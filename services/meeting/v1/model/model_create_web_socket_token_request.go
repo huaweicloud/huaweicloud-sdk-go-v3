@@ -10,10 +10,10 @@ import (
 type CreateWebSocketTokenRequest struct {
 
 	// 会议ID。
-	ConferenceID string `json:"conferenceID"`
+	ConferenceID string `json:"conferenceID" xml:"conferenceID"`
 
 	// 会控正式Token。 该头域统一为BASE64编码。
-	XConferenceAuthorization string `json:"X-Conference-Authorization"`
+	XConferenceAuthorization string `json:"X-Conference-Authorization" xml:"X-Conference-Authorization"`
 }
 
 func (o CreateWebSocketTokenRequest) String() string {

@@ -13,16 +13,16 @@ import (
 type CreateTasksResponse struct {
 
 	// 状态码:   * success - 成功   * failure - 失败
-	InfoCode *CreateTasksResponseInfoCode `json:"info_code,omitempty"`
+	InfoCode *CreateTasksResponseInfoCode `json:"info_code,omitempty" xml:"info_code"`
 
 	// 返回的提示信息
-	InfoDescription *string `json:"info_description,omitempty"`
+	InfoDescription *string `json:"info_description,omitempty" xml:"info_description"`
 
 	// 任务ID
-	TaskId *string `json:"task_id,omitempty"`
+	TaskId *string `json:"task_id,omitempty" xml:"task_id"`
 
 	// 任务状态:   * running - 正在运行   * success - 成功   * canceled - 已取消   * waiting - 正在等待   * failure - 失败
-	TaskStatus     *CreateTasksResponseTaskStatus `json:"task_status,omitempty"`
+	TaskStatus     *CreateTasksResponseTaskStatus `json:"task_status,omitempty" xml:"task_status"`
 	HttpStatusCode int                            `json:"-"`
 }
 

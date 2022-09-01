@@ -10,13 +10,13 @@ import (
 type FileAddr struct {
 
 	// OBS的bucket名称。
-	Bucket string `json:"bucket"`
+	Bucket string `json:"bucket" xml:"bucket"`
 
 	// 桶所在的区域名， 如“华北-北京四”的区域名为“cn-north-4”，创建的桶所在区域必须和点播服务所在区域保持一致。
-	Location string `json:"location"`
+	Location string `json:"location" xml:"location"`
 
 	// 文件的存储路径。
-	Object string `json:"object"`
+	Object string `json:"object" xml:"object"`
 }
 
 func (o FileAddr) String() string {

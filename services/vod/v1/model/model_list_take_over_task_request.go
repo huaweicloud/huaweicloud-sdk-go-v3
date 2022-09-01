@@ -10,16 +10,16 @@ import (
 type ListTakeOverTaskRequest struct {
 
 	// 任务状态。
-	Status *string `json:"status,omitempty"`
+	Status *string `json:"status,omitempty" xml:"status"`
 
 	// 任务ID。
-	TaskId *string `json:"task_id,omitempty"`
+	TaskId *string `json:"task_id,omitempty" xml:"task_id"`
 
 	// 分页编号，默认为0。
-	Page *int32 `json:"page,omitempty"`
+	Page *int32 `json:"page,omitempty" xml:"page"`
 
 	// 每页记录数。  默认10，范围[1,100]，指定task_id时该参数无效。
-	Size *int32 `json:"size,omitempty"`
+	Size *int32 `json:"size,omitempty" xml:"size"`
 }
 
 func (o ListTakeOverTaskRequest) String() string {

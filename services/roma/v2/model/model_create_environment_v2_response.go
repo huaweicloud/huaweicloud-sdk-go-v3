@@ -11,16 +11,16 @@ import (
 type CreateEnvironmentV2Response struct {
 
 	// 创建时间
-	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
+	CreateTime *sdktime.SdkTime `json:"create_time,omitempty" xml:"create_time"`
 
 	// 环境名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 描述信息
-	Remark *string `json:"remark,omitempty"`
+	Remark *string `json:"remark,omitempty" xml:"remark"`
 
 	// 环境编号
-	Id             *string `json:"id,omitempty"`
+	Id             *string `json:"id,omitempty" xml:"id"`
 	HttpStatusCode int     `json:"-"`
 }
 

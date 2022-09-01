@@ -9,10 +9,10 @@ import (
 type Nics struct {
 
 	// 安全组ID
-	SecurityGroupId string `json:"securityGroupId"`
+	SecurityGroupId string `json:"securityGroupId" xml:"securityGroupId"`
 
 	// 子网ID
-	NetId string `json:"net-id"`
+	NetId string `json:"net-id" xml:"net-id"`
 }
 
 func (o Nics) String() string {

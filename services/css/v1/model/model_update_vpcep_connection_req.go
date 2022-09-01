@@ -9,10 +9,10 @@ import (
 type UpdateVpcepConnectionReq struct {
 
 	// 期望的操作行为。 - receive: 允许连接 - reject: 拒绝连接
-	Action string `json:"action"`
+	Action string `json:"action" xml:"action"`
 
 	// 终端节点ID列表。
-	EndpointIdList []string `json:"endpointIdList"`
+	EndpointIdList []string `json:"endpointIdList" xml:"endpointIdList"`
 }
 
 func (o UpdateVpcepConnectionReq) String() string {

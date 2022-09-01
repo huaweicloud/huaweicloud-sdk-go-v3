@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CompareFaceByFileRequest struct {
-	Body *CompareFaceByFileRequestBody `json:"body,omitempty" type:"multipart"`
+	Body *CompareFaceByFileRequestBody `json:"body,omitempty" xml:"body" type:"multipart"`
 }
 
 func (o CompareFaceByFileRequest) String() string {

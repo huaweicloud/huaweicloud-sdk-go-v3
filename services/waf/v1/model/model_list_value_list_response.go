@@ -10,10 +10,10 @@ import (
 type ListValueListResponse struct {
 
 	// 引用表条数
-	Total *int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty" xml:"total"`
 
 	// 引用表列表
-	Items          *[]ValueListResponseBody `json:"items,omitempty"`
+	Items          *[]ValueListResponseBody `json:"items,omitempty" xml:"items"`
 	HttpStatusCode int                      `json:"-"`
 }
 

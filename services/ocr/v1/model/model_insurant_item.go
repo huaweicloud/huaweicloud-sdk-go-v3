@@ -7,15 +7,15 @@ import (
 )
 
 type InsurantItem struct {
-	InsurantName *InsurancePolicyDetail `json:"insurant_name,omitempty"`
+	InsurantName *InsurancePolicyDetail `json:"insurant_name,omitempty" xml:"insurant_name"`
 
-	InsurantSex *InsurancePolicyDetail `json:"insurant_sex,omitempty"`
+	InsurantSex *InsurancePolicyDetail `json:"insurant_sex,omitempty" xml:"insurant_sex"`
 
-	InsurantBirthday *InsurancePolicyDetail `json:"insurant_birthday,omitempty"`
+	InsurantBirthday *InsurancePolicyDetail `json:"insurant_birthday,omitempty" xml:"insurant_birthday"`
 
-	InsurantIdType *InsurancePolicyDetail `json:"insurant_id_type,omitempty"`
+	InsurantIdType *InsurancePolicyDetail `json:"insurant_id_type,omitempty" xml:"insurant_id_type"`
 
-	InsurantIdNumber *InsurancePolicyDetail `json:"insurant_id_number,omitempty"`
+	InsurantIdNumber *InsurancePolicyDetail `json:"insurant_id_number,omitempty" xml:"insurant_id_number"`
 }
 
 func (o InsurantItem) String() string {

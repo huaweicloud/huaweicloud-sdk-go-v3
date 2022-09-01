@@ -10,7 +10,7 @@ import (
 type ZoneState struct {
 
 	// 可用分区是否可用。
-	Available *bool `json:"available,omitempty"`
+	Available *bool `json:"available,omitempty" xml:"available"`
 }
 
 func (o ZoneState) String() string {

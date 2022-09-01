@@ -10,10 +10,10 @@ import (
 type ListDatabasesResponse struct {
 
 	// 数据库信息。
-	Databases *[]DatabaseForCreation `json:"databases,omitempty"`
+	Databases *[]DatabaseForCreation `json:"databases,omitempty" xml:"databases"`
 
 	// 总数。
-	TotalCount     *int32 `json:"total_count,omitempty"`
+	TotalCount     *int32 `json:"total_count,omitempty" xml:"total_count"`
 	HttpStatusCode int    `json:"-"`
 }
 

@@ -10,10 +10,10 @@ import (
 type TrackerObsChannelConfigBody struct {
 
 	// OBS桶名称
-	BucketName string `json:"bucket_name"`
+	BucketName string `json:"bucket_name" xml:"bucket_name"`
 
 	// 区域id
-	RegionId string `json:"region_id"`
+	RegionId string `json:"region_id" xml:"region_id"`
 }
 
 func (o TrackerObsChannelConfigBody) String() string {

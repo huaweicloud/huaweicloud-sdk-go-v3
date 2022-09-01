@@ -12,18 +12,18 @@ import (
 type SubscriptionTarget struct {
 
 	// 订阅目标ID，需保证全局唯一，由小写字母、数字、中划线组成，必须字母或数字开头，长度为32~64字符。  创建订阅目标场景时，指定ID作为待创建的订阅目标对象ID，未指定时由系统自动生成。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 订阅的事件目标名称
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 订阅的事件目标的提供方类型
-	ProviderType SubscriptionTargetProviderType `json:"provider_type"`
+	ProviderType SubscriptionTargetProviderType `json:"provider_type" xml:"provider_type"`
 
 	// 订阅的事件目标参数列表，该字段序列化后总长度不超过1024字节。
-	Detail *interface{} `json:"detail,omitempty"`
+	Detail *interface{} `json:"detail,omitempty" xml:"detail"`
 
-	Transform *SubscriptionTargetTransform `json:"transform"`
+	Transform *SubscriptionTargetTransform `json:"transform" xml:"transform"`
 }
 
 func (o SubscriptionTarget) String() string {

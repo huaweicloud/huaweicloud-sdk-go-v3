@@ -10,10 +10,10 @@ import (
 type CreateRedirectPoolsConfig struct {
 
 	// 后端主机组的ID。
-	PoolId string `json:"pool_id"`
+	PoolId string `json:"pool_id" xml:"pool_id"`
 
 	// 后端主机组的权重。 取值：0-100。
-	Weight int32 `json:"weight"`
+	Weight int32 `json:"weight" xml:"weight"`
 }
 
 func (o CreateRedirectPoolsConfig) String() string {

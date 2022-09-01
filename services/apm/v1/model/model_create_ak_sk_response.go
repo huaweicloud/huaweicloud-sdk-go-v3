@@ -10,7 +10,7 @@ import (
 type CreateAkSkResponse struct {
 
 	// 创建/删除的ak信息
-	Ak             *string `json:"ak,omitempty"`
+	Ak             *string `json:"ak,omitempty" xml:"ak"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type UpdateServerResponse struct {
-	Server         *UpdateServerResult `json:"server,omitempty"`
+	Server         *UpdateServerResult `json:"server,omitempty" xml:"server"`
 	HttpStatusCode int                 `json:"-"`
 }
 

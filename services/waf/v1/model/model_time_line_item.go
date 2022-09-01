@@ -9,10 +9,10 @@ import (
 type TimeLineItem struct {
 
 	// 时间点
-	Time *int64 `json:"time,omitempty"`
+	Time *int64 `json:"time,omitempty" xml:"time"`
 
 	// 数量
-	Num *int32 `json:"num,omitempty"`
+	Num *int32 `json:"num,omitempty" xml:"num"`
 }
 
 func (o TimeLineItem) String() string {

@@ -10,16 +10,16 @@ import (
 type ListSimPoolsRequest struct {
 
 	// 流量池名称
-	PoolName *string `json:"pool_name,omitempty"`
+	PoolName *string `json:"pool_name,omitempty" xml:"pool_name"`
 
 	// 分页查询时每页显示的记录数，默认值为10，取值范围为10-500的整数
-	Limit *int64 `json:"limit,omitempty"`
+	Limit *int64 `json:"limit,omitempty" xml:"limit"`
 
 	// 分页查询时的页码数，默认值为1，取值范围为1-1000000的整数
-	Offset *int64 `json:"offset,omitempty"`
+	Offset *int64 `json:"offset,omitempty" xml:"offset"`
 
 	// 账期，例如：2021-04
-	BillingCycle *string `json:"billing_cycle,omitempty"`
+	BillingCycle *string `json:"billing_cycle,omitempty" xml:"billing_cycle"`
 }
 
 func (o ListSimPoolsRequest) String() string {

@@ -10,13 +10,13 @@ import (
 type ListRequestPropertiesResponse struct {
 
 	// 总数
-	Total *int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty" xml:"total"`
 
 	// 本次返回数量
-	Size *int32 `json:"size,omitempty"`
+	Size *int32 `json:"size,omitempty" xml:"size"`
 
 	// 属性列表
-	Items          *[]Property `json:"items,omitempty"`
+	Items          *[]Property `json:"items,omitempty" xml:"items"`
 	HttpStatusCode int         `json:"-"`
 }
 

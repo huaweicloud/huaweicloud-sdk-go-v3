@@ -10,7 +10,7 @@ import (
 type ListUserMfaDevicesResponse struct {
 
 	// 虚拟MFA设备信息列表。
-	VirtualMfaDevices *[]MfaDeviceResult `json:"virtual_mfa_devices,omitempty"`
+	VirtualMfaDevices *[]MfaDeviceResult `json:"virtual_mfa_devices,omitempty" xml:"virtual_mfa_devices"`
 	HttpStatusCode    int                `json:"-"`
 }
 

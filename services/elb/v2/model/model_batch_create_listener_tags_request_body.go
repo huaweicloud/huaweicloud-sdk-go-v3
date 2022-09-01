@@ -13,10 +13,10 @@ import (
 type BatchCreateListenerTagsRequestBody struct {
 
 	// 操作类型。 取值范围：create - 创建标签。
-	Action BatchCreateListenerTagsRequestBodyAction `json:"action"`
+	Action BatchCreateListenerTagsRequestBodyAction `json:"action" xml:"action"`
 
 	// 标签对象列表。
-	Tags *[]ResourceTag `json:"tags,omitempty"`
+	Tags *[]ResourceTag `json:"tags,omitempty" xml:"tags"`
 }
 
 func (o BatchCreateListenerTagsRequestBody) String() string {

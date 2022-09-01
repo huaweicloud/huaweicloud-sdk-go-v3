@@ -10,7 +10,7 @@ import (
 type ListVersionAliasesRequest struct {
 
 	// 函数的URN。
-	FunctionUrn string `json:"function_urn"`
+	FunctionUrn string `json:"function_urn" xml:"function_urn"`
 }
 
 func (o ListVersionAliasesRequest) String() string {

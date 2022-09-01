@@ -13,16 +13,16 @@ import (
 type ListProjectsV4Request struct {
 
 	// 语言类型 中文:zh-cn 英文:en-us
-	XLanguage *ListProjectsV4RequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *ListProjectsV4RequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 
 	// 搜索关键字,支持按名称和描述搜索，默认null
-	Keyword *string `json:"keyword,omitempty"`
+	Keyword *string `json:"keyword,omitempty" xml:"keyword"`
 
 	// 每页显示的条目数量,默认100
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 偏移量，表示从此偏移量开始查询,默认0
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 }
 
 func (o ListProjectsV4Request) String() string {

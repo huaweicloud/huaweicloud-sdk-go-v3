@@ -10,7 +10,7 @@ import (
 type ListDevicesInProductResponse struct {
 
 	// 产品内设备数量
-	Summary        *int32 `json:"summary,omitempty"`
+	Summary        *int32 `json:"summary,omitempty" xml:"summary"`
 	HttpStatusCode int    `json:"-"`
 }
 

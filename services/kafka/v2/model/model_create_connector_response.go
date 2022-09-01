@@ -10,10 +10,10 @@ import (
 type CreateConnectorResponse struct {
 
 	// 任务ID。
-	JobId *string `json:"job_id,omitempty"`
+	JobId *string `json:"job_id,omitempty" xml:"job_id"`
 
 	// 实例转储ID。
-	ConnectorId    *string `json:"connector_id,omitempty"`
+	ConnectorId    *string `json:"connector_id,omitempty" xml:"connector_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -10,13 +10,13 @@ import (
 type DeleteDatabaseRequest struct {
 
 	// 语言
-	XLanguage *string `json:"X-Language,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 需要删除的数据库名。
-	DbName string `json:"db_name"`
+	DbName string `json:"db_name" xml:"db_name"`
 }
 
 func (o DeleteDatabaseRequest) String() string {

@@ -10,9 +10,9 @@ import (
 type ShowPropertyRawValueRequest struct {
 
 	// 资产ID
-	AssetId string `json:"asset_id"`
+	AssetId string `json:"asset_id" xml:"asset_id"`
 
-	Body *RawRequest `json:"body,omitempty"`
+	Body *RawRequest `json:"body,omitempty" xml:"body"`
 }
 
 func (o ShowPropertyRawValueRequest) String() string {

@@ -13,16 +13,16 @@ import (
 type VocabInfo struct {
 
 	// 热词表ID。
-	VocabularyId string `json:"vocabulary_id"`
+	VocabularyId string `json:"vocabulary_id" xml:"vocabulary_id"`
 
 	// 热词表名。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 热词表语言类型。
-	Language VocabInfoLanguage `json:"language"`
+	Language VocabInfoLanguage `json:"language" xml:"language"`
 
 	// 热词表描述。
-	Description string `json:"description"`
+	Description string `json:"description" xml:"description"`
 }
 
 func (o VocabInfo) String() string {

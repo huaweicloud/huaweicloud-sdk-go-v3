@@ -9,10 +9,10 @@ import (
 type DomainNameEntity struct {
 
 	// 实例历史域名。
-	DomainName *string `json:"domain_name,omitempty"`
+	DomainName *string `json:"domain_name,omitempty" xml:"domain_name"`
 
 	// 是否只读域名 - true：是 - false：否
-	IsReadonly *bool `json:"is_readonly,omitempty"`
+	IsReadonly *bool `json:"is_readonly,omitempty" xml:"is_readonly"`
 }
 
 func (o DomainNameEntity) String() string {

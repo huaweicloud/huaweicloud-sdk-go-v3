@@ -9,10 +9,10 @@ import (
 type ErrorResponse struct {
 
 	// 错误码。
-	ErrorCode *string `json:"error_code,omitempty"`
+	ErrorCode *string `json:"error_code,omitempty" xml:"error_code"`
 
 	// 错误描述。
-	ErrorMsg *string `json:"error_msg,omitempty"`
+	ErrorMsg *string `json:"error_msg,omitempty" xml:"error_msg"`
 }
 
 func (o ErrorResponse) String() string {

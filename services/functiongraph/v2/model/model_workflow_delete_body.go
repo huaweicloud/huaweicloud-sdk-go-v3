@@ -10,7 +10,7 @@ import (
 type WorkflowDeleteBody struct {
 
 	// 函数流URN列表
-	WorkflowUrns []string `json:"workflow_urns"`
+	WorkflowUrns []string `json:"workflow_urns" xml:"workflow_urns"`
 }
 
 func (o WorkflowDeleteBody) String() string {

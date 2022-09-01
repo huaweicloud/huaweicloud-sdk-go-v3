@@ -9,13 +9,13 @@ import (
 type ExportDlqMessageReq struct {
 
 	// 主题名称。
-	Topic *string `json:"topic,omitempty"`
+	Topic *string `json:"topic,omitempty" xml:"topic"`
 
 	// 消息ID列表。
-	MsgIdList *[]string `json:"msg_id_list,omitempty"`
+	MsgIdList *[]string `json:"msg_id_list,omitempty" xml:"msg_id_list"`
 
 	// 唯一Key列表。
-	UniqKeyList *[]string `json:"uniq_key_list,omitempty"`
+	UniqKeyList *[]string `json:"uniq_key_list,omitempty" xml:"uniq_key_list"`
 }
 
 func (o ExportDlqMessageReq) String() string {

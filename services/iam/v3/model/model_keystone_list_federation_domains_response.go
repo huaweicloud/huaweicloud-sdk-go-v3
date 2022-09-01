@@ -10,9 +10,9 @@ import (
 type KeystoneListFederationDomainsResponse struct {
 
 	// 账号信息列表。
-	Domains *[]Domains `json:"domains,omitempty"`
+	Domains *[]Domains `json:"domains,omitempty" xml:"domains"`
 
-	Links          *LinksSelf `json:"links,omitempty"`
+	Links          *LinksSelf `json:"links,omitempty" xml:"links"`
 	HttpStatusCode int        `json:"-"`
 }
 

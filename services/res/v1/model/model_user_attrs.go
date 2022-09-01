@@ -9,10 +9,10 @@ import (
 type UserAttrs struct {
 
 	// 数据类型。
-	DataType *string `json:"data_type,omitempty"`
+	DataType *string `json:"data_type,omitempty" xml:"data_type"`
 
 	// 用户名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 }
 
 func (o UserAttrs) String() string {

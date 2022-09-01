@@ -10,7 +10,7 @@ import (
 type ResetMultiTaskOffsetResponse struct {
 
 	// 任务重置结果
-	Message        *string `json:"message,omitempty"`
+	Message        *string `json:"message,omitempty" xml:"message"`
 	HttpStatusCode int     `json:"-"`
 }
 

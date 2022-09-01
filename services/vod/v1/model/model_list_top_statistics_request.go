@@ -10,10 +10,10 @@ import (
 type ListTopStatisticsRequest struct {
 
 	// 查询域名，暂只支持查询单个或者全部域名。  取值如下： - 单个加速域名，格式：example.test1.com。 - ALL：表示查询名下全部域名。
-	Domain string `json:"domain"`
+	Domain string `json:"domain" xml:"domain"`
 
 	// 查询日期，格式为yyyymmdd - date必须为昨天或之前的日期。 - 最多只能查最近一个月内的数据。
-	Date string `json:"date"`
+	Date string `json:"date" xml:"date"`
 }
 
 func (o ListTopStatisticsRequest) String() string {

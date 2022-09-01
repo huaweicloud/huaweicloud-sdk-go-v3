@@ -8,10 +8,10 @@ import (
 
 // 监控数据信息
 type MetricItemResultApi struct {
-	Metric *MetricDemision `json:"metric,omitempty"`
+	Metric *MetricDemision `json:"metric,omitempty" xml:"metric"`
 
 	// 监控数据信息
-	DataPoints *[]MetricDataPoints `json:"dataPoints,omitempty"`
+	DataPoints *[]MetricDataPoints `json:"dataPoints,omitempty" xml:"dataPoints"`
 }
 
 func (o MetricItemResultApi) String() string {

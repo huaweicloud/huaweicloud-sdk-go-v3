@@ -10,10 +10,10 @@ import (
 type MysqlVolumeInfo struct {
 
 	// 磁盘类型。
-	Type string `json:"type"`
+	Type string `json:"type" xml:"type"`
 
 	// 已使用磁盘大小，单位GB。
-	Size string `json:"size"`
+	Size string `json:"size" xml:"size"`
 }
 
 func (o MysqlVolumeInfo) String() string {

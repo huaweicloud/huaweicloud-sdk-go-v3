@@ -10,12 +10,12 @@ import (
 type BatchEnableMembersRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// VPC通道的编号
-	VpcChannelId string `json:"vpc_channel_id"`
+	VpcChannelId string `json:"vpc_channel_id" xml:"vpc_channel_id"`
 
-	Body *MembersBatchEnableOrDisable `json:"body,omitempty"`
+	Body *MembersBatchEnableOrDisable `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchEnableMembersRequest) String() string {

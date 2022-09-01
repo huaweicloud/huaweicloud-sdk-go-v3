@@ -9,10 +9,10 @@ import (
 type TagValuesList struct {
 
 	// 键
-	Key string `json:"key"`
+	Key string `json:"key" xml:"key"`
 
 	// 值列表
-	Values []string `json:"values"`
+	Values []string `json:"values" xml:"values"`
 }
 
 func (o TagValuesList) String() string {

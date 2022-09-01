@@ -13,13 +13,13 @@ import (
 type MaskStrategies struct {
 
 	// 需要脱敏的字段名称，最大支持长度256。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 脱敏算法名称，详情见附录\"动态脱敏策略配置\"。
-	Algorithm MaskStrategiesAlgorithm `json:"algorithm"`
+	Algorithm MaskStrategiesAlgorithm `json:"algorithm" xml:"algorithm"`
 
 	// 脱敏算法参数，详情见附录\"动态脱敏策略配置\"。
-	Parameters map[string]interface{} `json:"parameters,omitempty"`
+	Parameters map[string]interface{} `json:"parameters,omitempty" xml:"parameters"`
 }
 
 func (o MaskStrategies) String() string {

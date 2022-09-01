@@ -10,13 +10,13 @@ import (
 type DownloadSlowlogResponse struct {
 
 	// 具体信息。
-	List *[]DownloadSlowlogResult `json:"list,omitempty"`
+	List *[]DownloadSlowlogResult `json:"list,omitempty" xml:"list"`
 
 	// 慢日志下载链接生成状态。 - FINISH，表示下载链接已经生成完成。 - CREATING，表示正在生成文件，准备下载链接。 - FAILED，表示存在日志文件准备失败。
-	Status *string `json:"status,omitempty"`
+	Status *string `json:"status,omitempty" xml:"status"`
 
 	// 慢日志链接数量。
-	Count          *int32 `json:"count,omitempty"`
+	Count          *int32 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

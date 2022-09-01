@@ -9,142 +9,142 @@ import (
 type NvlCostAnalysedBillDetail struct {
 
 	// 查询分摊成本的月份。 格式为YYYY-MM，按照东八区时间截取。
-	SharedMonth *string `json:"shared_month,omitempty"`
+	SharedMonth *string `json:"shared_month,omitempty" xml:"shared_month"`
 
 	// 账期。 格式：YYYY-MM。按照东八区时间截取。
-	BillCycle *string `json:"bill_cycle,omitempty"`
+	BillCycle *string `json:"bill_cycle,omitempty" xml:"bill_cycle"`
 
 	// 账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
-	BillType *int32 `json:"bill_type,omitempty"`
+	BillType *int32 `json:"bill_type,omitempty" xml:"bill_type"`
 
 	// 消费的客户账号ID。 如果是普通客户或者企业子查询消费记录，只能查询到自身的消费记录，则这个地方显示的是自身的客户ID。如果是企业主查询消费记录，可以查询到自身以及企业子的消费记录，这个地方是消费的实际客户ID，如果是企业主自身消费，为企业主ID，如果这条消费记录是某个企业子客户的消费，这个地方的ID是企业子账号ID。
-	CustomerId *string `json:"customer_id,omitempty"`
+	CustomerId *string `json:"customer_id,omitempty" xml:"customer_id"`
 
 	// 云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
-	RegionCode *string `json:"region_code,omitempty"`
+	RegionCode *string `json:"region_code,omitempty" xml:"region_code"`
 
 	// 云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
-	RegionName *string `json:"region_name,omitempty"`
+	RegionName *string `json:"region_name,omitempty" xml:"region_name"`
 
 	// 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
-	ServiceTypeCode *string `json:"service_type_code,omitempty"`
+	ServiceTypeCode *string `json:"service_type_code,omitempty" xml:"service_type_code"`
 
 	// 资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
-	ResourceTypeCode *string `json:"resource_type_code,omitempty"`
+	ResourceTypeCode *string `json:"resource_type_code,omitempty" xml:"resource_type_code"`
 
 	// 云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
-	ServiceTypeName *string `json:"service_type_name,omitempty"`
+	ServiceTypeName *string `json:"service_type_name,omitempty" xml:"service_type_name"`
 
 	// 资源类型名称。例如ECS的资源类型名称为“云主机”。
-	ResourceTypeName *string `json:"resource_type_name,omitempty"`
+	ResourceTypeName *string `json:"resource_type_name,omitempty" xml:"resource_type_name"`
 
 	// 费用对应的资源使用的开始时间，按需有效，包年/包月该字段保留。
-	EffectiveTime *string `json:"effective_time,omitempty"`
+	EffectiveTime *string `json:"effective_time,omitempty" xml:"effective_time"`
 
 	// 费用对应的资源使用的结束时间，按需有效，包年/包月该字段保留。
-	ExpireTime *string `json:"expire_time,omitempty"`
+	ExpireTime *string `json:"expire_time,omitempty" xml:"expire_time"`
 
 	// 资源ID。
-	ResourceId *string `json:"resource_id,omitempty"`
+	ResourceId *string `json:"resource_id,omitempty" xml:"resource_id"`
 
 	// 资源名称。
-	ResourceName *string `json:"resource_name,omitempty"`
+	ResourceName *string `json:"resource_name,omitempty" xml:"resource_name"`
 
 	// 资源标签。
-	ResourceTag *string `json:"resource_tag,omitempty"`
+	ResourceTag *string `json:"resource_tag,omitempty" xml:"resource_tag"`
 
 	// 产品的规格描述。
-	ProductSpecDesc *string `json:"product_spec_desc,omitempty"`
+	ProductSpecDesc *string `json:"product_spec_desc,omitempty" xml:"product_spec_desc"`
 
 	// 企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
 
 	// 企业项目的名称。
-	EnterpriseProjectName *string `json:"enterprise_project_name,omitempty"`
+	EnterpriseProjectName *string `json:"enterprise_project_name,omitempty" xml:"enterprise_project_name"`
 
 	// 计费模式。 1：包年/包月3：按需10：预留实例
-	ChargingMode *int32 `json:"charging_mode,omitempty"`
+	ChargingMode *int32 `json:"charging_mode,omitempty" xml:"charging_mode"`
 
 	// 订单ID。  说明： 包年/包月资源的使用记录才有该字段，按需资源则为空。
-	OrderId *string `json:"order_id,omitempty"`
+	OrderId *string `json:"order_id,omitempty" xml:"order_id"`
 
 	// 周期类型。 19：年20：月24：天25：小时5：一次性
-	PeriodType *int32 `json:"period_type,omitempty"`
+	PeriodType *int32 `json:"period_type,omitempty" xml:"period_type"`
 
 	// 资源使用量的类型，您可以调用查询使用量类型列表接口获取。
-	UsageType *string `json:"usage_type,omitempty"`
+	UsageType *string `json:"usage_type,omitempty" xml:"usage_type"`
 
 	// 资源的使用量。
-	Usage *float64 `json:"usage,omitempty"`
+	Usage *float64 `json:"usage,omitempty" xml:"usage"`
 
 	// 资源使用量的度量单位，您可以调用查询度量单位列表接口获取。
-	UsageMeasureId *int32 `json:"usage_measure_id,omitempty"`
+	UsageMeasureId *int32 `json:"usage_measure_id,omitempty" xml:"usage_measure_id"`
 
 	// 套餐内使用量。
-	FreeResourceUsage *float64 `json:"free_resource_usage,omitempty"`
+	FreeResourceUsage *float64 `json:"free_resource_usage,omitempty" xml:"free_resource_usage"`
 
 	// 套餐内使用量的度量单位，您可以调用查询度量单位列表接口获取。
-	FreeResourceMeasureId *int32 `json:"free_resource_measure_id,omitempty"`
+	FreeResourceMeasureId *int32 `json:"free_resource_measure_id,omitempty" xml:"free_resource_measure_id"`
 
 	// 预留实例使用量。
-	RiUsage *float64 `json:"ri_usage,omitempty"`
+	RiUsage *float64 `json:"ri_usage,omitempty" xml:"ri_usage"`
 
 	// 预留实例使用量单位。
-	RiUsageMeasureId *int32 `json:"ri_usage_measure_id,omitempty"`
+	RiUsageMeasureId *int32 `json:"ri_usage_measure_id,omitempty" xml:"ri_usage_measure_id"`
 
 	// 消费金额（应付金额）。 消费金额=期初已分摊金额+当月分摊金额+期末未分摊金额
-	ConsumeAmount *float64 `json:"consume_amount,omitempty"`
+	ConsumeAmount *float64 `json:"consume_amount,omitempty" xml:"consume_amount"`
 
 	// 期初已分摊金额。  说明： 包周期和预留实例预付时有效；计费类型为按需，预留实例为按时计费时该值为0。
-	PastMonthsAmortizedAmount *float64 `json:"past_months_amortized_amount,omitempty"`
+	PastMonthsAmortizedAmount *float64 `json:"past_months_amortized_amount,omitempty" xml:"past_months_amortized_amount"`
 
 	// 当月分摊金额。 当月分摊金额=现金分摊金额+信用额度分摊金额+代金券分摊金额+现金券分摊金额+储值卡分摊金额+奖励金分摊金额
-	CurrentMonthAmortizedAmount *float64 `json:"current_month_amortized_amount,omitempty"`
+	CurrentMonthAmortizedAmount *float64 `json:"current_month_amortized_amount,omitempty" xml:"current_month_amortized_amount"`
 
 	// 期末未分摊金额。月度成本分摊时，当月以后还未分摊的金额。  说明： 包周期和预留实例预付时有效；计费类型为按需，预留实例为按时计费时该值为0。
-	FutureMonthsAmortizedAmount *float64 `json:"future_months_amortized_amount,omitempty"`
+	FutureMonthsAmortizedAmount *float64 `json:"future_months_amortized_amount,omitempty" xml:"future_months_amortized_amount"`
 
 	// 月度成本分摊时，当月已分摊金额中包含的现金金额。
-	AmortizedCashAmount *float64 `json:"amortized_cash_amount,omitempty"`
+	AmortizedCashAmount *float64 `json:"amortized_cash_amount,omitempty" xml:"amortized_cash_amount"`
 
 	// 月度成本分摊时，当月已分摊金额中包含的信用额度分摊金额。
-	AmortizedCreditAmount *float64 `json:"amortized_credit_amount,omitempty"`
+	AmortizedCreditAmount *float64 `json:"amortized_credit_amount,omitempty" xml:"amortized_credit_amount"`
 
 	// 月度成本分摊时，当月已分摊金额中包含的代金券分摊金额。
-	AmortizedCouponAmount *float64 `json:"amortized_coupon_amount,omitempty"`
+	AmortizedCouponAmount *float64 `json:"amortized_coupon_amount,omitempty" xml:"amortized_coupon_amount"`
 
 	// 月度成本分摊时，当月已分摊金额中包含的现金券分摊金额。
-	AmortizedFlexipurchaseCouponAmount *float64 `json:"amortized_flexipurchase_coupon_amount,omitempty"`
+	AmortizedFlexipurchaseCouponAmount *float64 `json:"amortized_flexipurchase_coupon_amount,omitempty" xml:"amortized_flexipurchase_coupon_amount"`
 
 	// 月度成本分摊时，当月已分摊金额中包含的储值卡分摊金额。
-	AmortizedStoredValueCardAmount *float64 `json:"amortized_stored_value_card_amount,omitempty"`
+	AmortizedStoredValueCardAmount *float64 `json:"amortized_stored_value_card_amount,omitempty" xml:"amortized_stored_value_card_amount"`
 
 	// 月度成本分摊时，当月已分摊金额中包含的奖励金分摊金额（用于现网未清干净的奖励金）。
-	AmortizedBonusAmount *float64 `json:"amortized_bonus_amount,omitempty"`
+	AmortizedBonusAmount *float64 `json:"amortized_bonus_amount,omitempty" xml:"amortized_bonus_amount"`
 
 	// 该字段为预留字段
-	SubServiceTypeCode *string `json:"sub_service_type_code,omitempty"`
+	SubServiceTypeCode *string `json:"sub_service_type_code,omitempty" xml:"sub_service_type_code"`
 
 	// 该字段为预留字段
-	SubServiceTypeName *string `json:"sub_service_type_name,omitempty"`
+	SubServiceTypeName *string `json:"sub_service_type_name,omitempty" xml:"sub_service_type_name"`
 
 	// 该字段为预留字段
-	SubResourceTypeCode *string `json:"sub_resource_type_code,omitempty"`
+	SubResourceTypeCode *string `json:"sub_resource_type_code,omitempty" xml:"sub_resource_type_code"`
 
 	// 该字段为预留字段。
-	SubResourceTypeName *string `json:"sub_resource_type_name,omitempty"`
+	SubResourceTypeName *string `json:"sub_resource_type_name,omitempty" xml:"sub_resource_type_name"`
 
 	// 该字段为预留字段。
-	SubResourceId *string `json:"sub_resource_id,omitempty"`
+	SubResourceId *string `json:"sub_resource_id,omitempty" xml:"sub_resource_id"`
 
 	// 该字段为预留字段。
-	SubResourceName *string `json:"sub_resource_name,omitempty"`
+	SubResourceName *string `json:"sub_resource_name,omitempty" xml:"sub_resource_name"`
 
 	// 成本标签。
-	EffectiveTagPairs *[]TagPair `json:"effective_tag_pairs,omitempty"`
+	EffectiveTagPairs *[]TagPair `json:"effective_tag_pairs,omitempty" xml:"effective_tag_pairs"`
 
 	// 成本单元。
-	CostUnitPairs *[]CostUnitPair `json:"cost_unit_pairs,omitempty"`
+	CostUnitPairs *[]CostUnitPair `json:"cost_unit_pairs,omitempty" xml:"cost_unit_pairs"`
 }
 
 func (o NvlCostAnalysedBillDetail) String() string {

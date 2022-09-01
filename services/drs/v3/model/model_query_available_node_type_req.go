@@ -13,19 +13,19 @@ import (
 type QueryAvailableNodeTypeReq struct {
 
 	// 引擎类型
-	EngineType string `json:"engine_type"`
+	EngineType string `json:"engine_type" xml:"engine_type"`
 
 	// 迁移场景，migration-实时迁移,sync-实时同步,cloudDataGuard-实时灾备
-	DbUseType QueryAvailableNodeTypeReqDbUseType `json:"db_use_type"`
+	DbUseType QueryAvailableNodeTypeReqDbUseType `json:"db_use_type" xml:"db_use_type"`
 
 	// 迁移方向，up ：入云 ，灾备场景时对应本云为备，down：出云，灾备场景时对应本云为主，non-dbs：自建
-	JobDirection QueryAvailableNodeTypeReqJobDirection `json:"job_direction"`
+	JobDirection QueryAvailableNodeTypeReqJobDirection `json:"job_direction" xml:"job_direction"`
 
 	// 规格类型。
-	NodeType string `json:"node_type"`
+	NodeType string `json:"node_type" xml:"node_type"`
 
 	// 是否是双主灾备，不填默认为false
-	MultiWrite *string `json:"multi_write,omitempty"`
+	MultiWrite *string `json:"multi_write,omitempty" xml:"multi_write"`
 }
 
 func (o QueryAvailableNodeTypeReq) String() string {

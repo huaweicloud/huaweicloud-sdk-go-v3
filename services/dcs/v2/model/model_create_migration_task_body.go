@@ -13,25 +13,25 @@ import (
 type CreateMigrationTaskBody struct {
 
 	// 迁移任务名称。
-	TaskName string `json:"task_name"`
+	TaskName string `json:"task_name" xml:"task_name"`
 
 	// 迁移任务描述。
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 迁移任务类型,包括备份文件导入和在线迁移两种类型。 取值范围： - backupfile_import：表示备份文件导入 - online_migration：表示在线迁移。
-	MigrationType CreateMigrationTaskBodyMigrationType `json:"migration_type"`
+	MigrationType CreateMigrationTaskBodyMigrationType `json:"migration_type" xml:"migration_type"`
 
 	// 迁移方式，包括全量迁移和增量迁移两种类型。 取值范围： - full_amount_migration：表示全量迁移。 - incremental_migration：表示增量迁移。
-	MigrationMethod CreateMigrationTaskBodyMigrationMethod `json:"migration_method"`
+	MigrationMethod CreateMigrationTaskBodyMigrationMethod `json:"migration_method" xml:"migration_method"`
 
-	BackupFiles *BackupFilesBody `json:"backup_files,omitempty"`
+	BackupFiles *BackupFilesBody `json:"backup_files,omitempty" xml:"backup_files"`
 
 	// 迁移任务类型为在线迁移时，表示源Redis和目标Redis联通的网络类型，包括vpc和vpn两种类型。
-	NetworkType *CreateMigrationTaskBodyNetworkType `json:"network_type,omitempty"`
+	NetworkType *CreateMigrationTaskBodyNetworkType `json:"network_type,omitempty" xml:"network_type"`
 
-	SourceInstance *SourceInstanceBody `json:"source_instance,omitempty"`
+	SourceInstance *SourceInstanceBody `json:"source_instance,omitempty" xml:"source_instance"`
 
-	TargetInstance *TargetInstanceBody `json:"target_instance"`
+	TargetInstance *TargetInstanceBody `json:"target_instance" xml:"target_instance"`
 }
 
 func (o CreateMigrationTaskBody) String() string {

@@ -12,88 +12,88 @@ import (
 type PublicipSingleShowResp struct {
 
 	// 功能说明：弹性公网IP唯一标识
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 功能说明：项目ID
-	ProjectId *string `json:"project_id,omitempty"`
+	ProjectId *string `json:"project_id,omitempty" xml:"project_id"`
 
 	// 功能说明：IP版本信息 取值范围：4表示公网IP地址为public_ip_address地址;6表示公网IP地址为public_ipv6_address地址\"
-	IpVersion *PublicipSingleShowRespIpVersion `json:"ip_version,omitempty"`
+	IpVersion *PublicipSingleShowRespIpVersion `json:"ip_version,omitempty" xml:"ip_version"`
 
 	// 功能说明：弹性公网IP或者IPv6端口的地址
-	PublicIpAddress *string `json:"public_ip_address,omitempty"`
+	PublicIpAddress *string `json:"public_ip_address,omitempty" xml:"public_ip_address"`
 
 	// 功能说明：IPv4时无此字段，IPv6时为申请到的弹性公网IP地址
-	PublicIpv6Address *string `json:"public_ipv6_address,omitempty"`
+	PublicIpv6Address *string `json:"public_ipv6_address,omitempty" xml:"public_ipv6_address"`
 
 	// 废弃，功能由publicip_pool_name继承，默认不显示。功能说明：弹性公网IP的网络类型
-	NetworkType *string `json:"network_type,omitempty"`
+	NetworkType *string `json:"network_type,omitempty" xml:"network_type"`
 
 	// 功能说明：弹性公网IP的状态  取值范围：冻结FREEZED，绑定失败BIND_ERROR，绑定中BINDING，释放中PENDING_DELETE， 创建中PENDING_CREATE，创建中NOTIFYING，释放中NOTIFY_DELETE，更新中PENDING_UPDATE， 未绑定DOWN ，绑定ACTIVE，绑定ELB，绑定VPN，失败ERROR。
-	Status *PublicipSingleShowRespStatus `json:"status,omitempty"`
+	Status *PublicipSingleShowRespStatus `json:"status,omitempty" xml:"status"`
 
 	// 功能说明：弹性公网IP描述信息 约束：用户以自定义方式标识资源，系统不感知
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 功能说明：表示中心站点资源或者边缘站点资源 取值范围： center、边缘站点名称 约束：publicip只能绑定该字段相同的资源
-	PublicBorderGroup *string `json:"public_border_group,omitempty"`
+	PublicBorderGroup *string `json:"public_border_group,omitempty" xml:"public_border_group"`
 
 	// 功能说明：资源创建UTC时间 格式:yyyy-MM-ddTHH:mm:ssZ
-	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
+	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty" xml:"created_at"`
 
 	// 功能说明：资源更新UTC时间 格式:yyyy-MM-ddTHH:mm:ssZ
-	UpdatedAt *sdktime.SdkTime `json:"updated_at,omitempty"`
+	UpdatedAt *sdktime.SdkTime `json:"updated_at,omitempty" xml:"updated_at"`
 
 	// 功能说明：弹性公网IP类型
-	Type *PublicipSingleShowRespType `json:"type,omitempty"`
+	Type *PublicipSingleShowRespType `json:"type,omitempty" xml:"type"`
 
-	Vnic *VnicInfo `json:"vnic,omitempty"`
+	Vnic *VnicInfo `json:"vnic,omitempty" xml:"vnic"`
 
-	Bandwidth *PublicipBandwidthInfo `json:"bandwidth,omitempty"`
+	Bandwidth *PublicipBandwidthInfo `json:"bandwidth,omitempty" xml:"bandwidth"`
 
 	// 功能说明：企业项目ID。最大长度36字节,带“-”连字符的UUID格式,或者是字符串“0”。创建弹性公网IP时,给弹性公网IP绑定企业项目ID。
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
 
 	// 功能说明：公网IP的订单信息 约束：包周期才会有订单信息，按需资源此字段为空
-	BillingInfo *string `json:"billing_info,omitempty"`
+	BillingInfo *string `json:"billing_info,omitempty" xml:"billing_info"`
 
 	// 功能说明：记录公网IP当前的冻结状态 约束：metadata类型，标识欠费冻结、公安冻结 取值范围：police，locked
-	LockStatus *string `json:"lock_status,omitempty"`
+	LockStatus *string `json:"lock_status,omitempty" xml:"lock_status"`
 
 	// 功能说明：公网IP绑定的实例类型 取值范围：PORT、NATGW、ELB、ELBV1、VPN、null
-	AssociateInstanceType *PublicipSingleShowRespAssociateInstanceType `json:"associate_instance_type,omitempty"`
+	AssociateInstanceType *PublicipSingleShowRespAssociateInstanceType `json:"associate_instance_type,omitempty" xml:"associate_instance_type"`
 
 	// 功能说明：公网IP绑定的实例ID
-	AssociateInstanceId *string `json:"associate_instance_id,omitempty"`
+	AssociateInstanceId *string `json:"associate_instance_id,omitempty" xml:"associate_instance_id"`
 
 	// 功能说明：公网IP所属网络的ID。publicip_pool_name对应的网络ID
-	PublicipPoolId *string `json:"publicip_pool_id,omitempty"`
+	PublicipPoolId *string `json:"publicip_pool_id,omitempty" xml:"publicip_pool_id"`
 
 	// 功能说明：弹性公网IP的网络类型, 包括公共池类型，如5_bgp/5_sbgp...，和用户购买的专属池。 专属池见publcip_pool相关接口
-	PublicipPoolName *string `json:"publicip_pool_name,omitempty"`
+	PublicipPoolName *string `json:"publicip_pool_name,omitempty" xml:"publicip_pool_name"`
 
 	// 功能说明：弹性公网IP名称
-	Alias *string `json:"alias,omitempty"`
+	Alias *string `json:"alias,omitempty" xml:"alias"`
 
-	Profile *ProfileInfo `json:"profile,omitempty"`
+	Profile *ProfileInfo `json:"profile,omitempty" xml:"profile"`
 
 	// 默认不显示。该字段仅仅用于表示eip的bgp类型是否是真实的静态sbgp * 1. 如果为true，则该eip可以切换bgp类型 * 2. 如果为false，则该eip不可以切换bgp类型
-	FakeNetworkType *bool `json:"fake_network_type,omitempty"`
+	FakeNetworkType *bool `json:"fake_network_type,omitempty" xml:"fake_network_type"`
 
 	// 默认不显示。用户标签
-	Tags *[]string `json:"tags,omitempty"`
+	Tags *[]string `json:"tags,omitempty" xml:"tags"`
 
 	// 默认不显示。记录实例的更上一层归属。例如associate_instance_type为PORT，此字段记录PORT的device_id和device_owner信息。仅有限场景记录。
-	AssociateInstanceMetadata *string `json:"associate_instance_metadata,omitempty"`
+	AssociateInstanceMetadata *string `json:"associate_instance_metadata,omitempty" xml:"associate_instance_metadata"`
 
 	// 默认不显示。开启支持直通模式后展示，表示直通模式的标识。
-	AssociateMode *string `json:"associate_mode,omitempty"`
+	AssociateMode *string `json:"associate_mode,omitempty" xml:"associate_mode"`
 
 	// 功能说明：表示此publicip可以加入的共享带宽类型列表，如果为空列表，则表示该           publicip不能加入任何共享带宽 约束：publicip只能加入到有该带宽类型的共享带宽中
-	AllowShareBandwidthTypes *[]string `json:"allow_share_bandwidth_types,omitempty"`
+	AllowShareBandwidthTypes *[]string `json:"allow_share_bandwidth_types,omitempty" xml:"allow_share_bandwidth_types"`
 
 	// 默认不显示。表示该eip是否支持与实例同步删除。
-	CascadeDeleteByInstance *bool `json:"cascade_delete_by_instance,omitempty"`
+	CascadeDeleteByInstance *bool `json:"cascade_delete_by_instance,omitempty" xml:"cascade_delete_by_instance"`
 }
 
 func (o PublicipSingleShowResp) String() string {

@@ -10,7 +10,7 @@ import (
 type Addresses struct {
 
 	// 裸金属服务器所属网络信息。key表示裸金属服务器使用的虚拟私有云的ID。value为网络详细信息
-	VpcId []Address `json:"vpc_id"`
+	VpcId []Address `json:"vpc_id" xml:"vpc_id"`
 }
 
 func (o Addresses) String() string {

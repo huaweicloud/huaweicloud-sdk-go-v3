@@ -10,16 +10,16 @@ import (
 type ListMetadatasResponse struct {
 
 	// 系统提示信息，执行成功时，字段可能为空。执行失败时，用于显示错误信息。
-	ErrorMessage *string `json:"errorMessage,omitempty"`
+	ErrorMessage *string `json:"errorMessage,omitempty" xml:"errorMessage"`
 
 	// 系统提示信息，执行成功时，字段可能为空。执行失败时，用于显示错误码。
-	ErrorCode *string `json:"errorCode,omitempty"`
+	ErrorCode *string `json:"errorCode,omitempty" xml:"errorCode"`
 
 	// 元数据返回个数。请求失败时，字段为空。
-	SchemaCount *int32 `json:"schemaCount,omitempty"`
+	SchemaCount *int32 `json:"schemaCount,omitempty" xml:"schemaCount"`
 
 	// 当前projectId下的所有元数据列表。请求失败时，字段为空。
-	SchemaList     *[]Metadata `json:"schemaList,omitempty"`
+	SchemaList     *[]Metadata `json:"schemaList,omitempty" xml:"schemaList"`
 	HttpStatusCode int         `json:"-"`
 }
 

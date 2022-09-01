@@ -8,7 +8,7 @@ import (
 
 // This is a auto create Body Object
 type BatchRebootServersRequestBody struct {
-	Reboot *BatchRebootSeversOption `json:"reboot"`
+	Reboot *BatchRebootSeversOption `json:"reboot" xml:"reboot"`
 }
 
 func (o BatchRebootServersRequestBody) String() string {

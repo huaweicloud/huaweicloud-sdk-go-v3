@@ -10,7 +10,7 @@ import (
 type ListBcsMetricRequestBody struct {
 
 	// 指标列表 取值范围 cpuUsage：CPU使用率 diskUsedRate：磁盘使用率 memUsedRate：物理内存使用率 sendBytesRate：上行Bps recvBytesRate：下行Bps cpuCoreLimit：CPU内核总量 cpuCoreUsed：CPU内核占用 totalMem：物理内存总量 freeMem：可用物理内存 diskCapacity：磁盘空间容量 diskAvailableCapacity：可用磁盘空间 默认值：前5项
-	MetricNames *[]string `json:"metric_names,omitempty"`
+	MetricNames *[]string `json:"metric_names,omitempty" xml:"metric_names"`
 }
 
 func (o ListBcsMetricRequestBody) String() string {

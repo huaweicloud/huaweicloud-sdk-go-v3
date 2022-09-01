@@ -10,17 +10,17 @@ import (
 type CreateClusterResponse struct {
 
 	// 集群名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 集群ID
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
-	Task *Task `json:"task,omitempty"`
+	Task *Task `json:"task,omitempty" xml:"task"`
 
-	Datastore *Datastore `json:"datastore,omitempty"`
+	Datastore *Datastore `json:"datastore,omitempty" xml:"datastore"`
 
 	// 集群的节点信息
-	Instances      *[]ClusterInstance `json:"instances,omitempty"`
+	Instances      *[]ClusterInstance `json:"instances,omitempty" xml:"instances"`
 	HttpStatusCode int                `json:"-"`
 }
 

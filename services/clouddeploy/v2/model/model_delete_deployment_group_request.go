@@ -10,7 +10,7 @@ import (
 type DeleteDeploymentGroupRequest struct {
 
 	// 主机组id
-	GroupId string `json:"group_id"`
+	GroupId string `json:"group_id" xml:"group_id"`
 }
 
 func (o DeleteDeploymentGroupRequest) String() string {

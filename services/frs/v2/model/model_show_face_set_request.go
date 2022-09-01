@@ -10,7 +10,7 @@ import (
 type ShowFaceSetRequest struct {
 
 	// 人脸库名称。
-	FaceSetName string `json:"face_set_name"`
+	FaceSetName string `json:"face_set_name" xml:"face_set_name"`
 }
 
 func (o ShowFaceSetRequest) String() string {

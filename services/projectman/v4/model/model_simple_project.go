@@ -9,10 +9,10 @@ import (
 type SimpleProject struct {
 
 	// 项目名称
-	ProjectName *string `json:"project_name,omitempty"`
+	ProjectName *string `json:"project_name,omitempty" xml:"project_name"`
 
 	// 项目id
-	ProjectId *string `json:"project_id,omitempty"`
+	ProjectId *string `json:"project_id,omitempty" xml:"project_id"`
 }
 
 func (o SimpleProject) String() string {

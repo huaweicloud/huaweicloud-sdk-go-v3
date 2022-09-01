@@ -12,13 +12,13 @@ import (
 type CreateEdgeApplicationRequestDto struct {
 
 	// 应用ID
-	EdgeAppId string `json:"edge_app_id"`
+	EdgeAppId string `json:"edge_app_id" xml:"edge_app_id"`
 
 	// 应用描述
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 功能类型,分为数据处理（DATA_PROCESSING）、协议解析（PROTOCOL_PARSING）、IT集成（ON_PREMISE_INTEGRATION）和混合应用（COMPOSITE_APPLICATION），数据默认为DATA_PROCESSING，数据处理模块可以传输消息，协议解析为驱动类型，IT集成为部署南向3rdIA使用，混合应用可同时实现数据处理和协议解析。
-	FunctionType *CreateEdgeApplicationRequestDtoFunctionType `json:"function_type,omitempty"`
+	FunctionType *CreateEdgeApplicationRequestDtoFunctionType `json:"function_type,omitempty" xml:"function_type"`
 }
 
 func (o CreateEdgeApplicationRequestDto) String() string {

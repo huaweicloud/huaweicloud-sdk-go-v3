@@ -9,7 +9,7 @@ import (
 type UpdateInstanceAutoCreateTopicReq struct {
 
 	// 是否开启自动创建topic功能。
-	EnableAutoTopic bool `json:"enable_auto_topic"`
+	EnableAutoTopic bool `json:"enable_auto_topic" xml:"enable_auto_topic"`
 }
 
 func (o UpdateInstanceAutoCreateTopicReq) String() string {

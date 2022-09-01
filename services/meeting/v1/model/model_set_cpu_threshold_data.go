@@ -10,7 +10,7 @@ import (
 type SetCpuThresholdData struct {
 
 	// CPU阈值设定值，单位为百分比(%)。 取值范围：0 - 100。
-	Cpu *int32 `json:"cpu,omitempty"`
+	Cpu *int32 `json:"cpu,omitempty" xml:"cpu"`
 }
 
 func (o SetCpuThresholdData) String() string {

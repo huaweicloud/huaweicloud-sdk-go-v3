@@ -10,13 +10,13 @@ import (
 type LogList struct {
 
 	// 日志内容。
-	Content *string `json:"content,omitempty"`
+	Content *string `json:"content,omitempty" xml:"content"`
 
-	// 当条日志记录时间，格式为ISO8601：CCYY-MM-DDThh:mm:ss。
-	Date *string `json:"date,omitempty"`
+	// 日期。
+	Date *string `json:"date,omitempty" xml:"date"`
 
 	// 日志级别。
-	Level *string `json:"level,omitempty"`
+	Level *string `json:"level,omitempty" xml:"level"`
 }
 
 func (o LogList) String() string {

@@ -10,13 +10,13 @@ import (
 type ListTagValuesResponse struct {
 
 	// 标签的名称
-	TagName *string `json:"tag_name,omitempty"`
+	TagName *string `json:"tag_name,omitempty" xml:"tag_name"`
 
 	// 标签的值列表
-	TagValues *[]string `json:"tag_values,omitempty"`
+	TagValues *[]string `json:"tag_values,omitempty" xml:"tag_values"`
 
 	// 当前列表元素总数
-	Count          *int32 `json:"count,omitempty"`
+	Count          *int32 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

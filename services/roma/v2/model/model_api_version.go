@@ -9,7 +9,7 @@ import (
 type ApiVersion struct {
 
 	// API版本的编号
-	VersionId string `json:"version_id"`
+	VersionId string `json:"version_id" xml:"version_id"`
 }
 
 func (o ApiVersion) String() string {

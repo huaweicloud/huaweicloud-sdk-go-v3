@@ -10,9 +10,9 @@ import (
 type CreateShareRequest struct {
 
 	// MIME类型
-	ContentType string `json:"Content-Type"`
+	ContentType string `json:"Content-Type" xml:"Content-Type"`
 
-	Body *CreateShareRequestBody `json:"body,omitempty"`
+	Body *CreateShareRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateShareRequest) String() string {

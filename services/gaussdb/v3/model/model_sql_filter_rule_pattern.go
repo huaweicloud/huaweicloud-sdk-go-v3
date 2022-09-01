@@ -10,10 +10,10 @@ import (
 type SqlFilterRulePattern struct {
 
 	// SQL限流规则。
-	Pattern string `json:"pattern"`
+	Pattern string `json:"pattern" xml:"pattern"`
 
 	// 最大并发数。
-	MaxConcurrency int32 `json:"max_concurrency"`
+	MaxConcurrency int32 `json:"max_concurrency" xml:"max_concurrency"`
 }
 
 func (o SqlFilterRulePattern) String() string {

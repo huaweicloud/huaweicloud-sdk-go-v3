@@ -10,9 +10,9 @@ import (
 type CreateDiagnosisTaskRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *CreateDiagnosisTaskBody `json:"body,omitempty"`
+	Body *CreateDiagnosisTaskBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateDiagnosisTaskRequest) String() string {

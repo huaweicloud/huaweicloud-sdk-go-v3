@@ -9,7 +9,7 @@ import (
 type CompressRequest struct {
 
 	// GZIP压缩开关。0关闭。1打开
-	CompressSwitch *int32 `json:"compress_switch,omitempty"`
+	CompressSwitch *int32 `json:"compress_switch,omitempty" xml:"compress_switch"`
 }
 
 func (o CompressRequest) String() string {

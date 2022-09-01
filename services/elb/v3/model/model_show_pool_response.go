@@ -10,9 +10,9 @@ import (
 type ShowPoolResponse struct {
 
 	// 请求ID。  注：自动生成 。
-	RequestId *string `json:"request_id,omitempty"`
+	RequestId *string `json:"request_id,omitempty" xml:"request_id"`
 
-	Pool           *Pool `json:"pool,omitempty"`
+	Pool           *Pool `json:"pool,omitempty" xml:"pool"`
 	HttpStatusCode int   `json:"-"`
 }
 

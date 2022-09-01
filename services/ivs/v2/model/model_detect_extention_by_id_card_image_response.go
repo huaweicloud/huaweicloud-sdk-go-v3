@@ -8,9 +8,9 @@ import (
 
 // Response Object
 type DetectExtentionByIdCardImageResponse struct {
-	Meta *Meta `json:"meta,omitempty"`
+	Meta *Meta `json:"meta,omitempty" xml:"meta"`
 
-	Result         *IvsExtentionByIdCardImageResponseBodyResult `json:"result,omitempty"`
+	Result         *IvsExtentionByIdCardImageResponseBodyResult `json:"result,omitempty" xml:"result"`
 	HttpStatusCode int                                          `json:"-"`
 }
 

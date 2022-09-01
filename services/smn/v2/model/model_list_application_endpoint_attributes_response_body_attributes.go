@@ -9,13 +9,13 @@ import (
 type ListApplicationEndpointAttributesResponseBodyAttributes struct {
 
 	// 设备是否可用。
-	Enabled string `json:"enabled"`
+	Enabled string `json:"enabled" xml:"enabled"`
 
 	// 设备token。
-	Token string `json:"token"`
+	Token string `json:"token" xml:"token"`
 
 	// 用户数据。
-	UserData string `json:"user_data"`
+	UserData string `json:"user_data" xml:"user_data"`
 }
 
 func (o ListApplicationEndpointAttributesResponseBodyAttributes) String() string {

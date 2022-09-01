@@ -13,16 +13,16 @@ import (
 type ShowApplicationDependentResourcesRequest struct {
 
 	// 语言类型 中文:zh-cn 英文:en-us
-	XLanguage *ShowApplicationDependentResourcesRequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *ShowApplicationDependentResourcesRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 
 	// 应用id
-	ApplicationId string `json:"application_id"`
+	ApplicationId string `json:"application_id" xml:"application_id"`
 
 	// 每页显示的条目数量
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 偏移量，表示从此偏移量开始查询
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 }
 
 func (o ShowApplicationDependentResourcesRequest) String() string {

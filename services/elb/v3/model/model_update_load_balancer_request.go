@@ -10,9 +10,9 @@ import (
 type UpdateLoadBalancerRequest struct {
 
 	// 负载均衡器ID。
-	LoadbalancerId string `json:"loadbalancer_id"`
+	LoadbalancerId string `json:"loadbalancer_id" xml:"loadbalancer_id"`
 
-	Body *UpdateLoadBalancerRequestBody `json:"body,omitempty"`
+	Body *UpdateLoadBalancerRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateLoadBalancerRequest) String() string {

@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ShowMonthUsagesRequest struct {
-	Body *ShowMonthUsageReq `json:"body,omitempty"`
+	Body *ShowMonthUsageReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o ShowMonthUsagesRequest) String() string {

@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type UpdateSecretStageResponse struct {
-	Stage          *Stage `json:"stage,omitempty"`
+	Stage          *Stage `json:"stage,omitempty" xml:"stage"`
 	HttpStatusCode int    `json:"-"`
 }
 

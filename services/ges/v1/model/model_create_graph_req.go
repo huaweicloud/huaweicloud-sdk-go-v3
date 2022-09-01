@@ -8,7 +8,7 @@ import (
 
 // This is a auto create Body Object
 type CreateGraphReq struct {
-	Graph *Graph `json:"graph"`
+	Graph *Graph `json:"graph" xml:"graph"`
 }
 
 func (o CreateGraphReq) String() string {

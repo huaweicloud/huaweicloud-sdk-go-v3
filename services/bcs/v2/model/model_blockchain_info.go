@@ -9,10 +9,10 @@ import (
 type BlockchainInfo struct {
 
 	// 服务实例ID
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 服务实例名
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 }
 
 func (o BlockchainInfo) String() string {

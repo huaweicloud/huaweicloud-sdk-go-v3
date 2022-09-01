@@ -13,19 +13,19 @@ import (
 type BatchListModulesRequest struct {
 
 	// 边缘节点ID
-	EdgeNodeId string `json:"edge_node_id"`
+	EdgeNodeId string `json:"edge_node_id" xml:"edge_node_id"`
 
 	// 查询的起始位置，取值范围为非负整数，默认为0
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 每页记录数，默认值为10，取值区间为1-1000
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 应用类型
-	AppType *BatchListModulesRequestAppType `json:"app_type,omitempty"`
+	AppType *BatchListModulesRequestAppType `json:"app_type,omitempty" xml:"app_type"`
 
 	// 功能类型
-	FunctionType *BatchListModulesRequestFunctionType `json:"function_type,omitempty"`
+	FunctionType *BatchListModulesRequestFunctionType `json:"function_type,omitempty" xml:"function_type"`
 }
 
 func (o BatchListModulesRequest) String() string {

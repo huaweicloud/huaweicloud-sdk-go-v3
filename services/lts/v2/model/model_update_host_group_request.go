@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type UpdateHostGroupRequest struct {
-	Body *UpdateHostGroupRequestBody `json:"body,omitempty"`
+	Body *UpdateHostGroupRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateHostGroupRequest) String() string {

@@ -10,13 +10,13 @@ import (
 type ListDependenciesResponse struct {
 
 	// 依赖包列表
-	Dependencies *[]ListDependenciesResult `json:"dependencies,omitempty"`
+	Dependencies *[]ListDependenciesResult `json:"dependencies,omitempty" xml:"dependencies"`
 
 	// 下次读取位置
-	NextMarker *int64 `json:"next_marker,omitempty"`
+	NextMarker *int64 `json:"next_marker,omitempty" xml:"next_marker"`
 
 	// 依赖包总数
-	Count          *int64 `json:"count,omitempty"`
+	Count          *int64 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

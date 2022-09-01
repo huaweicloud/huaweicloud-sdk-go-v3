@@ -10,7 +10,7 @@ import (
 type GlanceDeleteImageRequestBody struct {
 
 	// 取值为：true和false true：表示删除整机镜像时，同时删除其关联的云服务器备份。 false：表示只删除整机镜像，不删除其关联的云服务器备份。
-	DeleteBackup *bool `json:"delete_backup,omitempty"`
+	DeleteBackup *bool `json:"delete_backup,omitempty" xml:"delete_backup"`
 }
 
 func (o GlanceDeleteImageRequestBody) String() string {

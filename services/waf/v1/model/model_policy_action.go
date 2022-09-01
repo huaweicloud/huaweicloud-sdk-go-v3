@@ -13,7 +13,7 @@ import (
 type PolicyAction struct {
 
 	// web基础防护动作（log为仅记录、block为拦截）
-	Category *PolicyActionCategory `json:"category,omitempty"`
+	Category *PolicyActionCategory `json:"category,omitempty" xml:"category"`
 }
 
 func (o PolicyAction) String() string {

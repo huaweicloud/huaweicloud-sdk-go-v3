@@ -9,88 +9,88 @@ import (
 type IQueryUserCouponsResultV2 struct {
 
 	// 优惠券实例ID。
-	CouponId *string `json:"coupon_id,omitempty"`
+	CouponId *string `json:"coupon_id,omitempty" xml:"coupon_id"`
 
 	// 优惠券编码。
-	CouponCode *string `json:"coupon_code,omitempty"`
+	CouponCode *string `json:"coupon_code,omitempty" xml:"coupon_code"`
 
 	// 优惠券状态： 1：未激活2：待使用3：已使用4：已过期5：已回收
-	Status *int32 `json:"status,omitempty"`
+	Status *int32 `json:"status,omitempty" xml:"status"`
 
 	// 客户账号ID。
-	CustomerId *string `json:"customer_id,omitempty"`
+	CustomerId *string `json:"customer_id,omitempty" xml:"customer_id"`
 
 	// 优惠券类型： 1：代金券2：折扣券3：产品券4：现金券
-	CouponType *int32 `json:"coupon_type,omitempty"`
+	CouponType *int32 `json:"coupon_type,omitempty" xml:"coupon_type"`
 
 	// 度量单位。 1：元
-	MeasureId *int32 `json:"measure_id,omitempty"`
+	MeasureId *int32 `json:"measure_id,omitempty" xml:"measure_id"`
 
 	// 优惠券金额。
-	FaceValue *float64 `json:"face_value,omitempty"`
+	FaceValue *float64 `json:"face_value,omitempty" xml:"face_value"`
 
 	// 生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
-	ValidTime *string `json:"valid_time,omitempty"`
+	ValidTime *string `json:"valid_time,omitempty" xml:"valid_time"`
 
 	// 失效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
-	ExpireTime *string `json:"expire_time,omitempty"`
+	ExpireTime *string `json:"expire_time,omitempty" xml:"expire_time"`
 
 	// 订单ID。
-	OrderId *string `json:"order_id,omitempty"`
+	OrderId *string `json:"order_id,omitempty" xml:"order_id"`
 
 	// 促销计划ID。
-	PromotionPlanId *string `json:"promotion_plan_id,omitempty"`
+	PromotionPlanId *string `json:"promotion_plan_id,omitempty" xml:"promotion_plan_id"`
 
 	// 促销计划名称。
-	PlanName *string `json:"plan_name,omitempty"`
+	PlanName *string `json:"plan_name,omitempty" xml:"plan_name"`
 
 	// 促销计划描述。
-	PlanDesc *string `json:"plan_desc,omitempty"`
+	PlanDesc *string `json:"plan_desc,omitempty" xml:"plan_desc"`
 
 	// 介质类型。 1：电子券2：纸质券
-	MediaType *int32 `json:"media_type,omitempty"`
+	MediaType *int32 `json:"media_type,omitempty" xml:"media_type"`
 
 	// 获取方式： 1：线上领取2：线上兑换3：线上发放4：线下获取5：事件赠送
-	FetchMethod *int32 `json:"fetch_method,omitempty"`
+	FetchMethod *int32 `json:"fetch_method,omitempty" xml:"fetch_method"`
 
 	// 优惠券使用限制。 具体请参见表3。
-	UseLimits *[]ICouponUseLimitInfoV2 `json:"use_limits,omitempty"`
+	UseLimits *[]ICouponUseLimitInfoV2 `json:"use_limits,omitempty" xml:"use_limits"`
 
 	// 激活时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
-	ActiveTime *string `json:"active_time,omitempty"`
+	ActiveTime *string `json:"active_time,omitempty" xml:"active_time"`
 
 	// 使用时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
-	ReserveTime *string `json:"reserve_time,omitempty"`
+	ReserveTime *string `json:"reserve_time,omitempty" xml:"reserve_time"`
 
 	// 促销ID。
-	PromotionId *string `json:"promotion_id,omitempty"`
+	PromotionId *string `json:"promotion_id,omitempty" xml:"promotion_id"`
 
 	// 创建时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
-	CreateTime *string `json:"create_time,omitempty"`
+	CreateTime *string `json:"create_time,omitempty" xml:"create_time"`
 
 	// 优惠券版本： 1：老版本，老版本优惠券只能使用一次2：新版本，新版本优惠券可以反复使用
-	CouponVersion *int32 `json:"coupon_version,omitempty"`
+	CouponVersion *int32 `json:"coupon_version,omitempty" xml:"coupon_version"`
 
 	// 优惠券余额。单位：元。 如果为老版本优惠券，该值为空。
-	Balance *float64 `json:"balance,omitempty"`
+	Balance *float64 `json:"balance,omitempty" xml:"balance"`
 
 	// 锁定优惠券的订单ID。 如果为老版本优惠券，该值为空。
-	LockOrderId *string `json:"lock_order_id,omitempty"`
+	LockOrderId *string `json:"lock_order_id,omitempty" xml:"lock_order_id"`
 
 	// 优惠券用途。
-	CouponUsage *string `json:"coupon_usage,omitempty"`
+	CouponUsage *string `json:"coupon_usage,omitempty" xml:"coupon_usage"`
 
 	// 优惠券是否冻结： 0：否1：是
-	IsFrozen *string `json:"is_frozen,omitempty"`
+	IsFrozen *string `json:"is_frozen,omitempty" xml:"is_frozen"`
 
 	// 币种。 CNY：人民币
-	Currency *string `json:"currency,omitempty"`
+	Currency *string `json:"currency,omitempty" xml:"currency"`
 
 	// 扩展字段。
-	ExtendParam1 *string `json:"extend_param1,omitempty"`
+	ExtendParam1 *string `json:"extend_param1,omitempty" xml:"extend_param1"`
 
 	// 发券来源。 如果是合作伙伴发送的券，此处为伙伴ID。如果是活动发券，此处为活动ID：云豆兑换优惠券：云豆计划ID累计送优惠券：累计送计划ID抽奖送优惠券：抽奖计划ID事件送优惠券：事件计划ID定制优惠券：创建人ID
-	SourceId *string `json:"source_id,omitempty"`
+	SourceId *string `json:"source_id,omitempty" xml:"source_id"`
 }
 
 func (o IQueryUserCouponsResultV2) String() string {

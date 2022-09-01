@@ -10,10 +10,10 @@ import (
 type CloneServerBrief struct {
 
 	// 克隆服务器ID
-	VmId *string `json:"vm_id,omitempty"`
+	VmId *string `json:"vm_id,omitempty" xml:"vm_id"`
 
 	// 克隆虚拟机的名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 }
 
 func (o CloneServerBrief) String() string {

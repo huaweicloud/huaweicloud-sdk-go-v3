@@ -9,10 +9,10 @@ import (
 type CodeMessageResq struct {
 
 	// code
-	Code *string `json:"code,omitempty"`
+	Code *string `json:"code,omitempty" xml:"code"`
 
 	// message
-	Message *string `json:"message,omitempty"`
+	Message *string `json:"message,omitempty" xml:"message"`
 }
 
 func (o CodeMessageResq) String() string {

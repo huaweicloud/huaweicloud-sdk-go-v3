@@ -9,7 +9,7 @@ import (
 type UpdateTopicAccessPolicyReq struct {
 
 	// 策略列表。
-	Topics []UpdateTopicAccessPolicyTopicsObject `json:"topics"`
+	Topics []UpdateTopicAccessPolicyTopicsObject `json:"topics" xml:"topics"`
 }
 
 func (o UpdateTopicAccessPolicyReq) String() string {

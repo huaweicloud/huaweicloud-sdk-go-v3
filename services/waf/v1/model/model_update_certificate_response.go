@@ -10,16 +10,16 @@ import (
 type UpdateCertificateResponse struct {
 
 	// 证书ID
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 证书名
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 证书过期时间戳
-	ExpireTime *int64 `json:"expire_time,omitempty"`
+	ExpireTime *int64 `json:"expire_time,omitempty" xml:"expire_time"`
 
 	// 时间戳
-	Timestamp      *int64 `json:"timestamp,omitempty"`
+	Timestamp      *int64 `json:"timestamp,omitempty" xml:"timestamp"`
 	HttpStatusCode int    `json:"-"`
 }
 

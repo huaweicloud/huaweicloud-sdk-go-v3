@@ -8,7 +8,7 @@ import (
 
 // 添加保护实例标签请求体
 type ProtectedInstanceAddTagsRequestBody struct {
-	Tag *ResourceTag `json:"tag"`
+	Tag *ResourceTag `json:"tag" xml:"tag"`
 }
 
 func (o ProtectedInstanceAddTagsRequestBody) String() string {

@@ -10,7 +10,7 @@ import (
 type ListLabelValuesAomPromGetRequest struct {
 
 	// 查询所用标签。
-	LabelName string `json:"label_name"`
+	LabelName string `json:"label_name" xml:"label_name"`
 }
 
 func (o ListLabelValuesAomPromGetRequest) String() string {

@@ -10,16 +10,16 @@ import (
 type ListResWorkspacesResponse struct {
 
 	// 是否成功。
-	IsSuccess *bool `json:"is_success,omitempty"`
+	IsSuccess *bool `json:"is_success,omitempty" xml:"is_success"`
 
 	// 工作空间列表。
-	Workspaces *[]Workspaces `json:"workspaces,omitempty"`
+	Workspaces *[]Workspaces `json:"workspaces,omitempty" xml:"workspaces"`
 
 	// 返回消息（请求成功时，不返回此字段）。
-	Message *string `json:"message,omitempty"`
+	Message *string `json:"message,omitempty" xml:"message"`
 
 	// 错误码（请求成功时，不返回此字段）。
-	ErrorCode      *string `json:"error_code,omitempty"`
+	ErrorCode      *string `json:"error_code,omitempty" xml:"error_code"`
 	HttpStatusCode int     `json:"-"`
 }
 

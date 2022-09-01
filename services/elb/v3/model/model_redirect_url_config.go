@@ -13,22 +13,22 @@ import (
 type RedirectUrlConfig struct {
 
 	// 重定向的协议。默认值${protocol}表示继承原值（即与被转发请求保持一致）。  取值范围： - HTTP - HTTPS - ${protocol}
-	Protocol RedirectUrlConfigProtocol `json:"protocol"`
+	Protocol RedirectUrlConfigProtocol `json:"protocol" xml:"protocol"`
 
 	// 重定向的主机名。字符串只能包含英文字母、数字、“-”、“.”。且必须以字母、数字开头。默认值${host}表示继承原值（即与被转发请求保持一致）。
-	Host string `json:"host"`
+	Host string `json:"host" xml:"host"`
 
 	// 重定向到的端口。默认值${port}表示继承原值（即与被转发请求保持一致）。
-	Port string `json:"port"`
+	Port string `json:"port" xml:"port"`
 
 	// 重定向的路径。默认值${path}表示继承原值（即与被转发请求保持一致）。  支持英文字母、数字、_~';@^-%#&$.*+?,=!:|\\/()\\[\\]{}，且必须以\"/\"开头。
-	Path string `json:"path"`
+	Path string `json:"path" xml:"path"`
 
 	// 重定向的查询字符串。默认${query}表示继承原值（即与被转发请求保持一致）。举例如下：   若该字段被设置为：${query}&name=my_name，则在转发符合条件的URL（如https://www.xxx.com:8080/elb?type=loadbalancer，此时${query}表示type=loadbalancer）时，将会重定向到https://www.xxx.com:8080/elb?type=loadbalancer&name=my_name。   只能包含英文字母、数字和特殊字符：!$&'()*+,-./:;=?@^_`。字母区分大小写。
-	Query string `json:"query"`
+	Query string `json:"query" xml:"query"`
 
 	// 重定向后的返回码。  取值范围： - 301 - 302 - 303 - 307 - 308
-	StatusCode RedirectUrlConfigStatusCode `json:"status_code"`
+	StatusCode RedirectUrlConfigStatusCode `json:"status_code" xml:"status_code"`
 }
 
 func (o RedirectUrlConfig) String() string {

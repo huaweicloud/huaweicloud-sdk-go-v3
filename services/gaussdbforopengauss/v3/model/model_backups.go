@@ -12,33 +12,33 @@ import (
 type Backups struct {
 
 	// 备份ID。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 备份名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 备份文件描述信息。
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 备份开始时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
-	BeginTime *string `json:"begin_time,omitempty"`
+	BeginTime *string `json:"begin_time,omitempty" xml:"begin_time"`
 
 	// 备份结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
-	EndTime *string `json:"end_time,omitempty"`
+	EndTime *string `json:"end_time,omitempty" xml:"end_time"`
 
 	// 备份状态
-	Status *BackupsStatus `json:"status,omitempty"`
+	Status *BackupsStatus `json:"status,omitempty" xml:"status"`
 
 	// 备份大小(单位：MB)
-	Size *float64 `json:"size,omitempty"`
+	Size *float64 `json:"size,omitempty" xml:"size"`
 
 	// 备份类型
-	Type *BackupsType `json:"type,omitempty"`
+	Type *BackupsType `json:"type,omitempty" xml:"type"`
 
-	Datastore *OpenGaussDatastore `json:"datastore,omitempty"`
+	Datastore *OpenGaussDatastore `json:"datastore,omitempty" xml:"datastore"`
 
 	// 实例ID。
-	InstanceId *string `json:"instance_id,omitempty"`
+	InstanceId *string `json:"instance_id,omitempty" xml:"instance_id"`
 }
 
 func (o Backups) String() string {

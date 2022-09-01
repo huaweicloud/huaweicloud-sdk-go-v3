@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ListLogHistogramRequest struct {
-	Body *QueryLogKeyWordCountRequestBody `json:"body,omitempty"`
+	Body *QueryLogKeyWordCountRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o ListLogHistogramRequest) String() string {

@@ -9,16 +9,16 @@ import (
 type QosQualityData struct {
 
 	// 用户id
-	Uid *string `json:"uid,omitempty"`
+	Uid *string `json:"uid,omitempty" xml:"uid"`
 
 	// 对端的用户ID，为0时表示本端上行数据
-	Peerid *string `json:"peerid,omitempty"`
+	Peerid *string `json:"peerid,omitempty" xml:"peerid"`
 
 	// 指标ID
-	Mid *string `json:"mid,omitempty"`
+	Mid *string `json:"mid,omitempty" xml:"mid"`
 
 	// 时间戳及相应时间的指标数值列表
-	Data *[]TimeFloatValueData `json:"data,omitempty"`
+	Data *[]TimeFloatValueData `json:"data,omitempty" xml:"data"`
 }
 
 func (o QosQualityData) String() string {

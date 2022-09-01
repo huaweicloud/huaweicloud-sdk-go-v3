@@ -9,13 +9,13 @@ import (
 type ListProductsRespHourly struct {
 
 	// 消息引擎的名称，该字段显示为kafka。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 消息引擎的版本，当前仅支持1.1.0和2.3.0。
-	Version *string `json:"version,omitempty"`
+	Version *string `json:"version,omitempty" xml:"version"`
 
 	// 产品规格列表。
-	Values *[]ListProductsRespValues `json:"values,omitempty"`
+	Values *[]ListProductsRespValues `json:"values,omitempty" xml:"values"`
 }
 
 func (o ListProductsRespHourly) String() string {

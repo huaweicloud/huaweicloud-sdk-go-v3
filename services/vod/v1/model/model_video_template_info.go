@@ -13,19 +13,19 @@ import (
 type VideoTemplateInfo struct {
 
 	// 画质。
-	Quality VideoTemplateInfoQuality `json:"quality"`
+	Quality VideoTemplateInfoQuality `json:"quality" xml:"quality"`
 
 	// 视频宽度。
-	Width *int32 `json:"width,omitempty"`
+	Width *int32 `json:"width,omitempty" xml:"width"`
 
 	// 视频高度。
-	Height *int32 `json:"height,omitempty"`
+	Height *int32 `json:"height,omitempty" xml:"height"`
 
 	// 码率。
-	Bitrate *int32 `json:"bitrate,omitempty"`
+	Bitrate *int32 `json:"bitrate,omitempty" xml:"bitrate"`
 
 	// 帧率（默认为1，1代表自适应，单位是帧每秒）。
-	FrameRate *int32 `json:"frame_rate,omitempty"`
+	FrameRate *int32 `json:"frame_rate,omitempty" xml:"frame_rate"`
 }
 
 func (o VideoTemplateInfo) String() string {

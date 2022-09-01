@@ -8,7 +8,7 @@ import (
 
 // 将弹性公网IP插入共享带宽的请求体
 type AddPublicipsIntoSharedBandwidthRequestBody struct {
-	Bandwidth *AddPublicipsIntoSharedBandwidthOption `json:"bandwidth"`
+	Bandwidth *AddPublicipsIntoSharedBandwidthOption `json:"bandwidth" xml:"bandwidth"`
 }
 
 func (o AddPublicipsIntoSharedBandwidthRequestBody) String() string {

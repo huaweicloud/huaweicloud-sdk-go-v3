@@ -9,9 +9,9 @@ import (
 type Content struct {
 
 	// content_type
-	ContentType *int32 `json:"content_type,omitempty"`
+	ContentType *int32 `json:"content_type,omitempty" xml:"content_type"`
 
-	Content *ContentInfo `json:"content,omitempty"`
+	Content *ContentInfo `json:"content,omitempty" xml:"content"`
 }
 
 func (o Content) String() string {

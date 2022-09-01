@@ -10,12 +10,12 @@ import (
 type UpdateServiceRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 服务ID
-	ServiceId string `json:"service_id"`
+	ServiceId string `json:"service_id" xml:"service_id"`
 
-	Body *UpdateServiceRequestBody `json:"body,omitempty"`
+	Body *UpdateServiceRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateServiceRequest) String() string {

@@ -13,28 +13,28 @@ import (
 type ListEventRequest struct {
 
 	// 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
 
 	// 查询日志的时间范围（不能和from、to同时使用，同时使用以recent为准），且recent参数与from、to必须使用其中一个。当同时使用recent参数与from、to时，以recent参数为准
-	Recent *ListEventRequestRecent `json:"recent,omitempty"`
+	Recent *ListEventRequestRecent `json:"recent,omitempty" xml:"recent"`
 
 	// 起始时间(13位时间戳)，需要和to同时使用，不能和recent参数同时使用
-	From *int64 `json:"from,omitempty"`
+	From *int64 `json:"from,omitempty" xml:"from"`
 
 	// 结束时间(13位时间戳)，需要和from同时使用，不能和recent参数同时使用
-	To *int64 `json:"to,omitempty"`
+	To *int64 `json:"to,omitempty" xml:"to"`
 
 	// 攻击类型:   - vuln：其它攻击类型   - sqli： sql注入攻击   - lfi： 本地文件包含  - cmdi：命令注入攻击   - xss：XSS攻击   - robot：恶意爬虫   - rfi：远程文件包含   - custom_custom：精准防护   - cc: cc攻击   - webshell：网站木马   - custom_whiteblackip：黑白名单拦截   - custom_geoip：地理访问控制拦截   - antitamper：防篡改   - anticrawler：反爬虫    - leakage：网站信息防泄漏   - illegal：非法请求
-	Attacks *[]string `json:"attacks,omitempty"`
+	Attacks *[]string `json:"attacks,omitempty" xml:"attacks"`
 
 	// 域名id，从获取防护网站列表（ListHost）接口获取域名id
-	Hosts *[]string `json:"hosts,omitempty"`
+	Hosts *[]string `json:"hosts,omitempty" xml:"hosts"`
 
 	// 分页查询时，返回第几页数据。默认值为1，表示返回第1页数据。
-	Page *int32 `json:"page,omitempty"`
+	Page *int32 `json:"page,omitempty" xml:"page"`
 
 	// 分页查询时，每页包含多少条结果。范围1-100，默认值为10，表示每页包含10条结果。
-	Pagesize *int32 `json:"pagesize,omitempty"`
+	Pagesize *int32 `json:"pagesize,omitempty" xml:"pagesize"`
 }
 
 func (o ListEventRequest) String() string {

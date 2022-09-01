@@ -10,10 +10,10 @@ import (
 type StartRequest struct {
 
 	// 会议ID
-	ConferenceID string `json:"conferenceID"`
+	ConferenceID string `json:"conferenceID" xml:"conferenceID"`
 
 	// 主席密码
-	Password string `json:"password"`
+	Password string `json:"password" xml:"password"`
 }
 
 func (o StartRequest) String() string {

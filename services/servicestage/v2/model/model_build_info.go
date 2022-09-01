@@ -10,9 +10,9 @@ import (
 type BuildInfo struct {
 
 	// 构建ID，查看构建列表获取。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
-	Parameters *BuildInfoParameters `json:"parameters,omitempty"`
+	Parameters *BuildInfoParameters `json:"parameters,omitempty" xml:"parameters"`
 }
 
 func (o BuildInfo) String() string {

@@ -8,7 +8,7 @@ import (
 
 //
 type UpdateSubnetRequestBody struct {
-	Subnet *UpdateSubnetOption `json:"subnet"`
+	Subnet *UpdateSubnetOption `json:"subnet" xml:"subnet"`
 }
 
 func (o UpdateSubnetRequestBody) String() string {

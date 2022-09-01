@@ -10,7 +10,7 @@ import (
 type BatchDeleteAlarmRulesResponse struct {
 
 	// 成功删除的告警规则ID列表
-	AlarmIds       *[]string `json:"alarm_ids,omitempty"`
+	AlarmIds       *[]string `json:"alarm_ids,omitempty" xml:"alarm_ids"`
 	HttpStatusCode int       `json:"-"`
 }
 

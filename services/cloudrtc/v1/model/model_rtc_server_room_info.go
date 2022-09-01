@@ -12,25 +12,25 @@ import (
 type RtcServerRoomInfo struct {
 
 	// 域名
-	Domain *string `json:"domain,omitempty"`
+	Domain *string `json:"domain,omitempty" xml:"domain"`
 
 	// 应用标识
-	App *string `json:"app,omitempty"`
+	App *string `json:"app,omitempty" xml:"app"`
 
 	// 房间ID
-	RoomId *string `json:"room_id,omitempty"`
+	RoomId *string `json:"room_id,omitempty" xml:"room_id"`
 
 	// 房间状态，取值如下：  - RUNNING：开启中  - CLOSED：已关闭
-	State *RtcServerRoomInfoState `json:"state,omitempty"`
+	State *RtcServerRoomInfoState `json:"state,omitempty" xml:"state"`
 
 	// 房间持续时长
-	Duration *int32 `json:"duration,omitempty"`
+	Duration *int32 `json:"duration,omitempty" xml:"duration"`
 
 	// 房间开始时间，即第一个用户加入房间时间，UTC时间，格式：YYYY-MM-DDThh:mm:ssZ，如2020-04-23T07:00:00Z
-	StartTime *string `json:"start_time,omitempty"`
+	StartTime *string `json:"start_time,omitempty" xml:"start_time"`
 
 	// 房间关闭时间，即最后一个room_uuid关闭的时间，UTC时间，格式：YYYY-MM-DDThh:mm:ssZ，如2020-04-23T07:00:00Z，若房间未关闭，则返回 “-”
-	EndTime *string `json:"end_time,omitempty"`
+	EndTime *string `json:"end_time,omitempty" xml:"end_time"`
 }
 
 func (o RtcServerRoomInfo) String() string {

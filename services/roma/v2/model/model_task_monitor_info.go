@@ -13,64 +13,64 @@ import (
 type TaskMonitorInfo struct {
 
 	// 任务ID
-	TaskId *string `json:"task_id,omitempty"`
+	TaskId *string `json:"task_id,omitempty" xml:"task_id"`
 
 	// 任务名称
-	TaskName *string `json:"task_name,omitempty"`
+	TaskName *string `json:"task_name,omitempty" xml:"task_name"`
 
 	// 任务类型, 只允许两种类型:TIMING-定时任务, REALTIME-实时任务
-	TaskType *TaskMonitorInfoTaskType `json:"task_type,omitempty"`
+	TaskType *TaskMonitorInfoTaskType `json:"task_type,omitempty" xml:"task_type"`
 
 	// 任务状态, 只允许两种类型:0-停止, 1-运行中
-	Status *TaskMonitorInfoStatus `json:"status,omitempty"`
+	Status *TaskMonitorInfoStatus `json:"status,omitempty" xml:"status"`
 
 	// 任务最近一次执行时间，格式timestamp(ms)，使用UTC时区
-	LastExecuteTime *int64 `json:"last_execute_time,omitempty"`
+	LastExecuteTime *int64 `json:"last_execute_time,omitempty" xml:"last_execute_time"`
 
 	// 任务是否使用Quartz表达式，只有定时任务才有该属性
-	UseQuartzCron *bool `json:"use_quartz_cron,omitempty"`
+	UseQuartzCron *bool `json:"use_quartz_cron,omitempty" xml:"use_quartz_cron"`
 
 	// CRON表达式，只有定时任务且use_quartz_cron为true时才有该属性
-	Cron *string `json:"cron,omitempty"`
+	Cron *string `json:"cron,omitempty" xml:"cron"`
 
 	// 调度周期的单位，如天，小时等，只有定时任务且use_quartz_cron为false时才有该属性，当前仅允许如下类型：MIN-分钟, HOUR-小时, DAY-天, WEEK-周, MON-月
-	Period *TaskMonitorInfoPeriod `json:"period,omitempty"`
+	Period *TaskMonitorInfoPeriod `json:"period,omitempty" xml:"period"`
 
 	// 调度周期，和period字段一起可以确定每隔多长时间调度一次，只有定时任务且use_quartz_cron为false时才有该属性
-	DispatchInterval *int32 `json:"dispatch_interval,omitempty"`
+	DispatchInterval *int32 `json:"dispatch_interval,omitempty" xml:"dispatch_interval"`
 
 	// 标识最近一次任务执行到哪一个阶段，允许如下值：ADAPTER-任务处于初始化阶段, READER-任务正在执行Reader读操作, WRITER-任务正在执行Writer写操作
-	Position *TaskMonitorInfoPosition `json:"position,omitempty"`
+	Position *TaskMonitorInfoPosition `json:"position,omitempty" xml:"position"`
 
 	// 任务最近一次执行状态，允许如下值：UNSTARTED-未启动, WAITING-等待调度中, RUNNING-执行中, SUCCESS-执行成功, CANCELLED-任务取消, ERROR-执行异常
-	ExecuteStatus *TaskMonitorInfoExecuteStatus `json:"execute_status,omitempty"`
+	ExecuteStatus *TaskMonitorInfoExecuteStatus `json:"execute_status,omitempty" xml:"execute_status"`
 
 	// 任务源端数据源所属应用ID
-	SourceAppId *string `json:"source_app_id,omitempty"`
+	SourceAppId *string `json:"source_app_id,omitempty" xml:"source_app_id"`
 
 	// 任务源端数据源所属应用名称
-	SourceAppName *string `json:"source_app_name,omitempty"`
+	SourceAppName *string `json:"source_app_name,omitempty" xml:"source_app_name"`
 
 	// 任务源端数据源所属实例ID
-	SourceInstanceId *string `json:"source_instance_id,omitempty"`
+	SourceInstanceId *string `json:"source_instance_id,omitempty" xml:"source_instance_id"`
 
 	// 任务目标端数据源所属应用ID
-	TargetAppId *string `json:"target_app_id,omitempty"`
+	TargetAppId *string `json:"target_app_id,omitempty" xml:"target_app_id"`
 
 	// 任务目标端数据源所属应用名称
-	TargetAppName *string `json:"target_app_name,omitempty"`
+	TargetAppName *string `json:"target_app_name,omitempty" xml:"target_app_name"`
 
 	// 任务目标端数据源所属实例ID
-	TargetInstanceId *string `json:"target_instance_id,omitempty"`
+	TargetInstanceId *string `json:"target_instance_id,omitempty" xml:"target_instance_id"`
 
 	// 任务扩展类型，当前如果是CDC组合任务，该字段为CDC，否则为null
-	ExtType *TaskMonitorInfoExtType `json:"ext_type,omitempty"`
+	ExtType *TaskMonitorInfoExtType `json:"ext_type,omitempty" xml:"ext_type"`
 
 	// 任务所属企业项目ID，默认为0
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
 
 	// 任务标签
-	TaskTag *string `json:"task_tag,omitempty"`
+	TaskTag *string `json:"task_tag,omitempty" xml:"task_tag"`
 }
 
 func (o TaskMonitorInfo) String() string {

@@ -9,22 +9,22 @@ import (
 type StructFieldInfo struct {
 
 	// 结构化方式
-	IsAnalysis bool `json:"isAnalysis"`
+	IsAnalysis bool `json:"isAnalysis" xml:"isAnalysis"`
 
 	// 字段内容
-	Content *string `json:"content,omitempty"`
+	Content *string `json:"content,omitempty" xml:"content"`
 
 	// 字段名称
-	FieldName *string `json:"fieldName,omitempty"`
+	FieldName *string `json:"fieldName,omitempty" xml:"fieldName"`
 
 	// 字段数据类型,例：string，long，float
-	Type string `json:"type"`
+	Type string `json:"type" xml:"type"`
 
 	// 自定义别名(json方式中按需添加)
-	UserDefinedName *string `json:"userDefinedName,omitempty"`
+	UserDefinedName *string `json:"userDefinedName,omitempty" xml:"userDefinedName"`
 
 	// 序号
-	Index *int32 `json:"index,omitempty"`
+	Index *int32 `json:"index,omitempty" xml:"index"`
 }
 
 func (o StructFieldInfo) String() string {

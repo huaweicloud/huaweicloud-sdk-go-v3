@@ -10,7 +10,7 @@ import (
 type BatchStopMigrationTasksBody struct {
 
 	// 数据迁移任务列表。
-	MigrationTasks []string `json:"migration_tasks"`
+	MigrationTasks []string `json:"migration_tasks" xml:"migration_tasks"`
 }
 
 func (o BatchStopMigrationTasksBody) String() string {

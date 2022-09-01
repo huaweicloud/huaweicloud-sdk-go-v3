@@ -10,43 +10,43 @@ import (
 type CorpBasicInfoDto struct {
 
 	// 企业id
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 企业名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 企业所在地
-	Address *string `json:"address,omitempty"`
+	Address *string `json:"address,omitempty" xml:"address"`
 
 	// 管理员名称
-	AdminName *string `json:"adminName,omitempty"`
+	AdminName *string `json:"adminName,omitempty" xml:"adminName"`
 
 	// 管理员账号
-	Account *string `json:"account,omitempty"`
+	Account *string `json:"account,omitempty" xml:"account"`
 
 	// 管理员手机
-	Phone *string `json:"phone,omitempty"`
+	Phone *string `json:"phone,omitempty" xml:"phone"`
 
 	// 管理员手机所属的国家
-	Country *string `json:"country,omitempty"`
+	Country *string `json:"country,omitempty" xml:"country"`
 
 	// 管理员邮箱
-	Email *string `json:"email,omitempty"`
+	Email *string `json:"email,omitempty" xml:"email"`
 
 	// 是否发送短信
-	EnableSMS *bool `json:"enableSMS,omitempty"`
+	EnableSMS *bool `json:"enableSMS,omitempty" xml:"enableSMS"`
 
 	// 是否开启云盘
-	EnableCloudDisk *bool `json:"enableCloudDisk,omitempty"`
+	EnableCloudDisk *bool `json:"enableCloudDisk,omitempty" xml:"enableCloudDisk"`
 
 	// 是否具有pstn功能
-	EnablePstn *bool `json:"enablePstn,omitempty"`
+	EnablePstn *bool `json:"enablePstn,omitempty" xml:"enablePstn"`
 
 	// 是否支持自动开户
-	AutoUserCreate *bool `json:"autoUserCreate,omitempty"`
+	AutoUserCreate *bool `json:"autoUserCreate,omitempty" xml:"autoUserCreate"`
 
 	// 企业类型
-	CorpType *int32 `json:"corpType,omitempty"`
+	CorpType *int32 `json:"corpType,omitempty" xml:"corpType"`
 }
 
 func (o CorpBasicInfoDto) String() string {

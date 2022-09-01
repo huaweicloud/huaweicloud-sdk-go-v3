@@ -10,9 +10,9 @@ import (
 type BatchTagActionRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *BatchTagActionRequestBody `json:"body,omitempty"`
+	Body *BatchTagActionRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchTagActionRequest) String() string {

@@ -13,47 +13,47 @@ import (
 type TemplateRequest struct {
 
 	// 模板名称
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 是否是通用模板，如果模板关联一个任务，则不算通用模板
-	IsTemplate bool `json:"is_template"`
+	IsTemplate bool `json:"is_template" xml:"is_template"`
 
 	// Region信息
-	Region string `json:"region"`
+	Region string `json:"region" xml:"region"`
 
 	// 项目ID
-	Projectid string `json:"projectid"`
+	Projectid string `json:"projectid" xml:"projectid"`
 
 	// 目标端服务器名称
-	TargetServerName *string `json:"target_server_name,omitempty"`
+	TargetServerName *string `json:"target_server_name,omitempty" xml:"target_server_name"`
 
 	// 可用区
-	AvailabilityZone *string `json:"availability_zone,omitempty"`
+	AvailabilityZone *string `json:"availability_zone,omitempty" xml:"availability_zone"`
 
 	// 磁盘类型
-	Volumetype *TemplateRequestVolumetype `json:"volumetype,omitempty"`
+	Volumetype *TemplateRequestVolumetype `json:"volumetype,omitempty" xml:"volumetype"`
 
 	// 虚拟机规格
-	Flavor *string `json:"flavor,omitempty"`
+	Flavor *string `json:"flavor,omitempty" xml:"flavor"`
 
-	Vpc *VpcObject `json:"vpc,omitempty"`
+	Vpc *VpcObject `json:"vpc,omitempty" xml:"vpc"`
 
 	// 网卡信息，支持多个网卡，如果是自动创建，只填一个，id使用“autoCreate”
-	Nics *[]Nics `json:"nics,omitempty"`
+	Nics *[]Nics `json:"nics,omitempty" xml:"nics"`
 
 	// 安全组，支持多个安全组，如果是自动创建，只填一个，id使用“autoCreate”
-	SecurityGroups *[]SgObject `json:"security_groups,omitempty"`
+	SecurityGroups *[]SgObject `json:"security_groups,omitempty" xml:"security_groups"`
 
-	Publicip *PublicIp `json:"publicip,omitempty"`
+	Publicip *PublicIp `json:"publicip,omitempty" xml:"publicip"`
 
 	// 磁盘信息
-	Disk *[]TemplateDisk `json:"disk,omitempty"`
+	Disk *[]TemplateDisk `json:"disk,omitempty" xml:"disk"`
 
 	// 数据盘磁盘类型
-	DataVolumeType *TemplateRequestDataVolumeType `json:"data_volume_type,omitempty"`
+	DataVolumeType *TemplateRequestDataVolumeType `json:"data_volume_type,omitempty" xml:"data_volume_type"`
 
 	// 目的端密码
-	TargetPassword *string `json:"target_password,omitempty"`
+	TargetPassword *string `json:"target_password,omitempty" xml:"target_password"`
 }
 
 func (o TemplateRequest) String() string {

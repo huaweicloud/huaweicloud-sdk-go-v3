@@ -10,10 +10,10 @@ import (
 type ListChildIssuesV4Request struct {
 
 	// devcloud项目的32位id
-	ProjectId string `json:"project_id"`
+	ProjectId string `json:"project_id" xml:"project_id"`
 
 	// 工作项id
-	IssueId int32 `json:"issue_id"`
+	IssueId int32 `json:"issue_id" xml:"issue_id"`
 }
 
 func (o ListChildIssuesV4Request) String() string {

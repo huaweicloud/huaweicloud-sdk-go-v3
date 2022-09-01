@@ -9,10 +9,10 @@ import (
 type InnerLatencyStats struct {
 
 	// 最大网关内部延时  单位：ms
-	MaxInnerLatency *int32 `json:"max_inner_latency,omitempty"`
+	MaxInnerLatency *int32 `json:"max_inner_latency,omitempty" xml:"max_inner_latency"`
 
 	// 平均网关内部延时  单位：ms
-	AvgInnerLatency *float32 `json:"avg_inner_latency,omitempty"`
+	AvgInnerLatency *float32 `json:"avg_inner_latency,omitempty" xml:"avg_inner_latency"`
 }
 
 func (o InnerLatencyStats) String() string {

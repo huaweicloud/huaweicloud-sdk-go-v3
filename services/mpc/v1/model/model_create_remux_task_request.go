@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateRemuxTaskRequest struct {
-	Body *CreateRemuxTaskReq `json:"body,omitempty"`
+	Body *CreateRemuxTaskReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateRemuxTaskRequest) String() string {

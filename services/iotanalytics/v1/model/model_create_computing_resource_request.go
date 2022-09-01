@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateComputingResourceRequest struct {
-	Body *CreateComputingResourceRequestBody `json:"body,omitempty"`
+	Body *CreateComputingResourceRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateComputingResourceRequest) String() string {

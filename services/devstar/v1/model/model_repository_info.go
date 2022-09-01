@@ -9,31 +9,31 @@ import (
 type RepositoryInfo struct {
 
 	// 代码仓的名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 代码仓描述。
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 项目id。
-	ProjectId *string `json:"project_id,omitempty"`
+	ProjectId *string `json:"project_id,omitempty" xml:"project_id"`
 
 	// 区域id。
-	RegionId *string `json:"region_id,omitempty"`
+	RegionId *string `json:"region_id,omitempty" xml:"region_id"`
 
 	// 根据编程语言生成gitignore文件。
-	Gitignore *string `json:"gitignore,omitempty"`
+	Gitignore *string `json:"gitignore,omitempty" xml:"gitignore"`
 
 	// 是否允许项目内成员访问仓库： - 0：不允许 - 1：允许
-	MemberPermission *int32 `json:"member_permission,omitempty"`
+	MemberPermission *int32 `json:"member_permission,omitempty" xml:"member_permission"`
 
 	// 是否允许生成README文件： - 0：不允许 - 1：允许
-	ReadmePermission *int32 `json:"readme_permission,omitempty"`
+	ReadmePermission *int32 `json:"readme_permission,omitempty" xml:"readme_permission"`
 
 	// 是否公开： - 0：私有 - 20：公开只读
-	VisibilityLevel *int32 `json:"visibility_level,omitempty"`
+	VisibilityLevel *int32 `json:"visibility_level,omitempty" xml:"visibility_level"`
 
 	//  开源许可证id （0:默认）。
-	LicenseId *int32 `json:"license_id,omitempty"`
+	LicenseId *int32 `json:"license_id,omitempty" xml:"license_id"`
 }
 
 func (o RepositoryInfo) String() string {

@@ -10,10 +10,10 @@ import (
 type Region struct {
 
 	// 区域ID
-	RegionId *string `json:"region_id,omitempty"`
+	RegionId *string `json:"region_id,omitempty" xml:"region_id"`
 
 	// 区域显示名称
-	DisplayName *string `json:"display_name,omitempty"`
+	DisplayName *string `json:"display_name,omitempty" xml:"display_name"`
 }
 
 func (o Region) String() string {

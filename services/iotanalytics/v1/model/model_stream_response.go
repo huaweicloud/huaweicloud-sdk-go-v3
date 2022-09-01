@@ -10,13 +10,13 @@ import (
 type StreamResponse struct {
 
 	// 输入参数
-	Inputs *[]InputResponse `json:"inputs,omitempty"`
+	Inputs *[]InputResponse `json:"inputs,omitempty" xml:"inputs"`
 
 	// 流计算任务ID
-	JobId *string `json:"job_id,omitempty"`
+	JobId *string `json:"job_id,omitempty" xml:"job_id"`
 
 	// 输出属性，最多支持10个
-	Outputs *[]StreamOutput `json:"outputs,omitempty"`
+	Outputs *[]StreamOutput `json:"outputs,omitempty" xml:"outputs"`
 }
 
 func (o StreamResponse) String() string {

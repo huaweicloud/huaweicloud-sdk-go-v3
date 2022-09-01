@@ -10,19 +10,19 @@ import (
 type ShowScanJobsRequest struct {
 
 	// 页码
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 分页大小
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 内容
-	Content *string `json:"content,omitempty"`
+	Content *string `json:"content,omitempty" xml:"content"`
 
 	// 预留，待启用
-	StartTime *string `json:"start_time,omitempty"`
+	StartTime *string `json:"start_time,omitempty" xml:"start_time"`
 
 	// 预留，待启用
-	EndTime *string `json:"end_time,omitempty"`
+	EndTime *string `json:"end_time,omitempty" xml:"end_time"`
 }
 
 func (o ShowScanJobsRequest) String() string {

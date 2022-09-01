@@ -10,28 +10,28 @@ import (
 type ListEdgeNodesRequest struct {
 
 	// 节点名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 节点状态,OFFLINE|ONLINE|UNINSTALLED|INSTALLED|DELETING|UPGRADING
-	State *string `json:"state,omitempty"`
+	State *string `json:"state,omitempty" xml:"state"`
 
 	// 节点所属资源类型，advanced|standard
-	Type *string `json:"type,omitempty"`
+	Type *string `json:"type,omitempty" xml:"type"`
 
 	// 实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
-	InstanceId *string `json:"instance_id,omitempty"`
+	InstanceId *string `json:"instance_id,omitempty" xml:"instance_id"`
 
 	// 资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，可以携带该参数查询指定资源空间下的设备列表，不携带该参数则会查询该用户下所有设备列表。
-	SpaceId *string `json:"space_id,omitempty"`
+	SpaceId *string `json:"space_id,omitempty" xml:"space_id"`
 
 	// 节点id列表,查询ID在给的节点ID列表内的节点信息
-	NodeIds *[]string `json:"node_ids,omitempty"`
+	NodeIds *[]string `json:"node_ids,omitempty" xml:"node_ids"`
 
 	// 查询的起始位置，取值范围为非负整数，默认为0
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 每页记录数，默认值为10，取值区间为1-1000
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 }
 
 func (o ListEdgeNodesRequest) String() string {

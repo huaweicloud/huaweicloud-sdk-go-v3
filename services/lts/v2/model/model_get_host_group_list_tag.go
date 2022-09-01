@@ -13,10 +13,10 @@ import (
 type GetHostGroupListTag struct {
 
 	// 标签类型。AND：标签过滤的逻辑为与，OR：标签过滤的逻辑为或
-	TagType *GetHostGroupListTagTagType `json:"tag_type,omitempty"`
+	TagType *GetHostGroupListTagTagType `json:"tag_type,omitempty" xml:"tag_type"`
 
 	// 主机组标签
-	TagList *[]HostGroupTag `json:"tag_list,omitempty"`
+	TagList *[]HostGroupTag `json:"tag_list,omitempty" xml:"tag_list"`
 }
 
 func (o GetHostGroupListTag) String() string {

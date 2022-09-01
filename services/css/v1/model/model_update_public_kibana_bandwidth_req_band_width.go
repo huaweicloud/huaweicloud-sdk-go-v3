@@ -10,7 +10,7 @@ import (
 type UpdatePublicKibanaBandwidthReqBandWidth struct {
 
 	// 修改后的带宽大小。
-	Size int32 `json:"size"`
+	Size int32 `json:"size" xml:"size"`
 }
 
 func (o UpdatePublicKibanaBandwidthReqBandWidth) String() string {

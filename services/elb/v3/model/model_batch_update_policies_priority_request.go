@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type BatchUpdatePoliciesPriorityRequest struct {
-	Body *BatchUpdatePoliciesPriorityRequestBody `json:"body,omitempty"`
+	Body *BatchUpdatePoliciesPriorityRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchUpdatePoliciesPriorityRequest) String() string {

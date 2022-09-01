@@ -10,12 +10,12 @@ import (
 type ImportLiveDataApiDefinitionsV2Response struct {
 
 	// 导入成功信息
-	Success *[]Success `json:"success,omitempty"`
+	Success *[]Success `json:"success,omitempty" xml:"success"`
 
 	// 导入失败信息
-	Failure *[]Failure `json:"failure,omitempty"`
+	Failure *[]Failure `json:"failure,omitempty" xml:"failure"`
 
-	Swagger        *Swagger `json:"swagger,omitempty"`
+	Swagger        *Swagger `json:"swagger,omitempty" xml:"swagger"`
 	HttpStatusCode int      `json:"-"`
 }
 

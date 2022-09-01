@@ -10,58 +10,58 @@ import (
 type ShowTemplateDetailResponse struct {
 
 	// 模板ID
-	TemplateId *string `json:"template_id,omitempty"`
+	TemplateId *string `json:"template_id,omitempty" xml:"template_id"`
 
 	// 模板名字
-	TemplateName *string `json:"template_name,omitempty"`
+	TemplateName *string `json:"template_name,omitempty" xml:"template_name"`
 
 	// 模板类型
-	TemplateType *string `json:"template_type,omitempty"`
+	TemplateType *string `json:"template_type,omitempty" xml:"template_type"`
 
 	// 用户ID
-	UserId *string `json:"user_id,omitempty"`
+	UserId *string `json:"user_id,omitempty" xml:"user_id"`
 
 	// 用户名字
-	UserName *string `json:"user_name,omitempty"`
+	UserName *string `json:"user_name,omitempty" xml:"user_name"`
 
 	// 租户ID
-	DomainId *string `json:"domain_id,omitempty"`
+	DomainId *string `json:"domain_id,omitempty" xml:"domain_id"`
 
 	// 租户名字
-	DomainName *string `json:"domain_name,omitempty"`
+	DomainName *string `json:"domain_name,omitempty" xml:"domain_name"`
 
 	// 是否内置模板
-	IsBuildIn *bool `json:"is_build_in,omitempty"`
+	IsBuildIn *bool `json:"is_build_in,omitempty" xml:"is_build_in"`
 
 	// region
-	Region *string `json:"region,omitempty"`
+	Region *string `json:"region,omitempty" xml:"region"`
 
 	// 项目ID
-	ProjectId *string `json:"project_id,omitempty"`
+	ProjectId *string `json:"project_id,omitempty" xml:"project_id"`
 
 	// 项目名字
-	ProjectName *string `json:"project_name,omitempty"`
+	ProjectName *string `json:"project_name,omitempty" xml:"project_name"`
 
 	// 创建时间
-	CreateTime *string `json:"create_time,omitempty"`
+	CreateTime *string `json:"create_time,omitempty" xml:"create_time"`
 
 	// 修改时间
-	LastModifyTime *string `json:"last_modify_time,omitempty"`
+	LastModifyTime *string `json:"last_modify_time,omitempty" xml:"last_modify_time"`
 
 	// 是否关注
-	IsWatch *bool `json:"is_watch,omitempty"`
+	IsWatch *bool `json:"is_watch,omitempty" xml:"is_watch"`
 
 	// 模板描述
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 模板参数
-	Parameter *[]TemplateParam `json:"parameter,omitempty"`
+	Parameter *[]TemplateParam `json:"parameter,omitempty" xml:"parameter"`
 
 	// 编排flow详情，描述流水线内各阶段任务的串并行关系。map类型数据，key为阶段名字，默认第一阶段initial，最后阶段为final，其余名字以'state_数字'标识。value为该阶段内任务(以'Task_数字'标识)以及后续阶段的标识。本字段为描述流水线基础编排数据之一，建议可通过流水线真实界面基于模板创建接口中获取
-	Flow map[string]map[string]string `json:"flow,omitempty"`
+	Flow map[string]map[string]string `json:"flow,omitempty" xml:"flow"`
 
 	// 编排State详情，map类型数据。本字段为描述流水线基础编排数据之一，建议可通过流水线真实界面基于模板创建接口中获取
-	States         map[string]TemplateState `json:"states,omitempty"`
+	States         map[string]TemplateState `json:"states,omitempty" xml:"states"`
 	HttpStatusCode int                      `json:"-"`
 }
 

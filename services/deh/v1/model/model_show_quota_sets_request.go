@@ -10,10 +10,10 @@ import (
 type ShowQuotaSetsRequest struct {
 
 	// 租户ID。  可以从专属主机控制台查询，或者通过调用查询专属主机列表API获取。
-	TenantId string `json:"tenant_id"`
+	TenantId string `json:"tenant_id" xml:"tenant_id"`
 
 	// 配额类别。
-	Resource *string `json:"resource,omitempty"`
+	Resource *string `json:"resource,omitempty" xml:"resource"`
 }
 
 func (o ShowQuotaSetsRequest) String() string {

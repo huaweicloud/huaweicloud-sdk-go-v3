@@ -10,12 +10,12 @@ import (
 type BatchListModulesResponse struct {
 
 	// 总记录数
-	Count *int64 `json:"count,omitempty"`
+	Count *int64 `json:"count,omitempty" xml:"count"`
 
-	PageInfo *PageInfoDto `json:"page_info,omitempty"`
+	PageInfo *PageInfoDto `json:"page_info,omitempty" xml:"page_info"`
 
 	// 每页记录数
-	Modules        *[]EdgeModuleDto `json:"modules,omitempty"`
+	Modules        *[]EdgeModuleDto `json:"modules,omitempty" xml:"modules"`
 	HttpStatusCode int              `json:"-"`
 }
 

@@ -10,10 +10,10 @@ import (
 type ListTemplateGroupCollectionResponse struct {
 
 	// 模板组集合信息<br/>
-	TemplateGroupCollectionList *[]TemplateGroupCollection `json:"template_group_collection_list,omitempty"`
+	TemplateGroupCollectionList *[]TemplateGroupCollection `json:"template_group_collection_list,omitempty" xml:"template_group_collection_list"`
 
 	// 总记录条数<br/>
-	Total          *int32 `json:"total,omitempty"`
+	Total          *int32 `json:"total,omitempty" xml:"total"`
 	HttpStatusCode int    `json:"-"`
 }
 

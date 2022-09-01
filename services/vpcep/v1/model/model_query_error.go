@@ -10,10 +10,10 @@ import (
 type QueryError struct {
 
 	// 错误编码。
-	ErrorCode *string `json:"error_code,omitempty"`
+	ErrorCode *string `json:"error_code,omitempty" xml:"error_code"`
 
 	// 错误信息。
-	ErrorMessage *string `json:"error_message,omitempty"`
+	ErrorMessage *string `json:"error_message,omitempty" xml:"error_message"`
 }
 
 func (o QueryError) String() string {

@@ -10,9 +10,9 @@ import (
 type UpdateSnapshotSettingRequest struct {
 
 	// 指定待操作的集群ID。
-	ClusterId string `json:"cluster_id"`
+	ClusterId string `json:"cluster_id" xml:"cluster_id"`
 
-	Body *UpdateSnapshotSettingReq `json:"body,omitempty"`
+	Body *UpdateSnapshotSettingReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateSnapshotSettingRequest) String() string {

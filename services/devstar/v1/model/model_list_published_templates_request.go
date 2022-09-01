@@ -13,16 +13,16 @@ import (
 type ListPublishedTemplatesRequest struct {
 
 	// 语言类型，缺省值为“zh-cn”。  枚举值： - zh-cn：中文 - en-us：英文
-	XLanguage *ListPublishedTemplatesRequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *ListPublishedTemplatesRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 
 	// 搜索关键字，支持按名称和描述搜索，默认null。
-	Keyword *string `json:"keyword,omitempty"`
+	Keyword *string `json:"keyword,omitempty" xml:"keyword"`
 
 	// 偏移量，表示从此偏移量开始查询，offset大于等于0。
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 每页的模板条数，默认10。
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 }
 
 func (o ListPublishedTemplatesRequest) String() string {

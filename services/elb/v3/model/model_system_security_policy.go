@@ -9,16 +9,16 @@ import (
 type SystemSecurityPolicy struct {
 
 	// 系统安全策略的名称。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 系统安全策略的TLS协议列表。
-	Protocols string `json:"protocols"`
+	Protocols string `json:"protocols" xml:"protocols"`
 
 	// 系统安全策略的加密套件列表。
-	Ciphers string `json:"ciphers"`
+	Ciphers string `json:"ciphers" xml:"ciphers"`
 
 	// 项目id。
-	ProjectId string `json:"project_id"`
+	ProjectId string `json:"project_id" xml:"project_id"`
 }
 
 func (o SystemSecurityPolicy) String() string {

@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowHttpInfoResponse struct {
-	Https          *HttpInfoResponseBody `json:"https,omitempty"`
+	Https          *HttpInfoResponseBody `json:"https,omitempty" xml:"https"`
 	HttpStatusCode int                   `json:"-"`
 }
 

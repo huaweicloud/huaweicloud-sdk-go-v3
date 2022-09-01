@@ -10,10 +10,10 @@ import (
 type Tag struct {
 
 	// 标签键
-	Key *string `json:"key,omitempty"`
+	Key *string `json:"key,omitempty" xml:"key"`
 
 	// 标签值
-	Value *string `json:"value,omitempty"`
+	Value *string `json:"value,omitempty" xml:"value"`
 }
 
 func (o Tag) String() string {

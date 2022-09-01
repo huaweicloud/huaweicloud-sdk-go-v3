@@ -10,10 +10,10 @@ import (
 type ListSlowLogsResponse struct {
 
 	// 具体信息。
-	SlowLogList *[]SlowlogResult `json:"slow_log_list,omitempty"`
+	SlowLogList *[]SlowlogResult `json:"slow_log_list,omitempty" xml:"slow_log_list"`
 
 	// 数据库版本总记录数。
-	TotalRecord    *int32 `json:"total_record,omitempty"`
+	TotalRecord    *int32 `json:"total_record,omitempty" xml:"total_record"`
 	HttpStatusCode int    `json:"-"`
 }
 

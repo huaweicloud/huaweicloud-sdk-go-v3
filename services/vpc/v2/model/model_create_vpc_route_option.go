@@ -13,16 +13,16 @@ import (
 type CreateVpcRouteOption struct {
 
 	// 路由目的地址CIDR，如192.168.200.0/24。
-	Destination string `json:"destination"`
+	Destination string `json:"destination" xml:"destination"`
 
 	// 功能说明：路由下一跳  取值范围：如果type为peering类型，则nexthop为peering的ID
-	Nexthop string `json:"nexthop"`
+	Nexthop string `json:"nexthop" xml:"nexthop"`
 
 	// 功能说明：路由类型  取值范围：peering
-	Type CreateVpcRouteOptionType `json:"type"`
+	Type CreateVpcRouteOptionType `json:"type" xml:"type"`
 
 	// 请求添加路由的VPC ID
-	VpcId string `json:"vpc_id"`
+	VpcId string `json:"vpc_id" xml:"vpc_id"`
 }
 
 func (o CreateVpcRouteOption) String() string {

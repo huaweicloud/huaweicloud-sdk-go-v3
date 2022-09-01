@@ -10,12 +10,12 @@ import (
 )
 
 type ImportConnectionReq struct {
-	Path *string `json:"path,omitempty"`
+	Path *string `json:"path,omitempty" xml:"path"`
 
 	// 连接参数
-	Params *[]ConnectionParam `json:"params,omitempty"`
+	Params *[]ConnectionParam `json:"params,omitempty" xml:"params"`
 
-	SameNamePolicy *ImportConnectionReqSameNamePolicy `json:"sameNamePolicy,omitempty"`
+	SameNamePolicy *ImportConnectionReqSameNamePolicy `json:"sameNamePolicy,omitempty" xml:"sameNamePolicy"`
 }
 
 func (o ImportConnectionReq) String() string {

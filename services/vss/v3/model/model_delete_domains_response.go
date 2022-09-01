@@ -13,10 +13,10 @@ import (
 type DeleteDomainsResponse struct {
 
 	// 状态码:   * success - 成功   * failure - 失败
-	InfoCode *DeleteDomainsResponseInfoCode `json:"info_code,omitempty"`
+	InfoCode *DeleteDomainsResponseInfoCode `json:"info_code,omitempty" xml:"info_code"`
 
 	// 返回的提示信息
-	InfoDescription *string `json:"info_description,omitempty"`
+	InfoDescription *string `json:"info_description,omitempty" xml:"info_description"`
 	HttpStatusCode  int     `json:"-"`
 }
 

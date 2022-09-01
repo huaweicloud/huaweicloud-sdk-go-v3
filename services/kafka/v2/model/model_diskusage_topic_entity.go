@@ -9,16 +9,16 @@ import (
 type DiskusageTopicEntity struct {
 
 	// 磁盘使用量。
-	Size *string `json:"size,omitempty"`
+	Size *string `json:"size,omitempty" xml:"size"`
 
 	// topic名称。
-	TopicName *string `json:"topic_name,omitempty"`
+	TopicName *string `json:"topic_name,omitempty" xml:"topic_name"`
 
 	// 分区。
-	TopicPartition *string `json:"topic_partition,omitempty"`
+	TopicPartition *string `json:"topic_partition,omitempty" xml:"topic_partition"`
 
 	// 磁盘使用量的占比。
-	Percentage *float64 `json:"percentage,omitempty"`
+	Percentage *float64 `json:"percentage,omitempty" xml:"percentage"`
 }
 
 func (o DiskusageTopicEntity) String() string {

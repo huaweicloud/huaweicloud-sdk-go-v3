@@ -10,28 +10,28 @@ import (
 type InstanceSpec struct {
 
 	// 集群id
-	ClusterID string `json:"clusterID"`
+	ClusterID string `json:"clusterID" xml:"clusterID"`
 
 	// 插件模板版本号，如1.0.0
-	Version string `json:"version"`
+	Version string `json:"version" xml:"version"`
 
 	// 插件模板名称，如coredns
-	AddonTemplateName string `json:"addonTemplateName"`
+	AddonTemplateName string `json:"addonTemplateName" xml:"addonTemplateName"`
 
 	// 插件模板类型
-	AddonTemplateType string `json:"addonTemplateType"`
+	AddonTemplateType string `json:"addonTemplateType" xml:"addonTemplateType"`
 
 	// 插件模板logo图片的地址
-	AddonTemplateLogo *string `json:"addonTemplateLogo,omitempty"`
+	AddonTemplateLogo *string `json:"addonTemplateLogo,omitempty" xml:"addonTemplateLogo"`
 
 	// 插件模板所属类型
-	AddonTemplateLabels *[]string `json:"addonTemplateLabels,omitempty"`
+	AddonTemplateLabels *[]string `json:"addonTemplateLabels,omitempty" xml:"addonTemplateLabels"`
 
 	// 插件模板描述
-	Description string `json:"description"`
+	Description string `json:"description" xml:"description"`
 
 	// 插件模板安装参数（各插件不同），请根据具体插件模板信息填写安装参数。
-	Values map[string]interface{} `json:"values"`
+	Values map[string]interface{} `json:"values" xml:"values"`
 }
 
 func (o InstanceSpec) String() string {

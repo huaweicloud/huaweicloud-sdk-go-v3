@@ -10,10 +10,10 @@ import (
 type ListStoredValueCardsResponse struct {
 
 	// 符合查询条件的总条数。
-	TotalCount *int32 `json:"total_count,omitempty"`
+	TotalCount *int32 `json:"total_count,omitempty" xml:"total_count"`
 
 	// 优惠券记录。 具体请参见表2。
-	StoredValueCards *[]UserStoredValueCard `json:"stored_value_cards,omitempty"`
+	StoredValueCards *[]UserStoredValueCard `json:"stored_value_cards,omitempty" xml:"stored_value_cards"`
 	HttpStatusCode   int                    `json:"-"`
 }
 

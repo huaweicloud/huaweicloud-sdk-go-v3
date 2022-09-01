@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RestoreNewInstanceRequest struct {
-	Body *RestoreNewInstanceRequestBody `json:"body,omitempty"`
+	Body *RestoreNewInstanceRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o RestoreNewInstanceRequest) String() string {

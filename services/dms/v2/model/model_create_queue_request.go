@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateQueueRequest struct {
-	Body *CreateQueueReq `json:"body,omitempty"`
+	Body *CreateQueueReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateQueueRequest) String() string {

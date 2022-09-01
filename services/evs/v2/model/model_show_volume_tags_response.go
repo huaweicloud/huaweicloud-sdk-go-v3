@@ -10,7 +10,7 @@ import (
 type ShowVolumeTagsResponse struct {
 
 	// 标签列表。
-	Tags           *[]Tag `json:"tags,omitempty"`
+	Tags           *[]Tag `json:"tags,omitempty" xml:"tags"`
 	HttpStatusCode int    `json:"-"`
 }
 

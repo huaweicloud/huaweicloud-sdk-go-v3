@@ -10,7 +10,7 @@ import (
 type CreateNet2CloudPhoneServerRequestBodyPublicIpEip struct {
 
 	// 弹性公网IP的类型，取值范围：5_telcom（电信），5_union（联通），5_bgp（全动态BGP），5_sbgp（静态BGP）
-	Type string `json:"type"`
+	Type string `json:"type" xml:"type"`
 }
 
 func (o CreateNet2CloudPhoneServerRequestBodyPublicIpEip) String() string {

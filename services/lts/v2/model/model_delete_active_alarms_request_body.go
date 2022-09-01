@@ -9,7 +9,7 @@ import (
 type DeleteActiveAlarmsRequestBody struct {
 
 	// 主题信息
-	Events []Event `json:"events"`
+	Events []Event `json:"events" xml:"events"`
 }
 
 func (o DeleteActiveAlarmsRequestBody) String() string {

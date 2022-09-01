@@ -10,7 +10,7 @@ import (
 type ShowBaremetalServerTagsResponse struct {
 
 	//
-	Tags           *[]BaremetalServerTag `json:"tags,omitempty"`
+	Tags           *[]BaremetalServerTag `json:"tags,omitempty" xml:"tags"`
 	HttpStatusCode int                   `json:"-"`
 }
 

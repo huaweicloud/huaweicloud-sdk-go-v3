@@ -10,10 +10,10 @@ import (
 type FieldModel struct {
 
 	// 字段名称
-	FieldName string `json:"field_name"`
+	FieldName string `json:"field_name" xml:"field_name"`
 
 	// 是否开启快速分析。
-	IsAnalysis bool `json:"is_analysis"`
+	IsAnalysis bool `json:"is_analysis" xml:"is_analysis"`
 }
 
 func (o FieldModel) String() string {

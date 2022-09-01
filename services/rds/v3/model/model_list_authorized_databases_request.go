@@ -10,19 +10,19 @@ import (
 type ListAuthorizedDatabasesRequest struct {
 
 	// 语言
-	XLanguage *string `json:"X-Language,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 数据库用户名。
-	UserName string `json:"user-name"`
+	UserName string `json:"user-name" xml:"user-name"`
 
 	// 分页页码，从1开始。
-	Page int32 `json:"page"`
+	Page int32 `json:"page" xml:"page"`
 
 	// 每页数据条数。取值范围[1, 100]。
-	Limit int32 `json:"limit"`
+	Limit int32 `json:"limit" xml:"limit"`
 }
 
 func (o ListAuthorizedDatabasesRequest) String() string {

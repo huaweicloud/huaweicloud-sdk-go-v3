@@ -7,12 +7,12 @@ import (
 )
 
 type MysqlShowProxyResponseV3 struct {
-	Proxy *MysqlProxyV3 `json:"proxy,omitempty"`
+	Proxy *MysqlProxyV3 `json:"proxy,omitempty" xml:"proxy"`
 
-	MasterNode *MysqlProxyNodeV3 `json:"master_node,omitempty"`
+	MasterNode *MysqlProxyNodeV3 `json:"master_node,omitempty" xml:"master_node"`
 
 	// 只读节点信息。
-	ReadonlyNodes *[]MysqlProxyNodeV3 `json:"readonly_nodes,omitempty"`
+	ReadonlyNodes *[]MysqlProxyNodeV3 `json:"readonly_nodes,omitempty" xml:"readonly_nodes"`
 }
 
 func (o MysqlShowProxyResponseV3) String() string {

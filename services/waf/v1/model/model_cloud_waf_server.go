@@ -13,22 +13,22 @@ import (
 type CloudWafServer struct {
 
 	// 客户端请求访问防护域名源站服务器的协议
-	FrontProtocol CloudWafServerFrontProtocol `json:"front_protocol"`
+	FrontProtocol CloudWafServerFrontProtocol `json:"front_protocol" xml:"front_protocol"`
 
 	// WAF转发客户端请求到防护域名源站服务器的协议
-	BackProtocol CloudWafServerBackProtocol `json:"back_protocol"`
+	BackProtocol CloudWafServerBackProtocol `json:"back_protocol" xml:"back_protocol"`
 
 	// 源站权重，负载均衡算法将按该权重将请求分配给源站，默认值是1，云模式的冗余字段
-	Weight *int32 `json:"weight,omitempty"`
+	Weight *int32 `json:"weight,omitempty" xml:"weight"`
 
 	// 客户端访问的源站服务器的IP地址
-	Address string `json:"address"`
+	Address string `json:"address" xml:"address"`
 
 	// WAF转发客户端请求到源站服务的业务端口
-	Port int32 `json:"port"`
+	Port int32 `json:"port" xml:"port"`
 
 	// 源站地址为ipv4或ipv6
-	Type CloudWafServerType `json:"type"`
+	Type CloudWafServerType `json:"type" xml:"type"`
 }
 
 func (o CloudWafServer) String() string {

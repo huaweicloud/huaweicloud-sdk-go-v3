@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowScalingV2PolicyResponse struct {
-	ScalingPolicy  *ScalingV2PolicyDetail `json:"scaling_policy,omitempty"`
+	ScalingPolicy  *ScalingV2PolicyDetail `json:"scaling_policy,omitempty" xml:"scaling_policy"`
 	HttpStatusCode int                    `json:"-"`
 }
 

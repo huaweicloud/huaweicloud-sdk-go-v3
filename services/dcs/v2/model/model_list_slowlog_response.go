@@ -10,10 +10,10 @@ import (
 type ListSlowlogResponse struct {
 
 	// 总数
-	Count *int32 `json:"count,omitempty"`
+	Count *int32 `json:"count,omitempty" xml:"count"`
 
 	// 慢日志列表
-	Slowlogs       *[]SlowlogItem `json:"slowlogs,omitempty"`
+	Slowlogs       *[]SlowlogItem `json:"slowlogs,omitempty" xml:"slowlogs"`
 	HttpStatusCode int            `json:"-"`
 }
 

@@ -10,9 +10,9 @@ import (
 type ShowResourceHistoryResponse struct {
 
 	// 资源历史列表
-	Items *[]HistoryItem `json:"items,omitempty"`
+	Items *[]HistoryItem `json:"items,omitempty" xml:"items"`
 
-	PageInfo       *PageInfo `json:"page_info,omitempty"`
+	PageInfo       *PageInfo `json:"page_info,omitempty" xml:"page_info"`
 	HttpStatusCode int       `json:"-"`
 }
 

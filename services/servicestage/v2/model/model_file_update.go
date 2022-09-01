@@ -9,13 +9,13 @@ import (
 type FileUpdate struct {
 
 	// 提交描述。
-	Message string `json:"message"`
+	Message string `json:"message" xml:"message"`
 
 	// 经base64编码的文件内容。
-	Content string `json:"content"`
+	Content string `json:"content" xml:"content"`
 
 	// 文件的sha值。
-	Sha string `json:"sha"`
+	Sha string `json:"sha" xml:"sha"`
 }
 
 func (o FileUpdate) String() string {

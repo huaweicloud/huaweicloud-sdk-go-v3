@@ -10,7 +10,7 @@ import (
 type DeleteAuthorizeRequest struct {
 
 	// 授权名称。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 }
 
 func (o DeleteAuthorizeRequest) String() string {

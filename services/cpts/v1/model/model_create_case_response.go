@@ -10,12 +10,12 @@ import (
 type CreateCaseResponse struct {
 
 	// code
-	Code *string `json:"code,omitempty"`
+	Code *string `json:"code,omitempty" xml:"code"`
 
-	Json *CreateCaseResultJson `json:"json,omitempty"`
+	Json *CreateCaseResultJson `json:"json,omitempty" xml:"json"`
 
 	// message
-	Message        *string `json:"message,omitempty"`
+	Message        *string `json:"message,omitempty" xml:"message"`
 	HttpStatusCode int     `json:"-"`
 }
 

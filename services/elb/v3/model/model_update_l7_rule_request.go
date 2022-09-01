@@ -10,12 +10,12 @@ import (
 type UpdateL7RuleRequest struct {
 
 	// 策略ID。
-	L7policyId string `json:"l7policy_id"`
+	L7policyId string `json:"l7policy_id" xml:"l7policy_id"`
 
 	// 规则ID。
-	L7ruleId string `json:"l7rule_id"`
+	L7ruleId string `json:"l7rule_id" xml:"l7rule_id"`
 
-	Body *UpdateL7RuleRequestBody `json:"body,omitempty"`
+	Body *UpdateL7RuleRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateL7RuleRequest) String() string {

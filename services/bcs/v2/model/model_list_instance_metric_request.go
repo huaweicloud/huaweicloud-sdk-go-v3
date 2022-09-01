@@ -10,9 +10,9 @@ import (
 type ListInstanceMetricRequest struct {
 
 	// 区块链服务id。
-	BlockchainId string `json:"blockchain_id"`
+	BlockchainId string `json:"blockchain_id" xml:"blockchain_id"`
 
-	Body *ListInstanceMetricRequestBody `json:"body,omitempty"`
+	Body *ListInstanceMetricRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o ListInstanceMetricRequest) String() string {

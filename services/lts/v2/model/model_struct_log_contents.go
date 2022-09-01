@@ -10,10 +10,10 @@ import (
 type StructLogContents struct {
 
 	// 日志原数据。
-	LogContent *string `json:"log_content,omitempty"`
+	LogContent *string `json:"log_content,omitempty" xml:"log_content"`
 
 	// 日志单行序列号。
-	LineNum *string `json:"line_num,omitempty"`
+	LineNum *string `json:"line_num,omitempty" xml:"line_num"`
 }
 
 func (o StructLogContents) String() string {

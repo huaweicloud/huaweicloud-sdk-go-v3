@@ -10,13 +10,13 @@ import (
 type ShowInstanceMessagesResponse struct {
 
 	// 消息列表。
-	Messages *[]MessagesEntity `json:"messages,omitempty"`
+	Messages *[]MessagesEntity `json:"messages,omitempty" xml:"messages"`
 
 	// 消息总条数。
-	Total *int64 `json:"total,omitempty"`
+	Total *int64 `json:"total,omitempty" xml:"total"`
 
 	// 消息条数。
-	Size           *int64 `json:"size,omitempty"`
+	Size           *int64 `json:"size,omitempty" xml:"size"`
 	HttpStatusCode int    `json:"-"`
 }
 

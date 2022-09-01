@@ -10,13 +10,13 @@ import (
 type SubJobEntities struct {
 
 	// 云服务器相关操作显示server_id。
-	ServerId *string `json:"server_id,omitempty"`
+	ServerId *string `json:"server_id,omitempty" xml:"server_id"`
 
 	// 网卡相关操作显示nic_id。
-	NicId *string `json:"nic_id,omitempty"`
+	NicId *string `json:"nic_id,omitempty" xml:"nic_id"`
 
 	// 子任务执行失败的具体原因。
-	ErrorcodeMessage *string `json:"errorcode_message,omitempty"`
+	ErrorcodeMessage *string `json:"errorcode_message,omitempty" xml:"errorcode_message"`
 }
 
 func (o SubJobEntities) String() string {

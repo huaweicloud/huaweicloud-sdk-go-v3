@@ -9,10 +9,10 @@ import (
 type FlavorAzObject struct {
 
 	// 缓存容量（G Byte）。
-	Capacity *string `json:"capacity,omitempty"`
+	Capacity *string `json:"capacity,omitempty" xml:"capacity"`
 
 	// 有资源的可用区编码。
-	AzCodes *[]string `json:"az_codes,omitempty"`
+	AzCodes *[]string `json:"az_codes,omitempty" xml:"az_codes"`
 }
 
 func (o FlavorAzObject) String() string {

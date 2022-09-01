@@ -10,40 +10,40 @@ import (
 type Attendee struct {
 
 	// 与会者的用户UUID。
-	UserUUID *string `json:"userUUID,omitempty"`
+	UserUUID *string `json:"userUUID,omitempty" xml:"userUUID"`
 
 	// 与会者帐号，兼容终端老版本。如果没有携带userUUID，就通过accountId查询用户信息。
-	AccountId *string `json:"accountId,omitempty"`
+	AccountId *string `json:"accountId,omitempty" xml:"accountId"`
 
 	// 与会者名称或昵称，长度限制为96个字符。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 会议中的角色。 - 0: 普通与会者。 - 1: 会议主席。 - 2: 预留字段，暂不对外开放。 default: 0
-	Role *int32 `json:"role,omitempty"`
+	Role *int32 `json:"role,omitempty" xml:"role"`
 
 	// 电话号码(可支持SIP、TEL号码格式)。最大不超过127个字符。phone、email和sms三者需至少填写一个。当type为telepresence时，且设备为三屏智真，则该字段填写中屏号码。
-	Phone string `json:"phone"`
+	Phone string `json:"phone" xml:"phone"`
 
 	// 预留字段，取值类型同phone。当type为telepresence时，且设备为三屏智真，则该字段填写左屏号码
-	Phone2 *string `json:"phone2,omitempty"`
+	Phone2 *string `json:"phone2,omitempty" xml:"phone2"`
 
 	// 预留字段，取值类型同phone。当type为telepresence时，且设备为三屏智真，则该字段填写右屏号码
-	Phone3 *string `json:"phone3,omitempty"`
+	Phone3 *string `json:"phone3,omitempty" xml:"phone3"`
 
 	// 邮件地址。最大不超过255个字符。phone、email和sms三者需至少填写一个。
-	Email *string `json:"email,omitempty"`
+	Email *string `json:"email,omitempty" xml:"email"`
 
 	// 短信通知的手机号码。最大不超过32个字符。phone、email和sms三者需至少填写一个。
-	Sms *string `json:"sms,omitempty"`
+	Sms *string `json:"sms,omitempty" xml:"sms"`
 
 	// 默认值由会议AS定义，号码类型枚举如下： - normal: 软终端。 - telepresence: 智真。单屏、三屏智真均属此类。（预留字段） - terminal: 会议室或硬终端。 - outside: 外部与会人。 - mobile: 用户手机号码。 - telephone: 软终端用户固定电话，暂不使用。
-	Type string `json:"type"`
+	Type string `json:"type" xml:"type"`
 
 	// 部门ID。最大不超过64个字符。
-	DeptUUID *string `json:"deptUUID,omitempty"`
+	DeptUUID *string `json:"deptUUID,omitempty" xml:"deptUUID"`
 
 	// 部门名称。最大不超过128个字符。
-	DeptName *string `json:"deptName,omitempty"`
+	DeptName *string `json:"deptName,omitempty" xml:"deptName"`
 }
 
 func (o Attendee) String() string {

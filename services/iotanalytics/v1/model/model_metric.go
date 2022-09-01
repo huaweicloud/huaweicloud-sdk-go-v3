@@ -9,16 +9,16 @@ import (
 type Metric struct {
 
 	// 指标名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 指标值类型
-	Type *string `json:"type,omitempty"`
+	Type *string `json:"type,omitempty" xml:"type"`
 
 	// 指标描述
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 指标单位
-	Unit *string `json:"unit,omitempty"`
+	Unit *string `json:"unit,omitempty" xml:"unit"`
 }
 
 func (o Metric) String() string {

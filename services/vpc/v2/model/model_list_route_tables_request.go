@@ -10,19 +10,19 @@ import (
 type ListRouteTablesRequest struct {
 
 	// 每页返回的个数
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 分页查询起始的资源ID，为空时为查询第一页
-	Marker *string `json:"marker,omitempty"`
+	Marker *string `json:"marker,omitempty" xml:"marker"`
 
 	// 路由表ID，可过滤对应ID的路由表
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 虚拟私有云ID，可过滤对应虚拟私有云包含的路由表
-	VpcId *string `json:"vpc_id,omitempty"`
+	VpcId *string `json:"vpc_id,omitempty" xml:"vpc_id"`
 
 	// 子网ID，可过滤对应子网关联的路由表
-	SubnetId *string `json:"subnet_id,omitempty"`
+	SubnetId *string `json:"subnet_id,omitempty" xml:"subnet_id"`
 }
 
 func (o ListRouteTablesRequest) String() string {

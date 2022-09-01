@@ -10,10 +10,10 @@ import (
 type ListProjectWorkHoursResponse struct {
 
 	// 工时列表
-	WorkHours *[]ShowProjectWorkHoursResponseBodyWorkHours `json:"work_hours,omitempty"`
+	WorkHours *[]ShowProjectWorkHoursResponseBodyWorkHours `json:"work_hours,omitempty" xml:"work_hours"`
 
 	// 总数
-	Total          *int32 `json:"total,omitempty"`
+	Total          *int32 `json:"total,omitempty" xml:"total"`
 	HttpStatusCode int    `json:"-"`
 }
 

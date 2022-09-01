@@ -10,22 +10,22 @@ import (
 type ListLiveStreamsOnlineResponse struct {
 
 	// 总条页数
-	TotalPage *int64 `json:"total_page,omitempty"`
+	TotalPage *int64 `json:"total_page,omitempty" xml:"total_page"`
 
 	// 总条目数
-	TotalNum *int64 `json:"total_num,omitempty"`
+	TotalNum *int64 `json:"total_num,omitempty" xml:"total_num"`
 
 	// 偏移量
-	Offset *int64 `json:"offset,omitempty"`
+	Offset *int64 `json:"offset,omitempty" xml:"offset"`
 
 	// 每页条目数
-	Limit *int64 `json:"limit,omitempty"`
+	Limit *int64 `json:"limit,omitempty" xml:"limit"`
 
 	// 请求唯一标识
-	RequestId *string `json:"request_id,omitempty"`
+	RequestId *string `json:"request_id,omitempty" xml:"request_id"`
 
 	// 推流统计
-	Streams        *[]OnlineInfo `json:"streams,omitempty"`
+	Streams        *[]OnlineInfo `json:"streams,omitempty" xml:"streams"`
 	HttpStatusCode int           `json:"-"`
 }
 

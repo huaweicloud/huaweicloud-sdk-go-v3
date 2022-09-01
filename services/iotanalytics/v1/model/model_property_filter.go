@@ -10,13 +10,13 @@ import (
 type PropertyFilter struct {
 
 	// 过滤属性名称，正则：\"^[a-zA-Z0-9_]{1,64}$\"
-	PropertyName string `json:"property_name"`
+	PropertyName string `json:"property_name" xml:"property_name"`
 
 	// 过滤操作方式,当前仅支持“=”
-	Operator string `json:"operator"`
+	Operator string `json:"operator" xml:"operator"`
 
 	// 过滤属性值
-	Value *interface{} `json:"value"`
+	Value *interface{} `json:"value" xml:"value"`
 }
 
 func (o PropertyFilter) String() string {

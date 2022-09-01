@@ -10,7 +10,7 @@ import (
 type BatchSetupSyncPolicyReq struct {
 
 	// 批量设置同步策略请求列表。
-	Jobs []SyncPolicyReq `json:"jobs"`
+	Jobs []SyncPolicyReq `json:"jobs" xml:"jobs"`
 }
 
 func (o BatchSetupSyncPolicyReq) String() string {

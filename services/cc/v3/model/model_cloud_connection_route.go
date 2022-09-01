@@ -13,28 +13,28 @@ import (
 type CloudConnectionRoute struct {
 
 	// 云连接实例路由的ID。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 云连接实例的ID。
-	CloudConnectionId *string `json:"cloud_connection_id,omitempty"`
+	CloudConnectionId *string `json:"cloud_connection_id,omitempty" xml:"cloud_connection_id"`
 
 	// 帐号ID。
-	DomainId *string `json:"domain_id,omitempty"`
+	DomainId *string `json:"domain_id,omitempty" xml:"domain_id"`
 
 	// 网络实例的项目ID。
-	ProjectId *string `json:"project_id,omitempty"`
+	ProjectId *string `json:"project_id,omitempty" xml:"project_id"`
 
 	// 路由条目下一跳指向的网络实例的ID。
-	InstanceId *string `json:"instance_id,omitempty"`
+	InstanceId *string `json:"instance_id,omitempty" xml:"instance_id"`
 
 	// 路由条目下一跳指向的网络实例的类型。 - VPC：虚拟私有云。 - VGW：虚拟网关。
-	Type *CloudConnectionRouteType `json:"type,omitempty"`
+	Type *CloudConnectionRouteType `json:"type,omitempty" xml:"type"`
 
 	// Region的ID。
-	RegionId *string `json:"region_id,omitempty"`
+	RegionId *string `json:"region_id,omitempty" xml:"region_id"`
 
 	// 目的地址。
-	Destination *string `json:"destination,omitempty"`
+	Destination *string `json:"destination,omitempty" xml:"destination"`
 }
 
 func (o CloudConnectionRoute) String() string {

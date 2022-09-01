@@ -10,7 +10,7 @@ import (
 type ShowJobStatusResponse struct {
 
 	// 任务运行结果
-	Result         *bool `json:"result,omitempty"`
+	Result         *bool `json:"result,omitempty" xml:"result"`
 	HttpStatusCode int   `json:"-"`
 }
 

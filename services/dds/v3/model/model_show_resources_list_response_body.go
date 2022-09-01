@@ -9,7 +9,7 @@ import (
 type ShowResourcesListResponseBody struct {
 
 	// 资源列表对象。
-	Resources []ShowResourcesDetailResponseBody `json:"resources"`
+	Resources []ShowResourcesDetailResponseBody `json:"resources" xml:"resources"`
 }
 
 func (o ShowResourcesListResponseBody) String() string {

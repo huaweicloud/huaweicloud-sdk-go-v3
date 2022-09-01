@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type KeystoneCreateIdentityProviderResponse struct {
-	IdentityProvider *IdentityprovidersResult `json:"identity_provider,omitempty"`
+	IdentityProvider *IdentityprovidersResult `json:"identity_provider,omitempty" xml:"identity_provider"`
 	HttpStatusCode   int                      `json:"-"`
 }
 

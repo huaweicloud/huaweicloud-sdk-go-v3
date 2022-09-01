@@ -9,9 +9,9 @@ import (
 type AddFavoriteReq struct {
 
 	// 自定义模板名称。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
-	Template *AddFavoriteReqTemplate `json:"template"`
+	Template *AddFavoriteReqTemplate `json:"template" xml:"template"`
 }
 
 func (o AddFavoriteReq) String() string {

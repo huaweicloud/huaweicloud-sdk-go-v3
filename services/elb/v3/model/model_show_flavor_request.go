@@ -10,7 +10,7 @@ import (
 type ShowFlavorRequest struct {
 
 	// 规格ID。
-	FlavorId string `json:"flavor_id"`
+	FlavorId string `json:"flavor_id" xml:"flavor_id"`
 }
 
 func (o ShowFlavorRequest) String() string {

@@ -10,9 +10,9 @@ import (
 type CreateRandomRequest struct {
 
 	// API版本号
-	VersionId string `json:"version_id"`
+	VersionId string `json:"version_id" xml:"version_id"`
 
-	Body *GenRandomRequestBody `json:"body,omitempty"`
+	Body *GenRandomRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateRandomRequest) String() string {

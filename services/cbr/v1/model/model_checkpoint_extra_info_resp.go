@@ -9,13 +9,13 @@ import (
 type CheckpointExtraInfoResp struct {
 
 	// 备份名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 备份描述
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 备份保留天数
-	RetentionDuration *int32 `json:"retention_duration,omitempty"`
+	RetentionDuration *int32 `json:"retention_duration,omitempty" xml:"retention_duration"`
 }
 
 func (o CheckpointExtraInfoResp) String() string {

@@ -10,10 +10,10 @@ import (
 type NeutronCreateSecurityGroupOption struct {
 
 	// 功能说明：安全组描述 取值范围：0-255个字符
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 功能说明：安全组名称 取值范围：0-255个字符 约束：不允许为“default”
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 }
 
 func (o NeutronCreateSecurityGroupOption) String() string {

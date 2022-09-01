@@ -10,7 +10,7 @@ import (
 type DeleteApplicationEndpointRequest struct {
 
 	// Endpoint的唯一资源标识，可通过[查询Application的Endpoint列表](https://support.huaweicloud.com/api-smn/ListApplicationEndpoints.html)获取该标识。
-	EndpointUrn string `json:"endpoint_urn"`
+	EndpointUrn string `json:"endpoint_urn" xml:"endpoint_urn"`
 }
 
 func (o DeleteApplicationEndpointRequest) String() string {

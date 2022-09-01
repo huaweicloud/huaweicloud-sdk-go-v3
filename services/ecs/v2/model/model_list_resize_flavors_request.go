@@ -13,25 +13,25 @@ import (
 type ListResizeFlavorsRequest struct {
 
 	// 进行规格切换的云服务器ID，UUID格式。
-	InstanceUuid *string `json:"instance_uuid,omitempty"`
+	InstanceUuid *string `json:"instance_uuid,omitempty" xml:"instance_uuid"`
 
 	// 单页面可显示的flavor条数最大值，默认是1000。
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 以单页最后一条flavor的ID作为分页标记。
-	Marker *string `json:"marker,omitempty"`
+	Marker *string `json:"marker,omitempty" xml:"marker"`
 
 	// 升序/降序排序，默认值为：asc。  取值范围：  - asc：表示升序。 - desc：表示降序
-	SortDir *ListResizeFlavorsRequestSortDir `json:"sort_dir,omitempty"`
+	SortDir *ListResizeFlavorsRequestSortDir `json:"sort_dir,omitempty" xml:"sort_dir"`
 
 	// 排序字段。  key的取值范围：  - flavorid：表示规格ID。 - sort_key的默认值为“flavorid”。 - name：表示规格名称。 - memory_mb：表示内存大小。 - vcpus：表示CPU大小。 - root_gb：表示系统盘大小。
-	SortKey *ListResizeFlavorsRequestSortKey `json:"sort_key,omitempty"`
+	SortKey *ListResizeFlavorsRequestSortKey `json:"sort_key,omitempty" xml:"sort_key"`
 
 	// 进行规格切换的云服务器源规格ID。
-	SourceFlavorId *string `json:"source_flavor_id,omitempty"`
+	SourceFlavorId *string `json:"source_flavor_id,omitempty" xml:"source_flavor_id"`
 
 	// 进行规格切换的云服务器源规格名称。
-	SourceFlavorName *string `json:"source_flavor_name,omitempty"`
+	SourceFlavorName *string `json:"source_flavor_name,omitempty" xml:"source_flavor_name"`
 }
 
 func (o ListResizeFlavorsRequest) String() string {

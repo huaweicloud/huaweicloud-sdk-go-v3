@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type RunImageDescriptionResponse struct {
-	Result         *ImageDescriptionResponseResult `json:"result,omitempty"`
+	Result         *ImageDescriptionResponseResult `json:"result,omitempty" xml:"result"`
 	HttpStatusCode int                             `json:"-"`
 }
 

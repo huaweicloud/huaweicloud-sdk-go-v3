@@ -13,22 +13,22 @@ import (
 type ListScalingPoliciesRequest struct {
 
 	// 伸缩组ID。
-	ScalingGroupId string `json:"scaling_group_id"`
+	ScalingGroupId string `json:"scaling_group_id" xml:"scaling_group_id"`
 
 	// 伸缩策略名称。
-	ScalingPolicyName *string `json:"scaling_policy_name,omitempty"`
+	ScalingPolicyName *string `json:"scaling_policy_name,omitempty" xml:"scaling_policy_name"`
 
 	// 策略类型。
-	ScalingPolicyType *ListScalingPoliciesRequestScalingPolicyType `json:"scaling_policy_type,omitempty"`
+	ScalingPolicyType *ListScalingPoliciesRequestScalingPolicyType `json:"scaling_policy_type,omitempty" xml:"scaling_policy_type"`
 
 	// 伸缩策略ID。
-	ScalingPolicyId *string `json:"scaling_policy_id,omitempty"`
+	ScalingPolicyId *string `json:"scaling_policy_id,omitempty" xml:"scaling_policy_id"`
 
 	// 查询的起始行号，默认为0。
-	StartNumber *int32 `json:"start_number,omitempty"`
+	StartNumber *int32 `json:"start_number,omitempty" xml:"start_number"`
 
 	// 查询记录数，默认20，最大100。
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 }
 
 func (o ListScalingPoliciesRequest) String() string {

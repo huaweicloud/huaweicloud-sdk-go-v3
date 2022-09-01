@@ -7,11 +7,11 @@ import (
 )
 
 type DevicesCalculation struct {
-	NormalDevices *Calculation `json:"normal_devices,omitempty"`
+	NormalDevices *Calculation `json:"normal_devices,omitempty" xml:"normal_devices"`
 
-	GatewayDevices *Calculation `json:"gateway_devices,omitempty"`
+	GatewayDevices *Calculation `json:"gateway_devices,omitempty" xml:"gateway_devices"`
 
-	SubsetsDevices *Calculation `json:"subsets_devices,omitempty"`
+	SubsetsDevices *Calculation `json:"subsets_devices,omitempty" xml:"subsets_devices"`
 }
 
 func (o DevicesCalculation) String() string {

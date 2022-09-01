@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowGaussMySqlBackupPolicyResponse struct {
-	BackupPolicy   *BackupPolicy `json:"backup_policy,omitempty"`
+	BackupPolicy   *BackupPolicy `json:"backup_policy,omitempty" xml:"backup_policy"`
 	HttpStatusCode int           `json:"-"`
 }
 

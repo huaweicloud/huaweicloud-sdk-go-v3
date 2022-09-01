@@ -10,10 +10,10 @@ import (
 type ListDatabasesResponse struct {
 
 	// 逻辑库相关信息的集合
-	Databases *[]GetDatabaseInfo `json:"databases,omitempty"`
+	Databases *[]GetDatabaseInfo `json:"databases,omitempty" xml:"databases"`
 
 	// 总条数
-	Total          *int32 `json:"total,omitempty"`
+	Total          *int32 `json:"total,omitempty" xml:"total"`
 	HttpStatusCode int    `json:"-"`
 }
 

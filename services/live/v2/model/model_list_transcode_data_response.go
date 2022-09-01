@@ -10,12 +10,12 @@ import (
 type ListTranscodeDataResponse struct {
 
 	// 采样数据列表。
-	TranscodeDataList *[]TranscodeData `json:"transcode_data_list,omitempty"`
+	TranscodeDataList *[]TranscodeData `json:"transcode_data_list,omitempty" xml:"transcode_data_list"`
 
 	// 指定时间区间内各转码规格转码时长总和。
-	SummaryList *[]TranscodeSummary `json:"summary_list,omitempty"`
+	SummaryList *[]TranscodeSummary `json:"summary_list,omitempty" xml:"summary_list"`
 
-	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	XRequestId     *string `json:"X-Request-Id,omitempty" xml:"X-Request-Id"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -9,7 +9,7 @@ import (
 type AudioModerationResultResultSegments struct {
 
 	// 命中的风险片段
-	Segment *string `json:"segment,omitempty"`
+	Segment *string `json:"segment,omitempty" xml:"segment"`
 }
 
 func (o AudioModerationResultResultSegments) String() string {

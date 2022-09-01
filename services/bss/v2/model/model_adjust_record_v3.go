@@ -9,31 +9,31 @@ import (
 type AdjustRecordV3 struct {
 
 	// 客户账号ID。
-	CustomerId *string `json:"customer_id,omitempty"`
+	CustomerId *string `json:"customer_id,omitempty" xml:"customer_id"`
 
 	// 客户名称。
-	CustomerName *string `json:"customer_name,omitempty"`
+	CustomerName *string `json:"customer_name,omitempty" xml:"customer_name"`
 
 	// 调账类型。 SOURCE_OPERATION_BEADJUST：拨款SOURCE_OPERATION_BERETRIEVE：回收SOURCE_OPERATION_BEUNBIND：解绑回收
-	OperationType *string `json:"operation_type,omitempty"`
+	OperationType *string `json:"operation_type,omitempty" xml:"operation_type"`
 
 	// 调账的总金额。
-	Amount *string `json:"amount,omitempty"`
+	Amount *string `json:"amount,omitempty" xml:"amount"`
 
 	// 币种。 CNY：人民币
-	Currency *string `json:"currency,omitempty"`
+	Currency *string `json:"currency,omitempty" xml:"currency"`
 
 	// 使用场景。
-	ApplyScene *string `json:"apply_scene,omitempty"`
+	ApplyScene *string `json:"apply_scene,omitempty" xml:"apply_scene"`
 
 	// 调账操作的时间。 UTC时间，格式为：2016-03-28T14:45:38Z
-	OperationTime *string `json:"operation_time,omitempty"`
+	OperationTime *string `json:"operation_time,omitempty" xml:"operation_time"`
 
 	// 调账单位。 1：元
-	MeasureId *int32 `json:"measure_id,omitempty"`
+	MeasureId *int32 `json:"measure_id,omitempty" xml:"measure_id"`
 
 	// 事务ID。
-	TransId *string `json:"trans_id,omitempty"`
+	TransId *string `json:"trans_id,omitempty" xml:"trans_id"`
 }
 
 func (o AdjustRecordV3) String() string {

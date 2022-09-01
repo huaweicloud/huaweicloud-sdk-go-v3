@@ -10,7 +10,7 @@ import (
 type ShowCloudConnectionRoutesRequest struct {
 
 	// 云连接路由实例ID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 }
 
 func (o ShowCloudConnectionRoutesRequest) String() string {

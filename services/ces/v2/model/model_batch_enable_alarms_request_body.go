@@ -9,10 +9,10 @@ import (
 type BatchEnableAlarmsRequestBody struct {
 
 	// 需要批量启停的告警规则的ID列表
-	AlarmIds []string `json:"alarm_ids"`
+	AlarmIds []string `json:"alarm_ids" xml:"alarm_ids"`
 
 	// 告警开关
-	AlarmEnabled bool `json:"alarm_enabled"`
+	AlarmEnabled bool `json:"alarm_enabled" xml:"alarm_enabled"`
 }
 
 func (o BatchEnableAlarmsRequestBody) String() string {

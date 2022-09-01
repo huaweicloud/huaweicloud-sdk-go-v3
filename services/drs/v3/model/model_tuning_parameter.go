@@ -10,13 +10,13 @@ import (
 type TuningParameter struct {
 
 	// 参数名称
-	ParamName *string `json:"param_name,omitempty"`
+	ParamName *string `json:"param_name,omitempty" xml:"param_name"`
 
 	// 参数取值
-	ParamValue *string `json:"param_value,omitempty"`
+	ParamValue *string `json:"param_value,omitempty" xml:"param_value"`
 
 	// 是否可用
-	Availability *string `json:"availability,omitempty"`
+	Availability *string `json:"availability,omitempty" xml:"availability"`
 }
 
 func (o TuningParameter) String() string {

@@ -10,9 +10,9 @@ import (
 type ShowResourceBindEnterpriseProjectRequest struct {
 
 	// 企业项目ID
-	EnterpriseProjectId string `json:"enterprise_project_id"`
+	EnterpriseProjectId string `json:"enterprise_project_id" xml:"enterprise_project_id"`
 
-	Body *ResqEpResouce `json:"body,omitempty"`
+	Body *ResqEpResouce `json:"body,omitempty" xml:"body"`
 }
 
 func (o ShowResourceBindEnterpriseProjectRequest) String() string {

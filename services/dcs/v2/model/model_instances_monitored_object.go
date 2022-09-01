@@ -10,13 +10,13 @@ import (
 type InstancesMonitoredObject struct {
 
 	// 测量对象ID，即实例的ID。
-	DcsInstanceId *string `json:"dcs_instance_id,omitempty"`
+	DcsInstanceId *string `json:"dcs_instance_id,omitempty" xml:"dcs_instance_id"`
 
 	// 测量对象名称，即实例名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 测量对象状态，即实例状态。
-	Status *string `json:"status,omitempty"`
+	Status *string `json:"status,omitempty" xml:"status"`
 }
 
 func (o InstancesMonitoredObject) String() string {

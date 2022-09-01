@@ -10,9 +10,9 @@ import (
 type UpdateL7policiesRequest struct {
 
 	// 待更新的转发策略id
-	L7policyId string `json:"l7policy_id"`
+	L7policyId string `json:"l7policy_id" xml:"l7policy_id"`
 
-	Body *UpdateL7policiesRequestBody `json:"body,omitempty"`
+	Body *UpdateL7policiesRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateL7policiesRequest) String() string {

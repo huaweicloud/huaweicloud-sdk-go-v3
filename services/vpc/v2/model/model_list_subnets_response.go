@@ -10,7 +10,7 @@ import (
 type ListSubnetsResponse struct {
 
 	// subnet对象列表
-	Subnets        *[]Subnet `json:"subnets,omitempty"`
+	Subnets        *[]Subnet `json:"subnets,omitempty" xml:"subnets"`
 	HttpStatusCode int       `json:"-"`
 }
 

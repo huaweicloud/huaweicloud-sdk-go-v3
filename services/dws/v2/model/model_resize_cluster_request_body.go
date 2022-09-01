@@ -8,7 +8,7 @@ import (
 
 // This is a auto create Body Object
 type ResizeClusterRequestBody struct {
-	ScaleOut *ScaleOut `json:"scale_out,omitempty"`
+	ScaleOut *ScaleOut `json:"scale_out,omitempty" xml:"scale_out"`
 }
 
 func (o ResizeClusterRequestBody) String() string {

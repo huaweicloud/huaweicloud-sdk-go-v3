@@ -13,7 +13,7 @@ import (
 type DisableAction struct {
 
 	// 停用操作
-	Action DisableActionAction `json:"action"`
+	Action DisableActionAction `json:"action" xml:"action"`
 }
 
 func (o DisableAction) String() string {

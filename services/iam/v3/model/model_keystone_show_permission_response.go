@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type KeystoneShowPermissionResponse struct {
-	Role           *RoleResult `json:"role,omitempty"`
+	Role           *RoleResult `json:"role,omitempty" xml:"role"`
 	HttpStatusCode int         `json:"-"`
 }
 

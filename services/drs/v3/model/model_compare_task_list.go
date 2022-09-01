@@ -13,19 +13,19 @@ import (
 type CompareTaskList struct {
 
 	// 对比任务的id。
-	CompareTaskId string `json:"compare_task_id"`
+	CompareTaskId string `json:"compare_task_id" xml:"compare_task_id"`
 
 	// 对比任务的类型。
-	CompareType string `json:"compare_type"`
+	CompareType string `json:"compare_type" xml:"compare_type"`
 
 	// 对比任务的状态。
-	CompareTaskStatus CompareTaskListCompareTaskStatus `json:"compare_task_status"`
+	CompareTaskStatus CompareTaskListCompareTaskStatus `json:"compare_task_status" xml:"compare_task_status"`
 
 	// 对比开始时间。
-	CreateTime string `json:"create_time"`
+	CreateTime string `json:"create_time" xml:"create_time"`
 
 	// 对比结束时间。
-	EndTime *string `json:"end_time,omitempty"`
+	EndTime *string `json:"end_time,omitempty" xml:"end_time"`
 }
 
 func (o CompareTaskList) String() string {

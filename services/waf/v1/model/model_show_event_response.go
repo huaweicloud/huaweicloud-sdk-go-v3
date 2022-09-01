@@ -10,10 +10,10 @@ import (
 type ShowEventResponse struct {
 
 	// 攻击事件数量
-	Total *int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty" xml:"total"`
 
 	// 攻击事件详情
-	Items          *[]ShowEventItems `json:"items,omitempty"`
+	Items          *[]ShowEventItems `json:"items,omitempty" xml:"items"`
 	HttpStatusCode int               `json:"-"`
 }
 

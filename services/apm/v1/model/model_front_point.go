@@ -10,10 +10,10 @@ import (
 type FrontPoint struct {
 
 	// 时间
-	Time *int64 `json:"time,omitempty"`
+	Time *int64 `json:"time,omitempty" xml:"time"`
 
 	// 值
-	Value *interface{} `json:"value,omitempty"`
+	Value *interface{} `json:"value,omitempty" xml:"value"`
 }
 
 func (o FrontPoint) String() string {

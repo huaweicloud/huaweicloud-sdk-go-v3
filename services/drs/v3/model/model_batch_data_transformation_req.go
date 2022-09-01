@@ -10,7 +10,7 @@ import (
 type BatchDataTransformationReq struct {
 
 	// 批量数据加工规则请求列表
-	Jobs []CheckDataTransformationReq `json:"jobs"`
+	Jobs []CheckDataTransformationReq `json:"jobs" xml:"jobs"`
 }
 
 func (o BatchDataTransformationReq) String() string {

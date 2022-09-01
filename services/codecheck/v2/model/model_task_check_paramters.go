@@ -9,13 +9,13 @@ import (
 type TaskCheckParamters struct {
 
 	// 检查工具ID
-	CheckId *int32 `json:"check_id,omitempty"`
+	CheckId *int32 `json:"check_id,omitempty" xml:"check_id"`
 
 	// 编译参数名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 检查参数配置信息
-	CheckerConfigs *[]CheckConfigInfo `json:"checker_configs,omitempty"`
+	CheckerConfigs *[]CheckConfigInfo `json:"checker_configs,omitempty" xml:"checker_configs"`
 }
 
 func (o TaskCheckParamters) String() string {

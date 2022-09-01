@@ -9,10 +9,10 @@ import (
 type UpdateDatabaseReq struct {
 
 	// 数据库名称。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 数据库备注。
-	Comment string `json:"comment"`
+	Comment string `json:"comment" xml:"comment"`
 }
 
 func (o UpdateDatabaseReq) String() string {

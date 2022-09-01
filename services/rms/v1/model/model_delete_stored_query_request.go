@@ -10,7 +10,7 @@ import (
 type DeleteStoredQueryRequest struct {
 
 	// 查询ID
-	QueryId string `json:"query_id"`
+	QueryId string `json:"query_id" xml:"query_id"`
 }
 
 func (o DeleteStoredQueryRequest) String() string {

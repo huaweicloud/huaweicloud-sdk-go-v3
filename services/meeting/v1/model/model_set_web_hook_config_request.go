@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type SetWebHookConfigRequest struct {
-	Body *WebHookConfigRequest `json:"body,omitempty"`
+	Body *WebHookConfigRequest `json:"body,omitempty" xml:"body"`
 }
 
 func (o SetWebHookConfigRequest) String() string {

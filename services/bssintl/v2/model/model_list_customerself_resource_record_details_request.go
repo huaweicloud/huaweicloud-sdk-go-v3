@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ListCustomerselfResourceRecordDetailsRequest struct {
-	Body *QueryResRecordsDetailReq `json:"body,omitempty"`
+	Body *QueryResRecordsDetailReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o ListCustomerselfResourceRecordDetailsRequest) String() string {

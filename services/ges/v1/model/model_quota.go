@@ -10,13 +10,13 @@ import (
 type Quota struct {
 
 	// 类型。  取值范围： - \"graph\" - \"backup\" - \"metadata\"
-	Type string `json:"type"`
+	Type string `json:"type" xml:"type"`
 
 	// 图的可用个数。
-	Available int32 `json:"available"`
+	Available int32 `json:"available" xml:"available"`
 
 	// 边的可用个数。type为graph时此值有效。
-	EdgeVolume *int32 `json:"edgeVolume,omitempty"`
+	EdgeVolume *int32 `json:"edgeVolume,omitempty" xml:"edgeVolume"`
 }
 
 func (o Quota) String() string {

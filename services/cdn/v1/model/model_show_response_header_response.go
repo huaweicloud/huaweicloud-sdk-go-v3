@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowResponseHeaderResponse struct {
-	Headers        *HeaderMap `json:"headers,omitempty"`
+	Headers        *HeaderMap `json:"headers,omitempty" xml:"headers"`
 	HttpStatusCode int        `json:"-"`
 }
 

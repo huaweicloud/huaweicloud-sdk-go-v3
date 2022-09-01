@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateImageRequest struct {
-	Body *CreateImageRequestBody `json:"body,omitempty"`
+	Body *CreateImageRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateImageRequest) String() string {

@@ -10,10 +10,10 @@ import (
 type ReinstallVolumeSpec struct {
 
 	// 用户自定义镜像ID
-	ImageID *string `json:"imageID,omitempty"`
+	ImageID *string `json:"imageID,omitempty" xml:"imageID"`
 
 	// 用户主密钥ID。默认为空时，表示云硬盘不加密。
-	CmkID *string `json:"cmkID,omitempty"`
+	CmkID *string `json:"cmkID,omitempty" xml:"cmkID"`
 }
 
 func (o ReinstallVolumeSpec) String() string {

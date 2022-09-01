@@ -10,15 +10,15 @@ import (
 type UpdateDevice struct {
 
 	// **参数说明**：设备名称。 **取值范围**：长度不超过256，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合，建议不少于4个字符。
-	DeviceName *string `json:"device_name,omitempty"`
+	DeviceName *string `json:"device_name,omitempty" xml:"device_name"`
 
 	// **参数说明**：设备的描述信息。 **取值范围**：长度不超过2048，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// **参数说明**：设备扩展信息。用户可以自定义任何想要的扩展信息，修改子设备信息时不会下发给网关。
-	ExtensionInfo *interface{} `json:"extension_info,omitempty"`
+	ExtensionInfo *interface{} `json:"extension_info,omitempty" xml:"extension_info"`
 
-	AuthInfo *AuthInfoWithoutSecret `json:"auth_info,omitempty"`
+	AuthInfo *AuthInfoWithoutSecret `json:"auth_info,omitempty" xml:"auth_info"`
 }
 
 func (o UpdateDevice) String() string {

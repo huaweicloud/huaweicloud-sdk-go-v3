@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreatePartnerCouponsRequest struct {
-	Body *CreatePartnerCouponsReq `json:"body,omitempty"`
+	Body *CreatePartnerCouponsReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreatePartnerCouponsRequest) String() string {

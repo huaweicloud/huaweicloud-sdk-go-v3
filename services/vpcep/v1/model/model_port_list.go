@@ -13,13 +13,13 @@ import (
 type PortList struct {
 
 	// 终端节点访问的端口。 终端节点提供给用户，作为访问终端节 点服务的端口，范围1-65535。
-	ClientPort *int32 `json:"client_port,omitempty"`
+	ClientPort *int32 `json:"client_port,omitempty" xml:"client_port"`
 
 	// 终端节点服务的端口。 终端节点服务绑定了后端资源，作为提 供服务的端口，范围1-65535。
-	ServerPort *int32 `json:"server_port,omitempty"`
+	ServerPort *int32 `json:"server_port,omitempty" xml:"server_port"`
 
 	// 端口映射协议，支持TCP。
-	Protocol *PortListProtocol `json:"protocol,omitempty"`
+	Protocol *PortListProtocol `json:"protocol,omitempty" xml:"protocol"`
 }
 
 func (o PortList) String() string {

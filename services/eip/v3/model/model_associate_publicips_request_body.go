@@ -8,7 +8,7 @@ import (
 
 // 绑定弹性公网IP的请求体
 type AssociatePublicipsRequestBody struct {
-	Publicip *AssociatePublicipsOption `json:"publicip"`
+	Publicip *AssociatePublicipsOption `json:"publicip" xml:"publicip"`
 }
 
 func (o AssociatePublicipsRequestBody) String() string {

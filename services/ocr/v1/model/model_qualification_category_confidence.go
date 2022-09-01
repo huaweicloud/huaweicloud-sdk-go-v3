@@ -9,16 +9,16 @@ import (
 type QualificationCategoryConfidence struct {
 
 	// 诚信考核信息（非必有，依赖对应从业资格证板式）。
-	Category *float32 `json:"category,omitempty"`
+	Category *float32 `json:"category,omitempty" xml:"category"`
 
 	// 初次领证日期（非必有，依赖对应从业资格证板式）
-	InitialIssueDate *float32 `json:"initial_issue_date,omitempty"`
+	InitialIssueDate *float32 `json:"initial_issue_date,omitempty" xml:"initial_issue_date"`
 
 	// 有效起始日期（非必有，依赖对应从业资格证板式）
-	IssueDate *float32 `json:"issue_date,omitempty"`
+	IssueDate *float32 `json:"issue_date,omitempty" xml:"issue_date"`
 
 	// 有效期至
-	ExpiryDate *float32 `json:"expiry_date,omitempty"`
+	ExpiryDate *float32 `json:"expiry_date,omitempty" xml:"expiry_date"`
 }
 
 func (o QualificationCategoryConfidence) String() string {

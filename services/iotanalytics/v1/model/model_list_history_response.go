@@ -10,10 +10,10 @@ import (
 type ListHistoryResponse struct {
 
 	// 时间序列
-	Timestamps *[]string `json:"timestamps,omitempty"`
+	Timestamps *[]string `json:"timestamps,omitempty" xml:"timestamps"`
 
 	// 查询设备的属性值
-	Properties     *[]HistoryValues `json:"properties,omitempty"`
+	Properties     *[]HistoryValues `json:"properties,omitempty" xml:"properties"`
 	HttpStatusCode int              `json:"-"`
 }
 

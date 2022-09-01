@@ -10,10 +10,10 @@ import (
 type ListAppVersionsResponse struct {
 
 	// app详情
-	Versions *[]AppVersionDetail `json:"versions,omitempty"`
+	Versions *[]AppVersionDetail `json:"versions,omitempty" xml:"versions"`
 
 	// 满足条件的应用版本个数
-	Count          *int32 `json:"count,omitempty"`
+	Count          *int32 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

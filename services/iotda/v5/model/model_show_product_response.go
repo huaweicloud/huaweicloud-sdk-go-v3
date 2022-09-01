@@ -10,40 +10,40 @@ import (
 type ShowProductResponse struct {
 
 	// 资源空间ID。
-	AppId *string `json:"app_id,omitempty"`
+	AppId *string `json:"app_id,omitempty" xml:"app_id"`
 
 	// 资源空间名称。
-	AppName *string `json:"app_name,omitempty"`
+	AppName *string `json:"app_name,omitempty" xml:"app_name"`
 
 	// 产品ID，用于唯一标识一个产品，在物联网平台创建产品后由平台分配获得。
-	ProductId *string `json:"product_id,omitempty"`
+	ProductId *string `json:"product_id,omitempty" xml:"product_id"`
 
 	// 产品名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 设备类型。
-	DeviceType *string `json:"device_type,omitempty"`
+	DeviceType *string `json:"device_type,omitempty" xml:"device_type"`
 
 	// 设备使用的协议类型。取值范围：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF， OPC-UA，OPC-DA，Other。
-	ProtocolType *string `json:"protocol_type,omitempty"`
+	ProtocolType *string `json:"protocol_type,omitempty" xml:"protocol_type"`
 
 	// 设备上报数据的格式，取值范围：json，binary。
-	DataFormat *string `json:"data_format,omitempty"`
+	DataFormat *string `json:"data_format,omitempty" xml:"data_format"`
 
 	// 厂商名称。
-	ManufacturerName *string `json:"manufacturer_name,omitempty"`
+	ManufacturerName *string `json:"manufacturer_name,omitempty" xml:"manufacturer_name"`
 
 	// 设备所属行业。
-	Industry *string `json:"industry,omitempty"`
+	Industry *string `json:"industry,omitempty" xml:"industry"`
 
 	// 产品的描述信息。
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 设备的服务能力列表。
-	ServiceCapabilities *[]ServiceCapability `json:"service_capabilities,omitempty"`
+	ServiceCapabilities *[]ServiceCapability `json:"service_capabilities,omitempty" xml:"service_capabilities"`
 
 	// 在物联网平台创建产品的时间，格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
-	CreateTime     *string `json:"create_time,omitempty"`
+	CreateTime     *string `json:"create_time,omitempty" xml:"create_time"`
 	HttpStatusCode int     `json:"-"`
 }
 

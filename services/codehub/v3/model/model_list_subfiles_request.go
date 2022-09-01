@@ -10,19 +10,19 @@ import (
 type ListSubfilesRequest struct {
 
 	// 仓库id
-	RepositoryUuid string `json:"repository_uuid"`
+	RepositoryUuid string `json:"repository_uuid" xml:"repository_uuid"`
 
 	// 分支名称
-	BranchName string `json:"branch_name"`
+	BranchName string `json:"branch_name" xml:"branch_name"`
 
 	// 文件路径
-	Path *string `json:"path,omitempty"`
+	Path *string `json:"path,omitempty" xml:"path"`
 
 	// 偏移量
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 记录数量
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 }
 
 func (o ListSubfilesRequest) String() string {

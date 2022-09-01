@@ -10,13 +10,13 @@ import (
 type ListApiQuantitiesV2Response struct {
 
 	// API总个数
-	InstanceNum *int32 `json:"instance_num,omitempty"`
+	InstanceNum *int32 `json:"instance_num,omitempty" xml:"instance_num"`
 
 	// 已发布到release环境的API个数
-	NumsOnRelease *int32 `json:"nums_on_release,omitempty"`
+	NumsOnRelease *int32 `json:"nums_on_release,omitempty" xml:"nums_on_release"`
 
 	// 未发布到release环境的API个数
-	NumsOffRelease *int32 `json:"nums_off_release,omitempty"`
+	NumsOffRelease *int32 `json:"nums_off_release,omitempty" xml:"nums_off_release"`
 	HttpStatusCode int    `json:"-"`
 }
 

@@ -10,10 +10,10 @@ import (
 type ProgressInfo struct {
 
 	// 完成进度
-	Completed *string `json:"completed,omitempty"`
+	Completed *string `json:"completed,omitempty" xml:"completed"`
 
 	// 预计剩余时间
-	RemainingTime *string `json:"remaining_time,omitempty"`
+	RemainingTime *string `json:"remaining_time,omitempty" xml:"remaining_time"`
 }
 
 func (o ProgressInfo) String() string {

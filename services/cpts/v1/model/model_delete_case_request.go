@@ -10,7 +10,7 @@ import (
 type DeleteCaseRequest struct {
 
 	// 用例id
-	CaseId int32 `json:"case_id"`
+	CaseId int32 `json:"case_id" xml:"case_id"`
 }
 
 func (o DeleteCaseRequest) String() string {

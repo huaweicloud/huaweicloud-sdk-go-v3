@@ -13,25 +13,25 @@ import (
 type Keypair struct {
 
 	// SSH密钥对的名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// SSH密钥对的类型，值为“ssh”或“x509”
-	Type *KeypairType `json:"type,omitempty"`
+	Type *KeypairType `json:"type,omitempty" xml:"type"`
 
 	// 租户级或者用户级
-	Scope *KeypairScope `json:"scope,omitempty"`
+	Scope *KeypairScope `json:"scope,omitempty" xml:"scope"`
 
 	// SSH密钥对对应的publicKey信息
-	PublicKey *string `json:"public_key,omitempty"`
+	PublicKey *string `json:"public_key,omitempty" xml:"public_key"`
 
 	// SSH密钥对应指纹信息
-	Fingerprint *string `json:"fingerprint,omitempty"`
+	Fingerprint *string `json:"fingerprint,omitempty" xml:"fingerprint"`
 
 	// 是否托管密钥
-	IsKeyProtection *bool `json:"is_key_protection,omitempty"`
+	IsKeyProtection *bool `json:"is_key_protection,omitempty" xml:"is_key_protection"`
 
 	// 冻结状态 - 0：正常状态 - 1：普通冻结 - 2：公安冻结 - 3：普通冻结及公安冻结 - 4：违规冻结 - 5：普通冻结及违规冻结 - 6：公安冻结及违规冻结 - 7：普通冻结、公安冻结及违规冻结 - 8：未实名认证冻结 - 9：普通冻结及未实名认证冻结 - 10：公安冻结及未实名认证冻结
-	FrozenState *string `json:"frozen_state,omitempty"`
+	FrozenState *string `json:"frozen_state,omitempty" xml:"frozen_state"`
 }
 
 func (o Keypair) String() string {

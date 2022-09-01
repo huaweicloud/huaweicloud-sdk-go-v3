@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RunTextSimilarityRequest struct {
-	Body *TextSimilarityRequest `json:"body,omitempty"`
+	Body *TextSimilarityRequest `json:"body,omitempty" xml:"body"`
 }
 
 func (o RunTextSimilarityRequest) String() string {

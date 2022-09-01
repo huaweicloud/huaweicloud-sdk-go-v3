@@ -10,25 +10,25 @@ import (
 type IncConfigV2 struct {
 
 	// 需要关联的父任务ID，流水线创建或MR创建任务需要该参数
-	ParentTaskId *string `json:"parent_task_id,omitempty"`
+	ParentTaskId *string `json:"parent_task_id,omitempty" xml:"parent_task_id"`
 
 	// 增量检查代码源分支
-	GitSourceBranch *string `json:"git_source_branch,omitempty"`
+	GitSourceBranch *string `json:"git_source_branch,omitempty" xml:"git_source_branch"`
 
 	// 增量检查代码目标分支
-	GitTargetBranch *string `json:"git_target_branch,omitempty"`
+	GitTargetBranch *string `json:"git_target_branch,omitempty" xml:"git_target_branch"`
 
 	// MR唯一标示ID
-	MergeId *string `json:"merge_id,omitempty"`
+	MergeId *string `json:"merge_id,omitempty" xml:"merge_id"`
 
 	// webhook触发事件类型,merge_request/push_request
-	EventType *string `json:"event_type,omitempty"`
+	EventType *string `json:"event_type,omitempty" xml:"event_type"`
 
 	// webhook事件状态，open/close/update
-	Action *string `json:"action,omitempty"`
+	Action *string `json:"action,omitempty" xml:"action"`
 
 	// MR标题
-	Title *string `json:"title,omitempty"`
+	Title *string `json:"title,omitempty" xml:"title"`
 }
 
 func (o IncConfigV2) String() string {

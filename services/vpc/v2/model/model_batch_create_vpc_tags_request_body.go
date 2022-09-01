@@ -13,10 +13,10 @@ import (
 type BatchCreateVpcTagsRequestBody struct {
 
 	// 功能说明：操作标识 取值范围：create
-	Action BatchCreateVpcTagsRequestBodyAction `json:"action"`
+	Action BatchCreateVpcTagsRequestBodyAction `json:"action" xml:"action"`
 
 	// 功能说明：标签列表
-	Tags []ResourceTag `json:"tags"`
+	Tags []ResourceTag `json:"tags" xml:"tags"`
 }
 
 func (o BatchCreateVpcTagsRequestBody) String() string {

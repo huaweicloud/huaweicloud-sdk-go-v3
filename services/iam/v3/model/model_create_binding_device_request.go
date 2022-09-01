@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateBindingDeviceRequest struct {
-	Body *BindMfaDevice `json:"body,omitempty"`
+	Body *BindMfaDevice `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateBindingDeviceRequest) String() string {

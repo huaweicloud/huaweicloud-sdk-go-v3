@@ -9,9 +9,9 @@ import (
 type InputResponse struct {
 
 	// 参数名
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
-	PropertyReference *PropertyReferenceResponse `json:"property_reference,omitempty"`
+	PropertyReference *PropertyReferenceResponse `json:"property_reference,omitempty" xml:"property_reference"`
 }
 
 func (o InputResponse) String() string {

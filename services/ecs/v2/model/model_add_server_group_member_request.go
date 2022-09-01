@@ -10,9 +10,9 @@ import (
 type AddServerGroupMemberRequest struct {
 
 	// 云服务器组ID。
-	ServerGroupId string `json:"server_group_id"`
+	ServerGroupId string `json:"server_group_id" xml:"server_group_id"`
 
-	Body *AddServerGroupMemberRequestBody `json:"body,omitempty"`
+	Body *AddServerGroupMemberRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o AddServerGroupMemberRequest) String() string {

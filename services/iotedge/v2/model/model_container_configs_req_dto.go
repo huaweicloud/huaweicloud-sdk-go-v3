@@ -9,7 +9,7 @@ import (
 type ContainerConfigsReqDto struct {
 
 	// 容器端口映射值
-	ContainerPortList *[]ContainerPortDto `json:"container_port_list,omitempty"`
+	ContainerPortList *[]ContainerPortDto `json:"container_port_list,omitempty" xml:"container_port_list"`
 }
 
 func (o ContainerConfigsReqDto) String() string {

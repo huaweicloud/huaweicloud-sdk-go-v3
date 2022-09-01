@@ -9,7 +9,7 @@ import (
 type CustomizeSourceUpdateReq struct {
 
 	// 事件源描述
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 }
 
 func (o CustomizeSourceUpdateReq) String() string {

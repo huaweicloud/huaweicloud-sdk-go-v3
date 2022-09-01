@@ -10,10 +10,10 @@ import (
 type ListProjectModulesResponse struct {
 
 	// 模块总数
-	Total *int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty" xml:"total"`
 
 	// 模块列表
-	Modules        *[]ProjectModule `json:"modules,omitempty"`
+	Modules        *[]ProjectModule `json:"modules,omitempty" xml:"modules"`
 	HttpStatusCode int              `json:"-"`
 }
 

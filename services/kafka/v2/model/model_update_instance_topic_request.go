@@ -10,9 +10,9 @@ import (
 type UpdateInstanceTopicRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *UpdateInstanceTopicReq `json:"body,omitempty"`
+	Body *UpdateInstanceTopicReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateInstanceTopicRequest) String() string {

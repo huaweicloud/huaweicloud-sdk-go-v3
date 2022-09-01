@@ -10,7 +10,7 @@ import (
 type ApplicationListConfigConfiguration struct {
 
 	// 应用组件环境变量。
-	Env *[]ApplicationListConfigConfigurationEnv `json:"env,omitempty"`
+	Env *[]ApplicationListConfigConfigurationEnv `json:"env,omitempty" xml:"env"`
 }
 
 func (o ApplicationListConfigConfiguration) String() string {

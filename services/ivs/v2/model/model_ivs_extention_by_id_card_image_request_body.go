@@ -7,9 +7,9 @@ import (
 )
 
 type IvsExtentionByIdCardImageRequestBody struct {
-	Meta *Meta `json:"meta"`
+	Meta *Meta `json:"meta" xml:"meta"`
 
-	Data *IvsExtentionByIdCardImageRequestBodyData `json:"data"`
+	Data *IvsExtentionByIdCardImageRequestBodyData `json:"data" xml:"data"`
 }
 
 func (o IvsExtentionByIdCardImageRequestBody) String() string {

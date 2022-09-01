@@ -10,7 +10,7 @@ import (
 type BatchCreateMembersRequestBody struct {
 
 	// 后端服务器对象。
-	Members []BatchCreateMembersOption `json:"members"`
+	Members []BatchCreateMembersOption `json:"members" xml:"members"`
 }
 
 func (o BatchCreateMembersRequestBody) String() string {

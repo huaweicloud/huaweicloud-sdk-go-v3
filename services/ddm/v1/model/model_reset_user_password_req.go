@@ -10,7 +10,7 @@ import (
 type ResetUserPasswordReq struct {
 
 	// 重置后的新密码。
-	Password string `json:"password"`
+	Password string `json:"password" xml:"password"`
 }
 
 func (o ResetUserPasswordReq) String() string {

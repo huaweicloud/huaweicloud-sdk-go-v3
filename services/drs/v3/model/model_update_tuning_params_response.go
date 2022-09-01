@@ -10,19 +10,19 @@ import (
 type UpdateTuningParamsResponse struct {
 
 	// 全量调优参数
-	FullSync *[]TuningParameter `json:"full_sync,omitempty"`
+	FullSync *[]TuningParameter `json:"full_sync,omitempty" xml:"full_sync"`
 
 	// 增量抓取调优参数
-	IncreCapture *[]TuningParameter `json:"incre_capture,omitempty"`
+	IncreCapture *[]TuningParameter `json:"incre_capture,omitempty" xml:"incre_capture"`
 
 	// 增量回放调优参数
-	IncreApply *[]TuningParameter `json:"incre_apply,omitempty"`
+	IncreApply *[]TuningParameter `json:"incre_apply,omitempty" xml:"incre_apply"`
 
 	// 增量日志拉取调优参数
-	IncreRelay *[]TuningParameter `json:"incre_relay,omitempty"`
+	IncreRelay *[]TuningParameter `json:"incre_relay,omitempty" xml:"incre_relay"`
 
 	// 参数修改是否成功
-	ModifyResult   *string `json:"modify_result,omitempty"`
+	ModifyResult   *string `json:"modify_result,omitempty" xml:"modify_result"`
 	HttpStatusCode int     `json:"-"`
 }
 

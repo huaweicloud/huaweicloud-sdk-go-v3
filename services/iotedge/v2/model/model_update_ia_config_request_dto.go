@@ -9,13 +9,13 @@ import (
 type UpdateIaConfigRequestDto struct {
 
 	// 配置项名称
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 配置项详情，长度2MB以内
-	Value string `json:"value"`
+	Value string `json:"value" xml:"value"`
 
 	// 配置项描述
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 }
 
 func (o UpdateIaConfigRequestDto) String() string {

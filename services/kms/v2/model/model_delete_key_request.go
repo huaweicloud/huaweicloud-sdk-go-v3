@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type DeleteKeyRequest struct {
-	Body *ScheduleKeyDeletionRequestBody `json:"body,omitempty"`
+	Body *ScheduleKeyDeletionRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o DeleteKeyRequest) String() string {

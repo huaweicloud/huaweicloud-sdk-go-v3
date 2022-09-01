@@ -10,9 +10,9 @@ import (
 type StartVpecpRequest struct {
 
 	// 指定开启终端节点的集群ID。
-	ClusterId string `json:"cluster_id"`
+	ClusterId string `json:"cluster_id" xml:"cluster_id"`
 
-	Body *StartVpecpReq `json:"body,omitempty"`
+	Body *StartVpecpReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o StartVpecpRequest) String() string {

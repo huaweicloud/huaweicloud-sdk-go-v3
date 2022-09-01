@@ -10,13 +10,13 @@ import (
 type ShowJobSuccessRatioResponse struct {
 
 	// 任务成功构建次数
-	SuccessCount *int32 `json:"success_count,omitempty"`
+	SuccessCount *int32 `json:"success_count,omitempty" xml:"success_count"`
 
 	// 任务构建总次数
-	TotalCount *int32 `json:"total_count,omitempty"`
+	TotalCount *int32 `json:"total_count,omitempty" xml:"total_count"`
 
 	// 任务成功率,精确到小数点后两位
-	SuccessRatio   *float64 `json:"success_ratio,omitempty"`
+	SuccessRatio   *float64 `json:"success_ratio,omitempty" xml:"success_ratio"`
 	HttpStatusCode int      `json:"-"`
 }
 

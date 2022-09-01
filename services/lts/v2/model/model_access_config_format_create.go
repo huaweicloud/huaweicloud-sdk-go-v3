@@ -8,9 +8,9 @@ import (
 
 // 日志格式
 type AccessConfigFormatCreate struct {
-	Single *AccessConfigFormatSingleCreate `json:"single,omitempty"`
+	Single *AccessConfigFormatSingleCreate `json:"single,omitempty" xml:"single"`
 
-	Multi *AccessConfigFormatMutilCreate `json:"multi,omitempty"`
+	Multi *AccessConfigFormatMutilCreate `json:"multi,omitempty" xml:"multi"`
 }
 
 func (o AccessConfigFormatCreate) String() string {

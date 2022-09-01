@@ -12,40 +12,40 @@ import (
 type CreateScoresRequestModel struct {
 
 	// 大赛ID，大赛平台提供
-	CompetitionId string `json:"competition_id"`
+	CompetitionId string `json:"competition_id" xml:"competition_id"`
 
 	// 大赛阶段ID，大赛平台提供
-	StageId string `json:"stage_id"`
+	StageId string `json:"stage_id" xml:"stage_id"`
 
 	// 第三方服务作品ID
-	WorksId int32 `json:"works_id"`
+	WorksId int32 `json:"works_id" xml:"works_id"`
 
 	// 作品名称，名称最大字符数为75，并且不能有含有特殊符号
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 作品类型,例如docx、png、zip等
-	WorksKind *string `json:"works_kind,omitempty"`
+	WorksKind *string `json:"works_kind,omitempty" xml:"works_kind"`
 
 	// 作品分数，作品状态为failed时传-1，计算长度时包括小数点，小数点后面最多保留四位
-	Score float64 `json:"score"`
+	Score float64 `json:"score" xml:"score"`
 
 	// 作品状态success|failed。判题时，需要对上传作品进行检查，当作品不符合要求时，应该返回failed，并将提示信息通过 message显示出来
-	Status CreateScoresRequestModelStatus `json:"status"`
+	Status CreateScoresRequestModelStatus `json:"status" xml:"status"`
 
 	// 作品创建时间
-	CreatedTime string `json:"created_time"`
+	CreatedTime string `json:"created_time" xml:"created_time"`
 
 	// 作品备注信息
-	Note *string `json:"note,omitempty"`
+	Note *string `json:"note,omitempty" xml:"note"`
 
 	// 作品描述信息
-	Message *string `json:"message,omitempty"`
+	Message *string `json:"message,omitempty" xml:"message"`
 
 	// 租户ID
-	DomainId string `json:"domain_id"`
+	DomainId string `json:"domain_id" xml:"domain_id"`
 
 	// 用户ID
-	UserId *string `json:"user_id,omitempty"`
+	UserId *string `json:"user_id,omitempty" xml:"user_id"`
 }
 
 func (o CreateScoresRequestModel) String() string {

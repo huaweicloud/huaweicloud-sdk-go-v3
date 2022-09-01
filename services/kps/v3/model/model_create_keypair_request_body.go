@@ -8,7 +8,7 @@ import (
 
 // 创建密钥对请求体
 type CreateKeypairRequestBody struct {
-	Keypair *CreateKeypairAction `json:"keypair"`
+	Keypair *CreateKeypairAction `json:"keypair" xml:"keypair"`
 }
 
 func (o CreateKeypairRequestBody) String() string {

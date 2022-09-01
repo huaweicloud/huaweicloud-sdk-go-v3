@@ -10,13 +10,13 @@ import (
 type ShowResourceBindEnterpriseProjectResponse struct {
 
 	// 资源列表
-	Resources *[]Resources `json:"resources,omitempty"`
+	Resources *[]Resources `json:"resources,omitempty" xml:"resources"`
 
 	// 查询失败的企业项目下的资源
-	Errors *[]Errors `json:"errors,omitempty"`
+	Errors *[]Errors `json:"errors,omitempty" xml:"errors"`
 
 	// 企业项目下的资源总数
-	TotalCount     *int32 `json:"total_count,omitempty"`
+	TotalCount     *int32 `json:"total_count,omitempty" xml:"total_count"`
 	HttpStatusCode int    `json:"-"`
 }
 

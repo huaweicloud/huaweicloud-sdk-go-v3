@@ -7,9 +7,9 @@ import (
 )
 
 type Script struct {
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
-	Path *string `json:"path,omitempty"`
+	Path *string `json:"path,omitempty" xml:"path"`
 }
 
 func (o Script) String() string {

@@ -10,13 +10,13 @@ import (
 type SimpleTimerType struct {
 
 	// **参数说明**：规则触发的开始时间，使用UTC时区，格式：yyyyMMdd'T'HHmmss'Z'。
-	StartTime string `json:"start_time"`
+	StartTime string `json:"start_time" xml:"start_time"`
 
 	// **参数说明**：规则触发的重复时间间隔，单位为秒。
-	RepeatInterval int32 `json:"repeat_interval"`
+	RepeatInterval int32 `json:"repeat_interval" xml:"repeat_interval"`
 
 	// **参数说明**：规则触发的重复次数。
-	RepeatCount int32 `json:"repeat_count"`
+	RepeatCount int32 `json:"repeat_count" xml:"repeat_count"`
 }
 
 func (o SimpleTimerType) String() string {

@@ -10,10 +10,10 @@ import (
 type ListEdgeCloudResponse struct {
 
 	// 边缘业务数量。
-	Count *int32 `json:"count,omitempty"`
+	Count *int32 `json:"count,omitempty" xml:"count"`
 
 	// 边缘业务列表。
-	Edgeclouds     *[]EdgeCloud `json:"edgeclouds,omitempty"`
+	Edgeclouds     *[]EdgeCloud `json:"edgeclouds,omitempty" xml:"edgeclouds"`
 	HttpStatusCode int          `json:"-"`
 }
 

@@ -13,10 +13,10 @@ import (
 type IntentReq struct {
 
 	// 支持的文本语言类型，目前只支持中文，默认为zh。
-	Lang *IntentReqLang `json:"lang,omitempty"`
+	Lang *IntentReqLang `json:"lang,omitempty" xml:"lang"`
 
 	// 待分析文本列表，UTF-8编码，限定32个字符以内，文本长度超过32个字符时，只检测前32个字符。
-	Text string `json:"text"`
+	Text string `json:"text" xml:"text"`
 }
 
 func (o IntentReq) String() string {

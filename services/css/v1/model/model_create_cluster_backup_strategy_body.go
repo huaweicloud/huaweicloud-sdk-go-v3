@@ -10,22 +10,22 @@ import (
 type CreateClusterBackupStrategyBody struct {
 
 	// 每天自动创建快照的时间点。只支持整点，后面需加上时区，格式为“HH:mm z”，“HH:mm”表示整点时间，“z”表示时区。比如“00:00 GMT+08:00”、“01:00 GMT+08:00”等。
-	Period string `json:"period"`
+	Period string `json:"period" xml:"period"`
 
 	// 自动创建的快照的前缀，需要用户自己手动输入。只能包含1~32位小写字母、数字、中划线或者下划线，并且以小写字母开头。
-	Prefix string `json:"prefix"`
+	Prefix string `json:"prefix" xml:"prefix"`
 
 	// 自动创建快照的保留天数。取值范围：1-90。
-	Keepday int32 `json:"keepday"`
+	Keepday int32 `json:"keepday" xml:"keepday"`
 
 	// 备份使用的OBS桶名称。
-	Bucket *string `json:"bucket,omitempty"`
+	Bucket *string `json:"bucket,omitempty" xml:"bucket"`
 
 	// 快照在OBS桶中的存放路径。
-	BasePath *string `json:"basePath,omitempty"`
+	BasePath *string `json:"basePath,omitempty" xml:"basePath"`
 
 	// 访问OBS使用的IAM委托名称。  >如果bucket、basePath和agency三个参数同时为空，则系统会自动创建OBS桶和IAM代理，否则使用配置的参数值。
-	Agency *string `json:"agency,omitempty"`
+	Agency *string `json:"agency,omitempty" xml:"agency"`
 }
 
 func (o CreateClusterBackupStrategyBody) String() string {

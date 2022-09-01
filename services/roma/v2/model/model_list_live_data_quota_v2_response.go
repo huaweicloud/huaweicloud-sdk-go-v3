@@ -10,19 +10,19 @@ import (
 type ListLiveDataQuotaV2Response struct {
 
 	// 数据源配额
-	Datasource *string `json:"datasource,omitempty"`
+	Datasource *string `json:"datasource,omitempty" xml:"datasource"`
 
 	// 后端api配额
-	Api *string `json:"api,omitempty"`
+	Api *string `json:"api,omitempty" xml:"api"`
 
 	// 脚本配额
-	Scripts *string `json:"scripts,omitempty"`
+	Scripts *string `json:"scripts,omitempty" xml:"scripts"`
 
 	// 已使用的数据源数量
-	DatasourceUsed *string `json:"datasource_used,omitempty"`
+	DatasourceUsed *string `json:"datasource_used,omitempty" xml:"datasource_used"`
 
 	// 已使用的后端api数量
-	ApiUsed        *string `json:"api_used,omitempty"`
+	ApiUsed        *string `json:"api_used,omitempty" xml:"api_used"`
 	HttpStatusCode int     `json:"-"`
 }
 

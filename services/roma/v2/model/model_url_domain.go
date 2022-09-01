@@ -12,22 +12,22 @@ import (
 type UrlDomain struct {
 
 	// 域名编号
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 访问域名
-	Domain *string `json:"domain,omitempty"`
+	Domain *string `json:"domain,omitempty" xml:"domain"`
 
 	// 域名cname状态： - 1：未解析 - 2：解析中 - 3：解析成功 - 4：解析失败
-	CnameStatus *int32 `json:"cname_status,omitempty"`
+	CnameStatus *int32 `json:"cname_status,omitempty" xml:"cname_status"`
 
 	// SSL证书编号
-	SslId *string `json:"ssl_id,omitempty"`
+	SslId *string `json:"ssl_id,omitempty" xml:"ssl_id"`
 
 	// SSL证书名称
-	SslName *string `json:"ssl_name,omitempty"`
+	SslName *string `json:"ssl_name,omitempty" xml:"ssl_name"`
 
 	// 最小ssl协议版本号。支持TLSv1.1或TLSv1.2
-	MinSslVersion *UrlDomainMinSslVersion `json:"min_ssl_version,omitempty"`
+	MinSslVersion *UrlDomainMinSslVersion `json:"min_ssl_version,omitempty" xml:"min_ssl_version"`
 }
 
 func (o UrlDomain) String() string {

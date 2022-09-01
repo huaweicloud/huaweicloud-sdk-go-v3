@@ -9,10 +9,10 @@ import (
 type ConfirmIaConfigRequestBody struct {
 
 	// 配置项ID
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 版本号
-	Version string `json:"version"`
+	Version string `json:"version" xml:"version"`
 }
 
 func (o ConfirmIaConfigRequestBody) String() string {

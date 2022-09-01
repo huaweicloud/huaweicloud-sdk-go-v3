@@ -10,10 +10,10 @@ import (
 type ShowPublicKeyResponse struct {
 
 	// 密钥ID。
-	KeyId *string `json:"key_id,omitempty"`
+	KeyId *string `json:"key_id,omitempty" xml:"key_id"`
 
 	// 公钥信息。
-	PublicKey      *string `json:"public_key,omitempty"`
+	PublicKey      *string `json:"public_key,omitempty" xml:"public_key"`
 	HttpStatusCode int     `json:"-"`
 }
 

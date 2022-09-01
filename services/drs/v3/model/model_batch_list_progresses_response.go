@@ -10,10 +10,10 @@ import (
 type BatchListProgressesResponse struct {
 
 	// 总数
-	Count *int32 `json:"count,omitempty"`
+	Count *int32 `json:"count,omitempty" xml:"count"`
 
 	// 批量查询迁移进度的响应体集合
-	Results        *[]QueryProgressResp `json:"results,omitempty"`
+	Results        *[]QueryProgressResp `json:"results,omitempty" xml:"results"`
 	HttpStatusCode int                  `json:"-"`
 }
 

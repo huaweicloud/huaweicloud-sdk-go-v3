@@ -10,7 +10,7 @@ import (
 type DeleteUserResponse struct {
 
 	// DDM实例帐号名称。
-	Name           *string `json:"name,omitempty"`
+	Name           *string `json:"name,omitempty" xml:"name"`
 	HttpStatusCode int     `json:"-"`
 }
 

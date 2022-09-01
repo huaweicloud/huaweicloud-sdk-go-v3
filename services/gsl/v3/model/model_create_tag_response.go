@@ -10,13 +10,13 @@ import (
 type CreateTagResponse struct {
 
 	// 标签标识
-	Id *int64 `json:"id,omitempty"`
+	Id *int64 `json:"id,omitempty" xml:"id"`
 
 	// 标签名称
-	TagName *string `json:"tag_name,omitempty"`
+	TagName *string `json:"tag_name,omitempty" xml:"tag_name"`
 
 	// 标签状态，0未使用，1使用中。
-	Status         *int32 `json:"status,omitempty"`
+	Status         *int32 `json:"status,omitempty" xml:"status"`
 	HttpStatusCode int    `json:"-"`
 }
 

@@ -9,10 +9,10 @@ import (
 type RepositoryMemberList struct {
 
 	// 仓库成员总数
-	Total *int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty" xml:"total"`
 
 	// 仓库成员列表
-	Users *[]RepositoryMember `json:"users,omitempty"`
+	Users *[]RepositoryMember `json:"users,omitempty" xml:"users"`
 }
 
 func (o RepositoryMemberList) String() string {

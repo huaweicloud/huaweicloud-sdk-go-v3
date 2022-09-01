@@ -10,13 +10,13 @@ import (
 type MysqlProxyInfo struct {
 
 	// Proxy实例id。
-	PoolId *string `json:"pool_id,omitempty"`
+	PoolId *string `json:"pool_id,omitempty" xml:"pool_id"`
 
 	// Proxy实例名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// Proxy读写分离地址。
-	Address *string `json:"address,omitempty"`
+	Address *string `json:"address,omitempty" xml:"address"`
 }
 
 func (o MysqlProxyInfo) String() string {

@@ -10,118 +10,118 @@ import (
 type SimDeviceVo struct {
 
 	// sim卡id
-	SimCardId *int64 `json:"sim_card_id,omitempty"`
+	SimCardId *int64 `json:"sim_card_id,omitempty" xml:"sim_card_id"`
 
 	// 账户id
-	AccountId *string `json:"account_id,omitempty"`
+	AccountId *string `json:"account_id,omitempty" xml:"account_id"`
 
 	// 容器ID:不同类型卡含义如下 iccid(实体卡)，eid（eSIM）cid（vSIM)
-	Cid *string `json:"cid,omitempty"`
+	Cid *string `json:"cid,omitempty" xml:"cid"`
 
 	// 流量池ID
-	SimPoolId *int64 `json:"sim_pool_id,omitempty"`
+	SimPoolId *int64 `json:"sim_pool_id,omitempty" xml:"sim_pool_id"`
 
 	// 设备IMEI
-	Imei *string `json:"imei,omitempty"`
+	Imei *string `json:"imei,omitempty" xml:"imei"`
 
 	// sim卡状态：  10.可测试  11.未激活  13.可激活  14.已停用  20.在用  30.已拆机
-	SimStatus *int32 `json:"sim_status,omitempty"`
+	SimStatus *int32 `json:"sim_status,omitempty" xml:"sim_status"`
 
 	// 设备状态
-	DeviceStatus *int32 `json:"device_status,omitempty"`
+	DeviceStatus *int32 `json:"device_status,omitempty" xml:"device_status"`
 
 	// 设备模组
-	DeviceModel *string `json:"device_model,omitempty"`
+	DeviceModel *string `json:"device_model,omitempty" xml:"device_model"`
 
 	// 激活日期 例如2020-01-31T16:00:00.000Z
-	ActDate *sdktime.SdkTime `json:"act_date,omitempty"`
+	ActDate *sdktime.SdkTime `json:"act_date,omitempty" xml:"act_date"`
 
 	// 设备状态变更时间 例如2020-01-31T16:00:00.000Z
-	DeviceStatusDate *sdktime.SdkTime `json:"device_status_date,omitempty"`
+	DeviceStatusDate *sdktime.SdkTime `json:"device_status_date,omitempty" xml:"device_status_date"`
 
 	// 设备标识
-	NodeId *string `json:"node_id,omitempty"`
+	NodeId *string `json:"node_id,omitempty" xml:"node_id"`
 
 	// 码号iccid
-	Iccid *string `json:"iccid,omitempty"`
+	Iccid *string `json:"iccid,omitempty" xml:"iccid"`
 
 	// 网络类型
-	NetworkType *string `json:"network_type,omitempty"`
+	NetworkType *string `json:"network_type,omitempty" xml:"network_type"`
 
 	// 信号强度
-	Dbm *string `json:"dbm,omitempty"`
+	Dbm *string `json:"dbm,omitempty" xml:"dbm"`
 
 	// 信号等级:1.差  2.良  3.良 4.优（该参数只有eSIM,vSIM返回，实体卡不返回）
-	SignalLevel *string `json:"signal_level,omitempty"`
+	SignalLevel *string `json:"signal_level,omitempty" xml:"signal_level"`
 
 	// sim卡类型 1.vSIM  2.eSIM  3.实体卡
-	SimType *int32 `json:"sim_type,omitempty"`
+	SimType *int32 `json:"sim_type,omitempty" xml:"sim_type"`
 
 	// 标签名
-	TagNames *string `json:"tag_names,omitempty"`
+	TagNames *string `json:"tag_names,omitempty" xml:"tag_names"`
 
 	// 批次号
-	OrderId *int64 `json:"order_id,omitempty"`
+	OrderId *int64 `json:"order_id,omitempty" xml:"order_id"`
 
 	// 到期时间 例如2021-06-30T00:00:00.000Z
-	ExpireTime *sdktime.SdkTime `json:"expire_time,omitempty"`
+	ExpireTime *sdktime.SdkTime `json:"expire_time,omitempty" xml:"expire_time"`
 
 	// 在用套餐名
-	PricePlanName *string `json:"price_plan_name,omitempty"`
+	PricePlanName *string `json:"price_plan_name,omitempty" xml:"price_plan_name"`
 
 	// 套餐订购实例ID
-	SimPricePlanId *int64 `json:"sim_price_plan_id,omitempty"`
+	SimPricePlanId *int64 `json:"sim_price_plan_id,omitempty" xml:"sim_price_plan_id"`
 
 	// 剩余流量(单位M)，数据默认截止到昨日24点。
-	FlowLeft *float64 `json:"flow_left,omitempty"`
+	FlowLeft *float64 `json:"flow_left,omitempty" xml:"flow_left"`
 
 	// 已用流量(单位M)，数据默认截止到昨日24点。
-	FlowUsed *float64 `json:"flow_used,omitempty"`
+	FlowUsed *float64 `json:"flow_used,omitempty" xml:"flow_used"`
 
 	// 运营商状态 -1.正常（非停机状态） 1.停机（超流量停机） 2.停机（超流量阈值停机） 3.停机（流量池停机） 4.停机（套餐到期停机） 5.停机（主动停机） 6.停机（违规停机）
-	OperatorStatus *int32 `json:"operator_status,omitempty"`
+	OperatorStatus *int32 `json:"operator_status,omitempty" xml:"operator_status"`
 
 	// MSISDN
-	Msisdn *string `json:"msisdn,omitempty"`
+	Msisdn *string `json:"msisdn,omitempty" xml:"msisdn"`
 
 	// IMSI
-	Imsi *string `json:"imsi,omitempty"`
+	Imsi *string `json:"imsi,omitempty" xml:"imsi"`
 
 	// 自定义属性一
-	CustomerAttribute1 *string `json:"customer_attribute1,omitempty"`
+	CustomerAttribute1 *string `json:"customer_attribute1,omitempty" xml:"customer_attribute1"`
 
 	// 自定义属性二
-	CustomerAttribute2 *string `json:"customer_attribute2,omitempty"`
+	CustomerAttribute2 *string `json:"customer_attribute2,omitempty" xml:"customer_attribute2"`
 
 	// 自定义属性三
-	CustomerAttribute3 *string `json:"customer_attribute3,omitempty"`
+	CustomerAttribute3 *string `json:"customer_attribute3,omitempty" xml:"customer_attribute3"`
 
 	// 自定义属性四
-	CustomerAttribute4 *string `json:"customer_attribute4,omitempty"`
+	CustomerAttribute4 *string `json:"customer_attribute4,omitempty" xml:"customer_attribute4"`
 
 	// 自定义属性五
-	CustomerAttribute5 *string `json:"customer_attribute5,omitempty"`
+	CustomerAttribute5 *string `json:"customer_attribute5,omitempty" xml:"customer_attribute5"`
 
 	// 自定义属性六
-	CustomerAttribute6 *string `json:"customer_attribute6,omitempty"`
+	CustomerAttribute6 *string `json:"customer_attribute6,omitempty" xml:"customer_attribute6"`
 
 	// 是否已实名认证: true表示是，false表示否，系统SIM卡实名认证状态非实时。
-	RealNamed *bool `json:"real_named,omitempty"`
+	RealNamed *bool `json:"real_named,omitempty" xml:"real_named"`
 
 	// 是否单独断网 true:断网，false:未断网 （当前仅电信卡支持）
-	CutNetFlag *bool `json:"cut_net_flag,omitempty"`
+	CutNetFlag *bool `json:"cut_net_flag,omitempty" xml:"cut_net_flag"`
 
 	// 是否达量断网 true:达量断网，false:未达量断网 （当前仅电信卡支持）
-	ExceedCutNetFlag *bool `json:"exceed_cut_net_flag,omitempty"`
+	ExceedCutNetFlag *bool `json:"exceed_cut_net_flag,omitempty" xml:"exceed_cut_net_flag"`
 
 	// 达量断网阈值（单位MB 当前仅电信卡支持）
-	ExceedCutNetQuota *int32 `json:"exceed_cut_net_quota,omitempty"`
+	ExceedCutNetQuota *int32 `json:"exceed_cut_net_quota,omitempty" xml:"exceed_cut_net_quota"`
 
 	// 本月机卡绑定剩余次数（当前仅电信卡支持）
-	ImeiBindRemainTimes *int32 `json:"imei_bind_remain_times,omitempty"`
+	ImeiBindRemainTimes *int32 `json:"imei_bind_remain_times,omitempty" xml:"imei_bind_remain_times"`
 
 	// 网络限制速率（单位Kbps,当前电信联通卡支持）
-	SpeedValue *int32 `json:"speed_value,omitempty"`
+	SpeedValue *int32 `json:"speed_value,omitempty" xml:"speed_value"`
 }
 
 func (o SimDeviceVo) String() string {

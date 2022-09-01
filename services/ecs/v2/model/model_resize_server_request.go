@@ -10,9 +10,9 @@ import (
 type ResizeServerRequest struct {
 
 	// 云服务器ID。
-	ServerId string `json:"server_id"`
+	ServerId string `json:"server_id" xml:"server_id"`
 
-	Body *ResizeServerRequestBody `json:"body,omitempty"`
+	Body *ResizeServerRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o ResizeServerRequest) String() string {

@@ -10,19 +10,19 @@ import (
 type ShowInstanceParamResponse struct {
 
 	// DDM参数最后更新时间。
-	Updated *string `json:"updated,omitempty"`
+	Updated *string `json:"updated,omitempty" xml:"updated"`
 
 	// DDM实例参数信息列表的集合。
-	ConfigurationParameter *[]ConfigurationParameterList `json:"configuration_parameter,omitempty"`
+	ConfigurationParameter *[]ConfigurationParameterList `json:"configuration_parameter,omitempty" xml:"configuration_parameter"`
 
 	// 分页参数: 起始值。
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 分页参数：每页多少条。
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 集合总数
-	Total          *int32 `json:"total,omitempty"`
+	Total          *int32 `json:"total,omitempty" xml:"total"`
 	HttpStatusCode int    `json:"-"`
 }
 

@@ -10,9 +10,9 @@ import (
 type CreateNotificationRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *CreateNotificationRequestBody `json:"body,omitempty"`
+	Body *CreateNotificationRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateNotificationRequest) String() string {

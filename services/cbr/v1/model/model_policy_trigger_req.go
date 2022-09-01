@@ -7,7 +7,7 @@ import (
 )
 
 type PolicyTriggerReq struct {
-	Properties *PolicyTriggerPropertiesReq `json:"properties"`
+	Properties *PolicyTriggerPropertiesReq `json:"properties" xml:"properties"`
 }
 
 func (o PolicyTriggerReq) String() string {

@@ -10,7 +10,7 @@ import (
 type ShowPartitionMessageResponse struct {
 
 	// 消息列表。
-	Message        *[]ShowPartitionMessageEntity `json:"message,omitempty"`
+	Message        *[]ShowPartitionMessageEntity `json:"message,omitempty" xml:"message"`
 	HttpStatusCode int                           `json:"-"`
 }
 

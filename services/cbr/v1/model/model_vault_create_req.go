@@ -7,7 +7,7 @@ import (
 )
 
 type VaultCreateReq struct {
-	Vault *VaultCreate `json:"vault"`
+	Vault *VaultCreate `json:"vault" xml:"vault"`
 }
 
 func (o VaultCreateReq) String() string {

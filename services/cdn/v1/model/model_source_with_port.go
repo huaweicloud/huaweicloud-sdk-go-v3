@@ -13,22 +13,22 @@ import (
 type SourceWithPort struct {
 
 	// 源站IP（非内网IP）或者域名。
-	IpOrDomain string `json:"ip_or_domain"`
+	IpOrDomain string `json:"ip_or_domain" xml:"ip_or_domain"`
 
 	// 源站类型（\"ipaddr\"： \"IP源站\"；\"domain\"： \"域名源站\"；\"obs_bucket\"： \"OBS Bucket源站\"）
-	OriginType SourceWithPortOriginType `json:"origin_type"`
+	OriginType SourceWithPortOriginType `json:"origin_type" xml:"origin_type"`
 
 	// 主备状态（1代表主站；0代表备站）；主源站必须存在，备源站可选。
-	ActiveStandby int32 `json:"active_standby"`
+	ActiveStandby int32 `json:"active_standby" xml:"active_standby"`
 
 	// 是否开启Obs静态网站托管(0表示关闭,1表示则为开启)，源站类型为obs_bucket时传递。
-	EnableObsWebHosting *int32 `json:"enable_obs_web_hosting,omitempty"`
+	EnableObsWebHosting *int32 `json:"enable_obs_web_hosting,omitempty" xml:"enable_obs_web_hosting"`
 
 	// HTTP端口，默认80
-	HttpPort *int32 `json:"http_port,omitempty"`
+	HttpPort *int32 `json:"http_port,omitempty" xml:"http_port"`
 
 	// HTTPS端口，默认443
-	HttpsPort *int32 `json:"https_port,omitempty"`
+	HttpsPort *int32 `json:"https_port,omitempty" xml:"https_port"`
 }
 
 func (o SourceWithPort) String() string {

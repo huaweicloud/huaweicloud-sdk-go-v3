@@ -10,7 +10,7 @@ import (
 type ListEnterpriseProjectsForGroupResponse struct {
 
 	// 企业项目信息。
-	EnterpriseProjects *[]ListEnterpriseProjectsResDetail `json:"enterprise-projects,omitempty"`
+	EnterpriseProjects *[]ListEnterpriseProjectsResDetail `json:"enterprise-projects,omitempty" xml:"enterprise-projects"`
 	HttpStatusCode     int                                `json:"-"`
 }
 

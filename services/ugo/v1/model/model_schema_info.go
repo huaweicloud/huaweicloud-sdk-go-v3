@@ -10,10 +10,10 @@ import (
 type SchemaInfo struct {
 
 	// 是否选择全部schema。
-	IsSelectAllSchemas bool `json:"is_select_all_schemas"`
+	IsSelectAllSchemas bool `json:"is_select_all_schemas" xml:"is_select_all_schemas"`
 
 	// 需要评估的源库schema列表。is_select_all_schemas为false时，必填。
-	SchemasList *[]string `json:"schemas_list,omitempty"`
+	SchemasList *[]string `json:"schemas_list,omitempty" xml:"schemas_list"`
 }
 
 func (o SchemaInfo) String() string {

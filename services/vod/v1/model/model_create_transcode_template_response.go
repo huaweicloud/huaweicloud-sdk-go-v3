@@ -10,7 +10,7 @@ import (
 type CreateTranscodeTemplateResponse struct {
 
 	// 模板组ID<br/>
-	GroupId        *string `json:"group_id,omitempty"`
+	GroupId        *string `json:"group_id,omitempty" xml:"group_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

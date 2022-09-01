@@ -10,7 +10,7 @@ import (
 type BatchAttachSharableVolumesRequestBody struct {
 
 	// 共享磁盘需要挂载的弹性云服务器列表。
-	Serverinfo []BatchAttachSharableVolumesOption `json:"serverinfo"`
+	Serverinfo []BatchAttachSharableVolumesOption `json:"serverinfo" xml:"serverinfo"`
 }
 
 func (o BatchAttachSharableVolumesRequestBody) String() string {

@@ -9,7 +9,7 @@ import (
 type ShowCeshierarchyRespNodes struct {
 
 	// 节点名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 }
 
 func (o ShowCeshierarchyRespNodes) String() string {

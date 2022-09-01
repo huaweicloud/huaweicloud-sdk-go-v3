@@ -10,13 +10,13 @@ import (
 type CreateClusterResponse struct {
 
 	//   操作结果。  true：操作成功  false：操作失败
-	Result *bool `json:"result,omitempty"`
+	Result *bool `json:"result,omitempty" xml:"result"`
 
 	// 系统提示信息，可为空。
-	Msg *string `json:"msg,omitempty"`
+	Msg *string `json:"msg,omitempty" xml:"msg"`
 
 	// 集群创建成功后系统返回的集群ID值。
-	ClusterId      *string `json:"cluster_id,omitempty"`
+	ClusterId      *string `json:"cluster_id,omitempty" xml:"cluster_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

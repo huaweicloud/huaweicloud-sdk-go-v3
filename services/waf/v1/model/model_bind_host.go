@@ -10,16 +10,16 @@ import (
 type BindHost struct {
 
 	// 域名ID
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 域名
-	Hostname *string `json:"hostname,omitempty"`
+	Hostname *string `json:"hostname,omitempty" xml:"hostname"`
 
 	// 域名对应模式：cloud（云模式）/premium（独享模式）
-	WafType *string `json:"waf_type,omitempty"`
+	WafType *string `json:"waf_type,omitempty" xml:"waf_type"`
 
 	// 仅独享模式涉及特殊域名模式
-	Mode *string `json:"mode,omitempty"`
+	Mode *string `json:"mode,omitempty" xml:"mode"`
 }
 
 func (o BindHost) String() string {

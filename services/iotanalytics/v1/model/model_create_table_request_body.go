@@ -9,46 +9,46 @@ import (
 type CreateTableRequestBody struct {
 
 	// 标签。只能包含数字、英文字母、中文字符、下划线、中划线、逗号以及斜杠。长度为0~128。
-	Tags *string `json:"tags,omitempty"`
+	Tags *string `json:"tags,omitempty" xml:"tags"`
 
 	// 新增表名称。
-	TableName string `json:"table_name"`
+	TableName string `json:"table_name" xml:"table_name"`
 
 	// 新增表别名。只能包含数字、英文字母、中文字符、下划线以及中划线。长度为0~32。
-	TableAlias *string `json:"table_alias,omitempty"`
+	TableAlias *string `json:"table_alias,omitempty" xml:"table_alias"`
 
 	// 新增表的描述信息。
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 新增表的描述信息。
-	Columns []Column `json:"columns"`
+	Columns []Column `json:"columns" xml:"columns"`
 
 	// 新增表的数据类型，目前支持：Parquet、CSV格式。
-	DataType string `json:"data_type"`
+	DataType string `json:"data_type" xml:"data_type"`
 
 	// 数据来源。来源类型有：pipeline, default. 默认为default.
-	DataSource *string `json:"data_source,omitempty"`
+	DataSource *string `json:"data_source,omitempty" xml:"data_source"`
 
 	// 仅当数据来源为pipeline时使用。数据的Data Store ID.
-	DataStoreId *string `json:"data_store_id,omitempty"`
+	DataStoreId *string `json:"data_store_id,omitempty" xml:"data_store_id"`
 
 	// 表数据是否包含表头。只有CSV类型数据具有该属性。
-	WithColumnHeader *bool `json:"with_column_header,omitempty"`
+	WithColumnHeader *bool `json:"with_column_header,omitempty" xml:"with_column_header"`
 
 	// 用户自定义数据分隔符。只有CSV类型数据具有该属性。
-	Delimiter *string `json:"delimiter,omitempty"`
+	Delimiter *string `json:"delimiter,omitempty" xml:"delimiter"`
 
 	// 用户自定义引用字符，默认为双引号（即“\"”）。只有CSV类型数据具有该属性。
-	QuoteChar *string `json:"quote_char,omitempty"`
+	QuoteChar *string `json:"quote_char,omitempty" xml:"quote_char"`
 
 	// 用户自定义转义字符，默认为反斜杠（即\\）。只有CSV类型数据具有该属性。
-	EscapeChar *string `json:"escape_char,omitempty"`
+	EscapeChar *string `json:"escape_char,omitempty" xml:"escape_char"`
 
 	// 用户自定义日期类型，默认格式为“yyyy-MM-dd”。日期格式字符定义详见表3。只有CSV和JSON类型数据具有该属性。
-	DateFormat *string `json:"date_format,omitempty"`
+	DateFormat *string `json:"date_format,omitempty" xml:"date_format"`
 
 	// 用户自定义时间类型。默认格式为“yyyy-MM-dd HH:mm:ss”。时间戳格式字符定义详见表3。只有CSV和JSON类型数据具有该属性。
-	TimestampFormat *string `json:"timestamp_format,omitempty"`
+	TimestampFormat *string `json:"timestamp_format,omitempty" xml:"timestamp_format"`
 }
 
 func (o CreateTableRequestBody) String() string {

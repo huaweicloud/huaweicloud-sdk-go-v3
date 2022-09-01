@@ -10,7 +10,7 @@ import (
 type ListImageTagsRequest struct {
 
 	// 镜像ID。
-	ImageId string `json:"image_id"`
+	ImageId string `json:"image_id" xml:"image_id"`
 }
 
 func (o ListImageTagsRequest) String() string {

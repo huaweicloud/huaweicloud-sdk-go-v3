@@ -10,10 +10,10 @@ import (
 type UpdateCloudConnection struct {
 
 	// 云连接实例的名字。只能由中文、英文字母、数字、下划线、中划线、点组成。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 云连接实例的描述。不支持 <>。
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 }
 
 func (o UpdateCloudConnection) String() string {

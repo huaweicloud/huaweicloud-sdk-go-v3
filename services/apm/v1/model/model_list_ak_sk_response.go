@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ListAkSkResponse struct {
-	AccessAkSkModels *[]AccessAkskVo `json:"access_ak_sk_models,omitempty"`
+	AccessAkSkModels *[]AccessAkskVo `json:"access_ak_sk_models,omitempty" xml:"access_ak_sk_models"`
 	HttpStatusCode   int             `json:"-"`
 }
 

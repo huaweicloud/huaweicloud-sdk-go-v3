@@ -10,10 +10,10 @@ import (
 type ShowMonitoringDataResponse struct {
 
 	// 容灾监控数据响应体集合
-	Results *[]QueryDataGuardMonitorAndChartResp `json:"results,omitempty"`
+	Results *[]QueryDataGuardMonitorAndChartResp `json:"results,omitempty" xml:"results"`
 
 	// 查询总数
-	Count          *int32 `json:"count,omitempty"`
+	Count          *int32 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

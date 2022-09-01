@@ -10,10 +10,10 @@ import (
 type ExpandShareResponse struct {
 
 	// SFS Turbo文件系统ID。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// SFS Turbo文件系统名称。
-	Name           *string `json:"name,omitempty"`
+	Name           *string `json:"name,omitempty" xml:"name"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -10,13 +10,13 @@ import (
 type QuotaDetailGigabytesSas struct {
 
 	// 已使用的数量。
-	InUse int32 `json:"in_use"`
+	InUse int32 `json:"in_use" xml:"in_use"`
 
 	// 最大的数量。
-	Limit int32 `json:"limit"`
+	Limit int32 `json:"limit" xml:"limit"`
 
 	// 预留属性。
-	Reserved int32 `json:"reserved"`
+	Reserved int32 `json:"reserved" xml:"reserved"`
 }
 
 func (o QuotaDetailGigabytesSas) String() string {

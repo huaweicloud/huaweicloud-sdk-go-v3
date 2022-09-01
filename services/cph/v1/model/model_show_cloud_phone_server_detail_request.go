@@ -10,7 +10,7 @@ import (
 type ShowCloudPhoneServerDetailRequest struct {
 
 	// 服务器id。
-	ServerId string `json:"server_id"`
+	ServerId string `json:"server_id" xml:"server_id"`
 }
 
 func (o ShowCloudPhoneServerDetailRequest) String() string {

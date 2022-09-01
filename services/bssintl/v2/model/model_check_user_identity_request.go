@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CheckUserIdentityRequest struct {
-	Body *CheckSubcustomerUserReq `json:"body,omitempty"`
+	Body *CheckSubcustomerUserReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o CheckUserIdentityRequest) String() string {

@@ -10,10 +10,10 @@ import (
 type InstanceSecurityGroup struct {
 
 	// 安全组名称或者UUID。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 实例使用安全组规则的ID。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 }
 
 func (o InstanceSecurityGroup) String() string {

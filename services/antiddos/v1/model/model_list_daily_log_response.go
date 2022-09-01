@@ -10,10 +10,10 @@ import (
 type ListDailyLogResponse struct {
 
 	// 弹性IP总数
-	Total *int64 `json:"total,omitempty"`
+	Total *int64 `json:"total,omitempty" xml:"total"`
 
 	// 异常事件列表
-	Logs           *[]DailyLog `json:"logs,omitempty"`
+	Logs           *[]DailyLog `json:"logs,omitempty" xml:"logs"`
 	HttpStatusCode int         `json:"-"`
 }
 

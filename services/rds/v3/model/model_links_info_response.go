@@ -9,10 +9,10 @@ import (
 type LinksInfoResponse struct {
 
 	// 对应该API的URL
-	Href *string `json:"href,omitempty"`
+	Href *string `json:"href,omitempty" xml:"href"`
 
 	// 取值为“self”，表示href为本地链接。
-	Rel *string `json:"rel,omitempty"`
+	Rel *string `json:"rel,omitempty" xml:"rel"`
 }
 
 func (o LinksInfoResponse) String() string {

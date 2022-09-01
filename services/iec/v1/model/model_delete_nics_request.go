@@ -10,9 +10,9 @@ import (
 type DeleteNicsRequest struct {
 
 	// 边缘实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *DeleteNicsRequestBody `json:"body,omitempty"`
+	Body *DeleteNicsRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o DeleteNicsRequest) String() string {

@@ -13,28 +13,28 @@ import (
 type JobRecords struct {
 
 	// 任务名称
-	JobName *string `json:"job_name,omitempty"`
+	JobName *string `json:"job_name,omitempty" xml:"job_name"`
 
 	// 记录类型。API：接口调用类型。MEG：消息类型。
-	RecordType *JobRecordsRecordType `json:"record_type,omitempty"`
+	RecordType *JobRecordsRecordType `json:"record_type,omitempty" xml:"record_type"`
 
 	// 记录时间。
-	RecordTime *string `json:"record_time,omitempty"`
+	RecordTime *string `json:"record_time,omitempty" xml:"record_time"`
 
 	// 请求体，仅当record_type为API时有效
-	Request *string `json:"request,omitempty"`
+	Request *string `json:"request,omitempty" xml:"request"`
 
 	// 返回体，仅当record_type为API时有效
-	Response *string `json:"response,omitempty"`
+	Response *string `json:"response,omitempty" xml:"response"`
 
 	// 返回码，仅当record_type为API时有效
-	Code *string `json:"code,omitempty"`
+	Code *string `json:"code,omitempty" xml:"code"`
 
 	// 消息，仅当record_type为MEG时有效
-	Message *string `json:"message,omitempty"`
+	Message *string `json:"message,omitempty" xml:"message"`
 
 	// job执行状态：SUCCESS：成功。FAIL：失败。
-	JobStatus *JobRecordsJobStatus `json:"job_status,omitempty"`
+	JobStatus *JobRecordsJobStatus `json:"job_status,omitempty" xml:"job_status"`
 }
 
 func (o JobRecords) String() string {

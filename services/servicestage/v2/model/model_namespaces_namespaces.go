@@ -9,10 +9,10 @@ import (
 type NamespacesNamespaces struct {
 
 	// 命名空间ID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 命名空间名称。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 }
 
 func (o NamespacesNamespaces) String() string {

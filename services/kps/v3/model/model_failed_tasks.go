@@ -13,28 +13,28 @@ import (
 type FailedTasks struct {
 
 	// 虚拟机ID
-	TaskId *string `json:"task_id,omitempty"`
+	TaskId *string `json:"task_id,omitempty" xml:"task_id"`
 
 	// 任务的操作类型。 - FAILED_RESET 重置 - FAILED_REPLACE 替换 - FAILED_UNBIND 解绑
-	OperateType *FailedTasksOperateType `json:"operate_type,omitempty"`
+	OperateType *FailedTasksOperateType `json:"operate_type,omitempty" xml:"operate_type"`
 
 	// 任务时间
-	TaskTime *string `json:"task_time,omitempty"`
+	TaskTime *string `json:"task_time,omitempty" xml:"task_time"`
 
 	// 任务失败错误码
-	TaskErrorCode *string `json:"task_error_code,omitempty"`
+	TaskErrorCode *string `json:"task_error_code,omitempty" xml:"task_error_code"`
 
 	// 任务失败错误码
-	TaskErrorMsg *string `json:"task_error_msg,omitempty"`
+	TaskErrorMsg *string `json:"task_error_msg,omitempty" xml:"task_error_msg"`
 
 	// 虚拟机名称
-	ServerName *string `json:"server_name,omitempty"`
+	ServerName *string `json:"server_name,omitempty" xml:"server_name"`
 
 	// 虚拟机ID
-	ServerId *string `json:"server_id,omitempty"`
+	ServerId *string `json:"server_id,omitempty" xml:"server_id"`
 
 	// 密钥对名称
-	KeypairName *string `json:"keypair_name,omitempty"`
+	KeypairName *string `json:"keypair_name,omitempty" xml:"keypair_name"`
 }
 
 func (o FailedTasks) String() string {

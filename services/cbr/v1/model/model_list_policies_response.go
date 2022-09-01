@@ -10,10 +10,10 @@ import (
 type ListPoliciesResponse struct {
 
 	//
-	Policies *[]Policy `json:"policies,omitempty"`
+	Policies *[]Policy `json:"policies,omitempty" xml:"policies"`
 
 	// 策略总数
-	Count          *int32 `json:"count,omitempty"`
+	Count          *int32 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

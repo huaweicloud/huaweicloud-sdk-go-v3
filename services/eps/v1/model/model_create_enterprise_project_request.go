@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateEnterpriseProjectRequest struct {
-	Body *EnterpriseProject `json:"body,omitempty"`
+	Body *EnterpriseProject `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateEnterpriseProjectRequest) String() string {

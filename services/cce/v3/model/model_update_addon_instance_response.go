@@ -10,16 +10,16 @@ import (
 type UpdateAddonInstanceResponse struct {
 
 	// API类型，固定值“Addon”，该值不可修改。
-	Kind *string `json:"kind,omitempty"`
+	Kind *string `json:"kind,omitempty" xml:"kind"`
 
 	// API版本，固定值“v3”，该值不可修改。
-	ApiVersion *string `json:"apiVersion,omitempty"`
+	ApiVersion *string `json:"apiVersion,omitempty" xml:"apiVersion"`
 
-	Metadata *Metadata `json:"metadata,omitempty"`
+	Metadata *Metadata `json:"metadata,omitempty" xml:"metadata"`
 
-	Spec *InstanceSpec `json:"spec,omitempty"`
+	Spec *InstanceSpec `json:"spec,omitempty" xml:"spec"`
 
-	Status         *AddonInstanceStatus `json:"status,omitempty"`
+	Status         *AddonInstanceStatus `json:"status,omitempty" xml:"status"`
 	HttpStatusCode int                  `json:"-"`
 }
 

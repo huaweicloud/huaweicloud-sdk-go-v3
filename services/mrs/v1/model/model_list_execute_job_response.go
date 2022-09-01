@@ -10,10 +10,10 @@ import (
 type ListExecuteJobResponse struct {
 
 	// 作业列表总数。
-	TotalRecord *int32 `json:"totalRecord,omitempty"`
+	TotalRecord *int32 `json:"totalRecord,omitempty" xml:"totalRecord"`
 
 	// 作业列表。
-	JobExecutions  *[]JobExeResult `json:"job_executions,omitempty"`
+	JobExecutions  *[]JobExeResult `json:"job_executions,omitempty" xml:"job_executions"`
 	HttpStatusCode int             `json:"-"`
 }
 

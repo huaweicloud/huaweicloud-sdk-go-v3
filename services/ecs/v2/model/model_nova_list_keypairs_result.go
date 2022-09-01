@@ -8,7 +8,7 @@ import (
 
 //
 type NovaListKeypairsResult struct {
-	Keypair *NovaSimpleKeypair `json:"keypair"`
+	Keypair *NovaSimpleKeypair `json:"keypair" xml:"keypair"`
 }
 
 func (o NovaListKeypairsResult) String() string {

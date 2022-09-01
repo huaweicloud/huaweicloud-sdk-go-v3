@@ -10,12 +10,12 @@ import (
 type CreatePostgresqlDbUserRequest struct {
 
 	// 语言
-	XLanguage *string `json:"X-Language,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *PostgresqlUserForCreation `json:"body,omitempty"`
+	Body *PostgresqlUserForCreation `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreatePostgresqlDbUserRequest) String() string {

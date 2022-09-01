@@ -8,7 +8,7 @@ import (
 
 // 创建端口请求体
 type CreatePortRequestBody struct {
-	Port *CreatePortOption `json:"port"`
+	Port *CreatePortOption `json:"port" xml:"port"`
 }
 
 func (o CreatePortRequestBody) String() string {

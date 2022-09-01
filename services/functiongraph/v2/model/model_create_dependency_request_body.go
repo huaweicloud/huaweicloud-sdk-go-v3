@@ -12,22 +12,22 @@ import (
 type CreateDependencyRequestBody struct {
 
 	// depend_type为zip类型时必填，为文件流格式,需要base64编码zip文件。
-	DependFile *string `json:"depend_file,omitempty"`
+	DependFile *string `json:"depend_file,omitempty" xml:"depend_file"`
 
 	// depend_type为obs类型时，依赖包在obs的存储地址。
-	DependLink *string `json:"depend_link,omitempty"`
+	DependLink *string `json:"depend_link,omitempty" xml:"depend_link"`
 
 	// 导入类型,目前支持obs和zip。
-	DependType string `json:"depend_type"`
+	DependType string `json:"depend_type" xml:"depend_type"`
 
 	// 运行时语言，Java11、Nodejs14:、Python3:在type为v2时支持。
-	Runtime CreateDependencyRequestBodyRuntime `json:"runtime"`
+	Runtime CreateDependencyRequestBodyRuntime `json:"runtime" xml:"runtime"`
 
 	// 依赖包名称。必须以大、小写字母开头，以字母或数字结尾，只能由字母、数字、下划线、点和中划线组成，长度不超过96个字符。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 依赖包描述，不超过512个字符。
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 }
 
 func (o CreateDependencyRequestBody) String() string {

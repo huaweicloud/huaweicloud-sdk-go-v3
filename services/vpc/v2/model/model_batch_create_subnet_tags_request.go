@@ -10,9 +10,9 @@ import (
 type BatchCreateSubnetTagsRequest struct {
 
 	// 子网ID
-	SubnetId string `json:"subnet_id"`
+	SubnetId string `json:"subnet_id" xml:"subnet_id"`
 
-	Body *BatchCreateSubnetTagsRequestBody `json:"body,omitempty"`
+	Body *BatchCreateSubnetTagsRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchCreateSubnetTagsRequest) String() string {

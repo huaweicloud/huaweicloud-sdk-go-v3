@@ -9,15 +9,15 @@ import (
 type UploadFromObsReq struct {
 
 	// 元数据存储地址。
-	MetadataPath string `json:"metadataPath"`
+	MetadataPath string `json:"metadataPath" xml:"metadataPath"`
 
 	// 元数据的名字。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 对元数据的描述。
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
-	Encryption *EncryptionReq `json:"encryption,omitempty"`
+	Encryption *EncryptionReq `json:"encryption,omitempty" xml:"encryption"`
 }
 
 func (o UploadFromObsReq) String() string {

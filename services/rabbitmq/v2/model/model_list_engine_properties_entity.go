@@ -10,28 +10,28 @@ import (
 type ListEnginePropertiesEntity struct {
 
 	// 每个Broker的最大分区数。
-	MaxPartitionPerBroker *string `json:"max_partition_per_broker,omitempty"`
+	MaxPartitionPerBroker *string `json:"max_partition_per_broker,omitempty" xml:"max_partition_per_broker"`
 
 	// Broker的最大个数。
-	MaxBroker *string `json:"max_broker,omitempty"`
+	MaxBroker *string `json:"max_broker,omitempty" xml:"max_broker"`
 
 	// 每个节点的最大存储。单位为GB。
-	MaxStoragePerNode *string `json:"max_storage_per_node,omitempty"`
+	MaxStoragePerNode *string `json:"max_storage_per_node,omitempty" xml:"max_storage_per_node"`
 
 	// 每个Broker的最大消费者数。
-	MaxConsumerPerBroker *string `json:"max_consumer_per_broker,omitempty"`
+	MaxConsumerPerBroker *string `json:"max_consumer_per_broker,omitempty" xml:"max_consumer_per_broker"`
 
 	// Broker的最小个数。
-	MinBroker *string `json:"min_broker,omitempty"`
+	MinBroker *string `json:"min_broker,omitempty" xml:"min_broker"`
 
 	// 每个Broker的最大带宽。
-	MaxBandwidthPerBroker *string `json:"max_bandwidth_per_broker,omitempty"`
+	MaxBandwidthPerBroker *string `json:"max_bandwidth_per_broker,omitempty" xml:"max_bandwidth_per_broker"`
 
 	// 每个节点的最小存储。单位为GB。
-	MinStoragePerNode *string `json:"min_storage_per_node,omitempty"`
+	MinStoragePerNode *string `json:"min_storage_per_node,omitempty" xml:"min_storage_per_node"`
 
 	// 每个Broker的最大TPS。
-	MaxTpsPerBroker *string `json:"max_tps_per_broker,omitempty"`
+	MaxTpsPerBroker *string `json:"max_tps_per_broker,omitempty" xml:"max_tps_per_broker"`
 }
 
 func (o ListEnginePropertiesEntity) String() string {

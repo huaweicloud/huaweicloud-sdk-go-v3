@@ -12,64 +12,64 @@ import (
 type InstanceParam struct {
 
 	// 代理商id，教程活动场景下使用
-	AgentId *string `json:"agent_id,omitempty"`
+	AgentId *string `json:"agent_id,omitempty" xml:"agent_id"`
 
 	// cpu架构 x86|arm
-	Arch *InstanceParamArch `json:"arch,omitempty"`
+	Arch *InstanceParamArch `json:"arch,omitempty" xml:"arch"`
 
 	// cpu规格.arm架构支持4U8G，x86架构支持1U1G,2U4G,2U8G 与技术栈配置的规格对应，可通过技术栈管理ListStacks接口获取。如果标签不为空，以标签配置的技术栈规格为准。 quantum技术栈，x86架构cpu规格为2U8G;其他技术栈，x86架构cpu规格为1U1G,2U4G
-	CpuMemory InstanceParamCpuMemory `json:"cpu_memory"`
+	CpuMemory InstanceParamCpuMemory `json:"cpu_memory" xml:"cpu_memory"`
 
 	// 描述
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 实例名。 可以输入中文、数字、字母、下划线、点、破折号。长度介于3-100之间
-	DisplayName string `json:"display_name"`
+	DisplayName string `json:"display_name" xml:"display_name"`
 
 	// 是否页面显示（以标签配置为准）
-	IsTemporary *bool `json:"is_temporary,omitempty"`
+	IsTemporary *bool `json:"is_temporary,omitempty" xml:"is_temporary"`
 
 	// 实例标签（不同的第三方需要和CloudIDE服务共同设定标签），不传默认为default
-	LabelTag *string `json:"label_tag,omitempty"`
+	LabelTag *string `json:"label_tag,omitempty" xml:"label_tag"`
 
 	// 预装插件列表
-	PluginEnableList *[]string `json:"plugin_enable_list,omitempty"`
+	PluginEnableList *[]string `json:"plugin_enable_list,omitempty" xml:"plugin_enable_list"`
 
 	// 预装插件参数
-	PluginVars map[string]string `json:"plugin_vars,omitempty"`
+	PluginVars map[string]string `json:"plugin_vars,omitempty" xml:"plugin_vars"`
 
 	// 云服务器对应的portId，小网连接ecs的场景下使用
-	PortId *string `json:"port_id,omitempty"`
+	PortId *string `json:"port_id,omitempty" xml:"port_id"`
 
 	// 云服务器ip，小网连接ecs的场景下使用
-	PrivateIp *string `json:"private_ip,omitempty"`
+	PrivateIp *string `json:"private_ip,omitempty" xml:"private_ip"`
 
 	// PVC规格 5GB|10GB|20GB
-	PvcQuantity InstanceParamPvcQuantity `json:"pvc_quantity"`
+	PvcQuantity InstanceParamPvcQuantity `json:"pvc_quantity" xml:"pvc_quantity"`
 
 	// 自动休眠时长。 arm架构,自动休眠时长只能设置成30，60。x86架构可取值为30，60，240，1440和-1。除-1外，其它值的单位为“分钟”。实例无操作超过自动休眠时长后，将会被暂停（已保存的数据不会被删除）。-1表示实例不会自动停止
-	RefreshInterval string `json:"refresh_interval"`
+	RefreshInterval string `json:"refresh_interval" xml:"refresh_interval"`
 
 	// 解放号的仓库id，解放号场景下使用
-	RepositoryId *int64 `json:"repository_id,omitempty"`
+	RepositoryId *int64 `json:"repository_id,omitempty" xml:"repository_id"`
 
 	// 技术栈ID，通过技术栈管理ListStacks接口获取。
-	StackId string `json:"stack_id"`
+	StackId string `json:"stack_id" xml:"stack_id"`
 
 	// 任务类型，教程活动场景下使用
-	TaskType *string `json:"task_type,omitempty"`
+	TaskType *string `json:"task_type,omitempty" xml:"task_type"`
 
 	// 解放号的token，解放号场景下使用
-	Token *string `json:"token,omitempty"`
+	Token *string `json:"token,omitempty" xml:"token"`
 
 	// 云服务器对应的vpcId，小网连接ecs的场景下使用
-	VpcId *string `json:"vpc_id,omitempty"`
+	VpcId *string `json:"vpc_id,omitempty" xml:"vpc_id"`
 
 	// 实例授权用户租户ID
-	InstanceDomainId *string `json:"instance_domain_id,omitempty"`
+	InstanceDomainId *string `json:"instance_domain_id,omitempty" xml:"instance_domain_id"`
 
 	// 实例授权用户ID
-	InstanceUserId *string `json:"instance_user_id,omitempty"`
+	InstanceUserId *string `json:"instance_user_id,omitempty" xml:"instance_user_id"`
 }
 
 func (o InstanceParam) String() string {

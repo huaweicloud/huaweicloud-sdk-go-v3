@@ -10,16 +10,16 @@ import (
 type MatchFeaturePair struct {
 
 	// 用户特征。
-	UserFeatureName *string `json:"user_feature_name,omitempty"`
+	UserFeatureName *string `json:"user_feature_name,omitempty" xml:"user_feature_name"`
 
 	// 物品特征。
-	ItemFeatureName *string `json:"item_feature_name,omitempty"`
+	ItemFeatureName *string `json:"item_feature_name,omitempty" xml:"item_feature_name"`
 
 	// 权重。
-	Weight *float64 `json:"weight,omitempty"`
+	Weight *float64 `json:"weight,omitempty" xml:"weight"`
 
 	// 匹配个数度量。
-	MatchCount *bool `json:"match_count,omitempty"`
+	MatchCount *bool `json:"match_count,omitempty" xml:"match_count"`
 }
 
 func (o MatchFeaturePair) String() string {

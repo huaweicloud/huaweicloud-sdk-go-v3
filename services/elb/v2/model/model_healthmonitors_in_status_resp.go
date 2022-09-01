@@ -13,16 +13,16 @@ import (
 type HealthmonitorsInStatusResp struct {
 
 	// 健康检查ID
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 健康检查名称
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 健康检查类型
-	Type HealthmonitorsInStatusRespType `json:"type"`
+	Type HealthmonitorsInStatusRespType `json:"type" xml:"type"`
 
 	// 健康检查的配置状态；该字段为预留字段，暂未启用。默认为ACTIVE。
-	ProvisioningStatus string `json:"provisioning_status"`
+	ProvisioningStatus string `json:"provisioning_status" xml:"provisioning_status"`
 }
 
 func (o HealthmonitorsInStatusResp) String() string {

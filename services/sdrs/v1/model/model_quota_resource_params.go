@@ -10,19 +10,19 @@ import (
 type QuotaResourceParams struct {
 
 	// 资源类型server_groups：表示保护组资源类型。replications：表示复制对资源类型。
-	Type string `json:"type"`
+	Type string `json:"type" xml:"type"`
 
 	// 已经使用的资源个数。
-	Used int32 `json:"used"`
+	Used int32 `json:"used" xml:"used"`
 
 	// 资源配额。-1：表示无穷大。
-	Quota int32 `json:"quota"`
+	Quota int32 `json:"quota" xml:"quota"`
 
 	// 设置该资源配额允许的最小值。
-	Min int32 `json:"min"`
+	Min int32 `json:"min" xml:"min"`
 
 	// 设置该资源配额允许的最大值。-1：表示无穷大。
-	Max int32 `json:"max"`
+	Max int32 `json:"max" xml:"max"`
 }
 
 func (o QuotaResourceParams) String() string {

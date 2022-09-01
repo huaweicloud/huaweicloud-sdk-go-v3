@@ -12,13 +12,13 @@ import (
 type BatchAddSharedTagsRequestBody struct {
 
 	// 操作标识，取值范围为：create。 为指定共享批量添加标签时使用create。
-	Action BatchAddSharedTagsRequestBodyAction `json:"action"`
+	Action BatchAddSharedTagsRequestBodyAction `json:"action" xml:"action"`
 
 	// 标签列表。 用户权限时该字段必选，op_service权限时和sys_tags二选一。
-	Tags *[]ResourceTag `json:"tags,omitempty"`
+	Tags *[]ResourceTag `json:"tags,omitempty" xml:"tags"`
 
 	// 系统标签列表。 op_service权限可以访问，和tags二选一。目前TMS调用时只包含一个resource_tag结构体，key固定为：_sys_enterprise_project_id。
-	SysTags *[]ResourceTag `json:"sys_tags,omitempty"`
+	SysTags *[]ResourceTag `json:"sys_tags,omitempty" xml:"sys_tags"`
 }
 
 func (o BatchAddSharedTagsRequestBody) String() string {

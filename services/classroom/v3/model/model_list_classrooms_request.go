@@ -10,13 +10,13 @@ import (
 type ListClassroomsRequest struct {
 
 	// 信息记录的起始编号
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 每页包含的信息记录数
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 查询的课堂类别，默认查询所有的课堂。 取值范围： create：只查询当前用户创建的课堂。 attend：只查询当前用户加入的课堂。 all：查询当前用户所有的课堂。
-	QueryType *string `json:"query_type,omitempty"`
+	QueryType *string `json:"query_type,omitempty" xml:"query_type"`
 }
 
 func (o ListClassroomsRequest) String() string {

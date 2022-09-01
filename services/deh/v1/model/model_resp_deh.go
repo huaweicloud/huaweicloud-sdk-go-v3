@@ -10,16 +10,16 @@ import (
 type RespDeh struct {
 
 	// 专属主机ID。
-	ResourceId string `json:"resource_id"`
+	ResourceId string `json:"resource_id" xml:"resource_id"`
 
 	// 专属主机详情。  该字段用于后续扩展，默认为空。
-	ResouceDetail string `json:"resouce_detail"`
+	ResouceDetail string `json:"resouce_detail" xml:"resouce_detail"`
 
 	// 标签列表。
-	Tags []ResourceTag `json:"tags"`
+	Tags []ResourceTag `json:"tags" xml:"tags"`
 
 	// 资源名称。
-	ResourceName string `json:"resource_name"`
+	ResourceName string `json:"resource_name" xml:"resource_name"`
 }
 
 func (o RespDeh) String() string {

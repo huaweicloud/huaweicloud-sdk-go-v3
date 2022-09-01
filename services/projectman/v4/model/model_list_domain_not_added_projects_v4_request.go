@@ -10,10 +10,10 @@ import (
 type ListDomainNotAddedProjectsV4Request struct {
 
 	// 分页索引，偏移量,offset是limit的整数倍，limit=10,offset=0,10,20...
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 每页显示的数量,每页最多显示100条
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 }
 
 func (o ListDomainNotAddedProjectsV4Request) String() string {

@@ -10,9 +10,9 @@ import (
 type CreateConsumerGroupRequest struct {
 
 	// 指定的队列ID
-	QueueId string `json:"queue_id"`
+	QueueId string `json:"queue_id" xml:"queue_id"`
 
-	Body *CreateConsumerGroupReq `json:"body,omitempty"`
+	Body *CreateConsumerGroupReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateConsumerGroupRequest) String() string {

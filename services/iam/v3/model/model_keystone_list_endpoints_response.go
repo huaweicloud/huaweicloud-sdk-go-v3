@@ -8,10 +8,10 @@ import (
 
 // Response Object
 type KeystoneListEndpointsResponse struct {
-	Links *Links `json:"links,omitempty"`
+	Links *Links `json:"links,omitempty" xml:"links"`
 
 	// 终端节点信息列表。
-	Endpoints      *[]Endpoint `json:"endpoints,omitempty"`
+	Endpoints      *[]Endpoint `json:"endpoints,omitempty" xml:"endpoints"`
 	HttpStatusCode int         `json:"-"`
 }
 

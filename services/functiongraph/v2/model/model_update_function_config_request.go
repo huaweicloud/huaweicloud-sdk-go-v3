@@ -10,9 +10,9 @@ import (
 type UpdateFunctionConfigRequest struct {
 
 	// 函数的URN，详细解释见FunctionGraph函数模型。
-	FunctionUrn string `json:"function_urn"`
+	FunctionUrn string `json:"function_urn" xml:"function_urn"`
 
-	Body *UpdateFunctionConfigRequestBody `json:"body,omitempty"`
+	Body *UpdateFunctionConfigRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateFunctionConfigRequest) String() string {

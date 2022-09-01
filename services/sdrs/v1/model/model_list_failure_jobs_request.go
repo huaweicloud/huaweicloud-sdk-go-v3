@@ -13,22 +13,22 @@ import (
 type ListFailureJobsRequest struct {
 
 	// 失败任务状态。createFail：表示创建失败。deleteFail：表示删除失败。attachFail：表示挂载失败。detachFail：表示卸载失败。expandFail：表示扩容失败。resizeFail：表示变更规格失败。startFail：表示开启保护失败。stopFail：表示停止保护失败。reverseFail：表示切换失败。failoverFail：表示故障切换失败。reprotectFail : 表示重保护失败。
-	FailureStatus *ListFailureJobsRequestFailureStatus `json:"failure_status,omitempty"`
+	FailureStatus *ListFailureJobsRequestFailureStatus `json:"failure_status,omitempty" xml:"failure_status"`
 
 	// 保护组资源名称。
-	ResourceName *string `json:"resource_name,omitempty"`
+	ResourceName *string `json:"resource_name,omitempty" xml:"resource_name"`
 
 	// 保护组ID。
-	ServerGroupId *string `json:"server_group_id,omitempty"`
+	ServerGroupId *string `json:"server_group_id,omitempty" xml:"server_group_id"`
 
 	// 资源类型。server_groups：表示保护组。protected_instances：表示保护实例。replications：表示复制对。disaster_recovery_drills：表示容灾演练。
-	ResourceType *ListFailureJobsRequestResourceType `json:"resource_type,omitempty"`
+	ResourceType *ListFailureJobsRequestResourceType `json:"resource_type,omitempty" xml:"resource_type"`
 
 	// 每次请求返回结果个数限制。取值范围为[0,1000]的正整数，默认值为1000。
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 每次请求开始的下标，即偏移量，默认值为0。offset必须为数字，不能为负数。
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 }
 
 func (o ListFailureJobsRequest) String() string {

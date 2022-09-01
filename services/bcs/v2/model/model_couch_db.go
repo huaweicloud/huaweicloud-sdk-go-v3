@@ -10,10 +10,10 @@ import (
 type CouchDb struct {
 
 	// couchDB用户名
-	UserName string `json:"user_name"`
+	UserName string `json:"user_name" xml:"user_name"`
 
 	// couchDB密码
-	Password string `json:"password"`
+	Password string `json:"password" xml:"password"`
 }
 
 func (o CouchDb) String() string {

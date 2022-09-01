@@ -9,10 +9,10 @@ import (
 type Branch struct {
 
 	// 是否开启保护分支功能
-	IsProtected *bool `json:"is_protected,omitempty"`
+	IsProtected *bool `json:"is_protected,omitempty" xml:"is_protected"`
 
 	// 分支名
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 }
 
 func (o Branch) String() string {

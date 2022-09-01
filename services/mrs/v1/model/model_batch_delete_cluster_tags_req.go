@@ -12,10 +12,10 @@ import (
 type BatchDeleteClusterTagsReq struct {
 
 	// 操作标识：仅限于delete（删除）。
-	Action BatchDeleteClusterTagsReqAction `json:"action"`
+	Action BatchDeleteClusterTagsReqAction `json:"action" xml:"action"`
 
 	// 标签列表。
-	Tags []Tag `json:"tags"`
+	Tags []Tag `json:"tags" xml:"tags"`
 }
 
 func (o BatchDeleteClusterTagsReq) String() string {

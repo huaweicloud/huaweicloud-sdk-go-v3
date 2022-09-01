@@ -10,7 +10,7 @@ import (
 type ListAvailableZonesV2Response struct {
 
 	// 可用区列表
-	AvailableZones *[]AvailableZone `json:"available_zones,omitempty"`
+	AvailableZones *[]AvailableZone `json:"available_zones,omitempty" xml:"available_zones"`
 	HttpStatusCode int              `json:"-"`
 }
 

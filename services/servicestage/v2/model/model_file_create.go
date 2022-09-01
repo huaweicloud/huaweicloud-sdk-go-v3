@@ -9,10 +9,10 @@ import (
 type FileCreate struct {
 
 	// 提交描述。
-	Message string `json:"message"`
+	Message string `json:"message" xml:"message"`
 
 	// 经base64编码的文件内容。
-	Content string `json:"content"`
+	Content string `json:"content" xml:"content"`
 }
 
 func (o FileCreate) String() string {

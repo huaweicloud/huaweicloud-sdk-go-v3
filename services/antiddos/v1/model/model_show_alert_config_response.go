@@ -10,12 +10,12 @@ import (
 type ShowAlertConfigResponse struct {
 
 	// 告警群组的唯一标识
-	TopicUrn *string `json:"topic_urn,omitempty"`
+	TopicUrn *string `json:"topic_urn,omitempty" xml:"topic_urn"`
 
 	// 告警群组描述
-	DisplayName *string `json:"display_name,omitempty"`
+	DisplayName *string `json:"display_name,omitempty" xml:"display_name"`
 
-	WarnConfig     *AlertConfigRespWarnConfig `json:"warn_config,omitempty"`
+	WarnConfig     *AlertConfigRespWarnConfig `json:"warn_config,omitempty" xml:"warn_config"`
 	HttpStatusCode int                        `json:"-"`
 }
 

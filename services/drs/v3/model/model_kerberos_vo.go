@@ -10,16 +10,16 @@ import (
 type KerberosVo struct {
 
 	// krb5配置文件
-	Krb5ConfFile *string `json:"krb5_conf_file,omitempty"`
+	Krb5ConfFile *string `json:"krb5_conf_file,omitempty" xml:"krb5_conf_file"`
 
 	// key文件
-	KeyTabFile *string `json:"key_tab_file,omitempty"`
+	KeyTabFile *string `json:"key_tab_file,omitempty" xml:"key_tab_file"`
 
 	// 域名
-	DomainName *string `json:"domain_name,omitempty"`
+	DomainName *string `json:"domain_name,omitempty" xml:"domain_name"`
 
 	// Kerberos用户对象
-	UserPrincipal *string `json:"user_principal,omitempty"`
+	UserPrincipal *string `json:"user_principal,omitempty" xml:"user_principal"`
 }
 
 func (o KerberosVo) String() string {

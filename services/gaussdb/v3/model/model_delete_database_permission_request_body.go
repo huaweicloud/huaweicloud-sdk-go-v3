@@ -10,7 +10,7 @@ import (
 type DeleteDatabasePermissionRequestBody struct {
 
 	// 数据库用户列表，列表最大长度为50。
-	Users []DeleteDatabasePermission `json:"users"`
+	Users []DeleteDatabasePermission `json:"users" xml:"users"`
 }
 
 func (o DeleteDatabasePermissionRequestBody) String() string {

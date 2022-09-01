@@ -10,13 +10,13 @@ import (
 type ListFunctionsRequest struct {
 
 	// 上一次查询到的最后的记录位置。
-	Marker *string `json:"marker,omitempty"`
+	Marker *string `json:"marker,omitempty" xml:"marker"`
 
 	// 每次查询获取的最大函数记录数量 最大值：400 如果不提供该值或者提供的值大于400或等于0，则使用默认值：400 如果该值小于0，则返回参数错误。
-	Maxitems *string `json:"maxitems,omitempty"`
+	Maxitems *string `json:"maxitems,omitempty" xml:"maxitems"`
 
 	// 应用名称。
-	PackageName *string `json:"package_name,omitempty"`
+	PackageName *string `json:"package_name,omitempty" xml:"package_name"`
 }
 
 func (o ListFunctionsRequest) String() string {

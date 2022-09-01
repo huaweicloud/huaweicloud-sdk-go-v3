@@ -10,10 +10,10 @@ import (
 type ListCommonPoolsResponse struct {
 
 	// 功能说明：公共池对象
-	CommonPools *[]CommonPoolDict `json:"common_pools,omitempty"`
+	CommonPools *[]CommonPoolDict `json:"common_pools,omitempty" xml:"common_pools"`
 
 	// 本次请求的编号
-	RequestId      *string `json:"request_id,omitempty"`
+	RequestId      *string `json:"request_id,omitempty" xml:"request_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

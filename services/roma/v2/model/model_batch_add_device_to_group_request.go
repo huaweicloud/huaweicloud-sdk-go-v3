@@ -10,12 +10,12 @@ import (
 type BatchAddDeviceToGroupRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 设备分组ID
-	GroupId int32 `json:"group_id"`
+	GroupId int32 `json:"group_id" xml:"group_id"`
 
-	Body *BatchAddDeviceToGroupRequestBody `json:"body,omitempty"`
+	Body *BatchAddDeviceToGroupRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchAddDeviceToGroupRequest) String() string {

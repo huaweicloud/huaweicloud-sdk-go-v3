@@ -10,7 +10,7 @@ import (
 type DeleteEdgeAppRequest struct {
 
 	// 应用ID，应用唯一。
-	EdgeAppId string `json:"edge_app_id"`
+	EdgeAppId string `json:"edge_app_id" xml:"edge_app_id"`
 }
 
 func (o DeleteEdgeAppRequest) String() string {

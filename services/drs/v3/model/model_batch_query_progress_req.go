@@ -10,7 +10,7 @@ import (
 type BatchQueryProgressReq struct {
 
 	// 批量查询进度任务ID请求列表
-	Jobs []string `json:"jobs"`
+	Jobs []string `json:"jobs" xml:"jobs"`
 }
 
 func (o BatchQueryProgressReq) String() string {

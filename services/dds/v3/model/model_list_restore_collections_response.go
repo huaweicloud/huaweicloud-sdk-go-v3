@@ -10,10 +10,10 @@ import (
 type ListRestoreCollectionsResponse struct {
 
 	// 集合总数。
-	TotalCount *int32 `json:"total_count,omitempty"`
+	TotalCount *int32 `json:"total_count,omitempty" xml:"total_count"`
 
 	// 集合列表，列表中每个元素表示一个集合。
-	Collections    *[]string `json:"collections,omitempty"`
+	Collections    *[]string `json:"collections,omitempty" xml:"collections"`
 	HttpStatusCode int       `json:"-"`
 }
 

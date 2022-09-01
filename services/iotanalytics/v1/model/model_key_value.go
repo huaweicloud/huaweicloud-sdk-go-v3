@@ -9,10 +9,10 @@ import (
 type KeyValue struct {
 
 	// 键。
-	Key *string `json:"key,omitempty"`
+	Key *string `json:"key,omitempty" xml:"key"`
 
 	// 值。
-	Value *string `json:"value,omitempty"`
+	Value *string `json:"value,omitempty" xml:"value"`
 }
 
 func (o KeyValue) String() string {

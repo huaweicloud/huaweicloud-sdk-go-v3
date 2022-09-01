@@ -10,10 +10,10 @@ import (
 type TwinUpdateDetail struct {
 
 	// 终端设备动态属性
-	Twin map[string]ValueInTwin `json:"twin"`
+	Twin map[string]ValueInTwin `json:"twin" xml:"twin"`
 
 	// 孪生属性配置，与access_protocol关联。
-	PropertyVisitors map[string]ValueInPropertyVisitors `json:"property_visitors"`
+	PropertyVisitors map[string]ValueInPropertyVisitors `json:"property_visitors" xml:"property_visitors"`
 }
 
 func (o TwinUpdateDetail) String() string {

@@ -10,7 +10,7 @@ import (
 type DeletePostalRequest struct {
 
 	// 邮寄地址ID
-	AddressId string `json:"address_id"`
+	AddressId string `json:"address_id" xml:"address_id"`
 }
 
 func (o DeletePostalRequest) String() string {

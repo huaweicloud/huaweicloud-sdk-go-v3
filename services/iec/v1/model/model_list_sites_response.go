@@ -10,10 +10,10 @@ import (
 type ListSitesResponse struct {
 
 	// 边缘站点总数。
-	Count *int32 `json:"count,omitempty"`
+	Count *int32 `json:"count,omitempty" xml:"count"`
 
 	// 站点列表。
-	Sites          *[]Site `json:"sites,omitempty"`
+	Sites          *[]Site `json:"sites,omitempty" xml:"sites"`
 	HttpStatusCode int     `json:"-"`
 }
 

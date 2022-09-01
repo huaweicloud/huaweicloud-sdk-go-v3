@@ -10,7 +10,7 @@ import (
 type StopPublicKibanaWhitelistRequest struct {
 
 	// 指定关闭Kibana公网访问控制的集群ID。
-	ClusterId string `json:"cluster_id"`
+	ClusterId string `json:"cluster_id" xml:"cluster_id"`
 }
 
 func (o StopPublicKibanaWhitelistRequest) String() string {

@@ -13,37 +13,37 @@ import (
 type ShowEngineJobResponse struct {
 
 	// 任务ID
-	Id *int32 `json:"id,omitempty"`
+	Id *int32 `json:"id,omitempty" xml:"id"`
 
 	// 任务所属引擎ID
-	EngineId *string `json:"engine_id,omitempty"`
+	EngineId *string `json:"engine_id,omitempty" xml:"engine_id"`
 
 	// 任务类型
-	Type *ShowEngineJobResponseType `json:"type,omitempty"`
+	Type *ShowEngineJobResponseType `json:"type,omitempty" xml:"type"`
 
 	// 任务描述
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 任务状态
-	Status *ShowEngineJobResponseStatus `json:"status,omitempty"`
+	Status *ShowEngineJobResponseStatus `json:"status,omitempty" xml:"status"`
 
 	// 任务是否正在执行，0表示不在执行，1表示执行中
-	Scheduling *int32 `json:"scheduling,omitempty"`
+	Scheduling *int32 `json:"scheduling,omitempty" xml:"scheduling"`
 
 	// 任务创建者
-	CreateUser *string `json:"create_user,omitempty"`
+	CreateUser *string `json:"create_user,omitempty" xml:"create_user"`
 
 	// 任务开始时间
-	StartTime *int64 `json:"start_time,omitempty"`
+	StartTime *int64 `json:"start_time,omitempty" xml:"start_time"`
 
 	// 任务结束时间
-	EndTime *int64 `json:"end_time,omitempty"`
+	EndTime *int64 `json:"end_time,omitempty" xml:"end_time"`
 
 	// 任务执行上下文
-	Context *string `json:"context,omitempty"`
+	Context *string `json:"context,omitempty" xml:"context"`
 
 	// 任务包含的处理阶段
-	Tasks          *[]TaskSteps `json:"tasks,omitempty"`
+	Tasks          *[]TaskSteps `json:"tasks,omitempty" xml:"tasks"`
 	HttpStatusCode int          `json:"-"`
 }
 

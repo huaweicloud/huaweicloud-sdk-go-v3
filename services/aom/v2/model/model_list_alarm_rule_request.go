@@ -10,10 +10,10 @@ import (
 type ListAlarmRuleRequest struct {
 
 	// 分页信息。
-	Offset *string `json:"offset,omitempty"`
+	Offset *string `json:"offset,omitempty" xml:"offset"`
 
 	// 用于限制结果数据条数。 取值范围(0,1000],默认值为1000。
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 }
 
 func (o ListAlarmRuleRequest) String() string {

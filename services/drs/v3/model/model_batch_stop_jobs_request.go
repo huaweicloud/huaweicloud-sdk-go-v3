@@ -13,9 +13,9 @@ import (
 type BatchStopJobsRequest struct {
 
 	// 请求语言类型
-	XLanguage *BatchStopJobsRequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *BatchStopJobsRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 
-	Body *BatchPauseJobReq `json:"body,omitempty"`
+	Body *BatchPauseJobReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchStopJobsRequest) String() string {

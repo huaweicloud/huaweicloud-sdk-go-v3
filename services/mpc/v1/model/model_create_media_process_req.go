@@ -7,12 +7,12 @@ import (
 )
 
 type CreateMediaProcessReq struct {
-	Input *ObsObjInfo `json:"input,omitempty"`
+	Input *ObsObjInfo `json:"input,omitempty" xml:"input"`
 
-	Output *ObsObjInfo `json:"output,omitempty"`
+	Output *ObsObjInfo `json:"output,omitempty" xml:"output"`
 
 	// 模板ID
-	TemplateId *string `json:"template_id,omitempty"`
+	TemplateId *string `json:"template_id,omitempty" xml:"template_id"`
 }
 
 func (o CreateMediaProcessReq) String() string {

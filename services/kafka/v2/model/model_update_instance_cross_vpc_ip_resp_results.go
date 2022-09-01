@@ -10,13 +10,13 @@ import (
 type UpdateInstanceCrossVpcIpRespResults struct {
 
 	// advertised.listeners IP/域名。
-	AdvertisedIp *string `json:"advertised_ip,omitempty"`
+	AdvertisedIp *string `json:"advertised_ip,omitempty" xml:"advertised_ip"`
 
 	// 修改broker跨VPC访问的状态。
-	Success *bool `json:"success,omitempty"`
+	Success *bool `json:"success,omitempty" xml:"success"`
 
 	// listeners IP。
-	Ip *string `json:"ip,omitempty"`
+	Ip *string `json:"ip,omitempty" xml:"ip"`
 }
 
 func (o UpdateInstanceCrossVpcIpRespResults) String() string {

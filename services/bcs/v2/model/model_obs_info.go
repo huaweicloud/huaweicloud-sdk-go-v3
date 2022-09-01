@@ -10,10 +10,10 @@ import (
 type ObsInfo struct {
 
 	// OBS桶名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// OBS桶地址
-	Addr *string `json:"addr,omitempty"`
+	Addr *string `json:"addr,omitempty" xml:"addr"`
 }
 
 func (o ObsInfo) String() string {

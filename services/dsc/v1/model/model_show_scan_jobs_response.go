@@ -10,10 +10,10 @@ import (
 type ShowScanJobsResponse struct {
 
 	// 本次返回的扫描任务列表
-	Tasks *[]ScanJob `json:"tasks,omitempty"`
+	Tasks *[]ScanJob `json:"tasks,omitempty" xml:"tasks"`
 
 	// 任务总数
-	Total          *int64 `json:"total,omitempty"`
+	Total          *int64 `json:"total,omitempty" xml:"total"`
 	HttpStatusCode int    `json:"-"`
 }
 

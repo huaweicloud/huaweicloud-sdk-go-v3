@@ -13,65 +13,65 @@ import (
 type CreateJobReq struct {
 
 	// 是否绑定eip，网络类型为eip时必填且为true
-	BindEip *bool `json:"bind_eip,omitempty"`
+	BindEip *bool `json:"bind_eip,omitempty" xml:"bind_eip"`
 
 	// 迁移场景，migration-实时迁移,sync-实时同步,cloudDataGuard-实时灾备
-	DbUseType CreateJobReqDbUseType `json:"db_use_type"`
+	DbUseType CreateJobReqDbUseType `json:"db_use_type" xml:"db_use_type"`
 
 	// 任务名称，约束：任务名称在4位到50位之间，不区分大小写，可以包含字母、数字、中划线或下划线，不能包括其他特殊字符。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 任务描述。  **约束**：任务描述不能超过256位，且不能包含!<>&'\"\\特殊字符。
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 引擎类型 - mysql：迁移，同步使用 - mongodb：迁移使用 - cloudDataGuard-mysql：灾备使用 - gaussdbv5，postgresql：同步使用
-	EngineType CreateJobReqEngineType `json:"engine_type"`
+	EngineType CreateJobReqEngineType `json:"engine_type" xml:"engine_type"`
 
 	// 指定目标实例是否限制为只读，MySQL迁移和灾备，且job_direction为up时设置有效。（灾备场景下，单主灾备且本云为备为必填且为true，不填默认设置为true）。
-	IsTargetReadonly *bool `json:"is_target_readonly,omitempty"`
+	IsTargetReadonly *bool `json:"is_target_readonly,omitempty" xml:"is_target_readonly"`
 
 	// 迁移方向，up ：入云 ，灾备场景时对应本云为备，down：出云，灾备场景时对应本云为主，non-dbs：自建
-	JobDirection CreateJobReqJobDirection `json:"job_direction"`
+	JobDirection CreateJobReqJobDirection `json:"job_direction" xml:"job_direction"`
 
 	// - db_use_type 是cloudDataGuard时，必填，灾备类型是双主灾备时 muti_write取值true, 否则为false。 - db_use_type 是其他类型时，muti_write是非必选参数
-	MultiWrite *bool `json:"multi_write,omitempty"`
+	MultiWrite *bool `json:"multi_write,omitempty" xml:"multi_write"`
 
 	// 网络类型
-	NetType CreateJobReqNetType `json:"net_type"`
+	NetType CreateJobReqNetType `json:"net_type" xml:"net_type"`
 
 	// 节点个数。MongoDB数据库时对应源端分片个数，源库为集群时必填，[1-32]，MySQL双主灾备时会默认设置为2。
-	NodeNum *int32 `json:"node_num,omitempty"`
+	NodeNum *int32 `json:"node_num,omitempty" xml:"node_num"`
 
 	// 规格类型。
-	NodeType CreateJobReqNodeType `json:"node_type"`
+	NodeType CreateJobReqNodeType `json:"node_type" xml:"node_type"`
 
-	SourceEndpoint *Endpoint `json:"source_endpoint"`
+	SourceEndpoint *Endpoint `json:"source_endpoint" xml:"source_endpoint"`
 
-	TargetEndpoint *Endpoint `json:"target_endpoint"`
+	TargetEndpoint *Endpoint `json:"target_endpoint" xml:"target_endpoint"`
 
 	// 标签信息。
-	Tags *[]ResourceTag `json:"tags,omitempty"`
+	Tags *[]ResourceTag `json:"tags,omitempty" xml:"tags"`
 
 	// 迁移模式，FULL_TRANS 全量,FULL_INCR_TRANS 全量+增量,INCR_TRANS 增量，灾备场景单主灾备仅支持全量加增量（FULL_INCR_TRANS）
-	TaskType CreateJobReqTaskType `json:"task_type"`
+	TaskType CreateJobReqTaskType `json:"task_type" xml:"task_type"`
 
 	// DRS实例所在子网ID，对应目标库相同VPC下已创建的子网（subnet）的网络ID，UUID格式。
-	CustomizeSutnetId string `json:"customize_sutnet_id"`
+	CustomizeSutnetId string `json:"customize_sutnet_id" xml:"customize_sutnet_id"`
 
 	// 产品id。
-	ProductId *string `json:"product_id,omitempty"`
+	ProductId *string `json:"product_id,omitempty" xml:"product_id"`
 
 	// 企业项目，不填默认为default，key值必须为_sys_enterprise_project_id，value为企业项目ID，只能有一个企业项目。
-	SysTags *[]ResourceTag `json:"sys_tags,omitempty"`
+	SysTags *[]ResourceTag `json:"sys_tags,omitempty" xml:"sys_tags"`
 
 	// 任务处于异常状态一段时间后，将会自动结束，单位为天。(范围14-100)，不传默认为14天。
-	ExpiredDays *string `json:"expired_days,omitempty"`
+	ExpiredDays *string `json:"expired_days,omitempty" xml:"expired_days"`
 
 	// 主备任务主任务所在可用区code，可以通过查询规格未售罄的可用区接口获取 - master_az和slave_az同时填写时生效 - 目前支持mysql，gaussdbv5ha-to-kafka
-	MasterAz *string `json:"master_az,omitempty"`
+	MasterAz *string `json:"master_az,omitempty" xml:"master_az"`
 
 	// 主备任务备任务所在可用区code，可以通过查询规格未售罄的可用区接口获取 - master_az和slave_az同时填写时生效 - 目前支持mysql，gaussdbv5ha-to-kafka
-	SlaveAz *string `json:"slave_az,omitempty"`
+	SlaveAz *string `json:"slave_az,omitempty" xml:"slave_az"`
 }
 
 func (o CreateJobReq) String() string {

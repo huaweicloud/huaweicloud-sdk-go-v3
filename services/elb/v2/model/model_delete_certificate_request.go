@@ -10,7 +10,7 @@ import (
 type DeleteCertificateRequest struct {
 
 	// SSL证书ID
-	CertificateId string `json:"certificate_id"`
+	CertificateId string `json:"certificate_id" xml:"certificate_id"`
 }
 
 func (o DeleteCertificateRequest) String() string {

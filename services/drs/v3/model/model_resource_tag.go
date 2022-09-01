@@ -10,10 +10,10 @@ import (
 type ResourceTag struct {
 
 	// 标签键，最大长度36，只能包含字母、数字、下划线、中划线和中文，需要修改标签时填写。
-	Key *string `json:"key,omitempty"`
+	Key *string `json:"key,omitempty" xml:"key"`
 
 	// 标签值，最大长度43，只能包含字母、数字、下划线、中划线和中文，需要修改标签时填写。
-	Value *string `json:"value,omitempty"`
+	Value *string `json:"value,omitempty" xml:"value"`
 }
 
 func (o ResourceTag) String() string {

@@ -10,7 +10,7 @@ import (
 type ResourceId struct {
 
 	// 资源ID
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 }
 
 func (o ResourceId) String() string {

@@ -10,16 +10,16 @@ import (
 type SyncExecutionNodeErrorDetail struct {
 
 	// 流程节点ID
-	NodeId *string `json:"node_id,omitempty"`
+	NodeId *string `json:"node_id,omitempty" xml:"node_id"`
 
 	// 错误详细信息
-	ErrorMessage *string `json:"error_message,omitempty"`
+	ErrorMessage *string `json:"error_message,omitempty" xml:"error_message"`
 
 	// 流程实例创建时间，格式：yyyy-MM-ddTHH:mm:ssZ，UTC时间
-	BeginTime *string `json:"begin_time,omitempty"`
+	BeginTime *string `json:"begin_time,omitempty" xml:"begin_time"`
 
 	// 流程实例结束时间，格式：yyyy-MM-ddTHH:mm:ssZ，UTC时间
-	EndTime *string `json:"end_time,omitempty"`
+	EndTime *string `json:"end_time,omitempty" xml:"end_time"`
 }
 
 func (o SyncExecutionNodeErrorDetail) String() string {

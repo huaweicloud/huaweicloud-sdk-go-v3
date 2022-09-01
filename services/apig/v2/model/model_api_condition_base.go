@@ -12,16 +12,16 @@ import (
 type ApiConditionBase struct {
 
 	// 关联的请求参数对象名称。策略类型为param时必选
-	ReqParamName *string `json:"req_param_name,omitempty"`
+	ReqParamName *string `json:"req_param_name,omitempty" xml:"req_param_name"`
 
 	// 策略条件 - exact：绝对匹配 - enum：枚举 - pattern：正则  策略类型为param时必选
-	ConditionType *ApiConditionBaseConditionType `json:"condition_type,omitempty"`
+	ConditionType *ApiConditionBaseConditionType `json:"condition_type,omitempty" xml:"condition_type"`
 
 	// 策略类型 - param：参数 - source：源IP
-	ConditionOrigin ApiConditionBaseConditionOrigin `json:"condition_origin"`
+	ConditionOrigin ApiConditionBaseConditionOrigin `json:"condition_origin" xml:"condition_origin"`
 
 	// 策略值
-	ConditionValue string `json:"condition_value"`
+	ConditionValue string `json:"condition_value" xml:"condition_value"`
 }
 
 func (o ApiConditionBase) String() string {

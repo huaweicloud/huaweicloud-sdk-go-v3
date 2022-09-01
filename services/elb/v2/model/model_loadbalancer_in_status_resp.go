@@ -13,22 +13,22 @@ import (
 type LoadbalancerInStatusResp struct {
 
 	// 负载均衡器名称
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 负载均衡器ID
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 负载均衡器关联的监听器列表
-	Listeners []ListenersInStatusResp `json:"listeners"`
+	Listeners []ListenersInStatusResp `json:"listeners" xml:"listeners"`
 
 	// 负载均衡器关联的后端云服务器组列表
-	Pools []PoolsInStatusResp `json:"pools"`
+	Pools []PoolsInStatusResp `json:"pools" xml:"pools"`
 
 	// 负载均衡器的操作状态；该字段为预留字段，暂未启用。默认为ONLINE。
-	OperatingStatus LoadbalancerInStatusRespOperatingStatus `json:"operating_status"`
+	OperatingStatus LoadbalancerInStatusRespOperatingStatus `json:"operating_status" xml:"operating_status"`
 
 	// 负载均衡器的配置状态；该字段为预留字段，暂未启用。默认为ACTIVE。
-	ProvisioningStatus LoadbalancerInStatusRespProvisioningStatus `json:"provisioning_status"`
+	ProvisioningStatus LoadbalancerInStatusRespProvisioningStatus `json:"provisioning_status" xml:"provisioning_status"`
 }
 
 func (o LoadbalancerInStatusResp) String() string {

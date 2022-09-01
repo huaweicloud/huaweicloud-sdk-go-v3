@@ -9,37 +9,37 @@ import (
 type PipelineBasicInfo struct {
 
 	// devCloud项目id
-	ProjectId string `json:"project_id"`
+	ProjectId string `json:"project_id" xml:"project_id"`
 
 	// devCloud项目名字
-	ProjectName string `json:"project_name"`
+	ProjectName string `json:"project_name" xml:"project_name"`
 
 	// 流水线id
-	PipelineId string `json:"pipeline_id"`
+	PipelineId string `json:"pipeline_id" xml:"pipeline_id"`
 
 	// 流水线名字
-	PipelineName string `json:"pipeline_name"`
+	PipelineName string `json:"pipeline_name" xml:"pipeline_name"`
 
 	// 流水线创建人id
-	CreatorId string `json:"creator_id"`
+	CreatorId string `json:"creator_id" xml:"creator_id"`
 
 	// 流水线创建人名字
-	CreatorName string `json:"creator_name"`
+	CreatorName string `json:"creator_name" xml:"creator_name"`
 
 	// 流水线创建人id
-	ExecutorId string `json:"executor_id"`
+	ExecutorId string `json:"executor_id" xml:"executor_id"`
 
 	// 流水线执行人名字
-	ExecutorName string `json:"executor_name"`
+	ExecutorName string `json:"executor_name" xml:"executor_name"`
 
 	// 启动时间
-	StartTime string `json:"start_time"`
+	StartTime string `json:"start_time" xml:"start_time"`
 
 	// 创建时间
-	CreateTime string `json:"create_time"`
+	CreateTime string `json:"create_time" xml:"create_time"`
 
 	// 用户是否关注流水线：true（关注），false（未关注）
-	Watched string `json:"watched"`
+	Watched string `json:"watched" xml:"watched"`
 }
 
 func (o PipelineBasicInfo) String() string {

@@ -10,13 +10,13 @@ import (
 type MetricDemision struct {
 
 	// 命名空间
-	Namespace *string `json:"namespace,omitempty"`
+	Namespace *string `json:"namespace,omitempty" xml:"namespace"`
 
 	// 指标名称
-	MetricName *string `json:"metricName,omitempty"`
+	MetricName *string `json:"metricName,omitempty" xml:"metricName"`
 
 	// 维度列表
-	Dimensions *[]Dimension `json:"dimensions,omitempty"`
+	Dimensions *[]Dimension `json:"dimensions,omitempty" xml:"dimensions"`
 }
 
 func (o MetricDemision) String() string {

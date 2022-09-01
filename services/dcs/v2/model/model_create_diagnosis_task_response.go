@@ -10,7 +10,7 @@ import (
 type CreateDiagnosisTaskResponse struct {
 
 	// 报告ID
-	ReportId       *string `json:"report_id,omitempty"`
+	ReportId       *string `json:"report_id,omitempty" xml:"report_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

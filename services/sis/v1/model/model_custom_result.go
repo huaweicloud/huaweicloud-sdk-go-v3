@@ -10,7 +10,7 @@ import (
 type CustomResult struct {
 
 	// 语音数据， Base64编码格式返回。
-	Data string `json:"data"`
+	Data string `json:"data" xml:"data"`
 }
 
 func (o CustomResult) String() string {

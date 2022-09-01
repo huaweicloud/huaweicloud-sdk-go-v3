@@ -10,9 +10,9 @@ import (
 type UpdatePermanentAccessKeyRequest struct {
 
 	// 待修改的指定AK。
-	AccessKey string `json:"access_key"`
+	AccessKey string `json:"access_key" xml:"access_key"`
 
-	Body *UpdatePermanentAccessKeyRequestBody `json:"body,omitempty"`
+	Body *UpdatePermanentAccessKeyRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdatePermanentAccessKeyRequest) String() string {

@@ -10,7 +10,7 @@ import (
 type TaskServiceConfig struct {
 
 	// 根据不同服务，填写对应的服务配置参数json结构体
-	Common *interface{} `json:"common,omitempty"`
+	Common *interface{} `json:"common,omitempty" xml:"common"`
 }
 
 func (o TaskServiceConfig) String() string {

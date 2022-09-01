@@ -10,10 +10,10 @@ import (
 type ListDeploymentsResponse struct {
 
 	// 部署计划列表的总和。
-	Count *int32 `json:"count,omitempty"`
+	Count *int32 `json:"count,omitempty" xml:"count"`
 
 	// 部署计划列表。
-	Deployments    *[]Deployment `json:"deployments,omitempty"`
+	Deployments    *[]Deployment `json:"deployments,omitempty" xml:"deployments"`
 	HttpStatusCode int           `json:"-"`
 }
 

@@ -10,7 +10,7 @@ import (
 type DeleteMetadataRequest struct {
 
 	// 元数据ID。
-	MetadataId string `json:"metadata_id"`
+	MetadataId string `json:"metadata_id" xml:"metadata_id"`
 }
 
 func (o DeleteMetadataRequest) String() string {

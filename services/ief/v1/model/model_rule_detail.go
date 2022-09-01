@@ -8,7 +8,7 @@ import (
 
 // 规则配置
 type RuleDetail struct {
-	Rule *RuleConfig `json:"rule,omitempty"`
+	Rule *RuleConfig `json:"rule,omitempty" xml:"rule"`
 }
 
 func (o RuleDetail) String() string {

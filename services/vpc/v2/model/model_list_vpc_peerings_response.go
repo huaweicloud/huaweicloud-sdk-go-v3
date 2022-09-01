@@ -10,10 +10,10 @@ import (
 type ListVpcPeeringsResponse struct {
 
 	// peering对象列表
-	Peerings *[]VpcPeering `json:"peerings,omitempty"`
+	Peerings *[]VpcPeering `json:"peerings,omitempty" xml:"peerings"`
 
 	// 分页信息
-	PeeringsLinks  *[]NeutronPageLink `json:"peerings_links,omitempty"`
+	PeeringsLinks  *[]NeutronPageLink `json:"peerings_links,omitempty" xml:"peerings_links"`
 	HttpStatusCode int                `json:"-"`
 }
 

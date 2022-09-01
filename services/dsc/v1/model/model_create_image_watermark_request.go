@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateImageWatermarkRequest struct {
-	Body *CreateImageWatermarkRequestBody `json:"body,omitempty" type:"multipart"`
+	Body *CreateImageWatermarkRequestBody `json:"body,omitempty" xml:"body" type:"multipart"`
 }
 
 func (o CreateImageWatermarkRequest) String() string {

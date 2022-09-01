@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateGroupRequest struct {
-	Body *StorageGroup `json:"body,omitempty"`
+	Body *StorageGroup `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateGroupRequest) String() string {

@@ -13,24 +13,24 @@ import (
 type DedicatedResource struct {
 
 	// 专属资源池ID。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 专属资源池名称
-	ResourceName *string `json:"resource_name,omitempty"`
+	ResourceName *string `json:"resource_name,omitempty" xml:"resource_name"`
 
 	// 数据库引擎名称
-	EngineName *string `json:"engine_name,omitempty"`
+	EngineName *string `json:"engine_name,omitempty" xml:"engine_name"`
 
 	// CPU架构
-	Architecture *string `json:"architecture,omitempty"`
+	Architecture *string `json:"architecture,omitempty" xml:"architecture"`
 
 	// 专属资源池状态
-	Status *DedicatedResourceStatus `json:"status,omitempty"`
+	Status *DedicatedResourceStatus `json:"status,omitempty" xml:"status"`
 
-	Capacity *DedicatedResourceCapacity `json:"capacity,omitempty"`
+	Capacity *DedicatedResourceCapacity `json:"capacity,omitempty" xml:"capacity"`
 
 	// 专属资源池可用区信息。
-	AvailabilityZone *[]string `json:"availability_zone,omitempty"`
+	AvailabilityZone *[]string `json:"availability_zone,omitempty" xml:"availability_zone"`
 }
 
 func (o DedicatedResource) String() string {

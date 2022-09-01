@@ -10,16 +10,16 @@ import (
 type DebugApiV2Response struct {
 
 	// 调试请求报文内容
-	Request *string `json:"request,omitempty"`
+	Request *string `json:"request,omitempty" xml:"request"`
 
 	// 调试响应报文内容，响应消息体最大支持2097152字节，超过部分会被截断 > 响应消息体超过限制长度时，超过部分会被截断，并追加\"[TRUNCATED]\"信息。
-	Response *string `json:"response,omitempty"`
+	Response *string `json:"response,omitempty" xml:"response"`
 
 	// 调试耗时，单位：毫秒
-	Latency *int32 `json:"latency,omitempty"`
+	Latency *int32 `json:"latency,omitempty" xml:"latency"`
 
 	// 调试过程日志
-	Log            *string `json:"log,omitempty"`
+	Log            *string `json:"log,omitempty" xml:"log"`
 	HttpStatusCode int     `json:"-"`
 }
 

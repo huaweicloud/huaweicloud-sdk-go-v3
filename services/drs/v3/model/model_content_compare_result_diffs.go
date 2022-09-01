@@ -10,16 +10,16 @@ import (
 type ContentCompareResultDiffs struct {
 
 	// 源库名称。
-	SourceDbName string `json:"source_db_name"`
+	SourceDbName string `json:"source_db_name" xml:"source_db_name"`
 
 	// 源库的表名称。
-	SourceTableName string `json:"source_table_name"`
+	SourceTableName string `json:"source_table_name" xml:"source_table_name"`
 
 	// 内容对比结果差异。
-	ContentCompareDiff []ContentCompareDiff `json:"ContentCompareDiff"`
+	ContentCompareDiff []ContentCompareDiff `json:"ContentCompareDiff" xml:"ContentCompareDiff"`
 
 	// 内容对比结果差异总数。
-	ContentCompareDiffCount int32 `json:"content_compare_diff_count"`
+	ContentCompareDiffCount int32 `json:"content_compare_diff_count" xml:"content_compare_diff_count"`
 }
 
 func (o ContentCompareResultDiffs) String() string {

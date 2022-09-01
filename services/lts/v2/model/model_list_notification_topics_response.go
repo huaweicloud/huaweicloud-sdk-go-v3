@@ -10,13 +10,13 @@ import (
 type ListNotificationTopicsResponse struct {
 
 	// request_id
-	RequestId *string `json:"request_id,omitempty"`
+	RequestId *string `json:"request_id,omitempty" xml:"request_id"`
 
 	// topics数量
-	TopicCount *int32 `json:"topic_count,omitempty"`
+	TopicCount *int32 `json:"topic_count,omitempty" xml:"topic_count"`
 
 	// 主题信息
-	Topics         *[]Topics `json:"topics,omitempty"`
+	Topics         *[]Topics `json:"topics,omitempty" xml:"topics"`
 	HttpStatusCode int       `json:"-"`
 }
 

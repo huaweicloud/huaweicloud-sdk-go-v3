@@ -10,16 +10,16 @@ import (
 type ResetMessagesResponse struct {
 
 	// topic名称。
-	Topic *string `json:"topic,omitempty"`
+	Topic *string `json:"topic,omitempty" xml:"topic"`
 
 	// 分区。
-	Partition *int32 `json:"partition,omitempty"`
+	Partition *int32 `json:"partition,omitempty" xml:"partition"`
 
 	// 消息偏移量。
-	MessageOffset *int64 `json:"message_offset,omitempty"`
+	MessageOffset *int64 `json:"message_offset,omitempty" xml:"message_offset"`
 
 	// 应用key。在该消息头中添加一个consumer_key的消息头。
-	ConsumerKey    *string `json:"consumer_key,omitempty"`
+	ConsumerKey    *string `json:"consumer_key,omitempty" xml:"consumer_key"`
 	HttpStatusCode int     `json:"-"`
 }
 

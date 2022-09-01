@@ -10,12 +10,12 @@ import (
 type ListRetentionHistoriesResponse struct {
 
 	// 镜像老化日志
-	RetentionLog *[]RetentionLog `json:"retention_log,omitempty"`
+	RetentionLog *[]RetentionLog `json:"retention_log,omitempty" xml:"retention_log"`
 
 	// 总个数
-	Total *int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty" xml:"total"`
 
-	ContentRange   *string `json:"Content-Range,omitempty"`
+	ContentRange   *string `json:"Content-Range,omitempty" xml:"Content-Range"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -9,16 +9,16 @@ import (
 type ResourceConfigDto struct {
 
 	// cpu个数
-	Cpu *float32 `json:"cpu,omitempty"`
+	Cpu *float32 `json:"cpu,omitempty" xml:"cpu"`
 
 	// 内存大小
-	Memory *float32 `json:"memory,omitempty"`
+	Memory *float32 `json:"memory,omitempty" xml:"memory"`
 
 	// cpu个数
-	Gpu *float32 `json:"gpu,omitempty"`
+	Gpu *float32 `json:"gpu,omitempty" xml:"gpu"`
 
 	// cpu个数
-	Npu *float32 `json:"npu,omitempty"`
+	Npu *float32 `json:"npu,omitempty" xml:"npu"`
 }
 
 func (o ResourceConfigDto) String() string {

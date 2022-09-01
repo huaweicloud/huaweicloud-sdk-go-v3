@@ -10,10 +10,10 @@ import (
 type ScopeDomainOption struct {
 
 	// 账号ID，id与name二选一即可。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 账号名，id与name二选一即可。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 }
 
 func (o ScopeDomainOption) String() string {

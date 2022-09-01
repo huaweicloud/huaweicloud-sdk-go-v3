@@ -10,14 +10,14 @@ import (
 type NodeCreateRequest struct {
 
 	// API类型，固定值“Node”，该值不可修改。
-	Kind string `json:"kind"`
+	Kind string `json:"kind" xml:"kind"`
 
 	// API版本，固定值“v3”，该值不可修改。
-	ApiVersion string `json:"apiVersion"`
+	ApiVersion string `json:"apiVersion" xml:"apiVersion"`
 
-	Metadata *NodeMetadata `json:"metadata,omitempty"`
+	Metadata *NodeMetadata `json:"metadata,omitempty" xml:"metadata"`
 
-	Spec *NodeSpec `json:"spec"`
+	Spec *NodeSpec `json:"spec" xml:"spec"`
 }
 
 func (o NodeCreateRequest) String() string {

@@ -10,7 +10,7 @@ import (
 type RecordParam struct {
 
 	// 录制规则id。
-	RecordRuleId string `json:"record_rule_id"`
+	RecordRuleId string `json:"record_rule_id" xml:"record_rule_id"`
 }
 
 func (o RecordParam) String() string {

@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type CinderListQuotasResponse struct {
-	QuotaSet       *QuotaList `json:"quota_set,omitempty"`
+	QuotaSet       *QuotaList `json:"quota_set,omitempty" xml:"quota_set"`
 	HttpStatusCode int        `json:"-"`
 }
 

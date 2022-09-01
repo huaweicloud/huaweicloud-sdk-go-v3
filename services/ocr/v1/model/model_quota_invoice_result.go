@@ -9,19 +9,19 @@ import (
 type QuotaInvoiceResult struct {
 
 	// 发票号码。
-	Number *string `json:"number,omitempty"`
+	Number *string `json:"number,omitempty" xml:"number"`
 
 	// 发票代码。
-	Code *string `json:"code,omitempty"`
+	Code *string `json:"code,omitempty" xml:"code"`
 
 	// 地址。
-	Location *string `json:"location,omitempty"`
+	Location *string `json:"location,omitempty" xml:"location"`
 
 	// 发票金额。
-	Amount *string `json:"amount,omitempty"`
+	Amount *string `json:"amount,omitempty" xml:"amount"`
 
 	// 相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
-	Confidence *interface{} `json:"confidence,omitempty"`
+	Confidence *interface{} `json:"confidence,omitempty" xml:"confidence"`
 }
 
 func (o QuotaInvoiceResult) String() string {

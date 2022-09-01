@@ -10,7 +10,7 @@ import (
 type ListRepoDomainsResponse struct {
 
 	// 共享租户列表
-	Body           *[]ShowRepoDomainsResponse `json:"body,omitempty"`
+	Body           *[]ShowRepoDomainsResponse `json:"body,omitempty" xml:"body"`
 	HttpStatusCode int                        `json:"-"`
 }
 

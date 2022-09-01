@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowDeviceStatusResponse struct {
-	Body           *[]UserStatusDto `json:"body,omitempty"`
+	Body           *[]UserStatusDto `json:"body,omitempty" xml:"body"`
 	HttpStatusCode int              `json:"-"`
 }
 

@@ -10,10 +10,10 @@ import (
 type ListLabelsAomPromGetResponse struct {
 
 	// 响应状态。
-	Status *string `json:"status,omitempty"`
+	Status *string `json:"status,omitempty" xml:"status"`
 
 	// 标签值信息。
-	Data           *[]string `json:"data,omitempty"`
+	Data           *[]string `json:"data,omitempty" xml:"data"`
 	HttpStatusCode int       `json:"-"`
 }
 

@@ -8,7 +8,7 @@ import (
 
 //
 type KeystoneCreateIdentityProviderRequestBody struct {
-	IdentityProvider *IdentityproviderOption `json:"identity_provider"`
+	IdentityProvider *IdentityproviderOption `json:"identity_provider" xml:"identity_provider"`
 }
 
 func (o KeystoneCreateIdentityProviderRequestBody) String() string {

@@ -10,12 +10,12 @@ import (
 type ListPublicipPoolResponse struct {
 
 	// 功能说明：公网池对象
-	PublicipPools *[]PublicipPoolShowResp `json:"publicip_pools,omitempty"`
+	PublicipPools *[]PublicipPoolShowResp `json:"publicip_pools,omitempty" xml:"publicip_pools"`
 
 	// 本次请求的编号
-	RequestId *string `json:"request_id,omitempty"`
+	RequestId *string `json:"request_id,omitempty" xml:"request_id"`
 
-	PageInfo       *PageInfoOption `json:"page_info,omitempty"`
+	PageInfo       *PageInfoOption `json:"page_info,omitempty" xml:"page_info"`
 	HttpStatusCode int             `json:"-"`
 }
 

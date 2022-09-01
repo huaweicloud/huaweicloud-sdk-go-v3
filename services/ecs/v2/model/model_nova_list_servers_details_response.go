@@ -10,10 +10,10 @@ import (
 type NovaListServersDetailsResponse struct {
 
 	// 查询云服务器信息列表。
-	Servers *[]NovaServer `json:"servers,omitempty"`
+	Servers *[]NovaServer `json:"servers,omitempty" xml:"servers"`
 
 	// 分页查询时，查询下一页数据链接。
-	ServersLinks   *[]PageLink `json:"servers_links,omitempty"`
+	ServersLinks   *[]PageLink `json:"servers_links,omitempty" xml:"servers_links"`
 	HttpStatusCode int         `json:"-"`
 }
 

@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type BatchDeleteWorkflowsRequest struct {
-	Body *WorkflowDeleteBody `json:"body,omitempty"`
+	Body *WorkflowDeleteBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchDeleteWorkflowsRequest) String() string {

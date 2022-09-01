@@ -10,21 +10,21 @@ import (
 type LoadBalancerStatusPool struct {
 
 	// 后端服务器组的配置状态。取值： - ACTIVE：使用中。
-	ProvisioningStatus *string `json:"provisioning_status,omitempty"`
+	ProvisioningStatus *string `json:"provisioning_status,omitempty" xml:"provisioning_status"`
 
 	// 后端服务器组名。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
-	Healthmonitor *LoadBalancerStatusHealthMonitor `json:"healthmonitor,omitempty"`
+	Healthmonitor *LoadBalancerStatusHealthMonitor `json:"healthmonitor,omitempty" xml:"healthmonitor"`
 
 	// 后端服务器状态信息。
-	Members *[]LoadBalancerStatusMember `json:"members,omitempty"`
+	Members *[]LoadBalancerStatusMember `json:"members,omitempty" xml:"members"`
 
 	// 后端服务器组ID。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 后端服务器组的操作状态。取值：  - ONLINE：创建时默认状态，表后端服务器组正常。  - DEGRADED：该后端服务器组下存在member为的operating_status=OFFLINE。  - DISABLED：负载均衡器或后端服务器组的admin_state_up=false。   说明：  DEGRADED和DISABLED仅在当前接口返回，查询后端服务器组详情等其他接口返回的operating_status字段不存在这两个状态值。
-	OperatingStatus *string `json:"operating_status,omitempty"`
+	OperatingStatus *string `json:"operating_status,omitempty" xml:"operating_status"`
 }
 
 func (o LoadBalancerStatusPool) String() string {

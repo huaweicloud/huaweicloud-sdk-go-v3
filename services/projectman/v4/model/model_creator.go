@@ -9,7 +9,7 @@ import (
 type Creator struct {
 
 	// 指定工作项的创建者用户id
-	UserId string `json:"user_id"`
+	UserId string `json:"user_id" xml:"user_id"`
 }
 
 func (o Creator) String() string {

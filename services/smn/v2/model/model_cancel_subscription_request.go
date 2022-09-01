@@ -10,7 +10,7 @@ import (
 type CancelSubscriptionRequest struct {
 
 	// 订阅者的唯一的资源标识，可通过[查询订阅者列表](https://support.huaweicloud.com/api-smn/ListSubscriptions.html)获取该标识。
-	SubscriptionUrn string `json:"subscription_urn"`
+	SubscriptionUrn string `json:"subscription_urn" xml:"subscription_urn"`
 }
 
 func (o CancelSubscriptionRequest) String() string {

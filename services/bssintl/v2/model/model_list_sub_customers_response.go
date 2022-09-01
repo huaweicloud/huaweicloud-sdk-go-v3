@@ -10,10 +10,10 @@ import (
 type ListSubCustomersResponse struct {
 
 	// 客户信息列表。 具体请参见表1。
-	CustomerInfos *[]CustomerInformation `json:"customer_infos,omitempty"`
+	CustomerInfos *[]CustomerInformation `json:"customer_infos,omitempty" xml:"customer_infos"`
 
 	// 总记录数。
-	Count          *int32 `json:"count,omitempty"`
+	Count          *int32 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

@@ -9,31 +9,31 @@ import (
 type CmdbTagEntity struct {
 
 	// 环境标签名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 应用id
-	BusinessId *int64 `json:"business_id,omitempty"`
+	BusinessId *int64 `json:"business_id,omitempty" xml:"business_id"`
 
 	// UUID
-	Uuid *string `json:"uuid,omitempty"`
+	Uuid *string `json:"uuid,omitempty" xml:"uuid"`
 
 	// 描述信息
-	Descp *string `json:"descp,omitempty"`
+	Descp *string `json:"descp,omitempty" xml:"descp"`
 
 	// 创建者id
-	CreatorId *int64 `json:"creator_id,omitempty"`
+	CreatorId *int64 `json:"creator_id,omitempty" xml:"creator_id"`
 
 	// 环境id列表
-	EnvIdList *[]int64 `json:"env_id_list,omitempty"`
+	EnvIdList *[]int64 `json:"env_id_list,omitempty" xml:"env_id_list"`
 
 	// 环境标签id
-	Id *int64 `json:"id,omitempty"`
+	Id *int64 `json:"id,omitempty" xml:"id"`
 
 	// 创建时间
-	GmtCreate *string `json:"gmt_create,omitempty"`
+	GmtCreate *string `json:"gmt_create,omitempty" xml:"gmt_create"`
 
 	// 修改时间
-	GmtModify *string `json:"gmt_modify,omitempty"`
+	GmtModify *string `json:"gmt_modify,omitempty" xml:"gmt_modify"`
 }
 
 func (o CmdbTagEntity) String() string {

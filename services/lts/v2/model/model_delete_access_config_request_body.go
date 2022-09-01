@@ -10,7 +10,7 @@ import (
 type DeleteAccessConfigRequestBody struct {
 
 	// 日志接入ID列表
-	AccessConfigIdList []string `json:"access_config_id_list"`
+	AccessConfigIdList []string `json:"access_config_id_list" xml:"access_config_id_list"`
 }
 
 func (o DeleteAccessConfigRequestBody) String() string {

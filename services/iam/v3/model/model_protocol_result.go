@@ -10,12 +10,12 @@ import (
 type ProtocolResult struct {
 
 	// 协议ID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 映射ID。
-	MappingId string `json:"mapping_id"`
+	MappingId string `json:"mapping_id" xml:"mapping_id"`
 
-	Links *ProtocolLinks `json:"links"`
+	Links *ProtocolLinks `json:"links" xml:"links"`
 }
 
 func (o ProtocolResult) String() string {

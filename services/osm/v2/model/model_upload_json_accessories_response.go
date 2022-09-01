@@ -10,7 +10,7 @@ import (
 type UploadJsonAccessoriesResponse struct {
 
 	// 附件id
-	AccessoryId    *string `json:"accessory_id,omitempty"`
+	AccessoryId    *string `json:"accessory_id,omitempty" xml:"accessory_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

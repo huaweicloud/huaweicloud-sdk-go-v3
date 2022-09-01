@@ -10,10 +10,10 @@ import (
 type ListIssuedPartnerCouponsResponse struct {
 
 	// 总数。
-	TotalCount *int32 `json:"total_count,omitempty"`
+	TotalCount *int32 `json:"total_count,omitempty" xml:"total_count"`
 
 	// 发放的优惠券记录。 具体请参见表2。
-	UserCoupons    *[]IQueryUserPartnerCouponsResultV2 `json:"user_coupons,omitempty"`
+	UserCoupons    *[]IQueryUserPartnerCouponsResultV2 `json:"user_coupons,omitempty" xml:"user_coupons"`
 	HttpStatusCode int                                 `json:"-"`
 }
 

@@ -10,13 +10,13 @@ import (
 type ListHooksRequest struct {
 
 	// 组名
-	GroupName string `json:"group_name"`
+	GroupName string `json:"group_name" xml:"group_name"`
 
 	// hook id
-	HookId *string `json:"hook_id,omitempty"`
+	HookId *string `json:"hook_id,omitempty" xml:"hook_id"`
 
 	// 仓库名
-	RepositoryName string `json:"repository_name"`
+	RepositoryName string `json:"repository_name" xml:"repository_name"`
 }
 
 func (o ListHooksRequest) String() string {

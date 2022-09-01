@@ -10,9 +10,9 @@ import (
 type CreateSinkTaskRequest struct {
 
 	// 实例转储ID。 请参考[实例生命周期][查询实例]接口返回的数据。
-	ConnectorId string `json:"connector_id"`
+	ConnectorId string `json:"connector_id" xml:"connector_id"`
 
-	Body *CreateSinkTaskReq `json:"body,omitempty"`
+	Body *CreateSinkTaskReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateSinkTaskRequest) String() string {

@@ -10,10 +10,10 @@ import (
 type GlanceListImageMembersResponse struct {
 
 	// 成员信息
-	Members *[]GlanceImageMembers `json:"members,omitempty"`
+	Members *[]GlanceImageMembers `json:"members,omitempty" xml:"members"`
 
 	// 视图信息
-	Schema         *string `json:"schema,omitempty"`
+	Schema         *string `json:"schema,omitempty" xml:"schema"`
 	HttpStatusCode int     `json:"-"`
 }
 

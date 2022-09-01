@@ -13,10 +13,10 @@ import (
 type BatchDeleteVpcTagsRequestBody struct {
 
 	// 操作标识
-	Action BatchDeleteVpcTagsRequestBodyAction `json:"action"`
+	Action BatchDeleteVpcTagsRequestBodyAction `json:"action" xml:"action"`
 
 	// 标签列表
-	Tags []ResourceTag `json:"tags"`
+	Tags []ResourceTag `json:"tags" xml:"tags"`
 }
 
 func (o BatchDeleteVpcTagsRequestBody) String() string {

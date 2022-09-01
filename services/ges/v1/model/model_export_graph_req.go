@@ -10,16 +10,16 @@ import (
 type ExportGraphReq struct {
 
 	// 图的导出OBS路径。
-	GraphExportPath string `json:"graphExportPath"`
+	GraphExportPath string `json:"graphExportPath" xml:"graphExportPath"`
 
 	// 导出边文件名。
-	EdgeSetName string `json:"edgeSetName"`
+	EdgeSetName string `json:"edgeSetName" xml:"edgeSetName"`
 
 	// 导出点文件名。
-	VertexSetName string `json:"vertexSetName"`
+	VertexSetName string `json:"vertexSetName" xml:"vertexSetName"`
 
 	// 导出元数据文件名。
-	SchemaName string `json:"schemaName"`
+	SchemaName string `json:"schemaName" xml:"schemaName"`
 }
 
 func (o ExportGraphReq) String() string {

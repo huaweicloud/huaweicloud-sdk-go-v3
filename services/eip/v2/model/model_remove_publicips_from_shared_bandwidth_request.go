@@ -10,9 +10,9 @@ import (
 type RemovePublicipsFromSharedBandwidthRequest struct {
 
 	// 带宽唯一标识
-	BandwidthId string `json:"bandwidth_id"`
+	BandwidthId string `json:"bandwidth_id" xml:"bandwidth_id"`
 
-	Body *RemovePublicipsFromSharedBandwidthRequestBody `json:"body,omitempty"`
+	Body *RemovePublicipsFromSharedBandwidthRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o RemovePublicipsFromSharedBandwidthRequest) String() string {

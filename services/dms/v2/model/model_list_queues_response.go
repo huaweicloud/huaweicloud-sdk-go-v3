@@ -10,10 +10,10 @@ import (
 type ListQueuesResponse struct {
 
 	// 该租户的所有队列总数。
-	Total *int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty" xml:"total"`
 
 	// 该租户的所有队列数组。
-	Queues         *[]ListQueuesRespQueues `json:"queues,omitempty"`
+	Queues         *[]ListQueuesRespQueues `json:"queues,omitempty" xml:"queues"`
 	HttpStatusCode int                     `json:"-"`
 }
 

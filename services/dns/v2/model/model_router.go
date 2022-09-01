@@ -9,10 +9,10 @@ import (
 type Router struct {
 
 	// Router(VPC)所属VPC的ID。
-	RouterId string `json:"router_id"`
+	RouterId string `json:"router_id" xml:"router_id"`
 
 	// Router(VPC)所在的region。
-	RouterRegion *string `json:"router_region,omitempty"`
+	RouterRegion *string `json:"router_region,omitempty" xml:"router_region"`
 }
 
 func (o Router) String() string {

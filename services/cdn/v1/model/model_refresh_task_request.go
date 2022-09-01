@@ -7,7 +7,7 @@ import (
 )
 
 type RefreshTaskRequest struct {
-	RefreshTask *RefreshTaskRequestBody `json:"refresh_task"`
+	RefreshTask *RefreshTaskRequestBody `json:"refresh_task" xml:"refresh_task"`
 }
 
 func (o RefreshTaskRequest) String() string {

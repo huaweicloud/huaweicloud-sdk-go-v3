@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type DetectLiveFaceByUrlRequest struct {
-	Body *LiveDetectFaceUrlReq `json:"body,omitempty"`
+	Body *LiveDetectFaceUrlReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o DetectLiveFaceByUrlRequest) String() string {

@@ -10,18 +10,18 @@ import (
 type TestPlanJournalList struct {
 
 	// DevCloud项目id，项目唯一标识，固定长度32位字符
-	ProjectId *string `json:"project_id,omitempty"`
+	ProjectId *string `json:"project_id,omitempty" xml:"project_id"`
 
 	// 测试计划id
-	PlanId *string `json:"plan_id,omitempty"`
+	PlanId *string `json:"plan_id,omitempty" xml:"plan_id"`
 
 	// 变更时间
-	OperateTime *string `json:"operate_time,omitempty"`
+	OperateTime *string `json:"operate_time,omitempty" xml:"operate_time"`
 
-	Operator *NameAndId `json:"operator,omitempty"`
+	Operator *NameAndId `json:"operator,omitempty" xml:"operator"`
 
 	// 历史记录详情
-	Detail *[]TestPlanJournalDetail `json:"detail,omitempty"`
+	Detail *[]TestPlanJournalDetail `json:"detail,omitempty" xml:"detail"`
 }
 
 func (o TestPlanJournalList) String() string {

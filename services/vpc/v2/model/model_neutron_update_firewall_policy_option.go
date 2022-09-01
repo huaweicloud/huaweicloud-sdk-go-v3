@@ -10,16 +10,16 @@ import (
 type NeutronUpdateFirewallPolicyOption struct {
 
 	// 功能说明：网络ACL防火墙策略名称 取值范围：最长255个字符
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 功能说明：网络ACL防火墙策略描述 取值范围：最长255个字符
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 功能说明：网络ACL策略关联的规则列表
-	FirewallRules *[]string `json:"firewall_rules,omitempty"`
+	FirewallRules *[]string `json:"firewall_rules,omitempty" xml:"firewall_rules"`
 
 	// 审计标记。
-	Audited *bool `json:"audited,omitempty"`
+	Audited *bool `json:"audited,omitempty" xml:"audited"`
 }
 
 func (o NeutronUpdateFirewallPolicyOption) String() string {

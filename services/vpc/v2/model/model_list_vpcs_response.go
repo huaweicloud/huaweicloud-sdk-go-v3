@@ -10,7 +10,7 @@ import (
 type ListVpcsResponse struct {
 
 	// vpc对象列表
-	Vpcs           *[]Vpc `json:"vpcs,omitempty"`
+	Vpcs           *[]Vpc `json:"vpcs,omitempty" xml:"vpcs"`
 	HttpStatusCode int    `json:"-"`
 }
 

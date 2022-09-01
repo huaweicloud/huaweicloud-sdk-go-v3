@@ -10,7 +10,7 @@ import (
 type StopPipelineJobResponse struct {
 
 	// 管道ID
-	PipelineId     *string `json:"pipeline_id,omitempty"`
+	PipelineId     *string `json:"pipeline_id,omitempty" xml:"pipeline_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

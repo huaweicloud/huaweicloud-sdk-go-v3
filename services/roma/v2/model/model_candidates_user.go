@@ -9,10 +9,10 @@ import (
 type CandidatesUser struct {
 
 	// 用户名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 用户ID
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 }
 
 func (o CandidatesUser) String() string {

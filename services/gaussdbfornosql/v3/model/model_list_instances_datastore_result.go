@@ -10,13 +10,13 @@ import (
 type ListInstancesDatastoreResult struct {
 
 	// 数据库引擎。
-	Type string `json:"type"`
+	Type string `json:"type" xml:"type"`
 
 	// 数据库版本号。
-	Version string `json:"version"`
+	Version string `json:"version" xml:"version"`
 
 	// 是否有补丁版本的数据库支持升级，返回true时可以通过升级补丁接口进行数据库升级，否则不允许升级补丁。
-	PatchAvailable bool `json:"patch_available"`
+	PatchAvailable bool `json:"patch_available" xml:"patch_available"`
 }
 
 func (o ListInstancesDatastoreResult) String() string {

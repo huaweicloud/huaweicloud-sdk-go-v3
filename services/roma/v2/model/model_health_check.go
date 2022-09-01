@@ -13,19 +13,19 @@ import (
 type HealthCheck struct {
 
 	// 当前LVS只支持TCP_CHECK
-	Protocol *HealthCheckProtocol `json:"protocol,omitempty"`
+	Protocol *HealthCheckProtocol `json:"protocol,omitempty" xml:"protocol"`
 
 	// 健康检查端口
-	Port *int32 `json:"port,omitempty"`
+	Port *int32 `json:"port,omitempty" xml:"port"`
 
 	// 判定后端不健康的阈值，连续探测失败次数
-	Unhealthy *int32 `json:"unhealthy,omitempty"`
+	Unhealthy *int32 `json:"unhealthy,omitempty" xml:"unhealthy"`
 
 	// 探测后端的超时时间，单位秒
-	Timeout *int32 `json:"timeout,omitempty"`
+	Timeout *int32 `json:"timeout,omitempty" xml:"timeout"`
 
 	// 探测后端的间隔时间，单位秒
-	Interval *int32 `json:"interval,omitempty"`
+	Interval *int32 `json:"interval,omitempty" xml:"interval"`
 }
 
 func (o HealthCheck) String() string {

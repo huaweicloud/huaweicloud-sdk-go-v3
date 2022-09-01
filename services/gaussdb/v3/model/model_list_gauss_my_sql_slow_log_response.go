@@ -10,13 +10,13 @@ import (
 type ListGaussMySqlSlowLogResponse struct {
 
 	// 错误日志具体信息。
-	SlowLogList *[]MysqlSlowLogList `json:"slow_log_list,omitempty"`
+	SlowLogList *[]MysqlSlowLogList `json:"slow_log_list,omitempty" xml:"slow_log_list"`
 
 	// 慢日志阈值。
-	LongQueryTime *string `json:"long_query_time,omitempty"`
+	LongQueryTime *string `json:"long_query_time,omitempty" xml:"long_query_time"`
 
 	// 总记录数。
-	TotalRecord    *int32 `json:"total_record,omitempty"`
+	TotalRecord    *int32 `json:"total_record,omitempty" xml:"total_record"`
 	HttpStatusCode int    `json:"-"`
 }
 

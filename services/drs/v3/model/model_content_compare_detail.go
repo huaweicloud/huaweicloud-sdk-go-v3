@@ -13,34 +13,34 @@ import (
 type ContentCompareDetail struct {
 
 	// 源库名称。
-	SourceDbName string `json:"source_db_name"`
+	SourceDbName string `json:"source_db_name" xml:"source_db_name"`
 
 	// 目标库名称。
-	TargetDbName string `json:"target_db_name"`
+	TargetDbName string `json:"target_db_name" xml:"target_db_name"`
 
 	// 源库的表名称。
-	SourceTableName string `json:"source_table_name"`
+	SourceTableName string `json:"source_table_name" xml:"source_table_name"`
 
 	// 目标库的表名称。
-	TargetTableName string `json:"target_table_name"`
+	TargetTableName string `json:"target_table_name" xml:"target_table_name"`
 
 	// 源库的表的行数。
-	SourceRowNum int32 `json:"source_row_num"`
+	SourceRowNum int32 `json:"source_row_num" xml:"source_row_num"`
 
 	// 目标库的表的行数。
-	TargetRowNum int32 `json:"target_row_num"`
+	TargetRowNum int32 `json:"target_row_num" xml:"target_row_num"`
 
 	// 源库的表和目标库的表的差异值。
-	DiffRowNum int32 `json:"diff_row_num"`
+	DiffRowNum int32 `json:"diff_row_num" xml:"diff_row_num"`
 
 	// 行对比结果。
-	LineCompareResult *ContentCompareDetailLineCompareResult `json:"line_compare_result,omitempty"`
+	LineCompareResult *ContentCompareDetailLineCompareResult `json:"line_compare_result,omitempty" xml:"line_compare_result"`
 
 	// 内容对比结果。
-	ContentCompareResult ContentCompareDetailContentCompareResult `json:"content_compare_result"`
+	ContentCompareResult ContentCompareDetailContentCompareResult `json:"content_compare_result" xml:"content_compare_result"`
 
 	// 附加信息。
-	Message *string `json:"message,omitempty"`
+	Message *string `json:"message,omitempty" xml:"message"`
 }
 
 func (o ContentCompareDetail) String() string {

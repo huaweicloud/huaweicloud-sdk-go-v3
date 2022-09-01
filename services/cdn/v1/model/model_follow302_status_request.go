@@ -13,7 +13,7 @@ import (
 type Follow302StatusRequest struct {
 
 	// follow302状态（\"off\"/\"on\"）
-	Follow302Status Follow302StatusRequestFollow302Status `json:"follow302_status"`
+	Follow302Status Follow302StatusRequestFollow302Status `json:"follow302_status" xml:"follow302_status"`
 }
 
 func (o Follow302StatusRequest) String() string {

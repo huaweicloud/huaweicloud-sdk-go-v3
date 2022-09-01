@@ -10,9 +10,9 @@ import (
 type ListRtcRealtimeScaleResponse struct {
 
 	// 时间戳及相应时间的指标数值列表
-	Scale *[]TimeValueData `json:"scale,omitempty"`
+	Scale *[]TimeValueData `json:"scale,omitempty" xml:"scale"`
 
-	XRequestId     *string `json:"X-request-id,omitempty"`
+	XRequestId     *string `json:"X-request-id,omitempty" xml:"X-request-id"`
 	HttpStatusCode int     `json:"-"`
 }
 

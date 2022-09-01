@@ -10,10 +10,10 @@ import (
 type RecallFiled struct {
 
 	// 字段名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 使用字段值的个数。
-	Value *int32 `json:"value,omitempty"`
+	Value *int32 `json:"value,omitempty" xml:"value"`
 }
 
 func (o RecallFiled) String() string {

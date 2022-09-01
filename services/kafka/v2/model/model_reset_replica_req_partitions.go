@@ -9,10 +9,10 @@ import (
 type ResetReplicaReqPartitions struct {
 
 	// 分区ID。
-	Partition *int32 `json:"partition,omitempty"`
+	Partition *int32 `json:"partition,omitempty" xml:"partition"`
 
 	// 副本期望所在的broker ID。其中Array首位为leader副本，所有分区需要有同样数量的副本，副本数不能大于总broker的数量。
-	Replicas *[]int32 `json:"replicas,omitempty"`
+	Replicas *[]int32 `json:"replicas,omitempty" xml:"replicas"`
 }
 
 func (o ResetReplicaReqPartitions) String() string {

@@ -10,10 +10,10 @@ import (
 type ServerSecurityGroup struct {
 
 	// 安全组名称或者UUID。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 安全组ID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 }
 
 func (o ServerSecurityGroup) String() string {

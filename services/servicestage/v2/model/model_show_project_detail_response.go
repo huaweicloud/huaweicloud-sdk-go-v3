@@ -10,16 +10,16 @@ import (
 type ShowProjectDetailResponse struct {
 
 	// 命名空间ID。
-	NamespaceId *string `json:"namespace_id,omitempty"`
+	NamespaceId *string `json:"namespace_id,omitempty" xml:"namespace_id"`
 
 	// 命名空间。
-	Namespace *string `json:"namespace,omitempty"`
+	Namespace *string `json:"namespace,omitempty" xml:"namespace"`
 
 	// 仓库项目ID。
-	ProjectId *string `json:"project_id,omitempty"`
+	ProjectId *string `json:"project_id,omitempty" xml:"project_id"`
 
 	// 仓库项目。
-	Project        *string `json:"project,omitempty"`
+	Project        *string `json:"project,omitempty" xml:"project"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -10,9 +10,9 @@ import (
 type UpdateSpeedRequest struct {
 
 	// 主机迁移任务的id
-	TaskId string `json:"task_id"`
+	TaskId string `json:"task_id" xml:"task_id"`
 
-	Body *SpeedLimit `json:"body,omitempty"`
+	Body *SpeedLimit `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateSpeedRequest) String() string {

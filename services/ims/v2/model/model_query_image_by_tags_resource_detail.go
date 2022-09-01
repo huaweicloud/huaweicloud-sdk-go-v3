@@ -10,7 +10,7 @@ import (
 type QueryImageByTagsResourceDetail struct {
 
 	// 镜像状态
-	Status string `json:"status"`
+	Status string `json:"status" xml:"status"`
 }
 
 func (o QueryImageByTagsResourceDetail) String() string {

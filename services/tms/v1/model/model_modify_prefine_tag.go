@@ -8,9 +8,9 @@ import (
 
 // 修改预定义标签
 type ModifyPrefineTag struct {
-	NewTag *PredefineTagRequest `json:"new_tag"`
+	NewTag *PredefineTagRequest `json:"new_tag" xml:"new_tag"`
 
-	OldTag *PredefineTagRequest `json:"old_tag"`
+	OldTag *PredefineTagRequest `json:"old_tag" xml:"old_tag"`
 }
 
 func (o ModifyPrefineTag) String() string {

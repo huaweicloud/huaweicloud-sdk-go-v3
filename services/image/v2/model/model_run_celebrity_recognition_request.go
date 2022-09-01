@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RunCelebrityRecognitionRequest struct {
-	Body *CelebrityRecognitionReq `json:"body,omitempty"`
+	Body *CelebrityRecognitionReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o RunCelebrityRecognitionRequest) String() string {

@@ -10,7 +10,7 @@ import (
 type ListClusterTagsResponse struct {
 
 	// 标签列表
-	Tags           *[]TagPlain `json:"tags,omitempty"`
+	Tags           *[]TagPlain `json:"tags,omitempty" xml:"tags"`
 	HttpStatusCode int         `json:"-"`
 }
 

@@ -10,9 +10,9 @@ import (
 type ShowResourceRelationsResponse struct {
 
 	// 资源关系列表
-	Relations *[]ResourceRelation `json:"relations,omitempty"`
+	Relations *[]ResourceRelation `json:"relations,omitempty" xml:"relations"`
 
-	PageInfo       *PageInfo `json:"page_info,omitempty"`
+	PageInfo       *PageInfo `json:"page_info,omitempty" xml:"page_info"`
 	HttpStatusCode int       `json:"-"`
 }
 

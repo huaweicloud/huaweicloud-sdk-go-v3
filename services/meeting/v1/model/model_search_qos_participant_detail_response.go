@@ -8,9 +8,9 @@ import (
 
 // Response Object
 type SearchQosParticipantDetailResponse struct {
-	User *QosParticipantInfo `json:"user,omitempty"`
+	User *QosParticipantInfo `json:"user,omitempty" xml:"user"`
 
-	Qos            *QosInfo `json:"qos,omitempty"`
+	Qos            *QosInfo `json:"qos,omitempty" xml:"qos"`
 	HttpStatusCode int      `json:"-"`
 }
 

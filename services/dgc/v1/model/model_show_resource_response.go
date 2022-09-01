@@ -11,19 +11,19 @@ import (
 
 // Response Object
 type ShowResourceResponse struct {
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
-	Type *ShowResourceResponseType `json:"type,omitempty"`
+	Type *ShowResourceResponseType `json:"type,omitempty" xml:"type"`
 
 	// 资源文件所在OBS路径
-	Location *string `json:"location,omitempty"`
+	Location *string `json:"location,omitempty" xml:"location"`
 
-	DependFiles *[]string `json:"dependFiles,omitempty"`
+	DependFiles *[]string `json:"dependFiles,omitempty" xml:"dependFiles"`
 
-	Desc *string `json:"desc,omitempty"`
+	Desc *string `json:"desc,omitempty" xml:"desc"`
 
 	// 资源所在目录
-	Directory      *string `json:"directory,omitempty"`
+	Directory      *string `json:"directory,omitempty" xml:"directory"`
 	HttpStatusCode int     `json:"-"`
 }
 

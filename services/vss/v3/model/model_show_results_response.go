@@ -10,12 +10,12 @@ import (
 type ShowResultsResponse struct {
 
 	// 漏洞总数
-	Total *int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty" xml:"total"`
 
 	// 漏洞信息列表
-	Data *[]VulnItem `json:"data,omitempty"`
+	Data *[]VulnItem `json:"data,omitempty" xml:"data"`
 
-	Statistics     *VulnsLevel `json:"statistics,omitempty"`
+	Statistics     *VulnsLevel `json:"statistics,omitempty" xml:"statistics"`
 	HttpStatusCode int         `json:"-"`
 }
 

@@ -12,31 +12,31 @@ import (
 type AuthorizerCreate struct {
 
 	// 自定义认证的名称。 长度为3 ~ 64位的字符串，字符串由中文、英文字母、数字、“_”组成，且只能以英文或中文开头。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 自定义认证类型  - FRONTEND：前端 - BACKEND：后端  不支持修改
-	Type AuthorizerCreateType `json:"type"`
+	Type AuthorizerCreateType `json:"type" xml:"type"`
 
 	// 只能为：FUNC
-	AuthorizerType AuthorizerCreateAuthorizerType `json:"authorizer_type"`
+	AuthorizerType AuthorizerCreateAuthorizerType `json:"authorizer_type" xml:"authorizer_type"`
 
 	// 函数地址。
-	AuthorizerUri string `json:"authorizer_uri"`
+	AuthorizerUri string `json:"authorizer_uri" xml:"authorizer_uri"`
 
 	// 认证来源
-	Identities *[]Identity `json:"identities,omitempty"`
+	Identities *[]Identity `json:"identities,omitempty" xml:"identities"`
 
 	// 缓存时间
-	Ttl *int32 `json:"ttl,omitempty"`
+	Ttl *int32 `json:"ttl,omitempty" xml:"ttl"`
 
 	// 用户数据
-	UserData *string `json:"user_data,omitempty"`
+	UserData *string `json:"user_data,omitempty" xml:"user_data"`
 
 	// 自定义后端服务ID。  暂不支持
-	LdApiId *string `json:"ld_api_id,omitempty"`
+	LdApiId *string `json:"ld_api_id,omitempty" xml:"ld_api_id"`
 
 	// 是否发送body
-	NeedBody *bool `json:"need_body,omitempty"`
+	NeedBody *bool `json:"need_body,omitempty" xml:"need_body"`
 }
 
 func (o AuthorizerCreate) String() string {

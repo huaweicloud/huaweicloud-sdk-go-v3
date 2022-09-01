@@ -11,19 +11,19 @@ import (
 type InstanceConfig struct {
 
 	// 配额编号
-	ConfigId *string `json:"config_id,omitempty"`
+	ConfigId *string `json:"config_id,omitempty" xml:"config_id"`
 
 	// 配额名称
-	ConfigName *InstanceConfigConfigName `json:"config_name,omitempty"`
+	ConfigName *InstanceConfigConfigName `json:"config_name,omitempty" xml:"config_name"`
 
 	// 配额值  当前实例所在租户该配额对应的数量
-	ConfigValue *string `json:"config_value,omitempty"`
+	ConfigValue *string `json:"config_value,omitempty" xml:"config_value"`
 
 	// 配额创建时间
-	ConfigTime *sdktime.SdkTime `json:"config_time,omitempty"`
+	ConfigTime *sdktime.SdkTime `json:"config_time,omitempty" xml:"config_time"`
 
 	// 配额描述 - INSTANCE_NUM_LIMIT：租户可以创建的实例个数限制
-	Remark *string `json:"remark,omitempty"`
+	Remark *string `json:"remark,omitempty" xml:"remark"`
 }
 
 func (o InstanceConfig) String() string {

@@ -8,7 +8,7 @@ import (
 
 //
 type CreateVpcRouteRequestBody struct {
-	Route *CreateVpcRouteOption `json:"route"`
+	Route *CreateVpcRouteOption `json:"route" xml:"route"`
 }
 
 func (o CreateVpcRouteRequestBody) String() string {

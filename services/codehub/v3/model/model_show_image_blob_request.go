@@ -10,13 +10,13 @@ import (
 type ShowImageBlobRequest struct {
 
 	// 仓库id
-	RepositoryUuid string `json:"repository_uuid"`
+	RepositoryUuid string `json:"repository_uuid" xml:"repository_uuid"`
 
 	// 分支名称
-	BranchName string `json:"branch_name"`
+	BranchName string `json:"branch_name" xml:"branch_name"`
 
 	// 图片路径
-	Path string `json:"path"`
+	Path string `json:"path" xml:"path"`
 }
 
 func (o ShowImageBlobRequest) String() string {

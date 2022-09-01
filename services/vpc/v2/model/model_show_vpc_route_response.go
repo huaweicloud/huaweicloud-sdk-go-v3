@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowVpcRouteResponse struct {
-	Route          *VpcRoute `json:"route,omitempty"`
+	Route          *VpcRoute `json:"route,omitempty" xml:"route"`
 	HttpStatusCode int       `json:"-"`
 }
 

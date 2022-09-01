@@ -8,12 +8,12 @@ import (
 
 // Response Object
 type ListFilesResponse struct {
-	Error *Error `json:"error,omitempty"`
+	Error *Error `json:"error,omitempty" xml:"error"`
 
-	Result *FilesResponseInfo `json:"result,omitempty"`
+	Result *FilesResponseInfo `json:"result,omitempty" xml:"result"`
 
 	// 响应状态
-	Status         *string `json:"status,omitempty"`
+	Status         *string `json:"status,omitempty" xml:"status"`
 	HttpStatusCode int     `json:"-"`
 }
 

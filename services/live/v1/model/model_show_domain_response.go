@@ -10,10 +10,10 @@ import (
 type ShowDomainResponse struct {
 
 	// 查询结果的总数量
-	Total float32 `json:"total,omitempty"`
+	Total float32 `json:"total,omitempty" xml:"total"`
 
 	// 直播域名列表
-	DomainInfo     *[]DecoupledLiveDomainInfo `json:"domain_info,omitempty"`
+	DomainInfo     *[]DecoupledLiveDomainInfo `json:"domain_info,omitempty" xml:"domain_info"`
 	HttpStatusCode int                        `json:"-"`
 }
 

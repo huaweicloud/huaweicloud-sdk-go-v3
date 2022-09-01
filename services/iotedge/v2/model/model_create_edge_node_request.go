@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateEdgeNodeRequest struct {
-	Body *EdgeNodeCreation `json:"body,omitempty"`
+	Body *EdgeNodeCreation `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateEdgeNodeRequest) String() string {

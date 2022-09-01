@@ -10,22 +10,22 @@ import (
 type TemplateTaskRequestBody struct {
 
 	// devcloud创建的项目id
-	ProjectId string `json:"project_id"`
+	ProjectId string `json:"project_id" xml:"project_id"`
 
 	// devcloud创建的项目名称
-	ProjectName string `json:"project_name"`
+	ProjectName string `json:"project_name" xml:"project_name"`
 
 	// 部署模板id
-	TemplateId string `json:"template_id"`
+	TemplateId string `json:"template_id" xml:"template_id"`
 
 	// 部署任务名称
-	TaskName string `json:"task_name"`
+	TaskName string `json:"task_name" xml:"task_name"`
 
 	// 自定义slave资源池id
-	SlaveClusterId *string `json:"slave_cluster_id,omitempty"`
+	SlaveClusterId *string `json:"slave_cluster_id,omitempty" xml:"slave_cluster_id"`
 
 	// 部署参数类
-	Configs *[]ConfigInfoDo `json:"configs,omitempty"`
+	Configs *[]ConfigInfoDo `json:"configs,omitempty" xml:"configs"`
 }
 
 func (o TemplateTaskRequestBody) String() string {

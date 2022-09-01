@@ -10,10 +10,10 @@ import (
 type SwitchSslResponse struct {
 
 	// 任务ID。
-	JobId *string `json:"job_id,omitempty"`
+	JobId *string `json:"job_id,omitempty" xml:"job_id"`
 
 	// SSL开关状态。
-	SslOption      *string `json:"ssl_option,omitempty"`
+	SslOption      *string `json:"ssl_option,omitempty" xml:"ssl_option"`
 	HttpStatusCode int     `json:"-"`
 }
 

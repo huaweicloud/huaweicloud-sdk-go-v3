@@ -9,7 +9,7 @@ import (
 type SetRecordSetsStatusReq struct {
 
 	// 解析记录状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析
-	Status string `json:"status"`
+	Status string `json:"status" xml:"status"`
 }
 
 func (o SetRecordSetsStatusReq) String() string {

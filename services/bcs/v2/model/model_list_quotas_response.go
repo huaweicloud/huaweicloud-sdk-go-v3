@@ -10,7 +10,7 @@ import (
 type ListQuotasResponse struct {
 
 	// 配额信息
-	Resources      *[]Resource `json:"resources,omitempty"`
+	Resources      *[]Resource `json:"resources,omitempty" xml:"resources"`
 	HttpStatusCode int         `json:"-"`
 }
 

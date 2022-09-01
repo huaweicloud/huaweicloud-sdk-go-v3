@@ -10,10 +10,10 @@ import (
 type ListEnvironmentsResponse struct {
 
 	// 环境总数。
-	Count *int32 `json:"count,omitempty"`
+	Count *int32 `json:"count,omitempty" xml:"count"`
 
 	// 环境列表。
-	Environments   *[]Environment `json:"environments,omitempty"`
+	Environments   *[]Environment `json:"environments,omitempty" xml:"environments"`
 	HttpStatusCode int            `json:"-"`
 }
 

@@ -10,9 +10,9 @@ import (
 type UpdateDeploymentGroupRequest struct {
 
 	// 主机组ID
-	GroupId string `json:"group_id"`
+	GroupId string `json:"group_id" xml:"group_id"`
 
-	Body *DeploymentGroupUpdateRequest `json:"body,omitempty"`
+	Body *DeploymentGroupUpdateRequest `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateDeploymentGroupRequest) String() string {

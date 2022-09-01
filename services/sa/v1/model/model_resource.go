@@ -9,34 +9,34 @@ import (
 type Resource struct {
 
 	// 资源ID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 资源名称；最大长度255个字符。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 资源类型。
-	Type string `json:"type"`
+	Type string `json:"type" xml:"type"`
 
 	// 云服务名称。
-	Provider string `json:"provider"`
+	Provider string `json:"provider" xml:"provider"`
 
 	// 区域。
-	RegionId *string `json:"region_id,omitempty"`
+	RegionId *string `json:"region_id,omitempty" xml:"region_id"`
 
 	// 资源所属租户账号ID。
-	DomainId string `json:"domain_id"`
+	DomainId string `json:"domain_id" xml:"domain_id"`
 
 	// 资源所属项目ID。
-	ProjectId *string `json:"project_id,omitempty"`
+	ProjectId *string `json:"project_id,omitempty" xml:"project_id"`
 
 	// 企业项目ID。
-	EpId *string `json:"ep_id,omitempty"`
+	EpId *string `json:"ep_id,omitempty" xml:"ep_id"`
 
 	// 企业项目名称。
-	EpName *string `json:"ep_name,omitempty"`
+	EpName *string `json:"ep_name,omitempty" xml:"ep_name"`
 
 	// 资源标签 1、最多50个key/values对。 2、values：最大255字符。 3、取值范围：字母数字、空格、“+”、“-”、“=”、“.”、“_”、“:”、“/”、“@”。
-	Tags *interface{} `json:"tags,omitempty"`
+	Tags *interface{} `json:"tags,omitempty" xml:"tags"`
 }
 
 func (o Resource) String() string {

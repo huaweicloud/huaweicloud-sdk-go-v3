@@ -10,13 +10,13 @@ import (
 type RegisterDbUserRequestBody struct {
 
 	// 数据库用户名称
-	DbUsername string `json:"db_username"`
+	DbUsername string `json:"db_username" xml:"db_username"`
 
 	// 数据库用户密码
-	DbUserPassword string `json:"db_user_password"`
+	DbUserPassword string `json:"db_user_password" xml:"db_user_password"`
 
 	// 数据库类型，取值为MySQL
-	DatastoreType string `json:"datastore_type"`
+	DatastoreType string `json:"datastore_type" xml:"datastore_type"`
 }
 
 func (o RegisterDbUserRequestBody) String() string {

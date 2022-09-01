@@ -10,22 +10,22 @@ import (
 type RunlogItem struct {
 
 	// 日志的唯一标识
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 运行日志文件名
-	FileName *string `json:"file_name,omitempty"`
+	FileName *string `json:"file_name,omitempty" xml:"file_name"`
 
 	// 分片名称
-	GroupName *string `json:"group_name,omitempty"`
+	GroupName *string `json:"group_name,omitempty" xml:"group_name"`
 
 	// 采集运行日志所在副本的IP
-	ReplicationIp *string `json:"replication_ip,omitempty"`
+	ReplicationIp *string `json:"replication_ip,omitempty" xml:"replication_ip"`
 
 	// 获取运行日志状态
-	Status *string `json:"status,omitempty"`
+	Status *string `json:"status,omitempty" xml:"status"`
 
 	// 运行日志采集的日期，格式为\"yyyy-MM-dd\"
-	Time *string `json:"time,omitempty"`
+	Time *string `json:"time,omitempty" xml:"time"`
 }
 
 func (o RunlogItem) String() string {

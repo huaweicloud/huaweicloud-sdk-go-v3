@@ -10,7 +10,7 @@ import (
 type ShowEvaluationProjectStatusRequest struct {
 
 	// 评估项目ID。
-	EvaluationProjectId string `json:"evaluation_project_id"`
+	EvaluationProjectId string `json:"evaluation_project_id" xml:"evaluation_project_id"`
 }
 
 func (o ShowEvaluationProjectStatusRequest) String() string {

@@ -10,9 +10,9 @@ import (
 type RestoreClusterRequest struct {
 
 	// 待恢复的快照ID。
-	SnapshotId string `json:"snapshot_id"`
+	SnapshotId string `json:"snapshot_id" xml:"snapshot_id"`
 
-	Body *RestoreClusterRequestBody `json:"body,omitempty"`
+	Body *RestoreClusterRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o RestoreClusterRequest) String() string {

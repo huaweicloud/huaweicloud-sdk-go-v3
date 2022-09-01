@@ -9,10 +9,10 @@ import (
 type ShowGroupsRespGroupAssignment struct {
 
 	// topic名称。
-	Topic *string `json:"topic,omitempty"`
+	Topic *string `json:"topic,omitempty" xml:"topic"`
 
 	// 分区列表。
-	Partitions *[]int32 `json:"partitions,omitempty"`
+	Partitions *[]int32 `json:"partitions,omitempty" xml:"partitions"`
 }
 
 func (o ShowGroupsRespGroupAssignment) String() string {

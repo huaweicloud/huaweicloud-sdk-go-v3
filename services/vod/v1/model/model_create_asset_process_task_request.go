@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateAssetProcessTaskRequest struct {
-	Body *AssetProcessReq `json:"body,omitempty"`
+	Body *AssetProcessReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateAssetProcessTaskRequest) String() string {

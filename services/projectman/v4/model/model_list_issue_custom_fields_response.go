@@ -10,7 +10,7 @@ import (
 type ListIssueCustomFieldsResponse struct {
 
 	// 自定义字段返回数据
-	Datas          *[]IssueCustomField `json:"datas,omitempty"`
+	Datas          *[]IssueCustomField `json:"datas,omitempty" xml:"datas"`
 	HttpStatusCode int                 `json:"-"`
 }
 

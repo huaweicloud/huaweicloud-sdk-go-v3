@@ -13,10 +13,10 @@ import (
 type BatchCreateBaremetalServerTagsRequestBody struct {
 
 	// 操作标识（仅支持小写）：create（创建）。
-	Action BatchCreateBaremetalServerTagsRequestBodyAction `json:"action"`
+	Action BatchCreateBaremetalServerTagsRequestBodyAction `json:"action" xml:"action"`
 
 	// 标签列表。
-	Tags []BaremetalServerTag `json:"tags"`
+	Tags []BaremetalServerTag `json:"tags" xml:"tags"`
 }
 
 func (o BatchCreateBaremetalServerTagsRequestBody) String() string {

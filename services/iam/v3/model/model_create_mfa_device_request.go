@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateMfaDeviceRequest struct {
-	Body *CreateMfaDeviceReq `json:"body,omitempty"`
+	Body *CreateMfaDeviceReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateMfaDeviceRequest) String() string {

@@ -8,10 +8,10 @@ import (
 
 // Response Object
 type ShowLoadBalancerStatusResponse struct {
-	Statuses *LoadBalancerStatusResult `json:"statuses,omitempty"`
+	Statuses *LoadBalancerStatusResult `json:"statuses,omitempty" xml:"statuses"`
 
 	// 请求ID。  注：自动生成 。
-	RequestId      *string `json:"request_id,omitempty"`
+	RequestId      *string `json:"request_id,omitempty" xml:"request_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

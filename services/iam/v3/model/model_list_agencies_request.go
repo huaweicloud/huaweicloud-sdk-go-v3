@@ -10,13 +10,13 @@ import (
 type ListAgenciesRequest struct {
 
 	// 委托方账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
-	DomainId string `json:"domain_id"`
+	DomainId string `json:"domain_id" xml:"domain_id"`
 
 	// 被委托方账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
-	TrustDomainId *string `json:"trust_domain_id,omitempty"`
+	TrustDomainId *string `json:"trust_domain_id,omitempty" xml:"trust_domain_id"`
 
 	// 委托名，获取方式请参见：[获取委托名、委托ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 }
 
 func (o ListAgenciesRequest) String() string {

@@ -10,7 +10,7 @@ import (
 type DeleteRoutetableRequest struct {
 
 	// 路由表ID
-	RoutetableId string `json:"routetable_id"`
+	RoutetableId string `json:"routetable_id" xml:"routetable_id"`
 }
 
 func (o DeleteRoutetableRequest) String() string {

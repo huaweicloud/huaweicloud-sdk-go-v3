@@ -10,10 +10,10 @@ import (
 type CreateClusterResp struct {
 
 	// 集群ID。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 集群名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 }
 
 func (o CreateClusterResp) String() string {

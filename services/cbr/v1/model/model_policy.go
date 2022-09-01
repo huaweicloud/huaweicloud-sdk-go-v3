@@ -12,23 +12,23 @@ import (
 type Policy struct {
 
 	// 策略是否启用
-	Enabled bool `json:"enabled"`
+	Enabled bool `json:"enabled" xml:"enabled"`
 
 	// 策略ID
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 策略名称
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
-	OperationDefinition *PolicyoOdCreate `json:"operation_definition"`
+	OperationDefinition *PolicyoOdCreate `json:"operation_definition" xml:"operation_definition"`
 
 	// 策略类型,例如 ‘backup’：自动备份
-	OperationType PolicyOperationType `json:"operation_type"`
+	OperationType PolicyOperationType `json:"operation_type" xml:"operation_type"`
 
-	Trigger *PolicyTriggerResp `json:"trigger"`
+	Trigger *PolicyTriggerResp `json:"trigger" xml:"trigger"`
 
 	// 关联的存储库
-	AssociatedVaults *[]PolicyAssociateVault `json:"associated_vaults,omitempty"`
+	AssociatedVaults *[]PolicyAssociateVault `json:"associated_vaults,omitempty" xml:"associated_vaults"`
 }
 
 func (o Policy) String() string {

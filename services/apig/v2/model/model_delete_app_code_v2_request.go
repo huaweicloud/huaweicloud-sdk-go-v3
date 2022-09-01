@@ -10,13 +10,13 @@ import (
 type DeleteAppCodeV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 应用编号
-	AppId string `json:"app_id"`
+	AppId string `json:"app_id" xml:"app_id"`
 
 	// APP Code编号
-	AppCodeId string `json:"app_code_id"`
+	AppCodeId string `json:"app_code_id" xml:"app_code_id"`
 }
 
 func (o DeleteAppCodeV2Request) String() string {

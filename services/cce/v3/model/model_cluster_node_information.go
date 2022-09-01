@@ -8,7 +8,7 @@ import (
 
 //
 type ClusterNodeInformation struct {
-	Metadata *ClusterNodeInformationMetadata `json:"metadata"`
+	Metadata *ClusterNodeInformationMetadata `json:"metadata" xml:"metadata"`
 }
 
 func (o ClusterNodeInformation) String() string {

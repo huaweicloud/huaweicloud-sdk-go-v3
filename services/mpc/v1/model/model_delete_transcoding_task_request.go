@@ -10,7 +10,7 @@ import (
 type DeleteTranscodingTaskRequest struct {
 
 	// 创建转码任务成功时返回的任务ID
-	TaskId int32 `json:"task_id"`
+	TaskId int32 `json:"task_id" xml:"task_id"`
 }
 
 func (o DeleteTranscodingTaskRequest) String() string {

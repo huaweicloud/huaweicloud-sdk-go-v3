@@ -10,7 +10,7 @@ import (
 type ListBranchesResponse struct {
 
 	// 项目分支列表。
-	Branches       *[]string `json:"branches,omitempty"`
+	Branches       *[]string `json:"branches,omitempty" xml:"branches"`
 	HttpStatusCode int       `json:"-"`
 }
 

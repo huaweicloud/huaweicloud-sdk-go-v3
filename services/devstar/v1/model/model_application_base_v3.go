@@ -9,28 +9,28 @@ import (
 type ApplicationBaseV3 struct {
 
 	// 应用id
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 应用名称
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 应用描述
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 区域id
-	RegionId string `json:"region_id"`
+	RegionId string `json:"region_id" xml:"region_id"`
 
 	// 区域名称
-	RegionName string `json:"region_name"`
+	RegionName string `json:"region_name" xml:"region_name"`
 
 	// 所属项目id
-	ProjectId string `json:"project_id"`
+	ProjectId string `json:"project_id" xml:"project_id"`
 
 	// 项目名称
-	ProjectName string `json:"project_name"`
+	ProjectName string `json:"project_name" xml:"project_name"`
 
 	// 应用图标
-	Icon *string `json:"icon,omitempty"`
+	Icon *string `json:"icon,omitempty" xml:"icon"`
 }
 
 func (o ApplicationBaseV3) String() string {

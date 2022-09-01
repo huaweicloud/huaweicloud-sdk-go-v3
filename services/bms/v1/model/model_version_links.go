@@ -10,10 +10,10 @@ import (
 type VersionLinks struct {
 
 	// API的url地址
-	Href *string `json:"href,omitempty"`
+	Href *string `json:"href,omitempty" xml:"href"`
 
 	// API的url地址依赖
-	Rel *string `json:"rel,omitempty"`
+	Rel *string `json:"rel,omitempty" xml:"rel"`
 }
 
 func (o VersionLinks) String() string {

@@ -10,7 +10,7 @@ import (
 type ListTranscodeDetailResponse struct {
 
 	// 转码详情任务组
-	TaskArray      *[]TaskDetailInfo `json:"task_array,omitempty"`
+	TaskArray      *[]TaskDetailInfo `json:"task_array,omitempty" xml:"task_array"`
 	HttpStatusCode int               `json:"-"`
 }
 

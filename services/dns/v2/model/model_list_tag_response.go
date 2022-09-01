@@ -8,9 +8,9 @@ import (
 
 // Response Object
 type ListTagResponse struct {
-	Resources *[]ResourceItem `json:"resources,omitempty"`
+	Resources *[]ResourceItem `json:"resources,omitempty" xml:"resources"`
 
-	TotalCount     *int32 `json:"total_count,omitempty"`
+	TotalCount     *int32 `json:"total_count,omitempty" xml:"total_count"`
 	HttpStatusCode int    `json:"-"`
 }
 

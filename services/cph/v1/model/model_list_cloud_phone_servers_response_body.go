@@ -10,10 +10,10 @@ import (
 type ListCloudPhoneServersResponseBody struct {
 
 	// 请求的唯一标识ID
-	RequestId string `json:"request_id"`
+	RequestId string `json:"request_id" xml:"request_id"`
 
 	// 云手机服务器信息
-	Servers []interface{} `json:"servers"`
+	Servers []interface{} `json:"servers" xml:"servers"`
 }
 
 func (o ListCloudPhoneServersResponseBody) String() string {

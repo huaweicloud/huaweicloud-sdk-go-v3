@@ -10,10 +10,10 @@ import (
 type ResetDeviceSecretResponse struct {
 
 	// 设备ID，用于唯一标识一个设备。在注册设备时直接指定，或者由物联网平台分配获得。由物联网平台分配时，生成规则为\"product_id\" + \"_\" + \"node_id\"拼接而成。
-	DeviceId *string `json:"device_id,omitempty"`
+	DeviceId *string `json:"device_id,omitempty" xml:"device_id"`
 
 	// 设备密钥。
-	Secret         *string `json:"secret,omitempty"`
+	Secret         *string `json:"secret,omitempty" xml:"secret"`
 	HttpStatusCode int     `json:"-"`
 }
 

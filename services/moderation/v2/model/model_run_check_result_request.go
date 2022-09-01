@@ -10,7 +10,7 @@ import (
 type RunCheckResultRequest struct {
 
 	// 任务标识。
-	JobId string `json:"job_id"`
+	JobId string `json:"job_id" xml:"job_id"`
 }
 
 func (o RunCheckResultRequest) String() string {

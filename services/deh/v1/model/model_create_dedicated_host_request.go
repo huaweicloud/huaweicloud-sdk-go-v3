@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateDedicatedHostRequest struct {
-	Body *ReqAllocateDeh `json:"body,omitempty"`
+	Body *ReqAllocateDeh `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateDedicatedHostRequest) String() string {

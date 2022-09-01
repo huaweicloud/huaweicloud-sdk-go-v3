@@ -10,7 +10,7 @@ import (
 type RestoreInstanceResponse struct {
 
 	// 恢复记录ID。
-	RestoreId      *string `json:"restore_id,omitempty"`
+	RestoreId      *string `json:"restore_id,omitempty" xml:"restore_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

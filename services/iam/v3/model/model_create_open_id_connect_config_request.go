@@ -10,9 +10,9 @@ import (
 type CreateOpenIdConnectConfigRequest struct {
 
 	// 身份提供商ID
-	IdpId string `json:"idp_id"`
+	IdpId string `json:"idp_id" xml:"idp_id"`
 
-	Body *CreateOpenIdConnectConfigRequestBody `json:"body,omitempty"`
+	Body *CreateOpenIdConnectConfigRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateOpenIdConnectConfigRequest) String() string {

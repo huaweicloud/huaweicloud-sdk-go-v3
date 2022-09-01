@@ -12,25 +12,25 @@ import (
 type ApiPolicyMockResp struct {
 
 	// 编号
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 关联的策略组合模式： - ALL：满足全部条件 - ANY：满足任一条件
-	EffectMode ApiPolicyMockRespEffectMode `json:"effect_mode"`
+	EffectMode ApiPolicyMockRespEffectMode `json:"effect_mode" xml:"effect_mode"`
 
 	// 策略后端名称。字符串由中文、英文字母、数字、下划线组成，且只能以中文或英文开头。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 后端参数列表
-	BackendParams *[]BackendParam `json:"backend_params,omitempty"`
+	BackendParams *[]BackendParam `json:"backend_params,omitempty" xml:"backend_params"`
 
 	// 策略条件列表
-	Conditions []CoditionResp `json:"conditions"`
+	Conditions []CoditionResp `json:"conditions" xml:"conditions"`
 
 	// 后端自定义认证对象的ID
-	AuthorizerId *string `json:"authorizer_id,omitempty"`
+	AuthorizerId *string `json:"authorizer_id,omitempty" xml:"authorizer_id"`
 
 	// 返回结果
-	ResultContent *string `json:"result_content,omitempty"`
+	ResultContent *string `json:"result_content,omitempty" xml:"result_content"`
 }
 
 func (o ApiPolicyMockResp) String() string {

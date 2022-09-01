@@ -13,9 +13,9 @@ import (
 type BatchCheckResultsRequest struct {
 
 	// 请求语言类型
-	XLanguage *BatchCheckResultsRequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *BatchCheckResultsRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 
-	Body *BatchQueryPrecheckResultReq `json:"body,omitempty"`
+	Body *BatchQueryPrecheckResultReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchCheckResultsRequest) String() string {

@@ -10,10 +10,10 @@ import (
 type ListSubCustomerCouponsResponse struct {
 
 	// 符合查询条件的总条数。
-	Count *int32 `json:"count,omitempty"`
+	Count *int32 `json:"count,omitempty" xml:"count"`
 
 	// 优惠券记录。 具体请参见表2。
-	UserCoupons    *[]IQueryUserCouponsResultV2 `json:"user_coupons,omitempty"`
+	UserCoupons    *[]IQueryUserCouponsResultV2 `json:"user_coupons,omitempty" xml:"user_coupons"`
 	HttpStatusCode int                          `json:"-"`
 }
 

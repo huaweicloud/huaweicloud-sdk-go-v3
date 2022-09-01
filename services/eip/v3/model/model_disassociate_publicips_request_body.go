@@ -8,7 +8,7 @@ import (
 
 // 解绑弹性公网IP的请求体
 type DisassociatePublicipsRequestBody struct {
-	Publicip *DisassociatePublicipsOption `json:"publicip"`
+	Publicip *DisassociatePublicipsOption `json:"publicip" xml:"publicip"`
 }
 
 func (o DisassociatePublicipsRequestBody) String() string {

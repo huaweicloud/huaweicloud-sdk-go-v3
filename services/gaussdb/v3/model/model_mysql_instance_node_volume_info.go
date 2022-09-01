@@ -10,13 +10,13 @@ import (
 type MysqlInstanceNodeVolumeInfo struct {
 
 	// 磁盘类型。
-	Type string `json:"type"`
+	Type string `json:"type" xml:"type"`
 
 	// 已使用磁盘大小，单位GB。
-	Used string `json:"used"`
+	Used string `json:"used" xml:"used"`
 
 	// 包周期购买的存储空间大小，单位GB。
-	Size int64 `json:"size"`
+	Size int64 `json:"size" xml:"size"`
 }
 
 func (o MysqlInstanceNodeVolumeInfo) String() string {

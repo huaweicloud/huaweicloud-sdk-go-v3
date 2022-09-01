@@ -9,10 +9,10 @@ import (
 type CompressResponse struct {
 
 	// GZIP压缩开关。0关闭。1打开
-	CompressSwitch int32 `json:"compress_switch"`
+	CompressSwitch int32 `json:"compress_switch" xml:"compress_switch"`
 
 	// GZIP压缩规则
-	CompressRules *[]CompressRules `json:"compress_rules,omitempty"`
+	CompressRules *[]CompressRules `json:"compress_rules,omitempty" xml:"compress_rules"`
 }
 
 func (o CompressResponse) String() string {

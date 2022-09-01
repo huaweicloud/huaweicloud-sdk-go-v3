@@ -10,7 +10,7 @@ import (
 type ImageTaggingResponseResult struct {
 
 	// 标签列表集合。
-	Tags *[]ImageTaggingItemBody `json:"tags,omitempty"`
+	Tags *[]ImageTaggingItemBody `json:"tags,omitempty" xml:"tags"`
 }
 
 func (o ImageTaggingResponseResult) String() string {

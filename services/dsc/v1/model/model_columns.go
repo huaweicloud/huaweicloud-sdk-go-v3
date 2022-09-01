@@ -13,13 +13,13 @@ import (
 type Columns struct {
 
 	// 数据的字段名称，最大支持长度256
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 数据的字段类型
-	Type ColumnsType `json:"type"`
+	Type ColumnsType `json:"type" xml:"type"`
 
 	// 标记该字段是否为主键。true为主键，表示用来定位水印位置；false为非主键，将在该列嵌入/提取水印内容。字段类型列表中可同时包含多个为true或为false的字段
-	PrimaryKey bool `json:"primary_key"`
+	PrimaryKey bool `json:"primary_key" xml:"primary_key"`
 }
 
 func (o Columns) String() string {

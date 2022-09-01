@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RecognizeTaxiInvoiceRequest struct {
-	Body *TaxiInvoiceRequestBody `json:"body,omitempty"`
+	Body *TaxiInvoiceRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o RecognizeTaxiInvoiceRequest) String() string {

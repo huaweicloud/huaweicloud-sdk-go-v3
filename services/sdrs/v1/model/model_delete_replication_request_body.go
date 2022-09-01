@@ -8,7 +8,7 @@ import (
 
 // 删除复制对请求体
 type DeleteReplicationRequestBody struct {
-	Replication *DeleteReplicationRequestParams `json:"replication"`
+	Replication *DeleteReplicationRequestParams `json:"replication" xml:"replication"`
 }
 
 func (o DeleteReplicationRequestBody) String() string {

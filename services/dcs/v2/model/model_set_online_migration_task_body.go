@@ -13,17 +13,17 @@ import (
 type SetOnlineMigrationTaskBody struct {
 
 	// 迁移方式，包括全量迁移和增量迁移两种类型。 - 全量迁移：该模式为Redis的一次性迁移，适用于可中断业务的迁移场景。   全量迁移过程中，如果源Redis有数据更新，这部分更新数据不会被迁移到目标Redis。 - 增量迁移：该模式为Redis的持续性迁移，适用于对业务中断敏感的迁移场景。   增量迁移阶段通过解析日志等技术， 持续保持源Redis和目标端Redis的数据一致。 取值范围： - full_amount_migration：表示全量迁移。 - incremental_migration：表示增量迁移。
-	MigrationMethod SetOnlineMigrationTaskBodyMigrationMethod `json:"migration_method"`
+	MigrationMethod SetOnlineMigrationTaskBodyMigrationMethod `json:"migration_method" xml:"migration_method"`
 
 	// 自动重连，根据参数决定是否自动重连。 自动重连模式在遇到网络等异常情况时，会无限自动重试。 自动重连模式在无法进行增量同步时，会触发全量同步，增加带宽占用，请谨慎选择。 取值范围： - auto：自动重连。 - manual：手动重连。
-	ResumeMode SetOnlineMigrationTaskBodyResumeMode `json:"resume_mode"`
+	ResumeMode SetOnlineMigrationTaskBodyResumeMode `json:"resume_mode" xml:"resume_mode"`
 
 	// 带宽限制，当迁移方式为增量迁移时，为保证业务正常运行，您可以启用带宽限制功能，当数据同步速度达到带宽限制时，将限制同步速度的继续增长。 -限制为MB/s -取值范围：1-10,241(大于0小于10,241的整数)
-	BandwidthLimitMb *string `json:"bandwidth_limit_mb,omitempty"`
+	BandwidthLimitMb *string `json:"bandwidth_limit_mb,omitempty" xml:"bandwidth_limit_mb"`
 
-	SourceInstance *ConfigMigrationInstanceBody `json:"source_instance"`
+	SourceInstance *ConfigMigrationInstanceBody `json:"source_instance" xml:"source_instance"`
 
-	TargetInstance *ConfigMigrationInstanceBody `json:"target_instance"`
+	TargetInstance *ConfigMigrationInstanceBody `json:"target_instance" xml:"target_instance"`
 }
 
 func (o SetOnlineMigrationTaskBody) String() string {

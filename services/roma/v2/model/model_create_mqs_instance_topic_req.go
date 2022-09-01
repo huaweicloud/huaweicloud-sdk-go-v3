@@ -12,37 +12,37 @@ import (
 type CreateMqsInstanceTopicReq struct {
 
 	// topic名称，以字母开头，仅能包含数字,字母,下划线(_)，中划线（-）,长度3-200字符。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 集成应用key。
-	AppId string `json:"app_id"`
+	AppId string `json:"app_id" xml:"app_id"`
 
 	// topic分区数，设置消费的并发数。  取值范围：1-50。  默认值：3。
-	Partition *int32 `json:"partition,omitempty"`
+	Partition *int32 `json:"partition,omitempty" xml:"partition"`
 
 	// 副本数，配置数据的可靠性。  取值范围：1-3。  默认值：3。  > 体验版实例的副本数只能为1。
-	Replication *int32 `json:"replication,omitempty"`
+	Replication *int32 `json:"replication,omitempty" xml:"replication"`
 
 	// 权限类型。   - all：发布+订阅   - pub：发布   - sub：订阅
-	AccessPolicy CreateMqsInstanceTopicReqAccessPolicy `json:"access_policy"`
+	AccessPolicy CreateMqsInstanceTopicReqAccessPolicy `json:"access_policy" xml:"access_policy"`
 
 	// 是否使用同步落盘。默认值为false。同步落盘会导致性能降低。
-	SyncMessageFlush *bool `json:"sync_message_flush,omitempty"`
+	SyncMessageFlush *bool `json:"sync_message_flush,omitempty" xml:"sync_message_flush"`
 
 	// 是否开启同步复制，开启后，客户端生产消息时相应的也要设置acks=-1，否则不生效,默认关闭。
-	SyncReplication *bool `json:"sync_replication,omitempty"`
+	SyncReplication *bool `json:"sync_replication,omitempty" xml:"sync_replication"`
 
 	// 消息老化时间。默认值为72。取值范围1~720，单位小时。
-	RetentionTime *int32 `json:"retention_time,omitempty"`
+	RetentionTime *int32 `json:"retention_time,omitempty" xml:"retention_time"`
 
 	// 权限类型对应的标签。  当权限类型是all时，发布和订阅的标签用符号“&”隔开。  当有多个标签时，标签用符号“||”隔开。
-	Tag *string `json:"tag,omitempty"`
+	Tag *string `json:"tag,omitempty" xml:"tag"`
 
 	// 描述。长度0-1000字符。
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 敏感字段。  当有多个敏感字段时，敏感字段用符号“||”隔开。
-	SensitiveWord *string `json:"sensitive_word,omitempty"`
+	SensitiveWord *string `json:"sensitive_word,omitempty" xml:"sensitive_word"`
 }
 
 func (o CreateMqsInstanceTopicReq) String() string {

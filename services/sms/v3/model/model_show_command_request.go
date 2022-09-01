@@ -10,7 +10,7 @@ import (
 type ShowCommandRequest struct {
 
 	// 命令对应的服务器id
-	ServerId string `json:"server_id"`
+	ServerId string `json:"server_id" xml:"server_id"`
 }
 
 func (o ShowCommandRequest) String() string {

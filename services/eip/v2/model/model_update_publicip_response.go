@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type UpdatePublicipResponse struct {
-	Publicip       *PublicipUpdateResp `json:"publicip,omitempty"`
+	Publicip       *PublicipUpdateResp `json:"publicip,omitempty" xml:"publicip"`
 	HttpStatusCode int                 `json:"-"`
 }
 

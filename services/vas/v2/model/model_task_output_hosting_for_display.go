@@ -10,13 +10,13 @@ import (
 type TaskOutputHostingForDisplay struct {
 
 	// 作业所有结果文件所在的OBS桶和路径
-	Obs *[]TaskOutputHostingForDisplayObs `json:"obs,omitempty"`
+	Obs *[]TaskOutputHostingForDisplayObs `json:"obs,omitempty" xml:"obs"`
 
 	// 作业结果文件的过期时间
-	ResultJsonOverdueAt *int64 `json:"result_json_overdue_at,omitempty"`
+	ResultJsonOverdueAt *int64 `json:"result_json_overdue_at,omitempty" xml:"result_json_overdue_at"`
 
 	// 作业输出数据类别的列表，当输出类型下有这个列表时，表示希望这个输出类型下存放dataCategory列表内的数据，部分服务需要
-	DataCategory *[]string `json:"data_category,omitempty"`
+	DataCategory *[]string `json:"data_category,omitempty" xml:"data_category"`
 }
 
 func (o TaskOutputHostingForDisplay) String() string {

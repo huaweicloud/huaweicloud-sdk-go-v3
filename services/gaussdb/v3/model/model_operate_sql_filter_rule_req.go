@@ -8,7 +8,7 @@ import (
 
 // - 开启/关闭sql限流参数体。
 type OperateSqlFilterRuleReq struct {
-	SqlFilterRules []NodeSqlFilterRuleInfo `json:"sql_filter_rules"`
+	SqlFilterRules []NodeSqlFilterRuleInfo `json:"sql_filter_rules" xml:"sql_filter_rules"`
 }
 
 func (o OperateSqlFilterRuleReq) String() string {

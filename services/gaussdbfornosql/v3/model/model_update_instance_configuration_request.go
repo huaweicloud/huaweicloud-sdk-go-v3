@@ -10,9 +10,9 @@ import (
 type UpdateInstanceConfigurationRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *UpdateInstanceConfigurationRequestBody `json:"body,omitempty"`
+	Body *UpdateInstanceConfigurationRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateInstanceConfigurationRequest) String() string {

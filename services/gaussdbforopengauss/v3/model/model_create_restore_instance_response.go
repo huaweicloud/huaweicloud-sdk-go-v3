@@ -8,10 +8,10 @@ import (
 
 // Response Object
 type CreateRestoreInstanceResponse struct {
-	Instance *CreateInstanceRespItem `json:"instance,omitempty"`
+	Instance *CreateInstanceRespItem `json:"instance,omitempty" xml:"instance"`
 
 	// 恢复新实例的任务id。  仅恢复按需实例时会返回该参数。
-	JobId          *string `json:"job_id,omitempty"`
+	JobId          *string `json:"job_id,omitempty" xml:"job_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

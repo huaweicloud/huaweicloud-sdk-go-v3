@@ -10,12 +10,12 @@ import (
 type ConditionGroup struct {
 
 	// **参数说明**：规则的条件列表，单个规则最多支持设置10个条件。
-	Conditions *[]RuleCondition `json:"conditions,omitempty"`
+	Conditions *[]RuleCondition `json:"conditions,omitempty" xml:"conditions"`
 
 	// **参数说明**：规则条件列表中多个条件之间的逻辑关系，默认值：and。 **取值范围**： - and：逻辑且。 - or：逻辑或。
-	Logic *string `json:"logic,omitempty"`
+	Logic *string `json:"logic,omitempty" xml:"logic"`
 
-	TimeRange *TimeRange `json:"time_range,omitempty"`
+	TimeRange *TimeRange `json:"time_range,omitempty" xml:"time_range"`
 }
 
 func (o ConditionGroup) String() string {

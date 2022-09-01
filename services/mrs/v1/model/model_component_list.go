@@ -9,7 +9,7 @@ import (
 type ComponentList struct {
 
 	// 组件名称
-	ComponentName string `json:"component_name"`
+	ComponentName string `json:"component_name" xml:"component_name"`
 }
 
 func (o ComponentList) String() string {

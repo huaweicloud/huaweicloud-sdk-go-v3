@@ -8,13 +8,13 @@ import (
 
 // Response Object
 type CreateInstanceResponse struct {
-	Instance *CreateInstanceRespItem `json:"instance,omitempty"`
+	Instance *CreateInstanceRespItem `json:"instance,omitempty" xml:"instance"`
 
 	// 实例创建的任务id。  仅创建按需实例时会返回该参数。
-	JobId *string `json:"job_id,omitempty"`
+	JobId *string `json:"job_id,omitempty" xml:"job_id"`
 
 	// 订单号，创建包年包月时返回该参数。
-	OrderId        *string `json:"order_id,omitempty"`
+	OrderId        *string `json:"order_id,omitempty" xml:"order_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

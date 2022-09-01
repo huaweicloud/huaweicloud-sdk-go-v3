@@ -10,18 +10,18 @@ import (
 type FunctionAsyncConfig struct {
 
 	// 消息最大存活时长，取值范围[60，86400]。单位：秒。
-	MaxAsyncEventAgeInSeconds int32 `json:"max_async_event_age_in_seconds"`
+	MaxAsyncEventAgeInSeconds int32 `json:"max_async_event_age_in_seconds" xml:"max_async_event_age_in_seconds"`
 
 	// 异步调用失败后的最大重试次数，默认值为3。取值范围[0，8]。
-	MaxAsyncRetryAttempts int32 `json:"max_async_retry_attempts"`
+	MaxAsyncRetryAttempts int32 `json:"max_async_retry_attempts" xml:"max_async_retry_attempts"`
 
-	DestinationConfig *FuncAsyncDestinationConfig `json:"destination_config"`
+	DestinationConfig *FuncAsyncDestinationConfig `json:"destination_config" xml:"destination_config"`
 
 	// 异步调用配置的创建时间。
-	CreatedTime *string `json:"created_time,omitempty"`
+	CreatedTime *string `json:"created_time,omitempty" xml:"created_time"`
 
 	// 异步调用配置的最后更改时间。
-	LastModified *string `json:"last_modified,omitempty"`
+	LastModified *string `json:"last_modified,omitempty" xml:"last_modified"`
 }
 
 func (o FunctionAsyncConfig) String() string {

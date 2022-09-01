@@ -10,7 +10,7 @@ import (
 type DeleteTasksReq struct {
 
 	// 待删除的任务id列表
-	Ids []string `json:"ids"`
+	Ids []string `json:"ids" xml:"ids"`
 }
 
 func (o DeleteTasksReq) String() string {

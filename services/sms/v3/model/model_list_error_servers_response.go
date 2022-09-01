@@ -10,10 +10,10 @@ import (
 type ListErrorServersResponse struct {
 
 	// 迁移过程中发生错误的源端数量
-	Count *int32 `json:"count,omitempty"`
+	Count *int32 `json:"count,omitempty" xml:"count"`
 
 	// 迁移过程中发生的错误详情
-	MigrationErrors *[]MigrationErrors `json:"migration_errors,omitempty"`
+	MigrationErrors *[]MigrationErrors `json:"migration_errors,omitempty" xml:"migration_errors"`
 	HttpStatusCode  int                `json:"-"`
 }
 

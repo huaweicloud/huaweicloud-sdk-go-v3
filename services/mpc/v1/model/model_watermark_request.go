@@ -7,17 +7,17 @@ import (
 )
 
 type WatermarkRequest struct {
-	Input *ObsObjInfo `json:"input,omitempty"`
+	Input *ObsObjInfo `json:"input,omitempty" xml:"input"`
 
 	// 水印模板。可通过新建水印模板接口创建水印模板。
-	TemplateId *string `json:"template_id,omitempty"`
+	TemplateId *string `json:"template_id,omitempty" xml:"template_id"`
 
 	// 文字水印内容，内容需做Base64编码，若类型为文字水印 (type字段为Text)，则此配置项不能为空  示例：若想添加文字水印“测试文字水印”，那么Content的值为：5rWL6K+V5paH5a2X5rC05Y2w
-	TextContext *string `json:"text_context,omitempty"`
+	TextContext *string `json:"text_context,omitempty" xml:"text_context"`
 
-	ImageWatermark *ImageWatermark `json:"image_watermark,omitempty"`
+	ImageWatermark *ImageWatermark `json:"image_watermark,omitempty" xml:"image_watermark"`
 
-	TextWatermark *TextWatermark `json:"text_watermark,omitempty"`
+	TextWatermark *TextWatermark `json:"text_watermark,omitempty" xml:"text_watermark"`
 }
 
 func (o WatermarkRequest) String() string {

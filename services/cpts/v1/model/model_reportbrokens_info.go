@@ -7,16 +7,16 @@ import (
 )
 
 type ReportbrokensInfo struct {
-	BrandBrokens *BrandBrokens `json:"brand_brokens,omitempty"`
+	BrandBrokens *BrandBrokens `json:"brand_brokens,omitempty" xml:"brand_brokens"`
 
 	// 时间戳
-	CommonTimestamps *[]string `json:"commonTimestamps,omitempty"`
+	CommonTimestamps *[]string `json:"commonTimestamps,omitempty" xml:"commonTimestamps"`
 
-	RespcodeBrokens *RespcodeBrokens `json:"respcode_brokens,omitempty"`
+	RespcodeBrokens *RespcodeBrokens `json:"respcode_brokens,omitempty" xml:"respcode_brokens"`
 
-	TpsBrokens *TpsBrokens `json:"tps_brokens,omitempty"`
+	TpsBrokens *TpsBrokens `json:"tps_brokens,omitempty" xml:"tps_brokens"`
 
-	VusersBrokens *VusersBrokens `json:"vusers_brokens,omitempty"`
+	VusersBrokens *VusersBrokens `json:"vusers_brokens,omitempty" xml:"vusers_brokens"`
 }
 
 func (o ReportbrokensInfo) String() string {

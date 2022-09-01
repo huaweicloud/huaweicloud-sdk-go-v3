@@ -10,7 +10,7 @@ import (
 type CreateDatabaseReq struct {
 
 	// 逻辑库相关信息的集合
-	Databases []CreateDatabaseDetail `json:"databases"`
+	Databases []CreateDatabaseDetail `json:"databases" xml:"databases"`
 }
 
 func (o CreateDatabaseReq) String() string {

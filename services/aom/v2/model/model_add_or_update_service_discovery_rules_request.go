@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type AddOrUpdateServiceDiscoveryRulesRequest struct {
-	Body *AppRulesBody `json:"body,omitempty"`
+	Body *AppRulesBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o AddOrUpdateServiceDiscoveryRulesRequest) String() string {

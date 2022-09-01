@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowDomainFullConfigResponse struct {
-	Configs        *ConfigsGetBody `json:"configs,omitempty"`
+	Configs        *ConfigsGetBody `json:"configs,omitempty" xml:"configs"`
 	HttpStatusCode int             `json:"-"`
 }
 

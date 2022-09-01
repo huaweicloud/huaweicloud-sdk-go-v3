@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type CreateSecurityGroupResponse struct {
-	SecurityGroup  *SecurityGroup `json:"security_group,omitempty"`
+	SecurityGroup  *SecurityGroup `json:"security_group,omitempty" xml:"security_group"`
 	HttpStatusCode int            `json:"-"`
 }
 

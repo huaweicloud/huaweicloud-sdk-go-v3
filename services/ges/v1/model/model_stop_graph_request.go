@@ -13,10 +13,10 @@ import (
 type StopGraphRequest struct {
 
 	// 图ID。
-	GraphId string `json:"graph_id"`
+	GraphId string `json:"graph_id" xml:"graph_id"`
 
 	// 图actionId
-	ActionId StopGraphRequestActionId `json:"action_id"`
+	ActionId StopGraphRequestActionId `json:"action_id" xml:"action_id"`
 }
 
 func (o StopGraphRequest) String() string {

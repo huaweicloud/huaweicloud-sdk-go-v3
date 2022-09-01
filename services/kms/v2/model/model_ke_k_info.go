@@ -10,10 +10,10 @@ import (
 type KeKInfo struct {
 
 	// 密钥ID。
-	KeyId *string `json:"key_id,omitempty"`
+	KeyId *string `json:"key_id,omitempty" xml:"key_id"`
 
 	// 用户域ID。
-	DomainId *string `json:"domain_id,omitempty"`
+	DomainId *string `json:"domain_id,omitempty" xml:"domain_id"`
 }
 
 func (o KeKInfo) String() string {

@@ -9,25 +9,25 @@ import (
 type PeriodProductRatingResult struct {
 
 	// ID标识，来源于请求中的ID。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 包年/包月产品的ID。
-	ProductId *string `json:"product_id,omitempty"`
+	ProductId *string `json:"product_id,omitempty" xml:"product_id"`
 
 	// 总额，即最终优惠后的金额。 amount= official_website_amount - discountAmount。
-	Amount *float64 `json:"amount,omitempty"`
+	Amount *float64 `json:"amount,omitempty" xml:"amount"`
 
 	// 包年/包月产品的官网价。
-	OfficialWebsiteAmount *float64 `json:"official_website_amount,omitempty"`
+	OfficialWebsiteAmount *float64 `json:"official_website_amount,omitempty" xml:"official_website_amount"`
 
 	// 可选折扣优惠额，如商务折扣、伙伴折扣、促销折扣和折扣券选用时的优惠额。
-	DiscountAmount *float64 `json:"discount_amount,omitempty"`
+	DiscountAmount *float64 `json:"discount_amount,omitempty" xml:"discount_amount"`
 
 	// 价格度量单位标识。 1：元
-	MeasureId *int32 `json:"measure_id,omitempty"`
+	MeasureId *int32 `json:"measure_id,omitempty" xml:"measure_id"`
 
 	// |参数名称：每页数量| |参数的约束及描述：该参数非必填，且只允许1-100数字，默认10，最多100|
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 }
 
 func (o PeriodProductRatingResult) String() string {

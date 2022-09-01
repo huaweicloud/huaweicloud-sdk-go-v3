@@ -10,9 +10,9 @@ import (
 type AddProtectedInstanceTagsRequest struct {
 
 	// 保护实例的ID。
-	ProtectedInstanceId string `json:"protected_instance_id"`
+	ProtectedInstanceId string `json:"protected_instance_id" xml:"protected_instance_id"`
 
-	Body *ProtectedInstanceAddTagsRequestBody `json:"body,omitempty"`
+	Body *ProtectedInstanceAddTagsRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o AddProtectedInstanceTagsRequest) String() string {

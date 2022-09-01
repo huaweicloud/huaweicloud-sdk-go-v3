@@ -10,10 +10,10 @@ import (
 type ListRoutetablesResponse struct {
 
 	// 路由表
-	Routetables *[]ListRoutetableOption `json:"routetables,omitempty"`
+	Routetables *[]ListRoutetableOption `json:"routetables,omitempty" xml:"routetables"`
 
 	// 数量
-	Count          *int32 `json:"count,omitempty"`
+	Count          *int32 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

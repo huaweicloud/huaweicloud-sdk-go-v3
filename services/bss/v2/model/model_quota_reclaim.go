@@ -9,10 +9,10 @@ import (
 type QuotaReclaim struct {
 
 	// 被回收的云经销商的代金券额度ID。
-	QuotaId *string `json:"quota_id,omitempty"`
+	QuotaId *string `json:"quota_id,omitempty" xml:"quota_id"`
 
 	// 被回收额度后的代金券额度余额。单位：元。
-	QuotaBalance *float64 `json:"quota_balance,omitempty"`
+	QuotaBalance *float64 `json:"quota_balance,omitempty" xml:"quota_balance"`
 }
 
 func (o QuotaReclaim) String() string {

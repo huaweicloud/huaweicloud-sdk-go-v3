@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type BatchShowPipelinesStatusResponse struct {
-	Body           *[]PipelineExecuteStates `json:"body,omitempty"`
+	Body           *[]PipelineExecuteStates `json:"body,omitempty" xml:"body"`
 	HttpStatusCode int                      `json:"-"`
 }
 

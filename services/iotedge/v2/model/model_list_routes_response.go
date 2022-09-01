@@ -10,10 +10,10 @@ import (
 type ListRoutesResponse struct {
 
 	// 路由列表
-	Routes *[]RouterDetailRespDto `json:"routes,omitempty"`
+	Routes *[]RouterDetailRespDto `json:"routes,omitempty" xml:"routes"`
 
 	// 最后一次修改时间
-	UpdateTime     *string `json:"update_time,omitempty"`
+	UpdateTime     *string `json:"update_time,omitempty" xml:"update_time"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -10,9 +10,9 @@ import (
 type UpdateTracingRequest struct {
 
 	// 函数的URN（Uniform Resource Name），唯一标识函数。
-	FunctionUrn string `json:"function_urn"`
+	FunctionUrn string `json:"function_urn" xml:"function_urn"`
 
-	Body *UpdateTracingRequestBody `json:"body,omitempty"`
+	Body *UpdateTracingRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateTracingRequest) String() string {

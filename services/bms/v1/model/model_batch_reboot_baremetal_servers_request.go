@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type BatchRebootBaremetalServersRequest struct {
-	Body *RebootBody `json:"body,omitempty"`
+	Body *RebootBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchRebootBaremetalServersRequest) String() string {

@@ -9,10 +9,10 @@ import (
 type RollingRestartReq struct {
 
 	// 操作角色。
-	Type string `json:"type"`
+	Type string `json:"type" xml:"type"`
 
 	// 实例类型（选择实例类型时至少需要一个数据节点）。例如:  - ess-master对应Master节点。 - ess-client对应Clinet节点。 - ess-cold对应冷数据节点。 - ess对应数据节点。 - all对应所有节点。
-	Value string `json:"value"`
+	Value string `json:"value" xml:"value"`
 }
 
 func (o RollingRestartReq) String() string {

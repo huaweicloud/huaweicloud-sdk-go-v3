@@ -10,7 +10,7 @@ import (
 type ReplicationClusterParams struct {
 
 	// 可用区名称。
-	AvailabilityZone string `json:"availability_zone"`
+	AvailabilityZone string `json:"availability_zone" xml:"availability_zone"`
 }
 
 func (o ReplicationClusterParams) String() string {

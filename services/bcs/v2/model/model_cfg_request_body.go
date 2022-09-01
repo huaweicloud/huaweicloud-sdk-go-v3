@@ -9,25 +9,25 @@ import (
 type CfgRequestBody struct {
 
 	// 链代码名称，以小写字母开头，支持小写字母和数字，长度6-25位
-	ChaincodeName string `json:"chaincode_name"`
+	ChaincodeName string `json:"chaincode_name" xml:"chaincode_name"`
 
 	// SDK配置文件存放路径
-	CertPath string `json:"cert_path"`
+	CertPath string `json:"cert_path" xml:"cert_path"`
 
 	// 通道名称
-	ChannelName string `json:"channel_name"`
+	ChannelName string `json:"channel_name" xml:"channel_name"`
 
 	// key：组织名，value：该组织下需要下载的peer节点信息，peer节点请按照0,1,2的顺序升序填写
-	PeerOrgs map[string][]string `json:"peer_orgs"`
+	PeerOrgs map[string][]string `json:"peer_orgs" xml:"peer_orgs"`
 
 	// key：联盟成员名称，value：该联盟成员peer组织名称hash值数组
-	UnionInfo map[string][]string `json:"union_info,omitempty"`
+	UnionInfo map[string][]string `json:"union_info,omitempty" xml:"union_info"`
 
 	// 是否是多通道请求，如此处设成true则必须传入channel_chaincode，chaincode_name和channel_name设为空即可
-	IsMultiChan *bool `json:"is_multi_chan,omitempty"`
+	IsMultiChan *bool `json:"is_multi_chan,omitempty" xml:"is_multi_chan"`
 
 	// key：通道名称，value：该通道对应的链代码数组
-	ChannelChaincode map[string][]string `json:"channel_chaincode,omitempty"`
+	ChannelChaincode map[string][]string `json:"channel_chaincode,omitempty" xml:"channel_chaincode"`
 }
 
 func (o CfgRequestBody) String() string {

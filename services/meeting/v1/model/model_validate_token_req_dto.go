@@ -9,13 +9,13 @@ import (
 type ValidateTokenReqDto struct {
 
 	// 登录用账号的token字符串
-	Token string `json:"token"`
+	Token string `json:"token" xml:"token"`
 
 	// 是否生成新的token，内部使用参数。 true：生成新的token值。 false：不生成新的token值。
-	NeedGenNewToken bool `json:"needGenNewToken"`
+	NeedGenNewToken bool `json:"needGenNewToken" xml:"needGenNewToken"`
 
 	// 是否需要返回用户可见帐号信息（帐号、用户姓名等信息）。
-	NeedAccountInfo *bool `json:"needAccountInfo,omitempty"`
+	NeedAccountInfo *bool `json:"needAccountInfo,omitempty" xml:"needAccountInfo"`
 }
 
 func (o ValidateTokenReqDto) String() string {

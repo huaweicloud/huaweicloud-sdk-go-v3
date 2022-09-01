@@ -13,19 +13,19 @@ import (
 type ListSupportedRegionsRequest struct {
 
 	// 选择接口返回信息的语言类型，默认为中文\"zh-cn\"
-	XLanguage *ListSupportedRegionsRequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *ListSupportedRegionsRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 
 	// 每页的数量
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 分页标识
-	Marker *string `json:"marker,omitempty"`
+	Marker *string `json:"marker,omitempty" xml:"marker"`
 
 	// 排序字段
-	SortKey *[]string `json:"sort_key,omitempty"`
+	SortKey *[]string `json:"sort_key,omitempty" xml:"sort_key"`
 
 	// 排序方向，取值范围： - desc：降序 - acs：升序
-	SortDir *[]string `json:"sort_dir,omitempty"`
+	SortDir *[]string `json:"sort_dir,omitempty" xml:"sort_dir"`
 }
 
 func (o ListSupportedRegionsRequest) String() string {

@@ -10,7 +10,7 @@ import (
 type DeleteAnimatedGraphicsTaskRequest struct {
 
 	// 任务ID
-	TaskId string `json:"task_id"`
+	TaskId string `json:"task_id" xml:"task_id"`
 }
 
 func (o DeleteAnimatedGraphicsTaskRequest) String() string {

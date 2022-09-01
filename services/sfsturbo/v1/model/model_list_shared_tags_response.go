@@ -10,7 +10,7 @@ import (
 type ListSharedTagsResponse struct {
 
 	// tag标签的列表
-	Tags           *[]Tag `json:"tags,omitempty"`
+	Tags           *[]Tag `json:"tags,omitempty" xml:"tags"`
 	HttpStatusCode int    `json:"-"`
 }
 

@@ -10,9 +10,9 @@ import (
 type BatchDeleteRecordSetWithLineRequest struct {
 
 	// 所属zone的ID。
-	ZoneId string `json:"zone_id"`
+	ZoneId string `json:"zone_id" xml:"zone_id"`
 
-	Body *BatchDeleteRSetWithLineReq `json:"body,omitempty"`
+	Body *BatchDeleteRSetWithLineReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchDeleteRecordSetWithLineRequest) String() string {

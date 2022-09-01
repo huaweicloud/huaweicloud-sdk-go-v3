@@ -10,7 +10,7 @@ import (
 type RunCelebrityRecognitionResponse struct {
 
 	// 调用成功时表示调用结果。  调用失败时无此字段。
-	Result         *[]CelebrityRecognitionResultBody `json:"result,omitempty"`
+	Result         *[]CelebrityRecognitionResultBody `json:"result,omitempty" xml:"result"`
 	HttpStatusCode int                               `json:"-"`
 }
 

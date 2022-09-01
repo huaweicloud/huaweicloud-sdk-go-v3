@@ -10,9 +10,9 @@ import (
 type MigrateServerRequest struct {
 
 	// 云服务器ID。
-	ServerId string `json:"server_id"`
+	ServerId string `json:"server_id" xml:"server_id"`
 
-	Body *MigrateServerRequestBody `json:"body,omitempty"`
+	Body *MigrateServerRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o MigrateServerRequest) String() string {

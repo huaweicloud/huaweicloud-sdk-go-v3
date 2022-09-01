@@ -10,7 +10,7 @@ import (
 type UpdateDesireds struct {
 
 	// **参数说明**：设备影子期望值构体。
-	Shadow *[]UpdateDesired `json:"shadow,omitempty"`
+	Shadow *[]UpdateDesired `json:"shadow,omitempty" xml:"shadow"`
 }
 
 func (o UpdateDesireds) String() string {

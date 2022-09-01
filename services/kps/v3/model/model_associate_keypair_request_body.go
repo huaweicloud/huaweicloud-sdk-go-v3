@@ -10,9 +10,9 @@ import (
 type AssociateKeypairRequestBody struct {
 
 	// SSH密钥对的名称
-	KeypairName string `json:"keypair_name"`
+	KeypairName string `json:"keypair_name" xml:"keypair_name"`
 
-	Server *EcsServerInfo `json:"server"`
+	Server *EcsServerInfo `json:"server" xml:"server"`
 }
 
 func (o AssociateKeypairRequestBody) String() string {

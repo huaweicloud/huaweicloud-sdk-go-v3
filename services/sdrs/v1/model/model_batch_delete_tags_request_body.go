@@ -13,10 +13,10 @@ import (
 type BatchDeleteTagsRequestBody struct {
 
 	// 标签列表。
-	Tags []DeleteResourceTag `json:"tags"`
+	Tags []DeleteResourceTag `json:"tags" xml:"tags"`
 
 	// 操作标识，取值仅限于：delete：删除
-	Action BatchDeleteTagsRequestBodyAction `json:"action"`
+	Action BatchDeleteTagsRequestBodyAction `json:"action" xml:"action"`
 }
 
 func (o BatchDeleteTagsRequestBody) String() string {

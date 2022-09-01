@@ -10,25 +10,25 @@ import (
 type ConfigMapResp struct {
 
 	// 配置项ID
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 配置项名称
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 配置项描述
-	Description string `json:"description"`
+	Description string `json:"description" xml:"description"`
 
 	// 配置项键列表
-	Configs map[string]string `json:"configs"`
+	Configs map[string]string `json:"configs" xml:"configs"`
 
 	// 项目ID
-	ProjectId string `json:"project_id"`
+	ProjectId string `json:"project_id" xml:"project_id"`
 
 	// 创建时间
-	CreatedAt string `json:"created_at"`
+	CreatedAt string `json:"created_at" xml:"created_at"`
 
 	// 更新时间
-	UpdatedAt string `json:"updated_at"`
+	UpdatedAt string `json:"updated_at" xml:"updated_at"`
 }
 
 func (o ConfigMapResp) String() string {

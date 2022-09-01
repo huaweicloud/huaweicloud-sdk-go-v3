@@ -9,9 +9,9 @@ import (
 type Login struct {
 
 	// 选择密钥对方式登录时的密钥对名称。
-	SshKey *string `json:"sshKey,omitempty"`
+	SshKey *string `json:"sshKey,omitempty" xml:"sshKey"`
 
-	UserPassword *UserPassword `json:"userPassword,omitempty"`
+	UserPassword *UserPassword `json:"userPassword,omitempty" xml:"userPassword"`
 }
 
 func (o Login) String() string {

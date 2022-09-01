@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RunMultiGrainedSegmentRequest struct {
-	Body *PostMultiGrainedSegmentReq `json:"body,omitempty"`
+	Body *PostMultiGrainedSegmentReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o RunMultiGrainedSegmentRequest) String() string {

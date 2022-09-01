@@ -10,9 +10,9 @@ import (
 type SendMessagesRequest struct {
 
 	// 指定的队列ID。
-	QueueId string `json:"queue_id"`
+	QueueId string `json:"queue_id" xml:"queue_id"`
 
-	Body *SendMessagesReq `json:"body,omitempty"`
+	Body *SendMessagesReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o SendMessagesRequest) String() string {

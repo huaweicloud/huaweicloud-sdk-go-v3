@@ -10,7 +10,7 @@ import (
 type MetadataInfos struct {
 
 	// metadata键、值。键、值长度均不大于255字节。
-	Key *string `json:"key,omitempty"`
+	Key *string `json:"key,omitempty" xml:"key"`
 }
 
 func (o MetadataInfos) String() string {

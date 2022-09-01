@@ -13,25 +13,25 @@ import (
 type ListTasksRequest struct {
 
 	// 迁移任务状态
-	State *ListTasksRequestState `json:"state,omitempty"`
+	State *ListTasksRequestState `json:"state,omitempty" xml:"state"`
 
 	// 任务的名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 任务的ID
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 源端服务器的ID
-	SourceServerId *string `json:"source_server_id,omitempty"`
+	SourceServerId *string `json:"source_server_id,omitempty" xml:"source_server_id"`
 
 	// 每一页记录的任务数量
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 偏移量
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 需要查询的企业项目id
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
 }
 
 func (o ListTasksRequest) String() string {

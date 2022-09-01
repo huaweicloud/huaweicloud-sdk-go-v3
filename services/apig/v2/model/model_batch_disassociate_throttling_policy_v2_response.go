@@ -10,10 +10,10 @@ import (
 type BatchDisassociateThrottlingPolicyV2Response struct {
 
 	// 成功解除绑定的API和流控策略绑定关系的数量
-	SuccessCount *int32 `json:"success_count,omitempty"`
+	SuccessCount *int32 `json:"success_count,omitempty" xml:"success_count"`
 
 	// 解除绑定失败的API和流控绑定关系及错误信息
-	Failure        *[]ThrottleBindingBatchFailure `json:"failure,omitempty"`
+	Failure        *[]ThrottleBindingBatchFailure `json:"failure,omitempty" xml:"failure"`
 	HttpStatusCode int                            `json:"-"`
 }
 

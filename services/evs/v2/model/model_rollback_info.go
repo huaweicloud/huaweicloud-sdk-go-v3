@@ -9,7 +9,7 @@ import (
 type RollbackInfo struct {
 
 	// 回滚的目标云硬盘UUID。
-	VolumeId string `json:"volume_id"`
+	VolumeId string `json:"volume_id" xml:"volume_id"`
 }
 
 func (o RollbackInfo) String() string {

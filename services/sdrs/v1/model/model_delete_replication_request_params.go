@@ -10,10 +10,10 @@ import (
 type DeleteReplicationRequestParams struct {
 
 	// 保护组的ID。
-	ServerGroupId *string `json:"server_group_id,omitempty"`
+	ServerGroupId *string `json:"server_group_id,omitempty" xml:"server_group_id"`
 
 	// 是否删除容灾站点磁盘，默认值为false。
-	DeleteTargetVolume *bool `json:"delete_target_volume,omitempty"`
+	DeleteTargetVolume *bool `json:"delete_target_volume,omitempty" xml:"delete_target_volume"`
 }
 
 func (o DeleteReplicationRequestParams) String() string {

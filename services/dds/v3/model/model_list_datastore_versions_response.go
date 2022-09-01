@@ -10,7 +10,7 @@ import (
 type ListDatastoreVersionsResponse struct {
 
 	// 数据库版本。支持3.4、3.2和4.0版本。
-	Versions       *[]string `json:"versions,omitempty"`
+	Versions       *[]string `json:"versions,omitempty" xml:"versions"`
 	HttpStatusCode int       `json:"-"`
 }
 

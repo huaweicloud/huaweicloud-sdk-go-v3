@@ -10,7 +10,7 @@ import (
 type ResetGaussMySqlDatabasePasswordResponse struct {
 
 	// 修改数据库用户密码的任务id。
-	JobId          *string `json:"job_id,omitempty"`
+	JobId          *string `json:"job_id,omitempty" xml:"job_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

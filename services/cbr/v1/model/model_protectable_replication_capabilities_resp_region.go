@@ -9,10 +9,10 @@ import (
 type ProtectableReplicationCapabilitiesRespRegion struct {
 
 	// 云服务所在的区域
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 支持复制的目标区域列表
-	ReplicationDestinations []string `json:"replication_destinations"`
+	ReplicationDestinations []string `json:"replication_destinations" xml:"replication_destinations"`
 }
 
 func (o ProtectableReplicationCapabilitiesRespRegion) String() string {

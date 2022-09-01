@@ -13,19 +13,19 @@ import (
 type PolicyParameterDefinition struct {
 
 	// 策略参数名字
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 策略参数描述
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 策略参数允许值列表
-	AllowedValues *[]interface{} `json:"allowed_values,omitempty"`
+	AllowedValues *[]interface{} `json:"allowed_values,omitempty" xml:"allowed_values"`
 
 	// 策略参数默认值
-	DefaultValue *string `json:"default_value,omitempty"`
+	DefaultValue *string `json:"default_value,omitempty" xml:"default_value"`
 
 	// 策略参数类型
-	Type *PolicyParameterDefinitionType `json:"type,omitempty"`
+	Type *PolicyParameterDefinitionType `json:"type,omitempty" xml:"type"`
 }
 
 func (o PolicyParameterDefinition) String() string {

@@ -13,9 +13,9 @@ import (
 type BatchListProgressesRequest struct {
 
 	// 请求语言类型
-	XLanguage *BatchListProgressesRequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *BatchListProgressesRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 
-	Body *BatchQueryProgressReq `json:"body,omitempty"`
+	Body *BatchQueryProgressReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchListProgressesRequest) String() string {

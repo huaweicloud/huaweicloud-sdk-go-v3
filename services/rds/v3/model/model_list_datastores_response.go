@@ -10,7 +10,7 @@ import (
 type ListDatastoresResponse struct {
 
 	// 数据库引擎信息。
-	DataStores     *[]LDatastore `json:"dataStores,omitempty"`
+	DataStores     *[]LDatastore `json:"dataStores,omitempty" xml:"dataStores"`
 	HttpStatusCode int           `json:"-"`
 }
 

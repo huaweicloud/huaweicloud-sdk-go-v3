@@ -10,10 +10,10 @@ import (
 type ShowTasksRulesetsResponse struct {
 
 	// 规则集信息
-	Info *[]TaskRulesetInfo `json:"info,omitempty"`
+	Info *[]TaskRulesetInfo `json:"info,omitempty" xml:"info"`
 
 	// 总数
-	Total          *int32 `json:"total,omitempty"`
+	Total          *int32 `json:"total,omitempty" xml:"total"`
 	HttpStatusCode int    `json:"-"`
 }
 

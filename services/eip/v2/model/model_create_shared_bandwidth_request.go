@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateSharedBandwidthRequest struct {
-	Body *CreateSharedBandwidhRequestBody `json:"body,omitempty"`
+	Body *CreateSharedBandwidhRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateSharedBandwidthRequest) String() string {

@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type RecognizeMainlandTravelPermitResponse struct {
-	Result         *MainlandTravelPermitResult `json:"result,omitempty"`
+	Result         *MainlandTravelPermitResult `json:"result,omitempty" xml:"result"`
 	HttpStatusCode int                         `json:"-"`
 }
 

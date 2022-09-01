@@ -13,22 +13,22 @@ import (
 type ListGroupsRequest struct {
 
 	// 存储用量单位
-	Unit *ListGroupsRequestUnit `json:"unit,omitempty"`
+	Unit *ListGroupsRequestUnit `json:"unit,omitempty" xml:"unit"`
 
 	// 存储类型，有资产存储(取值:AssetStorage)、设备存储(取值:DeviceStorage)两种类型
-	Type *string `json:"type,omitempty"`
+	Type *string `json:"type,omitempty" xml:"type"`
 
 	// 存储组 ID
-	GroupId *string `json:"group_id,omitempty"`
+	GroupId *string `json:"group_id,omitempty" xml:"group_id"`
 
 	// 存储组名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 页码
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 返回条数限制
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 }
 
 func (o ListGroupsRequest) String() string {

@@ -9,7 +9,7 @@ import (
 type RoleEnterpriseProjectAssignmentId struct {
 
 	// 企业项目ID。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 }
 
 func (o RoleEnterpriseProjectAssignmentId) String() string {

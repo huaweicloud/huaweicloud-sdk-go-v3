@@ -10,7 +10,7 @@ import (
 type UpdateCustomerAccountAmountResponse struct {
 
 	// 事务流水ID，只有成功响应才会返回。
-	TransferId     *string `json:"transfer_id,omitempty"`
+	TransferId     *string `json:"transfer_id,omitempty" xml:"transfer_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

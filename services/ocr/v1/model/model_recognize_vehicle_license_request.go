@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RecognizeVehicleLicenseRequest struct {
-	Body *VehicleLicenseRequestBody `json:"body,omitempty"`
+	Body *VehicleLicenseRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o RecognizeVehicleLicenseRequest) String() string {

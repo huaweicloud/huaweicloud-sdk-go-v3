@@ -9,13 +9,13 @@ import (
 type ResponseInfoResp struct {
 
 	// 响应的HTTP状态码
-	Status *int32 `json:"status,omitempty"`
+	Status *int32 `json:"status,omitempty" xml:"status"`
 
 	// 响应的Body模板
-	Body *string `json:"body,omitempty"`
+	Body *string `json:"body,omitempty" xml:"body"`
 
 	// 是否为默认响应
-	Default *bool `json:"default,omitempty"`
+	Default *bool `json:"default,omitempty" xml:"default"`
 }
 
 func (o ResponseInfoResp) String() string {

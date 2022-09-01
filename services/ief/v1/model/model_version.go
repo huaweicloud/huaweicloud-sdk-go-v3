@@ -8,7 +8,7 @@ import (
 
 // 应用模板版本
 type Version struct {
-	Version *VersionDetail `json:"version"`
+	Version *VersionDetail `json:"version" xml:"version"`
 }
 
 func (o Version) String() string {

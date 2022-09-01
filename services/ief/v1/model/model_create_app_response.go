@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type CreateAppResponse struct {
-	App            *AppResponse `json:"app,omitempty"`
+	App            *AppResponse `json:"app,omitempty" xml:"app"`
 	HttpStatusCode int          `json:"-"`
 }
 

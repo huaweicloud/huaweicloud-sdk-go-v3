@@ -10,10 +10,10 @@ import (
 type ListGaussMySqlDatabaseUserResponse struct {
 
 	// 数据库用户列表。
-	Users *[]ListGaussMySqlDatabaseUser `json:"users,omitempty"`
+	Users *[]ListGaussMySqlDatabaseUser `json:"users,omitempty" xml:"users"`
 
 	// 实例的数据库用户总数
-	TotalCount     *int32 `json:"total_count,omitempty"`
+	TotalCount     *int32 `json:"total_count,omitempty" xml:"total_count"`
 	HttpStatusCode int    `json:"-"`
 }
 

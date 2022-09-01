@@ -8,7 +8,7 @@ import (
 
 //
 type CreateTemporaryAccessKeyByTokenRequestBody struct {
-	Auth *TokenAuth `json:"auth"`
+	Auth *TokenAuth `json:"auth" xml:"auth"`
 }
 
 func (o CreateTemporaryAccessKeyByTokenRequestBody) String() string {

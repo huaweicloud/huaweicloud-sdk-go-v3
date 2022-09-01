@@ -10,10 +10,10 @@ import (
 type DeleteServerMetadataRequest struct {
 
 	// 待删除的云服务器metadata键值
-	Key string `json:"key"`
+	Key string `json:"key" xml:"key"`
 
 	// 云服务器ID。
-	ServerId string `json:"server_id"`
+	ServerId string `json:"server_id" xml:"server_id"`
 }
 
 func (o DeleteServerMetadataRequest) String() string {

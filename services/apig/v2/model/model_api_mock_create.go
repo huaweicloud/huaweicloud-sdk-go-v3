@@ -10,16 +10,16 @@ import (
 type ApiMockCreate struct {
 
 	// 描述信息。长度不超过255个字符 > 中文字符必须为UTF-8或者unicode编码。
-	Remark *string `json:"remark,omitempty"`
+	Remark *string `json:"remark,omitempty" xml:"remark"`
 
 	// 返回结果
-	ResultContent *string `json:"result_content,omitempty"`
+	ResultContent *string `json:"result_content,omitempty" xml:"result_content"`
 
 	// 版本。字符长度不超过64
-	Version *string `json:"version,omitempty"`
+	Version *string `json:"version,omitempty" xml:"version"`
 
 	// 后端自定义认证ID
-	AuthorizerId *string `json:"authorizer_id,omitempty"`
+	AuthorizerId *string `json:"authorizer_id,omitempty" xml:"authorizer_id"`
 }
 
 func (o ApiMockCreate) String() string {

@@ -10,10 +10,10 @@ import (
 type ListRemuxTaskResponse struct {
 
 	// 任务总数
-	Total *int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty" xml:"total"`
 
 	// 任务列表
-	Tasks          *[]RemuxTask `json:"tasks,omitempty"`
+	Tasks          *[]RemuxTask `json:"tasks,omitempty" xml:"tasks"`
 	HttpStatusCode int          `json:"-"`
 }
 

@@ -10,13 +10,13 @@ import (
 type DeleteGaussMySqlReadonlyNodeRequest struct {
 
 	// 语言
-	XLanguage *string `json:"X-Language,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
 
 	// 实例ID，严格匹配UUID规则。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 节点ID，严格匹配UUID规则。
-	NodeId string `json:"node_id"`
+	NodeId string `json:"node_id" xml:"node_id"`
 }
 
 func (o DeleteGaussMySqlReadonlyNodeRequest) String() string {

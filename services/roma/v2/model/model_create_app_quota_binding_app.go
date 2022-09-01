@@ -9,7 +9,7 @@ import (
 type CreateAppQuotaBindingApp struct {
 
 	// 客户端应用编号列表
-	AppIds []string `json:"app_ids"`
+	AppIds []string `json:"app_ids" xml:"app_ids"`
 }
 
 func (o CreateAppQuotaBindingApp) String() string {

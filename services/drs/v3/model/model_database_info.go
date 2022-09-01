@@ -13,22 +13,22 @@ import (
 type DatabaseInfo struct {
 
 	// object_type为database时，为库名；object_type为table或者view时，字段值参考示例。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// object_type为table或view时需要填写，为库名
-	ParentId *string `json:"parent_id,omitempty"`
+	ParentId *string `json:"parent_id,omitempty" xml:"parent_id"`
 
 	// 类型
-	ObjectType *DatabaseInfoObjectType `json:"object_type,omitempty"`
+	ObjectType *DatabaseInfoObjectType `json:"object_type,omitempty" xml:"object_type"`
 
 	// 数据库对象名称，库名、表名、视图名
-	ObjectName *string `json:"object_name,omitempty"`
+	ObjectName *string `json:"object_name,omitempty" xml:"object_name"`
 
 	// 别名，映射的新名称。
-	ObjectAliasName *string `json:"object_alias_name,omitempty"`
+	ObjectAliasName *string `json:"object_alias_name,omitempty" xml:"object_alias_name"`
 
 	// 是否选中，值为true会进行迁移，false该数据库对象不会迁移，partial为迁移库下面的部分表，不填默认为false
-	Select *string `json:"select,omitempty"`
+	Select *string `json:"select,omitempty" xml:"select"`
 }
 
 func (o DatabaseInfo) String() string {

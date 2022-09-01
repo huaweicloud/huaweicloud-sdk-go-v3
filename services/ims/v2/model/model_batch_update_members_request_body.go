@@ -13,16 +13,16 @@ import (
 type BatchUpdateMembersRequestBody struct {
 
 	// 镜像ID列表。
-	Images []string `json:"images"`
+	Images []string `json:"images" xml:"images"`
 
 	// 项目ID。
-	ProjectId string `json:"project_id"`
+	ProjectId string `json:"project_id" xml:"project_id"`
 
 	// 镜像成员的状态。 取值如下： accepted：表示接受共享镜像。接受后，该镜像在用户镜像列表中可见，用户可以使用该镜像创建云服务器。 rejected：表示拒绝共享镜像。拒绝后，该镜像在用户镜像列表中不可见，但是，用户仍然可以使用该镜像创建云服务器。
-	Status BatchUpdateMembersRequestBodyStatus `json:"status"`
+	Status BatchUpdateMembersRequestBodyStatus `json:"status" xml:"status"`
 
 	// 存储库ID。 如果是通过CBR创建的整机镜像，则在接受该共享镜像时，为必选参数，需传入该值。
-	VaultId *string `json:"vault_id,omitempty"`
+	VaultId *string `json:"vault_id,omitempty" xml:"vault_id"`
 }
 
 func (o BatchUpdateMembersRequestBody) String() string {

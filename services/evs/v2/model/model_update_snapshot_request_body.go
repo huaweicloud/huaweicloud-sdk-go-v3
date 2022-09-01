@@ -8,7 +8,7 @@ import (
 
 // This is a auto create Body Object
 type UpdateSnapshotRequestBody struct {
-	Snapshot *UpdateSnapshotOption `json:"snapshot"`
+	Snapshot *UpdateSnapshotOption `json:"snapshot" xml:"snapshot"`
 }
 
 func (o UpdateSnapshotRequestBody) String() string {

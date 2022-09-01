@@ -10,10 +10,10 @@ import (
 type ListCertificatesResponse struct {
 
 	// 证书列表
-	Items *[]CertificateBody `json:"items,omitempty"`
+	Items *[]CertificateBody `json:"items,omitempty" xml:"items"`
 
 	// 证书总数
-	Total          *int32 `json:"total,omitempty"`
+	Total          *int32 `json:"total,omitempty" xml:"total"`
 	HttpStatusCode int    `json:"-"`
 }
 

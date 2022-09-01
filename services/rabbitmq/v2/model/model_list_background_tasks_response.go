@@ -10,10 +10,10 @@ import (
 type ListBackgroundTasksResponse struct {
 
 	// 任务数量。
-	TaskCount *string `json:"task_count,omitempty"`
+	TaskCount *string `json:"task_count,omitempty" xml:"task_count"`
 
 	// 任务列表。
-	Tasks          *[]ListBackgroundTasksRespTasks `json:"tasks,omitempty"`
+	Tasks          *[]ListBackgroundTasksRespTasks `json:"tasks,omitempty" xml:"tasks"`
 	HttpStatusCode int                             `json:"-"`
 }
 

@@ -10,13 +10,13 @@ import (
 type ListApiRuntimeDefinitionV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// API的编号
-	ApiId string `json:"api_id"`
+	ApiId string `json:"api_id" xml:"api_id"`
 
 	// API的发布环境编号
-	EnvId *string `json:"env_id,omitempty"`
+	EnvId *string `json:"env_id,omitempty" xml:"env_id"`
 }
 
 func (o ListApiRuntimeDefinitionV2Request) String() string {

@@ -10,13 +10,13 @@ import (
 type AddNodeList struct {
 
 	// API版本，固定值“v3”。
-	ApiVersion string `json:"apiVersion"`
+	ApiVersion string `json:"apiVersion" xml:"apiVersion"`
 
 	// API类型，固定值“List”。
-	Kind string `json:"kind"`
+	Kind string `json:"kind" xml:"kind"`
 
 	// 纳管节点列表
-	NodeList []AddNode `json:"nodeList"`
+	NodeList []AddNode `json:"nodeList" xml:"nodeList"`
 }
 
 func (o AddNodeList) String() string {

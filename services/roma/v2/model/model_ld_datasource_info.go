@@ -11,37 +11,37 @@ import (
 type LdDatasourceInfo struct {
 
 	// 数据源名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 数据源类型： - oracle：oracle数据源类型 - mysql：mysql数据源类型 - mongodb：mongodb数据源类型 - redis：redis数据源类型 - postgresql：postgresql数据源类型 - hive：hive数据源类型 - mssql：sqlserver数据源类型 - sqlserver：sqlserver数据源类型 - gauss200：gauss200数据源类型 - dws：dws数据源类型 - gauss100：gauss100数据源类型 - zenith：zenith数据源类型
-	Type *LdDatasourceInfoType `json:"type,omitempty"`
+	Type *LdDatasourceInfoType `json:"type,omitempty" xml:"type"`
 
 	// 数据源描述
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 数据源连接字符串
-	Url *string `json:"url,omitempty"`
+	Url *string `json:"url,omitempty" xml:"url"`
 
 	// 用户名
-	User *string `json:"user,omitempty"`
+	User *string `json:"user,omitempty" xml:"user"`
 
 	// 密码。  敏感信息不作为响应返回
-	Password *string `json:"password,omitempty"`
+	Password *string `json:"password,omitempty" xml:"password"`
 
 	// ftp上传路径  预留字段，暂不支持。
-	Remotepath *string `json:"remotepath,omitempty"`
+	Remotepath *string `json:"remotepath,omitempty" xml:"remotepath"`
 
 	// 数据源ID
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 数据源状态： - old：存量数据源 - new：roma数据源
-	Status *string `json:"status,omitempty"`
+	Status *string `json:"status,omitempty" xml:"status"`
 
 	// 数据源创建时间
-	CreatedTime *sdktime.SdkTime `json:"created_time,omitempty"`
+	CreatedTime *sdktime.SdkTime `json:"created_time,omitempty" xml:"created_time"`
 
 	// 数据源更新时间
-	ModifiedTime *sdktime.SdkTime `json:"modified_time,omitempty"`
+	ModifiedTime *sdktime.SdkTime `json:"modified_time,omitempty" xml:"modified_time"`
 }
 
 func (o LdDatasourceInfo) String() string {

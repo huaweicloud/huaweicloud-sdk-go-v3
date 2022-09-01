@@ -10,7 +10,7 @@ import (
 type CancelAssetTranscodeTaskRequest struct {
 
 	// 媒资ID。
-	AssetId string `json:"asset_id"`
+	AssetId string `json:"asset_id" xml:"asset_id"`
 }
 
 func (o CancelAssetTranscodeTaskRequest) String() string {

@@ -10,25 +10,25 @@ import (
 type SlaveRegister struct {
 
 	// cluster ID
-	ClusterId string `json:"cluster_id"`
+	ClusterId string `json:"cluster_id" xml:"cluster_id"`
 
 	// Slave名称
-	SlaveName string `json:"slave_name"`
+	SlaveName string `json:"slave_name" xml:"slave_name"`
 
 	// Slave工作空间
-	WorkDir string `json:"work_dir"`
+	WorkDir string `json:"work_dir" xml:"work_dir"`
 
 	// Slave label
-	Label *string `json:"label,omitempty"`
+	Label *string `json:"label,omitempty" xml:"label"`
 
 	// agent版本
-	Version *string `json:"version,omitempty"`
+	Version *string `json:"version,omitempty" xml:"version"`
 
 	// 是否重试
-	Retry *bool `json:"retry,omitempty"`
+	Retry *bool `json:"retry,omitempty" xml:"retry"`
 
 	// Slave ownerType
-	OwnerType *string `json:"owner_type,omitempty"`
+	OwnerType *string `json:"owner_type,omitempty" xml:"owner_type"`
 }
 
 func (o SlaveRegister) String() string {

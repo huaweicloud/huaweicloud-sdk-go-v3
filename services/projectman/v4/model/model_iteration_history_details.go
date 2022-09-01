@@ -10,13 +10,13 @@ import (
 type IterationHistoryDetails struct {
 
 	// 变更的字段
-	OperateFieldName *string `json:"operate_field_name,omitempty"`
+	OperateFieldName *string `json:"operate_field_name,omitempty" xml:"operate_field_name"`
 
 	// 操作后的值
-	NewValue *string `json:"new_value,omitempty"`
+	NewValue *string `json:"new_value,omitempty" xml:"new_value"`
 
 	// 操作前的值
-	OldValue *string `json:"old_value,omitempty"`
+	OldValue *string `json:"old_value,omitempty" xml:"old_value"`
 }
 
 func (o IterationHistoryDetails) String() string {

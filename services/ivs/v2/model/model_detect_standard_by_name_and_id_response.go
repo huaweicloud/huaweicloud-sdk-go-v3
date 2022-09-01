@@ -8,9 +8,9 @@ import (
 
 // Response Object
 type DetectStandardByNameAndIdResponse struct {
-	Meta *Meta `json:"meta,omitempty"`
+	Meta *Meta `json:"meta,omitempty" xml:"meta"`
 
-	Result         *IvsStandardByNameAndIdResponseBodyResult `json:"result,omitempty"`
+	Result         *IvsStandardByNameAndIdResponseBodyResult `json:"result,omitempty" xml:"result"`
 	HttpStatusCode int                                       `json:"-"`
 }
 

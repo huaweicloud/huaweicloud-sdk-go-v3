@@ -13,16 +13,16 @@ import (
 type UpdateParamsResponse struct {
 
 	// 修改参数是否成功
-	Success *bool `json:"success,omitempty"`
+	Success *bool `json:"success,omitempty" xml:"success"`
 
 	// 是否需要重启
-	ShouldRestart *UpdateParamsResponseShouldRestart `json:"should_restart,omitempty"`
+	ShouldRestart *UpdateParamsResponseShouldRestart `json:"should_restart,omitempty" xml:"should_restart"`
 
 	// 错误码
-	ErrorCode *string `json:"error_code,omitempty"`
+	ErrorCode *string `json:"error_code,omitempty" xml:"error_code"`
 
 	// 错误信息
-	ErrorMsg       *string `json:"error_msg,omitempty"`
+	ErrorMsg       *string `json:"error_msg,omitempty" xml:"error_msg"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -13,19 +13,19 @@ import (
 type Flag struct {
 
 	// 是否开启pci_3ds合规认证   - true：开启   - false：不开启
-	Pci3ds *FlagPci3ds `json:"pci_3ds,omitempty"`
+	Pci3ds *FlagPci3ds `json:"pci_3ds,omitempty" xml:"pci_3ds"`
 
 	// 是否开启pci_dss合规认证   - true：开启   - false：不开启
-	PciDss *FlagPciDss `json:"pci_dss,omitempty"`
+	PciDss *FlagPciDss `json:"pci_dss,omitempty" xml:"pci_dss"`
 
 	// old：代表域名使用的老的cname，new：代表域名使用新的cname
-	Cname *FlagCname `json:"cname,omitempty"`
+	Cname *FlagCname `json:"cname,omitempty" xml:"cname"`
 
 	// 域名是否开启ipv6   - true：支持   - false：不支持
-	IsDualAz *FlagIsDualAz `json:"is_dual_az,omitempty"`
+	IsDualAz *FlagIsDualAz `json:"is_dual_az,omitempty" xml:"is_dual_az"`
 
 	// 域名是否开启ipv6   - true：支持   - false：不支持
-	Ipv6 *FlagIpv6 `json:"ipv6,omitempty"`
+	Ipv6 *FlagIpv6 `json:"ipv6,omitempty" xml:"ipv6"`
 }
 
 func (o Flag) String() string {

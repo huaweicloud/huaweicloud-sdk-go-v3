@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type DeletePredefineTagsRequest struct {
-	Body *ReqDeletePredefineTag `json:"body,omitempty"`
+	Body *ReqDeletePredefineTag `json:"body,omitempty" xml:"body"`
 }
 
 func (o DeletePredefineTagsRequest) String() string {

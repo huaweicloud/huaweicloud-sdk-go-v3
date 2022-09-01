@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type AddSshKeyRequest struct {
-	Body *AddSshKeyRequestBody `json:"body,omitempty"`
+	Body *AddSshKeyRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o AddSshKeyRequest) String() string {

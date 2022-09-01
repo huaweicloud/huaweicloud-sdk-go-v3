@@ -10,25 +10,25 @@ import (
 type OpenRoomSettingReq struct {
 
 	// 直播介绍, 最大不超过500个字符
-	RoomIntroduce *string `json:"roomIntroduce,omitempty"`
+	RoomIntroduce *string `json:"roomIntroduce,omitempty" xml:"roomIntroduce"`
 
 	// 企业Logo（文件id）,不超过32字符
-	CropLogoId *string `json:"cropLogoId,omitempty"`
+	CropLogoId *string `json:"cropLogoId,omitempty" xml:"cropLogoId"`
 
 	// 封面内容(文件id)，不超过32字符
-	CoverPictureId *string `json:"coverPictureId,omitempty"`
+	CoverPictureId *string `json:"coverPictureId,omitempty" xml:"coverPictureId"`
 
 	// 显示观众人数的模式。默认值为real_time - none:不显示 - real_time:实时显示
-	ShowAudienceMode *string `json:"showAudienceMode,omitempty"`
+	ShowAudienceMode *string `json:"showAudienceMode,omitempty" xml:"showAudienceMode"`
 
 	// 智能倍增开关。默认值为Y - Y 开启智能倍增 - N 关闭智能倍增
-	IsRedoubleOpen *string `json:"isRedoubleOpen,omitempty"`
+	IsRedoubleOpen *string `json:"isRedoubleOpen,omitempty" xml:"isRedoubleOpen"`
 
 	// 基础设置人数(直播间没人时显示的人数). 取值范围为[0, 10000]。默认值为0
-	BaseAudienceCount *int32 `json:"baseAudienceCount,omitempty"`
+	BaseAudienceCount *int32 `json:"baseAudienceCount,omitempty" xml:"baseAudienceCount"`
 
 	// 设置倍数(基础人数+真实人数*倍数). 取值范围为[0, 10]，取1位小数。默认值为1.0
-	Multiple *float64 `json:"multiple,omitempty"`
+	Multiple *float64 `json:"multiple,omitempty" xml:"multiple"`
 }
 
 func (o OpenRoomSettingReq) String() string {

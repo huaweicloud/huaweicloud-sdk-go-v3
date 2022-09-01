@@ -8,7 +8,7 @@ import (
 
 // 边缘节点参数
 type Node struct {
-	Node *EdgeNode `json:"node"`
+	Node *EdgeNode `json:"node" xml:"node"`
 }
 
 func (o Node) String() string {

@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RecognizeMainlandTravelPermitRequest struct {
-	Body *MainlandTravelPermitRequestBody `json:"body,omitempty"`
+	Body *MainlandTravelPermitRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o RecognizeMainlandTravelPermitRequest) String() string {

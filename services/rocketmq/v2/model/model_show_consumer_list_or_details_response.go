@@ -10,7 +10,7 @@ import (
 type ShowConsumerListOrDetailsResponse struct {
 
 	// Topic列表。
-	Topics         *[]string `json:"topics,omitempty"`
+	Topics         *[]string `json:"topics,omitempty" xml:"topics"`
 	HttpStatusCode int       `json:"-"`
 }
 

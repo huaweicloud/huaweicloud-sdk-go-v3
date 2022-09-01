@@ -11,14 +11,14 @@ import (
 
 // 修改录制规则
 type RecordRuleReq struct {
-	ObsAddr *RecordObsFileAddr `json:"obs_addr"`
+	ObsAddr *RecordObsFileAddr `json:"obs_addr" xml:"obs_addr"`
 
 	//  录制格式：支持HLS格式和MP4格式（HLS和MP4为大写）。   - 若配置HLS则必须携带HLSRecordConfig参数  - 若配置MP4则需要携带MP4RecordConfig
-	RecordFormats []RecordRuleReqRecordFormats `json:"record_formats"`
+	RecordFormats []RecordRuleReqRecordFormats `json:"record_formats" xml:"record_formats"`
 
-	HlsConfig *HlsRecordConfig `json:"hls_config,omitempty"`
+	HlsConfig *HlsRecordConfig `json:"hls_config,omitempty" xml:"hls_config"`
 
-	Mp4Config *Mp4RecordConfig `json:"mp4_config,omitempty"`
+	Mp4Config *Mp4RecordConfig `json:"mp4_config,omitempty" xml:"mp4_config"`
 }
 
 func (o RecordRuleReq) String() string {

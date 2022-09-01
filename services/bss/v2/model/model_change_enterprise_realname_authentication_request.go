@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ChangeEnterpriseRealnameAuthenticationRequest struct {
-	Body *ChangeEnterpriseRealnameAuthsReq `json:"body,omitempty"`
+	Body *ChangeEnterpriseRealnameAuthsReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o ChangeEnterpriseRealnameAuthenticationRequest) String() string {

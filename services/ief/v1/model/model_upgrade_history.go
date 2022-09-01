@@ -10,22 +10,22 @@ import (
 type UpgradeHistory struct {
 
 	// 节点升级或安装历史版本id
-	Id *int32 `json:"id,omitempty"`
+	Id *int32 `json:"id,omitempty" xml:"id"`
 
 	// 节点升级前节点上edgecore版本号，形式如2.1.0，其中每一位都是整数
-	FromVersion *string `json:"from_version,omitempty"`
+	FromVersion *string `json:"from_version,omitempty" xml:"from_version"`
 
 	// 节点升级或安装后节点行edgecore版本号，形式如2.1.0，其中每一位都是整数
-	ToVersion *string `json:"to_version,omitempty"`
+	ToVersion *string `json:"to_version,omitempty" xml:"to_version"`
 
 	// 节点升级或安装的十位时间戳
-	UpgradeTime *int32 `json:"upgrade_time,omitempty"`
+	UpgradeTime *int32 `json:"upgrade_time,omitempty" xml:"upgrade_time"`
 
 	// 节点升级或安装状态，包含 - install_success：边缘节点安装成功 - upgrade_success：边缘节点升级成功 - install_failed：边缘节点安装失败 - upgrade_failed：边缘节点升级失败 - upgrade_failed_rollback_success：边缘节点升级失败回滚成功 - upgrade_failed_rollback_failed：边缘节点升级失败回滚失败
-	Result *string `json:"result,omitempty"`
+	Result *string `json:"result,omitempty" xml:"result"`
 
 	// 节点升级所消耗的时间
-	DurTime *int32 `json:"dur_time,omitempty"`
+	DurTime *int32 `json:"dur_time,omitempty" xml:"dur_time"`
 }
 
 func (o UpgradeHistory) String() string {

@@ -9,15 +9,15 @@ import (
 type CreateEdgeSite struct {
 
 	// 边缘小站名称，最大支持长度为64个字节。只包含中文字符、英文字母（a-z、A-Z）、数字（0-9）、下划线（_）、中划线（-）
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 边缘小站所属区域ID，最大长度为64个字节。只包含英文字母（a-z、A-Z）、数字（0-9）、下划线（_）、中划线（-）
-	RegionId string `json:"region_id"`
+	RegionId string `json:"region_id" xml:"region_id"`
 
 	// 边缘小站描述，最大支持长度为255个字节，不允许包含<>
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
-	Location *CreateLocation `json:"location"`
+	Location *CreateLocation `json:"location" xml:"location"`
 }
 
 func (o CreateEdgeSite) String() string {

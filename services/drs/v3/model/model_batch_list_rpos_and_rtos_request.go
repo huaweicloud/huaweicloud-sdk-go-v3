@@ -13,9 +13,9 @@ import (
 type BatchListRposAndRtosRequest struct {
 
 	// 请求语言类型
-	XLanguage *BatchListRposAndRtosRequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *BatchListRposAndRtosRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 
-	Body *BatchQueryRpoAndRtoReq `json:"body,omitempty"`
+	Body *BatchQueryRpoAndRtoReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchListRposAndRtosRequest) String() string {

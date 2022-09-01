@@ -10,7 +10,7 @@ import (
 type CreateDatabaseDetailResponses struct {
 
 	// 逻辑库名称。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 }
 
 func (o CreateDatabaseDetailResponses) String() string {

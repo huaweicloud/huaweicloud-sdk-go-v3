@@ -13,12 +13,12 @@ import (
 type TaskInput struct {
 
 	// 作业的输入类型，必填。可选类型有obs（对象存储服务存储的文件），vis（视频接入服务的视频流），url（指定的文件地址或取流地址），edgecamera（绑定在IEF的边缘摄像头），edgerestful（从自定义的流媒体服务器通过Restful接口获取取流地址），vcn（VCN设备）。
-	Type TaskInputType `json:"type"`
+	Type TaskInputType `json:"type" xml:"type"`
 
 	// 作业的输入详情，针对不同的输入类型有不同的配置。创建时允许填写多路输入，但更新时，obs以外其余的输入类型只允许填写一路输入
-	Data []TaskInputData `json:"data"`
+	Data []TaskInputData `json:"data" xml:"data"`
 
-	Vcn *TaskInputVcn `json:"vcn,omitempty"`
+	Vcn *TaskInputVcn `json:"vcn,omitempty" xml:"vcn"`
 }
 
 func (o TaskInput) String() string {

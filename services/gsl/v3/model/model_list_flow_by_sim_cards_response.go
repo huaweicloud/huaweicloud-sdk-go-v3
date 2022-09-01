@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ListFlowBySimCardsResponse struct {
-	Body           *[]SimCardsFlowVo `json:"body,omitempty"`
+	Body           *[]SimCardsFlowVo `json:"body,omitempty" xml:"body"`
 	HttpStatusCode int               `json:"-"`
 }
 

@@ -9,10 +9,10 @@ import (
 type GeoClassificationItem struct {
 
 	// GeoItem的总数量
-	Total *int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty" xml:"total"`
 
 	// GeoItem详细信息
-	Items *[]GeoItem `json:"items,omitempty"`
+	Items *[]GeoItem `json:"items,omitempty" xml:"items"`
 }
 
 func (o GeoClassificationItem) String() string {

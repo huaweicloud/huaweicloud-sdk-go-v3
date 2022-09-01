@@ -10,19 +10,19 @@ import (
 type ProcessInfo struct {
 
 	// 操作名
-	StepName *string `json:"step_name,omitempty"`
+	StepName *string `json:"step_name,omitempty" xml:"step_name"`
 
 	// 操作状态
-	Status *string `json:"status,omitempty"`
+	Status *string `json:"status,omitempty" xml:"status"`
 
 	// 操作详情
-	Detail *string `json:"detail,omitempty"`
+	Detail *string `json:"detail,omitempty" xml:"detail"`
 
 	// 子操作, \"map[string][SubDetail] key:子操作名 value:子操作结果\"
-	SubSteps map[string]SubDetail `json:"sub_steps,omitempty"`
+	SubSteps map[string]SubDetail `json:"sub_steps,omitempty" xml:"sub_steps"`
 
 	// 序列号
-	SerialNum *int64 `json:"serial_num,omitempty"`
+	SerialNum *int64 `json:"serial_num,omitempty" xml:"serial_num"`
 }
 
 func (o ProcessInfo) String() string {

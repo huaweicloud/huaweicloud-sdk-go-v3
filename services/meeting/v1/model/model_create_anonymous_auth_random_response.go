@@ -10,10 +10,10 @@ import (
 type CreateAnonymousAuthRandomResponse struct {
 
 	// 下一跳URL。
-	SiteUrl *string `json:"siteUrl,omitempty"`
+	SiteUrl *string `json:"siteUrl,omitempty" xml:"siteUrl"`
 
 	// 鉴权随机数。
-	Random         *string `json:"random,omitempty"`
+	Random         *string `json:"random,omitempty" xml:"random"`
 	HttpStatusCode int     `json:"-"`
 }
 

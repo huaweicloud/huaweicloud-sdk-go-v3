@@ -10,10 +10,10 @@ import (
 type DeleteTranscodingsTemplateRequest struct {
 
 	// 推流域名
-	Domain string `json:"domain"`
+	Domain string `json:"domain" xml:"domain"`
 
 	// 应用名称
-	AppName string `json:"app_name"`
+	AppName string `json:"app_name" xml:"app_name"`
 }
 
 func (o DeleteTranscodingsTemplateRequest) String() string {

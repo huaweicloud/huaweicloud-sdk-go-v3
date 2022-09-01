@@ -8,9 +8,9 @@ import (
 
 // 函数异步调用目标参数配置。
 type FuncAsyncDestinationConfig struct {
-	OnSuccess *FuncDestinationConfig `json:"on_success,omitempty"`
+	OnSuccess *FuncDestinationConfig `json:"on_success,omitempty" xml:"on_success"`
 
-	OnFailure *FuncDestinationConfig `json:"on_failure,omitempty"`
+	OnFailure *FuncDestinationConfig `json:"on_failure,omitempty" xml:"on_failure"`
 }
 
 func (o FuncAsyncDestinationConfig) String() string {

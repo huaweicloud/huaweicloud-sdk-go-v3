@@ -10,16 +10,16 @@ import (
 type ShowMonitorItemViewConfigResponse struct {
 
 	// 标题
-	Title *string `json:"title,omitempty"`
+	Title *string `json:"title,omitempty" xml:"title"`
 
 	// 采集器名称
-	CollectorName *string `json:"collector_name,omitempty"`
+	CollectorName *string `json:"collector_name,omitempty" xml:"collector_name"`
 
 	// 视图的列表，内部每个List代表的是一行图表
-	ViewRowList *[]ViewRow `json:"view_row_list,omitempty"`
+	ViewRowList *[]ViewRow `json:"view_row_list,omitempty" xml:"view_row_list"`
 
 	// 类型
-	Style          *string `json:"style,omitempty"`
+	Style          *string `json:"style,omitempty" xml:"style"`
 	HttpStatusCode int     `json:"-"`
 }
 

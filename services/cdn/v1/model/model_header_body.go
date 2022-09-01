@@ -7,7 +7,7 @@ import (
 )
 
 type HeaderBody struct {
-	Headers *HeaderMap `json:"headers,omitempty"`
+	Headers *HeaderMap `json:"headers,omitempty" xml:"headers"`
 }
 
 func (o HeaderBody) String() string {

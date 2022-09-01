@@ -10,9 +10,9 @@ import (
 type UpdatePublicBandWidthRequest struct {
 
 	// 指定修改公网访问带宽集群ID。
-	ClusterId string `json:"cluster_id"`
+	ClusterId string `json:"cluster_id" xml:"cluster_id"`
 
-	Body *BindPublicReqEip `json:"body,omitempty"`
+	Body *BindPublicReqEipReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdatePublicBandWidthRequest) String() string {

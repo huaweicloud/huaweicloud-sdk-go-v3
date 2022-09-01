@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type UpdateNodeByDeviceIdResponse struct {
-	UpdateNodes    *NodeUpdateByDevice `json:"update_nodes,omitempty"`
+	UpdateNodes    *NodeUpdateByDevice `json:"update_nodes,omitempty" xml:"update_nodes"`
 	HttpStatusCode int                 `json:"-"`
 }
 

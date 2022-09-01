@@ -10,13 +10,13 @@ import (
 type SetSensitiveSlowLogRequest struct {
 
 	// 语言
-	XLanguage *string `json:"X-Language,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
 
 	// 实例ID，可以调用“查询实例列表”接口获取。如果未申请实例，可以调用“创建实例”接口创建。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 开启或关闭慢日志敏感信息明文，取值为on或off。
-	Status string `json:"status"`
+	Status string `json:"status" xml:"status"`
 }
 
 func (o SetSensitiveSlowLogRequest) String() string {

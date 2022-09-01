@@ -10,10 +10,10 @@ import (
 type ServerSystemTag struct {
 
 	// 系统标签的Key值。
-	Key *string `json:"key,omitempty"`
+	Key *string `json:"key,omitempty" xml:"key"`
 
 	// 系统标签的value值。
-	Value *string `json:"value,omitempty"`
+	Value *string `json:"value,omitempty" xml:"value"`
 }
 
 func (o ServerSystemTag) String() string {

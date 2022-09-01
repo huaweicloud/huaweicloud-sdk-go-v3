@@ -10,10 +10,10 @@ import (
 type AllowIpRangesOption struct {
 
 	// 描述信息。
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// IP地址区间,例如:0.0.0.0-255.255.255.255。
-	IpRange string `json:"ip_range"`
+	IpRange string `json:"ip_range" xml:"ip_range"`
 }
 
 func (o AllowIpRangesOption) String() string {

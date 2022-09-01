@@ -10,7 +10,7 @@ import (
 type DeleteVpcRouteRequest struct {
 
 	// 路由ID
-	RouteId string `json:"route_id"`
+	RouteId string `json:"route_id" xml:"route_id"`
 }
 
 func (o DeleteVpcRouteRequest) String() string {

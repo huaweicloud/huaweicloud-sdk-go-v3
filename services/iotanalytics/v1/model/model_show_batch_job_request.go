@@ -10,7 +10,7 @@ import (
 type ShowBatchJobRequest struct {
 
 	// 数据开发任务ID。
-	JobId string `json:"job_id"`
+	JobId string `json:"job_id" xml:"job_id"`
 }
 
 func (o ShowBatchJobRequest) String() string {

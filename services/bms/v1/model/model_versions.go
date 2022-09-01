@@ -12,22 +12,22 @@ import (
 type Versions struct {
 
 	// API版本ID
-	Id *VersionsId `json:"id,omitempty"`
+	Id *VersionsId `json:"id,omitempty" xml:"id"`
 
 	// API的url地址
-	Links *[]VersionLinks `json:"links,omitempty"`
+	Links *[]VersionLinks `json:"links,omitempty" xml:"links"`
 
 	// API支持的最小微版本号
-	MinVersion *string `json:"min_version,omitempty"`
+	MinVersion *string `json:"min_version,omitempty" xml:"min_version"`
 
 	// 这个是API版本的状态。可以是：CURRENT这是使用的API的首选版本；SUPPORTED：这是一个较老的，但仍然支持的API版本；DEPRECATED：一个被废弃的API版本，该版本将被删除
-	Status *VersionsStatus `json:"status,omitempty"`
+	Status *VersionsStatus `json:"status,omitempty" xml:"status"`
 
 	// API支持的最大微版本号
-	Version *string `json:"version,omitempty"`
+	Version *string `json:"version,omitempty" xml:"version"`
 
 	// API版本发布时间
-	Updated *sdktime.SdkTime `json:"updated,omitempty"`
+	Updated *sdktime.SdkTime `json:"updated,omitempty" xml:"updated"`
 }
 
 func (o Versions) String() string {

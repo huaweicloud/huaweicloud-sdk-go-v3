@@ -13,10 +13,10 @@ import (
 type AutoRecordModeReq struct {
 
 	// 录制模式。 - AUTO_RECORD_OFF：关闭自动录制。 - AUTO_INDIVIDUAL_RECORD：开启单流自动录制，此时record_rule_id必须非空。
-	Mode AutoRecordModeReqMode `json:"mode"`
+	Mode AutoRecordModeReqMode `json:"mode" xml:"mode"`
 
 	// 录制规则id。
-	RecordRuleId *string `json:"record_rule_id,omitempty"`
+	RecordRuleId *string `json:"record_rule_id,omitempty" xml:"record_rule_id"`
 }
 
 func (o AutoRecordModeReq) String() string {

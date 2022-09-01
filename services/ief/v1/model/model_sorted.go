@@ -10,10 +10,10 @@ import (
 type Sorted struct {
 
 	// 按key值对请求内容进行排序
-	Key *string `json:"key,omitempty"`
+	Key *string `json:"key,omitempty" xml:"key"`
 
 	// 是否采用倒序
-	Reverse *bool `json:"reverse,omitempty"`
+	Reverse *bool `json:"reverse,omitempty" xml:"reverse"`
 }
 
 func (o Sorted) String() string {

@@ -10,10 +10,10 @@ import (
 type ModifyIpWhitelistBody struct {
 
 	// 是否启用白名单（true/false）。
-	EnableWhitelist bool `json:"enable_whitelist"`
+	EnableWhitelist bool `json:"enable_whitelist" xml:"enable_whitelist"`
 
 	// IP白名单分组列表。
-	Whitelist []Whitelist `json:"whitelist"`
+	Whitelist []Whitelist `json:"whitelist" xml:"whitelist"`
 }
 
 func (o ModifyIpWhitelistBody) String() string {

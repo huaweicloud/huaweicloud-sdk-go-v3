@@ -9,10 +9,10 @@ import (
 type RestoreInstanceBody struct {
 
 	// 备份记录ID。
-	BackupId string `json:"backup_id"`
+	BackupId string `json:"backup_id" xml:"backup_id"`
 
 	// 恢复缓存实例的备注信息。
-	Remark *string `json:"remark,omitempty"`
+	Remark *string `json:"remark,omitempty" xml:"remark"`
 }
 
 func (o RestoreInstanceBody) String() string {

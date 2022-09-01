@@ -10,7 +10,7 @@ import (
 type CreateTaskResponse struct {
 
 	// 检查任务id
-	TaskId         *string `json:"task_id,omitempty"`
+	TaskId         *string `json:"task_id,omitempty" xml:"task_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

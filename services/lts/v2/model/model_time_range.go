@@ -10,19 +10,19 @@ import (
 type TimeRange struct {
 
 	// 时区信息，默认为“UTC”。
-	SqlTimeZone *string `json:"sql_time_zone,omitempty"`
+	SqlTimeZone *string `json:"sql_time_zone,omitempty" xml:"sql_time_zone"`
 
 	// 搜索起始时间（UTC时间，毫秒级）。
-	StartTime string `json:"start_time"`
+	StartTime string `json:"start_time" xml:"start_time"`
 
 	// 搜索起始时间（UTC时间，毫秒级）。
-	EndTime string `json:"end_time"`
+	EndTime string `json:"end_time" xml:"end_time"`
 
 	// 搜索是否包含起始时间点，默认为false。
-	StartTimeGt *bool `json:"start_time_gt,omitempty"`
+	StartTimeGt *bool `json:"start_time_gt,omitempty" xml:"start_time_gt"`
 
 	// 搜索是否包含结束时间点，默认为false。
-	EndTimeLt *bool `json:"end_time_lt,omitempty"`
+	EndTimeLt *bool `json:"end_time_lt,omitempty" xml:"end_time_lt"`
 }
 
 func (o TimeRange) String() string {

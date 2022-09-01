@@ -9,10 +9,10 @@ import (
 type UpdateApplicationEndpointRequestBody struct {
 
 	// 设备是否可用，值为true或false字符串。
-	Enabled *string `json:"enabled,omitempty"`
+	Enabled *string `json:"enabled,omitempty" xml:"enabled"`
 
 	// 用户自定义数据，最大长度支持UTF-8编码后2048字节。
-	UserData *string `json:"user_data,omitempty"`
+	UserData *string `json:"user_data,omitempty" xml:"user_data"`
 }
 
 func (o UpdateApplicationEndpointRequestBody) String() string {

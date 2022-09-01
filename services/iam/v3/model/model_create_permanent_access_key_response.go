@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type CreatePermanentAccessKeyResponse struct {
-	Credential     *CreateCredentialResult `json:"credential,omitempty"`
+	Credential     *CreateCredentialResult `json:"credential,omitempty" xml:"credential"`
 	HttpStatusCode int                     `json:"-"`
 }
 

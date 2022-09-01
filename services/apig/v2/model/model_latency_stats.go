@@ -9,10 +9,10 @@ import (
 type LatencyStats struct {
 
 	// 最大延时  单位：ms
-	MaxLatency *int32 `json:"max_latency,omitempty"`
+	MaxLatency *int32 `json:"max_latency,omitempty" xml:"max_latency"`
 
 	// 平均延时  单位：ms
-	AvgLatency *float32 `json:"avg_latency,omitempty"`
+	AvgLatency *float32 `json:"avg_latency,omitempty" xml:"avg_latency"`
 }
 
 func (o LatencyStats) String() string {

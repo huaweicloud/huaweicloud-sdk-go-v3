@@ -10,16 +10,16 @@ import (
 type ListRangeQueryAomPromPostRequest struct {
 
 	// PromQL表达式(参考https://prometheus.io/docs/prometheus/latest/querying/basics/)。
-	Query string `json:"query"`
+	Query string `json:"query" xml:"query"`
 
 	// 起始时间戳(Unix时间戳格式，单位：秒）。
-	Start string `json:"start"`
+	Start string `json:"start" xml:"start"`
 
 	// 结束时间戳(Unix时间戳格式，单位：秒）。
-	End string `json:"end"`
+	End string `json:"end" xml:"end"`
 
 	// 查询时间步长，时间区内每step秒执行一次。
-	Step string `json:"step"`
+	Step string `json:"step" xml:"step"`
 }
 
 func (o ListRangeQueryAomPromPostRequest) String() string {

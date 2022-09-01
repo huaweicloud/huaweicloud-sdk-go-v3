@@ -9,7 +9,7 @@ import (
 type TopologyTree struct {
 
 	// 拓扑树节点
-	Tree *[]TreeNode `json:"tree,omitempty"`
+	Tree *[]TreeNode `json:"tree,omitempty" xml:"tree"`
 }
 
 func (o TopologyTree) String() string {

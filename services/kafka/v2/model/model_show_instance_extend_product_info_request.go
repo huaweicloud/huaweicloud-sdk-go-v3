@@ -13,13 +13,13 @@ import (
 type ShowInstanceExtendProductInfoRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 产品的类型。 - advanced: 专享版 - platinum: 铂金版 - dec: 专属云版 - exp: 体验版
-	Type ShowInstanceExtendProductInfoRequestType `json:"type"`
+	Type ShowInstanceExtendProductInfoRequestType `json:"type" xml:"type"`
 
 	// 消息引擎的类型。当前支持的类型为kafka。
-	Engine ShowInstanceExtendProductInfoRequestEngine `json:"engine"`
+	Engine ShowInstanceExtendProductInfoRequestEngine `json:"engine" xml:"engine"`
 }
 
 func (o ShowInstanceExtendProductInfoRequest) String() string {

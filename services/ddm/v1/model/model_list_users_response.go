@@ -10,19 +10,19 @@ import (
 type ListUsersResponse struct {
 
 	// DDM实例帐号相关信息的集合。
-	Users *[]GetUsersListDetailResponses `json:"users,omitempty"`
+	Users *[]GetUsersListDetailResponses `json:"users,omitempty" xml:"users"`
 
 	// 当前页码
-	PageNo *int32 `json:"page_no,omitempty"`
+	PageNo *int32 `json:"page_no,omitempty" xml:"page_no"`
 
 	// 当前页码的数据条数
-	PageSize *int32 `json:"page_size,omitempty"`
+	PageSize *int32 `json:"page_size,omitempty" xml:"page_size"`
 
 	// 总条数
-	TotalRecord *int32 `json:"total_record,omitempty"`
+	TotalRecord *int32 `json:"total_record,omitempty" xml:"total_record"`
 
 	// 总页数
-	TotalPage      *int32 `json:"total_page,omitempty"`
+	TotalPage      *int32 `json:"total_page,omitempty" xml:"total_page"`
 	HttpStatusCode int    `json:"-"`
 }
 

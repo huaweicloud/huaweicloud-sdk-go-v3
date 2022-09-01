@@ -13,43 +13,43 @@ import (
 type ShowQueueResponse struct {
 
 	// 队列ID。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 队列的名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 创建队列的时间。
-	Created *int64 `json:"created,omitempty"`
+	Created *int64 `json:"created,omitempty" xml:"created"`
 
 	// 队列的描述信息。
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 队列类型。
-	QueueMode *ShowQueueResponseQueueMode `json:"queue_mode,omitempty"`
+	QueueMode *ShowQueueResponseQueueMode `json:"queue_mode,omitempty" xml:"queue_mode"`
 
 	// 消息在队列中允许保留的时长（单位分钟）。
-	Reservation *int32 `json:"reservation,omitempty"`
+	Reservation *int32 `json:"reservation,omitempty" xml:"reservation"`
 
 	// 队列中允许的最大消息大小（单位Byte）。
-	MaxMsgSizeByte *int32 `json:"max_msg_size_byte,omitempty"`
+	MaxMsgSizeByte *int32 `json:"max_msg_size_byte,omitempty" xml:"max_msg_size_byte"`
 
 	// 队列的消息总数。
-	ProducedMessages *int32 `json:"produced_messages,omitempty"`
+	ProducedMessages *int32 `json:"produced_messages,omitempty" xml:"produced_messages"`
 
 	// 该队列是否开启死信消息。仅当include_deadletter为true时，才有该响应参数。 - enable：表示开启。 - disable：表示不开启。
-	RedrivePolicy *ShowQueueResponseRedrivePolicy `json:"redrive_policy,omitempty"`
+	RedrivePolicy *ShowQueueResponseRedrivePolicy `json:"redrive_policy,omitempty" xml:"redrive_policy"`
 
 	// 最大确认消费失败的次数，当达到最大确认失败次数后，DMS会将该条消息转存到死信队列中。 仅当include_deadletter为true时，才有该响应参数。
-	MaxConsumeCount *int32 `json:"max_consume_count,omitempty"`
+	MaxConsumeCount *int32 `json:"max_consume_count,omitempty" xml:"max_consume_count"`
 
 	// 该队列下的消费组数量。
-	GroupCount *int32 `json:"group_count,omitempty"`
+	GroupCount *int32 `json:"group_count,omitempty" xml:"group_count"`
 
 	// 仅Kafka队列才有该参数。
-	KafkaTopic *string `json:"kafka_topic,omitempty"`
+	KafkaTopic *string `json:"kafka_topic,omitempty" xml:"kafka_topic"`
 
 	// 创建队列的时间。
-	EffDate        *int64 `json:"eff_date,omitempty"`
+	EffDate        *int64 `json:"eff_date,omitempty" xml:"eff_date"`
 	HttpStatusCode int    `json:"-"`
 }
 

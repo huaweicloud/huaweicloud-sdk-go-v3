@@ -10,9 +10,9 @@ import (
 type StartLogsRequest struct {
 
 	// 指定开启日志的集群ID。
-	ClusterId string `json:"cluster_id"`
+	ClusterId string `json:"cluster_id" xml:"cluster_id"`
 
-	Body *StartLogsReq `json:"body,omitempty"`
+	Body *StartLogsReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o StartLogsRequest) String() string {

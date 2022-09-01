@@ -8,7 +8,7 @@ import (
 
 //
 type KeystoneCreateUserRequestBody struct {
-	User *KeystoneCreateUserOption `json:"user"`
+	User *KeystoneCreateUserOption `json:"user" xml:"user"`
 }
 
 func (o KeystoneCreateUserRequestBody) String() string {

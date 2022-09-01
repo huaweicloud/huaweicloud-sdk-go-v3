@@ -9,10 +9,10 @@ import (
 type PageInfoDto struct {
 
 	// 页码
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 每页记录数
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 }
 
 func (o PageInfoDto) String() string {

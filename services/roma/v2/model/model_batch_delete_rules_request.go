@@ -10,9 +10,9 @@ import (
 type BatchDeleteRulesRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *BatchDeleteRulesRequestBody `json:"body,omitempty"`
+	Body *BatchDeleteRulesRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchDeleteRulesRequest) String() string {

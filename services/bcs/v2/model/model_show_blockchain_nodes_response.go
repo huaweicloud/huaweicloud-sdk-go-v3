@@ -10,7 +10,7 @@ import (
 type ShowBlockchainNodesResponse struct {
 
 	// key:组织名，value：组织详细信息
-	NodeOrgs       map[string]Org `json:"node_orgs,omitempty"`
+	NodeOrgs       map[string]Org `json:"node_orgs,omitempty" xml:"node_orgs"`
 	HttpStatusCode int            `json:"-"`
 }
 

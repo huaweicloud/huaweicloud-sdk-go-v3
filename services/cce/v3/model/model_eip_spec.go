@@ -7,7 +7,7 @@ import (
 )
 
 type EipSpec struct {
-	Bandwidth *EipSpecBandwidth `json:"bandwidth,omitempty"`
+	Bandwidth *EipSpecBandwidth `json:"bandwidth,omitempty" xml:"bandwidth"`
 }
 
 func (o EipSpec) String() string {

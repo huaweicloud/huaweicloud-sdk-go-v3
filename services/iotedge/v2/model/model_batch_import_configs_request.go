@@ -10,12 +10,12 @@ import (
 type BatchImportConfigsRequest struct {
 
 	// 边缘节点ID
-	NodeId string `json:"node_id"`
+	NodeId string `json:"node_id" xml:"node_id"`
 
 	// 边侧第三方应用的模块ID
-	IaId string `json:"ia_id"`
+	IaId string `json:"ia_id" xml:"ia_id"`
 
-	Body *BatchImportConfigsRequestBody `json:"body,omitempty"`
+	Body *BatchImportConfigsRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchImportConfigsRequest) String() string {

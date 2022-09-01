@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type UpdateEnterpriseProjectResponse struct {
-	EnterpriseProject *EpDetail `json:"enterprise_project,omitempty"`
+	EnterpriseProject *EpDetail `json:"enterprise_project,omitempty" xml:"enterprise_project"`
 	HttpStatusCode    int       `json:"-"`
 }
 

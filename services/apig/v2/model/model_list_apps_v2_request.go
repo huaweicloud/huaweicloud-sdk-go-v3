@@ -10,31 +10,31 @@ import (
 type ListAppsV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 偏移量，表示从此偏移量开始查询，偏移量小于0时，自动转换为0
-	Offset *int64 `json:"offset,omitempty"`
+	Offset *int64 `json:"offset,omitempty" xml:"offset"`
 
 	// 每页显示的条目数量
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// APP编号
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// APP名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// APP状态
-	Status *int32 `json:"status,omitempty"`
+	Status *int32 `json:"status,omitempty" xml:"status"`
 
 	// APP的KEY
-	AppKey *string `json:"app_key,omitempty"`
+	AppKey *string `json:"app_key,omitempty" xml:"app_key"`
 
 	// APP的创建者。 - USER：用户自行创建 - MARKET：云市场分配
-	Creator *string `json:"creator,omitempty"`
+	Creator *string `json:"creator,omitempty" xml:"creator"`
 
 	// 指定需要精确匹配查找的参数名称，目前仅支持name
-	PreciseSearch *string `json:"precise_search,omitempty"`
+	PreciseSearch *string `json:"precise_search,omitempty" xml:"precise_search"`
 }
 
 func (o ListAppsV2Request) String() string {

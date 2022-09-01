@@ -13,115 +13,115 @@ import (
 type ListImagesRequest struct {
 
 	// 镜像类型，目前支持以下类型： 公共镜像：gold 私有镜像：private 共享镜像：shared
-	Imagetype *ListImagesRequestImagetype `json:"__imagetype,omitempty"`
+	Imagetype *ListImagesRequestImagetype `json:"__imagetype,omitempty" xml:"__imagetype"`
 
 	// 镜像是否可用，取值为true，扩展接口会默认为true，普通用户只能查询取值为true的镜像。
-	Isregistered *ListImagesRequestIsregistered `json:"__isregistered,omitempty"`
+	Isregistered *ListImagesRequestIsregistered `json:"__isregistered,omitempty" xml:"__isregistered"`
 
 	// 操作系统位数，一般取值为32或者64。
-	OsBit *ListImagesRequestOsBit `json:"__os_bit,omitempty"`
+	OsBit *ListImagesRequestOsBit `json:"__os_bit,omitempty" xml:"__os_bit"`
 
 	// 镜像系统类型，取值为Linux，Windows，Other。
-	OsType *ListImagesRequestOsType `json:"__os_type,omitempty"`
+	OsType *ListImagesRequestOsType `json:"__os_type,omitempty" xml:"__os_type"`
 
 	// 镜像平台分类
-	Platform *ListImagesRequestPlatform `json:"__platform,omitempty"`
+	Platform *ListImagesRequestPlatform `json:"__platform,omitempty" xml:"__platform"`
 
 	// 表示该镜像支持密集存储。如果镜像支持密集存储性能，则值为true，否则无需增加该属性。
-	SupportDiskintensive *string `json:"__support_diskintensive,omitempty"`
+	SupportDiskintensive *string `json:"__support_diskintensive,omitempty" xml:"__support_diskintensive"`
 
 	// 表示该镜像支持高计算性能。如果镜像支持高计算性能，则值为true，否则无需增加该属性。
-	SupportHighperformance *string `json:"__support_highperformance,omitempty"`
+	SupportHighperformance *string `json:"__support_highperformance,omitempty" xml:"__support_highperformance"`
 
 	// 如果镜像支持KVM，取值为true，否则无需增加该属性。
-	SupportKvm *string `json:"__support_kvm,omitempty"`
+	SupportKvm *string `json:"__support_kvm,omitempty" xml:"__support_kvm"`
 
 	// 表示该镜像是支持KVM虚拟化平台下的GPU类型，如果不支持KVM虚拟机下GPU类型，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存。
-	SupportKvmGpuType *string `json:"__support_kvm_gpu_type,omitempty"`
+	SupportKvmGpuType *string `json:"__support_kvm_gpu_type,omitempty" xml:"__support_kvm_gpu_type"`
 
 	// 如果镜像支持KVM虚拟化下Infiniband网卡类型，取值为true。否则，无需添加该属性。该属性与“__support_xen”属性不共存。
-	SupportKvmInfiniband *string `json:"__support_kvm_infiniband,omitempty"`
+	SupportKvmInfiniband *string `json:"__support_kvm_infiniband,omitempty" xml:"__support_kvm_infiniband"`
 
 	// 表示该镜像支持超大内存。如果镜像支持超大内存，取值为true，否则无需增加该属性。
-	SupportLargememory *string `json:"__support_largememory,omitempty"`
+	SupportLargememory *string `json:"__support_largememory,omitempty" xml:"__support_largememory"`
 
 	// 如果镜像支持XEN，取值为true，否则无需增加该属性。
-	SupportXen *string `json:"__support_xen,omitempty"`
+	SupportXen *string `json:"__support_xen,omitempty" xml:"__support_xen"`
 
 	// 表示该镜像是支持XEN虚拟化平台下的GPU优化类型，如果不支持XEN虚拟化下GPU类型，无需添加该属性 。该属性与“__support_xen”和“__support_kvm”属性不共存。
-	SupportXenGpuType *string `json:"__support_xen_gpu_type,omitempty"`
+	SupportXenGpuType *string `json:"__support_xen_gpu_type,omitempty" xml:"__support_xen_gpu_type"`
 
 	// 如果镜像支持XEN虚拟化下HANA类型，取值为true。否则，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存。
-	SupportXenHana *string `json:"__support_xen_hana,omitempty"`
+	SupportXenHana *string `json:"__support_xen_hana,omitempty" xml:"__support_xen_hana"`
 
 	// 容器类型
-	ContainerFormat *string `json:"container_format,omitempty"`
+	ContainerFormat *string `json:"container_format,omitempty" xml:"container_format"`
 
 	// 镜像格式，目前支持vhd，zvhd、raw，qcow2,zvhd2。默认值是vhd。
-	DiskFormat *ListImagesRequestDiskFormat `json:"disk_format,omitempty"`
+	DiskFormat *ListImagesRequestDiskFormat `json:"disk_format,omitempty" xml:"disk_format"`
 
 	// 表示查询某个企业项目下的镜像。 取值为0，表示查询属于default企业项目下的镜像。 取值为UUID，表示查询属于该UUID对应的企业项目下的镜像。取值为all_granted_eps，表示查询当前用户所有企业项目下的镜像。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
 
 	// 镜像ID
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 用于分页，表示查询几条镜像记录，取值为整数，默认取值为500。
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 用于分页，表示从哪个镜像开始查询，取值为镜像ID。
-	Marker *string `json:"marker,omitempty"`
+	Marker *string `json:"marker,omitempty" xml:"marker"`
 
 	// 成员状态。目前取值有accepted、rejected、pending。accepted表示已经接受共享的镜像，rejected表示已经拒绝了其他用户共享的镜像，pending表示需要确认的其他用户的共享镜像。需要在查询时设置“visibility”参数为“shared”。
-	MemberStatus *ListImagesRequestMemberStatus `json:"member_status,omitempty"`
+	MemberStatus *ListImagesRequestMemberStatus `json:"member_status,omitempty" xml:"member_status"`
 
 	// 镜像运行需要的最小磁盘，单位为GB 。取值为40～1024GB。
-	MinDisk *int32 `json:"min_disk,omitempty"`
+	MinDisk *int32 `json:"min_disk,omitempty" xml:"min_disk"`
 
 	// 镜像运行需要的最小内存，单位为MB。参数取值依据弹性云服务器的规格限制，一般设置为0。
-	MinRam *int32 `json:"min_ram,omitempty"`
+	MinRam *int32 `json:"min_ram,omitempty" xml:"min_ram"`
 
 	// 镜像名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 镜像属于哪个租户
-	Owner *string `json:"owner,omitempty"`
+	Owner *string `json:"owner,omitempty" xml:"owner"`
 
 	// 镜像是否是受保护，取值为true/false，一般查询公共镜像时候取值为true，查询私有镜像可以不指定。
-	Protected *bool `json:"protected,omitempty"`
+	Protected *bool `json:"protected,omitempty" xml:"protected"`
 
 	// 用于排序，表示升序还是降序，取值为asc和desc。与sort_key一起组合使用，默认为降序desc。
-	SortDir *ListImagesRequestSortDir `json:"sort_dir,omitempty"`
+	SortDir *ListImagesRequestSortDir `json:"sort_dir,omitempty" xml:"sort_dir"`
 
 	// 用于排序，表示按照哪个字段排序。取值为镜像属性name，container_format，disk_format，status ，id，size字段，默认为创建时间。
-	SortKey *ListImagesRequestSortKey `json:"sort_key,omitempty"`
+	SortKey *ListImagesRequestSortKey `json:"sort_key,omitempty" xml:"sort_key"`
 
 	// 镜像状态。取值如下： queued：表示镜像元数据已经创建成功，等待上传镜像文件。 saving：表示镜像正在上传文件到后端存储。 deleted：表示镜像已经删除。 killed：表示镜像上传错误。 active：表示镜像可以正常使用。
-	Status *ListImagesRequestStatus `json:"status,omitempty"`
+	Status *ListImagesRequestStatus `json:"status,omitempty" xml:"status"`
 
 	// 标签，用户为镜像增加自定义标签后可以通过该参数过滤查询。
-	Tag *string `json:"tag,omitempty"`
+	Tag *string `json:"tag,omitempty" xml:"tag"`
 
 	// 镜像使用环境类型：FusionCompute，Ironic，DataImage。如果弹性云服务器镜像，则取值为FusionCompute，如果是数据卷镜像则取值是DataImage，如果是裸金属服务器镜像，则取值是Ironic。
-	VirtualEnvType *ListImagesRequestVirtualEnvType `json:"virtual_env_type,omitempty"`
+	VirtualEnvType *ListImagesRequestVirtualEnvType `json:"virtual_env_type,omitempty" xml:"virtual_env_type"`
 
 	// 是否被其他租户可见，取值为public或private
-	Visibility *ListImagesRequestVisibility `json:"visibility,omitempty"`
+	Visibility *ListImagesRequestVisibility `json:"visibility,omitempty" xml:"visibility"`
 
 	// 请求的发生时间,格式为YYYYMMDDTHHMMSSZ。取值为当前系统的GMT时间。使用AK/SK认证时该字段必选
-	XSdkDate *string `json:"X-Sdk-Date,omitempty"`
+	XSdkDate *string `json:"X-Sdk-Date,omitempty" xml:"X-Sdk-Date"`
 
 	// 用于通过云服务器规格过滤出可用公共镜像，取值为规格ID。 当前仅支持通过单个规格进行过滤。
-	FlavorId *string `json:"flavor_id,omitempty"`
+	FlavorId *string `json:"flavor_id,omitempty" xml:"flavor_id"`
 
 	// 镜像创建时间。支持按照时间点过滤查询，取值格式为“操作符:UTC时间”。 其中操作符支持如下几种： gt：大于 gte：大于等于 lt：小于 lte：小于等于 eq：等于 neq：不等于 时间格式支持：yyyy-MM-ddThh:mm:ssZ或者yyyy-MM-dd hh:mm:ss 例如，查询创建时间在2018-10-28 10:00:00之前的镜像，可以通过如下条件过滤： created_at=gt:2018-10-28T10:00:00Z
-	CreatedAt *string `json:"created_at,omitempty"`
+	CreatedAt *string `json:"created_at,omitempty" xml:"created_at"`
 
 	// 镜像修改时间。支持按照时间点过滤查询，取值格式为“ 操作符:UTC时间”。 其中操作符支持如下几种： gt：大于 gte：大于等于 lt：小于 lte：小于等于 eq：等于 neq：不等于 时间格式支持：yyyy-MM-ddThh:mm:ssZ或者yyyy-MM-dd hh:mm:ss 例如，查询修改时间在2018-10-28 10:00:00之前的镜像，可以通过如下条件过滤： updated_at=gt:2018-10-28T10:00:00Z
-	UpdatedAt *string `json:"updated_at,omitempty"`
+	UpdatedAt *string `json:"updated_at,omitempty" xml:"updated_at"`
 
 	// 镜像架构类型。取值包括： x86 arm
-	Architecture *ListImagesRequestArchitecture `json:"architecture,omitempty"`
+	Architecture *ListImagesRequestArchitecture `json:"architecture,omitempty" xml:"architecture"`
 }
 
 func (o ListImagesRequest) String() string {

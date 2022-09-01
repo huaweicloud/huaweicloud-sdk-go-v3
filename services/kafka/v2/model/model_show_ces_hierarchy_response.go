@@ -10,19 +10,19 @@ import (
 type ShowCesHierarchyResponse struct {
 
 	// 监控维度。
-	Dimensions *[]ShowCeshierarchyRespDimensions `json:"dimensions,omitempty"`
+	Dimensions *[]ShowCeshierarchyRespDimensions `json:"dimensions,omitempty" xml:"dimensions"`
 
 	// 实例信息。
-	InstanceIds *[]ShowCeshierarchyRespInstanceIds `json:"instance_ids,omitempty"`
+	InstanceIds *[]ShowCeshierarchyRespInstanceIds `json:"instance_ids,omitempty" xml:"instance_ids"`
 
 	// 节点信息。
-	Nodes *[]ShowCeshierarchyRespNodes `json:"nodes,omitempty"`
+	Nodes *[]ShowCeshierarchyRespNodes `json:"nodes,omitempty" xml:"nodes"`
 
 	// 队列信息。
-	Queues *[]ShowCeshierarchyRespQueues `json:"queues,omitempty"`
+	Queues *[]ShowCeshierarchyRespQueues `json:"queues,omitempty" xml:"queues"`
 
 	// 消费组信息。
-	Groups         *[]ShowCeshierarchyRespGroups `json:"groups,omitempty"`
+	Groups         *[]ShowCeshierarchyRespGroups `json:"groups,omitempty" xml:"groups"`
 	HttpStatusCode int                           `json:"-"`
 }
 

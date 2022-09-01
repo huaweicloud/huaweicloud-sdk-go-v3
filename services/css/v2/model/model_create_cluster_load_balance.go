@@ -10,10 +10,10 @@ import (
 type CreateClusterLoadBalance struct {
 
 	// 是否开启内网域名。 - true： 开启内网域名。 - false： 关闭内网域名。
-	EndpointWithDnsName bool `json:"endpointWithDnsName"`
+	EndpointWithDnsName bool `json:"endpointWithDnsName" xml:"endpointWithDnsName"`
 
 	// 访问控制。
-	VpcPermisssions *[]string `json:"vpcPermisssions,omitempty"`
+	VpcPermisssions *[]string `json:"vpcPermisssions,omitempty" xml:"vpcPermisssions"`
 }
 
 func (o CreateClusterLoadBalance) String() string {

@@ -10,7 +10,7 @@ import (
 type DeleteMigrationTaskResponse struct {
 
 	// 删除的迁移任务ID列表。
-	TaskIdList     *[]string `json:"task_id_list,omitempty"`
+	TaskIdList     *[]string `json:"task_id_list,omitempty" xml:"task_id_list"`
 	HttpStatusCode int       `json:"-"`
 }
 

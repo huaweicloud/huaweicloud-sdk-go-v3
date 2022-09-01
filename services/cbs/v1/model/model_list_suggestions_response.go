@@ -10,7 +10,7 @@ import (
 type ListSuggestionsResponse struct {
 
 	// 推荐问列表。
-	Questions      *[]string `json:"questions,omitempty"`
+	Questions      *[]string `json:"questions,omitempty" xml:"questions"`
 	HttpStatusCode int       `json:"-"`
 }
 

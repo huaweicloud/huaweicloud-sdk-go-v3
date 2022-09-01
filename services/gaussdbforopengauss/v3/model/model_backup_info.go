@@ -13,25 +13,25 @@ import (
 type BackupInfo struct {
 
 	// 备份ID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 备份名称。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 备份描述。
-	Description string `json:"description"`
+	Description string `json:"description" xml:"description"`
 
 	// 备份开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
-	BeginTime string `json:"begin_time"`
+	BeginTime string `json:"begin_time" xml:"begin_time"`
 
 	// 备份状态，取值：  - BUILDING: 备份中。 - COMPLETED: 备份完成。 - FAILED：备份失败。 - DELETING：备份删除中。
-	Status BackupInfoStatus `json:"status"`
+	Status BackupInfoStatus `json:"status" xml:"status"`
 
 	// 备份类型，取值： - “manual”: 手动全量备份
-	Type BackupInfoType `json:"type"`
+	Type BackupInfoType `json:"type" xml:"type"`
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 }
 
 func (o BackupInfo) String() string {

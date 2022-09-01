@@ -13,28 +13,28 @@ import (
 type ListMessagesRequest struct {
 
 	// 消息引擎。
-	Engine ListMessagesRequestEngine `json:"engine"`
+	Engine ListMessagesRequestEngine `json:"engine" xml:"engine"`
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 主题名称。
-	Topic string `json:"topic"`
+	Topic string `json:"topic" xml:"topic"`
 
 	// 查询数量。
-	Limit *string `json:"limit,omitempty"`
+	Limit *string `json:"limit,omitempty" xml:"limit"`
 
 	// 偏移量，表示从此偏移量开始查询， offset大于等于0。
-	Offset *string `json:"offset,omitempty"`
+	Offset *string `json:"offset,omitempty" xml:"offset"`
 
 	// 开始时间。
-	StartTime *string `json:"start_time,omitempty"`
+	StartTime *string `json:"start_time,omitempty" xml:"start_time"`
 
 	// 结束时间。
-	EndTime *string `json:"end_time,omitempty"`
+	EndTime *string `json:"end_time,omitempty" xml:"end_time"`
 
 	// 消息ID。
-	MsgId *string `json:"msg_id,omitempty"`
+	MsgId *string `json:"msg_id,omitempty" xml:"msg_id"`
 }
 
 func (o ListMessagesRequest) String() string {

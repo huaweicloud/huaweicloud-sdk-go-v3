@@ -10,7 +10,7 @@ import (
 type CreateConsumerGroupResponse struct {
 
 	// 消费组信息。
-	Groups         *[]CreateConsumerGroupRespGroups `json:"groups,omitempty"`
+	Groups         *[]CreateConsumerGroupRespGroups `json:"groups,omitempty" xml:"groups"`
 	HttpStatusCode int                              `json:"-"`
 }
 

@@ -8,11 +8,11 @@ import (
 
 //
 type Nearline struct {
-	ItemTopic *Topic `json:"item_topic,omitempty"`
+	ItemTopic *Topic `json:"item_topic,omitempty" xml:"item_topic"`
 
-	UserTopic *Topic `json:"user_topic,omitempty"`
+	UserTopic *Topic `json:"user_topic,omitempty" xml:"user_topic"`
 
-	BehaviorTopic *Topic `json:"behavior_topic,omitempty"`
+	BehaviorTopic *Topic `json:"behavior_topic,omitempty" xml:"behavior_topic"`
 }
 
 func (o Nearline) String() string {

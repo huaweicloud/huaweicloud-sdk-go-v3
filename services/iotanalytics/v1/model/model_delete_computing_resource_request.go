@@ -10,7 +10,7 @@ import (
 type DeleteComputingResourceRequest struct {
 
 	// 计算资源ID。
-	ComputingResourceId string `json:"computing_resource_id"`
+	ComputingResourceId string `json:"computing_resource_id" xml:"computing_resource_id"`
 }
 
 func (o DeleteComputingResourceRequest) String() string {

@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type CreateDomainResponse struct {
-	Domain         *CreateDomainResponseBodyContent `json:"domain,omitempty"`
+	Domain         *CreateDomainResponseBodyContent `json:"domain,omitempty" xml:"domain"`
 	HttpStatusCode int                              `json:"-"`
 }
 

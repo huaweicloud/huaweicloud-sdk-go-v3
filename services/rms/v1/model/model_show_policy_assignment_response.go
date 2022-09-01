@@ -10,30 +10,30 @@ import (
 type ShowPolicyAssignmentResponse struct {
 
 	// 规则ID
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 规则名字
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 规则描述
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
-	PolicyFilter *PolicyFilterDefinition `json:"policy_filter,omitempty"`
+	PolicyFilter *PolicyFilterDefinition `json:"policy_filter,omitempty" xml:"policy_filter"`
 
 	// 规则状态
-	State *string `json:"state,omitempty"`
+	State *string `json:"state,omitempty" xml:"state"`
 
 	// 规则创建时间
-	Created *string `json:"created,omitempty"`
+	Created *string `json:"created,omitempty" xml:"created"`
 
 	// 规则更新时间
-	Updated *string `json:"updated,omitempty"`
+	Updated *string `json:"updated,omitempty" xml:"updated"`
 
 	// 规则的策略ID
-	PolicyDefinitionId *string `json:"policy_definition_id,omitempty"`
+	PolicyDefinitionId *string `json:"policy_definition_id,omitempty" xml:"policy_definition_id"`
 
 	// 规则参数
-	Parameters     map[string]PolicyParameterValue `json:"parameters,omitempty"`
+	Parameters     map[string]PolicyParameterValue `json:"parameters,omitempty" xml:"parameters"`
 	HttpStatusCode int                             `json:"-"`
 }
 

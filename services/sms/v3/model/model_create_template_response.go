@@ -10,7 +10,7 @@ import (
 type CreateTemplateResponse struct {
 
 	// 服务端返回的新添加的模板的id
-	Id             *string `json:"id,omitempty"`
+	Id             *string `json:"id,omitempty" xml:"id"`
 	HttpStatusCode int     `json:"-"`
 }
 

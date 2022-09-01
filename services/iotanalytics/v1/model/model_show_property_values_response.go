@@ -10,7 +10,7 @@ import (
 type ShowPropertyValuesResponse struct {
 
 	// 查询设备的属性值
-	Properties     *[]PropertyValue `json:"properties,omitempty"`
+	Properties     *[]PropertyValue `json:"properties,omitempty" xml:"properties"`
 	HttpStatusCode int              `json:"-"`
 }
 

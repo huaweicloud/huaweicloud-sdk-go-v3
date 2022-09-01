@@ -10,7 +10,7 @@ import (
 type BatchRebootInstanceResponse struct {
 
 	// 任务列表对象。
-	Jobs           *[]JobResult `json:"jobs,omitempty"`
+	Jobs           *[]JobResult `json:"jobs,omitempty" xml:"jobs"`
 	HttpStatusCode int          `json:"-"`
 }
 

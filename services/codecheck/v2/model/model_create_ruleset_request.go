@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateRulesetRequest struct {
-	Body *Ruleset `json:"body,omitempty"`
+	Body *Ruleset `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateRulesetRequest) String() string {

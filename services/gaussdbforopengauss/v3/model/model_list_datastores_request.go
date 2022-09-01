@@ -10,7 +10,7 @@ import (
 type ListDatastoresRequest struct {
 
 	// 语言
-	XLanguage *string `json:"X-Language,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
 }
 
 func (o ListDatastoresRequest) String() string {

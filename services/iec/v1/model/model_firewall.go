@@ -13,32 +13,32 @@ import (
 type Firewall struct {
 
 	// 网络ACL ID
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 网络ACL名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 网络ACL使能开关。  取值范围：true（开启），false（关闭）。默认为true
-	AdminStateUp *bool `json:"admin_state_up,omitempty"`
+	AdminStateUp *bool `json:"admin_state_up,omitempty" xml:"admin_state_up"`
 
 	// 网络ACL状态。  取值范围：INACTIVE
-	Status *FirewallStatus `json:"status,omitempty"`
+	Status *FirewallStatus `json:"status,omitempty" xml:"status"`
 
 	// 网络ACL描述。
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 租户domainID
-	DomainId *string `json:"domain_id,omitempty"`
+	DomainId *string `json:"domain_id,omitempty" xml:"domain_id"`
 
-	EgressFirewallPolicy *FirewallPolicy `json:"egress_firewall_policy,omitempty"`
+	EgressFirewallPolicy *FirewallPolicy `json:"egress_firewall_policy,omitempty" xml:"egress_firewall_policy"`
 
 	// 出方向网络ACL规则个数。
-	EgressFirewallRuleCount *int32 `json:"egress_firewall_rule_count,omitempty"`
+	EgressFirewallRuleCount *int32 `json:"egress_firewall_rule_count,omitempty" xml:"egress_firewall_rule_count"`
 
-	IngressFirewallPolicy *FirewallPolicy `json:"ingress_firewall_policy,omitempty"`
+	IngressFirewallPolicy *FirewallPolicy `json:"ingress_firewall_policy,omitempty" xml:"ingress_firewall_policy"`
 
 	// 入方向网络ACL规则个数。
-	IngressFirewallRuleCount *int32 `json:"ingress_firewall_rule_count,omitempty"`
+	IngressFirewallRuleCount *int32 `json:"ingress_firewall_rule_count,omitempty" xml:"ingress_firewall_rule_count"`
 }
 
 func (o Firewall) String() string {

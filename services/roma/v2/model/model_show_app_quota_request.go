@@ -10,10 +10,10 @@ import (
 type ShowAppQuotaRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 客户端配额编号
-	AppQuotaId string `json:"app_quota_id"`
+	AppQuotaId string `json:"app_quota_id" xml:"app_quota_id"`
 }
 
 func (o ShowAppQuotaRequest) String() string {

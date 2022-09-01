@@ -10,9 +10,9 @@ import (
 type DeleteSecretForScheduleRequest struct {
 
 	// 凭据的资源标识符。
-	SecretId string `json:"secret_id"`
+	SecretId string `json:"secret_id" xml:"secret_id"`
 
-	Body *DeleteSecretForScheduleRequestBody `json:"body,omitempty"`
+	Body *DeleteSecretForScheduleRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o DeleteSecretForScheduleRequest) String() string {

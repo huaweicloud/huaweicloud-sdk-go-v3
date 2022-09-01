@@ -10,10 +10,10 @@ import (
 type DatabaseObjectVo struct {
 
 	// 数据库对象和数据库表名称，例如格式为hec-*-*-drs_test1。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 是否选择高级配置，值为true。
-	Select *string `json:"select,omitempty"`
+	Select *string `json:"select,omitempty" xml:"select"`
 }
 
 func (o DatabaseObjectVo) String() string {

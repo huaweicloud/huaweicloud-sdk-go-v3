@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type BatchDeleteScalingPoliciesRequest struct {
-	Body *BatchDeleteScalingPoliciesOption `json:"body,omitempty"`
+	Body *BatchDeleteScalingPoliciesOption `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchDeleteScalingPoliciesRequest) String() string {

@@ -10,13 +10,13 @@ import (
 type ListSubscriptionsByTopicResponse struct {
 
 	// 请求的唯一标识ID。
-	RequestId *string `json:"request_id,omitempty"`
+	RequestId *string `json:"request_id,omitempty" xml:"request_id"`
 
 	// 订阅者个数。
-	SubscriptionCount *int32 `json:"subscription_count,omitempty"`
+	SubscriptionCount *int32 `json:"subscription_count,omitempty" xml:"subscription_count"`
 
 	// Subscription结构体。
-	Subscriptions  *[]ListSubscriptionsItem `json:"subscriptions,omitempty"`
+	Subscriptions  *[]ListSubscriptionsItem `json:"subscriptions,omitempty" xml:"subscriptions"`
 	HttpStatusCode int                      `json:"-"`
 }
 

@@ -9,16 +9,16 @@ import (
 type ResourceDetail struct {
 
 	// 企业项目ID
-	EnterpriseProjectId string `json:"enterprise_project_id"`
+	EnterpriseProjectId string `json:"enterprise_project_id" xml:"enterprise_project_id"`
 
 	// 详情ID
-	DetailId string `json:"detailId"`
+	DetailId string `json:"detailId" xml:"detailId"`
 
 	// topic唯一标识
-	TopicUrn string `json:"topic_urn"`
+	TopicUrn string `json:"topic_urn" xml:"topic_urn"`
 
 	// 显示名
-	DisplayName string `json:"display_name"`
+	DisplayName string `json:"display_name" xml:"display_name"`
 }
 
 func (o ResourceDetail) String() string {

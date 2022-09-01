@@ -9,7 +9,7 @@ import (
 type BatchDeleteRSetWithLineReq struct {
 
 	// Record Set ID列表。最多支持100个。
-	RecordsetIds []string `json:"recordset_ids"`
+	RecordsetIds []string `json:"recordset_ids" xml:"recordset_ids"`
 }
 
 func (o BatchDeleteRSetWithLineReq) String() string {

@@ -10,10 +10,10 @@ import (
 type InsertHeader struct {
 
 	// 负载均衡器弹性公网IP透传开关。
-	XForwardedELBIP *bool `json:"X-Forwarded-ELB-IP,omitempty"`
+	XForwardedELBIP *bool `json:"X-Forwarded-ELB-IP,omitempty" xml:"X-Forwarded-ELB-IP"`
 
 	// X-Forwarded-Host设为true可以将客户请求头的第一个X-Forwarded-Host设置为请求头的Host带到后端云服务器。
-	XForwardedHost *bool `json:"X-Forwarded-Host,omitempty"`
+	XForwardedHost *bool `json:"X-Forwarded-Host,omitempty" xml:"X-Forwarded-Host"`
 }
 
 func (o InsertHeader) String() string {

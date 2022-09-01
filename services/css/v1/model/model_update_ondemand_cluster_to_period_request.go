@@ -10,9 +10,9 @@ import (
 type UpdateOndemandClusterToPeriodRequest struct {
 
 	// 指定待转包周期的集群ID。
-	ClusterId string `json:"cluster_id"`
+	ClusterId string `json:"cluster_id" xml:"cluster_id"`
 
-	Body *PeriodReq `json:"body,omitempty"`
+	Body *PeriodReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateOndemandClusterToPeriodRequest) String() string {

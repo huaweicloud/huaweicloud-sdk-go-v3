@@ -10,13 +10,13 @@ import (
 type ListVpcChannelsV2Response struct {
 
 	// 本次返回的列表长度
-	Size int32 `json:"size"`
+	Size int32 `json:"size" xml:"size"`
 
 	// 满足条件的记录数
-	Total int64 `json:"total"`
+	Total int64 `json:"total" xml:"total"`
 
 	// 本次查询到的VPC通道列表
-	VpcChannels    *[]VpcChannelInfo `json:"vpc_channels,omitempty"`
+	VpcChannels    *[]VpcChannelInfo `json:"vpc_channels,omitempty" xml:"vpc_channels"`
 	HttpStatusCode int               `json:"-"`
 }
 

@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CancelSelfGrantRequest struct {
-	Body *RevokeGrantRequestBody `json:"body,omitempty"`
+	Body *RevokeGrantRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CancelSelfGrantRequest) String() string {

@@ -10,10 +10,10 @@ import (
 type RelatedInstance struct {
 
 	// 关联实例id。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 关联实例类型。  - “replica_of”对应于“主实例”。 - “replica”对应于“只读实例”。
-	Type string `json:"type"`
+	Type string `json:"type" xml:"type"`
 }
 
 func (o RelatedInstance) String() string {

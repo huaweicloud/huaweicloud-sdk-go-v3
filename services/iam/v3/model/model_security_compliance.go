@@ -10,10 +10,10 @@ import (
 type SecurityCompliance struct {
 
 	// 密码强度策略的正则表达式。
-	PasswordRegex string `json:"password_regex"`
+	PasswordRegex string `json:"password_regex" xml:"password_regex"`
 
 	// 密码强度策略的描述。
-	PasswordRegexDescription string `json:"password_regex_description"`
+	PasswordRegexDescription string `json:"password_regex_description" xml:"password_regex_description"`
 }
 
 func (o SecurityCompliance) String() string {

@@ -10,13 +10,13 @@ import (
 type ListTopicAccessPolicyResponse struct {
 
 	// 用户列表。
-	Policies *[]ListAccessPolicyRespPolicies `json:"policies,omitempty"`
+	Policies *[]ListAccessPolicyRespPolicies `json:"policies,omitempty" xml:"policies"`
 
 	// 总用户个数。
-	Total float32 `json:"total,omitempty"`
+	Total float32 `json:"total,omitempty" xml:"total"`
 
 	// 主题或消费组名称。
-	Name           *string `json:"name,omitempty"`
+	Name           *string `json:"name,omitempty" xml:"name"`
 	HttpStatusCode int     `json:"-"`
 }
 

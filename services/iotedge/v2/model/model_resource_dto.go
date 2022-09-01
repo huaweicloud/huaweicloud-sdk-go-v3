@@ -7,9 +7,9 @@ import (
 )
 
 type ResourceDto struct {
-	Limits *ResourceConfigDto `json:"limits,omitempty"`
+	Limits *ResourceConfigDto `json:"limits,omitempty" xml:"limits"`
 
-	Requests *ResourceConfigDto `json:"requests,omitempty"`
+	Requests *ResourceConfigDto `json:"requests,omitempty" xml:"requests"`
 }
 
 func (o ResourceDto) String() string {

@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateCompetitionScoreRequest struct {
-	Body *CreateScoresRequestModel `json:"body,omitempty"`
+	Body *CreateScoresRequestModel `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateCompetitionScoreRequest) String() string {

@@ -10,9 +10,9 @@ import (
 type UpdateBatchJobRequest struct {
 
 	// 数据开发任务ID。
-	JobId string `json:"job_id"`
+	JobId string `json:"job_id" xml:"job_id"`
 
-	Body *Job `json:"body,omitempty"`
+	Body *Job `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateBatchJobRequest) String() string {

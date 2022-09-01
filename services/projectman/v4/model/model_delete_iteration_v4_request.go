@@ -10,10 +10,10 @@ import (
 type DeleteIterationV4Request struct {
 
 	// devcloud项目的32位id
-	ProjectId string `json:"project_id"`
+	ProjectId string `json:"project_id" xml:"project_id"`
 
 	// 迭代id
-	IterationId int32 `json:"iteration_id"`
+	IterationId int32 `json:"iteration_id" xml:"iteration_id"`
 }
 
 func (o DeleteIterationV4Request) String() string {

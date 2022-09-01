@@ -10,12 +10,12 @@ import (
 type UpdateEdgeModuleReqDto struct {
 
 	// 边缘应用版本
-	AppVersion *string `json:"app_version,omitempty"`
+	AppVersion *string `json:"app_version,omitempty" xml:"app_version"`
 
 	// 边缘模块名称
-	ModuleName *string `json:"module_name,omitempty"`
+	ModuleName *string `json:"module_name,omitempty" xml:"module_name"`
 
-	ContainerSettings *ContainerSettingsReqDto `json:"container_settings,omitempty"`
+	ContainerSettings *ContainerSettingsReqDto `json:"container_settings,omitempty" xml:"container_settings"`
 }
 
 func (o UpdateEdgeModuleReqDto) String() string {

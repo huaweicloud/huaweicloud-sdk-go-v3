@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type RecognizeQuotaInvoiceResponse struct {
-	Result         *QuotaInvoiceResult `json:"result,omitempty"`
+	Result         *QuotaInvoiceResult `json:"result,omitempty" xml:"result"`
 	HttpStatusCode int                 `json:"-"`
 }
 

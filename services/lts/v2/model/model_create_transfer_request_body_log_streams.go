@@ -9,10 +9,10 @@ import (
 type CreateTransferRequestBodyLogStreams struct {
 
 	// 日志流ID
-	LogStreamId string `json:"log_stream_id"`
+	LogStreamId string `json:"log_stream_id" xml:"log_stream_id"`
 
 	// 日志流名称
-	LogStreamName *string `json:"log_stream_name,omitempty"`
+	LogStreamName *string `json:"log_stream_name,omitempty" xml:"log_stream_name"`
 }
 
 func (o CreateTransferRequestBodyLogStreams) String() string {

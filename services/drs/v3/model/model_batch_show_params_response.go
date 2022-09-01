@@ -10,10 +10,10 @@ import (
 type BatchShowParamsResponse struct {
 
 	// 查询数据库参数响应体
-	ParamsList *[]QueryDbParamsResp `json:"params_list,omitempty"`
+	ParamsList *[]QueryDbParamsResp `json:"params_list,omitempty" xml:"params_list"`
 
 	// 总数
-	Count          *int32 `json:"count,omitempty"`
+	Count          *int32 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

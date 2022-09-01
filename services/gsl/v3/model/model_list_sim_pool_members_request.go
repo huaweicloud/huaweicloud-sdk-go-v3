@@ -10,19 +10,19 @@ import (
 type ListSimPoolMembersRequest struct {
 
 	// 流量池标识
-	SimPoolId int64 `json:"sim_pool_id"`
+	SimPoolId int64 `json:"sim_pool_id" xml:"sim_pool_id"`
 
 	// 容器ID
-	Cid *string `json:"cid,omitempty"`
+	Cid *string `json:"cid,omitempty" xml:"cid"`
 
 	// 每页记录数
-	Limit *int64 `json:"limit,omitempty"`
+	Limit *int64 `json:"limit,omitempty" xml:"limit"`
 
 	// 页码
-	Offset *int64 `json:"offset,omitempty"`
+	Offset *int64 `json:"offset,omitempty" xml:"offset"`
 
 	// 账期，例如：2021-04
-	BillingCycle string `json:"billing_cycle"`
+	BillingCycle string `json:"billing_cycle" xml:"billing_cycle"`
 }
 
 func (o ListSimPoolMembersRequest) String() string {

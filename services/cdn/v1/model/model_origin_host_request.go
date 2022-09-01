@@ -7,7 +7,7 @@ import (
 )
 
 type OriginHostRequest struct {
-	OriginHost *OriginHostBody `json:"origin_host"`
+	OriginHost *OriginHostBody `json:"origin_host" xml:"origin_host"`
 }
 
 func (o OriginHostRequest) String() string {

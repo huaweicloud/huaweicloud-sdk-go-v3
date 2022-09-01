@@ -10,10 +10,10 @@ import (
 type ShowRegionInfoOfMeetingResponse struct {
 
 	// 会议所在区域的公网IP地址。
-	RegionIP *string `json:"regionIP,omitempty"`
+	RegionIP *string `json:"regionIP,omitempty" xml:"regionIP"`
 
 	// 会议所在区域的公网域名。
-	RegionUrl      *string `json:"regionUrl,omitempty"`
+	RegionUrl      *string `json:"regionUrl,omitempty" xml:"regionUrl"`
 	HttpStatusCode int     `json:"-"`
 }
 

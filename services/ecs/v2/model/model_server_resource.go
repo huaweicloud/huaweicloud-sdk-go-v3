@@ -10,16 +10,16 @@ import (
 type ServerResource struct {
 
 	// 云服务器ID。
-	ResourceId string `json:"resource_id"`
+	ResourceId string `json:"resource_id" xml:"resource_id"`
 
 	// 预留字段。
-	ResourceDetail string `json:"resource_detail"`
+	ResourceDetail string `json:"resource_detail" xml:"resource_detail"`
 
 	// 标签列表
-	Tags []ResourceTag `json:"tags"`
+	Tags []ResourceTag `json:"tags" xml:"tags"`
 
 	// 资源名称，即弹性云服务器名称。
-	ResourceName string `json:"resource_name"`
+	ResourceName string `json:"resource_name" xml:"resource_name"`
 }
 
 func (o ServerResource) String() string {

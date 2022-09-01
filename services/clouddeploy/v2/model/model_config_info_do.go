@@ -13,25 +13,25 @@ import (
 type ConfigInfoDo struct {
 
 	// 部署参数名称，用户可自定义
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 类型，如果填写name字段，则type必选
-	Type *ConfigInfoDoType `json:"type,omitempty"`
+	Type *ConfigInfoDoType `json:"type,omitempty" xml:"type"`
 
 	// 描述
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 部署参数值，如果填写name字段，则value必选
-	Value *string `json:"value,omitempty"`
+	Value *string `json:"value,omitempty" xml:"value"`
 
 	// 部署任务id，创建部署任务后由系统自动生成
-	TaskId *string `json:"task_id,omitempty"`
+	TaskId *string `json:"task_id,omitempty" xml:"task_id"`
 
 	// 表示是否为静态参数，值为1时不支持执行时变更参数，值为0时支持，并且也会把该参数上报流水线
-	StaticStatus *ConfigInfoDoStaticStatus `json:"static_status,omitempty"`
+	StaticStatus *ConfigInfoDoStaticStatus `json:"static_status,omitempty" xml:"static_status"`
 
 	// 当参数类型为enum枚举类型时，必须填写可选值
-	Limits *[]ParamTypeLimits `json:"limits,omitempty"`
+	Limits *[]ParamTypeLimits `json:"limits,omitempty" xml:"limits"`
 }
 
 func (o ConfigInfoDo) String() string {

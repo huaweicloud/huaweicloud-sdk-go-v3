@@ -10,12 +10,12 @@ import (
 type ShowProjectResponse struct {
 
 	// code
-	Code *string `json:"code,omitempty"`
+	Code *string `json:"code,omitempty" xml:"code"`
 
 	// message
-	Message *string `json:"message,omitempty"`
+	Message *string `json:"message,omitempty" xml:"message"`
 
-	Project        *Project `json:"project,omitempty"`
+	Project        *Project `json:"project,omitempty" xml:"project"`
 	HttpStatusCode int      `json:"-"`
 }
 

@@ -10,10 +10,10 @@ import (
 type ListRestoreRecordsResponse struct {
 
 	// 实例恢复记录的详情数组。
-	RestoreRecordResponse *[]InstanceRestoreInfo `json:"restore_record_response,omitempty"`
+	RestoreRecordResponse *[]InstanceRestoreInfo `json:"restore_record_response,omitempty" xml:"restore_record_response"`
 
 	// 返回记录数。
-	TotalNum       *int32 `json:"total_num,omitempty"`
+	TotalNum       *int32 `json:"total_num,omitempty" xml:"total_num"`
 	HttpStatusCode int    `json:"-"`
 }
 

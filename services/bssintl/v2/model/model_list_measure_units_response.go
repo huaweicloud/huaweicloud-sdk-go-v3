@@ -10,7 +10,7 @@ import (
 type ListMeasureUnitsResponse struct {
 
 	// 度量单位信息，具体参见表2。
-	MeasureUnits   *[]MeasureUnitRest `json:"measure_units,omitempty"`
+	MeasureUnits   *[]MeasureUnitRest `json:"measure_units,omitempty" xml:"measure_units"`
 	HttpStatusCode int                `json:"-"`
 }
 

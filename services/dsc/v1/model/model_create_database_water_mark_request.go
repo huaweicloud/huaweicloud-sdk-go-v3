@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateDatabaseWaterMarkRequest struct {
-	Body *EmbeddedDatabaseWatermark `json:"body,omitempty"`
+	Body *EmbeddedDatabaseWatermark `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateDatabaseWaterMarkRequest) String() string {

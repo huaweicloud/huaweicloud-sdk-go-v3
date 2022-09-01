@@ -10,10 +10,10 @@ import (
 type ShowBackupDownloadLinkResponse struct {
 
 	// 备份文件信息。
-	Files *[]GetBackupDownloadLinkFiles `json:"files,omitempty"`
+	Files *[]GetBackupDownloadLinkFiles `json:"files,omitempty" xml:"files"`
 
 	// OBS桶名。
-	Bucket         *string `json:"bucket,omitempty"`
+	Bucket         *string `json:"bucket,omitempty" xml:"bucket"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type CreateAgencyCustomPolicyResponse struct {
-	Role           *AgencyPolicyRoleResult `json:"role,omitempty"`
+	Role           *AgencyPolicyRoleResult `json:"role,omitempty" xml:"role"`
 	HttpStatusCode int                     `json:"-"`
 }
 

@@ -10,7 +10,7 @@ import (
 type CollectTranscriberJobRequest struct {
 
 	// 录音文件识别任务标识符。
-	JobId string `json:"job_id"`
+	JobId string `json:"job_id" xml:"job_id"`
 }
 
 func (o CollectTranscriberJobRequest) String() string {

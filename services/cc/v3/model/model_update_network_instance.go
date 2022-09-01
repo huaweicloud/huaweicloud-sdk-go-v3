@@ -10,13 +10,13 @@ import (
 type UpdateNetworkInstance struct {
 
 	// 网络实例的名字。只能由中文、英文字母、数字、下划线、中划线、点组成。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 网络实例的描述。不支持 <>。
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
-	// 网络实例发布的网段路由列表，ER场景此字段为空。
-	Cidrs *[]string `json:"cidrs,omitempty"`
+	// 网络实例发布的网段路由列表。
+	Cidrs *[]string `json:"cidrs,omitempty" xml:"cidrs"`
 }
 
 func (o UpdateNetworkInstance) String() string {

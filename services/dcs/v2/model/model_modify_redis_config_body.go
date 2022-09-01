@@ -10,7 +10,7 @@ import (
 type ModifyRedisConfigBody struct {
 
 	// 实例配置项数组。
-	RedisConfig *[]RedisConfig `json:"redis_config,omitempty"`
+	RedisConfig *[]RedisConfig `json:"redis_config,omitempty" xml:"redis_config"`
 }
 
 func (o ModifyRedisConfigBody) String() string {

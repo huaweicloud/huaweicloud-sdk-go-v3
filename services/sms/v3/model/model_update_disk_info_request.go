@@ -10,9 +10,9 @@ import (
 type UpdateDiskInfoRequest struct {
 
 	// 源端服务器id
-	SourceId string `json:"source_id"`
+	SourceId string `json:"source_id" xml:"source_id"`
 
-	Body *PutDiskInfoReq `json:"body,omitempty"`
+	Body *PutDiskInfoReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateDiskInfoRequest) String() string {

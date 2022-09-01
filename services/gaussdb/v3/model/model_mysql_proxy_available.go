@@ -9,10 +9,10 @@ import (
 type MysqlProxyAvailable struct {
 
 	// 可用区编码。
-	Code *string `json:"code,omitempty"`
+	Code *string `json:"code,omitempty" xml:"code"`
 
 	// 可用区描述。
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 }
 
 func (o MysqlProxyAvailable) String() string {

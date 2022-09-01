@@ -12,22 +12,22 @@ import (
 type TaskBasicRequestBody struct {
 
 	// 任务名称，只能以字母、数字为开头，包含字母、数字和 . _ -  3~100个字符
-	TaskName *string `json:"task_name,omitempty"`
+	TaskName *string `json:"task_name,omitempty" xml:"task_name"`
 
 	// 任务类型 - REALTIME (实时) - TIMING (定时)
-	TaskType *TaskBasicRequestBodyTaskType `json:"task_type,omitempty"`
+	TaskType *TaskBasicRequestBodyTaskType `json:"task_type,omitempty" xml:"task_type"`
 
 	// 源端数据源ID
-	SourceDatasourceId *string `json:"source_datasource_id,omitempty"`
+	SourceDatasourceId *string `json:"source_datasource_id,omitempty" xml:"source_datasource_id"`
 
 	// 目标端数据源ID
-	TargetDatasourceId *string `json:"target_datasource_id,omitempty"`
+	TargetDatasourceId *string `json:"target_datasource_id,omitempty" xml:"target_datasource_id"`
 
 	// 描述信息
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 任务标签,只能包含字母、数字、中划线、下划线
-	TaskTag *string `json:"task_tag,omitempty"`
+	TaskTag *string `json:"task_tag,omitempty" xml:"task_tag"`
 }
 
 func (o TaskBasicRequestBody) String() string {

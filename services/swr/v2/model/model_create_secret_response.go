@@ -10,9 +10,9 @@ import (
 type CreateSecretResponse struct {
 
 	// 认证信息
-	Auths map[string]AuthInfo `json:"auths,omitempty"`
+	Auths map[string]AuthInfo `json:"auths,omitempty" xml:"auths"`
 
-	XSwrDockerlogin *string `json:"X-Swr-Dockerlogin,omitempty"`
+	XSwrDockerlogin *string `json:"X-Swr-Dockerlogin,omitempty" xml:"X-Swr-Dockerlogin"`
 	HttpStatusCode  int     `json:"-"`
 }
 

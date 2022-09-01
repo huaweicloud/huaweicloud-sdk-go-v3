@@ -10,16 +10,16 @@ import (
 type ShowPlansRequest struct {
 
 	// 模糊查询使用(针对测试计划名称)
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 测试计划所处阶段（create,design,execute,report）
-	CurrentStage *string `json:"current_stage,omitempty"`
+	CurrentStage *string `json:"current_stage,omitempty" xml:"current_stage"`
 
 	// 页号，取值范围为1-20000
-	Offset int32 `json:"offset"`
+	Offset int32 `json:"offset" xml:"offset"`
 
 	// 每页显示的条目数量，取值范围为1-200
-	Limit int32 `json:"limit"`
+	Limit int32 `json:"limit" xml:"limit"`
 }
 
 func (o ShowPlansRequest) String() string {

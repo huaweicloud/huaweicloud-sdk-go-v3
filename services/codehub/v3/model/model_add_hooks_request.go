@@ -10,12 +10,12 @@ import (
 type AddHooksRequest struct {
 
 	// 组名
-	GroupName string `json:"group_name"`
+	GroupName string `json:"group_name" xml:"group_name"`
 
 	// 仓库名
-	RepositoryName string `json:"repository_name"`
+	RepositoryName string `json:"repository_name" xml:"repository_name"`
 
-	Body *RepositoryHookRequest `json:"body,omitempty"`
+	Body *RepositoryHookRequest `json:"body,omitempty" xml:"body"`
 }
 
 func (o AddHooksRequest) String() string {

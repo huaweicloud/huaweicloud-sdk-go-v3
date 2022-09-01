@@ -10,19 +10,19 @@ import (
 type KeystoneCreateUserOption struct {
 
 	// IAM用户名，长度1~64之间，只能包含如下字符：大小写字母、空格、数字或特殊字符（-_.）且不能以数字开头。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// IAM用户所属账号ID。
-	DomainId *string `json:"domain_id,omitempty"`
+	DomainId *string `json:"domain_id,omitempty" xml:"domain_id"`
 
 	// IAM用户密码。 - 系统默认密码最小长度为6位字符，在6-32位之间支持用户自定义密码长度。 - 至少包含以下四种字符中的两种： 大写字母、小写字母、数字和特殊字符。 - 不能包含手机号和邮箱。 - 必须满足账户设置中密码策略的要求。
-	Password *string `json:"password,omitempty"`
+	Password *string `json:"password,omitempty" xml:"password"`
 
 	// 是否启用IAM用户。true为启用，false为停用，默认为true。
-	Enabled *bool `json:"enabled,omitempty"`
+	Enabled *bool `json:"enabled,omitempty" xml:"enabled"`
 
 	// IAM用户描述信息。
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 }
 
 func (o KeystoneCreateUserOption) String() string {

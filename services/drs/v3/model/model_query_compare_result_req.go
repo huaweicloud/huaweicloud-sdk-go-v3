@@ -10,22 +10,22 @@ import (
 type QueryCompareResultReq struct {
 
 	// 任务id。
-	JobId string `json:"job_id"`
+	JobId string `json:"job_id" xml:"job_id"`
 
 	// 请求查询结果的对象级对比任务id。
-	ObjectLevelCompareId *string `json:"object_level_compare_id,omitempty"`
+	ObjectLevelCompareId *string `json:"object_level_compare_id,omitempty" xml:"object_level_compare_id"`
 
 	// 请求查询结果的行对比任务id。
-	LineCompareId *string `json:"line_compare_id,omitempty"`
+	LineCompareId *string `json:"line_compare_id,omitempty" xml:"line_compare_id"`
 
 	// 请求查询结果的内容对比任务id。
-	ContentCompareId *string `json:"content_compare_id,omitempty"`
+	ContentCompareId *string `json:"content_compare_id,omitempty" xml:"content_compare_id"`
 
 	// 分页查询的当前页码，对查询对比任务的结果生效。
-	CurrentPage int32 `json:"current_page"`
+	CurrentPage int32 `json:"current_page" xml:"current_page"`
 
 	// 分页查询的每页个数，对查询对比任务的结果生效。
-	PerPage int32 `json:"per_page"`
+	PerPage int32 `json:"per_page" xml:"per_page"`
 }
 
 func (o QueryCompareResultReq) String() string {

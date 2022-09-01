@@ -13,7 +13,7 @@ import (
 type ShowApiVersionInfoRequest struct {
 
 	// 需要查询的API版本号。
-	ApiVersion ShowApiVersionInfoRequestApiVersion `json:"api_version"`
+	ApiVersion ShowApiVersionInfoRequestApiVersion `json:"api_version" xml:"api_version"`
 }
 
 func (o ShowApiVersionInfoRequest) String() string {

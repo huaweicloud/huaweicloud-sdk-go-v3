@@ -10,9 +10,9 @@ import (
 type KeyProtection struct {
 
 	// 导入SSH密钥对的私钥。
-	PrivateKey *string `json:"private_key,omitempty"`
+	PrivateKey *string `json:"private_key,omitempty" xml:"private_key"`
 
-	Encryption *Encryption `json:"encryption,omitempty"`
+	Encryption *Encryption `json:"encryption,omitempty" xml:"encryption"`
 }
 
 func (o KeyProtection) String() string {

@@ -10,16 +10,16 @@ import (
 type ApiVersion struct {
 
 	// API版本号，如v1、v3。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 对应API的链接信息，v1、v3版本该字段为空。
-	Links []LinksInfoResponse `json:"links"`
+	Links []LinksInfoResponse `json:"links" xml:"links"`
 
 	// 版本状态。 取值“CURRENT”，表示该版本为主推版本。 取值“DEPRECATED”，表示为废弃版本，存在后续删除的可能。
-	Status string `json:"status"`
+	Status string `json:"status" xml:"status"`
 
 	// 版本更新时间。 格式为“yyyy-mm-dd Thh:mm:ssZ”。 其中，T指某个时间的开始；Z指UTC时间。
-	Updated string `json:"updated"`
+	Updated string `json:"updated" xml:"updated"`
 }
 
 func (o ApiVersion) String() string {

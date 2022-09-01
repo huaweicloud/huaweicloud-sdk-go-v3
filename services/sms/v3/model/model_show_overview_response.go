@@ -10,16 +10,16 @@ import (
 type ShowOverviewResponse struct {
 
 	// 等待中
-	Waiting *int32 `json:"waiting,omitempty"`
+	Waiting *int32 `json:"waiting,omitempty" xml:"waiting"`
 
 	// 复制中
-	Replicating *int32 `json:"replicating,omitempty"`
+	Replicating *int32 `json:"replicating,omitempty" xml:"replicating"`
 
 	// 同步中
-	Syncing *int32 `json:"syncing,omitempty"`
+	Syncing *int32 `json:"syncing,omitempty" xml:"syncing"`
 
 	// 其它
-	Other          *int32 `json:"other,omitempty"`
+	Other          *int32 `json:"other,omitempty" xml:"other"`
 	HttpStatusCode int    `json:"-"`
 }
 

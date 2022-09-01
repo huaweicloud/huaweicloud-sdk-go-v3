@@ -9,34 +9,34 @@ import (
 type OrderRefundInfoV2 struct {
 
 	// 该记录的ID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 金额。 金额为负数，表示退订金额。金额为正数，表示已消费金额或收取的退订手续费。
-	Amount float64 `json:"amount"`
+	Amount float64 `json:"amount" xml:"amount"`
 
 	// 金额的度量单位。 1：元
-	MeasureId string `json:"measure_id"`
+	MeasureId string `json:"measure_id" xml:"measure_id"`
 
 	// 客户账号ID。
-	CustomerId string `json:"customer_id"`
+	CustomerId string `json:"customer_id" xml:"customer_id"`
 
 	// 资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
-	ResourceTypeCode string `json:"resource_type_code"`
+	ResourceTypeCode string `json:"resource_type_code" xml:"resource_type_code"`
 
 	// 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
-	ServiceTypeCode string `json:"service_type_code"`
+	ServiceTypeCode string `json:"service_type_code" xml:"service_type_code"`
 
 	// 资源类型名称。例如ECS的资源类型名称为“云主机”。
-	ResourceTypeName *string `json:"resource_type_name,omitempty"`
+	ResourceTypeName *string `json:"resource_type_name,omitempty" xml:"resource_type_name"`
 
 	// 云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
-	ServiceTypeName *string `json:"service_type_name,omitempty"`
+	ServiceTypeName *string `json:"service_type_name,omitempty" xml:"service_type_name"`
 
 	// 云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
-	RegionCode string `json:"region_code"`
+	RegionCode string `json:"region_code" xml:"region_code"`
 
 	// 退订金额、已消费金额或收取退订手续费对应的原订单ID。
-	BaseOrderId *string `json:"base_order_id,omitempty"`
+	BaseOrderId *string `json:"base_order_id,omitempty" xml:"base_order_id"`
 }
 
 func (o OrderRefundInfoV2) String() string {

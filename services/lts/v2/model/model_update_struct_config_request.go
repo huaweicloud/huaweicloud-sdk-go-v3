@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type UpdateStructConfigRequest struct {
-	Body *StructConfig `json:"body,omitempty"`
+	Body *StructConfig `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateStructConfigRequest) String() string {

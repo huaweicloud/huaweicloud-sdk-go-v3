@@ -10,10 +10,10 @@ import (
 type ListFreeResourceInfosResponse struct {
 
 	// 资源包信息列表，具体参见表2。
-	FreeResourcePackages *[]FreeResourcePackageV3 `json:"free_resource_packages,omitempty"`
+	FreeResourcePackages *[]FreeResourcePackageV3 `json:"free_resource_packages,omitempty" xml:"free_resource_packages"`
 
 	// 总条数。
-	TotalCount     *int32 `json:"total_count,omitempty"`
+	TotalCount     *int32 `json:"total_count,omitempty" xml:"total_count"`
 	HttpStatusCode int    `json:"-"`
 }
 

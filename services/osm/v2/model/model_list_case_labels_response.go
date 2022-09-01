@@ -10,7 +10,7 @@ import (
 type ListCaseLabelsResponse struct {
 
 	// 工单关联的标签列表
-	CaseLabelList  *[]CaseLabelInfo `json:"case_label_list,omitempty"`
+	CaseLabelList  *[]CaseLabelInfo `json:"case_label_list,omitempty" xml:"case_label_list"`
 	HttpStatusCode int              `json:"-"`
 }
 

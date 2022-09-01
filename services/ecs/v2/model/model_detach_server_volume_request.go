@@ -13,13 +13,13 @@ import (
 type DetachServerVolumeRequest struct {
 
 	// 云服务器ID。
-	ServerId string `json:"server_id"`
+	ServerId string `json:"server_id" xml:"server_id"`
 
 	// 磁盘ID。
-	VolumeId string `json:"volume_id"`
+	VolumeId string `json:"volume_id" xml:"volume_id"`
 
 	// 是否强制卸载数据盘。  - 是，值为“1”。  - 否，值为“0”。  默认值为0。
-	DeleteFlag *DetachServerVolumeRequestDeleteFlag `json:"delete_flag,omitempty"`
+	DeleteFlag *DetachServerVolumeRequestDeleteFlag `json:"delete_flag,omitempty" xml:"delete_flag"`
 }
 
 func (o DetachServerVolumeRequest) String() string {

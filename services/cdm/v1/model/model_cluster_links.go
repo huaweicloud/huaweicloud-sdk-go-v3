@@ -10,10 +10,10 @@ import (
 type ClusterLinks struct {
 
 	// 关系
-	Rel *string `json:"rel,omitempty"`
+	Rel *string `json:"rel,omitempty" xml:"rel"`
 
 	// 链接地址
-	Href *string `json:"href,omitempty"`
+	Href *string `json:"href,omitempty" xml:"href"`
 }
 
 func (o ClusterLinks) String() string {

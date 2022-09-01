@@ -10,10 +10,10 @@ import (
 type ListInstancesByResourceTagsResponse struct {
 
 	// 实例列表。
-	Instances *[]InstanceResult `json:"instances,omitempty"`
+	Instances *[]InstanceResult `json:"instances,omitempty" xml:"instances"`
 
 	// 总记录数。
-	TotalCount     *int32 `json:"total_count,omitempty"`
+	TotalCount     *int32 `json:"total_count,omitempty" xml:"total_count"`
 	HttpStatusCode int    `json:"-"`
 }
 

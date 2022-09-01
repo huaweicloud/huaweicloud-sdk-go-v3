@@ -13,19 +13,19 @@ import (
 type CreateInstanceFlavorOption struct {
 
 	// 节点类型。 取值：   - 集群实例包含mongos、shard和config节点，各节点下该参数取值分别为“mongos”、“shard”和“config”。   - 副本集实例下该参数取值为“replica”。   - 单节点实例下该参数取值为“single”。
-	Type CreateInstanceFlavorOptionType `json:"type"`
+	Type CreateInstanceFlavorOptionType `json:"type" xml:"type"`
 
 	// 节点数量。 取值：   - 集群实例下“mongos”类型的节点数量可取2~16。   - 集群实例下“shard”类型的组数量可取2~16。   - “shard”类型的组数量可取2~16。   - “config”类型的组数量只能取1。   - “replica”类型的组数量可取3，5，7。   - “single”类型的节点数量只能取1。
-	Num string `json:"num"`
+	Num string `json:"num" xml:"num"`
 
 	// 磁盘类型。 取值：ULTRAHIGH，表示SSD。   - 对于集群实例的shard和config节点、副本集、以及单节点实例，该参数有效。mongos节点不涉及选择磁盘，该参数无意义。
-	Storage *string `json:"storage,omitempty"`
+	Storage *string `json:"storage,omitempty" xml:"storage"`
 
 	// 磁盘大小。 取值：必须为10的整数倍。单位为GB。   - 对于集群实例，shard组可取10GB~2000GB，config组仅可取20GB。mongos节点不涉及选择磁盘，该参数无意义。   - 对于副本集实例，可取10GB~2000GB。   - 对于单节点实例，可取10GB~1000GB。
-	Size *string `json:"size,omitempty"`
+	Size *string `json:"size,omitempty" xml:"size"`
 
 	// 资源规格编码
-	SpecCode string `json:"spec_code"`
+	SpecCode string `json:"spec_code" xml:"spec_code"`
 }
 
 func (o CreateInstanceFlavorOption) String() string {

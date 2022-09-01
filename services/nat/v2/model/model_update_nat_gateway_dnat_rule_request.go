@@ -10,9 +10,9 @@ import (
 type UpdateNatGatewayDnatRuleRequest struct {
 
 	// DNAT规则的ID。
-	DnatRuleId string `json:"dnat_rule_id"`
+	DnatRuleId string `json:"dnat_rule_id" xml:"dnat_rule_id"`
 
-	Body *UpdateNatGatewayDnatRuleRequestBody `json:"body,omitempty"`
+	Body *UpdateNatGatewayDnatRuleRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateNatGatewayDnatRuleRequest) String() string {

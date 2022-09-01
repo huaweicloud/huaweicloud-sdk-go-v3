@@ -10,10 +10,10 @@ import (
 type ListServicePermissionsDetailsResponse struct {
 
 	// permission列表。
-	Permissions *[]Permission `json:"permissions,omitempty"`
+	Permissions *[]Permission `json:"permissions,omitempty" xml:"permissions"`
 
 	// 满足查询条件的终端节点服务的白名单总条数，不受分页（即limit、offset参数）影响。
-	TotalCount     *int32 `json:"total_count,omitempty"`
+	TotalCount     *int32 `json:"total_count,omitempty" xml:"total_count"`
 	HttpStatusCode int    `json:"-"`
 }
 

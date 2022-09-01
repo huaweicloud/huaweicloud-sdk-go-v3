@@ -12,22 +12,22 @@ import (
 type DuplicateApiInfo struct {
 
 	// API ID
-	ApiId *string `json:"api_id,omitempty"`
+	ApiId *string `json:"api_id,omitempty" xml:"api_id"`
 
 	// API名称
-	ApiName *string `json:"api_name,omitempty"`
+	ApiName *string `json:"api_name,omitempty" xml:"api_name"`
 
 	// 分组名称
-	GroupName *string `json:"group_name,omitempty"`
+	GroupName *string `json:"group_name,omitempty" xml:"group_name"`
 
 	// 分组ID
-	GroupId *string `json:"group_id,omitempty"`
+	GroupId *string `json:"group_id,omitempty" xml:"group_id"`
 
 	// API描述
-	Remark *string `json:"remark,omitempty"`
+	Remark *string `json:"remark,omitempty" xml:"remark"`
 
 	// api类型： - self-owned：自有API - authorized：授权API
-	ApiType *DuplicateApiInfoApiType `json:"api_type,omitempty"`
+	ApiType *DuplicateApiInfoApiType `json:"api_type,omitempty" xml:"api_type"`
 }
 
 func (o DuplicateApiInfo) String() string {

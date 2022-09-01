@@ -10,19 +10,19 @@ import (
 type ListRoutetablesRequest struct {
 
 	// 路由表ID
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 每页的最大数
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 路由表名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 偏移量
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// vpc的ID
-	VpcId *string `json:"vpc_id,omitempty"`
+	VpcId *string `json:"vpc_id,omitempty" xml:"vpc_id"`
 }
 
 func (o ListRoutetablesRequest) String() string {

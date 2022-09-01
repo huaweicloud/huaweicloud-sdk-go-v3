@@ -11,16 +11,16 @@ import (
 
 // 流水线资源信息
 type PipelineCreationResult struct {
-	Pipeline *PipelineBasic `json:"pipeline,omitempty"`
+	Pipeline *PipelineBasic `json:"pipeline,omitempty" xml:"pipeline"`
 
 	// 任务id
-	TaskId *string `json:"task_id,omitempty"`
+	TaskId *string `json:"task_id,omitempty" xml:"task_id"`
 
 	// 任务状态, success:成功,failed:失败,creating:创建中,cancel:取消,pending:等待创建
-	Status *PipelineCreationResultStatus `json:"status,omitempty"`
+	Status *PipelineCreationResultStatus `json:"status,omitempty" xml:"status"`
 
 	// 失败原因
-	FailureReason *string `json:"failure_reason,omitempty"`
+	FailureReason *string `json:"failure_reason,omitempty" xml:"failure_reason"`
 }
 
 func (o PipelineCreationResult) String() string {

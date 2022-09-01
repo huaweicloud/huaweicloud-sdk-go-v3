@@ -8,7 +8,7 @@ import (
 
 //
 type VaultTagsCreateReq struct {
-	Tag *Tag `json:"tag,omitempty"`
+	Tag *Tag `json:"tag,omitempty" xml:"tag"`
 }
 
 func (o VaultTagsCreateReq) String() string {

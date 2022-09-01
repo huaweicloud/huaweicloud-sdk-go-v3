@@ -10,10 +10,10 @@ import (
 type IotdaRuleAction struct {
 
 	// IoTDA中的规则Id
-	RuleId string `json:"rule_id"`
+	RuleId string `json:"rule_id" xml:"rule_id"`
 
 	// IoTDA中推送数据动作ID
-	ActionId string `json:"action_id"`
+	ActionId string `json:"action_id" xml:"action_id"`
 }
 
 func (o IotdaRuleAction) String() string {

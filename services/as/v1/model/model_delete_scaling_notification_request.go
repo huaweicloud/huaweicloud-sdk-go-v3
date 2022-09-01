@@ -10,10 +10,10 @@ import (
 type DeleteScalingNotificationRequest struct {
 
 	// 伸缩组标识。
-	ScalingGroupId string `json:"scaling_group_id"`
+	ScalingGroupId string `json:"scaling_group_id" xml:"scaling_group_id"`
 
 	// SMN服务中Topic的唯一的资源标识。
-	TopicUrn string `json:"topic_urn"`
+	TopicUrn string `json:"topic_urn" xml:"topic_urn"`
 }
 
 func (o DeleteScalingNotificationRequest) String() string {

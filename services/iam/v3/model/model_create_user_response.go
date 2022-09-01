@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type CreateUserResponse struct {
-	User           *CreateUserResult `json:"user,omitempty"`
+	User           *CreateUserResult `json:"user,omitempty" xml:"user"`
 	HttpStatusCode int               `json:"-"`
 }
 

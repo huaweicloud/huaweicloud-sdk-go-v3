@@ -10,9 +10,9 @@ import (
 type RollingRestartRequest struct {
 
 	// 指定重启集群ID。
-	ClusterId string `json:"cluster_id"`
+	ClusterId string `json:"cluster_id" xml:"cluster_id"`
 
-	Body *RollingRestartReq `json:"body,omitempty"`
+	Body *RollingRestartReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o RollingRestartRequest) String() string {

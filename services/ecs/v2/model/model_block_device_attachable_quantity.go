@@ -10,13 +10,13 @@ import (
 type BlockDeviceAttachableQuantity struct {
 
 	// 云服务器可挂载scsi类型磁盘数量。
-	FreeScsi *int32 `json:"free_scsi,omitempty"`
+	FreeScsi *int32 `json:"free_scsi,omitempty" xml:"free_scsi"`
 
 	// 云服务器可挂载virtio_blk类型磁盘数量。
-	FreeBlk *int32 `json:"free_blk,omitempty"`
+	FreeBlk *int32 `json:"free_blk,omitempty" xml:"free_blk"`
 
 	// 云服务器可挂载磁盘总数。
-	FreeDisk *int32 `json:"free_disk,omitempty"`
+	FreeDisk *int32 `json:"free_disk,omitempty" xml:"free_disk"`
 }
 
 func (o BlockDeviceAttachableQuantity) String() string {

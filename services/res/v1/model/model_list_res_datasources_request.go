@@ -10,7 +10,7 @@ import (
 type ListResDatasourcesRequest struct {
 
 	// 工作空间id。
-	WorkspaceId string `json:"workspace_id"`
+	WorkspaceId string `json:"workspace_id" xml:"workspace_id"`
 }
 
 func (o ListResDatasourcesRequest) String() string {

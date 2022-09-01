@@ -10,10 +10,10 @@ import (
 type ListContainerNodesResponse struct {
 
 	// 容器节点总数
-	TotalNum *int32 `json:"total_num,omitempty"`
+	TotalNum *int32 `json:"total_num,omitempty" xml:"total_num"`
 
 	// 容器节点列表
-	DataList       *[]ContainerNodeInfo `json:"data_list,omitempty"`
+	DataList       *[]ContainerNodeInfo `json:"data_list,omitempty" xml:"data_list"`
 	HttpStatusCode int                  `json:"-"`
 }
 

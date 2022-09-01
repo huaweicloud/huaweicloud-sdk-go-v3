@@ -8,7 +8,7 @@ import (
 
 // This is a auto create Body Object
 type RollbackSnapshotRequestBody struct {
-	Rollback *RollbackSnapshotOption `json:"rollback"`
+	Rollback *RollbackSnapshotOption `json:"rollback" xml:"rollback"`
 }
 
 func (o RollbackSnapshotRequestBody) String() string {

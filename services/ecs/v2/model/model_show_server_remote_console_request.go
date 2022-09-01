@@ -10,9 +10,9 @@ import (
 type ShowServerRemoteConsoleRequest struct {
 
 	// 云服务器ID。
-	ServerId string `json:"server_id"`
+	ServerId string `json:"server_id" xml:"server_id"`
 
-	Body *ShowServerRemoteConsoleRequestBody `json:"body,omitempty"`
+	Body *ShowServerRemoteConsoleRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o ShowServerRemoteConsoleRequest) String() string {

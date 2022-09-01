@@ -12,19 +12,19 @@ import (
 type CreateRuleRequestBody struct {
 
 	// 规则名称，支持英文大小写，数字，下划线和中划线,长度1-64
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 应用ID
-	AppId string `json:"app_id"`
+	AppId string `json:"app_id" xml:"app_id"`
 
 	// 描述，长度0-200
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 规则状态 0-启用 1-停用，不填写时默认为0-启用
-	Status *CreateRuleRequestBodyStatus `json:"status,omitempty"`
+	Status *CreateRuleRequestBodyStatus `json:"status,omitempty" xml:"status"`
 
 	// 数据解析状态，0-启用 1-停用，不填写时默认为1-禁用
-	DataParsingStatus *CreateRuleRequestBodyDataParsingStatus `json:"data_parsing_status,omitempty"`
+	DataParsingStatus *CreateRuleRequestBodyDataParsingStatus `json:"data_parsing_status,omitempty" xml:"data_parsing_status"`
 }
 
 func (o CreateRuleRequestBody) String() string {

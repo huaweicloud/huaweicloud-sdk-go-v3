@@ -10,22 +10,22 @@ import (
 type V2FramerateInfo struct {
 
 	// 推流域名。
-	PublishDomain *string `json:"publish_domain,omitempty"`
+	PublishDomain *string `json:"publish_domain,omitempty" xml:"publish_domain"`
 
 	// 应用名称。
-	App *string `json:"app,omitempty"`
+	App *string `json:"app,omitempty" xml:"app"`
 
 	// 流名。
-	Stream *string `json:"stream,omitempty"`
+	Stream *string `json:"stream,omitempty" xml:"stream"`
 
 	// 采样开始时间。日期格式按照ISO8601表示法，并使用UTC时间。 格式为：YYYY-MM-DDThh:mm:ssZ。
-	StartTime *string `json:"start_time,omitempty"`
+	StartTime *string `json:"start_time,omitempty" xml:"start_time"`
 
 	// 采样结束时间。日期格式按照ISO8601表示法，并使用UTC时间。 格式为：YYYY-MM-DDThh:mm:ssZ。
-	EndTime *string `json:"end_time,omitempty"`
+	EndTime *string `json:"end_time,omitempty" xml:"end_time"`
 
 	// 帧率信息列表，单位为fps。
-	DataList *[]int64 `json:"data_list,omitempty"`
+	DataList *[]int64 `json:"data_list,omitempty" xml:"data_list"`
 }
 
 func (o V2FramerateInfo) String() string {

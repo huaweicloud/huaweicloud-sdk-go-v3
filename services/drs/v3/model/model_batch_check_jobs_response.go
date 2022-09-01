@@ -10,10 +10,10 @@ import (
 type BatchCheckJobsResponse struct {
 
 	// 预检查响应体
-	Results *[]PostPreCheckResp `json:"results,omitempty"`
+	Results *[]PostPreCheckResp `json:"results,omitempty" xml:"results"`
 
 	// 总数
-	Count          *int32 `json:"count,omitempty"`
+	Count          *int32 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

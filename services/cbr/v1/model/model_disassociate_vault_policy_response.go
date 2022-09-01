@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type DisassociateVaultPolicyResponse struct {
-	DissociatePolicy *VaultPolicyResp `json:"dissociate_policy,omitempty"`
+	DissociatePolicy *VaultPolicyResp `json:"dissociate_policy,omitempty" xml:"dissociate_policy"`
 	HttpStatusCode   int              `json:"-"`
 }
 

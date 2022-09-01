@@ -12,34 +12,34 @@ import (
 type ApiFunc struct {
 
 	// 函数URN
-	FunctionUrn string `json:"function_urn"`
+	FunctionUrn string `json:"function_urn" xml:"function_urn"`
 
 	// 描述信息。长度不超过255个字符 > 中文字符必须为UTF-8或者unicode编码。
-	Remark *string `json:"remark,omitempty"`
+	Remark *string `json:"remark,omitempty" xml:"remark"`
 
 	// 调用类型 - async： 异步 - sync：同步
-	InvocationType ApiFuncInvocationType `json:"invocation_type"`
+	InvocationType ApiFuncInvocationType `json:"invocation_type" xml:"invocation_type"`
 
 	// 版本。
-	Version *string `json:"version,omitempty"`
+	Version *string `json:"version,omitempty" xml:"version"`
 
 	// API网关请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
-	Timeout int32 `json:"timeout"`
+	Timeout int32 `json:"timeout" xml:"timeout"`
 
 	// 后端自定义认证ID
-	AuthorizerId *string `json:"authorizer_id,omitempty"`
+	AuthorizerId *string `json:"authorizer_id,omitempty" xml:"authorizer_id"`
 
 	// 编号
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 注册时间
-	RegisterTime *sdktime.SdkTime `json:"register_time,omitempty"`
+	RegisterTime *sdktime.SdkTime `json:"register_time,omitempty" xml:"register_time"`
 
 	// 后端状态   - 1： 有效
-	Status *int32 `json:"status,omitempty"`
+	Status *int32 `json:"status,omitempty" xml:"status"`
 
 	// 修改时间
-	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
+	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty" xml:"update_time"`
 }
 
 func (o ApiFunc) String() string {

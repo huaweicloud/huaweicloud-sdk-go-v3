@@ -10,16 +10,16 @@ import (
 type ListAvailableRdsListResponse struct {
 
 	// 获取创建逻辑库可用数据库实例信息列表的集合。
-	Instances *[]QueryAvailableRdsList `json:"instances,omitempty"`
+	Instances *[]QueryAvailableRdsList `json:"instances,omitempty" xml:"instances"`
 
 	// 分页参数: 起始值。
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 分页参数：每页多少条。
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 集合总数
-	Total          *int32 `json:"total,omitempty"`
+	Total          *int32 `json:"total,omitempty" xml:"total"`
 	HttpStatusCode int    `json:"-"`
 }
 

@@ -10,7 +10,7 @@ import (
 type Ipv6Bandwidth struct {
 
 	// IPv6共享带宽的ID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 }
 
 func (o Ipv6Bandwidth) String() string {

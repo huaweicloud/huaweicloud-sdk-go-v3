@@ -12,10 +12,10 @@ import (
 type OriginRangeBody struct {
 
 	// range状态（\"off\"/\"on\"）
-	RangeStatus *OriginRangeBodyRangeStatus `json:"range_status,omitempty"`
+	RangeStatus *OriginRangeBodyRangeStatus `json:"range_status,omitempty" xml:"range_status"`
 
 	// 加速域名id。获取方法请参见查询加速域名。
-	DomainId *string `json:"domain_id,omitempty"`
+	DomainId *string `json:"domain_id,omitempty" xml:"domain_id"`
 }
 
 func (o OriginRangeBody) String() string {

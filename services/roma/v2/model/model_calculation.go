@@ -9,13 +9,13 @@ import (
 type Calculation struct {
 
 	// 从未连接过的设备数量
-	NeverConnected *int32 `json:"never_connected,omitempty"`
+	NeverConnected *int32 `json:"never_connected,omitempty" xml:"never_connected"`
 
 	// 在线设备数量
-	Online *int32 `json:"online,omitempty"`
+	Online *int32 `json:"online,omitempty" xml:"online"`
 
 	// 离线设备数量
-	Offline *int32 `json:"offline,omitempty"`
+	Offline *int32 `json:"offline,omitempty" xml:"offline"`
 }
 
 func (o Calculation) String() string {

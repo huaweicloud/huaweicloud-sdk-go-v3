@@ -10,10 +10,10 @@ import (
 type ListSecurityGroupsRequest struct {
 
 	// 查询返回边缘安全组列表数量。取值范围：0~1000。
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 查询的偏移量。
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 }
 
 func (o ListSecurityGroupsRequest) String() string {

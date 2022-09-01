@@ -10,10 +10,10 @@ import (
 type DownloadAssetArchiveRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 作业执行成功后，查询作业进度返回的entities.archive_id字段
-	ArchiveId string `json:"archive_id"`
+	ArchiveId string `json:"archive_id" xml:"archive_id"`
 }
 
 func (o DownloadAssetArchiveRequest) String() string {

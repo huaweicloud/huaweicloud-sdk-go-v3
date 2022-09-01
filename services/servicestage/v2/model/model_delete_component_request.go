@@ -10,13 +10,13 @@ import (
 type DeleteComponentRequest struct {
 
 	// 应用ID。
-	ApplicationId string `json:"application_id"`
+	ApplicationId string `json:"application_id" xml:"application_id"`
 
 	// 组件ID。
-	ComponentId string `json:"component_id"`
+	ComponentId string `json:"component_id" xml:"component_id"`
 
 	// 是否强制删除。
-	Force *bool `json:"force,omitempty"`
+	Force *bool `json:"force,omitempty" xml:"force"`
 }
 
 func (o DeleteComponentRequest) String() string {

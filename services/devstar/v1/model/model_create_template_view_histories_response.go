@@ -10,10 +10,10 @@ import (
 type CreateTemplateViewHistoriesResponse struct {
 
 	// 我浏览的模板。
-	Templates *[]TemplateViewHistory `json:"templates,omitempty"`
+	Templates *[]TemplateViewHistory `json:"templates,omitempty" xml:"templates"`
 
 	// 我浏览的模板数量。
-	Count          *int32 `json:"count,omitempty"`
+	Count          *int32 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

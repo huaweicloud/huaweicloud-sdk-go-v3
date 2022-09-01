@@ -11,42 +11,42 @@ import (
 type ProjectVpcChannelInfo struct {
 
 	// VPC通道的名称。  长度为3 ~ 64位的字符串，字符串由中文、英文字母、数字、中划线、下划线组成，且只能以英文或中文开头。 > 中文字符必须为UTF-8或者unicode编码。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// VPC通道中主机的端口号。  取值范围1 ~ 65535。
-	Port int32 `json:"port"`
+	Port int32 `json:"port" xml:"port"`
 
 	// 分发算法。 - 1：加权轮询（wrr） - 2：加权最少连接（wleastconn） - 3：源地址哈希（source） - 4：URI哈希（uri）
-	BalanceStrategy ProjectVpcChannelInfoBalanceStrategy `json:"balance_strategy"`
+	BalanceStrategy ProjectVpcChannelInfoBalanceStrategy `json:"balance_strategy" xml:"balance_strategy"`
 
 	// VPC通道的成员类型。[site场景必须修改成IP类型](tag:Site) - ip - ecs
-	MemberType ProjectVpcChannelInfoMemberType `json:"member_type"`
+	MemberType ProjectVpcChannelInfoMemberType `json:"member_type" xml:"member_type"`
 
 	// VPC通道的字典编码  支持英文，数字，特殊字符（-_.）  暂不支持
-	DictCode *string `json:"dict_code,omitempty"`
+	DictCode *string `json:"dict_code,omitempty" xml:"dict_code"`
 
 	// VPC通道的创建时间
-	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
+	CreateTime *sdktime.SdkTime `json:"create_time,omitempty" xml:"create_time"`
 
 	// VPC通道的编号
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// VPC通道的状态。 - 1：正常 - 2：异常
-	Status *ProjectVpcChannelInfoStatus `json:"status,omitempty"`
+	Status *ProjectVpcChannelInfoStatus `json:"status,omitempty" xml:"status"`
 
 	// 后端云服务器组列表。
-	MemberGroups *[]MemberGroupInfo `json:"member_groups,omitempty"`
+	MemberGroups *[]MemberGroupInfo `json:"member_groups,omitempty" xml:"member_groups"`
 
 	// 实例编号
-	InstanceId *string `json:"instance_id,omitempty"`
+	InstanceId *string `json:"instance_id,omitempty" xml:"instance_id"`
 
 	// 实例名称
-	InstanceName *string `json:"instance_name,omitempty"`
+	InstanceName *string `json:"instance_name,omitempty" xml:"instance_name"`
 
 	// 后端实例列表。
-	Members *[]VpcMemberInfo `json:"members,omitempty"`
+	Members *[]VpcMemberInfo `json:"members,omitempty" xml:"members"`
 
-	VpcHealthConfig *VpcHealthConfigInfo `json:"vpc_health_config,omitempty"`
+	VpcHealthConfig *VpcHealthConfigInfo `json:"vpc_health_config,omitempty" xml:"vpc_health_config"`
 }
 
 func (o ProjectVpcChannelInfo) String() string {

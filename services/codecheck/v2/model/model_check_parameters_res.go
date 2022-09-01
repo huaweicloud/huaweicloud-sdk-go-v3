@@ -9,13 +9,13 @@ import (
 type CheckParametersRes struct {
 
 	// 检查工具ID
-	CheckId *int32 `json:"check_id,omitempty"`
+	CheckId *int32 `json:"check_id,omitempty" xml:"check_id"`
 
 	// 编译参数名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 检查参数配置信息
-	CheckerConfigs *[]CheckConfigsItem `json:"checker_configs,omitempty"`
+	CheckerConfigs *[]CheckConfigsItem `json:"checker_configs,omitempty" xml:"checker_configs"`
 }
 
 func (o CheckParametersRes) String() string {

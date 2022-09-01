@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowProjectDetailsAndStatusResponse struct {
-	Project        *ProjectDetailsAndStatusResult `json:"project,omitempty"`
+	Project        *ProjectDetailsAndStatusResult `json:"project,omitempty" xml:"project"`
 	HttpStatusCode int                            `json:"-"`
 }
 

@@ -12,19 +12,19 @@ import (
 type Topic struct {
 
 	// TOPIC的ID
-	Id *int32 `json:"id,omitempty"`
+	Id *int32 `json:"id,omitempty" xml:"id"`
 
 	// TOPIC的名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// TOPIC描述
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// TOPIC权限, 主题权限 0-发布 1-订阅
-	Permission *TopicPermission `json:"permission,omitempty"`
+	Permission *TopicPermission `json:"permission,omitempty" xml:"permission"`
 
 	// TOPIC类型 0-基础TOPIC 1-用户自定义TOPIC
-	IsPrivate *TopicIsPrivate `json:"is_private,omitempty"`
+	IsPrivate *TopicIsPrivate `json:"is_private,omitempty" xml:"is_private"`
 }
 
 func (o Topic) String() string {

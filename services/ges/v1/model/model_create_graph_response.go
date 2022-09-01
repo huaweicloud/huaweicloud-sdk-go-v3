@@ -10,16 +10,16 @@ import (
 type CreateGraphResponse struct {
 
 	// 图ID。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 图名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 系统提示信息，执行成功时，字段可能为空。执行失败时，用于显示错误信息。
-	ErrorMessage *string `json:"errorMessage,omitempty"`
+	ErrorMessage *string `json:"errorMessage,omitempty" xml:"errorMessage"`
 
 	// 系统提示信息，执行成功时，字段可能为空。执行失败时，用于显示错误码。
-	ErrorCode      *string `json:"errorCode,omitempty"`
+	ErrorCode      *string `json:"errorCode,omitempty" xml:"errorCode"`
 	HttpStatusCode int     `json:"-"`
 }
 

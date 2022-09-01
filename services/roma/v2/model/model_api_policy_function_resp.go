@@ -12,34 +12,34 @@ import (
 type ApiPolicyFunctionResp struct {
 
 	// 函数URN
-	FunctionUrn string `json:"function_urn"`
+	FunctionUrn string `json:"function_urn" xml:"function_urn"`
 
 	// 调用类型 - async： 异步 - sync：同步
-	InvocationType ApiPolicyFunctionRespInvocationType `json:"invocation_type"`
+	InvocationType ApiPolicyFunctionRespInvocationType `json:"invocation_type" xml:"invocation_type"`
 
 	// ROMA Connect APIC请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000  单位：毫秒。
-	Timeout int32 `json:"timeout"`
+	Timeout int32 `json:"timeout" xml:"timeout"`
 
 	// 版本。字符长度不超过64
-	Version *string `json:"version,omitempty"`
+	Version *string `json:"version,omitempty" xml:"version"`
 
 	// 编号
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 策略后端名称。字符串由中文、英文字母、数字、下划线组成，且只能以中文或英文开头。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 策略条件列表
-	Conditions []ConditionResp `json:"conditions"`
+	Conditions []ConditionResp `json:"conditions" xml:"conditions"`
 
 	// 后端参数列表
-	BackendParams *[]BackendParam `json:"backend_params,omitempty"`
+	BackendParams *[]BackendParam `json:"backend_params,omitempty" xml:"backend_params"`
 
 	// 关联的策略组合模式： - ALL：满足全部条件 - ANY：满足任一条件
-	EffectMode ApiPolicyFunctionRespEffectMode `json:"effect_mode"`
+	EffectMode ApiPolicyFunctionRespEffectMode `json:"effect_mode" xml:"effect_mode"`
 
 	// 后端自定义认证对象的ID
-	AuthorizerId *string `json:"authorizer_id,omitempty"`
+	AuthorizerId *string `json:"authorizer_id,omitempty" xml:"authorizer_id"`
 }
 
 func (o ApiPolicyFunctionResp) String() string {

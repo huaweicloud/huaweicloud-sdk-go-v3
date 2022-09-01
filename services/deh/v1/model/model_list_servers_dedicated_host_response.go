@@ -10,7 +10,7 @@ import (
 type ListServersDedicatedHostResponse struct {
 
 	// server字段数据结构说明
-	Servers        *[]RespServer `json:"servers,omitempty"`
+	Servers        *[]RespServer `json:"servers,omitempty" xml:"servers"`
 	HttpStatusCode int           `json:"-"`
 }
 

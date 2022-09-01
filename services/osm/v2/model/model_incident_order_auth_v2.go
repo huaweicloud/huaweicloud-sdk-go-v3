@@ -10,43 +10,43 @@ import (
 type IncidentOrderAuthV2 struct {
 
 	// 授权id
-	Id *int64 `json:"id,omitempty"`
+	Id *int64 `json:"id,omitempty" xml:"id"`
 
 	// 授权状态
-	Status *int32 `json:"status,omitempty"`
+	Status *int32 `json:"status,omitempty" xml:"status"`
 
 	// 工单id
-	IncidentId *string `json:"incident_id,omitempty"`
+	IncidentId *string `json:"incident_id,omitempty" xml:"incident_id"`
 
 	// 简要描述
-	SimpleDescription *string `json:"simple_description,omitempty"`
+	SimpleDescription *string `json:"simple_description,omitempty" xml:"simple_description"`
 
 	// 授权资源类型名称
-	ResourceTypeName *string `json:"resource_type_name,omitempty"`
+	ResourceTypeName *string `json:"resource_type_name,omitempty" xml:"resource_type_name"`
 
 	// 授权访问类型名称
-	VisitTypeName *string `json:"visit_type_name,omitempty"`
+	VisitTypeName *string `json:"visit_type_name,omitempty" xml:"visit_type_name"`
 
 	// 创建时间
-	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
+	CreateTime *sdktime.SdkTime `json:"create_time,omitempty" xml:"create_time"`
 
 	// 授权生效时间
-	AuthEffectiveTime *sdktime.SdkTime `json:"auth_effective_time,omitempty"`
+	AuthEffectiveTime *sdktime.SdkTime `json:"auth_effective_time,omitempty" xml:"auth_effective_time"`
 
 	// 授权到期时间
-	AuthExpireTime *sdktime.SdkTime `json:"auth_expire_time,omitempty"`
+	AuthExpireTime *sdktime.SdkTime `json:"auth_expire_time,omitempty" xml:"auth_expire_time"`
 
 	// 拒绝原因
-	RejectReason *string `json:"reject_reason,omitempty"`
+	RejectReason *string `json:"reject_reason,omitempty" xml:"reject_reason"`
 
 	// 主账号id
-	CustomerId *string `json:"customer_id,omitempty"`
+	CustomerId *string `json:"customer_id,omitempty" xml:"customer_id"`
 
 	// 子用户id
-	XCustomerId *string `json:"x_customer_id,omitempty"`
+	XCustomerId *string `json:"x_customer_id,omitempty" xml:"x_customer_id"`
 
 	// 子用户名称
-	XCustomerName *string `json:"x_customer_name,omitempty"`
+	XCustomerName *string `json:"x_customer_name,omitempty" xml:"x_customer_name"`
 }
 
 func (o IncidentOrderAuthV2) String() string {

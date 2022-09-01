@@ -13,25 +13,25 @@ import (
 type ListSlowlogRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 偏移量，表示从此偏移量开始查询， offset大于等于0
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 每页显示的条目数量。
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 返回结果按该关键字排序，支持start_time，duration，默认为“start_time”
-	SortKey *ListSlowlogRequestSortKey `json:"sort_key,omitempty"`
+	SortKey *ListSlowlogRequestSortKey `json:"sort_key,omitempty" xml:"sort_key"`
 
 	// 降序或升序（分别对应desc和asc，默认为“desc”）
-	SortDir *ListSlowlogRequestSortDir `json:"sort_dir,omitempty"`
+	SortDir *ListSlowlogRequestSortDir `json:"sort_dir,omitempty" xml:"sort_dir"`
 
 	// 查询开始时间，时间为UTC时间的Unix时间戳。如：1598803200000。
-	StartTime string `json:"start_time"`
+	StartTime string `json:"start_time" xml:"start_time"`
 
 	// 查询结束时间，时间为UTC时间的Unix时间戳。如：1599494399000。
-	EndTime string `json:"end_time"`
+	EndTime string `json:"end_time" xml:"end_time"`
 }
 
 func (o ListSlowlogRequest) String() string {

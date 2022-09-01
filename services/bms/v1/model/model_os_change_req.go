@@ -8,7 +8,7 @@ import (
 
 // 切换裸金属服务器操作系统接口请求结构体
 type OsChangeReq struct {
-	OsChange *OsChange `json:"os-change"`
+	OsChange *OsChange `json:"os-change" xml:"os-change"`
 }
 
 func (o OsChangeReq) String() string {

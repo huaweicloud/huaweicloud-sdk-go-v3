@@ -10,7 +10,7 @@ import (
 type ShowMasterRequest struct {
 
 	// 仓库id
-	RepositoryUuid string `json:"repository_uuid"`
+	RepositoryUuid string `json:"repository_uuid" xml:"repository_uuid"`
 }
 
 func (o ShowMasterRequest) String() string {

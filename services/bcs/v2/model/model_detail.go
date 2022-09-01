@@ -13,16 +13,16 @@ import (
 type Detail struct {
 
 	// 开始时间
-	StartTime *string `json:"start_time,omitempty"`
+	StartTime *string `json:"start_time,omitempty" xml:"start_time"`
 
 	// 结束时间
-	EndTime *string `json:"end_time,omitempty"`
+	EndTime *string `json:"end_time,omitempty" xml:"end_time"`
 
 	// 状态
-	Status *DetailStatus `json:"status,omitempty"`
+	Status *DetailStatus `json:"status,omitempty" xml:"status"`
 
 	// 细节描述
-	Detail *string `json:"detail,omitempty"`
+	Detail *string `json:"detail,omitempty" xml:"detail"`
 }
 
 func (o Detail) String() string {

@@ -10,13 +10,13 @@ import (
 type TraceTopologyNode struct {
 
 	// 节点id
-	NodeId *int64 `json:"node_id,omitempty"`
+	NodeId *int64 `json:"node_id,omitempty" xml:"node_id"`
 
 	// 节点名称
-	NodeName *string `json:"node_name,omitempty"`
+	NodeName *string `json:"node_name,omitempty" xml:"node_name"`
 
 	// 节点提示字段
-	Hint *string `json:"hint,omitempty"`
+	Hint *string `json:"hint,omitempty" xml:"hint"`
 }
 
 func (o TraceTopologyNode) String() string {

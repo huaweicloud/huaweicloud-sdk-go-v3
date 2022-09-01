@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateEditingJobRequest struct {
-	Body *CreateEditingJobReq `json:"body,omitempty"`
+	Body *CreateEditingJobReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateEditingJobRequest) String() string {

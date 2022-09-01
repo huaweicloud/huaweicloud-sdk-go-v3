@@ -13,12 +13,12 @@ import (
 type ExportGraphRequest struct {
 
 	// 图ID。
-	GraphId string `json:"graph_id"`
+	GraphId string `json:"graph_id" xml:"graph_id"`
 
 	// 图actionId
-	ActionId ExportGraphRequestActionId `json:"action_id"`
+	ActionId ExportGraphRequestActionId `json:"action_id" xml:"action_id"`
 
-	Body *ExportGraphReq `json:"body,omitempty"`
+	Body *ExportGraphReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o ExportGraphRequest) String() string {

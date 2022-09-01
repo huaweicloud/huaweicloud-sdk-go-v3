@@ -10,25 +10,25 @@ import (
 type CircuitBreaker struct {
 
 	// 熔断开关，是否开启连接保护   - true：开启连接保护   - false: 关闭连接保护
-	Switch *bool `json:"switch,omitempty"`
+	Switch *bool `json:"switch,omitempty" xml:"switch"`
 
 	// 502/504数量阈值，每30s累加的502/504数量阈值
-	DeadNum *int32 `json:"dead_num,omitempty"`
+	DeadNum *int32 `json:"dead_num,omitempty" xml:"dead_num"`
 
 	// 502/504数量占比(%)，总请求数量中502/504数量占比达到所设定值，并且与数量阈值同时满足时触发宕机保护
-	DeadRatio float32 `json:"dead_ratio,omitempty"`
+	DeadRatio float32 `json:"dead_ratio,omitempty" xml:"dead_ratio"`
 
 	// 初次触发宕机的保护时间，即WAF将停止转发用户请求的时间。
-	BlockTime *int32 `json:"block_time,omitempty"`
+	BlockTime *int32 `json:"block_time,omitempty" xml:"block_time"`
 
 	// 连续触发时，保护时间延长最大倍数，叠加周期为3600s。例如，“初次保护时间”设置为180s，“连续触发叠加系数”设置为3。   - 当触发次数为2（即小于3）时，保护时间为360s。   - 当次数大于等于3时，保护时间为540s。   - 当累计保护时间超过1小时（3600s），叠加次数会从头计数。
-	SuperpositionNum *int32 `json:"superposition_num,omitempty"`
+	SuperpositionNum *int32 `json:"superposition_num,omitempty" xml:"superposition_num"`
 
 	// 读等待URL请求数量阈值，读等待URL请求数量到达设定值即触发连接保护
-	SuspendNum *int32 `json:"suspend_num,omitempty"`
+	SuspendNum *int32 `json:"suspend_num,omitempty" xml:"suspend_num"`
 
 	// 读等待URL请求数量超过阈值后的熔断时间，达到数量阈值所触发的保护时间，即WAF将停止转发用户请求的时间。
-	SusBlockTime *int32 `json:"sus_block_time,omitempty"`
+	SusBlockTime *int32 `json:"sus_block_time,omitempty" xml:"sus_block_time"`
 }
 
 func (o CircuitBreaker) String() string {

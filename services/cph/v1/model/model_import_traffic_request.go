@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ImportTrafficRequest struct {
-	Body *ImportTrafficRequestBody `json:"body,omitempty"`
+	Body *ImportTrafficRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o ImportTrafficRequest) String() string {

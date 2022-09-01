@@ -10,9 +10,9 @@ import (
 type CreatePipelineByTemplateRequest struct {
 
 	// 语言类型 中文:zh-cn 英文:en-us，默认en-us
-	XLanguage *string `json:"X-Language,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
 
-	Body *TemplateCddl `json:"body,omitempty"`
+	Body *TemplateCddl `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreatePipelineByTemplateRequest) String() string {

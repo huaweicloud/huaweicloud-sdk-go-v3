@@ -10,9 +10,9 @@ import (
 type KeystoneUpdateUserByAdminRequest struct {
 
 	// 待修改信息的IAM用户ID，获取方式请参见：[获取用户ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
-	UserId string `json:"user_id"`
+	UserId string `json:"user_id" xml:"user_id"`
 
-	Body *KeystoneUpdateUserByAdminRequestBody `json:"body,omitempty"`
+	Body *KeystoneUpdateUserByAdminRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o KeystoneUpdateUserByAdminRequest) String() string {

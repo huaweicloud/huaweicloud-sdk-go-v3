@@ -10,13 +10,13 @@ import (
 type SearchPictureItem struct {
 
 	// 被搜索图片的路径。
-	Path *string `json:"path,omitempty"`
+	Path *string `json:"path,omitempty" xml:"path"`
 
 	// 查询图片和被搜索图片的相似度，值越接近1表示越相似。
-	Sim *float32 `json:"sim,omitempty"`
+	Sim *float32 `json:"sim,omitempty" xml:"sim"`
 
 	// 自定义的标签名称和标签内容。
-	Tags *interface{} `json:"tags,omitempty"`
+	Tags *interface{} `json:"tags,omitempty" xml:"tags"`
 }
 
 func (o SearchPictureItem) String() string {

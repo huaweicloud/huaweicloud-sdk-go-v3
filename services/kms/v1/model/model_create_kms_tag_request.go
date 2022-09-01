@@ -10,12 +10,12 @@ import (
 type CreateKmsTagRequest struct {
 
 	// API版本号
-	VersionId string `json:"version_id"`
+	VersionId string `json:"version_id" xml:"version_id"`
 
 	// 密钥ID
-	KeyId string `json:"key_id"`
+	KeyId string `json:"key_id" xml:"key_id"`
 
-	Body *CreateKmsTagRequestBody `json:"body,omitempty"`
+	Body *CreateKmsTagRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateKmsTagRequest) String() string {

@@ -10,10 +10,10 @@ import (
 type Dimension struct {
 
 	// 维度名称。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 维度取值。
-	Value string `json:"value"`
+	Value string `json:"value" xml:"value"`
 }
 
 func (o Dimension) String() string {

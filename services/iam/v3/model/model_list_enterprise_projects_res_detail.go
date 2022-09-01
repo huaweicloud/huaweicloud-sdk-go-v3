@@ -9,7 +9,7 @@ import (
 type ListEnterpriseProjectsResDetail struct {
 
 	// 项目Id。
-	ProjectId string `json:"projectId"`
+	ProjectId string `json:"projectId" xml:"projectId"`
 }
 
 func (o ListEnterpriseProjectsResDetail) String() string {

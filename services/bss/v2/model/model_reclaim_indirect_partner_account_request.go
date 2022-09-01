@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ReclaimIndirectPartnerAccountRequest struct {
-	Body *ReclaimIndirectPartnerAccountReq `json:"body,omitempty"`
+	Body *ReclaimIndirectPartnerAccountReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o ReclaimIndirectPartnerAccountRequest) String() string {

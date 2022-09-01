@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ListTaskRulesetResponse struct {
-	Body           *[]ListTaskRulesetRes `json:"body,omitempty"`
+	Body           *[]ListTaskRulesetRes `json:"body,omitempty" xml:"body"`
 	HttpStatusCode int                   `json:"-"`
 }
 

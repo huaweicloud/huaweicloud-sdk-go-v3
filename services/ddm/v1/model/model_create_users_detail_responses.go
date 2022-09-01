@@ -10,7 +10,7 @@ import (
 type CreateUsersDetailResponses struct {
 
 	// DDM实例帐号名称。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 }
 
 func (o CreateUsersDetailResponses) String() string {

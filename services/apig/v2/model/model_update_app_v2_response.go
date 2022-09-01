@@ -12,37 +12,37 @@ import (
 type UpdateAppV2Response struct {
 
 	// 编号
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 描述
-	Remark *string `json:"remark,omitempty"`
+	Remark *string `json:"remark,omitempty" xml:"remark"`
 
 	// APP的创建者 - USER：用户自行创建 - MARKET：云市场分配  暂不支持MARKET
-	Creator *UpdateAppV2ResponseCreator `json:"creator,omitempty"`
+	Creator *UpdateAppV2ResponseCreator `json:"creator,omitempty" xml:"creator"`
 
 	// 更新时间
-	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
+	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty" xml:"update_time"`
 
 	// APP的key
-	AppKey *string `json:"app_key,omitempty"`
+	AppKey *string `json:"app_key,omitempty" xml:"app_key"`
 
 	// 密钥
-	AppSecret *string `json:"app_secret,omitempty"`
+	AppSecret *string `json:"app_secret,omitempty" xml:"app_secret"`
 
 	// 注册时间
-	RegisterTime *sdktime.SdkTime `json:"register_time,omitempty"`
+	RegisterTime *sdktime.SdkTime `json:"register_time,omitempty" xml:"register_time"`
 
 	// 状态   - 1： 有效
-	Status *UpdateAppV2ResponseStatus `json:"status,omitempty"`
+	Status *UpdateAppV2ResponseStatus `json:"status,omitempty" xml:"status"`
 
 	// APP的类型： - apig：存量apig应用，不推荐使用 - roma：roma集成应用  默认apig，暂不支持其他类型
-	AppType *UpdateAppV2ResponseAppType `json:"app_type,omitempty"`
+	AppType *UpdateAppV2ResponseAppType `json:"app_type,omitempty" xml:"app_type"`
 
 	// ROMA_APP的类型： - subscription：订阅应用 - integration：集成应用  暂不支持
-	RomaAppType    *string `json:"roma_app_type,omitempty"`
+	RomaAppType    *string `json:"roma_app_type,omitempty" xml:"roma_app_type"`
 	HttpStatusCode int     `json:"-"`
 }
 

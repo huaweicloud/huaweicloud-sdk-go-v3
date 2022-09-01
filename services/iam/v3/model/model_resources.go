@@ -10,19 +10,19 @@ import (
 type Resources struct {
 
 	// 配额最大值。
-	Max *int32 `json:"max,omitempty"`
+	Max *int32 `json:"max,omitempty" xml:"max"`
 
 	// 配额最小值。
-	Min *int32 `json:"min,omitempty"`
+	Min *int32 `json:"min,omitempty" xml:"min"`
 
 	// 当前配额。
-	Quota *int32 `json:"quota,omitempty"`
+	Quota *int32 `json:"quota,omitempty" xml:"quota"`
 
 	// 配额类型。
-	Type *string `json:"type,omitempty"`
+	Type *string `json:"type,omitempty" xml:"type"`
 
 	// 已使用的配额。
-	Used *int32 `json:"used,omitempty"`
+	Used *int32 `json:"used,omitempty" xml:"used"`
 }
 
 func (o Resources) String() string {

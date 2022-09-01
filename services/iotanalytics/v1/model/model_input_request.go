@@ -9,9 +9,9 @@ import (
 type InputRequest struct {
 
 	// 参数名，正则： \"^[A-Za-z][A-Za-z_]{0,31}$\"
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
-	PropertyReference *PropertyReferenceReq `json:"property_reference"`
+	PropertyReference *PropertyReferenceReq `json:"property_reference" xml:"property_reference"`
 }
 
 func (o InputRequest) String() string {

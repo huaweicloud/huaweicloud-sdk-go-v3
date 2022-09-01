@@ -10,9 +10,9 @@ import (
 type ShowPublicipResponse struct {
 
 	// 本次请求的编号
-	RequestId *string `json:"request_id,omitempty"`
+	RequestId *string `json:"request_id,omitempty" xml:"request_id"`
 
-	Publicip       *PublicipSingleShowResp `json:"publicip,omitempty"`
+	Publicip       *PublicipSingleShowResp `json:"publicip,omitempty" xml:"publicip"`
 	HttpStatusCode int                     `json:"-"`
 }
 

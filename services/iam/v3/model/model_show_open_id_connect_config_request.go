@@ -10,7 +10,7 @@ import (
 type ShowOpenIdConnectConfigRequest struct {
 
 	// 身份提供商ID
-	IdpId string `json:"idp_id"`
+	IdpId string `json:"idp_id" xml:"idp_id"`
 }
 
 func (o ShowOpenIdConnectConfigRequest) String() string {

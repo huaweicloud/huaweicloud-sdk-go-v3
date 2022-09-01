@@ -9,13 +9,13 @@ import (
 type VertexsetPath1 struct {
 
 	// 导入OBS文件对应的jobId。
-	JobId string `json:"jobId"`
+	JobId string `json:"jobId" xml:"jobId"`
 
 	// OBS存储路径，不包含OBS Endpoint。
-	Path string `json:"path"`
+	Path string `json:"path" xml:"path"`
 
 	// OBS文件导入状态。  - success：完全导入成功 - partiallyFailed：部分失败 - failed：完全导入失败
-	Status string `json:"status"`
+	Status string `json:"status" xml:"status"`
 }
 
 func (o VertexsetPath1) String() string {

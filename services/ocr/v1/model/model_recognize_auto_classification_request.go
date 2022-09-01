@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RecognizeAutoClassificationRequest struct {
-	Body *AutoClassificationRequestBody `json:"body,omitempty"`
+	Body *AutoClassificationRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o RecognizeAutoClassificationRequest) String() string {

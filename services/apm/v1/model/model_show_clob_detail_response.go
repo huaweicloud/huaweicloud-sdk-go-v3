@@ -10,7 +10,7 @@ import (
 type ShowClobDetailResponse struct {
 
 	// clob详情
-	ClobString     *string `json:"clob_string,omitempty"`
+	ClobString     *string `json:"clob_string,omitempty" xml:"clob_string"`
 	HttpStatusCode int     `json:"-"`
 }
 

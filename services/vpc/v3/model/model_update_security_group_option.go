@@ -10,10 +10,10 @@ import (
 type UpdateSecurityGroupOption struct {
 
 	// 功能说明：安全组名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 功能说明：安全组描述 取值范围：0-255个字符，不能包含“<”和“>”
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 }
 
 func (o UpdateSecurityGroupOption) String() string {

@@ -10,9 +10,9 @@ import (
 type UpdateEdgeSiteRequest struct {
 
 	// 边缘小站ID
-	SiteId string `json:"site_id"`
+	SiteId string `json:"site_id" xml:"site_id"`
 
-	Body *UpdateEdgeSiteRequestBody `json:"body,omitempty"`
+	Body *UpdateEdgeSiteRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateEdgeSiteRequest) String() string {

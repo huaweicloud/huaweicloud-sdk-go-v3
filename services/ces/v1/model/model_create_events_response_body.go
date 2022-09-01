@@ -10,10 +10,10 @@ import (
 type CreateEventsResponseBody struct {
 
 	// 事件ID。
-	EventId string `json:"event_id"`
+	EventId string `json:"event_id" xml:"event_id"`
 
 	// 事件名称。  必须以字母开头，只能包含0-9/a-z/A-Z/_，长度最短为1，最大为64。
-	EventName string `json:"event_name"`
+	EventName string `json:"event_name" xml:"event_name"`
 }
 
 func (o CreateEventsResponseBody) String() string {

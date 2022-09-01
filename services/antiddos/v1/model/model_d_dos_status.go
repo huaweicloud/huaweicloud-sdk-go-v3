@@ -10,28 +10,28 @@ import (
 type DDosStatus struct {
 
 	// EIP的ID
-	FloatingIpId string `json:"floating_ip_id"`
+	FloatingIpId string `json:"floating_ip_id" xml:"floating_ip_id"`
 
 	// 浮动IP地址
-	FloatingIpAddress string `json:"floating_ip_address"`
+	FloatingIpAddress string `json:"floating_ip_address" xml:"floating_ip_address"`
 
 	// EIP所属类型，可选范围： - EIP：未绑定到ECS的EIP或绑定到ECS的EIP - ELB：绑定到ELB的EIP
-	NetworkType string `json:"network_type"`
+	NetworkType string `json:"network_type" xml:"network_type"`
 
 	// 防护状态，可选范围： - normal：表示正常 - configging：表示设置中 - notConfig：表示未设置 - packetcleaning：表示清洗 - packetdropping：表示黑洞
-	Status string `json:"status"`
+	Status string `json:"status" xml:"status"`
 
 	// 黑洞结束时间
-	BlackholeEndtime int64 `json:"blackhole_endtime"`
+	BlackholeEndtime int64 `json:"blackhole_endtime" xml:"blackhole_endtime"`
 
 	// 防护类型
-	ProtectType string `json:"protect_type"`
+	ProtectType string `json:"protect_type" xml:"protect_type"`
 
 	// 流量阈值
-	TrafficThreshold int64 `json:"traffic_threshold"`
+	TrafficThreshold int64 `json:"traffic_threshold" xml:"traffic_threshold"`
 
 	// http流量阈值
-	HttpThreshold int64 `json:"http_threshold"`
+	HttpThreshold int64 `json:"http_threshold" xml:"http_threshold"`
 }
 
 func (o DDosStatus) String() string {

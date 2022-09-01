@@ -10,10 +10,10 @@ import (
 type ListMetadataLocksResponse struct {
 
 	// 元数据锁列表
-	MetadataLocks *[]MetadataLock `json:"metadata_locks,omitempty"`
+	MetadataLocks *[]MetadataLock `json:"metadata_locks,omitempty" xml:"metadata_locks"`
 
 	// 元数据锁数量
-	Count          *int32 `json:"count,omitempty"`
+	Count          *int32 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

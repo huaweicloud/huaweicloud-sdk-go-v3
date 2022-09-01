@@ -10,9 +10,9 @@ import (
 type CreateDatasourceInfoRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *DatasourceInfo `json:"body,omitempty"`
+	Body *DatasourceInfo `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateDatasourceInfoRequest) String() string {

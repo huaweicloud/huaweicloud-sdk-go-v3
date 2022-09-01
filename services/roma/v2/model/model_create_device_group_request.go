@@ -10,9 +10,9 @@ import (
 type CreateDeviceGroupRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *CreateDeviceGroupRequestBody `json:"body,omitempty"`
+	Body *CreateDeviceGroupRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateDeviceGroupRequest) String() string {

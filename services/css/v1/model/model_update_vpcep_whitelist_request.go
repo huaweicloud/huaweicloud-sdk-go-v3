@@ -10,9 +10,9 @@ import (
 type UpdateVpcepWhitelistRequest struct {
 
 	// 指定待更改的集群ID。
-	ClusterId string `json:"cluster_id"`
+	ClusterId string `json:"cluster_id" xml:"cluster_id"`
 
-	Body *UpdateVpcepWhitelistReq `json:"body,omitempty"`
+	Body *UpdateVpcepWhitelistReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateVpcepWhitelistRequest) String() string {

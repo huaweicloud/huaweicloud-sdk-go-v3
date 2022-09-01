@@ -9,31 +9,31 @@ import (
 type IdcardResult struct {
 
 	// 身份证上识别的名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 身份证号。
-	Number *string `json:"number,omitempty"`
+	Number *string `json:"number,omitempty" xml:"number"`
 
 	// 性别。
-	Sex *string `json:"sex,omitempty"`
+	Sex *string `json:"sex,omitempty" xml:"sex"`
 
 	// 出生日期。
-	Birth *string `json:"birth,omitempty"`
+	Birth *string `json:"birth,omitempty" xml:"birth"`
 
 	// 民族。
-	Ethnicity *string `json:"ethnicity,omitempty"`
+	Ethnicity *string `json:"ethnicity,omitempty" xml:"ethnicity"`
 
 	// 地址。
-	Address *string `json:"address,omitempty"`
+	Address *string `json:"address,omitempty" xml:"address"`
 
 	// 发证机关。
-	Issue *string `json:"issue,omitempty"`
+	Issue *string `json:"issue,omitempty" xml:"issue"`
 
 	// 有效起始日期。
-	ValidFrom *string `json:"valid_from,omitempty"`
+	ValidFrom *string `json:"valid_from,omitempty" xml:"valid_from"`
 
 	// 有效结束日期。
-	ValidTo *string `json:"valid_to,omitempty"`
+	ValidTo *string `json:"valid_to,omitempty" xml:"valid_to"`
 }
 
 func (o IdcardResult) String() string {

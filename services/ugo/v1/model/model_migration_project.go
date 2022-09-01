@@ -12,31 +12,31 @@ import (
 type MigrationProject struct {
 
 	// 迁移项目ID。
-	MigrationProjectId int32 `json:"migration_project_id"`
+	MigrationProjectId int32 `json:"migration_project_id" xml:"migration_project_id"`
 
 	// 迁移项目名称。
-	MigrationProjectName string `json:"migration_project_name"`
+	MigrationProjectName string `json:"migration_project_name" xml:"migration_project_name"`
 
 	// 评估项目ID。
-	EvaluationProjectId int32 `json:"evaluation_project_id"`
+	EvaluationProjectId int32 `json:"evaluation_project_id" xml:"evaluation_project_id"`
 
 	// 评估项目名称。
-	EvaluationProjectName string `json:"evaluation_project_name"`
+	EvaluationProjectName string `json:"evaluation_project_name" xml:"evaluation_project_name"`
 
 	// 迁移项目状态。
-	MigrationProjectStatus MigrationProjectMigrationProjectStatus `json:"migration_project_status"`
+	MigrationProjectStatus MigrationProjectMigrationProjectStatus `json:"migration_project_status" xml:"migration_project_status"`
 
 	// 目标库权限检查状态。
-	PermissionCheckStatus MigrationProjectPermissionCheckStatus `json:"permission_check_status"`
+	PermissionCheckStatus MigrationProjectPermissionCheckStatus `json:"permission_check_status" xml:"permission_check_status"`
 
 	// 资源ID。
-	ResourceId string `json:"resource_id"`
+	ResourceId string `json:"resource_id" xml:"resource_id"`
 
 	// 创建时间。
-	CreatedTime string `json:"created_time"`
+	CreatedTime string `json:"created_time" xml:"created_time"`
 
 	// 更新时间。
-	UpdatedTime string `json:"updated_time"`
+	UpdatedTime string `json:"updated_time" xml:"updated_time"`
 }
 
 func (o MigrationProject) String() string {

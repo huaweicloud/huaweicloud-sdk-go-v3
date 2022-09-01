@@ -7,10 +7,10 @@ import (
 )
 
 type VaultBackup struct {
-	Parameters *CheckpointParam `json:"parameters,omitempty"`
+	Parameters *CheckpointParam `json:"parameters,omitempty" xml:"parameters"`
 
 	// 存储库ID
-	VaultId string `json:"vault_id"`
+	VaultId string `json:"vault_id" xml:"vault_id"`
 }
 
 func (o VaultBackup) String() string {

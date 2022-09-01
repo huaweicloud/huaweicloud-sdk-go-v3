@@ -8,10 +8,10 @@ import (
 
 // Response Object
 type KeystoneListProtocolsResponse struct {
-	Links *Links `json:"links,omitempty"`
+	Links *Links `json:"links,omitempty" xml:"links"`
 
 	// 协议信息列表。
-	Protocols      *[]ProtocolResult `json:"protocols,omitempty"`
+	Protocols      *[]ProtocolResult `json:"protocols,omitempty" xml:"protocols"`
 	HttpStatusCode int               `json:"-"`
 }
 

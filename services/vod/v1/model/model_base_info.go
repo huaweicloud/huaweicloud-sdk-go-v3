@@ -10,49 +10,49 @@ import (
 type BaseInfo struct {
 
 	// 媒资标题。  长度不超过128个字节，UTF8编码。
-	Title *string `json:"title,omitempty"`
+	Title *string `json:"title,omitempty" xml:"title"`
 
 	// 媒资文件名。
-	VideoName *string `json:"video_name,omitempty"`
+	VideoName *string `json:"video_name,omitempty" xml:"video_name"`
 
 	// 媒资描述。  长度不超过1024个字节。
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 媒资分类id。
-	CategoryId *int64 `json:"category_id,omitempty"`
+	CategoryId *int64 `json:"category_id,omitempty" xml:"category_id"`
 
 	// 媒资分类名称。
-	CategoryName *string `json:"category_name,omitempty"`
+	CategoryName *string `json:"category_name,omitempty" xml:"category_name"`
 
 	// 媒资创建时间。  格式为yyyymmddhhmmss。必须是与时区无关的UTC时间。
-	CreateTime *string `json:"create_time,omitempty"`
+	CreateTime *string `json:"create_time,omitempty" xml:"create_time"`
 
 	// 媒资最近修改时间。  格式为yyyymmddhhmmss。必须是与时区无关的UTC时间。
-	LastModified *string `json:"last_modified,omitempty"`
+	LastModified *string `json:"last_modified,omitempty" xml:"last_modified"`
 
 	// 音视频文件类型。  取值如下： - 视频文件：MP4、TS、MOV、MXF、MPG、FLV、WMV、AVI、M4V、F4V、MPEG、3GP、ASF、MKV。 - 音频文件：MP3、OGG、WAV、WMA、APE、FLAC、AAC、AC3、MMF、AMR、M4A、M4R、WV、MP2。
-	VideoType *string `json:"video_type,omitempty"`
+	VideoType *string `json:"video_type,omitempty" xml:"video_type"`
 
 	// 媒资标签。  单个标签不超过16个字节，最多不超过16个标签。  多个用逗号分隔，UTF8编码。
-	Tags *string `json:"tags,omitempty"`
+	Tags *string `json:"tags,omitempty" xml:"tags"`
 
-	MetaData *MetaData `json:"meta_data,omitempty"`
+	MetaData *MetaData `json:"meta_data,omitempty" xml:"meta_data"`
 
 	// 原始视频文件的访问地址。
-	VideoUrl *string `json:"video_url,omitempty"`
+	VideoUrl *string `json:"video_url,omitempty" xml:"video_url"`
 
 	// 原视频文件的OBS临时访问地址,仅媒资详情接口生效
-	SignUrl *string `json:"sign_url,omitempty"`
+	SignUrl *string `json:"sign_url,omitempty" xml:"sign_url"`
 
 	// 封面信息。
-	CoverInfoArray *[]CoverInfo `json:"cover_info_array,omitempty"`
+	CoverInfoArray *[]CoverInfo `json:"cover_info_array,omitempty" xml:"cover_info_array"`
 
 	// 字幕信息数组
-	SubtitleInfo *[]SubtitleInfo `json:"subtitle_info,omitempty"`
+	SubtitleInfo *[]SubtitleInfo `json:"subtitle_info,omitempty" xml:"subtitle_info"`
 
-	SourcePath *FileAddr `json:"source_path,omitempty"`
+	SourcePath *FileAddr `json:"source_path,omitempty" xml:"source_path"`
 
-	OutputPath *FileAddr `json:"output_path,omitempty"`
+	OutputPath *FileAddr `json:"output_path,omitempty" xml:"output_path"`
 }
 
 func (o BaseInfo) String() string {

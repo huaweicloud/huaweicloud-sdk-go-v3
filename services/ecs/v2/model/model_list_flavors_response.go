@@ -10,7 +10,7 @@ import (
 type ListFlavorsResponse struct {
 
 	// 云服务器规格列表。
-	Flavors        *[]Flavor `json:"flavors,omitempty"`
+	Flavors        *[]Flavor `json:"flavors,omitempty" xml:"flavors"`
 	HttpStatusCode int       `json:"-"`
 }
 

@@ -11,19 +11,19 @@ import (
 
 // Response Object
 type ShowJobResponse struct {
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
-	Nodes *[]Node `json:"nodes,omitempty"`
+	Nodes *[]Node `json:"nodes,omitempty" xml:"nodes"`
 
-	Schedule *Schedule `json:"schedule,omitempty"`
+	Schedule *Schedule `json:"schedule,omitempty" xml:"schedule"`
 
-	Params *[]JobParam `json:"params,omitempty"`
+	Params *[]JobParam `json:"params,omitempty" xml:"params"`
 
-	Directory *string `json:"directory,omitempty"`
+	Directory *string `json:"directory,omitempty" xml:"directory"`
 
-	JobType *ShowJobResponseJobType `json:"jobType,omitempty"`
+	JobType *ShowJobResponseJobType `json:"jobType,omitempty" xml:"jobType"`
 
-	BasicConfig    *BasicInfo `json:"basicConfig,omitempty"`
+	BasicConfig    *BasicInfo `json:"basicConfig,omitempty" xml:"basicConfig"`
 	HttpStatusCode int        `json:"-"`
 }
 

@@ -10,12 +10,12 @@ import (
 type QueryLtsStructLogParamsNew struct {
 
 	// sql语句字符串。
-	Query string `json:"query"`
+	Query string `json:"query" xml:"query"`
 
 	// 查询结果格式。当前仅支持：\"k-v\"。
-	Format string `json:"format"`
+	Format string `json:"format" xml:"format"`
 
-	TimeRange *TimeRange `json:"time_range"`
+	TimeRange *TimeRange `json:"time_range" xml:"time_range"`
 }
 
 func (o QueryLtsStructLogParamsNew) String() string {

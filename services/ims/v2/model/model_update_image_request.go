@@ -10,9 +10,9 @@ import (
 type UpdateImageRequest struct {
 
 	// 镜像ID
-	ImageId string `json:"image_id"`
+	ImageId string `json:"image_id" xml:"image_id"`
 
-	Body *[]UpdateImageRequestBody `json:"body,omitempty"`
+	Body *[]UpdateImageRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateImageRequest) String() string {

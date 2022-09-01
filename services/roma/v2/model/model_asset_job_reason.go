@@ -12,16 +12,16 @@ import (
 type AssetJobReason struct {
 
 	// 资源类型
-	ResourceType *AssetJobReasonResourceType `json:"resource_type,omitempty"`
+	ResourceType *AssetJobReasonResourceType `json:"resource_type,omitempty" xml:"resource_type"`
 
 	// 资源名称
-	ResourceName *string `json:"resource_name,omitempty"`
+	ResourceName *string `json:"resource_name,omitempty" xml:"resource_name"`
 
 	// 错误码
-	ErrorCode *string `json:"error_code,omitempty"`
+	ErrorCode *string `json:"error_code,omitempty" xml:"error_code"`
 
 	// 错误信息
-	ErrorMsg *string `json:"error_msg,omitempty"`
+	ErrorMsg *string `json:"error_msg,omitempty" xml:"error_msg"`
 }
 
 func (o AssetJobReason) String() string {

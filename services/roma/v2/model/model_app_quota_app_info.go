@@ -10,34 +10,34 @@ import (
 type AppQuotaAppInfo struct {
 
 	// 客户端应用编号
-	AppId *string `json:"app_id,omitempty"`
+	AppId *string `json:"app_id,omitempty" xml:"app_id"`
 
 	// 客户端应用名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 客户端应用状态： - 1：启用 - 2：禁用
-	Status *int32 `json:"status,omitempty"`
+	Status *int32 `json:"status,omitempty" xml:"status"`
 
 	// 客户端应用的Key
-	AppKey *string `json:"app_key,omitempty"`
+	AppKey *string `json:"app_key,omitempty" xml:"app_key"`
 
 	// 客户端应用描述
-	Remark *string `json:"remark,omitempty"`
+	Remark *string `json:"remark,omitempty" xml:"remark"`
 
 	// 创建时间
-	RegisterTime *sdktime.SdkTime `json:"register_time,omitempty"`
+	RegisterTime *sdktime.SdkTime `json:"register_time,omitempty" xml:"register_time"`
 
 	// 更新时间
-	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
+	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty" xml:"update_time"`
 
 	// 客户端配额编号
-	AppQuotaId *string `json:"app_quota_id,omitempty"`
+	AppQuotaId *string `json:"app_quota_id,omitempty" xml:"app_quota_id"`
 
 	// 配额名称。支持汉字，英文，数字，下划线，且只能以英文和汉字开头，3-255字符
-	AppQuotaName *string `json:"app_quota_name,omitempty"`
+	AppQuotaName *string `json:"app_quota_name,omitempty" xml:"app_quota_name"`
 
 	// 绑定时间
-	BoundTime *sdktime.SdkTime `json:"bound_time,omitempty"`
+	BoundTime *sdktime.SdkTime `json:"bound_time,omitempty" xml:"bound_time"`
 }
 
 func (o AppQuotaAppInfo) String() string {

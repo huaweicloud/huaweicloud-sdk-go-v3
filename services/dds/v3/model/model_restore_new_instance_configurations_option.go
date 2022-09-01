@@ -13,10 +13,10 @@ import (
 type RestoreNewInstanceConfigurationsOption struct {
 
 	// 节点类型。 取值：   - 集群实例包含mongos、shard和config节点，各节点下该参数取值分别为“mongos”、“shard”和“config”。   - 副本集实例下该参数取值为“replica”。   - 单节点实例下该参数取值为“single”。
-	Type RestoreNewInstanceConfigurationsOptionType `json:"type"`
+	Type RestoreNewInstanceConfigurationsOptionType `json:"type" xml:"type"`
 
 	// 参数组id。
-	ConfigurationId string `json:"configuration_id"`
+	ConfigurationId string `json:"configuration_id" xml:"configuration_id"`
 }
 
 func (o RestoreNewInstanceConfigurationsOption) String() string {

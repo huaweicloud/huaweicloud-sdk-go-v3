@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type UpdateFalsePositiveRequest struct {
-	Body *UpdateFalsePositiveRequestBody `json:"body,omitempty"`
+	Body *UpdateFalsePositiveRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateFalsePositiveRequest) String() string {

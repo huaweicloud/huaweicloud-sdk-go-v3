@@ -10,7 +10,7 @@ import (
 type UpdateAuditLogResponse struct {
 
 	// 开启/关闭审计日志操作结果。
-	Result         *string `json:"result,omitempty"`
+	Result         *string `json:"result,omitempty" xml:"result"`
 	HttpStatusCode int     `json:"-"`
 }
 

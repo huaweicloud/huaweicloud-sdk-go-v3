@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateApplicationRequest struct {
-	Body *ApplicationCreate `json:"body,omitempty"`
+	Body *ApplicationCreate `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateApplicationRequest) String() string {

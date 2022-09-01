@@ -10,9 +10,9 @@ import (
 type CreateDatakeyRequest struct {
 
 	// API版本号
-	VersionId string `json:"version_id"`
+	VersionId string `json:"version_id" xml:"version_id"`
 
-	Body *CreateDatakeyRequestBody `json:"body,omitempty"`
+	Body *CreateDatakeyRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateDatakeyRequest) String() string {

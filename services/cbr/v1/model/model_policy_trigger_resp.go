@@ -12,15 +12,15 @@ import (
 type PolicyTriggerResp struct {
 
 	// 调度器id
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 调度器名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
-	Properties *PolicyTriggerPropertiesResp `json:"properties"`
+	Properties *PolicyTriggerPropertiesResp `json:"properties" xml:"properties"`
 
 	// 调度器类型,目前只支持 time: 定时调度。
-	Type *PolicyTriggerRespType `json:"type,omitempty"`
+	Type *PolicyTriggerRespType `json:"type,omitempty" xml:"type"`
 }
 
 func (o PolicyTriggerResp) String() string {

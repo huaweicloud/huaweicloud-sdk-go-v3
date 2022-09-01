@@ -10,10 +10,10 @@ import (
 type ResourceSchemaResponse struct {
 
 	// 资源类型.
-	Type *string `json:"type,omitempty"`
+	Type *string `json:"type,omitempty" xml:"type"`
 
 	// schema 内容.
-	Schema *interface{} `json:"schema,omitempty"`
+	Schema *interface{} `json:"schema,omitempty" xml:"schema"`
 }
 
 func (o ResourceSchemaResponse) String() string {

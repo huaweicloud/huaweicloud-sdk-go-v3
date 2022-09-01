@@ -10,10 +10,10 @@ import (
 type ListPartnerCouponsRecordResponse struct {
 
 	// 查询记录总数。
-	TotalCount *int32 `json:"total_count,omitempty"`
+	TotalCount *int32 `json:"total_count,omitempty" xml:"total_count"`
 
 	// 日志记录列表。 具体请参见表2。
-	Records        *[]CouponRecordV2 `json:"records,omitempty"`
+	Records        *[]CouponRecordV2 `json:"records,omitempty" xml:"records"`
 	HttpStatusCode int               `json:"-"`
 }
 

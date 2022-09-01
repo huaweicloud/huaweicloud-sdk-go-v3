@@ -9,12 +9,12 @@ import (
 type UpdateProjectModuleRequestBody struct {
 
 	// 模块描述
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 模块名称
-	ModuleName string `json:"module_name"`
+	ModuleName string `json:"module_name" xml:"module_name"`
 
-	Owner *UserRequest `json:"owner"`
+	Owner *UserRequest `json:"owner" xml:"owner"`
 }
 
 func (o UpdateProjectModuleRequestBody) String() string {

@@ -10,7 +10,7 @@ import (
 type ShowConnectionRequest struct {
 
 	// 连接名称.
-	ConnectionName string `json:"connection_name"`
+	ConnectionName string `json:"connection_name" xml:"connection_name"`
 }
 
 func (o ShowConnectionRequest) String() string {

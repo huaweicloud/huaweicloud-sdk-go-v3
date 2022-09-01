@@ -10,10 +10,10 @@ import (
 type ImageTag struct {
 
 	// 标签key值
-	Key *string `json:"key,omitempty"`
+	Key *string `json:"key,omitempty" xml:"key"`
 
 	// 标签value值
-	Value *string `json:"value,omitempty"`
+	Value *string `json:"value,omitempty" xml:"value"`
 }
 
 func (o ImageTag) String() string {

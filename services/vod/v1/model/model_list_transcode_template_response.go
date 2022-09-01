@@ -10,10 +10,10 @@ import (
 type ListTranscodeTemplateResponse struct {
 
 	// 模板组信息<br/>
-	TemplateGroupList *[]TransTemplateRsp `json:"template_group_list,omitempty"`
+	TemplateGroupList *[]TransTemplateRsp `json:"template_group_list,omitempty" xml:"template_group_list"`
 
 	// 总记录条数<br/>
-	Total          *int32 `json:"total,omitempty"`
+	Total          *int32 `json:"total,omitempty" xml:"total"`
 	HttpStatusCode int    `json:"-"`
 }
 

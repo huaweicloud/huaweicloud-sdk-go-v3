@@ -10,10 +10,10 @@ import (
 type ListSqlserverDbUsersResponse struct {
 
 	// 用户信息。
-	Users *[]UserForList `json:"users,omitempty"`
+	Users *[]UserForList `json:"users,omitempty" xml:"users"`
 
 	// 总条数。
-	TotalCount     *int32 `json:"total_count,omitempty"`
+	TotalCount     *int32 `json:"total_count,omitempty" xml:"total_count"`
 	HttpStatusCode int    `json:"-"`
 }
 

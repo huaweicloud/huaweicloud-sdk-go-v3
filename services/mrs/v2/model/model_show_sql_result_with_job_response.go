@@ -10,7 +10,7 @@ import (
 type ShowSqlResultWithJobResponse struct {
 
 	// SQL语句查询结果。
-	SqlResults     *interface{} `json:"sql_results,omitempty"`
+	SqlResults     *interface{} `json:"sql_results,omitempty" xml:"sql_results"`
 	HttpStatusCode int          `json:"-"`
 }
 

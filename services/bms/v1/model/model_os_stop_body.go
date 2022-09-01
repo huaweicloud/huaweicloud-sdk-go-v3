@@ -8,7 +8,7 @@ import (
 
 // 关闭裸金属服务器接口请求结构体
 type OsStopBody struct {
-	OsStop *OsStopBodyType `json:"os-stop"`
+	OsStop *OsStopBodyType `json:"os-stop" xml:"os-stop"`
 }
 
 func (o OsStopBody) String() string {

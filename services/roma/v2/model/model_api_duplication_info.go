@@ -12,16 +12,16 @@ import (
 type ApiDuplicationInfo struct {
 
 	// 请求方式
-	ReqMethod *ApiDuplicationInfoReqMethod `json:"req_method,omitempty"`
+	ReqMethod *ApiDuplicationInfoReqMethod `json:"req_method,omitempty" xml:"req_method"`
 
 	// API的访问地址
-	ReqUri *string `json:"req_uri,omitempty"`
+	ReqUri *string `json:"req_uri,omitempty" xml:"req_uri"`
 
 	// API的匹配方式 - SWA：前缀匹配 - NORMAL：正常匹配（绝对匹配） 默认：NORMAL
-	MatchMode *ApiDuplicationInfoMatchMode `json:"match_mode,omitempty"`
+	MatchMode *ApiDuplicationInfoMatchMode `json:"match_mode,omitempty" xml:"match_mode"`
 
 	// 该路径下冲突的api列表
-	DuplicatedApis *[]DuplicateApiInfo `json:"duplicated_apis,omitempty"`
+	DuplicatedApis *[]DuplicateApiInfo `json:"duplicated_apis,omitempty" xml:"duplicated_apis"`
 }
 
 func (o ApiDuplicationInfo) String() string {

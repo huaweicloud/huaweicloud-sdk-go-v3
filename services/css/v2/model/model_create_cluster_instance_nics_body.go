@@ -10,13 +10,13 @@ import (
 type CreateClusterInstanceNicsBody struct {
 
 	// 指定虚拟私有云ID，用于集群网络配置。
-	VpcId string `json:"vpcId"`
+	VpcId string `json:"vpcId" xml:"vpcId"`
 
 	// 子网ID(网络ID)。
-	NetId string `json:"netId"`
+	NetId string `json:"netId" xml:"netId"`
 
 	// 安全组ID。
-	SecurityGroupId string `json:"securityGroupId"`
+	SecurityGroupId string `json:"securityGroupId" xml:"securityGroupId"`
 }
 
 func (o CreateClusterInstanceNicsBody) String() string {

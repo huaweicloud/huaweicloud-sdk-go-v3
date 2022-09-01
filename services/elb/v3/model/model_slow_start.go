@@ -10,10 +10,10 @@ import (
 type SlowStart struct {
 
 	// 慢启动的开关，默认值：false； true：开启； false：关闭
-	Enable bool `json:"enable"`
+	Enable bool `json:"enable" xml:"enable"`
 
 	// 慢启动的持续时间。取值：30~1200s，默认30s；
-	Duration int32 `json:"duration"`
+	Duration int32 `json:"duration" xml:"duration"`
 }
 
 func (o SlowStart) String() string {

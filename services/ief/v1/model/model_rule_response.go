@@ -10,44 +10,44 @@ import (
 type RuleResponse struct {
 
 	// 创建时间
-	CreatedAt *string `json:"created_at,omitempty"`
+	CreatedAt *string `json:"created_at,omitempty" xml:"created_at"`
 
 	// 规则描述，最大长度255，不允许^~#$%&*<>()[]{}'\"\\
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 转发失败的消息数
-	FailMessages *int32 `json:"fail_messages,omitempty"`
+	FailMessages *int32 `json:"fail_messages,omitempty" xml:"fail_messages"`
 
 	// 规则ID
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 铂金版实例ID，如果为空则表示是专业版实例。
-	IefInstanceId *string `json:"ief_instance_id,omitempty"`
+	IefInstanceId *string `json:"ief_instance_id,omitempty" xml:"ief_instance_id"`
 
 	// 是否启用规则，默认为true（启用）
-	InUsing *bool `json:"in_using,omitempty"`
+	InUsing *bool `json:"in_using,omitempty" xml:"in_using"`
 
 	// 规则名称，只允许中文字符、英文字符、数字、下划线、中划线，最大长度64 同一个帐号中创建的规则名唯一
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 项目ID
-	ProjectId string `json:"project_id"`
+	ProjectId string `json:"project_id" xml:"project_id"`
 
-	Source *EndpointObjResp `json:"source"`
+	Source *EndpointObjResp `json:"source" xml:"source"`
 
 	// 源端点资源。 示例： - rest: path取值需要为标准URI格式。 {\"path\":\"/a/b/c\"} - eventbus: {\"topic\": \"<project id>/nodes/<node id>/user/<租户自定义且满足eventbus topic要求的字符串>\",\"node_id\":\"<node id>\"}
-	SourceResource map[string]string `json:"source_resource"`
+	SourceResource map[string]string `json:"source_resource" xml:"source_resource"`
 
-	Target *EndpointObjResp `json:"target"`
+	Target *EndpointObjResp `json:"target" xml:"target"`
 
 	// 目的端点资源，示例： - dis: {\"channel\": \"dis channel name\"} - servicebus: {\"path\": \"/request path\"} - apigw: {\"resource\": \"http://ssss.com\"} - eventbus: {\"topic\": \"/xxxx\"}
-	TargetResource map[string]string `json:"target_resource"`
+	TargetResource map[string]string `json:"target_resource" xml:"target_resource"`
 
 	// 更新时间
-	UpdatedAt string `json:"updated_at"`
+	UpdatedAt string `json:"updated_at" xml:"updated_at"`
 
 	// 转发成功的消息数
-	SuccessMessages int32 `json:"success_messages"`
+	SuccessMessages int32 `json:"success_messages" xml:"success_messages"`
 }
 
 func (o RuleResponse) String() string {

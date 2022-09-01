@@ -10,7 +10,7 @@ import (
 type ShowQuotaSetsResponse struct {
 
 	// 专属主机的配额。
-	QuotaSet       *[]RespQuotaSet `json:"quota_set,omitempty"`
+	QuotaSet       *[]RespQuotaSet `json:"quota_set,omitempty" xml:"quota_set"`
 	HttpStatusCode int             `json:"-"`
 }
 

@@ -10,7 +10,7 @@ import (
 type RespMetadata struct {
 
 	// 弹性云服务器系统类型。
-	OsType *string `json:"os_type,omitempty"`
+	OsType *string `json:"os_type,omitempty" xml:"os_type"`
 }
 
 func (o RespMetadata) String() string {

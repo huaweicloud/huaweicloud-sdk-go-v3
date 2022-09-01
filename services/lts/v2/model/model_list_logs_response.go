@@ -10,10 +10,10 @@ import (
 type ListLogsResponse struct {
 
 	// 日志条数。
-	Count *int32 `json:"count,omitempty"`
+	Count *int32 `json:"count,omitempty" xml:"count"`
 
 	// 日志信息。
-	Logs           *[]LogContents `json:"logs,omitempty"`
+	Logs           *[]LogContents `json:"logs,omitempty" xml:"logs"`
 	HttpStatusCode int            `json:"-"`
 }
 

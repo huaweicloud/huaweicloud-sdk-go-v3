@@ -10,7 +10,7 @@ import (
 type ListBlockchainChannelsResponse struct {
 
 	// 通道信息列表
-	Channels       *[]Channel `json:"channels,omitempty"`
+	Channels       *[]Channel `json:"channels,omitempty" xml:"channels"`
 	HttpStatusCode int        `json:"-"`
 }
 

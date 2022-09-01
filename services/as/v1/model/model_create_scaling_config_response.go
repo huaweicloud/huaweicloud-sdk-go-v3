@@ -10,7 +10,7 @@ import (
 type CreateScalingConfigResponse struct {
 
 	// 伸缩配置ID
-	ScalingConfigurationId *string `json:"scaling_configuration_id,omitempty"`
+	ScalingConfigurationId *string `json:"scaling_configuration_id,omitempty" xml:"scaling_configuration_id"`
 	HttpStatusCode         int     `json:"-"`
 }
 

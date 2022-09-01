@@ -10,10 +10,10 @@ import (
 type VaultMigrateResourceReq struct {
 
 	// 目标存储库
-	DestinationVaultId string `json:"destination_vault_id"`
+	DestinationVaultId string `json:"destination_vault_id" xml:"destination_vault_id"`
 
 	// 待迁移的资源ID
-	ResourceIds []string `json:"resource_ids"`
+	ResourceIds []string `json:"resource_ids" xml:"resource_ids"`
 }
 
 func (o VaultMigrateResourceReq) String() string {

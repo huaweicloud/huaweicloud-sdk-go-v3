@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type RecognizeCambodianIdCardResponse struct {
-	Result         *CambodianIdCardResult `json:"result,omitempty"`
+	Result         *CambodianIdCardResult `json:"result,omitempty" xml:"result"`
 	HttpStatusCode int                    `json:"-"`
 }
 

@@ -9,9 +9,9 @@ import (
 type ApplicationConfigModify struct {
 
 	// 环境ID。
-	EnvironmentId string `json:"environment_id"`
+	EnvironmentId string `json:"environment_id" xml:"environment_id"`
 
-	Configuration *ApplicationConfigModifyConfiguration `json:"configuration"`
+	Configuration *ApplicationConfigModifyConfiguration `json:"configuration" xml:"configuration"`
 }
 
 func (o ApplicationConfigModify) String() string {

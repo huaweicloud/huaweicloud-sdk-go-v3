@@ -10,12 +10,12 @@ import (
 type UpdateInstanceMonitorRequest struct {
 
 	// 语言
-	XLanguage *string `json:"X-Language,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *TaurusModifyInstanceMonitorRequestBody `json:"body,omitempty"`
+	Body *TaurusModifyInstanceMonitorRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateInstanceMonitorRequest) String() string {

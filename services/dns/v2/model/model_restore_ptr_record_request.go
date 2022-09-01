@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type RestorePtrRecordRequest struct {
-	Region string `json:"region"`
+	Region string `json:"region" xml:"region"`
 
-	FloatingipId string `json:"floatingip_id"`
+	FloatingipId string `json:"floatingip_id" xml:"floatingip_id"`
 
-	Body *RestorePtrReq `json:"body,omitempty"`
+	Body *RestorePtrReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o RestorePtrRecordRequest) String() string {

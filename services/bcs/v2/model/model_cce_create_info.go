@@ -10,22 +10,22 @@ import (
 type CceCreateInfo struct {
 
 	// 集群节点数
-	NodeNum int64 `json:"node_num"`
+	NodeNum int64 `json:"node_num" xml:"node_num"`
 
 	// 集群节点规格ID（支持的规格配置最小为4u8g）
-	NodeFlavor string `json:"node_flavor"`
+	NodeFlavor string `json:"node_flavor" xml:"node_flavor"`
 
 	// CCE集群规格
-	CceFlavor string `json:"cce_flavor"`
+	CceFlavor string `json:"cce_flavor" xml:"cce_flavor"`
 
 	// 节点初始密码
-	InitNodePwd string `json:"init_node_pwd"`
+	InitNodePwd string `json:"init_node_pwd" xml:"init_node_pwd"`
 
 	// 可用区
-	Az string `json:"az"`
+	Az string `json:"az" xml:"az"`
 
 	// 集群CPU架构类型：X86（VirtualMachine），ARM（ARM64）
-	ClusterPlatformType string `json:"cluster_platform_type"`
+	ClusterPlatformType string `json:"cluster_platform_type" xml:"cluster_platform_type"`
 }
 
 func (o CceCreateInfo) String() string {

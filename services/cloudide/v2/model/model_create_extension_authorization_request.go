@@ -10,9 +10,9 @@ import (
 type CreateExtensionAuthorizationRequest struct {
 
 	// CloudIDE实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *ExtensionAuthorization `json:"body,omitempty"`
+	Body *ExtensionAuthorization `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateExtensionAuthorizationRequest) String() string {

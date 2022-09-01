@@ -10,10 +10,10 @@ import (
 type ListRulesetsResponse struct {
 
 	// 规则集列表信息
-	Info *[]RulesetItem `json:"info,omitempty"`
+	Info *[]RulesetItem `json:"info,omitempty" xml:"info"`
 
 	// 总数
-	Total          *int32 `json:"total,omitempty"`
+	Total          *int32 `json:"total,omitempty" xml:"total"`
 	HttpStatusCode int    `json:"-"`
 }
 

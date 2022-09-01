@@ -10,10 +10,10 @@ import (
 type BatchStop struct {
 
 	// 待停止的边缘实例列表。
-	Servers []BaseId `json:"servers"`
+	Servers []BaseId `json:"servers" xml:"servers"`
 
 	// 关机类型，默认为SOFT。  取值范围： - SOFT：普通关机。 - HARD：强制关机。
-	Type *string `json:"type,omitempty"`
+	Type *string `json:"type,omitempty" xml:"type"`
 }
 
 func (o BatchStop) String() string {

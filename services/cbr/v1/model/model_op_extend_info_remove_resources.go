@@ -9,13 +9,13 @@ import (
 type OpExtendInfoRemoveResources struct {
 
 	// 删除失败的资源数量
-	FailCount *int32 `json:"fail_count,omitempty"`
+	FailCount *int32 `json:"fail_count,omitempty" xml:"fail_count"`
 
 	// 删除的备份数量
-	TotalCount *int32 `json:"total_count,omitempty"`
+	TotalCount *int32 `json:"total_count,omitempty" xml:"total_count"`
 
 	//
-	Resources *[]Resource `json:"resources,omitempty"`
+	Resources *[]Resource `json:"resources,omitempty" xml:"resources"`
 }
 
 func (o OpExtendInfoRemoveResources) String() string {

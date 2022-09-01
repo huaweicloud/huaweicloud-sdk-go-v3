@@ -13,19 +13,19 @@ import (
 type AvailableZones struct {
 
 	// 可用区编码。
-	Code *string `json:"code,omitempty"`
+	Code *string `json:"code,omitempty" xml:"code"`
 
 	// 可用区端口号。
-	Port *string `json:"port,omitempty"`
+	Port *string `json:"port,omitempty" xml:"port"`
 
 	// 可用区名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 可用区ID。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 分区上是否还有可用资源。 - true：还有资源。 - false：资源已售罄。
-	ResourceAvailability *AvailableZonesResourceAvailability `json:"resource_availability,omitempty"`
+	ResourceAvailability *AvailableZonesResourceAvailability `json:"resource_availability,omitempty" xml:"resource_availability"`
 }
 
 func (o AvailableZones) String() string {

@@ -9,22 +9,22 @@ import (
 type CreateInstanceTopicReq struct {
 
 	// topic名称，长度为4-64，以字母开头且只支持大小写字母、中横线、下划线以及数字。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 副本数，配置数据的可靠性。 取值范围：1-3。
-	Replication *int32 `json:"replication,omitempty"`
+	Replication *int32 `json:"replication,omitempty" xml:"replication"`
 
 	// 是否使用同步落盘。默认值为false。同步落盘会导致性能降低。
-	SyncMessageFlush *bool `json:"sync_message_flush,omitempty"`
+	SyncMessageFlush *bool `json:"sync_message_flush,omitempty" xml:"sync_message_flush"`
 
 	// topic分区数，设置消费的并发数。 取值范围：[1-100](tag:hc,hk,hws,hws_hk,otc,hws_ocb,ctc,sbc,hk_sbc)[1-20](tag:cmcc)。
-	Partition *int32 `json:"partition,omitempty"`
+	Partition *int32 `json:"partition,omitempty" xml:"partition"`
 
 	// 是否开启同步复制，开启后，客户端生产消息时相应的也要设置acks=-1，否则不生效，默认关闭。
-	SyncReplication *bool `json:"sync_replication,omitempty"`
+	SyncReplication *bool `json:"sync_replication,omitempty" xml:"sync_replication"`
 
 	// 消息老化时间。默认值为72。 取值范围[1~168](tag:hc,hk,hws,hws_hk,hws_ocb,ctc,sbc,hk_sbc)[1-720](tag:ocb,otc)，单位小时。
-	RetentionTime *int32 `json:"retention_time,omitempty"`
+	RetentionTime *int32 `json:"retention_time,omitempty" xml:"retention_time"`
 }
 
 func (o CreateInstanceTopicReq) String() string {

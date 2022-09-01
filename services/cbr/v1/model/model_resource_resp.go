@@ -11,31 +11,31 @@ import (
 
 // 资源详情
 type ResourceResp struct {
-	ExtraInfo *ResourceExtraInfo `json:"extra_info,omitempty"`
+	ExtraInfo *ResourceExtraInfo `json:"extra_info,omitempty" xml:"extra_info"`
 
 	// 待备份资源id
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 待备份资源名称
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 保护状态
-	ProtectStatus *ResourceRespProtectStatus `json:"protect_status,omitempty"`
+	ProtectStatus *ResourceRespProtectStatus `json:"protect_status,omitempty" xml:"protect_status"`
 
 	// 资源已分配容量,单位为GB
-	Size *int32 `json:"size,omitempty"`
+	Size *int32 `json:"size,omitempty" xml:"size"`
 
 	// 待备份资源的类型, 云服务器: OS::Nova::Server, 云硬盘: OS::Cinder::Volume, 裸金属服务器: OS::Ironic::BareMetalServer, 线下本地服务器: OS::Native::Server, 弹性文件系统: OS::Sfs::Turbo
-	Type string `json:"type"`
+	Type string `json:"type" xml:"type"`
 
 	// 副本大小
-	BackupSize *int32 `json:"backup_size,omitempty"`
+	BackupSize *int32 `json:"backup_size,omitempty" xml:"backup_size"`
 
 	// 副本数量
-	BackupCount *int32 `json:"backup_count,omitempty"`
+	BackupCount *int32 `json:"backup_count,omitempty" xml:"backup_count"`
 
 	// 是否跟随存储库自动备份策略进行备份
-	AutoProtect *bool `json:"auto_protect,omitempty"`
+	AutoProtect *bool `json:"auto_protect,omitempty" xml:"auto_protect"`
 }
 
 func (o ResourceResp) String() string {

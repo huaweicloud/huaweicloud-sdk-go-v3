@@ -10,7 +10,7 @@ import (
 type CreateDatabaseResponse struct {
 
 	// 逻辑库相关信息的集合。
-	Databases      *[]CreateDatabaseDetailResponses `json:"databases,omitempty"`
+	Databases      *[]CreateDatabaseDetailResponses `json:"databases,omitempty" xml:"databases"`
 	HttpStatusCode int                              `json:"-"`
 }
 

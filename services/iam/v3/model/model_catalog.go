@@ -10,16 +10,16 @@ import (
 type Catalog struct {
 
 	// 终端节点信息。
-	Endpoints []CatalogEndpoints `json:"endpoints"`
+	Endpoints []CatalogEndpoints `json:"endpoints" xml:"endpoints"`
 
 	// 服务ID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 服务名。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 服务类型。
-	Type string `json:"type"`
+	Type string `json:"type" xml:"type"`
 }
 
 func (o Catalog) String() string {

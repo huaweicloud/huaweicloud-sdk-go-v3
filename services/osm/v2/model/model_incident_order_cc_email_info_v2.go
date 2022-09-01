@@ -9,13 +9,13 @@ import (
 type IncidentOrderCcEmailInfoV2 struct {
 
 	// 用户id
-	UserId *string `json:"user_id,omitempty"`
+	UserId *string `json:"user_id,omitempty" xml:"user_id"`
 
 	// 客户id
-	CustomerId *string `json:"customer_id,omitempty"`
+	CustomerId *string `json:"customer_id,omitempty" xml:"customer_id"`
 
 	// 操作邮箱
-	CcEmail *string `json:"cc_email,omitempty"`
+	CcEmail *string `json:"cc_email,omitempty" xml:"cc_email"`
 }
 
 func (o IncidentOrderCcEmailInfoV2) String() string {

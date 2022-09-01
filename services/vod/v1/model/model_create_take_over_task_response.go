@@ -10,7 +10,7 @@ import (
 type CreateTakeOverTaskResponse struct {
 
 	// 任务ID。
-	TaskId         *string `json:"task_id,omitempty"`
+	TaskId         *string `json:"task_id,omitempty" xml:"task_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

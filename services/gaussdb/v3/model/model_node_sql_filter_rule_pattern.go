@@ -10,10 +10,10 @@ import (
 type NodeSqlFilterRulePattern struct {
 
 	// SQL限流规则，由一个或多个关键字（最多为128个关键字）组成，关键字之间通过\"~\"分隔符分开，如select~from~t1。规则中不能包含‘\\’、中英文逗号、‘~~’，不能以‘~’结尾。
-	Pattern string `json:"pattern"`
+	Pattern string `json:"pattern" xml:"pattern"`
 
 	// 最大并发数。取值范围：非负整数。
-	MaxConcurrency int32 `json:"max_concurrency"`
+	MaxConcurrency int32 `json:"max_concurrency" xml:"max_concurrency"`
 }
 
 func (o NodeSqlFilterRulePattern) String() string {

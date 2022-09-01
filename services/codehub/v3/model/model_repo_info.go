@@ -9,37 +9,37 @@ import (
 type RepoInfo struct {
 
 	// 创建时间
-	CreateAt *string `json:"createAt,omitempty"`
+	CreateAt *string `json:"createAt,omitempty" xml:"createAt"`
 
 	// 仓库组名
-	GroupName *string `json:"groupName,omitempty"`
+	GroupName *string `json:"groupName,omitempty" xml:"groupName"`
 
 	// https url
-	HttpUrl *string `json:"httpUrl,omitempty"`
+	HttpUrl *string `json:"httpUrl,omitempty" xml:"httpUrl"`
 
 	// 仓库uuid
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 仓库名
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 项目的uuid
-	ProjectId *string `json:"projectId,omitempty"`
+	ProjectId *string `json:"projectId,omitempty" xml:"projectId"`
 
 	// 项目是否被删除
-	ProjectIsDelete *string `json:"projectIsDelete,omitempty"`
+	ProjectIsDelete *string `json:"projectIsDelete,omitempty" xml:"projectIsDelete"`
 
 	// 仓库主键id
-	RepoId *string `json:"repoId,omitempty"`
+	RepoId *string `json:"repoId,omitempty" xml:"repoId"`
 
 	// ssh url
-	SshUrl *string `json:"sshUrl,omitempty"`
+	SshUrl *string `json:"sshUrl,omitempty" xml:"sshUrl"`
 
 	// 是否可见：0私有仓库，20公有仓库
-	VisibilityLevel *int32 `json:"visibilityLevel,omitempty"`
+	VisibilityLevel *int32 `json:"visibilityLevel,omitempty" xml:"visibilityLevel"`
 
 	// web url 访问路径
-	WebUrl *string `json:"webUrl,omitempty"`
+	WebUrl *string `json:"webUrl,omitempty" xml:"webUrl"`
 }
 
 func (o RepoInfo) String() string {

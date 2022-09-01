@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowDomainPasswordPolicyResponse struct {
-	PasswordPolicy *PasswordPolicyResult `json:"password_policy,omitempty"`
+	PasswordPolicy *PasswordPolicyResult `json:"password_policy,omitempty" xml:"password_policy"`
 	HttpStatusCode int                   `json:"-"`
 }
 

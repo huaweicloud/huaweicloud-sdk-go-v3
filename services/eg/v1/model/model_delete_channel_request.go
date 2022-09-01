@@ -10,7 +10,7 @@ import (
 type DeleteChannelRequest struct {
 
 	// 指定查询的事件通道ID
-	ChannelId string `json:"channel_id"`
+	ChannelId string `json:"channel_id" xml:"channel_id"`
 }
 
 func (o DeleteChannelRequest) String() string {

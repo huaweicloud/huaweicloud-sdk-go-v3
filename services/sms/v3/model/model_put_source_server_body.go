@@ -10,16 +10,16 @@ import (
 type PutSourceServerBody struct {
 
 	// 源端服务器修改后的名字
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 源端服务器修改后所属的迁移项目id
-	Migprojectid *string `json:"migprojectid,omitempty"`
+	Migprojectid *string `json:"migprojectid,omitempty" xml:"migprojectid"`
 
 	// 磁盘
-	Disks *[]PutDisk `json:"disks,omitempty"`
+	Disks *[]PutDisk `json:"disks,omitempty" xml:"disks"`
 
 	// 卷组
-	VolumeGroups *[]PutVolumeGroups `json:"volume_groups,omitempty"`
+	VolumeGroups *[]PutVolumeGroups `json:"volume_groups,omitempty" xml:"volume_groups"`
 }
 
 func (o PutSourceServerBody) String() string {

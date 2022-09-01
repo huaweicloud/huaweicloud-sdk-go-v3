@@ -10,12 +10,12 @@ import (
 type PublicKibanaRespBody struct {
 
 	// 带宽大小。单位：Mbit/s
-	EipSize *int32 `json:"eipSize,omitempty"`
+	EipSize *int32 `json:"eipSize,omitempty" xml:"eipSize"`
 
-	ElbWhiteList *KibanaElbWhiteListResp `json:"elbWhiteList,omitempty"`
+	ElbWhiteListResp *KibanaElbWhiteListResp `json:"elbWhiteListResp,omitempty" xml:"elbWhiteListResp"`
 
 	// kibana访问IP。
-	PublicKibanaIp *string `json:"publicKibanaIp,omitempty"`
+	PublicKibanaIp *string `json:"publicKibanaIp,omitempty" xml:"publicKibanaIp"`
 }
 
 func (o PublicKibanaRespBody) String() string {

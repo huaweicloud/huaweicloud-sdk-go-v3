@@ -9,10 +9,10 @@ import (
 type Province struct {
 
 	// 省份的编码。
-	Code string `json:"code"`
+	Code string `json:"code" xml:"code"`
 
 	// 省份的名称，根据请求的语言会传递回对应的语言的名称，目前仅支持中文。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 }
 
 func (o Province) String() string {

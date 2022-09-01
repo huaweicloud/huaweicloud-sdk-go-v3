@@ -10,10 +10,10 @@ import (
 type ListPrivacyRuleResponse struct {
 
 	// 规则条数
-	Total *int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty" xml:"total"`
 
 	// 规则详情数组
-	Items          *[]PrivacyResponseBody `json:"items,omitempty"`
+	Items          *[]PrivacyResponseBody `json:"items,omitempty" xml:"items"`
 	HttpStatusCode int                    `json:"-"`
 }
 

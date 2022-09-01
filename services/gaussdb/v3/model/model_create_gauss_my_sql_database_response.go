@@ -10,7 +10,7 @@ import (
 type CreateGaussMySqlDatabaseResponse struct {
 
 	// 创建数据库的任务id。
-	JobId          *string `json:"job_id,omitempty"`
+	JobId          *string `json:"job_id,omitempty" xml:"job_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

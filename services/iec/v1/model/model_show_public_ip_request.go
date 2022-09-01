@@ -10,7 +10,7 @@ import (
 type ShowPublicIpRequest struct {
 
 	// 弹性公网IP ID。
-	PublicipId string `json:"publicip_id"`
+	PublicipId string `json:"publicip_id" xml:"publicip_id"`
 }
 
 func (o ShowPublicIpRequest) String() string {

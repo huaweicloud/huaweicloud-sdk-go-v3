@@ -10,16 +10,16 @@ import (
 type ListBackupsResponse struct {
 
 	// 备份列表
-	Backups *[]BackupResp `json:"backups,omitempty"`
+	Backups *[]BackupResp `json:"backups,omitempty" xml:"backups"`
 
 	// 备份个数
-	Count *int32 `json:"count,omitempty"`
+	Count *int32 `json:"count,omitempty" xml:"count"`
 
 	// 偏移量，表示从此偏移量开始查询
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 每页显示的条目数量
-	Limit          *int32 `json:"limit,omitempty"`
+	Limit          *int32 `json:"limit,omitempty" xml:"limit"`
 	HttpStatusCode int    `json:"-"`
 }
 

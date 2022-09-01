@@ -10,7 +10,7 @@ import (
 type ListListenersResponse struct {
 
 	// 监听器对象列表
-	Listeners      *[]ListenerResp `json:"listeners,omitempty"`
+	Listeners      *[]ListenerResp `json:"listeners,omitempty" xml:"listeners"`
 	HttpStatusCode int             `json:"-"`
 }
 

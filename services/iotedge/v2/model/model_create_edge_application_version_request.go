@@ -10,9 +10,9 @@ import (
 type CreateEdgeApplicationVersionRequest struct {
 
 	// 应用ID，应用唯一。
-	EdgeAppId string `json:"edge_app_id"`
+	EdgeAppId string `json:"edge_app_id" xml:"edge_app_id"`
 
-	Body *CreateEdgeApplicationVersionDto `json:"body,omitempty"`
+	Body *CreateEdgeApplicationVersionDto `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateEdgeApplicationVersionRequest) String() string {

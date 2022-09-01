@@ -10,16 +10,16 @@ import (
 type ListAttributesRequest struct {
 
 	// 自定义属性名称
-	CustAttrName *string `json:"cust_attr_name,omitempty"`
+	CustAttrName *string `json:"cust_attr_name,omitempty" xml:"cust_attr_name"`
 
 	// 分页查询时每页显示的记录数，默认值为10，取值范围为10-500的整数
-	Limit *int64 `json:"limit,omitempty"`
+	Limit *int64 `json:"limit,omitempty" xml:"limit"`
 
 	// 分页查询时的页码数，默认值为1，取值范围为1-1000000的整数
-	Offset *int64 `json:"offset,omitempty"`
+	Offset *int64 `json:"offset,omitempty" xml:"offset"`
 
 	// 自定义属性状态：0 未启用，1 已启用。
-	Status *int32 `json:"status,omitempty"`
+	Status *int32 `json:"status,omitempty" xml:"status"`
 }
 
 func (o ListAttributesRequest) String() string {

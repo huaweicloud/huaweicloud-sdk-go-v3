@@ -10,13 +10,13 @@ import (
 type ShowTaskListByProjectIdRequest struct {
 
 	// 项目ID
-	ProjectId string `json:"project_id"`
+	ProjectId string `json:"project_id" xml:"project_id"`
 
 	// 分页索引，偏移量
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 每页显示的数量,每页最多显示100条
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 }
 
 func (o ShowTaskListByProjectIdRequest) String() string {

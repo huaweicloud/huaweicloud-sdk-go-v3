@@ -9,13 +9,13 @@ import (
 type Resources struct {
 
 	// 项目资源配额。
-	Quota *int32 `json:"quota,omitempty"`
+	Quota *int32 `json:"quota,omitempty" xml:"quota"`
 
 	// 已使用的资源数量。
-	Used *int32 `json:"used,omitempty"`
+	Used *int32 `json:"used,omitempty" xml:"used"`
 
 	// 项目资源类型，取值范围：instance。
-	Type *string `json:"type,omitempty"`
+	Type *string `json:"type,omitempty" xml:"type"`
 }
 
 func (o Resources) String() string {

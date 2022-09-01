@@ -9,13 +9,13 @@ import (
 type StoredQueryRequestBody struct {
 
 	// ResourceQL 名字
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// ResourceQL 描述
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// ResourceQL 表达式
-	Expression string `json:"expression"`
+	Expression string `json:"expression" xml:"expression"`
 }
 
 func (o StoredQueryRequestBody) String() string {

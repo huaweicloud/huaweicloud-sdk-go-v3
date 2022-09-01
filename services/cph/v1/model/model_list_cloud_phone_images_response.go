@@ -10,10 +10,10 @@ import (
 type ListCloudPhoneImagesResponse struct {
 
 	// 请求的唯一标识ID
-	RequestId string `json:"request_id"`
+	RequestId string `json:"request_id" xml:"request_id"`
 
 	// 手机镜像信息
-	PhoneImages    []interface{} `json:"phone_images"`
+	PhoneImages    []interface{} `json:"phone_images" xml:"phone_images"`
 	HttpStatusCode int           `json:"-"`
 }
 

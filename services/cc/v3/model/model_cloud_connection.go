@@ -12,43 +12,43 @@ import (
 type CloudConnection struct {
 
 	// 云连接实例的ID。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 云连接实例的名字。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 云连接实例的描述。
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 帐号ID。
-	DomainId *string `json:"domain_id,omitempty"`
+	DomainId *string `json:"domain_id,omitempty" xml:"domain_id"`
 
 	// 云连接实例的企业项目ID。
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
 
 	// 云连接实例的状态。ACTIVE：表示状态可用。
-	Status *CloudConnectionStatus `json:"status,omitempty"`
+	Status *CloudConnectionStatus `json:"status,omitempty" xml:"status"`
 
 	// 云连接实例的管理状态。
-	AdminStateUp *bool `json:"admin_state_up,omitempty"`
+	AdminStateUp *bool `json:"admin_state_up,omitempty" xml:"admin_state_up"`
 
 	// 云连接实例的创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss
-	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
+	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty" xml:"created_at"`
 
 	// 云连接实例的更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss
-	UpdatedAt *sdktime.SdkTime `json:"updated_at,omitempty"`
+	UpdatedAt *sdktime.SdkTime `json:"updated_at,omitempty" xml:"updated_at"`
 
-	// 云连接使用场景。 - VPC：虚拟私有云。 - ER：企业路由器。
-	UsedScene *CloudConnectionUsedScene `json:"used_scene,omitempty"`
+	// 云连接使用场景。 - VPC：虚拟私有云。
+	UsedScene *CloudConnectionUsedScene `json:"used_scene,omitempty" xml:"used_scene"`
 
 	// 云连接实例关联网络实例的个数。
-	NetworkInstanceNumber *int32 `json:"network_instance_number,omitempty"`
+	NetworkInstanceNumber *int32 `json:"network_instance_number,omitempty" xml:"network_instance_number"`
 
 	// 云连接实例关联带宽包的个数。
-	BandwidthPackageNumber *int32 `json:"bandwidth_package_number,omitempty"`
+	BandwidthPackageNumber *int32 `json:"bandwidth_package_number,omitempty" xml:"bandwidth_package_number"`
 
 	// 云连接实例关联域间带宽的个数。
-	InterRegionBandwidthNumber *int32 `json:"inter_region_bandwidth_number,omitempty"`
+	InterRegionBandwidthNumber *int32 `json:"inter_region_bandwidth_number,omitempty" xml:"inter_region_bandwidth_number"`
 }
 
 func (o CloudConnection) String() string {
@@ -103,15 +103,11 @@ type CloudConnectionUsedScene struct {
 }
 
 type CloudConnectionUsedSceneEnum struct {
-	ER  CloudConnectionUsedScene
 	VPC CloudConnectionUsedScene
 }
 
 func GetCloudConnectionUsedSceneEnum() CloudConnectionUsedSceneEnum {
 	return CloudConnectionUsedSceneEnum{
-		ER: CloudConnectionUsedScene{
-			value: "er",
-		},
 		VPC: CloudConnectionUsedScene{
 			value: "vpc",
 		},

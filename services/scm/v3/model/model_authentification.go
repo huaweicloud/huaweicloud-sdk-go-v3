@@ -9,16 +9,16 @@ import (
 type Authentification struct {
 
 	// 域名校验值名字。
-	RecordName *string `json:"record_name,omitempty"`
+	RecordName *string `json:"record_name,omitempty" xml:"record_name"`
 
 	// 域名校验值类型。
-	RecordType *string `json:"record_type,omitempty"`
+	RecordType *string `json:"record_type,omitempty" xml:"record_type"`
 
 	// 域名校验值。
-	RecordValue *string `json:"record_value,omitempty"`
+	RecordValue *string `json:"record_value,omitempty" xml:"record_value"`
 
 	// 校验值对应的域名。
-	Domain *string `json:"domain,omitempty"`
+	Domain *string `json:"domain,omitempty" xml:"domain"`
 }
 
 func (o Authentification) String() string {

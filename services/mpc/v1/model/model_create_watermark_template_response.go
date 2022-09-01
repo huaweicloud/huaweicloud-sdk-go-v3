@@ -10,7 +10,7 @@ import (
 type CreateWatermarkTemplateResponse struct {
 
 	// 水印模板Id
-	TemplateId     *int32 `json:"template_id,omitempty"`
+	TemplateId     *int32 `json:"template_id,omitempty" xml:"template_id"`
 	HttpStatusCode int    `json:"-"`
 }
 

@@ -10,10 +10,10 @@ import (
 type ShowShareRequest struct {
 
 	// MIME类型
-	ContentType string `json:"Content-Type"`
+	ContentType string `json:"Content-Type" xml:"Content-Type"`
 
 	// 文件系统ID
-	ShareId string `json:"share_id"`
+	ShareId string `json:"share_id" xml:"share_id"`
 }
 
 func (o ShowShareRequest) String() string {

@@ -10,10 +10,10 @@ import (
 type DeleteApplicationConfigurationRequest struct {
 
 	// 应用ID。
-	ApplicationId string `json:"application_id"`
+	ApplicationId string `json:"application_id" xml:"application_id"`
 
 	// 环境ID。
-	EnvironmentId string `json:"environment_id"`
+	EnvironmentId string `json:"environment_id" xml:"environment_id"`
 }
 
 func (o DeleteApplicationConfigurationRequest) String() string {

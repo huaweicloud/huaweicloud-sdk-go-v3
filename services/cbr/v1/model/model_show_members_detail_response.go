@@ -10,10 +10,10 @@ import (
 type ShowMembersDetailResponse struct {
 
 	// 添加备份共享成员响应信息
-	Members *[]Member `json:"members,omitempty"`
+	Members *[]Member `json:"members,omitempty" xml:"members"`
 
 	// 备份共享成员数量
-	Count          *int32 `json:"count,omitempty"`
+	Count          *int32 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

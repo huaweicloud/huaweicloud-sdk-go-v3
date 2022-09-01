@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ListJobInfoResponse struct {
-	Job            *GetJobInfoResponseBodyJob `json:"job,omitempty"`
+	Job            *GetJobInfoResponseBodyJob `json:"job,omitempty" xml:"job"`
 	HttpStatusCode int                        `json:"-"`
 }
 

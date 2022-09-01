@@ -10,7 +10,7 @@ import (
 type GlanceAddImageMemberRequestBody struct {
 
 	// 镜像成员。取值为目标用户的项目ID。
-	Member string `json:"member"`
+	Member string `json:"member" xml:"member"`
 }
 
 func (o GlanceAddImageMemberRequestBody) String() string {

@@ -10,10 +10,10 @@ import (
 type AccessPolicyTopicEntity struct {
 
 	// topic名称。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 权限列表。
-	Policies []AccessPolicyEntity `json:"policies"`
+	Policies []AccessPolicyEntity `json:"policies" xml:"policies"`
 }
 
 func (o AccessPolicyTopicEntity) String() string {

@@ -9,13 +9,13 @@ import (
 type ChannelInfoV2 struct {
 
 	// 通道名
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 通道中组织名
-	OrgNames []string `json:"org_names"`
+	OrgNames []string `json:"org_names" xml:"org_names"`
 
 	// 通道描述
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 }
 
 func (o ChannelInfoV2) String() string {

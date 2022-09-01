@@ -9,24 +9,24 @@ import (
 type TemplateJobInfo struct {
 
 	// 应用名称
-	ApplicationName *string `json:"application_name,omitempty"`
+	ApplicationName *string `json:"application_name,omitempty" xml:"application_name"`
 
 	// 任务依赖的模板id
-	TemplateId string `json:"template_id"`
+	TemplateId string `json:"template_id" xml:"template_id"`
 
 	// 应用名称
-	ProjectName *string `json:"project_name,omitempty"`
+	ProjectName *string `json:"project_name,omitempty" xml:"project_name"`
 
 	// 应用代码生成后的地址类型，目前支持0：codehub地址和1：压缩包下载地址
-	RepoType *int32 `json:"repo_type,omitempty"`
+	RepoType *int32 `json:"repo_type,omitempty" xml:"repo_type"`
 
 	// 应用的动态参数json
-	Properties *interface{} `json:"properties,omitempty"`
+	Properties *interface{} `json:"properties,omitempty" xml:"properties"`
 
 	// 模板 dependency ID 集合
-	TemplateDependencies *[]string `json:"template_dependencies,omitempty"`
+	TemplateDependencies *[]string `json:"template_dependencies,omitempty" xml:"template_dependencies"`
 
-	RepoInfo *RepositoryInfo `json:"repo_info,omitempty"`
+	RepoInfo *RepositoryInfo `json:"repo_info,omitempty" xml:"repo_info"`
 }
 
 func (o TemplateJobInfo) String() string {

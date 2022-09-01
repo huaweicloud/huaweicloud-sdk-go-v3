@@ -10,7 +10,7 @@ import (
 type ShowPublicZoneNameServerRequest struct {
 
 	// 待查询zone的ID。  可以通过查询公网Zone列表获取。
-	ZoneId string `json:"zone_id"`
+	ZoneId string `json:"zone_id" xml:"zone_id"`
 }
 
 func (o ShowPublicZoneNameServerRequest) String() string {

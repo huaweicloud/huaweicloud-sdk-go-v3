@@ -10,13 +10,13 @@ import (
 type RecognizeFlashAsrResponse struct {
 
 	// 服务内部的令牌，可用于在日志中追溯具体调用流程
-	TraceId *string `json:"trace_id,omitempty"`
+	TraceId *string `json:"trace_id,omitempty" xml:"trace_id"`
 
 	// 音频时长
-	AudioDuration *int32 `json:"audio_duration,omitempty"`
+	AudioDuration *int32 `json:"audio_duration,omitempty" xml:"audio_duration"`
 
 	// 识别结果
-	FlashResult    *[]FlashResult `json:"flash_result,omitempty"`
+	FlashResult    *[]FlashResult `json:"flash_result,omitempty" xml:"flash_result"`
 	HttpStatusCode int            `json:"-"`
 }
 

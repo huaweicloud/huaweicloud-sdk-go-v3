@@ -10,12 +10,12 @@ import (
 type NovaAvailabilityZone struct {
 
 	// 该字段的值为null。
-	Hosts []string `json:"hosts"`
+	Hosts []string `json:"hosts" xml:"hosts"`
 
 	// 可用域的名称。
-	ZoneName string `json:"zoneName"`
+	ZoneName string `json:"zoneName" xml:"zoneName"`
 
-	ZoneState *NovaAvailabilityZoneState `json:"zoneState"`
+	ZoneState *NovaAvailabilityZoneState `json:"zoneState" xml:"zoneState"`
 }
 
 func (o NovaAvailabilityZone) String() string {

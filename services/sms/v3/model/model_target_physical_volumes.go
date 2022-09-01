@@ -13,28 +13,28 @@ import (
 type TargetPhysicalVolumes struct {
 
 	// 分区类型
-	DeviceUse *TargetPhysicalVolumesDeviceUse `json:"device_use,omitempty"`
+	DeviceUse *TargetPhysicalVolumesDeviceUse `json:"device_use,omitempty" xml:"device_use"`
 
 	// 文件系统
-	FileSystem *string `json:"file_system,omitempty"`
+	FileSystem *string `json:"file_system,omitempty" xml:"file_system"`
 
 	// 编号
-	Index *int32 `json:"index,omitempty"`
+	Index *int32 `json:"index,omitempty" xml:"index"`
 
 	// 挂载点
-	MountPoint *string `json:"mount_point,omitempty"`
+	MountPoint *string `json:"mount_point,omitempty" xml:"mount_point"`
 
 	// 名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 大小
-	Size *int64 `json:"size,omitempty"`
+	Size *int64 `json:"size,omitempty" xml:"size"`
 
 	// 使用大小
-	UsedSize *int64 `json:"used_size,omitempty"`
+	UsedSize *int64 `json:"used_size,omitempty" xml:"used_size"`
 
 	// uuid
-	Uuid *string `json:"uuid,omitempty"`
+	Uuid *string `json:"uuid,omitempty" xml:"uuid"`
 }
 
 func (o TargetPhysicalVolumes) String() string {

@@ -10,7 +10,7 @@ import (
 type OperateAuditLogRequestV3Body struct {
 
 	// 审计日志开关状态。取值：ON|OFF
-	SwitchStatus string `json:"switch_status"`
+	SwitchStatus string `json:"switch_status" xml:"switch_status"`
 }
 
 func (o OperateAuditLogRequestV3Body) String() string {

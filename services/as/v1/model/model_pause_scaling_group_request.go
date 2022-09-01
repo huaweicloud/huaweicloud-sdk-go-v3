@@ -10,9 +10,9 @@ import (
 type PauseScalingGroupRequest struct {
 
 	// 伸缩组ID
-	ScalingGroupId string `json:"scaling_group_id"`
+	ScalingGroupId string `json:"scaling_group_id" xml:"scaling_group_id"`
 
-	Body *PauseScalingGroupOption `json:"body,omitempty"`
+	Body *PauseScalingGroupOption `json:"body,omitempty" xml:"body"`
 }
 
 func (o PauseScalingGroupRequest) String() string {

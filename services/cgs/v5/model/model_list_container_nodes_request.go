@@ -10,16 +10,16 @@ import (
 type ListContainerNodesRequest struct {
 
 	// 节点（服务器）名称
-	HostName *string `json:"host_name,omitempty"`
+	HostName *string `json:"host_name,omitempty" xml:"host_name"`
 
 	// Agent状态，包含如下3种。   - not_installed ：未安装   - online ：在线   - offline ：离线
-	AgentStatus *string `json:"agent_status,omitempty"`
+	AgentStatus *string `json:"agent_status,omitempty" xml:"agent_status"`
 
 	// 查询返回查询容器节点列表当前页面的数，量默认10
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 查询游标，初始传入0
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 }
 
 func (o ListContainerNodesRequest) String() string {

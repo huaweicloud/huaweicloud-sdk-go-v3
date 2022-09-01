@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type BatchAddDataMaskRequest struct {
-	Body *DynamicDataMask `json:"body,omitempty"`
+	Body *DynamicDataMask `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchAddDataMaskRequest) String() string {

@@ -9,7 +9,7 @@ import (
 type BatchAddDeviceToGroupRequestBody struct {
 
 	// 设备ID列表，自动向下取整
-	Resources []int32 `json:"resources"`
+	Resources []int32 `json:"resources" xml:"resources"`
 }
 
 func (o BatchAddDeviceToGroupRequestBody) String() string {

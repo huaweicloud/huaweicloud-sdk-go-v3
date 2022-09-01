@@ -10,12 +10,12 @@ import (
 type CreateSpecialThrottlingConfigurationV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 流控策略的编号
-	ThrottleId string `json:"throttle_id"`
+	ThrottleId string `json:"throttle_id" xml:"throttle_id"`
 
-	Body *ThrottleSpecialCreate `json:"body,omitempty"`
+	Body *ThrottleSpecialCreate `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateSpecialThrottlingConfigurationV2Request) String() string {

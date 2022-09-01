@@ -13,13 +13,13 @@ import (
 type RunCheckTaskJobsRequest struct {
 
 	// 图像内容审核任务处理状态如下：  - created 已创建  - running 正在处理  - finish 已完成  - failed 处理失败
-	Status *RunCheckTaskJobsRequestStatus `json:"status,omitempty"`
+	Status *RunCheckTaskJobsRequestStatus `json:"status,omitempty" xml:"status"`
 
 	// 偏移量， 默认为0。
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 指定每一页返回的最大条目数，默认为符合查询条件的总任务数量。
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 }
 
 func (o RunCheckTaskJobsRequest) String() string {

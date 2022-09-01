@@ -9,16 +9,16 @@ import (
 type SearchBoxDetail struct {
 
 	// 区域中x坐标的最小值，单位：像素。
-	X *int32 `json:"x,omitempty"`
+	X *int32 `json:"x,omitempty" xml:"x"`
 
 	// 区域中y坐标的最小值，单位：像素。
-	Y *int32 `json:"y,omitempty"`
+	Y *int32 `json:"y,omitempty" xml:"y"`
 
 	// 区域的宽度，单位：像素。
-	Width *int32 `json:"width,omitempty"`
+	Width *int32 `json:"width,omitempty" xml:"width"`
 
 	// 区域的高度，单位：像素。
-	Height *int32 `json:"height,omitempty"`
+	Height *int32 `json:"height,omitempty" xml:"height"`
 }
 
 func (o SearchBoxDetail) String() string {

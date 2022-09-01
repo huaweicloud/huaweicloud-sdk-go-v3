@@ -10,7 +10,7 @@ import (
 type DeleteRepositoryRequest struct {
 
 	// 仓库uuid，用来指定删除的仓库
-	RepositoryUuid string `json:"repository_uuid"`
+	RepositoryUuid string `json:"repository_uuid" xml:"repository_uuid"`
 }
 
 func (o DeleteRepositoryRequest) String() string {

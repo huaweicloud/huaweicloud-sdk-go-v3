@@ -12,64 +12,64 @@ import (
 type ListMessageTraceRespTrace struct {
 
 	// 是否成功。
-	Success *bool `json:"success,omitempty"`
+	Success *bool `json:"success,omitempty" xml:"success"`
 
 	// 轨迹类型
-	TraceType *ListMessageTraceRespTraceTraceType `json:"trace_type,omitempty"`
+	TraceType *ListMessageTraceRespTraceTraceType `json:"trace_type,omitempty" xml:"trace_type"`
 
 	// 时间。
-	Timestamp float32 `json:"timestamp,omitempty"`
+	Timestamp float32 `json:"timestamp,omitempty" xml:"timestamp"`
 
 	// 生产组或消费组。
-	GroupName *string `json:"group_name,omitempty"`
+	GroupName *string `json:"group_name,omitempty" xml:"group_name"`
 
 	// 耗时。
-	CostTime float32 `json:"cost_time,omitempty"`
+	CostTime float32 `json:"cost_time,omitempty" xml:"cost_time"`
 
 	// 请求ID。
-	RequestId *string `json:"request_id,omitempty"`
+	RequestId *string `json:"request_id,omitempty" xml:"request_id"`
 
 	// 消费状态。
-	ConsumeStatus float32 `json:"consume_status,omitempty"`
+	ConsumeStatus float32 `json:"consume_status,omitempty" xml:"consume_status"`
 
 	// 主题名称。
-	Topic *string `json:"topic,omitempty"`
+	Topic *string `json:"topic,omitempty" xml:"topic"`
 
 	// 消息ID。
-	MsgId *string `json:"msg_id,omitempty"`
+	MsgId *string `json:"msg_id,omitempty" xml:"msg_id"`
 
 	// offset消息ID。
-	OffsetMsgId *string `json:"offset_msg_id,omitempty"`
+	OffsetMsgId *string `json:"offset_msg_id,omitempty" xml:"offset_msg_id"`
 
 	// 消息的标签。
-	Tags *string `json:"tags,omitempty"`
+	Tags *string `json:"tags,omitempty" xml:"tags"`
 
 	// 消息的keys。
-	Keys *string `json:"keys,omitempty"`
+	Keys *string `json:"keys,omitempty" xml:"keys"`
 
 	// 存储消息的主机IP。
-	StoreHost *string `json:"store_host,omitempty"`
+	StoreHost *string `json:"store_host,omitempty" xml:"store_host"`
 
 	// 产生消息的主机IP。
-	ClientHost *string `json:"client_host,omitempty"`
+	ClientHost *string `json:"client_host,omitempty" xml:"client_host"`
 
 	// 重试次数。
-	RetryTimes *string `json:"retry_times,omitempty"`
+	RetryTimes *string `json:"retry_times,omitempty" xml:"retry_times"`
 
 	// 消息体长度。
-	BodyLength float32 `json:"body_length,omitempty"`
+	BodyLength float32 `json:"body_length,omitempty" xml:"body_length"`
 
 	// 消息类型。
-	MsgType *ListMessageTraceRespTraceMsgType `json:"msg_type,omitempty"`
+	MsgType *ListMessageTraceRespTraceMsgType `json:"msg_type,omitempty" xml:"msg_type"`
 
 	// 事务状态。
-	TransactionState *ListMessageTraceRespTraceTransactionState `json:"transaction_state,omitempty"`
+	TransactionState *ListMessageTraceRespTraceTransactionState `json:"transaction_state,omitempty" xml:"transaction_state"`
 
 	// 事务ID。
-	TransactionId *string `json:"transaction_id,omitempty"`
+	TransactionId *string `json:"transaction_id,omitempty" xml:"transaction_id"`
 
 	// 是否为事务回查的响应。
-	FromTransactionCheck *bool `json:"from_transaction_check,omitempty"`
+	FromTransactionCheck *bool `json:"from_transaction_check,omitempty" xml:"from_transaction_check"`
 }
 
 func (o ListMessageTraceRespTrace) String() string {

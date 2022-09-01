@@ -10,10 +10,10 @@ import (
 type ListMonitoredObjectsOfInstanceRequest struct {
 
 	// 主维度对象ID，与DCS实例列表中实例ID相同。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 主维度ID，当前支持子维度的主维度ID的有dcs_instance_id。
-	DimName string `json:"dim_name"`
+	DimName string `json:"dim_name" xml:"dim_name"`
 }
 
 func (o ListMonitoredObjectsOfInstanceRequest) String() string {

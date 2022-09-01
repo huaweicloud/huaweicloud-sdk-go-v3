@@ -10,9 +10,9 @@ import (
 type InstallMultiTasksRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *MultiTaskInitBody `json:"body,omitempty"`
+	Body *MultiTaskInitBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o InstallMultiTasksRequest) String() string {

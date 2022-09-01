@@ -8,7 +8,7 @@ import (
 
 // This is a auto create Body Object
 type ReinstallServerWithCloudInitRequestBody struct {
-	OsReinstall *ReinstallServerWithCloudInitOption `json:"os-reinstall"`
+	OsReinstall *ReinstallServerWithCloudInitOption `json:"os-reinstall" xml:"os-reinstall"`
 }
 
 func (o ReinstallServerWithCloudInitRequestBody) String() string {

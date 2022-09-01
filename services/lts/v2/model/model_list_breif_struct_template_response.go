@@ -10,7 +10,7 @@ import (
 type ListBreifStructTemplateResponse struct {
 
 	// 结构化模板缩略信息列表
-	Results        *[]BriefStructTemplateModel `json:"results,omitempty"`
+	Results        *[]BriefStructTemplateModel `json:"results,omitempty" xml:"results"`
 	HttpStatusCode int                         `json:"-"`
 }
 

@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ListShadowsResponse struct {
-	Body           *[]ShadowService `json:"body,omitempty"`
+	Body           *[]ShadowService `json:"body,omitempty" xml:"body"`
 	HttpStatusCode int              `json:"-"`
 }
 

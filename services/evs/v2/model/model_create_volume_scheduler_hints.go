@@ -10,7 +10,7 @@ import (
 type CreateVolumeSchedulerHints struct {
 
 	// 指定专属存储池ID，表示将云硬盘创建在该ID对应的存储池中。
-	DedicatedStorageId *string `json:"dedicated_storage_id,omitempty"`
+	DedicatedStorageId *string `json:"dedicated_storage_id,omitempty" xml:"dedicated_storage_id"`
 }
 
 func (o CreateVolumeSchedulerHints) String() string {

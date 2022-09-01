@@ -10,10 +10,10 @@ import (
 type ListServersResponse struct {
 
 	// 符合查询条件的源端总数量，不受limit和offset影响
-	Count *int32 `json:"count,omitempty"`
+	Count *int32 `json:"count,omitempty" xml:"count"`
 
 	// 批量查询的源端服务器详列表
-	SourceServers  *[]SourceServersResponseBody `json:"source_servers,omitempty"`
+	SourceServers  *[]SourceServersResponseBody `json:"source_servers,omitempty" xml:"source_servers"`
 	HttpStatusCode int                          `json:"-"`
 }
 

@@ -10,9 +10,9 @@ import (
 type StartInstanceRequest struct {
 
 	// 实例id
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *StartInstanceParam `json:"body,omitempty"`
+	Body *StartInstanceParam `json:"body,omitempty" xml:"body"`
 }
 
 func (o StartInstanceRequest) String() string {

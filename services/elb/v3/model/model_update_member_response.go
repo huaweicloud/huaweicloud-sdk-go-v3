@@ -10,9 +10,9 @@ import (
 type UpdateMemberResponse struct {
 
 	// 请求ID。  注：自动生成 。
-	RequestId *string `json:"request_id,omitempty"`
+	RequestId *string `json:"request_id,omitempty" xml:"request_id"`
 
-	Member         *Member `json:"member,omitempty"`
+	Member         *Member `json:"member,omitempty" xml:"member"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -10,10 +10,10 @@ import (
 type ListReadWriteRatioResponse struct {
 
 	// DDM读写比例监控信息条数。
-	TotalRecord *int32 `json:"totalRecord,omitempty"`
+	TotalRecord *int32 `json:"totalRecord,omitempty" xml:"totalRecord"`
 
 	// DDM实例读写次数信息列表的集合。
-	ReadWriteRatioList *[]ReadWriteRatioList `json:"readWriteRatioList,omitempty"`
+	ReadWriteRatioList *[]ReadWriteRatioList `json:"readWriteRatioList,omitempty" xml:"readWriteRatioList"`
 	HttpStatusCode     int                   `json:"-"`
 }
 

@@ -9,10 +9,10 @@ import (
 type UrlClassificationItem struct {
 
 	// UrlItem的总数量
-	Total *int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty" xml:"total"`
 
 	// UrlItem详细信息
-	Items *[]UrlItem `json:"items,omitempty"`
+	Items *[]UrlItem `json:"items,omitempty" xml:"items"`
 }
 
 func (o UrlClassificationItem) String() string {

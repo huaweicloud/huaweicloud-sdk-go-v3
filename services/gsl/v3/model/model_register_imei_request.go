@@ -10,9 +10,9 @@ import (
 type RegisterImeiRequest struct {
 
 	// SIM卡标识，可通过[查询SIM卡列表接口](https://support.huaweicloud.com/api-ocgsl/gsl_07_0008.html)获取
-	SimCardId int64 `json:"sim_card_id"`
+	SimCardId int64 `json:"sim_card_id" xml:"sim_card_id"`
 
-	Body *RegisterImeiReq `json:"body,omitempty"`
+	Body *RegisterImeiReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o RegisterImeiRequest) String() string {

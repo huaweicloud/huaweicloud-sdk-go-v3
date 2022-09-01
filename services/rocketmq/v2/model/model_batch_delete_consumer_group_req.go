@@ -9,7 +9,7 @@ import (
 type BatchDeleteConsumerGroupReq struct {
 
 	// 待删除的消费组列表。
-	Groups *[]string `json:"groups,omitempty"`
+	Groups *[]string `json:"groups,omitempty" xml:"groups"`
 }
 
 func (o BatchDeleteConsumerGroupReq) String() string {

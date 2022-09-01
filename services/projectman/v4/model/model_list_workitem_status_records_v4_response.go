@@ -10,10 +10,10 @@ import (
 type ListWorkitemStatusRecordsV4Response struct {
 
 	// 操作历史
-	Records *[]WorkitemStatusRecords `json:"records,omitempty"`
+	Records *[]WorkitemStatusRecords `json:"records,omitempty" xml:"records"`
 
 	// 总数
-	Total          *int32 `json:"total,omitempty"`
+	Total          *int32 `json:"total,omitempty" xml:"total"`
 	HttpStatusCode int    `json:"-"`
 }
 

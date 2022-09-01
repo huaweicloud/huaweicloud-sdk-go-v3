@@ -10,13 +10,13 @@ import (
 type ListWorkitemStatusRecordsV4Request struct {
 
 	// devcloud项目的32位id
-	ProjectId string `json:"project_id"`
+	ProjectId string `json:"project_id" xml:"project_id"`
 
 	// 偏移量 从0开始
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 每页数量 最小1,最大100
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 }
 
 func (o ListWorkitemStatusRecordsV4Request) String() string {

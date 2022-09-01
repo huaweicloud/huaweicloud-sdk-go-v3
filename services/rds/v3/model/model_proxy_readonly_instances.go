@@ -9,10 +9,10 @@ import (
 type ProxyReadonlyInstances struct {
 
 	// 只读实例ID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 只读实例权重，取值范围为0~1000。
-	Weight int32 `json:"weight"`
+	Weight int32 `json:"weight" xml:"weight"`
 }
 
 func (o ProxyReadonlyInstances) String() string {

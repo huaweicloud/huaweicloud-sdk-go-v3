@@ -9,16 +9,16 @@ import (
 type TaxInfo struct {
 
 	// 税种。 VATISSWHTGST
-	TaxClass *string `json:"taxClass,omitempty"`
+	TaxClass *string `json:"taxClass,omitempty" xml:"taxClass"`
 
 	// 税率。
-	TaxRate *string `json:"taxRate,omitempty"`
+	TaxRate *string `json:"taxRate,omitempty" xml:"taxRate"`
 
 	// 税种子类。 PISCOFINSCGSTSGSTIGSTISSWHTVAT
-	SubTaxClass *string `json:"subTaxClass,omitempty"`
+	SubTaxClass *string `json:"subTaxClass,omitempty" xml:"subTaxClass"`
 
 	// 税金金额。 单位：美元
-	TaxAmount *float64 `json:"taxAmount,omitempty"`
+	TaxAmount *float64 `json:"taxAmount,omitempty" xml:"taxAmount"`
 }
 
 func (o TaxInfo) String() string {

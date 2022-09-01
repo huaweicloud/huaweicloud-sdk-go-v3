@@ -10,10 +10,10 @@ import (
 type ListSecretsResponse struct {
 
 	// 密钥
-	Secrets *[]SecretDetailResp `json:"secrets,omitempty"`
+	Secrets *[]SecretDetailResp `json:"secrets,omitempty" xml:"secrets"`
 
 	// 满足条件的个数
-	Count          *int32 `json:"count,omitempty"`
+	Count          *int32 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

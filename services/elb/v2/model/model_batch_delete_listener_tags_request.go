@@ -10,9 +10,9 @@ import (
 type BatchDeleteListenerTagsRequest struct {
 
 	// 监听器ID。
-	ListenerId string `json:"listener_id"`
+	ListenerId string `json:"listener_id" xml:"listener_id"`
 
-	Body *BatchDeleteListenerTagsRequestBody `json:"body,omitempty"`
+	Body *BatchDeleteListenerTagsRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchDeleteListenerTagsRequest) String() string {

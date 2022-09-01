@@ -10,10 +10,10 @@ import (
 type ListAssetListResponse struct {
 
 	// 媒资总数  > 暂只能统计2万个媒资，若您需要查询具体的媒资总数，请提交工单申请。
-	Total *int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty" xml:"total"`
 
 	// 媒资列表
-	Assets         *[]AssetSummary `json:"assets,omitempty"`
+	Assets         *[]AssetSummary `json:"assets,omitempty" xml:"assets"`
 	HttpStatusCode int             `json:"-"`
 }
 

@@ -10,7 +10,7 @@ import (
 type ShowRabbitMqProjectTagsResponse struct {
 
 	// 标签列表
-	Tags           *[]TagMultyValueEntity `json:"tags,omitempty"`
+	Tags           *[]TagMultyValueEntity `json:"tags,omitempty" xml:"tags"`
 	HttpStatusCode int                    `json:"-"`
 }
 

@@ -13,13 +13,13 @@ import (
 type AuthorizeDomainsResponse struct {
 
 	// 状态码:   * success - 成功   * failure - 失败
-	InfoCode *AuthorizeDomainsResponseInfoCode `json:"info_code,omitempty"`
+	InfoCode *AuthorizeDomainsResponseInfoCode `json:"info_code,omitempty" xml:"info_code"`
 
 	// 返回的提示信息
-	InfoDescription *string `json:"info_description,omitempty"`
+	InfoDescription *string `json:"info_description,omitempty" xml:"info_description"`
 
 	// 域名认证使用须知
-	UsageNotice    *string `json:"usage_notice,omitempty"`
+	UsageNotice    *string `json:"usage_notice,omitempty" xml:"usage_notice"`
 	HttpStatusCode int     `json:"-"`
 }
 

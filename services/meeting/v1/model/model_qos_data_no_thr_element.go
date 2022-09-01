@@ -10,10 +10,10 @@ import (
 type QosDataNoThrElement struct {
 
 	// Qos时间点, UTC时间，格式：yyyy-MM-ddTHH:mm:ss.SSSZ。
-	Time *string `json:"time,omitempty"`
+	Time *string `json:"time,omitempty" xml:"time"`
 
 	// QoS值。
-	Value *string `json:"value,omitempty"`
+	Value *string `json:"value,omitempty" xml:"value"`
 }
 
 func (o QosDataNoThrElement) String() string {

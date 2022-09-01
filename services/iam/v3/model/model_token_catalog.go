@@ -10,16 +10,16 @@ import (
 type TokenCatalog struct {
 
 	// 该接口所属服务。
-	Type string `json:"type"`
+	Type string `json:"type" xml:"type"`
 
 	// 服务ID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 服务名称。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 终端节点。
-	Endpoints []TokenCatalogEndpoint `json:"endpoints"`
+	Endpoints []TokenCatalogEndpoint `json:"endpoints" xml:"endpoints"`
 }
 
 func (o TokenCatalog) String() string {

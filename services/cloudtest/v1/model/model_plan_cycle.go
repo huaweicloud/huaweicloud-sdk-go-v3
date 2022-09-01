@@ -10,10 +10,10 @@ import (
 type PlanCycle struct {
 
 	// 计划开始时间，要求用UTC时间表示。如2020-03-04
-	StartDate *string `json:"start_date,omitempty"`
+	StartDate *string `json:"start_date,omitempty" xml:"start_date"`
 
 	// 计划结束时间，要求用UTC时间表示。如2020-03-31
-	EndDate *string `json:"end_date,omitempty"`
+	EndDate *string `json:"end_date,omitempty" xml:"end_date"`
 }
 
 func (o PlanCycle) String() string {

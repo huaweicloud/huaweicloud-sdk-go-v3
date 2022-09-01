@@ -10,16 +10,16 @@ import (
 type ListSimPoolMembersResponse struct {
 
 	// 每页记录数
-	Limit *int64 `json:"limit,omitempty"`
+	Limit *int64 `json:"limit,omitempty" xml:"limit"`
 
 	// 页码
-	Offset *int64 `json:"offset,omitempty"`
+	Offset *int64 `json:"offset,omitempty" xml:"offset"`
 
 	// 当前流量池的成员总数
-	Count *int64 `json:"count,omitempty"`
+	Count *int64 `json:"count,omitempty" xml:"count"`
 
 	// 查询出来的流量池成员记录列表
-	PoolMembers    *[]PoolMemVo `json:"pool_members,omitempty"`
+	PoolMembers    *[]PoolMemVo `json:"pool_members,omitempty" xml:"pool_members"`
 	HttpStatusCode int          `json:"-"`
 }
 

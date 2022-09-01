@@ -10,7 +10,7 @@ import (
 type ListAssetCategoryResponse struct {
 
 	// 分类返回值
-	Body           *[]QueryCategoryRsp `json:"body,omitempty"`
+	Body           *[]QueryCategoryRsp `json:"body,omitempty" xml:"body"`
 	HttpStatusCode int                 `json:"-"`
 }
 

@@ -10,9 +10,9 @@ import (
 type CreateVersionAliasRequest struct {
 
 	// 函数的URN。
-	FunctionUrn string `json:"function_urn"`
+	FunctionUrn string `json:"function_urn" xml:"function_urn"`
 
-	Body *CreateVersionAliasRequestBody `json:"body,omitempty"`
+	Body *CreateVersionAliasRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateVersionAliasRequest) String() string {

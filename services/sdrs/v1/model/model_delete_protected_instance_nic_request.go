@@ -10,9 +10,9 @@ import (
 type DeleteProtectedInstanceNicRequest struct {
 
 	// 保护实例的ID。
-	ProtectedInstanceId string `json:"protected_instance_id"`
+	ProtectedInstanceId string `json:"protected_instance_id" xml:"protected_instance_id"`
 
-	Body *ProtectedInstanceDeleteNicRequestBody `json:"body,omitempty"`
+	Body *ProtectedInstanceDeleteNicRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o DeleteProtectedInstanceNicRequest) String() string {

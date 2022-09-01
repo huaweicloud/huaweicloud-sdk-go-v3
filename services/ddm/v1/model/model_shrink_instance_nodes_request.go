@@ -10,9 +10,9 @@ import (
 type ShrinkInstanceNodesRequest struct {
 
 	// DDM实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *ReduceRequest `json:"body,omitempty"`
+	Body *ReduceRequest `json:"body,omitempty" xml:"body"`
 }
 
 func (o ShrinkInstanceNodesRequest) String() string {

@@ -8,7 +8,7 @@ import (
 
 // This is a auto create Body Object
 type CreateIpGroupRequestBody struct {
-	Ipgroup *CreateIpGroupOption `json:"ipgroup"`
+	Ipgroup *CreateIpGroupOption `json:"ipgroup" xml:"ipgroup"`
 }
 
 func (o CreateIpGroupRequestBody) String() string {

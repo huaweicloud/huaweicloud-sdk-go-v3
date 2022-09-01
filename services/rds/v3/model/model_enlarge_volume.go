@@ -7,7 +7,7 @@ import (
 )
 
 type EnlargeVolume struct {
-	EnlargeVolume *EnlargeVolumeObject `json:"enlarge_volume"`
+	EnlargeVolume *EnlargeVolumeObject `json:"enlarge_volume" xml:"enlarge_volume"`
 }
 
 func (o EnlargeVolume) String() string {

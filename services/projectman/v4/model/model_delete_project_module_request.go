@@ -10,10 +10,10 @@ import (
 type DeleteProjectModuleRequest struct {
 
 	// devcloud项目的32位id
-	ProjectId string `json:"project_id"`
+	ProjectId string `json:"project_id" xml:"project_id"`
 
 	// 模块id
-	ModuleId int32 `json:"module_id"`
+	ModuleId int32 `json:"module_id" xml:"module_id"`
 }
 
 func (o DeleteProjectModuleRequest) String() string {

@@ -8,7 +8,7 @@ import (
 
 // 模板响应
 type TemplateResponse struct {
-	Template *TemplateResponseBody `json:"template,omitempty"`
+	Template *TemplateResponseBody `json:"template,omitempty" xml:"template"`
 }
 
 func (o TemplateResponse) String() string {

@@ -10,22 +10,22 @@ import (
 type BtrfsSubvolumn struct {
 
 	// 父卷的uuid
-	Uuid string `json:"uuid"`
+	Uuid string `json:"uuid" xml:"uuid"`
 
 	// 子卷是否为快照
-	IsSnapshot string `json:"is_snapshot"`
+	IsSnapshot string `json:"is_snapshot" xml:"is_snapshot"`
 
 	// 子卷的id
-	SubvolId string `json:"subvol_id"`
+	SubvolId string `json:"subvol_id" xml:"subvol_id"`
 
 	// 父卷id
-	ParentId string `json:"parent_id"`
+	ParentId string `json:"parent_id" xml:"parent_id"`
 
 	// 子卷的名称
-	SubvolName string `json:"subvol_name"`
+	SubvolName string `json:"subvol_name" xml:"subvol_name"`
 
 	// 子卷的挂载路径
-	SubvolMountPath string `json:"subvol_mount_path"`
+	SubvolMountPath string `json:"subvol_mount_path" xml:"subvol_mount_path"`
 }
 
 func (o BtrfsSubvolumn) String() string {

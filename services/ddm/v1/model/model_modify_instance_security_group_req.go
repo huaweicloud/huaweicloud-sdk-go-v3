@@ -10,7 +10,7 @@ import (
 type ModifyInstanceSecurityGroupReq struct {
 
 	// 安全组ID，默认值为原安全组ID，可根据需要判断是否修改安全组ID
-	SecurityGroupId string `json:"security_group_id"`
+	SecurityGroupId string `json:"security_group_id" xml:"security_group_id"`
 }
 
 func (o ModifyInstanceSecurityGroupReq) String() string {

@@ -10,12 +10,12 @@ import (
 type CreateInstallCmdRequest struct {
 
 	// 边缘节点ID
-	EdgeNodeId string `json:"edge_node_id"`
+	EdgeNodeId string `json:"edge_node_id" xml:"edge_node_id"`
 
 	// 节点架构
-	Arch string `json:"arch"`
+	Arch string `json:"arch" xml:"arch"`
 
-	Body *CreateInstallCmdRequestDto `json:"body,omitempty"`
+	Body *CreateInstallCmdRequestDto `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateInstallCmdRequest) String() string {

@@ -10,10 +10,10 @@ import (
 type AccessConfigBaseLogInfo struct {
 
 	// 日志组ID
-	LogGroupId *string `json:"log_group_id,omitempty"`
+	LogGroupId *string `json:"log_group_id,omitempty" xml:"log_group_id"`
 
 	// 日志流ID
-	LogStreamId *string `json:"log_stream_id,omitempty"`
+	LogStreamId *string `json:"log_stream_id,omitempty" xml:"log_stream_id"`
 }
 
 func (o AccessConfigBaseLogInfo) String() string {

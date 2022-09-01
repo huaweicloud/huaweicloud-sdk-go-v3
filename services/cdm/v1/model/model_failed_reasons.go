@@ -8,7 +8,7 @@ import (
 
 // 失败原因。集群处于正常状态时不返回。
 type FailedReasons struct {
-	CreateFailed *FailedReasonsCreateFailed `json:"CREATE_FAILED,omitempty"`
+	CreateFailed *FailedReasonsCreateFailed `json:"CREATE_FAILED,omitempty" xml:"CREATE_FAILED"`
 }
 
 func (o FailedReasons) String() string {

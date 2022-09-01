@@ -8,7 +8,7 @@ import (
 
 // 批量创建保护实例请求数据接口
 type BatchCreateProtectedInstancesRequestBody struct {
-	ProtectedInstances *BatchCreateProtectedInstancesRequestParams `json:"protected_instances"`
+	ProtectedInstances *BatchCreateProtectedInstancesRequestParams `json:"protected_instances" xml:"protected_instances"`
 }
 
 func (o BatchCreateProtectedInstancesRequestBody) String() string {

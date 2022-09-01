@@ -13,16 +13,16 @@ import (
 type CallbackLifeCycleHookOption struct {
 
 	// 生命周期操作令牌，通过查询伸缩实例挂起信息接口获取。指定生命周期回调对象，当不传入instance_id字段时，该字段为必选。当该字段与instance_id字段都传入，优先使用该字段进行回调。
-	LifecycleActionKey *string `json:"lifecycle_action_key,omitempty"`
+	LifecycleActionKey *string `json:"lifecycle_action_key,omitempty" xml:"lifecycle_action_key"`
 
 	// 实例ID。指定生命周期回调对象，当不传入lifecycle_action_key字段时，该字段为必选。
-	InstanceId *string `json:"instance_id,omitempty"`
+	InstanceId *string `json:"instance_id,omitempty" xml:"instance_id"`
 
 	// 生命周期挂钩名称。指定生命周期回调对象，当不传入lifecycle_action_key字段时，该字段为必选。
-	LifecycleHookName *string `json:"lifecycle_hook_name,omitempty"`
+	LifecycleHookName *string `json:"lifecycle_hook_name,omitempty" xml:"lifecycle_hook_name"`
 
 	// 生命周期回调操作。ABANDON：终止。CONTINUE：继续。EXTEND：延长超时时间，每次延长1小时。
-	LifecycleActionResult CallbackLifeCycleHookOptionLifecycleActionResult `json:"lifecycle_action_result"`
+	LifecycleActionResult CallbackLifeCycleHookOptionLifecycleActionResult `json:"lifecycle_action_result" xml:"lifecycle_action_result"`
 }
 
 func (o CallbackLifeCycleHookOption) String() string {

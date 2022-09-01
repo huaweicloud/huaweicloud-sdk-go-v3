@@ -10,9 +10,9 @@ import (
 type CreateKmsTagRequest struct {
 
 	// 密钥ID
-	KeyId string `json:"key_id"`
+	KeyId string `json:"key_id" xml:"key_id"`
 
-	Body *CreateKmsTagRequestBody `json:"body,omitempty"`
+	Body *CreateKmsTagRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateKmsTagRequest) String() string {

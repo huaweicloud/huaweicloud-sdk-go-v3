@@ -10,7 +10,7 @@ import (
 type RestMuteParticipantReqBody struct {
 
 	// - 0: 取消静音。 - 1: 静音。
-	IsMute int32 `json:"isMute"`
+	IsMute int32 `json:"isMute" xml:"isMute"`
 }
 
 func (o RestMuteParticipantReqBody) String() string {

@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateMigprojectRequest struct {
-	Body *PostMigProjectBody `json:"body,omitempty"`
+	Body *PostMigProjectBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateMigprojectRequest) String() string {

@@ -10,10 +10,10 @@ import (
 type RestartCloudPhoneServerResponse struct {
 
 	// 请求的唯一标识ID
-	RequestId string `json:"request_id"`
+	RequestId string `json:"request_id" xml:"request_id"`
 
 	// 任务信息
-	Jobs           []interface{} `json:"jobs"`
+	Jobs           []interface{} `json:"jobs" xml:"jobs"`
 	HttpStatusCode int           `json:"-"`
 }
 

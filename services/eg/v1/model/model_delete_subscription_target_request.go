@@ -10,10 +10,10 @@ import (
 type DeleteSubscriptionTargetRequest struct {
 
 	// 事件订阅ID
-	SubscriptionId string `json:"subscription_id"`
+	SubscriptionId string `json:"subscription_id" xml:"subscription_id"`
 
 	// 事件订阅目标ID
-	TargetId string `json:"target_id"`
+	TargetId string `json:"target_id" xml:"target_id"`
 }
 
 func (o DeleteSubscriptionTargetRequest) String() string {

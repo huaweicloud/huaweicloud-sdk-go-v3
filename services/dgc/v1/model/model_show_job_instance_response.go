@@ -8,21 +8,21 @@ import (
 
 // Response Object
 type ShowJobInstanceResponse struct {
-	Status *string `json:"status,omitempty"`
+	Status *string `json:"status,omitempty" xml:"status"`
 
-	PlanTime *int32 `json:"planTime,omitempty"`
+	PlanTime *int32 `json:"planTime,omitempty" xml:"planTime"`
 
-	StartTime *int32 `json:"startTime,omitempty"`
+	StartTime *int32 `json:"startTime,omitempty" xml:"startTime"`
 
-	EndTime *int32 `json:"endTime,omitempty"`
+	EndTime *int32 `json:"endTime,omitempty" xml:"endTime"`
 
-	ExecuteTime *int32 `json:"executeTime,omitempty"`
+	ExecuteTime *int32 `json:"executeTime,omitempty" xml:"executeTime"`
 
-	InstancesId *string `json:"instancesId,omitempty"`
+	InstancesId *string `json:"instancesId,omitempty" xml:"instancesId"`
 
-	Total *int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty" xml:"total"`
 
-	Nodes          *[]NodeInstance `json:"nodes,omitempty"`
+	Nodes          *[]NodeInstance `json:"nodes,omitempty" xml:"nodes"`
 	HttpStatusCode int             `json:"-"`
 }
 

@@ -9,13 +9,13 @@ import (
 type UpdateIpGroupOption struct {
 
 	// IP地址组的描述信息
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// IP地址组的名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// IP地址组中包含的IP列表。
-	IpList *[]UpadateIpGroupIpOption `json:"ip_list,omitempty"`
+	IpList *[]UpadateIpGroupIpOption `json:"ip_list,omitempty" xml:"ip_list"`
 }
 
 func (o UpdateIpGroupOption) String() string {

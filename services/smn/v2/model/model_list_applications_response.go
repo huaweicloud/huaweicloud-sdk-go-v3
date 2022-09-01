@@ -10,12 +10,12 @@ import (
 type ListApplicationsResponse struct {
 
 	// 请求的唯一标识ID。
-	RequestId *string `json:"request_id,omitempty"`
+	RequestId *string `json:"request_id,omitempty" xml:"request_id"`
 
 	// 返回的Application个数。该参数不受offset和limit影响，即返回的是您账户下所有的Application个数。
-	ApplicationCount *int32 `json:"application_count,omitempty"`
+	ApplicationCount *int32 `json:"application_count,omitempty" xml:"application_count"`
 
-	Applications   *[]ApplicationItem `json:"applications,omitempty"`
+	Applications   *[]ApplicationItem `json:"applications,omitempty" xml:"applications"`
 	HttpStatusCode int                `json:"-"`
 }
 

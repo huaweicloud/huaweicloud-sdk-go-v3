@@ -13,16 +13,16 @@ import (
 type DeploymentHostAuthorizationBody struct {
 
 	// 用户名，可输入中英文，数字和符号(-_.)。
-	Username string `json:"username"`
+	Username string `json:"username" xml:"username"`
 
 	// 密码，认证类型为0时，密码必填。
-	Password *string `json:"password,omitempty"`
+	Password *string `json:"password,omitempty" xml:"password"`
 
 	// 密钥，认证类型为1时，密钥必填
-	PrivateKey *string `json:"private_key,omitempty"`
+	PrivateKey *string `json:"private_key,omitempty" xml:"private_key"`
 
 	// 认证类型，0表示使用密码认证，1表示使用密钥认证
-	TrustedType DeploymentHostAuthorizationBodyTrustedType `json:"trusted_type"`
+	TrustedType DeploymentHostAuthorizationBodyTrustedType `json:"trusted_type" xml:"trusted_type"`
 }
 
 func (o DeploymentHostAuthorizationBody) String() string {

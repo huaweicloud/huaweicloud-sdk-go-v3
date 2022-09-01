@@ -9,25 +9,25 @@ import (
 type ListUsersForEnterpriseProjectResUsers struct {
 
 	// 授权用户所属账号ID。
-	DomainId string `json:"domain_id"`
+	DomainId string `json:"domain_id" xml:"domain_id"`
 
 	// 授权用户ID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 授权用户名。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 授权用户是否启用，true表示启用，false表示停用，默认为true。
-	Enabled bool `json:"enabled"`
+	Enabled bool `json:"enabled" xml:"enabled"`
 
 	// 授权用户描述信息。
-	Description string `json:"description"`
+	Description string `json:"description" xml:"description"`
 
 	// 授权用户的策略数。
-	PolicyNum int32 `json:"policy_num"`
+	PolicyNum int32 `json:"policy_num" xml:"policy_num"`
 
 	// 用户最近与企业项目关联策略的时间（毫秒）。
-	LastestPolicyTime int64 `json:"lastest_policy_time"`
+	LastestPolicyTime int64 `json:"lastest_policy_time" xml:"lastest_policy_time"`
 }
 
 func (o ListUsersForEnterpriseProjectResUsers) String() string {

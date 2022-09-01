@@ -10,10 +10,10 @@ import (
 type BatchListStructProcessResponse struct {
 
 	// 批量查询灾备初始化进度返回列表
-	Results *[]QueryStructProcessResp `json:"results,omitempty"`
+	Results *[]QueryStructProcessResp `json:"results,omitempty" xml:"results"`
 
 	// 总数
-	Count          *int32 `json:"count,omitempty"`
+	Count          *int32 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

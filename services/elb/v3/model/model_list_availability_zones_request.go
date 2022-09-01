@@ -10,7 +10,7 @@ import (
 type ListAvailabilityZonesRequest struct {
 
 	// AZ组。
-	PublicBorderGroup *string `json:"public_border_group,omitempty"`
+	PublicBorderGroup *string `json:"public_border_group,omitempty" xml:"public_border_group"`
 }
 
 func (o ListAvailabilityZonesRequest) String() string {

@@ -9,13 +9,13 @@ import (
 type TransTemplateGroupCollection struct {
 
 	// 模板组集合名称<br/>
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 模板组集合描述<br/>
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 模板组列表,模板ID<br/>
-	TemplateGroupList *[]string `json:"template_group_list,omitempty"`
+	TemplateGroupList *[]string `json:"template_group_list,omitempty" xml:"template_group_list"`
 }
 
 func (o TransTemplateGroupCollection) String() string {

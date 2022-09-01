@@ -8,7 +8,7 @@ import (
 
 // 更新边缘实例请求体
 type UpdateInstanceRequestBody struct {
-	Server *UpdateInstanceOption `json:"server"`
+	Server *UpdateInstanceOption `json:"server" xml:"server"`
 }
 
 func (o UpdateInstanceRequestBody) String() string {

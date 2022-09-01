@@ -9,7 +9,7 @@ import (
 type TaskStatus struct {
 
 	// 任务ID，供调用者查询任务进度。
-	JobID *string `json:"jobID,omitempty"`
+	JobID *string `json:"jobID,omitempty" xml:"jobID"`
 }
 
 func (o TaskStatus) String() string {

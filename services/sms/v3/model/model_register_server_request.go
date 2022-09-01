@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RegisterServerRequest struct {
-	Body *PostSourceServerBody `json:"body,omitempty"`
+	Body *PostSourceServerBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o RegisterServerRequest) String() string {

@@ -10,7 +10,7 @@ import (
 type DeleteTableRequest struct {
 
 	// 表ID
-	TableId string `json:"table_id"`
+	TableId string `json:"table_id" xml:"table_id"`
 }
 
 func (o DeleteTableRequest) String() string {

@@ -10,10 +10,10 @@ import (
 type UpdateTaskRulesetRequest struct {
 
 	// 任务ID
-	TaskId string `json:"task_id"`
+	TaskId string `json:"task_id" xml:"task_id"`
 
 	// 修改任务规则集
-	Body *[]UpdateTaskRulesetItem `json:"body,omitempty"`
+	Body *[]UpdateTaskRulesetItem `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateTaskRulesetRequest) String() string {

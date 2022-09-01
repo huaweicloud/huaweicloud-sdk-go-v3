@@ -9,19 +9,19 @@ import (
 type CreateAppReq struct {
 
 	// 应用名称 - 字符集：支持中文、英文字母、数字、中划线、下划线、点、空格和中英文圆括号 - 约束：实例下唯一
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 应用描述
-	Remark *string `json:"remark,omitempty"`
+	Remark *string `json:"remark,omitempty" xml:"remark"`
 
 	// 应用认证访问KEY,未提供时随机生成 - 字符集：支持中文、英文字母、数字、中划线、下划线、@号和点，以字母或中文或数字开头 - 约束：实例下唯一
-	Key *string `json:"key,omitempty"`
+	Key *string `json:"key,omitempty" xml:"key"`
 
 	// 应用认证访问SECRET,未提供（字段不存在或值为null）时随机生成 - 字符集：英文字母、数字、！、@、#、$、%、+、=、点、中划线、斜线/ - 复杂度：满足大小写字母、数字、特殊字符的复杂度组合，考虑兼容性暂时可不做
-	Secret *string `json:"secret,omitempty"`
+	Secret *string `json:"secret,omitempty" xml:"secret"`
 
 	// 是否收藏应用，收藏的应用会在列表里优先显示
-	Favorite *bool `json:"favorite,omitempty"`
+	Favorite *bool `json:"favorite,omitempty" xml:"favorite"`
 }
 
 func (o CreateAppReq) String() string {

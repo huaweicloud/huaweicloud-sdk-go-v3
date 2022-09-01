@@ -9,10 +9,10 @@ import (
 type DomainMapping struct {
 
 	// 直播播放域名
-	PullDomain string `json:"pull_domain"`
+	PullDomain string `json:"pull_domain" xml:"pull_domain"`
 
 	// 直播播放域名关联的推流域名
-	PushDomain string `json:"push_domain"`
+	PushDomain string `json:"push_domain" xml:"push_domain"`
 }
 
 func (o DomainMapping) String() string {

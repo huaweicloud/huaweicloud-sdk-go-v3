@@ -10,7 +10,7 @@ import (
 type ListConversionsResponse struct {
 
 	// 度量单位的换算信息，具体参见表3。
-	Conversions    *[]Conversion `json:"conversions,omitempty"`
+	Conversions    *[]Conversion `json:"conversions,omitempty" xml:"conversions"`
 	HttpStatusCode int           `json:"-"`
 }
 

@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateScalingGroupRequest struct {
-	Body *CreateScalingGroupOption `json:"body,omitempty"`
+	Body *CreateScalingGroupOption `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateScalingGroupRequest) String() string {

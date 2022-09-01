@@ -10,25 +10,25 @@ import (
 type ShowAutoCreatePolicyResponse struct {
 
 	// 快照保留的天数。
-	Keepday *int32 `json:"keepday,omitempty"`
+	Keepday *int32 `json:"keepday,omitempty" xml:"keepday"`
 
 	// 每天快照创建时刻。
-	Period *string `json:"period,omitempty"`
+	Period *string `json:"period,omitempty" xml:"period"`
 
 	// 快照命名前缀，需要用户自己手动输入。
-	Prefix *string `json:"prefix,omitempty"`
+	Prefix *string `json:"prefix,omitempty" xml:"prefix"`
 
 	// 快照存放的OBS桶的桶名。
-	Bucket *string `json:"bucket,omitempty"`
+	Bucket *string `json:"bucket,omitempty" xml:"bucket"`
 
 	// 快照在OBS桶中的存放路径。
-	BasePath *string `json:"basePath,omitempty"`
+	BasePath *string `json:"basePath,omitempty" xml:"basePath"`
 
 	// 访问OBS桶用到的委托。
-	Agency *string `json:"agency,omitempty"`
+	Agency *string `json:"agency,omitempty" xml:"agency"`
 
 	// 是否开启自动创建快照策略。 - true：表示开启自动创建快照策略。 - false：表示关闭自动创建快照策略。
-	Enable         *string `json:"enable,omitempty"`
+	Enable         *string `json:"enable,omitempty" xml:"enable"`
 	HttpStatusCode int     `json:"-"`
 }
 

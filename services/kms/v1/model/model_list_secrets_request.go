@@ -10,10 +10,10 @@ import (
 type ListSecretsRequest struct {
 
 	// 每页返回的个数。  默认值：50。
-	Limit *string `json:"limit,omitempty"`
+	Limit *string `json:"limit,omitempty" xml:"limit"`
 
 	// 分页查询起始的资源id，为空时为查询第一页
-	Marker *string `json:"marker,omitempty"`
+	Marker *string `json:"marker,omitempty" xml:"marker"`
 }
 
 func (o ListSecretsRequest) String() string {

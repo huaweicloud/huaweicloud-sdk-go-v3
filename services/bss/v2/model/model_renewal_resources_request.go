@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RenewalResourcesRequest struct {
-	Body *RenewalResourcesReq `json:"body,omitempty"`
+	Body *RenewalResourcesReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o RenewalResourcesRequest) String() string {

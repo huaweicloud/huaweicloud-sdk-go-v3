@@ -10,16 +10,16 @@ import (
 type ShowDatasetRequest struct {
 
 	// 作业ID。
-	JobId string `json:"job_id"`
+	JobId string `json:"job_id" xml:"job_id"`
 
 	// 作业运行ID。
-	RunId string `json:"run_id"`
+	RunId string `json:"run_id" xml:"run_id"`
 
 	// 当前偏移量，默认为0。
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 每页显示的最大作业个数，范围: [1, 100]。默认值：10。
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 }
 
 func (o ShowDatasetRequest) String() string {

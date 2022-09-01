@@ -10,7 +10,7 @@ import (
 type RunGetFileTranslationResultRequest struct {
 
 	// 文档翻译任务标识符。通过文档翻译接口获取。
-	JobId string `json:"job_id"`
+	JobId string `json:"job_id" xml:"job_id"`
 }
 
 func (o RunGetFileTranslationResultRequest) String() string {

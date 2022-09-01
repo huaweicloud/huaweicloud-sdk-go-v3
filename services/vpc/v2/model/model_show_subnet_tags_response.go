@@ -10,7 +10,7 @@ import (
 type ShowSubnetTagsResponse struct {
 
 	// tag对象列表
-	Tags           *[]ResourceTag `json:"tags,omitempty"`
+	Tags           *[]ResourceTag `json:"tags,omitempty" xml:"tags"`
 	HttpStatusCode int            `json:"-"`
 }
 

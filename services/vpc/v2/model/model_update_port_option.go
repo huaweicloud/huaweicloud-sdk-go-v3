@@ -10,16 +10,16 @@ import (
 type UpdatePortOption struct {
 
 	// 功能说明：端口名称 取值范围：0~255个字符，支持中文、英文、字母、_(下划线)、-（中划线）
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 安全组的ID列表
-	SecurityGroups *[]string `json:"security_groups,omitempty"`
+	SecurityGroups *[]string `json:"security_groups,omitempty" xml:"security_groups"`
 
 	// 功能说明：IP/Mac对列表 约束： - IP地址不允许为 “0.0.0.0”。 - 如果配置地址池较大（CIDR掩码小于24位），建议为该port配置一个单独的安全组。 - 为虚拟IP配置后端ECS场景，allowed_address_pairs中配置的IP地址，必须为ECS网卡已有的IP地址，否则可能会导致虚拟IP通信异常。
-	AllowedAddressPairs *[]AllowedAddressPair `json:"allowed_address_pairs,omitempty"`
+	AllowedAddressPairs *[]AllowedAddressPair `json:"allowed_address_pairs,omitempty" xml:"allowed_address_pairs"`
 
 	// 功能说明：DHCP的扩展Option(扩展属性)
-	ExtraDhcpOpts *[]ExtraDhcpOpt `json:"extra_dhcp_opts,omitempty"`
+	ExtraDhcpOpts *[]ExtraDhcpOpt `json:"extra_dhcp_opts,omitempty" xml:"extra_dhcp_opts"`
 }
 
 func (o UpdatePortOption) String() string {

@@ -10,9 +10,9 @@ import (
 type CreateConfigMapRequest struct {
 
 	// 铂金版实例ID，专业版实例为空值
-	IefInstanceId *string `json:"ief-instance-id,omitempty"`
+	IefInstanceId *string `json:"ief-instance-id,omitempty" xml:"ief-instance-id"`
 
-	Body *ConfigMaps `json:"body,omitempty"`
+	Body *ConfigMaps `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateConfigMapRequest) String() string {

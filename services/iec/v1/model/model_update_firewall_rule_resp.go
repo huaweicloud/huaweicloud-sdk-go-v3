@@ -13,14 +13,14 @@ import (
 type UpdateFirewallRuleResp struct {
 
 	// 网络ACL ID
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 网络ACL状态。
-	Status UpdateFirewallRuleRespStatus `json:"status"`
+	Status UpdateFirewallRuleRespStatus `json:"status" xml:"status"`
 
-	EgressFirewallPolicy *FirewallPolicy `json:"egress_firewall_policy"`
+	EgressFirewallPolicy *FirewallPolicy `json:"egress_firewall_policy" xml:"egress_firewall_policy"`
 
-	IngressFirewallPolicy *FirewallPolicy `json:"ingress_firewall_policy"`
+	IngressFirewallPolicy *FirewallPolicy `json:"ingress_firewall_policy" xml:"ingress_firewall_policy"`
 }
 
 func (o UpdateFirewallRuleResp) String() string {

@@ -13,13 +13,13 @@ import (
 type DownloadBlockchainCertRequest struct {
 
 	// blockchainID
-	BlockchainId string `json:"blockchain_id"`
+	BlockchainId string `json:"blockchain_id" xml:"blockchain_id"`
 
 	// order或者peer组织名称
-	OrgName string `json:"org_name"`
+	OrgName string `json:"org_name" xml:"org_name"`
 
 	// 下载证书类别
-	CertType DownloadBlockchainCertRequestCertType `json:"cert_type"`
+	CertType DownloadBlockchainCertRequestCertType `json:"cert_type" xml:"cert_type"`
 }
 
 func (o DownloadBlockchainCertRequest) String() string {

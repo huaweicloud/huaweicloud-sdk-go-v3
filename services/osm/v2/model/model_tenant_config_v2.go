@@ -9,7 +9,7 @@ import (
 type TenantConfigV2 struct {
 
 	// 抄送邮箱最大个数
-	CreateCaseCcemailMaxCount *int32 `json:"create_case_ccemail_max_count,omitempty"`
+	CreateCaseCcemailMaxCount *int32 `json:"create_case_ccemail_max_count,omitempty" xml:"create_case_ccemail_max_count"`
 }
 
 func (o TenantConfigV2) String() string {

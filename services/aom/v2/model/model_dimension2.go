@@ -10,10 +10,10 @@ import (
 type Dimension2 struct {
 
 	// 维度名称。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 指标数据的值。
-	Value string `json:"value"`
+	Value string `json:"value" xml:"value"`
 }
 
 func (o Dimension2) String() string {

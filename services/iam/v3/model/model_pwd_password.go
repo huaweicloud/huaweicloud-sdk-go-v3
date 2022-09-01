@@ -8,7 +8,7 @@ import (
 
 //
 type PwdPassword struct {
-	User *PwdPasswordUser `json:"user"`
+	User *PwdPasswordUser `json:"user" xml:"user"`
 }
 
 func (o PwdPassword) String() string {

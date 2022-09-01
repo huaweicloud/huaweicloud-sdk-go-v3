@@ -9,13 +9,13 @@ import (
 type StatisticStatusV2 struct {
 
 	// 未解决
-	Unresolved *int32 `json:"unresolved,omitempty"`
+	Unresolved *int32 `json:"unresolved,omitempty" xml:"unresolved"`
 
 	// 已解决
-	Resolved *int32 `json:"resolved,omitempty"`
+	Resolved *int32 `json:"resolved,omitempty" xml:"resolved"`
 
 	// 已忽略
-	Dismissed *int32 `json:"dismissed,omitempty"`
+	Dismissed *int32 `json:"dismissed,omitempty" xml:"dismissed"`
 }
 
 func (o StatisticStatusV2) String() string {

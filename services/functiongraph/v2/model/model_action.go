@@ -8,7 +8,7 @@ import (
 
 // 节点操作详情
 type Action struct {
-	FunctionRef *FunctionRef `json:"function_ref,omitempty"`
+	FunctionRef *FunctionRef `json:"function_ref,omitempty" xml:"function_ref"`
 }
 
 func (o Action) String() string {

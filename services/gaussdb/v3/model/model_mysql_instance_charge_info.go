@@ -10,10 +10,10 @@ import (
 type MysqlInstanceChargeInfo struct {
 
 	// 计费模式。
-	ChargeMode string `json:"charge_mode"`
+	ChargeMode string `json:"charge_mode" xml:"charge_mode"`
 
 	// 订单号。
-	OrderId *string `json:"order_id,omitempty"`
+	OrderId *string `json:"order_id,omitempty" xml:"order_id"`
 }
 
 func (o MysqlInstanceChargeInfo) String() string {

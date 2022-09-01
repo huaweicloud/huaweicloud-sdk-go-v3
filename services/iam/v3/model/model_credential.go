@@ -10,16 +10,16 @@ import (
 type Credential struct {
 
 	// AK/SK和securitytoken的过期时间。
-	ExpiresAt string `json:"expires_at"`
+	ExpiresAt string `json:"expires_at" xml:"expires_at"`
 
 	// 获取的AK。
-	Access string `json:"access"`
+	Access string `json:"access" xml:"access"`
 
 	// 获取的SK。
-	Secret string `json:"secret"`
+	Secret string `json:"secret" xml:"secret"`
 
 	// securitytoken是将所获的AK、SK等信息进行加密后的字符串。
-	Securitytoken string `json:"securitytoken"`
+	Securitytoken string `json:"securitytoken" xml:"securitytoken"`
 }
 
 func (o Credential) String() string {

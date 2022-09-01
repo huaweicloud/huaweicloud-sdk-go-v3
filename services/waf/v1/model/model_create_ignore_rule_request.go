@@ -10,12 +10,12 @@ import (
 type CreateIgnoreRuleRequest struct {
 
 	// 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
 
 	// 防护策略id，您可以通过调用查询防护策略列表（ListPolicy）获取策略id
-	PolicyId string `json:"policy_id"`
+	PolicyId string `json:"policy_id" xml:"policy_id"`
 
-	Body *CreateIgnoreRuleRequestBody `json:"body,omitempty"`
+	Body *CreateIgnoreRuleRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateIgnoreRuleRequest) String() string {

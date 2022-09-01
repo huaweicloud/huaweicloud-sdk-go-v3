@@ -8,7 +8,7 @@ import (
 
 //
 type UpdateAgencyCustomPolicyRequestBody struct {
-	Role *AgencyPolicyRoleOption `json:"role"`
+	Role *AgencyPolicyRoleOption `json:"role" xml:"role"`
 }
 
 func (o UpdateAgencyCustomPolicyRequestBody) String() string {

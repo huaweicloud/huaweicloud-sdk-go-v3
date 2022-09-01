@@ -10,9 +10,9 @@ import (
 type AssociateRouteTableRequest struct {
 
 	// 路由表ID
-	RoutetableId string `json:"routetable_id"`
+	RoutetableId string `json:"routetable_id" xml:"routetable_id"`
 
-	Body *RoutetableAssociateReqbody `json:"body,omitempty"`
+	Body *RoutetableAssociateReqbody `json:"body,omitempty" xml:"body"`
 }
 
 func (o AssociateRouteTableRequest) String() string {

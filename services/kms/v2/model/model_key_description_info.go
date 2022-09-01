@@ -10,10 +10,10 @@ import (
 type KeyDescriptionInfo struct {
 
 	// 密钥ID。
-	KeyId *string `json:"key_id,omitempty"`
+	KeyId *string `json:"key_id,omitempty" xml:"key_id"`
 
 	// 密钥描述。
-	KeyDescription *string `json:"key_description,omitempty"`
+	KeyDescription *string `json:"key_description,omitempty" xml:"key_description"`
 }
 
 func (o KeyDescriptionInfo) String() string {

@@ -10,10 +10,10 @@ import (
 type PageLink struct {
 
 	// 当前资源的链接。
-	Self *string `json:"self,omitempty"`
+	Self *string `json:"self,omitempty" xml:"self"`
 
 	// 下一页资源的链接。
-	Next *string `json:"next,omitempty"`
+	Next *string `json:"next,omitempty" xml:"next"`
 }
 
 func (o PageLink) String() string {

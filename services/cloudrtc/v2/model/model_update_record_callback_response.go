@@ -10,11 +10,11 @@ import (
 type UpdateRecordCallbackResponse struct {
 
 	// 应用id
-	AppId *string `json:"app_id,omitempty"`
+	AppId *string `json:"app_id,omitempty" xml:"app_id"`
 
-	RecordCallback *AppCallbackUrl `json:"record_callback,omitempty"`
+	RecordCallback *AppCallbackUrl `json:"record_callback,omitempty" xml:"record_callback"`
 
-	XRequestId     *string `json:"X-request-Id,omitempty"`
+	XRequestId     *string `json:"X-request-Id,omitempty" xml:"X-request-Id"`
 	HttpStatusCode int     `json:"-"`
 }
 

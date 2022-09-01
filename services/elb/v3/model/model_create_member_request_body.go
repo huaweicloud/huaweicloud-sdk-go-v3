@@ -8,7 +8,7 @@ import (
 
 // This is a auto create Body Object
 type CreateMemberRequestBody struct {
-	Member *CreateMemberOption `json:"member"`
+	Member *CreateMemberOption `json:"member" xml:"member"`
 }
 
 func (o CreateMemberRequestBody) String() string {

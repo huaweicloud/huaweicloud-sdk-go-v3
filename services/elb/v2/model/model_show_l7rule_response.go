@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowL7ruleResponse struct {
-	Rule           *L7ruleResp `json:"rule,omitempty"`
+	Rule           *L7ruleResp `json:"rule,omitempty" xml:"rule"`
 	HttpStatusCode int         `json:"-"`
 }
 

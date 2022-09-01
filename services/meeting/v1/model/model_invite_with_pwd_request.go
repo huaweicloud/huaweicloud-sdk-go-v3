@@ -10,9 +10,9 @@ import (
 type InviteWithPwdRequest struct {
 
 	// 会议ID
-	ConferenceID string `json:"conferenceID"`
+	ConferenceID string `json:"conferenceID" xml:"conferenceID"`
 
-	Body *RestInviteWithPwdReqBody `json:"body,omitempty"`
+	Body *RestInviteWithPwdReqBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o InviteWithPwdRequest) String() string {

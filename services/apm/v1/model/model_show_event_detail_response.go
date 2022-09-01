@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowEventDetailResponse struct {
-	EventInfo      *SpanEventInfo `json:"event_info,omitempty"`
+	EventInfo      *SpanEventInfo `json:"event_info,omitempty" xml:"event_info"`
 	HttpStatusCode int            `json:"-"`
 }
 

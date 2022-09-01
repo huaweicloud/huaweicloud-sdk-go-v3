@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type RecognizeFinancialStatementResponse struct {
-	Result         *FinancialStatementResult `json:"result,omitempty"`
+	Result         *FinancialStatementResult `json:"result,omitempty" xml:"result"`
 	HttpStatusCode int                       `json:"-"`
 }
 

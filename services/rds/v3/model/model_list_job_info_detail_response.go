@@ -8,10 +8,10 @@ import (
 
 // Response Object
 type ListJobInfoDetailResponse struct {
-	Jobs *GetTaskDetailListRspJobs `json:"jobs,omitempty"`
+	Jobs *GetTaskDetailListRspJobs `json:"jobs,omitempty" xml:"jobs"`
 
 	// 任务数量。
-	Count          *int32 `json:"count,omitempty"`
+	Count          *int32 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

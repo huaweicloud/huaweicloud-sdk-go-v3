@@ -9,7 +9,7 @@ import (
 type IefInfo struct {
 
 	// BCS服务边缘节点部署模式，分为：随机模式（0），绑定模式（1）
-	DeployMode *int64 `json:"deploy_mode,omitempty"`
+	DeployMode *int64 `json:"deploy_mode,omitempty" xml:"deploy_mode"`
 }
 
 func (o IefInfo) String() string {

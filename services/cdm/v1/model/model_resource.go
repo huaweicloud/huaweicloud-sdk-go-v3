@@ -9,10 +9,10 @@ import (
 type Resource struct {
 
 	// 资源id
-	ResourceId *string `json:"resource_id,omitempty"`
+	ResourceId *string `json:"resource_id,omitempty" xml:"resource_id"`
 
 	// 资源类型：server(服务器)
-	ResourceType *string `json:"resource_type,omitempty"`
+	ResourceType *string `json:"resource_type,omitempty" xml:"resource_type"`
 }
 
 func (o Resource) String() string {

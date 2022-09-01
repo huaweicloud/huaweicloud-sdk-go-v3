@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateManualBackupRequest struct {
-	Body *CreateManualBackupRequestBody `json:"body,omitempty"`
+	Body *CreateManualBackupRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateManualBackupRequest) String() string {

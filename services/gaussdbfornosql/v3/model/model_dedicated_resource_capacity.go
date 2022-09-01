@@ -10,13 +10,13 @@ import (
 type DedicatedResourceCapacity struct {
 
 	// CPU核数。
-	Vcpus int32 `json:"vcpus"`
+	Vcpus int32 `json:"vcpus" xml:"vcpus"`
 
 	// 内存大小，单位GB。
-	Ram int32 `json:"ram"`
+	Ram int32 `json:"ram" xml:"ram"`
 
 	// 存储大小，单位GB
-	Volume int32 `json:"volume"`
+	Volume int32 `json:"volume" xml:"volume"`
 }
 
 func (o DedicatedResourceCapacity) String() string {

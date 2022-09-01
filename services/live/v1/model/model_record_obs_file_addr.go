@@ -12,13 +12,13 @@ import (
 type RecordObsFileAddr struct {
 
 	// OBS的bucket名称
-	Bucket string `json:"bucket"`
+	Bucket string `json:"bucket" xml:"bucket"`
 
 	// OBS Bucket所在RegionID
-	Location RecordObsFileAddrLocation `json:"location"`
+	Location RecordObsFileAddrLocation `json:"location" xml:"location"`
 
 	// OBS对象路径，遵守OBS Object定义。如果为空则保存到根目录
-	Object string `json:"object"`
+	Object string `json:"object" xml:"object"`
 }
 
 func (o RecordObsFileAddr) String() string {

@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type RunRecordResponse struct {
-	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	XRequestId     *string `json:"X-Request-Id,omitempty" xml:"X-Request-Id"`
 	HttpStatusCode int     `json:"-"`
 }
 

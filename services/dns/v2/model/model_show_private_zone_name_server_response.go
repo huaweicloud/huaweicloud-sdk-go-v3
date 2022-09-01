@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowPrivateZoneNameServerResponse struct {
-	Nameservers    *[]PrivateNameServer `json:"nameservers,omitempty"`
+	Nameservers    *[]PrivateNameServer `json:"nameservers,omitempty" xml:"nameservers"`
 	HttpStatusCode int                  `json:"-"`
 }
 

@@ -10,9 +10,9 @@ import (
 type CreateSnapshotRequest struct {
 
 	// 指定要创建快照的集群ID。
-	ClusterId string `json:"cluster_id"`
+	ClusterId string `json:"cluster_id" xml:"cluster_id"`
 
-	Body *CreateSnapshotReq `json:"body,omitempty"`
+	Body *CreateSnapshotReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateSnapshotRequest) String() string {

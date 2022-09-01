@@ -12,39 +12,39 @@ import (
 type Backups struct {
 
 	// 备份ID。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 备份名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 备份开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
-	BeginTime *string `json:"begin_time,omitempty"`
+	BeginTime *string `json:"begin_time,omitempty" xml:"begin_time"`
 
 	// 备份结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
-	EndTime *string `json:"end_time,omitempty"`
+	EndTime *string `json:"end_time,omitempty" xml:"end_time"`
 
 	// 备份状态，取值： - BUILDING：备份中。 - COMPLETED：备份完成。 - FAILED：备份失败。 - AVAILABLE：备份可用。
-	Status *BackupsStatus `json:"status,omitempty"`
+	Status *BackupsStatus `json:"status,omitempty" xml:"status"`
 
 	// 备份花费时间(单位：minutes)
-	TakeUpTime *int32 `json:"take_up_time,omitempty"`
+	TakeUpTime *int32 `json:"take_up_time,omitempty" xml:"take_up_time"`
 
 	// 备份类型，取值： - auto：自动全量备份。 - manual：手动全量备份
-	Type *BackupsType `json:"type,omitempty"`
+	Type *BackupsType `json:"type,omitempty" xml:"type"`
 
 	// 备份大小，(单位：MB)
-	Size *int64 `json:"size,omitempty"`
+	Size *int64 `json:"size,omitempty" xml:"size"`
 
-	Datastore *MysqlDatastore `json:"datastore,omitempty"`
+	Datastore *MysqlDatastore `json:"datastore,omitempty" xml:"datastore"`
 
 	// 实例ID。
-	InstanceId *string `json:"instance_id,omitempty"`
+	InstanceId *string `json:"instance_id,omitempty" xml:"instance_id"`
 
 	// 备份级别。当开启一级备份开关时，返回该参数。  取值： - 0：备份正在创建中或者备份失败。 - 1：一级备份。 - 2：二级备份。
-	BackupLevel *BackupsBackupLevel `json:"backup_level,omitempty"`
+	BackupLevel *BackupsBackupLevel `json:"backup_level,omitempty" xml:"backup_level"`
 
 	// 备份文件描述信息
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 }
 
 func (o Backups) String() string {

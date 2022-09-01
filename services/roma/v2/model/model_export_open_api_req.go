@@ -12,22 +12,22 @@ import (
 type ExportOpenApiReq struct {
 
 	// API分组发布的环境ID
-	EnvId *string `json:"env_id,omitempty"`
+	EnvId *string `json:"env_id,omitempty" xml:"env_id"`
 
 	// API分组ID
-	GroupId string `json:"group_id"`
+	GroupId string `json:"group_id" xml:"group_id"`
 
 	// 导出API的定义范围： - spec：基础定义，只包括api前端定义 - proxy：全量定义，包括api前后端定义 - all：扩展定义，包括api前后端定义以及流控、访问控制、自定义认证等扩展定义 - dev：开发定义，包括未发布的api的前后端定义
-	Define *ExportOpenApiReqDefine `json:"define,omitempty"`
+	Define *ExportOpenApiReqDefine `json:"define,omitempty" xml:"define"`
 
 	// 导出的API定义的格式
-	Type *ExportOpenApiReqType `json:"type,omitempty"`
+	Type *ExportOpenApiReqType `json:"type,omitempty" xml:"type"`
 
 	// 导出的API定义版本，默认为当前时间
-	Version *string `json:"version,omitempty"`
+	Version *string `json:"version,omitempty" xml:"version"`
 
 	// 导出的API ID列表
-	Apis *[]string `json:"apis,omitempty"`
+	Apis *[]string `json:"apis,omitempty" xml:"apis"`
 }
 
 func (o ExportOpenApiReq) String() string {

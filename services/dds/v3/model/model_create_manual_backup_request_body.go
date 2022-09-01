@@ -7,7 +7,7 @@ import (
 )
 
 type CreateManualBackupRequestBody struct {
-	Backup *CreateManualBackupOption `json:"backup"`
+	Backup *CreateManualBackupOption `json:"backup" xml:"backup"`
 }
 
 func (o CreateManualBackupRequestBody) String() string {

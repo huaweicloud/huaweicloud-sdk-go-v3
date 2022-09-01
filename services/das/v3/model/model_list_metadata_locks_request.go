@@ -13,22 +13,22 @@ import (
 type ListMetadataLocksRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 数据库用户ID
-	DbUserId string `json:"db_user_id"`
+	DbUserId string `json:"db_user_id" xml:"db_user_id"`
 
 	// 会话ID
-	ThreadId *string `json:"thread_id,omitempty"`
+	ThreadId *string `json:"thread_id,omitempty" xml:"thread_id"`
 
 	// 数据库名称
-	Database *string `json:"database,omitempty"`
+	Database *string `json:"database,omitempty" xml:"database"`
 
 	// 表名
-	Table *string `json:"table,omitempty"`
+	Table *string `json:"table,omitempty" xml:"table"`
 
 	// 语言
-	XLanguage *ListMetadataLocksRequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *ListMetadataLocksRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 }
 
 func (o ListMetadataLocksRequest) String() string {

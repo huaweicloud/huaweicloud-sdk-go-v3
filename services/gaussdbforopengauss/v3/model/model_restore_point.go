@@ -9,10 +9,10 @@ import (
 type RestorePoint struct {
 
 	// 源实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 用于恢复的备份ID。
-	BackupId string `json:"backup_id"`
+	BackupId string `json:"backup_id" xml:"backup_id"`
 }
 
 func (o RestorePoint) String() string {

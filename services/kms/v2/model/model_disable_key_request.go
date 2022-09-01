@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type DisableKeyRequest struct {
-	Body *OperateKeyRequestBody `json:"body,omitempty"`
+	Body *OperateKeyRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o DisableKeyRequest) String() string {

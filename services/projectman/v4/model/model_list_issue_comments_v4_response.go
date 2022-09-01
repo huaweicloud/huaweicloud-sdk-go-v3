@@ -10,10 +10,10 @@ import (
 type ListIssueCommentsV4Response struct {
 
 	// 评论总数
-	Total *int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty" xml:"total"`
 
 	// 品论列表
-	Comments       *[]IssueCommentV4 `json:"comments,omitempty"`
+	Comments       *[]IssueCommentV4 `json:"comments,omitempty" xml:"comments"`
 	HttpStatusCode int               `json:"-"`
 }
 

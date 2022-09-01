@@ -10,10 +10,10 @@ import (
 type ListTemplateResponse struct {
 
 	// 转码模板
-	TemplateArray *[]TemplateInfo `json:"template_array,omitempty"`
+	TemplateArray *[]TemplateInfo `json:"template_array,omitempty" xml:"template_array"`
 
 	// 转码模板总数
-	Total          *int32 `json:"total,omitempty"`
+	Total          *int32 `json:"total,omitempty" xml:"total"`
 	HttpStatusCode int    `json:"-"`
 }
 

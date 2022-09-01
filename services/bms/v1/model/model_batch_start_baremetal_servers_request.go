@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type BatchStartBaremetalServersRequest struct {
-	Body *OsStartBody `json:"body,omitempty"`
+	Body *OsStartBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchStartBaremetalServersRequest) String() string {

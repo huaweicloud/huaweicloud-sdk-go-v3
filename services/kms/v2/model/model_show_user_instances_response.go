@@ -10,7 +10,7 @@ import (
 type ShowUserInstancesResponse struct {
 
 	// 非默认用户主密钥个数。
-	InstanceNum    *int32 `json:"instance_num,omitempty"`
+	InstanceNum    *int32 `json:"instance_num,omitempty" xml:"instance_num"`
 	HttpStatusCode int    `json:"-"`
 }
 

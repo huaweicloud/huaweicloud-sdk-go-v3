@@ -10,9 +10,9 @@ import (
 type CreateEngineRequest struct {
 
 	// 如果不带则默认企业项目为\"default\"，ID为\"0\"
-	XEnterpriseProjectID *string `json:"X-Enterprise-Project-ID,omitempty"`
+	XEnterpriseProjectID *string `json:"X-Enterprise-Project-ID,omitempty" xml:"X-Enterprise-Project-ID"`
 
-	Body *EngineCreateReq `json:"body,omitempty"`
+	Body *EngineCreateReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateEngineRequest) String() string {

@@ -10,9 +10,9 @@ import (
 type DeleteClusterRequest struct {
 
 	// 指定待删除集群的ID
-	ClusterId string `json:"cluster_id"`
+	ClusterId string `json:"cluster_id" xml:"cluster_id"`
 
-	Body *DeleteClusterRequestBody `json:"body,omitempty"`
+	Body *DeleteClusterRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o DeleteClusterRequest) String() string {

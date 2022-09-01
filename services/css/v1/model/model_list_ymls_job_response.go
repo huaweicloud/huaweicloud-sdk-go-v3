@@ -10,8 +10,8 @@ import (
 type ListYmlsJobResponse struct {
 
 	// 历史修改配置列表。
-	Configurations *[]ConfigurationsRsp `json:"configurations,omitempty"`
-	HttpStatusCode int                  `json:"-"`
+	ConfigList     *[]ConfigListRsp `json:"configList,omitempty" xml:"configList"`
+	HttpStatusCode int              `json:"-"`
 }
 
 func (o ListYmlsJobResponse) String() string {

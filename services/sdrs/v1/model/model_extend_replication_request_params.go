@@ -10,7 +10,7 @@ import (
 type ExtendReplicationRequestParams struct {
 
 	// 复制对内的磁盘扩容后的最终容量。单位：GB 说明:该参数的取值为小数时，系统默认取小数点前的整数值。
-	NewSize int32 `json:"new_size"`
+	NewSize int32 `json:"new_size" xml:"new_size"`
 }
 
 func (o ExtendReplicationRequestParams) String() string {

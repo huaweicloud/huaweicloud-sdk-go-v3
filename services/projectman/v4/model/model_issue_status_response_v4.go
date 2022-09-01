@@ -10,22 +10,22 @@ import (
 type IssueStatusResponseV4 struct {
 
 	// 已关闭数量
-	ClosedNum *int32 `json:"closed_num,omitempty"`
+	ClosedNum *int32 `json:"closed_num,omitempty" xml:"closed_num"`
 
 	// 新建的数量
-	NewNum *int32 `json:"new_num,omitempty"`
+	NewNum *int32 `json:"new_num,omitempty" xml:"new_num"`
 
 	// 开发中的数量
-	ProcessNum *int32 `json:"process_num,omitempty"`
+	ProcessNum *int32 `json:"process_num,omitempty" xml:"process_num"`
 
 	// 已拒绝数量
-	RejectedNum *int32 `json:"rejected_num,omitempty"`
+	RejectedNum *int32 `json:"rejected_num,omitempty" xml:"rejected_num"`
 
 	// 已解决数量
-	SolvedNum *int32 `json:"solved_num,omitempty"`
+	SolvedNum *int32 `json:"solved_num,omitempty" xml:"solved_num"`
 
 	// 测试中的数量
-	TestNum *int32 `json:"test_num,omitempty"`
+	TestNum *int32 `json:"test_num,omitempty" xml:"test_num"`
 }
 
 func (o IssueStatusResponseV4) String() string {

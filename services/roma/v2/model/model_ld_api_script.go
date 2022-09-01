@@ -11,34 +11,34 @@ import (
 type LdApiScript struct {
 
 	// 数据源编号，当api_type = data时，必选
-	DsId *string `json:"ds_id,omitempty"`
+	DsId *string `json:"ds_id,omitempty" xml:"ds_id"`
 
 	// 数据源名称
-	DsName *string `json:"ds_name,omitempty"`
+	DsName *string `json:"ds_name,omitempty" xml:"ds_name"`
 
 	// 数据源类型： - oracle：oracle数据源类型 - mysql：mysql数据源类型 - mongodb：mongodb数据源类型 - redis：redis数据源类型 - postgresql：postgresql数据源类型 - hive：hive数据源类型 - mssql：sqlserver数据源类型 - sqlserver：sqlserver数据源类型 - gauss200：gauss200数据源类型 - dws：dws数据源类型 - gauss100：gauss100数据源类型 - zenith：zenith数据源类型
-	DsType *LdApiScriptDsType `json:"ds_type,omitempty"`
+	DsType *LdApiScriptDsType `json:"ds_type,omitempty" xml:"ds_type"`
 
 	// 脚本类型 - SQL：sql语句 - SP：存储过程
-	Type *string `json:"type,omitempty"`
+	Type *string `json:"type,omitempty" xml:"type"`
 
 	// 返回对象。  当api_type = data时，必选
-	ObjectName *string `json:"object_name,omitempty"`
+	ObjectName *string `json:"object_name,omitempty" xml:"object_name"`
 
 	// API脚本内容  请对脚本进行base64编码
-	Content string `json:"content"`
+	Content string `json:"content" xml:"content"`
 
 	// 数据脚本是否结果分页，当api_type = data时有效
-	EnableResultPaging *bool `json:"enable_result_paging,omitempty"`
+	EnableResultPaging *bool `json:"enable_result_paging,omitempty" xml:"enable_result_paging"`
 
 	// 数据脚本是否预编译，当api_type = data时有效
-	EnablePreparestatement *bool `json:"enable_preparestatement,omitempty"`
+	EnablePreparestatement *bool `json:"enable_preparestatement,omitempty" xml:"enable_preparestatement"`
 
 	// 后端API脚本创建时间
-	CreatedTime *sdktime.SdkTime `json:"created_time,omitempty"`
+	CreatedTime *sdktime.SdkTime `json:"created_time,omitempty" xml:"created_time"`
 
 	// 后端API脚本修改时间
-	ModifiedTime *sdktime.SdkTime `json:"modified_time,omitempty"`
+	ModifiedTime *sdktime.SdkTime `json:"modified_time,omitempty" xml:"modified_time"`
 }
 
 func (o LdApiScript) String() string {

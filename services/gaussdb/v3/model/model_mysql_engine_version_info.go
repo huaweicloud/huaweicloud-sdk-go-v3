@@ -9,10 +9,10 @@ import (
 type MysqlEngineVersionInfo struct {
 
 	// 数据库版本ID，该字段不会有重复
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 数据库版本号，只返回两位数的大版本号
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 }
 
 func (o MysqlEngineVersionInfo) String() string {

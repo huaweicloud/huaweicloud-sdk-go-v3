@@ -10,7 +10,7 @@ import (
 type DeleteDataStoreRequest struct {
 
 	// 存储 ID
-	DataStoreId string `json:"data_store_id"`
+	DataStoreId string `json:"data_store_id" xml:"data_store_id"`
 }
 
 func (o DeleteDataStoreRequest) String() string {

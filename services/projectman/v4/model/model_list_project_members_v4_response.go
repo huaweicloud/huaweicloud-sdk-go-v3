@@ -10,10 +10,10 @@ import (
 type ListProjectMembersV4Response struct {
 
 	// 项目成员列表
-	Members *[]MemberListV4Members `json:"members,omitempty"`
+	Members *[]MemberListV4Members `json:"members,omitempty" xml:"members"`
 
 	// 总数
-	Total          *int32 `json:"total,omitempty"`
+	Total          *int32 `json:"total,omitempty" xml:"total"`
 	HttpStatusCode int    `json:"-"`
 }
 

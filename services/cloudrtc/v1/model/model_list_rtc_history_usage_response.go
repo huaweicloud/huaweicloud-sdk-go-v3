@@ -10,9 +10,9 @@ import (
 type ListRtcHistoryUsageResponse struct {
 
 	// 时间戳及相应时间的指标数值列表
-	Usage *[]RtcHistoryUsage `json:"usage,omitempty"`
+	Usage *[]RtcHistoryUsage `json:"usage,omitempty" xml:"usage"`
 
-	XRequestId     *string `json:"X-request-id,omitempty"`
+	XRequestId     *string `json:"X-request-id,omitempty" xml:"X-request-id"`
 	HttpStatusCode int     `json:"-"`
 }
 

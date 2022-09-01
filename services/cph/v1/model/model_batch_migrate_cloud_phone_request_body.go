@@ -9,7 +9,7 @@ import (
 type BatchMigrateCloudPhoneRequestBody struct {
 
 	// 待迁移数据的云手机信息
-	MigrateInfos []BatchMigrateCloudPhoneRequestBodyMigrateInfos `json:"migrate_infos"`
+	MigrateInfos []BatchMigrateCloudPhoneRequestBodyMigrateInfos `json:"migrate_infos" xml:"migrate_infos"`
 }
 
 func (o BatchMigrateCloudPhoneRequestBody) String() string {

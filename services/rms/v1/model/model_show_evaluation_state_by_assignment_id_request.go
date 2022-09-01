@@ -10,7 +10,7 @@ import (
 type ShowEvaluationStateByAssignmentIdRequest struct {
 
 	// 规则ID
-	PolicyAssignmentId string `json:"policy_assignment_id"`
+	PolicyAssignmentId string `json:"policy_assignment_id" xml:"policy_assignment_id"`
 }
 
 func (o ShowEvaluationStateByAssignmentIdRequest) String() string {

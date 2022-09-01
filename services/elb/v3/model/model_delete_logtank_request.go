@@ -10,7 +10,7 @@ import (
 type DeleteLogtankRequest struct {
 
 	// 云日志ID。
-	LogtankId string `json:"logtank_id"`
+	LogtankId string `json:"logtank_id" xml:"logtank_id"`
 }
 
 func (o DeleteLogtankRequest) String() string {

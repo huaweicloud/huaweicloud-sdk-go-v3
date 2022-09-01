@@ -13,10 +13,10 @@ import (
 type UpdateFirewallResp struct {
 
 	// 网络ACL ID
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 网络ACL状态。
-	Status UpdateFirewallRespStatus `json:"status"`
+	Status UpdateFirewallRespStatus `json:"status" xml:"status"`
 }
 
 func (o UpdateFirewallResp) String() string {

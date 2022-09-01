@@ -10,13 +10,13 @@ import (
 type NodeDeviceInfos struct {
 
 	// 终端设备和节点关系的名称，只允许中文字符、英文字母、数字、下划线、中划线，最大长度64
-	Relation string `json:"relation"`
+	Relation string `json:"relation" xml:"relation"`
 
 	// 终端设备和节点关系的描述，最大长度64，不允许^ ~ # $ % & * < > ( ) [ ] { } ' \" \\
-	Comment string `json:"comment"`
+	Comment string `json:"comment" xml:"comment"`
 
 	// 节点ID列表，一个设备只可以被绑定于一个边缘节点。
-	NodeIds []string `json:"node_ids"`
+	NodeIds []string `json:"node_ids" xml:"node_ids"`
 }
 
 func (o NodeDeviceInfos) String() string {

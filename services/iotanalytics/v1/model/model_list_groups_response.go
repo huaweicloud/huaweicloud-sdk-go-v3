@@ -10,10 +10,10 @@ import (
 type ListGroupsResponse struct {
 
 	// 存储组列表
-	Groups *[]GetGroup `json:"groups,omitempty"`
+	Groups *[]GetGroup `json:"groups,omitempty" xml:"groups"`
 
 	// 返回的 data-store-group 数量
-	Count          *int32 `json:"count,omitempty"`
+	Count          *int32 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

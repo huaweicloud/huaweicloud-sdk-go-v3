@@ -10,7 +10,7 @@ import (
 type UpdateMaterialRequestDto struct {
 
 	// 素材名称
-	MaterialName *string `json:"materialName,omitempty"`
+	MaterialName *string `json:"materialName,omitempty" xml:"materialName"`
 }
 
 func (o UpdateMaterialRequestDto) String() string {

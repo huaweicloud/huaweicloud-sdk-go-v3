@@ -9,7 +9,7 @@ import (
 type ContainerNetworkUpdate struct {
 
 	// 容器网络网段列表。1.21及新版本集群，当集群网络类型为vpc-router时，支持增量添加容器网段。  此参数在集群更新后不可更改，请谨慎选择。
-	Cidrs *[]ContainerCidr `json:"cidrs,omitempty"`
+	Cidrs *[]ContainerCidr `json:"cidrs,omitempty" xml:"cidrs"`
 }
 
 func (o ContainerNetworkUpdate) String() string {

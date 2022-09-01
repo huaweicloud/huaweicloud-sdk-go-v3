@@ -10,10 +10,10 @@ import (
 type OperateErrorInfo struct {
 
 	// 唯一标识ID，流程URN
-	WorkflowUrn *string `json:"workflow_urn,omitempty"`
+	WorkflowUrn *string `json:"workflow_urn,omitempty" xml:"workflow_urn"`
 
 	// 错误详情
-	ErrorDetail *string `json:"error_detail,omitempty"`
+	ErrorDetail *string `json:"error_detail,omitempty" xml:"error_detail"`
 }
 
 func (o OperateErrorInfo) String() string {

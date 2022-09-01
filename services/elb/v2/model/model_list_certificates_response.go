@@ -10,10 +10,10 @@ import (
 type ListCertificatesResponse struct {
 
 	// SSL证书列表对象
-	Certificates *[]CertificateResp `json:"certificates,omitempty"`
+	Certificates *[]CertificateResp `json:"certificates,omitempty" xml:"certificates"`
 
 	// 证书的个数
-	InstanceNum    *int32 `json:"instance_num,omitempty"`
+	InstanceNum    *int32 `json:"instance_num,omitempty" xml:"instance_num"`
 	HttpStatusCode int    `json:"-"`
 }
 

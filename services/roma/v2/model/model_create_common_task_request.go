@@ -10,9 +10,9 @@ import (
 type CreateCommonTaskRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *CreateCommonTaskRequestBody `json:"body,omitempty"`
+	Body *CreateCommonTaskRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateCommonTaskRequest) String() string {

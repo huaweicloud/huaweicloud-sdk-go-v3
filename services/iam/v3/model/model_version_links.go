@@ -10,10 +10,10 @@ import (
 type VersionLinks struct {
 
 	// 链接类型。self：自助链接包含了版本链接的资源。bookmark：书签链接提供了一个永久资源的永久链接。alternate：备用链接包含了资源的替换表示形式。
-	Rel string `json:"rel"`
+	Rel string `json:"rel" xml:"rel"`
 
 	// 资源链接地址。
-	Href string `json:"href"`
+	Href string `json:"href" xml:"href"`
 }
 
 func (o VersionLinks) String() string {

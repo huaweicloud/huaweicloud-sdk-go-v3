@@ -13,7 +13,7 @@ import (
 type SchedulerHints struct {
 
 	// 是否在专属云中创建裸金属服务器，参数值为share或dedicate。约束：该值不传时默认为share。在专属云中创建裸金属服务器时，必须指定该字段为dedicate。
-	DecBaremetal *[]SchedulerHintsDecBaremetal `json:"dec_baremetal,omitempty"`
+	DecBaremetal *[]SchedulerHintsDecBaremetal `json:"dec_baremetal,omitempty" xml:"dec_baremetal"`
 }
 
 func (o SchedulerHints) String() string {

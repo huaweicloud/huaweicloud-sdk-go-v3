@@ -13,13 +13,13 @@ import (
 type RouteServerBody struct {
 
 	// WAF转发客户端请求到防护域名源站服务器的协议
-	BackProtocol *RouteServerBodyBackProtocol `json:"back_protocol,omitempty"`
+	BackProtocol *RouteServerBodyBackProtocol `json:"back_protocol,omitempty" xml:"back_protocol"`
 
 	// 客户端访问的源站服务器的IP地址
-	Address *string `json:"address,omitempty"`
+	Address *string `json:"address,omitempty" xml:"address"`
 
 	// WAF转发客户端请求到源站服务的业务端口
-	Port *int32 `json:"port,omitempty"`
+	Port *int32 `json:"port,omitempty" xml:"port"`
 }
 
 func (o RouteServerBody) String() string {

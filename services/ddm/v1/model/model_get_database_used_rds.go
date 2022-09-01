@@ -10,16 +10,16 @@ import (
 type GetDatabaseUsedRds struct {
 
 	// 关联RDS节点ID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 关联RDS名称
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 关联RDS状态。
-	Status string `json:"status"`
+	Status string `json:"status" xml:"status"`
 
 	// 响应信息，若无异常信息则不返回该参数。
-	ErrorMsg *string `json:"error_msg,omitempty"`
+	ErrorMsg *string `json:"error_msg,omitempty" xml:"error_msg"`
 }
 
 func (o GetDatabaseUsedRds) String() string {

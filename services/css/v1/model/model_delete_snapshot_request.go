@@ -10,10 +10,10 @@ import (
 type DeleteSnapshotRequest struct {
 
 	// 删除快照所属的集群的ID。
-	ClusterId string `json:"cluster_id"`
+	ClusterId string `json:"cluster_id" xml:"cluster_id"`
 
 	// 要删除快照的ID。
-	SnapshotId string `json:"snapshot_id"`
+	SnapshotId string `json:"snapshot_id" xml:"snapshot_id"`
 }
 
 func (o DeleteSnapshotRequest) String() string {

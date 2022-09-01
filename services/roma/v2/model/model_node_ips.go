@@ -10,10 +10,10 @@ import (
 type NodeIps struct {
 
 	// 自定义后端服务livedta组件节点ip列表
-	Livedata *[]string `json:"livedata,omitempty"`
+	Livedata *[]string `json:"livedata,omitempty" xml:"livedata"`
 
 	// API网关shubao组件节点ip列表
-	Shubao *[]string `json:"shubao,omitempty"`
+	Shubao *[]string `json:"shubao,omitempty" xml:"shubao"`
 }
 
 func (o NodeIps) String() string {

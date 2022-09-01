@@ -13,43 +13,43 @@ import (
 type OsExtraSpecs struct {
 
 	// 识该规格对应的资源类型，取值范围为“ironic”。
-	ResourceType OsExtraSpecsResourceType `json:"resource_type"`
+	ResourceType OsExtraSpecsResourceType `json:"resource_type" xml:"resource_type"`
 
 	// 裸金属服务器的CPU架构类型，取值为：x86_64（适用于x86机型）aarch64（适用于ARM机型）
-	CapabilitiescpuArch OsExtraSpecsCapabilitiescpuArch `json:"capabilities:cpu_arch"`
+	CapabilitiescpuArch OsExtraSpecsCapabilitiescpuArch `json:"capabilities:cpu_arch" xml:"capabilities:cpu_arch"`
 
 	// 磁盘物理规格描述信息。
-	BaremetaldiskDetail string `json:"baremetal:disk_detail"`
+	BaremetaldiskDetail string `json:"baremetal:disk_detail" xml:"baremetal:disk_detail"`
 
 	// 标示ironic类型的规格。
-	CapabilitieshypervisorType string `json:"capabilities:hypervisor_type"`
+	CapabilitieshypervisorType string `json:"capabilities:hypervisor_type" xml:"capabilities:hypervisor_type"`
 
 	// 标识当前的规格是否支持挂载EVS卷。truefalse
-	BaremetalSupportEvs *string `json:"baremetal:__support_evs,omitempty"`
+	BaremetalSupportEvs *string `json:"baremetal:__support_evs,omitempty" xml:"baremetal:__support_evs"`
 
 	// 裸金属服务器启动源。LocalDisk：本地盘Volume：云硬盘（快速发放）
-	BaremetalextBootType *OsExtraSpecsBaremetalextBootType `json:"baremetal:extBootType,omitempty"`
+	BaremetalextBootType *OsExtraSpecsBaremetalextBootType `json:"baremetal:extBootType,omitempty" xml:"baremetal:extBootType"`
 
 	// 裸金属服务器的规格类型。格式为规格的缩写，例如规格名称为“physical.o2.medium”，则规格类型为“o2m”。
-	CapabilitiesboardType string `json:"capabilities:board_type"`
+	CapabilitiesboardType string `json:"capabilities:board_type" xml:"capabilities:board_type"`
 
 	// 实际可挂载网络数量。
-	BaremetalnetNum string `json:"baremetal:net_num"`
+	BaremetalnetNum string `json:"baremetal:net_num" xml:"baremetal:net_num"`
 
 	// 网卡物理规格描述信息。
-	BaremetalnetcardDetail string `json:"baremetal:netcard_detail"`
+	BaremetalnetcardDetail string `json:"baremetal:netcard_detail" xml:"baremetal:netcard_detail"`
 
 	// CPU物理规格描述信息。
-	BaremetalcpuDetail string `json:"baremetal:cpu_detail"`
+	BaremetalcpuDetail string `json:"baremetal:cpu_detail" xml:"baremetal:cpu_detail"`
 
 	// 内存物理规格描述信息
-	BaremetalmemoryDetail string `json:"baremetal:memory_detail"`
+	BaremetalmemoryDetail string `json:"baremetal:memory_detail" xml:"baremetal:memory_detail"`
 
 	// 裸金属服务器规格状态。不配置时等同于normal。normal：正常商用abandon：下线（即不显示）sellout：售罄obt：公测promotion：推荐（等同normal，也是商用）
-	Condoperationstatus *OsExtraSpecsCondoperationstatus `json:"cond:operation:status,omitempty"`
+	Condoperationstatus *OsExtraSpecsCondoperationstatus `json:"cond:operation:status,omitempty" xml:"cond:operation:status"`
 
 	// 在某个AZ的裸金属服务器规格状态。此参数是AZ级配置，某个AZ没有在此参数中配置时默认使用cond:operation:status参数的取值。格式：az(xx)。()内为某个AZ下的裸金属服务器规格状态，()内必须填写状态，不填为无效配置。例如：规格在某个区域的az0正常商用，az1售罄，az2公测，az3正常商用，其他az显示下线，可配置为：“cond:operation:status”设置为“abandon”“cond:operation:az”设置为“az0(normal), az1(sellout), az2(obt), az3(promotion)” 说明：如果规格在某个AZ下的状态与cond:operation:status配置状态不同，必须配置该参数。
-	Condoperationaz *string `json:"cond:operation:az,omitempty"`
+	Condoperationaz *string `json:"cond:operation:az,omitempty" xml:"cond:operation:az"`
 }
 
 func (o OsExtraSpecs) String() string {

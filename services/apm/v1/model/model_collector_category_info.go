@@ -10,16 +10,16 @@ import (
 type CollectorCategoryInfo struct {
 
 	// 采集器类别id
-	CategoryId *int32 `json:"category_id,omitempty"`
+	CategoryId *int32 `json:"category_id,omitempty" xml:"category_id"`
 
 	// 采集器类别名称
-	CategoryName *string `json:"category_name,omitempty"`
+	CategoryName *string `json:"category_name,omitempty" xml:"category_name"`
 
 	// 采集器类别展示名称
-	DisplayName *string `json:"display_name,omitempty"`
+	DisplayName *string `json:"display_name,omitempty" xml:"display_name"`
 
 	// 序列号
-	Sequence *int32 `json:"sequence,omitempty"`
+	Sequence *int32 `json:"sequence,omitempty" xml:"sequence"`
 }
 
 func (o CollectorCategoryInfo) String() string {

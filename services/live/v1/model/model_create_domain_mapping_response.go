@@ -10,10 +10,10 @@ import (
 type CreateDomainMappingResponse struct {
 
 	// 直播播放域名
-	PullDomain *string `json:"pull_domain,omitempty"`
+	PullDomain *string `json:"pull_domain,omitempty" xml:"pull_domain"`
 
 	// 直播播放域名关联的推流域名
-	PushDomain     *string `json:"push_domain,omitempty"`
+	PushDomain     *string `json:"push_domain,omitempty" xml:"push_domain"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -8,9 +8,9 @@ import (
 
 // Response Object
 type ShowHisMeetingDetailResponse struct {
-	ConferenceData *ConferenceInfo `json:"conferenceData,omitempty"`
+	ConferenceData *ConferenceInfo `json:"conferenceData,omitempty" xml:"conferenceData"`
 
-	Data           *PageParticipant `json:"data,omitempty"`
+	Data           *PageParticipant `json:"data,omitempty" xml:"data"`
 	HttpStatusCode int              `json:"-"`
 }
 

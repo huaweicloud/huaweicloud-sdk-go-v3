@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ListImageByTagsRequest struct {
-	Body *ListImageByTagsRequestBody `json:"body,omitempty"`
+	Body *ListImageByTagsRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o ListImageByTagsRequest) String() string {

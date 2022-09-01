@@ -9,22 +9,22 @@ import (
 type UrlObject struct {
 
 	// url的id
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// url的地址。
-	Url *string `json:"url,omitempty"`
+	Url *string `json:"url,omitempty" xml:"url"`
 
 	// url的状态 processing 处理中，succeed 完成，failed 失败，waiting 等待，refreshing 刷新中，preheating 预热中。
-	Status *string `json:"status,omitempty"`
+	Status *string `json:"status,omitempty" xml:"status"`
 
 	// url创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
-	CreateTime *int64 `json:"create_time,omitempty"`
+	CreateTime *int64 `json:"create_time,omitempty" xml:"create_time"`
 
 	// 任务id。
-	TaskId *string `json:"task_id,omitempty"`
+	TaskId *string `json:"task_id,omitempty" xml:"task_id"`
 
 	// 任务的类型， 其值可以为REFRESH、PREHEATING、REFRESH_AFTER_PREHEATING
-	TaskType *string `json:"task_type,omitempty"`
+	TaskType *string `json:"task_type,omitempty" xml:"task_type"`
 }
 
 func (o UrlObject) String() string {

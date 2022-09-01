@@ -10,7 +10,7 @@ import (
 type DeleteBackupRequest struct {
 
 	// 指定删除的备份ID
-	BackupId string `json:"backup_id"`
+	BackupId string `json:"backup_id" xml:"backup_id"`
 }
 
 func (o DeleteBackupRequest) String() string {

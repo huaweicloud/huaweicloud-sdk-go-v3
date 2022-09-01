@@ -10,9 +10,9 @@ import (
 type CreateRuleRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *CreateRuleRequestBody `json:"body,omitempty"`
+	Body *CreateRuleRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateRuleRequest) String() string {

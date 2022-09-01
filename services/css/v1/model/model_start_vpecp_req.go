@@ -9,7 +9,7 @@ import (
 type StartVpecpReq struct {
 
 	// 开启终端节点。
-	EndpointWithDnsName bool `json:"endpointWithDnsName"`
+	EndpointWithDnsName bool `json:"endpointWithDnsName" xml:"endpointWithDnsName"`
 }
 
 func (o StartVpecpReq) String() string {

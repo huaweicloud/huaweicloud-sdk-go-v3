@@ -10,7 +10,7 @@ import (
 type ListApplicationAttributesRequest struct {
 
 	// Application的唯一资源标识，可通过[查询Application](https://support.huaweicloud.com/api-smn/ListApplications.html)获取该标识。
-	ApplicationUrn string `json:"application_urn"`
+	ApplicationUrn string `json:"application_urn" xml:"application_urn"`
 }
 
 func (o ListApplicationAttributesRequest) String() string {

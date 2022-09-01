@@ -10,7 +10,7 @@ import (
 type Action struct {
 
 	// 特征反爬虫中防护动作信息   - log：仅记录   - block：拦截
-	Category *string `json:"category,omitempty"`
+	Category *string `json:"category,omitempty" xml:"category"`
 }
 
 func (o Action) String() string {

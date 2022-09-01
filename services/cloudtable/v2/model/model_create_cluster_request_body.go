@@ -8,7 +8,7 @@ import (
 
 // 创建集群发起的请求的请求体对象。
 type CreateClusterRequestBody struct {
-	Cluster *Cluster `json:"cluster"`
+	Cluster *Cluster `json:"cluster" xml:"cluster"`
 }
 
 func (o CreateClusterRequestBody) String() string {

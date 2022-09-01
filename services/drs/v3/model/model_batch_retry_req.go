@@ -10,7 +10,7 @@ import (
 type BatchRetryReq struct {
 
 	// 批量续传任务请求列表
-	Jobs []RetryInfo `json:"jobs"`
+	Jobs []RetryInfo `json:"jobs" xml:"jobs"`
 }
 
 func (o BatchRetryReq) String() string {

@@ -13,28 +13,28 @@ import (
 type ShowSumTableResponse struct {
 
 	// 结果的ID信息，分页查询的时候带过来
-	ResultId *string `json:"result_id,omitempty"`
+	ResultId *string `json:"result_id,omitempty" xml:"result_id"`
 
 	// 数据行列表
-	RowList *[]FrontRow `json:"row_list,omitempty"`
+	RowList *[]FrontRow `json:"row_list,omitempty" xml:"row_list"`
 
 	// 最近一笔数据的时间
-	LatestDataTime *int64 `json:"latest_data_Time,omitempty"`
+	LatestDataTime *int64 `json:"latest_data_Time,omitempty" xml:"latest_data_Time"`
 
 	// 表格的方向，H：默认，表头横向，V：表头纵向
-	TableDirection *ShowSumTableResponseTableDirection `json:"table_direction,omitempty"`
+	TableDirection *ShowSumTableResponseTableDirection `json:"table_direction,omitempty" xml:"table_direction"`
 
 	// 实际开始的时间
-	RealStartTime *int64 `json:"real_start_time,omitempty"`
+	RealStartTime *int64 `json:"real_start_time,omitempty" xml:"real_start_time"`
 
 	// 实际结束的时间
-	RealEndTime *int64 `json:"real_end_time,omitempty"`
+	RealEndTime *int64 `json:"real_end_time,omitempty" xml:"real_end_time"`
 
 	// 提示信息
-	NoticeMsg *string `json:"notice_msg,omitempty"`
+	NoticeMsg *string `json:"notice_msg,omitempty" xml:"notice_msg"`
 
 	// 总数
-	TotalCount     *int32 `json:"total_count,omitempty"`
+	TotalCount     *int32 `json:"total_count,omitempty" xml:"total_count"`
 	HttpStatusCode int    `json:"-"`
 }
 

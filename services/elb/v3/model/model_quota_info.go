@@ -10,16 +10,16 @@ import (
 type QuotaInfo struct {
 
 	// 资源类型。  取值：loadbalancer、listener、ipgroup、pool、member、members_per_pool、healthmonitor、l7policy、certificate、security_policy，其中members_per_pool表示一个pool下最多可关联的member数量。
-	QuotaKey string `json:"quota_key"`
+	QuotaKey string `json:"quota_key" xml:"quota_key"`
 
 	// 总配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-	QuotaLimit int32 `json:"quota_limit"`
+	QuotaLimit int32 `json:"quota_limit" xml:"quota_limit"`
 
 	// 已使用配额。
-	Used int32 `json:"used"`
+	Used int32 `json:"used" xml:"used"`
 
 	// 配额单位。 取值：count，表示个数。
-	Unit string `json:"unit"`
+	Unit string `json:"unit" xml:"unit"`
 }
 
 func (o QuotaInfo) String() string {

@@ -10,13 +10,13 @@ import (
 type CreateMemberGroupResponse struct {
 
 	// 本次返回的列表长度
-	Size int32 `json:"size"`
+	Size int32 `json:"size" xml:"size"`
 
 	// 满足条件的记录数
-	Total int64 `json:"total"`
+	Total int64 `json:"total" xml:"total"`
 
 	// VPC通道后端服务器组列表
-	MemberGroups   *[]MemberGroupInfo `json:"member_groups,omitempty"`
+	MemberGroups   *[]MemberGroupInfo `json:"member_groups,omitempty" xml:"member_groups"`
 	HttpStatusCode int                `json:"-"`
 }
 

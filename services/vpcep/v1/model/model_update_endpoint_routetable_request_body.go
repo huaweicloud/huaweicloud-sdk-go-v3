@@ -10,7 +10,7 @@ import (
 type UpdateEndpointRoutetableRequestBody struct {
 
 	// 路由表ID列表。
-	Routetables []string `json:"routetables"`
+	Routetables []string `json:"routetables" xml:"routetables"`
 }
 
 func (o UpdateEndpointRoutetableRequestBody) String() string {

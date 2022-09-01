@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowServerGroupResponse struct {
-	ServerGroup    *ShowServerGroupResult `json:"server_group,omitempty"`
+	ServerGroup    *ShowServerGroupResult `json:"server_group,omitempty" xml:"server_group"`
 	HttpStatusCode int                    `json:"-"`
 }
 

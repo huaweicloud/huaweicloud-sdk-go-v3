@@ -10,9 +10,9 @@ import (
 type ListServerGroupsResponse struct {
 
 	// 弹性云服务器组信息
-	ServerGroups *[]ListServerGroupsResult `json:"server_groups,omitempty"`
+	ServerGroups *[]ListServerGroupsResult `json:"server_groups,omitempty" xml:"server_groups"`
 
-	PageInfo       *ListServerGroupsPageInfoResult `json:"page_info,omitempty"`
+	PageInfo       *ListServerGroupsPageInfoResult `json:"page_info,omitempty" xml:"page_info"`
 	HttpStatusCode int                             `json:"-"`
 }
 

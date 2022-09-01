@@ -10,13 +10,13 @@ import (
 type ListLiveSampleLogsResponse struct {
 
 	// 符合查询条件的总条目数
-	Total *int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty" xml:"total"`
 
 	// 播放域名
-	Domain *string `json:"domain,omitempty"`
+	Domain *string `json:"domain,omitempty" xml:"domain"`
 
 	// 日志信息列表
-	Logs           *[]LogInfo `json:"logs,omitempty"`
+	Logs           *[]LogInfo `json:"logs,omitempty" xml:"logs"`
 	HttpStatusCode int        `json:"-"`
 }
 

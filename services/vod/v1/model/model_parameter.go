@@ -10,7 +10,7 @@ import (
 type Parameter struct {
 
 	// 封装格式。  取值如下： - MP3 - AAC
-	Format *string `json:"format,omitempty"`
+	Format *string `json:"format,omitempty" xml:"format"`
 }
 
 func (o Parameter) String() string {

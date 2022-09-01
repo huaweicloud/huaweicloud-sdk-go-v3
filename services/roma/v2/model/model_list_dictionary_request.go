@@ -10,22 +10,22 @@ import (
 type ListDictionaryRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 偏移量，大于等于0
-	Offset *string `json:"offset,omitempty"`
+	Offset *string `json:"offset,omitempty" xml:"offset"`
 
 	// 每页显示的条目数量
-	Limit *string `json:"limit,omitempty"`
+	Limit *string `json:"limit,omitempty" xml:"limit"`
 
 	// 指定父字典编码，返回子字典列表信息，未指定时查询顶级字典列表信息
-	ParentCode *string `json:"parent_code,omitempty"`
+	ParentCode *string `json:"parent_code,omitempty" xml:"parent_code"`
 
 	// 通过code进行模糊匹配查询
-	Code *string `json:"code,omitempty"`
+	Code *string `json:"code,omitempty" xml:"code"`
 
 	// 通过name进行模糊匹配查询
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 }
 
 func (o ListDictionaryRequest) String() string {

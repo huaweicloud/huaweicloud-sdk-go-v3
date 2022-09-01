@@ -10,9 +10,9 @@ import (
 type UpdateRecordCallbackConfigRequest struct {
 
 	// 配置ID，在创建配置成功后返回
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
-	Body *RecordCallbackConfigRequest `json:"body,omitempty"`
+	Body *RecordCallbackConfigRequest `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateRecordCallbackConfigRequest) String() string {

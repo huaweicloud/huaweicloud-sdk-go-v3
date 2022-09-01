@@ -10,10 +10,10 @@ import (
 type ListWhiteblackipRuleResponse struct {
 
 	// 黑白名单规则条数
-	Total *int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty" xml:"total"`
 
 	// 黑白名单规则列表信息
-	Items          *[]WhiteBlackIpResponseBody `json:"items,omitempty"`
+	Items          *[]WhiteBlackIpResponseBody `json:"items,omitempty" xml:"items"`
 	HttpStatusCode int                         `json:"-"`
 }
 

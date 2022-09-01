@@ -10,7 +10,7 @@ import (
 type ProtectedInstanceDeleteNicRequestBody struct {
 
 	// 网卡Port ID。
-	NicId string `json:"nic_id"`
+	NicId string `json:"nic_id" xml:"nic_id"`
 }
 
 func (o ProtectedInstanceDeleteNicRequestBody) String() string {

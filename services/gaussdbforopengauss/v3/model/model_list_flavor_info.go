@@ -10,10 +10,10 @@ import (
 type ListFlavorInfo struct {
 
 	// cpu核数。
-	Vcpu int32 `json:"vcpu"`
+	Vcpu int32 `json:"vcpu" xml:"vcpu"`
 
 	// 内存大小。
-	Mem int32 `json:"mem"`
+	Mem int32 `json:"mem" xml:"mem"`
 }
 
 func (o ListFlavorInfo) String() string {

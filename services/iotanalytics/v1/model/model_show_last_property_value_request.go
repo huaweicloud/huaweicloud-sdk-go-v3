@@ -10,9 +10,9 @@ import (
 type ShowLastPropertyValueRequest struct {
 
 	// 资产ID
-	AssetId string `json:"asset_id"`
+	AssetId string `json:"asset_id" xml:"asset_id"`
 
-	Body *LastAssetPropertyValueRequest `json:"body,omitempty"`
+	Body *LastAssetPropertyValueRequest `json:"body,omitempty" xml:"body"`
 }
 
 func (o ShowLastPropertyValueRequest) String() string {

@@ -10,13 +10,13 @@ import (
 type ClassificationResult struct {
 
 	// 待分析文本。
-	Content string `json:"content"`
+	Content string `json:"content" xml:"content"`
 
 	// 分类标签。 1：广告 0：非广告
-	Label int32 `json:"label"`
+	Label int32 `json:"label" xml:"label"`
 
 	// 标签label的置信度。
-	Confidence float32 `json:"confidence"`
+	Confidence float32 `json:"confidence" xml:"confidence"`
 }
 
 func (o ClassificationResult) String() string {

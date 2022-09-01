@@ -10,10 +10,10 @@ import (
 type IotdaContentReq struct {
 
 	// IoTDA实例Id
-	IotdaInstanceId string `json:"iotda_instance_id"`
+	IotdaInstanceId string `json:"iotda_instance_id" xml:"iotda_instance_id"`
 
 	// 在IoTDA实例中要配置转发规则推送数据的资源空间和产品列表
-	Rules []IotdaContentRuleReq `json:"rules"`
+	Rules []IotdaContentRuleReq `json:"rules" xml:"rules"`
 }
 
 func (o IotdaContentReq) String() string {

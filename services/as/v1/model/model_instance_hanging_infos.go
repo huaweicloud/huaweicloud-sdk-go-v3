@@ -13,25 +13,25 @@ import (
 type InstanceHangingInfos struct {
 
 	// 生命周期挂钩名称。
-	LifecycleHookName *string `json:"lifecycle_hook_name,omitempty"`
+	LifecycleHookName *string `json:"lifecycle_hook_name,omitempty" xml:"lifecycle_hook_name"`
 
 	// 生命周期操作令牌，用于指定生命周期回调对象。
-	LifecycleActionKey *string `json:"lifecycle_action_key,omitempty"`
+	LifecycleActionKey *string `json:"lifecycle_action_key,omitempty" xml:"lifecycle_action_key"`
 
 	// 伸缩实例ID。
-	InstanceId *string `json:"instance_id,omitempty"`
+	InstanceId *string `json:"instance_id,omitempty" xml:"instance_id"`
 
 	// 伸缩组ID。
-	ScalingGroupId *string `json:"scaling_group_id,omitempty"`
+	ScalingGroupId *string `json:"scaling_group_id,omitempty" xml:"scaling_group_id"`
 
 	// 伸缩实例挂钩的挂起状态。HANGING：挂起。CONTINUE：继续。ABANDON：终止。
-	LifecycleHookStatus *InstanceHangingInfosLifecycleHookStatus `json:"lifecycle_hook_status,omitempty"`
+	LifecycleHookStatus *InstanceHangingInfosLifecycleHookStatus `json:"lifecycle_hook_status,omitempty" xml:"lifecycle_hook_status"`
 
 	// 超时时间，遵循UTC时间，格式为：YYYY-MM-DDThh:mm:ssZZ。
-	Timeout *string `json:"timeout,omitempty"`
+	Timeout *string `json:"timeout,omitempty" xml:"timeout"`
 
 	// 生命周期挂钩默认回调操作。
-	DefaultResult *string `json:"default_result,omitempty"`
+	DefaultResult *string `json:"default_result,omitempty" xml:"default_result"`
 }
 
 func (o InstanceHangingInfos) String() string {

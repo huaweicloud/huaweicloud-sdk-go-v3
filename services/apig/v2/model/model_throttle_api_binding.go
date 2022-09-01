@@ -11,19 +11,19 @@ import (
 type ThrottleApiBinding struct {
 
 	// API的发布记录编号
-	PublishId *string `json:"publish_id,omitempty"`
+	PublishId *string `json:"publish_id,omitempty" xml:"publish_id"`
 
 	// 策略作用域，取值如下： - 1：整个API - 2： 单个用户 - 3：单个APP  目前只支持1
-	Scope *ThrottleApiBindingScope `json:"scope,omitempty"`
+	Scope *ThrottleApiBindingScope `json:"scope,omitempty" xml:"scope"`
 
 	// 流控策略的ID
-	StrategyId *string `json:"strategy_id,omitempty"`
+	StrategyId *string `json:"strategy_id,omitempty" xml:"strategy_id"`
 
 	// 绑定时间
-	ApplyTime *sdktime.SdkTime `json:"apply_time,omitempty"`
+	ApplyTime *sdktime.SdkTime `json:"apply_time,omitempty" xml:"apply_time"`
 
 	// 绑定关系的ID
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 }
 
 func (o ThrottleApiBinding) String() string {

@@ -10,10 +10,10 @@ import (
 type DeleteAppRequest struct {
 
 	// 铂金版实例ID，专业版实例为空值
-	IefInstanceId *string `json:"ief-instance-id,omitempty"`
+	IefInstanceId *string `json:"ief-instance-id,omitempty" xml:"ief-instance-id"`
 
 	// 应用模板ID。
-	AppId string `json:"app_id"`
+	AppId string `json:"app_id" xml:"app_id"`
 }
 
 func (o DeleteAppRequest) String() string {

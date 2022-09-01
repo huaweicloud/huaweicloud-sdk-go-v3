@@ -10,10 +10,10 @@ import (
 type CheckMd5DuplicationResponse struct {
 
 	// 是否重复。  取值如下： - 0：表示不重复。 - 1：表示重复。
-	IsDuplicated *int32 `json:"is_duplicated,omitempty"`
+	IsDuplicated *int32 `json:"is_duplicated,omitempty" xml:"is_duplicated"`
 
 	// 重复的媒资ID
-	AssetIds       *[]string `json:"asset_ids,omitempty"`
+	AssetIds       *[]string `json:"asset_ids,omitempty" xml:"asset_ids"`
 	HttpStatusCode int       `json:"-"`
 }
 

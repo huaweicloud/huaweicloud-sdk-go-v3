@@ -10,16 +10,16 @@ import (
 type LoadBalancerStatusHealthMonitor struct {
 
 	// 协议类型。取值：TCP、UDP_CONNECT或HTTP。
-	Type *string `json:"type,omitempty"`
+	Type *string `json:"type,omitempty" xml:"type"`
 
 	// 健康检查器ID。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 健康检查器名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 健康检查器的配置状态。取值：ACTIVE表示使用中。
-	ProvisioningStatus *string `json:"provisioning_status,omitempty"`
+	ProvisioningStatus *string `json:"provisioning_status,omitempty" xml:"provisioning_status"`
 }
 
 func (o LoadBalancerStatusHealthMonitor) String() string {

@@ -10,19 +10,19 @@ import (
 type StructDetailVo struct {
 
 	// 进度
-	Progress *int32 `json:"progress,omitempty"`
+	Progress *int32 `json:"progress,omitempty" xml:"progress"`
 
 	// 源数据库名称
-	SrcDB *string `json:"src_DB,omitempty"`
+	SrcDB *string `json:"src_DB,omitempty" xml:"src_DB"`
 
 	// 源对象名称
-	SrcTB *string `json:"src_TB,omitempty"`
+	SrcTB *string `json:"src_TB,omitempty" xml:"src_TB"`
 
 	// 目标数据库名称
-	DstDB *string `json:"dst_DB,omitempty"`
+	DstDB *string `json:"dst_DB,omitempty" xml:"dst_DB"`
 
 	// 目标对象名称
-	DstTB *string `json:"dst_TB,omitempty"`
+	DstTB *string `json:"dst_TB,omitempty" xml:"dst_TB"`
 }
 
 func (o StructDetailVo) String() string {

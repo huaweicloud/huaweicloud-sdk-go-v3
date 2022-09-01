@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowProjectInfoV4Response struct {
-	Project        *GetProjectInfoV4ResultProject `json:"project,omitempty"`
+	Project        *GetProjectInfoV4ResultProject `json:"project,omitempty" xml:"project"`
 	HttpStatusCode int                            `json:"-"`
 }
 

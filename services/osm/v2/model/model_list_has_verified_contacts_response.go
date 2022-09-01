@@ -10,10 +10,10 @@ import (
 type ListHasVerifiedContactsResponse struct {
 
 	// 总数
-	Count *int32 `json:"count,omitempty"`
+	Count *int32 `json:"count,omitempty" xml:"count"`
 
 	// 联系方式列表
-	ContactList    *[]ContactV2 `json:"contact_list,omitempty"`
+	ContactList    *[]ContactV2 `json:"contact_list,omitempty" xml:"contact_list"`
 	HttpStatusCode int          `json:"-"`
 }
 

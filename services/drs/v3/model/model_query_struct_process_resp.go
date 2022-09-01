@@ -10,15 +10,15 @@ import (
 type QueryStructProcessResp struct {
 
 	// 任务ID
-	JobId string `json:"job_id"`
+	JobId string `json:"job_id" xml:"job_id"`
 
 	// 错误码
-	ErrorCode *string `json:"error_code,omitempty"`
+	ErrorCode *string `json:"error_code,omitempty" xml:"error_code"`
 
 	// 错误信息
-	ErrorMessage *string `json:"error_message,omitempty"`
+	ErrorMessage *string `json:"error_message,omitempty" xml:"error_message"`
 
-	StructProcess *StructProcessResp `json:"struct_process,omitempty"`
+	StructProcess *StructProcessResp `json:"struct_process,omitempty" xml:"struct_process"`
 }
 
 func (o QueryStructProcessResp) String() string {

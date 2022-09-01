@@ -10,13 +10,13 @@ import (
 type DisassociateRouterResponse struct {
 
 	// Router(VPC)的ID。
-	RouterId *string `json:"router_id,omitempty"`
+	RouterId *string `json:"router_id,omitempty" xml:"router_id"`
 
 	// Router(VPC)所在的region。
-	RouterRegion *string `json:"router_region,omitempty"`
+	RouterRegion *string `json:"router_region,omitempty" xml:"router_region"`
 
 	// 资源状态。
-	Status         *string `json:"status,omitempty"`
+	Status         *string `json:"status,omitempty" xml:"status"`
 	HttpStatusCode int     `json:"-"`
 }
 

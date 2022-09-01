@@ -10,9 +10,9 @@ import (
 type PauseScalingPolicyRequest struct {
 
 	// 伸缩策略ID。
-	ScalingPolicyId string `json:"scaling_policy_id"`
+	ScalingPolicyId string `json:"scaling_policy_id" xml:"scaling_policy_id"`
 
-	Body *PauseScalingPolicyOption `json:"body,omitempty"`
+	Body *PauseScalingPolicyOption `json:"body,omitempty" xml:"body"`
 }
 
 func (o PauseScalingPolicyRequest) String() string {

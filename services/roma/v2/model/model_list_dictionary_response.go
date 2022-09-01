@@ -10,13 +10,13 @@ import (
 type ListDictionaryResponse struct {
 
 	// 总数，与分页无关
-	Total *int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty" xml:"total"`
 
 	// 当前页的数量，小于等于请求里指定的limit
-	Size *int32 `json:"size,omitempty"`
+	Size *int32 `json:"size,omitempty" xml:"size"`
 
 	// 字典列表
-	Dictionaries   *[]Dictionary `json:"dictionaries,omitempty"`
+	Dictionaries   *[]Dictionary `json:"dictionaries,omitempty" xml:"dictionaries"`
 	HttpStatusCode int           `json:"-"`
 }
 

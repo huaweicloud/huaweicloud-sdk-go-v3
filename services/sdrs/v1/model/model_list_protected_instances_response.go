@@ -10,10 +10,10 @@ import (
 type ListProtectedInstancesResponse struct {
 
 	// 保护实例的信息列表。
-	ProtectedInstances *[]ShowProtectedInstanceParams `json:"protected_instances,omitempty"`
+	ProtectedInstances *[]ShowProtectedInstanceParams `json:"protected_instances,omitempty" xml:"protected_instances"`
 
 	// 列表中包含的保护实例个数。
-	Count          *int32 `json:"count,omitempty"`
+	Count          *int32 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

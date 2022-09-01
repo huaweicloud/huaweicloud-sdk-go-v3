@@ -10,10 +10,10 @@ import (
 type WorkitemsDomain struct {
 
 	// 领域id
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 领域
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 }
 
 func (o WorkitemsDomain) String() string {

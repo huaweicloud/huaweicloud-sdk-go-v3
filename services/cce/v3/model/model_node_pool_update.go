@@ -8,9 +8,9 @@ import (
 
 //
 type NodePoolUpdate struct {
-	Metadata *NodePoolMetadataUpdate `json:"metadata"`
+	Metadata *NodePoolMetadataUpdate `json:"metadata" xml:"metadata"`
 
-	Spec *NodePoolSpecUpdate `json:"spec"`
+	Spec *NodePoolSpecUpdate `json:"spec" xml:"spec"`
 }
 
 func (o NodePoolUpdate) String() string {

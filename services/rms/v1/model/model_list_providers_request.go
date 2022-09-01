@@ -13,13 +13,13 @@ import (
 type ListProvidersRequest struct {
 
 	// 分页偏移
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 最大的返回数量
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 选择接口返回的信息的语言，默认为\"zh-cn\"中文
-	XLanguage *ListProvidersRequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *ListProvidersRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 }
 
 func (o ListProvidersRequest) String() string {

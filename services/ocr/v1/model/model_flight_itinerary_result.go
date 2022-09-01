@@ -10,61 +10,61 @@ import (
 type FlightItineraryResult struct {
 
 	// 印刷序号。
-	SerialNumber *string `json:"serial_number,omitempty"`
+	SerialNumber *string `json:"serial_number,omitempty" xml:"serial_number"`
 
 	// 旅客姓名。
-	PassengerName *string `json:"passenger_name,omitempty"`
+	PassengerName *string `json:"passenger_name,omitempty" xml:"passenger_name"`
 
 	// 有效身份证件号码。
-	IdNumber *string `json:"id_number,omitempty"`
+	IdNumber *string `json:"id_number,omitempty" xml:"id_number"`
 
 	// 备注。
-	EndorsementsRestrictions *string `json:"endorsements_restrictions,omitempty"`
+	EndorsementsRestrictions *string `json:"endorsements_restrictions,omitempty" xml:"endorsements_restrictions"`
 
 	// 订单号。
-	OrderNumber *string `json:"order_number,omitempty"`
+	OrderNumber *string `json:"order_number,omitempty" xml:"order_number"`
 
 	// 票价。
-	Fare *string `json:"fare,omitempty"`
+	Fare *string `json:"fare,omitempty" xml:"fare"`
 
 	// 民航（CAAC)发展基金。
-	CaacDevelopmentFund *string `json:"caac_development_fund,omitempty"`
+	CaacDevelopmentFund *string `json:"caac_development_fund,omitempty" xml:"caac_development_fund"`
 
 	// 燃油附加费。
-	FuelSurcharge *string `json:"fuel_surcharge,omitempty"`
+	FuelSurcharge *string `json:"fuel_surcharge,omitempty" xml:"fuel_surcharge"`
 
 	// 其他税费。
-	OtherTaxes *string `json:"other_taxes,omitempty"`
+	OtherTaxes *string `json:"other_taxes,omitempty" xml:"other_taxes"`
 
 	// 合计。
-	Total *string `json:"total,omitempty"`
+	Total *string `json:"total,omitempty" xml:"total"`
 
 	// 电子客票号码。
-	ETicketNumber *string `json:"e_ticket_number,omitempty"`
+	ETicketNumber *string `json:"e_ticket_number,omitempty" xml:"e_ticket_number"`
 
 	// 验证码。
-	CheckCode *string `json:"check_code,omitempty"`
+	CheckCode *string `json:"check_code,omitempty" xml:"check_code"`
 
 	// 提示信息。
-	ReferenceInformation *string `json:"reference_information,omitempty"`
+	ReferenceInformation *string `json:"reference_information,omitempty" xml:"reference_information"`
 
 	// 保险费。
-	Insurance *string `json:"insurance,omitempty"`
+	Insurance *string `json:"insurance,omitempty" xml:"insurance"`
 
 	// 销售单位代号。
-	AgentCode *string `json:"agent_code,omitempty"`
+	AgentCode *string `json:"agent_code,omitempty" xml:"agent_code"`
 
 	// 填开单位。
-	IssueOrganization *string `json:"issue_organization,omitempty"`
+	IssueOrganization *string `json:"issue_organization,omitempty" xml:"issue_organization"`
 
 	// 填开日期。
-	IssueDate *string `json:"issue_date,omitempty"`
+	IssueDate *string `json:"issue_date,omitempty" xml:"issue_date"`
 
 	// 机票行程列表。
-	ItineraryList *[]ItineraryList `json:"itinerary_list,omitempty"`
+	ItineraryList *[]ItineraryList `json:"itinerary_list,omitempty" xml:"itinerary_list"`
 
 	// 相关字段的置信度信息，取值范围0~1。  置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。  置信度由算法给出，不直接等价于对应字段的准确率。  > 说明：  - （1）置信度中的相关字段均与返回值中的相关字段一一对应；  - （2）置信度中的itinerary_list的顺序与返回值中的itinerary_list的顺序是一致的。
-	Confidence *interface{} `json:"confidence,omitempty"`
+	Confidence *interface{} `json:"confidence,omitempty" xml:"confidence"`
 }
 
 func (o FlightItineraryResult) String() string {

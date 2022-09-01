@@ -8,12 +8,12 @@ import (
 
 // Response Object
 type ListHooksResponse struct {
-	Error *Error `json:"error,omitempty"`
+	Error *Error `json:"error,omitempty" xml:"error"`
 
-	Result *RepoListHook `json:"result,omitempty"`
+	Result *RepoListHook `json:"result,omitempty" xml:"result"`
 
 	// 响应状态
-	Status         *string `json:"status,omitempty"`
+	Status         *string `json:"status,omitempty" xml:"status"`
 	HttpStatusCode int     `json:"-"`
 }
 

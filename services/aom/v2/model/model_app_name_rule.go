@@ -10,13 +10,13 @@ import (
 type AppNameRule struct {
 
 	// 取值类型。 从cmdLineHash、cmdLine、env、str里面选取。
-	NameType string `json:"nameType"`
+	NameType string `json:"nameType" xml:"nameType"`
 
 	// 输入值。
-	Args []string `json:"args"`
+	Args []string `json:"args" xml:"args"`
 
 	// 服务名(仅nameType为cmdLineHash时填写)。
-	Value *[]string `json:"value,omitempty"`
+	Value *[]string `json:"value,omitempty" xml:"value"`
 }
 
 func (o AppNameRule) String() string {

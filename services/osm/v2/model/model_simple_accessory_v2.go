@@ -9,10 +9,10 @@ import (
 type SimpleAccessoryV2 struct {
 
 	// 附件id
-	AccessoryId *string `json:"accessory_id,omitempty"`
+	AccessoryId *string `json:"accessory_id,omitempty" xml:"accessory_id"`
 
 	// 附件实际名称
-	FileActualName *string `json:"file_actual_name,omitempty"`
+	FileActualName *string `json:"file_actual_name,omitempty" xml:"file_actual_name"`
 }
 
 func (o SimpleAccessoryV2) String() string {

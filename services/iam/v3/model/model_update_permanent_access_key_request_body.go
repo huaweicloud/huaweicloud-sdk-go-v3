@@ -8,7 +8,7 @@ import (
 
 //
 type UpdatePermanentAccessKeyRequestBody struct {
-	Credential *UpdateCredentialOption `json:"credential"`
+	Credential *UpdateCredentialOption `json:"credential" xml:"credential"`
 }
 
 func (o UpdatePermanentAccessKeyRequestBody) String() string {

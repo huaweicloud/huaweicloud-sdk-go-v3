@@ -10,10 +10,10 @@ import (
 type RegisterCompetitionInfoResponse struct {
 
 	// 是否允许提交作品，true-允许，false-不允许
-	IsPermitted *bool `json:"is_permitted,omitempty"`
+	IsPermitted *bool `json:"is_permitted,omitempty" xml:"is_permitted"`
 
 	// 团队ID
-	TeamId         *string `json:"team_id,omitempty"`
+	TeamId         *string `json:"team_id,omitempty" xml:"team_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -10,7 +10,7 @@ import (
 type DeleteMultiTaskMappingResponse struct {
 
 	// 映射唯一ID
-	MappingId      *string `json:"mapping_id,omitempty"`
+	MappingId      *string `json:"mapping_id,omitempty" xml:"mapping_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

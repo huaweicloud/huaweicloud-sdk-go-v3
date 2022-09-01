@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowSingleJobExeResponse struct {
-	JobDetail      *JobQueryBean `json:"job_detail,omitempty"`
+	JobDetail      *JobQueryBean `json:"job_detail,omitempty" xml:"job_detail"`
 	HttpStatusCode int           `json:"-"`
 }
 

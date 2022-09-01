@@ -9,10 +9,10 @@ import (
 type AddressAndPorts struct {
 
 	// IP地址或域名。
-	Address string `json:"address"`
+	Address string `json:"address" xml:"address"`
 
 	// 端口号。
-	Port *int32 `json:"port,omitempty"`
+	Port *int32 `json:"port,omitempty" xml:"port"`
 }
 
 func (o AddressAndPorts) String() string {

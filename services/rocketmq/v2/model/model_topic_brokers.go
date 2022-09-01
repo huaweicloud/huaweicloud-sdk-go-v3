@@ -9,13 +9,13 @@ import (
 type TopicBrokers struct {
 
 	// 代理名称。
-	BrokerName *string `json:"broker_name,omitempty"`
+	BrokerName *string `json:"broker_name,omitempty" xml:"broker_name"`
 
 	// 读队列个数。
-	ReadQueueNum float32 `json:"read_queue_num,omitempty"`
+	ReadQueueNum float32 `json:"read_queue_num,omitempty" xml:"read_queue_num"`
 
 	// 写队列个数。
-	WriteQueueNum float32 `json:"write_queue_num,omitempty"`
+	WriteQueueNum float32 `json:"write_queue_num,omitempty" xml:"write_queue_num"`
 }
 
 func (o TopicBrokers) String() string {

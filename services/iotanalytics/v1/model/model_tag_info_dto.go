@@ -10,13 +10,13 @@ import (
 type TagInfoDto struct {
 
 	// 算子Id
-	OperatorId *string `json:"operator_id,omitempty"`
+	OperatorId *string `json:"operator_id,omitempty" xml:"operator_id"`
 
 	// 存储ID
-	DataStoreId *string `json:"data_store_id,omitempty"`
+	DataStoreId *string `json:"data_store_id,omitempty" xml:"data_store_id"`
 
 	// 标签信息
-	Tag *string `json:"tag,omitempty"`
+	Tag *string `json:"tag,omitempty" xml:"tag"`
 }
 
 func (o TagInfoDto) String() string {

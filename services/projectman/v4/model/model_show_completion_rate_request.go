@@ -10,9 +10,9 @@ import (
 type ShowCompletionRateRequest struct {
 
 	// devcloud项目的32位id
-	ProjectId string `json:"project_id"`
+	ProjectId string `json:"project_id" xml:"project_id"`
 
-	Body *MetricRequest3 `json:"body,omitempty"`
+	Body *MetricRequest3 `json:"body,omitempty" xml:"body"`
 }
 
 func (o ShowCompletionRateRequest) String() string {

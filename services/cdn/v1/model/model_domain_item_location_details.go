@@ -9,16 +9,16 @@ import (
 type DomainItemLocationDetails struct {
 
 	// 数据起始时间戳，可能与请求时间不一致
-	StartTime *int64 `json:"start_time,omitempty"`
+	StartTime *int64 `json:"start_time,omitempty" xml:"start_time"`
 
 	// 数据结束时间戳，可能与请求时间不一致
-	EndTime *int64 `json:"end_time,omitempty"`
+	EndTime *int64 `json:"end_time,omitempty" xml:"end_time"`
 
 	// 指标类型
-	StatType *string `json:"stat_type,omitempty"`
+	StatType *string `json:"stat_type,omitempty" xml:"stat_type"`
 
 	// 域名详情数据列表
-	Domains *[]DomainRegion `json:"domains,omitempty"`
+	Domains *[]DomainRegion `json:"domains,omitempty" xml:"domains"`
 }
 
 func (o DomainItemLocationDetails) String() string {

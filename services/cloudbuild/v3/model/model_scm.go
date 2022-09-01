@@ -10,10 +10,10 @@ import (
 type Scm struct {
 
 	// 代码Tag
-	BuildTag *string `json:"build_tag,omitempty"`
+	BuildTag *string `json:"build_tag,omitempty" xml:"build_tag"`
 
 	// 代码提交ID
-	BuildCommitId *string `json:"build_commit_id,omitempty"`
+	BuildCommitId *string `json:"build_commit_id,omitempty" xml:"build_commit_id"`
 }
 
 func (o Scm) String() string {

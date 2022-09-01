@@ -9,13 +9,13 @@ import (
 type StreamDetail struct {
 
 	// 采样开始时间。日期格式按照ISO8601表示法，并使用UTC时间。 格式为：YYYY-MM-DDThh:mm:ssZ。
-	StartTime string `json:"start_time"`
+	StartTime string `json:"start_time" xml:"start_time"`
 
 	// 采样结束时间。日期格式按照ISO8601表示法，并使用UTC时间。 格式为：YYYY-MM-DDThh:mm:ssZ。
-	EndTime string `json:"end_time"`
+	EndTime string `json:"end_time" xml:"end_time"`
 
 	// 流监控数据列表。
-	DataList []int64 `json:"data_list"`
+	DataList []int64 `json:"data_list" xml:"data_list"`
 }
 
 func (o StreamDetail) String() string {

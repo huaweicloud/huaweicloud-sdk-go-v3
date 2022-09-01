@@ -9,14 +9,14 @@ import (
 type VirtualSpace struct {
 
 	// virtualSpace的名称，当前仅支持三种类型：kubernetes、runtime、user。kubernetes：k8s空间配置，需配置lvmConfig；runtime：运行时空间配置，需配置runtimeConfig；user：用户空间配置，需配置lvmConfig
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// virtualSpace的大小，仅支持整数百分比。例如：90%。 需要注意：一个group中所有virtualSpace的百分比之和不得超过100%
-	Size string `json:"size"`
+	Size string `json:"size" xml:"size"`
 
-	LvmConfig *LvmConfig `json:"lvmConfig,omitempty"`
+	LvmConfig *LvmConfig `json:"lvmConfig,omitempty" xml:"lvmConfig"`
 
-	RuntimeConfig *RuntimeConfig `json:"runtimeConfig,omitempty"`
+	RuntimeConfig *RuntimeConfig `json:"runtimeConfig,omitempty" xml:"runtimeConfig"`
 }
 
 func (o VirtualSpace) String() string {

@@ -13,25 +13,25 @@ import (
 type NodeExecution struct {
 
 	// 流程节点执行状态
-	Status *NodeExecutionStatus `json:"status,omitempty"`
+	Status *NodeExecutionStatus `json:"status,omitempty" xml:"status"`
 
 	// 函数执行时的入参
-	Input *interface{} `json:"input,omitempty"`
+	Input *interface{} `json:"input,omitempty" xml:"input"`
 
 	// 函数执行结果
-	Output *interface{} `json:"output,omitempty"`
+	Output *interface{} `json:"output,omitempty" xml:"output"`
 
 	// 节点启动时间，UTC毫秒时间戳格式
-	BeginTime *int64 `json:"begin_time,omitempty"`
+	BeginTime *int64 `json:"begin_time,omitempty" xml:"begin_time"`
 
 	// 节点结束时间，UTC毫秒时间戳格式
-	EndTime *int64 `json:"end_time,omitempty"`
+	EndTime *int64 `json:"end_time,omitempty" xml:"end_time"`
 
 	// 节点错误信息，仅在节点出错时非空
-	ErrorMessage *interface{} `json:"error_message,omitempty"`
+	ErrorMessage *interface{} `json:"error_message,omitempty" xml:"error_message"`
 
 	// 流程节点请求ID
-	RequestId *string `json:"request_id,omitempty"`
+	RequestId *string `json:"request_id,omitempty" xml:"request_id"`
 }
 
 func (o NodeExecution) String() string {

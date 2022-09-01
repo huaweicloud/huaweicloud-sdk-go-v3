@@ -9,16 +9,16 @@ import (
 type ModifyTransTemplateReq struct {
 
 	// 转码模板ID
-	TemplateId int64 `json:"template_id"`
+	TemplateId int64 `json:"template_id" xml:"template_id"`
 
 	// 转码模板名称。
-	TemplateName string `json:"template_name"`
+	TemplateName string `json:"template_name" xml:"template_name"`
 
-	Video *Video `json:"video,omitempty"`
+	Video *Video `json:"video,omitempty" xml:"video"`
 
-	Audio *Audio `json:"audio,omitempty"`
+	Audio *Audio `json:"audio,omitempty" xml:"audio"`
 
-	Common *Common `json:"common"`
+	Common *Common `json:"common" xml:"common"`
 }
 
 func (o ModifyTransTemplateReq) String() string {

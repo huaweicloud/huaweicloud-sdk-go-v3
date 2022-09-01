@@ -10,10 +10,10 @@ import (
 type FailReason struct {
 
 	// 错误码
-	FailCode *string `json:"fail_code,omitempty"`
+	FailCode *string `json:"fail_code,omitempty" xml:"fail_code"`
 
 	// 边缘云失败原因列表。包含所边缘云的失败原因。
-	FailMessage *string `json:"fail_message,omitempty"`
+	FailMessage *string `json:"fail_message,omitempty" xml:"fail_message"`
 }
 
 func (o FailReason) String() string {

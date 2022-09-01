@@ -10,13 +10,13 @@ import (
 type ListBandwidthsRequest struct {
 
 	// 查询的数目，取值范围：0~1000。
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 查询的偏移量。
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 边缘站点ID。
-	SiteId *string `json:"site_id,omitempty"`
+	SiteId *string `json:"site_id,omitempty" xml:"site_id"`
 }
 
 func (o ListBandwidthsRequest) String() string {

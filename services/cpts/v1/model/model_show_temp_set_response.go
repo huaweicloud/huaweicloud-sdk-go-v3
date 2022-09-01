@@ -10,13 +10,13 @@ import (
 type ShowTempSetResponse struct {
 
 	// code
-	Code *string `json:"code,omitempty"`
+	Code *string `json:"code,omitempty" xml:"code"`
 
 	// message
-	Message *string `json:"message,omitempty"`
+	Message *string `json:"message,omitempty" xml:"message"`
 
 	// temps
-	Temps          *[]TempDetailInfo `json:"temps,omitempty"`
+	Temps          *[]TempDetailInfo `json:"temps,omitempty" xml:"temps"`
 	HttpStatusCode int               `json:"-"`
 }
 

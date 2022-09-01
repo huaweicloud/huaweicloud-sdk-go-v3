@@ -10,22 +10,22 @@ import (
 type ExtendDDoSSet struct {
 
 	// 配置分段ID
-	SetID int64 `json:"SetID"`
+	SetID int64 `json:"SetID" xml:"SetID"`
 
 	// 单一源IP新建连接个数
-	NewConnectionLimited int64 `json:"new_connection_limited"`
+	NewConnectionLimited int64 `json:"new_connection_limited" xml:"new_connection_limited"`
 
 	// 单一源IP连接数总个数
-	TotalConnectionLimited int64 `json:"total_connection_limited"`
+	TotalConnectionLimited int64 `json:"total_connection_limited" xml:"total_connection_limited"`
 
 	// 每秒HTTP请求数（个/s）阈值
-	HttpPacketPerSecond int64 `json:"http_packet_per_second"`
+	HttpPacketPerSecond int64 `json:"http_packet_per_second" xml:"http_packet_per_second"`
 
 	// 每秒流量（Mbit/s）阈值
-	TrafficPerSecond int64 `json:"traffic_per_second"`
+	TrafficPerSecond int64 `json:"traffic_per_second" xml:"traffic_per_second"`
 
 	// 每秒报文数（个/s）阈值
-	PacketPerSecond int64 `json:"packet_per_second"`
+	PacketPerSecond int64 `json:"packet_per_second" xml:"packet_per_second"`
 }
 
 func (o ExtendDDoSSet) String() string {

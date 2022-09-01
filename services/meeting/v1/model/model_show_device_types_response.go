@@ -10,7 +10,7 @@ import (
 type ShowDeviceTypesResponse struct {
 
 	// 查询到的终端类型列表
-	Body           *[]QueryDeviceTypeResultDto `json:"body,omitempty"`
+	Body           *[]QueryDeviceTypeResultDto `json:"body,omitempty" xml:"body"`
 	HttpStatusCode int                         `json:"-"`
 }
 

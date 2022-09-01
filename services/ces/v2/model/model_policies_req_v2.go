@@ -9,7 +9,7 @@ import (
 type PoliciesReqV2 struct {
 
 	// 策略信息
-	Policies []Policy `json:"policies"`
+	Policies []Policy `json:"policies" xml:"policies"`
 }
 
 func (o PoliciesReqV2) String() string {

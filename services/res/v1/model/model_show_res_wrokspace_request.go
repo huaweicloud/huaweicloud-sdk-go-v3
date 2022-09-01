@@ -10,7 +10,7 @@ import (
 type ShowResWrokspaceRequest struct {
 
 	// 工作空间id。
-	WorkspaceId string `json:"workspace_id"`
+	WorkspaceId string `json:"workspace_id" xml:"workspace_id"`
 }
 
 func (o ShowResWrokspaceRequest) String() string {

@@ -10,7 +10,7 @@ import (
 type MigrateVaultResourceResponse struct {
 
 	//
-	MigratedResources *[]string `json:"migrated_resources,omitempty"`
+	MigratedResources *[]string `json:"migrated_resources,omitempty" xml:"migrated_resources"`
 	HttpStatusCode    int       `json:"-"`
 }
 

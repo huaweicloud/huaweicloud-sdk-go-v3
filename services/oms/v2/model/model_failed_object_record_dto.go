@@ -10,13 +10,13 @@ import (
 type FailedObjectRecordDto struct {
 
 	// 是否支持失败对象重传。
-	Result *bool `json:"result,omitempty"`
+	Result *bool `json:"result,omitempty" xml:"result"`
 
 	// 失败对象列表文件路径。
-	ListFileKey *string `json:"list_file_key,omitempty"`
+	ListFileKey *string `json:"list_file_key,omitempty" xml:"list_file_key"`
 
 	// 失败对象列表上传失败的错误码。
-	ErrorCode *string `json:"error_code,omitempty"`
+	ErrorCode *string `json:"error_code,omitempty" xml:"error_code"`
 }
 
 func (o FailedObjectRecordDto) String() string {

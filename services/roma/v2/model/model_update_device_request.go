@@ -10,12 +10,12 @@ import (
 type UpdateDeviceRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 设备ID
-	DeviceId int32 `json:"device_id"`
+	DeviceId int32 `json:"device_id" xml:"device_id"`
 
-	Body *UpdateDeviceRequestBody `json:"body,omitempty"`
+	Body *UpdateDeviceRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateDeviceRequest) String() string {

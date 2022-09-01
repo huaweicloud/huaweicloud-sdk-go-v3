@@ -13,46 +13,46 @@ import (
 type NeutronFirewallRule struct {
 
 	// 功能说明：网络ACL规则的uuid标识。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 功能说明：网络ACL规则名称。 取值范围：0-255个字符
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 功能说明：网络ACL规则描述 取值范围：0-255个字符长度
-	Description string `json:"description"`
+	Description string `json:"description" xml:"description"`
 
 	// 功能说明：对通过网络ACL的流量执行的操作。 取值范围：DENY（拒绝）/ALLOW（允许）
-	Action NeutronFirewallRuleAction `json:"action"`
+	Action NeutronFirewallRuleAction `json:"action" xml:"action"`
 
 	// 功能说明：IP协议 取值范围：支持TCP,UDP,ICMP, ICMPV6或者IP协议号（0-255）
-	Protocol string `json:"protocol"`
+	Protocol string `json:"protocol" xml:"protocol"`
 
 	// 功能说明：IP协议版本 取值范围：Ipv4/Ipv6
-	IpVersion int32 `json:"ip_version"`
+	IpVersion int32 `json:"ip_version" xml:"ip_version"`
 
 	// 功能说明：是否使能网络ACL规则。 取值范围：true/false
-	Enabled bool `json:"enabled"`
+	Enabled bool `json:"enabled" xml:"enabled"`
 
 	// 功能说明：是否支持跨租户共享 取值范围：true/false
-	Public bool `json:"public"`
+	Public bool `json:"public" xml:"public"`
 
 	// 功能说明：目的地址或者CIDR。
-	DestinationIpAddress string `json:"destination_ip_address"`
+	DestinationIpAddress string `json:"destination_ip_address" xml:"destination_ip_address"`
 
 	// 功能说明：目的端口号或者一段端口范围。
-	DestinationPort string `json:"destination_port"`
+	DestinationPort string `json:"destination_port" xml:"destination_port"`
 
 	// 功能说明：源地址或者CIDR。
-	SourceIpAddress string `json:"source_ip_address"`
+	SourceIpAddress string `json:"source_ip_address" xml:"source_ip_address"`
 
 	// 功能说明：源端口号或者一段端口范围。
-	SourcePort string `json:"source_port"`
+	SourcePort string `json:"source_port" xml:"source_port"`
 
 	// 功能说明：项目ID
-	TenantId string `json:"tenant_id"`
+	TenantId string `json:"tenant_id" xml:"tenant_id"`
 
 	// 功能说明：项目ID
-	ProjectId string `json:"project_id"`
+	ProjectId string `json:"project_id" xml:"project_id"`
 }
 
 func (o NeutronFirewallRule) String() string {

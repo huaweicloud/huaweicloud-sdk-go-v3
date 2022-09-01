@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowListenerResponse struct {
-	Listener       *ListenerResp `json:"listener,omitempty"`
+	Listener       *ListenerResp `json:"listener,omitempty" xml:"listener"`
 	HttpStatusCode int           `json:"-"`
 }
 

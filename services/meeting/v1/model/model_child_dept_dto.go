@@ -10,13 +10,13 @@ import (
 type ChildDeptDto struct {
 
 	// 部门编码
-	DeptCode *string `json:"deptCode,omitempty"`
+	DeptCode *string `json:"deptCode,omitempty" xml:"deptCode"`
 
 	// 部门名称
-	DeptName *string `json:"deptName,omitempty"`
+	DeptName *string `json:"deptName,omitempty" xml:"deptName"`
 
 	// 是否为叶子节点（没有子部门的称为叶子节点）
-	IsLeafNodes *bool `json:"isLeafNodes,omitempty"`
+	IsLeafNodes *bool `json:"isLeafNodes,omitempty" xml:"isLeafNodes"`
 }
 
 func (o ChildDeptDto) String() string {

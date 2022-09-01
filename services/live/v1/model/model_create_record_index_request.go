@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateRecordIndexRequest struct {
-	Body *RecordIndexRequestBody `json:"body,omitempty"`
+	Body *RecordIndexRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateRecordIndexRequest) String() string {

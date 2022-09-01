@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateParametersForImportRequest struct {
-	Body *GetParametersForImportRequestBody `json:"body,omitempty"`
+	Body *GetParametersForImportRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateParametersForImportRequest) String() string {

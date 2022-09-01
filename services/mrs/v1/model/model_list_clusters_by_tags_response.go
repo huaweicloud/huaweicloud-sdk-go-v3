@@ -10,10 +10,10 @@ import (
 type ListClustersByTagsResponse struct {
 
 	// 资源列表
-	Resources *[]MrsResource `json:"resources,omitempty"`
+	Resources *[]MrsResource `json:"resources,omitempty" xml:"resources"`
 
 	// 资源总数
-	TotalCount     *int32 `json:"total_count,omitempty"`
+	TotalCount     *int32 `json:"total_count,omitempty" xml:"total_count"`
 	HttpStatusCode int    `json:"-"`
 }
 

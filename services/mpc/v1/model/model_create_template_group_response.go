@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type CreateTemplateGroupResponse struct {
-	TemplateGroup  *TemplateGroup `json:"template_group,omitempty"`
+	TemplateGroup  *TemplateGroup `json:"template_group,omitempty" xml:"template_group"`
 	HttpStatusCode int            `json:"-"`
 }
 

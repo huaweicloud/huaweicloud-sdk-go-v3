@@ -10,10 +10,10 @@ import (
 type ListHistorySessionsResponse struct {
 
 	// 总记录数
-	TotalCount *int32 `json:"total_count,omitempty"`
+	TotalCount *int32 `json:"total_count,omitempty" xml:"total_count"`
 
 	// 会话列表
-	SessionList    *[]OperateHistorySession `json:"session_list,omitempty"`
+	SessionList    *[]OperateHistorySession `json:"session_list,omitempty" xml:"session_list"`
 	HttpStatusCode int                      `json:"-"`
 }
 

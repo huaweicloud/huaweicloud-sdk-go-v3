@@ -9,10 +9,10 @@ import (
 type FinancialStatementResultImageSize struct {
 
 	// 矫正后图像的高。
-	Height *int32 `json:"height,omitempty"`
+	Height *int32 `json:"height,omitempty" xml:"height"`
 
 	// 矫正后图像的宽。
-	Width *int32 `json:"width,omitempty"`
+	Width *int32 `json:"width,omitempty" xml:"width"`
 }
 
 func (o FinancialStatementResultImageSize) String() string {

@@ -10,7 +10,7 @@ import (
 type DeleteAssetModelRequest struct {
 
 	// 模型ID
-	ModelId string `json:"model_id"`
+	ModelId string `json:"model_id" xml:"model_id"`
 }
 
 func (o DeleteAssetModelRequest) String() string {

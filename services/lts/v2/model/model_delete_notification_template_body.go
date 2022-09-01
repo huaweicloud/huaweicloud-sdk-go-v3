@@ -10,7 +10,7 @@ import (
 type DeleteNotificationTemplateBody struct {
 
 	// 待删除模板名称数组
-	TemplateNames []string `json:"template_names"`
+	TemplateNames []string `json:"template_names" xml:"template_names"`
 }
 
 func (o DeleteNotificationTemplateBody) String() string {

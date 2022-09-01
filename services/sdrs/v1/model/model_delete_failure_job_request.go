@@ -10,7 +10,7 @@ import (
 type DeleteFailureJobRequest struct {
 
 	// 失败任务ID。
-	FailureJobId string `json:"failure_job_id"`
+	FailureJobId string `json:"failure_job_id" xml:"failure_job_id"`
 }
 
 func (o DeleteFailureJobRequest) String() string {

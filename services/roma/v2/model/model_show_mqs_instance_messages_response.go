@@ -10,13 +10,13 @@ import (
 type ShowMqsInstanceMessagesResponse struct {
 
 	// 消息列表。
-	Messages *[]ShowMqsInstanceMessagesRespMessages `json:"messages,omitempty"`
+	Messages *[]ShowMqsInstanceMessagesRespMessages `json:"messages,omitempty" xml:"messages"`
 
 	// 消息总数。
-	Total float32 `json:"total,omitempty"`
+	Total float32 `json:"total,omitempty" xml:"total"`
 
 	// 返回总条数。
-	Size           float32 `json:"size,omitempty"`
+	Size           float32 `json:"size,omitempty" xml:"size"`
 	HttpStatusCode int     `json:"-"`
 }
 

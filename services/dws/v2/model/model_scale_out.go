@@ -10,7 +10,7 @@ import (
 type ScaleOut struct {
 
 	// 扩容节点数。
-	Count int32 `json:"count"`
+	Count int32 `json:"count" xml:"count"`
 }
 
 func (o ScaleOut) String() string {

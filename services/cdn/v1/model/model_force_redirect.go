@@ -9,10 +9,10 @@ import (
 type ForceRedirect struct {
 
 	// 强制跳转开关。1打开。0关闭。
-	Switch int32 `json:"switch"`
+	Switch int32 `json:"switch" xml:"switch"`
 
 	// 强制跳转类型。http：强制跳转HTTP。https：强制跳转HTTPS。
-	RedirectType *string `json:"redirect_type,omitempty"`
+	RedirectType *string `json:"redirect_type,omitempty" xml:"redirect_type"`
 }
 
 func (o ForceRedirect) String() string {

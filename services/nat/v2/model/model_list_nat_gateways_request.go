@@ -13,37 +13,37 @@ import (
 type ListNatGatewaysRequest struct {
 
 	// 公网NAT网关实例的ID。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 企业项目ID。创建公网NAT网关实例时，关联的企业项目ID。
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
 
 	// 公网NAT网关实例的描述，长度限制为255。
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 公网NAT网关实例的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
-	CreatedAt *string `json:"created_at,omitempty"`
+	CreatedAt *string `json:"created_at,omitempty" xml:"created_at"`
 
 	// 公网NAT网关实例的名字，长度限制为64。 公网NAT网关实例的名字仅支持数字、字母、_（下划线）、-（中划线）、中文
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 公网NAT网关实例的状态。
-	Status *[]ListNatGatewaysRequestStatus `json:"status,omitempty"`
+	Status *[]ListNatGatewaysRequestStatus `json:"status,omitempty" xml:"status"`
 
 	// 公网NAT网关实例的规格。 取值为： \"1\"：小型，SNAT最大连接数10000 \"2\"：中型，SNAT最大连接数50000 \"3\"：大型，SNAT最大连接数200000 \"4\"：超大型，SNAT最大连接数1000000
-	Spec *[]ListNatGatewaysRequestSpec `json:"spec,omitempty"`
+	Spec *[]ListNatGatewaysRequestSpec `json:"spec,omitempty" xml:"spec"`
 
 	// 解冻/冻结状态。 取值范围： \"true\"：解冻 \"false\"：冻结
-	AdminStateUp *bool `json:"admin_state_up,omitempty"`
+	AdminStateUp *bool `json:"admin_state_up,omitempty" xml:"admin_state_up"`
 
 	// 公网NAT网关下行口（DVR的下一跳）所属的network id。
-	InternalNetworkId *string `json:"internal_network_id,omitempty"`
+	InternalNetworkId *string `json:"internal_network_id,omitempty" xml:"internal_network_id"`
 
 	// VPC的id。
-	RouterId *string `json:"router_id,omitempty"`
+	RouterId *string `json:"router_id,omitempty" xml:"router_id"`
 
 	// 功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 }
 
 func (o ListNatGatewaysRequest) String() string {

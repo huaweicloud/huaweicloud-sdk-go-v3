@@ -10,23 +10,23 @@ import (
 type RunAudioAssessmentResponse struct {
 
 	// 综合评分，0-100
-	Score *float32 `json:"score,omitempty"`
+	Score *float32 `json:"score,omitempty" xml:"score"`
 
 	// 完整性评分，0-100 表示有多少比例的单词发音是清楚的
-	Completeness *float32 `json:"completeness,omitempty"`
+	Completeness *float32 `json:"completeness,omitempty" xml:"completeness"`
 
 	// 音频/视频时长，单位秒
-	Duration *float32 `json:"duration,omitempty"`
+	Duration *float32 `json:"duration,omitempty" xml:"duration"`
 
-	Pronunciation *Pronunciation `json:"pronunciation,omitempty"`
+	Pronunciation *Pronunciation `json:"pronunciation,omitempty" xml:"pronunciation"`
 
-	Fluency *Fluency `json:"fluency,omitempty"`
+	Fluency *Fluency `json:"fluency,omitempty" xml:"fluency"`
 
 	// 单词评测打分表
-	Words *[]Word `json:"words,omitempty"`
+	Words *[]Word `json:"words,omitempty" xml:"words"`
 
 	// 评测失败时定位问题使用的字段
-	TraceId        *string `json:"traceId,omitempty"`
+	TraceId        *string `json:"traceId,omitempty" xml:"traceId"`
 	HttpStatusCode int     `json:"-"`
 }
 

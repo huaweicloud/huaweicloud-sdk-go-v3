@@ -13,22 +13,22 @@ import (
 type TargetDisk struct {
 
 	// 判断是普通分区，启动分区还是系统分区
-	DeviceUse *TargetDiskDeviceUse `json:"device_use,omitempty"`
+	DeviceUse *TargetDiskDeviceUse `json:"device_use,omitempty" xml:"device_use"`
 
 	// 磁盘id
-	DiskId *string `json:"disk_id,omitempty"`
+	DiskId *string `json:"disk_id,omitempty" xml:"disk_id"`
 
 	// 磁盘名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 逻辑卷信息
-	PhysicalVolumes *[]TargetPhysicalVolumes `json:"physical_volumes,omitempty"`
+	PhysicalVolumes *[]TargetPhysicalVolumes `json:"physical_volumes,omitempty" xml:"physical_volumes"`
 
 	// 大小
-	Size *int64 `json:"size,omitempty"`
+	Size *int64 `json:"size,omitempty" xml:"size"`
 
 	// 已使用大小
-	UsedSize *int64 `json:"used_size,omitempty"`
+	UsedSize *int64 `json:"used_size,omitempty" xml:"used_size"`
 }
 
 func (o TargetDisk) String() string {

@@ -13,13 +13,13 @@ import (
 type BatchJobActionReq struct {
 
 	// 执行操作
-	Action BatchJobActionReqAction `json:"action"`
+	Action BatchJobActionReqAction `json:"action" xml:"action"`
 
 	// 任务ID（集群模式 取父任务的任务id）
-	JobId string `json:"job_id"`
+	JobId string `json:"job_id" xml:"job_id"`
 
 	// 操作对应的参数（API参考文档-批量测试连接-集群模式-property字段数据结构说明）[字段说明参考](https://support.huaweicloud.com/api-drs/zh-cn_topic_0295171516.html)
-	Property string `json:"property"`
+	Property string `json:"property" xml:"property"`
 }
 
 func (o BatchJobActionReq) String() string {

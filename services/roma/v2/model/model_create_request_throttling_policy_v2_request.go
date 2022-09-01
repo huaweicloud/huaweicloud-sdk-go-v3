@@ -10,9 +10,9 @@ import (
 type CreateRequestThrottlingPolicyV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *ThrottleBaseInfo `json:"body,omitempty"`
+	Body *ThrottleBaseInfo `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateRequestThrottlingPolicyV2Request) String() string {

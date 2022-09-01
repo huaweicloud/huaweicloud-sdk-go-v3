@@ -10,7 +10,7 @@ import (
 type ModifyAlarmActionReq struct {
 
 	// 告警是否启用。true：启动。false：停止
-	AlarmEnabled bool `json:"alarm_enabled"`
+	AlarmEnabled bool `json:"alarm_enabled" xml:"alarm_enabled"`
 }
 
 func (o ModifyAlarmActionReq) String() string {

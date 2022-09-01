@@ -9,13 +9,13 @@ import (
 type HttpCode struct {
 
 	// 状态码
-	Code *int32 `json:"code,omitempty"`
+	Code *int32 `json:"code,omitempty" xml:"code"`
 
 	// 状态码出现次数
-	Count *int32 `json:"count,omitempty"`
+	Count *int32 `json:"count,omitempty" xml:"count"`
 
 	// 状态码在对应时间点中的占比，保留4位小数。
-	Proportion *float64 `json:"proportion,omitempty"`
+	Proportion *float64 `json:"proportion,omitempty" xml:"proportion"`
 }
 
 func (o HttpCode) String() string {

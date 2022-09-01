@@ -13,27 +13,27 @@ import (
 type SourceOrArtifact struct {
 
 	// 存储方式，支持软件仓库swr和对象存储obs。
-	Storage *SourceOrArtifactStorage `json:"storage,omitempty"`
+	Storage *SourceOrArtifactStorage `json:"storage,omitempty" xml:"storage"`
 
 	// 类别，支持package。
-	Type *SourceOrArtifactType `json:"type,omitempty"`
+	Type *SourceOrArtifactType `json:"type,omitempty" xml:"type"`
 
 	// 软件包源码地址，如https://{IP}:20202/xxx/xxx.jar。
-	Url *string `json:"url,omitempty"`
+	Url *string `json:"url,omitempty" xml:"url"`
 
 	// 认证方式，支持iam，none，默认是iam。
-	Auth *string `json:"auth,omitempty"`
+	Auth *string `json:"auth,omitempty" xml:"auth"`
 
-	RepoType *SourceRepoType `json:"repo_type,omitempty"`
+	RepoType *SourceRepoType `json:"repo_type,omitempty" xml:"repo_type"`
 
 	// 代码仓url，如：https://github.com/example/demo.git
-	RepoUrl *string `json:"repo_url,omitempty"`
+	RepoUrl *string `json:"repo_url,omitempty" xml:"repo_url"`
 
 	// 代码分支或者Tag，默认是master。
-	RepoRef *string `json:"repo_ref,omitempty"`
+	RepoRef *string `json:"repo_ref,omitempty" xml:"repo_ref"`
 
 	// 授权名称，在授权列表获取。
-	RepoAuth *string `json:"repo_auth,omitempty"`
+	RepoAuth *string `json:"repo_auth,omitempty" xml:"repo_auth"`
 }
 
 func (o SourceOrArtifact) String() string {

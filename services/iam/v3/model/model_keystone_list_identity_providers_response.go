@@ -10,9 +10,9 @@ import (
 type KeystoneListIdentityProvidersResponse struct {
 
 	// 身份提供商信息列表。
-	IdentityProviders *[]IdentityprovidersResult `json:"identity_providers,omitempty"`
+	IdentityProviders *[]IdentityprovidersResult `json:"identity_providers,omitempty" xml:"identity_providers"`
 
-	Links          *Links `json:"links,omitempty"`
+	Links          *Links `json:"links,omitempty" xml:"links"`
 	HttpStatusCode int    `json:"-"`
 }
 

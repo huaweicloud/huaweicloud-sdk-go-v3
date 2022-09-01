@@ -10,22 +10,22 @@ import (
 type CdmRestartClusterReqRestart struct {
 
 	// 重启时延，单位：秒
-	RestartDelayTime *int32 `json:"restartDelayTime,omitempty"`
+	RestartDelayTime *int32 `json:"restartDelayTime,omitempty" xml:"restartDelayTime"`
 
 	// 重启类型： - IMMEDIATELY：立即重启。 - FORCELY：强制重启。 - SOFTLY：一般重启。  默认值为“IMMEDIATELY”。强制重启业务进程会中断，并重启集群的虚拟机。
-	RestartMode *string `json:"restartMode,omitempty"`
+	RestartMode *string `json:"restartMode,omitempty" xml:"restartMode"`
 
 	// 重启级别： - SERVICE：重启服务。 - VM：重启虚拟机。  默认值为“SERVICE”。
-	RestartLevel *string `json:"restartLevel,omitempty"`
+	RestartLevel *string `json:"restartLevel,omitempty" xml:"restartLevel"`
 
 	// 集群节点类型，只支持“cdm”
-	Type string `json:"type"`
+	Type string `json:"type" xml:"type"`
 
 	// 预留字段，“restartLevel” 为“SERVICE”时，“instance”必填，填空字串。
-	Instance *string `json:"instance,omitempty"`
+	Instance *string `json:"instance,omitempty" xml:"instance"`
 
 	// 预留字段，“restartLevel” 为“SERVICE”时，“group”必填，填空字串。
-	Group *string `json:"group,omitempty"`
+	Group *string `json:"group,omitempty" xml:"group"`
 }
 
 func (o CdmRestartClusterReqRestart) String() string {

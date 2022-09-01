@@ -8,7 +8,7 @@ import (
 
 // 请求体
 type CreateOpenIdConnectConfigRequestBody struct {
-	OpenidConnectConfig *CreateOpenIdConnectConfig `json:"openid_connect_config"`
+	OpenidConnectConfig *CreateOpenIdConnectConfig `json:"openid_connect_config" xml:"openid_connect_config"`
 }
 
 func (o CreateOpenIdConnectConfigRequestBody) String() string {

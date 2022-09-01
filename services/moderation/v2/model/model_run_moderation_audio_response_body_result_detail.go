@@ -10,9 +10,9 @@ import (
 type RunModerationAudioResponseBodyResultDetail struct {
 
 	// 返回的语音转文本后审核结果详细信息： ● politics：涉政敏感词列表。 ● porn：涉黄敏感词列表。 ● ad：广告敏感词列表。 ● abuse：辱骂敏感词列表。 ● contraband：违禁品敏感词列表
-	Text *interface{} `json:"text,omitempty"`
+	Text *interface{} `json:"text,omitempty" xml:"text"`
 
-	Audio *RunModerationAudioResponseBodyResultDetailAudio `json:"audio,omitempty"`
+	Audio *RunModerationAudioResponseBodyResultDetailAudio `json:"audio,omitempty" xml:"audio"`
 }
 
 func (o RunModerationAudioResponseBodyResultDetail) String() string {

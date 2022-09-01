@@ -10,10 +10,10 @@ import (
 type TaskDetailsError struct {
 
 	// 算法服务定义的错误码
-	Code string `json:"code"`
+	Code string `json:"code" xml:"code"`
 
 	// 算法服务反馈的错误信息
-	Message string `json:"message"`
+	Message string `json:"message" xml:"message"`
 }
 
 func (o TaskDetailsError) String() string {

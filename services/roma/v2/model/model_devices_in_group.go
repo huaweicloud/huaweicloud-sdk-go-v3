@@ -12,22 +12,22 @@ import (
 type DevicesInGroup struct {
 
 	// 设备ID
-	DeviceId *int32 `json:"device_id,omitempty"`
+	DeviceId *int32 `json:"device_id,omitempty" xml:"device_id"`
 
 	// 设备名称
-	DeviceName *string `json:"device_name,omitempty"`
+	DeviceName *string `json:"device_name,omitempty" xml:"device_name"`
 
 	// 产品ID
-	ProductId *int32 `json:"product_id,omitempty"`
+	ProductId *int32 `json:"product_id,omitempty" xml:"product_id"`
 
 	// 产品名称
-	ProductName *string `json:"product_name,omitempty"`
+	ProductName *string `json:"product_name,omitempty" xml:"product_name"`
 
 	// 设备状态 0-启用 1-禁用
-	Status *DevicesInGroupStatus `json:"status,omitempty"`
+	Status *DevicesInGroupStatus `json:"status,omitempty" xml:"status"`
 
 	// 是否在线 0-未连接 1-在线 2-离线
-	OnlineStatus *DevicesInGroupOnlineStatus `json:"online_status,omitempty"`
+	OnlineStatus *DevicesInGroupOnlineStatus `json:"online_status,omitempty" xml:"online_status"`
 }
 
 func (o DevicesInGroup) String() string {

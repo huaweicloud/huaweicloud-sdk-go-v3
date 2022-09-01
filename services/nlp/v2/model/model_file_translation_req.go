@@ -13,16 +13,16 @@ import (
 type FileTranslationReq struct {
 
 	// 存放在OBS的文档文件路径，私密文件推荐使用临时授权URL调用服务，如何获取OBS文件URL和临时授权URL请参见配置OBS访问权限（https://support.huaweicloud.com/api-nlp/nlp_03_0080.html）。OBS的region要和请求服务的region保持一致，region不一致则OBS不可用，即使obs是公开访问权限。
-	Url string `json:"url"`
+	Url string `json:"url" xml:"url"`
 
 	// 翻译原语言，文档翻译服务当前仅支持中英互译。
-	From FileTranslationReqFrom `json:"from"`
+	From FileTranslationReqFrom `json:"from" xml:"from"`
 
 	// 翻译目标语言，文档翻译服务当前仅支持中英互译。
-	To FileTranslationReqTo `json:"to"`
+	To FileTranslationReqTo `json:"to" xml:"to"`
 
 	// 文档格式，当前仅支持翻译“docx”、“pptx”和“txt”格式的文档。
-	Type FileTranslationReqType `json:"type"`
+	Type FileTranslationReqType `json:"type" xml:"type"`
 }
 
 func (o FileTranslationReq) String() string {

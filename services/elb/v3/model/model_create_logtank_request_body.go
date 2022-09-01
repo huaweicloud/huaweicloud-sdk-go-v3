@@ -8,7 +8,7 @@ import (
 
 // 创建云日志请求体
 type CreateLogtankRequestBody struct {
-	Logtank *CreateLogtankOption `json:"logtank"`
+	Logtank *CreateLogtankOption `json:"logtank" xml:"logtank"`
 }
 
 func (o CreateLogtankRequestBody) String() string {

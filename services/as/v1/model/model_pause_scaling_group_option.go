@@ -13,7 +13,7 @@ import (
 type PauseScalingGroupOption struct {
 
 	// 启用或停止伸缩组操作的标识。启用：resume 停止：pause
-	Action PauseScalingGroupOptionAction `json:"action"`
+	Action PauseScalingGroupOptionAction `json:"action" xml:"action"`
 }
 
 func (o PauseScalingGroupOption) String() string {

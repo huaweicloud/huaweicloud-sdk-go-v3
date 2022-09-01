@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type UpdateCouponQuotasRequest struct {
-	Body *AdjustCouponQuotasReq `json:"body,omitempty"`
+	Body *AdjustCouponQuotasReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateCouponQuotasRequest) String() string {

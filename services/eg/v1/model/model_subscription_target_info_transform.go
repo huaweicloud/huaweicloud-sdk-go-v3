@@ -10,13 +10,13 @@ import (
 type SubscriptionTargetInfoTransform struct {
 
 	// 转换规则类型
-	Type *string `json:"type,omitempty"`
+	Type *string `json:"type,omitempty" xml:"type"`
 
 	// 转换规则内容
-	Value *string `json:"value,omitempty"`
+	Value *string `json:"value,omitempty" xml:"value"`
 
 	// 转换规则模板
-	Template *string `json:"template,omitempty"`
+	Template *string `json:"template,omitempty" xml:"template"`
 }
 
 func (o SubscriptionTargetInfoTransform) String() string {

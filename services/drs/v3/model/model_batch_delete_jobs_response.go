@@ -10,10 +10,10 @@ import (
 type BatchDeleteJobsResponse struct {
 
 	// 批量结束任务或删除任务的响应体集合。
-	Results *[]DeleteJobResp `json:"results,omitempty"`
+	Results *[]DeleteJobResp `json:"results,omitempty" xml:"results"`
 
 	// 总数
-	Count          *int32 `json:"count,omitempty"`
+	Count          *int32 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

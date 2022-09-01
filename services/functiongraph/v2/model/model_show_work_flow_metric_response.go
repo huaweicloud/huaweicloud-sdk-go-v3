@@ -10,16 +10,16 @@ import (
 type ShowWorkFlowMetricResponse struct {
 
 	// 执行次数
-	Count *[]SlaReportsValue `json:"count,omitempty"`
+	Count *[]SlaReportsValue `json:"count,omitempty" xml:"count"`
 
 	// 平均时延，单位毫秒
-	Duration *[]SlaReportsValue `json:"duration,omitempty"`
+	Duration *[]SlaReportsValue `json:"duration,omitempty" xml:"duration"`
 
 	// 错误次数
-	FailCount *[]SlaReportsValue `json:"fail_count,omitempty"`
+	FailCount *[]SlaReportsValue `json:"fail_count,omitempty" xml:"fail_count"`
 
 	// 运行中数量
-	RunningCount   *[]SlaReportsValue `json:"running_count,omitempty"`
+	RunningCount   *[]SlaReportsValue `json:"running_count,omitempty" xml:"running_count"`
 	HttpStatusCode int                `json:"-"`
 }
 

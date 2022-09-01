@@ -10,10 +10,10 @@ import (
 type PublishMessageResponse struct {
 
 	// 请求的唯一标识ID。
-	RequestId *string `json:"request_id,omitempty"`
+	RequestId *string `json:"request_id,omitempty" xml:"request_id"`
 
 	// 唯一的消息ID。
-	MessageId      *string `json:"message_id,omitempty"`
+	MessageId      *string `json:"message_id,omitempty" xml:"message_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

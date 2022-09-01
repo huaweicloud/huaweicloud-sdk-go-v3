@@ -13,22 +13,22 @@ import (
 type CollectReplyRatesRequest struct {
 
 	// qabot编号，UUID格式。
-	QabotId string `json:"qabot_id"`
+	QabotId string `json:"qabot_id" xml:"qabot_id"`
 
 	// 查询的起始时间，long，UTC时间，默认值为0。
-	StartTime *string `json:"start_time,omitempty"`
+	StartTime *string `json:"start_time,omitempty" xml:"start_time"`
 
 	// 查询的结束时间，long，UTC时间，默认值为当前时间的毫秒数。
-	EndTime *string `json:"end_time,omitempty"`
+	EndTime *string `json:"end_time,omitempty" xml:"end_time"`
 
 	// 统计周期目前支持month,week,day。
-	Interval *CollectReplyRatesRequestInterval `json:"interval,omitempty"`
+	Interval *CollectReplyRatesRequestInterval `json:"interval,omitempty" xml:"interval"`
 
 	// 请求所在时区，例如：中国东八区为\"+08:00\"；美国西五区为\"-05:00\"；默认为\"UTC\"。
-	TimeZone *string `json:"time_zone,omitempty"`
+	TimeZone *string `json:"time_zone,omitempty" xml:"time_zone"`
 
 	// 所属领域。
-	Domain *string `json:"domain,omitempty"`
+	Domain *string `json:"domain,omitempty" xml:"domain"`
 }
 
 func (o CollectReplyRatesRequest) String() string {

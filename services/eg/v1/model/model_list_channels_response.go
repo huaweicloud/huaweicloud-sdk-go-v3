@@ -10,13 +10,13 @@ import (
 type ListChannelsResponse struct {
 
 	// 总数
-	Total *int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty" xml:"total"`
 
 	// 本页数量
-	Size *int32 `json:"size,omitempty"`
+	Size *int32 `json:"size,omitempty" xml:"size"`
 
 	// 对象列表
-	Items          *[]ChannelInfo `json:"items,omitempty"`
+	Items          *[]ChannelInfo `json:"items,omitempty" xml:"items"`
 	HttpStatusCode int            `json:"-"`
 }
 

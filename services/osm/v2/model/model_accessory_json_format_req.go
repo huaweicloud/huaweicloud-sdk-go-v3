@@ -9,16 +9,16 @@ import (
 type AccessoryJsonFormatReq struct {
 
 	// 文件名称
-	AccessoryName *string `json:"accessory_name,omitempty"`
+	AccessoryName *string `json:"accessory_name,omitempty" xml:"accessory_name"`
 
 	// 文件来源
-	AccessoryFrom *string `json:"accessory_from,omitempty"`
+	AccessoryFrom *string `json:"accessory_from,omitempty" xml:"accessory_from"`
 
 	// 上传类型
-	UploadType *int32 `json:"upload_type,omitempty"`
+	UploadType *int32 `json:"upload_type,omitempty" xml:"upload_type"`
 
 	// 文件内容，Base64格式
-	AccessoryData string `json:"accessory_data"`
+	AccessoryData string `json:"accessory_data" xml:"accessory_data"`
 }
 
 func (o AccessoryJsonFormatReq) String() string {

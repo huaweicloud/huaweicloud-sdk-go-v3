@@ -9,16 +9,16 @@ import (
 type VulnsLevel struct {
 
 	// 高危漏洞数
-	High *int32 `json:"high,omitempty"`
+	High *int32 `json:"high,omitempty" xml:"high"`
 
 	// 中危漏洞数
-	Middle *int32 `json:"middle,omitempty"`
+	Middle *int32 `json:"middle,omitempty" xml:"middle"`
 
 	// 低危漏洞数
-	Low *int32 `json:"low,omitempty"`
+	Low *int32 `json:"low,omitempty" xml:"low"`
 
 	// 提示危漏洞数
-	Hint *int32 `json:"hint,omitempty"`
+	Hint *int32 `json:"hint,omitempty" xml:"hint"`
 }
 
 func (o VulnsLevel) String() string {

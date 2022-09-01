@@ -13,22 +13,22 @@ import (
 type ListAppsRequest struct {
 
 	// 使用AK/SK方式认证时必选，携带的鉴权信息。
-	Authorization *string `json:"Authorization,omitempty"`
+	Authorization *string `json:"Authorization,omitempty" xml:"Authorization"`
 
 	// 使用AK/SK方式认证时必选，请求的发生时间。
-	XSdkDate *string `json:"X-Sdk-Date,omitempty"`
+	XSdkDate *string `json:"X-Sdk-Date,omitempty" xml:"X-Sdk-Date"`
 
 	// 使用AK/SK方式认证时必选，携带项目ID信息。
-	XProjectId *string `json:"X-Project-Id,omitempty"`
+	XProjectId *string `json:"X-Project-Id,omitempty" xml:"X-Project-Id"`
 
 	// 应用的状态：  - ACTIVATION：应用开启  - DEACTIVATION：应用停用  - ARREARS：应用欠费
-	State *ListAppsRequestState `json:"state,omitempty"`
+	State *ListAppsRequestState `json:"state,omitempty" xml:"state"`
 
 	// 查询结果起始编号，此处代表分页的页码，默认为0。
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 查询结果集数量，此处代表每一页的条数，最小为1，最大为100。默认为100。
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 }
 
 func (o ListAppsRequest) String() string {

@@ -10,7 +10,7 @@ import (
 type KeystoneListServicesRequest struct {
 
 	// 服务类型。
-	Type *string `json:"type,omitempty"`
+	Type *string `json:"type,omitempty" xml:"type"`
 }
 
 func (o KeystoneListServicesRequest) String() string {

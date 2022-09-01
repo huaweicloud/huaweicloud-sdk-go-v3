@@ -10,7 +10,7 @@ import (
 type EngineRbacPwd struct {
 
 	// 开启安全认证的微服务引擎专享版默认root帐号的密码
-	Pwd *string `json:"pwd,omitempty"`
+	Pwd *string `json:"pwd,omitempty" xml:"pwd"`
 }
 
 func (o EngineRbacPwd) String() string {

@@ -9,10 +9,10 @@ import (
 type AvailableZone struct {
 
 	// 可用区编码。
-	Code string `json:"code"`
+	Code string `json:"code" xml:"code"`
 
 	// 可用区描述。
-	Description string `json:"description"`
+	Description string `json:"description" xml:"description"`
 }
 
 func (o AvailableZone) String() string {

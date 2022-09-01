@@ -13,16 +13,16 @@ import (
 type ListEvaluationProjectsRequest struct {
 
 	// 评估项目名称（模糊搜索）。
-	EvaluationProjectName *string `json:"evaluation_project_name,omitempty"`
+	EvaluationProjectName *string `json:"evaluation_project_name,omitempty" xml:"evaluation_project_name"`
 
 	// 评估项目状态。
-	EvaluationProjectStatus *ListEvaluationProjectsRequestEvaluationProjectStatus `json:"evaluation_project_status,omitempty"`
+	EvaluationProjectStatus *ListEvaluationProjectsRequestEvaluationProjectStatus `json:"evaluation_project_status,omitempty" xml:"evaluation_project_status"`
 
 	// 分页查询的偏移量。
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 每页显示的条目数量。
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 }
 
 func (o ListEvaluationProjectsRequest) String() string {

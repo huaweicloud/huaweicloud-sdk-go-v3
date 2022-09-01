@@ -13,9 +13,9 @@ import (
 type ListCompareResultRequest struct {
 
 	// 请求语言类型
-	XLanguage *ListCompareResultRequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *ListCompareResultRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 
-	Body *QueryCompareResultReq `json:"body,omitempty"`
+	Body *QueryCompareResultReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o ListCompareResultRequest) String() string {

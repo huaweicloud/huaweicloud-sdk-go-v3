@@ -10,16 +10,16 @@ import (
 type ShowTakeOverTaskDetailsResponse struct {
 
 	// 总数。
-	Total *int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty" xml:"total"`
 
 	// 任务ID。
-	TaskId *string `json:"task_id,omitempty"`
+	TaskId *string `json:"task_id,omitempty" xml:"task_id"`
 
 	// 任务状态。
-	TaskStatus *string `json:"task_status,omitempty"`
+	TaskStatus *string `json:"task_status,omitempty" xml:"task_status"`
 
 	// 媒资信息。
-	Assets         *[]AssetDetails `json:"assets,omitempty"`
+	Assets         *[]AssetDetails `json:"assets,omitempty" xml:"assets"`
 	HttpStatusCode int             `json:"-"`
 }
 

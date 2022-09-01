@@ -10,10 +10,10 @@ import (
 type StartInstanceResponse struct {
 
 	// 返回值
-	Result *string `json:"result,omitempty"`
+	Result *string `json:"result,omitempty" xml:"result"`
 
 	// 状态
-	Status         *string `json:"status,omitempty"`
+	Status         *string `json:"status,omitempty" xml:"status"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -9,10 +9,10 @@ import (
 type ContentHeader struct {
 
 	// key
-	Key *string `json:"key,omitempty"`
+	Key *string `json:"key,omitempty" xml:"key"`
 
 	// value
-	Value *string `json:"value,omitempty"`
+	Value *string `json:"value,omitempty" xml:"value"`
 }
 
 func (o ContentHeader) String() string {

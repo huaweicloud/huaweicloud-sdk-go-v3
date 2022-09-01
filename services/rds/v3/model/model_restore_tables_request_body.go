@@ -9,10 +9,10 @@ import (
 type RestoreTablesRequestBody struct {
 
 	// 恢复时间戳
-	RestoreTime int64 `json:"restoreTime"`
+	RestoreTime int64 `json:"restoreTime" xml:"restoreTime"`
 
 	// 表信息
-	RestoreTables []RestoreDatabasesInfo `json:"restoreTables"`
+	RestoreTables []RestoreDatabasesInfo `json:"restoreTables" xml:"restoreTables"`
 }
 
 func (o RestoreTablesRequestBody) String() string {

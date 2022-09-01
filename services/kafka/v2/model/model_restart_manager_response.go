@@ -10,10 +10,10 @@ import (
 type RestartManagerResponse struct {
 
 	// 执行结果。
-	Result *string `json:"result,omitempty"`
+	Result *string `json:"result,omitempty" xml:"result"`
 
 	// 实例ID。
-	InstanceId     *string `json:"instance_id,omitempty"`
+	InstanceId     *string `json:"instance_id,omitempty" xml:"instance_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

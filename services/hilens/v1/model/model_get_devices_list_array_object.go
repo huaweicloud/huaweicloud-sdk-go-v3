@@ -10,70 +10,70 @@ import (
 type GetDevicesListArrayObject struct {
 
 	// 设备ID
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 设备名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 设备类型
-	Type *string `json:"type,omitempty"`
+	Type *string `json:"type,omitempty" xml:"type"`
 
 	// 设备状态(0:离线;1:在线)
-	Status *int32 `json:"status,omitempty"`
+	Status *int32 `json:"status,omitempty" xml:"status"`
 
 	// cpu核数
-	Cpu *int32 `json:"cpu,omitempty"`
+	Cpu *int32 `json:"cpu,omitempty" xml:"cpu"`
 
 	// 内存大小
-	Memory *int32 `json:"memory,omitempty"`
+	Memory *int32 `json:"memory,omitempty" xml:"memory"`
 
 	// 操作系统
-	Os *string `json:"os,omitempty"`
+	Os *string `json:"os,omitempty" xml:"os"`
 
 	// 固件名称
-	FirmwareName *string `json:"firmware_name,omitempty"`
+	FirmwareName *string `json:"firmware_name,omitempty" xml:"firmware_name"`
 
 	// 固件版本
-	FirmwareVersion *string `json:"firmware_version,omitempty"`
+	FirmwareVersion *string `json:"firmware_version,omitempty" xml:"firmware_version"`
 
 	// 固件状态(1:更新中，2：更新失败，3：更新成功)
-	FirmwareStatus *int32 `json:"firmware_status,omitempty"`
+	FirmwareStatus *int32 `json:"firmware_status,omitempty" xml:"firmware_status"`
 
 	// 固件更新失败原因
-	FirmwareCause *string `json:"firmware_cause,omitempty"`
+	FirmwareCause *string `json:"firmware_cause,omitempty" xml:"firmware_cause"`
 
 	// 设备数据存储路径，该桶需要和当前region匹配
-	Path *string `json:"path,omitempty"`
+	Path *string `json:"path,omitempty" xml:"path"`
 
 	// 设备数据存储路径更新状态(0:更新成功，1：更新中)
-	PathUpdateStatus *int32 `json:"path_update_status,omitempty"`
+	PathUpdateStatus *int32 `json:"path_update_status,omitempty" xml:"path_update_status"`
 
 	// 设备数据存储路径更新失败原因
-	PathUpdateCause *string `json:"path_update_cause,omitempty"`
+	PathUpdateCause *string `json:"path_update_cause,omitempty" xml:"path_update_cause"`
 
 	// 创建时间（时间戳）
-	CreateTime *int64 `json:"create_time,omitempty"`
+	CreateTime *int64 `json:"create_time,omitempty" xml:"create_time"`
 
 	// 更新时间（时间戳）
-	UpdateTime *int64 `json:"update_time,omitempty"`
+	UpdateTime *int64 `json:"update_time,omitempty" xml:"update_time"`
 
 	// IAM用户名
-	UserTime *string `json:"user_time,omitempty"`
+	UserTime *string `json:"user_time,omitempty" xml:"user_time"`
 
 	// 计费资源码
-	ResourceSpecCode *string `json:"resource_spec_code,omitempty"`
+	ResourceSpecCode *string `json:"resource_spec_code,omitempty" xml:"resource_spec_code"`
 
 	// 云服务计费类型
-	CloudServiceType *string `json:"cloud_service_type,omitempty"`
+	CloudServiceType *string `json:"cloud_service_type,omitempty" xml:"cloud_service_type"`
 
 	// 激活内容
-	ActiveContent *string `json:"active_content,omitempty"`
+	ActiveContent *string `json:"active_content,omitempty" xml:"active_content"`
 
 	// 激活状态(0:未激活，1：已激活且付费，2：已激活且免费，3：付费到期，4：已激活使用SN码，5：已激活30天免费，6：免费到期)
-	ActiveFlag *int32 `json:"active_flag,omitempty"`
+	ActiveFlag *int32 `json:"active_flag,omitempty" xml:"active_flag"`
 
 	// 关联设备的主题消息推送的URN地址
-	TopicUrn *string `json:"topic_urn,omitempty"`
+	TopicUrn *string `json:"topic_urn,omitempty" xml:"topic_urn"`
 }
 
 func (o GetDevicesListArrayObject) String() string {

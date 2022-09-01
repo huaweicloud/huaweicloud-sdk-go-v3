@@ -10,16 +10,16 @@ import (
 type ObsTriggerConfig struct {
 
 	// OBS桶名（trigger_type为OBS时配置）
-	Bucket string `json:"bucket"`
+	Bucket string `json:"bucket" xml:"bucket"`
 
 	// OBS事件列表（trigger_type为OBS时配置）
-	Events []string `json:"events"`
+	Events []string `json:"events" xml:"events"`
 
 	// 对象名前缀（trigger_type为OBS时配置）
-	Prefix string `json:"prefix"`
+	Prefix string `json:"prefix" xml:"prefix"`
 
 	// 对象名后缀（trigger_type为OBS时配置）
-	Suffix string `json:"suffix"`
+	Suffix string `json:"suffix" xml:"suffix"`
 }
 
 func (o ObsTriggerConfig) String() string {

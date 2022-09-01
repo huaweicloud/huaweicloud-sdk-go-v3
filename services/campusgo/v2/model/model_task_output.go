@@ -8,13 +8,13 @@ import (
 
 // 作业的输出配置
 type TaskOutput struct {
-	Obs *TaskOutputObs `json:"obs,omitempty"`
+	Obs *TaskOutputObs `json:"obs,omitempty" xml:"obs"`
 
-	Dis *TaskOutputDis `json:"dis,omitempty"`
+	Dis *TaskOutputDis `json:"dis,omitempty" xml:"dis"`
 
-	Webhook *TaskOutputWebhook `json:"webhook,omitempty"`
+	Webhook *TaskOutputWebhook `json:"webhook,omitempty" xml:"webhook"`
 
-	Localpath *TaskOutputLocalpath `json:"localpath,omitempty"`
+	Localpath *TaskOutputLocalpath `json:"localpath,omitempty" xml:"localpath"`
 }
 
 func (o TaskOutput) String() string {

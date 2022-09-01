@@ -10,7 +10,7 @@ import (
 type ListNotificationTemplatesResponse struct {
 
 	// 模板数组
-	Results        *[]NotificationTemplate `json:"results,omitempty"`
+	Results        *[]NotificationTemplate `json:"results,omitempty" xml:"results"`
 	HttpStatusCode int                     `json:"-"`
 }
 

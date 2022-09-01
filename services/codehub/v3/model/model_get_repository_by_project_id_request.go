@@ -10,7 +10,7 @@ import (
 type GetRepositoryByProjectIdRequest struct {
 
 	// 仓库的uuid,用来指定需要查看的仓库
-	RepositoryUuid string `json:"repository_uuid"`
+	RepositoryUuid string `json:"repository_uuid" xml:"repository_uuid"`
 }
 
 func (o GetRepositoryByProjectIdRequest) String() string {

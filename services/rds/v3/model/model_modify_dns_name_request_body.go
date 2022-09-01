@@ -9,7 +9,7 @@ import (
 type ModifyDnsNameRequestBody struct {
 
 	// 新域名的前缀，校验规则是^[0-9a-zA-Z]{8,64}$
-	DnsName string `json:"dns_name"`
+	DnsName string `json:"dns_name" xml:"dns_name"`
 }
 
 func (o ModifyDnsNameRequestBody) String() string {

@@ -10,9 +10,9 @@ import (
 type ListResourceInstancesRequest struct {
 
 	// 定值为resource_instances。
-	ResourceInstances string `json:"resource_instances"`
+	ResourceInstances string `json:"resource_instances" xml:"resource_instances"`
 
-	Body *ListResourceInstancesRequestBody `json:"body,omitempty"`
+	Body *ListResourceInstancesRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o ListResourceInstancesRequest) String() string {

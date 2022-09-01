@@ -10,16 +10,16 @@ import (
 type PersistentVolumeClaim struct {
 
 	// API版本，固定值**v1**
-	ApiVersion string `json:"apiVersion"`
+	ApiVersion string `json:"apiVersion" xml:"apiVersion"`
 
 	// API类型，固定值**PersistentVolumeClaim**
-	Kind string `json:"kind"`
+	Kind string `json:"kind" xml:"kind"`
 
-	Metadata *PersistentVolumeClaimMetadata `json:"metadata"`
+	Metadata *PersistentVolumeClaimMetadata `json:"metadata" xml:"metadata"`
 
-	Spec *PersistentVolumeClaimSpec `json:"spec"`
+	Spec *PersistentVolumeClaimSpec `json:"spec" xml:"spec"`
 
-	Status *PersistentVolumeClaimStatus `json:"status,omitempty"`
+	Status *PersistentVolumeClaimStatus `json:"status,omitempty" xml:"status"`
 }
 
 func (o PersistentVolumeClaim) String() string {

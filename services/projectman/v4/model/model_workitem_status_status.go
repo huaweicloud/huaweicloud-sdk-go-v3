@@ -10,19 +10,19 @@ import (
 type WorkitemStatusStatus struct {
 
 	// 工作项的状态id
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 状态名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 工作项状态的类型， BACKLOG( \"初始化\"), READY(\"待启动\"), IN_PROGRESS(\"进行中\"), COMPLETE(\"已完成\"), DONE(\"已结束\"),
-	Type *string `json:"type,omitempty"`
+	Type *string `json:"type,omitempty" xml:"type"`
 
 	// 工作项状态的描述
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 工作项状态的父状态id
-	ParentStatusId *string `json:"parent_status_id,omitempty"`
+	ParentStatusId *string `json:"parent_status_id,omitempty" xml:"parent_status_id"`
 }
 
 func (o WorkitemStatusStatus) String() string {

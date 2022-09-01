@@ -10,9 +10,9 @@ import (
 type RestartClusterRequest struct {
 
 	// 集群ID
-	ClusterId string `json:"cluster_id"`
+	ClusterId string `json:"cluster_id" xml:"cluster_id"`
 
-	Body *CdmRestartClusterReq `json:"body,omitempty"`
+	Body *CdmRestartClusterReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o RestartClusterRequest) String() string {

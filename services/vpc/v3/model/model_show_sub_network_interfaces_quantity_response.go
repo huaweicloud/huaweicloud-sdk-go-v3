@@ -10,10 +10,10 @@ import (
 type ShowSubNetworkInterfacesQuantityResponse struct {
 
 	// 请求ID
-	RequestId *string `json:"request_id,omitempty"`
+	RequestId *string `json:"request_id,omitempty" xml:"request_id"`
 
 	// 辅助弹性网卡数目
-	SubNetworkInterfaces *int32 `json:"sub_network_interfaces,omitempty"`
+	SubNetworkInterfaces *int32 `json:"sub_network_interfaces,omitempty" xml:"sub_network_interfaces"`
 	HttpStatusCode       int    `json:"-"`
 }
 

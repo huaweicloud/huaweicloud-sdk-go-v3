@@ -10,9 +10,9 @@ import (
 type CreateTestCaseInPlanRequest struct {
 
 	// 计划唯一标识，固定长度32位字符
-	PlanId string `json:"plan_id"`
+	PlanId string `json:"plan_id" xml:"plan_id"`
 
-	Body *CreateTestCaseInPlanRequestBody `json:"body,omitempty"`
+	Body *CreateTestCaseInPlanRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateTestCaseInPlanRequest) String() string {

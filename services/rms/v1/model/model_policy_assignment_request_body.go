@@ -10,18 +10,18 @@ import (
 type PolicyAssignmentRequestBody struct {
 
 	// 规则名字
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 规则描述
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
-	PolicyFilter *PolicyFilterDefinition `json:"policy_filter"`
+	PolicyFilter *PolicyFilterDefinition `json:"policy_filter" xml:"policy_filter"`
 
 	// 策略定义ID
-	PolicyDefinitionId string `json:"policy_definition_id"`
+	PolicyDefinitionId string `json:"policy_definition_id" xml:"policy_definition_id"`
 
 	// 规则参数
-	Parameters map[string]PolicyParameterValue `json:"parameters"`
+	Parameters map[string]PolicyParameterValue `json:"parameters" xml:"parameters"`
 }
 
 func (o PolicyAssignmentRequestBody) String() string {

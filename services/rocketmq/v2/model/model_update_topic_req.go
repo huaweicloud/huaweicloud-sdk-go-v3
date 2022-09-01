@@ -12,13 +12,13 @@ import (
 type UpdateTopicReq struct {
 
 	// 总读队列个数。
-	ReadQueueNum float32 `json:"read_queue_num,omitempty"`
+	ReadQueueNum float32 `json:"read_queue_num,omitempty" xml:"read_queue_num"`
 
 	// 总写队列个数。
-	WriteQueueNum float32 `json:"write_queue_num,omitempty"`
+	WriteQueueNum float32 `json:"write_queue_num,omitempty" xml:"write_queue_num"`
 
 	// 权限。
-	Permission *UpdateTopicReqPermission `json:"permission,omitempty"`
+	Permission *UpdateTopicReqPermission `json:"permission,omitempty" xml:"permission"`
 }
 
 func (o UpdateTopicReq) String() string {

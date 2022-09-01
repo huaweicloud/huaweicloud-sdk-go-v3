@@ -10,16 +10,16 @@ import (
 type CreateTestSuitByRepoFileInfo struct {
 
 	// 要生成的测试套名称
-	TestsuiteName string `json:"testsuite_name"`
+	TestsuiteName string `json:"testsuite_name" xml:"testsuite_name"`
 
 	// 仓库id
-	RepositoryId string `json:"repository_id"`
+	RepositoryId string `json:"repository_id" xml:"repository_id"`
 
 	// 仓库分支
-	RepositoryBranch string `json:"repository_branch"`
+	RepositoryBranch string `json:"repository_branch" xml:"repository_branch"`
 
 	// 仓库中yaml或json文件的相对路径，仅支持swagger 2.0版本的yaml和json文件
-	FilePath string `json:"file_path"`
+	FilePath string `json:"file_path" xml:"file_path"`
 }
 
 func (o CreateTestSuitByRepoFileInfo) String() string {

@@ -10,13 +10,13 @@ import (
 type DeleteserviceDiscoveryRulesResponse struct {
 
 	// 响应码。
-	ErrorCode *string `json:"errorCode,omitempty"`
+	ErrorCode *string `json:"errorCode,omitempty" xml:"errorCode"`
 
 	// 响应信息描述。
-	ErrorMessage *string `json:"errorMessage,omitempty"`
+	ErrorMessage *string `json:"errorMessage,omitempty" xml:"errorMessage"`
 
 	// 响应状态码。
-	ResponseStatus *int32 `json:"responseStatus,omitempty"`
+	ResponseStatus *int32 `json:"responseStatus,omitempty" xml:"responseStatus"`
 	HttpStatusCode int    `json:"-"`
 }
 

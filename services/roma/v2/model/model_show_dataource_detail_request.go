@@ -10,10 +10,10 @@ import (
 type ShowDataourceDetailRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 数据源ID
-	DatasourceId string `json:"datasource_id"`
+	DatasourceId string `json:"datasource_id" xml:"datasource_id"`
 }
 
 func (o ShowDataourceDetailRequest) String() string {

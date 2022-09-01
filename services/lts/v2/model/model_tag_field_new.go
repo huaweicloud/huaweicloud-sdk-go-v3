@@ -13,19 +13,19 @@ import (
 type TagFieldNew struct {
 
 	// 字段名称
-	FieldName string `json:"field_name"`
+	FieldName string `json:"field_name" xml:"field_name"`
 
 	// 字段示例内容
-	Content *string `json:"content,omitempty"`
+	Content *string `json:"content,omitempty" xml:"content"`
 
 	// 字段数据类型。 可选范围：string、long、float
-	Type TagFieldNewType `json:"type"`
+	Type TagFieldNewType `json:"type" xml:"type"`
 
 	// 是否开启快速分析
-	IsAnalysis *bool `json:"is_analysis,omitempty"`
+	IsAnalysis *bool `json:"is_analysis,omitempty" xml:"is_analysis"`
 
 	// 序号，从0开始
-	Index *int32 `json:"index,omitempty"`
+	Index *int32 `json:"index,omitempty" xml:"index"`
 }
 
 func (o TagFieldNew) String() string {

@@ -13,12 +13,12 @@ import (
 type RegisterDbUserRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 语言
-	XLanguage *RegisterDbUserRequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *RegisterDbUserRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 
-	Body *RegisterDbUserRequestBody `json:"body,omitempty"`
+	Body *RegisterDbUserRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o RegisterDbUserRequest) String() string {

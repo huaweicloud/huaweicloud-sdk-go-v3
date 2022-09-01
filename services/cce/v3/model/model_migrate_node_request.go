@@ -10,12 +10,12 @@ import (
 type MigrateNodeRequest struct {
 
 	// 集群 ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-	ClusterId string `json:"cluster_id"`
+	ClusterId string `json:"cluster_id" xml:"cluster_id"`
 
 	// 集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-	TargetClusterId string `json:"target_cluster_id"`
+	TargetClusterId string `json:"target_cluster_id" xml:"target_cluster_id"`
 
-	Body *MigrateNodesTask `json:"body,omitempty"`
+	Body *MigrateNodesTask `json:"body,omitempty" xml:"body"`
 }
 
 func (o MigrateNodeRequest) String() string {

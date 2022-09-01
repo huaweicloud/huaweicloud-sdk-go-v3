@@ -10,7 +10,7 @@ import (
 type CreateClusterPublicEipSize struct {
 
 	// 带宽大小。
-	Size int32 `json:"size"`
+	Size int32 `json:"size" xml:"size"`
 }
 
 func (o CreateClusterPublicEipSize) String() string {

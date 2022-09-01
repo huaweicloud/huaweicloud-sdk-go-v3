@@ -10,10 +10,10 @@ import (
 type AttrValueRules struct {
 
 	// 被推荐对象的属性-值配置。
-	AttrValuesA *[]AttrValue `json:"attr_values_a,omitempty"`
+	AttrValuesA *[]AttrValue `json:"attr_values_a,omitempty" xml:"attr_values_a"`
 
 	// 待推荐对象的属性-值配置。
-	AttrValuesB []AttrValue `json:"attr_values_b"`
+	AttrValuesB []AttrValue `json:"attr_values_b" xml:"attr_values_b"`
 }
 
 func (o AttrValueRules) String() string {

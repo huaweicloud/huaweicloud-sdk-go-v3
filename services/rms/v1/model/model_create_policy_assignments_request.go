@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreatePolicyAssignmentsRequest struct {
-	Body *PolicyAssignmentRequestBody `json:"body,omitempty"`
+	Body *PolicyAssignmentRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreatePolicyAssignmentsRequest) String() string {

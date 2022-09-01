@@ -10,9 +10,9 @@ import (
 type UpdateStoredQueryRequest struct {
 
 	// 查询ID
-	QueryId string `json:"query_id"`
+	QueryId string `json:"query_id" xml:"query_id"`
 
-	Body *StoredQueryRequestBody `json:"body,omitempty"`
+	Body *StoredQueryRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateStoredQueryRequest) String() string {

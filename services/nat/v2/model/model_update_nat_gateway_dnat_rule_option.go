@@ -13,34 +13,34 @@ import (
 type UpdateNatGatewayDnatRuleOption struct {
 
 	// NAT网关的id。
-	NatGatewayId string `json:"nat_gateway_id"`
+	NatGatewayId string `json:"nat_gateway_id" xml:"nat_gateway_id"`
 
 	// DNAT规则的描述，长度限制为255。
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 虚拟机或者裸机的Port ID，对应虚拟私有云场景，与private_ip参数二选一。
-	PortId *string `json:"port_id,omitempty"`
+	PortId *string `json:"port_id,omitempty" xml:"port_id"`
 
 	// 用户私有IP地址，对应专线、云连接场景，与port_id参数二选一。
-	PrivateIp *string `json:"private_ip,omitempty"`
+	PrivateIp *string `json:"private_ip,omitempty" xml:"private_ip"`
 
 	// 协议类型，目前支持TCP/tcp、UDP/udp、ANY/any。 对应协议号6、17、0。
-	Protocol *UpdateNatGatewayDnatRuleOptionProtocol `json:"protocol,omitempty"`
+	Protocol *UpdateNatGatewayDnatRuleOptionProtocol `json:"protocol,omitempty" xml:"protocol"`
 
 	// 弹性公网IP的id。
-	FloatingIpId *string `json:"floating_ip_id,omitempty"`
+	FloatingIpId *string `json:"floating_ip_id,omitempty" xml:"floating_ip_id"`
 
 	// 虚拟机或者裸机对外提供服务的协议端口号。 取值范围：0~65535。
-	InternalServicePort *int32 `json:"internal_service_port,omitempty"`
+	InternalServicePort *int32 `json:"internal_service_port,omitempty" xml:"internal_service_port"`
 
 	// Floatingip对外提供服务的端口号。 取值范围：0~65535。
-	ExternalServicePort *int32 `json:"external_service_port,omitempty"`
+	ExternalServicePort *int32 `json:"external_service_port,omitempty" xml:"external_service_port"`
 
 	// 虚拟机或者裸机对外提供服务的协议端口号范围。 功能说明：该端口范围与external _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围。
-	InternalServicePortRange *string `json:"internal_service_port_range,omitempty"`
+	InternalServicePortRange *string `json:"internal_service_port_range,omitempty" xml:"internal_service_port_range"`
 
 	// Floatingip对外提供服务的端口号范围。 功能说明：该端口范围与internal _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围。
-	ExternalServicePortRange *string `json:"external_service_port_range,omitempty"`
+	ExternalServicePortRange *string `json:"external_service_port_range,omitempty" xml:"external_service_port_range"`
 }
 
 func (o UpdateNatGatewayDnatRuleOption) String() string {

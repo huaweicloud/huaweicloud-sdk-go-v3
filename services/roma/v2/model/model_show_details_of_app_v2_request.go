@@ -10,10 +10,10 @@ import (
 type ShowDetailsOfAppV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 应用编号
-	AppId string `json:"app_id"`
+	AppId string `json:"app_id" xml:"app_id"`
 }
 
 func (o ShowDetailsOfAppV2Request) String() string {

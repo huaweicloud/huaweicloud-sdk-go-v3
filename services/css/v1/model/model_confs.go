@@ -9,18 +9,18 @@ import (
 type Confs struct {
 
 	// 配置文件名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 配置文件状态。
-	Status *string `json:"status,omitempty"`
+	Status *string `json:"status,omitempty" xml:"status"`
 
 	// 配置文件内容。
-	ConfContent *string `json:"confContent,omitempty"`
+	ConfContent *string `json:"confContent,omitempty" xml:"confContent"`
 
-	Setting *Setting `json:"setting,omitempty"`
+	Setting *Setting `json:"setting,omitempty" xml:"setting"`
 
 	// 更新时间。
-	UpdateAt *string `json:"updateAt,omitempty"`
+	UpdateAt *string `json:"updateAt,omitempty" xml:"updateAt"`
 }
 
 func (o Confs) String() string {

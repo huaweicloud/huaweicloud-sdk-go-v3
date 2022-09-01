@@ -12,19 +12,19 @@ import (
 type SubscriptionSource struct {
 
 	// 订阅源ID，需保证全局唯一。指定ID的订阅源存在时则进行更新，否则进行创建；未指定时由系统自动生成。  由小写字母、数字、中划线组成，必须字母或数字开头，长度为32~64字符。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 订阅的事件源名称
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 订阅的事件源的提供方类型
-	ProviderType SubscriptionSourceProviderType `json:"provider_type"`
+	ProviderType SubscriptionSourceProviderType `json:"provider_type" xml:"provider_type"`
 
 	// 订阅的事件源参数列表，该字段序列化后总长度不超过1024字节。
-	Detail *interface{} `json:"detail,omitempty"`
+	Detail *interface{} `json:"detail,omitempty" xml:"detail"`
 
 	// 订阅事件源的匹配过滤规则，该字段序列化后总长度不超过2048字节。
-	Filter *interface{} `json:"filter"`
+	Filter *interface{} `json:"filter" xml:"filter"`
 }
 
 func (o SubscriptionSource) String() string {

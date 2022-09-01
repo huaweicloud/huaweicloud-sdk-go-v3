@@ -9,7 +9,7 @@ import (
 type OpenEngressEipReq struct {
 
 	// 出公网带宽  单位：Mbit/s
-	BandwidthSize *string `json:"bandwidth_size,omitempty"`
+	BandwidthSize *string `json:"bandwidth_size,omitempty" xml:"bandwidth_size"`
 }
 
 func (o OpenEngressEipReq) String() string {

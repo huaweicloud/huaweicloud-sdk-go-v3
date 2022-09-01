@@ -9,16 +9,16 @@ import (
 type UploadProcessJsonDetail struct {
 
 	// id
-	Id *int32 `json:"id,omitempty"`
+	Id *int32 `json:"id,omitempty" xml:"id"`
 
 	// name
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// status
-	Status *int32 `json:"status,omitempty"`
+	Status *int32 `json:"status,omitempty" xml:"status"`
 
 	// cause
-	Cause *string `json:"cause,omitempty"`
+	Cause *string `json:"cause,omitempty" xml:"cause"`
 }
 
 func (o UploadProcessJsonDetail) String() string {

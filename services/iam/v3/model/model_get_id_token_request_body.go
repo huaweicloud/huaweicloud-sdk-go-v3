@@ -8,7 +8,7 @@ import (
 
 // 请求体
 type GetIdTokenRequestBody struct {
-	Auth *GetIdTokenAuthParams `json:"auth"`
+	Auth *GetIdTokenAuthParams `json:"auth" xml:"auth"`
 }
 
 func (o GetIdTokenRequestBody) String() string {

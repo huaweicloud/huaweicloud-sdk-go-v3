@@ -13,28 +13,28 @@ import (
 type ShowLifeCycleHookResponse struct {
 
 	// 生命周期挂钩名称。
-	LifecycleHookName *string `json:"lifecycle_hook_name,omitempty"`
+	LifecycleHookName *string `json:"lifecycle_hook_name,omitempty" xml:"lifecycle_hook_name"`
 
 	// 生命周期挂钩类型。INSTANCE_TERMINATING;INSTANCE_LAUNCHING
-	LifecycleHookType *ShowLifeCycleHookResponseLifecycleHookType `json:"lifecycle_hook_type,omitempty"`
+	LifecycleHookType *ShowLifeCycleHookResponseLifecycleHookType `json:"lifecycle_hook_type,omitempty" xml:"lifecycle_hook_type"`
 
 	// 生命周期挂钩默认回调操作。ABANDON;CONTINUE
-	DefaultResult *ShowLifeCycleHookResponseDefaultResult `json:"default_result,omitempty"`
+	DefaultResult *ShowLifeCycleHookResponseDefaultResult `json:"default_result,omitempty" xml:"default_result"`
 
 	// 生命周期挂钩超时时间，单位秒。
-	DefaultTimeout *int32 `json:"default_timeout,omitempty"`
+	DefaultTimeout *int32 `json:"default_timeout,omitempty" xml:"default_timeout"`
 
 	// SMN服务中Topic的唯一的资源标识。
-	NotificationTopicUrn *string `json:"notification_topic_urn,omitempty"`
+	NotificationTopicUrn *string `json:"notification_topic_urn,omitempty" xml:"notification_topic_urn"`
 
 	// SMN服务中Topic的资源名称。
-	NotificationTopicName *string `json:"notification_topic_name,omitempty"`
+	NotificationTopicName *string `json:"notification_topic_name,omitempty" xml:"notification_topic_name"`
 
 	// 自定义通知消息。
-	NotificationMetadata *string `json:"notification_metadata,omitempty"`
+	NotificationMetadata *string `json:"notification_metadata,omitempty" xml:"notification_metadata"`
 
 	// 生命周期挂钩创建时间，遵循UTC时间。
-	CreateTime     *string `json:"create_time,omitempty"`
+	CreateTime     *string `json:"create_time,omitempty" xml:"create_time"`
 	HttpStatusCode int     `json:"-"`
 }
 

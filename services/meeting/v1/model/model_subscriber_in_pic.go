@@ -10,13 +10,13 @@ import (
 type SubscriberInPic struct {
 
 	// 多画面中每个画面的编号。编号从1开始。 默认值为1。
-	Index int32 `json:"index"`
+	Index int32 `json:"index" xml:"index"`
 
 	// 每个画面中与会者标识列表。
-	Subscriber *[]string `json:"subscriber,omitempty"`
+	Subscriber *[]string `json:"subscriber,omitempty" xml:"subscriber"`
 
 	// 是否为辅流。默认值为0。 - 0: 不是辅流。 - 1: 是辅流。
-	IsAssistStream *int32 `json:"isAssistStream,omitempty"`
+	IsAssistStream *int32 `json:"isAssistStream,omitempty" xml:"isAssistStream"`
 }
 
 func (o SubscriberInPic) String() string {

@@ -9,13 +9,13 @@ import (
 type UpdateSnapshotSettingReq struct {
 
 	// 备份使用的OBS桶的桶名。
-	Bucket string `json:"bucket"`
+	Bucket string `json:"bucket" xml:"bucket"`
 
 	// 访问OBS使用的IAM委托名称。
-	Agency string `json:"agency"`
+	Agency string `json:"agency" xml:"agency"`
 
 	// 快照在OBS桶中的存放路径。
-	BasePath string `json:"basePath"`
+	BasePath string `json:"basePath" xml:"basePath"`
 }
 
 func (o UpdateSnapshotSettingReq) String() string {

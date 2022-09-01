@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RegisterCompetitionInfoRequest struct {
-	Body *RegisterInfoRequestModel `json:"body,omitempty"`
+	Body *RegisterInfoRequestModel `json:"body,omitempty" xml:"body"`
 }
 
 func (o RegisterCompetitionInfoRequest) String() string {

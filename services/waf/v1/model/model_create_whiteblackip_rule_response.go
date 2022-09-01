@@ -10,30 +10,30 @@ import (
 type CreateWhiteblackipRuleResponse struct {
 
 	// 规则id
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 黑白名单规则名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 策略id
-	Policyid *string `json:"policyid,omitempty"`
+	Policyid *string `json:"policyid,omitempty" xml:"policyid"`
 
 	// 黑白名单ip地址，需要输入标准的ip地址或地址段，例如：42.123.120.66或42.123.120.0/16
-	Addr *string `json:"addr,omitempty"`
+	Addr *string `json:"addr,omitempty" xml:"addr"`
 
 	// 防护动作：  - 0 拦截  - 1 放行  - 2 仅记录
-	White *int32 `json:"white,omitempty"`
+	White *int32 `json:"white,omitempty" xml:"white"`
 
-	IpGroup *IpGroup `json:"ip_group,omitempty"`
+	IpGroup *IpGroup `json:"ip_group,omitempty" xml:"ip_group"`
 
 	// 规则状态，0：关闭，1：开启
-	Status *int32 `json:"status,omitempty"`
+	Status *int32 `json:"status,omitempty" xml:"status"`
 
 	// 规则描述
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 创建规则的时间戳,13位毫秒时间戳
-	Timestamp      *int64 `json:"timestamp,omitempty"`
+	Timestamp      *int64 `json:"timestamp,omitempty" xml:"timestamp"`
 	HttpStatusCode int    `json:"-"`
 }
 

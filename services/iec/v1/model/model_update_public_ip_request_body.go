@@ -8,7 +8,7 @@ import (
 
 // 更新弹性公网IP请求数据
 type UpdatePublicIpRequestBody struct {
-	Publicip *UpdatePublicIpOption `json:"publicip"`
+	Publicip *UpdatePublicIpOption `json:"publicip" xml:"publicip"`
 }
 
 func (o UpdatePublicIpRequestBody) String() string {

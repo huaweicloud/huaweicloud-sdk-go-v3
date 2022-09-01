@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ShowDatabaseWaterMarkRequest struct {
-	Body *ExtractedDatabaseWatermark `json:"body,omitempty"`
+	Body *ExtractedDatabaseWatermark `json:"body,omitempty" xml:"body"`
 }
 
 func (o ShowDatabaseWaterMarkRequest) String() string {

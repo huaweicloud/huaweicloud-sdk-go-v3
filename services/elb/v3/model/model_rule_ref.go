@@ -10,7 +10,7 @@ import (
 type RuleRef struct {
 
 	// 规则ID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 }
 
 func (o RuleRef) String() string {

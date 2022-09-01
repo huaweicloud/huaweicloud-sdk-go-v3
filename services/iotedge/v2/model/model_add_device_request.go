@@ -10,9 +10,9 @@ import (
 type AddDeviceRequest struct {
 
 	// 边缘节点ID
-	EdgeNodeId string `json:"edge_node_id"`
+	EdgeNodeId string `json:"edge_node_id" xml:"edge_node_id"`
 
-	Body *AddDeviceRequestBody `json:"body,omitempty"`
+	Body *AddDeviceRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o AddDeviceRequest) String() string {

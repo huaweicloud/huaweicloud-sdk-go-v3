@@ -10,13 +10,13 @@ import (
 type HistorySlot struct {
 
 	// 槽位名称。
-	SlotName string `json:"slot_name"`
+	SlotName string `json:"slot_name" xml:"slot_name"`
 
 	// 槽信息。
-	SlotValues *[]HistorySlotWord `json:"slot_values,omitempty"`
+	SlotValues *[]HistorySlotWord `json:"slot_values,omitempty" xml:"slot_values"`
 
 	// 用户设置的槽位标识。
-	SlotIdentification string `json:"slot_identification"`
+	SlotIdentification string `json:"slot_identification" xml:"slot_identification"`
 }
 
 func (o HistorySlot) String() string {

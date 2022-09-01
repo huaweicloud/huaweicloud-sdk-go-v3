@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ShowPrivateKeyVerifyRequest struct {
-	Body *PrivateKeyVerify `json:"body,omitempty"`
+	Body *PrivateKeyVerify `json:"body,omitempty" xml:"body"`
 }
 
 func (o ShowPrivateKeyVerifyRequest) String() string {

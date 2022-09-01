@@ -9,13 +9,13 @@ import (
 type WorkitemUser struct {
 
 	// 用户32位uuid
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 用户名
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 昵称
-	NickName *string `json:"nick_name,omitempty"`
+	NickName *string `json:"nick_name,omitempty" xml:"nick_name"`
 }
 
 func (o WorkitemUser) String() string {

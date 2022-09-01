@@ -13,25 +13,25 @@ import (
 type ValueListResponseBody struct {
 
 	// 引用表id
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 引用表名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 引用表类型
-	Type *ValueListResponseBodyType `json:"type,omitempty"`
+	Type *ValueListResponseBodyType `json:"type,omitempty" xml:"type"`
 
 	// 引用表时间戳
-	Timestamp *int64 `json:"timestamp,omitempty"`
+	Timestamp *int64 `json:"timestamp,omitempty" xml:"timestamp"`
 
 	// 引用表的值
-	Values *[]string `json:"values,omitempty"`
+	Values *[]string `json:"values,omitempty" xml:"values"`
 
 	// 引用表来源，1代表用户创建，其它值代表modulleX自动生成
-	Producer *int32 `json:"producer,omitempty"`
+	Producer *int32 `json:"producer,omitempty" xml:"producer"`
 
 	// 引用表描述
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 }
 
 func (o ValueListResponseBody) String() string {

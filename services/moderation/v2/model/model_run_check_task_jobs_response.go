@@ -10,10 +10,10 @@ import (
 type RunCheckTaskJobsResponse struct {
 
 	// 调用成功时表示调用结果。  调用失败时无此字段。
-	Result *[]CheckTaskJobsItemsBody `json:"result,omitempty"`
+	Result *[]CheckTaskJobsItemsBody `json:"result,omitempty" xml:"result"`
 
 	// 符合查询条件的总任务数量。
-	Count          *int32 `json:"count,omitempty"`
+	Count          *int32 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

@@ -10,43 +10,43 @@ import (
 type SearchResourceOpRecordRequest struct {
 
 	// 请求requestId，用来标识一路请求，用于问题跟踪定位，建议使用uuId，若不携带，则后台自动生成
-	XRequestId *string `json:"X-Request-Id,omitempty"`
+	XRequestId *string `json:"X-Request-Id,omitempty" xml:"X-Request-Id"`
 
 	// 语言参数，默认为中文zh-CN, 英文为en-US
-	AcceptLanguage *string `json:"Accept-Language,omitempty"`
+	AcceptLanguage *string `json:"Accept-Language,omitempty" xml:"Accept-Language"`
 
 	// 查询偏移量,若超过最大数量，则返回最后一页的数据 默认值：0
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 查询数量 默认值：0
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 搜索条件
-	SearchKey *string `json:"searchKey,omitempty"`
+	SearchKey *string `json:"searchKey,omitempty" xml:"searchKey"`
 
 	// 企业id
-	CorpId string `json:"corp_id"`
+	CorpId string `json:"corp_id" xml:"corp_id"`
 
 	// 查询过期时间在该时间戳之后的订单操作记录
-	StartExpireDate *int64 `json:"startExpireDate,omitempty"`
+	StartExpireDate *int64 `json:"startExpireDate,omitempty" xml:"startExpireDate"`
 
 	// 查询过期时间在该时间戳之前的订单操作记录
-	EndExpireDate *int64 `json:"endExpireDate,omitempty"`
+	EndExpireDate *int64 `json:"endExpireDate,omitempty" xml:"endExpireDate"`
 
 	// 查询操作时间在该时间戳之后的订单操作记录
-	StartOperateDate *int64 `json:"startOperateDate,omitempty"`
+	StartOperateDate *int64 `json:"startOperateDate,omitempty" xml:"startOperateDate"`
 
 	// 查询操作时间在该时间戳之前的订单操作记录
-	EndOperateDate *int64 `json:"endOperateDate,omitempty"`
+	EndOperateDate *int64 `json:"endOperateDate,omitempty" xml:"endOperateDate"`
 
 	// 订单资源类型
-	Type *string `json:"type,omitempty"`
+	Type *string `json:"type,omitempty" xml:"type"`
 
 	// 当前仅当资源类型为vmr时生效
-	TypeId *string `json:"typeId,omitempty"`
+	TypeId *string `json:"typeId,omitempty" xml:"typeId"`
 
 	// 操作类型 - 0：添加 - 1：删除 - 2：修改 - 3：停用 - 4：启用
-	OperateType *int32 `json:"operateType,omitempty"`
+	OperateType *int32 `json:"operateType,omitempty" xml:"operateType"`
 }
 
 func (o SearchResourceOpRecordRequest) String() string {

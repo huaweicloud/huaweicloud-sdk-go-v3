@@ -10,22 +10,22 @@ import (
 type ShowDevicesInGroupRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 设备分组ID
-	GroupId int32 `json:"group_id"`
+	GroupId int32 `json:"group_id" xml:"group_id"`
 
 	// 每页显示条目数量，最大数量999，超过999后只返回999
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 产品名称
-	ProductName *string `json:"product_name,omitempty"`
+	ProductName *string `json:"product_name,omitempty" xml:"product_name"`
 
 	// 设备名称
-	DeviceName *string `json:"device_name,omitempty"`
+	DeviceName *string `json:"device_name,omitempty" xml:"device_name"`
 
 	// 偏移量，表示从此偏移量开始查询， offset大于等于0
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 }
 
 func (o ShowDevicesInGroupRequest) String() string {

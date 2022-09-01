@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type UploadSecretBlobRequest struct {
-	Body *UploadSecretBlobRequestBody `json:"body,omitempty"`
+	Body *UploadSecretBlobRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o UploadSecretBlobRequest) String() string {

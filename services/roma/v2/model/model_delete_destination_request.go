@@ -10,13 +10,13 @@ import (
 type DeleteDestinationRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 规则ID
-	RuleId string `json:"rule_id"`
+	RuleId string `json:"rule_id" xml:"rule_id"`
 
 	// 目标数据源ID
-	DestinationId int32 `json:"destination_id"`
+	DestinationId int32 `json:"destination_id" xml:"destination_id"`
 }
 
 func (o DeleteDestinationRequest) String() string {

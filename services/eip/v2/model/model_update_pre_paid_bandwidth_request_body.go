@@ -8,9 +8,9 @@ import (
 
 // 更新带宽的请求体
 type UpdatePrePaidBandwidthRequestBody struct {
-	Bandwidth *UpdatePrePaidBandwidthOption `json:"bandwidth"`
+	Bandwidth *UpdatePrePaidBandwidthOption `json:"bandwidth" xml:"bandwidth"`
 
-	ExtendParam *UpdatePrePaidBandwidthExtendParamOption `json:"extendParam,omitempty"`
+	ExtendParam *UpdatePrePaidBandwidthExtendParamOption `json:"extendParam,omitempty" xml:"extendParam"`
 }
 
 func (o UpdatePrePaidBandwidthRequestBody) String() string {

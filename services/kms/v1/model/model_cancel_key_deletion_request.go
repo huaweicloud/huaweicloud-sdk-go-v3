@@ -10,9 +10,9 @@ import (
 type CancelKeyDeletionRequest struct {
 
 	// API版本号
-	VersionId string `json:"version_id"`
+	VersionId string `json:"version_id" xml:"version_id"`
 
-	Body *OperateKeyRequestBody `json:"body,omitempty"`
+	Body *OperateKeyRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CancelKeyDeletionRequest) String() string {

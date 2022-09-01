@@ -10,7 +10,7 @@ import (
 type RunCheckPictureResponse struct {
 
 	// 调用成功时表示调用结果。  调用失败时无此字段。  - true表示图像索引库中存在查询的图片。  - false表示图像索引库中不存在查询的图片。
-	Exist          *string `json:"exist,omitempty"`
+	Exist          *string `json:"exist,omitempty" xml:"exist"`
 	HttpStatusCode int     `json:"-"`
 }
 

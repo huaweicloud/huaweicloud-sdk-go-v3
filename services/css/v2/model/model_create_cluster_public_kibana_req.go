@@ -10,9 +10,9 @@ import (
 type CreateClusterPublicKibanaReq struct {
 
 	// 带宽大小。
-	EipSize int32 `json:"eipSize"`
+	EipSize int32 `json:"eipSize" xml:"eipSize"`
 
-	ElbWhiteList *CreateClusterPublicKibanaElbWhiteList `json:"elbWhiteList"`
+	ElbWhiteList *CreateClusterPublicKibanaElbWhiteList `json:"elbWhiteList" xml:"elbWhiteList"`
 }
 
 func (o CreateClusterPublicKibanaReq) String() string {

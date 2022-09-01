@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateVocabularyRequest struct {
-	Body *PostCreateVocabReq `json:"body,omitempty"`
+	Body *PostCreateVocabReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateVocabularyRequest) String() string {

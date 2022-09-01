@@ -9,15 +9,15 @@ import (
 type CreateProjectModuleRequestBody struct {
 
 	// 模块描述
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 模块名称
-	ModuleName string `json:"module_name"`
+	ModuleName string `json:"module_name" xml:"module_name"`
 
 	// 父模块id
-	ParentModuleId *int32 `json:"parent_module_id,omitempty"`
+	ParentModuleId *int32 `json:"parent_module_id,omitempty" xml:"parent_module_id"`
 
-	Owner *UserRequest `json:"owner"`
+	Owner *UserRequest `json:"owner" xml:"owner"`
 }
 
 func (o CreateProjectModuleRequestBody) String() string {

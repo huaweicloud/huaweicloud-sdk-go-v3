@@ -9,43 +9,43 @@ import (
 type Proxy struct {
 
 	// Proxy实例ID。
-	PoolId string `json:"pool_id"`
+	PoolId string `json:"pool_id" xml:"pool_id"`
 
 	// Proxy实例开启状态，取值范围如下。 - open：打开。 - closed：关闭。 - frozen：已冻结。 - opening：打开中。 - closing：关闭中。 - freezing：冻结中。 - unfreezing：解冻中。
-	Status string `json:"status"`
+	Status string `json:"status" xml:"status"`
 
 	// Proxy读写分离地址。
-	Address string `json:"address"`
+	Address string `json:"address" xml:"address"`
 
 	// elb模式的虚拟IP信息。
-	ElbVip string `json:"elb_vip"`
+	ElbVip string `json:"elb_vip" xml:"elb_vip"`
 
 	// 弹性公网IP信息。
-	Eip string `json:"eip"`
+	Eip string `json:"eip" xml:"eip"`
 
 	// Proxy端口信息。
-	Port int32 `json:"port"`
+	Port int32 `json:"port" xml:"port"`
 
 	// Proxy实例状态。 - abnormal：异常。 - normal：正常。 - creating：创建中。 - deleted：已删除。
-	PoolStatus string `json:"pool_status"`
+	PoolStatus string `json:"pool_status" xml:"pool_status"`
 
 	// 延时阈值（单位：KB）。
-	DelayThresholdInKilobytes int32 `json:"delay_threshold_in_kilobytes"`
+	DelayThresholdInKilobytes int32 `json:"delay_threshold_in_kilobytes" xml:"delay_threshold_in_kilobytes"`
 
 	// Proxy实例规格的CPU数量。
-	Cpu string `json:"cpu"`
+	Cpu string `json:"cpu" xml:"cpu"`
 
 	// Proxy实例规格的内存数量。
-	Mem string `json:"mem"`
+	Mem string `json:"mem" xml:"mem"`
 
 	// Proxy节点个数。
-	NodeNum int32 `json:"node_num"`
+	NodeNum int32 `json:"node_num" xml:"node_num"`
 
 	// Proxy节点信息。
-	Nodes []ProxyNode `json:"nodes"`
+	Nodes []ProxyNode `json:"nodes" xml:"nodes"`
 
 	// Proxy主备模式，取值范围：Ha。
-	Mode string `json:"mode"`
+	Mode string `json:"mode" xml:"mode"`
 }
 
 func (o Proxy) String() string {

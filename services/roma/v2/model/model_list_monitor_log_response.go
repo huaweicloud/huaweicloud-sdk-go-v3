@@ -10,13 +10,13 @@ import (
 type ListMonitorLogResponse struct {
 
 	// 总数
-	Total *int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty" xml:"total"`
 
 	// 当前页日志数量
-	Size *int32 `json:"size,omitempty"`
+	Size *int32 `json:"size,omitempty" xml:"size"`
 
 	// 任务监控日志当前页元素
-	Entities       *[]TaskMonitorLog `json:"entities,omitempty"`
+	Entities       *[]TaskMonitorLog `json:"entities,omitempty" xml:"entities"`
 	HttpStatusCode int               `json:"-"`
 }
 

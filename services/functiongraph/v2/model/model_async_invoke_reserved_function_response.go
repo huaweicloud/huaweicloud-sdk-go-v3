@@ -10,9 +10,9 @@ import (
 type AsyncInvokeReservedFunctionResponse struct {
 
 	// 预留实例id
-	InstanceId *string `json:"instance_id,omitempty"`
+	InstanceId *string `json:"instance_id,omitempty" xml:"instance_id"`
 
-	ContentType    *string `json:"Content-Type,omitempty"`
+	ContentType    *string `json:"Content-Type,omitempty" xml:"Content-Type"`
 	HttpStatusCode int     `json:"-"`
 }
 

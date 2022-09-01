@@ -9,22 +9,22 @@ import (
 type LogObject struct {
 
 	// 域名名称。
-	DomainName *string `json:"domain_name,omitempty"`
+	DomainName *string `json:"domain_name,omitempty" xml:"domain_name"`
 
 	// 查询起始时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
-	StartTime *int64 `json:"start_time,omitempty"`
+	StartTime *int64 `json:"start_time,omitempty" xml:"start_time"`
 
 	// 查询结束时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
-	EndTime *int64 `json:"end_time,omitempty"`
+	EndTime *int64 `json:"end_time,omitempty" xml:"end_time"`
 
 	// 日志文件名字。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 文件大小(Byte)。
-	Size *int64 `json:"size,omitempty"`
+	Size *int64 `json:"size,omitempty" xml:"size"`
 
 	// 下载链接。
-	Link *string `json:"link,omitempty"`
+	Link *string `json:"link,omitempty" xml:"link"`
 }
 
 func (o LogObject) String() string {

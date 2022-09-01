@@ -10,9 +10,9 @@ import (
 type CancelAsyncInvocationRequest struct {
 
 	// 函数URN
-	FunctionUrn string `json:"function_urn"`
+	FunctionUrn string `json:"function_urn" xml:"function_urn"`
 
-	Body *CancelAsyncInvocationRequestBody `json:"body,omitempty"`
+	Body *CancelAsyncInvocationRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CancelAsyncInvocationRequest) String() string {

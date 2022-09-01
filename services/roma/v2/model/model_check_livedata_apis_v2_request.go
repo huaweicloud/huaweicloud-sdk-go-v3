@@ -10,9 +10,9 @@ import (
 type CheckLivedataApisV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *LdApiCheckInfo `json:"body,omitempty"`
+	Body *LdApiCheckInfo `json:"body,omitempty" xml:"body"`
 }
 
 func (o CheckLivedataApisV2Request) String() string {

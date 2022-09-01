@@ -9,10 +9,10 @@ import (
 type DomainClassificationItem struct {
 
 	// DomainItem的总数量
-	Total *int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty" xml:"total"`
 
 	// DomainItem详细信息
-	Items *[]DomainItem `json:"items,omitempty"`
+	Items *[]DomainItem `json:"items,omitempty" xml:"items"`
 }
 
 func (o DomainClassificationItem) String() string {

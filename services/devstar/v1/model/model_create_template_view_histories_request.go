@@ -13,9 +13,9 @@ import (
 type CreateTemplateViewHistoriesRequest struct {
 
 	// 语言类型，缺省值为“zh-cn”。  枚举值： - zh-cn：中文 - en-us：英文
-	XLanguage *CreateTemplateViewHistoriesRequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *CreateTemplateViewHistoriesRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 
-	Body *TemplatesInfo `json:"body,omitempty"`
+	Body *TemplatesInfo `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateTemplateViewHistoriesRequest) String() string {

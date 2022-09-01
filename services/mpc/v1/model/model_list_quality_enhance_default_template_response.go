@@ -10,10 +10,10 @@ import (
 type ListQualityEnhanceDefaultTemplateResponse struct {
 
 	// 任务列表
-	TaskArray *[]QualityEnhanceTemplateInfo `json:"task_array,omitempty"`
+	TaskArray *[]QualityEnhanceTemplateInfo `json:"task_array,omitempty" xml:"task_array"`
 
 	// 查询结果数量
-	Total          *int32 `json:"total,omitempty"`
+	Total          *int32 `json:"total,omitempty" xml:"total"`
 	HttpStatusCode int    `json:"-"`
 }
 

@@ -10,18 +10,18 @@ import (
 type CreateExternalEntityReqDto struct {
 
 	// 外部实体Id，节点下唯一
-	ExternalId string `json:"external_id"`
+	ExternalId string `json:"external_id" xml:"external_id"`
 
 	// 连接外部实体的协议类型
-	Protocol string `json:"protocol"`
+	Protocol string `json:"protocol" xml:"protocol"`
 
 	// 连接类型
-	ConnectionType string `json:"connection_type"`
+	ConnectionType string `json:"connection_type" xml:"connection_type"`
 
-	MqttConnectionInfo *MqttConnectionInfo `json:"mqtt_connection_info,omitempty"`
+	MqttConnectionInfo *MqttConnectionInfo `json:"mqtt_connection_info,omitempty" xml:"mqtt_connection_info"`
 
 	// 资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的外部实体归属到IoDA哪个资源空间下的边缘节点设备下，否则创建的外部实体将会归属到默认资源空间下对应的边缘节点下,对应于IoDA的app_id.
-	SpaceId *string `json:"space_id,omitempty"`
+	SpaceId *string `json:"space_id,omitempty" xml:"space_id"`
 }
 
 func (o CreateExternalEntityReqDto) String() string {

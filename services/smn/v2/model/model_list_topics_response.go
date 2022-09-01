@@ -10,13 +10,13 @@ import (
 type ListTopicsResponse struct {
 
 	// 请求的唯一标识ID。
-	RequestId *string `json:"request_id,omitempty"`
+	RequestId *string `json:"request_id,omitempty" xml:"request_id"`
 
 	// 返回的Topic个数。该参数不受offset和limit影响，即返回的是您账户下所有的Topic个数。
-	TopicCount *int32 `json:"topic_count,omitempty"`
+	TopicCount *int32 `json:"topic_count,omitempty" xml:"topic_count"`
 
 	// Topic结构体数组。
-	Topics         *[]ListTopicsItem `json:"topics,omitempty"`
+	Topics         *[]ListTopicsItem `json:"topics,omitempty" xml:"topics"`
 	HttpStatusCode int               `json:"-"`
 }
 

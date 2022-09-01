@@ -10,16 +10,16 @@ import (
 type Job struct {
 
 	// API类型，固定值“Job”，该值不可修改。
-	Kind *string `json:"kind,omitempty"`
+	Kind *string `json:"kind,omitempty" xml:"kind"`
 
 	// API版本，固定值“v3”，该值不可修改。
-	ApiVersion *string `json:"apiVersion,omitempty"`
+	ApiVersion *string `json:"apiVersion,omitempty" xml:"apiVersion"`
 
-	Metadata *JobMetadata `json:"metadata,omitempty"`
+	Metadata *JobMetadata `json:"metadata,omitempty" xml:"metadata"`
 
-	Spec *JobSpec `json:"spec,omitempty"`
+	Spec *JobSpec `json:"spec,omitempty" xml:"spec"`
 
-	Status *JobStatus `json:"status,omitempty"`
+	Status *JobStatus `json:"status,omitempty" xml:"status"`
 }
 
 func (o Job) String() string {

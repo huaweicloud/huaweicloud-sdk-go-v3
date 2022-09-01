@@ -10,7 +10,7 @@ import (
 type LoadBalancerRef struct {
 
 	// 负载均衡器ID。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 }
 
 func (o LoadBalancerRef) String() string {

@@ -10,9 +10,9 @@ import (
 type CreateAppResponse struct {
 
 	// 应用id
-	AppId *string `json:"app_id,omitempty"`
+	AppId *string `json:"app_id,omitempty" xml:"app_id"`
 
-	XRequestId     *string `json:"X-request-Id,omitempty"`
+	XRequestId     *string `json:"X-request-Id,omitempty" xml:"X-request-Id"`
 	HttpStatusCode int     `json:"-"`
 }
 

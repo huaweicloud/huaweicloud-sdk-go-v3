@@ -10,13 +10,13 @@ import (
 type CreateConfigurationDatastoreOption struct {
 
 	// 数据库类型。 - GaussDB(for Cassandra)实例取值为“cassandra”。 - GaussDB(for Mongo)实例取值为\"mongodb\"。 - GaussDB(for Influx)实例取值为\"influxdb\"。
-	Type string `json:"type"`
+	Type string `json:"type" xml:"type"`
 
 	// 数据库版本。 - GaussDB(for Cassandra)实例支持3.11版本，取值为“3.11”。 - GaussDB(for Mongo)实例支持4.0版本，取值为\"4.0\"。 - GaussDB(for Influx)实例支持1.7版本，取值\"1.7\"。
-	Version string `json:"version"`
+	Version string `json:"version" xml:"version"`
 
 	// 数据库部署模式，GaussDB(for Mongo)该参数必选。 - GaussDB(for Mongo) 副本集实例取值为\"ReplicaSet\"。
-	Mode *string `json:"mode,omitempty"`
+	Mode *string `json:"mode,omitempty" xml:"mode"`
 }
 
 func (o CreateConfigurationDatastoreOption) String() string {

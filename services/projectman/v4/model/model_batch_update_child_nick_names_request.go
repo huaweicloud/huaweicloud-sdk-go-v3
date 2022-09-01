@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type BatchUpdateChildNickNamesRequest struct {
-	Body *BatchUpdateChildUserNickNamesRequestBody `json:"body,omitempty"`
+	Body *BatchUpdateChildUserNickNamesRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchUpdateChildNickNamesRequest) String() string {

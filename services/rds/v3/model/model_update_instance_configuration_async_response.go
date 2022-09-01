@@ -10,10 +10,10 @@ import (
 type UpdateInstanceConfigurationAsyncResponse struct {
 
 	// 任务流id
-	JobId *string `json:"job_id,omitempty"`
+	JobId *string `json:"job_id,omitempty" xml:"job_id"`
 
 	// 实例是否需要重启。 - “true”需要重启。 - “false”不需要重启。
-	RestartRequired *bool `json:"restart_required,omitempty"`
+	RestartRequired *bool `json:"restart_required,omitempty" xml:"restart_required"`
 	HttpStatusCode  int   `json:"-"`
 }
 

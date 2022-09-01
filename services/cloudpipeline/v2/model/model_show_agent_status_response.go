@@ -10,10 +10,10 @@ import (
 type ShowAgentStatusResponse struct {
 
 	// Agent状态
-	Status *string `json:"status,omitempty"`
+	Status *string `json:"status,omitempty" xml:"status"`
 
 	// AgentID
-	AgentId        *string `json:"agent_id,omitempty"`
+	AgentId        *string `json:"agent_id,omitempty" xml:"agent_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

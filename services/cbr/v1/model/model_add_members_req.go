@@ -10,7 +10,7 @@ import (
 type AddMembersReq struct {
 
 	// 列表，待添加备份共享成员的project_id。
-	Members []string `json:"members"`
+	Members []string `json:"members" xml:"members"`
 }
 
 func (o AddMembersReq) String() string {

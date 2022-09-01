@@ -10,10 +10,10 @@ import (
 type ListIssueCustomFieldsRequestBody struct {
 
 	// 自定义字段
-	CustomFields *[]string `json:"custom_fields,omitempty"`
+	CustomFields *[]string `json:"custom_fields,omitempty" xml:"custom_fields"`
 
 	// 自定义字段页面显示的含义
-	Names *[]string `json:"names,omitempty"`
+	Names *[]string `json:"names,omitempty" xml:"names"`
 }
 
 func (o ListIssueCustomFieldsRequestBody) String() string {

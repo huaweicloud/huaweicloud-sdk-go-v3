@@ -9,13 +9,13 @@ import (
 type UpdateRepoDomainsRequestBody struct {
 
 	// 当前只支持read权限
-	Permit string `json:"permit"`
+	Permit string `json:"permit" xml:"permit"`
 
 	// 截止时间，UTC时间格式。永久有效为forever
-	Deadline string `json:"deadline"`
+	Deadline string `json:"deadline" xml:"deadline"`
 
 	// 描述。默认值为空字符串
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 }
 
 func (o UpdateRepoDomainsRequestBody) String() string {

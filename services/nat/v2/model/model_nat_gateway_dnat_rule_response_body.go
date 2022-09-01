@@ -13,52 +13,52 @@ import (
 type NatGatewayDnatRuleResponseBody struct {
 
 	// DNAT规则的ID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 项目的ID。
-	TenantId string `json:"tenant_id"`
+	TenantId string `json:"tenant_id" xml:"tenant_id"`
 
 	// DNAT规则的描述。长度限制为255。
-	Description string `json:"description"`
+	Description string `json:"description" xml:"description"`
 
 	// 虚拟机或者裸机的Port ID，对应虚拟私有云场景，与private_ip参数二选一。
-	PortId *string `json:"port_id,omitempty"`
+	PortId *string `json:"port_id,omitempty" xml:"port_id"`
 
 	// 用户私有IP地址，对应专线、云连接场景，与port_id参数二选一。
-	PrivateIp *string `json:"private_ip,omitempty"`
+	PrivateIp *string `json:"private_ip,omitempty" xml:"private_ip"`
 
 	// 虚拟机或者裸机对外提供服务的协议端口号。 取值范围：0~65535。
-	InternalServicePort int32 `json:"internal_service_port"`
+	InternalServicePort int32 `json:"internal_service_port" xml:"internal_service_port"`
 
 	// 公网NAT网关实例的ID。
-	NatGatewayId string `json:"nat_gateway_id"`
+	NatGatewayId string `json:"nat_gateway_id" xml:"nat_gateway_id"`
 
 	// 弹性公网IP的id。
-	FloatingIpId string `json:"floating_ip_id"`
+	FloatingIpId string `json:"floating_ip_id" xml:"floating_ip_id"`
 
 	// 弹性公网IP的IP地址。
-	FloatingIpAddress string `json:"floating_ip_address"`
+	FloatingIpAddress string `json:"floating_ip_address" xml:"floating_ip_address"`
 
 	// Floatingip对外提供服务的端口号。 取值范围：0~65535。
-	ExternalServicePort int32 `json:"external_service_port"`
+	ExternalServicePort int32 `json:"external_service_port" xml:"external_service_port"`
 
 	// 功能说明：DNAT规则的状态。
-	Status NatGatewayDnatRuleResponseBodyStatus `json:"status"`
+	Status NatGatewayDnatRuleResponseBodyStatus `json:"status" xml:"status"`
 
 	// 解冻/冻结状态。 取值范围： − “true”： 解冻 − “false”： 冻结
-	AdminStateUp bool `json:"admin_state_up"`
+	AdminStateUp bool `json:"admin_state_up" xml:"admin_state_up"`
 
 	// 虚拟机或者裸机对外提供服务的协议端口号范围。 功能说明：该端口范围与external _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围。
-	InternalServicePortRange *string `json:"internal_service_port_range,omitempty"`
+	InternalServicePortRange *string `json:"internal_service_port_range,omitempty" xml:"internal_service_port_range"`
 
 	// Floatingip对外提供服务的端口号范围。 功能说明：该端口范围与internal _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围
-	ExternalServicePortRange *string `json:"external_service_port_range,omitempty"`
+	ExternalServicePortRange *string `json:"external_service_port_range,omitempty" xml:"external_service_port_range"`
 
 	// 协议类型，目前支持TCP/tcp、UDP/udp、ANY/any。 对应协议号6、17、0。
-	Protocol NatGatewayDnatRuleResponseBodyProtocol `json:"protocol"`
+	Protocol NatGatewayDnatRuleResponseBodyProtocol `json:"protocol" xml:"protocol"`
 
 	// DNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
-	CreatedAt string `json:"created_at"`
+	CreatedAt string `json:"created_at" xml:"created_at"`
 }
 
 func (o NatGatewayDnatRuleResponseBody) String() string {

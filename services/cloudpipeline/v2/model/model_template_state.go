@@ -10,49 +10,49 @@ import (
 type TemplateState struct {
 
 	// 任务类型
-	Type string `json:"type"`
+	Type string `json:"type" xml:"type"`
 
 	// 任务名字
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 模板任务ID
-	ModuleOrTemplateId string `json:"module_or_template_id"`
+	ModuleOrTemplateId string `json:"module_or_template_id" xml:"module_or_template_id"`
 
 	// 模板任务名字
-	ModuleOrTemplateName string `json:"module_or_template_name"`
+	ModuleOrTemplateName string `json:"module_or_template_name" xml:"module_or_template_name"`
 
 	// 任务在流水线页面展示名字
-	DisplayName string `json:"display_name"`
+	DisplayName string `json:"display_name" xml:"display_name"`
 
 	// 流水线可挂载任务类型
-	DslMethod string `json:"dsl_method"`
+	DslMethod string `json:"dsl_method" xml:"dsl_method"`
 
 	// 任务参数,map类型数据
-	Parameters map[string]interface{} `json:"parameters"`
+	Parameters map[string]interface{} `json:"parameters" xml:"parameters"`
 
 	// 是否手动执行
-	IsManualExecution bool `json:"is_manual_execution"`
+	IsManualExecution bool `json:"is_manual_execution" xml:"is_manual_execution"`
 
 	// 任务参数是否校验
-	JobParameterValidate bool `json:"job_parameter_validate"`
+	JobParameterValidate bool `json:"job_parameter_validate" xml:"job_parameter_validate"`
 
 	// 是否显示代码仓URL
-	IsShowCodehubUrl bool `json:"is_show_codehub_url"`
+	IsShowCodehubUrl bool `json:"is_show_codehub_url" xml:"is_show_codehub_url"`
 
 	// 是否执行
-	IsExecute bool `json:"is_execute"`
+	IsExecute bool `json:"is_execute" xml:"is_execute"`
 
 	// 执行任务ID
-	JobId string `json:"job_id"`
+	JobId string `json:"job_id" xml:"job_id"`
 
 	// 执行任务名字
-	JobName string `json:"job_name"`
+	JobName string `json:"job_name" xml:"job_name"`
 
 	// 任务所属项目ID
-	ProjectId string `json:"project_id"`
+	ProjectId string `json:"project_id" xml:"project_id"`
 
 	// 控制阶段下任务的串并行（type是task的execution_mode值为null，type是stage的execution_mode可选parallel（并行）或者serial（串行））
-	ExecutionMode string `json:"execution_mode"`
+	ExecutionMode string `json:"execution_mode" xml:"execution_mode"`
 }
 
 func (o TemplateState) String() string {

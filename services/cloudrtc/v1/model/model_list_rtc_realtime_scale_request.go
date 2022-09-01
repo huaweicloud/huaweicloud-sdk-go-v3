@@ -10,28 +10,28 @@ import (
 type ListRtcRealtimeScaleRequest struct {
 
 	// 使用AK/SK方式认证时必选，携带的鉴权信息。
-	Authorization *string `json:"Authorization,omitempty"`
+	Authorization *string `json:"Authorization,omitempty" xml:"Authorization"`
 
 	// 使用AK/SK方式认证时必选，请求的发生时间。
-	XSdkDate *string `json:"X-Sdk-Date,omitempty"`
+	XSdkDate *string `json:"X-Sdk-Date,omitempty" xml:"X-Sdk-Date"`
 
 	// 使用AK/SK方式认证时必选，携带项目ID信息，与路径参数中的项目ID相同。
-	XProjectId *string `json:"X-Project-Id,omitempty"`
+	XProjectId *string `json:"X-Project-Id,omitempty" xml:"X-Project-Id"`
 
 	// 应用标识
-	App string `json:"app"`
+	App string `json:"app" xml:"app"`
 
 	// 房间ID
-	RoomId *string `json:"room_id,omitempty"`
+	RoomId *string `json:"room_id,omitempty" xml:"room_id"`
 
 	// 查询的数据类型  OnlineUsers:在线用户数;  RoomCount:在线房间数;
-	Metric string `json:"metric"`
+	Metric string `json:"metric" xml:"metric"`
 
 	// 查询起始时间。UTC时间，格式：YYYY-MM-DDThh:mm:ssZ，如2020-04-23T06:00:00Z，不写默认读取过去1小时数据数据。
-	StartTime *string `json:"start_time,omitempty"`
+	StartTime *string `json:"start_time,omitempty" xml:"start_time"`
 
 	// 查询结束时间。UTC时间，格式：YYYY-MM-DDThh:mm:ssZ，如2020-04-23T07:00:00Z，不写默认为当前时间。
-	EndTime *string `json:"end_time,omitempty"`
+	EndTime *string `json:"end_time,omitempty" xml:"end_time"`
 }
 
 func (o ListRtcRealtimeScaleRequest) String() string {

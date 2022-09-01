@@ -10,7 +10,7 @@ import (
 type PropertyReferenceReq struct {
 
 	// 引用的资产ID，只有single型参数才能填写，可填写null置空
-	AssetId *string `json:"asset_id,omitempty"`
+	AssetId *string `json:"asset_id,omitempty" xml:"asset_id"`
 }
 
 func (o PropertyReferenceReq) String() string {

@@ -10,10 +10,10 @@ import (
 type ListProductsResponse struct {
 
 	// 表示按需付费的产品列表。
-	Hourly *[]ListProductsRespHourly `json:"Hourly,omitempty"`
+	Hourly *[]ListProductsRespHourly `json:"Hourly,omitempty" xml:"Hourly"`
 
 	// 表示包年包月的产品列表。当前暂不支持通过API创建包年包月的rabbitmq实例。
-	Monthly        *[]ListProductsRespHourly `json:"Monthly,omitempty"`
+	Monthly        *[]ListProductsRespHourly `json:"Monthly,omitempty" xml:"Monthly"`
 	HttpStatusCode int                       `json:"-"`
 }
 

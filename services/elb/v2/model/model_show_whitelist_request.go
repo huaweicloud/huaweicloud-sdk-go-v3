@@ -10,7 +10,7 @@ import (
 type ShowWhitelistRequest struct {
 
 	// 白名单的id
-	WhitelistId string `json:"whitelist_id"`
+	WhitelistId string `json:"whitelist_id" xml:"whitelist_id"`
 }
 
 func (o ShowWhitelistRequest) String() string {

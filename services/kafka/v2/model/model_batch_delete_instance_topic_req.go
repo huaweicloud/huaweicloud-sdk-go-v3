@@ -9,7 +9,7 @@ import (
 type BatchDeleteInstanceTopicReq struct {
 
 	// 待删除的topic列表。
-	Topics *[]string `json:"topics,omitempty"`
+	Topics *[]string `json:"topics,omitempty" xml:"topics"`
 }
 
 func (o BatchDeleteInstanceTopicReq) String() string {

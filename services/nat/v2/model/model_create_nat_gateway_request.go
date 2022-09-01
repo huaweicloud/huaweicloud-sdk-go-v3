@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateNatGatewayRequest struct {
-	Body *CreateNatGatewayRequestBody `json:"body,omitempty"`
+	Body *CreateNatGatewayRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateNatGatewayRequest) String() string {

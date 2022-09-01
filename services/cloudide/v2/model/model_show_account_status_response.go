@@ -8,10 +8,10 @@ import (
 
 // Response Object
 type ShowAccountStatusResponse struct {
-	Result *AccountStatus `json:"result,omitempty"`
+	Result *AccountStatus `json:"result,omitempty" xml:"result"`
 
 	// 状态
-	Status         *string `json:"status,omitempty"`
+	Status         *string `json:"status,omitempty" xml:"status"`
 	HttpStatusCode int     `json:"-"`
 }
 

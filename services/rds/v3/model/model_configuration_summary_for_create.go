@@ -13,25 +13,25 @@ import (
 type ConfigurationSummaryForCreate struct {
 
 	// 参数组ID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 参数组名称。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 参数组描述。
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 引擎版本。
-	DatastoreVersionName string `json:"datastore_version_name"`
+	DatastoreVersionName string `json:"datastore_version_name" xml:"datastore_version_name"`
 
 	// 引擎名。
-	DatastoreName ConfigurationSummaryForCreateDatastoreName `json:"datastore_name"`
+	DatastoreName ConfigurationSummaryForCreateDatastoreName `json:"datastore_name" xml:"datastore_name"`
 
 	// 创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
-	Created string `json:"created"`
+	Created string `json:"created" xml:"created"`
 
 	// 更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
-	Updated string `json:"updated"`
+	Updated string `json:"updated" xml:"updated"`
 }
 
 func (o ConfigurationSummaryForCreate) String() string {

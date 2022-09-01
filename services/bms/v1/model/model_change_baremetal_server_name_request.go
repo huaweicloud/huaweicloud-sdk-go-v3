@@ -10,9 +10,9 @@ import (
 type ChangeBaremetalServerNameRequest struct {
 
 	// 裸金属服务器ID
-	ServerId string `json:"server_id"`
+	ServerId string `json:"server_id" xml:"server_id"`
 
-	Body *ChangeBaremetalNameBody `json:"body,omitempty"`
+	Body *ChangeBaremetalNameBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o ChangeBaremetalServerNameRequest) String() string {

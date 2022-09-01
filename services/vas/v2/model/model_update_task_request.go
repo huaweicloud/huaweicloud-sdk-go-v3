@@ -10,12 +10,12 @@ import (
 type UpdateTaskRequest struct {
 
 	// 服务名称
-	ServiceName string `json:"service_name"`
+	ServiceName string `json:"service_name" xml:"service_name"`
 
 	// 指定的服务作业ID
-	TaskId string `json:"task_id"`
+	TaskId string `json:"task_id" xml:"task_id"`
 
-	Body *UpdateTaskRequestBody `json:"body,omitempty"`
+	Body *UpdateTaskRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateTaskRequest) String() string {

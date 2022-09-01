@@ -10,13 +10,13 @@ import (
 type ListMonitoredObjectsRequest struct {
 
 	// 主维度ID，当前支持dcs_instance_id，dcs_memcached_instance_id。
-	DimName string `json:"dim_name"`
+	DimName string `json:"dim_name" xml:"dim_name"`
 
 	// 偏移量，表示从此偏移量开始查询，offset大于等于0
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 每页显示的条目数量
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 }
 
 func (o ListMonitoredObjectsRequest) String() string {

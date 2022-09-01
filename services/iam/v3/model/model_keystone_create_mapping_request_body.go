@@ -8,7 +8,7 @@ import (
 
 //
 type KeystoneCreateMappingRequestBody struct {
-	Mapping *MappingOption `json:"mapping"`
+	Mapping *MappingOption `json:"mapping" xml:"mapping"`
 }
 
 func (o KeystoneCreateMappingRequestBody) String() string {

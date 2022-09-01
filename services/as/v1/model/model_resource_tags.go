@@ -9,10 +9,10 @@ import (
 type ResourceTags struct {
 
 	// 资源标签值。最大长度36个unicode字符。
-	Key *string `json:"key,omitempty"`
+	Key *string `json:"key,omitempty" xml:"key"`
 
 	// 资源标签值。
-	Value *string `json:"value,omitempty"`
+	Value *string `json:"value,omitempty" xml:"value"`
 }
 
 func (o ResourceTags) String() string {

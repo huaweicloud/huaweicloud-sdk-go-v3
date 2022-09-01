@@ -10,19 +10,19 @@ import (
 type ShowCertificatesHttpsInfoRequest struct {
 
 	// 每页的数量，取值范围1-10000，不设值时默认值为30。
-	PageSize *int32 `json:"page_size,omitempty"`
+	PageSize *int32 `json:"page_size,omitempty" xml:"page_size"`
 
 	// 查询的页码。取值范围1-65535，不设值时默认值为1。
-	PageNumber *int32 `json:"page_number,omitempty"`
+	PageNumber *int32 `json:"page_number,omitempty" xml:"page_number"`
 
 	// 加速域名。
-	DomainName *string `json:"domain_name,omitempty"`
+	DomainName *string `json:"domain_name,omitempty" xml:"domain_name"`
 
 	// 域名所属用户的domain_id。
-	UserDomainId *string `json:"user_domain_id,omitempty"`
+	UserDomainId *string `json:"user_domain_id,omitempty" xml:"user_domain_id"`
 
 	// 当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子账号调用接口时，该参数必传。
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
 }
 
 func (o ShowCertificatesHttpsInfoRequest) String() string {

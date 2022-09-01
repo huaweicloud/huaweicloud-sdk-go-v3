@@ -13,7 +13,7 @@ import (
 type ListConfigurationsRequest struct {
 
 	// 语言
-	XLanguage *ListConfigurationsRequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *ListConfigurationsRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 }
 
 func (o ListConfigurationsRequest) String() string {

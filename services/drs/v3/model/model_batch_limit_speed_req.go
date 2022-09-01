@@ -10,7 +10,7 @@ import (
 type BatchLimitSpeedReq struct {
 
 	// 灾备限速设置信息
-	SpeedLimits []LimitSpeedReq `json:"speed_limits"`
+	SpeedLimits []LimitSpeedReq `json:"speed_limits" xml:"speed_limits"`
 }
 
 func (o BatchLimitSpeedReq) String() string {

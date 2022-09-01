@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CancelKeyDeletionRequest struct {
-	Body *OperateKeyRequestBody `json:"body,omitempty"`
+	Body *OperateKeyRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CancelKeyDeletionRequest) String() string {

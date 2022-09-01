@@ -10,10 +10,10 @@ import (
 type HandleUnionMemberQuitListResponse struct {
 
 	// 请求结果
-	Result *string `json:"result,omitempty"`
+	Result *string `json:"result,omitempty" xml:"result"`
 
 	// 操作记录ID
-	OperationId    *string `json:"operation_id,omitempty"`
+	OperationId    *string `json:"operation_id,omitempty" xml:"operation_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

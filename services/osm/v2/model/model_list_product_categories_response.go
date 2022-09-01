@@ -10,10 +10,10 @@ import (
 type ListProductCategoriesResponse struct {
 
 	// 总数
-	TotalCount *int32 `json:"total_count,omitempty"`
+	TotalCount *int32 `json:"total_count,omitempty" xml:"total_count"`
 
 	// 产品类型列表
-	IncidentProductCategoryList *[]IncidentProductCategoryV2 `json:"incident_product_category_list,omitempty"`
+	IncidentProductCategoryList *[]IncidentProductCategoryV2 `json:"incident_product_category_list,omitempty" xml:"incident_product_category_list"`
 	HttpStatusCode              int                          `json:"-"`
 }
 

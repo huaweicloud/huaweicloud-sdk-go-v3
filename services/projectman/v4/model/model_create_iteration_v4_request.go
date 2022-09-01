@@ -10,9 +10,9 @@ import (
 type CreateIterationV4Request struct {
 
 	// devcloud项目的32位id
-	ProjectId string `json:"project_id"`
+	ProjectId string `json:"project_id" xml:"project_id"`
 
-	Body *CreateIterationRequestV4 `json:"body,omitempty"`
+	Body *CreateIterationRequestV4 `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateIterationV4Request) String() string {

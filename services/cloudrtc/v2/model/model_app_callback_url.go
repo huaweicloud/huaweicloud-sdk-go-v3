@@ -13,16 +13,16 @@ import (
 type AppCallbackUrl struct {
 
 	// 回调通知url地址，url必须以http://或https://开头，需要支持POST调用。
-	Url *string `json:"url,omitempty"`
+	Url *string `json:"url,omitempty" xml:"url"`
 
 	// 回调秘钥，主要用于鉴权。如果不设置或者为空，则回调不会增加鉴权头域字段。
-	AuthKey *string `json:"auth_key,omitempty"`
+	AuthKey *string `json:"auth_key,omitempty" xml:"auth_key"`
 
 	// 订阅云端录制通知消息。  取值如下：  - RECORD_NEW_FILE_START：录制模块开始创建新的录制文件。  - RECORD_FILE_COMPLETE：录制模块已经生成录制文件。
-	NotifyEventSubscription *[]AppCallbackUrlNotifyEventSubscription `json:"notify_event_subscription,omitempty"`
+	NotifyEventSubscription *[]AppCallbackUrlNotifyEventSubscription `json:"notify_event_subscription,omitempty" xml:"notify_event_subscription"`
 
 	// 更新时间，形如“2006-01-02T15:04:05.075Z”，时区为：UTC。
-	UpdateTime *string `json:"update_time,omitempty"`
+	UpdateTime *string `json:"update_time,omitempty" xml:"update_time"`
 }
 
 func (o AppCallbackUrl) String() string {

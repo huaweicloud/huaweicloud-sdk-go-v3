@@ -10,10 +10,10 @@ import (
 type DeleteGraphRequest struct {
 
 	// 图ID。
-	GraphId string `json:"graph_id"`
+	GraphId string `json:"graph_id" xml:"graph_id"`
 
 	// 删除图后是否保留备份，默认保留1个自动备份和2个手动备份。该查询参数为空时，表示不保留。
-	KeepBackup *bool `json:"keepBackup,omitempty"`
+	KeepBackup *bool `json:"keepBackup,omitempty" xml:"keepBackup"`
 }
 
 func (o DeleteGraphRequest) String() string {

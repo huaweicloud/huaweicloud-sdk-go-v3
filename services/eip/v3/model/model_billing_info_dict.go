@@ -10,10 +10,10 @@ import (
 type BillingInfoDict struct {
 
 	// 订单信息
-	OrderId *string `json:"order_id,omitempty"`
+	OrderId *string `json:"order_id,omitempty" xml:"order_id"`
 
 	// 产品id
-	ProductId *string `json:"product_id,omitempty"`
+	ProductId *string `json:"product_id,omitempty" xml:"product_id"`
 }
 
 func (o BillingInfoDict) String() string {

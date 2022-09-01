@@ -10,12 +10,12 @@ import (
 type ShowRealTimeInfoOfMeetingResponse struct {
 
 	// 所有参加会议的与会者列表，包括未入会的以及在线的与会者信息。
-	Attendees *[]RealTimeAttendee `json:"attendees,omitempty"`
+	Attendees *[]RealTimeAttendee `json:"attendees,omitempty" xml:"attendees"`
 
 	// 在线会场列表，包括已进入会议、呼叫中、正在加入会议的与会者列表等。
-	Participants *[]RealTimeParticipant `json:"participants,omitempty"`
+	Participants *[]RealTimeParticipant `json:"participants,omitempty" xml:"participants"`
 
-	ConfInfo       *RealTimeConfInfo `json:"confInfo,omitempty"`
+	ConfInfo       *RealTimeConfInfo `json:"confInfo,omitempty" xml:"confInfo"`
 	HttpStatusCode int               `json:"-"`
 }
 

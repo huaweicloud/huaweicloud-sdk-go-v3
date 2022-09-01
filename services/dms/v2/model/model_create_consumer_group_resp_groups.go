@@ -9,10 +9,10 @@ import (
 type CreateConsumerGroupRespGroups struct {
 
 	// 消费组的ID。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 消费组的名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 }
 
 func (o CreateConsumerGroupRespGroups) String() string {

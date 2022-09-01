@@ -9,37 +9,37 @@ import (
 type HistoryRecord1 struct {
 
 	// 构建记录id--唯一key
-	RecordId *string `json:"record_id,omitempty"`
+	RecordId *string `json:"record_id,omitempty" xml:"record_id"`
 
 	// 任务id
-	JobId *string `json:"job_id,omitempty"`
+	JobId *string `json:"job_id,omitempty" xml:"job_id"`
 
 	// 构建编号
-	BuildNumber *int32 `json:"build_number,omitempty"`
+	BuildNumber *int32 `json:"build_number,omitempty" xml:"build_number"`
 
 	// 构建开始时间
-	StartTime *string `json:"start_time,omitempty"`
+	StartTime *string `json:"start_time,omitempty" xml:"start_time"`
 
 	// 构建结束时间
-	EndTime *string `json:"end_time,omitempty"`
+	EndTime *string `json:"end_time,omitempty" xml:"end_time"`
 
 	// 构建结果
-	Result *string `json:"result,omitempty"`
+	Result *string `json:"result,omitempty" xml:"result"`
 
 	// 代码分支
-	Branch *string `json:"branch,omitempty"`
+	Branch *string `json:"branch,omitempty" xml:"branch"`
 
 	// 代码提交的commit id
-	CommitId *string `json:"commit_id,omitempty"`
+	CommitId *string `json:"commit_id,omitempty" xml:"commit_id"`
 
 	// 代码提交时用户输入的提交信息，只有使用codehub仓库时有值
-	CommitMessage *string `json:"commit_message,omitempty"`
+	CommitMessage *string `json:"commit_message,omitempty" xml:"commit_message"`
 
 	// 执行构建任务的用户的用户名
-	Executor *string `json:"executor,omitempty"`
+	Executor *string `json:"executor,omitempty" xml:"executor"`
 
 	// 触发方式，可选值：手工触发，定时触发，代码更新触发，流水线触发
-	TriggerType *string `json:"trigger_type,omitempty"`
+	TriggerType *string `json:"trigger_type,omitempty" xml:"trigger_type"`
 }
 
 func (o HistoryRecord1) String() string {

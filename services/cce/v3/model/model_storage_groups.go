@@ -9,16 +9,16 @@ import (
 type StorageGroups struct {
 
 	// storageGroups的名字，作为虚拟存储组的名字，因此各个group个名字不能重复。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// k8s及runtime所属存储空间。有且仅有一个group被设置为true，不填默认false。
-	CceManaged *bool `json:"cceManaged,omitempty"`
+	CceManaged *bool `json:"cceManaged,omitempty" xml:"cceManaged"`
 
 	// 对应storageSelectors中的name，一个group可选择多个selector；但一个selector只能被一个group选择。
-	SelectorNames []string `json:"selectorNames"`
+	SelectorNames []string `json:"selectorNames" xml:"selectorNames"`
 
 	// group中空间配置的详细管理。
-	VirtualSpaces []VirtualSpace `json:"virtualSpaces"`
+	VirtualSpaces []VirtualSpace `json:"virtualSpaces" xml:"virtualSpaces"`
 }
 
 func (o StorageGroups) String() string {

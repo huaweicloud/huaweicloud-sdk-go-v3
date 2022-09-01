@@ -10,10 +10,10 @@ import (
 type BatchDeleteMembersResponse struct {
 
 	// 请求ID。  注：自动生成 。
-	RequestId *string `json:"request_id,omitempty"`
+	RequestId *string `json:"request_id,omitempty" xml:"request_id"`
 
 	// 后端服务器对象列表。
-	Members        *[]BatchDeleteMembersState `json:"members,omitempty"`
+	Members        *[]BatchDeleteMembersState `json:"members,omitempty" xml:"members"`
 	HttpStatusCode int                        `json:"-"`
 }
 

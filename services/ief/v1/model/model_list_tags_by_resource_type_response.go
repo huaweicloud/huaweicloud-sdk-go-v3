@@ -10,10 +10,10 @@ import (
 type ListTagsByResourceTypeResponse struct {
 
 	// 标签列表
-	Tags *[]Tag `json:"tags,omitempty"`
+	Tags *[]Tag `json:"tags,omitempty" xml:"tags"`
 
 	// 标签数量
-	Count          *int32 `json:"count,omitempty"`
+	Count          *int32 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

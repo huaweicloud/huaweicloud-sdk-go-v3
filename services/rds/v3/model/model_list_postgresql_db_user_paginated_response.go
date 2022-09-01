@@ -10,10 +10,10 @@ import (
 type ListPostgresqlDbUserPaginatedResponse struct {
 
 	// 列表中每个元素表示一个数据库用户。
-	Users *[]PostgresqlUserForList `json:"users,omitempty"`
+	Users *[]PostgresqlUserForList `json:"users,omitempty" xml:"users"`
 
 	// 数据库用户总数。
-	TotalCount     *int32 `json:"total_count,omitempty"`
+	TotalCount     *int32 `json:"total_count,omitempty" xml:"total_count"`
 	HttpStatusCode int    `json:"-"`
 }
 

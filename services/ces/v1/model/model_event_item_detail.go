@@ -13,25 +13,25 @@ import (
 type EventItemDetail struct {
 
 	// 事件内容，最大长度4096。
-	Content *string `json:"content,omitempty"`
+	Content *string `json:"content,omitempty" xml:"content"`
 
 	// 所属分组。  资源分组对应的ID，必须传存在的分组ID。
-	GroupId *string `json:"group_id,omitempty"`
+	GroupId *string `json:"group_id,omitempty" xml:"group_id"`
 
 	// 资源ID，支持字母、数字_ -：，最大长度128。
-	ResourceId *string `json:"resource_id,omitempty"`
+	ResourceId *string `json:"resource_id,omitempty" xml:"resource_id"`
 
 	// 资源名称，支持字母 中文 数字_ -. ，最大长度128。
-	ResourceName *string `json:"resource_name,omitempty"`
+	ResourceName *string `json:"resource_name,omitempty" xml:"resource_name"`
 
 	// 事件状态。  枚举类型：normal\\warning\\incident
-	EventState *EventItemDetailEventState `json:"event_state,omitempty"`
+	EventState *EventItemDetailEventState `json:"event_state,omitempty" xml:"event_state"`
 
 	// 事件级别。  枚举类型：Critical, Major, Minor, Info
-	EventLevel *EventItemDetailEventLevel `json:"event_level,omitempty"`
+	EventLevel *EventItemDetailEventLevel `json:"event_level,omitempty" xml:"event_level"`
 
 	// 事件用户。  支持字母 数字_ -/空格 ，最大长度64。
-	EventUser *string `json:"event_user,omitempty"`
+	EventUser *string `json:"event_user,omitempty" xml:"event_user"`
 }
 
 func (o EventItemDetail) String() string {

@@ -9,13 +9,13 @@ import (
 type ErrorDetail struct {
 
 	// 状态码。
-	ErrorCode *string `json:"error_code,omitempty"`
+	ErrorCode *string `json:"error_code,omitempty" xml:"error_code"`
 
 	// 错误描述信息。
-	ErrorMsg *string `json:"error_msg,omitempty"`
+	ErrorMsg *string `json:"error_msg,omitempty" xml:"error_msg"`
 
 	// 出现错误的客户ID或批量处理消息的ID。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 }
 
 func (o ErrorDetail) String() string {

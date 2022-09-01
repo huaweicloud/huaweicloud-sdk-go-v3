@@ -10,7 +10,7 @@ import (
 type IvsExtentionByNameAndIdRequestBodyData struct {
 
 	// 请求列表，用于支持批量调用。目前暂时只支持单个数据查询。
-	ReqData *[]ExtentionReqDataByNameAndId `json:"req_data,omitempty"`
+	ReqData *[]ExtentionReqDataByNameAndId `json:"req_data,omitempty" xml:"req_data"`
 }
 
 func (o IvsExtentionByNameAndIdRequestBodyData) String() string {

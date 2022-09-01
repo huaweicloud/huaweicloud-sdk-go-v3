@@ -12,16 +12,16 @@ import (
 type Success struct {
 
 	// API请求路径
-	Path *string `json:"path,omitempty"`
+	Path *string `json:"path,omitempty" xml:"path"`
 
 	// API请求方法
-	Method *string `json:"method,omitempty"`
+	Method *string `json:"method,omitempty" xml:"method"`
 
 	// 导入行为： - update：表示更新API - create：表示新建API
-	Action *SuccessAction `json:"action,omitempty"`
+	Action *SuccessAction `json:"action,omitempty" xml:"action"`
 
 	// 导入成功的API编号
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 }
 
 func (o Success) String() string {

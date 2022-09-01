@@ -10,10 +10,10 @@ import (
 type GetIdTokenScopeDomainOrProjectBody struct {
 
 	// domain id 或者 project id，与name字段至少存在一个。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// domain name 或者 project name，与id字段至少存在一个。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 }
 
 func (o GetIdTokenScopeDomainOrProjectBody) String() string {

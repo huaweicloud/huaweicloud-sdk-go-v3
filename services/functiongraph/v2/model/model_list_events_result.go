@@ -10,13 +10,13 @@ import (
 type ListEventsResult struct {
 
 	// 测试事件ID。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 上次修改的时间。
-	LastModified float32 `json:"last_modified,omitempty"`
+	LastModified float32 `json:"last_modified,omitempty" xml:"last_modified"`
 
 	// 测试事件名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 }
 
 func (o ListEventsResult) String() string {

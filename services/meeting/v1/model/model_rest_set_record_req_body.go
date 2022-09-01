@@ -10,7 +10,7 @@ import (
 type RestSetRecordReqBody struct {
 
 	// 默认值为0。 - 0: 停止会议录制。 - 1: 启动会议录制。
-	IsRecord int32 `json:"isRecord"`
+	IsRecord int32 `json:"isRecord" xml:"isRecord"`
 }
 
 func (o RestSetRecordReqBody) String() string {

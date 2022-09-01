@@ -10,10 +10,10 @@ import (
 type ListAssetModelsResponse struct {
 
 	// 总数
-	Count *int64 `json:"count,omitempty"`
+	Count *int64 `json:"count,omitempty" xml:"count"`
 
 	// 模型集，数量不超过limit
-	AssetModels    *[]AssetModelResponse `json:"asset_models,omitempty"`
+	AssetModels    *[]AssetModelResponse `json:"asset_models,omitempty" xml:"asset_models"`
 	HttpStatusCode int                   `json:"-"`
 }
 

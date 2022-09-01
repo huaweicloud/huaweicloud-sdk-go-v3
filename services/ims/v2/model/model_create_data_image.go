@@ -10,16 +10,16 @@ import (
 type CreateDataImage struct {
 
 	// 数据盘镜像名称。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 数据盘ID。
-	VolumeId string `json:"volume_id"`
+	VolumeId string `json:"volume_id" xml:"volume_id"`
 
 	// 数据盘描述。
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 数据盘镜像标签。
-	Tags *[]string `json:"tags,omitempty"`
+	Tags *[]string `json:"tags,omitempty" xml:"tags"`
 }
 
 func (o CreateDataImage) String() string {

@@ -10,10 +10,10 @@ import (
 type UpdateSecretRequestBody struct {
 
 	// 用于加密保护凭据值的KMS主密钥ID。更新凭据的主密钥后，仅新创建的凭据版本使用更新后的主密钥ID加密，之前的凭据版本依旧使用之前的主密钥ID解密。
-	KmsKeyId *string `json:"kms_key_id,omitempty"`
+	KmsKeyId *string `json:"kms_key_id,omitempty" xml:"kms_key_id"`
 
 	// 凭据的描述信息。 约束：2048字节。
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 }
 
 func (o UpdateSecretRequestBody) String() string {

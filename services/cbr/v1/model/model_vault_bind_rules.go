@@ -9,7 +9,7 @@ import (
 type VaultBindRules struct {
 
 	// 按tags过滤自动绑定的资源
-	Tags *[]Tag `json:"tags,omitempty"`
+	Tags *[]Tag `json:"tags,omitempty" xml:"tags"`
 }
 
 func (o VaultBindRules) String() string {

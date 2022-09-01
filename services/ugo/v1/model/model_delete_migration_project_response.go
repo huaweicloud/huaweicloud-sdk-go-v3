@@ -10,7 +10,7 @@ import (
 type DeleteMigrationProjectResponse struct {
 
 	// 迁移项目ID。
-	MigrationProjectId *string `json:"migration_project_id,omitempty"`
+	MigrationProjectId *string `json:"migration_project_id,omitempty" xml:"migration_project_id"`
 	HttpStatusCode     int     `json:"-"`
 }
 

@@ -13,10 +13,10 @@ import (
 type BatchDeleteLoadbalancerTagsRequestBody struct {
 
 	// 操作类型。 取值范围：delete - 删除标签。
-	Action BatchDeleteLoadbalancerTagsRequestBodyAction `json:"action"`
+	Action BatchDeleteLoadbalancerTagsRequestBodyAction `json:"action" xml:"action"`
 
 	// 标签对象列表。
-	Tags *[]ResourceTag `json:"tags,omitempty"`
+	Tags *[]ResourceTag `json:"tags,omitempty" xml:"tags"`
 }
 
 func (o BatchDeleteLoadbalancerTagsRequestBody) String() string {

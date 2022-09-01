@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateAkSkRequest struct {
-	Body *CreateAkskModel `json:"body,omitempty"`
+	Body *CreateAkskModel `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateAkSkRequest) String() string {

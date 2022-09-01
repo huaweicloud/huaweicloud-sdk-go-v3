@@ -10,9 +10,9 @@ import (
 type GetHostListRequestBody struct {
 
 	// 主机ID列表。可以根据主机ID列表进行批量过滤
-	HostIdList []string `json:"host_id_list"`
+	HostIdList []string `json:"host_id_list" xml:"host_id_list"`
 
-	Filter *GetHostListFilter `json:"filter"`
+	Filter *GetHostListFilter `json:"filter" xml:"filter"`
 }
 
 func (o GetHostListRequestBody) String() string {

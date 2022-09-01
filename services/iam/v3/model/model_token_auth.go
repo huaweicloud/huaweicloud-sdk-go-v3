@@ -8,7 +8,7 @@ import (
 
 //
 type TokenAuth struct {
-	Identity *TokenAuthIdentity `json:"identity"`
+	Identity *TokenAuthIdentity `json:"identity" xml:"identity"`
 }
 
 func (o TokenAuth) String() string {

@@ -10,7 +10,7 @@ import (
 type BindEipReq struct {
 
 	// 弹性公网IP的ID。
-	EipId string `json:"eipId"`
+	EipId string `json:"eipId" xml:"eipId"`
 }
 
 func (o BindEipReq) String() string {

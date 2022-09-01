@@ -10,9 +10,9 @@ import (
 type BatchStartOrStopTasksRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *OperateTasksBean `json:"body,omitempty"`
+	Body *OperateTasksBean `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchStartOrStopTasksRequest) String() string {

@@ -8,7 +8,7 @@ import (
 
 // This is a auto create Body Object
 type CacheConfigRequestBody struct {
-	CacheConfig *CacheConfigRequest `json:"cache_config"`
+	CacheConfig *CacheConfigRequest `json:"cache_config" xml:"cache_config"`
 }
 
 func (o CacheConfigRequestBody) String() string {

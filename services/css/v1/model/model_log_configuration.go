@@ -9,31 +9,31 @@ import (
 type LogConfiguration struct {
 
 	// 日志备份ID，通过系统UUID生成。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 集群ID。
-	ClusterId *string `json:"clusterId,omitempty"`
+	ClusterId *string `json:"clusterId,omitempty" xml:"clusterId"`
 
 	// 用于存储日志的OBS桶的桶名。
-	ObsBucket *string `json:"obsBucket,omitempty"`
+	ObsBucket *string `json:"obsBucket,omitempty" xml:"obsBucket"`
 
 	// IAM 委托。
-	Agency *string `json:"agency,omitempty"`
+	Agency *string `json:"agency,omitempty" xml:"agency"`
 
-	// 更新时间。格式为：Unix时间戳格式
-	UpdateAt *int64 `json:"updateAt,omitempty"`
+	// 更新时间。格式为：Unix时间戳格式。
+	UpdateAt *int64 `json:"updateAt,omitempty" xml:"updateAt"`
 
 	// 日志在OBS桶中的备份路径。
-	BasePath *string `json:"basePath,omitempty"`
+	BasePath *string `json:"basePath,omitempty" xml:"basePath"`
 
 	// 自动备份开关。 - true: 自动备份开启。 - false: 自动备份关闭。
-	AutoEnable *bool `json:"autoEnable,omitempty"`
+	AutoEnable *bool `json:"autoEnable,omitempty" xml:"autoEnable"`
 
 	// 自动备份日志开始时间。当autoEnable为false时该字段为null。格式为：格林威治标准时间。
-	Period *string `json:"period,omitempty"`
+	Period *string `json:"period,omitempty" xml:"period"`
 
 	// 日志开关。 - true: 日志开启。 - false: 日志关闭。
-	LogSwitch *bool `json:"logSwitch,omitempty"`
+	LogSwitch *bool `json:"logSwitch,omitempty" xml:"logSwitch"`
 }
 
 func (o LogConfiguration) String() string {

@@ -10,9 +10,9 @@ import (
 type NeutronUpdateSecurityGroupRequest struct {
 
 	// 安全组ID
-	SecurityGroupId string `json:"security_group_id"`
+	SecurityGroupId string `json:"security_group_id" xml:"security_group_id"`
 
-	Body *NeutronUpdateSecurityGroupRequestBody `json:"body,omitempty"`
+	Body *NeutronUpdateSecurityGroupRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o NeutronUpdateSecurityGroupRequest) String() string {

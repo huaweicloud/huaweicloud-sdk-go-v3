@@ -8,10 +8,10 @@ import (
 
 // Response Object
 type CreateInstanceResponse struct {
-	Result *InstancesResponseInstancesVoResult `json:"result,omitempty"`
+	Result *InstancesResponseInstancesVoResult `json:"result,omitempty" xml:"result"`
 
 	// 状态
-	Status         *string `json:"status,omitempty"`
+	Status         *string `json:"status,omitempty" xml:"status"`
 	HttpStatusCode int     `json:"-"`
 }
 

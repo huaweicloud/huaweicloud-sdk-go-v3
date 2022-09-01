@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RunImageModerationRequest struct {
-	Body *ImageDetectionReq `json:"body,omitempty"`
+	Body *ImageDetectionReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o RunImageModerationRequest) String() string {

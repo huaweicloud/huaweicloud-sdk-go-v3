@@ -10,10 +10,10 @@ import (
 type KeystoneShowProtocolRequest struct {
 
 	// 身份提供商ID。
-	IdpId string `json:"idp_id"`
+	IdpId string `json:"idp_id" xml:"idp_id"`
 
 	// 待查询的协议ID。
-	ProtocolId string `json:"protocol_id"`
+	ProtocolId string `json:"protocol_id" xml:"protocol_id"`
 }
 
 func (o KeystoneShowProtocolRequest) String() string {

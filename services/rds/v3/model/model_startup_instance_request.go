@@ -13,10 +13,10 @@ import (
 type StartupInstanceRequest struct {
 
 	// 语言
-	XLanguage *StartupInstanceRequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *StartupInstanceRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 }
 
 func (o StartupInstanceRequest) String() string {

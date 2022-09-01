@@ -13,17 +13,17 @@ import (
 type ShowTakeOverAssetDetailsResponse struct {
 
 	// 媒资ID。
-	AssetId *string `json:"asset_id,omitempty"`
+	AssetId *string `json:"asset_id,omitempty" xml:"asset_id"`
 
 	// 媒资状态。 - \"CREATING\"：上传中 - \"FAILED\"：上传失败 - \"CREATED\"：上传成功 - \"PUBLISHED\"：已发布 - \"DELETED\"：已删除
-	AssetStatus *ShowTakeOverAssetDetailsResponseAssetStatus `json:"asset_status,omitempty"`
+	AssetStatus *ShowTakeOverAssetDetailsResponseAssetStatus `json:"asset_status,omitempty" xml:"asset_status"`
 
 	// 转码状态。 - \"UN_TRANSCODE\"：未转码 - \"WAITING_TRANSCODE\"：等待转码，排队中 - \"TRANSCODING\"：转码中 - \"TRANSCODE_SUCCEED\"：转码成功 - \"TRANSCODE_FAILED\"：转码失败
-	TranscodeStatus *ShowTakeOverAssetDetailsResponseTranscodeStatus `json:"transcode_status,omitempty"`
+	TranscodeStatus *ShowTakeOverAssetDetailsResponseTranscodeStatus `json:"transcode_status,omitempty" xml:"transcode_status"`
 
-	BaseInfo *BaseInfo `json:"base_info,omitempty"`
+	BaseInfo *BaseInfo `json:"base_info,omitempty" xml:"base_info"`
 
-	TranscodeInfo  *TranscodeInfo `json:"transcode_info,omitempty"`
+	TranscodeInfo  *TranscodeInfo `json:"transcode_info,omitempty" xml:"transcode_info"`
 	HttpStatusCode int            `json:"-"`
 }
 

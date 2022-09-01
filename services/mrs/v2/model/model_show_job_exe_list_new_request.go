@@ -13,43 +13,43 @@ import (
 type ShowJobExeListNewRequest struct {
 
 	// 集群ID。获取方法，请参见[获取集群ID](https://support.huaweicloud.com/api-mrs/mrs_02_9001.html)。
-	ClusterId string `json:"cluster_id"`
+	ClusterId string `json:"cluster_id" xml:"cluster_id"`
 
 	// 作业名称，只能由字母、数字、中划线和下划线组成，并且长度为1～128个字符。
-	JobName *string `json:"job_name,omitempty"`
+	JobName *string `json:"job_name,omitempty" xml:"job_name"`
 
 	// 作业ID，只能由字母、数字、中划线(-)组成，并且长度为1~64字符。
-	JobId *string `json:"job_id,omitempty"`
+	JobId *string `json:"job_id,omitempty" xml:"job_id"`
 
 	// 用户名称、只能由字母、数字、特殊字符(-_.)组成，且不能以数字开头，并且长度为1～32字符。
-	User *string `json:"user,omitempty"`
+	User *string `json:"user,omitempty" xml:"user"`
 
 	// 作业类型。 - MapReduce - SparkSubmit - SparkSubmit：SparkPython类型的作业在查询时作业类型请选择SparkSubmit。 - HiveScript - HiveSql - DistCp，导入、导出数据。 - SparkScript - SparkSql - Flink
-	JobType *string `json:"job_type,omitempty"`
+	JobType *string `json:"job_type,omitempty" xml:"job_type"`
 
 	// 作业运行状态。 - FAILED：失败 - KILLED：已终止 - NEW：已创建 - NEW_SAVING：已创建保存中 - SUBMITTED：已提交 - ACCEPTED：已接受 - RUNNING：运行中 - FINISHED：已完成
-	JobState *ShowJobExeListNewRequestJobState `json:"job_state,omitempty"`
+	JobState *ShowJobExeListNewRequestJobState `json:"job_state,omitempty" xml:"job_state"`
 
 	// 作业运行结果。 - FAILED：执行失败的作业。 - KILLED：执行中被手动终止的作业。 - UNDEFINED：正在执行的作业。 - SUCCEEDED：执行成功的作业。
-	JobResult *ShowJobExeListNewRequestJobResult `json:"job_result,omitempty"`
+	JobResult *ShowJobExeListNewRequestJobResult `json:"job_result,omitempty" xml:"job_result"`
 
 	// 作业的资源对列类型名称，作业的资源对列类型名称，只能由数字、字母和特殊字符(-_)组成, 并且长度为1～64字符。
-	Queue *string `json:"queue,omitempty"`
+	Queue *string `json:"queue,omitempty" xml:"queue"`
 
 	// 返回结果中每页显示条数。缺省值：10
-	Limit *string `json:"limit,omitempty"`
+	Limit *string `json:"limit,omitempty" xml:"limit"`
 
 	// 表示作业列表从该偏移量开始查询。缺省值：1
-	Offset *string `json:"offset,omitempty"`
+	Offset *string `json:"offset,omitempty" xml:"offset"`
 
 	// 返回结果的排序方式，默认值为desc。 - asc：按升序排列 - desc：按降序排列
-	SortBy *string `json:"sort_by,omitempty"`
+	SortBy *string `json:"sort_by,omitempty" xml:"sort_by"`
 
 	// 查询该时间之后提交的作业，UTC的毫秒时间戳。例如：1562032041362。
-	SubmittedTimeBegin *int64 `json:"submitted_time_begin,omitempty"`
+	SubmittedTimeBegin *int64 `json:"submitted_time_begin,omitempty" xml:"submitted_time_begin"`
 
 	// 查询该时间之前提交的作业UTC的毫秒时间戳。例如：1562032041362。
-	SubmittedTimeEnd *int64 `json:"submitted_time_end,omitempty"`
+	SubmittedTimeEnd *int64 `json:"submitted_time_end,omitempty" xml:"submitted_time_end"`
 }
 
 func (o ShowJobExeListNewRequest) String() string {

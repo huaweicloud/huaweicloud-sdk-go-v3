@@ -65,13 +65,17 @@ func GenReqDefForCreateCluster() *def.HttpRequestDef {
 func GenReqDefForCreateClustersTags() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/v1.0/{project_id}/css-cluster/{cluster_id}/tags").
+		WithPath("/v1.0/{project_id}/{resource_type}/{cluster_id}/tags").
 		WithResponse(new(model.CreateClustersTagsResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClusterId").
 		WithJsonTag("cluster_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ResourceType").
+		WithJsonTag("resource_type").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -157,13 +161,17 @@ func GenReqDefForDeleteCluster() *def.HttpRequestDef {
 func GenReqDefForDeleteClustersTags() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/v1.0/{project_id}/css-cluster/{cluster_id}/tags/{key}").
+		WithPath("/v1.0/{project_id}/{resource_type}/{cluster_id}/tags/{key}").
 		WithResponse(new(model.DeleteClustersTagsResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClusterId").
 		WithJsonTag("cluster_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ResourceType").
+		WithJsonTag("resource_type").
 		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Key").
@@ -244,9 +252,14 @@ func GenReqDefForListClustersDetails() *def.HttpRequestDef {
 func GenReqDefForListClustersTags() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1.0/{project_id}/css-cluster/tags").
+		WithPath("/v1.0/{project_id}/{resource_type}/tags").
 		WithResponse(new(model.ListClustersTagsResponse)).
 		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ResourceType").
+		WithJsonTag("resource_type").
+		WithLocationType(def.Path))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -422,13 +435,17 @@ func GenReqDefForShowClusterDetail() *def.HttpRequestDef {
 func GenReqDefForShowClusterTag() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1.0/{project_id}/css-cluster/{cluster_id}/tags").
+		WithPath("/v1.0/{project_id}/{resource_type}/{cluster_id}/tags").
 		WithResponse(new(model.ShowClusterTagResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClusterId").
 		WithJsonTag("cluster_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ResourceType").
+		WithJsonTag("resource_type").
 		WithLocationType(def.Path))
 
 	requestDef := reqDefBuilder.Build()
@@ -682,13 +699,17 @@ func GenReqDefForStopVpecp() *def.HttpRequestDef {
 func GenReqDefForUpdateBatchClustersTags() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/v1.0/{project_id}/css-cluster/{cluster_id}/tags/action").
+		WithPath("/v1.0/{project_id}/{resource_type}/{cluster_id}/tags/action").
 		WithResponse(new(model.UpdateBatchClustersTagsResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClusterId").
 		WithJsonTag("cluster_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ResourceType").
+		WithJsonTag("resource_type").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

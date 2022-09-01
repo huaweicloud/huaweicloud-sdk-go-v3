@@ -11,16 +11,16 @@ import (
 
 // 仓库信息
 type RepositoryCreationResult struct {
-	Repository *RepositoryBasicInfo `json:"repository,omitempty"`
+	Repository *RepositoryBasicInfo `json:"repository,omitempty" xml:"repository"`
 
 	// 任务id
-	TaskId *string `json:"task_id,omitempty"`
+	TaskId *string `json:"task_id,omitempty" xml:"task_id"`
 
 	// 任务状态, success:成功,failed:失败,creating:创建中
-	Status *RepositoryCreationResultStatus `json:"status,omitempty"`
+	Status *RepositoryCreationResultStatus `json:"status,omitempty" xml:"status"`
 
 	// 失败原因
-	FailureReason *string `json:"failure_reason,omitempty"`
+	FailureReason *string `json:"failure_reason,omitempty" xml:"failure_reason"`
 }
 
 func (o RepositoryCreationResult) String() string {

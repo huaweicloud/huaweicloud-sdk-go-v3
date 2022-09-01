@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type NovaCreateKeypairResponse struct {
-	Keypair        *NovaKeypair `json:"keypair,omitempty"`
+	Keypair        *NovaKeypair `json:"keypair,omitempty" xml:"keypair"`
 	HttpStatusCode int          `json:"-"`
 }
 

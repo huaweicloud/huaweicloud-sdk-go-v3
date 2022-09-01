@@ -10,10 +10,10 @@ import (
 type IssueItemSfV4Status struct {
 
 	// 状态id
-	Id *int32 `json:"id,omitempty"`
+	Id *int32 `json:"id,omitempty" xml:"id"`
 
 	// 状态名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 }
 
 func (o IssueItemSfV4Status) String() string {

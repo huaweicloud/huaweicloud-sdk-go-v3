@@ -12,31 +12,31 @@ import (
 type Grants struct {
 
 	// 密钥ID。
-	KeyId *string `json:"key_id,omitempty"`
+	KeyId *string `json:"key_id,omitempty" xml:"key_id"`
 
 	// 授权ID，64字节。
-	GrantId *string `json:"grant_id,omitempty"`
+	GrantId *string `json:"grant_id,omitempty" xml:"grant_id"`
 
 	// 被授权用户ID，1~64字节，满足正则匹配“^[a-zA-Z0-9]{1，64}$”。 例如：0d0466b00d0466b00d0466b00d0466b0
-	GranteePrincipal *string `json:"grantee_principal,omitempty"`
+	GranteePrincipal *string `json:"grantee_principal,omitempty" xml:"grantee_principal"`
 
 	// 授权类型。 有效值：“user”，“domain”。
-	GranteePrincipalType *GrantsGranteePrincipalType `json:"grantee_principal_type,omitempty"`
+	GranteePrincipalType *GrantsGranteePrincipalType `json:"grantee_principal_type,omitempty" xml:"grantee_principal_type"`
 
 	// 授权允许的操作列表。 有效的值：“create-datakey”，“create-datakey-without-plaintext”，“encrypt-datakey”，“decrypt-datakey”，“describe-key”，“create-grant”，“retire-grant”，“encrypt-data”，“decrypt-data”。 有效值不能仅为“create-grant”。
-	Operations *[]string `json:"operations,omitempty"`
+	Operations *[]string `json:"operations,omitempty" xml:"operations"`
 
 	// 创建授权用户ID，1~64字节，满足正则匹配“^[a-zA-Z0-9]{1，64}$”。 例如：0d0466b00d0466b00d0466b00d0466b0
-	IssuingPrincipal *string `json:"issuing_principal,omitempty"`
+	IssuingPrincipal *string `json:"issuing_principal,omitempty" xml:"issuing_principal"`
 
 	// 创建时间，时间戳，即从1970年1月1日至该时间的总秒数。 例如：1497341531000
-	CreationDate *string `json:"creation_date,omitempty"`
+	CreationDate *string `json:"creation_date,omitempty" xml:"creation_date"`
 
 	// 授权名字，取值1到255字符，满足正则匹配“^[a-zA-Z0-9:/_-]{1,255}$”。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 可退役授权的用户ID，1~64字节，满足正则匹配“^[a-zA-Z0-9]{1，64}$”。 例如：0d0466b00d0466b00d0466b00d0466b0
-	RetiringPrincipal *string `json:"retiring_principal,omitempty"`
+	RetiringPrincipal *string `json:"retiring_principal,omitempty" xml:"retiring_principal"`
 }
 
 func (o Grants) String() string {

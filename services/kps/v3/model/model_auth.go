@@ -13,10 +13,10 @@ import (
 type Auth struct {
 
 	// 取值为枚举类型。
-	Type *AuthType `json:"type,omitempty"`
+	Type *AuthType `json:"type,omitempty" xml:"type"`
 
 	// - type为枚举值password时，key表示密码； - type为枚举值keypair时，key表示私钥；
-	Key *string `json:"key,omitempty"`
+	Key *string `json:"key,omitempty" xml:"key"`
 }
 
 func (o Auth) String() string {

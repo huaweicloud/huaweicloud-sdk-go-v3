@@ -10,7 +10,7 @@ import (
 type DeleteWatermarkTemplateRequest struct {
 
 	// 水印模板配置id
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 }
 
 func (o DeleteWatermarkTemplateRequest) String() string {

@@ -10,7 +10,7 @@ import (
 type DeleteListenerRequest struct {
 
 	// 监听器ID。
-	ListenerId string `json:"listener_id"`
+	ListenerId string `json:"listener_id" xml:"listener_id"`
 }
 
 func (o DeleteListenerRequest) String() string {

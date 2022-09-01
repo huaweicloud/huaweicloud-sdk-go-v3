@@ -10,9 +10,9 @@ import (
 type ShowStreamCountResponse struct {
 
 	// 采样数据列表。
-	DataList *[]StreamCountData `json:"data_list,omitempty"`
+	DataList *[]StreamCountData `json:"data_list,omitempty" xml:"data_list"`
 
-	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	XRequestId     *string `json:"X-Request-Id,omitempty" xml:"X-Request-Id"`
 	HttpStatusCode int     `json:"-"`
 }
 

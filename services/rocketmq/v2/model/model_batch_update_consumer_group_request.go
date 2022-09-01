@@ -10,9 +10,9 @@ import (
 type BatchUpdateConsumerGroupRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *BatchUpdateConsumerGroupReq `json:"body,omitempty"`
+	Body *BatchUpdateConsumerGroupReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchUpdateConsumerGroupRequest) String() string {

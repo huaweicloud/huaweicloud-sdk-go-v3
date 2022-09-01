@@ -8,7 +8,7 @@ import (
 
 // 创建tag对象的请求体
 type CreatePublicipTagRequestBody struct {
-	Tag *ResourceTagOption `json:"tag"`
+	Tag *ResourceTagOption `json:"tag" xml:"tag"`
 }
 
 func (o CreatePublicipTagRequestBody) String() string {

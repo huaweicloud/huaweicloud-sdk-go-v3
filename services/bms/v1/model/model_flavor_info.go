@@ -10,10 +10,10 @@ import (
 type FlavorInfo struct {
 
 	// 规格ID
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 规格相关信息快捷链接
-	Links *[]Links `json:"links,omitempty"`
+	Links *[]Links `json:"links,omitempty" xml:"links"`
 }
 
 func (o FlavorInfo) String() string {

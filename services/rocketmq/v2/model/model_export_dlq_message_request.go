@@ -10,9 +10,9 @@ import (
 type ExportDlqMessageRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *ExportDlqMessageReq `json:"body,omitempty"`
+	Body *ExportDlqMessageReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o ExportDlqMessageRequest) String() string {

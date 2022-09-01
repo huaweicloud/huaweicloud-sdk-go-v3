@@ -10,7 +10,7 @@ import (
 type UpdateCloseKibanaRequest struct {
 
 	// 指定待关闭的kibana公网访问的集群ID。
-	ClusterId string `json:"cluster_id"`
+	ClusterId string `json:"cluster_id" xml:"cluster_id"`
 }
 
 func (o UpdateCloseKibanaRequest) String() string {

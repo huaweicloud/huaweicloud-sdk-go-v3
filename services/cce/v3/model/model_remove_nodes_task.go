@@ -9,14 +9,14 @@ import (
 type RemoveNodesTask struct {
 
 	// API版本，固定值“v3”。
-	ApiVersion *string `json:"apiVersion,omitempty"`
+	ApiVersion *string `json:"apiVersion,omitempty" xml:"apiVersion"`
 
 	// API类型，固定值“RemoveNodesTask”。
-	Kind *string `json:"kind,omitempty"`
+	Kind *string `json:"kind,omitempty" xml:"kind"`
 
-	Spec *RemoveNodesSpec `json:"spec"`
+	Spec *RemoveNodesSpec `json:"spec" xml:"spec"`
 
-	Status *TaskStatus `json:"status,omitempty"`
+	Status *TaskStatus `json:"status,omitempty" xml:"status"`
 }
 
 func (o RemoveNodesTask) String() string {

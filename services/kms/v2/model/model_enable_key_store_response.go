@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type EnableKeyStoreResponse struct {
-	Keystore       *KeyStoreStateInfo `json:"keystore,omitempty"`
+	Keystore       *KeyStoreStateInfo `json:"keystore,omitempty" xml:"keystore"`
 	HttpStatusCode int                `json:"-"`
 }
 

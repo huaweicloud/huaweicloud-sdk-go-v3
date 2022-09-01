@@ -13,31 +13,31 @@ import (
 type ListChartsResponse struct {
 
 	// id
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// sql语句
-	Sql *string `json:"sql,omitempty"`
+	Sql *string `json:"sql,omitempty" xml:"sql"`
 
 	// 图表名称
-	Title *string `json:"title,omitempty"`
+	Title *string `json:"title,omitempty" xml:"title"`
 
 	// 图表类型
-	Type *ListChartsResponseType `json:"type,omitempty"`
+	Type *ListChartsResponseType `json:"type,omitempty" xml:"type"`
 
 	// 日志组id
-	LogGroupId *string `json:"log_group_id,omitempty"`
+	LogGroupId *string `json:"log_group_id,omitempty" xml:"log_group_id"`
 
 	// 日志组名称
-	LogGroupName *string `json:"log_group_name,omitempty"`
+	LogGroupName *string `json:"log_group_name,omitempty" xml:"log_group_name"`
 
 	// 日志组id
-	LogStreamId *string `json:"log_stream_id,omitempty"`
+	LogStreamId *string `json:"log_stream_id,omitempty" xml:"log_stream_id"`
 
 	// 日志流名称
-	LogStreamName *string `json:"log_stream_name,omitempty"`
+	LogStreamName *string `json:"log_stream_name,omitempty" xml:"log_stream_name"`
 
 	// 图表配置详情
-	Config         *ChartConfig `json:"config,omitempty"`
+	Config         *ChartConfig `json:"config,omitempty" xml:"config"`
 	HttpStatusCode int          `json:"-"`
 }
 

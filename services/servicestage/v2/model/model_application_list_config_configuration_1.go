@@ -9,12 +9,12 @@ import (
 type ApplicationListConfigConfiguration1 struct {
 
 	// 应用ID。
-	ApplicationId *string `json:"application_id,omitempty"`
+	ApplicationId *string `json:"application_id,omitempty" xml:"application_id"`
 
 	// 环境ID。
-	EnvironmentId *string `json:"environment_id,omitempty"`
+	EnvironmentId *string `json:"environment_id,omitempty" xml:"environment_id"`
 
-	Configuration *ApplicationListConfigConfiguration `json:"configuration,omitempty"`
+	Configuration *ApplicationListConfigConfiguration `json:"configuration,omitempty" xml:"configuration"`
 }
 
 func (o ApplicationListConfigConfiguration1) String() string {

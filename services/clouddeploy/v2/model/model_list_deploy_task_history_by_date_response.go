@@ -10,10 +10,10 @@ import (
 type ListDeployTaskHistoryByDateResponse struct {
 
 	// 部署任务历史执行记录列表
-	Result *[]ExecuteRecordV2Body `json:"result,omitempty"`
+	Result *[]ExecuteRecordV2Body `json:"result,omitempty" xml:"result"`
 
 	// 开始时间和结束时间内任务历史执行记录总数
-	TotalNum       *int32 `json:"total_num,omitempty"`
+	TotalNum       *int32 `json:"total_num,omitempty" xml:"total_num"`
 	HttpStatusCode int    `json:"-"`
 }
 

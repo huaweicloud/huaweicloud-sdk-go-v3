@@ -10,22 +10,22 @@ import (
 type HeaderMap struct {
 
 	// 指示回复的内容该以何种形式展示
-	ContentDisposition *string `json:"Content-Disposition,omitempty"`
+	ContentDisposition *string `json:"Content-Disposition,omitempty" xml:"Content-Disposition"`
 
 	// 说明访问者希望采用的语言或语言组合
-	ContentLanguage *string `json:"Content-Language,omitempty"`
+	ContentLanguage *string `json:"Content-Language,omitempty" xml:"Content-Language"`
 
 	// 指定了该响应的资源是否被允许与给定的origin共享
-	AccessControlAllowOrigin *string `json:"Access-Control-Allow-Origin,omitempty"`
+	AccessControlAllowOrigin *string `json:"Access-Control-Allow-Origin,omitempty" xml:"Access-Control-Allow-Origin"`
 
 	// 明确了客户端所要访问的资源允许使用的方法或方法列表
-	AccessControlAllowMethods *string `json:"Access-Control-Allow-Methods,omitempty"`
+	AccessControlAllowMethods *string `json:"Access-Control-Allow-Methods,omitempty" xml:"Access-Control-Allow-Methods"`
 
 	// Access-Control-Allow-Methods 和Access-Control-Allow-Headers 提供的信息可以被缓存多久
-	AccessControlMaxAge *string `json:"Access-Control-Max-Age,omitempty"`
+	AccessControlMaxAge *string `json:"Access-Control-Max-Age,omitempty" xml:"Access-Control-Max-Age"`
 
 	// 列出了哪些首部可以作为响应的一部分暴露给外部
-	AccessControlExposeHeaders *string `json:"Access-Control-Expose-Headers,omitempty"`
+	AccessControlExposeHeaders *string `json:"Access-Control-Expose-Headers,omitempty" xml:"Access-Control-Expose-Headers"`
 }
 
 func (o HeaderMap) String() string {

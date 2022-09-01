@@ -10,10 +10,10 @@ import (
 type NumericalAttr struct {
 
 	// 特征名。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 权重。
-	Weight float32 `json:"weight"`
+	Weight float32 `json:"weight" xml:"weight"`
 }
 
 func (o NumericalAttr) String() string {

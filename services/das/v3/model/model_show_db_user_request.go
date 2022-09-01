@@ -13,13 +13,13 @@ import (
 type ShowDbUserRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 数据库用户ID
-	DbUserId string `json:"db_user_id"`
+	DbUserId string `json:"db_user_id" xml:"db_user_id"`
 
 	// 语言
-	XLanguage *ShowDbUserRequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *ShowDbUserRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 }
 
 func (o ShowDbUserRequest) String() string {

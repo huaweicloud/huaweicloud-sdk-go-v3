@@ -9,25 +9,25 @@ import (
 type DemandProductRatingResult struct {
 
 	// 同一次询价中不能重复，用于标识返回询价结果和请求的映射关系。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 按需产品的ID。
-	ProductId *string `json:"product_id,omitempty"`
+	ProductId *string `json:"product_id,omitempty" xml:"product_id"`
 
 	// 折扣的金额。
-	Amount *float64 `json:"amount,omitempty"`
+	Amount *float64 `json:"amount,omitempty" xml:"amount"`
 
 	// 优惠额（官网价和总价的差）。
-	DiscountAmount *float64 `json:"discount_amount,omitempty"`
+	DiscountAmount *float64 `json:"discount_amount,omitempty" xml:"discount_amount"`
 
 	// 按需产品的官网价。
-	OfficialWebsiteAmount *float64 `json:"official_website_amount,omitempty"`
+	OfficialWebsiteAmount *float64 `json:"official_website_amount,omitempty" xml:"official_website_amount"`
 
 	// 度量单位标识。 1：元
-	MeasureId *int32 `json:"measure_id,omitempty"`
+	MeasureId *int32 `json:"measure_id,omitempty" xml:"measure_id"`
 
 	// 折扣优惠明细，包含产品本身的促销信息，同时包含商务或者伙伴折扣的优惠信息，具体参见表3。
-	DiscountRatingResults *[]DemandDiscountRatingResult `json:"discount_rating_results,omitempty"`
+	DiscountRatingResults *[]DemandDiscountRatingResult `json:"discount_rating_results,omitempty" xml:"discount_rating_results"`
 }
 
 func (o DemandProductRatingResult) String() string {

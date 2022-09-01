@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateAttributeRequest struct {
-	Body *AddOrModifyAttributeReq `json:"body,omitempty"`
+	Body *AddOrModifyAttributeReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateAttributeRequest) String() string {

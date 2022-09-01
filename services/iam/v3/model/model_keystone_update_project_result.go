@@ -10,30 +10,30 @@ import (
 type KeystoneUpdateProjectResult struct {
 
 	// false.
-	IsDomain bool `json:"is_domain"`
+	IsDomain bool `json:"is_domain" xml:"is_domain"`
 
 	// 项目描述信息。
-	Description string `json:"description"`
+	Description string `json:"description" xml:"description"`
 
 	// 项目的其他信息。
-	Extra *interface{} `json:"extra,omitempty"`
+	Extra *interface{} `json:"extra,omitempty" xml:"extra"`
 
-	Links *LinksSelf `json:"links"`
+	Links *LinksSelf `json:"links" xml:"links"`
 
 	// 项目是否可用。
-	Enabled bool `json:"enabled"`
+	Enabled bool `json:"enabled" xml:"enabled"`
 
 	// 项目ID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 区域对应的项目ID，例如区域“华北-北京一”区域对应的项目ID为：04dd42abe48026ad2fa3c01ad7fa.....。
-	ParentId string `json:"parent_id"`
+	ParentId string `json:"parent_id" xml:"parent_id"`
 
 	// 项目所属账号ID。
-	DomainId string `json:"domain_id"`
+	DomainId string `json:"domain_id" xml:"domain_id"`
 
 	// 项目名称。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 }
 
 func (o KeystoneUpdateProjectResult) String() string {

@@ -10,7 +10,7 @@ import (
 type ShowOpLogRequest struct {
 
 	// 任务ID
-	OperationLogId string `json:"operation_log_id"`
+	OperationLogId string `json:"operation_log_id" xml:"operation_log_id"`
 }
 
 func (o ShowOpLogRequest) String() string {

@@ -13,28 +13,28 @@ import (
 type ListSitesRequest struct {
 
 	// 查询返回边缘站点列表当前页面的数量。 取值范围：0~1000。
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 查询的偏移量。默认为0。
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 查询条件，站点ID。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 边缘实例所在大区。   大小写通用，皆支持。 支持多个查询，中间使用','分隔。
-	Area *string `json:"area,omitempty"`
+	Area *string `json:"area,omitempty" xml:"area"`
 
 	// 边缘实例所在省份。  大小写通用，皆支持。 支持多个查询，中间使用“,”分隔。
-	Province *string `json:"province,omitempty"`
+	Province *string `json:"province,omitempty" xml:"province"`
 
 	// 边缘实例所在城市。  大小写通用，皆支持。 支持多个查询，中间使用“,”分隔。
-	City *string `json:"city,omitempty"`
+	City *string `json:"city,omitempty" xml:"city"`
 
 	// 边缘实例规格。
-	Flavor *string `json:"flavor,omitempty"`
+	Flavor *string `json:"flavor,omitempty" xml:"flavor"`
 
 	// 过滤支持磁盘类型的站点，多个类型之间用“,”分割。
-	VolumeType *ListSitesRequestVolumeType `json:"volume_type,omitempty"`
+	VolumeType *ListSitesRequestVolumeType `json:"volume_type,omitempty" xml:"volume_type"`
 }
 
 func (o ListSitesRequest) String() string {

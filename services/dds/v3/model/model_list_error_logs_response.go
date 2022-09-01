@@ -10,10 +10,10 @@ import (
 type ListErrorLogsResponse struct {
 
 	// 具体信息。
-	ErrorLogList *[]ErrorlogResult `json:"error_log_list,omitempty"`
+	ErrorLogList *[]ErrorlogResult `json:"error_log_list,omitempty" xml:"error_log_list"`
 
 	// 数据库版本总记录数。
-	TotalRecord    *int32 `json:"total_record,omitempty"`
+	TotalRecord    *int32 `json:"total_record,omitempty" xml:"total_record"`
 	HttpStatusCode int    `json:"-"`
 }
 

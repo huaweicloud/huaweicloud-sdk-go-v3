@@ -10,13 +10,13 @@ import (
 type ParameterGroup struct {
 
 	// 参数组ID
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 参数组名称
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 集群参数状态，有效值包括：  - In-Sync：已同步 - Applying：应用中 - Pending-Reboot：需重启生效 - Sync-Failure：应用失败
-	Status string `json:"status"`
+	Status string `json:"status" xml:"status"`
 }
 
 func (o ParameterGroup) String() string {

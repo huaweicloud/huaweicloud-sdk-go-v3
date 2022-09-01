@@ -10,10 +10,10 @@ import (
 type ListBandwidthsResponse struct {
 
 	// 带宽列表对象。
-	Bandwidths *[]Bandwidth `json:"bandwidths,omitempty"`
+	Bandwidths *[]Bandwidth `json:"bandwidths,omitempty" xml:"bandwidths"`
 
 	// 带宽数量。
-	Count          *int32 `json:"count,omitempty"`
+	Count          *int32 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

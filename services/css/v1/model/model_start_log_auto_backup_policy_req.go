@@ -9,7 +9,7 @@ import (
 type StartLogAutoBackupPolicyReq struct {
 
 	// 备份开始时间。格式：格林威治标准时间。
-	Period string `json:"period"`
+	Period string `json:"period" xml:"period"`
 }
 
 func (o StartLogAutoBackupPolicyReq) String() string {

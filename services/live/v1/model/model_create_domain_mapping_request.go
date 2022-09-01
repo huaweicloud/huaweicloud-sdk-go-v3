@@ -10,9 +10,9 @@ import (
 type CreateDomainMappingRequest struct {
 
 	// op账号需要携带的特定project_id，当使用op账号时该值为所操作租户的project_id
-	SpecifyProject *string `json:"specify_project,omitempty"`
+	SpecifyProject *string `json:"specify_project,omitempty" xml:"specify_project"`
 
-	Body *DomainMapping `json:"body,omitempty"`
+	Body *DomainMapping `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateDomainMappingRequest) String() string {

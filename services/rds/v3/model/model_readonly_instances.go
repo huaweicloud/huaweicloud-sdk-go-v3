@@ -9,22 +9,22 @@ import (
 type ReadonlyInstances struct {
 
 	// 只读实例ID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 只读实例状态。
-	Status string `json:"status"`
+	Status string `json:"status" xml:"status"`
 
 	// 只读实例名称。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 只读实例读写分离权重。
-	Weight int32 `json:"weight"`
+	Weight int32 `json:"weight" xml:"weight"`
 
 	// 可用区信息。
-	AvailableZones []AvailableZone `json:"available_zones"`
+	AvailableZones []AvailableZone `json:"available_zones" xml:"available_zones"`
 
 	// 只读实例CPU个数。
-	CpuNum int32 `json:"cpu_num"`
+	CpuNum int32 `json:"cpu_num" xml:"cpu_num"`
 }
 
 func (o ReadonlyInstances) String() string {

@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateMpeCallBackRequest struct {
-	Body *MpeCallBackReq `json:"body,omitempty"`
+	Body *MpeCallBackReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateMpeCallBackRequest) String() string {

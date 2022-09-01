@@ -10,10 +10,10 @@ import (
 type DomainInfo struct {
 
 	// 租户id。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 租户name。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 }
 
 func (o DomainInfo) String() string {

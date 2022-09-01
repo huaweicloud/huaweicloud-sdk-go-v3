@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RunTextModerationRequest struct {
-	Body *TextDetectionReq `json:"body,omitempty"`
+	Body *TextDetectionReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o RunTextModerationRequest) String() string {

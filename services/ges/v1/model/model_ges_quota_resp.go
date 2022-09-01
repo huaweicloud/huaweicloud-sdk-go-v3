@@ -9,7 +9,7 @@ import (
 type GesQuotaResp struct {
 
 	// GES资源配额列表。
-	Resources *[]Quota `json:"resources,omitempty"`
+	Resources *[]Quota `json:"resources,omitempty" xml:"resources"`
 }
 
 func (o GesQuotaResp) String() string {

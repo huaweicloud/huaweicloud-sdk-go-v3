@@ -10,23 +10,23 @@ import (
 type ShowMigrationProjectDetailResponse struct {
 
 	// 迁移项目ID。
-	MigrationProjectId *int32 `json:"migration_project_id,omitempty"`
+	MigrationProjectId *int32 `json:"migration_project_id,omitempty" xml:"migration_project_id"`
 
 	// 迁移项目状态。
-	MigrationProjectName *string `json:"migration_project_name,omitempty"`
+	MigrationProjectName *string `json:"migration_project_name,omitempty" xml:"migration_project_name"`
 
 	// 对应的评估项目名称。
-	EvaluationProjectName *string `json:"evaluation_project_name,omitempty"`
+	EvaluationProjectName *string `json:"evaluation_project_name,omitempty" xml:"evaluation_project_name"`
 
-	SourceDbInfo *DataBase `json:"source_db_info,omitempty"`
+	SourceDbInfo *DataBase `json:"source_db_info,omitempty" xml:"source_db_info"`
 
-	TargetDbInfo *DataBase `json:"target_db_info,omitempty"`
+	TargetDbInfo *DataBase `json:"target_db_info,omitempty" xml:"target_db_info"`
 
 	// 创建时间。
-	CreatedTime *string `json:"created_time,omitempty"`
+	CreatedTime *string `json:"created_time,omitempty" xml:"created_time"`
 
 	// 更新时间。
-	UpdatedTime    *string `json:"updated_time,omitempty"`
+	UpdatedTime    *string `json:"updated_time,omitempty" xml:"updated_time"`
 	HttpStatusCode int     `json:"-"`
 }
 

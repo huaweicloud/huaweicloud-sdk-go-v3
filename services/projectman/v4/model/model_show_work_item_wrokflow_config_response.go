@@ -10,7 +10,7 @@ import (
 type ShowWorkItemWrokflowConfigResponse struct {
 
 	// 流转数据
-	Workflows      *[]WorkItemStatusFlowVo `json:"workflows,omitempty"`
+	Workflows      *[]WorkItemStatusFlowVo `json:"workflows,omitempty" xml:"workflows"`
 	HttpStatusCode int                     `json:"-"`
 }
 

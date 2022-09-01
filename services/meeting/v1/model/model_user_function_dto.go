@@ -9,7 +9,7 @@ import (
 type UserFunctionDto struct {
 
 	// 是否开启智能协同白板功能。如果开启，表示该帐号是给智能协同白板使用，占用企业智能协同白板的资源，如果资源不足，则无法开启。 默认值：false。
-	EnableRoom *bool `json:"enableRoom,omitempty"`
+	EnableRoom *bool `json:"enableRoom,omitempty" xml:"enableRoom"`
 }
 
 func (o UserFunctionDto) String() string {

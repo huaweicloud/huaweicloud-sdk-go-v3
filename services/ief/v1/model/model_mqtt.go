@@ -10,13 +10,13 @@ import (
 type Mqtt struct {
 
 	// MQTT监听地址，根据type取值确定。
-	BindAddr string `json:"bind_addr"`
+	BindAddr string `json:"bind_addr" xml:"bind_addr"`
 
 	// 端口号。
-	Port int32 `json:"port"`
+	Port int32 `json:"port" xml:"port"`
 
 	// 类型。枚举值： - nic：网卡类型 - ip：IP类型
-	Type string `json:"type"`
+	Type string `json:"type" xml:"type"`
 }
 
 func (o Mqtt) String() string {

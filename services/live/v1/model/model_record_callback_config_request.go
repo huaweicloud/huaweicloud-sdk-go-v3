@@ -12,19 +12,19 @@ import (
 type RecordCallbackConfigRequest struct {
 
 	// 直播推流域名
-	PublishDomain string `json:"publish_domain"`
+	PublishDomain string `json:"publish_domain" xml:"publish_domain"`
 
 	// app名称。如果需要匹配任意应用则需填写*。录制规则匹配的时候，优先精确app匹配，如果匹配不到，则匹配*
-	App string `json:"app"`
+	App string `json:"app" xml:"app"`
 
 	// 录制回调通知url地址
-	NotifyCallbackUrl *string `json:"notify_callback_url,omitempty"`
+	NotifyCallbackUrl *string `json:"notify_callback_url,omitempty" xml:"notify_callback_url"`
 
 	// 订阅录制通知消息。消息类型。RECORD_NEW_FILE_START开始创建新的录制文件。RECORD_FILE_COMPLETE录制文件生成完成。RECORD_OVER录制结束。RECORD_FAILED表示录制失败。如果不填写,默认订阅RECORD_FILE_COMPLETE
-	NotifyEventSubscription *[]RecordCallbackConfigRequestNotifyEventSubscription `json:"notify_event_subscription,omitempty"`
+	NotifyEventSubscription *[]RecordCallbackConfigRequestNotifyEventSubscription `json:"notify_event_subscription,omitempty" xml:"notify_event_subscription"`
 
 	// 加密类型
-	SignType *RecordCallbackConfigRequestSignType `json:"sign_type,omitempty"`
+	SignType *RecordCallbackConfigRequestSignType `json:"sign_type,omitempty" xml:"sign_type"`
 }
 
 func (o RecordCallbackConfigRequest) String() string {

@@ -10,10 +10,10 @@ import (
 type BaremetalServerTag struct {
 
 	// 键。  - 最大长度127个unicode字符。  - key不能为空。
-	Key string `json:"key"`
+	Key string `json:"key" xml:"key"`
 
 	// 值列表。  - 最多20个value。  - value不允许重复。  - 每个值最大长度255个unicode字符。  - 如果values为空则表示any_value。  - value之间为或的关系。
-	Value string `json:"value"`
+	Value string `json:"value" xml:"value"`
 }
 
 func (o BaremetalServerTag) String() string {

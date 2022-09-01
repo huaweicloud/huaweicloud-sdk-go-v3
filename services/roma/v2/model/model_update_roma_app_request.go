@@ -10,12 +10,12 @@ import (
 type UpdateRomaAppRequest struct {
 
 	// 应用ID
-	AppId string `json:"app_id"`
+	AppId string `json:"app_id" xml:"app_id"`
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *UpdateAppReq `json:"body,omitempty"`
+	Body *UpdateAppReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateRomaAppRequest) String() string {

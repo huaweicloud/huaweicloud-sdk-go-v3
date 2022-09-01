@@ -10,13 +10,13 @@ import (
 type DeleteApplicationV4Request struct {
 
 	// 应用id
-	ApplicationId string `json:"application_id"`
+	ApplicationId string `json:"application_id" xml:"application_id"`
 
 	// 是否删除代码仓
-	IsDeleteRepository *bool `json:"is_delete_repository,omitempty"`
+	IsDeleteRepository *bool `json:"is_delete_repository,omitempty" xml:"is_delete_repository"`
 
 	// 删除流水线ID,多流水线逗号隔开
-	PipelineIds *string `json:"pipeline_ids,omitempty"`
+	PipelineIds *string `json:"pipeline_ids,omitempty" xml:"pipeline_ids"`
 }
 
 func (o DeleteApplicationV4Request) String() string {

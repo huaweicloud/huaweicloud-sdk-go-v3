@@ -10,7 +10,7 @@ import (
 type ShowRegisterServiceResponse struct {
 
 	// 注册服务信息
-	Services       *[]ServicesInfo `json:"services,omitempty"`
+	Services       *[]ServicesInfo `json:"services,omitempty" xml:"services"`
 	HttpStatusCode int             `json:"-"`
 }
 

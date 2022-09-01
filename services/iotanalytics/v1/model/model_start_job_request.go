@@ -10,16 +10,16 @@ import (
 type StartJobRequest struct {
 
 	// 作业ID
-	JobId string `json:"job_id"`
+	JobId string `json:"job_id" xml:"job_id"`
 
 	// 运行作业的并发度
-	Parallel *int32 `json:"parallel,omitempty"`
+	Parallel *int32 `json:"parallel,omitempty" xml:"parallel"`
 
 	// 运行作业的RTU个数
-	Rtu *int32 `json:"rtu,omitempty"`
+	Rtu *int32 `json:"rtu,omitempty" xml:"rtu"`
 
 	// 运行作业使用历史缓存数据
-	ResumeSavepoint *bool `json:"resume_savepoint,omitempty"`
+	ResumeSavepoint *bool `json:"resume_savepoint,omitempty" xml:"resume_savepoint"`
 }
 
 func (o StartJobRequest) String() string {

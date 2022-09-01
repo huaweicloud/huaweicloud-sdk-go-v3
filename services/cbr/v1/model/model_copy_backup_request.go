@@ -10,9 +10,9 @@ import (
 type CopyBackupRequest struct {
 
 	// 复制的备份ID
-	BackupId string `json:"backup_id"`
+	BackupId string `json:"backup_id" xml:"backup_id"`
 
-	Body *BackupReplicateReq `json:"body,omitempty"`
+	Body *BackupReplicateReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o CopyBackupRequest) String() string {

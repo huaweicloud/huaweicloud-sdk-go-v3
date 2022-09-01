@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowServerRemoteConsoleResponse struct {
-	RemoteConsole  *ServerRemoteConsole `json:"remote_console,omitempty"`
+	RemoteConsole  *ServerRemoteConsole `json:"remote_console,omitempty" xml:"remote_console"`
 	HttpStatusCode int                  `json:"-"`
 }
 

@@ -8,7 +8,7 @@ import (
 
 // 创建子网对象
 type CreateSubnetRequestBody struct {
-	Subnet *CreateSubnetOption `json:"subnet"`
+	Subnet *CreateSubnetOption `json:"subnet" xml:"subnet"`
 }
 
 func (o CreateSubnetRequestBody) String() string {

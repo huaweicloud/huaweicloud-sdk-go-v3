@@ -12,49 +12,49 @@ import (
 type RtcUser struct {
 
 	// 域名
-	Domain *string `json:"domain,omitempty"`
+	Domain *string `json:"domain,omitempty" xml:"domain"`
 
 	// 应用标识
-	App *string `json:"app,omitempty"`
+	App *string `json:"app,omitempty" xml:"app"`
 
 	// 房间ID
-	RoomId *string `json:"room_id,omitempty"`
+	RoomId *string `json:"room_id,omitempty" xml:"room_id"`
 
 	// 用户id
-	Uid *string `json:"uid,omitempty"`
+	Uid *string `json:"uid,omitempty" xml:"uid"`
 
 	// 会话id
-	Session *string `json:"session,omitempty"`
+	Session *string `json:"session,omitempty" xml:"session"`
 
 	// 用户状态   - FAIL： 加入失败   - ONLINE：在线   - OFFLINE：离开
-	State *RtcUserState `json:"state,omitempty"`
+	State *RtcUserState `json:"state,omitempty" xml:"state"`
 
 	// 用户昵称
-	NickName *string `json:"nick_name,omitempty"`
+	NickName *string `json:"nick_name,omitempty" xml:"nick_name"`
 
 	// 用户接入IP
-	Ip *string `json:"ip,omitempty"`
+	Ip *string `json:"ip,omitempty" xml:"ip"`
 
 	// 用户接入IP所在省份
-	Region *string `json:"region,omitempty"`
+	Region *string `json:"region,omitempty" xml:"region"`
 
 	// 用户接入IP所在运营商
-	Isp *string `json:"isp,omitempty"`
+	Isp *string `json:"isp,omitempty" xml:"isp"`
 
 	// 用户设备型号
-	DeviceModel *string `json:"device_model,omitempty"`
+	DeviceModel *string `json:"device_model,omitempty" xml:"device_model"`
 
 	// 用户设备平台
-	Platform *string `json:"platform,omitempty"`
+	Platform *string `json:"platform,omitempty" xml:"platform"`
 
 	// 用户sdk版本
-	Sdk *string `json:"sdk,omitempty"`
+	Sdk *string `json:"sdk,omitempty" xml:"sdk"`
 
 	// 用户加入房间时间。格式为：YYYY-MM-DDThh:mm:ssZ
-	JoinTime *string `json:"join_time,omitempty"`
+	JoinTime *string `json:"join_time,omitempty" xml:"join_time"`
 
 	// 用户离开房间时间。格式为：YYYY-MM-DDThh:mm:ssZ，若用户未离开，则返回 “-”
-	LeaveTime *string `json:"leave_time,omitempty"`
+	LeaveTime *string `json:"leave_time,omitempty" xml:"leave_time"`
 }
 
 func (o RtcUser) String() string {

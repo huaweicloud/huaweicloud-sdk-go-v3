@@ -10,10 +10,10 @@ import (
 type ShowHdfsFileListResponse struct {
 
 	// 文件总数，与分页无关。
-	TotalCount *int64 `json:"total_count,omitempty"`
+	TotalCount *int64 `json:"total_count,omitempty" xml:"total_count"`
 
 	// 文件列表。
-	Files          *[]FileStatusV2 `json:"files,omitempty"`
+	Files          *[]FileStatusV2 `json:"files,omitempty" xml:"files"`
 	HttpStatusCode int             `json:"-"`
 }
 

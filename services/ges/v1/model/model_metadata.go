@@ -10,25 +10,25 @@ import (
 type Metadata struct {
 
 	// 元数据 ID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 元数据名称。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 元数据 描述。
-	Description string `json:"description"`
+	Description string `json:"description" xml:"description"`
 
 	// 元数据是否可用。
-	Status string `json:"status"`
+	Status string `json:"status" xml:"status"`
 
 	// 元数据对应路径。
-	MetadataPath string `json:"metadataPath"`
+	MetadataPath string `json:"metadataPath" xml:"metadataPath"`
 
 	// 元数据创建时间戳。
-	CreateTimestamp *string `json:"createTimestamp,omitempty"`
+	CreateTimestamp *string `json:"createTimestamp,omitempty" xml:"createTimestamp"`
 
 	// 元数据最后更新时间戳。
-	LastUpdateTimestamp *string `json:"lastUpdateTimestamp,omitempty"`
+	LastUpdateTimestamp *string `json:"lastUpdateTimestamp,omitempty" xml:"lastUpdateTimestamp"`
 }
 
 func (o Metadata) String() string {

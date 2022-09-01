@@ -13,27 +13,27 @@ import (
 type DiagnosisNodeReport struct {
 
 	// 节点IP。例如：192.168.0.234:6379
-	NodeIp string `json:"node_ip"`
+	NodeIp string `json:"node_ip" xml:"node_ip"`
 
 	// 节点所在可用区Code
-	AzCode string `json:"az_code"`
+	AzCode string `json:"az_code" xml:"az_code"`
 
 	// 节点所在分片的名称
-	GroupName string `json:"group_name"`
+	GroupName string `json:"group_name" xml:"group_name"`
 
 	// 诊断结果为异常的诊断项总数
-	AbnormalSum int32 `json:"abnormal_sum"`
+	AbnormalSum int32 `json:"abnormal_sum" xml:"abnormal_sum"`
 
 	// 诊断失败的诊断项总数
-	FailedSum int32 `json:"failed_sum"`
+	FailedSum int32 `json:"failed_sum" xml:"failed_sum"`
 
 	// 节点角色
-	Role DiagnosisNodeReportRole `json:"role"`
+	Role DiagnosisNodeReportRole `json:"role" xml:"role"`
 
 	// 诊断维度列表
-	DiagnosisDimensionList []DiagnosisDimension `json:"diagnosis_dimension_list"`
+	DiagnosisDimensionList []DiagnosisDimension `json:"diagnosis_dimension_list" xml:"diagnosis_dimension_list"`
 
-	CommandTimeTakenList *CommandTimeTakenList `json:"command_time_taken_list"`
+	CommandTimeTakenList *CommandTimeTakenList `json:"command_time_taken_list" xml:"command_time_taken_list"`
 }
 
 func (o DiagnosisNodeReport) String() string {

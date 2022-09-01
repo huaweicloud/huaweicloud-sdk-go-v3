@@ -10,10 +10,10 @@ import (
 type ShowSharedTagsRequest struct {
 
 	// MIME类型
-	ContentType string `json:"Content-Type"`
+	ContentType string `json:"Content-Type" xml:"Content-Type"`
 
 	// 共享ID
-	ShareId string `json:"share_id"`
+	ShareId string `json:"share_id" xml:"share_id"`
 }
 
 func (o ShowSharedTagsRequest) String() string {

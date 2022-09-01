@@ -10,12 +10,12 @@ import (
 type AddProtectBranchV2Request struct {
 
 	// 仓库主键id
-	RepositoryId int32 `json:"repository_id"`
+	RepositoryId int32 `json:"repository_id" xml:"repository_id"`
 
 	// 分支名称
-	BranchName string `json:"branch_name"`
+	BranchName string `json:"branch_name" xml:"branch_name"`
 
-	Body *AddProtectRequest `json:"body,omitempty"`
+	Body *AddProtectRequest `json:"body,omitempty" xml:"body"`
 }
 
 func (o AddProtectBranchV2Request) String() string {

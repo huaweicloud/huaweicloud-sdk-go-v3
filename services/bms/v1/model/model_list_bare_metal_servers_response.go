@@ -10,10 +10,10 @@ import (
 type ListBareMetalServersResponse struct {
 
 	// 裸金属服务器详情列表
-	Servers *[]ServerDetails `json:"servers,omitempty"`
+	Servers *[]ServerDetails `json:"servers,omitempty" xml:"servers"`
 
 	// 裸金属服务器的列表总数
-	Count          *int32 `json:"count,omitempty"`
+	Count          *int32 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

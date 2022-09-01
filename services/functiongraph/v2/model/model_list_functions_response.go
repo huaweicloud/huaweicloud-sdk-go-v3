@@ -10,13 +10,13 @@ import (
 type ListFunctionsResponse struct {
 
 	// 函数列表。
-	Functions *[]ListFunctionResult `json:"functions,omitempty"`
+	Functions *[]ListFunctionResult `json:"functions,omitempty" xml:"functions"`
 
 	// 函数下次记录读取位置。
-	NextMarker *int32 `json:"next_marker,omitempty"`
+	NextMarker *int32 `json:"next_marker,omitempty" xml:"next_marker"`
 
 	// 满足查询条件的函数总数。
-	Count          *int64 `json:"count,omitempty"`
+	Count          *int64 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

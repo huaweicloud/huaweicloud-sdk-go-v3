@@ -10,37 +10,37 @@ import (
 type CreateEdgeNodeCertsResponse struct {
 
 	// 证书id
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 证书名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 证书的描述
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 证书的创建时间
-	CreatedAt *string `json:"created_at,omitempty"`
+	CreatedAt *string `json:"created_at,omitempty" xml:"created_at"`
 
 	// 节点id
-	NodeId *string `json:"node_id,omitempty"`
+	NodeId *string `json:"node_id,omitempty" xml:"node_id"`
 
 	// 证书类型，包含： - system：创建节点时会默认创建一套系统证书 - application：应用证书 - device：设备证书
-	Type *string `json:"type,omitempty"`
+	Type *string `json:"type,omitempty" xml:"type"`
 
 	// 证书序列号
-	SerialNum *string `json:"serial_num,omitempty"`
+	SerialNum *string `json:"serial_num,omitempty" xml:"serial_num"`
 
 	// 根证书
-	Ca *string `json:"ca,omitempty"`
+	Ca *string `json:"ca,omitempty" xml:"ca"`
 
 	// 证书
-	Certificate *string `json:"certificate,omitempty"`
+	Certificate *string `json:"certificate,omitempty" xml:"certificate"`
 
 	// 私钥
-	PrivateKey *string `json:"private_key,omitempty"`
+	PrivateKey *string `json:"private_key,omitempty" xml:"private_key"`
 
 	// 将证书文件certificate/ca/private_key打成.tar.gz包后用base64编码的字符串。 使用时请使用base64解码成.tar.gz包。
-	Package        *string `json:"package,omitempty"`
+	Package        *string `json:"package,omitempty" xml:"package"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -10,10 +10,10 @@ import (
 type ShowDispatchesRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 任务ID
-	TaskId string `json:"task_id"`
+	TaskId string `json:"task_id" xml:"task_id"`
 }
 
 func (o ShowDispatchesRequest) String() string {

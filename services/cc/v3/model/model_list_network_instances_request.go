@@ -13,34 +13,34 @@ import (
 type ListNetworkInstancesRequest struct {
 
 	// 分页查询时，每页返回的个数。
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 分页查询时，上一页最后一条记录的ID，为空时为查询第一页。 使用说明：必须与limit一起使用。
-	Marker *string `json:"marker,omitempty"`
+	Marker *string `json:"marker,omitempty" xml:"marker"`
 
 	// 根据ID过滤网络实例列表。
-	Id *[]string `json:"id,omitempty"`
+	Id *[]string `json:"id,omitempty" xml:"id"`
 
 	// 根据名称过滤网络实例列表。
-	Name *[]string `json:"name,omitempty"`
+	Name *[]string `json:"name,omitempty" xml:"name"`
 
 	// 根据描述过滤网络实例列表。
-	Description *[]string `json:"description,omitempty"`
+	Description *[]string `json:"description,omitempty" xml:"description"`
 
 	// 根据状态过滤网络实例列表。ACTIVE：表示状态可用。
-	Status *[]ListNetworkInstancesRequestStatus `json:"status,omitempty"`
+	Status *[]ListNetworkInstancesRequestStatus `json:"status,omitempty" xml:"status"`
 
 	// 根据类型过滤网络实例列表。
-	Type *[]string `json:"type,omitempty"`
+	Type *[]string `json:"type,omitempty" xml:"type"`
 
 	// 根据云连接实例ID过滤网络实例列表。
-	CloudConnectionId *[]string `json:"cloud_connection_id,omitempty"`
+	CloudConnectionId *[]string `json:"cloud_connection_id,omitempty" xml:"cloud_connection_id"`
 
 	// 根据网络实例ID过滤网络实例列表。
-	InstanceId *[]string `json:"instance_id,omitempty"`
+	InstanceId *[]string `json:"instance_id,omitempty" xml:"instance_id"`
 
 	// 根据网络实例所在的Region过滤网络实例列表。
-	RegionId *[]string `json:"region_id,omitempty"`
+	RegionId *[]string `json:"region_id,omitempty" xml:"region_id"`
 }
 
 func (o ListNetworkInstancesRequest) String() string {

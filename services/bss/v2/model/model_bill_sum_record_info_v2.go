@@ -9,64 +9,64 @@ import (
 type BillSumRecordInfoV2 struct {
 
 	// 消费汇总数据所在账期，东八区时间，格式：YYYY-MM。
-	BillCycle *string `json:"bill_cycle,omitempty"`
+	BillCycle *string `json:"bill_cycle,omitempty" xml:"bill_cycle"`
 
 	// 资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
-	ResourceTypeCode *string `json:"resource_type_code,omitempty"`
+	ResourceTypeCode *string `json:"resource_type_code,omitempty" xml:"resource_type_code"`
 
 	// 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
-	ServiceTypeCode *string `json:"service_type_code,omitempty"`
+	ServiceTypeCode *string `json:"service_type_code,omitempty" xml:"service_type_code"`
 
 	// 云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
-	ServiceTypeName *string `json:"service_type_name,omitempty"`
+	ServiceTypeName *string `json:"service_type_name,omitempty" xml:"service_type_name"`
 
 	// 资源类型名称。例如ECS的资源类型名称为“云主机”。
-	ResourceTypeName *string `json:"resource_type_name,omitempty"`
+	ResourceTypeName *string `json:"resource_type_name,omitempty" xml:"resource_type_name"`
 
 	// 计费模式。 1：包年/包月3：按需10：预留实例
-	ChargingMode *int32 `json:"charging_mode,omitempty"`
+	ChargingMode *int32 `json:"charging_mode,omitempty" xml:"charging_mode"`
 
 	// 官网价。
-	OfficialAmount *float64 `json:"official_amount,omitempty"`
+	OfficialAmount *float64 `json:"official_amount,omitempty" xml:"official_amount"`
 
 	// 折扣金额。
-	OfficialDiscountAmount *float64 `json:"official_discount_amount,omitempty"`
+	OfficialDiscountAmount *float64 `json:"official_discount_amount,omitempty" xml:"official_discount_amount"`
 
 	// 抹零金额。
-	TruncatedAmount *float64 `json:"truncated_amount,omitempty"`
+	TruncatedAmount *float64 `json:"truncated_amount,omitempty" xml:"truncated_amount"`
 
 	// 应付金额。 应付金额=官网价-折扣金额-抹零金额
-	ConsumeAmount *float64 `json:"consume_amount,omitempty"`
+	ConsumeAmount *float64 `json:"consume_amount,omitempty" xml:"consume_amount"`
 
 	// 代金券金额。
-	CouponAmount *float64 `json:"coupon_amount,omitempty"`
+	CouponAmount *float64 `json:"coupon_amount,omitempty" xml:"coupon_amount"`
 
 	// 现金券金额，预留。
-	FlexipurchaseCouponAmount *float64 `json:"flexipurchase_coupon_amount,omitempty"`
+	FlexipurchaseCouponAmount *float64 `json:"flexipurchase_coupon_amount,omitempty" xml:"flexipurchase_coupon_amount"`
 
 	// 储值卡金额，预留。
-	StoredValueCardAmount *float64 `json:"stored_value_card_amount,omitempty"`
+	StoredValueCardAmount *float64 `json:"stored_value_card_amount,omitempty" xml:"stored_value_card_amount"`
 
 	// 欠费金额。即伙伴从客户账户扣费时，客户账户金额不足，欠费的金额。
-	DebtAmount *float64 `json:"debt_amount,omitempty"`
+	DebtAmount *float64 `json:"debt_amount,omitempty" xml:"debt_amount"`
 
 	// 欠费核销金额。
-	WriteoffAmount *float64 `json:"writeoff_amount,omitempty"`
+	WriteoffAmount *float64 `json:"writeoff_amount,omitempty" xml:"writeoff_amount"`
 
 	// 现金账户金额。
-	CashAmount *float64 `json:"cash_amount,omitempty"`
+	CashAmount *float64 `json:"cash_amount,omitempty" xml:"cash_amount"`
 
 	// 信用账户金额。
-	CreditAmount *float64 `json:"credit_amount,omitempty"`
+	CreditAmount *float64 `json:"credit_amount,omitempty" xml:"credit_amount"`
 
 	// 金额单位。 1：元
-	MeasureId *int32 `json:"measure_id,omitempty"`
+	MeasureId *int32 `json:"measure_id,omitempty" xml:"measure_id"`
 
 	// 账单类型。 1：消费2：退款3：调账
-	BillType *int32 `json:"bill_type,omitempty"`
+	BillType *int32 `json:"bill_type,omitempty" xml:"bill_type"`
 
 	// 消费的客户账号ID。 如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户ID。如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户ID。如果是企业主自己的消费记录，则为企业主ID；如果是某个企业子客户的消费记录，则此处为企业子账号ID。
-	CustomerId *string `json:"customer_id,omitempty"`
+	CustomerId *string `json:"customer_id,omitempty" xml:"customer_id"`
 }
 
 func (o BillSumRecordInfoV2) String() string {

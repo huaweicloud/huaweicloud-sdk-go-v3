@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateLogtankRequest struct {
-	Body *CreateLogtankRequestBody `json:"body,omitempty"`
+	Body *CreateLogtankRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateLogtankRequest) String() string {

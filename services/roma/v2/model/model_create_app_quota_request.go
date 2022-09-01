@@ -10,9 +10,9 @@ import (
 type CreateAppQuotaRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *AppQuotaCreate `json:"body,omitempty"`
+	Body *AppQuotaCreate `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateAppQuotaRequest) String() string {

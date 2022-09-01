@@ -9,10 +9,10 @@ import (
 type CreateLabelsReq struct {
 
 	// 标签名称
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 颜色值，如#000000
-	Color string `json:"color"`
+	Color string `json:"color" xml:"color"`
 }
 
 func (o CreateLabelsReq) String() string {

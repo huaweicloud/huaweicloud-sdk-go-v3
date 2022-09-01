@@ -10,7 +10,7 @@ import (
 type ListGaussMySqlDatabaseCharsetsResponse struct {
 
 	// 数据库字符集列表
-	Charsets       *[]string `json:"charsets,omitempty"`
+	Charsets       *[]string `json:"charsets,omitempty" xml:"charsets"`
 	HttpStatusCode int       `json:"-"`
 }
 

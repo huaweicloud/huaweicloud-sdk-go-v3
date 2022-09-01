@@ -10,10 +10,10 @@ import (
 type ListVpcRoutesResponse struct {
 
 	// route对象列表
-	Routes *[]VpcRoute `json:"routes,omitempty"`
+	Routes *[]VpcRoute `json:"routes,omitempty" xml:"routes"`
 
 	// 分页信息
-	RoutesLinks    *[]NeutronPageLink `json:"routes_links,omitempty"`
+	RoutesLinks    *[]NeutronPageLink `json:"routes_links,omitempty" xml:"routes_links"`
 	HttpStatusCode int                `json:"-"`
 }
 

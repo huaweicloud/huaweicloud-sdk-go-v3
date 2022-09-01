@@ -12,16 +12,16 @@ import (
 type HttpGetDto struct {
 
 	// 请求路径
-	Path string `json:"path"`
+	Path string `json:"path" xml:"path"`
 
 	// 端口
-	Port int32 `json:"port"`
+	Port int32 `json:"port" xml:"port"`
 
 	// 主机地址
-	Host *string `json:"host,omitempty"`
+	Host *string `json:"host,omitempty" xml:"host"`
 
 	// 协议类型
-	Scheme HttpGetDtoScheme `json:"scheme"`
+	Scheme HttpGetDtoScheme `json:"scheme" xml:"scheme"`
 }
 
 func (o HttpGetDto) String() string {

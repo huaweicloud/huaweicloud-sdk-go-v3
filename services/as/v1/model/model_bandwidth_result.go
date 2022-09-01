@@ -13,16 +13,16 @@ import (
 type BandwidthResult struct {
 
 	// 带宽（Mbit/s）。
-	Size *int32 `json:"size,omitempty"`
+	Size *int32 `json:"size,omitempty" xml:"size"`
 
 	// 带宽的共享类型。共享类型枚举：PER，表示独享。目前只支持独享。
-	ShareType *BandwidthResultShareType `json:"share_type,omitempty"`
+	ShareType *BandwidthResultShareType `json:"share_type,omitempty" xml:"share_type"`
 
 	// 带宽的计费类型。字段值为“bandwidth”，表示按带宽计费。字段值为“traffic”，表示按流量计费。
-	ChargingMode *BandwidthResultChargingMode `json:"charging_mode,omitempty"`
+	ChargingMode *BandwidthResultChargingMode `json:"charging_mode,omitempty" xml:"charging_mode"`
 
 	// 带宽ID，创建WHOLE类型带宽的弹性IP时指定的共享带宽。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 }
 
 func (o BandwidthResult) String() string {

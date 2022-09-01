@@ -10,11 +10,11 @@ import (
 type ShowAutoRecordResponse struct {
 
 	// 应用id
-	AppId *string `json:"app_id,omitempty"`
+	AppId *string `json:"app_id,omitempty" xml:"app_id"`
 
-	AutoRecordMode *AppAutoRecordMode `json:"auto_record_mode,omitempty"`
+	AutoRecordMode *AppAutoRecordMode `json:"auto_record_mode,omitempty" xml:"auto_record_mode"`
 
-	XRequestId     *string `json:"X-request-Id,omitempty"`
+	XRequestId     *string `json:"X-request-Id,omitempty" xml:"X-request-Id"`
 	HttpStatusCode int     `json:"-"`
 }
 

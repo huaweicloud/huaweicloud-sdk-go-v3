@@ -8,7 +8,7 @@ import (
 
 // 边缘节点的终端设备信息
 type EdgeNodeUpdateByDevice struct {
-	Nodes *NodeUpdateByDevice `json:"nodes"`
+	Nodes *NodeUpdateByDevice `json:"nodes" xml:"nodes"`
 }
 
 func (o EdgeNodeUpdateByDevice) String() string {

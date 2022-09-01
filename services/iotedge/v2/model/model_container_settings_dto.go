@@ -7,21 +7,21 @@ import (
 )
 
 type ContainerSettingsDto struct {
-	Configs *ContainerConfigsDto `json:"configs,omitempty"`
+	Configs *ContainerConfigsDto `json:"configs,omitempty" xml:"configs"`
 
 	// 镜像存储地址
-	ImageUrl string `json:"image_url"`
+	ImageUrl string `json:"image_url" xml:"image_url"`
 
 	// 环境变量
-	Envs *interface{} `json:"envs,omitempty"`
+	Envs *interface{} `json:"envs,omitempty" xml:"envs"`
 
 	// 卷配置
-	Volumes *[]VolumeDto `json:"volumes,omitempty"`
+	Volumes *[]VolumeDto `json:"volumes,omitempty" xml:"volumes"`
 
-	Resources *ResourceDto `json:"resources,omitempty"`
+	Resources *ResourceDto `json:"resources,omitempty" xml:"resources"`
 
 	// 外挂设备配置
-	ExtDevices *[]ExtDevice `json:"ext_devices,omitempty"`
+	ExtDevices *[]ExtDevice `json:"ext_devices,omitempty" xml:"ext_devices"`
 }
 
 func (o ContainerSettingsDto) String() string {

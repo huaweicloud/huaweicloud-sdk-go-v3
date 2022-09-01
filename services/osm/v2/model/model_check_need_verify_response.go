@@ -11,10 +11,10 @@ import (
 type CheckNeedVerifyResponse struct {
 
 	// 是否需要验证
-	NeedVerifyCode *int32 `json:"need_verify_code,omitempty"`
+	NeedVerifyCode *int32 `json:"need_verify_code,omitempty" xml:"need_verify_code"`
 
 	// 过期时间
-	ExpireTime     *sdktime.SdkTime `json:"expire_time,omitempty"`
+	ExpireTime     *sdktime.SdkTime `json:"expire_time,omitempty" xml:"expire_time"`
 	HttpStatusCode int              `json:"-"`
 }
 

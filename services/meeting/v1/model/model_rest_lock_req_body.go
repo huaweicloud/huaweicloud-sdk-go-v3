@@ -10,7 +10,7 @@ import (
 type RestLockReqBody struct {
 
 	// - 0: 解锁。 - 1: 锁定。
-	IsLock int32 `json:"isLock"`
+	IsLock int32 `json:"isLock" xml:"isLock"`
 }
 
 func (o RestLockReqBody) String() string {

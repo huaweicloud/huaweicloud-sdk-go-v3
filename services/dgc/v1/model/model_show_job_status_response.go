@@ -11,18 +11,18 @@ import (
 
 // Response Object
 type ShowJobStatusResponse struct {
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
-	Status *ShowJobStatusResponseStatus `json:"status,omitempty"`
+	Status *ShowJobStatusResponseStatus `json:"status,omitempty" xml:"status"`
 
-	Starttime *string `json:"starttime,omitempty"`
+	Starttime *string `json:"starttime,omitempty" xml:"starttime"`
 
-	EndTime *string `json:"endTime,omitempty"`
+	EndTime *string `json:"endTime,omitempty" xml:"endTime"`
 
 	// 状态最后更新时间
-	LastUpdateTime *string `json:"lastUpdateTime,omitempty"`
+	LastUpdateTime *string `json:"lastUpdateTime,omitempty" xml:"lastUpdateTime"`
 
-	Nodes          *[]RealTimeNodeStatus `json:"nodes,omitempty"`
+	Nodes          *[]RealTimeNodeStatus `json:"nodes,omitempty" xml:"nodes"`
 	HttpStatusCode int                   `json:"-"`
 }
 

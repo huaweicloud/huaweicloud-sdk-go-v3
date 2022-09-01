@@ -9,13 +9,13 @@ import (
 type AssetModelModRequest struct {
 
 	// 模型显示名称，正则：\"^[\\\\u4E00-\\\\u9FA5A-Za-z0-9_@#.-]{1,64}$\"
-	DisplayName *string `json:"display_name,omitempty"`
+	DisplayName *string `json:"display_name,omitempty" xml:"display_name"`
 
 	// 属性集，最多200个
-	Properties *[]PropertyModelRequest `json:"properties,omitempty"`
+	Properties *[]PropertyModelRequest `json:"properties,omitempty" xml:"properties"`
 
 	// 分析任务集，最多50个
-	Analyses *[]AnalysisModelRequest `json:"analyses,omitempty"`
+	Analyses *[]AnalysisModelRequest `json:"analyses,omitempty" xml:"analyses"`
 }
 
 func (o AssetModelModRequest) String() string {

@@ -10,12 +10,12 @@ import (
 type CreateCommandRequest struct {
 
 	// **参数说明**：下发消息的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获得。 **取值范围**：长度不超过128，只允许字母、数字、下划线（_）、连接符（-）的组合。
-	DeviceId string `json:"device_id"`
+	DeviceId string `json:"device_id" xml:"device_id"`
 
 	// **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
-	InstanceId *string `json:"Instance-Id,omitempty"`
+	InstanceId *string `json:"Instance-Id,omitempty" xml:"Instance-Id"`
 
-	Body *DeviceCommandRequest `json:"body,omitempty"`
+	Body *DeviceCommandRequest `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateCommandRequest) String() string {

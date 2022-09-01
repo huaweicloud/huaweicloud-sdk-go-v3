@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateMetadataRequest struct {
-	Body *CreateMetadataReq `json:"body,omitempty"`
+	Body *CreateMetadataReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateMetadataRequest) String() string {

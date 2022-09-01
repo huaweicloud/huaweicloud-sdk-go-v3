@@ -12,31 +12,31 @@ import (
 type MultiTaskMappingElement struct {
 
 	// 映射唯一ID
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 源表名
-	SourceTable *string `json:"source_table,omitempty"`
+	SourceTable *string `json:"source_table,omitempty" xml:"source_table"`
 
 	// 目标表名
-	TargetTable *string `json:"target_table,omitempty"`
+	TargetTable *string `json:"target_table,omitempty" xml:"target_table"`
 
 	// 上次修改时间
-	UpdatedTime *int64 `json:"updated_time,omitempty"`
+	UpdatedTime *int64 `json:"updated_time,omitempty" xml:"updated_time"`
 
 	// 匹配度
-	MappingPercent *int64 `json:"mapping_percent,omitempty"`
+	MappingPercent *int64 `json:"mapping_percent,omitempty" xml:"mapping_percent"`
 
 	// 映射状态 - AUTO (自动映射) - MANUAL (手工新增) - ADD (自动新增) - UPDATE (更新) - DELETE (删除) - USING (使用中)
-	Status *MultiTaskMappingElementStatus `json:"status,omitempty"`
+	Status *MultiTaskMappingElementStatus `json:"status,omitempty" xml:"status"`
 
 	// 源端字段列表
-	SourceColumns *[]MultiTaskColumnInfo `json:"source_columns,omitempty"`
+	SourceColumns *[]MultiTaskColumnInfo `json:"source_columns,omitempty" xml:"source_columns"`
 
 	// 目标端字段列表
-	TargetColumns *[]MultiTaskColumnInfo `json:"target_columns,omitempty"`
+	TargetColumns *[]MultiTaskColumnInfo `json:"target_columns,omitempty" xml:"target_columns"`
 
 	// 字段映射列表
-	Mapping *[]MappingInfo `json:"mapping,omitempty"`
+	Mapping *[]MappingInfo `json:"mapping,omitempty" xml:"mapping"`
 }
 
 func (o MultiTaskMappingElement) String() string {

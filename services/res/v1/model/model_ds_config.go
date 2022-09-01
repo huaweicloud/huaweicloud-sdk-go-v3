@@ -9,10 +9,10 @@ import (
 type DsConfig struct {
 
 	// 数据选择(天)。
-	TimeInterval *int32 `json:"time_interval,omitempty"`
+	TimeInterval *int32 `json:"time_interval,omitempty" xml:"time_interval"`
 
 	// 物品类别。
-	CategoryType *string `json:"category_type,omitempty"`
+	CategoryType *string `json:"category_type,omitempty" xml:"category_type"`
 }
 
 func (o DsConfig) String() string {

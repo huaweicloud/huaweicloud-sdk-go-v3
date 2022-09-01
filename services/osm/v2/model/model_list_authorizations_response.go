@@ -10,10 +10,10 @@ import (
 type ListAuthorizationsResponse struct {
 
 	// 总数
-	Total *int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty" xml:"total"`
 
 	// 授权列表
-	IncidentAuthList *[]IncidentOrderAuthV2 `json:"incident_auth_list,omitempty"`
+	IncidentAuthList *[]IncidentOrderAuthV2 `json:"incident_auth_list,omitempty" xml:"incident_auth_list"`
 	HttpStatusCode   int                    `json:"-"`
 }
 

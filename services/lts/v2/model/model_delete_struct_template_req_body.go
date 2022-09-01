@@ -10,7 +10,7 @@ import (
 type DeleteStructTemplateReqBody struct {
 
 	// 结构化规则ID
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 }
 
 func (o DeleteStructTemplateReqBody) String() string {

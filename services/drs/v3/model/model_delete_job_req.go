@@ -13,10 +13,10 @@ import (
 type DeleteJobReq struct {
 
 	// terminate:结束迁移任务,force_terminate:强制结束迁移任务,delete:删除迁移任务
-	DeleteType DeleteJobReqDeleteType `json:"delete_type"`
+	DeleteType DeleteJobReqDeleteType `json:"delete_type" xml:"delete_type"`
 
 	// 任务ID
-	JobId string `json:"job_id"`
+	JobId string `json:"job_id" xml:"job_id"`
 }
 
 func (o DeleteJobReq) String() string {

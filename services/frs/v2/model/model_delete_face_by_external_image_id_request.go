@@ -10,10 +10,10 @@ import (
 type DeleteFaceByExternalImageIdRequest struct {
 
 	// 人脸库名称。
-	FaceSetName string `json:"face_set_name"`
+	FaceSetName string `json:"face_set_name" xml:"face_set_name"`
 
 	// external_image_id。
-	ExternalImageId string `json:"external_image_id"`
+	ExternalImageId string `json:"external_image_id" xml:"external_image_id"`
 }
 
 func (o DeleteFaceByExternalImageIdRequest) String() string {

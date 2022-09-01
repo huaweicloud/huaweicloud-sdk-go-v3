@@ -10,15 +10,15 @@ import (
 type UpdateProductTopicRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 产品ID
-	ProductId int32 `json:"product_id"`
+	ProductId int32 `json:"product_id" xml:"product_id"`
 
 	// 产品主题ID
-	TopicId int32 `json:"topic_id"`
+	TopicId int32 `json:"topic_id" xml:"topic_id"`
 
-	Body *UpdateProductTopicRequestBody `json:"body,omitempty"`
+	Body *UpdateProductTopicRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateProductTopicRequest) String() string {

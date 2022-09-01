@@ -10,12 +10,12 @@ import (
 type ListRtcClientQosDetailsResponse struct {
 
 	// 房间ID
-	RoomId *string `json:"room_id,omitempty"`
+	RoomId *string `json:"room_id,omitempty" xml:"room_id"`
 
 	// QoS质量数据
-	Data *[]QosQualityData `json:"data,omitempty"`
+	Data *[]QosQualityData `json:"data,omitempty" xml:"data"`
 
-	XRequestId     *string `json:"X-request-id,omitempty"`
+	XRequestId     *string `json:"X-request-id,omitempty" xml:"X-request-id"`
 	HttpStatusCode int     `json:"-"`
 }
 

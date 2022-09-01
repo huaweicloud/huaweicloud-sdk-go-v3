@@ -10,7 +10,7 @@ import (
 type BatchModifyPwdReq struct {
 
 	// 批量修改数据库密码信息列表
-	Jobs []ModifyPwdEndPoint `json:"jobs"`
+	Jobs []ModifyPwdEndPoint `json:"jobs" xml:"jobs"`
 }
 
 func (o BatchModifyPwdReq) String() string {

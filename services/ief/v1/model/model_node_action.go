@@ -8,7 +8,7 @@ import (
 
 // 节点启停
 type NodeAction struct {
-	Node *Action `json:"node"`
+	Node *Action `json:"node" xml:"node"`
 }
 
 func (o NodeAction) String() string {

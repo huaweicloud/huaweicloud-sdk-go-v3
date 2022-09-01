@@ -9,10 +9,10 @@ import (
 type OpsWindowRequest struct {
 
 	// - 开始时间， UTC时间
-	StartTime string `json:"start_time"`
+	StartTime string `json:"start_time" xml:"start_time"`
 
 	// - 结束时间，UTC时间
-	EndTime string `json:"end_time"`
+	EndTime string `json:"end_time" xml:"end_time"`
 }
 
 func (o OpsWindowRequest) String() string {

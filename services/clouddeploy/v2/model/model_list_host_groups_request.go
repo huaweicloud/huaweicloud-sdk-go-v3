@@ -13,28 +13,28 @@ import (
 type ListHostGroupsRequest struct {
 
 	// devcloud创建的项目id
-	ProjectId *string `json:"project_id,omitempty"`
+	ProjectId *string `json:"project_id,omitempty" xml:"project_id"`
 
 	// 局点信息
-	RegionName string `json:"region_name"`
+	RegionName string `json:"region_name" xml:"region_name"`
 
 	// 操作系统：windows|linux
-	Os *ListHostGroupsRequestOs `json:"os,omitempty"`
+	Os *ListHostGroupsRequestOs `json:"os,omitempty" xml:"os"`
 
 	// 偏移量,表示从此偏移量开始查询,offset大于等于0
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 每页显示的条目数量，默认为1000
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 主机组名
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 排序字段：nickName|NAME|OWNER_NAME|CREATE_TIME|name|owner_name|create_time，不传使用默认排序
-	SortKey *string `json:"sort_key,omitempty"`
+	SortKey *string `json:"sort_key,omitempty" xml:"sort_key"`
 
 	// 排序方式：DESC、ASC，默认为DESC
-	SortDir *ListHostGroupsRequestSortDir `json:"sort_dir,omitempty"`
+	SortDir *ListHostGroupsRequestSortDir `json:"sort_dir,omitempty" xml:"sort_dir"`
 }
 
 func (o ListHostGroupsRequest) String() string {

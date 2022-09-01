@@ -8,10 +8,10 @@ import (
 
 // Response Object
 type KeystoneListRegionsResponse struct {
-	Links *Links `json:"links,omitempty"`
+	Links *Links `json:"links,omitempty" xml:"links"`
 
 	// 区域信息列表。
-	Regions        *[]Region `json:"regions,omitempty"`
+	Regions        *[]Region `json:"regions,omitempty" xml:"regions"`
 	HttpStatusCode int       `json:"-"`
 }
 

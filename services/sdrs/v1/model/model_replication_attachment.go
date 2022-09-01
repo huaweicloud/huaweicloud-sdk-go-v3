@@ -10,10 +10,10 @@ import (
 type ReplicationAttachment struct {
 
 	// 该复制对挂载的保护实例ID。
-	ProtectedInstance string `json:"protected_instance"`
+	ProtectedInstance string `json:"protected_instance" xml:"protected_instance"`
 
 	// 挂载点。
-	Device string `json:"device"`
+	Device string `json:"device" xml:"device"`
 }
 
 func (o ReplicationAttachment) String() string {

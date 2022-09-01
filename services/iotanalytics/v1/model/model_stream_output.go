@@ -10,10 +10,10 @@ import (
 type StreamOutput struct {
 
 	// 输出参数名称，必须是接收数据类型为资产数据的实时分析作业中已定义的
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 输出属性名，必须是本模型分析任务类别的属性的属性名
-	OutputProperty string `json:"output_property"`
+	OutputProperty string `json:"output_property" xml:"output_property"`
 }
 
 func (o StreamOutput) String() string {

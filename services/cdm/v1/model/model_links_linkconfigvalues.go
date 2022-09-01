@@ -10,12 +10,12 @@ import (
 type LinksLinkconfigvalues struct {
 
 	// 连接配置参数数据结构，请参见configs参数说明。
-	Configs []Configs `json:"configs"`
+	Configs []Configs `json:"configs" xml:"configs"`
 
-	ExtendedConfigs *LinksLinkconfigvaluesExtendedconfigs `json:"extended-configs,omitempty"`
+	ExtendedConfigs *LinksLinkconfigvaluesExtendedconfigs `json:"extended-configs,omitempty" xml:"extended-configs"`
 
 	// 校验器
-	Validators *[]string `json:"validators,omitempty"`
+	Validators *[]string `json:"validators,omitempty" xml:"validators"`
 }
 
 func (o LinksLinkconfigvalues) String() string {

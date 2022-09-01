@@ -10,7 +10,7 @@ import (
 type ModifyReadAndWriteStrategyReq struct {
 
 	// 主数据库实例与只读数据库实例的读权重集合。
-	ReadWeight *interface{} `json:"read_weight"`
+	ReadWeight *interface{} `json:"read_weight" xml:"read_weight"`
 }
 
 func (o ModifyReadAndWriteStrategyReq) String() string {

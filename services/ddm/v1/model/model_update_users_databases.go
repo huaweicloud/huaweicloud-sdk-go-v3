@@ -9,7 +9,7 @@ import (
 type UpdateUsersDatabases struct {
 
 	// 逻辑库名称，不区分大小写，databases和name字段必须同时缺失或者同时存在。  默认值为空
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 }
 
 func (o UpdateUsersDatabases) String() string {

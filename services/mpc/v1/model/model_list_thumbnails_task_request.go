@@ -13,25 +13,25 @@ import (
 type ListThumbnailsTaskRequest struct {
 
 	// 客户端语言
-	XLanguage *string `json:"x-language,omitempty"`
+	XLanguage *string `json:"x-language,omitempty" xml:"x-language"`
 
 	// 截图服务接受任务后产生的任务ID。一次最多10个
-	TaskId *[]string `json:"task_id,omitempty"`
+	TaskId *[]string `json:"task_id,omitempty" xml:"task_id"`
 
 	// 任务状态。  取值如下： - WAITING: 等待启动 - PROCESSING：截图中 - SUCCEEDED：截图成功 - FAILED：截图失败 - CANCELED：已删除
-	Status *ListThumbnailsTaskRequestStatus `json:"status,omitempty"`
+	Status *ListThumbnailsTaskRequestStatus `json:"status,omitempty" xml:"status"`
 
 	// 起始时间。格式为yyyymmddhhmmss。必须是与时区无关的UTC时间，指定task_id时该参数无效
-	StartTime *string `json:"start_time,omitempty"`
+	StartTime *string `json:"start_time,omitempty" xml:"start_time"`
 
 	// 结束时间。格式为yyyymmddhhmmss。必须是与时区无关的UTC时间，指定task_id时该参数无效
-	EndTime *string `json:"end_time,omitempty"`
+	EndTime *string `json:"end_time,omitempty" xml:"end_time"`
 
 	// 分页编号。查询指定“task_id”时，该参数无效。  默认值：0。
-	Page *int32 `json:"page,omitempty"`
+	Page *int32 `json:"page,omitempty" xml:"page"`
 
 	// 每页记录数。查询指定“task_id”时，该参数无效。  取值范围：[1,100]。  默认值：10。
-	Size *int32 `json:"size,omitempty"`
+	Size *int32 `json:"size,omitempty" xml:"size"`
 }
 
 func (o ListThumbnailsTaskRequest) String() string {

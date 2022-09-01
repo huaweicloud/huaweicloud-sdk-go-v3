@@ -10,10 +10,10 @@ import (
 type ListInvoicesResponse struct {
 
 	// 记录数，只有成功的时候才返回这个字段
-	Count *int32 `json:"count,omitempty"`
+	Count *int32 `json:"count,omitempty" xml:"count"`
 
 	// 发票信息列表，参见表2。
-	Invoices       *[]InvoiceRequestInfoIntl `json:"invoices,omitempty"`
+	Invoices       *[]InvoiceRequestInfoIntl `json:"invoices,omitempty" xml:"invoices"`
 	HttpStatusCode int                       `json:"-"`
 }
 

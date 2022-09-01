@@ -10,10 +10,10 @@ import (
 type ListMetadataAomPromGetResponse struct {
 
 	// 响应状态。
-	Status *string `json:"status,omitempty"`
+	Status *string `json:"status,omitempty" xml:"status"`
 
 	// 元数据信息。
-	Data           *interface{} `json:"data,omitempty"`
+	Data           *interface{} `json:"data,omitempty" xml:"data"`
 	HttpStatusCode int          `json:"-"`
 }
 

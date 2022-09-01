@@ -10,9 +10,9 @@ import (
 type CreateAnAppV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *AppCreate `json:"body,omitempty"`
+	Body *AppCreate `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateAnAppV2Request) String() string {

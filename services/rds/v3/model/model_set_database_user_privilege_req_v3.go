@@ -9,13 +9,13 @@ import (
 type SetDatabaseUserPrivilegeReqV3 struct {
 
 	// 是否设置所有用户。
-	AllUsers bool `json:"all_users"`
+	AllUsers bool `json:"all_users" xml:"all_users"`
 
 	// 数据库用户名。
-	UserName *string `json:"user_name,omitempty"`
+	UserName *string `json:"user_name,omitempty" xml:"user_name"`
 
 	// 是否为只读权限。
-	Readonly bool `json:"readonly"`
+	Readonly bool `json:"readonly" xml:"readonly"`
 }
 
 func (o SetDatabaseUserPrivilegeReqV3) String() string {

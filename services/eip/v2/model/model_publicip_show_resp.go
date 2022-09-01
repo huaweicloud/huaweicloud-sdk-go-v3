@@ -13,60 +13,60 @@ import (
 type PublicipShowResp struct {
 
 	// 弹性公网IP对应带宽ID
-	BandwidthId *string `json:"bandwidth_id,omitempty"`
+	BandwidthId *string `json:"bandwidth_id,omitempty" xml:"bandwidth_id"`
 
 	// 带宽名称
-	BandwidthName *string `json:"bandwidth_name,omitempty"`
+	BandwidthName *string `json:"bandwidth_name,omitempty" xml:"bandwidth_name"`
 
 	// 表示共享带宽或者独享带宽  取值范围：PER，WHOLE。  WHOLE表示共享带宽  PER表示独享带宽  约束：其中IPv6暂不支持WHOLE类型带宽。
-	BandwidthShareType *PublicipShowRespBandwidthShareType `json:"bandwidth_share_type,omitempty"`
+	BandwidthShareType *PublicipShowRespBandwidthShareType `json:"bandwidth_share_type,omitempty" xml:"bandwidth_share_type"`
 
 	// 带宽大小，单位为Mbit/s。
-	BandwidthSize *int32 `json:"bandwidth_size,omitempty"`
+	BandwidthSize *int32 `json:"bandwidth_size,omitempty" xml:"bandwidth_size"`
 
 	// 弹性公网IP申请时间（UTC）
-	CreateTime *string `json:"create_time,omitempty"`
+	CreateTime *string `json:"create_time,omitempty" xml:"create_time"`
 
 	// 企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。  创建弹性公网IP时，给弹性公网IP绑定企业项目ID。
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
 
 	// 弹性公网IP唯一标识
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 功能说明：端口id。  约束：只有绑定了的弹性公网IP查询才会返回该参数
-	PortId *string `json:"port_id,omitempty"`
+	PortId *string `json:"port_id,omitempty" xml:"port_id"`
 
 	// 功能说明：绑定弹性公网IP的私有IP地址  约束：只有绑定了的弹性公网IP查询才会返回该参数
-	PrivateIpAddress *string `json:"private_ip_address,omitempty"`
+	PrivateIpAddress *string `json:"private_ip_address,omitempty" xml:"private_ip_address"`
 
-	Profile *ProfileResp `json:"profile,omitempty"`
+	Profile *ProfileResp `json:"profile,omitempty" xml:"profile"`
 
 	// IPv4时是申请到的弹性公网IP地址，IPv6时是IPv6地址对应的IPv4地址
-	PublicIpAddress *string `json:"public_ip_address,omitempty"`
+	PublicIpAddress *string `json:"public_ip_address,omitempty" xml:"public_ip_address"`
 
 	// 功能说明：弹性公网IP的状态  取值范围：冻结FREEZED，绑定失败BIND_ERROR，绑定中BINDING，释放中PENDING_DELETE， 创建中PENDING_CREATE，创建中NOTIFYING，释放中NOTIFY_DELETE，更新中PENDING_UPDATE， 未绑定DOWN ，绑定ACTIVE，绑定ELB，绑定VPN，失败ERROR。
-	Status *PublicipShowRespStatus `json:"status,omitempty"`
+	Status *PublicipShowRespStatus `json:"status,omitempty" xml:"status"`
 
 	// 项目ID
-	TenantId *string `json:"tenant_id,omitempty"`
+	TenantId *string `json:"tenant_id,omitempty" xml:"tenant_id"`
 
 	// 弹性公网IP的类型
-	Type *string `json:"type,omitempty"`
+	Type *string `json:"type,omitempty" xml:"type"`
 
 	// IPv4时无此字段，IPv6时为申请到的弹性公网IP地址
-	PublicIpv6Address *string `json:"public_ipv6_address,omitempty"`
+	PublicIpv6Address *string `json:"public_ipv6_address,omitempty" xml:"public_ipv6_address"`
 
 	// IP版本信息，取值范围是4和6  4：表示IPv4  6：表示IPv6
-	IpVersion *PublicipShowRespIpVersion `json:"ip_version,omitempty"`
+	IpVersion *PublicipShowRespIpVersion `json:"ip_version,omitempty" xml:"ip_version"`
 
 	// 功能说明：表示中心站点资源或者边缘站点资源 取值范围： center、边缘站点名称 约束：publicip只能绑定该字段相同的资源
-	PublicBorderGroup *string `json:"public_border_group,omitempty"`
+	PublicBorderGroup *string `json:"public_border_group,omitempty" xml:"public_border_group"`
 
 	// 功能说明：表示此publicip可以加入的共享带宽类型列表，如果为空列表，则表示该           publicip不能加入任何共享带宽 约束：publicip只能加入到有该带宽类型的共享带宽中
-	AllowShareBandwidthTypes *[]string `json:"allow_share_bandwidth_types,omitempty"`
+	AllowShareBandwidthTypes *[]string `json:"allow_share_bandwidth_types,omitempty" xml:"allow_share_bandwidth_types"`
 
 	// 功能说明：弹性公网IP名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
-	Alias *string `json:"alias,omitempty"`
+	Alias *string `json:"alias,omitempty" xml:"alias"`
 }
 
 func (o PublicipShowResp) String() string {

@@ -8,9 +8,9 @@ import (
 
 // Response Object
 type ShowFileInfoResponse struct {
-	Jobs *[]Job `json:"jobs,omitempty"`
+	Jobs *[]Job `json:"jobs,omitempty" xml:"jobs"`
 
-	Scripts        *[]Script `json:"scripts,omitempty"`
+	Scripts        *[]Script `json:"scripts,omitempty" xml:"scripts"`
 	HttpStatusCode int       `json:"-"`
 }
 

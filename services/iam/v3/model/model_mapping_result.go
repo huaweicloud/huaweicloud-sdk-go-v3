@@ -10,12 +10,12 @@ import (
 type MappingResult struct {
 
 	// 映射ID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
-	Links *LinksSelf `json:"links"`
+	Links *LinksSelf `json:"links" xml:"links"`
 
 	// 将联邦用户映射为本地用户的规则列表。
-	Rules []MappingRules `json:"rules"`
+	Rules []MappingRules `json:"rules" xml:"rules"`
 }
 
 func (o MappingResult) String() string {

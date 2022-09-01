@@ -10,7 +10,7 @@ import (
 type GesMetaData struct {
 
 	// Label数据结构集合。
-	Labels []Label `json:"labels"`
+	Labels []Label `json:"labels" xml:"labels"`
 }
 
 func (o GesMetaData) String() string {

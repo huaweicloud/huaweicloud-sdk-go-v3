@@ -10,10 +10,10 @@ import (
 type TagResp struct {
 
 	// 键，key不能为空。长度不超过36个字符。由英文字母、数字、下划线、中划线、中文字符组成。
-	Key *string `json:"key,omitempty"`
+	Key *string `json:"key,omitempty" xml:"key"`
 
 	// 值列表。
-	Values *[]string `json:"values,omitempty"`
+	Values *[]string `json:"values,omitempty" xml:"values"`
 }
 
 func (o TagResp) String() string {

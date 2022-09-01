@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RunNerDomainRequest struct {
-	Body *PostDomainNerRequest `json:"body,omitempty"`
+	Body *PostDomainNerRequest `json:"body,omitempty" xml:"body"`
 }
 
 func (o RunNerDomainRequest) String() string {

@@ -10,12 +10,12 @@ import (
 type ListLogtanksResponse struct {
 
 	// 描述信息
-	Logtanks *[]Logtank `json:"logtanks,omitempty"`
+	Logtanks *[]Logtank `json:"logtanks,omitempty" xml:"logtanks"`
 
-	PageInfo *PageInfo `json:"page_info,omitempty"`
+	PageInfo *PageInfo `json:"page_info,omitempty" xml:"page_info"`
 
 	// 请求ID。  注：自动生成 。
-	RequestId      *string `json:"request_id,omitempty"`
+	RequestId      *string `json:"request_id,omitempty" xml:"request_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

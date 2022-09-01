@@ -10,13 +10,13 @@ import (
 type ListLiveDataApiTestHistoryV2Response struct {
 
 	// 本次返回的列表长度
-	Size int32 `json:"size"`
+	Size int32 `json:"size" xml:"size"`
 
 	// 满足条件的记录数
-	Total int64 `json:"total"`
+	Total int64 `json:"total" xml:"total"`
 
 	// 本次查询到的测试结果对象列表
-	Histories      *[]LdApiTestHistoryInfoV2 `json:"histories,omitempty"`
+	Histories      *[]LdApiTestHistoryInfoV2 `json:"histories,omitempty" xml:"histories"`
 	HttpStatusCode int                       `json:"-"`
 }
 

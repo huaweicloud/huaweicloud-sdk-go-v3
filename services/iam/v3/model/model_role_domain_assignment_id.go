@@ -9,7 +9,7 @@ import (
 type RoleDomainAssignmentId struct {
 
 	// 全局服务ID。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 }
 
 func (o RoleDomainAssignmentId) String() string {

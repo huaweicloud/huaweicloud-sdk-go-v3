@@ -10,27 +10,27 @@ import (
 type OffsiteBackupInstance struct {
 
 	// 实例ID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 创建的实例名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 源区域。
-	SourceRegion *string `json:"source_region,omitempty"`
+	SourceRegion *string `json:"source_region,omitempty" xml:"source_region"`
 
 	// 租户在源区域下的project ID。
-	SourceProjectId *string `json:"source_project_id,omitempty"`
+	SourceProjectId *string `json:"source_project_id,omitempty" xml:"source_project_id"`
 
-	Datastore *ParaGroupDatastore `json:"datastore,omitempty"`
+	Datastore *ParaGroupDatastore `json:"datastore,omitempty" xml:"datastore"`
 
 	// 跨区域备份所在区域。
-	DestinationRegion *string `json:"destination_region,omitempty"`
+	DestinationRegion *string `json:"destination_region,omitempty" xml:"destination_region"`
 
 	// 租户在目标区域下的project ID。
-	DestinationProjectId *string `json:"destination_project_id,omitempty"`
+	DestinationProjectId *string `json:"destination_project_id,omitempty" xml:"destination_project_id"`
 
 	// 跨区域备份保留天数。
-	KeepDays *int64 `json:"keep_days,omitempty"`
+	KeepDays *int64 `json:"keep_days,omitempty" xml:"keep_days"`
 }
 
 func (o OffsiteBackupInstance) String() string {

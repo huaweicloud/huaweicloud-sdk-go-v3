@@ -10,10 +10,10 @@ import (
 type DeleteNatGatewayDnatRuleRequest struct {
 
 	// 公网NAT网关实例的ID。
-	NatGatewayId string `json:"nat_gateway_id"`
+	NatGatewayId string `json:"nat_gateway_id" xml:"nat_gateway_id"`
 
 	// DNAT规则的ID。
-	DnatRuleId string `json:"dnat_rule_id"`
+	DnatRuleId string `json:"dnat_rule_id" xml:"dnat_rule_id"`
 }
 
 func (o DeleteNatGatewayDnatRuleRequest) String() string {

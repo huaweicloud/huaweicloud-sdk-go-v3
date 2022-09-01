@@ -9,10 +9,10 @@ import (
 type Node struct {
 
 	// 节点EIP信息
-	IpPort *string `json:"ip_port,omitempty"`
+	IpPort *string `json:"ip_port,omitempty" xml:"ip_port"`
 
 	// 节点所在通道数组
-	Channels *[]string `json:"channels,omitempty"`
+	Channels *[]string `json:"channels,omitempty" xml:"channels"`
 }
 
 func (o Node) String() string {

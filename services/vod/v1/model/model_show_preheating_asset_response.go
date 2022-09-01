@@ -10,7 +10,7 @@ import (
 type ShowPreheatingAssetResponse struct {
 
 	// 预热任务数组
-	PreheatingResults *[]PreheatingResult `json:"preheating_results,omitempty"`
+	PreheatingResults *[]PreheatingResult `json:"preheating_results,omitempty" xml:"preheating_results"`
 	HttpStatusCode    int                 `json:"-"`
 }
 

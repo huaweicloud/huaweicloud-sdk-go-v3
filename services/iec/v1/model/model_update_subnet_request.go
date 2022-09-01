@@ -10,9 +10,9 @@ import (
 type UpdateSubnetRequest struct {
 
 	// 子网ID。
-	SubnetId string `json:"subnet_id"`
+	SubnetId string `json:"subnet_id" xml:"subnet_id"`
 
-	Body *UpdateSubnetRequestBody `json:"body,omitempty"`
+	Body *UpdateSubnetRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateSubnetRequest) String() string {

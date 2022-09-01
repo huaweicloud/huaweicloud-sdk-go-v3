@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type CreateAomMappingRulesResponse struct {
-	Body           *[]AomMappingRuleResp `json:"body,omitempty"`
+	Body           *[]AomMappingRuleResp `json:"body,omitempty" xml:"body"`
 	HttpStatusCode int                   `json:"-"`
 }
 

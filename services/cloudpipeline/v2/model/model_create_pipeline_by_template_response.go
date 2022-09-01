@@ -10,7 +10,7 @@ import (
 type CreatePipelineByTemplateResponse struct {
 
 	// 实例ID
-	TaskId         *string `json:"task_id,omitempty"`
+	TaskId         *string `json:"task_id,omitempty" xml:"task_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

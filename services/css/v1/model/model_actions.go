@@ -9,25 +9,25 @@ import (
 type Actions struct {
 
 	// 操作记录id。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 操作类型。
-	ActionType *string `json:"actionType,omitempty"`
+	ActionType *string `json:"actionType,omitempty" xml:"actionType"`
 
 	// 配置文件内容。
-	ConfContent *string `json:"confContent,omitempty"`
+	ConfContent *string `json:"confContent,omitempty" xml:"confContent"`
 
 	// 操作状态。
-	Status *string `json:"status,omitempty"`
+	Status *string `json:"status,omitempty" xml:"status"`
 
 	// 更新时间，格式为ISO8601：CCYY-MM-DDThh:mm:ss。
-	UpdateAt *string `json:"updateAt,omitempty"`
+	UpdateAt *string `json:"updateAt,omitempty" xml:"updateAt"`
 
 	// 错误信息。当操作状态为success时该字段为null。
-	ErrorMsg *string `json:"errorMsg,omitempty"`
+	ErrorMsg *string `json:"errorMsg,omitempty" xml:"errorMsg"`
 
 	// 内容。
-	Message *string `json:"message,omitempty"`
+	Message *string `json:"message,omitempty" xml:"message"`
 }
 
 func (o Actions) String() string {

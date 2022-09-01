@@ -10,16 +10,16 @@ import (
 type ShowSubCustomerBudgetResponse struct {
 
 	// 初始预算金额。
-	BudgetAmount *float64 `json:"budget_amount,omitempty"`
+	BudgetAmount *float64 `json:"budget_amount,omitempty" xml:"budget_amount"`
 
 	// 已经使用的预算。该预算存在一定的时延和误差。
-	UsedAmount *float64 `json:"used_amount,omitempty"`
+	UsedAmount *float64 `json:"used_amount,omitempty" xml:"used_amount"`
 
 	// 金额单位。 1：元
-	MeasureId *int32 `json:"measure_id,omitempty"`
+	MeasureId *int32 `json:"measure_id,omitempty" xml:"measure_id"`
 
 	// 币种。 USD：美金
-	Currency       *string `json:"currency,omitempty"`
+	Currency       *string `json:"currency,omitempty" xml:"currency"`
 	HttpStatusCode int     `json:"-"`
 }
 

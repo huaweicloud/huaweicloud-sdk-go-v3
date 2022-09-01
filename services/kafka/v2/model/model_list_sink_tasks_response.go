@@ -10,16 +10,16 @@ import (
 type ListSinkTasksResponse struct {
 
 	// 转储任务列表。
-	Tasks *[]ListSinkTasksRespTasks `json:"tasks,omitempty"`
+	Tasks *[]ListSinkTasksRespTasks `json:"tasks,omitempty" xml:"tasks"`
 
 	// 转储任务总数。
-	TotalNumber *int32 `json:"total_number,omitempty"`
+	TotalNumber *int32 `json:"total_number,omitempty" xml:"total_number"`
 
 	// 总的支持任务个数。
-	MaxTasks *int32 `json:"max_tasks,omitempty"`
+	MaxTasks *int32 `json:"max_tasks,omitempty" xml:"max_tasks"`
 
 	// 任务总数的配额。
-	QuotaTasks     *int32 `json:"quota_tasks,omitempty"`
+	QuotaTasks     *int32 `json:"quota_tasks,omitempty" xml:"quota_tasks"`
 	HttpStatusCode int    `json:"-"`
 }
 

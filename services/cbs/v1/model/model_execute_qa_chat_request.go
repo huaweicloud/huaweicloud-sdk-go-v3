@@ -10,9 +10,9 @@ import (
 type ExecuteQaChatRequest struct {
 
 	// 机器人标识符，qabot编号，UUID格式。
-	QabotId string `json:"qabot_id"`
+	QabotId string `json:"qabot_id" xml:"qabot_id"`
 
-	Body *PostRequestsReq `json:"body,omitempty"`
+	Body *PostRequestsReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o ExecuteQaChatRequest) String() string {

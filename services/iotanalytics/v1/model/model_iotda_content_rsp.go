@@ -10,10 +10,10 @@ import (
 type IotdaContentRsp struct {
 
 	// IoTDA实例Id
-	IotdaInstanceId string `json:"iotda_instance_id"`
+	IotdaInstanceId string `json:"iotda_instance_id" xml:"iotda_instance_id"`
 
 	// 在IoTDA实例中要配置的转发规则，包含推送数据的资源空间和产品列表
-	Rules []IotdaContentRuleRsp `json:"rules"`
+	Rules []IotdaContentRuleRsp `json:"rules" xml:"rules"`
 }
 
 func (o IotdaContentRsp) String() string {

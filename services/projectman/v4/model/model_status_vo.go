@@ -10,10 +10,10 @@ import (
 type StatusVo struct {
 
 	// 状态id
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 状态id对应的值
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 }
 
 func (o StatusVo) String() string {

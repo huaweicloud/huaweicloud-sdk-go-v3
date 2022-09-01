@@ -9,13 +9,13 @@ import (
 type StartLogsReq struct {
 
 	// IAM委托。
-	Agency string `json:"agency"`
+	Agency string `json:"agency" xml:"agency"`
 
 	// 日志在OBS桶中的备份路径。
-	LogBasePath string `json:"logBasePath"`
+	LogBasePath string `json:"logBasePath" xml:"logBasePath"`
 
 	// 用于存储日志的OBS桶的桶名。
-	LogBucket string `json:"logBucket"`
+	LogBucket string `json:"logBucket" xml:"logBucket"`
 }
 
 func (o StartLogsReq) String() string {

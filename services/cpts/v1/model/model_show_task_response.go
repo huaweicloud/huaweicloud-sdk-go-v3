@@ -10,12 +10,12 @@ import (
 type ShowTaskResponse struct {
 
 	// code
-	Code *string `json:"code,omitempty"`
+	Code *string `json:"code,omitempty" xml:"code"`
 
 	// message
-	Message *string `json:"message,omitempty"`
+	Message *string `json:"message,omitempty" xml:"message"`
 
-	Taskinfo       *TaskInfo `json:"taskinfo,omitempty"`
+	Taskinfo       *TaskInfo `json:"taskinfo,omitempty" xml:"taskinfo"`
 	HttpStatusCode int       `json:"-"`
 }
 

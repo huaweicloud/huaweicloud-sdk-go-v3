@@ -10,13 +10,13 @@ import (
 type MatrixFactorization struct {
 
 	// 隐向量维度。
-	ImplicitVectorRank int32 `json:"implicit_vector_rank"`
+	ImplicitVectorRank int32 `json:"implicit_vector_rank" xml:"implicit_vector_rank"`
 
 	// 优化正则化系数。
-	RegularParam float64 `json:"regular_param"`
+	RegularParam float64 `json:"regular_param" xml:"regular_param"`
 
 	// 迭代次数。
-	MaxIteratorNum int32 `json:"max_iterator_num"`
+	MaxIteratorNum int32 `json:"max_iterator_num" xml:"max_iterator_num"`
 }
 
 func (o MatrixFactorization) String() string {

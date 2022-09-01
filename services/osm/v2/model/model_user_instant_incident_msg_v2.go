@@ -9,10 +9,10 @@ import (
 type UserInstantIncidentMsgV2 struct {
 
 	// 工单id
-	IncidentId *string `json:"incident_id,omitempty"`
+	IncidentId *string `json:"incident_id,omitempty" xml:"incident_id"`
 
 	// 留言列表
-	MessageList *[]QueryMessageInfoV2 `json:"message_list,omitempty"`
+	MessageList *[]QueryMessageInfoV2 `json:"message_list,omitempty" xml:"message_list"`
 }
 
 func (o UserInstantIncidentMsgV2) String() string {

@@ -8,10 +8,10 @@ import (
 
 // Response Object
 type ListServerBlockDevicesResponse struct {
-	AttachableQuantity *BlockDeviceAttachableQuantity `json:"attachableQuantity,omitempty"`
+	AttachableQuantity *BlockDeviceAttachableQuantity `json:"attachableQuantity,omitempty" xml:"attachableQuantity"`
 
 	// 云服务器挂载信息列表。
-	VolumeAttachments *[]ServerBlockDevice `json:"volumeAttachments,omitempty"`
+	VolumeAttachments *[]ServerBlockDevice `json:"volumeAttachments,omitempty" xml:"volumeAttachments"`
 	HttpStatusCode    int                  `json:"-"`
 }
 

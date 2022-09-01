@@ -10,37 +10,37 @@ import (
 type Quota struct {
 
 	// 项目ID。
-	ProjectId string `json:"project_id"`
+	ProjectId string `json:"project_id" xml:"project_id"`
 
 	// 负载均衡器配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-	Loadbalancer int32 `json:"loadbalancer"`
+	Loadbalancer int32 `json:"loadbalancer" xml:"loadbalancer"`
 
 	// 证书配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-	Certificate int32 `json:"certificate"`
+	Certificate int32 `json:"certificate" xml:"certificate"`
 
 	// 监听器配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-	Listener int32 `json:"listener"`
+	Listener int32 `json:"listener" xml:"listener"`
 
 	// 转发策略配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-	L7policy int32 `json:"l7policy"`
+	L7policy int32 `json:"l7policy" xml:"l7policy"`
 
 	// 后端云服务器组配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-	Pool int32 `json:"pool"`
+	Pool int32 `json:"pool" xml:"pool"`
 
 	// 健康检查配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-	Healthmonitor int32 `json:"healthmonitor"`
+	Healthmonitor int32 `json:"healthmonitor" xml:"healthmonitor"`
 
 	// 后端云服务器配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-	Member int32 `json:"member"`
+	Member int32 `json:"member" xml:"member"`
 
 	// 单个pool下的member的配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-	MembersPerPool int32 `json:"members_per_pool"`
+	MembersPerPool int32 `json:"members_per_pool" xml:"members_per_pool"`
 
 	// IP地址组配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
-	Ipgroup int32 `json:"ipgroup"`
+	Ipgroup int32 `json:"ipgroup" xml:"ipgroup"`
 
 	// 自定义安全策略配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
-	SecurityPolicy int32 `json:"security_policy"`
+	SecurityPolicy int32 `json:"security_policy" xml:"security_policy"`
 }
 
 func (o Quota) String() string {

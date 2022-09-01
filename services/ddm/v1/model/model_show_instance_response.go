@@ -10,67 +10,67 @@ import (
 type ShowInstanceResponse struct {
 
 	// DDM实例ID。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// DDM实例状态。
-	Status *string `json:"status,omitempty"`
+	Status *string `json:"status,omitempty" xml:"status"`
 
 	// DDM实例名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// DDM实例创建时间。
-	Created *string `json:"created,omitempty"`
+	Created *string `json:"created,omitempty" xml:"created"`
 
 	// DDM实例最后更新时间。
-	Updated *string `json:"updated,omitempty"`
+	Updated *string `json:"updated,omitempty" xml:"updated"`
 
 	// DDM实例可用区名称。
-	AvailableZone *string `json:"available_zone,omitempty"`
+	AvailableZone *string `json:"available_zone,omitempty" xml:"available_zone"`
 
 	// 虚拟私有云的ID。
-	VpcId *string `json:"vpc_id,omitempty"`
+	VpcId *string `json:"vpc_id,omitempty" xml:"vpc_id"`
 
 	// 子网ID。
-	SubnetId *string `json:"subnet_id,omitempty"`
+	SubnetId *string `json:"subnet_id,omitempty" xml:"subnet_id"`
 
 	// 安全组ID。
-	SecurityGroupId *string `json:"security_group_id,omitempty"`
+	SecurityGroupId *string `json:"security_group_id,omitempty" xml:"security_group_id"`
 
 	// 节点数量。
-	NodeCount *int32 `json:"node_count,omitempty"`
+	NodeCount *int32 `json:"node_count,omitempty" xml:"node_count"`
 
 	// DDM实例访问地址。
-	AccessIp *string `json:"access_ip,omitempty"`
+	AccessIp *string `json:"access_ip,omitempty" xml:"access_ip"`
 
 	// DDM实例访问端口。
-	AccessPort *string `json:"access_port,omitempty"`
+	AccessPort *string `json:"access_port,omitempty" xml:"access_port"`
 
 	// 节点状态。
-	NodeStatus *string `json:"node_status,omitempty"`
+	NodeStatus *string `json:"node_status,omitempty" xml:"node_status"`
 
 	// cpu个数。
-	CoreCount *string `json:"core_count,omitempty"`
+	CoreCount *string `json:"core_count,omitempty" xml:"core_count"`
 
 	// 内存大小，单位为G。
-	RamCapacity *string `json:"ram_capacity,omitempty"`
+	RamCapacity *string `json:"ram_capacity,omitempty" xml:"ram_capacity"`
 
 	// 响应信息，若无异常信息则不返回该参数。
-	ErrorMsg *string `json:"error_msg,omitempty"`
+	ErrorMsg *string `json:"error_msg,omitempty" xml:"error_msg"`
 
 	// 项目ID。
-	ProjectId *string `json:"project_id,omitempty"`
+	ProjectId *string `json:"project_id,omitempty" xml:"project_id"`
 
 	// 订单ID。包周期实例的订单ID，按需实例为空。
-	OrderId *string `json:"order_id,omitempty"`
+	OrderId *string `json:"order_id,omitempty" xml:"order_id"`
 
 	// 企业项目ID。
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
 
 	// 引擎版本号（Core实例版本号）。
-	EngineVersion *string `json:"engine_version,omitempty"`
+	EngineVersion *string `json:"engine_version,omitempty" xml:"engine_version"`
 
 	// 节点信息。
-	Nodes          *[]GetDetailfNodesInfo `json:"nodes,omitempty"`
+	Nodes          *[]GetDetailfNodesInfo `json:"nodes,omitempty" xml:"nodes"`
 	HttpStatusCode int                    `json:"-"`
 }
 

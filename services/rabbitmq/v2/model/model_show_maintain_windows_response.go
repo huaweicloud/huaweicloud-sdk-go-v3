@@ -10,7 +10,7 @@ import (
 type ShowMaintainWindowsResponse struct {
 
 	// 支持的维护时间窗列表。
-	MaintainWindows *[]MaintainWindowsEntity `json:"maintain_windows,omitempty"`
+	MaintainWindows *[]MaintainWindowsEntity `json:"maintain_windows,omitempty" xml:"maintain_windows"`
 	HttpStatusCode  int                      `json:"-"`
 }
 

@@ -10,10 +10,10 @@ import (
 type RestParticipantViewReqBody struct {
 
 	// 选看类型。 - 2: 选看会场。
-	ViewType int32 `json:"viewType"`
+	ViewType int32 `json:"viewType" xml:"viewType"`
 
 	// 被选看的与会者标识。
-	ParticipantID string `json:"participantID"`
+	ParticipantID string `json:"participantID" xml:"participantID"`
 }
 
 func (o RestParticipantViewReqBody) String() string {

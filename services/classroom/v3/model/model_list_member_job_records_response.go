@@ -10,10 +10,10 @@ import (
 type ListMemberJobRecordsResponse struct {
 
 	// 习题提交列表信息
-	Records *[]JobRecords `json:"records,omitempty"`
+	Records *[]JobRecords `json:"records,omitempty" xml:"records"`
 
 	// 习题提交总次数
-	Total          *int32 `json:"total,omitempty"`
+	Total          *int32 `json:"total,omitempty" xml:"total"`
 	HttpStatusCode int    `json:"-"`
 }
 

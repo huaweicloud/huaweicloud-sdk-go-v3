@@ -10,13 +10,13 @@ import (
 type MetaData struct {
 
 	// 当前返回结果条数。
-	Count *int32 `json:"count,omitempty"`
+	Count *int32 `json:"count,omitempty" xml:"count"`
 
 	// 下一个开始的标记，用于分页，null表示无更多数据。
-	Start *int64 `json:"start,omitempty"`
+	Start *int64 `json:"start,omitempty" xml:"start"`
 
 	// 总条数。
-	Total *int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty" xml:"total"`
 }
 
 func (o MetaData) String() string {

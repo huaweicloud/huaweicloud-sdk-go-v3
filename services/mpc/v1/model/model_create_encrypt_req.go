@@ -7,14 +7,14 @@ import (
 )
 
 type CreateEncryptReq struct {
-	Input *ObsObjInfo `json:"input,omitempty"`
+	Input *ObsObjInfo `json:"input,omitempty" xml:"input"`
 
-	Output *ObsObjInfo `json:"output,omitempty"`
+	Output *ObsObjInfo `json:"output,omitempty" xml:"output"`
 
-	Encryption *Encryption `json:"encryption,omitempty"`
+	Encryption *Encryption `json:"encryption,omitempty" xml:"encryption"`
 
 	// 用户自定义数据。
-	UserData *string `json:"user_data,omitempty"`
+	UserData *string `json:"user_data,omitempty" xml:"user_data"`
 }
 
 func (o CreateEncryptReq) String() string {

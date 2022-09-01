@@ -13,40 +13,40 @@ import (
 type TaskTargetServer struct {
 
 	// 目的端在SMS数据库中的ID
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 目的端服务器ID，自动创建虚拟机不需要这个参数
-	VmId *string `json:"vm_id,omitempty"`
+	VmId *string `json:"vm_id,omitempty" xml:"vm_id"`
 
 	// 目的端服务器的名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 目的端服务器ip
-	Ip *string `json:"ip,omitempty"`
+	Ip *string `json:"ip,omitempty" xml:"ip"`
 
 	// 源端服务器的OS类型，分为Windows和Linux，注册必选，更新非必选
-	OsType *TaskTargetServerOsType `json:"os_type,omitempty"`
+	OsType *TaskTargetServerOsType `json:"os_type,omitempty" xml:"os_type"`
 
 	// 操作系统版本，注册必选，更新非必选
-	OsVersion *string `json:"os_version,omitempty"`
+	OsVersion *string `json:"os_version,omitempty" xml:"os_version"`
 
 	// Windows必选，系统目录
-	SystemDir *string `json:"system_dir,omitempty"`
+	SystemDir *string `json:"system_dir,omitempty" xml:"system_dir"`
 
 	// 目的端磁盘信息，一般和源端保持一致
-	Disks []TargetDisk `json:"disks"`
+	Disks []TargetDisk `json:"disks" xml:"disks"`
 
 	// lvm信息，一般和源端保持一致
-	VolumeGroups *[]VolumeGroups `json:"volume_groups,omitempty"`
+	VolumeGroups *[]VolumeGroups `json:"volume_groups,omitempty" xml:"volume_groups"`
 
 	// Linux 必选，源端的Btrfs信息。如果源端不存在Btrfs，则为[]
-	BtrfsList *[]string `json:"btrfs_list,omitempty"`
+	BtrfsList *[]string `json:"btrfs_list,omitempty" xml:"btrfs_list"`
 
 	// 目的端代理镜像磁盘id
-	ImageDiskId *string `json:"image_disk_id,omitempty"`
+	ImageDiskId *string `json:"image_disk_id,omitempty" xml:"image_disk_id"`
 
 	// 目的端回滚快照id
-	CutoveredSnapshotIds *string `json:"cutovered_snapshot_ids,omitempty"`
+	CutoveredSnapshotIds *string `json:"cutovered_snapshot_ids,omitempty" xml:"cutovered_snapshot_ids"`
 }
 
 func (o TaskTargetServer) String() string {

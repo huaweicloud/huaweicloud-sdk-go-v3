@@ -12,25 +12,25 @@ import (
 type EpDetail struct {
 
 	// 企业项目ID
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 企业项目名称
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 企业项目描述
-	Description string `json:"description"`
+	Description string `json:"description" xml:"description"`
 
 	// 企业项目状态。1启用，2停用
-	Status int32 `json:"status"`
+	Status int32 `json:"status" xml:"status"`
 
 	// 创建时间，格式为UTC格式。如：2018-05-18T06:49:06Z。
-	CreatedAt *sdktime.SdkTime `json:"created_at"`
+	CreatedAt *sdktime.SdkTime `json:"created_at" xml:"created_at"`
 
 	// 修改时间，格式为UTC格式。如：2018-05-28T02:21:36Z。
-	UpdatedAt *sdktime.SdkTime `json:"updated_at"`
+	UpdatedAt *sdktime.SdkTime `json:"updated_at" xml:"updated_at"`
 
 	// 项目类型： - prod：商用项目 - poc：测试项目
-	Type EpDetailType `json:"type"`
+	Type EpDetailType `json:"type" xml:"type"`
 }
 
 func (o EpDetail) String() string {

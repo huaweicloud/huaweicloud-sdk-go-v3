@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateRecordRuleRequest struct {
-	Body *RecordRuleRequest `json:"body,omitempty"`
+	Body *RecordRuleRequest `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateRecordRuleRequest) String() string {

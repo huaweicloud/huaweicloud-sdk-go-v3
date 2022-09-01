@@ -13,16 +13,16 @@ import (
 type SqlConvertReq struct {
 
 	// 源数据库类型。
-	SourceDbType SqlConvertReqSourceDbType `json:"source_db_type"`
+	SourceDbType SqlConvertReqSourceDbType `json:"source_db_type" xml:"source_db_type"`
 
 	// 目标数据库类型。
-	TargetDbType SqlConvertReqTargetDbType `json:"target_db_type"`
+	TargetDbType SqlConvertReqTargetDbType `json:"target_db_type" xml:"target_db_type"`
 
 	// 目标数据库版本。 （注意：该字段需要与 target_db_type 字段组合成有效的目标数据库类型与版本，当前支持以下组合： GaussDB(for openGauss)-2020； RDS for PostgreSQL-11； RDS for PostgreSQL-Enhanced Edition； RDS for MySQL-5.7; GaussDB(for MySQL) 8.0。)
-	TargetDbVersion SqlConvertReqTargetDbVersion `json:"target_db_version"`
+	TargetDbVersion SqlConvertReqTargetDbVersion `json:"target_db_version" xml:"target_db_version"`
 
 	// 需要转换的SQL语句。
-	SqlStatement string `json:"sql_statement"`
+	SqlStatement string `json:"sql_statement" xml:"sql_statement"`
 }
 
 func (o SqlConvertReq) String() string {

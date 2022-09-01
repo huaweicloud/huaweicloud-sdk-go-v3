@@ -9,13 +9,13 @@ import (
 type QuerySqlPlanBody struct {
 
 	// 数据库用户ID
-	DbUserId *string `json:"db_user_id,omitempty"`
+	DbUserId *string `json:"db_user_id,omitempty" xml:"db_user_id"`
 
 	// 数据库名称
-	Database *string `json:"database,omitempty"`
+	Database *string `json:"database,omitempty" xml:"database"`
 
 	// SQL语句
-	Sql *string `json:"sql,omitempty"`
+	Sql *string `json:"sql,omitempty" xml:"sql"`
 }
 
 func (o QuerySqlPlanBody) String() string {

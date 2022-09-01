@@ -10,10 +10,10 @@ import (
 type CompareObjectInfo struct {
 
 	// 库名。
-	DbName string `json:"db_name"`
+	DbName string `json:"db_name" xml:"db_name"`
 
 	// 该库下的表名列表。
-	TableName *[]string `json:"table_name,omitempty"`
+	TableName *[]string `json:"table_name,omitempty" xml:"table_name"`
 }
 
 func (o CompareObjectInfo) String() string {

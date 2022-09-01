@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RunSqlConversionRequest struct {
-	Body *SqlConvertReq `json:"body,omitempty"`
+	Body *SqlConvertReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o RunSqlConversionRequest) String() string {

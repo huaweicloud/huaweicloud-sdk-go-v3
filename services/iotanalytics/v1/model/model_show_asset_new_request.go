@@ -10,10 +10,10 @@ import (
 type ShowAssetNewRequest struct {
 
 	// 资产ID
-	AssetId string `json:"asset_id"`
+	AssetId string `json:"asset_id" xml:"asset_id"`
 
 	// SKETCH：草稿态；RELEASE：发布态
-	Type string `json:"type"`
+	Type string `json:"type" xml:"type"`
 }
 
 func (o ShowAssetNewRequest) String() string {

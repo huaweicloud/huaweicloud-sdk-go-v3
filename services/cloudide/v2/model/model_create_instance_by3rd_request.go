@@ -10,9 +10,9 @@ import (
 type CreateInstanceBy3rdRequest struct {
 
 	// 实例标签（不同的第三方需要和CloudIDE服务共同设定标签）。不传默认为classroom
-	InstanceLabel *string `json:"instance_label,omitempty"`
+	InstanceLabel *string `json:"instance_label,omitempty" xml:"instance_label"`
 
-	Body *InstanceEdgeParam `json:"body,omitempty"`
+	Body *InstanceEdgeParam `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateInstanceBy3rdRequest) String() string {

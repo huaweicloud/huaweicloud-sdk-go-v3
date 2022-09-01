@@ -13,9 +13,9 @@ import (
 type BatchSetSpeedRequest struct {
 
 	// 请求语言类型
-	XLanguage *BatchSetSpeedRequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *BatchSetSpeedRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 
-	Body *BatchLimitSpeedReq `json:"body,omitempty"`
+	Body *BatchLimitSpeedReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchSetSpeedRequest) String() string {

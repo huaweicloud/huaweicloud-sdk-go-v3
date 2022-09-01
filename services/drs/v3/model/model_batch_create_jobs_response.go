@@ -10,10 +10,10 @@ import (
 type BatchCreateJobsResponse struct {
 
 	// 批量创建任务的响应体集合。
-	Results *[]CreateJobResp `json:"results,omitempty"`
+	Results *[]CreateJobResp `json:"results,omitempty" xml:"results"`
 
 	// 总记录数。
-	Count          *int32 `json:"count,omitempty"`
+	Count          *int32 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

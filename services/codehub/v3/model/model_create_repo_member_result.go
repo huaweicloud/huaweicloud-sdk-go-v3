@@ -9,16 +9,16 @@ import (
 type CreateRepoMemberResult struct {
 
 	// 用户id
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 创建仓库成员信息
-	Message *string `json:"message,omitempty"`
+	Message *string `json:"message,omitempty" xml:"message"`
 
 	// 用户名
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 创建仓库成员状态
-	Status *string `json:"status,omitempty"`
+	Status *string `json:"status,omitempty" xml:"status"`
 }
 
 func (o CreateRepoMemberResult) String() string {

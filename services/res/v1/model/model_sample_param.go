@@ -10,13 +10,13 @@ import (
 type SampleParam struct {
 
 	// 训练集测试集划分方式： - TIME，时间比例 - RAMDOM，个数比例
-	DivideType string `json:"divide_type"`
+	DivideType string `json:"divide_type" xml:"divide_type"`
 
 	// 训练数据占比。
-	TrainRate *float64 `json:"train_rate,omitempty"`
+	TrainRate *float64 `json:"train_rate,omitempty" xml:"train_rate"`
 
 	// 测试数据占比。
-	TestRate *float64 `json:"test_rate,omitempty"`
+	TestRate *float64 `json:"test_rate,omitempty" xml:"test_rate"`
 }
 
 func (o SampleParam) String() string {

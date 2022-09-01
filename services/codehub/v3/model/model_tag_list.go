@@ -9,10 +9,10 @@ import (
 type TagList struct {
 
 	// 指定仓库的标签列表
-	Tags *[]Tag `json:"tags,omitempty"`
+	Tags *[]Tag `json:"tags,omitempty" xml:"tags"`
 
 	// 指定仓库的标签总数
-	Total *int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty" xml:"total"`
 }
 
 func (o TagList) String() string {

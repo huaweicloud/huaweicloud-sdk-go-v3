@@ -9,13 +9,13 @@ import (
 type PropertyValue struct {
 
 	// 属性名称
-	PropertyName *string `json:"property_name,omitempty"`
+	PropertyName *string `json:"property_name,omitempty" xml:"property_name"`
 
 	// 属性值
-	Value *interface{} `json:"value,omitempty"`
+	Value *interface{} `json:"value,omitempty" xml:"value"`
 
 	// 属性值最后更新时间
-	Timestamp *string `json:"timestamp,omitempty"`
+	Timestamp *string `json:"timestamp,omitempty" xml:"timestamp"`
 }
 
 func (o PropertyValue) String() string {

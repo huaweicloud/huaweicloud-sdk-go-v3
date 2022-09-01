@@ -10,13 +10,13 @@ import (
 type OsVersionResponse struct {
 
 	// 接口状态。
-	Status string `json:"status"`
+	Status string `json:"status" xml:"status"`
 
 	// 接口ID。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 自描述信息。
-	Links *[]Links `json:"links,omitempty"`
+	Links *[]Links `json:"links,omitempty" xml:"links"`
 }
 
 func (o OsVersionResponse) String() string {

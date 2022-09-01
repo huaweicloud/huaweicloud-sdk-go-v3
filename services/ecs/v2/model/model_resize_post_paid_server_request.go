@@ -10,9 +10,9 @@ import (
 type ResizePostPaidServerRequest struct {
 
 	// 云服务器ID。
-	ServerId string `json:"server_id"`
+	ServerId string `json:"server_id" xml:"server_id"`
 
-	Body *ResizePostPaidServerRequestBody `json:"body,omitempty"`
+	Body *ResizePostPaidServerRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o ResizePostPaidServerRequest) String() string {

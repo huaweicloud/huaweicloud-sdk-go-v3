@@ -9,16 +9,16 @@ import (
 type CreateMessageDoV2 struct {
 
 	// 留言内容
-	Content string `json:"content"`
+	Content string `json:"content" xml:"content"`
 
 	// 是否授权
-	IsAuthorized *int32 `json:"is_authorized,omitempty"`
+	IsAuthorized *int32 `json:"is_authorized,omitempty" xml:"is_authorized"`
 
 	// 机密信息
-	AuthorizationContent *string `json:"authorization_content,omitempty"`
+	AuthorizationContent *string `json:"authorization_content,omitempty" xml:"authorization_content"`
 
 	// 附件id
-	AccessoryIds *[]string `json:"accessory_ids,omitempty"`
+	AccessoryIds *[]string `json:"accessory_ids,omitempty" xml:"accessory_ids"`
 }
 
 func (o CreateMessageDoV2) String() string {

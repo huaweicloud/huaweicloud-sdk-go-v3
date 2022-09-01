@@ -10,7 +10,7 @@ import (
 type ListProjectDemandStaticV4Response struct {
 
 	// 需求统计
-	DemandStatistics *[]DemandStatisticResponseV4 `json:"demand_statistics,omitempty"`
+	DemandStatistics *[]DemandStatisticResponseV4 `json:"demand_statistics,omitempty" xml:"demand_statistics"`
 	HttpStatusCode   int                          `json:"-"`
 }
 

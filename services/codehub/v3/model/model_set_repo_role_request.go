@@ -10,12 +10,12 @@ import (
 type SetRepoRoleRequest struct {
 
 	// 用户id
-	MemberId string `json:"member_id"`
+	MemberId string `json:"member_id" xml:"member_id"`
 
 	// 仓库uuid
-	RepositoryUuid string `json:"repository_uuid"`
+	RepositoryUuid string `json:"repository_uuid" xml:"repository_uuid"`
 
-	Body *SetRepoRoleRequestBody `json:"body,omitempty"`
+	Body *SetRepoRoleRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o SetRepoRoleRequest) String() string {

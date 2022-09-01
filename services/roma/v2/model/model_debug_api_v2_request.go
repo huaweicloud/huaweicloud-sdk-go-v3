@@ -10,12 +10,12 @@ import (
 type DebugApiV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// API的编号
-	ApiId string `json:"api_id"`
+	ApiId string `json:"api_id" xml:"api_id"`
 
-	Body *ApiDebugInfo `json:"body,omitempty"`
+	Body *ApiDebugInfo `json:"body,omitempty" xml:"body"`
 }
 
 func (o DebugApiV2Request) String() string {

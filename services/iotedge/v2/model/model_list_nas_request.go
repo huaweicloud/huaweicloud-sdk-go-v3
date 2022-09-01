@@ -10,13 +10,13 @@ import (
 type ListNasRequest struct {
 
 	// NA名称搜索关键字
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 查询的起始位置，取值范围为非负整数，默认为0
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 每页记录数，取值范围为非负整数，默认值为10
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 }
 
 func (o ListNasRequest) String() string {

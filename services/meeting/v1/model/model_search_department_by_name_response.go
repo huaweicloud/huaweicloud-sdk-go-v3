@@ -10,7 +10,7 @@ import (
 type SearchDepartmentByNameResponse struct {
 
 	// 部门信息
-	Body           *[]QueryDeptResultDto `json:"body,omitempty"`
+	Body           *[]QueryDeptResultDto `json:"body,omitempty" xml:"body"`
 	HttpStatusCode int                   `json:"-"`
 }
 

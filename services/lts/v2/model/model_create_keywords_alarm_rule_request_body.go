@@ -12,27 +12,27 @@ import (
 type CreateKeywordsAlarmRuleRequestBody struct {
 
 	// 关键词告警名称
-	KeywordsAlarmRuleName string `json:"keywords_alarm_rule_name"`
+	KeywordsAlarmRuleName string `json:"keywords_alarm_rule_name" xml:"keywords_alarm_rule_name"`
 
 	// 关键词告警信息描述
-	KeywordsAlarmRuleDescription *string `json:"keywords_alarm_rule_description,omitempty"`
+	KeywordsAlarmRuleDescription *string `json:"keywords_alarm_rule_description,omitempty" xml:"keywords_alarm_rule_description"`
 
 	// 关键词详细信息
-	KeywordsRequests []KeywordsRequest `json:"keywords_requests"`
+	KeywordsRequests []KeywordsRequest `json:"keywords_requests" xml:"keywords_requests"`
 
-	Frequency *Frequency `json:"frequency"`
+	Frequency *Frequency `json:"frequency" xml:"frequency"`
 
 	// 告警级别
-	KeywordsAlarmLevel CreateKeywordsAlarmRuleRequestBodyKeywordsAlarmLevel `json:"keywords_alarm_level"`
+	KeywordsAlarmLevel CreateKeywordsAlarmRuleRequestBodyKeywordsAlarmLevel `json:"keywords_alarm_level" xml:"keywords_alarm_level"`
 
 	// 是否发送
-	KeywordsAlarmSend bool `json:"keywords_alarm_send"`
+	KeywordsAlarmSend bool `json:"keywords_alarm_send" xml:"keywords_alarm_send"`
 
 	// domainId
-	DomainId string `json:"domain_id"`
+	DomainId string `json:"domain_id" xml:"domain_id"`
 
 	// 通知主题
-	NotificationSaveRule *NotificationSaveRule `json:"notification_save_rule,omitempty"`
+	NotificationSaveRule *NotificationSaveRule `json:"notification_save_rule,omitempty" xml:"notification_save_rule"`
 }
 
 func (o CreateKeywordsAlarmRuleRequestBody) String() string {

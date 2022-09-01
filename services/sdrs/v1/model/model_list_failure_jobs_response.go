@@ -10,10 +10,10 @@ import (
 type ListFailureJobsResponse struct {
 
 	// 失败任务信息列表。
-	FailureJobs *[]FailureJobParams `json:"failure_jobs,omitempty"`
+	FailureJobs *[]FailureJobParams `json:"failure_jobs,omitempty" xml:"failure_jobs"`
 
 	// 列表中失败任务个数。
-	Count          *int32 `json:"count,omitempty"`
+	Count          *int32 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

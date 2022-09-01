@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RunMultiModalAssessmentRequest struct {
-	Body *PostMultiModalAssessmentReq `json:"body,omitempty"`
+	Body *PostMultiModalAssessmentReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o RunMultiModalAssessmentRequest) String() string {

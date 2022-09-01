@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowBlockchainFlavorsResponse struct {
-	EnterpriseSpec *InstanceSpc `json:"enterprise_spec,omitempty"`
+	EnterpriseSpec *InstanceSpc `json:"enterprise_spec,omitempty" xml:"enterprise_spec"`
 	HttpStatusCode int          `json:"-"`
 }
 

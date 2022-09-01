@@ -10,13 +10,13 @@ import (
 type DtTransformMetrics struct {
 
 	// 定义指标计算查询的输入资产属性列表
-	Inputs []MetricInput `json:"inputs"`
+	Inputs []MetricInput `json:"inputs" xml:"inputs"`
 
 	// 指标表达式,最多64个字符
-	Expression string `json:"expression"`
+	Expression string `json:"expression" xml:"expression"`
 
 	// 指标名，指标计算查询的输出指标名称
-	MetricName string `json:"metric_name"`
+	MetricName string `json:"metric_name" xml:"metric_name"`
 }
 
 func (o DtTransformMetrics) String() string {

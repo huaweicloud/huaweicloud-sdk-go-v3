@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type BatchPauseScalingPoliciesRequest struct {
-	Body *BatchPauseScalingPoliciesOption `json:"body,omitempty"`
+	Body *BatchPauseScalingPoliciesOption `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchPauseScalingPoliciesRequest) String() string {

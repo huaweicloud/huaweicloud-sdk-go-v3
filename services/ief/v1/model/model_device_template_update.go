@@ -8,7 +8,7 @@ import (
 
 // 设备模板
 type DeviceTemplateUpdate struct {
-	DeviceTemplate *DeviceTemplateUpdateDetail `json:"device_template"`
+	DeviceTemplate *DeviceTemplateUpdateDetail `json:"device_template" xml:"device_template"`
 }
 
 func (o DeviceTemplateUpdate) String() string {

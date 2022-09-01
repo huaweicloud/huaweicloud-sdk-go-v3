@@ -10,9 +10,9 @@ import (
 type UpdatePodDeployment struct {
 
 	// 应用部署副本数，只能为1
-	Replicas int32 `json:"replicas"`
+	Replicas int32 `json:"replicas" xml:"replicas"`
 
-	Template *PodRequest `json:"template"`
+	Template *PodRequest `json:"template" xml:"template"`
 }
 
 func (o UpdatePodDeployment) String() string {

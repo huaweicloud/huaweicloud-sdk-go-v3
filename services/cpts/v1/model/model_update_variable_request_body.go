@@ -10,16 +10,16 @@ import (
 type UpdateVariableRequestBody struct {
 
 	// id
-	Id int32 `json:"id"`
+	Id int32 `json:"id" xml:"id"`
 
 	// name
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// variable_type
-	VariableType int32 `json:"variable_type"`
+	VariableType int32 `json:"variable_type" xml:"variable_type"`
 
 	// variable
-	Variable []interface{} `json:"variable"`
+	Variable []interface{} `json:"variable" xml:"variable"`
 }
 
 func (o UpdateVariableRequestBody) String() string {

@@ -13,22 +13,22 @@ import (
 type CreateKeypairResp struct {
 
 	// SSH密钥对的名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// SSH密钥对的类型
-	Type *CreateKeypairRespType `json:"type,omitempty"`
+	Type *CreateKeypairRespType `json:"type,omitempty" xml:"type"`
 
 	// SSH密钥对对应的publicKey信息
-	PublicKey *string `json:"public_key,omitempty"`
+	PublicKey *string `json:"public_key,omitempty" xml:"public_key"`
 
 	// SSH密钥对对应的privateKey信息 - 创建SSH密钥对时，响应中包括private_key的信息。 - 导入SSH密钥对时，响应中不包括private_key的信息。
-	PrivateKey *string `json:"private_key,omitempty"`
+	PrivateKey *string `json:"private_key,omitempty" xml:"private_key"`
 
 	// SSH密钥对应指纹信息
-	Fingerprint *string `json:"fingerprint,omitempty"`
+	Fingerprint *string `json:"fingerprint,omitempty" xml:"fingerprint"`
 
 	// SSH密钥对所属的用户信息
-	UserId *string `json:"user_id,omitempty"`
+	UserId *string `json:"user_id,omitempty" xml:"user_id"`
 }
 
 func (o CreateKeypairResp) String() string {

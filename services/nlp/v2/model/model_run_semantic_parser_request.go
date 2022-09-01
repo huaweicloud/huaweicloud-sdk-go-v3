@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RunSemanticParserRequest struct {
-	Body *IntentReq `json:"body,omitempty"`
+	Body *IntentReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o RunSemanticParserRequest) String() string {

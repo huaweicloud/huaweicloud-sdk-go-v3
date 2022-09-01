@@ -8,7 +8,7 @@ import (
 
 // This is a auto create Body Object
 type UpdateListenerRequestBody struct {
-	Listener *UpdateListenerReq `json:"listener"`
+	Listener *UpdateListenerReq `json:"listener" xml:"listener"`
 }
 
 func (o UpdateListenerRequestBody) String() string {

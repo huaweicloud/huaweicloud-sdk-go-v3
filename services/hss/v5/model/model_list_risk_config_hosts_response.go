@@ -10,10 +10,10 @@ import (
 type ListRiskConfigHostsResponse struct {
 
 	// 数据总量
-	TotalNum *int64 `json:"total_num,omitempty"`
+	TotalNum *int64 `json:"total_num,omitempty" xml:"total_num"`
 
 	// 数据列表
-	DataList       *[]SecurityCheckHostInfoResponseInfo `json:"data_list,omitempty"`
+	DataList       *[]SecurityCheckHostInfoResponseInfo `json:"data_list,omitempty" xml:"data_list"`
 	HttpStatusCode int                                  `json:"-"`
 }
 

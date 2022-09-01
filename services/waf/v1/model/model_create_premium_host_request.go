@@ -10,9 +10,9 @@ import (
 type CreatePremiumHostRequest struct {
 
 	// 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
 
-	Body *CreatePremiumHostRequestBody `json:"body,omitempty"`
+	Body *CreatePremiumHostRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreatePremiumHostRequest) String() string {

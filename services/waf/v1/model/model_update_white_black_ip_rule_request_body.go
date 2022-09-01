@@ -10,19 +10,19 @@ import (
 type UpdateWhiteBlackIpRuleRequestBody struct {
 
 	// 黑白名单规则名称
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 黑白名单ip地址，需要输入标准的ip地址或地址段，例如：42.123.120.66或42.123.120.0/16
-	Addr *string `json:"addr,omitempty"`
+	Addr *string `json:"addr,omitempty" xml:"addr"`
 
 	// 黑白名单规则描述
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 防护动作：  - 0 拦截  - 1 放行  - 2 仅记录
-	White int32 `json:"white"`
+	White int32 `json:"white" xml:"white"`
 
 	// 创建的Ip地址组id，该参数与addr参数使用一个即可；Ip地址组可在控制台中对象管理->地址组管理中添加。
-	IpGroupId *string `json:"ip_group_id,omitempty"`
+	IpGroupId *string `json:"ip_group_id,omitempty" xml:"ip_group_id"`
 }
 
 func (o UpdateWhiteBlackIpRuleRequestBody) String() string {

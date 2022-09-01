@@ -10,10 +10,10 @@ import (
 type Entitie struct {
 
 	// 裸金属服务器相关操作显示server_id
-	ServerId *string `json:"server_id,omitempty"`
+	ServerId *string `json:"server_id,omitempty" xml:"server_id"`
 
 	// 网卡相关操作显示nic_id
-	NicId *string `json:"nic_id,omitempty"`
+	NicId *string `json:"nic_id,omitempty" xml:"nic_id"`
 }
 
 func (o Entitie) String() string {

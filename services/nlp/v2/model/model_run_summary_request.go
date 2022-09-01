@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RunSummaryRequest struct {
-	Body *SummaryReq `json:"body,omitempty"`
+	Body *SummaryReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o RunSummaryRequest) String() string {

@@ -10,10 +10,10 @@ import (
 type ListClassroomMemberJobsResponse struct {
 
 	// 课堂下作业列表信息
-	Jobs *[]MemberJobCard `json:"jobs,omitempty"`
+	Jobs *[]MemberJobCard `json:"jobs,omitempty" xml:"jobs"`
 
 	// 学生作业总数
-	Total          *int32 `json:"total,omitempty"`
+	Total          *int32 `json:"total,omitempty" xml:"total"`
 	HttpStatusCode int    `json:"-"`
 }
 

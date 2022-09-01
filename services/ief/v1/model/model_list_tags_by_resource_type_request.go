@@ -10,10 +10,10 @@ import (
 type ListTagsByResourceTypeRequest struct {
 
 	// 铂金版实例ID，专业版实例为空值
-	IefInstanceId *string `json:"ief-instance-id,omitempty"`
+	IefInstanceId *string `json:"ief-instance-id,omitempty" xml:"ief-instance-id"`
 
 	// 资源类型 - ief-edge_node - ief-deployment - ief-application - ief-device
-	ResourceType string `json:"resource_type"`
+	ResourceType string `json:"resource_type" xml:"resource_type"`
 }
 
 func (o ListTagsByResourceTypeRequest) String() string {

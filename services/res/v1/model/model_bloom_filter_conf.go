@@ -10,10 +10,10 @@ import (
 type BloomFilterConf struct {
 
 	// 待过滤行为类型。
-	Behaviors *[]string `json:"behaviors,omitempty"`
+	Behaviors *[]string `json:"behaviors,omitempty" xml:"behaviors"`
 
 	// 过滤时间。
-	Interval *int32 `json:"interval,omitempty"`
+	Interval *int32 `json:"interval,omitempty" xml:"interval"`
 }
 
 func (o BloomFilterConf) String() string {

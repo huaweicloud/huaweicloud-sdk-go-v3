@@ -10,10 +10,10 @@ import (
 type ExternalServiceCaseStep struct {
 
 	// 测试用例预期结果信息，长度为[0-500]位字符
-	ExpectResult *string `json:"expect_result,omitempty"`
+	ExpectResult *string `json:"expect_result,omitempty" xml:"expect_result"`
 
 	// 测试步骤描述信息，长度为[0-500]位字符
-	TestStep *string `json:"test_step,omitempty"`
+	TestStep *string `json:"test_step,omitempty" xml:"test_step"`
 }
 
 func (o ExternalServiceCaseStep) String() string {

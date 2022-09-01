@@ -10,7 +10,7 @@ import (
 type FailoverRequest struct {
 
 	// 是否强制倒换；true：强制倒换；false和默认null为不强制。
-	Force *bool `json:"force,omitempty"`
+	Force *bool `json:"force,omitempty" xml:"force"`
 }
 
 func (o FailoverRequest) String() string {

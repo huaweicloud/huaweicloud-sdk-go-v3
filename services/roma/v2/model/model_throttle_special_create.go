@@ -12,13 +12,13 @@ import (
 type ThrottleSpecialCreate struct {
 
 	// 流控时间内特殊对象能够访问API的最大次数限制
-	CallLimits int32 `json:"call_limits"`
+	CallLimits int32 `json:"call_limits" xml:"call_limits"`
 
 	// 特殊APP的编号[或特殊租户的帐号ID](tag:hws;hws_hk;hcs;fcs;g42;)
-	ObjectId string `json:"object_id"`
+	ObjectId string `json:"object_id" xml:"object_id"`
 
 	// 特殊对象类型
-	ObjectType ThrottleSpecialCreateObjectType `json:"object_type"`
+	ObjectType ThrottleSpecialCreateObjectType `json:"object_type" xml:"object_type"`
 }
 
 func (o ThrottleSpecialCreate) String() string {

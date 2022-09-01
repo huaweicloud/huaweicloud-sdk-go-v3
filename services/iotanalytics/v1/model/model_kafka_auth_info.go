@@ -10,9 +10,9 @@ import (
 type KafkaAuthInfo struct {
 
 	// 安全协议
-	SecurityProtocol string `json:"security_protocol"`
+	SecurityProtocol string `json:"security_protocol" xml:"security_protocol"`
 
-	SaslPlainAuthInfo *SaslPlainAuthInfo `json:"sasl_plain_auth_info,omitempty"`
+	SaslPlainAuthInfo *SaslPlainAuthInfo `json:"sasl_plain_auth_info,omitempty" xml:"sasl_plain_auth_info"`
 }
 
 func (o KafkaAuthInfo) String() string {

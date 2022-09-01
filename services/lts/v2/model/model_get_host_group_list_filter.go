@@ -13,15 +13,15 @@ import (
 type GetHostGroupListFilter struct {
 
 	// 主机组类型。windows：windows类型，linux：linux类型
-	HostGroupType *GetHostGroupListFilterHostGroupType `json:"host_group_type,omitempty"`
+	HostGroupType *GetHostGroupListFilterHostGroupType `json:"host_group_type,omitempty" xml:"host_group_type"`
 
 	// 主机组名称列表。
-	HostGroupNameList *[]string `json:"host_group_name_list,omitempty"`
+	HostGroupNameList *[]string `json:"host_group_name_list,omitempty" xml:"host_group_name_list"`
 
 	// 主机名称列表。
-	HostNameList *[]string `json:"host_name_list,omitempty"`
+	HostNameList *[]string `json:"host_name_list,omitempty" xml:"host_name_list"`
 
-	HostGroupTag *GetHostGroupListTag `json:"host_group_tag,omitempty"`
+	HostGroupTag *GetHostGroupListTag `json:"host_group_tag,omitempty" xml:"host_group_tag"`
 }
 
 func (o GetHostGroupListFilter) String() string {

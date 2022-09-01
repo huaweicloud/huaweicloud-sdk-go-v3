@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateTaskRequest struct {
-	Body *PostTask `json:"body,omitempty"`
+	Body *PostTask `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateTaskRequest) String() string {

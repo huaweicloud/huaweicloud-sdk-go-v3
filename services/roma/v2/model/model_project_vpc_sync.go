@@ -9,13 +9,13 @@ import (
 type ProjectVpcSync struct {
 
 	// VPC通道编号
-	VpcChannelId *string `json:"vpc_channel_id,omitempty"`
+	VpcChannelId *string `json:"vpc_channel_id,omitempty" xml:"vpc_channel_id"`
 
 	// 新增关联的实例列表
-	InstanceIds *[]string `json:"instance_ids,omitempty"`
+	InstanceIds *[]string `json:"instance_ids,omitempty" xml:"instance_ids"`
 
 	// 是否强制同步，默认不强制同步
-	ForceSync *bool `json:"force_sync,omitempty"`
+	ForceSync *bool `json:"force_sync,omitempty" xml:"force_sync"`
 }
 
 func (o ProjectVpcSync) String() string {

@@ -10,9 +10,9 @@ import (
 type AddMemberRequest struct {
 
 	// 备份副本id
-	BackupId string `json:"backup_id"`
+	BackupId string `json:"backup_id" xml:"backup_id"`
 
-	Body *AddMembersReq `json:"body,omitempty"`
+	Body *AddMembersReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o AddMemberRequest) String() string {

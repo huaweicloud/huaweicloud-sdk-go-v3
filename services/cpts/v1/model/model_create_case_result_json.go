@@ -9,7 +9,7 @@ import (
 type CreateCaseResultJson struct {
 
 	// task_case_id
-	TaskCaseId *int32 `json:"task_case_id,omitempty"`
+	TaskCaseId *int32 `json:"task_case_id,omitempty" xml:"task_case_id"`
 }
 
 func (o CreateCaseResultJson) String() string {

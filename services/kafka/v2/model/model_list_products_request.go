@@ -10,7 +10,7 @@ import (
 type ListProductsRequest struct {
 
 	// 消息引擎的类型。当前只支持kafka类型。
-	Engine string `json:"engine"`
+	Engine string `json:"engine" xml:"engine"`
 }
 
 func (o ListProductsRequest) String() string {

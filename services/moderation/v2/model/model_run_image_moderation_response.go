@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type RunImageModerationResponse struct {
-	Result         *ImageDetectionResultBody `json:"result,omitempty"`
+	Result         *ImageDetectionResultBody `json:"result,omitempty" xml:"result"`
 	HttpStatusCode int                       `json:"-"`
 }
 

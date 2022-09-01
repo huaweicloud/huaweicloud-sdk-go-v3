@@ -10,9 +10,9 @@ import (
 type CreateGaussMySqlBackupRequest struct {
 
 	// 语言
-	XLanguage *string `json:"X-Language,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
 
-	Body *MysqlCreateBackupRequest `json:"body,omitempty"`
+	Body *MysqlCreateBackupRequest `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateGaussMySqlBackupRequest) String() string {

@@ -10,9 +10,9 @@ import (
 type AddNicsRequest struct {
 
 	// 边缘实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *AddNicsRequestBody `json:"body,omitempty"`
+	Body *AddNicsRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o AddNicsRequest) String() string {

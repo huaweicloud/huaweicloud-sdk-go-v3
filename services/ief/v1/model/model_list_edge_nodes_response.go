@@ -10,10 +10,10 @@ import (
 type ListEdgeNodesResponse struct {
 
 	// 边缘节点列表
-	Nodes *[]EdgeNodeResp `json:"nodes,omitempty"`
+	Nodes *[]EdgeNodeResp `json:"nodes,omitempty" xml:"nodes"`
 
 	// 满足条件的边缘节点个数
-	Count          *int32 `json:"count,omitempty"`
+	Count          *int32 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

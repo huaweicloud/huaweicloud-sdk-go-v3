@@ -7,7 +7,7 @@ import (
 )
 
 type PutEventsReq struct {
-	Events *[]CloudEvents `json:"events,omitempty"`
+	Events *[]CloudEvents `json:"events,omitempty" xml:"events"`
 }
 
 func (o PutEventsReq) String() string {

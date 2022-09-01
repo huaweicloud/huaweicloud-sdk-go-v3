@@ -10,7 +10,7 @@ import (
 type AllowedAddressPair struct {
 
 	// 是否开启源/目的检查开关。  默认是开启，不允许置空。  关闭：1.1.1.1/0 开启：除“1.1.1.1/0”以外的其余值均按开启处理
-	IpAddress *string `json:"ip_address,omitempty"`
+	IpAddress *string `json:"ip_address,omitempty" xml:"ip_address"`
 }
 
 func (o AllowedAddressPair) String() string {

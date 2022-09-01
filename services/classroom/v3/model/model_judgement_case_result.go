@@ -13,10 +13,10 @@ import (
 type JudgementCaseResult struct {
 
 	// 用例实际运行结果输出
-	Output string `json:"output"`
+	Output string `json:"output" xml:"output"`
 
 	// 用例运行结果状态： judgeout判题类型对应：pass（用例比对成功）、failed（用例比对失败）； caseout判题类型对应：success（用例运行成功）、error（用例运行失败）；run_timeout（用例运行超时）
-	CaseStatus JudgementCaseResultCaseStatus `json:"case_status"`
+	CaseStatus JudgementCaseResultCaseStatus `json:"case_status" xml:"case_status"`
 }
 
 func (o JudgementCaseResult) String() string {

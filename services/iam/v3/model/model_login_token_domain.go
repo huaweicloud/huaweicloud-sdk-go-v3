@@ -10,10 +10,10 @@ import (
 type LoginTokenDomain struct {
 
 	// 被委托方用户所属账号名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 被委托方用户所属账号ID。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 }
 
 func (o LoginTokenDomain) String() string {

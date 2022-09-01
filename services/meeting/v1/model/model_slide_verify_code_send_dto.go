@@ -9,13 +9,13 @@ import (
 type SlideVerifyCodeSendDto struct {
 
 	// 用户身份信息（手机号码或邮箱账号或用户真实账号） maxLength：255 minLength：1
-	User string `json:"user"`
+	User string `json:"user" xml:"user"`
 
 	// 登录客户端类型。 * 0：Web客户端类型； * 5：cloudlink pc； * 6：cloudlink mobile； * 16：workplace pc
-	ClientType int32 `json:"clientType"`
+	ClientType int32 `json:"clientType" xml:"clientType"`
 
 	// 校验类型。 * 0：登录； * 1：忘记密码； 默认值：0
-	CheckType *int32 `json:"checkType,omitempty"`
+	CheckType *int32 `json:"checkType,omitempty" xml:"checkType"`
 }
 
 func (o SlideVerifyCodeSendDto) String() string {

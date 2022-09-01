@@ -10,9 +10,9 @@ import (
 type UpdateCnfRequest struct {
 
 	// 指定更新配置文件的集群ID。
-	ClusterId string `json:"cluster_id"`
+	ClusterId string `json:"cluster_id" xml:"cluster_id"`
 
-	Body *CreateCnfReq `json:"body,omitempty"`
+	Body *CreateCnfReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateCnfRequest) String() string {

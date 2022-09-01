@@ -10,10 +10,10 @@ import (
 type ListServicesResponse struct {
 
 	// 满足条件的端点个数
-	Count *int64 `json:"count,omitempty"`
+	Count *int64 `json:"count,omitempty" xml:"count"`
 
 	// 服务列表
-	Services       *[]ServiceRespDetail `json:"services,omitempty"`
+	Services       *[]ServiceRespDetail `json:"services,omitempty" xml:"services"`
 	HttpStatusCode int                  `json:"-"`
 }
 

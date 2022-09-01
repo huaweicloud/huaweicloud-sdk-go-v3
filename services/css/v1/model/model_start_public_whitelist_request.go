@@ -10,9 +10,9 @@ import (
 type StartPublicWhitelistRequest struct {
 
 	// 指定开启公网访问控制白名单集群ID。
-	ClusterId string `json:"cluster_id"`
+	ClusterId string `json:"cluster_id" xml:"cluster_id"`
 
-	Body *StartPublicWhitelistReq `json:"body,omitempty"`
+	Body *StartPublicWhitelistReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o StartPublicWhitelistRequest) String() string {

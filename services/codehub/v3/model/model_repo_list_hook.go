@@ -9,7 +9,7 @@ import (
 type RepoListHook struct {
 
 	// hook列表
-	Hooks *[]RepoHook `json:"hooks,omitempty"`
+	Hooks *[]RepoHook `json:"hooks,omitempty" xml:"hooks"`
 }
 
 func (o RepoListHook) String() string {

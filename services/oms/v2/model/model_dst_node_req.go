@@ -10,22 +10,22 @@ import (
 type DstNodeReq struct {
 
 	// 目的端桶的AK（最大长度100个字符）。
-	Ak string `json:"ak"`
+	Ak string `json:"ak" xml:"ak"`
 
 	// 目的端桶的SK（最大长度100个字符）。
-	Sk string `json:"sk"`
+	Sk string `json:"sk" xml:"sk"`
 
 	// 目的端的临时Token（最大长度16384个字符）。
-	SecurityToken *string `json:"security_token,omitempty"`
+	SecurityToken *string `json:"security_token,omitempty" xml:"security_token"`
 
 	// 目的端桶的名称。
-	Bucket string `json:"bucket"`
+	Bucket string `json:"bucket" xml:"bucket"`
 
 	// 目的端桶内路径前缀（拼接在对象key前面,组成新的key,拼接后不能超过1024个字符）。
-	SavePrefix *string `json:"save_prefix,omitempty"`
+	SavePrefix *string `json:"save_prefix,omitempty" xml:"save_prefix"`
 
 	// 目的端桶所处的区域。  请与Endpoint对应的区域保持一致。
-	Region string `json:"region"`
+	Region string `json:"region" xml:"region"`
 }
 
 func (o DstNodeReq) String() string {

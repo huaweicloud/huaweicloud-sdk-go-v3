@@ -10,15 +10,15 @@ import (
 type TokenUserResult struct {
 
 	// IAM用户名。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// IAM用户ID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 密码过期时间（UTC时间），“”表示密码不过期。
-	PasswordExpiresAt string `json:"password_expires_at"`
+	PasswordExpiresAt string `json:"password_expires_at" xml:"password_expires_at"`
 
-	Domain *TokenUserDomainResult `json:"domain"`
+	Domain *TokenUserDomainResult `json:"domain" xml:"domain"`
 }
 
 func (o TokenUserResult) String() string {

@@ -13,12 +13,12 @@ import (
 type SetPostgresqlDbUserPwdRequest struct {
 
 	// 语言
-	XLanguage *SetPostgresqlDbUserPwdRequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *SetPostgresqlDbUserPwdRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *DbUserPwdRequest `json:"body,omitempty"`
+	Body *DbUserPwdRequest `json:"body,omitempty" xml:"body"`
 }
 
 func (o SetPostgresqlDbUserPwdRequest) String() string {

@@ -10,7 +10,7 @@ import (
 type CreateResourceGroupResponse struct {
 
 	// 创建的资源分组ID，如：rg1606377637506DmVOENVyL。
-	GroupId        *string `json:"group_id,omitempty"`
+	GroupId        *string `json:"group_id,omitempty" xml:"group_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

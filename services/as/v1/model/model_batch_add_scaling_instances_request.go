@@ -10,9 +10,9 @@ import (
 type BatchAddScalingInstancesRequest struct {
 
 	// 实例ID。
-	ScalingGroupId string `json:"scaling_group_id"`
+	ScalingGroupId string `json:"scaling_group_id" xml:"scaling_group_id"`
 
-	Body *BatchAddInstancesOption `json:"body,omitempty"`
+	Body *BatchAddInstancesOption `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchAddScalingInstancesRequest) String() string {

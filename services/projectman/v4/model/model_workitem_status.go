@@ -9,9 +9,9 @@ import (
 type WorkitemStatus struct {
 
 	// 工作项状态变更记录的id,每次变更产生一条新的记录id
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
-	Status *WorkitemStatusStatus `json:"status,omitempty"`
+	Status *WorkitemStatusStatus `json:"status,omitempty" xml:"status"`
 }
 
 func (o WorkitemStatus) String() string {

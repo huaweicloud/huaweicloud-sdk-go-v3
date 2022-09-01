@@ -9,10 +9,10 @@ import (
 type ApplicationConfigModifyConfigurationEnv struct {
 
 	// 环境变量名称。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 环境变量取值。
-	Value string `json:"value"`
+	Value string `json:"value" xml:"value"`
 }
 
 func (o ApplicationConfigModifyConfigurationEnv) String() string {

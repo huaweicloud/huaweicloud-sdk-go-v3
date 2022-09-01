@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CompareFaceByUrlRequest struct {
-	Body *FaceCompareUrlReq `json:"body,omitempty"`
+	Body *FaceCompareUrlReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o CompareFaceByUrlRequest) String() string {

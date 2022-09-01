@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateGrantRequest struct {
-	Body *CreateGrantRequestBody `json:"body,omitempty"`
+	Body *CreateGrantRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateGrantRequest) String() string {

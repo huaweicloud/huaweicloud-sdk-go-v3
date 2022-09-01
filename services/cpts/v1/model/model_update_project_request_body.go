@@ -10,22 +10,22 @@ import (
 type UpdateProjectRequestBody struct {
 
 	// id
-	Id int32 `json:"id"`
+	Id int32 `json:"id" xml:"id"`
 
 	// name
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// description
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// variables_no_file
-	VariablesNoFile *[]string `json:"variables_no_file,omitempty"`
+	VariablesNoFile *[]string `json:"variables_no_file,omitempty" xml:"variables_no_file"`
 
 	// source
-	Source *int32 `json:"source,omitempty"`
+	Source *int32 `json:"source,omitempty" xml:"source"`
 
 	// external_params
-	ExternalParams *interface{} `json:"external_params,omitempty"`
+	ExternalParams *interface{} `json:"external_params,omitempty" xml:"external_params"`
 }
 
 func (o UpdateProjectRequestBody) String() string {

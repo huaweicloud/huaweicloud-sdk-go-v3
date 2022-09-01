@@ -10,7 +10,7 @@ import (
 type ApplicationConfigModifyConfiguration struct {
 
 	// 应用环境变量。
-	Env []ApplicationConfigModifyConfigurationEnv `json:"env"`
+	Env []ApplicationConfigModifyConfigurationEnv `json:"env" xml:"env"`
 }
 
 func (o ApplicationConfigModifyConfiguration) String() string {

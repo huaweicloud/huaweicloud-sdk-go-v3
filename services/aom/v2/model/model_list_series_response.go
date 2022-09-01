@@ -10,9 +10,9 @@ import (
 type ListSeriesResponse struct {
 
 	// 时间序列对象列表。
-	Series *[]SeriesQueryItemResult `json:"series,omitempty"`
+	Series *[]SeriesQueryItemResult `json:"series,omitempty" xml:"series"`
 
-	MetaData       *MetaDataSeries `json:"meta_data,omitempty"`
+	MetaData       *MetaDataSeries `json:"meta_data,omitempty" xml:"meta_data"`
 	HttpStatusCode int             `json:"-"`
 }
 

@@ -9,13 +9,13 @@ import (
 type UnfreezeSubCustomersReq struct {
 
 	// 需要解冻的客户账号ID列表。 您可以调用查询客户列表接口获取customer_id。
-	CustomerIds []string `json:"customer_ids"`
+	CustomerIds []string `json:"customer_ids" xml:"customer_ids"`
 
 	// 解冻原因。
-	Reason string `json:"reason"`
+	Reason string `json:"reason" xml:"reason"`
 
 	// 云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
-	IndirectPartnerId *string `json:"indirect_partner_id,omitempty"`
+	IndirectPartnerId *string `json:"indirect_partner_id,omitempty" xml:"indirect_partner_id"`
 }
 
 func (o UnfreezeSubCustomersReq) String() string {

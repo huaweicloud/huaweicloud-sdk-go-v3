@@ -10,10 +10,10 @@ import (
 type ListIncentiveDiscountPoliciesResponse struct {
 
 	// 产品折扣和激励策略信息列表。 具体请参见表2。
-	Policies *[]IncentiveAndDiscountPolicy `json:"policies,omitempty"`
+	Policies *[]IncentiveAndDiscountPolicy `json:"policies,omitempty" xml:"policies"`
 
 	// 查询总条数。
-	TotalCount     *int32 `json:"total_count,omitempty"`
+	TotalCount     *int32 `json:"total_count,omitempty" xml:"total_count"`
 	HttpStatusCode int    `json:"-"`
 }
 

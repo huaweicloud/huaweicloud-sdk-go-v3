@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type UpdateAomMappingRulesRequest struct {
-	Body *AomMappingRequestInfo `json:"body,omitempty"`
+	Body *AomMappingRequestInfo `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateAomMappingRulesRequest) String() string {

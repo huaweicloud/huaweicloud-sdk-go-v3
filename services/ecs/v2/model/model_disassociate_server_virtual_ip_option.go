@@ -13,13 +13,13 @@ import (
 type DisassociateServerVirtualIpOption struct {
 
 	// 云服务器添加网卡的信息。  约束：解绑虚拟IP时，subnet_id为空字符串
-	SubnetId DisassociateServerVirtualIpOptionSubnetId `json:"subnet_id"`
+	SubnetId DisassociateServerVirtualIpOptionSubnetId `json:"subnet_id" xml:"subnet_id"`
 
 	// 网卡即将配置的虚拟IP的地址。  约束：解绑虚拟IP时，ip_address为空字符串
-	IpAddress DisassociateServerVirtualIpOptionIpAddress `json:"ip_address"`
+	IpAddress DisassociateServerVirtualIpOptionIpAddress `json:"ip_address" xml:"ip_address"`
 
 	// 虚拟IP的allowed_address_pairs属性是否添加网卡的IP/Mac对。
-	ReverseBinding *bool `json:"reverse_binding,omitempty"`
+	ReverseBinding *bool `json:"reverse_binding,omitempty" xml:"reverse_binding"`
 }
 
 func (o DisassociateServerVirtualIpOption) String() string {

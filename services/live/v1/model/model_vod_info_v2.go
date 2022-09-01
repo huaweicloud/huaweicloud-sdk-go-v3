@@ -9,10 +9,10 @@ import (
 type VodInfoV2 struct {
 
 	// VOD媒资id
-	AssetId string `json:"asset_id"`
+	AssetId string `json:"asset_id" xml:"asset_id"`
 
 	// 点播播放地址
-	PlayUrl *string `json:"play_url,omitempty"`
+	PlayUrl *string `json:"play_url,omitempty" xml:"play_url"`
 }
 
 func (o VodInfoV2) String() string {

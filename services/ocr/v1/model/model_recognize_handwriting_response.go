@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type RecognizeHandwritingResponse struct {
-	Result         *HandwritingResult `json:"result,omitempty"`
+	Result         *HandwritingResult `json:"result,omitempty" xml:"result"`
 	HttpStatusCode int                `json:"-"`
 }
 

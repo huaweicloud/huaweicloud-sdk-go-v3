@@ -9,7 +9,7 @@ import (
 type PicInfo struct {
 
 	// 截图文件名。
-	PicName *string `json:"pic_name,omitempty"`
+	PicName *string `json:"pic_name,omitempty" xml:"pic_name"`
 }
 
 func (o PicInfo) String() string {

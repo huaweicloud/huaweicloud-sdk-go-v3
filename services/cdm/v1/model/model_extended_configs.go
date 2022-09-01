@@ -9,10 +9,10 @@ import (
 type ExtendedConfigs struct {
 
 	// 扩展参数属性名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// cdm-base64编码后的值
-	Value *string `json:"value,omitempty"`
+	Value *string `json:"value,omitempty" xml:"value"`
 }
 
 func (o ExtendedConfigs) String() string {

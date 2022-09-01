@@ -10,10 +10,10 @@ import (
 type ListEncodeServersResponse struct {
 
 	// 请求的唯一标识ID
-	RequestId string `json:"request_id"`
+	RequestId string `json:"request_id" xml:"request_id"`
 
 	// 编码服务信息
-	EncodeServers  []interface{} `json:"encode_servers"`
+	EncodeServers  []interface{} `json:"encode_servers" xml:"encode_servers"`
 	HttpStatusCode int           `json:"-"`
 }
 

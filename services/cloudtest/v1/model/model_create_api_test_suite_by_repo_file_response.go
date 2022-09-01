@@ -10,10 +10,10 @@ import (
 type CreateApiTestSuiteByRepoFileResponse struct {
 
 	// 生成的测试套的id
-	TestsuiteId *string `json:"testsuite_id,omitempty"`
+	TestsuiteId *string `json:"testsuite_id,omitempty" xml:"testsuite_id"`
 
 	// 生成的测试用例id列表
-	TestcaseIds    *[]string `json:"testcase_ids,omitempty"`
+	TestcaseIds    *[]string `json:"testcase_ids,omitempty" xml:"testcase_ids"`
 	HttpStatusCode int       `json:"-"`
 }
 

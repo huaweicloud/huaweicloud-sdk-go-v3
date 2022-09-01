@@ -10,9 +10,9 @@ import (
 type BatchAttachSharableVolumesRequest struct {
 
 	// 共享磁盘ID。
-	VolumeId string `json:"volume_id"`
+	VolumeId string `json:"volume_id" xml:"volume_id"`
 
-	Body *BatchAttachSharableVolumesRequestBody `json:"body,omitempty"`
+	Body *BatchAttachSharableVolumesRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchAttachSharableVolumesRequest) String() string {

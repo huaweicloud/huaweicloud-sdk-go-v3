@@ -10,7 +10,7 @@ import (
 type DeleteDeployTaskRequest struct {
 
 	// 部署任务id
-	TaskId string `json:"task_id"`
+	TaskId string `json:"task_id" xml:"task_id"`
 }
 
 func (o DeleteDeployTaskRequest) String() string {

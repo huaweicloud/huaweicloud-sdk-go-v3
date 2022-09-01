@@ -8,9 +8,9 @@ import (
 
 // This is a auto create Body Object
 type CreateInstanceReq struct {
-	Instance *CreateInstanceDetail `json:"instance"`
+	Instance *CreateInstanceDetail `json:"instance" xml:"instance"`
 
-	ExtendParam *CreateInstanceExtendParam `json:"extend_param,omitempty"`
+	ExtendParam *CreateInstanceExtendParam `json:"extend_param,omitempty" xml:"extend_param"`
 }
 
 func (o CreateInstanceReq) String() string {

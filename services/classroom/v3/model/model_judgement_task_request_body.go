@@ -13,28 +13,28 @@ import (
 type JudgementTaskRequestBody struct {
 
 	// 第三方指定的判题结果回调url，取值来源于伙伴通道“判题管理配置”-“接口管理”中设置的回调地址相同
-	NotifyUrl string `json:"notify_url"`
+	NotifyUrl string `json:"notify_url" xml:"notify_url"`
 
 	// 代码来源：inline（源代码）
-	CodeType JudgementTaskRequestBodyCodeType `json:"code_type"`
+	CodeType JudgementTaskRequestBodyCodeType `json:"code_type" xml:"code_type"`
 
 	// 源代码，需Base64编码
-	SourceCode string `json:"source_code"`
+	SourceCode string `json:"source_code" xml:"source_code"`
 
 	// 任务描述
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 支持语言类型：java、c、cpp、python
-	RuntimeType JudgementTaskRequestBodyRuntimeType `json:"runtime_type"`
+	RuntimeType JudgementTaskRequestBodyRuntimeType `json:"runtime_type" xml:"runtime_type"`
 
 	// 代码运行超时时间，单位为秒
-	Timeout *int32 `json:"timeout,omitempty"`
+	Timeout *int32 `json:"timeout,omitempty" xml:"timeout"`
 
 	// 结果返回类型：sysout（标准输出）、fileout（以文件形式输出）、imgout（以图片形式输出）、caseout（用例运行返回）、judgeout（用例对比返回）
-	OutputType JudgementTaskRequestBodyOutputType `json:"output_type"`
+	OutputType JudgementTaskRequestBodyOutputType `json:"output_type" xml:"output_type"`
 
 	// 当判题结果类型是caseout和judgeout类型才需要传的字段，表示用例数据
-	Testcases *[]JudgementCaseInfo `json:"testcases,omitempty"`
+	Testcases *[]JudgementCaseInfo `json:"testcases,omitempty" xml:"testcases"`
 }
 
 func (o JudgementTaskRequestBody) String() string {

@@ -10,9 +10,9 @@ import (
 type ListDevicesResponse struct {
 
 	// 满足条件的设备总数
-	Total *int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty" xml:"total"`
 
-	Data           *[]GetDevicesListArrayObject `json:"data,omitempty"`
+	Data           *[]GetDevicesListArrayObject `json:"data,omitempty" xml:"data"`
 	HttpStatusCode int                          `json:"-"`
 }
 

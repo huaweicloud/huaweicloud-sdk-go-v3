@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type UpdateLoginProtectResponse struct {
-	LoginProtect   *UpdateLoginProtectRespon `json:"login_protect,omitempty"`
+	LoginProtect   *UpdateLoginProtectRespon `json:"login_protect,omitempty" xml:"login_protect"`
 	HttpStatusCode int                       `json:"-"`
 }
 

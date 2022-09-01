@@ -8,8 +8,11 @@ import (
 
 // Response Object
 type CreateClusterResponse struct {
-	Cluster        *CreateClusterResp `json:"cluster,omitempty"`
-	HttpStatusCode int                `json:"-"`
+	Cluster *CreateClusterResp `json:"cluster,omitempty" xml:"cluster"`
+
+	// 订单号。只有包周期集群拥有该参数。
+	OrdeId         *string `json:"ordeId,omitempty" xml:"ordeId"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o CreateClusterResponse) String() string {

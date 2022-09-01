@@ -10,10 +10,10 @@ import (
 type StopWorkFlowRequest struct {
 
 	// 函数工作流ID
-	WorkflowId string `json:"workflow_id"`
+	WorkflowId string `json:"workflow_id" xml:"workflow_id"`
 
 	// 函数流执行实例ID
-	ExecutionId string `json:"execution_id"`
+	ExecutionId string `json:"execution_id" xml:"execution_id"`
 }
 
 func (o StopWorkFlowRequest) String() string {

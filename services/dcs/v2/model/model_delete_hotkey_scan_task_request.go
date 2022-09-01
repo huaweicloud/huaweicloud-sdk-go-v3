@@ -10,10 +10,10 @@ import (
 type DeleteHotkeyScanTaskRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 热key分析任务ID。
-	HotkeyId string `json:"hotkey_id"`
+	HotkeyId string `json:"hotkey_id" xml:"hotkey_id"`
 }
 
 func (o DeleteHotkeyScanTaskRequest) String() string {

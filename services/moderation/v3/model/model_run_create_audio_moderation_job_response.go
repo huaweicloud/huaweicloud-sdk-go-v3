@@ -10,10 +10,10 @@ import (
 type RunCreateAudioModerationJobResponse struct {
 
 	// 本次请求的唯⼀标识，⽤于问题排查，建议保存。
-	RequestId *string `json:"request_id,omitempty"`
+	RequestId *string `json:"request_id,omitempty" xml:"request_id"`
 
 	// 作业唯一标识。
-	JobId          *string `json:"job_id,omitempty"`
+	JobId          *string `json:"job_id,omitempty" xml:"job_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

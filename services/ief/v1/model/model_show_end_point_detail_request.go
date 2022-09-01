@@ -10,10 +10,10 @@ import (
 type ShowEndPointDetailRequest struct {
 
 	// 铂金版实例ID，专业版实例为空值
-	IefInstanceId *string `json:"ief-instance-id,omitempty"`
+	IefInstanceId *string `json:"ief-instance-id,omitempty" xml:"ief-instance-id"`
 
 	// 端点ID
-	EndpointId string `json:"endpoint_id"`
+	EndpointId string `json:"endpoint_id" xml:"endpoint_id"`
 }
 
 func (o ShowEndPointDetailRequest) String() string {

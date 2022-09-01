@@ -9,19 +9,19 @@ import (
 type CustomerBalancesV2 struct {
 
 	// 客户账号ID。
-	CustomerId string `json:"customer_id"`
+	CustomerId string `json:"customer_id" xml:"customer_id"`
 
 	// 客户欠款总额度。
-	DebtAmount *float64 `json:"debt_amount,omitempty"`
+	DebtAmount *float64 `json:"debt_amount,omitempty" xml:"debt_amount"`
 
 	// 客户可用总额度。
-	Amount *float64 `json:"amount,omitempty"`
+	Amount *float64 `json:"amount,omitempty" xml:"amount"`
 
 	// 币种。 CNY：人民币。
-	Currency *string `json:"currency,omitempty"`
+	Currency *string `json:"currency,omitempty" xml:"currency"`
 
 	// 度量单位： 1：元
-	MeasureId *int32 `json:"measure_id,omitempty"`
+	MeasureId *int32 `json:"measure_id,omitempty" xml:"measure_id"`
 }
 
 func (o CustomerBalancesV2) String() string {

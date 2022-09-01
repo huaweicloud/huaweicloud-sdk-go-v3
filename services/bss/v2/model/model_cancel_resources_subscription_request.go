@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CancelResourcesSubscriptionRequest struct {
-	Body *UnsubscribeResourcesReq `json:"body,omitempty"`
+	Body *UnsubscribeResourcesReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o CancelResourcesSubscriptionRequest) String() string {

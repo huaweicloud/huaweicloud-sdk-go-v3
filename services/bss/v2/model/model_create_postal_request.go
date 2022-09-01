@@ -10,9 +10,9 @@ import (
 type CreatePostalRequest struct {
 
 	// 语言。中文：zh_CN 英文：en_US，缺省为zh_CN
-	XLanguage *string `json:"X-Language,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
 
-	Body *AddPostalReq `json:"body,omitempty"`
+	Body *AddPostalReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreatePostalRequest) String() string {

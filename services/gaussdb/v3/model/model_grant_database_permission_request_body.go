@@ -10,7 +10,7 @@ import (
 type GrantDatabasePermissionRequestBody struct {
 
 	// 数据库用户列表，列表最大长度为50。
-	Users []GrantDatabasePermission `json:"users"`
+	Users []GrantDatabasePermission `json:"users" xml:"users"`
 }
 
 func (o GrantDatabasePermissionRequestBody) String() string {

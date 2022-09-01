@@ -10,10 +10,10 @@ import (
 type UcbParam struct {
 
 	// 折中参数。
-	Alpha float64 `json:"alpha"`
+	Alpha float64 `json:"alpha" xml:"alpha"`
 
 	// 最小行为次数。
-	MinUsedNum int32 `json:"min_used_num"`
+	MinUsedNum int32 `json:"min_used_num" xml:"min_used_num"`
 }
 
 func (o UcbParam) String() string {

@@ -10,9 +10,9 @@ import (
 type UpdateResWorkspaceRequest struct {
 
 	// 工作空间id。
-	WorkspaceId string `json:"workspace_id"`
+	WorkspaceId string `json:"workspace_id" xml:"workspace_id"`
 
-	Body *UpdateResWorkspaceRequestBody `json:"body,omitempty"`
+	Body *UpdateResWorkspaceRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateResWorkspaceRequest) String() string {

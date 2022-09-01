@@ -10,13 +10,13 @@ import (
 type DeleteDomainMappingRequest struct {
 
 	// op账号需要携带的特定project_id，当使用op账号时该值为所操作租户的project_id
-	SpecifyProject *string `json:"specify_project,omitempty"`
+	SpecifyProject *string `json:"specify_project,omitempty" xml:"specify_project"`
 
 	// 直播播放域名
-	PullDomain string `json:"pull_domain"`
+	PullDomain string `json:"pull_domain" xml:"pull_domain"`
 
 	// 直播推流域名
-	PushDomain string `json:"push_domain"`
+	PushDomain string `json:"push_domain" xml:"push_domain"`
 }
 
 func (o DeleteDomainMappingRequest) String() string {

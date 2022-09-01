@@ -9,16 +9,16 @@ import (
 type EmbeddedDatabaseWatermark struct {
 
 	// 添加水印的内容
-	WatermarkContent string `json:"watermark_content"`
+	WatermarkContent string `json:"watermark_content" xml:"watermark_content"`
 
 	// 水印密钥
-	WatermarkKey string `json:"watermark_key"`
+	WatermarkKey string `json:"watermark_key" xml:"watermark_key"`
 
 	// 字段类型列表，最大长度100。使用时，至少包含两个字段，一个“primary_key”为true表示主键，一个为false用来嵌入水印
-	Columns []Columns `json:"columns"`
+	Columns []Columns `json:"columns" xml:"columns"`
 
 	// 数据字段的内容，最大支持长度2000
-	Data []map[string]interface{} `json:"data"`
+	Data []map[string]interface{} `json:"data" xml:"data"`
 }
 
 func (o EmbeddedDatabaseWatermark) String() string {

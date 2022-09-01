@@ -9,13 +9,13 @@ import (
 type EnvironmentModify struct {
 
 	// 环境名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 环境别名。
-	Alias *string `json:"alias,omitempty"`
+	Alias *string `json:"alias,omitempty" xml:"alias"`
 
 	// 环境描述。
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 }
 
 func (o EnvironmentModify) String() string {

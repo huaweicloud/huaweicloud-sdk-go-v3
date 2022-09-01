@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RecognizeVinRequest struct {
-	Body *VinRequestBody `json:"body,omitempty"`
+	Body *VinRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o RecognizeVinRequest) String() string {

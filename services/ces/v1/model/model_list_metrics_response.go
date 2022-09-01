@@ -10,9 +10,9 @@ import (
 type ListMetricsResponse struct {
 
 	// 指标信息列表
-	Metrics *[]MetricInfoList `json:"metrics,omitempty"`
+	Metrics *[]MetricInfoList `json:"metrics,omitempty" xml:"metrics"`
 
-	MetaData       *MetaData `json:"meta_data,omitempty"`
+	MetaData       *MetaData `json:"meta_data,omitempty" xml:"meta_data"`
 	HttpStatusCode int       `json:"-"`
 }
 

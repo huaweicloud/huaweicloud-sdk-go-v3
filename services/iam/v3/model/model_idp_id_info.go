@@ -10,7 +10,7 @@ import (
 type IdpIdInfo struct {
 
 	// 身份提供商id。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 }
 
 func (o IdpIdInfo) String() string {

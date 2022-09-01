@@ -10,12 +10,12 @@ import (
 type AddDatabasePermissionRequest struct {
 
 	// 语言。
-	XLanguage *string `json:"X-Language,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *GrantDatabasePermissionRequestBody `json:"body,omitempty"`
+	Body *GrantDatabasePermissionRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o AddDatabasePermissionRequest) String() string {

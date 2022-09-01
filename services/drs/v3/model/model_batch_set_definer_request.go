@@ -13,9 +13,9 @@ import (
 type BatchSetDefinerRequest struct {
 
 	// 请求语言类型
-	XLanguage *BatchSetDefinerRequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *BatchSetDefinerRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 
-	Body *BatchReplaceDefinerReq `json:"body,omitempty"`
+	Body *BatchReplaceDefinerReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchSetDefinerRequest) String() string {

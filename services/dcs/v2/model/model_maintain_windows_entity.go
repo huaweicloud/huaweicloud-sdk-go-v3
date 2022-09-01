@@ -10,16 +10,16 @@ import (
 type MaintainWindowsEntity struct {
 
 	// 序号。
-	Seq *int32 `json:"seq,omitempty"`
+	Seq *int32 `json:"seq,omitempty" xml:"seq"`
 
 	// 是否为默认时间段。
-	Default *bool `json:"default,omitempty"`
+	Default *bool `json:"default,omitempty" xml:"default"`
 
 	// 维护时间窗开始时间
-	Begin *string `json:"begin,omitempty"`
+	Begin *string `json:"begin,omitempty" xml:"begin"`
 
 	// 维护时间窗结束时间。
-	End *string `json:"end,omitempty"`
+	End *string `json:"end,omitempty" xml:"end"`
 }
 
 func (o MaintainWindowsEntity) String() string {

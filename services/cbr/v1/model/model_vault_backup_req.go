@@ -7,7 +7,7 @@ import (
 )
 
 type VaultBackupReq struct {
-	Checkpoint *VaultBackup `json:"checkpoint"`
+	Checkpoint *VaultBackup `json:"checkpoint" xml:"checkpoint"`
 }
 
 func (o VaultBackupReq) String() string {

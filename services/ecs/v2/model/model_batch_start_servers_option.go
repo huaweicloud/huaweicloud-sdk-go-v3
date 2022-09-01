@@ -10,7 +10,7 @@ import (
 type BatchStartServersOption struct {
 
 	// 云服务器ID列表
-	Servers []ServerId `json:"servers"`
+	Servers []ServerId `json:"servers" xml:"servers"`
 }
 
 func (o BatchStartServersOption) String() string {

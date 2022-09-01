@@ -10,10 +10,10 @@ import (
 type ShowApplicationConfigurationRequest struct {
 
 	// 应用ID。
-	ApplicationId string `json:"application_id"`
+	ApplicationId string `json:"application_id" xml:"application_id"`
 
 	// 环境ID，如果未提供，查询所有环境。
-	EnvironmentId *string `json:"environment_id,omitempty"`
+	EnvironmentId *string `json:"environment_id,omitempty" xml:"environment_id"`
 }
 
 func (o ShowApplicationConfigurationRequest) String() string {

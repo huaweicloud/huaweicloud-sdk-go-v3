@@ -10,13 +10,13 @@ import (
 type PublicIpInfo struct {
 
 	// 弹性公网ip配置id
-	PublicipId string `json:"publicip_id"`
+	PublicipId string `json:"publicip_id" xml:"publicip_id"`
 
 	// IP地址
-	PublicipAddress string `json:"publicip_address"`
+	PublicipAddress string `json:"publicip_address" xml:"publicip_address"`
 
 	// IP版本信息。 取值范围：4和6 4：IPv4 6：IPv6  [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
-	IpVersion int32 `json:"ip_version"`
+	IpVersion int32 `json:"ip_version" xml:"ip_version"`
 }
 
 func (o PublicIpInfo) String() string {

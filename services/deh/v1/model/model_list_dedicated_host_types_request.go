@@ -10,7 +10,7 @@ import (
 type ListDedicatedHostTypesRequest struct {
 
 	// AZ。
-	AvailabilityZone string `json:"availability_zone"`
+	AvailabilityZone string `json:"availability_zone" xml:"availability_zone"`
 }
 
 func (o ListDedicatedHostTypesRequest) String() string {

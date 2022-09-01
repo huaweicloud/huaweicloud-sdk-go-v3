@@ -12,22 +12,22 @@ import (
 type AppQuotaCreate struct {
 
 	// 配额名称。支持汉字，英文，数字，下划线，且只能以英文和汉字开头
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 客户端配额的访问次数限制
-	CallLimits int32 `json:"call_limits"`
+	CallLimits int32 `json:"call_limits" xml:"call_limits"`
 
 	// 限定时间单位：SECOND:秒、MINUTE:分、HOURE:时、DAY:天
-	TimeUnit AppQuotaCreateTimeUnit `json:"time_unit"`
+	TimeUnit AppQuotaCreateTimeUnit `json:"time_unit" xml:"time_unit"`
 
 	// 流控的限定时间值
-	TimeInterval int32 `json:"time_interval"`
+	TimeInterval int32 `json:"time_interval" xml:"time_interval"`
 
 	// 首次配额重置时间点，不配置默认为首次调用时间计算
-	ResetTime *string `json:"reset_time,omitempty"`
+	ResetTime *string `json:"reset_time,omitempty" xml:"reset_time"`
 
 	// 参数说明和描述。  不支持<，>字符
-	Remark *string `json:"remark,omitempty"`
+	Remark *string `json:"remark,omitempty" xml:"remark"`
 }
 
 func (o AppQuotaCreate) String() string {

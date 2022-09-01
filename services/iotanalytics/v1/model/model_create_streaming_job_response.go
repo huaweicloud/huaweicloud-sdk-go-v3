@@ -10,10 +10,10 @@ import (
 type CreateStreamingJobResponse struct {
 
 	// 作业ID
-	JobId *string `json:"job_id,omitempty"`
+	JobId *string `json:"job_id,omitempty" xml:"job_id"`
 
 	// 作业错误详情
-	CheckInfo      map[string]interface{} `json:"check_info,omitempty"`
+	CheckInfo      map[string]interface{} `json:"check_info,omitempty" xml:"check_info"`
 	HttpStatusCode int                    `json:"-"`
 }
 

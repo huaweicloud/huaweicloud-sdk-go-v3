@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type DeleteEdgeNodeResponse struct {
-	Body           *string `json:"body,omitempty"`
+	Body           *string `json:"body,omitempty" xml:"body"`
 	HttpStatusCode int     `json:"-"`
 }
 

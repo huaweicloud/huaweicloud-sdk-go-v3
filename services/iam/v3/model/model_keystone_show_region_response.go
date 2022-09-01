@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type KeystoneShowRegionResponse struct {
-	Region         *Region `json:"region,omitempty"`
+	Region         *Region `json:"region,omitempty" xml:"region"`
 	HttpStatusCode int     `json:"-"`
 }
 

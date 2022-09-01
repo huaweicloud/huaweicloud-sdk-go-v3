@@ -10,7 +10,7 @@ import (
 type DeleteWhitelistRequest struct {
 
 	// 白名单id
-	WhitelistId string `json:"whitelist_id"`
+	WhitelistId string `json:"whitelist_id" xml:"whitelist_id"`
 }
 
 func (o DeleteWhitelistRequest) String() string {

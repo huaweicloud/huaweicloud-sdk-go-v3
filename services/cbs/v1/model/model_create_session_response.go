@@ -10,10 +10,10 @@ import (
 type CreateSessionResponse struct {
 
 	// 会话标识符。
-	SessionId *string `json:"session_id,omitempty"`
+	SessionId *string `json:"session_id,omitempty" xml:"session_id"`
 
 	// 机器人问候语。
-	Greeting       *string `json:"greeting,omitempty"`
+	Greeting       *string `json:"greeting,omitempty" xml:"greeting"`
 	HttpStatusCode int     `json:"-"`
 }
 

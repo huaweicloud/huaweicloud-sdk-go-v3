@@ -10,7 +10,7 @@ import (
 type RunModerationAudioResponseBodyResultDetailAudio struct {
 
 	// 涉黄场景审核结果
-	Porn *[]PornModerationResultDetail `json:"porn,omitempty"`
+	Porn *[]PornModerationResultDetail `json:"porn,omitempty" xml:"porn"`
 }
 
 func (o RunModerationAudioResponseBodyResultDetailAudio) String() string {

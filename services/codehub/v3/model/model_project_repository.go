@@ -9,10 +9,10 @@ import (
 type ProjectRepository struct {
 
 	// 创建项目的UUID
-	ProjectUuid *string `json:"projectUuid,omitempty"`
+	ProjectUuid *string `json:"projectUuid,omitempty" xml:"projectUuid"`
 
 	// 创建仓库的UUID
-	RepositoryUuid *string `json:"repositoryUuid,omitempty"`
+	RepositoryUuid *string `json:"repositoryUuid,omitempty" xml:"repositoryUuid"`
 }
 
 func (o ProjectRepository) String() string {

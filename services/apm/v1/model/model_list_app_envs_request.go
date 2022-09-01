@@ -10,10 +10,10 @@ import (
 type ListAppEnvsRequest struct {
 
 	// 组件id
-	AppId int64 `json:"app_id"`
+	AppId int64 `json:"app_id" xml:"app_id"`
 
 	// 应用id
-	XBusinessId int64 `json:"x-business-id"`
+	XBusinessId int64 `json:"x-business-id" xml:"x-business-id"`
 }
 
 func (o ListAppEnvsRequest) String() string {

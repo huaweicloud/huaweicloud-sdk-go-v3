@@ -12,22 +12,22 @@ import (
 type OpExtendInfoBckup struct {
 
 	// 应用一致性备份失败错误码。请参见[错误码](ErrorCode.xml)。
-	AppConsistencyErrorCode *string `json:"app_consistency_error_code,omitempty"`
+	AppConsistencyErrorCode *string `json:"app_consistency_error_code,omitempty" xml:"app_consistency_error_code"`
 
 	// 应用一致性备份错误信息
-	AppConsistencyErrorMessage *string `json:"app_consistency_error_message,omitempty"`
+	AppConsistencyErrorMessage *string `json:"app_consistency_error_message,omitempty" xml:"app_consistency_error_message"`
 
 	// 应用一致性备份状态；0:非应用一致性，1：应用一致性备份
-	AppConsistencyStatus *OpExtendInfoBckupAppConsistencyStatus `json:"app_consistency_status,omitempty"`
+	AppConsistencyStatus *OpExtendInfoBckupAppConsistencyStatus `json:"app_consistency_status,omitempty" xml:"app_consistency_status"`
 
 	// 备份副本ID
-	BackupId string `json:"backup_id"`
+	BackupId string `json:"backup_id" xml:"backup_id"`
 
 	// 备份名称
-	BackupName *string `json:"backup_name,omitempty"`
+	BackupName *string `json:"backup_name,omitempty" xml:"backup_name"`
 
 	// 是否增备
-	Incremental *OpExtendInfoBckupIncremental `json:"incremental,omitempty"`
+	Incremental *OpExtendInfoBckupIncremental `json:"incremental,omitempty" xml:"incremental"`
 }
 
 func (o OpExtendInfoBckup) String() string {

@@ -10,10 +10,10 @@ import (
 type DeleteAccessConfigResponse struct {
 
 	// 日志接入列表
-	Result *[]AccessConfigInfo `json:"result,omitempty"`
+	Result *[]AccessConfigInfo `json:"result,omitempty" xml:"result"`
 
 	// 日志接入总数
-	Total          *int64 `json:"total,omitempty"`
+	Total          *int64 `json:"total,omitempty" xml:"total"`
 	HttpStatusCode int    `json:"-"`
 }
 

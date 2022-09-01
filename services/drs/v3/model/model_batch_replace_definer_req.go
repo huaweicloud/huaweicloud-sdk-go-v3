@@ -10,7 +10,7 @@ import (
 type BatchReplaceDefinerReq struct {
 
 	// 批量设置replaceDefiner请求列表
-	Jobs []ReplaceDefinerInfo `json:"jobs"`
+	Jobs []ReplaceDefinerInfo `json:"jobs" xml:"jobs"`
 }
 
 func (o BatchReplaceDefinerReq) String() string {

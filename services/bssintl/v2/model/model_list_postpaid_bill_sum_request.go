@@ -10,7 +10,7 @@ import (
 type ListPostpaidBillSumRequest struct {
 
 	// 账单所归属的月份。格式：YYYY-MM。
-	BillCycle string `json:"bill_cycle"`
+	BillCycle string `json:"bill_cycle" xml:"bill_cycle"`
 }
 
 func (o ListPostpaidBillSumRequest) String() string {

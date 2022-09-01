@@ -10,15 +10,15 @@ import (
 type FreezeCertRequest struct {
 
 	// userName
-	UserName string `json:"user_name"`
+	UserName string `json:"user_name" xml:"user_name"`
 
 	// blockchainID
-	BlockchainId string `json:"blockchain_id"`
+	BlockchainId string `json:"blockchain_id" xml:"blockchain_id"`
 
 	// orgName
-	OrgName string `json:"org_name"`
+	OrgName string `json:"org_name" xml:"org_name"`
 
-	Body *FreezeCertRequestBody `json:"body,omitempty" type:"multipart"`
+	Body *FreezeCertRequestBody `json:"body,omitempty" xml:"body" type:"multipart"`
 }
 
 func (o FreezeCertRequest) String() string {

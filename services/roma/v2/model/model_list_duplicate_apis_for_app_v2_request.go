@@ -10,10 +10,10 @@ import (
 type ListDuplicateApisForAppV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 应用id
-	AppId string `json:"app_id"`
+	AppId string `json:"app_id" xml:"app_id"`
 }
 
 func (o ListDuplicateApisForAppV2Request) String() string {

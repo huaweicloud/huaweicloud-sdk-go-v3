@@ -10,12 +10,12 @@ import (
 type GaussDBforOpenGaussUserForList struct {
 
 	// 帐号名。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
-	Attributes *GaussDBforOpenGaussUserForListAttributes `json:"attributes,omitempty"`
+	Attributes *GaussDBforOpenGaussUserForListAttributes `json:"attributes,omitempty" xml:"attributes"`
 
 	// 用户的默认权限。
-	Memberof *string `json:"memberof,omitempty"`
+	Memberof *string `json:"memberof,omitempty" xml:"memberof"`
 }
 
 func (o GaussDBforOpenGaussUserForList) String() string {

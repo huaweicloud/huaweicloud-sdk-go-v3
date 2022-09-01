@@ -10,7 +10,7 @@ import (
 type BatchDeleteServerNicOption struct {
 
 	// 网卡Port ID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 }
 
 func (o BatchDeleteServerNicOption) String() string {

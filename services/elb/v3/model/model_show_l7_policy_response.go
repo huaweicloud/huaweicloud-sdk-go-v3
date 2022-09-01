@@ -10,9 +10,9 @@ import (
 type ShowL7PolicyResponse struct {
 
 	// 请求ID。  注：自动生成 。
-	RequestId *string `json:"request_id,omitempty"`
+	RequestId *string `json:"request_id,omitempty" xml:"request_id"`
 
-	L7policy       *L7Policy `json:"l7policy,omitempty"`
+	L7policy       *L7Policy `json:"l7policy,omitempty" xml:"l7policy"`
 	HttpStatusCode int       `json:"-"`
 }
 

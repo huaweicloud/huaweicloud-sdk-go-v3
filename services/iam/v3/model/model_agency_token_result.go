@@ -10,27 +10,27 @@ import (
 type AgencyTokenResult struct {
 
 	// 获取token的方式。
-	Methods []string `json:"methods"`
+	Methods []string `json:"methods" xml:"methods"`
 
 	// token到期时间。
-	ExpiresAt string `json:"expires_at"`
+	ExpiresAt string `json:"expires_at" xml:"expires_at"`
 
 	// token下发时间。
-	IssuedAt string `json:"issued_at"`
+	IssuedAt string `json:"issued_at" xml:"issued_at"`
 
-	AssumedBy *AgencyAssumedby `json:"assumed_by"`
+	AssumedBy *AgencyAssumedby `json:"assumed_by" xml:"assumed_by"`
 
 	// 服务目录信息。
-	Catalog *[]TokenCatalog `json:"catalog,omitempty"`
+	Catalog *[]TokenCatalog `json:"catalog,omitempty" xml:"catalog"`
 
-	Domain *AgencyTokenDomain `json:"domain,omitempty"`
+	Domain *AgencyTokenDomain `json:"domain,omitempty" xml:"domain"`
 
-	Project *AgencyTokenProject `json:"project,omitempty"`
+	Project *AgencyTokenProject `json:"project,omitempty" xml:"project"`
 
 	// 委托token的权限信息。
-	Roles []TokenRole `json:"roles"`
+	Roles []TokenRole `json:"roles" xml:"roles"`
 
-	User *AgencyTokenUser `json:"user"`
+	User *AgencyTokenUser `json:"user" xml:"user"`
 }
 
 func (o AgencyTokenResult) String() string {

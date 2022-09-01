@@ -10,10 +10,10 @@ import (
 type ListMigrationProjectsResponse struct {
 
 	// 当前页的迁移项目列表。
-	MigrationProjects *[]MigrationProject `json:"migration_projects,omitempty"`
+	MigrationProjects *[]MigrationProject `json:"migration_projects,omitempty" xml:"migration_projects"`
 
 	// 迁移项目总数。
-	TotalCount     *int32 `json:"total_count,omitempty"`
+	TotalCount     *int32 `json:"total_count,omitempty" xml:"total_count"`
 	HttpStatusCode int    `json:"-"`
 }
 

@@ -10,9 +10,9 @@ import (
 type UpdateCommandResultRequest struct {
 
 	// 上报命令执行结果的命令所对应的服务端id
-	ServerId string `json:"server_id"`
+	ServerId string `json:"server_id" xml:"server_id"`
 
-	Body *CommandBody `json:"body,omitempty"`
+	Body *CommandBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateCommandResultRequest) String() string {

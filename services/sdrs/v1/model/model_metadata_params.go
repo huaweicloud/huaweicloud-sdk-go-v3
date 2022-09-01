@@ -10,7 +10,7 @@ import (
 type MetadataParams struct {
 
 	// 保护实例元数据中资源冻结的字段。 true：表示资源被冻结。 空：表示资源没有被冻结。
-	SystemFrozen string `json:"__system__frozen"`
+	SystemFrozen string `json:"__system__frozen" xml:"__system__frozen"`
 }
 
 func (o MetadataParams) String() string {

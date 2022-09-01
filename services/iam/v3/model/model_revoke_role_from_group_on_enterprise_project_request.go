@@ -10,13 +10,13 @@ import (
 type RevokeRoleFromGroupOnEnterpriseProjectRequest struct {
 
 	// 企业项目ID。
-	EnterpriseProjectId string `json:"enterprise_project_id"`
+	EnterpriseProjectId string `json:"enterprise_project_id" xml:"enterprise_project_id"`
 
 	// 用户组ID。
-	GroupId string `json:"group_id"`
+	GroupId string `json:"group_id" xml:"group_id"`
 
 	// 权限ID。
-	RoleId string `json:"role_id"`
+	RoleId string `json:"role_id" xml:"role_id"`
 }
 
 func (o RevokeRoleFromGroupOnEnterpriseProjectRequest) String() string {

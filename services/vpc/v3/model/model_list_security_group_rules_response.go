@@ -10,12 +10,12 @@ import (
 type ListSecurityGroupRulesResponse struct {
 
 	// 请求ID
-	RequestId *string `json:"request_id,omitempty"`
+	RequestId *string `json:"request_id,omitempty" xml:"request_id"`
 
 	// 安全组规则列表响应体
-	SecurityGroupRules *[]SecurityGroupRule `json:"security_group_rules,omitempty"`
+	SecurityGroupRules *[]SecurityGroupRule `json:"security_group_rules,omitempty" xml:"security_group_rules"`
 
-	PageInfo       *PageInfo `json:"page_info,omitempty"`
+	PageInfo       *PageInfo `json:"page_info,omitempty" xml:"page_info"`
 	HttpStatusCode int       `json:"-"`
 }
 

@@ -9,23 +9,23 @@ import (
 type UpdateNaRequestDto struct {
 
 	// NA系统名称
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 北向NA系统描述
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 访问URL地址
-	Endpoint string `json:"endpoint"`
+	Endpoint string `json:"endpoint" xml:"endpoint"`
 
 	// 鉴权方式
-	AuthType *string `json:"auth_type,omitempty"`
+	AuthType *string `json:"auth_type,omitempty" xml:"auth_type"`
 
-	AuthAkskInfo *AuthAkSkInfo `json:"auth_aksk_info,omitempty"`
+	AuthAkskInfo *AuthAkSkInfo `json:"auth_aksk_info,omitempty" xml:"auth_aksk_info"`
 
 	// 接入类型
-	AccessType string `json:"access_type"`
+	AccessType string `json:"access_type" xml:"access_type"`
 
-	AccessRomaInfo *AccessRomaInfo `json:"access_roma_info,omitempty"`
+	AccessRomaInfo *AccessRomaInfo `json:"access_roma_info,omitempty" xml:"access_roma_info"`
 }
 
 func (o UpdateNaRequestDto) String() string {

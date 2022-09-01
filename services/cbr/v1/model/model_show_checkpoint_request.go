@@ -10,7 +10,7 @@ import (
 type ShowCheckpointRequest struct {
 
 	// 还原点ID
-	CheckpointId string `json:"checkpoint_id"`
+	CheckpointId string `json:"checkpoint_id" xml:"checkpoint_id"`
 }
 
 func (o ShowCheckpointRequest) String() string {

@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowGaussMySqlJobInfoResponse struct {
-	Job            *GetJobInfoDetail `json:"job,omitempty"`
+	Job            *GetJobInfoDetail `json:"job,omitempty" xml:"job"`
 	HttpStatusCode int               `json:"-"`
 }
 

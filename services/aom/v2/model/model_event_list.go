@@ -10,7 +10,7 @@ import (
 type EventList struct {
 
 	// 事件或者告警详情。
-	Events []EventModel `json:"events"`
+	Events []EventModel `json:"events" xml:"events"`
 }
 
 func (o EventList) String() string {

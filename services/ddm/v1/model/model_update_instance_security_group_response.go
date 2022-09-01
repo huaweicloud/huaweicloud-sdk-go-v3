@@ -10,7 +10,7 @@ import (
 type UpdateInstanceSecurityGroupResponse struct {
 
 	// 安全组ID
-	SecurityGroupId *string `json:"security_group_id,omitempty"`
+	SecurityGroupId *string `json:"security_group_id,omitempty" xml:"security_group_id"`
 	HttpStatusCode  int     `json:"-"`
 }
 

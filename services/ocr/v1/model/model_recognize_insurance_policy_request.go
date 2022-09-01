@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RecognizeInsurancePolicyRequest struct {
-	Body *InsurancePolicyRequestBody `json:"body,omitempty"`
+	Body *InsurancePolicyRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o RecognizeInsurancePolicyRequest) String() string {

@@ -10,10 +10,10 @@ import (
 type JudgementCaseInfo struct {
 
 	// 用例数据输入
-	Input string `json:"input"`
+	Input string `json:"input" xml:"input"`
 
 	// 用例数据期望输出
-	Output *string `json:"output,omitempty"`
+	Output *string `json:"output,omitempty" xml:"output"`
 }
 
 func (o JudgementCaseInfo) String() string {

@@ -10,7 +10,7 @@ import (
 type BatchDeleteMembersRequestBody struct {
 
 	// 批量删除后端服务器请求body。
-	Members []BatchDeleteMembersOption `json:"members"`
+	Members []BatchDeleteMembersOption `json:"members" xml:"members"`
 }
 
 func (o BatchDeleteMembersRequestBody) String() string {

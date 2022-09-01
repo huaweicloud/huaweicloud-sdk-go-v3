@@ -9,10 +9,10 @@ import (
 type RuleSetV2 struct {
 
 	// 规则集id，需要从web界面获取
-	RulesetId *string `json:"ruleset_id,omitempty"`
+	RulesetId *string `json:"ruleset_id,omitempty" xml:"ruleset_id"`
 
 	// 检查语言，支持cpp,java,js,python,php,css,html,go,typescript
-	Language string `json:"language"`
+	Language string `json:"language" xml:"language"`
 }
 
 func (o RuleSetV2) String() string {

@@ -10,25 +10,25 @@ import (
 type NetWork struct {
 
 	// 网卡的名称
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 该网卡绑定的IP
-	Ip string `json:"ip"`
+	Ip string `json:"ip" xml:"ip"`
 
 	// 掩码
-	Netmask string `json:"netmask"`
+	Netmask string `json:"netmask" xml:"netmask"`
 
 	// 网关
-	Gateway string `json:"gateway"`
+	Gateway string `json:"gateway" xml:"gateway"`
 
 	// Linux必选，网卡的MTU
-	Mtu *int32 `json:"mtu,omitempty"`
+	Mtu *int32 `json:"mtu,omitempty" xml:"mtu"`
 
 	// Mac地址
-	Mac string `json:"mac"`
+	Mac string `json:"mac" xml:"mac"`
 
 	// 数据库Id
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 }
 
 func (o NetWork) String() string {

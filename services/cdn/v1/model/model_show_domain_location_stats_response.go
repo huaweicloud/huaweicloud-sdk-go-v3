@@ -10,10 +10,10 @@ import (
 type ShowDomainLocationStatsResponse struct {
 
 	// 数据分组方式
-	GroupBy *string `json:"group_by,omitempty"`
+	GroupBy *string `json:"group_by,omitempty" xml:"group_by"`
 
 	// 按指定的分组方式组织的数据
-	Result         map[string]interface{} `json:"result,omitempty"`
+	Result         map[string]interface{} `json:"result,omitempty" xml:"result"`
 	HttpStatusCode int                    `json:"-"`
 }
 

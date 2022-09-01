@@ -10,10 +10,10 @@ import (
 type ExportMqsInstanceTopicRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 待导出的topic。多个topic以“,”分隔。默认导出所有的topic。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 }
 
 func (o ExportMqsInstanceTopicRequest) String() string {

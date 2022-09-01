@@ -10,10 +10,10 @@ import (
 type Error struct {
 
 	// 任务异常错误信息描述
-	Message *string `json:"message,omitempty"`
+	Message *string `json:"message,omitempty" xml:"message"`
 
 	// 任务异常错误信息编码
-	Code *string `json:"code,omitempty"`
+	Code *string `json:"code,omitempty" xml:"code"`
 }
 
 func (o Error) String() string {

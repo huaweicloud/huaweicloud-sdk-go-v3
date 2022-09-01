@@ -10,7 +10,7 @@ import (
 type ShowGaussMySqlProxyListResponse struct {
 
 	// Proxy实例信息列表。
-	ProxyList      *[]MysqlShowProxyResponseV3 `json:"proxy_list,omitempty"`
+	ProxyList      *[]MysqlShowProxyResponseV3 `json:"proxy_list,omitempty" xml:"proxy_list"`
 	HttpStatusCode int                         `json:"-"`
 }
 

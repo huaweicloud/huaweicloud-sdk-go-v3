@@ -10,7 +10,7 @@ import (
 type RestoreTablesResponse struct {
 
 	// 任务ID。
-	JobId          *string `json:"jobId,omitempty"`
+	JobId          *string `json:"jobId,omitempty" xml:"jobId"`
 	HttpStatusCode int     `json:"-"`
 }
 

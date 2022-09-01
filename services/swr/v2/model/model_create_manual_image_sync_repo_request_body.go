@@ -10,16 +10,16 @@ import (
 type CreateManualImageSyncRepoRequestBody struct {
 
 	// 版本列表
-	ImageTag []string `json:"imageTag"`
+	ImageTag []string `json:"imageTag" xml:"imageTag"`
 
 	// 是否覆盖，默认为false
-	Override *bool `json:"override,omitempty"`
+	Override *bool `json:"override,omitempty" xml:"override"`
 
 	// 目标组织
-	RemoteNamespace string `json:"remoteNamespace"`
+	RemoteNamespace string `json:"remoteNamespace" xml:"remoteNamespace"`
 
 	// 目标region ID。
-	RemoteRegionId string `json:"remoteRegionId"`
+	RemoteRegionId string `json:"remoteRegionId" xml:"remoteRegionId"`
 }
 
 func (o CreateManualImageSyncRepoRequestBody) String() string {

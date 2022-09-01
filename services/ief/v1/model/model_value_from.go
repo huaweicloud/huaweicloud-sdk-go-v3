@@ -7,9 +7,9 @@ import (
 )
 
 type ValueFrom struct {
-	Secret *Secrets `json:"secret,omitempty"`
+	Secret *Secrets `json:"secret,omitempty" xml:"secret"`
 
-	Configmap *ConfigsMap `json:"configmap,omitempty"`
+	Configmap *ConfigsMap `json:"configmap,omitempty" xml:"configmap"`
 }
 
 func (o ValueFrom) String() string {

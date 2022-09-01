@@ -10,9 +10,9 @@ import (
 type AttachEipRequest struct {
 
 	// 需要绑定公网IP的节点ID。集群实例选择mongos节点，副本集实例选择primary或者secondary节点。
-	NodeId string `json:"node_id"`
+	NodeId string `json:"node_id" xml:"node_id"`
 
-	Body *AttachEipRequestBody `json:"body,omitempty"`
+	Body *AttachEipRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o AttachEipRequest) String() string {

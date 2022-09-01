@@ -10,10 +10,10 @@ import (
 type ListVulnerabilitiesResponse struct {
 
 	// 总数
-	TotalNum *int64 `json:"total_num,omitempty"`
+	TotalNum *int64 `json:"total_num,omitempty" xml:"total_num"`
 
 	// 软件漏洞列表
-	DataList       *[]VulInfo `json:"data_list,omitempty"`
+	DataList       *[]VulInfo `json:"data_list,omitempty" xml:"data_list"`
 	HttpStatusCode int        `json:"-"`
 }
 

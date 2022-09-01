@@ -10,7 +10,7 @@ import (
 type CreateEventsResponse struct {
 
 	// 响应参数。
-	Body           *[]CreateEventsResponseBody `json:"body,omitempty"`
+	Body           *[]CreateEventsResponseBody `json:"body,omitempty" xml:"body"`
 	HttpStatusCode int                         `json:"-"`
 }
 

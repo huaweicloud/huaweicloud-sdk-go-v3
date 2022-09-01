@@ -10,7 +10,7 @@ import (
 type DeleteCloudConnectionRequest struct {
 
 	// 云连接实例ID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 }
 
 func (o DeleteCloudConnectionRequest) String() string {

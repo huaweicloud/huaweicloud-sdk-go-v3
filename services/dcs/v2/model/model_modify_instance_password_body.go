@@ -9,10 +9,10 @@ import (
 type ModifyInstancePasswordBody struct {
 
 	// 旧密码
-	OldPassword *string `json:"old_password,omitempty"`
+	OldPassword *string `json:"old_password,omitempty" xml:"old_password"`
 
 	// 新密码
-	NewPassword *string `json:"new_password,omitempty"`
+	NewPassword *string `json:"new_password,omitempty" xml:"new_password"`
 }
 
 func (o ModifyInstancePasswordBody) String() string {

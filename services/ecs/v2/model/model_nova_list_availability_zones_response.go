@@ -10,7 +10,7 @@ import (
 type NovaListAvailabilityZonesResponse struct {
 
 	// 可用域信息。
-	AvailabilityZoneInfo *[]NovaAvailabilityZone `json:"availabilityZoneInfo,omitempty"`
+	AvailabilityZoneInfo *[]NovaAvailabilityZone `json:"availabilityZoneInfo,omitempty" xml:"availabilityZoneInfo"`
 	HttpStatusCode       int                     `json:"-"`
 }
 

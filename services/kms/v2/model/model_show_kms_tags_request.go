@@ -10,7 +10,7 @@ import (
 type ShowKmsTagsRequest struct {
 
 	// 密钥ID
-	KeyId string `json:"key_id"`
+	KeyId string `json:"key_id" xml:"key_id"`
 }
 
 func (o ShowKmsTagsRequest) String() string {

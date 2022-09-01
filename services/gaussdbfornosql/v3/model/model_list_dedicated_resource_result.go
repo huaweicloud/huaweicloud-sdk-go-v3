@@ -10,24 +10,24 @@ import (
 type ListDedicatedResourceResult struct {
 
 	// 专属资源ID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 专属资源的名称。
-	ResourceName string `json:"resource_name"`
+	ResourceName string `json:"resource_name" xml:"resource_name"`
 
 	// 引擎名称。
-	EngineName string `json:"engine_name"`
+	EngineName string `json:"engine_name" xml:"engine_name"`
 
 	// 可用区信息。
-	AvailabilityZone string `json:"availability_zone"`
+	AvailabilityZone string `json:"availability_zone" xml:"availability_zone"`
 
 	// 专属资源的计算架构。
-	Architecture string `json:"architecture"`
+	Architecture string `json:"architecture" xml:"architecture"`
 
-	Capacity *DedicatedResourceCapacity `json:"capacity"`
+	Capacity *DedicatedResourceCapacity `json:"capacity" xml:"capacity"`
 
 	// 专属资源的状态信息。
-	Status string `json:"status"`
+	Status string `json:"status" xml:"status"`
 }
 
 func (o ListDedicatedResourceResult) String() string {

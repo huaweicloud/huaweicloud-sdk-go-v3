@@ -8,13 +8,13 @@ import (
 
 // 作业创建参数
 type AudioModerationResultRequestParams struct {
-	EventType *string `json:"event_type,omitempty"`
+	EventType *string `json:"event_type,omitempty" xml:"event_type"`
 
-	Data *AudioModerationResultRequestParamsData `json:"data,omitempty"`
+	Data *AudioModerationResultRequestParamsData `json:"data,omitempty" xml:"data"`
 
-	Callback *string `json:"callback,omitempty"`
+	Callback *string `json:"callback,omitempty" xml:"callback"`
 
-	Categories *[]string `json:"categories,omitempty"`
+	Categories *[]string `json:"categories,omitempty" xml:"categories"`
 }
 
 func (o AudioModerationResultRequestParams) String() string {

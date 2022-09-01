@@ -10,13 +10,13 @@ import (
 type ListCustomAuthorizersV2Response struct {
 
 	// 本次返回的列表长度
-	Size int32 `json:"size"`
+	Size int32 `json:"size" xml:"size"`
 
 	// 满足条件的记录数
-	Total int64 `json:"total"`
+	Total int64 `json:"total" xml:"total"`
 
 	// 自定义认证列表
-	AuthorizerList *[]AuthorizerResp `json:"authorizer_list,omitempty"`
+	AuthorizerList *[]AuthorizerResp `json:"authorizer_list,omitempty" xml:"authorizer_list"`
 	HttpStatusCode int               `json:"-"`
 }
 

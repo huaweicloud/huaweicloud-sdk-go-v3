@@ -9,10 +9,10 @@ import (
 type CreateProjectDomainResponseBody struct {
 
 	// 领域名称
-	DomainName *string `json:"domain_name,omitempty"`
+	DomainName *string `json:"domain_name,omitempty" xml:"domain_name"`
 
 	// 领域id
-	DomainId *string `json:"domain_id,omitempty"`
+	DomainId *string `json:"domain_id,omitempty" xml:"domain_id"`
 }
 
 func (o CreateProjectDomainResponseBody) String() string {

@@ -10,22 +10,22 @@ import (
 type EntityMetricListItem struct {
 
 	// cpu使用率
-	CpuUsage *string `json:"cpuUsage,omitempty"`
+	CpuUsage *string `json:"cpuUsage,omitempty" xml:"cpuUsage"`
 
 	// 磁盘使用率
-	DiskReadRate *string `json:"diskReadRate,omitempty"`
+	DiskReadRate *string `json:"diskReadRate,omitempty" xml:"diskReadRate"`
 
 	// 磁盘写入速率
-	DiskWriteRate *string `json:"diskWriteRate,omitempty"`
+	DiskWriteRate *string `json:"diskWriteRate,omitempty" xml:"diskWriteRate"`
 
 	// 物理内存使用率
-	MemUsage *string `json:"memUsage,omitempty"`
+	MemUsage *string `json:"memUsage,omitempty" xml:"memUsage"`
 
 	// 下行BPs
-	RecvBytesRate *string `json:"recvBytesRate,omitempty"`
+	RecvBytesRate *string `json:"recvBytesRate,omitempty" xml:"recvBytesRate"`
 
 	// 上行BPs
-	SendBytesRate *string `json:"sendBytesRate,omitempty"`
+	SendBytesRate *string `json:"sendBytesRate,omitempty" xml:"sendBytesRate"`
 }
 
 func (o EntityMetricListItem) String() string {

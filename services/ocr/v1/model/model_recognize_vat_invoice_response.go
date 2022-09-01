@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type RecognizeVatInvoiceResponse struct {
-	Result         *VatInvoiceResult `json:"result,omitempty"`
+	Result         *VatInvoiceResult `json:"result,omitempty" xml:"result"`
 	HttpStatusCode int               `json:"-"`
 }
 

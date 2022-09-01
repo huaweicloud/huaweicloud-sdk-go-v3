@@ -10,9 +10,9 @@ import (
 type ListDevicesResponse struct {
 
 	// 设备信息列表。
-	Devices *[]QueryDeviceSimplify `json:"devices,omitempty"`
+	Devices *[]QueryDeviceSimplify `json:"devices,omitempty" xml:"devices"`
 
-	Page           *Page `json:"page,omitempty"`
+	Page           *Page `json:"page,omitempty" xml:"page"`
 	HttpStatusCode int   `json:"-"`
 }
 

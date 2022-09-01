@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowTemplateResponse struct {
-	Template       *TemplateResponseBody `json:"template,omitempty"`
+	Template       *TemplateResponseBody `json:"template,omitempty" xml:"template"`
 	HttpStatusCode int                   `json:"-"`
 }
 

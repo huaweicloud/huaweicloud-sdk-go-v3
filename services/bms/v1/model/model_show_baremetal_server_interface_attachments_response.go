@@ -10,7 +10,7 @@ import (
 type ShowBaremetalServerInterfaceAttachmentsResponse struct {
 
 	// 裸金属服务器网卡信息列表，详情请参见表2 interfaceAttachments字段数据结构说明。
-	InterfaceAttachments *[]InterfaceAttachments `json:"interfaceAttachments,omitempty"`
+	InterfaceAttachments *[]InterfaceAttachments `json:"interfaceAttachments,omitempty" xml:"interfaceAttachments"`
 	HttpStatusCode       int                     `json:"-"`
 }
 

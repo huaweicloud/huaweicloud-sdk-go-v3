@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type UploadFromObsRequest struct {
-	Body *UploadFromObsReq `json:"body,omitempty"`
+	Body *UploadFromObsReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o UploadFromObsRequest) String() string {

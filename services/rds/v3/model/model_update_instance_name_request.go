@@ -13,12 +13,12 @@ import (
 type UpdateInstanceNameRequest struct {
 
 	// 语言
-	XLanguage *UpdateInstanceNameRequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *UpdateInstanceNameRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *ModifiyInstanceNameRequest `json:"body,omitempty"`
+	Body *ModifiyInstanceNameRequest `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateInstanceNameRequest) String() string {

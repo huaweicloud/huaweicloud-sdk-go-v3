@@ -10,9 +10,9 @@ import (
 type UpdateInstanceRequest struct {
 
 	// bcs 服务id
-	BlockchainId string `json:"blockchain_id"`
+	BlockchainId string `json:"blockchain_id" xml:"blockchain_id"`
 
-	Body *UpdateInstanceRequestBody `json:"body,omitempty"`
+	Body *UpdateInstanceRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateInstanceRequest) String() string {

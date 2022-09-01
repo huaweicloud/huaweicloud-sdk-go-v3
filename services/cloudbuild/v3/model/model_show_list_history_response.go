@@ -10,10 +10,10 @@ import (
 type ShowListHistoryResponse struct {
 
 	// 构建历史列表
-	HistoryRecords *[]HistoryRecord `json:"history_records,omitempty"`
+	HistoryRecords *[]HistoryRecord `json:"history_records,omitempty" xml:"history_records"`
 
 	// 记录总数
-	Total          *int32 `json:"total,omitempty"`
+	Total          *int32 `json:"total,omitempty" xml:"total"`
 	HttpStatusCode int    `json:"-"`
 }
 

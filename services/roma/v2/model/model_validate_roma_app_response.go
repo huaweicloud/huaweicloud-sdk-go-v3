@@ -10,13 +10,13 @@ import (
 type ValidateRomaAppResponse struct {
 
 	// 应用ID
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 应用名称 - 字符集：支持中文、英文字母、数字、中划线、下划线、点、空格和中英文圆括号 - 约束：实例下唯一
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 应用描述
-	Remark         *string `json:"remark,omitempty"`
+	Remark         *string `json:"remark,omitempty" xml:"remark"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -13,13 +13,13 @@ import (
 type AudioModerationResultResult struct {
 
 	// 音频审核结果是否通过。 block：包含敏感信息，不通过 pass：不包含敏感信息，通过 review：需要人工复检
-	Suggestion *AudioModerationResultResultSuggestion `json:"suggestion,omitempty"`
+	Suggestion *AudioModerationResultResultSuggestion `json:"suggestion,omitempty" xml:"suggestion"`
 
 	// 审核详情
-	Details *[]AudioModerationResultResultDetails `json:"details,omitempty"`
+	Details *[]AudioModerationResultResultDetails `json:"details,omitempty" xml:"details"`
 
 	// 音频文本内容
-	AudioText *string `json:"audio_text,omitempty"`
+	AudioText *string `json:"audio_text,omitempty" xml:"audio_text"`
 }
 
 func (o AudioModerationResultResult) String() string {

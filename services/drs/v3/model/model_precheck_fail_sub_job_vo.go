@@ -10,13 +10,13 @@ import (
 type PrecheckFailSubJobVo struct {
 
 	// 预检查失败子任务id。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 预检查失败子任务名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 检查结果。
-	CheckResult *string `json:"check_result,omitempty"`
+	CheckResult *string `json:"check_result,omitempty" xml:"check_result"`
 }
 
 func (o PrecheckFailSubJobVo) String() string {

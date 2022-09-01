@@ -10,9 +10,9 @@ import (
 type ExecuteSqlRequest struct {
 
 	// 集群ID。获取方法，请参见[获取集群ID](https://support.huaweicloud.com/api-mrs/mrs_02_9001.html)。
-	ClusterId string `json:"cluster_id"`
+	ClusterId string `json:"cluster_id" xml:"cluster_id"`
 
-	Body *SqlExecutionReq `json:"body,omitempty"`
+	Body *SqlExecutionReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o ExecuteSqlRequest) String() string {

@@ -10,10 +10,10 @@ import (
 type ListTasksResponse struct {
 
 	// 查询的任务详情
-	Tasks *[]TaskResp `json:"tasks,omitempty"`
+	Tasks *[]TaskResp `json:"tasks,omitempty" xml:"tasks"`
 
 	// 满足查询条件的任务总数
-	Count          *int64 `json:"count,omitempty"`
+	Count          *int64 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

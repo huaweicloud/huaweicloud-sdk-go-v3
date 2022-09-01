@@ -10,10 +10,10 @@ import (
 type CheckSlideVerifyCodeResponse struct {
 
 	// 访问token字符串
-	Token *string `json:"token,omitempty"`
+	Token *string `json:"token,omitempty" xml:"token"`
 
 	// 过期时间，单位：秒
-	Expire         *int32 `json:"expire,omitempty"`
+	Expire         *int32 `json:"expire,omitempty" xml:"expire"`
 	HttpStatusCode int    `json:"-"`
 }
 

@@ -10,13 +10,13 @@ import (
 type ListInstancesV2Response struct {
 
 	// 本次返回的列表长度
-	Size int32 `json:"size"`
+	Size int32 `json:"size" xml:"size"`
 
 	// 满足条件的记录数
-	Total int64 `json:"total"`
+	Total int64 `json:"total" xml:"total"`
 
 	// 实例列表
-	Instances      *[]RespInstanceBase `json:"instances,omitempty"`
+	Instances      *[]RespInstanceBase `json:"instances,omitempty" xml:"instances"`
 	HttpStatusCode int                 `json:"-"`
 }
 

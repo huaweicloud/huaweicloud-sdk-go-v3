@@ -10,10 +10,10 @@ import (
 type PhonemeFluency struct {
 
 	//
-	Score float32 `json:"score"`
+	Score float32 `json:"score" xml:"score"`
 
 	//
-	Rhythm float32 `json:"rhythm"`
+	Rhythm float32 `json:"rhythm" xml:"rhythm"`
 }
 
 func (o PhonemeFluency) String() string {

@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowDbUserResponse struct {
-	DbUser         *DbUser `json:"db_user,omitempty"`
+	DbUser         *DbUser `json:"db_user,omitempty" xml:"db_user"`
 	HttpStatusCode int     `json:"-"`
 }
 

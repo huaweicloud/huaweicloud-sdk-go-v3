@@ -9,13 +9,13 @@ import (
 type PipelineTemplateInfo struct {
 
 	// 流水线模板的id。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 流水线模板的名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 流水线模板的详细信息。
-	Detail *string `json:"detail,omitempty"`
+	Detail *string `json:"detail,omitempty" xml:"detail"`
 }
 
 func (o PipelineTemplateInfo) String() string {

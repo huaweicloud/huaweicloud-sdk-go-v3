@@ -13,13 +13,13 @@ import (
 type PrePaidServerSchedulerHints struct {
 
 	// 云服务器组ID，UUID格式。  云服务器组的ID可以从控制台或者参考[查询云服务器组列表](https://support.huaweicloud.com/api-ecs/ecs_03_1402.html)获取。
-	Group *string `json:"group,omitempty"`
+	Group *string `json:"group,omitempty" xml:"group"`
 
 	// 在指定的专属主机或者共享主机上创建弹性云服务器。参数值为shared或者dedicated。
-	Tenancy *PrePaidServerSchedulerHintsTenancy `json:"tenancy,omitempty"`
+	Tenancy *PrePaidServerSchedulerHintsTenancy `json:"tenancy,omitempty" xml:"tenancy"`
 
 	// 专属主机的ID。
-	DedicatedHostId *string `json:"dedicated_host_id,omitempty"`
+	DedicatedHostId *string `json:"dedicated_host_id,omitempty" xml:"dedicated_host_id"`
 }
 
 func (o PrePaidServerSchedulerHints) String() string {

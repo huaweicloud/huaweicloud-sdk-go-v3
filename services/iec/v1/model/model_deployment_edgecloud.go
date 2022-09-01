@@ -10,17 +10,17 @@ import (
 type DeploymentEdgecloud struct {
 
 	// 边缘业务ID。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 边缘业务名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
-	Stacks *Stack `json:"stacks,omitempty"`
+	Stacks *Stack `json:"stacks,omitempty" xml:"stacks"`
 
 	// 边缘业务描述，最大支持255字节。
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
-	Coverage *Coverage `json:"coverage,omitempty"`
+	Coverage *Coverage `json:"coverage,omitempty" xml:"coverage"`
 }
 
 func (o DeploymentEdgecloud) String() string {

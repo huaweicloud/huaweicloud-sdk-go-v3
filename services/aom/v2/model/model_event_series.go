@@ -13,10 +13,10 @@ import (
 type EventSeries struct {
 
 	// 事件或者告警级别枚举类型。
-	EventSeverity *EventSeriesEventSeverity `json:"event_severity,omitempty"`
+	EventSeverity *EventSeriesEventSeverity `json:"event_severity,omitempty" xml:"event_severity"`
 
 	// 事件或者告警统计结果。
-	Values *[]int32 `json:"values,omitempty"`
+	Values *[]int32 `json:"values,omitempty" xml:"values"`
 }
 
 func (o EventSeries) String() string {

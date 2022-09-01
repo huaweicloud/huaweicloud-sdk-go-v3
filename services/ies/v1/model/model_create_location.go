@@ -13,24 +13,24 @@ import (
 type CreateLocation struct {
 
 	// 场地名称，最大支持长度为64个字节。只包含中文字符、英文字母（a-z、A-Z）、数字（0-9）、下划线（_）、中划线（-）
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 场地所在省/自治区/直辖市
-	Province string `json:"province"`
+	Province string `json:"province" xml:"province"`
 
 	// 场地所在市/区
-	City string `json:"city"`
+	City string `json:"city" xml:"city"`
 
 	// 场地所在区/县
-	District string `json:"district"`
+	District string `json:"district" xml:"district"`
 
 	// 场地所在国家
-	Country *CreateLocationCountry `json:"country,omitempty"`
+	Country *CreateLocationCountry `json:"country,omitempty" xml:"country"`
 
-	Condition *Condition `json:"condition"`
+	Condition *Condition `json:"condition" xml:"condition"`
 
 	// 场地描述，最大支持长度为255个字节，不允许包含<>
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 }
 
 func (o CreateLocation) String() string {

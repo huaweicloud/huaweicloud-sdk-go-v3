@@ -10,9 +10,9 @@ import (
 type CreateSubscriptionTargetRequest struct {
 
 	// 事件订阅ID
-	SubscriptionId string `json:"subscription_id"`
+	SubscriptionId string `json:"subscription_id" xml:"subscription_id"`
 
-	Body *SubscriptionTarget `json:"body,omitempty"`
+	Body *SubscriptionTarget `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateSubscriptionTargetRequest) String() string {

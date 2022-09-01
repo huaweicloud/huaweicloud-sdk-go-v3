@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ListLoadbalancersByTagsRequest struct {
-	Body *ListLoadbalancersByTagsRequestBody `json:"body,omitempty"`
+	Body *ListLoadbalancersByTagsRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o ListLoadbalancersByTagsRequest) String() string {

@@ -13,24 +13,24 @@ import (
 type DiskResult struct {
 
 	// 磁盘大小，容量单位为GB。
-	Size *int32 `json:"size,omitempty"`
+	Size *int32 `json:"size,omitempty" xml:"size"`
 
 	// 磁盘类型。
-	VolumeType *DiskResultVolumeType `json:"volume_type,omitempty"`
+	VolumeType *DiskResultVolumeType `json:"volume_type,omitempty" xml:"volume_type"`
 
 	// 系统盘还是数据盘，DATA表示为数据盘，SYS表示为系统盘。
-	DiskType *DiskResultDiskType `json:"disk_type,omitempty"`
+	DiskType *DiskResultDiskType `json:"disk_type,omitempty" xml:"disk_type"`
 
 	// 磁盘所属的专属存储ID。
-	DedicatedStorageId *string `json:"dedicated_storage_id,omitempty"`
+	DedicatedStorageId *string `json:"dedicated_storage_id,omitempty" xml:"dedicated_storage_id"`
 
 	// 导入数据盘的数据盘镜像ID。
-	DataDiskImageId *string `json:"data_disk_image_id,omitempty"`
+	DataDiskImageId *string `json:"data_disk_image_id,omitempty" xml:"data_disk_image_id"`
 
 	// 磁盘备份的快照ID。
-	SnapshotId *string `json:"snapshot_id,omitempty"`
+	SnapshotId *string `json:"snapshot_id,omitempty" xml:"snapshot_id"`
 
-	Metadata *MetaData `json:"metadata,omitempty"`
+	Metadata *MetaData `json:"metadata,omitempty" xml:"metadata"`
 }
 
 func (o DiskResult) String() string {

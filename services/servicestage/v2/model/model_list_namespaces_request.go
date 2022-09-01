@@ -10,7 +10,7 @@ import (
 type ListNamespacesRequest struct {
 
 	// 授权名称。
-	XRepoAuth string `json:"X-Repo-Auth"`
+	XRepoAuth string `json:"X-Repo-Auth" xml:"X-Repo-Auth"`
 }
 
 func (o ListNamespacesRequest) String() string {

@@ -8,13 +8,13 @@ import (
 
 // Response Object
 type ShowInstanceResponse struct {
-	Instance *InstancesVo `json:"instance,omitempty"`
+	Instance *InstancesVo `json:"instance,omitempty" xml:"instance"`
 
 	// 状态
-	Status *string `json:"status,omitempty"`
+	Status *string `json:"status,omitempty" xml:"status"`
 
 	// 静态资源链接
-	BundleUrl      *string `json:"bundle_url,omitempty"`
+	BundleUrl      *string `json:"bundle_url,omitempty" xml:"bundle_url"`
 	HttpStatusCode int     `json:"-"`
 }
 

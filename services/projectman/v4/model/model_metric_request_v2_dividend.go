@@ -10,7 +10,7 @@ import (
 type MetricRequestV2Dividend struct {
 
 	// 自定义类型过滤条件
-	CustomFields *[]MetricRequestV2DividendCustomFields `json:"custom_fields,omitempty"`
+	CustomFields *[]MetricRequestV2DividendCustomFields `json:"custom_fields,omitempty" xml:"custom_fields"`
 }
 
 func (o MetricRequestV2Dividend) String() string {

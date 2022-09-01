@@ -10,12 +10,12 @@ import (
 type UpdateDeviceTemplateByIdRequest struct {
 
 	// 铂金版实例ID，专业版实例为空值
-	IefInstanceId *string `json:"ief-instance-id,omitempty"`
+	IefInstanceId *string `json:"ief-instance-id,omitempty" xml:"ief-instance-id"`
 
 	// 设备模板ID
-	DeviceTemplateId string `json:"device_template_id"`
+	DeviceTemplateId string `json:"device_template_id" xml:"device_template_id"`
 
-	Body *DeviceTemplateUpdate `json:"body,omitempty"`
+	Body *DeviceTemplateUpdate `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateDeviceTemplateByIdRequest) String() string {

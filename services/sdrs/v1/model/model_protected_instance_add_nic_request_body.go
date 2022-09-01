@@ -10,13 +10,13 @@ import (
 type ProtectedInstanceAddNicRequestBody struct {
 
 	// 添加网卡的子网ID。该参数是子网的network_id，和neutron_network_id的值保持一致。
-	SubnetId string `json:"subnet_id"`
+	SubnetId string `json:"subnet_id" xml:"subnet_id"`
 
 	// 添加网卡的安全组信息。默认为Sys-default安全组。
-	SecurityGroups *[]SecurityGroupsParams `json:"security_groups,omitempty"`
+	SecurityGroups *[]SecurityGroupsParams `json:"security_groups,omitempty" xml:"security_groups"`
 
 	// IP地址，若无该参数表示自动分配IP地址。
-	IpAddress *string `json:"ip_address,omitempty"`
+	IpAddress *string `json:"ip_address,omitempty" xml:"ip_address"`
 }
 
 func (o ProtectedInstanceAddNicRequestBody) String() string {

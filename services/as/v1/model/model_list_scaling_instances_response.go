@@ -10,16 +10,16 @@ import (
 type ListScalingInstancesResponse struct {
 
 	// 总记录数。
-	TotalNumber *int32 `json:"total_number,omitempty"`
+	TotalNumber *int32 `json:"total_number,omitempty" xml:"total_number"`
 
 	// 查询的起始行号。
-	StartNumber *int32 `json:"start_number,omitempty"`
+	StartNumber *int32 `json:"start_number,omitempty" xml:"start_number"`
 
 	// 伸缩组实例详情。
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 伸缩组实例详情。
-	ScalingGroupInstances *[]ScalingGroupInstance `json:"scaling_group_instances,omitempty"`
+	ScalingGroupInstances *[]ScalingGroupInstance `json:"scaling_group_instances,omitempty" xml:"scaling_group_instances"`
 	HttpStatusCode        int                     `json:"-"`
 }
 

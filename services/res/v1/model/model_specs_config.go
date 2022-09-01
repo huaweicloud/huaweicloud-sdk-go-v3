@@ -10,16 +10,16 @@ import (
 type SpecsConfig struct {
 
 	// 离线计算规格。
-	Offline string `json:"offline"`
+	Offline string `json:"offline" xml:"offline"`
 
 	// 实时计算规格。
-	Nearline *string `json:"nearline,omitempty"`
+	Nearline *string `json:"nearline,omitempty" xml:"nearline"`
 
 	// 深度学习计算规格。
-	Rank *string `json:"rank,omitempty"`
+	Rank *string `json:"rank,omitempty" xml:"rank"`
 
 	// 在线服务最大并发数。
-	OnlineTps *int32 `json:"online_tps,omitempty"`
+	OnlineTps *int32 `json:"online_tps,omitempty" xml:"online_tps"`
 }
 
 func (o SpecsConfig) String() string {

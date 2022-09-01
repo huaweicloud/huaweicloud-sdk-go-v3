@@ -12,10 +12,10 @@ import (
 type CancelTasksRequestBody struct {
 
 	// 任务ID
-	TaskId string `json:"task_id"`
+	TaskId string `json:"task_id" xml:"task_id"`
 
 	// 对扫描任务的操作:   * cancel - 取消扫描任务   * restart - 重启扫描任务
-	Action CancelTasksRequestBodyAction `json:"action"`
+	Action CancelTasksRequestBodyAction `json:"action" xml:"action"`
 }
 
 func (o CancelTasksRequestBody) String() string {

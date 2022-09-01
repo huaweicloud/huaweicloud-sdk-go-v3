@@ -9,19 +9,19 @@ import (
 type LogInfo struct {
 
 	// 日志文件名，打包文件名格式：{Domain}_{logStartTimeStamp}.log.gz
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 日志下载链接
-	Url string `json:"url"`
+	Url string `json:"url" xml:"url"`
 
 	// 日志文件大小
-	Size int64 `json:"size"`
+	Size int64 `json:"size" xml:"size"`
 
 	// 日志文件中日志开始时间，北京时间
-	StartTime string `json:"start_time"`
+	StartTime string `json:"start_time" xml:"start_time"`
 
 	// 日志文件中日志结束时间，北京时间
-	EndTime string `json:"end_time"`
+	EndTime string `json:"end_time" xml:"end_time"`
 }
 
 func (o LogInfo) String() string {

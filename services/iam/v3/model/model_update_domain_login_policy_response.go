@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type UpdateDomainLoginPolicyResponse struct {
-	LoginPolicy    *LoginPolicyResult `json:"login_policy,omitempty"`
+	LoginPolicy    *LoginPolicyResult `json:"login_policy,omitempty" xml:"login_policy"`
 	HttpStatusCode int                `json:"-"`
 }
 

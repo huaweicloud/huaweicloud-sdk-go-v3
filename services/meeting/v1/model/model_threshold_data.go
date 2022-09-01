@@ -10,16 +10,16 @@ import (
 type ThresholdData struct {
 
 	// 自定义接收方向阈值，单位为毫秒(ms)
-	Receiving *int32 `json:"receiving,omitempty"`
+	Receiving *int32 `json:"receiving,omitempty" xml:"receiving"`
 
 	// 默认接收方向阈值，单位为毫秒(ms)
-	ReceivingDefault *int32 `json:"receivingDefault,omitempty"`
+	ReceivingDefault *int32 `json:"receivingDefault,omitempty" xml:"receivingDefault"`
 
 	// 自定义发送方向阈值，单位为毫秒(ms)
-	Sending *int32 `json:"sending,omitempty"`
+	Sending *int32 `json:"sending,omitempty" xml:"sending"`
 
 	// 默认发送方向阈值，单位为毫秒(ms)
-	SendingDefault *int32 `json:"sendingDefault,omitempty"`
+	SendingDefault *int32 `json:"sendingDefault,omitempty" xml:"sendingDefault"`
 }
 
 func (o ThresholdData) String() string {

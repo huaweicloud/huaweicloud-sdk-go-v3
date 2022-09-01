@@ -10,10 +10,10 @@ import (
 type SqlserverUserWithPrivilege struct {
 
 	// 数据库帐号名称。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 是否为只读权限。
-	Readonly *bool `json:"readonly,omitempty"`
+	Readonly *bool `json:"readonly,omitempty" xml:"readonly"`
 }
 
 func (o SqlserverUserWithPrivilege) String() string {

@@ -10,13 +10,13 @@ import (
 type ListEnvMonitorItemResponse struct {
 
 	// 监控项列表
-	MonitorItemList *[]MonitorItem `json:"monitor_item_list,omitempty"`
+	MonitorItemList *[]MonitorItem `json:"monitor_item_list,omitempty" xml:"monitor_item_list"`
 
 	// 总数
-	TotalCount *int32 `json:"total_count,omitempty"`
+	TotalCount *int32 `json:"total_count,omitempty" xml:"total_count"`
 
 	// 总页数
-	TotalPage      *int32 `json:"totalPage,omitempty"`
+	TotalPage      *int32 `json:"totalPage,omitempty" xml:"totalPage"`
 	HttpStatusCode int    `json:"-"`
 }
 

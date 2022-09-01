@@ -10,9 +10,9 @@ import (
 type ShowVpcResponse struct {
 
 	// 请求ID
-	RequestId *string `json:"request_id,omitempty"`
+	RequestId *string `json:"request_id,omitempty" xml:"request_id"`
 
-	Vpc            *Vpc `json:"vpc,omitempty"`
+	Vpc            *Vpc `json:"vpc,omitempty" xml:"vpc"`
 	HttpStatusCode int  `json:"-"`
 }
 

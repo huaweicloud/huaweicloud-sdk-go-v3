@@ -8,10 +8,10 @@ import (
 
 // Response Object
 type CountPreoccupyIpNumResponse struct {
-	PreoccupyIp *PreoccupyIp `json:"preoccupy_ip,omitempty"`
+	PreoccupyIp *PreoccupyIp `json:"preoccupy_ip,omitempty" xml:"preoccupy_ip"`
 
 	// 请求ID。  注：自动生成 。
-	RequestId      *string `json:"request_id,omitempty"`
+	RequestId      *string `json:"request_id,omitempty" xml:"request_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

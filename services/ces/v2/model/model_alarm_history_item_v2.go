@@ -12,46 +12,46 @@ import (
 type AlarmHistoryItemV2 struct {
 
 	// 告警记录ID
-	RecordId *string `json:"record_id,omitempty"`
+	RecordId *string `json:"record_id,omitempty" xml:"record_id"`
 
 	// 告警规则的ID，如：al1603131199286dzxpqK3Ez。
-	AlarmId *string `json:"alarm_id,omitempty"`
+	AlarmId *string `json:"alarm_id,omitempty" xml:"alarm_id"`
 
 	// 告警规则的名称，如：alarm-test01。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 告警记录的状态，取值为ok，alarm，invalid； ok为正常，alarm为告警，invalid为已失效。
-	Status *AlarmHistoryItemV2Status `json:"status,omitempty"`
+	Status *AlarmHistoryItemV2Status `json:"status,omitempty" xml:"status"`
 
 	// 告警记录的告警级别，值为1,2,3,4；1为紧急，2为重要，3为次要，4为提示。
-	Level *AlarmHistoryItemV2Level `json:"level,omitempty"`
+	Level *AlarmHistoryItemV2Level `json:"level,omitempty" xml:"level"`
 
 	// 告警类型； 仅针对事件告警的参数，枚举类型：值为EVENT.SYS或者EVENT.CUSTOM
-	Type *AlarmHistoryItemV2Type `json:"type,omitempty"`
+	Type *AlarmHistoryItemV2Type `json:"type,omitempty" xml:"type"`
 
 	// 是否发送通知，值为true或者false。
-	ActionEnabled *bool `json:"action_enabled,omitempty"`
+	ActionEnabled *bool `json:"action_enabled,omitempty" xml:"action_enabled"`
 
 	// 产生时间,UTC时间
-	BeginTime *sdktime.SdkTime `json:"begin_time,omitempty"`
+	BeginTime *sdktime.SdkTime `json:"begin_time,omitempty" xml:"begin_time"`
 
 	// 结束时间，UTC时间
-	EndTime *sdktime.SdkTime `json:"end_time,omitempty"`
+	EndTime *sdktime.SdkTime `json:"end_time,omitempty" xml:"end_time"`
 
-	Metric *Metric `json:"metric,omitempty"`
+	Metric *Metric `json:"metric,omitempty" xml:"metric"`
 
-	Condition *AlarmCondition `json:"condition,omitempty"`
+	Condition *AlarmCondition `json:"condition,omitempty" xml:"condition"`
 
-	AdditionalInfo *AdditionalInfo `json:"additional_info,omitempty"`
+	AdditionalInfo *AdditionalInfo `json:"additional_info,omitempty" xml:"additional_info"`
 
 	// 告警触发的动作。  结构如下：  {  \"type\": \"notification\", \"notification_list\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  }  type取值： notification：通知。 autoscaling：弹性伸缩。 notification_list：告警状态发生变化时，被通知对象的列表。
-	AlarmActions *[]Notification `json:"alarm_actions,omitempty"`
+	AlarmActions *[]Notification `json:"alarm_actions,omitempty" xml:"alarm_actions"`
 
 	// 告警恢复触发的动作。  结构如下：  {  \"type\": \"notification\", \"notification_list\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  } type取值：  notification：通知。  notification_list：告警状态发生变化时，被通知对象的列表。
-	OkActions *[]Notification `json:"ok_actions,omitempty"`
+	OkActions *[]Notification `json:"ok_actions,omitempty" xml:"ok_actions"`
 
 	// 计算出该条告警记录的资源监控数据上报时间和监控数值。
-	Datapoints *[]DataPointInfo `json:"datapoints,omitempty"`
+	Datapoints *[]DataPointInfo `json:"datapoints,omitempty" xml:"datapoints"`
 }
 
 func (o AlarmHistoryItemV2) String() string {

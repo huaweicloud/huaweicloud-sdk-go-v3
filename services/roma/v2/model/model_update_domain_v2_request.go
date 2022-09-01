@@ -10,15 +10,15 @@ import (
 type UpdateDomainV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 分组的编号
-	GroupId string `json:"group_id"`
+	GroupId string `json:"group_id" xml:"group_id"`
 
 	// 域名的编号
-	DomainId string `json:"domain_id"`
+	DomainId string `json:"domain_id" xml:"domain_id"`
 
-	Body *UrlDomainModify `json:"body,omitempty"`
+	Body *UrlDomainModify `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateDomainV2Request) String() string {

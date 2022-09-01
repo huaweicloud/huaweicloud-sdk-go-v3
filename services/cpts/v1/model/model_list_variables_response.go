@@ -10,13 +10,13 @@ import (
 type ListVariablesResponse struct {
 
 	// code
-	Code *string `json:"code,omitempty"`
+	Code *string `json:"code,omitempty" xml:"code"`
 
 	// message
-	Message *string `json:"message,omitempty"`
+	Message *string `json:"message,omitempty" xml:"message"`
 
 	// variable_list
-	VariableList   *[]VariableDetail `json:"variable_list,omitempty"`
+	VariableList   *[]VariableDetail `json:"variable_list,omitempty" xml:"variable_list"`
 	HttpStatusCode int               `json:"-"`
 }
 

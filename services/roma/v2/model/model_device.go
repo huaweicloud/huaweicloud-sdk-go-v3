@@ -12,96 +12,96 @@ import (
 type Device struct {
 
 	// 权限
-	Permissions *[]string `json:"permissions,omitempty"`
+	Permissions *[]string `json:"permissions,omitempty" xml:"permissions"`
 
 	// 设备ID
-	Id *int32 `json:"id,omitempty"`
+	Id *int32 `json:"id,omitempty" xml:"id"`
 
 	// 父设备ID
-	ParentDeviceId *int32 `json:"parent_device_id,omitempty"`
+	ParentDeviceId *int32 `json:"parent_device_id,omitempty" xml:"parent_device_id"`
 
 	// 父设备名称
-	ParentDeviceName *string `json:"parent_device_name,omitempty"`
+	ParentDeviceName *string `json:"parent_device_name,omitempty" xml:"parent_device_name"`
 
-	Product *ProductReferer `json:"product,omitempty"`
+	Product *ProductReferer `json:"product,omitempty" xml:"product"`
 
 	// 设备名称，支持中文、中文标点符号（）。；，：“”、？《》及英文大小写、数字及英文符号()_,#.?'-@%&!, 长度2-64
-	DeviceName *string `json:"device_name,omitempty"`
+	DeviceName *string `json:"device_name,omitempty" xml:"device_name"`
 
 	// 实例id
-	InstanceId *string `json:"instance_id,omitempty"`
+	InstanceId *string `json:"instance_id,omitempty" xml:"instance_id"`
 
 	// 设备客户端ID，平台生成的设备唯一标识
-	ClientId *string `json:"client_id,omitempty"`
+	ClientId *string `json:"client_id,omitempty" xml:"client_id"`
 
 	// 设备物理编号，通常使用MAC或者IMEI号，支持英文大小写，数字，下划线和中划线，长度2-64
-	NodeId *string `json:"node_id,omitempty"`
+	NodeId *string `json:"node_id,omitempty" xml:"node_id"`
 
 	// 应用名称
-	AppName *string `json:"app_name,omitempty"`
+	AppName *string `json:"app_name,omitempty" xml:"app_name"`
 
 	// 设备状态 0-启用 1-禁用
-	Status *DeviceStatus `json:"status,omitempty"`
+	Status *DeviceStatus `json:"status,omitempty" xml:"status"`
 
 	// 是否在线 0-未连接 1-在线 2-离线
-	OnlineStatus *DeviceOnlineStatus `json:"online_status,omitempty"`
+	OnlineStatus *DeviceOnlineStatus `json:"online_status,omitempty" xml:"online_status"`
 
 	// 备注
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
-	Authentication *Authentication `json:"authentication,omitempty"`
+	Authentication *Authentication `json:"authentication,omitempty" xml:"authentication"`
 
-	CreatedUser *CreatedUser `json:"created_user,omitempty"`
+	CreatedUser *CreatedUser `json:"created_user,omitempty" xml:"created_user"`
 
-	LastUpdatedUser *LastUpdatedUser `json:"last_updated_user,omitempty"`
+	LastUpdatedUser *LastUpdatedUser `json:"last_updated_user,omitempty" xml:"last_updated_user"`
 
 	// 标签
-	Tags *[]string `json:"tags,omitempty"`
+	Tags *[]string `json:"tags,omitempty" xml:"tags"`
 
 	// 创建时间，timestamp(ms)，使用UTC时区
-	CreatedDatetime *int64 `json:"created_datetime,omitempty"`
+	CreatedDatetime *int64 `json:"created_datetime,omitempty" xml:"created_datetime"`
 
 	// 最后修改时间，timestamp(ms)，使用UTC时区
-	LastUpdatedDatetime *int64 `json:"last_updated_datetime,omitempty"`
+	LastUpdatedDatetime *int64 `json:"last_updated_datetime,omitempty" xml:"last_updated_datetime"`
 
 	// 设备接入地址
-	ConnectAddress *string `json:"connect_address,omitempty"`
+	ConnectAddress *string `json:"connect_address,omitempty" xml:"connect_address"`
 
 	// 设备接入SSL地址
-	SslConnectAddress *string `json:"ssl_connect_address,omitempty"`
+	SslConnectAddress *string `json:"ssl_connect_address,omitempty" xml:"ssl_connect_address"`
 
 	// 设备接入IPV6地址
-	Ipv6ConnectAddress *string `json:"ipv6_connect_address,omitempty"`
+	Ipv6ConnectAddress *string `json:"ipv6_connect_address,omitempty" xml:"ipv6_connect_address"`
 
 	// 设备接入IPV6 SSL地址
-	Ipv6SslConnectAddress *string `json:"ipv6_ssl_connect_address,omitempty"`
+	Ipv6SslConnectAddress *string `json:"ipv6_ssl_connect_address,omitempty" xml:"ipv6_ssl_connect_address"`
 
 	// 最后登录时间
-	LastLoginDatetime *int64 `json:"last_login_datetime,omitempty"`
+	LastLoginDatetime *int64 `json:"last_login_datetime,omitempty" xml:"last_login_datetime"`
 
 	// 节点类型 0-直连 1-网关 2-子设备
-	NodeType *int32 `json:"node_type,omitempty"`
+	NodeType *int32 `json:"node_type,omitempty" xml:"node_type"`
 
 	// 设备类型<br>0-普通设备（无子设备也无父设备）<br>1-网关设备(可挂载子设备)<br>2-子设备(归属于某个网关设备)
-	DeviceType *DeviceDeviceType `json:"device_type,omitempty"`
+	DeviceType *DeviceDeviceType `json:"device_type,omitempty" xml:"device_type"`
 
 	// 客户端ip
-	ClientIp *string `json:"client_ip,omitempty"`
+	ClientIp *string `json:"client_ip,omitempty" xml:"client_ip"`
 
 	// 心跳时间
-	KeepAlive *string `json:"keep_alive,omitempty"`
+	KeepAlive *string `json:"keep_alive,omitempty" xml:"keep_alive"`
 
 	// 最后登录时间
-	LastActiveTime *int64 `json:"last_active_time,omitempty"`
+	LastActiveTime *int64 `json:"last_active_time,omitempty" xml:"last_active_time"`
 
 	// 设备版本
-	Version *string `json:"version,omitempty"`
+	Version *string `json:"version,omitempty" xml:"version"`
 
 	// modbus和opcua设备特有,表示设备所属产品的类型 0-普通产品 1-modbus网关产品 2-opcua网关产品
-	PluginId *DevicePluginId `json:"plugin_id,omitempty"`
+	PluginId *DevicePluginId `json:"plugin_id,omitempty" xml:"plugin_id"`
 
 	// 应用ID
-	AppId *string `json:"app_id,omitempty"`
+	AppId *string `json:"app_id,omitempty" xml:"app_id"`
 }
 
 func (o Device) String() string {

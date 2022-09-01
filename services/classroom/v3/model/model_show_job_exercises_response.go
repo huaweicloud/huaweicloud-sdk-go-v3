@@ -10,10 +10,10 @@ import (
 type ShowJobExercisesResponse struct {
 
 	// 作业下习题列表
-	GroupExercises *[]ExerciseGroup `json:"group_exercises,omitempty"`
+	GroupExercises *[]ExerciseGroup `json:"group_exercises,omitempty" xml:"group_exercises"`
 
 	// 作业下习题总数
-	Total          *int32 `json:"total,omitempty"`
+	Total          *int32 `json:"total,omitempty" xml:"total"`
 	HttpStatusCode int    `json:"-"`
 }
 

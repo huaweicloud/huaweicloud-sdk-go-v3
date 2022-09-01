@@ -13,19 +13,19 @@ import (
 type AuthResult struct {
 
 	// 授权结果 - SUCCESS：授权成功 - SKIPPED：跳过 - FAILED：授权失败
-	Status *AuthResultStatus `json:"status,omitempty"`
+	Status *AuthResultStatus `json:"status,omitempty" xml:"status"`
 
 	// 授权失败错误信息
-	ErrorMsg *string `json:"error_msg,omitempty"`
+	ErrorMsg *string `json:"error_msg,omitempty" xml:"error_msg"`
 
 	// 授权失败错误码
-	ErrorCode *string `json:"error_code,omitempty"`
+	ErrorCode *string `json:"error_code,omitempty" xml:"error_code"`
 
 	// 授权失败的API名称
-	ApiName *string `json:"api_name,omitempty"`
+	ApiName *string `json:"api_name,omitempty" xml:"api_name"`
 
 	// 授权失败的APP名称
-	AppName *string `json:"app_name,omitempty"`
+	AppName *string `json:"app_name,omitempty" xml:"app_name"`
 }
 
 func (o AuthResult) String() string {

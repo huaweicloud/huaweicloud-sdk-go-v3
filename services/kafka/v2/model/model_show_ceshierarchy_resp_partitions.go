@@ -9,7 +9,7 @@ import (
 type ShowCeshierarchyRespPartitions struct {
 
 	// 分区名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 }
 
 func (o ShowCeshierarchyRespPartitions) String() string {

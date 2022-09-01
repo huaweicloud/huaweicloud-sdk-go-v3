@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateNewBlockchainRequest struct {
-	Body *CreateRequestBody `json:"body,omitempty"`
+	Body *CreateRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateNewBlockchainRequest) String() string {

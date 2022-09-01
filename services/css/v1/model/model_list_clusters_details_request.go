@@ -10,10 +10,10 @@ import (
 type ListClustersDetailsRequest struct {
 
 	// 指定查询起始值，默认值为1，即从第1个集群开始查询。
-	Start *int32 `json:"start,omitempty"`
+	Start *int32 `json:"start,omitempty" xml:"start"`
 
 	// 指定查询个数，默认值为10，即一次查询10个集群信息。
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 }
 
 func (o ListClustersDetailsRequest) String() string {

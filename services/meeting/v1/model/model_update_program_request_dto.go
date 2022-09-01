@@ -10,10 +10,10 @@ import (
 type UpdateProgramRequestDto struct {
 
 	// 节目名称
-	ProgramName string `json:"programName"`
+	ProgramName string `json:"programName" xml:"programName"`
 
 	// 节目素材列表
-	ProgramItemList *[]ProgramItemRequestBase `json:"programItemList,omitempty"`
+	ProgramItemList *[]ProgramItemRequestBase `json:"programItemList,omitempty" xml:"programItemList"`
 }
 
 func (o UpdateProgramRequestDto) String() string {

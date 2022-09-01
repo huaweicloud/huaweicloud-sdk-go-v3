@@ -10,10 +10,10 @@ import (
 type DeleteUserRequest struct {
 
 	// DDM实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 要删除的DDM帐号名称。
-	Username string `json:"username"`
+	Username string `json:"username" xml:"username"`
 }
 
 func (o DeleteUserRequest) String() string {

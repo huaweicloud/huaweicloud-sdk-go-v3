@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type UpdateAlarmRuleStatusRequest struct {
-	Body *ChangeAlarmRuleStatus `json:"body,omitempty"`
+	Body *ChangeAlarmRuleStatus `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateAlarmRuleStatusRequest) String() string {

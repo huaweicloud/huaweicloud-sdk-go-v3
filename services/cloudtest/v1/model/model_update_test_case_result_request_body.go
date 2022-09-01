@@ -10,10 +10,10 @@ import (
 type UpdateTestCaseResultRequestBody struct {
 
 	// 注册测试类型服务接口返回的服务id
-	ServiceId int32 `json:"service_id"`
+	ServiceId int32 `json:"service_id" xml:"service_id"`
 
 	// 测试用例状态信息，数组长度小于等于50
-	ExecuteList []UpdateTestCaseResultBean `json:"execute_list"`
+	ExecuteList []UpdateTestCaseResultBean `json:"execute_list" xml:"execute_list"`
 }
 
 func (o UpdateTestCaseResultRequestBody) String() string {

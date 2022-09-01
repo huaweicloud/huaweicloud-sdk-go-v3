@@ -10,7 +10,7 @@ import (
 type ListNatGatewaySnatRulesResponse struct {
 
 	// 查询SNAT规则列表的响应体。
-	SnatRules      *[]NatGatewaySnatRuleResponseBody `json:"snat_rules,omitempty"`
+	SnatRules      *[]NatGatewaySnatRuleResponseBody `json:"snat_rules,omitempty" xml:"snat_rules"`
 	HttpStatusCode int                               `json:"-"`
 }
 

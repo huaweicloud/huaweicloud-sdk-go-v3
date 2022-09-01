@@ -10,9 +10,9 @@ import (
 type DataSource struct {
 
 	//   数据源类型。取值为OBS，且当前只支持OBS。
-	Type string `json:"type"`
+	Type string `json:"type" xml:"type"`
 
-	Parameters *Parameters `json:"parameters"`
+	Parameters *Parameters `json:"parameters" xml:"parameters"`
 }
 
 func (o DataSource) String() string {

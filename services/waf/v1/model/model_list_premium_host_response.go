@@ -10,10 +10,10 @@ import (
 type ListPremiumHostResponse struct {
 
 	// 全部防护域名的数量
-	Total *int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty" xml:"total"`
 
 	// 详细的防护域名信息数组
-	Items          *[]SimplePremiumWafHost `json:"items,omitempty"`
+	Items          *[]SimplePremiumWafHost `json:"items,omitempty" xml:"items"`
 	HttpStatusCode int                     `json:"-"`
 }
 

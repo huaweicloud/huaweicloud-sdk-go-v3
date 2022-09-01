@@ -9,10 +9,10 @@ import (
 type BachTags struct {
 
 	// 标签列表
-	Tags *[]ResourceTag `json:"tags,omitempty"`
+	Tags *[]ResourceTag `json:"tags,omitempty" xml:"tags"`
 
 	// 操作标识：仅限于create（创建）、delete（删除）
-	Action string `json:"action"`
+	Action string `json:"action" xml:"action"`
 }
 
 func (o BachTags) String() string {

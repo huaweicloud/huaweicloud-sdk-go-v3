@@ -10,12 +10,12 @@ import (
 type ListDevicesResponse struct {
 
 	// 查询设备列表响应结构体
-	Devices *[]QueryDeviceSimplifyDto `json:"devices,omitempty"`
+	Devices *[]QueryDeviceSimplifyDto `json:"devices,omitempty" xml:"devices"`
 
 	// 满足查询条件的记录总数。
-	Count *int64 `json:"count,omitempty"`
+	Count *int64 `json:"count,omitempty" xml:"count"`
 
-	PageInfo       *PageInfoDto `json:"page_info,omitempty"`
+	PageInfo       *PageInfoDto `json:"page_info,omitempty" xml:"page_info"`
 	HttpStatusCode int          `json:"-"`
 }
 

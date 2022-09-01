@@ -10,7 +10,7 @@ import (
 type CommitSyntaxConversionRequest struct {
 
 	// 迁移项目ID。
-	MigrationProjectId string `json:"migration_project_id"`
+	MigrationProjectId string `json:"migration_project_id" xml:"migration_project_id"`
 }
 
 func (o CommitSyntaxConversionRequest) String() string {

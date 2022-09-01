@@ -10,9 +10,9 @@ import (
 type StartJobRequest struct {
 
 	// 作业名称.
-	JobName string `json:"job_name"`
+	JobName string `json:"job_name" xml:"job_name"`
 
-	Body *StartJobReq `json:"body,omitempty"`
+	Body *StartJobReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o StartJobRequest) String() string {

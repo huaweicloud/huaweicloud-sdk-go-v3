@@ -10,10 +10,10 @@ import (
 type ListExtendsParamsResponse struct {
 
 	// 附加参数列表
-	ExtendsParams *[]ExtendsParamV2 `json:"extends_params,omitempty"`
+	ExtendsParams *[]ExtendsParamV2 `json:"extends_params,omitempty" xml:"extends_params"`
 
 	// 公共附加参数列表
-	CommonParams   *[]CommonParamV2 `json:"common_params,omitempty"`
+	CommonParams   *[]CommonParamV2 `json:"common_params,omitempty" xml:"common_params"`
 	HttpStatusCode int              `json:"-"`
 }
 

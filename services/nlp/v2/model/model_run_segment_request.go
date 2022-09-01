@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RunSegmentRequest struct {
-	Body *SegmentRequest `json:"body,omitempty"`
+	Body *SegmentRequest `json:"body,omitempty" xml:"body"`
 }
 
 func (o RunSegmentRequest) String() string {

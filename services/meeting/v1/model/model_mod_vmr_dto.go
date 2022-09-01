@@ -10,19 +10,19 @@ import (
 type ModVmrDto struct {
 
 	// 云会议室名称 maxLength：128 minLength：1
-	VmrName *string `json:"vmrName,omitempty"`
+	VmrName *string `json:"vmrName,omitempty" xml:"vmrName"`
 
 	// 来宾密码，“”代表不设置来宾密码 4~16位的数字
-	GustPwd *string `json:"gustPwd,omitempty"`
+	GustPwd *string `json:"gustPwd,omitempty" xml:"gustPwd"`
 
 	// 主席密码 4~16位的数字
-	ChairPwd *string `json:"chairPwd,omitempty"`
+	ChairPwd *string `json:"chairPwd,omitempty" xml:"chairPwd"`
 
 	// 是否允许来宾先入会。
-	AllowGustFirst *bool `json:"allowGustFirst,omitempty"`
+	AllowGustFirst *bool `json:"allowGustFirst,omitempty" xml:"allowGustFirst"`
 
 	// 云会议室被使用后是否通知会议室所有者。
-	GustFirstNotice *bool `json:"gustFirstNotice,omitempty"`
+	GustFirstNotice *bool `json:"gustFirstNotice,omitempty" xml:"gustFirstNotice"`
 }
 
 func (o ModVmrDto) String() string {

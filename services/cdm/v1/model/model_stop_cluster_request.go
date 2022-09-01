@@ -10,9 +10,9 @@ import (
 type StopClusterRequest struct {
 
 	// 集群ID
-	ClusterId string `json:"cluster_id"`
+	ClusterId string `json:"cluster_id" xml:"cluster_id"`
 
-	Body *CdmStopClusterReq `json:"body,omitempty"`
+	Body *CdmStopClusterReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o StopClusterRequest) String() string {

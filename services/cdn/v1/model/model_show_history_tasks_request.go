@@ -13,31 +13,31 @@ import (
 type ShowHistoryTasksRequest struct {
 
 	// 当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子账号调用接口时，该参数必传。
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
 
 	// 单页最大数量，取值范围为1-10000。page_size和page_number必须同时传值。默认值30。
-	PageSize *int32 `json:"page_size,omitempty"`
+	PageSize *int32 `json:"page_size,omitempty" xml:"page_size"`
 
 	// 当前查询第几页，取值范围为1-65535。默认值1。
-	PageNumber *int32 `json:"page_number,omitempty"`
+	PageNumber *int32 `json:"page_number,omitempty" xml:"page_number"`
 
 	// 任务状态。 task_inprocess 表示任务处理中，task_done表示任务完成。
-	Status *ShowHistoryTasksRequestStatus `json:"status,omitempty"`
+	Status *ShowHistoryTasksRequestStatus `json:"status,omitempty" xml:"status"`
 
 	// 查询起始时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
-	StartDate *int64 `json:"start_date,omitempty"`
+	StartDate *int64 `json:"start_date,omitempty" xml:"start_date"`
 
 	// 查询结束时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
-	EndDate *int64 `json:"end_date,omitempty"`
+	EndDate *int64 `json:"end_date,omitempty" xml:"end_date"`
 
 	// 用来排序的字段，支持的字段有“task_type”，“total”，“processing”， “succeed”，“failed”，“create_time”。order_field和order_type必须同时传值，否则使用默认值\"create_time\" 和 \"desc\"。
-	OrderField *string `json:"order_field,omitempty"`
+	OrderField *string `json:"order_field,omitempty" xml:"order_field"`
 
 	// desc 或者asc。默认值desc。
-	OrderType *string `json:"order_type,omitempty"`
+	OrderType *string `json:"order_type,omitempty" xml:"order_type"`
 
 	// 默认是文件file。file：文件,directory：目录。
-	FileType *ShowHistoryTasksRequestFileType `json:"file_type,omitempty"`
+	FileType *ShowHistoryTasksRequestFileType `json:"file_type,omitempty" xml:"file_type"`
 }
 
 func (o ShowHistoryTasksRequest) String() string {

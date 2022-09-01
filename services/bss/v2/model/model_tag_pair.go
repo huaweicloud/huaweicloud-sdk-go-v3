@@ -9,10 +9,10 @@ import (
 type TagPair struct {
 
 	// 标签key。
-	TagKey *string `json:"tag_key,omitempty"`
+	TagKey *string `json:"tag_key,omitempty" xml:"tag_key"`
 
 	// 标签value。
-	TagValue *string `json:"tag_value,omitempty"`
+	TagValue *string `json:"tag_value,omitempty" xml:"tag_value"`
 }
 
 func (o TagPair) String() string {

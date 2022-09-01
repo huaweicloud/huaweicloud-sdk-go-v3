@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type BatchCreateSharedBandwidthsRequest struct {
-	Body *BatchCreateBandwidthRequestBody `json:"body,omitempty"`
+	Body *BatchCreateBandwidthRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchCreateSharedBandwidthsRequest) String() string {

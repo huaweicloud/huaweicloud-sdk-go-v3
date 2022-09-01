@@ -10,7 +10,7 @@ import (
 type ListPrivilegesResponse struct {
 
 	// 是否有权限
-	HasPrivilege   *int32 `json:"has_privilege,omitempty"`
+	HasPrivilege   *int32 `json:"has_privilege,omitempty" xml:"has_privilege"`
 	HttpStatusCode int    `json:"-"`
 }
 

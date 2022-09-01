@@ -10,12 +10,12 @@ import (
 type BatchPublishOrOfflineApiV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// - online：发布 - offline：下线
-	Action string `json:"action"`
+	Action string `json:"action" xml:"action"`
 
-	Body *ApiBatchPublish `json:"body,omitempty"`
+	Body *ApiBatchPublish `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchPublishOrOfflineApiV2Request) String() string {

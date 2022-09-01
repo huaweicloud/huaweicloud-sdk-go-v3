@@ -13,10 +13,10 @@ import (
 type SubscriptionInfo struct {
 
 	// 短信或者邮件列表
-	Endpoints *[]string `json:"endpoints,omitempty"`
+	Endpoints *[]string `json:"endpoints,omitempty" xml:"endpoints"`
 
 	// 收件方式，sms：短信,email：邮件
-	Protocol *SubscriptionInfoProtocol `json:"protocol,omitempty"`
+	Protocol *SubscriptionInfoProtocol `json:"protocol,omitempty" xml:"protocol"`
 }
 
 func (o SubscriptionInfo) String() string {

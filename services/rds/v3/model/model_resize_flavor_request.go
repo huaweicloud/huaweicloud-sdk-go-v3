@@ -8,7 +8,7 @@ import (
 
 // 变更实例规格时必填。
 type ResizeFlavorRequest struct {
-	ResizeFlavor *ResizeFlavorObject `json:"resize_flavor"`
+	ResizeFlavor *ResizeFlavorObject `json:"resize_flavor" xml:"resize_flavor"`
 }
 
 func (o ResizeFlavorRequest) String() string {

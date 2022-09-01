@@ -10,10 +10,10 @@ import (
 type ValidateSignatureResponse struct {
 
 	// 密钥ID。
-	KeyId *string `json:"key_id,omitempty"`
+	KeyId *string `json:"key_id,omitempty" xml:"key_id"`
 
 	// 签名验证合法性，“true”表示验证签名合法，“false”表示验证签名非法。
-	SignatureValid *string `json:"signature_valid,omitempty"`
+	SignatureValid *string `json:"signature_valid,omitempty" xml:"signature_valid"`
 	HttpStatusCode int     `json:"-"`
 }
 

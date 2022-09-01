@@ -10,9 +10,9 @@ import (
 type KeystoneCreateMappingRequest struct {
 
 	// 待注册的映射ID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
-	Body *KeystoneCreateMappingRequestBody `json:"body,omitempty"`
+	Body *KeystoneCreateMappingRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o KeystoneCreateMappingRequest) String() string {

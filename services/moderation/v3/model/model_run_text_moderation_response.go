@@ -10,9 +10,9 @@ import (
 type RunTextModerationResponse struct {
 
 	// 本次请求的唯⼀标识，⽤于问题排查，建议保存
-	RequestId *string `json:"request_id,omitempty"`
+	RequestId *string `json:"request_id,omitempty" xml:"request_id"`
 
-	Result         *TextDetectionResult `json:"result,omitempty"`
+	Result         *TextDetectionResult `json:"result,omitempty" xml:"result"`
 	HttpStatusCode int                  `json:"-"`
 }
 

@@ -10,16 +10,16 @@ import (
 type SearchResourceOpRecordResponse struct {
 
 	// 页面起始页，从0开始
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 每页显示的条目数量。 默认值：10。
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 总数量。
-	Count *int32 `json:"count,omitempty"`
+	Count *int32 `json:"count,omitempty" xml:"count"`
 
 	// 分页查询企业的资源项
-	Data           *[]QueryResourceResultDto `json:"data,omitempty"`
+	Data           *[]QueryResourceResultDto `json:"data,omitempty" xml:"data"`
 	HttpStatusCode int                       `json:"-"`
 }
 

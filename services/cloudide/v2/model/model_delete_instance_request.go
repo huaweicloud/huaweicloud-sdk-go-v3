@@ -10,7 +10,7 @@ import (
 type DeleteInstanceRequest struct {
 
 	// 实例id
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 }
 
 func (o DeleteInstanceRequest) String() string {

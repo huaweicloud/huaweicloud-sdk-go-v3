@@ -10,9 +10,9 @@ import (
 type EncryptDatakeyRequest struct {
 
 	// API版本号
-	VersionId string `json:"version_id"`
+	VersionId string `json:"version_id" xml:"version_id"`
 
-	Body *EncryptDatakeyRequestBody `json:"body,omitempty"`
+	Body *EncryptDatakeyRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o EncryptDatakeyRequest) String() string {

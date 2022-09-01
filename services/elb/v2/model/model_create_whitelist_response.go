@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type CreateWhitelistResponse struct {
-	Whitelist      *WhitelistResp `json:"whitelist,omitempty"`
+	Whitelist      *WhitelistResp `json:"whitelist,omitempty" xml:"whitelist"`
 	HttpStatusCode int            `json:"-"`
 }
 

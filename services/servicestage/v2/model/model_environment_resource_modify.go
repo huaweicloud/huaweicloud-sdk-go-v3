@@ -9,13 +9,13 @@ import (
 type EnvironmentResourceModify struct {
 
 	// 添加基础资源。
-	AddBaseResources *[]Resource `json:"add_base_resources,omitempty"`
+	AddBaseResources *[]Resource `json:"add_base_resources,omitempty" xml:"add_base_resources"`
 
 	// 添加其他资源。
-	AddOptionalResources *[]Resource `json:"add_optional_resources,omitempty"`
+	AddOptionalResources *[]Resource `json:"add_optional_resources,omitempty" xml:"add_optional_resources"`
 
 	// 移除资源。
-	RemoveResources *[]Resource `json:"remove_resources,omitempty"`
+	RemoveResources *[]Resource `json:"remove_resources,omitempty" xml:"remove_resources"`
 }
 
 func (o EnvironmentResourceModify) String() string {

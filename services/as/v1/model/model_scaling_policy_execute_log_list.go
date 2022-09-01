@@ -13,48 +13,48 @@ import (
 type ScalingPolicyExecuteLogList struct {
 
 	// 策略执行状态：SUCCESS：成功。FAIL：失败。EXECUTING：执行中
-	Status *ScalingPolicyExecuteLogListStatus `json:"status,omitempty"`
+	Status *ScalingPolicyExecuteLogListStatus `json:"status,omitempty" xml:"status"`
 
 	// 策略执行失败原因。
-	FailedReason *string `json:"failed_reason,omitempty"`
+	FailedReason *string `json:"failed_reason,omitempty" xml:"failed_reason"`
 
 	// 策略执行类型：SCHEDULE：自动触发（定时）。RECURRENCE：自动触发（周期）。ALARM：自动警告（告警）。MANUAL：手动触发
-	ExecuteType *ScalingPolicyExecuteLogListExecuteType `json:"execute_type,omitempty"`
+	ExecuteType *ScalingPolicyExecuteLogListExecuteType `json:"execute_type,omitempty" xml:"execute_type"`
 
 	// 策略执行时间，遵循UTC时间。
-	ExecuteTime *string `json:"execute_time,omitempty"`
+	ExecuteTime *string `json:"execute_time,omitempty" xml:"execute_time"`
 
 	// 策略执行日志ID。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 租户id。
-	TenantId *string `json:"tenant_id,omitempty"`
+	TenantId *string `json:"tenant_id,omitempty" xml:"tenant_id"`
 
 	// 伸缩策略ID。
-	ScalingPolicyId *string `json:"scaling_policy_id,omitempty"`
+	ScalingPolicyId *string `json:"scaling_policy_id,omitempty" xml:"scaling_policy_id"`
 
 	// 伸缩资源类型：伸缩组：SCALING_GROUP 带宽：BANDWIDTH
-	ScalingResourceType *ScalingPolicyExecuteLogListScalingResourceType `json:"scaling_resource_type,omitempty"`
+	ScalingResourceType *ScalingPolicyExecuteLogListScalingResourceType `json:"scaling_resource_type,omitempty" xml:"scaling_resource_type"`
 
 	// 伸缩资源ID。
-	ScalingResourceId *string `json:"scaling_resource_id,omitempty"`
+	ScalingResourceId *string `json:"scaling_resource_id,omitempty" xml:"scaling_resource_id"`
 
 	// 伸缩原始值。
-	OldValue *string `json:"old_value,omitempty"`
+	OldValue *string `json:"old_value,omitempty" xml:"old_value"`
 
 	// 伸缩目标值。
-	DesireValue *string `json:"desire_value,omitempty"`
+	DesireValue *string `json:"desire_value,omitempty" xml:"desire_value"`
 
 	// 操作限制。当scaling_resource_type为BANDWIDTH时，且operation不为SET时，limit_value生效，单位为Mbit/s。此时，当operation为ADD时，limit_value表示最高带宽限制；当operation为REDUCE时，limit_value表示最低带宽限制。
-	LimitValue *string `json:"limit_value,omitempty"`
+	LimitValue *string `json:"limit_value,omitempty" xml:"limit_value"`
 
 	// 策略执行任务类型。ADD：添加。REMOVE：减少。SET：设置为
-	Type *ScalingPolicyExecuteLogListType `json:"type,omitempty"`
+	Type *ScalingPolicyExecuteLogListType `json:"type,omitempty" xml:"type"`
 
 	// 策略执行动作包含的具体任务
-	JobRecords *[]JobRecords `json:"job_records,omitempty"`
+	JobRecords *[]JobRecords `json:"job_records,omitempty" xml:"job_records"`
 
-	MetaData *EipMetaData `json:"meta_data,omitempty"`
+	MetaData *EipMetaData `json:"meta_data,omitempty" xml:"meta_data"`
 }
 
 func (o ScalingPolicyExecuteLogList) String() string {

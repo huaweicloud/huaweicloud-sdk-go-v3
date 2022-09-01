@@ -9,13 +9,13 @@ import (
 type GlobalEipInfo struct {
 
 	// global eip的id
-	GlobalEipId *string `json:"global_eip_id,omitempty"`
+	GlobalEipId *string `json:"global_eip_id,omitempty" xml:"global_eip_id"`
 
 	// global eip的ip地址
-	GlobalEipAddress *string `json:"global_eip_address,omitempty"`
+	GlobalEipAddress *string `json:"global_eip_address,omitempty" xml:"global_eip_address"`
 
 	// IP版本信息。 取值范围：4和6 4：IPv4 6：IPv6 [不支持IPv6，请勿设置为6。]
-	IpVersion *int32 `json:"ip_version,omitempty"`
+	IpVersion *int32 `json:"ip_version,omitempty" xml:"ip_version"`
 }
 
 func (o GlobalEipInfo) String() string {

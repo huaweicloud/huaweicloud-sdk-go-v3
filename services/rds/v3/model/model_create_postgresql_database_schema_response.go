@@ -10,7 +10,7 @@ import (
 type CreatePostgresqlDatabaseSchemaResponse struct {
 
 	// 操作结果。
-	Resp           *string `json:"resp,omitempty"`
+	Resp           *string `json:"resp,omitempty" xml:"resp"`
 	HttpStatusCode int     `json:"-"`
 }
 

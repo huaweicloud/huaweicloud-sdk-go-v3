@@ -13,10 +13,10 @@ import (
 type Pager struct {
 
 	// 页码url
-	Href *string `json:"href,omitempty"`
+	Href *string `json:"href,omitempty" xml:"href"`
 
 	// next:下一页  previous:前一页
-	Rel *PagerRel `json:"rel,omitempty"`
+	Rel *PagerRel `json:"rel,omitempty" xml:"rel"`
 }
 
 func (o Pager) String() string {

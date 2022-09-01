@@ -10,24 +10,24 @@ import (
 type CreateSubscriptionTargetResponse struct {
 
 	// 订阅目标ID
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 订阅的事件目标名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 订阅的事件目标的提供方类型
-	ProviderType *string `json:"provider_type,omitempty"`
+	ProviderType *string `json:"provider_type,omitempty" xml:"provider_type"`
 
 	// 订阅的事件目标参数列表
-	Detail *interface{} `json:"detail,omitempty"`
+	Detail *interface{} `json:"detail,omitempty" xml:"detail"`
 
-	Transform *SubscriptionTargetInfoTransform `json:"transform,omitempty"`
+	Transform *SubscriptionTargetInfoTransform `json:"transform,omitempty" xml:"transform"`
 
 	// 创建时间
-	CreatedTime *string `json:"created_time,omitempty"`
+	CreatedTime *string `json:"created_time,omitempty" xml:"created_time"`
 
 	// 更新时间
-	UpdatedTime    *string `json:"updated_time,omitempty"`
+	UpdatedTime    *string `json:"updated_time,omitempty" xml:"updated_time"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -10,9 +10,9 @@ import (
 type CreateAssetReviewTaskResponse struct {
 
 	// 媒资ID
-	AssetId *string `json:"asset_id,omitempty"`
+	AssetId *string `json:"asset_id,omitempty" xml:"asset_id"`
 
-	Review         *Review `json:"review,omitempty"`
+	Review         *Review `json:"review,omitempty" xml:"review"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -10,10 +10,10 @@ import (
 type SimpleFlavor struct {
 
 	// 云服务器规格的ID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 规格相关快捷链接地址。
-	Links []Link `json:"links"`
+	Links []Link `json:"links" xml:"links"`
 }
 
 func (o SimpleFlavor) String() string {

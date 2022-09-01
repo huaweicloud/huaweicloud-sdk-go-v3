@@ -10,7 +10,7 @@ import (
 type BindPublicReqEipBandWidth struct {
 
 	// 带宽大小。单位：Mbit/s
-	Size int32 `json:"size"`
+	Size int32 `json:"size" xml:"size"`
 }
 
 func (o BindPublicReqEipBandWidth) String() string {

@@ -10,7 +10,7 @@ import (
 type ShowJobRequest struct {
 
 	// job ID。
-	JobId string `json:"job_id"`
+	JobId string `json:"job_id" xml:"job_id"`
 }
 
 func (o ShowJobRequest) String() string {

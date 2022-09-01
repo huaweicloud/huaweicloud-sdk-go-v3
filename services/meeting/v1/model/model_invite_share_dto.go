@@ -10,7 +10,7 @@ import (
 type InviteShareDto struct {
 
 	// 0:取消邀请 1:邀请
-	Share int32 `json:"share"`
+	Share int32 `json:"share" xml:"share"`
 }
 
 func (o InviteShareDto) String() string {

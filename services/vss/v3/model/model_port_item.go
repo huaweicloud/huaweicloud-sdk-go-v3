@@ -12,16 +12,16 @@ import (
 type PortItem struct {
 
 	// 端口号
-	Port *int32 `json:"port,omitempty"`
+	Port *int32 `json:"port,omitempty" xml:"port"`
 
 	// 服务
-	Service *string `json:"service,omitempty"`
+	Service *string `json:"service,omitempty" xml:"service"`
 
 	// 端口协议:   * TCP   * UDP
-	Protocol *PortItemProtocol `json:"protocol,omitempty"`
+	Protocol *PortItemProtocol `json:"protocol,omitempty" xml:"protocol"`
 
 	// 端口状态:   * filtered - 过滤的   * open - 开放
-	Status *PortItemStatus `json:"status,omitempty"`
+	Status *PortItemStatus `json:"status,omitempty" xml:"status"`
 }
 
 func (o PortItem) String() string {

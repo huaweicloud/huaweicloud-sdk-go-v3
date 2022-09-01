@@ -10,7 +10,7 @@ import (
 type InvitedDomain struct {
 
 	// 被邀请方租户
-	InvitedUser string `json:"invited_user"`
+	InvitedUser string `json:"invited_user" xml:"invited_user"`
 }
 
 func (o InvitedDomain) String() string {

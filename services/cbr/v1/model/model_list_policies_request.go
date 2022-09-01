@@ -13,10 +13,10 @@ import (
 type ListPoliciesRequest struct {
 
 	// 策略类型：备份（backup）、复制(replication)
-	OperationType *ListPoliciesRequestOperationType `json:"operation_type,omitempty"`
+	OperationType *ListPoliciesRequestOperationType `json:"operation_type,omitempty" xml:"operation_type"`
 
 	// 存储库ID
-	VaultId *string `json:"vault_id,omitempty"`
+	VaultId *string `json:"vault_id,omitempty" xml:"vault_id"`
 }
 
 func (o ListPoliciesRequest) String() string {

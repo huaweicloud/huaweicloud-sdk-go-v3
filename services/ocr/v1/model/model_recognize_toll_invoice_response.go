@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type RecognizeTollInvoiceResponse struct {
-	Result         *TollInvoiceResult `json:"result,omitempty"`
+	Result         *TollInvoiceResult `json:"result,omitempty" xml:"result"`
 	HttpStatusCode int                `json:"-"`
 }
 

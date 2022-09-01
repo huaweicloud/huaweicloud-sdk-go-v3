@@ -10,10 +10,10 @@ import (
 type ListComponentsResponse struct {
 
 	// 组件个数。
-	Count *int32 `json:"count,omitempty"`
+	Count *int32 `json:"count,omitempty" xml:"count"`
 
 	// 组件列表。
-	Components     *[]ComponentView `json:"components,omitempty"`
+	Components     *[]ComponentView `json:"components,omitempty" xml:"components"`
 	HttpStatusCode int              `json:"-"`
 }
 

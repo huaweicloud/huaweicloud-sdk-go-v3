@@ -13,9 +13,9 @@ import (
 type ListTemplatesRequest struct {
 
 	// 语言类型，缺省值为“zh-cn”。  枚举值： - zh-cn：中文 - en-us：英文
-	XLanguage *ListTemplatesRequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *ListTemplatesRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 
-	Body *TemplateQuery `json:"body,omitempty"`
+	Body *TemplateQuery `json:"body,omitempty" xml:"body"`
 }
 
 func (o ListTemplatesRequest) String() string {

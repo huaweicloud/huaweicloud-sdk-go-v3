@@ -10,12 +10,12 @@ import (
 type CreateDatabaseSchemasRequest struct {
 
 	// 语言
-	XLanguage *string `json:"X-Language,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *GaussDBforOpenGaussDatabaseSchemaReq `json:"body,omitempty"`
+	Body *GaussDBforOpenGaussDatabaseSchemaReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateDatabaseSchemasRequest) String() string {

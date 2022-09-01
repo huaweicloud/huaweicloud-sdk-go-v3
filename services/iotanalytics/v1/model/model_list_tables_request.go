@@ -10,22 +10,22 @@ import (
 type ListTablesRequest struct {
 
 	// 过滤表名称的关键词。
-	Keyword *string `json:"keyword,omitempty"`
+	Keyword *string `json:"keyword,omitempty" xml:"keyword"`
 
 	// 过滤标签的关键字
-	Tag *string `json:"tag,omitempty"`
+	Tag *string `json:"tag,omitempty" xml:"tag"`
 
 	// 当前偏移量，默认为0。
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 每页显示的最大作业个数，范围: [1, 100]。默认值：10。
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 指定作业排序字段，默认为created_time（作业创建时间），支持created_time(作业创建时间)、modified_time（作业更新时间） 、job_name（作业名称）三种排序字段。
-	OrderBy *string `json:"order_by,omitempty"`
+	OrderBy *string `json:"order_by,omitempty" xml:"order_by"`
 
 	// 指定作业排序的升降序，默认为desc（降序），支持asc（升序）、desc（降序）两种排序方式。
-	Order *string `json:"order,omitempty"`
+	Order *string `json:"order,omitempty" xml:"order"`
 }
 
 func (o ListTablesRequest) String() string {

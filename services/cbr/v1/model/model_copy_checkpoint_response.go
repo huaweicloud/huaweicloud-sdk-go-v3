@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type CopyCheckpointResponse struct {
-	Replication    *CheckpointReplicateRespBody `json:"replication,omitempty"`
+	Replication    *CheckpointReplicateRespBody `json:"replication,omitempty" xml:"replication"`
 	HttpStatusCode int                          `json:"-"`
 }
 

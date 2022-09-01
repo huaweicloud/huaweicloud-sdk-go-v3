@@ -10,9 +10,9 @@ import (
 type CreateJobRequest struct {
 
 	// 集群ID
-	ClusterId string `json:"cluster_id"`
+	ClusterId string `json:"cluster_id" xml:"cluster_id"`
 
-	Body *CdmCreateJobJsonReq `json:"body,omitempty"`
+	Body *CdmCreateJobJsonReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateJobRequest) String() string {

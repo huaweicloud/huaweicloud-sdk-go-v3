@@ -10,16 +10,16 @@ import (
 type ShowCommandResponse struct {
 
 	// 命令所属服务id
-	ServiceId *int32 `json:"service_id,omitempty"`
+	ServiceId *int32 `json:"service_id,omitempty" xml:"service_id"`
 
 	// 命令id
-	CommandId *int32 `json:"command_id,omitempty"`
+	CommandId *int32 `json:"command_id,omitempty" xml:"command_id"`
 
 	// 命令名称
-	CommandName *string `json:"command_name,omitempty"`
+	CommandName *string `json:"command_name,omitempty" xml:"command_name"`
 
 	// 命令描述
-	Description    *string `json:"description,omitempty"`
+	Description    *string `json:"description,omitempty" xml:"description"`
 	HttpStatusCode int     `json:"-"`
 }
 

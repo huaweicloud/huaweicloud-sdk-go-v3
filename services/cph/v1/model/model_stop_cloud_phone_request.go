@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type StopCloudPhoneRequest struct {
-	Body *StopCloudPhoneRequestBody `json:"body,omitempty"`
+	Body *StopCloudPhoneRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o StopCloudPhoneRequest) String() string {

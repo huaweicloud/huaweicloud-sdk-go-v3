@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowResourceTagResponse struct {
-	Tags           *[]Tag `json:"tags,omitempty"`
+	Tags           *[]Tag `json:"tags,omitempty" xml:"tags"`
 	HttpStatusCode int    `json:"-"`
 }
 

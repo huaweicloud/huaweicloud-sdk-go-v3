@@ -9,10 +9,10 @@ import (
 type StartPipelineBuildParams struct {
 
 	// 构建参数名
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 构建参数值，最大长度为8192
-	Value string `json:"value"`
+	Value string `json:"value" xml:"value"`
 }
 
 func (o StartPipelineBuildParams) String() string {

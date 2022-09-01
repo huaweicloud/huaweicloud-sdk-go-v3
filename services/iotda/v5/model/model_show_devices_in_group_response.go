@@ -10,9 +10,9 @@ import (
 type ShowDevicesInGroupResponse struct {
 
 	// 设备列表。
-	Devices *[]SimplifyDevice `json:"devices,omitempty"`
+	Devices *[]SimplifyDevice `json:"devices,omitempty" xml:"devices"`
 
-	Page           *Page `json:"page,omitempty"`
+	Page           *Page `json:"page,omitempty" xml:"page"`
 	HttpStatusCode int   `json:"-"`
 }
 

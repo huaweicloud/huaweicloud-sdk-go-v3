@@ -10,10 +10,10 @@ import (
 type BatchShowNodesInformationResponse struct {
 
 	// 查询结果的实例总数
-	Count *int32 `json:"count,omitempty"`
+	Count *int32 `json:"count,omitempty" xml:"count"`
 
 	// 实例列表。
-	Instances      *[]InstanceNodesInfoResp `json:"instances,omitempty"`
+	Instances      *[]InstanceNodesInfoResp `json:"instances,omitempty" xml:"instances"`
 	HttpStatusCode int                      `json:"-"`
 }
 

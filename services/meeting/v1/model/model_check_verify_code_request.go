@@ -10,12 +10,12 @@ import (
 type CheckVerifyCodeRequest struct {
 
 	// 请求requestId，用来标识一路请求，用于问题跟踪定位，建议使用uuId，若不携带，则后台自动生成
-	XRequestID *string `json:"X-Request-ID,omitempty"`
+	XRequestID *string `json:"X-Request-ID,omitempty" xml:"X-Request-ID"`
 
 	// 语言参数，默认为中文zh-CN, 英文为en-US
-	AcceptLanguage *string `json:"Accept-Language,omitempty"`
+	AcceptLanguage *string `json:"Accept-Language,omitempty" xml:"Accept-Language"`
 
-	Body *VerifyCodeCheckDto `json:"body,omitempty"`
+	Body *VerifyCodeCheckDto `json:"body,omitempty" xml:"body"`
 }
 
 func (o CheckVerifyCodeRequest) String() string {

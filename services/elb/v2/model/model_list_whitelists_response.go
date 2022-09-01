@@ -10,7 +10,7 @@ import (
 type ListWhitelistsResponse struct {
 
 	// 白名单对象的列表
-	Whitelists     *[]WhitelistResp `json:"whitelists,omitempty"`
+	Whitelists     *[]WhitelistResp `json:"whitelists,omitempty" xml:"whitelists"`
 	HttpStatusCode int              `json:"-"`
 }
 

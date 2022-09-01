@@ -10,12 +10,12 @@ import (
 type ListBackupFileLinksRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 备份记录ID。
-	BackupId string `json:"backup_id"`
+	BackupId string `json:"backup_id" xml:"backup_id"`
 
-	Body *DownloadBackupFilesReq `json:"body,omitempty"`
+	Body *DownloadBackupFilesReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o ListBackupFileLinksRequest) String() string {

@@ -13,31 +13,31 @@ import (
 type CreateNetworkInstance struct {
 
 	// 网络实例的名字。只能由中文、英文字母、数字、下划线、中划线、点组成。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 网络实例的描述。不支持 <>。
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
-	// 添加到云连接网络实例的类型，有效值： - vpc：虚拟私有云。 - vgw：虚拟网关。 - er：企业路由器。
-	Type CreateNetworkInstanceType `json:"type"`
+	// 添加到云连接网络实例的类型，有效值： - vpc：虚拟私有云。 - vgw：虚拟网关。
+	Type CreateNetworkInstanceType `json:"type" xml:"type"`
 
-	// 添加到云连接网络实例的ID，VPC、VGW或者ER的ID。
-	InstanceId string `json:"instance_id"`
+	// 添加到云连接网络实例的ID，VPC或者VGW的ID。
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 网络实例的账户ID。跨账号加载必填；同账号下资源加载不填。
-	InstanceDomainId *string `json:"instance_domain_id,omitempty"`
+	InstanceDomainId *string `json:"instance_domain_id,omitempty" xml:"instance_domain_id"`
 
 	// 网络实例的项目ID。
-	ProjectId string `json:"project_id"`
+	ProjectId string `json:"project_id" xml:"project_id"`
 
 	// 网络实例的RegionID。
-	RegionId string `json:"region_id"`
+	RegionId string `json:"region_id" xml:"region_id"`
 
 	// 云连接实例ID。
-	CloudConnectionId string `json:"cloud_connection_id"`
+	CloudConnectionId string `json:"cloud_connection_id" xml:"cloud_connection_id"`
 
-	// 网络实例发布的网段路由列表，ER场景此字段为空。
-	Cidrs []string `json:"cidrs"`
+	// 网络实例发布的网段路由列表。
+	Cidrs []string `json:"cidrs" xml:"cidrs"`
 }
 
 func (o CreateNetworkInstance) String() string {
@@ -56,7 +56,6 @@ type CreateNetworkInstanceType struct {
 type CreateNetworkInstanceTypeEnum struct {
 	VPC CreateNetworkInstanceType
 	VGW CreateNetworkInstanceType
-	ER  CreateNetworkInstanceType
 }
 
 func GetCreateNetworkInstanceTypeEnum() CreateNetworkInstanceTypeEnum {
@@ -66,9 +65,6 @@ func GetCreateNetworkInstanceTypeEnum() CreateNetworkInstanceTypeEnum {
 		},
 		VGW: CreateNetworkInstanceType{
 			value: "vgw",
-		},
-		ER: CreateNetworkInstanceType{
-			value: "er",
 		},
 	}
 }

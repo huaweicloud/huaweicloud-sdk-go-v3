@@ -10,13 +10,13 @@ import (
 type LinkedEntity struct {
 
 	// 实体指称
-	Mention string `json:"mention"`
+	Mention string `json:"mention" xml:"mention"`
 
 	// 偏移量
-	Offset int32 `json:"offset"`
+	Offset int32 `json:"offset" xml:"offset"`
 
 	// 实体名称
-	EntityTitle string `json:"entity_title"`
+	EntityTitle string `json:"entity_title" xml:"entity_title"`
 }
 
 func (o LinkedEntity) String() string {

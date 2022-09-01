@@ -9,19 +9,19 @@ import (
 type ShowInstanceTopicDetailRespReplicas struct {
 
 	// 副本所在的节点ID。
-	Broker *int32 `json:"broker,omitempty"`
+	Broker *int32 `json:"broker,omitempty" xml:"broker"`
 
 	// 该副本是否为leader。
-	Leader *bool `json:"leader,omitempty"`
+	Leader *bool `json:"leader,omitempty" xml:"leader"`
 
 	// 该副本是否在ISR副本中。
-	InSync *bool `json:"in_sync,omitempty"`
+	InSync *bool `json:"in_sync,omitempty" xml:"in_sync"`
 
 	// 该副本当前日志大小。单位：Byte。
-	Size *int32 `json:"size,omitempty"`
+	Size *int32 `json:"size,omitempty" xml:"size"`
 
 	// 该副本当前落后hw的消息数。
-	Lag *int32 `json:"lag,omitempty"`
+	Lag *int32 `json:"lag,omitempty" xml:"lag"`
 }
 
 func (o ShowInstanceTopicDetailRespReplicas) String() string {

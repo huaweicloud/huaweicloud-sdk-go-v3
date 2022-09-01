@@ -10,9 +10,9 @@ import (
 type BatchAddPeersToChannelRequest struct {
 
 	// bcs 服务id
-	BlockchainId string `json:"blockchain_id"`
+	BlockchainId string `json:"blockchain_id" xml:"blockchain_id"`
 
-	Body *BatchAddPeersToChannelRequestBody `json:"body,omitempty"`
+	Body *BatchAddPeersToChannelRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchAddPeersToChannelRequest) String() string {

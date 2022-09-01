@@ -10,13 +10,13 @@ import (
 type ShowBackupPolicyResult struct {
 
 	// 备份文件可以保存的天数。
-	KeepDays int32 `json:"keep_days"`
+	KeepDays int32 `json:"keep_days" xml:"keep_days"`
 
 	// 备份时间段。自动备份将在该时间段内触发。
-	StartTime *string `json:"start_time,omitempty"`
+	StartTime *string `json:"start_time,omitempty" xml:"start_time"`
 
 	// 备份周期配置。自动备份将在每星期指定的天进行。
-	Period *string `json:"period,omitempty"`
+	Period *string `json:"period,omitempty" xml:"period"`
 }
 
 func (o ShowBackupPolicyResult) String() string {

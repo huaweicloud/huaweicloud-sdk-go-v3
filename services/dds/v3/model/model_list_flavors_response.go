@@ -10,7 +10,7 @@ import (
 type ListFlavorsResponse struct {
 
 	// 实例规格信息列表。
-	Flavors        *[]Flavor `json:"flavors,omitempty"`
+	Flavors        *[]Flavor `json:"flavors,omitempty" xml:"flavors"`
 	HttpStatusCode int       `json:"-"`
 }
 

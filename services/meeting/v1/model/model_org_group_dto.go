@@ -10,10 +10,10 @@ import (
 type OrgGroupDto struct {
 
 	// 分组Id
-	GroupId *string `json:"groupId,omitempty"`
+	GroupId *string `json:"groupId,omitempty" xml:"groupId"`
 
 	// 分组名称
-	GroupName *string `json:"groupName,omitempty"`
+	GroupName *string `json:"groupName,omitempty" xml:"groupName"`
 }
 
 func (o OrgGroupDto) String() string {

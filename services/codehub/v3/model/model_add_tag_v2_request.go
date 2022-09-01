@@ -10,9 +10,9 @@ import (
 type AddTagV2Request struct {
 
 	// 仓库主键id
-	RepositoryId int32 `json:"repository_id"`
+	RepositoryId int32 `json:"repository_id" xml:"repository_id"`
 
-	Body *AddTagsRequest `json:"body,omitempty"`
+	Body *AddTagsRequest `json:"body,omitempty" xml:"body"`
 }
 
 func (o AddTagV2Request) String() string {

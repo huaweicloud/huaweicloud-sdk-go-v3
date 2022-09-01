@@ -9,7 +9,7 @@ import (
 type ThrottleSpecialUpdate struct {
 
 	// 流控时间内特殊对象能够访问API的最大次数限制
-	CallLimits int64 `json:"call_limits"`
+	CallLimits int64 `json:"call_limits" xml:"call_limits"`
 }
 
 func (o ThrottleSpecialUpdate) String() string {

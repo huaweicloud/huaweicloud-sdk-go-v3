@@ -9,7 +9,7 @@ import (
 type MemberGroupCreateBatch struct {
 
 	// 后端服务器组列表
-	MemberGroups *[]MemberGroupCreate `json:"member_groups,omitempty"`
+	MemberGroups *[]MemberGroupCreate `json:"member_groups,omitempty" xml:"member_groups"`
 }
 
 func (o MemberGroupCreateBatch) String() string {

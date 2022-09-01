@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type UpdateCloudPhonePropertyRequest struct {
-	Body *Phones `json:"body,omitempty"`
+	Body *Phones `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateCloudPhonePropertyRequest) String() string {

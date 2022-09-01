@@ -10,10 +10,10 @@ import (
 type DeleteMqsInstanceTopicRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 待删除的topic，多个topic以“,”分割。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 }
 
 func (o DeleteMqsInstanceTopicRequest) String() string {

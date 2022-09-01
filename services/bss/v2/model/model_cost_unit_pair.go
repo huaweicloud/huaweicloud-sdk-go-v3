@@ -9,10 +9,10 @@ import (
 type CostUnitPair struct {
 
 	// 成本单元名称。
-	CostUnitName *string `json:"cost_unit_name,omitempty"`
+	CostUnitName *string `json:"cost_unit_name,omitempty" xml:"cost_unit_name"`
 
 	// 成本单元规则值。
-	CostUnitRuleValue *string `json:"cost_unit_rule_value,omitempty"`
+	CostUnitRuleValue *string `json:"cost_unit_rule_value,omitempty" xml:"cost_unit_rule_value"`
 }
 
 func (o CostUnitPair) String() string {

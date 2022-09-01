@@ -7,7 +7,7 @@ import (
 )
 
 type CreateEdgeSiteRequestBody struct {
-	EdgeSite *CreateEdgeSite `json:"edge_site"`
+	EdgeSite *CreateEdgeSite `json:"edge_site" xml:"edge_site"`
 }
 
 func (o CreateEdgeSiteRequestBody) String() string {

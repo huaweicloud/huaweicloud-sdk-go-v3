@@ -10,7 +10,7 @@ import (
 type BatchDeleteRulesResponse struct {
 
 	// 返回数组
-	Resources      *[]SingleResponse `json:"resources,omitempty"`
+	Resources      *[]SingleResponse `json:"resources,omitempty" xml:"resources"`
 	HttpStatusCode int               `json:"-"`
 }
 

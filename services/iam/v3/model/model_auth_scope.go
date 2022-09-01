@@ -8,9 +8,9 @@ import (
 
 //
 type AuthScope struct {
-	Domain *AuthScopeDomain `json:"domain,omitempty"`
+	Domain *AuthScopeDomain `json:"domain,omitempty" xml:"domain"`
 
-	Project *AuthScopeProject `json:"project,omitempty"`
+	Project *AuthScopeProject `json:"project,omitempty" xml:"project"`
 }
 
 func (o AuthScope) String() string {

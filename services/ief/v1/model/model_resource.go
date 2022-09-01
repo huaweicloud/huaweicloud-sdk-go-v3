@@ -9,13 +9,13 @@ import (
 type Resource struct {
 
 	// 资源ID
-	ResourceId string `json:"resource_id"`
+	ResourceId string `json:"resource_id" xml:"resource_id"`
 
 	// 标签列表，没有标签默认为空数组
-	Tags []ResourceTag `json:"tags"`
+	Tags []ResourceTag `json:"tags" xml:"tags"`
 
 	// 资源名称，资源没有名称时默认为空字符串。
-	ResourceName string `json:"resource_name"`
+	ResourceName string `json:"resource_name" xml:"resource_name"`
 }
 
 func (o Resource) String() string {

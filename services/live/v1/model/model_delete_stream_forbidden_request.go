@@ -10,16 +10,16 @@ import (
 type DeleteStreamForbiddenRequest struct {
 
 	// op账号需要携带的特定project_id，当使用op账号时该值为所操作租户的project_id
-	SpecifyProject *string `json:"specify_project,omitempty"`
+	SpecifyProject *string `json:"specify_project,omitempty" xml:"specify_project"`
 
 	// 推流域名
-	Domain string `json:"domain"`
+	Domain string `json:"domain" xml:"domain"`
 
 	// RTMP应用名称
-	AppName string `json:"app_name"`
+	AppName string `json:"app_name" xml:"app_name"`
 
 	// 流名称
-	StreamName string `json:"stream_name"`
+	StreamName string `json:"stream_name" xml:"stream_name"`
 }
 
 func (o DeleteStreamForbiddenRequest) String() string {

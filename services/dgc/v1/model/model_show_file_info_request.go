@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ShowFileInfoRequest struct {
-	Body *FilePath `json:"body,omitempty"`
+	Body *FilePath `json:"body,omitempty" xml:"body"`
 }
 
 func (o ShowFileInfoRequest) String() string {

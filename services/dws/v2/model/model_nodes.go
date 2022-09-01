@@ -10,10 +10,10 @@ import (
 type Nodes struct {
 
 	// 集群实例ID
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 集群实例状态
-	Status string `json:"status"`
+	Status string `json:"status" xml:"status"`
 }
 
 func (o Nodes) String() string {

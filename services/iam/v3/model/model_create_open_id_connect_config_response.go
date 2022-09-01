@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type CreateOpenIdConnectConfigResponse struct {
-	OpenidConnectConfig *CreateOpenIdConnectConfig `json:"openid_connect_config,omitempty"`
+	OpenidConnectConfig *CreateOpenIdConnectConfig `json:"openid_connect_config,omitempty" xml:"openid_connect_config"`
 	HttpStatusCode      int                        `json:"-"`
 }
 

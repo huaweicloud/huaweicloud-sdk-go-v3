@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type UpdateSubnetResponse struct {
-	Subnet         *SubnetResult `json:"subnet,omitempty"`
+	Subnet         *SubnetResult `json:"subnet,omitempty" xml:"subnet"`
 	HttpStatusCode int           `json:"-"`
 }
 

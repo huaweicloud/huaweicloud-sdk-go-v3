@@ -8,7 +8,7 @@ import (
 
 // This is a auto create Body Object
 type CreateTemplateReq struct {
-	Template *TemplateRequest `json:"template"`
+	Template *TemplateRequest `json:"template" xml:"template"`
 }
 
 func (o CreateTemplateReq) String() string {

@@ -10,10 +10,10 @@ import (
 type ShowRuleRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 规则ID
-	RuleId string `json:"rule_id"`
+	RuleId string `json:"rule_id" xml:"rule_id"`
 }
 
 func (o ShowRuleRequest) String() string {

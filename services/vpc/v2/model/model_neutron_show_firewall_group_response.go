@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type NeutronShowFirewallGroupResponse struct {
-	FirewallGroup  *NeutronFirewallGroup `json:"firewall_group,omitempty"`
+	FirewallGroup  *NeutronFirewallGroup `json:"firewall_group,omitempty" xml:"firewall_group"`
 	HttpStatusCode int                   `json:"-"`
 }
 

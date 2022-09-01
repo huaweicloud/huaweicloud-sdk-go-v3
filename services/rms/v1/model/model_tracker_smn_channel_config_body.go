@@ -10,13 +10,13 @@ import (
 type TrackerSmnChannelConfigBody struct {
 
 	// 区域id
-	RegionId string `json:"region_id"`
+	RegionId string `json:"region_id" xml:"region_id"`
 
 	// 项目id
-	ProjectId string `json:"project_id"`
+	ProjectId string `json:"project_id" xml:"project_id"`
 
 	// SMN主题urn
-	TopicUrn string `json:"topic_urn"`
+	TopicUrn string `json:"topic_urn" xml:"topic_urn"`
 }
 
 func (o TrackerSmnChannelConfigBody) String() string {

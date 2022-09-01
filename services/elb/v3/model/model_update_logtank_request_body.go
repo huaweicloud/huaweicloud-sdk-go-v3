@@ -8,7 +8,7 @@ import (
 
 // 更新云日志请求体
 type UpdateLogtankRequestBody struct {
-	Logtank *UpdateLogtankOption `json:"logtank"`
+	Logtank *UpdateLogtankOption `json:"logtank" xml:"logtank"`
 }
 
 func (o UpdateLogtankRequestBody) String() string {

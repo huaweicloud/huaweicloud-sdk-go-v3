@@ -10,9 +10,9 @@ import (
 type DeleteActiveAlarmsRequest struct {
 
 	// domainId
-	DomainId string `json:"domain_id"`
+	DomainId string `json:"domain_id" xml:"domain_id"`
 
-	Body *DeleteActiveAlarmsRequestBody `json:"body,omitempty"`
+	Body *DeleteActiveAlarmsRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o DeleteActiveAlarmsRequest) String() string {

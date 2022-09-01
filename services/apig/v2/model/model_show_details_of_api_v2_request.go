@@ -10,10 +10,10 @@ import (
 type ShowDetailsOfApiV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// API的编号
-	ApiId string `json:"api_id"`
+	ApiId string `json:"api_id" xml:"api_id"`
 }
 
 func (o ShowDetailsOfApiV2Request) String() string {

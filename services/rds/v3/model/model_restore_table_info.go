@@ -9,10 +9,10 @@ import (
 type RestoreTableInfo struct {
 
 	// 旧表名
-	OldName string `json:"oldName"`
+	OldName string `json:"oldName" xml:"oldName"`
 
 	// 新表名
-	NewName string `json:"newName"`
+	NewName string `json:"newName" xml:"newName"`
 }
 
 func (o RestoreTableInfo) String() string {

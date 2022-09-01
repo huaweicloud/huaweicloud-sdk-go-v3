@@ -10,9 +10,9 @@ import (
 type BatchCreateLoadbalancerTagsRequest struct {
 
 	// 负载均衡器ID。
-	LoadbalancerId string `json:"loadbalancer_id"`
+	LoadbalancerId string `json:"loadbalancer_id" xml:"loadbalancer_id"`
 
-	Body *BatchCreateLoadbalancerTagsRequestBody `json:"body,omitempty"`
+	Body *BatchCreateLoadbalancerTagsRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchCreateLoadbalancerTagsRequest) String() string {

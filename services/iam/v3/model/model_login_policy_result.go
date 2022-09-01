@@ -10,25 +10,25 @@ import (
 type LoginPolicyResult struct {
 
 	// 账号在该值设置的有效期内未使用，则被停用。
-	AccountValidityPeriod int32 `json:"account_validity_period"`
+	AccountValidityPeriod int32 `json:"account_validity_period" xml:"account_validity_period"`
 
 	// 登录提示信息。
-	CustomInfoForLogin string `json:"custom_info_for_login"`
+	CustomInfoForLogin string `json:"custom_info_for_login" xml:"custom_info_for_login"`
 
 	// 帐号锁定时长（分钟）。
-	LockoutDuration int32 `json:"lockout_duration"`
+	LockoutDuration int32 `json:"lockout_duration" xml:"lockout_duration"`
 
 	// 限定时间内登录失败次数。
-	LoginFailedTimes int32 `json:"login_failed_times"`
+	LoginFailedTimes int32 `json:"login_failed_times" xml:"login_failed_times"`
 
 	// 限定时间长度（分钟）。
-	PeriodWithLoginFailures int32 `json:"period_with_login_failures"`
+	PeriodWithLoginFailures int32 `json:"period_with_login_failures" xml:"period_with_login_failures"`
 
 	// 登录会话失效时间。
-	SessionTimeout int32 `json:"session_timeout"`
+	SessionTimeout int32 `json:"session_timeout" xml:"session_timeout"`
 
 	// 是否显示最近一次的登录信息。
-	ShowRecentLoginInfo bool `json:"show_recent_login_info"`
+	ShowRecentLoginInfo bool `json:"show_recent_login_info" xml:"show_recent_login_info"`
 }
 
 func (o LoginPolicyResult) String() string {

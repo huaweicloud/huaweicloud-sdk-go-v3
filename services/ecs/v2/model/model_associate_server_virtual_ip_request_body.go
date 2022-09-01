@@ -8,7 +8,7 @@ import (
 
 // This is a auto create Body Object
 type AssociateServerVirtualIpRequestBody struct {
-	Nic *AssociateServerVirtualIpOption `json:"nic"`
+	Nic *AssociateServerVirtualIpOption `json:"nic" xml:"nic"`
 }
 
 func (o AssociateServerVirtualIpRequestBody) String() string {

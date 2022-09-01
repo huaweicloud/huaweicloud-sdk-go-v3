@@ -12,15 +12,15 @@ import (
 type OutputSetting struct {
 
 	// 剪切或拼接的输出封装格式。
-	Format *OutputSettingFormat `json:"format,omitempty"`
+	Format *OutputSettingFormat `json:"format,omitempty" xml:"format"`
 
-	Video *EditVideoInfo `json:"video,omitempty"`
+	Video *EditVideoInfo `json:"video,omitempty" xml:"video"`
 
-	Audio *EditAudioInfo `json:"audio,omitempty"`
+	Audio *EditAudioInfo `json:"audio,omitempty" xml:"audio"`
 
-	Hls *EditHlsInfo `json:"hls,omitempty"`
+	Hls *EditHlsInfo `json:"hls,omitempty" xml:"hls"`
 
-	Output *ObsObjInfo `json:"output,omitempty"`
+	Output *ObsObjInfo `json:"output,omitempty" xml:"output"`
 }
 
 func (o OutputSetting) String() string {

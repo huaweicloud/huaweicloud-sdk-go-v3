@@ -10,10 +10,10 @@ import (
 type RunSearchPictureResponse struct {
 
 	// 搜索结果总数。
-	Count *int32 `json:"count,omitempty"`
+	Count *int32 `json:"count,omitempty" xml:"count"`
 
 	// 搜索结果详情。
-	Result         *[]SearchPictureItem `json:"result,omitempty"`
+	Result         *[]SearchPictureItem `json:"result,omitempty" xml:"result"`
 	HttpStatusCode int                  `json:"-"`
 }
 

@@ -8,18 +8,18 @@ import (
 
 // 模板参数。
 type TemplateView struct {
-	TemplateName *Template `json:"template_name,omitempty"`
+	TemplateName *Template `json:"template_name,omitempty" xml:"template_name"`
 
 	// 模板描述。
-	TemplateDesc *string `json:"template_desc,omitempty"`
+	TemplateDesc *string `json:"template_desc,omitempty" xml:"template_desc"`
 
 	// 模板类别。
-	SourceType *string `json:"source_type,omitempty"`
+	SourceType *string `json:"source_type,omitempty" xml:"source_type"`
 
 	// 源码仓库URL
-	SourceRepoUrl *string `json:"source_repo_url,omitempty"`
+	SourceRepoUrl *string `json:"source_repo_url,omitempty" xml:"source_repo_url"`
 
-	Runtime *RuntimeType `json:"runtime,omitempty"`
+	Runtime *RuntimeType `json:"runtime,omitempty" xml:"runtime"`
 }
 
 func (o TemplateView) String() string {

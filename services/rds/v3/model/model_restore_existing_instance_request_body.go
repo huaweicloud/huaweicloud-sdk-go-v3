@@ -7,9 +7,9 @@ import (
 )
 
 type RestoreExistingInstanceRequestBody struct {
-	Source *RestoreExistingInstanceRequestBodySource `json:"source"`
+	Source *RestoreExistingInstanceRequestBodySource `json:"source" xml:"source"`
 
-	Target *TargetInstanceRequest `json:"target"`
+	Target *TargetInstanceRequest `json:"target" xml:"target"`
 }
 
 func (o RestoreExistingInstanceRequestBody) String() string {

@@ -10,9 +10,9 @@ import (
 type ListRtcAbnormalEventDimensionResponse struct {
 
 	// 异常体验列表
-	Dimensions *[]AbnormalEventDimensionValue `json:"dimensions,omitempty"`
+	Dimensions *[]AbnormalEventDimensionValue `json:"dimensions,omitempty" xml:"dimensions"`
 
-	XRequestId     *string `json:"X-request-id,omitempty"`
+	XRequestId     *string `json:"X-request-id,omitempty" xml:"X-request-id"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -10,7 +10,7 @@ import (
 type DeleteMqsInstanceTopicResponse struct {
 
 	// Topic列表。
-	Topics         *[]DeleteMqsInstanceTopicRespTopics `json:"topics,omitempty"`
+	Topics         *[]DeleteMqsInstanceTopicRespTopics `json:"topics,omitempty" xml:"topics"`
 	HttpStatusCode int                                 `json:"-"`
 }
 

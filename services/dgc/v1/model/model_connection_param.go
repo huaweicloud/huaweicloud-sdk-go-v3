@@ -10,11 +10,11 @@ import (
 )
 
 type ConnectionParam struct {
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
-	ConnectionType *ConnectionParamConnectionType `json:"connectionType,omitempty"`
+	ConnectionType *ConnectionParamConnectionType `json:"connectionType,omitempty" xml:"connectionType"`
 
-	Params *interface{} `json:"params,omitempty"`
+	Params *interface{} `json:"params,omitempty" xml:"params"`
 }
 
 func (o ConnectionParam) String() string {

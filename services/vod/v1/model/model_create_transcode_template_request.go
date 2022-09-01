@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateTranscodeTemplateRequest struct {
-	Body *CreateTranscodeTemplate `json:"body,omitempty"`
+	Body *CreateTranscodeTemplate `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateTranscodeTemplateRequest) String() string {

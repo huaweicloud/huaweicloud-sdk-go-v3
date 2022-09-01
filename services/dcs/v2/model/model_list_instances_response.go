@@ -10,10 +10,10 @@ import (
 type ListInstancesResponse struct {
 
 	// 实例个数。
-	InstanceNum *int32 `json:"instance_num,omitempty"`
+	InstanceNum *int32 `json:"instance_num,omitempty" xml:"instance_num"`
 
 	// 实例的详情数组。
-	Instances      *[]InstanceListInfo `json:"instances,omitempty"`
+	Instances      *[]InstanceListInfo `json:"instances,omitempty" xml:"instances"`
 	HttpStatusCode int                 `json:"-"`
 }
 

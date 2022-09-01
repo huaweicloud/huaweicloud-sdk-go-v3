@@ -10,22 +10,22 @@ import (
 type SvcSpec struct {
 
 	// 虚拟服务IP地址
-	ClusterIp *string `json:"cluster_ip,omitempty"`
+	ClusterIp *string `json:"cluster_ip,omitempty" xml:"cluster_ip"`
 
 	// 外部IP列表 --- 暂不支持
-	ExternalIps *[]string `json:"external_ips,omitempty"`
+	ExternalIps *[]string `json:"external_ips,omitempty" xml:"external_ips"`
 
 	// 外部域名 --- 暂不支持
-	ExternalName *string `json:"external_name,omitempty"`
+	ExternalName *string `json:"external_name,omitempty" xml:"external_name"`
 
 	// 服务需要暴露的端口列表
-	Ports *[]SvcPort `json:"ports,omitempty"`
+	Ports *[]SvcPort `json:"ports,omitempty" xml:"ports"`
 
 	// 标签选择器，将选择具有指定Label标签的Pod作为管理范围
-	Selector map[string]string `json:"selector"`
+	Selector map[string]string `json:"selector" xml:"selector"`
 
 	// 服务的类型
-	Type *string `json:"type,omitempty"`
+	Type *string `json:"type,omitempty" xml:"type"`
 }
 
 func (o SvcSpec) String() string {

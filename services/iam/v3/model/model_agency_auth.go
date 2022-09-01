@@ -8,7 +8,7 @@ import (
 
 //
 type AgencyAuth struct {
-	Identity *AgencyAuthIdentity `json:"identity"`
+	Identity *AgencyAuthIdentity `json:"identity" xml:"identity"`
 }
 
 func (o AgencyAuth) String() string {

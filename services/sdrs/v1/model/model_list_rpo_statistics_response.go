@@ -10,10 +10,10 @@ import (
 type ListRpoStatisticsResponse struct {
 
 	// 资源的RPO超标趋势记录列表。
-	ResourceRpoStatistics *[]RpoStattisticsParams `json:"resource_rpo_statistics,omitempty"`
+	ResourceRpoStatistics *[]RpoStattisticsParams `json:"resource_rpo_statistics,omitempty" xml:"resource_rpo_statistics"`
 
 	// 列表中包含的资源的RPO超标趋势记录个数。
-	Count          *int32 `json:"count,omitempty"`
+	Count          *int32 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

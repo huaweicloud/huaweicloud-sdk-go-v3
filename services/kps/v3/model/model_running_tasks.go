@@ -13,22 +13,22 @@ import (
 type RunningTasks struct {
 
 	// 虚拟机ID
-	TaskId *string `json:"task_id,omitempty"`
+	TaskId *string `json:"task_id,omitempty" xml:"task_id"`
 
 	// 操作类型。 - FAILED_RESET 重置 - FAILED_REPLACE 替换 - FAILED_UNBIND 解绑
-	OperateType *RunningTasksOperateType `json:"operate_type,omitempty"`
+	OperateType *RunningTasksOperateType `json:"operate_type,omitempty" xml:"operate_type"`
 
 	// 任务时间
-	TaskTime *string `json:"task_time,omitempty"`
+	TaskTime *string `json:"task_time,omitempty" xml:"task_time"`
 
 	// 虚拟机名称
-	ServerName *string `json:"server_name,omitempty"`
+	ServerName *string `json:"server_name,omitempty" xml:"server_name"`
 
 	// 虚拟机ID
-	ServerId *string `json:"server_id,omitempty"`
+	ServerId *string `json:"server_id,omitempty" xml:"server_id"`
 
 	// 密钥对名称
-	KeypairName *string `json:"keypair_name,omitempty"`
+	KeypairName *string `json:"keypair_name,omitempty" xml:"keypair_name"`
 }
 
 func (o RunningTasks) String() string {

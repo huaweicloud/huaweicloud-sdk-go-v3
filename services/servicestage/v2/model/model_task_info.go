@@ -13,31 +13,31 @@ import (
 type TaskInfo struct {
 
 	// 创建时间。
-	CreatedAt *string `json:"CREATED_AT,omitempty"`
+	CreatedAt *string `json:"CREATED_AT,omitempty" xml:"CREATED_AT"`
 
 	// 健康检查时间。
-	LastHealthCheck *string `json:"LAST_HEALTH_CHECK,omitempty"`
+	LastHealthCheck *string `json:"LAST_HEALTH_CHECK,omitempty" xml:"LAST_HEALTH_CHECK"`
 
 	// 消息。
-	Messages *string `json:"MESSAGES,omitempty"`
+	Messages *string `json:"MESSAGES,omitempty" xml:"MESSAGES"`
 
 	// 创建用户ID。
-	OwnerId *string `json:"OWNER_ID,omitempty"`
+	OwnerId *string `json:"OWNER_ID,omitempty" xml:"OWNER_ID"`
 
 	// 任务ID。
-	TaskId *string `json:"TASK_ID,omitempty"`
+	TaskId *string `json:"TASK_ID,omitempty" xml:"TASK_ID"`
 
 	// 任务序号。
-	TaskIndex *int32 `json:"TASK_INDEX,omitempty"`
+	TaskIndex *int32 `json:"TASK_INDEX,omitempty" xml:"TASK_INDEX"`
 
 	// 任务名称。
-	TaskName *string `json:"TASK_NAME,omitempty"`
+	TaskName *string `json:"TASK_NAME,omitempty" xml:"TASK_NAME"`
 
 	// 任务状态。
-	TaskStatus *TaskInfoTaskStatus `json:"TASK_STATUS,omitempty"`
+	TaskStatus *TaskInfoTaskStatus `json:"TASK_STATUS,omitempty" xml:"TASK_STATUS"`
 
 	// 任务类型。
-	TaskType *string `json:"TASK_TYPE,omitempty"`
+	TaskType *string `json:"TASK_TYPE,omitempty" xml:"TASK_TYPE"`
 }
 
 func (o TaskInfo) String() string {

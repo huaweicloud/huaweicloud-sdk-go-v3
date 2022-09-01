@@ -9,10 +9,10 @@ import (
 type ResetRestartRequestBodyPhones struct {
 
 	// 云手机id
-	PhoneId string `json:"phone_id"`
+	PhoneId string `json:"phone_id" xml:"phone_id"`
 
 	// 云手机属性列表
-	Property *string `json:"property,omitempty"`
+	Property *string `json:"property,omitempty" xml:"property"`
 }
 
 func (o ResetRestartRequestBodyPhones) String() string {

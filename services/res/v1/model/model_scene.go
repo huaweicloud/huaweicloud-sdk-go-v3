@@ -10,34 +10,34 @@ import (
 type Scene struct {
 
 	// 类型。
-	Category string `json:"category"`
+	Category string `json:"category" xml:"category"`
 
 	// 场景类型。
-	Type string `json:"type"`
+	Type string `json:"type" xml:"type"`
 
 	// 场景名称。
-	SceneName string `json:"scene_name"`
+	SceneName string `json:"scene_name" xml:"scene_name"`
 
 	// 场景id。
-	SceneId string `json:"scene_id"`
+	SceneId string `json:"scene_id" xml:"scene_id"`
 
 	// 数据源id。
-	DatasourceId string `json:"datasource_id"`
+	DatasourceId string `json:"datasource_id" xml:"datasource_id"`
 
 	// 状态。
-	Status string `json:"status"`
+	Status string `json:"status" xml:"status"`
 
 	// 创建时间。
-	CreatedAt int64 `json:"created_at"`
+	CreatedAt int64 `json:"created_at" xml:"created_at"`
 
 	// 更新时间。
-	UpdateAt *int64 `json:"update_at,omitempty"`
+	UpdateAt *int64 `json:"update_at,omitempty" xml:"update_at"`
 
 	// 工作空间id。
-	WorkspaceId string `json:"workspace_id"`
+	WorkspaceId string `json:"workspace_id" xml:"workspace_id"`
 
 	// 服务类型。
-	ServiceType string `json:"service_type"`
+	ServiceType string `json:"service_type" xml:"service_type"`
 }
 
 func (o Scene) String() string {

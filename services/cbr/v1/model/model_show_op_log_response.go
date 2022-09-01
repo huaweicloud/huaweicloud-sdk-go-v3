@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowOpLogResponse struct {
-	OperationLog   *OperationLog `json:"operation_log,omitempty"`
+	OperationLog   *OperationLog `json:"operation_log,omitempty" xml:"operation_log"`
 	HttpStatusCode int           `json:"-"`
 }
 

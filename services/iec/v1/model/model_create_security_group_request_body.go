@@ -8,7 +8,7 @@ import (
 
 // 创建安全组请求体。
 type CreateSecurityGroupRequestBody struct {
-	SecurityGroup *CreateSecurityGroupOption `json:"security_group"`
+	SecurityGroup *CreateSecurityGroupOption `json:"security_group" xml:"security_group"`
 }
 
 func (o CreateSecurityGroupRequestBody) String() string {

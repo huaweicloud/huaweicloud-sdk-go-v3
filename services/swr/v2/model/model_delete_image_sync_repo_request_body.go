@@ -10,10 +10,10 @@ import (
 type DeleteImageSyncRepoRequestBody struct {
 
 	// 目标region ID。
-	RemoteRegionId string `json:"remoteRegionId"`
+	RemoteRegionId string `json:"remoteRegionId" xml:"remoteRegionId"`
 
 	// 目标组织
-	RemoteNamespace string `json:"remoteNamespace"`
+	RemoteNamespace string `json:"remoteNamespace" xml:"remoteNamespace"`
 }
 
 func (o DeleteImageSyncRepoRequestBody) String() string {

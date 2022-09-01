@@ -10,10 +10,10 @@ import (
 type StatisticValue struct {
 
 	// 统计方式。
-	Statistic *string `json:"statistic,omitempty"`
+	Statistic *string `json:"statistic,omitempty" xml:"statistic"`
 
 	// 统计结果。
-	Value *float64 `json:"value,omitempty"`
+	Value *float64 `json:"value,omitempty" xml:"value"`
 }
 
 func (o StatisticValue) String() string {

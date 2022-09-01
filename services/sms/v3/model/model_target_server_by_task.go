@@ -10,19 +10,19 @@ import (
 type TargetServerByTask struct {
 
 	// btrfs信息，数据从源端获取
-	BtrfsList *[]BtrfsFileSystem `json:"btrfs_list,omitempty"`
+	BtrfsList *[]BtrfsFileSystem `json:"btrfs_list,omitempty" xml:"btrfs_list"`
 
 	// 磁盘信息
-	Disks []TargetDisks `json:"disks"`
+	Disks []TargetDisks `json:"disks" xml:"disks"`
 
 	// 名称
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 虚拟机id
-	VmId string `json:"vm_id"`
+	VmId string `json:"vm_id" xml:"vm_id"`
 
 	// 卷组，数据从源端获取
-	VolumeGroups *[]VolumeGroups `json:"volume_groups,omitempty"`
+	VolumeGroups *[]VolumeGroups `json:"volume_groups,omitempty" xml:"volume_groups"`
 }
 
 func (o TargetServerByTask) String() string {

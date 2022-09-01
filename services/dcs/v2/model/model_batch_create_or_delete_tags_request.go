@@ -10,9 +10,9 @@ import (
 type BatchCreateOrDeleteTagsRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *CreateOrDeleteInstanceTags `json:"body,omitempty"`
+	Body *CreateOrDeleteInstanceTags `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchCreateOrDeleteTagsRequest) String() string {

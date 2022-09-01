@@ -13,16 +13,16 @@ import (
 type BandwidthInfoResp struct {
 
 	// 带宽名称
-	BandwidthName *string `json:"bandwidth_name,omitempty"`
+	BandwidthName *string `json:"bandwidth_name,omitempty" xml:"bandwidth_name"`
 
 	// 带宽大小
-	BandwidthNumber *int32 `json:"bandwidth_number,omitempty"`
+	BandwidthNumber *int32 `json:"bandwidth_number,omitempty" xml:"bandwidth_number"`
 
 	// 带宽类型
-	BandwidthType *BandwidthInfoRespBandwidthType `json:"bandwidth_type,omitempty"`
+	BandwidthType *BandwidthInfoRespBandwidthType `json:"bandwidth_type,omitempty" xml:"bandwidth_type"`
 
 	// 带宽id
-	BandwidthId *string `json:"bandwidth_id,omitempty"`
+	BandwidthId *string `json:"bandwidth_id,omitempty" xml:"bandwidth_id"`
 }
 
 func (o BandwidthInfoResp) String() string {

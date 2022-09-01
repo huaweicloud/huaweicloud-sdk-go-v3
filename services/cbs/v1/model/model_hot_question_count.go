@@ -10,13 +10,13 @@ import (
 type HotQuestionCount struct {
 
 	// 问答对ID。
-	QaPairId *string `json:"qa_pair_id,omitempty"`
+	QaPairId *string `json:"qa_pair_id,omitempty" xml:"qa_pair_id"`
 
 	// 标准问题。
-	StQuestion *string `json:"st_question,omitempty"`
+	StQuestion *string `json:"st_question,omitempty" xml:"st_question"`
 
 	// 标准问题所属领域。
-	Domain *string `json:"domain,omitempty"`
+	Domain *string `json:"domain,omitempty" xml:"domain"`
 }
 
 func (o HotQuestionCount) String() string {

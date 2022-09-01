@@ -10,16 +10,16 @@ import (
 type ListTopicAccessPolicyRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 主题名称。
-	Topic string `json:"topic"`
+	Topic string `json:"topic" xml:"topic"`
 
 	// 偏移量，表示从此偏移量开始查询， offset大于等于0。
-	Offset *string `json:"offset,omitempty"`
+	Offset *string `json:"offset,omitempty" xml:"offset"`
 
 	// 查询数量。
-	Limit *string `json:"limit,omitempty"`
+	Limit *string `json:"limit,omitempty" xml:"limit"`
 }
 
 func (o ListTopicAccessPolicyRequest) String() string {

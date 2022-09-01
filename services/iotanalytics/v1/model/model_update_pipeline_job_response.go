@@ -10,16 +10,16 @@ import (
 type UpdatePipelineJobResponse struct {
 
 	// 管道ID
-	PipelineId *string `json:"pipeline_id,omitempty"`
+	PipelineId *string `json:"pipeline_id,omitempty" xml:"pipeline_id"`
 
 	// 管道状态
-	PipelineState *string `json:"pipeline_state,omitempty"`
+	PipelineState *string `json:"pipeline_state,omitempty" xml:"pipeline_state"`
 
 	// 操作结果
-	Status *string `json:"status,omitempty"`
+	Status *string `json:"status,omitempty" xml:"status"`
 
 	// 管道错误详情
-	CheckInfo      map[string]interface{} `json:"check_info,omitempty"`
+	CheckInfo      map[string]interface{} `json:"check_info,omitempty" xml:"check_info"`
 	HttpStatusCode int                    `json:"-"`
 }
 

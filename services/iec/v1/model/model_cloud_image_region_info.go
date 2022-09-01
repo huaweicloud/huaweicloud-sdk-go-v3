@@ -10,10 +10,10 @@ import (
 type CloudImageRegionInfo struct {
 
 	// 区域ID
-	RegionId *string `json:"region_id,omitempty"`
+	RegionId *string `json:"region_id,omitempty" xml:"region_id"`
 
 	// 镜像ID
-	ImageId *string `json:"image_id,omitempty"`
+	ImageId *string `json:"image_id,omitempty" xml:"image_id"`
 }
 
 func (o CloudImageRegionInfo) String() string {

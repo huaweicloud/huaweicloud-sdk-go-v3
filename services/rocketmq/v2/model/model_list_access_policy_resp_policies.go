@@ -9,16 +9,16 @@ import (
 type ListAccessPolicyRespPolicies struct {
 
 	// 秘钥。
-	AccessKey *string `json:"access_key,omitempty"`
+	AccessKey *string `json:"access_key,omitempty" xml:"access_key"`
 
 	// IP白名单。
-	WhiteRemoteAddress *string `json:"white_remote_address,omitempty"`
+	WhiteRemoteAddress *string `json:"white_remote_address,omitempty" xml:"white_remote_address"`
 
 	// 是否为管理员。
-	Admin *bool `json:"admin,omitempty"`
+	Admin *bool `json:"admin,omitempty" xml:"admin"`
 
 	// 权限。
-	Perm *string `json:"perm,omitempty"`
+	Perm *string `json:"perm,omitempty" xml:"perm"`
 }
 
 func (o ListAccessPolicyRespPolicies) String() string {

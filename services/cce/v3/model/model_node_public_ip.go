@@ -10,12 +10,12 @@ import (
 type NodePublicIp struct {
 
 	// 已有的弹性IP的ID列表。数量不得大于待创建节点数 > 若已配置ids参数，则无需配置count和eip参数
-	Ids *[]string `json:"ids,omitempty"`
+	Ids *[]string `json:"ids,omitempty" xml:"ids"`
 
 	// 要动态创建的弹性IP个数。 > count参数与eip参数必须同时配置。
-	Count *int32 `json:"count,omitempty"`
+	Count *int32 `json:"count,omitempty" xml:"count"`
 
-	Eip *NodeEipSpec `json:"eip,omitempty"`
+	Eip *NodeEipSpec `json:"eip,omitempty" xml:"eip"`
 }
 
 func (o NodePublicIp) String() string {

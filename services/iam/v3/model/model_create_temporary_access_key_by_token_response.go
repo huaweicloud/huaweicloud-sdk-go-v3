@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type CreateTemporaryAccessKeyByTokenResponse struct {
-	Credential     *Credential `json:"credential,omitempty"`
+	Credential     *Credential `json:"credential,omitempty" xml:"credential"`
 	HttpStatusCode int         `json:"-"`
 }
 

@@ -8,7 +8,7 @@ import (
 
 // 创建保护实例请求体
 type CreateProtectedInstanceRequestBody struct {
-	ProtectedInstance *CreateProtectedInstanceRequestParams `json:"protected_instance"`
+	ProtectedInstance *CreateProtectedInstanceRequestParams `json:"protected_instance" xml:"protected_instance"`
 }
 
 func (o CreateProtectedInstanceRequestBody) String() string {

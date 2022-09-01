@@ -10,7 +10,7 @@ import (
 type ShowApplicationsResponse struct {
 
 	// 资源空间信息列表。
-	Applications   *[]ApplicationDto `json:"applications,omitempty"`
+	Applications   *[]ApplicationDto `json:"applications,omitempty" xml:"applications"`
 	HttpStatusCode int               `json:"-"`
 }
 

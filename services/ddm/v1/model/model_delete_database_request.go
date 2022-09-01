@@ -13,13 +13,13 @@ import (
 type DeleteDatabaseRequest struct {
 
 	// DDM实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 需要查询的逻辑库名称，不区分大小写。
-	DdmDbname string `json:"ddm_dbname"`
+	DdmDbname string `json:"ddm_dbname" xml:"ddm_dbname"`
 
 	// 是否同时删除关联后端数据库实例上存储的数据。 - 取值为“true”：删除。 - 取值为空或“false”：不删除。 默认值为空。
-	DeleteRdsData *DeleteDatabaseRequestDeleteRdsData `json:"delete_rds_data,omitempty"`
+	DeleteRdsData *DeleteDatabaseRequestDeleteRdsData `json:"delete_rds_data,omitempty" xml:"delete_rds_data"`
 }
 
 func (o DeleteDatabaseRequest) String() string {

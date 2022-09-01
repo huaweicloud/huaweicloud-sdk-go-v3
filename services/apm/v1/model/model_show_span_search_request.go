@@ -10,9 +10,9 @@ import (
 type ShowSpanSearchRequest struct {
 
 	// 应用id
-	XBusinessId int64 `json:"x-business-id"`
+	XBusinessId int64 `json:"x-business-id" xml:"x-business-id"`
 
-	Body *TraceSearchParam `json:"body,omitempty"`
+	Body *TraceSearchParam `json:"body,omitempty" xml:"body"`
 }
 
 func (o ShowSpanSearchRequest) String() string {

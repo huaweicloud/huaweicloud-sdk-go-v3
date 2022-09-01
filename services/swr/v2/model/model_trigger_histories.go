@@ -9,43 +9,43 @@ import (
 type TriggerHistories struct {
 
 	// 触发动作，update
-	Action string `json:"action"`
+	Action string `json:"action" xml:"action"`
 
 	// 应用类型，deployments、statefulsets
-	AppType string `json:"app_type"`
+	AppType string `json:"app_type" xml:"app_type"`
 
 	// 应用名
-	Application string `json:"application"`
+	Application string `json:"application" xml:"application"`
 
 	// 集群ID（cci时为空）
-	ClusterId string `json:"cluster_id"`
+	ClusterId string `json:"cluster_id" xml:"cluster_id"`
 
 	// 集群名（cci时为空）
-	ClusterName string `json:"cluster_name"`
+	ClusterName string `json:"cluster_name" xml:"cluster_name"`
 
 	// 应用名所在的namespace
-	ClusterNs string `json:"cluster_ns"`
+	ClusterNs string `json:"cluster_ns" xml:"cluster_ns"`
 
 	// 触发条件，type为all时为.*,type为tag时为tag名,type为regular时为正则表达式
-	Condition string `json:"condition"`
+	Condition string `json:"condition" xml:"condition"`
 
 	// 需更新的container名，默认为所有container
-	Container string `json:"container"`
+	Container string `json:"container" xml:"container"`
 
 	// 创建时间
-	CreatedAt string `json:"created_at"`
+	CreatedAt string `json:"created_at" xml:"created_at"`
 
 	// 创建人
-	CreatorName string `json:"creator_name"`
+	CreatorName string `json:"creator_name" xml:"creator_name"`
 
 	// 详情
-	Detail string `json:"detail"`
+	Detail string `json:"detail" xml:"detail"`
 
 	// 更新结果，success、failed
-	Result string `json:"result"`
+	Result string `json:"result" xml:"result"`
 
 	// 触发的版本号
-	Tag string `json:"tag"`
+	Tag string `json:"tag" xml:"tag"`
 }
 
 func (o TriggerHistories) String() string {

@@ -10,9 +10,9 @@ import (
 type CreateRecordSetWithLineRequest struct {
 
 	// 所属zone的ID。
-	ZoneId string `json:"zone_id"`
+	ZoneId string `json:"zone_id" xml:"zone_id"`
 
-	Body *CreateRecordSetWithLineReq `json:"body,omitempty"`
+	Body *CreateRecordSetWithLineReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateRecordSetWithLineRequest) String() string {

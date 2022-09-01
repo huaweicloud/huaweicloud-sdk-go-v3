@@ -10,9 +10,9 @@ import (
 type ListEngineSupportFeaturesEntity struct {
 
 	// 功能名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
-	Properties *ListEngineSupportFeaturesPropertiesEntity `json:"properties,omitempty"`
+	Properties *ListEngineSupportFeaturesPropertiesEntity `json:"properties,omitempty" xml:"properties"`
 }
 
 func (o ListEngineSupportFeaturesEntity) String() string {

@@ -10,9 +10,9 @@ import (
 type UpdateHotkeyAutoScanConfigRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *AutoscanConfigRequest `json:"body,omitempty"`
+	Body *AutoscanConfigRequest `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateHotkeyAutoScanConfigRequest) String() string {

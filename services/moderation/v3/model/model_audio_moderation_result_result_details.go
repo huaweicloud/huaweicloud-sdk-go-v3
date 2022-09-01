@@ -12,22 +12,22 @@ import (
 type AudioModerationResultResultDetails struct {
 
 	// 音频片段开始时间
-	StartTime *int32 `json:"start_time,omitempty"`
+	StartTime *int32 `json:"start_time,omitempty" xml:"start_time"`
 
 	// 音频片段审核处理建议： block：包含敏感信息，不通过 review：需要人工复检
-	Suggestion *AudioModerationResultResultDetailsSuggestion `json:"suggestion,omitempty"`
+	Suggestion *AudioModerationResultResultDetailsSuggestion `json:"suggestion,omitempty" xml:"suggestion"`
 
 	// 音频片段结束时间
-	EndTime *int32 `json:"end_time,omitempty"`
+	EndTime *int32 `json:"end_time,omitempty" xml:"end_time"`
 
 	// 音频片段标签
-	Label *string `json:"label,omitempty"`
+	Label *string `json:"label,omitempty" xml:"label"`
 
 	// 音频片段文本内容
-	AudioText *string `json:"audio_text,omitempty"`
+	AudioText *string `json:"audio_text,omitempty" xml:"audio_text"`
 
 	// 命中的风险片段信息列表，如果命中语义算法模型，则该字段不会存在
-	Segments *[]AudioModerationResultResultSegments `json:"segments,omitempty"`
+	Segments *[]AudioModerationResultResultSegments `json:"segments,omitempty" xml:"segments"`
 }
 
 func (o AudioModerationResultResultDetails) String() string {

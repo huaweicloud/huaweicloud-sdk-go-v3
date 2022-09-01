@@ -9,10 +9,10 @@ import (
 type ImStatusV2 struct {
 
 	// 状态
-	Status *int32 `json:"status,omitempty"`
+	Status *int32 `json:"status,omitempty" xml:"status"`
 
 	// 工单id
-	IncidentId *string `json:"incident_id,omitempty"`
+	IncidentId *string `json:"incident_id,omitempty" xml:"incident_id"`
 }
 
 func (o ImStatusV2) String() string {

@@ -10,16 +10,16 @@ import (
 type ListAlarmRuleResourcesRequest struct {
 
 	// 发送的实体的MIME类型。默认使用application/json; charset=UTF-8。
-	ContentType string `json:"Content-Type"`
+	ContentType string `json:"Content-Type" xml:"Content-Type"`
 
 	// Alarm实例ID
-	AlarmId string `json:"alarm_id"`
+	AlarmId string `json:"alarm_id" xml:"alarm_id"`
 
 	// 分页偏移量
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 分页大小
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 }
 
 func (o ListAlarmRuleResourcesRequest) String() string {

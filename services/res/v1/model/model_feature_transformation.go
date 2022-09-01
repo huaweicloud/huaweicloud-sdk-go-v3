@@ -8,13 +8,13 @@ import (
 
 //
 type FeatureTransformation struct {
-	Attr *Attribute `json:"attr,omitempty"`
+	Attr *Attribute `json:"attr,omitempty" xml:"attr"`
 
 	// 离散方法： - equal_distance_discrete，等距离散 - user_define_discrete，自定义离散 - normalize，归一化 - null，不离散
-	DiscreteMethod *string `json:"discrete_method,omitempty"`
+	DiscreteMethod *string `json:"discrete_method,omitempty" xml:"discrete_method"`
 
 	// 具体处理参数。
-	Params *interface{} `json:"params,omitempty"`
+	Params *interface{} `json:"params,omitempty" xml:"params"`
 }
 
 func (o FeatureTransformation) String() string {

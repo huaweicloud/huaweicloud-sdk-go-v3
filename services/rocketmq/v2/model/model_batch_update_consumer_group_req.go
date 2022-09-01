@@ -9,7 +9,7 @@ import (
 type BatchUpdateConsumerGroupReq struct {
 
 	// 消费组列表，当批量删除消费组时使用。
-	Groups *[]ConsumerGroup `json:"groups,omitempty"`
+	Groups *[]ConsumerGroup `json:"groups,omitempty" xml:"groups"`
 }
 
 func (o BatchUpdateConsumerGroupReq) String() string {

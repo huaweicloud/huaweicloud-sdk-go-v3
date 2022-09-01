@@ -10,10 +10,10 @@ import (
 type ListReplicationsResponse struct {
 
 	// 复制对列表。
-	Replications *[]ShowReplicationParams `json:"replications,omitempty"`
+	Replications *[]ShowReplicationParams `json:"replications,omitempty" xml:"replications"`
 
 	// 列表中包含的复制对个数。
-	Count          *int32 `json:"count,omitempty"`
+	Count          *int32 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

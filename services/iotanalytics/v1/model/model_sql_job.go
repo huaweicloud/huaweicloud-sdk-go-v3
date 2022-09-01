@@ -10,7 +10,7 @@ import (
 type SqlJob struct {
 
 	// 作业的SQL。
-	Sql string `json:"sql"`
+	Sql string `json:"sql" xml:"sql"`
 }
 
 func (o SqlJob) String() string {

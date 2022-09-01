@@ -9,19 +9,19 @@ import (
 type UpdateRecordSetReq struct {
 
 	// 域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 可选配置，对域名的描述。
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// Record Set的类型。
-	Type string `json:"type"`
+	Type string `json:"type" xml:"type"`
 
 	// 解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
-	Ttl *int32 `json:"ttl,omitempty"`
+	Ttl *int32 `json:"ttl,omitempty" xml:"ttl"`
 
 	// 解析记录的值。不同类型解析记录对应的值的规则不同。
-	Records *[]string `json:"records,omitempty"`
+	Records *[]string `json:"records,omitempty" xml:"records"`
 }
 
 func (o UpdateRecordSetReq) String() string {

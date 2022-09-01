@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateDisasterRecoveryDrillRequest struct {
-	Body *CreateDisasterRecoveryDrillRequestBody `json:"body,omitempty"`
+	Body *CreateDisasterRecoveryDrillRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateDisasterRecoveryDrillRequest) String() string {

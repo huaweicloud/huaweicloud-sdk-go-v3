@@ -13,7 +13,7 @@ import (
 type ListRegionsRequest struct {
 
 	// 选择接口返回的信息的语言，默认为\"zh-cn\"中文
-	XLanguage *ListRegionsRequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *ListRegionsRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 }
 
 func (o ListRegionsRequest) String() string {

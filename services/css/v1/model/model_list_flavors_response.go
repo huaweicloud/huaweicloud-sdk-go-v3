@@ -10,7 +10,7 @@ import (
 type ListFlavorsResponse struct {
 
 	// 引擎版本列表。
-	Versions       *[]EsflavorsVersionsResp `json:"versions,omitempty"`
+	Versions       *[]EsflavorsVersionsResp `json:"versions,omitempty" xml:"versions"`
 	HttpStatusCode int                      `json:"-"`
 }
 

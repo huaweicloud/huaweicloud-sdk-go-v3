@@ -9,10 +9,10 @@ import (
 type RoutetableInfoErrorDetial struct {
 
 	// 路由表ID。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 详细错误信息。
-	ErrorMessage *string `json:"error_message,omitempty"`
+	ErrorMessage *string `json:"error_message,omitempty" xml:"error_message"`
 }
 
 func (o RoutetableInfoErrorDetial) String() string {

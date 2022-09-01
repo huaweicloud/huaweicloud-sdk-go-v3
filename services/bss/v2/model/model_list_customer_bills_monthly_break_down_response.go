@@ -10,13 +10,13 @@ import (
 type ListCustomerBillsMonthlyBreakDownResponse struct {
 
 	// 货币单位代码： CNY：人民币
-	Currency *string `json:"currency,omitempty"`
+	Currency *string `json:"currency,omitempty" xml:"currency"`
 
 	// 结果集数量，只有成功才返回这个参数。
-	TotalCount *int32 `json:"total_count,omitempty"`
+	TotalCount *int32 `json:"total_count,omitempty" xml:"total_count"`
 
 	// 分摊成本记录数据。 具体请参见表3。
-	Details        *[]NvlCostAnalysedBillDetail `json:"details,omitempty"`
+	Details        *[]NvlCostAnalysedBillDetail `json:"details,omitempty" xml:"details"`
 	HttpStatusCode int                          `json:"-"`
 }
 

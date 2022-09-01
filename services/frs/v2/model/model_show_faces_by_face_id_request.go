@@ -10,10 +10,10 @@ import (
 type ShowFacesByFaceIdRequest struct {
 
 	// 人脸库名称。
-	FaceSetName string `json:"face_set_name"`
+	FaceSetName string `json:"face_set_name" xml:"face_set_name"`
 
 	// 人脸ID。
-	FaceId string `json:"face_id"`
+	FaceId string `json:"face_id" xml:"face_id"`
 }
 
 func (o ShowFacesByFaceIdRequest) String() string {

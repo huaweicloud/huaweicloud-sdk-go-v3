@@ -10,10 +10,10 @@ import (
 type ShowKmsTagsRequest struct {
 
 	// API版本号
-	VersionId string `json:"version_id"`
+	VersionId string `json:"version_id" xml:"version_id"`
 
 	// 密钥ID
-	KeyId string `json:"key_id"`
+	KeyId string `json:"key_id" xml:"key_id"`
 }
 
 func (o ShowKmsTagsRequest) String() string {

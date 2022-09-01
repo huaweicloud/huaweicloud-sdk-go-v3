@@ -8,7 +8,7 @@ import (
 
 // 数据库参数信息响应体
 type QueryDbParamsResp struct {
-	Params *[]Params `json:"params,omitempty"`
+	Params *[]Params `json:"params,omitempty" xml:"params"`
 }
 
 func (o QueryDbParamsResp) String() string {

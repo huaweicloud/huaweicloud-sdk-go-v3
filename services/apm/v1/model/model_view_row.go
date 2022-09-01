@@ -9,10 +9,10 @@ import (
 type ViewRow struct {
 
 	// 视图行，包含多个视图，展示的时候根据实际的长度适配
-	ViewList *[]ViewBase `json:"view_list,omitempty"`
+	ViewList *[]ViewBase `json:"view_list,omitempty" xml:"view_list"`
 
 	// 标题
-	Title *string `json:"title,omitempty"`
+	Title *string `json:"title,omitempty" xml:"title"`
 }
 
 func (o ViewRow) String() string {

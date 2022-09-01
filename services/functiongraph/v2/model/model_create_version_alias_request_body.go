@@ -10,16 +10,16 @@ import (
 type CreateVersionAliasRequestBody struct {
 
 	// 要获取的别名名称。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 别名对应的版本名称。
-	Version string `json:"version"`
+	Version string `json:"version" xml:"version"`
 
 	// 别名描述信息。
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 灰度版本信息
-	AdditionalVersionWeights map[string]int32 `json:"additional_version_weights,omitempty"`
+	AdditionalVersionWeights map[string]int32 `json:"additional_version_weights,omitempty" xml:"additional_version_weights"`
 }
 
 func (o CreateVersionAliasRequestBody) String() string {

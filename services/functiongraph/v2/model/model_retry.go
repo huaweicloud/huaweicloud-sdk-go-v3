@@ -10,13 +10,13 @@ import (
 type Retry struct {
 
 	// 重试策略名称，在单个流程中，名称需要唯一
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 重试间隔，单位：秒。若不传，默认为1
-	Delay *int64 `json:"delay,omitempty"`
+	Delay *int64 `json:"delay,omitempty" xml:"delay"`
 
 	// 最大重试次数，。若不传，默认为3
-	MaxAttempts *int64 `json:"max_attempts,omitempty"`
+	MaxAttempts *int64 `json:"max_attempts,omitempty" xml:"max_attempts"`
 }
 
 func (o Retry) String() string {

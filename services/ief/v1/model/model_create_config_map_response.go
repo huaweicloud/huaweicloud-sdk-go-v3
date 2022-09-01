@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type CreateConfigMapResponse struct {
-	Configmap      *ConfigMapResp `json:"configmap,omitempty"`
+	Configmap      *ConfigMapResp `json:"configmap,omitempty" xml:"configmap"`
 	HttpStatusCode int            `json:"-"`
 }
 

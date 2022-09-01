@@ -10,13 +10,13 @@ import (
 type AnalysisRequest struct {
 
 	// 分析任务名，必须是模型中已存在的
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
-	Transform *DtTransformRequest `json:"transform,omitempty"`
+	Transform *DtTransformRequest `json:"transform,omitempty" xml:"transform"`
 
-	Aggregate *DtAggregateRequest `json:"aggregate,omitempty"`
+	Aggregate *DtAggregateRequest `json:"aggregate,omitempty" xml:"aggregate"`
 
-	Stream *DtStreamRequest `json:"stream,omitempty"`
+	Stream *DtStreamRequest `json:"stream,omitempty" xml:"stream"`
 }
 
 func (o AnalysisRequest) String() string {

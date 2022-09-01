@@ -10,12 +10,12 @@ import (
 type CreateGatewayResponseV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 分组的编号
-	GroupId string `json:"group_id"`
+	GroupId string `json:"group_id" xml:"group_id"`
 
-	Body *ResponsesCreate `json:"body,omitempty"`
+	Body *ResponsesCreate `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateGatewayResponseV2Request) String() string {

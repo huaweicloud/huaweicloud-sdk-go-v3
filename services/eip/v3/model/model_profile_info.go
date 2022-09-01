@@ -13,33 +13,33 @@ import (
 type ProfileInfo struct {
 
 	// 公网IP附属的5_xxx网络（如5_bgp）中的port_id
-	LocalNetworkPort *string `json:"local_network_port,omitempty"`
+	LocalNetworkPort *string `json:"local_network_port,omitempty" xml:"local_network_port"`
 
 	// 标识公网IP是否是和虚机一起创建的。true-独立创建；false-和虚机一起创建
-	Standalone *bool `json:"standalone,omitempty"`
+	Standalone *bool `json:"standalone,omitempty" xml:"standalone"`
 
 	// 云服务标识公网IP创建进度, EIP服务内部使用。
-	NotifyStatus *ProfileInfoNotifyStatus `json:"notify_status,omitempty"`
+	NotifyStatus *ProfileInfoNotifyStatus `json:"notify_status,omitempty" xml:"notify_status"`
 
 	// 公网IP创建时间
-	CreateTime *string `json:"create_time,omitempty"`
+	CreateTime *string `json:"create_time,omitempty" xml:"create_time"`
 
 	// 该字段仅仅用于表示eip的bgp类型是否是真实的静态sbgp * 1. 如果为true，则该eip可以切换bgp类型 * 2. 如果为false，则该eip不可以切换bgp类型
-	FakeNetworkType *bool `json:"fake_network_type,omitempty"`
+	FakeNetworkType *bool `json:"fake_network_type,omitempty" xml:"fake_network_type"`
 
 	// 标识IP是和哪类资源一起购买的
-	CreateSource *ProfileInfoCreateSource `json:"create_source,omitempty"`
+	CreateSource *ProfileInfoCreateSource `json:"create_source,omitempty" xml:"create_source"`
 
 	// 标识和公网IP一起购买的ecs的id
-	EcsId *string `json:"ecs_id,omitempty"`
+	EcsId *string `json:"ecs_id,omitempty" xml:"ecs_id"`
 
 	// 公网IP加锁状态, eg:\"POLICE,LOCKED\"。POLICE-公安冻结；LOCKED-普通冻结；普通冻结细分状态：ARREAR-欠费；DELABLE-可删除；
-	LockStatus *string `json:"lock_status,omitempty"`
+	LockStatus *string `json:"lock_status,omitempty" xml:"lock_status"`
 
 	// 公网IP冻结状态。
-	FreezedStatus *ProfileInfoFreezedStatus `json:"freezed_status,omitempty"`
+	FreezedStatus *ProfileInfoFreezedStatus `json:"freezed_status,omitempty" xml:"freezed_status"`
 
-	BandwithInfo *BandwidthInfoResp `json:"bandwith_info,omitempty"`
+	BandwithInfo *BandwidthInfoResp `json:"bandwith_info,omitempty" xml:"bandwith_info"`
 }
 
 func (o ProfileInfo) String() string {

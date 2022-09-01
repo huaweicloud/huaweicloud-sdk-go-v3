@@ -13,46 +13,46 @@ import (
 type Subnet struct {
 
 	// 子网的ID。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 子网名称  取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 子网的网段  取值范围：必须在vpc对应cidr范围内  约束：必须是cidr格式。掩码长度不能大于28
-	Cidr *string `json:"cidr,omitempty"`
+	Cidr *string `json:"cidr,omitempty" xml:"cidr"`
 
 	// 子网dns服务器地址列表
-	DnsList *[]string `json:"dnsList,omitempty"`
+	DnsList *[]string `json:"dnsList,omitempty" xml:"dnsList"`
 
 	// 子网的网关  取值范围：子网网段中的IP地址  约束：必须是ip格式
-	GatewayIp *string `json:"gateway_ip,omitempty"`
+	GatewayIp *string `json:"gateway_ip,omitempty" xml:"gateway_ip"`
 
 	// 子网是否开启dhcp功能
-	DhcpEnable *bool `json:"dhcp_enable,omitempty"`
+	DhcpEnable *bool `json:"dhcp_enable,omitempty" xml:"dhcp_enable"`
 
 	// 子网dns服务器地址1
-	PrimaryDns *string `json:"primary_dns,omitempty"`
+	PrimaryDns *string `json:"primary_dns,omitempty" xml:"primary_dns"`
 
 	// 子网dns服务器地址2
-	SecondaryDns *string `json:"secondary_dns,omitempty"`
+	SecondaryDns *string `json:"secondary_dns,omitempty" xml:"secondary_dns"`
 
 	// 子网的状态  取值范围： - ACTIVE：表示子网已挂载到ROUTER上 - UNKNOWN：表示子网还未挂载到ROUTER上 - ERROR：表示子网状态故障
-	Status *SubnetStatus `json:"status,omitempty"`
+	Status *SubnetStatus `json:"status,omitempty" xml:"status"`
 
 	// 虚拟私有云ID。
-	VpcId *string `json:"vpc_id,omitempty"`
+	VpcId *string `json:"vpc_id,omitempty" xml:"vpc_id"`
 
 	// 子网所属的站点ID。
-	SiteId *string `json:"site_id,omitempty"`
+	SiteId *string `json:"site_id,omitempty" xml:"site_id"`
 
 	// 子网所属的站点信息。
-	SiteInfo *string `json:"site_info,omitempty"`
+	SiteInfo *string `json:"site_info,omitempty" xml:"site_info"`
 
 	// 对应网络（OpenStack Neutron接口） id。
-	NeutronNetworkId *string `json:"neutron_network_id,omitempty"`
+	NeutronNetworkId *string `json:"neutron_network_id,omitempty" xml:"neutron_network_id"`
 
 	// 对应子网（OpenStack Neutron接口） id。
-	NeutronSubnetId *string `json:"neutron_subnet_id,omitempty"`
+	NeutronSubnetId *string `json:"neutron_subnet_id,omitempty" xml:"neutron_subnet_id"`
 }
 
 func (o Subnet) String() string {

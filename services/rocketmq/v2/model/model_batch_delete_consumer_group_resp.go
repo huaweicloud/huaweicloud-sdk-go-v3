@@ -9,7 +9,7 @@ import (
 type BatchDeleteConsumerGroupResp struct {
 
 	// 删除消费组的任务ID
-	JobId *string `json:"job_id,omitempty"`
+	JobId *string `json:"job_id,omitempty" xml:"job_id"`
 }
 
 func (o BatchDeleteConsumerGroupResp) String() string {

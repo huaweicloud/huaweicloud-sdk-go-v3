@@ -13,10 +13,10 @@ import (
 type ListEngineProductsRequest struct {
 
 	// 消息引擎的类型。
-	Engine ListEngineProductsRequestEngine `json:"engine"`
+	Engine ListEngineProductsRequestEngine `json:"engine" xml:"engine"`
 
 	// 产品ID。
-	ProductId *string `json:"product_id,omitempty"`
+	ProductId *string `json:"product_id,omitempty" xml:"product_id"`
 }
 
 func (o ListEngineProductsRequest) String() string {

@@ -8,7 +8,7 @@ import (
 
 // 更新云连接实例的请求体。
 type UpdateCloudConnectionRequestBody struct {
-	CloudConnection *UpdateCloudConnection `json:"cloud_connection"`
+	CloudConnection *UpdateCloudConnection `json:"cloud_connection" xml:"cloud_connection"`
 }
 
 func (o UpdateCloudConnectionRequestBody) String() string {

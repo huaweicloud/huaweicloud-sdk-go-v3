@@ -9,13 +9,13 @@ import (
 type SendVerifyCodeReq struct {
 
 	// 联系方式的值
-	ContactValue string `json:"contact_value"`
+	ContactValue string `json:"contact_value" xml:"contact_value"`
 
 	// 联系方式的类型。0：短信；1：邮件
-	ContactWay int32 `json:"contact_way"`
+	ContactWay int32 `json:"contact_way" xml:"contact_way"`
 
 	// 国家码
-	AreaCode string `json:"area_code"`
+	AreaCode string `json:"area_code" xml:"area_code"`
 }
 
 func (o SendVerifyCodeReq) String() string {

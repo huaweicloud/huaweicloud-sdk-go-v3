@@ -10,7 +10,7 @@ import (
 type StopPublicWhitelistRequest struct {
 
 	// 指定关闭公网访问控制白名单集群ID。
-	ClusterId string `json:"cluster_id"`
+	ClusterId string `json:"cluster_id" xml:"cluster_id"`
 }
 
 func (o StopPublicWhitelistRequest) String() string {

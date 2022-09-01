@@ -12,100 +12,100 @@ import (
 type ScalingGroups struct {
 
 	// 伸缩组名称。
-	ScalingGroupName *string `json:"scaling_group_name,omitempty"`
+	ScalingGroupName *string `json:"scaling_group_name,omitempty" xml:"scaling_group_name"`
 
 	// 伸缩组ID。
-	ScalingGroupId *string `json:"scaling_group_id,omitempty"`
+	ScalingGroupId *string `json:"scaling_group_id,omitempty" xml:"scaling_group_id"`
 
 	// 伸缩组状态。
-	ScalingGroupStatus *ScalingGroupsScalingGroupStatus `json:"scaling_group_status,omitempty"`
+	ScalingGroupStatus *ScalingGroupsScalingGroupStatus `json:"scaling_group_status,omitempty" xml:"scaling_group_status"`
 
 	// 伸缩配置ID。
-	ScalingConfigurationId *string `json:"scaling_configuration_id,omitempty"`
+	ScalingConfigurationId *string `json:"scaling_configuration_id,omitempty" xml:"scaling_configuration_id"`
 
 	// 伸缩配置名称。
-	ScalingConfigurationName *string `json:"scaling_configuration_name,omitempty"`
+	ScalingConfigurationName *string `json:"scaling_configuration_name,omitempty" xml:"scaling_configuration_name"`
 
 	// 伸缩组中当前实例数。
-	CurrentInstanceNumber *int32 `json:"current_instance_number,omitempty"`
+	CurrentInstanceNumber *int32 `json:"current_instance_number,omitempty" xml:"current_instance_number"`
 
 	// 伸缩组期望实例数。
-	DesireInstanceNumber *int32 `json:"desire_instance_number,omitempty"`
+	DesireInstanceNumber *int32 `json:"desire_instance_number,omitempty" xml:"desire_instance_number"`
 
 	// 伸缩组最小实例数。
-	MinInstanceNumber *int32 `json:"min_instance_number,omitempty"`
+	MinInstanceNumber *int32 `json:"min_instance_number,omitempty" xml:"min_instance_number"`
 
 	// 伸缩组最大实例数
-	MaxInstanceNumber *int32 `json:"max_instance_number,omitempty"`
+	MaxInstanceNumber *int32 `json:"max_instance_number,omitempty" xml:"max_instance_number"`
 
 	// 冷却时间，单位是秒。
-	CoolDownTime *int32 `json:"cool_down_time,omitempty"`
+	CoolDownTime *int32 `json:"cool_down_time,omitempty" xml:"cool_down_time"`
 
 	// 经典型负载均衡监听器ID，多个负载均衡监听器ID以逗号分隔。
-	LbListenerId *string `json:"lb_listener_id,omitempty"`
+	LbListenerId *string `json:"lb_listener_id,omitempty" xml:"lb_listener_id"`
 
 	// 增强型负载均衡器信息，该参数为预留字段。
-	LbaasListeners *[]LbaasListenersResult `json:"lbaas_listeners,omitempty"`
+	LbaasListeners *[]LbaasListenersResult `json:"lbaas_listeners,omitempty" xml:"lbaas_listeners"`
 
 	// 可用分区信息
-	AvailableZones *[]string `json:"available_zones,omitempty"`
+	AvailableZones *[]string `json:"available_zones,omitempty" xml:"available_zones"`
 
 	// 网络信息
-	Networks *[]NetworksResult `json:"networks,omitempty"`
+	Networks *[]NetworksResult `json:"networks,omitempty" xml:"networks"`
 
 	// 安全组信息
-	SecurityGroups *[]SecurityGroupsResult `json:"security_groups,omitempty"`
+	SecurityGroups *[]SecurityGroupsResult `json:"security_groups,omitempty" xml:"security_groups"`
 
 	// 创建伸缩组时间，遵循UTC时间。
-	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
+	CreateTime *sdktime.SdkTime `json:"create_time,omitempty" xml:"create_time"`
 
 	// 伸缩组所在的VPC ID。
-	VpcId *string `json:"vpc_id,omitempty"`
+	VpcId *string `json:"vpc_id,omitempty" xml:"vpc_id"`
 
 	// 伸缩组详情。
-	Detail *string `json:"detail,omitempty"`
+	Detail *string `json:"detail,omitempty" xml:"detail"`
 
 	// 伸缩组伸缩标志。
-	IsScaling *bool `json:"is_scaling,omitempty"`
+	IsScaling *bool `json:"is_scaling,omitempty" xml:"is_scaling"`
 
 	// 健康检查方式。
-	HealthPeriodicAuditMethod *ScalingGroupsHealthPeriodicAuditMethod `json:"health_periodic_audit_method,omitempty"`
+	HealthPeriodicAuditMethod *ScalingGroupsHealthPeriodicAuditMethod `json:"health_periodic_audit_method,omitempty" xml:"health_periodic_audit_method"`
 
 	// 健康检查的间隔时间。
-	HealthPeriodicAuditTime *int32 `json:"health_periodic_audit_time,omitempty"`
+	HealthPeriodicAuditTime *int32 `json:"health_periodic_audit_time,omitempty" xml:"health_periodic_audit_time"`
 
 	// 健康状况检查宽限期。
-	HealthPeriodicAuditGracePeriod *int32 `json:"health_periodic_audit_grace_period,omitempty"`
+	HealthPeriodicAuditGracePeriod *int32 `json:"health_periodic_audit_grace_period,omitempty" xml:"health_periodic_audit_grace_period"`
 
 	// 移除策略。
-	InstanceTerminatePolicy *ScalingGroupsInstanceTerminatePolicy `json:"instance_terminate_policy,omitempty"`
+	InstanceTerminatePolicy *ScalingGroupsInstanceTerminatePolicy `json:"instance_terminate_policy,omitempty" xml:"instance_terminate_policy"`
 
 	// 通知方式：  EMAIL为发送邮件通知。  该通知方式已经被废除，建议给弹性伸缩组配置通知功能。请参考[通知](https://support.huaweicloud.com/api-as/as_06_0800.html)。
-	Notifications *[]string `json:"notifications,omitempty"`
+	Notifications *[]string `json:"notifications,omitempty" xml:"notifications"`
 
 	// 删除云服务器是否删除云服务器绑定的弹性IP。
-	DeletePublicip *bool `json:"delete_publicip,omitempty"`
+	DeletePublicip *bool `json:"delete_publicip,omitempty" xml:"delete_publicip"`
 
 	// 删除云服务器是否删除云服务器绑定的数据盘
-	DeleteVolume *bool `json:"delete_volume,omitempty"`
+	DeleteVolume *bool `json:"delete_volume,omitempty" xml:"delete_volume"`
 
 	// 该参数为预留字段
-	CloudLocationId *string `json:"cloud_location_id,omitempty"`
+	CloudLocationId *string `json:"cloud_location_id,omitempty" xml:"cloud_location_id"`
 
 	// 企业项目ID
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
 
 	// 伸缩组活动类型
-	ActivityType *string `json:"activity_type,omitempty"`
+	ActivityType *string `json:"activity_type,omitempty" xml:"activity_type"`
 
 	// 伸缩组扩缩容时目标AZ选择的优先级策略
-	MultiAzPriorityPolicy *string `json:"multi_az_priority_policy,omitempty"`
+	MultiAzPriorityPolicy *string `json:"multi_az_priority_policy,omitempty" xml:"multi_az_priority_policy"`
 
 	// 委托的名称委托是由租户管理员在统一身份认证服务（Identity and Access Management，IAM）上创建的，可以为弹性云服务器提供访问云服务的临时凭证。
-	IamAgencyName *string `json:"iam_agency_name,omitempty"`
+	IamAgencyName *string `json:"iam_agency_name,omitempty" xml:"iam_agency_name"`
 
 	// 伸缩组描述信息
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 }
 
 func (o ScalingGroups) String() string {

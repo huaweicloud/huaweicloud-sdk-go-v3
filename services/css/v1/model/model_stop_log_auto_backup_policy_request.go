@@ -10,7 +10,7 @@ import (
 type StopLogAutoBackupPolicyRequest struct {
 
 	// 指定关闭日志自动备份的集群ID。
-	ClusterId string `json:"cluster_id"`
+	ClusterId string `json:"cluster_id" xml:"cluster_id"`
 }
 
 func (o StopLogAutoBackupPolicyRequest) String() string {

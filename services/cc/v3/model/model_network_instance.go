@@ -12,46 +12,46 @@ import (
 type NetworkInstance struct {
 
 	// 网络实例的ID。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 网络实例的名字。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 网络实例的描述。
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 帐号ID。
-	DomainId *string `json:"domain_id,omitempty"`
+	DomainId *string `json:"domain_id,omitempty" xml:"domain_id"`
 
 	// 网络实例的状态。 - ACTIVE：处理成功。 - PENDING：处理中。 - ERROR：处理失败。
-	Status *NetworkInstanceStatus `json:"status,omitempty"`
+	Status *NetworkInstanceStatus `json:"status,omitempty" xml:"status"`
 
 	// 网络实例的创建时间。 UTC时间格式，yyyy-MM-ddTHH:mm:ss
-	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
+	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty" xml:"created_at"`
 
 	// 网络实例的更新时间。 UTC时间格式，yyyy-MM-ddTHH:mm:ss
-	UpdatedAt *sdktime.SdkTime `json:"updated_at,omitempty"`
+	UpdatedAt *sdktime.SdkTime `json:"updated_at,omitempty" xml:"updated_at"`
 
-	// 网络实例的类型。 - VPC：虚拟私有云。 - VGW：虚拟网关。 - ER：企业路由器。
-	Type *NetworkInstanceType `json:"type,omitempty"`
+	// 网络实例的类型。 - VPC：虚拟私有云。 - VGW：虚拟网关。
+	Type *NetworkInstanceType `json:"type,omitempty" xml:"type"`
 
 	// 云连接实例ID。
-	CloudConnectionId *string `json:"cloud_connection_id,omitempty"`
+	CloudConnectionId *string `json:"cloud_connection_id,omitempty" xml:"cloud_connection_id"`
 
 	// 网络实例的ID。
-	InstanceId *string `json:"instance_id,omitempty"`
+	InstanceId *string `json:"instance_id,omitempty" xml:"instance_id"`
 
 	// 网络实例所属账户ID。
-	InstanceDomainId *string `json:"instance_domain_id,omitempty"`
+	InstanceDomainId *string `json:"instance_domain_id,omitempty" xml:"instance_domain_id"`
 
 	// 网络实例所在Region的ID。
-	RegionId *string `json:"region_id,omitempty"`
+	RegionId *string `json:"region_id,omitempty" xml:"region_id"`
 
 	// 网络实例所在租户的项目ID。
-	ProjectId *string `json:"project_id,omitempty"`
+	ProjectId *string `json:"project_id,omitempty" xml:"project_id"`
 
-	// 网络实例发布的网段路由列表，ER场景此字段为空。
-	Cidrs *[]string `json:"cidrs,omitempty"`
+	// 网络实例发布的网段路由列表。
+	Cidrs *[]string `json:"cidrs,omitempty" xml:"cidrs"`
 }
 
 func (o NetworkInstance) String() string {
@@ -108,7 +108,6 @@ type NetworkInstanceType struct {
 type NetworkInstanceTypeEnum struct {
 	VPC NetworkInstanceType
 	VGW NetworkInstanceType
-	ER  NetworkInstanceType
 }
 
 func GetNetworkInstanceTypeEnum() NetworkInstanceTypeEnum {
@@ -118,9 +117,6 @@ func GetNetworkInstanceTypeEnum() NetworkInstanceTypeEnum {
 		},
 		VGW: NetworkInstanceType{
 			value: "vgw",
-		},
-		ER: NetworkInstanceType{
-			value: "er",
 		},
 	}
 }

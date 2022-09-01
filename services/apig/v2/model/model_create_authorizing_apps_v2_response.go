@@ -10,7 +10,7 @@ import (
 type CreateAuthorizingAppsV2Response struct {
 
 	// API与APP的授权关系列表
-	Auths          *[]ApiAuthRelations `json:"auths,omitempty"`
+	Auths          *[]ApiAuthRelations `json:"auths,omitempty" xml:"auths"`
 	HttpStatusCode int                 `json:"-"`
 }
 

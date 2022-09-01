@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type CountDevicesResponse struct {
-	ProductTemplates *ProductTemplatesCalculation `json:"product_templates,omitempty"`
+	ProductTemplates *ProductTemplatesCalculation `json:"product_templates,omitempty" xml:"product_templates"`
 
-	Products *ProductsCalculation `json:"products,omitempty"`
+	Products *ProductsCalculation `json:"products,omitempty" xml:"products"`
 
-	Devices        *DevicesCalculation `json:"devices,omitempty"`
+	Devices        *DevicesCalculation `json:"devices,omitempty" xml:"devices"`
 	HttpStatusCode int                 `json:"-"`
 }
 

@@ -10,25 +10,25 @@ import (
 type QueryRedisConfig struct {
 
 	// 配置参数值。
-	ParamValue *string `json:"param_value,omitempty"`
+	ParamValue *string `json:"param_value,omitempty" xml:"param_value"`
 
 	// 配置参数的值类型。
-	ValueType *string `json:"value_type,omitempty"`
+	ValueType *string `json:"value_type,omitempty" xml:"value_type"`
 
 	// 配置参数的取值范围。
-	ValueRange *string `json:"value_range,omitempty"`
+	ValueRange *string `json:"value_range,omitempty" xml:"value_range"`
 
 	// 配置项的描述。
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 配置参数的默认值。
-	DefaultValue *string `json:"default_value,omitempty"`
+	DefaultValue *string `json:"default_value,omitempty" xml:"default_value"`
 
 	// 配置参数名称。
-	ParamName *string `json:"param_name,omitempty"`
+	ParamName *string `json:"param_name,omitempty" xml:"param_name"`
 
 	// 配置参数ID。
-	ParamId *string `json:"param_id,omitempty"`
+	ParamId *string `json:"param_id,omitempty" xml:"param_id"`
 }
 
 func (o QueryRedisConfig) String() string {

@@ -10,15 +10,15 @@ import (
 type ListInstancesGroupResult struct {
 
 	// 组ID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 组状态。
-	Status string `json:"status"`
+	Status string `json:"status" xml:"status"`
 
-	Volume *Volume `json:"volume"`
+	Volume *Volume `json:"volume" xml:"volume"`
 
 	// 节点信息。
-	Nodes []ListInstancesNodeResult `json:"nodes"`
+	Nodes []ListInstancesNodeResult `json:"nodes" xml:"nodes"`
 }
 
 func (o ListInstancesGroupResult) String() string {

@@ -9,7 +9,7 @@ import (
 type BatchDelelteIssuesRequestV4 struct {
 
 	// 工作项的id
-	IssueIds []int32 `json:"issue_ids"`
+	IssueIds []int32 `json:"issue_ids" xml:"issue_ids"`
 }
 
 func (o BatchDelelteIssuesRequestV4) String() string {

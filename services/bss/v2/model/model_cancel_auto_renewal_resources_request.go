@@ -10,7 +10,7 @@ import (
 type CancelAutoRenewalResourcesRequest struct {
 
 	// 资源实例ID。您可以调用[查询客户包年包月资源列表](https://support.huaweicloud.com/api-bpconsole/api_order_00021.html)接口获取资源ID。在取消弹性云服务器自动续费的时候，能够自动将其挂载的硬盘一并取消自动续费。
-	ResourceId string `json:"resource_id"`
+	ResourceId string `json:"resource_id" xml:"resource_id"`
 }
 
 func (o CancelAutoRenewalResourcesRequest) String() string {

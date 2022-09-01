@@ -10,39 +10,39 @@ import (
 type SumTableParam struct {
 
 	// 上次请求的id
-	RequestId *string `json:"request_id,omitempty"`
+	RequestId *string `json:"request_id,omitempty" xml:"request_id"`
 
-	ViewConfig *SumTableView `json:"view_config,omitempty"`
+	ViewConfig *SumTableView `json:"view_config,omitempty" xml:"view_config"`
 
 	// 策略
-	Strategy *string `json:"strategy,omitempty"`
+	Strategy *string `json:"strategy,omitempty" xml:"strategy"`
 
 	// 当前页码
-	Page *int32 `json:"page,omitempty"`
+	Page *int32 `json:"page,omitempty" xml:"page"`
 
 	// 每页数据总数
-	PageSize *int32 `json:"page_size,omitempty"`
+	PageSize *int32 `json:"page_size,omitempty" xml:"page_size"`
 
 	// 排序规则
-	OrderBy *string `json:"order_by,omitempty"`
+	OrderBy *string `json:"order_by,omitempty" xml:"order_by"`
 
 	// 搜索关键字
-	SearchWord *string `json:"search_word,omitempty"`
+	SearchWord *string `json:"search_word,omitempty" xml:"search_word"`
 
 	// 实例id
-	InstanceId *int64 `json:"instance_id,omitempty"`
+	InstanceId *int64 `json:"instance_id,omitempty" xml:"instance_id"`
 
 	// 监控项id
-	MonitorItemId *int64 `json:"monitor_item_id,omitempty"`
+	MonitorItemId *int64 `json:"monitor_item_id,omitempty" xml:"monitor_item_id"`
 
 	// 环境id
-	EnvId *int64 `json:"env_id,omitempty"`
+	EnvId *int64 `json:"env_id,omitempty" xml:"env_id"`
 
 	// 起始时间
-	StartTime *string `json:"start_time,omitempty"`
+	StartTime *string `json:"start_time,omitempty" xml:"start_time"`
 
 	// 结束时间
-	EndTime *string `json:"end_time,omitempty"`
+	EndTime *string `json:"end_time,omitempty" xml:"end_time"`
 }
 
 func (o SumTableParam) String() string {

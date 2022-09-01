@@ -10,10 +10,10 @@ import (
 type ListPipelineTemplatesResponse struct {
 
 	// 模板列表
-	Templates *[]PipelineTemplate `json:"templates,omitempty"`
+	Templates *[]PipelineTemplate `json:"templates,omitempty" xml:"templates"`
 
 	// 模板总数
-	Count          *int32 `json:"count,omitempty"`
+	Count          *int32 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

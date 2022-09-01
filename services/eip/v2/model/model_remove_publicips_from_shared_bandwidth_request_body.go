@@ -8,7 +8,7 @@ import (
 
 // 共享带宽移除弹性公网IP的请求体
 type RemovePublicipsFromSharedBandwidthRequestBody struct {
-	Bandwidth *RemoveFromSharedBandwidthOption `json:"bandwidth"`
+	Bandwidth *RemoveFromSharedBandwidthOption `json:"bandwidth" xml:"bandwidth"`
 }
 
 func (o RemovePublicipsFromSharedBandwidthRequestBody) String() string {

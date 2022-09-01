@@ -13,13 +13,13 @@ import (
 type Taint struct {
 
 	// 键
-	Key string `json:"key"`
+	Key string `json:"key" xml:"key"`
 
 	// 值
-	Value *string `json:"value,omitempty"`
+	Value *string `json:"value,omitempty" xml:"value"`
 
 	// 作用效果
-	Effect TaintEffect `json:"effect"`
+	Effect TaintEffect `json:"effect" xml:"effect"`
 }
 
 func (o Taint) String() string {

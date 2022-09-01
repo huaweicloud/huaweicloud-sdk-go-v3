@@ -9,22 +9,22 @@ import (
 type TempDetailInfo struct {
 
 	// description
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// id
-	Id *int32 `json:"id,omitempty"`
+	Id *int32 `json:"id,omitempty" xml:"id"`
 
 	// 是否被引用
-	IsQuoted *bool `json:"is_quoted,omitempty"`
+	IsQuoted *bool `json:"is_quoted,omitempty" xml:"is_quoted"`
 
 	// name
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// temp_type
-	TempType *int32 `json:"temp_type,omitempty"`
+	TempType *int32 `json:"temp_type,omitempty" xml:"temp_type"`
 
 	// update_time
-	UpdateTime *string `json:"update_time,omitempty"`
+	UpdateTime *string `json:"update_time,omitempty" xml:"update_time"`
 }
 
 func (o TempDetailInfo) String() string {

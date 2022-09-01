@@ -9,7 +9,7 @@ import (
 type AdminResetPwdReqDto struct {
 
 	// 被修改密码的用户账号 maxLength：255 minLength：1
-	Account string `json:"account"`
+	Account string `json:"account" xml:"account"`
 }
 
 func (o AdminResetPwdReqDto) String() string {

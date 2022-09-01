@@ -10,10 +10,10 @@ import (
 type ListPolicyResponse struct {
 
 	// 防护策略的数量
-	Total *int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty" xml:"total"`
 
 	// 防护策略的具体内容
-	Items          *[]PolicyResponse `json:"items,omitempty"`
+	Items          *[]PolicyResponse `json:"items,omitempty" xml:"items"`
 	HttpStatusCode int               `json:"-"`
 }
 

@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ApplyJudgementRequest struct {
-	Body *JudgementTaskRequestBody `json:"body,omitempty"`
+	Body *JudgementTaskRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o ApplyJudgementRequest) String() string {

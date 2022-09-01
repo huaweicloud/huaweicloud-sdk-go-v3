@@ -9,10 +9,10 @@ import (
 type MessagePropertyList struct {
 
 	// 属性名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 属性值。
-	Value *string `json:"value,omitempty"`
+	Value *string `json:"value,omitempty" xml:"value"`
 }
 
 func (o MessagePropertyList) String() string {

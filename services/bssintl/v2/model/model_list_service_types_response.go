@@ -10,10 +10,10 @@ import (
 type ListServiceTypesResponse struct {
 
 	// 总数。
-	TotalCount *int32 `json:"total_count,omitempty"`
+	TotalCount *int32 `json:"total_count,omitempty" xml:"total_count"`
 
 	// 云服务类型信息列表，具体请参见表3。
-	ServiceTypes   *[]ServiceTypes `json:"service_types,omitempty"`
+	ServiceTypes   *[]ServiceTypes `json:"service_types,omitempty" xml:"service_types"`
 	HttpStatusCode int             `json:"-"`
 }
 

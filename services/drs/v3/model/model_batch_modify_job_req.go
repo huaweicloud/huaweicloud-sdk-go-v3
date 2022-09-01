@@ -10,7 +10,7 @@ import (
 type BatchModifyJobReq struct {
 
 	// 修改任务请求体
-	Jobs []ModifyJobReq `json:"jobs"`
+	Jobs []ModifyJobReq `json:"jobs" xml:"jobs"`
 }
 
 func (o BatchModifyJobReq) String() string {

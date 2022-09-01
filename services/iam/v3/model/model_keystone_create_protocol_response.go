@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type KeystoneCreateProtocolResponse struct {
-	Protocol       *ProtocolResult `json:"protocol,omitempty"`
+	Protocol       *ProtocolResult `json:"protocol,omitempty" xml:"protocol"`
 	HttpStatusCode int             `json:"-"`
 }
 

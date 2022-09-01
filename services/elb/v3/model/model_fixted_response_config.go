@@ -13,13 +13,13 @@ import (
 type FixtedResponseConfig struct {
 
 	// 返回码。支持200~299,400~499,500~599。
-	StatusCode string `json:"status_code"`
+	StatusCode string `json:"status_code" xml:"status_code"`
 
 	// 返回body的格式。  取值范围： - text/plain - text/css - text/html - application/javascript - application/json
-	ContentType FixtedResponseConfigContentType `json:"content_type"`
+	ContentType FixtedResponseConfigContentType `json:"content_type" xml:"content_type"`
 
 	// 返回消息内容。
-	MessageBody string `json:"message_body"`
+	MessageBody string `json:"message_body" xml:"message_body"`
 }
 
 func (o FixtedResponseConfig) String() string {

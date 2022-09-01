@@ -10,10 +10,10 @@ import (
 type CreateWatermarkTemplateResponse struct {
 
 	// 水印配置模板id<br/>
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 水印图片上传地址<br/>
-	UploadUrl      *string `json:"upload_url,omitempty"`
+	UploadUrl      *string `json:"upload_url,omitempty" xml:"upload_url"`
 	HttpStatusCode int     `json:"-"`
 }
 

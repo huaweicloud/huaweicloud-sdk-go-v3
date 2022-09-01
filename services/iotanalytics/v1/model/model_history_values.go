@@ -9,10 +9,10 @@ import (
 type HistoryValues struct {
 
 	// 属性名称
-	PropertyName *string `json:"property_name,omitempty"`
+	PropertyName *string `json:"property_name,omitempty" xml:"property_name"`
 
 	// 属性值
-	Values *[]interface{} `json:"values,omitempty"`
+	Values *[]interface{} `json:"values,omitempty" xml:"values"`
 }
 
 func (o HistoryValues) String() string {

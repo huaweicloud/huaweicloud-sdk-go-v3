@@ -12,28 +12,28 @@ import (
 type CommonInfo struct {
 
 	// pvc开关<br/>
-	Pvc bool `json:"pvc"`
+	Pvc bool `json:"pvc" xml:"pvc"`
 
 	// 视频编码格式<br/>
-	VideoCodec *CommonInfoVideoCodec `json:"video_codec,omitempty"`
+	VideoCodec *CommonInfoVideoCodec `json:"video_codec,omitempty" xml:"video_codec"`
 
 	// 音频编码格式<br/> AAC：AAC格式 (default)<br/> HEAAC1：HEAAC1格式<br/> HEAAC2：HEAAC2格式<br/> MP3：MP3格式<br/>
-	AudioCodec *CommonInfoAudioCodec `json:"audio_codec,omitempty"`
+	AudioCodec *CommonInfoAudioCodec `json:"audio_codec,omitempty" xml:"audio_codec"`
 
 	// 黑边剪裁类型<br/>
-	IsBlackCut *bool `json:"is_black_cut,omitempty"`
+	IsBlackCut *bool `json:"is_black_cut,omitempty" xml:"is_black_cut"`
 
 	// 格式<br/>
-	Format *CommonInfoFormat `json:"format,omitempty"`
+	Format *CommonInfoFormat `json:"format,omitempty" xml:"format"`
 
 	// 分片时长(默认为5秒)<br/>
-	HlsInterval *int32 `json:"hls_interval,omitempty"`
+	HlsInterval *int32 `json:"hls_interval,omitempty" xml:"hls_interval"`
 
 	// 上采样<br/>
-	Upsample *bool `json:"upsample,omitempty"`
+	Upsample *bool `json:"upsample,omitempty" xml:"upsample"`
 
 	// SHORT：短边自适应<br/> LONG：长边自适应<br/> NONE：宽高自适应<br/>
-	Adaptation *CommonInfoAdaptation `json:"adaptation,omitempty"`
+	Adaptation *CommonInfoAdaptation `json:"adaptation,omitempty" xml:"adaptation"`
 }
 
 func (o CommonInfo) String() string {

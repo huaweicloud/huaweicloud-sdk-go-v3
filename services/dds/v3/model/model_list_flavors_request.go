@@ -13,10 +13,10 @@ import (
 type ListFlavorsRequest struct {
 
 	// 实例所在区域。
-	Region *string `json:"region,omitempty"`
+	Region *string `json:"region,omitempty" xml:"region"`
 
 	// 数据库版本类型。取值为“DDS-Community”。
-	EngineName *ListFlavorsRequestEngineName `json:"engine_name,omitempty"`
+	EngineName *ListFlavorsRequestEngineName `json:"engine_name,omitempty" xml:"engine_name"`
 }
 
 func (o ListFlavorsRequest) String() string {

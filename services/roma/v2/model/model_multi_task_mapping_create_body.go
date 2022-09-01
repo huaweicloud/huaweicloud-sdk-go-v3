@@ -7,28 +7,28 @@ import (
 )
 
 type MultiTaskMappingCreateBody struct {
-	ExtInfo *MultiTaskInitElementExtInfo `json:"ext_info,omitempty"`
+	ExtInfo *MultiTaskInitElementExtInfo `json:"ext_info,omitempty" xml:"ext_info"`
 
 	// 源端数据源ID
-	SourceDatasourceId *string `json:"source_datasource_id,omitempty"`
+	SourceDatasourceId *string `json:"source_datasource_id,omitempty" xml:"source_datasource_id"`
 
 	// 目标端数据源ID
-	TargetDatasourceId *string `json:"target_datasource_id,omitempty"`
+	TargetDatasourceId *string `json:"target_datasource_id,omitempty" xml:"target_datasource_id"`
 
 	// 源端字段列表
-	SourceColumns *[]MultiTaskColumnInfo `json:"source_columns,omitempty"`
+	SourceColumns *[]MultiTaskColumnInfo `json:"source_columns,omitempty" xml:"source_columns"`
 
 	// 目标端字段列表
-	TargetColumns *[]MultiTaskColumnInfo `json:"target_columns,omitempty"`
+	TargetColumns *[]MultiTaskColumnInfo `json:"target_columns,omitempty" xml:"target_columns"`
 
 	// 源表名
-	SourceTable *string `json:"source_table,omitempty"`
+	SourceTable *string `json:"source_table,omitempty" xml:"source_table"`
 
 	// 目标表名
-	TargetTable *string `json:"target_table,omitempty"`
+	TargetTable *string `json:"target_table,omitempty" xml:"target_table"`
 
 	// 字段映射列表
-	MappingColumns *[]MappingInfo `json:"mapping_columns,omitempty"`
+	MappingColumns *[]MappingInfo `json:"mapping_columns,omitempty" xml:"mapping_columns"`
 }
 
 func (o MultiTaskMappingCreateBody) String() string {

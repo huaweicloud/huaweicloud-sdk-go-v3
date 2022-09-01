@@ -10,7 +10,7 @@ import (
 type ListPublicipTagsResponse struct {
 
 	// 标签列表
-	Tags           *[]TagResp `json:"tags,omitempty"`
+	Tags           *[]TagResp `json:"tags,omitempty" xml:"tags"`
 	HttpStatusCode int        `json:"-"`
 }
 

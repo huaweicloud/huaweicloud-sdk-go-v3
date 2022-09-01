@@ -9,11 +9,11 @@ import (
 type Thumbnail struct {
 
 	// 是否压缩抽帧图片生成tar包 - 0：表示压缩 - 1：表示不压缩
-	Tar *int32 `json:"tar,omitempty"`
+	Tar *int32 `json:"tar,omitempty" xml:"tar"`
 
-	Out *ObsObjInfo `json:"out,omitempty"`
+	Out *ObsObjInfo `json:"out,omitempty" xml:"out"`
 
-	Params *ThumbnailPara `json:"params"`
+	Params *ThumbnailPara `json:"params" xml:"params"`
 }
 
 func (o Thumbnail) String() string {

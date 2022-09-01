@@ -10,10 +10,10 @@ import (
 type StartMeetingResponse struct {
 
 	// 会议主席鉴权uuid
-	Uuid *string `json:"uuid,omitempty"`
+	Uuid *string `json:"uuid,omitempty" xml:"uuid"`
 
 	// 区域公网IP地址
-	RegionIP       *string `json:"regionIP,omitempty"`
+	RegionIP       *string `json:"regionIP,omitempty" xml:"regionIP"`
 	HttpStatusCode int     `json:"-"`
 }
 

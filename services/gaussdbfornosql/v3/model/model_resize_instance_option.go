@@ -9,7 +9,7 @@ import (
 type ResizeInstanceOption struct {
 
 	// 变更至新规格的资源规格编码。获取方法请参见查询数据库规格中响应参数“flavors.spec_code”的值。
-	TargetSpecCode string `json:"target_spec_code"`
+	TargetSpecCode string `json:"target_spec_code" xml:"target_spec_code"`
 }
 
 func (o ResizeInstanceOption) String() string {

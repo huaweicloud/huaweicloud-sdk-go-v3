@@ -10,19 +10,19 @@ import (
 type ShowMqsInstanceTopicAccessPolicyResponse struct {
 
 	// topic名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 策略列表。
-	Policies *[]ShowMqsInstanceTopicAccessPolicyRespPolicies `json:"policies,omitempty"`
+	Policies *[]ShowMqsInstanceTopicAccessPolicyRespPolicies `json:"policies,omitempty" xml:"policies"`
 
 	// 权限策略的总数。
-	Total *int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty" xml:"total"`
 
 	// 查询权限策略的数量。
-	Size *int32 `json:"size,omitempty"`
+	Size *int32 `json:"size,omitempty" xml:"size"`
 
 	// topic名称。
-	Operation      *string `json:"operation,omitempty"`
+	Operation      *string `json:"operation,omitempty" xml:"operation"`
 	HttpStatusCode int     `json:"-"`
 }
 

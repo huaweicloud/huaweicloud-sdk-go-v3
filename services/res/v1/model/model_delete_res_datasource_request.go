@@ -10,10 +10,10 @@ import (
 type DeleteResDatasourceRequest struct {
 
 	// 工作空间id。
-	WorkspaceId string `json:"workspace_id"`
+	WorkspaceId string `json:"workspace_id" xml:"workspace_id"`
 
 	// 数据源id。
-	DatasourceId string `json:"datasource_id"`
+	DatasourceId string `json:"datasource_id" xml:"datasource_id"`
 }
 
 func (o DeleteResDatasourceRequest) String() string {

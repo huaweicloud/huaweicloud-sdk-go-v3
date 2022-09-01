@@ -10,7 +10,7 @@ import (
 type ListRuntimesResponse struct {
 
 	// 运行时列表。
-	Runtimes       *[]RuntimeTypeView `json:"runtimes,omitempty"`
+	Runtimes       *[]RuntimeTypeView `json:"runtimes,omitempty" xml:"runtimes"`
 	HttpStatusCode int                `json:"-"`
 }
 

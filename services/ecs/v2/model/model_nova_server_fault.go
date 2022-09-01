@@ -10,16 +10,16 @@ import (
 type NovaServerFault struct {
 
 	// 错误码。
-	Code *int32 `json:"code,omitempty"`
+	Code *int32 `json:"code,omitempty" xml:"code"`
 
 	// 异常出现的时间。
-	Created *string `json:"created,omitempty"`
+	Created *string `json:"created,omitempty" xml:"created"`
 
 	// 异常描述信息。
-	Message *string `json:"message,omitempty"`
+	Message *string `json:"message,omitempty" xml:"message"`
 
 	// 异常详情信息。
-	Details *string `json:"details,omitempty"`
+	Details *string `json:"details,omitempty" xml:"details"`
 }
 
 func (o NovaServerFault) String() string {

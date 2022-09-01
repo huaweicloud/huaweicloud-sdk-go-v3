@@ -12,28 +12,28 @@ import (
 type UpdateVpcChannelV2Response struct {
 
 	// VPC通道的名称。  长度为3 ~ 64位的字符串，字符串由中文、英文字母、数字、中划线、下划线组成，且只能以英文或中文开头。 > 中文字符必须为UTF-8或者unicode编码。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// VPC通道中主机的端口号。  取值范围1 ~ 65535，仅VPC通道类型为2时有效。  VPC通道类型为2时必选。
-	Port *int32 `json:"port,omitempty"`
+	Port *int32 `json:"port,omitempty" xml:"port"`
 
 	// 分发算法。 - 1：加权轮询（wrr） - 2：加权最少连接（wleastconn） - 3：源地址哈希（source） - 4：URI哈希（uri）  VPC通道类型为2时必选。
-	BalanceStrategy *UpdateVpcChannelV2ResponseBalanceStrategy `json:"balance_strategy,omitempty"`
+	BalanceStrategy *UpdateVpcChannelV2ResponseBalanceStrategy `json:"balance_strategy,omitempty" xml:"balance_strategy"`
 
 	// VPC通道的成员类型。 - ip - ecs  VPC通道类型为2时必选。
-	MemberType *UpdateVpcChannelV2ResponseMemberType `json:"member_type,omitempty"`
+	MemberType *UpdateVpcChannelV2ResponseMemberType `json:"member_type,omitempty" xml:"member_type"`
 
 	// VPC通道的创建时间
-	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
+	CreateTime *sdktime.SdkTime `json:"create_time,omitempty" xml:"create_time"`
 
 	// VPC通道的编号
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// VPC通道的状态。 - 1：正常 - 2：异常
-	Status *UpdateVpcChannelV2ResponseStatus `json:"status,omitempty"`
+	Status *UpdateVpcChannelV2ResponseStatus `json:"status,omitempty" xml:"status"`
 
 	// 后端云服务器组列表。  暂不支持
-	MemberGroups   *[]MemberGroupInfo `json:"member_groups,omitempty"`
+	MemberGroups   *[]MemberGroupInfo `json:"member_groups,omitempty" xml:"member_groups"`
 	HttpStatusCode int                `json:"-"`
 }
 

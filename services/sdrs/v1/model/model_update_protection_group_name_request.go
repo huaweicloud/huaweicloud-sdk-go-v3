@@ -10,9 +10,9 @@ import (
 type UpdateProtectionGroupNameRequest struct {
 
 	// 保护组ID。
-	ServerGroupId string `json:"server_group_id"`
+	ServerGroupId string `json:"server_group_id" xml:"server_group_id"`
 
-	Body *UpdateProtectionGroupNameRequestBody `json:"body,omitempty"`
+	Body *UpdateProtectionGroupNameRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateProtectionGroupNameRequest) String() string {

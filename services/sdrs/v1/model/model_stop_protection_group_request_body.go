@@ -10,7 +10,7 @@ import (
 type StopProtectionGroupRequestBody struct {
 
 	// 标识保护组停止保护操作。该参数目前默认值为空。
-	StopServerGroup *interface{} `json:"stop-server-group"`
+	StopServerGroup *interface{} `json:"stop-server-group" xml:"stop-server-group"`
 }
 
 func (o StopProtectionGroupRequestBody) String() string {

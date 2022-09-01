@@ -10,10 +10,10 @@ import (
 type ShowAgentStatusRequest struct {
 
 	// 语言类型 中文:zh-cn 英文:en-us
-	XLanguage *string `json:"X-Language,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
 
 	// AgentID
-	AgentId string `json:"agent_id"`
+	AgentId string `json:"agent_id" xml:"agent_id"`
 }
 
 func (o ShowAgentStatusRequest) String() string {

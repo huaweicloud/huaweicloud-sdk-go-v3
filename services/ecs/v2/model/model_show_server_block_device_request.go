@@ -10,10 +10,10 @@ import (
 type ShowServerBlockDeviceRequest struct {
 
 	// 云服务器ID。
-	ServerId string `json:"server_id"`
+	ServerId string `json:"server_id" xml:"server_id"`
 
 	// 云硬盘ID，UUID格式。
-	VolumeId string `json:"volume_id"`
+	VolumeId string `json:"volume_id" xml:"volume_id"`
 }
 
 func (o ShowServerBlockDeviceRequest) String() string {

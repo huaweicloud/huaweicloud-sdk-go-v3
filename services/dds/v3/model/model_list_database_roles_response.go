@@ -10,10 +10,10 @@ import (
 type ListDatabaseRolesResponse struct {
 
 	// 数据库角色信息。
-	Roles *string `json:"roles,omitempty"`
+	Roles *string `json:"roles,omitempty" xml:"roles"`
 
 	// 数据库角色总数。
-	TotalCount     *int32 `json:"total_count,omitempty"`
+	TotalCount     *int32 `json:"total_count,omitempty" xml:"total_count"`
 	HttpStatusCode int    `json:"-"`
 }
 

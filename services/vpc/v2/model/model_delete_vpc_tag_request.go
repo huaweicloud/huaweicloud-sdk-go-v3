@@ -10,10 +10,10 @@ import (
 type DeleteVpcTagRequest struct {
 
 	// 功能说明：虚拟私有云唯一标识 取值范围：合法UUID 约束：ID对应的VPC必须存在
-	VpcId string `json:"vpc_id"`
+	VpcId string `json:"vpc_id" xml:"vpc_id"`
 
 	// 功能说明：标签键
-	Key string `json:"key"`
+	Key string `json:"key" xml:"key"`
 }
 
 func (o DeleteVpcTagRequest) String() string {

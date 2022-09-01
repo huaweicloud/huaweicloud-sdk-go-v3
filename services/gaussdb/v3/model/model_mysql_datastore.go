@@ -10,10 +10,10 @@ import (
 type MysqlDatastore struct {
 
 	// 数据库引擎，现在只支持gaussdb-mysql
-	Type string `json:"type"`
+	Type string `json:"type" xml:"type"`
 
 	// 数据库版本。  数据库支持的详细版本信息，可调用查询数据库引擎的版本接口获取。
-	Version string `json:"version"`
+	Version string `json:"version" xml:"version"`
 }
 
 func (o MysqlDatastore) String() string {

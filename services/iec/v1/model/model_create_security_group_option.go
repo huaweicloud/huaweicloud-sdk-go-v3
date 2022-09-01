@@ -10,10 +10,10 @@ import (
 type CreateSecurityGroupOption struct {
 
 	// 安全组的名称。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 安全组的描述。非必填项，默认值为空。
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 }
 
 func (o CreateSecurityGroupOption) String() string {

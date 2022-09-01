@@ -11,12 +11,12 @@ import (
 
 // Request Object
 type UpdateTuningParamsRequest struct {
-	JobId string `json:"job_id"`
+	JobId string `json:"job_id" xml:"job_id"`
 
 	// 请求语言类型
-	XLanguage *UpdateTuningParamsRequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *UpdateTuningParamsRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 
-	Body *ModifyTuningParamsReq `json:"body,omitempty"`
+	Body *ModifyTuningParamsReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateTuningParamsRequest) String() string {

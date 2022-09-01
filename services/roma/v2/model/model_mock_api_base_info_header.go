@@ -9,13 +9,13 @@ import (
 type MockApiBaseInfoHeader struct {
 
 	// mock后端自定义响应头header key
-	Key *string `json:"key,omitempty"`
+	Key *string `json:"key,omitempty" xml:"key"`
 
 	// mock后端自定义响应头header value
-	Value *string `json:"value,omitempty"`
+	Value *string `json:"value,omitempty" xml:"value"`
 
 	// mock后端自定义响应头header remark
-	Remark *string `json:"remark,omitempty"`
+	Remark *string `json:"remark,omitempty" xml:"remark"`
 }
 
 func (o MockApiBaseInfoHeader) String() string {

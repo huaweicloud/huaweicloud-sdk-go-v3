@@ -8,13 +8,13 @@ import (
 
 // project信息
 type ProjectInfo struct {
-	Domain *DomainInfo `json:"domain,omitempty"`
+	Domain *DomainInfo `json:"domain,omitempty" xml:"domain"`
 
 	// project id
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// project name
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 }
 
 func (o ProjectInfo) String() string {

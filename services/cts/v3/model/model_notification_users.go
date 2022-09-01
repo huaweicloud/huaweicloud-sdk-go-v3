@@ -10,10 +10,10 @@ import (
 type NotificationUsers struct {
 
 	// IAM用户组。
-	UserGroup string `json:"user_group"`
+	UserGroup string `json:"user_group" xml:"user_group"`
 
 	// IAM用户。
-	UserList []string `json:"user_list"`
+	UserList []string `json:"user_list" xml:"user_list"`
 }
 
 func (o NotificationUsers) String() string {

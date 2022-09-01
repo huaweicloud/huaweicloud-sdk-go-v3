@@ -7,19 +7,19 @@ import (
 )
 
 type JobInstance struct {
-	JobName *string `json:"jobName,omitempty"`
+	JobName *string `json:"jobName,omitempty" xml:"jobName"`
 
-	Status *string `json:"status,omitempty"`
+	Status *string `json:"status,omitempty" xml:"status"`
 
-	PlanTime *int32 `json:"planTime,omitempty"`
+	PlanTime *int32 `json:"planTime,omitempty" xml:"planTime"`
 
-	StartTime *int32 `json:"startTime,omitempty"`
+	StartTime *int32 `json:"startTime,omitempty" xml:"startTime"`
 
-	EndTime *int32 `json:"endTime,omitempty"`
+	EndTime *int32 `json:"endTime,omitempty" xml:"endTime"`
 
-	ExecuteTime *int32 `json:"executeTime,omitempty"`
+	ExecuteTime *int32 `json:"executeTime,omitempty" xml:"executeTime"`
 
-	InstancesId *string `json:"instancesId,omitempty"`
+	InstancesId *string `json:"instancesId,omitempty" xml:"instancesId"`
 }
 
 func (o JobInstance) String() string {

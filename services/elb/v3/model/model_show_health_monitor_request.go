@@ -10,7 +10,7 @@ import (
 type ShowHealthMonitorRequest struct {
 
 	// 健康检查ID。
-	HealthmonitorId string `json:"healthmonitor_id"`
+	HealthmonitorId string `json:"healthmonitor_id" xml:"healthmonitor_id"`
 }
 
 func (o ShowHealthMonitorRequest) String() string {

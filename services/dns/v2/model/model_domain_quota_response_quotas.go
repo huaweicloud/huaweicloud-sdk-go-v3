@@ -9,16 +9,16 @@ import (
 type DomainQuotaResponseQuotas struct {
 
 	// 资源类型。
-	QuotaKey string `json:"quota_key"`
+	QuotaKey string `json:"quota_key" xml:"quota_key"`
 
 	// 资源配额的最大值。
-	QuotaLimit int32 `json:"quota_limit"`
+	QuotaLimit int32 `json:"quota_limit" xml:"quota_limit"`
 
 	// 配额已使用数量。
-	Used int32 `json:"used"`
+	Used int32 `json:"used" xml:"used"`
 
 	// 配额统计单位，取固定值“count”。
-	Unit string `json:"unit"`
+	Unit string `json:"unit" xml:"unit"`
 }
 
 func (o DomainQuotaResponseQuotas) String() string {

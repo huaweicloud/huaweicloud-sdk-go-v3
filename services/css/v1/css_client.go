@@ -505,7 +505,7 @@ func (c *CssClient) RestoreSnapshotInvoker(request *model.RestoreSnapshotRequest
 	return &RestoreSnapshotInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowAutoCreatePolicy 查询集群的自动创建快照策略
+// ShowAutoCreatePolicy 查询自动创建快照的策略
 //
 // 该接口用于查询自动创建快照策略。
 //
@@ -521,7 +521,7 @@ func (c *CssClient) ShowAutoCreatePolicy(request *model.ShowAutoCreatePolicyRequ
 	}
 }
 
-// ShowAutoCreatePolicyInvoker 查询集群的自动创建快照策略
+// ShowAutoCreatePolicyInvoker 查询自动创建快照的策略
 func (c *CssClient) ShowAutoCreatePolicyInvoker(request *model.ShowAutoCreatePolicyRequest) *ShowAutoCreatePolicyInvoker {
 	requestDef := GenReqDefForShowAutoCreatePolicy()
 	return &ShowAutoCreatePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

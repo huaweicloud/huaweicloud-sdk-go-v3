@@ -10,7 +10,7 @@ import (
 type ErrorSite struct {
 
 	// 异常站点。
-	ErrSites *[]string `json:"err_sites,omitempty"`
+	ErrSites *[]string `json:"err_sites,omitempty" xml:"err_sites"`
 }
 
 func (o ErrorSite) String() string {

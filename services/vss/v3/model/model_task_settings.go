@@ -12,15 +12,15 @@ import (
 type TaskSettings struct {
 
 	// 普通任务的定时启动时间
-	Timer *string `json:"timer,omitempty"`
+	Timer *string `json:"timer,omitempty" xml:"timer"`
 
 	// 监测任务的定时触发时间
-	TriggerTime *string `json:"trigger_time,omitempty"`
+	TriggerTime *string `json:"trigger_time,omitempty" xml:"trigger_time"`
 
 	// 监测任务的定时触发周期:   * everyday - 每日   * threedays - 每三天   * everyweek - 每星期   * everymonth - 每月
-	TaskPeriod *TaskSettingsTaskPeriod `json:"task_period,omitempty"`
+	TaskPeriod *TaskSettingsTaskPeriod `json:"task_period,omitempty" xml:"task_period"`
 
-	TaskConfig *TaskSettingsTaskConfig `json:"task_config,omitempty"`
+	TaskConfig *TaskSettingsTaskConfig `json:"task_config,omitempty" xml:"task_config"`
 }
 
 func (o TaskSettings) String() string {

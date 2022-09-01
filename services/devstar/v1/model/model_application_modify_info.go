@@ -9,13 +9,13 @@ import (
 type ApplicationModifyInfo struct {
 
 	// 应用名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 应用描述
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 应用图标(传入图片的Base64编码,大小限制15k)
-	Icon *string `json:"icon,omitempty"`
+	Icon *string `json:"icon,omitempty" xml:"icon"`
 }
 
 func (o ApplicationModifyInfo) String() string {

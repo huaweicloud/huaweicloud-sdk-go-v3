@@ -10,10 +10,10 @@ import (
 type ListCommitStatisticsRequest struct {
 
 	// 分支名
-	BranchName string `json:"branch_name"`
+	BranchName string `json:"branch_name" xml:"branch_name"`
 
 	// 仓库的主键id
-	RepositoryId string `json:"repository_id"`
+	RepositoryId string `json:"repository_id" xml:"repository_id"`
 }
 
 func (o ListCommitStatisticsRequest) String() string {

@@ -13,25 +13,25 @@ import (
 type InstInfo struct {
 
 	// 引擎类型
-	EngineType *InstInfoEngineType `json:"engine_type,omitempty"`
+	EngineType *InstInfoEngineType `json:"engine_type,omitempty" xml:"engine_type"`
 
 	// 实例类型
-	InstType *InstInfoInstType `json:"inst_type,omitempty"`
+	InstType *InstInfoInstType `json:"inst_type,omitempty" xml:"inst_type"`
 
 	// 迁移实例所在的私有IP
-	Ip *string `json:"ip,omitempty"`
+	Ip *string `json:"ip,omitempty" xml:"ip"`
 
 	// 迁移实例所在的公网IP
-	PublicIp *string `json:"public_ip,omitempty"`
+	PublicIp *string `json:"public_ip,omitempty" xml:"public_ip"`
 
 	// 迁移实例任务定时启动时间
-	StartTime *string `json:"start_time,omitempty"`
+	StartTime *string `json:"start_time,omitempty" xml:"start_time"`
 
 	// 迁移实例的状态
-	Status *InstInfoStatus `json:"status,omitempty"`
+	Status *InstInfoStatus `json:"status,omitempty" xml:"status"`
 
 	// 迁移实例的磁盘大小
-	VolumeSize *int32 `json:"volume_size,omitempty"`
+	VolumeSize *int32 `json:"volume_size,omitempty" xml:"volume_size"`
 }
 
 func (o InstInfo) String() string {

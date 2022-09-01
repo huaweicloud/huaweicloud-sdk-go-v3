@@ -10,10 +10,10 @@ import (
 type BatchValidateClustersConnectionsResponse struct {
 
 	// 批量测试连接响应体集合。
-	Results *[]CheckJobResp `json:"results,omitempty"`
+	Results *[]CheckJobResp `json:"results,omitempty" xml:"results"`
 
 	// 总记录数。
-	Count          *int32 `json:"count,omitempty"`
+	Count          *int32 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

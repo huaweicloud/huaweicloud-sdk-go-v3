@@ -10,7 +10,7 @@ import (
 type DeleteTemplateRequest struct {
 
 	// 需要删除的模板的ID
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 }
 
 func (o DeleteTemplateRequest) String() string {

@@ -13,26 +13,26 @@ import (
 type IndividualStreamJobReq struct {
 
 	// 房间id
-	RoomId string `json:"room_id"`
+	RoomId string `json:"room_id" xml:"room_id"`
 
 	// 选看的用户id，单个录制任务内保证唯一
-	UserId string `json:"user_id"`
+	UserId string `json:"user_id" xml:"user_id"`
 
 	//  是否录制音频。  - true：录制音频 - false：不录制音频  缺省为true。
-	IsRecordAudio *bool `json:"is_record_audio,omitempty"`
+	IsRecordAudio *bool `json:"is_record_audio,omitempty" xml:"is_record_audio"`
 
 	// 标识视频流的类型，可选摄像头流或者屏幕分享流，未填写表示不录制视频。  - CAMERASTREAM：摄像头视频流 - SCREENSTREAM：屏幕分享视频流  默认为CAMERASTREAM。
-	VideoType *IndividualStreamJobReqVideoType `json:"video_type,omitempty"`
+	VideoType *IndividualStreamJobReqVideoType `json:"video_type,omitempty" xml:"video_type"`
 
 	// 指定窗口拉取的分辨率档位。  - LD - SD - HD - FHD  缺省为FHD。
-	SelectStreamType *IndividualStreamJobReqSelectStreamType `json:"select_stream_type,omitempty"`
+	SelectStreamType *IndividualStreamJobReqSelectStreamType `json:"select_stream_type,omitempty" xml:"select_stream_type"`
 
 	// 最长空闲频道时间。  取值范围：[5，43200]，默认值为30。  单位：秒。  如果频道内无连麦方的状态持续超过该时间，录制程序会自动退出。退出后，再次调用start请求，会产生新的录制任务。  连麦方指：joiner或者publisher的用户。
-	MaxIdleTime *int32 `json:"max_idle_time,omitempty"`
+	MaxIdleTime *int32 `json:"max_idle_time,omitempty" xml:"max_idle_time"`
 
-	PublishParam *PublishParam `json:"publish_param,omitempty"`
+	PublishParam *PublishParam `json:"publish_param,omitempty" xml:"publish_param"`
 
-	RecordParam *RecordParam `json:"record_param,omitempty"`
+	RecordParam *RecordParam `json:"record_param,omitempty" xml:"record_param"`
 }
 
 func (o IndividualStreamJobReq) String() string {

@@ -10,10 +10,10 @@ import (
 type DeleteJobRequest struct {
 
 	// 集群ID
-	ClusterId string `json:"cluster_id"`
+	ClusterId string `json:"cluster_id" xml:"cluster_id"`
 
 	// 作业名称
-	JobName string `json:"job_name"`
+	JobName string `json:"job_name" xml:"job_name"`
 }
 
 func (o DeleteJobRequest) String() string {

@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RecognizeGeneralTableRequest struct {
-	Body *GeneralTableRequestBody `json:"body,omitempty"`
+	Body *GeneralTableRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o RecognizeGeneralTableRequest) String() string {

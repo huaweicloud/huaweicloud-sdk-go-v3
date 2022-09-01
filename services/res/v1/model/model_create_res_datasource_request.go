@@ -10,9 +10,9 @@ import (
 type CreateResDatasourceRequest struct {
 
 	// 工作空间id。
-	WorkspaceId string `json:"workspace_id"`
+	WorkspaceId string `json:"workspace_id" xml:"workspace_id"`
 
-	Body *CreateResDatasourceRequestBody `json:"body,omitempty"`
+	Body *CreateResDatasourceRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateResDatasourceRequest) String() string {

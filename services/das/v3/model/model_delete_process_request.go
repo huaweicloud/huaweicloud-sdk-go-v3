@@ -13,12 +13,12 @@ import (
 type DeleteProcessRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 语言
-	XLanguage *DeleteProcessRequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *DeleteProcessRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 
-	Body *DeleteProcessReqBody `json:"body,omitempty"`
+	Body *DeleteProcessReqBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o DeleteProcessRequest) String() string {

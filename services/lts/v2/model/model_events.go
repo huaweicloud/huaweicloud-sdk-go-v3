@@ -7,27 +7,27 @@ import (
 )
 
 type Events struct {
-	Annotations *Annotations `json:"annotations"`
+	Annotations *Annotations `json:"annotations" xml:"annotations"`
 
-	Metadata *Metadata `json:"metadata"`
+	Metadata *Metadata `json:"metadata" xml:"metadata"`
 
 	// 到达时间(时间戳)
-	ArrivesAt int64 `json:"arrives_at"`
+	ArrivesAt int64 `json:"arrives_at" xml:"arrives_at"`
 
 	// 告警清除时间(时间戳)
-	EndsAt int64 `json:"ends_at"`
+	EndsAt int64 `json:"ends_at" xml:"ends_at"`
 
 	// 告警id
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 告警产生时间(时间戳)
-	StartsAt int64 `json:"starts_at"`
+	StartsAt int64 `json:"starts_at" xml:"starts_at"`
 
 	// 告警自动清除时间(时间戳)
-	Timeout int64 `json:"timeout"`
+	Timeout int64 `json:"timeout" xml:"timeout"`
 
 	// 告警规则类型(SQL/关键词)
-	Type string `json:"type"`
+	Type string `json:"type" xml:"type"`
 }
 
 func (o Events) String() string {

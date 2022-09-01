@@ -10,10 +10,10 @@ import (
 type OsfederationGroups struct {
 
 	// 用户组ID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 用户组名称。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 }
 
 func (o OsfederationGroups) String() string {

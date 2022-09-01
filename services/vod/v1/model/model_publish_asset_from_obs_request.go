@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type PublishAssetFromObsRequest struct {
-	Body *PublishAssetFromObsReq `json:"body,omitempty"`
+	Body *PublishAssetFromObsReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o PublishAssetFromObsRequest) String() string {

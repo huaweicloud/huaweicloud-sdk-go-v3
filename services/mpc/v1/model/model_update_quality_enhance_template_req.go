@@ -9,9 +9,9 @@ import (
 type UpdateQualityEnhanceTemplateReq struct {
 
 	// 模板ID。
-	TemplateId *int32 `json:"template_id,omitempty"`
+	TemplateId *int32 `json:"template_id,omitempty" xml:"template_id"`
 
-	Template *QualityEnhanceTemplate `json:"template,omitempty"`
+	Template *QualityEnhanceTemplate `json:"template,omitempty" xml:"template"`
 }
 
 func (o UpdateQualityEnhanceTemplateReq) String() string {

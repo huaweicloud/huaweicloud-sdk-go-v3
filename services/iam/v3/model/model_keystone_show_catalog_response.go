@@ -10,9 +10,9 @@ import (
 type KeystoneShowCatalogResponse struct {
 
 	// 服务目录信息列表。
-	Catalog *[]Catalog `json:"catalog,omitempty"`
+	Catalog *[]Catalog `json:"catalog,omitempty" xml:"catalog"`
 
-	Links          *LinksSelf `json:"links,omitempty"`
+	Links          *LinksSelf `json:"links,omitempty" xml:"links"`
 	HttpStatusCode int        `json:"-"`
 }
 

@@ -9,123 +9,123 @@ import (
 type InstanceListInfo struct {
 
 	// Redis缓存实例绑定的弹性IP地址的id。 如果未开启公网访问功能，该字段值为null。
-	PublicipId *string `json:"publicip_id,omitempty"`
+	PublicipId *string `json:"publicip_id,omitempty" xml:"publicip_id"`
 
 	// VPC的名称。
-	VpcName *string `json:"vpc_name,omitempty"`
+	VpcName *string `json:"vpc_name,omitempty" xml:"vpc_name"`
 
 	// 计费模式，0表示按需计费，1表示包年/包月计费。
-	ChargingMode *int32 `json:"charging_mode,omitempty"`
+	ChargingMode *int32 `json:"charging_mode,omitempty" xml:"charging_mode"`
 
 	// VPC ID。
-	VpcId *string `json:"vpc_id,omitempty"`
+	VpcId *string `json:"vpc_id,omitempty" xml:"vpc_id"`
 
 	// 子网ID。
-	SubnetId *string `json:"subnet_id,omitempty"`
+	SubnetId *string `json:"subnet_id,omitempty" xml:"subnet_id"`
 
 	// 安全组ID。
-	SecurityGroupId *string `json:"security_group_id,omitempty"`
+	SecurityGroupId *string `json:"security_group_id,omitempty" xml:"security_group_id"`
 
 	// 创建时间。格式为：2017-03-31T12:24:46.297Z
-	CreatedAt *string `json:"created_at,omitempty"`
+	CreatedAt *string `json:"created_at,omitempty" xml:"created_at"`
 
 	// Redis缓存实例开启公网访问功能时，是否选择支持ssl。 - true：开启 - false：不开启
-	EnableSsl *bool `json:"enable_ssl,omitempty"`
+	EnableSsl *bool `json:"enable_ssl,omitempty" xml:"enable_ssl"`
 
 	// 总内存，单位：MB。
-	MaxMemory *int32 `json:"max_memory,omitempty"`
+	MaxMemory *int32 `json:"max_memory,omitempty" xml:"max_memory"`
 
 	// 已使用的内存，单位：MB。
-	UsedMemory *int32 `json:"used_memory,omitempty"`
+	UsedMemory *int32 `json:"used_memory,omitempty" xml:"used_memory"`
 
 	// Redis缓存实例绑定的弹性IP地址。 如果未开启公网访问功能，该字段值为null。
-	PublicipAddress *string `json:"publicip_address,omitempty"`
+	PublicipAddress *string `json:"publicip_address,omitempty" xml:"publicip_address"`
 
 	// 缓存容量（G Byte）。
-	Capacity *int32 `json:"capacity,omitempty"`
+	Capacity *int32 `json:"capacity,omitempty" xml:"capacity"`
 
 	// 小规格缓存容量（G Byte）。
-	CapacityMinor *string `json:"capacity_minor,omitempty"`
+	CapacityMinor *string `json:"capacity_minor,omitempty" xml:"capacity_minor"`
 
 	// 订单ID，仅在创建包周期实例时返回。按需实例时此值为null
-	OrderId *string `json:"order_id,omitempty"`
+	OrderId *string `json:"order_id,omitempty" xml:"order_id"`
 
 	// 维护时间窗开始时间，为UTC时间，格式为HH:mm:ss。
-	MaintainBegin *string `json:"maintain_begin,omitempty"`
+	MaintainBegin *string `json:"maintain_begin,omitempty" xml:"maintain_begin"`
 
 	// 维护时间窗结束时间，为UTC时间，格式为HH:mm:ss。
-	MaintainEnd *string `json:"maintain_end,omitempty"`
+	MaintainEnd *string `json:"maintain_end,omitempty" xml:"maintain_end"`
 
 	// 缓存引擎。
-	Engine *string `json:"engine,omitempty"`
+	Engine *string `json:"engine,omitempty" xml:"engine"`
 
 	// 缓存版本。
-	EngineVersion *string `json:"engine_version,omitempty"`
+	EngineVersion *string `json:"engine_version,omitempty" xml:"engine_version"`
 
 	// 实例是否存在升级任务。 - true：存在 - false：不存在
-	ServiceUpgrade *bool `json:"service_upgrade,omitempty"`
+	ServiceUpgrade *bool `json:"service_upgrade,omitempty" xml:"service_upgrade"`
 
 	// 是否允许免密码访问缓存实例。 - true：该实例无需密码即可访问。 - false：该实例必须通过密码认证才能访问。
-	NoPasswordAccess *string `json:"no_password_access,omitempty"`
+	NoPasswordAccess *string `json:"no_password_access,omitempty" xml:"no_password_access"`
 
 	// 升级任务的ID。 - 当service_upgrade为true时，为升级任务的ID。 - 当service_upgrade为false时，该参数为空。
-	ServiceTaskId *string `json:"service_task_id,omitempty"`
+	ServiceTaskId *string `json:"service_task_id,omitempty" xml:"service_task_id"`
 
 	// 连接缓存实例的IP地址。如果是集群实例，返回多个IP地址，使用逗号分隔。如：192.168.0.1，192.168.0.2。
-	Ip *string `json:"ip,omitempty"`
+	Ip *string `json:"ip,omitempty" xml:"ip"`
 
 	// 通过密码认证访问缓存实例的认证用户名。
-	AccessUser *string `json:"access_user,omitempty"`
+	AccessUser *string `json:"access_user,omitempty" xml:"access_user"`
 
 	// 实例ID。
-	InstanceId *string `json:"instance_id,omitempty"`
+	InstanceId *string `json:"instance_id,omitempty" xml:"instance_id"`
 
 	// Redis缓存实例是否开启公网访问功能。 - true：开启 - false：不开启
-	EnablePublicip *bool `json:"enable_publicip,omitempty"`
+	EnablePublicip *bool `json:"enable_publicip,omitempty" xml:"enable_publicip"`
 
 	// 缓存的端口。
-	Port *int32 `json:"port,omitempty"`
+	Port *int32 `json:"port,omitempty" xml:"port"`
 
 	// 用户id。
-	UserId *string `json:"user_id,omitempty"`
+	UserId *string `json:"user_id,omitempty" xml:"user_id"`
 
 	// 用户名。
-	UserName *string `json:"user_name,omitempty"`
+	UserName *string `json:"user_name,omitempty" xml:"user_name"`
 
 	// 实例的域名。
-	DomainName *string `json:"domain_name,omitempty"`
+	DomainName *string `json:"domain_name,omitempty" xml:"domain_name"`
 
 	// 实例的只读域名，只有主备实例有该字段。
-	ReadonlyDomainName *string `json:"readonly_domain_name,omitempty"`
+	ReadonlyDomainName *string `json:"readonly_domain_name,omitempty" xml:"readonly_domain_name"`
 
 	// 实例名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 产品规格编码。
-	SpecCode *string `json:"spec_code,omitempty"`
+	SpecCode *string `json:"spec_code,omitempty" xml:"spec_code"`
 
 	// 实例状态。详细状态说明见[缓存实例状态说明](https://support.huaweicloud.com/api-dcs/dcs-api-0312047.html)。
-	Status *string `json:"status,omitempty"`
+	Status *string `json:"status,omitempty" xml:"status"`
 
 	// 实例标签键值。
-	Tags *[]ResourceTag `json:"tags,omitempty"`
+	Tags *[]ResourceTag `json:"tags,omitempty" xml:"tags"`
 
 	// 企业项目ID。
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
 
 	// 实例描述备注
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 实例CPU类型，通常为x86_64或aarch64
-	CpuType *string `json:"cpu_type,omitempty"`
+	CpuType *string `json:"cpu_type,omitempty" xml:"cpu_type"`
 
 	// 有资源的可用区编码。
-	AzCodes *[]string `json:"az_codes,omitempty"`
+	AzCodes *[]string `json:"az_codes,omitempty" xml:"az_codes"`
 
-	Features *Features `json:"features,omitempty"`
+	Features *Features `json:"features,omitempty" xml:"features"`
 
 	// 实例子状态。
-	SubStatus *string `json:"sub_status,omitempty"`
+	SubStatus *string `json:"sub_status,omitempty" xml:"sub_status"`
 }
 
 func (o InstanceListInfo) String() string {

@@ -10,15 +10,15 @@ import (
 type DebugCaseRequest struct {
 
 	// 测试工程id
-	TestSuiteId int32 `json:"test_suite_id"`
+	TestSuiteId int32 `json:"test_suite_id" xml:"test_suite_id"`
 
 	// 任务id
-	TaskId int32 `json:"task_id"`
+	TaskId int32 `json:"task_id" xml:"task_id"`
 
 	// 用例id
-	CaseId int32 `json:"case_id"`
+	CaseId int32 `json:"case_id" xml:"case_id"`
 
-	Body *DebugCaseRequestBody `json:"body,omitempty"`
+	Body *DebugCaseRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o DebugCaseRequest) String() string {

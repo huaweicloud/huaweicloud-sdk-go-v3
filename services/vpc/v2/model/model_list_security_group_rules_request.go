@@ -10,13 +10,13 @@ import (
 type ListSecurityGroupRulesRequest struct {
 
 	// 功能说明：分页查询起始的资源ID，为空时查询第一页
-	Marker *string `json:"marker,omitempty"`
+	Marker *string `json:"marker,omitempty" xml:"marker"`
 
 	// 每页返回的个数
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 安全组ID
-	SecurityGroupId *string `json:"security_group_id,omitempty"`
+	SecurityGroupId *string `json:"security_group_id,omitempty" xml:"security_group_id"`
 }
 
 func (o ListSecurityGroupRulesRequest) String() string {

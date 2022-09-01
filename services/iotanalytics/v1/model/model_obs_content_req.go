@@ -10,13 +10,13 @@ import (
 type ObsContentReq struct {
 
 	// 桶名称
-	BucketName string `json:"bucket_name"`
+	BucketName string `json:"bucket_name" xml:"bucket_name"`
 
 	// 租户的AK
-	Ak string `json:"ak"`
+	Ak string `json:"ak" xml:"ak"`
 
 	// 租户的SK
-	Sk string `json:"sk"`
+	Sk string `json:"sk" xml:"sk"`
 }
 
 func (o ObsContentReq) String() string {

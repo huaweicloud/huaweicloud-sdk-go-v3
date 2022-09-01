@@ -10,10 +10,10 @@ import (
 type ListInstanceSnapshotsResponse struct {
 
 	// 快照总数。
-	Count *int32 `json:"count,omitempty"`
+	Count *int32 `json:"count,omitempty" xml:"count"`
 
 	// 快照列表。
-	Snapshots      *[]InstanceSnapshotView `json:"snapshots,omitempty"`
+	Snapshots      *[]InstanceSnapshotView `json:"snapshots,omitempty" xml:"snapshots"`
 	HttpStatusCode int                     `json:"-"`
 }
 

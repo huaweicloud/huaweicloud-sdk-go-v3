@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type UpdateProtectionGroupNameResponse struct {
-	ServerGroup    *ShowProtectionGroupParams `json:"server_group,omitempty"`
+	ServerGroup    *ShowProtectionGroupParams `json:"server_group,omitempty" xml:"server_group"`
 	HttpStatusCode int                        `json:"-"`
 }
 

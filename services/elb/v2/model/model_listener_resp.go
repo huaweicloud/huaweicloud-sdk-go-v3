@@ -13,63 +13,63 @@ import (
 type ListenerResp struct {
 
 	// 监听器ID
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 监听器所在的项目ID。
-	TenantId string `json:"tenant_id"`
+	TenantId string `json:"tenant_id" xml:"tenant_id"`
 
 	// 监听器名称。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 监听器的描述信息
-	Description string `json:"description"`
+	Description string `json:"description" xml:"description"`
 
 	// 监听器的管理状态。只支持设定为true，该字段的值无实际意义。
-	AdminStateUp bool `json:"admin_state_up"`
+	AdminStateUp bool `json:"admin_state_up" xml:"admin_state_up"`
 
 	// 监听器绑定的负载均衡器ID的列表。
-	Loadbalancers []ResourceList `json:"loadbalancers"`
+	Loadbalancers []ResourceList `json:"loadbalancers" xml:"loadbalancers"`
 
 	// 监听器的最大连接数。该字段为预留字段，暂未启用。默认为-1。
-	ConnectionLimit int32 `json:"connection_limit"`
+	ConnectionLimit int32 `json:"connection_limit" xml:"connection_limit"`
 
 	// HTTP2功能的开启状态。该字段只有当监听器的协议是TERMINATED_HTTPS时生效。
-	Http2Enable bool `json:"http2_enable"`
+	Http2Enable bool `json:"http2_enable" xml:"http2_enable"`
 
 	// 监听器的监听协议
-	Protocol ListenerRespProtocol `json:"protocol"`
+	Protocol ListenerRespProtocol `json:"protocol" xml:"protocol"`
 
 	// 监听器的监听端口。
-	ProtocolPort int32 `json:"protocol_port"`
+	ProtocolPort int32 `json:"protocol_port" xml:"protocol_port"`
 
 	// 监听器的默认后端云服务器组ID。当请求没有匹配的转发策略时，转发到默认后端云服务器上处理。
-	DefaultPoolId string `json:"default_pool_id"`
+	DefaultPoolId string `json:"default_pool_id" xml:"default_pool_id"`
 
 	// 监听器使用的服务器证书ID。
-	DefaultTlsContainerRef string `json:"default_tls_container_ref"`
+	DefaultTlsContainerRef string `json:"default_tls_container_ref" xml:"default_tls_container_ref"`
 
 	// 监听器使用的CA证书ID。
-	ClientCaTlsContainerRef string `json:"client_ca_tls_container_ref"`
+	ClientCaTlsContainerRef string `json:"client_ca_tls_container_ref" xml:"client_ca_tls_container_ref"`
 
 	// 监听器使用的SNI证书（带域名的服务器证书）ID的列表。
-	SniContainerRefs []string `json:"sni_container_refs"`
+	SniContainerRefs []string `json:"sni_container_refs" xml:"sni_container_refs"`
 
 	// 监听器的标签。
-	Tags []string `json:"tags"`
+	Tags []string `json:"tags" xml:"tags"`
 
 	// 监听器的创建时间。
-	CreatedAt string `json:"created_at"`
+	CreatedAt string `json:"created_at" xml:"created_at"`
 
 	// 监听器的更新时间。
-	UpdatedAt string `json:"updated_at"`
+	UpdatedAt string `json:"updated_at" xml:"updated_at"`
 
-	InsertHeaders *InsertHeader `json:"insert_headers"`
+	InsertHeaders *InsertHeader `json:"insert_headers" xml:"insert_headers"`
 
 	// 监听器所在的项目ID。
-	ProjectId string `json:"project_id"`
+	ProjectId string `json:"project_id" xml:"project_id"`
 
 	// 监听器使用的安全策略，仅对TERMINATED_HTTPS协议类型的监听器有效，且默认值为tls-1-0。  取值包括：tls-1-0, tls-1-1, tls-1-2, tls-1-2-strict多种安全策略
-	TlsCiphersPolicy string `json:"tls_ciphers_policy"`
+	TlsCiphersPolicy string `json:"tls_ciphers_policy" xml:"tls_ciphers_policy"`
 }
 
 func (o ListenerResp) String() string {

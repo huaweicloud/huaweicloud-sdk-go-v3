@@ -10,13 +10,13 @@ import (
 type NetAddress struct {
 
 	// **参数说明**：服务的对应IP
-	Ip *string `json:"ip,omitempty"`
+	Ip *string `json:"ip,omitempty" xml:"ip"`
 
 	// **参数说明**：服务对应端口
-	Port *int32 `json:"port,omitempty"`
+	Port *int32 `json:"port,omitempty" xml:"port"`
 
 	// **参数说明**：服务对应的域名
-	Domain *string `json:"domain,omitempty"`
+	Domain *string `json:"domain,omitempty" xml:"domain"`
 }
 
 func (o NetAddress) String() string {

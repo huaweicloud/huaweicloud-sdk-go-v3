@@ -10,10 +10,10 @@ import (
 type AgencyAssumedbyUserDomain struct {
 
 	// 被委托方B的账号名称。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 被委托方B的账号ID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 }
 
 func (o AgencyAssumedbyUserDomain) String() string {

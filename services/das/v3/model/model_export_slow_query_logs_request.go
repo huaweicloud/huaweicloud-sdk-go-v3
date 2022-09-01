@@ -13,25 +13,25 @@ import (
 type ExportSlowQueryLogsRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 数据库类型。支持MySQL、GaussDB(for MySQL)、PostgreSQL。
-	DatastoreType string `json:"datastore_type"`
+	DatastoreType string `json:"datastore_type" xml:"datastore_type"`
 
 	// 开始时间（Unix timestamp），单位：毫秒。
-	StartAt int64 `json:"start_at"`
+	StartAt int64 `json:"start_at" xml:"start_at"`
 
 	// 结束时间（Unix timestamp），单位：毫秒。
-	EndAt int64 `json:"end_at"`
+	EndAt int64 `json:"end_at" xml:"end_at"`
 
 	// 每页记录数。最大为2000。
-	Limit int32 `json:"limit"`
+	Limit int32 `json:"limit" xml:"limit"`
 
 	// 指定一个标识符。获取第一页时不用赋值，获取下一页时取上页查询结果的返回值。
-	Marker *string `json:"marker,omitempty"`
+	Marker *string `json:"marker,omitempty" xml:"marker"`
 
 	// 请求语言类型。
-	XLanguage *ExportSlowQueryLogsRequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *ExportSlowQueryLogsRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 }
 
 func (o ExportSlowQueryLogsRequest) String() string {

@@ -9,25 +9,25 @@ import (
 type ApplicationItem struct {
 
 	// 创建application的名字。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 应用平台。
-	Platform string `json:"platform"`
+	Platform string `json:"platform" xml:"platform"`
 
 	// 创建application的时间。时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
-	CreateTime string `json:"create_time"`
+	CreateTime string `json:"create_time" xml:"create_time"`
 
 	// Application的唯一资源标识。
-	ApplicationUrn string `json:"application_urn"`
+	ApplicationUrn string `json:"application_urn" xml:"application_urn"`
 
 	// Application的唯一标识ID。
-	ApplicationId string `json:"application_id"`
+	ApplicationId string `json:"application_id" xml:"application_id"`
 
 	// 应用平台是否启用。
-	Enabled string `json:"enabled"`
+	Enabled string `json:"enabled" xml:"enabled"`
 
 	// 苹果证书过期时间APNS、APNS_SANDBOX平台特有属性时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
-	AppleCertificateExpirationDate *string `json:"apple_certificate_expiration_date,omitempty"`
+	AppleCertificateExpirationDate *string `json:"apple_certificate_expiration_date,omitempty" xml:"apple_certificate_expiration_date"`
 }
 
 func (o ApplicationItem) String() string {

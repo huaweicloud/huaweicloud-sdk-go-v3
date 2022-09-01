@@ -9,7 +9,7 @@ import (
 type BatchRemoveOrgsFromChannelRequestBody struct {
 
 	// 组织名称列表
-	OrgNames []string `json:"org_names"`
+	OrgNames []string `json:"org_names" xml:"org_names"`
 }
 
 func (o BatchRemoveOrgsFromChannelRequestBody) String() string {

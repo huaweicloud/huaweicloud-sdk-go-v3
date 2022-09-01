@@ -8,12 +8,12 @@ import (
 
 // 终端设备动态属性
 type ValueInTwin struct {
-	Excepted *Excepted `json:"excepted"`
+	Excepted *Excepted `json:"excepted" xml:"excepted"`
 
 	// 动态属性的期望信息
-	Optional *bool `json:"optional,omitempty"`
+	Optional *bool `json:"optional,omitempty" xml:"optional"`
 
-	Metadata *Metadata `json:"metadata,omitempty"`
+	Metadata *Metadata `json:"metadata,omitempty" xml:"metadata"`
 }
 
 func (o ValueInTwin) String() string {

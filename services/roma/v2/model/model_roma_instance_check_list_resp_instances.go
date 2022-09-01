@@ -12,73 +12,73 @@ import (
 type RomaInstanceCheckListRespInstances struct {
 
 	// 实例ID
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 实例名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 实例描述
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 实例规格ID
-	FlavorId *string `json:"flavor_id,omitempty"`
+	FlavorId *string `json:"flavor_id,omitempty" xml:"flavor_id"`
 
 	// 实例规格类型
-	FlavorType *string `json:"flavor_type,omitempty"`
+	FlavorType *string `json:"flavor_type,omitempty" xml:"flavor_type"`
 
 	// CPU架构类型，取值如下： - x86_64: x86架构 - aarch64: arm架构
-	CpuArch *RomaInstanceCheckListRespInstancesCpuArch `json:"cpu_arch,omitempty"`
+	CpuArch *RomaInstanceCheckListRespInstancesCpuArch `json:"cpu_arch,omitempty" xml:"cpu_arch"`
 
 	// 实例指定虚拟私有云ID
-	VpcId *string `json:"vpc_id,omitempty"`
+	VpcId *string `json:"vpc_id,omitempty" xml:"vpc_id"`
 
 	// 实例指定虚拟私有云子网ID
-	SubnetId *string `json:"subnet_id,omitempty"`
+	SubnetId *string `json:"subnet_id,omitempty" xml:"subnet_id"`
 
 	// 实例指定安全组ID
-	SecurityGroupId *string `json:"security_group_id,omitempty"`
+	SecurityGroupId *string `json:"security_group_id,omitempty" xml:"security_group_id"`
 
 	// 是否开启公网访问，开启时publicip_id字段必填。
-	PublicipEnable *bool `json:"publicip_enable,omitempty"`
+	PublicipEnable *bool `json:"publicip_enable,omitempty" xml:"publicip_enable"`
 
 	// 实例绑定的弹性公网地址ID
-	PublicipId *string `json:"publicip_id,omitempty"`
+	PublicipId *string `json:"publicip_id,omitempty" xml:"publicip_id"`
 
 	// 实例绑定的弹性公网地址
-	PublicipAddress *string `json:"publicip_address,omitempty"`
+	PublicipAddress *string `json:"publicip_address,omitempty" xml:"publicip_address"`
 
 	// 实例运行状态
-	Status *RomaInstanceCheckListRespInstancesStatus `json:"status,omitempty"`
+	Status *RomaInstanceCheckListRespInstancesStatus `json:"status,omitempty" xml:"status"`
 
 	// 错误码
-	ErrorCode *string `json:"error_code,omitempty"`
+	ErrorCode *string `json:"error_code,omitempty" xml:"error_code"`
 
 	// 错误消息
-	ErrorMsg *string `json:"error_msg,omitempty"`
+	ErrorMsg *string `json:"error_msg,omitempty" xml:"error_msg"`
 
 	// 实例计费模式
-	ChargeType *RomaInstanceCheckListRespInstancesChargeType `json:"charge_type,omitempty"`
+	ChargeType *RomaInstanceCheckListRespInstancesChargeType `json:"charge_type,omitempty" xml:"charge_type"`
 
 	// 租户项目ID
-	ProjectId *string `json:"project_id,omitempty"`
+	ProjectId *string `json:"project_id,omitempty" xml:"project_id"`
 
 	// 创建时间
-	CreateTime *string `json:"create_time,omitempty"`
+	CreateTime *string `json:"create_time,omitempty" xml:"create_time"`
 
 	// 更新时间
-	UpdateTime *string `json:"update_time,omitempty"`
+	UpdateTime *string `json:"update_time,omitempty" xml:"update_time"`
 
 	// 运维开始时间
-	MaintainBegin *string `json:"maintain_begin,omitempty"`
+	MaintainBegin *string `json:"maintain_begin,omitempty" xml:"maintain_begin"`
 
 	// 运维结束时间
-	MaintainEnd *string `json:"maintain_end,omitempty"`
+	MaintainEnd *string `json:"maintain_end,omitempty" xml:"maintain_end"`
 
 	// 创实例使用的可用区列表
-	AvailableZoneIds *[]string `json:"available_zone_ids,omitempty"`
+	AvailableZoneIds *[]string `json:"available_zone_ids,omitempty" xml:"available_zone_ids"`
 
 	// 实例所属企业项目ID
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
 }
 
 func (o RomaInstanceCheckListRespInstances) String() string {

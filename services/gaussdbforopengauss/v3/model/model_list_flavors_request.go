@@ -10,22 +10,22 @@ import (
 type ListFlavorsRequest struct {
 
 	// 语言
-	XLanguage *string `json:"X-Language,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
 
 	// 数据库版本号。
-	Version *string `json:"version,omitempty"`
+	Version *string `json:"version,omitempty" xml:"version"`
 
 	// 规格编码
-	SpecCode *string `json:"spec_code,omitempty"`
+	SpecCode *string `json:"spec_code,omitempty" xml:"spec_code"`
 
 	// 实例类型  集中式centralization_standard  分布式enterprise
-	HaMode *string `json:"ha_mode,omitempty"`
+	HaMode *string `json:"ha_mode,omitempty" xml:"ha_mode"`
 
 	// 查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 }
 
 func (o ListFlavorsRequest) String() string {

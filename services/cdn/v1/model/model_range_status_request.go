@@ -12,7 +12,7 @@ import (
 type RangeStatusRequest struct {
 
 	// range状态（\"off\"/\"on\"）
-	RangeStatus RangeStatusRequestRangeStatus `json:"range_status"`
+	RangeStatus RangeStatusRequestRangeStatus `json:"range_status" xml:"range_status"`
 }
 
 func (o RangeStatusRequest) String() string {

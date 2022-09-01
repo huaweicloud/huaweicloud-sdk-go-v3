@@ -13,24 +13,24 @@ import (
 type UpdateAccessConfigResponse struct {
 
 	// 日志接入ID
-	AccessConfigId *string `json:"access_config_id,omitempty"`
+	AccessConfigId *string `json:"access_config_id,omitempty" xml:"access_config_id"`
 
 	// 日志接入名称
-	AccessConfigName *string `json:"access_config_name,omitempty"`
+	AccessConfigName *string `json:"access_config_name,omitempty" xml:"access_config_name"`
 
 	// 日志接入类型。AGENT：主机接入
-	AccessConfigType *UpdateAccessConfigResponseAccessConfigType `json:"access_config_type,omitempty"`
+	AccessConfigType *UpdateAccessConfigResponseAccessConfigType `json:"access_config_type,omitempty" xml:"access_config_type"`
 
 	// 创建时间
-	CreateTime *int64 `json:"create_time,omitempty"`
+	CreateTime *int64 `json:"create_time,omitempty" xml:"create_time"`
 
-	AccessConfigDetail *AccessConfigDeatil `json:"access_config_detail,omitempty"`
+	AccessConfigDetail *AccessConfigDeatil `json:"access_config_detail,omitempty" xml:"access_config_detail"`
 
-	LogInfo *AccessConfigQueryLogInfo `json:"log_info,omitempty"`
+	LogInfo *AccessConfigQueryLogInfo `json:"log_info,omitempty" xml:"log_info"`
 
-	HostGroupInfo *AccessConfigHostGroupIdList `json:"host_group_info,omitempty"`
+	HostGroupInfo *AccessConfigHostGroupIdList `json:"host_group_info,omitempty" xml:"host_group_info"`
 
-	AccessConfigTag *[]AccessConfigTag `json:"access_config_tag,omitempty"`
+	AccessConfigTag *[]AccessConfigTag `json:"access_config_tag,omitempty" xml:"access_config_tag"`
 	HttpStatusCode  int                `json:"-"`
 }
 

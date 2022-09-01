@@ -10,10 +10,10 @@ import (
 type Hypervisor struct {
 
 	// hypervisor类型
-	HypervisorType *string `json:"hypervisor_type,omitempty"`
+	HypervisorType *string `json:"hypervisor_type,omitempty" xml:"hypervisor_type"`
 
 	// hypervisor csd信息
-	CsdHypervisor *string `json:"csd_hypervisor,omitempty"`
+	CsdHypervisor *string `json:"csd_hypervisor,omitempty" xml:"csd_hypervisor"`
 }
 
 func (o Hypervisor) String() string {

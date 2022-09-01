@@ -12,21 +12,21 @@ import (
 type MpeCallBackReq struct {
 
 	// 任务类型
-	TaskType *MpeCallBackReqTaskType `json:"task_type,omitempty"`
+	TaskType *MpeCallBackReqTaskType `json:"task_type,omitempty" xml:"task_type"`
 
 	// 任务ID。
-	TaskId *string `json:"task_id,omitempty"`
+	TaskId *string `json:"task_id,omitempty" xml:"task_id"`
 
 	// 任务状态。
-	Status *string `json:"status,omitempty"`
+	Status *string `json:"status,omitempty" xml:"status"`
 
 	// 任务完成进度百分比值。
-	CompleteRatio *int32 `json:"complete_ratio,omitempty"`
+	CompleteRatio *int32 `json:"complete_ratio,omitempty" xml:"complete_ratio"`
 
 	// 任务执行描述。
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
-	MetaData *MpeMetaData `json:"meta_data,omitempty"`
+	MetaData *MpeMetaData `json:"meta_data,omitempty" xml:"meta_data"`
 }
 
 func (o MpeCallBackReq) String() string {

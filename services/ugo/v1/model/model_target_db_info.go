@@ -10,16 +10,16 @@ import (
 type TargetDbInfo struct {
 
 	// 用户名。
-	UserName string `json:"user_name"`
+	UserName string `json:"user_name" xml:"user_name"`
 
 	// 用户密码。
-	Password string `json:"password"`
+	Password string `json:"password" xml:"password"`
 
 	// service名称。
-	ServiceName string `json:"service_name"`
+	ServiceName string `json:"service_name" xml:"service_name"`
 
 	// RDS数据库的实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 }
 
 func (o TargetDbInfo) String() string {

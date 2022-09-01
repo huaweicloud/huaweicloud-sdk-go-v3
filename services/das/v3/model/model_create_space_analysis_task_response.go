@@ -10,7 +10,7 @@ import (
 type CreateSpaceAnalysisTaskResponse struct {
 
 	// 执行时间，毫秒为单位的时间戳
-	ExecutionTime  *int64 `json:"execution_time,omitempty"`
+	ExecutionTime  *int64 `json:"execution_time,omitempty" xml:"execution_time"`
 	HttpStatusCode int    `json:"-"`
 }
 

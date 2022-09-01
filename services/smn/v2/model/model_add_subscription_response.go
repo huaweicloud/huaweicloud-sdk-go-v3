@@ -10,10 +10,10 @@ import (
 type AddSubscriptionResponse struct {
 
 	// 请求的唯一标识ID。
-	RequestId *string `json:"request_id,omitempty"`
+	RequestId *string `json:"request_id,omitempty" xml:"request_id"`
 
 	// 订阅者的唯一资源标识。
-	SubscriptionUrn *string `json:"subscription_urn,omitempty"`
+	SubscriptionUrn *string `json:"subscription_urn,omitempty" xml:"subscription_urn"`
 	HttpStatusCode  int     `json:"-"`
 }
 

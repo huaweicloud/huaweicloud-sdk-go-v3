@@ -13,12 +13,12 @@ import (
 type BatchListStructDetailRequest struct {
 
 	// 数据库支持迁移对象类型
-	Type BatchListStructDetailRequestType `json:"type"`
+	Type BatchListStructDetailRequestType `json:"type" xml:"type"`
 
 	// 请求语言类型
-	XLanguage *BatchListStructDetailRequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *BatchListStructDetailRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 
-	Body *BatchQueryJobReqPage `json:"body,omitempty"`
+	Body *BatchQueryJobReqPage `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchListStructDetailRequest) String() string {

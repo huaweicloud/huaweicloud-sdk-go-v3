@@ -9,9 +9,9 @@ import (
 type AudioFile struct {
 
 	// 音轨信息
-	TracksInfo *[]TracksInfo `json:"tracks_info,omitempty"`
+	TracksInfo *[]TracksInfo `json:"tracks_info,omitempty" xml:"tracks_info"`
 
-	Input *ObsObjInfo `json:"input,omitempty"`
+	Input *ObsObjInfo `json:"input,omitempty" xml:"input"`
 }
 
 func (o AudioFile) String() string {

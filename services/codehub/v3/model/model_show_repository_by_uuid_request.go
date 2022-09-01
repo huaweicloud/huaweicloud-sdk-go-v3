@@ -10,7 +10,7 @@ import (
 type ShowRepositoryByUuidRequest struct {
 
 	// 仓库的uuid
-	RepositoryUuid string `json:"repository_uuid"`
+	RepositoryUuid string `json:"repository_uuid" xml:"repository_uuid"`
 }
 
 func (o ShowRepositoryByUuidRequest) String() string {

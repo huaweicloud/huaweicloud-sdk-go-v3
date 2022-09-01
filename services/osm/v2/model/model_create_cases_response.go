@@ -10,7 +10,7 @@ import (
 type CreateCasesResponse struct {
 
 	// 工单id
-	IncidentId     *string `json:"incident_id,omitempty"`
+	IncidentId     *string `json:"incident_id,omitempty" xml:"incident_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

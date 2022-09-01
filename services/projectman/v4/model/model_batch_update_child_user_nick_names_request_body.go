@@ -9,7 +9,7 @@ import (
 type BatchUpdateChildUserNickNamesRequestBody struct {
 
 	// 修改的用户列表
-	Users []UpdateChildUserNickNameRequestBody `json:"users"`
+	Users []UpdateChildUserNickNameRequestBody `json:"users" xml:"users"`
 }
 
 func (o BatchUpdateChildUserNickNamesRequestBody) String() string {

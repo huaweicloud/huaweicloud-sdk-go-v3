@@ -9,13 +9,13 @@ import (
 type ImUnreadV2 struct {
 
 	// 状态
-	Status *int32 `json:"status,omitempty"`
+	Status *int32 `json:"status,omitempty" xml:"status"`
 
 	// 工单id
-	IncidentId *string `json:"incident_id,omitempty"`
+	IncidentId *string `json:"incident_id,omitempty" xml:"incident_id"`
 
 	// 未读数量
-	UnreadNum *int32 `json:"unread_num,omitempty"`
+	UnreadNum *int32 `json:"unread_num,omitempty" xml:"unread_num"`
 }
 
 func (o ImUnreadV2) String() string {

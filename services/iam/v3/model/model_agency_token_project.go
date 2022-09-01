@@ -10,12 +10,12 @@ import (
 type AgencyTokenProject struct {
 
 	// 委托方A的项目名称。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 委托方A的项目ID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
-	Domain *AgencyTokenProjectDomain `json:"domain"`
+	Domain *AgencyTokenProjectDomain `json:"domain" xml:"domain"`
 }
 
 func (o AgencyTokenProject) String() string {

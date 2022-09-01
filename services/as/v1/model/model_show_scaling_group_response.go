@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowScalingGroupResponse struct {
-	ScalingGroup   *ScalingGroups `json:"scaling_group,omitempty"`
+	ScalingGroup   *ScalingGroups `json:"scaling_group,omitempty" xml:"scaling_group"`
 	HttpStatusCode int            `json:"-"`
 }
 

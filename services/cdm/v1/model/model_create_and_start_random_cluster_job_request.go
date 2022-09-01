@@ -10,9 +10,9 @@ import (
 type CreateAndStartRandomClusterJobRequest struct {
 
 	// 请求语言。
-	XLanguage string `json:"X-Language"`
+	XLanguage string `json:"X-Language" xml:"X-Language"`
 
-	Body *CdmRandomCreateAndStartJobJsonReq `json:"body,omitempty"`
+	Body *CdmRandomCreateAndStartJobJsonReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateAndStartRandomClusterJobRequest) String() string {

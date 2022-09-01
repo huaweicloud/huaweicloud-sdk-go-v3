@@ -10,10 +10,10 @@ import (
 type ShowMasterAddressResponse struct {
 
 	// region的id，英文名称。
-	RegionName *string `json:"region_name,omitempty"`
+	RegionName *string `json:"region_name,omitempty" xml:"region_name"`
 
 	// APMmaster服务对对外暴露的地址，提供服务注册和心跳上报。
-	MasterAddress  *string `json:"master_address,omitempty"`
+	MasterAddress  *string `json:"master_address,omitempty" xml:"master_address"`
 	HttpStatusCode int     `json:"-"`
 }
 

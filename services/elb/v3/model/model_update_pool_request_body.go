@@ -8,7 +8,7 @@ import (
 
 // This is a auto create Body Object
 type UpdatePoolRequestBody struct {
-	Pool *UpdatePoolOption `json:"pool"`
+	Pool *UpdatePoolOption `json:"pool" xml:"pool"`
 }
 
 func (o UpdatePoolRequestBody) String() string {

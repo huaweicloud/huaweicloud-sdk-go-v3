@@ -12,13 +12,13 @@ import (
 type Rule struct {
 
 	// 回收类型，date_rule、tag_rule
-	Template RuleTemplate `json:"template"`
+	Template RuleTemplate `json:"template" xml:"template"`
 
 	// template是date_rule时，设置params为{\"days\": \"xxx\"} template是tag_rule时，设置params为{\"num\": \"xxx\"}
-	Params *interface{} `json:"params"`
+	Params *interface{} `json:"params" xml:"params"`
 
 	// 例外镜像
-	TagSelectors []TagSelector `json:"tag_selectors"`
+	TagSelectors []TagSelector `json:"tag_selectors" xml:"tag_selectors"`
 }
 
 func (o Rule) String() string {

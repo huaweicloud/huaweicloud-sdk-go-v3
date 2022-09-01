@@ -10,10 +10,10 @@ import (
 type DeleteRepoMemberRequest struct {
 
 	// 仓库成员id
-	MemberId string `json:"member_id"`
+	MemberId string `json:"member_id" xml:"member_id"`
 
 	// 仓库uuid
-	RepositoryUuid string `json:"repository_uuid"`
+	RepositoryUuid string `json:"repository_uuid" xml:"repository_uuid"`
 }
 
 func (o DeleteRepoMemberRequest) String() string {

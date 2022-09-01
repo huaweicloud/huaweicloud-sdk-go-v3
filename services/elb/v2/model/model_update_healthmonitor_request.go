@@ -10,9 +10,9 @@ import (
 type UpdateHealthmonitorRequest struct {
 
 	// 健康检查id
-	HealthmonitorId string `json:"healthmonitor_id"`
+	HealthmonitorId string `json:"healthmonitor_id" xml:"healthmonitor_id"`
 
-	Body *UpdateHealthmonitorRequestBody `json:"body,omitempty"`
+	Body *UpdateHealthmonitorRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateHealthmonitorRequest) String() string {

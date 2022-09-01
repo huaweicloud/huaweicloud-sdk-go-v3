@@ -10,19 +10,19 @@ import (
 type ShowLogsRequest struct {
 
 	// 只支持单个域名，如：www.test1.com。
-	DomainName string `json:"domain_name"`
+	DomainName string `json:"domain_name" xml:"domain_name"`
 
 	// 查询开始时间，查询开始时间到开始时间+1天内的日志数据，取值范围是距离当前30天内。
-	QueryDate int64 `json:"query_date"`
+	QueryDate int64 `json:"query_date" xml:"query_date"`
 
 	// 单页最大数量，取值范围为1-10000。
-	PageSize *int32 `json:"page_size,omitempty"`
+	PageSize *int32 `json:"page_size,omitempty" xml:"page_size"`
 
 	// 当前查询第几页，取值范围为1-65535。
-	PageNumber *int32 `json:"page_number,omitempty"`
+	PageNumber *int32 `json:"page_number,omitempty" xml:"page_number"`
 
 	// 当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子账号调用接口时，该参数必传。
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
 }
 
 func (o ShowLogsRequest) String() string {

@@ -10,19 +10,19 @@ import (
 type ListTemplatesRequest struct {
 
 	// 模板名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 可用区
-	AvailabilityZone *string `json:"availability_zone,omitempty"`
+	AvailabilityZone *string `json:"availability_zone,omitempty" xml:"availability_zone"`
 
 	// Region ID
-	Region *string `json:"region,omitempty"`
+	Region *string `json:"region,omitempty" xml:"region"`
 
 	// 分页大小，不传值默认为50
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 偏移量，不传值默认为0
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 }
 
 func (o ListTemplatesRequest) String() string {

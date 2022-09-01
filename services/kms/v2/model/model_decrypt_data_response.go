@@ -10,13 +10,13 @@ import (
 type DecryptDataResponse struct {
 
 	// 密钥ID。
-	KeyId *string `json:"key_id,omitempty"`
+	KeyId *string `json:"key_id,omitempty" xml:"key_id"`
 
 	// 明文。
-	PlainText *string `json:"plain_text,omitempty"`
+	PlainText *string `json:"plain_text,omitempty" xml:"plain_text"`
 
 	// 明文的Base64值，在非对称加密场景下，若加密的明文中含有不可见字符，则解密结果以该值为准。
-	PlainTextBase64 *string `json:"plain_text_base64,omitempty"`
+	PlainTextBase64 *string `json:"plain_text_base64,omitempty" xml:"plain_text_base64"`
 	HttpStatusCode  int     `json:"-"`
 }
 

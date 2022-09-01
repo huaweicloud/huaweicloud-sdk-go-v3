@@ -10,9 +10,9 @@ import (
 type ListConfigurationTemplatesResponse struct {
 
 	// 总记录数。
-	Count *int32 `json:"count,omitempty"`
+	Count *int32 `json:"count,omitempty" xml:"count"`
 
-	Configurations *[]ListConfigurationsResult `json:"configurations,omitempty"`
+	Configurations *[]ListConfigurationsResult `json:"configurations,omitempty" xml:"configurations"`
 	HttpStatusCode int                         `json:"-"`
 }
 

@@ -10,9 +10,9 @@ import (
 type RunTaskRequest struct {
 
 	// 任务ID
-	TaskId string `json:"task_id"`
+	TaskId string `json:"task_id" xml:"task_id"`
 
-	Body *RunRequestV2 `json:"body,omitempty"`
+	Body *RunRequestV2 `json:"body,omitempty" xml:"body"`
 }
 
 func (o RunTaskRequest) String() string {

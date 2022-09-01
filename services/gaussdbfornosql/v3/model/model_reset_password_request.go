@@ -10,9 +10,9 @@ import (
 type ResetPasswordRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *ResetPasswordRequestBody `json:"body,omitempty"`
+	Body *ResetPasswordRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o ResetPasswordRequest) String() string {

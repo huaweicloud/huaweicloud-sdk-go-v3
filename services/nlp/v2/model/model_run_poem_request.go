@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RunPoemRequest struct {
-	Body *CreatePoem `json:"body,omitempty"`
+	Body *CreatePoem `json:"body,omitempty" xml:"body"`
 }
 
 func (o RunPoemRequest) String() string {

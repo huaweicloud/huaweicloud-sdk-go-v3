@@ -13,31 +13,31 @@ import (
 type ShowHotkeyTaskDetailsResponse struct {
 
 	// 热key分析记录ID
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 实例ID
-	InstanceId *string `json:"instance_id,omitempty"`
+	InstanceId *string `json:"instance_id,omitempty" xml:"instance_id"`
 
 	// 分析任务状态
-	Status *ShowHotkeyTaskDetailsResponseStatus `json:"status,omitempty"`
+	Status *ShowHotkeyTaskDetailsResponseStatus `json:"status,omitempty" xml:"status"`
 
 	// 分析方式
-	ScanType *ShowHotkeyTaskDetailsResponseScanType `json:"scan_type,omitempty"`
+	ScanType *ShowHotkeyTaskDetailsResponseScanType `json:"scan_type,omitempty" xml:"scan_type"`
 
 	// 分析任务创建时间,格式为：\"2020-06-15T02:21:18.669Z\"
-	CreatedAt *string `json:"created_at,omitempty"`
+	CreatedAt *string `json:"created_at,omitempty" xml:"created_at"`
 
 	// 分析任务开始时间,格式为：\"2020-06-15T02:21:18.669Z\"
-	StartedAt *string `json:"started_at,omitempty"`
+	StartedAt *string `json:"started_at,omitempty" xml:"started_at"`
 
 	// 分析任务结束时间,格式为：\"2020-06-15T02:21:18.669Z\"
-	FinishedAt *string `json:"finished_at,omitempty"`
+	FinishedAt *string `json:"finished_at,omitempty" xml:"finished_at"`
 
 	// 热key的数量
-	Num *int32 `json:"num,omitempty"`
+	Num *int32 `json:"num,omitempty" xml:"num"`
 
 	// 热key记录
-	Keys           *[]HotkeysBody `json:"keys,omitempty"`
+	Keys           *[]HotkeysBody `json:"keys,omitempty" xml:"keys"`
 	HttpStatusCode int            `json:"-"`
 }
 

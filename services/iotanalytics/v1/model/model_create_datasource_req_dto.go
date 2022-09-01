@@ -9,12 +9,12 @@ import (
 type CreateDatasourceReqDto struct {
 
 	// 数据源名称
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 数据源类型, 包括：IOTDA、API[、OBS、DIS、SMN、FUNCTION_GRAPH、MODEL_ARTS、DCS、KAFKA](tag:IoTA-Cloud-Only)、NODE
-	Type string `json:"type"`
+	Type string `json:"type" xml:"type"`
 
-	Content *ContentDetailReq `json:"content"`
+	Content *ContentDetailReq `json:"content" xml:"content"`
 }
 
 func (o CreateDatasourceReqDto) String() string {

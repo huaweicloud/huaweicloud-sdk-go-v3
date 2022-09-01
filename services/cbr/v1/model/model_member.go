@@ -13,28 +13,28 @@ import (
 type Member struct {
 
 	// 共享状态
-	Status MemberStatus `json:"status"`
+	Status MemberStatus `json:"status" xml:"status"`
 
 	// 共享时间，例如:\"2020-02-05T10:38:34.209782\"
-	CreatedAt *string `json:"created_at,omitempty"`
+	CreatedAt *string `json:"created_at,omitempty" xml:"created_at"`
 
 	// 更新时间，例如:\"2020-02-05T10:38:34.209782\"
-	UpdatedAt *string `json:"updated_at,omitempty"`
+	UpdatedAt *string `json:"updated_at,omitempty" xml:"updated_at"`
 
 	// 备份副本id
-	BackupId *string `json:"backup_id,omitempty"`
+	BackupId *string `json:"backup_id,omitempty" xml:"backup_id"`
 
 	// 接受的共享备份副本注册的镜像id
-	ImageId *string `json:"image_id,omitempty"`
+	ImageId *string `json:"image_id,omitempty" xml:"image_id"`
 
 	// 接受备份共享的项目id
-	DestProjectId *string `json:"dest_project_id,omitempty"`
+	DestProjectId *string `json:"dest_project_id,omitempty" xml:"dest_project_id"`
 
 	// 目标端接受共享备份的存储库id
-	VaultId *string `json:"vault_id,omitempty"`
+	VaultId *string `json:"vault_id,omitempty" xml:"vault_id"`
 
 	// 共享记录id
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 }
 
 func (o Member) String() string {

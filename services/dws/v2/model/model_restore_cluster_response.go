@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type RestoreClusterResponse struct {
-	Cluster        *Cluster `json:"cluster,omitempty"`
+	Cluster        *Cluster `json:"cluster,omitempty" xml:"cluster"`
 	HttpStatusCode int      `json:"-"`
 }
 

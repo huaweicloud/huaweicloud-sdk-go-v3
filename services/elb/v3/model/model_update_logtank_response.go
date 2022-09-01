@@ -10,9 +10,9 @@ import (
 type UpdateLogtankResponse struct {
 
 	// 请求ID。  注：自动生成 。
-	RequestId *string `json:"request_id,omitempty"`
+	RequestId *string `json:"request_id,omitempty" xml:"request_id"`
 
-	Logtank        *Logtank `json:"logtank,omitempty"`
+	Logtank        *Logtank `json:"logtank,omitempty" xml:"logtank"`
 	HttpStatusCode int      `json:"-"`
 }
 

@@ -10,19 +10,19 @@ import (
 type UpdateAssetCategoryResponse struct {
 
 	// 媒资分类名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 父分类ID。 一级分类父ID为0。
-	ParentId *int32 `json:"parent_id,omitempty"`
+	ParentId *int32 `json:"parent_id,omitempty" xml:"parent_id"`
 
 	// 媒资分类ID。
-	Id *int32 `json:"id,omitempty"`
+	Id *int32 `json:"id,omitempty" xml:"id"`
 
 	// 媒资分类层级。  取值如下： - 1：一级分类层级。 - 2：二级分类层级。 - 3：三级分类层级。
-	Level *int32 `json:"level,omitempty"`
+	Level *int32 `json:"level,omitempty" xml:"level"`
 
 	// 项目ID。
-	ProjectId      *string `json:"projectId,omitempty"`
+	ProjectId      *string `json:"projectId,omitempty" xml:"projectId"`
 	HttpStatusCode int     `json:"-"`
 }
 

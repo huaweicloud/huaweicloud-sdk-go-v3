@@ -8,7 +8,7 @@ import (
 
 //
 type LoginTokenAssumedBy struct {
-	User *LoginTokenUser `json:"user,omitempty"`
+	User *LoginTokenUser `json:"user,omitempty" xml:"user"`
 }
 
 func (o LoginTokenAssumedBy) String() string {

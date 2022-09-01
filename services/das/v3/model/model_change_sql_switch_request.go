@@ -13,12 +13,12 @@ import (
 type ChangeSqlSwitchRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 请求语言类型。
-	XLanguage *ChangeSqlSwitchRequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *ChangeSqlSwitchRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 
-	Body *ChangeSqlSwitchBody `json:"body,omitempty"`
+	Body *ChangeSqlSwitchBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o ChangeSqlSwitchRequest) String() string {

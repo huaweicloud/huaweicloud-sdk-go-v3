@@ -10,10 +10,10 @@ import (
 type ActionTag struct {
 
 	// 标签的键。最大长度127个unicode字符。
-	Key string `json:"key"`
+	Key string `json:"key" xml:"key"`
 
 	// 标签的值列表。每个值最大长度255个unicode字符， value之间为或的关系。
-	Values *[]string `json:"values,omitempty"`
+	Values *[]string `json:"values,omitempty" xml:"values"`
 }
 
 func (o ActionTag) String() string {

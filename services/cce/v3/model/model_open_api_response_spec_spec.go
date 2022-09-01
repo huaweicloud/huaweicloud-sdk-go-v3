@@ -7,10 +7,10 @@ import (
 )
 
 type OpenApiResponseSpecSpec struct {
-	Eip *EipSpec `json:"eip,omitempty"`
+	Eip *EipSpec `json:"eip,omitempty" xml:"eip"`
 
 	// 是否动态创建
-	IsDynamic *bool `json:"IsDynamic,omitempty"`
+	IsDynamic *bool `json:"IsDynamic,omitempty" xml:"IsDynamic"`
 }
 
 func (o OpenApiResponseSpecSpec) String() string {

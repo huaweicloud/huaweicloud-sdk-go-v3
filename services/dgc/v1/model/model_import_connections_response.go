@@ -10,7 +10,7 @@ import (
 type ImportConnectionsResponse struct {
 
 	// 任务id
-	TaskId         *string `json:"taskId,omitempty"`
+	TaskId         *string `json:"taskId,omitempty" xml:"taskId"`
 	HttpStatusCode int     `json:"-"`
 }
 

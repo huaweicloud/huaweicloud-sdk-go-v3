@@ -10,9 +10,9 @@ import (
 type UpdateNatGatewayRequest struct {
 
 	// 公网NAT网关实例的ID。
-	NatGatewayId string `json:"nat_gateway_id"`
+	NatGatewayId string `json:"nat_gateway_id" xml:"nat_gateway_id"`
 
-	Body *UpdateNatGatewayRequestBody `json:"body,omitempty"`
+	Body *UpdateNatGatewayRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateNatGatewayRequest) String() string {

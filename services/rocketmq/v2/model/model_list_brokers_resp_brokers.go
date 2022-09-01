@@ -9,10 +9,10 @@ import (
 type ListBrokersRespBrokers struct {
 
 	// 全部代理ID。
-	Ids *[]float32 `json:"ids,omitempty"`
+	Ids *[]float32 `json:"ids,omitempty" xml:"ids"`
 
 	// 节点名称。
-	BrokerName *string `json:"broker_name,omitempty"`
+	BrokerName *string `json:"broker_name,omitempty" xml:"broker_name"`
 }
 
 func (o ListBrokersRespBrokers) String() string {

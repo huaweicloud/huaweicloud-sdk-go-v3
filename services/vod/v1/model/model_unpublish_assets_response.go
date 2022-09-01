@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type UnpublishAssetsResponse struct {
-	AssetInfoArray *[]AssetInfo `json:"asset_info_array,omitempty"`
+	AssetInfoArray *[]AssetInfo `json:"asset_info_array,omitempty" xml:"asset_info_array"`
 	HttpStatusCode int          `json:"-"`
 }
 

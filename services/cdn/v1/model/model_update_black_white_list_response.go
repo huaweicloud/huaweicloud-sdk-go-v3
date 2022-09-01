@@ -10,13 +10,13 @@ import (
 type UpdateBlackWhiteListResponse struct {
 
 	// 编码
-	Code *string `json:"code,omitempty"`
+	Code *string `json:"code,omitempty" xml:"code"`
 
 	// 结果
-	Result *string `json:"result,omitempty"`
+	Result *string `json:"result,omitempty" xml:"result"`
 
 	// 数据
-	Data           *interface{} `json:"data,omitempty"`
+	Data           *interface{} `json:"data,omitempty" xml:"data"`
 	HttpStatusCode int          `json:"-"`
 }
 

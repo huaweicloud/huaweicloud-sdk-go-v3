@@ -9,13 +9,13 @@ import (
 type Project struct {
 
 	// 项目ID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 项目名称。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 项目的clone url路径。
-	CloneUrl string `json:"clone_url"`
+	CloneUrl string `json:"clone_url" xml:"clone_url"`
 }
 
 func (o Project) String() string {

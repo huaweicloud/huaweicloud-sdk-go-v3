@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateMediaProcessTaskRequest struct {
-	Body *CreateMediaProcessReq `json:"body,omitempty"`
+	Body *CreateMediaProcessReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateMediaProcessTaskRequest) String() string {

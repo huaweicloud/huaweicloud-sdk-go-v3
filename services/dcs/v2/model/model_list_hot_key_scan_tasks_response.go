@@ -10,13 +10,13 @@ import (
 type ListHotKeyScanTasksResponse struct {
 
 	// 实例ID
-	InstanceId *string `json:"instance_id,omitempty"`
+	InstanceId *string `json:"instance_id,omitempty" xml:"instance_id"`
 
 	// 总数
-	Count *int32 `json:"count,omitempty"`
+	Count *int32 `json:"count,omitempty" xml:"count"`
 
 	// 热key分析记录列表
-	Records        *[]RecordsResponse `json:"records,omitempty"`
+	Records        *[]RecordsResponse `json:"records,omitempty" xml:"records"`
 	HttpStatusCode int                `json:"-"`
 }
 

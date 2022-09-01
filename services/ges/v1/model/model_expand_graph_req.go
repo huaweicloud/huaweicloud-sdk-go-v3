@@ -7,7 +7,7 @@ import (
 )
 
 type ExpandGraphReq struct {
-	Expand *ReplicationReq `json:"expand"`
+	Expand *ReplicationReq `json:"expand" xml:"expand"`
 }
 
 func (o ExpandGraphReq) String() string {

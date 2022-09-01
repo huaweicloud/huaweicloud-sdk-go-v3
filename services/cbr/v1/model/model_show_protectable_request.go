@@ -13,10 +13,10 @@ import (
 type ShowProtectableRequest struct {
 
 	// 资源ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 可保护性类型
-	ProtectableType ShowProtectableRequestProtectableType `json:"protectable_type"`
+	ProtectableType ShowProtectableRequestProtectableType `json:"protectable_type" xml:"protectable_type"`
 }
 
 func (o ShowProtectableRequest) String() string {

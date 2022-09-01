@@ -10,12 +10,12 @@ import (
 type EcsServerInfo struct {
 
 	// 需要绑定(替换或重置)SSH密钥对的虚拟机id
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
-	Auth *Auth `json:"auth,omitempty"`
+	Auth *Auth `json:"auth,omitempty" xml:"auth"`
 
 	// - true：禁用虚拟机的ssh登陆。 - false：不禁用虚拟机的ssh登陆。
-	DisablePassword *bool `json:"disable_password,omitempty"`
+	DisablePassword *bool `json:"disable_password,omitempty" xml:"disable_password"`
 }
 
 func (o EcsServerInfo) String() string {

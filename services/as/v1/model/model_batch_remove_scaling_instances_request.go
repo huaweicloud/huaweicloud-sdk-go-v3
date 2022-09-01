@@ -10,9 +10,9 @@ import (
 type BatchRemoveScalingInstancesRequest struct {
 
 	// 实例ID。
-	ScalingGroupId string `json:"scaling_group_id"`
+	ScalingGroupId string `json:"scaling_group_id" xml:"scaling_group_id"`
 
-	Body *BatchRemoveInstancesOption `json:"body,omitempty"`
+	Body *BatchRemoveInstancesOption `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchRemoveScalingInstancesRequest) String() string {

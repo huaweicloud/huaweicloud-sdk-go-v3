@@ -10,7 +10,7 @@ import (
 type DisassociateServerVirtualIpResponse struct {
 
 	// 云服务器网卡ID
-	PortId         *string `json:"port_id,omitempty"`
+	PortId         *string `json:"port_id,omitempty" xml:"port_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

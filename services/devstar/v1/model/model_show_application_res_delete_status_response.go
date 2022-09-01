@@ -13,10 +13,10 @@ import (
 type ShowApplicationResDeleteStatusResponse struct {
 
 	// 代码仓删除状态,deleted:删除成功,failed:删除失败,going:正在删除中
-	RepoStatus *ShowApplicationResDeleteStatusResponseRepoStatus `json:"repo_status,omitempty"`
+	RepoStatus *ShowApplicationResDeleteStatusResponseRepoStatus `json:"repo_status,omitempty" xml:"repo_status"`
 
 	// 流水线删除状态
-	PipelineStatus *[]PipelineDeleteStatus `json:"pipeline_status,omitempty"`
+	PipelineStatus *[]PipelineDeleteStatus `json:"pipeline_status,omitempty" xml:"pipeline_status"`
 	HttpStatusCode int                     `json:"-"`
 }
 

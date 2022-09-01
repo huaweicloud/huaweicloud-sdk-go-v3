@@ -10,9 +10,9 @@ import (
 type ValidateHttpsInfoRequest struct {
 
 	// 用户iam_user_uuid
-	IamUserUuid string `json:"iam_user_uuid"`
+	IamUserUuid string `json:"iam_user_uuid" xml:"iam_user_uuid"`
 
-	Body *PasswordRequest `json:"body,omitempty"`
+	Body *PasswordRequest `json:"body,omitempty" xml:"body"`
 }
 
 func (o ValidateHttpsInfoRequest) String() string {

@@ -10,25 +10,25 @@ import (
 type ListEventsRequest struct {
 
 	// 查询时间段的起始时间，毫秒级时间戳，end_time减去begin_time小于等于2天
-	BeginTime string `json:"begin_time"`
+	BeginTime string `json:"begin_time" xml:"begin_time"`
 
 	// 查询时间段的终止时间，毫秒级时间戳，end_time减去begin_time小于等于2天
-	EndTime string `json:"end_time"`
+	EndTime string `json:"end_time" xml:"end_time"`
 
 	// 云主机名称
-	HostName *string `json:"host_name,omitempty"`
+	HostName *string `json:"host_name,omitempty" xml:"host_name"`
 
 	// 事件类型，包含如下:   - Abnormal Login : 账户异常登录   - Invalid System Account : 风险账号   - Brute Force Cracking : 账号暴力破解   - System Start Script Change : 自启动检测   - Process Abnormal Activity : 进程异常行为   - Process Privilege Escalation : 进程提权操作   - File Privilege Escalation : 文件提权操作   - General Malware : 恶意程序（云查杀）   - Abnormal Shell : 异常shell   - Reverse Shell : 反弹Shell   - High-Risk Command Execution : 高危命令执行   - Key File Change : 关键文件变更   - Webshell : 网站后门
-	EventTypes []string `json:"event_types"`
+	EventTypes []string `json:"event_types" xml:"event_types"`
 
 	// 是否已处理，包含如下类型：   - \"unhandled\" ： 未处理   - \"handled\" ： 已处理
-	HandleStatus *string `json:"handle_status,omitempty"`
+	HandleStatus *string `json:"handle_status,omitempty" xml:"handle_status"`
 
 	// 默认10
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 默认0
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 }
 
 func (o ListEventsRequest) String() string {

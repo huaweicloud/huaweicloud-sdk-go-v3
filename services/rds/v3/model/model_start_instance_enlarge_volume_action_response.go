@@ -10,7 +10,7 @@ import (
 type StartInstanceEnlargeVolumeActionResponse struct {
 
 	// 任务ID。
-	JobId          *string `json:"job_id,omitempty"`
+	JobId          *string `json:"job_id,omitempty" xml:"job_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

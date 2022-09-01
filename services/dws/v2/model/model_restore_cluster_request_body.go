@@ -8,7 +8,7 @@ import (
 
 // This is a auto create Body Object
 type RestoreClusterRequestBody struct {
-	Restore *Restore `json:"restore"`
+	Restore *Restore `json:"restore" xml:"restore"`
 }
 
 func (o RestoreClusterRequestBody) String() string {

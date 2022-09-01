@@ -10,13 +10,13 @@ import (
 type CountEventsResponse struct {
 
 	// 统计步长。毫秒数，例如一分钟则填写为60000。
-	Step *int64 `json:"step,omitempty"`
+	Step *int64 `json:"step,omitempty" xml:"step"`
 
 	// 统计结果对应的时间序列。
-	Timestamps *[]int64 `json:"timestamps,omitempty"`
+	Timestamps *[]int64 `json:"timestamps,omitempty" xml:"timestamps"`
 
 	// 事件或者告警不同级别相同时间序列对应的统计结果。
-	Series         *[]EventSeries `json:"series,omitempty"`
+	Series         *[]EventSeries `json:"series,omitempty" xml:"series"`
 	HttpStatusCode int            `json:"-"`
 }
 

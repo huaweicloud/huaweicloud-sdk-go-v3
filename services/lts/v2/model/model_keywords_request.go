@@ -12,31 +12,31 @@ import (
 type KeywordsRequest struct {
 
 	// 日志流id
-	LogStreamId string `json:"log_stream_id"`
+	LogStreamId string `json:"log_stream_id" xml:"log_stream_id"`
 
 	// 日志流名称
-	LogStreamName *string `json:"log_stream_name,omitempty"`
+	LogStreamName *string `json:"log_stream_name,omitempty" xml:"log_stream_name"`
 
 	// 日志组id
-	LogGroupId string `json:"log_group_id"`
+	LogGroupId string `json:"log_group_id" xml:"log_group_id"`
 
 	// 日志组名称
-	LogGroupName *string `json:"log_group_name,omitempty"`
+	LogGroupName *string `json:"log_group_name,omitempty" xml:"log_group_name"`
 
 	// 关键词
-	Keywords string `json:"keywords"`
+	Keywords string `json:"keywords" xml:"keywords"`
 
 	// 条件
-	Condition KeywordsRequestCondition `json:"condition"`
+	Condition KeywordsRequestCondition `json:"condition" xml:"condition"`
 
 	// 行数
-	Number int32 `json:"number"`
+	Number int32 `json:"number" xml:"number"`
 
 	// 查询执行任务时最近数据的时间范围，最大值为60
-	SearchTimeRange int32 `json:"search_time_range"`
+	SearchTimeRange int32 `json:"search_time_range" xml:"search_time_range"`
 
 	// 查询时间单位
-	SearchTimeRangeUnit KeywordsRequestSearchTimeRangeUnit `json:"search_time_range_unit"`
+	SearchTimeRangeUnit KeywordsRequestSearchTimeRangeUnit `json:"search_time_range_unit" xml:"search_time_range_unit"`
 }
 
 func (o KeywordsRequest) String() string {

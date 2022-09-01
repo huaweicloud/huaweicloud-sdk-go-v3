@@ -13,9 +13,9 @@ import (
 type ListEventsRequest struct {
 
 	// 查询类型。type=active_alert代表查询活动告警，type=history_alert代表查询历史告警。不传或者传其他值则返回指定查询条件的所有信息。
-	Type *ListEventsRequestType `json:"type,omitempty"`
+	Type *ListEventsRequestType `json:"type,omitempty" xml:"type"`
 
-	Body *EventQueryParam2 `json:"body,omitempty"`
+	Body *EventQueryParam2 `json:"body,omitempty" xml:"body"`
 }
 
 func (o ListEventsRequest) String() string {

@@ -13,22 +13,22 @@ import (
 type EnvironmentCheck struct {
 
 	// 该检查项的ID
-	Id int64 `json:"id"`
+	Id int64 `json:"id" xml:"id"`
 
 	// 参数
-	Params *[]string `json:"params,omitempty"`
+	Params *[]string `json:"params,omitempty" xml:"params"`
 
 	// 检查项名称
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 检查结果
-	Result EnvironmentCheckResult `json:"result"`
+	Result EnvironmentCheckResult `json:"result" xml:"result"`
 
 	// 检查不通过的错误码
-	ErrorCode *string `json:"error_code,omitempty"`
+	ErrorCode *string `json:"error_code,omitempty" xml:"error_code"`
 
 	// 检查不通过的错误参数
-	ErrorParams *string `json:"error_params,omitempty"`
+	ErrorParams *string `json:"error_params,omitempty" xml:"error_params"`
 }
 
 func (o EnvironmentCheck) String() string {

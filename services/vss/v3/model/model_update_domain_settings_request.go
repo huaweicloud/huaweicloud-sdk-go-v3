@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type UpdateDomainSettingsRequest struct {
-	Body *UpdateDomainSettingsRequestBody `json:"body,omitempty"`
+	Body *UpdateDomainSettingsRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateDomainSettingsRequest) String() string {

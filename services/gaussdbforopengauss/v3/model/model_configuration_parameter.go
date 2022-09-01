@@ -12,22 +12,22 @@ import (
 type ConfigurationParameter struct {
 
 	// 参数名称。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 参数值。
-	Value string `json:"value"`
+	Value string `json:"value" xml:"value"`
 
 	// 修改该参数是否需要重启实例。
-	RestartRequired bool `json:"restart_required"`
+	RestartRequired bool `json:"restart_required" xml:"restart_required"`
 
 	// 参数取值范围。
-	ValueRange string `json:"value_range"`
+	ValueRange string `json:"value_range" xml:"value_range"`
 
 	// 参数类型，取值为“string”、“integer”、“boolean”、“list”或“float”之一。
-	Type ConfigurationParameterType `json:"type"`
+	Type ConfigurationParameterType `json:"type" xml:"type"`
 
 	// 参数描述。
-	Description string `json:"description"`
+	Description string `json:"description" xml:"description"`
 }
 
 func (o ConfigurationParameter) String() string {

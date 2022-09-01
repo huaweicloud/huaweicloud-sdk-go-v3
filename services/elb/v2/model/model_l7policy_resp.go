@@ -13,46 +13,46 @@ import (
 type L7policyResp struct {
 
 	// 转发策略ID
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 转发策略名称
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 转发策略关联的转发规则列表
-	Rules []ResourceList `json:"rules"`
+	Rules []ResourceList `json:"rules" xml:"rules"`
 
 	// 转发策略的转发动作；取值：REDIRECT_TO_POOL：转发到后端云服务器组；REDIRECT_TO_LISTENER：重定向到监听器
-	Action L7policyRespAction `json:"action"`
+	Action L7policyRespAction `json:"action" xml:"action"`
 
 	// 健康检查的配置状态；该字段为预留字段，暂未启用。默认为ACTIVE。
-	ProvisioningStatus string `json:"provisioning_status"`
+	ProvisioningStatus string `json:"provisioning_status" xml:"provisioning_status"`
 
 	// 转发策略所在的项目ID。
-	TenantId string `json:"tenant_id"`
+	TenantId string `json:"tenant_id" xml:"tenant_id"`
 
 	// 转发策略所在的项目ID。
-	ProjectId string `json:"project_id"`
+	ProjectId string `json:"project_id" xml:"project_id"`
 
 	// 转发策略的管理状态；该字段为预留字段，暂未启用。默认为true。
-	AdminStateUp bool `json:"admin_state_up"`
+	AdminStateUp bool `json:"admin_state_up" xml:"admin_state_up"`
 
 	// 转发策略额描述信息
-	Description string `json:"description"`
+	Description string `json:"description" xml:"description"`
 
 	// 转发策略对应的监听器ID
-	ListenerId string `json:"listener_id"`
+	ListenerId string `json:"listener_id" xml:"listener_id"`
 
 	// 转发到pool的ID。转发到pool的ID。当action为REDIRECT_TO_POOL时生效。
-	RedirectPoolId string `json:"redirect_pool_id"`
+	RedirectPoolId string `json:"redirect_pool_id" xml:"redirect_pool_id"`
 
 	// 转发到的listener的ID，当action为REDIRECT_TO_LISTENER时生效。
-	RedirectListenerId string `json:"redirect_listener_id"`
+	RedirectListenerId string `json:"redirect_listener_id" xml:"redirect_listener_id"`
 
 	// 转发到的url。该字段未启用。
-	RedirectUrl string `json:"redirect_url"`
+	RedirectUrl string `json:"redirect_url" xml:"redirect_url"`
 
 	// 转发策略的优先级，从1递增，最高100。该字段为预留字段，暂未启用。
-	Position int32 `json:"position"`
+	Position int32 `json:"position" xml:"position"`
 }
 
 func (o L7policyResp) String() string {

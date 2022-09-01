@@ -10,7 +10,7 @@ import (
 type ResetSimCardResponse struct {
 
 	// 业务受理单号
-	WorkOrderId    *int64 `json:"work_order_id,omitempty"`
+	WorkOrderId    *int64 `json:"work_order_id,omitempty" xml:"work_order_id"`
 	HttpStatusCode int    `json:"-"`
 }
 

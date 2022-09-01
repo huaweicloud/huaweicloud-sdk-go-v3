@@ -10,9 +10,9 @@ import (
 type BatchAddOrDeleteTagsRequest struct {
 
 	// 镜像ID。
-	ImageId string `json:"image_id"`
+	ImageId string `json:"image_id" xml:"image_id"`
 
-	Body *BatchAddOrDeleteTagsRequestBody `json:"body,omitempty"`
+	Body *BatchAddOrDeleteTagsRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchAddOrDeleteTagsRequest) String() string {

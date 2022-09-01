@@ -10,7 +10,7 @@ import (
 type ListAz2MigrateResponse struct {
 
 	// 可用区具体信息。
-	AzList         *[]Az2Migrate `json:"az_list,omitempty"`
+	AzList         *[]Az2Migrate `json:"az_list,omitempty" xml:"az_list"`
 	HttpStatusCode int           `json:"-"`
 }
 

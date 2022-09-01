@@ -13,13 +13,13 @@ import (
 type CreateDomainsResponse struct {
 
 	// 状态码:   * success - 成功   * failure - 失败
-	InfoCode *CreateDomainsResponseInfoCode `json:"info_code,omitempty"`
+	InfoCode *CreateDomainsResponseInfoCode `json:"info_code,omitempty" xml:"info_code"`
 
 	// 返回的提示信息
-	InfoDescription *string `json:"info_description,omitempty"`
+	InfoDescription *string `json:"info_description,omitempty" xml:"info_description"`
 
 	// 域名ID
-	DomainId       *string `json:"domain_id,omitempty"`
+	DomainId       *string `json:"domain_id,omitempty" xml:"domain_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -7,12 +7,12 @@ import (
 )
 
 type CommonCreateTaskReq struct {
-	Input *ObsObjInfo `json:"input,omitempty"`
+	Input *ObsObjInfo `json:"input,omitempty" xml:"input"`
 
-	Output *ObsObjInfo `json:"output,omitempty"`
+	Output *ObsObjInfo `json:"output,omitempty" xml:"output"`
 
 	// 用户自定义数据。
-	UserData *string `json:"user_data,omitempty"`
+	UserData *string `json:"user_data,omitempty" xml:"user_data"`
 }
 
 func (o CommonCreateTaskReq) String() string {

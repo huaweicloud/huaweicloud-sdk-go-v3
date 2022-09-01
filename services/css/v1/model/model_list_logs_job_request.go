@@ -10,7 +10,7 @@ import (
 type ListLogsJobRequest struct {
 
 	// 指定查询集群ID。
-	ClusterId string `json:"cluster_id"`
+	ClusterId string `json:"cluster_id" xml:"cluster_id"`
 }
 
 func (o ListLogsJobRequest) String() string {

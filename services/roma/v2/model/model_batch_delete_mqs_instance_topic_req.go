@@ -9,7 +9,7 @@ import (
 type BatchDeleteMqsInstanceTopicReq struct {
 
 	// 待删除的topic列表。
-	Topics []string `json:"topics"`
+	Topics []string `json:"topics" xml:"topics"`
 }
 
 func (o BatchDeleteMqsInstanceTopicReq) String() string {

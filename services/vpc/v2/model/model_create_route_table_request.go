@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateRouteTableRequest struct {
-	Body *CreateRoutetableReqBody `json:"body,omitempty"`
+	Body *CreateRoutetableReqBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateRouteTableRequest) String() string {

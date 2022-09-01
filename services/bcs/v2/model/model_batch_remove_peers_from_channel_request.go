@@ -10,12 +10,12 @@ import (
 type BatchRemovePeersFromChannelRequest struct {
 
 	// 区块链服务id。可调用“查询服务实例列表”接口获取id
-	BlockchainId string `json:"blockchain_id"`
+	BlockchainId string `json:"blockchain_id" xml:"blockchain_id"`
 
 	// 区块链通道名称。可调用“查询实例信息”接口获取，接口返回的“channels”中的name字段值
-	ChannelId string `json:"channel_id"`
+	ChannelId string `json:"channel_id" xml:"channel_id"`
 
-	Body *BatchRemovePeersFromChannelRequestBody `json:"body,omitempty"`
+	Body *BatchRemovePeersFromChannelRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchRemovePeersFromChannelRequest) String() string {

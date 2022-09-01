@@ -10,10 +10,10 @@ import (
 type ApiContentRsp struct {
 
 	// 数据源名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 数据上报url
-	Url *string `json:"url,omitempty"`
+	Url *string `json:"url,omitempty" xml:"url"`
 }
 
 func (o ApiContentRsp) String() string {

@@ -13,19 +13,19 @@ import (
 type CheckJobResp struct {
 
 	// 任务id。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 测试结果
-	Status CheckJobRespStatus `json:"status"`
+	Status CheckJobRespStatus `json:"status" xml:"status"`
 
 	// 错误码。
-	ErrorCode *string `json:"error_code,omitempty"`
+	ErrorCode *string `json:"error_code,omitempty" xml:"error_code"`
 
 	// 错误信息。
-	ErrorMsg *string `json:"error_msg,omitempty"`
+	ErrorMsg *string `json:"error_msg,omitempty" xml:"error_msg"`
 
 	// 是否成功
-	Success *bool `json:"success,omitempty"`
+	Success *bool `json:"success,omitempty" xml:"success"`
 }
 
 func (o CheckJobResp) String() string {

@@ -8,10 +8,10 @@ import (
 
 // Response Object
 type KeystoneListProjectPermissionsForGroupResponse struct {
-	Links *Links `json:"links,omitempty"`
+	Links *Links `json:"links,omitempty" xml:"links"`
 
 	// 权限信息列表。
-	Roles          *[]RoleResult `json:"roles,omitempty"`
+	Roles          *[]RoleResult `json:"roles,omitempty" xml:"roles"`
 	HttpStatusCode int           `json:"-"`
 }
 

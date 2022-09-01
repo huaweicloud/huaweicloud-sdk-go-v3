@@ -12,22 +12,22 @@ import (
 type ChannelInfo struct {
 
 	// 通道ID
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 通道名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 通道描述
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 通道提供方类型，OFFICIAL：官方事件通道；CUSTOM：自定义事件通道
-	ProviderType *ChannelInfoProviderType `json:"provider_type,omitempty"`
+	ProviderType *ChannelInfoProviderType `json:"provider_type,omitempty" xml:"provider_type"`
 
 	// 创建UTC时间
-	CreatedTime *string `json:"created_time,omitempty"`
+	CreatedTime *string `json:"created_time,omitempty" xml:"created_time"`
 
 	// 更新UTC时间
-	UpdatedTime *string `json:"updated_time,omitempty"`
+	UpdatedTime *string `json:"updated_time,omitempty" xml:"updated_time"`
 }
 
 func (o ChannelInfo) String() string {

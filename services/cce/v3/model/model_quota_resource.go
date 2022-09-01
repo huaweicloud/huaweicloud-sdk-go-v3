@@ -9,22 +9,22 @@ import (
 type QuotaResource struct {
 
 	// 资源类型
-	QuotaKey *string `json:"quotaKey,omitempty"`
+	QuotaKey *string `json:"quotaKey,omitempty" xml:"quotaKey"`
 
 	// 配额值
-	QuotaLimit *int32 `json:"quotaLimit,omitempty"`
+	QuotaLimit *int32 `json:"quotaLimit,omitempty" xml:"quotaLimit"`
 
 	// 已创建的资源个数
-	Used *int32 `json:"used,omitempty"`
+	Used *int32 `json:"used,omitempty" xml:"used"`
 
 	// 单位
-	Unit *string `json:"unit,omitempty"`
+	Unit *string `json:"unit,omitempty" xml:"unit"`
 
 	// 局点ID。若资源不涉及此参数，则不返回该参数。
-	RegionId *string `json:"regionId,omitempty"`
+	RegionId *string `json:"regionId,omitempty" xml:"regionId"`
 
 	// 可用区ID。若资源不涉及此参数，则不返回该参数。
-	AvailabilityZoneId *string `json:"availabilityZoneId,omitempty"`
+	AvailabilityZoneId *string `json:"availabilityZoneId,omitempty" xml:"availabilityZoneId"`
 }
 
 func (o QuotaResource) String() string {

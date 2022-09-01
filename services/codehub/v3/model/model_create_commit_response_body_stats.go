@@ -10,13 +10,13 @@ import (
 type CreateCommitResponseBodyStats struct {
 
 	// 变更增加的行数
-	Additions *int32 `json:"additions,omitempty"`
+	Additions *int32 `json:"additions,omitempty" xml:"additions"`
 
 	// 变更删除的行数
-	Deletions *int32 `json:"deletions,omitempty"`
+	Deletions *int32 `json:"deletions,omitempty" xml:"deletions"`
 
 	// 变更的总行数
-	Total *int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty" xml:"total"`
 }
 
 func (o CreateCommitResponseBodyStats) String() string {

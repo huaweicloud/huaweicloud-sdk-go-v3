@@ -10,9 +10,9 @@ import (
 type CreateAddressGroupResponse struct {
 
 	// 请求ID
-	RequestId *string `json:"request_id,omitempty"`
+	RequestId *string `json:"request_id,omitempty" xml:"request_id"`
 
-	AddressGroup   *AddressGroup `json:"address_group,omitempty"`
+	AddressGroup   *AddressGroup `json:"address_group,omitempty" xml:"address_group"`
 	HttpStatusCode int           `json:"-"`
 }
 

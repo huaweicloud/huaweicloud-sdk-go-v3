@@ -10,10 +10,10 @@ import (
 type DeleteBackupFileRequest struct {
 
 	// 备份记录ID。
-	BackupId string `json:"backup_id"`
+	BackupId string `json:"backup_id" xml:"backup_id"`
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 }
 
 func (o DeleteBackupFileRequest) String() string {

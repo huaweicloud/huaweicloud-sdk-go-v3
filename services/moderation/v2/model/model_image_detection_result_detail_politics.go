@@ -9,12 +9,12 @@ import (
 type ImageDetectionResultDetailPolitics struct {
 
 	// 置信度，取值范围 0-1。
-	Confidence *float32 `json:"confidence,omitempty"`
+	Confidence *float32 `json:"confidence,omitempty" xml:"confidence"`
 
 	// 对应的政治人物信息。
-	Label *string `json:"label,omitempty"`
+	Label *string `json:"label,omitempty" xml:"label"`
 
-	FaceDetail *ImageDetectionResultDetailFaceDetail `json:"face_detail,omitempty"`
+	FaceDetail *ImageDetectionResultDetailFaceDetail `json:"face_detail,omitempty" xml:"face_detail"`
 }
 
 func (o ImageDetectionResultDetailPolitics) String() string {

@@ -8,12 +8,12 @@ import (
 
 // TrackerConfig对象
 type TrackerConfigBody struct {
-	Channel *ChannelConfigBody `json:"channel"`
+	Channel *ChannelConfigBody `json:"channel" xml:"channel"`
 
-	Selector *SelectorConfigBody `json:"selector"`
+	Selector *SelectorConfigBody `json:"selector" xml:"selector"`
 
 	// IAM委托名称
-	AgencyName string `json:"agency_name"`
+	AgencyName string `json:"agency_name" xml:"agency_name"`
 }
 
 func (o TrackerConfigBody) String() string {

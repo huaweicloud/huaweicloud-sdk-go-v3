@@ -10,10 +10,10 @@ import (
 type ShowSqlFilterRuleResponse struct {
 
 	// 节点id
-	NodeId *string `json:"node_id,omitempty"`
+	NodeId *string `json:"node_id,omitempty" xml:"node_id"`
 
 	// SQL限流规则
-	SqlFilterRules *[]SqlFilterRule `json:"sql_filter_rules,omitempty"`
+	SqlFilterRules *[]SqlFilterRule `json:"sql_filter_rules,omitempty" xml:"sql_filter_rules"`
 	HttpStatusCode int              `json:"-"`
 }
 

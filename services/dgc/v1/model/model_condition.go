@@ -7,9 +7,9 @@ import (
 )
 
 type Condition struct {
-	PreNodeName *string `json:"preNodeName,omitempty"`
+	PreNodeName *string `json:"preNodeName,omitempty" xml:"preNodeName"`
 
-	Expression *string `json:"expression,omitempty"`
+	Expression *string `json:"expression,omitempty" xml:"expression"`
 }
 
 func (o Condition) String() string {

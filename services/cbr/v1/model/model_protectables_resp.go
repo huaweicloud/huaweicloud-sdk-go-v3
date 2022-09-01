@@ -12,27 +12,27 @@ import (
 type ProtectablesResp struct {
 
 	// 子资源
-	Children []interface{} `json:"children"`
+	Children []interface{} `json:"children" xml:"children"`
 
 	// 资源详情
-	Detail *interface{} `json:"detail,omitempty"`
+	Detail *interface{} `json:"detail,omitempty" xml:"detail"`
 
 	// id
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 名称
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
-	Protectable *ProtectableResult `json:"protectable"`
+	Protectable *ProtectableResult `json:"protectable" xml:"protectable"`
 
 	// 大小，单位GB
-	Size *int32 `json:"size,omitempty"`
+	Size *int32 `json:"size,omitempty" xml:"size"`
 
 	// 资源状态
-	Status *ProtectablesRespStatus `json:"status,omitempty"`
+	Status *ProtectablesRespStatus `json:"status,omitempty" xml:"status"`
 
 	// 待备份资源的类型, 云服务器: OS::Nova::Server, 云硬盘: OS::Cinder::Volume, 裸金属服务器: OS::Ironic::BareMetalServer, 线下本地服务器: OS::Native::Server, 弹性文件系统: OS::Sfs::Turbo
-	Type string `json:"type"`
+	Type string `json:"type" xml:"type"`
 }
 
 func (o ProtectablesResp) String() string {

@@ -13,25 +13,25 @@ import (
 type ListSubsetsRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 设备ID
-	DeviceId int32 `json:"device_id"`
+	DeviceId int32 `json:"device_id" xml:"device_id"`
 
 	// 每页显示条目数量，最大数量999，超过999后只返回999
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 设备名称
-	DeviceName *string `json:"device_name,omitempty"`
+	DeviceName *string `json:"device_name,omitempty" xml:"device_name"`
 
 	// 设备状态 0-启动 1-停用
-	Status *ListSubsetsRequestStatus `json:"status,omitempty"`
+	Status *ListSubsetsRequestStatus `json:"status,omitempty" xml:"status"`
 
 	// 设备状态 0-未连接 1-在线 2-离线
-	OnlineStatus *ListSubsetsRequestOnlineStatus `json:"online_status,omitempty"`
+	OnlineStatus *ListSubsetsRequestOnlineStatus `json:"online_status,omitempty" xml:"online_status"`
 
 	// 偏移量，表示从此偏移量开始查询， offset大于等于0
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 }
 
 func (o ListSubsetsRequest) String() string {

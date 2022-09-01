@@ -10,7 +10,7 @@ import (
 type ListProtectedInstanceTagsRequest struct {
 
 	// 保护实例的ID。
-	ProtectedInstanceId string `json:"protected_instance_id"`
+	ProtectedInstanceId string `json:"protected_instance_id" xml:"protected_instance_id"`
 }
 
 func (o ListProtectedInstanceTagsRequest) String() string {

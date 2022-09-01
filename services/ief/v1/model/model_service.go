@@ -8,7 +8,7 @@ import (
 
 // 服务详情
 type Service struct {
-	Service *ServiceReqDetail `json:"service,omitempty"`
+	Service *ServiceReqDetail `json:"service,omitempty" xml:"service"`
 }
 
 func (o Service) String() string {

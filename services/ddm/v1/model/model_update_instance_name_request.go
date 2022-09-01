@@ -10,9 +10,9 @@ import (
 type UpdateInstanceNameRequest struct {
 
 	// DDM实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *ModifyInstanceNameReq `json:"body,omitempty"`
+	Body *ModifyInstanceNameReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateInstanceNameRequest) String() string {

@@ -9,13 +9,13 @@ import (
 type CreateTopicRequestBody struct {
 
 	// 创建topic的名字。Topic名称只能包含大写字母、小写字母、数字、-和_，且必须由大写字母、小写字母或数字开头，长度为1到255个字符。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// Topic的显示名，推送邮件消息时，作为邮件发件人显示。显示名的长度为192byte或64个中文。默认值为空。
-	DisplayName string `json:"display_name"`
+	DisplayName string `json:"display_name" xml:"display_name"`
 
 	// 企业项目ID。非必选参数，当企业项目开关打开时需要传入该参数。
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
 }
 
 func (o CreateTopicRequestBody) String() string {

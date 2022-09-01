@@ -8,7 +8,7 @@ import (
 
 // 存储库修改参数体
 type VaultUpdateReq struct {
-	Vault *VaultUpdate `json:"vault"`
+	Vault *VaultUpdate `json:"vault" xml:"vault"`
 }
 
 func (o VaultUpdateReq) String() string {

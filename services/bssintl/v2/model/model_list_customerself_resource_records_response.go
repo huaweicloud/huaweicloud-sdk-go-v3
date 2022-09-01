@@ -10,13 +10,13 @@ import (
 type ListCustomerselfResourceRecordsResponse struct {
 
 	// 资源费用记录数据。 具体请参见表3。
-	FeeRecords *[]ResFeeRecordV2 `json:"fee_records,omitempty"`
+	FeeRecords *[]ResFeeRecordV2 `json:"fee_records,omitempty" xml:"fee_records"`
 
 	// 结果集数量，只有成功才返回这个参数。
-	TotalCount *int32 `json:"total_count,omitempty"`
+	TotalCount *int32 `json:"total_count,omitempty" xml:"total_count"`
 
 	// 货币单位代码： USD：美元
-	Currency       *string `json:"currency,omitempty"`
+	Currency       *string `json:"currency,omitempty" xml:"currency"`
 	HttpStatusCode int     `json:"-"`
 }
 

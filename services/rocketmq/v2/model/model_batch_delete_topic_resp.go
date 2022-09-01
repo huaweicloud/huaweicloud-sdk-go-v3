@@ -9,7 +9,7 @@ import (
 type BatchDeleteTopicResp struct {
 
 	// 删除主题任务ID。
-	JobId *string `json:"job_id,omitempty"`
+	JobId *string `json:"job_id,omitempty" xml:"job_id"`
 }
 
 func (o BatchDeleteTopicResp) String() string {

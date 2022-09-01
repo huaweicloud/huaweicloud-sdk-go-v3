@@ -10,16 +10,16 @@ import (
 type ListDomainLogsRequest struct {
 
 	// 加速域名，参考格式：www.test1.com。
-	DomainName string `json:"domain_name"`
+	DomainName string `json:"domain_name" xml:"domain_name"`
 
 	// 查询开始时间，格式为yyyyMMddHHmmss。 - 查询结果为开始时间之后24小时内的日志数据 - 只能查最近一个月内的数据
-	QueryDate string `json:"query_date"`
+	QueryDate string `json:"query_date" xml:"query_date"`
 
 	// 每页显示日志数量。
-	PageSize *int32 `json:"page_size,omitempty"`
+	PageSize *int32 `json:"page_size,omitempty" xml:"page_size"`
 
 	// 当前页数。
-	PageNumber *int32 `json:"page_number,omitempty"`
+	PageNumber *int32 `json:"page_number,omitempty" xml:"page_number"`
 }
 
 func (o ListDomainLogsRequest) String() string {

@@ -10,10 +10,10 @@ import (
 type ExportDatasetRequest struct {
 
 	// 作业ID。
-	JobId string `json:"job_id"`
+	JobId string `json:"job_id" xml:"job_id"`
 
 	// 作业运行ID。
-	RunId string `json:"run_id"`
+	RunId string `json:"run_id" xml:"run_id"`
 }
 
 func (o ExportDatasetRequest) String() string {

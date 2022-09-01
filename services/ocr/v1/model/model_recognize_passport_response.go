@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type RecognizePassportResponse struct {
-	Result         *PassportResult `json:"result,omitempty"`
+	Result         *PassportResult `json:"result,omitempty" xml:"result"`
 	HttpStatusCode int             `json:"-"`
 }
 

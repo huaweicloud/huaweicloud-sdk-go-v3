@@ -10,7 +10,7 @@ import (
 type ListLoadbalancerTagsResponse struct {
 
 	// 标签列表
-	Tags           *[]ListTag `json:"tags,omitempty"`
+	Tags           *[]ListTag `json:"tags,omitempty" xml:"tags"`
 	HttpStatusCode int        `json:"-"`
 }
 

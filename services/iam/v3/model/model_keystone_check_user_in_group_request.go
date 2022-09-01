@@ -10,10 +10,10 @@ import (
 type KeystoneCheckUserInGroupRequest struct {
 
 	// 用户组ID，获取方式请参见：[获取用户组ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
-	GroupId string `json:"group_id"`
+	GroupId string `json:"group_id" xml:"group_id"`
 
 	// 待查询的IAM用户ID，获取方式请参见：[获取IAM用户ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
-	UserId string `json:"user_id"`
+	UserId string `json:"user_id" xml:"user_id"`
 }
 
 func (o KeystoneCheckUserInGroupRequest) String() string {

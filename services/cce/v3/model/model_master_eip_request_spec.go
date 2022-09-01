@@ -12,15 +12,15 @@ import (
 type MasterEipRequestSpec struct {
 
 	// 绑定或解绑动作
-	Action *MasterEipRequestSpecAction `json:"action,omitempty"`
+	Action *MasterEipRequestSpecAction `json:"action,omitempty" xml:"action"`
 
-	Spec *MasterEipRequestSpecSpec `json:"spec,omitempty"`
+	Spec *MasterEipRequestSpecSpec `json:"spec,omitempty" xml:"spec"`
 
 	// 带宽
-	Bandwidth *string `json:"bandwidth,omitempty"`
+	Bandwidth *string `json:"bandwidth,omitempty" xml:"bandwidth"`
 
 	// 弹性网卡IP
-	ElasticIp *string `json:"elasticIp,omitempty"`
+	ElasticIp *string `json:"elasticIp,omitempty" xml:"elasticIp"`
 }
 
 func (o MasterEipRequestSpec) String() string {

@@ -8,7 +8,7 @@ import (
 
 // 需要解关联的Router(VPC)。
 type DisassociaterouterReq struct {
-	Router *Router `json:"router"`
+	Router *Router `json:"router" xml:"router"`
 }
 
 func (o DisassociaterouterReq) String() string {

@@ -10,28 +10,28 @@ import (
 type ListResourceUsageRequest struct {
 
 	// 语言。en_US：英文；zh_CN：中文。默认：zh_CN：中文
-	XLanguage *string `json:"X-Language,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
 
 	// 账期，东八区时间，格式为yyyy-MM。
-	BillCycle string `json:"bill_cycle"`
+	BillCycle string `json:"bill_cycle" xml:"bill_cycle"`
 
 	// 云服务类型，当前仅支持：hws.service.type.cdn：内容分发网络,hws.service.type.obs：对象存储服务
-	ServiceTypeCode string `json:"service_type_code"`
+	ServiceTypeCode string `json:"service_type_code" xml:"service_type_code"`
 
 	// 资源类型编码，当前仅支持：hws.resource.type.cdn：CDN,hws.resource.type.obs：云存储。资源类型和云服务类型的对应关系可调用[根据云服务类型查询资源列表](https://support.huaweicloud.com/api-oce/qct_00003.html)接口获取。
-	ResourceTypeCode string `json:"resource_type_code"`
+	ResourceTypeCode string `json:"resource_type_code" xml:"resource_type_code"`
 
 	// 使用量类型编码，当前仅支持：95Peak：中国大陆月95峰值带宽_1024进制,95peak_1000：中国大陆月95峰值带宽_1000进制,bandwidth95peak：95峰值带宽.资源类型和使用量类型的对应关系可调用[查询使用量类型列表](https://support.huaweicloud.com/api-oce/qct_00004.html)接口获取。
-	UsageType string `json:"usage_type"`
+	UsageType string `json:"usage_type" xml:"usage_type"`
 
 	// 资源ID，您可以调用[查询资源用量汇总](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001144806706.html)接口获取。
-	ResourceId string `json:"resource_id"`
+	ResourceId string `json:"resource_id" xml:"resource_id"`
 
 	// 偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 每次查询的数量限制。默认值为10。
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 }
 
 func (o ListResourceUsageRequest) String() string {

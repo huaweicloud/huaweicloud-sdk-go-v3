@@ -10,10 +10,10 @@ import (
 type ListBackupRecordsResponse struct {
 
 	// 返回记录数。
-	TotalNum *int32 `json:"total_num,omitempty"`
+	TotalNum *int32 `json:"total_num,omitempty" xml:"total_num"`
 
 	// 备份信息的详情数组。
-	BackupRecordResponse *[]BackupRecordResponse `json:"backup_record_response,omitempty"`
+	BackupRecordResponse *[]BackupRecordResponse `json:"backup_record_response,omitempty" xml:"backup_record_response"`
 	HttpStatusCode       int                     `json:"-"`
 }
 

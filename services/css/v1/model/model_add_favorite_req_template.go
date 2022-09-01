@@ -9,10 +9,10 @@ import (
 type AddFavoriteReqTemplate struct {
 
 	// 模板名称。
-	TemplateName string `json:"templateName"`
+	TemplateName string `json:"templateName" xml:"templateName"`
 
 	// 模板描述。
-	Desc *string `json:"desc,omitempty"`
+	Desc *string `json:"desc,omitempty" xml:"desc"`
 }
 
 func (o AddFavoriteReqTemplate) String() string {

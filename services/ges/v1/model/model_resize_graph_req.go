@@ -7,7 +7,7 @@ import (
 )
 
 type ResizeGraphReq struct {
-	Resize *GraphSizeTypeIndexReq `json:"resize"`
+	Resize *GraphSizeTypeIndexReq `json:"resize" xml:"resize"`
 }
 
 func (o ResizeGraphReq) String() string {

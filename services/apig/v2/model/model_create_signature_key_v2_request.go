@@ -10,9 +10,9 @@ import (
 type CreateSignatureKeyV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *BaseSignature `json:"body,omitempty"`
+	Body *BaseSignature `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateSignatureKeyV2Request) String() string {

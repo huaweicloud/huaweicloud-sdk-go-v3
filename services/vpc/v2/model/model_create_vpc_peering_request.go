@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateVpcPeeringRequest struct {
-	Body *CreateVpcPeeringRequestBody `json:"body,omitempty"`
+	Body *CreateVpcPeeringRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateVpcPeeringRequest) String() string {

@@ -10,16 +10,16 @@ import (
 type OprecordCluster struct {
 
 	// 集群类型
-	ClusterType *string `json:"cluster_type,omitempty"`
+	ClusterType *string `json:"cluster_type,omitempty" xml:"cluster_type"`
 
 	// 集群名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 集群ID
-	ClusterId *string `json:"cluster_id,omitempty"`
+	ClusterId *string `json:"cluster_id,omitempty" xml:"cluster_id"`
 
 	// 节点信息
-	NodeInfos *[]NodeInfo `json:"node_infos,omitempty"`
+	NodeInfos *[]NodeInfo `json:"node_infos,omitempty" xml:"node_infos"`
 }
 
 func (o OprecordCluster) String() string {

@@ -10,19 +10,19 @@ import (
 type VolumeGroups struct {
 
 	// Pv信息
-	Components *string `json:"components,omitempty"`
+	Components *string `json:"components,omitempty" xml:"components"`
 
 	// 剩余空间
-	FreeSize *int64 `json:"free_size,omitempty"`
+	FreeSize *int64 `json:"free_size,omitempty" xml:"free_size"`
 
 	// lv信息
-	LogicalVolumes *[]LogicalVolumes `json:"logical_volumes,omitempty"`
+	LogicalVolumes *[]LogicalVolumes `json:"logical_volumes,omitempty" xml:"logical_volumes"`
 
 	// 名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 大小
-	Size *int64 `json:"size,omitempty"`
+	Size *int64 `json:"size,omitempty" xml:"size"`
 }
 
 func (o VolumeGroups) String() string {

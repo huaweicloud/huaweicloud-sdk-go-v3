@@ -10,28 +10,28 @@ import (
 type IncidentMessageV2 struct {
 
 	// 类型，0客户留言 1华为工程师留言
-	Type *int32 `json:"type,omitempty"`
+	Type *int32 `json:"type,omitempty" xml:"type"`
 
 	// 回复人ID
-	Replier *string `json:"replier,omitempty"`
+	Replier *string `json:"replier,omitempty" xml:"replier"`
 
 	// 留言内容
-	Content *string `json:"content,omitempty"`
+	Content *string `json:"content,omitempty" xml:"content"`
 
 	// 留言id
-	MessageId *string `json:"message_id,omitempty"`
+	MessageId *string `json:"message_id,omitempty" xml:"message_id"`
 
 	// 回复人名称
-	ReplierName *string `json:"replier_name,omitempty"`
+	ReplierName *string `json:"replier_name,omitempty" xml:"replier_name"`
 
 	// 创建时间
-	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
+	CreateTime *sdktime.SdkTime `json:"create_time,omitempty" xml:"create_time"`
 
 	// 是否是第一条留言
-	IsFirstMessage *int32 `json:"is_first_message,omitempty"`
+	IsFirstMessage *int32 `json:"is_first_message,omitempty" xml:"is_first_message"`
 
 	// 附件列表
-	AccessoryList *[]SimpleAccessoryV2 `json:"accessory_list,omitempty"`
+	AccessoryList *[]SimpleAccessoryV2 `json:"accessory_list,omitempty" xml:"accessory_list"`
 }
 
 func (o IncidentMessageV2) String() string {

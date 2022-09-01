@@ -10,22 +10,22 @@ import (
 type RunEntitySentimentResponse struct {
 
 	// 响应的文本
-	Content *string `json:"content,omitempty"`
+	Content *string `json:"content,omitempty" xml:"content"`
 
 	// 响应的实体
-	Entity *string `json:"entity,omitempty"`
+	Entity *string `json:"entity,omitempty" xml:"entity"`
 
 	// 响应的情感标签，0表示负面，1表示非负面，2表示不相关
-	Label *int32 `json:"label,omitempty"`
+	Label *int32 `json:"label,omitempty" xml:"label"`
 
 	// 该实体在文本中的情感label的置信度
-	Confidence *float64 `json:"confidence,omitempty"`
+	Confidence *float64 `json:"confidence,omitempty" xml:"confidence"`
 
 	// 调用失败时的错误码，具体请参见错误码。调用成功时无此字段。
-	ErrorCode *string `json:"error_code,omitempty"`
+	ErrorCode *string `json:"error_code,omitempty" xml:"error_code"`
 
 	// 调用失败时的错误信息。调用成功时无此字段。
-	ErrorMsg       *string `json:"error_msg,omitempty"`
+	ErrorMsg       *string `json:"error_msg,omitempty" xml:"error_msg"`
 	HttpStatusCode int     `json:"-"`
 }
 

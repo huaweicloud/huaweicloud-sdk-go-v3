@@ -9,10 +9,10 @@ import (
 type CreateRetentionRequestBody struct {
 
 	// 回收规则匹配策略，固定为\"or\"
-	Algorithm string `json:"algorithm"`
+	Algorithm string `json:"algorithm" xml:"algorithm"`
 
 	// 镜像老化规则
-	Rules []Rule `json:"rules"`
+	Rules []Rule `json:"rules" xml:"rules"`
 }
 
 func (o CreateRetentionRequestBody) String() string {

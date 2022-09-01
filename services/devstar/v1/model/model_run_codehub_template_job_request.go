@@ -13,9 +13,9 @@ import (
 type RunCodehubTemplateJobRequest struct {
 
 	// 语言类型，缺省值为“zh-cn”。  枚举值： - zh-cn：中文 - en-us：英文
-	XLanguage *RunCodehubTemplateJobRequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *RunCodehubTemplateJobRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 
-	Body *CodehubJobInfo `json:"body,omitempty"`
+	Body *CodehubJobInfo `json:"body,omitempty" xml:"body"`
 }
 
 func (o RunCodehubTemplateJobRequest) String() string {

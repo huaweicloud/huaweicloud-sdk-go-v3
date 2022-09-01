@@ -10,9 +10,9 @@ import (
 type StartLogAutoBackupPolicyRequest struct {
 
 	// 指定开启日志备份的集群ID。
-	ClusterId string `json:"cluster_id"`
+	ClusterId string `json:"cluster_id" xml:"cluster_id"`
 
-	Body *StartLogAutoBackupPolicyReq `json:"body,omitempty"`
+	Body *StartLogAutoBackupPolicyReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o StartLogAutoBackupPolicyRequest) String() string {

@@ -10,10 +10,10 @@ import (
 type ListEnvTagsResponse struct {
 
 	// 环境标签数据模型
-	EnvTags *[]CmdbTagEntity `json:"env_tags,omitempty"`
+	EnvTags *[]CmdbTagEntity `json:"env_tags,omitempty" xml:"env_tags"`
 
 	// 总条数
-	TotalCount     *int32 `json:"total_count,omitempty"`
+	TotalCount     *int32 `json:"total_count,omitempty" xml:"total_count"`
 	HttpStatusCode int    `json:"-"`
 }
 

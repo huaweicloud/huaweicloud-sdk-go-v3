@@ -10,13 +10,13 @@ import (
 type IssueProjectResponseV4 struct {
 
 	// 项目id
-	ProjectId *string `json:"project_id,omitempty"`
+	ProjectId *string `json:"project_id,omitempty" xml:"project_id"`
 
 	// 项目名称
-	ProjectName *string `json:"project_name,omitempty"`
+	ProjectName *string `json:"project_name,omitempty" xml:"project_name"`
 
 	// 项目数字id
-	ProjectNumId *int32 `json:"project_num_id,omitempty"`
+	ProjectNumId *int32 `json:"project_num_id,omitempty" xml:"project_num_id"`
 }
 
 func (o IssueProjectResponseV4) String() string {

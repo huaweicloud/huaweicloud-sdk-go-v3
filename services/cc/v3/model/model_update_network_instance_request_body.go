@@ -8,7 +8,7 @@ import (
 
 // 更新网络实例的请求体。
 type UpdateNetworkInstanceRequestBody struct {
-	NetworkInstance *UpdateNetworkInstance `json:"network_instance"`
+	NetworkInstance *UpdateNetworkInstance `json:"network_instance" xml:"network_instance"`
 }
 
 func (o UpdateNetworkInstanceRequestBody) String() string {

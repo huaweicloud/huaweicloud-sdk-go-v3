@@ -10,10 +10,10 @@ import (
 type ApiBackendVpcReq struct {
 
 	// 代理主机
-	VpcChannelProxyHost *string `json:"vpc_channel_proxy_host,omitempty"`
+	VpcChannelProxyHost *string `json:"vpc_channel_proxy_host,omitempty" xml:"vpc_channel_proxy_host"`
 
 	// VPC通道编号
-	VpcChannelId string `json:"vpc_channel_id"`
+	VpcChannelId string `json:"vpc_channel_id" xml:"vpc_channel_id"`
 }
 
 func (o ApiBackendVpcReq) String() string {

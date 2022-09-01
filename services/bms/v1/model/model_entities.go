@@ -10,10 +10,10 @@ import (
 type Entities struct {
 
 	// 子任务数量。没有子任务时为0
-	SubJobsTotal *int32 `json:"sub_jobs_total,omitempty"`
+	SubJobsTotal *int32 `json:"sub_jobs_total,omitempty" xml:"sub_jobs_total"`
 
 	// 每个子任务的执行信息。没有子任务时为空列表
-	SubJobs *[]SubJobs `json:"sub_jobs,omitempty"`
+	SubJobs *[]SubJobs `json:"sub_jobs,omitempty" xml:"sub_jobs"`
 }
 
 func (o Entities) String() string {

@@ -10,20 +10,20 @@ import (
 type CollectReplyRatesResponse struct {
 
 	// 统计周期目前支持year、month、week、day。 调用失败时无此字段。
-	Interval *string `json:"interval,omitempty"`
+	Interval *string `json:"interval,omitempty" xml:"interval"`
 
 	// 所在时区，例如：中国东八区为\"+08:00\"；美国西五区为\"-05:00\";默认为\"UTC\"。 调用失败时无此字段。
-	TimeZone *string `json:"time_zone,omitempty"`
+	TimeZone *string `json:"time_zone,omitempty" xml:"time_zone"`
 
-	Total *ReplyRatesTotal `json:"total,omitempty"`
+	Total *ReplyRatesTotal `json:"total,omitempty" xml:"total"`
 
-	Intervals *ReplyRatesIntervals `json:"intervals,omitempty"`
+	Intervals *ReplyRatesIntervals `json:"intervals,omitempty" xml:"intervals"`
 
 	// 统计开始的utc时间。
-	Startutc *int64 `json:"startutc,omitempty"`
+	Startutc *int64 `json:"startutc,omitempty" xml:"startutc"`
 
 	// 统计结束的utc时间。
-	Endutc         *int64 `json:"endutc,omitempty"`
+	Endutc         *int64 `json:"endutc,omitempty" xml:"endutc"`
 	HttpStatusCode int    `json:"-"`
 }
 

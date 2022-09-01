@@ -13,10 +13,10 @@ import (
 type RunModerationAudioRequestBodyConfig struct {
 
 	// 支持的语音格式
-	Format RunModerationAudioRequestBodyConfigFormat `json:"format"`
+	Format RunModerationAudioRequestBodyConfigFormat `json:"format" xml:"format"`
 
 	// 所使用的模型特征串。通常是 “语种_采样率_领域”的形式。 采样率需要与音频采样率保持一致。 当前支持如下模型特征串：   chinese_8k_common   chinese_16k_common
-	Property RunModerationAudioRequestBodyConfigProperty `json:"property"`
+	Property RunModerationAudioRequestBodyConfigProperty `json:"property" xml:"property"`
 }
 
 func (o RunModerationAudioRequestBodyConfig) String() string {

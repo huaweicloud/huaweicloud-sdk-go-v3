@@ -11,28 +11,28 @@ import (
 type ApiGroupCommonInfo struct {
 
 	// 编号
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// API分组名称
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 状态   - 1： 有效
-	Status ApiGroupCommonInfoStatus `json:"status"`
+	Status ApiGroupCommonInfoStatus `json:"status" xml:"status"`
 
 	// 系统默认分配的子域名
-	SlDomain string `json:"sl_domain"`
+	SlDomain string `json:"sl_domain" xml:"sl_domain"`
 
 	// 创建时间
-	RegisterTime *sdktime.SdkTime `json:"register_time"`
+	RegisterTime *sdktime.SdkTime `json:"register_time" xml:"register_time"`
 
 	// 最近修改时间
-	UpdateTime *sdktime.SdkTime `json:"update_time"`
+	UpdateTime *sdktime.SdkTime `json:"update_time" xml:"update_time"`
 
 	// 是否已上架云市场： - 1：已上架 - 2：未上架 - 3：审核中  ROMAConnect暂未对接云市场，此字段默认返回2
-	OnSellStatus int32 `json:"on_sell_status"`
+	OnSellStatus int32 `json:"on_sell_status" xml:"on_sell_status"`
 
 	// 分组上绑定的独立域名列表
-	UrlDomains *[]UrlDomain `json:"url_domains,omitempty"`
+	UrlDomains *[]UrlDomain `json:"url_domains,omitempty" xml:"url_domains"`
 }
 
 func (o ApiGroupCommonInfo) String() string {

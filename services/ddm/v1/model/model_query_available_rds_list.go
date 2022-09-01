@@ -10,37 +10,37 @@ import (
 type QueryAvailableRdsList struct {
 
 	// 数据库实例 ID。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 数据库实例所在租户在某一region下的project ID。
-	ProjectId *string `json:"projectId,omitempty"`
+	ProjectId *string `json:"projectId,omitempty" xml:"projectId"`
 
 	// 数据库实例状态。
-	Status *string `json:"status,omitempty"`
+	Status *string `json:"status,omitempty" xml:"status"`
 
 	// 数据库实例名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 数据库实例引擎名称。
-	EngineName *string `json:"engineName,omitempty"`
+	EngineName *string `json:"engineName,omitempty" xml:"engineName"`
 
 	// 数据库实例引擎版本。
-	EngineSoftwareVersion *string `json:"engineSoftwareVersion,omitempty"`
+	EngineSoftwareVersion *string `json:"engineSoftwareVersion,omitempty" xml:"engineSoftwareVersion"`
 
 	// 数据库实例内网连接地址。
-	PrivateIp *string `json:"privateIp,omitempty"`
+	PrivateIp *string `json:"privateIp,omitempty" xml:"privateIp"`
 
 	// 数据库实例类型（主备或单机）。
-	Mode *string `json:"mode,omitempty"`
+	Mode *string `json:"mode,omitempty" xml:"mode"`
 
 	// 数据库实例端口。
-	Port *int32 `json:"port,omitempty"`
+	Port *int32 `json:"port,omitempty" xml:"port"`
 
 	// 可用区。
-	AzCode *string `json:"azCode,omitempty"`
+	AzCode *string `json:"azCode,omitempty" xml:"azCode"`
 
 	// 时区。
-	TimeZone *string `json:"timeZone,omitempty"`
+	TimeZone *string `json:"timeZone,omitempty" xml:"timeZone"`
 }
 
 func (o QueryAvailableRdsList) String() string {

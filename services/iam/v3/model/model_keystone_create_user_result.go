@@ -9,24 +9,24 @@ import (
 type KeystoneCreateUserResult struct {
 
 	// IAM用户所属账号ID。
-	DomainId string `json:"domain_id"`
+	DomainId string `json:"domain_id" xml:"domain_id"`
 
 	// IAM用户名。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// IAM用户描述信息。
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// IAM用户密码过期时间（UTC时间），“null”表示密码不过期。
-	PasswordExpiresAt string `json:"password_expires_at"`
+	PasswordExpiresAt string `json:"password_expires_at" xml:"password_expires_at"`
 
-	Links *LinksSelf `json:"links"`
+	Links *LinksSelf `json:"links" xml:"links"`
 
 	// IAM用户ID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// IAM用户是否启用。true表示启用，false表示停用，默认为true。
-	Enabled bool `json:"enabled"`
+	Enabled bool `json:"enabled" xml:"enabled"`
 }
 
 func (o KeystoneCreateUserResult) String() string {

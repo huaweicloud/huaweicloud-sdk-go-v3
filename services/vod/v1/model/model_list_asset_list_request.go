@@ -13,37 +13,37 @@ import (
 type ListAssetListRequest struct {
 
 	// 媒资ID，最多同时查询10个。
-	AssetId *[]string `json:"asset_id,omitempty"`
+	AssetId *[]string `json:"asset_id,omitempty" xml:"asset_id"`
 
 	// 媒资状态，同时查询多个状态的媒资。  取值如下： - CREATING：上传中 - FAILED：上传失败 - CREATED：上传成功 - PUBLISHED：已发布 - TRANSCODING：转码中 - TRANSCODE_SUCCEED：转码成功 - TRANSCODE_FAILED：转码失败 - THUMBNAILING：截图中 - THUMBNAIL_SUCCEED：截图成功 - THUMBNAIL_FAILED：截图失败 - UN_REVIEW：未审核 - REVIEWING：审核中 - REVIEW_SUSPICIOUS ：审核不过，待人工复审 - REVIEW_PASSED：审核通过 - REVIEW_FAILED：审核任务失败 - REVIEW_BLOCKED：已屏蔽
-	Status *[]ListAssetListRequestStatus `json:"status,omitempty"`
+	Status *[]ListAssetListRequestStatus `json:"status,omitempty" xml:"status"`
 
 	// 起始时间。  格式为yyyymmddhhm mss。必须是与时区无关的UTC时间。
-	StartTime *string `json:"start_time,omitempty"`
+	StartTime *string `json:"start_time,omitempty" xml:"start_time"`
 
 	// 结束时间。  格式为yyyymmddhhm mss。必须是与时区无关的UTC时间。
-	EndTime *string `json:"end_time,omitempty"`
+	EndTime *string `json:"end_time,omitempty" xml:"end_time"`
 
 	// 分类ID。
-	CategoryId *int32 `json:"category_id,omitempty"`
+	CategoryId *int32 `json:"category_id,omitempty" xml:"category_id"`
 
 	// 媒资标签。 单个标签不超过16个字节， 最多不超过16 个标签。 多个用英文逗号分隔，UTF8编码。
-	Tags *string `json:"tags,omitempty"`
+	Tags *string `json:"tags,omitempty" xml:"tags"`
 
 	// 在媒资标题、 描述、分类名称中模糊查询的字符串。
-	QueryString *string `json:"query_string,omitempty"`
+	QueryString *string `json:"query_string,omitempty" xml:"query_string"`
 
 	// 音视频文件的格式，支持多格式查询，最多不超过20个。  取值如下： - 视频文件格式：MP4、TS、MOV、MXF、MPG、FLV、WMV、AVI、M4V、F4V、MPEG - 音频文件格式：MP3、OGG、WAV、WMA、APE、FLAC、AAC、AC3、MMF、AMR、M4A、M4R、WV、MP2
-	MediaType *[]string `json:"media_type,omitempty"`
+	MediaType *[]string `json:"media_type,omitempty" xml:"media_type"`
 
 	// 分页编号。  默认值：0。
-	Page *int32 `json:"page,omitempty"`
+	Page *int32 `json:"page,omitempty" xml:"page"`
 
 	// 每页记录数。  取值范围：[1,100]。  默认值：10。
-	Size *int32 `json:"size,omitempty"`
+	Size *int32 `json:"size,omitempty" xml:"size"`
 
 	// 查询顺序，按createTime顺序还是倒序
-	Order *ListAssetListRequestOrder `json:"order,omitempty"`
+	Order *ListAssetListRequestOrder `json:"order,omitempty" xml:"order"`
 }
 
 func (o ListAssetListRequest) String() string {

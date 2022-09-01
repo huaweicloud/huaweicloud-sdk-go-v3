@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type DeleteServersRequest struct {
-	Body *DeleteServersRequestBody `json:"body,omitempty"`
+	Body *DeleteServersRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o DeleteServersRequest) String() string {

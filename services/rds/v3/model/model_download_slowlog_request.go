@@ -13,12 +13,12 @@ import (
 type DownloadSlowlogRequest struct {
 
 	// 语言
-	XLanguage *DownloadSlowlogRequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *DownloadSlowlogRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *SlowlogDownloadRequest `json:"body,omitempty"`
+	Body *SlowlogDownloadRequest `json:"body,omitempty" xml:"body"`
 }
 
 func (o DownloadSlowlogRequest) String() string {

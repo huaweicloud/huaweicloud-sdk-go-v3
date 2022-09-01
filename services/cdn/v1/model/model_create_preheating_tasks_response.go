@@ -10,7 +10,7 @@ import (
 type CreatePreheatingTasksResponse struct {
 
 	// 任务ID
-	PreheatingTask *string `json:"preheating_task,omitempty"`
+	PreheatingTask *string `json:"preheating_task,omitempty" xml:"preheating_task"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -9,13 +9,13 @@ import (
 type PipelineStageResp struct {
 
 	// 阶段名称
-	DisplayName *string `json:"display_name,omitempty"`
+	DisplayName *string `json:"display_name,omitempty" xml:"display_name"`
 
 	// 阶段状态
-	Status *string `json:"status,omitempty"`
+	Status *string `json:"status,omitempty" xml:"status"`
 
 	// 阶段执行结果
-	Result *string `json:"result,omitempty"`
+	Result *string `json:"result,omitempty" xml:"result"`
 }
 
 func (o PipelineStageResp) String() string {

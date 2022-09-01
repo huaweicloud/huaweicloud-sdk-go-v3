@@ -10,10 +10,10 @@ import (
 type SgObject struct {
 
 	// 安全组ID
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 安全组名称
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 }
 
 func (o SgObject) String() string {

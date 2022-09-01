@@ -10,9 +10,9 @@ import (
 type UpdateAlterKibanaRequest struct {
 
 	// 指定待修改kibana公网带宽的集群ID。
-	ClusterId string `json:"cluster_id"`
+	ClusterId string `json:"cluster_id" xml:"cluster_id"`
 
-	Body *UpdatePublicKibanaBandwidthReq `json:"body,omitempty"`
+	Body *UpdatePublicKibanaBandwidthReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateAlterKibanaRequest) String() string {

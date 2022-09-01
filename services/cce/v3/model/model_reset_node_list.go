@@ -10,13 +10,13 @@ import (
 type ResetNodeList struct {
 
 	// API版本，固定值“v3”。
-	ApiVersion string `json:"apiVersion"`
+	ApiVersion string `json:"apiVersion" xml:"apiVersion"`
 
 	// API类型，固定值“List”。
-	Kind string `json:"kind"`
+	Kind string `json:"kind" xml:"kind"`
 
 	// 重置节点列表
-	NodeList []ResetNode `json:"nodeList"`
+	NodeList []ResetNode `json:"nodeList" xml:"nodeList"`
 }
 
 func (o ResetNodeList) String() string {

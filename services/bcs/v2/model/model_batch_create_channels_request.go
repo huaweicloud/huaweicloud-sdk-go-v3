@@ -10,9 +10,9 @@ import (
 type BatchCreateChannelsRequest struct {
 
 	// bcs 服务id
-	BlockchainId string `json:"blockchain_id"`
+	BlockchainId string `json:"blockchain_id" xml:"blockchain_id"`
 
-	Body *BatchCreateChannelsRequestBody `json:"body,omitempty"`
+	Body *BatchCreateChannelsRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchCreateChannelsRequest) String() string {

@@ -13,9 +13,9 @@ import (
 type EipResult struct {
 
 	// IP地址类型。
-	IpType *EipResultIpType `json:"ip_type,omitempty"`
+	IpType *EipResultIpType `json:"ip_type,omitempty" xml:"ip_type"`
 
-	Bandwidth *BandwidthResult `json:"bandwidth,omitempty"`
+	Bandwidth *BandwidthResult `json:"bandwidth,omitempty" xml:"bandwidth"`
 }
 
 func (o EipResult) String() string {

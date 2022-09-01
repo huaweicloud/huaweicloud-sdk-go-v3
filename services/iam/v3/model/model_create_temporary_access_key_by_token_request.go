@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateTemporaryAccessKeyByTokenRequest struct {
-	Body *CreateTemporaryAccessKeyByTokenRequestBody `json:"body,omitempty"`
+	Body *CreateTemporaryAccessKeyByTokenRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateTemporaryAccessKeyByTokenRequest) String() string {

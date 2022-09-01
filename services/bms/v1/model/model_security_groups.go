@@ -10,7 +10,7 @@ import (
 type SecurityGroups struct {
 
 	// 创建裸金属服务器时未指定安全组，该值为default。创建裸金属服务器时，需要指定已有安全组的ID（UUID格式）。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 }
 
 func (o SecurityGroups) String() string {

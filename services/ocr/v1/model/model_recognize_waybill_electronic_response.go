@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type RecognizeWaybillElectronicResponse struct {
-	Result         *WaybillElectronicResult `json:"result,omitempty"`
+	Result         *WaybillElectronicResult `json:"result,omitempty" xml:"result"`
 	HttpStatusCode int                      `json:"-"`
 }
 

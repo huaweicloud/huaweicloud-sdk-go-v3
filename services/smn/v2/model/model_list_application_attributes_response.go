@@ -10,12 +10,12 @@ import (
 type ListApplicationAttributesResponse struct {
 
 	// 请求的唯一标识ID。
-	RequestId *string `json:"request_id,omitempty"`
+	RequestId *string `json:"request_id,omitempty" xml:"request_id"`
 
 	// Application的唯一标识ID。
-	ApplicationId *string `json:"application_id,omitempty"`
+	ApplicationId *string `json:"application_id,omitempty" xml:"application_id"`
 
-	Attributes     *ListApplicationAttributesResponseBodyAttributes `json:"attributes,omitempty"`
+	Attributes     *ListApplicationAttributesResponseBodyAttributes `json:"attributes,omitempty" xml:"attributes"`
 	HttpStatusCode int                                              `json:"-"`
 }
 

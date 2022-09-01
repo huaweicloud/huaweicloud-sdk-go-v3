@@ -10,10 +10,10 @@ import (
 type WordPronunciation struct {
 
 	// 单词发音综合得分 0-100
-	Score float32 `json:"score"`
+	Score float32 `json:"score" xml:"score"`
 
 	// 单词发音好坏得分 0-100
-	Gop float32 `json:"gop"`
+	Gop float32 `json:"gop" xml:"gop"`
 }
 
 func (o WordPronunciation) String() string {

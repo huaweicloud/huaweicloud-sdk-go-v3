@@ -9,7 +9,7 @@ import (
 type AccessRomaBriefInfo struct {
 
 	// 认证key，加密存储
-	AppKey *string `json:"app_key,omitempty"`
+	AppKey *string `json:"app_key,omitempty" xml:"app_key"`
 }
 
 func (o AccessRomaBriefInfo) String() string {

@@ -10,10 +10,10 @@ import (
 type ShowIpWhitelistResponse struct {
 
 	// 是否启用白名单（true/false）。
-	EnableWhitelist *bool `json:"enable_whitelist,omitempty"`
+	EnableWhitelist *bool `json:"enable_whitelist,omitempty" xml:"enable_whitelist"`
 
 	// IP白名单分组列表。
-	Whitelist      *[]Whitelist `json:"whitelist,omitempty"`
+	Whitelist      *[]Whitelist `json:"whitelist,omitempty" xml:"whitelist"`
 	HttpStatusCode int          `json:"-"`
 }
 

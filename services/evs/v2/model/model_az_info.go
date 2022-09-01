@@ -10,9 +10,9 @@ import (
 type AzInfo struct {
 
 	// 可用分区的名字。
-	ZoneName string `json:"zoneName"`
+	ZoneName string `json:"zoneName" xml:"zoneName"`
 
-	ZoneState *ZoneState `json:"zoneState"`
+	ZoneState *ZoneState `json:"zoneState" xml:"zoneState"`
 }
 
 func (o AzInfo) String() string {

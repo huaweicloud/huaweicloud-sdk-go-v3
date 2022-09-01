@@ -10,10 +10,10 @@ import (
 type CreateDeployTaskByTemplateResponse struct {
 
 	// 部署任务名称
-	TaskName *string `json:"task_name,omitempty"`
+	TaskName *string `json:"task_name,omitempty" xml:"task_name"`
 
 	// 部署任务id
-	TaskId         *string `json:"task_id,omitempty"`
+	TaskId         *string `json:"task_id,omitempty" xml:"task_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

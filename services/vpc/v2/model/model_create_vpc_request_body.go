@@ -8,7 +8,7 @@ import (
 
 //
 type CreateVpcRequestBody struct {
-	Vpc *CreateVpcOption `json:"vpc"`
+	Vpc *CreateVpcOption `json:"vpc" xml:"vpc"`
 }
 
 func (o CreateVpcRequestBody) String() string {

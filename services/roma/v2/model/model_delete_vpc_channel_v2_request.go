@@ -10,10 +10,10 @@ import (
 type DeleteVpcChannelV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// VPC通道的编号
-	VpcChannelId string `json:"vpc_channel_id"`
+	VpcChannelId string `json:"vpc_channel_id" xml:"vpc_channel_id"`
 }
 
 func (o DeleteVpcChannelV2Request) String() string {

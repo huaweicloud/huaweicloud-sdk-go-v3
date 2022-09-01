@@ -10,12 +10,12 @@ import (
 type UpdateUserRequest struct {
 
 	// DDM实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 需要修改的DDM帐号名称。
-	Username string `json:"username"`
+	Username string `json:"username" xml:"username"`
 
-	Body *UpdateUserReq `json:"body,omitempty"`
+	Body *UpdateUserReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateUserRequest) String() string {

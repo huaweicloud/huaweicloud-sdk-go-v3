@@ -10,10 +10,10 @@ import (
 type ListVolumesByTagsResponse struct {
 
 	// 符合查询条件的云硬盘资源个数
-	TotalCount *int32 `json:"total_count,omitempty"`
+	TotalCount *int32 `json:"total_count,omitempty" xml:"total_count"`
 
 	// 符合查询条件的资源列表
-	Resources      *[]Resource `json:"resources,omitempty"`
+	Resources      *[]Resource `json:"resources,omitempty" xml:"resources"`
 	HttpStatusCode int         `json:"-"`
 }
 

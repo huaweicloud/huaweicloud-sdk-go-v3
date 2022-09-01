@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ListListenersByTagsRequest struct {
-	Body *ListListenersByTagsRequestBody `json:"body,omitempty"`
+	Body *ListListenersByTagsRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o ListListenersByTagsRequest) String() string {

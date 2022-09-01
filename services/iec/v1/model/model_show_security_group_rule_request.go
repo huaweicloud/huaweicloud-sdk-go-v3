@@ -10,7 +10,7 @@ import (
 type ShowSecurityGroupRuleRequest struct {
 
 	// 安全组规则ID。
-	SecurityGroupRuleId string `json:"security_group_rule_id"`
+	SecurityGroupRuleId string `json:"security_group_rule_id" xml:"security_group_rule_id"`
 }
 
 func (o ShowSecurityGroupRuleRequest) String() string {

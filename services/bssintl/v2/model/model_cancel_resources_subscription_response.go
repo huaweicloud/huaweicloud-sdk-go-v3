@@ -10,7 +10,7 @@ import (
 type CancelResourcesSubscriptionResponse struct {
 
 	// 客户退订订单ID的列表信息。
-	OrderIds       *[]string `json:"order_ids,omitempty"`
+	OrderIds       *[]string `json:"order_ids,omitempty" xml:"order_ids"`
 	HttpStatusCode int       `json:"-"`
 }
 

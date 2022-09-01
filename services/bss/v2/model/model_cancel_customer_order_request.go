@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CancelCustomerOrderRequest struct {
-	Body *CancelCustomerOrderReq `json:"body,omitempty"`
+	Body *CancelCustomerOrderReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o CancelCustomerOrderRequest) String() string {

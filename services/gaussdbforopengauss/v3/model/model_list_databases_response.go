@@ -10,10 +10,10 @@ import (
 type ListDatabasesResponse struct {
 
 	// 列表中每个元素表示一个数据库。
-	Databases *[]GaussDBforOpenGaussListDatabase `json:"databases,omitempty"`
+	Databases *[]GaussDBforOpenGaussListDatabase `json:"databases,omitempty" xml:"databases"`
 
 	// 数据库总数。
-	TotalCount     *int64 `json:"total_count,omitempty"`
+	TotalCount     *int64 `json:"total_count,omitempty" xml:"total_count"`
 	HttpStatusCode int    `json:"-"`
 }
 

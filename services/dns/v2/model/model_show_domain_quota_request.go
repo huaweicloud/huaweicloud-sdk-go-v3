@@ -10,7 +10,7 @@ import (
 type ShowDomainQuotaRequest struct {
 
 	// 租户ID。
-	DomainId string `json:"domain_id"`
+	DomainId string `json:"domain_id" xml:"domain_id"`
 }
 
 func (o ShowDomainQuotaRequest) String() string {

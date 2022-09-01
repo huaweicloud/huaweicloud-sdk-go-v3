@@ -8,7 +8,7 @@ import (
 
 // 创建项目的请求体。
 type KeystoneCreateProjectRequestBody struct {
-	Project *KeystoneCreateProjectOption `json:"project"`
+	Project *KeystoneCreateProjectOption `json:"project" xml:"project"`
 }
 
 func (o KeystoneCreateProjectRequestBody) String() string {

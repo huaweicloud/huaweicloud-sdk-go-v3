@@ -10,10 +10,10 @@ import (
 type ListTablesResponse struct {
 
 	// 表的信息。
-	Tables *[]Table `json:"tables,omitempty"`
+	Tables *[]Table `json:"tables,omitempty" xml:"tables"`
 
 	// 数据表总数。
-	Count          *int64 `json:"count,omitempty"`
+	Count          *int64 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

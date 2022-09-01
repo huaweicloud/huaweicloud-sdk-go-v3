@@ -10,9 +10,9 @@ import (
 type AssociatePublicipsRequest struct {
 
 	// 弹性公网IP的ID
-	PublicipId string `json:"publicip_id"`
+	PublicipId string `json:"publicip_id" xml:"publicip_id"`
 
-	Body *AssociatePublicipsRequestBody `json:"body,omitempty"`
+	Body *AssociatePublicipsRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o AssociatePublicipsRequest) String() string {

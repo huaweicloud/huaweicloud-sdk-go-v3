@@ -10,13 +10,13 @@ import (
 type ListNotificationResponse struct {
 
 	// 总数
-	Total *int64 `json:"total,omitempty"`
+	Total *int64 `json:"total,omitempty" xml:"total"`
 
 	// 本次返回数量
-	Size *int64 `json:"size,omitempty"`
+	Size *int64 `json:"size,omitempty" xml:"size"`
 
 	// 订阅管理列表
-	Items          *[]NotificationResponseBody `json:"items,omitempty"`
+	Items          *[]NotificationResponseBody `json:"items,omitempty" xml:"items"`
 	HttpStatusCode int                         `json:"-"`
 }
 

@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type UpdatePredefineTagsRequest struct {
-	Body *ModifyPrefineTag `json:"body,omitempty"`
+	Body *ModifyPrefineTag `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdatePredefineTagsRequest) String() string {

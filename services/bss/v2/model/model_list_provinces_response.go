@@ -10,10 +10,10 @@ import (
 type ListProvincesResponse struct {
 
 	// 查询个数，成功的时候返回。
-	Count *int32 `json:"count,omitempty"`
+	Count *int32 `json:"count,omitempty" xml:"count"`
 
 	// 省份信息列表，成功的时候返回，具体参见表3。
-	Provinces      *[]Province `json:"provinces,omitempty"`
+	Provinces      *[]Province `json:"provinces,omitempty" xml:"provinces"`
 	HttpStatusCode int         `json:"-"`
 }
 

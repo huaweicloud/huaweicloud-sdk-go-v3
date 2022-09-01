@@ -10,10 +10,10 @@ import (
 type ShowIpInfoRequest struct {
 
 	// 当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子账号调用接口时，该参数必传。
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
 
 	// IP地址列表，以“，”分割，最多20个。
-	Ips string `json:"ips"`
+	Ips string `json:"ips" xml:"ips"`
 }
 
 func (o ShowIpInfoRequest) String() string {

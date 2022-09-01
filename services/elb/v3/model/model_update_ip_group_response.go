@@ -8,10 +8,10 @@ import (
 
 // Response Object
 type UpdateIpGroupResponse struct {
-	Ipgroup *IpGroup `json:"ipgroup,omitempty"`
+	Ipgroup *IpGroup `json:"ipgroup,omitempty" xml:"ipgroup"`
 
 	// 请求ID。  注：自动生成 。
-	RequestId      *string `json:"request_id,omitempty"`
+	RequestId      *string `json:"request_id,omitempty" xml:"request_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

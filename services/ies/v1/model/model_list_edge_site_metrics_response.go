@@ -10,7 +10,7 @@ import (
 type ListEdgeSiteMetricsResponse struct {
 
 	// 监控数据
-	MetricData     *[]MetricDataDetail `json:"metric_data,omitempty"`
+	MetricData     *[]MetricDataDetail `json:"metric_data,omitempty" xml:"metric_data"`
 	HttpStatusCode int                 `json:"-"`
 }
 

@@ -13,13 +13,13 @@ import (
 type SmnConfig struct {
 
 	// 当前用户所使用的管理控制台的语言。  可以选择zh-cn或者en-us。
-	Language *SmnConfigLanguage `json:"language,omitempty"`
+	Language *SmnConfigLanguage `json:"language,omitempty" xml:"language"`
 
 	// 迁移任务所绑定的SMN消息主题的urn号。
-	TopicUrn string `json:"topic_urn"`
+	TopicUrn string `json:"topic_urn" xml:"topic_urn"`
 
 	//   SMN消息的触发条件，取决于迁移任务状态。  迁移任务状态的取值范围为SUCCESS或者FAILURE。  - FAILURE表示任务失败后发送SMN消息。 - SUCCESS表示任务成功后发送SMN消息。
-	TriggerConditions []string `json:"trigger_conditions"`
+	TriggerConditions []string `json:"trigger_conditions" xml:"trigger_conditions"`
 }
 
 func (o SmnConfig) String() string {

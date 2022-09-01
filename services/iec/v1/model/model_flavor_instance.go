@@ -10,19 +10,19 @@ import (
 type FlavorInstance struct {
 
 	// 边缘实例规格的ID。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 边缘实例规格的名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 边缘实例规格对应要求系统盘大小。  当前未使用该参数，缺省值为0。
-	Disk *string `json:"disk,omitempty"`
+	Disk *string `json:"disk,omitempty" xml:"disk"`
 
 	// 边缘实例规格对应的内存大小，单位为MB。
-	Ram *string `json:"ram,omitempty"`
+	Ram *string `json:"ram,omitempty" xml:"ram"`
 
 	// 边缘实例规格对应的CPU核数。
-	Vcpus *string `json:"vcpus,omitempty"`
+	Vcpus *string `json:"vcpus,omitempty" xml:"vcpus"`
 }
 
 func (o FlavorInstance) String() string {

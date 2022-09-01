@@ -10,16 +10,16 @@ import (
 type ShowSubmissionsResponse struct {
 
 	// 作业运行信息，详见submissions参数说明。
-	Submissions *[]Submission `json:"submissions,omitempty"`
+	Submissions *[]Submission `json:"submissions,omitempty" xml:"submissions"`
 
 	// 查询该作业总的历史记录数。
-	Total *int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty" xml:"total"`
 
 	// 查询作业记录时，分页数。
-	PageNo *int32 `json:"page_no,omitempty"`
+	PageNo *int32 `json:"page_no,omitempty" xml:"page_no"`
 
 	// 分页查询，每页返回的记录数。默认值：10。
-	PageSize       *int32 `json:"page_size,omitempty"`
+	PageSize       *int32 `json:"page_size,omitempty" xml:"page_size"`
 	HttpStatusCode int    `json:"-"`
 }
 

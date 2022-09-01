@@ -10,10 +10,10 @@ import (
 type ShowLifeCycleHookRequest struct {
 
 	// 伸缩组标识。
-	ScalingGroupId string `json:"scaling_group_id"`
+	ScalingGroupId string `json:"scaling_group_id" xml:"scaling_group_id"`
 
 	// 生命周期挂钩标识。
-	LifecycleHookName string `json:"lifecycle_hook_name"`
+	LifecycleHookName string `json:"lifecycle_hook_name" xml:"lifecycle_hook_name"`
 }
 
 func (o ShowLifeCycleHookRequest) String() string {

@@ -10,10 +10,10 @@ import (
 type ShowTopUrlResponse struct {
 
 	// 服务区域
-	ServiceArea *string `json:"service_area,omitempty"`
+	ServiceArea *string `json:"service_area,omitempty" xml:"service_area"`
 
 	// 详情数据对象。
-	TopUrlSummary  *[]TopUrlSummary `json:"top_url_summary,omitempty"`
+	TopUrlSummary  *[]TopUrlSummary `json:"top_url_summary,omitempty" xml:"top_url_summary"`
 	HttpStatusCode int              `json:"-"`
 }
 

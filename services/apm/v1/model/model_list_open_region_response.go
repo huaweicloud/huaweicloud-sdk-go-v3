@@ -10,7 +10,7 @@ import (
 type ListOpenRegionResponse struct {
 
 	// region列表
-	RegionList     *[]Region `json:"region_list,omitempty"`
+	RegionList     *[]Region `json:"region_list,omitempty" xml:"region_list"`
 	HttpStatusCode int       `json:"-"`
 }
 

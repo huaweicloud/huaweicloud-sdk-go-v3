@@ -10,31 +10,31 @@ import (
 type FrontCell struct {
 
 	// 数据类型
-	DataType *string `json:"data_type,omitempty"`
+	DataType *string `json:"data_type,omitempty" xml:"data_type"`
 
 	// 函数
-	Function *string `json:"function,omitempty"`
+	Function *string `json:"function,omitempty" xml:"function"`
 
 	// 是否调用链
-	Trace *bool `json:"trace,omitempty"`
+	Trace *bool `json:"trace,omitempty" xml:"trace"`
 
 	// 是否是span信息，如果是就跳到调用链搜索页面
-	Span *bool `json:"span,omitempty"`
+	Span *bool `json:"span,omitempty" xml:"span"`
 
 	// span字段
-	SpanField *string `json:"span_field,omitempty"`
+	SpanField *string `json:"span_field,omitempty" xml:"span_field"`
 
 	// 小数点位数
-	Precision *int32 `json:"precision,omitempty"`
+	Precision *int32 `json:"precision,omitempty" xml:"precision"`
 
 	// 文本信息
-	Text *string `json:"text,omitempty"`
+	Text *string `json:"text,omitempty" xml:"text"`
 
 	// 单位
-	Unit *string `json:"unit,omitempty"`
+	Unit *string `json:"unit,omitempty" xml:"unit"`
 
 	// 是否可见
-	Visible *bool `json:"visible,omitempty"`
+	Visible *bool `json:"visible,omitempty" xml:"visible"`
 }
 
 func (o FrontCell) String() string {

@@ -13,42 +13,42 @@ import (
 type PoolResp struct {
 
 	// 后端云服务器组的ID
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 后端云服务器组所在的项目ID。
-	ProjectId string `json:"project_id"`
+	ProjectId string `json:"project_id" xml:"project_id"`
 
 	// 后端云服务器组所在的项目ID。
-	TenantId string `json:"tenant_id"`
+	TenantId string `json:"tenant_id" xml:"tenant_id"`
 
 	// 后端云服务器组的名称。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 后端云服务器组的描述信息
-	Description string `json:"description"`
+	Description string `json:"description" xml:"description"`
 
 	// 后端云服务器组的管理状态。只支持设定为true，该字段的值无实际意义。
-	AdminStateUp bool `json:"admin_state_up"`
+	AdminStateUp bool `json:"admin_state_up" xml:"admin_state_up"`
 
 	// 后端云服务器组绑定的负载均衡器ID的列表。
-	Loadbalancers []ResourceList `json:"loadbalancers"`
+	Loadbalancers []ResourceList `json:"loadbalancers" xml:"loadbalancers"`
 
 	// 后端云服务器组关联的监听器ID的列表。
-	Listeners []ResourceList `json:"listeners"`
+	Listeners []ResourceList `json:"listeners" xml:"listeners"`
 
 	// 后端云服务器组关联的后端云服务器ID的列表。
-	Members []ResourceList `json:"members"`
+	Members []ResourceList `json:"members" xml:"members"`
 
 	// 后端云服务器组关联的健康检查的ID。
-	HealthmonitorId string `json:"healthmonitor_id"`
+	HealthmonitorId string `json:"healthmonitor_id" xml:"healthmonitor_id"`
 
-	SessionPersistence *SessionPersistence `json:"session_persistence"`
+	SessionPersistence *SessionPersistence `json:"session_persistence" xml:"session_persistence"`
 
 	// 后端云服务器组的后端协议。
-	Protocol PoolRespProtocol `json:"protocol"`
+	Protocol PoolRespProtocol `json:"protocol" xml:"protocol"`
 
 	// 后端云服务器组的负载均衡算法，取值：ROUND_ROBIN：加权轮询算法；LEAST_CONNECTIONS：加权最少连接算法；SOURCE_IP：源IP算法。当该字段的取值为SOURCE_IP时，后端云服务器组绑定的后端云服务器的weight字段无效。
-	LbAlgorithm PoolRespLbAlgorithm `json:"lb_algorithm"`
+	LbAlgorithm PoolRespLbAlgorithm `json:"lb_algorithm" xml:"lb_algorithm"`
 }
 
 func (o PoolResp) String() string {

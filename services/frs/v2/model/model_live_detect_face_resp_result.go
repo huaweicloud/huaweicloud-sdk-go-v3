@@ -10,13 +10,13 @@ import (
 type LiveDetectFaceRespResult struct {
 
 	// 是否是活体。
-	Alive *bool `json:"alive,omitempty"`
+	Alive *bool `json:"alive,omitempty" xml:"alive"`
 
 	// 置信度，取值范围0～1。
-	Confidence *float64 `json:"confidence,omitempty"`
+	Confidence *float64 `json:"confidence,omitempty" xml:"confidence"`
 
 	// 检测出最大人脸的图片base64字符串。
-	Picture *string `json:"picture,omitempty"`
+	Picture *string `json:"picture,omitempty" xml:"picture"`
 }
 
 func (o LiveDetectFaceRespResult) String() string {

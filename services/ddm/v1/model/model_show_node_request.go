@@ -10,10 +10,10 @@ import (
 type ShowNodeRequest struct {
 
 	// DDM实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// DDM节点ID
-	NodeId string `json:"node_id"`
+	NodeId string `json:"node_id" xml:"node_id"`
 }
 
 func (o ShowNodeRequest) String() string {

@@ -10,13 +10,13 @@ import (
 type RestSubscriberInPic struct {
 
 	// 多画面中每个画面的编号，编号从1开始
-	Index *int32 `json:"index,omitempty"`
+	Index *int32 `json:"index,omitempty" xml:"index"`
 
 	// 每个画面中会话标识，即Call_ID，通过会议状态通知获取
-	Subscriber *[]string `json:"subscriber,omitempty"`
+	Subscriber *[]string `json:"subscriber,omitempty" xml:"subscriber"`
 
 	// 是否为辅流 0： 不是辅流 1： 是辅流
-	IsAssistStream *int32 `json:"isAssistStream,omitempty"`
+	IsAssistStream *int32 `json:"isAssistStream,omitempty" xml:"isAssistStream"`
 }
 
 func (o RestSubscriberInPic) String() string {

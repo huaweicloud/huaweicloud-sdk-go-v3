@@ -13,10 +13,10 @@ import (
 type ShowApplicationResDeleteStatusRequest struct {
 
 	// 语言类型 中文:zh-cn 英文:en-us
-	XLanguage *ShowApplicationResDeleteStatusRequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *ShowApplicationResDeleteStatusRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 
 	// 应用id
-	ApplicationId string `json:"application_id"`
+	ApplicationId string `json:"application_id" xml:"application_id"`
 }
 
 func (o ShowApplicationResDeleteStatusRequest) String() string {

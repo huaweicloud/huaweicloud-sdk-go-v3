@@ -13,46 +13,46 @@ import (
 type MetadataList struct {
 
 	// 裸金属服务器的计费类型。1：按包年包月计费（即prePaid：预付费方式）。
-	ChargingMode *MetadataListChargingMode `json:"chargingMode,omitempty"`
+	ChargingMode *MetadataListChargingMode `json:"chargingMode,omitempty" xml:"chargingMode"`
 
 	// 按“包年/包月”计费的裸金属服务器对应的订单ID。
-	MeteringOrderId *string `json:"metering.order_id,omitempty"`
+	MeteringOrderId *string `json:"metering.order_id,omitempty" xml:"metering.order_id"`
 
 	// 按“包年/包月”计费的裸金属服务器对应的产品ID
-	MeteringProductId *string `json:"metering.product_id,omitempty"`
+	MeteringProductId *string `json:"metering.product_id,omitempty" xml:"metering.product_id"`
 
 	// 裸金属服务器所属的虚拟私有云ID
-	VpcId *string `json:"vpc_id,omitempty"`
+	VpcId *string `json:"vpc_id,omitempty" xml:"vpc_id"`
 
 	// 裸金属服务器操作系统对应的镜像ID
-	MeteringImageId *string `json:"metering.image_id,omitempty"`
+	MeteringImageId *string `json:"metering.image_id,omitempty" xml:"metering.image_id"`
 
 	// 镜像类型，目前支持：公共镜像（gold）私有镜像（private）共享镜像（shared）
-	MeteringImagetype *MetadataListMeteringImagetype `json:"metering.imagetype,omitempty"`
+	MeteringImagetype *MetadataListMeteringImagetype `json:"metering.imagetype,omitempty" xml:"metering.imagetype"`
 
 	// 裸金属服务器的网卡列表。
-	BaremetalPortIDList *string `json:"baremetalPortIDList,omitempty"`
+	BaremetalPortIDList *string `json:"baremetalPortIDList,omitempty" xml:"baremetalPortIDList"`
 
 	// 裸金属服务器对应的资源规格编码，格式为：{规格ID}.{os_type}，例如physical.o2.medium.linux。
-	MeteringResourcespeccode *string `json:"metering.resourcespeccode,omitempty"`
+	MeteringResourcespeccode *string `json:"metering.resourcespeccode,omitempty" xml:"metering.resourcespeccode"`
 
 	// 裸金属服务器对应的资源类型，取值为：hws.resource.type.pm
-	MeteringResourcetype *string `json:"metering.resourcetype,omitempty"`
+	MeteringResourcetype *string `json:"metering.resourcetype,omitempty" xml:"metering.resourcetype"`
 
 	// 裸金属服务器操作系统对应的镜像名称
-	ImageName *string `json:"image_name,omitempty"`
+	ImageName *string `json:"image_name,omitempty" xml:"image_name"`
 
 	// 用户ID（登录管理控制台，进入我的凭证，即可看到“用户ID”）
-	OpSvcUserid *string `json:"op_svc_userid,omitempty"`
+	OpSvcUserid *string `json:"op_svc_userid,omitempty" xml:"op_svc_userid"`
 
 	// 操作系统类型，取值为：Linux、Windows
-	OsType *MetadataListOsType `json:"os_type,omitempty"`
+	OsType *MetadataListOsType `json:"os_type,omitempty" xml:"os_type"`
 
 	// 裸金属服务器是否支持EVS卷。
-	BmsSupportEvs *string `json:"__bms_support_evs,omitempty"`
+	BmsSupportEvs *string `json:"__bms_support_evs,omitempty" xml:"__bms_support_evs"`
 
 	// 操作系统位数，一般取值为“32”或者“64”。
-	OsBit *MetadataListOsBit `json:"os_bit,omitempty"`
+	OsBit *MetadataListOsBit `json:"os_bit,omitempty" xml:"os_bit"`
 }
 
 func (o MetadataList) String() string {

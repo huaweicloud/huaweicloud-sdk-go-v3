@@ -10,9 +10,9 @@ import (
 type ImageModerationResult struct {
 
 	// 审核情况
-	Suggestion *string `json:"suggestion,omitempty"`
+	Suggestion *string `json:"suggestion,omitempty" xml:"suggestion"`
 
-	CategorySuggestions *CategorySuggestions `json:"category_suggestions,omitempty"`
+	CategorySuggestions *CategorySuggestions `json:"category_suggestions,omitempty" xml:"category_suggestions"`
 }
 
 func (o ImageModerationResult) String() string {

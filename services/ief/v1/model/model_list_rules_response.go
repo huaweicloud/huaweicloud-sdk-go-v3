@@ -10,10 +10,10 @@ import (
 type ListRulesResponse struct {
 
 	// 规则配置
-	Rules *[]RuleResponse `json:"rules,omitempty"`
+	Rules *[]RuleResponse `json:"rules,omitempty" xml:"rules"`
 
 	// 满足条件的规则个数
-	Count          *int64 `json:"count,omitempty"`
+	Count          *int64 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

@@ -9,22 +9,22 @@ import (
 type ReadWriteRatioList struct {
 
 	// 逻辑库名称。
-	Schema *string `json:"schema,omitempty"`
+	Schema *string `json:"schema,omitempty" xml:"schema"`
 
 	// 逻辑表名称。
-	Table *string `json:"table,omitempty"`
+	Table *string `json:"table,omitempty" xml:"table"`
 
 	// 读次数。
-	ReadCount *string `json:"readCount,omitempty"`
+	ReadCount *string `json:"readCount,omitempty" xml:"readCount"`
 
 	// 写次数。
-	WriteCount *string `json:"writeCount,omitempty"`
+	WriteCount *string `json:"writeCount,omitempty" xml:"writeCount"`
 
 	// 关联表。
-	RelationTables *string `json:"relationTables,omitempty"`
+	RelationTables *string `json:"relationTables,omitempty" xml:"relationTables"`
 
 	// 最后执行时间。
-	LastUpdated *string `json:"lastUpdated,omitempty"`
+	LastUpdated *string `json:"lastUpdated,omitempty" xml:"lastUpdated"`
 }
 
 func (o ReadWriteRatioList) String() string {

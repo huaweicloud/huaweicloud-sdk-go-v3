@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type AddMetricDataRequest struct {
-	Body *[]MetricDataItem `json:"body,omitempty"`
+	Body *[]MetricDataItem `json:"body,omitempty" xml:"body"`
 }
 
 func (o AddMetricDataRequest) String() string {

@@ -10,10 +10,10 @@ import (
 type RoutetableInfoError struct {
 
 	// 绑定终端节点子网路由表失败信息。
-	BindFailed *[]RoutetableInfoErrorDetial `json:"bind_failed,omitempty"`
+	BindFailed *[]RoutetableInfoErrorDetial `json:"bind_failed,omitempty" xml:"bind_failed"`
 
 	// 解绑终端节点子网路由表失败信息。
-	UnbindFailed *[]RoutetableInfoErrorDetial `json:"unbind_failed,omitempty"`
+	UnbindFailed *[]RoutetableInfoErrorDetial `json:"unbind_failed,omitempty" xml:"unbind_failed"`
 }
 
 func (o RoutetableInfoError) String() string {

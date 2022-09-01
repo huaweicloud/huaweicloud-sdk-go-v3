@@ -9,10 +9,10 @@ import (
 type CommitStatistic struct {
 
 	// 增加的行数
-	Additions *int32 `json:"additions,omitempty"`
+	Additions *int32 `json:"additions,omitempty" xml:"additions"`
 
 	// 删除的行数
-	Deletions *int32 `json:"deletions,omitempty"`
+	Deletions *int32 `json:"deletions,omitempty" xml:"deletions"`
 }
 
 func (o CommitStatistic) String() string {

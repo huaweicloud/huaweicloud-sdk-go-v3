@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ListTopStatisticsResponse struct {
-	TopUrls        *[]TopUrl `json:"top_urls,omitempty"`
+	TopUrls        *[]TopUrl `json:"top_urls,omitempty" xml:"top_urls"`
 	HttpStatusCode int       `json:"-"`
 }
 

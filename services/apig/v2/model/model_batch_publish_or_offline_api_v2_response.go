@@ -10,10 +10,10 @@ import (
 type BatchPublishOrOfflineApiV2Response struct {
 
 	// 发布或下线成功的信息
-	Success *[]PublishResp `json:"success,omitempty"`
+	Success *[]PublishResp `json:"success,omitempty" xml:"success"`
 
 	// 发布或下线失败的API及错误信息
-	Failure        *[]BatchFailure `json:"failure,omitempty"`
+	Failure        *[]BatchFailure `json:"failure,omitempty" xml:"failure"`
 	HttpStatusCode int             `json:"-"`
 }
 

@@ -10,7 +10,7 @@ import (
 type ListSnapshotsResponse struct {
 
 	// 快照列表。
-	Backups        *[]ListSnapshotBackupsResp `json:"backups,omitempty"`
+	Backups        *[]ListSnapshotBackupsResp `json:"backups,omitempty" xml:"backups"`
 	HttpStatusCode int                        `json:"-"`
 }
 

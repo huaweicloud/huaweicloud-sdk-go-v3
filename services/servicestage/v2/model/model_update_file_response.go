@@ -10,7 +10,7 @@ import (
 type UpdateFileResponse struct {
 
 	// 文件路径。
-	Path           *string `json:"path,omitempty"`
+	Path           *string `json:"path,omitempty" xml:"path"`
 	HttpStatusCode int     `json:"-"`
 }
 

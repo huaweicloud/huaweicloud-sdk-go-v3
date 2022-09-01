@@ -9,10 +9,10 @@ import (
 type LtsOperationTraceReq struct {
 
 	// 是否开启图审计，默认“false”。
-	EnableAudit *bool `json:"enableAudit,omitempty"`
+	EnableAudit *bool `json:"enableAudit,omitempty" xml:"enableAudit"`
 
 	// LTS日志组名称。
-	AuditLogGroupName *string `json:"auditLogGroupName,omitempty"`
+	AuditLogGroupName *string `json:"auditLogGroupName,omitempty" xml:"auditLogGroupName"`
 }
 
 func (o LtsOperationTraceReq) String() string {

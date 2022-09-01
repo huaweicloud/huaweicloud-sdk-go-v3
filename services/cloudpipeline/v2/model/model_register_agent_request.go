@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RegisterAgentRequest struct {
-	Body *SlaveRegister `json:"body,omitempty"`
+	Body *SlaveRegister `json:"body,omitempty" xml:"body"`
 }
 
 func (o RegisterAgentRequest) String() string {

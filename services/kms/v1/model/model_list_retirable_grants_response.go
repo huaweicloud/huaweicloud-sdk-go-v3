@@ -13,13 +13,13 @@ import (
 type ListRetirableGrantsResponse struct {
 
 	// grant列表，详情请参见grants字段数据结构说明。
-	Grants *[]Grants `json:"grants,omitempty"`
+	Grants *[]Grants `json:"grants,omitempty" xml:"grants"`
 
 	// 获取下一页所需要传递的marker值。 当“truncated”为“false”时，“next_marker”为空。
-	NextMarker *string `json:"next_marker,omitempty"`
+	NextMarker *string `json:"next_marker,omitempty" xml:"next_marker"`
 
 	// 是否还有下一页：  - “true”表示还有数据。  - “false”表示已经是最后一页。
-	Truncated      *ListRetirableGrantsResponseTruncated `json:"truncated,omitempty"`
+	Truncated      *ListRetirableGrantsResponseTruncated `json:"truncated,omitempty" xml:"truncated"`
 	HttpStatusCode int                                   `json:"-"`
 }
 

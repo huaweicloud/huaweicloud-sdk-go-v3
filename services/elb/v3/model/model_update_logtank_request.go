@@ -10,9 +10,9 @@ import (
 type UpdateLogtankRequest struct {
 
 	// 云日志ID。
-	LogtankId string `json:"logtank_id"`
+	LogtankId string `json:"logtank_id" xml:"logtank_id"`
 
-	Body *UpdateLogtankRequestBody `json:"body,omitempty"`
+	Body *UpdateLogtankRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateLogtankRequest) String() string {

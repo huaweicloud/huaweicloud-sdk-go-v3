@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateAssetCategoryRequest struct {
-	Body *CreateCategoryReq `json:"body,omitempty"`
+	Body *CreateCategoryReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateAssetCategoryRequest) String() string {

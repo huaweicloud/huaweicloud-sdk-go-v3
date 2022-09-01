@@ -10,10 +10,10 @@ import (
 type Datastore struct {
 
 	// controller版本号，默认1.0.6
-	Version string `json:"version"`
+	Version string `json:"version" xml:"version"`
 
 	// 集群数据库类型
-	Type string `json:"type"`
+	Type string `json:"type" xml:"type"`
 }
 
 func (o Datastore) String() string {

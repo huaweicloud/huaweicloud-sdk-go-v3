@@ -10,7 +10,7 @@ import (
 type AddCorpResDto struct {
 
 	// 企业待添加的资源列表
-	Resource *[]ResourceDto `json:"resource,omitempty"`
+	Resource *[]ResourceDto `json:"resource,omitempty" xml:"resource"`
 }
 
 func (o AddCorpResDto) String() string {

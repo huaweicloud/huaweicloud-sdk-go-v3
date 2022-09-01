@@ -10,7 +10,7 @@ import (
 type PoolRef struct {
 
 	// 后端服务器组ID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 }
 
 func (o PoolRef) String() string {

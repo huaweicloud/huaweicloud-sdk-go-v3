@@ -10,16 +10,16 @@ import (
 type PutVolumeGroups struct {
 
 	// lv信息
-	LogicalVolumes *[]PutLogicalVolume `json:"logical_volumes,omitempty"`
+	LogicalVolumes *[]PutLogicalVolume `json:"logical_volumes,omitempty" xml:"logical_volumes"`
 
 	// 卷组id
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 是否迁移
-	NeedMigration *bool `json:"need_migration,omitempty"`
+	NeedMigration *bool `json:"need_migration,omitempty" xml:"need_migration"`
 
 	// 调整大小
-	AdjustSize *int64 `json:"adjust_size,omitempty"`
+	AdjustSize *int64 `json:"adjust_size,omitempty" xml:"adjust_size"`
 }
 
 func (o PutVolumeGroups) String() string {

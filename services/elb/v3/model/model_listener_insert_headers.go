@@ -10,16 +10,16 @@ import (
 type ListenerInsertHeaders struct {
 
 	// X-Forwarded-ELB-IP设为true可以将ELB实例的eip地址从报文的http头中带到后端云服务器。
-	XForwardedELBIP *bool `json:"X-Forwarded-ELB-IP,omitempty"`
+	XForwardedELBIP *bool `json:"X-Forwarded-ELB-IP,omitempty" xml:"X-Forwarded-ELB-IP"`
 
 	// X-Forwarded-Port设为true可以将ELB实例的监听端口从报文的http头中带到后端云服务器。
-	XForwardedPort *bool `json:"X-Forwarded-Port,omitempty"`
+	XForwardedPort *bool `json:"X-Forwarded-Port,omitempty" xml:"X-Forwarded-Port"`
 
 	// X-Forwarded-For-Port设为true可以将客户端的源端口从报文的http头中带到后端云服务器。
-	XForwardedForPort *bool `json:"X-Forwarded-For-Port,omitempty"`
+	XForwardedForPort *bool `json:"X-Forwarded-For-Port,omitempty" xml:"X-Forwarded-For-Port"`
 
 	// X-Forwarded-Host设为true可以将客户请求头的X-Forwarded-Host设置为请求头的Host带到后端云服务器。
-	XForwardedHost *bool `json:"X-Forwarded-Host,omitempty"`
+	XForwardedHost *bool `json:"X-Forwarded-Host,omitempty" xml:"X-Forwarded-Host"`
 }
 
 func (o ListenerInsertHeaders) String() string {

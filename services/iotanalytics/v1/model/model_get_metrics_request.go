@@ -10,11 +10,11 @@ import (
 type GetMetricsRequest struct {
 
 	// 查询类型
-	Type string `json:"type"`
+	Type string `json:"type" xml:"type"`
 
-	Transform *TransformMetrics `json:"transform,omitempty"`
+	Transform *TransformMetrics `json:"transform,omitempty" xml:"transform"`
 
-	Aggregate *AggregateMetrics `json:"aggregate,omitempty"`
+	Aggregate *AggregateMetrics `json:"aggregate,omitempty" xml:"aggregate"`
 }
 
 func (o GetMetricsRequest) String() string {

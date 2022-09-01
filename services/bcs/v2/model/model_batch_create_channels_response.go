@@ -10,7 +10,7 @@ import (
 type BatchCreateChannelsResponse struct {
 
 	// 操作记录id
-	OperationId    *string `json:"operation_id,omitempty"`
+	OperationId    *string `json:"operation_id,omitempty" xml:"operation_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

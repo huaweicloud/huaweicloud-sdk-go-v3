@@ -10,7 +10,7 @@ import (
 type ListPermanentAccessKeysRequest struct {
 
 	// 待查询的IAM用户ID。
-	UserId *string `json:"user_id,omitempty"`
+	UserId *string `json:"user_id,omitempty" xml:"user_id"`
 }
 
 func (o ListPermanentAccessKeysRequest) String() string {

@@ -9,10 +9,10 @@ import (
 type ExternalKeyMessage struct {
 
 	// 第三方保存在codehub的关键信息
-	ExternalKeyMessage *string `json:"external_key_message,omitempty"`
+	ExternalKeyMessage *string `json:"external_key_message,omitempty" xml:"external_key_message"`
 
 	// 外部服务名称
-	ExternalService *string `json:"external_service,omitempty"`
+	ExternalService *string `json:"external_service,omitempty" xml:"external_service"`
 }
 
 func (o ExternalKeyMessage) String() string {

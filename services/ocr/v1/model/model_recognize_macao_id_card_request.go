@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RecognizeMacaoIdCardRequest struct {
-	Body *MacaoIdCardRequestBody `json:"body,omitempty"`
+	Body *MacaoIdCardRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o RecognizeMacaoIdCardRequest) String() string {

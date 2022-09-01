@@ -13,16 +13,16 @@ import (
 type ModifyJobResp struct {
 
 	// 任务ID
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 状态
-	Status ModifyJobRespStatus `json:"status"`
+	Status ModifyJobRespStatus `json:"status" xml:"status"`
 
 	// 错误码
-	ErrorCode *string `json:"error_code,omitempty"`
+	ErrorCode *string `json:"error_code,omitempty" xml:"error_code"`
 
 	// 错误信息
-	ErrorMsg *string `json:"error_msg,omitempty"`
+	ErrorMsg *string `json:"error_msg,omitempty" xml:"error_msg"`
 }
 
 func (o ModifyJobResp) String() string {

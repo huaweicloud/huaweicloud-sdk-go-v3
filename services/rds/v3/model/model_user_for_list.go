@@ -10,7 +10,7 @@ import (
 type UserForList struct {
 
 	// 数据库用户名称。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 }
 
 func (o UserForList) String() string {

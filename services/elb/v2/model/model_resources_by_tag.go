@@ -10,19 +10,19 @@ import (
 type ResourcesByTag struct {
 
 	// 资源ID.
-	ResourceId string `json:"resource_id"`
+	ResourceId string `json:"resource_id" xml:"resource_id"`
 
 	// 资源名称。
-	ResourceName string `json:"resource_name"`
+	ResourceName string `json:"resource_name" xml:"resource_name"`
 
 	// 资源描述。
-	ResourceDetail string `json:"resource_detail"`
+	ResourceDetail string `json:"resource_detail" xml:"resource_detail"`
 
 	// 资源标签。
-	Tags []ResourceTag `json:"tags"`
+	Tags []ResourceTag `json:"tags" xml:"tags"`
 
 	// 父级资源ID。
-	SuperResourceId *string `json:"super_resource_id,omitempty"`
+	SuperResourceId *string `json:"super_resource_id,omitempty" xml:"super_resource_id"`
 }
 
 func (o ResourcesByTag) String() string {

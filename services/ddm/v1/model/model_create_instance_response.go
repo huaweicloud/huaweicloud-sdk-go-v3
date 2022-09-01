@@ -10,10 +10,10 @@ import (
 type CreateInstanceResponse struct {
 
 	// 实例ID。创建按需付费实例时返回该参数。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 订单号，创建包年/包月实例时返回该参数。
-	OrderId        *string `json:"order_id,omitempty"`
+	OrderId        *string `json:"order_id,omitempty" xml:"order_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

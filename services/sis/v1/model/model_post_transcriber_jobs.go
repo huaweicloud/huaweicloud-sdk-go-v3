@@ -8,10 +8,10 @@ import (
 
 //
 type PostTranscriberJobs struct {
-	Config *TranscriberConfig `json:"config"`
+	Config *TranscriberConfig `json:"config" xml:"config"`
 
 	// 存放在OBS的音频文件路径。OBS的region要和请求服务的region保持一致，region不一致则OBS不可用，即使obs是公开访问权限。
-	DataUrl string `json:"data_url"`
+	DataUrl string `json:"data_url" xml:"data_url"`
 }
 
 func (o PostTranscriberJobs) String() string {

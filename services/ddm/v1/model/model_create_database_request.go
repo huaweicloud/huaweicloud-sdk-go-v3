@@ -10,9 +10,9 @@ import (
 type CreateDatabaseRequest struct {
 
 	// DDM实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *CreateDatabaseReq `json:"body,omitempty"`
+	Body *CreateDatabaseReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateDatabaseRequest) String() string {

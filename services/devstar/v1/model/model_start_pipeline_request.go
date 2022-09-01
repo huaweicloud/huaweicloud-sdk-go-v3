@@ -13,10 +13,10 @@ import (
 type StartPipelineRequest struct {
 
 	// 语言类型 中文:zh-cn 英文:en-us
-	XLanguage *StartPipelineRequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *StartPipelineRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 
 	// 流水线ID
-	PipelineId string `json:"pipeline_id"`
+	PipelineId string `json:"pipeline_id" xml:"pipeline_id"`
 }
 
 func (o StartPipelineRequest) String() string {

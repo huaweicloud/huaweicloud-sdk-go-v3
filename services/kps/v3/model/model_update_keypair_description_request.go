@@ -10,9 +10,9 @@ import (
 type UpdateKeypairDescriptionRequest struct {
 
 	// 密钥对名称
-	KeypairName string `json:"keypair_name"`
+	KeypairName string `json:"keypair_name" xml:"keypair_name"`
 
-	Body *UpdateKeypairDescriptionRequestBody `json:"body,omitempty"`
+	Body *UpdateKeypairDescriptionRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateKeypairDescriptionRequest) String() string {

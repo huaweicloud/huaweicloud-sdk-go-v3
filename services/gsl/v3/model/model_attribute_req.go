@@ -9,25 +9,25 @@ import (
 type AttributeReq struct {
 
 	// SIM卡标识
-	SimCardId int64 `json:"sim_card_id"`
+	SimCardId int64 `json:"sim_card_id" xml:"sim_card_id"`
 
 	// 自定义属性一
-	CustomerAttribute1 *string `json:"customer_attribute1,omitempty"`
+	CustomerAttribute1 *string `json:"customer_attribute1,omitempty" xml:"customer_attribute1"`
 
 	// 自定义属性二
-	CustomerAttribute2 *string `json:"customer_attribute2,omitempty"`
+	CustomerAttribute2 *string `json:"customer_attribute2,omitempty" xml:"customer_attribute2"`
 
 	// 自定义属性三
-	CustomerAttribute3 *string `json:"customer_attribute3,omitempty"`
+	CustomerAttribute3 *string `json:"customer_attribute3,omitempty" xml:"customer_attribute3"`
 
 	// 自定义属性四
-	CustomerAttribute4 *string `json:"customer_attribute4,omitempty"`
+	CustomerAttribute4 *string `json:"customer_attribute4,omitempty" xml:"customer_attribute4"`
 
 	// 自定义属性五
-	CustomerAttribute5 *string `json:"customer_attribute5,omitempty"`
+	CustomerAttribute5 *string `json:"customer_attribute5,omitempty" xml:"customer_attribute5"`
 
 	// 自定义属性六
-	CustomerAttribute6 *string `json:"customer_attribute6,omitempty"`
+	CustomerAttribute6 *string `json:"customer_attribute6,omitempty" xml:"customer_attribute6"`
 }
 
 func (o AttributeReq) String() string {

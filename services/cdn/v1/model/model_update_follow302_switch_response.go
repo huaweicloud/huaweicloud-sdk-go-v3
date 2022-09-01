@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type UpdateFollow302SwitchResponse struct {
-	FollowStatus   *Follow302StatusBody `json:"follow_status,omitempty"`
+	FollowStatus   *Follow302StatusBody `json:"follow_status,omitempty" xml:"follow_status"`
 	HttpStatusCode int                  `json:"-"`
 }
 

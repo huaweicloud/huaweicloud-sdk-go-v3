@@ -13,22 +13,22 @@ import (
 type BigkeysBody struct {
 
 	// key名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// key类型
-	Type *BigkeysBodyType `json:"type,omitempty"`
+	Type *BigkeysBodyType `json:"type,omitempty" xml:"type"`
 
 	// 大key所在的分片，仅在实例类型为集群时支持,格式为ip:port
-	Shard *string `json:"shard,omitempty"`
+	Shard *string `json:"shard,omitempty" xml:"shard"`
 
 	// 大key所在的db
-	Db *int32 `json:"db,omitempty"`
+	Db *int32 `json:"db,omitempty" xml:"db"`
 
 	// key的value大小。
-	Size *int32 `json:"size,omitempty"`
+	Size *int32 `json:"size,omitempty" xml:"size"`
 
 	// key大小的单位。type为string时，单位是：byte；type为list/set/zset/hash时，单位是：count
-	Unit *string `json:"unit,omitempty"`
+	Unit *string `json:"unit,omitempty" xml:"unit"`
 }
 
 func (o BigkeysBody) String() string {

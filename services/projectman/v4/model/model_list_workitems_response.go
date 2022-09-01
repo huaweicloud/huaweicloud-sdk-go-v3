@@ -10,10 +10,10 @@ import (
 type ListWorkitemsResponse struct {
 
 	// 工作项
-	WorkItems *[]Workitems `json:"work_items,omitempty"`
+	WorkItems *[]Workitems `json:"work_items,omitempty" xml:"work_items"`
 
 	// 总数
-	Total          *int32 `json:"total,omitempty"`
+	Total          *int32 `json:"total,omitempty" xml:"total"`
 	HttpStatusCode int    `json:"-"`
 }
 

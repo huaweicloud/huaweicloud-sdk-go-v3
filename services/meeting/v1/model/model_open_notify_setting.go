@@ -10,13 +10,13 @@ import (
 type OpenNotifySetting struct {
 
 	// 发送邮件日历是否开启，\"Y\" 开启，\"N\" 不开启。
-	EnableCalendar string `json:"enableCalendar"`
+	EnableCalendar string `json:"enableCalendar" xml:"enableCalendar"`
 
 	// 短信通知是否开启，\"Y\" 开启，\"N\" 不开启。
-	EnableSms string `json:"enableSms"`
+	EnableSms string `json:"enableSms" xml:"enableSms"`
 
 	// 短信通知是否开启，\"Y\" 开启，\"N\" 不开启。
-	EnableEmail string `json:"enableEmail"`
+	EnableEmail string `json:"enableEmail" xml:"enableEmail"`
 }
 
 func (o OpenNotifySetting) String() string {

@@ -9,10 +9,10 @@ import (
 type BackendLatencyStats struct {
 
 	// 最大后端延时
-	MaxBackendLatency *int32 `json:"max_backend_latency,omitempty"`
+	MaxBackendLatency *int32 `json:"max_backend_latency,omitempty" xml:"max_backend_latency"`
 
 	// 平均后端延时
-	AvgBackendLatency *float32 `json:"avg_backend_latency,omitempty"`
+	AvgBackendLatency *float32 `json:"avg_backend_latency,omitempty" xml:"avg_backend_latency"`
 }
 
 func (o BackendLatencyStats) String() string {

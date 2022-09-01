@@ -10,9 +10,9 @@ import (
 type UpdateCloudConnectionRequest struct {
 
 	// 云连接实例ID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
-	Body *UpdateCloudConnectionRequestBody `json:"body,omitempty"`
+	Body *UpdateCloudConnectionRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateCloudConnectionRequest) String() string {

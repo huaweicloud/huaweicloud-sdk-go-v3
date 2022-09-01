@@ -10,7 +10,7 @@ import (
 type ProtocolIdInfo struct {
 
 	// 协议id。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 }
 
 func (o ProtocolIdInfo) String() string {

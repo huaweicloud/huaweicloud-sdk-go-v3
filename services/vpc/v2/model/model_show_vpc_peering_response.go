@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowVpcPeeringResponse struct {
-	Peering        *VpcPeering `json:"peering,omitempty"`
+	Peering        *VpcPeering `json:"peering,omitempty" xml:"peering"`
 	HttpStatusCode int         `json:"-"`
 }
 

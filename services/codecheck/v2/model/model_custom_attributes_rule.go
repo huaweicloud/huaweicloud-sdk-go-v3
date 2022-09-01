@@ -9,13 +9,13 @@ import (
 type CustomAttributesRule struct {
 
 	// 规则ID
-	RuleId *string `json:"rule_id,omitempty"`
+	RuleId *string `json:"rule_id,omitempty" xml:"rule_id"`
 
 	// attribute的问题级别，0致命，1严重，2一般，3提示
-	Value *string `json:"value,omitempty"`
+	Value *string `json:"value,omitempty" xml:"value"`
 
 	// 规则阈值详细
-	RuleConfigList *[]RuleConfig `json:"rule_config_list,omitempty"`
+	RuleConfigList *[]RuleConfig `json:"rule_config_list,omitempty" xml:"rule_config_list"`
 }
 
 func (o CustomAttributesRule) String() string {

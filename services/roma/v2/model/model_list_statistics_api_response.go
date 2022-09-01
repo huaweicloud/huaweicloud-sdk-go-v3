@@ -10,16 +10,16 @@ import (
 type ListStatisticsApiResponse struct {
 
 	// 响应码
-	Code *string `json:"code,omitempty"`
+	Code *string `json:"code,omitempty" xml:"code"`
 
 	// 开始时间的UTC的时间戳
-	StartTime *int64 `json:"start_time,omitempty"`
+	StartTime *int64 `json:"start_time,omitempty" xml:"start_time"`
 
 	// 截止时间的UTC的时间戳
-	EndTime *int64 `json:"end_time,omitempty"`
+	EndTime *int64 `json:"end_time,omitempty" xml:"end_time"`
 
 	// 统计指标的数据结构结构体
-	List           *[]StatisticsApi `json:"list,omitempty"`
+	List           *[]StatisticsApi `json:"list,omitempty" xml:"list"`
 	HttpStatusCode int              `json:"-"`
 }
 

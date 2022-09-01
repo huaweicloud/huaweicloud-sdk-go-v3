@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowPrivateipResponse struct {
-	Privateip      *Privateip `json:"privateip,omitempty"`
+	Privateip      *Privateip `json:"privateip,omitempty" xml:"privateip"`
 	HttpStatusCode int        `json:"-"`
 }
 

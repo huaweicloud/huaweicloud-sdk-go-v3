@@ -10,10 +10,10 @@ import (
 type ListMetricsResponse struct {
 
 	// 时间序列
-	Timestamps *[]string `json:"timestamps,omitempty"`
+	Timestamps *[]string `json:"timestamps,omitempty" xml:"timestamps"`
 
 	// 查询的测量指标列表
-	Metrics        *[]MetricList `json:"metrics,omitempty"`
+	Metrics        *[]MetricList `json:"metrics,omitempty" xml:"metrics"`
 	HttpStatusCode int           `json:"-"`
 }
 

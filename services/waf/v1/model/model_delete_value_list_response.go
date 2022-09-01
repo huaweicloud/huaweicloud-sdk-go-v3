@@ -10,16 +10,16 @@ import (
 type DeleteValueListResponse struct {
 
 	// 引用表id
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 引用表名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 引用表类型
-	Type *string `json:"type,omitempty"`
+	Type *string `json:"type,omitempty" xml:"type"`
 
 	// 删除引用表的时间，时间为13位毫秒时间戳
-	Timestamp      *int64 `json:"timestamp,omitempty"`
+	Timestamp      *int64 `json:"timestamp,omitempty" xml:"timestamp"`
 	HttpStatusCode int    `json:"-"`
 }
 

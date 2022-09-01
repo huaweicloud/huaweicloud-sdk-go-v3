@@ -10,10 +10,10 @@ import (
 type DeleteSecretTagRequest struct {
 
 	// 凭据ID
-	SecretId string `json:"secret_id"`
+	SecretId string `json:"secret_id" xml:"secret_id"`
 
 	// 标签键的值
-	Key string `json:"key"`
+	Key string `json:"key" xml:"key"`
 }
 
 func (o DeleteSecretTagRequest) String() string {

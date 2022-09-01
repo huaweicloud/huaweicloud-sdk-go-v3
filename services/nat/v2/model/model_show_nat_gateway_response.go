@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowNatGatewayResponse struct {
-	NatGateway     *NatGatewayResponseBody `json:"nat_gateway,omitempty"`
+	NatGateway     *NatGatewayResponseBody `json:"nat_gateway,omitempty" xml:"nat_gateway"`
 	HttpStatusCode int                     `json:"-"`
 }
 

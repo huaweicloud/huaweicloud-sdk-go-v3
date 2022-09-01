@@ -13,10 +13,10 @@ import (
 type StartPipelineResponse struct {
 
 	// 流水线id
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 流水线操作成功
-	Result         *StartPipelineResponseResult `json:"result,omitempty"`
+	Result         *StartPipelineResponseResult `json:"result,omitempty" xml:"result"`
 	HttpStatusCode int                          `json:"-"`
 }
 

@@ -9,7 +9,7 @@ import (
 type MysqlVolume struct {
 
 	// 磁盘大小。默认值为40，单位GB。 取值范围：40~128000，必须为10的整数倍。
-	Size string `json:"size"`
+	Size string `json:"size" xml:"size"`
 }
 
 func (o MysqlVolume) String() string {

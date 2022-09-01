@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreatePrePaidPublicipRequest struct {
-	Body *CreatePrePaidPublicipRequestBody `json:"body,omitempty"`
+	Body *CreatePrePaidPublicipRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreatePrePaidPublicipRequest) String() string {

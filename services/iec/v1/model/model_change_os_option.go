@@ -10,12 +10,12 @@ import (
 type ChangeOsOption struct {
 
 	// 切换系统所使用的新镜像的ID。
-	ImageId string `json:"image_id"`
+	ImageId string `json:"image_id" xml:"image_id"`
 
-	Metadata *ChangeOsMetadata `json:"metadata,omitempty"`
+	Metadata *ChangeOsMetadata `json:"metadata,omitempty" xml:"metadata"`
 
 	// 密钥对名称。 如果需要使用SSH密钥方式登录边缘实例，请指定已创建密钥的名称。
-	KeyName *string `json:"key_name,omitempty"`
+	KeyName *string `json:"key_name,omitempty" xml:"key_name"`
 }
 
 func (o ChangeOsOption) String() string {

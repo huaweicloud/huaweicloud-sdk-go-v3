@@ -10,10 +10,10 @@ import (
 type TokenRole struct {
 
 	// 权限名称。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 权限ID。默认显示为0，非真实权限ID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 }
 
 func (o TokenRole) String() string {

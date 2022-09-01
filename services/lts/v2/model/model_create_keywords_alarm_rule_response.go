@@ -10,7 +10,7 @@ import (
 type CreateKeywordsAlarmRuleResponse struct {
 
 	// 告警规则id
-	KeywordsAlarmRuleId *string `json:"keywords_alarm_rule_id,omitempty"`
+	KeywordsAlarmRuleId *string `json:"keywords_alarm_rule_id,omitempty" xml:"keywords_alarm_rule_id"`
 	HttpStatusCode      int     `json:"-"`
 }
 

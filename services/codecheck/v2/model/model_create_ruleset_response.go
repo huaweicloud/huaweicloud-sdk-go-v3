@@ -10,7 +10,7 @@ import (
 type CreateRulesetResponse struct {
 
 	// 规则集ID
-	TemplateId     *string `json:"template_id,omitempty"`
+	TemplateId     *string `json:"template_id,omitempty" xml:"template_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

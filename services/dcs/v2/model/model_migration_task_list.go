@@ -13,43 +13,43 @@ import (
 type MigrationTaskList struct {
 
 	// 迁移任务ID。
-	TaskId *string `json:"task_id,omitempty"`
+	TaskId *string `json:"task_id,omitempty" xml:"task_id"`
 
 	// 迁移任务名称。
-	TaskName *string `json:"task_name,omitempty"`
+	TaskName *string `json:"task_name,omitempty" xml:"task_name"`
 
 	// 迁移任务状态，这个字段的值包括：SUCCESS, FAILED, MIGRATING，TERMINATED
-	Status *MigrationTaskListStatus `json:"status,omitempty"`
+	Status *MigrationTaskListStatus `json:"status,omitempty" xml:"status"`
 
 	// 迁移任务类型,包括备份文件导入和在线迁移两种类型。
-	MigrationType *MigrationTaskListMigrationType `json:"migration_type,omitempty"`
+	MigrationType *MigrationTaskListMigrationType `json:"migration_type,omitempty" xml:"migration_type"`
 
 	// 迁移方式，包括全量迁移和增量迁移两种类型。
-	MigrationMethod *MigrationTaskListMigrationMethod `json:"migration_method,omitempty"`
+	MigrationMethod *MigrationTaskListMigrationMethod `json:"migration_method,omitempty" xml:"migration_method"`
 
 	// 迁移机租户侧私有IP，与目的/源redis私有IP处于同VPC，可将此IP加入白名单
-	EcsTenantPrivateIp *string `json:"ecs_tenant_private_ip,omitempty"`
+	EcsTenantPrivateIp *string `json:"ecs_tenant_private_ip,omitempty" xml:"ecs_tenant_private_ip"`
 
 	// 数据源，格式为ip:port或者桶名。
-	DataSource *string `json:"data_source,omitempty"`
+	DataSource *string `json:"data_source,omitempty" xml:"data_source"`
 
 	// 源实例名称，若自建redis则为空。
-	SourceInstanceName *string `json:"source_instance_name,omitempty"`
+	SourceInstanceName *string `json:"source_instance_name,omitempty" xml:"source_instance_name"`
 
 	// 源实例ID，若自建redis则为空。
-	SourceInstanceId *string `json:"source_instance_id,omitempty"`
+	SourceInstanceId *string `json:"source_instance_id,omitempty" xml:"source_instance_id"`
 
 	// 目标redis地址，格式为ip:port。
-	TargetInstanceAddrs *string `json:"target_instance_addrs,omitempty"`
+	TargetInstanceAddrs *string `json:"target_instance_addrs,omitempty" xml:"target_instance_addrs"`
 
 	// 目标实例名称。
-	TargetInstanceName *string `json:"target_instance_name,omitempty"`
+	TargetInstanceName *string `json:"target_instance_name,omitempty" xml:"target_instance_name"`
 
 	// 目标实例ID。
-	TargetInstanceId *string `json:"target_instance_id,omitempty"`
+	TargetInstanceId *string `json:"target_instance_id,omitempty" xml:"target_instance_id"`
 
 	// 迁移任务创建时间
-	CreatedAt *string `json:"created_at,omitempty"`
+	CreatedAt *string `json:"created_at,omitempty" xml:"created_at"`
 }
 
 func (o MigrationTaskList) String() string {

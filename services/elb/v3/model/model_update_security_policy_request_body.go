@@ -8,7 +8,7 @@ import (
 
 // This is a auto create Body Object
 type UpdateSecurityPolicyRequestBody struct {
-	SecurityPolicy *UpdateSecurityPolicyOption `json:"security_policy"`
+	SecurityPolicy *UpdateSecurityPolicyOption `json:"security_policy" xml:"security_policy"`
 }
 
 func (o UpdateSecurityPolicyRequestBody) String() string {

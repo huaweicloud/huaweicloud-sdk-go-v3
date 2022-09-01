@@ -10,10 +10,10 @@ import (
 type DeleteMemberRequest struct {
 
 	// 后端服务器组ID。
-	PoolId string `json:"pool_id"`
+	PoolId string `json:"pool_id" xml:"pool_id"`
 
 	// 后端服务器ID。 >说明： 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
-	MemberId string `json:"member_id"`
+	MemberId string `json:"member_id" xml:"member_id"`
 }
 
 func (o DeleteMemberRequest) String() string {

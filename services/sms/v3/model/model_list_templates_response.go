@@ -10,10 +10,10 @@ import (
 type ListTemplatesResponse struct {
 
 	// 模板个数
-	Count *int32 `json:"count,omitempty"`
+	Count *int32 `json:"count,omitempty" xml:"count"`
 
 	// 模板信息
-	Templates      *[]TemplateResponse `json:"templates,omitempty"`
+	Templates      *[]TemplateResponse `json:"templates,omitempty" xml:"templates"`
 	HttpStatusCode int                 `json:"-"`
 }
 

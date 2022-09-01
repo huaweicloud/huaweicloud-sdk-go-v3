@@ -10,15 +10,15 @@ import (
 type UpdateDepartmentRequest struct {
 
 	// 请求requestId，用来标识一路请求，用于问题跟踪定位，建议使用uuId，若不携带，则后台自动生成
-	XRequestId *string `json:"X-Request-Id,omitempty"`
+	XRequestId *string `json:"X-Request-Id,omitempty" xml:"X-Request-Id"`
 
 	// 语言参数，默认为中文zh-CN, 英文为en-US
-	AcceptLanguage *string `json:"Accept-Language,omitempty"`
+	AcceptLanguage *string `json:"Accept-Language,omitempty" xml:"Accept-Language"`
 
 	// 部门编码。 长度： 0-32位。
-	DeptCode string `json:"dept_code"`
+	DeptCode string `json:"dept_code" xml:"dept_code"`
 
-	Body *ModDeptDto `json:"body,omitempty"`
+	Body *ModDeptDto `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateDepartmentRequest) String() string {

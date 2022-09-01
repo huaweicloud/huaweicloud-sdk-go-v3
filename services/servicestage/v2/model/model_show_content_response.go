@@ -13,16 +13,16 @@ import (
 type ShowContentResponse struct {
 
 	// 文件路径。
-	Path *string `json:"path,omitempty"`
+	Path *string `json:"path,omitempty" xml:"path"`
 
 	// commit 哈希。
-	Sha *string `json:"sha,omitempty"`
+	Sha *string `json:"sha,omitempty" xml:"sha"`
 
 	// 编码方式：base64或者text/plain。
-	Encoding *ShowContentResponseEncoding `json:"encoding,omitempty"`
+	Encoding *ShowContentResponseEncoding `json:"encoding,omitempty" xml:"encoding"`
 
 	// 文件内容。
-	Content        *string `json:"content,omitempty"`
+	Content        *string `json:"content,omitempty" xml:"content"`
 	HttpStatusCode int     `json:"-"`
 }
 

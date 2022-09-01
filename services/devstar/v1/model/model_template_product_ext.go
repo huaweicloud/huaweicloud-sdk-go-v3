@@ -9,28 +9,28 @@ import (
 type TemplateProductExt struct {
 
 	// 产品id。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 产品短名。
-	Productshort *string `json:"productshort,omitempty"`
+	Productshort *string `json:"productshort,omitempty" xml:"productshort"`
 
 	// 产品名。
-	ProductName *string `json:"product_name,omitempty"`
+	ProductName *string `json:"product_name,omitempty" xml:"product_name"`
 
 	// 首页链接。
-	HomeLink *string `json:"home_link,omitempty"`
+	HomeLink *string `json:"home_link,omitempty" xml:"home_link"`
 
 	// api调试链接。
-	ApiLink *string `json:"api_link,omitempty"`
+	ApiLink *string `json:"api_link,omitempty" xml:"api_link"`
 
 	// sdk下载链接。
-	SdkLink *string `json:"sdk_link,omitempty"`
+	SdkLink *string `json:"sdk_link,omitempty" xml:"sdk_link"`
 
 	// 文档链接。
-	DocLink *string `json:"doc_link,omitempty"`
+	DocLink *string `json:"doc_link,omitempty" xml:"doc_link"`
 
 	// logo链接。
-	LogoLink *string `json:"logo_link,omitempty"`
+	LogoLink *string `json:"logo_link,omitempty" xml:"logo_link"`
 }
 
 func (o TemplateProductExt) String() string {

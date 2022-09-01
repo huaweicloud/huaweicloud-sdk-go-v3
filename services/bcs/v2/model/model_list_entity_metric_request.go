@@ -10,9 +10,9 @@ import (
 type ListEntityMetricRequest struct {
 
 	// 区块链服务id [目前不支持IEF实例](tag:hasief)
-	BlockchainId string `json:"blockchain_id"`
+	BlockchainId string `json:"blockchain_id" xml:"blockchain_id"`
 
-	Body *ListEntityMetricRequestBody `json:"body,omitempty"`
+	Body *ListEntityMetricRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o ListEntityMetricRequest) String() string {

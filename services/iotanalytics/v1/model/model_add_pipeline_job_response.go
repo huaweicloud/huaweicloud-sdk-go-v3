@@ -10,10 +10,10 @@ import (
 type AddPipelineJobResponse struct {
 
 	// 管道ID
-	PipelineId *string `json:"pipeline_id,omitempty"`
+	PipelineId *string `json:"pipeline_id,omitempty" xml:"pipeline_id"`
 
 	// 管道错误详情
-	CheckInfo      map[string]interface{} `json:"check_info,omitempty"`
+	CheckInfo      map[string]interface{} `json:"check_info,omitempty" xml:"check_info"`
 	HttpStatusCode int                    `json:"-"`
 }
 

@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateVolumeRequest struct {
-	Body *CreateVolumeRequestBody `json:"body,omitempty"`
+	Body *CreateVolumeRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateVolumeRequest) String() string {

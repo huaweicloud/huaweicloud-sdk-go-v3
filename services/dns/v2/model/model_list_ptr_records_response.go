@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListPtrRecordsResponse struct {
-	Links *PageLink `json:"links,omitempty"`
+	Links *PageLink `json:"links,omitempty" xml:"links"`
 
-	Metadata *Metedata `json:"metadata,omitempty"`
+	Metadata *Metedata `json:"metadata,omitempty" xml:"metadata"`
 
-	Floatingips    *[]ListPtrRecordsFloatingResp `json:"floatingips,omitempty"`
+	Floatingips    *[]ListPtrRecordsFloatingResp `json:"floatingips,omitempty" xml:"floatingips"`
 	HttpStatusCode int                           `json:"-"`
 }
 

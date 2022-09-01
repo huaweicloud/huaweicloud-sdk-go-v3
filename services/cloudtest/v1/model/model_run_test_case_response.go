@@ -10,12 +10,12 @@ import (
 type RunTestCaseResponse struct {
 
 	// 接口调用失败错误码
-	ErrorCode *string `json:"error_code,omitempty"`
+	ErrorCode *string `json:"error_code,omitempty" xml:"error_code"`
 
 	// 接口调用失败错误信息
-	ErrorMsg *string `json:"error_msg,omitempty"`
+	ErrorMsg *string `json:"error_msg,omitempty" xml:"error_msg"`
 
-	ErrorDetail    *ErrorDetailInfo `json:"error_detail,omitempty"`
+	ErrorDetail    *ErrorDetailInfo `json:"error_detail,omitempty" xml:"error_detail"`
 	HttpStatusCode int              `json:"-"`
 }
 

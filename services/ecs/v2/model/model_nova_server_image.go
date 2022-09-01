@@ -10,10 +10,10 @@ import (
 type NovaServerImage struct {
 
 	// 镜像ID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 云服务器类型相关标记快捷链接信息。
-	Links []NovaLink `json:"links"`
+	Links []NovaLink `json:"links" xml:"links"`
 }
 
 func (o NovaServerImage) String() string {

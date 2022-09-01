@@ -12,10 +12,10 @@ import (
 type LdApiScriptCreate struct {
 
 	// API类型 - data：数据API - function：函数API
-	ApiType *LdApiScriptCreateApiType `json:"api_type,omitempty"`
+	ApiType *LdApiScriptCreateApiType `json:"api_type,omitempty" xml:"api_type"`
 
 	// API脚本信息列表
-	Scripts *[]LdApiScriptBase `json:"scripts,omitempty"`
+	Scripts *[]LdApiScriptBase `json:"scripts,omitempty" xml:"scripts"`
 }
 
 func (o LdApiScriptCreate) String() string {

@@ -13,19 +13,19 @@ import (
 type ListConfigurationsResponse struct {
 
 	// 实例操作时间。格式为：2017-03-31T12:24:46.297Z
-	ConfigTime *string `json:"config_time,omitempty"`
+	ConfigTime *string `json:"config_time,omitempty" xml:"config_time"`
 
 	// 实例ID。
-	InstanceId *string `json:"instance_id,omitempty"`
+	InstanceId *string `json:"instance_id,omitempty" xml:"instance_id"`
 
 	// 实例配置项数组。
-	RedisConfig *[]QueryRedisConfig `json:"redis_config,omitempty"`
+	RedisConfig *[]QueryRedisConfig `json:"redis_config,omitempty" xml:"redis_config"`
 
 	// 实例修改状态 - UPDATING - FAILURE - SUCCESS
-	ConfigStatus *ListConfigurationsResponseConfigStatus `json:"config_status,omitempty"`
+	ConfigStatus *ListConfigurationsResponseConfigStatus `json:"config_status,omitempty" xml:"config_status"`
 
 	// 实例运行状态。
-	Status         *string `json:"status,omitempty"`
+	Status         *string `json:"status,omitempty" xml:"status"`
 	HttpStatusCode int     `json:"-"`
 }
 

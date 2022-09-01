@@ -12,16 +12,16 @@ import (
 type CreateTopicReq struct {
 
 	// 主题名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 关联的代理。
-	Brokers *[]string `json:"brokers,omitempty"`
+	Brokers *[]string `json:"brokers,omitempty" xml:"brokers"`
 
 	// 队列数。
-	QueueNum float32 `json:"queue_num,omitempty"`
+	QueueNum float32 `json:"queue_num,omitempty" xml:"queue_num"`
 
 	// 权限。
-	Permission *CreateTopicReqPermission `json:"permission,omitempty"`
+	Permission *CreateTopicReqPermission `json:"permission,omitempty" xml:"permission"`
 }
 
 func (o CreateTopicReq) String() string {

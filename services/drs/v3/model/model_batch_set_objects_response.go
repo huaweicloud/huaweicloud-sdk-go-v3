@@ -10,10 +10,10 @@ import (
 type BatchSetObjectsResponse struct {
 
 	// 总数
-	AllCounts *int64 `json:"all_counts,omitempty"`
+	AllCounts *int64 `json:"all_counts,omitempty" xml:"all_counts"`
 
 	// 批量对象选择响应列表
-	Results        *[]DatabaseObjectResp `json:"results,omitempty"`
+	Results        *[]DatabaseObjectResp `json:"results,omitempty" xml:"results"`
 	HttpStatusCode int                   `json:"-"`
 }
 

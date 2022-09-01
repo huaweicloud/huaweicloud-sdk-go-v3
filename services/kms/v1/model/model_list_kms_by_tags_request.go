@@ -10,12 +10,12 @@ import (
 type ListKmsByTagsRequest struct {
 
 	// 资源实例
-	ResourceInstances string `json:"resource_instances"`
+	ResourceInstances string `json:"resource_instances" xml:"resource_instances"`
 
 	// API版本号
-	VersionId string `json:"version_id"`
+	VersionId string `json:"version_id" xml:"version_id"`
 
-	Body *ListKmsByTagsRequestBody `json:"body,omitempty"`
+	Body *ListKmsByTagsRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o ListKmsByTagsRequest) String() string {

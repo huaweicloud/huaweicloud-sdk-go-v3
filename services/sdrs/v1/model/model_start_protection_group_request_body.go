@@ -10,7 +10,7 @@ import (
 type StartProtectionGroupRequestBody struct {
 
 	// 标识保护组开始保护操作。目前该参数为空。
-	StartServerGroup *interface{} `json:"start-server-group"`
+	StartServerGroup *interface{} `json:"start-server-group" xml:"start-server-group"`
 }
 
 func (o StartProtectionGroupRequestBody) String() string {

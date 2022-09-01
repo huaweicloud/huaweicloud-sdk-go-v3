@@ -9,10 +9,10 @@ import (
 type Instances struct {
 
 	// 缓存实例ID。
-	InstanceId *string `json:"instance_id,omitempty"`
+	InstanceId *string `json:"instance_id,omitempty" xml:"instance_id"`
 
 	// 缓存实例名称。
-	InstanceName *string `json:"instance_name,omitempty"`
+	InstanceName *string `json:"instance_name,omitempty" xml:"instance_name"`
 }
 
 func (o Instances) String() string {

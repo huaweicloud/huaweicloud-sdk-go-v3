@@ -10,9 +10,9 @@ import (
 type ShowLoadBalancerResponse struct {
 
 	// 请求ID。  注：自动生成 。
-	RequestId *string `json:"request_id,omitempty"`
+	RequestId *string `json:"request_id,omitempty" xml:"request_id"`
 
-	Loadbalancer   *LoadBalancer `json:"loadbalancer,omitempty"`
+	Loadbalancer   *LoadBalancer `json:"loadbalancer,omitempty" xml:"loadbalancer"`
 	HttpStatusCode int           `json:"-"`
 }
 

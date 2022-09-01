@@ -9,10 +9,10 @@ import (
 type TemplateListInfo struct {
 
 	// 仓库列表
-	Repos *[]DevstarRepoInfo `json:"repos,omitempty"`
+	Repos *[]DevstarRepoInfo `json:"repos,omitempty" xml:"repos"`
 
 	// 仓库总数
-	TotalCount *int32 `json:"total_count,omitempty"`
+	TotalCount *int32 `json:"total_count,omitempty" xml:"total_count"`
 }
 
 func (o TemplateListInfo) String() string {

@@ -13,25 +13,25 @@ import (
 type ShowRepositoryByCloudIdeRequest struct {
 
 	// 语言类型 中文:zh-cn 英文:en-us
-	XLanguage *ShowRepositoryByCloudIdeRequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *ShowRepositoryByCloudIdeRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 
 	// 仓库id。
-	RepositoryId string `json:"repository_id"`
+	RepositoryId string `json:"repository_id" xml:"repository_id"`
 
 	// 仓库下载地址。
-	RepositorySshUrl string `json:"repository_ssh_url"`
+	RepositorySshUrl string `json:"repository_ssh_url" xml:"repository_ssh_url"`
 
 	// 区域ID，目前仅支持北京四：cn-north-4及北京一：cn-north-1。
-	RegionId *string `json:"region_id,omitempty"`
+	RegionId *string `json:"region_id,omitempty" xml:"region_id"`
 
 	// 工作空间名称前缀，仅在is_open_last为false时生效，由用户自定义，支持大小写字母、中文、_、-，长度1-256。
-	SpacePrefix *string `json:"space_prefix,omitempty"`
+	SpacePrefix *string `json:"space_prefix,omitempty" xml:"space_prefix"`
 
 	// 是否打开上一次的工作空间，true表示打开上一次工作空间，如果没有上一次工作空间会返回空，false代表打开一个全新的工作空间。
-	IsOpenLast *bool `json:"is_open_last,omitempty"`
+	IsOpenLast *bool `json:"is_open_last,omitempty" xml:"is_open_last"`
 
 	// 是否创建 CloudIDE 免费实例链接，true表示创建一个 CloudIDE 免费实例链接，false表示创建一个 CloudIDE 收费实例链接。
-	IsFree *bool `json:"is_free,omitempty"`
+	IsFree *bool `json:"is_free,omitempty" xml:"is_free"`
 }
 
 func (o ShowRepositoryByCloudIdeRequest) String() string {

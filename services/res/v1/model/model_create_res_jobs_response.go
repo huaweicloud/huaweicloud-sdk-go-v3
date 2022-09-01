@@ -10,13 +10,13 @@ import (
 type CreateResJobsResponse struct {
 
 	// 请求是否成功
-	IsSuccess *bool `json:"is_success,omitempty"`
+	IsSuccess *bool `json:"is_success,omitempty" xml:"is_success"`
 
 	// 返回消息
-	Message *string `json:"message,omitempty"`
+	Message *string `json:"message,omitempty" xml:"message"`
 
 	// 错误码（请求成功时，不返回此字段）
-	ErrorCode      *string `json:"error_code,omitempty"`
+	ErrorCode      *string `json:"error_code,omitempty" xml:"error_code"`
 	HttpStatusCode int     `json:"-"`
 }
 

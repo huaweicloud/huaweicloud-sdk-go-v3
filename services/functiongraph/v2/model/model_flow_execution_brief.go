@@ -13,28 +13,28 @@ import (
 type FlowExecutionBrief struct {
 
 	// 流程定义ID
-	WorkflowId *string `json:"workflow_id,omitempty"`
+	WorkflowId *string `json:"workflow_id,omitempty" xml:"workflow_id"`
 
 	// 函数工作流URN, 格式为： urn:fss:<region_id>:<project_id>:workflow:\\<package\\>:<workflow_name>:\\<version\\> 注意： package当前只支持default version当前只支持latest
-	WorkflowUrn *string `json:"workflow_urn,omitempty"`
+	WorkflowUrn *string `json:"workflow_urn,omitempty" xml:"workflow_urn"`
 
 	// 流程执行实例ID
-	ExecutionId *string `json:"execution_id,omitempty"`
+	ExecutionId *string `json:"execution_id,omitempty" xml:"execution_id"`
 
 	// 流程实例执行状态
-	Status *FlowExecutionBriefStatus `json:"status,omitempty"`
+	Status *FlowExecutionBriefStatus `json:"status,omitempty" xml:"status"`
 
 	// 流程实例创建时间，格式：yyyy-MM-ddTHH:mm:ssZ，UTC时间
-	BeginTime *string `json:"begin_time,omitempty"`
+	BeginTime *string `json:"begin_time,omitempty" xml:"begin_time"`
 
 	// 流程实例结束时间，格式：yyyy-MM-ddTHH:mm:ssZ，UTC时间
-	EndTime *string `json:"end_time,omitempty"`
+	EndTime *string `json:"end_time,omitempty" xml:"end_time"`
 
 	// 流程实例上次更新时间，格式：yyyy-MM-ddTHH:mm:ssZ，UTC时间
-	LastUpdateTime *string `json:"last_update_time,omitempty"`
+	LastUpdateTime *string `json:"last_update_time,omitempty" xml:"last_update_time"`
 
 	// 流程实例创建者
-	CreatedBy *string `json:"created_by,omitempty"`
+	CreatedBy *string `json:"created_by,omitempty" xml:"created_by"`
 }
 
 func (o FlowExecutionBrief) String() string {

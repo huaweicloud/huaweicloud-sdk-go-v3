@@ -10,13 +10,13 @@ import (
 type LoginProtectResult struct {
 
 	// IAM用户是否开启登录保护，开启为\"true\"，未开启为\"false\"。
-	Enabled bool `json:"enabled"`
+	Enabled bool `json:"enabled" xml:"enabled"`
 
 	// IAM用户ID。
-	UserId string `json:"user_id"`
+	UserId string `json:"user_id" xml:"user_id"`
 
 	// IAM用户登录验证方式。
-	VerificationMethod string `json:"verification_method"`
+	VerificationMethod string `json:"verification_method" xml:"verification_method"`
 }
 
 func (o LoginProtectResult) String() string {

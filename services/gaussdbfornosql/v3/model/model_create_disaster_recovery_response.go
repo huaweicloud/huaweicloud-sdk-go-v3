@@ -10,10 +10,10 @@ import (
 type CreateDisasterRecoveryResponse struct {
 
 	// 搭建容灾关系的工作ID。
-	JobId *string `json:"job_id,omitempty"`
+	JobId *string `json:"job_id,omitempty" xml:"job_id"`
 
 	// 容灾ID。
-	DisasterRecoveryId *string `json:"disaster_recovery_id,omitempty"`
+	DisasterRecoveryId *string `json:"disaster_recovery_id,omitempty" xml:"disaster_recovery_id"`
 	HttpStatusCode     int     `json:"-"`
 }
 

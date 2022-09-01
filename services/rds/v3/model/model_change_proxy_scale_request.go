@@ -13,12 +13,12 @@ import (
 type ChangeProxyScaleRequest struct {
 
 	// 语言
-	XLanguage *ChangeProxyScaleRequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *ChangeProxyScaleRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *ScaleProxyRequestBody `json:"body,omitempty"`
+	Body *ScaleProxyRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o ChangeProxyScaleRequest) String() string {

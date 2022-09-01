@@ -10,9 +10,9 @@ import (
 type UpdatePolicyRequest struct {
 
 	// 策略ID
-	PolicyId string `json:"policy_id"`
+	PolicyId string `json:"policy_id" xml:"policy_id"`
 
-	Body *PolicyUpdateReq `json:"body,omitempty"`
+	Body *PolicyUpdateReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdatePolicyRequest) String() string {

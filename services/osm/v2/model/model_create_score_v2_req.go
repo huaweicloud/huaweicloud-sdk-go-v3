@@ -9,13 +9,13 @@ import (
 type CreateScoreV2Req struct {
 
 	// 评价内容
-	Judgement string `json:"judgement"`
+	Judgement string `json:"judgement" xml:"judgement"`
 
 	// 满意度列表
-	IncidentSatisfactionList []IncidentSatisfactionV2Do `json:"incident_satisfaction_list"`
+	IncidentSatisfactionList []IncidentSatisfactionV2Do `json:"incident_satisfaction_list" xml:"incident_satisfaction_list"`
 
 	// 组id
-	GroupId *string `json:"group_id,omitempty"`
+	GroupId *string `json:"group_id,omitempty" xml:"group_id"`
 }
 
 func (o CreateScoreV2Req) String() string {

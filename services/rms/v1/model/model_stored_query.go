@@ -9,22 +9,22 @@ import (
 type StoredQuery struct {
 
 	// ResourceQL ID
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// ResourceQL 名字
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// ResourceQL 描述
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// ResourceQL 表达式
-	Expression *string `json:"expression,omitempty"`
+	Expression *string `json:"expression,omitempty" xml:"expression"`
 
 	// ResourceQL 创建时间
-	Created *string `json:"created,omitempty"`
+	Created *string `json:"created,omitempty" xml:"created"`
 
 	// ResourceQL 更新时间
-	Updated *string `json:"updated,omitempty"`
+	Updated *string `json:"updated,omitempty" xml:"updated"`
 }
 
 func (o StoredQuery) String() string {

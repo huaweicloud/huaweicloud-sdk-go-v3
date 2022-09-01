@@ -10,10 +10,10 @@ import (
 type ListComponentInfosResponse struct {
 
 	// 组件信息。
-	Nodes *[]Nodes `json:"nodes,omitempty"`
+	Nodes *[]Nodes `json:"nodes,omitempty" xml:"nodes"`
 
 	// 总记录数。
-	TotalCount     *int32 `json:"total_count,omitempty"`
+	TotalCount     *int32 `json:"total_count,omitempty" xml:"total_count"`
 	HttpStatusCode int    `json:"-"`
 }
 

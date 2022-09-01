@@ -10,10 +10,10 @@ import (
 type UpdatePortOption struct {
 
 	// IP/Mac对列表
-	AllowedAddressPairs *[]AllowedAddressPair `json:"allowed_address_pairs,omitempty"`
+	AllowedAddressPairs *[]AllowedAddressPair `json:"allowed_address_pairs,omitempty" xml:"allowed_address_pairs"`
 
 	// 安全组列表
-	SecurityGroups *[]string `json:"security_groups,omitempty"`
+	SecurityGroups *[]string `json:"security_groups,omitempty" xml:"security_groups"`
 }
 
 func (o UpdatePortOption) String() string {

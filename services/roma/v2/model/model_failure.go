@@ -9,16 +9,16 @@ import (
 type Failure struct {
 
 	// API请求路径
-	Path *string `json:"path,omitempty"`
+	Path *string `json:"path,omitempty" xml:"path"`
 
 	// 导入失败的错误信息
-	ErrorMsg *string `json:"error_msg,omitempty"`
+	ErrorMsg *string `json:"error_msg,omitempty" xml:"error_msg"`
 
 	// API请求方法
-	Method *string `json:"method,omitempty"`
+	Method *string `json:"method,omitempty" xml:"method"`
 
 	// 导入失败的错误码
-	ErrorCode *string `json:"error_code,omitempty"`
+	ErrorCode *string `json:"error_code,omitempty" xml:"error_code"`
 }
 
 func (o Failure) String() string {

@@ -13,19 +13,19 @@ import (
 type UpdatePasswordResponse struct {
 
 	// 锁定时间。验证失败时和锁定时该参数返回不为null
-	LockTime *string `json:"lock_time,omitempty"`
+	LockTime *string `json:"lock_time,omitempty" xml:"lock_time"`
 
 	// 密码修改结果： - 成功：success； - 密码验证失败：passwordFailed； - 已锁定：locked； - 失败：failed。
-	Result *UpdatePasswordResponseResult `json:"result,omitempty"`
+	Result *UpdatePasswordResponseResult `json:"result,omitempty" xml:"result"`
 
 	// 锁定剩余时间。锁定时该参数返回不为null
-	LockTimeLeft *string `json:"lock_time_left,omitempty"`
+	LockTimeLeft *string `json:"lock_time_left,omitempty" xml:"lock_time_left"`
 
 	// 密码验证剩余次数。验证失败时该参数返回不为null
-	RetryTimesLeft *string `json:"retry_times_left,omitempty"`
+	RetryTimesLeft *string `json:"retry_times_left,omitempty" xml:"retry_times_left"`
 
 	// 修改结果。
-	Message        *string `json:"message,omitempty"`
+	Message        *string `json:"message,omitempty" xml:"message"`
 	HttpStatusCode int     `json:"-"`
 }
 

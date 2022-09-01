@@ -12,10 +12,10 @@ import (
 type BackupDatastore struct {
 
 	// 数据库引擎，不区分大小写：  - MySQL - PostgreSQL - SQLServer
-	Type BackupDatastoreType `json:"type"`
+	Type BackupDatastoreType `json:"type" xml:"type"`
 
 	// 数据库版本。
-	Version string `json:"version"`
+	Version string `json:"version" xml:"version"`
 }
 
 func (o BackupDatastore) String() string {

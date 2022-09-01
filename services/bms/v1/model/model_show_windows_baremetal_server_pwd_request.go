@@ -10,7 +10,7 @@ import (
 type ShowWindowsBaremetalServerPwdRequest struct {
 
 	// 裸金属服务器ID
-	ServerId string `json:"server_id"`
+	ServerId string `json:"server_id" xml:"server_id"`
 }
 
 func (o ShowWindowsBaremetalServerPwdRequest) String() string {

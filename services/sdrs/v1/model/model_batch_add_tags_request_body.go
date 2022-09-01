@@ -13,10 +13,10 @@ import (
 type BatchAddTagsRequestBody struct {
 
 	// 标签列表。
-	Tags []ResourceTag `json:"tags"`
+	Tags []ResourceTag `json:"tags" xml:"tags"`
 
 	// 操作标识，取值仅限于：create：创建
-	Action BatchAddTagsRequestBodyAction `json:"action"`
+	Action BatchAddTagsRequestBodyAction `json:"action" xml:"action"`
 }
 
 func (o BatchAddTagsRequestBody) String() string {

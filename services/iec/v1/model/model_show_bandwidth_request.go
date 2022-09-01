@@ -10,7 +10,7 @@ import (
 type ShowBandwidthRequest struct {
 
 	// 带宽ID。
-	BandwidthId string `json:"bandwidth_id"`
+	BandwidthId string `json:"bandwidth_id" xml:"bandwidth_id"`
 }
 
 func (o ShowBandwidthRequest) String() string {

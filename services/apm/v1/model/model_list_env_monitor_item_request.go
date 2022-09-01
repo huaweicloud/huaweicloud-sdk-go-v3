@@ -8,9 +8,9 @@ import (
 
 // Request Object
 type ListEnvMonitorItemRequest struct {
-	XBusinessId *int64 `json:"x-business-id,omitempty"`
+	XBusinessId *int64 `json:"x-business-id,omitempty" xml:"x-business-id"`
 
-	Body *GetEnvMonitorItemListParam `json:"body,omitempty"`
+	Body *GetEnvMonitorItemListParam `json:"body,omitempty" xml:"body"`
 }
 
 func (o ListEnvMonitorItemRequest) String() string {

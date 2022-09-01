@@ -10,7 +10,7 @@ import (
 type ShowConfOrgResponse struct {
 
 	// 企业ID
-	OrgID          *string `json:"orgID,omitempty"`
+	OrgID          *string `json:"orgID,omitempty" xml:"orgID"`
 	HttpStatusCode int     `json:"-"`
 }
 

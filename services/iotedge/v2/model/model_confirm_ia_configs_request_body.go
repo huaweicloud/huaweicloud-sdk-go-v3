@@ -9,7 +9,7 @@ import (
 type ConfirmIaConfigsRequestBody struct {
 
 	// 确认配置项列表
-	Configs *[]ConfirmIaConfigRequestBody `json:"configs,omitempty"`
+	Configs *[]ConfirmIaConfigRequestBody `json:"configs,omitempty" xml:"configs"`
 }
 
 func (o ConfirmIaConfigsRequestBody) String() string {

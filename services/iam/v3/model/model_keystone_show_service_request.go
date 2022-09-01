@@ -10,7 +10,7 @@ import (
 type KeystoneShowServiceRequest struct {
 
 	// 待查询的服务ID。
-	ServiceId string `json:"service_id"`
+	ServiceId string `json:"service_id" xml:"service_id"`
 }
 
 func (o KeystoneShowServiceRequest) String() string {

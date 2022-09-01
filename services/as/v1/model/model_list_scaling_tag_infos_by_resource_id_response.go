@@ -10,10 +10,10 @@ import (
 type ListScalingTagInfosByResourceIdResponse struct {
 
 	// 资源标签列表。
-	Tags *[]TagsSingleValue `json:"tags,omitempty"`
+	Tags *[]TagsSingleValue `json:"tags,omitempty" xml:"tags"`
 
 	// 系统资源标签列表。
-	SysTags        *[]TagsSingleValue `json:"sys_tags,omitempty"`
+	SysTags        *[]TagsSingleValue `json:"sys_tags,omitempty" xml:"sys_tags"`
 	HttpStatusCode int                `json:"-"`
 }
 

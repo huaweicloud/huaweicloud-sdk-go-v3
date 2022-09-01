@@ -10,22 +10,22 @@ import (
 type ListVulnerabilitiesRequest struct {
 
 	// 企业租户ID
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
 
 	// 漏洞类型，包含如下：   -linux_vul : linux漏洞   -windows_vul : windows漏洞   -web_cms : Web-CMS漏洞
-	Type *string `json:"type,omitempty"`
+	Type *string `json:"type,omitempty" xml:"type"`
 
 	// 漏洞ID
-	VulId string `json:"vul_id"`
+	VulId string `json:"vul_id" xml:"vul_id"`
 
 	// 漏洞名称
-	VulName *string `json:"vul_name,omitempty"`
+	VulName *string `json:"vul_name,omitempty" xml:"vul_name"`
 
 	// 每页显示个数
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 }
 
 func (o ListVulnerabilitiesRequest) String() string {

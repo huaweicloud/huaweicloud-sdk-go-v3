@@ -10,15 +10,15 @@ import (
 type ListHistoryWebinarsResponse struct {
 
 	// 偏移量。
-	Offset int32 `json:"offset"`
+	Offset int32 `json:"offset" xml:"offset"`
 
 	// 查询个数。
-	Limit int32 `json:"limit"`
+	Limit int32 `json:"limit" xml:"limit"`
 
 	// 总记录数
-	Count int64 `json:"count"`
+	Count int64 `json:"count" xml:"count"`
 
-	Data           *[]OpenWebinarHistoryInfo `json:"data,omitempty"`
+	Data           *[]OpenWebinarHistoryInfo `json:"data,omitempty" xml:"data"`
 	HttpStatusCode int                       `json:"-"`
 }
 

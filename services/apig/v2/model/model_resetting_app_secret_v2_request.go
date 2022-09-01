@@ -10,12 +10,12 @@ import (
 type ResettingAppSecretV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 应用编号
-	AppId string `json:"app_id"`
+	AppId string `json:"app_id" xml:"app_id"`
 
-	Body *AppResetCreate `json:"body,omitempty"`
+	Body *AppResetCreate `json:"body,omitempty" xml:"body"`
 }
 
 func (o ResettingAppSecretV2Request) String() string {

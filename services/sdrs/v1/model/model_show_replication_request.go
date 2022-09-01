@@ -10,7 +10,7 @@ import (
 type ShowReplicationRequest struct {
 
 	// 复制对ID。
-	ReplicationId string `json:"replication_id"`
+	ReplicationId string `json:"replication_id" xml:"replication_id"`
 }
 
 func (o ShowReplicationRequest) String() string {

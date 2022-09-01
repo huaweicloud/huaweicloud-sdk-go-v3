@@ -7,10 +7,10 @@ import (
 )
 
 type ExportJobsReq struct {
-	JobList *[]string `json:"jobList,omitempty"`
+	JobList *[]string `json:"jobList,omitempty" xml:"jobList"`
 
 	// 是否导出作业依赖的脚本和资源
-	ExportDepend *bool `json:"exportDepend,omitempty"`
+	ExportDepend *bool `json:"exportDepend,omitempty" xml:"exportDepend"`
 }
 
 func (o ExportJobsReq) String() string {

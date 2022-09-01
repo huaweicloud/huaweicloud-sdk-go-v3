@@ -10,7 +10,7 @@ import (
 type Action struct {
 
 	// 启用，停用边缘节点，支持start/stop
-	Action string `json:"action"`
+	Action string `json:"action" xml:"action"`
 }
 
 func (o Action) String() string {

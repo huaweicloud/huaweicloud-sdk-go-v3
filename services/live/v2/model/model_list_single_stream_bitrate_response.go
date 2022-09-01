@@ -10,9 +10,9 @@ import (
 type ListSingleStreamBitrateResponse struct {
 
 	// 用量详情。
-	BitrateInfoList *[]V2BitrateInfo `json:"bitrate_info_list,omitempty"`
+	BitrateInfoList *[]V2BitrateInfo `json:"bitrate_info_list,omitempty" xml:"bitrate_info_list"`
 
-	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	XRequestId     *string `json:"X-Request-Id,omitempty" xml:"X-Request-Id"`
 	HttpStatusCode int     `json:"-"`
 }
 

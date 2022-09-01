@@ -8,7 +8,7 @@ import (
 
 // 解绑密钥对描述消息体
 type DisassociateKeypairRequestBody struct {
-	Server *DisassociateEcsServerInfo `json:"server"`
+	Server *DisassociateEcsServerInfo `json:"server" xml:"server"`
 }
 
 func (o DisassociateKeypairRequestBody) String() string {

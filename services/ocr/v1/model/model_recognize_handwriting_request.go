@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RecognizeHandwritingRequest struct {
-	Body *HandwritingRequestBody `json:"body,omitempty"`
+	Body *HandwritingRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o RecognizeHandwritingRequest) String() string {

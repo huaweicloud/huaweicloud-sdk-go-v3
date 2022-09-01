@@ -10,10 +10,10 @@ import (
 type PhonemePronunciation struct {
 
 	//
-	Score float32 `json:"score"`
+	Score float32 `json:"score" xml:"score"`
 
 	//
-	Gop float32 `json:"gop"`
+	Gop float32 `json:"gop" xml:"gop"`
 }
 
 func (o PhonemePronunciation) String() string {

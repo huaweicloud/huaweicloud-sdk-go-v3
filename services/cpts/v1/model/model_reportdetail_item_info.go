@@ -9,12 +9,12 @@ import (
 type ReportdetailItemInfo struct {
 
 	// 自定义事务数据
-	CustomTransactions *[]string `json:"customTransactions,omitempty"`
+	CustomTransactions *[]string `json:"customTransactions,omitempty" xml:"customTransactions"`
 
 	// aw数据
-	DetailDatas *[]DetailDataInfo `json:"detailDatas,omitempty"`
+	DetailDatas *[]DetailDataInfo `json:"detailDatas,omitempty" xml:"detailDatas"`
 
-	Performance *PerformanceInfo `json:"performance,omitempty"`
+	Performance *PerformanceInfo `json:"performance,omitempty" xml:"performance"`
 }
 
 func (o ReportdetailItemInfo) String() string {

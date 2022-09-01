@@ -10,7 +10,7 @@ import (
 type ShowTopicStatusResponse struct {
 
 	// 代理。
-	Brokers        *[]ShowTopicStatusRespBrokers `json:"brokers,omitempty"`
+	Brokers        *[]ShowTopicStatusRespBrokers `json:"brokers,omitempty" xml:"brokers"`
 	HttpStatusCode int                           `json:"-"`
 }
 

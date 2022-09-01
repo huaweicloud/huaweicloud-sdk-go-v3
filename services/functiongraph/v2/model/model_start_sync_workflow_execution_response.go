@@ -13,22 +13,22 @@ import (
 type StartSyncWorkflowExecutionResponse struct {
 
 	// 流程实例ID
-	ExecutionId *string `json:"execution_id,omitempty"`
+	ExecutionId *string `json:"execution_id,omitempty" xml:"execution_id"`
 
 	// 流程执行最终状态
-	Status *StartSyncWorkflowExecutionResponseStatus `json:"status,omitempty"`
+	Status *StartSyncWorkflowExecutionResponseStatus `json:"status,omitempty" xml:"status"`
 
 	// 函数流的执行结果，JSON格式，仅在status为success时有值
-	Output *interface{} `json:"output,omitempty"`
+	Output *interface{} `json:"output,omitempty" xml:"output"`
 
 	// 流程执行错误信息，仅在status为fail时有值
-	Errors *[]SyncExecutionNodeErrorDetail `json:"errors,omitempty"`
+	Errors *[]SyncExecutionNodeErrorDetail `json:"errors,omitempty" xml:"errors"`
 
 	// 流程实例创建时间，格式：yyyy-MM-ddTHH:mm:ssZ，UTC时间
-	BeginTime *string `json:"begin_time,omitempty"`
+	BeginTime *string `json:"begin_time,omitempty" xml:"begin_time"`
 
 	// 流程实例结束时间，格式：yyyy-MM-ddTHH:mm:ssZ，UTC时间
-	EndTime        *string `json:"end_time,omitempty"`
+	EndTime        *string `json:"end_time,omitempty" xml:"end_time"`
 	HttpStatusCode int     `json:"-"`
 }
 

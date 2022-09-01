@@ -10,9 +10,9 @@ import (
 type ShowPropertyValuesRequest struct {
 
 	// 存储ID
-	DataStoreId string `json:"data_store_id"`
+	DataStoreId string `json:"data_store_id" xml:"data_store_id"`
 
-	Body *GetPropertyRequest `json:"body,omitempty"`
+	Body *GetPropertyRequest `json:"body,omitempty" xml:"body"`
 }
 
 func (o ShowPropertyValuesRequest) String() string {

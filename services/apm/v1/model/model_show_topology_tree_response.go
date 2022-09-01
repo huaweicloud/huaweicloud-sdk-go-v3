@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowTopologyTreeResponse struct {
-	TopologyTree   *TopologyTree `json:"topology_tree,omitempty"`
+	TopologyTree   *TopologyTree `json:"topology_tree,omitempty" xml:"topology_tree"`
 	HttpStatusCode int           `json:"-"`
 }
 

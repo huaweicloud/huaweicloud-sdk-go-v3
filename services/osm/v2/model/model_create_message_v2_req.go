@@ -7,10 +7,10 @@ import (
 )
 
 type CreateMessageV2Req struct {
-	Message *CreateMessageDoV2 `json:"message"`
+	Message *CreateMessageDoV2 `json:"message" xml:"message"`
 
 	// 组id
-	GroupId *string `json:"group_id,omitempty"`
+	GroupId *string `json:"group_id,omitempty" xml:"group_id"`
 }
 
 func (o CreateMessageV2Req) String() string {

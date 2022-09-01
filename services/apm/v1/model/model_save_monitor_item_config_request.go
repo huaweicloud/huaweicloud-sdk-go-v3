@@ -10,9 +10,9 @@ import (
 type SaveMonitorItemConfigRequest struct {
 
 	// 业务id
-	XBusinessId int64 `json:"x-business-id"`
+	XBusinessId int64 `json:"x-business-id" xml:"x-business-id"`
 
-	Body *SaveMonitorItemParam `json:"body,omitempty"`
+	Body *SaveMonitorItemParam `json:"body,omitempty" xml:"body"`
 }
 
 func (o SaveMonitorItemConfigRequest) String() string {

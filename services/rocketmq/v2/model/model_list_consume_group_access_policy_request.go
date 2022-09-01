@@ -13,19 +13,19 @@ import (
 type ListConsumeGroupAccessPolicyRequest struct {
 
 	// 消息引擎。
-	Engine ListConsumeGroupAccessPolicyRequestEngine `json:"engine"`
+	Engine ListConsumeGroupAccessPolicyRequestEngine `json:"engine" xml:"engine"`
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 消费组。
-	GroupId string `json:"group_id"`
+	GroupId string `json:"group_id" xml:"group_id"`
 
 	// 偏移量，表示从此偏移量开始查询， offset大于等于0。
-	Offset *string `json:"offset,omitempty"`
+	Offset *string `json:"offset,omitempty" xml:"offset"`
 
 	// 查询数量。
-	Limit *string `json:"limit,omitempty"`
+	Limit *string `json:"limit,omitempty" xml:"limit"`
 }
 
 func (o ListConsumeGroupAccessPolicyRequest) String() string {

@@ -9,10 +9,10 @@ import (
 type Link struct {
 
 	// 链接
-	Href string `json:"href"`
+	Href string `json:"href" xml:"href"`
 
 	// 描述
-	Rel string `json:"rel"`
+	Rel string `json:"rel" xml:"rel"`
 }
 
 func (o Link) String() string {

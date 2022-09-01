@@ -13,7 +13,7 @@ import (
 type ShowQuotasRequest struct {
 
 	// 语言
-	XLanguage *ShowQuotasRequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *ShowQuotasRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 }
 
 func (o ShowQuotasRequest) String() string {

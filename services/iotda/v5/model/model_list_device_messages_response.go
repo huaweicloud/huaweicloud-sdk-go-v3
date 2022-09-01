@@ -10,10 +10,10 @@ import (
 type ListDeviceMessagesResponse struct {
 
 	// 设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获得。
-	DeviceId *string `json:"device_id,omitempty"`
+	DeviceId *string `json:"device_id,omitempty" xml:"device_id"`
 
 	// 设备消息列表。
-	Messages       *[]DeviceMessage `json:"messages,omitempty"`
+	Messages       *[]DeviceMessage `json:"messages,omitempty" xml:"messages"`
 	HttpStatusCode int              `json:"-"`
 }
 

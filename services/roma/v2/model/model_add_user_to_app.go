@@ -9,7 +9,7 @@ import (
 type AddUserToApp struct {
 
 	// 要添加的用户成员列表，空列表时代表清空应用的所有成员
-	Users *[]User `json:"users,omitempty"`
+	Users *[]User `json:"users,omitempty" xml:"users"`
 }
 
 func (o AddUserToApp) String() string {

@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowDomainItemDetailsResponse struct {
-	DomainItemDetails *DomainItemDetail `json:"domain_item_details,omitempty"`
+	DomainItemDetails *DomainItemDetail `json:"domain_item_details,omitempty" xml:"domain_item_details"`
 	HttpStatusCode    int               `json:"-"`
 }
 

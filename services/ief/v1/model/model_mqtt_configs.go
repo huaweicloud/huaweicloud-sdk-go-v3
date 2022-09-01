@@ -10,10 +10,10 @@ import (
 type MqttConfigs struct {
 
 	// 是否启用MQTT
-	EnableMqtt bool `json:"enable_mqtt"`
+	EnableMqtt bool `json:"enable_mqtt" xml:"enable_mqtt"`
 
 	// MQTT配置 当enable_mqtt取值为false时，mqtts需要为空数组
-	Mqtts []Mqtt `json:"mqtts"`
+	Mqtts []Mqtt `json:"mqtts" xml:"mqtts"`
 }
 
 func (o MqttConfigs) String() string {

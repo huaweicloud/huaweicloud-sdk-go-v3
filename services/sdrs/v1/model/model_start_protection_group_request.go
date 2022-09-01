@@ -10,9 +10,9 @@ import (
 type StartProtectionGroupRequest struct {
 
 	// 保护组的ID。
-	ServerGroupId string `json:"server_group_id"`
+	ServerGroupId string `json:"server_group_id" xml:"server_group_id"`
 
-	Body *StartProtectionGroupRequestBody `json:"body,omitempty"`
+	Body *StartProtectionGroupRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o StartProtectionGroupRequest) String() string {

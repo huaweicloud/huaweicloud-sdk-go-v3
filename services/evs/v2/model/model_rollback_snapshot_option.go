@@ -9,10 +9,10 @@ import (
 type RollbackSnapshotOption struct {
 
 	// 回滚的目标云硬盘名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 回滚的目标云硬盘UUID。
-	VolumeId string `json:"volume_id"`
+	VolumeId string `json:"volume_id" xml:"volume_id"`
 }
 
 func (o RollbackSnapshotOption) String() string {

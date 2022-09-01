@@ -10,7 +10,7 @@ import (
 type ShowProductConfigRequest struct {
 
 	// 协议类型
-	ProtocolType string `json:"protocol_type"`
+	ProtocolType string `json:"protocol_type" xml:"protocol_type"`
 }
 
 func (o ShowProductConfigRequest) String() string {

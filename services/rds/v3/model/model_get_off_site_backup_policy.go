@@ -10,16 +10,16 @@ import (
 type GetOffSiteBackupPolicy struct {
 
 	// 指定备份的类型。取值如下：  - auto：自动全量备份。 - incremental：自动增量备份。 - manual：手动备份，仅SQL Server返回该备份类型 。
-	BackupType *string `json:"backup_type,omitempty"`
+	BackupType *string `json:"backup_type,omitempty" xml:"backup_type"`
 
 	// 备份文件可以保存的天数。
-	KeepDays *int32 `json:"keep_days,omitempty"`
+	KeepDays *int32 `json:"keep_days,omitempty" xml:"keep_days"`
 
 	// 设置跨区域备份策略的目标区域ID。
-	DestinationRegion *string `json:"destination_region,omitempty"`
+	DestinationRegion *string `json:"destination_region,omitempty" xml:"destination_region"`
 
 	// 设置跨区域备份策略的目标project ID。
-	DestinationProjectId *string `json:"destination_project_id,omitempty"`
+	DestinationProjectId *string `json:"destination_project_id,omitempty" xml:"destination_project_id"`
 }
 
 func (o GetOffSiteBackupPolicy) String() string {

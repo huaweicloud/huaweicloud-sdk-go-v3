@@ -13,20 +13,20 @@ import (
 type CreateTransferRequestBodyLogTransferInfo struct {
 
 	// 日志转储类型。OBS指OBS日志转储，DIS指DIS日志转储，DMS指DMS日志转储
-	LogTransferType string `json:"log_transfer_type"`
+	LogTransferType string `json:"log_transfer_type" xml:"log_transfer_type"`
 
 	// 日志转储方式。cycle是指周期性转储，realTime是指实时转储。OBS转储只支持\"cycle\"，DIS转储和DMS转储只支持\"realTime\"。
-	LogTransferMode CreateTransferRequestBodyLogTransferInfoLogTransferMode `json:"log_transfer_mode"`
+	LogTransferMode CreateTransferRequestBodyLogTransferInfoLogTransferMode `json:"log_transfer_mode" xml:"log_transfer_mode"`
 
 	// 日志转储格式。只支持\"RAW\", \"JSON\"。RAW是指原始日志格式，JSON是指JSON日志格式。OBS转储和DIS转储支持JSON和RAW，DMS转储仅支持RAW
-	LogStorageFormat CreateTransferRequestBodyLogTransferInfoLogStorageFormat `json:"log_storage_format"`
+	LogStorageFormat CreateTransferRequestBodyLogTransferInfoLogStorageFormat `json:"log_storage_format" xml:"log_storage_format"`
 
 	// 日志转储状态，只支持\"ENABLE\",\"DISABLE\",\"EXCEPTION\"。ENABLE是指日志转储开启状态，DISABLE是指日志转储关闭状态，EXCEPTION是指日志转储异常状态
-	LogTransferStatus CreateTransferRequestBodyLogTransferInfoLogTransferStatus `json:"log_transfer_status"`
+	LogTransferStatus CreateTransferRequestBodyLogTransferInfoLogTransferStatus `json:"log_transfer_status" xml:"log_transfer_status"`
 
-	LogAgencyTransfer *CreateTransferRequestBodyLogTransferInfoLogAgencyTransfer `json:"log_agency_transfer,omitempty"`
+	LogAgencyTransfer *CreateTransferRequestBodyLogTransferInfoLogAgencyTransfer `json:"log_agency_transfer,omitempty" xml:"log_agency_transfer"`
 
-	LogTransferDetail *TransferDetail `json:"log_transfer_detail"`
+	LogTransferDetail *TransferDetail `json:"log_transfer_detail" xml:"log_transfer_detail"`
 }
 
 func (o CreateTransferRequestBodyLogTransferInfo) String() string {

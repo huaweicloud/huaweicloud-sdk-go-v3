@@ -8,7 +8,7 @@ import (
 
 // 弹性IP信息
 type PublicipResult struct {
-	Eip *EipResult `json:"eip,omitempty"`
+	Eip *EipResult `json:"eip,omitempty" xml:"eip"`
 }
 
 func (o PublicipResult) String() string {

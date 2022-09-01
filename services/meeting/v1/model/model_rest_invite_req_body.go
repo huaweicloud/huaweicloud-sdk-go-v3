@@ -10,7 +10,7 @@ import (
 type RestInviteReqBody struct {
 
 	// 邀请的与会者列表。
-	Attendees []Attendee `json:"attendees"`
+	Attendees []Attendee `json:"attendees" xml:"attendees"`
 }
 
 func (o RestInviteReqBody) String() string {

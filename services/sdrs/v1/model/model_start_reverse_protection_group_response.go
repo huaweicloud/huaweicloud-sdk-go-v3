@@ -10,7 +10,7 @@ import (
 type StartReverseProtectionGroupResponse struct {
 
 	// 成功返回jobId信息
-	JobId          *string `json:"job_id,omitempty"`
+	JobId          *string `json:"job_id,omitempty" xml:"job_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

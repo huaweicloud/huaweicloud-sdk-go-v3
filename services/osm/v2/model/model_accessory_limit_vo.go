@@ -9,13 +9,13 @@ import (
 type AccessoryLimitVo struct {
 
 	// 限制文件数量
-	LimitCount *string `json:"limit_count,omitempty"`
+	LimitCount *string `json:"limit_count,omitempty" xml:"limit_count"`
 
 	// 限制文件大小，单位是M
-	LimitSize *string `json:"limit_size,omitempty"`
+	LimitSize *string `json:"limit_size,omitempty" xml:"limit_size"`
 
 	// 限制文件类型
-	LimitFileType *string `json:"limit_file_type,omitempty"`
+	LimitFileType *string `json:"limit_file_type,omitempty" xml:"limit_file_type"`
 }
 
 func (o AccessoryLimitVo) String() string {

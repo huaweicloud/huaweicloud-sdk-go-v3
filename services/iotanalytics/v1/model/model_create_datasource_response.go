@@ -10,21 +10,21 @@ import (
 type CreateDatasourceResponse struct {
 
 	// 数据源id
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 数据源名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 数据源类型, 包括：IOTDA、API[、OBS、DIS、SMN、FUNCTION_GRAPH、MODEL_ARTS、DCS、KAFKA](tag:IoTA-Cloud-Only)、NODE。数据源不支持修改类型。
-	Type *string `json:"type,omitempty"`
+	Type *string `json:"type,omitempty" xml:"type"`
 
-	Content *ContentDetailRsp `json:"content,omitempty"`
+	Content *ContentDetailRsp `json:"content,omitempty" xml:"content"`
 
 	// 创建时间，格式为：yyyy-MM-dd'T'HH:mm:ss'Z'
-	CreatedTime *string `json:"created_time,omitempty"`
+	CreatedTime *string `json:"created_time,omitempty" xml:"created_time"`
 
 	// 修改时间，格式为：yyyy-MM-dd'T'HH:mm:ss'Z'
-	ModifiedTime   *string `json:"modified_time,omitempty"`
+	ModifiedTime   *string `json:"modified_time,omitempty" xml:"modified_time"`
 	HttpStatusCode int     `json:"-"`
 }
 

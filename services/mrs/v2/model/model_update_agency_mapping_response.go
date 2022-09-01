@@ -10,7 +10,7 @@ import (
 type UpdateAgencyMappingResponse struct {
 
 	// 更新映射请求操作结果，succeeded为操作成功，failed为操作失败
-	Result         *string `json:"result,omitempty"`
+	Result         *string `json:"result,omitempty" xml:"result"`
 	HttpStatusCode int     `json:"-"`
 }
 

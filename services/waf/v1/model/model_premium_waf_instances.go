@@ -10,13 +10,13 @@ import (
 type PremiumWafInstances struct {
 
 	// 引擎实例id
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 引擎实例名
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 引擎实例是否已接入，false：未接入；true：已接入
-	Accessed *bool `json:"accessed,omitempty"`
+	Accessed *bool `json:"accessed,omitempty" xml:"accessed"`
 }
 
 func (o PremiumWafInstances) String() string {

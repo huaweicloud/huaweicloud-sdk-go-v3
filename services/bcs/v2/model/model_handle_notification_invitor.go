@@ -9,16 +9,16 @@ import (
 type HandleNotificationInvitor struct {
 
 	// 邀请方BCS服务实例ID
-	InvitorBcsId string `json:"invitor_bcs_id"`
+	InvitorBcsId string `json:"invitor_bcs_id" xml:"invitor_bcs_id"`
 
 	// 邀请方BCS服务实例名称
-	InvitorBcsName string `json:"invitor_bcs_name"`
+	InvitorBcsName string `json:"invitor_bcs_name" xml:"invitor_bcs_name"`
 
 	// 邀请方project id
-	InvitorProjectId string `json:"invitor_project_id"`
+	InvitorProjectId string `json:"invitor_project_id" xml:"invitor_project_id"`
 
 	// 邀请方租户id。控制台->邀请方账号->我的凭证->API凭证->账号ID
-	InvitorUserId string `json:"invitor_user_id"`
+	InvitorUserId string `json:"invitor_user_id" xml:"invitor_user_id"`
 }
 
 func (o HandleNotificationInvitor) String() string {

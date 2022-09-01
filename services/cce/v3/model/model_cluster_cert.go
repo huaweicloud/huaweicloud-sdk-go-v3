@@ -9,13 +9,13 @@ import (
 type ClusterCert struct {
 
 	// 服务器地址。
-	Server *string `json:"server,omitempty"`
+	Server *string `json:"server,omitempty" xml:"server"`
 
 	// 证书授权数据。
-	CertificateAuthorityData *string `json:"certificate-authority-data,omitempty"`
+	CertificateAuthorityData *string `json:"certificate-authority-data,omitempty" xml:"certificate-authority-data"`
 
 	// 不校验服务端证书，在 cluster 类型为 externalCluster 时，该值为 true。
-	InsecureSkipTlsVerify *bool `json:"insecure-skip-tls-verify,omitempty"`
+	InsecureSkipTlsVerify *bool `json:"insecure-skip-tls-verify,omitempty" xml:"insecure-skip-tls-verify"`
 }
 
 func (o ClusterCert) String() string {

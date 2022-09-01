@@ -10,12 +10,12 @@ import (
 type ListVpcsResponse struct {
 
 	// 请求ID
-	RequestId *string `json:"request_id,omitempty"`
+	RequestId *string `json:"request_id,omitempty" xml:"request_id"`
 
 	// VPC列表响应体
-	Vpcs *[]Vpc `json:"vpcs,omitempty"`
+	Vpcs *[]Vpc `json:"vpcs,omitempty" xml:"vpcs"`
 
-	PageInfo       *PageInfo `json:"page_info,omitempty"`
+	PageInfo       *PageInfo `json:"page_info,omitempty" xml:"page_info"`
 	HttpStatusCode int       `json:"-"`
 }
 

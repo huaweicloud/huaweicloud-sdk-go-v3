@@ -10,20 +10,20 @@ import (
 type ServiceRespDetail struct {
 
 	// 创建时间
-	CreatedAt string `json:"created_at"`
+	CreatedAt string `json:"created_at" xml:"created_at"`
 
 	// 服务ID
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
-	MetaData *SvcMetadata `json:"meta_data"`
+	MetaData *SvcMetadata `json:"meta_data" xml:"meta_data"`
 
 	// 租户ID
-	ProjectId string `json:"project_id"`
+	ProjectId string `json:"project_id" xml:"project_id"`
 
-	Spec *SvcSpec `json:"spec"`
+	Spec *SvcSpec `json:"spec" xml:"spec"`
 
 	// 更新时间
-	UpdatedAt string `json:"updated_at"`
+	UpdatedAt string `json:"updated_at" xml:"updated_at"`
 }
 
 func (o ServiceRespDetail) String() string {

@@ -13,31 +13,31 @@ import (
 type ShowMigrationProjectStatusResponse struct {
 
 	// 迁移项目ID。
-	MigrationProjectId *int32 `json:"migration_project_id,omitempty"`
+	MigrationProjectId *int32 `json:"migration_project_id,omitempty" xml:"migration_project_id"`
 
 	// 迁移项目名称。
-	MigrationProjectName *string `json:"migration_project_name,omitempty"`
+	MigrationProjectName *string `json:"migration_project_name,omitempty" xml:"migration_project_name"`
 
 	// 评估项目ID。
-	EvaluationProjectId *int32 `json:"evaluation_project_id,omitempty"`
+	EvaluationProjectId *int32 `json:"evaluation_project_id,omitempty" xml:"evaluation_project_id"`
 
 	// 评估项目名称。
-	EvaluationProjectName *string `json:"evaluation_project_name,omitempty"`
+	EvaluationProjectName *string `json:"evaluation_project_name,omitempty" xml:"evaluation_project_name"`
 
 	// 迁移项目状态。
-	MigrationProjectStatus *ShowMigrationProjectStatusResponseMigrationProjectStatus `json:"migration_project_status,omitempty"`
+	MigrationProjectStatus *ShowMigrationProjectStatusResponseMigrationProjectStatus `json:"migration_project_status,omitempty" xml:"migration_project_status"`
 
 	// 目标库权限检查状态。
-	PermissionCheckStatus *ShowMigrationProjectStatusResponsePermissionCheckStatus `json:"permission_check_status,omitempty"`
+	PermissionCheckStatus *ShowMigrationProjectStatusResponsePermissionCheckStatus `json:"permission_check_status,omitempty" xml:"permission_check_status"`
 
 	// 资源ID。
-	ResourceId *string `json:"resource_id,omitempty"`
+	ResourceId *string `json:"resource_id,omitempty" xml:"resource_id"`
 
 	// 创建时间。
-	CreatedTime *string `json:"created_time,omitempty"`
+	CreatedTime *string `json:"created_time,omitempty" xml:"created_time"`
 
 	// 更新时间。
-	UpdatedTime    *string `json:"updated_time,omitempty"`
+	UpdatedTime    *string `json:"updated_time,omitempty" xml:"updated_time"`
 	HttpStatusCode int     `json:"-"`
 }
 

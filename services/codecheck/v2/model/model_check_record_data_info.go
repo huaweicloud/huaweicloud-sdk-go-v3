@@ -9,9 +9,9 @@ import (
 type CheckRecordDataInfo struct {
 
 	// 检查时间
-	CheckTime *string `json:"check_time,omitempty"`
+	CheckTime *string `json:"check_time,omitempty" xml:"check_time"`
 
-	IssueCounts *CheckRecordIssueCountsInfo `json:"issue_counts,omitempty"`
+	IssueCounts *CheckRecordIssueCountsInfo `json:"issue_counts,omitempty" xml:"issue_counts"`
 }
 
 func (o CheckRecordDataInfo) String() string {

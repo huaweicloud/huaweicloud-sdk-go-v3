@@ -10,13 +10,13 @@ import (
 type WordInfo struct {
 
 	// 起始时间
-	StartTime *int32 `json:"start_time,omitempty"`
+	StartTime *int32 `json:"start_time,omitempty" xml:"start_time"`
 
 	// 结束时间
-	EndTime *int32 `json:"end_time,omitempty"`
+	EndTime *int32 `json:"end_time,omitempty" xml:"end_time"`
 
 	// 分词
-	Word *string `json:"word,omitempty"`
+	Word *string `json:"word,omitempty" xml:"word"`
 }
 
 func (o WordInfo) String() string {

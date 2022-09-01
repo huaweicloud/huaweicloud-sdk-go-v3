@@ -10,10 +10,10 @@ import (
 type RestoreJobInstanceRequest struct {
 
 	// 作业名称.
-	JobName string `json:"job_name"`
+	JobName string `json:"job_name" xml:"job_name"`
 
 	// 作业实例id.
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 }
 
 func (o RestoreJobInstanceRequest) String() string {

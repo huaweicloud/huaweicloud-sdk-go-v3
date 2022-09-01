@@ -10,7 +10,7 @@ import (
 type ListApiVersionsResponse struct {
 
 	// 所有API版本详情列表。
-	Versions       *[]VersionDetails `json:"versions,omitempty"`
+	Versions       *[]VersionDetails `json:"versions,omitempty" xml:"versions"`
 	HttpStatusCode int               `json:"-"`
 }
 

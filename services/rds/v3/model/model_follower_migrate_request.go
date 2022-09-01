@@ -9,10 +9,10 @@ import (
 type FollowerMigrateRequest struct {
 
 	// 备机节点Id
-	NodeId string `json:"nodeId"`
+	NodeId string `json:"nodeId" xml:"nodeId"`
 
 	// 要迁入的可用区code
-	AzCode string `json:"azCode"`
+	AzCode string `json:"azCode" xml:"azCode"`
 }
 
 func (o FollowerMigrateRequest) String() string {

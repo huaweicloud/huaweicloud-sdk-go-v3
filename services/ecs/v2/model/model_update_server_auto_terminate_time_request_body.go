@@ -10,7 +10,7 @@ import (
 type UpdateServerAutoTerminateTimeRequestBody struct {
 
 	// 销毁时间
-	AutoTerminateTime string `json:"auto_terminate_time"`
+	AutoTerminateTime string `json:"auto_terminate_time" xml:"auto_terminate_time"`
 }
 
 func (o UpdateServerAutoTerminateTimeRequestBody) String() string {

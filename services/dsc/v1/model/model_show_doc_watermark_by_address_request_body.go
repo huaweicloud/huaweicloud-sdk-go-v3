@@ -12,16 +12,16 @@ import (
 type ShowDocWatermarkByAddressRequestBody struct {
 
 	// 项目所在region的id，如北京一为：cn-north-1。
-	RegionId string `json:"region_id"`
+	RegionId string `json:"region_id" xml:"region_id"`
 
 	// 待提取水印的文档类型
-	DocType ShowDocWatermarkByAddressRequestBodyDocType `json:"doc_type"`
+	DocType ShowDocWatermarkByAddressRequestBodyDocType `json:"doc_type" xml:"doc_type"`
 
 	// 待提取文字暗水印的文档的地址，当前只支持华为云OBS对象，格式为 **obs://bucket/object** ，其中bucket为和当前项目处于同一区域的OBS桶名称，object为对象全路径名。例如：**obs://hwbucket/hwinfo/hw.doc**，其中obs://表示OBS存储，hwbucket为桶名，hwinfo/hw.doc为对象全路径名。
-	SrcFile string `json:"src_file"`
+	SrcFile string `json:"src_file" xml:"src_file"`
 
 	// 解密文件的密码， 最大支持长度256。如果Office文档有读密码或域控的权限密码，请输入读密码，或者有读权限的域控密码。
-	FilePassword *string `json:"file_password,omitempty"`
+	FilePassword *string `json:"file_password,omitempty" xml:"file_password"`
 }
 
 func (o ShowDocWatermarkByAddressRequestBody) String() string {

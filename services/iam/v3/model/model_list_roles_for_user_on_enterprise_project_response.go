@@ -10,7 +10,7 @@ import (
 type ListRolesForUserOnEnterpriseProjectResponse struct {
 
 	// 角色列表。
-	Roles          *[]RolesItem `json:"roles,omitempty"`
+	Roles          *[]RolesItem `json:"roles,omitempty" xml:"roles"`
 	HttpStatusCode int          `json:"-"`
 }
 

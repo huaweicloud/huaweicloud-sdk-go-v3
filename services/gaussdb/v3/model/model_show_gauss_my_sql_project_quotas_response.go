@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowGaussMySqlProjectQuotasResponse struct {
-	Quotas         *ProjectQuotas `json:"quotas,omitempty"`
+	Quotas         *ProjectQuotas `json:"quotas,omitempty" xml:"quotas"`
 	HttpStatusCode int            `json:"-"`
 }
 

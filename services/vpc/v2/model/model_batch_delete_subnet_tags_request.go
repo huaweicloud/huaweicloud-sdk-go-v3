@@ -10,9 +10,9 @@ import (
 type BatchDeleteSubnetTagsRequest struct {
 
 	// 子网ID
-	SubnetId string `json:"subnet_id"`
+	SubnetId string `json:"subnet_id" xml:"subnet_id"`
 
-	Body *BatchDeleteSubnetTagsRequestBody `json:"body,omitempty"`
+	Body *BatchDeleteSubnetTagsRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchDeleteSubnetTagsRequest) String() string {

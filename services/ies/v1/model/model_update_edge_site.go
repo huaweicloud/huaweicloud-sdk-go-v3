@@ -9,9 +9,9 @@ import (
 type UpdateEdgeSite struct {
 
 	// 边缘小站描述，最大支持长度为255个字节，不允许包含<>
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
-	Location *UpdateLocation `json:"location,omitempty"`
+	Location *UpdateLocation `json:"location,omitempty" xml:"location"`
 }
 
 func (o UpdateEdgeSite) String() string {

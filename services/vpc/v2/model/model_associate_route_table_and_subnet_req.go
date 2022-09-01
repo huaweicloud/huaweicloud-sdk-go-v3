@@ -10,10 +10,10 @@ import (
 type AssociateRouteTableAndSubnetReq struct {
 
 	// 路由表关联子网ID列表
-	Associate *[]string `json:"associate,omitempty"`
+	Associate *[]string `json:"associate,omitempty" xml:"associate"`
 
 	// 路由表解除关联子网ID列表
-	Disassociate *[]string `json:"disassociate,omitempty"`
+	Disassociate *[]string `json:"disassociate,omitempty" xml:"disassociate"`
 }
 
 func (o AssociateRouteTableAndSubnetReq) String() string {

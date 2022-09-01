@@ -12,40 +12,40 @@ import (
 type ScalingAllPolicyDetail struct {
 
 	// 伸缩策略名称。
-	ScalingPolicyName *string `json:"scaling_policy_name,omitempty"`
+	ScalingPolicyName *string `json:"scaling_policy_name,omitempty" xml:"scaling_policy_name"`
 
 	// 伸缩策略ID。
-	ScalingPolicyId *string `json:"scaling_policy_id,omitempty"`
+	ScalingPolicyId *string `json:"scaling_policy_id,omitempty" xml:"scaling_policy_id"`
 
 	// 伸缩资源ID。
-	ScalingResourceId *string `json:"scaling_resource_id,omitempty"`
+	ScalingResourceId *string `json:"scaling_resource_id,omitempty" xml:"scaling_resource_id"`
 
 	// 伸缩资源类型。伸缩组：SCALING_GROUP。带宽：BANDWIDTH。
-	ScalingResourceType *ScalingAllPolicyDetailScalingResourceType `json:"scaling_resource_type,omitempty"`
+	ScalingResourceType *ScalingAllPolicyDetailScalingResourceType `json:"scaling_resource_type,omitempty" xml:"scaling_resource_type"`
 
 	// 伸缩策略状态。INSERVICE：使用中。PAUSED：停止。EXECUTING：执行中。
-	PolicyStatus *ScalingAllPolicyDetailPolicyStatus `json:"policy_status,omitempty"`
+	PolicyStatus *ScalingAllPolicyDetailPolicyStatus `json:"policy_status,omitempty" xml:"policy_status"`
 
 	// 伸缩策略类型：ALARM：告警策略，此时alarm_id有返回，scheduled_policy不会返回。SCHEDULED：定时策略，此时alarm_id不会返回，scheduled_policy有返回，并且recurrence_type、recurrence_value、start_time和end_time不会返回。RECURRENCE：周期策略，此时alarm_id不会返回，scheduled_policy有返回，并且recurrence_type、recurrence_value、start_time和end_time有返回。
-	ScalingPolicyType *ScalingAllPolicyDetailScalingPolicyType `json:"scaling_policy_type,omitempty"`
+	ScalingPolicyType *ScalingAllPolicyDetailScalingPolicyType `json:"scaling_policy_type,omitempty" xml:"scaling_policy_type"`
 
 	// 告警ID。
-	AlarmId *string `json:"alarm_id,omitempty"`
+	AlarmId *string `json:"alarm_id,omitempty" xml:"alarm_id"`
 
-	ScheduledPolicy *ScheduledPolicy `json:"scheduled_policy,omitempty"`
+	ScheduledPolicy *ScheduledPolicy `json:"scheduled_policy,omitempty" xml:"scheduled_policy"`
 
-	ScalingPolicyAction *ScalingPolicyActionV2 `json:"scaling_policy_action,omitempty"`
+	ScalingPolicyAction *ScalingPolicyActionV2 `json:"scaling_policy_action,omitempty" xml:"scaling_policy_action"`
 
 	// 冷却时间，取值范围0-86400，默认为300，单位是秒。
-	CoolDownTime *int32 `json:"cool_down_time,omitempty"`
+	CoolDownTime *int32 `json:"cool_down_time,omitempty" xml:"cool_down_time"`
 
 	// 创建伸缩策略时间，遵循UTC时间
-	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
+	CreateTime *sdktime.SdkTime `json:"create_time,omitempty" xml:"create_time"`
 
-	MetaData *ScalingPolicyV2MetaData `json:"meta_data,omitempty"`
+	MetaData *ScalingPolicyV2MetaData `json:"meta_data,omitempty" xml:"meta_data"`
 
 	// 伸缩策略描述（1-256个字符）
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 }
 
 func (o ScalingAllPolicyDetail) String() string {

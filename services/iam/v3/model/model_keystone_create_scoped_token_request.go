@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type KeystoneCreateScopedTokenRequest struct {
-	Body *KeystoneCreateScopedTokenRequestBody `json:"body,omitempty"`
+	Body *KeystoneCreateScopedTokenRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o KeystoneCreateScopedTokenRequest) String() string {

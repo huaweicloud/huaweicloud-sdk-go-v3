@@ -9,19 +9,19 @@ import (
 type CdnIps struct {
 
 	// 需查询的IP地址。
-	Ip *string `json:"ip,omitempty"`
+	Ip *string `json:"ip,omitempty" xml:"ip"`
 
 	// 是否是华为云CDN节点。（true:是华为云CDN节点，false:不是华为云CDN节点）
-	Belongs *bool `json:"belongs,omitempty"`
+	Belongs *bool `json:"belongs,omitempty" xml:"belongs"`
 
 	// IP归属地省份。（Unknown:表示未知归属地）
-	Region *string `json:"region,omitempty"`
+	Region *string `json:"region,omitempty" xml:"region"`
 
 	// 运营商名称。如果IP归属地未知，该字段返回null。
-	Isp *string `json:"isp,omitempty"`
+	Isp *string `json:"isp,omitempty" xml:"isp"`
 
 	// 平台。如果IP归属地未知，该字段返回null。
-	Platform *string `json:"platform,omitempty"`
+	Platform *string `json:"platform,omitempty" xml:"platform"`
 }
 
 func (o CdnIps) String() string {

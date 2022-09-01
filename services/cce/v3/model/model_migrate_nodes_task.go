@@ -9,14 +9,14 @@ import (
 type MigrateNodesTask struct {
 
 	// API版本，固定值“v3”。
-	ApiVersion *string `json:"apiVersion,omitempty"`
+	ApiVersion *string `json:"apiVersion,omitempty" xml:"apiVersion"`
 
 	// API类型，固定值“MigrateNodesTask”。
-	Kind *string `json:"kind,omitempty"`
+	Kind *string `json:"kind,omitempty" xml:"kind"`
 
-	Spec *MigrateNodesSpec `json:"spec"`
+	Spec *MigrateNodesSpec `json:"spec" xml:"spec"`
 
-	Status *TaskStatus `json:"status,omitempty"`
+	Status *TaskStatus `json:"status,omitempty" xml:"status"`
 }
 
 func (o MigrateNodesTask) String() string {

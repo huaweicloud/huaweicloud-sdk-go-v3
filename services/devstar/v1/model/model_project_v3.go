@@ -9,22 +9,22 @@ import (
 type ProjectV3 struct {
 
 	// 项目id
-	ProjectId string `json:"project_id"`
+	ProjectId string `json:"project_id" xml:"project_id"`
 
 	// 项目名
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 区域编码
-	RegionId *string `json:"region_id,omitempty"`
+	RegionId *string `json:"region_id,omitempty" xml:"region_id"`
 
 	// 区域名称
-	RegionName *string `json:"region_name,omitempty"`
+	RegionName *string `json:"region_name,omitempty" xml:"region_name"`
 
 	// 管理权限
-	ManagementPermission *bool `json:"management_permission,omitempty"`
+	ManagementPermission *bool `json:"management_permission,omitempty" xml:"management_permission"`
 
 	// 是否是存量项目
-	IsStock *bool `json:"is_stock,omitempty"`
+	IsStock *bool `json:"is_stock,omitempty" xml:"is_stock"`
 }
 
 func (o ProjectV3) String() string {

@@ -13,7 +13,7 @@ import (
 type ListApiVersionsRequest struct {
 
 	// 消息体的类型（格式），下方类型可任选其一使用： application/json;charset=utf-8 application/json
-	ContentType ListApiVersionsRequestContentType `json:"Content-Type"`
+	ContentType ListApiVersionsRequestContentType `json:"Content-Type" xml:"Content-Type"`
 }
 
 func (o ListApiVersionsRequest) String() string {

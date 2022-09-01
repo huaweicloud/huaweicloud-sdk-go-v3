@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowCaseDetailResponse struct {
-	IncidentDetailInfo *IncidentDetailInfoV2 `json:"incident_detail_info,omitempty"`
+	IncidentDetailInfo *IncidentDetailInfoV2 `json:"incident_detail_info,omitempty" xml:"incident_detail_info"`
 	HttpStatusCode     int                   `json:"-"`
 }
 

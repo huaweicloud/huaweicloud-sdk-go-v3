@@ -10,7 +10,7 @@ import (
 type UpdateScalingV2PolicyResponse struct {
 
 	// 伸缩策略ID。
-	ScalingPolicyId *string `json:"scaling_policy_id,omitempty"`
+	ScalingPolicyId *string `json:"scaling_policy_id,omitempty" xml:"scaling_policy_id"`
 	HttpStatusCode  int     `json:"-"`
 }
 

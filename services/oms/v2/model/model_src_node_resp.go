@@ -13,21 +13,21 @@ import (
 type SrcNodeResp struct {
 
 	// 源端桶的名称。
-	Bucket *string `json:"bucket,omitempty"`
+	Bucket *string `json:"bucket,omitempty" xml:"bucket"`
 
 	// 源端云服务提供商。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、URLSource或者UCloud。默认值为Aliyun。
-	CloudType *SrcNodeRespCloudType `json:"cloud_type,omitempty"`
+	CloudType *SrcNodeRespCloudType `json:"cloud_type,omitempty" xml:"cloud_type"`
 
 	// 源端桶所处的区域。
-	Region *string `json:"region,omitempty"`
+	Region *string `json:"region,omitempty" xml:"region"`
 
 	// 当源端为腾讯云时，会返回此参数。
-	AppId *string `json:"app_id,omitempty"`
+	AppId *string `json:"app_id,omitempty" xml:"app_id"`
 
 	// 任务类型为对象迁移任务时，表示待迁移对象名称； 任务类型为前缀迁移任务时，表示待迁移前缀。
-	ObjectKey *[]string `json:"object_key,omitempty"`
+	ObjectKey *[]string `json:"object_key,omitempty" xml:"object_key"`
 
-	ListFile *ListFile `json:"list_file,omitempty"`
+	ListFile *ListFile `json:"list_file,omitempty" xml:"list_file"`
 }
 
 func (o SrcNodeResp) String() string {

@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowEndPointDetailResponse struct {
-	Endpoint       *EndpointObjResp `json:"endpoint,omitempty"`
+	Endpoint       *EndpointObjResp `json:"endpoint,omitempty" xml:"endpoint"`
 	HttpStatusCode int              `json:"-"`
 }
 

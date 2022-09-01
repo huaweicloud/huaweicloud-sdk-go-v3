@@ -9,13 +9,13 @@ import (
 type UpdateKeyDescriptionRequestBody struct {
 
 	// 密钥ID，36字节，满足正则匹配“^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$”。 例如：0d0466b0-e727-4d9c-b35d-f84bb474a37f。
-	KeyId *string `json:"key_id,omitempty"`
+	KeyId *string `json:"key_id,omitempty" xml:"key_id"`
 
 	// 密钥描述，取值0到255字符。
-	KeyDescription *string `json:"key_description,omitempty"`
+	KeyDescription *string `json:"key_description,omitempty" xml:"key_description"`
 
 	// 请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
-	Sequence *string `json:"sequence,omitempty"`
+	Sequence *string `json:"sequence,omitempty" xml:"sequence"`
 }
 
 func (o UpdateKeyDescriptionRequestBody) String() string {

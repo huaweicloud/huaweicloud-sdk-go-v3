@@ -10,13 +10,13 @@ import (
 type ListClustersResponse struct {
 
 	// Api type
-	Kind *string `json:"kind,omitempty"`
+	Kind *string `json:"kind,omitempty" xml:"kind"`
 
 	// API version
-	ApiVersion *string `json:"apiVersion,omitempty"`
+	ApiVersion *string `json:"apiVersion,omitempty" xml:"apiVersion"`
 
 	// 集群对象列表，包含了当前项目下所有集群的详细信息。您可通过items.metadata.name下的值来找到对应的集群。
-	Items          *[]Cluster `json:"items,omitempty"`
+	Items          *[]Cluster `json:"items,omitempty" xml:"items"`
 	HttpStatusCode int        `json:"-"`
 }
 

@@ -10,10 +10,10 @@ import (
 type ShowDetailsOfAclPolicyV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// ACL策略的编号
-	AclId string `json:"acl_id"`
+	AclId string `json:"acl_id" xml:"acl_id"`
 }
 
 func (o ShowDetailsOfAclPolicyV2Request) String() string {

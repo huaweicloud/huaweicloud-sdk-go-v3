@@ -8,10 +8,10 @@ import (
 
 // 更新部署请求Body参数
 type UpdateDeployment struct {
-	Deployment *UpdatePodDeployment `json:"deployment,omitempty"`
+	Deployment *UpdatePodDeployment `json:"deployment,omitempty" xml:"deployment"`
 
 	// 应用部署描述修改，只修改描述不需要传入deployment参数
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 }
 
 func (o UpdateDeployment) String() string {

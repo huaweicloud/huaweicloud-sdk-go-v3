@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type AddSubsetsToGatewayResponse struct {
-	Body           *[]Device `json:"body,omitempty"`
+	Body           *[]Device `json:"body,omitempty" xml:"body"`
 	HttpStatusCode int       `json:"-"`
 }
 

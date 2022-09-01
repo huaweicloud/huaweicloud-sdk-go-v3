@@ -10,10 +10,10 @@ import (
 type ShowSecretVersionRequest struct {
 
 	// 凭据名称。
-	SecretName string `json:"secret_name"`
+	SecretName string `json:"secret_name" xml:"secret_name"`
 
 	// 凭据的版本标识符。
-	VersionId string `json:"version_id"`
+	VersionId string `json:"version_id" xml:"version_id"`
 }
 
 func (o ShowSecretVersionRequest) String() string {

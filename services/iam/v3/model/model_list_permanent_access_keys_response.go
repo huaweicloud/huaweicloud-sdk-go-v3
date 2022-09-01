@@ -10,7 +10,7 @@ import (
 type ListPermanentAccessKeysResponse struct {
 
 	// 认证结果信息列表。
-	Credentials    *[]Credentials `json:"credentials,omitempty"`
+	Credentials    *[]Credentials `json:"credentials,omitempty" xml:"credentials"`
 	HttpStatusCode int            `json:"-"`
 }
 

@@ -8,11 +8,11 @@ import (
 
 // CCE组件
 type ComCce struct {
-	Cluster *Detail `json:"cluster,omitempty"`
+	Cluster *Detail `json:"cluster,omitempty" xml:"cluster"`
 
-	Network *Detail `json:"network,omitempty"`
+	Network *Detail `json:"network,omitempty" xml:"network"`
 
-	SecurityGroup *Detail `json:"security_group,omitempty"`
+	SecurityGroup *Detail `json:"security_group,omitempty" xml:"security_group"`
 }
 
 func (o ComCce) String() string {

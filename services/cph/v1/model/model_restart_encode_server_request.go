@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RestartEncodeServerRequest struct {
-	Body *RestartEncodeServerRequestBody `json:"body,omitempty"`
+	Body *RestartEncodeServerRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o RestartEncodeServerRequest) String() string {

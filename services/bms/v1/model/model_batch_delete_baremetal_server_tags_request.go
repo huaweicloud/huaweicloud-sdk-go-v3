@@ -8,9 +8,9 @@ import (
 
 // Request Object
 type BatchDeleteBaremetalServerTagsRequest struct {
-	ServerId string `json:"server_id"`
+	ServerId string `json:"server_id" xml:"server_id"`
 
-	Body *BatchDeleteBaremetalServerTagsRequestBody `json:"body,omitempty"`
+	Body *BatchDeleteBaremetalServerTagsRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchDeleteBaremetalServerTagsRequest) String() string {

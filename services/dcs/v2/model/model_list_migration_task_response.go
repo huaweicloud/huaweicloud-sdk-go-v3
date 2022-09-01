@@ -10,10 +10,10 @@ import (
 type ListMigrationTaskResponse struct {
 
 	// 迁移任务数量。
-	Count *int32 `json:"count,omitempty"`
+	Count *int32 `json:"count,omitempty" xml:"count"`
 
 	// 迁移任务列表。
-	MigrationTasks *[]MigrationTaskList `json:"migration_tasks,omitempty"`
+	MigrationTasks *[]MigrationTaskList `json:"migration_tasks,omitempty" xml:"migration_tasks"`
 	HttpStatusCode int                  `json:"-"`
 }
 

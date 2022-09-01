@@ -8,13 +8,13 @@ import (
 
 // Response Object
 type RunSemanticParserResponse struct {
-	Result *IntentResult `json:"result,omitempty"`
+	Result *IntentResult `json:"result,omitempty" xml:"result"`
 
 	// 调用失败时的错误码。调用成功时无此字段。
-	ErrorCode *string `json:"error_code,omitempty"`
+	ErrorCode *string `json:"error_code,omitempty" xml:"error_code"`
 
 	// 调用失败时的错误信息。调用成功时无此字段。
-	ErrorMsg       *string `json:"error_msg,omitempty"`
+	ErrorMsg       *string `json:"error_msg,omitempty" xml:"error_msg"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -10,7 +10,7 @@ import (
 type ShowVolumeRequest struct {
 
 	// 磁盘ID。
-	VolumeId string `json:"volume_id"`
+	VolumeId string `json:"volume_id" xml:"volume_id"`
 }
 
 func (o ShowVolumeRequest) String() string {

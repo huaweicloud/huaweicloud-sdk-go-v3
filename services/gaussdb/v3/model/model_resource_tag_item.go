@@ -9,10 +9,10 @@ import (
 type ResourceTagItem struct {
 
 	// 标签键。
-	Key string `json:"key"`
+	Key string `json:"key" xml:"key"`
 
 	// 标签值。
-	Value string `json:"value"`
+	Value string `json:"value" xml:"value"`
 }
 
 func (o ResourceTagItem) String() string {

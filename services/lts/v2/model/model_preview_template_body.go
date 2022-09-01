@@ -13,13 +13,13 @@ import (
 type PreviewTemplateBody struct {
 
 	// 邮件模板内容
-	Templates string `json:"templates"`
+	Templates string `json:"templates" xml:"templates"`
 
 	// 语言 zh-cn中文，en-us英文
-	Language PreviewTemplateBodyLanguage `json:"language"`
+	Language PreviewTemplateBodyLanguage `json:"language" xml:"language"`
 
 	// 来源，只能填LTS
-	Source string `json:"source"`
+	Source string `json:"source" xml:"source"`
 }
 
 func (o PreviewTemplateBody) String() string {

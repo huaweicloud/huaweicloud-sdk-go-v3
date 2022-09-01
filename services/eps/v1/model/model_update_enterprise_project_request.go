@@ -10,9 +10,9 @@ import (
 type UpdateEnterpriseProjectRequest struct {
 
 	// 企业项目ID，不能为0。 可以通过查询企业项目列表接口获取。
-	EnterpriseProjectId string `json:"enterprise_project_id"`
+	EnterpriseProjectId string `json:"enterprise_project_id" xml:"enterprise_project_id"`
 
-	Body *EnterpriseProject `json:"body,omitempty"`
+	Body *EnterpriseProject `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateEnterpriseProjectRequest) String() string {

@@ -10,10 +10,10 @@ import (
 type EnvPods struct {
 
 	// 环境变量的key，由大小写字母或下划线开头，由数字、大小写字母、下划线组成，最大长度2048个字符，不允许重复
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 环境变量的value，最大长度20480个字符。value、value_from和field_path必须三选一使用。
-	Value *string `json:"value,omitempty"`
+	Value *string `json:"value,omitempty" xml:"value"`
 }
 
 func (o EnvPods) String() string {

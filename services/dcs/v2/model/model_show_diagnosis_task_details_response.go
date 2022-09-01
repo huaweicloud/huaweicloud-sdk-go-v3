@@ -10,13 +10,13 @@ import (
 type ShowDiagnosisTaskDetailsResponse struct {
 
 	// 诊断结果为异常的诊断项总数
-	AbnormalItemSum *int32 `json:"abnormal_item_sum,omitempty"`
+	AbnormalItemSum *int32 `json:"abnormal_item_sum,omitempty" xml:"abnormal_item_sum"`
 
 	// 诊断失败的诊断项总数
-	FailedItemSum *int32 `json:"failed_item_sum,omitempty"`
+	FailedItemSum *int32 `json:"failed_item_sum,omitempty" xml:"failed_item_sum"`
 
 	// 节点诊断报告列表
-	DiagnosisNodeReportList *[]DiagnosisNodeReport `json:"diagnosis_node_report_list,omitempty"`
+	DiagnosisNodeReportList *[]DiagnosisNodeReport `json:"diagnosis_node_report_list,omitempty" xml:"diagnosis_node_report_list"`
 	HttpStatusCode          int                    `json:"-"`
 }
 

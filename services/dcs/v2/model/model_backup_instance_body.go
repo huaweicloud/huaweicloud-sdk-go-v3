@@ -13,10 +13,10 @@ import (
 type BackupInstanceBody struct {
 
 	// 备份缓存实例的备注信息。
-	Remark *string `json:"remark,omitempty"`
+	Remark *string `json:"remark,omitempty" xml:"remark"`
 
 	// 备份缓存实例的格式。
-	BackupFormat *BackupInstanceBodyBackupFormat `json:"backup_format,omitempty"`
+	BackupFormat *BackupInstanceBodyBackupFormat `json:"backup_format,omitempty" xml:"backup_format"`
 }
 
 func (o BackupInstanceBody) String() string {

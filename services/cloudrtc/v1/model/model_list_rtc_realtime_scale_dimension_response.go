@@ -10,9 +10,9 @@ import (
 type ListRtcRealtimeScaleDimensionResponse struct {
 
 	// 维度分布信息
-	Dimensions *[]RealtimeScaleDimensionValue `json:"dimensions,omitempty"`
+	Dimensions *[]RealtimeScaleDimensionValue `json:"dimensions,omitempty" xml:"dimensions"`
 
-	XRequestId     *string `json:"X-request-id,omitempty"`
+	XRequestId     *string `json:"X-request-id,omitempty" xml:"X-request-id"`
 	HttpStatusCode int     `json:"-"`
 }
 

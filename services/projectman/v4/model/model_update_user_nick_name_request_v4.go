@@ -10,7 +10,7 @@ import (
 type UpdateUserNickNameRequestV4 struct {
 
 	// 用户昵称
-	NickName string `json:"nick_name"`
+	NickName string `json:"nick_name" xml:"nick_name"`
 }
 
 func (o UpdateUserNickNameRequestV4) String() string {

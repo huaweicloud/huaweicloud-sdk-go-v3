@@ -10,10 +10,10 @@ import (
 type NameAndId struct {
 
 	// 对象编号
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 对象名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 }
 
 func (o NameAndId) String() string {

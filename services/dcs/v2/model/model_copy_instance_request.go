@@ -10,9 +10,9 @@ import (
 type CopyInstanceRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *BackupInstanceBody `json:"body,omitempty"`
+	Body *BackupInstanceBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CopyInstanceRequest) String() string {

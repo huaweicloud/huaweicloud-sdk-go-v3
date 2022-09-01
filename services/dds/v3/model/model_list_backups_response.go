@@ -10,10 +10,10 @@ import (
 type ListBackupsResponse struct {
 
 	// 备份列表。
-	Backups *[]BackupForList `json:"backups,omitempty"`
+	Backups *[]BackupForList `json:"backups,omitempty" xml:"backups"`
 
 	// 总记录数。
-	TotalCount     *int32 `json:"total_count,omitempty"`
+	TotalCount     *int32 `json:"total_count,omitempty" xml:"total_count"`
 	HttpStatusCode int    `json:"-"`
 }
 

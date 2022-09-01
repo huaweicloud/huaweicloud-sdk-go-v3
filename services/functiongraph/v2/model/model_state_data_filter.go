@@ -10,10 +10,10 @@ import (
 type StateDataFilter struct {
 
 	// 输入过滤表达式（JsonPath）
-	Input *string `json:"input,omitempty"`
+	Input *string `json:"input,omitempty" xml:"input"`
 
 	// 输出过滤表达式（JsonPath）
-	Output *string `json:"output,omitempty"`
+	Output *string `json:"output,omitempty" xml:"output"`
 }
 
 func (o StateDataFilter) String() string {

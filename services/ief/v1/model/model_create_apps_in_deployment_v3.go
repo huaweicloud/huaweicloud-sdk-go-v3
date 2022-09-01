@@ -10,11 +10,11 @@ import (
 type CreateAppsInDeploymentV3 struct {
 
 	// 副本数量
-	Replicas int32 `json:"replicas"`
+	Replicas int32 `json:"replicas" xml:"replicas"`
 
-	Template *PodRequest `json:"template"`
+	Template *PodRequest `json:"template" xml:"template"`
 
-	Annotations *Annotations `json:"annotations,omitempty"`
+	Annotations *Annotations `json:"annotations,omitempty" xml:"annotations"`
 }
 
 func (o CreateAppsInDeploymentV3) String() string {

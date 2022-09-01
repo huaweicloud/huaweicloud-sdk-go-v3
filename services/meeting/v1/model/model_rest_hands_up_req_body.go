@@ -10,7 +10,7 @@ import (
 type RestHandsUpReqBody struct {
 
 	// - 0: 放下手。 - 1: 举手。
-	HandsState int32 `json:"handsState"`
+	HandsState int32 `json:"handsState" xml:"handsState"`
 }
 
 func (o RestHandsUpReqBody) String() string {

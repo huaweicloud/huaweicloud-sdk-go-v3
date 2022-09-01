@@ -13,21 +13,21 @@ import (
 type CreateKeypairAction struct {
 
 	// SSH密钥对的名称。 - 新创建的密钥对名称不能和已有密钥对的名称相同。 - SSH密钥对名称由英文字母、数字、下划线、中划线组成，长度不能超过64个字节
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// SSH密钥对的类型
-	Type *CreateKeypairActionType `json:"type,omitempty"`
+	Type *CreateKeypairActionType `json:"type,omitempty" xml:"type"`
 
 	// 导入公钥的字符串信息。
-	PublicKey *string `json:"public_key,omitempty"`
+	PublicKey *string `json:"public_key,omitempty" xml:"public_key"`
 
 	// 租户级或者用户级
-	Scope *CreateKeypairActionScope `json:"scope,omitempty"`
+	Scope *CreateKeypairActionScope `json:"scope,omitempty" xml:"scope"`
 
 	// SSH密钥对所属的用户信息
-	UserId *string `json:"user_id,omitempty"`
+	UserId *string `json:"user_id,omitempty" xml:"user_id"`
 
-	KeyProtection *KeyProtection `json:"key_protection,omitempty"`
+	KeyProtection *KeyProtection `json:"key_protection,omitempty" xml:"key_protection"`
 }
 
 func (o CreateKeypairAction) String() string {

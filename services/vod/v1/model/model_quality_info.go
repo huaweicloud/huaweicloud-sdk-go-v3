@@ -11,12 +11,12 @@ import (
 
 //
 type QualityInfo struct {
-	Video *VideoTemplateInfo `json:"video,omitempty"`
+	Video *VideoTemplateInfo `json:"video,omitempty" xml:"video"`
 
-	Audio *AudioTemplateInfo `json:"audio,omitempty"`
+	Audio *AudioTemplateInfo `json:"audio,omitempty" xml:"audio"`
 
 	// 格式。
-	Format QualityInfoFormat `json:"format"`
+	Format QualityInfoFormat `json:"format" xml:"format"`
 }
 
 func (o QualityInfo) String() string {

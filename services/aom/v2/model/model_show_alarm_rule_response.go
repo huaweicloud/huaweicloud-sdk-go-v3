@@ -8,10 +8,10 @@ import (
 
 // Response Object
 type ShowAlarmRuleResponse struct {
-	MetaData *MetaData `json:"meta_data,omitempty"`
+	MetaData *MetaData `json:"meta_data,omitempty" xml:"meta_data"`
 
 	// 阈值规则列表。
-	Thresholds     *[]QueryAlarmResult `json:"thresholds,omitempty"`
+	Thresholds     *[]QueryAlarmResult `json:"thresholds,omitempty" xml:"thresholds"`
 	HttpStatusCode int                 `json:"-"`
 }
 

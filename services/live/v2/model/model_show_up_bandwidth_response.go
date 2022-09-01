@@ -10,9 +10,9 @@ import (
 type ShowUpBandwidthResponse struct {
 
 	// 采样数据列表
-	DataList *[]V2BandwidthData `json:"data_list,omitempty"`
+	DataList *[]V2BandwidthData `json:"data_list,omitempty" xml:"data_list"`
 
-	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	XRequestId     *string `json:"X-Request-Id,omitempty" xml:"X-Request-Id"`
 	HttpStatusCode int     `json:"-"`
 }
 

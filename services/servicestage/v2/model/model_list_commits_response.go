@@ -10,7 +10,7 @@ import (
 type ListCommitsResponse struct {
 
 	// 提交记录列表。
-	Commits        *[]CommitsCommits `json:"commits,omitempty"`
+	Commits        *[]CommitsCommits `json:"commits,omitempty" xml:"commits"`
 	HttpStatusCode int               `json:"-"`
 }
 

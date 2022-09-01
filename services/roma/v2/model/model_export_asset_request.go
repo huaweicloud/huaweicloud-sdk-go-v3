@@ -10,9 +10,9 @@ import (
 type ExportAssetRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *AssetExportRequest `json:"body,omitempty"`
+	Body *AssetExportRequest `json:"body,omitempty" xml:"body"`
 }
 
 func (o ExportAssetRequest) String() string {

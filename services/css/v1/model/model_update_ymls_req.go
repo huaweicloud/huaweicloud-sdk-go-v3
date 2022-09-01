@@ -7,7 +7,7 @@ import (
 )
 
 type UpdateYmlsReq struct {
-	Edit *UpdateYmlsReqEdit `json:"edit"`
+	Edit *UpdateYmlsReqEdit `json:"edit" xml:"edit"`
 }
 
 func (o UpdateYmlsReq) String() string {

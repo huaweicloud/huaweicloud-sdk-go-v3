@@ -8,7 +8,7 @@ import (
 
 //
 type RoutetableAssociateReqbody struct {
-	Routetable *AsscoiateReq `json:"routetable"`
+	Routetable *AsscoiateReq `json:"routetable" xml:"routetable"`
 }
 
 func (o RoutetableAssociateReqbody) String() string {

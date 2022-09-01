@@ -9,10 +9,10 @@ import (
 type TrafficSummaryData struct {
 
 	// 流量，单位为byte。
-	Value *int64 `json:"value,omitempty"`
+	Value *int64 `json:"value,omitempty" xml:"value"`
 
 	// 域名。
-	Domain *string `json:"domain,omitempty"`
+	Domain *string `json:"domain,omitempty" xml:"domain"`
 }
 
 func (o TrafficSummaryData) String() string {

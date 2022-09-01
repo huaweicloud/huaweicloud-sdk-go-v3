@@ -10,7 +10,7 @@ import (
 type ListPublicBorderGroupsRequest struct {
 
 	// 显示，形式为\"fields=id&fields=name&...\"  支持字段：publicip_pools/public_border_group
-	Fields *string `json:"fields,omitempty"`
+	Fields *string `json:"fields,omitempty" xml:"fields"`
 }
 
 func (o ListPublicBorderGroupsRequest) String() string {

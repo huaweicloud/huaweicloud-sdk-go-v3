@@ -10,13 +10,13 @@ import (
 type ListDomainsResponse struct {
 
 	// 域名总数
-	Total *int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty" xml:"total"`
 
 	// 一级域名总数
-	TopLevelDomainNum *int32 `json:"top_level_domain_num,omitempty"`
+	TopLevelDomainNum *int32 `json:"top_level_domain_num,omitempty" xml:"top_level_domain_num"`
 
 	// 域名列表
-	Domains        *[]DomainItem `json:"domains,omitempty"`
+	Domains        *[]DomainItem `json:"domains,omitempty" xml:"domains"`
 	HttpStatusCode int           `json:"-"`
 }
 

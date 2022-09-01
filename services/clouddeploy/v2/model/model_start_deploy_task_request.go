@@ -10,9 +10,9 @@ import (
 type StartDeployTaskRequest struct {
 
 	// 部署任务id
-	TaskId string `json:"task_id"`
+	TaskId string `json:"task_id" xml:"task_id"`
 
-	Body *EnvExecutionBody `json:"body,omitempty"`
+	Body *EnvExecutionBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o StartDeployTaskRequest) String() string {

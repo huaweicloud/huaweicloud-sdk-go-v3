@@ -9,12 +9,12 @@ import (
 type QualityEnhanceTemplate struct {
 
 	// 模板名称。
-	TemplateName string `json:"template_name"`
+	TemplateName string `json:"template_name" xml:"template_name"`
 
 	// 模板描述，查询预置模板时才会返回。
-	TemplateDescription *string `json:"template_description,omitempty"`
+	TemplateDescription *string `json:"template_description,omitempty" xml:"template_description"`
 
-	Video *QualityEnhanceVideo `json:"video,omitempty"`
+	Video *QualityEnhanceVideo `json:"video,omitempty" xml:"video"`
 }
 
 func (o QualityEnhanceTemplate) String() string {

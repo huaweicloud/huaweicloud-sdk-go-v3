@@ -10,13 +10,13 @@ import (
 type DeviceInfos struct {
 
 	// 设备和节点关系的名称，只允许中文字符、英文字母、数字、下划线、中划线，最大长度64
-	Relation string `json:"relation"`
+	Relation string `json:"relation" xml:"relation"`
 
 	// 设备和节点关系的描述，最大长度64，不允许^ ~ # $ % & * < > ( ) [ ] { } ' \" \\
-	Comment *string `json:"comment,omitempty"`
+	Comment *string `json:"comment,omitempty" xml:"comment"`
 
 	// 设备ID列表
-	DeviceIds []string `json:"device_ids"`
+	DeviceIds []string `json:"device_ids" xml:"device_ids"`
 }
 
 func (o DeviceInfos) String() string {

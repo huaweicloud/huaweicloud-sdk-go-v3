@@ -10,10 +10,10 @@ import (
 type NeutronListSecurityGroupRulesResponse struct {
 
 	// 安全组规则对象列表
-	SecurityGroupRules *[]NeutronSecurityGroupRule `json:"security_group_rules,omitempty"`
+	SecurityGroupRules *[]NeutronSecurityGroupRule `json:"security_group_rules,omitempty" xml:"security_group_rules"`
 
 	// 分页信息
-	SecurityGroupRulesLinks *[]NeutronPageLink `json:"security_group_rules_links,omitempty"`
+	SecurityGroupRulesLinks *[]NeutronPageLink `json:"security_group_rules_links,omitempty" xml:"security_group_rules_links"`
 	HttpStatusCode          int                `json:"-"`
 }
 

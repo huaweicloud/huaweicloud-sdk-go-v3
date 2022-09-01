@@ -10,7 +10,7 @@ import (
 type DeleteSubnetRequest struct {
 
 	// 子网ID。
-	SubnetId string `json:"subnet_id"`
+	SubnetId string `json:"subnet_id" xml:"subnet_id"`
 }
 
 func (o DeleteSubnetRequest) String() string {

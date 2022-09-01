@@ -10,10 +10,10 @@ import (
 type ListImageByTagsResponse struct {
 
 	// 镜像信息列表
-	Resources *[]ShowImageByTagsResource `json:"resources,omitempty"`
+	Resources *[]ShowImageByTagsResource `json:"resources,omitempty" xml:"resources"`
 
 	// 总记录数
-	TotalCount     *int32 `json:"total_count,omitempty"`
+	TotalCount     *int32 `json:"total_count,omitempty" xml:"total_count"`
 	HttpStatusCode int    `json:"-"`
 }
 

@@ -9,16 +9,16 @@ import (
 type DataCenterV2Do struct {
 
 	// 区域类型0大陆 1国际
-	Type *int32 `json:"type,omitempty"`
+	Type *int32 `json:"type,omitempty" xml:"type"`
 
 	// 区域id
-	RegionId *string `json:"region_id,omitempty"`
+	RegionId *string `json:"region_id,omitempty" xml:"region_id"`
 
 	// 区域名称
-	RegionName *string `json:"region_name,omitempty"`
+	RegionName *string `json:"region_name,omitempty" xml:"region_name"`
 
 	// 是否敏感
-	IsSensitive *int32 `json:"is_sensitive,omitempty"`
+	IsSensitive *int32 `json:"is_sensitive,omitempty" xml:"is_sensitive"`
 }
 
 func (o DataCenterV2Do) String() string {

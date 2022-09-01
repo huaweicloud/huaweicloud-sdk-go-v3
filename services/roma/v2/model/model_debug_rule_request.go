@@ -10,9 +10,9 @@ import (
 type DebugRuleRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *DebugRuleRequestBody `json:"body,omitempty"`
+	Body *DebugRuleRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o DebugRuleRequest) String() string {

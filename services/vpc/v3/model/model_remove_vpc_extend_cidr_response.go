@@ -8,10 +8,10 @@ import (
 
 // Response Object
 type RemoveVpcExtendCidrResponse struct {
-	Vpc *Vpc `json:"vpc,omitempty"`
+	Vpc *Vpc `json:"vpc,omitempty" xml:"vpc"`
 
 	// 请求ID
-	RequestId      *string `json:"request_id,omitempty"`
+	RequestId      *string `json:"request_id,omitempty" xml:"request_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -13,13 +13,13 @@ import (
 type KeywordExtractReq struct {
 
 	// 待分析文本，长度为1~512，文本编码为UTF-8。
-	Text string `json:"text"`
+	Text string `json:"text" xml:"text"`
 
 	// 返回关键词的最大数量，默认为5。
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 支持的文本语言类型，目前只支持中文，默认为zh。
-	Lang *KeywordExtractReqLang `json:"lang,omitempty"`
+	Lang *KeywordExtractReqLang `json:"lang,omitempty" xml:"lang"`
 }
 
 func (o KeywordExtractReq) String() string {

@@ -10,13 +10,13 @@ import (
 type BatchTaskFile struct {
 
 	// 上传的批量任务文件ID，由平台自动生成。
-	FileId *string `json:"file_id,omitempty"`
+	FileId *string `json:"file_id,omitempty" xml:"file_id"`
 
 	// 上传的批量任务文件名称。
-	FileName *string `json:"file_name,omitempty"`
+	FileName *string `json:"file_name,omitempty" xml:"file_name"`
 
 	// 在物联网平台上传文件的时间。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
-	UploadTime *string `json:"upload_time,omitempty"`
+	UploadTime *string `json:"upload_time,omitempty" xml:"upload_time"`
 }
 
 func (o BatchTaskFile) String() string {

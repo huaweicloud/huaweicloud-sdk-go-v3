@@ -10,10 +10,10 @@ import (
 type ListTemplatesResponse struct {
 
 	// 系统模板列表。
-	SystemTemplates *[]SystemTemplates `json:"systemTemplates,omitempty"`
+	SystemTemplates *[]SystemTemplates `json:"systemTemplates,omitempty" xml:"systemTemplates"`
 
 	// 自定义模板列表。
-	CustomTemplates *[]CustomTemplates `json:"customTemplates,omitempty"`
+	CustomTemplates *[]CustomTemplates `json:"customTemplates,omitempty" xml:"customTemplates"`
 	HttpStatusCode  int                `json:"-"`
 }
 

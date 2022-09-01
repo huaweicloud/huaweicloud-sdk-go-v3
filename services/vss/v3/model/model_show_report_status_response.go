@@ -13,10 +13,10 @@ import (
 type ShowReportStatusResponse struct {
 
 	// 任务ID
-	TaskId *string `json:"task_id,omitempty"`
+	TaskId *string `json:"task_id,omitempty" xml:"task_id"`
 
 	// PDF报告生成状态:   * ungenerated - 未生成   * generating - 生成中   * generated - 已生成   * failed - 生成失败
-	ReportStatus   *ShowReportStatusResponseReportStatus `json:"report_status,omitempty"`
+	ReportStatus   *ShowReportStatusResponseReportStatus `json:"report_status,omitempty" xml:"report_status"`
 	HttpStatusCode int                                   `json:"-"`
 }
 

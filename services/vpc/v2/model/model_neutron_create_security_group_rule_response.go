@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type NeutronCreateSecurityGroupRuleResponse struct {
-	SecurityGroupRule *NeutronSecurityGroupRule `json:"security_group_rule,omitempty"`
+	SecurityGroupRule *NeutronSecurityGroupRule `json:"security_group_rule,omitempty" xml:"security_group_rule"`
 	HttpStatusCode    int                       `json:"-"`
 }
 

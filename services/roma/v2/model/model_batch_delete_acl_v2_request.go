@@ -10,12 +10,12 @@ import (
 type BatchDeleteAclV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 必须为delete
-	Action string `json:"action"`
+	Action string `json:"action" xml:"action"`
 
-	Body *AclBatchDelete `json:"body,omitempty"`
+	Body *AclBatchDelete `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchDeleteAclV2Request) String() string {

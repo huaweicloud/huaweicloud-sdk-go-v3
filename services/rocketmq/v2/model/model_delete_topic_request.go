@@ -10,10 +10,10 @@ import (
 type DeleteTopicRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 主题名称。
-	Topic string `json:"topic"`
+	Topic string `json:"topic" xml:"topic"`
 }
 
 func (o DeleteTopicRequest) String() string {

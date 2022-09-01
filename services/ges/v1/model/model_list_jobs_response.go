@@ -10,16 +10,16 @@ import (
 type ListJobsResponse struct {
 
 	// 系统提示信息，执行成功时，字段可能为空。执行失败时，用于显示错误信息。
-	ErrorMessage *string `json:"errorMessage,omitempty"`
+	ErrorMessage *string `json:"errorMessage,omitempty" xml:"errorMessage"`
 
 	// 系统提示信息，执行成功时，字段可能为空。执行失败时，用于显示错误码。
-	ErrorCode *string `json:"errorCode,omitempty"`
+	ErrorCode *string `json:"errorCode,omitempty" xml:"errorCode"`
 
 	// 任务总数
-	JobCount *int32 `json:"jobCount,omitempty"`
+	JobCount *int32 `json:"jobCount,omitempty" xml:"jobCount"`
 
 	// 任务列表
-	JobList        *[]Job `json:"jobList,omitempty"`
+	JobList        *[]Job `json:"jobList,omitempty" xml:"jobList"`
 	HttpStatusCode int    `json:"-"`
 }
 

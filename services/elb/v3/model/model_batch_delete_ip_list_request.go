@@ -10,9 +10,9 @@ import (
 type BatchDeleteIpListRequest struct {
 
 	// IP地址组ID。
-	IpgroupId string `json:"ipgroup_id"`
+	IpgroupId string `json:"ipgroup_id" xml:"ipgroup_id"`
 
-	Body *BatchDeleteIpListRequestBody `json:"body,omitempty"`
+	Body *BatchDeleteIpListRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchDeleteIpListRequest) String() string {

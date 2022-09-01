@@ -10,10 +10,10 @@ import (
 type ListEnterpriseProjectResponse struct {
 
 	// 企业项目列表
-	EnterpriseProjects *[]EpDetail `json:"enterprise_projects,omitempty"`
+	EnterpriseProjects *[]EpDetail `json:"enterprise_projects,omitempty" xml:"enterprise_projects"`
 
 	// 企业项目总数
-	TotalCount     *int32 `json:"total_count,omitempty"`
+	TotalCount     *int32 `json:"total_count,omitempty" xml:"total_count"`
 	HttpStatusCode int    `json:"-"`
 }
 

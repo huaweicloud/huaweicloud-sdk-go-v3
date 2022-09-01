@@ -10,16 +10,16 @@ import (
 type ShowMqsInstanceTopicAccessPolicyRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// topic名称。
-	TopicName string `json:"topic_name"`
+	TopicName string `json:"topic_name" xml:"topic_name"`
 
 	// 分页查询偏移量。
-	Offset *string `json:"offset,omitempty"`
+	Offset *string `json:"offset,omitempty" xml:"offset"`
 
 	// 分页查询大小。
-	Limit *string `json:"limit,omitempty"`
+	Limit *string `json:"limit,omitempty" xml:"limit"`
 }
 
 func (o ShowMqsInstanceTopicAccessPolicyRequest) String() string {

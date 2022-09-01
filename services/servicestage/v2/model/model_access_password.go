@@ -9,13 +9,13 @@ import (
 type AccessPassword struct {
 
 	// 授权名称。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 仓库用户名。
-	User string `json:"user"`
+	User string `json:"user" xml:"user"`
 
 	// 仓库密码。
-	Password string `json:"password"`
+	Password string `json:"password" xml:"password"`
 }
 
 func (o AccessPassword) String() string {

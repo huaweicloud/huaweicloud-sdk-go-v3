@@ -9,7 +9,7 @@ import (
 type QueryRunRequestBody struct {
 
 	// ResourceQL 表达式
-	Expression string `json:"expression"`
+	Expression string `json:"expression" xml:"expression"`
 }
 
 func (o QueryRunRequestBody) String() string {

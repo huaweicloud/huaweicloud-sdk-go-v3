@@ -10,7 +10,7 @@ import (
 type PublishParam struct {
 
 	// 合流任务完成后，转推的RTMP推流地址。
-	RtmpUrls []string `json:"rtmp_urls"`
+	RtmpUrls []string `json:"rtmp_urls" xml:"rtmp_urls"`
 }
 
 func (o PublishParam) String() string {

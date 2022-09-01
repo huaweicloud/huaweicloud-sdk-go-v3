@@ -10,19 +10,19 @@ import (
 type CreateReplicationRequestParams struct {
 
 	// 保护组的ID。
-	ServerGroupId string `json:"server_group_id"`
+	ServerGroupId string `json:"server_group_id" xml:"server_group_id"`
 
 	// 生产站点卷的ID。
-	VolumeId string `json:"volume_id"`
+	VolumeId string `json:"volume_id" xml:"volume_id"`
 
 	// 指定复制对的名称，最大支持长度为64个字节。只包含中文字符、英文字母（a～ｚ、Ａ～Ｚ）、数字（０~９）、小数点（．）、下划线（_）、中划线（-）。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 指定复制对的描述，最大支持长度为64个字节，不能包含左尖括号（<）或右尖括号（>）。
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 专属分布式存储池ID。
-	ClusterId *string `json:"cluster_id,omitempty"`
+	ClusterId *string `json:"cluster_id,omitempty" xml:"cluster_id"`
 }
 
 func (o CreateReplicationRequestParams) String() string {

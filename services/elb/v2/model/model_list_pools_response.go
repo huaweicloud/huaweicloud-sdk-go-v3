@@ -10,7 +10,7 @@ import (
 type ListPoolsResponse struct {
 
 	// 后端云服务器对象组列表
-	Pools          *[]PoolResp `json:"pools,omitempty"`
+	Pools          *[]PoolResp `json:"pools,omitempty" xml:"pools"`
 	HttpStatusCode int         `json:"-"`
 }
 

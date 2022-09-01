@@ -13,13 +13,13 @@ import (
 type PostMultiGrainedSegmentReq struct {
 
 	// 待分词文本，长度为1~64，文本编码为UTF-8。
-	Text string `json:"text"`
+	Text string `json:"text" xml:"text"`
 
 	// 支持的文本语言类型，目前只支持中文，默认为zh。
-	Lang *PostMultiGrainedSegmentReqLang `json:"lang,omitempty"`
+	Lang *PostMultiGrainedSegmentReqLang `json:"lang,omitempty" xml:"lang"`
 
 	// 分词粒度，1为最细粒度，2为最粗粒度，其它情况默认返回全部粒度分词树结果。
-	Granularity *PostMultiGrainedSegmentReqGranularity `json:"granularity,omitempty"`
+	Granularity *PostMultiGrainedSegmentReqGranularity `json:"granularity,omitempty" xml:"granularity"`
 }
 
 func (o PostMultiGrainedSegmentReq) String() string {

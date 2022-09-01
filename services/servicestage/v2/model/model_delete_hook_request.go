@@ -10,16 +10,16 @@ import (
 type DeleteHookRequest struct {
 
 	// 授权名称。
-	XRepoAuth string `json:"X-Repo-Auth"`
+	XRepoAuth string `json:"X-Repo-Auth" xml:"X-Repo-Auth"`
 
 	// 组织ID。
-	Namespace string `json:"namespace"`
+	Namespace string `json:"namespace" xml:"namespace"`
 
 	// 仓库项目ID，如果含有“/”，需要将“/”替换为“:”。
-	Project string `json:"project"`
+	Project string `json:"project" xml:"project"`
 
 	// hook ID。
-	HookId string `json:"hook_id"`
+	HookId string `json:"hook_id" xml:"hook_id"`
 }
 
 func (o DeleteHookRequest) String() string {

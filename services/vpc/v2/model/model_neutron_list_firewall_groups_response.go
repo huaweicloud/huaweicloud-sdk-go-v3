@@ -10,10 +10,10 @@ import (
 type NeutronListFirewallGroupsResponse struct {
 
 	// firewall_group对象列表
-	FirewallGroups *[]NeutronFirewallGroup `json:"firewall_groups,omitempty"`
+	FirewallGroups *[]NeutronFirewallGroup `json:"firewall_groups,omitempty" xml:"firewall_groups"`
 
 	// 分页信息
-	FirewallGroupsLinks *[]NeutronPageLink `json:"firewall_groups_links,omitempty"`
+	FirewallGroupsLinks *[]NeutronPageLink `json:"firewall_groups_links,omitempty" xml:"firewall_groups_links"`
 	HttpStatusCode      int                `json:"-"`
 }
 

@@ -9,10 +9,10 @@ import (
 type TemplateArgs struct {
 
 	// 模板参数名。 目前仅支持sub_customer_name：表明企业主创建企业子的名字
-	Key string `json:"key"`
+	Key string `json:"key" xml:"key"`
 
 	// 模板参数值。 key对应的取值。
-	Value string `json:"value"`
+	Value string `json:"value" xml:"value"`
 }
 
 func (o TemplateArgs) String() string {

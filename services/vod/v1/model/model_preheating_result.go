@@ -12,10 +12,10 @@ import (
 type PreheatingResult struct {
 
 	// 媒资URL。
-	Url *string `json:"url,omitempty"`
+	Url *string `json:"url,omitempty" xml:"url"`
 
 	// 预热任务状态。  取值如下： - processing：处理中 - succeed：预热完成 - failed：预热失败
-	Status *PreheatingResultStatus `json:"status,omitempty"`
+	Status *PreheatingResultStatus `json:"status,omitempty" xml:"status"`
 }
 
 func (o PreheatingResult) String() string {

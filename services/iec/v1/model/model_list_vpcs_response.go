@@ -10,10 +10,10 @@ import (
 type ListVpcsResponse struct {
 
 	// 虚拟私有云的总数。
-	Count *int32 `json:"count,omitempty"`
+	Count *int32 `json:"count,omitempty" xml:"count"`
 
 	// 虚拟私有云数组对象。
-	Vpcs           *[]Vpc `json:"vpcs,omitempty"`
+	Vpcs           *[]Vpc `json:"vpcs,omitempty" xml:"vpcs"`
 	HttpStatusCode int    `json:"-"`
 }
 

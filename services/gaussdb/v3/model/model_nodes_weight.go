@@ -9,10 +9,10 @@ import (
 type NodesWeight struct {
 
 	// 数据库节点id。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 权重。取值范围：0~1000。
-	Weight *int32 `json:"weight,omitempty"`
+	Weight *int32 `json:"weight,omitempty" xml:"weight"`
 }
 
 func (o NodesWeight) String() string {

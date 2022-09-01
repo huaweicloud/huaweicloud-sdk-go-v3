@@ -10,16 +10,16 @@ import (
 type ShowEventResponse struct {
 
 	// 测试事件ID。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 测试事件名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 测试事件content。
-	Content *string `json:"content,omitempty"`
+	Content *string `json:"content,omitempty" xml:"content"`
 
 	// 上次修改的时间。
-	LastModified   float32 `json:"last_modified,omitempty"`
+	LastModified   float32 `json:"last_modified,omitempty" xml:"last_modified"`
 	HttpStatusCode int     `json:"-"`
 }
 

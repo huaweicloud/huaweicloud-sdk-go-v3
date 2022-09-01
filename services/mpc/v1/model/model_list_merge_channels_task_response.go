@@ -10,13 +10,13 @@ import (
 type ListMergeChannelsTaskResponse struct {
 
 	// 任务列表
-	TaskArray *[]MergeChannelsTaskInfo `json:"task_array,omitempty"`
+	TaskArray *[]MergeChannelsTaskInfo `json:"task_array,omitempty" xml:"task_array"`
 
 	// 查询结果是否被截取。 - 1：表示被截取，即还有结果未被返回，可以通过设置page和size参数继续查询。 - 0：表示未被截取，即所有结果已被返回。
-	IsTruncated *int32 `json:"is_truncated,omitempty"`
+	IsTruncated *int32 `json:"is_truncated,omitempty" xml:"is_truncated"`
 
 	// 查询结果的数量。
-	Total          *int32 `json:"total,omitempty"`
+	Total          *int32 `json:"total,omitempty" xml:"total"`
 	HttpStatusCode int    `json:"-"`
 }
 

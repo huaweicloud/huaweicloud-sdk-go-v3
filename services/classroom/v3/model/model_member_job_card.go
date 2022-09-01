@@ -9,19 +9,19 @@ import (
 type MemberJobCard struct {
 
 	// 作业名称
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 作业均分(作业有均分该字段才返回)
-	AverageScore string `json:"average_score"`
+	AverageScore string `json:"average_score" xml:"average_score"`
 
 	// 作业得分(作业有分数该字段才返回)
-	Score int32 `json:"score"`
+	Score int32 `json:"score" xml:"score"`
 
 	// 作业下发时间, 日期格式：yyyy-MM-dd HH:mm:ss
-	SendTime string `json:"send_time"`
+	SendTime string `json:"send_time" xml:"send_time"`
 
 	// 作业最后一次提交时间, 日期格式：yyyy-MM-dd HH:mm:ss
-	LastSubmitTime string `json:"last_submit_time"`
+	LastSubmitTime string `json:"last_submit_time" xml:"last_submit_time"`
 }
 
 func (o MemberJobCard) String() string {

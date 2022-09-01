@@ -10,10 +10,10 @@ import (
 type ShowIssuesWrokFlowConfigRequest struct {
 
 	// devcloud项目的32位id
-	ProjectId string `json:"project_id"`
+	ProjectId string `json:"project_id" xml:"project_id"`
 
 	// 工作项类型id [2,3,4,5,6,7]
-	TrackerId int32 `json:"tracker_id"`
+	TrackerId int32 `json:"tracker_id" xml:"tracker_id"`
 }
 
 func (o ShowIssuesWrokFlowConfigRequest) String() string {

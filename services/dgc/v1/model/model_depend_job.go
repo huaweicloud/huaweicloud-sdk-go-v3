@@ -10,11 +10,11 @@ import (
 )
 
 type DependJob struct {
-	Jobs *string `json:"jobs,omitempty"`
+	Jobs *string `json:"jobs,omitempty" xml:"jobs"`
 
-	DependPeriod *string `json:"dependPeriod,omitempty"`
+	DependPeriod *string `json:"dependPeriod,omitempty" xml:"dependPeriod"`
 
-	DependFailPolicy *DependJobDependFailPolicy `json:"dependFailPolicy,omitempty"`
+	DependFailPolicy *DependJobDependFailPolicy `json:"dependFailPolicy,omitempty" xml:"dependFailPolicy"`
 }
 
 func (o DependJob) String() string {

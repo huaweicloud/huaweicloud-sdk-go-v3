@@ -7,7 +7,7 @@ import (
 )
 
 type Keypairs struct {
-	Keypair *Keypair `json:"keypair"`
+	Keypair *Keypair `json:"keypair" xml:"keypair"`
 }
 
 func (o Keypairs) String() string {

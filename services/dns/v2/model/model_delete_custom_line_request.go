@@ -10,7 +10,7 @@ import (
 type DeleteCustomLineRequest struct {
 
 	// 解析线路ID。
-	LineId string `json:"line_id"`
+	LineId string `json:"line_id" xml:"line_id"`
 }
 
 func (o DeleteCustomLineRequest) String() string {

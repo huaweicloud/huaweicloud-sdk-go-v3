@@ -13,19 +13,19 @@ import (
 type BatchListEdgeAppsRequest struct {
 
 	// 应用ID搜索关键字
-	EdgeAppId *string `json:"edge_app_id,omitempty"`
+	EdgeAppId *string `json:"edge_app_id,omitempty" xml:"edge_app_id"`
 
 	// 查询的起始位置，取值范围为非负整数，默认为0
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 每页记录数，默认值为10，取值区间为1-1000
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 应用id搜索关键字
-	AppType *BatchListEdgeAppsRequestAppType `json:"app_type,omitempty"`
+	AppType *BatchListEdgeAppsRequestAppType `json:"app_type,omitempty" xml:"app_type"`
 
 	// 功能类型
-	FunctionType *BatchListEdgeAppsRequestFunctionType `json:"function_type,omitempty"`
+	FunctionType *BatchListEdgeAppsRequestFunctionType `json:"function_type,omitempty" xml:"function_type"`
 }
 
 func (o BatchListEdgeAppsRequest) String() string {

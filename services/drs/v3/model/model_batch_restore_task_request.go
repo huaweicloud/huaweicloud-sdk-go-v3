@@ -13,9 +13,9 @@ import (
 type BatchRestoreTaskRequest struct {
 
 	// 请求语言类型
-	XLanguage *BatchRestoreTaskRequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *BatchRestoreTaskRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 
-	Body *BatchRetryReq `json:"body,omitempty"`
+	Body *BatchRetryReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchRestoreTaskRequest) String() string {

@@ -10,10 +10,10 @@ import (
 type TaskDetailsServiceTitle struct {
 
 	// 作业对应服务的中文标题
-	Zh *string `json:"zh,omitempty"`
+	Zh *string `json:"zh,omitempty" xml:"zh"`
 
 	// 作业对应服务的英文标题
-	En *string `json:"en,omitempty"`
+	En *string `json:"en,omitempty" xml:"en"`
 }
 
 func (o TaskDetailsServiceTitle) String() string {

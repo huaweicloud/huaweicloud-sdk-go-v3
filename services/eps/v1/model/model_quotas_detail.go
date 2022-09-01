@@ -10,7 +10,7 @@ import (
 type QuotasDetail struct {
 
 	// 资源配额
-	Resources []EpQuotas `json:"resources"`
+	Resources []EpQuotas `json:"resources" xml:"resources"`
 }
 
 func (o QuotasDetail) String() string {

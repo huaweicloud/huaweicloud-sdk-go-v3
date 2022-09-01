@@ -8,7 +8,7 @@ import (
 
 // 合流任务参数
 type UpdateMixJobReq struct {
-	MixParam *UpdateMixParam `json:"mix_param"`
+	MixParam *UpdateMixParam `json:"mix_param" xml:"mix_param"`
 }
 
 func (o UpdateMixJobReq) String() string {

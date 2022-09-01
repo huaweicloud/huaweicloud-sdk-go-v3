@@ -12,13 +12,13 @@ import (
 type UpdateProductTemplateRequestBody struct {
 
 	// 产品模板名称，支持中文,英文大小写，数字，下划线和中划线,长度2-64
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 产品模板描述，长度0-200
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 产品模板状态 0-启用 1-禁用
-	Status UpdateProductTemplateRequestBodyStatus `json:"status"`
+	Status UpdateProductTemplateRequestBodyStatus `json:"status" xml:"status"`
 }
 
 func (o UpdateProductTemplateRequestBody) String() string {

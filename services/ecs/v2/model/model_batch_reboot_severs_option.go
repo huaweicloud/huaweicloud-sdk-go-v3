@@ -13,10 +13,10 @@ import (
 type BatchRebootSeversOption struct {
 
 	// 云服务器ID列表。
-	Servers []ServerId `json:"servers"`
+	Servers []ServerId `json:"servers" xml:"servers"`
 
 	// 重启类型：  - SOFT：普通重启。 - HARD：强制重启。
-	Type BatchRebootSeversOptionType `json:"type"`
+	Type BatchRebootSeversOptionType `json:"type" xml:"type"`
 }
 
 func (o BatchRebootSeversOption) String() string {

@@ -8,11 +8,11 @@ import (
 
 // Request Object
 type UpdatePtrRecordRequest struct {
-	Region string `json:"region"`
+	Region string `json:"region" xml:"region"`
 
-	FloatingipId string `json:"floatingip_id"`
+	FloatingipId string `json:"floatingip_id" xml:"floatingip_id"`
 
-	Body *UpdatePtrReq `json:"body,omitempty"`
+	Body *UpdatePtrReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdatePtrRecordRequest) String() string {

@@ -13,10 +13,10 @@ import (
 type DomainSentimentReq struct {
 
 	// 待分析文本。文本编码要求为utf-8。仅支持中文情感分析。 type为1（电商领域评论）时，限定200个字符以内，文本长度超过200个字符时，只检测前200个字符。 type为2（汽车领域评论）时，限定400个字符以内，文本长度超过400个字符时，只检测前400个字符。
-	Content string `json:"content"`
+	Content string `json:"content" xml:"content"`
 
 	// 取值如下： 0：自适应领域，根据输入内容自动识别适应领域。 1：电商领域，适用于电商领域评论。 2：汽车领域，适用于汽车领域评论。
-	Type *DomainSentimentReqType `json:"type,omitempty"`
+	Type *DomainSentimentReqType `json:"type,omitempty" xml:"type"`
 }
 
 func (o DomainSentimentReq) String() string {

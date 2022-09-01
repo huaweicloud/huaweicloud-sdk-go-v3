@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type DeleteAlarmRulesRequest struct {
-	Body *DeleteAlarmRulesBody `json:"body,omitempty"`
+	Body *DeleteAlarmRulesBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o DeleteAlarmRulesRequest) String() string {

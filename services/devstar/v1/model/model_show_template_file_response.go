@@ -10,19 +10,19 @@ import (
 type ShowTemplateFileResponse struct {
 
 	// 文件内容（返回的文件内容为encoding指定的编码格式编码后的内容）。
-	Content *string `json:"content,omitempty"`
+	Content *string `json:"content,omitempty" xml:"content"`
 
 	// 内容编码格式(固定base64)。
-	Encoding *string `json:"encoding,omitempty"`
+	Encoding *string `json:"encoding,omitempty" xml:"encoding"`
 
 	// 文件名。
-	FileName *string `json:"file_name,omitempty"`
+	FileName *string `json:"file_name,omitempty" xml:"file_name"`
 
 	// 文件相对路径。
-	FilePath *string `json:"file_path,omitempty"`
+	FilePath *string `json:"file_path,omitempty" xml:"file_path"`
 
 	// 文件类型。
-	FileType       *string `json:"file_type,omitempty"`
+	FileType       *string `json:"file_type,omitempty" xml:"file_type"`
 	HttpStatusCode int     `json:"-"`
 }
 

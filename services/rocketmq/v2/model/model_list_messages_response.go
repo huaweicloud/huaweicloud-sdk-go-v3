@@ -10,10 +10,10 @@ import (
 type ListMessagesResponse struct {
 
 	// 消息列表。
-	Messages *[]Message `json:"messages,omitempty"`
+	Messages *[]Message `json:"messages,omitempty" xml:"messages"`
 
 	// 消息总数。
-	Total          float32 `json:"total,omitempty"`
+	Total          float32 `json:"total,omitempty" xml:"total"`
 	HttpStatusCode int     `json:"-"`
 }
 

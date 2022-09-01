@@ -13,127 +13,127 @@ import (
 type ListPublicipsRequest struct {
 
 	// 分页查询起始的资源ID，为空时为查询第一页
-	Marker *string `json:"marker,omitempty"`
+	Marker *string `json:"marker,omitempty" xml:"marker"`
 
 	// 分页查询起始的资源序号
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 每页返回的个数取值范围：0~[2000]，其中2000为局点差异项，具体取值由局点决定
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 显示，形式为\"fields=id&fields=owner&...\"  支持字段：id/project_id/ip_version/type/public_ip_address/public_ipv6_address/network_type/status/description/created_at/updated_at/vnic/bandwidth/associate_instance_type/associate_instance_id/lock_status/billing_info/tags/enterprise_project_id/allow_share_bandwidth_types/public_border_group/alias/publicip_pool_name/publicip_pool_id
-	Fields *[]string `json:"fields,omitempty"`
+	Fields *[]string `json:"fields,omitempty" xml:"fields"`
 
 	// 排序，形式为\"sort_key=id\"  支持字段：id/public_ip_address/public_ipv6_address/ip_version/created_at/updated_at/public_border_group
-	SortKey *ListPublicipsRequestSortKey `json:"sort_key,omitempty"`
+	SortKey *ListPublicipsRequestSortKey `json:"sort_key,omitempty" xml:"sort_key"`
 
 	// 排序方向  取值范围：asc、desc
-	SortDir *ListPublicipsRequestSortDir `json:"sort_dir,omitempty"`
+	SortDir *ListPublicipsRequestSortDir `json:"sort_dir,omitempty" xml:"sort_dir"`
 
 	// 根据id过滤
-	Id *[]string `json:"id,omitempty"`
+	Id *[]string `json:"id,omitempty" xml:"id"`
 
 	// 根据ip_version过滤  取值范围：4、6
-	IpVersion *[]ListPublicipsRequestIpVersion `json:"ip_version,omitempty"`
+	IpVersion *[]ListPublicipsRequestIpVersion `json:"ip_version,omitempty" xml:"ip_version"`
 
 	// 根据public_ip_address过滤
-	PublicIpAddress *[]string `json:"public_ip_address,omitempty"`
+	PublicIpAddress *[]string `json:"public_ip_address,omitempty" xml:"public_ip_address"`
 
 	// 根据public_ip_address过滤，模糊搜索
-	PublicIpAddressLike *string `json:"public_ip_address_like,omitempty"`
+	PublicIpAddressLike *string `json:"public_ip_address_like,omitempty" xml:"public_ip_address_like"`
 
 	// 根据public_ipv6_address过滤
-	PublicIpv6Address *[]string `json:"public_ipv6_address,omitempty"`
+	PublicIpv6Address *[]string `json:"public_ipv6_address,omitempty" xml:"public_ipv6_address"`
 
 	// 根据public_ipv6_address过滤，模糊搜索
-	PublicIpv6AddressLike *string `json:"public_ipv6_address_like,omitempty"`
+	PublicIpv6AddressLike *string `json:"public_ipv6_address_like,omitempty" xml:"public_ipv6_address_like"`
 
 	// 根据type过滤  取值范围：EIP、DUALSTACK、DUALSTACK_SUBNET  EIP: 弹性公网IP   DUALSTACK: 双栈IPV6   DUALSTACK_SUBNET: 双栈子网
-	Type *[]ListPublicipsRequestType `json:"type,omitempty"`
+	Type *[]ListPublicipsRequestType `json:"type,omitempty" xml:"type"`
 
 	// 根据network_type过滤  取值范围：5_telcom、5_union、5_bgp、5_sbgp、5_ipv6、5_graybgp
-	NetworkType *[]ListPublicipsRequestNetworkType `json:"network_type,omitempty"`
+	NetworkType *[]ListPublicipsRequestNetworkType `json:"network_type,omitempty" xml:"network_type"`
 
 	// 根据publicip_pool_name过滤  取值范围：5_telcom、5_union、5_bgp、5_sbgp、5_ipv6、5_graybgp、专属池名称等
-	PublicipPoolName *[]string `json:"publicip_pool_name,omitempty"`
+	PublicipPoolName *[]string `json:"publicip_pool_name,omitempty" xml:"publicip_pool_name"`
 
 	// 根据status过滤  取值范围：FREEZED、DOWN、ACTIVE、ERROR
-	Status *[]ListPublicipsRequestStatus `json:"status,omitempty"`
+	Status *[]ListPublicipsRequestStatus `json:"status,omitempty" xml:"status"`
 
 	// 根据alias模糊搜索
-	AliasLike *string `json:"alias_like,omitempty"`
+	AliasLike *string `json:"alias_like,omitempty" xml:"alias_like"`
 
 	// 根据alias过滤
-	Alias *[]string `json:"alias,omitempty"`
+	Alias *[]string `json:"alias,omitempty" xml:"alias"`
 
 	// 根据description过滤
-	Description *[]string `json:"description,omitempty"`
+	Description *[]string `json:"description,omitempty" xml:"description"`
 
 	// 根据private_ip_address过滤
-	VnicPrivateIpAddress *[]string `json:"vnic.private_ip_address,omitempty"`
+	VnicPrivateIpAddress *[]string `json:"vnic.private_ip_address,omitempty" xml:"vnic.private_ip_address"`
 
 	// 根据private_ip_address模糊搜索
-	VnicPrivateIpAddressLike *string `json:"vnic.private_ip_address_like,omitempty"`
+	VnicPrivateIpAddressLike *string `json:"vnic.private_ip_address_like,omitempty" xml:"vnic.private_ip_address_like"`
 
 	// 根据device_id过滤
-	VnicDeviceId *[]string `json:"vnic.device_id,omitempty"`
+	VnicDeviceId *[]string `json:"vnic.device_id,omitempty" xml:"vnic.device_id"`
 
 	// 根据device_owner过滤
-	VnicDeviceOwner *[]string `json:"vnic.device_owner,omitempty"`
+	VnicDeviceOwner *[]string `json:"vnic.device_owner,omitempty" xml:"vnic.device_owner"`
 
 	// 根据vpc_id过滤
-	VnicVpcId *[]string `json:"vnic.vpc_id,omitempty"`
+	VnicVpcId *[]string `json:"vnic.vpc_id,omitempty" xml:"vnic.vpc_id"`
 
 	// 根据port_id过滤
-	VnicPortId *[]string `json:"vnic.port_id,omitempty"`
+	VnicPortId *[]string `json:"vnic.port_id,omitempty" xml:"vnic.port_id"`
 
 	// 根据device_owner_prefixlike模糊搜索
-	VnicDeviceOwnerPrefixlike *string `json:"vnic.device_owner_prefixlike,omitempty"`
+	VnicDeviceOwnerPrefixlike *string `json:"vnic.device_owner_prefixlike,omitempty" xml:"vnic.device_owner_prefixlike"`
 
 	// 根据instance_type过滤
-	VnicInstanceType *[]string `json:"vnic.instance_type,omitempty"`
+	VnicInstanceType *[]string `json:"vnic.instance_type,omitempty" xml:"vnic.instance_type"`
 
 	// 根据instance_id过滤
-	VnicInstanceId *[]string `json:"vnic.instance_id,omitempty"`
+	VnicInstanceId *[]string `json:"vnic.instance_id,omitempty" xml:"vnic.instance_id"`
 
 	// 根据id过滤
-	BandwidthId *[]string `json:"bandwidth.id,omitempty"`
+	BandwidthId *[]string `json:"bandwidth.id,omitempty" xml:"bandwidth.id"`
 
 	// 根据name过滤
-	BandwidthName *[]string `json:"bandwidth.name,omitempty"`
+	BandwidthName *[]string `json:"bandwidth.name,omitempty" xml:"bandwidth.name"`
 
 	// 根据name模糊过滤
-	BandwidthNameLike *[]string `json:"bandwidth.name_like,omitempty"`
+	BandwidthNameLike *[]string `json:"bandwidth.name_like,omitempty" xml:"bandwidth.name_like"`
 
 	// 根据size过滤
-	BandwidthSize *[]int32 `json:"bandwidth.size,omitempty"`
+	BandwidthSize *[]int32 `json:"bandwidth.size,omitempty" xml:"bandwidth.size"`
 
 	// 根据share_type过滤
-	BandwidthShareType *[]ListPublicipsRequestBandwidthShareType `json:"bandwidth.share_type,omitempty"`
+	BandwidthShareType *[]ListPublicipsRequestBandwidthShareType `json:"bandwidth.share_type,omitempty" xml:"bandwidth.share_type"`
 
 	// 根据charge_mode过滤
-	BandwidthChargeMode *[]ListPublicipsRequestBandwidthChargeMode `json:"bandwidth.charge_mode,omitempty"`
+	BandwidthChargeMode *[]ListPublicipsRequestBandwidthChargeMode `json:"bandwidth.charge_mode,omitempty" xml:"bandwidth.charge_mode"`
 
 	// 根据billing_info过滤
-	BillingInfo *[]string `json:"billing_info,omitempty"`
+	BillingInfo *[]string `json:"billing_info,omitempty" xml:"billing_info"`
 
 	// 根据订单模式过滤,   取值范围：YEARLY_MONTHLY、PAY_PER_USE
-	BillingMode *ListPublicipsRequestBillingMode `json:"billing_mode,omitempty"`
+	BillingMode *ListPublicipsRequestBillingMode `json:"billing_mode,omitempty" xml:"billing_mode"`
 
 	// 根据associate_instance_type过滤  取值范围：PORT、NATGW、ELB、VPN、ELBV1
-	AssociateInstanceType *[]ListPublicipsRequestAssociateInstanceType `json:"associate_instance_type,omitempty"`
+	AssociateInstanceType *[]ListPublicipsRequestAssociateInstanceType `json:"associate_instance_type,omitempty" xml:"associate_instance_type"`
 
 	// 根据associate_instance_id过滤
-	AssociateInstanceId *[]string `json:"associate_instance_id,omitempty"`
+	AssociateInstanceId *[]string `json:"associate_instance_id,omitempty" xml:"associate_instance_id"`
 
 	// 根据enterprise_project_id过滤
-	EnterpriseProjectId *[]string `json:"enterprise_project_id,omitempty"`
+	EnterpriseProjectId *[]string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
 
 	// 根据public_border_group过滤
-	PublicBorderGroup *[]string `json:"public_border_group,omitempty"`
+	PublicBorderGroup *[]string `json:"public_border_group,omitempty" xml:"public_border_group"`
 
 	// 共享带宽类型，根据任一共享带宽类型过滤EIP列表。 可以指定多个带宽类型，不同的带宽类型间用逗号分隔。
-	AllowShareBandwidthTypeAny *[]string `json:"allow_share_bandwidth_type_any,omitempty"`
+	AllowShareBandwidthTypeAny *[]string `json:"allow_share_bandwidth_type_any,omitempty" xml:"allow_share_bandwidth_type_any"`
 }
 
 func (o ListPublicipsRequest) String() string {

@@ -13,16 +13,16 @@ import (
 type CreateHostGroupRequestBody struct {
 
 	// 主机组名称
-	HostGroupName string `json:"host_group_name"`
+	HostGroupName string `json:"host_group_name" xml:"host_group_name"`
 
 	// 主机组类型。windows：windows类型，linux：linux类型
-	HostGroupType CreateHostGroupRequestBodyHostGroupType `json:"host_group_type"`
+	HostGroupType CreateHostGroupRequestBodyHostGroupType `json:"host_group_type" xml:"host_group_type"`
 
 	// 主机组ID列表。主机类型必须与主机组类型一致
-	HostIdList *[]string `json:"host_id_list,omitempty"`
+	HostIdList *[]string `json:"host_id_list,omitempty" xml:"host_id_list"`
 
 	// 标签信息。KEY不能重复
-	HostGroupTag *[]HostGroupTag `json:"host_group_tag,omitempty"`
+	HostGroupTag *[]HostGroupTag `json:"host_group_tag,omitempty" xml:"host_group_tag"`
 }
 
 func (o CreateHostGroupRequestBody) String() string {

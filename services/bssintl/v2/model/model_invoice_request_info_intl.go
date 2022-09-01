@@ -9,69 +9,69 @@ import (
 type InvoiceRequestInfoIntl struct {
 
 	// 请求ID。
-	RequestId *string `json:"requestId,omitempty"`
+	RequestId *string `json:"requestId,omitempty" xml:"requestId"`
 
 	// 驳回原因。
-	CancelReason *string `json:"cancelReason,omitempty"`
+	CancelReason *string `json:"cancelReason,omitempty" xml:"cancelReason"`
 
 	// 开票类型。 0：个人1：企业
-	TitleType *int32 `json:"titleType,omitempty"`
+	TitleType *int32 `json:"titleType,omitempty" xml:"titleType"`
 
 	// 渠道类型。 0：华为云
-	ChannelType *int32 `json:"channelType,omitempty"`
+	ChannelType *int32 `json:"channelType,omitempty" xml:"channelType"`
 
 	// 发票种类。 0：增值税专用发票1：增值税普通发票
-	InvoiceType *int32 `json:"invoiceType,omitempty"`
+	InvoiceType *int32 `json:"invoiceType,omitempty" xml:"invoiceType"`
 
 	// 发票抬头。
-	InvoiceTitle *string `json:"invoiceTitle,omitempty"`
+	InvoiceTitle *string `json:"invoiceTitle,omitempty" xml:"invoiceTitle"`
 
 	// 已开票金额（美元） 。
-	InvoiceAmount *float64 `json:"invoiceAmount,omitempty"`
+	InvoiceAmount *float64 `json:"invoiceAmount,omitempty" xml:"invoiceAmount"`
 
 	// 开票方式。 0：账期1：到账2：订单
-	InvoiceMethod *int32 `json:"invoiceMethod,omitempty"`
+	InvoiceMethod *int32 `json:"invoiceMethod,omitempty" xml:"invoiceMethod"`
 
 	// 发票类别。 0：税票1：商票
-	InvoiceClass *int32 `json:"invoiceClass,omitempty"`
+	InvoiceClass *int32 `json:"invoiceClass,omitempty" xml:"invoiceClass"`
 
 	// 开票状态。 0：草稿1：待审核4：等待导出发票文件5：等待发票文件回填6：等待邮寄确认7：等待回执确认8：完成9：已退票11：等待驳回审核13：退票待审核14：待退票状态回填15：退票失败
-	InvoiceState *int32 `json:"invoiceState,omitempty"`
+	InvoiceState *int32 `json:"invoiceState,omitempty" xml:"invoiceState"`
 
 	// 发票申请人员。
-	ApplyOpera *string `json:"applyOpera,omitempty"`
+	ApplyOpera *string `json:"applyOpera,omitempty" xml:"applyOpera"`
 
-	AddressInfo *PostAddressInfoIntl `json:"addressInfo,omitempty"`
+	AddressInfo *PostAddressInfoIntl `json:"addressInfo,omitempty" xml:"addressInfo"`
 
 	// 申请时间（UTC时间）。
-	ApplyTime *string `json:"applyTime,omitempty"`
+	ApplyTime *string `json:"applyTime,omitempty" xml:"applyTime"`
 
 	// 发票类型。 0：纸质票
-	InvoiceMode *string `json:"invoiceMode,omitempty"`
+	InvoiceMode *string `json:"invoiceMode,omitempty" xml:"invoiceMode"`
 
 	// 电子发票寄送地。
-	Email *string `json:"email,omitempty"`
+	Email *string `json:"email,omitempty" xml:"email"`
 
 	// 申请类型。 0：开票申请1：退票申请2：正向开票已退票
-	RequestMode *string `json:"requestMode,omitempty"`
+	RequestMode *string `json:"requestMode,omitempty" xml:"requestMode"`
 
 	// 退票时的原申请ID。
-	SrcRequestId *string `json:"srcRequestId,omitempty"`
+	SrcRequestId *string `json:"srcRequestId,omitempty" xml:"srcRequestId"`
 
 	// 签约主体ID。
-	SalesId *string `json:"salesId,omitempty"`
+	SalesId *string `json:"salesId,omitempty" xml:"salesId"`
 
 	// 发票号码。
-	InvoiceNo *string `json:"invoiceNo,omitempty"`
+	InvoiceNo *string `json:"invoiceNo,omitempty" xml:"invoiceNo"`
 
 	// 交易类型。 3：结算信用卡扣减4：结算未结清开票5：先开票后到款6：BP月结开票7：充值开票8：包年/包月在线支付开票10：普通提现开票
-	TradeType *int32 `json:"tradeType,omitempty"`
+	TradeType *int32 `json:"tradeType,omitempty" xml:"tradeType"`
 
 	// 发票账期。
-	BillCycle *string `json:"billCycle,omitempty"`
+	BillCycle *string `json:"billCycle,omitempty" xml:"billCycle"`
 
 	// 税务信息列表，参见表4。
-	TaxList *[]TaxInfo `json:"taxList,omitempty"`
+	TaxList *[]TaxInfo `json:"taxList,omitempty" xml:"taxList"`
 }
 
 func (o InvoiceRequestInfoIntl) String() string {

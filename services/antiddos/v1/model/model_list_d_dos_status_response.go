@@ -10,10 +10,10 @@ import (
 type ListDDosStatusResponse struct {
 
 	// 弹性IP总数
-	Total *int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty" xml:"total"`
 
 	// 防护状态列表
-	DdosStatus     *[]DDosStatus `json:"ddosStatus,omitempty"`
+	DdosStatus     *[]DDosStatus `json:"ddosStatus,omitempty" xml:"ddosStatus"`
 	HttpStatusCode int           `json:"-"`
 }
 

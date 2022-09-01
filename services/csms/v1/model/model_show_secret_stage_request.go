@@ -10,10 +10,10 @@ import (
 type ShowSecretStageRequest struct {
 
 	// 凭据名称。
-	SecretName string `json:"secret_name"`
+	SecretName string `json:"secret_name" xml:"secret_name"`
 
 	// 凭据版本状态的名称。
-	StageName string `json:"stage_name"`
+	StageName string `json:"stage_name" xml:"stage_name"`
 }
 
 func (o ShowSecretStageRequest) String() string {

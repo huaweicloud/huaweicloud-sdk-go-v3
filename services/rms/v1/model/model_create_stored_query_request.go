@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateStoredQueryRequest struct {
-	Body *StoredQueryRequestBody `json:"body,omitempty"`
+	Body *StoredQueryRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateStoredQueryRequest) String() string {

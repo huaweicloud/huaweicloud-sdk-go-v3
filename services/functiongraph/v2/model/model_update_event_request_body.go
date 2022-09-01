@@ -9,7 +9,7 @@ import (
 type UpdateEventRequestBody struct {
 
 	// 测试事件content,为json字符串
-	Content string `json:"content"`
+	Content string `json:"content" xml:"content"`
 }
 
 func (o UpdateEventRequestBody) String() string {

@@ -13,13 +13,13 @@ import (
 type OpenGaussHa struct {
 
 	// GaussDB(for openGauss)为分布式时，取值：enterprise；为集中式时，取值：centralization_standard。不区分大小写。
-	Mode OpenGaussHaMode `json:"mode"`
+	Mode OpenGaussHaMode `json:"mode" xml:"mode"`
 
 	// 指定实例一致性类型，当创建分布式模式实例时，该字段值必传，当创建主备模式实例时，该字段值不传。取值范围：strong（强一致性） | eventual(最终一致性)，不分区大小写。
-	Consistency OpenGaussHaConsistency `json:"consistency"`
+	Consistency OpenGaussHaConsistency `json:"consistency" xml:"consistency"`
 
 	// 备机同步参数。  取值：  GaussDB(for openGauss)为“sync\"  说明： - “sync”为同步模式。
-	ReplicationMode OpenGaussHaReplicationMode `json:"replication_mode"`
+	ReplicationMode OpenGaussHaReplicationMode `json:"replication_mode" xml:"replication_mode"`
 }
 
 func (o OpenGaussHa) String() string {

@@ -10,25 +10,25 @@ import (
 type Routetable struct {
 
 	// 路由表ID  取值范围：标准UUID
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 路由表名称  取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 路由表所关联的子网  约束：只能关联路由表所属VPC下的子网
-	Subnets *[]BaseId `json:"subnets,omitempty"`
+	Subnets *[]BaseId `json:"subnets,omitempty" xml:"subnets"`
 
 	// 路由表所在的虚拟私有云ID
-	VpcId *string `json:"vpc_id,omitempty"`
+	VpcId *string `json:"vpc_id,omitempty" xml:"vpc_id"`
 
 	// 帐号ID
-	DomainId *string `json:"domain_id,omitempty"`
+	DomainId *string `json:"domain_id,omitempty" xml:"domain_id"`
 
 	// 路由表描述信息  取值范围：0-255个字符，不能包含“<”和“>”
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 是否为默认路由表  取值范围：true表示默认路由表；false表示自定义路由表
-	Default *bool `json:"default,omitempty"`
+	Default *bool `json:"default,omitempty" xml:"default"`
 }
 
 func (o Routetable) String() string {

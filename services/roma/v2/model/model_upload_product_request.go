@@ -10,9 +10,9 @@ import (
 type UploadProductRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *UploadProductRequestBody `json:"body,omitempty" type:"multipart"`
+	Body *UploadProductRequestBody `json:"body,omitempty" xml:"body" type:"multipart"`
 }
 
 func (o UploadProductRequest) String() string {

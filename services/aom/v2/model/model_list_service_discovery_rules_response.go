@@ -10,13 +10,13 @@ import (
 type ListServiceDiscoveryRulesResponse struct {
 
 	// 查询结果规则信息。
-	AppRules *[]AppRules `json:"appRules,omitempty"`
+	AppRules *[]AppRules `json:"appRules,omitempty" xml:"appRules"`
 
 	// 响应码,AOM_INVENTORY_2000000代表正常返回。
-	ErrorCode *string `json:"errorCode,omitempty"`
+	ErrorCode *string `json:"errorCode,omitempty" xml:"errorCode"`
 
 	// 响应信息描述。
-	ErrorMessage   *string `json:"errorMessage,omitempty"`
+	ErrorMessage   *string `json:"errorMessage,omitempty" xml:"errorMessage"`
 	HttpStatusCode int     `json:"-"`
 }
 

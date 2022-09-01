@@ -10,7 +10,7 @@ import (
 type TestPlanDetailReportStage struct {
 
 	// 用例完成率,按状态统计
-	CaseCompleteRate *string `json:"case_complete_rate,omitempty"`
+	CaseCompleteRate *string `json:"case_complete_rate,omitempty" xml:"case_complete_rate"`
 }
 
 func (o TestPlanDetailReportStage) String() string {

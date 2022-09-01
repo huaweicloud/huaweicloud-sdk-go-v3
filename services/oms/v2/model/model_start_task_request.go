@@ -10,9 +10,9 @@ import (
 type StartTaskRequest struct {
 
 	// 迁移任务ID。
-	TaskId int64 `json:"task_id"`
+	TaskId int64 `json:"task_id" xml:"task_id"`
 
-	Body *StartTaskReq `json:"body,omitempty"`
+	Body *StartTaskReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o StartTaskRequest) String() string {

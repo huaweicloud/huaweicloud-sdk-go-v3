@@ -10,10 +10,10 @@ import (
 type ShowTagsTagsResp struct {
 
 	// 集群标签的key值。
-	Key *string `json:"key,omitempty"`
+	Key *string `json:"key,omitempty" xml:"key"`
 
 	// 集群标签的value值。
-	Value *string `json:"value,omitempty"`
+	Value *string `json:"value,omitempty" xml:"value"`
 }
 
 func (o ShowTagsTagsResp) String() string {

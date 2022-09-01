@@ -10,7 +10,7 @@ import (
 type ShowConfigurationDetailRequest struct {
 
 	// 参数模板ID。
-	ConfigId string `json:"config_id"`
+	ConfigId string `json:"config_id" xml:"config_id"`
 }
 
 func (o ShowConfigurationDetailRequest) String() string {

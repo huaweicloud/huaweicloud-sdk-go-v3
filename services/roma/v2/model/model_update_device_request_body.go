@@ -12,16 +12,16 @@ import (
 type UpdateDeviceRequestBody struct {
 
 	// 设备名称，支持中文、中文标点符号（）。；，：“”、？《》及英文大小写、数字及英文符号()_,#.?'-@%&!, 长度2-64
-	DeviceName string `json:"device_name"`
+	DeviceName string `json:"device_name" xml:"device_name"`
 
 	// 设备状态 0启用 1禁用
-	Status UpdateDeviceRequestBodyStatus `json:"status"`
+	Status UpdateDeviceRequestBodyStatus `json:"status" xml:"status"`
 
 	// 备注
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 标签
-	Tags *[]string `json:"tags,omitempty"`
+	Tags *[]string `json:"tags,omitempty" xml:"tags"`
 }
 
 func (o UpdateDeviceRequestBody) String() string {

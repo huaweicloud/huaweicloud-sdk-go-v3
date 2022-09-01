@@ -13,10 +13,10 @@ import (
 type BatchCreateLoadbalancerTagsRequestBody struct {
 
 	// 操作类型。 取值范围：create - 创建标签。
-	Action BatchCreateLoadbalancerTagsRequestBodyAction `json:"action"`
+	Action BatchCreateLoadbalancerTagsRequestBodyAction `json:"action" xml:"action"`
 
 	// 标签对象列表。
-	Tags *[]ResourceTag `json:"tags,omitempty"`
+	Tags *[]ResourceTag `json:"tags,omitempty" xml:"tags"`
 }
 
 func (o BatchCreateLoadbalancerTagsRequestBody) String() string {

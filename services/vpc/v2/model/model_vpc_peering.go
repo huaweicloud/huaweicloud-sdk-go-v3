@@ -12,26 +12,26 @@ import (
 type VpcPeering struct {
 
 	// 对等连接ID
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 功能说明：对等连接名称 取值范围：支持1~64个字符
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 功能说明：对等连接状态 取值范围： - PENDING_ACCEPTANCE：等待接受 - REJECTED：已拒绝。 - EXPIRED：已过期。 - DELETED：已删除。 - ACTIVE：活动的。
-	Status VpcPeeringStatus `json:"status"`
+	Status VpcPeeringStatus `json:"status" xml:"status"`
 
-	RequestVpcInfo *VpcInfo `json:"request_vpc_info"`
+	RequestVpcInfo *VpcInfo `json:"request_vpc_info" xml:"request_vpc_info"`
 
-	AcceptVpcInfo *VpcInfo `json:"accept_vpc_info"`
+	AcceptVpcInfo *VpcInfo `json:"accept_vpc_info" xml:"accept_vpc_info"`
 
 	// 功能说明：资源创建UTC时间 格式：yyyy-MM-ddTHH:mm:ss
-	CreatedAt *sdktime.SdkTime `json:"created_at"`
+	CreatedAt *sdktime.SdkTime `json:"created_at" xml:"created_at"`
 
 	// 功能说明：资源更新UTC时间 格式：yyyy-MM-ddTHH:mm:ss
-	UpdatedAt *sdktime.SdkTime `json:"updated_at"`
+	UpdatedAt *sdktime.SdkTime `json:"updated_at" xml:"updated_at"`
 
 	// 对等连接描述
-	Description string `json:"description"`
+	Description string `json:"description" xml:"description"`
 }
 
 func (o VpcPeering) String() string {

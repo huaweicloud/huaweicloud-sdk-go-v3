@@ -10,10 +10,10 @@ import (
 type ShowJobListByProjectIdResponse struct {
 
 	// 任务列表
-	Jobs *[]Job `json:"jobs,omitempty"`
+	Jobs *[]Job `json:"jobs,omitempty" xml:"jobs"`
 
 	// 任务总数
-	Total          *int32 `json:"total,omitempty"`
+	Total          *int32 `json:"total,omitempty" xml:"total"`
 	HttpStatusCode int    `json:"-"`
 }
 

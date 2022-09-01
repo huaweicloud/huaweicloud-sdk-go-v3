@@ -10,12 +10,12 @@ import (
 type CreateConsumerGroupOrBatchDeleteConsumerGroupRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 批量删除topic时使用，不配置则为创建接口。
-	Action *string `json:"action,omitempty"`
+	Action *string `json:"action,omitempty" xml:"action"`
 
-	Body *CreateConsumerGroupOrBatchDeleteConsumerGroupReq `json:"body,omitempty"`
+	Body *CreateConsumerGroupOrBatchDeleteConsumerGroupReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateConsumerGroupOrBatchDeleteConsumerGroupRequest) String() string {

@@ -10,16 +10,16 @@ import (
 type ListMonitoredObjectsResponse struct {
 
 	// 当前查询维度路由。如果是主维度，则数组中是自身ID。
-	Router *[]string `json:"router,omitempty"`
+	Router *[]string `json:"router,omitempty" xml:"router"`
 
 	// 当前查询维度子维度对象列表。当前只有维度为dcs_instance_id时才有值。 - Proxy集群有两个子维度，分别为dcs_cluster_redis_node和dcs_cluster_proxy_node。 - Cluster集群有一个子维度 dcs_cluster_proxy_node。
-	Children *[]DimChild `json:"children,omitempty"`
+	Children *[]DimChild `json:"children,omitempty" xml:"children"`
 
 	// 当前查询维度监控对象列表。
-	Instances *[]InstancesMonitoredObject `json:"instances,omitempty"`
+	Instances *[]InstancesMonitoredObject `json:"instances,omitempty" xml:"instances"`
 
 	// 主维度监控对象的总数。
-	Total          *int32 `json:"total,omitempty"`
+	Total          *int32 `json:"total,omitempty" xml:"total"`
 	HttpStatusCode int    `json:"-"`
 }
 

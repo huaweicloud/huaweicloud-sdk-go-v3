@@ -13,18 +13,18 @@ import (
 type UpdatePolicyRuleStatusRequest struct {
 
 	// 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
 
 	// 策略id（策略id从查询防护策略列表接口获取）
-	PolicyId string `json:"policy_id"`
+	PolicyId string `json:"policy_id" xml:"policy_id"`
 
 	// 策略类型
-	Ruletype UpdatePolicyRuleStatusRequestRuletype `json:"ruletype"`
+	Ruletype UpdatePolicyRuleStatusRequestRuletype `json:"ruletype" xml:"ruletype"`
 
 	// 规则id，根据不同的规则类型（ruletype）调用规则列表接口获取规则id，例如黑白名单（whiteblackip）规则id，您可以通过调用查询黑白名单规则列表（ListWhiteblackipRule）获取规则id
-	RuleId string `json:"rule_id"`
+	RuleId string `json:"rule_id" xml:"rule_id"`
 
-	Body *UpdatePolicyRuleStatusRequestBody `json:"body,omitempty"`
+	Body *UpdatePolicyRuleStatusRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdatePolicyRuleStatusRequest) String() string {

@@ -10,13 +10,13 @@ import (
 type ValidateDictionaryRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 待校验是否重复的字典名称，精确匹配
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 待校验是否重复的字典编码，精确匹配
-	Code *string `json:"code,omitempty"`
+	Code *string `json:"code,omitempty" xml:"code"`
 }
 
 func (o ValidateDictionaryRequest) String() string {

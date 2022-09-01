@@ -10,7 +10,7 @@ import (
 type ListNotificationsResponse struct {
 
 	// 通知列表
-	Notifications  *[]NotificationList `json:"notifications,omitempty"`
+	Notifications  *[]NotificationList `json:"notifications,omitempty" xml:"notifications"`
 	HttpStatusCode int                 `json:"-"`
 }
 

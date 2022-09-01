@@ -10,10 +10,10 @@ import (
 type ShowApplicationReleaseRepositoriesResponse struct {
 
 	// 软件包列表
-	ReleaseRepositories *[]ReleaseRepository `json:"release_repositories,omitempty"`
+	ReleaseRepositories *[]ReleaseRepository `json:"release_repositories,omitempty" xml:"release_repositories"`
 
 	// 软件包总条数
-	Count          *int32 `json:"count,omitempty"`
+	Count          *int32 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

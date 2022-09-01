@@ -10,9 +10,9 @@ import (
 type RestartInstanceRequest struct {
 
 	// DDM实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *RestartInstanceReq `json:"body,omitempty"`
+	Body *RestartInstanceReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o RestartInstanceRequest) String() string {

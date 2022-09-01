@@ -10,10 +10,10 @@ import (
 type ResourceTag struct {
 
 	// 功能说明：标签键 约束：同一资源的key值不能重复。
-	Key string `json:"key"`
+	Key string `json:"key" xml:"key"`
 
 	// 功能说明：标签值
-	Value string `json:"value"`
+	Value string `json:"value" xml:"value"`
 }
 
 func (o ResourceTag) String() string {

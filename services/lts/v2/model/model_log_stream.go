@@ -10,19 +10,19 @@ import (
 type LogStream struct {
 
 	// 创建时间
-	CreationTime int64 `json:"creation_time"`
+	CreationTime int64 `json:"creation_time" xml:"creation_time"`
 
 	// 日志流名称
-	LogStreamName string `json:"log_stream_name"`
+	LogStreamName string `json:"log_stream_name" xml:"log_stream_name"`
 
 	// 日志流ID
-	LogStreamId string `json:"log_stream_id"`
+	LogStreamId string `json:"log_stream_id" xml:"log_stream_id"`
 
 	// 过滤器个数
-	FilterCount int32 `json:"filter_count"`
+	FilterCount int32 `json:"filter_count" xml:"filter_count"`
 
 	// 日志流所属标签
-	Tag map[string]string `json:"tag,omitempty"`
+	Tag map[string]string `json:"tag,omitempty" xml:"tag"`
 }
 
 func (o LogStream) String() string {

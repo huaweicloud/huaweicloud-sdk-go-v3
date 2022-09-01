@@ -10,7 +10,7 @@ import (
 type RestBulkHangUpReqBody struct {
 
 	// 批量挂断会场列表，列表元素为与会者标识。
-	BulkHangUpParticipants []string `json:"bulkHangUpParticipants"`
+	BulkHangUpParticipants []string `json:"bulkHangUpParticipants" xml:"bulkHangUpParticipants"`
 }
 
 func (o RestBulkHangUpReqBody) String() string {

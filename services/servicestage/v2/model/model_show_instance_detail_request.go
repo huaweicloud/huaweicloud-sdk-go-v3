@@ -10,13 +10,13 @@ import (
 type ShowInstanceDetailRequest struct {
 
 	// 应用ID。
-	ApplicationId string `json:"application_id"`
+	ApplicationId string `json:"application_id" xml:"application_id"`
 
 	// 组件ID。
-	ComponentId string `json:"component_id"`
+	ComponentId string `json:"component_id" xml:"component_id"`
 
 	// 组件实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 }
 
 func (o ShowInstanceDetailRequest) String() string {

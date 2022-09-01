@@ -10,9 +10,9 @@ import (
 type UpdateSecurityGroupResponse struct {
 
 	// 请求ID
-	RequestId *string `json:"request_id,omitempty"`
+	RequestId *string `json:"request_id,omitempty" xml:"request_id"`
 
-	SecurityGroup  *SecurityGroupInfo `json:"security_group,omitempty"`
+	SecurityGroup  *SecurityGroupInfo `json:"security_group,omitempty" xml:"security_group"`
 	HttpStatusCode int                `json:"-"`
 }
 

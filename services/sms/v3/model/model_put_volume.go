@@ -10,13 +10,13 @@ import (
 type PutVolume struct {
 
 	// 数据库id
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 是否迁移
-	NeedMigration *bool `json:"need_migration,omitempty"`
+	NeedMigration *bool `json:"need_migration,omitempty" xml:"need_migration"`
 
 	// 调整大小
-	AdjustSize *int64 `json:"adjust_size,omitempty"`
+	AdjustSize *int64 `json:"adjust_size,omitempty" xml:"adjust_size"`
 }
 
 func (o PutVolume) String() string {

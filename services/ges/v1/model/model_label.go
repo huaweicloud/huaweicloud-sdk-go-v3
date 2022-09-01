@@ -10,10 +10,10 @@ import (
 type Label struct {
 
 	// Label名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 属性Map
-	Properties *interface{} `json:"properties,omitempty"`
+	Properties *interface{} `json:"properties,omitempty" xml:"properties"`
 }
 
 func (o Label) String() string {

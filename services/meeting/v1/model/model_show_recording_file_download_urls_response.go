@@ -10,7 +10,7 @@ import (
 type ShowRecordingFileDownloadUrlsResponse struct {
 
 	// 录制文件下载URL
-	RecordUrls     *[]RecordDownloadInfoBo `json:"recordUrls,omitempty"`
+	RecordUrls     *[]RecordDownloadInfoBo `json:"recordUrls,omitempty" xml:"recordUrls"`
 	HttpStatusCode int                     `json:"-"`
 }
 

@@ -9,10 +9,10 @@ import (
 type AttachEipRequestBody struct {
 
 	// 公网IP的ID。
-	PublicIpId string `json:"public_ip_id"`
+	PublicIpId string `json:"public_ip_id" xml:"public_ip_id"`
 
 	// 公网IP。
-	PublicIp string `json:"public_ip"`
+	PublicIp string `json:"public_ip" xml:"public_ip"`
 }
 
 func (o AttachEipRequestBody) String() string {

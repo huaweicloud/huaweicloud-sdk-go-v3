@@ -10,7 +10,7 @@ import (
 type InitTargetServer struct {
 
 	// 推荐的目的端服务器的磁盘信息
-	Disks []DiskIntargetServer `json:"disks"`
+	Disks []DiskIntargetServer `json:"disks" xml:"disks"`
 }
 
 func (o InitTargetServer) String() string {

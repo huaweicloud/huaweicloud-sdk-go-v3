@@ -10,16 +10,16 @@ import (
 type SecurityGroup struct {
 
 	// 安全组的ID。UUID
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 安全组的名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 安全组的描述。
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 安全组规则列表。
-	SecurityGroupRules *[]SecurityGroupRule `json:"security_group_rules,omitempty"`
+	SecurityGroupRules *[]SecurityGroupRule `json:"security_group_rules,omitempty" xml:"security_group_rules"`
 }
 
 func (o SecurityGroup) String() string {

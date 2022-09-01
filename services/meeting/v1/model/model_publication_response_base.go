@@ -13,31 +13,31 @@ import (
 type PublicationResponseBase struct {
 
 	// 发布ID
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 更新者
-	LastUpdatedBy *string `json:"lastUpdatedBy,omitempty"`
+	LastUpdatedBy *string `json:"lastUpdatedBy,omitempty" xml:"lastUpdatedBy"`
 
 	// 创建时间
-	CreateTime *int64 `json:"createTime,omitempty"`
+	CreateTime *int64 `json:"createTime,omitempty" xml:"createTime"`
 
 	// 更新时间
-	UpdateTime *int64 `json:"updateTime,omitempty"`
+	UpdateTime *int64 `json:"updateTime,omitempty" xml:"updateTime"`
 
 	// 发布名称
-	PublishName *string `json:"publishName,omitempty"`
+	PublishName *string `json:"publishName,omitempty" xml:"publishName"`
 
 	// 发布范围
-	PublishScope *string `json:"publishScope,omitempty"`
+	PublishScope *string `json:"publishScope,omitempty" xml:"publishScope"`
 
 	// 开始时间
-	StartTime *int64 `json:"startTime,omitempty"`
+	StartTime *int64 `json:"startTime,omitempty" xml:"startTime"`
 
 	// 结束时间
-	EndTime *int64 `json:"endTime,omitempty"`
+	EndTime *int64 `json:"endTime,omitempty" xml:"endTime"`
 
 	// 根据当前时间确定发布状态 - NOT_ONLINE-未上线 - PUBLISHING-发布中 - ALREADY_OFFLINE-已下线
-	PublishStatus *PublicationResponseBasePublishStatus `json:"publishStatus,omitempty"`
+	PublishStatus *PublicationResponseBasePublishStatus `json:"publishStatus,omitempty" xml:"publishStatus"`
 }
 
 func (o PublicationResponseBase) String() string {

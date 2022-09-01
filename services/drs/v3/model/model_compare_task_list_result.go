@@ -10,16 +10,16 @@ import (
 type CompareTaskListResult struct {
 
 	// 对比任务列表。
-	CompareTaskList *[]CompareTaskList `json:"CompareTaskList,omitempty"`
+	CompareTaskList *[]CompareTaskList `json:"CompareTaskList,omitempty" xml:"CompareTaskList"`
 
 	// 对比任务列表总数。
-	CompareTaskListCount *int32 `json:"compare_task_list_count,omitempty"`
+	CompareTaskListCount *int32 `json:"compare_task_list_count,omitempty" xml:"compare_task_list_count"`
 
 	// 错误信息
-	ErrorMsg *string `json:"error_msg,omitempty"`
+	ErrorMsg *string `json:"error_msg,omitempty" xml:"error_msg"`
 
 	// 错误码。
-	ErrorCode *string `json:"error_code,omitempty"`
+	ErrorCode *string `json:"error_code,omitempty" xml:"error_code"`
 }
 
 func (o CompareTaskListResult) String() string {

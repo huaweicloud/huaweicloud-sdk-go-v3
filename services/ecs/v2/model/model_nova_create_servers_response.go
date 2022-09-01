@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type NovaCreateServersResponse struct {
-	Server         *NovaCreateServersResult `json:"server,omitempty"`
+	Server         *NovaCreateServersResult `json:"server,omitempty" xml:"server"`
 	HttpStatusCode int                      `json:"-"`
 }
 

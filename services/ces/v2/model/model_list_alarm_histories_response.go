@@ -10,10 +10,10 @@ import (
 type ListAlarmHistoriesResponse struct {
 
 	// alarmHistories列表
-	AlarmHistories *[]AlarmHistoryItemV2 `json:"alarm_histories,omitempty"`
+	AlarmHistories *[]AlarmHistoryItemV2 `json:"alarm_histories,omitempty" xml:"alarm_histories"`
 
 	// 告警记录列表总数
-	Count          *int32 `json:"count,omitempty"`
+	Count          *int32 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

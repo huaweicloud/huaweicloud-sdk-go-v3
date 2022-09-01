@@ -10,25 +10,25 @@ import (
 type SubDetail struct {
 
 	// 子操作名
-	SubstepName *string `json:"substep_name,omitempty"`
+	SubstepName *string `json:"substep_name,omitempty" xml:"substep_name"`
 
 	// 子操作详情
-	Detail *string `json:"detail,omitempty"`
+	Detail *string `json:"detail,omitempty" xml:"detail"`
 
 	// 子操作状态
-	Status *string `json:"status,omitempty"`
+	Status *string `json:"status,omitempty" xml:"status"`
 
 	// 子操作过程信息记录
-	Message *[]string `json:"message,omitempty"`
+	Message *[]string `json:"message,omitempty" xml:"message"`
 
 	// 开始时间
-	StartTime *int64 `json:"start_time,omitempty"`
+	StartTime *int64 `json:"start_time,omitempty" xml:"start_time"`
 
 	// 结束时间
-	EndTime *int64 `json:"end_time,omitempty"`
+	EndTime *int64 `json:"end_time,omitempty" xml:"end_time"`
 
 	// 序列号
-	SerialNum *int64 `json:"serial_num,omitempty"`
+	SerialNum *int64 `json:"serial_num,omitempty" xml:"serial_num"`
 }
 
 func (o SubDetail) String() string {

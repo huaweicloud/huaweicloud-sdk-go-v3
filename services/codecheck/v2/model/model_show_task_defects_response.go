@@ -10,10 +10,10 @@ import (
 type ShowTaskDefectsResponse struct {
 
 	// 缺陷详情信息
-	Defects *[]DefectInfoV2 `json:"defects,omitempty"`
+	Defects *[]DefectInfoV2 `json:"defects,omitempty" xml:"defects"`
 
 	// 总数
-	Total          *int32 `json:"total,omitempty"`
+	Total          *int32 `json:"total,omitempty" xml:"total"`
 	HttpStatusCode int    `json:"-"`
 }
 

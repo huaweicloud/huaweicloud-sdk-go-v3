@@ -10,7 +10,7 @@ import (
 type ShowLoadBalancerStatusRequest struct {
 
 	// 负载均衡器ID。
-	LoadbalancerId string `json:"loadbalancer_id"`
+	LoadbalancerId string `json:"loadbalancer_id" xml:"loadbalancer_id"`
 }
 
 func (o ShowLoadBalancerStatusRequest) String() string {

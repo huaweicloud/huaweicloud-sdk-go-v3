@@ -10,9 +10,9 @@ import (
 type CreateComponentRequest struct {
 
 	// 应用ID。
-	ApplicationId string `json:"application_id"`
+	ApplicationId string `json:"application_id" xml:"application_id"`
 
-	Body *ComponentCreate `json:"body,omitempty"`
+	Body *ComponentCreate `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateComponentRequest) String() string {

@@ -10,12 +10,12 @@ import (
 type UpdateAuditLogRequest struct {
 
 	// 语言
-	XLanguage *string `json:"X-Language,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *OperateAuditLogRequestV3Body `json:"body,omitempty"`
+	Body *OperateAuditLogRequestV3Body `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateAuditLogRequest) String() string {

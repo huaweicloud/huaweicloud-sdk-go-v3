@@ -10,7 +10,7 @@ import (
 type RestVideoBody struct {
 
 	// 1：关闭视频 0：开启视频
-	Status int32 `json:"status"`
+	Status int32 `json:"status" xml:"status"`
 }
 
 func (o RestVideoBody) String() string {

@@ -13,12 +13,12 @@ import (
 type AttachEipRequest struct {
 
 	// 语言
-	XLanguage *AttachEipRequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *AttachEipRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *BindEipRequest `json:"body,omitempty"`
+	Body *BindEipRequest `json:"body,omitempty" xml:"body"`
 }
 
 func (o AttachEipRequest) String() string {

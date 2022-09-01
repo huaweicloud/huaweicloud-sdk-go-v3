@@ -10,7 +10,7 @@ import (
 type ShowIpInfoResponse struct {
 
 	// IP归属信息列表。
-	CdnIps         *[]CdnIps `json:"cdn_ips,omitempty"`
+	CdnIps         *[]CdnIps `json:"cdn_ips,omitempty" xml:"cdn_ips"`
 	HttpStatusCode int       `json:"-"`
 }
 

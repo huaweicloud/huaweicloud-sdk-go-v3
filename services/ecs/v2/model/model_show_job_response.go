@@ -13,33 +13,33 @@ import (
 type ShowJobResponse struct {
 
 	// 开始时间。
-	BeginTime *string `json:"begin_time,omitempty"`
+	BeginTime *string `json:"begin_time,omitempty" xml:"begin_time"`
 
 	// 查询Job的API请求出现错误时，返回的错误码。
-	Code *string `json:"code,omitempty"`
+	Code *string `json:"code,omitempty" xml:"code"`
 
 	// 结束时间。
-	EndTime *string `json:"end_time,omitempty"`
+	EndTime *string `json:"end_time,omitempty" xml:"end_time"`
 
-	Entities *JobEntities `json:"entities,omitempty"`
+	Entities *JobEntities `json:"entities,omitempty" xml:"entities"`
 
 	// Job执行失败时的错误码。  Job执行成功后，该值为null。
-	ErrorCode *string `json:"error_code,omitempty"`
+	ErrorCode *string `json:"error_code,omitempty" xml:"error_code"`
 
 	// Job执行失败时的错误原因。  Job执行成功后，该值为null。
-	FailReason *string `json:"fail_reason,omitempty"`
+	FailReason *string `json:"fail_reason,omitempty" xml:"fail_reason"`
 
 	// 异步请求的任务ID。
-	JobId *string `json:"job_id,omitempty"`
+	JobId *string `json:"job_id,omitempty" xml:"job_id"`
 
 	// 异步请求的任务类型。
-	JobType *string `json:"job_type,omitempty"`
+	JobType *string `json:"job_type,omitempty" xml:"job_type"`
 
 	// 查询Job的API请求出现错误时，返回的错误消息。
-	Message *string `json:"message,omitempty"`
+	Message *string `json:"message,omitempty" xml:"message"`
 
 	// Job的状态。  - SUCCESS：成功。  - RUNNING：运行中。  - FAIL：失败。  - INIT：正在初始化。
-	Status         *ShowJobResponseStatus `json:"status,omitempty"`
+	Status         *ShowJobResponseStatus `json:"status,omitempty" xml:"status"`
 	HttpStatusCode int                    `json:"-"`
 }
 

@@ -10,10 +10,10 @@ import (
 type ShowRefundOrderDetailsResponse struct {
 
 	// 查询总数。
-	TotalCount *int32 `json:"total_count,omitempty"`
+	TotalCount *int32 `json:"total_count,omitempty" xml:"total_count"`
 
 	// 资源信息列表。 具体请参见表2。
-	RefundInfos    *[]OrderRefundInfoV2 `json:"refund_infos,omitempty"`
+	RefundInfos    *[]OrderRefundInfoV2 `json:"refund_infos,omitempty" xml:"refund_infos"`
 	HttpStatusCode int                  `json:"-"`
 }
 

@@ -9,9 +9,9 @@ import (
 type AssetReviewReq struct {
 
 	// 媒资ID
-	AssetId string `json:"asset_id"`
+	AssetId string `json:"asset_id" xml:"asset_id"`
 
-	Review *Review `json:"review"`
+	Review *Review `json:"review" xml:"review"`
 }
 
 func (o AssetReviewReq) String() string {

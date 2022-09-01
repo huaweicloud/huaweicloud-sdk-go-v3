@@ -10,16 +10,16 @@ import (
 type ListTemplateGroupRequest struct {
 
 	// 模板组id
-	GroupId *string `json:"group_id,omitempty"`
+	GroupId *string `json:"group_id,omitempty" xml:"group_id"`
 
 	// 模板启用状态
-	Status *string `json:"status,omitempty"`
+	Status *string `json:"status,omitempty" xml:"status"`
 
 	// 分页编号。  默认为0，指定group_id时该参数无效。
-	Page *int32 `json:"page,omitempty"`
+	Page *int32 `json:"page,omitempty" xml:"page"`
 
 	// 每页记录数。  默认为10，范围[1,100]。指定group_id时该参数无效。
-	Size *int32 `json:"size,omitempty"`
+	Size *int32 `json:"size,omitempty" xml:"size"`
 }
 
 func (o ListTemplateGroupRequest) String() string {

@@ -10,10 +10,10 @@ import (
 type ShowJobsResponse struct {
 
 	// 总数
-	Count *int64 `json:"count,omitempty"`
+	Count *int64 `json:"count,omitempty" xml:"count"`
 
 	// 作业列表
-	Jobs           *[]StreamingJobInfoDto `json:"jobs,omitempty"`
+	Jobs           *[]StreamingJobInfoDto `json:"jobs,omitempty" xml:"jobs"`
 	HttpStatusCode int                    `json:"-"`
 }
 

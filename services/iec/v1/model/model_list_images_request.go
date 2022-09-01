@@ -13,61 +13,61 @@ import (
 type ListImagesRequest struct {
 
 	// 镜像类型，目前支持以下类型：  - 公共镜像：gold  - 私有镜像：private
-	Imagetype *string `json:"__imagetype,omitempty"`
+	Imagetype *string `json:"__imagetype,omitempty" xml:"__imagetype"`
 
 	// 镜像是否是受保护，取值为true/false，一般查询公共镜像时候取值为true，查询私有镜像可以不指定。
-	Protected *ListImagesRequestProtected `json:"protected,omitempty"`
+	Protected *ListImagesRequestProtected `json:"protected,omitempty" xml:"protected"`
 
 	// 镜像ID，精确匹配。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 是否被其他租户可见，取值如下：  - public：公共镜像  - private：私有镜像
-	Visibility *string `json:"visibility,omitempty"`
+	Visibility *string `json:"visibility,omitempty" xml:"visibility"`
 
 	// 镜像状态。取值如下：  - saving：表示镜像正在上传文件到后端存储  - deleted：表示镜像已经删除  - killed：表示镜像上传错误  - active：表示镜像可以正常使用
-	Status *string `json:"status,omitempty"`
+	Status *string `json:"status,omitempty" xml:"status"`
 
 	// 镜像名称，匹配规则为精确匹配。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 镜像系统类型，取值如下：  - Linux - Windows - Other
-	OsType *string `json:"__os_type,omitempty"`
+	OsType *string `json:"__os_type,omitempty" xml:"__os_type"`
 
 	// 镜像使用环境类型。  目前仅支持系统盘镜像，取值为：FusionCompute
-	VirtualEnvType *ListImagesRequestVirtualEnvType `json:"virtual_env_type,omitempty"`
+	VirtualEnvType *ListImagesRequestVirtualEnvType `json:"virtual_env_type,omitempty" xml:"virtual_env_type"`
 
 	// 镜像是否可用，取值为true/false。 > 查询公共镜像时，该参数无效。
-	Isregistered *ListImagesRequestIsregistered `json:"__isregistered,omitempty"`
+	Isregistered *ListImagesRequestIsregistered `json:"__isregistered,omitempty" xml:"__isregistered"`
 
 	// 用于分页，表示查询几条镜像记录，取值为正整数，最大（默认）取值为500
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 用于分页，表示查询偏移量，表示从整个列表查询结果中的该位置向后进行查询，并非页数偏移，默认取值为0，表示查询第一页。
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 用于排序，表示按照哪个字段排序，取值为镜像属性name、status、disk_format、created_at，默认取值为created_at。
-	SortKey *ListImagesRequestSortKey `json:"sort_key,omitempty"`
+	SortKey *ListImagesRequestSortKey `json:"sort_key,omitempty" xml:"sort_key"`
 
 	// 用于排序，表示升序还是降序，取值为asc和desc，与sort_key一起组合使用，默认为降序desc。
-	SortDir *ListImagesRequestSortDir `json:"sort_dir,omitempty"`
+	SortDir *ListImagesRequestSortDir `json:"sort_dir,omitempty" xml:"sort_dir"`
 
 	// 如果镜像支持KVM，取值为true，否则无该属性。
-	SupportKvm *string `json:"__support_kvm,omitempty"`
+	SupportKvm *string `json:"__support_kvm,omitempty" xml:"__support_kvm"`
 
 	// 如果镜像是支持KVM虚拟化平台下的GPU类型，取值为“V100_vGPU”或者“RTX5000”，否则无该属性。
-	SupportKvmGpuType *string `json:"__support_kvm_gpu_type,omitempty"`
+	SupportKvmGpuType *string `json:"__support_kvm_gpu_type,omitempty" xml:"__support_kvm_gpu_type"`
 
 	// 如果镜像支持AI加速，取值为true，否则无该属性。
-	SupportKvmAscend310 *string `json:"__support_kvm_ascend_310,omitempty"`
+	SupportKvmAscend310 *string `json:"__support_kvm_ascend_310,omitempty" xml:"__support_kvm_ascend_310"`
 
 	// 如果镜像支持计算增强，取值为true，否则无该属性。
-	SupportKvmHi1822Hiovs *string `json:"__support_kvm_hi1822_hiovs,omitempty"`
+	SupportKvmHi1822Hiovs *string `json:"__support_kvm_hi1822_hiovs,omitempty" xml:"__support_kvm_hi1822_hiovs"`
 
 	// 如果镜像为ARM架构类型，取值为true，否则无该属性。
-	SupportArm *string `json:"__support_arm,omitempty"`
+	SupportArm *string `json:"__support_arm,omitempty" xml:"__support_arm"`
 
 	// 如果镜像支持GPU T4，取值为true，否则无该属性。
-	SupportGpuT4 *string `json:"__support_gpu_t4,omitempty"`
+	SupportGpuT4 *string `json:"__support_gpu_t4,omitempty" xml:"__support_gpu_t4"`
 }
 
 func (o ListImagesRequest) String() string {

@@ -12,10 +12,10 @@ import (
 type ValidationLinkConfig struct {
 
 	// 错误描述
-	Message *string `json:"message,omitempty"`
+	Message *string `json:"message,omitempty" xml:"message"`
 
 	// ERROR,WARNING
-	Status *ValidationLinkConfigStatus `json:"status,omitempty"`
+	Status *ValidationLinkConfigStatus `json:"status,omitempty" xml:"status"`
 }
 
 func (o ValidationLinkConfig) String() string {

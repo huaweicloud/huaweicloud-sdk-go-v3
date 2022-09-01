@@ -10,10 +10,10 @@ import (
 type ElbWhiteListResp struct {
 
 	// 是否开启公网访问控制。 - true: 开启公网访问控制。 - false: 关闭公网访问控制。
-	EnableWhiteList *bool `json:"enableWhiteList,omitempty"`
+	EnableWhiteList *bool `json:"enableWhiteList,omitempty" xml:"enableWhiteList"`
 
 	// 公网访问白名单。
-	WhiteList *string `json:"whiteList,omitempty"`
+	WhiteList *string `json:"whiteList,omitempty" xml:"whiteList"`
 }
 
 func (o ElbWhiteListResp) String() string {

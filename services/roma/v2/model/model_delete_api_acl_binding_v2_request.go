@@ -10,10 +10,10 @@ import (
 type DeleteApiAclBindingV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 绑定关系编号
-	AclBindingsId string `json:"acl_bindings_id"`
+	AclBindingsId string `json:"acl_bindings_id" xml:"acl_bindings_id"`
 }
 
 func (o DeleteApiAclBindingV2Request) String() string {

@@ -10,9 +10,9 @@ import (
 type ListAlarmsResponse struct {
 
 	// 告警对象列表。
-	MetricAlarms *[]MetricAlarms `json:"metric_alarms,omitempty"`
+	MetricAlarms *[]MetricAlarms `json:"metric_alarms,omitempty" xml:"metric_alarms"`
 
-	MetaData       *MetaData `json:"meta_data,omitempty"`
+	MetaData       *MetaData `json:"meta_data,omitempty" xml:"meta_data"`
 	HttpStatusCode int       `json:"-"`
 }
 

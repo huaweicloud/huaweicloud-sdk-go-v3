@@ -10,7 +10,7 @@ import (
 type ChangeBaremetalNameServer struct {
 
 	// 修改后的裸金属服务器名称
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 }
 
 func (o ChangeBaremetalNameServer) String() string {

@@ -10,10 +10,10 @@ import (
 type MysqlExtendInstanceVolumeRequest struct {
 
 	// 扩容后的容量，每次扩容最小容量为10GB，实例所选容量大小必须为10的整数倍，最大为128000GB.
-	Size int32 `json:"size"`
+	Size int32 `json:"size" xml:"size"`
 
 	// 表示是否自动从客户的账户中支付。  - true，为自动支付，默认该方式。 - false，为手动支付。
-	IsAutoPay *string `json:"is_auto_pay,omitempty"`
+	IsAutoPay *string `json:"is_auto_pay,omitempty" xml:"is_auto_pay"`
 }
 
 func (o MysqlExtendInstanceVolumeRequest) String() string {

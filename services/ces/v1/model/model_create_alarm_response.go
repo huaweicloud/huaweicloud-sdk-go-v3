@@ -10,7 +10,7 @@ import (
 type CreateAlarmResponse struct {
 
 	// 告警规则的ID。
-	AlarmId        *string `json:"alarm_id,omitempty"`
+	AlarmId        *string `json:"alarm_id,omitempty" xml:"alarm_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

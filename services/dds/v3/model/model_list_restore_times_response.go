@@ -10,7 +10,7 @@ import (
 type ListRestoreTimesResponse struct {
 
 	// 可恢复时间段列表。
-	RestoreTime    *[]ListRestoreTimesResponseBodyRestoreTime `json:"restore_time,omitempty"`
+	RestoreTime    *[]ListRestoreTimesResponseBodyRestoreTime `json:"restore_time,omitempty" xml:"restore_time"`
 	HttpStatusCode int                                        `json:"-"`
 }
 

@@ -7,17 +7,17 @@ import (
 )
 
 type InsuranceItem struct {
-	InsuranceName *InsurancePolicyDetail `json:"insurance_name,omitempty"`
+	InsuranceName *InsurancePolicyDetail `json:"insurance_name,omitempty" xml:"insurance_name"`
 
-	InsurancePeriod *InsurancePolicyDetail `json:"insurance_period,omitempty"`
+	InsurancePeriod *InsurancePolicyDetail `json:"insurance_period,omitempty" xml:"insurance_period"`
 
-	InsuranceAmount *InsurancePolicyDetail `json:"insurance_amount,omitempty"`
+	InsuranceAmount *InsurancePolicyDetail `json:"insurance_amount,omitempty" xml:"insurance_amount"`
 
-	PaymentFrequency *InsurancePolicyDetail `json:"payment_frequency,omitempty"`
+	PaymentFrequency *InsurancePolicyDetail `json:"payment_frequency,omitempty" xml:"payment_frequency"`
 
-	PaymentPeriod *InsurancePolicyDetail `json:"payment_period,omitempty"`
+	PaymentPeriod *InsurancePolicyDetail `json:"payment_period,omitempty" xml:"payment_period"`
 
-	PaymentAmount *InsurancePolicyDetail `json:"payment_amount,omitempty"`
+	PaymentAmount *InsurancePolicyDetail `json:"payment_amount,omitempty" xml:"payment_amount"`
 }
 
 func (o InsuranceItem) String() string {

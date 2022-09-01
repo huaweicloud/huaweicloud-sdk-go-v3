@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RunKeywordExtractRequest struct {
-	Body *KeywordExtractReq `json:"body,omitempty"`
+	Body *KeywordExtractReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o RunKeywordExtractRequest) String() string {

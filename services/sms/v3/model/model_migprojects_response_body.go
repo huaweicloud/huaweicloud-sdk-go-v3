@@ -13,40 +13,40 @@ import (
 type MigprojectsResponseBody struct {
 
 	// 迁移项目ID
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 迁移项目名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 是否使用公网IP迁移
-	UsePublicIp *bool `json:"use_public_ip,omitempty"`
+	UsePublicIp *bool `json:"use_public_ip,omitempty" xml:"use_public_ip"`
 
 	// 是否为默认模板
-	Isdefault *bool `json:"isdefault,omitempty"`
+	Isdefault *bool `json:"isdefault,omitempty" xml:"isdefault"`
 
 	// 迁移后是否启动目的端虚拟机
-	StartTargetServer *bool `json:"start_target_server,omitempty"`
+	StartTargetServer *bool `json:"start_target_server,omitempty" xml:"start_target_server"`
 
 	// 区域名称
-	Region *string `json:"region,omitempty"`
+	Region *string `json:"region,omitempty" xml:"region"`
 
 	// 模板中配置的限速信息，单位：Mbps
-	SpeedLimit *int32 `json:"speed_limit,omitempty"`
+	SpeedLimit *int32 `json:"speed_limit,omitempty" xml:"speed_limit"`
 
 	// 迁移项目下是否存在服务器
-	ExistServer *bool `json:"exist_server,omitempty"`
+	ExistServer *bool `json:"exist_server,omitempty" xml:"exist_server"`
 
 	// 迁移项目描述
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 迁移项目默认迁移类型
-	Type *MigprojectsResponseBodyType `json:"type,omitempty"`
+	Type *MigprojectsResponseBodyType `json:"type,omitempty" xml:"type"`
 
 	// 迁移项目所属的企业项目名称
-	EnterpriseProject *string `json:"enterprise_project,omitempty"`
+	EnterpriseProject *string `json:"enterprise_project,omitempty" xml:"enterprise_project"`
 
 	// 是否持续同步
-	Syncing *bool `json:"syncing,omitempty"`
+	Syncing *bool `json:"syncing,omitempty" xml:"syncing"`
 }
 
 func (o MigprojectsResponseBody) String() string {

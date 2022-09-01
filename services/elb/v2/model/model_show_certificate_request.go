@@ -10,7 +10,7 @@ import (
 type ShowCertificateRequest struct {
 
 	// 证书id。
-	CertificateId string `json:"certificate_id"`
+	CertificateId string `json:"certificate_id" xml:"certificate_id"`
 }
 
 func (o ShowCertificateRequest) String() string {

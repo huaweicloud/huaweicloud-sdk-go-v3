@@ -10,10 +10,10 @@ import (
 type GetTaskDetailListRspJobsInstance struct {
 
 	// 实例ID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 实例名称。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 }
 
 func (o GetTaskDetailListRspJobsInstance) String() string {

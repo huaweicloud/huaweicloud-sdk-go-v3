@@ -13,28 +13,28 @@ import (
 type TaskSettingsTaskConfig struct {
 
 	// 扫描模式:   * fast - 快速扫描   * normal - 标准扫描   * deep - 深度扫描
-	ScanMode *TaskSettingsTaskConfigScanMode `json:"scan_mode,omitempty"`
+	ScanMode *TaskSettingsTaskConfigScanMode `json:"scan_mode,omitempty" xml:"scan_mode"`
 
 	// 是否进行端口扫描
-	PortScan *bool `json:"port_scan,omitempty"`
+	PortScan *bool `json:"port_scan,omitempty" xml:"port_scan"`
 
 	// 是否进行弱密码扫描
-	WeakPwdScan *bool `json:"weak_pwd_scan,omitempty"`
+	WeakPwdScan *bool `json:"weak_pwd_scan,omitempty" xml:"weak_pwd_scan"`
 
 	// 是否进行CVE漏洞扫描
-	CveCheck *bool `json:"cve_check,omitempty"`
+	CveCheck *bool `json:"cve_check,omitempty" xml:"cve_check"`
 
 	// 是否进行网站内容合规文字检测
-	TextCheck *bool `json:"text_check,omitempty"`
+	TextCheck *bool `json:"text_check,omitempty" xml:"text_check"`
 
 	// 是否进行网站内容合规图片检测
-	PictureCheck *bool `json:"picture_check,omitempty"`
+	PictureCheck *bool `json:"picture_check,omitempty" xml:"picture_check"`
 
 	// 是否进行网站挂马检测
-	MaliciousCode *bool `json:"malicious_code,omitempty"`
+	MaliciousCode *bool `json:"malicious_code,omitempty" xml:"malicious_code"`
 
 	// 是否进行链接健康检测（死链、暗链、恶意外链）
-	MaliciousLink *bool `json:"malicious_link,omitempty"`
+	MaliciousLink *bool `json:"malicious_link,omitempty" xml:"malicious_link"`
 }
 
 func (o TaskSettingsTaskConfig) String() string {

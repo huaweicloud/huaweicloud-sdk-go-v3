@@ -10,9 +10,9 @@ import (
 type ListRangeQueryAomPromPostResponse struct {
 
 	// 响应状态。
-	Status *string `json:"status,omitempty"`
+	Status *string `json:"status,omitempty" xml:"status"`
 
-	Data           *interface{} `json:"data,omitempty"`
+	Data           *interface{} `json:"data,omitempty" xml:"data"`
 	HttpStatusCode int          `json:"-"`
 }
 

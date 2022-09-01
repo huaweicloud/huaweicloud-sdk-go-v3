@@ -9,21 +9,21 @@ import (
 type ProjectChildModule struct {
 
 	// 模块id
-	ModuleId *int32 `json:"module_id,omitempty"`
+	ModuleId *int32 `json:"module_id,omitempty" xml:"module_id"`
 
 	// 模块名称
-	ModuleName *string `json:"module_name,omitempty"`
+	ModuleName *string `json:"module_name,omitempty" xml:"module_name"`
 
-	Owner *ModuleOwner `json:"owner,omitempty"`
+	Owner *ModuleOwner `json:"owner,omitempty" xml:"owner"`
 
 	// 模块层级
-	Deepth *int32 `json:"deepth,omitempty"`
+	Deepth *int32 `json:"deepth,omitempty" xml:"deepth"`
 
 	// 是否是父级，true 父模块， false 非父模块
-	IsParent *bool `json:"is_parent,omitempty"`
+	IsParent *bool `json:"is_parent,omitempty" xml:"is_parent"`
 
 	// 父模块id
-	ParentModuleId *int32 `json:"parent_module_id,omitempty"`
+	ParentModuleId *int32 `json:"parent_module_id,omitempty" xml:"parent_module_id"`
 }
 
 func (o ProjectChildModule) String() string {

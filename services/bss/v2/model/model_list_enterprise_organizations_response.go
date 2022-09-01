@@ -10,13 +10,13 @@ import (
 type ListEnterpriseOrganizationsResponse struct {
 
 	// 根节点ID，如果请求有parent_id，则该参数无值。
-	RootId *string `json:"root_id,omitempty"`
+	RootId *string `json:"root_id,omitempty" xml:"root_id"`
 
 	// 根节点名称，如果请求有parent_id，则该参数无值。  说明： 组织根节点没有设置组织名称时，可能为空。
-	RootName *string `json:"root_name,omitempty"`
+	RootName *string `json:"root_name,omitempty" xml:"root_name"`
 
 	// 子节点列表。
-	ChildNodes     *[]EmChildNodeV2 `json:"child_nodes,omitempty"`
+	ChildNodes     *[]EmChildNodeV2 `json:"child_nodes,omitempty" xml:"child_nodes"`
 	HttpStatusCode int              `json:"-"`
 }
 

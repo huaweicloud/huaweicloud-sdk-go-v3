@@ -8,9 +8,9 @@ import (
 
 // Response Object
 type DetectExtentionByNameAndIdResponse struct {
-	Meta *Meta `json:"meta,omitempty"`
+	Meta *Meta `json:"meta,omitempty" xml:"meta"`
 
-	Result         *IvsExtentionByNameAndIdResponseBodyResult `json:"result,omitempty"`
+	Result         *IvsExtentionByNameAndIdResponseBodyResult `json:"result,omitempty" xml:"result"`
 	HttpStatusCode int                                        `json:"-"`
 }
 

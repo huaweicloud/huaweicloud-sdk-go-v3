@@ -10,9 +10,9 @@ import (
 type AssociateSignatureKeyV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *SignApiBinding `json:"body,omitempty"`
+	Body *SignApiBinding `json:"body,omitempty" xml:"body"`
 }
 
 func (o AssociateSignatureKeyV2Request) String() string {

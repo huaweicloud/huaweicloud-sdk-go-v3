@@ -9,16 +9,16 @@ import (
 type Resources struct {
 
 	// 资源详情ID。
-	ResourceId *string `json:"resource_id,omitempty"`
+	ResourceId *string `json:"resource_id,omitempty" xml:"resource_id"`
 
 	// 资源详情。
-	ResourceDetail *string `json:"resource_detail,omitempty"`
+	ResourceDetail *string `json:"resource_detail,omitempty" xml:"resource_detail"`
 
 	// 标签列表，没有标签默认为空数组。
-	Tags *[]ResourceTags `json:"tags,omitempty"`
+	Tags *[]ResourceTags `json:"tags,omitempty" xml:"tags"`
 
 	// 资源名称，没有默认为空字符串。
-	ResourceName *string `json:"resource_name,omitempty"`
+	ResourceName *string `json:"resource_name,omitempty" xml:"resource_name"`
 }
 
 func (o Resources) String() string {

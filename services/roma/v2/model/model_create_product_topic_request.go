@@ -10,12 +10,12 @@ import (
 type CreateProductTopicRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 产品ID
-	ProductId int32 `json:"product_id"`
+	ProductId int32 `json:"product_id" xml:"product_id"`
 
-	Body *CreateProductTopicRequestBody `json:"body,omitempty"`
+	Body *CreateProductTopicRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateProductTopicRequest) String() string {

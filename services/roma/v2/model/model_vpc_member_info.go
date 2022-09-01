@@ -11,40 +11,40 @@ import (
 type VpcMemberInfo struct {
 
 	// 后端服务器地址  后端实例类型为ip时必填
-	Host *string `json:"host,omitempty"`
+	Host *string `json:"host,omitempty" xml:"host"`
 
 	// 权重值。  允许您对后端服务进行评级，权重值越大，转发到该云服务的请求数量越多。
-	Weight *int32 `json:"weight,omitempty"`
+	Weight *int32 `json:"weight,omitempty" xml:"weight"`
 
 	// 是否备用节点。  开启后对应后端服务为备用节点，仅当非备用节点全部故障时工作。  实例需要升级到对应版本才支持此功能，若不支持请联系技术支持。
-	IsBackup *bool `json:"is_backup,omitempty"`
+	IsBackup *bool `json:"is_backup,omitempty" xml:"is_backup"`
 
 	// 后端服务器组名称。为后端服务地址选择服务器组，便于统一修改对应服务器组的后端地址。
-	MemberGroupName *string `json:"member_group_name,omitempty"`
+	MemberGroupName *string `json:"member_group_name,omitempty" xml:"member_group_name"`
 
 	// 后端服务器状态   - 1：可用   - 2：不可用
-	Status *VpcMemberInfoStatus `json:"status,omitempty"`
+	Status *VpcMemberInfoStatus `json:"status,omitempty" xml:"status"`
 
 	// 后端服务器端口
-	Port *int32 `json:"port,omitempty"`
+	Port *int32 `json:"port,omitempty" xml:"port"`
 
 	// [后端云服务器的编号。](tag:hws;hws_hk;hcs;fcs;g42;)  [后端实例类型为ecs时必填，支持英文，数字，“-”,“_”，1 ~ 64字符。](tag:hws;hws_hk;hcs;fcs;g42;) [不支持后端云服务器类型](tag:Site)
-	EcsId *string `json:"ecs_id,omitempty"`
+	EcsId *string `json:"ecs_id,omitempty" xml:"ecs_id"`
 
 	// [后端云服务器的名称。]  [后端实例类型为ecs时必填，支持汉字，英文，数字，“-”,“_”,“.”，1 ~ 64字符。](tag:hws;hws_hk;hcs;fcs;g42;) [不支持后端云服务器类型](tag:Site)
-	EcsName *string `json:"ecs_name,omitempty"`
+	EcsName *string `json:"ecs_name,omitempty" xml:"ecs_name"`
 
 	// 后端实例对象的编号
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// VPC通道的编号
-	VpcChannelId *string `json:"vpc_channel_id,omitempty"`
+	VpcChannelId *string `json:"vpc_channel_id,omitempty" xml:"vpc_channel_id"`
 
 	// 后端实例增加到VPC通道的时间
-	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
+	CreateTime *sdktime.SdkTime `json:"create_time,omitempty" xml:"create_time"`
 
 	// 后端服务器组编号
-	MemberGroupId *string `json:"member_group_id,omitempty"`
+	MemberGroupId *string `json:"member_group_id,omitempty" xml:"member_group_id"`
 }
 
 func (o VpcMemberInfo) String() string {

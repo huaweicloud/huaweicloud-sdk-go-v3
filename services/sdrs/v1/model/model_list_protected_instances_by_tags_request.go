@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ListProtectedInstancesByTagsRequest struct {
-	Body *ListProtectedInstancesByTagsRequestBody `json:"body,omitempty"`
+	Body *ListProtectedInstancesByTagsRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o ListProtectedInstancesByTagsRequest) String() string {

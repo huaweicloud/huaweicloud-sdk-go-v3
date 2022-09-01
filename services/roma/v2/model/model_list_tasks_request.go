@@ -13,49 +13,49 @@ import (
 type ListTasksRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 每页显示条目数量，最大数量999，超过999后只返回999
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 分页查询，分页的偏移量，表示从此偏移量开始查询，偏移量小于0时，自动转换为0
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 任务ID，可为空
-	TaskId *string `json:"task_id,omitempty"`
+	TaskId *string `json:"task_id,omitempty" xml:"task_id"`
 
 	// 模糊匹配任务名称，可为空
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 任务状态，可为空 - 0 （停止/未启动） - 1 （运行中）
-	Status *ListTasksRequestStatus `json:"status,omitempty"`
+	Status *ListTasksRequestStatus `json:"status,omitempty" xml:"status"`
 
 	// 任务类型 - realtime (实时) - timing (定时)
-	TaskType *ListTasksRequestTaskType `json:"task_type,omitempty"`
+	TaskType *ListTasksRequestTaskType `json:"task_type,omitempty" xml:"task_type"`
 
 	// 源端数据源ID，可为空
-	SourceDatasourceId *string `json:"source_datasource_id,omitempty"`
+	SourceDatasourceId *string `json:"source_datasource_id,omitempty" xml:"source_datasource_id"`
 
 	// 目标端数据源ID，可为空
-	TargetDatasourceId *string `json:"target_datasource_id,omitempty"`
+	TargetDatasourceId *string `json:"target_datasource_id,omitempty" xml:"target_datasource_id"`
 
 	// 查询排序的条件
-	SortField *ListTasksRequestSortField `json:"sort_field,omitempty"`
+	SortField *ListTasksRequestSortField `json:"sort_field,omitempty" xml:"sort_field"`
 
 	// 排序类型，可为空 - ASC (升序) - DESC (降序)
-	SortType *ListTasksRequestSortType `json:"sort_type,omitempty"`
+	SortType *ListTasksRequestSortType `json:"sort_type,omitempty" xml:"sort_type"`
 
 	// 执行状态，可为空 - UNSTARTED (未启动) - WAITING (等待执行) - RUNNING (执行中) - SUCCESS (执行成功) - CANCELLED (任务取消) - ERROR (执行异常)
-	ExecuteStatus *string `json:"execute_status,omitempty"`
+	ExecuteStatus *string `json:"execute_status,omitempty" xml:"execute_status"`
 
 	// 源端数据源所属集成应用ID，可为空
-	SourceAppId *string `json:"source_app_id,omitempty"`
+	SourceAppId *string `json:"source_app_id,omitempty" xml:"source_app_id"`
 
 	// 目标端数据源所属集成应用ID，可为空
-	TargetAppId *string `json:"target_app_id,omitempty"`
+	TargetAppId *string `json:"target_app_id,omitempty" xml:"target_app_id"`
 
 	// 任务标签，可为空
-	TaskTag *string `json:"task_tag,omitempty"`
+	TaskTag *string `json:"task_tag,omitempty" xml:"task_tag"`
 }
 
 func (o ListTasksRequest) String() string {

@@ -13,9 +13,9 @@ import (
 type ShowJobListRequest struct {
 
 	// 请求语言类型
-	XLanguage *ShowJobListRequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *ShowJobListRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 
-	Body *QueryJobsReq `json:"body,omitempty"`
+	Body *QueryJobsReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o ShowJobListRequest) String() string {

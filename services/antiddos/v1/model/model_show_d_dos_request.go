@@ -10,10 +10,10 @@ import (
 type ShowDDosRequest struct {
 
 	// 用户EIP对应的ID
-	FloatingIpId string `json:"floating_ip_id"`
+	FloatingIpId string `json:"floating_ip_id" xml:"floating_ip_id"`
 
 	// 用户EIP
-	Ip *string `json:"ip,omitempty"`
+	Ip *string `json:"ip,omitempty" xml:"ip"`
 }
 
 func (o ShowDDosRequest) String() string {

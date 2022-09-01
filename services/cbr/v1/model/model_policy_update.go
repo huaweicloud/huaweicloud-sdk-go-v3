@@ -9,14 +9,14 @@ import (
 type PolicyUpdate struct {
 
 	// 是否启用策略
-	Enabled *bool `json:"enabled,omitempty"`
+	Enabled *bool `json:"enabled,omitempty" xml:"enabled"`
 
 	// 策略名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
-	OperationDefinition *PolicyoOdCreate `json:"operation_definition,omitempty"`
+	OperationDefinition *PolicyoOdCreate `json:"operation_definition,omitempty" xml:"operation_definition"`
 
-	Trigger *PolicyTriggerReq `json:"trigger,omitempty"`
+	Trigger *PolicyTriggerReq `json:"trigger,omitempty" xml:"trigger"`
 }
 
 func (o PolicyUpdate) String() string {

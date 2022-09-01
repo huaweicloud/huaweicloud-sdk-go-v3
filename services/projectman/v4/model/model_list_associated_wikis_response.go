@@ -10,10 +10,10 @@ import (
 type ListAssociatedWikisResponse struct {
 
 	// 关联的wiki列表
-	Wikis *[]AttachWikiDetail `json:"wikis,omitempty"`
+	Wikis *[]AttachWikiDetail `json:"wikis,omitempty" xml:"wikis"`
 
 	// 总数
-	Total          *int32 `json:"total,omitempty"`
+	Total          *int32 `json:"total,omitempty" xml:"total"`
 	HttpStatusCode int    `json:"-"`
 }
 

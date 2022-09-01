@@ -8,9 +8,9 @@ import (
 
 //
 type AgencyTokenAuth struct {
-	Identity *AgencyTokenIdentity `json:"identity"`
+	Identity *AgencyTokenIdentity `json:"identity" xml:"identity"`
 
-	Scope *AgencyTokenScope `json:"scope"`
+	Scope *AgencyTokenScope `json:"scope" xml:"scope"`
 }
 
 func (o AgencyTokenAuth) String() string {

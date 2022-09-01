@@ -13,31 +13,31 @@ import (
 type QueryPreCheckResp struct {
 
 	// 预检查id。
-	PrecheckId *string `json:"precheck_id,omitempty"`
+	PrecheckId *string `json:"precheck_id,omitempty" xml:"precheck_id"`
 
 	// 返回的预检查结果是否通过。true表示预检查通过，通过后才可进行启动任务。
-	Result *bool `json:"result,omitempty"`
+	Result *bool `json:"result,omitempty" xml:"result"`
 
 	// 预检查进度百分比。
-	Process *string `json:"process,omitempty"`
+	Process *string `json:"process,omitempty" xml:"process"`
 
 	// 预检查通过百分比。
-	TotalPassedRate *string `json:"total_passed_rate,omitempty"`
+	TotalPassedRate *string `json:"total_passed_rate,omitempty" xml:"total_passed_rate"`
 
 	// RDS实例id。
-	RdsInstanceId *string `json:"rds_instance_id,omitempty"`
+	RdsInstanceId *string `json:"rds_instance_id,omitempty" xml:"rds_instance_id"`
 
 	// 迁移方向
-	JobDirection *QueryPreCheckRespJobDirection `json:"job_direction,omitempty"`
+	JobDirection *QueryPreCheckRespJobDirection `json:"job_direction,omitempty" xml:"job_direction"`
 
 	// 预检查各项结果。
-	PrecheckResult *[]PrecheckResult `json:"precheck_result,omitempty"`
+	PrecheckResult *[]PrecheckResult `json:"precheck_result,omitempty" xml:"precheck_result"`
 
 	// 错误信息
-	ErrorMsg *string `json:"error_msg,omitempty"`
+	ErrorMsg *string `json:"error_msg,omitempty" xml:"error_msg"`
 
 	// 任务错误码。
-	ErrorCode *string `json:"error_code,omitempty"`
+	ErrorCode *string `json:"error_code,omitempty" xml:"error_code"`
 }
 
 func (o QueryPreCheckResp) String() string {

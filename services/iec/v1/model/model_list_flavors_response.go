@@ -10,10 +10,10 @@ import (
 type ListFlavorsResponse struct {
 
 	// 边缘实例规格数量。
-	Count *int32 `json:"count,omitempty"`
+	Count *int32 `json:"count,omitempty" xml:"count"`
 
 	// 规格列表。
-	Flavors        *[]Flavor `json:"flavors,omitempty"`
+	Flavors        *[]Flavor `json:"flavors,omitempty" xml:"flavors"`
 	HttpStatusCode int       `json:"-"`
 }
 

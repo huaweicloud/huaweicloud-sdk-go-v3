@@ -10,10 +10,10 @@ import (
 type CreateRedislogDownloadLinkRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 日志的唯一ID，来自于查询运行日志查询接口
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 }
 
 func (o CreateRedislogDownloadLinkRequest) String() string {

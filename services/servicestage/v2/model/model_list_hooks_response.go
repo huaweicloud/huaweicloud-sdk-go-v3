@@ -10,7 +10,7 @@ import (
 type ListHooksResponse struct {
 
 	// hook列表。
-	Hooks          *[]Hook `json:"hooks,omitempty"`
+	Hooks          *[]Hook `json:"hooks,omitempty" xml:"hooks"`
 	HttpStatusCode int     `json:"-"`
 }
 

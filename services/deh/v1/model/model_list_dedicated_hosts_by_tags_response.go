@@ -10,10 +10,10 @@ import (
 type ListDedicatedHostsByTagsResponse struct {
 
 	// 返回的专属主机列表。
-	Resources *[]RespDeh `json:"resources,omitempty"`
+	Resources *[]RespDeh `json:"resources,omitempty" xml:"resources"`
 
 	// 总记录数。
-	TotalCount     *int32 `json:"total_count,omitempty"`
+	TotalCount     *int32 `json:"total_count,omitempty" xml:"total_count"`
 	HttpStatusCode int    `json:"-"`
 }
 

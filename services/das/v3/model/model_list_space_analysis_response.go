@@ -10,12 +10,12 @@ import (
 type ListSpaceAnalysisResponse struct {
 
 	// 记录总数
-	Total *int64 `json:"total,omitempty"`
+	Total *int64 `json:"total,omitempty" xml:"total"`
 
 	// 数据库对象列表
-	DbObjects *[]DbObjectSpaceInfo `json:"db_objects,omitempty"`
+	DbObjects *[]DbObjectSpaceInfo `json:"db_objects,omitempty" xml:"db_objects"`
 
-	InstanceInfo   *InstanceSpaceInfo `json:"instance_info,omitempty"`
+	InstanceInfo   *InstanceSpaceInfo `json:"instance_info,omitempty" xml:"instance_info"`
 	HttpStatusCode int                `json:"-"`
 }
 

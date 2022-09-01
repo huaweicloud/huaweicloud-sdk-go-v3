@@ -10,10 +10,10 @@ import (
 type KeyStoreStateInfo struct {
 
 	// 密钥库ID
-	KeystoreId *string `json:"keystore_id,omitempty"`
+	KeystoreId *string `json:"keystore_id,omitempty" xml:"keystore_id"`
 
 	// 密钥库状态
-	KeystoreState *string `json:"keystore_state,omitempty"`
+	KeystoreState *string `json:"keystore_state,omitempty" xml:"keystore_state"`
 }
 
 func (o KeyStoreStateInfo) String() string {

@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowEdgeSiteResponse struct {
-	EdgeSite       *EdgeSiteDetail `json:"edge_site,omitempty"`
+	EdgeSite       *EdgeSiteDetail `json:"edge_site,omitempty" xml:"edge_site"`
 	HttpStatusCode int             `json:"-"`
 }
 

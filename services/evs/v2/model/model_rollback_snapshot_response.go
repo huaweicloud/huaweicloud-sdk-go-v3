@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type RollbackSnapshotResponse struct {
-	Rollback       *RollbackInfo `json:"rollback,omitempty"`
+	Rollback       *RollbackInfo `json:"rollback,omitempty" xml:"rollback"`
 	HttpStatusCode int           `json:"-"`
 }
 

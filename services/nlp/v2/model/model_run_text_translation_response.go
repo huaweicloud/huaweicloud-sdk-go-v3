@@ -10,16 +10,16 @@ import (
 type RunTextTranslationResponse struct {
 
 	// 翻译原文，编码格式为UTF-8。调用失败时无此字段。
-	SrcText *string `json:"src_text,omitempty"`
+	SrcText *string `json:"src_text,omitempty" xml:"src_text"`
 
 	// 翻译译文，编码格式为UTF-8。调用失败时无此字段。
-	TranslatedText *string `json:"translated_text,omitempty"`
+	TranslatedText *string `json:"translated_text,omitempty" xml:"translated_text"`
 
 	// 调用失败时的错误码，具体请参见错误码。调用成功时无此字段。
-	ErrorCode *string `json:"error_code,omitempty"`
+	ErrorCode *string `json:"error_code,omitempty" xml:"error_code"`
 
 	// 调用失败时的错误信息。调用成功时无此字段。
-	ErrorMsg       *string `json:"error_msg,omitempty"`
+	ErrorMsg       *string `json:"error_msg,omitempty" xml:"error_msg"`
 	HttpStatusCode int     `json:"-"`
 }
 

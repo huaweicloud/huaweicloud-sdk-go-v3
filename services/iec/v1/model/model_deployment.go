@@ -10,12 +10,12 @@ import (
 type Deployment struct {
 
 	// 部署计划ID。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 部署位置信息列表
-	Distribution *[]Distribution `json:"distribution,omitempty"`
+	Distribution *[]Distribution `json:"distribution,omitempty" xml:"distribution"`
 
-	Edgecloud *DeploymentEdgecloud `json:"edgecloud,omitempty"`
+	Edgecloud *DeploymentEdgecloud `json:"edgecloud,omitempty" xml:"edgecloud"`
 }
 
 func (o Deployment) String() string {

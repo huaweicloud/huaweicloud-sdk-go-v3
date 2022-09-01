@@ -10,16 +10,16 @@ import (
 type ShowMessagesResponse struct {
 
 	// 消息列表。
-	Messages *[]ShowMessagesRespMessages `json:"messages,omitempty"`
+	Messages *[]ShowMessagesRespMessages `json:"messages,omitempty" xml:"messages"`
 
 	// 消息总数。
-	MessagesCount *int32 `json:"messages_count,omitempty"`
+	MessagesCount *int32 `json:"messages_count,omitempty" xml:"messages_count"`
 
 	// 总页数。
-	OffsetsCount *int32 `json:"offsets_count,omitempty"`
+	OffsetsCount *int32 `json:"offsets_count,omitempty" xml:"offsets_count"`
 
 	// 当前页数。
-	Offset         *int32 `json:"offset,omitempty"`
+	Offset         *int32 `json:"offset,omitempty" xml:"offset"`
 	HttpStatusCode int    `json:"-"`
 }
 

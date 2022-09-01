@@ -10,25 +10,25 @@ import (
 type ConfAttendeeRecordInfo struct {
 
 	// 名称。
-	DisplayName *string `json:"displayName,omitempty"`
+	DisplayName *string `json:"displayName,omitempty" xml:"displayName"`
 
 	// 号码。
-	CallNumber *string `json:"callNumber,omitempty"`
+	CallNumber *string `json:"callNumber,omitempty" xml:"callNumber"`
 
 	// 设备类型。
-	DeviceType *string `json:"deviceType,omitempty"`
+	DeviceType *string `json:"deviceType,omitempty" xml:"deviceType"`
 
 	// 入会时间（UTC时间，单位毫秒）。
-	JoinTime *int64 `json:"joinTime,omitempty"`
+	JoinTime *int64 `json:"joinTime,omitempty" xml:"joinTime"`
 
 	// 离会时间（UTC时间，单位毫秒）。
-	LeftTime *int64 `json:"leftTime,omitempty"`
+	LeftTime *int64 `json:"leftTime,omitempty" xml:"leftTime"`
 
 	// 媒体类型。
-	MediaType *string `json:"mediaType,omitempty"`
+	MediaType *string `json:"mediaType,omitempty" xml:"mediaType"`
 
 	// 部门名称。
-	DeptName *string `json:"deptName,omitempty"`
+	DeptName *string `json:"deptName,omitempty" xml:"deptName"`
 }
 
 func (o ConfAttendeeRecordInfo) String() string {

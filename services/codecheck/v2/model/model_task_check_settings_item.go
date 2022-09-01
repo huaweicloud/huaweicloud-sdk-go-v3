@@ -9,13 +9,13 @@ import (
 type TaskCheckSettingsItem struct {
 
 	// 检查参数对应的key值
-	CfgKey string `json:"cfg_key"`
+	CfgKey string `json:"cfg_key" xml:"cfg_key"`
 
 	// 参数状态
-	Status string `json:"status"`
+	Status string `json:"status" xml:"status"`
 
 	// 检查参数值
-	CfgValue *string `json:"cfg_value,omitempty"`
+	CfgValue *string `json:"cfg_value,omitempty" xml:"cfg_value"`
 }
 
 func (o TaskCheckSettingsItem) String() string {

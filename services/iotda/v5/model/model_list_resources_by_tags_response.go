@@ -10,9 +10,9 @@ import (
 type ListResourcesByTagsResponse struct {
 
 	// 资源列表。
-	Resources *[]ResourceDto `json:"resources,omitempty"`
+	Resources *[]ResourceDto `json:"resources,omitempty" xml:"resources"`
 
-	Page           *Page `json:"page,omitempty"`
+	Page           *Page `json:"page,omitempty" xml:"page"`
 	HttpStatusCode int   `json:"-"`
 }
 

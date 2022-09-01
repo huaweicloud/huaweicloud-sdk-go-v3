@@ -3,9 +3,6 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
-	"errors"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-
 	"strings"
 )
 
@@ -13,16 +10,13 @@ import (
 type CreateCloudConnection struct {
 
 	// 云连接实例的名字。只能由中文、英文字母、数字、下划线、中划线、点组成。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 云连接实例的描述。不支持 <>。
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 云连接实例所属的企业项目ID。企业项目账号必填；非企业项目账号不填。
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
-
-	// 云连接使用场景，有效值： - vpc：虚拟私有云。 - er：企业路由器。
-	UsedScene *CreateCloudConnectionUsedScene `json:"used_scene,omitempty"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
 }
 
 func (o CreateCloudConnection) String() string {
@@ -32,46 +26,4 @@ func (o CreateCloudConnection) String() string {
 	}
 
 	return strings.Join([]string{"CreateCloudConnection", string(data)}, " ")
-}
-
-type CreateCloudConnectionUsedScene struct {
-	value string
-}
-
-type CreateCloudConnectionUsedSceneEnum struct {
-	ER  CreateCloudConnectionUsedScene
-	VPC CreateCloudConnectionUsedScene
-}
-
-func GetCreateCloudConnectionUsedSceneEnum() CreateCloudConnectionUsedSceneEnum {
-	return CreateCloudConnectionUsedSceneEnum{
-		ER: CreateCloudConnectionUsedScene{
-			value: "er",
-		},
-		VPC: CreateCloudConnectionUsedScene{
-			value: "vpc",
-		},
-	}
-}
-
-func (c CreateCloudConnectionUsedScene) Value() string {
-	return c.value
-}
-
-func (c CreateCloudConnectionUsedScene) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *CreateCloudConnectionUsedScene) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to string error")
-	}
 }

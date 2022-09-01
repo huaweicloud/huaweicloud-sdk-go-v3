@@ -10,22 +10,22 @@ import (
 type NovaKeypair struct {
 
 	// 密钥对应指纹信息。
-	Fingerprint string `json:"fingerprint"`
+	Fingerprint string `json:"fingerprint" xml:"fingerprint"`
 
 	// 密钥名称。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 密钥对应publicKey信息。
-	PublicKey string `json:"public_key"`
+	PublicKey string `json:"public_key" xml:"public_key"`
 
 	// 密钥对应privateKey信息。  - 创建SSH密钥时，响应中包括private_key的信息。 - 导入SSH密钥时，响应中不包括private_key的信息。
-	PrivateKey string `json:"private_key"`
+	PrivateKey string `json:"private_key" xml:"private_key"`
 
 	// 密钥所属用户ID。
-	UserId string `json:"user_id"`
+	UserId string `json:"user_id" xml:"user_id"`
 
 	// 密钥类型，默认“ssh”  微版本2.2以上支持
-	Type *string `json:"type,omitempty"`
+	Type *string `json:"type,omitempty" xml:"type"`
 }
 
 func (o NovaKeypair) String() string {

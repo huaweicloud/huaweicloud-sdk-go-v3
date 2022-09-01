@@ -10,10 +10,10 @@ import (
 type ListProjectTemplatesRequest struct {
 
 	// cpu架构 x86|arm
-	Arch *string `json:"arch,omitempty"`
+	Arch *string `json:"arch,omitempty" xml:"arch"`
 
 	// 技术栈ID，通过技术栈管理ListStacks接口获取。
-	StackId string `json:"stack_id"`
+	StackId string `json:"stack_id" xml:"stack_id"`
 }
 
 func (o ListProjectTemplatesRequest) String() string {

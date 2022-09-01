@@ -10,25 +10,25 @@ import (
 type GetDatabases struct {
 
 	// 分片数。
-	Dbslot int32 `json:"dbslot"`
+	Dbslot int32 `json:"dbslot" xml:"dbslot"`
 
 	// 分片名称.
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 状态。
-	Status string `json:"status"`
+	Status string `json:"status" xml:"status"`
 
 	// 创建时间。
-	Created string `json:"created"`
+	Created string `json:"created" xml:"created"`
 
 	// 最近更新时间。
-	Updated string `json:"updated"`
+	Updated string `json:"updated" xml:"updated"`
 
 	// 所在RDS的id。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 所在RDS的名称。
-	IdName string `json:"idName"`
+	IdName string `json:"idName" xml:"idName"`
 }
 
 func (o GetDatabases) String() string {

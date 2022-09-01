@@ -9,7 +9,7 @@ import (
 type RestartEncodeServerRequestBody struct {
 
 	// 待重启的编码服务的ID
-	EncodeServerIds []string `json:"encode_server_ids"`
+	EncodeServerIds []string `json:"encode_server_ids" xml:"encode_server_ids"`
 }
 
 func (o RestartEncodeServerRequestBody) String() string {

@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateAssetByFileUploadRequest struct {
-	Body *CreateAssetByFileUploadReq `json:"body,omitempty"`
+	Body *CreateAssetByFileUploadReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateAssetByFileUploadRequest) String() string {

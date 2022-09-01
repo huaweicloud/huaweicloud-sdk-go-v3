@@ -10,7 +10,7 @@ import (
 type ShowNaRequest struct {
 
 	// 北向数据接收端点ID
-	NaId string `json:"na_id"`
+	NaId string `json:"na_id" xml:"na_id"`
 }
 
 func (o ShowNaRequest) String() string {

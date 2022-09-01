@@ -9,10 +9,10 @@ import (
 type OperateLog struct {
 
 	// 操作指令
-	Oper *string `json:"oper,omitempty"`
+	Oper *string `json:"oper,omitempty" xml:"oper"`
 
 	// 操作时间
-	OperateTime *string `json:"operate_time,omitempty"`
+	OperateTime *string `json:"operate_time,omitempty" xml:"operate_time"`
 }
 
 func (o OperateLog) String() string {

@@ -10,10 +10,10 @@ import (
 type ShowStructTemplateRequest struct {
 
 	// 日志组ID
-	LogGroupId string `json:"logGroupId"`
+	LogGroupId string `json:"logGroupId" xml:"logGroupId"`
 
 	// 日志流ID
-	LogStreamId string `json:"logStreamId"`
+	LogStreamId string `json:"logStreamId" xml:"logStreamId"`
 }
 
 func (o ShowStructTemplateRequest) String() string {

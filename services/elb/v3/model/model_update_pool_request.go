@@ -10,9 +10,9 @@ import (
 type UpdatePoolRequest struct {
 
 	// 后端服务器组ID。
-	PoolId string `json:"pool_id"`
+	PoolId string `json:"pool_id" xml:"pool_id"`
 
-	Body *UpdatePoolRequestBody `json:"body,omitempty"`
+	Body *UpdatePoolRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdatePoolRequest) String() string {

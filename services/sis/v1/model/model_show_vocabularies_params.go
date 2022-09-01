@@ -9,7 +9,7 @@ import (
 type ShowVocabulariesParams struct {
 
 	// 热词表的表名，用于筛选热词表表名。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 }
 
 func (o ShowVocabulariesParams) String() string {

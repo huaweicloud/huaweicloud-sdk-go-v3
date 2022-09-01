@@ -9,33 +9,33 @@ import (
 type ApplyEnterpriseRealnameAuthsReq struct {
 
 	// 客户账号ID。您可以调用查询客户列表接口获取customer_id。
-	CustomerId string `json:"customer_id"`
+	CustomerId string `json:"customer_id" xml:"customer_id"`
 
 	// 认证方案。 1：单位证件认证
-	IdentifyType int32 `json:"identify_type"`
+	IdentifyType int32 `json:"identify_type" xml:"identify_type"`
 
 	// 单位证件类型： 0：企业营业执照1：事业单位法人证书2：社会团体法人登记证书3：行政执法主体资格证4：组织机构代码证99：其他
-	CertificateType *int32 `json:"certificate_type,omitempty"`
+	CertificateType *int32 `json:"certificate_type,omitempty" xml:"certificate_type"`
 
 	// 单位证件认证时证件附件的文件URL。附件地址必须按照顺序填写，先填写单位证件的附件，如果请求中填写了单位人员信息，再填写单位人员的身份证附件。 单位证件顺序为： 第1张单位证件照正面， 第2张单位证件照反面， 个人证件顺序为： 第1张个人证件的人像面 第2张个人证件的国徽面 假设不存在法人的情况下，第1张上传的是单位证件正面扫描件abc.023，第2张上传的是单位证件反面扫描件def004，那么上传顺序需要是： abc023 def004 文件名称区分大小写。 证件附件目前仅仅支持jpg、jpeg、bmp、png、gif、pdf格式，单个文件最大不超过10M。这个URL是相对URL，不需要包含桶名和download目录，只要包含download目录下的子目录和对应文件名称即可。举例如下：如果上传的证件附件在桶中的位置是：https://bucketname.obs.Endpoint.myhuaweicloud.com/download/abc023.jpg，该字段填写abc023.jpg； 如果上传的证件附件在桶中的位置是：https://bucketname.obs.Endpoint.myhuaweicloud.com/download/test/abc023.jpg，该字段填写test/abc023.jpg。
-	VerifiedFileUrl []string `json:"verified_file_url"`
+	VerifiedFileUrl []string `json:"verified_file_url" xml:"verified_file_url"`
 
 	// 单位名称。 不能全是数字、特殊字符、空格。
-	CorpName string `json:"corp_name"`
+	CorpName string `json:"corp_name" xml:"corp_name"`
 
 	// 单位证件号码。
-	VerifiedNumber string `json:"verified_number"`
+	VerifiedNumber string `json:"verified_number" xml:"verified_number"`
 
 	// 实名认证填写的注册国家。国家的两位字母简码。 例如：注册国家为“中国”请填写“CN”。
-	RegCountry *string `json:"reg_country,omitempty"`
+	RegCountry *string `json:"reg_country,omitempty" xml:"reg_country"`
 
 	// 实名认证企业注册地址。
-	RegAddress *string `json:"reg_address,omitempty"`
+	RegAddress *string `json:"reg_address,omitempty" xml:"reg_address"`
 
 	// 华为分给合作伙伴的平台标识。 该标识的具体值由华为分配。获取方法请参见如何获取xaccountType的取值。
-	XaccountType string `json:"xaccount_type"`
+	XaccountType string `json:"xaccount_type" xml:"xaccount_type"`
 
-	EnterprisePerson *EnterprisePersonNew `json:"enterprise_person,omitempty"`
+	EnterprisePerson *EnterprisePersonNew `json:"enterprise_person,omitempty" xml:"enterprise_person"`
 }
 
 func (o ApplyEnterpriseRealnameAuthsReq) String() string {

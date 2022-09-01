@@ -10,10 +10,10 @@ import (
 type UploadKieResponse struct {
 
 	// 导入成功的配置项列表。
-	Success *[]GetKieConfigs `json:"success,omitempty"`
+	Success *[]GetKieConfigs `json:"success,omitempty" xml:"success"`
 
 	// 导入失败的配置项及其错误列表。
-	Failure        *[]UploadKieRespFailure `json:"failure,omitempty"`
+	Failure        *[]UploadKieRespFailure `json:"failure,omitempty" xml:"failure"`
 	HttpStatusCode int                     `json:"-"`
 }
 

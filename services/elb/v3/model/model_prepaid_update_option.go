@@ -13,16 +13,16 @@ import (
 type PrepaidUpdateOption struct {
 
 	// 下单订购后，是否自动从客户的账户中支付； true：自动支付； false：不自动支付（默认）。 自动支付时，只能使用账户的现金支付；如果要使用代金券，请选择不自动支付，然后在用户费用中心，选择代金券支付。
-	AutoPay *bool `json:"auto_pay,omitempty"`
+	AutoPay *bool `json:"auto_pay,omitempty" xml:"auto_pay"`
 
 	// 规格变更类型： immediate：即时变更，规格变更立即生效。（默认） delay：续费变更，当前周期结束后变更为目标规格。
-	ChangeMode *PrepaidUpdateOptionChangeMode `json:"change_mode,omitempty"`
+	ChangeMode *PrepaidUpdateOptionChangeMode `json:"change_mode,omitempty" xml:"change_mode"`
 
 	// 订购周期数（默认1），取值会随运营策略变化。（仅在change_mode为delay时生效） period_type为month时，为[1,9]， period_type为year时，为[1,3]
-	PeriodNum *int32 `json:"period_num,omitempty"`
+	PeriodNum *int32 `json:"period_num,omitempty" xml:"period_num"`
 
 	// 订购周期类型，当前支持包月和包年： （仅在change_mode为delay时生效） month：月（默认）； year：年；
-	PeriodType *PrepaidUpdateOptionPeriodType `json:"period_type,omitempty"`
+	PeriodType *PrepaidUpdateOptionPeriodType `json:"period_type,omitempty" xml:"period_type"`
 }
 
 func (o PrepaidUpdateOption) String() string {

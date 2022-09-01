@@ -8,7 +8,7 @@ import (
 
 //
 type UpdateUserInformationRequestBody struct {
-	User *UpdateUserInformationOption `json:"user"`
+	User *UpdateUserInformationOption `json:"user" xml:"user"`
 }
 
 func (o UpdateUserInformationRequestBody) String() string {

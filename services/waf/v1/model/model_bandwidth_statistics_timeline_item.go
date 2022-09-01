@@ -10,10 +10,10 @@ import (
 type BandwidthStatisticsTimelineItem struct {
 
 	// 键值，包括带宽（BANDWIDTH）、入带宽（IN_BANDWIDTH）以及出带宽（OUT_BANDWIDTH）
-	Key *string `json:"key,omitempty"`
+	Key *string `json:"key,omitempty" xml:"key"`
 
 	// 对应键值的时间线统计数据
-	Timeline *[]TimeLineItem `json:"timeline,omitempty"`
+	Timeline *[]TimeLineItem `json:"timeline,omitempty" xml:"timeline"`
 }
 
 func (o BandwidthStatisticsTimelineItem) String() string {

@@ -7,11 +7,11 @@ import (
 )
 
 type RoleAssignmentScope struct {
-	Project *RoleProjectAssignmentId `json:"project,omitempty"`
+	Project *RoleProjectAssignmentId `json:"project,omitempty" xml:"project"`
 
-	Domain *RoleDomainAssignmentId `json:"domain,omitempty"`
+	Domain *RoleDomainAssignmentId `json:"domain,omitempty" xml:"domain"`
 
-	EnterpriseProject *RoleEnterpriseProjectAssignmentId `json:"enterprise_project,omitempty"`
+	EnterpriseProject *RoleEnterpriseProjectAssignmentId `json:"enterprise_project,omitempty" xml:"enterprise_project"`
 }
 
 func (o RoleAssignmentScope) String() string {

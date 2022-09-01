@@ -10,10 +10,10 @@ import (
 type DeleteProtectedInstanceTagRequest struct {
 
 	// 保护实例的ID。
-	ProtectedInstanceId string `json:"protected_instance_id"`
+	ProtectedInstanceId string `json:"protected_instance_id" xml:"protected_instance_id"`
 
 	// 标签key。
-	Key string `json:"key"`
+	Key string `json:"key" xml:"key"`
 }
 
 func (o DeleteProtectedInstanceTagRequest) String() string {

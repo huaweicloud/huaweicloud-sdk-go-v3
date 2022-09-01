@@ -10,9 +10,9 @@ import (
 type UpdateMembesRoleV4Request struct {
 
 	// devcloud项目的32位id
-	ProjectId string `json:"project_id"`
+	ProjectId string `json:"project_id" xml:"project_id"`
 
-	Body *UpdateMembesRoleV4RequestBody `json:"body,omitempty"`
+	Body *UpdateMembesRoleV4RequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateMembesRoleV4Request) String() string {

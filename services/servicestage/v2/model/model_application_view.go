@@ -9,31 +9,31 @@ import (
 type ApplicationView struct {
 
 	// 组件个数。
-	ComponentCount *int32 `json:"component_count,omitempty"`
+	ComponentCount *int32 `json:"component_count,omitempty" xml:"component_count"`
 
 	// 应用ID。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 应用名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 应用描述。
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 创建人。
-	Creator *string `json:"creator,omitempty"`
+	Creator *string `json:"creator,omitempty" xml:"creator"`
 
 	// 项目ID。
-	ProjectId *string `json:"project_id,omitempty"`
+	ProjectId *string `json:"project_id,omitempty" xml:"project_id"`
 
 	// 企业项目ID。
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
 
 	// 创建时间。
-	CreateTime *int64 `json:"create_time,omitempty"`
+	CreateTime *int64 `json:"create_time,omitempty" xml:"create_time"`
 
 	// 修改时间。
-	UpdateTime *int64 `json:"update_time,omitempty"`
+	UpdateTime *int64 `json:"update_time,omitempty" xml:"update_time"`
 }
 
 func (o ApplicationView) String() string {

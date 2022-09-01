@@ -10,7 +10,7 @@ import (
 type RunEntityLinkingResponse struct {
 
 	// 识别出的实体列表
-	Entities       *[]LinkedEntity `json:"entities,omitempty"`
+	Entities       *[]LinkedEntity `json:"entities,omitempty" xml:"entities"`
 	HttpStatusCode int             `json:"-"`
 }
 

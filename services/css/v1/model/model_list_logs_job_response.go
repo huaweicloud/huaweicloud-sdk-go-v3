@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ListLogsJobResponse struct {
-	ClusterLogRecord *[]ClusterLogRecord `json:"clusterLogRecord,omitempty"`
+	ClusterLogRecord *[]ClusterLogRecord `json:"clusterLogRecord,omitempty" xml:"clusterLogRecord"`
 	HttpStatusCode   int                 `json:"-"`
 }
 

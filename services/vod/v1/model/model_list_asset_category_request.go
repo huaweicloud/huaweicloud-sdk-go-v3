@@ -10,7 +10,7 @@ import (
 type ListAssetCategoryRequest struct {
 
 	// 视频分类ID。  若设置为0，则查询所有一级分类。
-	Id int32 `json:"id"`
+	Id int32 `json:"id" xml:"id"`
 }
 
 func (o ListAssetCategoryRequest) String() string {

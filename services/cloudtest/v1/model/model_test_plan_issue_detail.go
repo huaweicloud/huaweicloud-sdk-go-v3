@@ -10,40 +10,40 @@ import (
 type TestPlanIssueDetail struct {
 
 	// DevCloud项目id，项目唯一标识，固定长度32位字符
-	ProjectId *string `json:"project_id,omitempty"`
+	ProjectId *string `json:"project_id,omitempty" xml:"project_id"`
 
 	// 测试计划id
-	PlanId *string `json:"plan_id,omitempty"`
+	PlanId *string `json:"plan_id,omitempty" xml:"plan_id"`
 
 	// 工作项id
-	WorkitemId *string `json:"workitem_id,omitempty"`
+	WorkitemId *string `json:"workitem_id,omitempty" xml:"workitem_id"`
 
 	// 父工作项
-	ParentIssue *string `json:"parent_issue,omitempty"`
+	ParentIssue *string `json:"parent_issue,omitempty" xml:"parent_issue"`
 
 	// 预计开始日期
-	StartDate *string `json:"start_date,omitempty"`
+	StartDate *string `json:"start_date,omitempty" xml:"start_date"`
 
 	// 预计结束日期
-	EndDate *string `json:"end_date,omitempty"`
+	EndDate *string `json:"end_date,omitempty" xml:"end_date"`
 
 	// 工作项名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// region信息
-	RegionId *string `json:"region_id,omitempty"`
+	RegionId *string `json:"region_id,omitempty" xml:"region_id"`
 
-	Owner *NameAndId `json:"owner,omitempty"`
+	Owner *NameAndId `json:"owner,omitempty" xml:"owner"`
 
-	Severity *NameAndId `json:"severity,omitempty"`
+	Severity *NameAndId `json:"severity,omitempty" xml:"severity"`
 
-	Status *NameAndId `json:"status,omitempty"`
+	Status *NameAndId `json:"status,omitempty" xml:"status"`
 
-	Tracker *NameAndId `json:"tracker,omitempty"`
+	Tracker *NameAndId `json:"tracker,omitempty" xml:"tracker"`
 
-	Iteration *NameAndId `json:"iteration,omitempty"`
+	Iteration *NameAndId `json:"iteration,omitempty" xml:"iteration"`
 
-	Module *NameAndId `json:"module,omitempty"`
+	Module *NameAndId `json:"module,omitempty" xml:"module"`
 }
 
 func (o TestPlanIssueDetail) String() string {

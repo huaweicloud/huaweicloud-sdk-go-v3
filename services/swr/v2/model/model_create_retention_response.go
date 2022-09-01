@@ -10,7 +10,7 @@ import (
 type CreateRetentionResponse struct {
 
 	// 镜像老化规则id
-	Id             *int32 `json:"id,omitempty"`
+	Id             *int32 `json:"id,omitempty" xml:"id"`
 	HttpStatusCode int    `json:"-"`
 }
 

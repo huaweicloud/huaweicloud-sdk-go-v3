@@ -10,10 +10,10 @@ import (
 type ListSecurityEventsResponse struct {
 
 	// 总数
-	TotalNum *int32 `json:"total_num,omitempty"`
+	TotalNum *int32 `json:"total_num,omitempty" xml:"total_num"`
 
 	// 事件列表详情
-	DataList       *[]EventManagementResponseInfo `json:"data_list,omitempty"`
+	DataList       *[]EventManagementResponseInfo `json:"data_list,omitempty" xml:"data_list"`
 	HttpStatusCode int                            `json:"-"`
 }
 

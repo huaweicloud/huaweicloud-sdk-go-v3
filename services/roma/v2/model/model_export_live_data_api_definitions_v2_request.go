@@ -10,9 +10,9 @@ import (
 type ExportLiveDataApiDefinitionsV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *LiveDataExportReq `json:"body,omitempty"`
+	Body *LiveDataExportReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o ExportLiveDataApiDefinitionsV2Request) String() string {

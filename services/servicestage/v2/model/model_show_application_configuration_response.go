@@ -10,7 +10,7 @@ import (
 type ShowApplicationConfigurationResponse struct {
 
 	// 应用配置列表。
-	Configuration  *[]ApplicationListConfigConfiguration1 `json:"configuration,omitempty"`
+	Configuration  *[]ApplicationListConfigConfiguration1 `json:"configuration,omitempty" xml:"configuration"`
 	HttpStatusCode int                                    `json:"-"`
 }
 

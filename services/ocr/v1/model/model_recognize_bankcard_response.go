@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type RecognizeBankcardResponse struct {
-	Result         *BankcardResult `json:"result,omitempty"`
+	Result         *BankcardResult `json:"result,omitempty" xml:"result"`
 	HttpStatusCode int             `json:"-"`
 }
 

@@ -10,10 +10,10 @@ import (
 type FirewallSubnetOption struct {
 
 	// 子网ID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 虚拟私有云ID。
-	VpcId *string `json:"vpc_id,omitempty"`
+	VpcId *string `json:"vpc_id,omitempty" xml:"vpc_id"`
 }
 
 func (o FirewallSubnetOption) String() string {

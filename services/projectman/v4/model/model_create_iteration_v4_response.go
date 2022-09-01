@@ -10,7 +10,7 @@ import (
 type CreateIterationV4Response struct {
 
 	// 迭代id
-	Id             *int32 `json:"id,omitempty"`
+	Id             *int32 `json:"id,omitempty" xml:"id"`
 	HttpStatusCode int    `json:"-"`
 }
 

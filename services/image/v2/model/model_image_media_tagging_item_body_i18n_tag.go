@@ -10,10 +10,10 @@ import (
 type ImageMediaTaggingItemBodyI18nTag struct {
 
 	// 中文标签。
-	Zh *string `json:"zh,omitempty"`
+	Zh *string `json:"zh,omitempty" xml:"zh"`
 
 	// 英文标签。
-	En *string `json:"en,omitempty"`
+	En *string `json:"en,omitempty" xml:"en"`
 }
 
 func (o ImageMediaTaggingItemBodyI18nTag) String() string {

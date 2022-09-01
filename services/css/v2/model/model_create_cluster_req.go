@@ -7,7 +7,7 @@ import (
 )
 
 type CreateClusterReq struct {
-	Cluster *CreateClusterBody `json:"cluster"`
+	Cluster *CreateClusterBody `json:"cluster" xml:"cluster"`
 }
 
 func (o CreateClusterReq) String() string {

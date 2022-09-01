@@ -10,12 +10,12 @@ import (
 type UpdateCaseRequest struct {
 
 	// 用例id
-	CaseId int32 `json:"case_id"`
+	CaseId int32 `json:"case_id" xml:"case_id"`
 
 	// 类型
-	Target string `json:"target"`
+	Target string `json:"target" xml:"target"`
 
-	Body *UpdateCaseRequestBody `json:"body,omitempty"`
+	Body *UpdateCaseRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateCaseRequest) String() string {

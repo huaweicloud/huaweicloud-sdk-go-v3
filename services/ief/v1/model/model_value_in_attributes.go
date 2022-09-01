@@ -10,12 +10,12 @@ import (
 type ValueInAttributes struct {
 
 	// value 最大长度512， value允许英文字母、数字、下划线、中划线、点、逗号、@、#、+、\\、/、？、^、=、%、&、:、~
-	Value string `json:"value"`
+	Value string `json:"value" xml:"value"`
 
 	// 标识属性是否可选，默认为true
-	Optional *bool `json:"optional,omitempty"`
+	Optional *bool `json:"optional,omitempty" xml:"optional"`
 
-	Metadata *Metadata `json:"metadata,omitempty"`
+	Metadata *Metadata `json:"metadata,omitempty" xml:"metadata"`
 }
 
 func (o ValueInAttributes) String() string {

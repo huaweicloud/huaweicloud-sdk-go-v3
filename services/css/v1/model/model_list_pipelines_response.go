@@ -10,7 +10,7 @@ import (
 type ListPipelinesResponse struct {
 
 	// pipeline列表。
-	Pipelines      *[]Pipelines `json:"pipelines,omitempty"`
+	Pipelines      *[]Pipelines `json:"pipelines,omitempty" xml:"pipelines"`
 	HttpStatusCode int          `json:"-"`
 }
 

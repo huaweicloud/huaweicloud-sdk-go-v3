@@ -10,7 +10,7 @@ import (
 type DeleteTemplateRequest struct {
 
 	// 自定义转码模板ID
-	TemplateId int64 `json:"template_id"`
+	TemplateId int64 `json:"template_id" xml:"template_id"`
 }
 
 func (o DeleteTemplateRequest) String() string {

@@ -10,12 +10,12 @@ import (
 type ListFlavorsResponse struct {
 
 	// 规格列表。
-	Flavors *[]Flavor `json:"flavors,omitempty"`
+	Flavors *[]Flavor `json:"flavors,omitempty" xml:"flavors"`
 
-	PageInfo *PageInfo `json:"page_info,omitempty"`
+	PageInfo *PageInfo `json:"page_info,omitempty" xml:"page_info"`
 
 	// 请求ID。  注：自动生成 。
-	RequestId      *string `json:"request_id,omitempty"`
+	RequestId      *string `json:"request_id,omitempty" xml:"request_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

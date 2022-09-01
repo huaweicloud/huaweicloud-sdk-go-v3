@@ -10,10 +10,10 @@ import (
 type ListGaussMySqlInstancesResponse struct {
 
 	// 实例列表信息。
-	Instances *[]MysqlInstanceListInfo `json:"instances,omitempty"`
+	Instances *[]MysqlInstanceListInfo `json:"instances,omitempty" xml:"instances"`
 
 	// 总记录数。
-	TotalCount     *int32 `json:"total_count,omitempty"`
+	TotalCount     *int32 `json:"total_count,omitempty" xml:"total_count"`
 	HttpStatusCode int    `json:"-"`
 }
 

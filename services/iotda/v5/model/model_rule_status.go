@@ -10,7 +10,7 @@ import (
 type RuleStatus struct {
 
 	// **参数说明**：规则的激活状态。 **取值范围**： - active：激活。 - inactive：未激活。
-	Status string `json:"status"`
+	Status string `json:"status" xml:"status"`
 }
 
 func (o RuleStatus) String() string {

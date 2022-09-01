@@ -10,13 +10,13 @@ import (
 type ChangeAlarmRuleStatus struct {
 
 	// 告警规则ID
-	AlarmRuleId string `json:"alarm_rule_id"`
+	AlarmRuleId string `json:"alarm_rule_id" xml:"alarm_rule_id"`
 
 	// 状态（RUNNING/STOPPING）
-	Status string `json:"status"`
+	Status string `json:"status" xml:"status"`
 
 	// 类型
-	Type string `json:"type"`
+	Type string `json:"type" xml:"type"`
 }
 
 func (o ChangeAlarmRuleStatus) String() string {

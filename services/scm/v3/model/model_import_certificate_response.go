@@ -10,7 +10,7 @@ import (
 type ImportCertificateResponse struct {
 
 	// 证书id。
-	CertificateId  *string `json:"certificate_id,omitempty"`
+	CertificateId  *string `json:"certificate_id,omitempty" xml:"certificate_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

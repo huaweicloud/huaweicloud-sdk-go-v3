@@ -10,13 +10,13 @@ import (
 type AttributeChange struct {
 
 	// 变更后的取值
-	NewValue *string `json:"new_value,omitempty"`
+	NewValue *string `json:"new_value,omitempty" xml:"new_value"`
 
 	// 变更前的取值
-	OldValue *string `json:"old_value,omitempty"`
+	OldValue *string `json:"old_value,omitempty" xml:"old_value"`
 
 	// 发生变更的测试计划属性
-	AttributeType *string `json:"attribute_type,omitempty"`
+	AttributeType *string `json:"attribute_type,omitempty" xml:"attribute_type"`
 }
 
 func (o AttributeChange) String() string {

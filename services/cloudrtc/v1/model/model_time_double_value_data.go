@@ -9,10 +9,10 @@ import (
 type TimeDoubleValueData struct {
 
 	// 采样时间。日期格式按照ISO8601表示法，并使用UTC时间。格式为YYYY-MM-DDThh:mm:ssZ
-	Time *string `json:"time,omitempty"`
+	Time *string `json:"time,omitempty" xml:"time"`
 
 	// 当前时间返回参数取值
-	Value *float64 `json:"value,omitempty"`
+	Value *float64 `json:"value,omitempty" xml:"value"`
 }
 
 func (o TimeDoubleValueData) String() string {

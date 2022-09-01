@@ -10,16 +10,16 @@ import (
 type ListVaultResponse struct {
 
 	// 存储库实例列表
-	Vaults *[]Vault `json:"vaults,omitempty"`
+	Vaults *[]Vault `json:"vaults,omitempty" xml:"vaults"`
 
 	// 存储库个数
-	Count *int32 `json:"count,omitempty"`
+	Count *int32 `json:"count,omitempty" xml:"count"`
 
 	// 每页显示的条目数量
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 偏移量，表示从此偏移量开始查询
-	Offset         *int32 `json:"offset,omitempty"`
+	Offset         *int32 `json:"offset,omitempty" xml:"offset"`
 	HttpStatusCode int    `json:"-"`
 }
 

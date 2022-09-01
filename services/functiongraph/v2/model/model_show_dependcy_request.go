@@ -10,7 +10,7 @@ import (
 type ShowDependcyRequest struct {
 
 	// 依赖包的ID。
-	DependId string `json:"depend_id"`
+	DependId string `json:"depend_id" xml:"depend_id"`
 }
 
 func (o ShowDependcyRequest) String() string {

@@ -7,7 +7,7 @@ import (
 )
 
 type AddProtectRequest struct {
-	AccessLevel *AddProtectAccessLevel `json:"access_level"`
+	AccessLevel *AddProtectAccessLevel `json:"access_level" xml:"access_level"`
 }
 
 func (o AddProtectRequest) String() string {

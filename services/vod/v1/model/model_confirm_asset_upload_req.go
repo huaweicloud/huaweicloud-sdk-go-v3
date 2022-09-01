@@ -12,10 +12,10 @@ import (
 type ConfirmAssetUploadReq struct {
 
 	// 媒资ID。
-	AssetId string `json:"asset_id"`
+	AssetId string `json:"asset_id" xml:"asset_id"`
 
 	// 上传状态。  取值如下： - CREATED：创建成功。 - FAILED：创建失败。 - CANCELLED：创建取消。
-	Status ConfirmAssetUploadReqStatus `json:"status"`
+	Status ConfirmAssetUploadReqStatus `json:"status" xml:"status"`
 }
 
 func (o ConfirmAssetUploadReq) String() string {

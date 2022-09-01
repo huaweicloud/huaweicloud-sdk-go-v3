@@ -13,22 +13,22 @@ import (
 type TargetServerAssociatedWithTask struct {
 
 	// 目的端在SMS数据库中的ID
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 目的端虚机id
-	VmId *string `json:"vm_id,omitempty"`
+	VmId *string `json:"vm_id,omitempty" xml:"vm_id"`
 
 	// 目的端服务器名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 目的端服务器ip
-	Ip *string `json:"ip,omitempty"`
+	Ip *string `json:"ip,omitempty" xml:"ip"`
 
 	// 目的端服务器的OS类型
-	OsType *TargetServerAssociatedWithTaskOsType `json:"os_type,omitempty"`
+	OsType *TargetServerAssociatedWithTaskOsType `json:"os_type,omitempty" xml:"os_type"`
 
 	// 操作系统版本
-	OsVersion *string `json:"os_version,omitempty"`
+	OsVersion *string `json:"os_version,omitempty" xml:"os_version"`
 }
 
 func (o TargetServerAssociatedWithTask) String() string {

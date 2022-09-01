@@ -9,10 +9,10 @@ import (
 type ThrottleApiBindingCreate struct {
 
 	// 流控策略编号
-	StrategyId string `json:"strategy_id"`
+	StrategyId string `json:"strategy_id" xml:"strategy_id"`
 
 	// API的发布记录编号
-	PublishIds []string `json:"publish_ids"`
+	PublishIds []string `json:"publish_ids" xml:"publish_ids"`
 }
 
 func (o ThrottleApiBindingCreate) String() string {

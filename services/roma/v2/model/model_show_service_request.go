@@ -10,10 +10,10 @@ import (
 type ShowServiceRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 服务ID
-	ServiceId string `json:"service_id"`
+	ServiceId string `json:"service_id" xml:"service_id"`
 }
 
 func (o ShowServiceRequest) String() string {

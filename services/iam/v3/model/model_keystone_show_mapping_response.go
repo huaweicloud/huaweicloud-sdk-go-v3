@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type KeystoneShowMappingResponse struct {
-	Mapping        *MappingResult `json:"mapping,omitempty"`
+	Mapping        *MappingResult `json:"mapping,omitempty" xml:"mapping"`
 	HttpStatusCode int            `json:"-"`
 }
 

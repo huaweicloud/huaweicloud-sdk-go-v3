@@ -10,10 +10,10 @@ import (
 type ImageTaggingItemBodyI18nType struct {
 
 	// 中文标签类别
-	Zh *string `json:"zh,omitempty"`
+	Zh *string `json:"zh,omitempty" xml:"zh"`
 
 	// 英文标签类别
-	En *string `json:"en,omitempty"`
+	En *string `json:"en,omitempty" xml:"en"`
 }
 
 func (o ImageTaggingItemBodyI18nType) String() string {

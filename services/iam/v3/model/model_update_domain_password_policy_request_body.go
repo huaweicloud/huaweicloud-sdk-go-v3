@@ -8,7 +8,7 @@ import (
 
 //
 type UpdateDomainPasswordPolicyRequestBody struct {
-	PasswordPolicy *PasswordPolicyOption `json:"password_policy"`
+	PasswordPolicy *PasswordPolicyOption `json:"password_policy" xml:"password_policy"`
 }
 
 func (o UpdateDomainPasswordPolicyRequestBody) String() string {

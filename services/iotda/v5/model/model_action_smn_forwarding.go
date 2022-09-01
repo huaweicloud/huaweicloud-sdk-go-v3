@@ -10,22 +10,22 @@ import (
 type ActionSmnForwarding struct {
 
 	// **参数说明**：SMN服务对应的region区域。
-	RegionName string `json:"region_name"`
+	RegionName string `json:"region_name" xml:"region_name"`
 
 	// **参数说明**：SMN服务对应的projectId信息。
-	ProjectId string `json:"project_id"`
+	ProjectId string `json:"project_id" xml:"project_id"`
 
 	// **参数说明**：SMN服务对应的主题名称。
-	ThemeName string `json:"theme_name"`
+	ThemeName string `json:"theme_name" xml:"theme_name"`
 
 	// **参数说明**：SMN服务对应的topic的主题URN。
-	TopicUrn string `json:"topic_urn"`
+	TopicUrn string `json:"topic_urn" xml:"topic_urn"`
 
 	// **参数说明**：短信或邮件的内容。。
-	MessageContent string `json:"message_content"`
+	MessageContent string `json:"message_content" xml:"message_content"`
 
 	// **参数说明**：短信或邮件的主题。。
-	MessageTitle string `json:"message_title"`
+	MessageTitle string `json:"message_title" xml:"message_title"`
 }
 
 func (o ActionSmnForwarding) String() string {

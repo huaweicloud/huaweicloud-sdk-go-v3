@@ -10,22 +10,22 @@ import (
 type GlanceAddImageMemberResponse struct {
 
 	// 共享状态
-	Status *string `json:"status,omitempty"`
+	Status *string `json:"status,omitempty" xml:"status"`
 
 	// 共享时间，格式为UTC时间
-	CreatedAt *string `json:"created_at,omitempty"`
+	CreatedAt *string `json:"created_at,omitempty" xml:"created_at"`
 
 	// 更新时间，格式为UTC时间
-	UpdatedAt *string `json:"updated_at,omitempty"`
+	UpdatedAt *string `json:"updated_at,omitempty" xml:"updated_at"`
 
 	// 镜像ID
-	ImageId *string `json:"image_id,omitempty"`
+	ImageId *string `json:"image_id,omitempty" xml:"image_id"`
 
 	// 成员ID
-	MemberId *string `json:"member_id,omitempty"`
+	MemberId *string `json:"member_id,omitempty" xml:"member_id"`
 
 	// 共享视图
-	Schema         *string `json:"schema,omitempty"`
+	Schema         *string `json:"schema,omitempty" xml:"schema"`
 	HttpStatusCode int     `json:"-"`
 }
 

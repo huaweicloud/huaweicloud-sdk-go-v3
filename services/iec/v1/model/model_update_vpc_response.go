@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type UpdateVpcResponse struct {
-	Vpc            *Vpc `json:"vpc,omitempty"`
+	Vpc            *Vpc `json:"vpc,omitempty" xml:"vpc"`
 	HttpStatusCode int  `json:"-"`
 }
 

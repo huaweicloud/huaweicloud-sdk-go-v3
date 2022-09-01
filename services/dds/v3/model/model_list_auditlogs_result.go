@@ -9,22 +9,22 @@ import (
 type ListAuditlogsResult struct {
 
 	// 节点ID。
-	NodeId string `json:"node_id"`
+	NodeId string `json:"node_id" xml:"node_id"`
 
 	// 审计日志ID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 审计日志文件名。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 审计日志大小，单位：byte。
-	Size int64 `json:"size"`
+	Size int64 `json:"size" xml:"size"`
 
 	// 审计日志开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。其中，T指某个时间的开始，Z指时区偏移量，例如北京时间偏移显示为+0800。
-	StartTime string `json:"start_time"`
+	StartTime string `json:"start_time" xml:"start_time"`
 
 	// 审计日志结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
-	EndTime string `json:"end_time"`
+	EndTime string `json:"end_time" xml:"end_time"`
 }
 
 func (o ListAuditlogsResult) String() string {

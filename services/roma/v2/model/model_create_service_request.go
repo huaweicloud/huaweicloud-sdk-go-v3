@@ -10,9 +10,9 @@ import (
 type CreateServiceRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *CreateServiceRequestBody `json:"body,omitempty"`
+	Body *CreateServiceRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateServiceRequest) String() string {

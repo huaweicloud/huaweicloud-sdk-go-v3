@@ -8,9 +8,9 @@ import (
 
 // Request Object
 type ShowRecordSetWithLineRequest struct {
-	ZoneId string `json:"zone_id"`
+	ZoneId string `json:"zone_id" xml:"zone_id"`
 
-	RecordsetId string `json:"recordset_id"`
+	RecordsetId string `json:"recordset_id" xml:"recordset_id"`
 }
 
 func (o ShowRecordSetWithLineRequest) String() string {

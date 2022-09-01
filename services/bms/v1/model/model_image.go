@@ -10,10 +10,10 @@ import (
 type Image struct {
 
 	// 裸金属服务器镜像ID
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 裸金属服务器镜像相关快捷链接信息
-	Links *[]Links `json:"links,omitempty"`
+	Links *[]Links `json:"links,omitempty" xml:"links"`
 }
 
 func (o Image) String() string {

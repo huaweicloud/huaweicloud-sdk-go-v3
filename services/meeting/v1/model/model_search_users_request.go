@@ -13,46 +13,46 @@ import (
 type SearchUsersRequest struct {
 
 	// 请求requestId，用来标识一路请求，用于问题跟踪定位，建议使用uuId，若不携带，则后台自动生成
-	XRequestId *string `json:"X-Request-Id,omitempty"`
+	XRequestId *string `json:"X-Request-Id,omitempty" xml:"X-Request-Id"`
 
 	// 语言参数，默认为中文zh-CN, 英文为en-US
-	AcceptLanguage *string `json:"Accept-Language,omitempty"`
+	AcceptLanguage *string `json:"Accept-Language,omitempty" xml:"Accept-Language"`
 
 	// 查询偏移量,若超过最大数量，则返回最后一页
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 查询数量 默认值：0
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 搜索条件，支持姓名、手机、邮箱、账号、第三方账号模糊搜索。
-	SearchKey *string `json:"searchKey,omitempty"`
+	SearchKey *string `json:"searchKey,omitempty" xml:"searchKey"`
 
 	// 排序字段名称  约束 - 长度范围为0到64个字符  支持的取值 - userType - adminType - ldapAccount - deptCode - status - sortLevel
-	SortField *string `json:"sortField,omitempty"`
+	SortField *string `json:"sortField,omitempty" xml:"sortField"`
 
 	// 是否按升序排序
-	IsAsc *bool `json:"isAsc,omitempty"`
+	IsAsc *bool `json:"isAsc,omitempty" xml:"isAsc"`
 
 	// 部门编码，不带则查询所有。
-	DeptCode *string `json:"deptCode,omitempty"`
+	DeptCode *string `json:"deptCode,omitempty" xml:"deptCode"`
 
 	// 是否查询子部门 默认值: true
-	EnableSubDept *bool `json:"enableSubDept,omitempty"`
+	EnableSubDept *bool `json:"enableSubDept,omitempty" xml:"enableSubDept"`
 
 	// 根据管理员类型查询 * 1：普通管理员； * 2：非管理员。
-	AdminType *SearchUsersRequestAdminType `json:"adminType,omitempty"`
+	AdminType *SearchUsersRequestAdminType `json:"adminType,omitempty" xml:"adminType"`
 
 	// 是否开启智能协同白板功能功能位，不带则搜索所有。
-	EnableRoom *bool `json:"enableRoom,omitempty"`
+	EnableRoom *bool `json:"enableRoom,omitempty" xml:"enableRoom"`
 
 	// 用户类型 * 2：普通用户； * 12：智慧屏用户； * 13：ideaHub用户； * 若不携带，则默认查询普通用户。
-	UserType *[]int32 `json:"userType,omitempty"`
+	UserType *[]int32 `json:"userType,omitempty" xml:"userType"`
 
 	// 用户状态 * 0：正常； * 1：停用。不带则查询所有
-	Status *int32 `json:"status,omitempty"`
+	Status *int32 `json:"status,omitempty" xml:"status"`
 
 	// 是否查询未激活的终端 默认值: false
-	ContainsUnActive *bool `json:"containsUnActive,omitempty"`
+	ContainsUnActive *bool `json:"containsUnActive,omitempty" xml:"containsUnActive"`
 }
 
 func (o SearchUsersRequest) String() string {

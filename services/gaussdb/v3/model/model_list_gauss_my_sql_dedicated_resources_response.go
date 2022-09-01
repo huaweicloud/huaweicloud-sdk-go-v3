@@ -10,10 +10,10 @@ import (
 type ListGaussMySqlDedicatedResourcesResponse struct {
 
 	// 专属资源池信息
-	Resources *[]DedicatedResource `json:"resources,omitempty"`
+	Resources *[]DedicatedResource `json:"resources,omitempty" xml:"resources"`
 
 	// 专属资源池数量
-	TotalCount     *int32 `json:"total_count,omitempty"`
+	TotalCount     *int32 `json:"total_count,omitempty" xml:"total_count"`
 	HttpStatusCode int    `json:"-"`
 }
 

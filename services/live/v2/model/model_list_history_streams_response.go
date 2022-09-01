@@ -10,12 +10,12 @@ import (
 type ListHistoryStreamsResponse struct {
 
 	// 历史流信息列表。
-	HistoryStreamList *[]HistoryStreamInfo `json:"history_stream_list,omitempty"`
+	HistoryStreamList *[]HistoryStreamInfo `json:"history_stream_list,omitempty" xml:"history_stream_list"`
 
 	// 总记录数。
-	Total *int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty" xml:"total"`
 
-	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	XRequestId     *string `json:"X-Request-Id,omitempty" xml:"X-Request-Id"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -10,7 +10,7 @@ import (
 type CreateMetricDataRequest struct {
 
 	// 添加一条或多条自定义指标监控数据，请求参数。
-	Body *[]MetricDataItem `json:"body,omitempty"`
+	Body *[]MetricDataItem `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateMetricDataRequest) String() string {

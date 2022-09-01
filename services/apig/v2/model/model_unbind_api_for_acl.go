@@ -9,34 +9,34 @@ import (
 type UnbindApiForAcl struct {
 
 	// API的ID
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// API名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// API所属分组的编号
-	GroupId *string `json:"group_id,omitempty"`
+	GroupId *string `json:"group_id,omitempty" xml:"group_id"`
 
 	// API所属分组的名称
-	GroupName *string `json:"group_name,omitempty"`
+	GroupName *string `json:"group_name,omitempty" xml:"group_name"`
 
 	// API开放状态
-	Type *int32 `json:"type,omitempty"`
+	Type *int32 `json:"type,omitempty" xml:"type"`
 
 	// API描述
-	Remark *string `json:"remark,omitempty"`
+	Remark *string `json:"remark,omitempty" xml:"remark"`
 
 	// 发布的环境名
-	RunEnvName *string `json:"run_env_name,omitempty"`
+	RunEnvName *string `json:"run_env_name,omitempty" xml:"run_env_name"`
 
 	// 发布的环境id
-	RunEnvId *string `json:"run_env_id,omitempty"`
+	RunEnvId *string `json:"run_env_id,omitempty" xml:"run_env_id"`
 
 	// API发布记录编号
-	PublishId *string `json:"publish_id,omitempty"`
+	PublishId *string `json:"publish_id,omitempty" xml:"publish_id"`
 
 	// 绑定的其他同类型的ACL策略名称
-	AclName *string `json:"acl_name,omitempty"`
+	AclName *string `json:"acl_name,omitempty" xml:"acl_name"`
 }
 
 func (o UnbindApiForAcl) String() string {

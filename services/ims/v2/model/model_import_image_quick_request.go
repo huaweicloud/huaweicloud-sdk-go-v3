@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ImportImageQuickRequest struct {
-	Body *QuickImportImageByFileRequestBody `json:"body,omitempty"`
+	Body *QuickImportImageByFileRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o ImportImageQuickRequest) String() string {

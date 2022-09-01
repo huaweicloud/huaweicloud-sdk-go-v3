@@ -10,13 +10,13 @@ import (
 type ListEventSourcesResponse struct {
 
 	// 总数
-	Total *int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty" xml:"total"`
 
 	// 本页数量
-	Size *int32 `json:"size,omitempty"`
+	Size *int32 `json:"size,omitempty" xml:"size"`
 
 	// 对象列表
-	Items          *[]SourceInfo `json:"items,omitempty"`
+	Items          *[]SourceInfo `json:"items,omitempty" xml:"items"`
 	HttpStatusCode int           `json:"-"`
 }
 

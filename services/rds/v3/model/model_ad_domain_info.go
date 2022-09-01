@@ -10,10 +10,10 @@ import (
 type AdDomainInfo struct {
 
 	// 域管理员账号名
-	DomainAdminAccountName string `json:"domain_admin_account_name"`
+	DomainAdminAccountName string `json:"domain_admin_account_name" xml:"domain_admin_account_name"`
 
 	// 域管理员密码
-	DomainAdminPwd string `json:"domain_admin_pwd"`
+	DomainAdminPwd string `json:"domain_admin_pwd" xml:"domain_admin_pwd"`
 }
 
 func (o AdDomainInfo) String() string {

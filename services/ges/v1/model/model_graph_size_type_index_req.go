@@ -9,7 +9,7 @@ import (
 type GraphSizeTypeIndexReq struct {
 
 	// 图规格类型，当前支持取值为\"2\",\"3\",\"4\",\"5\"分别代表扩容成千万边、一亿边、十亿边、百亿边规格的图
-	GraphSizeTypeIndex string `json:"graphSizeTypeIndex"`
+	GraphSizeTypeIndex string `json:"graphSizeTypeIndex" xml:"graphSizeTypeIndex"`
 }
 
 func (o GraphSizeTypeIndexReq) String() string {

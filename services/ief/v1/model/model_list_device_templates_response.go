@@ -10,10 +10,10 @@ import (
 type ListDeviceTemplatesResponse struct {
 
 	// 终端设备属性
-	DeviceTemplates *[]EdgemgrDevice `json:"device_templates,omitempty"`
+	DeviceTemplates *[]EdgemgrDevice `json:"device_templates,omitempty" xml:"device_templates"`
 
 	// 模板数量
-	Count          *int32 `json:"count,omitempty"`
+	Count          *int32 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

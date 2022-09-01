@@ -12,19 +12,19 @@ import (
 type CreateServiceRequestBody struct {
 
 	// 服务归属的产品模板ID，产品模板ID和产品ID二选一必填，自动向下取整
-	ProductTemplateId *int32 `json:"product_template_id,omitempty"`
+	ProductTemplateId *int32 `json:"product_template_id,omitempty" xml:"product_template_id"`
 
 	// 服务归属的产品ID，产品模板ID和产品ID二选一必填，自动向下取整
-	ProductId *int32 `json:"product_id,omitempty"`
+	ProductId *int32 `json:"product_id,omitempty" xml:"product_id"`
 
 	// 服务名称，支持中文,英文大小写，数字，下划线和中划线,长度2-64
-	ServiceName string `json:"service_name"`
+	ServiceName string `json:"service_name" xml:"service_name"`
 
 	// 服务描述，长度0-200
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 服务状态 0-启用 1-停用
-	Status CreateServiceRequestBodyStatus `json:"status"`
+	Status CreateServiceRequestBodyStatus `json:"status" xml:"status"`
 }
 
 func (o CreateServiceRequestBody) String() string {

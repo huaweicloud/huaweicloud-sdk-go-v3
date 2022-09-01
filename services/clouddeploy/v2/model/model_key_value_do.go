@@ -10,13 +10,13 @@ import (
 type KeyValueDo struct {
 
 	// 执行部署任务时传递的参数名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 执行部署任务时传递的参数值
-	Value *string `json:"value,omitempty"`
+	Value *string `json:"value,omitempty" xml:"value"`
 
 	// 参数值为枚举类型时，返回可选值列表
-	Limits *[]ParamTypeLimits `json:"limits,omitempty"`
+	Limits *[]ParamTypeLimits `json:"limits,omitempty" xml:"limits"`
 }
 
 func (o KeyValueDo) String() string {

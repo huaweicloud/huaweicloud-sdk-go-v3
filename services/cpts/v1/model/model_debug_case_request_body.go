@@ -10,16 +10,16 @@ import (
 type DebugCaseRequestBody struct {
 
 	// status
-	Status int32 `json:"status"`
+	Status int32 `json:"status" xml:"status"`
 
 	// cluster_id
-	ClusterId int32 `json:"cluster_id"`
+	ClusterId int32 `json:"cluster_id" xml:"cluster_id"`
 
 	// cluster_type
-	ClusterType string `json:"cluster_type"`
+	ClusterType string `json:"cluster_type" xml:"cluster_type"`
 
 	// without_package
-	WithoutPackage int32 `json:"without_package"`
+	WithoutPackage int32 `json:"without_package" xml:"without_package"`
 }
 
 func (o DebugCaseRequestBody) String() string {

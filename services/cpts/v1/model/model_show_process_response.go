@@ -10,15 +10,15 @@ import (
 type ShowProcessResponse struct {
 
 	// code
-	Code *string `json:"code,omitempty"`
+	Code *string `json:"code,omitempty" xml:"code"`
 
 	// message
-	Message *string `json:"message,omitempty"`
+	Message *string `json:"message,omitempty" xml:"message"`
 
-	Json *UploadProcessJson `json:"json,omitempty"`
+	Json *UploadProcessJson `json:"json,omitempty" xml:"json"`
 
 	// extend
-	Extend         *string `json:"extend,omitempty"`
+	Extend         *string `json:"extend,omitempty" xml:"extend"`
 	HttpStatusCode int     `json:"-"`
 }
 

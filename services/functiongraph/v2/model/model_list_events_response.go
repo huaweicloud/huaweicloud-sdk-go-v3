@@ -10,13 +10,13 @@ import (
 type ListEventsResponse struct {
 
 	// 测试事件总数。
-	Count *int32 `json:"count,omitempty"`
+	Count *int32 `json:"count,omitempty" xml:"count"`
 
 	// 测试事件列表。
-	Events *[]ListEventsResult `json:"events,omitempty"`
+	Events *[]ListEventsResult `json:"events,omitempty" xml:"events"`
 
 	// 下次读取位置。
-	NextMarker     *int64 `json:"next_marker,omitempty"`
+	NextMarker     *int64 `json:"next_marker,omitempty" xml:"next_marker"`
 	HttpStatusCode int    `json:"-"`
 }
 

@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RestartOrFlushInstancesRequest struct {
-	Body *ChangeInstanceStatusBody `json:"body,omitempty"`
+	Body *ChangeInstanceStatusBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o RestartOrFlushInstancesRequest) String() string {

@@ -7,7 +7,7 @@ import (
 )
 
 type CreateKmsTagRequestBody struct {
-	Tag *TagItem `json:"tag,omitempty"`
+	Tag *TagItem `json:"tag,omitempty" xml:"tag"`
 }
 
 func (o CreateKmsTagRequestBody) String() string {

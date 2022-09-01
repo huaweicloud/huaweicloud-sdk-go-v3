@@ -10,10 +10,10 @@ import (
 type MixUserBackgroundImage struct {
 
 	// 需要设置背景图的用户ID
-	UserId string `json:"user_id"`
+	UserId string `json:"user_id" xml:"user_id"`
 
 	// 需要设置背景图的地址，图片先上传obs，格式s3://bucket/object
-	ImageUri string `json:"image_uri"`
+	ImageUri string `json:"image_uri" xml:"image_uri"`
 }
 
 func (o MixUserBackgroundImage) String() string {

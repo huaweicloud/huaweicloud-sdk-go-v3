@@ -10,7 +10,7 @@ import (
 type DeleteTemplateGroupCollectionRequest struct {
 
 	// 模板组集合id
-	GroupCollectionId string `json:"group_collection_id"`
+	GroupCollectionId string `json:"group_collection_id" xml:"group_collection_id"`
 }
 
 func (o DeleteTemplateGroupCollectionRequest) String() string {

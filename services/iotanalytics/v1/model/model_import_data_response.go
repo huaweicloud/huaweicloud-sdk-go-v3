@@ -10,13 +10,13 @@ import (
 type ImportDataResponse struct {
 
 	// 表ID。
-	TableId *string `json:"table_id,omitempty"`
+	TableId *string `json:"table_id,omitempty" xml:"table_id"`
 
 	// 作业ID。
-	JobId *string `json:"job_id,omitempty"`
+	JobId *string `json:"job_id,omitempty" xml:"job_id"`
 
 	// 作业运行ID。
-	RunId          *string `json:"run_id,omitempty"`
+	RunId          *string `json:"run_id,omitempty" xml:"run_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

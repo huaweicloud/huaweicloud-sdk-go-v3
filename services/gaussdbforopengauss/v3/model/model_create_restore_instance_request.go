@@ -13,9 +13,9 @@ import (
 type CreateRestoreInstanceRequest struct {
 
 	// 语言
-	XLanguage *CreateRestoreInstanceRequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *CreateRestoreInstanceRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 
-	Body *OpengaussRestoreInstanceRequest `json:"body,omitempty"`
+	Body *OpengaussRestoreInstanceRequest `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateRestoreInstanceRequest) String() string {

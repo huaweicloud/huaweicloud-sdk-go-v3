@@ -13,25 +13,25 @@ import (
 type UpdateTaskSpeedReq struct {
 
 	// 当前上报进度的子任务名称，子任务名称包括： 创建虚拟机 CREATE_CLOUD_SERVER 配置安全通道 SSL_CONFIG 挂载代理镜像 ATTACH_AGENT_IMAGE 卸载载代理镜像 DETTACH_AGENT_IMAGE Linux分区格式化 FORMAT_DISK_LINUX Linux分区格式化(文件级级） FORMAT_DISK_LINUX_FILE Linux分区格式化(块级） FORMAT_DISK_LINUX_BLOCK Windows分区格式化 FORMAT_DISK_WINDOWS Linux文件级数据迁移 MIGRATE_LINUX_FILE, Linux块级数据迁移 MIGRATE_LINUX_BLOCK Windows块级数据迁移 MIGRATE_WINDOWS_BLOCK 克隆一个虚拟机 CLONE_VM Linux文件级数据同步 SYNC_LINUX_FILE Linux块级数据同步 SYNC_LINUX_BLOCK Windows块级数据同步 SYNC_WINDOWS_BLOCK Linux配置修改 CONFIGURE_LINUX Linux配置修改(块级）CONFIGURE_LINUX_BLOCK Linux配置修改（文件级） CONFIGURE_LINUX_FILE Windows配置修改 CONFIGURE_WINDOWS
-	SubtaskName UpdateTaskSpeedReqSubtaskName `json:"subtask_name"`
+	SubtaskName UpdateTaskSpeedReqSubtaskName `json:"subtask_name" xml:"subtask_name"`
 
 	// 当前上报的子任务的最新百分比进度
-	Progress int32 `json:"progress"`
+	Progress int32 `json:"progress" xml:"progress"`
 
 	// 当前任务已经复制的数据量大小（B）
-	Replicatesize int64 `json:"replicatesize"`
+	Replicatesize int64 `json:"replicatesize" xml:"replicatesize"`
 
 	// 当前任务的总迁移数据大小
-	Totalsize int64 `json:"totalsize"`
+	Totalsize int64 `json:"totalsize" xml:"totalsize"`
 
 	// 迁移或同步时，具体的迁移详情
-	ProcessTrace string `json:"process_trace"`
+	ProcessTrace string `json:"process_trace" xml:"process_trace"`
 
 	// 实施迁移速率，单位Mb/s
-	MigrateSpeed *float64 `json:"migrate_speed,omitempty"`
+	MigrateSpeed *float64 `json:"migrate_speed,omitempty" xml:"migrate_speed"`
 
 	// 实施文件压缩率
-	CompressRate *float64 `json:"compress_rate,omitempty"`
+	CompressRate *float64 `json:"compress_rate,omitempty" xml:"compress_rate"`
 }
 
 func (o UpdateTaskSpeedReq) String() string {

@@ -13,10 +13,10 @@ import (
 type ConfirmImageUploadReq struct {
 
 	// 水印配置模板id。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 水印上传状态。
-	Status ConfirmImageUploadReqStatus `json:"status"`
+	Status ConfirmImageUploadReqStatus `json:"status" xml:"status"`
 }
 
 func (o ConfirmImageUploadReq) String() string {

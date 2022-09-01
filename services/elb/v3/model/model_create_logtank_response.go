@@ -8,10 +8,10 @@ import (
 
 // Response Object
 type CreateLogtankResponse struct {
-	Logtank *Logtank `json:"logtank,omitempty"`
+	Logtank *Logtank `json:"logtank,omitempty" xml:"logtank"`
 
 	// 请求ID。  注：自动生成 。
-	RequestId      *string `json:"request_id,omitempty"`
+	RequestId      *string `json:"request_id,omitempty" xml:"request_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

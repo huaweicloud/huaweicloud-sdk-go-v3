@@ -10,9 +10,9 @@ import (
 type ListRtcRealtimeNetworkResponse struct {
 
 	// 时间戳及相应时间的指标数值列表
-	Network *[]TimeDoubleValueData `json:"network,omitempty"`
+	Network *[]TimeDoubleValueData `json:"network,omitempty" xml:"network"`
 
-	XRequestId     *string `json:"X-request-id,omitempty"`
+	XRequestId     *string `json:"X-request-id,omitempty" xml:"X-request-id"`
 	HttpStatusCode int     `json:"-"`
 }
 

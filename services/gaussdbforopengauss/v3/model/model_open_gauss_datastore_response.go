@@ -13,10 +13,10 @@ import (
 type OpenGaussDatastoreResponse struct {
 
 	// 数据库引擎，不区分大小写，取值如下：  GaussDB(for openGauss)
-	Type OpenGaussDatastoreResponseType `json:"type"`
+	Type OpenGaussDatastoreResponseType `json:"type" xml:"type"`
 
 	// 数据库版本。
-	Version string `json:"version"`
+	Version string `json:"version" xml:"version"`
 }
 
 func (o OpenGaussDatastoreResponse) String() string {

@@ -13,26 +13,26 @@ import (
 type ShowProductTemplateResponse struct {
 
 	// 产品模板ID
-	Id *int32 `json:"id,omitempty"`
+	Id *int32 `json:"id,omitempty" xml:"id"`
 
 	// 产品模板名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 产品模板描述
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 产品模板状态 0-启用 1-停用
-	Status *ShowProductTemplateResponseStatus `json:"status,omitempty"`
+	Status *ShowProductTemplateResponseStatus `json:"status,omitempty" xml:"status"`
 
-	CreatedUser *CreatedUser `json:"created_user,omitempty"`
+	CreatedUser *CreatedUser `json:"created_user,omitempty" xml:"created_user"`
 
-	LastUpdatedUser *LastUpdatedUser `json:"last_updated_user,omitempty"`
+	LastUpdatedUser *LastUpdatedUser `json:"last_updated_user,omitempty" xml:"last_updated_user"`
 
 	// 创建时间，timestamp(ms)，使用UTC时区
-	CreatedDatetime *int64 `json:"created_datetime,omitempty"`
+	CreatedDatetime *int64 `json:"created_datetime,omitempty" xml:"created_datetime"`
 
 	// 最后修改时间，timestamp(ms)，使用UTC时区
-	LastUpdatedDatetime *int64 `json:"last_updated_datetime,omitempty"`
+	LastUpdatedDatetime *int64 `json:"last_updated_datetime,omitempty" xml:"last_updated_datetime"`
 	HttpStatusCode      int    `json:"-"`
 }
 

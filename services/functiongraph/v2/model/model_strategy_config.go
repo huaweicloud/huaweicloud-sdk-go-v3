@@ -10,10 +10,10 @@ import (
 type StrategyConfig struct {
 
 	// 单函数最大实例数，v1取值0和-1，v2取值-1到1000
-	Concurrency int32 `json:"concurrency"`
+	Concurrency int32 `json:"concurrency" xml:"concurrency"`
 
 	// 单实例最大并发数，v2版本才支持，取值-1到200000
-	ConcurrentNum int32 `json:"concurrent_num"`
+	ConcurrentNum int32 `json:"concurrent_num" xml:"concurrent_num"`
 }
 
 func (o StrategyConfig) String() string {

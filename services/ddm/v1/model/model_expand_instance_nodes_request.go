@@ -10,9 +10,9 @@ import (
 type ExpandInstanceNodesRequest struct {
 
 	// DDM实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *EnlargeRequest `json:"body,omitempty"`
+	Body *EnlargeRequest `json:"body,omitempty" xml:"body"`
 }
 
 func (o ExpandInstanceNodesRequest) String() string {

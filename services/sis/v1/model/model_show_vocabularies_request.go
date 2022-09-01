@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ShowVocabulariesRequest struct {
-	Body *ShowVocabulariesParams `json:"body,omitempty"`
+	Body *ShowVocabulariesParams `json:"body,omitempty" xml:"body"`
 }
 
 func (o ShowVocabulariesRequest) String() string {

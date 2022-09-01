@@ -10,10 +10,10 @@ import (
 type DatabaseWithPrivilege struct {
 
 	// 数据库名称。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 是否为只读权限。
-	Readonly bool `json:"readonly"`
+	Readonly bool `json:"readonly" xml:"readonly"`
 }
 
 func (o DatabaseWithPrivilege) String() string {

@@ -13,10 +13,10 @@ import (
 type ApiVersionLink struct {
 
 	// API版本信息的链接。
-	Href string `json:"href"`
+	Href string `json:"href" xml:"href"`
 
 	// 链接属性。self：自助链接包含版本链接的资源。立即链接后使用这些链接。
-	Rel ApiVersionLinkRel `json:"rel"`
+	Rel ApiVersionLinkRel `json:"rel" xml:"rel"`
 }
 
 func (o ApiVersionLink) String() string {

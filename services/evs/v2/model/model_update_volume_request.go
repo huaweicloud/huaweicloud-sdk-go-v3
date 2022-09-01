@@ -10,9 +10,9 @@ import (
 type UpdateVolumeRequest struct {
 
 	// 云硬盘ID。
-	VolumeId string `json:"volume_id"`
+	VolumeId string `json:"volume_id" xml:"volume_id"`
 
-	Body *UpdateVolumeRequestBody `json:"body,omitempty"`
+	Body *UpdateVolumeRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateVolumeRequest) String() string {

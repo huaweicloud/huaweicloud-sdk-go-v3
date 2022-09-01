@@ -13,12 +13,12 @@ import (
 type ChangeTheDelayThresholdRequest struct {
 
 	// 语言
-	XLanguage *ChangeTheDelayThresholdRequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *ChangeTheDelayThresholdRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *ChangingTheDelayThresholdRequestBody `json:"body,omitempty"`
+	Body *ChangingTheDelayThresholdRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o ChangeTheDelayThresholdRequest) String() string {

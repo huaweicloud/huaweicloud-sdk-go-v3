@@ -10,12 +10,12 @@ import (
 type CreateResJobsRequest struct {
 
 	// 资源id
-	ResourceId string `json:"resource_id"`
+	ResourceId string `json:"resource_id" xml:"resource_id"`
 
 	// 工作空间id
-	WorkspaceId string `json:"workspace_id"`
+	WorkspaceId string `json:"workspace_id" xml:"workspace_id"`
 
-	Body *CreateResJobsReququestBody `json:"body,omitempty"`
+	Body *CreateResJobsReququestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateResJobsRequest) String() string {

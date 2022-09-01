@@ -10,7 +10,7 @@ import (
 type ShowSecurityPolicyRequest struct {
 
 	// 自定义安全策略ID。
-	SecurityPolicyId string `json:"security_policy_id"`
+	SecurityPolicyId string `json:"security_policy_id" xml:"security_policy_id"`
 }
 
 func (o ShowSecurityPolicyRequest) String() string {

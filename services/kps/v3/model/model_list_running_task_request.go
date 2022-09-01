@@ -10,10 +10,10 @@ import (
 type ListRunningTaskRequest struct {
 
 	// 每页显示的条目数量。默认值1000。
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 首个展示的正在处理任务信息的偏移量
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 }
 
 func (o ListRunningTaskRequest) String() string {

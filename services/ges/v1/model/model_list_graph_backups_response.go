@@ -10,16 +10,16 @@ import (
 type ListGraphBackupsResponse struct {
 
 	// 系统提示信息，执行成功时，字段可能为空。执行失败时，用于显示错误信息。
-	ErrorMessage *string `json:"errorMessage,omitempty"`
+	ErrorMessage *string `json:"errorMessage,omitempty" xml:"errorMessage"`
 
 	// 系统提示信息，执行成功时，字段可能为空。执行失败时，用于显示错误码。
-	ErrorCode *string `json:"errorCode,omitempty"`
+	ErrorCode *string `json:"errorCode,omitempty" xml:"errorCode"`
 
 	// 备份总个数。请求失败时。字段为空。
-	BackupCount *int32 `json:"backupCount,omitempty"`
+	BackupCount *int32 `json:"backupCount,omitempty" xml:"backupCount"`
 
 	// 当前Project下指定Graph的的备份列表。请求失败时，字段为空。
-	BackupList     *[]Backup `json:"backupList,omitempty"`
+	BackupList     *[]Backup `json:"backupList,omitempty" xml:"backupList"`
 	HttpStatusCode int       `json:"-"`
 }
 

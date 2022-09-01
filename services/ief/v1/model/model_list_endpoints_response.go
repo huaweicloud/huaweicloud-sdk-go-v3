@@ -10,10 +10,10 @@ import (
 type ListEndpointsResponse struct {
 
 	// 端点详情
-	Endpoints *[]EndpointObjResp `json:"endpoints,omitempty"`
+	Endpoints *[]EndpointObjResp `json:"endpoints,omitempty" xml:"endpoints"`
 
 	// 满足条件的端点个数
-	Count          *int64 `json:"count,omitempty"`
+	Count          *int64 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

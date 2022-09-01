@@ -10,10 +10,10 @@ import (
 type ShowRepositoryNameExistRequest struct {
 
 	// 项目的uuid
-	ProjectUuid string `json:"project_uuid"`
+	ProjectUuid string `json:"project_uuid" xml:"project_uuid"`
 
 	// 仓库名
-	RepositoryName string `json:"repository_name"`
+	RepositoryName string `json:"repository_name" xml:"repository_name"`
 }
 
 func (o ShowRepositoryNameExistRequest) String() string {

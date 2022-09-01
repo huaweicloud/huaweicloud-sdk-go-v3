@@ -9,15 +9,15 @@ import (
 type MetricRequestV2 struct {
 
 	// 统计周期
-	DateRange *string `json:"date_range,omitempty"`
+	DateRange *string `json:"date_range,omitempty" xml:"date_range"`
 
 	// 指标类型
-	MetricType *string `json:"metric_type,omitempty"`
+	MetricType *string `json:"metric_type,omitempty" xml:"metric_type"`
 
-	Dividend *MetricRequestV2Dividend `json:"dividend,omitempty"`
+	Dividend *MetricRequestV2Dividend `json:"dividend,omitempty" xml:"dividend"`
 
 	// 指标分母过滤条件
-	Divisor *interface{} `json:"divisor,omitempty"`
+	Divisor *interface{} `json:"divisor,omitempty" xml:"divisor"`
 }
 
 func (o MetricRequestV2) String() string {

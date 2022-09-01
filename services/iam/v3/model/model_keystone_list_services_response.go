@@ -10,9 +10,9 @@ import (
 type KeystoneListServicesResponse struct {
 
 	// 服务信息列表。
-	Services *[]Service `json:"services,omitempty"`
+	Services *[]Service `json:"services,omitempty" xml:"services"`
 
-	Links          *Links `json:"links,omitempty"`
+	Links          *Links `json:"links,omitempty" xml:"links"`
 	HttpStatusCode int    `json:"-"`
 }
 

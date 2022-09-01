@@ -13,19 +13,19 @@ import (
 type DomainBody struct {
 
 	// 加速域名。（ 国际英文域名：域名用字母（A-Z，a-z，大小写等价）、数字（0-9）和连接符（-）组成，各级域名之间用实点（.）连接，国际域名75个字符。注意连接符（-）不能作为域名的开头或结尾字符。）
-	DomainName string `json:"domain_name"`
+	DomainName string `json:"domain_name" xml:"domain_name"`
 
 	// 域名业务类型，若为web，则表示类型为网页加速；若为download，则表示业务类型为文件下载加速；若为video，则表示业务类型为点播加速；若为wholeSite，则表示业务类型为全站加速。
-	BusinessType DomainBodyBusinessType `json:"business_type"`
+	BusinessType DomainBodyBusinessType `json:"business_type" xml:"business_type"`
 
 	// 源站域名或源站IP，源站为IP类型时，仅支持IPv4，如需传入多个源站IP，以多个源站对象传入，除IP其他参数请保持一致，主源站最多支持15个源站IP对象，备源站最多支持15个源站IP对象；源站为域名类型时仅支持1个源站对象。不支持IP源站和域名源站混用。
-	Sources []Sources `json:"sources"`
+	Sources []Sources `json:"sources" xml:"sources"`
 
 	// 域名服务范围，若为mainland_china，则表示服务范围为中国大陆；若为outside_mainland_china，则表示服务范围为中国大陆境外；若为global，则表示服务范围为全球。
-	ServiceArea DomainBodyServiceArea `json:"service_area"`
+	ServiceArea DomainBodyServiceArea `json:"service_area" xml:"service_area"`
 
 	// 当用户开启企业项目功能时，该参数生效，表示添加加速域名到该企业项目。注意：当使用子账号调用接口时，该参数必传。
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
 }
 
 func (o DomainBody) String() string {

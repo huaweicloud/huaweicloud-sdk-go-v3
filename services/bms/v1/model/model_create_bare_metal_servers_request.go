@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateBareMetalServersRequest struct {
-	Body *CreateBaremetalServersBody `json:"body,omitempty"`
+	Body *CreateBaremetalServersBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateBareMetalServersRequest) String() string {

@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type DetectLiveFaceByBase64Request struct {
-	Body *LiveDetectFaceBase64Req `json:"body,omitempty"`
+	Body *LiveDetectFaceBase64Req `json:"body,omitempty" xml:"body"`
 }
 
 func (o DetectLiveFaceByBase64Request) String() string {

@@ -12,12 +12,12 @@ import (
 type MasterEipResponseSpec struct {
 
 	// 绑定动作
-	Action *MasterEipResponseSpecAction `json:"action,omitempty"`
+	Action *MasterEipResponseSpecAction `json:"action,omitempty" xml:"action"`
 
-	Spec *MasterEipResponseSpecSpec `json:"spec,omitempty"`
+	Spec *MasterEipResponseSpecSpec `json:"spec,omitempty" xml:"spec"`
 
 	// 弹性公网IP
-	ElasticIp *string `json:"elasticIp,omitempty"`
+	ElasticIp *string `json:"elasticIp,omitempty" xml:"elasticIp"`
 }
 
 func (o MasterEipResponseSpec) String() string {

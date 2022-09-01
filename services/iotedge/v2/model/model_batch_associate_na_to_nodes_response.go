@@ -10,7 +10,7 @@ import (
 type BatchAssociateNaToNodesResponse struct {
 
 	// 授权北向NA信息到边缘节点列表的返回结构体，仅返回本次授权的节点列表信息
-	Nodes          *[]QueryAuthorizedNodeDto `json:"nodes,omitempty"`
+	Nodes          *[]QueryAuthorizedNodeDto `json:"nodes,omitempty" xml:"nodes"`
 	HttpStatusCode int                       `json:"-"`
 }
 

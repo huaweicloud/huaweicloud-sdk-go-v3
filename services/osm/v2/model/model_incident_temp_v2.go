@@ -9,13 +9,13 @@ import (
 type IncidentTempV2 struct {
 
 	// 模板id
-	IncidentTemplateId *string `json:"incident_template_id,omitempty"`
+	IncidentTemplateId *string `json:"incident_template_id,omitempty" xml:"incident_template_id"`
 
 	// 模板名称
-	IncidentTemplateName *string `json:"incident_template_name,omitempty"`
+	IncidentTemplateName *string `json:"incident_template_name,omitempty" xml:"incident_template_name"`
 
 	// 模板内容
-	IncidentTemplateContent *string `json:"incident_template_content,omitempty"`
+	IncidentTemplateContent *string `json:"incident_template_content,omitempty" xml:"incident_template_content"`
 }
 
 func (o IncidentTempV2) String() string {

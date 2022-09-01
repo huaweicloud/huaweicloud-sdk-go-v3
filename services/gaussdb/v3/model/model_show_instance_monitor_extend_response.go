@@ -10,10 +10,10 @@ import (
 type ShowInstanceMonitorExtendResponse struct {
 
 	// 实例秒级监控开关。为true时表示开启，为false时表示关闭。
-	MonitorSwitch *bool `json:"monitor_switch,omitempty"`
+	MonitorSwitch *bool `json:"monitor_switch,omitempty" xml:"monitor_switch"`
 
 	// 采集周期，仅在monitor_switch为true时返回。1：采集周期为1s； 5：采集周期为5s。
-	Period         *int32 `json:"period,omitempty"`
+	Period         *int32 `json:"period,omitempty" xml:"period"`
 	HttpStatusCode int    `json:"-"`
 }
 

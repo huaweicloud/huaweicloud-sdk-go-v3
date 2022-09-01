@@ -10,10 +10,10 @@ import (
 type IotdaContentRuleReq struct {
 
 	// IoTDA中的资源空间Id
-	AppId string `json:"app_id"`
+	AppId string `json:"app_id" xml:"app_id"`
 
 	// IoTDA中某资源空间Id下的产品列表
-	Products []string `json:"products"`
+	Products []string `json:"products" xml:"products"`
 }
 
 func (o IotdaContentRuleReq) String() string {

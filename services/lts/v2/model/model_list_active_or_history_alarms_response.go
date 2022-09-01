@@ -10,9 +10,9 @@ import (
 type ListActiveOrHistoryAlarmsResponse struct {
 
 	// 告警信息
-	Events *[]Events `json:"events,omitempty"`
+	Events *[]Events `json:"events,omitempty" xml:"events"`
 
-	PageInfo       *PageInfo `json:"page_info,omitempty"`
+	PageInfo       *PageInfo `json:"page_info,omitempty" xml:"page_info"`
 	HttpStatusCode int       `json:"-"`
 }
 

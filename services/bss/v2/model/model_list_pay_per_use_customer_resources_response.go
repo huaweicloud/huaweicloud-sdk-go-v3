@@ -10,10 +10,10 @@ import (
 type ListPayPerUseCustomerResourcesResponse struct {
 
 	// 资源列表。 具体请参见表2。
-	Data *[]OrderInstanceV2 `json:"data,omitempty"`
+	Data *[]OrderInstanceV2 `json:"data,omitempty" xml:"data"`
 
 	// 总记录数。
-	TotalCount     *int32 `json:"total_count,omitempty"`
+	TotalCount     *int32 `json:"total_count,omitempty" xml:"total_count"`
 	HttpStatusCode int    `json:"-"`
 }
 

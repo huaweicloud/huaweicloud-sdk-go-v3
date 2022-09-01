@@ -10,7 +10,7 @@ import (
 type StopLogsRequest struct {
 
 	// 指定关闭日志的集群ID。
-	ClusterId string `json:"cluster_id"`
+	ClusterId string `json:"cluster_id" xml:"cluster_id"`
 }
 
 func (o StopLogsRequest) String() string {

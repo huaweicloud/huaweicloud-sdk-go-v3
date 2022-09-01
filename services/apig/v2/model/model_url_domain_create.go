@@ -12,10 +12,10 @@ import (
 type UrlDomainCreate struct {
 
 	// 最小ssl协议版本号。支持TLSv1.1或TLSv1.2
-	MinSslVersion *UrlDomainCreateMinSslVersion `json:"min_ssl_version,omitempty"`
+	MinSslVersion *UrlDomainCreateMinSslVersion `json:"min_ssl_version,omitempty" xml:"min_ssl_version"`
 
 	// 自定义域名。长度为0-255位的字符串，需要符合域名规范。
-	UrlDomain *string `json:"url_domain,omitempty"`
+	UrlDomain *string `json:"url_domain,omitempty" xml:"url_domain"`
 }
 
 func (o UrlDomainCreate) String() string {

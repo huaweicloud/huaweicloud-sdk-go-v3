@@ -10,10 +10,10 @@ import (
 type DeleteDeployKeyRequest struct {
 
 	// 部署密钥id
-	KeyId int32 `json:"key_id"`
+	KeyId int32 `json:"key_id" xml:"key_id"`
 
 	// 仓库短id
-	RepositoryId int32 `json:"repository_id"`
+	RepositoryId int32 `json:"repository_id" xml:"repository_id"`
 }
 
 func (o DeleteDeployKeyRequest) String() string {

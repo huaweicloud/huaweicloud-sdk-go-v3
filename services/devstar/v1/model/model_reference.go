@@ -9,19 +9,19 @@ import (
 type Reference struct {
 
 	// 标题名称。
-	Title *string `json:"title,omitempty"`
+	Title *string `json:"title,omitempty" xml:"title"`
 
 	// 链接地址。
-	Url *string `json:"url,omitempty"`
+	Url *string `json:"url,omitempty" xml:"url"`
 
 	// 关联类型。
-	Type *int32 `json:"type,omitempty"`
+	Type *int32 `json:"type,omitempty" xml:"type"`
 
 	// 产品短名。
-	Productshort *string `json:"productshort,omitempty"`
+	Productshort *string `json:"productshort,omitempty" xml:"productshort"`
 
 	// 是否有效
-	IsValid *bool `json:"is_valid,omitempty"`
+	IsValid *bool `json:"is_valid,omitempty" xml:"is_valid"`
 }
 
 func (o Reference) String() string {

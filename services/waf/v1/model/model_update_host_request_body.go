@@ -13,50 +13,50 @@ import (
 type UpdateHostRequestBody struct {
 
 	// 防护域名是否使用代理   - false：不使用代理   - true：使用代理
-	Proxy *bool `json:"proxy,omitempty"`
+	Proxy *bool `json:"proxy,omitempty" xml:"proxy"`
 
 	// 证书id，通过查询证书列表接口（ListCertificates）接口获取证书id   - 对外协议为HTTP时不需要填写   - 对外协议HTTPS时为必填参数
-	Certificateid *string `json:"certificateid,omitempty"`
+	Certificateid *string `json:"certificateid,omitempty" xml:"certificateid"`
 
 	// 证书名   - 对外协议为HTTP时不需要填写   - 对外协议HTTPS时为必填参数
-	Certificatename *string `json:"certificatename,omitempty"`
+	Certificatename *string `json:"certificatename,omitempty" xml:"certificatename"`
 
 	// 防护域名的源站服务器配置信息
-	Server *[]CloudWafServer `json:"server,omitempty"`
+	Server *[]CloudWafServer `json:"server,omitempty" xml:"server"`
 
 	// 配置的最低TLS版本（TLS v1.0/TLS v1.1/TLS v1.2）,默认为TLS v1.0版本，对于低于最低TLS版本的请求，将无法正常访问网站
-	Tls *UpdateHostRequestBodyTls `json:"tls,omitempty"`
+	Tls *UpdateHostRequestBodyTls `json:"tls,omitempty" xml:"tls"`
 
 	// 加密套件（cipher_1，cipher_2，cipher_3，cipher_4，cipher_default）：  - cipher_1： 加密算法为ECDHE-ECDSA-AES256-GCM-SHA384:HIGH:!MEDIUM:!LOW:!aNULL:!eNULL:!DES:!MD5:!PSK:!RC4:!kRSA:!SRP:!3DES:!DSS:!EXP:!CAMELLIA:@STRENGTH   - cipher_2：加密算法为EECDH+AESGCM:EDH+AESGCM   - cipher_3：加密算法为ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-SHA384:RC4:HIGH:!MD5:!aNULL:!eNULL:!NULL:!DH:!EDH   - cipher_4：加密算法为ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-SHA384:AES256-SHA256:RC4:HIGH:!MD5:!aNULL:!eNULL:!NULL:!EDH   - cipher_default： 加密算法为ECDHE-RSA-AES256-SHA384:AES256-SHA256:RC4:HIGH:!MD5:!aNULL:!eNULL:!NULL:!DH:!EDH:!AESGCM
-	Cipher *UpdateHostRequestBodyCipher `json:"cipher,omitempty"`
+	Cipher *UpdateHostRequestBodyCipher `json:"cipher,omitempty" xml:"cipher"`
 
 	// 是否支持http2   - true：表示支持http2   - false：表示不支持http2
-	Http2Enable *bool `json:"http2_enable,omitempty"`
+	Http2Enable *bool `json:"http2_enable,omitempty" xml:"http2_enable"`
 
 	// 是否开启IPv6防护，仅专业版（原企业版）和铂金版（原旗舰版）支持IPv6防护。   - true：开启IPv6防护   - false：关闭IPV6防护
-	Ipv6Enable *bool `json:"ipv6_enable,omitempty"`
+	Ipv6Enable *bool `json:"ipv6_enable,omitempty" xml:"ipv6_enable"`
 
 	// 网站名称，对应WAF控制台域名详情中的网站名称
-	WebTag *string `json:"web_tag,omitempty"`
+	WebTag *string `json:"web_tag,omitempty" xml:"web_tag"`
 
 	// 是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
-	ExclusiveIp *bool `json:"exclusive_ip,omitempty"`
+	ExclusiveIp *bool `json:"exclusive_ip,omitempty" xml:"exclusive_ip"`
 
 	// 套餐付费模式，目前只支持prePaid预付款模式
-	PaidType *string `json:"paid_type,omitempty"`
+	PaidType *string `json:"paid_type,omitempty" xml:"paid_type"`
 
-	BlockPage *BlockPage `json:"block_page,omitempty"`
+	BlockPage *BlockPage `json:"block_page,omitempty" xml:"block_page"`
 
-	TrafficMark *TrafficMark `json:"traffic_mark,omitempty"`
+	TrafficMark *TrafficMark `json:"traffic_mark,omitempty" xml:"traffic_mark"`
 
-	Flag *Flag `json:"flag,omitempty"`
+	Flag *Flag `json:"flag,omitempty" xml:"flag"`
 
 	// 扩展字段，用于保存防护域名的一些配置信息。
-	Extend map[string]string `json:"extend,omitempty"`
+	Extend map[string]string `json:"extend,omitempty" xml:"extend"`
 
-	CircuitBreaker *CircuitBreaker `json:"circuit_breaker,omitempty"`
+	CircuitBreaker *CircuitBreaker `json:"circuit_breaker,omitempty" xml:"circuit_breaker"`
 
-	TimeoutConfig *TimeoutConfig `json:"timeout_config,omitempty"`
+	TimeoutConfig *TimeoutConfig `json:"timeout_config,omitempty" xml:"timeout_config"`
 }
 
 func (o UpdateHostRequestBody) String() string {

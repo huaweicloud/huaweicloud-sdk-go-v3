@@ -10,25 +10,25 @@ import (
 type CreateComputingResourceResponse struct {
 
 	// 新增计算资源ID。
-	ComputingResourceId *string `json:"computing_resource_id,omitempty"`
+	ComputingResourceId *string `json:"computing_resource_id,omitempty" xml:"computing_resource_id"`
 
 	// 新增计算资源名称。
-	ComputingResourceName *string `json:"computing_resource_name,omitempty"`
+	ComputingResourceName *string `json:"computing_resource_name,omitempty" xml:"computing_resource_name"`
 
 	// 计算资源的类型。目前支持：sql。如果不指定，默认为sql。
-	ComputingResourceType *string `json:"computing_resource_type,omitempty"`
+	ComputingResourceType *string `json:"computing_resource_type,omitempty" xml:"computing_resource_type"`
 
 	// 计算资源的描述信息。
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 与计算资源绑定的最小计算单元个数。设置值当前只支持16，64，256。
-	CuCount *int32 `json:"cu_count,omitempty"`
+	CuCount *int32 `json:"cu_count,omitempty" xml:"cu_count"`
 
 	// 计算资源的收费模式。只能设置为“1”，表示按照CU时收费。
-	ChargingMode *int32 `json:"charging_mode,omitempty"`
+	ChargingMode *int32 `json:"charging_mode,omitempty" xml:"charging_mode"`
 
 	// 创建计算资源时间。时间格式为ISO日期时间格式yyyy-MM-dd'T'HH:mm:ss'Z'。
-	CreatedTime    *string `json:"created_time,omitempty"`
+	CreatedTime    *string `json:"created_time,omitempty" xml:"created_time"`
 	HttpStatusCode int     `json:"-"`
 }
 

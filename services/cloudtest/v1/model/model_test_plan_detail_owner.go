@@ -10,16 +10,16 @@ import (
 type TestPlanDetailOwner struct {
 
 	// 测试计划处理者id
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 测试计划处理者名称，优先返回nickName，不存在则返回userName
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 测试计划处理者的昵称，当用户未设置昵称时不返回该字段
-	NickName *string `json:"nick_name,omitempty"`
+	NickName *string `json:"nick_name,omitempty" xml:"nick_name"`
 
 	// 测试计划处理者的用户名称
-	UserName *string `json:"user_name,omitempty"`
+	UserName *string `json:"user_name,omitempty" xml:"user_name"`
 }
 
 func (o TestPlanDetailOwner) String() string {

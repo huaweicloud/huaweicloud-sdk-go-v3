@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type KeystoneListVersionsResponse struct {
-	Versions       *Versions `json:"versions,omitempty"`
+	Versions       *Versions `json:"versions,omitempty" xml:"versions"`
 	HttpStatusCode int       `json:"-"`
 }
 

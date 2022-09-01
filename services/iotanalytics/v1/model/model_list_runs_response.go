@@ -10,10 +10,10 @@ import (
 type ListRunsResponse struct {
 
 	// 作业总个数。
-	Count *int64 `json:"count,omitempty"`
+	Count *int64 `json:"count,omitempty" xml:"count"`
 
 	// 作业运行列表。
-	Runs           *[]Run `json:"runs,omitempty"`
+	Runs           *[]Run `json:"runs,omitempty" xml:"runs"`
 	HttpStatusCode int    `json:"-"`
 }
 

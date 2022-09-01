@@ -10,13 +10,13 @@ import (
 type VaultPolicyResp struct {
 
 	// 目标region的vault ID，仅设置复制策略时有。
-	DestinationVaultId *string `json:"destination_vault_id,omitempty"`
+	DestinationVaultId *string `json:"destination_vault_id,omitempty" xml:"destination_vault_id"`
 
 	// 设置的策略ID
-	PolicyId string `json:"policy_id"`
+	PolicyId string `json:"policy_id" xml:"policy_id"`
 
 	// 设置策略的vault ID
-	VaultId string `json:"vault_id"`
+	VaultId string `json:"vault_id" xml:"vault_id"`
 }
 
 func (o VaultPolicyResp) String() string {

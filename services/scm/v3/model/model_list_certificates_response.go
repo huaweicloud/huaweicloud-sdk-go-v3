@@ -10,10 +10,10 @@ import (
 type ListCertificatesResponse struct {
 
 	// 证书列表，详情请参见CertificateDetail字段数据结构说明。
-	Certificates *[]CertificateDetail `json:"certificates,omitempty"`
+	Certificates *[]CertificateDetail `json:"certificates,omitempty" xml:"certificates"`
 
 	// 证书数量。
-	TotalCount     *int32 `json:"total_count,omitempty"`
+	TotalCount     *int32 `json:"total_count,omitempty" xml:"total_count"`
 	HttpStatusCode int    `json:"-"`
 }
 

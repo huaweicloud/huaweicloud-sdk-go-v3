@@ -13,10 +13,10 @@ import (
 type BatchCreateSubnetTagsRequestBody struct {
 
 	// 操作标识
-	Action BatchCreateSubnetTagsRequestBodyAction `json:"action"`
+	Action BatchCreateSubnetTagsRequestBodyAction `json:"action" xml:"action"`
 
 	// 标签列表
-	Tags []ResourceTag `json:"tags"`
+	Tags []ResourceTag `json:"tags" xml:"tags"`
 }
 
 func (o BatchCreateSubnetTagsRequestBody) String() string {

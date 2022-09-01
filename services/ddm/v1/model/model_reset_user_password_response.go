@@ -10,13 +10,13 @@ import (
 type ResetUserPasswordResponse struct {
 
 	// 操作是否成功。
-	Success *bool `json:"success,omitempty"`
+	Success *bool `json:"success,omitempty" xml:"success"`
 
 	// DDM实例ID。
-	InstanceId *string `json:"instance_id,omitempty"`
+	InstanceId *string `json:"instance_id,omitempty" xml:"instance_id"`
 
 	// DDM账号名称
-	UserName       *string `json:"user_name,omitempty"`
+	UserName       *string `json:"user_name,omitempty" xml:"user_name"`
 	HttpStatusCode int     `json:"-"`
 }
 

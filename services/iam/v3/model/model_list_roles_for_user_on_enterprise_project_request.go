@@ -10,10 +10,10 @@ import (
 type ListRolesForUserOnEnterpriseProjectRequest struct {
 
 	// 企业项目ID。
-	EnterpriseProjectId string `json:"enterprise_project_id"`
+	EnterpriseProjectId string `json:"enterprise_project_id" xml:"enterprise_project_id"`
 
 	// 用户ID。
-	UserId string `json:"user_id"`
+	UserId string `json:"user_id" xml:"user_id"`
 }
 
 func (o ListRolesForUserOnEnterpriseProjectRequest) String() string {

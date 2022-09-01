@@ -13,9 +13,9 @@ import (
 type BatchSetObjectsRequest struct {
 
 	// 请求语言类型
-	XLanguage *BatchSetObjectsRequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *BatchSetObjectsRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 
-	Body *BatchUpdateDatabaseObjectReq `json:"body,omitempty"`
+	Body *BatchUpdateDatabaseObjectReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchSetObjectsRequest) String() string {

@@ -9,10 +9,10 @@ import (
 type NetworkTrafficStats struct {
 
 	// 下行吞吐量（byte）
-	OutputThroughput *int64 `json:"output_throughput,omitempty"`
+	OutputThroughput *int64 `json:"output_throughput,omitempty" xml:"output_throughput"`
 
 	// 上行吞吐量（byte）
-	InputThroughput *int64 `json:"input_throughput,omitempty"`
+	InputThroughput *int64 `json:"input_throughput,omitempty" xml:"input_throughput"`
 }
 
 func (o NetworkTrafficStats) String() string {

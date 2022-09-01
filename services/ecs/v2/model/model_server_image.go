@@ -10,7 +10,7 @@ import (
 type ServerImage struct {
 
 	// 镜像id
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 }
 
 func (o ServerImage) String() string {

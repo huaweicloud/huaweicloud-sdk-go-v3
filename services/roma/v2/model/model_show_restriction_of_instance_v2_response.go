@@ -10,10 +10,10 @@ import (
 type ShowRestrictionOfInstanceV2Response struct {
 
 	// 受限的IP网段的CIDR列表。
-	RestrictCidrs *[]string `json:"restrict_cidrs,omitempty"`
+	RestrictCidrs *[]string `json:"restrict_cidrs,omitempty" xml:"restrict_cidrs"`
 
 	// 资源租户的IP网段的CIDR。
-	ResourceSubnetCidr *string `json:"resource_subnet_cidr,omitempty"`
+	ResourceSubnetCidr *string `json:"resource_subnet_cidr,omitempty" xml:"resource_subnet_cidr"`
 	HttpStatusCode     int     `json:"-"`
 }
 

@@ -10,7 +10,7 @@ import (
 type ListOrderCouponsByOrderIdRequest struct {
 
 	// 订单ID。
-	OrderId string `json:"order_id"`
+	OrderId string `json:"order_id" xml:"order_id"`
 }
 
 func (o ListOrderCouponsByOrderIdRequest) String() string {

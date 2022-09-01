@@ -9,19 +9,19 @@ import (
 type CreateKieReq struct {
 
 	// 配置项的key。
-	Key *string `json:"key,omitempty"`
+	Key *string `json:"key,omitempty" xml:"key"`
 
 	// 配置项的标签
-	Labels *interface{} `json:"labels,omitempty"`
+	Labels *interface{} `json:"labels,omitempty" xml:"labels"`
 
 	// 配置项的值。
-	Value *string `json:"value,omitempty"`
+	Value *string `json:"value,omitempty" xml:"value"`
 
 	// 配置项value的类型。
-	ValueType *string `json:"value_type,omitempty"`
+	ValueType *string `json:"value_type,omitempty" xml:"value_type"`
 
 	// 配置项的状态。
-	Status *string `json:"status,omitempty"`
+	Status *string `json:"status,omitempty" xml:"status"`
 }
 
 func (o CreateKieReq) String() string {

@@ -10,10 +10,10 @@ import (
 type ShowBandwidthDetailResponse struct {
 
 	// 请求的唯一标识ID
-	RequestId string `json:"request_id"`
+	RequestId string `json:"request_id" xml:"request_id"`
 
 	// 带宽信息
-	BandWidths     []interface{} `json:"band_widths"`
+	BandWidths     []interface{} `json:"band_widths" xml:"band_widths"`
 	HttpStatusCode int           `json:"-"`
 }
 

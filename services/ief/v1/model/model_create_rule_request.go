@@ -10,9 +10,9 @@ import (
 type CreateRuleRequest struct {
 
 	// 铂金版实例ID，专业版实例为空值
-	IefInstanceId *string `json:"ief-instance-id,omitempty"`
+	IefInstanceId *string `json:"ief-instance-id,omitempty" xml:"ief-instance-id"`
 
-	Body *RuleDetail `json:"body,omitempty"`
+	Body *RuleDetail `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateRuleRequest) String() string {

@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateResetTracksTaskRequest struct {
-	Body *CreateResetTracksReq `json:"body,omitempty"`
+	Body *CreateResetTracksReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateResetTracksTaskRequest) String() string {

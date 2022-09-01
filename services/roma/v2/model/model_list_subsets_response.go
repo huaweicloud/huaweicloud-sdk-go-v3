@@ -10,13 +10,13 @@ import (
 type ListSubsetsResponse struct {
 
 	// 总数
-	Total *int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty" xml:"total"`
 
 	// 本次返回数量
-	Size *int32 `json:"size,omitempty"`
+	Size *int32 `json:"size,omitempty" xml:"size"`
 
 	// 设备ID列表
-	Items          *[]Device `json:"items,omitempty"`
+	Items          *[]Device `json:"items,omitempty" xml:"items"`
 	HttpStatusCode int       `json:"-"`
 }
 

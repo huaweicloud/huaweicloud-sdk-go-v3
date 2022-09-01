@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type UpdateFirewallResponse struct {
-	Firewall       *UpdateFirewallResp `json:"firewall,omitempty"`
+	Firewall       *UpdateFirewallResp `json:"firewall,omitempty" xml:"firewall"`
 	HttpStatusCode int                 `json:"-"`
 }
 

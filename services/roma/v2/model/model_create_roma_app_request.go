@@ -10,9 +10,9 @@ import (
 type CreateRomaAppRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *CreateAppReq `json:"body,omitempty"`
+	Body *CreateAppReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateRomaAppRequest) String() string {

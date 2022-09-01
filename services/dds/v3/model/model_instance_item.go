@@ -9,13 +9,13 @@ import (
 type InstanceItem struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 实例名称
-	InstanceName string `json:"instance_name"`
+	InstanceName string `json:"instance_name" xml:"instance_name"`
 
 	// 标签列表。如果没有标签，默认为空数组。
-	Tags []InstanceItemTagItem `json:"tags"`
+	Tags []InstanceItemTagItem `json:"tags" xml:"tags"`
 }
 
 func (o InstanceItem) String() string {

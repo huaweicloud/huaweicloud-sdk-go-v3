@@ -13,22 +13,22 @@ import (
 type ListDbUsersRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 数据库用户ID
-	DbUserId *string `json:"db_user_id,omitempty"`
+	DbUserId *string `json:"db_user_id,omitempty" xml:"db_user_id"`
 
 	// 数据库用户名称
-	DbUsername *string `json:"db_username,omitempty"`
+	DbUsername *string `json:"db_username,omitempty" xml:"db_username"`
 
 	// 语言
-	XLanguage *ListDbUsersRequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *ListDbUsersRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 }
 
 func (o ListDbUsersRequest) String() string {

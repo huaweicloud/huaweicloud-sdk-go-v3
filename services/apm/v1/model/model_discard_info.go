@@ -10,13 +10,13 @@ import (
 type DiscardInfo struct {
 
 	// 类型
-	Type *string `json:"type,omitempty"`
+	Type *string `json:"type,omitempty" xml:"type"`
 
 	// 数量
-	Count *int32 `json:"count,omitempty"`
+	Count *int32 `json:"count,omitempty" xml:"count"`
 
 	// 总时间
-	TotalTime *int64 `json:"totalTime,omitempty"`
+	TotalTime *int64 `json:"totalTime,omitempty" xml:"totalTime"`
 }
 
 func (o DiscardInfo) String() string {

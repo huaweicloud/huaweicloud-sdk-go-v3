@@ -9,19 +9,19 @@ import (
 type ShowMqsInstanceTopicAccessPolicyRespPolicies struct {
 
 	// 是否为创建topic时所选择的应用。
-	Owner *bool `json:"owner,omitempty"`
+	Owner *bool `json:"owner,omitempty" xml:"owner"`
 
 	// 应用ID。
-	UserName *string `json:"user_name,omitempty"`
+	UserName *string `json:"user_name,omitempty" xml:"user_name"`
 
 	// 权限类型。   - all：发布+订阅   - pub：发布   - sub：订阅
-	AccessPolicy *string `json:"access_policy,omitempty"`
+	AccessPolicy *string `json:"access_policy,omitempty" xml:"access_policy"`
 
 	// 应用名称。
-	AppName *string `json:"app_name,omitempty"`
+	AppName *string `json:"app_name,omitempty" xml:"app_name"`
 
 	// 权限类型对应的标签。
-	Tag *string `json:"tag,omitempty"`
+	Tag *string `json:"tag,omitempty" xml:"tag"`
 }
 
 func (o ShowMqsInstanceTopicAccessPolicyRespPolicies) String() string {

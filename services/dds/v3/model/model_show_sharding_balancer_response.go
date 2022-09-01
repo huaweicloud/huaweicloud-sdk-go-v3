@@ -10,9 +10,9 @@ import (
 type ShowShardingBalancerResponse struct {
 
 	// 集群均衡是否打开。
-	IsOpen *bool `json:"is_open,omitempty"`
+	IsOpen *bool `json:"is_open,omitempty" xml:"is_open"`
 
-	ActiveWindow   *BalancerActiveWindow `json:"active_window,omitempty"`
+	ActiveWindow   *BalancerActiveWindow `json:"active_window,omitempty" xml:"active_window"`
 	HttpStatusCode int                   `json:"-"`
 }
 

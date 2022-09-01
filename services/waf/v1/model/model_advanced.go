@@ -10,10 +10,10 @@ import (
 type Advanced struct {
 
 	// 字段类型，支持的字段类型有：Params、Cookie、Header、Body、Multipart。   - 当选择“Params”、“Cookie”或者“Header”字段时，可以配置“全部”或根据需求配置子字段   - 当选择“Body”或“Multipart”字段时，可以配置“全部”
-	Index *string `json:"index,omitempty"`
+	Index *string `json:"index,omitempty" xml:"index"`
 
 	// 指定字段类型的子字段，默认值为“全部”
-	Contensts *[]string `json:"contensts,omitempty"`
+	Contensts *[]string `json:"contensts,omitempty" xml:"contensts"`
 }
 
 func (o Advanced) String() string {

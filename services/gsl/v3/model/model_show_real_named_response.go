@@ -10,10 +10,10 @@ import (
 type ShowRealNamedResponse struct {
 
 	// ICCID
-	Iccid *string `json:"iccid,omitempty"`
+	Iccid *string `json:"iccid,omitempty" xml:"iccid"`
 
 	// 是否已实名认证: true表示是，false表示否。
-	RealNamed      *bool `json:"real_named,omitempty"`
+	RealNamed      *bool `json:"real_named,omitempty" xml:"real_named"`
 	HttpStatusCode int   `json:"-"`
 }
 

@@ -12,37 +12,37 @@ import (
 type VpcHealthConfig struct {
 
 	// 使用以下协议，对VPC中主机执行健康检查。
-	Protocol VpcHealthConfigProtocol `json:"protocol"`
+	Protocol VpcHealthConfigProtocol `json:"protocol" xml:"protocol"`
 
 	// 健康检查时的目标路径。protocol = http时必选
-	Path *string `json:"path,omitempty"`
+	Path *string `json:"path,omitempty" xml:"path"`
 
 	// 健康检查时的请求方法
-	Method *VpcHealthConfigMethod `json:"method,omitempty"`
+	Method *VpcHealthConfigMethod `json:"method,omitempty" xml:"method"`
 
 	// 健康检查的目标端口，缺省时为VPC中主机的端口号。
-	Port *int32 `json:"port,omitempty"`
+	Port *int32 `json:"port,omitempty" xml:"port"`
 
 	// 正常阈值。判定VPC通道中主机正常的依据为：连续检查x成功，x为您设置的正常阈值。
-	ThresholdNormal int32 `json:"threshold_normal"`
+	ThresholdNormal int32 `json:"threshold_normal" xml:"threshold_normal"`
 
 	// 异常阙值。判定VPC通道中主机异常的依据为：连续检查x失败，x为您设置的异常阈值。
-	ThresholdAbnormal int32 `json:"threshold_abnormal"`
+	ThresholdAbnormal int32 `json:"threshold_abnormal" xml:"threshold_abnormal"`
 
 	// 间隔时间：连续两次检查的间隔时间，单位为秒。必须大于timeout字段取值。
-	TimeInterval int32 `json:"time_interval"`
+	TimeInterval int32 `json:"time_interval" xml:"time_interval"`
 
 	// 检查目标HTTP响应时，判断成功使用的HTTP响应码。取值范围为100到599之前的任意整数值，支持如下三种格式： - 多个值，如：200,201,202 - 一系列值，如：200-299 - 组合值，如：201,202,210-299 protocol = http时必选
-	HttpCode *string `json:"http_code,omitempty"`
+	HttpCode *string `json:"http_code,omitempty" xml:"http_code"`
 
 	// 是否开启双向认证。若开启，则使用实例配置中的backend_client_certificate配置项的证书
-	EnableClientSsl *bool `json:"enable_client_ssl,omitempty"`
+	EnableClientSsl *bool `json:"enable_client_ssl,omitempty" xml:"enable_client_ssl"`
 
 	// 健康检查状态   - 1：可用   - 2：不可用
-	Status *VpcHealthConfigStatus `json:"status,omitempty"`
+	Status *VpcHealthConfigStatus `json:"status,omitempty" xml:"status"`
 
 	// 超时时间：检查期间，无响应的时间，单位为秒。必须小于time_interval字段取值。
-	Timeout *int32 `json:"timeout,omitempty"`
+	Timeout *int32 `json:"timeout,omitempty" xml:"timeout"`
 }
 
 func (o VpcHealthConfig) String() string {

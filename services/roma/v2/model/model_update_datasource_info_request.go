@@ -10,12 +10,12 @@ import (
 type UpdateDatasourceInfoRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 数据源ID
-	DatasourceId string `json:"datasource_id"`
+	DatasourceId string `json:"datasource_id" xml:"datasource_id"`
 
-	Body *DatasourceInfo `json:"body,omitempty"`
+	Body *DatasourceInfo `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateDatasourceInfoRequest) String() string {

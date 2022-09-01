@@ -10,13 +10,13 @@ import (
 type CreateVpcResponse struct {
 
 	// 请求ID
-	RequestId *string `json:"request_id,omitempty"`
+	RequestId *string `json:"request_id,omitempty" xml:"request_id"`
 
 	// 错误消息
-	ErrorMsg *string `json:"error_msg,omitempty"`
+	ErrorMsg *string `json:"error_msg,omitempty" xml:"error_msg"`
 
 	// 错误码
-	ErrorCode      *string `json:"error_code,omitempty"`
+	ErrorCode      *string `json:"error_code,omitempty" xml:"error_code"`
 	HttpStatusCode int     `json:"-"`
 }
 

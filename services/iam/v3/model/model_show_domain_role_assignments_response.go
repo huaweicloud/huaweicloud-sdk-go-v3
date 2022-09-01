@@ -10,9 +10,9 @@ import (
 type ShowDomainRoleAssignmentsResponse struct {
 
 	// 返回授权记录的总条数。
-	TotalNum *int64 `json:"total_num,omitempty"`
+	TotalNum *int64 `json:"total_num,omitempty" xml:"total_num"`
 
-	RoleAssignments *[]RoleAssignmentBody `json:"role_assignments,omitempty"`
+	RoleAssignments *[]RoleAssignmentBody `json:"role_assignments,omitempty" xml:"role_assignments"`
 	HttpStatusCode  int                   `json:"-"`
 }
 

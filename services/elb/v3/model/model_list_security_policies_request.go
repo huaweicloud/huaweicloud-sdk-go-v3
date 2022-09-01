@@ -10,28 +10,28 @@ import (
 type ListSecurityPoliciesRequest struct {
 
 	// 上一页最后一条记录的ID。  使用说明：  - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
-	Marker *string `json:"marker,omitempty"`
+	Marker *string `json:"marker,omitempty" xml:"marker"`
 
 	// 每页返回的个数。
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 是否反向查询，取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。
-	PageReverse *bool `json:"page_reverse,omitempty"`
+	PageReverse *bool `json:"page_reverse,omitempty" xml:"page_reverse"`
 
 	// 自定义安全策略的ID。  支持多值查询，查询条件格式：*id=xxx&id=xxx*。
-	Id *[]string `json:"id,omitempty"`
+	Id *[]string `json:"id,omitempty" xml:"id"`
 
 	// 自定义安全策略的名称。  支持多值查询，查询条件格式：*name=xxx&name=xxx*。
-	Name *[]string `json:"name,omitempty"`
+	Name *[]string `json:"name,omitempty" xml:"name"`
 
 	// 自定义安全策略的描述信息。  支持多值查询，查询条件格式：*description=xxx&description=xxx*。
-	Description *[]string `json:"description,omitempty"`
+	Description *[]string `json:"description,omitempty" xml:"description"`
 
 	// 空格分隔的自定义安全策略的TLS协议。  支持多值查询，查询条件格式：*protocols=xxx&protocols=xxx*。
-	Protocols *[]string `json:"protocols,omitempty"`
+	Protocols *[]string `json:"protocols,omitempty" xml:"protocols"`
 
 	// 冒号分隔的自定义安全策略的加密套件。  支持多值查询，查询条件格式：*ciphers=xxx&ciphers=xxx*。
-	Ciphers *[]string `json:"ciphers,omitempty"`
+	Ciphers *[]string `json:"ciphers,omitempty" xml:"ciphers"`
 }
 
 func (o ListSecurityPoliciesRequest) String() string {

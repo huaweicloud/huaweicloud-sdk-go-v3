@@ -13,16 +13,16 @@ import (
 type ImageInfo struct {
 
 	// 镜像ID，格式为UUID。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 镜像的名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 镜像的类型。取值为：Linux（包括SUSE/RedHat/CentOS/Oracle Linux/EulerOS/Ubuntu操作系统）Windows（Windows操作系统）Other（ESXi操作系统）
-	OsType *ImageInfoOsType `json:"__os_type,omitempty"`
+	OsType *ImageInfoOsType `json:"__os_type,omitempty" xml:"__os_type"`
 
 	// 镜像相关快捷链接地址。
-	Links *[]Links `json:"links,omitempty"`
+	Links *[]Links `json:"links,omitempty" xml:"links"`
 }
 
 func (o ImageInfo) String() string {

@@ -10,16 +10,16 @@ import (
 type InvokeFunctionRequest struct {
 
 	// 函数的URN，详细解释见FunctionGraph函数模型的描述。
-	FunctionUrn string `json:"function_urn"`
+	FunctionUrn string `json:"function_urn" xml:"function_urn"`
 
 	// 取值为：tail（返回函数执行后的4K日志），或者为空（不返回日志）。
-	XCffLogType *string `json:"X-Cff-Log-Type,omitempty"`
+	XCffLogType *string `json:"X-Cff-Log-Type,omitempty" xml:"X-Cff-Log-Type"`
 
 	// 返回体格式，取值v0,v1。 v0:默认返回文本格式 v1:默认返回json格式，sdk需要使用此值。
-	XCFFRequestVersion *string `json:"X-CFF-Request-Version,omitempty"`
+	XCFFRequestVersion *string `json:"X-CFF-Request-Version,omitempty" xml:"X-CFF-Request-Version"`
 
 	// 执行函数请求体，为json格式。
-	Body map[string]interface{} `json:"body,omitempty"`
+	Body map[string]interface{} `json:"body,omitempty" xml:"body"`
 }
 
 func (o InvokeFunctionRequest) String() string {

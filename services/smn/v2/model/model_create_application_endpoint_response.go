@@ -10,10 +10,10 @@ import (
 type CreateApplicationEndpointResponse struct {
 
 	// 请求的唯一标识ID。
-	RequestId *string `json:"request_id,omitempty"`
+	RequestId *string `json:"request_id,omitempty" xml:"request_id"`
 
 	// Endpoint的唯一资源标识。
-	EndpointUrn    *string `json:"endpoint_urn,omitempty"`
+	EndpointUrn    *string `json:"endpoint_urn,omitempty" xml:"endpoint_urn"`
 	HttpStatusCode int     `json:"-"`
 }
 

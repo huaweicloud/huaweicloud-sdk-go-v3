@@ -10,7 +10,7 @@ import (
 type RealTimeConfInfo struct {
 
 	// 主持人与会者标识。
-	ChairID *string `json:"chairID,omitempty"`
+	ChairID *string `json:"chairID,omitempty" xml:"chairID"`
 }
 
 func (o RealTimeConfInfo) String() string {

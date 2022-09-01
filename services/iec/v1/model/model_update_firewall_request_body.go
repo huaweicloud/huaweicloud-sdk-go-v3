@@ -8,7 +8,7 @@ import (
 
 // 更新网络ACL请求体
 type UpdateFirewallRequestBody struct {
-	Firewall *UpdateFirewallOption `json:"firewall"`
+	Firewall *UpdateFirewallOption `json:"firewall" xml:"firewall"`
 }
 
 func (o UpdateFirewallRequestBody) String() string {

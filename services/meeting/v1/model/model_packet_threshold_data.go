@@ -10,16 +10,16 @@ import (
 type PacketThresholdData struct {
 
 	// 自定义接收方向阈值，单位为百分比(%)
-	Receiving *int32 `json:"receiving,omitempty"`
+	Receiving *int32 `json:"receiving,omitempty" xml:"receiving"`
 
 	// 默认接收方向阈值，单位为百分比(%)
-	ReceivingDefault *int32 `json:"receivingDefault,omitempty"`
+	ReceivingDefault *int32 `json:"receivingDefault,omitempty" xml:"receivingDefault"`
 
 	// 自定义发送方向阈值，单位为百分比(%)
-	Sending *int32 `json:"sending,omitempty"`
+	Sending *int32 `json:"sending,omitempty" xml:"sending"`
 
 	// 默认发送方向阈值，单位为百分比(%)
-	SendingDefault *int32 `json:"sendingDefault,omitempty"`
+	SendingDefault *int32 `json:"sendingDefault,omitempty" xml:"sendingDefault"`
 }
 
 func (o PacketThresholdData) String() string {

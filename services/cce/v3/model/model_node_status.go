@@ -13,24 +13,24 @@ import (
 type NodeStatus struct {
 
 	// 节点状态。
-	Phase *NodeStatusPhase `json:"phase,omitempty"`
+	Phase *NodeStatusPhase `json:"phase,omitempty" xml:"phase"`
 
 	// 创建或删除时的任务ID。
-	JobID *string `json:"jobID,omitempty"`
+	JobID *string `json:"jobID,omitempty" xml:"jobID"`
 
 	// 底层云服务器或裸金属节点ID。
-	ServerId *string `json:"serverId,omitempty"`
+	ServerId *string `json:"serverId,omitempty" xml:"serverId"`
 
 	// 节点主网卡私有网段IP地址。
-	PrivateIP *string `json:"privateIP,omitempty"`
+	PrivateIP *string `json:"privateIP,omitempty" xml:"privateIP"`
 
 	// 节点主网卡私有网段IPv6地址。
-	PrivateIPv6IP *string `json:"privateIPv6IP,omitempty"`
+	PrivateIPv6IP *string `json:"privateIPv6IP,omitempty" xml:"privateIPv6IP"`
 
 	// 节点弹性公网IP地址。如果ECS的数据没有实时同步，可在界面上通过“同步节点信息”手动进行更新。
-	PublicIP *string `json:"publicIP,omitempty"`
+	PublicIP *string `json:"publicIP,omitempty" xml:"publicIP"`
 
-	DeleteStatus *DeleteStatus `json:"deleteStatus,omitempty"`
+	DeleteStatus *DeleteStatus `json:"deleteStatus,omitempty" xml:"deleteStatus"`
 }
 
 func (o NodeStatus) String() string {

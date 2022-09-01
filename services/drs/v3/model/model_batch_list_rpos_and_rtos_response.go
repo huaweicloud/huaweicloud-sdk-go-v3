@@ -10,10 +10,10 @@ import (
 type BatchListRposAndRtosResponse struct {
 
 	// 总数
-	Count *int32 `json:"count,omitempty"`
+	Count *int32 `json:"count,omitempty" xml:"count"`
 
 	// 批量查询RPO&RTO的响应体集合
-	Results        *[]QueryRpoAndRtoResp `json:"results,omitempty"`
+	Results        *[]QueryRpoAndRtoResp `json:"results,omitempty" xml:"results"`
 	HttpStatusCode int                   `json:"-"`
 }
 

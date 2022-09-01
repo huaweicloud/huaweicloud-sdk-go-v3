@@ -10,7 +10,7 @@ import (
 type ShowWindowsBaremetalServerPwdResponse struct {
 
 	// 加密后的密码
-	Password       *string `json:"password,omitempty"`
+	Password       *string `json:"password,omitempty" xml:"password"`
 	HttpStatusCode int     `json:"-"`
 }
 

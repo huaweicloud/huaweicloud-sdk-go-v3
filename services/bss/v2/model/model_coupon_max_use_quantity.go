@@ -9,13 +9,13 @@ import (
 type CouponMaxUseQuantity struct {
 
 	// 优惠券类型。 1：代金券2：折扣券3：产品券4：现金券
-	CouponType *int32 `json:"coupon_type,omitempty"`
+	CouponType *int32 `json:"coupon_type,omitempty" xml:"coupon_type"`
 
 	// 优惠券分组。 1：云商店发放的券2：华为云券-1024-专用代金券3：华为云券-使用限制-抵扣硬件的券0：华为云服务券（排除上述取值之外的券）
-	CouponGroup *int32 `json:"coupon_group,omitempty"`
+	CouponGroup *int32 `json:"coupon_group,omitempty" xml:"coupon_group"`
 
 	// 优惠券使用数量。
-	UseQuantityValue *int32 `json:"use_quantity_value,omitempty"`
+	UseQuantityValue *int32 `json:"use_quantity_value,omitempty" xml:"use_quantity_value"`
 }
 
 func (o CouponMaxUseQuantity) String() string {

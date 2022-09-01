@@ -12,10 +12,10 @@ import (
 type JobSubmitResult struct {
 
 	// 作业ID。
-	JobId *string `json:"job_id,omitempty"`
+	JobId *string `json:"job_id,omitempty" xml:"job_id"`
 
 	// 作业提交状态。 枚举值： - COMPLETE：作业提交完成。 - FAILED：作业提交失败。
-	State *JobSubmitResultState `json:"state,omitempty"`
+	State *JobSubmitResultState `json:"state,omitempty" xml:"state"`
 }
 
 func (o JobSubmitResult) String() string {

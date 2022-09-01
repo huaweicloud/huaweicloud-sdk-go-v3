@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type UpdateNotificationRequest struct {
-	Body *UpdateNotificationRequestBody `json:"body,omitempty"`
+	Body *UpdateNotificationRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateNotificationRequest) String() string {

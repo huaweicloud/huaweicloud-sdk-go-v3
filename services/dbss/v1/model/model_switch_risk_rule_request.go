@@ -10,9 +10,9 @@ import (
 type SwitchRiskRuleRequest struct {
 
 	// instance_id
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *BatchSwitchesRequest `json:"body,omitempty"`
+	Body *BatchSwitchesRequest `json:"body,omitempty" xml:"body"`
 }
 
 func (o SwitchRiskRuleRequest) String() string {

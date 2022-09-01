@@ -10,25 +10,25 @@ import (
 type DatabaseObject struct {
 
 	// 对象类型。
-	ObjectType string `json:"object_type"`
+	ObjectType string `json:"object_type" xml:"object_type"`
 
 	// 该类型对象的总数。
-	TotalCount int64 `json:"total_count"`
+	TotalCount int64 `json:"total_count" xml:"total_count"`
 
 	// 成功的对象数量。
-	SucceedCount int64 `json:"succeed_count"`
+	SucceedCount int64 `json:"succeed_count" xml:"succeed_count"`
 
 	// 失败的对象数量。
-	FailedCount int64 `json:"failed_count"`
+	FailedCount int64 `json:"failed_count" xml:"failed_count"`
 
 	// 忽略的对象数量。
-	IgnoredCount int64 `json:"ignored_count"`
+	IgnoredCount int64 `json:"ignored_count" xml:"ignored_count"`
 
 	// 手动操作的对象数量。
-	ManualCount int64 `json:"manual_count"`
+	ManualCount int64 `json:"manual_count" xml:"manual_count"`
 
 	// 成功率。
-	SuccessRate string `json:"success_rate"`
+	SuccessRate string `json:"success_rate" xml:"success_rate"`
 }
 
 func (o DatabaseObject) String() string {

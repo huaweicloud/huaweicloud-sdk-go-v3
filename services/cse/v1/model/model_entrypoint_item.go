@@ -12,19 +12,19 @@ import (
 type EntrypointItem struct {
 
 	// 微服务引擎专享版组件的ipv4主接入地址
-	MasterEntrypoint *string `json:"master_entrypoint,omitempty"`
+	MasterEntrypoint *string `json:"master_entrypoint,omitempty" xml:"master_entrypoint"`
 
 	// 微服务引擎专享版组件的ipv6主接入地址
-	MasterEntrypointIpv6 *string `json:"master_entrypoint_ipv6,omitempty"`
+	MasterEntrypointIpv6 *string `json:"master_entrypoint_ipv6,omitempty" xml:"master_entrypoint_ipv6"`
 
 	// 微服务引擎专享版组件的ipv4备接入地址
-	SlaveEntrypoint *string `json:"slave_entrypoint,omitempty"`
+	SlaveEntrypoint *string `json:"slave_entrypoint,omitempty" xml:"slave_entrypoint"`
 
 	// 微服务引擎专享版组件的ipv6备接入地址
-	SlaveEntrypointIpv6 *string `json:"slave_entrypoint_ipv6,omitempty"`
+	SlaveEntrypointIpv6 *string `json:"slave_entrypoint_ipv6,omitempty" xml:"slave_entrypoint_ipv6"`
 
 	// 微服务引擎专享版组件类型
-	Type *EntrypointItemType `json:"type,omitempty"`
+	Type *EntrypointItemType `json:"type,omitempty" xml:"type"`
 }
 
 func (o EntrypointItem) String() string {

@@ -9,10 +9,10 @@ import (
 type Ignore struct {
 
 	// API请求方法
-	Method *string `json:"method,omitempty"`
+	Method *string `json:"method,omitempty" xml:"method"`
 
 	// API请求路径
-	Path *string `json:"path,omitempty"`
+	Path *string `json:"path,omitempty" xml:"path"`
 }
 
 func (o Ignore) String() string {

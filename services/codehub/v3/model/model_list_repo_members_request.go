@@ -10,16 +10,16 @@ import (
 type ListRepoMembersRequest struct {
 
 	// 第几页
-	PageIndex *int32 `json:"page_index,omitempty"`
+	PageIndex *int32 `json:"page_index,omitempty" xml:"page_index"`
 
 	// 每页显示size
-	PageSize *int32 `json:"page_size,omitempty"`
+	PageSize *int32 `json:"page_size,omitempty" xml:"page_size"`
 
 	// 仓库uuid
-	RepositoryUuid string `json:"repository_uuid"`
+	RepositoryUuid string `json:"repository_uuid" xml:"repository_uuid"`
 
 	// 搜索关键字
-	Subject *string `json:"subject,omitempty"`
+	Subject *string `json:"subject,omitempty" xml:"subject"`
 }
 
 func (o ListRepoMembersRequest) String() string {

@@ -10,13 +10,13 @@ import (
 type RestartInstanceResponse struct {
 
 	// DDM实例ID。
-	InstanceId *string `json:"instanceId,omitempty"`
+	InstanceId *string `json:"instanceId,omitempty" xml:"instanceId"`
 
 	// DDM实例名称。
-	InstanceName *string `json:"instanceName,omitempty"`
+	InstanceName *string `json:"instanceName,omitempty" xml:"instanceName"`
 
 	// 任务ID。
-	JobId          *string `json:"jobId,omitempty"`
+	JobId          *string `json:"jobId,omitempty" xml:"jobId"`
 	HttpStatusCode int     `json:"-"`
 }
 

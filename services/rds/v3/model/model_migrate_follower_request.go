@@ -13,12 +13,12 @@ import (
 type MigrateFollowerRequest struct {
 
 	// 语言
-	XLanguage *MigrateFollowerRequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *MigrateFollowerRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *FollowerMigrateRequest `json:"body,omitempty"`
+	Body *FollowerMigrateRequest `json:"body,omitempty" xml:"body"`
 }
 
 func (o MigrateFollowerRequest) String() string {

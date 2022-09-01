@@ -10,16 +10,16 @@ import (
 type VolumeAttachments struct {
 
 	// 挂载资源ID
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 所属裸金属服务器ID
-	ServerId *string `json:"serverId,omitempty"`
+	ServerId *string `json:"serverId,omitempty" xml:"serverId"`
 
 	// 挂载云磁盘ID
-	VolumeId *string `json:"volumeId,omitempty"`
+	VolumeId *string `json:"volumeId,omitempty" xml:"volumeId"`
 
 	// 挂载目录，例如“/dev/sdd”。
-	Device *string `json:"device,omitempty"`
+	Device *string `json:"device,omitempty" xml:"device"`
 }
 
 func (o VolumeAttachments) String() string {

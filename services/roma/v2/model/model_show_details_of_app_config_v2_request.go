@@ -10,13 +10,13 @@ import (
 type ShowDetailsOfAppConfigV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 应用编号
-	AppId string `json:"app_id"`
+	AppId string `json:"app_id" xml:"app_id"`
 
 	// 应用配置编号
-	AppConfigId string `json:"app_config_id"`
+	AppConfigId string `json:"app_config_id" xml:"app_config_id"`
 }
 
 func (o ShowDetailsOfAppConfigV2Request) String() string {

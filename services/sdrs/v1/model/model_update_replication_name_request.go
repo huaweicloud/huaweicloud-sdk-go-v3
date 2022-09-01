@@ -10,9 +10,9 @@ import (
 type UpdateReplicationNameRequest struct {
 
 	// replication_id
-	ReplicationId string `json:"replication_id"`
+	ReplicationId string `json:"replication_id" xml:"replication_id"`
 
-	Body *UpdateReplicationNameRequestBody `json:"body,omitempty"`
+	Body *UpdateReplicationNameRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateReplicationNameRequest) String() string {

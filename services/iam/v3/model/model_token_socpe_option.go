@@ -8,9 +8,9 @@ import (
 
 //
 type TokenSocpeOption struct {
-	Domain *ScopeDomainOption `json:"domain,omitempty"`
+	Domain *ScopeDomainOption `json:"domain,omitempty" xml:"domain"`
 
-	Project *ScopeProjectOption `json:"project,omitempty"`
+	Project *ScopeProjectOption `json:"project,omitempty" xml:"project"`
 }
 
 func (o TokenSocpeOption) String() string {

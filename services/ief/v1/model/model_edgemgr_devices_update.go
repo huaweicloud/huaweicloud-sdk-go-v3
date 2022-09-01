@@ -8,7 +8,7 @@ import (
 
 // 终端设备属性
 type EdgemgrDevicesUpdate struct {
-	Device *EdgemgrDevicesPara `json:"device"`
+	Device *EdgemgrDevicesPara `json:"device" xml:"device"`
 }
 
 func (o EdgemgrDevicesUpdate) String() string {

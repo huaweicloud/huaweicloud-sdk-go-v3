@@ -9,18 +9,18 @@ import (
 type UpdateTaskRequestBody struct {
 
 	// 作业的名称，必填。仅能包含汉字、字母、数字、中划线和下划线，长度介于1~100之间。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 作业的描述，选填。长度不超过500。
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
-	Timing *TaskTiming `json:"timing,omitempty"`
+	Timing *TaskTiming `json:"timing,omitempty" xml:"timing"`
 
-	Input *TaskInput `json:"input,omitempty"`
+	Input *TaskInput `json:"input,omitempty" xml:"input"`
 
-	Output *TaskOutput `json:"output,omitempty"`
+	Output *TaskOutput `json:"output,omitempty" xml:"output"`
 
-	ServiceConfig *TaskServiceConfig `json:"service_config,omitempty"`
+	ServiceConfig *TaskServiceConfig `json:"service_config,omitempty" xml:"service_config"`
 }
 
 func (o UpdateTaskRequestBody) String() string {

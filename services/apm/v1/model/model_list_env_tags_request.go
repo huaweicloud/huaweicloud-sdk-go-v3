@@ -10,9 +10,9 @@ import (
 type ListEnvTagsRequest struct {
 
 	// 应用id
-	XBusinessId int64 `json:"x-business-id"`
+	XBusinessId int64 `json:"x-business-id" xml:"x-business-id"`
 
-	Body *TagParam `json:"body,omitempty"`
+	Body *TagParam `json:"body,omitempty" xml:"body"`
 }
 
 func (o ListEnvTagsRequest) String() string {

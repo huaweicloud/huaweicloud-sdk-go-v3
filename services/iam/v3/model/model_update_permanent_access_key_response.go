@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type UpdatePermanentAccessKeyResponse struct {
-	Credential     *UpdateCredentialResult `json:"credential,omitempty"`
+	Credential     *UpdateCredentialResult `json:"credential,omitempty" xml:"credential"`
 	HttpStatusCode int                     `json:"-"`
 }
 

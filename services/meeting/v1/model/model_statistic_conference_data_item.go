@@ -10,25 +10,25 @@ import (
 type StatisticConferenceDataItem struct {
 
 	// * 日期/月份，category = conference_info时有效。 * 小时，category = conference_hourly_info时有效。
-	Time *string `json:"time,omitempty"`
+	Time *string `json:"time,omitempty" xml:"time"`
 
 	// 会议数(含VMR)。 category = conference_info时有效。
-	ConfCount *string `json:"confCount,omitempty"`
+	ConfCount *string `json:"confCount,omitempty" xml:"confCount"`
 
 	// 会议时长(秒)(含VMR)。 category = conference_info时有效。
-	ConfDuration *string `json:"confDuration,omitempty"`
+	ConfDuration *string `json:"confDuration,omitempty" xml:"confDuration"`
 
 	// 与会人次(含VMR)。 category = conference_info时有效。
-	AttendeeCount *string `json:"attendeeCount,omitempty"`
+	AttendeeCount *string `json:"attendeeCount,omitempty" xml:"attendeeCount"`
 
 	// 并发会议使用数。 category = conference_info时有效。
-	ConfConcurrentUsedCount *string `json:"confConcurrentUsedCount,omitempty"`
+	ConfConcurrentUsedCount *string `json:"confConcurrentUsedCount,omitempty" xml:"confConcurrentUsedCount"`
 
 	// 小时单位会议数(含VMR)。 category = conference_hourly_info时有效。
-	Conf24hCount *string `json:"conf24hCount,omitempty"`
+	Conf24hCount *string `json:"conf24hCount,omitempty" xml:"conf24hCount"`
 
 	// 小时单位与会人次(含VMR)。 category = conference_hourly_info时有效。
-	Conf24hAttendeeCount *string `json:"conf24hAttendeeCount,omitempty"`
+	Conf24hAttendeeCount *string `json:"conf24hAttendeeCount,omitempty" xml:"conf24hAttendeeCount"`
 }
 
 func (o StatisticConferenceDataItem) String() string {

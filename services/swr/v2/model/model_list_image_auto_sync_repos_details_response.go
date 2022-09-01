@@ -10,7 +10,7 @@ import (
 type ListImageAutoSyncReposDetailsResponse struct {
 
 	// 镜像自动同步规则
-	Body           *[]SyncRepo `json:"body,omitempty"`
+	Body           *[]SyncRepo `json:"body,omitempty" xml:"body"`
 	HttpStatusCode int         `json:"-"`
 }
 

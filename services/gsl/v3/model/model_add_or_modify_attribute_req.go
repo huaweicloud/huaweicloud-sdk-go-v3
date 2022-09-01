@@ -9,7 +9,7 @@ import (
 type AddOrModifyAttributeReq struct {
 
 	// 自定义属性名称
-	CustAttrName string `json:"cust_attr_name"`
+	CustAttrName string `json:"cust_attr_name" xml:"cust_attr_name"`
 }
 
 func (o AddOrModifyAttributeReq) String() string {

@@ -10,7 +10,7 @@ import (
 type UpdateBaremetalServerMetadataResponse struct {
 
 	//
-	Metadata       map[string]string `json:"metadata,omitempty"`
+	Metadata       map[string]string `json:"metadata,omitempty" xml:"metadata"`
 	HttpStatusCode int               `json:"-"`
 }
 

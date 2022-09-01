@@ -9,19 +9,19 @@ import (
 type TopUrl struct {
 
 	// 总播放次数。
-	Value *int64 `json:"value,omitempty"`
+	Value *int64 `json:"value,omitempty" xml:"value"`
 
 	// 媒资ID。
-	AssetId *string `json:"asset_id,omitempty"`
+	AssetId *string `json:"asset_id,omitempty" xml:"asset_id"`
 
 	// 媒资名称。
-	Title *string `json:"title,omitempty"`
+	Title *string `json:"title,omitempty" xml:"title"`
 
 	// 媒资时长。  单位：秒。
-	Duration *int32 `json:"duration,omitempty"`
+	Duration *int32 `json:"duration,omitempty" xml:"duration"`
 
 	// 媒资原始大小。  单位：字节。
-	Size *int64 `json:"size,omitempty"`
+	Size *int64 `json:"size,omitempty" xml:"size"`
 }
 
 func (o TopUrl) String() string {

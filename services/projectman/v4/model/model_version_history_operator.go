@@ -10,19 +10,19 @@ import (
 type VersionHistoryOperator struct {
 
 	// 用户uuid
-	UserId *string `json:"user_id,omitempty"`
+	UserId *string `json:"user_id,omitempty" xml:"user_id"`
 
 	// 用户名
-	UserName *string `json:"user_name,omitempty"`
+	UserName *string `json:"user_name,omitempty" xml:"user_name"`
 
 	// 昵称
-	NickName *string `json:"nick_name,omitempty"`
+	NickName *string `json:"nick_name,omitempty" xml:"nick_name"`
 
 	// 租户uuid
-	DomainId *string `json:"domain_id,omitempty"`
+	DomainId *string `json:"domain_id,omitempty" xml:"domain_id"`
 
 	// 租户名
-	DomainName *string `json:"domain_name,omitempty"`
+	DomainName *string `json:"domain_name,omitempty" xml:"domain_name"`
 }
 
 func (o VersionHistoryOperator) String() string {

@@ -10,10 +10,10 @@ import (
 type ListAppsResponse struct {
 
 	// 应用模板配置
-	Apps *[]AppResp `json:"apps,omitempty"`
+	Apps *[]AppResp `json:"apps,omitempty" xml:"apps"`
 
 	// 满足条件的应用模板个数
-	Count          *int32 `json:"count,omitempty"`
+	Count          *int32 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

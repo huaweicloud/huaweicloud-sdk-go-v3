@@ -10,7 +10,7 @@ import (
 type ShowEnvironmentDetailRequest struct {
 
 	// 环境ID。
-	EnvironmentId string `json:"environment_id"`
+	EnvironmentId string `json:"environment_id" xml:"environment_id"`
 }
 
 func (o ShowEnvironmentDetailRequest) String() string {

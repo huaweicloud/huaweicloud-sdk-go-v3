@@ -10,22 +10,22 @@ import (
 type ListenersInStatusResp struct {
 
 	// 监听器ID
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 监听器名称
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 监听器关联的后端云服务器组列表
-	Pools []PoolsInStatusResp `json:"pools"`
+	Pools []PoolsInStatusResp `json:"pools" xml:"pools"`
 
 	// 监听器关联的转发策略列表
-	L7policies []L7policiesInStatusResp `json:"l7policies"`
+	L7policies []L7policiesInStatusResp `json:"l7policies" xml:"l7policies"`
 
 	// 监听器的操作状态；该字段为预留字段，暂未启用。默认为ONLINE。
-	OperatingStatus string `json:"operating_status"`
+	OperatingStatus string `json:"operating_status" xml:"operating_status"`
 
 	// 监听器的配置状态；该字段为预留字段，暂未启用。默认为ACTIVE。
-	ProvisioningStatus string `json:"provisioning_status"`
+	ProvisioningStatus string `json:"provisioning_status" xml:"provisioning_status"`
 }
 
 func (o ListenersInStatusResp) String() string {

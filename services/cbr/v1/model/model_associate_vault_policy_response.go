@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type AssociateVaultPolicyResponse struct {
-	AssociatePolicy *VaultPolicyResp `json:"associate_policy,omitempty"`
+	AssociatePolicy *VaultPolicyResp `json:"associate_policy,omitempty" xml:"associate_policy"`
 	HttpStatusCode  int              `json:"-"`
 }
 

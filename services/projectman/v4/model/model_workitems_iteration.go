@@ -10,10 +10,10 @@ import (
 type WorkitemsIteration struct {
 
 	// 迭代id
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 迭代名
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 }
 
 func (o WorkitemsIteration) String() string {

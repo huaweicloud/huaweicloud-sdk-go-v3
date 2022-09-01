@@ -10,7 +10,7 @@ import (
 type ShowProjectSummaryV4Request struct {
 
 	// devcloud项目的32位id
-	ProjectId string `json:"project_id"`
+	ProjectId string `json:"project_id" xml:"project_id"`
 }
 
 func (o ShowProjectSummaryV4Request) String() string {

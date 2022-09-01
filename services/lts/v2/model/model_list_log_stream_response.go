@@ -10,7 +10,7 @@ import (
 type ListLogStreamResponse struct {
 
 	// 日志组数组。
-	LogStreams     *[]LogStream `json:"log_streams,omitempty"`
+	LogStreams     *[]LogStream `json:"log_streams,omitempty" xml:"log_streams"`
 	HttpStatusCode int          `json:"-"`
 }
 

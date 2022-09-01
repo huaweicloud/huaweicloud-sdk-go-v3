@@ -13,9 +13,9 @@ import (
 type SetQosThresholdRequest struct {
 
 	// 阈值类型： * AUDIO：音频相关阈值。 * VIDEO：视频相关阈值。 * SCREEN：屏幕共享相关阈值。 * CPU：CPU相关阈值。
-	ThresholdType SetQosThresholdRequestThresholdType `json:"thresholdType"`
+	ThresholdType SetQosThresholdRequestThresholdType `json:"thresholdType" xml:"thresholdType"`
 
-	Body *SetQosThresholdReq `json:"body,omitempty"`
+	Body *SetQosThresholdReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o SetQosThresholdRequest) String() string {

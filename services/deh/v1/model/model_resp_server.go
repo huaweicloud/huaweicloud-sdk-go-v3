@@ -8,37 +8,37 @@ import (
 
 // server字段数据结构说明。
 type RespServer struct {
-	Addresses *RespAddresses `json:"addresses"`
+	Addresses *RespAddresses `json:"addresses" xml:"addresses"`
 
 	// 弹性云服务器创建时间。
-	Created string `json:"created"`
+	Created string `json:"created" xml:"created"`
 
-	Flavor *RespFlavor `json:"flavor"`
+	Flavor *RespFlavor `json:"flavor" xml:"flavor"`
 
 	// 弹性云服务器ID，格式为UUID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 弹性云服务器名称。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 弹性云服务器状态。  取值范围：ACTIVE、BUILD、DELETED、ERROR、HARD_REBOOT、MIGRATING、PASSWORD、PAUSED、REBOOT、REBUILD、RESIZE、REVERT_RESIZE、SHUTOFF、SHELVED、SHELVED_OFFLOADED、SOFT_DELETED、SUSPENDED、VERIFY_RESIZE
-	Status string `json:"status"`
+	Status string `json:"status" xml:"status"`
 
 	// 弹性云服务器所属租户ID，格式为UUID。
-	TenantId string `json:"tenant_id"`
+	TenantId string `json:"tenant_id" xml:"tenant_id"`
 
 	// 弹性云服务器更新时间。
-	Updated string `json:"updated"`
+	Updated string `json:"updated" xml:"updated"`
 
 	// 创建弹性云服务器的用户ID，格式为UUID。
-	UserId string `json:"user_id"`
+	UserId string `json:"user_id" xml:"user_id"`
 
 	// 弹性云服务器当前任务的状态。
-	TaskState string `json:"task_state"`
+	TaskState string `json:"task_state" xml:"task_state"`
 
-	Image *RespImage `json:"image"`
+	Image *RespImage `json:"image" xml:"image"`
 
-	Metadata *RespMetadata `json:"metadata"`
+	Metadata *RespMetadata `json:"metadata" xml:"metadata"`
 }
 
 func (o RespServer) String() string {

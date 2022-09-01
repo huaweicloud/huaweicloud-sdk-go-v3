@@ -10,10 +10,10 @@ import (
 type ListServicePublicDetailsResponse struct {
 
 	// 终端节点服务列表。
-	EndpointServices *[]EndpointService `json:"endpoint_services,omitempty"`
+	EndpointServices *[]EndpointService `json:"endpoint_services,omitempty" xml:"endpoint_services"`
 
 	// 满足查询条件的公共终端节点服务总条数，不受分页（即limit、offset参数）影响。
-	TotalCount     *int32 `json:"total_count,omitempty"`
+	TotalCount     *int32 `json:"total_count,omitempty" xml:"total_count"`
 	HttpStatusCode int    `json:"-"`
 }
 

@@ -10,12 +10,12 @@ import (
 type ExecuteSessionRequest struct {
 
 	// 机器人标识符。
-	QabotId string `json:"qabot_id"`
+	QabotId string `json:"qabot_id" xml:"qabot_id"`
 
 	// 会话标识符。
-	SessionId string `json:"session_id"`
+	SessionId string `json:"session_id" xml:"session_id"`
 
-	Body *PostQaSessionReq `json:"body,omitempty"`
+	Body *PostQaSessionReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o ExecuteSessionRequest) String() string {

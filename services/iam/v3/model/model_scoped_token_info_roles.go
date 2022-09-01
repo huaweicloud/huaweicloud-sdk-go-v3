@@ -9,10 +9,10 @@ import (
 type ScopedTokenInfoRoles struct {
 
 	// role id
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// name id
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 }
 
 func (o ScopedTokenInfoRoles) String() string {

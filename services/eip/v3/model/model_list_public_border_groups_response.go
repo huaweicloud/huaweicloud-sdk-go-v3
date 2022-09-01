@@ -10,10 +10,10 @@ import (
 type ListPublicBorderGroupsResponse struct {
 
 	// 功能说明：公共池分组对象
-	PublicBorderGroups *[]CommonPoolsWithBorderGroupDict `json:"public_border_groups,omitempty"`
+	PublicBorderGroups *[]CommonPoolsWithBorderGroupDict `json:"public_border_groups,omitempty" xml:"public_border_groups"`
 
 	// 本次请求的编号
-	RequestId      *string `json:"request_id,omitempty"`
+	RequestId      *string `json:"request_id,omitempty" xml:"request_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

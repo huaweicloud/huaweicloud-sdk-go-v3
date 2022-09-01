@@ -10,7 +10,7 @@ import (
 type ServerGroupMember struct {
 
 	// 云服务器UUID。
-	InstanceUuid string `json:"instance_uuid"`
+	InstanceUuid string `json:"instance_uuid" xml:"instance_uuid"`
 }
 
 func (o ServerGroupMember) String() string {

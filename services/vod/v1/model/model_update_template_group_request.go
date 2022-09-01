@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type UpdateTemplateGroupRequest struct {
-	Body *ModifyTransTemplateGroup `json:"body,omitempty"`
+	Body *ModifyTransTemplateGroup `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateTemplateGroupRequest) String() string {

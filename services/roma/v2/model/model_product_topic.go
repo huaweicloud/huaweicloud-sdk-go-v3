@@ -12,22 +12,22 @@ import (
 type ProductTopic struct {
 
 	// 归属产品ID
-	ProductId *int32 `json:"product_id,omitempty"`
+	ProductId *int32 `json:"product_id,omitempty" xml:"product_id"`
 
 	// 产品主题ID
-	TopicId *string `json:"topic_id,omitempty"`
+	TopicId *string `json:"topic_id,omitempty" xml:"topic_id"`
 
 	// 主题权限 0-发布 1-订阅
-	Permission *ProductTopicPermission `json:"permission,omitempty"`
+	Permission *ProductTopicPermission `json:"permission,omitempty" xml:"permission"`
 
 	// 主题名称
-	TopicName *string `json:"topic_name,omitempty"`
+	TopicName *string `json:"topic_name,omitempty" xml:"topic_name"`
 
 	// 版本号
-	Version *string `json:"version,omitempty"`
+	Version *string `json:"version,omitempty" xml:"version"`
 
 	// 描述
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 }
 
 func (o ProductTopic) String() string {

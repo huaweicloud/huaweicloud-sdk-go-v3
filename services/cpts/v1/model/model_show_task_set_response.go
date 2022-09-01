@@ -10,16 +10,16 @@ import (
 type ShowTaskSetResponse struct {
 
 	// code
-	Code *string `json:"code,omitempty"`
+	Code *string `json:"code,omitempty" xml:"code"`
 
 	// extend
-	Extend *[]string `json:"extend,omitempty"`
+	Extend *[]string `json:"extend,omitempty" xml:"extend"`
 
 	// message
-	Message *string `json:"message,omitempty"`
+	Message *string `json:"message,omitempty" xml:"message"`
 
 	// 工程集详细信息
-	Tasks          *[]Task `json:"tasks,omitempty"`
+	Tasks          *[]Task `json:"tasks,omitempty" xml:"tasks"`
 	HttpStatusCode int     `json:"-"`
 }
 

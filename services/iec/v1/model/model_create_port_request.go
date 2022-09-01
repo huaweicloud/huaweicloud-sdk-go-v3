@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreatePortRequest struct {
-	Body *CreatePortRequestBody `json:"body,omitempty"`
+	Body *CreatePortRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreatePortRequest) String() string {

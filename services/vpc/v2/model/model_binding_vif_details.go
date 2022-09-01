@@ -10,13 +10,13 @@ import (
 type BindingVifDetails struct {
 
 	// 功能说明：取值为true，表示是虚拟机的主网卡。
-	PrimaryInterface *bool `json:"primary_interface,omitempty"`
+	PrimaryInterface *bool `json:"primary_interface,omitempty" xml:"primary_interface"`
 
 	// 功能说明：表示该网络服务提供端口过滤特性，如安全组和反MAC/IP欺骗。
-	PortFilter *bool `json:"port_filter,omitempty"`
+	PortFilter *bool `json:"port_filter,omitempty" xml:"port_filter"`
 
 	// 用于通知像nova这样的API消费者，应该使用OVS的混合插入策略。
-	OvsHybridPlug *bool `json:"ovs_hybrid_plug,omitempty"`
+	OvsHybridPlug *bool `json:"ovs_hybrid_plug,omitempty" xml:"ovs_hybrid_plug"`
 }
 
 func (o BindingVifDetails) String() string {

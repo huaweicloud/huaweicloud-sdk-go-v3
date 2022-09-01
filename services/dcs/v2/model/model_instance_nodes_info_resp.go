@@ -10,13 +10,13 @@ import (
 type InstanceNodesInfoResp struct {
 
 	// 实例ID
-	InstanceId *string `json:"instance_id,omitempty"`
+	InstanceId *string `json:"instance_id,omitempty" xml:"instance_id"`
 
 	// 当前实例节点总数
-	NodeCount *int32 `json:"node_count,omitempty"`
+	NodeCount *int32 `json:"node_count,omitempty" xml:"node_count"`
 
 	// 节点详情。
-	Nodes *[]NodesInfoResp `json:"nodes,omitempty"`
+	Nodes *[]NodesInfoResp `json:"nodes,omitempty" xml:"nodes"`
 }
 
 func (o InstanceNodesInfoResp) String() string {

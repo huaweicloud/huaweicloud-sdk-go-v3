@@ -10,7 +10,7 @@ import (
 type ListProjectBugStaticsV4Response struct {
 
 	// bug统计
-	BugStatistics  *[]BugStatisticResponseV4 `json:"bug_statistics,omitempty"`
+	BugStatistics  *[]BugStatisticResponseV4 `json:"bug_statistics,omitempty" xml:"bug_statistics"`
 	HttpStatusCode int                       `json:"-"`
 }
 

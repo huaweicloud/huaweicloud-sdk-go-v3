@@ -13,16 +13,16 @@ import (
 type ListDomainsRequest struct {
 
 	// 域名ID
-	DomainId *string `json:"domain_id,omitempty"`
+	DomainId *string `json:"domain_id,omitempty" xml:"domain_id"`
 
 	// 域名的认证状态:   * unauth - 未认证   * auth - 已认证   * invalid - 认证文件无效   * manual - 人工认证   * skip - 免认证
-	AuthStatus *ListDomainsRequestAuthStatus `json:"auth_status,omitempty"`
+	AuthStatus *ListDomainsRequestAuthStatus `json:"auth_status,omitempty" xml:"auth_status"`
 
 	// 分页查询，偏移量，表示从此偏移量开始查询
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 分页查询，每页显示的条目数量
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 }
 
 func (o ListDomainsRequest) String() string {

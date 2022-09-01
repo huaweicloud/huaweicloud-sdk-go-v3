@@ -9,10 +9,10 @@ import (
 type ServicesInfo struct {
 
 	// 服务id
-	Id *int32 `json:"id,omitempty"`
+	Id *int32 `json:"id,omitempty" xml:"id"`
 
 	// 服务名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 }
 
 func (o ServicesInfo) String() string {

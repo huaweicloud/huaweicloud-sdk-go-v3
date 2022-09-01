@@ -10,9 +10,9 @@ import (
 type UpdateBandwidthRequest struct {
 
 	// 带宽id。
-	BandWidthId string `json:"band_width_id"`
+	BandWidthId string `json:"band_width_id" xml:"band_width_id"`
 
-	Body *UpdateBandwidthRequestBody `json:"body,omitempty"`
+	Body *UpdateBandwidthRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateBandwidthRequest) String() string {

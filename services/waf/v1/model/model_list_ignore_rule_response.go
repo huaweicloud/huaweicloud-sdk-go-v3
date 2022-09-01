@@ -10,10 +10,10 @@ import (
 type ListIgnoreRuleResponse struct {
 
 	// 该策略下全局白名单规则数量
-	Total *int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty" xml:"total"`
 
 	// 全局白名单规则信息数组
-	Items          *[]IgnoreRuleBody `json:"items,omitempty"`
+	Items          *[]IgnoreRuleBody `json:"items,omitempty" xml:"items"`
 	HttpStatusCode int               `json:"-"`
 }
 

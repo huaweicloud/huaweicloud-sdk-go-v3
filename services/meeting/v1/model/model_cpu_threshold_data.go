@@ -10,10 +10,10 @@ import (
 type CpuThresholdData struct {
 
 	// 自定义的cpu阈值，单位为百分比(%)
-	Cpu *int32 `json:"cpu,omitempty"`
+	Cpu *int32 `json:"cpu,omitempty" xml:"cpu"`
 
 	// cpu阈值默认值，单位为百分比(%)
-	CpuDefault *int32 `json:"cpuDefault,omitempty"`
+	CpuDefault *int32 `json:"cpuDefault,omitempty" xml:"cpuDefault"`
 }
 
 func (o CpuThresholdData) String() string {

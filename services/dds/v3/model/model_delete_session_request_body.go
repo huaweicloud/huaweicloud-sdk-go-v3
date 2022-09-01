@@ -9,7 +9,7 @@ import (
 type DeleteSessionRequestBody struct {
 
 	// 需要终结的会话ID列表。
-	Sessions []string `json:"sessions"`
+	Sessions []string `json:"sessions" xml:"sessions"`
 }
 
 func (o DeleteSessionRequestBody) String() string {

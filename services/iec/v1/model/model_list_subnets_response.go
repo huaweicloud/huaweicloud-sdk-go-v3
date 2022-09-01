@@ -10,10 +10,10 @@ import (
 type ListSubnetsResponse struct {
 
 	// 子网数组。
-	Subnets *[]Subnet `json:"subnets,omitempty"`
+	Subnets *[]Subnet `json:"subnets,omitempty" xml:"subnets"`
 
 	// 子网数目。
-	Count          *int32 `json:"count,omitempty"`
+	Count          *int32 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

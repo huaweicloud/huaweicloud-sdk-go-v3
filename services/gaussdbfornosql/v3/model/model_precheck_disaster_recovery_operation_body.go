@@ -9,9 +9,9 @@ import (
 type PrecheckDisasterRecoveryOperationBody struct {
 
 	// 指定预校验的具体容灾操作。
-	Operation string `json:"operation"`
+	Operation string `json:"operation" xml:"operation"`
 
-	DisasterRecoveryInstance *PrecheckDisasterRecoveryInstance `json:"disaster_recovery_instance,omitempty"`
+	DisasterRecoveryInstance *PrecheckDisasterRecoveryInstance `json:"disaster_recovery_instance,omitempty" xml:"disaster_recovery_instance"`
 }
 
 func (o PrecheckDisasterRecoveryOperationBody) String() string {

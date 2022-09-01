@@ -10,13 +10,13 @@ import (
 type ListKeypairsRequest struct {
 
 	// 查询返回keypair列表当前页面的数量。 取值范围：0~1000。
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 偏移量。 当前偏移量，默认为0。
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 根据名称查询keypair列表。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 }
 
 func (o ListKeypairsRequest) String() string {

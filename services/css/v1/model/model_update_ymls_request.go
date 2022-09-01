@@ -10,9 +10,9 @@ import (
 type UpdateYmlsRequest struct {
 
 	// 指定修改参数配置的集群ID。
-	ClusterId string `json:"cluster_id"`
+	ClusterId string `json:"cluster_id" xml:"cluster_id"`
 
-	Body *UpdateYmlsReq `json:"body,omitempty"`
+	Body *UpdateYmlsReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateYmlsRequest) String() string {

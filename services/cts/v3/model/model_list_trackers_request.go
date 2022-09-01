@@ -13,10 +13,10 @@ import (
 type ListTrackersRequest struct {
 
 	// 标示追踪器名称。 在不传入该字段的情况下，将查询租户所有的追踪器。
-	TrackerName *string `json:"tracker_name,omitempty"`
+	TrackerName *string `json:"tracker_name,omitempty" xml:"tracker_name"`
 
 	// 标识追踪器类型。 目前支持系统追踪器有管理类追踪器（system）和数据类追踪器（data）。
-	TrackerType *ListTrackersRequestTrackerType `json:"tracker_type,omitempty"`
+	TrackerType *ListTrackersRequestTrackerType `json:"tracker_type,omitempty" xml:"tracker_type"`
 }
 
 func (o ListTrackersRequest) String() string {

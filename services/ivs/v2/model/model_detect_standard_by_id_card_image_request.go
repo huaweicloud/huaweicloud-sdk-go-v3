@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type DetectStandardByIdCardImageRequest struct {
-	Body *IvsStandardByIdCardImageRequestBody `json:"body,omitempty"`
+	Body *IvsStandardByIdCardImageRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o DetectStandardByIdCardImageRequest) String() string {

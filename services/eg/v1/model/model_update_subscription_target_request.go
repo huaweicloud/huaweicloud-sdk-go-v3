@@ -10,12 +10,12 @@ import (
 type UpdateSubscriptionTargetRequest struct {
 
 	// 事件订阅ID
-	SubscriptionId string `json:"subscription_id"`
+	SubscriptionId string `json:"subscription_id" xml:"subscription_id"`
 
 	// 事件订阅目标ID
-	TargetId string `json:"target_id"`
+	TargetId string `json:"target_id" xml:"target_id"`
 
-	Body *SubscriptionTarget `json:"body,omitempty"`
+	Body *SubscriptionTarget `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateSubscriptionTargetRequest) String() string {

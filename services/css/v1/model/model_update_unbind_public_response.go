@@ -10,7 +10,7 @@ import (
 type UpdateUnbindPublicResponse struct {
 
 	// 操作行为。固定为：unbindZone，表示解绑成功。
-	Action         *string `json:"action,omitempty"`
+	Action         *string `json:"action,omitempty" xml:"action"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -8,9 +8,9 @@ import (
 
 // 服务详情
 type ServiceReqDetail struct {
-	MetaData *SvcMetadata `json:"meta_data"`
+	MetaData *SvcMetadata `json:"meta_data" xml:"meta_data"`
 
-	Spec *SvcSpec `json:"spec"`
+	Spec *SvcSpec `json:"spec" xml:"spec"`
 }
 
 func (o ServiceReqDetail) String() string {

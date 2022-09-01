@@ -10,7 +10,7 @@ import (
 type UpdatePortResponse struct {
 
 	// 任务ID
-	WorkflowId     *string `json:"workflowId,omitempty"`
+	WorkflowId     *string `json:"workflowId,omitempty" xml:"workflowId"`
 	HttpStatusCode int     `json:"-"`
 }
 

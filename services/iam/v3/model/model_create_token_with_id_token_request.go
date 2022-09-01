@@ -10,9 +10,9 @@ import (
 type CreateTokenWithIdTokenRequest struct {
 
 	// 身份提供商ID。
-	XIdpId string `json:"X-Idp-Id"`
+	XIdpId string `json:"X-Idp-Id" xml:"X-Idp-Id"`
 
-	Body *GetIdTokenRequestBody `json:"body,omitempty"`
+	Body *GetIdTokenRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateTokenWithIdTokenRequest) String() string {

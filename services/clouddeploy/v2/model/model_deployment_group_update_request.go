@@ -13,16 +13,16 @@ import (
 type DeploymentGroupUpdateRequest struct {
 
 	// 主机组名
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 描述
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 自定义slave资源池id
-	SlaveClusterId *string `json:"slave_cluster_id,omitempty"`
+	SlaveClusterId *string `json:"slave_cluster_id,omitempty" xml:"slave_cluster_id"`
 
 	// 自动连通性验证 0不执行 1每日 2每周
-	AutoConnectionTestSwitch *DeploymentGroupUpdateRequestAutoConnectionTestSwitch `json:"auto_connection_test_switch,omitempty"`
+	AutoConnectionTestSwitch *DeploymentGroupUpdateRequestAutoConnectionTestSwitch `json:"auto_connection_test_switch,omitempty" xml:"auto_connection_test_switch"`
 }
 
 func (o DeploymentGroupUpdateRequest) String() string {

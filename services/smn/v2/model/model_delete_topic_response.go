@@ -10,7 +10,7 @@ import (
 type DeleteTopicResponse struct {
 
 	// 请求的唯一标识ID
-	RequestId      *string `json:"request_id,omitempty"`
+	RequestId      *string `json:"request_id,omitempty" xml:"request_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

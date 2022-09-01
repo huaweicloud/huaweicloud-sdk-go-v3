@@ -10,9 +10,9 @@ import (
 type UpdatePrePaidBandwidthRequest struct {
 
 	// 带宽唯一标识。通过弹性公网IP详情获取，且此弹性公网IP是包周期的。
-	BandwidthId string `json:"bandwidth_id"`
+	BandwidthId string `json:"bandwidth_id" xml:"bandwidth_id"`
 
-	Body *UpdatePrePaidBandwidthRequestBody `json:"body,omitempty"`
+	Body *UpdatePrePaidBandwidthRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdatePrePaidBandwidthRequest) String() string {

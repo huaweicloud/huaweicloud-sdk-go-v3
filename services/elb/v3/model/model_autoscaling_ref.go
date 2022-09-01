@@ -10,10 +10,10 @@ import (
 type AutoscalingRef struct {
 
 	// 当前负载均衡器是否开启弹性扩缩容。 取值： - true：开启。 - false：不开启。
-	Enable bool `json:"enable"`
+	Enable bool `json:"enable" xml:"enable"`
 
 	// 弹性扩缩容的最小七层规格ID（规格类型L7_elastic），有七层监听器时，该字段不能为空。
-	MinL7FlavorId *string `json:"min_l7_flavor_id,omitempty"`
+	MinL7FlavorId *string `json:"min_l7_flavor_id,omitempty" xml:"min_l7_flavor_id"`
 }
 
 func (o AutoscalingRef) String() string {

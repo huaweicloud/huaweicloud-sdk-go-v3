@@ -13,40 +13,40 @@ import (
 type ListPortsRequest struct {
 
 	// 功能说明：按照name过滤查询  取值范围：最大长度不超过255
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 按照port_id过滤查询
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 每页返回的个数
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 按照admin_state_up进行过滤
-	AdminStateUp *bool `json:"admin_state_up,omitempty"`
+	AdminStateUp *bool `json:"admin_state_up,omitempty" xml:"admin_state_up"`
 
 	// 按照network_id过滤查询
-	NetworkId *string `json:"network_id,omitempty"`
+	NetworkId *string `json:"network_id,omitempty" xml:"network_id"`
 
 	// 按照mac_address过滤查询
-	MacAddress *string `json:"mac_address,omitempty"`
+	MacAddress *string `json:"mac_address,omitempty" xml:"mac_address"`
 
 	// 按照device_id过滤查询
-	DeviceId *string `json:"device_id,omitempty"`
+	DeviceId *string `json:"device_id,omitempty" xml:"device_id"`
 
 	// 按照device_owner过滤查询
-	DeviceOwner *ListPortsRequestDeviceOwner `json:"device_owner,omitempty"`
+	DeviceOwner *ListPortsRequestDeviceOwner `json:"device_owner,omitempty" xml:"device_owner"`
 
 	// 功能说明：按照status过滤查询  取值范围：ACTIVE、BUILD、DOWN
-	Status *ListPortsRequestStatus `json:"status,omitempty"`
+	Status *ListPortsRequestStatus `json:"status,omitempty" xml:"status"`
 
 	// 分页查询起始的资源ID，为空时查询第一页
-	Marker *string `json:"marker,omitempty"`
+	Marker *string `json:"marker,omitempty" xml:"marker"`
 
 	// 按照fixed_ips=ip_address或者fixed_ips=subnet_id过滤查询
-	FixedIps *string `json:"fixed_ips,omitempty"`
+	FixedIps *string `json:"fixed_ips,omitempty" xml:"fixed_ips"`
 
 	// 功能说明：企业项目ID，用于基于企业项目的权限管理。  取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。  若需要查询当前用户所有企业项目绑定的端口，请传参all_granted_eps。
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
 }
 
 func (o ListPortsRequest) String() string {

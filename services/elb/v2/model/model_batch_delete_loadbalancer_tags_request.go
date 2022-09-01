@@ -10,9 +10,9 @@ import (
 type BatchDeleteLoadbalancerTagsRequest struct {
 
 	// 负载均衡器ID。
-	LoadbalancerId string `json:"loadbalancer_id"`
+	LoadbalancerId string `json:"loadbalancer_id" xml:"loadbalancer_id"`
 
-	Body *BatchDeleteLoadbalancerTagsRequestBody `json:"body,omitempty"`
+	Body *BatchDeleteLoadbalancerTagsRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchDeleteLoadbalancerTagsRequest) String() string {

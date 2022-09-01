@@ -13,10 +13,10 @@ import (
 type PostSentenceEmbeddingReq struct {
 
 	// 文本列表，文本长度为1~512，列表大小为1~1000，文本编码为UTF-8。
-	Sentences []string `json:"sentences"`
+	Sentences []string `json:"sentences" xml:"sentences"`
 
 	// 支持的领域类型，目前只支持通用领域，默认为general。
-	Domain *PostSentenceEmbeddingReqDomain `json:"domain,omitempty"`
+	Domain *PostSentenceEmbeddingReqDomain `json:"domain,omitempty" xml:"domain"`
 }
 
 func (o PostSentenceEmbeddingReq) String() string {

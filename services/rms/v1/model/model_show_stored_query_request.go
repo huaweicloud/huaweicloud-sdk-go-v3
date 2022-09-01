@@ -10,7 +10,7 @@ import (
 type ShowStoredQueryRequest struct {
 
 	// 查询ID
-	QueryId string `json:"query_id"`
+	QueryId string `json:"query_id" xml:"query_id"`
 }
 
 func (o ShowStoredQueryRequest) String() string {

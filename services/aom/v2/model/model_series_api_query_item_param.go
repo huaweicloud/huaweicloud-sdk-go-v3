@@ -10,7 +10,7 @@ import (
 type SeriesApiQueryItemParam struct {
 
 	// 通过该数组传递的参数信息进行时间序列查询。
-	Series []QuerySeriesOptionParam `json:"series"`
+	Series []QuerySeriesOptionParam `json:"series" xml:"series"`
 }
 
 func (o SeriesApiQueryItemParam) String() string {

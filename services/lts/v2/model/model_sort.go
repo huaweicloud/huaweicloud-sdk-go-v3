@@ -12,10 +12,10 @@ import (
 type Sort struct {
 
 	// 排序字段
-	OrderBy []string `json:"order_by"`
+	OrderBy []string `json:"order_by" xml:"order_by"`
 
 	// 排序顺序
-	Order SortOrder `json:"order"`
+	Order SortOrder `json:"order" xml:"order"`
 }
 
 func (o Sort) String() string {

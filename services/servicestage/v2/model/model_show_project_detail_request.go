@@ -10,10 +10,10 @@ import (
 type ShowProjectDetailRequest struct {
 
 	// 授权名称。
-	XRepoAuth string `json:"X-Repo-Auth"`
+	XRepoAuth string `json:"X-Repo-Auth" xml:"X-Repo-Auth"`
 
 	// 仓库克隆URL。
-	CloneUrl string `json:"clone_url"`
+	CloneUrl string `json:"clone_url" xml:"clone_url"`
 }
 
 func (o ShowProjectDetailRequest) String() string {

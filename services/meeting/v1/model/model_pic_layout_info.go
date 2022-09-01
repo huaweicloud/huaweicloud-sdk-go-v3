@@ -9,13 +9,13 @@ import (
 type PicLayoutInfo struct {
 
 	// 多画面布局的宽度
-	X *int32 `json:"x,omitempty"`
+	X *int32 `json:"x,omitempty" xml:"x"`
 
 	// 多画面布局的高度
-	Y *int32 `json:"y,omitempty"`
+	Y *int32 `json:"y,omitempty" xml:"y"`
 
 	// 子画面布局具体列表
-	SubPicLayoutInfoList *[]SubPicLayoutInfo `json:"subPicLayoutInfoList,omitempty"`
+	SubPicLayoutInfoList *[]SubPicLayoutInfo `json:"subPicLayoutInfoList,omitempty" xml:"subPicLayoutInfoList"`
 }
 
 func (o PicLayoutInfo) String() string {

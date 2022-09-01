@@ -9,11 +9,11 @@ import (
 type QualityEnhanceTemplateInfo struct {
 
 	// 模板ID。
-	TemplateId *int32 `json:"template_id,omitempty"`
+	TemplateId *int32 `json:"template_id,omitempty" xml:"template_id"`
 
-	Template *QualityEnhanceTemplate `json:"template,omitempty"`
+	Template *QualityEnhanceTemplate `json:"template,omitempty" xml:"template"`
 
-	Error *XCodeError `json:"error,omitempty"`
+	Error *XCodeError `json:"error,omitempty" xml:"error"`
 }
 
 func (o QualityEnhanceTemplateInfo) String() string {

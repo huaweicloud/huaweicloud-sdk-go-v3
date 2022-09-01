@@ -10,10 +10,10 @@ import (
 type ShrinkInstanceNodeResponse struct {
 
 	// 任务ID。
-	JobId *string `json:"job_id,omitempty"`
+	JobId *string `json:"job_id,omitempty" xml:"job_id"`
 
 	// 订单ID，仅创建包年包月实例时返回该参数。
-	OrderId        *string `json:"order_id,omitempty"`
+	OrderId        *string `json:"order_id,omitempty" xml:"order_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

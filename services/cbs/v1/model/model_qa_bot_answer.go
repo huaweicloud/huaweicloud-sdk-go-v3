@@ -10,22 +10,22 @@ import (
 type QaBotAnswer struct {
 
 	// 问答对ID。
-	QaPairId *string `json:"qa_pair_id,omitempty"`
+	QaPairId *string `json:"qa_pair_id,omitempty" xml:"qa_pair_id"`
 
 	// 标准问题。
-	StQuestion *string `json:"st_question,omitempty"`
+	StQuestion *string `json:"st_question,omitempty" xml:"st_question"`
 
 	// 知识库答案，包含该字段的回答为直接回答，未包含该字段的是推荐回答。
-	Answer *string `json:"answer,omitempty"`
+	Answer *string `json:"answer,omitempty" xml:"answer"`
 
 	// 相似度得分，精确到小数点后3位。
-	Score *float64 `json:"score,omitempty"`
+	Score *float64 `json:"score,omitempty" xml:"score"`
 
 	// 所属领域。
-	Domain *string `json:"domain,omitempty"`
+	Domain *string `json:"domain,omitempty" xml:"domain"`
 
 	// 最高评分的扩展问或标准问，当关闭内部阈值处理时返回。
-	TopScoreQuestion *string `json:"top_score_question,omitempty"`
+	TopScoreQuestion *string `json:"top_score_question,omitempty" xml:"top_score_question"`
 }
 
 func (o QaBotAnswer) String() string {

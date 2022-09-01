@@ -10,10 +10,10 @@ import (
 type FlashResult struct {
 
 	// 音频声道id
-	ChannelId *int32 `json:"channel_id,omitempty"`
+	ChannelId *int32 `json:"channel_id,omitempty" xml:"channel_id"`
 
 	// 分句结果
-	Sentences *[]Sentences `json:"sentences,omitempty"`
+	Sentences *[]Sentences `json:"sentences,omitempty" xml:"sentences"`
 }
 
 func (o FlashResult) String() string {

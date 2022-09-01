@@ -10,13 +10,13 @@ import (
 type LiveDetectRespVideoresult struct {
 
 	// 是否是活体。
-	Alive *bool `json:"alive,omitempty"`
+	Alive *bool `json:"alive,omitempty" xml:"alive"`
 
 	// 动作列表。
-	Actions *[]ActionsList `json:"actions,omitempty"`
+	Actions *[]ActionsList `json:"actions,omitempty" xml:"actions"`
 
 	// 检测出最大人脸的图片base64。
-	Picture *string `json:"picture,omitempty"`
+	Picture *string `json:"picture,omitempty" xml:"picture"`
 }
 
 func (o LiveDetectRespVideoresult) String() string {

@@ -12,51 +12,51 @@ import (
 type BackendApi struct {
 
 	// 后端自定义认证对象的ID
-	AuthorizerId *string `json:"authorizer_id,omitempty"`
+	AuthorizerId *string `json:"authorizer_id,omitempty" xml:"authorizer_id"`
 
 	// 后端服务的地址。  由主机（IP或域名）和端口号组成，总长度不超过255。格式为主机:端口（如：apig.example.com:7443）。如果不写端口，则HTTPS默认端口号为443，HTTP默认端口号为80。  支持环境变量，使用环境变量时，每个变量名的长度为3 ~ 32位的字符串，字符串由英文字母、数字、下划线、中划线组成，且只能以英文开头
-	UrlDomain *string `json:"url_domain,omitempty"`
+	UrlDomain *string `json:"url_domain,omitempty" xml:"url_domain"`
 
 	// 请求协议
-	ReqProtocol BackendApiReqProtocol `json:"req_protocol"`
+	ReqProtocol BackendApiReqProtocol `json:"req_protocol" xml:"req_protocol"`
 
 	// 描述。 > 中文字符必须为UTF-8或者unicode编码。
-	Remark *string `json:"remark,omitempty"`
+	Remark *string `json:"remark,omitempty" xml:"remark"`
 
 	// 请求方式
-	ReqMethod BackendApiReqMethod `json:"req_method"`
+	ReqMethod BackendApiReqMethod `json:"req_method" xml:"req_method"`
 
 	// web后端版本，字符长度不超过16
-	Version *string `json:"version,omitempty"`
+	Version *string `json:"version,omitempty" xml:"version"`
 
 	// 请求地址。可以包含请求参数，用{}标识，比如/getUserInfo/{userId}，支持 * % - _ . 等特殊字符，总长度不超过512，且满足URI规范。  支持环境变量，使用环境变量时，每个变量名的长度为3 ~ 32位的字符串，字符串由英文字母、数字、中划线、下划线组成，且只能以英文开头。 > 需要服从URI规范。
-	ReqUri string `json:"req_uri"`
+	ReqUri string `json:"req_uri" xml:"req_uri"`
 
 	// ROMA Connect APIC请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000  单位：毫秒。
-	Timeout int32 `json:"timeout"`
+	Timeout int32 `json:"timeout" xml:"timeout"`
 
 	// 是否开启双向认证
-	EnableClientSsl *bool `json:"enable_client_ssl,omitempty"`
+	EnableClientSsl *bool `json:"enable_client_ssl,omitempty" xml:"enable_client_ssl"`
 
 	// ROMA Connect APIC请求后端服务的重试次数，默认为-1，范围[-1,10]
-	RetryCount *string `json:"retry_count,omitempty"`
+	RetryCount *string `json:"retry_count,omitempty" xml:"retry_count"`
 
 	// 编号
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 后端状态   - 1： 有效
-	Status *BackendApiStatus `json:"status,omitempty"`
+	Status *BackendApiStatus `json:"status,omitempty" xml:"status"`
 
 	// 注册时间
-	RegisterTime *sdktime.SdkTime `json:"register_time,omitempty"`
+	RegisterTime *sdktime.SdkTime `json:"register_time,omitempty" xml:"register_time"`
 
 	// 修改时间
-	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
+	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty" xml:"update_time"`
 
-	VpcChannelInfo *VpcInfo `json:"vpc_channel_info,omitempty"`
+	VpcChannelInfo *VpcInfo `json:"vpc_channel_info,omitempty" xml:"vpc_channel_info"`
 
 	// 是否使用VPC通道 - 1：使用VPC通道 - 2：不使用VPC通道
-	VpcChannelStatus *int32 `json:"vpc_channel_status,omitempty"`
+	VpcChannelStatus *int32 `json:"vpc_channel_status,omitempty" xml:"vpc_channel_status"`
 }
 
 func (o BackendApi) String() string {

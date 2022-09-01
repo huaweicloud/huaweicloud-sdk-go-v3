@@ -10,7 +10,7 @@ import (
 type PublishAssetFromObsResponse struct {
 
 	// 媒资ID
-	AssetId        *string `json:"asset_id,omitempty"`
+	AssetId        *string `json:"asset_id,omitempty" xml:"asset_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

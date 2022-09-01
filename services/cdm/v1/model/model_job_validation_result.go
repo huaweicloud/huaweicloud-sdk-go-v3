@@ -13,10 +13,10 @@ import (
 type JobValidationResult struct {
 
 	// 错误描述
-	Message *string `json:"message,omitempty"`
+	Message *string `json:"message,omitempty" xml:"message"`
 
 	// ERROR,WARNING
-	Status *JobValidationResultStatus `json:"status,omitempty"`
+	Status *JobValidationResultStatus `json:"status,omitempty" xml:"status"`
 }
 
 func (o JobValidationResult) String() string {

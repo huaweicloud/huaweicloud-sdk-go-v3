@@ -10,43 +10,43 @@ import (
 type ShowMqsInstanceMessagesRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// topic名称。
-	Topic string `json:"topic"`
+	Topic string `json:"topic" xml:"topic"`
 
 	// 是否按照时间排序。
-	Asc *bool `json:"asc,omitempty"`
+	Asc *bool `json:"asc,omitempty" xml:"asc"`
 
 	// 开始时间。Unix毫秒时间戳。 查询消息偏移量时，为必选参数。
-	StartTime string `json:"start_time"`
+	StartTime string `json:"start_time" xml:"start_time"`
 
 	// 结束时间。Unix毫秒时间戳。 查询消息偏移量时，为必选参数。
-	EndTime string `json:"end_time"`
+	EndTime string `json:"end_time" xml:"end_time"`
 
 	// 查询消息的数量。
-	Limit *string `json:"limit,omitempty"`
+	Limit *string `json:"limit,omitempty" xml:"limit"`
 
 	// 查询的偏移量。
-	Offset *string `json:"offset,omitempty"`
+	Offset *string `json:"offset,omitempty" xml:"offset"`
 
 	// 是否下载。
-	Download *bool `json:"download,omitempty"`
+	Download *bool `json:"download,omitempty" xml:"download"`
 
 	// 消息偏移量。 查询消息内容时，为必选参数。 若start_time、end_time参数不为空，该参数无效。
-	MessageOffset *string `json:"message_offset,omitempty"`
+	MessageOffset *string `json:"message_offset,omitempty" xml:"message_offset"`
 
 	// 分区。 查询消息内容时，为必选参数。 若start_time、end_time参数不为空，该参数无效。
-	Partition *string `json:"partition,omitempty"`
+	Partition *string `json:"partition,omitempty" xml:"partition"`
 
 	// 消息key。
-	Key *string `json:"key,omitempty"`
+	Key *string `json:"key,omitempty" xml:"key"`
 
 	// 消息ID。
-	MessageId *string `json:"message_id,omitempty"`
+	MessageId *string `json:"message_id,omitempty" xml:"message_id"`
 
 	// 消息标签。
-	Tag *string `json:"tag,omitempty"`
+	Tag *string `json:"tag,omitempty" xml:"tag"`
 }
 
 func (o ShowMqsInstanceMessagesRequest) String() string {

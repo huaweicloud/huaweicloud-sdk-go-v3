@@ -10,19 +10,19 @@ import (
 type PolicyInstanceResources struct {
 
 	// 查询配额的类型。
-	Type *string `json:"type,omitempty"`
+	Type *string `json:"type,omitempty" xml:"type"`
 
 	// 已使用的配额数量。
-	Used *int32 `json:"used,omitempty"`
+	Used *int32 `json:"used,omitempty" xml:"used"`
 
 	// 配额总数量。
-	Quota *int32 `json:"quota,omitempty"`
+	Quota *int32 `json:"quota,omitempty" xml:"quota"`
 
 	// 配额上限。
-	Max *int32 `json:"max,omitempty"`
+	Max *int32 `json:"max,omitempty" xml:"max"`
 
 	// 配额下限。
-	Min *int32 `json:"min,omitempty"`
+	Min *int32 `json:"min,omitempty" xml:"min"`
 }
 
 func (o PolicyInstanceResources) String() string {

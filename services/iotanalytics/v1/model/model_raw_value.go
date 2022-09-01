@@ -9,10 +9,10 @@ import (
 type RawValue struct {
 
 	// 属性名称
-	PropertyName *string `json:"property_name,omitempty"`
+	PropertyName *string `json:"property_name,omitempty" xml:"property_name"`
 
 	// 资产属性的历史值序列，示例：[1,2]
-	Values *[]interface{} `json:"values,omitempty"`
+	Values *[]interface{} `json:"values,omitempty" xml:"values"`
 }
 
 func (o RawValue) String() string {

@@ -10,12 +10,12 @@ import (
 type ListCloudConnectionsResponse struct {
 
 	// 云连接实例列表。
-	CloudConnections *[]CloudConnection `json:"cloud_connections,omitempty"`
+	CloudConnections *[]CloudConnection `json:"cloud_connections,omitempty" xml:"cloud_connections"`
 
-	PageInfo *PageInfo `json:"page_info,omitempty"`
+	PageInfo *PageInfo `json:"page_info,omitempty" xml:"page_info"`
 
 	// 请求ID。
-	RequestId      *string `json:"request_id,omitempty"`
+	RequestId      *string `json:"request_id,omitempty" xml:"request_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

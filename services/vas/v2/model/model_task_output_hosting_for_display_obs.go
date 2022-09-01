@@ -10,10 +10,10 @@ import (
 type TaskOutputHostingForDisplayObs struct {
 
 	// 结果文件result.json所在的OBS桶
-	Bucket *string `json:"bucket,omitempty"`
+	Bucket *string `json:"bucket,omitempty" xml:"bucket"`
 
 	// 结果文件result.json所在的路径
-	Path *string `json:"path,omitempty"`
+	Path *string `json:"path,omitempty" xml:"path"`
 }
 
 func (o TaskOutputHostingForDisplayObs) String() string {

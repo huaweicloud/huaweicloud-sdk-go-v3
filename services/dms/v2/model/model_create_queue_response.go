@@ -10,13 +10,13 @@ import (
 type CreateQueueResponse struct {
 
 	// 队列ID。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 队列的名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 仅Kafka队列才有该响应参数。  使用Kafka SDK时的Kafka topic的ID。
-	KafkaTopic     *string `json:"kafka_topic,omitempty"`
+	KafkaTopic     *string `json:"kafka_topic,omitempty" xml:"kafka_topic"`
 	HttpStatusCode int     `json:"-"`
 }
 

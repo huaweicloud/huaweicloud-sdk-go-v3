@@ -13,19 +13,19 @@ import (
 type Regular struct {
 
 	// L2正则项系数。
-	L2Regularization *float64 `json:"l2_regularization,omitempty"`
+	L2Regularization *float64 `json:"l2_regularization,omitempty" xml:"l2_regularization"`
 
 	// 正则损失计算方式。
-	RegularLossComputeMode *RegularRegularLossComputeMode `json:"regular_loss_compute_mode,omitempty"`
+	RegularLossComputeMode *RegularRegularLossComputeMode `json:"regular_loss_compute_mode,omitempty" xml:"regular_loss_compute_mode"`
 
 	// 隐向量层L2正则化系数。
-	EmbedL2Regularization *float64 `json:"embed_l2_regularization,omitempty"`
+	EmbedL2Regularization *float64 `json:"embed_l2_regularization,omitempty" xml:"embed_l2_regularization"`
 
 	// wide部分L2正则化系数。
-	WideL2Regularization *float64 `json:"wide_l2_regularization,omitempty"`
+	WideL2Regularization *float64 `json:"wide_l2_regularization,omitempty" xml:"wide_l2_regularization"`
 
 	// 结构化部分L2正则化系数。
-	StructureL2Regularization *float64 `json:"structure_l2_regularization,omitempty"`
+	StructureL2Regularization *float64 `json:"structure_l2_regularization,omitempty" xml:"structure_l2_regularization"`
 }
 
 func (o Regular) String() string {

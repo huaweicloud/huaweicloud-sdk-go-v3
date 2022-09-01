@@ -10,13 +10,13 @@ import (
 type RecordDownloadUrlDo struct {
 
 	// 下载鉴权token
-	Token *string `json:"token,omitempty"`
+	Token *string `json:"token,omitempty" xml:"token"`
 
 	// 文件类型
-	FileType *string `json:"fileType,omitempty"`
+	FileType *string `json:"fileType,omitempty" xml:"fileType"`
 
 	// 录制文件下载URL
-	Url *string `json:"url,omitempty"`
+	Url *string `json:"url,omitempty" xml:"url"`
 }
 
 func (o RecordDownloadUrlDo) String() string {

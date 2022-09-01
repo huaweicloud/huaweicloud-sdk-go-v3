@@ -8,9 +8,9 @@ import (
 
 // tracker通道配置
 type ChannelConfigBody struct {
-	Smn *TrackerSmnChannelConfigBody `json:"smn,omitempty"`
+	Smn *TrackerSmnChannelConfigBody `json:"smn,omitempty" xml:"smn"`
 
-	Obs *TrackerObsChannelConfigBody `json:"obs,omitempty"`
+	Obs *TrackerObsChannelConfigBody `json:"obs,omitempty" xml:"obs"`
 }
 
 func (o ChannelConfigBody) String() string {

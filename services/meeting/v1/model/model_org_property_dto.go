@@ -9,10 +9,10 @@ import (
 type OrgPropertyDto struct {
 
 	// 配置项key。 开通本地录制功能，参数填写：enableClientRecord
-	PropertyKey *string `json:"propertyKey,omitempty"`
+	PropertyKey *string `json:"propertyKey,omitempty" xml:"propertyKey"`
 
 	// 配置项值。 开通本地录制功能，参数填写：true
-	PropertyValue *string `json:"propertyValue,omitempty"`
+	PropertyValue *string `json:"propertyValue,omitempty" xml:"propertyValue"`
 }
 
 func (o OrgPropertyDto) String() string {

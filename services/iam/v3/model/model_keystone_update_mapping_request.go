@@ -10,9 +10,9 @@ import (
 type KeystoneUpdateMappingRequest struct {
 
 	// 待更新的映射ID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
-	Body *KeystoneUpdateMappingRequestBody `json:"body,omitempty"`
+	Body *KeystoneUpdateMappingRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o KeystoneUpdateMappingRequest) String() string {

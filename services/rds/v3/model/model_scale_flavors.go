@@ -9,13 +9,13 @@ import (
 type ScaleFlavors struct {
 
 	// 规格码。
-	Code *string `json:"code,omitempty"`
+	Code *string `json:"code,omitempty" xml:"code"`
 
 	// CPU个数。
-	Cpu *string `json:"cpu,omitempty"`
+	Cpu *string `json:"cpu,omitempty" xml:"cpu"`
 
 	// 内存大小（单位：GB）。
-	Mem *string `json:"mem,omitempty"`
+	Mem *string `json:"mem,omitempty" xml:"mem"`
 }
 
 func (o ScaleFlavors) String() string {

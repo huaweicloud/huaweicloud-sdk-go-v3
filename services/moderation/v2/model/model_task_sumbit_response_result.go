@@ -10,7 +10,7 @@ import (
 type TaskSumbitResponseResult struct {
 
 	// 批量图像内容审核的任务标识，用于后续的结果查询。
-	JobId *string `json:"job_id,omitempty"`
+	JobId *string `json:"job_id,omitempty" xml:"job_id"`
 }
 
 func (o TaskSumbitResponseResult) String() string {

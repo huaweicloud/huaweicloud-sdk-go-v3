@@ -10,10 +10,10 @@ import (
 type ShowRepoIdRequest struct {
 
 	// 仓库组名
-	GroupName string `json:"group_name"`
+	GroupName string `json:"group_name" xml:"group_name"`
 
 	// 仓库名
-	RepositoryName string `json:"repository_name"`
+	RepositoryName string `json:"repository_name" xml:"repository_name"`
 }
 
 func (o ShowRepoIdRequest) String() string {

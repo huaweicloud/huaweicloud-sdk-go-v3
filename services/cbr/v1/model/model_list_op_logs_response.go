@@ -10,16 +10,16 @@ import (
 type ListOpLogsResponse struct {
 
 	// 任务列表
-	OperationLogs *[]OperationLog `json:"operation_logs,omitempty"`
+	OperationLogs *[]OperationLog `json:"operation_logs,omitempty" xml:"operation_logs"`
 
 	// 任务个数
-	Count *int32 `json:"count,omitempty"`
+	Count *int32 `json:"count,omitempty" xml:"count"`
 
 	// 每页显示的条目数量
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 偏移量，表示从此偏移量开始查询
-	Offset         *int32 `json:"offset,omitempty"`
+	Offset         *int32 `json:"offset,omitempty" xml:"offset"`
 	HttpStatusCode int    `json:"-"`
 }
 

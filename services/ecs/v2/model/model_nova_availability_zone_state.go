@@ -10,7 +10,7 @@ import (
 type NovaAvailabilityZoneState struct {
 
 	// 可用域状态。
-	Available bool `json:"available"`
+	Available bool `json:"available" xml:"available"`
 }
 
 func (o NovaAvailabilityZoneState) String() string {

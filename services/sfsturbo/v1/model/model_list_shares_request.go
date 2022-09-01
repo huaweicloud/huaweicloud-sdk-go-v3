@@ -10,13 +10,13 @@ import (
 type ListSharesRequest struct {
 
 	// MIME类型
-	ContentType string `json:"Content-Type"`
+	ContentType string `json:"Content-Type" xml:"Content-Type"`
 
 	// 返回的文件系统个数，最大值为200。
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 文件系统查询个数的偏移量。
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 }
 
 func (o ListSharesRequest) String() string {

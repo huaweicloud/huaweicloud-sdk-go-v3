@@ -10,9 +10,9 @@ import (
 type UpdateL7RuleResponse struct {
 
 	// 请求ID。  注：自动生成 。
-	RequestId *string `json:"request_id,omitempty"`
+	RequestId *string `json:"request_id,omitempty" xml:"request_id"`
 
-	Rule           *L7Rule `json:"rule,omitempty"`
+	Rule           *L7Rule `json:"rule,omitempty" xml:"rule"`
 	HttpStatusCode int     `json:"-"`
 }
 

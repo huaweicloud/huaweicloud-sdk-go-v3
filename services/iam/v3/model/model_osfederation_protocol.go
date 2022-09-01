@@ -10,7 +10,7 @@ import (
 type OsfederationProtocol struct {
 
 	// 协议ID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 }
 
 func (o OsfederationProtocol) String() string {

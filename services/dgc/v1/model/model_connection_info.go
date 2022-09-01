@@ -10,13 +10,13 @@ import (
 )
 
 type ConnectionInfo struct {
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
-	Type ConnectionInfoType `json:"type"`
+	Type ConnectionInfoType `json:"type" xml:"type"`
 
-	Config *interface{} `json:"config,omitempty"`
+	Config *interface{} `json:"config,omitempty" xml:"config"`
 
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 }
 
 func (o ConnectionInfo) String() string {

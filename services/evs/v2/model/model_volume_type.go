@@ -9,21 +9,21 @@ import (
 type VolumeType struct {
 
 	// 云硬盘类型的ID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 云硬盘类型名称。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
-	ExtraSpecs *VolumeTypeExtraSpecs `json:"extra_specs,omitempty"`
+	ExtraSpecs *VolumeTypeExtraSpecs `json:"extra_specs,omitempty" xml:"extra_specs"`
 
 	// 云硬盘类型的描述信息。
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 预留属性。
-	QosSpecsId *string `json:"qos_specs_id,omitempty"`
+	QosSpecsId *string `json:"qos_specs_id,omitempty" xml:"qos_specs_id"`
 
 	// 预留属性。
-	IsPublic *bool `json:"is_public,omitempty"`
+	IsPublic *bool `json:"is_public,omitempty" xml:"is_public"`
 }
 
 func (o VolumeType) String() string {

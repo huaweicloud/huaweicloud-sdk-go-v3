@@ -10,13 +10,13 @@ import (
 type ShowHistoryRunInfoResponse struct {
 
 	// code
-	Code *string `json:"code,omitempty"`
+	Code *string `json:"code,omitempty" xml:"code"`
 
 	// message
-	Message *string `json:"message,omitempty"`
+	Message *string `json:"message,omitempty" xml:"message"`
 
 	// log_list
-	LogList        *[]HistoryRunInfo `json:"log_list,omitempty"`
+	LogList        *[]HistoryRunInfo `json:"log_list,omitempty" xml:"log_list"`
 	HttpStatusCode int               `json:"-"`
 }
 

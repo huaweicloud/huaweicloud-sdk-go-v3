@@ -9,7 +9,7 @@ import (
 type UpdateTaskStatusResult struct {
 
 	// task_run_id
-	TaskRunId *int32 `json:"task_run_id,omitempty"`
+	TaskRunId *int32 `json:"task_run_id,omitempty" xml:"task_run_id"`
 }
 
 func (o UpdateTaskStatusResult) String() string {

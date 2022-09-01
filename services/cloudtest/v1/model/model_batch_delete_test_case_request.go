@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type BatchDeleteTestCaseRequest struct {
-	Body *BatchDeleteTestCaseRequestBody `json:"body,omitempty"`
+	Body *BatchDeleteTestCaseRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchDeleteTestCaseRequest) String() string {

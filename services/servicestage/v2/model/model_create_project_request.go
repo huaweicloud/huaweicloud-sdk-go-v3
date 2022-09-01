@@ -10,12 +10,12 @@ import (
 type CreateProjectRequest struct {
 
 	// 授权名称。
-	XRepoAuth string `json:"X-Repo-Auth"`
+	XRepoAuth string `json:"X-Repo-Auth" xml:"X-Repo-Auth"`
 
 	// 组织ID。
-	Namespace string `json:"namespace"`
+	Namespace string `json:"namespace" xml:"namespace"`
 
-	Body *ProjectCreate `json:"body,omitempty"`
+	Body *ProjectCreate `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateProjectRequest) String() string {

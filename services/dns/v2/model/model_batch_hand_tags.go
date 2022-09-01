@@ -9,10 +9,10 @@ import (
 type BatchHandTags struct {
 
 	// 标签列表。删除时tags结构体不能缺失。
-	Tags []Tag `json:"tags"`
+	Tags []Tag `json:"tags" xml:"tags"`
 
 	// 操作标识（区分大小写）：create（创建）、delete（删除）。
-	Action string `json:"action"`
+	Action string `json:"action" xml:"action"`
 }
 
 func (o BatchHandTags) String() string {

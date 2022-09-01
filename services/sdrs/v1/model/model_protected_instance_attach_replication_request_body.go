@@ -8,7 +8,7 @@ import (
 
 // 保护实例挂载复制对请求体
 type ProtectedInstanceAttachReplicationRequestBody struct {
-	ReplicationAttachment *ProtectedInstanceAttachReplicationRequestParams `json:"replicationAttachment"`
+	ReplicationAttachment *ProtectedInstanceAttachReplicationRequestParams `json:"replicationAttachment" xml:"replicationAttachment"`
 }
 
 func (o ProtectedInstanceAttachReplicationRequestBody) String() string {

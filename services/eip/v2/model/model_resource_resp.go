@@ -9,7 +9,7 @@ import (
 type ResourceResp struct {
 
 	// 资源配额对象
-	Resources []QuotaShowResp `json:"resources"`
+	Resources []QuotaShowResp `json:"resources" xml:"resources"`
 }
 
 func (o ResourceResp) String() string {

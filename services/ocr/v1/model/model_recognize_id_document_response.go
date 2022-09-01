@@ -10,7 +10,7 @@ import (
 type RecognizeIdDocumentResponse struct {
 
 	// 调用成功时表示调用结果。  调用失败时此字段为空。
-	Result         *interface{} `json:"result,omitempty"`
+	Result         *interface{} `json:"result,omitempty" xml:"result"`
 	HttpStatusCode int          `json:"-"`
 }
 

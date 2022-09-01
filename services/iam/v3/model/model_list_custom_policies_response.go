@@ -8,13 +8,13 @@ import (
 
 // Response Object
 type ListCustomPoliciesResponse struct {
-	Links *Links `json:"links,omitempty"`
+	Links *Links `json:"links,omitempty" xml:"links"`
 
 	// 自定义策略信息列表。
-	Roles *[]PolicyRoleResult `json:"roles,omitempty"`
+	Roles *[]PolicyRoleResult `json:"roles,omitempty" xml:"roles"`
 
 	// 返回自定义策略的总条数
-	TotalNumber    *int32 `json:"total_number,omitempty"`
+	TotalNumber    *int32 `json:"total_number,omitempty" xml:"total_number"`
 	HttpStatusCode int    `json:"-"`
 }
 

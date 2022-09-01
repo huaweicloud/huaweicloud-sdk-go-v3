@@ -10,28 +10,28 @@ import (
 type ListGaussMySqlErrorLogRequest struct {
 
 	// 语言
-	XLanguage *string `json:"X-Language,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
-	StartDate string `json:"start_date"`
+	StartDate string `json:"start_date" xml:"start_date"`
 
 	// 结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
-	EndDate string `json:"end_date"`
+	EndDate string `json:"end_date" xml:"end_date"`
 
 	// 索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 查询记录数。默认为100，不能为负数，最小值为1，最大值为100
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 日志级别。  取值范围：  - ALL - INFO - LOG - WARNING - ERROR - FATAL - PANIC - NOTE
-	Level *string `json:"level,omitempty"`
+	Level *string `json:"level,omitempty" xml:"level"`
 
 	// 节点ID
-	NodeId string `json:"node_id"`
+	NodeId string `json:"node_id" xml:"node_id"`
 }
 
 func (o ListGaussMySqlErrorLogRequest) String() string {

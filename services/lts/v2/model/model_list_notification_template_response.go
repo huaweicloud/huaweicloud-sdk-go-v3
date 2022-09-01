@@ -10,7 +10,7 @@ import (
 type ListNotificationTemplateResponse struct {
 
 	// 为一个html文本，需要进行相应的解析后展示
-	Template       *string `json:"template,omitempty"`
+	Template       *string `json:"template,omitempty" xml:"template"`
 	HttpStatusCode int     `json:"-"`
 }
 

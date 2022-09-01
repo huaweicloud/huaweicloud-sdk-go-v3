@@ -13,13 +13,13 @@ import (
 type SourceCdnResp struct {
 
 	//   从指定域名获取对象。
-	Domain string `json:"domain"`
+	Domain string `json:"domain" xml:"domain"`
 
 	// 协议类型，支持http和https协议。
-	Protocol SourceCdnRespProtocol `json:"protocol"`
+	Protocol SourceCdnRespProtocol `json:"protocol" xml:"protocol"`
 
 	// 鉴权类型: NONE, QINIU_PRIVATE_AUTHENTICATION, ALIYUN_OSS_A, ALIYUN_OSS_B, ALIYUN_OSS_C, KSYUN_PRIVATE_AUTHENTICATION, AZURE_SAS_TOKEN
-	AuthenticationType *SourceCdnRespAuthenticationType `json:"authentication_type,omitempty"`
+	AuthenticationType *SourceCdnRespAuthenticationType `json:"authentication_type,omitempty" xml:"authentication_type"`
 }
 
 func (o SourceCdnResp) String() string {

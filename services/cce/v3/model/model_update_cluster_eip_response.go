@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type UpdateClusterEipResponse struct {
-	Metadata *Metadata `json:"metadata,omitempty"`
+	Metadata *Metadata `json:"metadata,omitempty" xml:"metadata"`
 
-	Spec *MasterEipResponseSpec `json:"spec,omitempty"`
+	Spec *MasterEipResponseSpec `json:"spec,omitempty" xml:"spec"`
 
-	Status         *MasterEipResponseStatus `json:"status,omitempty"`
+	Status         *MasterEipResponseStatus `json:"status,omitempty" xml:"status"`
 	HttpStatusCode int                      `json:"-"`
 }
 

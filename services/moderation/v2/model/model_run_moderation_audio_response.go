@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type RunModerationAudioResponse struct {
-	Result         *RunModerationAudioResponseBodyResult `json:"result,omitempty"`
+	Result         *RunModerationAudioResponseBodyResult `json:"result,omitempty" xml:"result"`
 	HttpStatusCode int                                   `json:"-"`
 }
 

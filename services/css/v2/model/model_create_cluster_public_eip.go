@@ -8,7 +8,7 @@ import (
 
 // 公网带宽信息。
 type CreateClusterPublicEip struct {
-	BandWidth *CreateClusterPublicEipSize `json:"bandWidth"`
+	BandWidth *CreateClusterPublicEipSize `json:"bandWidth" xml:"bandWidth"`
 }
 
 func (o CreateClusterPublicEip) String() string {

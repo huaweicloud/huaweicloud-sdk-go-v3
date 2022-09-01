@@ -8,9 +8,9 @@ import (
 
 // Response Object
 type CountTasksResponse struct {
-	CommonTaskDetails *TaskStatisticDetails `json:"common_task_details,omitempty"`
+	CommonTaskDetails *TaskStatisticDetails `json:"common_task_details,omitempty" xml:"common_task_details"`
 
-	CdcTaskDetails *TaskStatisticDetails `json:"cdc_task_details,omitempty"`
+	CdcTaskDetails *TaskStatisticDetails `json:"cdc_task_details,omitempty" xml:"cdc_task_details"`
 	HttpStatusCode int                   `json:"-"`
 }
 

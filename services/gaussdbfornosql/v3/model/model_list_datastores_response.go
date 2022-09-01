@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ListDatastoresResponse struct {
-	Versions       *[]string `json:"versions,omitempty"`
+	Versions       *[]string `json:"versions,omitempty" xml:"versions"`
 	HttpStatusCode int       `json:"-"`
 }
 

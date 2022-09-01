@@ -10,9 +10,9 @@ import (
 type CreateClusterTagRequest struct {
 
 	// 集群ID。
-	ClusterId string `json:"cluster_id"`
+	ClusterId string `json:"cluster_id" xml:"cluster_id"`
 
-	Body *CreateTagReq `json:"body,omitempty"`
+	Body *CreateTagReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateClusterTagRequest) String() string {

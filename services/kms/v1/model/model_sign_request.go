@@ -10,9 +10,9 @@ import (
 type SignRequest struct {
 
 	// API版本号
-	VersionId string `json:"version_id"`
+	VersionId string `json:"version_id" xml:"version_id"`
 
-	Body *SignRequestBody `json:"body,omitempty"`
+	Body *SignRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o SignRequest) String() string {

@@ -10,7 +10,7 @@ import (
 type TaskBean struct {
 
 	// 任务ID, 可为空
-	TaskId *string `json:"task_id,omitempty"`
+	TaskId *string `json:"task_id,omitempty" xml:"task_id"`
 }
 
 func (o TaskBean) String() string {

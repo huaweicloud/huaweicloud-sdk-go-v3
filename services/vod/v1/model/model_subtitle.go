@@ -12,19 +12,19 @@ import (
 type Subtitle struct {
 
 	// 字幕id。  取值范围：[1,8]。
-	Id int32 `json:"id"`
+	Id int32 `json:"id" xml:"id"`
 
 	// 字幕文件类型，目前暂只支持“SRT”。
-	Type SubtitleType `json:"type"`
+	Type SubtitleType `json:"type" xml:"type"`
 
 	// 字幕语言类型。  取值如下： - CN：表示中文字幕。 - EN：表示英文字幕。
-	Language SubtitleLanguage `json:"language"`
+	Language SubtitleLanguage `json:"language" xml:"language"`
 
 	// 字幕文件的MD5值。
-	Md5 *string `json:"md5,omitempty"`
+	Md5 *string `json:"md5,omitempty" xml:"md5"`
 
 	// 字幕描述。
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 }
 
 func (o Subtitle) String() string {

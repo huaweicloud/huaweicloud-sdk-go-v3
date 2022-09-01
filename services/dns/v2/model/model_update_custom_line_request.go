@@ -10,9 +10,9 @@ import (
 type UpdateCustomLineRequest struct {
 
 	// 解析线路ID。
-	LineId string `json:"line_id"`
+	LineId string `json:"line_id" xml:"line_id"`
 
-	Body *UpdateCustomsLineReq `json:"body,omitempty"`
+	Body *UpdateCustomsLineReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateCustomLineRequest) String() string {

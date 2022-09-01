@@ -10,7 +10,7 @@ import (
 type OpenGaussEnlargeVolume struct {
 
 	// GaussDB(for openGauss)磁盘大小要求（分片数*40GB）的倍数；取值范围：（分片数*40GB）~（分片数*16TB）
-	Size int32 `json:"size"`
+	Size int32 `json:"size" xml:"size"`
 }
 
 func (o OpenGaussEnlargeVolume) String() string {

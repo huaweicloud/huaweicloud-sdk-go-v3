@@ -8,12 +8,12 @@ import (
 
 // Response Object
 type ShowCommitsByRepoIdResponse struct {
-	Error *Error `json:"error,omitempty"`
+	Error *Error `json:"error,omitempty" xml:"error"`
 
-	Result *CommitList `json:"result,omitempty"`
+	Result *CommitList `json:"result,omitempty" xml:"result"`
 
 	// 响应状态
-	Status         *string `json:"status,omitempty"`
+	Status         *string `json:"status,omitempty" xml:"status"`
 	HttpStatusCode int     `json:"-"`
 }
 

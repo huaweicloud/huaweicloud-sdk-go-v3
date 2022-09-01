@@ -9,19 +9,19 @@ import (
 type Pipelines struct {
 
 	// 配置文件名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// pipeline状态。
-	Status *string `json:"status,omitempty"`
+	Status *string `json:"status,omitempty" xml:"status"`
 
 	// 是否开启常驻。
-	KeepAlive *bool `json:"keepAlive,omitempty"`
+	KeepAlive *bool `json:"keepAlive,omitempty" xml:"keepAlive"`
 
 	// 事件只有在“工作中”状态才可以实时查看（需要手动刷新），“已停止”状态请到output端查看迁移数据量。
-	Events *string `json:"events,omitempty"`
+	Events *string `json:"events,omitempty" xml:"events"`
 
 	// 更新时间。
-	UpdateAt *string `json:"updateAt,omitempty"`
+	UpdateAt *string `json:"updateAt,omitempty" xml:"updateAt"`
 }
 
 func (o Pipelines) String() string {

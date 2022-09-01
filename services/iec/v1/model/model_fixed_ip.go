@@ -10,10 +10,10 @@ import (
 type FixedIp struct {
 
 	// 所属子网ID
-	SubnetId *string `json:"subnet_id,omitempty"`
+	SubnetId *string `json:"subnet_id,omitempty" xml:"subnet_id"`
 
 	// 端口IP地址
-	IpAddress *string `json:"ip_address,omitempty"`
+	IpAddress *string `json:"ip_address,omitempty" xml:"ip_address"`
 }
 
 func (o FixedIp) String() string {

@@ -10,10 +10,10 @@ import (
 type GaussDBforOpenGaussDatabaseForListSchema struct {
 
 	// schema名称。
-	SchemaName string `json:"schema_name"`
+	SchemaName string `json:"schema_name" xml:"schema_name"`
 
 	// schema所属用户。
-	Owner string `json:"owner"`
+	Owner string `json:"owner" xml:"owner"`
 }
 
 func (o GaussDBforOpenGaussDatabaseForListSchema) String() string {

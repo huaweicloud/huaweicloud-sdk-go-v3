@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateOnlineMigrationTaskRequest struct {
-	Body *CreateOnlineMigrationTaskBody `json:"body,omitempty"`
+	Body *CreateOnlineMigrationTaskBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateOnlineMigrationTaskRequest) String() string {

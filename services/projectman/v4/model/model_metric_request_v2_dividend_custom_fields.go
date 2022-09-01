@@ -9,10 +9,10 @@ import (
 type MetricRequestV2DividendCustomFields struct {
 
 	// 自定义字段名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 自定义字段取值，逗号分隔
-	Options *string `json:"options,omitempty"`
+	Options *string `json:"options,omitempty" xml:"options"`
 }
 
 func (o MetricRequestV2DividendCustomFields) String() string {

@@ -13,12 +13,12 @@ import (
 type StartInstanceRestartActionRequest struct {
 
 	// 语言
-	XLanguage *StartInstanceRestartActionRequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *StartInstanceRestartActionRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *InstanceRestartRequsetBody `json:"body,omitempty"`
+	Body *InstanceRestartRequsetBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o StartInstanceRestartActionRequest) String() string {

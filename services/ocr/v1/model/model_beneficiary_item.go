@@ -7,13 +7,13 @@ import (
 )
 
 type BeneficiaryItem struct {
-	BeneficiaryName *InsurancePolicyDetail `json:"beneficiary_name,omitempty"`
+	BeneficiaryName *InsurancePolicyDetail `json:"beneficiary_name,omitempty" xml:"beneficiary_name"`
 
-	BeneficiaryType *InsurancePolicyDetail `json:"beneficiary_type,omitempty"`
+	BeneficiaryType *InsurancePolicyDetail `json:"beneficiary_type,omitempty" xml:"beneficiary_type"`
 
-	BeneficiaryOrder *InsurancePolicyDetail `json:"beneficiary_order,omitempty"`
+	BeneficiaryOrder *InsurancePolicyDetail `json:"beneficiary_order,omitempty" xml:"beneficiary_order"`
 
-	BeneficiaryShare *InsurancePolicyDetail `json:"beneficiary_share,omitempty"`
+	BeneficiaryShare *InsurancePolicyDetail `json:"beneficiary_share,omitempty" xml:"beneficiary_share"`
 }
 
 func (o BeneficiaryItem) String() string {

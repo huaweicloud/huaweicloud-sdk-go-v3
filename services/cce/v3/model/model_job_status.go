@@ -10,10 +10,10 @@ import (
 type JobStatus struct {
 
 	// 任务的状态，有如下四种状态：  - JobPhaseInitializing JobPhase = \"Initializing\" - JobPhaseRunning JobPhase = \"Running\" - JobPhaseFailed JobPhase = \"Failed\" - JobPhaseSuccess JobPhase = \"Success\"
-	Phase *string `json:"phase,omitempty"`
+	Phase *string `json:"phase,omitempty" xml:"phase"`
 
 	// 任务变为当前状态的原因
-	Reason *string `json:"reason,omitempty"`
+	Reason *string `json:"reason,omitempty" xml:"reason"`
 }
 
 func (o JobStatus) String() string {

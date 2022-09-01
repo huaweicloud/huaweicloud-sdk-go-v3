@@ -10,13 +10,13 @@ import (
 type ListEnvironmentVariablesV2Response struct {
 
 	// 本次返回的列表长度
-	Size int32 `json:"size"`
+	Size int32 `json:"size" xml:"size"`
 
 	// 满足条件的记录数
-	Total int64 `json:"total"`
+	Total int64 `json:"total" xml:"total"`
 
 	// 本次返回的环境变量列表
-	Variables      *[]EnvVariableInfo `json:"variables,omitempty"`
+	Variables      *[]EnvVariableInfo `json:"variables,omitempty" xml:"variables"`
 	HttpStatusCode int                `json:"-"`
 }
 

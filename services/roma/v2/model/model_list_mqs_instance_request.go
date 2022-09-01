@@ -13,7 +13,7 @@ import (
 type ListMqsInstanceRequest struct {
 
 	// 是否包含内部的实例。include_internal参数必须为true。
-	IncludeInternal ListMqsInstanceRequestIncludeInternal `json:"include_internal"`
+	IncludeInternal ListMqsInstanceRequestIncludeInternal `json:"include_internal" xml:"include_internal"`
 }
 
 func (o ListMqsInstanceRequest) String() string {

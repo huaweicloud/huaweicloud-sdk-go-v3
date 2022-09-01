@@ -10,10 +10,10 @@ import (
 type ListWatermarkTemplateResponse struct {
 
 	// 水印模板信息。
-	Templates *[]WatermarkTemplate `json:"templates,omitempty"`
+	Templates *[]WatermarkTemplate `json:"templates,omitempty" xml:"templates"`
 
 	// 总数。
-	Total          *int32 `json:"total,omitempty"`
+	Total          *int32 `json:"total,omitempty" xml:"total"`
 	HttpStatusCode int    `json:"-"`
 }
 

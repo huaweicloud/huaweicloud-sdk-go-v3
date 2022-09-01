@@ -10,13 +10,13 @@ import (
 type NodeTypes struct {
 
 	// 节点类型名称。
-	SpecName string `json:"spec_name"`
+	SpecName string `json:"spec_name" xml:"spec_name"`
 
 	// 节点类型详细。
-	Detail []Detail `json:"detail"`
+	Detail []Detail `json:"detail" xml:"detail"`
 
 	// 节点类型ID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 }
 
 func (o NodeTypes) String() string {

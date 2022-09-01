@@ -10,16 +10,16 @@ import (
 type Node struct {
 
 	// API类型，固定值“Node”，该值不可修改。
-	Kind *string `json:"kind,omitempty"`
+	Kind *string `json:"kind,omitempty" xml:"kind"`
 
 	// API版本，固定值“v3”，该值不可修改。
-	ApiVersion *string `json:"apiVersion,omitempty"`
+	ApiVersion *string `json:"apiVersion,omitempty" xml:"apiVersion"`
 
-	Metadata *NodeMetadata `json:"metadata,omitempty"`
+	Metadata *NodeMetadata `json:"metadata,omitempty" xml:"metadata"`
 
-	Spec *NodeSpec `json:"spec,omitempty"`
+	Spec *NodeSpec `json:"spec,omitempty" xml:"spec"`
 
-	Status *NodeStatus `json:"status,omitempty"`
+	Status *NodeStatus `json:"status,omitempty" xml:"status"`
 }
 
 func (o Node) String() string {

@@ -8,9 +8,9 @@ import (
 
 // Request Object
 type UpdateScriptRequest struct {
-	ScriptName string `json:"script_name"`
+	ScriptName string `json:"script_name" xml:"script_name"`
 
-	Body *ScriptInfo `json:"body,omitempty"`
+	Body *ScriptInfo `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateScriptRequest) String() string {

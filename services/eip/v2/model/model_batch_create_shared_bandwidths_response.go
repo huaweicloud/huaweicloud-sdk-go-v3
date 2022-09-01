@@ -10,7 +10,7 @@ import (
 type BatchCreateSharedBandwidthsResponse struct {
 
 	// 批创的带宽对象的列表
-	Bandwidths     *[]BatchBandwidthResp `json:"bandwidths,omitempty"`
+	Bandwidths     *[]BatchBandwidthResp `json:"bandwidths,omitempty" xml:"bandwidths"`
 	HttpStatusCode int                   `json:"-"`
 }
 

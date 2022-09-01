@@ -9,13 +9,13 @@ import (
 type ApiBatchPublish struct {
 
 	// 需要发布或下线的API ID列表
-	Apis *[]string `json:"apis,omitempty"`
+	Apis *[]string `json:"apis,omitempty" xml:"apis"`
 
 	// 环境ID
-	EnvId string `json:"env_id"`
+	EnvId string `json:"env_id" xml:"env_id"`
 
 	// 对本次发布的描述信息  字符长度不超过255 > 中文字符必须为UTF-8或者unicode编码。
-	Remark *string `json:"remark,omitempty"`
+	Remark *string `json:"remark,omitempty" xml:"remark"`
 }
 
 func (o ApiBatchPublish) String() string {

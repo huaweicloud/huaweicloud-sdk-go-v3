@@ -10,10 +10,10 @@ import (
 type BatchSwitchoverResponse struct {
 
 	// 批量主备倒换任务返回列表
-	Results *[]SwitchoverResp `json:"results,omitempty"`
+	Results *[]SwitchoverResp `json:"results,omitempty" xml:"results"`
 
 	// 总数
-	Count          *int32 `json:"count,omitempty"`
+	Count          *int32 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

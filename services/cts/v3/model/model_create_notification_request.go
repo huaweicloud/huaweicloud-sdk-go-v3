@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateNotificationRequest struct {
-	Body *CreateNotificationRequestBody `json:"body,omitempty"`
+	Body *CreateNotificationRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateNotificationRequest) String() string {

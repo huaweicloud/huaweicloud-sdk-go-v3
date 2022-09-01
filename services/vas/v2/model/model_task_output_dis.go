@@ -10,10 +10,10 @@ import (
 type TaskOutputDis struct {
 
 	// DIS流名称，选用dis类型输出时必填。
-	StreamName string `json:"stream_name"`
+	StreamName string `json:"stream_name" xml:"stream_name"`
 
 	// 作业输出数据类别的列表，选填，仅部分服务需要。当输出类型下有这个列表时，表示希望这个输出类型下存放dataCategory列表内的数据。
-	DataCategory *[]string `json:"data_category,omitempty"`
+	DataCategory *[]string `json:"data_category,omitempty" xml:"data_category"`
 }
 
 func (o TaskOutputDis) String() string {

@@ -9,33 +9,33 @@ import (
 type InstanceCreate struct {
 
 	// 应用组件实例名称。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 环境ID。
-	EnvironmentId string `json:"environment_id"`
+	EnvironmentId string `json:"environment_id" xml:"environment_id"`
 
-	FlavorId *FlavorId `json:"flavor_id"`
+	FlavorId *FlavorId `json:"flavor_id" xml:"flavor_id"`
 
 	// 实例副本数。
-	Replica int32 `json:"replica"`
+	Replica int32 `json:"replica" xml:"replica"`
 
 	// 组件部署件。key为组件component_name，对于Docker多容器场景，key为容器名称。
-	Artifacts map[string]interface{} `json:"artifacts"`
+	Artifacts map[string]interface{} `json:"artifacts" xml:"artifacts"`
 
 	// 应用组件版本号，满足版本语义，如1.0.0。。
-	Version string `json:"version"`
+	Version string `json:"version" xml:"version"`
 
 	// 应用配置，环境变量等，如{“env”: [{“name”: “log-level”: “warn”}]}, 默认空。
-	Configuration *interface{} `json:"configuration,omitempty"`
+	Configuration *interface{} `json:"configuration,omitempty" xml:"configuration"`
 
 	// 描述。
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 访问方式。
-	ExternalAccesses *[]ExternalAccessesCreate `json:"external_accesses,omitempty"`
+	ExternalAccesses *[]ExternalAccessesCreate `json:"external_accesses,omitempty" xml:"external_accesses"`
 
 	// 部署资源。
-	ReferResources []ReferResourceCreate `json:"refer_resources"`
+	ReferResources []ReferResourceCreate `json:"refer_resources" xml:"refer_resources"`
 }
 
 func (o InstanceCreate) String() string {

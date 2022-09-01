@@ -7,9 +7,9 @@ import (
 )
 
 type InstanceAction struct {
-	Action *InstanceActionType `json:"action"`
+	Action *InstanceActionType `json:"action" xml:"action"`
 
-	Parameters *InstanceActionParameters `json:"parameters,omitempty"`
+	Parameters *InstanceActionParameters `json:"parameters,omitempty" xml:"parameters"`
 }
 
 func (o InstanceAction) String() string {

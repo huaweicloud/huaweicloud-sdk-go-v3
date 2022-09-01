@@ -10,10 +10,10 @@ import (
 type DeploymentResources struct {
 
 	// 允许容器使用的最大资源
-	Limits map[string]string `json:"limits,omitempty"`
+	Limits map[string]string `json:"limits,omitempty" xml:"limits"`
 
 	// 容器需要使用的最小资源
-	Requests map[string]string `json:"requests,omitempty"`
+	Requests map[string]string `json:"requests,omitempty" xml:"requests"`
 }
 
 func (o DeploymentResources) String() string {

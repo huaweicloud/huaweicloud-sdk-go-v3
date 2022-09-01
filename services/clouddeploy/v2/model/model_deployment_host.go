@@ -13,27 +13,27 @@ import (
 type DeploymentHost struct {
 
 	// 主机名称
-	HostName string `json:"host_name"`
+	HostName string `json:"host_name" xml:"host_name"`
 
 	// IP，请输入弹性ip格式：161.17.101.12
-	Ip string `json:"ip"`
+	Ip string `json:"ip" xml:"ip"`
 
 	// ssh端口，如：22
-	Port int32 `json:"port"`
+	Port int32 `json:"port" xml:"port"`
 
 	// 操作系统：windows|linux，需要和主机组保持一致
-	Os DeploymentHostOs `json:"os"`
+	Os DeploymentHostOs `json:"os" xml:"os"`
 
 	// 是否为代理机
-	AsProxy bool `json:"as_proxy"`
+	AsProxy bool `json:"as_proxy" xml:"as_proxy"`
 
 	// 代理机id
-	ProxyHostId *string `json:"proxy_host_id,omitempty"`
+	ProxyHostId *string `json:"proxy_host_id,omitempty" xml:"proxy_host_id"`
 
-	Authorization *DeploymentHostAuthorizationBody `json:"authorization"`
+	Authorization *DeploymentHostAuthorizationBody `json:"authorization" xml:"authorization"`
 
 	// 免费启用应用运维服务（AOM），提供指标监控、日志查询、告警功能（自动安装数据采集器 ICAgent，仅支持华为云linux主机）
-	InstallIcagent *bool `json:"install_icagent,omitempty"`
+	InstallIcagent *bool `json:"install_icagent,omitempty" xml:"install_icagent"`
 }
 
 func (o DeploymentHost) String() string {

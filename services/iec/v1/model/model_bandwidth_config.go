@@ -13,10 +13,10 @@ import (
 type BandwidthConfig struct {
 
 	// 带宽类型，现支持WHOLE类型，即共享带宽，其他类型不支持。
-	Sharetype BandwidthConfigSharetype `json:"sharetype"`
+	Sharetype BandwidthConfigSharetype `json:"sharetype" xml:"sharetype"`
 
 	// 带宽（Mbit/s）。
-	Size *int32 `json:"size,omitempty"`
+	Size *int32 `json:"size,omitempty" xml:"size"`
 }
 
 func (o BandwidthConfig) String() string {

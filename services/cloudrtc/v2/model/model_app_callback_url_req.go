@@ -10,10 +10,10 @@ import (
 type AppCallbackUrlReq struct {
 
 	// 回调通知url地址，url必须以http://或https://开头，需要支持POST调用。
-	Url string `json:"url"`
+	Url string `json:"url" xml:"url"`
 
 	// 回调秘钥，主要用于鉴权
-	AuthKey *string `json:"auth_key,omitempty"`
+	AuthKey *string `json:"auth_key,omitempty" xml:"auth_key"`
 }
 
 func (o AppCallbackUrlReq) String() string {

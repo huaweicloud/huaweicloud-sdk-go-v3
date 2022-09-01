@@ -9,10 +9,10 @@ import (
 type AssignedUserInfo struct {
 
 	// id信息
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 名称信息
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 }
 
 func (o AssignedUserInfo) String() string {

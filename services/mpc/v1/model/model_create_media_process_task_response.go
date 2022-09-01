@@ -10,7 +10,7 @@ import (
 type CreateMediaProcessTaskResponse struct {
 
 	// 任务Id
-	TaskId         *string `json:"task_id,omitempty"`
+	TaskId         *string `json:"task_id,omitempty" xml:"task_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

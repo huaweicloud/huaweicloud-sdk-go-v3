@@ -10,10 +10,10 @@ import (
 type RegisterDmsKafkaInstanceRequestBodyConnectInfo struct {
 
 	// 账号
-	UserName *string `json:"user_name,omitempty"`
+	UserName *string `json:"user_name,omitempty" xml:"user_name"`
 
 	// 密码
-	Pwd *string `json:"pwd,omitempty"`
+	Pwd *string `json:"pwd,omitempty" xml:"pwd"`
 }
 
 func (o RegisterDmsKafkaInstanceRequestBodyConnectInfo) String() string {

@@ -10,10 +10,10 @@ import (
 type DeleteSpecifiedConsumerGroupRequest struct {
 
 	// 队列ID
-	QueueId string `json:"queue_id"`
+	QueueId string `json:"queue_id" xml:"queue_id"`
 
 	// 待删除的消费组ID
-	GroupId string `json:"group_id"`
+	GroupId string `json:"group_id" xml:"group_id"`
 }
 
 func (o DeleteSpecifiedConsumerGroupRequest) String() string {

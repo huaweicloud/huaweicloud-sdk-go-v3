@@ -10,10 +10,10 @@ import (
 type StartInfo struct {
 
 	// 任务id。
-	JobId string `json:"job_id"`
+	JobId string `json:"job_id" xml:"job_id"`
 
 	// 任务启动时间，时间戳格式精确到秒，例如：1614078283，取值为空代表立即启动。
-	StartTime *string `json:"start_time,omitempty"`
+	StartTime *string `json:"start_time,omitempty" xml:"start_time"`
 }
 
 func (o StartInfo) String() string {

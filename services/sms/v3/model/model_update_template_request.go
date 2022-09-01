@@ -10,9 +10,9 @@ import (
 type UpdateTemplateRequest struct {
 
 	// 需要修改信息的模板的id
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
-	Body *UpdateTemplateReq `json:"body,omitempty"`
+	Body *UpdateTemplateReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateTemplateRequest) String() string {

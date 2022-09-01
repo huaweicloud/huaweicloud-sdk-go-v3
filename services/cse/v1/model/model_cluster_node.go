@@ -9,19 +9,19 @@ import (
 type ClusterNode struct {
 
 	// 微服务引擎专享版CCE节点ID
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 微服务引擎专享版CCE节点所属可用区
-	Az *string `json:"az,omitempty"`
+	Az *string `json:"az,omitempty" xml:"az"`
 
 	// 微服务引擎专享版CCE节点IP
-	Ip *string `json:"ip,omitempty"`
+	Ip *string `json:"ip,omitempty" xml:"ip"`
 
 	// 微服务引擎专享版CCE节点标签
-	Label *string `json:"label,omitempty"`
+	Label *string `json:"label,omitempty" xml:"label"`
 
 	// 微服务引擎专享版CCE节点状态
-	Status *string `json:"status,omitempty"`
+	Status *string `json:"status,omitempty" xml:"status"`
 }
 
 func (o ClusterNode) String() string {

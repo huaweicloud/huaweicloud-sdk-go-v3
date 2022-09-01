@@ -10,10 +10,10 @@ import (
 type ListDiagnosisTasksResponse struct {
 
 	// 诊断报告列表
-	DiagnosisReportList *[]DiagnosisReportInfo `json:"diagnosis_report_list,omitempty"`
+	DiagnosisReportList *[]DiagnosisReportInfo `json:"diagnosis_report_list,omitempty" xml:"diagnosis_report_list"`
 
 	// 诊断报告总数
-	TotalNum       *int32 `json:"total_num,omitempty"`
+	TotalNum       *int32 `json:"total_num,omitempty" xml:"total_num"`
 	HttpStatusCode int    `json:"-"`
 }
 

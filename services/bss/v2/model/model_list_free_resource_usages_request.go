@@ -10,9 +10,9 @@ import (
 type ListFreeResourceUsagesRequest struct {
 
 	// 语言。中文：zh_CN英文：en_US缺省为zh_CN。
-	XLanguage *string `json:"X-Language,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
 
-	Body *ListFreeResourceUsagesReq `json:"body,omitempty"`
+	Body *ListFreeResourceUsagesReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o ListFreeResourceUsagesRequest) String() string {

@@ -10,10 +10,10 @@ import (
 type DeleteMfaDeviceRequest struct {
 
 	// 绑定MFA设备的IAM 用户ID。
-	UserId string `json:"user_id"`
+	UserId string `json:"user_id" xml:"user_id"`
 
 	// MFA设备序列号。
-	SerialNumber string `json:"serial_number"`
+	SerialNumber string `json:"serial_number" xml:"serial_number"`
 }
 
 func (o DeleteMfaDeviceRequest) String() string {

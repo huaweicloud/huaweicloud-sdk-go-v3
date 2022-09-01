@@ -10,9 +10,9 @@ import (
 type UpdateInstanceCrossVpcIpRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *UpdateInstanceCrossVpcIpReq `json:"body,omitempty"`
+	Body *UpdateInstanceCrossVpcIpReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateInstanceCrossVpcIpRequest) String() string {

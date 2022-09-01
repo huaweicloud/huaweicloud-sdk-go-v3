@@ -9,16 +9,16 @@ import (
 type TenantAgreeAuthDetailV2 struct {
 
 	// 端口
-	Port *int32 `json:"port,omitempty"`
+	Port *int32 `json:"port,omitempty" xml:"port"`
 
 	// 账号
-	Account *string `json:"account,omitempty"`
+	Account *string `json:"account,omitempty" xml:"account"`
 
 	// 密码
-	Password *string `json:"password,omitempty"`
+	Password *string `json:"password,omitempty" xml:"password"`
 
 	// 授权详情id
-	AuthDetailId int64 `json:"auth_detail_id"`
+	AuthDetailId int64 `json:"auth_detail_id" xml:"auth_detail_id"`
 }
 
 func (o TenantAgreeAuthDetailV2) String() string {

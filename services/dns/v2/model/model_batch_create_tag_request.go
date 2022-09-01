@@ -10,12 +10,12 @@ import (
 type BatchCreateTagRequest struct {
 
 	// 资源的类型：DNS-public_zone，DNS-private_zone，DNS-public_recordset，DNS-private_recordset，DNS-ptr_record。
-	ResourceType string `json:"resource_type"`
+	ResourceType string `json:"resource_type" xml:"resource_type"`
 
 	// 资源id。
-	ResourceId string `json:"resource_id"`
+	ResourceId string `json:"resource_id" xml:"resource_id"`
 
-	Body *BatchHandTags `json:"body,omitempty"`
+	Body *BatchHandTags `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchCreateTagRequest) String() string {

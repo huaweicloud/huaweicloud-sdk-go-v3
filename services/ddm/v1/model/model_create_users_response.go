@@ -10,7 +10,7 @@ import (
 type CreateUsersResponse struct {
 
 	// DDM实例帐号相关信息的集合。
-	Users          *[]CreateUsersDetailResponses `json:"users,omitempty"`
+	Users          *[]CreateUsersDetailResponses `json:"users,omitempty" xml:"users"`
 	HttpStatusCode int                           `json:"-"`
 }
 

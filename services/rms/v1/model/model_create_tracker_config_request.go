@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateTrackerConfigRequest struct {
-	Body *TrackerConfigBody `json:"body,omitempty"`
+	Body *TrackerConfigBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateTrackerConfigRequest) String() string {

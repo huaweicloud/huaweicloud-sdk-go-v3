@@ -8,13 +8,13 @@ import (
 
 // Response Object
 type DeleteDeployKeyResponse struct {
-	Error *Error `json:"error,omitempty"`
+	Error *Error `json:"error,omitempty" xml:"error"`
 
 	// 响应结果
-	Result *bool `json:"result,omitempty"`
+	Result *bool `json:"result,omitempty" xml:"result"`
 
 	// 响应状态
-	Status         *string `json:"status,omitempty"`
+	Status         *string `json:"status,omitempty" xml:"status"`
 	HttpStatusCode int     `json:"-"`
 }
 

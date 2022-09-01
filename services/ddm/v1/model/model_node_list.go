@@ -9,16 +9,16 @@ import (
 type NodeList struct {
 
 	// 端口。
-	Port *string `json:"port,omitempty"`
+	Port *string `json:"port,omitempty" xml:"port"`
 
 	// 节点状态。
-	Status *string `json:"status,omitempty"`
+	Status *string `json:"status,omitempty" xml:"status"`
 
 	// 节点id。
-	NodeId *string `json:"node_id,omitempty"`
+	NodeId *string `json:"node_id,omitempty" xml:"node_id"`
 
 	// ip
-	Ip *string `json:"ip,omitempty"`
+	Ip *string `json:"ip,omitempty" xml:"ip"`
 }
 
 func (o NodeList) String() string {

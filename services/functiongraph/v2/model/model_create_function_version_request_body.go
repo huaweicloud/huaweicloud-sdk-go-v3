@@ -9,13 +9,13 @@ import (
 type CreateFunctionVersionRequestBody struct {
 
 	// md5键值
-	Digest *string `json:"digest,omitempty"`
+	Digest *string `json:"digest,omitempty" xml:"digest"`
 
 	// 发布版本名称
-	Version *string `json:"version,omitempty"`
+	Version *string `json:"version,omitempty" xml:"version"`
 
 	// 发布版本描述
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 }
 
 func (o CreateFunctionVersionRequestBody) String() string {

@@ -10,19 +10,19 @@ import (
 type ListCloudPhoneServersRequest struct {
 
 	// 偏移量为一个大于0小于资源总个数的整数，表示查询该偏移量后面的所有的资源数，默认值为0。
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 每页返回的资源个数。取值范围：1~100（默认值为100），一般设置为10、20、50。
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 云手机服务器名称，支持模糊查询。
-	ServerName *string `json:"server_name,omitempty"`
+	ServerName *string `json:"server_name,omitempty" xml:"server_name"`
 
 	// 服务器id。
-	ServerId *string `json:"server_id,omitempty"`
+	ServerId *string `json:"server_id,omitempty" xml:"server_id"`
 
 	// 云手机服务器是否为自定义网络标识 - v1：系统定义网络的云手机服务器。 - v2：自定义网络的云手机服务器。
-	NetworkVersion *string `json:"network_version,omitempty"`
+	NetworkVersion *string `json:"network_version,omitempty" xml:"network_version"`
 }
 
 func (o ListCloudPhoneServersRequest) String() string {

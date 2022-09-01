@@ -10,7 +10,7 @@ import (
 type ListOrderDiscountsResponse struct {
 
 	// 可用的折扣列表。 具体请参见表2。
-	Discounts      *[]DiscountInfoV3 `json:"discounts,omitempty"`
+	Discounts      *[]DiscountInfoV3 `json:"discounts,omitempty" xml:"discounts"`
 	HttpStatusCode int               `json:"-"`
 }
 

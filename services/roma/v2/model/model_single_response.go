@@ -9,10 +9,10 @@ import (
 type SingleResponse struct {
 
 	// 操作的ID
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 操作结果 枚举值successful-成功 error-失败
-	RetStatus *string `json:"ret_status,omitempty"`
+	RetStatus *string `json:"ret_status,omitempty" xml:"ret_status"`
 }
 
 func (o SingleResponse) String() string {

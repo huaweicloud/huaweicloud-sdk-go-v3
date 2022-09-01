@@ -7,7 +7,7 @@ import (
 )
 
 type HttpInfoRequest struct {
-	Https *HttpInfoRequestBody `json:"https"`
+	Https *HttpInfoRequestBody `json:"https" xml:"https"`
 }
 
 func (o HttpInfoRequest) String() string {

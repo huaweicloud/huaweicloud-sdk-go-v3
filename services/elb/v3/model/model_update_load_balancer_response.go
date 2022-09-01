@@ -8,16 +8,16 @@ import (
 
 // Response Object
 type UpdateLoadBalancerResponse struct {
-	Loadbalancer *LoadBalancer `json:"loadbalancer,omitempty"`
+	Loadbalancer *LoadBalancer `json:"loadbalancer,omitempty" xml:"loadbalancer"`
 
 	// 负载均衡器的id（包周期场景返回该字段）
-	LoadbalancerId *string `json:"loadbalancer_id,omitempty"`
+	LoadbalancerId *string `json:"loadbalancer_id,omitempty" xml:"loadbalancer_id"`
 
 	// 订单号（包周期规格变更场景返回该字段）
-	OrderId *string `json:"order_id,omitempty"`
+	OrderId *string `json:"order_id,omitempty" xml:"order_id"`
 
 	// 请求ID。  注：自动生成 。
-	RequestId      *string `json:"request_id,omitempty"`
+	RequestId      *string `json:"request_id,omitempty" xml:"request_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -10,13 +10,13 @@ import (
 type BatchDeleteProtectedInstancesRequestBody struct {
 
 	// 所需要删除的保护实例列表。
-	ProtectedInstances []ResourceId `json:"protected_instances"`
+	ProtectedInstances []ResourceId `json:"protected_instances" xml:"protected_instances"`
 
 	// 是否删除容灾站点服务器，默认值为false。
-	DeleteTargetServer *bool `json:"delete_target_server,omitempty"`
+	DeleteTargetServer *bool `json:"delete_target_server,omitempty" xml:"delete_target_server"`
 
 	// 是否删除容灾站点弹性IP，默认值为false。
-	DeleteTargetEip *bool `json:"delete_target_eip,omitempty"`
+	DeleteTargetEip *bool `json:"delete_target_eip,omitempty" xml:"delete_target_eip"`
 }
 
 func (o BatchDeleteProtectedInstancesRequestBody) String() string {

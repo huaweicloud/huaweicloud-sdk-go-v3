@@ -10,10 +10,10 @@ import (
 type NeutronPageLink struct {
 
 	// API链接
-	Href string `json:"href"`
+	Href string `json:"href" xml:"href"`
 
 	// API链接与该API版本的关系
-	Rel string `json:"rel"`
+	Rel string `json:"rel" xml:"rel"`
 }
 
 func (o NeutronPageLink) String() string {

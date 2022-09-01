@@ -10,13 +10,13 @@ import (
 type ListFeaturesV2Response struct {
 
 	// 本次返回的列表长度
-	Size int32 `json:"size"`
+	Size int32 `json:"size" xml:"size"`
 
 	// 满足条件的记录数
-	Total int64 `json:"total"`
+	Total int64 `json:"total" xml:"total"`
 
 	// 实例特性列表
-	Features       *[]FeatureInfoV2 `json:"features,omitempty"`
+	Features       *[]FeatureInfoV2 `json:"features,omitempty" xml:"features"`
 	HttpStatusCode int              `json:"-"`
 }
 

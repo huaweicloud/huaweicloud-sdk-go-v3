@@ -10,10 +10,10 @@ import (
 type ShowVaultResourceInstancesResponse struct {
 
 	// 符合查询条件的资源列表（action为count时无此参数）。
-	Resources *[]TagResource `json:"resources,omitempty"`
+	Resources *[]TagResource `json:"resources,omitempty" xml:"resources"`
 
 	// 符合查询条件的资源总个数
-	TotalCount     *int32 `json:"total_count,omitempty"`
+	TotalCount     *int32 `json:"total_count,omitempty" xml:"total_count"`
 	HttpStatusCode int    `json:"-"`
 }
 

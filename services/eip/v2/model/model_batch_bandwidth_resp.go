@@ -13,37 +13,37 @@ import (
 type BatchBandwidthResp struct {
 
 	// 功能说明：带宽类型，共享带宽默认为share。  取值范围：share，bgp，telcom，sbgp等。  share：共享带宽  bgp：动态bgp  telcom ：联通  sbgp：静态bgp
-	BandwidthType *string `json:"bandwidth_type,omitempty"`
+	BandwidthType *string `json:"bandwidth_type,omitempty" xml:"bandwidth_type"`
 
 	// 功能说明：账单信息  如果billing_info不为空，说明是包周期的带宽
-	BillingInfo *string `json:"billing_info,omitempty"`
+	BillingInfo *string `json:"billing_info,omitempty" xml:"billing_info"`
 
 	// 功能说明：按流量计费,按带宽计费还是按增强型95计费。  取值范围：bandwidth，traffic，95peak_plus(按增强型95计费)不返回或者为空时表示是bandwidth。  约束：只有共享带宽支持95peak_plus（按增强型95计费），按增强型95计费时需要指定保底百分比，默认是20%。
-	ChargeMode *BatchBandwidthRespChargeMode `json:"charge_mode,omitempty"`
+	ChargeMode *BatchBandwidthRespChargeMode `json:"charge_mode,omitempty" xml:"charge_mode"`
 
 	// 功能说明：带宽唯一标识
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 功能说明：带宽名称  取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 功能说明：带宽对应的弹性公网IP信息  约束：WHOLE类型的带宽支持多个弹性公网IP，PER类型的带宽只能对应一个弹性公网IP
-	PublicipInfo *[]PublicipInfoResp `json:"publicip_info,omitempty"`
+	PublicipInfo *[]PublicipInfoResp `json:"publicip_info,omitempty" xml:"publicip_info"`
 
 	// 功能说明：带宽类型，标识是否是共享带宽  取值范围：WHOLE，PER  WHOLE表示共享带宽；PER，表示独享带宽
-	ShareType *BatchBandwidthRespShareType `json:"share_type,omitempty"`
+	ShareType *BatchBandwidthRespShareType `json:"share_type,omitempty" xml:"share_type"`
 
 	// 功能说明：带宽大小  取值范围：默认5Mbit/s~2000Mbit/s（具体范围以各区域配置为准，请参见控制台对应页面显示）。
-	Size *int32 `json:"size,omitempty"`
+	Size *int32 `json:"size,omitempty" xml:"size"`
 
 	// 功能说明：用户所属租户ID
-	TenantId *string `json:"tenant_id,omitempty"`
+	TenantId *string `json:"tenant_id,omitempty" xml:"tenant_id"`
 
 	// 功能说明：带宽的状态  取值范围：  FREEZED：冻结  NORMAL：正常
-	Status *BatchBandwidthRespStatus `json:"status,omitempty"`
+	Status *BatchBandwidthRespStatus `json:"status,omitempty" xml:"status"`
 
 	// 功能说明：表示中心站点资源或者边缘站点资源 取值范围： center、边缘站点名称 约束：共享带宽只能插入与该字段相同的publicip
-	PublicBorderGroup *string `json:"public_border_group,omitempty"`
+	PublicBorderGroup *string `json:"public_border_group,omitempty" xml:"public_border_group"`
 }
 
 func (o BatchBandwidthResp) String() string {

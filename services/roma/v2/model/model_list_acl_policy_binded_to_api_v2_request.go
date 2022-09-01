@@ -10,28 +10,28 @@ import (
 type ListAclPolicyBindedToApiV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 偏移量，表示从此偏移量开始查询，偏移量小于0时，自动转换为0
-	Offset *int64 `json:"offset,omitempty"`
+	Offset *int64 `json:"offset,omitempty" xml:"offset"`
 
 	// 每页显示的条目数量
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// API编号
-	ApiId string `json:"api_id"`
+	ApiId string `json:"api_id" xml:"api_id"`
 
 	// 环境编号
-	EnvId *string `json:"env_id,omitempty"`
+	EnvId *string `json:"env_id,omitempty" xml:"env_id"`
 
 	// 环境名称
-	EnvName *string `json:"env_name,omitempty"`
+	EnvName *string `json:"env_name,omitempty" xml:"env_name"`
 
 	// ACL策略编号
-	AclId *string `json:"acl_id,omitempty"`
+	AclId *string `json:"acl_id,omitempty" xml:"acl_id"`
 
 	// ACL策略名称
-	AclName *string `json:"acl_name,omitempty"`
+	AclName *string `json:"acl_name,omitempty" xml:"acl_name"`
 }
 
 func (o ListAclPolicyBindedToApiV2Request) String() string {

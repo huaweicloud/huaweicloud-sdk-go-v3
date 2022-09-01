@@ -10,7 +10,7 @@ import (
 type RecyclePolicy struct {
 
 	// 保留时间，设置已删除实例保留天数，支持整数，可设置范围为1~7天。  当“retention_period_in_days”为空，保留时间默认是7天。
-	RetentionPeriodInDays *string `json:"retention_period_in_days,omitempty"`
+	RetentionPeriodInDays *string `json:"retention_period_in_days,omitempty" xml:"retention_period_in_days"`
 }
 
 func (o RecyclePolicy) String() string {

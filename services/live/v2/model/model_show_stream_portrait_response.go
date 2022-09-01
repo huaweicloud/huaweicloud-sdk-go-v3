@@ -10,9 +10,9 @@ import (
 type ShowStreamPortraitResponse struct {
 
 	// 播放画像信息列表。
-	StreamPortraits *[]StreamPortrait `json:"stream_portraits,omitempty"`
+	StreamPortraits *[]StreamPortrait `json:"stream_portraits,omitempty" xml:"stream_portraits"`
 
-	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	XRequestId     *string `json:"X-Request-Id,omitempty" xml:"X-Request-Id"`
 	HttpStatusCode int     `json:"-"`
 }
 

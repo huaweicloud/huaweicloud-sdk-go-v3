@@ -10,9 +10,9 @@ import (
 type BatchShowQueueResponse struct {
 
 	// 队列信息列表。
-	Queues *[]QueryQueueBase `json:"queues,omitempty"`
+	Queues *[]QueryQueueBase `json:"queues,omitempty" xml:"queues"`
 
-	Page           *Page `json:"page,omitempty"`
+	Page           *Page `json:"page,omitempty" xml:"page"`
 	HttpStatusCode int   `json:"-"`
 }
 

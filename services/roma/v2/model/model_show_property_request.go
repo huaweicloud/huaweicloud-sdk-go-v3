@@ -10,13 +10,13 @@ import (
 type ShowPropertyRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 服务ID
-	ServiceId string `json:"service_id"`
+	ServiceId string `json:"service_id" xml:"service_id"`
 
 	// 属性/请求属性/响应属性ID
-	PropertyId int32 `json:"property_id"`
+	PropertyId int32 `json:"property_id" xml:"property_id"`
 }
 
 func (o ShowPropertyRequest) String() string {

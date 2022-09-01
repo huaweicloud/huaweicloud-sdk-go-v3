@@ -10,7 +10,7 @@ import (
 type VinResult struct {
 
 	// 识别检测到的车架号。
-	Vin string `json:"vin"`
+	Vin string `json:"vin" xml:"vin"`
 }
 
 func (o VinResult) String() string {

@@ -10,10 +10,10 @@ import (
 type UpdateDatabaseInfoResponse struct {
 
 	// DDM实例id。
-	InstanceId *string `json:"instanceId,omitempty"`
+	InstanceId *string `json:"instanceId,omitempty" xml:"instanceId"`
 
 	// 任务ID。
-	JobId          *string `json:"jobId,omitempty"`
+	JobId          *string `json:"jobId,omitempty" xml:"jobId"`
 	HttpStatusCode int     `json:"-"`
 }
 

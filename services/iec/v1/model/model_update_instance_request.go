@@ -10,9 +10,9 @@ import (
 type UpdateInstanceRequest struct {
 
 	// 边缘实例ID。
-	ServerId string `json:"server_id"`
+	ServerId string `json:"server_id" xml:"server_id"`
 
-	Body *UpdateInstanceRequestBody `json:"body,omitempty"`
+	Body *UpdateInstanceRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateInstanceRequest) String() string {

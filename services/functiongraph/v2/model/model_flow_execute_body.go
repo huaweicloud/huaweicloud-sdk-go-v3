@@ -10,10 +10,10 @@ import (
 type FlowExecuteBody struct {
 
 	// 函数执行时需要的Header
-	Headers *interface{} `json:"headers,omitempty"`
+	Headers *interface{} `json:"headers,omitempty" xml:"headers"`
 
 	// 定义函数执行时的入参，支持使用JSONPATH进行映射，以及指定默认值
-	Input *interface{} `json:"input"`
+	Input *interface{} `json:"input" xml:"input"`
 }
 
 func (o FlowExecuteBody) String() string {

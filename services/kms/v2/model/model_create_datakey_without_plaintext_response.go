@@ -10,10 +10,10 @@ import (
 type CreateDatakeyWithoutPlaintextResponse struct {
 
 	// 密钥ID。
-	KeyId *string `json:"key_id,omitempty"`
+	KeyId *string `json:"key_id,omitempty" xml:"key_id"`
 
 	// DEK密文16进制，两位表示1byte。
-	CipherText     *string `json:"cipher_text,omitempty"`
+	CipherText     *string `json:"cipher_text,omitempty" xml:"cipher_text"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -9,7 +9,7 @@ import (
 type SubCustomerInfoV3 struct {
 
 	// 客户账号ID。
-	CustomerId *string `json:"customer_id,omitempty"`
+	CustomerId *string `json:"customer_id,omitempty" xml:"customer_id"`
 }
 
 func (o SubCustomerInfoV3) String() string {

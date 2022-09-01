@@ -12,7 +12,7 @@ import (
 type DeploymentJobConfirmType struct {
 
 	// 部署人工审核确认类型 stop终止部署 continue继续部署
-	Type *DeploymentJobConfirmTypeType `json:"type,omitempty"`
+	Type *DeploymentJobConfirmTypeType `json:"type,omitempty" xml:"type"`
 }
 
 func (o DeploymentJobConfirmType) String() string {

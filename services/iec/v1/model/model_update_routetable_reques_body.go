@@ -8,7 +8,7 @@ import (
 
 // 更新路由表请求体
 type UpdateRoutetableRequesBody struct {
-	Routetable *UpdateRoutetableOption `json:"routetable,omitempty"`
+	Routetable *UpdateRoutetableOption `json:"routetable,omitempty" xml:"routetable"`
 }
 
 func (o UpdateRoutetableRequesBody) String() string {

@@ -9,10 +9,10 @@ import (
 type Tag struct {
 
 	// 标签键，最大长度36个unicode字符。
-	Key *string `json:"key,omitempty"`
+	Key *string `json:"key,omitempty" xml:"key"`
 
 	// 标签值
-	Values *[]string `json:"values,omitempty"`
+	Values *[]string `json:"values,omitempty" xml:"values"`
 }
 
 func (o Tag) String() string {

@@ -10,15 +10,15 @@ import (
 type MuteParticipantRequest struct {
 
 	// 会议ID。
-	ConferenceID string `json:"conferenceID"`
+	ConferenceID string `json:"conferenceID" xml:"conferenceID"`
 
 	// 与会者标识。
-	ParticipantID string `json:"participantID"`
+	ParticipantID string `json:"participantID" xml:"participantID"`
 
 	// 会控授权令牌，通过获取会控token接口获得。
-	XConferenceAuthorization string `json:"X-Conference-Authorization"`
+	XConferenceAuthorization string `json:"X-Conference-Authorization" xml:"X-Conference-Authorization"`
 
-	Body *RestMuteParticipantReqBody `json:"body,omitempty"`
+	Body *RestMuteParticipantReqBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o MuteParticipantRequest) String() string {

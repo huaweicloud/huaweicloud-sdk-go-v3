@@ -10,10 +10,10 @@ import (
 type ShowApplicationDependentResourcesResponse struct {
 
 	// 依赖云资源信息
-	DependentServices *[]ResouceInfo `json:"dependent_services,omitempty"`
+	DependentServices *[]ResouceInfo `json:"dependent_services,omitempty" xml:"dependent_services"`
 
 	// 资源总个数
-	Count          *int32 `json:"count,omitempty"`
+	Count          *int32 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

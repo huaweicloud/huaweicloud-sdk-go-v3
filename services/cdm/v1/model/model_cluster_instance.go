@@ -10,16 +10,16 @@ import (
 type ClusterInstance struct {
 
 	// 节点的虚拟机ID。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 节点的虚拟机名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 节点类型，只支持一种类型“cdm”。
-	Type *string `json:"type,omitempty"`
+	Type *string `json:"type,omitempty" xml:"type"`
 
 	// 分片ID
-	ShardId *string `json:"shard_id,omitempty"`
+	ShardId *string `json:"shard_id,omitempty" xml:"shard_id"`
 }
 
 func (o ClusterInstance) String() string {

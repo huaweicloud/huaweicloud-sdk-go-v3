@@ -10,10 +10,10 @@ import (
 type RecordDownloadInfoBo struct {
 
 	// 会议UUID
-	ConfUuid *string `json:"confUuid,omitempty"`
+	ConfUuid *string `json:"confUuid,omitempty" xml:"confUuid"`
 
 	// 录制文件下载URL
-	Urls *[]RecordDownloadUrlDo `json:"urls,omitempty"`
+	Urls *[]RecordDownloadUrlDo `json:"urls,omitempty" xml:"urls"`
 }
 
 func (o RecordDownloadInfoBo) String() string {

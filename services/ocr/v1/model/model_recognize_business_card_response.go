@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type RecognizeBusinessCardResponse struct {
-	Result         *BusinessCardResult `json:"result,omitempty"`
+	Result         *BusinessCardResult `json:"result,omitempty" xml:"result"`
 	HttpStatusCode int                 `json:"-"`
 }
 

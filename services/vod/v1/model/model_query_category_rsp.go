@@ -9,13 +9,13 @@ import (
 type QueryCategoryRsp struct {
 
 	// 分类ID。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 分类名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 子分类列表。
-	Children *[]QueryCategoryRsp `json:"children,omitempty"`
+	Children *[]QueryCategoryRsp `json:"children,omitempty" xml:"children"`
 }
 
 func (o QueryCategoryRsp) String() string {

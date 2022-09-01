@@ -10,7 +10,7 @@ import (
 type NovaListKeypairsResponse struct {
 
 	// 密钥信息列表。
-	Keypairs       *[]NovaListKeypairsResult `json:"keypairs,omitempty"`
+	Keypairs       *[]NovaListKeypairsResult `json:"keypairs,omitempty" xml:"keypairs"`
 	HttpStatusCode int                       `json:"-"`
 }
 

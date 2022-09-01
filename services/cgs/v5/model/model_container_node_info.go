@@ -10,19 +10,19 @@ import (
 type ContainerNodeInfo struct {
 
 	// 节点id
-	HostId *string `json:"host_id,omitempty"`
+	HostId *string `json:"host_id,omitempty" xml:"host_id"`
 
 	// 节点（服务器）名称
-	HostName *string `json:"host_name,omitempty"`
+	HostName *string `json:"host_name,omitempty" xml:"host_name"`
 
 	// 服务器状态，包含如下4种。   - ACTIVE ：正在运行。   - SHUTOFF ：关机。   - BUILDING ：创建中。   - ERROR ：故障。
-	HostStatus *string `json:"host_status,omitempty"`
+	HostStatus *string `json:"host_status,omitempty" xml:"host_status"`
 
 	// Agent状态，包含如下3种。   - not_register ：未注册。   - online ：在线。   - offline ：离线。
-	AgentStatus *string `json:"agent_status,omitempty"`
+	AgentStatus *string `json:"agent_status,omitempty" xml:"agent_status"`
 
 	// 防护状态，包含如下2种。   - closed ：关闭。   - opened ：开启。
-	ProtectStatus *string `json:"protect_status,omitempty"`
+	ProtectStatus *string `json:"protect_status,omitempty" xml:"protect_status"`
 }
 
 func (o ContainerNodeInfo) String() string {

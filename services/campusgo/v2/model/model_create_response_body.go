@@ -9,7 +9,7 @@ import (
 type CreateResponseBody struct {
 
 	// 创建出的服务作业ID
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 }
 
 func (o CreateResponseBody) String() string {

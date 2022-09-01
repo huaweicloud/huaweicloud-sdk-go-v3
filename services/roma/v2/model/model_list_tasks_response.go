@@ -10,13 +10,13 @@ import (
 type ListTasksResponse struct {
 
 	// 查询任务列表任务总个数
-	Total *int64 `json:"total,omitempty"`
+	Total *int64 `json:"total,omitempty" xml:"total"`
 
 	// 查询任务列表返回的当前页的任务个数
-	Size *int32 `json:"size,omitempty"`
+	Size *int32 `json:"size,omitempty" xml:"size"`
 
 	// 查询任务列表返回的对象
-	Entities       *[]BriefTaskRespBean `json:"entities,omitempty"`
+	Entities       *[]BriefTaskRespBean `json:"entities,omitempty" xml:"entities"`
 	HttpStatusCode int                  `json:"-"`
 }
 

@@ -9,7 +9,7 @@ import (
 type UpdatePolicyRuleStatusRequestBody struct {
 
 	// 状态（开启：1，关闭：0）
-	Status *int32 `json:"status,omitempty"`
+	Status *int32 `json:"status,omitempty" xml:"status"`
 }
 
 func (o UpdatePolicyRuleStatusRequestBody) String() string {

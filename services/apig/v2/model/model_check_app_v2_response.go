@@ -10,13 +10,13 @@ import (
 type CheckAppV2Response struct {
 
 	// 编号
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 描述
-	Remark         *string `json:"remark,omitempty"`
+	Remark         *string `json:"remark,omitempty" xml:"remark"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -10,10 +10,10 @@ import (
 type CheckRecordResponse struct {
 
 	// 历史记录数据
-	Data *[]CheckRecordDataInfo `json:"data,omitempty"`
+	Data *[]CheckRecordDataInfo `json:"data,omitempty" xml:"data"`
 
 	// 总数
-	Total          *int32 `json:"total,omitempty"`
+	Total          *int32 `json:"total,omitempty" xml:"total"`
 	HttpStatusCode int    `json:"-"`
 }
 

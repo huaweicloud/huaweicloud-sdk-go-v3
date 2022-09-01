@@ -10,12 +10,12 @@ import (
 type ScopeProjectOption struct {
 
 	// 项目ID，id与name二选一即可。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 项目名，id与name二选一即可。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
-	Domain *ScopeDomainOption `json:"domain,omitempty"`
+	Domain *ScopeDomainOption `json:"domain,omitempty" xml:"domain"`
 }
 
 func (o ScopeProjectOption) String() string {

@@ -9,16 +9,16 @@ import (
 type CheckTaskJobsItemsBody struct {
 
 	// 任务标识。
-	JobId *string `json:"job_id,omitempty"`
+	JobId *string `json:"job_id,omitempty" xml:"job_id"`
 
 	// 任务状态如下：  - created 已创建  - running 正在处理  - finish 已完成  - failed 处理失败
-	Status *string `json:"status,omitempty"`
+	Status *string `json:"status,omitempty" xml:"status"`
 
 	// 任务创建的时间。例如：2018-01-02T15:03:04Z
-	CreateTime *string `json:"create_time,omitempty"`
+	CreateTime *string `json:"create_time,omitempty" xml:"create_time"`
 
 	// 任务最近更新的时间。例如：2018-01-02T15:03:04Z
-	UpdateTime *string `json:"update_time,omitempty"`
+	UpdateTime *string `json:"update_time,omitempty" xml:"update_time"`
 }
 
 func (o CheckTaskJobsItemsBody) String() string {

@@ -10,15 +10,15 @@ import (
 type TagResource struct {
 
 	// 资源ID。
-	ResourceId string `json:"resource_id"`
+	ResourceId string `json:"resource_id" xml:"resource_id"`
 
-	ResourceDetail *ResourceDetail `json:"resource_detail"`
+	ResourceDetail *ResourceDetail `json:"resource_detail" xml:"resource_detail"`
 
 	// 标签列表。
-	Tags []ResourceTag `json:"tags"`
+	Tags []ResourceTag `json:"tags" xml:"tags"`
 
 	// 资源名称。
-	ResourceName string `json:"resource_name"`
+	ResourceName string `json:"resource_name" xml:"resource_name"`
 }
 
 func (o TagResource) String() string {

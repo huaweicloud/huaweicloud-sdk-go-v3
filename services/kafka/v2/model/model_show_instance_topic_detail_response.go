@@ -10,13 +10,13 @@ import (
 type ShowInstanceTopicDetailResponse struct {
 
 	// topic名称。
-	Topic *string `json:"topic,omitempty"`
+	Topic *string `json:"topic,omitempty" xml:"topic"`
 
 	// 分区列表。
-	Partitions *[]ShowInstanceTopicDetailRespPartitions `json:"partitions,omitempty"`
+	Partitions *[]ShowInstanceTopicDetailRespPartitions `json:"partitions,omitempty" xml:"partitions"`
 
 	// 订阅该topic的消费组名称列表。
-	GroupSubscribed *[]string `json:"group_subscribed,omitempty"`
+	GroupSubscribed *[]string `json:"group_subscribed,omitempty" xml:"group_subscribed"`
 	HttpStatusCode  int       `json:"-"`
 }
 

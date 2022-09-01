@@ -10,7 +10,7 @@ import (
 type UpdatePrivateBucketAccessResponse struct {
 
 	// 桶开启关闭状态（true：开启；false：关闭）
-	Status         *bool `json:"status,omitempty"`
+	Status         *bool `json:"status,omitempty" xml:"status"`
 	HttpStatusCode int   `json:"-"`
 }
 

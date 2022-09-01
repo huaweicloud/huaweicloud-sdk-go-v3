@@ -10,12 +10,12 @@ import (
 type AllowDbPrivilegesRequest struct {
 
 	// 语言
-	XLanguage *string `json:"X-Language,omitempty"`
+	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *GaussDBforOpenGaussGrantRequest `json:"body,omitempty"`
+	Body *GaussDBforOpenGaussGrantRequest `json:"body,omitempty" xml:"body"`
 }
 
 func (o AllowDbPrivilegesRequest) String() string {

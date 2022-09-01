@@ -10,10 +10,10 @@ import (
 type ListCustomerOrdersResponse struct {
 
 	// 大于等于0的整数。 符合条件的记录总数。
-	TotalCount *int32 `json:"total_count,omitempty"`
+	TotalCount *int32 `json:"total_count,omitempty" xml:"total_count"`
 
 	// - 客户订单详情信息。 具体请参见表2
-	OrderInfos     *[]CustomerOrderV2 `json:"order_infos,omitempty"`
+	OrderInfos     *[]CustomerOrderV2 `json:"order_infos,omitempty" xml:"order_infos"`
 	HttpStatusCode int                `json:"-"`
 }
 

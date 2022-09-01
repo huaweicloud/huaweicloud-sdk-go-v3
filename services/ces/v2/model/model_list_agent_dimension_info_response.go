@@ -10,10 +10,10 @@ import (
 type ListAgentDimensionInfoResponse struct {
 
 	// 维度信息
-	Dimensions *[]AgentDimension `json:"dimensions,omitempty"`
+	Dimensions *[]AgentDimension `json:"dimensions,omitempty" xml:"dimensions"`
 
 	// 维度信息总数
-	Count          *int32 `json:"count,omitempty"`
+	Count          *int32 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

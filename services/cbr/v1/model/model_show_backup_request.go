@@ -10,7 +10,7 @@ import (
 type ShowBackupRequest struct {
 
 	// 备份ID
-	BackupId string `json:"backup_id"`
+	BackupId string `json:"backup_id" xml:"backup_id"`
 }
 
 func (o ShowBackupRequest) String() string {

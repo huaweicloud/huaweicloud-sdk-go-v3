@@ -10,10 +10,10 @@ import (
 type PageInfo struct {
 
 	// 当前页的资源数量
-	CurrentCount *int32 `json:"current_count,omitempty"`
+	CurrentCount *int32 `json:"current_count,omitempty" xml:"current_count"`
 
 	// 下一页的marker
-	NextMarker *string `json:"next_marker,omitempty"`
+	NextMarker *string `json:"next_marker,omitempty" xml:"next_marker"`
 }
 
 func (o PageInfo) String() string {

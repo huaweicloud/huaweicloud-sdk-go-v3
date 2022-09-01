@@ -8,7 +8,7 @@ import (
 
 // This is a auto update request Object
 type UpdateUserReq struct {
-	User *UpdateUserDetailReq `json:"user"`
+	User *UpdateUserDetailReq `json:"user" xml:"user"`
 }
 
 func (o UpdateUserReq) String() string {

@@ -10,9 +10,9 @@ import (
 type UpdateKeyDescriptionRequest struct {
 
 	// API版本号
-	VersionId string `json:"version_id"`
+	VersionId string `json:"version_id" xml:"version_id"`
 
-	Body *UpdateKeyDescriptionRequestBody `json:"body,omitempty"`
+	Body *UpdateKeyDescriptionRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateKeyDescriptionRequest) String() string {

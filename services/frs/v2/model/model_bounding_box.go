@@ -9,16 +9,16 @@ import (
 type BoundingBox struct {
 
 	// 矩形框宽度。
-	Width int32 `json:"width"`
+	Width int32 `json:"width" xml:"width"`
 
 	// 矩形框左上角纵坐标。
-	TopLeftY int32 `json:"top_left_y"`
+	TopLeftY int32 `json:"top_left_y" xml:"top_left_y"`
 
 	// 矩形框左上角横坐标。
-	TopLeftX int32 `json:"top_left_x"`
+	TopLeftX int32 `json:"top_left_x" xml:"top_left_x"`
 
 	// 矩形框高度。
-	Height int32 `json:"height"`
+	Height int32 `json:"height" xml:"height"`
 }
 
 func (o BoundingBox) String() string {

@@ -10,9 +10,9 @@ import (
 type StartKibanaPublicRequest struct {
 
 	// 指定待开启kibana公网访问的集群ID。
-	ClusterId string `json:"cluster_id"`
+	ClusterId string `json:"cluster_id" xml:"cluster_id"`
 
-	Body *StartKibanaPublicReq `json:"body,omitempty"`
+	Body *StartKibanaPublicReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o StartKibanaPublicRequest) String() string {

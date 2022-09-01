@@ -10,10 +10,10 @@ import (
 type ShowDeviceGroupTreeRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 应用ID
-	AppId string `json:"app_id"`
+	AppId string `json:"app_id" xml:"app_id"`
 }
 
 func (o ShowDeviceGroupTreeRequest) String() string {

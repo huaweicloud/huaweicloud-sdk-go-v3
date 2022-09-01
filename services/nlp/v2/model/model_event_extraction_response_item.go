@@ -10,16 +10,16 @@ import (
 type EventExtractionResponseItem struct {
 
 	// 事件元素列表。
-	Argument []EventExtractionResponseItemArgument `json:"argument"`
+	Argument []EventExtractionResponseItemArgument `json:"argument" xml:"argument"`
 
 	// 事件触发词。触发词是事件描述中最能代表事件发生的词汇，决定事件类别的重要特征。
-	EventTrigger string `json:"event_trigger"`
+	EventTrigger string `json:"event_trigger" xml:"event_trigger"`
 
 	// 事件类型。
-	EventType *string `json:"event_type,omitempty"`
+	EventType *string `json:"event_type,omitempty" xml:"event_type"`
 
 	// 事件触发词在待分析文本中的起始和终止位置。
-	TriggerSpan []int32 `json:"trigger_span"`
+	TriggerSpan []int32 `json:"trigger_span" xml:"trigger_span"`
 }
 
 func (o EventExtractionResponseItem) String() string {

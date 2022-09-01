@@ -10,16 +10,16 @@ import (
 type ListProPricePlansResponse struct {
 
 	// 每页的记录数
-	Limit *int64 `json:"limit,omitempty"`
+	Limit *int64 `json:"limit,omitempty" xml:"limit"`
 
 	// 页码，最小值是1，最大值为1000000。默认值是1.
-	Offset *int64 `json:"offset,omitempty"`
+	Offset *int64 `json:"offset,omitempty" xml:"offset"`
 
 	// 记录总数
-	Count *int64 `json:"count,omitempty"`
+	Count *int64 `json:"count,omitempty" xml:"count"`
 
 	// 套餐列表
-	PricePlans     *[]ProPricePlanVo `json:"price_plans,omitempty"`
+	PricePlans     *[]ProPricePlanVo `json:"price_plans,omitempty" xml:"price_plans"`
 	HttpStatusCode int               `json:"-"`
 }
 

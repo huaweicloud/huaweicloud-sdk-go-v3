@@ -9,28 +9,28 @@ import (
 type RuleConfig struct {
 
 	// 规则配置ID
-	Id *int32 `json:"id,omitempty"`
+	Id *int32 `json:"id,omitempty" xml:"id"`
 
 	// 规则ID
-	RuleId *int32 `json:"rule_id,omitempty"`
+	RuleId *int32 `json:"rule_id,omitempty" xml:"rule_id"`
 
 	// 默认值
-	DefaultValue *string `json:"default_value,omitempty"`
+	DefaultValue *string `json:"default_value,omitempty" xml:"default_value"`
 
 	// 当前
-	OptionValue *string `json:"option_value,omitempty"`
+	OptionValue *string `json:"option_value,omitempty" xml:"option_value"`
 
 	// 当前规则配置项key
-	OptionKey *string `json:"option_key,omitempty"`
+	OptionKey *string `json:"option_key,omitempty" xml:"option_key"`
 
 	// 当前规则配置项名称
-	OptionName *string `json:"option_name,omitempty"`
+	OptionName *string `json:"option_name,omitempty" xml:"option_name"`
 
 	// 规则集id
-	TemplateId *string `json:"template_id,omitempty"`
+	TemplateId *string `json:"template_id,omitempty" xml:"template_id"`
 
 	// 描述
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 }
 
 func (o RuleConfig) String() string {

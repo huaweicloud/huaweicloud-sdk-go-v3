@@ -10,10 +10,10 @@ import (
 type CreateRouterReqDto struct {
 
 	// 路由ID，节点下唯一
-	RouteId string `json:"route_id"`
+	RouteId string `json:"route_id" xml:"route_id"`
 
 	// sql參數
-	Sql string `json:"sql"`
+	Sql string `json:"sql" xml:"sql"`
 }
 
 func (o CreateRouterReqDto) String() string {

@@ -10,7 +10,7 @@ import (
 type StopJobResponse struct {
 
 	// 作业ID
-	JobId          *string `json:"job_id,omitempty"`
+	JobId          *string `json:"job_id,omitempty" xml:"job_id"`
 	HttpStatusCode int     `json:"-"`
 }
 

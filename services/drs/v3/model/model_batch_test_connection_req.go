@@ -10,7 +10,7 @@ import (
 type BatchTestConnectionReq struct {
 
 	// 批量测试连接请求列表。
-	Jobs []TestEndPoint `json:"jobs"`
+	Jobs []TestEndPoint `json:"jobs" xml:"jobs"`
 }
 
 func (o BatchTestConnectionReq) String() string {

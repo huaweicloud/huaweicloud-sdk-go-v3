@@ -13,13 +13,13 @@ import (
 type ListMessageTraceRequest struct {
 
 	// 消息引擎。
-	Engine ListMessageTraceRequestEngine `json:"engine"`
+	Engine ListMessageTraceRequestEngine `json:"engine" xml:"engine"`
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 消息ID。
-	MsgId *string `json:"msg_id,omitempty"`
+	MsgId *string `json:"msg_id,omitempty" xml:"msg_id"`
 }
 
 func (o ListMessageTraceRequest) String() string {

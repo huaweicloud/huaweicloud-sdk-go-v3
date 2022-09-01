@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type UpdatePoolResponse struct {
-	Pool           *PoolResp `json:"pool,omitempty"`
+	Pool           *PoolResp `json:"pool,omitempty" xml:"pool"`
 	HttpStatusCode int       `json:"-"`
 }
 

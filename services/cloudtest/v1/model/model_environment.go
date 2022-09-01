@@ -9,16 +9,16 @@ import (
 type Environment struct {
 
 	// 环境分组id
-	EnvironmentId *string `json:"environment_id,omitempty"`
+	EnvironmentId *string `json:"environment_id,omitempty" xml:"environment_id"`
 
 	// 环境分组名
-	EnvironmentName *string `json:"environment_name,omitempty"`
+	EnvironmentName *string `json:"environment_name,omitempty" xml:"environment_name"`
 
 	// 环境分组描述
-	EnvironmentDescription *string `json:"environment_description,omitempty"`
+	EnvironmentDescription *string `json:"environment_description,omitempty" xml:"environment_description"`
 
 	// 是否是默认环境
-	IsDefault *bool `json:"is_default,omitempty"`
+	IsDefault *bool `json:"is_default,omitempty" xml:"is_default"`
 }
 
 func (o Environment) String() string {

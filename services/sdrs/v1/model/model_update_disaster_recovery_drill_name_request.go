@@ -10,9 +10,9 @@ import (
 type UpdateDisasterRecoveryDrillNameRequest struct {
 
 	// 容灾演练的ID。
-	DisasterRecoveryDrillId string `json:"disaster_recovery_drill_id"`
+	DisasterRecoveryDrillId string `json:"disaster_recovery_drill_id" xml:"disaster_recovery_drill_id"`
 
-	Body *UpdateDisasterRecoveryDrillNameRequestBody `json:"body,omitempty"`
+	Body *UpdateDisasterRecoveryDrillNameRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateDisasterRecoveryDrillNameRequest) String() string {

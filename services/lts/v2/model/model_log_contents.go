@@ -10,13 +10,13 @@ import (
 type LogContents struct {
 
 	// 日志原数据。
-	Content *string `json:"content,omitempty"`
+	Content *string `json:"content,omitempty" xml:"content"`
 
 	// 日志单行序列号。
-	LineNum *string `json:"line_num,omitempty"`
+	LineNum *string `json:"line_num,omitempty" xml:"line_num"`
 
 	// 该条日志包含的 labels。
-	Labels map[string]string `json:"labels,omitempty"`
+	Labels map[string]string `json:"labels,omitempty" xml:"labels"`
 }
 
 func (o LogContents) String() string {

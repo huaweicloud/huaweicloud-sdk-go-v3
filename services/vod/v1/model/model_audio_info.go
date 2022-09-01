@@ -12,13 +12,13 @@ import (
 type AudioInfo struct {
 
 	// 音频采样率(有效值范围)<br/> AUDIO_SAMPLE_AUTO (default), AUDIO_SAMPLE_22050：22050Hz<br/> AUDIO_SAMPLE_32000：32000Hz<br/> AUDIO_SAMPLE_44100：44100Hz<br/> AUDIO_SAMPLE_48000：48000Hz<br/> AUDIO_SAMPLE_96000：96000Hz<br/>
-	SampleRate AudioInfoSampleRate `json:"sample_rate"`
+	SampleRate AudioInfoSampleRate `json:"sample_rate" xml:"sample_rate"`
 
 	// 音频码率（单位：Kbps）<br/>
-	Bitrate *int32 `json:"bitrate,omitempty"`
+	Bitrate *int32 `json:"bitrate,omitempty" xml:"bitrate"`
 
 	// 声道数(有效值范围)<br/> AUDIO_CHANNELS_1:单声道<br/> AUDIO_CHANNELS_2：双声道<br/> AUDIO_CHANNELS_5_1：5.1声道<br/>
-	Channels AudioInfoChannels `json:"channels"`
+	Channels AudioInfoChannels `json:"channels" xml:"channels"`
 }
 
 func (o AudioInfo) String() string {

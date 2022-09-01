@@ -10,7 +10,7 @@ import (
 type DeleteInstanceResponse struct {
 
 	// DDM实例ID。
-	Id             *string `json:"id,omitempty"`
+	Id             *string `json:"id,omitempty" xml:"id"`
 	HttpStatusCode int     `json:"-"`
 }
 

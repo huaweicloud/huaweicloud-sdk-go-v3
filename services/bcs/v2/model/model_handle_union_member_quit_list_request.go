@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type HandleUnionMemberQuitListRequest struct {
-	Body *QuitUnionFromMemberListRequestBody `json:"body,omitempty"`
+	Body *QuitUnionFromMemberListRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o HandleUnionMemberQuitListRequest) String() string {

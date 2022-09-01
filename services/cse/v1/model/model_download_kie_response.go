@@ -8,10 +8,10 @@ import (
 
 // Response Object
 type DownloadKieResponse struct {
-	Metadata *DownloadKieResponseBodyMetadata `json:"metadata,omitempty"`
+	Metadata *DownloadKieResponseBodyMetadata `json:"metadata,omitempty" xml:"metadata"`
 
 	// 导出的配置项列表。
-	Data           *[]CreateKieReq `json:"data,omitempty"`
+	Data           *[]CreateKieReq `json:"data,omitempty" xml:"data"`
 	HttpStatusCode int             `json:"-"`
 }
 

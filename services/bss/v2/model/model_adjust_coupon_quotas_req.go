@@ -9,13 +9,13 @@ import (
 type AdjustCouponQuotasReq struct {
 
 	// 华为云总经销商发放的代金券额度的ID。获取方法请参见查询优惠券额度。
-	QuotaId string `json:"quota_id"`
+	QuotaId string `json:"quota_id" xml:"quota_id"`
 
 	// 云经销商ID列表。
-	IndirectPartnerIds []string `json:"indirect_partner_ids"`
+	IndirectPartnerIds []string `json:"indirect_partner_ids" xml:"indirect_partner_ids"`
 
 	// 华为云总经销商向云经销商发放的代金券额度值。 单位：元。取值大于0且精确到小数点后2位。
-	QuotaAmount float64 `json:"quota_amount"`
+	QuotaAmount float64 `json:"quota_amount" xml:"quota_amount"`
 }
 
 func (o AdjustCouponQuotasReq) String() string {

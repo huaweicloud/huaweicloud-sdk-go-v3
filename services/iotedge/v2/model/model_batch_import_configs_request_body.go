@@ -9,7 +9,7 @@ import (
 type BatchImportConfigsRequestBody struct {
 
 	// 南向IA配置项列表
-	Configs *[]BatchImportConfigRequestBody `json:"configs,omitempty"`
+	Configs *[]BatchImportConfigRequestBody `json:"configs,omitempty" xml:"configs"`
 }
 
 func (o BatchImportConfigsRequestBody) String() string {

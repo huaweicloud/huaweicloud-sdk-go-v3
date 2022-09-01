@@ -10,22 +10,22 @@ import (
 type UpdatePublicationRequestDto struct {
 
 	// 发布名称
-	PublishName string `json:"publishName"`
+	PublishName string `json:"publishName" xml:"publishName"`
 
 	// 开始时间
-	StartTime int64 `json:"startTime"`
+	StartTime int64 `json:"startTime" xml:"startTime"`
 
 	// 结束时间
-	EndTime int64 `json:"endTime"`
+	EndTime int64 `json:"endTime" xml:"endTime"`
 
 	// 发布到部门编码列表
-	DeptList []string `json:"deptList"`
+	DeptList []string `json:"deptList" xml:"deptList"`
 
 	// 发布到设备用户ID列表
-	DeviceList []string `json:"deviceList"`
+	DeviceList []string `json:"deviceList" xml:"deviceList"`
 
 	// 发布节目ID列表
-	ProgramList *[]string `json:"programList,omitempty"`
+	ProgramList *[]string `json:"programList,omitempty" xml:"programList"`
 }
 
 func (o UpdatePublicationRequestDto) String() string {

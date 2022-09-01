@@ -10,10 +10,10 @@ import (
 type ListPostalAddressRequest struct {
 
 	// 偏移量。默认值为0。
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 每次查询的个数。默认值为10。
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 }
 
 func (o ListPostalAddressRequest) String() string {

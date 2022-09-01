@@ -12,22 +12,22 @@ import (
 type Frequency struct {
 
 	// 时间类型
-	Type FrequencyType `json:"type"`
+	Type FrequencyType `json:"type" xml:"type"`
 
 	// 当字段type为\"CRON\"时取该字段
-	CronExpr *string `json:"cron_expr,omitempty"`
+	CronExpr *string `json:"cron_expr,omitempty" xml:"cron_expr"`
 
 	// 当字段type为\"DAILY\"或者\"WEEKLY\"时取该字段
-	HourOfDay *int32 `json:"hour_of_day,omitempty"`
+	HourOfDay *int32 `json:"hour_of_day,omitempty" xml:"hour_of_day"`
 
 	// 当字段type为\"WEEKLY\"时取该字段(周日~周六)
-	DayOfWeek *int32 `json:"day_of_week,omitempty"`
+	DayOfWeek *int32 `json:"day_of_week,omitempty" xml:"day_of_week"`
 
 	// 当字段type为\"FIXED_RATE\"时取该字段(当fixed_rate_unit单位为minute，最大值60;当fixed_rate_unit单位为hour，最大值24)
-	FixedRate *int32 `json:"fixed_rate,omitempty"`
+	FixedRate *int32 `json:"fixed_rate,omitempty" xml:"fixed_rate"`
 
 	// 时间单位
-	FixedRateUnit *FrequencyFixedRateUnit `json:"fixed_rate_unit,omitempty"`
+	FixedRateUnit *FrequencyFixedRateUnit `json:"fixed_rate_unit,omitempty" xml:"fixed_rate_unit"`
 }
 
 func (o Frequency) String() string {

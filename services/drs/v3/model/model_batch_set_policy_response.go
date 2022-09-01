@@ -10,10 +10,10 @@ import (
 type BatchSetPolicyResponse struct {
 
 	// 批量设置同步策略响应体
-	Results *[]SyncPolicyResp `json:"results,omitempty"`
+	Results *[]SyncPolicyResp `json:"results,omitempty" xml:"results"`
 
 	// 总数
-	Count          *int32 `json:"count,omitempty"`
+	Count          *int32 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

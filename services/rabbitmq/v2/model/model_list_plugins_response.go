@@ -10,7 +10,7 @@ import (
 type ListPluginsResponse struct {
 
 	// 插件信息列表。
-	Plugins        *[]PluginEntity `json:"plugins,omitempty"`
+	Plugins        *[]PluginEntity `json:"plugins,omitempty" xml:"plugins"`
 	HttpStatusCode int             `json:"-"`
 }
 

@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreatePersonalRealnameAuthRequest struct {
-	Body *ApplyIndividualRealnameAuthsReq `json:"body,omitempty"`
+	Body *ApplyIndividualRealnameAuthsReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreatePersonalRealnameAuthRequest) String() string {

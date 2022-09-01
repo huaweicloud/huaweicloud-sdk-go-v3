@@ -8,7 +8,7 @@ import (
 
 // 保护实例变更规格请求体
 type ResizeProtectedInstanceRequestBody struct {
-	Resize *ResizeProtectedInstanceRequestParams `json:"resize"`
+	Resize *ResizeProtectedInstanceRequestParams `json:"resize" xml:"resize"`
 }
 
 func (o ResizeProtectedInstanceRequestBody) String() string {

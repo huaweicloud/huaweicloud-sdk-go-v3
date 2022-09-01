@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ImportJobRequest struct {
-	Body *ImportFileReq `json:"body,omitempty"`
+	Body *ImportFileReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o ImportJobRequest) String() string {

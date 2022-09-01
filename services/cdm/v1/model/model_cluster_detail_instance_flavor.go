@@ -10,10 +10,10 @@ import (
 type ClusterDetailInstanceFlavor struct {
 
 	// 节点虚拟机的规格ID。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 链接信息
-	Links *[]ClusterLinks `json:"links,omitempty"`
+	Links *[]ClusterLinks `json:"links,omitempty" xml:"links"`
 }
 
 func (o ClusterDetailInstanceFlavor) String() string {

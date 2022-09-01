@@ -10,25 +10,25 @@ import (
 type ListDevicesResponse struct {
 
 	// 总数
-	Total *int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty" xml:"total"`
 
 	// 本次返回数量
-	Size *int32 `json:"size,omitempty"`
+	Size *int32 `json:"size,omitempty" xml:"size"`
 
 	// 设备接入地址
-	ConnectAddress *string `json:"connect_address,omitempty"`
+	ConnectAddress *string `json:"connect_address,omitempty" xml:"connect_address"`
 
 	// 设备接入SSL地址
-	SslConnectAddress *string `json:"ssl_connect_address,omitempty"`
+	SslConnectAddress *string `json:"ssl_connect_address,omitempty" xml:"ssl_connect_address"`
 
 	// 设备接入IPV6地址
-	Ipv6ConnectAddress *string `json:"ipv6_connect_address,omitempty"`
+	Ipv6ConnectAddress *string `json:"ipv6_connect_address,omitempty" xml:"ipv6_connect_address"`
 
 	// 设备接入IPV6 SSL地址
-	Ipv6SslConnectAddress *string `json:"ipv6_ssl_connect_address,omitempty"`
+	Ipv6SslConnectAddress *string `json:"ipv6_ssl_connect_address,omitempty" xml:"ipv6_ssl_connect_address"`
 
 	// 设备ID列表
-	Items          *[]Device `json:"items,omitempty"`
+	Items          *[]Device `json:"items,omitempty" xml:"items"`
 	HttpStatusCode int       `json:"-"`
 }
 

@@ -10,13 +10,13 @@ import (
 type CreateShareResponse struct {
 
 	// 创建的SFS Turbo文件系统ID。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 创建的SFS Turbo文件系统名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// SFS Turbo文件系统的状态
-	Status         *string `json:"status,omitempty"`
+	Status         *string `json:"status,omitempty" xml:"status"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -13,43 +13,43 @@ import (
 type NatGatewaySnatRuleResponseBody struct {
 
 	// SNAT规则的ID。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 项目的ID。
-	TenantId string `json:"tenant_id"`
+	TenantId string `json:"tenant_id" xml:"tenant_id"`
 
 	// 公网NAT网关实例的ID。
-	NatGatewayId string `json:"nat_gateway_id"`
+	NatGatewayId string `json:"nat_gateway_id" xml:"nat_gateway_id"`
 
 	// cidr，可以是网段或者主机格式，与network_id参数二选一。 Source_type=0时，cidr必须是vpc 子网网段的子集(不能相等）; Source_type=1时，cidr必须指定专线侧网段。
-	Cidr string `json:"cidr"`
+	Cidr string `json:"cidr" xml:"cidr"`
 
 	// 0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
-	SourceType int32 `json:"source_type"`
+	SourceType int32 `json:"source_type" xml:"source_type"`
 
 	// 功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。
-	FloatingIpId string `json:"floating_ip_id"`
+	FloatingIpId string `json:"floating_ip_id" xml:"floating_ip_id"`
 
 	// SNAT规则的描述，长度限制为255。
-	Description string `json:"description"`
+	Description string `json:"description" xml:"description"`
 
 	// 功能说明：SNAT规则的状态。
-	Status NatGatewaySnatRuleResponseBodyStatus `json:"status"`
+	Status NatGatewaySnatRuleResponseBodyStatus `json:"status" xml:"status"`
 
 	// SNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
-	CreatedAt string `json:"created_at"`
+	CreatedAt string `json:"created_at" xml:"created_at"`
 
 	// 规则使用的网络id。与cidr参数二选一。
-	NetworkId string `json:"network_id"`
+	NetworkId string `json:"network_id" xml:"network_id"`
 
 	// 解冻/冻结状态。 取值范围： - \"true\"：解冻 - \"false\"：冻结
-	AdminStateUp bool `json:"admin_state_up"`
+	AdminStateUp bool `json:"admin_state_up" xml:"admin_state_up"`
 
 	// 功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。 取值范围：最大长度1024字节。
-	FloatingIpAddress string `json:"floating_ip_address"`
+	FloatingIpAddress string `json:"floating_ip_address" xml:"floating_ip_address"`
 
 	// 功能说明：冻结的弹性公网IP，多个冻结的弹性公网IP使用逗号分隔。 取值范围：最大长度1024字节。
-	FreezedIpAddress string `json:"freezed_ip_address"`
+	FreezedIpAddress string `json:"freezed_ip_address" xml:"freezed_ip_address"`
 }
 
 func (o NatGatewaySnatRuleResponseBody) String() string {

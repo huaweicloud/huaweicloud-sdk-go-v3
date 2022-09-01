@@ -9,10 +9,10 @@ import (
 type LinksItem struct {
 
 	// 备份文件名称。
-	FileName *string `json:"file_name,omitempty"`
+	FileName *string `json:"file_name,omitempty" xml:"file_name"`
 
 	// 备份文件下载链接地址。
-	Link *string `json:"link,omitempty"`
+	Link *string `json:"link,omitempty" xml:"link"`
 }
 
 func (o LinksItem) String() string {

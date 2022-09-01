@@ -10,7 +10,7 @@ import (
 type ShowBranchesByTwoRepositoryIdRequest struct {
 
 	// 仓库的主键id
-	RepositoryId string `json:"repository_id"`
+	RepositoryId string `json:"repository_id" xml:"repository_id"`
 }
 
 func (o ShowBranchesByTwoRepositoryIdRequest) String() string {

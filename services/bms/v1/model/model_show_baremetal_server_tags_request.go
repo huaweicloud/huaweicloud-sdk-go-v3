@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ShowBaremetalServerTagsRequest struct {
-	ServerId string `json:"server_id"`
+	ServerId string `json:"server_id" xml:"server_id"`
 }
 
 func (o ShowBaremetalServerTagsRequest) String() string {

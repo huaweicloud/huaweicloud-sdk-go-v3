@@ -13,16 +13,16 @@ import (
 type CommandTimeTakenList struct {
 
 	// 执行命令的总次数
-	TotalNum int32 `json:"total_num"`
+	TotalNum int32 `json:"total_num" xml:"total_num"`
 
 	// 执行命令的总耗时
-	TotalUsecSum float64 `json:"total_usec_sum"`
+	TotalUsecSum float64 `json:"total_usec_sum" xml:"total_usec_sum"`
 
 	// 命令耗时统计结果
-	Result CommandTimeTakenListResult `json:"result"`
+	Result CommandTimeTakenListResult `json:"result" xml:"result"`
 
 	// 命令耗时统计
-	CommandList []CommandTimeTaken `json:"command_list"`
+	CommandList []CommandTimeTaken `json:"command_list" xml:"command_list"`
 }
 
 func (o CommandTimeTakenList) String() string {

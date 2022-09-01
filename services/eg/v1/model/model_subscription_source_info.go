@@ -9,25 +9,25 @@ import (
 type SubscriptionSourceInfo struct {
 
 	// 订阅源ID
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 订阅的事件源名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 订阅的事件源的提供方类型
-	ProviderType *string `json:"provider_type,omitempty"`
+	ProviderType *string `json:"provider_type,omitempty" xml:"provider_type"`
 
 	// 订阅的事件源参数列表
-	Detail *interface{} `json:"detail,omitempty"`
+	Detail *interface{} `json:"detail,omitempty" xml:"detail"`
 
 	// 订阅事件源的匹配过滤规则
-	Filter *interface{} `json:"filter,omitempty"`
+	Filter *interface{} `json:"filter,omitempty" xml:"filter"`
 
 	// 创建时间
-	CreatedTime *string `json:"created_time,omitempty"`
+	CreatedTime *string `json:"created_time,omitempty" xml:"created_time"`
 
 	// 更新时间
-	UpdatedTime *string `json:"updated_time,omitempty"`
+	UpdatedTime *string `json:"updated_time,omitempty" xml:"updated_time"`
 }
 
 func (o SubscriptionSourceInfo) String() string {

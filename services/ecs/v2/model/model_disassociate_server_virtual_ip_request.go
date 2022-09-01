@@ -10,9 +10,9 @@ import (
 type DisassociateServerVirtualIpRequest struct {
 
 	// 云服务器网卡ID。
-	NicId string `json:"nic_id"`
+	NicId string `json:"nic_id" xml:"nic_id"`
 
-	Body *DisassociateServerVirtualIpRequestBody `json:"body,omitempty"`
+	Body *DisassociateServerVirtualIpRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o DisassociateServerVirtualIpRequest) String() string {

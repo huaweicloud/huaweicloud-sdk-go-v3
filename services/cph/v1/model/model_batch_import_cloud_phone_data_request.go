@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type BatchImportCloudPhoneDataRequest struct {
-	Body *BatchImportCloudPhoneDataRequestBody `json:"body,omitempty"`
+	Body *BatchImportCloudPhoneDataRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchImportCloudPhoneDataRequest) String() string {

@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RecognizeShortAudioRequest struct {
-	Body *PostShortAudioReq `json:"body,omitempty"`
+	Body *PostShortAudioReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o RecognizeShortAudioRequest) String() string {

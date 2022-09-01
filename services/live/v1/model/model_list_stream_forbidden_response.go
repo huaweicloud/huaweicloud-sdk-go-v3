@@ -10,10 +10,10 @@ import (
 type ListStreamForbiddenResponse struct {
 
 	// 查询结果的总元素数量
-	Total *int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty" xml:"total"`
 
 	// 禁播黑名单列表
-	Blocks         *[]StreamForbiddenList `json:"blocks,omitempty"`
+	Blocks         *[]StreamForbiddenList `json:"blocks,omitempty" xml:"blocks"`
 	HttpStatusCode int                    `json:"-"`
 }
 

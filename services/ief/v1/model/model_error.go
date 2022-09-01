@@ -9,19 +9,19 @@ import (
 type Error struct {
 
 	// 错误详情
-	Detail string `json:"detail"`
+	Detail string `json:"detail" xml:"detail"`
 
 	// 铂金版实例ID，如果为空则表示是专业版实例。
-	IefInstanceId string `json:"ief_instance_id"`
+	IefInstanceId string `json:"ief_instance_id" xml:"ief_instance_id"`
 
 	// 项目ID
-	ProjectId string `json:"project_id"`
+	ProjectId string `json:"project_id" xml:"project_id"`
 
 	// 规则ID
-	RuleId string `json:"rule_id"`
+	RuleId string `json:"rule_id" xml:"rule_id"`
 
 	// 错误发生的时间
-	Time string `json:"time"`
+	Time string `json:"time" xml:"time"`
 }
 
 func (o Error) String() string {

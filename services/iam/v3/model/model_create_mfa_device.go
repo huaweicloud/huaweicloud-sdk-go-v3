@@ -9,11 +9,11 @@ import (
 // {  \"virtual_mfa_device\": {   \"name\": \"{divice_name}\",   \"user_id\": \"{user_id}\"  } }
 type CreateMfaDevice struct {
 
-	// 设备名称。
-	Name string `json:"name"`
+	// 设备名称。 最小长度：1 最大长度：64
+	Name string `json:"name" xml:"name"`
 
 	// 创建MFA设备的IAM用户ID。
-	UserId string `json:"user_id"`
+	UserId string `json:"user_id" xml:"user_id"`
 }
 
 func (o CreateMfaDevice) String() string {

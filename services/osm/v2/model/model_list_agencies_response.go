@@ -10,10 +10,10 @@ import (
 type ListAgenciesResponse struct {
 
 	// 总数
-	TotalCount *int32 `json:"total_count,omitempty"`
+	TotalCount *int32 `json:"total_count,omitempty" xml:"total_count"`
 
 	// 委托列表
-	AgencyList     *[]AgencyV2 `json:"agency_list,omitempty"`
+	AgencyList     *[]AgencyV2 `json:"agency_list,omitempty" xml:"agency_list"`
 	HttpStatusCode int         `json:"-"`
 }
 

@@ -9,9 +9,9 @@ import (
 type MulInputFileInfo struct {
 
 	// 语言标签。
-	Language *string `json:"language,omitempty"`
+	Language *string `json:"language,omitempty" xml:"language"`
 
-	Input *ObsObjInfo `json:"input,omitempty"`
+	Input *ObsObjInfo `json:"input,omitempty" xml:"input"`
 }
 
 func (o MulInputFileInfo) String() string {

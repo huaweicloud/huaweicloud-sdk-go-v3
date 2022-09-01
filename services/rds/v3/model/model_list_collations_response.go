@@ -10,7 +10,7 @@ import (
 type ListCollationsResponse struct {
 
 	// 字符集信息列表
-	CharSets       *[]string `json:"charSets,omitempty"`
+	CharSets       *[]string `json:"charSets,omitempty" xml:"charSets"`
 	HttpStatusCode int       `json:"-"`
 }
 

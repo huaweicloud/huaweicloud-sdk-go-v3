@@ -10,12 +10,12 @@ import (
 type CreateLinkRequest struct {
 
 	// 集群ID
-	ClusterId string `json:"cluster_id"`
+	ClusterId string `json:"cluster_id" xml:"cluster_id"`
 
 	// 为“true”时，此API仅校验参数是否正确，不创建连接
-	Validate *string `json:"validate,omitempty"`
+	Validate *string `json:"validate,omitempty" xml:"validate"`
 
-	Body *CdmCreateAndUpdateLinkReq `json:"body,omitempty"`
+	Body *CdmCreateAndUpdateLinkReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateLinkRequest) String() string {

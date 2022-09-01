@@ -12,10 +12,10 @@ import (
 type BatchSwitchesRequest struct {
 
 	// risk id, ids 中间逗号分隔
-	Ids *string `json:"ids,omitempty"`
+	Ids *string `json:"ids,omitempty" xml:"ids"`
 
 	// OFF：关闭 ON：开启
-	Status *BatchSwitchesRequestStatus `json:"status,omitempty"`
+	Status *BatchSwitchesRequestStatus `json:"status,omitempty" xml:"status"`
 }
 
 func (o BatchSwitchesRequest) String() string {

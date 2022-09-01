@@ -10,10 +10,10 @@ import (
 type AccessProgress struct {
 
 	// 步骤   - 1: 指回源IP加白   - 2: 指本地验证   - 指修改DNS解析
-	Step *int32 `json:"step,omitempty"`
+	Step *int32 `json:"step,omitempty" xml:"step"`
 
 	// 状态，0：未完成这个步骤；1：已完成这个状态”
-	Status *int32 `json:"status,omitempty"`
+	Status *int32 `json:"status,omitempty" xml:"status"`
 }
 
 func (o AccessProgress) String() string {

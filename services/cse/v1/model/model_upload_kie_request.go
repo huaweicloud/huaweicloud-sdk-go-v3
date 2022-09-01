@@ -13,18 +13,18 @@ import (
 type UploadKieRequest struct {
 
 	// 如果不带则默认企业项目为\"default\"，ID为\"0\"
-	XEnterpriseProjectID *string `json:"X-Enterprise-Project-ID,omitempty"`
+	XEnterpriseProjectID *string `json:"X-Enterprise-Project-ID,omitempty" xml:"X-Enterprise-Project-ID"`
 
 	// 微服务引擎专享版ID。
-	XEngineId string `json:"x-engine-id"`
+	XEngineId string `json:"x-engine-id" xml:"x-engine-id"`
 
 	// 覆盖策略，force 强制覆盖、abort 遇到第一个重复时终止导入后续的kv、skip 跳过重复的key
-	Override UploadKieRequestOverride `json:"override"`
+	Override UploadKieRequestOverride `json:"override" xml:"override"`
 
 	// 指定label导入，格式为：{标签key}:{标签value}，如果不填则按body的label导入
-	Label *string `json:"label,omitempty"`
+	Label *string `json:"label,omitempty" xml:"label"`
 
-	Body *UploadKieRequestBody `json:"body,omitempty" type:"multipart"`
+	Body *UploadKieRequestBody `json:"body,omitempty" xml:"body" type:"multipart"`
 }
 
 func (o UploadKieRequest) String() string {

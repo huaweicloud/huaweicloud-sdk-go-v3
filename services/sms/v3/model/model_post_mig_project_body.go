@@ -13,37 +13,37 @@ import (
 type PostMigProjectBody struct {
 
 	// 迁移项目名称
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 迁移项目描述
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 是否为默认模板
-	Isdefault *bool `json:"isdefault,omitempty"`
+	Isdefault *bool `json:"isdefault,omitempty" xml:"isdefault"`
 
 	// 区域名称
-	Region string `json:"region"`
+	Region string `json:"region" xml:"region"`
 
 	// 迁移后是否启动目的端虚拟机
-	StartTargetServer *bool `json:"start_target_server,omitempty"`
+	StartTargetServer *bool `json:"start_target_server,omitempty" xml:"start_target_server"`
 
 	// 限制迁移速率，单位：Mbps
-	SpeedLimit *int32 `json:"speed_limit,omitempty"`
+	SpeedLimit *int32 `json:"speed_limit,omitempty" xml:"speed_limit"`
 
 	// 是否使用公网IP迁移
-	UsePublicIp bool `json:"use_public_ip"`
+	UsePublicIp bool `json:"use_public_ip" xml:"use_public_ip"`
 
 	// 是否是已经存在的服务器
-	ExistServer bool `json:"exist_server"`
+	ExistServer bool `json:"exist_server" xml:"exist_server"`
 
 	// 迁移项目类型
-	Type PostMigProjectBodyType `json:"type"`
+	Type PostMigProjectBodyType `json:"type" xml:"type"`
 
 	// 企业项目名称
-	EnterpriseProject *string `json:"enterprise_project,omitempty"`
+	EnterpriseProject *string `json:"enterprise_project,omitempty" xml:"enterprise_project"`
 
 	// 首次复制或者同步后 是否继续持续同步
-	Syncing bool `json:"syncing"`
+	Syncing bool `json:"syncing" xml:"syncing"`
 }
 
 func (o PostMigProjectBody) String() string {

@@ -13,31 +13,31 @@ import (
 type ListProductTemplatesRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 每页显示条目数量，最大数量999，超过999后只返回999
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 产品模板ID
-	Id *int32 `json:"id,omitempty"`
+	Id *int32 `json:"id,omitempty" xml:"id"`
 
 	// 产品模板名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 产品模板状态 0-启用 1-停用
-	Status *ListProductTemplatesRequestStatus `json:"status,omitempty"`
+	Status *ListProductTemplatesRequestStatus `json:"status,omitempty" xml:"status"`
 
 	// 创建用户名
-	CreatedUserName *string `json:"created_user_name,omitempty"`
+	CreatedUserName *string `json:"created_user_name,omitempty" xml:"created_user_name"`
 
 	// 创建时间起始，格式timestamp(ms)，使用UTC时区
-	CreatedDateStart *int64 `json:"created_date_start,omitempty"`
+	CreatedDateStart *int64 `json:"created_date_start,omitempty" xml:"created_date_start"`
 
 	// 创建时间截止，格式timestamp(ms)，使用UTC时区
-	CreatedDateEnd *int64 `json:"created_date_end,omitempty"`
+	CreatedDateEnd *int64 `json:"created_date_end,omitempty" xml:"created_date_end"`
 
 	// 偏移量，表示从此偏移量开始查询， offset大于等于0
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 }
 
 func (o ListProductTemplatesRequest) String() string {

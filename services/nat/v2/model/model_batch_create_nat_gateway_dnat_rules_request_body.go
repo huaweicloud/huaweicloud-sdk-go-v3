@@ -10,7 +10,7 @@ import (
 type BatchCreateNatGatewayDnatRulesRequestBody struct {
 
 	// DNAT规则批量创建对象的请求体。
-	DnatRules []CreateNatGatewayDnatOption `json:"dnat_rules"`
+	DnatRules []CreateNatGatewayDnatOption `json:"dnat_rules" xml:"dnat_rules"`
 }
 
 func (o BatchCreateNatGatewayDnatRulesRequestBody) String() string {

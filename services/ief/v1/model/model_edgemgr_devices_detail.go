@@ -10,29 +10,29 @@ import (
 type EdgemgrDevicesDetail struct {
 
 	// 终端设备ID，只允许英文字母、数字、下划线、中划线，必须以英文字母和数字开头，长度限制为24~64之间
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 终端设备名称，只允许中文字符、英文字母、数字、下划线、中划线，长度限制为1~64
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 终端设备描述，最大长度255，不允许^ ~ # $ % & * < > ( ) [ ] { } ' \" \\
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
-	Attributes map[string]ValueInAttributes `json:"attributes,omitempty"`
+	Attributes map[string]ValueInAttributes `json:"attributes,omitempty" xml:"attributes"`
 
 	// 连接类型，默认为edge
-	ConnectionType *string `json:"connection_type,omitempty"`
+	ConnectionType *string `json:"connection_type,omitempty" xml:"connection_type"`
 
 	// 访问协议，有如下选项： - userdefine：自定义协议 - modbus：modbus协议 - opc-ua：opc-ua协议 默认为userdefine
-	AccessProtocol *string `json:"access_protocol,omitempty"`
+	AccessProtocol *string `json:"access_protocol,omitempty" xml:"access_protocol"`
 
 	// 终端设备动态属性
-	Twin map[string]ValueInTwin `json:"twin,omitempty"`
+	Twin map[string]ValueInTwin `json:"twin,omitempty" xml:"twin"`
 
-	AccessConfig *AccessConfig `json:"access_config,omitempty"`
+	AccessConfig *AccessConfig `json:"access_config,omitempty" xml:"access_config"`
 
 	// 孪生属性配置
-	PropertyVisitors map[string]ValueInPropertyVisitors `json:"property_visitors,omitempty"`
+	PropertyVisitors map[string]ValueInPropertyVisitors `json:"property_visitors,omitempty" xml:"property_visitors"`
 }
 
 func (o EdgemgrDevicesDetail) String() string {

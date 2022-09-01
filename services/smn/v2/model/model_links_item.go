@@ -9,10 +9,10 @@ import (
 type LinksItem struct {
 
 	// 对应快捷链接。
-	Href string `json:"href"`
+	Href string `json:"href" xml:"href"`
 
 	// 快捷链接标记名称。
-	Rel string `json:"rel"`
+	Rel string `json:"rel" xml:"rel"`
 }
 
 func (o LinksItem) String() string {

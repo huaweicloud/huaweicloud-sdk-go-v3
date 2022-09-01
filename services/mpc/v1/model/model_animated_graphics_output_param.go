@@ -12,22 +12,22 @@ import (
 type AnimatedGraphicsOutputParam struct {
 
 	// 动图格式，目前仅支持取值 gif
-	Format *AnimatedGraphicsOutputParamFormat `json:"format,omitempty"`
+	Format *AnimatedGraphicsOutputParamFormat `json:"format,omitempty" xml:"format"`
 
 	// 输出动图的宽。  取值范围：0，-1或[32,3840]之间2的倍数。  >- 若设置为-1， 则宽根据高来自适应，此时“height”不能取-1或0。 >- 若设置为0，则取原始视频的宽，此时“height”只能取0。
-	Width int32 `json:"width"`
+	Width int32 `json:"width" xml:"width"`
 
 	// 输出动图的高。  取值范围：0，-1或[32,2160]之间2的倍数。  >- 若设置为-1， 则高根据宽来自适应，此时“width”不能取-1或0。 >- 若设置为0，则取原始视频的高，此时“width”只能取0。
-	Height int32 `json:"height"`
+	Height int32 `json:"height" xml:"height"`
 
 	// 起始时间，单位：毫秒
-	Start int32 `json:"start"`
+	Start int32 `json:"start" xml:"start"`
 
 	// 结束时间。  单位：毫秒。  end、start差值最多60秒。
-	End int32 `json:"end"`
+	End int32 `json:"end" xml:"end"`
 
 	// 动图帧率。  取值范围：[1,75]
-	FrameRate *int32 `json:"frame_rate,omitempty"`
+	FrameRate *int32 `json:"frame_rate,omitempty" xml:"frame_rate"`
 }
 
 func (o AnimatedGraphicsOutputParam) String() string {

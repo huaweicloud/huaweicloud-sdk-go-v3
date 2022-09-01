@@ -8,15 +8,15 @@ import (
 
 // 作业的输出配置展示
 type TaskOutputForDisplay struct {
-	Obs *TaskOutputObs `json:"obs,omitempty"`
+	Obs *TaskOutputObs `json:"obs,omitempty" xml:"obs"`
 
-	Dis *TaskOutputDis `json:"dis,omitempty"`
+	Dis *TaskOutputDis `json:"dis,omitempty" xml:"dis"`
 
-	Webhook *TaskOutputWebhook `json:"webhook,omitempty"`
+	Webhook *TaskOutputWebhook `json:"webhook,omitempty" xml:"webhook"`
 
-	Hosting *TaskOutputHostingForDisplay `json:"hosting,omitempty"`
+	Hosting *TaskOutputHostingForDisplay `json:"hosting,omitempty" xml:"hosting"`
 
-	Localpath *TaskOutputLocalpath `json:"localpath,omitempty"`
+	Localpath *TaskOutputLocalpath `json:"localpath,omitempty" xml:"localpath"`
 }
 
 func (o TaskOutputForDisplay) String() string {

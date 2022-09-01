@@ -10,10 +10,10 @@ import (
 type Compress struct {
 
 	// 智能压缩开关（on：开启，off：关闭）。
-	Status string `json:"status"`
+	Status string `json:"status" xml:"status"`
 
 	// 智能压缩类型（gzip：gzip压缩，br：br压缩）。
-	Type *string `json:"type,omitempty"`
+	Type *string `json:"type,omitempty" xml:"type"`
 }
 
 func (o Compress) String() string {

@@ -9,7 +9,7 @@ import (
 type RestCancelSingleRecordCycleConfListReqBody struct {
 
 	// 待删除的子会议标识列表
-	CycleSubConfIDs []string `json:"cycleSubConfIDs"`
+	CycleSubConfIDs []string `json:"cycleSubConfIDs" xml:"cycleSubConfIDs"`
 }
 
 func (o RestCancelSingleRecordCycleConfListReqBody) String() string {

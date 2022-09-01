@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type UpdateDomainMultiCertificatesResponse struct {
-	Https          *UpdateDomainMultiCertificatesResponseBodyContent `json:"https,omitempty"`
+	Https          *UpdateDomainMultiCertificatesResponseBodyContent `json:"https,omitempty" xml:"https"`
 	HttpStatusCode int                                               `json:"-"`
 }
 

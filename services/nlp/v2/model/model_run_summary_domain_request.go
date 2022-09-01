@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RunSummaryDomainRequest struct {
-	Body *SummaryDomainReq `json:"body,omitempty"`
+	Body *SummaryDomainReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o RunSummaryDomainRequest) String() string {

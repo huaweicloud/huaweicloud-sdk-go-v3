@@ -9,10 +9,10 @@ import (
 type DeviceInfoSimple struct {
 
 	// 设备ID
-	Id *int32 `json:"id,omitempty"`
+	Id *int32 `json:"id,omitempty" xml:"id"`
 
 	// 设备名称
-	DeviceName *string `json:"device_name,omitempty"`
+	DeviceName *string `json:"device_name,omitempty" xml:"device_name"`
 }
 
 func (o DeviceInfoSimple) String() string {

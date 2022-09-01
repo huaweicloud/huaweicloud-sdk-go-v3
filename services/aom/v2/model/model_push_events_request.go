@@ -13,12 +13,12 @@ import (
 type PushEventsRequest struct {
 
 	// 告警所属的企业项目id。
-	XEnterprisePrjectId *string `json:"x-enterprise-prject-id,omitempty"`
+	XEnterprisePrjectId *string `json:"x-enterprise-prject-id,omitempty" xml:"x-enterprise-prject-id"`
 
 	// 接口请求动作。action=clear代表清除告警，不传或者传其他值默认为上报动作。
-	Action *PushEventsRequestAction `json:"action,omitempty"`
+	Action *PushEventsRequestAction `json:"action,omitempty" xml:"action"`
 
-	Body *EventList `json:"body,omitempty"`
+	Body *EventList `json:"body,omitempty" xml:"body"`
 }
 
 func (o PushEventsRequest) String() string {

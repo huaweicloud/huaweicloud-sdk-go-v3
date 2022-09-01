@@ -9,10 +9,10 @@ import (
 type ShowTopicStatusRespBrokers struct {
 
 	// 队列列表。
-	Queues *[]ShowTopicStatusRespQueues `json:"queues,omitempty"`
+	Queues *[]ShowTopicStatusRespQueues `json:"queues,omitempty" xml:"queues"`
 
 	// 节点名称。
-	BrokerName *string `json:"broker_name,omitempty"`
+	BrokerName *string `json:"broker_name,omitempty" xml:"broker_name"`
 }
 
 func (o ShowTopicStatusRespBrokers) String() string {

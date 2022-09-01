@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateProjectV4Request struct {
-	Body *CreateProjectV4RequestBody `json:"body,omitempty"`
+	Body *CreateProjectV4RequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateProjectV4Request) String() string {

@@ -10,16 +10,16 @@ import (
 type Nics struct {
 
 	// 子网ID，如果是自动创建，使用\"autoCreate\"
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 子网名称
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 子网网关/掩码
-	Cidr string `json:"cidr"`
+	Cidr string `json:"cidr" xml:"cidr"`
 
 	// 虚拟机IP地址，如果没有这个字段，自动分配IP
-	Ip *string `json:"ip,omitempty"`
+	Ip *string `json:"ip,omitempty" xml:"ip"`
 }
 
 func (o Nics) String() string {

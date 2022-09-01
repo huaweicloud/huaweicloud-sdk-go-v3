@@ -13,58 +13,58 @@ import (
 type KeyDetails struct {
 
 	// 密钥ID。
-	KeyId *string `json:"key_id,omitempty"`
+	KeyId *string `json:"key_id,omitempty" xml:"key_id"`
 
 	// 用户域ID。
-	DomainId *string `json:"domain_id,omitempty"`
+	DomainId *string `json:"domain_id,omitempty" xml:"domain_id"`
 
 	// 密钥别名。
-	KeyAlias *string `json:"key_alias,omitempty"`
+	KeyAlias *string `json:"key_alias,omitempty" xml:"key_alias"`
 
 	// 密钥区域。
-	Realm *string `json:"realm,omitempty"`
+	Realm *string `json:"realm,omitempty" xml:"realm"`
 
 	// 密钥生成算法。  - AES_256  - SM4  - RSA_2048  - RSA_3072  - RSA_4096  - EC_P256  - EC_P384  - SM2
-	KeySpec *KeyDetailsKeySpec `json:"key_spec,omitempty"`
+	KeySpec *KeyDetailsKeySpec `json:"key_spec,omitempty" xml:"key_spec"`
 
 	// 密钥用途。 - ENCRYPT_DECRYPT - SIGN_VERIFY
-	KeyUsage *KeyDetailsKeyUsage `json:"key_usage,omitempty"`
+	KeyUsage *KeyDetailsKeyUsage `json:"key_usage,omitempty" xml:"key_usage"`
 
 	// 密钥描述。
-	KeyDescription *string `json:"key_description,omitempty"`
+	KeyDescription *string `json:"key_description,omitempty" xml:"key_description"`
 
 	// 密钥创建时间，时间戳，即从1970年1月1日至该时间的总秒数。
-	CreationDate *string `json:"creation_date,omitempty"`
+	CreationDate *string `json:"creation_date,omitempty" xml:"creation_date"`
 
 	// 密钥计划删除时间，时间戳，即从1970年1月1日至该时间的总秒数。
-	ScheduledDeletionDate *string `json:"scheduled_deletion_date,omitempty"`
+	ScheduledDeletionDate *string `json:"scheduled_deletion_date,omitempty" xml:"scheduled_deletion_date"`
 
 	// 密钥状态，满足正则匹配“^[1-5]{1}$”，枚举如下：  - “1”表示待激活状态  - “2”表示启用状态  - “3”表示禁用状态  - “4”表示计划删除状态  - “5”表示等待导入状态
-	KeyState *string `json:"key_state,omitempty"`
+	KeyState *string `json:"key_state,omitempty" xml:"key_state"`
 
 	// 默认主密钥标识，默认主密钥标识为1，非默认标识为0。
-	DefaultKeyFlag *string `json:"default_key_flag,omitempty"`
+	DefaultKeyFlag *string `json:"default_key_flag,omitempty" xml:"default_key_flag"`
 
 	// 密钥类型。
-	KeyType *string `json:"key_type,omitempty"`
+	KeyType *string `json:"key_type,omitempty" xml:"key_type"`
 
 	// 密钥材料失效时间，时间戳，即从1970年1月1日至该时间的总秒数。
-	ExpirationTime *string `json:"expiration_time,omitempty"`
+	ExpirationTime *string `json:"expiration_time,omitempty" xml:"expiration_time"`
 
 	// 密钥来源，默认为“kms”，枚举如下：  - kms表示密钥材料由kms生成kms表示密钥材料由kms生成  - external表示密钥材料由外部导入
-	Origin *KeyDetailsOrigin `json:"origin,omitempty"`
+	Origin *KeyDetailsOrigin `json:"origin,omitempty" xml:"origin"`
 
 	// 密钥轮换状态，默认为“false”，表示关闭密钥轮换功能。
-	KeyRotationEnabled *string `json:"key_rotation_enabled,omitempty"`
+	KeyRotationEnabled *string `json:"key_rotation_enabled,omitempty" xml:"key_rotation_enabled"`
 
 	// 企业项目ID，默认为“0”。  - 对于开通企业项目的用户，表示资源处于默认企业项目下。  - 对于未开通企业项目的用户，表示资源未处于企业项目下。
-	SysEnterpriseProjectId *string `json:"sys_enterprise_project_id,omitempty"`
+	SysEnterpriseProjectId *string `json:"sys_enterprise_project_id,omitempty" xml:"sys_enterprise_project_id"`
 
 	// 密钥库ID
-	KeystoreId *string `json:"keystore_id,omitempty"`
+	KeystoreId *string `json:"keystore_id,omitempty" xml:"keystore_id"`
 
 	// 密钥在加密机中的标签
-	KeyLabel *string `json:"key_label,omitempty"`
+	KeyLabel *string `json:"key_label,omitempty" xml:"key_label"`
 }
 
 func (o KeyDetails) String() string {

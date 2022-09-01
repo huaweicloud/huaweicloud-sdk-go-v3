@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type BatchSetAttributesRequest struct {
-	Body *BatchSetAttributesReq `json:"body,omitempty"`
+	Body *BatchSetAttributesReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchSetAttributesRequest) String() string {

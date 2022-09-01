@@ -8,7 +8,7 @@ import (
 
 // 密钥。
 type Secret struct {
-	Secret *SecretDetail `json:"secret"`
+	Secret *SecretDetail `json:"secret" xml:"secret"`
 }
 
 func (o Secret) String() string {

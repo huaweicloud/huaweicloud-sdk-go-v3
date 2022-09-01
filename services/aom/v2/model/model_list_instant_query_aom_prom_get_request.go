@@ -10,10 +10,10 @@ import (
 type ListInstantQueryAomPromGetRequest struct {
 
 	// PromQL表达式(参考https://prometheus.io/docs/prometheus/latest/querying/basics/)。
-	Query string `json:"query"`
+	Query string `json:"query" xml:"query"`
 
 	// 指定用于计算 PromQL 的时间戳，(Unix时间戳格式，单位：秒）。
-	Time *string `json:"time,omitempty"`
+	Time *string `json:"time,omitempty" xml:"time"`
 }
 
 func (o ListInstantQueryAomPromGetRequest) String() string {

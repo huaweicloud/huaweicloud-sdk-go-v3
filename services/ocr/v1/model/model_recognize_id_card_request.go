@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RecognizeIdCardRequest struct {
-	Body *IdCardRequestBody `json:"body,omitempty"`
+	Body *IdCardRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o RecognizeIdCardRequest) String() string {

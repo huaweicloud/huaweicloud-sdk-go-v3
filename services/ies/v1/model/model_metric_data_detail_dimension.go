@@ -10,10 +10,10 @@ import (
 type MetricDataDetailDimension struct {
 
 	// 维度名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 维度值
-	Value *string `json:"value,omitempty"`
+	Value *string `json:"value,omitempty" xml:"value"`
 }
 
 func (o MetricDataDetailDimension) String() string {

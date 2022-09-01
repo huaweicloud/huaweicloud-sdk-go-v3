@@ -10,9 +10,9 @@ import (
 type DtTransformRequest struct {
 
 	// 输入参数，最多支持10个
-	Inputs *[]InputRequest `json:"inputs,omitempty"`
+	Inputs *[]InputRequest `json:"inputs,omitempty" xml:"inputs"`
 
-	Outputs *[]OutputRequest `json:"outputs,omitempty"`
+	Outputs *[]OutputRequest `json:"outputs,omitempty" xml:"outputs"`
 }
 
 func (o DtTransformRequest) String() string {

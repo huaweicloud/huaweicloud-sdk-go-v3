@@ -10,10 +10,10 @@ import (
 type PublicIp struct {
 
 	// 弹性IP绑定类型，取值如下。 - auto_assign：自动绑定。 - bind_existing：使用已有。
-	PublicBindType *string `json:"publicBindType,omitempty"`
+	PublicBindType *string `json:"publicBindType,omitempty" xml:"publicBindType"`
 
 	// 弹性IP的id，当publicBindType设置为bind_existing时，该值为用户某个已创建但尚未绑定的EIP的ID；当publicBindType设置为auto_assign时，该值设置为空。
-	EipId *string `json:"eipId,omitempty"`
+	EipId *string `json:"eipId,omitempty" xml:"eipId"`
 }
 
 func (o PublicIp) String() string {

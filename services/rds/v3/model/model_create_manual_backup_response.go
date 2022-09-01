@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type CreateManualBackupResponse struct {
-	Backup         *BackupInfo `json:"backup,omitempty"`
+	Backup         *BackupInfo `json:"backup,omitempty" xml:"backup"`
 	HttpStatusCode int         `json:"-"`
 }
 

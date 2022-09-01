@@ -13,65 +13,65 @@ import (
 type SourceServersResponseBody struct {
 
 	// 源端服务器id
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 源端服务器的ip地址
-	Ip *string `json:"ip,omitempty"`
+	Ip *string `json:"ip,omitempty" xml:"ip"`
 
 	// 源端服务器名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 企业项目id
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
 
 	// 源端服务器的注册时间
-	AddDate *int64 `json:"add_date,omitempty"`
+	AddDate *int64 `json:"add_date,omitempty" xml:"add_date"`
 
 	// 操作系统类型，OS_TYPE (WINDOWS/LINUX)
-	OsType *SourceServersResponseBodyOsType `json:"os_type,omitempty"`
+	OsType *SourceServersResponseBodyOsType `json:"os_type,omitempty" xml:"os_type"`
 
 	// 系统详细版本号，如CENTOS7.6等
-	OsVersion *string `json:"os_version,omitempty"`
+	OsVersion *string `json:"os_version,omitempty" xml:"os_version"`
 
 	// 是否是OEM操作系统(Windows)
-	OemSystem *bool `json:"oem_system,omitempty"`
+	OemSystem *bool `json:"oem_system,omitempty" xml:"oem_system"`
 
 	// 源端服务器状态
-	State *SourceServersResponseBodyState `json:"state,omitempty"`
+	State *SourceServersResponseBodyState `json:"state,omitempty" xml:"state"`
 
 	// 源端服务器与主机迁移服务端是否连接
-	Connected *bool `json:"connected,omitempty"`
+	Connected *bool `json:"connected,omitempty" xml:"connected"`
 
 	// 源端CPU核心数
-	CpuQuantity *int32 `json:"cpu_quantity,omitempty"`
+	CpuQuantity *int32 `json:"cpu_quantity,omitempty" xml:"cpu_quantity"`
 
 	// 源端物理内存大小（单位：字节）
-	Memory *int64 `json:"memory,omitempty"`
+	Memory *int64 `json:"memory,omitempty" xml:"memory"`
 
-	CurrentTask *TaskByServerSources `json:"current_task,omitempty"`
+	CurrentTask *TaskByServerSources `json:"current_task,omitempty" xml:"current_task"`
 
 	// 源端校验检查项列表
-	Checks *[]EnvironmentCheck `json:"checks,omitempty"`
+	Checks *[]EnvironmentCheck `json:"checks,omitempty" xml:"checks"`
 
-	InitTargetServer *InitTargetServer `json:"init_target_server,omitempty"`
+	InitTargetServer *InitTargetServer `json:"init_target_server,omitempty" xml:"init_target_server"`
 
 	// 已复制的大小（单位：字节）
-	Replicatesize *int64 `json:"replicatesize,omitempty"`
+	Replicatesize *int64 `json:"replicatesize,omitempty" xml:"replicatesize"`
 
 	// 迁移周期（migration_cycle）上一次变化的时间
-	StageActionTime *int64 `json:"stage_action_time,omitempty"`
+	StageActionTime *int64 `json:"stage_action_time,omitempty" xml:"stage_action_time"`
 
 	// 需要迁移的数据量总大小（单位：字节）
-	Totalsize *int64 `json:"totalsize,omitempty"`
+	Totalsize *int64 `json:"totalsize,omitempty" xml:"totalsize"`
 
 	// Agent上一次连接状态发生变化的时间
-	LastVisitTime *int64 `json:"last_visit_time,omitempty"`
+	LastVisitTime *int64 `json:"last_visit_time,omitempty" xml:"last_visit_time"`
 
 	// 迁移周期
-	MigrationCycle *SourceServersResponseBodyMigrationCycle `json:"migration_cycle,omitempty"`
+	MigrationCycle *SourceServersResponseBodyMigrationCycle `json:"migration_cycle,omitempty" xml:"migration_cycle"`
 
 	// 源端状态（state）上次发生变化的时间
-	StateActionTime *int64 `json:"state_action_time,omitempty"`
+	StateActionTime *int64 `json:"state_action_time,omitempty" xml:"state_action_time"`
 }
 
 func (o SourceServersResponseBody) String() string {

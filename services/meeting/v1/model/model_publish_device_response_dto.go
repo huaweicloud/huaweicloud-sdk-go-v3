@@ -10,10 +10,10 @@ import (
 type PublishDeviceResponseDto struct {
 
 	// 设备用户ID
-	DeviceUserId *string `json:"deviceUserId,omitempty"`
+	DeviceUserId *string `json:"deviceUserId,omitempty" xml:"deviceUserId"`
 
 	// 设备名称
-	DeviceName *string `json:"deviceName,omitempty"`
+	DeviceName *string `json:"deviceName,omitempty" xml:"deviceName"`
 }
 
 func (o PublishDeviceResponseDto) String() string {

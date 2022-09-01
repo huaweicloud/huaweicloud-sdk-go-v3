@@ -8,7 +8,7 @@ import (
 
 // 创建复制对请求体
 type CreateReplicationRequestBody struct {
-	Replication *CreateReplicationRequestParams `json:"replication"`
+	Replication *CreateReplicationRequestParams `json:"replication" xml:"replication"`
 }
 
 func (o CreateReplicationRequestBody) String() string {

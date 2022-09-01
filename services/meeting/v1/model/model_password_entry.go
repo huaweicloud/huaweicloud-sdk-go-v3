@@ -10,10 +10,10 @@ import (
 type PasswordEntry struct {
 
 	// 会议角色。 - chair: 会议主持人。 - general: 普通与会者。
-	ConferenceRole *string `json:"conferenceRole,omitempty"`
+	ConferenceRole *string `json:"conferenceRole,omitempty" xml:"conferenceRole"`
 
 	// 会议中角色的密码（明文）。
-	Password *string `json:"password,omitempty"`
+	Password *string `json:"password,omitempty" xml:"password"`
 }
 
 func (o PasswordEntry) String() string {

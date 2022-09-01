@@ -9,16 +9,16 @@ import (
 type AppCreate struct {
 
 	// APP的名称。支持汉字，英文，数字，下划线，且只能以英文和汉字开头，3 ~ 64个字符。 > 中文字符必须为UTF-8或者unicode编码。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// APP描述。字符长度不能大于255。 > 中文字符必须为UTF-8或者unicode编码。
-	Remark *string `json:"remark,omitempty"`
+	Remark *string `json:"remark,omitempty" xml:"remark"`
 
 	// APP的key。支持英文，数字，“_”,“-”,且只能以英文或数字开头，8 ~ 64个字符。
-	AppKey *string `json:"app_key,omitempty"`
+	AppKey *string `json:"app_key,omitempty" xml:"app_key"`
 
 	// 密钥。支持英文，数字，“_”,“-”,“_”,“!”,“@”,“#”,“$”,“%”且只能以英文或数字开头，8 ~ 64个字符。
-	AppSecret *string `json:"app_secret,omitempty"`
+	AppSecret *string `json:"app_secret,omitempty" xml:"app_secret"`
 }
 
 func (o AppCreate) String() string {

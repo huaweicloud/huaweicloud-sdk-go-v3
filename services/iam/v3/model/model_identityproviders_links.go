@@ -10,10 +10,10 @@ import (
 type IdentityprovidersLinks struct {
 
 	// 身份提供商的资源链接地址。
-	Self string `json:"self"`
+	Self string `json:"self" xml:"self"`
 
 	// 协议的资源链接地址。
-	Protocols string `json:"protocols"`
+	Protocols string `json:"protocols" xml:"protocols"`
 }
 
 func (o IdentityprovidersLinks) String() string {

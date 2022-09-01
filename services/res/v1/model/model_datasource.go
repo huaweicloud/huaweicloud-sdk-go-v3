@@ -10,19 +10,19 @@ import (
 type Datasource struct {
 
 	// 数据源名称。
-	DatasourceName string `json:"datasource_name"`
+	DatasourceName string `json:"datasource_name" xml:"datasource_name"`
 
 	// 工作空间id。
-	WorkspaceId string `json:"workspace_id"`
+	WorkspaceId string `json:"workspace_id" xml:"workspace_id"`
 
 	// 数据源id。
-	DatasourceId *string `json:"datasource_id,omitempty"`
+	DatasourceId *string `json:"datasource_id,omitempty" xml:"datasource_id"`
 
 	// 状态。
-	Status *string `json:"status,omitempty"`
+	Status *string `json:"status,omitempty" xml:"status"`
 
 	// 创建时间。
-	CreatedAt *int64 `json:"created_at,omitempty"`
+	CreatedAt *int64 `json:"created_at,omitempty" xml:"created_at"`
 }
 
 func (o Datasource) String() string {

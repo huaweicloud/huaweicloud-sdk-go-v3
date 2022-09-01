@@ -10,7 +10,7 @@ import (
 type MatchExpressions struct {
 
 	// 匹配规则表达式
-	MatchExpressions *[]MatchExpression `json:"matchExpressions,omitempty"`
+	MatchExpressions *[]MatchExpression `json:"matchExpressions,omitempty" xml:"matchExpressions"`
 }
 
 func (o MatchExpressions) String() string {

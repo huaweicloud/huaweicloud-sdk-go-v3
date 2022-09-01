@@ -10,12 +10,12 @@ import (
 type Backend struct {
 
 	// 后端主机地址列表
-	Ip *[]string `json:"ip,omitempty"`
+	Ip *[]string `json:"ip,omitempty" xml:"ip"`
 
 	// 后端服务端口，不存在时使用监听器端口
-	Port *int32 `json:"port,omitempty"`
+	Port *int32 `json:"port,omitempty" xml:"port"`
 
-	HealthCheck *HealthCheck `json:"health_check,omitempty"`
+	HealthCheck *HealthCheck `json:"health_check,omitempty" xml:"health_check"`
 }
 
 func (o Backend) String() string {

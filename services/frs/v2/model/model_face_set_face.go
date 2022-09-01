@@ -7,16 +7,16 @@ import (
 )
 
 type FaceSetFace struct {
-	BoundingBox *BoundingBox `json:"bounding_box"`
+	BoundingBox *BoundingBox `json:"bounding_box" xml:"bounding_box"`
 
 	// 用户添加的额外字段。
-	ExternalFields *interface{} `json:"external_fields"`
+	ExternalFields *interface{} `json:"external_fields" xml:"external_fields"`
 
 	// 人脸所在的外部图片ID。
-	ExternalImageId string `json:"external_image_id"`
+	ExternalImageId string `json:"external_image_id" xml:"external_image_id"`
 
 	// 人脸ID，由系统内部生成的唯一ID。
-	FaceId string `json:"face_id"`
+	FaceId string `json:"face_id" xml:"face_id"`
 }
 
 func (o FaceSetFace) String() string {

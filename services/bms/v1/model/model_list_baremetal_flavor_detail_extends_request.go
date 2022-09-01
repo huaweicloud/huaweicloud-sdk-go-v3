@@ -10,7 +10,7 @@ import (
 type ListBaremetalFlavorDetailExtendsRequest struct {
 
 	// 可用区，需要指定可用区（AZ）的名称。请参考地区和终端节点获取。
-	AvailabilityZone *string `json:"availability_zone,omitempty"`
+	AvailabilityZone *string `json:"availability_zone,omitempty" xml:"availability_zone"`
 }
 
 func (o ListBaremetalFlavorDetailExtendsRequest) String() string {

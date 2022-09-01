@@ -12,139 +12,139 @@ import (
 type QueryJobResp struct {
 
 	// 任务id
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 父任务id。
-	ParentId *string `json:"parent_id,omitempty"`
+	ParentId *string `json:"parent_id,omitempty" xml:"parent_id"`
 
 	// 任务名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 任务状态
-	Status *QueryJobRespStatus `json:"status,omitempty"`
+	Status *QueryJobRespStatus `json:"status,omitempty" xml:"status"`
 
 	// 描述信息
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 创建时间，时间戳格式。
-	CreateTime *string `json:"create_time,omitempty"`
+	CreateTime *string `json:"create_time,omitempty" xml:"create_time"`
 
 	// 迁移模式
-	TaskType *QueryJobRespTaskType `json:"task_type,omitempty"`
+	TaskType *QueryJobRespTaskType `json:"task_type,omitempty" xml:"task_type"`
 
-	SourceEndpoint *Endpoint `json:"source_endpoint,omitempty"`
+	SourceEndpoint *Endpoint `json:"source_endpoint,omitempty" xml:"source_endpoint"`
 
-	DmqEndpoint *Endpoint `json:"dmq_endpoint,omitempty"`
+	DmqEndpoint *Endpoint `json:"dmq_endpoint,omitempty" xml:"dmq_endpoint"`
 
 	// 物理源库信息。
-	SourceSharding *[]Endpoint `json:"source_sharding,omitempty"`
+	SourceSharding *[]Endpoint `json:"source_sharding,omitempty" xml:"source_sharding"`
 
-	TargetEndpoint *Endpoint `json:"target_endpoint,omitempty"`
+	TargetEndpoint *Endpoint `json:"target_endpoint,omitempty" xml:"target_endpoint"`
 
 	// 网络类型
-	NetType *QueryJobRespNetType `json:"net_type,omitempty"`
+	NetType *QueryJobRespNetType `json:"net_type,omitempty" xml:"net_type"`
 
 	// 失败原因。
-	FailedReason *string `json:"failed_reason,omitempty"`
+	FailedReason *string `json:"failed_reason,omitempty" xml:"failed_reason"`
 
-	InstInfo *InstInfo `json:"inst_info,omitempty"`
+	InstInfo *InstInfo `json:"inst_info,omitempty" xml:"inst_info"`
 
 	// 实际启动时间，时间戳格式。
-	ActualStartTime *string `json:"actual_start_time,omitempty"`
+	ActualStartTime *string `json:"actual_start_time,omitempty" xml:"actual_start_time"`
 
 	// 全量完成时间，时间戳格式。
-	FullTransferCompleteTime *string `json:"full_transfer_complete_time,omitempty"`
+	FullTransferCompleteTime *string `json:"full_transfer_complete_time,omitempty" xml:"full_transfer_complete_time"`
 
 	// 更新时间，时间戳格式
-	UpdateTime *string `json:"update_time,omitempty"`
+	UpdateTime *string `json:"update_time,omitempty" xml:"update_time"`
 
 	// 任务方向
-	JobDirection *QueryJobRespJobDirection `json:"job_direction,omitempty"`
+	JobDirection *QueryJobRespJobDirection `json:"job_direction,omitempty" xml:"job_direction"`
 
 	// 迁移场景 - migration：实时迁移 - sync：实时同步 - cloudDataGuard：实时灾备
-	DbUseType *QueryJobRespDbUseType `json:"db_use_type,omitempty"`
+	DbUseType *QueryJobRespDbUseType `json:"db_use_type,omitempty" xml:"db_use_type"`
 
 	// 是否需要重启
-	NeedRestart *bool `json:"need_restart,omitempty"`
+	NeedRestart *bool `json:"need_restart,omitempty" xml:"need_restart"`
 
 	// 指定目标实例是否限制为只读
-	IsTargetReadonly *bool `json:"is_target_readonly,omitempty"`
+	IsTargetReadonly *bool `json:"is_target_readonly,omitempty" xml:"is_target_readonly"`
 
 	// 冲突忽略策略 - stop：冲突失败 - overwrite：冲突覆盖 - ignore：冲突忽略
-	ConflictPolicy *QueryJobRespConflictPolicy `json:"conflict_policy,omitempty"`
+	ConflictPolicy *QueryJobRespConflictPolicy `json:"conflict_policy,omitempty" xml:"conflict_policy"`
 
 	// 过滤DDL策略 - drop_database：过滤drop_database - drop_databasefilter_all：过滤所有ddl - \"\"：不过滤
-	FilterDdlPolicy *string `json:"filter_ddl_policy,omitempty"`
+	FilterDdlPolicy *string `json:"filter_ddl_policy,omitempty" xml:"filter_ddl_policy"`
 
 	// 迁移速度限制。
-	SpeedLimit *[]SpeedLimitInfo `json:"speed_limit,omitempty"`
+	SpeedLimit *[]SpeedLimitInfo `json:"speed_limit,omitempty" xml:"speed_limit"`
 
 	// 迁移方案 - Replication-主从复制 - Tungsten-日志解析 - PGBaseBackup-PG备份
-	SchemaType *QueryJobRespSchemaType `json:"schema_type,omitempty"`
+	SchemaType *QueryJobRespSchemaType `json:"schema_type,omitempty" xml:"schema_type"`
 
 	// 节点个数。
-	NodeNum *string `json:"node_num,omitempty"`
+	NodeNum *string `json:"node_num,omitempty" xml:"node_num"`
 
 	// 对象选择开关
-	ObjectSwitch *bool `json:"object_switch,omitempty"`
+	ObjectSwitch *bool `json:"object_switch,omitempty" xml:"object_switch"`
 
 	// 主任务Id。
-	MasterJobId *string `json:"master_job_id,omitempty"`
+	MasterJobId *string `json:"master_job_id,omitempty" xml:"master_job_id"`
 
 	// 全量快照模式。
-	FullMode *string `json:"full_mode,omitempty"`
+	FullMode *string `json:"full_mode,omitempty" xml:"full_mode"`
 
 	// 是否迁移结构。
-	StructTrans *bool `json:"struct_trans,omitempty"`
+	StructTrans *bool `json:"struct_trans,omitempty" xml:"struct_trans"`
 
 	// 否迁移索引。
-	IndexTrans *bool `json:"index_trans,omitempty"`
+	IndexTrans *bool `json:"index_trans,omitempty" xml:"index_trans"`
 
 	// 是否使用目标库的用户替换掉definer。
-	ReplaceDefiner *bool `json:"replace_definer,omitempty"`
+	ReplaceDefiner *bool `json:"replace_definer,omitempty" xml:"replace_definer"`
 
 	// 是否迁移用户。
-	MigrateUser *bool `json:"migrate_user,omitempty"`
+	MigrateUser *bool `json:"migrate_user,omitempty" xml:"migrate_user"`
 
 	// 是否库级同步。
-	SyncDatabase *bool `json:"sync_database,omitempty"`
+	SyncDatabase *bool `json:"sync_database,omitempty" xml:"sync_database"`
 
 	// 错误码
-	ErrorCode *string `json:"error_code,omitempty"`
+	ErrorCode *string `json:"error_code,omitempty" xml:"error_code"`
 
 	// 错误信息。
-	ErrorMessage *string `json:"error_message,omitempty"`
+	ErrorMessage *string `json:"error_message,omitempty" xml:"error_message"`
 
-	TargetRootDb *DefaultRootDb `json:"target_root_db,omitempty"`
+	TargetRootDb *DefaultRootDb `json:"target_root_db,omitempty" xml:"target_root_db"`
 
 	// node所在AZ
-	AzCode *string `json:"az_code,omitempty"`
+	AzCode *string `json:"az_code,omitempty" xml:"az_code"`
 
 	// node所在VPC
-	VpcId *string `json:"vpc_id,omitempty"`
+	VpcId *string `json:"vpc_id,omitempty" xml:"vpc_id"`
 
 	// node所在子网
-	SubnetId *string `json:"subnet_id,omitempty"`
+	SubnetId *string `json:"subnet_id,omitempty" xml:"subnet_id"`
 
 	// node所在安全组
-	SecurityGroupId *string `json:"security_group_id,omitempty"`
+	SecurityGroupId *string `json:"security_group_id,omitempty" xml:"security_group_id"`
 
 	// 是否多主灾备任务,双主灾备时有值为true
-	MultiWrite *bool `json:"multi_write,omitempty"`
+	MultiWrite *bool `json:"multi_write,omitempty" xml:"multi_write"`
 
 	// 是否支持IPV6
-	SupportIpV6 *bool `json:"support_ip_v6,omitempty"`
+	SupportIpV6 *bool `json:"support_ip_v6,omitempty" xml:"support_ip_v6"`
 
 	// 继承的任务ID，Oracle_Mrskafka链路时使用。
-	InheritId *string `json:"inherit_id,omitempty"`
+	InheritId *string `json:"inherit_id,omitempty" xml:"inherit_id"`
 
 	// 断点的GTID集合
-	Gtid *string `json:"gtid,omitempty"`
+	Gtid *string `json:"gtid,omitempty" xml:"gtid"`
 
-	AlarmNotify *QuerySmnInfoResp `json:"alarm_notify,omitempty"`
+	AlarmNotify *QuerySmnInfoResp `json:"alarm_notify,omitempty" xml:"alarm_notify"`
 
 	// 增量任务启动位点
-	IncreStartPosition *string `json:"incre_start_position,omitempty"`
+	IncreStartPosition *string `json:"incre_start_position,omitempty" xml:"incre_start_position"`
 }
 
 func (o QueryJobResp) String() string {

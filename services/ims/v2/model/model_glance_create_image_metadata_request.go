@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type GlanceCreateImageMetadataRequest struct {
-	Body *GlanceCreateImageMetadataRequestBody `json:"body,omitempty"`
+	Body *GlanceCreateImageMetadataRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o GlanceCreateImageMetadataRequest) String() string {

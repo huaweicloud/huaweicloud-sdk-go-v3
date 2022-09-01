@@ -10,13 +10,13 @@ import (
 type ShowExtensionAuthorizationRequest struct {
 
 	// 插件版本
-	ExtensionVersion string `json:"extension_version"`
+	ExtensionVersion string `json:"extension_version" xml:"extension_version"`
 
 	// 插件标识(发布者.插件名)
-	Identifier string `json:"identifier"`
+	Identifier string `json:"identifier" xml:"identifier"`
 
 	// CloudIDE实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 }
 
 func (o ShowExtensionAuthorizationRequest) String() string {

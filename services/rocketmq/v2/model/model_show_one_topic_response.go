@@ -13,16 +13,16 @@ import (
 type ShowOneTopicResponse struct {
 
 	// 总读队列个数。
-	TotalReadQueueNum float32 `json:"total_read_queue_num,omitempty"`
+	TotalReadQueueNum float32 `json:"total_read_queue_num,omitempty" xml:"total_read_queue_num"`
 
 	// 总写队列个数。
-	TotalWriteQueueNum float32 `json:"total_write_queue_num,omitempty"`
+	TotalWriteQueueNum float32 `json:"total_write_queue_num,omitempty" xml:"total_write_queue_num"`
 
 	// 权限。
-	Permission *ShowOneTopicResponsePermission `json:"permission,omitempty"`
+	Permission *ShowOneTopicResponsePermission `json:"permission,omitempty" xml:"permission"`
 
 	// 关联的代理。
-	Brokers        *[]TopicBrokers `json:"brokers,omitempty"`
+	Brokers        *[]TopicBrokers `json:"brokers,omitempty" xml:"brokers"`
 	HttpStatusCode int             `json:"-"`
 }
 

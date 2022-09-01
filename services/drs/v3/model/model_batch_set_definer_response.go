@@ -10,10 +10,10 @@ import (
 type BatchSetDefinerResponse struct {
 
 	// 总数
-	Count *int32 `json:"count,omitempty"`
+	Count *int32 `json:"count,omitempty" xml:"count"`
 
 	// 批量修改任务返回列表
-	Results        *[]ModifyJobResp `json:"results,omitempty"`
+	Results        *[]ModifyJobResp `json:"results,omitempty" xml:"results"`
 	HttpStatusCode int              `json:"-"`
 }
 

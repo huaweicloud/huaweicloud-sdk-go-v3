@@ -9,25 +9,25 @@ import (
 type ListSubscriptionsItem struct {
 
 	// Topic的唯一的资源标识。
-	TopicUrn string `json:"topic_urn"`
+	TopicUrn string `json:"topic_urn" xml:"topic_urn"`
 
 	// 不同协议对应不同的endpoint（接受消息的接入点）。目前支持的协议包括：  \"default\": 默认协议。  “email”：邮件传输协议，endpoint为邮箱地址。  “sms”：短信传输协议，endpoint为手机号码。  “functionstage”：FunctionGraph（函数）传输协议，endpoint为一个函数。  “http”、“https”：HTTP/HTTPS传输协议，endpoint为URL。
-	Protocol string `json:"protocol"`
+	Protocol string `json:"protocol" xml:"protocol"`
 
 	// 订阅者的唯一资源标识。
-	SubscriptionUrn string `json:"subscription_urn"`
+	SubscriptionUrn string `json:"subscription_urn" xml:"subscription_urn"`
 
 	// Topic创建者的项目ID。
-	Owner string `json:"owner"`
+	Owner string `json:"owner" xml:"owner"`
 
 	// 接受消息的接入点。
-	Endpoint string `json:"endpoint"`
+	Endpoint string `json:"endpoint" xml:"endpoint"`
 
 	// 备注。
-	Remark string `json:"remark"`
+	Remark string `json:"remark" xml:"remark"`
 
 	// 订阅者状态：0表示订阅还未确认，1表示已经确认，3表示已经取消确认。
-	Status int32 `json:"status"`
+	Status int32 `json:"status" xml:"status"`
 }
 
 func (o ListSubscriptionsItem) String() string {

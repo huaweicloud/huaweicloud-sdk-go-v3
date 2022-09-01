@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type KeystoneShowSecurityComplianceByOptionResponse struct {
-	Config         *ConfigByOption `json:"config,omitempty"`
+	Config         *ConfigByOption `json:"config,omitempty" xml:"config"`
 	HttpStatusCode int             `json:"-"`
 }
 

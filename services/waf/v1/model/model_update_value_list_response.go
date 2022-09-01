@@ -10,22 +10,22 @@ import (
 type UpdateValueListResponse struct {
 
 	// 引用表id
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 引用表名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 引用表类型
-	Type *string `json:"type,omitempty"`
+	Type *string `json:"type,omitempty" xml:"type"`
 
 	// 引用表描述
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 引用表的值
-	Values *[]string `json:"values,omitempty"`
+	Values *[]string `json:"values,omitempty" xml:"values"`
 
 	// 引用表来源：  - 1:表示来源于用户手动创建  - 2:表示来源于智能访问控制自动创建
-	Producer       *int32 `json:"producer,omitempty"`
+	Producer       *int32 `json:"producer,omitempty" xml:"producer"`
 	HttpStatusCode int    `json:"-"`
 }
 

@@ -9,7 +9,7 @@ import (
 type RemuxRetryReq struct {
 
 	// 任务Id。
-	TaskId *string `json:"task_id,omitempty"`
+	TaskId *string `json:"task_id,omitempty" xml:"task_id"`
 }
 
 func (o RemuxRetryReq) String() string {

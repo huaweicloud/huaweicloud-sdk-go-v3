@@ -10,10 +10,10 @@ import (
 type ListEnterpriseMultiAccountResponse struct {
 
 	// 记录条数。
-	TotalCount *int32 `json:"total_count,omitempty"`
+	TotalCount *int32 `json:"total_count,omitempty" xml:"total_count"`
 
 	// 可回收余额信息，如果是余额账户，只会有一条记录。 具体请参见表2。
-	AmountInfos    *[]RetrieveAmountInfoV2 `json:"amount_infos,omitempty"`
+	AmountInfos    *[]RetrieveAmountInfoV2 `json:"amount_infos,omitempty" xml:"amount_infos"`
 	HttpStatusCode int                     `json:"-"`
 }
 

@@ -12,19 +12,19 @@ import (
 type VideoProcess struct {
 
 	// 需要单独设置时长的HLS起始分片数量。与hls_init_interval配合使用，设置前面hls_init_count个HLS分片时长。 为0表示不单独配置时长。
-	HlsInitCount *int32 `json:"hls_init_count,omitempty"`
+	HlsInitCount *int32 `json:"hls_init_count,omitempty" xml:"hls_init_count"`
 
 	// 表示前面hls_init_count个HLS分片的时长,hls_init_count不为0时，该字段才起作用。
-	HlsInitInterval *int32 `json:"hls_init_interval,omitempty"`
+	HlsInitInterval *int32 `json:"hls_init_interval,omitempty" xml:"hls_init_interval"`
 
 	// 视频顺时针旋转角度。  - 0：表示不旋转 - 1：表示顺时针旋转90度 - 2：表示顺时针旋转180度 - 3：表示顺时针旋转270度
-	Rotate *int32 `json:"rotate,omitempty"`
+	Rotate *int32 `json:"rotate,omitempty" xml:"rotate"`
 
 	// 长短边自适应控制字段： - SHORT：表示短边自适应 - LONG：表示长边自适应 - NONE：表示不自适应
-	Adaptation *VideoProcessAdaptation `json:"adaptation,omitempty"`
+	Adaptation *VideoProcessAdaptation `json:"adaptation,omitempty" xml:"adaptation"`
 
 	// 是否开启上采样，如支持从480P的片源转为720P，可取值为:  - 0：表示上采样关闭， - 1：表示上采样开启.
-	Upsample *int32 `json:"upsample,omitempty"`
+	Upsample *int32 `json:"upsample,omitempty" xml:"upsample"`
 }
 
 func (o VideoProcess) String() string {

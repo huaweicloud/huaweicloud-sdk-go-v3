@@ -10,10 +10,10 @@ import (
 type NovaShowServerRequest struct {
 
 	// 云服务器ID。
-	ServerId string `json:"server_id"`
+	ServerId string `json:"server_id" xml:"server_id"`
 
 	// 微版本头
-	OpenStackAPIVersion *string `json:"OpenStack-API-Version,omitempty"`
+	OpenStackAPIVersion *string `json:"OpenStack-API-Version,omitempty" xml:"OpenStack-API-Version"`
 }
 
 func (o NovaShowServerRequest) String() string {

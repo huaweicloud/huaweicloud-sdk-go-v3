@@ -10,10 +10,10 @@ import (
 type ListHostGroupsResponse struct {
 
 	// 主机组个数
-	Total *int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty" xml:"total"`
 
 	// 主机组详情响应体
-	HostGroups     *[]DeploymentGroupDetail `json:"host_groups,omitempty"`
+	HostGroups     *[]DeploymentGroupDetail `json:"host_groups,omitempty" xml:"host_groups"`
 	HttpStatusCode int                      `json:"-"`
 }
 

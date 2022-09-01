@@ -10,7 +10,7 @@ import (
 type OpenGaussShard struct {
 
 	// 新增的DN分片扩容数大小
-	Count int32 `json:"count"`
+	Count int32 `json:"count" xml:"count"`
 }
 
 func (o OpenGaussShard) String() string {

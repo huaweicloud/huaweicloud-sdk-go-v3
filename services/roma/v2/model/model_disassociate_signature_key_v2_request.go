@@ -10,10 +10,10 @@ import (
 type DisassociateSignatureKeyV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// API与签名密钥的绑定关系编号
-	SignBindingsId string `json:"sign_bindings_id"`
+	SignBindingsId string `json:"sign_bindings_id" xml:"sign_bindings_id"`
 }
 
 func (o DisassociateSignatureKeyV2Request) String() string {

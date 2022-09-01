@@ -10,9 +10,9 @@ import (
 type DisassociateSubnetRequest struct {
 
 	// 路由表ID
-	RoutetableId string `json:"routetable_id"`
+	RoutetableId string `json:"routetable_id" xml:"routetable_id"`
 
-	Body *DisassociateSubnetRequestBody `json:"body,omitempty"`
+	Body *DisassociateSubnetRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o DisassociateSubnetRequest) String() string {

@@ -10,10 +10,10 @@ import (
 type IpItem struct {
 
 	// ip地址
-	Key *string `json:"key,omitempty"`
+	Key *string `json:"key,omitempty" xml:"key"`
 
 	// 数量
-	Num *int32 `json:"num,omitempty"`
+	Num *int32 `json:"num,omitempty" xml:"num"`
 }
 
 func (o IpItem) String() string {

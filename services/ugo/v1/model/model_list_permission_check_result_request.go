@@ -10,13 +10,13 @@ import (
 type ListPermissionCheckResultRequest struct {
 
 	// 迁移项目ID。
-	MigrationProjectId string `json:"migration_project_id"`
+	MigrationProjectId string `json:"migration_project_id" xml:"migration_project_id"`
 
 	// 分页查询的偏移量。
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 每页显示的条目数量。
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 }
 
 func (o ListPermissionCheckResultRequest) String() string {

@@ -10,7 +10,7 @@ import (
 type UpdateJobResponse struct {
 
 	// 校验结果：如果修改失败，返回失败原因。如果修改成功，返回空列表
-	ValidationResult *[]JobValidationResult `json:"validation-result,omitempty"`
+	ValidationResult *[]JobValidationResult `json:"validation-result,omitempty" xml:"validation-result"`
 	HttpStatusCode   int                    `json:"-"`
 }
 

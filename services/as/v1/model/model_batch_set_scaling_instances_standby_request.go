@@ -10,9 +10,9 @@ import (
 type BatchSetScalingInstancesStandbyRequest struct {
 
 	// 实例ID。
-	ScalingGroupId string `json:"scaling_group_id"`
+	ScalingGroupId string `json:"scaling_group_id" xml:"scaling_group_id"`
 
-	Body *BatchEnterStandbyInstancesOption `json:"body,omitempty"`
+	Body *BatchEnterStandbyInstancesOption `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchSetScalingInstancesStandbyRequest) String() string {

@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type FreezeSubCustomersRequest struct {
-	Body *FreezeSubCustomersReq `json:"body,omitempty"`
+	Body *FreezeSubCustomersReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o FreezeSubCustomersRequest) String() string {

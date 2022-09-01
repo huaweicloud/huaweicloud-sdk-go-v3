@@ -10,9 +10,9 @@ import (
 type ListLogItemsRequest struct {
 
 	// 日志接口调用方式,当值为\"querylogs\"时接口功能为查询日志内容。
-	Type string `json:"type"`
+	Type string `json:"type" xml:"type"`
 
-	Body *QueryBodyParam `json:"body,omitempty"`
+	Body *QueryBodyParam `json:"body,omitempty" xml:"body"`
 }
 
 func (o ListLogItemsRequest) String() string {

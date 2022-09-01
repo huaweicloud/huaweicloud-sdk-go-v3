@@ -10,7 +10,7 @@ import (
 type IvsStandardByIdCardImageRequestBodyData struct {
 
 	// 请求列表，用于支持批量调用。目前暂时只支持单个数据查询。
-	ReqData *[]ReqDataByIdCardImage `json:"req_data,omitempty"`
+	ReqData *[]ReqDataByIdCardImage `json:"req_data,omitempty" xml:"req_data"`
 }
 
 func (o IvsStandardByIdCardImageRequestBodyData) String() string {

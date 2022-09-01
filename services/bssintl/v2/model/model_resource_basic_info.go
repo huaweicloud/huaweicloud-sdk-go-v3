@@ -9,16 +9,16 @@ import (
 type ResourceBasicInfo struct {
 
 	// 资源类型编码。例如：hws.resource.type.general。
-	ResourceTypeCode *string `json:"resource_type_code,omitempty"`
+	ResourceTypeCode *string `json:"resource_type_code,omitempty" xml:"resource_type_code"`
 
 	// 资源类型归属的服务类型编码。例如：hws.service.type.offline。
-	ProductOwnerService *string `json:"product_owner_service,omitempty"`
+	ProductOwnerService *string `json:"product_owner_service,omitempty" xml:"product_owner_service"`
 
 	// 资源类型名称。例如：通用规格。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 资源类型描述。
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 }
 
 func (o ResourceBasicInfo) String() string {

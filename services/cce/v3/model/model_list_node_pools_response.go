@@ -10,13 +10,13 @@ import (
 type ListNodePoolsResponse struct {
 
 	// API type. The value is fixed to List.
-	Kind *string `json:"kind,omitempty"`
+	Kind *string `json:"kind,omitempty" xml:"kind"`
 
 	// API version. The value is fixed to v3.
-	ApiVersion *string `json:"apiVersion,omitempty"`
+	ApiVersion *string `json:"apiVersion,omitempty" xml:"apiVersion"`
 
 	// /
-	Items          *[]NodePool `json:"items,omitempty"`
+	Items          *[]NodePool `json:"items,omitempty" xml:"items"`
 	HttpStatusCode int         `json:"-"`
 }
 

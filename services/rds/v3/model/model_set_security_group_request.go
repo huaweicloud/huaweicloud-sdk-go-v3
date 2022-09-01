@@ -13,12 +13,12 @@ import (
 type SetSecurityGroupRequest struct {
 
 	// 语言
-	XLanguage *SetSecurityGroupRequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *SetSecurityGroupRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *SecurityGroupRequest `json:"body,omitempty"`
+	Body *SecurityGroupRequest `json:"body,omitempty" xml:"body"`
 }
 
 func (o SetSecurityGroupRequest) String() string {

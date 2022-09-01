@@ -7,9 +7,9 @@ import (
 )
 
 type QualityInfoList struct {
-	Video *VideoInfo `json:"video,omitempty"`
+	Video *VideoInfo `json:"video,omitempty" xml:"video"`
 
-	Audio *AudioInfo `json:"audio,omitempty"`
+	Audio *AudioInfo `json:"audio,omitempty" xml:"audio"`
 }
 
 func (o QualityInfoList) String() string {

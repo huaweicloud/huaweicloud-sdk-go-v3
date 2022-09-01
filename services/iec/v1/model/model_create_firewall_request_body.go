@@ -8,7 +8,7 @@ import (
 
 // 创建网络ACL请求体。
 type CreateFirewallRequestBody struct {
-	Firewall *CreateFirewallOption `json:"firewall"`
+	Firewall *CreateFirewallOption `json:"firewall" xml:"firewall"`
 }
 
 func (o CreateFirewallRequestBody) String() string {

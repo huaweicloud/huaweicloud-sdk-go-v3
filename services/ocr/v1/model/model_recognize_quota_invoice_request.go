@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RecognizeQuotaInvoiceRequest struct {
-	Body *QuotaInvoiceRequestBody `json:"body,omitempty"`
+	Body *QuotaInvoiceRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o RecognizeQuotaInvoiceRequest) String() string {

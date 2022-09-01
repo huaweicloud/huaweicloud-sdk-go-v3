@@ -8,9 +8,9 @@ import (
 
 //
 type UserDynamicAttr struct {
-	UserInterestedAttrs *Attribute `json:"user_interested_attrs,omitempty"`
+	UserInterestedAttrs *Attribute `json:"user_interested_attrs,omitempty" xml:"user_interested_attrs"`
 
-	UserInterestedActionType *Attribute `json:"user_interested_action_type,omitempty"`
+	UserInterestedActionType *Attribute `json:"user_interested_action_type,omitempty" xml:"user_interested_action_type"`
 }
 
 func (o UserDynamicAttr) String() string {

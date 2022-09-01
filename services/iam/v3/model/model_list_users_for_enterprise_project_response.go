@@ -10,7 +10,7 @@ import (
 type ListUsersForEnterpriseProjectResponse struct {
 
 	// 用户信息。
-	Users          *[]ListUsersForEnterpriseProjectResUsers `json:"users,omitempty"`
+	Users          *[]ListUsersForEnterpriseProjectResUsers `json:"users,omitempty" xml:"users"`
 	HttpStatusCode int                                      `json:"-"`
 }
 

@@ -8,7 +8,7 @@ import (
 
 // 应用模板
 type App struct {
-	App *AppDetail `json:"app"`
+	App *AppDetail `json:"app" xml:"app"`
 }
 
 func (o App) String() string {

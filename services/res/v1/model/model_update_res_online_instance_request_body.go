@@ -10,21 +10,21 @@ import (
 type UpdateResOnlineInstanceRequestBody struct {
 
 	// 类别。
-	Category string `json:"category"`
+	Category string `json:"category" xml:"category"`
 
 	// 描述。
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
-	JobConfig *JobConfig `json:"job_config"`
+	JobConfig *JobConfig `json:"job_config" xml:"job_config"`
 
 	// 作业名称。
-	JobName string `json:"job_name"`
+	JobName string `json:"job_name" xml:"job_name"`
 
 	// 作业类型。
-	JobType string `json:"job_type"`
+	JobType string `json:"job_type" xml:"job_type"`
 
 	// 调度参数。
-	Schedule string `json:"schedule"`
+	Schedule string `json:"schedule" xml:"schedule"`
 }
 
 func (o UpdateResOnlineInstanceRequestBody) String() string {

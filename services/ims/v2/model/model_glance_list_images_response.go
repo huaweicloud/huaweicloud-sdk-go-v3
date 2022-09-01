@@ -10,16 +10,16 @@ import (
 type GlanceListImagesResponse struct {
 
 	// 查询首页的URL。
-	First *string `json:"first,omitempty"`
+	First *string `json:"first,omitempty" xml:"first"`
 
 	// 资源类型。
-	Images *[]GlanceShowImageResponseBody `json:"images,omitempty"`
+	Images *[]GlanceShowImageResponseBody `json:"images,omitempty" xml:"images"`
 
 	// 描述镜像列表模式的URL。
-	Schema *string `json:"schema,omitempty"`
+	Schema *string `json:"schema,omitempty" xml:"schema"`
 
 	// 查询下一页的URL。当查询镜像列表最后一页时，不存在next。
-	Next           *string `json:"next,omitempty"`
+	Next           *string `json:"next,omitempty" xml:"next"`
 	HttpStatusCode int     `json:"-"`
 }
 

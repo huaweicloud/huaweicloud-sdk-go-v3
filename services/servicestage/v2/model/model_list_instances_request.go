@@ -13,22 +13,22 @@ import (
 type ListInstancesRequest struct {
 
 	// 应用ID。
-	ApplicationId string `json:"application_id"`
+	ApplicationId string `json:"application_id" xml:"application_id"`
 
 	// 组件ID。
-	ComponentId string `json:"component_id"`
+	ComponentId string `json:"component_id" xml:"component_id"`
 
 	// 指定个数，明确指定的时候用于分页，取值[0, 100]。不指定的时候表示不分页，最多查询1000条记录。
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 指定查询偏移量，默认偏移量为0.
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 排序字段，默认按创建时间排序。  排序字段支持枚举值：create_time、name、update_time。
-	OrderBy *string `json:"order_by,omitempty"`
+	OrderBy *string `json:"order_by,omitempty" xml:"order_by"`
 
 	// desc/asc，默认desc。
-	Order *ListInstancesRequestOrder `json:"order,omitempty"`
+	Order *ListInstancesRequestOrder `json:"order,omitempty" xml:"order"`
 }
 
 func (o ListInstancesRequest) String() string {

@@ -9,25 +9,25 @@ import (
 type RuleItem struct {
 
 	// 规则id
-	RuleId *string `json:"rule_id,omitempty"`
+	RuleId *string `json:"rule_id,omitempty" xml:"rule_id"`
 
 	// 规则所属语言
-	RuleLanguage *string `json:"rule_language,omitempty"`
+	RuleLanguage *string `json:"rule_language,omitempty" xml:"rule_language"`
 
 	// 规则名称
-	RuleName *string `json:"rule_name,omitempty"`
+	RuleName *string `json:"rule_name,omitempty" xml:"rule_name"`
 
 	// 规则问题级别
-	RuleSeverity *string `json:"rule_severity,omitempty"`
+	RuleSeverity *string `json:"rule_severity,omitempty" xml:"rule_severity"`
 
 	// 规则标签
-	RuleTages *string `json:"rule_tages,omitempty"`
+	RuleTages *string `json:"rule_tages,omitempty" xml:"rule_tages"`
 
 	// 规则状态0：未启用，1：已启用
-	Checked *string `json:"checked,omitempty"`
+	Checked *string `json:"checked,omitempty" xml:"checked"`
 
 	// 规则配置参数阈值相关信息
-	RuleConfigList *[]RuleConfig `json:"rule_config_list,omitempty"`
+	RuleConfigList *[]RuleConfig `json:"rule_config_list,omitempty" xml:"rule_config_list"`
 }
 
 func (o RuleItem) String() string {

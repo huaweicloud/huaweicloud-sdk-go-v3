@@ -9,7 +9,7 @@ import (
 type AppCodeCreate struct {
 
 	// App Code值  支持英文，+_!@#$%+/=，且只能以英文和+、/开头，64-180个字符。
-	AppCode string `json:"app_code"`
+	AppCode string `json:"app_code" xml:"app_code"`
 }
 
 func (o AppCodeCreate) String() string {

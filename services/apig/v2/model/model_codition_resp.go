@@ -12,25 +12,25 @@ import (
 type CoditionResp struct {
 
 	// 关联的请求参数对象名称。策略类型为param时必选
-	ReqParamName *string `json:"req_param_name,omitempty"`
+	ReqParamName *string `json:"req_param_name,omitempty" xml:"req_param_name"`
 
 	// 策略条件 - exact：绝对匹配 - enum：枚举 - pattern：正则  策略类型为param时必选
-	ConditionType *CoditionRespConditionType `json:"condition_type,omitempty"`
+	ConditionType *CoditionRespConditionType `json:"condition_type,omitempty" xml:"condition_type"`
 
 	// 策略类型 - param：参数 - source：源IP
-	ConditionOrigin CoditionRespConditionOrigin `json:"condition_origin"`
+	ConditionOrigin CoditionRespConditionOrigin `json:"condition_origin" xml:"condition_origin"`
 
 	// 策略值
-	ConditionValue string `json:"condition_value"`
+	ConditionValue string `json:"condition_value" xml:"condition_value"`
 
 	// 编号
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 关联的请求参数对象编号
-	ReqParamId *string `json:"req_param_id,omitempty"`
+	ReqParamId *string `json:"req_param_id,omitempty" xml:"req_param_id"`
 
 	// 关联的请求参数对象位置
-	ReqParamLocation *string `json:"req_param_location,omitempty"`
+	ReqParamLocation *string `json:"req_param_location,omitempty" xml:"req_param_location"`
 }
 
 func (o CoditionResp) String() string {

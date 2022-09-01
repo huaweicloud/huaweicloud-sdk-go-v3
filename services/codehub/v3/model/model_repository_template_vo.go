@@ -9,25 +9,25 @@ import (
 type RepositoryTemplateVo struct {
 
 	// 模板类型
-	TemplateType string `json:"templateType"`
+	TemplateType string `json:"templateType" xml:"templateType"`
 
 	// 代码模板名称
-	CodeTitle *string `json:"codeTitle,omitempty"`
+	CodeTitle *string `json:"codeTitle,omitempty" xml:"codeTitle"`
 
 	// 创建者名称
-	CreatorName *string `json:"creatorName,omitempty"`
+	CreatorName *string `json:"creatorName,omitempty" xml:"creatorName"`
 
 	// 代码模板描述
-	CodeDescription *string `json:"codeDescription,omitempty"`
+	CodeDescription *string `json:"codeDescription,omitempty" xml:"codeDescription"`
 
 	// 模板语言
-	Languages *[]string `json:"languages,omitempty"`
+	Languages *[]string `json:"languages,omitempty" xml:"languages"`
 
 	// 模板平台
-	Plateform *[]string `json:"plateform,omitempty"`
+	Plateform *[]string `json:"plateform,omitempty" xml:"plateform"`
 
 	// 模板类型
-	Entertype *[]string `json:"entertype,omitempty"`
+	Entertype *[]string `json:"entertype,omitempty" xml:"entertype"`
 }
 
 func (o RepositoryTemplateVo) String() string {

@@ -10,9 +10,9 @@ import (
 type AddDeployKeyRequest struct {
 
 	// 仓库短id
-	RepositoryId int32 `json:"repository_id"`
+	RepositoryId int32 `json:"repository_id" xml:"repository_id"`
 
-	Body *AddDeployKeyRequestBody `json:"body,omitempty"`
+	Body *AddDeployKeyRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o AddDeployKeyRequest) String() string {

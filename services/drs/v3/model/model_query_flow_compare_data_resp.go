@@ -10,13 +10,13 @@ import (
 type QueryFlowCompareDataResp struct {
 
 	// 任务总数
-	TotalRecord *int64 `json:"total_record,omitempty"`
+	TotalRecord *int64 `json:"total_record,omitempty" xml:"total_record"`
 
 	// 数据生成时间
-	CreateTime *string `json:"create_time,omitempty"`
+	CreateTime *string `json:"create_time,omitempty" xml:"create_time"`
 
 	// 对比结果
-	List *[]StructDetailVo `json:"list,omitempty"`
+	List *[]StructDetailVo `json:"list,omitempty" xml:"list"`
 }
 
 func (o QueryFlowCompareDataResp) String() string {

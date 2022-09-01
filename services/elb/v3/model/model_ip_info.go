@@ -10,10 +10,10 @@ import (
 type IpInfo struct {
 
 	// IP地址组中的IP地址。 [ 不支持IPv6，请勿设置为IPv6地址。](tag:dt,dt_test)
-	Ip string `json:"ip"`
+	Ip string `json:"ip" xml:"ip"`
 
 	// IP地址组中ip的备注信息
-	Description string `json:"description"`
+	Description string `json:"description" xml:"description"`
 }
 
 func (o IpInfo) String() string {

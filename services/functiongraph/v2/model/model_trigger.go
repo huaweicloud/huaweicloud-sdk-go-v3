@@ -13,15 +13,15 @@ import (
 type Trigger struct {
 
 	// 触发器名称
-	TriggerName string `json:"trigger_name"`
+	TriggerName string `json:"trigger_name" xml:"trigger_name"`
 
 	// 触发器类型 FLOWTIMER：定时触发器 SMN：SMN触发器 APIG：APIG触发器(共享版) APIG_DE：APIG触发器(专享版) OBS：OBS触发器
-	TriggerType TriggerTriggerType `json:"trigger_type"`
+	TriggerType TriggerTriggerType `json:"trigger_type" xml:"trigger_type"`
 
 	// 是否启用触发器
-	Enabled *bool `json:"enabled,omitempty"`
+	Enabled *bool `json:"enabled,omitempty" xml:"enabled"`
 
-	TriggerConfig *ObsTriggerConfig `json:"trigger_config,omitempty"`
+	TriggerConfig *ObsTriggerConfig `json:"trigger_config,omitempty" xml:"trigger_config"`
 }
 
 func (o Trigger) String() string {

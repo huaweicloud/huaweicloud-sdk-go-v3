@@ -10,7 +10,7 @@ import (
 type StopVpecpRequest struct {
 
 	// 指定待关闭终端节点的集群ID。
-	ClusterId string `json:"cluster_id"`
+	ClusterId string `json:"cluster_id" xml:"cluster_id"`
 }
 
 func (o StopVpecpRequest) String() string {

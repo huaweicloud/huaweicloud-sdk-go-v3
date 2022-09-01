@@ -10,10 +10,10 @@ import (
 type ActionMatch struct {
 
 	// 键。目前只支持resource_name。表示匹配资源实例的名称。
-	Key string `json:"key"`
+	Key string `json:"key" xml:"key"`
 
 	// 值。每个值最大长度255个unicode字符 。当key为resource_name时，表示待匹配的资源实例的名称。
-	Value string `json:"value"`
+	Value string `json:"value" xml:"value"`
 }
 
 func (o ActionMatch) String() string {

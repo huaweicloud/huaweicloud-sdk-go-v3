@@ -8,10 +8,10 @@ import (
 
 // Response Object
 type ListSlowLogFileResponse struct {
-	List *[]SlowLogFile `json:"list,omitempty"`
+	List *[]SlowLogFile `json:"list,omitempty" xml:"list"`
 
 	// 文件总数。
-	TotalCount     *int64 `json:"total_count,omitempty"`
+	TotalCount     *int64 `json:"total_count,omitempty" xml:"total_count"`
 	HttpStatusCode int    `json:"-"`
 }
 

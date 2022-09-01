@@ -10,16 +10,16 @@ import (
 type SearchMeetingFileListResponse struct {
 
 	// 页面起始页，从0开始
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 每页显示的条目数量。 默认值：10。
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 总数量。
-	Count *int32 `json:"count,omitempty"`
+	Count *int32 `json:"count,omitempty" xml:"count"`
 
 	// IdeaHub、终端“查看会议纪要列表”响应
-	Data           *[]ListMeetingFileResponseDto `json:"data,omitempty"`
+	Data           *[]ListMeetingFileResponseDto `json:"data,omitempty" xml:"data"`
 	HttpStatusCode int                           `json:"-"`
 }
 

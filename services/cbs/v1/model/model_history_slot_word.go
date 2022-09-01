@@ -10,10 +10,10 @@ import (
 type HistorySlotWord struct {
 
 	// 词
-	Word string `json:"word"`
+	Word string `json:"word" xml:"word"`
 
 	// 归一化后的词
-	NormWord string `json:"norm_word"`
+	NormWord string `json:"norm_word" xml:"norm_word"`
 }
 
 func (o HistorySlotWord) String() string {

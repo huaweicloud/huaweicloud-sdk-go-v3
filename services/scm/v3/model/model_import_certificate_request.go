@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ImportCertificateRequest struct {
-	Body *ImportCertificateRequestBody `json:"body,omitempty"`
+	Body *ImportCertificateRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o ImportCertificateRequest) String() string {

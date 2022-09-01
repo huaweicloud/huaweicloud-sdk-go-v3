@@ -10,10 +10,10 @@ import (
 type NamedFormula struct {
 
 	// 公式名称，不能和输入参数名重复，正则：\"^[A-Za-z][A-Za-z_]{0,31}$\"
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 公式，最多1024个字符
-	Formula string `json:"formula"`
+	Formula string `json:"formula" xml:"formula"`
 }
 
 func (o NamedFormula) String() string {

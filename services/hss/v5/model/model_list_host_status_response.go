@@ -10,10 +10,10 @@ import (
 type ListHostStatusResponse struct {
 
 	// 总数
-	TotalNum *int32 `json:"total_num,omitempty"`
+	TotalNum *int32 `json:"total_num,omitempty" xml:"total_num"`
 
 	// 查询弹性云服务器状态列表
-	DataList       *[]Host `json:"data_list,omitempty"`
+	DataList       *[]Host `json:"data_list,omitempty" xml:"data_list"`
 	HttpStatusCode int     `json:"-"`
 }
 

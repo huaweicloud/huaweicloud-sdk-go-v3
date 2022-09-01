@@ -10,7 +10,7 @@ import (
 type ShowBlockchainDetailRequest struct {
 
 	// blockchainID
-	BlockchainId string `json:"blockchain_id"`
+	BlockchainId string `json:"blockchain_id" xml:"blockchain_id"`
 }
 
 func (o ShowBlockchainDetailRequest) String() string {

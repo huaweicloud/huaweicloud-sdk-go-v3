@@ -10,10 +10,10 @@ import (
 type Stack struct {
 
 	// 边缘资源组名称。 取值范围：只能由中文字符、大小写英文字母、数字及中划线、下划线组成，且长度为[1-48]个字符。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 边缘业务的堆栈，即为资源组。
-	Resources []Resource `json:"resources"`
+	Resources []Resource `json:"resources" xml:"resources"`
 }
 
 func (o Stack) String() string {

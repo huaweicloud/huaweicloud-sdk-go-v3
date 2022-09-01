@@ -9,9 +9,9 @@ import (
 type Users struct {
 
 	// 当前为固定值“user“。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
-	User *User `json:"user,omitempty"`
+	User *User `json:"user,omitempty" xml:"user"`
 }
 
 func (o Users) String() string {

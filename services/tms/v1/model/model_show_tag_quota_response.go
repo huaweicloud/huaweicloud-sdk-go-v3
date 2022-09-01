@@ -10,7 +10,7 @@ import (
 type ShowTagQuotaResponse struct {
 
 	// 配额列表
-	Quotas         *[]TagQuota `json:"quotas,omitempty"`
+	Quotas         *[]TagQuota `json:"quotas,omitempty" xml:"quotas"`
 	HttpStatusCode int         `json:"-"`
 }
 

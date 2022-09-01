@@ -10,9 +10,9 @@ import (
 type StartSyncWorkflowExecutionRequest struct {
 
 	// 函数流定义ID
-	WorkflowId string `json:"workflow_id"`
+	WorkflowId string `json:"workflow_id" xml:"workflow_id"`
 
-	Body *FlowExecuteBody `json:"body,omitempty"`
+	Body *FlowExecuteBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o StartSyncWorkflowExecutionRequest) String() string {

@@ -10,10 +10,10 @@ import (
 type ListBlockchainsResponse struct {
 
 	// 服务实例简要信息
-	Blockchains *[]BlockchainInfo `json:"blockchains,omitempty"`
+	Blockchains *[]BlockchainInfo `json:"blockchains,omitempty" xml:"blockchains"`
 
 	// 实例总数
-	Count          *int64 `json:"count,omitempty"`
+	Count          *int64 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

@@ -13,9 +13,9 @@ import (
 type BatchSwitchoverRequest struct {
 
 	// 请求语言类型
-	XLanguage *BatchSwitchoverRequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *BatchSwitchoverRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 
-	Body *BatchSwitchoverReq `json:"body,omitempty"`
+	Body *BatchSwitchoverReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchSwitchoverRequest) String() string {

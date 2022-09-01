@@ -10,24 +10,24 @@ import (
 type ListSingleStreamDetailResponse struct {
 
 	// 推流域名
-	PublishDomain *string `json:"publish_domain,omitempty"`
+	PublishDomain *string `json:"publish_domain,omitempty" xml:"publish_domain"`
 
 	// 应用名
-	App *string `json:"app,omitempty"`
+	App *string `json:"app,omitempty" xml:"app"`
 
 	// 流名
-	Stream *string `json:"stream,omitempty"`
+	Stream *string `json:"stream,omitempty" xml:"stream"`
 
 	// 展示流视频帧率情况，帧率单位为fps。  如果出现断流则会出现多个时间段流信息，如： ``` \"video_framerate\": [     {       \"start_time\": \"2022-02-04T07:00:00Z\",       \"end_time\": \"2022-02-04T07:00:02Z\",       \"data_list\": [         21,         22       ]     },     {       \"start_time\": \"2022-02-04T07:00:05Z\",       \"end_time\": \"2022-02-04T07:00:07Z\",       \"data_list\": [         13,         34,         21       ]     }   ]
-	VideoFramerate *[]StreamDetail `json:"video_framerate,omitempty"`
+	VideoFramerate *[]StreamDetail `json:"video_framerate,omitempty" xml:"video_framerate"`
 
 	// 展示流视频码率情况，码率单位为Kbps。  如果出现断流则会出现多个时间段流信息，如： ``` \"video_bitrate\": [     {       \"start_time\": \"2022-02-04T07:00:00Z\",       \"end_time\": \"2022-02-04T07:00:02Z\",       \"data_list\": [         1326,         1268,         775       ]     },     {       \"start_time\": \"2022-02-04T07:00:05Z\",       \"end_time\": \"2022-02-04T07:00:07Z\",       \"data_list\": [         1021,         2022       ]     }   ]
-	VideoBitrate *[]StreamDetail `json:"video_bitrate,omitempty"`
+	VideoBitrate *[]StreamDetail `json:"video_bitrate,omitempty" xml:"video_bitrate"`
 
 	// 展示流音频帧率情况，帧率单位为fps。  如果出现断流则会出现多个时间段流信息，如： ``` \"audio_framerate\": [     {       \"start_time\": \"2022-02-04T07:00:00Z\",       \"end_time\": \"2022-02-04T07:00:02Z\",       \"data_list\": [         10,         17       ]     },     {       \"start_time\": \"2022-02-04T07:00:05Z\",       \"end_time\": \"2022-02-04T07:00:06Z\",       \"data_list\": [         31,         33       ]     }   ]
-	AudioFramerate *[]StreamDetail `json:"audio_framerate,omitempty"`
+	AudioFramerate *[]StreamDetail `json:"audio_framerate,omitempty" xml:"audio_framerate"`
 
-	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	XRequestId     *string `json:"X-Request-Id,omitempty" xml:"X-Request-Id"`
 	HttpStatusCode int     `json:"-"`
 }
 

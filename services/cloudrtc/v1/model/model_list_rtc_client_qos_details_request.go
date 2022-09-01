@@ -13,52 +13,52 @@ import (
 type ListRtcClientQosDetailsRequest struct {
 
 	// 使用AK/SK方式认证时必选，携带的鉴权信息。
-	Authorization *string `json:"Authorization,omitempty"`
+	Authorization *string `json:"Authorization,omitempty" xml:"Authorization"`
 
 	// 使用AK/SK方式认证时必选，请求的发生时间。
-	XSdkDate *string `json:"X-Sdk-Date,omitempty"`
+	XSdkDate *string `json:"X-Sdk-Date,omitempty" xml:"X-Sdk-Date"`
 
 	// 使用AK/SK方式认证时必选，携带项目ID信息，与路径参数中的项目ID相同。
-	XProjectId *string `json:"X-Project-Id,omitempty"`
+	XProjectId *string `json:"X-Project-Id,omitempty" xml:"X-Project-Id"`
 
 	// 域名
-	Domain *string `json:"domain,omitempty"`
+	Domain *string `json:"domain,omitempty" xml:"domain"`
 
 	// 应用id
-	AppId string `json:"app_id"`
+	AppId string `json:"app_id" xml:"app_id"`
 
 	// 房间ID
-	RoomId string `json:"room_id"`
+	RoomId string `json:"room_id" xml:"room_id"`
 
 	// 发送端用户
-	UserId *string `json:"user_id,omitempty"`
+	UserId *string `json:"user_id,omitempty" xml:"user_id"`
 
 	// 需查询接收端用户id
-	PeerId *string `json:"peer_id,omitempty"`
+	PeerId *string `json:"peer_id,omitempty" xml:"peer_id"`
 
 	// 流号
-	StreamId *string `json:"stream_id,omitempty"`
+	StreamId *string `json:"stream_id,omitempty" xml:"stream_id"`
 
 	// 判断上下行数据
-	Direction *string `json:"direction,omitempty"`
+	Direction *string `json:"direction,omitempty" xml:"direction"`
 
 	// 需查询的指标，填all则返回所有指标。多个指标使用','分割 - appcpu：端侧APP CPU使用率（appCpu） - syscpu：端侧系统 CPU使用率（deviceCpu） - abit：端侧音频码率kpbs（bitrate） - vbit：端侧视频码率kbps（bitRate） - dbit：端侧辅流码率kbps（bitRate） - vfps：端侧视频帧率fps（actFrameRate） - dfps：端侧辅流帧率fps（actFrameRate） - vblock：端侧视频卡顿率（统计大于等于600ms视频卡顿） - dblock：端侧辅流卡顿率（统计大于等于600ms辅流卡顿） - aloss：端侧音频丢包率（pktLoss） - vloss：端侧视频丢包率（pktLoss） - dloss：端侧辅流丢包率（pktLoss） - vwidth：端侧视频分辨率宽（actPicW） - vheight：端侧视频分辨率高（actPicH） - dwidth：端侧辅流分辨率宽（actPicW） - dheight：端侧辅流分辨率高（actPicH） - ajitter：端侧音频抖动率（jitter） - artt：端侧音频时延（rtt） - vjitter：端侧视频抖动率（jitter） - vrtt：端侧视频时延（rtt） - djitter：端侧辅流抖动率（jitter） - drtt：端侧辅流时延（rtt）
-	Mid ListRtcClientQosDetailsRequestMid `json:"mid"`
+	Mid ListRtcClientQosDetailsRequestMid `json:"mid" xml:"mid"`
 
 	// 查询起始时间。UTC时间，格式：yyyy-mm-ddThh:mm:ssZ，如2020-04-23T06:00:00Z
-	StartTime string `json:"start_time"`
+	StartTime string `json:"start_time" xml:"start_time"`
 
 	// 查询结束时间。UTC时间，格式：yyyy-mm-ddThh:mm:ssZ，如2020-04-23T07:00:00Z
-	EndTime string `json:"end_time"`
+	EndTime string `json:"end_time" xml:"end_time"`
 
 	// 查询的时间类型取值：stime 数据库打点时间，不填默认ctime查询
-	TimeType *string `json:"time_type,omitempty"`
+	TimeType *string `json:"time_type,omitempty" xml:"time_type"`
 
 	// 查询结果限制
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 查询偏移量
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 }
 
 func (o ListRtcClientQosDetailsRequest) String() string {

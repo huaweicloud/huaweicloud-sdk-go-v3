@@ -8,7 +8,7 @@ import (
 
 // 修改备份策略信息
 type MysqlUpdateBackupPolicyRequest struct {
-	BackupPolicy *MysqlBackupPolicy `json:"backup_policy"`
+	BackupPolicy *MysqlBackupPolicy `json:"backup_policy" xml:"backup_policy"`
 }
 
 func (o MysqlUpdateBackupPolicyRequest) String() string {

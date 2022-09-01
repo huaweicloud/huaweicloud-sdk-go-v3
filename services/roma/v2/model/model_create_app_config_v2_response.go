@@ -11,25 +11,25 @@ import (
 type CreateAppConfigV2Response struct {
 
 	// 应用配置编号
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 应用编号
-	AppId *string `json:"app_id,omitempty"`
+	AppId *string `json:"app_id,omitempty" xml:"app_id"`
 
 	// 应用配置类型
-	ConfigType *string `json:"config_type,omitempty"`
+	ConfigType *string `json:"config_type,omitempty" xml:"config_type"`
 
 	// 应用配置名称
-	ConfigName *string `json:"config_name,omitempty"`
+	ConfigName *string `json:"config_name,omitempty" xml:"config_name"`
 
 	// 应用配置值
-	ConfigValue *string `json:"config_value,omitempty"`
+	ConfigValue *string `json:"config_value,omitempty" xml:"config_value"`
 
 	// 应用配置更新时间
-	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
+	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty" xml:"update_time"`
 
 	// 应用配置描述
-	Description    *string `json:"description,omitempty"`
+	Description    *string `json:"description,omitempty" xml:"description"`
 	HttpStatusCode int     `json:"-"`
 }
 

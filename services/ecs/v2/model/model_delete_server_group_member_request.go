@@ -10,9 +10,9 @@ import (
 type DeleteServerGroupMemberRequest struct {
 
 	// 云服务器组ID。
-	ServerGroupId string `json:"server_group_id"`
+	ServerGroupId string `json:"server_group_id" xml:"server_group_id"`
 
-	Body *DeleteServerGroupMemberRequestBody `json:"body,omitempty"`
+	Body *DeleteServerGroupMemberRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o DeleteServerGroupMemberRequest) String() string {

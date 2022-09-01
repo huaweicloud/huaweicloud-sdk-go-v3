@@ -10,10 +10,10 @@ import (
 type ListIssuedCouponQuotasResponse struct {
 
 	// 查询的记录总数。
-	TotalCount *int32 `json:"total_count,omitempty"`
+	TotalCount *int32 `json:"total_count,omitempty" xml:"total_count"`
 
 	// 额度记录列表。 具体请参见表2。
-	Quotas         *[]IssuedCouponQuota `json:"quotas,omitempty"`
+	Quotas         *[]IssuedCouponQuota `json:"quotas,omitempty" xml:"quotas"`
 	HttpStatusCode int                  `json:"-"`
 }
 

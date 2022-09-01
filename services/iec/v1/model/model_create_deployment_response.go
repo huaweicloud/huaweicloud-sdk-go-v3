@@ -10,10 +10,10 @@ import (
 type CreateDeploymentResponse struct {
 
 	// 部署计划ID。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 部署位置信息列表。
-	Locations      *[]Location `json:"locations,omitempty"`
+	Locations      *[]Location `json:"locations,omitempty" xml:"locations"`
 	HttpStatusCode int         `json:"-"`
 }
 

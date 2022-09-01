@@ -12,43 +12,43 @@ import (
 type UpdateCustomAuthorizerV2Response struct {
 
 	// 自定义认证的名称。 长度为3 ~ 64位的字符串，字符串由中文、英文字母、数字、“_”组成，且只能以英文或中文开头。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 自定义认证类型  - FRONTEND：前端 - BACKEND：后端
-	Type UpdateCustomAuthorizerV2ResponseType `json:"type"`
+	Type UpdateCustomAuthorizerV2ResponseType `json:"type" xml:"type"`
 
 	// 自定义认证函数类型： - LD：自定义后端函数 - FUNC：函数服务函数
-	AuthorizerType UpdateCustomAuthorizerV2ResponseAuthorizerType `json:"authorizer_type"`
+	AuthorizerType UpdateCustomAuthorizerV2ResponseAuthorizerType `json:"authorizer_type" xml:"authorizer_type"`
 
 	// 函数地址。  注意：使用自定义后端的函数API，API请求方法必须为POST，且API状态必须为已部署。
-	AuthorizerUri string `json:"authorizer_uri"`
+	AuthorizerUri string `json:"authorizer_uri" xml:"authorizer_uri"`
 
 	// 认证来源
-	Identities *[]Identity `json:"identities,omitempty"`
+	Identities *[]Identity `json:"identities,omitempty" xml:"identities"`
 
 	// 缓存时间
-	Ttl *int32 `json:"ttl,omitempty"`
+	Ttl *int32 `json:"ttl,omitempty" xml:"ttl"`
 
 	// 用户数据
-	UserData *string `json:"user_data,omitempty"`
+	UserData *string `json:"user_data,omitempty" xml:"user_data"`
 
 	// 自定义后端服务ID。  自定义认证函数类型为LD时必填
-	LdApiId *string `json:"ld_api_id,omitempty"`
+	LdApiId *string `json:"ld_api_id,omitempty" xml:"ld_api_id"`
 
 	// 是否发送body
-	NeedBody *bool `json:"need_body,omitempty"`
+	NeedBody *bool `json:"need_body,omitempty" xml:"need_body"`
 
 	// 自定义认证编号
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 创建时间
-	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
+	CreateTime *sdktime.SdkTime `json:"create_time,omitempty" xml:"create_time"`
 
 	// 自定义认证所属应用编号
-	RomaAppId *string `json:"roma_app_id,omitempty"`
+	RomaAppId *string `json:"roma_app_id,omitempty" xml:"roma_app_id"`
 
 	// 自定义认证所属应用名称
-	RomaAppName    *string `json:"roma_app_name,omitempty"`
+	RomaAppName    *string `json:"roma_app_name,omitempty" xml:"roma_app_name"`
 	HttpStatusCode int     `json:"-"`
 }
 

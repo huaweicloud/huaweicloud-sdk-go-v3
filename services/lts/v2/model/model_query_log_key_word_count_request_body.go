@@ -10,22 +10,22 @@ import (
 type QueryLogKeyWordCountRequestBody struct {
 
 	// 开始时间
-	StartTime string `json:"start_time"`
+	StartTime string `json:"start_time" xml:"start_time"`
 
 	// 结束时间
-	EndTime string `json:"end_time"`
+	EndTime string `json:"end_time" xml:"end_time"`
 
 	// 步长间隔
-	StepInterval int64 `json:"step_interval"`
+	StepInterval int64 `json:"step_interval" xml:"step_interval"`
 
 	// 日志组ID
-	GroupId string `json:"group_id"`
+	GroupId string `json:"group_id" xml:"group_id"`
 
 	// 日志流ID
-	StreamId string `json:"stream_id"`
+	StreamId string `json:"stream_id" xml:"stream_id"`
 
 	// 关键词
-	KeyWord string `json:"key_word"`
+	KeyWord string `json:"key_word" xml:"key_word"`
 }
 
 func (o QueryLogKeyWordCountRequestBody) String() string {

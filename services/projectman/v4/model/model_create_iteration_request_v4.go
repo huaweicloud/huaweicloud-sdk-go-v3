@@ -9,16 +9,16 @@ import (
 type CreateIterationRequestV4 struct {
 
 	// 开始时间，年-月-日
-	BeginTime string `json:"begin_time"`
+	BeginTime string `json:"begin_time" xml:"begin_time"`
 
 	// 描述
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 结束时间，年-月-日
-	EndTime string `json:"end_time"`
+	EndTime string `json:"end_time" xml:"end_time"`
 
 	// 标题
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 }
 
 func (o CreateIterationRequestV4) String() string {

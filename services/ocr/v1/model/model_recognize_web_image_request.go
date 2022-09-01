@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RecognizeWebImageRequest struct {
-	Body *WebImageRequestBody `json:"body,omitempty"`
+	Body *WebImageRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o RecognizeWebImageRequest) String() string {

@@ -10,9 +10,9 @@ import (
 type OpenUploadFileInfo struct {
 
 	// 文件Id
-	FileId *string `json:"fileId,omitempty"`
+	FileId *string `json:"fileId,omitempty" xml:"fileId"`
 
-	ImageModeration *ImageModerationResult `json:"imageModeration,omitempty"`
+	ImageModeration *ImageModerationResult `json:"imageModeration,omitempty" xml:"imageModeration"`
 }
 
 func (o OpenUploadFileInfo) String() string {

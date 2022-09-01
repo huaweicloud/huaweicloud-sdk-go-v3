@@ -13,10 +13,10 @@ import (
 type AspectSentimentAdvanceRequest struct {
 
 	// 待分析文本。文本编码要求为utf-8，仅支持中文。 限定4096个字符以内，建议文本长度300个字符以内。
-	Content string `json:"content"`
+	Content string `json:"content" xml:"content"`
 
 	// 取值如下： 1 手机领域 2 汽车领域
-	Type AspectSentimentAdvanceRequestType `json:"type"`
+	Type AspectSentimentAdvanceRequestType `json:"type" xml:"type"`
 }
 
 func (o AspectSentimentAdvanceRequest) String() string {

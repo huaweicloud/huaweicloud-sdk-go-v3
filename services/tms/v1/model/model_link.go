@@ -10,10 +10,10 @@ import (
 type Link struct {
 
 	// API的URL地址。
-	Href string `json:"href"`
+	Href string `json:"href" xml:"href"`
 
 	// self
-	Rel string `json:"rel"`
+	Rel string `json:"rel" xml:"rel"`
 }
 
 func (o Link) String() string {

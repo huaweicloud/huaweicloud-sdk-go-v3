@@ -10,19 +10,19 @@ import (
 type ShowCloudPhoneServerDetailResponse struct {
 
 	// 请求的唯一标识ID
-	RequestId string `json:"request_id"`
+	RequestId string `json:"request_id" xml:"request_id"`
 
 	// 云手机服务器信息
-	Servers []interface{} `json:"servers"`
+	Servers []interface{} `json:"servers" xml:"servers"`
 
 	// 云手机服务器带宽信息的结构体数组
-	BandWidths []interface{} `json:"band_widths"`
+	BandWidths []interface{} `json:"band_widths" xml:"band_widths"`
 
 	// 云手机服务器卷信息的结构体数组
-	Volumes []interface{} `json:"volumes"`
+	Volumes []interface{} `json:"volumes" xml:"volumes"`
 
 	// 服务器扩展网卡绑定的安全组信息 系统定义网络的服务器，该字段返回为空列表
-	SecurityGroups []string `json:"security_groups"`
+	SecurityGroups []string `json:"security_groups" xml:"security_groups"`
 	HttpStatusCode int      `json:"-"`
 }
 

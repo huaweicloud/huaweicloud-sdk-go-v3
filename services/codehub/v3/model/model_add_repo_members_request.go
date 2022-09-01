@@ -10,9 +10,9 @@ import (
 type AddRepoMembersRequest struct {
 
 	// 仓库uuid
-	RepositoryUuid string `json:"repository_uuid"`
+	RepositoryUuid string `json:"repository_uuid" xml:"repository_uuid"`
 
-	Body *CreateRepoMemberRequest `json:"body,omitempty"`
+	Body *CreateRepoMemberRequest `json:"body,omitempty" xml:"body"`
 }
 
 func (o AddRepoMembersRequest) String() string {

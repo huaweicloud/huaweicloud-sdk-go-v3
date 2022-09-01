@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RecognizeLicensePlateRequest struct {
-	Body *LicensePlateRequestBody `json:"body,omitempty"`
+	Body *LicensePlateRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o RecognizeLicensePlateRequest) String() string {

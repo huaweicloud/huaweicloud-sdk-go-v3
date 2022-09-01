@@ -10,10 +10,10 @@ import (
 type DetachBaremetalServerVolumeRequest struct {
 
 	// 裸金属服务器ID
-	ServerId string `json:"server_id"`
+	ServerId string `json:"server_id" xml:"server_id"`
 
 	// 裸金属服务器的云磁盘ID
-	AttachmentId string `json:"attachment_id"`
+	AttachmentId string `json:"attachment_id" xml:"attachment_id"`
 }
 
 func (o DetachBaremetalServerVolumeRequest) String() string {

@@ -12,16 +12,16 @@ import (
 type LiveDataExportReq struct {
 
 	// API所属的应用ID
-	AppId *string `json:"app_id,omitempty"`
+	AppId *string `json:"app_id,omitempty" xml:"app_id"`
 
 	// 导出的API定义的格式
-	Format *LiveDataExportReqFormat `json:"format,omitempty"`
+	Format *LiveDataExportReqFormat `json:"format,omitempty" xml:"format"`
 
 	// 导出的自定义后端API ID列表
-	Apis *[]string `json:"apis,omitempty"`
+	Apis *[]string `json:"apis,omitempty" xml:"apis"`
 
 	// 导出的后端API状态： - 1：待开发 - 3：开发中 - 4：已部署
-	Status *int32 `json:"status,omitempty"`
+	Status *int32 `json:"status,omitempty" xml:"status"`
 }
 
 func (o LiveDataExportReq) String() string {

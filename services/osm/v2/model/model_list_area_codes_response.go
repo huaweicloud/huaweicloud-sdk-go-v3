@@ -10,7 +10,7 @@ import (
 type ListAreaCodesResponse struct {
 
 	// 国家码列表
-	AreaCodeList   *[]AreaCodeSimpleInfoV2 `json:"area_code_list,omitempty"`
+	AreaCodeList   *[]AreaCodeSimpleInfoV2 `json:"area_code_list,omitempty" xml:"area_code_list"`
 	HttpStatusCode int                     `json:"-"`
 }
 

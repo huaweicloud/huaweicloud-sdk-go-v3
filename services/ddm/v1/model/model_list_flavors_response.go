@@ -10,7 +10,7 @@ import (
 type ListFlavorsResponse struct {
 
 	// 计算类型规格组。
-	ComputeFlavorGroups *[]ComputeFlavorGroupsInfo `json:"computeFlavorGroups,omitempty"`
+	ComputeFlavorGroups *[]ComputeFlavorGroupsInfo `json:"computeFlavorGroups,omitempty" xml:"computeFlavorGroups"`
 	HttpStatusCode      int                        `json:"-"`
 }
 

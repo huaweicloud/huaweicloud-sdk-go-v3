@@ -10,9 +10,9 @@ import (
 type ShowTrendRequest struct {
 
 	// 应用id
-	XBusinessId int64 `json:"x-business-id"`
+	XBusinessId int64 `json:"x-business-id" xml:"x-business-id"`
 
-	Body *TrendParam `json:"body,omitempty"`
+	Body *TrendParam `json:"body,omitempty" xml:"body"`
 }
 
 func (o ShowTrendRequest) String() string {

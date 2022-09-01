@@ -10,10 +10,10 @@ import (
 type UpdateTracingRequestBody struct {
 
 	// apm的ak
-	TracingAk *string `json:"tracing_ak,omitempty"`
+	TracingAk *string `json:"tracing_ak,omitempty" xml:"tracing_ak"`
 
 	// apm的sk
-	TracingSk *string `json:"tracing_sk,omitempty"`
+	TracingSk *string `json:"tracing_sk,omitempty" xml:"tracing_sk"`
 }
 
 func (o UpdateTracingRequestBody) String() string {

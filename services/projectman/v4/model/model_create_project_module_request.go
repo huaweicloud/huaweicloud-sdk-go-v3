@@ -10,9 +10,9 @@ import (
 type CreateProjectModuleRequest struct {
 
 	// devcloud项目的32位id
-	ProjectId string `json:"project_id"`
+	ProjectId string `json:"project_id" xml:"project_id"`
 
-	Body *CreateProjectModuleRequestBody `json:"body,omitempty"`
+	Body *CreateProjectModuleRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateProjectModuleRequest) String() string {

@@ -10,10 +10,10 @@ import (
 type AttachEipResponse struct {
 
 	// 系统提示信息，执行成功时，字段可能为空。执行失败时，用于显示错误信息。
-	ErrorMessage *string `json:"errorMessage,omitempty"`
+	ErrorMessage *string `json:"errorMessage,omitempty" xml:"errorMessage"`
 
 	// 系统提示信息，执行成功时，字段可能为空。执行失败时，用于显示错误码。
-	ErrorCode      *string `json:"errorCode,omitempty"`
+	ErrorCode      *string `json:"errorCode,omitempty" xml:"errorCode"`
 	HttpStatusCode int     `json:"-"`
 }
 

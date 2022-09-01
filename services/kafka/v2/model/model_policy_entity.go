@@ -12,13 +12,13 @@ import (
 type PolicyEntity struct {
 
 	// 是否为创建topic时所选择的用户。
-	Owner *bool `json:"owner,omitempty"`
+	Owner *bool `json:"owner,omitempty" xml:"owner"`
 
 	// 用户名。
-	UserName *string `json:"user_name,omitempty"`
+	UserName *string `json:"user_name,omitempty" xml:"user_name"`
 
 	// 权限类型。 - all：拥有发布、订阅权限; - pub：拥有发布权限; - sub：拥有订阅权限。
-	AccessPolicy *PolicyEntityAccessPolicy `json:"access_policy,omitempty"`
+	AccessPolicy *PolicyEntityAccessPolicy `json:"access_policy,omitempty" xml:"access_policy"`
 }
 
 func (o PolicyEntity) String() string {

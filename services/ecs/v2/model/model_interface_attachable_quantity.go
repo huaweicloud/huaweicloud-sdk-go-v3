@@ -9,7 +9,7 @@ import (
 type InterfaceAttachableQuantity struct {
 
 	// 云服务器剩余可挂载网卡数量
-	FreeNic *int32 `json:"free_nic,omitempty"`
+	FreeNic *int32 `json:"free_nic,omitempty" xml:"free_nic"`
 }
 
 func (o InterfaceAttachableQuantity) String() string {

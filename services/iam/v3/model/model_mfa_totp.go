@@ -8,7 +8,7 @@ import (
 
 //
 type MfaTotp struct {
-	User *MfaTotpUser `json:"user"`
+	User *MfaTotpUser `json:"user" xml:"user"`
 }
 
 func (o MfaTotp) String() string {

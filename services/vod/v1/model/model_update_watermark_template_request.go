@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type UpdateWatermarkTemplateRequest struct {
-	Body *UpdateWatermarkTemplateReq `json:"body,omitempty"`
+	Body *UpdateWatermarkTemplateReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateWatermarkTemplateRequest) String() string {

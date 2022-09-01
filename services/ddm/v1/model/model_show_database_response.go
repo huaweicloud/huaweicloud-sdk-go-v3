@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowDatabaseResponse struct {
-	Database       *GetDatabaseResponseBean `json:"database,omitempty"`
+	Database       *GetDatabaseResponseBean `json:"database,omitempty" xml:"database"`
 	HttpStatusCode int                      `json:"-"`
 }
 

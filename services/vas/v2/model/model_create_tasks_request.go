@@ -10,9 +10,9 @@ import (
 type CreateTasksRequest struct {
 
 	// 服务名称
-	ServiceName string `json:"service_name"`
+	ServiceName string `json:"service_name" xml:"service_name"`
 
-	Body *CreateTasksRequestBody `json:"body,omitempty"`
+	Body *CreateTasksRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateTasksRequest) String() string {

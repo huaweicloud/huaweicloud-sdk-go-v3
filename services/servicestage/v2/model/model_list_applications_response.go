@@ -10,10 +10,10 @@ import (
 type ListApplicationsResponse struct {
 
 	// 应用总数。
-	Count *int32 `json:"count,omitempty"`
+	Count *int32 `json:"count,omitempty" xml:"count"`
 
 	// 应用列表。
-	Applications   *[]ApplicationView `json:"applications,omitempty"`
+	Applications   *[]ApplicationView `json:"applications,omitempty" xml:"applications"`
 	HttpStatusCode int                `json:"-"`
 }
 

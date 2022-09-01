@@ -10,7 +10,7 @@ import (
 type ShowJobExesRequest struct {
 
 	// 作业ID。
-	JobExeId string `json:"job_exe_id"`
+	JobExeId string `json:"job_exe_id" xml:"job_exe_id"`
 }
 
 func (o ShowJobExesRequest) String() string {

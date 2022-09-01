@@ -10,7 +10,7 @@ import (
 type ShowVaultProjectTagResponse struct {
 
 	// 标签列表
-	Tags           *[]TagsResp `json:"tags,omitempty"`
+	Tags           *[]TagsResp `json:"tags,omitempty" xml:"tags"`
 	HttpStatusCode int         `json:"-"`
 }
 

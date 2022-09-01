@@ -10,10 +10,10 @@ import (
 type UpdatePoolSlowStartOption struct {
 
 	// 慢启动的开关，默认值：false； true：开启； false：关闭
-	Enable *bool `json:"enable,omitempty"`
+	Enable *bool `json:"enable,omitempty" xml:"enable"`
 
 	// 慢启动的持续时间，单位：s。默认：30； 取值范围：30~1200
-	Duration *int32 `json:"duration,omitempty"`
+	Duration *int32 `json:"duration,omitempty" xml:"duration"`
 }
 
 func (o UpdatePoolSlowStartOption) String() string {

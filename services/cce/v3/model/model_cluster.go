@@ -10,16 +10,16 @@ import (
 type Cluster struct {
 
 	// API类型，固定值“Cluster”或“cluster”，该值不可修改。
-	Kind string `json:"kind"`
+	Kind string `json:"kind" xml:"kind"`
 
 	// API版本，固定值“v3”，该值不可修改。
-	ApiVersion string `json:"apiVersion"`
+	ApiVersion string `json:"apiVersion" xml:"apiVersion"`
 
-	Metadata *ClusterMetadata `json:"metadata"`
+	Metadata *ClusterMetadata `json:"metadata" xml:"metadata"`
 
-	Spec *ClusterSpec `json:"spec"`
+	Spec *ClusterSpec `json:"spec" xml:"spec"`
 
-	Status *ClusterStatus `json:"status,omitempty"`
+	Status *ClusterStatus `json:"status,omitempty" xml:"status"`
 }
 
 func (o Cluster) String() string {

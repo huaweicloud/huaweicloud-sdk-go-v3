@@ -12,10 +12,10 @@ import (
 type UserGroupPerms struct {
 
 	// 消费组名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 权限。
-	Perm *UserGroupPermsPerm `json:"perm,omitempty"`
+	Perm *UserGroupPermsPerm `json:"perm,omitempty" xml:"perm"`
 }
 
 func (o UserGroupPerms) String() string {

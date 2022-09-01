@@ -10,13 +10,13 @@ import (
 type ShowAuditlogPolicyResponse struct {
 
 	// 审计日志保存天数，审计日志策略关闭时为0。
-	KeepDays *int32 `json:"keep_days,omitempty"`
+	KeepDays *int32 `json:"keep_days,omitempty" xml:"keep_days"`
 
 	// 审计范围。
-	AuditScope *string `json:"audit_scope,omitempty"`
+	AuditScope *string `json:"audit_scope,omitempty" xml:"audit_scope"`
 
 	// 审计类型。
-	AuditTypes     *[]string `json:"audit_types,omitempty"`
+	AuditTypes     *[]string `json:"audit_types,omitempty" xml:"audit_types"`
 	HttpStatusCode int       `json:"-"`
 }
 

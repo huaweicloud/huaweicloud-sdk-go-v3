@@ -9,10 +9,10 @@ import (
 type MasterEipResponseStatus struct {
 
 	// 集群访问的PrivateIP(HA集群返回VIP)
-	PrivateEndpoint *string `json:"privateEndpoint,omitempty"`
+	PrivateEndpoint *string `json:"privateEndpoint,omitempty" xml:"privateEndpoint"`
 
 	// 集群访问的PublicIP
-	PublicEndpoint *string `json:"publicEndpoint,omitempty"`
+	PublicEndpoint *string `json:"publicEndpoint,omitempty" xml:"publicEndpoint"`
 }
 
 func (o MasterEipResponseStatus) String() string {

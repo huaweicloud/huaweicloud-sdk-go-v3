@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RecognizeQualificationCertificateRequest struct {
-	Body *QualificationCertificateRequestBody `json:"body,omitempty"`
+	Body *QualificationCertificateRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o RecognizeQualificationCertificateRequest) String() string {

@@ -10,9 +10,9 @@ import (
 type UpdateNaRequest struct {
 
 	// 北向数据接收端点ID
-	NaId string `json:"na_id"`
+	NaId string `json:"na_id" xml:"na_id"`
 
-	Body *UpdateNaRequestDto `json:"body,omitempty"`
+	Body *UpdateNaRequestDto `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateNaRequest) String() string {

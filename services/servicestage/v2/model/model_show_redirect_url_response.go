@@ -10,7 +10,7 @@ import (
 type ShowRedirectUrlResponse struct {
 
 	// 授权重定向URL。
-	Url            *string `json:"url,omitempty"`
+	Url            *string `json:"url,omitempty" xml:"url"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -13,25 +13,25 @@ import (
 type InterfaceAttachments struct {
 
 	// 网卡端口状态。取值为：ACTIVE、BUILD、DOWN
-	PortState *InterfaceAttachmentsPortState `json:"port_state,omitempty"`
+	PortState *InterfaceAttachmentsPortState `json:"port_state,omitempty" xml:"port_state"`
 
 	// 网卡私网IP信息列表，详情请参见表3 fixed_ips字段数据结构说明。
-	FixedIps *[]FixedIps `json:"fixed_ips,omitempty"`
+	FixedIps *[]FixedIps `json:"fixed_ips,omitempty" xml:"fixed_ips"`
 
 	// 网卡端口所属子网的网络ID（network_id）。
-	NetId *string `json:"net_id,omitempty"`
+	NetId *string `json:"net_id,omitempty" xml:"net_id"`
 
 	// 网卡端口ID。
-	PortId *string `json:"port_id,omitempty"`
+	PortId *string `json:"port_id,omitempty" xml:"port_id"`
 
 	// 网卡Mac地址信息
-	MacAddr *string `json:"mac_addr,omitempty"`
+	MacAddr *string `json:"mac_addr,omitempty" xml:"mac_addr"`
 
 	// 从guest os中，网卡的驱动类型
-	DriverMode *string `json:"driver_mode,omitempty"`
+	DriverMode *string `json:"driver_mode,omitempty" xml:"driver_mode"`
 
 	// 弹性网卡在Linux GuestOS里的BDF号
-	PciAddress *string `json:"pci_address,omitempty"`
+	PciAddress *string `json:"pci_address,omitempty" xml:"pci_address"`
 }
 
 func (o InterfaceAttachments) String() string {

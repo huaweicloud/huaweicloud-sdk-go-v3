@@ -10,13 +10,13 @@ import (
 type SelectedSetAlarmTaskReq struct {
 
 	// 任务ID
-	JobId string `json:"job_id"`
+	JobId string `json:"job_id" xml:"job_id"`
 
 	// 任务状态
-	Status string `json:"status"`
+	Status string `json:"status" xml:"status"`
 
 	// 引擎类型
-	EngineType string `json:"engine_type"`
+	EngineType string `json:"engine_type" xml:"engine_type"`
 }
 
 func (o SelectedSetAlarmTaskReq) String() string {

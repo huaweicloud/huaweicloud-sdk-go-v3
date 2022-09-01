@@ -9,20 +9,20 @@ import (
 type ComponentCreate struct {
 
 	// 应用组件名称。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
-	Runtime *RuntimeType `json:"runtime"`
+	Runtime *RuntimeType `json:"runtime" xml:"runtime"`
 
-	Category *ComponentCategory `json:"category"`
+	Category *ComponentCategory `json:"category" xml:"category"`
 
-	SubCategory *ComponentSubCategory `json:"sub_category,omitempty"`
+	SubCategory *ComponentSubCategory `json:"sub_category,omitempty" xml:"sub_category"`
 
 	// 描述。
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
-	Source *SourceObject `json:"source,omitempty"`
+	Source *SourceObject `json:"source,omitempty" xml:"source"`
 
-	Build *Build `json:"build,omitempty"`
+	Build *Build `json:"build,omitempty" xml:"build"`
 }
 
 func (o ComponentCreate) String() string {

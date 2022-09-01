@@ -10,7 +10,7 @@ import (
 type ShowTempRequest struct {
 
 	// 事务id
-	TemplateId int32 `json:"template_id"`
+	TemplateId int32 `json:"template_id" xml:"template_id"`
 }
 
 func (o ShowTempRequest) String() string {

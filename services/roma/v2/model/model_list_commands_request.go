@@ -10,22 +10,22 @@ import (
 type ListCommandsRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 服务ID
-	ServiceId string `json:"service_id"`
+	ServiceId string `json:"service_id" xml:"service_id"`
 
 	// 每页显示条目数量，最大数量999，超过999后只返回999
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 命令ID
-	CommandId *int32 `json:"command_id,omitempty"`
+	CommandId *int32 `json:"command_id,omitempty" xml:"command_id"`
 
 	// 命令名称
-	CommandName *string `json:"command_name,omitempty"`
+	CommandName *string `json:"command_name,omitempty" xml:"command_name"`
 
 	// 偏移量，表示从此偏移量开始查询， offset大于等于0
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 }
 
 func (o ListCommandsRequest) String() string {

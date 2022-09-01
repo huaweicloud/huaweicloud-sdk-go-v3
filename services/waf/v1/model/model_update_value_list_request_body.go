@@ -13,16 +13,16 @@ import (
 type UpdateValueListRequestBody struct {
 
 	// 引用表名称，2-32位字符串组成
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 引用表类型，参见枚举列表
-	Type UpdateValueListRequestBodyType `json:"type"`
+	Type UpdateValueListRequestBodyType `json:"type" xml:"type"`
 
 	// 引用表的值
-	Values *[]string `json:"values,omitempty"`
+	Values *[]string `json:"values,omitempty" xml:"values"`
 
 	// 引用表描述，最长128字符
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 }
 
 func (o UpdateValueListRequestBody) String() string {

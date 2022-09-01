@@ -13,10 +13,10 @@ import (
 type ShowRepositoryStatisticalDataV2Request struct {
 
 	// 语言类型 中文:zh-cn 英文:en-us
-	XLanguage *ShowRepositoryStatisticalDataV2RequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *ShowRepositoryStatisticalDataV2RequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 
 	// 代码仓库id
-	RepositoryId string `json:"repository_id"`
+	RepositoryId string `json:"repository_id" xml:"repository_id"`
 }
 
 func (o ShowRepositoryStatisticalDataV2Request) String() string {

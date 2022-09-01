@@ -13,13 +13,13 @@ import (
 type AttributeInfo struct {
 
 	// 属性匹配对。
-	RankFeaturePairs *[]RankFeaturePair `json:"rank_feature_pairs,omitempty"`
+	RankFeaturePairs *[]RankFeaturePair `json:"rank_feature_pairs,omitempty" xml:"rank_feature_pairs"`
 
 	// 属性权重。
-	NumericalAttrs *[]NumericalAttr `json:"numerical_attrs,omitempty"`
+	NumericalAttrs *[]NumericalAttr `json:"numerical_attrs,omitempty" xml:"numerical_attrs"`
 
 	// 统计方式： - ORDER，顺序 - ABS，绝对值
-	NumStatisticsType *AttributeInfoNumStatisticsType `json:"num_statistics_type,omitempty"`
+	NumStatisticsType *AttributeInfoNumStatisticsType `json:"num_statistics_type,omitempty" xml:"num_statistics_type"`
 }
 
 func (o AttributeInfo) String() string {

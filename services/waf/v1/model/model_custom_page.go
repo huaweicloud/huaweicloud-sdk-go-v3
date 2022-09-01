@@ -10,13 +10,13 @@ import (
 type CustomPage struct {
 
 	// 返回状态码
-	StatusCode string `json:"status_code"`
+	StatusCode string `json:"status_code" xml:"status_code"`
 
 	// “自定义”告警页面内容类型，可选择text/html、text/xml和application/json三种类型
-	ContentType string `json:"content_type"`
+	ContentType string `json:"content_type" xml:"content_type"`
 
 	// 根据选择的“页面类型”配置对应的页面内容，具体示例可以参考“Web应用防火墙 WAF”用户手册
-	Content string `json:"content"`
+	Content string `json:"content" xml:"content"`
 }
 
 func (o CustomPage) String() string {

@@ -8,11 +8,11 @@ import (
 
 // 合流任务参数，转推和录制至少选一个
 type MixJobReq struct {
-	MixParam *MixParam `json:"mix_param"`
+	MixParam *MixParam `json:"mix_param" xml:"mix_param"`
 
-	PublishParam *PublishParam `json:"publish_param,omitempty"`
+	PublishParam *PublishParam `json:"publish_param,omitempty" xml:"publish_param"`
 
-	RecordParam *RecordParam `json:"record_param,omitempty"`
+	RecordParam *RecordParam `json:"record_param,omitempty" xml:"record_param"`
 }
 
 func (o MixJobReq) String() string {

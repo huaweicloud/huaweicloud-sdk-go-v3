@@ -10,7 +10,7 @@ import (
 type ApiContentReq struct {
 
 	// api数据源名称
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 }
 
 func (o ApiContentReq) String() string {

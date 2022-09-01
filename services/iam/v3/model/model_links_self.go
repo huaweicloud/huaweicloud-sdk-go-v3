@@ -10,7 +10,7 @@ import (
 type LinksSelf struct {
 
 	// 资源链接地址。
-	Self string `json:"self"`
+	Self string `json:"self" xml:"self"`
 }
 
 func (o LinksSelf) String() string {

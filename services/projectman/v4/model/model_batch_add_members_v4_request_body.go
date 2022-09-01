@@ -9,7 +9,7 @@ import (
 type BatchAddMembersV4RequestBody struct {
 
 	// 添加的用户信息
-	Users []BatchAddMemberRequestV4 `json:"users"`
+	Users []BatchAddMemberRequestV4 `json:"users" xml:"users"`
 }
 
 func (o BatchAddMembersV4RequestBody) String() string {

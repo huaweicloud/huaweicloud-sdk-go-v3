@@ -10,15 +10,15 @@ import (
 type Networks struct {
 
 	// 子网的网络id。
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 是否启用IPv6。取值为true时，标识此网卡已启用IPv6。
-	Ipv6Enable *bool `json:"ipv6_enable,omitempty"`
+	Ipv6Enable *bool `json:"ipv6_enable,omitempty" xml:"ipv6_enable"`
 
-	Ipv6Bandwidth *Ipv6Bandwidth `json:"ipv6_bandwidth,omitempty"`
+	Ipv6Bandwidth *Ipv6Bandwidth `json:"ipv6_bandwidth,omitempty" xml:"ipv6_bandwidth"`
 
 	// 是否开启源/目的检查开关。
-	AllowedAddressPairs *[]AllowedAddressPair `json:"allowed_address_pairs,omitempty"`
+	AllowedAddressPairs *[]AllowedAddressPair `json:"allowed_address_pairs,omitempty" xml:"allowed_address_pairs"`
 }
 
 func (o Networks) String() string {

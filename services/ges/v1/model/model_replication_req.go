@@ -9,7 +9,7 @@ import (
 type ReplicationReq struct {
 
 	// 新扩副本数量。
-	Replication string `json:"replication"`
+	Replication string `json:"replication" xml:"replication"`
 }
 
 func (o ReplicationReq) String() string {

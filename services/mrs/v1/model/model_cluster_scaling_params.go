@@ -12,30 +12,30 @@ import (
 type ClusterScalingParams struct {
 
 	// 扩容/缩容时系统获取的订单号，用户不需要配置。
-	OrderId *string `json:"order_id,omitempty"`
+	OrderId *string `json:"order_id,omitempty" xml:"order_id"`
 
 	// - scale_in：缩容 - scale_out：扩容
-	ScaleType ClusterScalingParamsScaleType `json:"scale_type"`
+	ScaleType ClusterScalingParamsScaleType `json:"scale_type" xml:"scale_type"`
 
 	// 扩容/缩容时新增或者减少节点的ID标识,参数值固定为node_orderadd。
-	NodeId string `json:"node_id"`
+	NodeId string `json:"node_id" xml:"node_id"`
 
 	// 扩容或缩容的节点组。 - 如果node_group为core_node_default_group，表示Core节点组。 - 如果node_group为task_node_default_group，表示Task节点组。  该字段可以为空，为空时，系统默认值为core_node_default_group。
-	NodeGroup *string `json:"node_group,omitempty"`
+	NodeGroup *string `json:"node_group,omitempty" xml:"node_group"`
 
 	// 是否跳过引导操作，默认为false，即执行引导操作。 仅在创建集群时配置了引导操作且扩容时有意义，表示扩容时是否在新增节点上执行创建集群时指定的引导操作。
-	SkipBootstrapScripts *string `json:"skip_bootstrap_scripts,omitempty"`
+	SkipBootstrapScripts *string `json:"skip_bootstrap_scripts,omitempty" xml:"skip_bootstrap_scripts"`
 
 	// 扩容后是否启动扩容节点上的组件。  - true：扩容后不启动组件。 - false：扩容后启动组件。
-	ScaleWithoutStart *bool `json:"scale_without_start,omitempty"`
+	ScaleWithoutStart *bool `json:"scale_without_start,omitempty" xml:"scale_without_start"`
 
 	// 缩容Task节点时指定待删除Task节点的ID列表。  - 当scale_type为扩容时，该参数不生效。 - 当scale_type为缩容且该参数不为空时，删除指定的Task节点。 - 当scale_type为缩容且server_ids为空时，按照系统规则自动选择删除Task节点。
-	ServerIds *[]string `json:"server_ids,omitempty"`
+	ServerIds *[]string `json:"server_ids,omitempty" xml:"server_ids"`
 
 	// 扩容或缩容的节点数。  - 扩容时的最大节点数为（500 - 集群Core/Task节点数）。例如，当前集群Core节点数为3，此处扩容的节点数必须小于等于497。     Core和Task节点总数最大值为500，如果用户需要的Core/Task节点数大于500，可以联系技术支持人员或者调用后台接口修改数据库。   - 缩容时Core节点数大于3或者Task节点数大于0可以进行节点删除。例如，当前集群Core节点和Task节点数均为5，Core节点可缩容的节点数为2（5减去3），Task节点可缩容节点数为小于等于5。
-	Instances int32 `json:"instances"`
+	Instances int32 `json:"instances" xml:"instances"`
 
-	TaskNodeInfo *TaskNodeInfo `json:"task_node_info,omitempty"`
+	TaskNodeInfo *TaskNodeInfo `json:"task_node_info,omitempty" xml:"task_node_info"`
 }
 
 func (o ClusterScalingParams) String() string {

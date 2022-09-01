@@ -13,22 +13,22 @@ import (
 type ProductReferer struct {
 
 	// 产品ID，未填写厂商ID+型号时产品ID必填
-	ProductId *int32 `json:"product_id,omitempty"`
+	ProductId *int32 `json:"product_id,omitempty" xml:"product_id"`
 
 	// 产品名称
-	ProductName *string `json:"product_name,omitempty"`
+	ProductName *string `json:"product_name,omitempty" xml:"product_name"`
 
 	// 厂商ID，未填写产品ID时厂商ID和型号必填
-	ManufacturerId *string `json:"manufacturer_id,omitempty"`
+	ManufacturerId *string `json:"manufacturer_id,omitempty" xml:"manufacturer_id"`
 
 	// 型号，未填写产品ID时厂商ID和型号必填
-	Model *string `json:"model,omitempty"`
+	Model *string `json:"model,omitempty" xml:"model"`
 
 	// 产品的协议类型：0-mqtt，1-coap，2-modbus，3-http, 4-opcua
-	ProtocolType *ProductRefererProtocolType `json:"protocol_type,omitempty"`
+	ProtocolType *ProductRefererProtocolType `json:"protocol_type,omitempty" xml:"protocol_type"`
 
 	// 产品类型：0-普通产品 1-网关产品
-	ProductType *ProductRefererProductType `json:"product_type,omitempty"`
+	ProductType *ProductRefererProductType `json:"product_type,omitempty" xml:"product_type"`
 }
 
 func (o ProductReferer) String() string {

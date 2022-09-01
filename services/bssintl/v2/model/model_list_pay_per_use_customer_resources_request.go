@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ListPayPerUseCustomerResourcesRequest struct {
-	Body *QueryResourcesReq `json:"body,omitempty"`
+	Body *QueryResourcesReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o ListPayPerUseCustomerResourcesRequest) String() string {

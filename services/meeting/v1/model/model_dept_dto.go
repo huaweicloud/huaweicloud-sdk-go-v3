@@ -12,28 +12,28 @@ import (
 type DeptDto struct {
 
 	// 部门编码，企业内唯一，若携带则以携带为准，不支持修改。 maxLength：32
-	DeptCode *string `json:"deptCode,omitempty"`
+	DeptCode *string `json:"deptCode,omitempty" xml:"deptCode"`
 
 	// 部门名称 maxLength：128 minLength：1
-	DeptName string `json:"deptName"`
+	DeptName string `json:"deptName" xml:"deptName"`
 
 	// 父部门编码,默认为根部门。 默认值：1： maxLength：32
-	ParentDeptCode *string `json:"parentDeptCode,omitempty"`
+	ParentDeptCode *string `json:"parentDeptCode,omitempty" xml:"parentDeptCode"`
 
 	// 备注 maxLength：96 minLength：0
-	Note *string `json:"note,omitempty"`
+	Note *string `json:"note,omitempty" xml:"note"`
 
 	// 其他用户对该部门下用户的访问权限： - UNLIMITED：默认，不做限制 - OPEN：公开，其他部门都可访问（无论对方权限如何配置）
-	InPermission *DeptDtoInPermission `json:"inPermission,omitempty"`
+	InPermission *DeptDtoInPermission `json:"inPermission,omitempty" xml:"inPermission"`
 
 	// 该部门下用户访问权限控制 - UNLIMITED：不限制 - ONLY_SELF：仅能查询自己 - SELF_AND_CHILD_DEPARTMENT：该部门下用户能查询本部门及子部门通讯 - DESIGNATED_DEPARTMENT：该部门下用户能查询指定部门通讯录
-	OutPermission *DeptDtoOutPermission `json:"outPermission,omitempty"`
+	OutPermission *DeptDtoOutPermission `json:"outPermission,omitempty" xml:"outPermission"`
 
 	// 允许访问的部门列表,仅outPermission为DESIGNATED_DEPARTMENT时有效，最多支持配置150
-	DesignatedOutDeptCodes *[]string `json:"designatedOutDeptCodes,omitempty"`
+	DesignatedOutDeptCodes *[]string `json:"designatedOutDeptCodes,omitempty" xml:"designatedOutDeptCodes"`
 
 	// 部门排序号，序号越小,部门排序越靠前 minimum: 1 maximum: 10000
-	SortLevel *int32 `json:"sortLevel,omitempty"`
+	SortLevel *int32 `json:"sortLevel,omitempty" xml:"sortLevel"`
 }
 
 func (o DeptDto) String() string {

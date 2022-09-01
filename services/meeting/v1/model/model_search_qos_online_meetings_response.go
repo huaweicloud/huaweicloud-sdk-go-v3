@@ -10,16 +10,16 @@ import (
 type SearchQosOnlineMeetingsResponse struct {
 
 	// 总记录数。
-	Count *int32 `json:"count,omitempty"`
+	Count *int32 `json:"count,omitempty" xml:"count"`
 
 	// 查询条目数量。
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 
 	// 查询偏移量。
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// QoS会议列表，按照会议开始时间降序排序。
-	Data           *[]QosConferenceInfo `json:"data,omitempty"`
+	Data           *[]QosConferenceInfo `json:"data,omitempty" xml:"data"`
 	HttpStatusCode int                  `json:"-"`
 }
 

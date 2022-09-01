@@ -10,19 +10,19 @@ import (
 type ModifyTuningParamsReq struct {
 
 	// 全量参数的参数名及对应的取值
-	FullSync map[string]string `json:"full_sync,omitempty"`
+	FullSync map[string]string `json:"full_sync,omitempty" xml:"full_sync"`
 
 	// 增量抓取参数的参数名及对应的取值
-	IncreCapture map[string]string `json:"incre_capture,omitempty"`
+	IncreCapture map[string]string `json:"incre_capture,omitempty" xml:"incre_capture"`
 
 	// 增量回放参数的参数名及对应的取值
-	IncreApply map[string]string `json:"incre_apply,omitempty"`
+	IncreApply map[string]string `json:"incre_apply,omitempty" xml:"incre_apply"`
 
 	// 增量日志拉取参数的参数名及对应的取值 -slotAdvanceInterval： 源库逻辑复制槽推进间隔
-	IncreRelay map[string]string `json:"incre_relay,omitempty"`
+	IncreRelay map[string]string `json:"incre_relay,omitempty" xml:"incre_relay"`
 
 	// 初始化参数，首次调用时需要传true，其他时候不传。
-	Recovery *bool `json:"recovery,omitempty"`
+	Recovery *bool `json:"recovery,omitempty" xml:"recovery"`
 }
 
 func (o ModifyTuningParamsReq) String() string {

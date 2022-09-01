@@ -13,22 +13,22 @@ import (
 type ListDatasourceTablesRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// 数据源ID
-	DatasourceId string `json:"datasource_id"`
+	DatasourceId string `json:"datasource_id" xml:"datasource_id"`
 
 	// 数据源所在任务位置 - SOURCE 数据源处于任务源端 - TARGET 数据源处于任务目标端
-	Position ListDatasourceTablesRequestPosition `json:"position"`
+	Position ListDatasourceTablesRequestPosition `json:"position" xml:"position"`
 
 	// 数据库名称，只支持MRSHIVE，FIHIVE类型的数据源
-	DbName *string `json:"db_name,omitempty"`
+	DbName *string `json:"db_name,omitempty" xml:"db_name"`
 
 	// 数据库模式,GAUSS100数据库使用
-	DbSchema *string `json:"db_schema,omitempty"`
+	DbSchema *string `json:"db_schema,omitempty" xml:"db_schema"`
 
 	// 表名模糊匹配过滤器
-	Filter *string `json:"filter,omitempty"`
+	Filter *string `json:"filter,omitempty" xml:"filter"`
 }
 
 func (o ListDatasourceTablesRequest) String() string {

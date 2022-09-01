@@ -12,28 +12,28 @@ import (
 type CheckpointResourceResp struct {
 
 	// 资源附加信息
-	ExtraInfo *string `json:"extra_info,omitempty"`
+	ExtraInfo *string `json:"extra_info,omitempty" xml:"extra_info"`
 
 	// 待备份资源id
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 待备份资源名称
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 保护状态。available（可用），error（错误），protecting（备份中），restoring（恢复中），removing（删除中）。
-	ProtectStatus *CheckpointResourceRespProtectStatus `json:"protect_status,omitempty"`
+	ProtectStatus *CheckpointResourceRespProtectStatus `json:"protect_status,omitempty" xml:"protect_status"`
 
 	// 资源已分配容量,单位为GB
-	ResourceSize *string `json:"resource_size,omitempty"`
+	ResourceSize *string `json:"resource_size,omitempty" xml:"resource_size"`
 
 	// 待备份资源的类型: OS::Nova::Server, OS::Cinder::Volume, OS::Ironic::BareMetalServer, OS::Native::Server, OS::Sfs::Turbo
-	Type string `json:"type"`
+	Type string `json:"type" xml:"type"`
 
 	// 副本大小
-	BackupSize *string `json:"backup_size,omitempty"`
+	BackupSize *string `json:"backup_size,omitempty" xml:"backup_size"`
 
 	// 副本数量
-	BackupCount *string `json:"backup_count,omitempty"`
+	BackupCount *string `json:"backup_count,omitempty" xml:"backup_count"`
 }
 
 func (o CheckpointResourceResp) String() string {

@@ -10,7 +10,7 @@ import (
 type DeleteKeywordsAlarmRuleRequest struct {
 
 	// 关键词告警规则id
-	KeywordsAlarmRuleId string `json:"keywords_alarm_rule_id"`
+	KeywordsAlarmRuleId string `json:"keywords_alarm_rule_id" xml:"keywords_alarm_rule_id"`
 }
 
 func (o DeleteKeywordsAlarmRuleRequest) String() string {

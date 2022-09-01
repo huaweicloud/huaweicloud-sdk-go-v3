@@ -10,13 +10,13 @@ import (
 type AttachInternalIpResponse struct {
 
 	// 任务ID。
-	JobId *string `json:"job_id,omitempty"`
+	JobId *string `json:"job_id,omitempty" xml:"job_id"`
 
 	// 节点ID。
-	NodeId *string `json:"node_id,omitempty"`
+	NodeId *string `json:"node_id,omitempty" xml:"node_id"`
 
 	// 新的内网IP。
-	NewIp          *string `json:"new_ip,omitempty"`
+	NewIp          *string `json:"new_ip,omitempty" xml:"new_ip"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateWhitelistRequest struct {
-	Body *CreateWhitelistRequestBody `json:"body,omitempty"`
+	Body *CreateWhitelistRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateWhitelistRequest) String() string {

@@ -10,9 +10,9 @@ import (
 type BatchCreateListenerTagsRequest struct {
 
 	// 监听器ID。
-	ListenerId string `json:"listener_id"`
+	ListenerId string `json:"listener_id" xml:"listener_id"`
 
-	Body *BatchCreateListenerTagsRequestBody `json:"body,omitempty"`
+	Body *BatchCreateListenerTagsRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o BatchCreateListenerTagsRequest) String() string {

@@ -13,10 +13,10 @@ import (
 type ShowStructTemplateRule struct {
 
 	// 测试
-	Param *string `json:"param,omitempty"`
+	Param *string `json:"param,omitempty" xml:"param"`
 
 	// 结构化类型
-	Type *ShowStructTemplateRuleType `json:"type,omitempty"`
+	Type *ShowStructTemplateRuleType `json:"type,omitempty" xml:"type"`
 }
 
 func (o ShowStructTemplateRule) String() string {

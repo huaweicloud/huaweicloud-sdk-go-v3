@@ -10,10 +10,10 @@ import (
 type DownloadKieResponseBodyMetadata struct {
 
 	// 版本号
-	Version *string `json:"version,omitempty"`
+	Version *string `json:"version,omitempty" xml:"version"`
 
 	// 导出文件的其他信息
-	Annotations *interface{} `json:"annotations,omitempty"`
+	Annotations *interface{} `json:"annotations,omitempty" xml:"annotations"`
 }
 
 func (o DownloadKieResponseBodyMetadata) String() string {

@@ -10,13 +10,13 @@ import (
 type ShowProjectSuccessRateRequest struct {
 
 	// 项目id
-	ProjectId string `json:"project_id"`
+	ProjectId string `json:"project_id" xml:"project_id"`
 
 	// 任务执行开始时间范围的左边界（包含），格式yyyy-MM-dd
-	StartDate string `json:"start_date"`
+	StartDate string `json:"start_date" xml:"start_date"`
 
 	// 任务执行开始时间范围的右边界（包含），格式yyyy-MM-dd 。最大时间范围为1年。
-	EndDate string `json:"end_date"`
+	EndDate string `json:"end_date" xml:"end_date"`
 }
 
 func (o ShowProjectSuccessRateRequest) String() string {

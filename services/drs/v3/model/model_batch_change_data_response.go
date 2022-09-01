@@ -10,10 +10,10 @@ import (
 type BatchChangeDataResponse struct {
 
 	// 批量数据加工响应列表
-	Results *[]DataTransformationResp `json:"results,omitempty"`
+	Results *[]DataTransformationResp `json:"results,omitempty" xml:"results"`
 
 	// 总数
-	Count          *int32 `json:"count,omitempty"`
+	Count          *int32 `json:"count,omitempty" xml:"count"`
 	HttpStatusCode int    `json:"-"`
 }
 

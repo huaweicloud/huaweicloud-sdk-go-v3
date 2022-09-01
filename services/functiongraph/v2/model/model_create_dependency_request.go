@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateDependencyRequest struct {
-	Body *CreateDependencyRequestBody `json:"body,omitempty"`
+	Body *CreateDependencyRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateDependencyRequest) String() string {

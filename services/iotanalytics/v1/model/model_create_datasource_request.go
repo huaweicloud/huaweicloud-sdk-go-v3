@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateDatasourceRequest struct {
-	Body *CreateDatasourceReqDto `json:"body,omitempty"`
+	Body *CreateDatasourceReqDto `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateDatasourceRequest) String() string {

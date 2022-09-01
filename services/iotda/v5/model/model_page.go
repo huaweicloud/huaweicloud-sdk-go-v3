@@ -10,10 +10,10 @@ import (
 type Page struct {
 
 	// 满足查询条件的记录总数。
-	Count *int64 `json:"count,omitempty"`
+	Count *int64 `json:"count,omitempty" xml:"count"`
 
 	// 本次分页查询结果中最后一条记录的ID，可在下一次分页查询时使用。
-	Marker *string `json:"marker,omitempty"`
+	Marker *string `json:"marker,omitempty" xml:"marker"`
 }
 
 func (o Page) String() string {

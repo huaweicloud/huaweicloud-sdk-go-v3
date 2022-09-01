@@ -12,28 +12,28 @@ import (
 type CreateDomainResponse struct {
 
 	// 直播域名
-	Domain *string `json:"domain,omitempty"`
+	Domain *string `json:"domain,omitempty" xml:"domain"`
 
 	// 域名类型 - pull表示播放域名 - push表示推流域名
-	DomainType *CreateDomainResponseDomainType `json:"domain_type,omitempty"`
+	DomainType *CreateDomainResponseDomainType `json:"domain_type,omitempty" xml:"domain_type"`
 
 	// 直播域名的CNAME
-	DomainCname *string `json:"domain_cname,omitempty"`
+	DomainCname *string `json:"domain_cname,omitempty" xml:"domain_cname"`
 
 	// 直播所属直播中心
-	Region *string `json:"region,omitempty"`
+	Region *string `json:"region,omitempty" xml:"region"`
 
 	// 直播域名的状态
-	Status *CreateDomainResponseStatus `json:"status,omitempty"`
+	Status *CreateDomainResponseStatus `json:"status,omitempty" xml:"status"`
 
 	// 域名创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间
-	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
+	CreateTime *sdktime.SdkTime `json:"create_time,omitempty" xml:"create_time"`
 
 	// 状态描述
-	StatusDescribe *string `json:"status_describe,omitempty"`
+	StatusDescribe *string `json:"status_describe,omitempty" xml:"status_describe"`
 
 	// 域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
-	ServiceArea    *CreateDomainResponseServiceArea `json:"service_area,omitempty"`
+	ServiceArea    *CreateDomainResponseServiceArea `json:"service_area,omitempty" xml:"service_area"`
 	HttpStatusCode int                              `json:"-"`
 }
 

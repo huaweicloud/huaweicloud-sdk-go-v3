@@ -10,15 +10,15 @@ import (
 type ResetVisionActiveCodeRequest struct {
 
 	// 请求requestId，用来标识一路请求，用于问题跟踪定位，建议使用uuId，若不携带，则后台自动生成
-	XRequestId *string `json:"X-Request-Id,omitempty"`
+	XRequestId *string `json:"X-Request-Id,omitempty" xml:"X-Request-Id"`
 
 	// 语言参数，默认为中文zh-CN, 英文为en-US
-	AcceptLanguage *string `json:"Accept-Language,omitempty"`
+	AcceptLanguage *string `json:"Accept-Language,omitempty" xml:"Accept-Language"`
 
 	// 账号 可通过用户管理中分页查询用户接口获取，对应接口返回userAccount字段。
-	Account string `json:"account"`
+	Account string `json:"account" xml:"account"`
 
-	Body *ActiveDto `json:"body,omitempty"`
+	Body *ActiveDto `json:"body,omitempty" xml:"body"`
 }
 
 func (o ResetVisionActiveCodeRequest) String() string {

@@ -7,7 +7,7 @@ import (
 )
 
 type CreateTagReq struct {
-	Tag *Tag `json:"tag"`
+	Tag *Tag `json:"tag" xml:"tag"`
 }
 
 func (o CreateTagReq) String() string {

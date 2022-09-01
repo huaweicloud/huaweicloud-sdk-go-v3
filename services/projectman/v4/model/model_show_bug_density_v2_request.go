@@ -10,9 +10,9 @@ import (
 type ShowBugDensityV2Request struct {
 
 	// devcloud项目的32位id
-	ProjectId string `json:"project_id"`
+	ProjectId string `json:"project_id" xml:"project_id"`
 
-	Body *MetricRequestV2 `json:"body,omitempty"`
+	Body *MetricRequestV2 `json:"body,omitempty" xml:"body"`
 }
 
 func (o ShowBugDensityV2Request) String() string {

@@ -10,22 +10,22 @@ import (
 type LogConfigDto struct {
 
 	// 应用日志文件大小限制，单位MB，默认50，取值范围10-1000
-	Size *int32 `json:"size,omitempty"`
+	Size *int32 `json:"size,omitempty" xml:"size"`
 
 	// 应用日志级别，可选项：on/off，当type为LTS时有效
-	Level *string `json:"level,omitempty"`
+	Level *string `json:"level,omitempty" xml:"level"`
 
 	// 应用日志rotate个数，默认5，取值范围1-10
-	RotateNum *int32 `json:"rotate_num,omitempty"`
+	RotateNum *int32 `json:"rotate_num,omitempty" xml:"rotate_num"`
 
 	// 应用日志rotate周期，可选项： daily/monthly/weekly/yearly
-	RotatePeriod *string `json:"rotate_period,omitempty"`
+	RotatePeriod *string `json:"rotate_period,omitempty" xml:"rotate_period"`
 
 	// LTS:将日志发送到LTS, local 本地日志
-	Type *string `json:"type,omitempty"`
+	Type *string `json:"type,omitempty" xml:"type"`
 
 	// app:部署到边缘设备上的应用的日志, system 边缘设备上系统的日志
-	Component *string `json:"component,omitempty"`
+	Component *string `json:"component,omitempty" xml:"component"`
 }
 
 func (o LogConfigDto) String() string {

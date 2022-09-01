@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type UpdateSqlAlarmRuleRequest struct {
-	Body *UpdateSqlAlarmRuleRequestBody `json:"body,omitempty"`
+	Body *UpdateSqlAlarmRuleRequestBody `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateSqlAlarmRuleRequest) String() string {

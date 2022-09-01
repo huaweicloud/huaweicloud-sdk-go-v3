@@ -8,7 +8,7 @@ import (
 
 // This is a auto create Body Object
 type NovaCreateKeypairRequestBody struct {
-	Keypair *NovaCreateKeypairOption `json:"keypair"`
+	Keypair *NovaCreateKeypairOption `json:"keypair" xml:"keypair"`
 }
 
 func (o NovaCreateKeypairRequestBody) String() string {

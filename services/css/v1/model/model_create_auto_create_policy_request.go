@@ -10,9 +10,9 @@ import (
 type CreateAutoCreatePolicyRequest struct {
 
 	// 指定要自动创建快照的集群ID。
-	ClusterId string `json:"cluster_id"`
+	ClusterId string `json:"cluster_id" xml:"cluster_id"`
 
-	Body *SetRdsBackupCnfReq `json:"body,omitempty"`
+	Body *SetRdsBackupCnfReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateAutoCreatePolicyRequest) String() string {

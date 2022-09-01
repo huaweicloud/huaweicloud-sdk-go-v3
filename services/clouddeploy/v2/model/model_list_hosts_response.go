@@ -10,13 +10,13 @@ import (
 type ListHostsResponse struct {
 
 	// 主机数量
-	Total *int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty" xml:"total"`
 
 	// 主机组名称
-	GroupName *string `json:"group_name,omitempty"`
+	GroupName *string `json:"group_name,omitempty" xml:"group_name"`
 
 	// 主机列表信息
-	Hosts          *[]DeploymentHostDetail `json:"hosts,omitempty"`
+	Hosts          *[]DeploymentHostDetail `json:"hosts,omitempty" xml:"hosts"`
 	HttpStatusCode int                     `json:"-"`
 }
 

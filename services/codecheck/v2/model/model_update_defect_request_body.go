@@ -9,10 +9,10 @@ import (
 type UpdateDefectRequestBody struct {
 
 	// 问题id,多个时英文逗号分隔
-	DefectId *string `json:"defect_id,omitempty"`
+	DefectId *string `json:"defect_id,omitempty" xml:"defect_id"`
 
 	// 状态2：已忽略 1：已解决 0：未解决
-	DefectStatus *string `json:"defect_status,omitempty"`
+	DefectStatus *string `json:"defect_status,omitempty" xml:"defect_status"`
 }
 
 func (o UpdateDefectRequestBody) String() string {

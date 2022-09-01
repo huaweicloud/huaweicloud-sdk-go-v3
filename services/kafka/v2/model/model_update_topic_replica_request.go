@@ -10,12 +10,12 @@ import (
 type UpdateTopicReplicaRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
 	// Topic名称。
-	Topic string `json:"topic"`
+	Topic string `json:"topic" xml:"topic"`
 
-	Body *ResetReplicaReq `json:"body,omitempty"`
+	Body *ResetReplicaReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateTopicReplicaRequest) String() string {

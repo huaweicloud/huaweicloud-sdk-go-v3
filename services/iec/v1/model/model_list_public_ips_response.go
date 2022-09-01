@@ -10,10 +10,10 @@ import (
 type ListPublicIpsResponse struct {
 
 	// 弹性公网IP数目。
-	Count *int32 `json:"count,omitempty"`
+	Count *int32 `json:"count,omitempty" xml:"count"`
 
 	// 弹性公网IP数组对象。
-	Publicips      *[]PublicIp `json:"publicips,omitempty"`
+	Publicips      *[]PublicIp `json:"publicips,omitempty" xml:"publicips"`
 	HttpStatusCode int         `json:"-"`
 }
 

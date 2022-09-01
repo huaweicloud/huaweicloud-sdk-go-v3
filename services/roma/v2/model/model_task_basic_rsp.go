@@ -12,58 +12,58 @@ import (
 type TaskBasicRsp struct {
 
 	// 任务ID, 可为空
-	TaskId *string `json:"task_id,omitempty"`
+	TaskId *string `json:"task_id,omitempty" xml:"task_id"`
 
 	// 任务名称，只能以字母、数字为开头，包含字母、数字和 . _ -  3~100个字符
-	TaskName *string `json:"task_name,omitempty"`
+	TaskName *string `json:"task_name,omitempty" xml:"task_name"`
 
 	// 任务类型 - realtime (实时) - timing (定时)
-	TaskType *TaskBasicRspTaskType `json:"task_type,omitempty"`
+	TaskType *TaskBasicRspTaskType `json:"task_type,omitempty" xml:"task_type"`
 
 	// 任务状态, - stop (0停止\\未启动) - running (1运行中)
-	Status *TaskBasicRspStatus `json:"status,omitempty"`
+	Status *TaskBasicRspStatus `json:"status,omitempty" xml:"status"`
 
 	// 项目ID
-	ProjectId *string `json:"project_id,omitempty"`
+	ProjectId *string `json:"project_id,omitempty" xml:"project_id"`
 
 	// 源端数据源ID
-	SourceDatasourceId *string `json:"source_datasource_id,omitempty"`
+	SourceDatasourceId *string `json:"source_datasource_id,omitempty" xml:"source_datasource_id"`
 
 	// 目标端数据源ID
-	TargetDatasourceId *string `json:"target_datasource_id,omitempty"`
+	TargetDatasourceId *string `json:"target_datasource_id,omitempty" xml:"target_datasource_id"`
 
 	// 源端数据源的名称
-	SourceDatasourceName *string `json:"source_datasource_name,omitempty"`
+	SourceDatasourceName *string `json:"source_datasource_name,omitempty" xml:"source_datasource_name"`
 
 	// 目标端数据源的名称
-	TargetDatasourceName *string `json:"target_datasource_name,omitempty"`
+	TargetDatasourceName *string `json:"target_datasource_name,omitempty" xml:"target_datasource_name"`
 
 	// 源端数据源所属集成应用ID
-	SourceAppId *string `json:"source_app_id,omitempty"`
+	SourceAppId *string `json:"source_app_id,omitempty" xml:"source_app_id"`
 
 	// 目标端数据源所属集成应用ID
-	TargetAppId *string `json:"target_app_id,omitempty"`
+	TargetAppId *string `json:"target_app_id,omitempty" xml:"target_app_id"`
 
 	// 源端数据源所属集成应用名称
-	SourceAppName *string `json:"source_app_name,omitempty"`
+	SourceAppName *string `json:"source_app_name,omitempty" xml:"source_app_name"`
 
 	// 目标端数据源所属集成应用名称
-	TargetAppName *string `json:"target_app_name,omitempty"`
+	TargetAppName *string `json:"target_app_name,omitempty" xml:"target_app_name"`
 
 	// 创建时间
-	CreatedDate *int64 `json:"created_date,omitempty"`
+	CreatedDate *int64 `json:"created_date,omitempty" xml:"created_date"`
 
 	// 最近一次的修改时间
-	LastModifiedDate *int64 `json:"last_modified_date,omitempty"`
+	LastModifiedDate *int64 `json:"last_modified_date,omitempty" xml:"last_modified_date"`
 
 	// 描述信息
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 任务标签,只能包含字母、数字、中划线、下划线
-	TaskTag *string `json:"task_tag,omitempty"`
+	TaskTag *string `json:"task_tag,omitempty" xml:"task_tag"`
 
 	// 任务的创建者
-	CreatedBy *string `json:"created_by,omitempty"`
+	CreatedBy *string `json:"created_by,omitempty" xml:"created_by"`
 }
 
 func (o TaskBasicRsp) String() string {

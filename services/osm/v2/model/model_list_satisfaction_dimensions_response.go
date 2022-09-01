@@ -10,10 +10,10 @@ import (
 type ListSatisfactionDimensionsResponse struct {
 
 	// 总数
-	TotalCount *int32 `json:"total_count,omitempty"`
+	TotalCount *int32 `json:"total_count,omitempty" xml:"total_count"`
 
 	// 满意度分类列表
-	SatisfactionDimensionList *[]SatisfactionDimensionSimpleInfoV2 `json:"satisfaction_dimension_list,omitempty"`
+	SatisfactionDimensionList *[]SatisfactionDimensionSimpleInfoV2 `json:"satisfaction_dimension_list,omitempty" xml:"satisfaction_dimension_list"`
 	HttpStatusCode            int                                  `json:"-"`
 }
 

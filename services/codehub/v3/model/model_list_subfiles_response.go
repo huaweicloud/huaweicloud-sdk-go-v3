@@ -10,10 +10,10 @@ import (
 type ListSubfilesResponse struct {
 
 	// 文件日志树
-	Trees *[]LogsTree `json:"trees,omitempty"`
+	Trees *[]LogsTree `json:"trees,omitempty" xml:"trees"`
 
 	// 记录总数
-	Total          *int32 `json:"total,omitempty"`
+	Total          *int32 `json:"total,omitempty" xml:"total"`
 	HttpStatusCode int    `json:"-"`
 }
 

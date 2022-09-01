@@ -9,7 +9,7 @@ import (
 type RuntimeConfig struct {
 
 	// LVM写入模式：linear、striped。linear：线性模式；striped：条带模式，使用多块磁盘组成条带模式，能够提升磁盘性能。
-	LvType string `json:"lvType"`
+	LvType string `json:"lvType" xml:"lvType"`
 }
 
 func (o RuntimeConfig) String() string {

@@ -9,9 +9,9 @@ import (
 type TranscodeDetail struct {
 
 	// 一进多出情况下部分转码失败的情况。
-	MultitaskInfo *[]MultiTaskInfo `json:"multitask_info,omitempty"`
+	MultitaskInfo *[]MultiTaskInfo `json:"multitask_info,omitempty" xml:"multitask_info"`
 
-	InputFile *SourceInfo `json:"input_file,omitempty"`
+	InputFile *SourceInfo `json:"input_file,omitempty" xml:"input_file"`
 }
 
 func (o TranscodeDetail) String() string {

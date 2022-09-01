@@ -10,7 +10,7 @@ import (
 type DeleteKeypairRequest struct {
 
 	// 密钥名称。
-	KeypairName string `json:"keypair_name"`
+	KeypairName string `json:"keypair_name" xml:"keypair_name"`
 }
 
 func (o DeleteKeypairRequest) String() string {

@@ -10,10 +10,10 @@ import (
 type ShowBlackWhiteListResponse struct {
 
 	// IP黑白名单类型（0：关闭IP黑白名单功能，1：黑名单，2：白名单）
-	Type *int32 `json:"type,omitempty"`
+	Type *int32 `json:"type,omitempty" xml:"type"`
 
 	// IP黑白名单列表（支持掩码且有掩码的情况下IP必须是该IP段的第一个IP）
-	IpList         *[]string `json:"ip_list,omitempty"`
+	IpList         *[]string `json:"ip_list,omitempty" xml:"ip_list"`
 	HttpStatusCode int       `json:"-"`
 }
 

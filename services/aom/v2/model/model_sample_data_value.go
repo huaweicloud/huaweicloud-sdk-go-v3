@@ -8,10 +8,10 @@ import (
 
 // 查询结果详细。
 type SampleDataValue struct {
-	Sample *QuerySample `json:"sample,omitempty"`
+	Sample *QuerySample `json:"sample,omitempty" xml:"sample"`
 
 	// 时序数据。
-	DataPoints *[]MetricDataPoints `json:"data_points,omitempty"`
+	DataPoints *[]MetricDataPoints `json:"data_points,omitempty" xml:"data_points"`
 }
 
 func (o SampleDataValue) String() string {

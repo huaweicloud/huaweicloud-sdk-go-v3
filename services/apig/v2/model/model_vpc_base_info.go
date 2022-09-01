@@ -9,13 +9,13 @@ import (
 type VpcBaseInfo struct {
 
 	// 云服务器ID
-	EcsId *string `json:"ecs_id,omitempty"`
+	EcsId *string `json:"ecs_id,omitempty" xml:"ecs_id"`
 
 	// 云服务器名称
-	EcsName *string `json:"ecs_name,omitempty"`
+	EcsName *string `json:"ecs_name,omitempty" xml:"ecs_name"`
 
 	// 是否使用级联方式  暂不支持
-	CascadeFlag *bool `json:"cascade_flag,omitempty"`
+	CascadeFlag *bool `json:"cascade_flag,omitempty" xml:"cascade_flag"`
 }
 
 func (o VpcBaseInfo) String() string {

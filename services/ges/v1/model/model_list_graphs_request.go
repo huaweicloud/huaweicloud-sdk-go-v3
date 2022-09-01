@@ -10,10 +10,10 @@ import (
 type ListGraphsRequest struct {
 
 	// 本次请求的起始位置，默认为0。
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty" xml:"offset"`
 
 	// 每页资源数量的最大值，默认为10。
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty" xml:"limit"`
 }
 
 func (o ListGraphsRequest) String() string {

@@ -10,9 +10,9 @@ import (
 type CreateMqsInstanceTopicRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId string `json:"instance_id" xml:"instance_id"`
 
-	Body *CreateMqsInstanceTopicReq `json:"body,omitempty"`
+	Body *CreateMqsInstanceTopicReq `json:"body,omitempty" xml:"body"`
 }
 
 func (o CreateMqsInstanceTopicRequest) String() string {

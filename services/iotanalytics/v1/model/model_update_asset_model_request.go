@@ -10,9 +10,9 @@ import (
 type UpdateAssetModelRequest struct {
 
 	// 模型ID
-	ModelId string `json:"model_id"`
+	ModelId string `json:"model_id" xml:"model_id"`
 
-	Body *AssetModelModRequest `json:"body,omitempty"`
+	Body *AssetModelModRequest `json:"body,omitempty" xml:"body"`
 }
 
 func (o UpdateAssetModelRequest) String() string {

@@ -10,10 +10,10 @@ import (
 type ListComputingResourcesResponse struct {
 
 	// 计算资源总个数。
-	Count *int64 `json:"count,omitempty"`
+	Count *int64 `json:"count,omitempty" xml:"count"`
 
 	// 计算资源列表。
-	ComputingResources *[]ComputingResource `json:"computing_resources,omitempty"`
+	ComputingResources *[]ComputingResource `json:"computing_resources,omitempty" xml:"computing_resources"`
 	HttpStatusCode     int                  `json:"-"`
 }
 

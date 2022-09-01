@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type UpdateLoadbalancerResponse struct {
-	Loadbalancer   *LoadbalancerResp `json:"loadbalancer,omitempty"`
+	Loadbalancer   *LoadbalancerResp `json:"loadbalancer,omitempty" xml:"loadbalancer"`
 	HttpStatusCode int               `json:"-"`
 }
 

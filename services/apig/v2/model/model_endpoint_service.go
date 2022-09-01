@@ -10,10 +10,10 @@ import (
 type EndpointService struct {
 
 	// 终端节点服务名称
-	ServiceName *string `json:"service_name,omitempty"`
+	ServiceName *string `json:"service_name,omitempty" xml:"service_name"`
 
 	// 创建时间
-	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
+	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty" xml:"created_at"`
 }
 
 func (o EndpointService) String() string {

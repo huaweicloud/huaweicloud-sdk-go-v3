@@ -10,13 +10,13 @@ import (
 type ShowTranscodingsTemplateResponse struct {
 
 	// 查询结果的总元素数量
-	Total *int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty" xml:"total"`
 
 	// 播放域名
-	Domain *string `json:"domain,omitempty"`
+	Domain *string `json:"domain,omitempty" xml:"domain"`
 
 	// 转码模板
-	Templates      *[]AppQualityInfo `json:"templates,omitempty"`
+	Templates      *[]AppQualityInfo `json:"templates,omitempty" xml:"templates"`
 	HttpStatusCode int               `json:"-"`
 }
 

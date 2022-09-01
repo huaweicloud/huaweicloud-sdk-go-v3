@@ -10,9 +10,9 @@ import (
 type ListEventsResponse struct {
 
 	// 一条或者多条事件数据。
-	Events *[]EventInfo `json:"events,omitempty"`
+	Events *[]EventInfo `json:"events,omitempty" xml:"events"`
 
-	MetaData       *TotalMetaData `json:"meta_data,omitempty"`
+	MetaData       *TotalMetaData `json:"meta_data,omitempty" xml:"meta_data"`
 	HttpStatusCode int            `json:"-"`
 }
 

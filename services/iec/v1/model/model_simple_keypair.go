@@ -10,16 +10,16 @@ import (
 type SimpleKeypair struct {
 
 	// 密钥名称。
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	//   密钥对应publicKey信息。
-	PublicKey *string `json:"public_key,omitempty"`
+	PublicKey *string `json:"public_key,omitempty" xml:"public_key"`
 
 	// 用户ID。
-	UserId *string `json:"user_id,omitempty"`
+	UserId *string `json:"user_id,omitempty" xml:"user_id"`
 
 	//   密钥对应指纹信息。
-	Fingerprint *string `json:"fingerprint,omitempty"`
+	Fingerprint *string `json:"fingerprint,omitempty" xml:"fingerprint"`
 }
 
 func (o SimpleKeypair) String() string {

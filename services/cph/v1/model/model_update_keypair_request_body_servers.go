@@ -9,10 +9,10 @@ import (
 type UpdateKeypairRequestBodyServers struct {
 
 	// 密钥对名称
-	KeypairName string `json:"keypair_name"`
+	KeypairName string `json:"keypair_name" xml:"keypair_name"`
 
 	// 云手机服务器ID，不得超过32个字节
-	ServerId string `json:"server_id"`
+	ServerId string `json:"server_id" xml:"server_id"`
 }
 
 func (o UpdateKeypairRequestBodyServers) String() string {

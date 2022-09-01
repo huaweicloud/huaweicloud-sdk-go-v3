@@ -9,15 +9,15 @@ import (
 type Resource struct {
 
 	// 资源ID。
-	ResourceId string `json:"resource_id"`
+	ResourceId string `json:"resource_id" xml:"resource_id"`
 
 	// 资源名称。
-	ResourceName *string `json:"resource_name,omitempty"`
+	ResourceName *string `json:"resource_name,omitempty" xml:"resource_name"`
 
-	ResourceDetail *VolumeDetailForTag `json:"resource_detail"`
+	ResourceDetail *VolumeDetailForTag `json:"resource_detail" xml:"resource_detail"`
 
 	// 标签列表。
-	Tags []map[string]string `json:"tags"`
+	Tags []map[string]string `json:"tags" xml:"tags"`
 }
 
 func (o Resource) String() string {

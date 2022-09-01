@@ -10,10 +10,10 @@ import (
 type ShowSqlResultRequest struct {
 
 	// 集群ID。获取方法，请参见[获取集群ID](https://support.huaweicloud.com/api-mrs/mrs_02_9001.html)。
-	ClusterId string `json:"cluster_id"`
+	ClusterId string `json:"cluster_id" xml:"cluster_id"`
 
 	// SQL的执行ID，即提交SQL语句返回结果中的sql_id。
-	SqlId string `json:"sql_id"`
+	SqlId string `json:"sql_id" xml:"sql_id"`
 }
 
 func (o ShowSqlResultRequest) String() string {

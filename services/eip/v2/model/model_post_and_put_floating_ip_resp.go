@@ -13,34 +13,34 @@ import (
 type PostAndPutFloatingIpResp struct {
 
 	// 关联端口的私有IP地址。
-	FixedIpAddress *string `json:"fixed_ip_address,omitempty"`
+	FixedIpAddress *string `json:"fixed_ip_address,omitempty" xml:"fixed_ip_address"`
 
 	// 浮动IP地址。
-	FloatingIpAddress *string `json:"floating_ip_address,omitempty"`
+	FloatingIpAddress *string `json:"floating_ip_address,omitempty" xml:"floating_ip_address"`
 
 	// 外部网络的id。只能使用固定的外网，外部网络的信息请通过GET /v2.0/networks?router:external=True或GET /v2.0/networks?name={floating_network}或neutron net-external-list方式查询。
-	FloatingNetworkId *string `json:"floating_network_id,omitempty"`
+	FloatingNetworkId *string `json:"floating_network_id,omitempty" xml:"floating_network_id"`
 
 	// 浮动IP地址的id。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 端口id。
-	PortId *string `json:"port_id,omitempty"`
+	PortId *string `json:"port_id,omitempty" xml:"port_id"`
 
 	// 所属路由器id。
-	RouterId *string `json:"router_id,omitempty"`
+	RouterId *string `json:"router_id,omitempty" xml:"router_id"`
 
 	// 网络状态，可以为ACTIVE， DOWN或ERROR。  DOWN：未绑定  ACTIVE：绑定  ERROR：异常
-	Status *PostAndPutFloatingIpRespStatus `json:"status,omitempty"`
+	Status *PostAndPutFloatingIpRespStatus `json:"status,omitempty" xml:"status"`
 
 	// 项目id。
-	TenantId *string `json:"tenant_id,omitempty"`
+	TenantId *string `json:"tenant_id,omitempty" xml:"tenant_id"`
 
 	// DNS名称(目前仅广州局点支持)
-	DnsName *string `json:"dns_name,omitempty"`
+	DnsName *string `json:"dns_name,omitempty" xml:"dns_name"`
 
 	// DNS域地址(目前仅广州局点支持)
-	DnsDomain *string `json:"dns_domain,omitempty"`
+	DnsDomain *string `json:"dns_domain,omitempty" xml:"dns_domain"`
 }
 
 func (o PostAndPutFloatingIpResp) String() string {

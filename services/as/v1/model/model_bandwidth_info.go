@@ -13,16 +13,16 @@ import (
 type BandwidthInfo struct {
 
 	// 带宽（Mbit/s），按带宽分配取值范围为[1,2000]，按流量分配取值范围为[1,300]。  说明： - 若share_type是PER，该参数为必选项。若share_type是WHOLE，会忽略该参数。 - 具体范围以各区域配置为准，请参见控制台对应页面显示。 - 创建带宽时的最小单位会根据带宽取值范围不同存在差异。 - 小于等于300Mbit/s：默认最小单位为1Mbit/s。 - 300Mbit/s~1000Mbit/s：默认最小单位为50Mbit/s。 - 大于1000Mbit/s：默认最小单位为500Mbit/s。
-	Size *int32 `json:"size,omitempty"`
+	Size *int32 `json:"size,omitempty" xml:"size"`
 
 	// 带宽的共享类型。共享类型枚举：PER：独享型。WHOLE：共享型。
-	ShareType BandwidthInfoShareType `json:"share_type"`
+	ShareType BandwidthInfoShareType `json:"share_type" xml:"share_type"`
 
 	// 带宽的计费类型。字段值为“bandwidth”，表示按带宽计费。字段值为“traffic”，表示按流量计费。字段为其它值，会导致创建云服务器失败。如果share_type是PER，该参数为必选项。如果share_type是WHOLE，会忽略该参数。
-	ChargingMode *BandwidthInfoChargingMode `json:"charging_mode,omitempty"`
+	ChargingMode *BandwidthInfoChargingMode `json:"charging_mode,omitempty" xml:"charging_mode"`
 
 	// 带宽ID，使用共享型带宽时，可以选择之前创建的共享带宽来创建弹性IP。如果share_type是PER，会忽略该参数。如果share_type是WHOLE，该参数为必选项。
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 }
 
 func (o BandwidthInfo) String() string {

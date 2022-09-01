@@ -10,10 +10,10 @@ import (
 type ListTaskHistoriesResponse struct {
 
 	// 历史扫描任务总数
-	Total *int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty" xml:"total"`
 
 	// 历史扫描任务列表
-	Data           *[]ShowTasksResponseBody `json:"data,omitempty"`
+	Data           *[]ShowTasksResponseBody `json:"data,omitempty" xml:"data"`
 	HttpStatusCode int                      `json:"-"`
 }
 

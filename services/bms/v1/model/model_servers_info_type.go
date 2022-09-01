@@ -13,10 +13,10 @@ import (
 type ServersInfoType struct {
 
 	// 重启类型：SOFT：普通重启。HARD：强制重启。
-	Type ServersInfoTypeType `json:"type"`
+	Type ServersInfoTypeType `json:"type" xml:"type"`
 
 	// 裸金属服务器ID列表，详情请参见表3 servers字段数据结构说明。
-	Servers []ServersList `json:"servers"`
+	Servers []ServersList `json:"servers" xml:"servers"`
 }
 
 func (o ServersInfoType) String() string {

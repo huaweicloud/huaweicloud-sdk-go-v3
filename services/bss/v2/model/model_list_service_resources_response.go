@@ -10,10 +10,10 @@ import (
 type ListServiceResourcesResponse struct {
 
 	// 总数。
-	TotalCount *int32 `json:"total_count,omitempty"`
+	TotalCount *int32 `json:"total_count,omitempty" xml:"total_count"`
 
 	// 资源基本信息列表，具体请参见表3。
-	Infos          *[]ServiceResourceInfo `json:"infos,omitempty"`
+	Infos          *[]ServiceResourceInfo `json:"infos,omitempty" xml:"infos"`
 	HttpStatusCode int                    `json:"-"`
 }
 

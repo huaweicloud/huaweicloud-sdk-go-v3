@@ -13,19 +13,19 @@ import (
 type SourceDbInfo struct {
 
 	// 连接字符串。
-	ConnectionString string `json:"connection_string"`
+	ConnectionString string `json:"connection_string" xml:"connection_string"`
 
 	// 用户名。
-	UserName string `json:"user_name"`
+	UserName string `json:"user_name" xml:"user_name"`
 
 	// 用户密码。
-	Password string `json:"password"`
+	Password string `json:"password" xml:"password"`
 
 	// 数据库类型。
-	SourceDbType SourceDbInfoSourceDbType `json:"source_db_type"`
+	SourceDbType SourceDbInfoSourceDbType `json:"source_db_type" xml:"source_db_type"`
 
 	// 数据库版本。 （注意：该字段的值是数据库类型source_db_type对应的版本，当前支持以下组合： ORACLE-11g； ORACLE-12c； ORACLE-18c； ORACLE-19c。）
-	SourceDbVersion SourceDbInfoSourceDbVersion `json:"source_db_version"`
+	SourceDbVersion SourceDbInfoSourceDbVersion `json:"source_db_version" xml:"source_db_version"`
 }
 
 func (o SourceDbInfo) String() string {

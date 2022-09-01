@@ -8,9 +8,9 @@ import (
 
 // 自定义指标参数
 type IndicatorParam struct {
-	CustomizeParameter *CustomizeParameter `json:"customize_parameter,omitempty"`
+	CustomizeParameter *CustomizeParameter `json:"customize_parameter,omitempty" xml:"customize_parameter"`
 
-	CustomizeFormula *CustomizeFormula `json:"customize_formula,omitempty"`
+	CustomizeFormula *CustomizeFormula `json:"customize_formula,omitempty" xml:"customize_formula"`
 }
 
 func (o IndicatorParam) String() string {

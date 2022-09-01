@@ -8,7 +8,7 @@ import (
 
 //
 type CreateMfaDeviceReq struct {
-	VirtualMfaDevice *CreateMfaDevice `json:"virtual_mfa_device"`
+	VirtualMfaDevice *CreateMfaDevice `json:"virtual_mfa_device" xml:"virtual_mfa_device"`
 }
 
 func (o CreateMfaDeviceReq) String() string {

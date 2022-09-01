@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowLogBackupResponse struct {
-	LogList        *[]LogList `json:"logList,omitempty"`
+	LogList        *[]LogList `json:"logList,omitempty" xml:"logList"`
 	HttpStatusCode int        `json:"-"`
 }
 

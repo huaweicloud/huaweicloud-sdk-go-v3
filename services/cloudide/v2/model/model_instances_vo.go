@@ -12,87 +12,87 @@ import (
 type InstancesVo struct {
 
 	// cpu架构 x86|arm
-	Arch *InstancesVoArch `json:"arch,omitempty"`
+	Arch *InstancesVoArch `json:"arch,omitempty" xml:"arch"`
 
-	Attributes *Attributes `json:"attributes,omitempty"`
+	Attributes *Attributes `json:"attributes,omitempty" xml:"attributes"`
 
 	// cpu规格.arm架构支持4U8G，x86架构支持1U1G,2U4G,2U8G 与技术栈配置的规格对应，可通过技术栈管理ListStacks接口获取。如果标签不为空，以标签配置的技术栈规格为准。 quantum技术栈，x86架构cpu规格为2U8G;其他技术栈，x86架构cpu规格为1U1G,2U4G
-	CpuMemory *InstancesVoCpuMemory `json:"cpu_memory,omitempty"`
+	CpuMemory *InstancesVoCpuMemory `json:"cpu_memory,omitempty" xml:"cpu_memory"`
 
 	// 创建时间
-	CreatedTime *string `json:"created_time,omitempty"`
+	CreatedTime *string `json:"created_time,omitempty" xml:"created_time"`
 
 	// 描述
-	Description *string `json:"description,omitempty"`
+	Description *string `json:"description,omitempty" xml:"description"`
 
 	// 实例名。 可以输入中文、数字、字母、下划线、点、破折号。长度介于3-100之间
-	DisplayName *string `json:"display_name,omitempty"`
+	DisplayName *string `json:"display_name,omitempty" xml:"display_name"`
 
 	// 租户名
-	DomainName *string `json:"domain_name,omitempty"`
+	DomainName *string `json:"domain_name,omitempty" xml:"domain_name"`
 
 	// id
-	Id *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty" xml:"id"`
 
 	// 是否页面显示（以标签配置为准）
-	IsTemporary *bool `json:"is_temporary,omitempty"`
+	IsTemporary *bool `json:"is_temporary,omitempty" xml:"is_temporary"`
 
 	// 标签
-	Label *string `json:"label,omitempty"`
+	Label *string `json:"label,omitempty" xml:"label"`
 
 	// 链接
-	Link *string `json:"link,omitempty"`
+	Link *string `json:"link,omitempty" xml:"link"`
 
 	// 名称
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name"`
 
 	// 租户id（对应华为云帐号的domainId）
-	OrganizationId *string `json:"organization_id,omitempty"`
+	OrganizationId *string `json:"organization_id,omitempty" xml:"organization_id"`
 
 	// 用户id
-	OwnerId *string `json:"owner_id,omitempty"`
+	OwnerId *string `json:"owner_id,omitempty" xml:"owner_id"`
 
 	// 用户名
-	OwnerName *string `json:"owner_name,omitempty"`
+	OwnerName *string `json:"owner_name,omitempty" xml:"owner_name"`
 
 	// 平台ID
-	PlatformId *int64 `json:"platform_id,omitempty"`
+	PlatformId *int64 `json:"platform_id,omitempty" xml:"platform_id"`
 
 	// 是否私有平台
-	Private *bool `json:"private,omitempty"`
+	Private *bool `json:"private,omitempty" xml:"private"`
 
 	// PVC规格 5GB|10GB|20GB
-	PvcQuantity *InstancesVoPvcQuantity `json:"pvc_quantity,omitempty"`
+	PvcQuantity *InstancesVoPvcQuantity `json:"pvc_quantity,omitempty" xml:"pvc_quantity"`
 
 	// 自动休眠时长。 arm架构,自动休眠时长只能设置成30，60。x86架构可取值为30，60，240，1440和-1。除-1外，其它值的单位为“分钟”。实例无操作超过自动休眠时长后，将会被暂停（已保存的数据不会被删除）。-1表示实例不会自动停止
-	RefreshInterval *int64 `json:"refresh_interval,omitempty"`
+	RefreshInterval *int64 `json:"refresh_interval,omitempty" xml:"refresh_interval"`
 
 	// 区域
-	Region *string `json:"region,omitempty"`
+	Region *string `json:"region,omitempty" xml:"region"`
 
 	// server
-	ServerMap map[string]string `json:"server_map,omitempty"`
+	ServerMap map[string]string `json:"server_map,omitempty" xml:"server_map"`
 
 	// 服务链接
-	ServerUrl *string `json:"server_url,omitempty"`
+	ServerUrl *string `json:"server_url,omitempty" xml:"server_url"`
 
 	// 技术栈ID，通过技术栈管理ListStacks接口获取。
-	StackId *string `json:"stack_id,omitempty"`
+	StackId *string `json:"stack_id,omitempty" xml:"stack_id"`
 
 	// 实例状态 。 - INIT 初始化 - STARTING 启动中 - RUNNING 运行中 - STOPPING 停止中 - STOPPED 已停止 - DELETING 删除中 - DELETED 已删除 - DELETE_FAILED 删除失败
-	Status *InstancesVoStatus `json:"status,omitempty"`
+	Status *InstancesVoStatus `json:"status,omitempty" xml:"status"`
 
 	// 更新时间
-	UpdatedTime *string `json:"updated_time,omitempty"`
+	UpdatedTime *string `json:"updated_time,omitempty" xml:"updated_time"`
 
 	// 访问者id
-	VisitorId *string `json:"visitor_id,omitempty"`
+	VisitorId *string `json:"visitor_id,omitempty" xml:"visitor_id"`
 
 	// 访问者名称
-	VisitorName *string `json:"visitor_name,omitempty"`
+	VisitorName *string `json:"visitor_name,omitempty" xml:"visitor_name"`
 
 	// 访问者租户名称
-	VisitorDomainName *string `json:"visitor_domain_name,omitempty"`
+	VisitorDomainName *string `json:"visitor_domain_name,omitempty" xml:"visitor_domain_name"`
 }
 
 func (o InstancesVo) String() string {

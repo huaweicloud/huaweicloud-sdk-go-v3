@@ -10,34 +10,34 @@ import (
 type GetDatabaseResponseBean struct {
 
 	// 逻辑库名称。
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 逻辑库的创建时间。
-	Created string `json:"created"`
+	Created string `json:"created" xml:"created"`
 
 	// 状态。
-	Status string `json:"status"`
+	Status string `json:"status" xml:"status"`
 
 	// DDM实例最后更新时间。
-	Updated string `json:"updated"`
+	Updated string `json:"updated" xml:"updated"`
 
 	// 逻辑库分片的详细信息。
-	Databases []GetDatabases `json:"databases"`
+	Databases []GetDatabases `json:"databases" xml:"databases"`
 
 	// 逻辑库的工作模式。  - cluster表示逻辑库是拆分模式。 - single表示逻辑库是非拆分模式。
-	ShardMode string `json:"shard_mode"`
+	ShardMode string `json:"shard_mode" xml:"shard_mode"`
 
 	// 同一种工作模式下逻辑库分片的数量。
-	ShardNumber int32 `json:"shard_number"`
+	ShardNumber int32 `json:"shard_number" xml:"shard_number"`
 
 	// 单个RDS上的逻辑库分片数。
-	ShardUnit int32 `json:"shard_unit"`
+	ShardUnit int32 `json:"shard_unit" xml:"shard_unit"`
 
 	// 连接逻辑库使用的IP:端口。
-	DataVips []string `json:"dataVips"`
+	DataVips []string `json:"dataVips" xml:"dataVips"`
 
 	// 关联RDS
-	UsedRds []GetDatabaseUsedRds `json:"used_rds"`
+	UsedRds []GetDatabaseUsedRds `json:"used_rds" xml:"used_rds"`
 }
 
 func (o GetDatabaseResponseBean) String() string {

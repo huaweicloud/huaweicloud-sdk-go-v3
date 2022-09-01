@@ -10,10 +10,10 @@ import (
 type UserTag struct {
 
 	// 云服务器标签的键。不得以\"CCE-\"或\"__type_baremetal\"开头
-	Key *string `json:"key,omitempty"`
+	Key *string `json:"key,omitempty" xml:"key"`
 
 	// 云服务器标签的值
-	Value *string `json:"value,omitempty"`
+	Value *string `json:"value,omitempty" xml:"value"`
 }
 
 func (o UserTag) String() string {

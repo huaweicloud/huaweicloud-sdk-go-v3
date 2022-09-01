@@ -13,10 +13,10 @@ import (
 type ListUsersRequest struct {
 
 	// 请求语言类型
-	XLanguage *ListUsersRequestXLanguage `json:"X-Language,omitempty"`
+	XLanguage *ListUsersRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
 
 	// 任务ID
-	JobId string `json:"job_id"`
+	JobId string `json:"job_id" xml:"job_id"`
 }
 
 func (o ListUsersRequest) String() string {

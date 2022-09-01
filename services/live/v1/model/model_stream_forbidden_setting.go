@@ -10,16 +10,16 @@ import (
 type StreamForbiddenSetting struct {
 
 	// 推流域名
-	Domain string `json:"domain"`
+	Domain string `json:"domain" xml:"domain"`
 
 	// 流应用名称
-	AppName string `json:"app_name"`
+	AppName string `json:"app_name" xml:"app_name"`
 
 	// 流名称
-	StreamName string `json:"stream_name"`
+	StreamName string `json:"stream_name" xml:"stream_name"`
 
 	// 恢复流时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间，不指定则默认7天，最大禁推为90天
-	ResumeTime *sdktime.SdkTime `json:"resume_time,omitempty"`
+	ResumeTime *sdktime.SdkTime `json:"resume_time,omitempty" xml:"resume_time"`
 }
 
 func (o StreamForbiddenSetting) String() string {

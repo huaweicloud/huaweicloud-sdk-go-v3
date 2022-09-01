@@ -13,33 +13,33 @@ import (
 type OperationState struct {
 
 	// Action执行模式，支持串行，并行两种模式，默认串行
-	ActionMode *OperationStateActionMode `json:"action_mode,omitempty"`
+	ActionMode *OperationStateActionMode `json:"action_mode,omitempty" xml:"action_mode"`
 
 	// 节点中要执行的操作列表
-	Actions []Action `json:"actions"`
+	Actions []Action `json:"actions" xml:"actions"`
 
 	// 错误处理策略
-	OnErrors *[]OnError `json:"on_errors,omitempty"`
+	OnErrors *[]OnError `json:"on_errors,omitempty" xml:"on_errors"`
 
 	// 节点ID，需要在当前函数流中唯一
-	Id string `json:"id"`
+	Id string `json:"id" xml:"id"`
 
 	// 节点名称
-	Name string `json:"name"`
+	Name string `json:"name" xml:"name"`
 
 	// 节点类型
-	Type OperationStateType `json:"type"`
+	Type OperationStateType `json:"type" xml:"type"`
 
 	// 是否是结束节点
-	End bool `json:"end"`
+	End bool `json:"end" xml:"end"`
 
 	// 下一步骤节点ID
-	Transition string `json:"transition"`
+	Transition string `json:"transition" xml:"transition"`
 
-	StateDataFilter *StateDataFilter `json:"state_data_filter,omitempty"`
+	StateDataFilter *StateDataFilter `json:"state_data_filter,omitempty" xml:"state_data_filter"`
 
 	// 时间等待节点等待时间（秒）,节点类型为Sleep时为必填，节点类型不为Sleep时无效
-	Duration *int64 `json:"duration,omitempty"`
+	Duration *int64 `json:"duration,omitempty" xml:"duration"`
 }
 
 func (o OperationState) String() string {

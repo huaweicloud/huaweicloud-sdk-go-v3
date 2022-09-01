@@ -10,16 +10,16 @@ import (
 type BatchFailure struct {
 
 	// 操作失败的API ID
-	ApiId *string `json:"api_id,omitempty"`
+	ApiId *string `json:"api_id,omitempty" xml:"api_id"`
 
 	// 操作失败的APi名称
-	ApiName *string `json:"api_name,omitempty"`
+	ApiName *string `json:"api_name,omitempty" xml:"api_name"`
 
 	// 操作失败的错误码
-	ErrorCode *string `json:"error_code,omitempty"`
+	ErrorCode *string `json:"error_code,omitempty" xml:"error_code"`
 
 	// 操作失败的错误信息
-	ErrorMsg *string `json:"error_msg,omitempty"`
+	ErrorMsg *string `json:"error_msg,omitempty" xml:"error_msg"`
 }
 
 func (o BatchFailure) String() string {

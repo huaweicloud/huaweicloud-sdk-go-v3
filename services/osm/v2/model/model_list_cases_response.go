@@ -10,10 +10,10 @@ import (
 type ListCasesResponse struct {
 
 	// 总数
-	TotalCount *int32 `json:"total_count,omitempty"`
+	TotalCount *int32 `json:"total_count,omitempty" xml:"total_count"`
 
 	// 工单列表
-	IncidentInfoList *[]IncidentInfoV2 `json:"incident_info_list,omitempty"`
+	IncidentInfoList *[]IncidentInfoV2 `json:"incident_info_list,omitempty" xml:"incident_info_list"`
 	HttpStatusCode   int               `json:"-"`
 }
 
