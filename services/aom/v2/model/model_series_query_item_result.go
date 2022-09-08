@@ -10,19 +10,19 @@ import (
 type SeriesQueryItemResult struct {
 
 	// 命名空间。
-	Namespace *string `json:"namespace,omitempty" xml:"namespace"`
+	Namespace *string `json:"namespace,omitempty"`
 
 	// 维度列表。
-	Dimensions *[]DimensionSeries `json:"dimensions,omitempty" xml:"dimensions"`
+	Dimensions *[]DimensionSeries `json:"dimensions,omitempty"`
 
 	// 时间序列名称。
-	MetricName *string `json:"metric_name,omitempty" xml:"metric_name"`
+	MetricName *string `json:"metric_name,omitempty"`
 
 	// 时间序列单位。
-	Unit *string `json:"unit,omitempty" xml:"unit"`
+	Unit *string `json:"unit,omitempty"`
 
 	// 时间序列哈希值。
-	DimensionValueHash *string `json:"dimension_value_hash,omitempty" xml:"dimension_value_hash"`
+	DimensionValueHash *string `json:"dimension_value_hash,omitempty"`
 }
 
 func (o SeriesQueryItemResult) String() string {

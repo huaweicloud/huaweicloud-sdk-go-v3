@@ -10,10 +10,10 @@ import (
 type TaurusModifyProxyWeightRequest struct {
 
 	// 主节点权重
-	MasterWeight *int32 `json:"master_weight,omitempty" xml:"master_weight"`
+	MasterWeight *int32 `json:"master_weight,omitempty"`
 
 	// 只读节点权重配置信息
-	ReadonlyNodes *[]TaurusModifyProxyWeightReadonlyNode `json:"readonly_nodes,omitempty" xml:"readonly_nodes"`
+	ReadonlyNodes *[]TaurusModifyProxyWeightReadonlyNode `json:"readonly_nodes,omitempty"`
 }
 
 func (o TaurusModifyProxyWeightRequest) String() string {

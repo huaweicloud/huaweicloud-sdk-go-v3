@@ -8,7 +8,7 @@ import (
 
 //
 type UpdateAgencyRequestBody struct {
-	Agency *UpdateAgencyOption `json:"agency" xml:"agency"`
+	Agency *UpdateAgencyOption `json:"agency"`
 }
 
 func (o UpdateAgencyRequestBody) String() string {

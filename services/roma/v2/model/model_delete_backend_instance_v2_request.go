@@ -10,13 +10,13 @@ import (
 type DeleteBackendInstanceV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// VPC通道的编号
-	VpcChannelId string `json:"vpc_channel_id" xml:"vpc_channel_id"`
+	VpcChannelId string `json:"vpc_channel_id"`
 
 	// 后端实例对象的编号
-	MemberId string `json:"member_id" xml:"member_id"`
+	MemberId string `json:"member_id"`
 }
 
 func (o DeleteBackendInstanceV2Request) String() string {

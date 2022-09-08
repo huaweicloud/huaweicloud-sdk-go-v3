@@ -10,7 +10,7 @@ import (
 type UpdateDeploymentHostResponse struct {
 
 	// 主机id
-	HostId         *string `json:"host_id,omitempty" xml:"host_id"`
+	HostId         *string `json:"host_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

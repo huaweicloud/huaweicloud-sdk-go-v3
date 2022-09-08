@@ -10,13 +10,13 @@ import (
 type CommandBody struct {
 
 	// 命令名称，分为：START、STOP、DELETE、SYNC、UPLOAD_LOG、RSET_LOG_ACL
-	CommandName string `json:"command_name" xml:"command_name"`
+	CommandName string `json:"command_name"`
 
 	// 命令执行结果  success代表执行命令成功  fail代表命令执行失败
-	Result string `json:"result" xml:"result"`
+	Result string `json:"result"`
 
 	// JSON格式的命令执行结果，只用于保存数据库，没有其他作用
-	ResultDetail *interface{} `json:"result_detail" xml:"result_detail"`
+	ResultDetail *interface{} `json:"result_detail"`
 }
 
 func (o CommandBody) String() string {

@@ -10,15 +10,15 @@ import (
 type UpdateTaskStatusResponse struct {
 
 	// code
-	Code *string `json:"code,omitempty" xml:"code"`
+	Code *string `json:"code,omitempty"`
 
 	// message
-	Message *string `json:"message,omitempty" xml:"message"`
+	Message *string `json:"message,omitempty"`
 
 	// extend
-	Extend *string `json:"extend,omitempty" xml:"extend"`
+	Extend *string `json:"extend,omitempty"`
 
-	Result         *UpdateTaskStatusResult `json:"result,omitempty" xml:"result"`
+	Result         *UpdateTaskStatusResult `json:"result,omitempty"`
 	HttpStatusCode int                     `json:"-"`
 }
 

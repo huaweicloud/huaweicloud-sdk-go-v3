@@ -10,9 +10,9 @@ import (
 type CreateSecretRequest struct {
 
 	// 铂金版实例ID，专业版实例为空值
-	IefInstanceId *string `json:"ief-instance-id,omitempty" xml:"ief-instance-id"`
+	IefInstanceId *string `json:"ief-instance-id,omitempty"`
 
-	Body *Secret `json:"body,omitempty" xml:"body"`
+	Body *Secret `json:"body,omitempty"`
 }
 
 func (o CreateSecretRequest) String() string {

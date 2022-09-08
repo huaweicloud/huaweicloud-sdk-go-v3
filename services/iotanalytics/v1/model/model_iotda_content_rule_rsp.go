@@ -10,13 +10,13 @@ import (
 type IotdaContentRuleRsp struct {
 
 	// IoTDA中的资源空间Id
-	AppId string `json:"app_id" xml:"app_id"`
+	AppId string `json:"app_id"`
 
 	// IoTDA中某资源空间Id下的产品列表
-	Products []string `json:"products" xml:"products"`
+	Products []string `json:"products"`
 
 	// IoTDA中rule_id和action_id列表
-	RuleActions []IotdaRuleAction `json:"rule_actions" xml:"rule_actions"`
+	RuleActions []IotdaRuleAction `json:"rule_actions"`
 }
 
 func (o IotdaContentRuleRsp) String() string {

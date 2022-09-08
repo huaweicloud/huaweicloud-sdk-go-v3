@@ -9,7 +9,7 @@ import (
 type ServerOsSchedulerHints struct {
 
 	// 反亲和性组信息。  UUID格式。
-	Group *[]string `json:"group,omitempty" xml:"group"`
+	Group *[]string `json:"group,omitempty"`
 }
 
 func (o ServerOsSchedulerHints) String() string {

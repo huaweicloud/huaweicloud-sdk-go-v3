@@ -10,10 +10,10 @@ import (
 type UpdateResWorkspaceRequestBody struct {
 
 	// 工作空间名称，1-64位数字、字母、下划线、中划线组成，支持中文，不能以 - 结尾。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 描述。
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 }
 
 func (o UpdateResWorkspaceRequestBody) String() string {

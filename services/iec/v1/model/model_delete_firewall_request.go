@@ -10,7 +10,7 @@ import (
 type DeleteFirewallRequest struct {
 
 	// 网络ACL ID
-	FirewallId string `json:"firewall_id" xml:"firewall_id"`
+	FirewallId string `json:"firewall_id"`
 }
 
 func (o DeleteFirewallRequest) String() string {

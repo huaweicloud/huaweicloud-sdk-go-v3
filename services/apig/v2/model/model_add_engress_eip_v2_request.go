@@ -10,9 +10,9 @@ import (
 type AddEngressEipV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
-	Body *OpenEngressEipReq `json:"body,omitempty" xml:"body"`
+	Body *OpenEngressEipReq `json:"body,omitempty"`
 }
 
 func (o AddEngressEipV2Request) String() string {

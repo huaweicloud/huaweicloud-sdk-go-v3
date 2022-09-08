@@ -10,9 +10,9 @@ import (
 type UpdateLogSettingRequest struct {
 
 	// 指定更改日志基础配置的集群ID。
-	ClusterId string `json:"cluster_id" xml:"cluster_id"`
+	ClusterId string `json:"cluster_id"`
 
-	Body *UpdateLogSettingReq `json:"body,omitempty" xml:"body"`
+	Body *UpdateLogSettingReq `json:"body,omitempty"`
 }
 
 func (o UpdateLogSettingRequest) String() string {

@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type UpdateNatGatewaySnatRuleResponse struct {
-	SnatRule       *NatGatewaySnatRuleResponseBody `json:"snat_rule,omitempty" xml:"snat_rule"`
+	SnatRule       *NatGatewaySnatRuleResponseBody `json:"snat_rule,omitempty"`
 	HttpStatusCode int                             `json:"-"`
 }
 

@@ -9,7 +9,7 @@ import (
 type CciDeploymentJobsParam struct {
 
 	// 软件包或者镜像地址
-	Image *string `json:"image,omitempty" xml:"image"`
+	Image *string `json:"image,omitempty"`
 }
 
 func (o CciDeploymentJobsParam) String() string {

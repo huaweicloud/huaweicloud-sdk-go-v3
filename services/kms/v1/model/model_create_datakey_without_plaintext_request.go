@@ -10,9 +10,9 @@ import (
 type CreateDatakeyWithoutPlaintextRequest struct {
 
 	// API版本号
-	VersionId string `json:"version_id" xml:"version_id"`
+	VersionId string `json:"version_id"`
 
-	Body *CreateDatakeyRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreateDatakeyRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateDatakeyWithoutPlaintextRequest) String() string {

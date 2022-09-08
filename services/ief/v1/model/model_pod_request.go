@@ -8,15 +8,15 @@ import (
 
 // 应用部署模板
 type PodRequest struct {
-	Configs *PodConfigs `json:"configs" xml:"configs"`
+	Configs *PodConfigs `json:"configs"`
 
-	Affinity *Affinity `json:"affinity,omitempty" xml:"affinity"`
+	Affinity *Affinity `json:"affinity,omitempty"`
 
 	// 应用部署init业务容器
-	InitContainers *[]ContainerDef `json:"init_containers,omitempty" xml:"init_containers"`
+	InitContainers *[]ContainerDef `json:"init_containers,omitempty"`
 
 	// 应用部署业务容器
-	Containers []ContainerDef `json:"containers" xml:"containers"`
+	Containers []ContainerDef `json:"containers"`
 }
 
 func (o PodRequest) String() string {

@@ -10,7 +10,7 @@ import (
 type Deduplication struct {
 
 	// 属性。
-	Attributes *[]string `json:"attributes,omitempty" xml:"attributes"`
+	Attributes *[]string `json:"attributes,omitempty"`
 }
 
 func (o Deduplication) String() string {

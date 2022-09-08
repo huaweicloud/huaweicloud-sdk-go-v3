@@ -10,9 +10,9 @@ import (
 type UpdateAddonInstanceRequest struct {
 
 	// 插件实例id
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
-	Body *InstanceRequest `json:"body,omitempty" xml:"body"`
+	Body *InstanceRequest `json:"body,omitempty"`
 }
 
 func (o UpdateAddonInstanceRequest) String() string {

@@ -10,9 +10,9 @@ import (
 type CreateSecretTagRequest struct {
 
 	// 凭据ID
-	SecretId string `json:"secret_id" xml:"secret_id"`
+	SecretId string `json:"secret_id"`
 
-	Body *CreateSecretTagRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreateSecretTagRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateSecretTagRequest) String() string {

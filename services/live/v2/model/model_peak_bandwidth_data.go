@@ -9,10 +9,10 @@ import (
 type PeakBandwidthData struct {
 
 	// 带宽峰值，单位为bps。
-	Value *int64 `json:"value,omitempty" xml:"value"`
+	Value *int64 `json:"value,omitempty"`
 
 	// 播放域名。
-	Domain *string `json:"domain,omitempty" xml:"domain"`
+	Domain *string `json:"domain,omitempty"`
 }
 
 func (o PeakBandwidthData) String() string {

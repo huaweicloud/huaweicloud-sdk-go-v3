@@ -10,19 +10,19 @@ import (
 type TagFieldsInfo struct {
 
 	// 字段名称
-	FieldName *string `json:"fieldName,omitempty" xml:"fieldName"`
+	FieldName *string `json:"fieldName,omitempty"`
 
 	// 字段类型
-	Type *string `json:"type,omitempty" xml:"type"`
+	Type *string `json:"type,omitempty"`
 
 	// 内容
-	Content *string `json:"content,omitempty" xml:"content"`
+	Content *string `json:"content,omitempty"`
 
 	// 是否解析
-	IsAnalysis *bool `json:"isAnalysis,omitempty" xml:"isAnalysis"`
+	IsAnalysis *bool `json:"isAnalysis,omitempty"`
 
 	// 字段名称
-	Index *int32 `json:"index,omitempty" xml:"index"`
+	Index *int32 `json:"index,omitempty"`
 }
 
 func (o TagFieldsInfo) String() string {

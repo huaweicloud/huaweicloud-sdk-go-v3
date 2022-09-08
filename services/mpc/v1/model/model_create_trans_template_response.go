@@ -10,7 +10,7 @@ import (
 type CreateTransTemplateResponse struct {
 
 	// 自定义转码模板编号。
-	TemplateId     *int32 `json:"template_id,omitempty" xml:"template_id"`
+	TemplateId     *int32 `json:"template_id,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

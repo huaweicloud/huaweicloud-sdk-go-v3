@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateLoadbalancerRequest struct {
-	Body *CreateLoadbalancerRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreateLoadbalancerRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateLoadbalancerRequest) String() string {

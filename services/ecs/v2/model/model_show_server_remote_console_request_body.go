@@ -8,7 +8,7 @@ import (
 
 // This is a auto create Body Object
 type ShowServerRemoteConsoleRequestBody struct {
-	RemoteConsole *GetServerRemoteConsoleOption `json:"remote_console" xml:"remote_console"`
+	RemoteConsole *GetServerRemoteConsoleOption `json:"remote_console"`
 }
 
 func (o ShowServerRemoteConsoleRequestBody) String() string {

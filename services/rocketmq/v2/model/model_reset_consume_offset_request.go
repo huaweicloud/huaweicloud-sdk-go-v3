@@ -13,15 +13,15 @@ import (
 type ResetConsumeOffsetRequest struct {
 
 	// 引擎类型：reliability。
-	Engine ResetConsumeOffsetRequestEngine `json:"engine" xml:"engine"`
+	Engine ResetConsumeOffsetRequestEngine `json:"engine"`
 
 	// 实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 消费组名称。
-	GroupId string `json:"group_id" xml:"group_id"`
+	GroupId string `json:"group_id"`
 
-	Body *ResetConsumeOffsetReq `json:"body,omitempty" xml:"body"`
+	Body *ResetConsumeOffsetReq `json:"body,omitempty"`
 }
 
 func (o ResetConsumeOffsetRequest) String() string {

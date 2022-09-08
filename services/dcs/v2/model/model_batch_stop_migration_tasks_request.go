@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type BatchStopMigrationTasksRequest struct {
-	Body *BatchStopMigrationTasksBody `json:"body,omitempty" xml:"body"`
+	Body *BatchStopMigrationTasksBody `json:"body,omitempty"`
 }
 
 func (o BatchStopMigrationTasksRequest) String() string {

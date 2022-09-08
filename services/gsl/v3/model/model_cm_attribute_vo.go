@@ -10,25 +10,25 @@ import (
 type CmAttributeVo struct {
 
 	// 自定义属性标识
-	Id *int64 `json:"id,omitempty" xml:"id"`
+	Id *int64 `json:"id,omitempty"`
 
 	// 默认属性名称中文
-	DefaultAttrNameCn *string `json:"default_attr_name_cn,omitempty" xml:"default_attr_name_cn"`
+	DefaultAttrNameCn *string `json:"default_attr_name_cn,omitempty"`
 
 	// 默认属性名称英文
-	DefaultAttrNameEn *string `json:"default_attr_name_en,omitempty" xml:"default_attr_name_en"`
+	DefaultAttrNameEn *string `json:"default_attr_name_en,omitempty"`
 
 	// 自定义属性名称
-	CustAttrName *string `json:"cust_attr_name,omitempty" xml:"cust_attr_name"`
+	CustAttrName *string `json:"cust_attr_name,omitempty"`
 
 	// 自定义属性状态：0 未启用，1 已启用。
-	Status *int32 `json:"status,omitempty" xml:"status"`
+	Status *int32 `json:"status,omitempty"`
 
 	// 创建时间
-	CreateTime *sdktime.SdkTime `json:"create_time,omitempty" xml:"create_time"`
+	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
 
 	// 更新时间
-	ModifyTime *sdktime.SdkTime `json:"modify_time,omitempty" xml:"modify_time"`
+	ModifyTime *sdktime.SdkTime `json:"modify_time,omitempty"`
 }
 
 func (o CmAttributeVo) String() string {

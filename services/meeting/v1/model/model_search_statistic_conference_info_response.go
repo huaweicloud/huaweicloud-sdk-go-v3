@@ -10,16 +10,16 @@ import (
 type SearchStatisticConferenceInfoResponse struct {
 
 	// 总记录数。
-	Count *int32 `json:"count,omitempty" xml:"count"`
+	Count *int32 `json:"count,omitempty"`
 
 	// 查询条目数量。
-	Limit *int32 `json:"limit,omitempty" xml:"limit"`
+	Limit *int32 `json:"limit,omitempty"`
 
 	// 查询偏移量。
-	Offset *int32 `json:"offset,omitempty" xml:"offset"`
+	Offset *int32 `json:"offset,omitempty"`
 
 	// 会议总体数据按时间点统计的查询结果数组。
-	Data           *[]StatisticConferenceDataItem `json:"data,omitempty" xml:"data"`
+	Data           *[]StatisticConferenceDataItem `json:"data,omitempty"`
 	HttpStatusCode int                            `json:"-"`
 }
 

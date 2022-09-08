@@ -10,7 +10,7 @@ import (
 type StartDatabaseProxyResponse struct {
 
 	// 工作流ID
-	WorkflowId     *string `json:"workflow_id,omitempty" xml:"workflow_id"`
+	WorkflowId     *string `json:"workflow_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

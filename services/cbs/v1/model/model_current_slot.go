@@ -10,16 +10,16 @@ import (
 type CurrentSlot struct {
 
 	// 槽位ID。
-	SlotId string `json:"slot_id" xml:"slot_id"`
+	SlotId string `json:"slot_id"`
 
 	// 槽位名称。
-	SlotName string `json:"slot_name" xml:"slot_name"`
+	SlotName string `json:"slot_name"`
 
 	// 槽位值。
-	SlotValues []SlotValue `json:"slot_values" xml:"slot_values"`
+	SlotValues []SlotValue `json:"slot_values"`
 
 	// 槽位标识。
-	SlotIdentification *string `json:"slot_identification,omitempty" xml:"slot_identification"`
+	SlotIdentification *string `json:"slot_identification,omitempty"`
 }
 
 func (o CurrentSlot) String() string {

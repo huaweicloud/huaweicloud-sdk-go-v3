@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateBatchJobRequest struct {
-	Body *Job `json:"body,omitempty" xml:"body"`
+	Body *Job `json:"body,omitempty"`
 }
 
 func (o CreateBatchJobRequest) String() string {

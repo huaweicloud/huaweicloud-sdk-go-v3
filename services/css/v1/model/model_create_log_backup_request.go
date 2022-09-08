@@ -10,7 +10,7 @@ import (
 type CreateLogBackupRequest struct {
 
 	// 指定待备份日志的集群ID。
-	ClusterId string `json:"cluster_id" xml:"cluster_id"`
+	ClusterId string `json:"cluster_id"`
 }
 
 func (o CreateLogBackupRequest) String() string {

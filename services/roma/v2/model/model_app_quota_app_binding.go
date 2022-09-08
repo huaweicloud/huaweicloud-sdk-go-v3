@@ -11,13 +11,13 @@ import (
 type AppQuotaAppBinding struct {
 
 	// 客户端配额编号
-	AppQuotaId *string `json:"app_quota_id,omitempty" xml:"app_quota_id"`
+	AppQuotaId *string `json:"app_quota_id,omitempty"`
 
 	// 客户端应用编号
-	AppId *string `json:"app_id,omitempty" xml:"app_id"`
+	AppId *string `json:"app_id,omitempty"`
 
 	// 绑定时间
-	BoundTime *sdktime.SdkTime `json:"bound_time,omitempty" xml:"bound_time"`
+	BoundTime *sdktime.SdkTime `json:"bound_time,omitempty"`
 }
 
 func (o AppQuotaAppBinding) String() string {

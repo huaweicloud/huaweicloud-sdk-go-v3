@@ -8,7 +8,7 @@ import (
 
 // This is a auto restart Body Object
 type RestartInstanceReq struct {
-	Restart *RestarInstanceInfo `json:"restart,omitempty" xml:"restart"`
+	Restart *RestarInstanceInfo `json:"restart,omitempty"`
 }
 
 func (o RestartInstanceReq) String() string {

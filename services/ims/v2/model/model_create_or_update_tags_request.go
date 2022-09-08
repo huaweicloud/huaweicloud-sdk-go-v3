@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateOrUpdateTagsRequest struct {
-	Body *AddOrUpdateTagsRequestBody `json:"body,omitempty" xml:"body"`
+	Body *AddOrUpdateTagsRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateOrUpdateTagsRequest) String() string {

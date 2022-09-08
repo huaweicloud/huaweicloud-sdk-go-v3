@@ -10,16 +10,16 @@ import (
 type TaskInputVcn struct {
 
 	// VCN服务器的IP地址
-	Ip string `json:"ip" xml:"ip"`
+	Ip string `json:"ip"`
 
 	// VCN服务器的端口号
-	Port int32 `json:"port" xml:"port"`
+	Port int32 `json:"port"`
 
 	// VCN服务器的账号名
-	Username string `json:"username" xml:"username"`
+	Username string `json:"username"`
 
 	// VCN服务器的与账号对应的密码
-	Password string `json:"password" xml:"password"`
+	Password string `json:"password"`
 }
 
 func (o TaskInputVcn) String() string {

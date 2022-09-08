@@ -9,7 +9,7 @@ import (
 type UpdateDbUserReq struct {
 
 	// 数据库用户备注。
-	Comment *string `json:"comment,omitempty" xml:"comment"`
+	Comment *string `json:"comment,omitempty"`
 }
 
 func (o UpdateDbUserReq) String() string {

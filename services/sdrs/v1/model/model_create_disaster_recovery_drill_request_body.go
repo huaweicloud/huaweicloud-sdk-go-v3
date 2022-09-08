@@ -8,7 +8,7 @@ import (
 
 // 创建容灾演练请求体
 type CreateDisasterRecoveryDrillRequestBody struct {
-	DisasterRecoveryDrill *CreateDisasterRecoveryDrillRequestParams `json:"disaster_recovery_drill" xml:"disaster_recovery_drill"`
+	DisasterRecoveryDrill *CreateDisasterRecoveryDrillRequestParams `json:"disaster_recovery_drill"`
 }
 
 func (o CreateDisasterRecoveryDrillRequestBody) String() string {

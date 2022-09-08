@@ -10,25 +10,25 @@ import (
 type EsflavorsVersionsFlavorsResp struct {
 
 	// 实例的CPU核数。
-	Cpu *int32 `json:"cpu,omitempty" xml:"cpu"`
+	Cpu *int32 `json:"cpu,omitempty"`
 
 	// 实例的内存大小。单位GB。
-	Ram *int32 `json:"ram,omitempty" xml:"ram"`
+	Ram *int32 `json:"ram,omitempty"`
 
 	// 规格名称。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 可用region。
-	Region *string `json:"region,omitempty" xml:"region"`
+	Region *string `json:"region,omitempty"`
 
 	// 实例的硬盘容量范围。
-	Diskrange *string `json:"diskrange,omitempty" xml:"diskrange"`
+	Diskrange *string `json:"diskrange,omitempty"`
 
 	// 可用区。
-	AvailableAZ *string `json:"availableAZ,omitempty" xml:"availableAZ"`
+	AvailableAZ *string `json:"availableAZ,omitempty"`
 
 	// 规格对应的ID。
-	FlavorId *string `json:"flavor_id,omitempty" xml:"flavor_id"`
+	FlavorId *string `json:"flavor_id,omitempty"`
 }
 
 func (o EsflavorsVersionsFlavorsResp) String() string {

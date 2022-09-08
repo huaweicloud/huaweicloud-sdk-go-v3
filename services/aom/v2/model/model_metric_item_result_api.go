@@ -10,19 +10,19 @@ import (
 type MetricItemResultApi struct {
 
 	// 指标维度列表。
-	Dimensions *[]Dimension `json:"dimensions,omitempty" xml:"dimensions"`
+	Dimensions *[]Dimension `json:"dimensions,omitempty"`
 
 	// 指标哈希值。
-	Dimensionvaluehash *string `json:"dimensionvaluehash,omitempty" xml:"dimensionvaluehash"`
+	Dimensionvaluehash *string `json:"dimensionvaluehash,omitempty"`
 
 	// 指标名称。
-	MetricName *string `json:"metricName,omitempty" xml:"metricName"`
+	MetricName *string `json:"metricName,omitempty"`
 
 	// 命名空间。
-	Namespace *string `json:"namespace,omitempty" xml:"namespace"`
+	Namespace *string `json:"namespace,omitempty"`
 
 	// 指标单位。
-	Unit *string `json:"unit,omitempty" xml:"unit"`
+	Unit *string `json:"unit,omitempty"`
 }
 
 func (o MetricItemResultApi) String() string {

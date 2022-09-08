@@ -9,7 +9,7 @@ import (
 type UpdateUnreadNewInstantMsgV2Req struct {
 
 	// 组id
-	GroupId *string `json:"group_id,omitempty" xml:"group_id"`
+	GroupId *string `json:"group_id,omitempty"`
 }
 
 func (o UpdateUnreadNewInstantMsgV2Req) String() string {

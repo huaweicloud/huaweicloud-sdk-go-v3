@@ -9,21 +9,21 @@ import (
 type IterationHistory struct {
 
 	// 迭代ID
-	IterationId *string `json:"iteration_id,omitempty" xml:"iteration_id"`
+	IterationId *string `json:"iteration_id,omitempty"`
 
 	// 项目ID
-	ProjectId *string `json:"project_id,omitempty" xml:"project_id"`
+	ProjectId *string `json:"project_id,omitempty"`
 
-	Operator *VersionHistoryOperator `json:"operator,omitempty" xml:"operator"`
+	Operator *VersionHistoryOperator `json:"operator,omitempty"`
 
 	// 操作类型
-	Operate *string `json:"operate,omitempty" xml:"operate"`
+	Operate *string `json:"operate,omitempty"`
 
 	// 操作时间
-	OperateTime *string `json:"operate_time,omitempty" xml:"operate_time"`
+	OperateTime *string `json:"operate_time,omitempty"`
 
 	// 操作详情
-	Details *[]IterationHistoryDetails `json:"details,omitempty" xml:"details"`
+	Details *[]IterationHistoryDetails `json:"details,omitempty"`
 }
 
 func (o IterationHistory) String() string {

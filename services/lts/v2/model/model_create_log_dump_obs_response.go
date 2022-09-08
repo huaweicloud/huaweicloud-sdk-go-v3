@@ -10,7 +10,7 @@ import (
 type CreateLogDumpObsResponse struct {
 
 	// 转储id。
-	LogDumpObsId   *string `json:"log_dump_obs_id,omitempty" xml:"log_dump_obs_id"`
+	LogDumpObsId   *string `json:"log_dump_obs_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

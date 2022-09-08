@@ -9,25 +9,25 @@ import (
 type AgencyV2 struct {
 
 	// 委托id
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 委托名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 委托的期限
-	Duration *string `json:"duration,omitempty" xml:"duration"`
+	Duration *string `json:"duration,omitempty"`
 
 	// 委托的账号名称
-	TrustDomainName *string `json:"trust_domain_name,omitempty" xml:"trust_domain_name"`
+	TrustDomainName *string `json:"trust_domain_name,omitempty"`
 
 	// 委托的账号id
-	TrustDomainId *string `json:"trust_domain_id,omitempty" xml:"trust_domain_id"`
+	TrustDomainId *string `json:"trust_domain_id,omitempty"`
 
 	// 创建时间
-	CreateTime *string `json:"create_time,omitempty" xml:"create_time"`
+	CreateTime *string `json:"create_time,omitempty"`
 
 	// 超期时间
-	ExpireTime *string `json:"expire_time,omitempty" xml:"expire_time"`
+	ExpireTime *string `json:"expire_time,omitempty"`
 }
 
 func (o AgencyV2) String() string {

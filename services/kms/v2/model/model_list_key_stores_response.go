@@ -10,10 +10,10 @@ import (
 type ListKeyStoresResponse struct {
 
 	// 密钥库总数
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 
 	// 密钥详情列表。详情参见KeystoreDetails
-	Keystores      *[]KeystoreDetails `json:"keystores,omitempty" xml:"keystores"`
+	Keystores      *[]KeystoreDetails `json:"keystores,omitempty"`
 	HttpStatusCode int                `json:"-"`
 }
 

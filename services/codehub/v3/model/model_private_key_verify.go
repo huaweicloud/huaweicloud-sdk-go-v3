@@ -8,11 +8,11 @@ import (
 
 type PrivateKeyVerify struct {
 
-	// 仓库UUID
-	RepositoryUuid string `json:"repository_uuid" xml:"repository_uuid"`
+	// 仓库UUID(由CreateRepository接口返回)
+	RepositoryUuid string `json:"repository_uuid"`
 
 	// 私钥
-	PrivateKey string `json:"private_key" xml:"private_key"`
+	PrivateKey string `json:"private_key"`
 }
 
 func (o PrivateKeyVerify) String() string {

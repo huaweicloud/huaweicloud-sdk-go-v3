@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type UpdateRangeSwitchResponse struct {
-	OriginRange    *OriginRangeBody `json:"origin_range,omitempty" xml:"origin_range"`
+	OriginRange    *OriginRangeBody `json:"origin_range,omitempty"`
 	HttpStatusCode int              `json:"-"`
 }
 

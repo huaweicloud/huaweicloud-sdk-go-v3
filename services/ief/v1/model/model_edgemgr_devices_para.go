@@ -10,9 +10,9 @@ import (
 type EdgemgrDevicesPara struct {
 
 	// 终端设备描述，最大长度255，不允许^ ~ # $ % & * < > ( ) [ ] { } ' \" \\
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
-	Attributes map[string]ValueInAttributes `json:"attributes,omitempty" xml:"attributes"`
+	Attributes map[string]ValueInAttributes `json:"attributes,omitempty"`
 }
 
 func (o EdgemgrDevicesPara) String() string {

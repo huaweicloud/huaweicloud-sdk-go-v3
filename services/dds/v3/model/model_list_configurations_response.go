@@ -10,10 +10,10 @@ import (
 type ListConfigurationsResponse struct {
 
 	// 总记录数。
-	TotalCount *int32 `json:"total_count,omitempty" xml:"total_count"`
+	TotalCount *int32 `json:"total_count,omitempty"`
 
 	// 参数模板列表。
-	Configurations *[]ListConfigurationsResult `json:"configurations,omitempty" xml:"configurations"`
+	Configurations *[]ListConfigurationsResult `json:"configurations,omitempty"`
 	HttpStatusCode int                         `json:"-"`
 }
 

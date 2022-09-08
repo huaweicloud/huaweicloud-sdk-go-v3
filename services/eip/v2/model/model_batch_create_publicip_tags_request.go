@@ -10,9 +10,9 @@ import (
 type BatchCreatePublicipTagsRequest struct {
 
 	// 资源ID
-	PublicipId string `json:"publicip_id" xml:"publicip_id"`
+	PublicipId string `json:"publicip_id"`
 
-	Body *BatchCreatePublicipTagsRequestBody `json:"body,omitempty" xml:"body"`
+	Body *BatchCreatePublicipTagsRequestBody `json:"body,omitempty"`
 }
 
 func (o BatchCreatePublicipTagsRequest) String() string {

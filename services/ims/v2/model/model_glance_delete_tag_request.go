@@ -10,10 +10,10 @@ import (
 type GlanceDeleteTagRequest struct {
 
 	// 镜像id
-	ImageId string `json:"image_id" xml:"image_id"`
+	ImageId string `json:"image_id"`
 
 	// 新增的tag。字符串中不能包含“=”和“.”。
-	Tag string `json:"tag" xml:"tag"`
+	Tag string `json:"tag"`
 }
 
 func (o GlanceDeleteTagRequest) String() string {

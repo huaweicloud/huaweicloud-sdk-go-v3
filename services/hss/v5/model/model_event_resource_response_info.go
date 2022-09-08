@@ -10,61 +10,61 @@ import (
 type EventResourceResponseInfo struct {
 
 	// 租户账号ID
-	DomainId *string `json:"domain_id,omitempty" xml:"domain_id"`
+	DomainId *string `json:"domain_id,omitempty"`
 
 	// 项目ID
-	ProjectId *string `json:"project_id,omitempty" xml:"project_id"`
+	ProjectId *string `json:"project_id,omitempty"`
 
 	// 企业项目ID
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// Region名称
-	RegionName *string `json:"region_name,omitempty" xml:"region_name"`
+	RegionName *string `json:"region_name,omitempty"`
 
 	// VPC ID
-	VpcId *string `json:"vpc_id,omitempty" xml:"vpc_id"`
+	VpcId *string `json:"vpc_id,omitempty"`
 
 	// 云主机ID
-	CloudId *string `json:"cloud_id,omitempty" xml:"cloud_id"`
+	CloudId *string `json:"cloud_id,omitempty"`
 
 	// 虚拟机名称
-	VmName *string `json:"vm_name,omitempty" xml:"vm_name"`
+	VmName *string `json:"vm_name,omitempty"`
 
 	// 虚拟机UUID
-	VmUuid *string `json:"vm_uuid,omitempty" xml:"vm_uuid"`
+	VmUuid *string `json:"vm_uuid,omitempty"`
 
 	// 容器ID
-	ContainerId *string `json:"container_id,omitempty" xml:"container_id"`
+	ContainerId *string `json:"container_id,omitempty"`
 
 	// 镜像ID
-	ImageId *string `json:"image_id,omitempty" xml:"image_id"`
+	ImageId *string `json:"image_id,omitempty"`
 
 	// 镜像名称
-	ImageName *string `json:"image_name,omitempty" xml:"image_name"`
+	ImageName *string `json:"image_name,omitempty"`
 
 	// 主机属性
-	HostAttr *string `json:"host_attr,omitempty" xml:"host_attr"`
+	HostAttr *string `json:"host_attr,omitempty"`
 
 	// 业务服务
-	Service *string `json:"service,omitempty" xml:"service"`
+	Service *string `json:"service,omitempty"`
 
 	// 微服务
-	MicroService *string `json:"micro_service,omitempty" xml:"micro_service"`
+	MicroService *string `json:"micro_service,omitempty"`
 
 	// 系统CPU架构
-	SysArch *string `json:"sys_arch,omitempty" xml:"sys_arch"`
+	SysArch *string `json:"sys_arch,omitempty"`
 
 	// 操作系统位数
-	OsBit *string `json:"os_bit,omitempty" xml:"os_bit"`
+	OsBit *string `json:"os_bit,omitempty"`
 
 	// 操作系统类型
-	OsType *string `json:"os_type,omitempty" xml:"os_type"`
+	OsType *string `json:"os_type,omitempty"`
 
 	// 操作系统名称
-	OsName *string `json:"os_name,omitempty" xml:"os_name"`
+	OsName *string `json:"os_name,omitempty"`
 
 	// 操作系统版本
-	OsVersion *string `json:"os_version,omitempty" xml:"os_version"`
+	OsVersion *string `json:"os_version,omitempty"`
 }
 
 func (o EventResourceResponseInfo) String() string {

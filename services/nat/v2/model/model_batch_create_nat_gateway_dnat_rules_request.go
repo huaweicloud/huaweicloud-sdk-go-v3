@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type BatchCreateNatGatewayDnatRulesRequest struct {
-	Body *BatchCreateNatGatewayDnatRulesRequestBody `json:"body,omitempty" xml:"body"`
+	Body *BatchCreateNatGatewayDnatRulesRequestBody `json:"body,omitempty"`
 }
 
 func (o BatchCreateNatGatewayDnatRulesRequest) String() string {

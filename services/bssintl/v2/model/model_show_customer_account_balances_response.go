@@ -10,16 +10,16 @@ import (
 type ShowCustomerAccountBalancesResponse struct {
 
 	// 账户余额列表。 具体请参见表1。
-	AccountBalances *[]AccountBalanceV3 `json:"account_balances,omitempty" xml:"account_balances"`
+	AccountBalances *[]AccountBalanceV3 `json:"account_balances,omitempty"`
 
 	// 欠款总金额。
-	DebtAmount *float64 `json:"debt_amount,omitempty" xml:"debt_amount"`
+	DebtAmount *float64 `json:"debt_amount,omitempty"`
 
 	// 度量单位。 1：元
-	MeasureId *int32 `json:"measure_id,omitempty" xml:"measure_id"`
+	MeasureId *int32 `json:"measure_id,omitempty"`
 
 	// 币种。 USD：美元。
-	Currency       *string `json:"currency,omitempty" xml:"currency"`
+	Currency       *string `json:"currency,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

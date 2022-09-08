@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowDomainProtectPolicyResponse struct {
-	ProtectPolicy  *ShowDomainProtectPolicyResponseBodyProtectPolicy `json:"protect_policy,omitempty" xml:"protect_policy"`
+	ProtectPolicy  *ShowDomainProtectPolicyResponseBodyProtectPolicy `json:"protect_policy,omitempty"`
 	HttpStatusCode int                                               `json:"-"`
 }
 

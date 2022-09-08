@@ -13,19 +13,19 @@ import (
 type DynamicConfigInfo struct {
 
 	// 执行部署任务时传递的参数名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 执行部署任务时传递的参数值
-	Value *string `json:"value,omitempty" xml:"value"`
+	Value *string `json:"value,omitempty"`
 
 	// 参数值为枚举类型时，返回可选值列表
-	Limits *[]ParamTypeLimits `json:"limits,omitempty" xml:"limits"`
+	Limits *[]ParamTypeLimits `json:"limits,omitempty"`
 
 	// 类型，如果填写动态参数，则类型必选
-	Type *DynamicConfigInfoType `json:"type,omitempty" xml:"type"`
+	Type *DynamicConfigInfoType `json:"type,omitempty"`
 
 	// 描述
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 }
 
 func (o DynamicConfigInfo) String() string {

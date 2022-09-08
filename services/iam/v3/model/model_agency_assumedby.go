@@ -8,7 +8,7 @@ import (
 
 //
 type AgencyAssumedby struct {
-	User *AgencyAssumedbyUser `json:"user" xml:"user"`
+	User *AgencyAssumedbyUser `json:"user"`
 }
 
 func (o AgencyAssumedby) String() string {

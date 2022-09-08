@@ -10,13 +10,13 @@ import (
 type JobMetadata struct {
 
 	// 任务的ID。
-	Uid *string `json:"uid,omitempty" xml:"uid"`
+	Uid *string `json:"uid,omitempty"`
 
 	// 任务的创建时间。
-	CreationTimestamp *string `json:"creationTimestamp,omitempty" xml:"creationTimestamp"`
+	CreationTimestamp *string `json:"creationTimestamp,omitempty"`
 
 	// 任务的更新时间。
-	UpdateTimestamp *string `json:"updateTimestamp,omitempty" xml:"updateTimestamp"`
+	UpdateTimestamp *string `json:"updateTimestamp,omitempty"`
 }
 
 func (o JobMetadata) String() string {

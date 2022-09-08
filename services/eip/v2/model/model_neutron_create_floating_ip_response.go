@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type NeutronCreateFloatingIpResponse struct {
-	Floatingip     *PostAndPutFloatingIpResp `json:"floatingip,omitempty" xml:"floatingip"`
+	Floatingip     *PostAndPutFloatingIpResp `json:"floatingip,omitempty"`
 	HttpStatusCode int                       `json:"-"`
 }
 

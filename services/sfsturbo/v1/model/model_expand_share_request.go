@@ -10,12 +10,12 @@ import (
 type ExpandShareRequest struct {
 
 	// MIME类型
-	ContentType string `json:"Content-Type" xml:"Content-Type"`
+	ContentType string `json:"Content-Type"`
 
 	// 文件系统ID
-	ShareId string `json:"share_id" xml:"share_id"`
+	ShareId string `json:"share_id"`
 
-	Body *ExpandShareRequestBody `json:"body,omitempty" xml:"body"`
+	Body *ExpandShareRequestBody `json:"body,omitempty"`
 }
 
 func (o ExpandShareRequest) String() string {

@@ -10,7 +10,7 @@ import (
 type StartConnectivityTestResponse struct {
 
 	// 连通性测试结果。
-	Result         *[]Result `json:"result,omitempty" xml:"result"`
+	Result         *[]Result `json:"result,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }
 

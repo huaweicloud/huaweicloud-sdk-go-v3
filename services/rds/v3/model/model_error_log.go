@@ -10,13 +10,13 @@ import (
 type ErrorLog struct {
 
 	// 日期时间UTC时间。
-	Time string `json:"time" xml:"time"`
+	Time string `json:"time"`
 
 	// 日志级别。
-	Level string `json:"level" xml:"level"`
+	Level string `json:"level"`
 
 	// 错误日志内容。
-	Content string `json:"content" xml:"content"`
+	Content string `json:"content"`
 }
 
 func (o ErrorLog) String() string {

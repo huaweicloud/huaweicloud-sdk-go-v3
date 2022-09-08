@@ -13,10 +13,10 @@ import (
 type BatchCreateVolumeTagsRequestBody struct {
 
 	// 操作标识，当前支持的取值如下：  添加标签：create
-	Action BatchCreateVolumeTagsRequestBodyAction `json:"action" xml:"action"`
+	Action BatchCreateVolumeTagsRequestBodyAction `json:"action"`
 
 	// 标签列表。
-	Tags []Tag `json:"tags" xml:"tags"`
+	Tags []Tag `json:"tags"`
 }
 
 func (o BatchCreateVolumeTagsRequestBody) String() string {

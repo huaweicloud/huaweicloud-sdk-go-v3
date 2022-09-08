@@ -13,21 +13,21 @@ import (
 type ReviewInfo struct {
 
 	// 检测结果是否通过。  取值如下： - block：包含敏感信息，不通过。 - pass：不包含敏感信息，通过。 - review：需要人工复检。  > 当同时检测多个场景时，suggestion的值以最可能包含敏感信息的场景为准。即任一场景出现了block则总的suggestion为block，所有场景都pass时suggestion为pass，这两种情况之外则一定有场景需要review，此时suggestion为review。
-	Suggestion *ReviewInfoSuggestion `json:"suggestion,omitempty" xml:"suggestion"`
+	Suggestion *ReviewInfoSuggestion `json:"suggestion,omitempty"`
 
-	Text *TextReviewRet `json:"text,omitempty" xml:"text"`
+	Text *TextReviewRet `json:"text,omitempty"`
 
 	// 封面检测结果。
-	Cover *[]PictureReviewRet `json:"cover,omitempty" xml:"cover"`
+	Cover *[]PictureReviewRet `json:"cover,omitempty"`
 
 	// 视频检测结果。
-	Video *[]PictureReviewRet `json:"video,omitempty" xml:"video"`
+	Video *[]PictureReviewRet `json:"video,omitempty"`
 
 	// 执行情况描述。
-	ExecDesc *string `json:"exec_desc,omitempty" xml:"exec_desc"`
+	ExecDesc *string `json:"exec_desc,omitempty"`
 
 	// 审核状态。  取值如下： - UN_REVIEW：未审核 - REVIEWING：审核中 - REVIEW_SUSPICIOUS：审核可疑，需要人工审核 - REVIEW_PASSED：审核通过 - REVIEW_FAILED：审核失败。 - REVIEW_BLOCKED：已屏蔽。
-	ReviewStatus string `json:"review_status" xml:"review_status"`
+	ReviewStatus string `json:"review_status"`
 }
 
 func (o ReviewInfo) String() string {

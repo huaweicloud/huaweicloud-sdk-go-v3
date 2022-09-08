@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ReclaimSubEnterpriseAmountRequest struct {
-	Body *RetrieveEnterpriseMultiAccountReq `json:"body,omitempty" xml:"body"`
+	Body *RetrieveEnterpriseMultiAccountReq `json:"body,omitempty"`
 }
 
 func (o ReclaimSubEnterpriseAmountRequest) String() string {

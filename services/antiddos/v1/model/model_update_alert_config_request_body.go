@@ -9,12 +9,12 @@ import (
 type UpdateAlertConfigRequestBody struct {
 
 	// 告警群组描述。
-	DisplayName string `json:"display_name" xml:"display_name"`
+	DisplayName string `json:"display_name"`
 
 	// 告警群组的唯一标识。
-	TopicUrn string `json:"topic_urn" xml:"topic_urn"`
+	TopicUrn string `json:"topic_urn"`
 
-	WarnConfig *UpdateAlertConfigRequestBodyWarnConfig `json:"warn_config" xml:"warn_config"`
+	WarnConfig *UpdateAlertConfigRequestBodyWarnConfig `json:"warn_config"`
 }
 
 func (o UpdateAlertConfigRequestBody) String() string {

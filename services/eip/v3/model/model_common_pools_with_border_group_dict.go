@@ -10,10 +10,10 @@ import (
 type CommonPoolsWithBorderGroupDict struct {
 
 	// 同组的公共池列表
-	PublicipPools *[]string `json:"publicip_pools,omitempty" xml:"publicip_pools"`
+	PublicipPools *[]string `json:"publicip_pools,omitempty"`
 
 	// 分组：中心还是边缘
-	PublicBorderGroup *string `json:"public_border_group,omitempty" xml:"public_border_group"`
+	PublicBorderGroup *string `json:"public_border_group,omitempty"`
 }
 
 func (o CommonPoolsWithBorderGroupDict) String() string {

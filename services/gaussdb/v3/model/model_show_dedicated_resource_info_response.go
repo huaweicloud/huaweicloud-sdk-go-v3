@@ -10,26 +10,26 @@ import (
 type ShowDedicatedResourceInfoResponse struct {
 
 	// 专属资源池id
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 专属资源池名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 引擎名称
-	EngineName *string `json:"engine_name,omitempty" xml:"engine_name"`
+	EngineName *string `json:"engine_name,omitempty"`
 
 	// 可用区
-	AvailabilityZoneIds *[]string `json:"availability_zone_ids,omitempty" xml:"availability_zone_ids"`
+	AvailabilityZoneIds *[]string `json:"availability_zone_ids,omitempty"`
 
 	// 资源规格类型
-	Architecture *string `json:"architecture,omitempty" xml:"architecture"`
+	Architecture *string `json:"architecture,omitempty"`
 
 	// 专属资源池状态
-	Status *string `json:"status,omitempty" xml:"status"`
+	Status *string `json:"status,omitempty"`
 
-	DedicatedComputeInfo *DedicatedComputeInfo `json:"dedicated_compute_info,omitempty" xml:"dedicated_compute_info"`
+	DedicatedComputeInfo *DedicatedComputeInfo `json:"dedicated_compute_info,omitempty"`
 
-	DedicatedStorageInfo *DedicatedStorageInfo `json:"dedicated_storage_info,omitempty" xml:"dedicated_storage_info"`
+	DedicatedStorageInfo *DedicatedStorageInfo `json:"dedicated_storage_info,omitempty"`
 	HttpStatusCode       int                   `json:"-"`
 }
 

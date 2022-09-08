@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateAddressGroupRequest struct {
-	Body *CreateAddressGroupRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreateAddressGroupRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateAddressGroupRequest) String() string {

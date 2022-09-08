@@ -12,16 +12,16 @@ import (
 type NotificationSaveRule struct {
 
 	// 首选项对应的语言
-	Language NotificationSaveRuleLanguage `json:"language" xml:"language"`
+	Language NotificationSaveRuleLanguage `json:"language"`
 
 	// 首选项对应的时区信息
-	Timezone *string `json:"timezone,omitempty" xml:"timezone"`
+	Timezone *string `json:"timezone,omitempty"`
 
 	// 用户名
-	UserName string `json:"user_name" xml:"user_name"`
+	UserName string `json:"user_name"`
 
 	// 主题信息
-	Topics []Topics `json:"topics" xml:"topics"`
+	Topics []Topics `json:"topics"`
 }
 
 func (o NotificationSaveRule) String() string {

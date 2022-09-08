@@ -9,16 +9,16 @@ import (
 type NpuInfo struct {
 
 	// NPU名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// NPU类型
-	Type *string `json:"type,omitempty" xml:"type"`
+	Type *string `json:"type,omitempty"`
 
 	// NPU memory大小
-	Capacity *string `json:"capacity,omitempty" xml:"capacity"`
+	Capacity *string `json:"capacity,omitempty"`
 
 	// NPU驱动版本
-	DriverVersion *string `json:"driver_version,omitempty" xml:"driver_version"`
+	DriverVersion *string `json:"driver_version,omitempty"`
 }
 
 func (o NpuInfo) String() string {

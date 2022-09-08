@@ -12,13 +12,13 @@ import (
 type UserAuth struct {
 
 	// 用户id，需要从IAM服务获取
-	UserId string `json:"user_id" xml:"user_id"`
+	UserId string `json:"user_id"`
 
 	// 用户名，需要从IAM服务获取
-	UserName string `json:"user_name" xml:"user_name"`
+	UserName string `json:"user_name"`
 
 	// 用户权限，7表示管理权限，3表示编辑权限，1表示读取权限
-	Auth UserAuthAuth `json:"auth" xml:"auth"`
+	Auth UserAuthAuth `json:"auth"`
 }
 
 func (o UserAuth) String() string {

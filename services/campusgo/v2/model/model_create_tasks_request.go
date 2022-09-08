@@ -10,9 +10,9 @@ import (
 type CreateTasksRequest struct {
 
 	// 服务API,具体API名称见园区智能体提供的API参考列表中URI描述[API列表](https://support.huaweicloud.com/api-campusgo/campusgo_03_0013.html)
-	ServiceName string `json:"service_name" xml:"service_name"`
+	ServiceName string `json:"service_name"`
 
-	Body *CreateTasksRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreateTasksRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateTasksRequest) String() string {

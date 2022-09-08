@@ -8,7 +8,7 @@ import (
 
 //
 type NeutronCreateSecurityGroupRequestBody struct {
-	SecurityGroup *NeutronCreateSecurityGroupOption `json:"security_group" xml:"security_group"`
+	SecurityGroup *NeutronCreateSecurityGroupOption `json:"security_group"`
 }
 
 func (o NeutronCreateSecurityGroupRequestBody) String() string {

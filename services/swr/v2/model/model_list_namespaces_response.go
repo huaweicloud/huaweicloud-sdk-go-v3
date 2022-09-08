@@ -10,7 +10,7 @@ import (
 type ListNamespacesResponse struct {
 
 	// 组织列表
-	Namespaces     *[]ShowNamespace `json:"namespaces,omitempty" xml:"namespaces"`
+	Namespaces     *[]ShowNamespace `json:"namespaces,omitempty"`
 	HttpStatusCode int              `json:"-"`
 }
 

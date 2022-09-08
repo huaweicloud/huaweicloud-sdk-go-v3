@@ -11,37 +11,37 @@ import (
 type AppInfo struct {
 
 	// 编号
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 描述
-	Remark *string `json:"remark,omitempty" xml:"remark"`
+	Remark *string `json:"remark,omitempty"`
 
 	// APP的创建者 - USER：用户自行创建 - MARKET：云市场分配  暂不支持MARKET
-	Creator *AppInfoCreator `json:"creator,omitempty" xml:"creator"`
+	Creator *AppInfoCreator `json:"creator,omitempty"`
 
 	// 更新时间
-	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty" xml:"update_time"`
+	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
 
 	// APP的key
-	AppKey *string `json:"app_key,omitempty" xml:"app_key"`
+	AppKey *string `json:"app_key,omitempty"`
 
 	// 密钥
-	AppSecret *string `json:"app_secret,omitempty" xml:"app_secret"`
+	AppSecret *string `json:"app_secret,omitempty"`
 
 	// 注册时间
-	RegisterTime *sdktime.SdkTime `json:"register_time,omitempty" xml:"register_time"`
+	RegisterTime *sdktime.SdkTime `json:"register_time,omitempty"`
 
 	// 状态   - 1： 有效
-	Status *AppInfoStatus `json:"status,omitempty" xml:"status"`
+	Status *AppInfoStatus `json:"status,omitempty"`
 
 	// APP的类型： - apig：存量apig应用，不推荐使用 - roma：roma集成应用
-	AppType *AppInfoAppType `json:"app_type,omitempty" xml:"app_type"`
+	AppType *AppInfoAppType `json:"app_type,omitempty"`
 
 	// ROMA_APP的类型： - subscription：订阅应用 - integration：集成应用
-	RomaAppType *string `json:"roma_app_type,omitempty" xml:"roma_app_type"`
+	RomaAppType *string `json:"roma_app_type,omitempty"`
 }
 
 func (o AppInfo) String() string {

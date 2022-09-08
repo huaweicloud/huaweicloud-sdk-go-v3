@@ -10,7 +10,7 @@ import (
 type MysqlReadOnlySwitch struct {
 
 	// 是否设置为只读权限 - true，表示设置为只读权限 - false，表示解除已设置的只读权限
-	Readonly bool `json:"readonly" xml:"readonly"`
+	Readonly bool `json:"readonly"`
 }
 
 func (o MysqlReadOnlySwitch) String() string {

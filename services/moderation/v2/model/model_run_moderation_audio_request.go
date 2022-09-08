@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RunModerationAudioRequest struct {
-	Body *RunModerationAudioRequestBody `json:"body,omitempty" xml:"body"`
+	Body *RunModerationAudioRequestBody `json:"body,omitempty"`
 }
 
 func (o RunModerationAudioRequest) String() string {

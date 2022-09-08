@@ -10,10 +10,10 @@ import (
 type ShowComponentDetailRequest struct {
 
 	// 应用ID。
-	ApplicationId string `json:"application_id" xml:"application_id"`
+	ApplicationId string `json:"application_id"`
 
 	// 组件ID。
-	ComponentId string `json:"component_id" xml:"component_id"`
+	ComponentId string `json:"component_id"`
 }
 
 func (o ShowComponentDetailRequest) String() string {

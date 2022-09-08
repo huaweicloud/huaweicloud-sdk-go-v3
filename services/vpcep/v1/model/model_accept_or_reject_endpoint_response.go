@@ -10,7 +10,7 @@ import (
 type AcceptOrRejectEndpointResponse struct {
 
 	// 连接列表
-	Connections    *[]ConnectionEndpoints `json:"connections,omitempty" xml:"connections"`
+	Connections    *[]ConnectionEndpoints `json:"connections,omitempty"`
 	HttpStatusCode int                    `json:"-"`
 }
 

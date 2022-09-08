@@ -8,10 +8,10 @@ import (
 
 // Response Object
 type KeystoneListUsersForGroupByAdminResponse struct {
-	Links *Links `json:"links,omitempty" xml:"links"`
+	Links *Links `json:"links,omitempty"`
 
 	// IAM用户信息列表。
-	Users          *[]KeystoneUserResult `json:"users,omitempty" xml:"users"`
+	Users          *[]KeystoneUserResult `json:"users,omitempty"`
 	HttpStatusCode int                   `json:"-"`
 }
 

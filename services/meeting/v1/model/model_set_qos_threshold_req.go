@@ -8,15 +8,15 @@ import (
 
 // 设置企业用户指定类型的阈值的请求体
 type SetQosThresholdReq struct {
-	Latency *SetThresholdData `json:"latency,omitempty" xml:"latency"`
+	Latency *SetThresholdData `json:"latency,omitempty"`
 
-	Jitter *SetThresholdData `json:"jitter,omitempty" xml:"jitter"`
+	Jitter *SetThresholdData `json:"jitter,omitempty"`
 
-	PacketLoss *SetPacketThresholdData `json:"packetLoss,omitempty" xml:"packetLoss"`
+	PacketLoss *SetPacketThresholdData `json:"packetLoss,omitempty"`
 
-	ClientCpuMax *SetCpuThresholdData `json:"clientCpuMax,omitempty" xml:"clientCpuMax"`
+	ClientCpuMax *SetCpuThresholdData `json:"clientCpuMax,omitempty"`
 
-	SystemCpuMax *SetCpuThresholdData `json:"systemCpuMax,omitempty" xml:"systemCpuMax"`
+	SystemCpuMax *SetCpuThresholdData `json:"systemCpuMax,omitempty"`
 }
 
 func (o SetQosThresholdReq) String() string {

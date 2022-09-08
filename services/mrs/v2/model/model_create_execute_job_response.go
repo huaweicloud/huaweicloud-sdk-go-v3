@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type CreateExecuteJobResponse struct {
-	JobSubmitResult *JobSubmitResult `json:"job_submit_result,omitempty" xml:"job_submit_result"`
+	JobSubmitResult *JobSubmitResult `json:"job_submit_result,omitempty"`
 	HttpStatusCode  int              `json:"-"`
 }
 

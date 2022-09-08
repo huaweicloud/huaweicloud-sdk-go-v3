@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type MigrateSubNetworkInterfaceRequest struct {
-	Body *MigrateSubNetworkInterfaceRequestBody `json:"body,omitempty" xml:"body"`
+	Body *MigrateSubNetworkInterfaceRequestBody `json:"body,omitempty"`
 }
 
 func (o MigrateSubNetworkInterfaceRequest) String() string {

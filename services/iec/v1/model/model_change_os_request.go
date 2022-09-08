@@ -10,9 +10,9 @@ import (
 type ChangeOsRequest struct {
 
 	// 边缘实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
-	Body *ChangeOsOption `json:"body,omitempty" xml:"body"`
+	Body *ChangeOsOption `json:"body,omitempty"`
 }
 
 func (o ChangeOsRequest) String() string {

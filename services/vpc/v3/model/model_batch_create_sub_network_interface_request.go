@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type BatchCreateSubNetworkInterfaceRequest struct {
-	Body *BatchCreateSubNetworkInterfaceRequestBody `json:"body,omitempty" xml:"body"`
+	Body *BatchCreateSubNetworkInterfaceRequestBody `json:"body,omitempty"`
 }
 
 func (o BatchCreateSubNetworkInterfaceRequest) String() string {

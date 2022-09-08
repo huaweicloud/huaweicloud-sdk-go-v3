@@ -8,7 +8,7 @@ import (
 
 // This is a auto create Body Object
 type CreateWhitelistRequestBody struct {
-	Whitelist *CreateWhitelistReq `json:"whitelist" xml:"whitelist"`
+	Whitelist *CreateWhitelistReq `json:"whitelist"`
 }
 
 func (o CreateWhitelistRequestBody) String() string {

@@ -10,9 +10,9 @@ import (
 type ShowCommandResponse struct {
 
 	// 命令名称，分为：START、STOP、DELETE、SYNC
-	CommandName *string `json:"command_name,omitempty" xml:"command_name"`
+	CommandName *string `json:"command_name,omitempty"`
 
-	CommandParam   *ComandParam `json:"command_param,omitempty" xml:"command_param"`
+	CommandParam   *ComandParam `json:"command_param,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }
 

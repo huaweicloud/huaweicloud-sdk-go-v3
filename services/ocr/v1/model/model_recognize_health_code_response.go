@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type RecognizeHealthCodeResponse struct {
-	Result         *HealthCodeResult `json:"result,omitempty" xml:"result"`
+	Result         *HealthCodeResult `json:"result,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }
 

@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowBackupPolicyResponse struct {
-	BackupPolicy   *ShowBackupPolicy `json:"backup_policy,omitempty" xml:"backup_policy"`
+	BackupPolicy   *ShowBackupPolicy `json:"backup_policy,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }
 

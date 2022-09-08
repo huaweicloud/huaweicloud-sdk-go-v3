@@ -13,9 +13,9 @@ import (
 type BatchResetPasswordRequest struct {
 
 	// 请求语言类型
-	XLanguage *BatchResetPasswordRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *BatchResetPasswordRequestXLanguage `json:"X-Language,omitempty"`
 
-	Body *BatchModifyPwdReq `json:"body,omitempty" xml:"body"`
+	Body *BatchModifyPwdReq `json:"body,omitempty"`
 }
 
 func (o BatchResetPasswordRequest) String() string {

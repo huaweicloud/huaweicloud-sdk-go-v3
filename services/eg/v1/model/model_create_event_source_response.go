@@ -13,31 +13,31 @@ import (
 type CreateEventSourceResponse struct {
 
 	// 事件源ID
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 事件源名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 事件源名称展示
-	Label *string `json:"label,omitempty" xml:"label"`
+	Label *string `json:"label,omitempty"`
 
 	// 事件源描述
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 事件源提供方类型，OFFICIAL：官方云服务事件源；CUSTOM：用户创建的自定义事件源
-	ProviderType *CreateEventSourceResponseProviderType `json:"provider_type,omitempty" xml:"provider_type"`
+	ProviderType *CreateEventSourceResponseProviderType `json:"provider_type,omitempty"`
 
 	// 创建UTC时间
-	CreatedTime *string `json:"created_time,omitempty" xml:"created_time"`
+	CreatedTime *string `json:"created_time,omitempty"`
 
 	// 更新UTC时间
-	UpdatedTime *string `json:"updated_time,omitempty" xml:"updated_time"`
+	UpdatedTime *string `json:"updated_time,omitempty"`
 
 	// 事件源归属的事件通道ID
-	ChannelId *string `json:"channel_id,omitempty" xml:"channel_id"`
+	ChannelId *string `json:"channel_id,omitempty"`
 
 	// 事件源归属的事件通道名称
-	ChannelName    *string `json:"channel_name,omitempty" xml:"channel_name"`
+	ChannelName    *string `json:"channel_name,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

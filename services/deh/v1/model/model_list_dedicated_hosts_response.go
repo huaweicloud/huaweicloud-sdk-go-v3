@@ -10,10 +10,10 @@ import (
 type ListDedicatedHostsResponse struct {
 
 	// 满足查询条件的专属主机。
-	DedicatedHosts *[]RespDedicatedHost `json:"dedicated_hosts,omitempty" xml:"dedicated_hosts"`
+	DedicatedHosts *[]RespDedicatedHost `json:"dedicated_hosts,omitempty"`
 
 	// 满足查询条件的专属主机数量。
-	Total          *int32 `json:"total,omitempty" xml:"total"`
+	Total          *int32 `json:"total,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

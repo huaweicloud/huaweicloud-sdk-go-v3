@@ -10,7 +10,7 @@ import (
 type Ipv6Bandwidth struct {
 
 	// IPv6带宽的ID。
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 }
 
 func (o Ipv6Bandwidth) String() string {

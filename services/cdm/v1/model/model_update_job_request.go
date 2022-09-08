@@ -10,12 +10,12 @@ import (
 type UpdateJobRequest struct {
 
 	// 集群ID
-	ClusterId string `json:"cluster_id" xml:"cluster_id"`
+	ClusterId string `json:"cluster_id"`
 
 	// 作业名称。
-	JobName string `json:"job_name" xml:"job_name"`
+	JobName string `json:"job_name"`
 
-	Body *CdmUpdateJobJsonReq `json:"body,omitempty" xml:"body"`
+	Body *CdmUpdateJobJsonReq `json:"body,omitempty"`
 }
 
 func (o UpdateJobRequest) String() string {

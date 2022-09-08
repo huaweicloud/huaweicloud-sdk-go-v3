@@ -9,10 +9,10 @@ import (
 type AppQualityInfo struct {
 
 	// 应用名称
-	AppName *string `json:"app_name,omitempty" xml:"app_name"`
+	AppName *string `json:"app_name,omitempty"`
 
 	// 视频质量信息
-	QualityInfo *[]QualityInfo `json:"quality_info,omitempty" xml:"quality_info"`
+	QualityInfo *[]QualityInfo `json:"quality_info,omitempty"`
 }
 
 func (o AppQualityInfo) String() string {

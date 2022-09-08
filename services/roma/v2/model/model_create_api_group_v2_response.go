@@ -12,55 +12,55 @@ import (
 type CreateApiGroupV2Response struct {
 
 	// 编号
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
 	// API分组名称
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 状态   - 1： 有效
-	Status CreateApiGroupV2ResponseStatus `json:"status" xml:"status"`
+	Status CreateApiGroupV2ResponseStatus `json:"status"`
 
 	// 系统默认分配的子域名
-	SlDomain string `json:"sl_domain" xml:"sl_domain"`
+	SlDomain string `json:"sl_domain"`
 
 	// 创建时间
-	RegisterTime *sdktime.SdkTime `json:"register_time" xml:"register_time"`
+	RegisterTime *sdktime.SdkTime `json:"register_time"`
 
 	// 最近修改时间
-	UpdateTime *sdktime.SdkTime `json:"update_time" xml:"update_time"`
+	UpdateTime *sdktime.SdkTime `json:"update_time"`
 
 	// 是否已上架云市场： - 1：已上架 - 2：未上架 - 3：审核中  ROMAConnect暂未对接云市场，此字段默认返回2
-	OnSellStatus int32 `json:"on_sell_status" xml:"on_sell_status"`
+	OnSellStatus int32 `json:"on_sell_status"`
 
 	// 分组上绑定的独立域名列表
-	UrlDomains *[]UrlDomain `json:"url_domains,omitempty" xml:"url_domains"`
+	UrlDomains *[]UrlDomain `json:"url_domains,omitempty"`
 
 	// 系统默认分配的子域名列表
-	SlDomains *[]string `json:"sl_domains,omitempty" xml:"sl_domains"`
+	SlDomains *[]string `json:"sl_domains,omitempty"`
 
 	// 描述
-	Remark *string `json:"remark,omitempty" xml:"remark"`
+	Remark *string `json:"remark,omitempty"`
 
 	// 流控时长内分组下的API的总访问次数限制，默认不限，请根据服务的负载能力自行设置  暂不支持
-	CallLimits *int32 `json:"call_limits,omitempty" xml:"call_limits"`
+	CallLimits *int32 `json:"call_limits,omitempty"`
 
 	// 流控时长  暂不支持
-	TimeInterval *int32 `json:"time_interval,omitempty" xml:"time_interval"`
+	TimeInterval *int32 `json:"time_interval,omitempty"`
 
 	// 流控的时间单位  暂不支持
-	TimeUnit *string `json:"time_unit,omitempty" xml:"time_unit"`
+	TimeUnit *string `json:"time_unit,omitempty"`
 
 	// 是否为默认分组
-	IsDefault *int32 `json:"is_default,omitempty" xml:"is_default"`
+	IsDefault *int32 `json:"is_default,omitempty"`
 
 	// 分组版本  - V1：全局分组 - V2：应用级分组
-	Version *string `json:"version,omitempty" xml:"version"`
+	Version *string `json:"version,omitempty"`
 
 	// 分组归属的集成应用编号。  分组版本V2时必填。
-	RomaAppId *string `json:"roma_app_id,omitempty" xml:"roma_app_id"`
+	RomaAppId *string `json:"roma_app_id,omitempty"`
 
 	// 分组归属的集成应用名称
-	RomaAppName    *string `json:"roma_app_name,omitempty" xml:"roma_app_name"`
+	RomaAppName    *string `json:"roma_app_name,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

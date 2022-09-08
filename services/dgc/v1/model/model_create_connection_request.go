@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateConnectionRequest struct {
-	Body *ConnectionInfo `json:"body,omitempty" xml:"body"`
+	Body *ConnectionInfo `json:"body,omitempty"`
 }
 
 func (o CreateConnectionRequest) String() string {

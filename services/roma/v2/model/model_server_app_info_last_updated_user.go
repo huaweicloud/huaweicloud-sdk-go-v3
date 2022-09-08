@@ -10,10 +10,10 @@ import (
 type ServerAppInfoLastUpdatedUser struct {
 
 	// 最后修改者的用户ID
-	UserId *string `json:"user_id,omitempty" xml:"user_id"`
+	UserId *string `json:"user_id,omitempty"`
 
 	// 最后修改者的用户名
-	UserName *string `json:"user_name,omitempty" xml:"user_name"`
+	UserName *string `json:"user_name,omitempty"`
 }
 
 func (o ServerAppInfoLastUpdatedUser) String() string {

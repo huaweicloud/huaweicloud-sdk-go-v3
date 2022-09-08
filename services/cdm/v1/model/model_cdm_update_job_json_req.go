@@ -9,7 +9,7 @@ import (
 type CdmUpdateJobJsonReq struct {
 
 	// 作业列表，请参见jobs数据结构说明。
-	Jobs []Job `json:"jobs" xml:"jobs"`
+	Jobs []Job `json:"jobs"`
 }
 
 func (o CdmUpdateJobJsonReq) String() string {

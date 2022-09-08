@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ListAccessConfigRequest struct {
-	Body *GetAccessConfigListRequestBody `json:"body,omitempty" xml:"body"`
+	Body *GetAccessConfigListRequestBody `json:"body,omitempty"`
 }
 
 func (o ListAccessConfigRequest) String() string {

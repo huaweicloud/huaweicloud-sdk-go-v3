@@ -7,17 +7,17 @@ import (
 )
 
 type AddCorpDto struct {
-	BasicInfo *CorpBasicDto `json:"basicInfo" xml:"basicInfo"`
+	BasicInfo *CorpBasicDto `json:"basicInfo"`
 
-	AdminInfo *AdminDto `json:"adminInfo" xml:"adminInfo"`
+	AdminInfo *AdminDto `json:"adminInfo"`
 
-	ResInfo *AddCorpResDto `json:"resInfo,omitempty" xml:"resInfo"`
+	ResInfo *AddCorpResDto `json:"resInfo,omitempty"`
 
 	// 媒体接入（包括SBC和MCU）分组id, 可通过企业资源管理下的SP管理员查询资源信息接口获取。
-	GroupId *string `json:"groupId,omitempty" xml:"groupId"`
+	GroupId *string `json:"groupId,omitempty"`
 
 	// 可配置项信息。
-	PropertyInfo *[]OrgPropertyDto `json:"propertyInfo,omitempty" xml:"propertyInfo"`
+	PropertyInfo *[]OrgPropertyDto `json:"propertyInfo,omitempty"`
 }
 
 func (o AddCorpDto) String() string {

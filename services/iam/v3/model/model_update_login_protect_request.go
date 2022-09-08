@@ -10,9 +10,9 @@ import (
 type UpdateLoginProtectRequest struct {
 
 	// 待修改登录保护状态信息的IAM用户ID。
-	UserId string `json:"user_id" xml:"user_id"`
+	UserId string `json:"user_id"`
 
-	Body *UpdateLoginProjectReq `json:"body,omitempty" xml:"body"`
+	Body *UpdateLoginProjectReq `json:"body,omitempty"`
 }
 
 func (o UpdateLoginProtectRequest) String() string {

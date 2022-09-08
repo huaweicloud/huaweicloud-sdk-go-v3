@@ -13,10 +13,10 @@ import (
 type MatchReq struct {
 
 	// 键。当前仅限定为resource_name
-	Key MatchReqKey `json:"key" xml:"key"`
+	Key MatchReqKey `json:"key"`
 
 	// 值。每个值最大长度255个unicode字符。
-	Value string `json:"value" xml:"value"`
+	Value string `json:"value"`
 }
 
 func (o MatchReq) String() string {

@@ -10,13 +10,13 @@ import (
 type ShowTakeOverTaskDetailsRequest struct {
 
 	// 任务ID。
-	TaskId string `json:"task_id" xml:"task_id"`
+	TaskId string `json:"task_id"`
 
 	// 分页编号，默认为0。
-	Page *int32 `json:"page,omitempty" xml:"page"`
+	Page *int32 `json:"page,omitempty"`
 
 	// 每页记录数。  默认10，范围[1,100]
-	Size *int32 `json:"size,omitempty" xml:"size"`
+	Size *int32 `json:"size,omitempty"`
 }
 
 func (o ShowTakeOverTaskDetailsRequest) String() string {

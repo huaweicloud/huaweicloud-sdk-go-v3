@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type PushTranscriberJobsRequest struct {
-	Body *PostTranscriberJobs `json:"body,omitempty" xml:"body"`
+	Body *PostTranscriberJobs `json:"body,omitempty"`
 }
 
 func (o PushTranscriberJobsRequest) String() string {

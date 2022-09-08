@@ -10,7 +10,7 @@ import (
 type ListStructTemplateRequest struct {
 
 	// 待查询模板id,非必填，不传时返回项目下所有自定义结构化模板
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 }
 
 func (o ListStructTemplateRequest) String() string {

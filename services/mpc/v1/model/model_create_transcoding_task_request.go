@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateTranscodingTaskRequest struct {
-	Body *CreateTranscodingReq `json:"body,omitempty" xml:"body"`
+	Body *CreateTranscodingReq `json:"body,omitempty"`
 }
 
 func (o CreateTranscodingTaskRequest) String() string {

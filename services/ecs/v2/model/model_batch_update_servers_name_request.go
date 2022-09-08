@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type BatchUpdateServersNameRequest struct {
-	Body *BatchUpdateServersNameRequestBody `json:"body,omitempty" xml:"body"`
+	Body *BatchUpdateServersNameRequestBody `json:"body,omitempty"`
 }
 
 func (o BatchUpdateServersNameRequest) String() string {

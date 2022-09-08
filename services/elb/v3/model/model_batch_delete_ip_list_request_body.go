@@ -8,7 +8,7 @@ import (
 
 // This is a auto create Response Object
 type BatchDeleteIpListRequestBody struct {
-	Ipgroup *BatchDeleteIpListOption `json:"ipgroup,omitempty" xml:"ipgroup"`
+	Ipgroup *BatchDeleteIpListOption `json:"ipgroup,omitempty"`
 }
 
 func (o BatchDeleteIpListRequestBody) String() string {

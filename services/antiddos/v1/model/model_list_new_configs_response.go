@@ -10,16 +10,16 @@ import (
 type ListNewConfigsResponse struct {
 
 	// 流量限制列表
-	TrafficLimitedList *[]TriggerBpsDict `json:"traffic_limited_list,omitempty" xml:"traffic_limited_list"`
+	TrafficLimitedList *[]TriggerBpsDict `json:"traffic_limited_list,omitempty"`
 
 	// HTTP限制列表
-	HttpLimitedList *[]TriggerQpsDict `json:"http_limited_list,omitempty" xml:"http_limited_list"`
+	HttpLimitedList *[]TriggerQpsDict `json:"http_limited_list,omitempty"`
 
 	// 连接数限制列表
-	ConnectionLimitedList *[]CleanLimitDict `json:"connection_limited_list,omitempty" xml:"connection_limited_list"`
+	ConnectionLimitedList *[]CleanLimitDict `json:"connection_limited_list,omitempty"`
 
 	// 扩展配置列表
-	ExtendDdosConfig *[]ExtendDDoSSet `json:"extend_ddos_config,omitempty" xml:"extend_ddos_config"`
+	ExtendDdosConfig *[]ExtendDDoSSet `json:"extend_ddos_config,omitempty"`
 	HttpStatusCode   int              `json:"-"`
 }
 

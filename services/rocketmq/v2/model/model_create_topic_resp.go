@@ -9,7 +9,7 @@ import (
 type CreateTopicResp struct {
 
 	// 主题名称。
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 }
 
 func (o CreateTopicResp) String() string {

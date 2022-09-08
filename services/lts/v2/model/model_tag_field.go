@@ -10,16 +10,16 @@ import (
 type TagField struct {
 
 	// 字段名称
-	FieldName string `json:"fieldName" xml:"fieldName"`
+	FieldName string `json:"fieldName"`
 
 	// 字段数据类型，例：string，long，float
-	Type string `json:"type" xml:"type"`
+	Type string `json:"type"`
 
 	// 内容
-	Content *string `json:"content,omitempty" xml:"content"`
+	Content *string `json:"content,omitempty"`
 
 	// 是否开启快速分析
-	IsAnalysis *bool `json:"isAnalysis,omitempty" xml:"isAnalysis"`
+	IsAnalysis *bool `json:"isAnalysis,omitempty"`
 }
 
 func (o TagField) String() string {

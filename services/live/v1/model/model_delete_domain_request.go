@@ -10,7 +10,7 @@ import (
 type DeleteDomainRequest struct {
 
 	// 直播域名
-	Domain string `json:"domain" xml:"domain"`
+	Domain string `json:"domain"`
 }
 
 func (o DeleteDomainRequest) String() string {

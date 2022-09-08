@@ -10,7 +10,7 @@ import (
 type BatchDeleteInstancesResponse struct {
 
 	// 修改实例的结果。
-	Results        *[]BatchDeleteInstanceRespResults `json:"results,omitempty" xml:"results"`
+	Results        *[]BatchDeleteInstanceRespResults `json:"results,omitempty"`
 	HttpStatusCode int                               `json:"-"`
 }
 

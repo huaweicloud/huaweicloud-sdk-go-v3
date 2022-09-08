@@ -10,9 +10,9 @@ import (
 type SetOnlineMigrationTaskRequest struct {
 
 	// 在线迁移任务ID。
-	TaskId string `json:"task_id" xml:"task_id"`
+	TaskId string `json:"task_id"`
 
-	Body *SetOnlineMigrationTaskBody `json:"body,omitempty" xml:"body"`
+	Body *SetOnlineMigrationTaskBody `json:"body,omitempty"`
 }
 
 func (o SetOnlineMigrationTaskRequest) String() string {

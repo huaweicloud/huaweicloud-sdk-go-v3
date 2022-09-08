@@ -10,7 +10,7 @@ import (
 type UpdateMeetingResponse struct {
 
 	// 会议信息列表
-	Body           *[]ConferenceInfo `json:"body,omitempty" xml:"body"`
+	Body           *[]ConferenceInfo `json:"body,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }
 

@@ -10,12 +10,12 @@ import (
 type ConfirmConsumptionMessagesRequest struct {
 
 	// 队列ID。
-	QueueId string `json:"queue_id" xml:"queue_id"`
+	QueueId string `json:"queue_id"`
 
 	// 消费组ID。
-	ConsumerGroupId string `json:"consumer_group_id" xml:"consumer_group_id"`
+	ConsumerGroupId string `json:"consumer_group_id"`
 
-	Body *ConfirmConsumptionMessagesReq `json:"body,omitempty" xml:"body"`
+	Body *ConfirmConsumptionMessagesReq `json:"body,omitempty"`
 }
 
 func (o ConfirmConsumptionMessagesRequest) String() string {

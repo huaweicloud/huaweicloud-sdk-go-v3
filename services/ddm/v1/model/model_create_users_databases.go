@@ -9,7 +9,7 @@ import (
 type CreateUsersDatabases struct {
 
 	// 关联逻辑库名称。
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 }
 
 func (o CreateUsersDatabases) String() string {

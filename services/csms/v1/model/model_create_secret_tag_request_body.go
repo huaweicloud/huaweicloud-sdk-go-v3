@@ -7,7 +7,7 @@ import (
 )
 
 type CreateSecretTagRequestBody struct {
-	Tag *TagItem `json:"tag,omitempty" xml:"tag"`
+	Tag *TagItem `json:"tag,omitempty"`
 }
 
 func (o CreateSecretTagRequestBody) String() string {

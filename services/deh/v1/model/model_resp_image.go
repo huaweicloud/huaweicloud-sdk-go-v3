@@ -10,7 +10,7 @@ import (
 type RespImage struct {
 
 	// 弹性云服务器镜像ID。
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 }
 
 func (o RespImage) String() string {

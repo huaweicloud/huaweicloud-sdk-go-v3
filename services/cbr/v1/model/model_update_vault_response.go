@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type UpdateVaultResponse struct {
-	Vault          *Vault `json:"vault,omitempty" xml:"vault"`
+	Vault          *Vault `json:"vault,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

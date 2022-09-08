@@ -10,9 +10,9 @@ import (
 type ResetNodeRequest struct {
 
 	// 集群 ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-	ClusterId string `json:"cluster_id" xml:"cluster_id"`
+	ClusterId string `json:"cluster_id"`
 
-	Body *ResetNodeList `json:"body,omitempty" xml:"body"`
+	Body *ResetNodeList `json:"body,omitempty"`
 }
 
 func (o ResetNodeRequest) String() string {

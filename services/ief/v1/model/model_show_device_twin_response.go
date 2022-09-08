@@ -8,12 +8,12 @@ import (
 
 // Response Object
 type ShowDeviceTwinResponse struct {
-	PropertyVisitors *ValueInPropertyVisitors `json:"property_visitors,omitempty" xml:"property_visitors"`
+	PropertyVisitors *ValueInPropertyVisitors `json:"property_visitors,omitempty"`
 
-	Twin *ValueInTwinResponse `json:"twin,omitempty" xml:"twin"`
+	Twin *ValueInTwinResponse `json:"twin,omitempty"`
 
 	// 访问协议，有如下选项： - userdefine：自定义协议 - modbus：modbus协议 - opc-ua：opc-ua协议
-	AccessProtocol *string `json:"access_protocol,omitempty" xml:"access_protocol"`
+	AccessProtocol *string `json:"access_protocol,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

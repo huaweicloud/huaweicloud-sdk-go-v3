@@ -10,10 +10,10 @@ import (
 type NovaSecurityGroupCommonGroup struct {
 
 	// 对端安全组的名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 对端安全组所属租户的租户ID
-	TenantId *string `json:"tenant_id,omitempty" xml:"tenant_id"`
+	TenantId *string `json:"tenant_id,omitempty"`
 }
 
 func (o NovaSecurityGroupCommonGroup) String() string {

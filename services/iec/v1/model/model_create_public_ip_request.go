@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreatePublicIpRequest struct {
-	Body *CreatePublicIpRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreatePublicIpRequestBody `json:"body,omitempty"`
 }
 
 func (o CreatePublicIpRequest) String() string {

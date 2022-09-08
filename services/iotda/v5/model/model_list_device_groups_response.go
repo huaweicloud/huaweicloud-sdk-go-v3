@@ -10,9 +10,9 @@ import (
 type ListDeviceGroupsResponse struct {
 
 	// 设备组信息列表。
-	DeviceGroups *[]DeviceGroupResponseDto `json:"device_groups,omitempty" xml:"device_groups"`
+	DeviceGroups *[]DeviceGroupResponseDto `json:"device_groups,omitempty"`
 
-	Page           *Page `json:"page,omitempty" xml:"page"`
+	Page           *Page `json:"page,omitempty"`
 	HttpStatusCode int   `json:"-"`
 }
 

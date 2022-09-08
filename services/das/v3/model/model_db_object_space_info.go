@@ -13,25 +13,25 @@ import (
 type DbObjectSpaceInfo struct {
 
 	// 对象类型，如果是table，同时需要传database_id
-	ObjectType DbObjectSpaceInfoObjectType `json:"object_type" xml:"object_type"`
+	ObjectType DbObjectSpaceInfoObjectType `json:"object_type"`
 
 	// 对象名称
-	ObjectName string `json:"object_name" xml:"object_name"`
+	ObjectName string `json:"object_name"`
 
 	// 对象ID
-	ObjectId *string `json:"object_id,omitempty" xml:"object_id"`
+	ObjectId *string `json:"object_id,omitempty"`
 
 	// 已使用空间，以字节为单位
-	UsedSize *int64 `json:"used_size,omitempty" xml:"used_size"`
+	UsedSize *int64 `json:"used_size,omitempty"`
 
 	// 数据空间，以字节为单位
-	DataSize *int64 `json:"data_size,omitempty" xml:"data_size"`
+	DataSize *int64 `json:"data_size,omitempty"`
 
 	// 索引空间，以字节为单位
-	IndexSize *int64 `json:"index_size,omitempty" xml:"index_size"`
+	IndexSize *int64 `json:"index_size,omitempty"`
 
 	// 估算值行数，以字节为单位
-	EstimatedRows *int64 `json:"estimated_rows,omitempty" xml:"estimated_rows"`
+	EstimatedRows *int64 `json:"estimated_rows,omitempty"`
 }
 
 func (o DbObjectSpaceInfo) String() string {

@@ -13,10 +13,10 @@ import (
 type ModifyTargetParamsReq struct {
 
 	// 参数分组
-	Group ModifyTargetParamsReqGroup `json:"group" xml:"group"`
+	Group ModifyTargetParamsReqGroup `json:"group"`
 
 	// 修改的参数信息
-	Params []ParamsReqBean `json:"params" xml:"params"`
+	Params []ParamsReqBean `json:"params"`
 }
 
 func (o ModifyTargetParamsReq) String() string {

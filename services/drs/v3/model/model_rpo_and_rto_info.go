@@ -10,16 +10,16 @@ import (
 type RpoAndRtoInfo struct {
 
 	// 检查点
-	CheckPoint *string `json:"check_point,omitempty" xml:"check_point"`
+	CheckPoint *string `json:"check_point,omitempty"`
 
 	// 延迟
-	Delay *string `json:"delay,omitempty" xml:"delay"`
+	Delay *string `json:"delay,omitempty"`
 
 	// gtid集合
-	GtidSet *string `json:"gtid_set,omitempty" xml:"gtid_set"`
+	GtidSet *string `json:"gtid_set,omitempty"`
 
 	// 当前时间 ，格式为“yyyy-MM-dd HH:mm:ss”
-	Time *string `json:"time,omitempty" xml:"time"`
+	Time *string `json:"time,omitempty"`
 }
 
 func (o RpoAndRtoInfo) String() string {

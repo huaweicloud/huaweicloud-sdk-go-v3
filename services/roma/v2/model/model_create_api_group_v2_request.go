@@ -10,9 +10,9 @@ import (
 type CreateApiGroupV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
-	Body *ApiGroupCreate `json:"body,omitempty" xml:"body"`
+	Body *ApiGroupCreate `json:"body,omitempty"`
 }
 
 func (o CreateApiGroupV2Request) String() string {

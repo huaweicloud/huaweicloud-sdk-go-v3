@@ -8,7 +8,7 @@ import (
 
 //
 type KeystoneCreateAgencyTokenRequestBody struct {
-	Auth *AgencyTokenAuth `json:"auth" xml:"auth"`
+	Auth *AgencyTokenAuth `json:"auth"`
 }
 
 func (o KeystoneCreateAgencyTokenRequestBody) String() string {

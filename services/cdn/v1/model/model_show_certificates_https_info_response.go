@@ -10,10 +10,10 @@ import (
 type ShowCertificatesHttpsInfoResponse struct {
 
 	// 查询结果总数
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 
 	// https对象。
-	Https          *[]HttpsDetail `json:"https,omitempty" xml:"https"`
+	Https          *[]HttpsDetail `json:"https,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }
 

@@ -10,9 +10,9 @@ import (
 type UpdateConfigurationsRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
-	Body *ModifyRedisConfigBody `json:"body,omitempty" xml:"body"`
+	Body *ModifyRedisConfigBody `json:"body,omitempty"`
 }
 
 func (o UpdateConfigurationsRequest) String() string {

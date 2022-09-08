@@ -10,10 +10,10 @@ import (
 type DeleteSessionRequest struct {
 
 	// 机器人标识符。
-	QabotId string `json:"qabot_id" xml:"qabot_id"`
+	QabotId string `json:"qabot_id"`
 
 	// 会话标识符。
-	SessionId string `json:"session_id" xml:"session_id"`
+	SessionId string `json:"session_id"`
 }
 
 func (o DeleteSessionRequest) String() string {

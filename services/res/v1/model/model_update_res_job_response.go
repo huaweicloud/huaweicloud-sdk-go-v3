@@ -10,10 +10,10 @@ import (
 type UpdateResJobResponse struct {
 
 	// 是否成功
-	IsSuccess *bool `json:"is_success,omitempty" xml:"is_success"`
+	IsSuccess *bool `json:"is_success,omitempty"`
 
 	// 返回消息
-	Message        *string `json:"message,omitempty" xml:"message"`
+	Message        *string `json:"message,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

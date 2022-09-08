@@ -13,24 +13,24 @@ import (
 type TaskSteps struct {
 
 	// 处理阶段名称
-	TaskName *string `json:"task_name,omitempty" xml:"task_name"`
+	TaskName *string `json:"task_name,omitempty"`
 
 	// 当前处理阶段包含的处理步骤名称列表
-	TaskNames *[]string `json:"task_names,omitempty" xml:"task_names"`
+	TaskNames *[]string `json:"task_names,omitempty"`
 
 	// 处理阶段状态
-	Status *TaskStepsStatus `json:"status,omitempty" xml:"status"`
+	Status *TaskStepsStatus `json:"status,omitempty"`
 
 	// 处理阶段开始时间
-	StartTime *int64 `json:"start_time,omitempty" xml:"start_time"`
+	StartTime *int64 `json:"start_time,omitempty"`
 
 	// 处理阶段结束时间
-	EndTime *int64 `json:"end_time,omitempty" xml:"end_time"`
+	EndTime *int64 `json:"end_time,omitempty"`
 
-	TaskExecutorBrief *TaskExecutorBrief `json:"task_executor_brief,omitempty" xml:"task_executor_brief"`
+	TaskExecutorBrief *TaskExecutorBrief `json:"task_executor_brief,omitempty"`
 
 	// 处理步骤
-	Tasks *[]Task `json:"tasks,omitempty" xml:"tasks"`
+	Tasks *[]Task `json:"tasks,omitempty"`
 }
 
 func (o TaskSteps) String() string {

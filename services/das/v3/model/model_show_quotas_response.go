@@ -10,7 +10,7 @@ import (
 type ShowQuotasResponse struct {
 
 	// 配额列表对象。
-	Quotas         *interface{} `json:"quotas,omitempty" xml:"quotas"`
+	Quotas         *interface{} `json:"quotas,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }
 

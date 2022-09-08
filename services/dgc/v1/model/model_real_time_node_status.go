@@ -10,13 +10,13 @@ import (
 )
 
 type RealTimeNodeStatus struct {
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
-	Status *RealTimeNodeStatusStatus `json:"status,omitempty" xml:"status"`
+	Status *RealTimeNodeStatusStatus `json:"status,omitempty"`
 
-	LogPath *string `json:"logPath,omitempty" xml:"logPath"`
+	LogPath *string `json:"logPath,omitempty"`
 
-	NodeType *RealTimeNodeStatusNodeType `json:"nodeType,omitempty" xml:"nodeType"`
+	NodeType *RealTimeNodeStatusNodeType `json:"nodeType,omitempty"`
 }
 
 func (o RealTimeNodeStatus) String() string {

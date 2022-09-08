@@ -13,13 +13,13 @@ import (
 type TextSimilarityRequest struct {
 
 	// 待计算文本1，中文长度1~512，英文长度1~2000，文本编码为UTF-8。
-	Text1 string `json:"text1" xml:"text1"`
+	Text1 string `json:"text1"`
 
 	// 待计算文本2，中文长度1~512，英文长度1~2000，文本编码为UTF-8。
-	Text2 string `json:"text2" xml:"text2"`
+	Text2 string `json:"text2"`
 
 	// 支持的文本语言类型，目前支持中文（zh）和英文（en），默认为中文。
-	Lang *TextSimilarityRequestLang `json:"lang,omitempty" xml:"lang"`
+	Lang *TextSimilarityRequestLang `json:"lang,omitempty"`
 }
 
 func (o TextSimilarityRequest) String() string {

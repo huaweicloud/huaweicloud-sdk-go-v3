@@ -9,9 +9,9 @@ import (
 type MixInfo struct {
 
 	// 合成任务原始视频配置
-	Inputs *[]InputSetting `json:"inputs,omitempty" xml:"inputs"`
+	Inputs *[]InputSetting `json:"inputs,omitempty"`
 
-	Layout *MixInfoLayout `json:"layout,omitempty" xml:"layout"`
+	Layout *MixInfoLayout `json:"layout,omitempty"`
 }
 
 func (o MixInfo) String() string {

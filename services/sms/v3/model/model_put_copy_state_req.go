@@ -13,10 +13,10 @@ import (
 type PutCopyStateReq struct {
 
 	// 源端服务器状
-	Copystate *PutCopyStateReqCopystate `json:"copystate,omitempty" xml:"copystate"`
+	Copystate *PutCopyStateReqCopystate `json:"copystate,omitempty"`
 
 	// 迁移周期
-	Migrationcycle *PutCopyStateReqMigrationcycle `json:"migrationcycle,omitempty" xml:"migrationcycle"`
+	Migrationcycle *PutCopyStateReqMigrationcycle `json:"migrationcycle,omitempty"`
 }
 
 func (o PutCopyStateReq) String() string {

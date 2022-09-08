@@ -8,7 +8,7 @@ import (
 
 // 创建路由表请求体
 type CreateRoutetableRequestBody struct {
-	Routetable *CreateRoutetableOption `json:"routetable" xml:"routetable"`
+	Routetable *CreateRoutetableOption `json:"routetable"`
 }
 
 func (o CreateRoutetableRequestBody) String() string {

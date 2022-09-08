@@ -10,7 +10,7 @@ import (
 type ListYmlsJobResponse struct {
 
 	// 历史修改配置列表。
-	ConfigList     *[]ConfigListRsp `json:"configList,omitempty" xml:"configList"`
+	ConfigList     *[]ConfigListRsp `json:"configList,omitempty"`
 	HttpStatusCode int              `json:"-"`
 }
 

@@ -10,10 +10,10 @@ import (
 type ListFunctionStatisticsRequest struct {
 
 	// 函数的URN（Uniform Resource Name），唯一标识函数。
-	FuncUrn string `json:"func_urn" xml:"func_urn"`
+	FuncUrn string `json:"func_urn"`
 
 	// 获取最近多少分钟内函数执行的指标。
-	Period string `json:"period" xml:"period"`
+	Period string `json:"period"`
 }
 
 func (o ListFunctionStatisticsRequest) String() string {

@@ -10,7 +10,7 @@ import (
 type DeleteDisasterRecoveryResponse struct {
 
 	// 解除容灾关系的工作ID。
-	JobId          *string `json:"job_id,omitempty" xml:"job_id"`
+	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

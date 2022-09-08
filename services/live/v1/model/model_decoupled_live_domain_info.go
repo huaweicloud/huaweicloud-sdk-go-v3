@@ -11,34 +11,34 @@ import (
 type DecoupledLiveDomainInfo struct {
 
 	// 直播域名
-	Domain string `json:"domain" xml:"domain"`
+	Domain string `json:"domain"`
 
 	// 域名类型
-	DomainType DecoupledLiveDomainInfoDomainType `json:"domain_type" xml:"domain_type"`
+	DomainType DecoupledLiveDomainInfoDomainType `json:"domain_type"`
 
 	// CDN厂商
-	Vendor DecoupledLiveDomainInfoVendor `json:"vendor" xml:"vendor"`
+	Vendor DecoupledLiveDomainInfoVendor `json:"vendor"`
 
 	// 直播所属直播中心
-	Region string `json:"region" xml:"region"`
+	Region string `json:"region"`
 
 	// 直播域名的CName
-	DomainCname string `json:"domain_cname" xml:"domain_cname"`
+	DomainCname string `json:"domain_cname"`
 
 	// 直播域名的状态
-	Status DecoupledLiveDomainInfoStatus `json:"status" xml:"status"`
+	Status DecoupledLiveDomainInfoStatus `json:"status"`
 
 	// 播放域名关联的推流域名（只有domain_type为pull的时候有效）
-	RelatedDomain string `json:"related_domain" xml:"related_domain"`
+	RelatedDomain string `json:"related_domain"`
 
 	// 域名创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间
-	CreateTime *sdktime.SdkTime `json:"create_time" xml:"create_time"`
+	CreateTime *sdktime.SdkTime `json:"create_time"`
 
 	// 状态描述
-	StatusDescribe *string `json:"status_describe,omitempty" xml:"status_describe"`
+	StatusDescribe *string `json:"status_describe,omitempty"`
 
 	// 域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
-	ServiceArea *DecoupledLiveDomainInfoServiceArea `json:"service_area,omitempty" xml:"service_area"`
+	ServiceArea *DecoupledLiveDomainInfoServiceArea `json:"service_area,omitempty"`
 }
 
 func (o DecoupledLiveDomainInfo) String() string {

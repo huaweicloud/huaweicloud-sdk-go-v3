@@ -10,10 +10,10 @@ import (
 type ListCompetitionWorksResponse struct {
 
 	// 作品列表
-	Works *[]ListWorksResponseModel `json:"works,omitempty" xml:"works"`
+	Works *[]ListWorksResponseModel `json:"works,omitempty"`
 
 	// 作品总数
-	Total          *int32 `json:"total,omitempty" xml:"total"`
+	Total          *int32 `json:"total,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

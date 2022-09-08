@@ -10,10 +10,10 @@ import (
 type ShowSqlExecutionPlanResponse struct {
 
 	// SQL执行计划列表
-	ExecutionPlans *[]ExecutionPlan `json:"execution_plans,omitempty" xml:"execution_plans"`
+	ExecutionPlans *[]ExecutionPlan `json:"execution_plans,omitempty"`
 
 	// SQL执行失败时，显示执行错误信息
-	ErrorMessage   *string `json:"error_message,omitempty" xml:"error_message"`
+	ErrorMessage   *string `json:"error_message,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

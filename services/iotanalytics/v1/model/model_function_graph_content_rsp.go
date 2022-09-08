@@ -10,25 +10,25 @@ import (
 type FunctionGraphContentRsp struct {
 
 	// 名称
-	FunctionName *string `json:"functionName,omitempty" xml:"functionName"`
+	FunctionName *string `json:"functionName,omitempty"`
 
 	// 原始URL
-	OrigUrl *string `json:"origUrl,omitempty" xml:"origUrl"`
+	OrigUrl *string `json:"origUrl,omitempty"`
 
 	// 转换后的URL
-	FinalUrl *string `json:"finalUrl,omitempty" xml:"finalUrl"`
+	FinalUrl *string `json:"finalUrl,omitempty"`
 
 	// 校验参数
-	VerifyBody *string `json:"verifyBody,omitempty" xml:"verifyBody"`
+	VerifyBody *string `json:"verifyBody,omitempty"`
 
 	// 租户的AK
-	Ak *string `json:"ak,omitempty" xml:"ak"`
+	Ak *string `json:"ak,omitempty"`
 
 	// 租户的SK
-	Sk *string `json:"sk,omitempty" xml:"sk"`
+	Sk *string `json:"sk,omitempty"`
 
 	// 项目id
-	ProjectId *string `json:"projectId,omitempty" xml:"projectId"`
+	ProjectId *string `json:"projectId,omitempty"`
 }
 
 func (o FunctionGraphContentRsp) String() string {

@@ -9,10 +9,10 @@ import (
 type UpdateLabelsReq struct {
 
 	// 标签名称
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 颜色id
-	Color string `json:"color" xml:"color"`
+	Color string `json:"color"`
 }
 
 func (o UpdateLabelsReq) String() string {

@@ -10,7 +10,7 @@ import (
 type NeutronDeleteFirewallRuleRequest struct {
 
 	// 网络ACL防火墙规则ID
-	FirewallRuleId string `json:"firewall_rule_id" xml:"firewall_rule_id"`
+	FirewallRuleId string `json:"firewall_rule_id"`
 }
 
 func (o NeutronDeleteFirewallRuleRequest) String() string {

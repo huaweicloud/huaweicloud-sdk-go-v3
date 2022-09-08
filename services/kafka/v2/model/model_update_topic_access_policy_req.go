@@ -9,7 +9,7 @@ import (
 type UpdateTopicAccessPolicyReq struct {
 
 	// topic列表。
-	Topics []AccessPolicyTopicEntity `json:"topics" xml:"topics"`
+	Topics []AccessPolicyTopicEntity `json:"topics"`
 }
 
 func (o UpdateTopicAccessPolicyReq) String() string {

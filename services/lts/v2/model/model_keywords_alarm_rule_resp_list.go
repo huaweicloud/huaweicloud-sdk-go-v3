@@ -12,47 +12,47 @@ import (
 type KeywordsAlarmRuleRespList struct {
 
 	// 项目id
-	ProjectId string `json:"projectId" xml:"projectId"`
+	ProjectId string `json:"projectId"`
 
 	// 关键词告警id
-	KeywordsAlarmRuleId string `json:"keywords_alarm_rule_id" xml:"keywords_alarm_rule_id"`
+	KeywordsAlarmRuleId string `json:"keywords_alarm_rule_id"`
 
 	// 关键词告警名称
-	KeywordsAlarmRuleName string `json:"keywords_alarm_rule_name" xml:"keywords_alarm_rule_name"`
+	KeywordsAlarmRuleName string `json:"keywords_alarm_rule_name"`
 
 	// 关键词告警信息描述
-	KeywordsAlarmRuleDescription string `json:"keywords_alarm_rule_description" xml:"keywords_alarm_rule_description"`
+	KeywordsAlarmRuleDescription string `json:"keywords_alarm_rule_description"`
 
 	// 条件
-	ConditionExpression string `json:"condition_expression" xml:"condition_expression"`
+	ConditionExpression string `json:"condition_expression"`
 
 	// 关键词详细信息
-	KeywordsRequests []KeywordsRequest `json:"keywords_requests" xml:"keywords_requests"`
+	KeywordsRequests []KeywordsRequest `json:"keywords_requests"`
 
 	// 告警统计周期
-	Frequency *Frequency `json:"frequency" xml:"frequency"`
+	Frequency *Frequency `json:"frequency"`
 
 	// 告警级别
-	KeywordsAlarmLevel KeywordsAlarmRuleRespListKeywordsAlarmLevel `json:"keywords_alarm_level" xml:"keywords_alarm_level"`
+	KeywordsAlarmLevel KeywordsAlarmRuleRespListKeywordsAlarmLevel `json:"keywords_alarm_level"`
 
 	// 是否发送
-	KeywordsAlarmSend bool `json:"keywords_alarm_send" xml:"keywords_alarm_send"`
+	KeywordsAlarmSend bool `json:"keywords_alarm_send"`
 
 	// domainId
-	DomainId string `json:"domain_id" xml:"domain_id"`
+	DomainId string `json:"domain_id"`
 
 	// 创建时间(毫秒时间戳)
-	CreateTime int64 `json:"create_time" xml:"create_time"`
+	CreateTime int64 `json:"create_time"`
 
 	// 更新时间(毫秒时间戳)
-	UpdateTime int64 `json:"update_time" xml:"update_time"`
+	UpdateTime int64 `json:"update_time"`
 
 	// 主题
-	Topics []Topics `json:"topics" xml:"topics"`
+	Topics []Topics `json:"topics"`
 
-	TemplateName *string `json:"template_name,omitempty" xml:"template_name"`
+	TemplateName *string `json:"template_name,omitempty"`
 
-	Status *KeywordsAlarmRuleRespListStatus `json:"status,omitempty" xml:"status"`
+	Status *KeywordsAlarmRuleRespListStatus `json:"status,omitempty"`
 }
 
 func (o KeywordsAlarmRuleRespList) String() string {

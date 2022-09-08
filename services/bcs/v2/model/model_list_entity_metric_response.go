@@ -10,7 +10,7 @@ import (
 type ListEntityMetricResponse struct {
 
 	// 指标对象列表。
-	Metrics        *[]EntityMetricList `json:"metrics,omitempty" xml:"metrics"`
+	Metrics        *[]EntityMetricList `json:"metrics,omitempty"`
 	HttpStatusCode int                 `json:"-"`
 }
 

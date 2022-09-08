@@ -10,9 +10,9 @@ import (
 type RollbackSnapshotRequest struct {
 
 	// 快照ID
-	SnapshotId string `json:"snapshot_id" xml:"snapshot_id"`
+	SnapshotId string `json:"snapshot_id"`
 
-	Body *RollbackSnapshotRequestBody `json:"body,omitempty" xml:"body"`
+	Body *RollbackSnapshotRequestBody `json:"body,omitempty"`
 }
 
 func (o RollbackSnapshotRequest) String() string {

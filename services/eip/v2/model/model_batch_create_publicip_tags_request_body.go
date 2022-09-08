@@ -13,10 +13,10 @@ import (
 type BatchCreatePublicipTagsRequestBody struct {
 
 	// 标签列表
-	Tags []ResourceTagOption `json:"tags" xml:"tags"`
+	Tags []ResourceTagOption `json:"tags"`
 
 	// 操作标识  create：创建  action为create时，tag的value必选
-	Action BatchCreatePublicipTagsRequestBodyAction `json:"action" xml:"action"`
+	Action BatchCreatePublicipTagsRequestBodyAction `json:"action"`
 }
 
 func (o BatchCreatePublicipTagsRequestBody) String() string {

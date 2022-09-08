@@ -10,7 +10,7 @@ import (
 type ListCloudPhoneServerModelsRequest struct {
 
 	// 产品类型 - 0：云手机 - 1：云手游
-	ProductType *int32 `json:"product_type,omitempty" xml:"product_type"`
+	ProductType *int32 `json:"product_type,omitempty"`
 }
 
 func (o ListCloudPhoneServerModelsRequest) String() string {

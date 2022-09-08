@@ -10,7 +10,7 @@ import (
 type ShowImageWatermarkResponse struct {
 
 	// 暗水印内容，长度不超过32个字节
-	Watermark      *string `json:"watermark,omitempty" xml:"watermark"`
+	Watermark      *string `json:"watermark,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

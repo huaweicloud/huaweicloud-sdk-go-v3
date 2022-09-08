@@ -10,37 +10,37 @@ import (
 type ListTwoTemplatesRequest struct {
 
 	// 模板平台类型
-	Platform *string `json:"platform,omitempty" xml:"platform"`
+	Platform *string `json:"platform,omitempty"`
 
 	// 语言类型
-	Language *string `json:"language,omitempty" xml:"language"`
+	Language *string `json:"language,omitempty"`
 
 	// 是否支持流水线
-	Pipeline *string `json:"pipeline,omitempty" xml:"pipeline"`
+	Pipeline *string `json:"pipeline,omitempty"`
 
 	// 模板分类
-	EnterType *string `json:"enter_type,omitempty" xml:"enter_type"`
+	EnterType *string `json:"enter_type,omitempty"`
 
 	// 模板名称
-	Search *string `json:"search,omitempty" xml:"search"`
+	Search *string `json:"search,omitempty"`
 
 	// 模板日期排序
-	DateOrder *string `json:"date_order,omitempty" xml:"date_order"`
+	DateOrder *string `json:"date_order,omitempty"`
 
 	// 模板引用次数排序
-	UsedTimeOrder *string `json:"used_time_order,omitempty" xml:"used_time_order"`
+	UsedTimeOrder *string `json:"used_time_order,omitempty"`
 
 	// 模板公开类型
-	Type *string `json:"type,omitempty" xml:"type"`
+	Type *string `json:"type,omitempty"`
 
 	// 大区名称
-	Region *string `json:"region,omitempty" xml:"region"`
+	Region *string `json:"region,omitempty"`
 
 	// 分页页数
-	PageNo int32 `json:"page_no" xml:"page_no"`
+	PageNo int32 `json:"page_no"`
 
 	// 每页数据数
-	PageSize int32 `json:"page_size" xml:"page_size"`
+	PageSize int32 `json:"page_size"`
 }
 
 func (o ListTwoTemplatesRequest) String() string {

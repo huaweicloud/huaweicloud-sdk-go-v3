@@ -10,12 +10,12 @@ import (
 type UpdateMemberRequest struct {
 
 	// 后端云服务器id
-	MemberId string `json:"member_id" xml:"member_id"`
+	MemberId string `json:"member_id"`
 
 	// 后端云服务器组id
-	PoolId string `json:"pool_id" xml:"pool_id"`
+	PoolId string `json:"pool_id"`
 
-	Body *UpdateMemberRequestBody `json:"body,omitempty" xml:"body"`
+	Body *UpdateMemberRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateMemberRequest) String() string {

@@ -12,26 +12,26 @@ import (
 type ProductTemplate struct {
 
 	// 产品模板ID
-	Id *int32 `json:"id,omitempty" xml:"id"`
+	Id *int32 `json:"id,omitempty"`
 
 	// 产品模板名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 产品模板描述
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 产品模板状态 0-启用 1-停用
-	Status *ProductTemplateStatus `json:"status,omitempty" xml:"status"`
+	Status *ProductTemplateStatus `json:"status,omitempty"`
 
-	CreatedUser *CreatedUser `json:"created_user,omitempty" xml:"created_user"`
+	CreatedUser *CreatedUser `json:"created_user,omitempty"`
 
-	LastUpdatedUser *LastUpdatedUser `json:"last_updated_user,omitempty" xml:"last_updated_user"`
+	LastUpdatedUser *LastUpdatedUser `json:"last_updated_user,omitempty"`
 
 	// 创建时间，timestamp(ms)，使用UTC时区
-	CreatedDatetime *int64 `json:"created_datetime,omitempty" xml:"created_datetime"`
+	CreatedDatetime *int64 `json:"created_datetime,omitempty"`
 
 	// 最后修改时间，timestamp(ms)，使用UTC时区
-	LastUpdatedDatetime *int64 `json:"last_updated_datetime,omitempty" xml:"last_updated_datetime"`
+	LastUpdatedDatetime *int64 `json:"last_updated_datetime,omitempty"`
 }
 
 func (o ProductTemplate) String() string {

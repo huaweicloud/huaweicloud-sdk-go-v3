@@ -13,110 +13,110 @@ import (
 type ShowDetailsOfInstanceV2Response struct {
 
 	// 实例ID
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 实例所属租户ID
-	ProjectId *string `json:"project_id,omitempty" xml:"project_id"`
+	ProjectId *string `json:"project_id,omitempty"`
 
 	// 实例名称
-	InstanceName *string `json:"instance_name,omitempty" xml:"instance_name"`
+	InstanceName *string `json:"instance_name,omitempty"`
 
 	// 实例状态： - Creating：创建中 - CreateSuccess：创建成功 - CreateFail：创建失败 - Initing：初始化中 - Registering：注册中 - Running：运行中 - InitingFailed：初始化失败 - RegisterFailed：注册失败 - Installing：安装中 - InstallFailed：安装失败 - Updating：升级中 - UpdateFailed：升级失败 - Rollbacking：回滚中 - RollbackSuccess：回滚成功 - RollbackFailed：回滚失败 - Deleting：删除中 - DeleteFailed：删除失败 - Unregistering：注销中 - UnRegisterFailed：注销失败 - CreateTimeout：创建超时 - InitTimeout：初始化超时 - RegisterTimeout：注册超时 - InstallTimeout：安装超时 - UpdateTimeout：升级超时 - RollbackTimeout：回滚超时 - DeleteTimeout：删除超时 - UnregisterTimeout：注销超时 - Starting：启动中 - Freezing：冻结中 - Frozen：已冻结 - Restarting：重启中 - RestartFail：重启失败 - Unhealthy：实例异常 - RestartTimeout：重启超时
-	Status *ShowDetailsOfInstanceV2ResponseStatus `json:"status,omitempty" xml:"status"`
+	Status *ShowDetailsOfInstanceV2ResponseStatus `json:"status,omitempty"`
 
 	// 实例状态对应编号 - 1：创建中 - 2：创建成功 - 3：创建失败 - 4：初始化中 - 5：注册中 - 6：运行中 - 7：初始化失败 - 8：注册失败 - 10：安装中 - 11：安装失败 - 12：升级中 - 13：升级失败 - 20：回滚中 - 21：回滚成功 - 22：回滚失败 - 23：删除中 - 24：删除失败 - 25：注销中 - 26：注销失败 - 27：创建超时 - 28：初始化超时 - 29：注册超时 - 30：安装超时 - 31：升级超时 - 32：回滚超时 - 33：删除超时 - 34：注销超时 - 35：启动中 - 36：冻结中 - 37：已冻结 - 38：重启中 - 39：重启失败 - 40：实例异常 - 41：重启超时
-	InstanceStatus *ShowDetailsOfInstanceV2ResponseInstanceStatus `json:"instance_status,omitempty" xml:"instance_status"`
+	InstanceStatus *ShowDetailsOfInstanceV2ResponseInstanceStatus `json:"instance_status,omitempty"`
 
 	// 实例类型  默认apig
-	Type *string `json:"type,omitempty" xml:"type"`
+	Type *string `json:"type,omitempty"`
 
 	// 实例规格： - BASIC：基础版实例 - PROFESSIONAL：专业版实例 - ENTERPRISE：企业版实例 - PLATINUM：铂金版实例 - BASIC_IPV6：基础版IPV6实例 - PROFESSIONAL_IPV6：专业版IPV6实例 - ENTERPRISE_IPV6：企业版IPV6实例 - PLATINUM_IPV6：铂金版IPV6实例
-	Spec *ShowDetailsOfInstanceV2ResponseSpec `json:"spec,omitempty" xml:"spec"`
+	Spec *ShowDetailsOfInstanceV2ResponseSpec `json:"spec,omitempty"`
 
 	// 实例创建时间。unix时间戳格式。
-	CreateTime *int64 `json:"create_time,omitempty" xml:"create_time"`
+	CreateTime *int64 `json:"create_time,omitempty"`
 
 	// 企业项目ID，企业帐号必填
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 实例绑定的弹性IP地址
-	EipAddress *string `json:"eip_address,omitempty" xml:"eip_address"`
+	EipAddress *string `json:"eip_address,omitempty"`
 
 	// 实例计费方式： - 0：按需计费 - 1：包周期计费
-	ChargingMode *ShowDetailsOfInstanceV2ResponseChargingMode `json:"charging_mode,omitempty" xml:"charging_mode"`
+	ChargingMode *ShowDetailsOfInstanceV2ResponseChargingMode `json:"charging_mode,omitempty"`
 
 	// 包周期计费订单编号
-	CbcMetadata *string `json:"cbc_metadata,omitempty" xml:"cbc_metadata"`
+	CbcMetadata *string `json:"cbc_metadata,omitempty"`
 
 	// 实例使用的负载均衡器类型 - lvs Linux虚拟服务器 - elb 弹性负载均衡，elb仅部分region支持
-	LoadbalancerProvider *ShowDetailsOfInstanceV2ResponseLoadbalancerProvider `json:"loadbalancer_provider,omitempty" xml:"loadbalancer_provider"`
+	LoadbalancerProvider *ShowDetailsOfInstanceV2ResponseLoadbalancerProvider `json:"loadbalancer_provider,omitempty"`
 
 	// 实例描述
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 虚拟私有云ID。  获取方法如下：   - 方法1：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。   - 方法2：通过虚拟私有云服务的API接口查询，具体方法请参见《虚拟私有云服务API参考》的“查询VPC列表”章节。
-	VpcId *string `json:"vpc_id,omitempty" xml:"vpc_id"`
+	VpcId *string `json:"vpc_id,omitempty"`
 
 	// 子网的网络ID。  获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，单击VPC下的子网，进入子网详情页面，查找网络ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体方法请参见《虚拟私有云服务API参考》的“查询子网列表”章节。
-	SubnetId *string `json:"subnet_id,omitempty" xml:"subnet_id"`
+	SubnetId *string `json:"subnet_id,omitempty"`
 
 	// 指定实例所属的安全组。  获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体方法请参见《虚拟私有云服务API参考》的“查询安全组列表”章节。
-	SecurityGroupId *string `json:"security_group_id,omitempty" xml:"security_group_id"`
+	SecurityGroupId *string `json:"security_group_id,omitempty"`
 
 	// '维护时间窗开始时间。时间格式为 xx:00:00，xx取值为02,06,10,14,18,22。'  '在这个时间段内，运维人员可以对该实例的节点进行维护操作。维护期间，业务可以正常使用，可能会发生闪断。维护操作通常几个月一次。'
-	MaintainBegin *string `json:"maintain_begin,omitempty" xml:"maintain_begin"`
+	MaintainBegin *string `json:"maintain_begin,omitempty"`
 
 	// '维护时间窗结束时间。时间格式为 xx:00:00，与维护时间窗开始时间相差4个小时。'  '在这个时间段内，运维人员可以对该实例的节点进行维护操作。维护期间，业务可以正常使用，可能会发生闪断。维护操作通常几个月一次'。
-	MaintainEnd *string `json:"maintain_end,omitempty" xml:"maintain_end"`
+	MaintainEnd *string `json:"maintain_end,omitempty"`
 
 	// 实例入口，虚拟私有云访问地址
-	IngressIp *string `json:"ingress_ip,omitempty" xml:"ingress_ip"`
+	IngressIp *string `json:"ingress_ip,omitempty"`
 
 	// 实例所属用户ID
-	UserId *string `json:"user_id,omitempty" xml:"user_id"`
+	UserId *string `json:"user_id,omitempty"`
 
 	// 出公网网段 (IPv6)  。  当前仅部分region部分可用区支持IPv6
-	NatEipIpv6Cidr *string `json:"nat_eip_ipv6_cidr,omitempty" xml:"nat_eip_ipv6_cidr"`
+	NatEipIpv6Cidr *string `json:"nat_eip_ipv6_cidr,omitempty"`
 
 	// 弹性IP地址(IPv6)。  当前仅部分region部分可用区支持IPv6
-	EipIpv6Address *string `json:"eip_ipv6_address,omitempty" xml:"eip_ipv6_address"`
+	EipIpv6Address *string `json:"eip_ipv6_address,omitempty"`
 
 	// 实例出公网IP
-	NatEipAddress *string `json:"nat_eip_address,omitempty" xml:"nat_eip_address"`
+	NatEipAddress *string `json:"nat_eip_address,omitempty"`
 
 	// 出公网带宽
-	BandwidthSize *int32 `json:"bandwidth_size,omitempty" xml:"bandwidth_size"`
+	BandwidthSize *int32 `json:"bandwidth_size,omitempty"`
 
 	// 可用区
-	AvailableZoneIds *string `json:"available_zone_ids,omitempty" xml:"available_zone_ids"`
+	AvailableZoneIds *string `json:"available_zone_ids,omitempty"`
 
 	// 实例版本编号
-	InstanceVersion *string `json:"instance_version,omitempty" xml:"instance_version"`
+	InstanceVersion *string `json:"instance_version,omitempty"`
 
 	// 子网的网络ID。  暂不支持
-	VirsubnetId *string `json:"virsubnet_id,omitempty" xml:"virsubnet_id"`
+	VirsubnetId *string `json:"virsubnet_id,omitempty"`
 
 	// roma弹性公网IP。  暂不支持
-	RomaEipAddress *string `json:"roma_eip_address,omitempty" xml:"roma_eip_address"`
+	RomaEipAddress *string `json:"roma_eip_address,omitempty"`
 
 	// 监听信息  暂不支持
-	Listeners *interface{} `json:"listeners,omitempty" xml:"listeners"`
+	Listeners *interface{} `json:"listeners,omitempty"`
 
 	// 实例支持的特性列表
-	SupportedFeatures *[]string `json:"supported_features,omitempty" xml:"supported_features"`
+	SupportedFeatures *[]string `json:"supported_features,omitempty"`
 
-	EndpointService *EndpointService `json:"endpoint_service,omitempty" xml:"endpoint_service"`
+	EndpointService *EndpointService `json:"endpoint_service,omitempty"`
 
 	// 终端节点服务列表
-	EndpointServices *[]EndpointService `json:"endpoint_services,omitempty" xml:"endpoint_services"`
+	EndpointServices *[]EndpointService `json:"endpoint_services,omitempty"`
 
-	NodeIps *NodeIps `json:"node_ips,omitempty" xml:"node_ips"`
+	NodeIps *NodeIps `json:"node_ips,omitempty"`
 
 	// 公网入口地址列表
-	Publicips *[]IpDetails `json:"publicips,omitempty" xml:"publicips"`
+	Publicips *[]IpDetails `json:"publicips,omitempty"`
 
 	// 私网入口地址列表
-	Privateips     *[]IpDetails `json:"privateips,omitempty" xml:"privateips"`
+	Privateips     *[]IpDetails `json:"privateips,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }
 

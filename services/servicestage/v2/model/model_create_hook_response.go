@@ -10,13 +10,13 @@ import (
 type CreateHookResponse struct {
 
 	// hook ID。
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// hook类型。
-	Type *string `json:"type,omitempty" xml:"type"`
+	Type *string `json:"type,omitempty"`
 
 	// 回滚URL。
-	CallbackUrl    *string `json:"callback_url,omitempty" xml:"callback_url"`
+	CallbackUrl    *string `json:"callback_url,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

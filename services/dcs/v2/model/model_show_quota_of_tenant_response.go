@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowQuotaOfTenantResponse struct {
-	Quotas         *QueryTenantQuotaRespQuotas `json:"quotas,omitempty" xml:"quotas"`
+	Quotas         *QueryTenantQuotaRespQuotas `json:"quotas,omitempty"`
 	HttpStatusCode int                         `json:"-"`
 }
 

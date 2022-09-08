@@ -10,10 +10,10 @@ import (
 type Topic struct {
 
 	// 名称。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// id。
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 }
 
 func (o Topic) String() string {

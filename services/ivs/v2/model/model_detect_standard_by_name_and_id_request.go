@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type DetectStandardByNameAndIdRequest struct {
-	Body *IvsStandardByNameAndIdRequestBody `json:"body,omitempty" xml:"body"`
+	Body *IvsStandardByNameAndIdRequestBody `json:"body,omitempty"`
 }
 
 func (o DetectStandardByNameAndIdRequest) String() string {

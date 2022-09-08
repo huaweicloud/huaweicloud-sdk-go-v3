@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ListHostRequest struct {
-	Body *GetHostListRequestBody `json:"body,omitempty" xml:"body"`
+	Body *GetHostListRequestBody `json:"body,omitempty"`
 }
 
 func (o ListHostRequest) String() string {

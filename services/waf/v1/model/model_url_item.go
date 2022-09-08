@@ -10,13 +10,13 @@ import (
 type UrlItem struct {
 
 	// url路径
-	Key *string `json:"key,omitempty" xml:"key"`
+	Key *string `json:"key,omitempty"`
 
 	// 数量
-	Num *int32 `json:"num,omitempty" xml:"num"`
+	Num *int32 `json:"num,omitempty"`
 
 	// 域名
-	Host *string `json:"host,omitempty" xml:"host"`
+	Host *string `json:"host,omitempty"`
 }
 
 func (o UrlItem) String() string {

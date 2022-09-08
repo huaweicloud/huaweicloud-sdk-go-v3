@@ -10,7 +10,7 @@ import (
 type DeletePortRequest struct {
 
 	// 端口ID
-	PortId string `json:"port_id" xml:"port_id"`
+	PortId string `json:"port_id"`
 }
 
 func (o DeletePortRequest) String() string {

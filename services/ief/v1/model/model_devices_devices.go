@@ -8,10 +8,10 @@ import (
 
 // 终端设备信息
 type DevicesDevices struct {
-	Added *DevicesDevicesAdded `json:"added,omitempty" xml:"added"`
+	Added *DevicesDevicesAdded `json:"added,omitempty"`
 
 	// 要解绑的终端设备ID
-	Removed *[]string `json:"removed,omitempty" xml:"removed"`
+	Removed *[]string `json:"removed,omitempty"`
 }
 
 func (o DevicesDevices) String() string {

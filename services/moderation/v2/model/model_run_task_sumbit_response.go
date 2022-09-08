@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type RunTaskSumbitResponse struct {
-	Result         *TaskSumbitResponseResult `json:"result,omitempty" xml:"result"`
+	Result         *TaskSumbitResponseResult `json:"result,omitempty"`
 	HttpStatusCode int                       `json:"-"`
 }
 

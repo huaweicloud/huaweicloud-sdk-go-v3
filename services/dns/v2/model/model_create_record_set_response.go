@@ -8,33 +8,33 @@ import (
 
 // Response Object
 type CreateRecordSetResponse struct {
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
-	ZoneId *string `json:"zone_id,omitempty" xml:"zone_id"`
+	ZoneId *string `json:"zone_id,omitempty"`
 
-	ZoneName *string `json:"zone_name,omitempty" xml:"zone_name"`
+	ZoneName *string `json:"zone_name,omitempty"`
 
-	Type *string `json:"type,omitempty" xml:"type"`
+	Type *string `json:"type,omitempty"`
 
-	Ttl *int32 `json:"ttl,omitempty" xml:"ttl"`
+	Ttl *int32 `json:"ttl,omitempty"`
 
-	Records *[]string `json:"records,omitempty" xml:"records"`
+	Records *[]string `json:"records,omitempty"`
 
-	CreateAt *string `json:"create_at,omitempty" xml:"create_at"`
+	CreateAt *string `json:"create_at,omitempty"`
 
-	UpdateAt *string `json:"update_at,omitempty" xml:"update_at"`
+	UpdateAt *string `json:"update_at,omitempty"`
 
-	Status *string `json:"status,omitempty" xml:"status"`
+	Status *string `json:"status,omitempty"`
 
-	Default *bool `json:"default,omitempty" xml:"default"`
+	Default *bool `json:"default,omitempty"`
 
-	ProjectId *string `json:"project_id,omitempty" xml:"project_id"`
+	ProjectId *string `json:"project_id,omitempty"`
 
-	Links          *PageLink `json:"links,omitempty" xml:"links"`
+	Links          *PageLink `json:"links,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }
 

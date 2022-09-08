@@ -10,10 +10,10 @@ import (
 type DeleteEventRequest struct {
 
 	// 函数的URN，详细解释见FunctionGraph函数模型的描述。
-	FunctionUrn string `json:"function_urn" xml:"function_urn"`
+	FunctionUrn string `json:"function_urn"`
 
 	// 测试事件ID
-	EventId string `json:"event_id" xml:"event_id"`
+	EventId string `json:"event_id"`
 }
 
 func (o DeleteEventRequest) String() string {

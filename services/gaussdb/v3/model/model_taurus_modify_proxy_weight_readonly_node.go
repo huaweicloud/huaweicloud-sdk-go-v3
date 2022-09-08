@@ -10,10 +10,10 @@ import (
 type TaurusModifyProxyWeightReadonlyNode struct {
 
 	// 只读节点id
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 只读节点权重
-	Weight *int32 `json:"weight,omitempty" xml:"weight"`
+	Weight *int32 `json:"weight,omitempty"`
 }
 
 func (o TaurusModifyProxyWeightReadonlyNode) String() string {

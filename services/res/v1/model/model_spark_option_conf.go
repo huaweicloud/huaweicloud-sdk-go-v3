@@ -10,10 +10,10 @@ import (
 type SparkOptionConf struct {
 
 	// 参数名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 参数值
-	Value *string `json:"value,omitempty" xml:"value"`
+	Value *string `json:"value,omitempty"`
 }
 
 func (o SparkOptionConf) String() string {

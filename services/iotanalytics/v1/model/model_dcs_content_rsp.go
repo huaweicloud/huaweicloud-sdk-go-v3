@@ -10,22 +10,22 @@ import (
 type DcsContentRsp struct {
 
 	// VPC-EP服务端id
-	EndpointServiceId *string `json:"endpointServiceId,omitempty" xml:"endpointServiceId"`
+	EndpointServiceId *string `json:"endpointServiceId,omitempty"`
 
 	// VPC-EP服务端名称
-	EndpointServiceName *string `json:"endpointServiceName,omitempty" xml:"endpointServiceName"`
+	EndpointServiceName *string `json:"endpointServiceName,omitempty"`
 
 	// VPC-EP客户端IP
-	EndpointIp *string `json:"endpointIp,omitempty" xml:"endpointIp"`
+	EndpointIp *string `json:"endpointIp,omitempty"`
 
 	// VPC-EP客户端Port
-	Port *int32 `json:"port,omitempty" xml:"port"`
+	Port *int32 `json:"port,omitempty"`
 
 	// redis实例类型
-	DcsType *string `json:"dcsType,omitempty" xml:"dcsType"`
+	DcsType *string `json:"dcsType,omitempty"`
 
 	// redis访问密码
-	Password *string `json:"password,omitempty" xml:"password"`
+	Password *string `json:"password,omitempty"`
 }
 
 func (o DcsContentRsp) String() string {

@@ -10,9 +10,9 @@ import (
 type UploadFileResponse struct {
 
 	// 文件Id
-	FileId *string `json:"fileId,omitempty" xml:"fileId"`
+	FileId *string `json:"fileId,omitempty"`
 
-	ImageModeration *ImageModerationResult `json:"imageModeration,omitempty" xml:"imageModeration"`
+	ImageModeration *ImageModerationResult `json:"imageModeration,omitempty"`
 	HttpStatusCode  int                    `json:"-"`
 }
 

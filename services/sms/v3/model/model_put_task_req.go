@@ -13,88 +13,88 @@ import (
 type PutTaskReq struct {
 
 	// 任务名称（用户自定义）
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 任务类型，创建时必选，更新时可选
-	Type *PutTaskReqType `json:"type,omitempty" xml:"type"`
+	Type *PutTaskReqType `json:"type,omitempty"`
 
 	// 操作系统类型，分为WINDOWS和LINUX，创建时必选，更新时可选
-	OsType *PutTaskReqOsType `json:"os_type,omitempty" xml:"os_type"`
+	OsType *PutTaskReqOsType `json:"os_type,omitempty"`
 
 	// 迁移任务id
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 进程优先级  0：低  1：标准（默认）  2：高
-	Priority *PutTaskReqPriority `json:"priority,omitempty" xml:"priority"`
+	Priority *PutTaskReqPriority `json:"priority,omitempty"`
 
 	// 目的端服务器的区域ID
-	RegionId *string `json:"region_id,omitempty" xml:"region_id"`
+	RegionId *string `json:"region_id,omitempty"`
 
 	// 迁移完成后是否启动目的端服务器  true：启动  false：停止
-	StartTargetServer *bool `json:"start_target_server,omitempty" xml:"start_target_server"`
+	StartTargetServer *bool `json:"start_target_server,omitempty"`
 
 	// 企业项目id
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 目的端服务器的IP地址。  公网迁移时请填写弹性IP地址  专线迁移时请填写私有IP地址
-	MigrationIp *string `json:"migration_ip,omitempty" xml:"migration_ip"`
+	MigrationIp *string `json:"migration_ip,omitempty"`
 
 	// 目的端服务器的区域名称
-	RegionName *string `json:"region_name,omitempty" xml:"region_name"`
+	RegionName *string `json:"region_name,omitempty"`
 
 	// 目的端服务器所在项目名称
-	ProjectName *string `json:"project_name,omitempty" xml:"project_name"`
+	ProjectName *string `json:"project_name,omitempty"`
 
 	// 目的端服务器所在项目ID
-	ProjectId *string `json:"project_id,omitempty" xml:"project_id"`
+	ProjectId *string `json:"project_id,omitempty"`
 
 	// 模板ID
-	VmTemplateId *string `json:"vm_template_id,omitempty" xml:"vm_template_id"`
+	VmTemplateId *string `json:"vm_template_id,omitempty"`
 
-	SourceServer *PostSourceServerBody `json:"source_server,omitempty" xml:"source_server"`
+	SourceServer *PostSourceServerBody `json:"source_server,omitempty"`
 
-	TargetServer *TargetServer `json:"target_server,omitempty" xml:"target_server"`
+	TargetServer *TargetServer `json:"target_server,omitempty"`
 
 	// 任务状态
-	State *string `json:"state,omitempty" xml:"state"`
+	State *string `json:"state,omitempty"`
 
 	// 预估完成时间
-	EstimateCompleteTime *int64 `json:"estimate_complete_time,omitempty" xml:"estimate_complete_time"`
+	EstimateCompleteTime *int64 `json:"estimate_complete_time,omitempty"`
 
 	// 连接状态
-	Connected *bool `json:"connected,omitempty" xml:"connected"`
+	Connected *bool `json:"connected,omitempty"`
 
 	// 任务创建时间
-	CreateDate *int64 `json:"create_date,omitempty" xml:"create_date"`
+	CreateDate *int64 `json:"create_date,omitempty"`
 
 	// 任务开始时间
-	StartDate *int64 `json:"start_date,omitempty" xml:"start_date"`
+	StartDate *int64 `json:"start_date,omitempty"`
 
 	// 任务结束时间
-	FinishDate *int64 `json:"finish_date,omitempty" xml:"finish_date"`
+	FinishDate *int64 `json:"finish_date,omitempty"`
 
 	// 迁移速率，单位：MB/S
-	MigrateSpeed *float64 `json:"migrate_speed,omitempty" xml:"migrate_speed"`
+	MigrateSpeed *float64 `json:"migrate_speed,omitempty"`
 
 	// 错误信息
-	ErrorJson *string `json:"error_json,omitempty" xml:"error_json"`
+	ErrorJson *string `json:"error_json,omitempty"`
 
 	// 任务总耗时
-	TotalTime *int64 `json:"total_time,omitempty" xml:"total_time"`
+	TotalTime *int64 `json:"total_time,omitempty"`
 
 	// 暂时保留float,兼容现网老版本的SMS-Agent
-	FloatIp *string `json:"float_ip,omitempty" xml:"float_ip"`
+	FloatIp *string `json:"float_ip,omitempty"`
 
 	// 迁移剩余时间（秒）
-	RemainSeconds *int64 `json:"remain_seconds,omitempty" xml:"remain_seconds"`
+	RemainSeconds *int64 `json:"remain_seconds,omitempty"`
 
 	// 目的端的快照id
-	TargetSnapshotId *string `json:"target_snapshot_id,omitempty" xml:"target_snapshot_id"`
+	TargetSnapshotId *string `json:"target_snapshot_id,omitempty"`
 
-	CloneServer *CloneServer `json:"clone_server,omitempty" xml:"clone_server"`
+	CloneServer *CloneServer `json:"clone_server,omitempty"`
 
 	// 任务包含的子任务列表
-	SubTasks *[]SubTask `json:"sub_tasks,omitempty" xml:"sub_tasks"`
+	SubTasks *[]SubTask `json:"sub_tasks,omitempty"`
 }
 
 func (o PutTaskReq) String() string {

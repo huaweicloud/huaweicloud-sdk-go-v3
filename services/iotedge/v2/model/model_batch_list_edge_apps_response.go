@@ -10,12 +10,12 @@ import (
 type BatchListEdgeAppsResponse struct {
 
 	// 总记录数
-	Count *int32 `json:"count,omitempty" xml:"count"`
+	Count *int32 `json:"count,omitempty"`
 
-	PageInfo *PageInfoDto `json:"page_info,omitempty" xml:"page_info"`
+	PageInfo *PageInfoDto `json:"page_info,omitempty"`
 
 	// 每页记录数
-	EdgeApps       *[]QueryApplicationBriefResponseDto `json:"edge_apps,omitempty" xml:"edge_apps"`
+	EdgeApps       *[]QueryApplicationBriefResponseDto `json:"edge_apps,omitempty"`
 	HttpStatusCode int                                 `json:"-"`
 }
 

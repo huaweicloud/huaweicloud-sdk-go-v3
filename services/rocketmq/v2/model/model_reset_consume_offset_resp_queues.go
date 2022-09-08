@@ -9,13 +9,13 @@ import (
 type ResetConsumeOffsetRespQueues struct {
 
 	// 队列所在的broker。
-	BrokerName *string `json:"broker_name,omitempty" xml:"broker_name"`
+	BrokerName *string `json:"broker_name,omitempty"`
 
 	// 队列ID。
-	QueueId *int32 `json:"queue_id,omitempty" xml:"queue_id"`
+	QueueId *int32 `json:"queue_id,omitempty"`
 
 	// 重置消费进度。
-	TimestampOffset *int64 `json:"timestamp_offset,omitempty" xml:"timestamp_offset"`
+	TimestampOffset *int64 `json:"timestamp_offset,omitempty"`
 }
 
 func (o ResetConsumeOffsetRespQueues) String() string {

@@ -10,19 +10,19 @@ import (
 type CreateVariableRequestBody struct {
 
 	// id
-	Id int32 `json:"id" xml:"id"`
+	Id int32 `json:"id"`
 
 	// name
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// variable_type
-	VariableType int32 `json:"variable_type" xml:"variable_type"`
+	VariableType int32 `json:"variable_type"`
 
 	// variable
-	Variable []interface{} `json:"variable" xml:"variable"`
+	Variable []interface{} `json:"variable"`
 
 	// 是否被引用
-	IsQuoted bool `json:"is_quoted" xml:"is_quoted"`
+	IsQuoted bool `json:"is_quoted"`
 }
 
 func (o CreateVariableRequestBody) String() string {

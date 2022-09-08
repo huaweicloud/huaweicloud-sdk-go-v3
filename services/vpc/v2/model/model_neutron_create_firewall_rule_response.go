@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type NeutronCreateFirewallRuleResponse struct {
-	FirewallRule   *NeutronFirewallRule `json:"firewall_rule,omitempty" xml:"firewall_rule"`
+	FirewallRule   *NeutronFirewallRule `json:"firewall_rule,omitempty"`
 	HttpStatusCode int                  `json:"-"`
 }
 

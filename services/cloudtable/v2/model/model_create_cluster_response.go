@@ -10,7 +10,7 @@ import (
 type CreateClusterResponse struct {
 
 	// 集群唯一标识，新建集群的ID。
-	ClusterId      *string `json:"cluster_id,omitempty" xml:"cluster_id"`
+	ClusterId      *string `json:"cluster_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

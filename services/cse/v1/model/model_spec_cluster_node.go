@@ -10,7 +10,7 @@ import (
 type SpecClusterNode struct {
 
 	// CCE节点信息。
-	ClusterNodes *[]ClusterNode `json:"cluster_nodes,omitempty" xml:"cluster_nodes"`
+	ClusterNodes *[]ClusterNode `json:"cluster_nodes,omitempty"`
 }
 
 func (o SpecClusterNode) String() string {

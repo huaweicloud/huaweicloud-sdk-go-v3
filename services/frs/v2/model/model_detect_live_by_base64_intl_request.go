@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type DetectLiveByBase64IntlRequest struct {
-	Body *LiveDetectBase64Req `json:"body,omitempty" xml:"body"`
+	Body *LiveDetectBase64Req `json:"body,omitempty"`
 }
 
 func (o DetectLiveByBase64IntlRequest) String() string {

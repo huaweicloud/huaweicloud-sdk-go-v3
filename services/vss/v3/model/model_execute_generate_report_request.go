@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ExecuteGenerateReportRequest struct {
-	Body *ExecuteGenerateReportRequestBody `json:"body,omitempty" xml:"body"`
+	Body *ExecuteGenerateReportRequestBody `json:"body,omitempty"`
 }
 
 func (o ExecuteGenerateReportRequest) String() string {

@@ -9,7 +9,7 @@ import (
 type MixInfoLayout struct {
 
 	// 原视频在合成视频中的位置布局配置
-	Panes []PaneSetting `json:"panes" xml:"panes"`
+	Panes []PaneSetting `json:"panes"`
 }
 
 func (o MixInfoLayout) String() string {

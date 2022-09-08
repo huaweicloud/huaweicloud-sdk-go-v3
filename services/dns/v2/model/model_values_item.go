@@ -10,7 +10,7 @@ import (
 type ValuesItem struct {
 
 	// 所有版本列表。
-	Values *[]ListApiVersionsItem `json:"values,omitempty" xml:"values"`
+	Values *[]ListApiVersionsItem `json:"values,omitempty"`
 }
 
 func (o ValuesItem) String() string {

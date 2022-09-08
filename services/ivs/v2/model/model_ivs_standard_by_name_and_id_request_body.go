@@ -7,9 +7,9 @@ import (
 )
 
 type IvsStandardByNameAndIdRequestBody struct {
-	Meta *Meta `json:"meta" xml:"meta"`
+	Meta *Meta `json:"meta"`
 
-	Data *IvsStandardByNameAndIdRequestBodyData `json:"data" xml:"data"`
+	Data *IvsStandardByNameAndIdRequestBodyData `json:"data"`
 }
 
 func (o IvsStandardByNameAndIdRequestBody) String() string {

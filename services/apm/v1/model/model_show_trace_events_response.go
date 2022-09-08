@@ -10,7 +10,7 @@ import (
 type ShowTraceEventsResponse struct {
 
 	// span event信息列表
-	SpanEventList  *[]SpanEventInfo `json:"span_event_list,omitempty" xml:"span_event_list"`
+	SpanEventList  *[]SpanEventInfo `json:"span_event_list,omitempty"`
 	HttpStatusCode int              `json:"-"`
 }
 

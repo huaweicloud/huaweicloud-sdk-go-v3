@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type CreatePolicyResponse struct {
-	Policy         *Policy `json:"policy,omitempty" xml:"policy"`
+	Policy         *Policy `json:"policy,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

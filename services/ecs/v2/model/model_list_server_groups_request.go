@@ -10,10 +10,10 @@ import (
 type ListServerGroupsRequest struct {
 
 	// 查询返回server group数量限制。
-	Limit *int32 `json:"limit,omitempty" xml:"limit"`
+	Limit *int32 `json:"limit,omitempty"`
 
 	// 从marker指定的server group的下一条数据开始查询。
-	Marker *string `json:"marker,omitempty" xml:"marker"`
+	Marker *string `json:"marker,omitempty"`
 }
 
 func (o ListServerGroupsRequest) String() string {

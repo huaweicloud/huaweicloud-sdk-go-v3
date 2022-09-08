@@ -10,10 +10,10 @@ import (
 type DeleteDictionaryRequest struct {
 
 	// 字典ID
-	DictId string `json:"dict_id" xml:"dict_id"`
+	DictId string `json:"dict_id"`
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 }
 
 func (o DeleteDictionaryRequest) String() string {

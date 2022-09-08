@@ -9,13 +9,13 @@ import (
 type ApplicationCreate struct {
 
 	// 应用名称。
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 应用描述。
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 企业项目ID。默认值为0。
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 
 func (o ApplicationCreate) String() string {

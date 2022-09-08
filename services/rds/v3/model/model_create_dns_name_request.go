@@ -13,12 +13,12 @@ import (
 type CreateDnsNameRequest struct {
 
 	// 语言
-	XLanguage *CreateDnsNameRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *CreateDnsNameRequestXLanguage `json:"X-Language,omitempty"`
 
 	// 实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
-	Body *CreateDnsNameRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreateDnsNameRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateDnsNameRequest) String() string {

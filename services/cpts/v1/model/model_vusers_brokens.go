@@ -9,7 +9,7 @@ import (
 type VusersBrokens struct {
 
 	// vusers
-	Vusers *[]float64 `json:"vusers,omitempty" xml:"vusers"`
+	Vusers *[]float64 `json:"vusers,omitempty"`
 }
 
 func (o VusersBrokens) String() string {

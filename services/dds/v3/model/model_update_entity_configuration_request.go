@@ -10,9 +10,9 @@ import (
 type UpdateEntityConfigurationRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
-	Body *UpdateConfigurationParameterResult `json:"body,omitempty" xml:"body"`
+	Body *UpdateConfigurationParameterResult `json:"body,omitempty"`
 }
 
 func (o UpdateEntityConfigurationRequest) String() string {

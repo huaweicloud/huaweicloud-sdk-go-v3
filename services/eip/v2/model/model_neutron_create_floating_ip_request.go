@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type NeutronCreateFloatingIpRequest struct {
-	Body *NeutronCreateFloatingIpRequestBody `json:"body,omitempty" xml:"body"`
+	Body *NeutronCreateFloatingIpRequestBody `json:"body,omitempty"`
 }
 
 func (o NeutronCreateFloatingIpRequest) String() string {

@@ -10,7 +10,7 @@ import (
 type ShowGaussMySqlProxyFlavorsResponse struct {
 
 	// 规格组信息。
-	ProxyFlavorGroups *[]MysqlProxyFlavorGroups `json:"proxy_flavor_groups,omitempty" xml:"proxy_flavor_groups"`
+	ProxyFlavorGroups *[]MysqlProxyFlavorGroups `json:"proxy_flavor_groups,omitempty"`
 	HttpStatusCode    int                       `json:"-"`
 }
 

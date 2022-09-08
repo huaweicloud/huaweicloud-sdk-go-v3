@@ -10,19 +10,19 @@ import (
 type GaussDBforOpenGaussListDatabase struct {
 
 	// 数据库名称。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 数据库所属用户。
-	Owner *string `json:"owner,omitempty" xml:"owner"`
+	Owner *string `json:"owner,omitempty"`
 
 	// 数据库使用的字符集，例如UTF8。
-	CharacterSet *string `json:"character_set,omitempty" xml:"character_set"`
+	CharacterSet *string `json:"character_set,omitempty"`
 
 	// 数据库排序集，例如en_US.UTF-8等。
-	CollateSet *string `json:"collate_set,omitempty" xml:"collate_set"`
+	CollateSet *string `json:"collate_set,omitempty"`
 
 	// 数据库大小（单位：MB）。
-	Size *string `json:"size,omitempty" xml:"size"`
+	Size *string `json:"size,omitempty"`
 }
 
 func (o GaussDBforOpenGaussListDatabase) String() string {

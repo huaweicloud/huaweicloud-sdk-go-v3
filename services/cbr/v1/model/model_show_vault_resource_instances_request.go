@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ShowVaultResourceInstancesRequest struct {
-	Body *VaultResourceInstancesReq `json:"body,omitempty" xml:"body"`
+	Body *VaultResourceInstancesReq `json:"body,omitempty"`
 }
 
 func (o ShowVaultResourceInstancesRequest) String() string {

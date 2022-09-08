@@ -7,7 +7,7 @@ import (
 )
 
 type OpenApiResponseSpec struct {
-	Spec *OpenApiResponseSpecSpec `json:"spec,omitempty" xml:"spec"`
+	Spec *OpenApiResponseSpecSpec `json:"spec,omitempty"`
 }
 
 func (o OpenApiResponseSpec) String() string {

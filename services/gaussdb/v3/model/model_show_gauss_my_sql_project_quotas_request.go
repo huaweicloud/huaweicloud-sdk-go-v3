@@ -13,10 +13,10 @@ import (
 type ShowGaussMySqlProjectQuotasRequest struct {
 
 	// 语言
-	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *string `json:"X-Language,omitempty"`
 
 	// '功能说明：根据type过滤查询指定类型的配额' 取值范围：instance
-	Type *ShowGaussMySqlProjectQuotasRequestType `json:"type,omitempty" xml:"type"`
+	Type *ShowGaussMySqlProjectQuotasRequestType `json:"type,omitempty"`
 }
 
 func (o ShowGaussMySqlProjectQuotasRequest) String() string {

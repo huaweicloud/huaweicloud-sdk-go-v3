@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowGroupsResponse struct {
-	Group          *ShowGroupsRespGroup `json:"group,omitempty" xml:"group"`
+	Group          *ShowGroupsRespGroup `json:"group,omitempty"`
 	HttpStatusCode int                  `json:"-"`
 }
 

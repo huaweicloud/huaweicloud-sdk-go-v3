@@ -10,19 +10,19 @@ import (
 type TokenCatalogEndpoint struct {
 
 	// 终端节点的URL。
-	Url string `json:"url" xml:"url"`
+	Url string `json:"url"`
 
 	// 终端节点所属区域。
-	Region string `json:"region" xml:"region"`
+	Region string `json:"region"`
 
 	// 终端节点所属区域ID。
-	RegionId string `json:"region_id" xml:"region_id"`
+	RegionId string `json:"region_id"`
 
 	// 接口类型，描述接口在该终端节点的可见性。值为“public”，表示该接口为公开接口。
-	Interface string `json:"interface" xml:"interface"`
+	Interface string `json:"interface"`
 
 	// 终端节点ID。
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 }
 
 func (o TokenCatalogEndpoint) String() string {

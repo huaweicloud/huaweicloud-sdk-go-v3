@@ -10,9 +10,9 @@ import (
 type ExpandReplicationRequest struct {
 
 	// 复制对的ID。
-	ReplicationId string `json:"replication_id" xml:"replication_id"`
+	ReplicationId string `json:"replication_id"`
 
-	Body *ExtendReplicationRequestBody `json:"body,omitempty" xml:"body"`
+	Body *ExtendReplicationRequestBody `json:"body,omitempty"`
 }
 
 func (o ExpandReplicationRequest) String() string {

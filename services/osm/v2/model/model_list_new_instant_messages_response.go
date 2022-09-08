@@ -10,13 +10,13 @@ import (
 type ListNewInstantMessagesResponse struct {
 
 	// 状态列表
-	Imstatus *[]ImStatusV2 `json:"imstatus,omitempty" xml:"imstatus"`
+	Imstatus *[]ImStatusV2 `json:"imstatus,omitempty"`
 
 	// 留言内容列表
-	Immsg *[]UserInstantIncidentMsgV2 `json:"immsg,omitempty" xml:"immsg"`
+	Immsg *[]UserInstantIncidentMsgV2 `json:"immsg,omitempty"`
 
 	// 上次查询留言时间
-	LastMessageTimeId *string `json:"last_message_time_id,omitempty" xml:"last_message_time_id"`
+	LastMessageTimeId *string `json:"last_message_time_id,omitempty"`
 	HttpStatusCode    int     `json:"-"`
 }
 

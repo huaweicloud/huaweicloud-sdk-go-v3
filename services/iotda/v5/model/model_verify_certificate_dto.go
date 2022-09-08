@@ -10,7 +10,7 @@ import (
 type VerifyCertificateDto struct {
 
 	// **参数说明**：验证证书的内容信息。
-	VerifyContent string `json:"verify_content" xml:"verify_content"`
+	VerifyContent string `json:"verify_content"`
 }
 
 func (o VerifyCertificateDto) String() string {

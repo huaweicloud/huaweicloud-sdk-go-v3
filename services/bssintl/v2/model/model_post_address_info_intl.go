@@ -9,16 +9,16 @@ import (
 type PostAddressInfoIntl struct {
 
 	// 收件人地址。
-	Address *string `json:"address,omitempty" xml:"address"`
+	Address *string `json:"address,omitempty"`
 
 	// 收件人。
-	Recipients *string `json:"recipients,omitempty" xml:"recipients"`
+	Recipients *string `json:"recipients,omitempty"`
 
 	// 收件所在地邮政编码。
-	ZipCode *string `json:"zipCode,omitempty" xml:"zipCode"`
+	ZipCode *string `json:"zipCode,omitempty"`
 
 	// 收件人手机号码。
-	MobilePhone *string `json:"mobilePhone,omitempty" xml:"mobilePhone"`
+	MobilePhone *string `json:"mobilePhone,omitempty"`
 }
 
 func (o PostAddressInfoIntl) String() string {

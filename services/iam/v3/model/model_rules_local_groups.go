@@ -10,7 +10,7 @@ import (
 type RulesLocalGroups struct {
 
 	// 联邦用户在本系统中所属用户组列表
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 }
 
 func (o RulesLocalGroups) String() string {

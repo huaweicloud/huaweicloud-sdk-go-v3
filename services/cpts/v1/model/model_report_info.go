@@ -7,16 +7,16 @@ import (
 )
 
 type ReportInfo struct {
-	Brokens *ReportbrokensInfo `json:"brokens,omitempty" xml:"brokens"`
+	Brokens *ReportbrokensInfo `json:"brokens,omitempty"`
 
-	Details *ReportdetailsInfo `json:"details,omitempty" xml:"details"`
+	Details *ReportdetailsInfo `json:"details,omitempty"`
 
-	Outline *ReportoutlineInfo `json:"outline,omitempty" xml:"outline"`
+	Outline *ReportoutlineInfo `json:"outline,omitempty"`
 
 	// 响应时间分布
-	Rtproportion *string `json:"rtproportion,omitempty" xml:"rtproportion"`
+	Rtproportion *string `json:"rtproportion,omitempty"`
 
-	TaskInfo *ReportTaskInfo `json:"taskInfo,omitempty" xml:"taskInfo"`
+	TaskInfo *ReportTaskInfo `json:"taskInfo,omitempty"`
 }
 
 func (o ReportInfo) String() string {

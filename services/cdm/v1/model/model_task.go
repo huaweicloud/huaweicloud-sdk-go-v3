@@ -10,10 +10,10 @@ import (
 type Task struct {
 
 	// 任务id
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 任务名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 }
 
 func (o Task) String() string {

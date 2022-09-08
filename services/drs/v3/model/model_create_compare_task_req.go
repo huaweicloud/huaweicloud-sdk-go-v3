@@ -13,12 +13,12 @@ import (
 type CreateCompareTaskReq struct {
 
 	// 任务id。
-	JobId string `json:"job_id" xml:"job_id"`
+	JobId string `json:"job_id"`
 
 	// 对象级对比类型，取值为空代表不创建对象级对比。object_level_compare_type和data_level_compare_info都为空时，只查询已创建的对比任务列表。
-	ObjectLevelCompareType *CreateCompareTaskReqObjectLevelCompareType `json:"object_level_compare_type,omitempty" xml:"object_level_compare_type"`
+	ObjectLevelCompareType *CreateCompareTaskReqObjectLevelCompareType `json:"object_level_compare_type,omitempty"`
 
-	DataLevelCompareInfo *CreateDataLevelCompareReq `json:"data_level_compare_info,omitempty" xml:"data_level_compare_info"`
+	DataLevelCompareInfo *CreateDataLevelCompareReq `json:"data_level_compare_info,omitempty"`
 }
 
 func (o CreateCompareTaskReq) String() string {

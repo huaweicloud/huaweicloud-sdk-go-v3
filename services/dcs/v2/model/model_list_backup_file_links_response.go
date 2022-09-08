@@ -10,13 +10,13 @@ import (
 type ListBackupFileLinksResponse struct {
 
 	// OBS桶内文件路径。
-	FilePath *string `json:"file_path,omitempty" xml:"file_path"`
+	FilePath *string `json:"file_path,omitempty"`
 
 	// OBS桶名。
-	BucketName *string `json:"bucket_name,omitempty" xml:"bucket_name"`
+	BucketName *string `json:"bucket_name,omitempty"`
 
 	// 备份文件下链接集合，链接数最大为64个。
-	Links          *[]LinksItem `json:"links,omitempty" xml:"links"`
+	Links          *[]LinksItem `json:"links,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }
 

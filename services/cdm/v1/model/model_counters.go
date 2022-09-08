@@ -7,7 +7,7 @@ import (
 )
 
 type Counters struct {
-	OrgApacheSqoopSubmissionCounterSqoopCounters *Counter `json:"org.apache.sqoop.submission.counter.SqoopCounters" xml:"org.apache.sqoop.submission.counter.SqoopCounters"`
+	OrgApacheSqoopSubmissionCounterSqoopCounters *Counter `json:"org.apache.sqoop.submission.counter.SqoopCounters"`
 }
 
 func (o Counters) String() string {

@@ -10,10 +10,10 @@ import (
 type Category struct {
 
 	// 用户特征。
-	UserMetaList *[]string `json:"user_meta_list,omitempty" xml:"user_meta_list"`
+	UserMetaList *[]string `json:"user_meta_list,omitempty"`
 
 	// 物品特征。
-	ItemMetaList *[]string `json:"item_meta_list,omitempty" xml:"item_meta_list"`
+	ItemMetaList *[]string `json:"item_meta_list,omitempty"`
 }
 
 func (o Category) String() string {

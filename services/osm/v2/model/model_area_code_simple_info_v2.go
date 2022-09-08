@@ -9,13 +9,13 @@ import (
 type AreaCodeSimpleInfoV2 struct {
 
 	// 唯一id
-	Id *int32 `json:"id,omitempty" xml:"id"`
+	Id *int32 `json:"id,omitempty"`
 
 	// 国家码
-	AreaCode *string `json:"area_code,omitempty" xml:"area_code"`
+	AreaCode *string `json:"area_code,omitempty"`
 
 	// 国家名称
-	AreaName *string `json:"area_name,omitempty" xml:"area_name"`
+	AreaName *string `json:"area_name,omitempty"`
 }
 
 func (o AreaCodeSimpleInfoV2) String() string {

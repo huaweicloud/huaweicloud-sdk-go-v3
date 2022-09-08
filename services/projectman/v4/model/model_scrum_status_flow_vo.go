@@ -9,16 +9,16 @@ import (
 type ScrumStatusFlowVo struct {
 
 	// 流转数据的uuid
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 状态名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 状态id
-	StatusId *int32 `json:"status_id,omitempty" xml:"status_id"`
+	StatusId *int32 `json:"status_id,omitempty"`
 
 	// 流转到的数据
-	DirectTo *[]ScrumStatusFlowDirectToVo `json:"direct_to,omitempty" xml:"direct_to"`
+	DirectTo *[]ScrumStatusFlowDirectToVo `json:"direct_to,omitempty"`
 }
 
 func (o ScrumStatusFlowVo) String() string {

@@ -8,13 +8,13 @@ import (
 
 // Response Object
 type CreateConfTokenResponse struct {
-	Data *TokenInfo `json:"data,omitempty" xml:"data"`
+	Data *TokenInfo `json:"data,omitempty"`
 
 	// 地址本查询临时Token。
-	AddressToken *string `json:"addressToken,omitempty" xml:"addressToken"`
+	AddressToken *string `json:"addressToken,omitempty"`
 
 	// global外网IP。
-	GloablPublicIP *string `json:"gloablPublicIP,omitempty" xml:"gloablPublicIP"`
+	GloablPublicIP *string `json:"gloablPublicIP,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

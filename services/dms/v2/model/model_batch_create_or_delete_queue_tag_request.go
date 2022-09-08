@@ -10,9 +10,9 @@ import (
 type BatchCreateOrDeleteQueueTagRequest struct {
 
 	// 队列ID。
-	QueueId string `json:"queue_id" xml:"queue_id"`
+	QueueId string `json:"queue_id"`
 
-	Body *BatchCreateOrDeleteTagReq `json:"body,omitempty" xml:"body"`
+	Body *BatchCreateOrDeleteTagReq `json:"body,omitempty"`
 }
 
 func (o BatchCreateOrDeleteQueueTagRequest) String() string {

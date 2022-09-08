@@ -10,9 +10,9 @@ import (
 type BatchQueryJobReqPage struct {
 
 	// 批量查询任务详情
-	Jobs []string `json:"jobs" xml:"jobs"`
+	Jobs []string `json:"jobs"`
 
-	PageReq *PageReq `json:"page_req,omitempty" xml:"page_req"`
+	PageReq *PageReq `json:"page_req,omitempty"`
 }
 
 func (o BatchQueryJobReqPage) String() string {

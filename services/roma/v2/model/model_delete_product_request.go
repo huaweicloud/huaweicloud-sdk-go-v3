@@ -10,10 +10,10 @@ import (
 type DeleteProductRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 产品ID
-	ProductId int32 `json:"product_id" xml:"product_id"`
+	ProductId int32 `json:"product_id"`
 }
 
 func (o DeleteProductRequest) String() string {

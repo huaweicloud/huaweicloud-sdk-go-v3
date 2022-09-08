@@ -8,7 +8,7 @@ import (
 
 // This is a auto create Body Object
 type NovaDisassociateSecurityGroupRequestBody struct {
-	RemoveSecurityGroup *NovaRemoveSecurityGroupOption `json:"removeSecurityGroup" xml:"removeSecurityGroup"`
+	RemoveSecurityGroup *NovaRemoveSecurityGroupOption `json:"removeSecurityGroup"`
 }
 
 func (o NovaDisassociateSecurityGroupRequestBody) String() string {

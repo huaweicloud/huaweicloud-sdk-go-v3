@@ -10,12 +10,12 @@ import (
 type StartTestDatasourceRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 数据源ID
-	DatasourceId string `json:"datasource_id" xml:"datasource_id"`
+	DatasourceId string `json:"datasource_id"`
 
-	Body *DatasourceInfo `json:"body,omitempty" xml:"body"`
+	Body *DatasourceInfo `json:"body,omitempty"`
 }
 
 func (o StartTestDatasourceRequest) String() string {

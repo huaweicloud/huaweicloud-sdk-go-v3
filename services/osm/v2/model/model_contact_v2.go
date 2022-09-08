@@ -9,16 +9,16 @@ import (
 type ContactV2 struct {
 
 	// 联系方式类型
-	ContactWay *int32 `json:"contact_way,omitempty" xml:"contact_way"`
+	ContactWay *int32 `json:"contact_way,omitempty"`
 
 	// 联系方式值
-	ContactValue *string `json:"contact_value,omitempty" xml:"contact_value"`
+	ContactValue *string `json:"contact_value,omitempty"`
 
 	// 国家码
-	AreaCode *string `json:"area_code,omitempty" xml:"area_code"`
+	AreaCode *string `json:"area_code,omitempty"`
 
 	// 验证序列号
-	VerifiedId *string `json:"verified_id,omitempty" xml:"verified_id"`
+	VerifiedId *string `json:"verified_id,omitempty"`
 }
 
 func (o ContactV2) String() string {

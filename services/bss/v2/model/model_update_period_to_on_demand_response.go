@@ -10,7 +10,7 @@ import (
 type UpdatePeriodToOnDemandResponse struct {
 
 	// HTTP 200的时候返回该字段；部分失败时仅返回失败的记录；如果全部成功，则该记录为空，具体参见表1。
-	ErrorDetails   *[]ErrorDetail `json:"error_details,omitempty" xml:"error_details"`
+	ErrorDetails   *[]ErrorDetail `json:"error_details,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }
 

@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateDomainsRequest struct {
-	Body *CreateDomainsRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreateDomainsRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateDomainsRequest) String() string {

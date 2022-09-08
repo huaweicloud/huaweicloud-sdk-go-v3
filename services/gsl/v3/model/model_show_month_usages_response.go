@@ -10,7 +10,7 @@ import (
 type ShowMonthUsagesResponse struct {
 
 	// 月用量列表
-	MonthUsages    *[]MonthUsageVo `json:"month_usages,omitempty" xml:"month_usages"`
+	MonthUsages    *[]MonthUsageVo `json:"month_usages,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }
 

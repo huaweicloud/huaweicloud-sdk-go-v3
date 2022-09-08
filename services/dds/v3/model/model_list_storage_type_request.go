@@ -13,7 +13,7 @@ import (
 type ListStorageTypeRequest struct {
 
 	// 数据库版本类型： - 取值为“DDS-Community”。
-	EngineName *ListStorageTypeRequestEngineName `json:"engine_name,omitempty" xml:"engine_name"`
+	EngineName *ListStorageTypeRequestEngineName `json:"engine_name,omitempty"`
 }
 
 func (o ListStorageTypeRequest) String() string {

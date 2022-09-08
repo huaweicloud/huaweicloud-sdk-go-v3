@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ListKeypairsResponse struct {
-	Body           *[]SimpleKeypair `json:"body,omitempty" xml:"body"`
+	Body           *[]SimpleKeypair `json:"body,omitempty"`
 	HttpStatusCode int              `json:"-"`
 }
 

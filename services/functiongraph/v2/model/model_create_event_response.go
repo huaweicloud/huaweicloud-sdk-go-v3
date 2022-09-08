@@ -10,10 +10,10 @@ import (
 type CreateEventResponse struct {
 
 	// 测试事件ID。
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 测试事件名称。
-	Name           *string `json:"name,omitempty" xml:"name"`
+	Name           *string `json:"name,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -10,7 +10,7 @@ import (
 type UpdateSqlFilterControlResponse struct {
 
 	// 开启/关闭SQL限流任务ID。
-	JobId          *string `json:"job_id,omitempty" xml:"job_id"`
+	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

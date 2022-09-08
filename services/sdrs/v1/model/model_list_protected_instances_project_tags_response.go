@@ -10,7 +10,7 @@ import (
 type ListProtectedInstancesProjectTagsResponse struct {
 
 	// 标签列表。
-	Tags           *[]TagParams `json:"tags,omitempty" xml:"tags"`
+	Tags           *[]TagParams `json:"tags,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }
 

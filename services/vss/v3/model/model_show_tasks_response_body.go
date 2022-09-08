@@ -12,53 +12,53 @@ import (
 type ShowTasksResponseBody struct {
 
 	// 任务名称
-	TaskName string `json:"task_name" xml:"task_name"`
+	TaskName string `json:"task_name"`
 
 	// 待扫描的目标网址
-	Url string `json:"url" xml:"url"`
+	Url string `json:"url"`
 
 	// 扫描任务类型:   * normal - 普通任务   * monitor - 监测任务
-	TaskType *ShowTasksResponseBodyTaskType `json:"task_type,omitempty" xml:"task_type"`
+	TaskType *ShowTasksResponseBodyTaskType `json:"task_type,omitempty"`
 
 	// 任务ID
-	TaskId *string `json:"task_id,omitempty" xml:"task_id"`
+	TaskId *string `json:"task_id,omitempty"`
 
 	// 域名
-	DomainName *string `json:"domain_name,omitempty" xml:"domain_name"`
+	DomainName *string `json:"domain_name,omitempty"`
 
-	TaskSettings *TaskSettings `json:"task_settings,omitempty" xml:"task_settings"`
+	TaskSettings *TaskSettings `json:"task_settings,omitempty"`
 
 	// 创建任务的时间
-	CreateTime *string `json:"create_time,omitempty" xml:"create_time"`
+	CreateTime *string `json:"create_time,omitempty"`
 
 	// 任务启动的时间
-	StartTime *string `json:"start_time,omitempty" xml:"start_time"`
+	StartTime *string `json:"start_time,omitempty"`
 
 	// 任务结束的时间
-	EndTime *string `json:"end_time,omitempty" xml:"end_time"`
+	EndTime *string `json:"end_time,omitempty"`
 
 	// 任务状态:   * running - 正在运行   * success - 成功   * canceled - 已取消   * waiting - 正在等待   * failure - 失败
-	TaskStatus *ShowTasksResponseBodyTaskStatus `json:"task_status,omitempty" xml:"task_status"`
+	TaskStatus *ShowTasksResponseBodyTaskStatus `json:"task_status,omitempty"`
 
 	// 监测任务状态:   * running - 正在运行   * waiting - 正在等待   * finished - 已完成
-	ScheduleStatus *ShowTasksResponseBodyScheduleStatus `json:"schedule_status,omitempty" xml:"schedule_status"`
+	ScheduleStatus *ShowTasksResponseBodyScheduleStatus `json:"schedule_status,omitempty"`
 
 	// 任务进度
-	Progress *int32 `json:"progress,omitempty" xml:"progress"`
+	Progress *int32 `json:"progress,omitempty"`
 
 	// 任务状态描述
-	Reason *string `json:"reason,omitempty" xml:"reason"`
+	Reason *string `json:"reason,omitempty"`
 
 	// 包总数
-	PackNum *int64 `json:"pack_num,omitempty" xml:"pack_num"`
+	PackNum *int64 `json:"pack_num,omitempty"`
 
 	// 安全分数
-	Score *int32 `json:"score,omitempty" xml:"score"`
+	Score *int32 `json:"score,omitempty"`
 
 	// 安全等级:   * - safety  : 安全   * - average : 中风险   * - highrisk: 高风险
-	SafeLevel *ShowTasksResponseBodySafeLevel `json:"safe_level,omitempty" xml:"safe_level"`
+	SafeLevel *ShowTasksResponseBodySafeLevel `json:"safe_level,omitempty"`
 
-	Statistics *VulnsLevel `json:"statistics,omitempty" xml:"statistics"`
+	Statistics *VulnsLevel `json:"statistics,omitempty"`
 }
 
 func (o ShowTasksResponseBody) String() string {

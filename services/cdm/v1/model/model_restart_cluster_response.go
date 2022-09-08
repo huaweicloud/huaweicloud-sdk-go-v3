@@ -10,7 +10,7 @@ import (
 type RestartClusterResponse struct {
 
 	// 作业ID
-	JobId          *string `json:"jobId,omitempty" xml:"jobId"`
+	JobId          *string `json:"jobId,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -10,7 +10,7 @@ import (
 type DeleteResourceRequest struct {
 
 	// 资源id.
-	ResourceId string `json:"resource_id" xml:"resource_id"`
+	ResourceId string `json:"resource_id"`
 }
 
 func (o DeleteResourceRequest) String() string {

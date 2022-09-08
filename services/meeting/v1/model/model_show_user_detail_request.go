@@ -10,16 +10,16 @@ import (
 type ShowUserDetailRequest struct {
 
 	// 请求requestId，用来标识一路请求，用于问题跟踪定位，建议使用uuId，若不携带，则后台自动生成
-	XRequestId *string `json:"X-Request-Id,omitempty" xml:"X-Request-Id"`
+	XRequestId *string `json:"X-Request-Id,omitempty"`
 
 	// 语言参数，默认为中文zh-CN, 英文为en-US
-	AcceptLanguage *string `json:"Accept-Language,omitempty" xml:"Accept-Language"`
+	AcceptLanguage *string `json:"Accept-Language,omitempty"`
 
 	// 企业用户帐号。
-	Account string `json:"account" xml:"account"`
+	Account string `json:"account"`
 
 	// 账号类型 * 0：会议账号； * 1：第三方账号，默认0。
-	AccountType *int32 `json:"accountType,omitempty" xml:"accountType"`
+	AccountType *int32 `json:"accountType,omitempty"`
 }
 
 func (o ShowUserDetailRequest) String() string {

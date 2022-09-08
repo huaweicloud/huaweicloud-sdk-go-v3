@@ -13,16 +13,16 @@ import (
 type TextReviewRet struct {
 
 	// 检测结果是否通过。  取值如下： - block：包含敏感信息，不通过。 - pass：不包含敏感信息，通过。 - review：需要人工复检。
-	Suggestion TextReviewRetSuggestion `json:"suggestion" xml:"suggestion"`
+	Suggestion TextReviewRetSuggestion `json:"suggestion"`
 
 	// 涉政敏感词列表
-	Politics *string `json:"politics,omitempty" xml:"politics"`
+	Politics *string `json:"politics,omitempty"`
 
 	// 涉黄敏感词列表
-	Porn *string `json:"porn,omitempty" xml:"porn"`
+	Porn *string `json:"porn,omitempty"`
 
 	// 辱骂敏感词列表
-	Abuse *string `json:"abuse,omitempty" xml:"abuse"`
+	Abuse *string `json:"abuse,omitempty"`
 }
 
 func (o TextReviewRet) String() string {

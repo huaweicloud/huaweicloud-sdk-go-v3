@@ -10,7 +10,7 @@ import (
 type CreateTemplateGroupResponse struct {
 
 	// 模板组ID<br/>
-	GroupId        *string `json:"group_id,omitempty" xml:"group_id"`
+	GroupId        *string `json:"group_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

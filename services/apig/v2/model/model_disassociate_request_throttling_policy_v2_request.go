@@ -10,10 +10,10 @@ import (
 type DisassociateRequestThrottlingPolicyV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// API和流控策略绑定关系的编号
-	ThrottleBindingId string `json:"throttle_binding_id" xml:"throttle_binding_id"`
+	ThrottleBindingId string `json:"throttle_binding_id"`
 }
 
 func (o DisassociateRequestThrottlingPolicyV2Request) String() string {

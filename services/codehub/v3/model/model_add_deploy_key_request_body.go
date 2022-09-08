@@ -8,17 +8,17 @@ import (
 
 type AddDeployKeyRequestBody struct {
 
-	// 部署key的来源
-	Application string `json:"application" xml:"application"`
+	// 部署使用的SSH密钥的来源
+	Application string `json:"application"`
 
-	// 部署key是否可以推送代码
-	CanPush bool `json:"can_push" xml:"can_push"`
+	// 部署使用的SSH密钥是否可以推送代码
+	CanPush bool `json:"can_push"`
 
-	// 部署key
-	Key string `json:"key" xml:"key"`
+	// 部署使用的SSH密钥
+	Key string `json:"key"`
 
-	// 部署key名称
-	KeyTitle string `json:"key_title" xml:"key_title"`
+	// 部署使用的SSH密钥名称
+	KeyTitle string `json:"key_title"`
 }
 
 func (o AddDeployKeyRequestBody) String() string {

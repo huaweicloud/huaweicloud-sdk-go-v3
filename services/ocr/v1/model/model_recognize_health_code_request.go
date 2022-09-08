@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RecognizeHealthCodeRequest struct {
-	Body *HealthCodeRequestBody `json:"body,omitempty" xml:"body"`
+	Body *HealthCodeRequestBody `json:"body,omitempty"`
 }
 
 func (o RecognizeHealthCodeRequest) String() string {

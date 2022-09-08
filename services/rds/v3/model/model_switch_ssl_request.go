@@ -13,12 +13,12 @@ import (
 type SwitchSslRequest struct {
 
 	// 语言
-	XLanguage *SwitchSslRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *SwitchSslRequestXLanguage `json:"X-Language,omitempty"`
 
 	// 实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
-	Body *SslOptionRequest `json:"body,omitempty" xml:"body"`
+	Body *SslOptionRequest `json:"body,omitempty"`
 }
 
 func (o SwitchSslRequest) String() string {

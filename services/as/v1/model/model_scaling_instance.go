@@ -10,19 +10,19 @@ import (
 type ScalingInstance struct {
 
 	// 云服务器名称。
-	InstanceName *string `json:"instance_name,omitempty" xml:"instance_name"`
+	InstanceName *string `json:"instance_name,omitempty"`
 
 	// 云服务器id。
-	InstanceId *string `json:"instance_id,omitempty" xml:"instance_id"`
+	InstanceId *string `json:"instance_id,omitempty"`
 
 	// 实例伸缩失败原因。
-	FailedReason *string `json:"failed_reason,omitempty" xml:"failed_reason"`
+	FailedReason *string `json:"failed_reason,omitempty"`
 
 	// 实例伸缩失败详情。
-	FailedDetails *string `json:"failed_details,omitempty" xml:"failed_details"`
+	FailedDetails *string `json:"failed_details,omitempty"`
 
 	// 实例配置信息。
-	InstanceConfig *string `json:"instance_config,omitempty" xml:"instance_config"`
+	InstanceConfig *string `json:"instance_config,omitempty"`
 }
 
 func (o ScalingInstance) String() string {

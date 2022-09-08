@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RunDocClassificationRequest struct {
-	Body *DocumentClassificationReq `json:"body,omitempty" xml:"body"`
+	Body *DocumentClassificationReq `json:"body,omitempty"`
 }
 
 func (o RunDocClassificationRequest) String() string {

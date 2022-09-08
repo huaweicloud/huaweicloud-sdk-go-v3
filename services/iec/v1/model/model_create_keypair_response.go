@@ -10,19 +10,19 @@ import (
 type CreateKeypairResponse struct {
 
 	// 密钥对名称。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 公钥。
-	PublicKey *string `json:"public_key,omitempty" xml:"public_key"`
+	PublicKey *string `json:"public_key,omitempty"`
 
 	// 私钥。
-	PrivateKey *string `json:"private_key,omitempty" xml:"private_key"`
+	PrivateKey *string `json:"private_key,omitempty"`
 
 	// 用户ID。
-	UserId *string `json:"user_id,omitempty" xml:"user_id"`
+	UserId *string `json:"user_id,omitempty"`
 
 	// 指纹。
-	Fingerprint    *string `json:"fingerprint,omitempty" xml:"fingerprint"`
+	Fingerprint    *string `json:"fingerprint,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

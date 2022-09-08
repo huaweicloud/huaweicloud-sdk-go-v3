@@ -10,10 +10,10 @@ import (
 type PolicyDepends struct {
 
 	// 权限所在目录。
-	Catalog string `json:"catalog" xml:"catalog"`
+	Catalog string `json:"catalog"`
 
 	// 权限展示名。
-	DisplayName string `json:"display_name" xml:"display_name"`
+	DisplayName string `json:"display_name"`
 }
 
 func (o PolicyDepends) String() string {

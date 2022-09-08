@@ -10,10 +10,10 @@ import (
 type UserInfo struct {
 
 	// 用户id
-	UserId *string `json:"user_id,omitempty" xml:"user_id"`
+	UserId *string `json:"user_id,omitempty"`
 
 	// 用户名
-	UserName *string `json:"user_name,omitempty" xml:"user_name"`
+	UserName *string `json:"user_name,omitempty"`
 }
 
 func (o UserInfo) String() string {

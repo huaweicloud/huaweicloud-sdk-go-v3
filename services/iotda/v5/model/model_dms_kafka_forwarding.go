@@ -10,25 +10,25 @@ import (
 type DmsKafkaForwarding struct {
 
 	// **参数说明**：Kafka服务对应的region区域
-	RegionName string `json:"region_name" xml:"region_name"`
+	RegionName string `json:"region_name"`
 
 	// **参数说明**：Kafka服务对应的projectId信息
-	ProjectId string `json:"project_id" xml:"project_id"`
+	ProjectId string `json:"project_id"`
 
 	// **参数说明**：转发kafka消息对应的地址列表
-	Addresses []NetAddress `json:"addresses" xml:"addresses"`
+	Addresses []NetAddress `json:"addresses"`
 
 	// **参数说明**：转发kafka消息关联的topic信息。
-	Topic string `json:"topic" xml:"topic"`
+	Topic string `json:"topic"`
 
 	// **参数说明**：转发kafka关联的用户名信息。
-	Username *string `json:"username,omitempty" xml:"username"`
+	Username *string `json:"username,omitempty"`
 
 	// **参数说明**：转发kafka关联的密码信息。
-	Password *string `json:"password,omitempty" xml:"password"`
+	Password *string `json:"password,omitempty"`
 
 	// **参数说明**：转发kafka关联的鉴权机制。 **取值范围**： - PAAS：非SASL鉴权。 - PLAIN：SASL/PLAIN模式。需要填写对应的用户名密码信息。
-	Mechanism *string `json:"mechanism,omitempty" xml:"mechanism"`
+	Mechanism *string `json:"mechanism,omitempty"`
 }
 
 func (o DmsKafkaForwarding) String() string {

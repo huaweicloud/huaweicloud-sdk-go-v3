@@ -8,7 +8,7 @@ import (
 
 //
 type KeystoneUpdateProjectRequestBody struct {
-	Project *KeystoneUpdateProjectOption `json:"project" xml:"project"`
+	Project *KeystoneUpdateProjectOption `json:"project"`
 }
 
 func (o KeystoneUpdateProjectRequestBody) String() string {

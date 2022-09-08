@@ -9,10 +9,10 @@ import (
 type OpExtendInfoVaultDelete struct {
 
 	// 本次任务删除失败的资源数量
-	FailCount *int32 `json:"fail_count,omitempty" xml:"fail_count"`
+	FailCount *int32 `json:"fail_count,omitempty"`
 
 	// 本次任务删除的备份总数
-	TotalCount *int32 `json:"total_count,omitempty" xml:"total_count"`
+	TotalCount *int32 `json:"total_count,omitempty"`
 }
 
 func (o OpExtendInfoVaultDelete) String() string {

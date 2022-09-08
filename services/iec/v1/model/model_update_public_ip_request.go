@@ -10,9 +10,9 @@ import (
 type UpdatePublicIpRequest struct {
 
 	// 弹性公网IP ID
-	PublicipId string `json:"publicip_id" xml:"publicip_id"`
+	PublicipId string `json:"publicip_id"`
 
-	Body *UpdatePublicIpRequestBody `json:"body,omitempty" xml:"body"`
+	Body *UpdatePublicIpRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdatePublicIpRequest) String() string {

@@ -10,7 +10,7 @@ import (
 type ShowTaskDefectsStatisticRequest struct {
 
 	// 任务ID
-	TaskId string `json:"task_id" xml:"task_id"`
+	TaskId string `json:"task_id"`
 }
 
 func (o ShowTaskDefectsStatisticRequest) String() string {

@@ -13,7 +13,7 @@ import (
 type OpenGaussConfig struct {
 
 	// 权限检查类型。
-	PermissionCheckType *OpenGaussConfigPermissionCheckType `json:"permission_check_type,omitempty" xml:"permission_check_type"`
+	PermissionCheckType *OpenGaussConfigPermissionCheckType `json:"permission_check_type,omitempty"`
 }
 
 func (o OpenGaussConfig) String() string {

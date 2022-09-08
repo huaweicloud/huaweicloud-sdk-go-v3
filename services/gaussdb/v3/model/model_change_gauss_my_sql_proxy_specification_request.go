@@ -10,15 +10,15 @@ import (
 type ChangeGaussMySqlProxySpecificationRequest struct {
 
 	// 语言。
-	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *string `json:"X-Language,omitempty"`
 
 	// 实例ID，严格匹配UUID规则。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 数据库代理ID，严格匹配UUID规则。
-	ProxyId string `json:"proxy_id" xml:"proxy_id"`
+	ProxyId string `json:"proxy_id"`
 
-	Body *TaurusProxyScaleRequest `json:"body,omitempty" xml:"body"`
+	Body *TaurusProxyScaleRequest `json:"body,omitempty"`
 }
 
 func (o ChangeGaussMySqlProxySpecificationRequest) String() string {

@@ -10,7 +10,7 @@ import (
 type ImageDescriptionResponseResult struct {
 
 	// 图像描述。
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 }
 
 func (o ImageDescriptionResponseResult) String() string {

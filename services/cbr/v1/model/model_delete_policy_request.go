@@ -10,7 +10,7 @@ import (
 type DeletePolicyRequest struct {
 
 	// 策略ID
-	PolicyId string `json:"policy_id" xml:"policy_id"`
+	PolicyId string `json:"policy_id"`
 }
 
 func (o DeletePolicyRequest) String() string {

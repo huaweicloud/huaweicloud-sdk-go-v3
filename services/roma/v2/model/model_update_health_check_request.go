@@ -10,12 +10,12 @@ import (
 type UpdateHealthCheckRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// VPC通道的编号
-	VpcChannelId string `json:"vpc_channel_id" xml:"vpc_channel_id"`
+	VpcChannelId string `json:"vpc_channel_id"`
 
-	Body *VpcHealthConfig `json:"body,omitempty" xml:"body"`
+	Body *VpcHealthConfig `json:"body,omitempty"`
 }
 
 func (o UpdateHealthCheckRequest) String() string {

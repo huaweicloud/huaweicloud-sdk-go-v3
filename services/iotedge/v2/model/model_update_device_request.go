@@ -10,12 +10,12 @@ import (
 type UpdateDeviceRequest struct {
 
 	// 边缘节点ID
-	EdgeNodeId string `json:"edge_node_id" xml:"edge_node_id"`
+	EdgeNodeId string `json:"edge_node_id"`
 
 	// 设备ID
-	DeviceId string `json:"device_id" xml:"device_id"`
+	DeviceId string `json:"device_id"`
 
-	Body *UpdateDesireds `json:"body,omitempty" xml:"body"`
+	Body *UpdateDesireds `json:"body,omitempty"`
 }
 
 func (o UpdateDeviceRequest) String() string {

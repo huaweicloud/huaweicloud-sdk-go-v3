@@ -10,7 +10,7 @@ import (
 type PolicyParameterValue struct {
 
 	// 规则参数值
-	Value *interface{} `json:"value,omitempty" xml:"value"`
+	Value *interface{} `json:"value,omitempty"`
 }
 
 func (o PolicyParameterValue) String() string {

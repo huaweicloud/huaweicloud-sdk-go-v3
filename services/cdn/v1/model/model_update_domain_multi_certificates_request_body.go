@@ -7,7 +7,7 @@ import (
 )
 
 type UpdateDomainMultiCertificatesRequestBody struct {
-	Https *UpdateDomainMultiCertificatesRequestBodyContent `json:"https,omitempty" xml:"https"`
+	Https *UpdateDomainMultiCertificatesRequestBodyContent `json:"https,omitempty"`
 }
 
 func (o UpdateDomainMultiCertificatesRequestBody) String() string {

@@ -13,37 +13,37 @@ import (
 type ListApplicationsV6Request struct {
 
 	// 语言类型 中文:zh-cn 英文:en-us
-	XLanguage *ListApplicationsV6RequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *ListApplicationsV6RequestXLanguage `json:"X-Language,omitempty"`
 
 	// 是否查询我关注的应用
-	Attention *bool `json:"attention,omitempty" xml:"attention"`
+	Attention *bool `json:"attention,omitempty"`
 
 	// 区域id，从控制台获取方法请参见: [获取区域ID](https://console.huaweicloud.com/iam/?region=cn-north-1&locale=zh-cn#/iam/projects)
-	RegionId *string `json:"region_id,omitempty" xml:"region_id"`
+	RegionId *string `json:"region_id,omitempty"`
 
 	// 搜索关键字,支持按名称和描述搜索，默认null
-	Keyword *string `json:"keyword,omitempty" xml:"keyword"`
+	Keyword *string `json:"keyword,omitempty"`
 
 	// 所属DevCloud项目id，从 [项目列表接口](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=DevStar&api=ListProjectsV4) 查询。
-	ProjectId *string `json:"project_id,omitempty" xml:"project_id"`
+	ProjectId *string `json:"project_id,omitempty"`
 
 	// 主题id,场景或者部署方式分类id
-	TopicId *string `json:"topic_id,omitempty" xml:"topic_id"`
+	TopicId *string `json:"topic_id,omitempty"`
 
 	// 是否查询由我创建
-	IsCreatedBySelf *bool `json:"is_created_by_self,omitempty" xml:"is_created_by_self"`
+	IsCreatedBySelf *bool `json:"is_created_by_self,omitempty"`
 
 	// 排序字段, name：应用名称,created_at:创建时间,updated_at:更新时间
-	SortKey *[]ListApplicationsV6RequestSortKey `json:"sort_key,omitempty" xml:"sort_key"`
+	SortKey *[]ListApplicationsV6RequestSortKey `json:"sort_key,omitempty"`
 
 	// 排序方式, desc:降序, asc:升序
-	SortDir *[]ListApplicationsV6RequestSortDir `json:"sort_dir,omitempty" xml:"sort_dir"`
+	SortDir *[]ListApplicationsV6RequestSortDir `json:"sort_dir,omitempty"`
 
 	// 每页显示的条目数量,默认10
-	Limit *int32 `json:"limit,omitempty" xml:"limit"`
+	Limit *int32 `json:"limit,omitempty"`
 
 	// 偏移量，表示从此偏移量开始查询,默认0
-	Offset *int32 `json:"offset,omitempty" xml:"offset"`
+	Offset *int32 `json:"offset,omitempty"`
 }
 
 func (o ListApplicationsV6Request) String() string {

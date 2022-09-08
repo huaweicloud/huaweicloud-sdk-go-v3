@@ -10,7 +10,7 @@ import (
 type AdditionalProperties struct {
 
 	// 类型
-	Type string `json:"type" xml:"type"`
+	Type string `json:"type"`
 }
 
 func (o AdditionalProperties) String() string {

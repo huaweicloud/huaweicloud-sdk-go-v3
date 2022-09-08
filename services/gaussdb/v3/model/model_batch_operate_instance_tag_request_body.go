@@ -9,10 +9,10 @@ import (
 type BatchOperateInstanceTagRequestBody struct {
 
 	// 操作标识，取值： - create，表示添加标签。 - delete，表示删除标签。
-	Action string `json:"action" xml:"action"`
+	Action string `json:"action"`
 
 	// 标签列表。
-	Tags []TagItem `json:"tags" xml:"tags"`
+	Tags []TagItem `json:"tags"`
 }
 
 func (o BatchOperateInstanceTagRequestBody) String() string {

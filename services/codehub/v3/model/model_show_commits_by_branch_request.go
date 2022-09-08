@@ -9,20 +9,20 @@ import (
 // Request Object
 type ShowCommitsByBranchRequest struct {
 
-	// 仓库组名
-	GroupName string `json:"group_name" xml:"group_name"`
+	// 仓库组名(克隆地址中域名后面项目名前的一段 示例：git@codehub.alpha.devcloud.inhuawei.com:Demo00228/testword.git  组名：Demo00228 )
+	GroupName string `json:"group_name"`
 
 	// 分页索引
-	PageIndex *int32 `json:"page_index,omitempty" xml:"page_index"`
+	PageIndex *int32 `json:"page_index,omitempty"`
 
 	// 分页索引
-	PageSize *int32 `json:"page_size,omitempty" xml:"page_size"`
+	PageSize *int32 `json:"page_size,omitempty"`
 
 	// 分支或标签名，支持SHA格式
-	RefName string `json:"ref_name" xml:"ref_name"`
+	RefName string `json:"ref_name"`
 
 	// 仓库名
-	RepositoryName string `json:"repository_name" xml:"repository_name"`
+	RepositoryName string `json:"repository_name"`
 }
 
 func (o ShowCommitsByBranchRequest) String() string {

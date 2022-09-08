@@ -10,7 +10,7 @@ import (
 type DeleteServerGroupRequest struct {
 
 	// 弹性云服务器组UUID。
-	ServerGroupId string `json:"server_group_id" xml:"server_group_id"`
+	ServerGroupId string `json:"server_group_id"`
 }
 
 func (o DeleteServerGroupRequest) String() string {

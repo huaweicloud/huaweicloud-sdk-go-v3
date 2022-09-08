@@ -10,13 +10,13 @@ import (
 type DeleteClustersTagsRequest struct {
 
 	// 指定删除标签的集群ID。
-	ClusterId string `json:"cluster_id" xml:"cluster_id"`
+	ClusterId string `json:"cluster_id"`
 
 	// 资源类型，当前固定值为“css-cluster”，表示是集群类型。
-	ResourceType string `json:"resource_type" xml:"resource_type"`
+	ResourceType string `json:"resource_type"`
 
 	// 需要删除的标签名。
-	Key string `json:"key" xml:"key"`
+	Key string `json:"key"`
 }
 
 func (o DeleteClustersTagsRequest) String() string {

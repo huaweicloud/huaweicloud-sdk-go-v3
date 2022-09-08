@@ -8,7 +8,7 @@ import (
 
 // This is a auto create Body Object
 type CreateSnapshotRequestBody struct {
-	Snapshot *Snapshot `json:"snapshot" xml:"snapshot"`
+	Snapshot *Snapshot `json:"snapshot"`
 }
 
 func (o CreateSnapshotRequestBody) String() string {

@@ -10,10 +10,10 @@ import (
 type FailedReasonsCreateFailed struct {
 
 	// 错误码
-	ErrorCode *string `json:"errorCode,omitempty" xml:"errorCode"`
+	ErrorCode *string `json:"errorCode,omitempty"`
 
 	// 失败原因
-	ErrorMsg *string `json:"errorMsg,omitempty" xml:"errorMsg"`
+	ErrorMsg *string `json:"errorMsg,omitempty"`
 }
 
 func (o FailedReasonsCreateFailed) String() string {

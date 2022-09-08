@@ -10,10 +10,10 @@ import (
 type ListBusinessRisksResponse struct {
 
 	// 业务风险总数
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 
 	// 业务风险列表
-	Data           *[]BusinessRiskItem `json:"data,omitempty" xml:"data"`
+	Data           *[]BusinessRiskItem `json:"data,omitempty"`
 	HttpStatusCode int                 `json:"-"`
 }
 

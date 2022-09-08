@@ -10,7 +10,7 @@ import (
 type UpdateKeypairDescriptionReq struct {
 
 	// 描述信息
-	Description string `json:"description" xml:"description"`
+	Description string `json:"description"`
 }
 
 func (o UpdateKeypairDescriptionReq) String() string {

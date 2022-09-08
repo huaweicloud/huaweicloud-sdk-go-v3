@@ -9,12 +9,12 @@ import (
 type TranscriberResult struct {
 
 	// 识别结果文本。
-	Text string `json:"text" xml:"text"`
+	Text string `json:"text"`
 
-	AnalysisInfo *AnalysisInfoResult `json:"analysis_info,omitempty" xml:"analysis_info"`
+	AnalysisInfo *AnalysisInfoResult `json:"analysis_info,omitempty"`
 
 	// 分词输出列表
-	WordInfo *[]WordInfo `json:"word_info,omitempty" xml:"word_info"`
+	WordInfo *[]WordInfo `json:"word_info,omitempty"`
 }
 
 func (o TranscriberResult) String() string {

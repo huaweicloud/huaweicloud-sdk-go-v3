@@ -9,10 +9,10 @@ import (
 type SourceInfoEventTypes struct {
 
 	// 事件类型名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 事件类型描述
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 }
 
 func (o SourceInfoEventTypes) String() string {

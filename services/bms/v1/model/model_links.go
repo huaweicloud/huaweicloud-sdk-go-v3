@@ -10,10 +10,10 @@ import (
 type Links struct {
 
 	// 快捷链接标记名称
-	Rel *string `json:"rel,omitempty" xml:"rel"`
+	Rel *string `json:"rel,omitempty"`
 
 	// 对应快捷链接
-	Href *string `json:"href,omitempty" xml:"href"`
+	Href *string `json:"href,omitempty"`
 }
 
 func (o Links) String() string {

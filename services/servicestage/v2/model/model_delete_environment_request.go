@@ -10,7 +10,7 @@ import (
 type DeleteEnvironmentRequest struct {
 
 	// 环境ID。
-	EnvironmentId string `json:"environment_id" xml:"environment_id"`
+	EnvironmentId string `json:"environment_id"`
 }
 
 func (o DeleteEnvironmentRequest) String() string {

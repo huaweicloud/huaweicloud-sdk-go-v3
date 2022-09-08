@@ -10,12 +10,12 @@ import (
 type UpdateSecretRequest struct {
 
 	// 铂金版实例ID，专业版实例为空值
-	IefInstanceId *string `json:"ief-instance-id,omitempty" xml:"ief-instance-id"`
+	IefInstanceId *string `json:"ief-instance-id,omitempty"`
 
 	// 密钥ID
-	SecretId string `json:"secret_id" xml:"secret_id"`
+	SecretId string `json:"secret_id"`
 
-	Body *UpdateSecret `json:"body,omitempty" xml:"body"`
+	Body *UpdateSecret `json:"body,omitempty"`
 }
 
 func (o UpdateSecretRequest) String() string {

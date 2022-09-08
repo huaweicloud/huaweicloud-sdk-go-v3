@@ -13,11 +13,11 @@ import (
 type Eip struct {
 
 	// 弹性公网IP地址类型。类型枚举值：5_bgp、5_sbgp详情请参见《虚拟私有云API参考》申请弹性公网IP章节的publicip字段说明。
-	Iptype EipIptype `json:"iptype" xml:"iptype"`
+	Iptype EipIptype `json:"iptype"`
 
-	Bandwidth *BandWidth `json:"bandwidth" xml:"bandwidth"`
+	Bandwidth *BandWidth `json:"bandwidth"`
 
-	Extendparam *ExtendParamEip `json:"extendparam" xml:"extendparam"`
+	Extendparam *ExtendParamEip `json:"extendparam"`
 }
 
 func (o Eip) String() string {

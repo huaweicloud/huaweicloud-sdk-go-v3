@@ -10,9 +10,9 @@ import (
 type UpdateVpcPeeringRequest struct {
 
 	// 对等连接ID
-	PeeringId string `json:"peering_id" xml:"peering_id"`
+	PeeringId string `json:"peering_id"`
 
-	Body *UpdateVpcPeeringRequestBody `json:"body,omitempty" xml:"body"`
+	Body *UpdateVpcPeeringRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateVpcPeeringRequest) String() string {

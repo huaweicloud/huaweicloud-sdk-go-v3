@@ -10,13 +10,13 @@ import (
 type RankFeaturePair struct {
 
 	// 待推荐对象的属性。
-	FeatureNameA *string `json:"feature_name_a,omitempty" xml:"feature_name_a"`
+	FeatureNameA *string `json:"feature_name_a,omitempty"`
 
 	// 被推荐对象的属性。
-	FeatureNameB *string `json:"feature_name_b,omitempty" xml:"feature_name_b"`
+	FeatureNameB *string `json:"feature_name_b,omitempty"`
 
 	// 权重。
-	Weight *float32 `json:"weight,omitempty" xml:"weight"`
+	Weight *float32 `json:"weight,omitempty"`
 }
 
 func (o RankFeaturePair) String() string {

@@ -9,10 +9,10 @@ import (
 type RealtimeScaleDimensionValue struct {
 
 	// 维度值，如查询维度为region，则此处取值可能为GD
-	Dimension *string `json:"dimension,omitempty" xml:"dimension"`
+	Dimension *string `json:"dimension,omitempty"`
 
 	// 在线观众数
-	OnlineUsers *int64 `json:"online_users,omitempty" xml:"online_users"`
+	OnlineUsers *int64 `json:"online_users,omitempty"`
 }
 
 func (o RealtimeScaleDimensionValue) String() string {

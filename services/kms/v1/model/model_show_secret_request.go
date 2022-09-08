@@ -10,7 +10,7 @@ import (
 type ShowSecretRequest struct {
 
 	// 凭据的资源标识符。
-	SecretId string `json:"secret_id" xml:"secret_id"`
+	SecretId string `json:"secret_id"`
 }
 
 func (o ShowSecretRequest) String() string {

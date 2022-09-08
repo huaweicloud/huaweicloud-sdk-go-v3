@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ListNameServersResponse struct {
-	Nameservers    *[]NameServersResp `json:"nameservers,omitempty" xml:"nameservers"`
+	Nameservers    *[]NameServersResp `json:"nameservers,omitempty"`
 	HttpStatusCode int                `json:"-"`
 }
 

@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type SendSmsVerificationCodeRequest struct {
-	Body *SendSmVerificationCodeReq `json:"body,omitempty" xml:"body"`
+	Body *SendSmVerificationCodeReq `json:"body,omitempty"`
 }
 
 func (o SendSmsVerificationCodeRequest) String() string {

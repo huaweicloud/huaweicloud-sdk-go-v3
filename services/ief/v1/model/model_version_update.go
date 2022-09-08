@@ -10,27 +10,27 @@ import (
 type VersionUpdate struct {
 
 	// 环境变量
-	Envs *[]Env `json:"envs,omitempty" xml:"envs"`
+	Envs *[]Env `json:"envs,omitempty"`
 
 	// 卷配置
-	Volumes *[]Volumes `json:"volumes,omitempty" xml:"volumes"`
+	Volumes *[]Volumes `json:"volumes,omitempty"`
 
-	Configs *AppConfigs `json:"configs,omitempty" xml:"configs"`
+	Configs *AppConfigs `json:"configs,omitempty"`
 
-	Resources *Resources `json:"resources,omitempty" xml:"resources"`
+	Resources *Resources `json:"resources,omitempty"`
 
 	// 启动命令
-	Command *[]string `json:"command,omitempty" xml:"command"`
+	Command *[]string `json:"command,omitempty"`
 
 	// 参数
-	Args *[]string `json:"args,omitempty" xml:"args"`
+	Args *[]string `json:"args,omitempty"`
 
-	LivenessProbe *ProbeDetail `json:"liveness_probe,omitempty" xml:"liveness_probe"`
+	LivenessProbe *ProbeDetail `json:"liveness_probe,omitempty"`
 
-	ReadinessProbe *ProbeDetail `json:"readiness_probe,omitempty" xml:"readiness_probe"`
+	ReadinessProbe *ProbeDetail `json:"readiness_probe,omitempty"`
 
 	// NPU类型，支持D310类型和D910类型。 - D310表示D310类型。 - D910表示D910类型。 - 不填表示为D310类型。
-	NpuType *string `json:"npu_type,omitempty" xml:"npu_type"`
+	NpuType *string `json:"npu_type,omitempty"`
 }
 
 func (o VersionUpdate) String() string {

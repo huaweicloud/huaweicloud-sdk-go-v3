@@ -10,16 +10,16 @@ import (
 type SchemaPath struct {
 
 	// OBS文件路径
-	Path string `json:"path" xml:"path"`
+	Path string `json:"path"`
 
 	// OBS文件导入日志存储文件
-	Log *string `json:"log,omitempty" xml:"log"`
+	Log *string `json:"log,omitempty"`
 
 	// - OBS文件导入状态。 - success：完全成功 - failed：完全失败 - partFailed：部分成功
-	Status string `json:"status" xml:"status"`
+	Status string `json:"status"`
 
 	// 导入失败原因
-	Cause *string `json:"cause,omitempty" xml:"cause"`
+	Cause *string `json:"cause,omitempty"`
 }
 
 func (o SchemaPath) String() string {

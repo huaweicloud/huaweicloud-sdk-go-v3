@@ -10,9 +10,9 @@ import (
 type BatchCreateServerTagsRequest struct {
 
 	// 云服务器ID。
-	ServerId string `json:"server_id" xml:"server_id"`
+	ServerId string `json:"server_id"`
 
-	Body *BatchCreateServerTagsRequestBody `json:"body,omitempty" xml:"body"`
+	Body *BatchCreateServerTagsRequestBody `json:"body,omitempty"`
 }
 
 func (o BatchCreateServerTagsRequest) String() string {

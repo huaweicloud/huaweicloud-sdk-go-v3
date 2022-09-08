@@ -10,10 +10,10 @@ import (
 type DeleteSubnetRequest struct {
 
 	// 子网对应的vpc_id
-	VpcId string `json:"vpc_id" xml:"vpc_id"`
+	VpcId string `json:"vpc_id"`
 
 	// 子网ID
-	SubnetId string `json:"subnet_id" xml:"subnet_id"`
+	SubnetId string `json:"subnet_id"`
 }
 
 func (o DeleteSubnetRequest) String() string {

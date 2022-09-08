@@ -13,19 +13,19 @@ import (
 type DiagnosisItem struct {
 
 	// 诊断项名称
-	Name DiagnosisItemName `json:"name" xml:"name"`
+	Name DiagnosisItemName `json:"name"`
 
 	// 原因ID列表
-	CauseIds *[]ConclusionItem `json:"cause_ids,omitempty" xml:"cause_ids"`
+	CauseIds *[]ConclusionItem `json:"cause_ids,omitempty"`
 
 	// 影响ID列表
-	ImpactIds *[]ConclusionItem `json:"impact_ids,omitempty" xml:"impact_ids"`
+	ImpactIds *[]ConclusionItem `json:"impact_ids,omitempty"`
 
 	// 建议ID列表
-	AdviceIds *[]ConclusionItem `json:"advice_ids,omitempty" xml:"advice_ids"`
+	AdviceIds *[]ConclusionItem `json:"advice_ids,omitempty"`
 
 	// 诊断结果
-	Result DiagnosisItemResult `json:"result" xml:"result"`
+	Result DiagnosisItemResult `json:"result"`
 }
 
 func (o DiagnosisItem) String() string {

@@ -9,13 +9,13 @@ import (
 type ListWorksResponseModel struct {
 
 	// 作品ID
-	WorksId string `json:"works_id" xml:"works_id"`
+	WorksId string `json:"works_id"`
 
 	// 租户ID
-	DomainId string `json:"domain_id" xml:"domain_id"`
+	DomainId string `json:"domain_id"`
 
 	// 团队ID
-	TeamId string `json:"team_id" xml:"team_id"`
+	TeamId string `json:"team_id"`
 }
 
 func (o ListWorksResponseModel) String() string {

@@ -10,10 +10,10 @@ import (
 type ListClassroomMembersResponse struct {
 
 	// 课堂成员列表
-	Members *[]ClassroomMember `json:"members,omitempty" xml:"members"`
+	Members *[]ClassroomMember `json:"members,omitempty"`
 
 	// 课堂成员总数
-	Total          *int32 `json:"total,omitempty" xml:"total"`
+	Total          *int32 `json:"total,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

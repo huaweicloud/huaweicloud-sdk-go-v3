@@ -8,7 +8,7 @@ import (
 
 // 创建云连接实例的请求体。
 type CreateCloudConnectionRequestBody struct {
-	CloudConnection *CreateCloudConnection `json:"cloud_connection" xml:"cloud_connection"`
+	CloudConnection *CreateCloudConnection `json:"cloud_connection"`
 }
 
 func (o CreateCloudConnectionRequestBody) String() string {

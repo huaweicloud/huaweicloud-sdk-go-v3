@@ -13,28 +13,28 @@ import (
 type ShowIaConfigResponse struct {
 
 	// 配置ID
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 配置项名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 配置项详情
-	Value *string `json:"value,omitempty" xml:"value"`
+	Value *string `json:"value,omitempty"`
 
 	// 配置项描述
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 版本号
-	Version *int64 `json:"version,omitempty" xml:"version"`
+	Version *int64 `json:"version,omitempty"`
 
 	// 下发状态
-	State *ShowIaConfigResponseState `json:"state,omitempty" xml:"state"`
+	State *ShowIaConfigResponseState `json:"state,omitempty"`
 
 	// 创建时间
-	CreateTime *string `json:"create_time,omitempty" xml:"create_time"`
+	CreateTime *string `json:"create_time,omitempty"`
 
 	// 更新时间
-	UpdateTime     *string `json:"update_time,omitempty" xml:"update_time"`
+	UpdateTime     *string `json:"update_time,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

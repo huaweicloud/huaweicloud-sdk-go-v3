@@ -10,13 +10,13 @@ import (
 type ShowStreamPortraitRequest struct {
 
 	// 播放域名。
-	PlayDomain string `json:"play_domain" xml:"play_domain"`
+	PlayDomain string `json:"play_domain"`
 
 	// 流名。
-	Stream *string `json:"stream,omitempty" xml:"stream"`
+	Stream *string `json:"stream,omitempty"`
 
 	// 统计日期，日期格式按照ISO8601表示法，格式：YYYYMMDD，如20200904。可以查询过去31天的数据（不含当天）。
-	Time string `json:"time" xml:"time"`
+	Time string `json:"time"`
 }
 
 func (o ShowStreamPortraitRequest) String() string {

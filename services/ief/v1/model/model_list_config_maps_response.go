@@ -10,10 +10,10 @@ import (
 type ListConfigMapsResponse struct {
 
 	// 配置项
-	Configmaps *[]ConfigMapResp `json:"configmaps,omitempty" xml:"configmaps"`
+	Configmaps *[]ConfigMapResp `json:"configmaps,omitempty"`
 
 	// 满足条件的个数
-	Count          *int32 `json:"count,omitempty" xml:"count"`
+	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

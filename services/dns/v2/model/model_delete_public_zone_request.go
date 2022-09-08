@@ -10,7 +10,7 @@ import (
 type DeletePublicZoneRequest struct {
 
 	// 待删除zone的ID
-	ZoneId string `json:"zone_id" xml:"zone_id"`
+	ZoneId string `json:"zone_id"`
 }
 
 func (o DeletePublicZoneRequest) String() string {

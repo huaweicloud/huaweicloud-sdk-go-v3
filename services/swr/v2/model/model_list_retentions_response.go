@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ListRetentionsResponse struct {
-	Body           *[]Retention `json:"body,omitempty" xml:"body"`
+	Body           *[]Retention `json:"body,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }
 

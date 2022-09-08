@@ -8,9 +8,9 @@ import (
 
 // Request Object
 type CreateRecordSetWithBatchLinesRequest struct {
-	ZoneId string `json:"zone_id" xml:"zone_id"`
+	ZoneId string `json:"zone_id"`
 
-	Body *CreateRSetBatchLinesReq `json:"body,omitempty" xml:"body"`
+	Body *CreateRSetBatchLinesReq `json:"body,omitempty"`
 }
 
 func (o CreateRecordSetWithBatchLinesRequest) String() string {

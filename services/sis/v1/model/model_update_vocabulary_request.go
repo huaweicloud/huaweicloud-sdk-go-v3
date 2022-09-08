@@ -10,9 +10,9 @@ import (
 type UpdateVocabularyRequest struct {
 
 	// 被更新的热词表id。
-	VocabularyId string `json:"vocabulary_id" xml:"vocabulary_id"`
+	VocabularyId string `json:"vocabulary_id"`
 
-	Body *PutUpdateVocabReq `json:"body,omitempty" xml:"body"`
+	Body *PutUpdateVocabReq `json:"body,omitempty"`
 }
 
 func (o UpdateVocabularyRequest) String() string {

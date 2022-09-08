@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// Kibana公网访问信息
+// Kibana公网访问信息。只有在authorityEnable设置为true时该参数配置生效。
 type CreateClusterPublicKibanaReq struct {
 
 	// 带宽大小。
-	EipSize int32 `json:"eipSize" xml:"eipSize"`
+	EipSize int32 `json:"eipSize"`
 
-	ElbWhiteList *CreateClusterPublicKibanaElbWhiteList `json:"elbWhiteList" xml:"elbWhiteList"`
+	ElbWhiteList *CreateClusterPublicKibanaElbWhiteList `json:"elbWhiteList"`
 }
 
 func (o CreateClusterPublicKibanaReq) String() string {

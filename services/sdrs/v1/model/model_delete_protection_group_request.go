@@ -10,7 +10,7 @@ import (
 type DeleteProtectionGroupRequest struct {
 
 	// 保护组ID。
-	ServerGroupId string `json:"server_group_id" xml:"server_group_id"`
+	ServerGroupId string `json:"server_group_id"`
 }
 
 func (o DeleteProtectionGroupRequest) String() string {

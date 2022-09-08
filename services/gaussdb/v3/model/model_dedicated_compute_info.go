@@ -9,22 +9,22 @@ import (
 type DedicatedComputeInfo struct {
 
 	// 专属资源池中cpu总数
-	VcpusTotal int32 `json:"vcpus_total" xml:"vcpus_total"`
+	VcpusTotal int32 `json:"vcpus_total"`
 
 	// 专属资源池已使用的cpu数
-	VcpusUsed int32 `json:"vcpus_used" xml:"vcpus_used"`
+	VcpusUsed int32 `json:"vcpus_used"`
 
 	// 专属资源池计算内存大小, 单位GB
-	RamTotal int32 `json:"ram_total" xml:"ram_total"`
+	RamTotal int32 `json:"ram_total"`
 
 	// 专属资源池已使用的计算内存大小，单位GB
-	RamUsed int32 `json:"ram_used" xml:"ram_used"`
+	RamUsed int32 `json:"ram_used"`
 
 	// 专属资源池计算资源规格码
-	SpecCode string `json:"spec_code" xml:"spec_code"`
+	SpecCode string `json:"spec_code"`
 
 	// 专属资源池计算主机数量
-	HostNum int32 `json:"host_num" xml:"host_num"`
+	HostNum int32 `json:"host_num"`
 }
 
 func (o DedicatedComputeInfo) String() string {

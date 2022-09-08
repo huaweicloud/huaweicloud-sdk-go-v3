@@ -10,24 +10,24 @@ import (
 type Deployment struct {
 
 	// 部署名称
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 部署描述
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 应用部署来源：边缘市场（iem）或自定义()
-	Source *string `json:"source,omitempty" xml:"source"`
+	Source *string `json:"source,omitempty"`
 
 	// 应用部署到指定节点组，与node_ids二选一
-	GroupId *string `json:"group_id,omitempty" xml:"group_id"`
+	GroupId *string `json:"group_id,omitempty"`
 
 	// 应用部署到指定节点，当前只支持一个边缘节点
-	NodeIds []string `json:"node_ids" xml:"node_ids"`
+	NodeIds []string `json:"node_ids"`
 
 	// 节点属性
-	Tags *[]Attributes `json:"tags,omitempty" xml:"tags"`
+	Tags *[]Attributes `json:"tags,omitempty"`
 
-	Deployment *CreateAppsInDeploymentV3 `json:"deployment" xml:"deployment"`
+	Deployment *CreateAppsInDeploymentV3 `json:"deployment"`
 }
 
 func (o Deployment) String() string {

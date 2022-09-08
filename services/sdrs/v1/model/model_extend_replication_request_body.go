@@ -8,7 +8,7 @@ import (
 
 // 复制对扩容请求体
 type ExtendReplicationRequestBody struct {
-	ExtendReplication *ExtendReplicationRequestParams `json:"extend-replication" xml:"extend-replication"`
+	ExtendReplication *ExtendReplicationRequestParams `json:"extend-replication"`
 }
 
 func (o ExtendReplicationRequestBody) String() string {

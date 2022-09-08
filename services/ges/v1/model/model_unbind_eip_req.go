@@ -10,7 +10,7 @@ import (
 type UnbindEipReq struct {
 
 	// 弹性公网IP的ID。
-	EipId string `json:"eipId" xml:"eipId"`
+	EipId string `json:"eipId"`
 }
 
 func (o UnbindEipReq) String() string {

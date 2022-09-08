@@ -10,19 +10,19 @@ import (
 type ShowTopologyTreeRequest struct {
 
 	// 区域id
-	RegionId *string `json:"region_id,omitempty" xml:"region_id"`
+	RegionId *string `json:"region_id,omitempty"`
 
 	// 应用id
-	BusinessId *int64 `json:"business_id,omitempty" xml:"business_id"`
+	BusinessId *int64 `json:"business_id,omitempty"`
 
 	// 环境标签id
-	EnvTagId *int64 `json:"env_tag_id,omitempty" xml:"env_tag_id"`
+	EnvTagId *int64 `json:"env_tag_id,omitempty"`
 
 	// 环境关键字
-	EnvKeyword *string `json:"env_keyword,omitempty" xml:"env_keyword"`
+	EnvKeyword *string `json:"env_keyword,omitempty"`
 
 	// 应用id
-	XBusinessId int64 `json:"x-business-id" xml:"x-business-id"`
+	XBusinessId int64 `json:"x-business-id"`
 }
 
 func (o ShowTopologyTreeRequest) String() string {

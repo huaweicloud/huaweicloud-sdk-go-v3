@@ -9,19 +9,19 @@ import (
 type LogInfo struct {
 
 	// 日志标题
-	DisplayName *string `json:"display_name,omitempty" xml:"display_name"`
+	DisplayName *string `json:"display_name,omitempty"`
 
 	// 日志内容
-	Log *string `json:"log,omitempty" xml:"log"`
+	Log *string `json:"log,omitempty"`
 
 	// 日志级别
-	Level *string `json:"level,omitempty" xml:"level"`
+	Level *string `json:"level,omitempty"`
 
 	// 日志分析
-	Analysis *string `json:"analysis,omitempty" xml:"analysis"`
+	Analysis *string `json:"analysis,omitempty"`
 
 	// 常见问题解答
-	Faq *string `json:"faq,omitempty" xml:"faq"`
+	Faq *string `json:"faq,omitempty"`
 }
 
 func (o LogInfo) String() string {

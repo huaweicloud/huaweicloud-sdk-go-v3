@@ -9,10 +9,10 @@ import (
 type VodSampleData struct {
 
 	// 存储空间。  单位：GB。
-	Storage *float32 `json:"storage,omitempty" xml:"storage"`
+	Storage *float32 `json:"storage,omitempty"`
 
 	// 转码时长。  单位：秒。
-	Transcode *int64 `json:"transcode,omitempty" xml:"transcode"`
+	Transcode *int64 `json:"transcode,omitempty"`
 }
 
 func (o VodSampleData) String() string {

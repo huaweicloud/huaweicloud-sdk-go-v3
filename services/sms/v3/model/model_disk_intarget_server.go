@@ -13,13 +13,13 @@ import (
 type DiskIntargetServer struct {
 
 	// 磁盘名称
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 磁盘大小，单位：字节
-	Size int64 `json:"size" xml:"size"`
+	Size int64 `json:"size"`
 
 	// 磁盘的作用
-	DeviceUse *DiskIntargetServerDeviceUse `json:"device_use,omitempty" xml:"device_use"`
+	DeviceUse *DiskIntargetServerDeviceUse `json:"device_use,omitempty"`
 }
 
 func (o DiskIntargetServer) String() string {

@@ -10,9 +10,9 @@ import (
 type UploadIssueImgRequest struct {
 
 	// devcloud项目的32位id
-	ProjectId string `json:"project_id" xml:"project_id"`
+	ProjectId string `json:"project_id"`
 
-	Body *UploadIssueImgRequestBody `json:"body,omitempty" xml:"body" type:"multipart"`
+	Body *UploadIssueImgRequestBody `json:"body,omitempty" type:"multipart"`
 }
 
 func (o UploadIssueImgRequest) String() string {

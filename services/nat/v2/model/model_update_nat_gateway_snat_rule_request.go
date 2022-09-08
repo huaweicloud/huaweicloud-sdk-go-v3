@@ -10,9 +10,9 @@ import (
 type UpdateNatGatewaySnatRuleRequest struct {
 
 	// SNAT规则的ID。
-	SnatRuleId string `json:"snat_rule_id" xml:"snat_rule_id"`
+	SnatRuleId string `json:"snat_rule_id"`
 
-	Body *UpdateNatGatewaySnatRuleRequestOption `json:"body,omitempty" xml:"body"`
+	Body *UpdateNatGatewaySnatRuleRequestOption `json:"body,omitempty"`
 }
 
 func (o UpdateNatGatewaySnatRuleRequest) String() string {

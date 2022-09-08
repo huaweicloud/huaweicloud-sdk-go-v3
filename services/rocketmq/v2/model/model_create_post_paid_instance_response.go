@@ -10,7 +10,7 @@ import (
 type CreatePostPaidInstanceResponse struct {
 
 	// 实例ID。
-	InstanceId     *string `json:"instance_id,omitempty" xml:"instance_id"`
+	InstanceId     *string `json:"instance_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

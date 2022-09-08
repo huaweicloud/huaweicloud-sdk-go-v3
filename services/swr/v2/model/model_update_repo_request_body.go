@@ -12,13 +12,13 @@ import (
 type UpdateRepoRequestBody struct {
 
 	// 是否为公共仓库，可选值为true或false。
-	IsPublic bool `json:"is_public" xml:"is_public"`
+	IsPublic bool `json:"is_public"`
 
 	// 仓库类型，可设置为app_server, linux, framework_app, database, lang, other, windows, arm。
-	Category *UpdateRepoRequestBodyCategory `json:"category,omitempty" xml:"category"`
+	Category *UpdateRepoRequestBodyCategory `json:"category,omitempty"`
 
 	// 镜像仓库的描述信息。
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 }
 
 func (o UpdateRepoRequestBody) String() string {

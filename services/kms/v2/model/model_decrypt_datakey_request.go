@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type DecryptDatakeyRequest struct {
-	Body *DecryptDatakeyRequestBody `json:"body,omitempty" xml:"body"`
+	Body *DecryptDatakeyRequestBody `json:"body,omitempty"`
 }
 
 func (o DecryptDatakeyRequest) String() string {

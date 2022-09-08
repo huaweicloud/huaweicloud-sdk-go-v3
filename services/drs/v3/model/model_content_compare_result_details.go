@@ -10,19 +10,19 @@ import (
 type ContentCompareResultDetails struct {
 
 	// 源库名称。
-	SourceDbName string `json:"source_db_name" xml:"source_db_name"`
+	SourceDbName string `json:"source_db_name"`
 
 	// 该库的表的内容对比详情。
-	ContentCompareDetail []ContentCompareDetail `json:"content_compare_detail" xml:"content_compare_detail"`
+	ContentCompareDetail []ContentCompareDetail `json:"content_compare_detail"`
 
 	// 内容对比结果详情总数。
-	ContentCompareDetailCount int32 `json:"content_compare_detail_count" xml:"content_compare_detail_count"`
+	ContentCompareDetailCount int32 `json:"content_compare_detail_count"`
 
 	// 该库的表的内容对比详情(无法对比的表)。
-	ContentUncompareDetail *[]ContentCompareDetail `json:"content_uncompare_detail,omitempty" xml:"content_uncompare_detail"`
+	ContentUncompareDetail *[]ContentCompareDetail `json:"content_uncompare_detail,omitempty"`
 
 	// 内容对比结果详情总数(无法对比的表)。
-	ContentUncompareDetailCount int32 `json:"content_uncompare_detail_count" xml:"content_uncompare_detail_count"`
+	ContentUncompareDetailCount int32 `json:"content_uncompare_detail_count"`
 }
 
 func (o ContentCompareResultDetails) String() string {

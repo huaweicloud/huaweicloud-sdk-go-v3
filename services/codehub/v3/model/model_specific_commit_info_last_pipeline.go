@@ -10,19 +10,19 @@ import (
 type SpecificCommitInfoLastPipeline struct {
 
 	// 流水线id
-	Id *int32 `json:"id,omitempty" xml:"id"`
+	Id *int32 `json:"id,omitempty"`
 
 	// 提交对应的SHA id
-	Sha *string `json:"sha,omitempty" xml:"sha"`
+	Sha *string `json:"sha,omitempty"`
 
 	// 分支名
-	Ref *string `json:"ref,omitempty" xml:"ref"`
+	Ref *string `json:"ref,omitempty"`
 
 	// 流水线状态
-	Status *string `json:"status,omitempty" xml:"status"`
+	Status *string `json:"status,omitempty"`
 
 	// 流水线url
-	WebUrl *string `json:"web_url,omitempty" xml:"web_url"`
+	WebUrl *string `json:"web_url,omitempty"`
 }
 
 func (o SpecificCommitInfoLastPipeline) String() string {

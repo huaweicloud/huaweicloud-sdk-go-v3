@@ -13,16 +13,16 @@ import (
 type RouteOption struct {
 
 	// 路由的类型  取值范围：     1）ecs：弹性云服务器     2）vip：虚拟IP
-	Type RouteOptionType `json:"type" xml:"type"`
+	Type RouteOptionType `json:"type"`
 
 	// 路由的目的网段  约束：合法的CIDR格式, 目的地址不可更新
-	Destination string `json:"destination" xml:"destination"`
+	Destination string `json:"destination"`
 
 	// 路由下一跳对象的ID  取值范围：     1）当type为ecs时，传入ecs实例ID；     2）当type为vip时，取值为vip的ip地址；
-	Nexthop string `json:"nexthop" xml:"nexthop"`
+	Nexthop string `json:"nexthop"`
 
 	// 路由的描述信息  取值范围：0-255个字符，不能包含“<”和“>”
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 }
 
 func (o RouteOption) String() string {

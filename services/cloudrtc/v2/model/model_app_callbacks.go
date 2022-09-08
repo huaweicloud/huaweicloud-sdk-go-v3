@@ -8,9 +8,9 @@ import (
 
 // app回调配置
 type AppCallbacks struct {
-	PushCallback *AppCallbackUrl `json:"push_callback,omitempty" xml:"push_callback"`
+	PushCallback *AppCallbackUrl `json:"push_callback,omitempty"`
 
-	RecordCallback *AppCallbackUrl `json:"record_callback,omitempty" xml:"record_callback"`
+	RecordCallback *AppCallbackUrl `json:"record_callback,omitempty"`
 }
 
 func (o AppCallbacks) String() string {

@@ -9,19 +9,19 @@ import (
 type UnscopedTokenInfoCatalog struct {
 
 	// 终端节点ID。
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 接口类型，描述接口在该终端节点的可见性。值为“public”，表示该接口为公开接口。
-	Interface *string `json:"interface,omitempty" xml:"interface"`
+	Interface *string `json:"interface,omitempty"`
 
 	// 终端节点所属区域。
-	Region *string `json:"region,omitempty" xml:"region"`
+	Region *string `json:"region,omitempty"`
 
 	// 终端节点所属区域ID。
-	RegionId *string `json:"region_id,omitempty" xml:"region_id"`
+	RegionId *string `json:"region_id,omitempty"`
 
 	// 终端节点的URL。
-	Url *string `json:"url,omitempty" xml:"url"`
+	Url *string `json:"url,omitempty"`
 }
 
 func (o UnscopedTokenInfoCatalog) String() string {

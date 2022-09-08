@@ -10,16 +10,16 @@ import (
 type StorageGroup struct {
 
 	// 存储组名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 描述
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 温数据老化策略，单位只支持d（天），且只支持整数，如365天则可配置为“365d”，如“365h”或“360.5d”等均不被支持
-	WarmDataRetentionPolicy *string `json:"warm_data_retention_policy,omitempty" xml:"warm_data_retention_policy"`
+	WarmDataRetentionPolicy *string `json:"warm_data_retention_policy,omitempty"`
 
 	// 冷数据老化策略，单位只支持d（天），且只支持整数，如365天则可配置为“365d”，如“365h”或“360.5d”等均不被支持
-	ColdDataRetentionPolicy *string `json:"cold_data_retention_policy,omitempty" xml:"cold_data_retention_policy"`
+	ColdDataRetentionPolicy *string `json:"cold_data_retention_policy,omitempty"`
 }
 
 func (o StorageGroup) String() string {

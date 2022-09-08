@@ -13,10 +13,10 @@ import (
 type ShowRedirectUrlRequest struct {
 
 	// 仓库类型。 取值范围：github、gitlab、gitee、bitbucket。
-	RepoType ShowRedirectUrlRequestRepoType `json:"repo_type" xml:"repo_type"`
+	RepoType ShowRedirectUrlRequestRepoType `json:"repo_type"`
 
 	// 站点标签。 比如国际站的，?tag=intl。 默认为空。
-	Tag *string `json:"tag,omitempty" xml:"tag"`
+	Tag *string `json:"tag,omitempty"`
 }
 
 func (o ShowRedirectUrlRequest) String() string {

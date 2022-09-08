@@ -10,9 +10,9 @@ import (
 type CopyImageInRegionRequest struct {
 
 	// 镜像ID
-	ImageId string `json:"image_id" xml:"image_id"`
+	ImageId string `json:"image_id"`
 
-	Body *CopyImageInRegionRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CopyImageInRegionRequestBody `json:"body,omitempty"`
 }
 
 func (o CopyImageInRegionRequest) String() string {

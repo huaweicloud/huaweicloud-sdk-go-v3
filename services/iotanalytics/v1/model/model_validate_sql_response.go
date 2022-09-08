@@ -10,7 +10,7 @@ import (
 type ValidateSqlResponse struct {
 
 	// SQL是否通过语法校验
-	Valid          *bool `json:"valid,omitempty" xml:"valid"`
+	Valid          *bool `json:"valid,omitempty"`
 	HttpStatusCode int   `json:"-"`
 }
 

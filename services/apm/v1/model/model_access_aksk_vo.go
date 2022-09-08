@@ -10,28 +10,28 @@ import (
 type AccessAkskVo struct {
 
 	// ak/sk的id
-	Id *int32 `json:"id,omitempty" xml:"id"`
+	Id *int32 `json:"id,omitempty"`
 
 	// ak/sk的生成时间
-	GmtCreate *string `json:"gmt_create,omitempty" xml:"gmt_create"`
+	GmtCreate *string `json:"gmt_create,omitempty"`
 
 	// ak/sk的修改时间
-	GmtModify *string `json:"gmt_modify,omitempty" xml:"gmt_modify"`
+	GmtModify *string `json:"gmt_modify,omitempty"`
 
 	// 内部租户id
-	InnerDomainId *int32 `json:"inner_domain_id,omitempty" xml:"inner_domain_id"`
+	InnerDomainId *int32 `json:"inner_domain_id,omitempty"`
 
 	// 生成的ak
-	Ak *string `json:"ak,omitempty" xml:"ak"`
+	Ak *string `json:"ak,omitempty"`
 
 	// 生成的sk
-	Sk *string `json:"sk,omitempty" xml:"sk"`
+	Sk *string `json:"sk,omitempty"`
 
 	// ak/sk的状态
-	Status *string `json:"status,omitempty" xml:"status"`
+	Status *string `json:"status,omitempty"`
 
 	// ak/sk的描述信息
-	Descp *string `json:"descp,omitempty" xml:"descp"`
+	Descp *string `json:"descp,omitempty"`
 }
 
 func (o AccessAkskVo) String() string {

@@ -10,10 +10,10 @@ import (
 type DeleteSecretStageRequest struct {
 
 	// 凭据的资源标识符。
-	SecretId string `json:"secret_id" xml:"secret_id"`
+	SecretId string `json:"secret_id"`
 
 	// 凭据版本状态的名称。
-	StageName string `json:"stage_name" xml:"stage_name"`
+	StageName string `json:"stage_name"`
 }
 
 func (o DeleteSecretStageRequest) String() string {

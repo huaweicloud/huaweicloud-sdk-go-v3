@@ -13,10 +13,10 @@ import (
 type RestartGraphRequest struct {
 
 	// 图ID。
-	GraphId string `json:"graph_id" xml:"graph_id"`
+	GraphId string `json:"graph_id"`
 
 	// 图actionId
-	ActionId RestartGraphRequestActionId `json:"action_id" xml:"action_id"`
+	ActionId RestartGraphRequestActionId `json:"action_id"`
 }
 
 func (o RestartGraphRequest) String() string {

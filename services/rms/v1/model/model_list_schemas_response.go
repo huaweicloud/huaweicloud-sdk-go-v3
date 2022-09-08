@@ -10,9 +10,9 @@ import (
 type ListSchemasResponse struct {
 
 	// schemas 接口.
-	Value *[]ResourceSchemaResponse `json:"value,omitempty" xml:"value"`
+	Value *[]ResourceSchemaResponse `json:"value,omitempty"`
 
-	PageInfo       *PageInfo `json:"page_info,omitempty" xml:"page_info"`
+	PageInfo       *PageInfo `json:"page_info,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }
 

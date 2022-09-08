@@ -9,10 +9,10 @@ import (
 type CheckpointReplicateRespbackups struct {
 
 	// 待复制的备份ID
-	BackupId string `json:"backup_id" xml:"backup_id"`
+	BackupId string `json:"backup_id"`
 
 	// 复制记录ID
-	ReplicationRecordId string `json:"replication_record_id" xml:"replication_record_id"`
+	ReplicationRecordId string `json:"replication_record_id"`
 }
 
 func (o CheckpointReplicateRespbackups) String() string {

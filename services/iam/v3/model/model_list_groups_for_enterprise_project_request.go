@@ -10,7 +10,7 @@ import (
 type ListGroupsForEnterpriseProjectRequest struct {
 
 	// 待查询的企业项目Id。
-	EnterpriseProjectId string `json:"enterprise_project_id" xml:"enterprise_project_id"`
+	EnterpriseProjectId string `json:"enterprise_project_id"`
 }
 
 func (o ListGroupsForEnterpriseProjectRequest) String() string {

@@ -10,10 +10,10 @@ import (
 type TagLaborRequest struct {
 
 	// qabot编号，UUID格式。
-	QabotId string `json:"qabot_id" xml:"qabot_id"`
+	QabotId string `json:"qabot_id"`
 
 	// 请求ID，由问答机器人会话生成。
-	RequestId string `json:"request_id" xml:"request_id"`
+	RequestId string `json:"request_id"`
 }
 
 func (o TagLaborRequest) String() string {

@@ -10,13 +10,13 @@ import (
 type AssociateRouterResponse struct {
 
 	// Router(VPC)的ID。
-	RouterId *string `json:"router_id,omitempty" xml:"router_id"`
+	RouterId *string `json:"router_id,omitempty"`
 
 	// Router(VPC)所在的region。
-	RouterRegion *string `json:"router_region,omitempty" xml:"router_region"`
+	RouterRegion *string `json:"router_region,omitempty"`
 
 	// 资源状态。
-	Status         *string `json:"status,omitempty" xml:"status"`
+	Status         *string `json:"status,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

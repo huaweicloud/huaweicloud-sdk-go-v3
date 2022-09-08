@@ -12,31 +12,31 @@ import (
 type TasksObject struct {
 
 	// 任务id。
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 任务的类型， 其值可以为refresh或preheating。
-	TaskType *TasksObjectTaskType `json:"task_type,omitempty" xml:"task_type"`
+	TaskType *TasksObjectTaskType `json:"task_type,omitempty"`
 
 	// 刷新结果。task_done表示刷新成功  ，task_inprocess表示刷新中。
-	Status *string `json:"status,omitempty" xml:"status"`
+	Status *string `json:"status,omitempty"`
 
 	// 处理中的url个数。
-	Processing *int32 `json:"processing,omitempty" xml:"processing"`
+	Processing *int32 `json:"processing,omitempty"`
 
 	// 成功处理的url个数。
-	Succeed *int32 `json:"succeed,omitempty" xml:"succeed"`
+	Succeed *int32 `json:"succeed,omitempty"`
 
 	// 处理失败的url个数。
-	Failed *int32 `json:"failed,omitempty" xml:"failed"`
+	Failed *int32 `json:"failed,omitempty"`
 
 	// url总数。
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 
 	// 任务的创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
-	CreateTime *int64 `json:"create_time,omitempty" xml:"create_time"`
+	CreateTime *int64 `json:"create_time,omitempty"`
 
 	// 默认是文件file。file：文件,directory：目录。
-	FileType *TasksObjectFileType `json:"file_type,omitempty" xml:"file_type"`
+	FileType *TasksObjectFileType `json:"file_type,omitempty"`
 }
 
 func (o TasksObject) String() string {

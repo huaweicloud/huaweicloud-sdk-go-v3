@@ -10,7 +10,7 @@ import (
 type ListDatasourceColumnsResponse struct {
 
 	// 返回的实体对象
-	Columns        *[]ColumnInfo `json:"columns,omitempty" xml:"columns"`
+	Columns        *[]ColumnInfo `json:"columns,omitempty"`
 	HttpStatusCode int           `json:"-"`
 }
 

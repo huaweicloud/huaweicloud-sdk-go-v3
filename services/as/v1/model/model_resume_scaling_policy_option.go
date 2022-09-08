@@ -13,7 +13,7 @@ import (
 type ResumeScalingPolicyOption struct {
 
 	// 执行或启用或停止伸缩策略操作的标识。执行：execute。启用：resume。停止：pause。
-	Action ResumeScalingPolicyOptionAction `json:"action" xml:"action"`
+	Action ResumeScalingPolicyOptionAction `json:"action"`
 }
 
 func (o ResumeScalingPolicyOption) String() string {

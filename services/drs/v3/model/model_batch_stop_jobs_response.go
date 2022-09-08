@@ -10,10 +10,10 @@ import (
 type BatchStopJobsResponse struct {
 
 	// 批量暂停返回列表
-	Results *[]PauseJobResp `json:"results,omitempty" xml:"results"`
+	Results *[]PauseJobResp `json:"results,omitempty"`
 
 	// 总数
-	Count          *int32 `json:"count,omitempty" xml:"count"`
+	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

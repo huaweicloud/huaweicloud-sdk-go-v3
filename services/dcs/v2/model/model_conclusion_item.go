@@ -10,10 +10,10 @@ import (
 type ConclusionItem struct {
 
 	// 结论id
-	Id int32 `json:"id" xml:"id"`
+	Id int32 `json:"id"`
 
 	// 结论参数
-	Params map[string]string `json:"params,omitempty" xml:"params"`
+	Params map[string]string `json:"params,omitempty"`
 }
 
 func (o ConclusionItem) String() string {

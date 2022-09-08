@@ -10,9 +10,9 @@ import (
 type ListBatchJobsResponse struct {
 
 	// 定时作业总个数。
-	Count *int64 `json:"count,omitempty" xml:"count"`
+	Count *int64 `json:"count,omitempty"`
 
-	Jobs           *[]Job `json:"jobs,omitempty" xml:"jobs"`
+	Jobs           *[]Job `json:"jobs,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

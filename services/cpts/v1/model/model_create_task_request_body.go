@@ -10,19 +10,19 @@ import (
 type CreateTaskRequestBody struct {
 
 	// name
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// project_id
-	ProjectId int32 `json:"project_id" xml:"project_id"`
+	ProjectId int32 `json:"project_id"`
 
 	// temps
-	Temps *[]string `json:"temps,omitempty" xml:"temps"`
+	Temps *[]string `json:"temps,omitempty"`
 
 	// operate_mode
-	OperateMode *int32 `json:"operate_mode,omitempty" xml:"operate_mode"`
+	OperateMode *int32 `json:"operate_mode,omitempty"`
 
 	// bench_concurrent
-	BenchConcurrent *int32 `json:"bench_concurrent,omitempty" xml:"bench_concurrent"`
+	BenchConcurrent *int32 `json:"bench_concurrent,omitempty"`
 }
 
 func (o CreateTaskRequestBody) String() string {

@@ -9,10 +9,10 @@ import (
 type WorkitemsTags struct {
 
 	// 标签id
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 标签名
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 }
 
 func (o WorkitemsTags) String() string {

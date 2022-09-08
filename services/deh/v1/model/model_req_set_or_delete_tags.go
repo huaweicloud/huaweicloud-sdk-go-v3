@@ -13,10 +13,10 @@ import (
 type ReqSetOrDeleteTags struct {
 
 	// 标签列表。
-	Tags []ResourceTag `json:"tags" xml:"tags"`
+	Tags []ResourceTag `json:"tags"`
 
 	// 操作标识（仅支持小写）：create（创建），delete（删除）。
-	Action ReqSetOrDeleteTagsAction `json:"action" xml:"action"`
+	Action ReqSetOrDeleteTagsAction `json:"action"`
 }
 
 func (o ReqSetOrDeleteTags) String() string {

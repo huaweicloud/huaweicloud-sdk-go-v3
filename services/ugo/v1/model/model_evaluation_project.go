@@ -10,42 +10,42 @@ import (
 type EvaluationProject struct {
 
 	// 评估项目ID。
-	EvaluationProjectId int32 `json:"evaluation_project_id" xml:"evaluation_project_id"`
+	EvaluationProjectId int32 `json:"evaluation_project_id"`
 
 	// 评估项目名称。
-	EvaluationProjectName string `json:"evaluation_project_name" xml:"evaluation_project_name"`
+	EvaluationProjectName string `json:"evaluation_project_name"`
 
 	// 评估项目状态。
-	EvaluationProjectStatus string `json:"evaluation_project_status" xml:"evaluation_project_status"`
+	EvaluationProjectStatus string `json:"evaluation_project_status"`
 
-	ProjectStatusDetail *ProjectStatusDetail `json:"project_status_detail,omitempty" xml:"project_status_detail"`
+	ProjectStatusDetail *ProjectStatusDetail `json:"project_status_detail,omitempty"`
 
 	// 源数据库类型。
-	SourceDbType string `json:"source_db_type" xml:"source_db_type"`
+	SourceDbType string `json:"source_db_type"`
 
 	// 源数据库版本。
-	SourceDbVersion string `json:"source_db_version" xml:"source_db_version"`
+	SourceDbVersion string `json:"source_db_version"`
 
 	// 目标数据库类型。
-	TargetDbType *string `json:"target_db_type,omitempty" xml:"target_db_type"`
+	TargetDbType *string `json:"target_db_type,omitempty"`
 
 	// 目标数据库版本。
-	TargetDbVersion *string `json:"target_db_version,omitempty" xml:"target_db_version"`
+	TargetDbVersion *string `json:"target_db_version,omitempty"`
 
 	// 已收集的SQL大小，单位：B。
-	CollectSize *int64 `json:"collect_size,omitempty" xml:"collect_size"`
+	CollectSize *int64 `json:"collect_size,omitempty"`
 
 	// 资源ID。
-	ResourceId string `json:"resource_id" xml:"resource_id"`
+	ResourceId string `json:"resource_id"`
 
 	// 创建时间。
-	CreatedTime string `json:"created_time" xml:"created_time"`
+	CreatedTime string `json:"created_time"`
 
 	// 更新时间。
-	UpdatedTime string `json:"updated_time" xml:"updated_time"`
+	UpdatedTime string `json:"updated_time"`
 
 	// 失败原因。
-	ErrorReason *string `json:"error_reason,omitempty" xml:"error_reason"`
+	ErrorReason *string `json:"error_reason,omitempty"`
 }
 
 func (o EvaluationProject) String() string {

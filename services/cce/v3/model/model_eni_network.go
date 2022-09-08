@@ -10,13 +10,13 @@ import (
 type EniNetwork struct {
 
 	// ENI所在子网的IPv4网络ID(暂不支持IPv6,废弃中)。获取方法如下：  - 方法1：登录虚拟私有云服务的控制台界面，单击VPC下的子网，进入子网详情页面，查找IPv4子网ID。 - 方法2：通过虚拟私有云服务的查询子网列表接口查询。   [链接请参见[查询子网列表](https://support.huaweicloud.com/api-vpc/vpc_subnet01_0003.html)](tag:hws)   [链接请参见[查询子网列表](https://support.huaweicloud.com/intl/zh-cn/api-vpc/vpc_subnet01_0003.html)](tag:hws_hk)
-	EniSubnetId string `json:"eniSubnetId" xml:"eniSubnetId"`
+	EniSubnetId string `json:"eniSubnetId"`
 
 	// ENI子网CIDR(废弃中)
-	EniSubnetCIDR string `json:"eniSubnetCIDR" xml:"eniSubnetCIDR"`
+	EniSubnetCIDR string `json:"eniSubnetCIDR"`
 
 	// IPv4子网ID列表
-	Subnets []NetworkSubnet `json:"subnets" xml:"subnets"`
+	Subnets []NetworkSubnet `json:"subnets"`
 }
 
 func (o EniNetwork) String() string {

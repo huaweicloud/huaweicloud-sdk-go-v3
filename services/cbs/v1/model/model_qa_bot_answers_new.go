@@ -10,10 +10,10 @@ import (
 type QaBotAnswersNew struct {
 
 	// 问答机器人回复。
-	Answers *[]QaBotAnswer `json:"answers,omitempty" xml:"answers"`
+	Answers *[]QaBotAnswer `json:"answers,omitempty"`
 
 	// 问答机器人推荐问题
-	RecommendAnswers *[]RecomendAnswer `json:"recommend_answers,omitempty" xml:"recommend_answers"`
+	RecommendAnswers *[]RecomendAnswer `json:"recommend_answers,omitempty"`
 }
 
 func (o QaBotAnswersNew) String() string {

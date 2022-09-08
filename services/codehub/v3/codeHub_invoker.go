@@ -53,6 +53,18 @@ func (i *ShowSingleCommitInvoker) Invoke() (*model.ShowSingleCommitResponse, err
 	}
 }
 
+type ListFilesByQueryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListFilesByQueryInvoker) Invoke() (*model.ListFilesByQueryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListFilesByQueryResponse), nil
+	}
+}
+
 type ShowFileInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -281,6 +293,18 @@ func (i *GetTemplatesInvoker) Invoke() (*model.GetTemplatesResponse, error) {
 	}
 }
 
+type ListBranchesByRepositoryIdInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBranchesByRepositoryIdInvoker) Invoke() (*model.ListBranchesByRepositoryIdResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBranchesByRepositoryIdResponse), nil
+	}
+}
+
 type ListCommitStatisticsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -302,6 +326,18 @@ func (i *ListFilesInvoker) Invoke() (*model.ListFilesResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListFilesResponse), nil
+	}
+}
+
+type ListMergeRequestInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListMergeRequestInvoker) Invoke() (*model.ListMergeRequestResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListMergeRequestResponse), nil
 	}
 }
 
@@ -446,6 +482,18 @@ func (i *ShowMasterInvoker) Invoke() (*model.ShowMasterResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowMasterResponse), nil
+	}
+}
+
+type ShowMergeRequestInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowMergeRequestInvoker) Invoke() (*model.ShowMergeRequestResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowMergeRequestResponse), nil
 	}
 }
 
@@ -602,6 +650,30 @@ func (i *ValidateHttpsInfoV2Invoker) Invoke() (*model.ValidateHttpsInfoV2Respons
 		return nil, err
 	} else {
 		return result.(*model.ValidateHttpsInfoV2Response), nil
+	}
+}
+
+type CreateNewBranchInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateNewBranchInvoker) Invoke() (*model.CreateNewBranchResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateNewBranchResponse), nil
+	}
+}
+
+type AssociateIssuesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AssociateIssuesInvoker) Invoke() (*model.AssociateIssuesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AssociateIssuesResponse), nil
 	}
 }
 

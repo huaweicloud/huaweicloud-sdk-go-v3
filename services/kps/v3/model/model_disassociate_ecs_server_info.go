@@ -10,9 +10,9 @@ import (
 type DisassociateEcsServerInfo struct {
 
 	// 需要绑定(替换或重置)SSH密钥对的虚拟机id
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
-	Auth *Auth `json:"auth,omitempty" xml:"auth"`
+	Auth *Auth `json:"auth,omitempty"`
 }
 
 func (o DisassociateEcsServerInfo) String() string {

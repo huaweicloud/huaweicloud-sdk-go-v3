@@ -7,9 +7,9 @@ import (
 )
 
 type DetectFace struct {
-	BoundingBox *BoundingBox `json:"bounding_box" xml:"bounding_box"`
+	BoundingBox *BoundingBox `json:"bounding_box"`
 
-	Attributes *Attributes `json:"attributes,omitempty" xml:"attributes"`
+	Attributes *Attributes `json:"attributes,omitempty"`
 }
 
 func (o DetectFace) String() string {

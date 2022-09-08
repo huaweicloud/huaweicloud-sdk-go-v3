@@ -10,19 +10,19 @@ import (
 type NovaSecurityGroup struct {
 
 	// 安全组描述信息，长度0-255
-	Description string `json:"description" xml:"description"`
+	Description string `json:"description"`
 
 	// 安全组ID，UUID格式
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
 	// 安全组名字，长度0-255
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 租户ID或项目ID
-	TenantId string `json:"tenant_id" xml:"tenant_id"`
+	TenantId string `json:"tenant_id"`
 
 	// 安全组规则列表
-	Rules []NovaSecurityGroupCommonRule `json:"rules" xml:"rules"`
+	Rules []NovaSecurityGroupCommonRule `json:"rules"`
 }
 
 func (o NovaSecurityGroup) String() string {

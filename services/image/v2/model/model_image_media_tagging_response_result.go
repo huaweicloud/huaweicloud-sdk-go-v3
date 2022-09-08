@@ -10,7 +10,7 @@ import (
 type ImageMediaTaggingResponseResult struct {
 
 	// 标签列表集合。
-	Tags *[]ImageMediaTaggingItemBody `json:"tags,omitempty" xml:"tags"`
+	Tags *[]ImageMediaTaggingItemBody `json:"tags,omitempty"`
 }
 
 func (o ImageMediaTaggingResponseResult) String() string {

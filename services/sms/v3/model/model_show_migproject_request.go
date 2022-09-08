@@ -10,7 +10,7 @@ import (
 type ShowMigprojectRequest struct {
 
 	// 迁移项目id
-	MigProjectId string `json:"mig_project_id" xml:"mig_project_id"`
+	MigProjectId string `json:"mig_project_id"`
 }
 
 func (o ShowMigprojectRequest) String() string {

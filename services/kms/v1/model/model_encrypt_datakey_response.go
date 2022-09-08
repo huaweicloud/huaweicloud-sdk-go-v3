@@ -10,13 +10,13 @@ import (
 type EncryptDatakeyResponse struct {
 
 	// 密钥ID
-	KeyId *string `json:"key_id,omitempty" xml:"key_id"`
+	KeyId *string `json:"key_id,omitempty"`
 
 	// DEK密文16进制，两位表示1byte。
-	CipherText *string `json:"cipher_text,omitempty" xml:"cipher_text"`
+	CipherText *string `json:"cipher_text,omitempty"`
 
 	// DEK字节长度。
-	DatakeyLength  *string `json:"datakey_length,omitempty" xml:"datakey_length"`
+	DatakeyLength  *string `json:"datakey_length,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

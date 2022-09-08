@@ -13,25 +13,25 @@ import (
 type ListInstanceSnapshotsRequest struct {
 
 	// 应用ID。
-	ApplicationId string `json:"application_id" xml:"application_id"`
+	ApplicationId string `json:"application_id"`
 
 	// 组件ID。
-	ComponentId string `json:"component_id" xml:"component_id"`
+	ComponentId string `json:"component_id"`
 
 	// 组件实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 指定个数，明确指定的时候用于分页，取值[0, 100]。不指定的时候表示不分页，最多查询1000条记录。
-	Limit *int32 `json:"limit,omitempty" xml:"limit"`
+	Limit *int32 `json:"limit,omitempty"`
 
 	// 指定查询偏移量，默认偏移量为0.
-	Offset *int32 `json:"offset,omitempty" xml:"offset"`
+	Offset *int32 `json:"offset,omitempty"`
 
 	// 排序字段，默认按创建时间排序。  排序字段支持枚举值：create_time、version。
-	SnapshotOrderBy *string `json:"snapshot_order_by,omitempty" xml:"snapshot_order_by"`
+	SnapshotOrderBy *string `json:"snapshot_order_by,omitempty"`
 
 	// desc/asc，默认desc。
-	Order *ListInstanceSnapshotsRequestOrder `json:"order,omitempty" xml:"order"`
+	Order *ListInstanceSnapshotsRequestOrder `json:"order,omitempty"`
 }
 
 func (o ListInstanceSnapshotsRequest) String() string {

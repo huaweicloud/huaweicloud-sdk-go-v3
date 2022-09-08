@@ -10,10 +10,10 @@ import (
 type ResourceExtraInfoIncludeVolumes struct {
 
 	// 卷ID，仅支持uuid
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
 	// 操作系统类型
-	OsVersion *string `json:"os_version,omitempty" xml:"os_version"`
+	OsVersion *string `json:"os_version,omitempty"`
 }
 
 func (o ResourceExtraInfoIncludeVolumes) String() string {

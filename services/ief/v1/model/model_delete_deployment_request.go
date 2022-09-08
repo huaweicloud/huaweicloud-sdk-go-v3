@@ -10,13 +10,13 @@ import (
 type DeleteDeploymentRequest struct {
 
 	// 铂金版实例ID，专业版实例为空值
-	IefInstanceId *string `json:"ief-instance-id,omitempty" xml:"ief-instance-id"`
+	IefInstanceId *string `json:"ief-instance-id,omitempty"`
 
 	// 应用部署ID
-	DeploymentId string `json:"deployment_id" xml:"deployment_id"`
+	DeploymentId string `json:"deployment_id"`
 
 	// 是否强制删除。默认为false。
-	ForceDelete *string `json:"force_delete,omitempty" xml:"force_delete"`
+	ForceDelete *string `json:"force_delete,omitempty"`
 }
 
 func (o DeleteDeploymentRequest) String() string {

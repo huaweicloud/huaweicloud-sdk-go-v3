@@ -7,7 +7,7 @@ import (
 )
 
 type CreateResetTracksReq struct {
-	AudioFile *SubAudioFile `json:"audio_file,omitempty" xml:"audio_file"`
+	AudioFile *SubAudioFile `json:"audio_file,omitempty"`
 }
 
 func (o CreateResetTracksReq) String() string {

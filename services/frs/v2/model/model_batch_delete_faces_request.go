@@ -10,9 +10,9 @@ import (
 type BatchDeleteFacesRequest struct {
 
 	// 人脸库名称。
-	FaceSetName string `json:"face_set_name" xml:"face_set_name"`
+	FaceSetName string `json:"face_set_name"`
 
-	Body *DeleteFacesBatchReq `json:"body,omitempty" xml:"body"`
+	Body *DeleteFacesBatchReq `json:"body,omitempty"`
 }
 
 func (o BatchDeleteFacesRequest) String() string {

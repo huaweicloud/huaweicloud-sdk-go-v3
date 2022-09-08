@@ -10,12 +10,12 @@ import (
 type ShowJobDetailResponse struct {
 
 	// 部署任务数量。
-	TaskCount *int32 `json:"task_count,omitempty" xml:"task_count"`
+	TaskCount *int32 `json:"task_count,omitempty"`
 
-	Job *JobInfo `json:"job,omitempty" xml:"job"`
+	Job *JobInfo `json:"job,omitempty"`
 
 	// 部署任务列表。
-	Tasks          *[]TaskInfo `json:"tasks,omitempty" xml:"tasks"`
+	Tasks          *[]TaskInfo `json:"tasks,omitempty"`
 	HttpStatusCode int         `json:"-"`
 }
 

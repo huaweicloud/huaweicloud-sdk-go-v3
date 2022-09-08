@@ -9,25 +9,25 @@ import (
 type OutputVideoPara struct {
 
 	// 输出视频对应的模板ID
-	TemplateId *int32 `json:"template_id,omitempty" xml:"template_id"`
+	TemplateId *int32 `json:"template_id,omitempty"`
 
 	// 视频大小
-	Size *int64 `json:"size,omitempty" xml:"size"`
+	Size *int64 `json:"size,omitempty"`
 
 	// 视频封装格式
-	Pack *string `json:"pack,omitempty" xml:"pack"`
+	Pack *string `json:"pack,omitempty"`
 
-	Video *VideoInfo `json:"video,omitempty" xml:"video"`
+	Video *VideoInfo `json:"video,omitempty"`
 
-	Audio *AudioInfo `json:"audio,omitempty" xml:"audio"`
+	Audio *AudioInfo `json:"audio,omitempty"`
 
 	// 输出片源文件名
-	FileName *string `json:"file_name,omitempty" xml:"file_name"`
+	FileName *string `json:"file_name,omitempty"`
 
 	// 折算后视频时长
-	ConverDuration *float64 `json:"conver_duration,omitempty" xml:"conver_duration"`
+	ConverDuration *float64 `json:"conver_duration,omitempty"`
 
-	Error *XCodeError `json:"error,omitempty" xml:"error"`
+	Error *XCodeError `json:"error,omitempty"`
 }
 
 func (o OutputVideoPara) String() string {

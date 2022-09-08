@@ -10,28 +10,28 @@ import (
 type ShowUrlTaskInfoRequest struct {
 
 	// 起始时间戳（毫秒），默认当天00:00
-	StartTime *int32 `json:"start_time,omitempty" xml:"start_time"`
+	StartTime *int32 `json:"start_time,omitempty"`
 
 	// 结束时间戳（毫秒），默认次日00:00
-	EndTime *int32 `json:"end_time,omitempty" xml:"end_time"`
+	EndTime *int32 `json:"end_time,omitempty"`
 
 	// 偏移量
-	Offset *int32 `json:"offset,omitempty" xml:"offset"`
+	Offset *int32 `json:"offset,omitempty"`
 
 	// 单次查询数据条数，上限为100
-	Limit *int32 `json:"limit,omitempty" xml:"limit"`
+	Limit *int32 `json:"limit,omitempty"`
 
 	// 刷新预热url
-	Url *string `json:"url,omitempty" xml:"url"`
+	Url *string `json:"url,omitempty"`
 
 	// 任务类型，REFRESH：刷新任务；PREHEATING：预热任务
-	TaskType *string `json:"task_type,omitempty" xml:"task_type"`
+	TaskType *string `json:"task_type,omitempty"`
 
 	// url状态，状态类型：processing：处理中；succeed：完成；failed：失败；waiting：等待；refreshing：刷新中; preheating : 预热中
-	Status *string `json:"status,omitempty" xml:"status"`
+	Status *string `json:"status,omitempty"`
 
 	// 文件类型，file:文件;directory:目录
-	FileType *string `json:"file_type,omitempty" xml:"file_type"`
+	FileType *string `json:"file_type,omitempty"`
 }
 
 func (o ShowUrlTaskInfoRequest) String() string {

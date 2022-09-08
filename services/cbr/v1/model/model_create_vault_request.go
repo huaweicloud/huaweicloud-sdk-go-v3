@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateVaultRequest struct {
-	Body *VaultCreateReq `json:"body,omitempty" xml:"body"`
+	Body *VaultCreateReq `json:"body,omitempty"`
 }
 
 func (o CreateVaultRequest) String() string {

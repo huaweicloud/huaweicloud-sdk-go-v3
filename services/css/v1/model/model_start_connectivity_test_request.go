@@ -10,9 +10,9 @@ import (
 type StartConnectivityTestRequest struct {
 
 	// 指定待测试的集群ID。
-	ClusterId string `json:"cluster_id" xml:"cluster_id"`
+	ClusterId string `json:"cluster_id"`
 
-	Body *StartConnectivityTestReq `json:"body,omitempty" xml:"body"`
+	Body *StartConnectivityTestReq `json:"body,omitempty"`
 }
 
 func (o StartConnectivityTestRequest) String() string {

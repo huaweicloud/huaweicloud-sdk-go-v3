@@ -10,16 +10,16 @@ import (
 type UpdateBigkeyAutoscanConfigResponse struct {
 
 	// 实例ID
-	InstanceId *string `json:"instance_id,omitempty" xml:"instance_id"`
+	InstanceId *string `json:"instance_id,omitempty"`
 
 	// 是否开启自动分析
-	EnableAutoScan *bool `json:"enable_auto_scan,omitempty" xml:"enable_auto_scan"`
+	EnableAutoScan *bool `json:"enable_auto_scan,omitempty"`
 
 	// 每日分析时间，时间格式为21:00
-	ScheduleAt *[]string `json:"schedule_at,omitempty" xml:"schedule_at"`
+	ScheduleAt *[]string `json:"schedule_at,omitempty"`
 
 	// 配置更新时间，时间格式为2020-06-15T02:21:18.669Z
-	UpdatedAt      *string `json:"updated_at,omitempty" xml:"updated_at"`
+	UpdatedAt      *string `json:"updated_at,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

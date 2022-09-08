@@ -10,7 +10,7 @@ import (
 type CreateAkskModel struct {
 
 	// 描述信息
-	Descp *string `json:"descp,omitempty" xml:"descp"`
+	Descp *string `json:"descp,omitempty"`
 }
 
 func (o CreateAkskModel) String() string {

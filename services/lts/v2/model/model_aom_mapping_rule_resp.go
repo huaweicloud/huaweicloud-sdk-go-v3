@@ -9,15 +9,15 @@ import (
 type AomMappingRuleResp struct {
 
 	// 项目id
-	ProjectId string `json:"project_id" xml:"project_id"`
+	ProjectId string `json:"project_id"`
 
 	// 接入规则名称
-	RuleName string `json:"rule_name" xml:"rule_name"`
+	RuleName string `json:"rule_name"`
 
 	// 接入规则id
-	RuleId string `json:"rule_id" xml:"rule_id"`
+	RuleId string `json:"rule_id"`
 
-	RuleInfo *AomMappingRuleInfo `json:"rule_info" xml:"rule_info"`
+	RuleInfo *AomMappingRuleInfo `json:"rule_info"`
 }
 
 func (o AomMappingRuleResp) String() string {

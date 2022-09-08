@@ -9,16 +9,16 @@ import (
 type CommonParamV2 struct {
 
 	// 参数标识
-	ParamKey *string `json:"param_key,omitempty" xml:"param_key"`
+	ParamKey *string `json:"param_key,omitempty"`
 
 	// 参数名称
-	ParamName *string `json:"param_name,omitempty" xml:"param_name"`
+	ParamName *string `json:"param_name,omitempty"`
 
 	// 是否展示
-	IsShow *int32 `json:"is_show,omitempty" xml:"is_show"`
+	IsShow *int32 `json:"is_show,omitempty"`
 
 	// 是否必填
-	IsRequired *int32 `json:"is_required,omitempty" xml:"is_required"`
+	IsRequired *int32 `json:"is_required,omitempty"`
 }
 
 func (o CommonParamV2) String() string {

@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RegisterDmsKafkaInstanceRequest struct {
-	Body *RegisterDmsKafkaInstanceRequestBody `json:"body,omitempty" xml:"body"`
+	Body *RegisterDmsKafkaInstanceRequestBody `json:"body,omitempty"`
 }
 
 func (o RegisterDmsKafkaInstanceRequest) String() string {

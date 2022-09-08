@@ -8,7 +8,7 @@ import (
 
 //
 type UpdateDomainProtectPolicyRequestBody struct {
-	ProtectPolicy *ProtectPolicyOption `json:"protect_policy" xml:"protect_policy"`
+	ProtectPolicy *ProtectPolicyOption `json:"protect_policy"`
 }
 
 func (o UpdateDomainProtectPolicyRequestBody) String() string {

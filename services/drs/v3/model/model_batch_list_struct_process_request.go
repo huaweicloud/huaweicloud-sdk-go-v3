@@ -13,9 +13,9 @@ import (
 type BatchListStructProcessRequest struct {
 
 	// 请求语言类型
-	XLanguage *BatchListStructProcessRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *BatchListStructProcessRequestXLanguage `json:"X-Language,omitempty"`
 
-	Body *BatchQueryJobReq `json:"body,omitempty" xml:"body"`
+	Body *BatchQueryJobReq `json:"body,omitempty"`
 }
 
 func (o BatchListStructProcessRequest) String() string {

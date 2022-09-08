@@ -9,10 +9,10 @@ import (
 type DeleteShareAppsRequestBody struct {
 
 	// 所需删除的共享应用的合法包名
-	PackageName string `json:"package_name" xml:"package_name"`
+	PackageName string `json:"package_name"`
 
 	// 云手机服务器ID列表
-	ServerIds []string `json:"server_ids" xml:"server_ids"`
+	ServerIds []string `json:"server_ids"`
 }
 
 func (o DeleteShareAppsRequestBody) String() string {

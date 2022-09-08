@@ -10,7 +10,7 @@ import (
 type UpdateClusterScalingResponse struct {
 
 	// 操作结果。 - succeeded：操作成功 - 操作失败时返回的错误码信息如[错误码](https://support.huaweicloud.com/api-mrs/ErrorCode.html)所示。
-	Result         *string `json:"result,omitempty" xml:"result"`
+	Result         *string `json:"result,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

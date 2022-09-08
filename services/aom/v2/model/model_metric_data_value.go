@@ -10,9 +10,9 @@ import (
 type MetricDataValue struct {
 
 	// 重点指标。
-	DataPoints *[]MetricDataPoints `json:"dataPoints,omitempty" xml:"dataPoints"`
+	DataPoints *[]MetricDataPoints `json:"dataPoints,omitempty"`
 
-	Metric *MetricQueryMeritcParam `json:"metric,omitempty" xml:"metric"`
+	Metric *MetricQueryMeritcParam `json:"metric,omitempty"`
 }
 
 func (o MetricDataValue) String() string {

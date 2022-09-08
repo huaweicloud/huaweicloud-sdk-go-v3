@@ -10,83 +10,83 @@ import (
 type ShowEdgeNodeResponse struct {
 
 	// 边缘节点在IEF的日志配置
-	LogConfigs *[]LogConfigDto `json:"log_configs,omitempty" xml:"log_configs"`
+	LogConfigs *[]LogConfigDto `json:"log_configs,omitempty"`
 
-	HaConfig *HaConfigDto `json:"ha_config,omitempty" xml:"ha_config"`
+	HaConfig *HaConfigDto `json:"ha_config,omitempty"`
 
 	// 边缘节点Id
-	EdgeNodeId *string `json:"edge_node_id,omitempty" xml:"edge_node_id"`
+	EdgeNodeId *string `json:"edge_node_id,omitempty"`
 
 	// 实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
-	InstanceId *string `json:"instance_id,omitempty" xml:"instance_id"`
+	InstanceId *string `json:"instance_id,omitempty"`
 
 	// 边缘节点关联的产品ID，用于唯一标识一个产品模型。
-	ProductId *string `json:"product_id,omitempty" xml:"product_id"`
+	ProductId *string `json:"product_id,omitempty"`
 
 	// 边缘节点关联的产品名称。
-	ProductName *string `json:"product_name,omitempty" xml:"product_name"`
+	ProductName *string `json:"product_name,omitempty"`
 
 	// 资源空间id，对应IOTDA云服务接口参数中的app_id。
-	SpaceId *string `json:"space_id,omitempty" xml:"space_id"`
+	SpaceId *string `json:"space_id,omitempty"`
 
 	// 节点所购买的资源类型的列表
-	ResourceSpecTypes *[]string `json:"resource_spec_types,omitempty" xml:"resource_spec_types"`
+	ResourceSpecTypes *[]string `json:"resource_spec_types,omitempty"`
 
 	// 资源id列表，创建节点时需绑定已购买的资源包，可以叠加节点功能。
-	ResourceIds *[]string `json:"resource_ids,omitempty" xml:"resource_ids"`
+	ResourceIds *[]string `json:"resource_ids,omitempty"`
 
 	// 边缘节点主机ip
-	Ips *[]string `json:"ips,omitempty" xml:"ips"`
+	Ips *[]string `json:"ips,omitempty"`
 
 	// 边缘节点名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 边缘节点状态
-	State *string `json:"state,omitempty" xml:"state"`
+	State *string `json:"state,omitempty"`
 
 	// 边缘应用id，只允许数字、英文小写、中划线，切必须以字母或数字结尾
-	SoftwareVersion *string `json:"software_version,omitempty" xml:"software_version"`
+	SoftwareVersion *string `json:"software_version,omitempty"`
 
 	// 边缘节点创建时间
-	CreateTime *string `json:"create_time,omitempty" xml:"create_time"`
+	CreateTime *string `json:"create_time,omitempty"`
 
 	// 边缘节点更新时间
-	UpdateTime *string `json:"update_time,omitempty" xml:"update_time"`
+	UpdateTime *string `json:"update_time,omitempty"`
 
 	// 边缘节点操作系统名称
-	OsName *string `json:"os_name,omitempty" xml:"os_name"`
+	OsName *string `json:"os_name,omitempty"`
 
 	// 边缘节点操作系统架构
-	Arch *string `json:"arch,omitempty" xml:"arch"`
+	Arch *string `json:"arch,omitempty"`
 
 	// 边缘节点主机名
-	HostName *string `json:"host_name,omitempty" xml:"host_name"`
+	HostName *string `json:"host_name,omitempty"`
 
 	// 边缘节点网络网卡信息
-	Nics *[]Nic `json:"nics,omitempty" xml:"nics"`
+	Nics *[]Nic `json:"nics,omitempty"`
 
 	// 网络规格，如4 cores | 3867 MB
-	Specification *string `json:"specification,omitempty" xml:"specification"`
+	Specification *string `json:"specification,omitempty"`
 
 	// 华为AI加速卡类型，如NPU、GPU、unEquipped
-	AiCardType *string `json:"ai_card_type,omitempty" xml:"ai_card_type"`
+	AiCardType *string `json:"ai_card_type,omitempty"`
 
 	// 容器运行时版本
-	ContainerVersion *string `json:"container_version,omitempty" xml:"container_version"`
+	ContainerVersion *string `json:"container_version,omitempty"`
 
 	// 节点所属资源类型：advanced|standard
-	Type *string `json:"type,omitempty" xml:"type"`
+	Type *string `json:"type,omitempty"`
 
 	// 节点的安全等级，MEDIUM边缘节数据上报不进行加密，HIGH对数据上报进行加密。
-	SecurityLevel *string `json:"security_level,omitempty" xml:"security_level"`
+	SecurityLevel *string `json:"security_level,omitempty"`
 
 	// 节点的存储周期，默认0天，取值范围0~7天，0天则不存储。
-	StoragePeriod *int32 `json:"storage_period,omitempty" xml:"storage_period"`
+	StoragePeriod *int32 `json:"storage_period,omitempty"`
 
-	BasePath *BasePathDto `json:"base_path,omitempty" xml:"base_path"`
+	BasePath *BasePathDto `json:"base_path,omitempty"`
 
 	// 注册节点网关配置
-	HardwareModel  *string `json:"hardware_model,omitempty" xml:"hardware_model"`
+	HardwareModel  *string `json:"hardware_model,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

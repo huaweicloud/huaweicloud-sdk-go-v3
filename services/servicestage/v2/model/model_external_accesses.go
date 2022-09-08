@@ -10,25 +10,25 @@ import (
 type ExternalAccesses struct {
 
 	// ID。
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
-	Protocol *ExternalAccessProtocol `json:"protocol" xml:"protocol"`
+	Protocol *ExternalAccessProtocol `json:"protocol"`
 
 	// 访问地址。
-	Address string `json:"address" xml:"address"`
+	Address string `json:"address"`
 
 	// 应用组件进程监听端口
-	ForwardPort int32 `json:"forward_port" xml:"forward_port"`
+	ForwardPort int32 `json:"forward_port"`
 
-	Type *ExternalAccessType `json:"type,omitempty" xml:"type"`
+	Type *ExternalAccessType `json:"type,omitempty"`
 
-	Status *ExternalAccessStatus `json:"status,omitempty" xml:"status"`
+	Status *ExternalAccessStatus `json:"status,omitempty"`
 
 	// 创建时间。
-	CreateTime *int64 `json:"create_time,omitempty" xml:"create_time"`
+	CreateTime *int64 `json:"create_time,omitempty"`
 
 	// 修改时间。
-	UpdateTime *int64 `json:"update_time,omitempty" xml:"update_time"`
+	UpdateTime *int64 `json:"update_time,omitempty"`
 }
 
 func (o ExternalAccesses) String() string {

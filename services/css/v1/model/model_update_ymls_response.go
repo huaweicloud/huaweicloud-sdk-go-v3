@@ -10,13 +10,13 @@ import (
 type UpdateYmlsResponse struct {
 
 	// 修改是否成功。 - true: 修改成功。 - false: 修改失败。
-	Acknowledged *bool `json:"acknowledged,omitempty" xml:"acknowledged"`
+	Acknowledged *bool `json:"acknowledged,omitempty"`
 
 	// 错误信息描述。当acknowledged为true时，该字段返回null。
-	ExternalMessage *string `json:"externalMessage,omitempty" xml:"externalMessage"`
+	ExternalMessage *string `json:"externalMessage,omitempty"`
 
 	// HTTP错误信息。默认为null。
-	HttpErrorResponse *string `json:"httpErrorResponse,omitempty" xml:"httpErrorResponse"`
+	HttpErrorResponse *string `json:"httpErrorResponse,omitempty"`
 	HttpStatusCode    int     `json:"-"`
 }
 

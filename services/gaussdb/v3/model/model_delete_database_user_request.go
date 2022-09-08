@@ -10,7 +10,7 @@ import (
 type DeleteDatabaseUserRequest struct {
 
 	// 准备删除的数据库用户列表，列表最大长度为50。
-	Users []ListDeleteDatabaseUserRequest `json:"users" xml:"users"`
+	Users []ListDeleteDatabaseUserRequest `json:"users"`
 }
 
 func (o DeleteDatabaseUserRequest) String() string {

@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type BatchRestartOrDeleteInstancesRequest struct {
-	Body *BatchRestartOrDeleteInstanceReq `json:"body,omitempty" xml:"body"`
+	Body *BatchRestartOrDeleteInstanceReq `json:"body,omitempty"`
 }
 
 func (o BatchRestartOrDeleteInstancesRequest) String() string {

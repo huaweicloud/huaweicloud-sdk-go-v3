@@ -10,7 +10,7 @@ import (
 type ShowPartnersCasesPrivilegeResponse struct {
 
 	// 是否有权限
-	HasPrivilege   *bool `json:"has_privilege,omitempty" xml:"has_privilege"`
+	HasPrivilege   *bool `json:"has_privilege,omitempty"`
 	HttpStatusCode int   `json:"-"`
 }
 

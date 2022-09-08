@@ -10,7 +10,7 @@ import (
 type ListVersionAliasesResponse struct {
 
 	// 函数版本别名列表
-	Body           *[]ListVersionAliasResult `json:"body,omitempty" xml:"body"`
+	Body           *[]ListVersionAliasResult `json:"body,omitempty"`
 	HttpStatusCode int                       `json:"-"`
 }
 

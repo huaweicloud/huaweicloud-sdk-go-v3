@@ -10,10 +10,10 @@ import (
 type SlowLogFile struct {
 
 	// 文件名。
-	FileName string `json:"file_name" xml:"file_name"`
+	FileName string `json:"file_name"`
 
 	// 文件大小（单位Byte）
-	FileSize string `json:"file_size" xml:"file_size"`
+	FileSize string `json:"file_size"`
 }
 
 func (o SlowLogFile) String() string {

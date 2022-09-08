@@ -10,10 +10,10 @@ import (
 type ListCustomerOnDemandResourcesResponse struct {
 
 	// 客户资源列表。 具体参见表2。
-	Resources *[]CustomerOnDemandResource `json:"resources,omitempty" xml:"resources"`
+	Resources *[]CustomerOnDemandResource `json:"resources,omitempty"`
 
 	// 查询总数。
-	TotalCount     *int32 `json:"total_count,omitempty" xml:"total_count"`
+	TotalCount     *int32 `json:"total_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

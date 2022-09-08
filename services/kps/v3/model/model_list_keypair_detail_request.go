@@ -10,7 +10,7 @@ import (
 type ListKeypairDetailRequest struct {
 
 	// 密钥对名称
-	KeypairName string `json:"keypair_name" xml:"keypair_name"`
+	KeypairName string `json:"keypair_name"`
 }
 
 func (o ListKeypairDetailRequest) String() string {

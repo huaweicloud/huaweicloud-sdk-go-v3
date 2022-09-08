@@ -9,16 +9,16 @@ import (
 type AccountStatus struct {
 
 	// 是否有创建实例权限
-	CurOrgCreateRole *bool `json:"cur_org_create_role,omitempty" xml:"cur_org_create_role"`
+	CurOrgCreateRole *bool `json:"cur_org_create_role,omitempty"`
 
 	// 帐号所属租户是否开通服务
-	CurOrgOpen *bool `json:"cur_org_open,omitempty" xml:"cur_org_open"`
+	CurOrgOpen *bool `json:"cur_org_open,omitempty"`
 
 	// 免费试用
-	HasFreeTrial *bool `json:"has_free_trial,omitempty" xml:"has_free_trial"`
+	HasFreeTrial *bool `json:"has_free_trial,omitempty"`
 
 	// 是否有管理入口的权限
-	ShowManage *bool `json:"show_manage,omitempty" xml:"show_manage"`
+	ShowManage *bool `json:"show_manage,omitempty"`
 }
 
 func (o AccountStatus) String() string {

@@ -9,7 +9,7 @@ import (
 type SlowlogDownloadRequest struct {
 
 	// - 需要下载的文件的文件名, 当引擎为SQL Server时为必选。
-	FileName *string `json:"file_name,omitempty" xml:"file_name"`
+	FileName *string `json:"file_name,omitempty"`
 }
 
 func (o SlowlogDownloadRequest) String() string {

@@ -9,10 +9,10 @@ import (
 type ListIssueRequestV4CustomFields struct {
 
 	// 自定义属性字段
-	CustomField *string `json:"custom_field,omitempty" xml:"custom_field"`
+	CustomField *string `json:"custom_field,omitempty"`
 
 	// 自定义属性对应的值
-	Value *string `json:"value,omitempty" xml:"value"`
+	Value *string `json:"value,omitempty"`
 }
 
 func (o ListIssueRequestV4CustomFields) String() string {

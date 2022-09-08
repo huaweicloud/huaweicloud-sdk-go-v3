@@ -9,14 +9,14 @@ import (
 type ComponentModify struct {
 
 	// 应用组件名称。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 描述。
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
-	Source *SourceObject `json:"source,omitempty" xml:"source"`
+	Source *SourceObject `json:"source,omitempty"`
 
-	Build *Build `json:"build,omitempty" xml:"build"`
+	Build *Build `json:"build,omitempty"`
 }
 
 func (o ComponentModify) String() string {

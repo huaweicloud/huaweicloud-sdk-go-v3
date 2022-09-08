@@ -8,7 +8,7 @@ import (
 
 // This is a auto create Body Object
 type CreateCertificateRequestBody struct {
-	Certificate *CreateCertificateOption `json:"certificate" xml:"certificate"`
+	Certificate *CreateCertificateOption `json:"certificate"`
 }
 
 func (o CreateCertificateRequestBody) String() string {

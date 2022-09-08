@@ -8,7 +8,7 @@ import (
 
 // 创建弹性公网IP请求体。
 type CreatePublicIpRequestBody struct {
-	Publicip *CreatePublicIpOption `json:"publicip" xml:"publicip"`
+	Publicip *CreatePublicIpOption `json:"publicip"`
 }
 
 func (o CreatePublicIpRequestBody) String() string {

@@ -9,18 +9,18 @@ import (
 type MetricRequest3 struct {
 
 	// 统计周期
-	DateRange *string `json:"date_range,omitempty" xml:"date_range"`
+	DateRange *string `json:"date_range,omitempty"`
 
 	// 指标类型
-	MetricType *string `json:"metric_type,omitempty" xml:"metric_type"`
+	MetricType *string `json:"metric_type,omitempty"`
 
 	// 迭代ID
-	SprintId *string `json:"sprint_id,omitempty" xml:"sprint_id"`
+	SprintId *string `json:"sprint_id,omitempty"`
 
-	Dividend *MetricRequest3Dividend `json:"dividend,omitempty" xml:"dividend"`
+	Dividend *MetricRequest3Dividend `json:"dividend,omitempty"`
 
 	// 指标分母过滤条件
-	Divisor *interface{} `json:"divisor,omitempty" xml:"divisor"`
+	Divisor *interface{} `json:"divisor,omitempty"`
 }
 
 func (o MetricRequest3) String() string {

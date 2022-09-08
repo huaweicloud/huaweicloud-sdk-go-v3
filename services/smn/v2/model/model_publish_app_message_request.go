@@ -10,9 +10,9 @@ import (
 type PublishAppMessageRequest struct {
 
 	// Endpoint的唯一资源标识，可通过[查询Application的Endpoint列表](https://support.huaweicloud.com/api-smn/ListApplicationEndpoints.html)获取该标识
-	EndpointUrn string `json:"endpoint_urn" xml:"endpoint_urn"`
+	EndpointUrn string `json:"endpoint_urn"`
 
-	Body *PublishAppMessageRequestBody `json:"body,omitempty" xml:"body"`
+	Body *PublishAppMessageRequestBody `json:"body,omitempty"`
 }
 
 func (o PublishAppMessageRequest) String() string {

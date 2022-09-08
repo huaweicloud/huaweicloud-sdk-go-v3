@@ -10,7 +10,7 @@ import (
 type ShowPermanentAccessKeyRequest struct {
 
 	// 待查询的指定AK。
-	AccessKey string `json:"access_key" xml:"access_key"`
+	AccessKey string `json:"access_key"`
 }
 
 func (o ShowPermanentAccessKeyRequest) String() string {

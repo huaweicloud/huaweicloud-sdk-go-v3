@@ -10,9 +10,9 @@ import (
 type BatchCreateKmsTagsRequest struct {
 
 	// 密钥ID
-	KeyId string `json:"key_id" xml:"key_id"`
+	KeyId string `json:"key_id"`
 
-	Body *BatchCreateKmsTagsRequestBody `json:"body,omitempty" xml:"body"`
+	Body *BatchCreateKmsTagsRequestBody `json:"body,omitempty"`
 }
 
 func (o BatchCreateKmsTagsRequest) String() string {

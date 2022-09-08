@@ -10,10 +10,10 @@ import (
 type BatchListJobDetailsResponse struct {
 
 	// 任务数量
-	Count *int32 `json:"count,omitempty" xml:"count"`
+	Count *int32 `json:"count,omitempty"`
 
 	// 任务详细信息
-	Results        *[]QueryJobResp `json:"results,omitempty" xml:"results"`
+	Results        *[]QueryJobResp `json:"results,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }
 

@@ -10,13 +10,13 @@ import (
 type CceClusterInfo struct {
 
 	// 集群ID
-	ClusterId string `json:"cluster_id" xml:"cluster_id"`
+	ClusterId string `json:"cluster_id"`
 
 	// 集群名称
-	ClusterName string `json:"cluster_name" xml:"cluster_name"`
+	ClusterName string `json:"cluster_name"`
 
 	// 集群CPU架构类型：X86（VirtualMachine），ARM（ARM64）
-	ClusterPlatformType string `json:"cluster_platform_type" xml:"cluster_platform_type"`
+	ClusterPlatformType string `json:"cluster_platform_type"`
 }
 
 func (o CceClusterInfo) String() string {

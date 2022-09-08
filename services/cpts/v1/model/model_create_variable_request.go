@@ -10,9 +10,9 @@ import (
 type CreateVariableRequest struct {
 
 	// 测试工程id
-	TestSuiteId int32 `json:"test_suite_id" xml:"test_suite_id"`
+	TestSuiteId int32 `json:"test_suite_id"`
 
-	Body *[]CreateVariableRequestBody `json:"body,omitempty" xml:"body"`
+	Body *[]CreateVariableRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateVariableRequest) String() string {

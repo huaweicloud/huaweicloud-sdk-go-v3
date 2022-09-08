@@ -10,10 +10,10 @@ import (
 type MountUser struct {
 
 	// 用户ID(-1~65534的非0整数)
-	UserId string `json:"user_id" xml:"user_id"`
+	UserId string `json:"user_id"`
 
 	// 用户组ID(-1~65534的非0整数)
-	UserGroupId string `json:"user_group_id" xml:"user_group_id"`
+	UserGroupId string `json:"user_group_id"`
 }
 
 func (o MountUser) String() string {

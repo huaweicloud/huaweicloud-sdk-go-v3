@@ -11,28 +11,28 @@ import (
 type NeutronSecurityGroup struct {
 
 	// 功能说明：安全组描述 取值范围：0-255个字符
-	Description string `json:"description" xml:"description"`
+	Description string `json:"description"`
 
 	// 安全组ID
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
 	// 功能说明：安全组名称 取值范围：0-255个字符
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 安全组规则，详情参见Security Group Rule对象
-	SecurityGroupRules []NeutronSecurityGroupRule `json:"security_group_rules" xml:"security_group_rules"`
+	SecurityGroupRules []NeutronSecurityGroupRule `json:"security_group_rules"`
 
 	// 项目ID
-	TenantId string `json:"tenant_id" xml:"tenant_id"`
+	TenantId string `json:"tenant_id"`
 
 	// 项目ID
-	ProjectId string `json:"project_id" xml:"project_id"`
+	ProjectId string `json:"project_id"`
 
 	// 功能说明：资源创建UTC时间 格式：yyyy-MM-ddTHH:mm:ss
-	CreatedAt *sdktime.SdkTime `json:"created_at" xml:"created_at"`
+	CreatedAt *sdktime.SdkTime `json:"created_at"`
 
 	// 功能说明：资源更新UTC时间 格式：yyyy-MM-ddTHH:mm:ss
-	UpdatedAt *sdktime.SdkTime `json:"updated_at" xml:"updated_at"`
+	UpdatedAt *sdktime.SdkTime `json:"updated_at"`
 }
 
 func (o NeutronSecurityGroup) String() string {

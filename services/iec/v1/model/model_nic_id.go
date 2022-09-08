@@ -10,7 +10,7 @@ import (
 type NicId struct {
 
 	// 网卡ID。
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 }
 
 func (o NicId) String() string {

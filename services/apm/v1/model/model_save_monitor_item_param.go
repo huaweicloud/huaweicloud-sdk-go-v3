@@ -9,16 +9,16 @@ import (
 type SaveMonitorItemParam struct {
 
 	// 监控项id
-	MonitorItemId *int64 `json:"monitor_item_id,omitempty" xml:"monitor_item_id"`
+	MonitorItemId *int64 `json:"monitor_item_id,omitempty"`
 
 	// 采集间隔
-	Interval *int32 `json:"interval,omitempty" xml:"interval"`
+	Interval *int32 `json:"interval,omitempty"`
 
 	// 环境id
-	EnvId *int32 `json:"env_id,omitempty" xml:"env_id"`
+	EnvId *int32 `json:"env_id,omitempty"`
 
 	// 配置项列表
-	ConfigValueList *[]ConfigItem `json:"config_value_list,omitempty" xml:"config_value_list"`
+	ConfigValueList *[]ConfigItem `json:"config_value_list,omitempty"`
 }
 
 func (o SaveMonitorItemParam) String() string {

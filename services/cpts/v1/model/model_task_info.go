@@ -10,37 +10,37 @@ import (
 type TaskInfo struct {
 
 	// bench_concurrent
-	BenchConcurrent *int32 `json:"bench_concurrent,omitempty" xml:"bench_concurrent"`
+	BenchConcurrent *int32 `json:"bench_concurrent,omitempty"`
 
 	// case_list
-	CaseList *[]CaseInfo `json:"case_list,omitempty" xml:"case_list"`
+	CaseList *[]CaseInfo `json:"case_list,omitempty"`
 
 	// 创建时间
-	CreateTime *sdktime.SdkTime `json:"create_time,omitempty" xml:"create_time"`
+	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
 
 	// description
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// name
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// operate_mode
-	OperateMode *int32 `json:"operate_mode,omitempty" xml:"operate_mode"`
+	OperateMode *int32 `json:"operate_mode,omitempty"`
 
 	// project_id
-	ProjectId *int32 `json:"project_id,omitempty" xml:"project_id"`
+	ProjectId *int32 `json:"project_id,omitempty"`
 
 	// related_temp_running_data
-	RelatedTempRunningData *[]RelatedTempRunningData `json:"related_temp_running_data,omitempty" xml:"related_temp_running_data"`
+	RelatedTempRunningData *[]RelatedTempRunningData `json:"related_temp_running_data,omitempty"`
 
 	// run_status
-	RunStatus *int32 `json:"run_status,omitempty" xml:"run_status"`
+	RunStatus *int32 `json:"run_status,omitempty"`
 
 	// update_time
-	UpdateTime *string `json:"update_time,omitempty" xml:"update_time"`
+	UpdateTime *string `json:"update_time,omitempty"`
 
 	// parallel
-	Parallel *bool `json:"parallel,omitempty" xml:"parallel"`
+	Parallel *bool `json:"parallel,omitempty"`
 }
 
 func (o TaskInfo) String() string {

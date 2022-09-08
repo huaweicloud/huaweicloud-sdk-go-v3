@@ -10,10 +10,10 @@ import (
 type Nodes struct {
 
 	// 节点ID。
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
 	// 组件列表。
-	Components []Components `json:"components" xml:"components"`
+	Components []Components `json:"components"`
 }
 
 func (o Nodes) String() string {

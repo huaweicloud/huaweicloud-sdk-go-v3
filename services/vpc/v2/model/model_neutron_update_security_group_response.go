@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type NeutronUpdateSecurityGroupResponse struct {
-	SecurityGroup  *NeutronSecurityGroup `json:"security_group,omitempty" xml:"security_group"`
+	SecurityGroup  *NeutronSecurityGroup `json:"security_group,omitempty"`
 	HttpStatusCode int                   `json:"-"`
 }
 

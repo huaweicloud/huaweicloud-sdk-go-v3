@@ -9,16 +9,16 @@ import (
 type VerifyHostV2Req struct {
 
 	// 主机端口
-	Port int32 `json:"port" xml:"port"`
+	Port int32 `json:"port"`
 
 	// 主机账号
-	Account string `json:"account" xml:"account"`
+	Account string `json:"account"`
 
 	// 主机密码
-	Password string `json:"password" xml:"password"`
+	Password string `json:"password"`
 
 	// 组id
-	GroupId *string `json:"group_id,omitempty" xml:"group_id"`
+	GroupId *string `json:"group_id,omitempty"`
 }
 
 func (o VerifyHostV2Req) String() string {

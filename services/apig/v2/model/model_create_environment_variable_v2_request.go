@@ -10,9 +10,9 @@ import (
 type CreateEnvironmentVariableV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
-	Body *EnvVariableCreate `json:"body,omitempty" xml:"body"`
+	Body *EnvVariableCreate `json:"body,omitempty"`
 }
 
 func (o CreateEnvironmentVariableV2Request) String() string {

@@ -10,7 +10,7 @@ import (
 type DeleteDedicatedHostRequest struct {
 
 	// 专属主机ID。
-	DedicatedHostId string `json:"dedicated_host_id" xml:"dedicated_host_id"`
+	DedicatedHostId string `json:"dedicated_host_id"`
 }
 
 func (o DeleteDedicatedHostRequest) String() string {

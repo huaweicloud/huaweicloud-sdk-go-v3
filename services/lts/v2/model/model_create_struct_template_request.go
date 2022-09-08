@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateStructTemplateRequest struct {
-	Body *LtsStructTemplateInfo `json:"body,omitempty" xml:"body"`
+	Body *LtsStructTemplateInfo `json:"body,omitempty"`
 }
 
 func (o CreateStructTemplateRequest) String() string {

@@ -10,7 +10,7 @@ import (
 type ShowAomMappingRuleRequest struct {
 
 	// 接入规则ID
-	RuleId string `json:"rule_id" xml:"rule_id"`
+	RuleId string `json:"rule_id"`
 }
 
 func (o ShowAomMappingRuleRequest) String() string {

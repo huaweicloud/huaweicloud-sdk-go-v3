@@ -10,9 +10,9 @@ import (
 type ChangeApplicationRequest struct {
 
 	// 应用ID。
-	ApplicationId string `json:"application_id" xml:"application_id"`
+	ApplicationId string `json:"application_id"`
 
-	Body *ApplicationModify `json:"body,omitempty" xml:"body"`
+	Body *ApplicationModify `json:"body,omitempty"`
 }
 
 func (o ChangeApplicationRequest) String() string {

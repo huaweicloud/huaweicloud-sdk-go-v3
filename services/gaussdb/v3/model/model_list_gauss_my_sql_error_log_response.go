@@ -10,10 +10,10 @@ import (
 type ListGaussMySqlErrorLogResponse struct {
 
 	// 错误日志具体信息。
-	ErrorLogList *[]MysqlErrorLogList `json:"error_log_list,omitempty" xml:"error_log_list"`
+	ErrorLogList *[]MysqlErrorLogList `json:"error_log_list,omitempty"`
 
 	// 总记录数。
-	TotalRecord    *int32 `json:"total_record,omitempty" xml:"total_record"`
+	TotalRecord    *int32 `json:"total_record,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

@@ -10,12 +10,12 @@ import (
 type ListFunctionAsyncInvokeConfigResponse struct {
 
 	// 函数异步配置列表。
-	AsyncInvokeConfigs *[]ListFunctionAsyncInvokeConfigResult `json:"async_invoke_configs,omitempty" xml:"async_invoke_configs"`
+	AsyncInvokeConfigs *[]ListFunctionAsyncInvokeConfigResult `json:"async_invoke_configs,omitempty"`
 
 	// 列表总数。
-	Count *int64 `json:"count,omitempty" xml:"count"`
+	Count *int64 `json:"count,omitempty"`
 
-	PageInfo       *PageInfo `json:"page_info,omitempty" xml:"page_info"`
+	PageInfo       *PageInfo `json:"page_info,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }
 

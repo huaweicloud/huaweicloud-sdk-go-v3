@@ -10,9 +10,9 @@ import (
 type CreateResIntelligentSceneRequest struct {
 
 	// 工作空间id。
-	WorkspaceId string `json:"workspace_id" xml:"workspace_id"`
+	WorkspaceId string `json:"workspace_id"`
 
-	Body *CreateResIntelligentSceneRequestNBody `json:"body,omitempty" xml:"body"`
+	Body *CreateResIntelligentSceneRequestNBody `json:"body,omitempty"`
 }
 
 func (o CreateResIntelligentSceneRequest) String() string {

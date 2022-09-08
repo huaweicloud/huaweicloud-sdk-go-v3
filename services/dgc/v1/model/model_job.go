@@ -7,11 +7,11 @@ import (
 )
 
 type Job struct {
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
-	Path *string `json:"path,omitempty" xml:"path"`
+	Path *string `json:"path,omitempty"`
 
-	Params *interface{} `json:"params,omitempty" xml:"params"`
+	Params *interface{} `json:"params,omitempty"`
 }
 
 func (o Job) String() string {

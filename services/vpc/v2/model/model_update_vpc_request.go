@@ -10,9 +10,9 @@ import (
 type UpdateVpcRequest struct {
 
 	// 虚拟私有云ID
-	VpcId string `json:"vpc_id" xml:"vpc_id"`
+	VpcId string `json:"vpc_id"`
 
-	Body *UpdateVpcRequestBody `json:"body,omitempty" xml:"body"`
+	Body *UpdateVpcRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateVpcRequest) String() string {

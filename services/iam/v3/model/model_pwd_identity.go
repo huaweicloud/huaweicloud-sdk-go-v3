@@ -13,9 +13,9 @@ import (
 type PwdIdentity struct {
 
 	// 认证方法，该字段内容为[\"password\"]。
-	Methods []PwdIdentityMethods `json:"methods" xml:"methods"`
+	Methods []PwdIdentityMethods `json:"methods"`
 
-	Password *PwdPassword `json:"password" xml:"password"`
+	Password *PwdPassword `json:"password"`
 }
 
 func (o PwdIdentity) String() string {

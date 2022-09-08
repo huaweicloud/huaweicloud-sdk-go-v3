@@ -12,10 +12,10 @@ import (
 type BatchTagActionRequestBody struct {
 
 	// 操作标识。取值： - create，表示添加标签。 - delete，表示删除标签。
-	Action BatchTagActionRequestBodyAction `json:"action" xml:"action"`
+	Action BatchTagActionRequestBodyAction `json:"action"`
 
 	// 标签列表。
-	Tags []BatchTagActionTagOption `json:"tags" xml:"tags"`
+	Tags []BatchTagActionTagOption `json:"tags"`
 }
 
 func (o BatchTagActionRequestBody) String() string {

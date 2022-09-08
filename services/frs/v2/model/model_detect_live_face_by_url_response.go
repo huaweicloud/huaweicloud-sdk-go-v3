@@ -8,10 +8,10 @@ import (
 
 // Response Object
 type DetectLiveFaceByUrlResponse struct {
-	Result *LiveDetectFaceRespResult `json:"result,omitempty" xml:"result"`
+	Result *LiveDetectFaceRespResult `json:"result,omitempty"`
 
 	// 警告信息列表。 调用失败时无此字段。
-	WarningList    *[]WarningList `json:"warning-list,omitempty" xml:"warning-list"`
+	WarningList    *[]WarningList `json:"warning-list,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }
 

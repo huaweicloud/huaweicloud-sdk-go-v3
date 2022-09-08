@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type StartMeetingRequest struct {
-	Body *StartRequest `json:"body,omitempty" xml:"body"`
+	Body *StartRequest `json:"body,omitempty"`
 }
 
 func (o StartMeetingRequest) String() string {

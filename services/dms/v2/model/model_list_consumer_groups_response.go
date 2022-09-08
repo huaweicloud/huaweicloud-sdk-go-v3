@@ -13,16 +13,16 @@ import (
 type ListConsumerGroupsResponse struct {
 
 	// 队列ID。
-	QueueId *string `json:"queue_id,omitempty" xml:"queue_id"`
+	QueueId *string `json:"queue_id,omitempty"`
 
 	// 队列的名称。
-	QueueName *string `json:"queue_name,omitempty" xml:"queue_name"`
+	QueueName *string `json:"queue_name,omitempty"`
 
 	// 消费组列表。
-	Groups *[]ListQueueGroupsRespGroups `json:"groups,omitempty" xml:"groups"`
+	Groups *[]ListQueueGroupsRespGroups `json:"groups,omitempty"`
 
 	// 该队列是否开启死信消息。仅当include_deadletter为true时，才有该响应参数。 - enable：表示开启。 - disable：表示不开启。
-	RedrivePolicy  *ListConsumerGroupsResponseRedrivePolicy `json:"redrive_policy,omitempty" xml:"redrive_policy"`
+	RedrivePolicy  *ListConsumerGroupsResponseRedrivePolicy `json:"redrive_policy,omitempty"`
 	HttpStatusCode int                                      `json:"-"`
 }
 

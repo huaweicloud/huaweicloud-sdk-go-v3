@@ -10,12 +10,12 @@ import (
 type CreateResOnlineInstanceRequest struct {
 
 	// 资源id（数据源id或场景id）。
-	ResourceId string `json:"resource_id" xml:"resource_id"`
+	ResourceId string `json:"resource_id"`
 
 	// 工作空间id。
-	WorkspaceId string `json:"workspace_id" xml:"workspace_id"`
+	WorkspaceId string `json:"workspace_id"`
 
-	Body *CreateResOnlineInstanceRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreateResOnlineInstanceRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateResOnlineInstanceRequest) String() string {

@@ -10,9 +10,9 @@ import (
 type ShowAddressGroupResponse struct {
 
 	// 请求ID
-	RequestId *string `json:"request_id,omitempty" xml:"request_id"`
+	RequestId *string `json:"request_id,omitempty"`
 
-	AddressGroup   *AddressGroup `json:"address_group,omitempty" xml:"address_group"`
+	AddressGroup   *AddressGroup `json:"address_group,omitempty"`
 	HttpStatusCode int           `json:"-"`
 }
 

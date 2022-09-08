@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateAssetReviewTaskRequest struct {
-	Body *AssetReviewReq `json:"body,omitempty" xml:"body"`
+	Body *AssetReviewReq `json:"body,omitempty"`
 }
 
 func (o CreateAssetReviewTaskRequest) String() string {

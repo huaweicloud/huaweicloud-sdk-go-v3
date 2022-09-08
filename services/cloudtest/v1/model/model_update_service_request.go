@@ -10,9 +10,9 @@ import (
 type UpdateServiceRequest struct {
 
 	// 注册服务唯一标识，该值由注册接口返回
-	ServiceId int32 `json:"service_id" xml:"service_id"`
+	ServiceId int32 `json:"service_id"`
 
-	Body *ServiceRequestBody `json:"body,omitempty" xml:"body"`
+	Body *ServiceRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateServiceRequest) String() string {

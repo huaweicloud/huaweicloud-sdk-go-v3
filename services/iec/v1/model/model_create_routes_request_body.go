@@ -10,7 +10,7 @@ import (
 type CreateRoutesRequestBody struct {
 
 	// 待创建的路由列表
-	Routes []RouteOption `json:"routes" xml:"routes"`
+	Routes []RouteOption `json:"routes"`
 }
 
 func (o CreateRoutesRequestBody) String() string {

@@ -9,10 +9,10 @@ import (
 type BatchTagActionDelRequestBody struct {
 
 	// 操作标识（区分大小写）：删除时为“delete”。
-	Action string `json:"action" xml:"action"`
+	Action string `json:"action"`
 
 	// 标签列表。单个实例总标签数上限10个。
-	Tags []TagDelWithKeyValue `json:"tags" xml:"tags"`
+	Tags []TagDelWithKeyValue `json:"tags"`
 }
 
 func (o BatchTagActionDelRequestBody) String() string {

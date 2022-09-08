@@ -10,22 +10,22 @@ import (
 type QueryNaBriefResponseDto struct {
 
 	// NA系统ID，提供给其他系统访问的唯一标识
-	NaId *string `json:"na_id,omitempty" xml:"na_id"`
+	NaId *string `json:"na_id,omitempty"`
 
 	// NA系统名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 北向NA系统描述
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 访问URL地址
-	Endpoint *string `json:"endpoint,omitempty" xml:"endpoint"`
+	Endpoint *string `json:"endpoint,omitempty"`
 
 	// 创建时间
-	CreateTime *string `json:"create_time,omitempty" xml:"create_time"`
+	CreateTime *string `json:"create_time,omitempty"`
 
 	// 更新时间
-	UpdateTime *string `json:"update_time,omitempty" xml:"update_time"`
+	UpdateTime *string `json:"update_time,omitempty"`
 }
 
 func (o QueryNaBriefResponseDto) String() string {

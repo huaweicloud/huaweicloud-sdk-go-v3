@@ -10,7 +10,7 @@ import (
 type SearchQueryScaleFlavorsResponse struct {
 
 	// 计算规格列表对象。
-	ComputeFlavorGroups *[]Computes `json:"compute_flavor_groups,omitempty" xml:"compute_flavor_groups"`
+	ComputeFlavorGroups *[]Computes `json:"compute_flavor_groups,omitempty"`
 	HttpStatusCode      int         `json:"-"`
 }
 

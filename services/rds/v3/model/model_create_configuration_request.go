@@ -13,9 +13,9 @@ import (
 type CreateConfigurationRequest struct {
 
 	// 语言
-	XLanguage *CreateConfigurationRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *CreateConfigurationRequestXLanguage `json:"X-Language,omitempty"`
 
-	Body *ConfigurationForCreation `json:"body,omitempty" xml:"body"`
+	Body *ConfigurationForCreation `json:"body,omitempty"`
 }
 
 func (o CreateConfigurationRequest) String() string {

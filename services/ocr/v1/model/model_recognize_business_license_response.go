@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type RecognizeBusinessLicenseResponse struct {
-	Result         *BusinessLicenseResult `json:"result,omitempty" xml:"result"`
+	Result         *BusinessLicenseResult `json:"result,omitempty"`
 	HttpStatusCode int                    `json:"-"`
 }
 

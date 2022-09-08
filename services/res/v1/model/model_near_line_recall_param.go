@@ -10,19 +10,19 @@ import (
 type NearLineRecallParam struct {
 
 	// 时间过滤。
-	TimeLimit *bool `json:"time_limit,omitempty" xml:"time_limit"`
+	TimeLimit *bool `json:"time_limit,omitempty"`
 
 	// 时间特征。
-	TimeFeature *string `json:"timeFeature,omitempty" xml:"timeFeature"`
+	TimeFeature *string `json:"timeFeature,omitempty"`
 
 	// 保留期(天)。
-	RetainDays *int32 `json:"retainDays,omitempty" xml:"retainDays"`
+	RetainDays *int32 `json:"retainDays,omitempty"`
 
 	// 召回字段。
-	RecallFileds *[]RecallFiled `json:"recall_fileds,omitempty" xml:"recall_fileds"`
+	RecallFileds *[]RecallFiled `json:"recall_fileds,omitempty"`
 
 	// 物品协同过滤作业名称。
-	ItemCFJobName *string `json:"itemCF_job_name,omitempty" xml:"itemCF_job_name"`
+	ItemCFJobName *string `json:"itemCF_job_name,omitempty"`
 }
 
 func (o NearLineRecallParam) String() string {

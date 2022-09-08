@@ -10,9 +10,9 @@ import (
 type StartAutoCreateSnapshotsRequest struct {
 
 	// 快照所属的集群的ID。
-	ClusterId string `json:"cluster_id" xml:"cluster_id"`
+	ClusterId string `json:"cluster_id"`
 
-	Body *StartAutoCreateSnapshotsReq `json:"body,omitempty" xml:"body"`
+	Body *StartAutoCreateSnapshotsReq `json:"body,omitempty"`
 }
 
 func (o StartAutoCreateSnapshotsRequest) String() string {

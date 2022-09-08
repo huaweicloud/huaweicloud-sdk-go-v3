@@ -10,12 +10,12 @@ import (
 type BlockPage struct {
 
 	// 模板名称
-	Template string `json:"template" xml:"template"`
+	Template string `json:"template"`
 
-	CustomPage *CustomPage `json:"custom_page,omitempty" xml:"custom_page"`
+	CustomPage *CustomPage `json:"custom_page,omitempty"`
 
 	// “重定向”页面URL
-	RedirectUrl *string `json:"redirect_url,omitempty" xml:"redirect_url"`
+	RedirectUrl *string `json:"redirect_url,omitempty"`
 }
 
 func (o BlockPage) String() string {

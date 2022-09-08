@@ -13,19 +13,19 @@ import (
 type VersionDetails struct {
 
 	// 版本ID。
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
 	// 版本详情的URL地址。
-	Links string `json:"links" xml:"links"`
+	Links string `json:"links"`
 
 	// 该版本API的微版本信息。
-	Version string `json:"version" xml:"version"`
+	Version string `json:"version"`
 
 	// 版本的状态。
-	Status VersionDetailsStatus `json:"status" xml:"status"`
+	Status VersionDetailsStatus `json:"status"`
 
 	// 版本更新时间。
-	Updated string `json:"updated" xml:"updated"`
+	Updated string `json:"updated"`
 }
 
 func (o VersionDetails) String() string {

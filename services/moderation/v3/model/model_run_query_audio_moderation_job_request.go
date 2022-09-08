@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RunQueryAudioModerationJobRequest struct {
-	JobId string `json:"job_id" xml:"job_id"`
+	JobId string `json:"job_id"`
 }
 
 func (o RunQueryAudioModerationJobRequest) String() string {

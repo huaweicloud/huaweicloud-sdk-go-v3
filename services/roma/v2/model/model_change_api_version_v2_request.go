@@ -10,12 +10,12 @@ import (
 type ChangeApiVersionV2Request struct {
 
 	// 实例编号
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// API的编号
-	ApiId string `json:"api_id" xml:"api_id"`
+	ApiId string `json:"api_id"`
 
-	Body *ApiVersion `json:"body,omitempty" xml:"body"`
+	Body *ApiVersion `json:"body,omitempty"`
 }
 
 func (o ChangeApiVersionV2Request) String() string {

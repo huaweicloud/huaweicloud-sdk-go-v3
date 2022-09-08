@@ -10,13 +10,13 @@ import (
 type DatabaseInstabcesParam struct {
 
 	// 逻辑库关联的RDS的id
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
 	// 关联RDS实例的用户。
-	AdminUser string `json:"adminUser" xml:"adminUser"`
+	AdminUser string `json:"adminUser"`
 
 	// 关联RDS实例的密码。
-	AdminPassword string `json:"adminPassword" xml:"adminPassword"`
+	AdminPassword string `json:"adminPassword"`
 }
 
 func (o DatabaseInstabcesParam) String() string {

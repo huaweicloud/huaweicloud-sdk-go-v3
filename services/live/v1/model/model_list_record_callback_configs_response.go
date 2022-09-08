@@ -10,10 +10,10 @@ import (
 type ListRecordCallbackConfigsResponse struct {
 
 	// 查询结果的总元素数量
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 
 	// 回调配置
-	CallbackConfig *[]RecordCallbackConfig `json:"callback_config,omitempty" xml:"callback_config"`
+	CallbackConfig *[]RecordCallbackConfig `json:"callback_config,omitempty"`
 	HttpStatusCode int                     `json:"-"`
 }
 

@@ -9,10 +9,10 @@ import (
 type AssetOperateRequest struct {
 
 	// 应用列表
-	Apps []string `json:"apps" xml:"apps"`
+	Apps []string `json:"apps"`
 
 	// 任务列表
-	Tasks []AssetOperateRequestTasks `json:"tasks" xml:"tasks"`
+	Tasks []AssetOperateRequestTasks `json:"tasks"`
 }
 
 func (o AssetOperateRequest) String() string {

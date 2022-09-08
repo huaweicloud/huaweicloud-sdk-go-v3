@@ -13,16 +13,16 @@ import (
 type DataTransformationResp struct {
 
 	// 任务id
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 状态
-	Status *DataTransformationRespStatus `json:"status,omitempty" xml:"status"`
+	Status *DataTransformationRespStatus `json:"status,omitempty"`
 
 	// 错误码
-	ErrorCode *string `json:"error_code,omitempty" xml:"error_code"`
+	ErrorCode *string `json:"error_code,omitempty"`
 
 	// 错误信息
-	ErrorMsg *string `json:"error_msg,omitempty" xml:"error_msg"`
+	ErrorMsg *string `json:"error_msg,omitempty"`
 }
 
 func (o DataTransformationResp) String() string {

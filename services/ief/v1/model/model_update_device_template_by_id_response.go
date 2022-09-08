@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type UpdateDeviceTemplateByIdResponse struct {
-	DeviceTemplate *EdgemgrDevice `json:"device_template,omitempty" xml:"device_template"`
+	DeviceTemplate *EdgemgrDevice `json:"device_template,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }
 

@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateLogGroupRequest struct {
-	Body *CreateLogGroupParams `json:"body,omitempty" xml:"body"`
+	Body *CreateLogGroupParams `json:"body,omitempty"`
 }
 
 func (o CreateLogGroupRequest) String() string {

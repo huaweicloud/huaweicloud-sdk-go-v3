@@ -13,28 +13,28 @@ import (
 type CreateOpenIdConnectConfig struct {
 
 	// 访问方式: program_console: 支持编程访问和管理控制台访问方式; program: 支持编程访问方式
-	AccessMode string `json:"access_mode" xml:"access_mode"`
+	AccessMode string `json:"access_mode"`
 
 	// OpenID Connect身份提供商标识, 对应ID token 中 iss
-	IdpUrl string `json:"idp_url" xml:"idp_url"`
+	IdpUrl string `json:"idp_url"`
 
 	// 在OpenID Connect身份提供商注册的客户端ID
-	ClientId string `json:"client_id" xml:"client_id"`
+	ClientId string `json:"client_id"`
 
 	// OpenID Connect身份提供商授权地址;编程访问和管理控制台访问方式必选，编程访问方式不可选
-	AuthorizationEndpoint *string `json:"authorization_endpoint,omitempty" xml:"authorization_endpoint"`
+	AuthorizationEndpoint *string `json:"authorization_endpoint,omitempty"`
 
 	// 授权请求信息范围，编程访问和管理控制台访问方式必选，编程访问方式不可选，可选值：openid 、email、profile，IDP自定义scope，字符集a-zA-Z_0-9 ，1-10个可选值组合空格分割，至少包括openid，顺序无关，总长度最长255字符，例如：\"openid\"、\"openid email\"、\"openid profile\" 、\"openid email profile\"
-	Scope *string `json:"scope,omitempty" xml:"scope"`
+	Scope *string `json:"scope,omitempty"`
 
 	// 授权请求返回的类型；id_token ；编程访问和管理控制台访问方式必选，编程访问方式不可选
-	ResponseType *CreateOpenIdConnectConfigResponseType `json:"response_type,omitempty" xml:"response_type"`
+	ResponseType *CreateOpenIdConnectConfigResponseType `json:"response_type,omitempty"`
 
 	// 授权请求返回方式， form_post 或 fragment ；编程访问和管理控制台访问方式必选，编程访问方式不可选
-	ResponseMode *CreateOpenIdConnectConfigResponseMode `json:"response_mode,omitempty" xml:"response_mode"`
+	ResponseMode *CreateOpenIdConnectConfigResponseMode `json:"response_mode,omitempty"`
 
 	// OpenID Connect身份提供商ID Token签名的公钥
-	SigningKey string `json:"signing_key" xml:"signing_key"`
+	SigningKey string `json:"signing_key"`
 }
 
 func (o CreateOpenIdConnectConfig) String() string {

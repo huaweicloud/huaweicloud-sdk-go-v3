@@ -10,25 +10,25 @@ import (
 type ScopeTokenResult struct {
 
 	// 获取token的方式。
-	Methods []string `json:"methods" xml:"methods"`
+	Methods []string `json:"methods"`
 
 	// token过期时间。
-	ExpiresAt string `json:"expires_at" xml:"expires_at"`
+	ExpiresAt string `json:"expires_at"`
 
 	// 服务目录信息。
-	Catalog *[]TokenCatalog `json:"catalog,omitempty" xml:"catalog"`
+	Catalog *[]TokenCatalog `json:"catalog,omitempty"`
 
-	Domain *TokenDomainResult `json:"domain" xml:"domain"`
+	Domain *TokenDomainResult `json:"domain"`
 
-	Project *TokenProjectResult `json:"project" xml:"project"`
+	Project *TokenProjectResult `json:"project"`
 
 	// token的权限信息。
-	Roles []TokenRole `json:"roles" xml:"roles"`
+	Roles []TokenRole `json:"roles"`
 
-	User *ScopedTokenUser `json:"user" xml:"user"`
+	User *ScopedTokenUser `json:"user"`
 
 	// token下发时间。
-	IssuedAt string `json:"issued_at" xml:"issued_at"`
+	IssuedAt string `json:"issued_at"`
 }
 
 func (o ScopeTokenResult) String() string {

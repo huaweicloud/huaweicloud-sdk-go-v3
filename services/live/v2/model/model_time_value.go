@@ -9,10 +9,10 @@ import (
 type TimeValue struct {
 
 	// 采样时间。日期格式按照ISO8601表示法，并使用UTC时间。格式为YYYY-MM-DDThh:mm:ssZ
-	Time *string `json:"time,omitempty" xml:"time"`
+	Time *string `json:"time,omitempty"`
 
 	// 当前时间返回指定指标的值
-	Value *int64 `json:"value,omitempty" xml:"value"`
+	Value *int64 `json:"value,omitempty"`
 }
 
 func (o TimeValue) String() string {

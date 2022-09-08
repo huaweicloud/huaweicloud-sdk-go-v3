@@ -10,7 +10,7 @@ import (
 type QueryTenantQuotaRespQuotas struct {
 
 	// 配额列表。
-	Resources *[]Resources `json:"resources,omitempty" xml:"resources"`
+	Resources *[]Resources `json:"resources,omitempty"`
 }
 
 func (o QueryTenantQuotaRespQuotas) String() string {

@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateCheckpointRequest struct {
-	Body *VaultBackupReq `json:"body,omitempty" xml:"body"`
+	Body *VaultBackupReq `json:"body,omitempty"`
 }
 
 func (o CreateCheckpointRequest) String() string {

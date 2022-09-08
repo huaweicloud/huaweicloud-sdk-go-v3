@@ -10,9 +10,9 @@ import (
 type UpdateConfigurationRequest struct {
 
 	// 参数模板ID。
-	ConfigId string `json:"config_id" xml:"config_id"`
+	ConfigId string `json:"config_id"`
 
-	Body *UpdateConfigurationRequestBody `json:"body,omitempty" xml:"body"`
+	Body *UpdateConfigurationRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateConfigurationRequest) String() string {

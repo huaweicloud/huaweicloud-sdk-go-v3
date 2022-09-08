@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ImportKeyMaterialRequest struct {
-	Body *ImportKeyMaterialRequestBody `json:"body,omitempty" xml:"body"`
+	Body *ImportKeyMaterialRequestBody `json:"body,omitempty"`
 }
 
 func (o ImportKeyMaterialRequest) String() string {

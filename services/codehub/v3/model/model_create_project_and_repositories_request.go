@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateProjectAndRepositoriesRequest struct {
-	Body *CreateProjectRepoRequest `json:"body,omitempty" xml:"body"`
+	Body *CreateProjectRepoRequest `json:"body,omitempty"`
 }
 
 func (o CreateProjectAndRepositoriesRequest) String() string {

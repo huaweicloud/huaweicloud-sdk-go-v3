@@ -8,7 +8,7 @@ import (
 
 //
 type CreateTemporaryAccessKeyByAgencyRequestBody struct {
-	Auth *AgencyAuth `json:"auth" xml:"auth"`
+	Auth *AgencyAuth `json:"auth"`
 }
 
 func (o CreateTemporaryAccessKeyByAgencyRequestBody) String() string {

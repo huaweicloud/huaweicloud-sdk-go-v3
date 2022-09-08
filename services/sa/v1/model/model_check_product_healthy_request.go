@@ -8,9 +8,9 @@ import (
 
 // Request Object
 type CheckProductHealthyRequest struct {
-	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *string `json:"X-Language,omitempty"`
 
-	Body *ProductInfo `json:"body,omitempty" xml:"body"`
+	Body *ProductInfo `json:"body,omitempty"`
 }
 
 func (o CheckProductHealthyRequest) String() string {

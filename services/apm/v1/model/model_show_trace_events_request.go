@@ -10,7 +10,7 @@ import (
 type ShowTraceEventsRequest struct {
 
 	// 调用链ID
-	TraceId string `json:"trace_id" xml:"trace_id"`
+	TraceId string `json:"trace_id"`
 }
 
 func (o ShowTraceEventsRequest) String() string {

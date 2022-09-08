@@ -10,16 +10,16 @@ import (
 type TemplateDisk struct {
 
 	// 磁盘序号，从0开始
-	Index int32 `json:"index" xml:"index"`
+	Index int32 `json:"index"`
 
 	// 磁盘名称
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 磁盘类型，同volumetype字段
-	Disktype string `json:"disktype" xml:"disktype"`
+	Disktype string `json:"disktype"`
 
 	// 磁盘大小，单位：GB
-	Size int64 `json:"size" xml:"size"`
+	Size int64 `json:"size"`
 }
 
 func (o TemplateDisk) String() string {

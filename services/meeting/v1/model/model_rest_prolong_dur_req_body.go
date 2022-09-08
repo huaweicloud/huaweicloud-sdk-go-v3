@@ -10,10 +10,10 @@ import (
 type RestProlongDurReqBody struct {
 
 	// - 0: 手动延长。 - 1: 自动延长（未携带延长时间时，默认每次延长15分钟）。
-	Auto int32 `json:"auto" xml:"auto"`
+	Auto int32 `json:"auto"`
 
 	// 延长时间，单位为分钟。 默认值：15
-	Duration *int32 `json:"duration,omitempty" xml:"duration"`
+	Duration *int32 `json:"duration,omitempty"`
 }
 
 func (o RestProlongDurReqBody) String() string {

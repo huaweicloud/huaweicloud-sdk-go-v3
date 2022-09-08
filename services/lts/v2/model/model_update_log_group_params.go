@@ -10,7 +10,7 @@ import (
 type UpdateLogGroupParams struct {
 
 	// 日志存储时间 天。 取值范围为 [1, 30]
-	TtlInDays int32 `json:"ttl_in_days" xml:"ttl_in_days"`
+	TtlInDays int32 `json:"ttl_in_days"`
 }
 
 func (o UpdateLogGroupParams) String() string {

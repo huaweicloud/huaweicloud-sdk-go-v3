@@ -12,34 +12,34 @@ import (
 type ApiMock struct {
 
 	// 描述信息。 > 中文字符必须为UTF-8或者unicode编码。
-	Remark *string `json:"remark,omitempty" xml:"remark"`
+	Remark *string `json:"remark,omitempty"`
 
 	// 返回结果
-	ResultContent *string `json:"result_content,omitempty" xml:"result_content"`
+	ResultContent *string `json:"result_content,omitempty"`
 
 	// 版本。字符长度不超过64
-	Version *string `json:"version,omitempty" xml:"version"`
+	Version *string `json:"version,omitempty"`
 
 	// 后端自定义认证ID
-	AuthorizerId *string `json:"authorizer_id,omitempty" xml:"authorizer_id"`
+	AuthorizerId *string `json:"authorizer_id,omitempty"`
 
 	// mock后端自定义状态码： \"200\": \"OK\", \"201\": \"Created\", \"202\": \"Accepted\", \"203\": \"NonAuthoritativeInformation\", \"204\": \"NoContent\", \"205\": \"ResetContent\", \"206\": \"PartialContent\", \"300\": \"MultipleChoices\", \"301\": \"MovedPermanently\", \"302\": \"Found\", \"303\": \"SeeOther\", \"304\": \"NotModified\", \"305\": \"UseProxy\", \"306\": \"Unused\", \"307\": \"TemporaryRedirect\", \"400\": \"BadRequest\", \"401\": \"Unauthorized\", \"402\": \"PaymentRequired\", \"403\": \"Forbidden\", \"404\": \"NotFound\", \"405\": \"MethodNotAllowed\", \"406\": \"NotAcceptable\", \"407\": \"ProxyAuthenticationRequired\", \"408\": \"RequestTimeout\", \"409\": \"Conflict\", \"410\": \"Gone\", \"411\": \"LengthRequired\", \"412\": \"PreconditionFailed\", \"413\": \"RequestEntityTooLarge\", \"414\": \"RequestURITooLong\", \"415\": \"UnsupportedMediaType\", \"416\": \"RequestedRangeNotSatisfiable\", \"417\": \"ExpectationFailed\", \"450\": \"ParameterRequried\", \"451\": \"MethodConnectException\", \"500\": \"InternalServerError\", \"501\": \"NotImplemented\", \"502\": \"BadGateway\", \"503\": \"ServiceUnavailable\", \"504\": \"GatewayTimeout\", \"505\": \"HTTPVersionNotSupported\",
-	StatusCode *ApiMockStatusCode `json:"status_code,omitempty" xml:"status_code"`
+	StatusCode *ApiMockStatusCode `json:"status_code,omitempty"`
 
 	// mock后端自定义响应头header
-	Header *[]MockApiBaseInfoHeader `json:"header,omitempty" xml:"header"`
+	Header *[]MockApiBaseInfoHeader `json:"header,omitempty"`
 
 	// 编号
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 注册时间
-	RegisterTime *sdktime.SdkTime `json:"register_time,omitempty" xml:"register_time"`
+	RegisterTime *sdktime.SdkTime `json:"register_time,omitempty"`
 
 	// 后端状态   - 1： 有效
-	Status *ApiMockStatus `json:"status,omitempty" xml:"status"`
+	Status *ApiMockStatus `json:"status,omitempty"`
 
 	// 修改时间
-	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty" xml:"update_time"`
+	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
 }
 
 func (o ApiMock) String() string {

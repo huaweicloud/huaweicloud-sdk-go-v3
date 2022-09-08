@@ -10,9 +10,9 @@ import (
 )
 
 type OrderParam struct {
-	Field *string `json:"field,omitempty" xml:"field"`
+	Field *string `json:"field,omitempty"`
 
-	Order *OrderParamOrder `json:"order,omitempty" xml:"order"`
+	Order *OrderParamOrder `json:"order,omitempty"`
 }
 
 func (o OrderParam) String() string {

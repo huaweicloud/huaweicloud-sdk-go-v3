@@ -10,10 +10,10 @@ import (
 type WorkitemsStatus struct {
 
 	// 状态id
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 状态名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 }
 
 func (o WorkitemsStatus) String() string {

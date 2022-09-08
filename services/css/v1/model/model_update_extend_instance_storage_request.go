@@ -10,9 +10,9 @@ import (
 type UpdateExtendInstanceStorageRequest struct {
 
 	// 指定待扩容的集群ID。
-	ClusterId string `json:"cluster_id" xml:"cluster_id"`
+	ClusterId string `json:"cluster_id"`
 
-	Body *RoleExtendReq `json:"body,omitempty" xml:"body"`
+	Body *RoleExtendReq `json:"body,omitempty"`
 }
 
 func (o UpdateExtendInstanceStorageRequest) String() string {

@@ -13,13 +13,13 @@ import (
 type CertificateBundingHostBody struct {
 
 	// 域名id
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 域名
-	Hostname *string `json:"hostname,omitempty" xml:"hostname"`
+	Hostname *string `json:"hostname,omitempty"`
 
 	// waf模式（分为云模式：cloud,独享模式：premium）
-	WafType *CertificateBundingHostBodyWafType `json:"waf_type,omitempty" xml:"waf_type"`
+	WafType *CertificateBundingHostBodyWafType `json:"waf_type,omitempty"`
 }
 
 func (o CertificateBundingHostBody) String() string {

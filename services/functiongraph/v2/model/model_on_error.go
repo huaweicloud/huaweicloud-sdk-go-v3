@@ -10,13 +10,13 @@ import (
 type OnError struct {
 
 	// 错误匹配表达式，用来过滤需要处理的异常
-	Error *string `json:"error,omitempty" xml:"error"`
+	Error *string `json:"error,omitempty"`
 
 	// 下一步骤节点ID
-	Transition *string `json:"transition,omitempty" xml:"transition"`
+	Transition *string `json:"transition,omitempty"`
 
 	// 重试策略名称
-	RetryRef *string `json:"retry_ref,omitempty" xml:"retry_ref"`
+	RetryRef *string `json:"retry_ref,omitempty"`
 }
 
 func (o OnError) String() string {

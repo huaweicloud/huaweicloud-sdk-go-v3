@@ -10,15 +10,15 @@ import (
 type UpdateSlavePriorityRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 分片ID。
-	GroupId string `json:"group_id" xml:"group_id"`
+	GroupId string `json:"group_id"`
 
 	// 节点ID。
-	NodeId string `json:"node_id" xml:"node_id"`
+	NodeId string `json:"node_id"`
 
-	Body *PriorityBody `json:"body,omitempty" xml:"body"`
+	Body *PriorityBody `json:"body,omitempty"`
 }
 
 func (o UpdateSlavePriorityRequest) String() string {

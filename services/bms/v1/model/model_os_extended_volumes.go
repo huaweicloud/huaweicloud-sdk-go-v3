@@ -10,10 +10,10 @@ import (
 type OsExtendedVolumes struct {
 
 	// 云硬盘ID
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 删裸金属服务器时是否一并删除该卷。true：是false：否
-	DeleteOnTermination *bool `json:"delete_on_termination,omitempty" xml:"delete_on_termination"`
+	DeleteOnTermination *bool `json:"delete_on_termination,omitempty"`
 }
 
 func (o OsExtendedVolumes) String() string {

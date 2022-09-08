@@ -13,7 +13,7 @@ import (
 type OpenGaussChargeInfoListResponse struct {
 
 	// 计费模式。  取值范围：  postPaid：后付费，即按需付费。  prePaid：预付费，即包年/包月。
-	ChargeMode OpenGaussChargeInfoListResponseChargeMode `json:"charge_mode" xml:"charge_mode"`
+	ChargeMode OpenGaussChargeInfoListResponseChargeMode `json:"charge_mode"`
 }
 
 func (o OpenGaussChargeInfoListResponse) String() string {

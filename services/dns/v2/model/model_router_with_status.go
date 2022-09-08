@@ -9,13 +9,13 @@ import (
 type RouterWithStatus struct {
 
 	// 资源状态。
-	Status *string `json:"status,omitempty" xml:"status"`
+	Status *string `json:"status,omitempty"`
 
 	// Router(VPC)所属VPC的ID。
-	RouterId *string `json:"router_id,omitempty" xml:"router_id"`
+	RouterId *string `json:"router_id,omitempty"`
 
 	// Router(VPC)所在的region。
-	RouterRegion *string `json:"router_region,omitempty" xml:"router_region"`
+	RouterRegion *string `json:"router_region,omitempty"`
 }
 
 func (o RouterWithStatus) String() string {

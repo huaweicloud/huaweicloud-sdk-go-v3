@@ -8,11 +8,11 @@ import (
 
 // 联邦用户映射到IAM中的身份信息
 type RulesLocal struct {
-	User *RulesLocalUser `json:"user,omitempty" xml:"user"`
+	User *RulesLocalUser `json:"user,omitempty"`
 
-	Group *RulesLocalGroup `json:"group,omitempty" xml:"group"`
+	Group *RulesLocalGroup `json:"group,omitempty"`
 
-	Groups *RulesLocalGroups `json:"groups,omitempty" xml:"groups"`
+	Groups *RulesLocalGroups `json:"groups,omitempty"`
 }
 
 func (o RulesLocal) String() string {

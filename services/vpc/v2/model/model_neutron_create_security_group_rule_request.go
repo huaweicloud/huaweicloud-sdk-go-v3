@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type NeutronCreateSecurityGroupRuleRequest struct {
-	Body *NeutronCreateSecurityGroupRuleRequestBody `json:"body,omitempty" xml:"body"`
+	Body *NeutronCreateSecurityGroupRuleRequestBody `json:"body,omitempty"`
 }
 
 func (o NeutronCreateSecurityGroupRuleRequest) String() string {

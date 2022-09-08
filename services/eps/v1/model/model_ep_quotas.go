@@ -10,13 +10,13 @@ import (
 type EpQuotas struct {
 
 	// 总配额
-	Quota int32 `json:"quota" xml:"quota"`
+	Quota int32 `json:"quota"`
 
 	// qutoa的资源类型
-	Type string `json:"type" xml:"type"`
+	Type string `json:"type"`
 
 	// 配额使用量
-	Used int32 `json:"used" xml:"used"`
+	Used int32 `json:"used"`
 }
 
 func (o EpQuotas) String() string {

@@ -10,10 +10,10 @@ import (
 type ListFlavorInfosResponse struct {
 
 	// 总记录数。
-	TotalCount *int32 `json:"total_count,omitempty" xml:"total_count"`
+	TotalCount *int32 `json:"total_count,omitempty"`
 
 	// 实例规格信息列表。
-	Flavors        *[]FlavorInfo `json:"flavors,omitempty" xml:"flavors"`
+	Flavors        *[]FlavorInfo `json:"flavors,omitempty"`
 	HttpStatusCode int           `json:"-"`
 }
 

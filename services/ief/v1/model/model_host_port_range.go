@@ -10,10 +10,10 @@ import (
 type HostPortRange struct {
 
 	// 主机端口下限制，1到65535之间的整数
-	MinPort int32 `json:"min_port" xml:"min_port"`
+	MinPort int32 `json:"min_port"`
 
 	// 主机端口上限值，1到65535之间的整数；max_port需大于min_port
-	MaxPort int32 `json:"max_port" xml:"max_port"`
+	MaxPort int32 `json:"max_port"`
 }
 
 func (o HostPortRange) String() string {

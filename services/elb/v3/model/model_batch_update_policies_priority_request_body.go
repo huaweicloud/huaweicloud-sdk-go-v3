@@ -10,7 +10,7 @@ import (
 type BatchUpdatePoliciesPriorityRequestBody struct {
 
 	// 转发策略的结构体
-	L7policies *[]BatchUpdatePriorityRequestBody `json:"l7policies,omitempty" xml:"l7policies"`
+	L7policies *[]BatchUpdatePriorityRequestBody `json:"l7policies,omitempty"`
 }
 
 func (o BatchUpdatePoliciesPriorityRequestBody) String() string {

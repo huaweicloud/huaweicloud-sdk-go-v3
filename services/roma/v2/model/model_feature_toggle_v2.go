@@ -9,13 +9,13 @@ import (
 type FeatureToggleV2 struct {
 
 	// 特性名称
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 是否开启特性
-	Enable bool `json:"enable" xml:"enable"`
+	Enable bool `json:"enable"`
 
 	// 特性参数配置
-	Config *string `json:"config,omitempty" xml:"config"`
+	Config *string `json:"config,omitempty"`
 }
 
 func (o FeatureToggleV2) String() string {

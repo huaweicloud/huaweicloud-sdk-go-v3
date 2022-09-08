@@ -8,7 +8,7 @@ import (
 
 // This is a auto create Body Object
 type BatchStopServersRequestBody struct {
-	OsStop *BatchStopServersOption `json:"os-stop" xml:"os-stop"`
+	OsStop *BatchStopServersOption `json:"os-stop"`
 }
 
 func (o BatchStopServersRequestBody) String() string {

@@ -10,25 +10,25 @@ import (
 type TaskProgress struct {
 
 	// 子任务总个数。
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 
 	// 正在执行的子任务个数。
-	Processing *int32 `json:"processing,omitempty" xml:"processing"`
+	Processing *int32 `json:"processing,omitempty"`
 
 	// 执行成功的子任务个数。
-	Success *int32 `json:"success,omitempty" xml:"success"`
+	Success *int32 `json:"success,omitempty"`
 
 	// 执行失败的的子任务个数。
-	Fail *int32 `json:"fail,omitempty" xml:"fail"`
+	Fail *int32 `json:"fail,omitempty"`
 
 	// 等待执行的子任务个数。
-	Waitting *int32 `json:"waitting,omitempty" xml:"waitting"`
+	Waitting *int32 `json:"waitting,omitempty"`
 
 	// 失败等待重试的子任务个数。
-	FailWaitRetry *int32 `json:"fail_wait_retry,omitempty" xml:"fail_wait_retry"`
+	FailWaitRetry *int32 `json:"fail_wait_retry,omitempty"`
 
 	// 停止的子任务个数。
-	Stopped *int32 `json:"stopped,omitempty" xml:"stopped"`
+	Stopped *int32 `json:"stopped,omitempty"`
 }
 
 func (o TaskProgress) String() string {

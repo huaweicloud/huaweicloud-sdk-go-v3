@@ -9,7 +9,7 @@ import (
 type SecurityId struct {
 
 	// 安全组ID。
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 }
 
 func (o SecurityId) String() string {

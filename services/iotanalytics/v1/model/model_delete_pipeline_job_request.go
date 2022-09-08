@@ -10,7 +10,7 @@ import (
 type DeletePipelineJobRequest struct {
 
 	// 管道ID
-	PipelineId string `json:"pipeline_id" xml:"pipeline_id"`
+	PipelineId string `json:"pipeline_id"`
 }
 
 func (o DeletePipelineJobRequest) String() string {

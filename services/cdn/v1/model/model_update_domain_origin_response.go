@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type UpdateDomainOriginResponse struct {
-	Origin         *ResourceBody `json:"origin,omitempty" xml:"origin"`
+	Origin         *ResourceBody `json:"origin,omitempty"`
 	HttpStatusCode int           `json:"-"`
 }
 

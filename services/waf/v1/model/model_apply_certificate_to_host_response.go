@@ -10,19 +10,19 @@ import (
 type ApplyCertificateToHostResponse struct {
 
 	// 证书id
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 证书名
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 时间戳
-	Timestamp *int64 `json:"timestamp,omitempty" xml:"timestamp"`
+	Timestamp *int64 `json:"timestamp,omitempty"`
 
 	// 过期时间
-	ExpireTime *int64 `json:"expire_time,omitempty" xml:"expire_time"`
+	ExpireTime *int64 `json:"expire_time,omitempty"`
 
 	// 绑定域名列表
-	BindHost       *[]CertificateBundingHostBody `json:"bind_host,omitempty" xml:"bind_host"`
+	BindHost       *[]CertificateBundingHostBody `json:"bind_host,omitempty"`
 	HttpStatusCode int                           `json:"-"`
 }
 

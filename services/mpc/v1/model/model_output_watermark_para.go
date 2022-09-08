@@ -9,7 +9,7 @@ import (
 type OutputWatermarkPara struct {
 
 	// 水印时长
-	TimeDuration *int32 `json:"time_duration,omitempty" xml:"time_duration"`
+	TimeDuration *int32 `json:"time_duration,omitempty"`
 }
 
 func (o OutputWatermarkPara) String() string {

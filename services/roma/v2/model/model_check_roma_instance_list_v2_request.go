@@ -10,13 +10,13 @@ import (
 type CheckRomaInstanceListV2Request struct {
 
 	// 实例状态
-	Status *string `json:"status,omitempty" xml:"status"`
+	Status *string `json:"status,omitempty"`
 
 	// 偏移量，大于等于0
-	Offset *int32 `json:"offset,omitempty" xml:"offset"`
+	Offset *int32 `json:"offset,omitempty"`
 
 	// 每页显示的条目数量
-	Limit *int32 `json:"limit,omitempty" xml:"limit"`
+	Limit *int32 `json:"limit,omitempty"`
 }
 
 func (o CheckRomaInstanceListV2Request) String() string {

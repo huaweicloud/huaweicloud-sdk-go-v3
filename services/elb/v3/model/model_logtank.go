@@ -10,19 +10,19 @@ import (
 type Logtank struct {
 
 	// 云日志ID。
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
 	// 项目ID。
-	ProjectId string `json:"project_id" xml:"project_id"`
+	ProjectId string `json:"project_id"`
 
 	// 负载均衡器ID。
-	LoadbalancerId string `json:"loadbalancer_id" xml:"loadbalancer_id"`
+	LoadbalancerId string `json:"loadbalancer_id"`
 
 	// 云日志分组ID。
-	LogGroupId string `json:"log_group_id" xml:"log_group_id"`
+	LogGroupId string `json:"log_group_id"`
 
 	// 云日志主题ID。
-	LogTopicId string `json:"log_topic_id" xml:"log_topic_id"`
+	LogTopicId string `json:"log_topic_id"`
 }
 
 func (o Logtank) String() string {

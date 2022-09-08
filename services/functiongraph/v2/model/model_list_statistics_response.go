@@ -10,12 +10,12 @@ import (
 type ListStatisticsResponse struct {
 
 	// 月度调用次数
-	Count *[]MonthUsed `json:"count,omitempty" xml:"count"`
+	Count *[]MonthUsed `json:"count,omitempty"`
 
 	// 月度资源用量
-	Gbs *[]MonthUsed `json:"gbs,omitempty" xml:"gbs"`
+	Gbs *[]MonthUsed `json:"gbs,omitempty"`
 
-	Statistics     *ListFunctionStatisticsResponseBody `json:"statistics,omitempty" xml:"statistics"`
+	Statistics     *ListFunctionStatisticsResponseBody `json:"statistics,omitempty"`
 	HttpStatusCode int                                 `json:"-"`
 }
 

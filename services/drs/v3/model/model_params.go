@@ -13,34 +13,34 @@ import (
 type Params struct {
 
 	// 参数对比结果
-	CompareResult *ParamsCompareResult `json:"compare_result,omitempty" xml:"compare_result"`
+	CompareResult *ParamsCompareResult `json:"compare_result,omitempty"`
 
 	// 参数类型
-	DataType *string `json:"data_type,omitempty" xml:"data_type"`
+	DataType *string `json:"data_type,omitempty"`
 
 	// 分组
-	Group *ParamsGroup `json:"group,omitempty" xml:"group"`
+	Group *ParamsGroup `json:"group,omitempty"`
 
 	// 参数名
-	Key *string `json:"key,omitempty" xml:"key"`
+	Key *string `json:"key,omitempty"`
 
 	// 是否需要重启
-	NeedRestart *ParamsNeedRestart `json:"need_restart,omitempty" xml:"need_restart"`
+	NeedRestart *ParamsNeedRestart `json:"need_restart,omitempty"`
 
 	// 源数据库参数值
-	SourceValue *string `json:"source_value,omitempty" xml:"source_value"`
+	SourceValue *string `json:"source_value,omitempty"`
 
 	// 目标数据库参数值
-	TargetValue *string `json:"target_value,omitempty" xml:"target_value"`
+	TargetValue *string `json:"target_value,omitempty"`
 
 	// 参数范围
-	ValueRange *string `json:"value_range,omitempty" xml:"value_range"`
+	ValueRange *string `json:"value_range,omitempty"`
 
 	// 错误码
-	ErrorCode *string `json:"error_code,omitempty" xml:"error_code"`
+	ErrorCode *string `json:"error_code,omitempty"`
 
 	// 错误信息
-	ErrorMessage *string `json:"error_message,omitempty" xml:"error_message"`
+	ErrorMessage *string `json:"error_message,omitempty"`
 }
 
 func (o Params) String() string {

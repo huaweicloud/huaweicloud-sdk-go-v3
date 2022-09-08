@@ -9,19 +9,19 @@ import (
 type ListGroupsForEnterpriseProjectResDetail struct {
 
 	// 用户组创建时间。
-	CreateTime int64 `json:"createTime" xml:"createTime"`
+	CreateTime int64 `json:"createTime"`
 
 	// 用户组描述。
-	Description string `json:"description" xml:"description"`
+	Description string `json:"description"`
 
 	// 租户Id。
-	DomainId string `json:"domainId" xml:"domainId"`
+	DomainId string `json:"domainId"`
 
 	// 用户组Id。
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
 	// 用户组名称。
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 }
 
 func (o ListGroupsForEnterpriseProjectResDetail) String() string {

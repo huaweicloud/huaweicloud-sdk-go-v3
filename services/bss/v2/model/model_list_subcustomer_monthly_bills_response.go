@@ -10,13 +10,13 @@ import (
 type ListSubcustomerMonthlyBillsResponse struct {
 
 	// 账单记录，具体参考表2。
-	BillSums *[]BillSumInfoV2 `json:"bill_sums,omitempty" xml:"bill_sums"`
+	BillSums *[]BillSumInfoV2 `json:"bill_sums,omitempty"`
 
 	// 总记录数。
-	Count *int32 `json:"count,omitempty" xml:"count"`
+	Count *int32 `json:"count,omitempty"`
 
 	// 货币编码。 CNY：人民币。
-	Currency       *string `json:"currency,omitempty" xml:"currency"`
+	Currency       *string `json:"currency,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

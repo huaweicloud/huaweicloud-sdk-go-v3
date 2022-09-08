@@ -10,9 +10,9 @@ import (
 type UpdateClusterNameRequest struct {
 
 	// 指定待更改集群名称的集群ID。
-	ClusterId string `json:"cluster_id" xml:"cluster_id"`
+	ClusterId string `json:"cluster_id"`
 
-	Body *UpdateClusterNameReq `json:"body,omitempty" xml:"body"`
+	Body *UpdateClusterNameReq `json:"body,omitempty"`
 }
 
 func (o UpdateClusterNameRequest) String() string {

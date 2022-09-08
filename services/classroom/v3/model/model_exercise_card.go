@@ -9,19 +9,19 @@ import (
 type ExerciseCard struct {
 
 	// 习题名称
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 习题ID
-	ExerciseId string `json:"exercise_id" xml:"exercise_id"`
+	ExerciseId string `json:"exercise_id"`
 
 	// 习题描述
-	Description string `json:"description" xml:"description"`
+	Description string `json:"description"`
 
 	// 习题子类型 1：函数c 2：函数c++ 3：函数Java 4：函数Python 5：单人项目java 6：单人项目Hadoop 7：通用 8：企业级软件项目 10：web习题 11：AI习题 12：单选题 13：多选题 14：填空题 15：单人项目C 16：单人项目C++
-	ResourceSubType int32 `json:"resource_sub_type" xml:"resource_sub_type"`
+	ResourceSubType int32 `json:"resource_sub_type"`
 
 	// 习题分值
-	TargetScore int32 `json:"target_score" xml:"target_score"`
+	TargetScore int32 `json:"target_score"`
 }
 
 func (o ExerciseCard) String() string {

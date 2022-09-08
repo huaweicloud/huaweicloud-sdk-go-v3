@@ -10,7 +10,7 @@ import (
 type DebugRuleResponse struct {
 
 	// 规则测试输出结果
-	TestResult     *string `json:"test_result,omitempty" xml:"test_result"`
+	TestResult     *string `json:"test_result,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

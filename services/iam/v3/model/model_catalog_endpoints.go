@@ -10,19 +10,19 @@ import (
 type CatalogEndpoints struct {
 
 	// 终端节点ID。
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
 	// 终端节点平面，public表示为公开。
-	Interface string `json:"interface" xml:"interface"`
+	Interface string `json:"interface"`
 
 	// 终端节点所属区域。
-	Region string `json:"region" xml:"region"`
+	Region string `json:"region"`
 
 	// 终端节点所属区域的ID。
-	RegionId string `json:"region_id" xml:"region_id"`
+	RegionId string `json:"region_id"`
 
 	// 终端节点的地址。
-	Url string `json:"url" xml:"url"`
+	Url string `json:"url"`
 }
 
 func (o CatalogEndpoints) String() string {

@@ -9,10 +9,10 @@ import (
 type ApiGroupCheck struct {
 
 	// 待校验的API分组名称
-	GroupName string `json:"group_name" xml:"group_name"`
+	GroupName string `json:"group_name"`
 
 	// 集成应用ID  校验分组在集成应用下是否重名时必填，不填写默认校验全局分组是否重名
-	RomaAppId *string `json:"roma_app_id,omitempty" xml:"roma_app_id"`
+	RomaAppId *string `json:"roma_app_id,omitempty"`
 }
 
 func (o ApiGroupCheck) String() string {

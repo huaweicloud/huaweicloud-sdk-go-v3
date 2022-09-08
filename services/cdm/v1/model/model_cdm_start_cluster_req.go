@@ -9,7 +9,7 @@ import (
 type CdmStartClusterReq struct {
 
 	// 集群启动操作，定义集群启动标识，为空对象
-	Start *interface{} `json:"start" xml:"start"`
+	Start *interface{} `json:"start"`
 }
 
 func (o CdmStartClusterReq) String() string {

@@ -9,13 +9,13 @@ import (
 type RedisConfig struct {
 
 	// 实例配置项的值。
-	ParamValue string `json:"param_value" xml:"param_value"`
+	ParamValue string `json:"param_value"`
 
 	// 实例配置项名。
-	ParamName string `json:"param_name" xml:"param_name"`
+	ParamName string `json:"param_name"`
 
 	// 实例配置项ID。
-	ParamId string `json:"param_id" xml:"param_id"`
+	ParamId string `json:"param_id"`
 }
 
 func (o RedisConfig) String() string {

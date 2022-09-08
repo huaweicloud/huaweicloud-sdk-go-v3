@@ -9,16 +9,16 @@ import (
 type EmChildNodeV2 struct {
 
 	// 实体关系ID。
-	RelationId *string `json:"relation_id,omitempty" xml:"relation_id"`
+	RelationId *string `json:"relation_id,omitempty"`
 
 	// 节点ID（即组织单元的Party ID）。
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 节点名称。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 子节点列表。
-	ChildNodes *[]EmChildNodeV2 `json:"child_nodes,omitempty" xml:"child_nodes"`
+	ChildNodes *[]EmChildNodeV2 `json:"child_nodes,omitempty"`
 }
 
 func (o EmChildNodeV2) String() string {

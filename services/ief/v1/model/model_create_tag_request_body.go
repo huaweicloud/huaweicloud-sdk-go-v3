@@ -7,7 +7,7 @@ import (
 )
 
 type CreateTagRequestBody struct {
-	Tag *ResourceTag `json:"tag" xml:"tag"`
+	Tag *ResourceTag `json:"tag"`
 }
 
 func (o CreateTagRequestBody) String() string {

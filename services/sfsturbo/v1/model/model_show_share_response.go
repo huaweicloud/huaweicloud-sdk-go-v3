@@ -10,67 +10,67 @@ import (
 
 // Response Object
 type ShowShareResponse struct {
-	ActionProgress *ActionProgress `json:"action_progress,omitempty" xml:"action_progress"`
+	ActionProgress *ActionProgress `json:"action_progress,omitempty"`
 
 	// SFS Turbo文件系统的版本号。
-	Version *string `json:"version,omitempty" xml:"version"`
+	Version *string `json:"version,omitempty"`
 
 	// SFS Turbo文件系统剩余容量，单位GB。
-	AvailCapacity *string `json:"avail_capacity,omitempty" xml:"avail_capacity"`
+	AvailCapacity *string `json:"avail_capacity,omitempty"`
 
 	// SFS Turbo文件系统所在可用区编码。
-	AvailabilityZone *string `json:"availability_zone,omitempty" xml:"availability_zone"`
+	AvailabilityZone *string `json:"availability_zone,omitempty"`
 
 	// SFS Turbo文件系统所在可用区名称。
-	AzName *string `json:"az_name,omitempty" xml:"az_name"`
+	AzName *string `json:"az_name,omitempty"`
 
 	// 创建时间。UTC时间，例如：2018-11-19T04:02:03
-	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty" xml:"created_at"`
+	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
 
 	// 用户指定的加密密钥ID，非加密盘时不返回。
-	CryptKeyId *string `json:"crypt_key_id,omitempty" xml:"crypt_key_id"`
+	CryptKeyId *string `json:"crypt_key_id,omitempty"`
 
 	// 如果是增强型文件系统，该字段返回bandwidth，否则不返回。
-	ExpandType *string `json:"expand_type,omitempty" xml:"expand_type"`
+	ExpandType *string `json:"expand_type,omitempty"`
 
 	// SFS Turbo文件系统的挂载端点。
-	ExportLocation *string `json:"export_location,omitempty" xml:"export_location"`
+	ExportLocation *string `json:"export_location,omitempty"`
 
 	// SFS Turbo的文件系统ID。
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 创建时指定的SFS Turbo文件系统名称。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// SFS Turbo文件系统的计费模式。'0'代表按需付费，'1'代表包周期计费。
-	PayModel *ShowShareResponsePayModel `json:"pay_model,omitempty" xml:"pay_model"`
+	PayModel *ShowShareResponsePayModel `json:"pay_model,omitempty"`
 
 	// SFS Turbo文件系统所在区域。
-	Region *string `json:"region,omitempty" xml:"region"`
+	Region *string `json:"region,omitempty"`
 
 	// 用户指定的安全组ID。
-	SecurityGroupId *string `json:"security_group_id,omitempty" xml:"security_group_id"`
+	SecurityGroupId *string `json:"security_group_id,omitempty"`
 
 	// SFS Turbo文件系统的协议类型，当前为NFS
-	ShareProto *string `json:"share_proto,omitempty" xml:"share_proto"`
+	ShareProto *string `json:"share_proto,omitempty"`
 
 	// SFS Turbo文件系统性能类型，包括“STANDARD”标准型和“PERFORMANCE”性能型。
-	ShareType *string `json:"share_type,omitempty" xml:"share_type"`
+	ShareType *string `json:"share_type,omitempty"`
 
 	// SFS Turbo文件系统总容量，单位GB。
-	Size *string `json:"size,omitempty" xml:"size"`
+	Size *string `json:"size,omitempty"`
 
 	// SFS Turbo文件系统的状态。'100'表示创建中，'200'表示可用，'400'表示已删除，'303'表示创建失败。
-	Status *string `json:"status,omitempty" xml:"status"`
+	Status *string `json:"status,omitempty"`
 
 	// SFS Turbo文件系统的子状态。'121'表示扩容中，'221'表示扩容成功，'321'表示扩容失败。
-	SubStatus *string `json:"sub_status,omitempty" xml:"sub_status"`
+	SubStatus *string `json:"sub_status,omitempty"`
 
 	// 用户指定的子网的网络ID。
-	SubnetId *string `json:"subnet_id,omitempty" xml:"subnet_id"`
+	SubnetId *string `json:"subnet_id,omitempty"`
 
 	// 用户指定的VPC ID。
-	VpcId          *string `json:"vpc_id,omitempty" xml:"vpc_id"`
+	VpcId          *string `json:"vpc_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

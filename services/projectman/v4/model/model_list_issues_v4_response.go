@@ -10,10 +10,10 @@ import (
 type ListIssuesV4Response struct {
 
 	// 工作项列表
-	Issues *[]ListIssueItemResponse `json:"issues,omitempty" xml:"issues"`
+	Issues *[]ListIssueItemResponse `json:"issues,omitempty"`
 
 	// 总数
-	Total          *int32 `json:"total,omitempty" xml:"total"`
+	Total          *int32 `json:"total,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type UploadMetaDataByUrlRequest struct {
-	Body *UploadMetaDataByUrlReq `json:"body,omitempty" xml:"body"`
+	Body *UploadMetaDataByUrlReq `json:"body,omitempty"`
 }
 
 func (o UploadMetaDataByUrlRequest) String() string {

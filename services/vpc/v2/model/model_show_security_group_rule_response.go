@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowSecurityGroupRuleResponse struct {
-	SecurityGroupRule *SecurityGroupRule `json:"security_group_rule,omitempty" xml:"security_group_rule"`
+	SecurityGroupRule *SecurityGroupRule `json:"security_group_rule,omitempty"`
 	HttpStatusCode    int                `json:"-"`
 }
 

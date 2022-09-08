@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type DeleteBindingDeviceRequest struct {
-	Body *UnbindMfaDevice `json:"body,omitempty" xml:"body"`
+	Body *UnbindMfaDevice `json:"body,omitempty"`
 }
 
 func (o DeleteBindingDeviceRequest) String() string {

@@ -13,34 +13,34 @@ import (
 type QueryJobsReq struct {
 
 	// 第几页
-	CurPage int32 `json:"cur_page" xml:"cur_page"`
+	CurPage int32 `json:"cur_page"`
 
 	// 每页记录数
-	PerPage int32 `json:"per_page" xml:"per_page"`
+	PerPage int32 `json:"per_page"`
 
 	// 迁移场景，migration:实时迁移,sync:实时同步,cloudDataGuard:实时灾备
-	DbUseType QueryJobsReqDbUseType `json:"db_use_type" xml:"db_use_type"`
+	DbUseType QueryJobsReqDbUseType `json:"db_use_type"`
 
 	// 引擎类型,mysql：迁移，同步使用。mongodb：迁移使用。cloudDataGuard-mysql：灾备使用。
-	EngineType *QueryJobsReqEngineType `json:"engine_type,omitempty" xml:"engine_type"`
+	EngineType *QueryJobsReqEngineType `json:"engine_type,omitempty"`
 
 	// 企业项目
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// name或id
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 网络类型
-	NetType *QueryJobsReqNetType `json:"net_type,omitempty" xml:"net_type"`
+	NetType *QueryJobsReqNetType `json:"net_type,omitempty"`
 
 	// 开启EPS时使用，值为eps
-	ServiceName *string `json:"service_name,omitempty" xml:"service_name"`
+	ServiceName *string `json:"service_name,omitempty"`
 
 	// 状态，CREATING：创建中,CREATE_FAILED: 创建失败,CONFIGURATION: 配置中,STARTJOBING: 启动中,WAITING_FOR_START：等待启动中,START_JOB_FAILED：任务启动失败,FULL_TRANSFER_STARTED：全量迁移中 灾备场景为初始化,FULL_TRANSFER_FAILED：全量迁移失败  灾备场景为初始化失败,FULL_TRANSFER_COMPLETE：全量迁移完成 灾备场景为初始化完成,INCRE_TRANSFER_STARTED：增量迁移中 灾备场景为灾备中,INCRE_TRANSFER_FAILED：增量迁移失败 灾备场景为灾备异常,RELEASE_RESOURCE_STARTED：结束任务中,RELEASE_RESOURCE_FAILED：结束任务失败,RELEASE_RESOURCE_COMPLETE：已结束,CHANGE_JOB_STARTED：任务变更中,CHANGE_JOB_FAILED：任务变更失败,CHILD_TRANSFER_STARTING：子任务启动中,CHILD_TRANSFER_STARTED：子任务迁移中,CHILD_TRANSFER_COMPLETE：子任务迁移完成,CHILD_TRANSFER_FAILED：子任务迁移失败,RELEASE_CHILD_TRANSFER_STARTED：子任务结束中,RELEASE_CHILD_TRANSFER_COMPLETE：子任务已结束
-	Status *QueryJobsReqStatus `json:"status,omitempty" xml:"status"`
+	Status *QueryJobsReqStatus `json:"status,omitempty"`
 
 	// 标签
-	Tags map[string]string `json:"tags,omitempty" xml:"tags"`
+	Tags map[string]string `json:"tags,omitempty"`
 }
 
 func (o QueryJobsReq) String() string {

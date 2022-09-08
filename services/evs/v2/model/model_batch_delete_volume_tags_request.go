@@ -10,9 +10,9 @@ import (
 type BatchDeleteVolumeTagsRequest struct {
 
 	// 磁盘ID。
-	VolumeId string `json:"volume_id" xml:"volume_id"`
+	VolumeId string `json:"volume_id"`
 
-	Body *BatchDeleteVolumeTagsRequestBody `json:"body,omitempty" xml:"body"`
+	Body *BatchDeleteVolumeTagsRequestBody `json:"body,omitempty"`
 }
 
 func (o BatchDeleteVolumeTagsRequest) String() string {

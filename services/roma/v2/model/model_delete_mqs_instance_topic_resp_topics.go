@@ -9,10 +9,10 @@ import (
 type DeleteMqsInstanceTopicRespTopics struct {
 
 	// Topic名称。
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 是否删除成功。
-	Success *bool `json:"success,omitempty" xml:"success"`
+	Success *bool `json:"success,omitempty"`
 }
 
 func (o DeleteMqsInstanceTopicRespTopics) String() string {

@@ -13,12 +13,12 @@ import (
 type AttachEipRequest struct {
 
 	// 图ID。
-	GraphId string `json:"graph_id" xml:"graph_id"`
+	GraphId string `json:"graph_id"`
 
 	// 图actionId
-	ActionId AttachEipRequestActionId `json:"action_id" xml:"action_id"`
+	ActionId AttachEipRequestActionId `json:"action_id"`
 
-	Body *BindEipReq `json:"body,omitempty" xml:"body"`
+	Body *BindEipReq `json:"body,omitempty"`
 }
 
 func (o AttachEipRequest) String() string {

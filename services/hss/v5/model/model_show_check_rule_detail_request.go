@@ -10,19 +10,19 @@ import (
 type ShowCheckRuleDetailRequest struct {
 
 	// 企业项目ID
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 基线名称
-	CheckType string `json:"check_type" xml:"check_type"`
+	CheckType string `json:"check_type"`
 
 	// 检查项ID
-	CheckRuleId string `json:"check_rule_id" xml:"check_rule_id"`
+	CheckRuleId string `json:"check_rule_id"`
 
 	// 标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 华为标准   - qt_standard : 青腾标准
-	Standard string `json:"standard" xml:"standard"`
+	Standard string `json:"standard"`
 
 	// 主机ID
-	HostId *string `json:"host_id,omitempty" xml:"host_id"`
+	HostId *string `json:"host_id,omitempty"`
 }
 
 func (o ShowCheckRuleDetailRequest) String() string {

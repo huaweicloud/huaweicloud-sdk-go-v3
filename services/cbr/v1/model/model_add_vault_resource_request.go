@@ -10,9 +10,9 @@ import (
 type AddVaultResourceRequest struct {
 
 	// 存储库ID
-	VaultId string `json:"vault_id" xml:"vault_id"`
+	VaultId string `json:"vault_id"`
 
-	Body *VaultAddResourceReq `json:"body,omitempty" xml:"body"`
+	Body *VaultAddResourceReq `json:"body,omitempty"`
 }
 
 func (o AddVaultResourceRequest) String() string {

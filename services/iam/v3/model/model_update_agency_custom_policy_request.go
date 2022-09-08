@@ -10,9 +10,9 @@ import (
 type UpdateAgencyCustomPolicyRequest struct {
 
 	// 待修改的自定义策略ID，获取方式请参见：[自定义策略ID](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=IAM&api=ListCustomPolicies)。
-	RoleId string `json:"role_id" xml:"role_id"`
+	RoleId string `json:"role_id"`
 
-	Body *UpdateAgencyCustomPolicyRequestBody `json:"body,omitempty" xml:"body"`
+	Body *UpdateAgencyCustomPolicyRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateAgencyCustomPolicyRequest) String() string {

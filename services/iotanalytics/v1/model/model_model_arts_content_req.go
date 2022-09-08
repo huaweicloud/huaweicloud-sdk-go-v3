@@ -10,22 +10,22 @@ import (
 type ModelArtsContentReq struct {
 
 	// 服务名称
-	ServiceName string `json:"service_name" xml:"service_name"`
+	ServiceName string `json:"service_name"`
 
 	// 访问地址
-	AccessAddress string `json:"access_address" xml:"access_address"`
+	AccessAddress string `json:"access_address"`
 
 	// 校验参数
-	VerifyBody string `json:"verify_body" xml:"verify_body"`
+	VerifyBody string `json:"verify_body"`
 
 	// 租户的AK
-	Ak string `json:"ak" xml:"ak"`
+	Ak string `json:"ak"`
 
 	// 租户的SK
-	Sk string `json:"sk" xml:"sk"`
+	Sk string `json:"sk"`
 
 	// 项目id
-	ProjectId string `json:"project_id" xml:"project_id"`
+	ProjectId string `json:"project_id"`
 }
 
 func (o ModelArtsContentReq) String() string {

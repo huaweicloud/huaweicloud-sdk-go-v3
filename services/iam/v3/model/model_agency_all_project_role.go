@@ -10,12 +10,12 @@ import (
 type AgencyAllProjectRole struct {
 
 	// 权限ID。
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
-	Links *LinksSelf `json:"links" xml:"links"`
+	Links *LinksSelf `json:"links"`
 
 	// 权限名。
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 }
 
 func (o AgencyAllProjectRole) String() string {

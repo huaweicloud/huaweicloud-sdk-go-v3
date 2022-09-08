@@ -10,7 +10,7 @@ import (
 type ShowRecordCallbackConfigRequest struct {
 
 	// 配置ID
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 }
 
 func (o ShowRecordCallbackConfigRequest) String() string {

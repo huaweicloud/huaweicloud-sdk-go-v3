@@ -10,13 +10,13 @@ import (
 type Striping struct {
 
 	// 最近领域个数。
-	NearestNeighborhood int32 `json:"nearest_neighborhood" xml:"nearest_neighborhood"`
+	NearestNeighborhood int32 `json:"nearest_neighborhood"`
 
 	// 相似程度。
-	Band int32 `json:"band" xml:"band"`
+	Band int32 `json:"band"`
 
 	// 相似距离。
-	Row int32 `json:"row" xml:"row"`
+	Row int32 `json:"row"`
 }
 
 func (o Striping) String() string {

@@ -9,28 +9,28 @@ import (
 type FileOperateLog struct {
 
 	// 传输时间 格式：hh:ii:ss
-	Duration *string `json:"duration,omitempty" xml:"duration"`
+	Duration *string `json:"duration,omitempty"`
 
 	// 操作时间
-	OperateTime *string `json:"operate_time,omitempty" xml:"operate_time"`
+	OperateTime *string `json:"operate_time,omitempty"`
 
 	// 操作类型
-	OperateType *string `json:"operate_type,omitempty" xml:"operate_type"`
+	OperateType *string `json:"operate_type,omitempty"`
 
 	// 文件名
-	FileName *string `json:"file_name,omitempty" xml:"file_name"`
+	FileName *string `json:"file_name,omitempty"`
 
 	// 来源路径
-	FromPath *string `json:"from_path,omitempty" xml:"from_path"`
+	FromPath *string `json:"from_path,omitempty"`
 
 	// 目标路径
-	ToPath *string `json:"to_path,omitempty" xml:"to_path"`
+	ToPath *string `json:"to_path,omitempty"`
 
 	// 文件大小，多少k，多少M，多少G。
-	FileSize *string `json:"file_size,omitempty" xml:"file_size"`
+	FileSize *string `json:"file_size,omitempty"`
 
 	// 操作结果
-	OperResult *string `json:"oper_result,omitempty" xml:"oper_result"`
+	OperResult *string `json:"oper_result,omitempty"`
 }
 
 func (o FileOperateLog) String() string {

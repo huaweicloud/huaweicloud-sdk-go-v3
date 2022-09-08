@@ -13,64 +13,64 @@ import (
 type ShowEdgeApplicationVersionResponse struct {
 
 	// 应用ID
-	EdgeAppId *string `json:"edge_app_id,omitempty" xml:"edge_app_id"`
+	EdgeAppId *string `json:"edge_app_id,omitempty"`
 
 	// 应用名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 部署类型docker|process
-	DeployType *string `json:"deploy_type,omitempty" xml:"deploy_type"`
+	DeployType *string `json:"deploy_type,omitempty"`
 
 	// 是否允许部署多实例
-	DeployMultiInstance *bool `json:"deploy_multi_instance,omitempty" xml:"deploy_multi_instance"`
+	DeployMultiInstance *bool `json:"deploy_multi_instance,omitempty"`
 
 	// 应用版本
-	Version *string `json:"version,omitempty" xml:"version"`
+	Version *string `json:"version,omitempty"`
 
 	// 应用集成的边缘升得快版本
-	SdkVersion *string `json:"sdk_version,omitempty" xml:"sdk_version"`
+	SdkVersion *string `json:"sdk_version,omitempty"`
 
 	// 应用描述
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 创建时间
-	CreateTime *string `json:"create_time,omitempty" xml:"create_time"`
+	CreateTime *string `json:"create_time,omitempty"`
 
 	// 最后一次修改时间
-	UpdateTime *string `json:"update_time,omitempty" xml:"update_time"`
+	UpdateTime *string `json:"update_time,omitempty"`
 
 	// 应用版本状态
-	State *ShowEdgeApplicationVersionResponseState `json:"state,omitempty" xml:"state"`
+	State *ShowEdgeApplicationVersionResponseState `json:"state,omitempty"`
 
-	LivenessProbe *ProbeDto `json:"liveness_probe,omitempty" xml:"liveness_probe"`
+	LivenessProbe *ProbeDto `json:"liveness_probe,omitempty"`
 
-	ReadinessProbe *ProbeDto `json:"readiness_probe,omitempty" xml:"readiness_probe"`
+	ReadinessProbe *ProbeDto `json:"readiness_probe,omitempty"`
 
 	// 架构
-	Arch *[]string `json:"arch,omitempty" xml:"arch"`
+	Arch *[]string `json:"arch,omitempty"`
 
 	// 启动命令
-	Command *[]string `json:"command,omitempty" xml:"command"`
+	Command *[]string `json:"command,omitempty"`
 
 	// 启动参数
-	Args *[]string `json:"args,omitempty" xml:"args"`
+	Args *[]string `json:"args,omitempty"`
 
-	ContainerSettings *ContainerSettingsDto `json:"container_settings,omitempty" xml:"container_settings"`
+	ContainerSettings *ContainerSettingsDto `json:"container_settings,omitempty"`
 
 	// 应用输出路由端点
-	Outputs *[]string `json:"outputs,omitempty" xml:"outputs"`
+	Outputs *[]string `json:"outputs,omitempty"`
 
 	// 应用输入路由
-	Inputs *[]string `json:"inputs,omitempty" xml:"inputs"`
+	Inputs *[]string `json:"inputs,omitempty"`
 
 	// 应用实现的服务列表
-	Services *[]string `json:"services,omitempty" xml:"services"`
+	Services *[]string `json:"services,omitempty"`
 
 	// 发布时间
-	PublishTime *string `json:"publish_time,omitempty" xml:"publish_time"`
+	PublishTime *string `json:"publish_time,omitempty"`
 
 	// 下线时间
-	OffShelfTime   *string `json:"off_shelf_time,omitempty" xml:"off_shelf_time"`
+	OffShelfTime   *string `json:"off_shelf_time,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

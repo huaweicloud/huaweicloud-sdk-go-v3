@@ -10,10 +10,10 @@ import (
 type ListRedislogResponse struct {
 
 	// 总数
-	TotalNum *int32 `json:"total_num,omitempty" xml:"total_num"`
+	TotalNum *int32 `json:"total_num,omitempty"`
 
 	// 运行日志列表
-	FileList       *[]RunlogItem `json:"file_list,omitempty" xml:"file_list"`
+	FileList       *[]RunlogItem `json:"file_list,omitempty"`
 	HttpStatusCode int           `json:"-"`
 }
 

@@ -10,9 +10,9 @@ import (
 type CreateDictionaryRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
-	Body *CreateDictionary `json:"body,omitempty" xml:"body"`
+	Body *CreateDictionary `json:"body,omitempty"`
 }
 
 func (o CreateDictionaryRequest) String() string {

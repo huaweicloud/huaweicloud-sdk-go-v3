@@ -12,58 +12,58 @@ import (
 type NodeGroupV10 struct {
 
 	// 节点组名。
-	GroupName *string `json:"GroupName,omitempty" xml:"GroupName"`
+	GroupName *string `json:"GroupName,omitempty"`
 
 	// 节点数量，取值范围0～500，Master节点和Core节点数量至少为1，Core与Task节点总数最大为500个。
-	NodeNum *int32 `json:"NodeNum,omitempty" xml:"NodeNum"`
+	NodeNum *int32 `json:"NodeNum,omitempty"`
 
 	// 节点的实例规格。
-	NodeSize *string `json:"NodeSize,omitempty" xml:"NodeSize"`
+	NodeSize *string `json:"NodeSize,omitempty"`
 
 	// 节点实例规格ID。
-	NodeSpecId *string `json:"NodeSpecId,omitempty" xml:"NodeSpecId"`
+	NodeSpecId *string `json:"NodeSpecId,omitempty"`
 
 	// 节点虚拟机产品ID。
-	VmProductId *string `json:"VmProductId,omitempty" xml:"VmProductId"`
+	VmProductId *string `json:"VmProductId,omitempty"`
 
 	// 节点虚拟机产品规格。
-	VmSpecCode *string `json:"VmSpecCode,omitempty" xml:"VmSpecCode"`
+	VmSpecCode *string `json:"VmSpecCode,omitempty"`
 
 	// 节点实例产品ID。
-	NodeProductId *string `json:"NodeProductId,omitempty" xml:"NodeProductId"`
+	NodeProductId *string `json:"NodeProductId,omitempty"`
 
 	// 节点系统盘大小，不可配置，默认为40GB。
-	RootVolumeSize *int32 `json:"RootVolumeSize,omitempty" xml:"RootVolumeSize"`
+	RootVolumeSize *int32 `json:"RootVolumeSize,omitempty"`
 
 	// 节点系统盘的产品ID。
-	RootVolumeProductId *string `json:"RootVolumeProductId,omitempty" xml:"RootVolumeProductId"`
+	RootVolumeProductId *string `json:"RootVolumeProductId,omitempty"`
 
 	// 节点系统盘的类型。
-	RootVolumeType *string `json:"RootVolumeType,omitempty" xml:"RootVolumeType"`
+	RootVolumeType *string `json:"RootVolumeType,omitempty"`
 
 	// 节点系统盘产品规格。
-	RootVolumeResourceSpecCode *string `json:"RootVolumeResourceSpecCode,omitempty" xml:"RootVolumeResourceSpecCode"`
+	RootVolumeResourceSpecCode *string `json:"RootVolumeResourceSpecCode,omitempty"`
 
 	// 节点系统盘产品类型。
-	RootVolumeResourceType *string `json:"RootVolumeResourceType,omitempty" xml:"RootVolumeResourceType"`
+	RootVolumeResourceType *string `json:"RootVolumeResourceType,omitempty"`
 
 	// 节点数据磁盘存储类别，目前支持SATA、SAS和SSD。  - SATA：普通IO - SAS：高IO - SSD：超高IO
-	DataVolumeType *NodeGroupV10DataVolumeType `json:"DataVolumeType,omitempty" xml:"DataVolumeType"`
+	DataVolumeType *NodeGroupV10DataVolumeType `json:"DataVolumeType,omitempty"`
 
 	// 节点数据磁盘存储数目。
-	DataVolumeCount *int32 `json:"DataVolumeCount,omitempty" xml:"DataVolumeCount"`
+	DataVolumeCount *int32 `json:"DataVolumeCount,omitempty"`
 
 	// 节点数据磁盘存储大小。
-	DataVolumeSize *int32 `json:"DataVolumeSize,omitempty" xml:"DataVolumeSize"`
+	DataVolumeSize *int32 `json:"DataVolumeSize,omitempty"`
 
 	// 节点数据磁盘的产品ID。
-	DataVolumeProductId *string `json:"DataVolumeProductId,omitempty" xml:"DataVolumeProductId"`
+	DataVolumeProductId *string `json:"DataVolumeProductId,omitempty"`
 
 	// 节点数据磁盘的产品规格。
-	DataVolumeResourceSpecCode *string `json:"DataVolumeResourceSpecCode,omitempty" xml:"DataVolumeResourceSpecCode"`
+	DataVolumeResourceSpecCode *string `json:"DataVolumeResourceSpecCode,omitempty"`
 
 	// 节点数据磁盘的产品类型。
-	DataVolumeResourceType *string `json:"DataVolumeResourceType,omitempty" xml:"DataVolumeResourceType"`
+	DataVolumeResourceType *string `json:"DataVolumeResourceType,omitempty"`
 }
 
 func (o NodeGroupV10) String() string {

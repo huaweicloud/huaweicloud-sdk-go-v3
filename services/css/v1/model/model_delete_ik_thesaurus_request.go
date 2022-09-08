@@ -10,7 +10,7 @@ import (
 type DeleteIkThesaurusRequest struct {
 
 	// 指定要删除自定义词库的集群ID。
-	ClusterId string `json:"cluster_id" xml:"cluster_id"`
+	ClusterId string `json:"cluster_id"`
 }
 
 func (o DeleteIkThesaurusRequest) String() string {

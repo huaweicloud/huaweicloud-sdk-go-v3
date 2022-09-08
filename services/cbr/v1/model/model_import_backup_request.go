@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ImportBackupRequest struct {
-	Body *BackupSyncReq `json:"body,omitempty" xml:"body"`
+	Body *BackupSyncReq `json:"body,omitempty"`
 }
 
 func (o ImportBackupRequest) String() string {

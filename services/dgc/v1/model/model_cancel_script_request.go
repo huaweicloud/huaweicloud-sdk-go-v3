@@ -8,9 +8,9 @@ import (
 
 // Request Object
 type CancelScriptRequest struct {
-	ScriptName string `json:"script_name" xml:"script_name"`
+	ScriptName string `json:"script_name"`
 
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 }
 
 func (o CancelScriptRequest) String() string {

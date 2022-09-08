@@ -10,10 +10,10 @@ import (
 type ConsumeDeadlettersMessageMessage struct {
 
 	// 消息体的内容。
-	Body *interface{} `json:"body,omitempty" xml:"body"`
+	Body *interface{} `json:"body,omitempty"`
 
 	// 属性的列表。
-	Attributes *interface{} `json:"attributes,omitempty" xml:"attributes"`
+	Attributes *interface{} `json:"attributes,omitempty"`
 }
 
 func (o ConsumeDeadlettersMessageMessage) String() string {

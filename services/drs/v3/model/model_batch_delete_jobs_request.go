@@ -13,9 +13,9 @@ import (
 type BatchDeleteJobsRequest struct {
 
 	// 请求语言类型
-	XLanguage *BatchDeleteJobsRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *BatchDeleteJobsRequestXLanguage `json:"X-Language,omitempty"`
 
-	Body *BatchDeleteJobReq `json:"body,omitempty" xml:"body"`
+	Body *BatchDeleteJobReq `json:"body,omitempty"`
 }
 
 func (o BatchDeleteJobsRequest) String() string {

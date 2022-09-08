@@ -12,19 +12,19 @@ import (
 type LdApiCheckInfo struct {
 
 	// 校验类型：   - path：路径类型   - name：名称类型
-	Type LdApiCheckInfoType `json:"type" xml:"type"`
+	Type LdApiCheckInfoType `json:"type"`
 
 	// 自定义后端API名称。  type = name时必填
-	LdApiName *string `json:"ld_api_name,omitempty" xml:"ld_api_name"`
+	LdApiName *string `json:"ld_api_name,omitempty"`
 
 	// 自定义后端API请求方式。  type = path时必填
-	LdApiMethod *LdApiCheckInfoLdApiMethod `json:"ld_api_method,omitempty" xml:"ld_api_method"`
+	LdApiMethod *LdApiCheckInfoLdApiMethod `json:"ld_api_method,omitempty"`
 
 	// 自定义后端API的访问地址。  type = path时必填
-	LdApiPath *string `json:"ld_api_path,omitempty" xml:"ld_api_path"`
+	LdApiPath *string `json:"ld_api_path,omitempty"`
 
 	// 集成应用ID。  校验应用下后端API定义是否重复时必填
-	RomaAppId *string `json:"roma_app_id,omitempty" xml:"roma_app_id"`
+	RomaAppId *string `json:"roma_app_id,omitempty"`
 }
 
 func (o LdApiCheckInfo) String() string {

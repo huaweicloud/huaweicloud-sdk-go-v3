@@ -10,10 +10,10 @@ import (
 type WorkitemsModule struct {
 
 	// 模块id
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 模块
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 }
 
 func (o WorkitemsModule) String() string {

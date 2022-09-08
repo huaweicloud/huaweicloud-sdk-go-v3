@@ -10,10 +10,10 @@ import (
 type RestLockSiteViewReqBody struct {
 
 	// - 0: 取消锁定。 - 1: 锁定。
-	Status int32 `json:"status" xml:"status"`
+	Status int32 `json:"status"`
 
 	// 被锁定视频源的与会者标识。
-	ParticipantID string `json:"participantID" xml:"participantID"`
+	ParticipantID string `json:"participantID"`
 }
 
 func (o RestLockSiteViewReqBody) String() string {

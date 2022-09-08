@@ -9,13 +9,13 @@ import (
 type RepoStatisticsLaunch struct {
 
 	// 仓库是否可以统计
-	CanStatistics *bool `json:"can_statistics,omitempty" xml:"can_statistics"`
+	CanStatistics *bool `json:"can_statistics,omitempty"`
 
 	// sidekiq任务的 id
-	JoinId *string `json:"join_id,omitempty" xml:"join_id"`
+	JoinId *string `json:"join_id,omitempty"`
 
 	// 启动仓库统计返回的信息
-	Message *string `json:"message,omitempty" xml:"message"`
+	Message *string `json:"message,omitempty"`
 }
 
 func (o RepoStatisticsLaunch) String() string {

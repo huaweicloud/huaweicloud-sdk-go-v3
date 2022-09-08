@@ -13,10 +13,10 @@ import (
 type ShowApplicationV3Request struct {
 
 	// 语言类型 中文:zh-cn 英文:en-us
-	XLanguage *ShowApplicationV3RequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *ShowApplicationV3RequestXLanguage `json:"X-Language,omitempty"`
 
 	// 应用id
-	ApplicationId string `json:"application_id" xml:"application_id"`
+	ApplicationId string `json:"application_id"`
 }
 
 func (o ShowApplicationV3Request) String() string {

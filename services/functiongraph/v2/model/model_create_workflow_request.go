@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateWorkflowRequest struct {
-	Body *WorkflowCreateBody `json:"body,omitempty" xml:"body"`
+	Body *WorkflowCreateBody `json:"body,omitempty"`
 }
 
 func (o CreateWorkflowRequest) String() string {

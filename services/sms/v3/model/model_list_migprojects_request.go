@@ -10,10 +10,10 @@ import (
 type ListMigprojectsRequest struct {
 
 	// 每一页记录的迁移项目
-	Limit *int32 `json:"limit,omitempty" xml:"limit"`
+	Limit *int32 `json:"limit,omitempty"`
 
 	// 偏移量
-	Offset *int32 `json:"offset,omitempty" xml:"offset"`
+	Offset *int32 `json:"offset,omitempty"`
 }
 
 func (o ListMigprojectsRequest) String() string {

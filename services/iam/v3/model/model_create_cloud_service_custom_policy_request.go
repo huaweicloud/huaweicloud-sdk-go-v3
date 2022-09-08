@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateCloudServiceCustomPolicyRequest struct {
-	Body *CreateCloudServiceCustomPolicyRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreateCloudServiceCustomPolicyRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateCloudServiceCustomPolicyRequest) String() string {

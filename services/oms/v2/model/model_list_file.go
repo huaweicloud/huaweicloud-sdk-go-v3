@@ -10,10 +10,10 @@ import (
 type ListFile struct {
 
 	// 对象列表文件或URL列表文件对象名。
-	ListFileKey string `json:"list_file_key" xml:"list_file_key"`
+	ListFileKey string `json:"list_file_key"`
 
 	// 存放对象列表文件的OBS桶名。  请确保与目的端桶处于同一区域，否则将导致任务创建失败。
-	ObsBucket string `json:"obs_bucket" xml:"obs_bucket"`
+	ObsBucket string `json:"obs_bucket"`
 }
 
 func (o ListFile) String() string {

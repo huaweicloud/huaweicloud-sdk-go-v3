@@ -9,16 +9,16 @@ import (
 type EngineGroupsInfo struct {
 
 	// 引擎id。
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 引擎名称。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 引擎版本。
-	Version *string `json:"version,omitempty" xml:"version"`
+	Version *string `json:"version,omitempty"`
 
 	// 可用区列表。
-	SupportAzs *[]SupportAzsInfo `json:"supportAzs,omitempty" xml:"supportAzs"`
+	SupportAzs *[]SupportAzsInfo `json:"supportAzs,omitempty"`
 }
 
 func (o EngineGroupsInfo) String() string {

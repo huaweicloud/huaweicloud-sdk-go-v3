@@ -10,16 +10,16 @@ import (
 type PluginEntity struct {
 
 	// 是否运行。
-	Running *bool `json:"running,omitempty" xml:"running"`
+	Running *bool `json:"running,omitempty"`
 
 	// 是否启用。
-	Enable *bool `json:"enable,omitempty" xml:"enable"`
+	Enable *bool `json:"enable,omitempty"`
 
 	// 插件名称。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 插件版本。
-	Version *string `json:"version,omitempty" xml:"version"`
+	Version *string `json:"version,omitempty"`
 }
 
 func (o PluginEntity) String() string {

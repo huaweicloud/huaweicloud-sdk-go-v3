@@ -10,63 +10,63 @@ import (
 type UpdateVolumeResponse struct {
 
 	// 是否挂载信息。
-	Attachments *[]Attachment `json:"attachments,omitempty" xml:"attachments"`
+	Attachments *[]Attachment `json:"attachments,omitempty"`
 
 	// 云硬盘所属AZ。
-	AvailabilityZone *string `json:"availability_zone,omitempty" xml:"availability_zone"`
+	AvailabilityZone *string `json:"availability_zone,omitempty"`
 
 	// 是否为可启动云硬盘。
-	Bootable *string `json:"bootable,omitempty" xml:"bootable"`
+	Bootable *string `json:"bootable,omitempty"`
 
 	// 创建云硬盘的时间。
-	CreatedAt *string `json:"created_at,omitempty" xml:"created_at"`
+	CreatedAt *string `json:"created_at,omitempty"`
 
 	// 云硬盘ID。
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 云硬盘uri自描述信息
-	Links *[]Link `json:"links,omitempty" xml:"links"`
+	Links *[]Link `json:"links,omitempty"`
 
-	Metadata *VolumeMetadata `json:"metadata,omitempty" xml:"metadata"`
+	Metadata *VolumeMetadata `json:"metadata,omitempty"`
 
 	// 是否为可共享云硬盘。
-	Multiattach *bool `json:"multiattach,omitempty" xml:"multiattach"`
+	Multiattach *bool `json:"multiattach,omitempty"`
 
 	// 云硬盘名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 预留属性。
-	OsVolHostAttrhost *string `json:"os-vol-host-attr:host,omitempty" xml:"os-vol-host-attr:host"`
+	OsVolHostAttrhost *string `json:"os-vol-host-attr:host,omitempty"`
 
 	// 云硬盘所属的项目ID。
-	OsVolTenantAttrtenantId *string `json:"os-vol-tenant-attr:tenant_id,omitempty" xml:"os-vol-tenant-attr:tenant_id"`
+	OsVolTenantAttrtenantId *string `json:"os-vol-tenant-attr:tenant_id,omitempty"`
 
 	// 是否为共享云硬盘。
-	Shareable *string `json:"shareable,omitempty" xml:"shareable"`
+	Shareable *string `json:"shareable,omitempty"`
 
 	// 云硬盘大小。
-	Size *int32 `json:"size,omitempty" xml:"size"`
+	Size *int32 `json:"size,omitempty"`
 
 	// 快照ID。
-	SnapshotId *string `json:"snapshot_id,omitempty" xml:"snapshot_id"`
+	SnapshotId *string `json:"snapshot_id,omitempty"`
 
 	// 预留字段。
-	SourceVolid *string `json:"source_volid,omitempty" xml:"source_volid"`
+	SourceVolid *string `json:"source_volid,omitempty"`
 
 	// 云硬盘状态。
-	Status *string `json:"status,omitempty" xml:"status"`
+	Status *string `json:"status,omitempty"`
 
 	// 云硬盘镜像的元数据。 > 说明： >  > 关于“volume_image_metadata”字段的详细说明，具体请参见：\"[查询镜像详情](https://support.huaweicloud.com/api-ims/ims_03_0703.html)\"。
-	VolumeImageMetadata *interface{} `json:"volume_image_metadata,omitempty" xml:"volume_image_metadata"`
+	VolumeImageMetadata *interface{} `json:"volume_image_metadata,omitempty"`
 
 	// 云硬盘类型。
-	VolumeType *string `json:"volume_type,omitempty" xml:"volume_type"`
+	VolumeType *string `json:"volume_type,omitempty"`
 
 	// 云硬盘描述。
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 预留属性。
-	OsVolumeReplicationextendedStatus *string `json:"os-volume-replication:extended_status,omitempty" xml:"os-volume-replication:extended_status"`
+	OsVolumeReplicationextendedStatus *string `json:"os-volume-replication:extended_status,omitempty"`
 	HttpStatusCode                    int     `json:"-"`
 }
 

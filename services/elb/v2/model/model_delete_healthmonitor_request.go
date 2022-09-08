@@ -10,7 +10,7 @@ import (
 type DeleteHealthmonitorRequest struct {
 
 	// 健康检查id
-	HealthmonitorId string `json:"healthmonitor_id" xml:"healthmonitor_id"`
+	HealthmonitorId string `json:"healthmonitor_id"`
 }
 
 func (o DeleteHealthmonitorRequest) String() string {

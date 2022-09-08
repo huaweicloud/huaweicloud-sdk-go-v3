@@ -10,13 +10,13 @@ import (
 type ShowResourceByIdRequest struct {
 
 	// 云服务名称
-	Provider string `json:"provider" xml:"provider"`
+	Provider string `json:"provider"`
 
 	// 资源类型名称
-	Type string `json:"type" xml:"type"`
+	Type string `json:"type"`
 
 	// 资源ID
-	ResourceId string `json:"resource_id" xml:"resource_id"`
+	ResourceId string `json:"resource_id"`
 }
 
 func (o ShowResourceByIdRequest) String() string {

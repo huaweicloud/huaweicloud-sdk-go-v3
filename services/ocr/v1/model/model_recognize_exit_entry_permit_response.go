@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type RecognizeExitEntryPermitResponse struct {
-	Result         *ExitEntryPermitResult `json:"result,omitempty" xml:"result"`
+	Result         *ExitEntryPermitResult `json:"result,omitempty"`
 	HttpStatusCode int                    `json:"-"`
 }
 

@@ -10,10 +10,10 @@ import (
 type RespAddr struct {
 
 	// 云服务器的vpc ip。
-	Addr string `json:"addr" xml:"addr"`
+	Addr string `json:"addr"`
 
 	// 云服务器的vpc版本。
-	Version string `json:"version" xml:"version"`
+	Version string `json:"version"`
 }
 
 func (o RespAddr) String() string {

@@ -9,13 +9,13 @@ import (
 type CustomerErrorDetail struct {
 
 	// 返回码。具体请参见状态码。 注意，此时返回的状态码全部为200。
-	ErrorCode *string `json:"error_code,omitempty" xml:"error_code"`
+	ErrorCode *string `json:"error_code,omitempty"`
 
 	// 返回码的描述信息。
-	ErrorMsg *string `json:"error_msg,omitempty" xml:"error_msg"`
+	ErrorMsg *string `json:"error_msg,omitempty"`
 
 	// 标识ID。该参数对应的是customer_ids。
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 }
 
 func (o CustomerErrorDetail) String() string {

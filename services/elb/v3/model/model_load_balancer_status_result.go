@@ -8,7 +8,7 @@ import (
 
 //
 type LoadBalancerStatusResult struct {
-	Loadbalancer *LoadBalancerStatus `json:"loadbalancer" xml:"loadbalancer"`
+	Loadbalancer *LoadBalancerStatus `json:"loadbalancer"`
 }
 
 func (o LoadBalancerStatusResult) String() string {

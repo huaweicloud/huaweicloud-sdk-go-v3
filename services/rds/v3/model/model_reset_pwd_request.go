@@ -13,12 +13,12 @@ import (
 type ResetPwdRequest struct {
 
 	// 语言
-	XLanguage *ResetPwdRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *ResetPwdRequestXLanguage `json:"X-Language,omitempty"`
 
 	// 实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
-	Body *PwdResetRequest `json:"body,omitempty" xml:"body"`
+	Body *PwdResetRequest `json:"body,omitempty"`
 }
 
 func (o ResetPwdRequest) String() string {

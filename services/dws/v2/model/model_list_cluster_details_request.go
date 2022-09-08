@@ -10,7 +10,7 @@ import (
 type ListClusterDetailsRequest struct {
 
 	// 集群ID
-	ClusterId string `json:"cluster_id" xml:"cluster_id"`
+	ClusterId string `json:"cluster_id"`
 }
 
 func (o ListClusterDetailsRequest) String() string {

@@ -12,7 +12,7 @@ import (
 type OutputPolicy struct {
 
 	// 输出策略。  取值如下： - discard - transcode  >- 当视频参数中的“output_policy”为\"discard\"，且音频参数中的“output_policy”为“transcode”时，表示只输出音频。 >- 当视频参数中的“output_policy”为\"transcode\"，且音频参数中的“output_policy”为“discard”时，表示只输出视频。 >- 同时为\"discard\"时不合法。 >- 同时为“transcode”时，表示输出音视频。
-	OutputPolicy *OutputPolicyOutputPolicy `json:"output_policy,omitempty" xml:"output_policy"`
+	OutputPolicy *OutputPolicyOutputPolicy `json:"output_policy,omitempty"`
 }
 
 func (o OutputPolicy) String() string {

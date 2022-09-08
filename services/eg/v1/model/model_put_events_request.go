@@ -10,9 +10,9 @@ import (
 type PutEventsRequest struct {
 
 	// 指定查询的事件通道ID
-	ChannelId string `json:"channel_id" xml:"channel_id"`
+	ChannelId string `json:"channel_id"`
 
-	Body *PutEventsReq `json:"body,omitempty" xml:"body"`
+	Body *PutEventsReq `json:"body,omitempty"`
 }
 
 func (o PutEventsRequest) String() string {

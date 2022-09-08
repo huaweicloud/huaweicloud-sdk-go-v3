@@ -10,34 +10,34 @@ import (
 type ShowCommitsByRepoIdRequest struct {
 
 	// 提交作者
-	Author *string `json:"author,omitempty" xml:"author"`
+	Author *string `json:"author,omitempty"`
 
 	// 起始提交日期，格式为yyyy-MM-dd
-	BeginDate *string `json:"begin_date,omitempty" xml:"begin_date"`
+	BeginDate *string `json:"begin_date,omitempty"`
 
 	// 终止提交日期，格式为yyyy-MM-dd
-	EndDate *string `json:"end_date,omitempty" xml:"end_date"`
+	EndDate *string `json:"end_date,omitempty"`
 
 	// 提交信息
-	Message *string `json:"message,omitempty" xml:"message"`
+	Message *string `json:"message,omitempty"`
 
 	// 分页索引
-	PageIndex *int32 `json:"page_index,omitempty" xml:"page_index"`
+	PageIndex *int32 `json:"page_index,omitempty"`
 
 	// 每页数据量
-	PageSize *int32 `json:"page_size,omitempty" xml:"page_size"`
+	PageSize *int32 `json:"page_size,omitempty"`
 
 	// 文件路径
-	Path *string `json:"path,omitempty" xml:"path"`
+	Path *string `json:"path,omitempty"`
 
 	// 分支或标签名，支持SHA格式
-	RefName string `json:"ref_name" xml:"ref_name"`
+	RefName string `json:"ref_name"`
 
 	// 仓库主键id
-	RepositoryId int32 `json:"repository_id" xml:"repository_id"`
+	RepositoryId int32 `json:"repository_id"`
 
 	// 提交的文件变更详情信息（不包含diff）
-	StatFormat *string `json:"stat_format,omitempty" xml:"stat_format"`
+	StatFormat *string `json:"stat_format,omitempty"`
 }
 
 func (o ShowCommitsByRepoIdRequest) String() string {

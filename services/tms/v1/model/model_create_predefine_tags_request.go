@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreatePredefineTagsRequest struct {
-	Body *ReqCreatePredefineTag `json:"body,omitempty" xml:"body"`
+	Body *ReqCreatePredefineTag `json:"body,omitempty"`
 }
 
 func (o CreatePredefineTagsRequest) String() string {

@@ -12,10 +12,10 @@ import (
 type GetServerRemoteConsoleOption struct {
 
 	// 远程登录协议，请将protocol配置为“vnc”。
-	Protocol GetServerRemoteConsoleOptionProtocol `json:"protocol" xml:"protocol"`
+	Protocol GetServerRemoteConsoleOptionProtocol `json:"protocol"`
 
 	// 远程登录的类型，请将type配置为“novnc”。
-	Type GetServerRemoteConsoleOptionType `json:"type" xml:"type"`
+	Type GetServerRemoteConsoleOptionType `json:"type"`
 }
 
 func (o GetServerRemoteConsoleOption) String() string {

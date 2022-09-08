@@ -12,10 +12,10 @@ import (
 type BatchDeleteInstanceRespResults struct {
 
 	// 操作结果。
-	Result *BatchDeleteInstanceRespResultsResult `json:"result,omitempty" xml:"result"`
+	Result *BatchDeleteInstanceRespResultsResult `json:"result,omitempty"`
 
 	// 实例ID。
-	Instance *string `json:"instance,omitempty" xml:"instance"`
+	Instance *string `json:"instance,omitempty"`
 }
 
 func (o BatchDeleteInstanceRespResults) String() string {

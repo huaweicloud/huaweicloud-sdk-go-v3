@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type RecognizePcrTestRecordResponse struct {
-	Result         *PcrTestRecordResult `json:"result,omitempty" xml:"result"`
+	Result         *PcrTestRecordResult `json:"result,omitempty"`
 	HttpStatusCode int                  `json:"-"`
 }
 

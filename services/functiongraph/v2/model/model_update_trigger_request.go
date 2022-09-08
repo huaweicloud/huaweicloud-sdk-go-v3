@@ -13,15 +13,15 @@ import (
 type UpdateTriggerRequest struct {
 
 	// 函数的URN，详细解释见FunctionGraph函数模型的描述。
-	FunctionUrn string `json:"function_urn" xml:"function_urn"`
+	FunctionUrn string `json:"function_urn"`
 
 	// 触发器类型代码。
-	TriggerTypeCode UpdateTriggerRequestTriggerTypeCode `json:"trigger_type_code" xml:"trigger_type_code"`
+	TriggerTypeCode UpdateTriggerRequestTriggerTypeCode `json:"trigger_type_code"`
 
 	// 触发器编码。
-	TriggerId string `json:"trigger_id" xml:"trigger_id"`
+	TriggerId string `json:"trigger_id"`
 
-	Body *UpdateTriggerRequestBody `json:"body,omitempty" xml:"body"`
+	Body *UpdateTriggerRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateTriggerRequest) String() string {

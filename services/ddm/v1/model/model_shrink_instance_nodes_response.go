@@ -10,13 +10,13 @@ import (
 type ShrinkInstanceNodesResponse struct {
 
 	// DDM实例ID。
-	InstanceId *string `json:"instanceId,omitempty" xml:"instanceId"`
+	InstanceId *string `json:"instanceId,omitempty"`
 
 	// DDM实例名称。
-	InstanceName *string `json:"instanceName,omitempty" xml:"instanceName"`
+	InstanceName *string `json:"instanceName,omitempty"`
 
 	// 任务ID。
-	JobId          *string `json:"jobId,omitempty" xml:"jobId"`
+	JobId          *string `json:"jobId,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ListPublicipsByTagsRequest struct {
-	Body *ListPublicipsByTagsRequestBody `json:"body,omitempty" xml:"body"`
+	Body *ListPublicipsByTagsRequestBody `json:"body,omitempty"`
 }
 
 func (o ListPublicipsByTagsRequest) String() string {

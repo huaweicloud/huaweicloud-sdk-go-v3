@@ -10,13 +10,13 @@ import (
 type AzInfoResp struct {
 
 	// 可用区标识代码
-	Code *string `json:"code,omitempty" xml:"code"`
+	Code *string `json:"code,omitempty"`
 
 	// 可用区名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 可用区状态
-	Status *string `json:"status,omitempty" xml:"status"`
+	Status *string `json:"status,omitempty"`
 }
 
 func (o AzInfoResp) String() string {

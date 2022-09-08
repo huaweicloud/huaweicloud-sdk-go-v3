@@ -10,12 +10,12 @@ import (
 type UpdateInstanceParamRequest struct {
 
 	// DDM实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 语种，默认中文。中文:zh-cn;英文:en-us
-	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *string `json:"X-Language,omitempty"`
 
-	Body *UpdateParametersReq `json:"body,omitempty" xml:"body"`
+	Body *UpdateParametersReq `json:"body,omitempty"`
 }
 
 func (o UpdateInstanceParamRequest) String() string {

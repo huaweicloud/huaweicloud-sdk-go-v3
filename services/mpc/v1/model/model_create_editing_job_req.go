@@ -10,30 +10,30 @@ import (
 type CreateEditingJobReq struct {
 
 	// 剪辑任务类型。取值如下：\"CLIP\",\"CONCAT\",\"CONCATS\",\"MIX\"。
-	EditType *[]string `json:"edit_type,omitempty" xml:"edit_type"`
+	EditType *[]string `json:"edit_type,omitempty"`
 
 	// 剪切信息
-	Clips *[]ClipInfo `json:"clips,omitempty" xml:"clips"`
+	Clips *[]ClipInfo `json:"clips,omitempty"`
 
 	// 多拼接任务信息，支持多个拼接输出，与concat参数只能二选一。
-	Concats *[]MultiConcatInfo `json:"concats,omitempty" xml:"concats"`
+	Concats *[]MultiConcatInfo `json:"concats,omitempty"`
 
-	Concat *ConcatInfo `json:"concat,omitempty" xml:"concat"`
+	Concat *ConcatInfo `json:"concat,omitempty"`
 
-	Mix *MixInfo `json:"mix,omitempty" xml:"mix"`
+	Mix *MixInfo `json:"mix,omitempty"`
 
-	Input *ObsObjInfo `json:"input,omitempty" xml:"input"`
+	Input *ObsObjInfo `json:"input,omitempty"`
 
-	OutputSetting *OutputSetting `json:"output_setting,omitempty" xml:"output_setting"`
+	OutputSetting *OutputSetting `json:"output_setting,omitempty"`
 
 	// 水印信息。
-	ImageWatermarkSettings *[]ImageWatermarkSetting `json:"image_watermark_settings,omitempty" xml:"image_watermark_settings"`
+	ImageWatermarkSettings *[]ImageWatermarkSetting `json:"image_watermark_settings,omitempty"`
 
 	// 媒体处理配置，当edit_type为空时该参数生效。会根据该参数配置，对input参数指定的源文件进行处理
-	EditSettings *[]EditSetting `json:"edit_settings,omitempty" xml:"edit_settings"`
+	EditSettings *[]EditSetting `json:"edit_settings,omitempty"`
 
 	// 用户自定义数据。
-	UserData *string `json:"user_data,omitempty" xml:"user_data"`
+	UserData *string `json:"user_data,omitempty"`
 }
 
 func (o CreateEditingJobReq) String() string {

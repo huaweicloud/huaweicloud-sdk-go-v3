@@ -9,19 +9,19 @@ import (
 type ListProductsRespIo struct {
 
 	// IO类型。
-	IoType *string `json:"io_type,omitempty" xml:"io_type"`
+	IoType *string `json:"io_type,omitempty"`
 
 	// IO规格。
-	StorageSpecCode *string `json:"storage_spec_code,omitempty" xml:"storage_spec_code"`
+	StorageSpecCode *string `json:"storage_spec_code,omitempty"`
 
 	// IO未售罄的可用区列表。
-	AvailableZones *[]string `json:"available_zones,omitempty" xml:"available_zones"`
+	AvailableZones *[]string `json:"available_zones,omitempty"`
 
 	// IO已售罄的不可用区列表。
-	UnavailableZones *[]string `json:"unavailable_zones,omitempty" xml:"unavailable_zones"`
+	UnavailableZones *[]string `json:"unavailable_zones,omitempty"`
 
 	// 磁盘类型。
-	VolumeType *string `json:"volume_type,omitempty" xml:"volume_type"`
+	VolumeType *string `json:"volume_type,omitempty"`
 }
 
 func (o ListProductsRespIo) String() string {

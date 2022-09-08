@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ChangeLoadbalancerChargeModeRequest struct {
-	Body *ChangeLoadbalancerChargeModeRequestBody `json:"body,omitempty" xml:"body"`
+	Body *ChangeLoadbalancerChargeModeRequestBody `json:"body,omitempty"`
 }
 
 func (o ChangeLoadbalancerChargeModeRequest) String() string {

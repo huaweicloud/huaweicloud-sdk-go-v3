@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RecognizeWaybillElectronicRequest struct {
-	Body *WaybillElectronicRequestBody `json:"body,omitempty" xml:"body"`
+	Body *WaybillElectronicRequestBody `json:"body,omitempty"`
 }
 
 func (o RecognizeWaybillElectronicRequest) String() string {

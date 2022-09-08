@@ -13,10 +13,10 @@ import (
 type SubscriptionOperateReq struct {
 
 	// 订阅对象ID列表，单次批量操作最多支持10个订阅
-	SubscriptionIds *[]string `json:"subscription_ids,omitempty" xml:"subscription_ids"`
+	SubscriptionIds *[]string `json:"subscription_ids,omitempty"`
 
 	// 操作类型
-	Operation *SubscriptionOperateReqOperation `json:"operation,omitempty" xml:"operation"`
+	Operation *SubscriptionOperateReqOperation `json:"operation,omitempty"`
 }
 
 func (o SubscriptionOperateReq) String() string {

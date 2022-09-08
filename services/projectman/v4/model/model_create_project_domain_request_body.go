@@ -9,7 +9,7 @@ import (
 type CreateProjectDomainRequestBody struct {
 
 	// 领域名称
-	DomainName string `json:"domain_name" xml:"domain_name"`
+	DomainName string `json:"domain_name"`
 }
 
 func (o CreateProjectDomainRequestBody) String() string {

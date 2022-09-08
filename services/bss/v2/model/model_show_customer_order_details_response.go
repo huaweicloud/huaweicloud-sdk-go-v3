@@ -10,12 +10,12 @@ import (
 type ShowCustomerOrderDetailsResponse struct {
 
 	// 订单项个数。
-	TotalCount *int32 `json:"total_count,omitempty" xml:"total_count"`
+	TotalCount *int32 `json:"total_count,omitempty"`
 
-	OrderInfo *CustomerOrderV3 `json:"order_info,omitempty" xml:"order_info"`
+	OrderInfo *CustomerOrderV3 `json:"order_info,omitempty"`
 
 	// 订单对应的订单项。 具体请参见表5。
-	OrderLineItems *[]OrderLineItemEntityV2 `json:"order_line_items,omitempty" xml:"order_line_items"`
+	OrderLineItems *[]OrderLineItemEntityV2 `json:"order_line_items,omitempty"`
 	HttpStatusCode int                      `json:"-"`
 }
 

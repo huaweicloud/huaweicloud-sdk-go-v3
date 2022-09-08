@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type PushShareAppsRequest struct {
-	Body *PushShareAppsRequestBody `json:"body,omitempty" xml:"body"`
+	Body *PushShareAppsRequestBody `json:"body,omitempty"`
 }
 
 func (o PushShareAppsRequest) String() string {

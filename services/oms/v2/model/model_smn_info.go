@@ -10,13 +10,13 @@ import (
 type SmnInfo struct {
 
 	// 记录迁移任务执行完毕后SMN消息是否发送成功。
-	NotifyResult *bool `json:"notify_result,omitempty" xml:"notify_result"`
+	NotifyResult *bool `json:"notify_result,omitempty"`
 
 	// 记录SMN消息发送失败原因的错误码（迁移任务成功时为空）。
-	NotifyErrorMessage *string `json:"notify_error_message,omitempty" xml:"notify_error_message"`
+	NotifyErrorMessage *string `json:"notify_error_message,omitempty"`
 
 	// SMN Topic的名称（SMN消息发送成功时为空）。
-	TopicName *string `json:"topic_name,omitempty" xml:"topic_name"`
+	TopicName *string `json:"topic_name,omitempty"`
 }
 
 func (o SmnInfo) String() string {

@@ -10,9 +10,9 @@ import (
 type BatchProtectScalingInstancesRequest struct {
 
 	// 实例ID。
-	ScalingGroupId string `json:"scaling_group_id" xml:"scaling_group_id"`
+	ScalingGroupId string `json:"scaling_group_id"`
 
-	Body *BatchProtectInstancesOption `json:"body,omitempty" xml:"body"`
+	Body *BatchProtectInstancesOption `json:"body,omitempty"`
 }
 
 func (o BatchProtectScalingInstancesRequest) String() string {

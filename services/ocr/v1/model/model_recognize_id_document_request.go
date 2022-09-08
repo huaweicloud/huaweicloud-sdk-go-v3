@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RecognizeIdDocumentRequest struct {
-	Body *IdDocumentRequestBody `json:"body,omitempty" xml:"body"`
+	Body *IdDocumentRequestBody `json:"body,omitempty"`
 }
 
 func (o RecognizeIdDocumentRequest) String() string {

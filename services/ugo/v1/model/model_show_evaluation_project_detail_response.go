@@ -10,45 +10,45 @@ import (
 type ShowEvaluationProjectDetailResponse struct {
 
 	// 数据库大小。
-	SourceDbSize *string `json:"source_db_size,omitempty" xml:"source_db_size"`
+	SourceDbSize *string `json:"source_db_size,omitempty"`
 
 	// 数据库schema个数。
-	SourceDbSchema *int64 `json:"source_db_schema,omitempty" xml:"source_db_schema"`
+	SourceDbSchema *int64 `json:"source_db_schema,omitempty"`
 
 	// 数据库CPU个数。
-	SourceDbCpu *string `json:"source_db_cpu,omitempty" xml:"source_db_cpu"`
+	SourceDbCpu *string `json:"source_db_cpu,omitempty"`
 
 	// 数据库字符集。
-	SourceDbCharacterSet *string `json:"source_db_character_set,omitempty" xml:"source_db_character_set"`
+	SourceDbCharacterSet *string `json:"source_db_character_set,omitempty"`
 
 	// 数据库操作系统。
-	SourceDbOs *string `json:"source_db_os,omitempty" xml:"source_db_os"`
+	SourceDbOs *string `json:"source_db_os,omitempty"`
 
 	// 实例数量。
-	SourceDbInstanceNum *int32 `json:"source_db_instance_num,omitempty" xml:"source_db_instance_num"`
+	SourceDbInstanceNum *int32 `json:"source_db_instance_num,omitempty"`
 
 	// 数据库内存。
-	SourceDbRam *string `json:"source_db_ram,omitempty" xml:"source_db_ram"`
+	SourceDbRam *string `json:"source_db_ram,omitempty"`
 
-	SourceDbInfo *SourceDb `json:"source_db_info,omitempty" xml:"source_db_info"`
+	SourceDbInfo *SourceDb `json:"source_db_info,omitempty"`
 
 	// 数据库物理RAM。
-	SourceDbPhyRam *string `json:"source_db_phy_ram,omitempty" xml:"source_db_phy_ram"`
+	SourceDbPhyRam *string `json:"source_db_phy_ram,omitempty"`
 
 	// 数据库版本。
-	SourceDbVersion *string `json:"source_db_version,omitempty" xml:"source_db_version"`
+	SourceDbVersion *string `json:"source_db_version,omitempty"`
 
 	// 数据库配置。
-	SourceDbConf *string `json:"source_db_conf,omitempty" xml:"source_db_conf"`
+	SourceDbConf *string `json:"source_db_conf,omitempty"`
 
 	// 数据库时区。
-	SourceDbClock *string `json:"source_db_clock,omitempty" xml:"source_db_clock"`
+	SourceDbClock *string `json:"source_db_clock,omitempty"`
 
 	// 评估项目ID。
-	EvaluationProjectId *int32 `json:"evaluation_project_id,omitempty" xml:"evaluation_project_id"`
+	EvaluationProjectId *int32 `json:"evaluation_project_id,omitempty"`
 
 	// 评估项目名称。
-	EvaluationProjectName *string `json:"evaluation_project_name,omitempty" xml:"evaluation_project_name"`
+	EvaluationProjectName *string `json:"evaluation_project_name,omitempty"`
 	HttpStatusCode        int     `json:"-"`
 }
 

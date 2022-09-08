@@ -9,7 +9,7 @@ import (
 type UpdateMqsInstanceTopicReq struct {
 
 	// Topic列表。
-	Topics []UpdateTopicObject `json:"topics" xml:"topics"`
+	Topics []UpdateTopicObject `json:"topics"`
 }
 
 func (o UpdateMqsInstanceTopicReq) String() string {

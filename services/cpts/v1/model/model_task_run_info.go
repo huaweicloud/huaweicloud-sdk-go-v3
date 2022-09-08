@@ -10,10 +10,10 @@ import (
 type TaskRunInfo struct {
 
 	// id
-	Id *int32 `json:"id,omitempty" xml:"id"`
+	Id *int32 `json:"id,omitempty"`
 
 	// run_type
-	RunType *int32 `json:"run_type,omitempty" xml:"run_type"`
+	RunType *int32 `json:"run_type,omitempty"`
 }
 
 func (o TaskRunInfo) String() string {

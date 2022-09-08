@@ -10,16 +10,16 @@ import (
 type ListScalingPoliciesResponse struct {
 
 	// 总记录数。
-	TotalNumber *int32 `json:"total_number,omitempty" xml:"total_number"`
+	TotalNumber *int32 `json:"total_number,omitempty"`
 
 	// 查询的起始行号。
-	StartNumber *int32 `json:"start_number,omitempty" xml:"start_number"`
+	StartNumber *int32 `json:"start_number,omitempty"`
 
 	// 查询记录数。
-	Limit *int32 `json:"limit,omitempty" xml:"limit"`
+	Limit *int32 `json:"limit,omitempty"`
 
 	// 伸缩策略列表
-	ScalingPolicies *[]ScalingV1PolicyDetail `json:"scaling_policies,omitempty" xml:"scaling_policies"`
+	ScalingPolicies *[]ScalingV1PolicyDetail `json:"scaling_policies,omitempty"`
 	HttpStatusCode  int                      `json:"-"`
 }
 

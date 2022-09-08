@@ -10,9 +10,9 @@ import (
 type UpdatePluginsRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
-	Body *UpdatePluginsReq `json:"body,omitempty" xml:"body"`
+	Body *UpdatePluginsReq `json:"body,omitempty"`
 }
 
 func (o UpdatePluginsRequest) String() string {

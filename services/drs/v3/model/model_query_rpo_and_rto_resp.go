@@ -10,17 +10,17 @@ import (
 type QueryRpoAndRtoResp struct {
 
 	// 任务ID
-	JobId *string `json:"job_id,omitempty" xml:"job_id"`
+	JobId *string `json:"job_id,omitempty"`
 
-	RpoInfo *RpoAndRtoInfo `json:"rpo_info,omitempty" xml:"rpo_info"`
+	RpoInfo *RpoAndRtoInfo `json:"rpo_info,omitempty"`
 
-	RtoInfo *RpoAndRtoInfo `json:"rto_info,omitempty" xml:"rto_info"`
+	RtoInfo *RpoAndRtoInfo `json:"rto_info,omitempty"`
 
 	// 错误码
-	ErrorCode *string `json:"error_code,omitempty" xml:"error_code"`
+	ErrorCode *string `json:"error_code,omitempty"`
 
 	// 错误信息
-	ErrorMsg *string `json:"error_msg,omitempty" xml:"error_msg"`
+	ErrorMsg *string `json:"error_msg,omitempty"`
 }
 
 func (o QueryRpoAndRtoResp) String() string {

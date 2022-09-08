@@ -10,10 +10,10 @@ import (
 type ErrorReasonResp struct {
 
 	// 迁移失败的错误码。
-	ErrorCode *string `json:"error_code,omitempty" xml:"error_code"`
+	ErrorCode *string `json:"error_code,omitempty"`
 
 	// 迁移失败的原因。
-	ErrorMsg *string `json:"error_msg,omitempty" xml:"error_msg"`
+	ErrorMsg *string `json:"error_msg,omitempty"`
 }
 
 func (o ErrorReasonResp) String() string {

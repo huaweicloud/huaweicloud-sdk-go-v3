@@ -9,38 +9,38 @@ import (
 type ResScene struct {
 
 	// 类型。
-	Category *string `json:"category,omitempty" xml:"category"`
+	Category *string `json:"category,omitempty"`
 
 	// 数据源id。
-	DatasourceId *string `json:"datasource_id,omitempty" xml:"datasource_id"`
+	DatasourceId *string `json:"datasource_id,omitempty"`
 
-	DsConfig *DataConfig `json:"ds_config,omitempty" xml:"ds_config"`
+	DsConfig *DataConfig `json:"ds_config,omitempty"`
 
 	// 场景id。
-	SceneId *string `json:"scene_id,omitempty" xml:"scene_id"`
+	SceneId *string `json:"scene_id,omitempty"`
 
 	// 场景名称。
-	SceneName *string `json:"scene_name,omitempty" xml:"scene_name"`
+	SceneName *string `json:"scene_name,omitempty"`
 
 	// 场景类型。
-	Type *string `json:"type,omitempty" xml:"type"`
+	Type *string `json:"type,omitempty"`
 
 	// 服务类型。
-	ServiceType *string `json:"service_type,omitempty" xml:"service_type"`
+	ServiceType *string `json:"service_type,omitempty"`
 
 	// 状态。
-	Status *string `json:"status,omitempty" xml:"status"`
+	Status *string `json:"status,omitempty"`
 
 	// 工作空间id。
-	WorkspaceId *string `json:"workspace_id,omitempty" xml:"workspace_id"`
+	WorkspaceId *string `json:"workspace_id,omitempty"`
 
 	// 创建时间。
-	CreatedAt *int64 `json:"created_at,omitempty" xml:"created_at"`
+	CreatedAt *int64 `json:"created_at,omitempty"`
 
 	// 更新时间。
-	UpdateAt *int64 `json:"update_at,omitempty" xml:"update_at"`
+	UpdateAt *int64 `json:"update_at,omitempty"`
 
-	SpecsConfig *SpecsConfig `json:"specs_config,omitempty" xml:"specs_config"`
+	SpecsConfig *SpecsConfig `json:"specs_config,omitempty"`
 }
 
 func (o ResScene) String() string {

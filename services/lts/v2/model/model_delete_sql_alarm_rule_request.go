@@ -10,7 +10,7 @@ import (
 type DeleteSqlAlarmRuleRequest struct {
 
 	// Sql告警规则id
-	SqlAlarmRuleId string `json:"sql_alarm_rule_id" xml:"sql_alarm_rule_id"`
+	SqlAlarmRuleId string `json:"sql_alarm_rule_id"`
 }
 
 func (o DeleteSqlAlarmRuleRequest) String() string {

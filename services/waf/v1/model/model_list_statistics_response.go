@@ -10,7 +10,7 @@ import (
 type ListStatisticsResponse struct {
 
 	// 安全总览请求与攻击数据
-	Body           *[]CountItem `json:"body,omitempty" xml:"body"`
+	Body           *[]CountItem `json:"body,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }
 

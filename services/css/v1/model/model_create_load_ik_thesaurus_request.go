@@ -10,9 +10,9 @@ import (
 type CreateLoadIkThesaurusRequest struct {
 
 	// 指定配置自定义词库的集群ID。
-	ClusterId string `json:"cluster_id" xml:"cluster_id"`
+	ClusterId string `json:"cluster_id"`
 
-	Body *LoadCustomThesaurusReq `json:"body,omitempty" xml:"body"`
+	Body *LoadCustomThesaurusReq `json:"body,omitempty"`
 }
 
 func (o CreateLoadIkThesaurusRequest) String() string {

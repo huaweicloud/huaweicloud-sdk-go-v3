@@ -10,7 +10,7 @@ import (
 type GlanceListImageMembersRequest struct {
 
 	// 镜像id
-	ImageId string `json:"image_id" xml:"image_id"`
+	ImageId string `json:"image_id"`
 }
 
 func (o GlanceListImageMembersRequest) String() string {

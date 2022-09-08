@@ -10,9 +10,9 @@ import (
 type UpdateServerNameRequest struct {
 
 	// 服务器id。
-	ServerId string `json:"server_id" xml:"server_id"`
+	ServerId string `json:"server_id"`
 
-	Body *UpdateServerNameRequestBody `json:"body,omitempty" xml:"body"`
+	Body *UpdateServerNameRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateServerNameRequest) String() string {

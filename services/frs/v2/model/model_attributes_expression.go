@@ -10,10 +10,10 @@ import (
 type AttributesExpression struct {
 
 	// 人脸表情类型： • neutral：中性 • happy：高兴 • fear：害怕 • surprise：惊讶 • sad：伤心 • angry：生气 • disgust：厌恶 • unknown：图片质量问题导致未识别
-	Type *string `json:"type,omitempty" xml:"type"`
+	Type *string `json:"type,omitempty"`
 
 	// 表情置信度，取值范围[0-1]。
-	Probability *float64 `json:"probability,omitempty" xml:"probability"`
+	Probability *float64 `json:"probability,omitempty"`
 }
 
 func (o AttributesExpression) String() string {

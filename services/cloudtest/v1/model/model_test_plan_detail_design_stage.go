@@ -10,13 +10,13 @@ import (
 type TestPlanDetailDesignStage struct {
 
 	// 用例个数
-	CaseCount *int32 `json:"case_count,omitempty" xml:"case_count"`
+	CaseCount *int32 `json:"case_count,omitempty"`
 
 	// 需求个数
-	IssueCount *int32 `json:"issue_count,omitempty" xml:"issue_count"`
+	IssueCount *int32 `json:"issue_count,omitempty"`
 
 	// 已被用例关联的需求个数
-	IssueCoveredCount *string `json:"issue_covered_count,omitempty" xml:"issue_covered_count"`
+	IssueCoveredCount *string `json:"issue_covered_count,omitempty"`
 }
 
 func (o TestPlanDetailDesignStage) String() string {

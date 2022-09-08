@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateReplicationRequest struct {
-	Body *CreateReplicationRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreateReplicationRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateReplicationRequest) String() string {

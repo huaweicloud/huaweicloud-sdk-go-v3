@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type DetectLiveByFileIntlRequest struct {
-	Body *DetectLiveByFileIntlRequestBody `json:"body,omitempty" xml:"body" type:"multipart"`
+	Body *DetectLiveByFileIntlRequestBody `json:"body,omitempty" type:"multipart"`
 }
 
 func (o DetectLiveByFileIntlRequest) String() string {

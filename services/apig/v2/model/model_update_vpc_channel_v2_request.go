@@ -10,12 +10,12 @@ import (
 type UpdateVpcChannelV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// VPC通道的编号
-	VpcChannelId string `json:"vpc_channel_id" xml:"vpc_channel_id"`
+	VpcChannelId string `json:"vpc_channel_id"`
 
-	Body *VpcCreate `json:"body,omitempty" xml:"body"`
+	Body *VpcCreate `json:"body,omitempty"`
 }
 
 func (o UpdateVpcChannelV2Request) String() string {

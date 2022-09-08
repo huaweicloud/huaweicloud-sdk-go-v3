@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type UpdateOriginHostResponse struct {
-	OriginHost     *DomainOriginHost `json:"origin_host,omitempty" xml:"origin_host"`
+	OriginHost     *DomainOriginHost `json:"origin_host,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }
 

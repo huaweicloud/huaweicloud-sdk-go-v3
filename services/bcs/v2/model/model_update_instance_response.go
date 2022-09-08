@@ -10,7 +10,7 @@ import (
 type UpdateInstanceResponse struct {
 
 	// 操作记录id
-	OperationId    *string `json:"operation_id,omitempty" xml:"operation_id"`
+	OperationId    *string `json:"operation_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

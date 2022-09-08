@@ -10,19 +10,19 @@ import (
 type SparkCalcSpec struct {
 
 	// driver内存
-	DriverMemory string `json:"driver_memory" xml:"driver_memory"`
+	DriverMemory string `json:"driver_memory"`
 
 	// driver核数
-	DriverCores int32 `json:"driver_cores" xml:"driver_cores"`
+	DriverCores int32 `json:"driver_cores"`
 
 	// executor内存
-	ExecutorMemory string `json:"executor_memory" xml:"executor_memory"`
+	ExecutorMemory string `json:"executor_memory"`
 
 	// executor核数
-	ExecutorCores int32 `json:"executor_cores" xml:"executor_cores"`
+	ExecutorCores int32 `json:"executor_cores"`
 
 	// executor个数
-	NumExecutors int32 `json:"num_executors" xml:"num_executors"`
+	NumExecutors int32 `json:"num_executors"`
 }
 
 func (o SparkCalcSpec) String() string {

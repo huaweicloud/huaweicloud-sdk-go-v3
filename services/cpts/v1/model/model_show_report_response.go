@@ -10,15 +10,15 @@ import (
 type ShowReportResponse struct {
 
 	// code
-	Code *string `json:"code,omitempty" xml:"code"`
+	Code *string `json:"code,omitempty"`
 
 	// message
-	Message *string `json:"message,omitempty" xml:"message"`
+	Message *string `json:"message,omitempty"`
 
 	// extend
-	Extend *string `json:"extend,omitempty" xml:"extend"`
+	Extend *string `json:"extend,omitempty"`
 
-	Result         *ReportInfo `json:"result,omitempty" xml:"result"`
+	Result         *ReportInfo `json:"result,omitempty"`
 	HttpStatusCode int         `json:"-"`
 }
 

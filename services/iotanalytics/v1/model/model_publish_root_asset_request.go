@@ -10,7 +10,7 @@ import (
 type PublishRootAssetRequest struct {
 
 	// 根资产ID
-	RootAssetId string `json:"root_asset_id" xml:"root_asset_id"`
+	RootAssetId string `json:"root_asset_id"`
 }
 
 func (o PublishRootAssetRequest) String() string {

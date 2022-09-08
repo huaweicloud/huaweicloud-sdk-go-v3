@@ -10,16 +10,16 @@ import (
 type FrontRow struct {
 
 	// 数据单元集合
-	CellList *[]FrontCell `json:"cell_list,omitempty" xml:"cell_list"`
+	CellList *[]FrontCell `json:"cell_list,omitempty"`
 
 	// 将group by的字段拼接成过滤字符串，用于后续点网格点击使用
-	Filter *string `json:"filter,omitempty" xml:"filter"`
+	Filter *string `json:"filter,omitempty"`
 
 	// 是否是header信息
-	Header *bool `json:"header,omitempty" xml:"header"`
+	Header *bool `json:"header,omitempty"`
 
 	// 是否是事务
-	TxId *int64 `json:"tx_id,omitempty" xml:"tx_id"`
+	TxId *int64 `json:"tx_id,omitempty"`
 }
 
 func (o FrontRow) String() string {

@@ -10,15 +10,15 @@ import (
 type InviteOperateVideoRequest struct {
 
 	// 会议id，创建会议时生成
-	ConferenceID string `json:"conferenceID" xml:"conferenceID"`
+	ConferenceID string `json:"conferenceID"`
 
 	// 被操作的会场id，可以通过查询会场id接口获取。
-	ParticipantID string `json:"participantID" xml:"participantID"`
+	ParticipantID string `json:"participantID"`
 
 	// 会控授权令牌，通过调用申请会控token的接口生成
-	XConferenceAuthorization string `json:"X-Conference-Authorization" xml:"X-Conference-Authorization"`
+	XConferenceAuthorization string `json:"X-Conference-Authorization"`
 
-	Body *RestVideoBody `json:"body,omitempty" xml:"body"`
+	Body *RestVideoBody `json:"body,omitempty"`
 }
 
 func (o InviteOperateVideoRequest) String() string {

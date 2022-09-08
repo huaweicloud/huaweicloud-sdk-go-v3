@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RunDomainSentimentRequest struct {
-	Body *DomainSentimentReq `json:"body,omitempty" xml:"body"`
+	Body *DomainSentimentReq `json:"body,omitempty"`
 }
 
 func (o RunDomainSentimentRequest) String() string {

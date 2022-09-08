@@ -10,7 +10,7 @@ import (
 type BatchAddServerNicsRequestBody struct {
 
 	// 需要添加的网卡参数列表。
-	Nics []BatchAddServerNicOption `json:"nics" xml:"nics"`
+	Nics []BatchAddServerNicOption `json:"nics"`
 }
 
 func (o BatchAddServerNicsRequestBody) String() string {

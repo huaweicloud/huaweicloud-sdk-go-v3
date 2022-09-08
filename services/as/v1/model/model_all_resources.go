@@ -13,19 +13,19 @@ import (
 type AllResources struct {
 
 	// 查询配额的类型。scaling_Group：伸缩组配额。scaling_Config：伸缩配置配额。scaling_Policy：伸缩策略配额。scaling_Instance：伸缩实例配额。bandwidth_scaling_policy：伸缩带宽策略配额。
-	Type *AllResourcesType `json:"type,omitempty" xml:"type"`
+	Type *AllResourcesType `json:"type,omitempty"`
 
 	// 已使用的配额数量。当type为scaling_Policy和scaling_Instance时，该字段为保留字段，返回-1。可通过查询弹性伸缩策略和伸缩实例配额查询指定弹性伸缩组下的弹性伸缩策略和伸缩实例已使用的配额数量。
-	Used *int32 `json:"used,omitempty" xml:"used"`
+	Used *int32 `json:"used,omitempty"`
 
 	// 配额总数量。
-	Quota *int32 `json:"quota,omitempty" xml:"quota"`
+	Quota *int32 `json:"quota,omitempty"`
 
 	// 配额上限。
-	Max *int32 `json:"max,omitempty" xml:"max"`
+	Max *int32 `json:"max,omitempty"`
 
 	// 配额下限。
-	Min *int32 `json:"min,omitempty" xml:"min"`
+	Min *int32 `json:"min,omitempty"`
 }
 
 func (o AllResources) String() string {

@@ -8,7 +8,7 @@ import (
 
 // 创建共享带宽请求体
 type CreateSharedBandwidhRequestBody struct {
-	Bandwidth *CreateSharedBandwidthOption `json:"bandwidth" xml:"bandwidth"`
+	Bandwidth *CreateSharedBandwidthOption `json:"bandwidth"`
 }
 
 func (o CreateSharedBandwidhRequestBody) String() string {

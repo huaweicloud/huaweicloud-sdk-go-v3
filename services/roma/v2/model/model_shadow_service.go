@@ -9,13 +9,13 @@ import (
 type ShadowService struct {
 
 	// 服务ID
-	ServiceId *int32 `json:"service_id,omitempty" xml:"service_id"`
+	ServiceId *int32 `json:"service_id,omitempty"`
 
 	// 服务名称
-	ServiceName *string `json:"service_name,omitempty" xml:"service_name"`
+	ServiceName *string `json:"service_name,omitempty"`
 
 	// 影子值
-	Properties *[]ShadowValue `json:"properties,omitempty" xml:"properties"`
+	Properties *[]ShadowValue `json:"properties,omitempty"`
 }
 
 func (o ShadowService) String() string {

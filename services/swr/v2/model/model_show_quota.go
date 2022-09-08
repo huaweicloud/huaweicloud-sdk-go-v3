@@ -9,16 +9,16 @@ import (
 type ShowQuota struct {
 
 	// 配额限制
-	QuotaLimit int32 `json:"quota_limit" xml:"quota_limit"`
+	QuotaLimit int32 `json:"quota_limit"`
 
 	// 配额类型
-	QuotaKey string `json:"quota_key" xml:"quota_key"`
+	QuotaKey string `json:"quota_key"`
 
 	// 单位
-	Unit string `json:"unit" xml:"unit"`
+	Unit string `json:"unit"`
 
 	// 已用配额
-	Used int32 `json:"used" xml:"used"`
+	Used int32 `json:"used"`
 }
 
 func (o ShowQuota) String() string {

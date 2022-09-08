@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type RunCheckResultResponse struct {
-	Result         *CheckResultResultBody `json:"result,omitempty" xml:"result"`
+	Result         *CheckResultResultBody `json:"result,omitempty"`
 	HttpStatusCode int                    `json:"-"`
 }
 

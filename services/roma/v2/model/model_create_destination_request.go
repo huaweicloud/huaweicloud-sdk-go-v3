@@ -10,12 +10,12 @@ import (
 type CreateDestinationRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 规则ID
-	RuleId string `json:"rule_id" xml:"rule_id"`
+	RuleId string `json:"rule_id"`
 
-	Body *CreateDestinationRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreateDestinationRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateDestinationRequest) String() string {

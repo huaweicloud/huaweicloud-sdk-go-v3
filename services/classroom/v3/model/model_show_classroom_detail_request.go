@@ -10,7 +10,7 @@ import (
 type ShowClassroomDetailRequest struct {
 
 	// 课堂ID
-	ClassroomId string `json:"classroom_id" xml:"classroom_id"`
+	ClassroomId string `json:"classroom_id"`
 }
 
 func (o ShowClassroomDetailRequest) String() string {

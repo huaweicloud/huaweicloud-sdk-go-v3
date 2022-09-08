@@ -8,7 +8,7 @@ import (
 
 // 批量启动边缘实例请求体。
 type BatchStartInstanceRequestBody struct {
-	OsStart *BatchStart `json:"os-start,omitempty" xml:"os-start"`
+	OsStart *BatchStart `json:"os-start,omitempty"`
 }
 
 func (o BatchStartInstanceRequestBody) String() string {

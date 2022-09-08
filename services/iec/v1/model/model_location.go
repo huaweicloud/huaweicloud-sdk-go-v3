@@ -13,28 +13,28 @@ import (
 type Location struct {
 
 	// 站点ID。
-	SiteId *string `json:"site_id,omitempty" xml:"site_id"`
+	SiteId *string `json:"site_id,omitempty"`
 
 	// 所在大区。
-	Area *string `json:"area,omitempty" xml:"area"`
+	Area *string `json:"area,omitempty"`
 
 	// 所属省份英文名称。 大小写通用，皆支持
-	Province *string `json:"province,omitempty" xml:"province"`
+	Province *string `json:"province,omitempty"`
 
 	// 所在城市英文名称。
-	City *string `json:"city,omitempty" xml:"city"`
+	City *string `json:"city,omitempty"`
 
 	// 所属运营商。
-	Operator *LocationOperator `json:"operator,omitempty" xml:"operator"`
+	Operator *LocationOperator `json:"operator,omitempty"`
 
 	// 线路ID。多线路场景下，创建的弹性公网IP在该线路下。
-	PoolId *string `json:"pool_id,omitempty" xml:"pool_id"`
+	PoolId *string `json:"pool_id,omitempty"`
 
 	// 站点需要发放的资源(组)总数。
-	StackCount *int32 `json:"stack_count,omitempty" xml:"stack_count"`
+	StackCount *int32 `json:"stack_count,omitempty"`
 
 	// 城市简称。
-	CityShortName *string `json:"city_short_name,omitempty" xml:"city_short_name"`
+	CityShortName *string `json:"city_short_name,omitempty"`
 }
 
 func (o Location) String() string {

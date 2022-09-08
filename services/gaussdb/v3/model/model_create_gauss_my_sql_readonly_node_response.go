@@ -10,16 +10,16 @@ import (
 type CreateGaussMySqlReadonlyNodeResponse struct {
 
 	// 实例ID。
-	InstanceId *string `json:"instance_id,omitempty" xml:"instance_id"`
+	InstanceId *string `json:"instance_id,omitempty"`
 
 	// 节点名称列表。
-	NodeNames *[]string `json:"node_names,omitempty" xml:"node_names"`
+	NodeNames *[]string `json:"node_names,omitempty"`
 
 	// 创建只读节点的任务id。  仅创建按需只读节点时会返回该参数。
-	JobId *string `json:"job_id,omitempty" xml:"job_id"`
+	JobId *string `json:"job_id,omitempty"`
 
 	// 订单号，创建包年包月只读节点时返回该参数。
-	OrderId        *string `json:"order_id,omitempty" xml:"order_id"`
+	OrderId        *string `json:"order_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

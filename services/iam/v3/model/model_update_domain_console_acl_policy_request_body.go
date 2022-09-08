@@ -8,7 +8,7 @@ import (
 
 //
 type UpdateDomainConsoleAclPolicyRequestBody struct {
-	ConsoleAclPolicy *AclPolicyOption `json:"console_acl_policy" xml:"console_acl_policy"`
+	ConsoleAclPolicy *AclPolicyOption `json:"console_acl_policy"`
 }
 
 func (o UpdateDomainConsoleAclPolicyRequestBody) String() string {

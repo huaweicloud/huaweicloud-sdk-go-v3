@@ -9,7 +9,7 @@ import (
 type AssetExportRequestTasks struct {
 
 	// 任务ID
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 }
 
 func (o AssetExportRequestTasks) String() string {

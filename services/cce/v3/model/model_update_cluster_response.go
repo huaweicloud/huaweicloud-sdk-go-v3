@@ -10,16 +10,16 @@ import (
 type UpdateClusterResponse struct {
 
 	// API类型，固定值“Cluster”或“cluster”，该值不可修改。
-	Kind *string `json:"kind,omitempty" xml:"kind"`
+	Kind *string `json:"kind,omitempty"`
 
 	// API版本，固定值“v3”，该值不可修改。
-	ApiVersion *string `json:"apiVersion,omitempty" xml:"apiVersion"`
+	ApiVersion *string `json:"apiVersion,omitempty"`
 
-	Metadata *ClusterMetadata `json:"metadata,omitempty" xml:"metadata"`
+	Metadata *ClusterMetadata `json:"metadata,omitempty"`
 
-	Spec *ClusterSpec `json:"spec,omitempty" xml:"spec"`
+	Spec *ClusterSpec `json:"spec,omitempty"`
 
-	Status         *ClusterStatus `json:"status,omitempty" xml:"status"`
+	Status         *ClusterStatus `json:"status,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }
 

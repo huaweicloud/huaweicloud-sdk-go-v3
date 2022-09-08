@@ -10,7 +10,7 @@ import (
 type SqlJobRun struct {
 
 	// 作业类型。DDL, DCL, IMPORT, EXPORT, QUERY, INSERT.
-	SqlType string `json:"sql_type" xml:"sql_type"`
+	SqlType string `json:"sql_type"`
 }
 
 func (o SqlJobRun) String() string {

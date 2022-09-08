@@ -10,7 +10,7 @@ import (
 type PolicyInstanceQuotas struct {
 
 	// 配额资源详情。
-	Resources *[]PolicyInstanceResources `json:"resources,omitempty" xml:"resources"`
+	Resources *[]PolicyInstanceResources `json:"resources,omitempty"`
 }
 
 func (o PolicyInstanceQuotas) String() string {

@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type BatchStopInstanceRequest struct {
-	Body *BatchStopInstanceRequestBody `json:"body,omitempty" xml:"body"`
+	Body *BatchStopInstanceRequestBody `json:"body,omitempty"`
 }
 
 func (o BatchStopInstanceRequest) String() string {

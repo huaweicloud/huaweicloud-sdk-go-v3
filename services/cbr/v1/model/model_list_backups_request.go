@@ -13,70 +13,70 @@ import (
 type ListBackupsRequest struct {
 
 	// 还原点ID
-	CheckpointId *string `json:"checkpoint_id,omitempty" xml:"checkpoint_id"`
+	CheckpointId *string `json:"checkpoint_id,omitempty"`
 
 	// 专属云
-	Dec *bool `json:"dec,omitempty" xml:"dec"`
+	Dec *bool `json:"dec,omitempty"`
 
 	// 备份产生时间范围的结束时间，格式为%YYYY-%mm-%ddT%HH:%MM:%SSZ，例如2018-02-01T12:00:00Z
-	EndTime *string `json:"end_time,omitempty" xml:"end_time"`
+	EndTime *string `json:"end_time,omitempty"`
 
 	// 备份类型
-	ImageType *ListBackupsRequestImageType `json:"image_type,omitempty" xml:"image_type"`
+	ImageType *ListBackupsRequestImageType `json:"image_type,omitempty"`
 
 	// 每页显示的条目数量，正整数
-	Limit *int32 `json:"limit,omitempty" xml:"limit"`
+	Limit *int32 `json:"limit,omitempty"`
 
 	// 上一次查询最后一条的id
-	Marker *string `json:"marker,omitempty" xml:"marker"`
+	Marker *string `json:"marker,omitempty"`
 
 	// 名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 偏移值，正整数
-	Offset *int32 `json:"offset,omitempty" xml:"offset"`
+	Offset *int32 `json:"offset,omitempty"`
 
 	// 支持按az来过滤
-	ResourceAz *string `json:"resource_az,omitempty" xml:"resource_az"`
+	ResourceAz *string `json:"resource_az,omitempty"`
 
 	// 资源ID
-	ResourceId *string `json:"resource_id,omitempty" xml:"resource_id"`
+	ResourceId *string `json:"resource_id,omitempty"`
 
 	// 资源名称
-	ResourceName *string `json:"resource_name,omitempty" xml:"resource_name"`
+	ResourceName *string `json:"resource_name,omitempty"`
 
 	// 资源类型
-	ResourceType *ListBackupsRequestResourceType `json:"resource_type,omitempty" xml:"resource_type"`
+	ResourceType *ListBackupsRequestResourceType `json:"resource_type,omitempty"`
 
 	// sort的内容为一组由逗号分隔的属性及可选排序方向组成，形如<key1>[:<direction>],<key2>[:<direction>],其中direction的取值为asc (升序) 或 desc (降序),如没有传入direction参数，默认为降序，sort内容的长度限制为255个字符。key取值范围:[created_at，updated_at，name，status，protected_at，id]
-	Sort *string `json:"sort,omitempty" xml:"sort"`
+	Sort *string `json:"sort,omitempty"`
 
 	// 备份产生时间范围的开始时间，格式为%YYYY-%mm-%ddT%HH:%MM:%SSZ，例如2018-02-01T12:00:00Z
-	StartTime *string `json:"start_time,omitempty" xml:"start_time"`
+	StartTime *string `json:"start_time,omitempty"`
 
 	// 状态。 调用API时，支持通过传多个status值进行过滤。例如：status=available&status=error
-	Status *ListBackupsRequestStatus `json:"status,omitempty" xml:"status"`
+	Status *ListBackupsRequestStatus `json:"status,omitempty"`
 
 	// 存储库ID
-	VaultId *string `json:"vault_id,omitempty" xml:"vault_id"`
+	VaultId *string `json:"vault_id,omitempty"`
 
 	// 企业项目id或all_granted_eps，all_granted_eps表示查询用户有权限的所有企业项目id
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 持有类型，私有的private/共享的shared/全部all_granted，默认只查询private。
-	OwnType *ListBackupsRequestOwnType `json:"own_type,omitempty" xml:"own_type"`
+	OwnType *ListBackupsRequestOwnType `json:"own_type,omitempty"`
 
 	// 共享状态
-	MemberStatus *ListBackupsRequestMemberStatus `json:"member_status,omitempty" xml:"member_status"`
+	MemberStatus *ListBackupsRequestMemberStatus `json:"member_status,omitempty"`
 
 	// 父备份ID
-	ParentId *string `json:"parent_id,omitempty" xml:"parent_id"`
+	ParentId *string `json:"parent_id,omitempty"`
 
 	// 根据存储库使用率过滤备份，取值范围 [1, 100]，含1和100。例如，used_percent=80，表示筛选所属存储库使用率大于等于80%的所有备份。
-	UsedPercent *string `json:"used_percent,omitempty" xml:"used_percent"`
+	UsedPercent *string `json:"used_percent,omitempty"`
 
 	// 是否返回复制记录
-	ShowReplication *bool `json:"show_replication,omitempty" xml:"show_replication"`
+	ShowReplication *bool `json:"show_replication,omitempty"`
 }
 
 func (o ListBackupsRequest) String() string {

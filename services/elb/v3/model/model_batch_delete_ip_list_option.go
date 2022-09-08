@@ -10,7 +10,7 @@ import (
 type BatchDeleteIpListOption struct {
 
 	// IP列表。
-	IpList *[]IpGroupIp `json:"ip_list,omitempty" xml:"ip_list"`
+	IpList *[]IpGroupIp `json:"ip_list,omitempty"`
 }
 
 func (o BatchDeleteIpListOption) String() string {

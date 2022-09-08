@@ -9,25 +9,25 @@ import (
 type EntityConfigurationParametersResult struct {
 
 	// 参数名称。
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 参数值。
-	Value string `json:"value" xml:"value"`
+	Value string `json:"value"`
 
 	// 参数值范围。示例：Integer类型取值范围为0~1、Boolean类型取值为“true”或“false”。
-	ValueRange string `json:"value_range" xml:"value_range"`
+	ValueRange string `json:"value_range"`
 
 	// 参数是否需要重启。 - 取值为“true”，需要重启。 - 取值为“false”，不需要重启。
-	RestartRequired bool `json:"restart_required" xml:"restart_required"`
+	RestartRequired bool `json:"restart_required"`
 
 	// 是否只读。 - 取值为“false”，非只读参数。 - 取值为“true”，只读参数。
-	Readonly bool `json:"readonly" xml:"readonly"`
+	Readonly bool `json:"readonly"`
 
 	// 参数类型，取值为“integer”，“string”，“boolean”，“float”或“list”。
-	Type string `json:"type" xml:"type"`
+	Type string `json:"type"`
 
 	// 参数描述。
-	Description string `json:"description" xml:"description"`
+	Description string `json:"description"`
 }
 
 func (o EntityConfigurationParametersResult) String() string {

@@ -10,9 +10,9 @@ import (
 type ResizeGraphRequest struct {
 
 	// 图ID。
-	GraphId string `json:"graph_id" xml:"graph_id"`
+	GraphId string `json:"graph_id"`
 
-	Body *ResizeGraphReq `json:"body,omitempty" xml:"body"`
+	Body *ResizeGraphReq `json:"body,omitempty"`
 }
 
 func (o ResizeGraphRequest) String() string {

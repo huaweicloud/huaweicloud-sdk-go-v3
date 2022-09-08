@@ -10,7 +10,7 @@ import (
 type UpdateFloatingIpOption struct {
 
 	// 端口id。
-	PortId *string `json:"port_id,omitempty" xml:"port_id"`
+	PortId *string `json:"port_id,omitempty"`
 }
 
 func (o UpdateFloatingIpOption) String() string {

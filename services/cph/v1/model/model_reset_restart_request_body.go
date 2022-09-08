@@ -9,10 +9,10 @@ import (
 type ResetRestartRequestBody struct {
 
 	// 云手机镜像
-	ImageId *string `json:"image_id,omitempty" xml:"image_id"`
+	ImageId *string `json:"image_id,omitempty"`
 
 	// 云手机列表
-	Phones []ResetRestartRequestBodyPhones `json:"phones" xml:"phones"`
+	Phones []ResetRestartRequestBodyPhones `json:"phones"`
 }
 
 func (o ResetRestartRequestBody) String() string {

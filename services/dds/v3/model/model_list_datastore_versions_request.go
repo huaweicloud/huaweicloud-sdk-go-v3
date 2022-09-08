@@ -13,7 +13,7 @@ import (
 type ListDatastoreVersionsRequest struct {
 
 	// 数据库版本类型。取值为“DDS-Community”。
-	DatastoreName ListDatastoreVersionsRequestDatastoreName `json:"datastore_name" xml:"datastore_name"`
+	DatastoreName ListDatastoreVersionsRequestDatastoreName `json:"datastore_name"`
 }
 
 func (o ListDatastoreVersionsRequest) String() string {

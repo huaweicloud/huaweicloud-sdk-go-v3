@@ -13,10 +13,10 @@ import (
 type CdmStopClusterReqStop struct {
 
 	// 关机类型： - IMMEDIATELY：立即关机。 - GRACEFULLY：优雅关机。
-	StopMode CdmStopClusterReqStopStopMode `json:"stopMode" xml:"stopMode"`
+	StopMode CdmStopClusterReqStopStopMode `json:"stopMode"`
 
 	// 关机时延，仅在stopMode为“GRACEFULLY”生效，单位：秒。该值为-1时，表示等待所有作业完成，并停止接受新作业。该值为大于0的任意值表示等待该时长后关机，并停止接受新作业。
-	DelayTime *int32 `json:"delayTime,omitempty" xml:"delayTime"`
+	DelayTime *int32 `json:"delayTime,omitempty"`
 }
 
 func (o CdmStopClusterReqStop) String() string {

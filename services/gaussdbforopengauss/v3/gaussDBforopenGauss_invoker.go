@@ -341,6 +341,18 @@ func (i *ShowInstanceConfigurationInvoker) Invoke() (*model.ShowInstanceConfigur
 	}
 }
 
+type ShowJobDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowJobDetailInvoker) Invoke() (*model.ShowJobDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowJobDetailResponse), nil
+	}
+}
+
 type SwitchShardInvoker struct {
 	*invoker.BaseInvoker
 }

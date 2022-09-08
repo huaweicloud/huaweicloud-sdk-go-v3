@@ -13,28 +13,28 @@ import (
 type CreateUserResponse struct {
 
 	// 用户名。
-	AccessKey *string `json:"access_key,omitempty" xml:"access_key"`
+	AccessKey *string `json:"access_key,omitempty"`
 
 	// 密钥。
-	SecretKey *string `json:"secret_key,omitempty" xml:"secret_key"`
+	SecretKey *string `json:"secret_key,omitempty"`
 
 	// IP白名单。
-	WhiteRemoteAddress *string `json:"white_remote_address,omitempty" xml:"white_remote_address"`
+	WhiteRemoteAddress *string `json:"white_remote_address,omitempty"`
 
 	// 是否为管理员。
-	Admin *bool `json:"admin,omitempty" xml:"admin"`
+	Admin *bool `json:"admin,omitempty"`
 
 	// 默认的主题权限。
-	DefaultTopicPerm *CreateUserResponseDefaultTopicPerm `json:"default_topic_perm,omitempty" xml:"default_topic_perm"`
+	DefaultTopicPerm *CreateUserResponseDefaultTopicPerm `json:"default_topic_perm,omitempty"`
 
 	// 默认的消费组权限。
-	DefaultGroupPerm *CreateUserResponseDefaultGroupPerm `json:"default_group_perm,omitempty" xml:"default_group_perm"`
+	DefaultGroupPerm *CreateUserResponseDefaultGroupPerm `json:"default_group_perm,omitempty"`
 
 	// 特殊的主题权限。
-	TopicPerms *[]UserTopicPerms `json:"topic_perms,omitempty" xml:"topic_perms"`
+	TopicPerms *[]UserTopicPerms `json:"topic_perms,omitempty"`
 
 	// 特殊的消费组权限。
-	GroupPerms     *[]UserGroupPerms `json:"group_perms,omitempty" xml:"group_perms"`
+	GroupPerms     *[]UserGroupPerms `json:"group_perms,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }
 

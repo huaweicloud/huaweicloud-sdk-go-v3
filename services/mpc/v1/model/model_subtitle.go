@@ -7,13 +7,13 @@ import (
 )
 
 type Subtitle struct {
-	Input *ObsObjInfo `json:"input,omitempty" xml:"input"`
+	Input *ObsObjInfo `json:"input,omitempty"`
 
 	// 多字幕文件地址。
-	Inputs *[]MulInputFileInfo `json:"inputs,omitempty" xml:"inputs"`
+	Inputs *[]MulInputFileInfo `json:"inputs,omitempty"`
 
 	// 字幕类型。取值如下：  - 0，表示不输出字幕 - 1，表示外部字幕文件嵌入视频流 - 2，表示输出WebVTT格式字幕
-	SubtitleType *int32 `json:"subtitle_type,omitempty" xml:"subtitle_type"`
+	SubtitleType *int32 `json:"subtitle_type,omitempty"`
 }
 
 func (o Subtitle) String() string {

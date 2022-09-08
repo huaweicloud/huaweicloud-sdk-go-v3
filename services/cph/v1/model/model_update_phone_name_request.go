@@ -10,9 +10,9 @@ import (
 type UpdatePhoneNameRequest struct {
 
 	// 云手机id。
-	PhoneId string `json:"phone_id" xml:"phone_id"`
+	PhoneId string `json:"phone_id"`
 
-	Body *UpdatePhoneNameRequestBody `json:"body,omitempty" xml:"body"`
+	Body *UpdatePhoneNameRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdatePhoneNameRequest) String() string {

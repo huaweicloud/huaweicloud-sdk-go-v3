@@ -9,16 +9,16 @@ import (
 type ResetMessagesReq struct {
 
 	// topic名称。
-	Topic string `json:"topic" xml:"topic"`
+	Topic string `json:"topic"`
 
 	// 分区。
-	Partition int32 `json:"partition" xml:"partition"`
+	Partition int32 `json:"partition"`
 
 	// 消息偏移量。
-	MessageOffset float32 `json:"message_offset" xml:"message_offset"`
+	MessageOffset float32 `json:"message_offset"`
 
 	// 应用key。在该消息头中添加一个consumer_key的消息头。
-	ConsumerKey *string `json:"consumer_key,omitempty" xml:"consumer_key"`
+	ConsumerKey *string `json:"consumer_key,omitempty"`
 }
 
 func (o ResetMessagesReq) String() string {

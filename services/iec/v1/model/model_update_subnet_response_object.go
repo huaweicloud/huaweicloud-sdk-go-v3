@@ -13,10 +13,10 @@ import (
 type UpdateSubnetResponseObject struct {
 
 	// 子网ID
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 子网的状态  取值范围： - ACTIVE：表示子网已挂载到ROUTER上 - UNKNOWN：表示子网还未挂载到ROUTER上 - ERROR：表示子网状态故障
-	Status *UpdateSubnetResponseObjectStatus `json:"status,omitempty" xml:"status"`
+	Status *UpdateSubnetResponseObjectStatus `json:"status,omitempty"`
 }
 
 func (o UpdateSubnetResponseObject) String() string {

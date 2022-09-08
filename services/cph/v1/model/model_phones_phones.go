@@ -9,10 +9,10 @@ import (
 type PhonesPhones struct {
 
 	// 云手机id
-	PhoneId string `json:"phone_id" xml:"phone_id"`
+	PhoneId string `json:"phone_id"`
 
 	// 云手机属性列表
-	Property string `json:"property" xml:"property"`
+	Property string `json:"property"`
 }
 
 func (o PhonesPhones) String() string {

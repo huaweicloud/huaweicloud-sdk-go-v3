@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowFaceSetResponse struct {
-	FaceSetInfo    *FaceSetInfo `json:"face_set_info,omitempty" xml:"face_set_info"`
+	FaceSetInfo    *FaceSetInfo `json:"face_set_info,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }
 

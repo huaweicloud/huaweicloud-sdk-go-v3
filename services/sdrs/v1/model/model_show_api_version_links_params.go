@@ -10,10 +10,10 @@ import (
 type ShowApiVersionLinksParams struct {
 
 	// 链接的描述
-	Rel string `json:"rel" xml:"rel"`
+	Rel string `json:"rel"`
 
 	// 版本号查询链接
-	Href string `json:"href" xml:"href"`
+	Href string `json:"href"`
 }
 
 func (o ShowApiVersionLinksParams) String() string {

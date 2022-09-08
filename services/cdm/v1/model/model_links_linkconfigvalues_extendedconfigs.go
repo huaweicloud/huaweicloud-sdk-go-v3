@@ -10,10 +10,10 @@ import (
 type LinksLinkconfigvaluesExtendedconfigs struct {
 
 	// 名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 值
-	Value *string `json:"value,omitempty" xml:"value"`
+	Value *string `json:"value,omitempty"`
 }
 
 func (o LinksLinkconfigvaluesExtendedconfigs) String() string {

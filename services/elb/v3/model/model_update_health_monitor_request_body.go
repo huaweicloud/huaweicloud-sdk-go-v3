@@ -8,7 +8,7 @@ import (
 
 // This is a auto create Body Object
 type UpdateHealthMonitorRequestBody struct {
-	Healthmonitor *UpdateHealthMonitorOption `json:"healthmonitor" xml:"healthmonitor"`
+	Healthmonitor *UpdateHealthMonitorOption `json:"healthmonitor"`
 }
 
 func (o UpdateHealthMonitorRequestBody) String() string {

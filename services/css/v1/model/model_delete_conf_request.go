@@ -10,9 +10,9 @@ import (
 type DeleteConfRequest struct {
 
 	// 指定删除配置文件的集群ID。
-	ClusterId string `json:"cluster_id" xml:"cluster_id"`
+	ClusterId string `json:"cluster_id"`
 
-	Body *DeleteConfReq `json:"body,omitempty" xml:"body"`
+	Body *DeleteConfReq `json:"body,omitempty"`
 }
 
 func (o DeleteConfRequest) String() string {

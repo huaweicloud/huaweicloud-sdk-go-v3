@@ -10,16 +10,16 @@ import (
 type ShowDepartmentResponse struct {
 
 	// 部门编码
-	DeptCode *string `json:"deptCode,omitempty" xml:"deptCode"`
+	DeptCode *string `json:"deptCode,omitempty"`
 
 	// 部门名称
-	DeptName *string `json:"deptName,omitempty" xml:"deptName"`
+	DeptName *string `json:"deptName,omitempty"`
 
 	// 是否为叶子节点（没有子部门的称为叶子节点）
-	IsLeafNodes *bool `json:"isLeafNodes,omitempty" xml:"isLeafNodes"`
+	IsLeafNodes *bool `json:"isLeafNodes,omitempty"`
 
 	// 子部门详情
-	ChildDepts     *[]ChildDeptDto `json:"childDepts,omitempty" xml:"childDepts"`
+	ChildDepts     *[]ChildDeptDto `json:"childDepts,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }
 

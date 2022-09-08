@@ -9,9 +9,9 @@ import (
 type TemplateInfo struct {
 
 	// 转码模板ID。
-	TemplateId *int32 `json:"template_id,omitempty" xml:"template_id"`
+	TemplateId *int32 `json:"template_id,omitempty"`
 
-	Template *QueryTransTemplate `json:"template,omitempty" xml:"template"`
+	Template *QueryTransTemplate `json:"template,omitempty"`
 }
 
 func (o TemplateInfo) String() string {

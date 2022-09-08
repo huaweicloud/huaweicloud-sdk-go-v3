@@ -10,9 +10,9 @@ import (
 type ShowMetricValueRequest struct {
 
 	// 资产ID
-	AssetId string `json:"asset_id" xml:"asset_id"`
+	AssetId string `json:"asset_id"`
 
-	Body *GetMetricsValue `json:"body,omitempty" xml:"body"`
+	Body *GetMetricsValue `json:"body,omitempty"`
 }
 
 func (o ShowMetricValueRequest) String() string {

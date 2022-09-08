@@ -10,7 +10,7 @@ import (
 type BatchDeleteJobReq struct {
 
 	// 批量结束与删除任务请求列表
-	Jobs []DeleteJobReq `json:"jobs" xml:"jobs"`
+	Jobs []DeleteJobReq `json:"jobs"`
 }
 
 func (o BatchDeleteJobReq) String() string {

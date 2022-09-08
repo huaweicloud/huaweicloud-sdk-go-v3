@@ -10,9 +10,9 @@ import (
 type CheckApiGroupsV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
-	Body *ApiGroupCheck `json:"body,omitempty" xml:"body"`
+	Body *ApiGroupCheck `json:"body,omitempty"`
 }
 
 func (o CheckApiGroupsV2Request) String() string {

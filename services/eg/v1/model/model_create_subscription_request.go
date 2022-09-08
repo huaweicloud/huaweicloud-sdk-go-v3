@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateSubscriptionRequest struct {
-	Body *SubscriptionCreateReq `json:"body,omitempty" xml:"body"`
+	Body *SubscriptionCreateReq `json:"body,omitempty"`
 }
 
 func (o CreateSubscriptionRequest) String() string {

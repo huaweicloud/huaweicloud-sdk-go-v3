@@ -10,10 +10,10 @@ import (
 type UpdateCaseRequestBody struct {
 
 	// contents
-	Contents *[]CaseInfo `json:"contents,omitempty" xml:"contents"`
+	Contents *[]CaseInfo `json:"contents,omitempty"`
 
 	// for_loop_params
-	ForLoopParams *[]interface{} `json:"for_loop_params,omitempty" xml:"for_loop_params"`
+	ForLoopParams *[]interface{} `json:"for_loop_params,omitempty"`
 }
 
 func (o UpdateCaseRequestBody) String() string {

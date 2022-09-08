@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type RecognizeWebImageResponse struct {
-	Result         *WebImageResult `json:"result,omitempty" xml:"result"`
+	Result         *WebImageResult `json:"result,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }
 

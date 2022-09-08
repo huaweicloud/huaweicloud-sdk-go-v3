@@ -9,13 +9,13 @@ import (
 type ConfigItem struct {
 
 	// 配置项名称
-	ConfigName *string `json:"config_name,omitempty" xml:"config_name"`
+	ConfigName *string `json:"config_name,omitempty"`
 
 	// 配置项值
-	ConfigValue *string `json:"config_value,omitempty" xml:"config_value"`
+	ConfigValue *string `json:"config_value,omitempty"`
 
 	// 是否重写
-	ShouldOverride *bool `json:"should_override,omitempty" xml:"should_override"`
+	ShouldOverride *bool `json:"should_override,omitempty"`
 }
 
 func (o ConfigItem) String() string {

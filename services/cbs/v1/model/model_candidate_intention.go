@@ -10,10 +10,10 @@ import (
 type CandidateIntention struct {
 
 	// 候选意图。
-	CandidateIntention string `json:"candidate_intention" xml:"candidate_intention"`
+	CandidateIntention string `json:"candidate_intention"`
 
 	// 候选意图置信度。
-	CandidateConfidence float64 `json:"candidate_confidence" xml:"candidate_confidence"`
+	CandidateConfidence float64 `json:"candidate_confidence"`
 }
 
 func (o CandidateIntention) String() string {

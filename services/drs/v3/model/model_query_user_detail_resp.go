@@ -10,37 +10,37 @@ import (
 type QueryUserDetailResp struct {
 
 	// 用户账户id。
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 账户。
-	Account *string `json:"account,omitempty" xml:"account"`
+	Account *string `json:"account,omitempty"`
 
 	// 说明。
-	Comment *string `json:"comment,omitempty" xml:"comment"`
+	Comment *string `json:"comment,omitempty"`
 
 	// 是否支持迁移
-	IsTransfer *bool `json:"is_transfer,omitempty" xml:"is_transfer"`
+	IsTransfer *bool `json:"is_transfer,omitempty"`
 
 	// 权限
-	Privileges *[]string `json:"privileges,omitempty" xml:"privileges"`
+	Privileges *[]string `json:"privileges,omitempty"`
 
 	// 密码。
-	Password *string `json:"password,omitempty" xml:"password"`
+	Password *string `json:"password,omitempty"`
 
 	// 账号拥有的角色
-	Roles *[]string `json:"roles,omitempty" xml:"roles"`
+	Roles *[]string `json:"roles,omitempty"`
 
 	// 是否选择。
-	Selected *bool `json:"selected,omitempty" xml:"selected"`
+	Selected *bool `json:"selected,omitempty"`
 
 	// 无法同步的用户权限
-	NoPrivileges *string `json:"no_privileges,omitempty" xml:"no_privileges"`
+	NoPrivileges *string `json:"no_privileges,omitempty"`
 
 	// 父用户
-	ParentAccount *string `json:"parent_account,omitempty" xml:"parent_account"`
+	ParentAccount *string `json:"parent_account,omitempty"`
 
 	// 无法同步父子关系的父用户
-	NoParentAccount *string `json:"no_parent_account,omitempty" xml:"no_parent_account"`
+	NoParentAccount *string `json:"no_parent_account,omitempty"`
 }
 
 func (o QueryUserDetailResp) String() string {

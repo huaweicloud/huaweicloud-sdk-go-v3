@@ -13,10 +13,10 @@ import (
 type DeleteInstanceRequest struct {
 
 	// DDM实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 是否同时删除关联后端数据库实例上存储的数据。  - 取值为空或“true”：删除。 - 取值为“false”：不删除。 默认值为空。
-	DeleteRdsData *DeleteInstanceRequestDeleteRdsData `json:"delete_rds_data,omitempty" xml:"delete_rds_data"`
+	DeleteRdsData *DeleteInstanceRequestDeleteRdsData `json:"delete_rds_data,omitempty"`
 }
 
 func (o DeleteInstanceRequest) String() string {

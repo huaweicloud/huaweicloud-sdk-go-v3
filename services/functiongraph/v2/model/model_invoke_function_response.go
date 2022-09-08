@@ -10,18 +10,18 @@ import (
 type InvokeFunctionResponse struct {
 
 	// 请求ID。
-	RequestId *string `json:"request_id,omitempty" xml:"request_id"`
+	RequestId *string `json:"request_id,omitempty"`
 
 	// 函数执行结果
-	Result *string `json:"result,omitempty" xml:"result"`
+	Result *string `json:"result,omitempty"`
 
 	// 函数执行返回日志
-	Log *string `json:"log,omitempty" xml:"log"`
+	Log *string `json:"log,omitempty"`
 
 	// 函数执行返回状态
-	Status *int32 `json:"status,omitempty" xml:"status"`
+	Status *int32 `json:"status,omitempty"`
 
-	XCffRequestId  *string `json:"X-Cff-Request-Id,omitempty" xml:"X-Cff-Request-Id"`
+	XCffRequestId  *string `json:"X-Cff-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

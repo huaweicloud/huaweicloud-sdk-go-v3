@@ -10,16 +10,16 @@ import (
 type RunRequestV2 struct {
 
 	// 该任务对应临时仓库有权限的用户名
-	Username *string `json:"username,omitempty" xml:"username"`
+	Username *string `json:"username,omitempty"`
 
 	// 该任务对应临时仓库有权限的用户token
-	AccessToken *string `json:"access_token,omitempty" xml:"access_token"`
+	AccessToken *string `json:"access_token,omitempty"`
 
 	// 该任务对应的临时仓库地址
-	GitUrl *string `json:"git_url,omitempty" xml:"git_url"`
+	GitUrl *string `json:"git_url,omitempty"`
 
 	// 该任务对应的临时仓库分支
-	GitBranch *string `json:"git_branch,omitempty" xml:"git_branch"`
+	GitBranch *string `json:"git_branch,omitempty"`
 }
 
 func (o RunRequestV2) String() string {

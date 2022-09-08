@@ -9,40 +9,40 @@ import (
 type UpdateEdgeAppVersionDto struct {
 
 	// 应用描述
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 部署类型docker|process
-	DeployType *string `json:"deploy_type,omitempty" xml:"deploy_type"`
+	DeployType *string `json:"deploy_type,omitempty"`
 
 	// 是否允许部署多实例
-	DeployMultiInstance *bool `json:"deploy_multi_instance,omitempty" xml:"deploy_multi_instance"`
+	DeployMultiInstance *bool `json:"deploy_multi_instance,omitempty"`
 
-	ContainerSettings *ContainerSettingsDto `json:"container_settings,omitempty" xml:"container_settings"`
+	ContainerSettings *ContainerSettingsDto `json:"container_settings,omitempty"`
 
-	LivenessProbe *ProbeDto `json:"liveness_probe,omitempty" xml:"liveness_probe"`
+	LivenessProbe *ProbeDto `json:"liveness_probe,omitempty"`
 
-	ReadinessProbe *ProbeDto `json:"readiness_probe,omitempty" xml:"readiness_probe"`
+	ReadinessProbe *ProbeDto `json:"readiness_probe,omitempty"`
 
 	// 应用集成的边缘升得快版本
-	SdkVersion *string `json:"sdk_version,omitempty" xml:"sdk_version"`
+	SdkVersion *string `json:"sdk_version,omitempty"`
 
 	// 架构
-	Arch *interface{} `json:"arch,omitempty" xml:"arch"`
+	Arch *interface{} `json:"arch,omitempty"`
 
 	// 启动命令
-	Command *interface{} `json:"command,omitempty" xml:"command"`
+	Command *interface{} `json:"command,omitempty"`
 
 	// 启动参数
-	Args *interface{} `json:"args,omitempty" xml:"args"`
+	Args *interface{} `json:"args,omitempty"`
 
 	// 应用输出路由端点
-	Outputs *interface{} `json:"outputs,omitempty" xml:"outputs"`
+	Outputs *interface{} `json:"outputs,omitempty"`
 
 	// 应用输入路由
-	Inputs *interface{} `json:"inputs,omitempty" xml:"inputs"`
+	Inputs *interface{} `json:"inputs,omitempty"`
 
 	// 应用实现的服务列表
-	Services *interface{} `json:"services,omitempty" xml:"services"`
+	Services *interface{} `json:"services,omitempty"`
 }
 
 func (o UpdateEdgeAppVersionDto) String() string {

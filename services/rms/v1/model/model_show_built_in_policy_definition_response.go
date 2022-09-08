@@ -10,28 +10,31 @@ import (
 type ShowBuiltInPolicyDefinitionResponse struct {
 
 	// 策略id
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 策略名字
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 策略类型
-	PolicyType *string `json:"policy_type,omitempty" xml:"policy_type"`
+	PolicyType *string `json:"policy_type,omitempty"`
 
 	// 策略描述
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 策略语法类型
-	PolicyRuleType *string `json:"policy_rule_type,omitempty" xml:"policy_rule_type"`
+	PolicyRuleType *string `json:"policy_rule_type,omitempty"`
 
 	// 策略规则
-	PolicyRule *interface{} `json:"policy_rule,omitempty" xml:"policy_rule"`
+	PolicyRule *interface{} `json:"policy_rule,omitempty"`
+
+	// 触发器类型，可选值：resource, period
+	TriggerType *string `json:"trigger_type,omitempty"`
 
 	// 关键词列表
-	Keywords *[]string `json:"keywords,omitempty" xml:"keywords"`
+	Keywords *[]string `json:"keywords,omitempty"`
 
 	// 策略参数
-	Parameters     map[string]PolicyParameterDefinition `json:"parameters,omitempty" xml:"parameters"`
+	Parameters     map[string]PolicyParameterDefinition `json:"parameters,omitempty"`
 	HttpStatusCode int                                  `json:"-"`
 }
 

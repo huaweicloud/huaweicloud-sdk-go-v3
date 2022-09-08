@@ -10,7 +10,7 @@ import (
 type ShowBaremetalServerVolumeInfoResponse struct {
 
 	// 裸金属服务器挂载信息列表，详情请参见表2 volumeAttachments字段数据结构说明。
-	VolumeAttachments *[]VolumeAttachments `json:"volumeAttachments,omitempty" xml:"volumeAttachments"`
+	VolumeAttachments *[]VolumeAttachments `json:"volumeAttachments,omitempty"`
 	HttpStatusCode    int                  `json:"-"`
 }
 

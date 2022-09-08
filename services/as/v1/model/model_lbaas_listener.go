@@ -10,16 +10,16 @@ import (
 type LbaasListener struct {
 
 	// 监听器ID。
-	ListenerId *string `json:"listener_id,omitempty" xml:"listener_id"`
+	ListenerId *string `json:"listener_id,omitempty"`
 
 	// 后端云服务器组ID。
-	PoolId *string `json:"pool_id,omitempty" xml:"pool_id"`
+	PoolId *string `json:"pool_id,omitempty"`
 
 	// 后端协议端口，指后端云服务器监听的端口。
-	ProtocolPort *int32 `json:"protocol_port,omitempty" xml:"protocol_port"`
+	ProtocolPort *int32 `json:"protocol_port,omitempty"`
 
 	// 权重，指后端云服务器分发得到请求的数量比例。
-	Weight *int32 `json:"weight,omitempty" xml:"weight"`
+	Weight *int32 `json:"weight,omitempty"`
 }
 
 func (o LbaasListener) String() string {

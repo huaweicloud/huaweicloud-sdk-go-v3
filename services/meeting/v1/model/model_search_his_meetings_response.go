@@ -10,16 +10,16 @@ import (
 type SearchHisMeetingsResponse struct {
 
 	// 第几条。
-	Offset *int32 `json:"offset,omitempty" xml:"offset"`
+	Offset *int32 `json:"offset,omitempty"`
 
 	// 每页的记录数。
-	Limit *int32 `json:"limit,omitempty" xml:"limit"`
+	Limit *int32 `json:"limit,omitempty"`
 
 	// 总记录数。
-	Count *int32 `json:"count,omitempty" xml:"count"`
+	Count *int32 `json:"count,omitempty"`
 
 	// 会议信息列表。
-	Data           *[]ConferenceInfo `json:"data,omitempty" xml:"data"`
+	Data           *[]ConferenceInfo `json:"data,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }
 

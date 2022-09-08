@@ -13,9 +13,9 @@ import (
 type BatchShowParamsRequest struct {
 
 	// 请求语言类型
-	XLanguage *BatchShowParamsRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *BatchShowParamsRequestXLanguage `json:"X-Language,omitempty"`
 
-	Body *BatchQueryParamReq `json:"body,omitempty" xml:"body"`
+	Body *BatchQueryParamReq `json:"body,omitempty"`
 }
 
 func (o BatchShowParamsRequest) String() string {

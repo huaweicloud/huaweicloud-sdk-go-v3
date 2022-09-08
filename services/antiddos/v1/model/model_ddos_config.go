@@ -10,19 +10,19 @@ import (
 type DdosConfig struct {
 
 	// 是否开启L7层防护
-	EnableL7 bool `json:"enable_L7" xml:"enable_L7"`
+	EnableL7 bool `json:"enable_L7"`
 
 	// 流量分段ID，取值范围：1～9
-	TrafficPosId int64 `json:"traffic_pos_id" xml:"traffic_pos_id"`
+	TrafficPosId int64 `json:"traffic_pos_id"`
 
 	// HTTP请求数分段ID，取值范围：1～15
-	HttpRequestPosId int64 `json:"http_request_pos_id" xml:"http_request_pos_id"`
+	HttpRequestPosId int64 `json:"http_request_pos_id"`
 
 	// 清洗时访问限制分段ID，取值范围：1～8
-	CleaningAccessPosId int64 `json:"cleaning_access_pos_id" xml:"cleaning_access_pos_id"`
+	CleaningAccessPosId int64 `json:"cleaning_access_pos_id"`
 
 	// 应用类型ID，可选取值： - 0 - 1
-	AppTypeId int64 `json:"app_type_id" xml:"app_type_id"`
+	AppTypeId int64 `json:"app_type_id"`
 }
 
 func (o DdosConfig) String() string {

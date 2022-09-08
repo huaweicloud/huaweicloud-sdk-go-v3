@@ -12,10 +12,10 @@ import (
 type BatchCreateClusterTagsReq struct {
 
 	// 操作标识：仅限于create（创建）。
-	Action BatchCreateClusterTagsReqAction `json:"action" xml:"action"`
+	Action BatchCreateClusterTagsReqAction `json:"action"`
 
 	// 标签列表。
-	Tags []Tag `json:"tags" xml:"tags"`
+	Tags []Tag `json:"tags"`
 }
 
 func (o BatchCreateClusterTagsReq) String() string {

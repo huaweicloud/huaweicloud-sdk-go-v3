@@ -10,10 +10,10 @@ import (
 type ListRestoreDatabasesResponse struct {
 
 	// 数据库总数。
-	TotalCount *int32 `json:"total_count,omitempty" xml:"total_count"`
+	TotalCount *int32 `json:"total_count,omitempty"`
 
 	// 数据库列表，列表中每个元素表示一个数据库。
-	Databases      *[]string `json:"databases,omitempty" xml:"databases"`
+	Databases      *[]string `json:"databases,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }
 

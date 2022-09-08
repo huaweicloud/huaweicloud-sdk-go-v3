@@ -13,9 +13,9 @@ import (
 type CreateInstanceRequest struct {
 
 	// 语言
-	XLanguage *CreateInstanceRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *CreateInstanceRequestXLanguage `json:"X-Language,omitempty"`
 
-	Body *InstanceRequest `json:"body,omitempty" xml:"body"`
+	Body *InstanceRequest `json:"body,omitempty"`
 }
 
 func (o CreateInstanceRequest) String() string {

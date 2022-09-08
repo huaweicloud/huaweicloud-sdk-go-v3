@@ -9,10 +9,10 @@ import (
 type Nics struct {
 
 	// 边缘节点网卡名称
-	Interface *string `json:"interface,omitempty" xml:"interface"`
+	Interface *string `json:"interface,omitempty"`
 
 	// 上述网卡对应的IPv4地址
-	Ip *string `json:"ip,omitempty" xml:"ip"`
+	Ip *string `json:"ip,omitempty"`
 }
 
 func (o Nics) String() string {

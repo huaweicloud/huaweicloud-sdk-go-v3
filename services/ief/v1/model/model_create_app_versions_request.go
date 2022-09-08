@@ -10,12 +10,12 @@ import (
 type CreateAppVersionsRequest struct {
 
 	// 铂金版实例ID，专业版实例为空值
-	IefInstanceId *string `json:"ief-instance-id,omitempty" xml:"ief-instance-id"`
+	IefInstanceId *string `json:"ief-instance-id,omitempty"`
 
 	// 应用模板ID
-	AppId string `json:"app_id" xml:"app_id"`
+	AppId string `json:"app_id"`
 
-	Body *Version `json:"body,omitempty" xml:"body"`
+	Body *Version `json:"body,omitempty"`
 }
 
 func (o CreateAppVersionsRequest) String() string {

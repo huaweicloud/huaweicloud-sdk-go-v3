@@ -9,10 +9,10 @@ import (
 type StacksTags struct {
 
 	// 技术栈列表
-	StackList *[]StackInfo `json:"stack_list,omitempty" xml:"stack_list"`
+	StackList *[]StackInfo `json:"stack_list,omitempty"`
 
 	// 技术栈tag集合
-	Tags *[]string `json:"tags,omitempty" xml:"tags"`
+	Tags *[]string `json:"tags,omitempty"`
 }
 
 func (o StacksTags) String() string {

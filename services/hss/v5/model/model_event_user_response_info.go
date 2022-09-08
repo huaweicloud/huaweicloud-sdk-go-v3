@@ -10,55 +10,55 @@ import (
 type EventUserResponseInfo struct {
 
 	// 用户uid
-	UserId *int32 `json:"user_id,omitempty" xml:"user_id"`
+	UserId *int32 `json:"user_id,omitempty"`
 
 	// 用户gid
-	UserGid *int32 `json:"user_gid,omitempty" xml:"user_gid"`
+	UserGid *int32 `json:"user_gid,omitempty"`
 
 	// 用户名称
-	UserName *string `json:"user_name,omitempty" xml:"user_name"`
+	UserName *string `json:"user_name,omitempty"`
 
 	// 用户组名称
-	UserGroupName *string `json:"user_group_name,omitempty" xml:"user_group_name"`
+	UserGroupName *string `json:"user_group_name,omitempty"`
 
 	// 用户home目录
-	UserHomeDir *string `json:"user_home_dir,omitempty" xml:"user_home_dir"`
+	UserHomeDir *string `json:"user_home_dir,omitempty"`
 
 	// 用户登录ip
-	LoginIp *string `json:"login_ip,omitempty" xml:"login_ip"`
+	LoginIp *string `json:"login_ip,omitempty"`
 
 	// 登录的服务类型
-	ServiceType *string `json:"service_type,omitempty" xml:"service_type"`
+	ServiceType *string `json:"service_type,omitempty"`
 
 	// 登录服务端口
-	ServicePort *int32 `json:"service_port,omitempty" xml:"service_port"`
+	ServicePort *int32 `json:"service_port,omitempty"`
 
 	// 登录方式
-	LoginMode *int32 `json:"login_mode,omitempty" xml:"login_mode"`
+	LoginMode *int32 `json:"login_mode,omitempty"`
 
 	// 用户最后一次登录时间
-	LoginLastTime *int64 `json:"login_last_time,omitempty" xml:"login_last_time"`
+	LoginLastTime *int64 `json:"login_last_time,omitempty"`
 
 	// 用户登录失败次数
-	LoginFailCount *int32 `json:"login_fail_count,omitempty" xml:"login_fail_count"`
+	LoginFailCount *int32 `json:"login_fail_count,omitempty"`
 
 	// 口令hash
-	PwdHash *string `json:"pwd_hash,omitempty" xml:"pwd_hash"`
+	PwdHash *string `json:"pwd_hash,omitempty"`
 
 	// 匿名化处理后的口令
-	PwdWithFuzzing *string `json:"pwd_with_fuzzing,omitempty" xml:"pwd_with_fuzzing"`
+	PwdWithFuzzing *string `json:"pwd_with_fuzzing,omitempty"`
 
 	// 密码使用的天数
-	PwdUsedDays *int32 `json:"pwd_used_days,omitempty" xml:"pwd_used_days"`
+	PwdUsedDays *int32 `json:"pwd_used_days,omitempty"`
 
 	// 口令的最短有效期限
-	PwdMinDays *int32 `json:"pwd_min_days,omitempty" xml:"pwd_min_days"`
+	PwdMinDays *int32 `json:"pwd_min_days,omitempty"`
 
 	// 口令的最长有效期限
-	PwdMaxDays *int32 `json:"pwd_max_days,omitempty" xml:"pwd_max_days"`
+	PwdMaxDays *int32 `json:"pwd_max_days,omitempty"`
 
 	// 口令无效时提前告警天数
-	PwdWarnLeftDays *int32 `json:"pwd_warn_left_days,omitempty" xml:"pwd_warn_left_days"`
+	PwdWarnLeftDays *int32 `json:"pwd_warn_left_days,omitempty"`
 }
 
 func (o EventUserResponseInfo) String() string {

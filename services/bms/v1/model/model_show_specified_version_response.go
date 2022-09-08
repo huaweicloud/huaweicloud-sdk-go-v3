@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowSpecifiedVersionResponse struct {
-	Version        *Versions `json:"version,omitempty" xml:"version"`
+	Version        *Versions `json:"version,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }
 

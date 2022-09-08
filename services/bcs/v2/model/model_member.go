@@ -10,17 +10,17 @@ import (
 type Member struct {
 
 	// 是否支持可信
-	TcsNeed *bool `json:"tcs_need,omitempty" xml:"tcs_need"`
+	TcsNeed *bool `json:"tcs_need,omitempty"`
 
 	// 通道名称
-	ChannelName *string `json:"channel_name,omitempty" xml:"channel_name"`
+	ChannelName *string `json:"channel_name,omitempty"`
 
 	// 被邀请的组织
-	InvitedOrgs *[]OrganizationV2 `json:"invited_orgs,omitempty" xml:"invited_orgs"`
+	InvitedOrgs *[]OrganizationV2 `json:"invited_orgs,omitempty"`
 
-	InvitorInfo *MemberInvitor `json:"invitor_info,omitempty" xml:"invitor_info"`
+	InvitorInfo *MemberInvitor `json:"invitor_info,omitempty"`
 
-	InviteeInfo *MemberInvitee `json:"invitee_info,omitempty" xml:"invitee_info"`
+	InviteeInfo *MemberInvitee `json:"invitee_info,omitempty"`
 }
 
 func (o Member) String() string {

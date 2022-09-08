@@ -10,12 +10,12 @@ import (
 type AddSubsetsToGatewayRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 设备ID
-	DeviceId int32 `json:"device_id" xml:"device_id"`
+	DeviceId int32 `json:"device_id"`
 
-	Body *AddSubsetsToGatewayRequestBody `json:"body,omitempty" xml:"body"`
+	Body *AddSubsetsToGatewayRequestBody `json:"body,omitempty"`
 }
 
 func (o AddSubsetsToGatewayRequest) String() string {

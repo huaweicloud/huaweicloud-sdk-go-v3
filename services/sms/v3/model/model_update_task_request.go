@@ -10,9 +10,9 @@ import (
 type UpdateTaskRequest struct {
 
 	// 迁移任务id
-	TaskId string `json:"task_id" xml:"task_id"`
+	TaskId string `json:"task_id"`
 
-	Body *PutTaskReq `json:"body,omitempty" xml:"body"`
+	Body *PutTaskReq `json:"body,omitempty"`
 }
 
 func (o UpdateTaskRequest) String() string {

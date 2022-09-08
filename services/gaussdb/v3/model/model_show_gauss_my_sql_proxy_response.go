@@ -8,12 +8,12 @@ import (
 
 // Response Object
 type ShowGaussMySqlProxyResponse struct {
-	Proxy *MysqlProxy `json:"proxy,omitempty" xml:"proxy"`
+	Proxy *MysqlProxy `json:"proxy,omitempty"`
 
-	MasterNode *MysqlProxyNode `json:"master_node,omitempty" xml:"master_node"`
+	MasterNode *MysqlProxyNode `json:"master_node,omitempty"`
 
 	// 只读节点信息。
-	ReadonlyNodes  *[]MysqlProxyNode `json:"readonly_nodes,omitempty" xml:"readonly_nodes"`
+	ReadonlyNodes  *[]MysqlProxyNode `json:"readonly_nodes,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }
 

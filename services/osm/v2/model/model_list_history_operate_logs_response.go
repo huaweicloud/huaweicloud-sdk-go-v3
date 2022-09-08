@@ -10,10 +10,10 @@ import (
 type ListHistoryOperateLogsResponse struct {
 
 	// 总记录数
-	TotalCount *int32 `json:"total_count,omitempty" xml:"total_count"`
+	TotalCount *int32 `json:"total_count,omitempty"`
 
 	// 操作列表
-	OpsList        *[]OperateLog `json:"ops_list,omitempty" xml:"ops_list"`
+	OpsList        *[]OperateLog `json:"ops_list,omitempty"`
 	HttpStatusCode int           `json:"-"`
 }
 

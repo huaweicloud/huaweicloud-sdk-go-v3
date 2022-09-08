@@ -10,13 +10,13 @@ import (
 type CreateTempResponse struct {
 
 	// code
-	Code *string `json:"code,omitempty" xml:"code"`
+	Code *string `json:"code,omitempty"`
 
 	// tempId
-	TempId *int32 `json:"tempId,omitempty" xml:"tempId"`
+	TempId *int32 `json:"tempId,omitempty"`
 
 	// message
-	Message        *string `json:"message,omitempty" xml:"message"`
+	Message        *string `json:"message,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

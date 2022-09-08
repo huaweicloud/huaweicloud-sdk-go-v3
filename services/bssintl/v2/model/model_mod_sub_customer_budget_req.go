@@ -9,16 +9,16 @@ import (
 type ModSubCustomerBudgetReq struct {
 
 	// 客户账号ID。您可以调用查询客户列表接口获取customer_id。
-	CustomerId string `json:"customer_id" xml:"customer_id"`
+	CustomerId string `json:"customer_id"`
 
 	// 调整的目标金额。 单位：元。精确至小数点后2位。
-	BudgetAmount float64 `json:"budget_amount" xml:"budget_amount"`
+	BudgetAmount float64 `json:"budget_amount"`
 
 	// 是否在设置客户预算的同时解除账号冻结： 0：否1：是 默认值为0。
-	CancelPartnerFrozen *string `json:"cancel_partner_frozen,omitempty" xml:"cancel_partner_frozen"`
+	CancelPartnerFrozen *string `json:"cancel_partner_frozen,omitempty"`
 
 	// 云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
-	IndirectPartnerId *string `json:"indirect_partner_id,omitempty" xml:"indirect_partner_id"`
+	IndirectPartnerId *string `json:"indirect_partner_id,omitempty"`
 }
 
 func (o ModSubCustomerBudgetReq) String() string {

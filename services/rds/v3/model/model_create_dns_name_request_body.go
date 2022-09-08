@@ -9,7 +9,7 @@ import (
 type CreateDnsNameRequestBody struct {
 
 	// 域名类型，当前只支持private
-	DnsType string `json:"dns_type" xml:"dns_type"`
+	DnsType string `json:"dns_type"`
 }
 
 func (o CreateDnsNameRequestBody) String() string {

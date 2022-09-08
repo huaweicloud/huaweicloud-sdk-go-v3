@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type BatchResetServersPasswordRequest struct {
-	Body *BatchResetServersPasswordRequestBody `json:"body,omitempty" xml:"body"`
+	Body *BatchResetServersPasswordRequestBody `json:"body,omitempty"`
 }
 
 func (o BatchResetServersPasswordRequest) String() string {

@@ -9,9 +9,9 @@ import (
 type UpdateTransferRequestBody struct {
 
 	// 日志转储ID
-	LogTransferId string `json:"log_transfer_id" xml:"log_transfer_id"`
+	LogTransferId string `json:"log_transfer_id"`
 
-	LogTransferInfo *UpdateTransferRequestBodyLogTransferInfo `json:"log_transfer_info" xml:"log_transfer_info"`
+	LogTransferInfo *UpdateTransferRequestBodyLogTransferInfo `json:"log_transfer_info"`
 }
 
 func (o UpdateTransferRequestBody) String() string {

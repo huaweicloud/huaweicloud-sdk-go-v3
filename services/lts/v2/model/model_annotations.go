@@ -9,16 +9,16 @@ import (
 type Annotations struct {
 
 	// 告警列表详情
-	Message string `json:"message" xml:"message"`
+	Message string `json:"message"`
 
 	// 日志组/流id,名称
-	LogInfo string `json:"log_info" xml:"log_info"`
+	LogInfo string `json:"log_info"`
 
 	// 当前值
-	CurrentValue string `json:"current_value" xml:"current_value"`
+	CurrentValue string `json:"current_value"`
 
 	// (sql/关键词)告警详情原始数据
-	OldAnnotations string `json:"old_annotations" xml:"old_annotations"`
+	OldAnnotations string `json:"old_annotations"`
 }
 
 func (o Annotations) String() string {

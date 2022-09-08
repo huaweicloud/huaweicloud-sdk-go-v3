@@ -10,19 +10,19 @@ import (
 type QueryVmrPkgResResultDto struct {
 
 	// 云会议室套餐包id。
-	VmrPkgId *string `json:"vmrPkgId,omitempty" xml:"vmrPkgId"`
+	VmrPkgId *string `json:"vmrPkgId,omitempty"`
 
 	// 云会议室套餐包名称。
-	VmrName *string `json:"vmrName,omitempty" xml:"vmrName"`
+	VmrName *string `json:"vmrName,omitempty"`
 
 	// 云会议室套餐方数。
-	VmrPkgParties *int32 `json:"vmrPkgParties,omitempty" xml:"vmrPkgParties"`
+	VmrPkgParties *int32 `json:"vmrPkgParties,omitempty"`
 
 	// 该云会议室套餐分配的总数。
-	VmrPkgCount *int32 `json:"vmrPkgCount,omitempty" xml:"vmrPkgCount"`
+	VmrPkgCount *int32 `json:"vmrPkgCount,omitempty"`
 
 	// 该套餐对应的云会议室已分配数量。
-	VmrPkgUsedCount *int32 `json:"vmrPkgUsedCount,omitempty" xml:"vmrPkgUsedCount"`
+	VmrPkgUsedCount *int32 `json:"vmrPkgUsedCount,omitempty"`
 }
 
 func (o QueryVmrPkgResResultDto) String() string {

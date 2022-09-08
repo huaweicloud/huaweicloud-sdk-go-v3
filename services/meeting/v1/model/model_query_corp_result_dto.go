@@ -7,16 +7,16 @@ import (
 )
 
 type QueryCorpResultDto struct {
-	BasicInfo *QueryCorpBasicResultDto `json:"basicInfo,omitempty" xml:"basicInfo"`
+	BasicInfo *QueryCorpBasicResultDto `json:"basicInfo,omitempty"`
 
-	AdminInfo *QueryAdminResultDto `json:"adminInfo,omitempty" xml:"adminInfo"`
+	AdminInfo *QueryAdminResultDto `json:"adminInfo,omitempty"`
 
-	ResInfo *QueryCorpResResultDto `json:"resInfo,omitempty" xml:"resInfo"`
+	ResInfo *QueryCorpResResultDto `json:"resInfo,omitempty"`
 
-	GroupDTO *OrgGroupDto `json:"groupDTO,omitempty" xml:"groupDTO"`
+	GroupDTO *OrgGroupDto `json:"groupDTO,omitempty"`
 
 	// 企业id
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 }
 
 func (o QueryCorpResultDto) String() string {

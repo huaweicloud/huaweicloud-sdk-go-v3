@@ -10,12 +10,12 @@ import (
 type ExpandGaussMySqlInstanceVolumeRequest struct {
 
 	// 语言
-	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *string `json:"X-Language,omitempty"`
 
 	// 实例ID，严格匹配UUID规则。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
-	Body *MysqlExtendInstanceVolumeRequest `json:"body,omitempty" xml:"body"`
+	Body *MysqlExtendInstanceVolumeRequest `json:"body,omitempty"`
 }
 
 func (o ExpandGaussMySqlInstanceVolumeRequest) String() string {

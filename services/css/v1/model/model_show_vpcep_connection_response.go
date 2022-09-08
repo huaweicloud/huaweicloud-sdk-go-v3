@@ -8,13 +8,13 @@ import (
 
 // Response Object
 type ShowVpcepConnectionResponse struct {
-	Connections *[]Connections `json:"connections,omitempty" xml:"connections"`
+	Connections *[]Connections `json:"connections,omitempty"`
 
 	// 终端节点更新开关。 - true： 开启终端节点。 - false： 关闭终端节点。
-	VpcepUpdateSwitch *bool `json:"vpcepUpdateSwitch,omitempty" xml:"vpcepUpdateSwitch"`
+	VpcepUpdateSwitch *bool `json:"vpcepUpdateSwitch,omitempty"`
 
 	// 终端节点数量。
-	TotalCount     *int32 `json:"total_count,omitempty" xml:"total_count"`
+	TotalCount     *int32 `json:"total_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

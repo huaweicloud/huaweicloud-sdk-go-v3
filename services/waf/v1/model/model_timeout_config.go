@@ -10,13 +10,13 @@ import (
 type TimeoutConfig struct {
 
 	// WAF连接源站超时配置
-	ConnectTimeout *int32 `json:"connect_timeout,omitempty" xml:"connect_timeout"`
+	ConnectTimeout *int32 `json:"connect_timeout,omitempty"`
 
 	// WAF发送请求到源站超时配置
-	SendTimeout *int32 `json:"send_timeout,omitempty" xml:"send_timeout"`
+	SendTimeout *int32 `json:"send_timeout,omitempty"`
 
 	// WAF接收源站响应超时配置
-	ReadTimeout *int32 `json:"read_timeout,omitempty" xml:"read_timeout"`
+	ReadTimeout *int32 `json:"read_timeout,omitempty"`
 }
 
 func (o TimeoutConfig) String() string {

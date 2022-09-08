@@ -13,25 +13,25 @@ import (
 type SourceServerAssociatedWithTask struct {
 
 	// 源端在SMS数据库中的ID
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 源端服务器ip，注册源端时必选，更新非必选
-	Ip string `json:"ip" xml:"ip"`
+	Ip string `json:"ip"`
 
 	// 用来区分不同源端服务器的名称
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 源端服务器的OS类型，分为Windows和Linux，注册必选，更新非必选
-	OsType SourceServerAssociatedWithTaskOsType `json:"os_type" xml:"os_type"`
+	OsType SourceServerAssociatedWithTaskOsType `json:"os_type"`
 
 	// 操作系统版本，注册必选，更新非必选
-	OsVersion *string `json:"os_version,omitempty" xml:"os_version"`
+	OsVersion *string `json:"os_version,omitempty"`
 
 	// 是否是OEM操作系统(Windows)
-	OemSystem *bool `json:"oem_system,omitempty" xml:"oem_system"`
+	OemSystem *bool `json:"oem_system,omitempty"`
 
 	// 当前源端服务器状态
-	State *SourceServerAssociatedWithTaskState `json:"state,omitempty" xml:"state"`
+	State *SourceServerAssociatedWithTaskState `json:"state,omitempty"`
 }
 
 func (o SourceServerAssociatedWithTask) String() string {

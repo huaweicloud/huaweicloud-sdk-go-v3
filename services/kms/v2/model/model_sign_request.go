@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type SignRequest struct {
-	Body *SignRequestBody `json:"body,omitempty" xml:"body"`
+	Body *SignRequestBody `json:"body,omitempty"`
 }
 
 func (o SignRequest) String() string {

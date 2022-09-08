@@ -10,7 +10,7 @@ import (
 type CreateDatabaseWaterMarkResponse struct {
 
 	// 嵌入水印后的数据
-	MarkedData     *[]map[string]interface{} `json:"marked_data,omitempty" xml:"marked_data"`
+	MarkedData     *[]map[string]interface{} `json:"marked_data,omitempty"`
 	HttpStatusCode int                       `json:"-"`
 }
 

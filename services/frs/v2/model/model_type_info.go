@@ -9,7 +9,7 @@ import (
 type TypeInfo struct {
 
 	// 数据类型:string,integer,double,long等。
-	Type *string `json:"type,omitempty" xml:"type"`
+	Type *string `json:"type,omitempty"`
 }
 
 func (o TypeInfo) String() string {

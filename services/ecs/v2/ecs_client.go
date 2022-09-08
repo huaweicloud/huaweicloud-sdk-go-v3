@@ -19,7 +19,7 @@ func EcsClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// AddServerGroupMember 云服务器组添加成员
+// AddServerGroupMember 添加云服务器组成员
 //
 // 将云服务器加入云服务器组。添加成功后，如果该云服务器组是反亲和性策略的，则该云服务器与云服务器组中的其他成员尽量分散地创建在不同主机上。如果该云服务器时故障域类型的，则该云服务器会拥有故障域属性。
 //
@@ -35,7 +35,7 @@ func (c *EcsClient) AddServerGroupMember(request *model.AddServerGroupMemberRequ
 	}
 }
 
-// AddServerGroupMemberInvoker 云服务器组添加成员
+// AddServerGroupMemberInvoker 添加云服务器组成员
 func (c *EcsClient) AddServerGroupMemberInvoker(request *model.AddServerGroupMemberRequest) *AddServerGroupMemberInvoker {
 	requestDef := GenReqDefForAddServerGroupMember()
 	return &AddServerGroupMemberInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -491,7 +491,7 @@ func (c *EcsClient) DeleteServerGroupInvoker(request *model.DeleteServerGroupReq
 	return &DeleteServerGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteServerGroupMember 云服务器组删除成员
+// DeleteServerGroupMember 删除云服务器组成员
 //
 // 将弹性云服务器移出云服务器组。移出后，该云服务器与云服务器组中的成员不再遵从反亲和策略。
 //
@@ -507,7 +507,7 @@ func (c *EcsClient) DeleteServerGroupMember(request *model.DeleteServerGroupMemb
 	}
 }
 
-// DeleteServerGroupMemberInvoker 云服务器组删除成员
+// DeleteServerGroupMemberInvoker 删除云服务器组成员
 func (c *EcsClient) DeleteServerGroupMemberInvoker(request *model.DeleteServerGroupMemberRequest) *DeleteServerGroupMemberInvoker {
 	requestDef := GenReqDefForDeleteServerGroupMember()
 	return &DeleteServerGroupMemberInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

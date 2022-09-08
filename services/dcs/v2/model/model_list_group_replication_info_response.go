@@ -10,10 +10,10 @@ import (
 type ListGroupReplicationInfoResponse struct {
 
 	// 分片列表
-	GroupList *[]InstanceGroupListInfo `json:"group_list,omitempty" xml:"group_list"`
+	GroupList *[]InstanceGroupListInfo `json:"group_list,omitempty"`
 
 	// 实例分片总数。
-	GroupCount     *int32 `json:"group_count,omitempty" xml:"group_count"`
+	GroupCount     *int32 `json:"group_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type DeleteAccessConfigRequest struct {
-	Body *DeleteAccessConfigRequestBody `json:"body,omitempty" xml:"body"`
+	Body *DeleteAccessConfigRequestBody `json:"body,omitempty"`
 }
 
 func (o DeleteAccessConfigRequest) String() string {

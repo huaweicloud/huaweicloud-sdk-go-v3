@@ -10,13 +10,13 @@ import (
 type DnsAssignment struct {
 
 	// 端口内网fqdn
-	Fqdn *string `json:"fqdn,omitempty" xml:"fqdn"`
+	Fqdn *string `json:"fqdn,omitempty"`
 
 	// 端口hostname
-	Hostname *string `json:"hostname,omitempty" xml:"hostname"`
+	Hostname *string `json:"hostname,omitempty"`
 
 	// 端口IP地址
-	IpAddress *string `json:"ip_address,omitempty" xml:"ip_address"`
+	IpAddress *string `json:"ip_address,omitempty"`
 }
 
 func (o DnsAssignment) String() string {

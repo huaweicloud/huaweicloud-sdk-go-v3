@@ -10,10 +10,10 @@ import (
 type ListAuthorizedDatabasesResponse struct {
 
 	// 数据库及相关权限。
-	Databases *[]DatabaseWithPrivilege `json:"databases,omitempty" xml:"databases"`
+	Databases *[]DatabaseWithPrivilege `json:"databases,omitempty"`
 
 	// 总数。
-	TotalCount     *int32 `json:"total_count,omitempty" xml:"total_count"`
+	TotalCount     *int32 `json:"total_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

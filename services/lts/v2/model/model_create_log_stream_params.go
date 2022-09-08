@@ -10,10 +10,13 @@ import (
 type CreateLogStreamParams struct {
 
 	// 需要创建的日志流名称。
-	LogStreamName string `json:"log_stream_name" xml:"log_stream_name"`
+	LogStreamName string `json:"log_stream_name"`
 
 	// 企业项目名称。
-	EnterpriseProjectName *string `json:"enterprise_project_name,omitempty" xml:"enterprise_project_name"`
+	EnterpriseProjectName *string `json:"enterprise_project_name,omitempty"`
+
+	// 日志存储时间（天），取值范围：1-365。
+	TtlInDays *int32 `json:"ttl_in_days,omitempty"`
 }
 
 func (o CreateLogStreamParams) String() string {

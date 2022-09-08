@@ -9,10 +9,10 @@ import (
 type StartInstanceParam struct {
 
 	// 插件列表
-	PluginEnableList *[]string `json:"plugin_enable_list,omitempty" xml:"plugin_enable_list"`
+	PluginEnableList *[]string `json:"plugin_enable_list,omitempty"`
 
 	// 插件参数
-	PluginVars map[string]string `json:"plugin_vars,omitempty" xml:"plugin_vars"`
+	PluginVars map[string]string `json:"plugin_vars,omitempty"`
 }
 
 func (o StartInstanceParam) String() string {

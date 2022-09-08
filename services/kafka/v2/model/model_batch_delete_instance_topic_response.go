@@ -10,7 +10,7 @@ import (
 type BatchDeleteInstanceTopicResponse struct {
 
 	// Topic列表。
-	Topics         *[]BatchDeleteInstanceTopicRespTopics `json:"topics,omitempty" xml:"topics"`
+	Topics         *[]BatchDeleteInstanceTopicRespTopics `json:"topics,omitempty"`
 	HttpStatusCode int                                   `json:"-"`
 }
 

@@ -10,13 +10,13 @@ import (
 type CheckRuleCheckCaseResponseInfo struct {
 
 	// 检测用例描述
-	CheckDescription *string `json:"check_description,omitempty" xml:"check_description"`
+	CheckDescription *string `json:"check_description,omitempty"`
 
 	// 当前结果
-	CurrentValue *string `json:"current_value,omitempty" xml:"current_value"`
+	CurrentValue *string `json:"current_value,omitempty"`
 
 	// 期待结果
-	SuggestValue *string `json:"suggest_value,omitempty" xml:"suggest_value"`
+	SuggestValue *string `json:"suggest_value,omitempty"`
 }
 
 func (o CheckRuleCheckCaseResponseInfo) String() string {

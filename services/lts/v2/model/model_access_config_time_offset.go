@@ -13,10 +13,10 @@ import (
 type AccessConfigTimeOffset struct {
 
 	// 偏移时间。 当\"unit\"选择\"day\"时，范围为1~7天。 当\"unit\"选择\"hour\"时，范围为1~168小时。 当\"unit\"选择\"sec\"时，范围为1~604800秒。
-	Offset int64 `json:"offset" xml:"offset"`
+	Offset int64 `json:"offset"`
 
 	// 偏移时间单位。day ：天，hour：小时，sec：秒
-	Unit AccessConfigTimeOffsetUnit `json:"unit" xml:"unit"`
+	Unit AccessConfigTimeOffsetUnit `json:"unit"`
 }
 
 func (o AccessConfigTimeOffset) String() string {

@@ -10,19 +10,19 @@ import (
 type ShowInstanceStatusResponse struct {
 
 	// 实例ID
-	TaskId *string `json:"task_id,omitempty" xml:"task_id"`
+	TaskId *string `json:"task_id,omitempty"`
 
 	// 实例创建状态，取值和含义:initializing：初始化中；processing：处理中；finished：已完成；succeeded：成功
-	TaskStatus *string `json:"task_status,omitempty" xml:"task_status"`
+	TaskStatus *string `json:"task_status,omitempty"`
 
 	// 流水线ID
-	PipelineId *string `json:"pipeline_id,omitempty" xml:"pipeline_id"`
+	PipelineId *string `json:"pipeline_id,omitempty"`
 
 	// 流水线名字
-	PipelineName *string `json:"pipeline_name,omitempty" xml:"pipeline_name"`
+	PipelineName *string `json:"pipeline_name,omitempty"`
 
 	// 流水线详情页面url
-	PipelineUrl    *string `json:"pipeline_url,omitempty" xml:"pipeline_url"`
+	PipelineUrl    *string `json:"pipeline_url,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

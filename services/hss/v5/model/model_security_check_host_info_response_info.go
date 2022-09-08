@@ -10,25 +10,25 @@ import (
 type SecurityCheckHostInfoResponseInfo struct {
 
 	// 服务器ID
-	HostId *string `json:"host_id,omitempty" xml:"host_id"`
+	HostId *string `json:"host_id,omitempty"`
 
 	// 服务器名称
-	HostName *string `json:"host_name,omitempty" xml:"host_name"`
+	HostName *string `json:"host_name,omitempty"`
 
 	// 服务器公网IP
-	HostPublicIp *string `json:"host_public_ip,omitempty" xml:"host_public_ip"`
+	HostPublicIp *string `json:"host_public_ip,omitempty"`
 
 	// 服务器私网IP
-	HostPrivateIp *string `json:"host_private_ip,omitempty" xml:"host_private_ip"`
+	HostPrivateIp *string `json:"host_private_ip,omitempty"`
 
 	// 扫描时间
-	ScanTime *int64 `json:"scan_time,omitempty" xml:"scan_time"`
+	ScanTime *int64 `json:"scan_time,omitempty"`
 
 	// 风险项数量
-	FailedNum *int32 `json:"failed_num,omitempty" xml:"failed_num"`
+	FailedNum *int32 `json:"failed_num,omitempty"`
 
 	// 通过项数量
-	PassedNum *int32 `json:"passed_num,omitempty" xml:"passed_num"`
+	PassedNum *int32 `json:"passed_num,omitempty"`
 }
 
 func (o SecurityCheckHostInfoResponseInfo) String() string {

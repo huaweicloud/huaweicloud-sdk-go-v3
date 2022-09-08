@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RunTtsRequest struct {
-	Body *PostCustomTtsReq `json:"body,omitempty" xml:"body"`
+	Body *PostCustomTtsReq `json:"body,omitempty"`
 }
 
 func (o RunTtsRequest) String() string {

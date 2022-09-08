@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type UpdatePortResponse struct {
-	Port           *Port `json:"port,omitempty" xml:"port"`
+	Port           *Port `json:"port,omitempty"`
 	HttpStatusCode int   `json:"-"`
 }
 

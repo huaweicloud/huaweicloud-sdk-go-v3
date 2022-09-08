@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type RecognizeQualificationCertificateResponse struct {
-	Result         *QualificationCertificateResult `json:"result,omitempty" xml:"result"`
+	Result         *QualificationCertificateResult `json:"result,omitempty"`
 	HttpStatusCode int                             `json:"-"`
 }
 

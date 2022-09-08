@@ -10,16 +10,16 @@ import (
 type ShowSqlFilterRuleRequest struct {
 
 	// 语言。
-	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *string `json:"X-Language,omitempty"`
 
 	// 实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 节点id。
-	NodeId string `json:"node_id" xml:"node_id"`
+	NodeId string `json:"node_id"`
 
 	// SQL限流类型，取值为SELECT、UPDATE、DELETE，不区分大小写；若不传则默认查询所有类型的限流规则。
-	Type *string `json:"type,omitempty" xml:"type"`
+	Type *string `json:"type,omitempty"`
 }
 
 func (o ShowSqlFilterRuleRequest) String() string {

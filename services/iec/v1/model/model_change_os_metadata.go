@@ -10,7 +10,7 @@ import (
 type ChangeOsMetadata struct {
 
 	// 切换边缘实例操作系统过程中注入的用户数据。
-	UserData *string `json:"user_data,omitempty" xml:"user_data"`
+	UserData *string `json:"user_data,omitempty"`
 }
 
 func (o ChangeOsMetadata) String() string {

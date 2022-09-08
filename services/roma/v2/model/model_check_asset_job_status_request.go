@@ -10,10 +10,10 @@ import (
 type CheckAssetJobStatusRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 作业ID
-	JobId string `json:"job_id" xml:"job_id"`
+	JobId string `json:"job_id"`
 }
 
 func (o CheckAssetJobStatusRequest) String() string {

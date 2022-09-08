@@ -10,7 +10,7 @@ import (
 type ListSecretVersionsResponse struct {
 
 	// version_metadata对象。
-	VersionMetadatas *[]VersionMetadata `json:"version_metadatas,omitempty" xml:"version_metadatas"`
+	VersionMetadatas *[]VersionMetadata `json:"version_metadatas,omitempty"`
 	HttpStatusCode   int                `json:"-"`
 }
 

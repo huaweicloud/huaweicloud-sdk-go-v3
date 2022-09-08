@@ -9,13 +9,13 @@ import (
 type SupportAzsInfo struct {
 
 	// 可用区编码。
-	Code *string `json:"code,omitempty" xml:"code"`
+	Code *string `json:"code,omitempty"`
 
 	// 可用区名称。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 是否支持。
-	Favored *bool `json:"favored,omitempty" xml:"favored"`
+	Favored *bool `json:"favored,omitempty"`
 }
 
 func (o SupportAzsInfo) String() string {

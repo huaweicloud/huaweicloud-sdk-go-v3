@@ -7,7 +7,7 @@ import (
 )
 
 type ModuleContainerSettingsResDto struct {
-	Configs *ContainerConfigsResDto `json:"configs,omitempty" xml:"configs"`
+	Configs *ContainerConfigsResDto `json:"configs,omitempty"`
 }
 
 func (o ModuleContainerSettingsResDto) String() string {

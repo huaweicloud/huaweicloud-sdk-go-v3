@@ -9,7 +9,7 @@ import (
 type TempName struct {
 
 	// name
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 }
 
 func (o TempName) String() string {

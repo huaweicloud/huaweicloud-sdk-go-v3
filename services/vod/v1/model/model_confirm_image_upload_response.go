@@ -10,10 +10,10 @@ import (
 type ConfirmImageUploadResponse struct {
 
 	// 水印配置模板id<br/>
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 水印图片的下载url<br/>
-	ImageUrl       *string `json:"image_url,omitempty" xml:"image_url"`
+	ImageUrl       *string `json:"image_url,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

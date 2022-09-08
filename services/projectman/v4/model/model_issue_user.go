@@ -9,13 +9,13 @@ import (
 type IssueUser struct {
 
 	// 用户id
-	Id *int32 `json:"id,omitempty" xml:"id"`
+	Id *int32 `json:"id,omitempty"`
 
 	// 用户名
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 昵称
-	NickName *string `json:"nick_name,omitempty" xml:"nick_name"`
+	NickName *string `json:"nick_name,omitempty"`
 }
 
 func (o IssueUser) String() string {

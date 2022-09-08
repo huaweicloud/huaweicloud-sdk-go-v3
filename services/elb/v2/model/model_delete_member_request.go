@@ -10,10 +10,10 @@ import (
 type DeleteMemberRequest struct {
 
 	// 后端云服务器组id
-	PoolId string `json:"pool_id" xml:"pool_id"`
+	PoolId string `json:"pool_id"`
 
 	// 后端云服务器id
-	MemberId string `json:"member_id" xml:"member_id"`
+	MemberId string `json:"member_id"`
 }
 
 func (o DeleteMemberRequest) String() string {

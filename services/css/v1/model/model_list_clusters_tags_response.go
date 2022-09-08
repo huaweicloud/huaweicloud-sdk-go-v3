@@ -10,7 +10,7 @@ import (
 type ListClustersTagsResponse struct {
 
 	// 集群的标签列表。
-	Tags           *[]ShowAllTagsTagsResp `json:"tags,omitempty" xml:"tags"`
+	Tags           *[]ShowAllTagsTagsResp `json:"tags,omitempty"`
 	HttpStatusCode int                    `json:"-"`
 }
 

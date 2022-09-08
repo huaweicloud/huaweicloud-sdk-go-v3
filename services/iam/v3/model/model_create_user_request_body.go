@@ -8,7 +8,7 @@ import (
 
 //
 type CreateUserRequestBody struct {
-	User *CreateUserOption `json:"user" xml:"user"`
+	User *CreateUserOption `json:"user"`
 }
 
 func (o CreateUserRequestBody) String() string {

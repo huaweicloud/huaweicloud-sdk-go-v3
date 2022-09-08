@@ -13,10 +13,10 @@ import (
 type Match struct {
 
 	// 键，表示要匹配的字段。  key不能重复，value为匹配的值。  此字段为固定字典值。  不允许为空字符串。  当前key的参数值仅支持resource_name，此时value的参数值为专属主机名称。
-	Key MatchKey `json:"key" xml:"key"`
+	Key MatchKey `json:"key"`
 
 	// 值。  每个值最大长度为255个unicode字符。  不可以为空 。
-	Value string `json:"value" xml:"value"`
+	Value string `json:"value"`
 }
 
 func (o Match) String() string {

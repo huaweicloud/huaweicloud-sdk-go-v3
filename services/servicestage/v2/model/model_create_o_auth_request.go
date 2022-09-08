@@ -13,12 +13,12 @@ import (
 type CreateOAuthRequest struct {
 
 	// 仓库类型。 支持OAuth授权的仓库类型有：github、gitlab、gitee、bitbucket。
-	RepoType CreateOAuthRequestRepoType `json:"repo_type" xml:"repo_type"`
+	RepoType CreateOAuthRequestRepoType `json:"repo_type"`
 
 	// 站点标签。 比如国际站的，?tag=intl。 默认为空。
-	Tag *string `json:"tag,omitempty" xml:"tag"`
+	Tag *string `json:"tag,omitempty"`
 
-	Body *OAuth `json:"body,omitempty" xml:"body"`
+	Body *OAuth `json:"body,omitempty"`
 }
 
 func (o CreateOAuthRequest) String() string {

@@ -7,7 +7,7 @@ import (
 )
 
 type StartJobReq struct {
-	JobParams *[]JobParam `json:"jobParams,omitempty" xml:"jobParams"`
+	JobParams *[]JobParam `json:"jobParams,omitempty"`
 }
 
 func (o StartJobReq) String() string {

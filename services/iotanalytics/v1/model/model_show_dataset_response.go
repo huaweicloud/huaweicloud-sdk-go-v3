@@ -10,15 +10,15 @@ import (
 type ShowDatasetResponse struct {
 
 	// 作业结果总个数。
-	Count *int64 `json:"count,omitempty" xml:"count"`
+	Count *int64 `json:"count,omitempty"`
 
 	// 作业运行ID。
-	RunId *string `json:"run_id,omitempty" xml:"run_id"`
+	RunId *string `json:"run_id,omitempty"`
 
 	// 作业类型。
-	JobType *string `json:"job_type,omitempty" xml:"job_type"`
+	JobType *string `json:"job_type,omitempty"`
 
-	SqlJob         *SqlJobQueryDataset `json:"sql_job,omitempty" xml:"sql_job"`
+	SqlJob         *SqlJobQueryDataset `json:"sql_job,omitempty"`
 	HttpStatusCode int                 `json:"-"`
 }
 

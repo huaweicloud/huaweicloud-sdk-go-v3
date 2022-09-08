@@ -10,10 +10,10 @@ import (
 type GeoItem struct {
 
 	// 攻击来源区域
-	Key *string `json:"key,omitempty" xml:"key"`
+	Key *string `json:"key,omitempty"`
 
 	// 数量
-	Num *int32 `json:"num,omitempty" xml:"num"`
+	Num *int32 `json:"num,omitempty"`
 }
 
 func (o GeoItem) String() string {

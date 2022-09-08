@@ -10,16 +10,16 @@ import (
 type MetaDataSeries struct {
 
 	// 当前返回结果条数。
-	Count *int32 `json:"count,omitempty" xml:"count"`
+	Count *int32 `json:"count,omitempty"`
 
 	// 下一个开始的标记，用于分页，null表示无更多数据。
-	Offset *int32 `json:"offset,omitempty" xml:"offset"`
+	Offset *int32 `json:"offset,omitempty"`
 
 	// 总条数。
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 
 	// 偏移量。
-	NextToken *int32 `json:"nextToken,omitempty" xml:"nextToken"`
+	NextToken *int32 `json:"nextToken,omitempty"`
 }
 
 func (o MetaDataSeries) String() string {

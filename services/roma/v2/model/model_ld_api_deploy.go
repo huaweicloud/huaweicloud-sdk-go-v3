@@ -12,40 +12,40 @@ import (
 type LdApiDeploy struct {
 
 	// 是否自动发布API - true：部署完成后自动创建并发布前端API。此时auth_type，group_id，env_id，protocol必填。 - false：部署完成后不创建前端API
-	DeployFrontApi *bool `json:"deploy_front_api,omitempty" xml:"deploy_front_api"`
+	DeployFrontApi *bool `json:"deploy_front_api,omitempty"`
 
 	// 认证方式[，site暂不支持IAM认证。](tag:Site) - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证
-	AuthType *string `json:"auth_type,omitempty" xml:"auth_type"`
+	AuthType *string `json:"auth_type,omitempty"`
 
 	// 自定义认证编号。  认证方式auth_type = AUTHORIZER时必填
-	AuthorizerId *string `json:"authorizer_id,omitempty" xml:"authorizer_id"`
+	AuthorizerId *string `json:"authorizer_id,omitempty"`
 
 	// 部署的前端API分组编号
-	GroupId *string `json:"group_id,omitempty" xml:"group_id"`
+	GroupId *string `json:"group_id,omitempty"`
 
 	// 部署的环境编号
-	EnvId *string `json:"env_id,omitempty" xml:"env_id"`
+	EnvId *string `json:"env_id,omitempty"`
 
 	// 请求协议
-	Protocol *LdApiDeployProtocol `json:"protocol,omitempty" xml:"protocol"`
+	Protocol *LdApiDeployProtocol `json:"protocol,omitempty"`
 
 	// 超时时间
-	BackendTimeout *int32 `json:"backend_timeout,omitempty" xml:"backend_timeout"`
+	BackendTimeout *int32 `json:"backend_timeout,omitempty"`
 
 	// 请求路径
-	Path *string `json:"path,omitempty" xml:"path"`
+	Path *string `json:"path,omitempty"`
 
 	// 请求方式
-	Method *string `json:"method,omitempty" xml:"method"`
+	Method *string `json:"method,omitempty"`
 
 	// 是否支持跨域 - true：支持 - false：不支持
-	Cors *bool `json:"cors,omitempty" xml:"cors"`
+	Cors *bool `json:"cors,omitempty"`
 
 	// 部署到前端的api归属的应用编号，与后端归属的应用编号保持一致
-	RomaAppId *string `json:"roma_app_id,omitempty" xml:"roma_app_id"`
+	RomaAppId *string `json:"roma_app_id,omitempty"`
 
 	// ROMA Connect APIC请求后端服务的重试次数，默认为-1，范围[-1,10]
-	RetryCount *string `json:"retry_count,omitempty" xml:"retry_count"`
+	RetryCount *string `json:"retry_count,omitempty"`
 }
 
 func (o LdApiDeploy) String() string {

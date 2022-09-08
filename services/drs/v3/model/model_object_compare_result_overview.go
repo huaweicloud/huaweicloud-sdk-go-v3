@@ -13,19 +13,19 @@ import (
 type ObjectCompareResultOverview struct {
 
 	// 对象类型。
-	ObjectType ObjectCompareResultOverviewObjectType `json:"object_type" xml:"object_type"`
+	ObjectType ObjectCompareResultOverviewObjectType `json:"object_type"`
 
 	// 对比结果。
-	ObjectCompareResult ObjectCompareResultOverviewObjectCompareResult `json:"object_compare_result" xml:"object_compare_result"`
+	ObjectCompareResult ObjectCompareResultOverviewObjectCompareResult `json:"object_compare_result"`
 
 	// 该类型的对象在目标库的个数。
-	TargetCount int32 `json:"target_count" xml:"target_count"`
+	TargetCount int32 `json:"target_count"`
 
 	// 该类型的对象在源库的个数。
-	SourceCount int32 `json:"source_count" xml:"source_count"`
+	SourceCount int32 `json:"source_count"`
 
 	// 源库和目标库的差异数量。
-	DiffCount int32 `json:"diff_count" xml:"diff_count"`
+	DiffCount int32 `json:"diff_count"`
 }
 
 func (o ObjectCompareResultOverview) String() string {

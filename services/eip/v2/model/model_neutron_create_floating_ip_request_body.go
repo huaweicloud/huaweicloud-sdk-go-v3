@@ -8,7 +8,7 @@ import (
 
 // 创建floatingip对象
 type NeutronCreateFloatingIpRequestBody struct {
-	Floatingip *CreateFloatingIpOption `json:"floatingip" xml:"floatingip"`
+	Floatingip *CreateFloatingIpOption `json:"floatingip"`
 }
 
 func (o NeutronCreateFloatingIpRequestBody) String() string {

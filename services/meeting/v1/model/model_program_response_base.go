@@ -10,22 +10,22 @@ import (
 type ProgramResponseBase struct {
 
 	// 节目ID
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 更新者
-	LastUpdatedBy *string `json:"lastUpdatedBy,omitempty" xml:"lastUpdatedBy"`
+	LastUpdatedBy *string `json:"lastUpdatedBy,omitempty"`
 
 	// 更新时间
-	UpdateTime *int64 `json:"updateTime,omitempty" xml:"updateTime"`
+	UpdateTime *int64 `json:"updateTime,omitempty"`
 
 	// 节目名称
-	ProgramName *string `json:"programName,omitempty" xml:"programName"`
+	ProgramName *string `json:"programName,omitempty"`
 
 	// 节目的总素材大小（含单位）
-	MaterialSizeStr *string `json:"materialSizeStr,omitempty" xml:"materialSizeStr"`
+	MaterialSizeStr *string `json:"materialSizeStr,omitempty"`
 
 	// 节目的总播放时长，单位秒
-	PlayTime *int32 `json:"playTime,omitempty" xml:"playTime"`
+	PlayTime *int32 `json:"playTime,omitempty"`
 }
 
 func (o ProgramResponseBase) String() string {

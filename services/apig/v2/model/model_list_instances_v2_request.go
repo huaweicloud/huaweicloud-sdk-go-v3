@@ -13,19 +13,19 @@ import (
 type ListInstancesV2Request struct {
 
 	// 偏移量，表示从此偏移量开始查询，偏移量小于0时，自动转换为0
-	Offset *int64 `json:"offset,omitempty" xml:"offset"`
+	Offset *int64 `json:"offset,omitempty"`
 
 	// 每页显示的条目数量
-	Limit *int32 `json:"limit,omitempty" xml:"limit"`
+	Limit *int32 `json:"limit,omitempty"`
 
 	// 实例编号
-	InstanceId *string `json:"instance_id,omitempty" xml:"instance_id"`
+	InstanceId *string `json:"instance_id,omitempty"`
 
 	// 实例名称
-	InstanceName *string `json:"instance_name,omitempty" xml:"instance_name"`
+	InstanceName *string `json:"instance_name,omitempty"`
 
 	// 实例状态： - Creating：创建中 - CreateSuccess：创建成功 - CreateFail：创建失败 - Initing：初始化中 - Registering：注册中 - Running：运行中 - InitingFailed：初始化失败 - RegisterFailed：注册失败 - Installing：安装中 - InstallFailed：安装失败 - Updating：升级中 - UpdateFailed：升级失败 - Rollbacking：回滚中 - RollbackSuccess：回滚成功 - RollbackFailed：回滚失败 - Deleting：删除中 - DeleteFailed：删除失败 - Unregistering：注销中 - UnRegisterFailed：注销失败 - CreateTimeout：创建超时 - InitTimeout：初始化超时 - RegisterTimeout：注册超时 - InstallTimeout：安装超时 - UpdateTimeout：升级超时 - RollbackTimeout：回滚超时 - DeleteTimeout：删除超时 - UnregisterTimeout：注销超时 - Starting：启动中 - Freezing：冻结中 - Frozen：已冻结 - Restarting：重启中 - RestartFail：重启失败 - Unhealthy：实例异常 - RestartTimeout：重启超时
-	Status *ListInstancesV2RequestStatus `json:"status,omitempty" xml:"status"`
+	Status *ListInstancesV2RequestStatus `json:"status,omitempty"`
 }
 
 func (o ListInstancesV2Request) String() string {

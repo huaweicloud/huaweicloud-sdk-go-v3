@@ -13,10 +13,10 @@ import (
 type ListApiVersionsResponse struct {
 
 	// API版本号。 取值：由高到低版本分别为v3，v2，v2.0。
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// API版本的状态。 取值： - CURRENT：当前版本。 - STABLE：稳定版本。 - DEPRECATED：废弃版本。  说明： 所有支持的API版本中最高版状态为CURRENT，其他版本状态为STABLE。
-	Status         *ListApiVersionsResponseStatus `json:"status,omitempty" xml:"status"`
+	Status         *ListApiVersionsResponseStatus `json:"status,omitempty"`
 	HttpStatusCode int                            `json:"-"`
 }
 

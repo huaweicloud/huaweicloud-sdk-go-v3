@@ -10,7 +10,7 @@ import (
 type RulesLocalUser struct {
 
 	// 联邦用户在本系统中的用户名称
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 }
 
 func (o RulesLocalUser) String() string {

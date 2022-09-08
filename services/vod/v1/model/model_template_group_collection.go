@@ -9,16 +9,16 @@ import (
 type TemplateGroupCollection struct {
 
 	// 模板组集合id<br/>
-	GroupCollectionId *string `json:"group_collection_id,omitempty" xml:"group_collection_id"`
+	GroupCollectionId *string `json:"group_collection_id,omitempty"`
 
 	// 模板组集合名称<br/>
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 模板介绍<br/>
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 转码组列表<br/>
-	TemplateGroupList *[]TemplateGroup `json:"template_group_list,omitempty" xml:"template_group_list"`
+	TemplateGroupList *[]TemplateGroup `json:"template_group_list,omitempty"`
 }
 
 func (o TemplateGroupCollection) String() string {

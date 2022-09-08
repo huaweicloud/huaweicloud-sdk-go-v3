@@ -8,7 +8,7 @@ import (
 
 //
 type CreateCloudServiceCustomPolicyRequestBody struct {
-	Role *ServicePolicyRoleOption `json:"role" xml:"role"`
+	Role *ServicePolicyRoleOption `json:"role"`
 }
 
 func (o CreateCloudServiceCustomPolicyRequestBody) String() string {

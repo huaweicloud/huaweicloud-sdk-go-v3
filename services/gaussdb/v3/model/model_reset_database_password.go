@@ -10,13 +10,13 @@ import (
 type ResetDatabasePassword struct {
 
 	// 数据库用户名。
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 主机地址。
-	Host *string `json:"host,omitempty" xml:"host"`
+	Host *string `json:"host,omitempty"`
 
 	// 数据库用户密码，非空，至少包含以下字符中的三种：大写字母、小写字母、数字和特殊符号~!@#$%^*-_=+?,()&组成，长度8~32个字符。建议您输入高强度密码，以提高安全性，防止出现密码被暴力破解等安全风险
-	Password string `json:"password" xml:"password"`
+	Password string `json:"password"`
 }
 
 func (o ResetDatabasePassword) String() string {

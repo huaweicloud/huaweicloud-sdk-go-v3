@@ -10,9 +10,9 @@ import (
 type CreateL7RuleRequest struct {
 
 	// 转发策略ID。
-	L7policyId string `json:"l7policy_id" xml:"l7policy_id"`
+	L7policyId string `json:"l7policy_id"`
 
-	Body *CreateL7RuleRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreateL7RuleRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateL7RuleRequest) String() string {

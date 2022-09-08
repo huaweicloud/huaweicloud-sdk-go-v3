@@ -10,13 +10,13 @@ import (
 type CheckRomaInstanceListV2Response struct {
 
 	// 列表总数
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 
 	// 本页数量
-	Size *int32 `json:"size,omitempty" xml:"size"`
+	Size *int32 `json:"size,omitempty"`
 
 	// 实例列表
-	Instances      *[]RomaInstanceCheckListRespInstances `json:"instances,omitempty" xml:"instances"`
+	Instances      *[]RomaInstanceCheckListRespInstances `json:"instances,omitempty"`
 	HttpStatusCode int                                   `json:"-"`
 }
 

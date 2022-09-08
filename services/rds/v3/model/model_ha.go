@@ -13,10 +13,10 @@ import (
 type Ha struct {
 
 	// 实例主备模式，取值：Ha（主备），不区分大小写。
-	Mode HaMode `json:"mode" xml:"mode"`
+	Mode HaMode `json:"mode"`
 
 	// 备机同步参数。实例主备模式为Ha时有效。 取值： - MySQL为“async”或“semisync”。 - PostgreSQL为“async”或“sync”。 - Microsoft SQL Server为“sync”。
-	ReplicationMode HaReplicationMode `json:"replication_mode" xml:"replication_mode"`
+	ReplicationMode HaReplicationMode `json:"replication_mode"`
 }
 
 func (o Ha) String() string {

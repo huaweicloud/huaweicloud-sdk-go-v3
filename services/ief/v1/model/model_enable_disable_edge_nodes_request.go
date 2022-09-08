@@ -10,12 +10,12 @@ import (
 type EnableDisableEdgeNodesRequest struct {
 
 	// 节点ID
-	NodeId string `json:"node_id" xml:"node_id"`
+	NodeId string `json:"node_id"`
 
 	// 铂金版实例ID，专业版实例为空值
-	IefInstanceId *string `json:"ief-instance-id,omitempty" xml:"ief-instance-id"`
+	IefInstanceId *string `json:"ief-instance-id,omitempty"`
 
-	Body *NodeAction `json:"body,omitempty" xml:"body"`
+	Body *NodeAction `json:"body,omitempty"`
 }
 
 func (o EnableDisableEdgeNodesRequest) String() string {

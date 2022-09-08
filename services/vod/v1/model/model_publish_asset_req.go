@@ -9,7 +9,7 @@ import (
 type PublishAssetReq struct {
 
 	// 媒资ID。
-	AssetId []string `json:"asset_id" xml:"asset_id"`
+	AssetId []string `json:"asset_id"`
 }
 
 func (o PublishAssetReq) String() string {

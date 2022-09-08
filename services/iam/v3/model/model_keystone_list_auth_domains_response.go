@@ -10,9 +10,9 @@ import (
 type KeystoneListAuthDomainsResponse struct {
 
 	// 账号信息列表。
-	Domains *[]Domains `json:"domains,omitempty" xml:"domains"`
+	Domains *[]Domains `json:"domains,omitempty"`
 
-	Links          *LinksSelf `json:"links,omitempty" xml:"links"`
+	Links          *LinksSelf `json:"links,omitempty"`
 	HttpStatusCode int        `json:"-"`
 }
 

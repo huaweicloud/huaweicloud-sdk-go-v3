@@ -10,7 +10,7 @@ import (
 type DeleteGaussMySqlDatabaseRequestBody struct {
 
 	// 准备删除的数据库列表，列表最大长度为50。
-	Databases []string `json:"databases" xml:"databases"`
+	Databases []string `json:"databases"`
 }
 
 func (o DeleteGaussMySqlDatabaseRequestBody) String() string {

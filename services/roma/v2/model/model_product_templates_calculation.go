@@ -9,7 +9,7 @@ import (
 type ProductTemplatesCalculation struct {
 
 	// 产品模板数量
-	ProductTemplatesNumbers *int32 `json:"product_templates_numbers,omitempty" xml:"product_templates_numbers"`
+	ProductTemplatesNumbers *int32 `json:"product_templates_numbers,omitempty"`
 }
 
 func (o ProductTemplatesCalculation) String() string {

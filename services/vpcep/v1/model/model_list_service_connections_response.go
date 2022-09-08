@@ -10,10 +10,10 @@ import (
 type ListServiceConnectionsResponse struct {
 
 	// 连接列表。
-	Connections *[]Connection `json:"connections,omitempty" xml:"connections"`
+	Connections *[]Connection `json:"connections,omitempty"`
 
 	// 满足查询条件的终端节点总条数，不受分页（即limit、offset参数）影响。
-	TotalCount     *int32 `json:"total_count,omitempty" xml:"total_count"`
+	TotalCount     *int32 `json:"total_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

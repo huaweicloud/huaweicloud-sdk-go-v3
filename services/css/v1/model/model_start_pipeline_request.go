@@ -10,9 +10,9 @@ import (
 type StartPipelineRequest struct {
 
 	// 指定开启pipeline的集群ID。
-	ClusterId string `json:"cluster_id" xml:"cluster_id"`
+	ClusterId string `json:"cluster_id"`
 
-	Body *StartPipelineReq `json:"body,omitempty" xml:"body"`
+	Body *StartPipelineReq `json:"body,omitempty"`
 }
 
 func (o StartPipelineRequest) String() string {

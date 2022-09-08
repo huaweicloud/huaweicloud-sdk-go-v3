@@ -13,9 +13,9 @@ import (
 type RunDevstarTemplateJobRequest struct {
 
 	// 语言类型，缺省值为“zh-cn”。  枚举值： - zh-cn：中文 - en-us：英文
-	XLanguage *RunDevstarTemplateJobRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *RunDevstarTemplateJobRequestXLanguage `json:"X-Language,omitempty"`
 
-	Body *TemplateJobInfo `json:"body,omitempty" xml:"body"`
+	Body *TemplateJobInfo `json:"body,omitempty"`
 }
 
 func (o RunDevstarTemplateJobRequest) String() string {

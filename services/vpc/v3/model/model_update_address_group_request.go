@@ -10,9 +10,9 @@ import (
 type UpdateAddressGroupRequest struct {
 
 	// 地址组的唯一标识
-	AddressGroupId string `json:"address_group_id" xml:"address_group_id"`
+	AddressGroupId string `json:"address_group_id"`
 
-	Body *UpdateAddressGroupRequestBody `json:"body,omitempty" xml:"body"`
+	Body *UpdateAddressGroupRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateAddressGroupRequest) String() string {

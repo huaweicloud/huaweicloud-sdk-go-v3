@@ -13,15 +13,15 @@ import (
 type ModifyPwdEndPoint struct {
 
 	// 数据库密码
-	DbPassword string `json:"db_password" xml:"db_password"`
+	DbPassword string `json:"db_password"`
 
 	// 类型，so：源库；ta：目标库。
-	EndPointType ModifyPwdEndPointEndPointType `json:"end_point_type" xml:"end_point_type"`
+	EndPointType ModifyPwdEndPointEndPointType `json:"end_point_type"`
 
 	// 任务id
-	JobId string `json:"job_id" xml:"job_id"`
+	JobId string `json:"job_id"`
 
-	Kerberos *KerberosVo `json:"kerberos,omitempty" xml:"kerberos"`
+	Kerberos *KerberosVo `json:"kerberos,omitempty"`
 }
 
 func (o ModifyPwdEndPoint) String() string {

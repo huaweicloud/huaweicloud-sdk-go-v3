@@ -10,20 +10,20 @@ import (
 type Phoneme struct {
 
 	// 音标（ARPAbet音标系统）
-	Arpa string `json:"arpa" xml:"arpa"`
+	Arpa string `json:"arpa"`
 
 	// 音标（国际音标系统）
-	Ipa string `json:"ipa" xml:"ipa"`
+	Ipa string `json:"ipa"`
 
 	//
-	StartTime float32 `json:"start_time" xml:"start_time"`
+	StartTime float32 `json:"start_time"`
 
 	//
-	EndTime float32 `json:"end_time" xml:"end_time"`
+	EndTime float32 `json:"end_time"`
 
-	Fluency *PhonemeFluency `json:"fluency" xml:"fluency"`
+	Fluency *PhonemeFluency `json:"fluency"`
 
-	Pronunciation *PhonemePronunciation `json:"pronunciation" xml:"pronunciation"`
+	Pronunciation *PhonemePronunciation `json:"pronunciation"`
 }
 
 func (o Phoneme) String() string {

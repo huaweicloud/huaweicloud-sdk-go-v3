@@ -10,10 +10,10 @@ import (
 type BatchOpsResult struct {
 
 	// 操作结果，取值有success或failed。
-	Result *string `json:"result,omitempty" xml:"result"`
+	Result *string `json:"result,omitempty"`
 
 	// 缓存实例ID。
-	Instance *string `json:"instance,omitempty" xml:"instance"`
+	Instance *string `json:"instance,omitempty"`
 }
 
 func (o BatchOpsResult) String() string {

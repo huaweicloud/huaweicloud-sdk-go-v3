@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ListCaseLimitsResponse struct {
-	Config         *TenantConfigV2 `json:"config,omitempty" xml:"config"`
+	Config         *TenantConfigV2 `json:"config,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }
 

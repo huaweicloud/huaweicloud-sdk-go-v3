@@ -10,9 +10,9 @@ import (
 type UploadExtensionFileRequest struct {
 
 	// 插件类型。目前只支持CloudIDE
-	Official string `json:"official" xml:"official"`
+	Official string `json:"official"`
 
-	Body *UploadExtensionFileRequestBody `json:"body,omitempty" xml:"body" type:"multipart"`
+	Body *UploadExtensionFileRequestBody `json:"body,omitempty" type:"multipart"`
 }
 
 func (o UploadExtensionFileRequest) String() string {

@@ -10,7 +10,7 @@ import (
 type IpGroupIp struct {
 
 	// IP地址，可以是具体的IP地址或者IP地址段。
-	Ip string `json:"ip" xml:"ip"`
+	Ip string `json:"ip"`
 }
 
 func (o IpGroupIp) String() string {

@@ -10,25 +10,25 @@ import (
 type PermissionItem struct {
 
 	// 权限类型。
-	PermissionType *string `json:"permission_type,omitempty" xml:"permission_type"`
+	PermissionType *string `json:"permission_type,omitempty"`
 
 	// schema名称。
-	SchemaName *string `json:"schema_name,omitempty" xml:"schema_name"`
+	SchemaName *string `json:"schema_name,omitempty"`
 
 	// 权限描述。
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 是否通过。
-	Status *string `json:"status,omitempty" xml:"status"`
+	Status *string `json:"status,omitempty"`
 
 	// 失败原因。
-	FailedReason *string `json:"failed_reason,omitempty" xml:"failed_reason"`
+	FailedReason *string `json:"failed_reason,omitempty"`
 
 	// 失败详情。
-	FailedDetail *string `json:"failed_detail,omitempty" xml:"failed_detail"`
+	FailedDetail *string `json:"failed_detail,omitempty"`
 
 	// 解决建议。
-	SuggestSolution *[]string `json:"suggest_solution,omitempty" xml:"suggest_solution"`
+	SuggestSolution *[]string `json:"suggest_solution,omitempty"`
 }
 
 func (o PermissionItem) String() string {

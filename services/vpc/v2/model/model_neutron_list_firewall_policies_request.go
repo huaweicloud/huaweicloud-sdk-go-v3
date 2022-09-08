@@ -10,22 +10,22 @@ import (
 type NeutronListFirewallPoliciesRequest struct {
 
 	// 每页返回的个数
-	Limit *int32 `json:"limit,omitempty" xml:"limit"`
+	Limit *int32 `json:"limit,omitempty"`
 
 	// 分页查询起始的资源ID，为空时查询第一页
-	Marker *string `json:"marker,omitempty" xml:"marker"`
+	Marker *string `json:"marker,omitempty"`
 
 	// 使用网络ACL策略ID过滤网络ACL策略
-	Id *[]string `json:"id,omitempty" xml:"id"`
+	Id *[]string `json:"id,omitempty"`
 
 	// 使用name过滤网络ACL策略
-	Name *[]string `json:"name,omitempty" xml:"name"`
+	Name *[]string `json:"name,omitempty"`
 
 	// 使用网络ACL策略描述过滤查询网络ACL策略
-	Description *[]string `json:"description,omitempty" xml:"description"`
+	Description *[]string `json:"description,omitempty"`
 
 	// 使用tenant_id过滤查询网络ACL策略
-	TenantId *string `json:"tenant_id,omitempty" xml:"tenant_id"`
+	TenantId *string `json:"tenant_id,omitempty"`
 }
 
 func (o NeutronListFirewallPoliciesRequest) String() string {

@@ -8,13 +8,13 @@ import (
 
 // Response Object
 type AddRepoMembersResponse struct {
-	Error *Error `json:"error,omitempty" xml:"error"`
+	Error *Error `json:"error,omitempty"`
 
 	// 响应结果
-	Result *[]CreateRepoMemberResult `json:"result,omitempty" xml:"result"`
+	Result *[]CreateRepoMemberResult `json:"result,omitempty"`
 
 	// 响应状态
-	Status         *string `json:"status,omitempty" xml:"status"`
+	Status         *string `json:"status,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

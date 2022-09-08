@@ -10,7 +10,7 @@ import (
 type UpdateRoutesRequestBody struct {
 
 	// 待更新的路由信息
-	Routes []RouteOption `json:"routes" xml:"routes"`
+	Routes []RouteOption `json:"routes"`
 }
 
 func (o UpdateRoutesRequestBody) String() string {

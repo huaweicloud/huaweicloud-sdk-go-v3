@@ -13,12 +13,12 @@ import (
 type StartResizeFlavorActionRequest struct {
 
 	// 语言
-	XLanguage *StartResizeFlavorActionRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *StartResizeFlavorActionRequestXLanguage `json:"X-Language,omitempty"`
 
 	// 实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
-	Body *ResizeFlavorRequest `json:"body,omitempty" xml:"body"`
+	Body *ResizeFlavorRequest `json:"body,omitempty"`
 }
 
 func (o StartResizeFlavorActionRequest) String() string {

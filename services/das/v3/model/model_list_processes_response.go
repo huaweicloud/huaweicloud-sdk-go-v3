@@ -10,10 +10,10 @@ import (
 type ListProcessesResponse struct {
 
 	// 会话列表
-	Processes *[]Process `json:"processes,omitempty" xml:"processes"`
+	Processes *[]Process `json:"processes,omitempty"`
 
 	// 总记录数
-	Count          *int64 `json:"count,omitempty" xml:"count"`
+	Count          *int64 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

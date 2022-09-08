@@ -9,13 +9,13 @@ import (
 type ServiceTypes struct {
 
 	// 云服务类型的名称。
-	ServiceTypeName *string `json:"service_type_name,omitempty" xml:"service_type_name"`
+	ServiceTypeName *string `json:"service_type_name,omitempty"`
 
 	// 云服务类型的编码。
-	ServiceTypeCode *string `json:"service_type_code,omitempty" xml:"service_type_code"`
+	ServiceTypeCode *string `json:"service_type_code,omitempty"`
 
 	// 云服务类型的缩写。
-	Abbreviation *string `json:"abbreviation,omitempty" xml:"abbreviation"`
+	Abbreviation *string `json:"abbreviation,omitempty"`
 }
 
 func (o ServiceTypes) String() string {

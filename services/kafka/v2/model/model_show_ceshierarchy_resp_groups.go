@@ -9,10 +9,10 @@ import (
 type ShowCeshierarchyRespGroups struct {
 
 	// 消费组名称。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// topic信息。
-	Queues *[]ShowCeshierarchyRespQueues1 `json:"queues,omitempty" xml:"queues"`
+	Queues *[]ShowCeshierarchyRespQueues1 `json:"queues,omitempty"`
 }
 
 func (o ShowCeshierarchyRespGroups) String() string {

@@ -13,28 +13,28 @@ import (
 type ListProtectableRequest struct {
 
 	// 每页显示的条目数量，每页最多支持50条
-	Limit *int32 `json:"limit,omitempty" xml:"limit"`
+	Limit *int32 `json:"limit,omitempty"`
 
 	// 上一次查询最后一条的ID
-	Marker *string `json:"marker,omitempty" xml:"marker"`
+	Marker *string `json:"marker,omitempty"`
 
 	// 按名称过滤
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 偏移值
-	Offset *int32 `json:"offset,omitempty" xml:"offset"`
+	Offset *int32 `json:"offset,omitempty"`
 
 	// 对象类型
-	ProtectableType ListProtectableRequestProtectableType `json:"protectable_type" xml:"protectable_type"`
+	ProtectableType ListProtectableRequestProtectableType `json:"protectable_type"`
 
 	// 资源的状态，如available，error 等
-	Status *string `json:"status,omitempty" xml:"status"`
+	Status *string `json:"status,omitempty"`
 
 	// 根据资源id过滤
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 根据该id过滤属于该服务器的所有磁盘，支持企业多项目的用户才能传入此参数
-	ServerId *string `json:"server_id,omitempty" xml:"server_id"`
+	ServerId *string `json:"server_id,omitempty"`
 }
 
 func (o ListProtectableRequest) String() string {

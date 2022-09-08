@@ -10,19 +10,19 @@ import (
 type PublicationRequestBase struct {
 
 	// 发布名称
-	PublishName string `json:"publishName" xml:"publishName"`
+	PublishName string `json:"publishName"`
 
 	// 开始时间
-	StartTime int64 `json:"startTime" xml:"startTime"`
+	StartTime int64 `json:"startTime"`
 
 	// 结束时间
-	EndTime int64 `json:"endTime" xml:"endTime"`
+	EndTime int64 `json:"endTime"`
 
 	// 发布到部门编码列表
-	DeptList []string `json:"deptList" xml:"deptList"`
+	DeptList []string `json:"deptList"`
 
 	// 发布到设备用户ID列表
-	DeviceList []string `json:"deviceList" xml:"deviceList"`
+	DeviceList []string `json:"deviceList"`
 }
 
 func (o PublicationRequestBase) String() string {

@@ -10,10 +10,10 @@ import (
 type Word struct {
 
 	// 词汇文本。
-	Content string `json:"content" xml:"content"`
+	Content string `json:"content"`
 
 	// 词汇对应的词性。
-	Pos string `json:"pos" xml:"pos"`
+	Pos string `json:"pos"`
 }
 
 func (o Word) String() string {

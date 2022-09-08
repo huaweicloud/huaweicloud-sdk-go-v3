@@ -10,7 +10,7 @@ import (
 type ShowAutoCreatePolicyRequest struct {
 
 	// 指定需查询自动创建快照策略的集群ID。
-	ClusterId string `json:"cluster_id" xml:"cluster_id"`
+	ClusterId string `json:"cluster_id"`
 }
 
 func (o ShowAutoCreatePolicyRequest) String() string {

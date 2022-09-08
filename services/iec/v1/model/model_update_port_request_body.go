@@ -8,7 +8,7 @@ import (
 
 // 更新端口请求体
 type UpdatePortRequestBody struct {
-	Port *UpdatePortOption `json:"port" xml:"port"`
+	Port *UpdatePortOption `json:"port"`
 }
 
 func (o UpdatePortRequestBody) String() string {

@@ -8,7 +8,7 @@ import (
 
 // 更新子网的请求体。
 type UpdateSubnetRequestBody struct {
-	Subnet *UpdateSubnetOption `json:"subnet,omitempty" xml:"subnet"`
+	Subnet *UpdateSubnetOption `json:"subnet,omitempty"`
 }
 
 func (o UpdateSubnetRequestBody) String() string {

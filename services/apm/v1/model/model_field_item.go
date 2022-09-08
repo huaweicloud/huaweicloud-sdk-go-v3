@@ -10,25 +10,25 @@ import (
 type FieldItem struct {
 
 	// 表达式
-	Function *string `json:"function,omitempty" xml:"function"`
+	Function *string `json:"function,omitempty"`
 
 	// 作为
-	As *string `json:"as,omitempty" xml:"as"`
+	As *string `json:"as,omitempty"`
 
 	// 默认值
-	DefaultValue *string `json:"default_value,omitempty" xml:"default_value"`
+	DefaultValue *string `json:"default_value,omitempty"`
 
 	// 是否是trace
-	Trace *bool `json:"trace,omitempty" xml:"trace"`
+	Trace *bool `json:"trace,omitempty"`
 
 	// 百分比
-	Precision *int32 `json:"precision,omitempty" xml:"precision"`
+	Precision *int32 `json:"precision,omitempty"`
 
 	// 单位
-	Unit *string `json:"unit,omitempty" xml:"unit"`
+	Unit *string `json:"unit,omitempty"`
 
 	// 是否可见
-	Visible *bool `json:"visible,omitempty" xml:"visible"`
+	Visible *bool `json:"visible,omitempty"`
 }
 
 func (o FieldItem) String() string {

@@ -10,22 +10,22 @@ import (
 type CreateStoredQueryResponse struct {
 
 	// ResourceQL ID
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// ResourceQL 名字
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// ResourceQL 描述
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// ResourceQL 表达式
-	Expression *string `json:"expression,omitempty" xml:"expression"`
+	Expression *string `json:"expression,omitempty"`
 
 	// ResourceQL 创建时间
-	Created *string `json:"created,omitempty" xml:"created"`
+	Created *string `json:"created,omitempty"`
 
 	// ResourceQL 更新时间
-	Updated        *string `json:"updated,omitempty" xml:"updated"`
+	Updated        *string `json:"updated,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

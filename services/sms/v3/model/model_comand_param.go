@@ -10,10 +10,10 @@ import (
 type ComandParam struct {
 
 	// 任务id
-	TaskId *string `json:"task_id,omitempty" xml:"task_id"`
+	TaskId *string `json:"task_id,omitempty"`
 
 	// 桶名
-	Bucket *string `json:"bucket,omitempty" xml:"bucket"`
+	Bucket *string `json:"bucket,omitempty"`
 }
 
 func (o ComandParam) String() string {

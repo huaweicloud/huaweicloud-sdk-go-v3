@@ -8,43 +8,43 @@ import (
 
 // 访问配置，与access_protocol直接关联
 type AccessConfig struct {
-	ProtocolType *ValueInAttributes `json:"protocol_type" xml:"protocol_type"`
+	ProtocolType *ValueInAttributes `json:"protocol_type"`
 
-	ProtocolName *ValueInAttributes `json:"protocol_name,omitempty" xml:"protocol_name"`
+	ProtocolName *ValueInAttributes `json:"protocol_name,omitempty"`
 
-	SlaveId *ValueInAttributes `json:"slave_id,omitempty" xml:"slave_id"`
+	SlaveId *ValueInAttributes `json:"slave_id,omitempty"`
 
-	Ip *ValueInAttributes `json:"ip,omitempty" xml:"ip"`
+	Ip *ValueInAttributes `json:"ip,omitempty"`
 
-	Port *ValueInAttributes `json:"port,omitempty" xml:"port"`
+	Port *ValueInAttributes `json:"port,omitempty"`
 
-	SerialPort *ValueInAttributes `json:"serial_port,omitempty" xml:"serial_port"`
+	SerialPort *ValueInAttributes `json:"serial_port,omitempty"`
 
-	BaudRate *ValueInAttributes `json:"baud_rate,omitempty" xml:"baud_rate"`
+	BaudRate *ValueInAttributes `json:"baud_rate,omitempty"`
 
-	DataBits *ValueInAttributes `json:"data_bits,omitempty" xml:"data_bits"`
+	DataBits *ValueInAttributes `json:"data_bits,omitempty"`
 
-	StopBits *ValueInAttributes `json:"stop_bits,omitempty" xml:"stop_bits"`
+	StopBits *ValueInAttributes `json:"stop_bits,omitempty"`
 
-	ParityBits *ValueInAttributes `json:"parity_bits,omitempty" xml:"parity_bits"`
+	ParityBits *ValueInAttributes `json:"parity_bits,omitempty"`
 
-	Url *ValueInAttributes `json:"url,omitempty" xml:"url"`
+	Url *ValueInAttributes `json:"url,omitempty"`
 
-	SecMode *ValueInAttributes `json:"sec_mode,omitempty" xml:"sec_mode"`
+	SecMode *ValueInAttributes `json:"sec_mode,omitempty"`
 
-	SecPolicy *ValueInAttributes `json:"sec_policy,omitempty" xml:"sec_policy"`
+	SecPolicy *ValueInAttributes `json:"sec_policy,omitempty"`
 
-	AuthType *ValueInAttributes `json:"auth_type,omitempty" xml:"auth_type"`
+	AuthType *ValueInAttributes `json:"auth_type,omitempty"`
 
-	Username *ValueInAttributes `json:"username,omitempty" xml:"username"`
+	Username *ValueInAttributes `json:"username,omitempty"`
 
-	Password *ValueInAttributes `json:"password,omitempty" xml:"password"`
+	Password *ValueInAttributes `json:"password,omitempty"`
 
-	PrivateKey *ValueInAttributes `json:"private_key,omitempty" xml:"private_key"`
+	PrivateKey *ValueInAttributes `json:"private_key,omitempty"`
 
-	Certificate *ValueInAttributes `json:"certificate,omitempty" xml:"certificate"`
+	Certificate *ValueInAttributes `json:"certificate,omitempty"`
 
-	Timeout *ValueInAttributes `json:"timeout,omitempty" xml:"timeout"`
+	Timeout *ValueInAttributes `json:"timeout,omitempty"`
 }
 
 func (o AccessConfig) String() string {

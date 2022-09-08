@@ -10,9 +10,9 @@ import (
 type CreateCertificateResponse struct {
 
 	// 请求ID。  注：自动生成 。
-	RequestId *string `json:"request_id,omitempty" xml:"request_id"`
+	RequestId *string `json:"request_id,omitempty"`
 
-	Certificate    *CertificateInfo `json:"certificate,omitempty" xml:"certificate"`
+	Certificate    *CertificateInfo `json:"certificate,omitempty"`
 	HttpStatusCode int              `json:"-"`
 }
 

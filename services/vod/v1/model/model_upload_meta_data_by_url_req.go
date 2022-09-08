@@ -9,7 +9,7 @@ import (
 type UploadMetaDataByUrlReq struct {
 
 	// 待拉取创建的媒资元数据
-	UploadMetadatas []UploadMetaDataByUrl `json:"upload_metadatas" xml:"upload_metadatas"`
+	UploadMetadatas []UploadMetaDataByUrl `json:"upload_metadatas"`
 }
 
 func (o UploadMetaDataByUrlReq) String() string {

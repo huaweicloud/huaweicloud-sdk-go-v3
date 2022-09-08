@@ -10,10 +10,10 @@ import (
 type ListSystemSecurityPoliciesResponse struct {
 
 	// 系统安全策略列表。
-	SystemSecurityPolicies *[]SystemSecurityPolicy `json:"system_security_policies,omitempty" xml:"system_security_policies"`
+	SystemSecurityPolicies *[]SystemSecurityPolicy `json:"system_security_policies,omitempty"`
 
 	// 请求ID。  注：自动生成 。
-	RequestId      *string `json:"request_id,omitempty" xml:"request_id"`
+	RequestId      *string `json:"request_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

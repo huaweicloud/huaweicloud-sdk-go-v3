@@ -10,7 +10,7 @@ import (
 type AudioInputBody struct {
 
 	// 音频url地址。
-	Url string `json:"url" xml:"url"`
+	Url *string `json:"url,omitempty"`
 }
 
 func (o AudioInputBody) String() string {

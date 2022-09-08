@@ -9,7 +9,7 @@ import (
 type Phones struct {
 
 	// 手机列表
-	Phones []PhonesPhones `json:"phones" xml:"phones"`
+	Phones []PhonesPhones `json:"phones"`
 }
 
 func (o Phones) String() string {

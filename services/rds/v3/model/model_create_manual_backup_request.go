@@ -10,9 +10,9 @@ import (
 type CreateManualBackupRequest struct {
 
 	// 语言
-	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *string `json:"X-Language,omitempty"`
 
-	Body *CreateManualBackupRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreateManualBackupRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateManualBackupRequest) String() string {

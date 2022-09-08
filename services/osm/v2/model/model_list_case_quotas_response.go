@@ -10,10 +10,10 @@ import (
 type ListCaseQuotasResponse struct {
 
 	// 总配额
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 
 	// 未使用
-	UnUsed         *int32 `json:"un_used,omitempty" xml:"un_used"`
+	UnUsed         *int32 `json:"un_used,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

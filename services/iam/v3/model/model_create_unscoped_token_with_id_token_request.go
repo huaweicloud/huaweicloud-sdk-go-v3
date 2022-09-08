@@ -10,13 +10,13 @@ import (
 type CreateUnscopedTokenWithIdTokenRequest struct {
 
 	// 身份提供商id。
-	IdpId string `json:"idp_id" xml:"idp_id"`
+	IdpId string `json:"idp_id"`
 
 	// 协议id。
-	ProtocolId string `json:"protocol_id" xml:"protocol_id"`
+	ProtocolId string `json:"protocol_id"`
 
 	// OpenID Connect身份提供商的ID Token，格式为Bearer {ID Token}。
-	Authorization string `json:"Authorization" xml:"Authorization"`
+	Authorization string `json:"Authorization"`
 }
 
 func (o CreateUnscopedTokenWithIdTokenRequest) String() string {

@@ -10,9 +10,9 @@ import (
 type UpdateDataStoreRequest struct {
 
 	// 存储 ID
-	DataStoreId string `json:"data_store_id" xml:"data_store_id"`
+	DataStoreId string `json:"data_store_id"`
 
-	Body *UpdateDataStore `json:"body,omitempty" xml:"body"`
+	Body *UpdateDataStore `json:"body,omitempty"`
 }
 
 func (o UpdateDataStoreRequest) String() string {

@@ -9,19 +9,19 @@ import (
 type DebugCaseReturnHeader struct {
 
 	// Connection
-	Connection *string `json:"Connection,omitempty" xml:"Connection"`
+	Connection *string `json:"Connection,omitempty"`
 
 	// Content-Length
-	ContentLength *string `json:"Content-Length,omitempty" xml:"Content-Length"`
+	ContentLength *string `json:"Content-Length,omitempty"`
 
 	// Content-Type
-	ContentType *string `json:"Content-Type,omitempty" xml:"Content-Type"`
+	ContentType *string `json:"Content-Type,omitempty"`
 
 	// Date
-	Date *string `json:"Date,omitempty" xml:"Date"`
+	Date *string `json:"Date,omitempty"`
 
 	// Vary
-	Vary *string `json:"Vary,omitempty" xml:"Vary"`
+	Vary *string `json:"Vary,omitempty"`
 }
 
 func (o DebugCaseReturnHeader) String() string {

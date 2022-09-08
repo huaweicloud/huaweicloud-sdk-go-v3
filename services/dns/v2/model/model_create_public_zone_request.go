@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreatePublicZoneRequest struct {
-	Body *CreatePublicZoneReq `json:"body,omitempty" xml:"body"`
+	Body *CreatePublicZoneReq `json:"body,omitempty"`
 }
 
 func (o CreatePublicZoneRequest) String() string {

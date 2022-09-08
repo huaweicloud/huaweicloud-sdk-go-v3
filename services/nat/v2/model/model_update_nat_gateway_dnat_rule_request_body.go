@@ -8,7 +8,7 @@ import (
 
 // 更新DNAT规则的响应体。
 type UpdateNatGatewayDnatRuleRequestBody struct {
-	DnatRule *UpdateNatGatewayDnatRuleOption `json:"dnat_rule,omitempty" xml:"dnat_rule"`
+	DnatRule *UpdateNatGatewayDnatRuleOption `json:"dnat_rule,omitempty"`
 }
 
 func (o UpdateNatGatewayDnatRuleRequestBody) String() string {

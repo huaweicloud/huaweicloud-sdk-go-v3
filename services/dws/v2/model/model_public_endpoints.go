@@ -10,10 +10,10 @@ import (
 type PublicEndpoints struct {
 
 	// 公网连接信息
-	PublicConnectInfo *string `json:"public_connect_info,omitempty" xml:"public_connect_info"`
+	PublicConnectInfo *string `json:"public_connect_info,omitempty"`
 
 	// 公网JDBC URL，默认格式如下： jdbc:postgresql://<public_connect_info>/<YOUR_DATABASE_name>
-	JdbcUrl *string `json:"jdbc_url,omitempty" xml:"jdbc_url"`
+	JdbcUrl *string `json:"jdbc_url,omitempty"`
 }
 
 func (o PublicEndpoints) String() string {

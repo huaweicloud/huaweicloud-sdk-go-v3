@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowCheckpointResponse struct {
-	Checkpoint     *CheckpointCreate `json:"checkpoint,omitempty" xml:"checkpoint"`
+	Checkpoint     *CheckpointCreate `json:"checkpoint,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }
 

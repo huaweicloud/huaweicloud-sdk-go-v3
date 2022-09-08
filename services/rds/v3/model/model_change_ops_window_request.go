@@ -13,12 +13,12 @@ import (
 type ChangeOpsWindowRequest struct {
 
 	// 语言
-	XLanguage *ChangeOpsWindowRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *ChangeOpsWindowRequestXLanguage `json:"X-Language,omitempty"`
 
 	// 实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
-	Body *OpsWindowRequest `json:"body,omitempty" xml:"body"`
+	Body *OpsWindowRequest `json:"body,omitempty"`
 }
 
 func (o ChangeOpsWindowRequest) String() string {

@@ -9,7 +9,7 @@ import (
 type DeleteAlarmRulesBody struct {
 
 	// 阈值规则列表
-	AlarmRules []string `json:"alarm_rules" xml:"alarm_rules"`
+	AlarmRules []string `json:"alarm_rules"`
 }
 
 func (o DeleteAlarmRulesBody) String() string {

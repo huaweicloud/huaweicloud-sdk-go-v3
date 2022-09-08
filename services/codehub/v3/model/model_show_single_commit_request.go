@@ -10,13 +10,13 @@ import (
 type ShowSingleCommitRequest struct {
 
 	// 仓库短id
-	RepoId int32 `json:"repo_id" xml:"repo_id"`
+	RepoId int32 `json:"repo_id"`
 
 	// commit id，仓库的branch名或tag名
-	Sha string `json:"sha" xml:"sha"`
+	Sha string `json:"sha"`
 
 	// 包括提交统计信息。默认值为true
-	Stats *bool `json:"stats,omitempty" xml:"stats"`
+	Stats *bool `json:"stats,omitempty"`
 }
 
 func (o ShowSingleCommitRequest) String() string {

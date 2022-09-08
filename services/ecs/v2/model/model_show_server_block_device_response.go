@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowServerBlockDeviceResponse struct {
-	VolumeAttachment *ServerBlockDevice `json:"volumeAttachment,omitempty" xml:"volumeAttachment"`
+	VolumeAttachment *ServerBlockDevice `json:"volumeAttachment,omitempty"`
 	HttpStatusCode   int                `json:"-"`
 }
 

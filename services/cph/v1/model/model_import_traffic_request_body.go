@@ -9,10 +9,10 @@ import (
 type ImportTrafficRequestBody struct {
 
 	// 手机路由类型 direct：默认路由 routing：路由到编码容器
-	TrafficType string `json:"traffic_type" xml:"traffic_type"`
+	TrafficType string `json:"traffic_type"`
 
 	// 手机id列表 一次调用最多支持100个
-	PhoneIds []string `json:"phone_ids" xml:"phone_ids"`
+	PhoneIds []string `json:"phone_ids"`
 }
 
 func (o ImportTrafficRequestBody) String() string {

@@ -10,18 +10,18 @@ import (
 type ListRtcUserListResponse struct {
 
 	// 总数
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 
 	// 查询结果限制
-	Limit *int32 `json:"limit,omitempty" xml:"limit"`
+	Limit *int32 `json:"limit,omitempty"`
 
 	// 查询偏移量
-	Offset *int32 `json:"offset,omitempty" xml:"offset"`
+	Offset *int32 `json:"offset,omitempty"`
 
 	// 用户列表
-	Users *[]RtcUser `json:"users,omitempty" xml:"users"`
+	Users *[]RtcUser `json:"users,omitempty"`
 
-	XRequestId     *string `json:"X-request-id,omitempty" xml:"X-request-id"`
+	XRequestId     *string `json:"X-request-id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -10,9 +10,9 @@ import (
 type ResizeInstanceRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
-	Body *ResizeInstanceBody `json:"body,omitempty" xml:"body"`
+	Body *ResizeInstanceBody `json:"body,omitempty"`
 }
 
 func (o ResizeInstanceRequest) String() string {

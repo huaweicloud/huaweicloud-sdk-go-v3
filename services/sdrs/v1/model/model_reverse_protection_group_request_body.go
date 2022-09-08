@@ -8,7 +8,7 @@ import (
 
 // 保护组切换请求体
 type ReverseProtectionGroupRequestBody struct {
-	ReverseServerGroup *ReverseProtectionGroupRequestParams `json:"reverse-server-group" xml:"reverse-server-group"`
+	ReverseServerGroup *ReverseProtectionGroupRequestParams `json:"reverse-server-group"`
 }
 
 func (o ReverseProtectionGroupRequestBody) String() string {

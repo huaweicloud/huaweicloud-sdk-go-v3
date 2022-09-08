@@ -12,7 +12,7 @@ import (
 type UpdateEdgeAppVersionStateDto struct {
 
 	// 应用版本状态
-	State *UpdateEdgeAppVersionStateDtoState `json:"state,omitempty" xml:"state"`
+	State *UpdateEdgeAppVersionStateDtoState `json:"state,omitempty"`
 }
 
 func (o UpdateEdgeAppVersionStateDto) String() string {

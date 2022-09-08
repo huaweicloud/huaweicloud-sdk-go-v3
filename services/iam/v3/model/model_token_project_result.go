@@ -10,12 +10,12 @@ import (
 type TokenProjectResult struct {
 
 	// 项目名。
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 项目ID。
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
-	Domain *TokenProjectDomainResult `json:"domain" xml:"domain"`
+	Domain *TokenProjectDomainResult `json:"domain"`
 }
 
 func (o TokenProjectResult) String() string {

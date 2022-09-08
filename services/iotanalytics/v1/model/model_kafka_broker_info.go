@@ -10,10 +10,10 @@ import (
 type KafkaBrokerInfo struct {
 
 	// IP
-	Ip string `json:"ip" xml:"ip"`
+	Ip string `json:"ip"`
 
 	// Port
-	Port int32 `json:"port" xml:"port"`
+	Port int32 `json:"port"`
 }
 
 func (o KafkaBrokerInfo) String() string {

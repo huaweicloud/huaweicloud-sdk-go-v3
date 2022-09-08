@@ -10,10 +10,10 @@ import (
 type DeleteNodeSqlFilterRuleInfo struct {
 
 	// 节点id
-	NodeId string `json:"node_id" xml:"node_id"`
+	NodeId string `json:"node_id"`
 
 	// SQL限流规则。
-	Rules []DeleteNodeSqlFilterRule `json:"rules" xml:"rules"`
+	Rules []DeleteNodeSqlFilterRule `json:"rules"`
 }
 
 func (o DeleteNodeSqlFilterRuleInfo) String() string {

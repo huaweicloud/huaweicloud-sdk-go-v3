@@ -8,7 +8,7 @@ import (
 
 // 更新专属主机属性消息体。
 type ReqUpdateDeh struct {
-	DedicatedHost *ReqUpdateDehMessage `json:"dedicated_host" xml:"dedicated_host"`
+	DedicatedHost *ReqUpdateDehMessage `json:"dedicated_host"`
 }
 
 func (o ReqUpdateDeh) String() string {

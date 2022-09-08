@@ -9,25 +9,25 @@ import (
 type IncidentSatisfactionV2Do struct {
 
 	// 满意度总分数
-	Value *int32 `json:"value,omitempty" xml:"value"`
+	Value *int32 `json:"value,omitempty"`
 
 	// 满意度分类id
-	SatisfactionId int32 `json:"satisfaction_id" xml:"satisfaction_id"`
+	SatisfactionId int32 `json:"satisfaction_id"`
 
 	// 满意度的值
-	SatisfactionValue int32 `json:"satisfaction_value" xml:"satisfaction_value"`
+	SatisfactionValue int32 `json:"satisfaction_value"`
 
 	// 满意度分类名称
-	SatisfactionName *string `json:"satisfaction_name,omitempty" xml:"satisfaction_name"`
+	SatisfactionName *string `json:"satisfaction_name,omitempty"`
 
 	// 每格的分数
-	PerValue *int32 `json:"per_value,omitempty" xml:"per_value"`
+	PerValue *int32 `json:"per_value,omitempty"`
 
 	// 满意度维度id
-	SatCategoryId *string `json:"sat_category_id,omitempty" xml:"sat_category_id"`
+	SatCategoryId *string `json:"sat_category_id,omitempty"`
 
 	// 满意度维度名称
-	SatCategoryName *string `json:"sat_category_name,omitempty" xml:"sat_category_name"`
+	SatCategoryName *string `json:"sat_category_name,omitempty"`
 }
 
 func (o IncidentSatisfactionV2Do) String() string {

@@ -10,9 +10,9 @@ import (
 type ListProductsResponse struct {
 
 	// 产品信息列表。
-	Products *[]ProductSummary `json:"products,omitempty" xml:"products"`
+	Products *[]ProductSummary `json:"products,omitempty"`
 
-	Page           *Page `json:"page,omitempty" xml:"page"`
+	Page           *Page `json:"page,omitempty"`
 	HttpStatusCode int   `json:"-"`
 }
 

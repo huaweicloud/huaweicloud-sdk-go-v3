@@ -10,7 +10,7 @@ import (
 type ListLogGroupsResponse struct {
 
 	// 日志组信息。
-	LogGroups      *[]LogGroup `json:"log_groups,omitempty" xml:"log_groups"`
+	LogGroups      *[]LogGroup `json:"log_groups,omitempty"`
 	HttpStatusCode int         `json:"-"`
 }
 

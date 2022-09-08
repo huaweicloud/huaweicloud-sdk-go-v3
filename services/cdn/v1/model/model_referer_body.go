@@ -7,7 +7,7 @@ import (
 )
 
 type RefererBody struct {
-	Referer *Referer `json:"referer" xml:"referer"`
+	Referer *Referer `json:"referer"`
 }
 
 func (o RefererBody) String() string {

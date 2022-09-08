@@ -9,7 +9,7 @@ import (
 type SecurityGroupRequest struct {
 
 	// - 安全组ID。
-	SecurityGroupId string `json:"security_group_id" xml:"security_group_id"`
+	SecurityGroupId string `json:"security_group_id"`
 }
 
 func (o SecurityGroupRequest) String() string {

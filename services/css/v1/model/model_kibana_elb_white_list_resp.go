@@ -10,10 +10,10 @@ import (
 type KibanaElbWhiteListResp struct {
 
 	// 是否开启kibana访问控制。 - true: 开启访问控制。 - false: 关闭访问控制
-	EnableWhiteList *bool `json:"enableWhiteList,omitempty" xml:"enableWhiteList"`
+	EnableWhiteList *bool `json:"enableWhiteList,omitempty"`
 
 	// kibana公网访问白名单。
-	WhiteList *string `json:"whiteList,omitempty" xml:"whiteList"`
+	WhiteList *string `json:"whiteList,omitempty"`
 }
 
 func (o KibanaElbWhiteListResp) String() string {

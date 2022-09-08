@@ -10,13 +10,13 @@ import (
 type ListUserRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 偏移量，表示从此偏移量开始查询， offset大于等于0。
-	Offset *string `json:"offset,omitempty" xml:"offset"`
+	Offset *string `json:"offset,omitempty"`
 
 	// 查询数量。
-	Limit *string `json:"limit,omitempty" xml:"limit"`
+	Limit *string `json:"limit,omitempty"`
 }
 
 func (o ListUserRequest) String() string {

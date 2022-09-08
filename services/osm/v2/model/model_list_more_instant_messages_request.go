@@ -10,28 +10,28 @@ import (
 type ListMoreInstantMessagesRequest struct {
 
 	// 工单id
-	CaseId string `json:"case_id" xml:"case_id"`
+	CaseId string `json:"case_id"`
 
 	// 创建时间，时间戳
-	CreateTime string `json:"create_time" xml:"create_time"`
+	CreateTime string `json:"create_time"`
 
 	// 上一条消息的留言方式 0是客户留言 1是客服回留言
-	Type int32 `json:"type" xml:"type"`
+	Type int32 `json:"type"`
 
 	// 组id
-	GroupId *string `json:"group_id,omitempty" xml:"group_id"`
+	GroupId *string `json:"group_id,omitempty"`
 
 	// 查询数量
-	Limit int32 `json:"limit" xml:"limit"`
+	Limit int32 `json:"limit"`
 
 	// 对接站点信息。  0（中国站） 1（国际站），不填的话默认为0。
-	XSite *int32 `json:"X-Site,omitempty" xml:"X-Site"`
+	XSite *int32 `json:"X-Site,omitempty"`
 
 	// 语言环境，值为通用的语言描述字符串，比如zh-cn等，默认为zh-cn。  会根据语言环境对应展示一些国际化的信息，比如工单类型名称等。
-	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *string `json:"X-Language,omitempty"`
 
 	// 环境时区，值为通用的时区描述字符串，比如GMT+8等，默认为GMT+8。  涉及时间的数据会根据环境时区处理。
-	XTimeZone *string `json:"X-Time-Zone,omitempty" xml:"X-Time-Zone"`
+	XTimeZone *string `json:"X-Time-Zone,omitempty"`
 }
 
 func (o ListMoreInstantMessagesRequest) String() string {

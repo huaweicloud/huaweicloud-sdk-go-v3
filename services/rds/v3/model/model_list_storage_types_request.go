@@ -13,16 +13,16 @@ import (
 type ListStorageTypesRequest struct {
 
 	// 语言
-	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *string `json:"X-Language,omitempty"`
 
 	// 数据库引擎。支持的引擎如下，不区分大小写： MySQL PostgreSQL SQLServer
-	DatabaseName ListStorageTypesRequestDatabaseName `json:"database_name" xml:"database_name"`
+	DatabaseName ListStorageTypesRequestDatabaseName `json:"database_name"`
 
 	// 数据库版本号。
-	VersionName string `json:"version_name" xml:"version_name"`
+	VersionName string `json:"version_name"`
 
 	// 主备模式： single：单机模式。 ha：主备模式。 replica：只读模式。
-	HaMode *ListStorageTypesRequestHaMode `json:"ha_mode,omitempty" xml:"ha_mode"`
+	HaMode *ListStorageTypesRequestHaMode `json:"ha_mode,omitempty"`
 }
 
 func (o ListStorageTypesRequest) String() string {

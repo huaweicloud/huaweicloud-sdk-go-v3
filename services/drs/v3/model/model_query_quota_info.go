@@ -8,7 +8,7 @@ import (
 
 // 配额信息
 type QueryQuotaInfo struct {
-	Resource *QuotaResource `json:"resource,omitempty" xml:"resource"`
+	Resource *QuotaResource `json:"resource,omitempty"`
 }
 
 func (o QueryQuotaInfo) String() string {

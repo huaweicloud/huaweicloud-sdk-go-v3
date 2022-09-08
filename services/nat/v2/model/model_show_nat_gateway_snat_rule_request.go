@@ -10,7 +10,7 @@ import (
 type ShowNatGatewaySnatRuleRequest struct {
 
 	// SNAT规则的ID。
-	SnatRuleId string `json:"snat_rule_id" xml:"snat_rule_id"`
+	SnatRuleId string `json:"snat_rule_id"`
 }
 
 func (o ShowNatGatewaySnatRuleRequest) String() string {

@@ -13,12 +13,12 @@ import (
 type UpdatePortRequest struct {
 
 	// 语言
-	XLanguage *UpdatePortRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *UpdatePortRequestXLanguage `json:"X-Language,omitempty"`
 
 	// 实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
-	Body *UpdateDbPortRequest `json:"body,omitempty" xml:"body"`
+	Body *UpdateDbPortRequest `json:"body,omitempty"`
 }
 
 func (o UpdatePortRequest) String() string {

@@ -10,7 +10,7 @@ import (
 type DeleteRecordRuleRequest struct {
 
 	// 规则ID
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 }
 
 func (o DeleteRecordRuleRequest) String() string {

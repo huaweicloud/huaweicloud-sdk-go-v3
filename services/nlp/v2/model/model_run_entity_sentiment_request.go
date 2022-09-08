@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RunEntitySentimentRequest struct {
-	Body *EntitySentimentReq `json:"body,omitempty" xml:"body"`
+	Body *EntitySentimentReq `json:"body,omitempty"`
 }
 
 func (o RunEntitySentimentRequest) String() string {

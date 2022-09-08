@@ -8,9 +8,9 @@ import (
 
 // Response Object
 type ListAlarmRuleResponse struct {
-	MetaData *MetaData `json:"meta_data,omitempty" xml:"meta_data"`
+	MetaData *MetaData `json:"meta_data,omitempty"`
 
-	Thresholds     *[]QueryAlarmResult `json:"thresholds,omitempty" xml:"thresholds"`
+	Thresholds     *[]QueryAlarmResult `json:"thresholds,omitempty"`
 	HttpStatusCode int                 `json:"-"`
 }
 

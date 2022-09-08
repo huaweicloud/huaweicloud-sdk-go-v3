@@ -10,22 +10,22 @@ import (
 type PublicipBandwidthInfo struct {
 
 	// 带宽ID
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 功能描述：带宽大小 取值范围：默认5Mbit/s~2000Mbit/s
-	Size *int32 `json:"size,omitempty" xml:"size"`
+	Size *int32 `json:"size,omitempty"`
 
 	// 功能说明：带宽类型,标识是否是共享带宽 取值范围：PER，WHOLE。   PER：独享带宽   WHOLE：共享带宽 约束：其中IPv6暂不支持WHOLE类型带宽。
-	ShareType *string `json:"share_type,omitempty" xml:"share_type"`
+	ShareType *string `json:"share_type,omitempty"`
 
 	// 功能说明：按流量计费还是按带宽计费 取值范围： bandwidth：按带宽计费 traffic：按流量计费 95peak_plus：按增强型95计费
-	ChargeMode *string `json:"charge_mode,omitempty" xml:"charge_mode"`
+	ChargeMode *string `json:"charge_mode,omitempty"`
 
 	// 功能说明：带宽名称 取值范围：1-64个字符,支持数字、字母、中文、_(下划线)、-(中划线)、.(点)
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 功能说明：账单信息。如果billinginfo不为空，说明是包周期的带宽
-	BillingInfo *string `json:"billing_info,omitempty" xml:"billing_info"`
+	BillingInfo *string `json:"billing_info,omitempty"`
 }
 
 func (o PublicipBandwidthInfo) String() string {

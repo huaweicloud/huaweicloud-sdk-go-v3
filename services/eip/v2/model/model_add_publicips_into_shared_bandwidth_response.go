@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type AddPublicipsIntoSharedBandwidthResponse struct {
-	Bandwidth      *BandwidthRespInsert `json:"bandwidth,omitempty" xml:"bandwidth"`
+	Bandwidth      *BandwidthRespInsert `json:"bandwidth,omitempty"`
 	HttpStatusCode int                  `json:"-"`
 }
 

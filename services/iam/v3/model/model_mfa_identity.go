@@ -13,11 +13,11 @@ import (
 type MfaIdentity struct {
 
 	// 认证方法，该字段内容为[\"password\", \"totp\"]。
-	Methods []MfaIdentityMethods `json:"methods" xml:"methods"`
+	Methods []MfaIdentityMethods `json:"methods"`
 
-	Password *PwdPassword `json:"password" xml:"password"`
+	Password *PwdPassword `json:"password"`
 
-	Totp *MfaTotp `json:"totp" xml:"totp"`
+	Totp *MfaTotp `json:"totp"`
 }
 
 func (o MfaIdentity) String() string {

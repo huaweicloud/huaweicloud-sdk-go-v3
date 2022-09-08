@@ -10,7 +10,7 @@ import (
 type AmqpForwarding struct {
 
 	// **参数说明**：用于接收满足规则条件数据的amqp queue。
-	QueueName string `json:"queue_name" xml:"queue_name"`
+	QueueName string `json:"queue_name"`
 }
 
 func (o AmqpForwarding) String() string {

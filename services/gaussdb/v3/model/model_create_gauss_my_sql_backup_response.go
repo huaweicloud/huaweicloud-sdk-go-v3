@@ -8,10 +8,10 @@ import (
 
 // Response Object
 type CreateGaussMySqlBackupResponse struct {
-	Backup *Backup `json:"backup,omitempty" xml:"backup"`
+	Backup *Backup `json:"backup,omitempty"`
 
 	// 任务ID。
-	JobId          *string `json:"job_id,omitempty" xml:"job_id"`
+	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

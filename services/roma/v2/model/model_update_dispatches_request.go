@@ -10,15 +10,15 @@ import (
 type UpdateDispatchesRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 任务ID
-	TaskId string `json:"task_id" xml:"task_id"`
+	TaskId string `json:"task_id"`
 
 	// 调度唯一标识，调度计划ID
-	DispatchId string `json:"dispatch_id" xml:"dispatch_id"`
+	DispatchId string `json:"dispatch_id"`
 
-	Body *TaskDispatch `json:"body,omitempty" xml:"body"`
+	Body *TaskDispatch `json:"body,omitempty"`
 }
 
 func (o UpdateDispatchesRequest) String() string {

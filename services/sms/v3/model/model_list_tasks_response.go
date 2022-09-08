@@ -10,10 +10,10 @@ import (
 type ListTasksResponse struct {
 
 	// 符合要求的任务数量，不受分页影响
-	Count *int32 `json:"count,omitempty" xml:"count"`
+	Count *int32 `json:"count,omitempty"`
 
 	// 查询到的任务列表
-	Tasks          *[]TasksResponseBody `json:"tasks,omitempty" xml:"tasks"`
+	Tasks          *[]TasksResponseBody `json:"tasks,omitempty"`
 	HttpStatusCode int                  `json:"-"`
 }
 

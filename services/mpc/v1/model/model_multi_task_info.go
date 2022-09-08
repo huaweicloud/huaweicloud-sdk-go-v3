@@ -9,11 +9,11 @@ import (
 type MultiTaskInfo struct {
 
 	// 转码模板ID。
-	TemplateId *int32 `json:"template_id,omitempty" xml:"template_id"`
+	TemplateId *int32 `json:"template_id,omitempty"`
 
-	Error *ErrorResponse `json:"error,omitempty" xml:"error"`
+	Error *ErrorResponse `json:"error,omitempty"`
 
-	OutputFile *SourceInfo `json:"output_file,omitempty" xml:"output_file"`
+	OutputFile *SourceInfo `json:"output_file,omitempty"`
 }
 
 func (o MultiTaskInfo) String() string {

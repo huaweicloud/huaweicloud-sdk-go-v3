@@ -13,12 +13,12 @@ import (
 type UpdateDataIpRequest struct {
 
 	// 语言
-	XLanguage *UpdateDataIpRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *UpdateDataIpRequestXLanguage `json:"X-Language,omitempty"`
 
 	// 实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
-	Body *DataIpRequest `json:"body,omitempty" xml:"body"`
+	Body *DataIpRequest `json:"body,omitempty"`
 }
 
 func (o UpdateDataIpRequest) String() string {

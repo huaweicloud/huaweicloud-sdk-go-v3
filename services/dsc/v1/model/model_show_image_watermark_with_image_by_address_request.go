@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ShowImageWatermarkWithImageByAddressRequest struct {
-	Body *ShowImageWatermarkWithImageByAddressRequestBody `json:"body,omitempty" xml:"body"`
+	Body *ShowImageWatermarkWithImageByAddressRequestBody `json:"body,omitempty"`
 }
 
 func (o ShowImageWatermarkWithImageByAddressRequest) String() string {

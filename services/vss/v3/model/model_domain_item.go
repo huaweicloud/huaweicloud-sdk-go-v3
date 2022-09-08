@@ -12,37 +12,37 @@ import (
 type DomainItem struct {
 
 	// 高危漏洞数
-	High *int32 `json:"high,omitempty" xml:"high"`
+	High *int32 `json:"high,omitempty"`
 
 	// 中危漏洞数
-	Middle *int32 `json:"middle,omitempty" xml:"middle"`
+	Middle *int32 `json:"middle,omitempty"`
 
 	// 低危漏洞数
-	Low *int32 `json:"low,omitempty" xml:"low"`
+	Low *int32 `json:"low,omitempty"`
 
 	// 提示危漏洞数
-	Hint *int32 `json:"hint,omitempty" xml:"hint"`
+	Hint *int32 `json:"hint,omitempty"`
 
 	// 域名id
-	DomainId *string `json:"domain_id,omitempty" xml:"domain_id"`
+	DomainId *string `json:"domain_id,omitempty"`
 
 	// 一级域名id
-	TopLevelDomainId *string `json:"top_level_domain_id,omitempty" xml:"top_level_domain_id"`
+	TopLevelDomainId *string `json:"top_level_domain_id,omitempty"`
 
 	// 域名
-	DomainName *string `json:"domain_name,omitempty" xml:"domain_name"`
+	DomainName *string `json:"domain_name,omitempty"`
 
 	// 域名的别名
-	Alias *string `json:"alias,omitempty" xml:"alias"`
+	Alias *string `json:"alias,omitempty"`
 
 	// 创建域名资产的时间
-	CreateTime *string `json:"create_time,omitempty" xml:"create_time"`
+	CreateTime *string `json:"create_time,omitempty"`
 
 	// 域名的认证状态:   * unauth - 未认证   * auth - 已认证   * invalid - 认证文件无效   * manual - 人工认证   * skip - 免认证
-	AuthStatus *DomainItemAuthStatus `json:"auth_status,omitempty" xml:"auth_status"`
+	AuthStatus *DomainItemAuthStatus `json:"auth_status,omitempty"`
 
 	// 协议类型:   * http:// - HTTP   * https:// - HTTPS
-	ProtocolType *DomainItemProtocolType `json:"protocol_type,omitempty" xml:"protocol_type"`
+	ProtocolType *DomainItemProtocolType `json:"protocol_type,omitempty"`
 }
 
 func (o DomainItem) String() string {

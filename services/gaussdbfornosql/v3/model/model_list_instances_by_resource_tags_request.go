@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ListInstancesByResourceTagsRequest struct {
-	Body *ListInstancesByTagsRequestBody `json:"body,omitempty" xml:"body"`
+	Body *ListInstancesByTagsRequestBody `json:"body,omitempty"`
 }
 
 func (o ListInstancesByResourceTagsRequest) String() string {

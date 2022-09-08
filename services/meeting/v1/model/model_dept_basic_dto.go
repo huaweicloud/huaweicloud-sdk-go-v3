@@ -10,19 +10,19 @@ import (
 type DeptBasicDto struct {
 
 	// 部门编码
-	DeptCode *string `json:"deptCode,omitempty" xml:"deptCode"`
+	DeptCode *string `json:"deptCode,omitempty"`
 
 	// 企业id
-	CorpId *string `json:"corpId,omitempty" xml:"corpId"`
+	CorpId *string `json:"corpId,omitempty"`
 
 	// 部门名称
-	DeptName *string `json:"deptName,omitempty" xml:"deptName"`
+	DeptName *string `json:"deptName,omitempty"`
 
 	// 部门名称路径
-	DeptNamePath *string `json:"deptNamePath,omitempty" xml:"deptNamePath"`
+	DeptNamePath *string `json:"deptNamePath,omitempty"`
 
 	// 父部门编码
-	ParentDeptCode *string `json:"parentDeptCode,omitempty" xml:"parentDeptCode"`
+	ParentDeptCode *string `json:"parentDeptCode,omitempty"`
 }
 
 func (o DeptBasicDto) String() string {

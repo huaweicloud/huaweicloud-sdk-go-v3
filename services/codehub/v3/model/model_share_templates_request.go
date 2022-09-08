@@ -10,9 +10,9 @@ import (
 type ShareTemplatesRequest struct {
 
 	// 仓库id
-	RepositoryUuid string `json:"repository_uuid" xml:"repository_uuid"`
+	RepositoryUuid string `json:"repository_uuid"`
 
-	Body *RepositoryTemplateVo `json:"body,omitempty" xml:"body"`
+	Body *RepositoryTemplateVo `json:"body,omitempty"`
 }
 
 func (o ShareTemplatesRequest) String() string {

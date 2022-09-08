@@ -10,10 +10,10 @@ import (
 type ListMoreInstantMessagesResponse struct {
 
 	// 总数
-	Count *int32 `json:"count,omitempty" xml:"count"`
+	Count *int32 `json:"count,omitempty"`
 
 	// 留言列表
-	MessageList    *[]QueryMessageInfoV2 `json:"message_list,omitempty" xml:"message_list"`
+	MessageList    *[]QueryMessageInfoV2 `json:"message_list,omitempty"`
 	HttpStatusCode int                   `json:"-"`
 }
 

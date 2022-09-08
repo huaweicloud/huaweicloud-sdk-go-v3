@@ -10,13 +10,13 @@ import (
 type PageInfo struct {
 
 	// 下一页的marker，值为资源的uuid，为空时表示最后一页。
-	NextMarker *string `json:"next_marker,omitempty" xml:"next_marker"`
+	NextMarker *string `json:"next_marker,omitempty"`
 
 	// 上一页的marker，值为资源的uuid，为空时表示第一页。
-	PreviousMarker *string `json:"previous_marker,omitempty" xml:"previous_marker"`
+	PreviousMarker *string `json:"previous_marker,omitempty"`
 
 	// 当前列表中资源数量。
-	CurrentCount *int32 `json:"current_count,omitempty" xml:"current_count"`
+	CurrentCount *int32 `json:"current_count,omitempty"`
 }
 
 func (o PageInfo) String() string {

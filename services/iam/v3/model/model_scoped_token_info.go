@@ -10,25 +10,25 @@ import (
 type ScopedTokenInfo struct {
 
 	// 过期时间。
-	ExpiresAt string `json:"expires_at" xml:"expires_at"`
+	ExpiresAt string `json:"expires_at"`
 
 	// 获取token的方式，联邦用户默认为mapped。
-	Methods []string `json:"methods" xml:"methods"`
+	Methods []string `json:"methods"`
 
 	// 生成时间。
-	IssuedAt string `json:"issued_at" xml:"issued_at"`
+	IssuedAt string `json:"issued_at"`
 
-	User *FederationUserBody `json:"user" xml:"user"`
+	User *FederationUserBody `json:"user"`
 
-	Domain *DomainInfo `json:"domain,omitempty" xml:"domain"`
+	Domain *DomainInfo `json:"domain,omitempty"`
 
-	Project *ProjectInfo `json:"project,omitempty" xml:"project"`
+	Project *ProjectInfo `json:"project,omitempty"`
 
 	// roles信息。
-	Roles []ScopedTokenInfoRoles `json:"roles" xml:"roles"`
+	Roles []ScopedTokenInfoRoles `json:"roles"`
 
 	// catalog信息
-	Catalog []UnscopedTokenInfoCatalog `json:"catalog" xml:"catalog"`
+	Catalog []UnscopedTokenInfoCatalog `json:"catalog"`
 }
 
 func (o ScopedTokenInfo) String() string {

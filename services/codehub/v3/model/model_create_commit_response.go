@@ -8,13 +8,12 @@ import (
 
 // Response Object
 type CreateCommitResponse struct {
-	Error *Error `json:"error,omitempty" xml:"error"`
+	Error *Error `json:"error,omitempty"`
 
-	// 差异列表
-	Result *[]CreateCommitResponseBody `json:"result,omitempty" xml:"result"`
+	Result *CreateCommitResponseBody `json:"result,omitempty"`
 
 	// 响应状态
-	Status         *string `json:"status,omitempty" xml:"status"`
+	Status         *string `json:"status,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

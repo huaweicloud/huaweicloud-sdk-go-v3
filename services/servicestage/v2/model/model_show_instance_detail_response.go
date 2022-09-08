@@ -10,46 +10,46 @@ import (
 type ShowInstanceDetailResponse struct {
 
 	// 应用组件实例ID。
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 应用组件实例名称。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 实例描述。
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 应用组件环境ID。
-	EnvironmentId *string `json:"environment_id,omitempty" xml:"environment_id"`
+	EnvironmentId *string `json:"environment_id,omitempty"`
 
-	PlatformType *InstancePlatformType `json:"platform_type,omitempty" xml:"platform_type"`
+	PlatformType *InstancePlatformType `json:"platform_type,omitempty"`
 
-	FlavorId *FlavorId `json:"flavor_id,omitempty" xml:"flavor_id"`
+	FlavorId *FlavorId `json:"flavor_id,omitempty"`
 
 	// 组件部署件。key为组件component_name，对于Docker多容器场景，key为容器名称。
-	Artifacts map[string]interface{} `json:"artifacts,omitempty" xml:"artifacts"`
+	Artifacts map[string]interface{} `json:"artifacts,omitempty"`
 
 	// 应用组件版本号。
-	Version *string `json:"version,omitempty" xml:"version"`
+	Version *string `json:"version,omitempty"`
 
 	// 应用组件配置，如环境变量。
-	Configuration *interface{} `json:"configuration,omitempty" xml:"configuration"`
+	Configuration *interface{} `json:"configuration,omitempty"`
 
 	// 创建人。
-	Creator *string `json:"creator,omitempty" xml:"creator"`
+	Creator *string `json:"creator,omitempty"`
 
 	// 创建时间。
-	CreateTime *int64 `json:"create_time,omitempty" xml:"create_time"`
+	CreateTime *int64 `json:"create_time,omitempty"`
 
 	// 修改时间。
-	UpdateTime *int64 `json:"update_time,omitempty" xml:"update_time"`
+	UpdateTime *int64 `json:"update_time,omitempty"`
 
 	// 访问方式列表。
-	ExternalAccesses *[]ExternalAccesses `json:"external_accesses,omitempty" xml:"external_accesses"`
+	ExternalAccesses *[]ExternalAccesses `json:"external_accesses,omitempty"`
 
 	// 部署资源列表。
-	ReferResources *[]ReferResources `json:"refer_resources,omitempty" xml:"refer_resources"`
+	ReferResources *[]ReferResources `json:"refer_resources,omitempty"`
 
-	StatusDetail   *InstanceStatusView `json:"status_detail,omitempty" xml:"status_detail"`
+	StatusDetail   *InstanceStatusView `json:"status_detail,omitempty"`
 	HttpStatusCode int                 `json:"-"`
 }
 

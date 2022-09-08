@@ -10,10 +10,10 @@ import (
 type ListDatabaseSchemasResponse struct {
 
 	// 列表中每个元素表示一个数据库schema。
-	DatabaseSchemas *[]GaussDBforOpenGaussDatabaseForListSchema `json:"database_schemas,omitempty" xml:"database_schemas"`
+	DatabaseSchemas *[]GaussDBforOpenGaussDatabaseForListSchema `json:"database_schemas,omitempty"`
 
 	// 数据库schema总数。
-	TotalCount     *int32 `json:"total_count,omitempty" xml:"total_count"`
+	TotalCount     *int32 `json:"total_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

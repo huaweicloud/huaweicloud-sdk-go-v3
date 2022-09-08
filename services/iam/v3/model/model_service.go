@@ -10,21 +10,21 @@ import (
 type Service struct {
 
 	// 服务名。
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 服务描述信息。
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
-	Links *Links `json:"links" xml:"links"`
+	Links *Links `json:"links"`
 
 	// 服务ID。
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
 	// 服务类型。
-	Type string `json:"type" xml:"type"`
+	Type string `json:"type"`
 
 	// 服务是否可用。
-	Enabled bool `json:"enabled" xml:"enabled"`
+	Enabled bool `json:"enabled"`
 }
 
 func (o Service) String() string {

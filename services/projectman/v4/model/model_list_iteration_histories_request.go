@@ -10,13 +10,13 @@ import (
 type ListIterationHistoriesRequest struct {
 
 	// 迭代id
-	IterationId int32 `json:"iteration_id" xml:"iteration_id"`
+	IterationId int32 `json:"iteration_id"`
 
 	// 偏移量
-	Offset *int32 `json:"offset,omitempty" xml:"offset"`
+	Offset *int32 `json:"offset,omitempty"`
 
 	// 每页数量，最大为100
-	Limit *int32 `json:"limit,omitempty" xml:"limit"`
+	Limit *int32 `json:"limit,omitempty"`
 }
 
 func (o ListIterationHistoriesRequest) String() string {

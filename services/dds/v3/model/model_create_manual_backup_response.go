@@ -10,10 +10,10 @@ import (
 type CreateManualBackupResponse struct {
 
 	// 手动备份的异步任务ID。
-	JobId *string `json:"job_id,omitempty" xml:"job_id"`
+	JobId *string `json:"job_id,omitempty"`
 
 	// 手动备份ID。
-	BackupId       *string `json:"backup_id,omitempty" xml:"backup_id"`
+	BackupId       *string `json:"backup_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

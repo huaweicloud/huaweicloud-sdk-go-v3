@@ -10,7 +10,7 @@ import (
 type ListScalingTagInfosByTenantIdResponse struct {
 
 	// 资源标签。
-	Tags           *[]TagsMultiValue `json:"tags,omitempty" xml:"tags"`
+	Tags           *[]TagsMultiValue `json:"tags,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }
 

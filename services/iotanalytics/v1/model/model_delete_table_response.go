@@ -10,10 +10,10 @@ import (
 type DeleteTableResponse struct {
 
 	// 被删除表ID
-	TableId *string `json:"table_id,omitempty" xml:"table_id"`
+	TableId *string `json:"table_id,omitempty"`
 
 	// 被删除表名。
-	TableName      *string `json:"table_name,omitempty" xml:"table_name"`
+	TableName      *string `json:"table_name,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

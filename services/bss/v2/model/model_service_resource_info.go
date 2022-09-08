@@ -7,7 +7,7 @@ import (
 )
 
 type ServiceResourceInfo struct {
-	BasicInfo *ResourceBasicInfo `json:"basic_info,omitempty" xml:"basic_info"`
+	BasicInfo *ResourceBasicInfo `json:"basic_info,omitempty"`
 }
 
 func (o ServiceResourceInfo) String() string {

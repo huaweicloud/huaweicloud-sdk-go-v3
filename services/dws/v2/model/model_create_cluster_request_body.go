@@ -8,7 +8,7 @@ import (
 
 // This is a auto create Body Object
 type CreateClusterRequestBody struct {
-	Cluster *CreateClusterInfo `json:"cluster" xml:"cluster"`
+	Cluster *CreateClusterInfo `json:"cluster"`
 }
 
 func (o CreateClusterRequestBody) String() string {

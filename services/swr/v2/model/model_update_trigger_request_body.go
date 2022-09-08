@@ -9,7 +9,7 @@ import (
 type UpdateTriggerRequestBody struct {
 
 	// 是否生效,true启用，false不启用
-	Enable string `json:"enable" xml:"enable"`
+	Enable string `json:"enable"`
 }
 
 func (o UpdateTriggerRequestBody) String() string {

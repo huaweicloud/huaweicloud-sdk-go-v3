@@ -9,28 +9,28 @@ import (
 type ObsScanResultInfo struct {
 
 	// 任务ID
-	TaskId *string `json:"task_id,omitempty" xml:"task_id"`
+	TaskId *string `json:"task_id,omitempty"`
 
 	// OBS桶ID
-	BucketId *string `json:"bucket_id,omitempty" xml:"bucket_id"`
+	BucketId *string `json:"bucket_id,omitempty"`
 
 	// OBS桶名称
-	BucketName *string `json:"bucket_name,omitempty" xml:"bucket_name"`
+	BucketName *string `json:"bucket_name,omitempty"`
 
 	// 文件路径
-	FilePath *string `json:"file_path,omitempty" xml:"file_path"`
+	FilePath *string `json:"file_path,omitempty"`
 
 	// 文件名
-	FileName *string `json:"file_name,omitempty" xml:"file_name"`
+	FileName *string `json:"file_name,omitempty"`
 
 	// 文件md5值
-	Md5 *string `json:"md5,omitempty" xml:"md5"`
+	Md5 *string `json:"md5,omitempty"`
 
 	// 风险等级
-	RiskLevel *int32 `json:"risk_level,omitempty" xml:"risk_level"`
+	RiskLevel *int32 `json:"risk_level,omitempty"`
 
 	// 风险数据类型
-	SensitiveDataType *[]string `json:"sensitive_data_type,omitempty" xml:"sensitive_data_type"`
+	SensitiveDataType *[]string `json:"sensitive_data_type,omitempty"`
 }
 
 func (o ObsScanResultInfo) String() string {

@@ -10,13 +10,13 @@ import (
 type Az2Migrate struct {
 
 	// 可用区ID。
-	Code string `json:"code" xml:"code"`
+	Code string `json:"code"`
 
 	// 可用区描述。
-	Description string `json:"description" xml:"description"`
+	Description string `json:"description"`
 
 	// 当前可用区的的状态。 - ENABLED，表示该可用区（组合）可用。 - DISABLED，表示该可用区（组合）不可用。
-	Status string `json:"status" xml:"status"`
+	Status string `json:"status"`
 }
 
 func (o Az2Migrate) String() string {

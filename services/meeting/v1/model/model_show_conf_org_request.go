@@ -10,7 +10,7 @@ import (
 type ShowConfOrgRequest struct {
 
 	// 会议ID。
-	ConferenceID string `json:"conferenceID" xml:"conferenceID"`
+	ConferenceID string `json:"conferenceID"`
 }
 
 func (o ShowConfOrgRequest) String() string {

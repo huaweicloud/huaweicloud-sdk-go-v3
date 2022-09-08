@@ -10,10 +10,10 @@ import (
 type ListWeakPasswordUsersResponse struct {
 
 	// 总数
-	TotalNum *int64 `json:"total_num,omitempty" xml:"total_num"`
+	TotalNum *int64 `json:"total_num,omitempty"`
 
 	// 弱口令列表
-	DataList       *[]WeakPwdListInfoResponseInfo `json:"data_list,omitempty" xml:"data_list"`
+	DataList       *[]WeakPwdListInfoResponseInfo `json:"data_list,omitempty"`
 	HttpStatusCode int                            `json:"-"`
 }
 

@@ -10,10 +10,10 @@ import (
 type ListPasswordComplexityResponse struct {
 
 	// 记录总数
-	TotalNum *int64 `json:"total_num,omitempty" xml:"total_num"`
+	TotalNum *int64 `json:"total_num,omitempty"`
 
 	// 口令复杂度策略检测列表
-	DataList       *[]PwdPolicyInfoResponseInfo `json:"data_list,omitempty" xml:"data_list"`
+	DataList       *[]PwdPolicyInfoResponseInfo `json:"data_list,omitempty"`
 	HttpStatusCode int                          `json:"-"`
 }
 

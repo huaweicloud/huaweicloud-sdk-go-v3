@@ -9,16 +9,16 @@ import (
 type UpdateTopicAccessPolicyTopicsObject struct {
 
 	// topic名称。
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 权限列表。
-	Policies []UpdateTopicAccessPolicyPoliciesObject `json:"policies" xml:"policies"`
+	Policies []UpdateTopicAccessPolicyPoliciesObject `json:"policies"`
 
 	// 描述。
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 敏感字段。
-	SensitiveWord *string `json:"sensitive_word,omitempty" xml:"sensitive_word"`
+	SensitiveWord *string `json:"sensitive_word,omitempty"`
 }
 
 func (o UpdateTopicAccessPolicyTopicsObject) String() string {

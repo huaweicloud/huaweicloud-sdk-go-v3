@@ -10,7 +10,7 @@ import (
 type UpdateGaussMySqlQuotasResponse struct {
 
 	// 资源列表对象。
-	QuotaList      *[]SetQuota `json:"quota_list,omitempty" xml:"quota_list"`
+	QuotaList      *[]SetQuota `json:"quota_list,omitempty"`
 	HttpStatusCode int         `json:"-"`
 }
 

@@ -10,9 +10,9 @@ import (
 type CreatePreheatingTasksRequest struct {
 
 	// 当用户开启企业项目功能时，该参数生效，表示在当前企业项目下添加缓存预热任务，\"all\"代表所有项目。注意：当使用子账号调用接口时，该参数必传。
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	Body *PreheatingTaskRequest `json:"body,omitempty" xml:"body"`
+	Body *PreheatingTaskRequest `json:"body,omitempty"`
 }
 
 func (o CreatePreheatingTasksRequest) String() string {

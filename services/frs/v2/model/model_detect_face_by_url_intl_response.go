@@ -10,7 +10,7 @@ import (
 type DetectFaceByUrlIntlResponse struct {
 
 	// 检测到的人脸。 调用失败时无此字段。
-	Faces          *[]DetectFace `json:"faces,omitempty" xml:"faces"`
+	Faces          *[]DetectFace `json:"faces,omitempty"`
 	HttpStatusCode int           `json:"-"`
 }
 

@@ -10,25 +10,25 @@ import (
 type Templatespec struct {
 
 	// 模板类型（helm，static）
-	Type string `json:"type" xml:"type"`
+	Type string `json:"type"`
 
 	// 是否为必安装插件
-	Require *bool `json:"require,omitempty" xml:"require"`
+	Require *bool `json:"require,omitempty"`
 
 	// 模板所属分组
-	Labels []string `json:"labels" xml:"labels"`
+	Labels []string `json:"labels"`
 
 	// Logo图片地址
-	LogoURL string `json:"logoURL" xml:"logoURL"`
+	LogoURL string `json:"logoURL"`
 
 	// 插件详情描述及使用说明
-	ReadmeURL string `json:"readmeURL" xml:"readmeURL"`
+	ReadmeURL string `json:"readmeURL"`
 
 	// 模板描述
-	Description string `json:"description" xml:"description"`
+	Description string `json:"description"`
 
 	// 模板具体版本详情
-	Versions []Versions `json:"versions" xml:"versions"`
+	Versions []Versions `json:"versions"`
 }
 
 func (o Templatespec) String() string {

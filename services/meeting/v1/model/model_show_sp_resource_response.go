@@ -8,36 +8,36 @@ import (
 
 // Response Object
 type ShowSpResourceResponse struct {
-	Te1080pHardCount *ResDetailDto `json:"te1080pHardCount,omitempty" xml:"te1080pHardCount"`
+	Te1080pHardCount *ResDetailDto `json:"te1080pHardCount,omitempty"`
 
-	Te720pHardCount *ResDetailDto `json:"te720pHardCount,omitempty" xml:"te720pHardCount"`
+	Te720pHardCount *ResDetailDto `json:"te720pHardCount,omitempty"`
 
-	TeSoftCount *ResDetailDto `json:"teSoftCount,omitempty" xml:"teSoftCount"`
+	TeSoftCount *ResDetailDto `json:"teSoftCount,omitempty"`
 
-	RoomCount *ResDetailDto `json:"roomCount,omitempty" xml:"roomCount"`
+	RoomCount *ResDetailDto `json:"roomCount,omitempty"`
 
-	RecordCapability *ResDetailDto `json:"recordCapability,omitempty" xml:"recordCapability"`
+	RecordCapability *ResDetailDto `json:"recordCapability,omitempty"`
 
-	ConfCallCount *ResDetailDto `json:"confCallCount,omitempty" xml:"confCallCount"`
+	ConfCallCount *ResDetailDto `json:"confCallCount,omitempty"`
 
-	LiveCount *ResDetailDto `json:"liveCount,omitempty" xml:"liveCount"`
+	LiveCount *ResDetailDto `json:"liveCount,omitempty"`
 
-	CorpCount *ResDetailDto `json:"corpCount,omitempty" xml:"corpCount"`
+	CorpCount *ResDetailDto `json:"corpCount,omitempty"`
 
-	ThirdPartyHardCount *ResDetailDto `json:"thirdPartyHardCount,omitempty" xml:"thirdPartyHardCount"`
+	ThirdPartyHardCount *ResDetailDto `json:"thirdPartyHardCount,omitempty"`
 
-	HwVisionCount *ResDetailDto `json:"hwVisionCount,omitempty" xml:"hwVisionCount"`
+	HwVisionCount *ResDetailDto `json:"hwVisionCount,omitempty"`
 
-	IdeaHubCount *ResDetailDto `json:"ideaHubCount,omitempty" xml:"ideaHubCount"`
+	IdeaHubCount *ResDetailDto `json:"ideaHubCount,omitempty"`
 
 	// 在创建SP的时候设置的pstn权限开关
-	EnablePstn *bool `json:"enablePstn,omitempty" xml:"enablePstn"`
+	EnablePstn *bool `json:"enablePstn,omitempty"`
 
 	// 在创建SP的时候设置发送短信开关
-	EnableSMS *bool `json:"enableSMS,omitempty" xml:"enableSMS"`
+	EnableSMS *bool `json:"enableSMS,omitempty"`
 
 	// sp管理员绑定的分组列表
-	GroupList      *[]QueryCorpGroupDto `json:"groupList,omitempty" xml:"groupList"`
+	GroupList      *[]QueryCorpGroupDto `json:"groupList,omitempty"`
 	HttpStatusCode int                  `json:"-"`
 }
 

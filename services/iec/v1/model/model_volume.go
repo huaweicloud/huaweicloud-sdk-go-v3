@@ -10,40 +10,40 @@ import (
 type Volume struct {
 
 	// 硬盘ID。
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 磁盘状态。
-	Status *string `json:"status,omitempty" xml:"status"`
+	Status *string `json:"status,omitempty"`
 
 	// 磁盘大小。
-	Size *int32 `json:"size,omitempty" xml:"size"`
+	Size *int32 `json:"size,omitempty"`
 
 	// 硬盘所属的AZ信息。
-	AvailabilityZone *string `json:"availability_zone,omitempty" xml:"availability_zone"`
+	AvailabilityZone *string `json:"availability_zone,omitempty"`
 
 	// 硬盘的挂载信息。
-	Attachments *[]Attachment `json:"attachments,omitempty" xml:"attachments"`
+	Attachments *[]Attachment `json:"attachments,omitempty"`
 
 	// 磁盘名称。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 描述。
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 磁盘类型。
-	VolumeType *string `json:"volume_type,omitempty" xml:"volume_type"`
+	VolumeType *string `json:"volume_type,omitempty"`
 
 	// 显示这个卷是否可启动。
-	Bootable *string `json:"bootable,omitempty" xml:"bootable"`
+	Bootable *string `json:"bootable,omitempty"`
 
 	// 显示该卷是否已被加密。
-	Encrypted *bool `json:"encrypted,omitempty" xml:"encrypted"`
+	Encrypted *bool `json:"encrypted,omitempty"`
 
 	// 磁盘是否多挂载。
-	Multiattach bool `json:"multiattach" xml:"multiattach"`
+	Multiattach bool `json:"multiattach"`
 
 	// 硬盘的元数据。
-	Metadata map[string]string `json:"metadata,omitempty" xml:"metadata"`
+	Metadata map[string]string `json:"metadata,omitempty"`
 }
 
 func (o Volume) String() string {

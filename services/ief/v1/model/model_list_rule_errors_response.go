@@ -10,10 +10,10 @@ import (
 type ListRuleErrorsResponse struct {
 
 	// 满足条件的错误个数
-	Count *int64 `json:"count,omitempty" xml:"count"`
+	Count *int64 `json:"count,omitempty"`
 
 	// 错误列表
-	Errors         *[]Error `json:"errors,omitempty" xml:"errors"`
+	Errors         *[]Error `json:"errors,omitempty"`
 	HttpStatusCode int      `json:"-"`
 }
 

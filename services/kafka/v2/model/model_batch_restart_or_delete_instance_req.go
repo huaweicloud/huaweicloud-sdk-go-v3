@@ -12,13 +12,13 @@ import (
 type BatchRestartOrDeleteInstanceReq struct {
 
 	// 实例的ID列表。
-	Instances *[]string `json:"instances,omitempty" xml:"instances"`
+	Instances *[]string `json:"instances,omitempty"`
 
 	// 对实例的操作：restart、delete
-	Action BatchRestartOrDeleteInstanceReqAction `json:"action" xml:"action"`
+	Action BatchRestartOrDeleteInstanceReqAction `json:"action"`
 
 	// 参数值为kafka，表示删除租户所有创建失败的Kafka实例。
-	AllFailure *BatchRestartOrDeleteInstanceReqAllFailure `json:"all_failure,omitempty" xml:"all_failure"`
+	AllFailure *BatchRestartOrDeleteInstanceReqAllFailure `json:"all_failure,omitempty"`
 }
 
 func (o BatchRestartOrDeleteInstanceReq) String() string {

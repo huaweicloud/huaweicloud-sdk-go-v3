@@ -10,16 +10,16 @@ import (
 type OutputWithModel struct {
 
 	// 输出参数名称,formulas中定义的name
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 输出模型ID，如果输出到本模型可以不携带；使用导入模型和导出模型接口时，该字段无效
-	OutputAssetModelId *string `json:"output_asset_model_id,omitempty" xml:"output_asset_model_id"`
+	OutputAssetModelId *string `json:"output_asset_model_id,omitempty"`
 
 	// 输出模型名称，请求中携带该字段时可以不携带output_asset_model_id
-	OutputAssetModelName *string `json:"output_asset_model_name,omitempty" xml:"output_asset_model_name"`
+	OutputAssetModelName *string `json:"output_asset_model_name,omitempty"`
 
 	// 输出属性名
-	OutputProperty string `json:"output_property" xml:"output_property"`
+	OutputProperty string `json:"output_property"`
 }
 
 func (o OutputWithModel) String() string {

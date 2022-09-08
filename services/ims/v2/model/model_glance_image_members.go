@@ -10,22 +10,22 @@ import (
 type GlanceImageMembers struct {
 
 	// 共享状态。
-	Status string `json:"status" xml:"status"`
+	Status string `json:"status"`
 
 	// 共享时间，格式为UTC时间。
-	CreatedAt string `json:"created_at" xml:"created_at"`
+	CreatedAt string `json:"created_at"`
 
 	// 更新时间，格式为UTC时间。
-	UpdatedAt string `json:"updated_at" xml:"updated_at"`
+	UpdatedAt string `json:"updated_at"`
 
 	// 镜像ID。
-	ImageId string `json:"image_id" xml:"image_id"`
+	ImageId string `json:"image_id"`
 
 	// 成员ID。
-	MemberId string `json:"member_id" xml:"member_id"`
+	MemberId string `json:"member_id"`
 
 	// 共享视图。
-	Schema string `json:"schema" xml:"schema"`
+	Schema string `json:"schema"`
 }
 
 func (o GlanceImageMembers) String() string {

@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type UpdateKeyRotationIntervalRequest struct {
-	Body *UpdateKeyRotationIntervalRequestBody `json:"body,omitempty" xml:"body"`
+	Body *UpdateKeyRotationIntervalRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateKeyRotationIntervalRequest) String() string {

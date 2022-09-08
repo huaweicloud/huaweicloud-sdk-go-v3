@@ -9,12 +9,12 @@ import (
 type UpdateFunctionReservedInstancesCountRequestBody struct {
 
 	// 预留实例个数
-	Count int32 `json:"count" xml:"count"`
+	Count int32 `json:"count"`
 
 	// 是否开启闲置模式配置
-	IdleMode *bool `json:"idle_mode,omitempty" xml:"idle_mode"`
+	IdleMode *bool `json:"idle_mode,omitempty"`
 
-	TacticsConfig *TacticsConfig `json:"tactics_config,omitempty" xml:"tactics_config"`
+	TacticsConfig *TacticsConfig `json:"tactics_config,omitempty"`
 }
 
 func (o UpdateFunctionReservedInstancesCountRequestBody) String() string {

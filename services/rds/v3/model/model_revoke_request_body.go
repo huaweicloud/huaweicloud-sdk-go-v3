@@ -9,10 +9,10 @@ import (
 type RevokeRequestBody struct {
 
 	// 数据库名称。
-	DbName string `json:"db_name" xml:"db_name"`
+	DbName string `json:"db_name"`
 
 	// 解除授权的用户列表。
-	Users []RevokeRequestBodyUsers `json:"users" xml:"users"`
+	Users []RevokeRequestBodyUsers `json:"users"`
 }
 
 func (o RevokeRequestBody) String() string {

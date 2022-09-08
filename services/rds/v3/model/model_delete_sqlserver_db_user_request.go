@@ -10,13 +10,13 @@ import (
 type DeleteSqlserverDbUserRequest struct {
 
 	// 语言
-	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *string `json:"X-Language,omitempty"`
 
 	// 实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 需要删除的帐号名。
-	UserName string `json:"user_name" xml:"user_name"`
+	UserName string `json:"user_name"`
 }
 
 func (o DeleteSqlserverDbUserRequest) String() string {

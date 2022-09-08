@@ -10,10 +10,10 @@ import (
 type CloudResource struct {
 
 	// 功能描述：资源类型
-	ResourceType string `json:"resource_type" xml:"resource_type"`
+	ResourceType string `json:"resource_type"`
 
 	// 功能说明：资源数量
-	ResourceCount int32 `json:"resource_count" xml:"resource_count"`
+	ResourceCount int32 `json:"resource_count"`
 }
 
 func (o CloudResource) String() string {

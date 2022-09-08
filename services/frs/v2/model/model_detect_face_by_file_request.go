@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type DetectFaceByFileRequest struct {
-	Body *DetectFaceByFileRequestBody `json:"body,omitempty" xml:"body" type:"multipart"`
+	Body *DetectFaceByFileRequestBody `json:"body,omitempty" type:"multipart"`
 }
 
 func (o DetectFaceByFileRequest) String() string {

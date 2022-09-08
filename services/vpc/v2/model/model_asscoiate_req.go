@@ -8,7 +8,7 @@ import (
 
 //
 type AsscoiateReq struct {
-	Subnets *AssociateRouteTableAndSubnetReq `json:"subnets" xml:"subnets"`
+	Subnets *AssociateRouteTableAndSubnetReq `json:"subnets"`
 }
 
 func (o AsscoiateReq) String() string {

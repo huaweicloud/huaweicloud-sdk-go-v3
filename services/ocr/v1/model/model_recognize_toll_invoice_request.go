@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RecognizeTollInvoiceRequest struct {
-	Body *TollInvoiceRequestBody `json:"body,omitempty" xml:"body"`
+	Body *TollInvoiceRequestBody `json:"body,omitempty"`
 }
 
 func (o RecognizeTollInvoiceRequest) String() string {

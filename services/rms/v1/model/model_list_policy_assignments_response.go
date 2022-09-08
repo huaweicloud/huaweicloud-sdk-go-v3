@@ -10,9 +10,9 @@ import (
 type ListPolicyAssignmentsResponse struct {
 
 	// 规则列表
-	Value *[]PolicyAssignment `json:"value,omitempty" xml:"value"`
+	Value *[]PolicyAssignment `json:"value,omitempty"`
 
-	PageInfo       *PageInfo `json:"page_info,omitempty" xml:"page_info"`
+	PageInfo       *PageInfo `json:"page_info,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }
 

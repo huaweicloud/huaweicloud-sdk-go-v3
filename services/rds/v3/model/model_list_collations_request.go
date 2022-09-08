@@ -13,7 +13,7 @@ import (
 type ListCollationsRequest struct {
 
 	// 语言
-	XLanguage *ListCollationsRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *ListCollationsRequestXLanguage `json:"X-Language,omitempty"`
 }
 
 func (o ListCollationsRequest) String() string {

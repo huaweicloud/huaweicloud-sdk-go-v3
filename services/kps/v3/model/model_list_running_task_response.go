@@ -10,10 +10,10 @@ import (
 type ListRunningTaskResponse struct {
 
 	// 正在处理的任务总数。
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 
 	// 正在处理的任务列表。
-	Tasks          *[]RunningTasks `json:"tasks,omitempty" xml:"tasks"`
+	Tasks          *[]RunningTasks `json:"tasks,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }
 

@@ -10,7 +10,7 @@ import (
 type ListDedicatedHostTypesResponse struct {
 
 	// 可用的专属主机类型。
-	DedicatedHostTypes *[]RespHostType `json:"dedicated_host_types,omitempty" xml:"dedicated_host_types"`
+	DedicatedHostTypes *[]RespHostType `json:"dedicated_host_types,omitempty"`
 	HttpStatusCode     int             `json:"-"`
 }
 

@@ -10,16 +10,16 @@ import (
 type ChangeLoadbalancerChargeModeResponse struct {
 
 	// 转包周期下单成功的EIP ID列表
-	EipIdList *[]string `json:"eip_id_list,omitempty" xml:"eip_id_list"`
+	EipIdList *[]string `json:"eip_id_list,omitempty"`
 
 	// 转包周期下单成功的LB ID列表
-	LoadbalancerIdList *[]string `json:"loadbalancer_id_list,omitempty" xml:"loadbalancer_id_list"`
+	LoadbalancerIdList *[]string `json:"loadbalancer_id_list,omitempty"`
 
 	// 转包周期订单号
-	OrderId *string `json:"order_id,omitempty" xml:"order_id"`
+	OrderId *string `json:"order_id,omitempty"`
 
 	// 请求的UUIID
-	RequestId      *string `json:"request_id,omitempty" xml:"request_id"`
+	RequestId      *string `json:"request_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

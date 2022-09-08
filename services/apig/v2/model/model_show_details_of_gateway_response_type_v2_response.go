@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowDetailsOfGatewayResponseTypeV2Response struct {
-	Body           map[string]ResponseInfoResp `json:"body,omitempty" xml:"body"`
+	Body           map[string]ResponseInfoResp `json:"body,omitempty"`
 	HttpStatusCode int                         `json:"-"`
 }
 

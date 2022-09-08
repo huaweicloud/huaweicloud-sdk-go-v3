@@ -9,10 +9,10 @@ import (
 type CustomAttributes struct {
 
 	// 配置项属性，severity：为问题级别
-	Attribute *string `json:"attribute,omitempty" xml:"attribute"`
+	Attribute *string `json:"attribute,omitempty"`
 
 	// 规则详细
-	Rules *[]CustomAttributesRule `json:"rules,omitempty" xml:"rules"`
+	Rules *[]CustomAttributesRule `json:"rules,omitempty"`
 }
 
 func (o CustomAttributes) String() string {

@@ -10,22 +10,22 @@ import (
 type CreateProjectV4Response struct {
 
 	// 项目数字id
-	ProjectNumId *int32 `json:"project_num_id,omitempty" xml:"project_num_id"`
+	ProjectNumId *int32 `json:"project_num_id,omitempty"`
 
 	// 项目id
-	ProjectId *string `json:"project_id,omitempty" xml:"project_id"`
+	ProjectId *string `json:"project_id,omitempty"`
 
 	// 项目名
-	ProjectName *string `json:"project_name,omitempty" xml:"project_name"`
+	ProjectName *string `json:"project_name,omitempty"`
 
 	// 项目描述
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 项目类型
-	ProjectType *string `json:"project_type,omitempty" xml:"project_type"`
+	ProjectType *string `json:"project_type,omitempty"`
 
 	// 创建者的数字id
-	UserNumId      *int32 `json:"user_num_id,omitempty" xml:"user_num_id"`
+	UserNumId      *int32 `json:"user_num_id,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

@@ -10,12 +10,12 @@ import (
 type ListAppsResponse struct {
 
 	// app的总数
-	Count *int32 `json:"count,omitempty" xml:"count"`
+	Count *int32 `json:"count,omitempty"`
 
 	// app的列表
-	Apps *[]App `json:"apps,omitempty" xml:"apps"`
+	Apps *[]App `json:"apps,omitempty"`
 
-	XRequestId     *string `json:"X-request-Id,omitempty" xml:"X-request-Id"`
+	XRequestId     *string `json:"X-request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

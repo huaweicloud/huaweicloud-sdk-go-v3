@@ -10,16 +10,16 @@ import (
 type BatchInviteMembersToChannelRequestBody struct {
 
 	// 发出邀请的BCS服务实例id
-	BcsId string `json:"bcs_id" xml:"bcs_id"`
+	BcsId string `json:"bcs_id"`
 
 	// 邀请加入的通道名
-	ChannelName string `json:"channel_name" xml:"channel_name"`
+	ChannelName string `json:"channel_name"`
 
 	// 发出邀请的租户名
-	InvitorUsername *string `json:"invitor_username,omitempty" xml:"invitor_username"`
+	InvitorUsername *string `json:"invitor_username,omitempty"`
 
 	// 被邀请的用户列表
-	InvitedUserinfo []InvitedDomain `json:"invited_userinfo" xml:"invited_userinfo"`
+	InvitedUserinfo []InvitedDomain `json:"invited_userinfo"`
 }
 
 func (o BatchInviteMembersToChannelRequestBody) String() string {

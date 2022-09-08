@@ -10,13 +10,13 @@ import (
 type ListMessageTemplatesResponse struct {
 
 	// 请求的唯一标识ID。
-	RequestId *string `json:"request_id,omitempty" xml:"request_id"`
+	RequestId *string `json:"request_id,omitempty"`
 
 	// 返回的模板个数。
-	MessageTemplateCount *int32 `json:"message_template_count,omitempty" xml:"message_template_count"`
+	MessageTemplateCount *int32 `json:"message_template_count,omitempty"`
 
 	// Message_template结构体数组。
-	MessageTemplates *[]MessageTemplate `json:"message_templates,omitempty" xml:"message_templates"`
+	MessageTemplates *[]MessageTemplate `json:"message_templates,omitempty"`
 	HttpStatusCode   int                `json:"-"`
 }
 

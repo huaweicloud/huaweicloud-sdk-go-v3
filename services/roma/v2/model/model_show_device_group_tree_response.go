@@ -10,13 +10,13 @@ import (
 type ShowDeviceGroupTreeResponse struct {
 
 	// 总数
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 
 	// 本次返回数量
-	Size *int32 `json:"size,omitempty" xml:"size"`
+	Size *int32 `json:"size,omitempty"`
 
 	// 设备分组信息
-	Items          *[]GroupTreeResponse `json:"items,omitempty" xml:"items"`
+	Items          *[]GroupTreeResponse `json:"items,omitempty"`
 	HttpStatusCode int                  `json:"-"`
 }
 

@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateKeypairRequest struct {
-	Body *CreateKeypairRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreateKeypairRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateKeypairRequest) String() string {

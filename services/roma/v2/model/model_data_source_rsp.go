@@ -13,42 +13,42 @@ import (
 type DataSourceRsp struct {
 
 	// 数据源ID
-	DatasourceId *string `json:"datasource_id,omitempty" xml:"datasource_id"`
+	DatasourceId *string `json:"datasource_id,omitempty"`
 
 	// 数据源名称
-	DatasourceName *string `json:"datasource_name,omitempty" xml:"datasource_name"`
+	DatasourceName *string `json:"datasource_name,omitempty"`
 
 	// 数据源类型 - DWS - MYSQL - KAFKA - API - OBS - SAP - MRSHBASE - MRSHDFS - MRSHIVE - WEBSOCKET - SQLSERVER - ORACLE - POSTGRESQL - REDIS - MONGODB - DIS - HL7 - RABBITMQ - SNMP - IBMMQ - CUSTOMIZED (自定义类型) - ACTIVEMQ - ARTEMISMQ - FTP - HIVE - HANA - FIKAFKA - MRSKAFKA - FIHDFS - FIHIVE - GAUSS200 - GAUSS100 - LDAP - DB2 - TAURUS
-	DatasourceType *DataSourceRspDatasourceType `json:"datasource_type,omitempty" xml:"datasource_type"`
+	DatasourceType *DataSourceRspDatasourceType `json:"datasource_type,omitempty"`
 
 	// 数据源所属虚拟私有云VpcId
-	VpcId *string `json:"vpc_id,omitempty" xml:"vpc_id"`
+	VpcId *string `json:"vpc_id,omitempty"`
 
 	// 数据源所属应用ID
-	AppId *string `json:"app_id,omitempty" xml:"app_id"`
+	AppId *string `json:"app_id,omitempty"`
 
 	// 数据源所属应用名称
-	AppName *string `json:"app_name,omitempty" xml:"app_name"`
+	AppName *string `json:"app_name,omitempty"`
 
 	// 数据源所属实例Id
-	InstanceId *string `json:"instance_id,omitempty" xml:"instance_id"`
+	InstanceId *string `json:"instance_id,omitempty"`
 
 	// 数据源创建时间
-	CreateTime *int64 `json:"create_time,omitempty" xml:"create_time"`
+	CreateTime *int64 `json:"create_time,omitempty"`
 
 	// 数据源修改时间
-	UpdateTime *int64 `json:"update_time,omitempty" xml:"update_time"`
+	UpdateTime *int64 `json:"update_time,omitempty"`
 
 	// 数据源所属连接器Id
-	CustomPluginId *string `json:"custom_plugin_id,omitempty" xml:"custom_plugin_id"`
+	CustomPluginId *string `json:"custom_plugin_id,omitempty"`
 
-	Content *Content `json:"content,omitempty" xml:"content"`
+	Content *Content `json:"content,omitempty"`
 
 	// 数据源描述
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 集成应用权限信息 - read (读权限) - access (调用权限) - delete (删除权限) - modify (修改权限)
-	AppPermission *[]DataSourceRspAppPermission `json:"app_permission,omitempty" xml:"app_permission"`
+	AppPermission *[]DataSourceRspAppPermission `json:"app_permission,omitempty"`
 }
 
 func (o DataSourceRsp) String() string {

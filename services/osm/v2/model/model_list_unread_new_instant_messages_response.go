@@ -10,7 +10,7 @@ import (
 type ListUnreadNewInstantMessagesResponse struct {
 
 	// 未读消息列表
-	Imunread       *[]ImUnreadV2 `json:"imunread,omitempty" xml:"imunread"`
+	Imunread       *[]ImUnreadV2 `json:"imunread,omitempty"`
 	HttpStatusCode int           `json:"-"`
 }
 

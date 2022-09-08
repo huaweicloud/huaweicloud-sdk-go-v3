@@ -10,10 +10,10 @@ import (
 type CreateDefaultConfigResponse struct {
 
 	// 内部错误码
-	ErrorCode *string `json:"error_code,omitempty" xml:"error_code"`
+	ErrorCode *string `json:"error_code,omitempty"`
 
 	// 内部错误描述
-	ErrorMsg       *string `json:"error_msg,omitempty" xml:"error_msg"`
+	ErrorMsg       *string `json:"error_msg,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

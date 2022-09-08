@@ -10,19 +10,19 @@ import (
 type ListPostgresqlDatabaseSchemasRequest struct {
 
 	// 语言
-	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *string `json:"X-Language,omitempty"`
 
 	// 实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 数据库名称。
-	DbName string `json:"db_name" xml:"db_name"`
+	DbName string `json:"db_name"`
 
 	// 分页页码，从1开始。
-	Page int32 `json:"page" xml:"page"`
+	Page int32 `json:"page"`
 
 	// 每页数据条数。取值范围[1, 100]。
-	Limit int32 `json:"limit" xml:"limit"`
+	Limit int32 `json:"limit"`
 }
 
 func (o ListPostgresqlDatabaseSchemasRequest) String() string {

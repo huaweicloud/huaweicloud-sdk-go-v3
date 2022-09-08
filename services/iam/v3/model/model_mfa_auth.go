@@ -8,9 +8,9 @@ import (
 
 //
 type MfaAuth struct {
-	Identity *MfaIdentity `json:"identity" xml:"identity"`
+	Identity *MfaIdentity `json:"identity"`
 
-	Scope *AuthScope `json:"scope" xml:"scope"`
+	Scope *AuthScope `json:"scope"`
 }
 
 func (o MfaAuth) String() string {

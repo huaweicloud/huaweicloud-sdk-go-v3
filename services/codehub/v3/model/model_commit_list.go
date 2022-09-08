@@ -9,10 +9,10 @@ import (
 type CommitList struct {
 
 	// 提交列表
-	Commits *[]Commit `json:"commits,omitempty" xml:"commits"`
+	Commits *[]Commit `json:"commits,omitempty"`
 
 	// 提交总数
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 }
 
 func (o CommitList) String() string {

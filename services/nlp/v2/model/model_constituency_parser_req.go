@@ -12,10 +12,10 @@ import (
 type ConstituencyParserReq struct {
 
 	// 支持的文本语言类型，目前支持中文（zh）。
-	Lang *ConstituencyParserReqLang `json:"lang,omitempty" xml:"lang"`
+	Lang *ConstituencyParserReqLang `json:"lang,omitempty"`
 
 	// 待分析文本，长度为1~32。
-	Text string `json:"text" xml:"text"`
+	Text string `json:"text"`
 }
 
 func (o ConstituencyParserReq) String() string {

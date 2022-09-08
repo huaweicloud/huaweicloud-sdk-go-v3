@@ -10,10 +10,10 @@ import (
 type ListPodsResponse struct {
 
 	// 应用实例总数
-	Count *int32 `json:"count,omitempty" xml:"count"`
+	Count *int32 `json:"count,omitempty"`
 
 	// 应用实例列表
-	Pods           *[]PodResp `json:"pods,omitempty" xml:"pods"`
+	Pods           *[]PodResp `json:"pods,omitempty"`
 	HttpStatusCode int        `json:"-"`
 }
 

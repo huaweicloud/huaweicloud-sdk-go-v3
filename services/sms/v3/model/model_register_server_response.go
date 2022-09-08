@@ -10,7 +10,7 @@ import (
 type RegisterServerResponse struct {
 
 	// 源端id
-	Id             *string `json:"id,omitempty" xml:"id"`
+	Id             *string `json:"id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

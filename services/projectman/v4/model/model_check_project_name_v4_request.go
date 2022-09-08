@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CheckProjectNameV4Request struct {
-	Body *CheckProjectNameRequestV4 `json:"body,omitempty" xml:"body"`
+	Body *CheckProjectNameRequestV4 `json:"body,omitempty"`
 }
 
 func (o CheckProjectNameV4Request) String() string {

@@ -10,9 +10,9 @@ import (
 type BatchFreezeDevicesRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
-	Body *BatchFreezeDevicesRequestBody `json:"body,omitempty" xml:"body"`
+	Body *BatchFreezeDevicesRequestBody `json:"body,omitempty"`
 }
 
 func (o BatchFreezeDevicesRequest) String() string {

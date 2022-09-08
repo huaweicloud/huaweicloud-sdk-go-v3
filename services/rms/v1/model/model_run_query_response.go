@@ -8,10 +8,10 @@ import (
 
 // Response Object
 type RunQueryResponse struct {
-	QueryInfo *QueryInfo `json:"query_info,omitempty" xml:"query_info"`
+	QueryInfo *QueryInfo `json:"query_info,omitempty"`
 
 	// ResourceQL 查询结果.
-	Results        *[]interface{} `json:"results,omitempty" xml:"results"`
+	Results        *[]interface{} `json:"results,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }
 

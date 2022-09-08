@@ -10,12 +10,12 @@ import (
 type DeleteAlarmRuleResourcesRequest struct {
 
 	// 发送的实体的MIME类型。默认使用application/json; charset=UTF-8。
-	ContentType string `json:"Content-Type" xml:"Content-Type"`
+	ContentType string `json:"Content-Type"`
 
 	// Alarm实例ID
-	AlarmId string `json:"alarm_id" xml:"alarm_id"`
+	AlarmId string `json:"alarm_id"`
 
-	Body *ResourcesReqV2 `json:"body,omitempty" xml:"body"`
+	Body *ResourcesReqV2 `json:"body,omitempty"`
 }
 
 func (o DeleteAlarmRuleResourcesRequest) String() string {

@@ -10,25 +10,25 @@ import (
 type UpdateSubscriptionSourceResponse struct {
 
 	// 订阅源ID
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 订阅的事件源名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 订阅的事件源的提供方类型
-	ProviderType *string `json:"provider_type,omitempty" xml:"provider_type"`
+	ProviderType *string `json:"provider_type,omitempty"`
 
 	// 订阅的事件源参数列表
-	Detail *interface{} `json:"detail,omitempty" xml:"detail"`
+	Detail *interface{} `json:"detail,omitempty"`
 
 	// 订阅事件源的匹配过滤规则
-	Filter *interface{} `json:"filter,omitempty" xml:"filter"`
+	Filter *interface{} `json:"filter,omitempty"`
 
 	// 创建时间
-	CreatedTime *string `json:"created_time,omitempty" xml:"created_time"`
+	CreatedTime *string `json:"created_time,omitempty"`
 
 	// 更新时间
-	UpdatedTime    *string `json:"updated_time,omitempty" xml:"updated_time"`
+	UpdatedTime    *string `json:"updated_time,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

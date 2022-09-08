@@ -13,39 +13,39 @@ import (
 type ShowModuleResponse struct {
 
 	// 应用ID
-	EdgeAppId *string `json:"edge_app_id,omitempty" xml:"edge_app_id"`
+	EdgeAppId *string `json:"edge_app_id,omitempty"`
 
 	// 应用版本
-	AppVersion *string `json:"app_version,omitempty" xml:"app_version"`
+	AppVersion *string `json:"app_version,omitempty"`
 
 	// 模块运行状态
-	State *ShowModuleResponseState `json:"state,omitempty" xml:"state"`
+	State *ShowModuleResponseState `json:"state,omitempty"`
 
 	// 模块管控状态
-	ControlStatus *string `json:"control_status,omitempty" xml:"control_status"`
+	ControlStatus *string `json:"control_status,omitempty"`
 
 	// 边缘节点（同deviceID）ID
-	NodeId *string `json:"node_id,omitempty" xml:"node_id"`
+	NodeId *string `json:"node_id,omitempty"`
 
 	// 模块名称
-	ModuleName *string `json:"module_name,omitempty" xml:"module_name"`
+	ModuleName *string `json:"module_name,omitempty"`
 
 	// 模块ID
-	ModuleId *string `json:"module_id,omitempty" xml:"module_id"`
+	ModuleId *string `json:"module_id,omitempty"`
 
 	// 创建时间
-	CreateTime *string `json:"create_time,omitempty" xml:"create_time"`
+	CreateTime *string `json:"create_time,omitempty"`
 
 	// 最后一次修改时间
-	UpdateTime *string `json:"update_time,omitempty" xml:"update_time"`
+	UpdateTime *string `json:"update_time,omitempty"`
 
 	// 应用类型
-	AppType *ShowModuleResponseAppType `json:"app_type,omitempty" xml:"app_type"`
+	AppType *ShowModuleResponseAppType `json:"app_type,omitempty"`
 
 	// 功能类型
-	FunctionType *ShowModuleResponseFunctionType `json:"function_type,omitempty" xml:"function_type"`
+	FunctionType *ShowModuleResponseFunctionType `json:"function_type,omitempty"`
 
-	ContainerSettings *ModuleContainerSettingsResDto `json:"container_settings,omitempty" xml:"container_settings"`
+	ContainerSettings *ModuleContainerSettingsResDto `json:"container_settings,omitempty"`
 	HttpStatusCode    int                            `json:"-"`
 }
 

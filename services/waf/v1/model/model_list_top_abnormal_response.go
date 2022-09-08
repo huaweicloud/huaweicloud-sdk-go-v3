@@ -10,10 +10,10 @@ import (
 type ListTopAbnormalResponse struct {
 
 	// 异常请求数量
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 
 	// 异常请求信息数组
-	Items          *[]UrlCountItem `json:"items,omitempty" xml:"items"`
+	Items          *[]UrlCountItem `json:"items,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }
 

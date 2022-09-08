@@ -10,10 +10,10 @@ import (
 type ConfigsMap struct {
 
 	// 配置项的名称
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 配置项的属性名
-	Key string `json:"key" xml:"key"`
+	Key string `json:"key"`
 }
 
 func (o ConfigsMap) String() string {

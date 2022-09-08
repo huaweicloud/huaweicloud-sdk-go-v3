@@ -13,31 +13,31 @@ import (
 type RecognizeFlashAsrRequest struct {
 
 	// 所使用的模型特征串。通常是 “语种_采样率_领域”的形式。 采样率需要与音频采样率保持一致。 当前支持如下模型特征串： chinese_8k_common chinese_16k_conversation
-	Property RecognizeFlashAsrRequestProperty `json:"property" xml:"property"`
+	Property RecognizeFlashAsrRequestProperty `json:"property"`
 
 	// 音频格式，audio_format取值范围： wav,mp3,m4a,aac,opus
-	AudioFormat RecognizeFlashAsrRequestAudioFormat `json:"audio_format" xml:"audio_format"`
+	AudioFormat RecognizeFlashAsrRequestAudioFormat `json:"audio_format"`
 
 	// 是否加标点， 可以为 yes, 默认no
-	AddPunc *RecognizeFlashAsrRequestAddPunc `json:"add_punc,omitempty" xml:"add_punc"`
+	AddPunc *RecognizeFlashAsrRequestAddPunc `json:"add_punc,omitempty"`
 
 	// 是否将音频中的数字使用阿拉伯数字的形式呈现，取值为yes，no，默认为yes
-	DigitNorm *RecognizeFlashAsrRequestDigitNorm `json:"digit_norm,omitempty" xml:"digit_norm"`
+	DigitNorm *RecognizeFlashAsrRequestDigitNorm `json:"digit_norm,omitempty"`
 
 	// 表示是否在识别结果中输出分词结果信息，取值为yes，no，默认no
-	NeedWordInfo *RecognizeFlashAsrRequestNeedWordInfo `json:"need_word_info,omitempty" xml:"need_word_info"`
+	NeedWordInfo *RecognizeFlashAsrRequestNeedWordInfo `json:"need_word_info,omitempty"`
 
 	// 热词表id
-	VocabularyId *string `json:"vocabulary_id,omitempty" xml:"vocabulary_id"`
+	VocabularyId *string `json:"vocabulary_id,omitempty"`
 
 	// obs桶名
-	ObsBucketName *string `json:"obs_bucket_name,omitempty" xml:"obs_bucket_name"`
+	ObsBucketName *string `json:"obs_bucket_name,omitempty"`
 
 	// obs对象key，经过urlencode编码，长度不超过1024个字符
-	ObsObjectKey *string `json:"obs_object_key,omitempty" xml:"obs_object_key"`
+	ObsObjectKey *string `json:"obs_object_key,omitempty"`
 
 	// 表示是否在识别中只识别首个声道的音频数据，取值为“yes”和“no”，默认为“no”。
-	FirstChannelOnly *RecognizeFlashAsrRequestFirstChannelOnly `json:"first_channel_only,omitempty" xml:"first_channel_only"`
+	FirstChannelOnly *RecognizeFlashAsrRequestFirstChannelOnly `json:"first_channel_only,omitempty"`
 }
 
 func (o RecognizeFlashAsrRequest) String() string {

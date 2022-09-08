@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowReplicationResponse struct {
-	Replication    *ShowReplicationParams `json:"replication,omitempty" xml:"replication"`
+	Replication    *ShowReplicationParams `json:"replication,omitempty"`
 	HttpStatusCode int                    `json:"-"`
 }
 

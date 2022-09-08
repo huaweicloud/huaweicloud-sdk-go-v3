@@ -8,7 +8,7 @@ import (
 
 // 端点详情
 type Endpoint struct {
-	Endpoint *EndpointObj `json:"endpoint,omitempty" xml:"endpoint"`
+	Endpoint *EndpointObj `json:"endpoint,omitempty"`
 }
 
 func (o Endpoint) String() string {

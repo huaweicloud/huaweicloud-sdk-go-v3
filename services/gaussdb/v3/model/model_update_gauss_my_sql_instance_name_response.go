@@ -10,7 +10,7 @@ import (
 type UpdateGaussMySqlInstanceNameResponse struct {
 
 	// 修改实例名称的任务id
-	JobId          *string `json:"job_id,omitempty" xml:"job_id"`
+	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

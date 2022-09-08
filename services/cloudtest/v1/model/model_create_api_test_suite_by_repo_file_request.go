@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateApiTestSuiteByRepoFileRequest struct {
-	Body *CreateTestSuitByRepoFileInfo `json:"body,omitempty" xml:"body"`
+	Body *CreateTestSuitByRepoFileInfo `json:"body,omitempty"`
 }
 
 func (o CreateApiTestSuiteByRepoFileRequest) String() string {

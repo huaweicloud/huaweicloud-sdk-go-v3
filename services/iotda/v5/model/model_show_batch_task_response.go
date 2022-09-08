@@ -8,12 +8,12 @@ import (
 
 // Response Object
 type ShowBatchTaskResponse struct {
-	Batchtask *Task `json:"batchtask,omitempty" xml:"batchtask"`
+	Batchtask *Task `json:"batchtask,omitempty"`
 
 	// 子任务详情列表。
-	TaskDetails *[]TaskDetail `json:"task_details,omitempty" xml:"task_details"`
+	TaskDetails *[]TaskDetail `json:"task_details,omitempty"`
 
-	Page           *Page `json:"page,omitempty" xml:"page"`
+	Page           *Page `json:"page,omitempty"`
 	HttpStatusCode int   `json:"-"`
 }
 

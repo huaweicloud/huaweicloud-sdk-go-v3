@@ -10,9 +10,9 @@ import (
 type AttachServerVolumeRequest struct {
 
 	// 云服务器ID。
-	ServerId string `json:"server_id" xml:"server_id"`
+	ServerId string `json:"server_id"`
 
-	Body *AttachServerVolumeRequestBody `json:"body,omitempty" xml:"body"`
+	Body *AttachServerVolumeRequestBody `json:"body,omitempty"`
 }
 
 func (o AttachServerVolumeRequest) String() string {

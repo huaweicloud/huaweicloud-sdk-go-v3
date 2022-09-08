@@ -10,7 +10,7 @@ import (
 type StartAutoSettingRequest struct {
 
 	// 指定要备份的集群ID。
-	ClusterId string `json:"cluster_id" xml:"cluster_id"`
+	ClusterId string `json:"cluster_id"`
 }
 
 func (o StartAutoSettingRequest) String() string {

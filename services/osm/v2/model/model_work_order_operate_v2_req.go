@@ -9,16 +9,16 @@ import (
 type WorkOrderOperateV2Req struct {
 
 	// 评价内容
-	Judgement *string `json:"judgement,omitempty" xml:"judgement"`
+	Judgement *string `json:"judgement,omitempty"`
 
 	// 操作描述
-	OperateDesc *string `json:"operate_desc,omitempty" xml:"operate_desc"`
+	OperateDesc *string `json:"operate_desc,omitempty"`
 
 	// 组id
-	GroupId *string `json:"group_id,omitempty" xml:"group_id"`
+	GroupId *string `json:"group_id,omitempty"`
 
 	// 工单满意度列表
-	IncidentSatisfactionList *[]IncidentSatisfactionV2Do `json:"incident_satisfaction_list,omitempty" xml:"incident_satisfaction_list"`
+	IncidentSatisfactionList *[]IncidentSatisfactionV2Do `json:"incident_satisfaction_list,omitempty"`
 }
 
 func (o WorkOrderOperateV2Req) String() string {

@@ -9,19 +9,19 @@ import (
 type SlowlogResult struct {
 
 	// 执行时间。
-	Time string `json:"time" xml:"time"`
+	Time string `json:"time"`
 
 	// 所属数据库。
-	Database string `json:"database" xml:"database"`
+	Database string `json:"database"`
 
 	// 执行语法。
-	QuerySample string `json:"query_sample" xml:"query_sample"`
+	QuerySample string `json:"query_sample"`
 
 	// 语句类型。
-	Type string `json:"type" xml:"type"`
+	Type string `json:"type"`
 
 	// 发生时间，UTC时间。
-	StartTime string `json:"start_time" xml:"start_time"`
+	StartTime string `json:"start_time"`
 }
 
 func (o SlowlogResult) String() string {

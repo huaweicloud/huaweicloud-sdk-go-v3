@@ -10,28 +10,28 @@ import (
 type Urls struct {
 
 	// urlid
-	Id *int32 `json:"id,omitempty" xml:"id"`
+	Id *int32 `json:"id,omitempty"`
 
 	// url具体值
-	Url *string `json:"url,omitempty" xml:"url"`
+	Url *string `json:"url,omitempty"`
 
 	// url状态
-	Status *string `json:"status,omitempty" xml:"status"`
+	Status *string `json:"status,omitempty"`
 
 	// 任务类型
-	Type *string `json:"type,omitempty" xml:"type"`
+	Type *string `json:"type,omitempty"`
 
 	// 任务id
-	TaskId *int64 `json:"task_id,omitempty" xml:"task_id"`
+	TaskId *int64 `json:"task_id,omitempty"`
 
 	// 修改时间戳（毫秒）
-	ModifyTime *int32 `json:"modify_time,omitempty" xml:"modify_time"`
+	ModifyTime *int32 `json:"modify_time,omitempty"`
 
 	// 创建时间戳（毫秒）
-	CreateTime *int32 `json:"create_time,omitempty" xml:"create_time"`
+	CreateTime *int32 `json:"create_time,omitempty"`
 
 	// 文件类型，目录还是文件
-	FileType *string `json:"file_type,omitempty" xml:"file_type"`
+	FileType *string `json:"file_type,omitempty"`
 }
 
 func (o Urls) String() string {

@@ -10,7 +10,7 @@ import (
 type CreateAlarmTemplateResponse struct {
 
 	// 自定义告警模板创建成功返回的ID，如：at1603252280799wLRyGLxnz。
-	TemplateId     *string `json:"template_id,omitempty" xml:"template_id"`
+	TemplateId     *string `json:"template_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -10,9 +10,9 @@ import (
 type ListKmsByTagsRequest struct {
 
 	// 资源实例，固定值为resource_instances
-	ResourceInstances string `json:"resource_instances" xml:"resource_instances"`
+	ResourceInstances string `json:"resource_instances"`
 
-	Body *ListKmsByTagsRequestBody `json:"body,omitempty" xml:"body"`
+	Body *ListKmsByTagsRequestBody `json:"body,omitempty"`
 }
 
 func (o ListKmsByTagsRequest) String() string {

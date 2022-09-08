@@ -10,15 +10,15 @@ import (
 type QueryStructDetailResp struct {
 
 	// 任务ID
-	JobId string `json:"job_id" xml:"job_id"`
+	JobId string `json:"job_id"`
 
 	// 错误码
-	ErrorCode *string `json:"error_code,omitempty" xml:"error_code"`
+	ErrorCode *string `json:"error_code,omitempty"`
 
 	// 错误信息
-	ErrorMessage *string `json:"error_message,omitempty" xml:"error_message"`
+	ErrorMessage *string `json:"error_message,omitempty"`
 
-	StructDetail *QueryFlowCompareDataResp `json:"struct_detail,omitempty" xml:"struct_detail"`
+	StructDetail *QueryFlowCompareDataResp `json:"struct_detail,omitempty"`
 }
 
 func (o QueryStructDetailResp) String() string {

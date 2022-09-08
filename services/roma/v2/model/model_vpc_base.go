@@ -12,19 +12,19 @@ import (
 type VpcBase struct {
 
 	// VPC通道的名称。  长度为3 ~ 64位的字符串，字符串由中文、英文字母、数字、中划线、下划线组成，且只能以英文或中文开头。 > 中文字符必须为UTF-8或者unicode编码。
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// VPC通道中主机的端口号。  取值范围1 ~ 65535。
-	Port int32 `json:"port" xml:"port"`
+	Port int32 `json:"port"`
 
 	// 分发算法。 - 1：加权轮询（wrr） - 2：加权最少连接（wleastconn） - 3：源地址哈希（source） - 4：URI哈希（uri）
-	BalanceStrategy VpcBaseBalanceStrategy `json:"balance_strategy" xml:"balance_strategy"`
+	BalanceStrategy VpcBaseBalanceStrategy `json:"balance_strategy"`
 
 	// VPC通道的成员类型。[site场景必须修改成IP类型](tag:Site) - ip - ecs
-	MemberType VpcBaseMemberType `json:"member_type" xml:"member_type"`
+	MemberType VpcBaseMemberType `json:"member_type"`
 
 	// VPC通道的字典编码  支持英文，数字，特殊字符（-_.）  暂不支持
-	DictCode *string `json:"dict_code,omitempty" xml:"dict_code"`
+	DictCode *string `json:"dict_code,omitempty"`
 }
 
 func (o VpcBase) String() string {

@@ -12,19 +12,19 @@ import (
 type CreateTopicOrBatchDeleteTopicReq struct {
 
 	// 主题名称。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 关联的代理。
-	Brokers *[]string `json:"brokers,omitempty" xml:"brokers"`
+	Brokers *[]string `json:"brokers,omitempty"`
 
 	// 队列数。
-	QueueNum float32 `json:"queue_num,omitempty" xml:"queue_num"`
+	QueueNum float32 `json:"queue_num,omitempty"`
 
 	// 权限。
-	Permission *CreateTopicOrBatchDeleteTopicReqPermission `json:"permission,omitempty" xml:"permission"`
+	Permission *CreateTopicOrBatchDeleteTopicReqPermission `json:"permission,omitempty"`
 
 	// 主题列表，当批量删除主题时使用。
-	Topics *[]string `json:"topics,omitempty" xml:"topics"`
+	Topics *[]string `json:"topics,omitempty"`
 }
 
 func (o CreateTopicOrBatchDeleteTopicReq) String() string {

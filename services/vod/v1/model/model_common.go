@@ -13,19 +13,19 @@ import (
 type Common struct {
 
 	// pvc开关。
-	Pvc CommonPvc `json:"pvc" xml:"pvc"`
+	Pvc CommonPvc `json:"pvc"`
 
 	// pvc版本。
-	PvcVersion *string `json:"pvc_version,omitempty" xml:"pvc_version"`
+	PvcVersion *string `json:"pvc_version,omitempty"`
 
 	// 视频编码格式。
-	VideoCodec *CommonVideoCodec `json:"video_codec,omitempty" xml:"video_codec"`
+	VideoCodec *CommonVideoCodec `json:"video_codec,omitempty"`
 
 	// 音频编码格式(有效值范围) - 1：AUDIO_CODECTYPE_AAC - 2：AUDIO_CODECTYPE_HEAAC1 - 3：AUDIO_CODECTYPE_HEAAC2 - 4：AUDIO_CODECTYPE_MP3  默认值为1。
-	AudioCodec *CommonAudioCodec `json:"audio_codec,omitempty" xml:"audio_codec"`
+	AudioCodec *CommonAudioCodec `json:"audio_codec,omitempty"`
 
 	// 分片时长(默认为5秒)。
-	HlsInterval *int32 `json:"hls_interval,omitempty" xml:"hls_interval"`
+	HlsInterval *int32 `json:"hls_interval,omitempty"`
 }
 
 func (o Common) String() string {

@@ -8,9 +8,9 @@ import (
 
 // Response Object
 type ShowApiVersionResponse struct {
-	Versions *ApiVersion `json:"versions,omitempty" xml:"versions"`
+	Versions *ApiVersion `json:"versions,omitempty"`
 
-	Version        *ApiVersion `json:"version,omitempty" xml:"version"`
+	Version        *ApiVersion `json:"version,omitempty"`
 	HttpStatusCode int         `json:"-"`
 }
 

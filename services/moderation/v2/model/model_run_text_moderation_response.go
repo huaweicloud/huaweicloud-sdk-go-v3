@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type RunTextModerationResponse struct {
-	Result         *TextDetectionResponseResult `json:"result,omitempty" xml:"result"`
+	Result         *TextDetectionResponseResult `json:"result,omitempty"`
 	HttpStatusCode int                          `json:"-"`
 }
 

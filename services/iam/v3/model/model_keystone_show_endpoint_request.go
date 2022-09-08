@@ -10,7 +10,7 @@ import (
 type KeystoneShowEndpointRequest struct {
 
 	// 待查询的终端节点ID。
-	EndpointId string `json:"endpoint_id" xml:"endpoint_id"`
+	EndpointId string `json:"endpoint_id"`
 }
 
 func (o KeystoneShowEndpointRequest) String() string {

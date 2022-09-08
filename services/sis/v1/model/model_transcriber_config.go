@@ -12,27 +12,27 @@ import (
 type TranscriberConfig struct {
 
 	// 支持语音的格式。  audioformat取值范围:  auto  自动判断，系统会自动判断并支持WAV（内部支持pcm/ulaw/alaw/adpcm编码格式）、MP3、M4A、ogg-speex、ogg-opus、AMR、wma等格式，相应的文件后缀名为.wav, .mp3, .m4a, .spx, .opus, .amr 和.wma, 不区分大小写。支持双声道的音频。  pcm16k16bit  16k16bit裸音频录音数据。  pcm8k16bit   8k16bit裸音频录音数据。  ulaw16k8bit  16k8bit ulaw 裸音频录音数据。  ulaw8k8bit   8k8bit ulaw 裸音频录音数据。  alaw16k8bit  16k8bit alaw 裸音频录音数据。  alaw8k8bit   8k8bit alaw 裸音频录音数据。  vox8k4bit    8k4bit vox 裸音频录音数据。  v3_8k4bit    8k4bit v3 裸音频录音数据。
-	AudioFormat *TranscriberConfigAudioFormat `json:"audio_format,omitempty" xml:"audio_format"`
+	AudioFormat *TranscriberConfigAudioFormat `json:"audio_format,omitempty"`
 
-	// 所使用的模型特征串。通常是“语种_采样率_领域”的形式，例如chinese_8k_common。  采样率需要与音频采样率保持一致。  当前支持如下模型特征串：  chinese_8k_common  chinese_16k_conversation  chinese_8k_bank（银行领域，区域仅支持cn-north-4）  chinese_8k_insurance（保险领域，区域仅支持cn-north-4）
-	Property TranscriberConfigProperty `json:"property" xml:"property"`
+	// 所使用的模型特征串。通常是“语种_采样率_领域”的形式，例如chinese_8k_common。  采样率需要与音频采样率保持一致。  当前支持如下模型特征串：  chinese_16k_media (音视频领域，区域仅支持cn-north-4，cn-east-3)  chinese_8k_common  chinese_16k_conversation  chinese_8k_bank（银行领域，区域仅支持cn-north-4）  chinese_8k_insurance（保险领域，区域仅支持cn-north-4）
+	Property TranscriberConfigProperty `json:"property"`
 
 	// 是否加标点， 可以为 yes, no(缺省)。
-	AddPunc *TranscriberConfigAddPunc `json:"add_punc,omitempty" xml:"add_punc"`
+	AddPunc *TranscriberConfigAddPunc `json:"add_punc,omitempty"`
 
-	NeedAnalysisInfo *AnalysisInfo `json:"need_analysis_info,omitempty" xml:"need_analysis_info"`
+	NeedAnalysisInfo *AnalysisInfo `json:"need_analysis_info,omitempty"`
 
 	// 热词表id，不使用则不填写。
-	VocabularyId *string `json:"vocabulary_id,omitempty" xml:"vocabulary_id"`
+	VocabularyId *string `json:"vocabulary_id,omitempty"`
 
 	// 表示是否将语音中的数字识别为阿拉伯数字，取值为yes 、 no，缺省为yes。
-	DigitNorm *TranscriberConfigDigitNorm `json:"digit_norm,omitempty" xml:"digit_norm"`
+	DigitNorm *TranscriberConfigDigitNorm `json:"digit_norm,omitempty"`
 
 	// 用于录音文件识表示回调 url，即用户用于接收识别结果的服务器地址，不支持IP地址方式调用，url长度小于2048字节。服务请求方法为POST。  如果用户使用回调方式获取识别结果，需填写该参数，处理成功后用户服务器需返回状态码“200”。  如果用户使用轮询方式获取识别结果，则无需填写该参数。别结果的回调url，不使用则不填写。
-	CallbackUrl *string `json:"callback_url,omitempty" xml:"callback_url"`
+	CallbackUrl *string `json:"callback_url,omitempty"`
 
 	// 表示是否在识别结果中输出分词结果信息，取值为“yes”和“no”，默认为“no”。
-	NeedWordInfo *TranscriberConfigNeedWordInfo `json:"need_word_info,omitempty" xml:"need_word_info"`
+	NeedWordInfo *TranscriberConfigNeedWordInfo `json:"need_word_info,omitempty"`
 }
 
 func (o TranscriberConfig) String() string {
@@ -119,15 +119,18 @@ type TranscriberConfigProperty struct {
 }
 
 type TranscriberConfigPropertyEnum struct {
+	CHINESE_16K_MEDIA        TranscriberConfigProperty
 	CHINESE_8K_COMMON        TranscriberConfigProperty
 	CHINESE_16K_CONVERSATION TranscriberConfigProperty
 	CHINESE_8K_BANK          TranscriberConfigProperty
 	CHINESE_8K_INSURANCE     TranscriberConfigProperty
-	CHINESE_16K_MEDIA        TranscriberConfigProperty
 }
 
 func GetTranscriberConfigPropertyEnum() TranscriberConfigPropertyEnum {
 	return TranscriberConfigPropertyEnum{
+		CHINESE_16K_MEDIA: TranscriberConfigProperty{
+			value: "chinese_16k_media",
+		},
 		CHINESE_8K_COMMON: TranscriberConfigProperty{
 			value: "chinese_8k_common",
 		},
@@ -139,9 +142,6 @@ func GetTranscriberConfigPropertyEnum() TranscriberConfigPropertyEnum {
 		},
 		CHINESE_8K_INSURANCE: TranscriberConfigProperty{
 			value: "chinese_8k_insurance",
-		},
-		CHINESE_16K_MEDIA: TranscriberConfigProperty{
-			value: "chinese_16k_media",
 		},
 	}
 }

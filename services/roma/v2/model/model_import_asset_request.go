@@ -10,9 +10,9 @@ import (
 type ImportAssetRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
-	Body *ImportAssetRequestBody `json:"body,omitempty" xml:"body" type:"multipart"`
+	Body *ImportAssetRequestBody `json:"body,omitempty" type:"multipart"`
 }
 
 func (o ImportAssetRequest) String() string {

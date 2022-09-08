@@ -10,7 +10,7 @@ import (
 type RunOnceResponse struct {
 
 	// 作业实例id
-	InstanceId     *string `json:"instanceId,omitempty" xml:"instanceId"`
+	InstanceId     *string `json:"instanceId,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

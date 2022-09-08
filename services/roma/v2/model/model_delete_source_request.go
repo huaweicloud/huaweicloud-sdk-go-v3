@@ -10,13 +10,13 @@ import (
 type DeleteSourceRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 规则ID
-	RuleId string `json:"rule_id" xml:"rule_id"`
+	RuleId string `json:"rule_id"`
 
 	// 源数据源ID
-	SourceId int32 `json:"source_id" xml:"source_id"`
+	SourceId int32 `json:"source_id"`
 }
 
 func (o DeleteSourceRequest) String() string {

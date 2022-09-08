@@ -10,10 +10,10 @@ import (
 type TargetServerById struct {
 
 	// 目的端服务器ID
-	VmId *string `json:"vm_id,omitempty" xml:"vm_id"`
+	VmId *string `json:"vm_id,omitempty"`
 
 	// 目的端服务器名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 }
 
 func (o TargetServerById) String() string {

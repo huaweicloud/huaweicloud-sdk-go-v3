@@ -10,10 +10,10 @@ import (
 type VersionMediatypes struct {
 
 	// 媒体类型。
-	Type string `json:"type" xml:"type"`
+	Type string `json:"type"`
 
 	// 基础类型。
-	Base string `json:"base" xml:"base"`
+	Base string `json:"base"`
 }
 
 func (o VersionMediatypes) String() string {

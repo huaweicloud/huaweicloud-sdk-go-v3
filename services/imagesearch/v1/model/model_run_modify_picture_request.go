@@ -10,9 +10,9 @@ import (
 type RunModifyPictureRequest struct {
 
 	// 实例名称。
-	InstanceName string `json:"instance_name" xml:"instance_name"`
+	InstanceName string `json:"instance_name"`
 
-	Body *RunModifyPictureReq `json:"body,omitempty" xml:"body"`
+	Body *RunModifyPictureReq `json:"body,omitempty"`
 }
 
 func (o RunModifyPictureRequest) String() string {

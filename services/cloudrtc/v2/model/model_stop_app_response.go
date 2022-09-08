@@ -10,11 +10,11 @@ import (
 type StopAppResponse struct {
 
 	// 应用id
-	AppId *string `json:"app_id,omitempty" xml:"app_id"`
+	AppId *string `json:"app_id,omitempty"`
 
-	State *AppState `json:"state,omitempty" xml:"state"`
+	State *AppState `json:"state,omitempty"`
 
-	XRequestId     *string `json:"X-request-Id,omitempty" xml:"X-request-Id"`
+	XRequestId     *string `json:"X-request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -10,10 +10,10 @@ import (
 type Nics struct {
 
 	// CloudTable集群所在网络ID。
-	NetId string `json:"net_id" xml:"net_id"`
+	NetId string `json:"net_id"`
 
 	// CloudTable所在安全组对应的ID。
-	SecurityGroupId string `json:"security_group_id" xml:"security_group_id"`
+	SecurityGroupId string `json:"security_group_id"`
 }
 
 func (o Nics) String() string {

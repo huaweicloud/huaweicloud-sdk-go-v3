@@ -9,7 +9,7 @@ import (
 type ResourcesReqV2 struct {
 
 	// 资源信息
-	Resources [][]Dimension `json:"resources" xml:"resources"`
+	Resources [][]Dimension `json:"resources"`
 }
 
 func (o ResourcesReqV2) String() string {

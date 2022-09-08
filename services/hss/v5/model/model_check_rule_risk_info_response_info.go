@@ -10,28 +10,28 @@ import (
 type CheckRuleRiskInfoResponseInfo struct {
 
 	// 风险等级，包含如下:   - Low : 低危   - Medium : 中危   - High : 高危
-	Severity *string `json:"severity,omitempty" xml:"severity"`
+	Severity *string `json:"severity,omitempty"`
 
 	// 基线名称
-	CheckType *string `json:"check_type,omitempty" xml:"check_type"`
+	CheckType *string `json:"check_type,omitempty"`
 
 	// 标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 华为标准   - qt_standard : 青腾标准
-	Standard *string `json:"standard,omitempty" xml:"standard"`
+	Standard *string `json:"standard,omitempty"`
 
 	// 检查项
-	CheckRuleName *string `json:"check_rule_name,omitempty" xml:"check_rule_name"`
+	CheckRuleName *string `json:"check_rule_name,omitempty"`
 
 	// 检查项ID
-	CheckRuleId *string `json:"check_rule_id,omitempty" xml:"check_rule_id"`
+	CheckRuleId *string `json:"check_rule_id,omitempty"`
 
 	// 影响服务器数量
-	HostNum *int32 `json:"host_num,omitempty" xml:"host_num"`
+	HostNum *int32 `json:"host_num,omitempty"`
 
 	// 检测结果，包含如下：   - pass   - failed
-	ScanResult *string `json:"scan_result,omitempty" xml:"scan_result"`
+	ScanResult *string `json:"scan_result,omitempty"`
 
 	// 状态，包含如下：   - safe : 无需处理   - ignored : 已忽略   - unhandled : 未处理
-	Status *string `json:"status,omitempty" xml:"status"`
+	Status *string `json:"status,omitempty"`
 }
 
 func (o CheckRuleRiskInfoResponseInfo) String() string {

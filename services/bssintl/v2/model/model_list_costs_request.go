@@ -10,9 +10,9 @@ import (
 type ListCostsRequest struct {
 
 	// 语言。中文：zh_CN英文：en_US。缺省为zh_CN。
-	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *string `json:"X-Language,omitempty"`
 
-	Body *ListCostsReq `json:"body,omitempty" xml:"body"`
+	Body *ListCostsReq `json:"body,omitempty"`
 }
 
 func (o ListCostsRequest) String() string {

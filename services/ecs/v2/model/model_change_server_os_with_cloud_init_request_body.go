@@ -8,7 +8,7 @@ import (
 
 // This is a auto create Body Object
 type ChangeServerOsWithCloudInitRequestBody struct {
-	OsChange *ChangeServerOsWithCloudInitOption `json:"os-change" xml:"os-change"`
+	OsChange *ChangeServerOsWithCloudInitOption `json:"os-change"`
 }
 
 func (o ChangeServerOsWithCloudInitRequestBody) String() string {

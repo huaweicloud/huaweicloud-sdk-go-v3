@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ConfirmTargetDbTypeRequest struct {
-	Body *ConfirmTargetDbReq `json:"body,omitempty" xml:"body"`
+	Body *ConfirmTargetDbReq `json:"body,omitempty"`
 }
 
 func (o ConfirmTargetDbTypeRequest) String() string {

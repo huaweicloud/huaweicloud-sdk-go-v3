@@ -10,7 +10,7 @@ import (
 type BatchStartInstanceResponse struct {
 
 	// 任务列表对象。
-	Jobs           *[]JobResult `json:"jobs,omitempty" xml:"jobs"`
+	Jobs           *[]JobResult `json:"jobs,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }
 

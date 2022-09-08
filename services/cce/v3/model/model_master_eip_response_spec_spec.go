@@ -9,12 +9,12 @@ import (
 type MasterEipResponseSpecSpec struct {
 
 	// 弹性网卡ID
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
-	Eip *EipSpec `json:"eip,omitempty" xml:"eip"`
+	Eip *EipSpec `json:"eip,omitempty"`
 
 	// 是否动态创建
-	IsDynamic *bool `json:"IsDynamic,omitempty" xml:"IsDynamic"`
+	IsDynamic *bool `json:"IsDynamic,omitempty"`
 }
 
 func (o MasterEipResponseSpecSpec) String() string {

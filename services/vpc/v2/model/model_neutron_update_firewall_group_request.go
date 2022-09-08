@@ -10,9 +10,9 @@ import (
 type NeutronUpdateFirewallGroupRequest struct {
 
 	// 网络ACL防火墙组ID
-	FirewallGroupId string `json:"firewall_group_id" xml:"firewall_group_id"`
+	FirewallGroupId string `json:"firewall_group_id"`
 
-	Body *NeutronUpdateFirewallGroupRequestBody `json:"body,omitempty" xml:"body"`
+	Body *NeutronUpdateFirewallGroupRequestBody `json:"body,omitempty"`
 }
 
 func (o NeutronUpdateFirewallGroupRequest) String() string {

@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowServerLimitsResponse struct {
-	Absolute       *ServerLimits `json:"absolute,omitempty" xml:"absolute"`
+	Absolute       *ServerLimits `json:"absolute,omitempty"`
 	HttpStatusCode int           `json:"-"`
 }
 

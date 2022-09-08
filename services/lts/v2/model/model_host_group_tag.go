@@ -10,10 +10,10 @@ import (
 type HostGroupTag struct {
 
 	// 标签Key
-	Key *string `json:"key,omitempty" xml:"key"`
+	Key *string `json:"key,omitempty"`
 
 	// 标签Value
-	Value *string `json:"value,omitempty" xml:"value"`
+	Value *string `json:"value,omitempty"`
 }
 
 func (o HostGroupTag) String() string {

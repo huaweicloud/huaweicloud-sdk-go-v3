@@ -9,7 +9,7 @@ import (
 type UpdateSecretStageRequestBody struct {
 
 	// 凭据的版本号标识符。
-	VersionId string `json:"version_id" xml:"version_id"`
+	VersionId string `json:"version_id"`
 }
 
 func (o UpdateSecretStageRequestBody) String() string {

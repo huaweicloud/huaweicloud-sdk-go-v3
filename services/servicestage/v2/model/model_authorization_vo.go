@@ -10,34 +10,34 @@ import (
 type AuthorizationVo struct {
 
 	// 授权名称。
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 仓库类型。 取值范围：github、gitlab、gitee、bitbucket、devcloud。
-	RepoType string `json:"repo_type" xml:"repo_type"`
+	RepoType string `json:"repo_type"`
 
 	// 仓库地址。
-	RepoHost string `json:"repo_host" xml:"repo_host"`
+	RepoHost string `json:"repo_host"`
 
 	// 仓库主页。
-	RepoHome string `json:"repo_home" xml:"repo_home"`
+	RepoHome string `json:"repo_home"`
 
 	// 仓库用户名。
-	RepoUser string `json:"repo_user" xml:"repo_user"`
+	RepoUser string `json:"repo_user"`
 
 	// 头像。
-	Avartar string `json:"avartar" xml:"avartar"`
+	Avartar string `json:"avartar"`
 
 	// 授权方式。
-	TokenType string `json:"token_type" xml:"token_type"`
+	TokenType string `json:"token_type"`
 
 	// 创建时间。
-	CreateTime int64 `json:"create_time" xml:"create_time"`
+	CreateTime int64 `json:"create_time"`
 
 	// 修改时间。
-	UpdateTime int64 `json:"update_time" xml:"update_time"`
+	UpdateTime int64 `json:"update_time"`
 
 	// 状态。
-	Status int32 `json:"status" xml:"status"`
+	Status int32 `json:"status"`
 }
 
 func (o AuthorizationVo) String() string {

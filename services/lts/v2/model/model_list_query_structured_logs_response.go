@@ -10,7 +10,7 @@ import (
 type ListQueryStructuredLogsResponse struct {
 
 	// 日志信息。
-	StructLogs     *[]StructLogContents `json:"struct_logs,omitempty" xml:"struct_logs"`
+	StructLogs     *[]StructLogContents `json:"struct_logs,omitempty"`
 	HttpStatusCode int                  `json:"-"`
 }
 

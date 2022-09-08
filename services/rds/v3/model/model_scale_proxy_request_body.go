@@ -9,10 +9,10 @@ import (
 type ScaleProxyRequestBody struct {
 
 	// 需要变更的新规格ID。
-	FlavorRef string `json:"flavor_ref" xml:"flavor_ref"`
+	FlavorRef string `json:"flavor_ref"`
 
 	// 是否延迟变更。  - true：延迟变更，将在运维时间窗内自动变更。 - false：立即变更。
-	Delay bool `json:"delay" xml:"delay"`
+	Delay bool `json:"delay"`
 }
 
 func (o ScaleProxyRequestBody) String() string {

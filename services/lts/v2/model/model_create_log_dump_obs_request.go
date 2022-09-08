@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateLogDumpObsRequest struct {
-	Body *CreateLogDumpObsRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreateLogDumpObsRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateLogDumpObsRequest) String() string {

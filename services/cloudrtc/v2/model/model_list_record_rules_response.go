@@ -10,9 +10,9 @@ import (
 type ListRecordRulesResponse struct {
 
 	// 录制规则列表
-	Rules *[]RecordRule `json:"rules,omitempty" xml:"rules"`
+	Rules *[]RecordRule `json:"rules,omitempty"`
 
-	XRequestId     *string `json:"X-request-Id,omitempty" xml:"X-request-Id"`
+	XRequestId     *string `json:"X-request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

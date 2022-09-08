@@ -10,12 +10,12 @@ import (
 type ListLoadBalancersResponse struct {
 
 	// Loadbalancer的列表。
-	Loadbalancers *[]LoadBalancer `json:"loadbalancers,omitempty" xml:"loadbalancers"`
+	Loadbalancers *[]LoadBalancer `json:"loadbalancers,omitempty"`
 
-	PageInfo *PageInfo `json:"page_info,omitempty" xml:"page_info"`
+	PageInfo *PageInfo `json:"page_info,omitempty"`
 
 	// 请求ID。  注：自动生成 。
-	RequestId      *string `json:"request_id,omitempty" xml:"request_id"`
+	RequestId      *string `json:"request_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -10,9 +10,9 @@ import (
 type CreateServiceRequest struct {
 
 	// 铂金版实例ID
-	IefInstanceId string `json:"ief-instance-id" xml:"ief-instance-id"`
+	IefInstanceId string `json:"ief-instance-id"`
 
-	Body *Service `json:"body,omitempty" xml:"body"`
+	Body *Service `json:"body,omitempty"`
 }
 
 func (o CreateServiceRequest) String() string {

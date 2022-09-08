@@ -10,28 +10,28 @@ import (
 type ListRtcRealtimeScaleDimensionRequest struct {
 
 	// 使用AK/SK方式认证时必选，携带的鉴权信息。
-	Authorization *string `json:"Authorization,omitempty" xml:"Authorization"`
+	Authorization *string `json:"Authorization,omitempty"`
 
 	// 使用AK/SK方式认证时必选，请求的发生时间。
-	XSdkDate *string `json:"X-Sdk-Date,omitempty" xml:"X-Sdk-Date"`
+	XSdkDate *string `json:"X-Sdk-Date,omitempty"`
 
 	// 使用AK/SK方式认证时必选，携带项目ID信息，与路径参数中的项目ID相同。
-	XProjectId *string `json:"X-Project-Id,omitempty" xml:"X-Project-Id"`
+	XProjectId *string `json:"X-Project-Id,omitempty"`
 
 	// 应用标识
-	App string `json:"app" xml:"app"`
+	App string `json:"app"`
 
 	// 房间ID
-	RoomId *string `json:"room_id,omitempty" xml:"room_id"`
+	RoomId *string `json:"room_id,omitempty"`
 
 	// 查询的数据类型  OnlineUsers:在线用户数
-	Metric string `json:"metric" xml:"metric"`
+	Metric string `json:"metric"`
 
 	// 维度类型: region:省份 access_net:网络类型 platform:系统平台 sdk:SDK版本
-	Dimension string `json:"dimension" xml:"dimension"`
+	Dimension string `json:"dimension"`
 
 	// 查询时刻。UTC时间，格式：YYYY-MM-DDThh:mm:ssZ
-	Time string `json:"time" xml:"time"`
+	Time string `json:"time"`
 }
 
 func (o ListRtcRealtimeScaleDimensionRequest) String() string {

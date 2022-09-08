@@ -13,45 +13,45 @@ import (
 type Bandwidth struct {
 
 	// 带宽类型。 取值范围： share：共享类型
-	BandwidthType *BandwidthBandwidthType `json:"bandwidth_type,omitempty" xml:"bandwidth_type"`
+	BandwidthType *BandwidthBandwidthType `json:"bandwidth_type,omitempty"`
 
 	// 计费模式，当前只支持峰值95计费。  取值范围：  - 95peak_plus：峰值95计费
-	ChargeMode *BandwidthChargeMode `json:"charge_mode,omitempty" xml:"charge_mode"`
+	ChargeMode *BandwidthChargeMode `json:"charge_mode,omitempty"`
 
 	// 创建时间。
-	CreateTime *string `json:"create_time,omitempty" xml:"create_time"`
+	CreateTime *string `json:"create_time,omitempty"`
 
 	// 带宽ID。
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 带宽名称。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
-	Operator *Operator `json:"operator,omitempty" xml:"operator"`
+	Operator *Operator `json:"operator,omitempty"`
 
 	// 弹性公网IP信息。
-	PublicipInfo *[]PublicipInfo `json:"publicip_info,omitempty" xml:"publicip_info"`
+	PublicipInfo *[]PublicipInfo `json:"publicip_info,omitempty"`
 
 	// 共享带宽类型，标识是否是共享带宽。  取值范围：  - WHOLE：共享带宽
-	ShareType *BandwidthShareType `json:"share_type,omitempty" xml:"share_type"`
+	ShareType *BandwidthShareType `json:"share_type,omitempty"`
 
 	// 边缘站点ID。
-	SiteId *string `json:"site_id,omitempty" xml:"site_id"`
+	SiteId *string `json:"site_id,omitempty"`
 
 	// 站点信息。
-	SiteInfo *string `json:"site_info,omitempty" xml:"site_info"`
+	SiteInfo *string `json:"site_info,omitempty"`
 
 	// 带宽大小。
-	Size *int32 `json:"size,omitempty" xml:"size"`
+	Size *int32 `json:"size,omitempty"`
 
 	// 带宽的状态。  取值范围：  - FREEZED：冻结  - NORMAL：正常
-	Status *BandwidthStatus `json:"status,omitempty" xml:"status"`
+	Status *BandwidthStatus `json:"status,omitempty"`
 
 	// 更新时间。
-	UpdateTime *string `json:"update_time,omitempty" xml:"update_time"`
+	UpdateTime *string `json:"update_time,omitempty"`
 
 	// 线路ID。
-	PoolId *string `json:"pool_id,omitempty" xml:"pool_id"`
+	PoolId *string `json:"pool_id,omitempty"`
 }
 
 func (o Bandwidth) String() string {

@@ -8,9 +8,9 @@ import (
 
 // Response Object
 type UpdateDeviceTwinResponse struct {
-	PropertyVisitors *ValueInPropertyVisitors `json:"property_visitors,omitempty" xml:"property_visitors"`
+	PropertyVisitors *ValueInPropertyVisitors `json:"property_visitors,omitempty"`
 
-	Twin           *ValueInTwinResponse `json:"twin,omitempty" xml:"twin"`
+	Twin           *ValueInTwinResponse `json:"twin,omitempty"`
 	HttpStatusCode int                  `json:"-"`
 }
 

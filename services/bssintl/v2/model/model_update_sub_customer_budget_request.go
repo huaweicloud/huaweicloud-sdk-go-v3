@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type UpdateSubCustomerBudgetRequest struct {
-	Body *ModSubCustomerBudgetReq `json:"body,omitempty" xml:"body"`
+	Body *ModSubCustomerBudgetReq `json:"body,omitempty"`
 }
 
 func (o UpdateSubCustomerBudgetRequest) String() string {

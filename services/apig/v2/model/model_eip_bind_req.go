@@ -9,7 +9,7 @@ import (
 type EipBindReq struct {
 
 	// 弹性公网IP编号
-	EipId *string `json:"eip_id,omitempty" xml:"eip_id"`
+	EipId *string `json:"eip_id,omitempty"`
 }
 
 func (o EipBindReq) String() string {

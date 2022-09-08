@@ -10,13 +10,13 @@ import (
 type DeleteTagRequest struct {
 
 	// 资源的类型：DNS-public_zone，DNS-private_zone，DNS-public_recordset，DNS-private_recordset，DNS-ptr_record。
-	ResourceType string `json:"resource_type" xml:"resource_type"`
+	ResourceType string `json:"resource_type"`
 
 	// 资源id。
-	ResourceId string `json:"resource_id" xml:"resource_id"`
+	ResourceId string `json:"resource_id"`
 
 	// 标签key。  标签key不能为空或者空字符串。
-	Key string `json:"key" xml:"key"`
+	Key string `json:"key"`
 }
 
 func (o DeleteTagRequest) String() string {

@@ -10,16 +10,16 @@ import (
 type ShowEventDetailRequest struct {
 
 	// trace id
-	TraceId string `json:"trace_id" xml:"trace_id"`
+	TraceId string `json:"trace_id"`
 
 	// span id
-	SpanId string `json:"span_id" xml:"span_id"`
+	SpanId string `json:"span_id"`
 
 	// event id
-	EventId string `json:"event_id" xml:"event_id"`
+	EventId string `json:"event_id"`
 
 	// 环境id
-	EnvId int64 `json:"env_id" xml:"env_id"`
+	EnvId int64 `json:"env_id"`
 }
 
 func (o ShowEventDetailRequest) String() string {

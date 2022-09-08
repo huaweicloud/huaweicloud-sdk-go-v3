@@ -9,25 +9,25 @@ import (
 type AomMappingRuleInfo struct {
 
 	// 集群id
-	ClusterId string `json:"cluster_id" xml:"cluster_id"`
+	ClusterId string `json:"cluster_id"`
 
 	// 集群名称
-	ClusterName string `json:"cluster_name" xml:"cluster_name"`
+	ClusterName string `json:"cluster_name"`
 
 	// 日志流前缀
-	DeploymentsPrefix *string `json:"deployments_prefix,omitempty" xml:"deployments_prefix"`
+	DeploymentsPrefix *string `json:"deployments_prefix,omitempty"`
 
 	// 工作负载
-	Deployments []string `json:"deployments" xml:"deployments"`
+	Deployments []string `json:"deployments"`
 
 	// 命名空间
-	Namespace string `json:"namespace" xml:"namespace"`
+	Namespace string `json:"namespace"`
 
 	// 容器名称
-	ContainerName *string `json:"container_name,omitempty" xml:"container_name"`
+	ContainerName *string `json:"container_name,omitempty"`
 
 	// 接入规则详情
-	Files []AomMappingfilesInfo `json:"files" xml:"files"`
+	Files []AomMappingfilesInfo `json:"files"`
 }
 
 func (o AomMappingRuleInfo) String() string {

@@ -10,9 +10,9 @@ import (
 type UpdateResourceRequest struct {
 
 	// 资源id.
-	ResourceId string `json:"resource_id" xml:"resource_id"`
+	ResourceId string `json:"resource_id"`
 
-	Body *ResourceInfo `json:"body,omitempty" xml:"body"`
+	Body *ResourceInfo `json:"body,omitempty"`
 }
 
 func (o UpdateResourceRequest) String() string {

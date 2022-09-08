@@ -10,15 +10,15 @@ import (
 type CreateAppRequest struct {
 
 	// 使用AK/SK方式认证时必选，携带的鉴权信息。
-	Authorization *string `json:"Authorization,omitempty" xml:"Authorization"`
+	Authorization *string `json:"Authorization,omitempty"`
 
 	// 使用AK/SK方式认证时必选，请求的发生时间。
-	XSdkDate *string `json:"X-Sdk-Date,omitempty" xml:"X-Sdk-Date"`
+	XSdkDate *string `json:"X-Sdk-Date,omitempty"`
 
 	// 使用AK/SK方式认证时必选，携带项目ID信息。
-	XProjectId *string `json:"X-Project-Id,omitempty" xml:"X-Project-Id"`
+	XProjectId *string `json:"X-Project-Id,omitempty"`
 
-	Body *AppReq `json:"body,omitempty" xml:"body"`
+	Body *AppReq `json:"body,omitempty"`
 }
 
 func (o CreateAppRequest) String() string {

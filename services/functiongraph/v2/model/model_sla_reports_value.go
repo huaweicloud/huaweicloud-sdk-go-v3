@@ -9,10 +9,10 @@ import (
 type SlaReportsValue struct {
 
 	// 时间戳
-	Timestamp *int64 `json:"timestamp,omitempty" xml:"timestamp"`
+	Timestamp *int64 `json:"timestamp,omitempty"`
 
 	// 值
-	Value *float64 `json:"value,omitempty" xml:"value"`
+	Value *float64 `json:"value,omitempty"`
 }
 
 func (o SlaReportsValue) String() string {

@@ -13,19 +13,19 @@ import (
 type ListMonitorInfosRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 偏移量，表示从此偏移量开始查询， offset大于等于1
-	Offset *int32 `json:"offset,omitempty" xml:"offset"`
+	Offset *int32 `json:"offset,omitempty"`
 
 	// 每页显示条目数量，最大数量999，超过999后只返回999
-	Limit *int32 `json:"limit,omitempty" xml:"limit"`
+	Limit *int32 `json:"limit,omitempty"`
 
 	// 需要搜索的任务名称，支持模糊搜索，大小写敏感，非必填参数，如果为空，搜索所有任务
-	TaskName *string `json:"task_name,omitempty" xml:"task_name"`
+	TaskName *string `json:"task_name,omitempty"`
 
 	// 需要搜索任务的执行状态, 只允许如下枚举值：UNSTARTED-未启动, WAITING-等待执行,RUNNING-执行中, SUCCESS-执行成功, CANCELLED-任务取消, ERROR-执行异常</br> 非必填参数，如果为空，搜索所有任务
-	ExecuteStatus *ListMonitorInfosRequestExecuteStatus `json:"execute_status,omitempty" xml:"execute_status"`
+	ExecuteStatus *ListMonitorInfosRequestExecuteStatus `json:"execute_status,omitempty"`
 }
 
 func (o ListMonitorInfosRequest) String() string {

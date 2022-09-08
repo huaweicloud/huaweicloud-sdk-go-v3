@@ -10,15 +10,15 @@ import (
 type CreateProjectModuleResponse struct {
 
 	// 模块描述
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 模块名称
-	ModuleName *string `json:"module_name,omitempty" xml:"module_name"`
+	ModuleName *string `json:"module_name,omitempty"`
 
 	// 模块id
-	ModuleId *int32 `json:"module_id,omitempty" xml:"module_id"`
+	ModuleId *int32 `json:"module_id,omitempty"`
 
-	Owner          *ModuleOwner `json:"owner,omitempty" xml:"owner"`
+	Owner          *ModuleOwner `json:"owner,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }
 

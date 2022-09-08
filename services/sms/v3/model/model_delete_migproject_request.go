@@ -10,7 +10,7 @@ import (
 type DeleteMigprojectRequest struct {
 
 	// 需要删除的迁移项目的id
-	MigProjectId string `json:"mig_project_id" xml:"mig_project_id"`
+	MigProjectId string `json:"mig_project_id"`
 }
 
 func (o DeleteMigprojectRequest) String() string {

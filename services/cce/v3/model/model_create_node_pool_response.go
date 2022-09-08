@@ -10,16 +10,16 @@ import (
 type CreateNodePoolResponse struct {
 
 	// API类型，固定值“NodePool”。
-	Kind *string `json:"kind,omitempty" xml:"kind"`
+	Kind *string `json:"kind,omitempty"`
 
 	// API版本，固定值“v3”。
-	ApiVersion *string `json:"apiVersion,omitempty" xml:"apiVersion"`
+	ApiVersion *string `json:"apiVersion,omitempty"`
 
-	Metadata *NodePoolMetadata `json:"metadata,omitempty" xml:"metadata"`
+	Metadata *NodePoolMetadata `json:"metadata,omitempty"`
 
-	Spec *NodePoolSpec `json:"spec,omitempty" xml:"spec"`
+	Spec *NodePoolSpec `json:"spec,omitempty"`
 
-	Status         *NodePoolStatus `json:"status,omitempty" xml:"status"`
+	Status         *NodePoolStatus `json:"status,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }
 

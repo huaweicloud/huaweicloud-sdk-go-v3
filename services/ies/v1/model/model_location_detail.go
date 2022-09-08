@@ -10,24 +10,24 @@ import (
 type LocationDetail struct {
 
 	// 场地名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 场地描述
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 场地所在国家
-	Country *string `json:"country,omitempty" xml:"country"`
+	Country *string `json:"country,omitempty"`
 
 	// 场地所在省/自治区/直辖市
-	Province *string `json:"province,omitempty" xml:"province"`
+	Province *string `json:"province,omitempty"`
 
 	// 场地所在市/区
-	City *string `json:"city,omitempty" xml:"city"`
+	City *string `json:"city,omitempty"`
 
 	// 场地所在区/县
-	District *string `json:"district,omitempty" xml:"district"`
+	District *string `json:"district,omitempty"`
 
-	Condition *Condition `json:"condition,omitempty" xml:"condition"`
+	Condition *Condition `json:"condition,omitempty"`
 }
 
 func (o LocationDetail) String() string {

@@ -10,9 +10,9 @@ import (
 type ListHistoryRequest struct {
 
 	// 存储ID
-	DataStoreId string `json:"data_store_id" xml:"data_store_id"`
+	DataStoreId string `json:"data_store_id"`
 
-	Body *GetHistoryRequest `json:"body,omitempty" xml:"body"`
+	Body *GetHistoryRequest `json:"body,omitempty"`
 }
 
 func (o ListHistoryRequest) String() string {

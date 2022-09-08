@@ -10,23 +10,23 @@ import (
 type AttachWikiDetail struct {
 
 	// 工作项ID
-	IssueId *int32 `json:"issue_id,omitempty" xml:"issue_id"`
+	IssueId *int32 `json:"issue_id,omitempty"`
 
 	// Wiki标题
-	WikiTitle *string `json:"wiki_title,omitempty" xml:"wiki_title"`
+	WikiTitle *string `json:"wiki_title,omitempty"`
 
-	WikiAuthor *SimpleUser `json:"wiki_author,omitempty" xml:"wiki_author"`
+	WikiAuthor *SimpleUser `json:"wiki_author,omitempty"`
 
-	Project *SimpleProject `json:"project,omitempty" xml:"project"`
+	Project *SimpleProject `json:"project,omitempty"`
 
 	// 创建时间
-	CreatedDate *string `json:"created_date,omitempty" xml:"created_date"`
+	CreatedDate *string `json:"created_date,omitempty"`
 
 	// wiki ID
-	WikiId *string `json:"wiki_id,omitempty" xml:"wiki_id"`
+	WikiId *string `json:"wiki_id,omitempty"`
 
 	// region值
-	Region *string `json:"region,omitempty" xml:"region"`
+	Region *string `json:"region,omitempty"`
 }
 
 func (o AttachWikiDetail) String() string {

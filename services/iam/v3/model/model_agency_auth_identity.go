@@ -13,11 +13,11 @@ import (
 type AgencyAuthIdentity struct {
 
 	// 认证方法，该字段内容为[\"assume_role\"]。
-	Methods []AgencyAuthIdentityMethods `json:"methods" xml:"methods"`
+	Methods []AgencyAuthIdentityMethods `json:"methods"`
 
-	AssumeRole *IdentityAssumerole `json:"assume_role" xml:"assume_role"`
+	AssumeRole *IdentityAssumerole `json:"assume_role"`
 
-	Policy *ServicePolicy `json:"policy,omitempty" xml:"policy"`
+	Policy *ServicePolicy `json:"policy,omitempty"`
 }
 
 func (o AgencyAuthIdentity) String() string {

@@ -10,10 +10,10 @@ import (
 type ListPostgresqlDatabasesResponse struct {
 
 	// 列表中每个元素表示一个数据库。
-	Databases *[]PostgresqlListDatabase `json:"databases,omitempty" xml:"databases"`
+	Databases *[]PostgresqlListDatabase `json:"databases,omitempty"`
 
 	// 数据库总数。
-	TotalCount     *int32 `json:"total_count,omitempty" xml:"total_count"`
+	TotalCount     *int32 `json:"total_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

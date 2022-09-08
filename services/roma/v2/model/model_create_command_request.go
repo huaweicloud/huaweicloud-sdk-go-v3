@@ -10,12 +10,12 @@ import (
 type CreateCommandRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 服务ID
-	ServiceId string `json:"service_id" xml:"service_id"`
+	ServiceId string `json:"service_id"`
 
-	Body *CreateCommandRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreateCommandRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateCommandRequest) String() string {

@@ -10,23 +10,23 @@ import (
 type CreateExtractTaskResponse struct {
 
 	// 任务ID
-	TaskId *string `json:"task_id,omitempty" xml:"task_id"`
+	TaskId *string `json:"task_id,omitempty"`
 
 	// 任务状态
-	Status *string `json:"status,omitempty" xml:"status"`
+	Status *string `json:"status,omitempty"`
 
 	// 任务创建时间
-	CreateTime *string `json:"create_time,omitempty" xml:"create_time"`
+	CreateTime *string `json:"create_time,omitempty"`
 
-	Output *ObsObjInfo `json:"output,omitempty" xml:"output"`
+	Output *ObsObjInfo `json:"output,omitempty"`
 
 	// 解析文件名称
-	OutputFileName *string `json:"output_file_name,omitempty" xml:"output_file_name"`
+	OutputFileName *string `json:"output_file_name,omitempty"`
 
 	// 任务描述，如当任务异常时，此字段为异常的具体信息
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
-	Metadata       *MetaData `json:"metadata,omitempty" xml:"metadata"`
+	Metadata       *MetaData `json:"metadata,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }
 

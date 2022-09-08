@@ -10,9 +10,9 @@ import (
 type CreateExternalEntityRequest struct {
 
 	// 边缘节点ID
-	EdgeNodeId string `json:"edge_node_id" xml:"edge_node_id"`
+	EdgeNodeId string `json:"edge_node_id"`
 
-	Body *CreateExternalEntityReqDto `json:"body,omitempty" xml:"body"`
+	Body *CreateExternalEntityReqDto `json:"body,omitempty"`
 }
 
 func (o CreateExternalEntityRequest) String() string {

@@ -13,19 +13,19 @@ import (
 type ListServiceDescribeDetailsResponse struct {
 
 	// 终端节点服务的ID，唯一标识。
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 终端节点服务的名称。
-	ServiceName *string `json:"service_name,omitempty" xml:"service_name"`
+	ServiceName *string `json:"service_name,omitempty"`
 
 	// 终端节点服务类型。仅支持将用户私有服务创 建为interface类型的终端节点服务。 ● gataway：由运维人员配置。用户无需创 建，可直接使用。 ● interface：包括运维人员配置的云服务和 用户自己创建的私有服务。其中，运维人 员配置的云服务无需创建，用户可直接使 用。 您可以通过创建终端节点创建访问Gateway和 Interface类型终端节点服务的终端节点。
-	ServiceType *ListServiceDescribeDetailsResponseServiceType `json:"service_type,omitempty" xml:"service_type"`
+	ServiceType *ListServiceDescribeDetailsResponseServiceType `json:"service_type,omitempty"`
 
 	// 终端节点服务的创建时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH: MM:SSZ
-	CreatedAt *string `json:"created_at,omitempty" xml:"created_at"`
+	CreatedAt *string `json:"created_at,omitempty"`
 
 	// 连接该终端节点服务的终端节点是否计费。 ● true：计费 ● false：不计费
-	IsCharge       *bool `json:"is_charge,omitempty" xml:"is_charge"`
+	IsCharge       *bool `json:"is_charge,omitempty"`
 	HttpStatusCode int   `json:"-"`
 }
 

@@ -12,10 +12,10 @@ import (
 type PipelineDeleteStatus struct {
 
 	// 流水线名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 流水线删除状态,deleted:删除成功,failed:删除失败,going:正在删除中
-	Status *PipelineDeleteStatusStatus `json:"status,omitempty" xml:"status"`
+	Status *PipelineDeleteStatusStatus `json:"status,omitempty"`
 }
 
 func (o PipelineDeleteStatus) String() string {

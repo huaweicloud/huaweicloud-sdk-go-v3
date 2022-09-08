@@ -7,9 +7,9 @@ import (
 )
 
 type AccessConfigTag struct {
-	Key *string `json:"key,omitempty" xml:"key"`
+	Key *string `json:"key,omitempty"`
 
-	Value *string `json:"value,omitempty" xml:"value"`
+	Value *string `json:"value,omitempty"`
 }
 
 func (o AccessConfigTag) String() string {

@@ -10,7 +10,7 @@ import (
 type ListSystemTasksRequest struct {
 
 	// 系统任务id.
-	TaskId string `json:"task_id" xml:"task_id"`
+	TaskId string `json:"task_id"`
 }
 
 func (o ListSystemTasksRequest) String() string {

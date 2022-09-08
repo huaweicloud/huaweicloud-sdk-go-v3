@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CopyCheckpointRequest struct {
-	Body *CheckpointReplicateReq `json:"body,omitempty" xml:"body"`
+	Body *CheckpointReplicateReq `json:"body,omitempty"`
 }
 
 func (o CopyCheckpointRequest) String() string {

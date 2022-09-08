@@ -9,9 +9,9 @@ import (
 type AomMappingfilesInfo struct {
 
 	// 路径名
-	FileName string `json:"file_name" xml:"file_name"`
+	FileName string `json:"file_name"`
 
-	LogStreamInfo *AomMappingLogStreamInfo `json:"log_stream_info" xml:"log_stream_info"`
+	LogStreamInfo *AomMappingLogStreamInfo `json:"log_stream_info"`
 }
 
 func (o AomMappingfilesInfo) String() string {

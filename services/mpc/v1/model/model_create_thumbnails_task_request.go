@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateThumbnailsTaskRequest struct {
-	Body *CreateThumbReq `json:"body,omitempty" xml:"body"`
+	Body *CreateThumbReq `json:"body,omitempty"`
 }
 
 func (o CreateThumbnailsTaskRequest) String() string {

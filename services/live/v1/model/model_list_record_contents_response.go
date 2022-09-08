@@ -10,12 +10,12 @@ import (
 type ListRecordContentsResponse struct {
 
 	// 查询结果的总元素数量
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 
 	// 录制内容数组
-	RecordContents *[]RecordContentInfoV2 `json:"record_contents,omitempty" xml:"record_contents"`
+	RecordContents *[]RecordContentInfoV2 `json:"record_contents,omitempty"`
 
-	XRequestId     *string `json:"X-Request-Id,omitempty" xml:"X-Request-Id"`
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

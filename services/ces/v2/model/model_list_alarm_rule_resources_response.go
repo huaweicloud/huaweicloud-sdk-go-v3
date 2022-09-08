@@ -10,10 +10,10 @@ import (
 type ListAlarmRuleResourcesResponse struct {
 
 	// 资源信息
-	Resources *[][]Dimension `json:"resources,omitempty" xml:"resources"`
+	Resources *[][]Dimension `json:"resources,omitempty"`
 
 	// 资源总数
-	Count          *int32 `json:"count,omitempty" xml:"count"`
+	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

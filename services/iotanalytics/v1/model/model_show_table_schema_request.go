@@ -10,7 +10,7 @@ import (
 type ShowTableSchemaRequest struct {
 
 	// 表ID。
-	TableId string `json:"table_id" xml:"table_id"`
+	TableId string `json:"table_id"`
 }
 
 func (o ShowTableSchemaRequest) String() string {

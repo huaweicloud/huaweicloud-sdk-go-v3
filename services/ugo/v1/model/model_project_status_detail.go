@@ -10,16 +10,16 @@ import (
 type ProjectStatusDetail struct {
 
 	// 采集的状态。
-	ObjectCollectionStatus *string `json:"object_collection_status,omitempty" xml:"object_collection_status"`
+	ObjectCollectionStatus *string `json:"object_collection_status,omitempty"`
 
 	// 采集的进度。
-	ObjectCollectionProgress *string `json:"object_collection_progress,omitempty" xml:"object_collection_progress"`
+	ObjectCollectionProgress *string `json:"object_collection_progress,omitempty"`
 
 	// 评估的状态。
-	PreMigrationStatus *string `json:"pre_migration_status,omitempty" xml:"pre_migration_status"`
+	PreMigrationStatus *string `json:"pre_migration_status,omitempty"`
 
 	// 评估的进度。
-	PreMigrationProgress *string `json:"pre_migration_progress,omitempty" xml:"pre_migration_progress"`
+	PreMigrationProgress *string `json:"pre_migration_progress,omitempty"`
 }
 
 func (o ProjectStatusDetail) String() string {

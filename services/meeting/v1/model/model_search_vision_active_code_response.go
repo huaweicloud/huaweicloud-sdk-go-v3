@@ -10,15 +10,15 @@ import (
 type SearchVisionActiveCodeResponse struct {
 
 	// 页面起始页，从0开始
-	Offset *int32 `json:"offset,omitempty" xml:"offset"`
+	Offset *int32 `json:"offset,omitempty"`
 
 	// 每页显示的条目数量。 默认值：10。
-	Limit *int32 `json:"limit,omitempty" xml:"limit"`
+	Limit *int32 `json:"limit,omitempty"`
 
 	// 总数量。
-	Count *int32 `json:"count,omitempty" xml:"count"`
+	Count *int32 `json:"count,omitempty"`
 
-	Data           *[]QueryVisionActiveCodeResultDto `json:"data,omitempty" xml:"data"`
+	Data           *[]QueryVisionActiveCodeResultDto `json:"data,omitempty"`
 	HttpStatusCode int                               `json:"-"`
 }
 

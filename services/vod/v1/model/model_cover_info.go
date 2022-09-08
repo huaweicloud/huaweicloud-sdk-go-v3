@@ -10,7 +10,7 @@ import (
 type CoverInfo struct {
 
 	// 封面文件的下载地址。
-	CoverUrl *string `json:"cover_url,omitempty" xml:"cover_url"`
+	CoverUrl *string `json:"cover_url,omitempty"`
 }
 
 func (o CoverInfo) String() string {

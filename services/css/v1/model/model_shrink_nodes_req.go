@@ -9,7 +9,7 @@ import (
 type ShrinkNodesReq struct {
 
 	// 需要缩容的节点ID。  通过[查询集群详情](ShowClusterDetail.xml)获取instances中的id属性。
-	ShrinkNodes []string `json:"shrinkNodes" xml:"shrinkNodes"`
+	ShrinkNodes []string `json:"shrinkNodes"`
 }
 
 func (o ShrinkNodesReq) String() string {

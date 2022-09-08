@@ -10,9 +10,9 @@ import (
 type ListRepositoryTagsResponse struct {
 
 	// 镜像tag列表
-	Body *[]ShowReposTagResp `json:"body,omitempty" xml:"body"`
+	Body *[]ShowReposTagResp `json:"body,omitempty"`
 
-	ContentRange   *string `json:"Content-Range,omitempty" xml:"Content-Range"`
+	ContentRange   *string `json:"Content-Range,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

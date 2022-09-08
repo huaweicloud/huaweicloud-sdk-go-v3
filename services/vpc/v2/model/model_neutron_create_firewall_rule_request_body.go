@@ -8,7 +8,7 @@ import (
 
 //
 type NeutronCreateFirewallRuleRequestBody struct {
-	FirewallRule *NeutronCreateFirewallRuleOption `json:"firewall_rule" xml:"firewall_rule"`
+	FirewallRule *NeutronCreateFirewallRuleOption `json:"firewall_rule"`
 }
 
 func (o NeutronCreateFirewallRuleRequestBody) String() string {

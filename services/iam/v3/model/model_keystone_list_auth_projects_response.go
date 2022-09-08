@@ -8,10 +8,10 @@ import (
 
 // Response Object
 type KeystoneListAuthProjectsResponse struct {
-	Links *LinksSelf `json:"links,omitempty" xml:"links"`
+	Links *LinksSelf `json:"links,omitempty"`
 
 	// 项目信息列表。
-	Projects       *[]AuthProjectResult `json:"projects,omitempty" xml:"projects"`
+	Projects       *[]AuthProjectResult `json:"projects,omitempty"`
 	HttpStatusCode int                  `json:"-"`
 }
 

@@ -10,13 +10,13 @@ import (
 type RouteBody struct {
 
 	// WAF集群的cname后缀
-	Cname *string `json:"cname,omitempty" xml:"cname"`
+	Cname *string `json:"cname,omitempty"`
 
 	// WAF集群名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 防护域名源站服务器信息列表
-	Servers *[]RouteServerBody `json:"servers,omitempty" xml:"servers"`
+	Servers *[]RouteServerBody `json:"servers,omitempty"`
 }
 
 func (o RouteBody) String() string {

@@ -9,22 +9,22 @@ import (
 type ConsumerGroup struct {
 
 	// 是否启用。
-	Enabled *bool `json:"enabled,omitempty" xml:"enabled"`
+	Enabled *bool `json:"enabled,omitempty"`
 
 	// 是否广播。
-	Broadcast *bool `json:"broadcast,omitempty" xml:"broadcast"`
+	Broadcast *bool `json:"broadcast,omitempty"`
 
 	// 关联的代理列表。
-	Brokers *[]string `json:"brokers,omitempty" xml:"brokers"`
+	Brokers *[]string `json:"brokers,omitempty"`
 
 	// 消费组名称。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 最大重试次数。
-	RetryMaxTime float32 `json:"retry_max_time,omitempty" xml:"retry_max_time"`
+	RetryMaxTime float32 `json:"retry_max_time,omitempty"`
 
 	// 是否重头消费。
-	FromBeginning *bool `json:"from_beginning,omitempty" xml:"from_beginning"`
+	FromBeginning *bool `json:"from_beginning,omitempty"`
 }
 
 func (o ConsumerGroup) String() string {

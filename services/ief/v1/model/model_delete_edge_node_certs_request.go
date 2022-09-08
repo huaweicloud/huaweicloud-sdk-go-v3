@@ -10,13 +10,13 @@ import (
 type DeleteEdgeNodeCertsRequest struct {
 
 	// 边缘节点ID
-	NodeId string `json:"node_id" xml:"node_id"`
+	NodeId string `json:"node_id"`
 
 	// 证书ID
-	CertId string `json:"cert_id" xml:"cert_id"`
+	CertId string `json:"cert_id"`
 
 	// 铂金版实例ID，专业版实例为空值
-	IefInstanceId *string `json:"ief-instance-id,omitempty" xml:"ief-instance-id"`
+	IefInstanceId *string `json:"ief-instance-id,omitempty"`
 }
 
 func (o DeleteEdgeNodeCertsRequest) String() string {

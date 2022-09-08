@@ -10,9 +10,9 @@ import (
 type UpdateDataSourceRequest struct {
 
 	// 数据源id
-	DatasourceId string `json:"datasource_id" xml:"datasource_id"`
+	DatasourceId string `json:"datasource_id"`
 
-	Body *UpdateDatasourceReqDto `json:"body,omitempty" xml:"body"`
+	Body *UpdateDatasourceReqDto `json:"body,omitempty"`
 }
 
 func (o UpdateDataSourceRequest) String() string {

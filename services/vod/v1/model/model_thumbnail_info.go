@@ -10,15 +10,15 @@ import (
 type ThumbnailInfo struct {
 
 	// 视频截图信息。
-	Sample *[]ThumbnailRsp `json:"sample,omitempty" xml:"sample"`
+	Sample *[]ThumbnailRsp `json:"sample,omitempty"`
 
-	Dots *[]ThumbnailRsp `json:"dots,omitempty" xml:"dots"`
+	Dots *[]ThumbnailRsp `json:"dots,omitempty"`
 
 	// 执行情况描述。
-	ExecDesc *string `json:"exec_desc,omitempty" xml:"exec_desc"`
+	ExecDesc *string `json:"exec_desc,omitempty"`
 
 	// 截图状态。  取值如下： - UN_THUMBNAIL：未截图 - THUMBNAILING：截图中 - THUMBNAIL_SUCCEED：截图成功 - THUMBNAIL_FAILED：截图失败
-	ThumbnailStatus *string `json:"thumbnail_status,omitempty" xml:"thumbnail_status"`
+	ThumbnailStatus *string `json:"thumbnail_status,omitempty"`
 }
 
 func (o ThumbnailInfo) String() string {

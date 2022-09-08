@@ -8,7 +8,7 @@ import (
 
 // This is a auto create Body Object
 type CreateVpcResourceTagRequestBody struct {
-	Tag *ResourceTag `json:"tag" xml:"tag"`
+	Tag *ResourceTag `json:"tag"`
 }
 
 func (o CreateVpcResourceTagRequestBody) String() string {

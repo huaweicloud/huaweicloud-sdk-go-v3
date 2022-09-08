@@ -9,10 +9,10 @@ import (
 type ListDeleteDatabaseUserRequest struct {
 
 	// 数据库用户名。
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 主机地址
-	Host *string `json:"host,omitempty" xml:"host"`
+	Host *string `json:"host,omitempty"`
 }
 
 func (o ListDeleteDatabaseUserRequest) String() string {

@@ -10,22 +10,22 @@ import (
 type ListInstancesResponse struct {
 
 	// DDM实例的信息。
-	Instances *[]ShowInstanceBeanResponse `json:"instances,omitempty" xml:"instances"`
+	Instances *[]ShowInstanceBeanResponse `json:"instances,omitempty"`
 
 	// 租户下的DDM实例个数
-	InstanceNum *int32 `json:"instance_num,omitempty" xml:"instance_num"`
+	InstanceNum *int32 `json:"instance_num,omitempty"`
 
 	// 当前页码
-	PageNo *int32 `json:"page_no,omitempty" xml:"page_no"`
+	PageNo *int32 `json:"page_no,omitempty"`
 
 	// 当前页码的数据条数
-	PageSize *int32 `json:"page_size,omitempty" xml:"page_size"`
+	PageSize *int32 `json:"page_size,omitempty"`
 
 	// 总条数
-	TotalRecord *int32 `json:"total_record,omitempty" xml:"total_record"`
+	TotalRecord *int32 `json:"total_record,omitempty"`
 
 	// 总页数
-	TotalPage      *int32 `json:"total_page,omitempty" xml:"total_page"`
+	TotalPage      *int32 `json:"total_page,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

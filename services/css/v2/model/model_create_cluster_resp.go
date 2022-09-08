@@ -6,14 +6,14 @@ import (
 	"strings"
 )
 
-// 集群对象。
+// 集群对象。若创建的是按需集群，则只返回cluster参数。
 type CreateClusterResp struct {
 
 	// 集群ID。
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 集群名称。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 }
 
 func (o CreateClusterResp) String() string {

@@ -10,12 +10,12 @@ import (
 type UpdateProjectModuleRequest struct {
 
 	// devcloud项目的32位id
-	ProjectId string `json:"project_id" xml:"project_id"`
+	ProjectId string `json:"project_id"`
 
 	// 模块id
-	ModuleId int32 `json:"module_id" xml:"module_id"`
+	ModuleId int32 `json:"module_id"`
 
-	Body *UpdateProjectModuleRequestBody `json:"body,omitempty" xml:"body"`
+	Body *UpdateProjectModuleRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateProjectModuleRequest) String() string {

@@ -9,16 +9,16 @@ import (
 type PcrTestRecordConfidence struct {
 
 	// 姓名的置信度
-	Name *float32 `json:"name,omitempty" xml:"name"`
+	Name *float32 `json:"name,omitempty"`
 
 	// 核酸检测采样时间的置信度
-	SamplingTime *float32 `json:"sampling_time,omitempty" xml:"sampling_time"`
+	SamplingTime *float32 `json:"sampling_time,omitempty"`
 
 	// 核酸检测结果更新时间的置信度
-	TestTime *float32 `json:"test_time,omitempty" xml:"test_time"`
+	TestTime *float32 `json:"test_time,omitempty"`
 
 	// 核酸检测结果的置信度
-	TestResult *float32 `json:"test_result,omitempty" xml:"test_result"`
+	TestResult *float32 `json:"test_result,omitempty"`
 }
 
 func (o PcrTestRecordConfidence) String() string {

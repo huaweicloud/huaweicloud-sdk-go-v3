@@ -10,16 +10,16 @@ import (
 type DeleteAntitamperRuleResponse struct {
 
 	// 规则id
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 策略id
-	Policyid *string `json:"policyid,omitempty" xml:"policyid"`
+	Policyid *string `json:"policyid,omitempty"`
 
 	// 防篡改的url
-	Url *string `json:"url,omitempty" xml:"url"`
+	Url *string `json:"url,omitempty"`
 
 	// 创建规则的时间戳
-	Timestamp      *int64 `json:"timestamp,omitempty" xml:"timestamp"`
+	Timestamp      *int64 `json:"timestamp,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

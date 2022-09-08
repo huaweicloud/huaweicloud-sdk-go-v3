@@ -10,13 +10,13 @@ import (
 type ListInstanceMetricRequestBody struct {
 
 	// 实体类型，[可选值如下 org     # 节点组织 plugin  # 插件](tag:online) 默认为org
-	Type string `json:"type" xml:"type"`
+	Type string `json:"type"`
 
 	// 所属实体的名称
-	EntityName string `json:"entity_name" xml:"entity_name"`
+	EntityName string `json:"entity_name"`
 
 	// 具体实例的名称
-	InstanceName string `json:"instance_name" xml:"instance_name"`
+	InstanceName string `json:"instance_name"`
 }
 
 func (o ListInstanceMetricRequestBody) String() string {

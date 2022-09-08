@@ -10,35 +10,35 @@ import (
 type QueryOrgVmrResultDto struct {
 
 	// 唯一标识。 说明：对应会议管理->创建会议接口中的vmrID。
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 云会议室ID。 说明：对应会议管理->创建会议接口中当vmrIDType等于0（固定ID）时返回数据的conferenceID 。
-	VmrId *string `json:"vmrId,omitempty" xml:"vmrId"`
+	VmrId *string `json:"vmrId,omitempty"`
 
 	// 云会议室名称。
-	VmrName *string `json:"vmrName,omitempty" xml:"vmrName"`
+	VmrName *string `json:"vmrName,omitempty"`
 
 	// 云会议室套餐名称。
-	VmrPkgName *string `json:"vmrPkgName,omitempty" xml:"vmrPkgName"`
+	VmrPkgName *string `json:"vmrPkgName,omitempty"`
 
 	// 云会议室套餐会议并发方数。
-	VmrPkgParties *int32 `json:"vmrPkgParties,omitempty" xml:"vmrPkgParties"`
+	VmrPkgParties *int32 `json:"vmrPkgParties,omitempty"`
 
 	// 最大观众与会方数（仅网络研讨会有效）
-	MaxAudienceParties *int32 `json:"maxAudienceParties,omitempty" xml:"maxAudienceParties"`
+	MaxAudienceParties *int32 `json:"maxAudienceParties,omitempty"`
 
-	Member *IdMarkDto `json:"member,omitempty" xml:"member"`
+	Member *IdMarkDto `json:"member,omitempty"`
 
-	Device *IdMarkDto `json:"device,omitempty" xml:"device"`
+	Device *IdMarkDto `json:"device,omitempty"`
 
 	// 云会议室状态。 * 0：正常 * 1：冻结 * 2：未分配
-	Status *int32 `json:"status,omitempty" xml:"status"`
+	Status *int32 `json:"status,omitempty"`
 
 	// 到期时间，utc时间戳
-	ExpireDate *int64 `json:"expireDate,omitempty" xml:"expireDate"`
+	ExpireDate *int64 `json:"expireDate,omitempty"`
 
 	// 按次资源转商后，商用规格最大观众与会方数（仅网络研讨会有效）
-	CommercialMaxAudienceParties *int32 `json:"commercialMaxAudienceParties,omitempty" xml:"commercialMaxAudienceParties"`
+	CommercialMaxAudienceParties *int32 `json:"commercialMaxAudienceParties,omitempty"`
 }
 
 func (o QueryOrgVmrResultDto) String() string {

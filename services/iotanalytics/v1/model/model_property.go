@@ -9,16 +9,16 @@ import (
 type Property struct {
 
 	// 属性名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 属性值类型
-	Type *string `json:"type,omitempty" xml:"type"`
+	Type *string `json:"type,omitempty"`
 
 	// 属性描述
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 属性单位
-	Unit *string `json:"unit,omitempty" xml:"unit"`
+	Unit *string `json:"unit,omitempty"`
 }
 
 func (o Property) String() string {

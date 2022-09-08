@@ -10,10 +10,10 @@ import (
 type VpcInfo struct {
 
 	// 对等连接其中一端vpc ID
-	VpcId string `json:"vpc_id" xml:"vpc_id"`
+	VpcId string `json:"vpc_id"`
 
 	// 对等连接其中一端vpc所属的租户ID 约束：跨租户VPC创建对等连接时必选
-	TenantId *string `json:"tenant_id,omitempty" xml:"tenant_id"`
+	TenantId *string `json:"tenant_id,omitempty"`
 }
 
 func (o VpcInfo) String() string {

@@ -10,9 +10,9 @@ import (
 type UpdateFirewallRequest struct {
 
 	// 网络ACL ID
-	FirewallId string `json:"firewall_id" xml:"firewall_id"`
+	FirewallId string `json:"firewall_id"`
 
-	Body *UpdateFirewallRequestBody `json:"body,omitempty" xml:"body"`
+	Body *UpdateFirewallRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateFirewallRequest) String() string {

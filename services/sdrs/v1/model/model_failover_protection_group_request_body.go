@@ -10,7 +10,7 @@ import (
 type FailoverProtectionGroupRequestBody struct {
 
 	// 标识保护组故障切换操作。该参数目前默认值为空。
-	FailoverServerGroup *interface{} `json:"failover-server-group" xml:"failover-server-group"`
+	FailoverServerGroup *interface{} `json:"failover-server-group"`
 }
 
 func (o FailoverProtectionGroupRequestBody) String() string {

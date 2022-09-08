@@ -10,7 +10,7 @@ import (
 type DeleteManualBackupRequest struct {
 
 	// 备份文件ID。
-	BackupId string `json:"backup_id" xml:"backup_id"`
+	BackupId string `json:"backup_id"`
 }
 
 func (o DeleteManualBackupRequest) String() string {

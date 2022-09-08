@@ -10,9 +10,9 @@ import (
 type CreatePublicipTagRequest struct {
 
 	// 资源ID
-	PublicipId string `json:"publicip_id" xml:"publicip_id"`
+	PublicipId string `json:"publicip_id"`
 
-	Body *CreatePublicipTagRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreatePublicipTagRequestBody `json:"body,omitempty"`
 }
 
 func (o CreatePublicipTagRequest) String() string {

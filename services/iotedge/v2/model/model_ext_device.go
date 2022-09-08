@@ -10,13 +10,13 @@ import (
 type ExtDevice struct {
 
 	// 源路径
-	Source string `json:"source" xml:"source"`
+	Source string `json:"source"`
 
 	// 卷挂载路径
-	Destination string `json:"destination" xml:"destination"`
+	Destination string `json:"destination"`
 
 	// 只读，默认MRW
-	CgroupPermissions *string `json:"cgroup_permissions,omitempty" xml:"cgroup_permissions"`
+	CgroupPermissions *string `json:"cgroup_permissions,omitempty"`
 }
 
 func (o ExtDevice) String() string {

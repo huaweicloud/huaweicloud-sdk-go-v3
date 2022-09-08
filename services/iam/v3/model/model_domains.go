@@ -10,18 +10,18 @@ import (
 type Domains struct {
 
 	// 是否启用账号，true为启用，false为停用，默认为true。
-	Enabled bool `json:"enabled" xml:"enabled"`
+	Enabled bool `json:"enabled"`
 
 	// 账号ID。
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
 	// 账号名。
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
-	Links *LinksSelf `json:"links" xml:"links"`
+	Links *LinksSelf `json:"links"`
 
 	// 账号的描述信息。
-	Description string `json:"description" xml:"description"`
+	Description string `json:"description"`
 }
 
 func (o Domains) String() string {

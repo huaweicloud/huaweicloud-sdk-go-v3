@@ -10,13 +10,13 @@ import (
 type ShowAssetCipherResponse struct {
 
 	// 媒资ID。
-	AssetId *string `json:"asset_id,omitempty" xml:"asset_id"`
+	AssetId *string `json:"asset_id,omitempty"`
 
 	// 密钥密文。
-	Edk *string `json:"edk,omitempty" xml:"edk"`
+	Edk *string `json:"edk,omitempty"`
 
 	// 密钥明文。
-	Dk             *string `json:"dk,omitempty" xml:"dk"`
+	Dk             *string `json:"dk,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

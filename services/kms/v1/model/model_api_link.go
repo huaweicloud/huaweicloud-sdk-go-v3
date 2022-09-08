@@ -9,10 +9,10 @@ import (
 type ApiLink struct {
 
 	// API的URL地址。
-	Href *string `json:"href,omitempty" xml:"href"`
+	Href *string `json:"href,omitempty"`
 
 	// 默认值self。
-	Rel *string `json:"rel,omitempty" xml:"rel"`
+	Rel *string `json:"rel,omitempty"`
 }
 
 func (o ApiLink) String() string {

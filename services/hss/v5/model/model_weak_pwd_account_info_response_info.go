@@ -10,13 +10,13 @@ import (
 type WeakPwdAccountInfoResponseInfo struct {
 
 	// 弱口令账号名称
-	UserName *string `json:"user_name,omitempty" xml:"user_name"`
+	UserName *string `json:"user_name,omitempty"`
 
 	// 账号类型
-	ServiceType *string `json:"service_type,omitempty" xml:"service_type"`
+	ServiceType *string `json:"service_type,omitempty"`
 
 	// 弱口令使用时长，单位天
-	Duration *int32 `json:"duration,omitempty" xml:"duration"`
+	Duration *int32 `json:"duration,omitempty"`
 }
 
 func (o WeakPwdAccountInfoResponseInfo) String() string {

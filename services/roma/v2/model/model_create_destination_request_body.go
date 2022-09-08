@@ -12,34 +12,34 @@ import (
 type CreateDestinationRequestBody struct {
 
 	// 操作类型，枚举值:0-目标端为本ROMA实例内MQS，； 7-目标端为设备
-	DestinationType CreateDestinationRequestBodyDestinationType `json:"destination_type" xml:"destination_type"`
+	DestinationType CreateDestinationRequestBodyDestinationType `json:"destination_type"`
 
 	// 应用ID，目标端为0时需明确对方的APP_ID
-	AppId *string `json:"app_id,omitempty" xml:"app_id"`
+	AppId *string `json:"app_id,omitempty"`
 
 	// 目标数据源名称
-	DestinationName *string `json:"destination_name,omitempty" xml:"destination_name"`
+	DestinationName *string `json:"destination_name,omitempty"`
 
 	// 目标数据源主题，从MQS服务中获取已有topic
-	Topic string `json:"topic" xml:"topic"`
+	Topic string `json:"topic"`
 
 	// 目标端数据源服务，连接地址
-	Server *string `json:"server,omitempty" xml:"server"`
+	Server *string `json:"server,omitempty"`
 
 	// 目标端数据源token
-	Token *string `json:"token,omitempty" xml:"token"`
+	Token *string `json:"token,omitempty"`
 
 	// 目标数据源标签
-	Tag *string `json:"tag,omitempty" xml:"tag"`
+	Tag *string `json:"tag,omitempty"`
 
 	// 目标端数据源MQS的SASL字段是否需要支持SSL加密
-	MqsSaslSsl *bool `json:"mqs_sasl_ssl,omitempty" xml:"mqs_sasl_ssl"`
+	MqsSaslSsl *bool `json:"mqs_sasl_ssl,omitempty"`
 
 	// 目标数据源用户名
-	UserName *string `json:"user_name,omitempty" xml:"user_name"`
+	UserName *string `json:"user_name,omitempty"`
 
 	// 目标数据源密码
-	Password *string `json:"password,omitempty" xml:"password"`
+	Password *string `json:"password,omitempty"`
 }
 
 func (o CreateDestinationRequestBody) String() string {

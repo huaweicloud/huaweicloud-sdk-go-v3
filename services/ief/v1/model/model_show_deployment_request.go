@@ -10,10 +10,10 @@ import (
 type ShowDeploymentRequest struct {
 
 	// 应用部署ID
-	DeploymentId string `json:"deployment_id" xml:"deployment_id"`
+	DeploymentId string `json:"deployment_id"`
 
 	// 铂金版实例ID，专业版实例为空值
-	IefInstanceId *string `json:"ief-instance-id,omitempty" xml:"ief-instance-id"`
+	IefInstanceId *string `json:"ief-instance-id,omitempty"`
 }
 
 func (o ShowDeploymentRequest) String() string {

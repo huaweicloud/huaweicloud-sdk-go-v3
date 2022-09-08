@@ -13,34 +13,34 @@ import (
 type ListServersRequest struct {
 
 	// 源端服务器状态
-	State *ListServersRequestState `json:"state,omitempty" xml:"state"`
+	State *ListServersRequestState `json:"state,omitempty"`
 
 	// 源端服务器名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 源端服务器ID
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 源端服务器IP地址
-	Ip *string `json:"ip,omitempty" xml:"ip"`
+	Ip *string `json:"ip,omitempty"`
 
 	// 迁移项目id，填写该参数将查询迁移项目下的所有虚拟机
-	Migproject *string `json:"migproject,omitempty" xml:"migproject"`
+	Migproject *string `json:"migproject,omitempty"`
 
 	// 每一页记录的源端服务器数量，0表示用默认值 200
-	Limit *int32 `json:"limit,omitempty" xml:"limit"`
+	Limit *int32 `json:"limit,omitempty"`
 
 	// 偏移量，默认值0
-	Offset *int32 `json:"offset,omitempty" xml:"offset"`
+	Offset *int32 `json:"offset,omitempty"`
 
 	// 根据迁移周期查询
-	MigrationCycle *ListServersRequestMigrationCycle `json:"migration_cycle,omitempty" xml:"migration_cycle"`
+	MigrationCycle *ListServersRequestMigrationCycle `json:"migration_cycle,omitempty"`
 
 	// 查询失去连接的源端
-	Connected *bool `json:"connected,omitempty" xml:"connected"`
+	Connected *bool `json:"connected,omitempty"`
 
 	// 需要查询的企业项目id
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 
 func (o ListServersRequest) String() string {

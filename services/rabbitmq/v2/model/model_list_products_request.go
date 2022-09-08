@@ -10,7 +10,7 @@ import (
 type ListProductsRequest struct {
 
 	// 消息引擎的类型。当前只支持rabbitmq。
-	Engine *string `json:"engine,omitempty" xml:"engine"`
+	Engine *string `json:"engine,omitempty"`
 }
 
 func (o ListProductsRequest) String() string {

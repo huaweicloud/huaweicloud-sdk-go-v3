@@ -13,16 +13,16 @@ import (
 type UpdateDomainV2Response struct {
 
 	// 自定义域名
-	UrlDomain *string `json:"url_domain,omitempty" xml:"url_domain"`
+	UrlDomain *string `json:"url_domain,omitempty"`
 
 	// 自定义域名的编号
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// CNAME解析状态 - 1: 未解析 - 2: 解析中 - 3: 解析成功 - 4: 解析失败
-	Status *UpdateDomainV2ResponseStatus `json:"status,omitempty" xml:"status"`
+	Status *UpdateDomainV2ResponseStatus `json:"status,omitempty"`
 
 	// 支持的最小SSL版本
-	MinSslVersion  *string `json:"min_ssl_version,omitempty" xml:"min_ssl_version"`
+	MinSslVersion  *string `json:"min_ssl_version,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

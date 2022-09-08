@@ -10,12 +10,12 @@ import (
 type UpdateResDatastructRequestBodyBody struct {
 
 	// 物品特征信息。
-	ItemAttrs []ItemAttrs `json:"item_attrs" xml:"item_attrs"`
+	ItemAttrs []ItemAttrs `json:"item_attrs"`
 
 	// 用户特征信息。
-	UserAttrs []UserAttrs `json:"user_attrs" xml:"user_attrs"`
+	UserAttrs []UserAttrs `json:"user_attrs"`
 
-	Behaviors *BehaviorsConfig `json:"behaviors" xml:"behaviors"`
+	Behaviors *BehaviorsConfig `json:"behaviors"`
 }
 
 func (o UpdateResDatastructRequestBodyBody) String() string {

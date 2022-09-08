@@ -13,16 +13,16 @@ import (
 type DiagnosisDimension struct {
 
 	// 诊断维度名称
-	Name DiagnosisDimensionName `json:"name" xml:"name"`
+	Name DiagnosisDimensionName `json:"name"`
 
 	// 诊断结果为异常的诊断项总数
-	AbnormalNum int32 `json:"abnormal_num" xml:"abnormal_num"`
+	AbnormalNum int32 `json:"abnormal_num"`
 
 	// 诊断失败的诊断项总数
-	FailedNum int32 `json:"failed_num" xml:"failed_num"`
+	FailedNum int32 `json:"failed_num"`
 
 	// 诊断项列表
-	DiagnosisItemList []DiagnosisItem `json:"diagnosis_item_list" xml:"diagnosis_item_list"`
+	DiagnosisItemList []DiagnosisItem `json:"diagnosis_item_list"`
 }
 
 func (o DiagnosisDimension) String() string {

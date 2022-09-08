@@ -10,9 +10,9 @@ import (
 type CreateMemberRequest struct {
 
 	// 后端云服务器组id
-	PoolId string `json:"pool_id" xml:"pool_id"`
+	PoolId string `json:"pool_id"`
 
-	Body *CreateMemberRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreateMemberRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateMemberRequest) String() string {

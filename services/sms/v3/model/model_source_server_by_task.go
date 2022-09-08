@@ -10,7 +10,7 @@ import (
 type SourceServerByTask struct {
 
 	// 源端服务器id
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 }
 
 func (o SourceServerByTask) String() string {

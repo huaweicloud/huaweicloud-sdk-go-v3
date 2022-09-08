@@ -10,10 +10,10 @@ import (
 type ListLogHistogramResponse struct {
 
 	// 直方图结果
-	Histogram *string `json:"histogram,omitempty" xml:"histogram"`
+	Histogram *string `json:"histogram,omitempty"`
 
 	// 日志条数
-	Count          *int64 `json:"count,omitempty" xml:"count"`
+	Count          *int64 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

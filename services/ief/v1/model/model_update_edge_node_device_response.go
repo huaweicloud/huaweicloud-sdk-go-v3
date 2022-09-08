@@ -10,15 +10,15 @@ import (
 type UpdateEdgeNodeDeviceResponse struct {
 
 	// 工业终端设备预留字段
-	DeleteConnector *bool `json:"delete_connector,omitempty" xml:"delete_connector"`
+	DeleteConnector *bool `json:"delete_connector,omitempty"`
 
 	// 工业终端设备预留字段
-	DeployConnector *bool `json:"deploy_connector,omitempty" xml:"deploy_connector"`
+	DeployConnector *bool `json:"deploy_connector,omitempty"`
 
 	// 工业终端设备预留字段
-	DeploymentId *string `json:"deployment_id,omitempty" xml:"deployment_id"`
+	DeploymentId *string `json:"deployment_id,omitempty"`
 
-	UpdateDevices  *NodeDevice `json:"update_devices,omitempty" xml:"update_devices"`
+	UpdateDevices  *NodeDevice `json:"update_devices,omitempty"`
 	HttpStatusCode int         `json:"-"`
 }
 

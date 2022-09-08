@@ -10,13 +10,13 @@ import (
 type UpdateAccessConfigRequestBody struct {
 
 	// 日志接入ID
-	AccessConfigId string `json:"access_config_id" xml:"access_config_id"`
+	AccessConfigId string `json:"access_config_id"`
 
-	AccessConfigDetail *AccessConfigDeatil `json:"access_config_detail,omitempty" xml:"access_config_detail"`
+	AccessConfigDetail *AccessConfigDeatil `json:"access_config_detail,omitempty"`
 
-	HostGroupInfo *AccessConfigHostGroupIdList `json:"host_group_info,omitempty" xml:"host_group_info"`
+	HostGroupInfo *AccessConfigHostGroupIdList `json:"host_group_info,omitempty"`
 
-	AccessConfigTag *[]AccessConfigTag `json:"access_config_tag,omitempty" xml:"access_config_tag"`
+	AccessConfigTag *[]AccessConfigTag `json:"access_config_tag,omitempty"`
 }
 
 func (o UpdateAccessConfigRequestBody) String() string {

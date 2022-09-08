@@ -9,34 +9,34 @@ import (
 type IssueAccessory struct {
 
 	// 附件id
-	AttachmentId *int32 `json:"attachment_id,omitempty" xml:"attachment_id"`
+	AttachmentId *int32 `json:"attachment_id,omitempty"`
 
 	// 工作鞋ID
-	IssueId *int32 `json:"issue_id,omitempty" xml:"issue_id"`
+	IssueId *int32 `json:"issue_id,omitempty"`
 
 	// 创建者数字ID
-	CreatorNumId *int32 `json:"creator_num_id,omitempty" xml:"creator_num_id"`
+	CreatorNumId *int32 `json:"creator_num_id,omitempty"`
 
 	// 附件创建时间
-	CreatedDate *string `json:"created_date,omitempty" xml:"created_date"`
+	CreatedDate *string `json:"created_date,omitempty"`
 
 	// 上传时文件名
-	FileName *string `json:"file_name,omitempty" xml:"file_name"`
+	FileName *string `json:"file_name,omitempty"`
 
 	// 附件id
-	ContainerType *string `json:"container_type,omitempty" xml:"container_type"`
+	ContainerType *string `json:"container_type,omitempty"`
 
 	// 附件名称
-	DiskFileName *string `json:"disk_file_name,omitempty" xml:"disk_file_name"`
+	DiskFileName *string `json:"disk_file_name,omitempty"`
 
 	// 附件id
-	Digest *string `json:"digest,omitempty" xml:"digest"`
+	Digest *string `json:"digest,omitempty"`
 
 	// 附件路径
-	DiskDirectory *string `json:"disk_directory,omitempty" xml:"disk_directory"`
+	DiskDirectory *string `json:"disk_directory,omitempty"`
 
 	// 创建这用户uuid
-	CreatorId *string `json:"creator_id,omitempty" xml:"creator_id"`
+	CreatorId *string `json:"creator_id,omitempty"`
 }
 
 func (o IssueAccessory) String() string {

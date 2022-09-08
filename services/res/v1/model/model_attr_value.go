@@ -10,10 +10,10 @@ import (
 type AttrValue struct {
 
 	// 属性名称。
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 属性值。
-	Value string `json:"value" xml:"value"`
+	Value string `json:"value"`
 }
 
 func (o AttrValue) String() string {

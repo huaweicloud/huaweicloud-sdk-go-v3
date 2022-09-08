@@ -10,13 +10,13 @@ import (
 type QuotaDetail struct {
 
 	// 中文配额描述
-	ZhCn *string `json:"zh_cn,omitempty" xml:"zh_cn"`
+	ZhCn *string `json:"zh_cn,omitempty"`
 
 	// 英文配额描述
-	EnUs *string `json:"en_us,omitempty" xml:"en_us"`
+	EnUs *string `json:"en_us,omitempty"`
 
 	// 租户剩余配额数量
-	Remaining int32 `json:"remaining" xml:"remaining"`
+	Remaining int32 `json:"remaining"`
 }
 
 func (o QuotaDetail) String() string {

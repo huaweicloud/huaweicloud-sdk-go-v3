@@ -10,12 +10,12 @@ import (
 type ListCbhInstanceResponse struct {
 
 	// 实例总数
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 
-	QuotaDetail *QuotaDetail `json:"quota_detail,omitempty" xml:"quota_detail"`
+	QuotaDetail *QuotaDetail `json:"quota_detail,omitempty"`
 
 	// 实例列表
-	Instance       *[]InstanceDetail `json:"instance,omitempty" xml:"instance"`
+	Instance       *[]InstanceDetail `json:"instance,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }
 

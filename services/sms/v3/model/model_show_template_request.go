@@ -10,7 +10,7 @@ import (
 type ShowTemplateRequest struct {
 
 	// 需要查询的模板信息的id
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 }
 
 func (o ShowTemplateRequest) String() string {

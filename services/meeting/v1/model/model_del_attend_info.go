@@ -10,10 +10,10 @@ import (
 type DelAttendInfo struct {
 
 	// 会场呼叫号码。
-	Number string `json:"number" xml:"number"`
+	Number string `json:"number"`
 
 	// 与会者标识，已入会的必须填写该字段。
-	ParticipantID *string `json:"participantID,omitempty" xml:"participantID"`
+	ParticipantID *string `json:"participantID,omitempty"`
 }
 
 func (o DelAttendInfo) String() string {

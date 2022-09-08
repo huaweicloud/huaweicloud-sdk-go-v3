@@ -10,10 +10,10 @@ import (
 type StopTaskRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 任务ID
-	TaskId string `json:"task_id" xml:"task_id"`
+	TaskId string `json:"task_id"`
 }
 
 func (o StopTaskRequest) String() string {

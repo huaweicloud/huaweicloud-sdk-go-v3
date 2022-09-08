@@ -9,10 +9,10 @@ import (
 type PipelineParameter struct {
 
 	// 参数名称
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 参数值
-	Value string `json:"value" xml:"value"`
+	Value string `json:"value"`
 }
 
 func (o PipelineParameter) String() string {

@@ -8,10 +8,10 @@ import (
 
 // Response Object
 type BatchDeleteIpListResponse struct {
-	Ipgroup *IpGroup `json:"ipgroup,omitempty" xml:"ipgroup"`
+	Ipgroup *IpGroup `json:"ipgroup,omitempty"`
 
 	// 请求ID。 注：自动生成 。
-	RequestId      *string `json:"request_id,omitempty" xml:"request_id"`
+	RequestId      *string `json:"request_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -10,7 +10,7 @@ import (
 type CollectKeyWordsResponse struct {
 
 	// 指定时间范围内，用户问关键词列表。
-	Keywords       *[]KeyWordsStat `json:"keywords,omitempty" xml:"keywords"`
+	Keywords       *[]KeyWordsStat `json:"keywords,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }
 

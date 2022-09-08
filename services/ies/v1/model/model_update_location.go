@@ -13,24 +13,24 @@ import (
 type UpdateLocation struct {
 
 	// 场地名称，0-64位。只包含中文字符、英文字母（a-z、A-Z）、数字（0-9）、下划线（_）、中划线（-）。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 场地所在国家
-	Country *UpdateLocationCountry `json:"country,omitempty" xml:"country"`
+	Country *UpdateLocationCountry `json:"country,omitempty"`
 
 	// 场地所在省/自治区/直辖市
-	Province *string `json:"province,omitempty" xml:"province"`
+	Province *string `json:"province,omitempty"`
 
 	// 场地所在市/区
-	City *string `json:"city,omitempty" xml:"city"`
+	City *string `json:"city,omitempty"`
 
 	// 场地所在区/县
-	District *string `json:"district,omitempty" xml:"district"`
+	District *string `json:"district,omitempty"`
 
-	Condition *UpdateCondition `json:"condition,omitempty" xml:"condition"`
+	Condition *UpdateCondition `json:"condition,omitempty"`
 
 	// 场地描述，最大支持长度为255个字节，不允许包含<>
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 }
 
 func (o UpdateLocation) String() string {

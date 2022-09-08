@@ -9,7 +9,7 @@ import (
 type ListFlowBySimCardsReq struct {
 
 	// ICCID列表,最大支持50
-	Iccids []string `json:"iccids" xml:"iccids"`
+	Iccids []string `json:"iccids"`
 }
 
 func (o ListFlowBySimCardsReq) String() string {

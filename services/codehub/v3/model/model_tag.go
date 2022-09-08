@@ -9,10 +9,10 @@ import (
 type Tag struct {
 
 	// 是否与分支重名
-	IsDoubleName *bool `json:"is_double_name,omitempty" xml:"is_double_name"`
+	IsDoubleName *bool `json:"is_double_name,omitempty"`
 
 	// 标签名
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 }
 
 func (o Tag) String() string {

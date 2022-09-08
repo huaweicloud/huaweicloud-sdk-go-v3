@@ -10,22 +10,22 @@ import (
 type HealthCodeResult struct {
 
 	// 姓名
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 健康码更新时间
-	Time string `json:"time" xml:"time"`
+	Time string `json:"time"`
 
 	// 健康码颜色，可选值包括： - \"green\" - \"yellow\" - \"red\" - \"gray\"
-	Color string `json:"color" xml:"color"`
+	Color string `json:"color"`
 
 	// 各个字段的置信度。
-	Confidence *interface{} `json:"confidence" xml:"confidence"`
+	Confidence *interface{} `json:"confidence"`
 
 	// 代表检测识别出来的文字块数目。
-	WordsBlockCount int32 `json:"words_block_count" xml:"words_block_count"`
+	WordsBlockCount int32 `json:"words_block_count"`
 
 	// 识别文字块列表，输出顺序从左到右，从上到下。
-	WordsBlockList []HealthCodeWordsBlockList `json:"words_block_list" xml:"words_block_list"`
+	WordsBlockList []HealthCodeWordsBlockList `json:"words_block_list"`
 }
 
 func (o HealthCodeResult) String() string {

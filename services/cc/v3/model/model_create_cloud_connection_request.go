@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateCloudConnectionRequest struct {
-	Body *CreateCloudConnectionRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreateCloudConnectionRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateCloudConnectionRequest) String() string {

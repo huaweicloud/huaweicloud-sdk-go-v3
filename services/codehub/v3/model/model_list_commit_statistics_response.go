@@ -8,12 +8,12 @@ import (
 
 // Response Object
 type ListCommitStatisticsResponse struct {
-	Error *Error `json:"error,omitempty" xml:"error"`
+	Error *Error `json:"error,omitempty"`
 
-	Result *RepoCommitStatistics `json:"result,omitempty" xml:"result"`
+	Result *RepoCommitStatistics `json:"result,omitempty"`
 
 	// 响应状态
-	Status         *string `json:"status,omitempty" xml:"status"`
+	Status         *string `json:"status,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

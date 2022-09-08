@@ -10,9 +10,9 @@ import (
 type CreateRunRequest struct {
 
 	// 作业ID。
-	JobId string `json:"job_id" xml:"job_id"`
+	JobId string `json:"job_id"`
 
-	Body *CreateRunRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreateRunRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateRunRequest) String() string {

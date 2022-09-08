@@ -10,9 +10,9 @@ import (
 type RunOnceRequest struct {
 
 	// 作业名称.
-	JobName string `json:"job_name" xml:"job_name"`
+	JobName string `json:"job_name"`
 
-	Body *StartJobReq `json:"body,omitempty" xml:"body"`
+	Body *StartJobReq `json:"body,omitempty"`
 }
 
 func (o RunOnceRequest) String() string {

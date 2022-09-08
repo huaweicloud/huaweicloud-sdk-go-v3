@@ -10,19 +10,19 @@ import (
 type CommandTimeTaken struct {
 
 	// 调用次数
-	CallsSum int32 `json:"calls_sum" xml:"calls_sum"`
+	CallsSum int32 `json:"calls_sum"`
 
 	// 耗时总数
-	UsecSum float64 `json:"usec_sum" xml:"usec_sum"`
+	UsecSum float64 `json:"usec_sum"`
 
 	// 命令名称
-	CommandName string `json:"command_name" xml:"command_name"`
+	CommandName string `json:"command_name"`
 
 	// 耗时占比
-	PerUsec string `json:"per_usec" xml:"per_usec"`
+	PerUsec string `json:"per_usec"`
 
 	// 每次调用平均耗时
-	AverageUsec float64 `json:"average_usec" xml:"average_usec"`
+	AverageUsec float64 `json:"average_usec"`
 }
 
 func (o CommandTimeTaken) String() string {

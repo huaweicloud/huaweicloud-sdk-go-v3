@@ -10,22 +10,22 @@ import (
 type RestInviteWithPwdReqBody struct {
 
 	// 被邀请的会议人号码。
-	CallNum string `json:"callNum" xml:"callNum"`
+	CallNum string `json:"callNum"`
 
 	// 被邀请的会议人所属企业ID。
-	OrgID *string `json:"orgID,omitempty" xml:"orgID"`
+	OrgID *string `json:"orgID,omitempty"`
 
 	// 当前会议ID。
-	ConfID string `json:"confID" xml:"confID"`
+	ConfID string `json:"confID"`
 
 	// 当前会议的密码。
-	Pwd string `json:"pwd" xml:"pwd"`
+	Pwd string `json:"pwd"`
 
 	// 号码类型0是本局号码，1是中继号码。
-	NumBelongsType *int32 `json:"numBelongsType,omitempty" xml:"numBelongsType"`
+	NumBelongsType *int32 `json:"numBelongsType,omitempty"`
 
 	// 是否不叠加会场名。
-	IsNotOverlayPidName *bool `json:"isNotOverlayPidName,omitempty" xml:"isNotOverlayPidName"`
+	IsNotOverlayPidName *bool `json:"isNotOverlayPidName,omitempty"`
 }
 
 func (o RestInviteWithPwdReqBody) String() string {

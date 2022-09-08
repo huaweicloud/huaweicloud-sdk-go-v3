@@ -10,10 +10,10 @@ import (
 type EntityMetricList struct {
 
 	// 指标对象列表。
-	Dimensions *[]Dimension `json:"dimensions,omitempty" xml:"dimensions"`
+	Dimensions *[]Dimension `json:"dimensions,omitempty"`
 
 	// 监控数据列表项目。
-	Values *[]EntityMetricListItem `json:"values,omitempty" xml:"values"`
+	Values *[]EntityMetricListItem `json:"values,omitempty"`
 }
 
 func (o EntityMetricList) String() string {

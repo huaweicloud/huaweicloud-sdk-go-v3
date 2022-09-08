@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type DeleteSecretForScheduleResponse struct {
-	Secret         *Secret `json:"secret,omitempty" xml:"secret"`
+	Secret         *Secret `json:"secret,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

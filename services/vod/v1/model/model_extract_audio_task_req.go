@@ -9,9 +9,9 @@ import (
 type ExtractAudioTaskReq struct {
 
 	// 媒资ID。
-	AssetId string `json:"asset_id" xml:"asset_id"`
+	AssetId string `json:"asset_id"`
 
-	Parameter *Parameter `json:"parameter,omitempty" xml:"parameter"`
+	Parameter *Parameter `json:"parameter,omitempty"`
 }
 
 func (o ExtractAudioTaskReq) String() string {

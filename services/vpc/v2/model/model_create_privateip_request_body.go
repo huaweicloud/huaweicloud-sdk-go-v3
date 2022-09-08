@@ -10,7 +10,7 @@ import (
 type CreatePrivateipRequestBody struct {
 
 	// 私有IP列表对象
-	Privateips []CreatePrivateipOption `json:"privateips" xml:"privateips"`
+	Privateips []CreatePrivateipOption `json:"privateips"`
 }
 
 func (o CreatePrivateipRequestBody) String() string {

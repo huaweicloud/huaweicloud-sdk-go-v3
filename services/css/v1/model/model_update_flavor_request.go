@@ -10,9 +10,9 @@ import (
 type UpdateFlavorRequest struct {
 
 	// 指定待更改规格的集群ID。
-	ClusterId string `json:"cluster_id" xml:"cluster_id"`
+	ClusterId string `json:"cluster_id"`
 
-	Body *UpdateFlavorReq `json:"body,omitempty" xml:"body"`
+	Body *UpdateFlavorReq `json:"body,omitempty"`
 }
 
 func (o UpdateFlavorRequest) String() string {

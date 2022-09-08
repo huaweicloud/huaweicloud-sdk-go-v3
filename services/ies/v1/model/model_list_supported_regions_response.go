@@ -10,9 +10,9 @@ import (
 type ListSupportedRegionsResponse struct {
 
 	// 区域列表
-	Regions *[]RegionDetail `json:"regions,omitempty" xml:"regions"`
+	Regions *[]RegionDetail `json:"regions,omitempty"`
 
-	PageInfo       *PageInfo `json:"page_info,omitempty" xml:"page_info"`
+	PageInfo       *PageInfo `json:"page_info,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }
 

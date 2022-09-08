@@ -10,12 +10,12 @@ import (
 type UpdateLinkRequest struct {
 
 	// 集群ID
-	ClusterId string `json:"cluster_id" xml:"cluster_id"`
+	ClusterId string `json:"cluster_id"`
 
 	// 连接名称
-	LinkName string `json:"link_name" xml:"link_name"`
+	LinkName string `json:"link_name"`
 
-	Body *CdmCreateAndUpdateLinkReq `json:"body,omitempty" xml:"body"`
+	Body *CdmCreateAndUpdateLinkReq `json:"body,omitempty"`
 }
 
 func (o UpdateLinkRequest) String() string {

@@ -10,9 +10,9 @@ import (
 type UpdateVpcepConnectionRequest struct {
 
 	// 指定更新终端节点的集群ID。
-	ClusterId string `json:"cluster_id" xml:"cluster_id"`
+	ClusterId string `json:"cluster_id"`
 
-	Body *UpdateVpcepConnectionReq `json:"body,omitempty" xml:"body"`
+	Body *UpdateVpcepConnectionReq `json:"body,omitempty"`
 }
 
 func (o UpdateVpcepConnectionRequest) String() string {

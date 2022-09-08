@@ -10,12 +10,12 @@ import (
 type EtlBasicParameter struct {
 
 	// 用户特征。
-	UserFeatures *[]FeatureTransformation `json:"user_features,omitempty" xml:"user_features"`
+	UserFeatures *[]FeatureTransformation `json:"user_features,omitempty"`
 
 	// 物品特征。
-	ItemFeatures *[]FeatureTransformation `json:"item_features,omitempty" xml:"item_features"`
+	ItemFeatures *[]FeatureTransformation `json:"item_features,omitempty"`
 
-	RankEtlFilter *RankEtlFilter `json:"rank_etl_filter,omitempty" xml:"rank_etl_filter"`
+	RankEtlFilter *RankEtlFilter `json:"rank_etl_filter,omitempty"`
 }
 
 func (o EtlBasicParameter) String() string {

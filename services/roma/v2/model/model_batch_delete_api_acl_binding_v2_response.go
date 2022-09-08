@@ -10,10 +10,10 @@ import (
 type BatchDeleteApiAclBindingV2Response struct {
 
 	// 成功解除绑定的ACL策略数量
-	SuccessCount *int32 `json:"success_count,omitempty" xml:"success_count"`
+	SuccessCount *int32 `json:"success_count,omitempty"`
 
 	// 解除绑定失败的ACL策略及错误信息
-	Failure        *[]AclBindingBatchFailure `json:"failure,omitempty" xml:"failure"`
+	Failure        *[]AclBindingBatchFailure `json:"failure,omitempty"`
 	HttpStatusCode int                       `json:"-"`
 }
 

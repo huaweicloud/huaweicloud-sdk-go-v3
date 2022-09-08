@@ -8,9 +8,9 @@ import (
 
 // Response Object
 type CreateLoginTokenResponse struct {
-	Logintoken *LoginToken `json:"logintoken,omitempty" xml:"logintoken"`
+	Logintoken *LoginToken `json:"logintoken,omitempty"`
 
-	XSubjectLoginToken *string `json:"X-Subject-LoginToken,omitempty" xml:"X-Subject-LoginToken"`
+	XSubjectLoginToken *string `json:"X-Subject-LoginToken,omitempty"`
 	HttpStatusCode     int     `json:"-"`
 }
 

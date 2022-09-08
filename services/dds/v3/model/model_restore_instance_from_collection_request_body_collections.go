@@ -9,13 +9,13 @@ import (
 type RestoreInstanceFromCollectionRequestBodyCollections struct {
 
 	// 恢复前表名。
-	OldName string `json:"old_name" xml:"old_name"`
+	OldName string `json:"old_name"`
 
 	// 恢复后表名。
-	NewName *string `json:"new_name,omitempty" xml:"new_name"`
+	NewName *string `json:"new_name,omitempty"`
 
 	// 数据库集合恢复时间点。UNIX时间戳格式，单位是毫秒，时区是UTC。
-	RestoreCollectionTime string `json:"restore_collection_time" xml:"restore_collection_time"`
+	RestoreCollectionTime string `json:"restore_collection_time"`
 }
 
 func (o RestoreInstanceFromCollectionRequestBodyCollections) String() string {

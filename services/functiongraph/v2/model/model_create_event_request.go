@@ -10,9 +10,9 @@ import (
 type CreateEventRequest struct {
 
 	// 函数的URN，详细解释见FunctionGraph函数模型的描述。
-	FunctionUrn string `json:"function_urn" xml:"function_urn"`
+	FunctionUrn string `json:"function_urn"`
 
-	Body *CreateEventRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreateEventRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateEventRequest) String() string {

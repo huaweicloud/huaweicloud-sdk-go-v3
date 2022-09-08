@@ -10,25 +10,25 @@ import (
 type AppConfigInfoV2 struct {
 
 	// 应用配置编号
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 应用编号
-	AppId *string `json:"app_id,omitempty" xml:"app_id"`
+	AppId *string `json:"app_id,omitempty"`
 
 	// 应用配置类型
-	ConfigType *string `json:"config_type,omitempty" xml:"config_type"`
+	ConfigType *string `json:"config_type,omitempty"`
 
 	// 应用配置名称
-	ConfigName *string `json:"config_name,omitempty" xml:"config_name"`
+	ConfigName *string `json:"config_name,omitempty"`
 
 	// 应用配置值
-	ConfigValue *string `json:"config_value,omitempty" xml:"config_value"`
+	ConfigValue *string `json:"config_value,omitempty"`
 
 	// 应用配置更新时间
-	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty" xml:"update_time"`
+	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
 
 	// 应用配置描述
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 }
 
 func (o AppConfigInfoV2) String() string {

@@ -8,10 +8,10 @@ import (
 
 // Response Object
 type ListInstancesResponse struct {
-	Instances *PageInstancesVo `json:"instances,omitempty" xml:"instances"`
+	Instances *PageInstancesVo `json:"instances,omitempty"`
 
 	// 状态
-	Status         *string `json:"status,omitempty" xml:"status"`
+	Status         *string `json:"status,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

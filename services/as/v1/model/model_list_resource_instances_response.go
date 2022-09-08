@@ -10,13 +10,13 @@ import (
 type ListResourceInstancesResponse struct {
 
 	// 标签资源实例。
-	Resources *[]Resources `json:"resources,omitempty" xml:"resources"`
+	Resources *[]Resources `json:"resources,omitempty"`
 
 	// 总记录数。
-	TotalCount *int32 `json:"total_count,omitempty" xml:"total_count"`
+	TotalCount *int32 `json:"total_count,omitempty"`
 
 	// 分页位置标识。
-	Marker         *string `json:"marker,omitempty" xml:"marker"`
+	Marker         *string `json:"marker,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

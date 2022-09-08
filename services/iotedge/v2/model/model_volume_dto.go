@@ -9,19 +9,19 @@ import (
 type VolumeDto struct {
 
 	// 卷名称
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 挂载类型
-	Type *string `json:"type,omitempty" xml:"type"`
+	Type *string `json:"type,omitempty"`
 
 	// 源路径
-	Source string `json:"source" xml:"source"`
+	Source string `json:"source"`
 
 	// 卷挂载路径
-	Destination string `json:"destination" xml:"destination"`
+	Destination string `json:"destination"`
 
 	// 只读，默认只读
-	ReadOnly *bool `json:"read_only,omitempty" xml:"read_only"`
+	ReadOnly *bool `json:"read_only,omitempty"`
 }
 
 func (o VolumeDto) String() string {

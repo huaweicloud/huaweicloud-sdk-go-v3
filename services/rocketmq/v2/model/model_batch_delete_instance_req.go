@@ -12,13 +12,13 @@ import (
 type BatchDeleteInstanceReq struct {
 
 	// 实例的ID列表。
-	Instances *[]string `json:"instances,omitempty" xml:"instances"`
+	Instances *[]string `json:"instances,omitempty"`
 
 	// 对实例的操作：delete
-	Action BatchDeleteInstanceReqAction `json:"action" xml:"action"`
+	Action BatchDeleteInstanceReqAction `json:"action"`
 
 	// 参数值为RocketMQ，表示删除租户所有创建失败的RocketMQ实例。
-	AllFailure *BatchDeleteInstanceReqAllFailure `json:"all_failure,omitempty" xml:"all_failure"`
+	AllFailure *BatchDeleteInstanceReqAllFailure `json:"all_failure,omitempty"`
 }
 
 func (o BatchDeleteInstanceReq) String() string {

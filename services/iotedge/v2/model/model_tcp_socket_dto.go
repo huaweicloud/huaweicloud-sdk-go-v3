@@ -9,7 +9,7 @@ import (
 type TcpSocketDto struct {
 
 	// 端口
-	Port int32 `json:"port" xml:"port"`
+	Port int32 `json:"port"`
 }
 
 func (o TcpSocketDto) String() string {

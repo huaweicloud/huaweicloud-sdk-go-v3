@@ -8,9 +8,9 @@ import (
 
 // Request Object
 type SetRecordSetsStatusRequest struct {
-	RecordsetId string `json:"recordset_id" xml:"recordset_id"`
+	RecordsetId string `json:"recordset_id"`
 
-	Body *SetRecordSetsStatusReq `json:"body,omitempty" xml:"body"`
+	Body *SetRecordSetsStatusReq `json:"body,omitempty"`
 }
 
 func (o SetRecordSetsStatusRequest) String() string {

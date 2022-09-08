@@ -10,10 +10,10 @@ import (
 type CustomizeFormula struct {
 
 	// 别名。
-	Alias *string `json:"alias,omitempty" xml:"alias"`
+	Alias *string `json:"alias,omitempty"`
 
 	// 公式。
-	Formula *string `json:"formula,omitempty" xml:"formula"`
+	Formula *string `json:"formula,omitempty"`
 }
 
 func (o CustomizeFormula) String() string {

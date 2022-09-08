@@ -10,13 +10,13 @@ import (
 type ErrorSample struct {
 
 	// 检测源描述。
-	Source string `json:"source" xml:"source"`
+	Source string `json:"source"`
 
 	// 此错误共计次数。
-	Count *int32 `json:"count,omitempty" xml:"count"`
+	Count *int32 `json:"count,omitempty"`
 
 	// 错误数据和错误提示消息。
-	Msg *string `json:"msg,omitempty" xml:"msg"`
+	Msg *string `json:"msg,omitempty"`
 }
 
 func (o ErrorSample) String() string {

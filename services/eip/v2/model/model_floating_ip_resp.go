@@ -12,43 +12,43 @@ import (
 type FloatingIpResp struct {
 
 	// 关联端口的私有IP地址。
-	FixedIpAddress *string `json:"fixed_ip_address,omitempty" xml:"fixed_ip_address"`
+	FixedIpAddress *string `json:"fixed_ip_address,omitempty"`
 
 	// 浮动IP地址。
-	FloatingIpAddress *string `json:"floating_ip_address,omitempty" xml:"floating_ip_address"`
+	FloatingIpAddress *string `json:"floating_ip_address,omitempty"`
 
 	// 外部网络的id。只能使用固定的外网，外部网络的信息请通过GET /v2.0/networks?router:external=True或GET /v2.0/networks?name={floating_network}或neutron net-external-list方式查询。
-	FloatingNetworkId *string `json:"floating_network_id,omitempty" xml:"floating_network_id"`
+	FloatingNetworkId *string `json:"floating_network_id,omitempty"`
 
 	// 浮动IP地址的id。
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 端口id。
-	PortId *string `json:"port_id,omitempty" xml:"port_id"`
+	PortId *string `json:"port_id,omitempty"`
 
 	// 所属路由器id。
-	RouterId *string `json:"router_id,omitempty" xml:"router_id"`
+	RouterId *string `json:"router_id,omitempty"`
 
 	// 网络状态，可以为ACTIVE， DOWN或ERROR。  DOWN：未绑定  ACTIVE：绑定  ERROR：异常
-	Status *FloatingIpRespStatus `json:"status,omitempty" xml:"status"`
+	Status *FloatingIpRespStatus `json:"status,omitempty"`
 
 	// 项目id。
-	TenantId *string `json:"tenant_id,omitempty" xml:"tenant_id"`
+	TenantId *string `json:"tenant_id,omitempty"`
 
 	// 项目id。
-	ProjectId *string `json:"project_id,omitempty" xml:"project_id"`
+	ProjectId *string `json:"project_id,omitempty"`
 
 	// DNS名称(目前仅广州局点支持)
-	DnsName *string `json:"dns_name,omitempty" xml:"dns_name"`
+	DnsName *string `json:"dns_name,omitempty"`
 
 	// DNS域地址(目前仅广州局点支持)
-	DnsDomain *string `json:"dns_domain,omitempty" xml:"dns_domain"`
+	DnsDomain *string `json:"dns_domain,omitempty"`
 
 	// 资源创建时间  采用UTC时间  格式：YYYY-MM-DDTHH:MM:SS
-	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty" xml:"created_at"`
+	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
 
 	// 资源更新时间  采用UTC时间  格式：YYYY-MM-DDTHH:MM:SS
-	UpdatedAt *sdktime.SdkTime `json:"updated_at,omitempty" xml:"updated_at"`
+	UpdatedAt *sdktime.SdkTime `json:"updated_at,omitempty"`
 }
 
 func (o FloatingIpResp) String() string {

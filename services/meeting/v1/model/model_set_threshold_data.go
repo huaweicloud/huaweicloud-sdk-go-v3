@@ -10,10 +10,10 @@ import (
 type SetThresholdData struct {
 
 	// 接收方向阈值设定值，单位为毫秒(ms) 取值范围：0 - 10000
-	Receiving *int32 `json:"receiving,omitempty" xml:"receiving"`
+	Receiving *int32 `json:"receiving,omitempty"`
 
 	// 发送方向阈值设定值，单位为毫秒(ms) 取值范围：0 - 10000
-	Sending *int32 `json:"sending,omitempty" xml:"sending"`
+	Sending *int32 `json:"sending,omitempty"`
 }
 
 func (o SetThresholdData) String() string {

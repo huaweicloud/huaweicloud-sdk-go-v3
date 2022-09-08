@@ -10,9 +10,9 @@ import (
 type RunDeletePictureRequest struct {
 
 	// 实例名称。
-	InstanceName string `json:"instance_name" xml:"instance_name"`
+	InstanceName string `json:"instance_name"`
 
-	Body *DeletePictureReq `json:"body,omitempty" xml:"body"`
+	Body *DeletePictureReq `json:"body,omitempty"`
 }
 
 func (o RunDeletePictureRequest) String() string {

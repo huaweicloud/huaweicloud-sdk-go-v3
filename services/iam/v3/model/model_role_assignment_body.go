@@ -7,18 +7,18 @@ import (
 )
 
 type RoleAssignmentBody struct {
-	User *RoleUserAssignmentId `json:"user,omitempty" xml:"user"`
+	User *RoleUserAssignmentId `json:"user,omitempty"`
 
-	Role *RoleAssignmentId `json:"role,omitempty" xml:"role"`
+	Role *RoleAssignmentId `json:"role,omitempty"`
 
-	Group *RoleGroupAssignmentId `json:"group,omitempty" xml:"group"`
+	Group *RoleGroupAssignmentId `json:"group,omitempty"`
 
-	Agency *RoleAgencyAssignmentId `json:"agency,omitempty" xml:"agency"`
+	Agency *RoleAgencyAssignmentId `json:"agency,omitempty"`
 
-	Scope *RoleAssignmentScope `json:"scope,omitempty" xml:"scope"`
+	Scope *RoleAssignmentScope `json:"scope,omitempty"`
 
 	// 是否基于所有项目授权。
-	IsInherited *bool `json:"is_inherited,omitempty" xml:"is_inherited"`
+	IsInherited *bool `json:"is_inherited,omitempty"`
 }
 
 func (o RoleAssignmentBody) String() string {

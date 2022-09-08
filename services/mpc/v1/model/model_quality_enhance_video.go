@@ -7,17 +7,17 @@ import (
 )
 
 type QualityEnhanceVideo struct {
-	VideoDenoise *VideoDenoise `json:"video_denoise,omitempty" xml:"video_denoise"`
+	VideoDenoise *VideoDenoise `json:"video_denoise,omitempty"`
 
-	VideoSharp *VideoSharp `json:"video_sharp,omitempty" xml:"video_sharp"`
+	VideoSharp *VideoSharp `json:"video_sharp,omitempty"`
 
-	VideoContrast *VideoContrast `json:"video_contrast,omitempty" xml:"video_contrast"`
+	VideoContrast *VideoContrast `json:"video_contrast,omitempty"`
 
-	VideoSuperresolution *VideoSuperresolution `json:"video_superresolution,omitempty" xml:"video_superresolution"`
+	VideoSuperresolution *VideoSuperresolution `json:"video_superresolution,omitempty"`
 
-	VideoDeblock *VideoDeblock `json:"video_deblock,omitempty" xml:"video_deblock"`
+	VideoDeblock *VideoDeblock `json:"video_deblock,omitempty"`
 
-	VideoSaturation *VideoSaturation `json:"video_saturation,omitempty" xml:"video_saturation"`
+	VideoSaturation *VideoSaturation `json:"video_saturation,omitempty"`
 }
 
 func (o QualityEnhanceVideo) String() string {

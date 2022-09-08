@@ -13,10 +13,10 @@ import (
 type TransformationInfo struct {
 
 	// - 生成加工规则值为contentConditionalFilter - 生成配置规则值为configConditionalFilter
-	TransformationType TransformationInfoTransformationType `json:"transformation_type" xml:"transformation_type"`
+	TransformationType TransformationInfoTransformationType `json:"transformation_type"`
 
 	// 过滤条件，生成加工规则值为sql条件语句，生成配置规则值为config。长度限制256。
-	Value string `json:"value" xml:"value"`
+	Value string `json:"value"`
 }
 
 func (o TransformationInfo) String() string {

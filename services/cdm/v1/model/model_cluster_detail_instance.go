@@ -7,69 +7,69 @@ import (
 )
 
 type ClusterDetailInstance struct {
-	Flavor *ClusterDetailInstanceFlavor `json:"flavor" xml:"flavor"`
+	Flavor *ClusterDetailInstanceFlavor `json:"flavor"`
 
-	Volume *ClusterDetailInstanceVolume `json:"volume" xml:"volume"`
+	Volume *ClusterDetailInstanceVolume `json:"volume"`
 
 	// 节点状态： - 100：创建中。 - 200：正常。 - 300：失败。 - 303：创建失败。 - 400：已删除。 - 800：冻结。
-	Status string `json:"status" xml:"status"`
+	Status string `json:"status"`
 
 	// 节点操作状态列表： - REBOOTING：重启中。 - RESTORING：恢复中。 - REBOOT_FAILURE：重启失败。
-	Actions *[]string `json:"actions,omitempty" xml:"actions"`
+	Actions *[]string `json:"actions,omitempty"`
 
 	// 节点类型，只支持一种类型“cdm”。
-	Type string `json:"type" xml:"type"`
+	Type string `json:"type"`
 
 	// 节点的虚拟机ID。
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
 	// 节点的虚拟机名称。
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 节点是否冻结：0：否。1：是。
-	IsFrozen string `json:"isFrozen" xml:"isFrozen"`
+	IsFrozen string `json:"isFrozen"`
 
 	// 组件
-	Components *string `json:"components,omitempty" xml:"components"`
+	Components *string `json:"components,omitempty"`
 
 	// 节点配置状态（查询集群列表时为null）： - In-Sync：配置已同步。 - Applying：配置中。 - Sync-Failure：配置失败。
-	ConfigStatus *string `json:"config_status,omitempty" xml:"config_status"`
+	ConfigStatus *string `json:"config_status,omitempty"`
 
 	// 实例角色
-	Role *string `json:"role,omitempty" xml:"role"`
+	Role *string `json:"role,omitempty"`
 
 	// 分组
-	Group *string `json:"group,omitempty" xml:"group"`
+	Group *string `json:"group,omitempty"`
 
 	// 链接信息（查询集群列表时返回值为null）
-	Links *[]ClusterLinks `json:"links,omitempty" xml:"links"`
+	Links *[]ClusterLinks `json:"links,omitempty"`
 
 	// 组件分组id
-	ParamsGroupId *string `json:"paramsGroupId,omitempty" xml:"paramsGroupId"`
+	ParamsGroupId *string `json:"paramsGroupId,omitempty"`
 
 	// 公网ip
-	PublicIp *string `json:"publicIp,omitempty" xml:"publicIp"`
+	PublicIp *string `json:"publicIp,omitempty"`
 
 	// 管理ip
-	ManageIp *string `json:"manageIp,omitempty" xml:"manageIp"`
+	ManageIp *string `json:"manageIp,omitempty"`
 
 	// 流量ip
-	TrafficIp *string `json:"trafficIp,omitempty" xml:"trafficIp"`
+	TrafficIp *string `json:"trafficIp,omitempty"`
 
 	// 分片id
-	ShardId *string `json:"shard_id,omitempty" xml:"shard_id"`
+	ShardId *string `json:"shard_id,omitempty"`
 
 	// 管理修复ip
-	ManageFixIp *string `json:"manage_fix_ip,omitempty" xml:"manage_fix_ip"`
+	ManageFixIp *string `json:"manage_fix_ip,omitempty"`
 
 	// 私有ip
-	PrivateIp *string `json:"private_ip,omitempty" xml:"private_ip"`
+	PrivateIp *string `json:"private_ip,omitempty"`
 
 	// 内部ip
-	InternalIp *string `json:"internal_ip,omitempty" xml:"internal_ip"`
+	InternalIp *string `json:"internal_ip,omitempty"`
 
 	// 资源信息（查询集群列表时返回值为null）
-	Resource *[]Resource `json:"resource,omitempty" xml:"resource"`
+	Resource *[]Resource `json:"resource,omitempty"`
 }
 
 func (o ClusterDetailInstance) String() string {

@@ -8,7 +8,7 @@ import (
 
 // 更新SSH密钥对描述
 type UpdateKeypairDescriptionRequestBody struct {
-	Keypair *UpdateKeypairDescriptionReq `json:"keypair" xml:"keypair"`
+	Keypair *UpdateKeypairDescriptionReq `json:"keypair"`
 }
 
 func (o UpdateKeypairDescriptionRequestBody) String() string {

@@ -8,26 +8,26 @@ import (
 
 // 深度学习作业通用参数
 type DeepLearingParam struct {
-	InitialParameters *Initial `json:"initial_parameters,omitempty" xml:"initial_parameters"`
+	InitialParameters *Initial `json:"initial_parameters,omitempty"`
 
-	OptimizeParameters *Optimizer `json:"optimize_parameters,omitempty" xml:"optimize_parameters"`
+	OptimizeParameters *Optimizer `json:"optimize_parameters,omitempty"`
 
-	RegularParameters *Regular `json:"regular_parameters,omitempty" xml:"regular_parameters"`
+	RegularParameters *Regular `json:"regular_parameters,omitempty"`
 
 	// 最大迭代轮数。
-	MaxIterations *int32 `json:"max_iterations,omitempty" xml:"max_iterations"`
+	MaxIterations *int32 `json:"max_iterations,omitempty"`
 
 	// 提前终止训练轮数。
-	EarlyStopIterations *int32 `json:"early_stop_iterations,omitempty" xml:"early_stop_iterations"`
+	EarlyStopIterations *int32 `json:"early_stop_iterations,omitempty"`
 
 	// 批量大小。
-	BatchSize *int32 `json:"batch_size,omitempty" xml:"batch_size"`
+	BatchSize *int32 `json:"batch_size,omitempty"`
 
 	// 训练数据集切分数量。
-	DatasetSplitParts *int32 `json:"dataset_split_parts,omitempty" xml:"dataset_split_parts"`
+	DatasetSplitParts *int32 `json:"dataset_split_parts,omitempty"`
 
 	// 重新训练。
-	RestartTrain *bool `json:"restart_train,omitempty" xml:"restart_train"`
+	RestartTrain *bool `json:"restart_train,omitempty"`
 }
 
 func (o DeepLearingParam) String() string {

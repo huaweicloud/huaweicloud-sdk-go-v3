@@ -12,22 +12,22 @@ import (
 type BusinessRiskItem struct {
 
 	// 业务风险ID
-	RiskId *string `json:"risk_id,omitempty" xml:"risk_id"`
+	RiskId *string `json:"risk_id,omitempty"`
 
 	// 有风险的URL
-	RiskUrl *string `json:"risk_url,omitempty" xml:"risk_url"`
+	RiskUrl *string `json:"risk_url,omitempty"`
 
 	// 业务风险类型:   * text - 不合规文字   * image - 不合规图片   * dead_link - 不合规链接（死链）   * dark_link - 不合规链接（暗链）   * business_risk - 业务风险
-	RiskType *BusinessRiskItemRiskType `json:"risk_type,omitempty" xml:"risk_type"`
+	RiskType *BusinessRiskItemRiskType `json:"risk_type,omitempty"`
 
 	// 业务风险发现时间
-	FindTime *string `json:"find_time,omitempty" xml:"find_time"`
+	FindTime *string `json:"find_time,omitempty"`
 
 	// 业务风险内容
-	RiskContent *string `json:"risk_content,omitempty" xml:"risk_content"`
+	RiskContent *string `json:"risk_content,omitempty"`
 
 	// 漏洞状态:   * repairing - 未修复   * repaired - 已修复   * false_report - 误报，已忽略
-	RiskStatus *BusinessRiskItemRiskStatus `json:"risk_status,omitempty" xml:"risk_status"`
+	RiskStatus *BusinessRiskItemRiskStatus `json:"risk_status,omitempty"`
 }
 
 func (o BusinessRiskItem) String() string {

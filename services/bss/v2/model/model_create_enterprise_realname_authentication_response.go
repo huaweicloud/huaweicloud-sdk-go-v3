@@ -10,7 +10,7 @@ import (
 type CreateEnterpriseRealnameAuthenticationResponse struct {
 
 	// 是否需要转人工审核，只有状态码为200才返回该参数。 0：不需要1：需要
-	IsReview       *int32 `json:"is_review,omitempty" xml:"is_review"`
+	IsReview       *int32 `json:"is_review,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

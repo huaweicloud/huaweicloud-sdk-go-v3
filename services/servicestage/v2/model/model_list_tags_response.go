@@ -10,7 +10,7 @@ import (
 type ListTagsResponse struct {
 
 	// 项目tag标签列表。
-	Tags           *[]string `json:"tags,omitempty" xml:"tags"`
+	Tags           *[]string `json:"tags,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }
 

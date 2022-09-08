@@ -9,13 +9,13 @@ import (
 type Input struct {
 
 	// 参数名
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 参数值
-	Value string `json:"value" xml:"value"`
+	Value string `json:"value"`
 
 	// 值类型
-	Type *string `json:"type,omitempty" xml:"type"`
+	Type *string `json:"type,omitempty"`
 }
 
 func (o Input) String() string {

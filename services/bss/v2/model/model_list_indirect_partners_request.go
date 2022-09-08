@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ListIndirectPartnersRequest struct {
-	Body *QueryIndirectPartnersReq `json:"body,omitempty" xml:"body"`
+	Body *QueryIndirectPartnersReq `json:"body,omitempty"`
 }
 
 func (o ListIndirectPartnersRequest) String() string {

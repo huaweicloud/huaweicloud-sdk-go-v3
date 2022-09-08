@@ -9,28 +9,28 @@ import (
 type JobRecords struct {
 
 	// 第XX次提交
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 习题判题得分
-	AutoScore int32 `json:"auto_score" xml:"auto_score"`
+	AutoScore int32 `json:"auto_score"`
 
 	// 习题用例通过数
-	CasePassCount int32 `json:"case_pass_count" xml:"case_pass_count"`
+	CasePassCount int32 `json:"case_pass_count"`
 
 	// 习题用例总数
-	ExeCaseCount int32 `json:"exe_case_count" xml:"exe_case_count"`
+	ExeCaseCount int32 `json:"exe_case_count"`
 
 	// 代码行数
-	CodeLine int32 `json:"code_line" xml:"code_line"`
+	CodeLine int32 `json:"code_line"`
 
 	// 习题提交时间, 日期格式：yyyy-MM-dd HH:mm:ss
-	CommitTime string `json:"commit_time" xml:"commit_time"`
+	CommitTime string `json:"commit_time"`
 
 	// 习题圈复杂度
-	ComplexityFileAvg string `json:"complexity_file_avg" xml:"complexity_file_avg"`
+	ComplexityFileAvg string `json:"complexity_file_avg"`
 
 	// 习题判题耗时(毫秒)
-	AutoScoreUsingTime int32 `json:"auto_score_using_time" xml:"auto_score_using_time"`
+	AutoScoreUsingTime int32 `json:"auto_score_using_time"`
 }
 
 func (o JobRecords) String() string {

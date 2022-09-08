@@ -10,7 +10,7 @@ import (
 type ListBandwidthTimelineResponse struct {
 
 	// 安全统计的带宽时间线数据
-	Body           *[]BandwidthStatisticsTimelineItem `json:"body,omitempty" xml:"body"`
+	Body           *[]BandwidthStatisticsTimelineItem `json:"body,omitempty"`
 	HttpStatusCode int                                `json:"-"`
 }
 

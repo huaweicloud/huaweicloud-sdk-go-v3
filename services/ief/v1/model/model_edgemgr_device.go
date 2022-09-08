@@ -10,33 +10,33 @@ import (
 type EdgemgrDevice struct {
 
 	// 终端设备ID，只允许英文字母、数字、下划线、中划线，必须以英文字母和数字开头，长度限制为24~64之间
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
 	// 终端设备名称，只允许中文字符、英文字母、数字、下划线、中划线，长度限制为1~64
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 访问协议，有如下选项： - userdefine：自定义协议 - modbus：modbus协议 - opc-ua：opc-ua协议 默认为userdefine
-	AccessProtocol string `json:"access_protocol" xml:"access_protocol"`
+	AccessProtocol string `json:"access_protocol"`
 
 	// 终端设备描述，最大长度255，不允许^ ~ # $ % & * < > ( ) [ ] { } ' \" \\
-	Description string `json:"description" xml:"description"`
+	Description string `json:"description"`
 
 	// 静态属性
-	Attributes map[string]ValueInAttributes `json:"attributes" xml:"attributes"`
+	Attributes map[string]ValueInAttributes `json:"attributes"`
 
 	// 终端设备静态属性信息
-	Twin map[string]ValueInTwinResponse `json:"twin" xml:"twin"`
+	Twin map[string]ValueInTwinResponse `json:"twin"`
 
 	// 项目ID
-	ProjectId string `json:"project_id" xml:"project_id"`
+	ProjectId string `json:"project_id"`
 
 	// 创建时间
-	CreatedAt string `json:"created_at" xml:"created_at"`
+	CreatedAt string `json:"created_at"`
 
 	// 孪生属性配置
-	PropertyVisitors map[string]ValueInPropertyVisitors `json:"property_visitors" xml:"property_visitors"`
+	PropertyVisitors map[string]ValueInPropertyVisitors `json:"property_visitors"`
 
-	Tags *ResourceTag `json:"tags" xml:"tags"`
+	Tags *ResourceTag `json:"tags"`
 }
 
 func (o EdgemgrDevice) String() string {

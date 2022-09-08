@@ -10,7 +10,7 @@ import (
 type ShowDomainSettingsRequest struct {
 
 	// 域名ID
-	DomainId string `json:"domain_id" xml:"domain_id"`
+	DomainId string `json:"domain_id"`
 }
 
 func (o ShowDomainSettingsRequest) String() string {

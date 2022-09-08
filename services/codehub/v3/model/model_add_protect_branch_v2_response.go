@@ -8,12 +8,12 @@ import (
 
 // Response Object
 type AddProtectBranchV2Response struct {
-	Error *Error `json:"error,omitempty" xml:"error"`
+	Error *Error `json:"error,omitempty"`
 
-	Result *AddProtectResponse `json:"result,omitempty" xml:"result"`
+	Result *AddProtectResponse `json:"result,omitempty"`
 
 	// 响应状态
-	Status         *string `json:"status,omitempty" xml:"status"`
+	Status         *string `json:"status,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

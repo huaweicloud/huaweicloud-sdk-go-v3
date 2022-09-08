@@ -8,9 +8,9 @@ import (
 
 // Response Object
 type ListJobsResponse struct {
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 
-	Jobs           *[]JobInfo `json:"jobs,omitempty" xml:"jobs"`
+	Jobs           *[]JobInfo `json:"jobs,omitempty"`
 	HttpStatusCode int        `json:"-"`
 }
 

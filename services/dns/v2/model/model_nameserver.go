@@ -9,10 +9,10 @@ import (
 type Nameserver struct {
 
 	// 主机名。
-	Hostname *string `json:"hostname,omitempty" xml:"hostname"`
+	Hostname *string `json:"hostname,omitempty"`
 
 	// 优先级。
-	Priority *int32 `json:"priority,omitempty" xml:"priority"`
+	Priority *int32 `json:"priority,omitempty"`
 }
 
 func (o Nameserver) String() string {

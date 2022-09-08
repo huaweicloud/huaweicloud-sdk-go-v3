@@ -10,7 +10,7 @@ import (
 type SaveMonitorItemConfigResponse struct {
 
 	// 保存监控系项返回状态
-	Flag           *string `json:"flag,omitempty" xml:"flag"`
+	Flag           *string `json:"flag,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

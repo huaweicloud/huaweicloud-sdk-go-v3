@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RecognizeMvsInvoiceRequest struct {
-	Body *MvsInvoiceRequestBody `json:"body,omitempty" xml:"body"`
+	Body *MvsInvoiceRequestBody `json:"body,omitempty"`
 }
 
 func (o RecognizeMvsInvoiceRequest) String() string {

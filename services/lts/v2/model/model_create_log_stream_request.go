@@ -10,9 +10,9 @@ import (
 type CreateLogStreamRequest struct {
 
 	// 租户想创建的日志流所在的日志组的groupid，一般为36位字符串。
-	LogGroupId string `json:"log_group_id" xml:"log_group_id"`
+	LogGroupId string `json:"log_group_id"`
 
-	Body *CreateLogStreamParams `json:"body,omitempty" xml:"body"`
+	Body *CreateLogStreamParams `json:"body,omitempty"`
 }
 
 func (o CreateLogStreamRequest) String() string {

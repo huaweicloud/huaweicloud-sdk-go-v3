@@ -13,55 +13,55 @@ import (
 type ModifyJobReq struct {
 
 	// 任务id
-	JobId string `json:"job_id" xml:"job_id"`
+	JobId string `json:"job_id"`
 
 	// 任务描述，修改任务描述时必填。
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 任务名称，修改任务名称时必填
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
-	AlarmNotify *AlarmNotifyInfo `json:"alarm_notify,omitempty" xml:"alarm_notify"`
+	AlarmNotify *AlarmNotifyInfo `json:"alarm_notify,omitempty"`
 
 	// 任务模式，FULL_TRANS：全量；FULL_INCR_TRANS：全量+增量；INCR_TRANS：增量。
-	TaskType *ModifyJobReqTaskType `json:"task_type,omitempty" xml:"task_type"`
+	TaskType *ModifyJobReqTaskType `json:"task_type,omitempty"`
 
-	SourceEndpoint *Endpoint `json:"source_endpoint,omitempty" xml:"source_endpoint"`
+	SourceEndpoint *Endpoint `json:"source_endpoint,omitempty"`
 
-	TargetEndpoint *Endpoint `json:"target_endpoint,omitempty" xml:"target_endpoint"`
+	TargetEndpoint *Endpoint `json:"target_endpoint,omitempty"`
 
 	// node规格类型，测试连接之后修改调用时必填。
-	NodeType *ModifyJobReqNodeType `json:"node_type,omitempty" xml:"node_type"`
+	NodeType *ModifyJobReqNodeType `json:"node_type,omitempty"`
 
 	// 引擎类型，测试连接之后修改调用时必填。mysql：迁移，同步使用。mongodb：迁移使用。cloudDataGuard-mysql：灾备使用
-	EngineType *ModifyJobReqEngineType `json:"engine_type,omitempty" xml:"engine_type"`
+	EngineType *ModifyJobReqEngineType `json:"engine_type,omitempty"`
 
 	// 网络类型，测试连接之后修改调用时必填。
-	NetType *ModifyJobReqNetType `json:"net_type,omitempty" xml:"net_type"`
+	NetType *ModifyJobReqNetType `json:"net_type,omitempty"`
 
 	// 保存数据库信息，测试连接之后修改调用时必填为true。
-	StoreDbInfo *bool `json:"store_db_info,omitempty" xml:"store_db_info"`
+	StoreDbInfo *bool `json:"store_db_info,omitempty"`
 
 	// 是否为重建任务。
-	IsRecreate *bool `json:"is_recreate,omitempty" xml:"is_recreate"`
+	IsRecreate *bool `json:"is_recreate,omitempty"`
 
 	// 迁移方向,up 入云 灾备场景时对应本云为备,down 出云 灾备场景时对应本云为主,non-dbs 自建
-	JobDirection *ModifyJobReqJobDirection `json:"job_direction,omitempty" xml:"job_direction"`
+	JobDirection *ModifyJobReqJobDirection `json:"job_direction,omitempty"`
 
 	// 目标实例是否限制为只读。
-	IsTargetReadonly *bool `json:"is_target_readonly,omitempty" xml:"is_target_readonly"`
+	IsTargetReadonly *bool `json:"is_target_readonly,omitempty"`
 
 	// 所有Definer是否迁移到该用户下，MySQL数据库支持该设置，测试连接之后修改调用时必填。 - true：迁移后，所有源数据库对象的Definer都会迁移至该用户下，其他用户需要授权后才具有数据库对象权限 - false：迁移后，将保持源数据库对象Definer定义不变，选择此选项，需要配合下一步用户权限迁移功能，将源数据库的用户全部迁移，这样才能保持源数据库的权限体系完全不变。
-	ReplaceDefiner *bool `json:"replace_definer,omitempty" xml:"replace_definer"`
+	ReplaceDefiner *bool `json:"replace_definer,omitempty"`
 
 	// 标签信息
-	Tags *[]ResourceTag `json:"tags,omitempty" xml:"tags"`
+	Tags *[]ResourceTag `json:"tags,omitempty"`
 
 	// 迁移类型，migration-实时迁移,sync-实时同步,cloudDataGuard-实时灾备
-	DbUseType *ModifyJobReqDbUseType `json:"db_use_type,omitempty" xml:"db_use_type"`
+	DbUseType *ModifyJobReqDbUseType `json:"db_use_type,omitempty"`
 
 	// 产品ID。
-	ProductId *string `json:"product_id,omitempty" xml:"product_id"`
+	ProductId *string `json:"product_id,omitempty"`
 }
 
 func (o ModifyJobReq) String() string {

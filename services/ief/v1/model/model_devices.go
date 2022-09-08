@@ -8,7 +8,7 @@ import (
 
 // 终端设备属性
 type Devices struct {
-	Devices *DevicesDevices `json:"devices" xml:"devices"`
+	Devices *DevicesDevices `json:"devices"`
 }
 
 func (o Devices) String() string {

@@ -10,10 +10,10 @@ import (
 type Pronunciation struct {
 
 	// 发音质量综合得分 0-100
-	Score float32 `json:"score" xml:"score"`
+	Score float32 `json:"score"`
 
 	// 发音质量好坏 0-100
-	Gop float32 `json:"gop" xml:"gop"`
+	Gop float32 `json:"gop"`
 }
 
 func (o Pronunciation) String() string {

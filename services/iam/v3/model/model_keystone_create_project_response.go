@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type KeystoneCreateProjectResponse struct {
-	Project        *AuthProjectResult `json:"project,omitempty" xml:"project"`
+	Project        *AuthProjectResult `json:"project,omitempty"`
 	HttpStatusCode int                `json:"-"`
 }
 

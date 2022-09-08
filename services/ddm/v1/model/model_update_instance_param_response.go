@@ -10,19 +10,19 @@ import (
 type UpdateInstanceParamResponse struct {
 
 	// 节点列表。
-	NodeList *string `json:"nodeList,omitempty" xml:"nodeList"`
+	NodeList *string `json:"nodeList,omitempty"`
 
 	// 是否需要重启实例。
-	NeedRestart *bool `json:"needRestart,omitempty" xml:"needRestart"`
+	NeedRestart *bool `json:"needRestart,omitempty"`
 
 	// 任务id。
-	JobId *string `json:"jobId,omitempty" xml:"jobId"`
+	JobId *string `json:"jobId,omitempty"`
 
 	// 参数组id。
-	ConfigId *string `json:"configId,omitempty" xml:"configId"`
+	ConfigId *string `json:"configId,omitempty"`
 
 	// 参数组名称。
-	ConfigName     *string `json:"configName,omitempty" xml:"configName"`
+	ConfigName     *string `json:"configName,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

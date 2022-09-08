@@ -10,12 +10,12 @@ import (
 type KeystoneCreateProtocolRequest struct {
 
 	// 身份提供商ID。
-	IdpId string `json:"idp_id" xml:"idp_id"`
+	IdpId string `json:"idp_id"`
 
 	// 待注册的协议ID。
-	ProtocolId string `json:"protocol_id" xml:"protocol_id"`
+	ProtocolId string `json:"protocol_id"`
 
-	Body *KeystoneCreateProtocolRequestBody `json:"body,omitempty" xml:"body"`
+	Body *KeystoneCreateProtocolRequestBody `json:"body,omitempty"`
 }
 
 func (o KeystoneCreateProtocolRequest) String() string {

@@ -10,9 +10,9 @@ import (
 type UpdateTempRequest struct {
 
 	// 事务id
-	TemplateId int32 `json:"template_id" xml:"template_id"`
+	TemplateId int32 `json:"template_id"`
 
-	Body *UpdateTempRequestBody `json:"body,omitempty" xml:"body"`
+	Body *UpdateTempRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateTempRequest) String() string {

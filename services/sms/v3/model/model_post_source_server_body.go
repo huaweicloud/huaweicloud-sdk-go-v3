@@ -13,73 +13,73 @@ import (
 type PostSourceServerBody struct {
 
 	// 源端在SMS数据库中的ID
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 源端服务器ip，注册源端时必选，更新非必选
-	Ip string `json:"ip" xml:"ip"`
+	Ip string `json:"ip"`
 
 	// 用来区分不同源端服务器的名称
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 源端主机名，注册源端必选，更新非必选
-	Hostname *string `json:"hostname,omitempty" xml:"hostname"`
+	Hostname *string `json:"hostname,omitempty"`
 
 	// 源端服务器的OS类型，分为Windows和Linux，注册必选，更新非必选
-	OsType PostSourceServerBodyOsType `json:"os_type" xml:"os_type"`
+	OsType PostSourceServerBodyOsType `json:"os_type"`
 
 	// 操作系统版本，注册必选，更新非必选
-	OsVersion *string `json:"os_version,omitempty" xml:"os_version"`
+	OsVersion *string `json:"os_version,omitempty"`
 
 	// 源端服务器启动类型，如BIOS或者UEFI
-	Firmware *PostSourceServerBodyFirmware `json:"firmware,omitempty" xml:"firmware"`
+	Firmware *PostSourceServerBodyFirmware `json:"firmware,omitempty"`
 
 	// CPU个数，单位vCPU
-	CpuQuantity *int32 `json:"cpu_quantity,omitempty" xml:"cpu_quantity"`
+	CpuQuantity *int32 `json:"cpu_quantity,omitempty"`
 
 	// 内存大小，单位MB
-	Memory *int64 `json:"memory,omitempty" xml:"memory"`
+	Memory *int64 `json:"memory,omitempty"`
 
 	// 源端服务器的磁盘信息
-	Disks *[]ServerDisk `json:"disks,omitempty" xml:"disks"`
+	Disks *[]ServerDisk `json:"disks,omitempty"`
 
 	// Linux 必选，源端的Btrfs信息。如果源端不存在Btrfs，则为[]
-	BtrfsList *[]BtrfsFileSystem `json:"btrfs_list,omitempty" xml:"btrfs_list"`
+	BtrfsList *[]BtrfsFileSystem `json:"btrfs_list,omitempty"`
 
 	// 源端服务器的网卡信息
-	Networks *[]NetWork `json:"networks,omitempty" xml:"networks"`
+	Networks *[]NetWork `json:"networks,omitempty"`
 
 	// 租户的domainId
-	DomainId *string `json:"domain_id,omitempty" xml:"domain_id"`
+	DomainId *string `json:"domain_id,omitempty"`
 
 	// 是否安装rsync组件，Linux系统此参数为必选
-	HasRsync *bool `json:"has_rsync,omitempty" xml:"has_rsync"`
+	HasRsync *bool `json:"has_rsync,omitempty"`
 
 	// Linux场景必选，源端是否是半虚拟化
-	Paravirtualization *bool `json:"paravirtualization,omitempty" xml:"paravirtualization"`
+	Paravirtualization *bool `json:"paravirtualization,omitempty"`
 
 	// Linux必选，裸设备列表
-	RawDevices *string `json:"raw_devices,omitempty" xml:"raw_devices"`
+	RawDevices *string `json:"raw_devices,omitempty"`
 
 	// Windows 必选，是否缺少驱动文件
-	DriverFiles *bool `json:"driver_files,omitempty" xml:"driver_files"`
+	DriverFiles *bool `json:"driver_files,omitempty"`
 
 	// Windows必选，是否存在不正常服务
-	SystemServices *bool `json:"system_services,omitempty" xml:"system_services"`
+	SystemServices *bool `json:"system_services,omitempty"`
 
 	// Windows必选，权限是否满足要求
-	AccountRights *bool `json:"account_rights,omitempty" xml:"account_rights"`
+	AccountRights *bool `json:"account_rights,omitempty"`
 
 	// Linux必选，系统引导类型，BOOT_LOADER(GRUB/LILO)
-	BootLoader *PostSourceServerBodyBootLoader `json:"boot_loader,omitempty" xml:"boot_loader"`
+	BootLoader *PostSourceServerBodyBootLoader `json:"boot_loader,omitempty"`
 
 	// Windows必选，系统目录
-	SystemDir *string `json:"system_dir,omitempty" xml:"system_dir"`
+	SystemDir *string `json:"system_dir,omitempty"`
 
 	// Linux必选，如果没有卷组，输入[]
-	VolumeGroups *[]VolumeGroups `json:"volume_groups,omitempty" xml:"volume_groups"`
+	VolumeGroups *[]VolumeGroups `json:"volume_groups,omitempty"`
 
 	// Agent版本
-	AgentVersion string `json:"agent_version" xml:"agent_version"`
+	AgentVersion string `json:"agent_version"`
 }
 
 func (o PostSourceServerBody) String() string {

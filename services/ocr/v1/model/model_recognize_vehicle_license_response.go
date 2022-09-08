@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type RecognizeVehicleLicenseResponse struct {
-	Result         *VehicleLicenseResult `json:"result,omitempty" xml:"result"`
+	Result         *VehicleLicenseResult `json:"result,omitempty"`
 	HttpStatusCode int                   `json:"-"`
 }
 

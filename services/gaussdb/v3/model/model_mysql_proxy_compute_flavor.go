@@ -9,22 +9,22 @@ import (
 type MysqlProxyComputeFlavor struct {
 
 	// CPU大小。例如：1表示1U。
-	Vcpus string `json:"vcpus" xml:"vcpus"`
+	Vcpus string `json:"vcpus"`
 
 	// 内存大小，单位为GB。
-	Ram string `json:"ram" xml:"ram"`
+	Ram string `json:"ram"`
 
 	// 数据库类型。
-	DbType string `json:"db_type" xml:"db_type"`
+	DbType string `json:"db_type"`
 
 	// Proxy规格id。
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
 	// Proxy规格码。
-	SpecCode string `json:"spec_code" xml:"spec_code"`
+	SpecCode string `json:"spec_code"`
 
 	// 其中key是可用区编号，value是规格所在az的状态。
-	AzStatus *interface{} `json:"az_status" xml:"az_status"`
+	AzStatus *interface{} `json:"az_status"`
 }
 
 func (o MysqlProxyComputeFlavor) String() string {

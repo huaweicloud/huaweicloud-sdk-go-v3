@@ -12,13 +12,13 @@ import (
 type Identity struct {
 
 	// 参数名称。  支持数字，英文，下划线，中划线，点，且只能以数字或英文开头。
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 参数位置
-	Location IdentityLocation `json:"location" xml:"location"`
+	Location IdentityLocation `json:"location"`
 
 	// 参数校验表达式，默认为null，不做校验
-	Validation *string `json:"validation,omitempty" xml:"validation"`
+	Validation *string `json:"validation,omitempty"`
 }
 
 func (o Identity) String() string {

@@ -10,19 +10,19 @@ import (
 type DataBase struct {
 
 	// 端口。
-	Port *string `json:"port,omitempty" xml:"port"`
+	Port *string `json:"port,omitempty"`
 
 	// 连接IP。
-	Ip *string `json:"ip,omitempty" xml:"ip"`
+	Ip *string `json:"ip,omitempty"`
 
 	// 用户名。
-	UserName string `json:"user_name" xml:"user_name"`
+	UserName string `json:"user_name"`
 
 	// 服务名。
-	ServiceName string `json:"service_name" xml:"service_name"`
+	ServiceName string `json:"service_name"`
 
 	// 连接字符串。
-	ConnectionString *string `json:"connection_string,omitempty" xml:"connection_string"`
+	ConnectionString *string `json:"connection_string,omitempty"`
 }
 
 func (o DataBase) String() string {

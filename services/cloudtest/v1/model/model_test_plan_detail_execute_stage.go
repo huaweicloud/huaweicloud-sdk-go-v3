@@ -10,16 +10,16 @@ import (
 type TestPlanDetailExecuteStage struct {
 
 	// 缺陷个数
-	DefectCount *int32 `json:"defect_count,omitempty" xml:"defect_count"`
+	DefectCount *int32 `json:"defect_count,omitempty"`
 
 	// 已完成缺陷个数
-	CompletedDefectCount *int32 `json:"completed_defect_count,omitempty" xml:"completed_defect_count"`
+	CompletedDefectCount *int32 `json:"completed_defect_count,omitempty"`
 
 	// 用例通过率,按用例结果计算
-	CasePassRate *string `json:"case_pass_rate,omitempty" xml:"case_pass_rate"`
+	CasePassRate *string `json:"case_pass_rate,omitempty"`
 
 	// 已执行用例数, 按用例状态统计
-	ExecutedCaseCount *int32 `json:"executed_case_count,omitempty" xml:"executed_case_count"`
+	ExecutedCaseCount *int32 `json:"executed_case_count,omitempty"`
 }
 
 func (o TestPlanDetailExecuteStage) String() string {

@@ -12,7 +12,7 @@ import (
 type SetRepoRoleRequestBody struct {
 
 	// 设置仓库的成员权限，取值范围：20 -> 只读成员 30->普通成员，40->管理员
-	Role SetRepoRoleRequestBodyRole `json:"role" xml:"role"`
+	Role SetRepoRoleRequestBodyRole `json:"role"`
 }
 
 func (o SetRepoRoleRequestBody) String() string {

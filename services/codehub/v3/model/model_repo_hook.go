@@ -10,43 +10,43 @@ import (
 type RepoHook struct {
 
 	// 是否触发build_events事件
-	BuildEvents *bool `json:"build_events,omitempty" xml:"build_events"`
+	BuildEvents *bool `json:"build_events,omitempty"`
 
 	// 仓库统计创建的时间
-	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty" xml:"created_at"`
+	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
 
 	// 是否使用ssl验证
-	EnableSslVerification *bool `json:"enable_ssl_verification,omitempty" xml:"enable_ssl_verification"`
+	EnableSslVerification *bool `json:"enable_ssl_verification,omitempty"`
 
 	// hook id
-	Id *int32 `json:"id,omitempty" xml:"id"`
+	Id *int32 `json:"id,omitempty"`
 
 	// 是否触发issues_events事件
-	IssuesEvents *bool `json:"issues_events,omitempty" xml:"issues_events"`
+	IssuesEvents *bool `json:"issues_events,omitempty"`
 
 	// 是否触发merge_requests_events事件
-	MergeRequestsEvents *bool `json:"merge_requests_events,omitempty" xml:"merge_requests_events"`
+	MergeRequestsEvents *bool `json:"merge_requests_events,omitempty"`
 
 	// 是否触发note_events事件
-	NoteEvents *bool `json:"note_events,omitempty" xml:"note_events"`
+	NoteEvents *bool `json:"note_events,omitempty"`
 
 	// 是否触发pipeline_events事件
-	PipelineEvents *bool `json:"pipeline_events,omitempty" xml:"pipeline_events"`
+	PipelineEvents *bool `json:"pipeline_events,omitempty"`
 
 	// 仓库id
-	ProjectId *int32 `json:"project_id,omitempty" xml:"project_id"`
+	ProjectId *int32 `json:"project_id,omitempty"`
 
 	// 是否触发push_events事件
-	PushEvents *bool `json:"push_events,omitempty" xml:"push_events"`
+	PushEvents *bool `json:"push_events,omitempty"`
 
 	// 是否触发repository_update_events事件
-	RepositoryUpdateEvents *bool `json:"repository_update_events,omitempty" xml:"repository_update_events"`
+	RepositoryUpdateEvents *bool `json:"repository_update_events,omitempty"`
 
 	// 是否触发tag_push_events事件
-	TagPushEvents *bool `json:"tag_push_events,omitempty" xml:"tag_push_events"`
+	TagPushEvents *bool `json:"tag_push_events,omitempty"`
 
 	// 是否触发wiki_page_events事件
-	WikiPageEvents *bool `json:"wiki_page_events,omitempty" xml:"wiki_page_events"`
+	WikiPageEvents *bool `json:"wiki_page_events,omitempty"`
 }
 
 func (o RepoHook) String() string {

@@ -13,9 +13,9 @@ import (
 type BatchValidateClustersConnectionsRequest struct {
 
 	// 请求语言类型
-	XLanguage *BatchValidateClustersConnectionsRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *BatchValidateClustersConnectionsRequestXLanguage `json:"X-Language,omitempty"`
 
-	Body *BatchSpecialTestConnectionReq `json:"body,omitempty" xml:"body"`
+	Body *BatchSpecialTestConnectionReq `json:"body,omitempty"`
 }
 
 func (o BatchValidateClustersConnectionsRequest) String() string {

@@ -10,10 +10,10 @@ import (
 type SignResponse struct {
 
 	// 密钥ID。
-	KeyId *string `json:"key_id,omitempty" xml:"key_id"`
+	KeyId *string `json:"key_id,omitempty"`
 
 	// 签名值，使用base64编码。
-	Signature      *string `json:"signature,omitempty" xml:"signature"`
+	Signature      *string `json:"signature,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -10,10 +10,10 @@ import (
 type DrillServerParams struct {
 
 	// 演练云服务器对应的保护实例ID。
-	ProtectedInstance string `json:"protected_instance" xml:"protected_instance"`
+	ProtectedInstance string `json:"protected_instance"`
 
 	// 演练云服务器ID。
-	DrillServerId string `json:"drill_server_id" xml:"drill_server_id"`
+	DrillServerId string `json:"drill_server_id"`
 }
 
 func (o DrillServerParams) String() string {

@@ -10,15 +10,15 @@ import (
 type ShowResSceneResponse struct {
 
 	// 是否成功。
-	IsSuccess *bool `json:"is_success,omitempty" xml:"is_success"`
+	IsSuccess *bool `json:"is_success,omitempty"`
 
-	Scene *ResScene `json:"scene,omitempty" xml:"scene"`
+	Scene *ResScene `json:"scene,omitempty"`
 
 	// 返回消息（请求成功时，不返回此字段）。
-	Message *string `json:"message,omitempty" xml:"message"`
+	Message *string `json:"message,omitempty"`
 
 	// 错误码（请求成功时，不返回此字段）。
-	ErrorCode      *string `json:"error_code,omitempty" xml:"error_code"`
+	ErrorCode      *string `json:"error_code,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

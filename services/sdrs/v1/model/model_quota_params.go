@@ -10,7 +10,7 @@ import (
 type QuotaParams struct {
 
 	// 租户资源配额信息列表。
-	Resources []QuotaResourceParams `json:"resources" xml:"resources"`
+	Resources []QuotaResourceParams `json:"resources"`
 }
 
 func (o QuotaParams) String() string {

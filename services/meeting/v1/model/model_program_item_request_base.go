@@ -10,10 +10,10 @@ import (
 type ProgramItemRequestBase struct {
 
 	// 素材ID
-	MaterialId string `json:"materialId" xml:"materialId"`
+	MaterialId string `json:"materialId"`
 
 	// 播放时长
-	PlayTime int32 `json:"playTime" xml:"playTime"`
+	PlayTime int32 `json:"playTime"`
 }
 
 func (o ProgramItemRequestBase) String() string {

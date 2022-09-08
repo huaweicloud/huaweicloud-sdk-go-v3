@@ -10,10 +10,10 @@ import (
 type ListVolume struct {
 
 	// 磁盘类型。
-	Type string `json:"type" xml:"type"`
+	Type string `json:"type"`
 
 	// 磁盘大小。
-	Size int32 `json:"size" xml:"size"`
+	Size int32 `json:"size"`
 }
 
 func (o ListVolume) String() string {

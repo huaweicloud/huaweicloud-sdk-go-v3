@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type AuthorizeDomainsRequest struct {
-	Body *AuthorizeDomainsRequestBody `json:"body,omitempty" xml:"body"`
+	Body *AuthorizeDomainsRequestBody `json:"body,omitempty"`
 }
 
 func (o AuthorizeDomainsRequest) String() string {

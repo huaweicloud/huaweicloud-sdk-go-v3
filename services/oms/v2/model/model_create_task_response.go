@@ -10,10 +10,10 @@ import (
 type CreateTaskResponse struct {
 
 	// 任务ID。
-	Id *int64 `json:"id,omitempty" xml:"id"`
+	Id *int64 `json:"id,omitempty"`
 
 	// 任务名称。
-	TaskName       *string `json:"task_name,omitempty" xml:"task_name"`
+	TaskName       *string `json:"task_name,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

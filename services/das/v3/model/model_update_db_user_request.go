@@ -13,15 +13,15 @@ import (
 type UpdateDbUserRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 数据库用户ID
-	DbUserId string `json:"db_user_id" xml:"db_user_id"`
+	DbUserId string `json:"db_user_id"`
 
 	// 语言
-	XLanguage *UpdateDbUserRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *UpdateDbUserRequestXLanguage `json:"X-Language,omitempty"`
 
-	Body *UpdateDbUserRequestBody `json:"body,omitempty" xml:"body"`
+	Body *UpdateDbUserRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateDbUserRequest) String() string {

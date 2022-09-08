@@ -10,28 +10,28 @@ import (
 type ExecuteRecordV2Body struct {
 
 	// 执行用时
-	Duration *string `json:"duration,omitempty" xml:"duration"`
+	Duration *string `json:"duration,omitempty"`
 
 	// 任务状态
-	State *string `json:"state,omitempty" xml:"state"`
+	State *string `json:"state,omitempty"`
 
 	// 操作人用户名
-	Operator *string `json:"operator,omitempty" xml:"operator"`
+	Operator *string `json:"operator,omitempty"`
 
 	// 执行记录ID
-	ExecutionId *string `json:"execution_id,omitempty" xml:"execution_id"`
+	ExecutionId *string `json:"execution_id,omitempty"`
 
 	// 执行任务的开始时间
-	StartTime *string `json:"start_time,omitempty" xml:"start_time"`
+	StartTime *string `json:"start_time,omitempty"`
 
 	// 操作人昵称
-	Nickname *string `json:"nickname,omitempty" xml:"nickname"`
+	Nickname *string `json:"nickname,omitempty"`
 
 	// 执行任务的结束时间
-	EndTime *string `json:"end_time,omitempty" xml:"end_time"`
+	EndTime *string `json:"end_time,omitempty"`
 
 	// 执行序列号
-	ReleaseId *int64 `json:"release_id,omitempty" xml:"release_id"`
+	ReleaseId *int64 `json:"release_id,omitempty"`
 }
 
 func (o ExecuteRecordV2Body) String() string {

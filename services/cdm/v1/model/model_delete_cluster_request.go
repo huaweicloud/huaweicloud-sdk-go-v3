@@ -10,9 +10,9 @@ import (
 type DeleteClusterRequest struct {
 
 	// 集群ID
-	ClusterId string `json:"cluster_id" xml:"cluster_id"`
+	ClusterId string `json:"cluster_id"`
 
-	Body *CdmDeleteClusterReq `json:"body,omitempty" xml:"body"`
+	Body *CdmDeleteClusterReq `json:"body,omitempty"`
 }
 
 func (o DeleteClusterRequest) String() string {

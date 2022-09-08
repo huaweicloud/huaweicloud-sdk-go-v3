@@ -9,13 +9,13 @@ import (
 type SourceStorage struct {
 
 	// 位置
-	Location *string `json:"location,omitempty" xml:"location"`
+	Location *string `json:"location,omitempty"`
 
 	// 参数值
-	Parameters map[string]string `json:"parameters,omitempty" xml:"parameters"`
+	Parameters map[string]string `json:"parameters,omitempty"`
 
 	// 类型
-	Type *string `json:"type,omitempty" xml:"type"`
+	Type *string `json:"type,omitempty"`
 }
 
 func (o SourceStorage) String() string {

@@ -10,13 +10,13 @@ import (
 type DiscoveryRule struct {
 
 	// 匹配值。
-	CheckContent []string `json:"checkContent" xml:"checkContent"`
+	CheckContent []string `json:"checkContent"`
 
 	// 匹配条件。 contain、equals
-	CheckMode string `json:"checkMode" xml:"checkMode"`
+	CheckMode string `json:"checkMode"`
 
 	// 匹配类型。 cmdLine、env、scope
-	CheckType string `json:"checkType" xml:"checkType"`
+	CheckType string `json:"checkType"`
 }
 
 func (o DiscoveryRule) String() string {

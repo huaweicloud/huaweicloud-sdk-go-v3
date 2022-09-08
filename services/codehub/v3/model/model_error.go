@@ -9,10 +9,10 @@ import (
 type Error struct {
 
 	// 错误码
-	Code *string `json:"code,omitempty" xml:"code"`
+	Code *string `json:"code,omitempty"`
 
 	// 错误信息
-	Message *string `json:"message,omitempty" xml:"message"`
+	Message *string `json:"message,omitempty"`
 }
 
 func (o Error) String() string {

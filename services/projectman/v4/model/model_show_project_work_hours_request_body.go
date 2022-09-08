@@ -9,25 +9,25 @@ import (
 type ShowProjectWorkHoursRequestBody struct {
 
 	// 查询的用户id列表
-	UserIds *[]string `json:"user_ids,omitempty" xml:"user_ids"`
+	UserIds *[]string `json:"user_ids,omitempty"`
 
 	// 工时类型，以逗号分隔,21:研发设计,22:后端开发,23:前端开发(Web),24:前端开发(小程序),25:前端开发(App),26:测试验证,27:缺陷修复,28:UI设计,29:会议,30:公共事务,31:培训,32:研究,33:其它,34:调休请假
-	WorkHoursTypes *string `json:"work_hours_types,omitempty" xml:"work_hours_types"`
+	WorkHoursTypes *string `json:"work_hours_types,omitempty"`
 
 	// 工时日期，以逗号分隔，年-月-日
-	WorkHoursDates *string `json:"work_hours_dates,omitempty" xml:"work_hours_dates"`
+	WorkHoursDates *string `json:"work_hours_dates,omitempty"`
 
 	// 工时开始日期，年-月-日
-	BeginTime *string `json:"begin_time,omitempty" xml:"begin_time"`
+	BeginTime *string `json:"begin_time,omitempty"`
 
 	// 工时结束日期，年-月-日
-	EndTime *string `json:"end_time,omitempty" xml:"end_time"`
+	EndTime *string `json:"end_time,omitempty"`
 
 	// 偏移量,offset是limit的整数倍，limit=10,offset=0,10,20...
-	Offset int32 `json:"offset" xml:"offset"`
+	Offset int32 `json:"offset"`
 
 	// 每页显示数量，每页最多显示100条
-	Limit int32 `json:"limit" xml:"limit"`
+	Limit int32 `json:"limit"`
 }
 
 func (o ShowProjectWorkHoursRequestBody) String() string {

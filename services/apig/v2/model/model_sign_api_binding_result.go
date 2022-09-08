@@ -9,7 +9,7 @@ import (
 type SignApiBindingResult struct {
 
 	// API与签名密钥的绑定关系列表
-	Bindings *[]SignApiBindingInfo `json:"bindings,omitempty" xml:"bindings"`
+	Bindings *[]SignApiBindingInfo `json:"bindings,omitempty"`
 }
 
 func (o SignApiBindingResult) String() string {

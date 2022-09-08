@@ -10,7 +10,7 @@ import (
 type ShowsSpeedLimitsResponse struct {
 
 	// 按时间段限速信息
-	SpeedLimit     *[]SpeedLimitlJson `json:"speed_limit,omitempty" xml:"speed_limit"`
+	SpeedLimit     *[]SpeedLimitlJson `json:"speed_limit,omitempty"`
 	HttpStatusCode int                `json:"-"`
 }
 

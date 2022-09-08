@@ -10,11 +10,11 @@ import (
 type CreateResDatasourceRequestBody struct {
 
 	// 数据源名称，1-64位字母、数字、下划线、中划线组合。
-	DatasourceName string `json:"datasource_name" xml:"datasource_name"`
+	DatasourceName string `json:"datasource_name"`
 
-	SpecsConfig *SpecsConfig `json:"specs_config" xml:"specs_config"`
+	SpecsConfig *SpecsConfig `json:"specs_config"`
 
-	DataConfig *DataConfig `json:"data_config" xml:"data_config"`
+	DataConfig *DataConfig `json:"data_config"`
 }
 
 func (o CreateResDatasourceRequestBody) String() string {

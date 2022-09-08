@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RunSentimentRequest struct {
-	Body *HwCloudSentimentReq `json:"body,omitempty" xml:"body"`
+	Body *HwCloudSentimentReq `json:"body,omitempty"`
 }
 
 func (o RunSentimentRequest) String() string {

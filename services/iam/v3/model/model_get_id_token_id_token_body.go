@@ -10,7 +10,7 @@ import (
 type GetIdTokenIdTokenBody struct {
 
 	// id_token的值
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 }
 
 func (o GetIdTokenIdTokenBody) String() string {

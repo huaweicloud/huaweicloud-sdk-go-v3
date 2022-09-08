@@ -9,13 +9,13 @@ import (
 type OAuth struct {
 
 	// 授权名称。
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// git仓库授权后，重定向回来的url里面的query参数。
-	Code string `json:"code" xml:"code"`
+	Code string `json:"code"`
 
 	// git仓库授权后，一次性的认证编码和随机串。
-	State string `json:"state" xml:"state"`
+	State string `json:"state"`
 }
 
 func (o OAuth) String() string {

@@ -10,13 +10,13 @@ import (
 type PutLogicalVolume struct {
 
 	// 逻辑卷id
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
 	// 是否迁移
-	NeedMigration *bool `json:"need_migration,omitempty" xml:"need_migration"`
+	NeedMigration *bool `json:"need_migration,omitempty"`
 
 	// 调整大小
-	AdjustSize *int64 `json:"adjust_size,omitempty" xml:"adjust_size"`
+	AdjustSize *int64 `json:"adjust_size,omitempty"`
 }
 
 func (o PutLogicalVolume) String() string {

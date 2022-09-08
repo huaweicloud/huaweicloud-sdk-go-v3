@@ -9,7 +9,7 @@ import (
 type AssetExportRequestApps struct {
 
 	// 应用ID
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 }
 
 func (o AssetExportRequestApps) String() string {

@@ -13,22 +13,22 @@ import (
 type ShowResourceHistoryRequest struct {
 
 	// 资源ID
-	ResourceId string `json:"resource_id" xml:"resource_id"`
+	ResourceId string `json:"resource_id"`
 
 	// 分页参数，通过上一个请求中返回的marker信息作为输入，获取当前页
-	Marker *string `json:"marker,omitempty" xml:"marker"`
+	Marker *string `json:"marker,omitempty"`
 
 	// 最大的返回数量
-	Limit *int32 `json:"limit,omitempty" xml:"limit"`
+	Limit *int32 `json:"limit,omitempty"`
 
 	// 指定查询范围的起始时间点，如果不设置此参数，默认为最早的时间
-	EarlierTime *int64 `json:"earlier_time,omitempty" xml:"earlier_time"`
+	EarlierTime *int64 `json:"earlier_time,omitempty"`
 
 	// 指定查询范围的结束时间点，如果不设置此参数，默认为当前时间
-	LaterTime *int64 `json:"later_time,omitempty" xml:"later_time"`
+	LaterTime *int64 `json:"later_time,omitempty"`
 
 	// 指定返回数据的时间顺序，默认为倒序
-	ChronologicalOrder *ShowResourceHistoryRequestChronologicalOrder `json:"chronological_order,omitempty" xml:"chronological_order"`
+	ChronologicalOrder *ShowResourceHistoryRequestChronologicalOrder `json:"chronological_order,omitempty"`
 }
 
 func (o ShowResourceHistoryRequest) String() string {

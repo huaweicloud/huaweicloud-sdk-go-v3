@@ -10,12 +10,12 @@ import (
 type GrantDatabasePermission struct {
 
 	// 数据库用户名。
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 主机地址。
-	Host *string `json:"host,omitempty" xml:"host"`
+	Host *string `json:"host,omitempty"`
 
-	Databases []DatabasePermission `json:"databases" xml:"databases"`
+	Databases []DatabasePermission `json:"databases"`
 }
 
 func (o GrantDatabasePermission) String() string {

@@ -10,13 +10,13 @@ import (
 type UpdateLoadbalancerReq struct {
 
 	// 负载均衡器名称。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 负载均衡器的描述信息
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 负载均衡器的管理状态。只支持设定为true，该字段的值无实际意义。
-	AdminStateUp *bool `json:"admin_state_up,omitempty" xml:"admin_state_up"`
+	AdminStateUp *bool `json:"admin_state_up,omitempty"`
 }
 
 func (o UpdateLoadbalancerReq) String() string {

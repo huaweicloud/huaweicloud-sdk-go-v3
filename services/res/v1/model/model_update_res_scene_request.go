@@ -10,12 +10,12 @@ import (
 type UpdateResSceneRequest struct {
 
 	// 场景id。
-	SceneId string `json:"scene_id" xml:"scene_id"`
+	SceneId string `json:"scene_id"`
 
 	// 工作空间id。
-	WorkspaceId string `json:"workspace_id" xml:"workspace_id"`
+	WorkspaceId string `json:"workspace_id"`
 
-	Body *UpdateResSceneRequestBody `json:"body,omitempty" xml:"body"`
+	Body *UpdateResSceneRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateResSceneRequest) String() string {

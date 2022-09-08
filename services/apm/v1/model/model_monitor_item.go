@@ -10,43 +10,43 @@ import (
 type MonitorItem struct {
 
 	// 监控项id
-	Id *int64 `json:"id,omitempty" xml:"id"`
+	Id *int64 `json:"id,omitempty"`
 
 	// 环境id
-	EnvId *int64 `json:"env_id,omitempty" xml:"env_id"`
+	EnvId *int64 `json:"env_id,omitempty"`
 
 	// 采集器id
-	CollectorId *int32 `json:"collector_id,omitempty" xml:"collector_id"`
+	CollectorId *int32 `json:"collector_id,omitempty"`
 
 	// 采集器名称
-	CollectorName *string `json:"collector_name,omitempty" xml:"collector_name"`
+	CollectorName *string `json:"collector_name,omitempty"`
 
 	// 采集器展示名称
-	DisplayName *string `json:"display_name,omitempty" xml:"display_name"`
+	DisplayName *string `json:"display_name,omitempty"`
 
 	// 采集间隔
-	CollectInterval *int32 `json:"collect_interval,omitempty" xml:"collect_interval"`
+	CollectInterval *int32 `json:"collect_interval,omitempty"`
 
 	// 是否禁用
-	Disabled *bool `json:"disabled,omitempty" xml:"disabled"`
+	Disabled *bool `json:"disabled,omitempty"`
 
 	// 修改采集状态用户id
-	StatusChangeUserId *string `json:"status_change_user_id,omitempty" xml:"status_change_user_id"`
+	StatusChangeUserId *string `json:"status_change_user_id,omitempty"`
 
 	// 修改采集状态用户名称
-	StatusChangeUserName *string `json:"status_change_user_name,omitempty" xml:"status_change_user_name"`
+	StatusChangeUserName *string `json:"status_change_user_name,omitempty"`
 
 	// 修改采集状态时间
-	StatusChangeTime *string `json:"status_change_time,omitempty" xml:"status_change_time"`
+	StatusChangeTime *string `json:"status_change_time,omitempty"`
 
 	// 修改采集配置用户id
-	ConfigChangeUserId *string `json:"config_change_user_id,omitempty" xml:"config_change_user_id"`
+	ConfigChangeUserId *string `json:"config_change_user_id,omitempty"`
 
 	// 修改采集配置用户名称
-	ConfigChangeUserName *string `json:"config_change_user_name,omitempty" xml:"config_change_user_name"`
+	ConfigChangeUserName *string `json:"config_change_user_name,omitempty"`
 
 	// 修改采集配置时间
-	ConfigChangeTime *string `json:"config_change_time,omitempty" xml:"config_change_time"`
+	ConfigChangeTime *string `json:"config_change_time,omitempty"`
 }
 
 func (o MonitorItem) String() string {

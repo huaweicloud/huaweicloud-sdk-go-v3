@@ -9,10 +9,10 @@ import (
 type ProjectTagItem struct {
 
 	// 标签键。
-	Key string `json:"key" xml:"key"`
+	Key string `json:"key"`
 
 	// 标签值。
-	Values []string `json:"values" xml:"values"`
+	Values []string `json:"values"`
 }
 
 func (o ProjectTagItem) String() string {

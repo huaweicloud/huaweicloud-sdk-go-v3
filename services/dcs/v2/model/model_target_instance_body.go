@@ -10,13 +10,13 @@ import (
 type TargetInstanceBody struct {
 
 	// Redis实例ID（target_instance信息中必须填写）。
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
 	// Redis实例名称(target_instance信息中填写)。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// Redis密码，如果设置了密码，则必须填写。
-	Password *string `json:"password,omitempty" xml:"password"`
+	Password *string `json:"password,omitempty"`
 }
 
 func (o TargetInstanceBody) String() string {

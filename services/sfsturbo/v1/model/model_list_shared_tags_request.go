@@ -10,7 +10,7 @@ import (
 type ListSharedTagsRequest struct {
 
 	// MIME类型
-	ContentType string `json:"Content-Type" xml:"Content-Type"`
+	ContentType string `json:"Content-Type"`
 }
 
 func (o ListSharedTagsRequest) String() string {

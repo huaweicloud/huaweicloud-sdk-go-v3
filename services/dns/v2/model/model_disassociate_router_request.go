@@ -10,9 +10,9 @@ import (
 type DisassociateRouterRequest struct {
 
 	// 待解关联zone的ID。
-	ZoneId string `json:"zone_id" xml:"zone_id"`
+	ZoneId string `json:"zone_id"`
 
-	Body *DisassociaterouterReq `json:"body,omitempty" xml:"body"`
+	Body *DisassociaterouterReq `json:"body,omitempty"`
 }
 
 func (o DisassociateRouterRequest) String() string {

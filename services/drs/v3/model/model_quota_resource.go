@@ -10,19 +10,19 @@ import (
 type QuotaResource struct {
 
 	// 配额类型信息
-	Type *string `json:"type,omitempty" xml:"type"`
+	Type *string `json:"type,omitempty"`
 
 	// 配额最小取值
-	Min *int32 `json:"min,omitempty" xml:"min"`
+	Min *int32 `json:"min,omitempty"`
 
 	// 配额最大取值
-	Max *int32 `json:"max,omitempty" xml:"max"`
+	Max *int32 `json:"max,omitempty"`
 
 	// 用户配额的实际值
-	Quota *int32 `json:"quota,omitempty" xml:"quota"`
+	Quota *int32 `json:"quota,omitempty"`
 
 	// 已使用的配额值
-	Used *int32 `json:"used,omitempty" xml:"used"`
+	Used *int32 `json:"used,omitempty"`
 }
 
 func (o QuotaResource) String() string {

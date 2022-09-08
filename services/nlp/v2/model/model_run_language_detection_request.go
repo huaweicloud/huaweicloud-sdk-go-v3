@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RunLanguageDetectionRequest struct {
-	Body *LanguageDetectionReq `json:"body,omitempty" xml:"body"`
+	Body *LanguageDetectionReq `json:"body,omitempty"`
 }
 
 func (o RunLanguageDetectionRequest) String() string {

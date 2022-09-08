@@ -13,10 +13,10 @@ import (
 type CinderListQuotasRequest struct {
 
 	// 目标的项目ID。与project_id保持一致即可。
-	TargetProjectId string `json:"target_project_id" xml:"target_project_id"`
+	TargetProjectId string `json:"target_project_id"`
 
 	// 是否查询配额详细信息。当前只支持传true。
-	Usage CinderListQuotasRequestUsage `json:"usage" xml:"usage"`
+	Usage CinderListQuotasRequestUsage `json:"usage"`
 }
 
 func (o CinderListQuotasRequest) String() string {

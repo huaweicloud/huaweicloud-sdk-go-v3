@@ -10,7 +10,7 @@ import (
 type ListActiveActiveDomainsResponse struct {
 
 	// 双活域列表信息。
-	Domains        *[]ShowActiveActiveDomainParams `json:"domains,omitempty" xml:"domains"`
+	Domains        *[]ShowActiveActiveDomainParams `json:"domains,omitempty"`
 	HttpStatusCode int                             `json:"-"`
 }
 

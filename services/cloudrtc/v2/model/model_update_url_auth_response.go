@@ -10,11 +10,11 @@ import (
 type UpdateUrlAuthResponse struct {
 
 	// 应用id
-	AppId *string `json:"app_id,omitempty" xml:"app_id"`
+	AppId *string `json:"app_id,omitempty"`
 
-	Authentication *AppAuth `json:"authentication,omitempty" xml:"authentication"`
+	Authentication *AppAuth `json:"authentication,omitempty"`
 
-	XRequestId     *string `json:"X-request-Id,omitempty" xml:"X-request-Id"`
+	XRequestId     *string `json:"X-request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

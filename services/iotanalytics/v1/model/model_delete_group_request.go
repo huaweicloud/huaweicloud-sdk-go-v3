@@ -10,7 +10,7 @@ import (
 type DeleteGroupRequest struct {
 
 	// 存储组 ID
-	GroupId string `json:"group_id" xml:"group_id"`
+	GroupId string `json:"group_id"`
 }
 
 func (o DeleteGroupRequest) String() string {

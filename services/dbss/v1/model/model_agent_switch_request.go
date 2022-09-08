@@ -9,10 +9,10 @@ import (
 type AgentSwitchRequest struct {
 
 	// 审计agent的ID
-	AgentId string `json:"agent_id" xml:"agent_id"`
+	AgentId string `json:"agent_id"`
 
 	// Agent开关状态 1：开启 0：关闭
-	Status int32 `json:"status" xml:"status"`
+	Status int32 `json:"status"`
 }
 
 func (o AgentSwitchRequest) String() string {

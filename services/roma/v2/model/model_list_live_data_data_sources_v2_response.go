@@ -10,13 +10,13 @@ import (
 type ListLiveDataDataSourcesV2Response struct {
 
 	// 本次返回的列表长度
-	Size int32 `json:"size" xml:"size"`
+	Size int32 `json:"size"`
 
 	// 满足条件的记录数
-	Total int64 `json:"total" xml:"total"`
+	Total int64 `json:"total"`
 
 	// 数据源列表
-	DataSources    *[]LdDatasourceInfo `json:"data_sources,omitempty" xml:"data_sources"`
+	DataSources    *[]LdDatasourceInfo `json:"data_sources,omitempty"`
 	HttpStatusCode int                 `json:"-"`
 }
 

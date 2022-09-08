@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type BatchSetTagsRequest struct {
-	Body *BatchSetTagsReq `json:"body,omitempty" xml:"body"`
+	Body *BatchSetTagsReq `json:"body,omitempty"`
 }
 
 func (o BatchSetTagsRequest) String() string {

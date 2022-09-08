@@ -9,37 +9,37 @@ import (
 type ShowMqsInstanceMessagesRespMessages struct {
 
 	// topic名称。
-	Topic *string `json:"topic,omitempty" xml:"topic"`
+	Topic *string `json:"topic,omitempty"`
 
 	// 消息所在的分区。
-	Partition *int32 `json:"partition,omitempty" xml:"partition"`
+	Partition *int32 `json:"partition,omitempty"`
 
 	// 消息key。
-	Key *string `json:"key,omitempty" xml:"key"`
+	Key *string `json:"key,omitempty"`
 
 	// 消息内容。
-	Value *string `json:"value,omitempty" xml:"value"`
+	Value *string `json:"value,omitempty"`
 
 	// 消息大小。
-	Size *int64 `json:"size,omitempty" xml:"size"`
+	Size *int64 `json:"size,omitempty"`
 
 	// topic名称。
-	Timestamp *int64 `json:"timestamp,omitempty" xml:"timestamp"`
+	Timestamp *int64 `json:"timestamp,omitempty"`
 
 	// 大数据标识。
-	HugeMessage *bool `json:"huge_message,omitempty" xml:"huge_message"`
+	HugeMessage *bool `json:"huge_message,omitempty"`
 
 	// 消息偏移量。
-	MessageOffset *int64 `json:"message_offset,omitempty" xml:"message_offset"`
+	MessageOffset *int64 `json:"message_offset,omitempty"`
 
 	// 消息ID。
-	MessageId *string `json:"message_id,omitempty" xml:"message_id"`
+	MessageId *string `json:"message_id,omitempty"`
 
 	// 应用ID。
-	AppId *string `json:"app_id,omitempty" xml:"app_id"`
+	AppId *string `json:"app_id,omitempty"`
 
 	// 消息标签。
-	Tag *string `json:"tag,omitempty" xml:"tag"`
+	Tag *string `json:"tag,omitempty"`
 }
 
 func (o ShowMqsInstanceMessagesRespMessages) String() string {

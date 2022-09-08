@@ -8,7 +8,7 @@ import (
 
 //
 type NeutronCreateFirewallGroupRequestBody struct {
-	FirewallGroup *NeutronCreateFirewallGroupOption `json:"firewall_group" xml:"firewall_group"`
+	FirewallGroup *NeutronCreateFirewallGroupOption `json:"firewall_group"`
 }
 
 func (o NeutronCreateFirewallGroupRequestBody) String() string {

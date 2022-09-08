@@ -13,12 +13,12 @@ import (
 type UpdateApplicationRequest struct {
 
 	// 语言类型 中文:zh-cn 英文:en-us
-	XLanguage *UpdateApplicationRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *UpdateApplicationRequestXLanguage `json:"X-Language,omitempty"`
 
 	// 应用id
-	ApplicationId string `json:"application_id" xml:"application_id"`
+	ApplicationId string `json:"application_id"`
 
-	Body *ApplicationModifyInfo `json:"body,omitempty" xml:"body"`
+	Body *ApplicationModifyInfo `json:"body,omitempty"`
 }
 
 func (o UpdateApplicationRequest) String() string {

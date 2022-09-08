@@ -10,7 +10,7 @@ import (
 type DeletePoolRequest struct {
 
 	// 后端云服务器组id
-	PoolId string `json:"pool_id" xml:"pool_id"`
+	PoolId string `json:"pool_id"`
 }
 
 func (o DeletePoolRequest) String() string {

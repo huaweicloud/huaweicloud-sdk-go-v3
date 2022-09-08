@@ -9,7 +9,7 @@ import (
 type CouchDbInfo struct {
 
 	// couchDB用户名称
-	User *string `json:"user,omitempty" xml:"user"`
+	User *string `json:"user,omitempty"`
 }
 
 func (o CouchDbInfo) String() string {

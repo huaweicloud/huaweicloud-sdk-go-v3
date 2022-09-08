@@ -9,10 +9,10 @@ import (
 type ContainerConfigsResDto struct {
 
 	// 是否使用主机网络模式
-	HostNetwork *bool `json:"host_network,omitempty" xml:"host_network"`
+	HostNetwork *bool `json:"host_network,omitempty"`
 
 	// 容器端口映射值
-	ContainerPortList *[]ContainerPortDto `json:"container_port_list,omitempty" xml:"container_port_list"`
+	ContainerPortList *[]ContainerPortDto `json:"container_port_list,omitempty"`
 }
 
 func (o ContainerConfigsResDto) String() string {

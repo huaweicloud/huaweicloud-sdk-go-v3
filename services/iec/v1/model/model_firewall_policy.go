@@ -10,19 +10,19 @@ import (
 type FirewallPolicy struct {
 
 	// 网络ACL策略ID。
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
 	// 网络ACL策略名称。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 网络ACL规则列表对象。
-	FirewallRules []FirewallRule `json:"firewall_rules" xml:"firewall_rules"`
+	FirewallRules []FirewallRule `json:"firewall_rules"`
 
 	// ACL规则ID，表示在此ACL规则之后添加ACL规则
-	InsertAfter *string `json:"insert_after,omitempty" xml:"insert_after"`
+	InsertAfter *string `json:"insert_after,omitempty"`
 
 	// ACL规则ID，表示在此ACL规则之前添加ACL规则
-	InsertBefore *string `json:"insert_before,omitempty" xml:"insert_before"`
+	InsertBefore *string `json:"insert_before,omitempty"`
 }
 
 func (o FirewallPolicy) String() string {

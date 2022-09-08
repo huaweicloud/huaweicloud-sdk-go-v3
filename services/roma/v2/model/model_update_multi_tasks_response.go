@@ -10,7 +10,7 @@ import (
 type UpdateMultiTasksResponse struct {
 
 	// 任务ID, 可为空
-	TaskId         *string `json:"task_id,omitempty" xml:"task_id"`
+	TaskId         *string `json:"task_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

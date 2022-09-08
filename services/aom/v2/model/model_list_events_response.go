@@ -10,7 +10,7 @@ import (
 type ListEventsResponse struct {
 
 	// 事件或者告警详情。
-	Events         *[]EventModel `json:"events,omitempty" xml:"events"`
+	Events         *[]EventModel `json:"events,omitempty"`
 	HttpStatusCode int           `json:"-"`
 }
 

@@ -10,7 +10,7 @@ import (
 type AgencyMappingArray struct {
 
 	// 用户（组）与委托之间的映射关系详细信息。
-	AgencyMappings []AgencyMapping `json:"agency_mappings" xml:"agency_mappings"`
+	AgencyMappings []AgencyMapping `json:"agency_mappings"`
 }
 
 func (o AgencyMappingArray) String() string {

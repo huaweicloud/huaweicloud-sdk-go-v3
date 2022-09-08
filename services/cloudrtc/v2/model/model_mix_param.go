@@ -13,31 +13,31 @@ import (
 type MixParam struct {
 
 	// 房间id
-	RoomId string `json:"room_id" xml:"room_id"`
+	RoomId string `json:"room_id"`
 
 	// 输出编码模板名称 - 1920x1080_30_4620：输出流是1080p，帧率30，码率4.62Mbps - 1920x1080_15_3460：输出流是1080p，帧率15，码率3.46Mbps - 1280x720_30_3420：输出流是720p，帧率30，码率3.42Mbps - 1280x720_15_2260：输出流是720p，帧率15，码率2.26Mbps
-	EncodeTemplate MixParamEncodeTemplate `json:"encode_template" xml:"encode_template"`
+	EncodeTemplate MixParamEncodeTemplate `json:"encode_template"`
 
 	// 最长空闲频道时间。  取值范围：[5，43200]，默认值为30。  单位：秒。  如果频道内无连麦方的状态持续超过该时间，录制程序会自动退出。退出后，再次调用start请求，会产生新的录制任务。  连麦方指：joiner或者publisher的用户。
-	MaxIdleTime *int32 `json:"max_idle_time,omitempty" xml:"max_idle_time"`
+	MaxIdleTime *int32 `json:"max_idle_time,omitempty"`
 
 	// 视频布局模板编号，不混视频的时候，不需要带。 - nine_grids_view：九宫格模板（自适应模板） - screen_share_left：主视图在左边的屏幕共享模板（自适应模板） - screen_share_right：主视图在右边的屏幕共享模板（自适应模板） - custom：自定义布局
-	LayoutTemplate *string `json:"layout_template,omitempty" xml:"layout_template"`
+	LayoutTemplate *string `json:"layout_template,omitempty"`
 
 	// 默认用户背景图地址，图片先上传obs，格式s3://bucket/object。默认使用等比缩放裁剪，保证铺满。
-	DefaultUserBackgroundImage *string `json:"default_user_background_image,omitempty" xml:"default_user_background_image"`
+	DefaultUserBackgroundImage *string `json:"default_user_background_image,omitempty"`
 
 	// 共享屏幕的背景图地址，图片先上传obs，格式s3://bucket/object。  在一大多小的布局场景下，无论大窗是显示非指定用户（屏幕共享人的桌面）还是指定用户的共享桌面，都通过该字段指定背景图。
-	ScreenBackgroundImage *string `json:"screen_background_image,omitempty" xml:"screen_background_image"`
+	ScreenBackgroundImage *string `json:"screen_background_image,omitempty"`
 
 	// 画布背景图地址，图片先上传obs，格式s3://bucket/object。默认使用等比缩放裁剪，保证铺满。
-	BackgroundImage *string `json:"background_image,omitempty" xml:"background_image"`
+	BackgroundImage *string `json:"background_image,omitempty"`
 
 	// 需要混流的视频列表。若不需要混流视频，则可不传递该参数。  nine_grids_view模板不需要填写本字段。
-	LayoutPanes *[]MixLayoutPane `json:"layout_panes,omitempty" xml:"layout_panes"`
+	LayoutPanes *[]MixLayoutPane `json:"layout_panes,omitempty"`
 
 	// 指定用户背景图，优先级大于default_user_background_image
-	UserBackgroundImages *[]MixUserBackgroundImage `json:"user_background_images,omitempty" xml:"user_background_images"`
+	UserBackgroundImages *[]MixUserBackgroundImage `json:"user_background_images,omitempty"`
 }
 
 func (o MixParam) String() string {

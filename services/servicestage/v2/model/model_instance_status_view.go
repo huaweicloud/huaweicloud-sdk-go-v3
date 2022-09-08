@@ -8,21 +8,21 @@ import (
 
 // 状态详情。
 type InstanceStatusView struct {
-	Status *InstanceStatusType `json:"status,omitempty" xml:"status"`
+	Status *InstanceStatusType `json:"status,omitempty"`
 
 	// 正常实例副本数。
-	AvailableReplica *int32 `json:"available_replica,omitempty" xml:"available_replica"`
+	AvailableReplica *int32 `json:"available_replica,omitempty"`
 
 	// 实例副本数。
-	Replica *int32 `json:"replica,omitempty" xml:"replica"`
+	Replica *int32 `json:"replica,omitempty"`
 
-	FailDetail *InstanceFailDetail `json:"fail_detail,omitempty" xml:"fail_detail"`
+	FailDetail *InstanceFailDetail `json:"fail_detail,omitempty"`
 
 	// 最近Job ID。
-	LastJobId *string `json:"last_job_id,omitempty" xml:"last_job_id"`
+	LastJobId *string `json:"last_job_id,omitempty"`
 
 	// 企业项目ID。
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 
 func (o InstanceStatusView) String() string {

@@ -8,13 +8,12 @@ import (
 
 // Response Object
 type ShowStatisticCommitV3Response struct {
-	Error *Error `json:"error,omitempty" xml:"error"`
+	Error *Error `json:"error,omitempty"`
 
-	// 代码增加和删除的行数
-	Result *[]CommitStatistic `json:"result,omitempty" xml:"result"`
+	Result *CommitStatistic `json:"result,omitempty"`
 
 	// 响应状态
-	Status         *string `json:"status,omitempty" xml:"status"`
+	Status         *string `json:"status,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

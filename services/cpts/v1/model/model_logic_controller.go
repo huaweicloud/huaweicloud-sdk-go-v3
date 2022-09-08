@@ -9,10 +9,10 @@ import (
 type LogicController struct {
 
 	// for_loop_params
-	ForLoopParams *string `json:"for_loop_params,omitempty" xml:"for_loop_params"`
+	ForLoopParams *string `json:"for_loop_params,omitempty"`
 
 	// condition
-	Condition *string `json:"condition,omitempty" xml:"condition"`
+	Condition *string `json:"condition,omitempty"`
 }
 
 func (o LogicController) String() string {

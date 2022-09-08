@@ -10,7 +10,7 @@ import (
 type ListTransfersResponse struct {
 
 	// 查询日志转储信息数组
-	LogTransfers   *[]CreateTransferResponseBody `json:"log_transfers,omitempty" xml:"log_transfers"`
+	LogTransfers   *[]CreateTransferResponseBody `json:"log_transfers,omitempty"`
 	HttpStatusCode int                           `json:"-"`
 }
 

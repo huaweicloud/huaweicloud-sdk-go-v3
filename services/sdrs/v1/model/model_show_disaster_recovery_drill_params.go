@@ -10,28 +10,28 @@ import (
 type ShowDisasterRecoveryDrillParams struct {
 
 	// 容灾演练的ID。
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
 	// 容灾演练的名称。
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 容灾演练的状态。
-	Status string `json:"status" xml:"status"`
+	Status string `json:"status"`
 
 	// 演练虚拟私有云id。
-	DrillVpcId string `json:"drill_vpc_id" xml:"drill_vpc_id"`
+	DrillVpcId string `json:"drill_vpc_id"`
 
 	// 创建时间。默认格式为：\"yyyy-MM-dd HH:mm:ss.SSS\"，例：\"2019-04-01 12:00:00.000\"。
-	CreatedAt string `json:"created_at" xml:"created_at"`
+	CreatedAt string `json:"created_at"`
 
 	// 更新时间。默认格式为：\"yyyy-MM-dd HH:mm:ss.SSS\"，例：\"2019-04-01 12:00:00.000\"。
-	UpdatedAt string `json:"updated_at" xml:"updated_at"`
+	UpdatedAt string `json:"updated_at"`
 
 	// 保护组的ID。
-	ServerGroupId string `json:"server_group_id" xml:"server_group_id"`
+	ServerGroupId string `json:"server_group_id"`
 
 	// 演练云服务器列表。
-	DrillServers []DrillServerParams `json:"drill_servers" xml:"drill_servers"`
+	DrillServers []DrillServerParams `json:"drill_servers"`
 }
 
 func (o ShowDisasterRecoveryDrillParams) String() string {

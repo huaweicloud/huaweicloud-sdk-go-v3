@@ -13,100 +13,100 @@ import (
 type GlanceListImagesRequest struct {
 
 	// 镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
-	Imagetype *GlanceListImagesRequestImagetype `json:"__imagetype,omitempty" xml:"__imagetype"`
+	Imagetype *GlanceListImagesRequestImagetype `json:"__imagetype,omitempty"`
 
 	// 镜像是否是受保护，取值为true/false。一般查询公共镜像时候取值为true，查询私有镜像可以不指定。
-	Isregistered *bool `json:"__isregistered,omitempty" xml:"__isregistered"`
+	Isregistered *bool `json:"__isregistered,omitempty"`
 
 	// 操作系统位数，一般取值为32或者64
-	OsBit *GlanceListImagesRequestOsBit `json:"__os_bit,omitempty" xml:"__os_bit"`
+	OsBit *GlanceListImagesRequestOsBit `json:"__os_bit,omitempty"`
 
 	// 镜像系统类型，取值为Linux，Windows，Other
-	OsType *GlanceListImagesRequestOsType `json:"__os_type,omitempty" xml:"__os_type"`
+	OsType *GlanceListImagesRequestOsType `json:"__os_type,omitempty"`
 
 	// 镜像平台分类，取值为Windows，Ubuntu，RedHat，SUSE，CentOS，Debian，OpenSUSE, Oracle Linux，Fedora，Other，CoreOS和EulerOS
-	Platform *GlanceListImagesRequestPlatform `json:"__platform,omitempty" xml:"__platform"`
+	Platform *GlanceListImagesRequestPlatform `json:"__platform,omitempty"`
 
 	// 表示该镜像支持密集存储。如果镜像支持密集存储性能，则值为true，否则无需增加该属性
-	SupportDiskintensive *string `json:"__support_diskintensive,omitempty" xml:"__support_diskintensive"`
+	SupportDiskintensive *string `json:"__support_diskintensive,omitempty"`
 
 	// 表示该镜像支持高计算性能。如果镜像支持高计算性能，则值为true，否则无需增加该属性
-	SupportHighperformance *string `json:"__support_highperformance,omitempty" xml:"__support_highperformance"`
+	SupportHighperformance *string `json:"__support_highperformance,omitempty"`
 
 	// 如果镜像支持KVM，取值为true，否则无需增加该属性
-	SupportKvm *string `json:"__support_kvm,omitempty" xml:"__support_kvm"`
+	SupportKvm *string `json:"__support_kvm,omitempty"`
 
 	// 表示该镜像是支持KVM虚拟化平台下的GPU类型,如果不支持KVM虚拟机下GPU类型，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存
-	SupportKvmGpuType *string `json:"__support_kvm_gpu_type,omitempty" xml:"__support_kvm_gpu_type"`
+	SupportKvmGpuType *string `json:"__support_kvm_gpu_type,omitempty"`
 
 	// 如果镜像支持KVM虚拟化下Infiniband网卡类型，取值为true。否则，无需添加该属性。该属性与“__support_xen”属性不共存。
-	SupportKvmInfiniband *string `json:"__support_kvm_infiniband,omitempty" xml:"__support_kvm_infiniband"`
+	SupportKvmInfiniband *string `json:"__support_kvm_infiniband,omitempty"`
 
 	// 表示该镜像支持超大内存。如果镜像支持超大内存，取值为true，否则无需增加该属性
-	SupportLargememory *string `json:"__support_largememory,omitempty" xml:"__support_largememory"`
+	SupportLargememory *string `json:"__support_largememory,omitempty"`
 
 	// 如果镜像支持XEN，取值为true，否则无需增加该属性
-	SupportXen *string `json:"__support_xen,omitempty" xml:"__support_xen"`
+	SupportXen *string `json:"__support_xen,omitempty"`
 
 	// 表示该镜像是支持XEN虚拟化平台下的GPU优化类型,如果不支持XEN虚拟化下GPU类型，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存
-	SupportXenGpuType *string `json:"__support_xen_gpu_type,omitempty" xml:"__support_xen_gpu_type"`
+	SupportXenGpuType *string `json:"__support_xen_gpu_type,omitempty"`
 
 	// 如果镜像支持XEN虚拟化下HANA类型，取值为true。否则，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存
-	SupportXenHana *string `json:"__support_xen_hana,omitempty" xml:"__support_xen_hana"`
+	SupportXenHana *string `json:"__support_xen_hana,omitempty"`
 
 	// 容器类型
-	ContainerFormat *string `json:"container_format,omitempty" xml:"container_format"`
+	ContainerFormat *string `json:"container_format,omitempty"`
 
 	// 镜像格式，目前支持vhd，zvhd、raw，qcow2。默认值是vhd
-	DiskFormat *GlanceListImagesRequestDiskFormat `json:"disk_format,omitempty" xml:"disk_format"`
+	DiskFormat *GlanceListImagesRequestDiskFormat `json:"disk_format,omitempty"`
 
 	// 镜像ID
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 用于分页，表示查询几条镜像记录，取值为整数，默认返回25条镜像记录
-	Limit *int32 `json:"limit,omitempty" xml:"limit"`
+	Limit *int32 `json:"limit,omitempty"`
 
 	// 用于分页，表示从哪个镜像开始查询，取值为镜像ID。
-	Marker *string `json:"marker,omitempty" xml:"marker"`
+	Marker *string `json:"marker,omitempty"`
 
 	// 成员状态。目前取值有accepted、rejected、pending。accepted表示已经接受共享的镜像，rejected表示已经拒绝了其他用户共享的镜像，pending表示需要确认的其他用户的共享镜像。需要在查询时，设置“visibility”参数为“shared”
-	MemberStatus *string `json:"member_status,omitempty" xml:"member_status"`
+	MemberStatus *string `json:"member_status,omitempty"`
 
 	// 镜像运行需要的最小磁盘，单位为GB 。取值为40～1024GB。取值为1～1024GB。取值为40～255GB
-	MinDisk *int32 `json:"min_disk,omitempty" xml:"min_disk"`
+	MinDisk *int32 `json:"min_disk,omitempty"`
 
 	// 镜像运行需要的最小内存，单位为MB。参数取值依据弹性云服务器的规格限制，一般设置为0。
-	MinRam *int32 `json:"min_ram,omitempty" xml:"min_ram"`
+	MinRam *int32 `json:"min_ram,omitempty"`
 
 	// 镜像名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 镜像属于哪个租户
-	Owner *string `json:"owner,omitempty" xml:"owner"`
+	Owner *string `json:"owner,omitempty"`
 
 	// 镜像是否是受保护，查询公共镜像时候取值为True，查询私有镜像可以不指定。
-	Protected *bool `json:"protected,omitempty" xml:"protected"`
+	Protected *bool `json:"protected,omitempty"`
 
 	// 用于排序，表示升序还是降序，取值为asc和desc。与sort_key一起组合使用，默认为降序desc
-	SortDir *string `json:"sort_dir,omitempty" xml:"sort_dir"`
+	SortDir *string `json:"sort_dir,omitempty"`
 
 	// 用于排序，表示按照哪个字段排序。取值为镜像属性name，container_format，disk_format，status，id，size字段，默认为创建时间。
-	SortKey *string `json:"sort_key,omitempty" xml:"sort_key"`
+	SortKey *string `json:"sort_key,omitempty"`
 
 	// 镜像状态。取值如下：queued：表示镜像元数据已经创建成功，等待上传镜像文件。saving：表示镜像正在上传文件到后端存储。deleted：表示镜像已经删除。killed：表示镜像上传错误。active：表示镜像可以正常使用
-	Status *GlanceListImagesRequestStatus `json:"status,omitempty" xml:"status"`
+	Status *GlanceListImagesRequestStatus `json:"status,omitempty"`
 
 	// 标签，用户为镜像增加自定义标签后可以通过该参数过滤查询
-	Tag *string `json:"tag,omitempty" xml:"tag"`
+	Tag *string `json:"tag,omitempty"`
 
 	// 是否被其他租户可见，取值如下： public：公共镜像 private：私有镜像 shared：共享镜像
-	Visibility *GlanceListImagesRequestVisibility `json:"visibility,omitempty" xml:"visibility"`
+	Visibility *GlanceListImagesRequestVisibility `json:"visibility,omitempty"`
 
 	// 镜像创建时间。支持按照时间点过滤查询，取值格式为“ 操作符:UTC时间”。 其中操作符支持如下几种： gt：大于 gte：大于等于 lt：小于 lte：小于等于 eq：等于 neq：不等于 时间格式支持：yyyy-MM-ddThh:mm:ssZ或者yyyy-MM-dd hh:mm:ss 例如，查询创建时间在2018-10-28 10:00:00之前的镜像，可以通过如下条件过滤： created_at=gt:2018-10-28T10:00:00Z
-	CreatedAt *string `json:"created_at,omitempty" xml:"created_at"`
+	CreatedAt *string `json:"created_at,omitempty"`
 
 	// 镜像修改时间。支持按照时间点过滤查询，取值格式为 “ 操作符:UTC时间”。 其中操作符支持如下几种： gt：大于 gte：大于等于 lt：小于 lte：小于等于 eq：等于 neq：不等于 时间格式支持：yyyy-MM-ddThh:mm:ssZ或者yyyy-MM-dd hh:mm:ss 例如，查询修改时间在2018-10-28 10:00:00之前的镜像，可以通过如下条件过滤： updated_at=gt:2018-10-28T10:00:00Z
-	UpdatedAt *string `json:"updated_at,omitempty" xml:"updated_at"`
+	UpdatedAt *string `json:"updated_at,omitempty"`
 }
 
 func (o GlanceListImagesRequest) String() string {

@@ -10,25 +10,25 @@ import (
 type ShowRiskConfigDetailResponse struct {
 
 	// 风险等级，包含如下:   - Low : 低危   - Medium : 中危   - High : 高危
-	Severity *string `json:"severity,omitempty" xml:"severity"`
+	Severity *string `json:"severity,omitempty"`
 
 	// 基线描述
-	CheckTypeDesc *string `json:"check_type_desc,omitempty" xml:"check_type_desc"`
+	CheckTypeDesc *string `json:"check_type_desc,omitempty"`
 
 	// 检查项总数量
-	CheckRuleNum *int32 `json:"check_rule_num,omitempty" xml:"check_rule_num"`
+	CheckRuleNum *int32 `json:"check_rule_num,omitempty"`
 
 	// 未通过的检查项数量
-	FailedRuleNum *int32 `json:"failed_rule_num,omitempty" xml:"failed_rule_num"`
+	FailedRuleNum *int32 `json:"failed_rule_num,omitempty"`
 
 	// 已通过的检查项数量
-	PassedRuleNum *int32 `json:"passed_rule_num,omitempty" xml:"passed_rule_num"`
+	PassedRuleNum *int32 `json:"passed_rule_num,omitempty"`
 
 	// 已忽略的检查项数量
-	IgnoredRuleNum *int32 `json:"ignored_rule_num,omitempty" xml:"ignored_rule_num"`
+	IgnoredRuleNum *int32 `json:"ignored_rule_num,omitempty"`
 
 	// 受影响的服务器的数量
-	HostNum        *int64 `json:"host_num,omitempty" xml:"host_num"`
+	HostNum        *int64 `json:"host_num,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

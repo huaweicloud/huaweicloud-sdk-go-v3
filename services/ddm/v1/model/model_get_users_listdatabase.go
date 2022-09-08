@@ -10,10 +10,10 @@ import (
 type GetUsersListdatabase struct {
 
 	// DDM实例帐号关联的逻辑库名称。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 逻辑库的描述信息。
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 }
 
 func (o GetUsersListdatabase) String() string {

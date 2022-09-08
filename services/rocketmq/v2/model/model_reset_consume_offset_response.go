@@ -10,7 +10,7 @@ import (
 type ResetConsumeOffsetResponse struct {
 
 	// 重置的队列。
-	Queues         *[]ResetConsumeOffsetRespQueues `json:"queues,omitempty" xml:"queues"`
+	Queues         *[]ResetConsumeOffsetRespQueues `json:"queues,omitempty"`
 	HttpStatusCode int                             `json:"-"`
 }
 

@@ -10,7 +10,7 @@ import (
 type MultiTaskInitBodyExtInfo struct {
 
 	// Mysql的ServerID
-	ServerId *string `json:"server_id,omitempty" xml:"server_id"`
+	ServerId *string `json:"server_id,omitempty"`
 }
 
 func (o MultiTaskInitBodyExtInfo) String() string {

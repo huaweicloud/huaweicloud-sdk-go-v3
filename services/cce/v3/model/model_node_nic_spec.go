@@ -8,10 +8,10 @@ import (
 
 // 节点网卡的描述信息。
 type NodeNicSpec struct {
-	PrimaryNic *NicSpec `json:"primaryNic,omitempty" xml:"primaryNic"`
+	PrimaryNic *NicSpec `json:"primaryNic,omitempty"`
 
 	// 扩展网卡 >创建节点池添加节点时不支持该参数。
-	ExtNics *[]NicSpec `json:"extNics,omitempty" xml:"extNics"`
+	ExtNics *[]NicSpec `json:"extNics,omitempty"`
 }
 
 func (o NodeNicSpec) String() string {

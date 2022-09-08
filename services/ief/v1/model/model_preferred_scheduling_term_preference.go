@@ -10,7 +10,7 @@ import (
 type PreferredSchedulingTermPreference struct {
 
 	// 匹配规则表达式
-	MatchExpressions *[]MatchExpression `json:"matchExpressions,omitempty" xml:"matchExpressions"`
+	MatchExpressions *[]MatchExpression `json:"matchExpressions,omitempty"`
 }
 
 func (o PreferredSchedulingTermPreference) String() string {

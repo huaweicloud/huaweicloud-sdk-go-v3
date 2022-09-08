@@ -9,10 +9,10 @@ import (
 type RestoreDatabasesInfo struct {
 
 	// 库名
-	Database string `json:"database" xml:"database"`
+	Database string `json:"database"`
 
 	// 表信息
-	Tables []RestoreTableInfo `json:"tables" xml:"tables"`
+	Tables []RestoreTableInfo `json:"tables"`
 }
 
 func (o RestoreDatabasesInfo) String() string {

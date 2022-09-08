@@ -10,7 +10,7 @@ import (
 type DeletePublicIpRequest struct {
 
 	// 弹性公网IP ID
-	PublicipId string `json:"publicip_id" xml:"publicip_id"`
+	PublicipId string `json:"publicip_id"`
 }
 
 func (o DeletePublicIpRequest) String() string {

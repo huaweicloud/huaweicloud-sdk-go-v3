@@ -9,7 +9,7 @@ import (
 type RestartCloudPhoneServerRequestBody struct {
 
 	// 云手机服务器id列表
-	ServerIds []string `json:"server_ids" xml:"server_ids"`
+	ServerIds []string `json:"server_ids"`
 }
 
 func (o RestartCloudPhoneServerRequestBody) String() string {

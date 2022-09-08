@@ -12,7 +12,7 @@ import (
 type Runtime struct {
 
 	// 容器运行时，默认为“docker”
-	Name *RuntimeName `json:"name,omitempty" xml:"name"`
+	Name *RuntimeName `json:"name,omitempty"`
 }
 
 func (o Runtime) String() string {

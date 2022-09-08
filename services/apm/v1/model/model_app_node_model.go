@@ -10,25 +10,25 @@ import (
 type AppNodeModel struct {
 
 	// 组件id
-	Id *int64 `json:"id,omitempty" xml:"id"`
+	Id *int64 `json:"id,omitempty"`
 
 	// 创建时间
-	GmtCreate *string `json:"gmt_create,omitempty" xml:"gmt_create"`
+	GmtCreate *string `json:"gmt_create,omitempty"`
 
 	// 修改时间
-	GmtModify *string `json:"gmt_modify,omitempty" xml:"gmt_modify"`
+	GmtModify *string `json:"gmt_modify,omitempty"`
 
 	// 组件名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 应用id
-	BusinessId *int64 `json:"business_id,omitempty" xml:"business_id"`
+	BusinessId *int64 `json:"business_id,omitempty"`
 
 	// 子应用id
-	SubBusinessId *int64 `json:"sub_business_id,omitempty" xml:"sub_business_id"`
+	SubBusinessId *int64 `json:"sub_business_id,omitempty"`
 
 	// 租户id
-	InnerDomainId *int32 `json:"inner_domain_id,omitempty" xml:"inner_domain_id"`
+	InnerDomainId *int32 `json:"inner_domain_id,omitempty"`
 }
 
 func (o AppNodeModel) String() string {

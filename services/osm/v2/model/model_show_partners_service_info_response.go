@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowPartnersServiceInfoResponse struct {
-	PartnersServiceInfo *PartnersServiceInfo `json:"partners_service_info,omitempty" xml:"partners_service_info"`
+	PartnersServiceInfo *PartnersServiceInfo `json:"partners_service_info,omitempty"`
 	HttpStatusCode      int                  `json:"-"`
 }
 

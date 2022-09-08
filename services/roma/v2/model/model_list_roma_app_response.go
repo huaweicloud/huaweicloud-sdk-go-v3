@@ -10,13 +10,13 @@ import (
 type ListRomaAppResponse struct {
 
 	// 总的数量
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 
 	// 当前页数量
-	Size *int32 `json:"size,omitempty" xml:"size"`
+	Size *int32 `json:"size,omitempty"`
 
 	// 创建用户信息
-	Apps           *[]ServerAppInfo `json:"apps,omitempty" xml:"apps"`
+	Apps           *[]ServerAppInfo `json:"apps,omitempty"`
 	HttpStatusCode int              `json:"-"`
 }
 

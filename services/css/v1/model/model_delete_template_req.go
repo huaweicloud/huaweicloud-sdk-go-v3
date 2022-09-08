@@ -9,7 +9,7 @@ import (
 type DeleteTemplateReq struct {
 
 	// 模板名称。
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 }
 
 func (o DeleteTemplateReq) String() string {

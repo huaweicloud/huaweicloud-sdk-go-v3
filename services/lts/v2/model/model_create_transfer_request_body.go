@@ -10,12 +10,12 @@ import (
 type CreateTransferRequestBody struct {
 
 	// 日志组ID
-	LogGroupId string `json:"log_group_id" xml:"log_group_id"`
+	LogGroupId string `json:"log_group_id"`
 
 	// 日志流ID集合
-	LogStreams []CreateTransferRequestBodyLogStreams `json:"log_streams" xml:"log_streams"`
+	LogStreams []CreateTransferRequestBodyLogStreams `json:"log_streams"`
 
-	LogTransferInfo *CreateTransferRequestBodyLogTransferInfo `json:"log_transfer_info" xml:"log_transfer_info"`
+	LogTransferInfo *CreateTransferRequestBodyLogTransferInfo `json:"log_transfer_info"`
 }
 
 func (o CreateTransferRequestBody) String() string {

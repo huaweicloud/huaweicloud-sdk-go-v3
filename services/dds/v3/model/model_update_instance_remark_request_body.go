@@ -9,7 +9,7 @@ import (
 type UpdateInstanceRemarkRequestBody struct {
 
 	// 实例备注内容。 长度不能超过64位，不支持回车和>!<\"&'=特殊字符。
-	Remark string `json:"remark" xml:"remark"`
+	Remark string `json:"remark"`
 }
 
 func (o UpdateInstanceRemarkRequestBody) String() string {

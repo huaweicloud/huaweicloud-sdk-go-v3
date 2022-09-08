@@ -13,64 +13,64 @@ import (
 type UpdateParametersReqValues struct {
 
 	// 用于描述多个拆分表的内在数据关联性，用于告知优化器在处理join时，把join下推到MySQL层执行。格式为:[{tb.col1,tb2.col2},{tb.col2,tb3.col1},...]。
-	BindTable *string `json:"bind_table,omitempty" xml:"bind_table"`
+	BindTable *string `json:"bind_table,omitempty"`
 
 	// DDM服务端字符集，如果需要存储emoji表情符号，请选择utf8mb4,并设置RDS字符集也为utf8mb4。修改DDM服务端字符集时，DDM服务端字符序必须同步修改为对应类型的值。
-	CharacterSetServer *UpdateParametersReqValuesCharacterSetServer `json:"character_set_server,omitempty" xml:"character_set_server"`
+	CharacterSetServer *UpdateParametersReqValuesCharacterSetServer `json:"character_set_server,omitempty"`
 
 	// DDM服务端字符序。修改DDM服务端字符序时，DDM服务端字符集必须同步修改为对应类型的值。
-	CollationServer *UpdateParametersReqValuesCollationServer `json:"collation_server,omitempty" xml:"collation_server"`
+	CollationServer *UpdateParametersReqValuesCollationServer `json:"collation_server,omitempty"`
 
 	// 逻辑表扫描时的分片并发执行级别: DATA_NODE: 分库间并行扫描，同一分库内各分片串行扫描;RDS_INSTANCE: RDS实例间并行扫描，同一RDS实例内各分片串行扫描;PHY_TABLE: 各物理分片全部并行扫描。
-	ConcurrentExecutionLevel *UpdateParametersReqValuesConcurrentExecutionLevel `json:"concurrent_execution_level,omitempty" xml:"concurrent_execution_level"`
+	ConcurrentExecutionLevel *UpdateParametersReqValuesConcurrentExecutionLevel `json:"concurrent_execution_level,omitempty"`
 
 	// 服务器关闭连接之前等待连接活动的秒数，以秒为单位，取值范围为60-28800，默认值28800，表示服务器关闭连接之前等待28800秒后，关闭连接。
-	ConnectionIdleTimeout *string `json:"connection_idle_timeout,omitempty" xml:"connection_idle_timeout"`
+	ConnectionIdleTimeout *string `json:"connection_idle_timeout,omitempty"`
 
 	// 是否开启表回收站。
-	EnableTableRecycle *UpdateParametersReqValuesEnableTableRecycle `json:"enable_table_recycle,omitempty" xml:"enable_table_recycle"`
+	EnableTableRecycle *UpdateParametersReqValuesEnableTableRecycle `json:"enable_table_recycle,omitempty"`
 
 	// insert 常量值使用load data执行。
-	InsertToLoadData *UpdateParametersReqValuesInsertToLoadData `json:"insert_to_load_data,omitempty" xml:"insert_to_load_data"`
+	InsertToLoadData *UpdateParametersReqValuesInsertToLoadData `json:"insert_to_load_data,omitempty"`
 
 	// 在途事务等待时间窗口，以秒为单位，取值范围为0-100，默认值为1，表示服务器关闭前端连接之前等待1秒后关闭连接。
-	LiveTransactionTimeoutOnShutdown *string `json:"live_transaction_timeout_on_shutdown,omitempty" xml:"live_transaction_timeout_on_shutdown"`
+	LiveTransactionTimeoutOnShutdown *string `json:"live_transaction_timeout_on_shutdown,omitempty"`
 
 	// 记录慢查询的最小秒数,以秒为单位，取值范围为0.01-10，默认值为1，表示如果sql执行大于等于1秒就定义为慢sql。
-	LongQueryTime *string `json:"long_query_time,omitempty" xml:"long_query_time"`
+	LongQueryTime *string `json:"long_query_time,omitempty"`
 
 	// 包或任何生成的中间字符串的最大值。包缓冲区初始化为net_buffer_length字节，但需要时可以增长到max_allowed_packet字节。该值默认很小，以捕获大的（可能是错误的）数据包。该值必须设置为1024的倍数。取值范围为1024~1073741824，默认值为16777216。
-	MaxAllowedPacket *string `json:"max_allowed_packet,omitempty" xml:"max_allowed_packet"`
+	MaxAllowedPacket *string `json:"max_allowed_packet,omitempty"`
 
 	// 允许每个DDM节点同时连接RDS的最大客户端总数。0为默认值标识符,实际值等于(RDS的最大连接数-20)/DDM节点数。取值范围为0-10000000。
-	MaxBackendConnections *string `json:"max_backend_connections,omitempty" xml:"max_backend_connections"`
+	MaxBackendConnections *string `json:"max_backend_connections,omitempty"`
 
 	// 允许同时连接的客户端总数。与后端RDS规格及数量有关。以个数为单位，取值范围为10-40000，默认值为20000，表示允许同时连接的客户端总数不能超过40000。
-	MaxConnections *string `json:"max_connections,omitempty" xml:"max_connections"`
+	MaxConnections *string `json:"max_connections,omitempty"`
 
 	// 允许每个DDM节点同时连接RDS的最小客户端总数。默认值为10。取值范围为0-10000000。
-	MinBackendConnections *string `json:"min_backend_connections,omitempty" xml:"min_backend_connections"`
+	MinBackendConnections *string `json:"min_backend_connections,omitempty"`
 
 	// 是否强制下推查询语句中不含from的语句。
-	NotFromPushdown *UpdateParametersReqValuesNotFromPushdown `json:"not_from_pushdown,omitempty" xml:"not_from_pushdown"`
+	NotFromPushdown *UpdateParametersReqValuesNotFromPushdown `json:"not_from_pushdown,omitempty"`
 
 	// 主从rds节点延迟时间阈值，以秒为单位，取值范围为0-7200，默认值为30，表示主rds与从rds之间的数据同步时间值不能超过30秒，如果超过30s，读数据指令就不走当前读节点。
-	SecondsBehindMaster *string `json:"seconds_behind_master,omitempty" xml:"seconds_behind_master"`
+	SecondsBehindMaster *string `json:"seconds_behind_master,omitempty"`
 
 	// 开启或关闭SQL审计。
-	SqlAudit *UpdateParametersReqValuesSqlAudit `json:"sql_audit,omitempty" xml:"sql_audit"`
+	SqlAudit *UpdateParametersReqValuesSqlAudit `json:"sql_audit,omitempty"`
 
 	// SQL执行超时秒数，以秒为单位，取值范围为100-28800，默认值28800，表示sql执行大于等于28800秒超时。
-	SqlExecuteTimeout *string `json:"sql_execute_timeout,omitempty" xml:"sql_execute_timeout"`
+	SqlExecuteTimeout *string `json:"sql_execute_timeout,omitempty"`
 
 	// DDL语句添加binlog hint。
-	SupportDdlBinlogHint *UpdateParametersReqValuesSupportDdlBinlogHint `json:"support_ddl_binlog_hint,omitempty" xml:"support_ddl_binlog_hint"`
+	SupportDdlBinlogHint *UpdateParametersReqValuesSupportDdlBinlogHint `json:"support_ddl_binlog_hint,omitempty"`
 
 	// XA：XA 事务，保证原子性，保证可见性；FREE：允许多写，不保证原子性，无性能损耗；NO_DTX：单分片事务。
-	TransactionPolicy *UpdateParametersReqValuesTransactionPolicy `json:"transaction_policy,omitempty" xml:"transaction_policy"`
+	TransactionPolicy *UpdateParametersReqValuesTransactionPolicy `json:"transaction_policy,omitempty"`
 
 	// 开启或关闭优化器中的极致下推优化功能。
-	UltimateOptimize *UpdateParametersReqValuesUltimateOptimize `json:"ultimate_optimize,omitempty" xml:"ultimate_optimize"`
+	UltimateOptimize *UpdateParametersReqValuesUltimateOptimize `json:"ultimate_optimize,omitempty"`
 }
 
 func (o UpdateParametersReqValues) String() string {

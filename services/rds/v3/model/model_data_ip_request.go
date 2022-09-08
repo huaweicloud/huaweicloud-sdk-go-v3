@@ -9,7 +9,7 @@ import (
 type DataIpRequest struct {
 
 	// 内网ip
-	NewIp string `json:"new_ip" xml:"new_ip"`
+	NewIp string `json:"new_ip"`
 }
 
 func (o DataIpRequest) String() string {

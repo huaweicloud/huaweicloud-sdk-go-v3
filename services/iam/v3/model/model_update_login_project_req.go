@@ -8,7 +8,7 @@ import (
 
 //
 type UpdateLoginProjectReq struct {
-	LoginProtect *UpdateLoginProject `json:"login_protect" xml:"login_protect"`
+	LoginProtect *UpdateLoginProject `json:"login_protect"`
 }
 
 func (o UpdateLoginProjectReq) String() string {

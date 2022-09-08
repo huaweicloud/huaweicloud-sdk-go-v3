@@ -9,10 +9,10 @@ import (
 type ShowMonthUsageReq struct {
 
 	// sim卡id列表
-	SimCardIds []int64 `json:"sim_card_ids" xml:"sim_card_ids"`
+	SimCardIds []int64 `json:"sim_card_ids"`
 
 	// 账期
-	BillingCycles []string `json:"billing_cycles" xml:"billing_cycles"`
+	BillingCycles []string `json:"billing_cycles"`
 }
 
 func (o ShowMonthUsageReq) String() string {

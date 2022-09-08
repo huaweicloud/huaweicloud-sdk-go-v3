@@ -9,7 +9,7 @@ import (
 type BatchDeleteTopicReq struct {
 
 	// 主题列表，当批量删除主题时使用。
-	Topics *[]string `json:"topics,omitempty" xml:"topics"`
+	Topics *[]string `json:"topics,omitempty"`
 }
 
 func (o BatchDeleteTopicReq) String() string {

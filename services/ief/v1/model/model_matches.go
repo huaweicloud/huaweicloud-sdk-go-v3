@@ -10,10 +10,10 @@ import (
 type Matches struct {
 
 	// 键。限定为resource_name,后续扩展。
-	Key string `json:"key" xml:"key"`
+	Key string `json:"key"`
 
 	// 值。每个值最大长度64个unicode字符。不校验字符集范围。
-	Value *string `json:"value,omitempty" xml:"value"`
+	Value *string `json:"value,omitempty"`
 }
 
 func (o Matches) String() string {

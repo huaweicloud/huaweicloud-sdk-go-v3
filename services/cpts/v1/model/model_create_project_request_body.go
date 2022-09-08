@@ -10,10 +10,10 @@ import (
 type CreateProjectRequestBody struct {
 
 	// name
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// description
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 }
 
 func (o CreateProjectRequestBody) String() string {

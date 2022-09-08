@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowGaussMySqlInstanceInfoResponse struct {
-	Instance       *MysqlInstanceInfoDetail `json:"instance,omitempty" xml:"instance"`
+	Instance       *MysqlInstanceInfoDetail `json:"instance,omitempty"`
 	HttpStatusCode int                      `json:"-"`
 }
 

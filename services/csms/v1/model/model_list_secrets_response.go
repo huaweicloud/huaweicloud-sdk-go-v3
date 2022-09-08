@@ -10,9 +10,9 @@ import (
 type ListSecretsResponse struct {
 
 	// 凭据详情列表。
-	Secrets *[]Secret `json:"secrets,omitempty" xml:"secrets"`
+	Secrets *[]Secret `json:"secrets,omitempty"`
 
-	PageInfo       *PageInfo `json:"page_info,omitempty" xml:"page_info"`
+	PageInfo       *PageInfo `json:"page_info,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }
 

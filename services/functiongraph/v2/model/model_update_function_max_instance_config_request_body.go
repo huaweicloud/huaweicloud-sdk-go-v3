@@ -10,7 +10,7 @@ import (
 type UpdateFunctionMaxInstanceConfigRequestBody struct {
 
 	// 最大实例数
-	MaxInstanceNum *int32 `json:"max_instance_num,omitempty" xml:"max_instance_num"`
+	MaxInstanceNum *int32 `json:"max_instance_num,omitempty"`
 }
 
 func (o UpdateFunctionMaxInstanceConfigRequestBody) String() string {

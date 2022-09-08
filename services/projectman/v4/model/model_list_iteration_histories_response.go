@@ -10,10 +10,10 @@ import (
 type ListIterationHistoriesResponse struct {
 
 	// 总数
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 
 	// 历史记录
-	Histories      *[]IterationHistory `json:"histories,omitempty" xml:"histories"`
+	Histories      *[]IterationHistory `json:"histories,omitempty"`
 	HttpStatusCode int                 `json:"-"`
 }
 

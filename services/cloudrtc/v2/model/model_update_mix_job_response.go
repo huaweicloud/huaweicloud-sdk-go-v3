@@ -13,43 +13,43 @@ import (
 type UpdateMixJobResponse struct {
 
 	// 任务编号，可以用于修改、查看和停止合流任务
-	JobId *string `json:"job_id,omitempty" xml:"job_id"`
+	JobId *string `json:"job_id,omitempty"`
 
 	// 流名
-	StreamName *string `json:"stream_name,omitempty" xml:"stream_name"`
+	StreamName *string `json:"stream_name,omitempty"`
 
 	// 应用id
-	AppId *string `json:"app_id,omitempty" xml:"app_id"`
+	AppId *string `json:"app_id,omitempty"`
 
 	// 房间id
-	RoomId *string `json:"room_id,omitempty" xml:"room_id"`
+	RoomId *string `json:"room_id,omitempty"`
 
-	MixParam *MixParam `json:"mix_param,omitempty" xml:"mix_param"`
+	MixParam *MixParam `json:"mix_param,omitempty"`
 
-	RecordParam *RecordParam `json:"record_param,omitempty" xml:"record_param"`
+	RecordParam *RecordParam `json:"record_param,omitempty"`
 
 	// 任务创建的时间，形如“2006-01-02T15:04:05.075Z”，时区为：UTC
-	CreateTime *string `json:"create_time,omitempty" xml:"create_time"`
+	CreateTime *string `json:"create_time,omitempty"`
 
 	// 任务中的布局更新的时间，形如“2006-01-02T15:04:05.075Z”，时区为：UTC
-	UpdateTime *string `json:"update_time,omitempty" xml:"update_time"`
+	UpdateTime *string `json:"update_time,omitempty"`
 
 	// 任务状态。  - INIT：任务正在初始化 - RUNNING：任务正在运行 - STOPPED：任务已停止
-	State *UpdateMixJobResponseState `json:"state,omitempty" xml:"state"`
+	State *UpdateMixJobResponseState `json:"state,omitempty"`
 
 	// 任务结束原因
-	StopReason *UpdateMixJobResponseStopReason `json:"stop_reason,omitempty" xml:"stop_reason"`
+	StopReason *UpdateMixJobResponseStopReason `json:"stop_reason,omitempty"`
 
 	// 状态描述，对state字段的一些补充说明，可用于人工查阅。
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 任务开始时间，形如“2006-01-02T15:04:05.075Z”，时区为：UTC
-	StartTime *string `json:"start_time,omitempty" xml:"start_time"`
+	StartTime *string `json:"start_time,omitempty"`
 
 	// 任务结束时间，形如“2006-01-02T15:04:05.075Z”，时区为：UTC
-	StopTime *string `json:"stop_time,omitempty" xml:"stop_time"`
+	StopTime *string `json:"stop_time,omitempty"`
 
-	XRequestId     *string `json:"X-request-Id,omitempty" xml:"X-request-Id"`
+	XRequestId     *string `json:"X-request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

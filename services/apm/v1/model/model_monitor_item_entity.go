@@ -7,23 +7,23 @@ import (
 )
 
 type MonitorItemEntity struct {
-	CategoryId *int32 `json:"category_id,omitempty" xml:"category_id"`
+	CategoryId *int32 `json:"category_id,omitempty"`
 
-	CollectorName *string `json:"collector_name,omitempty" xml:"collector_name"`
+	CollectorName *string `json:"collector_name,omitempty"`
 
-	DisplayName *string `json:"display_name,omitempty" xml:"display_name"`
+	DisplayName *string `json:"display_name,omitempty"`
 
-	ShowInTotal *bool `json:"show_in_total,omitempty" xml:"show_in_total"`
+	ShowInTotal *bool `json:"show_in_total,omitempty"`
 
-	MonitorItemId *int64 `json:"monitor_item_id,omitempty" xml:"monitor_item_id"`
+	MonitorItemId *int64 `json:"monitor_item_id,omitempty"`
 
-	Disabled *bool `json:"disabled,omitempty" xml:"disabled"`
+	Disabled *bool `json:"disabled,omitempty"`
 
-	CollectorId *int32 `json:"collector_id,omitempty" xml:"collector_id"`
+	CollectorId *int32 `json:"collector_id,omitempty"`
 
-	Sequence *int32 `json:"sequence,omitempty" xml:"sequence"`
+	Sequence *int32 `json:"sequence,omitempty"`
 
-	CollectInterval *int32 `json:"collect_interval,omitempty" xml:"collect_interval"`
+	CollectInterval *int32 `json:"collect_interval,omitempty"`
 }
 
 func (o MonitorItemEntity) String() string {

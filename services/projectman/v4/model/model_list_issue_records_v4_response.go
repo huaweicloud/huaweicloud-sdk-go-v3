@@ -10,15 +10,15 @@ import (
 type ListIssueRecordsV4Response struct {
 
 	// 操作记录id (已废弃)
-	Id *int32 `json:"id,omitempty" xml:"id"`
+	Id *int32 `json:"id,omitempty"`
 
 	// 创建时间 (已废弃)
-	CreatedTime *int64 `json:"created_time,omitempty" xml:"created_time"`
+	CreatedTime *int64 `json:"created_time,omitempty"`
 
-	Records *[]IssueRecordV4 `json:"records,omitempty" xml:"records"`
+	Records *[]IssueRecordV4 `json:"records,omitempty"`
 
 	// 操作记录总数
-	Total          *int32 `json:"total,omitempty" xml:"total"`
+	Total          *int32 `json:"total,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

@@ -10,7 +10,7 @@ import (
 type KeystoneShowIdentityProviderRequest struct {
 
 	// 待查询的身份提供商ID。
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 }
 
 func (o KeystoneShowIdentityProviderRequest) String() string {

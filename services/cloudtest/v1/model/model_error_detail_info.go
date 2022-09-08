@@ -9,7 +9,7 @@ import (
 type ErrorDetailInfo struct {
 
 	// 批量操作失败的资源的详情信息
-	Failed *[]ErrorCaseInfoBean `json:"failed,omitempty" xml:"failed"`
+	Failed *[]ErrorCaseInfoBean `json:"failed,omitempty"`
 }
 
 func (o ErrorDetailInfo) String() string {

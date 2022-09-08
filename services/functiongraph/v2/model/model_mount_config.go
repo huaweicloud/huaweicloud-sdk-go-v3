@@ -8,10 +8,10 @@ import (
 
 // 函数挂载配置。
 type MountConfig struct {
-	MountUser *MountUser `json:"mount_user" xml:"mount_user"`
+	MountUser *MountUser `json:"mount_user"`
 
 	// 函数挂载列表。
-	FuncMounts []FuncMount `json:"func_mounts" xml:"func_mounts"`
+	FuncMounts []FuncMount `json:"func_mounts"`
 }
 
 func (o MountConfig) String() string {

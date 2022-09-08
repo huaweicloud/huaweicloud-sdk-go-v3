@@ -10,13 +10,13 @@ import (
 )
 
 type InputSetting struct {
-	Input *ObsObjInfo `json:"input" xml:"input"`
+	Input *ObsObjInfo `json:"input"`
 
 	// 原视频的id,为整数类型数值字符串。用于匹配后面的布局配置。
-	PaneId string `json:"pane_id" xml:"pane_id"`
+	PaneId string `json:"pane_id"`
 
 	// 该视频采取的音频策略。DISCARD表示丢弃音频，合成的视频中不会出现该视频的音频。 RESERVE表示保留音频，合成的视频中会出现该视频音频。如果多个原视频配置了RESERVE，合成的视频文件的音频，是多个原 视频音频的混合。默认会丢弃音频。
-	AudioPolicy *InputSettingAudioPolicy `json:"audio_policy,omitempty" xml:"audio_policy"`
+	AudioPolicy *InputSettingAudioPolicy `json:"audio_policy,omitempty"`
 }
 
 func (o InputSetting) String() string {

@@ -10,19 +10,19 @@ import (
 type MemberInvitor struct {
 
 	// 邀请方BCS服务实例id
-	InvitorBcsId *string `json:"invitor_bcs_id,omitempty" xml:"invitor_bcs_id"`
+	InvitorBcsId *string `json:"invitor_bcs_id,omitempty"`
 
 	// 邀请方BCS服务实例名称
-	InvitorBcsName *string `json:"invitor_bcs_name,omitempty" xml:"invitor_bcs_name"`
+	InvitorBcsName *string `json:"invitor_bcs_name,omitempty"`
 
 	// 邀请方project id
-	InvitorProjectId *string `json:"invitor_project_id,omitempty" xml:"invitor_project_id"`
+	InvitorProjectId *string `json:"invitor_project_id,omitempty"`
 
 	// 邀请方租户id
-	InvitorUserId *string `json:"invitor_user_id,omitempty" xml:"invitor_user_id"`
+	InvitorUserId *string `json:"invitor_user_id,omitempty"`
 
 	// 邀请方租户名
-	InvitorUsername *string `json:"invitor_username,omitempty" xml:"invitor_username"`
+	InvitorUsername *string `json:"invitor_username,omitempty"`
 }
 
 func (o MemberInvitor) String() string {

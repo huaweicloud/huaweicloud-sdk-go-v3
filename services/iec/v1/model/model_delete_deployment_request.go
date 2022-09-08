@@ -10,7 +10,7 @@ import (
 type DeleteDeploymentRequest struct {
 
 	// 部署计划ID。
-	DeploymentId string `json:"deployment_id" xml:"deployment_id"`
+	DeploymentId string `json:"deployment_id"`
 }
 
 func (o DeleteDeploymentRequest) String() string {

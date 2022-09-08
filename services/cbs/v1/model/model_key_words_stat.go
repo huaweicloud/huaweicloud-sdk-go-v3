@@ -10,10 +10,10 @@ import (
 type KeyWordsStat struct {
 
 	// 关键词。
-	Keyword string `json:"keyword" xml:"keyword"`
+	Keyword string `json:"keyword"`
 
 	// 关键词频次。
-	Freq int64 `json:"freq" xml:"freq"`
+	Freq int64 `json:"freq"`
 }
 
 func (o KeyWordsStat) String() string {

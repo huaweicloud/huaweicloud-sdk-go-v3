@@ -8,15 +8,15 @@ import (
 
 // 物联网平台转发数据的通道配置参数。
 type ChannelDetail struct {
-	HttpForwarding *HttpForwarding `json:"http_forwarding,omitempty" xml:"http_forwarding"`
+	HttpForwarding *HttpForwarding `json:"http_forwarding,omitempty"`
 
-	DisForwarding *DisForwarding `json:"dis_forwarding,omitempty" xml:"dis_forwarding"`
+	DisForwarding *DisForwarding `json:"dis_forwarding,omitempty"`
 
-	ObsForwarding *ObsForwarding `json:"obs_forwarding,omitempty" xml:"obs_forwarding"`
+	ObsForwarding *ObsForwarding `json:"obs_forwarding,omitempty"`
 
-	AmqpForwarding *AmqpForwarding `json:"amqp_forwarding,omitempty" xml:"amqp_forwarding"`
+	AmqpForwarding *AmqpForwarding `json:"amqp_forwarding,omitempty"`
 
-	DmsKafkaForwarding *DmsKafkaForwarding `json:"dms_kafka_forwarding,omitempty" xml:"dms_kafka_forwarding"`
+	DmsKafkaForwarding *DmsKafkaForwarding `json:"dms_kafka_forwarding,omitempty"`
 }
 
 func (o ChannelDetail) String() string {

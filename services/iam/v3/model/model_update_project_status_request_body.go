@@ -8,7 +8,7 @@ import (
 
 //
 type UpdateProjectStatusRequestBody struct {
-	Project *UpdateProjectOption `json:"project" xml:"project"`
+	Project *UpdateProjectOption `json:"project"`
 }
 
 func (o UpdateProjectStatusRequestBody) String() string {

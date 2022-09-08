@@ -10,7 +10,7 @@ import (
 type ListRoutesResponse struct {
 
 	// 路由列表
-	Routes         *[]Route `json:"routes,omitempty" xml:"routes"`
+	Routes         *[]Route `json:"routes,omitempty"`
 	HttpStatusCode int      `json:"-"`
 }
 

@@ -10,9 +10,9 @@ import (
 type NovaAssociateSecurityGroupRequest struct {
 
 	// 弹性云服务器ID。
-	ServerId string `json:"server_id" xml:"server_id"`
+	ServerId string `json:"server_id"`
 
-	Body *NovaAssociateSecurityGroupRequestBody `json:"body,omitempty" xml:"body"`
+	Body *NovaAssociateSecurityGroupRequestBody `json:"body,omitempty"`
 }
 
 func (o NovaAssociateSecurityGroupRequest) String() string {

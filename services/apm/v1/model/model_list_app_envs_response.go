@@ -10,7 +10,7 @@ import (
 type ListAppEnvsResponse struct {
 
 	// 环境信息列表
-	Envs           *[]EnvNodeModel `json:"envs,omitempty" xml:"envs"`
+	Envs           *[]EnvNodeModel `json:"envs,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }
 

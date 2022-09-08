@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ListSimPricePlansResponse struct {
-	Body           *[]SimPricePlanVo `json:"body,omitempty" xml:"body"`
+	Body           *[]SimPricePlanVo `json:"body,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }
 

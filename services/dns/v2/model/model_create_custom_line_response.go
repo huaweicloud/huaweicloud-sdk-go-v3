@@ -10,25 +10,25 @@ import (
 type CreateCustomLineResponse struct {
 
 	// 解析线路ID。
-	LineId *string `json:"line_id,omitempty" xml:"line_id"`
+	LineId *string `json:"line_id,omitempty"`
 
 	// 解析线路名称。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// IP地址段。
-	IpSegments *[]string `json:"ip_segments,omitempty" xml:"ip_segments"`
+	IpSegments *[]string `json:"ip_segments,omitempty"`
 
 	// 创建时间。
-	CreatedAt *string `json:"created_at,omitempty" xml:"created_at"`
+	CreatedAt *string `json:"created_at,omitempty"`
 
 	// 更新时间。
-	UpdatedAt *string `json:"updated_at,omitempty" xml:"updated_at"`
+	UpdatedAt *string `json:"updated_at,omitempty"`
 
 	// 资源状态。
-	Status *string `json:"status,omitempty" xml:"status"`
+	Status *string `json:"status,omitempty"`
 
 	// 自定义线路的描述信息。
-	Description    *string `json:"description,omitempty" xml:"description"`
+	Description    *string `json:"description,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -10,18 +10,18 @@ import (
 type CreateRunResponse struct {
 
 	// 作业运行ID。
-	RunId *string `json:"run_id,omitempty" xml:"run_id"`
+	RunId *string `json:"run_id,omitempty"`
 
 	// 作业ID。
-	JobId *string `json:"job_id,omitempty" xml:"job_id"`
+	JobId *string `json:"job_id,omitempty"`
 
 	// 作业类型。
-	JobType *string `json:"job_type,omitempty" xml:"job_type"`
+	JobType *string `json:"job_type,omitempty"`
 
 	// 创建运行时间。
-	CreatedTime *string `json:"created_time,omitempty" xml:"created_time"`
+	CreatedTime *string `json:"created_time,omitempty"`
 
-	SqlJob         *SqlJobRunResponseBody `json:"sql_job,omitempty" xml:"sql_job"`
+	SqlJob         *SqlJobRunResponseBody `json:"sql_job,omitempty"`
 	HttpStatusCode int                    `json:"-"`
 }
 

@@ -10,10 +10,10 @@ import (
 type SupportVersions struct {
 
 	// 支持的集群类型
-	ClusterType string `json:"clusterType" xml:"clusterType"`
+	ClusterType string `json:"clusterType"`
 
 	// 支持的集群版本（正则表达式）
-	ClusterVersion []string `json:"clusterVersion" xml:"clusterVersion"`
+	ClusterVersion []string `json:"clusterVersion"`
 }
 
 func (o SupportVersions) String() string {

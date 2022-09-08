@@ -9,16 +9,16 @@ import (
 type OpExtendInfoRestore struct {
 
 	// 备份副本ID
-	BackupId *string `json:"backup_id,omitempty" xml:"backup_id"`
+	BackupId *string `json:"backup_id,omitempty"`
 
 	// 备份名称
-	BackupName *string `json:"backup_name,omitempty" xml:"backup_name"`
+	BackupName *string `json:"backup_name,omitempty"`
 
 	// 恢复目标资源ID
-	TargetResourceId *string `json:"target_resource_id,omitempty" xml:"target_resource_id"`
+	TargetResourceId *string `json:"target_resource_id,omitempty"`
 
 	// 恢复目标资源名称
-	TargetResourceName *string `json:"target_resource_name,omitempty" xml:"target_resource_name"`
+	TargetResourceName *string `json:"target_resource_name,omitempty"`
 }
 
 func (o OpExtendInfoRestore) String() string {

@@ -10,13 +10,13 @@ import (
 type GaussMySqlDatabaseInfo struct {
 
 	// 数据库用户名。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 主机地址。
-	Host *string `json:"host,omitempty" xml:"host"`
+	Host *string `json:"host,omitempty"`
 
 	// 是否为只读权限：true表示只读,false表示可读写。
-	Readonly *bool `json:"readonly,omitempty" xml:"readonly"`
+	Readonly *bool `json:"readonly,omitempty"`
 }
 
 func (o GaussMySqlDatabaseInfo) String() string {

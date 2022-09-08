@@ -10,25 +10,25 @@ import (
 type ListCommitsRequest struct {
 
 	// 仓库短id
-	RepoId int32 `json:"repo_id" xml:"repo_id"`
+	RepoId int32 `json:"repo_id"`
 
 	// 仓库的branch名或tag名，如果为空则查询默认分支
-	RefName *string `json:"ref_name,omitempty" xml:"ref_name"`
+	RefName *string `json:"ref_name,omitempty"`
 
 	// 在此日期之后或当天提交，格式 YYYY-MM-DDTHH:MM:SSZ
-	Since *string `json:"since,omitempty" xml:"since"`
+	Since *string `json:"since,omitempty"`
 
 	// 在此日期之前或当天提交，格式 YYYY-MM-DDTHH:MM:SSZ
-	Until *string `json:"until,omitempty" xml:"until"`
+	Until *string `json:"until,omitempty"`
 
 	// 文件路径
-	Path *string `json:"path,omitempty" xml:"path"`
+	Path *string `json:"path,omitempty"`
 
 	// 是否检索仓库中每个提交
-	All *bool `json:"all,omitempty" xml:"all"`
+	All *bool `json:"all,omitempty"`
 
 	// 有关每个提交的统计信息是否添加到响应中
-	WithStats *bool `json:"with_stats,omitempty" xml:"with_stats"`
+	WithStats *bool `json:"with_stats,omitempty"`
 }
 
 func (o ListCommitsRequest) String() string {

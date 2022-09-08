@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type UpdatePeriodToOnDemandRequest struct {
-	Body *PeriodToOnDemandReq `json:"body,omitempty" xml:"body"`
+	Body *PeriodToOnDemandReq `json:"body,omitempty"`
 }
 
 func (o UpdatePeriodToOnDemandRequest) String() string {

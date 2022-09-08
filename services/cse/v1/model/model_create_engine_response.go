@@ -10,13 +10,13 @@ import (
 type CreateEngineResponse struct {
 
 	// 创建的微服务引擎专享版ID
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 创建的微服务引擎专享版名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 微服务引擎专享版执行的任务ID
-	JobId          *int32 `json:"job_id,omitempty" xml:"job_id"`
+	JobId          *int32 `json:"job_id,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RecognizeFlightItineraryRequest struct {
-	Body *FlightItineraryRequestBody `json:"body,omitempty" xml:"body"`
+	Body *FlightItineraryRequestBody `json:"body,omitempty"`
 }
 
 func (o RecognizeFlightItineraryRequest) String() string {

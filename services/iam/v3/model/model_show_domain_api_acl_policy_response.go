@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowDomainApiAclPolicyResponse struct {
-	ApiAclPolicy   *AclPolicyResult `json:"api_acl_policy,omitempty" xml:"api_acl_policy"`
+	ApiAclPolicy   *AclPolicyResult `json:"api_acl_policy,omitempty"`
 	HttpStatusCode int              `json:"-"`
 }
 

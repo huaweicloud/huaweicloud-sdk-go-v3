@@ -8,7 +8,7 @@ import (
 
 // This is a auto create Body Object
 type UpdateL7ruleRequestBody struct {
-	Rule *UpdateL7ruleReq `json:"rule" xml:"rule"`
+	Rule *UpdateL7ruleReq `json:"rule"`
 }
 
 func (o UpdateL7ruleRequestBody) String() string {

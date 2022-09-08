@@ -10,7 +10,7 @@ import (
 type DisableKeyStoreRequest struct {
 
 	// 密钥库ID
-	KeystoreId string `json:"keystore_id" xml:"keystore_id"`
+	KeystoreId string `json:"keystore_id"`
 }
 
 func (o DisableKeyStoreRequest) String() string {

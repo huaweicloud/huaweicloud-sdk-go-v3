@@ -10,32 +10,32 @@ import (
 type InsurancePolicyResult struct {
 
 	// 发卡行。
-	BankName *string `json:"bank_name,omitempty" xml:"bank_name"`
+	BankName *string `json:"bank_name,omitempty"`
 
-	BillNumber *InsurancePolicyDetail `json:"bill_number,omitempty" xml:"bill_number"`
+	BillNumber *InsurancePolicyDetail `json:"bill_number,omitempty"`
 
-	Company *InsurancePolicyDetail `json:"company,omitempty" xml:"company"`
+	Company *InsurancePolicyDetail `json:"company,omitempty"`
 
-	EffectiveDate *InsurancePolicyDetail `json:"effective_date,omitempty" xml:"effective_date"`
+	EffectiveDate *InsurancePolicyDetail `json:"effective_date,omitempty"`
 
-	ApplicantName *InsurancePolicyDetail `json:"applicant_name,omitempty" xml:"applicant_name"`
+	ApplicantName *InsurancePolicyDetail `json:"applicant_name,omitempty"`
 
-	ApplicantSex *InsurancePolicyDetail `json:"applicant_sex,omitempty" xml:"applicant_sex"`
+	ApplicantSex *InsurancePolicyDetail `json:"applicant_sex,omitempty"`
 
-	ApplicantBirthday *InsurancePolicyDetail `json:"applicant_birthday,omitempty" xml:"applicant_birthday"`
+	ApplicantBirthday *InsurancePolicyDetail `json:"applicant_birthday,omitempty"`
 
-	ApplicantIdType *InsurancePolicyDetail `json:"applicant_id_type,omitempty" xml:"applicant_id_type"`
+	ApplicantIdType *InsurancePolicyDetail `json:"applicant_id_type,omitempty"`
 
-	ApplicantIdNumber *InsurancePolicyDetail `json:"applicant_id_number,omitempty" xml:"applicant_id_number"`
+	ApplicantIdNumber *InsurancePolicyDetail `json:"applicant_id_number,omitempty"`
 
 	// 被保人列表（第一个默认为主被保人）。
-	InsurantList *[]InsurantItem `json:"insurant_list,omitempty" xml:"insurant_list"`
+	InsurantList *[]InsurantItem `json:"insurant_list,omitempty"`
 
 	// 受益人列表。
-	BeneficiaryList *[]BeneficiaryItem `json:"beneficiary_list,omitempty" xml:"beneficiary_list"`
+	BeneficiaryList *[]BeneficiaryItem `json:"beneficiary_list,omitempty"`
 
 	// 保险项目信息列表。
-	InsuranceList *[]InsuranceItem `json:"insurance_list,omitempty" xml:"insurance_list"`
+	InsuranceList *[]InsuranceItem `json:"insurance_list,omitempty"`
 }
 
 func (o InsurancePolicyResult) String() string {

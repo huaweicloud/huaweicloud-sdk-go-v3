@@ -13,19 +13,19 @@ import (
 type L7policiesInStatusResp struct {
 
 	// 转发策略ID
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
 	// 转发策略名称
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 转发策略关联的转发规则列表
-	Rules []L7rulesInStatusResp `json:"rules" xml:"rules"`
+	Rules []L7rulesInStatusResp `json:"rules"`
 
 	// 转发策略的转发动作；取值：REDIRECT_TO_POOL：转发到后端云服务器组；REDIRECT_TO_LISTENER：重定向到监听器
-	Action L7policiesInStatusRespAction `json:"action" xml:"action"`
+	Action L7policiesInStatusRespAction `json:"action"`
 
 	// 健康检查的配置状态；该字段为预留字段，暂未启用。默认为ACTIVE。
-	ProvisioningStatus string `json:"provisioning_status" xml:"provisioning_status"`
+	ProvisioningStatus string `json:"provisioning_status"`
 }
 
 func (o L7policiesInStatusResp) String() string {

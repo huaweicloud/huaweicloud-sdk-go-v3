@@ -10,15 +10,15 @@ import (
 type UpdateAomMappingRulesResponse struct {
 
 	// 项目id
-	ProjectId *string `json:"project_id,omitempty" xml:"project_id"`
+	ProjectId *string `json:"project_id,omitempty"`
 
 	// 接入规则名称
-	RuleName *string `json:"rule_name,omitempty" xml:"rule_name"`
+	RuleName *string `json:"rule_name,omitempty"`
 
 	// 接入规则id
-	RuleId *string `json:"rule_id,omitempty" xml:"rule_id"`
+	RuleId *string `json:"rule_id,omitempty"`
 
-	RuleInfo       *AomMappingRuleInfo `json:"rule_info,omitempty" xml:"rule_info"`
+	RuleInfo       *AomMappingRuleInfo `json:"rule_info,omitempty"`
 	HttpStatusCode int                 `json:"-"`
 }
 

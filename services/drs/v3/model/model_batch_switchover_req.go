@@ -10,7 +10,7 @@ import (
 type BatchSwitchoverReq struct {
 
 	// 批量主备调换的任务详情ID请求列表
-	Jobs []string `json:"jobs" xml:"jobs"`
+	Jobs []string `json:"jobs"`
 }
 
 func (o BatchSwitchoverReq) String() string {

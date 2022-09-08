@@ -9,7 +9,7 @@ import (
 type SnapshotResp struct {
 
 	// Snapshot ID
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 }
 
 func (o SnapshotResp) String() string {

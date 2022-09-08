@@ -12,6 +12,8 @@ var CN_NORTH_1 = region.NewRegion("cn-north-1", "https://ocr.cn-north-1.myhuawei
 var AP_SOUTHEAST_2 = region.NewRegion("ap-southeast-2", "https://ocr.ap-southeast-2.myhuaweicloud.com")
 var AP_SOUTHEAST_1 = region.NewRegion("ap-southeast-1", "https://ocr.ap-southeast-1.myhuaweicloud.com")
 var AP_SOUTHEAST_3 = region.NewRegion("ap-southeast-3", "https://ocr.ap-southeast-3.myhuaweicloud.com")
+var LA_SOUTH_2 = region.NewRegion("la-south-2", "https://ocr.la-south-2.myhuaweicloud.com")
+var AF_SOUTH_1 = region.NewRegion("af-south-1", "https://ocr.af-south-1.myhuaweicloud.com")
 
 var staticFields = map[string]*region.Region{
 	"cn-north-4":     CN_NORTH_4,
@@ -21,6 +23,8 @@ var staticFields = map[string]*region.Region{
 	"ap-southeast-2": AP_SOUTHEAST_2,
 	"ap-southeast-1": AP_SOUTHEAST_1,
 	"ap-southeast-3": AP_SOUTHEAST_3,
+	"la-south-2":     LA_SOUTH_2,
+	"af-south-1":     AF_SOUTH_1,
 }
 
 var provider = region.DefaultProviderChain("OCR")

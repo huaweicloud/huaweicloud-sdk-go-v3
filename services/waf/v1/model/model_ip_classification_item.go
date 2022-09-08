@@ -9,10 +9,10 @@ import (
 type IpClassificationItem struct {
 
 	// IpItem的总数量
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 
 	// IpItem详细信息
-	Items *[]IpItem `json:"items,omitempty" xml:"items"`
+	Items *[]IpItem `json:"items,omitempty"`
 }
 
 func (o IpClassificationItem) String() string {

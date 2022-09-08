@@ -10,82 +10,82 @@ import (
 type ShowConsoleConfigResponse struct {
 
 	// 是否支持EPS，false：不支持；true：支持
-	Eps *bool `json:"eps,omitempty" xml:"eps"`
+	Eps *bool `json:"eps,omitempty"`
 
 	// 是否支持的TLS版本（TLS v1.0/TLS v1.1/TLS v1.2）,默认为TLS v1.0版本，false：不支持；true：支持
-	Tls *bool `json:"tls,omitempty" xml:"tls"`
+	Tls *bool `json:"tls,omitempty"`
 
 	// 是否支持IPV6，false：不支持；true：支持
-	Ipv6 *bool `json:"ipv6,omitempty" xml:"ipv6"`
+	Ipv6 *bool `json:"ipv6,omitempty"`
 
 	// 是否支持告警，false：不支持；true：支持
-	Alert *bool `json:"alert,omitempty" xml:"alert"`
+	Alert *bool `json:"alert,omitempty"`
 
 	// 是否支持精准防护，false：不支持；true：支持
-	Custom *bool `json:"custom,omitempty" xml:"custom"`
+	Custom *bool `json:"custom,omitempty"`
 
 	// 是否支持ELB模式，false：不支持；true：支持
-	ElbMode *bool `json:"elb_mode,omitempty" xml:"elb_mode"`
+	ElbMode *bool `json:"elb_mode,omitempty"`
 
 	// 是否支持LTS全量日志，false：不支持；true：支持
-	EventLts *bool `json:"event_lts,omitempty" xml:"event_lts"`
+	EventLts *bool `json:"event_lts,omitempty"`
 
 	// 是否支持多DNS解析，false：不支持；true：支持
-	MultiDns *bool `json:"multi_dns,omitempty" xml:"multi_dns"`
+	MultiDns *bool `json:"multi_dns,omitempty"`
 
 	// 是否支持搜索IP，false：不支持；true：支持
-	SearchIp *bool `json:"search_ip,omitempty" xml:"search_ip"`
+	SearchIp *bool `json:"search_ip,omitempty"`
 
 	// 是否支持CC增强，false：不支持；true：支持
-	CcEnhance *bool `json:"cc_enhance,omitempty" xml:"cc_enhance"`
+	CcEnhance *bool `json:"cc_enhance,omitempty"`
 
 	// 是否支持cname切换，false：不支持；true：支持
-	CnameSwitch *bool `json:"cname_switch,omitempty" xml:"cname_switch"`
+	CnameSwitch *bool `json:"cname_switch,omitempty"`
 
 	// 是否支持自定义拦截页面，false：不支持，true：支持
-	CustomBlock *bool `json:"custom_block,omitempty" xml:"custom_block"`
+	CustomBlock *bool `json:"custom_block,omitempty"`
 
 	// 是否支持误报屏蔽，false：不支持；true：支持
-	AdvancedIgnore *bool `json:"advanced_ignore,omitempty" xml:"advanced_ignore"`
+	AdvancedIgnore *bool `json:"advanced_ignore,omitempty"`
 
 	// 是否支持js反爬虫，false：不支持；true：支持
-	JsCrawlerEnable *bool `json:"js_crawler_enable,omitempty" xml:"js_crawler_enable"`
+	JsCrawlerEnable *bool `json:"js_crawler_enable,omitempty"`
 
 	// 是否支持web基础防护深度检测，false：不支持；true：支持
-	DeepDecodeEnable *bool `json:"deep_decode_enable,omitempty" xml:"deep_decode_enable"`
+	DeepDecodeEnable *bool `json:"deep_decode_enable,omitempty"`
 
 	// 是否支持安全总览带宽统计，false：不支持；true：支持
-	OverviewBandwidth *bool `json:"overview_bandwidth,omitempty" xml:"overview_bandwidth"`
+	OverviewBandwidth *bool `json:"overview_bandwidth,omitempty"`
 
 	// 是否支持使用旧cname解析，false：不支持；true：支持
-	ProxyUseOldcname *bool `json:"proxy_use_oldcname,omitempty" xml:"proxy_use_oldcname"`
+	ProxyUseOldcname *bool `json:"proxy_use_oldcname,omitempty"`
 
 	// 是否支持检查所有的header，false：不支持；true：支持
-	CheckAllHeadersEnable *bool `json:"check_all_headers_enable,omitempty" xml:"check_all_headers_enable"`
+	CheckAllHeadersEnable *bool `json:"check_all_headers_enable,omitempty"`
 
 	// 是否支持地理位置访问控制，false：不支持；true：支持
-	GeoipEnable *bool `json:"geoip_enable,omitempty" xml:"geoip_enable"`
+	GeoipEnable *bool `json:"geoip_enable,omitempty"`
 
 	// 是否支持域名访问负载均衡配置，false：不支持；true：支持
-	LoadBalanceEnable *bool `json:"load_balance_enable,omitempty" xml:"load_balance_enable"`
+	LoadBalanceEnable *bool `json:"load_balance_enable,omitempty"`
 
 	// 是否支持ipv6防护，false：不支持；true：支持
-	Ipv6ProtectionEnable *bool `json:"ipv6_protection_enable,omitempty" xml:"ipv6_protection_enable"`
+	Ipv6ProtectionEnable *bool `json:"ipv6_protection_enable,omitempty"`
 
 	// 是否支持策略共享，false：不支持；true：支持
-	PolicySharingEnable *bool `json:"policy_sharing_enable,omitempty" xml:"policy_sharing_enable"`
+	PolicySharingEnable *bool `json:"policy_sharing_enable,omitempty"`
 
 	// 是否支持ip地址组，false：不支持；true：支持
-	IpGroup *bool `json:"ip_group,omitempty" xml:"ip_group"`
+	IpGroup *bool `json:"ip_group,omitempty"`
 
 	// 是否支持网站反爬虫，false：不支持；true：支持
-	RobotActionEnable *bool `json:"robot_action_enable,omitempty" xml:"robot_action_enable"`
+	RobotActionEnable *bool `json:"robot_action_enable,omitempty"`
 
 	// 是否支持http2，false：不支持；true：支持
-	Http2Enable *bool `json:"http2_enable,omitempty" xml:"http2_enable"`
+	Http2Enable *bool `json:"http2_enable,omitempty"`
 
 	// 是否支持超时配置，false：不支持；true：支持
-	TimeoutConfigEnable *bool `json:"timeout_config_enable,omitempty" xml:"timeout_config_enable"`
+	TimeoutConfigEnable *bool `json:"timeout_config_enable,omitempty"`
 	HttpStatusCode      int   `json:"-"`
 }
 

@@ -12,58 +12,58 @@ import (
 type ScalingActivityLogV2 struct {
 
 	// 伸缩活动状态：SUCCESS：成功。FAIL：失败。DOING：伸缩过程中。
-	Status *ScalingActivityLogV2Status `json:"status,omitempty" xml:"status"`
+	Status *ScalingActivityLogV2Status `json:"status,omitempty"`
 
 	// 伸缩活动触发时间，遵循UTC时间。
-	StartTime *sdktime.SdkTime `json:"start_time,omitempty" xml:"start_time"`
+	StartTime *sdktime.SdkTime `json:"start_time,omitempty"`
 
 	// 伸缩活动结束时间，遵循UTC时间。
-	EndTime *sdktime.SdkTime `json:"end_time,omitempty" xml:"end_time"`
+	EndTime *sdktime.SdkTime `json:"end_time,omitempty"`
 
 	// 伸缩活动日志ID。
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 完成伸缩活动且只被移出弹性伸缩组的云服务器名称列表，云服务信息之间以逗号分隔。
-	InstanceRemovedList *[]ScalingInstance `json:"instance_removed_list,omitempty" xml:"instance_removed_list"`
+	InstanceRemovedList *[]ScalingInstance `json:"instance_removed_list,omitempty"`
 
 	// 完成伸缩活动且被移出弹性伸缩组并删除的云服务器名称列表，云服务器信息之间以逗号分隔。
-	InstanceDeletedList *[]ScalingInstance `json:"instance_deleted_list,omitempty" xml:"instance_deleted_list"`
+	InstanceDeletedList *[]ScalingInstance `json:"instance_deleted_list,omitempty"`
 
 	// 完成伸缩活动且被加入弹性伸缩组的云服务器名称列表，云服务器信息之间以逗号分割。
-	InstanceAddedList *[]ScalingInstance `json:"instance_added_list,omitempty" xml:"instance_added_list"`
+	InstanceAddedList *[]ScalingInstance `json:"instance_added_list,omitempty"`
 
 	// 弹性伸缩组中伸缩活动失败的云服务器列表。
-	InstanceFailedList *[]ScalingInstance `json:"instance_failed_list,omitempty" xml:"instance_failed_list"`
+	InstanceFailedList *[]ScalingInstance `json:"instance_failed_list,omitempty"`
 
 	// 完成伸缩活动且被转入/移出备用状态的云服务器列表
-	InstanceStandbyList *[]ScalingInstance `json:"instance_standby_list,omitempty" xml:"instance_standby_list"`
+	InstanceStandbyList *[]ScalingInstance `json:"instance_standby_list,omitempty"`
 
 	// 伸缩活动中变化（增加或减少）的云服务器数量。
-	ScalingValue *string `json:"scaling_value,omitempty" xml:"scaling_value"`
+	ScalingValue *string `json:"scaling_value,omitempty"`
 
 	// 伸缩活动的描述信息。
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 伸缩组当前instance值。
-	InstanceValue *int32 `json:"instance_value,omitempty" xml:"instance_value"`
+	InstanceValue *int32 `json:"instance_value,omitempty"`
 
 	// 伸缩活动最终desire值。
-	DesireValue *int32 `json:"desire_value,omitempty" xml:"desire_value"`
+	DesireValue *int32 `json:"desire_value,omitempty"`
 
 	// 绑定成功的负载均衡器列表。
-	LbBindSuccessList *[]ModifyLb `json:"lb_bind_success_list,omitempty" xml:"lb_bind_success_list"`
+	LbBindSuccessList *[]ModifyLb `json:"lb_bind_success_list,omitempty"`
 
 	// 绑定失败的负载均衡器列表。
-	LbBindFailedList *[]ModifyLb `json:"lb_bind_failed_list,omitempty" xml:"lb_bind_failed_list"`
+	LbBindFailedList *[]ModifyLb `json:"lb_bind_failed_list,omitempty"`
 
 	// 解绑成功的负载均衡器列表。
-	LbUnbindSuccessList *[]ModifyLb `json:"lb_unbind_success_list,omitempty" xml:"lb_unbind_success_list"`
+	LbUnbindSuccessList *[]ModifyLb `json:"lb_unbind_success_list,omitempty"`
 
 	// 解绑失败的负载均衡器列表。
-	LbUnbindFailedList *[]ModifyLb `json:"lb_unbind_failed_list,omitempty" xml:"lb_unbind_failed_list"`
+	LbUnbindFailedList *[]ModifyLb `json:"lb_unbind_failed_list,omitempty"`
 
 	// 伸缩组活动类型
-	Type *string `json:"type,omitempty" xml:"type"`
+	Type *string `json:"type,omitempty"`
 }
 
 func (o ScalingActivityLogV2) String() string {

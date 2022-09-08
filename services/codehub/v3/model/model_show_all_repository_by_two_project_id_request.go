@@ -10,16 +10,16 @@ import (
 type ShowAllRepositoryByTwoProjectIdRequest struct {
 
 	// 分页索引，从1开始计数
-	PageIndex *int32 `json:"page_index,omitempty" xml:"page_index"`
+	PageIndex *int32 `json:"page_index,omitempty"`
 
 	// 每页条目数
-	PageSize *int32 `json:"page_size,omitempty" xml:"page_size"`
+	PageSize *int32 `json:"page_size,omitempty"`
 
 	// 项目的uuid
-	ProjectUuid string `json:"project_uuid" xml:"project_uuid"`
+	ProjectUuid string `json:"project_uuid"`
 
 	// 搜索关键字
-	Search *string `json:"search,omitempty" xml:"search"`
+	Search *string `json:"search,omitempty"`
 }
 
 func (o ShowAllRepositoryByTwoProjectIdRequest) String() string {

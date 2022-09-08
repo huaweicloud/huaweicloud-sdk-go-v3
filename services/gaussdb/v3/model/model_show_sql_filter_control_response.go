@@ -10,7 +10,7 @@ import (
 type ShowSqlFilterControlResponse struct {
 
 	// sql限流开关状态。  取值：  - ON：已开启 - OFF：已关闭
-	SwitchStatus   *string `json:"switch_status,omitempty" xml:"switch_status"`
+	SwitchStatus   *string `json:"switch_status,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

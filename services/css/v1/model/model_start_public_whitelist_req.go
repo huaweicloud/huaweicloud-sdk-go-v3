@@ -9,7 +9,7 @@ import (
 type StartPublicWhitelistReq struct {
 
 	// 开启白名单的用户IP。
-	WhiteList string `json:"whiteList" xml:"whiteList"`
+	WhiteList string `json:"whiteList"`
 }
 
 func (o StartPublicWhitelistReq) String() string {

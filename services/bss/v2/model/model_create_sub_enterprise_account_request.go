@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateSubEnterpriseAccountRequest struct {
-	Body *CreateSubCustomerReqV2 `json:"body,omitempty" xml:"body"`
+	Body *CreateSubCustomerReqV2 `json:"body,omitempty"`
 }
 
 func (o CreateSubEnterpriseAccountRequest) String() string {

@@ -13,25 +13,25 @@ import (
 type PrecheckResult struct {
 
 	// 检查项。
-	Item *string `json:"item,omitempty" xml:"item"`
+	Item *string `json:"item,omitempty"`
 
 	// 检查结果
-	Result *PrecheckResultResult `json:"result,omitempty" xml:"result"`
+	Result *PrecheckResultResult `json:"result,omitempty"`
 
 	// 失败原因。
-	FailedReason *string `json:"failed_reason,omitempty" xml:"failed_reason"`
+	FailedReason *string `json:"failed_reason,omitempty"`
 
 	// 加密的数据。
-	Data *string `json:"data,omitempty" xml:"data"`
+	Data *string `json:"data,omitempty"`
 
 	// 行错误信息。
-	RawErrorMsg *string `json:"raw_error_msg,omitempty" xml:"raw_error_msg"`
+	RawErrorMsg *string `json:"raw_error_msg,omitempty"`
 
 	// 检查项分组
-	Group *string `json:"group,omitempty" xml:"group"`
+	Group *string `json:"group,omitempty"`
 
 	// 失败的子任务信息。
-	FailedSubJobs *[]PrecheckFailSubJobVo `json:"failed_sub_jobs,omitempty" xml:"failed_sub_jobs"`
+	FailedSubJobs *[]PrecheckFailSubJobVo `json:"failed_sub_jobs,omitempty"`
 }
 
 func (o PrecheckResult) String() string {

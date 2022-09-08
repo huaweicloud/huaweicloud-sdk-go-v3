@@ -7,7 +7,7 @@ import (
 )
 
 type SetBackupPolicyRequestBody struct {
-	BackupPolicy *BackupPolicy `json:"backup_policy" xml:"backup_policy"`
+	BackupPolicy *BackupPolicy `json:"backup_policy"`
 }
 
 func (o SetBackupPolicyRequestBody) String() string {

@@ -10,7 +10,7 @@ import (
 type UpdateDbUserResponse struct {
 
 	// 修改结果，修改成功返回OK
-	Result         *string `json:"result,omitempty" xml:"result"`
+	Result         *string `json:"result,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -10,7 +10,7 @@ import (
 type BatchStart struct {
 
 	// 待启动的边缘实例列表。
-	Servers *[]BaseId `json:"servers,omitempty" xml:"servers"`
+	Servers *[]BaseId `json:"servers,omitempty"`
 }
 
 func (o BatchStart) String() string {

@@ -10,7 +10,7 @@ import (
 type DeleteAssetCategoryRequest struct {
 
 	// 视频分类ID
-	Id int32 `json:"id" xml:"id"`
+	Id int32 `json:"id"`
 }
 
 func (o DeleteAssetCategoryRequest) String() string {

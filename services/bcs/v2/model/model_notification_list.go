@@ -9,32 +9,32 @@ import (
 type NotificationList struct {
 
 	// 通道名称
-	ChannelName *string `json:"channel_name,omitempty" xml:"channel_name"`
+	ChannelName *string `json:"channel_name,omitempty"`
 
 	// 当前状态
-	Status *string `json:"status,omitempty" xml:"status"`
+	Status *string `json:"status,omitempty"`
 
 	// 更新时间
-	UpdatedTime *string `json:"updated_time,omitempty" xml:"updated_time"`
+	UpdatedTime *string `json:"updated_time,omitempty"`
 
 	// 是否开启可信
-	Tc3Need *bool `json:"tc3_need,omitempty" xml:"tc3_need"`
+	Tc3Need *bool `json:"tc3_need,omitempty"`
 
-	InvitorInfo *InvitorInfo `json:"invitor_info,omitempty" xml:"invitor_info"`
+	InvitorInfo *InvitorInfo `json:"invitor_info,omitempty"`
 
-	InviteeInfo *InviteeInfo `json:"invitee_info,omitempty" xml:"invitee_info"`
+	InviteeInfo *InviteeInfo `json:"invitee_info,omitempty"`
 
 	// 是否删除
-	Hide *int64 `json:"hide,omitempty" xml:"hide"`
+	Hide *int64 `json:"hide,omitempty"`
 
 	// 被邀请的组织信息
-	InviteeOrgs *[]OrganizationV2 `json:"invitee_orgs,omitempty" xml:"invitee_orgs"`
+	InviteeOrgs *[]OrganizationV2 `json:"invitee_orgs,omitempty"`
 
 	// 阅读状态值
-	ReadStatus *int64 `json:"read_status,omitempty" xml:"read_status"`
+	ReadStatus *int64 `json:"read_status,omitempty"`
 
 	// 跨版本进行升级
-	CrossVersionUpgrade *string `json:"cross_version_upgrade,omitempty" xml:"cross_version_upgrade"`
+	CrossVersionUpgrade *string `json:"cross_version_upgrade,omitempty"`
 }
 
 func (o NotificationList) String() string {

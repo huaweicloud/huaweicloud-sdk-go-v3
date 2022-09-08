@@ -10,9 +10,9 @@ import (
 type UpdateReadAndWriteStrategyRequest struct {
 
 	// DDM实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
-	Body *ModifyReadAndWriteStrategyReq `json:"body,omitempty" xml:"body"`
+	Body *ModifyReadAndWriteStrategyReq `json:"body,omitempty"`
 }
 
 func (o UpdateReadAndWriteStrategyRequest) String() string {

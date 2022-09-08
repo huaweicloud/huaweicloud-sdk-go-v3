@@ -9,13 +9,13 @@ import (
 type CreateNet2CloudPhoneServerRequestBodyPorts struct {
 
 	// 应用端口名称，不超过16个字节，系统关键服务名称不能使用\"adb\"和\"vnc\"
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 端口号，大于等于10000，小于等于50000
-	ListenPort *int32 `json:"listen_port,omitempty" xml:"listen_port"`
+	ListenPort *int32 `json:"listen_port,omitempty"`
 
 	// 为\"true\"则映射出公网访问（忽略大小写）。 为其他则不映射
-	InternetAccessible *string `json:"internet_accessible,omitempty" xml:"internet_accessible"`
+	InternetAccessible *string `json:"internet_accessible,omitempty"`
 }
 
 func (o CreateNet2CloudPhoneServerRequestBodyPorts) String() string {

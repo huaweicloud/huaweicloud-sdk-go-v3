@@ -9,13 +9,13 @@ import (
 type DebugCaseResultHeader struct {
 
 	// Connection
-	Connection *string `json:"Connection,omitempty" xml:"Connection"`
+	Connection *string `json:"Connection,omitempty"`
 
 	// Content-Type
-	ContentType *string `json:"Content-Type,omitempty" xml:"Content-Type"`
+	ContentType *string `json:"Content-Type,omitempty"`
 
 	// Host
-	Host *string `json:"Host,omitempty" xml:"Host"`
+	Host *string `json:"Host,omitempty"`
 }
 
 func (o DebugCaseResultHeader) String() string {

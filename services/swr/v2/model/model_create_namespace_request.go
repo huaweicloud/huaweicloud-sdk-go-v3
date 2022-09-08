@@ -13,9 +13,9 @@ import (
 type CreateNamespaceRequest struct {
 
 	// 消息体的类型（格式），下方类型可任选其一使用： application/json;charset=utf-8 application/json
-	ContentType CreateNamespaceRequestContentType `json:"Content-Type" xml:"Content-Type"`
+	ContentType CreateNamespaceRequestContentType `json:"Content-Type"`
 
-	Body *CreateNamespaceRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreateNamespaceRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateNamespaceRequest) String() string {

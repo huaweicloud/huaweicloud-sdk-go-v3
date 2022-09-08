@@ -13,16 +13,16 @@ import (
 type BackupFilesBody struct {
 
 	// 数据来源，当前仅支持OBS桶方式，取值为：self_build_obs。
-	FileSource *BackupFilesBodyFileSource `json:"file_source,omitempty" xml:"file_source"`
+	FileSource *BackupFilesBodyFileSource `json:"file_source,omitempty"`
 
 	// OBS桶名。
-	BucketName string `json:"bucket_name" xml:"bucket_name"`
+	BucketName string `json:"bucket_name"`
 
 	// 导入的备份文件文件列表。
-	Files []Files `json:"files" xml:"files"`
+	Files []Files `json:"files"`
 
 	// 备份记录ID，数据来源为备份记录时必须填写
-	BackupId *string `json:"backup_id,omitempty" xml:"backup_id"`
+	BackupId *string `json:"backup_id,omitempty"`
 }
 
 func (o BackupFilesBody) String() string {

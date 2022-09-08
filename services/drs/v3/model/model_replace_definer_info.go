@@ -10,10 +10,10 @@ import (
 type ReplaceDefinerInfo struct {
 
 	// 任务id
-	JobId string `json:"job_id" xml:"job_id"`
+	JobId string `json:"job_id"`
 
 	// 是否使用目标库的用户替换掉definer
-	ReplaceDefiner bool `json:"replace_definer" xml:"replace_definer"`
+	ReplaceDefiner bool `json:"replace_definer"`
 }
 
 func (o ReplaceDefinerInfo) String() string {

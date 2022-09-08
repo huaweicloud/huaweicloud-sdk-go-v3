@@ -13,12 +13,12 @@ import (
 type CreateNodeRequest struct {
 
 	// 集群 ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-	ClusterId string `json:"cluster_id" xml:"cluster_id"`
+	ClusterId string `json:"cluster_id"`
 
 	// 标明是否为nodepool下发的请求。若不为“NodepoolScaleUp”将自动更新对应节点池的实例数
-	NodepoolScaleUp *CreateNodeRequestNodepoolScaleUp `json:"nodepoolScaleUp,omitempty" xml:"nodepoolScaleUp"`
+	NodepoolScaleUp *CreateNodeRequestNodepoolScaleUp `json:"nodepoolScaleUp,omitempty"`
 
-	Body *NodeCreateRequest `json:"body,omitempty" xml:"body"`
+	Body *NodeCreateRequest `json:"body,omitempty"`
 }
 
 func (o CreateNodeRequest) String() string {

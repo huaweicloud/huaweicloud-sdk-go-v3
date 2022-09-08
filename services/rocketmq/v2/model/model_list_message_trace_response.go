@@ -10,7 +10,7 @@ import (
 type ListMessageTraceResponse struct {
 
 	// 消息轨迹列表。
-	Trace          *[]ListMessageTraceRespTrace `json:"trace,omitempty" xml:"trace"`
+	Trace          *[]ListMessageTraceRespTrace `json:"trace,omitempty"`
 	HttpStatusCode int                          `json:"-"`
 }
 

@@ -7,7 +7,7 @@ import (
 )
 
 type Single2Ha struct {
-	SingleToHa *Single2HaObject `json:"single_to_ha" xml:"single_to_ha"`
+	SingleToHa *Single2HaObject `json:"single_to_ha"`
 }
 
 func (o Single2Ha) String() string {

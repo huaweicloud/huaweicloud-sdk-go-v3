@@ -10,13 +10,13 @@ import (
 type CreateNet2CloudPhoneServerResponse struct {
 
 	// 请求的唯一标识ID
-	RequestId string `json:"request_id" xml:"request_id"`
+	RequestId string `json:"request_id"`
 
 	// 订单ID，不超过64个字节
-	OrderId string `json:"order_id" xml:"order_id"`
+	OrderId string `json:"order_id"`
 
 	// 产品ID，不超过64个字节
-	ProductId      string `json:"product_id" xml:"product_id"`
+	ProductId      string `json:"product_id"`
 	HttpStatusCode int    `json:"-"`
 }
 

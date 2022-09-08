@@ -9,10 +9,10 @@ import (
 type WarningList struct {
 
 	// 警告ID。
-	WarningCode *int32 `json:"warningCode,omitempty" xml:"warningCode"`
+	WarningCode *int32 `json:"warningCode,omitempty"`
 
 	// 告警消息。
-	WarningMsg *string `json:"warningMsg,omitempty" xml:"warningMsg"`
+	WarningMsg *string `json:"warningMsg,omitempty"`
 }
 
 func (o WarningList) String() string {

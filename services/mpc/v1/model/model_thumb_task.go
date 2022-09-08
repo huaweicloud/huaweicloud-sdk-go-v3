@@ -12,32 +12,32 @@ import (
 type ThumbTask struct {
 
 	// 任务ID。  截图服务接受任务后产生的任务ID。一次最多10个。
-	TaskId *string `json:"task_id,omitempty" xml:"task_id"`
+	TaskId *string `json:"task_id,omitempty"`
 
 	// 任务状态
-	Status *ThumbTaskStatus `json:"status,omitempty" xml:"status"`
+	Status *ThumbTaskStatus `json:"status,omitempty"`
 
 	// 起始时间。  格式为yyyymmddhhmmss。必须是与时区无关的UTC时间，指定task_id时该参数无效。
-	CreateTime *string `json:"create_time,omitempty" xml:"create_time"`
+	CreateTime *string `json:"create_time,omitempty"`
 
 	// 结束时间。  格式为yyyymmddhhmmss。必须是与时区无关的UTC时间，指定task_id时该参数无效。
-	EndTime *string `json:"end_time,omitempty" xml:"end_time"`
+	EndTime *string `json:"end_time,omitempty"`
 
-	Input *ObsObjInfo `json:"input,omitempty" xml:"input"`
+	Input *ObsObjInfo `json:"input,omitempty"`
 
-	Output *ObsObjInfo `json:"output,omitempty" xml:"output"`
+	Output *ObsObjInfo `json:"output,omitempty"`
 
 	// 输出文件名。
-	OutputFileName *string `json:"output_file_name,omitempty" xml:"output_file_name"`
+	OutputFileName *string `json:"output_file_name,omitempty"`
 
 	// 用户数据。
-	UserData *string `json:"user_data,omitempty" xml:"user_data"`
+	UserData *string `json:"user_data,omitempty"`
 
 	// 任务描述。
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 截图文件信息。
-	ThumbnailInfo *[]PicInfo `json:"thumbnail_info,omitempty" xml:"thumbnail_info"`
+	ThumbnailInfo *[]PicInfo `json:"thumbnail_info,omitempty"`
 }
 
 func (o ThumbTask) String() string {

@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateEnvironmentRequest struct {
-	Body *EnvironmentCreate `json:"body,omitempty" xml:"body"`
+	Body *EnvironmentCreate `json:"body,omitempty"`
 }
 
 func (o CreateEnvironmentRequest) String() string {

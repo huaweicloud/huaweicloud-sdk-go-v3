@@ -10,9 +10,9 @@ import (
 type BatchCreateAndDeleteVaultTagsRequest struct {
 
 	// 资源id
-	VaultId string `json:"vault_id" xml:"vault_id"`
+	VaultId string `json:"vault_id"`
 
-	Body *BulkCreateAndDeleteVaultTagsReq `json:"body,omitempty" xml:"body"`
+	Body *BulkCreateAndDeleteVaultTagsReq `json:"body,omitempty"`
 }
 
 func (o BatchCreateAndDeleteVaultTagsRequest) String() string {

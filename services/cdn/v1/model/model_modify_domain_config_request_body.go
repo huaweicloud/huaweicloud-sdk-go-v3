@@ -7,7 +7,7 @@ import (
 )
 
 type ModifyDomainConfigRequestBody struct {
-	Configs *Configs `json:"configs,omitempty" xml:"configs"`
+	Configs *Configs `json:"configs,omitempty"`
 }
 
 func (o ModifyDomainConfigRequestBody) String() string {

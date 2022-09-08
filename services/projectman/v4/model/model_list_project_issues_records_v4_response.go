@@ -10,10 +10,10 @@ import (
 type ListProjectIssuesRecordsV4Response struct {
 
 	// 历史记录
-	Records *[]IssueAttrHistoryRecord `json:"records,omitempty" xml:"records"`
+	Records *[]IssueAttrHistoryRecord `json:"records,omitempty"`
 
 	// 总数
-	Total          *int32 `json:"total,omitempty" xml:"total"`
+	Total          *int32 `json:"total,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

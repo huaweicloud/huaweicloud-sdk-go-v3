@@ -9,10 +9,10 @@ import (
 type AddSshKeyRequestBody struct {
 
 	// 密钥
-	Key string `json:"key" xml:"key"`
+	Key string `json:"key"`
 
 	// 密钥名称
-	Title string `json:"title" xml:"title"`
+	Title string `json:"title"`
 }
 
 func (o AddSshKeyRequestBody) String() string {

@@ -10,9 +10,9 @@ import (
 type CreateCommitRequest struct {
 
 	// 仓库短id
-	RepoId int32 `json:"repo_id" xml:"repo_id"`
+	RepoId int32 `json:"repo_id"`
 
-	Body *CreateCommitRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreateCommitRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateCommitRequest) String() string {

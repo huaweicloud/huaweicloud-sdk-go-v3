@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type UpdateTrackerRequest struct {
-	Body *UpdateTrackerRequestBody `json:"body,omitempty" xml:"body"`
+	Body *UpdateTrackerRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateTrackerRequest) String() string {

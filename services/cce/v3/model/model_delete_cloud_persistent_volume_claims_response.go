@@ -10,16 +10,16 @@ import (
 type DeleteCloudPersistentVolumeClaimsResponse struct {
 
 	// API版本，固定值**v1**
-	ApiVersion *string `json:"apiVersion,omitempty" xml:"apiVersion"`
+	ApiVersion *string `json:"apiVersion,omitempty"`
 
 	// API类型，固定值**PersistentVolumeClaim**
-	Kind *string `json:"kind,omitempty" xml:"kind"`
+	Kind *string `json:"kind,omitempty"`
 
-	Metadata *PersistentVolumeClaimMetadata `json:"metadata,omitempty" xml:"metadata"`
+	Metadata *PersistentVolumeClaimMetadata `json:"metadata,omitempty"`
 
-	Spec *PersistentVolumeClaimSpec `json:"spec,omitempty" xml:"spec"`
+	Spec *PersistentVolumeClaimSpec `json:"spec,omitempty"`
 
-	Status         *PersistentVolumeClaimStatus `json:"status,omitempty" xml:"status"`
+	Status         *PersistentVolumeClaimStatus `json:"status,omitempty"`
 	HttpStatusCode int                          `json:"-"`
 }
 

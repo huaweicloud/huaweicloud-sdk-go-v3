@@ -10,10 +10,10 @@ import (
 type ShowTaskRequest struct {
 
 	// 服务名称
-	ServiceName string `json:"service_name" xml:"service_name"`
+	ServiceName string `json:"service_name"`
 
 	// 指定的服务作业ID
-	TaskId string `json:"task_id" xml:"task_id"`
+	TaskId string `json:"task_id"`
 }
 
 func (o ShowTaskRequest) String() string {

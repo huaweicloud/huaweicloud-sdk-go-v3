@@ -12,22 +12,22 @@ import (
 type QuotaItemInfo struct {
 
 	// 名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 配额类型
-	Type *QuotaItemInfoType `json:"type,omitempty" xml:"type"`
+	Type *QuotaItemInfoType `json:"type,omitempty"`
 
 	// 配额最大值
-	Max *string `json:"max,omitempty" xml:"max"`
+	Max *string `json:"max,omitempty"`
 
 	// 配额最小值
-	Min *string `json:"min,omitempty" xml:"min"`
+	Min *string `json:"min,omitempty"`
 
 	// 当前租户的配额
-	Quota *string `json:"quota,omitempty" xml:"quota"`
+	Quota *string `json:"quota,omitempty"`
 
 	// 当前租户已使用的配额
-	Used *string `json:"used,omitempty" xml:"used"`
+	Used *string `json:"used,omitempty"`
 }
 
 func (o QuotaItemInfo) String() string {

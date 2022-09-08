@@ -10,28 +10,28 @@ import (
 type UpdateTempRequestBody struct {
 
 	// id
-	Id int32 `json:"id" xml:"id"`
+	Id int32 `json:"id"`
 
 	// project_id
-	ProjectId int32 `json:"project_id" xml:"project_id"`
+	ProjectId int32 `json:"project_id"`
 
 	// name
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// temp_type
-	TempType *int32 `json:"temp_type,omitempty" xml:"temp_type"`
+	TempType *int32 `json:"temp_type,omitempty"`
 
 	// description
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// for_loop_params
-	ForLoopParams *[]interface{} `json:"for_loop_params,omitempty" xml:"for_loop_params"`
+	ForLoopParams *[]interface{} `json:"for_loop_params,omitempty"`
 
 	// enable_pre
-	EnablePre *bool `json:"enable_pre,omitempty" xml:"enable_pre"`
+	EnablePre *bool `json:"enable_pre,omitempty"`
 
 	// contents
-	Contents *[]TempContentInfo `json:"contents,omitempty" xml:"contents"`
+	Contents *[]TempContentInfo `json:"contents,omitempty"`
 }
 
 func (o UpdateTempRequestBody) String() string {

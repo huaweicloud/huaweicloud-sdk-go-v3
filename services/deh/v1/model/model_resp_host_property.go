@@ -10,25 +10,25 @@ import (
 type RespHostProperty struct {
 
 	// 专属主机类型。
-	HostType string `json:"host_type" xml:"host_type"`
+	HostType string `json:"host_type"`
 
 	// 专属主机类型的名称。
-	HostTypeName string `json:"host_type_name" xml:"host_type_name"`
+	HostTypeName string `json:"host_type_name"`
 
 	// 专属主机的vCPUs个数。
-	Vcpus int32 `json:"vcpus" xml:"vcpus"`
+	Vcpus int32 `json:"vcpus"`
 
 	// 专属主机的物理核数。
-	Cores int32 `json:"cores" xml:"cores"`
+	Cores int32 `json:"cores"`
 
 	// 专属主机的物理套接字数量。
-	Sockets int32 `json:"sockets" xml:"sockets"`
+	Sockets int32 `json:"sockets"`
 
 	// 专属主机的物理内存大小。
-	Memory int32 `json:"memory" xml:"memory"`
+	Memory int32 `json:"memory"`
 
 	// 专属主机上创建的云服务器规格。
-	AvailableInstanceCapacities []RespInstanceCapacity `json:"available_instance_capacities" xml:"available_instance_capacities"`
+	AvailableInstanceCapacities []RespInstanceCapacity `json:"available_instance_capacities"`
 }
 
 func (o RespHostProperty) String() string {

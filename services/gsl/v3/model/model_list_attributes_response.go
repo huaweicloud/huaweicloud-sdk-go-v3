@@ -10,16 +10,16 @@ import (
 type ListAttributesResponse struct {
 
 	// 每页记录数
-	Limit *int64 `json:"limit,omitempty" xml:"limit"`
+	Limit *int64 `json:"limit,omitempty"`
 
 	// 页码
-	Offset *int64 `json:"offset,omitempty" xml:"offset"`
+	Offset *int64 `json:"offset,omitempty"`
 
 	// 记录总数
-	Count *int64 `json:"count,omitempty" xml:"count"`
+	Count *int64 `json:"count,omitempty"`
 
 	// 自定义属性记录
-	Attributes     *[]CmAttributeVo `json:"attributes,omitempty" xml:"attributes"`
+	Attributes     *[]CmAttributeVo `json:"attributes,omitempty"`
 	HttpStatusCode int              `json:"-"`
 }
 

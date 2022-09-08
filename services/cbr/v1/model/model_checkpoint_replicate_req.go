@@ -8,7 +8,7 @@ import (
 
 // 执行复制请求体
 type CheckpointReplicateReq struct {
-	Replicate *CheckpointReplicateParam `json:"replicate" xml:"replicate"`
+	Replicate *CheckpointReplicateParam `json:"replicate"`
 }
 
 func (o CheckpointReplicateReq) String() string {

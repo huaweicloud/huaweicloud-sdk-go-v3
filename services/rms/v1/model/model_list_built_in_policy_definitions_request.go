@@ -10,7 +10,7 @@ import (
 type ListBuiltInPolicyDefinitionsRequest struct {
 
 	// 选择接口返回的信息的语言，默认为\"zh-cn\"中文
-	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *string `json:"X-Language,omitempty"`
 }
 
 func (o ListBuiltInPolicyDefinitionsRequest) String() string {

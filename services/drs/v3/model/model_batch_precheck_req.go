@@ -10,7 +10,7 @@ import (
 type BatchPrecheckReq struct {
 
 	// 批量预检查请求列表
-	Jobs []PreCheckInfo `json:"jobs" xml:"jobs"`
+	Jobs []PreCheckInfo `json:"jobs"`
 }
 
 func (o BatchPrecheckReq) String() string {

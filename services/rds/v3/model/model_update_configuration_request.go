@@ -10,12 +10,12 @@ import (
 type UpdateConfigurationRequest struct {
 
 	// 语言
-	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *string `json:"X-Language,omitempty"`
 
 	// 参数模板ID。
-	ConfigId string `json:"config_id" xml:"config_id"`
+	ConfigId string `json:"config_id"`
 
-	Body *ConfigurationForUpdate `json:"body,omitempty" xml:"body"`
+	Body *ConfigurationForUpdate `json:"body,omitempty"`
 }
 
 func (o UpdateConfigurationRequest) String() string {

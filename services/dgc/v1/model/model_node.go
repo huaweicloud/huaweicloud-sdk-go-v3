@@ -10,40 +10,40 @@ import (
 )
 
 type Node struct {
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 节点的类型
-	NodeType *NodeNodeType `json:"nodeType,omitempty" xml:"nodeType"`
+	NodeType *NodeNodeType `json:"nodeType,omitempty"`
 
-	Location *Location `json:"location,omitempty" xml:"location"`
+	Location *Location `json:"location,omitempty"`
 
 	// 本节点依赖的前一个节点名称
-	PreNodeNames *string `json:"preNodeNames,omitempty" xml:"preNodeNames"`
+	PreNodeNames *string `json:"preNodeNames,omitempty"`
 
 	// 节点执行条件
-	Condition *[]Condition `json:"condition,omitempty" xml:"condition"`
+	Condition *[]Condition `json:"condition,omitempty"`
 
 	// 节点的属性
-	NodeProperties *string `json:"nodeProperties,omitempty" xml:"nodeProperties"`
+	NodeProperties *string `json:"nodeProperties,omitempty"`
 
 	// 轮询节点执行结果时间间隔
-	PollingInterval *int32 `json:"pollingInterval,omitempty" xml:"pollingInterval"`
+	PollingInterval *int32 `json:"pollingInterval,omitempty"`
 
 	// 节点最大执行时间
-	MaxExecutionTime *int32 `json:"maxExecutionTime,omitempty" xml:"maxExecutionTime"`
+	MaxExecutionTime *int32 `json:"maxExecutionTime,omitempty"`
 
 	// 节点失败重试次数
-	RetryTimes *int32 `json:"retryTimes,omitempty" xml:"retryTimes"`
+	RetryTimes *int32 `json:"retryTimes,omitempty"`
 
 	// 失败重试时间间隔
-	RetryInterval *int32 `json:"retryInterval,omitempty" xml:"retryInterval"`
+	RetryInterval *int32 `json:"retryInterval,omitempty"`
 
 	// 作业失败策略
-	FailPolicy *NodeFailPolicy `json:"failPolicy,omitempty" xml:"failPolicy"`
+	FailPolicy *NodeFailPolicy `json:"failPolicy,omitempty"`
 
-	EventTrigger *Event `json:"eventTrigger,omitempty" xml:"eventTrigger"`
+	EventTrigger *Event `json:"eventTrigger,omitempty"`
 
-	CronTrigger *Cron `json:"cronTrigger,omitempty" xml:"cronTrigger"`
+	CronTrigger *Cron `json:"cronTrigger,omitempty"`
 }
 
 func (o Node) String() string {

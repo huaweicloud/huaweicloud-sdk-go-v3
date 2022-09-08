@@ -9,7 +9,7 @@ import (
 type UpdateSinkTaskQuotaReq struct {
 
 	// 转储任务的总个数。
-	SinkMaxTasks int32 `json:"sink_max_tasks" xml:"sink_max_tasks"`
+	SinkMaxTasks int32 `json:"sink_max_tasks"`
 }
 
 func (o UpdateSinkTaskQuotaReq) String() string {

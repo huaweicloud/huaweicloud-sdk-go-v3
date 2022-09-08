@@ -7,7 +7,7 @@ import (
 )
 
 type CdmStopClusterReq struct {
-	Stop *CdmStopClusterReqStop `json:"stop" xml:"stop"`
+	Stop *CdmStopClusterReqStop `json:"stop"`
 }
 
 func (o CdmStopClusterReq) String() string {

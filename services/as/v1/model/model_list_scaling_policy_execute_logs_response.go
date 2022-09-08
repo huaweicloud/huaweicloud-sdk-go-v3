@@ -10,16 +10,16 @@ import (
 type ListScalingPolicyExecuteLogsResponse struct {
 
 	// 总记录数。
-	TotalNumber *int32 `json:"total_number,omitempty" xml:"total_number"`
+	TotalNumber *int32 `json:"total_number,omitempty"`
 
 	// 查询的起始行号。
-	StartNumber *int32 `json:"start_number,omitempty" xml:"start_number"`
+	StartNumber *int32 `json:"start_number,omitempty"`
 
 	// 查询记录数。
-	Limit *int32 `json:"limit,omitempty" xml:"limit"`
+	Limit *int32 `json:"limit,omitempty"`
 
 	// 伸缩策略执行日志列表。
-	ScalingPolicyExecuteLog *[]ScalingPolicyExecuteLogList `json:"scaling_policy_execute_log,omitempty" xml:"scaling_policy_execute_log"`
+	ScalingPolicyExecuteLog *[]ScalingPolicyExecuteLogList `json:"scaling_policy_execute_log,omitempty"`
 	HttpStatusCode          int                            `json:"-"`
 }
 

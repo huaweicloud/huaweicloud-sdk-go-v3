@@ -8,7 +8,7 @@ import (
 
 // 策略修改body
 type PolicyUpdateReq struct {
-	Policy *PolicyUpdate `json:"policy" xml:"policy"`
+	Policy *PolicyUpdate `json:"policy"`
 }
 
 func (o PolicyUpdateReq) String() string {

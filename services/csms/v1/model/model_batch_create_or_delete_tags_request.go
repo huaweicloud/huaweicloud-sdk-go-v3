@@ -10,9 +10,9 @@ import (
 type BatchCreateOrDeleteTagsRequest struct {
 
 	// 凭据ID
-	SecretId string `json:"secret_id" xml:"secret_id"`
+	SecretId string `json:"secret_id"`
 
-	Body *BatchCreateOrDeleteTagsRequestBody `json:"body,omitempty" xml:"body"`
+	Body *BatchCreateOrDeleteTagsRequestBody `json:"body,omitempty"`
 }
 
 func (o BatchCreateOrDeleteTagsRequest) String() string {

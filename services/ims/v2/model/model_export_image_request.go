@@ -10,9 +10,9 @@ import (
 type ExportImageRequest struct {
 
 	// 镜像ID。
-	ImageId string `json:"image_id" xml:"image_id"`
+	ImageId string `json:"image_id"`
 
-	Body *ExportImageRequestBody `json:"body,omitempty" xml:"body"`
+	Body *ExportImageRequestBody `json:"body,omitempty"`
 }
 
 func (o ExportImageRequest) String() string {

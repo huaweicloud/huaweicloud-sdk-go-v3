@@ -13,19 +13,19 @@ import (
 type PipelineBasic struct {
 
 	// DevStar系统生成的流水线UUID
-	Uuid *string `json:"uuid,omitempty" xml:"uuid"`
+	Uuid *string `json:"uuid,omitempty"`
 
 	// CloudPipeline系统对应流水线ID
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 流水线名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 流水线地址
-	Url *string `json:"url,omitempty" xml:"url"`
+	Url *string `json:"url,omitempty"`
 
 	// 流水线最后一次运行状态,success:成功,failed:失败,running:运行中
-	LastRunningStatus *PipelineBasicLastRunningStatus `json:"last_running_status,omitempty" xml:"last_running_status"`
+	LastRunningStatus *PipelineBasicLastRunningStatus `json:"last_running_status,omitempty"`
 }
 
 func (o PipelineBasic) String() string {

@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type BatchAddMembersRequest struct {
-	Body *BatchAddMembersRequestBody `json:"body,omitempty" xml:"body"`
+	Body *BatchAddMembersRequestBody `json:"body,omitempty"`
 }
 
 func (o BatchAddMembersRequest) String() string {

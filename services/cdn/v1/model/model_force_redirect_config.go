@@ -10,10 +10,10 @@ import (
 type ForceRedirectConfig struct {
 
 	// 强制跳转开关（on：打开，off：关闭）。
-	Status string `json:"status" xml:"status"`
+	Status string `json:"status"`
 
 	// 强制跳转类型（http：强制跳转HTTP，https：强制跳转HTTPS）。
-	Type *string `json:"type,omitempty" xml:"type"`
+	Type *string `json:"type,omitempty"`
 }
 
 func (o ForceRedirectConfig) String() string {

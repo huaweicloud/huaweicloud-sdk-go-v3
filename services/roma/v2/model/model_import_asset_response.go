@@ -10,7 +10,7 @@ import (
 type ImportAssetResponse struct {
 
 	// 资产导入作业的ID，可用于查询作业进度，获取导入作业进度
-	JobId          *string `json:"job_id,omitempty" xml:"job_id"`
+	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

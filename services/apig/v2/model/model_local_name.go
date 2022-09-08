@@ -10,10 +10,10 @@ import (
 type LocalName struct {
 
 	// 可用区英文名称。
-	EnUs *string `json:"en_us,omitempty" xml:"en_us"`
+	EnUs *string `json:"en_us,omitempty"`
 
 	// 可用区中文名称。
-	ZhCn *string `json:"zh_cn,omitempty" xml:"zh_cn"`
+	ZhCn *string `json:"zh_cn,omitempty"`
 }
 
 func (o LocalName) String() string {

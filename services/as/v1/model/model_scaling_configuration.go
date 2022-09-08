@@ -11,21 +11,21 @@ import (
 type ScalingConfiguration struct {
 
 	// 伸缩配置ID，全局唯一。
-	ScalingConfigurationId *string `json:"scaling_configuration_id,omitempty" xml:"scaling_configuration_id"`
+	ScalingConfigurationId *string `json:"scaling_configuration_id,omitempty"`
 
 	// 租户ID。
-	Tenant *string `json:"tenant,omitempty" xml:"tenant"`
+	Tenant *string `json:"tenant,omitempty"`
 
 	// 伸缩配置名称。
-	ScalingConfigurationName *string `json:"scaling_configuration_name,omitempty" xml:"scaling_configuration_name"`
+	ScalingConfigurationName *string `json:"scaling_configuration_name,omitempty"`
 
-	InstanceConfig *InstanceConfigResult `json:"instance_config,omitempty" xml:"instance_config"`
+	InstanceConfig *InstanceConfigResult `json:"instance_config,omitempty"`
 
 	// 创建伸缩配置的时间，遵循UTC时间。
-	CreateTime *sdktime.SdkTime `json:"create_time,omitempty" xml:"create_time"`
+	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
 
 	// 绑定该伸缩配置的伸缩组ID
-	ScalingGroupId *string `json:"scaling_group_id,omitempty" xml:"scaling_group_id"`
+	ScalingGroupId *string `json:"scaling_group_id,omitempty"`
 }
 
 func (o ScalingConfiguration) String() string {

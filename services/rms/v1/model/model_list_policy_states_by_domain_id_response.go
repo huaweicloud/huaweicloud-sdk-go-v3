@@ -10,9 +10,9 @@ import (
 type ListPolicyStatesByDomainIdResponse struct {
 
 	// 合规结果查询返回值
-	Value *[]PolicyState `json:"value,omitempty" xml:"value"`
+	Value *[]PolicyState `json:"value,omitempty"`
 
-	PageInfo       *PageInfo `json:"page_info,omitempty" xml:"page_info"`
+	PageInfo       *PageInfo `json:"page_info,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }
 

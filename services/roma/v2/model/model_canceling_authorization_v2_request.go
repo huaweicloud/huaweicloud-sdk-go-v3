@@ -10,10 +10,10 @@ import (
 type CancelingAuthorizationV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 授权关系的编号
-	AppAuthId string `json:"app_auth_id" xml:"app_auth_id"`
+	AppAuthId string `json:"app_auth_id"`
 }
 
 func (o CancelingAuthorizationV2Request) String() string {

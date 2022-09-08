@@ -10,7 +10,7 @@ import (
 type CopyInstanceResponse struct {
 
 	// 备份记录ID。
-	BackupId       *string `json:"backup_id,omitempty" xml:"backup_id"`
+	BackupId       *string `json:"backup_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -13,70 +13,70 @@ import (
 type ShowEngineResponse struct {
 
 	// 微服务引擎专享版ID
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 微服务引擎专享版名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 微服务引擎专享版描述
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 微服务引擎专享版认证类型
-	AuthType *ShowEngineResponseAuthType `json:"auth_type,omitempty" xml:"auth_type"`
+	AuthType *ShowEngineResponseAuthType `json:"auth_type,omitempty"`
 
 	// 微服务引擎专享版规格
-	Flavor *string `json:"flavor,omitempty" xml:"flavor"`
+	Flavor *string `json:"flavor,omitempty"`
 
 	// 微服务引擎专享版计费方式
-	Payment *string `json:"payment,omitempty" xml:"payment"`
+	Payment *string `json:"payment,omitempty"`
 
 	// 微服务引擎专享版当前版本
-	Version *string `json:"version,omitempty" xml:"version"`
+	Version *string `json:"version,omitempty"`
 
 	// 微服务引擎专享版最新版本
-	LatestVersion *string `json:"latest_version,omitempty" xml:"latest_version"`
+	LatestVersion *string `json:"latest_version,omitempty"`
 
 	// 微服务引擎专享版状态
-	Status *ShowEngineResponseStatus `json:"status,omitempty" xml:"status"`
+	Status *ShowEngineResponseStatus `json:"status,omitempty"`
 
 	// engine 是否是默认引擎
-	BeDefault *bool `json:"be_default,omitempty" xml:"be_default"`
+	BeDefault *bool `json:"be_default,omitempty"`
 
 	// 微服务引擎专享版创建者
-	CreateUser *string `json:"create_user,omitempty" xml:"create_user"`
+	CreateUser *string `json:"create_user,omitempty"`
 
 	// 微服务引擎专享版创建时间
-	CreateTime *int64 `json:"create_time,omitempty" xml:"create_time"`
+	CreateTime *int64 `json:"create_time,omitempty"`
 
-	CceSpec *Spec `json:"cce_spec,omitempty" xml:"cce_spec"`
+	CceSpec *Spec `json:"cce_spec,omitempty"`
 
-	ExternalEntrypoint *EngineExternalEntrypoint `json:"external_entrypoint,omitempty" xml:"external_entrypoint"`
+	ExternalEntrypoint *EngineExternalEntrypoint `json:"external_entrypoint,omitempty"`
 
-	Reference *EngineReference `json:"reference,omitempty" xml:"reference"`
+	Reference *EngineReference `json:"reference,omitempty"`
 
 	// 微服务引擎专享版最近的任务ID
-	LatestJobId *int32 `json:"latest_job_id,omitempty" xml:"latest_job_id"`
+	LatestJobId *int32 `json:"latest_job_id,omitempty"`
 
 	// 微服务引擎专享版所属企业项目ID
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 微服务引擎专享版所属企业项目名称
-	EnterpriseProjectName *string `json:"enterprise_project_name,omitempty" xml:"enterprise_project_name"`
+	EnterpriseProjectName *string `json:"enterprise_project_name,omitempty"`
 
 	// 微服务引擎专享版允许的附加操作
-	EngineAdditionalActions *[]ShowEngineResponseEngineAdditionalActions `json:"engine_additional_actions,omitempty" xml:"engine_additional_actions"`
+	EngineAdditionalActions *[]ShowEngineResponseEngineAdditionalActions `json:"engine_additional_actions,omitempty"`
 
 	// 微服务引擎专享版应用部署类型
-	SpecType *ShowEngineResponseSpecType `json:"spec_type,omitempty" xml:"spec_type"`
+	SpecType *ShowEngineResponseSpecType `json:"spec_type,omitempty"`
 
 	// 微服务引擎类型，CSE表示专享版，CSE_Share表示专业版
-	Type *ShowEngineResponseType `json:"type,omitempty" xml:"type"`
+	Type *ShowEngineResponseType `json:"type,omitempty"`
 
 	// 微服务引擎专享版所属项目ID
-	ProjectId *string `json:"project_id,omitempty" xml:"project_id"`
+	ProjectId *string `json:"project_id,omitempty"`
 
 	// 当前引擎在资源租户侧使用的虚拟机 id 列表
-	VmIds          *[]string `json:"vm_ids,omitempty" xml:"vm_ids"`
+	VmIds          *[]string `json:"vm_ids,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }
 

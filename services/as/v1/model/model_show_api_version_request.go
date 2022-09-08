@@ -13,7 +13,7 @@ import (
 type ShowApiVersionRequest struct {
 
 	// API版本ID。
-	ApiVersion ShowApiVersionRequestApiVersion `json:"api_version" xml:"api_version"`
+	ApiVersion ShowApiVersionRequestApiVersion `json:"api_version"`
 }
 
 func (o ShowApiVersionRequest) String() string {

@@ -13,43 +13,43 @@ import (
 type TreeNode struct {
 
 	// 拓扑树节点id
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 拓扑树节点的父节点
-	Parent *string `json:"parent,omitempty" xml:"parent"`
+	Parent *string `json:"parent,omitempty"`
 
 	// 拓扑树节点的实际id
-	RealId *int64 `json:"real_id,omitempty" xml:"real_id"`
+	RealId *int64 `json:"real_id,omitempty"`
 
 	// 拓扑树节点名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 拓扑树节点展示名称
-	DisplayName *string `json:"display_name,omitempty" xml:"display_name"`
+	DisplayName *string `json:"display_name,omitempty"`
 
 	// 组件名称
-	AppName *string `json:"app_name,omitempty" xml:"app_name"`
+	AppName *string `json:"app_name,omitempty"`
 
 	// 组件id
-	AppId *int64 `json:"app_id,omitempty" xml:"app_id"`
+	AppId *int64 `json:"app_id,omitempty"`
 
 	// 是否是管理节点
-	IsAdmin *bool `json:"is_admin,omitempty" xml:"is_admin"`
+	IsAdmin *bool `json:"is_admin,omitempty"`
 
 	// 是否是根节点
-	IsRoot *bool `json:"is_root,omitempty" xml:"is_root"`
+	IsRoot *bool `json:"is_root,omitempty"`
 
 	// 应用id
-	BusinessId *int64 `json:"business_id,omitempty" xml:"business_id"`
+	BusinessId *int64 `json:"business_id,omitempty"`
 
 	// 节点类型
-	NodeType *TreeNodeNodeType `json:"node_type,omitempty" xml:"node_type"`
+	NodeType *TreeNodeNodeType `json:"node_type,omitempty"`
 
 	// 区域
-	Region *string `json:"region,omitempty" xml:"region"`
+	Region *string `json:"region,omitempty"`
 
 	// 是否是默认的节点
-	IsDefault *bool `json:"is_default,omitempty" xml:"is_default"`
+	IsDefault *bool `json:"is_default,omitempty"`
 }
 
 func (o TreeNode) String() string {

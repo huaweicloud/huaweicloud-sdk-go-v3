@@ -9,7 +9,7 @@ import (
 type QueryInfo struct {
 
 	// ResourceQL 查询字段
-	SelectFields *[]string `json:"select_fields,omitempty" xml:"select_fields"`
+	SelectFields *[]string `json:"select_fields,omitempty"`
 }
 
 func (o QueryInfo) String() string {

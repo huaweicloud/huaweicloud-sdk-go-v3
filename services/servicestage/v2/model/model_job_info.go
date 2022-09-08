@@ -13,31 +13,31 @@ import (
 type JobInfo struct {
 
 	// 创建者。
-	CreatedBy *string `json:"CREATED_BY,omitempty" xml:"CREATED_BY"`
+	CreatedBy *string `json:"CREATED_BY,omitempty"`
 
 	// 执行状态。
-	ExecutionStatus *JobInfoExecutionStatus `json:"EXECUTION_STATUS,omitempty" xml:"EXECUTION_STATUS"`
+	ExecutionStatus *JobInfoExecutionStatus `json:"EXECUTION_STATUS,omitempty"`
 
 	// 工作描述。
-	JobDesc *string `json:"JOB_DESC,omitempty" xml:"JOB_DESC"`
+	JobDesc *string `json:"JOB_DESC,omitempty"`
 
 	// 工作ID。
-	JobId *string `json:"JOB_ID,omitempty" xml:"JOB_ID"`
+	JobId *string `json:"JOB_ID,omitempty"`
 
 	// 工作名称。
-	JobName *string `json:"JOB_NAME,omitempty" xml:"JOB_NAME"`
+	JobName *string `json:"JOB_NAME,omitempty"`
 
 	// 类别。
-	JobType *string `json:"JOB_TYPE,omitempty" xml:"JOB_TYPE"`
+	JobType *string `json:"JOB_TYPE,omitempty"`
 
 	// 排序ID。
-	OrderId *string `json:"ORDER_ID,omitempty" xml:"ORDER_ID"`
+	OrderId *string `json:"ORDER_ID,omitempty"`
 
 	// 创建租户的项目ID。
-	ProjectId *string `json:"PROJECT_ID,omitempty" xml:"PROJECT_ID"`
+	ProjectId *string `json:"PROJECT_ID,omitempty"`
 
 	// 实例ID。
-	ServiceInstanceId *string `json:"SERVICE_INSTANCE_ID,omitempty" xml:"SERVICE_INSTANCE_ID"`
+	ServiceInstanceId *string `json:"SERVICE_INSTANCE_ID,omitempty"`
 }
 
 func (o JobInfo) String() string {

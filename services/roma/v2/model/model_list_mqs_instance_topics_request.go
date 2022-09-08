@@ -13,22 +13,22 @@ import (
 type ListMqsInstanceTopicsRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 应用名称。
-	AppName *string `json:"app_name,omitempty" xml:"app_name"`
+	AppName *string `json:"app_name,omitempty"`
 
 	// Topic名称。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 权限类型。 - all：发布+订阅 - pub：发布 - sub：订阅
-	AccessPolicy *ListMqsInstanceTopicsRequestAccessPolicy `json:"access_policy,omitempty" xml:"access_policy"`
+	AccessPolicy *ListMqsInstanceTopicsRequestAccessPolicy `json:"access_policy,omitempty"`
 
 	// 分页查询大小。默认查询所有的topic。
-	Limit *string `json:"limit,omitempty" xml:"limit"`
+	Limit *string `json:"limit,omitempty"`
 
 	// 分页查询的偏移量。默认值是0。
-	Offset *string `json:"offset,omitempty" xml:"offset"`
+	Offset *string `json:"offset,omitempty"`
 }
 
 func (o ListMqsInstanceTopicsRequest) String() string {

@@ -10,10 +10,10 @@ import (
 type Nic struct {
 
 	// 网卡信息，如eth0,eth1
-	Eth *string `json:"eth,omitempty" xml:"eth"`
+	Eth *string `json:"eth,omitempty"`
 
 	// 网卡ip
-	Ip *string `json:"ip,omitempty" xml:"ip"`
+	Ip *string `json:"ip,omitempty"`
 }
 
 func (o Nic) String() string {

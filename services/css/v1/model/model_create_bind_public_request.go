@@ -10,9 +10,9 @@ import (
 type CreateBindPublicRequest struct {
 
 	// 指定开启公网访问的集群ID。
-	ClusterId string `json:"cluster_id" xml:"cluster_id"`
+	ClusterId string `json:"cluster_id"`
 
-	Body *BindPublicReq `json:"body,omitempty" xml:"body"`
+	Body *BindPublicReq `json:"body,omitempty"`
 }
 
 func (o CreateBindPublicRequest) String() string {

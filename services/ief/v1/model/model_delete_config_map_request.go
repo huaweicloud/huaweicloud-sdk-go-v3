@@ -10,10 +10,10 @@ import (
 type DeleteConfigMapRequest struct {
 
 	// 铂金版实例ID，专业版实例为空值
-	IefInstanceId *string `json:"ief-instance-id,omitempty" xml:"ief-instance-id"`
+	IefInstanceId *string `json:"ief-instance-id,omitempty"`
 
 	// 配置项ID
-	ConfigmapId string `json:"configmap_id" xml:"configmap_id"`
+	ConfigmapId string `json:"configmap_id"`
 }
 
 func (o DeleteConfigMapRequest) String() string {

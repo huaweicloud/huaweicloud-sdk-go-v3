@@ -10,7 +10,7 @@ import (
 type ShowServerPasswordResponse struct {
 
 	// 加密后的密码。
-	Password       *string `json:"password,omitempty" xml:"password"`
+	Password       *string `json:"password,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

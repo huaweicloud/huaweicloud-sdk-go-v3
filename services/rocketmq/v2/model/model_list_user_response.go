@@ -10,10 +10,10 @@ import (
 type ListUserResponse struct {
 
 	// 用户列表。
-	Users *[]User `json:"users,omitempty" xml:"users"`
+	Users *[]User `json:"users,omitempty"`
 
 	// 总用户个数。
-	Total          float32 `json:"total,omitempty" xml:"total"`
+	Total          float32 `json:"total,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

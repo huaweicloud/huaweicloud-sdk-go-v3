@@ -10,7 +10,7 @@ import (
 type RequestIdResponseBody struct {
 
 	// 请求的唯一标识ID
-	RequestId string `json:"request_id" xml:"request_id"`
+	RequestId string `json:"request_id"`
 }
 
 func (o RequestIdResponseBody) String() string {

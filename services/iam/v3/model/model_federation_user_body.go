@@ -8,15 +8,15 @@ import (
 
 // 联邦用户信息。
 type FederationUserBody struct {
-	OsFederation *OsFederationInfo `json:"OS-FEDERATION" xml:"OS-FEDERATION"`
+	OsFederation *OsFederationInfo `json:"OS-FEDERATION"`
 
-	Domain *DomainInfo `json:"domain" xml:"domain"`
+	Domain *DomainInfo `json:"domain"`
 
 	// user id。
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// user name。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 }
 
 func (o FederationUserBody) String() string {

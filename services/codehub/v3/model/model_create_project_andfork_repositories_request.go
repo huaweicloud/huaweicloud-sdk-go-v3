@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateProjectAndforkRepositoriesRequest struct {
-	Body *ForkProjectRepoRequest `json:"body,omitempty" xml:"body"`
+	Body *ForkProjectRepoRequest `json:"body,omitempty"`
 }
 
 func (o CreateProjectAndforkRepositoriesRequest) String() string {

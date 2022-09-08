@@ -10,7 +10,7 @@ import (
 type ListSampleResponse struct {
 
 	// 时间序列对象列表。
-	Samples        *[]SampleDataValue `json:"samples,omitempty" xml:"samples"`
+	Samples        *[]SampleDataValue `json:"samples,omitempty"`
 	HttpStatusCode int                `json:"-"`
 }
 

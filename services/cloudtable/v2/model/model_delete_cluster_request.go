@@ -10,10 +10,10 @@ import (
 type DeleteClusterRequest struct {
 
 	// 语言类型
-	XLanguage string `json:"X-Language" xml:"X-Language"`
+	XLanguage string `json:"X-Language"`
 
 	// 集群ID。  获取方法：在ClooudTable控制台，单击要查询的集群名称进入集群详情页，获取“集群ID\"。
-	ClusterId string `json:"cluster_id" xml:"cluster_id"`
+	ClusterId string `json:"cluster_id"`
 }
 
 func (o DeleteClusterRequest) String() string {

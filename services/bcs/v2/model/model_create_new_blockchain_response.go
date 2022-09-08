@@ -10,13 +10,13 @@ import (
 type CreateNewBlockchainResponse struct {
 
 	// 服务实例ID
-	BlockchainId *string `json:"blockchain_id,omitempty" xml:"blockchain_id"`
+	BlockchainId *string `json:"blockchain_id,omitempty"`
 
 	// 服务实例名
-	BlockchainName *string `json:"blockchain_name,omitempty" xml:"blockchain_name"`
+	BlockchainName *string `json:"blockchain_name,omitempty"`
 
 	// 操作ID
-	OperationId    *string `json:"operation_id,omitempty" xml:"operation_id"`
+	OperationId    *string `json:"operation_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

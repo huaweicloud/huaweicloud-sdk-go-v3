@@ -10,7 +10,7 @@ import (
 type DeleteAssetNewRequest struct {
 
 	// 资产ID
-	AssetId string `json:"asset_id" xml:"asset_id"`
+	AssetId string `json:"asset_id"`
 }
 
 func (o DeleteAssetNewRequest) String() string {

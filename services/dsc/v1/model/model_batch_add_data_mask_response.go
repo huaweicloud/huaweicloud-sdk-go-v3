@@ -10,7 +10,7 @@ import (
 type BatchAddDataMaskResponse struct {
 
 	// 脱敏后的数据的数据列表，结构与请求中结构相同
-	MaskedData     *[]map[string]interface{} `json:"masked_data,omitempty" xml:"masked_data"`
+	MaskedData     *[]map[string]interface{} `json:"masked_data,omitempty"`
 	HttpStatusCode int                       `json:"-"`
 }
 

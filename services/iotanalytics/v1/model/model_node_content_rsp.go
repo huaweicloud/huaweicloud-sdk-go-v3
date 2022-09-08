@@ -10,10 +10,10 @@ import (
 type NodeContentRsp struct {
 
 	// 节点实例ID
-	SiteId *string `json:"site_id,omitempty" xml:"site_id"`
+	SiteId *string `json:"site_id,omitempty"`
 
 	// SQL列表，将指定边缘平台节点的数字孪生模型实例数据转发到中心平台节点。
-	Sqllist *[]string `json:"sqllist,omitempty" xml:"sqllist"`
+	Sqllist *[]string `json:"sqllist,omitempty"`
 }
 
 func (o NodeContentRsp) String() string {

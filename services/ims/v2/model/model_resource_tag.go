@@ -10,10 +10,10 @@ import (
 type ResourceTag struct {
 
 	// 标签的键
-	Key string `json:"key" xml:"key"`
+	Key string `json:"key"`
 
 	// 标签的值
-	Value string `json:"value" xml:"value"`
+	Value string `json:"value"`
 }
 
 func (o ResourceTag) String() string {

@@ -10,9 +10,9 @@ import (
 type CreateTasksRequest struct {
 
 	// 是否将本次扫描升级为专业版规格（￥99.00/次）
-	Upgrade *bool `json:"upgrade,omitempty" xml:"upgrade"`
+	Upgrade *bool `json:"upgrade,omitempty"`
 
-	Body *CreateTasksRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreateTasksRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateTasksRequest) String() string {

@@ -10,19 +10,19 @@ import (
 type TaskSuccessRate struct {
 
 	// 任务id
-	TaskId *string `json:"task_id,omitempty" xml:"task_id"`
+	TaskId *string `json:"task_id,omitempty"`
 
 	// 任务名称
-	TaskName *string `json:"task_name,omitempty" xml:"task_name"`
+	TaskName *string `json:"task_name,omitempty"`
 
 	// 成功率
-	SuccessRate *string `json:"success_rate,omitempty" xml:"success_rate"`
+	SuccessRate *string `json:"success_rate,omitempty"`
 
 	// 执行记录数
-	RecordCount *int32 `json:"record_count,omitempty" xml:"record_count"`
+	RecordCount *int32 `json:"record_count,omitempty"`
 
 	// 成功的执行记录数
-	SuccessRecordCount *int32 `json:"success_record_count,omitempty" xml:"success_record_count"`
+	SuccessRecordCount *int32 `json:"success_record_count,omitempty"`
 }
 
 func (o TaskSuccessRate) String() string {

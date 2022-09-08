@@ -10,15 +10,15 @@ import (
 type ListPublicipsResponse struct {
 
 	// 本次请求的编号
-	RequestId *string `json:"request_id,omitempty" xml:"request_id"`
+	RequestId *string `json:"request_id,omitempty"`
 
 	// 功能说明：弹性公网IP对象
-	Publicips *[]PublicipSingleShowResp `json:"publicips,omitempty" xml:"publicips"`
+	Publicips *[]PublicipSingleShowResp `json:"publicips,omitempty"`
 
-	PageInfo *PageInfoOption `json:"page_info,omitempty" xml:"page_info"`
+	PageInfo *PageInfoOption `json:"page_info,omitempty"`
 
 	// 公网IP总条目数
-	TotalCount     *int32 `json:"total_count,omitempty" xml:"total_count"`
+	TotalCount     *int32 `json:"total_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

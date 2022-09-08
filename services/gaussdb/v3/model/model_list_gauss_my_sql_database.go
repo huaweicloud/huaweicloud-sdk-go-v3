@@ -10,10 +10,10 @@ import (
 type ListGaussMySqlDatabase struct {
 
 	// 数据库名称。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 是否为只读权限：true表示只读,false表示可读写。
-	Readonly *bool `json:"readonly,omitempty" xml:"readonly"`
+	Readonly *bool `json:"readonly,omitempty"`
 }
 
 func (o ListGaussMySqlDatabase) String() string {

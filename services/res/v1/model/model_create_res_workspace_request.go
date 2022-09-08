@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateResWorkspaceRequest struct {
-	Body *CreateResWorkspaceRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreateResWorkspaceRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateResWorkspaceRequest) String() string {

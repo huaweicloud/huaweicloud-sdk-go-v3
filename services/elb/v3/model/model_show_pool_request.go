@@ -10,7 +10,7 @@ import (
 type ShowPoolRequest struct {
 
 	// 后端服务器组ID。
-	PoolId string `json:"pool_id" xml:"pool_id"`
+	PoolId string `json:"pool_id"`
 }
 
 func (o ShowPoolRequest) String() string {

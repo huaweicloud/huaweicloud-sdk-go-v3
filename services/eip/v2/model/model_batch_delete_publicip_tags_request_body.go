@@ -13,10 +13,10 @@ import (
 type BatchDeletePublicipTagsRequestBody struct {
 
 	// 标签列表
-	Tags []ResourceTagOption `json:"tags" xml:"tags"`
+	Tags []ResourceTagOption `json:"tags"`
 
 	// 操作标识  delete：删除  action为delete时，value可选
-	Action BatchDeletePublicipTagsRequestBodyAction `json:"action" xml:"action"`
+	Action BatchDeletePublicipTagsRequestBodyAction `json:"action"`
 }
 
 func (o BatchDeletePublicipTagsRequestBody) String() string {

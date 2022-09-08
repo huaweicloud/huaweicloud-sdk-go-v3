@@ -10,9 +10,9 @@ import (
 type UpdateInstanceSecurityGroupRequest struct {
 
 	// DDM实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
-	Body *ModifyInstanceSecurityGroupReq `json:"body,omitempty" xml:"body"`
+	Body *ModifyInstanceSecurityGroupReq `json:"body,omitempty"`
 }
 
 func (o UpdateInstanceSecurityGroupRequest) String() string {

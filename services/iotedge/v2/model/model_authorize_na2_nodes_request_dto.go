@@ -9,7 +9,7 @@ import (
 type AuthorizeNa2NodesRequestDto struct {
 
 	// 授权北向NA信息到边缘节点的请求结构体
-	NodeIds *interface{} `json:"node_ids" xml:"node_ids"`
+	NodeIds *interface{} `json:"node_ids"`
 }
 
 func (o AuthorizeNa2NodesRequestDto) String() string {

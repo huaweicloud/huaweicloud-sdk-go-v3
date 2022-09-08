@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ListRateOnPeriodDetailRequest struct {
-	Body *RateOnPeriodReq `json:"body,omitempty" xml:"body"`
+	Body *RateOnPeriodReq `json:"body,omitempty"`
 }
 
 func (o ListRateOnPeriodDetailRequest) String() string {

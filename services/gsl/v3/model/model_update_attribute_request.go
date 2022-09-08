@@ -10,9 +10,9 @@ import (
 type UpdateAttributeRequest struct {
 
 	// 自定义属性标识
-	AttributeId int64 `json:"attribute_id" xml:"attribute_id"`
+	AttributeId int64 `json:"attribute_id"`
 
-	Body *AddOrModifyAttributeReq `json:"body,omitempty" xml:"body"`
+	Body *AddOrModifyAttributeReq `json:"body,omitempty"`
 }
 
 func (o UpdateAttributeRequest) String() string {

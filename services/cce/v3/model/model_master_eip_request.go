@@ -7,7 +7,7 @@ import (
 )
 
 type MasterEipRequest struct {
-	Spec *MasterEipRequestSpec `json:"spec" xml:"spec"`
+	Spec *MasterEipRequestSpec `json:"spec"`
 }
 
 func (o MasterEipRequest) String() string {

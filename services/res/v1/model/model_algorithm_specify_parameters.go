@@ -13,42 +13,42 @@ import (
 type AlgorithmSpecifyParameters struct {
 
 	// 隐向量长度(DEEPFM需要提供此参数)。
-	LatentVectorLength *int32 `json:"latent_vector_length,omitempty" xml:"latent_vector_length"`
+	LatentVectorLength *int32 `json:"latent_vector_length,omitempty"`
 
 	// 神经网络结构(DEEPFM需要提供此参数)。
-	Architecture *[]int32 `json:"architecture,omitempty" xml:"architecture"`
+	Architecture *[]int32 `json:"architecture,omitempty"`
 
 	// 激活函数(DEEPFM需要提供此参数,AutoGroup需要提供此参数)。
-	ActiveFunction *AlgorithmSpecifyParametersActiveFunction `json:"active_function,omitempty" xml:"active_function"`
+	ActiveFunction *AlgorithmSpecifyParametersActiveFunction `json:"active_function,omitempty"`
 
 	// 神经元值保留概率(DEEPFM需要提供此参数,AutoGroup需要提供此参数)。
-	ValueKeepProbability *float64 `json:"value_keep_probability,omitempty" xml:"value_keep_probability"`
+	ValueKeepProbability *float64 `json:"value_keep_probability,omitempty"`
 
 	// 各阶隐向量长度(AutoGroup需要提供此参数)。
-	EmbedSize *[]int32 `json:"embed_size,omitempty" xml:"embed_size"`
+	EmbedSize *[]int32 `json:"embed_size,omitempty"`
 
 	// 神经网络结构(AutoGroup需要提供此参数)。
-	MlpArchitecture *[]int32 `json:"mlp_architecture,omitempty" xml:"mlp_architecture"`
+	MlpArchitecture *[]int32 `json:"mlp_architecture,omitempty"`
 
 	// 最大交互阶数(AutoGroup需要提供此参数)。
-	MaxOrder *int32 `json:"max_order,omitempty" xml:"max_order"`
+	MaxOrder *int32 `json:"max_order,omitempty"`
 
 	// 哈希长度(AutoGroup需要提供此参数)。
-	HashSizes *[]int32 `json:"hash_sizes,omitempty" xml:"hash_sizes"`
+	HashSizes *[]int32 `json:"hash_sizes,omitempty"`
 
 	// 特征交互层惩罚项系数(AutoGroup需要提供此参数)。
-	HashCompensation *[]float64 `json:"hash_compensation,omitempty" xml:"hash_compensation"`
+	HashCompensation *[]float64 `json:"hash_compensation,omitempty"`
 
 	// 使用线性部分(AutoGroup需要提供此参数)。
-	UseWidePart *bool `json:"use_wide_part,omitempty" xml:"use_wide_part"`
+	UseWidePart *bool `json:"use_wide_part,omitempty"`
 
-	StructureOptimizer *Optimizer `json:"structure_optimizer,omitempty" xml:"structure_optimizer"`
+	StructureOptimizer *Optimizer `json:"structure_optimizer,omitempty"`
 
 	// 融合多值特征(AutoGroup需要提供此参数)。
-	MergeMultiHot *bool `json:"merge_multi_hot,omitempty" xml:"merge_multi_hot"`
+	MergeMultiHot *bool `json:"merge_multi_hot,omitempty"`
 
 	// 固定哈希结构(AutoGroup需要提供此参数)。
-	FixStructure *bool `json:"fix_structure,omitempty" xml:"fix_structure"`
+	FixStructure *bool `json:"fix_structure,omitempty"`
 }
 
 func (o AlgorithmSpecifyParameters) String() string {

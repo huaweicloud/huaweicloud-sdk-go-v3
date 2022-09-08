@@ -7,7 +7,7 @@ import (
 )
 
 type CreateMergeChannelsReq struct {
-	MultiAudio *MpcMultiAudio `json:"multi_audio,omitempty" xml:"multi_audio"`
+	MultiAudio *MpcMultiAudio `json:"multi_audio,omitempty"`
 }
 
 func (o CreateMergeChannelsReq) String() string {

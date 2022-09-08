@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type UpdateCoverByThumbnailRequest struct {
-	Body *UpdateCoverByThumbnailReq `json:"body,omitempty" xml:"body"`
+	Body *UpdateCoverByThumbnailReq `json:"body,omitempty"`
 }
 
 func (o UpdateCoverByThumbnailRequest) String() string {

@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowGetLogSettingResponse struct {
-	LogConfiguration *LogConfiguration `json:"logConfiguration,omitempty" xml:"logConfiguration"`
+	LogConfiguration *LogConfiguration `json:"logConfiguration,omitempty"`
 	HttpStatusCode   int               `json:"-"`
 }
 

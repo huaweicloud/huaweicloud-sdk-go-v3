@@ -10,12 +10,12 @@ import (
 type ListRtcAbnormalEventsResponse struct {
 
 	// 异常总数
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 
 	// 异常体验列表
-	Events *[]AbnormalEvent `json:"events,omitempty" xml:"events"`
+	Events *[]AbnormalEvent `json:"events,omitempty"`
 
-	XRequestId     *string `json:"X-request-id,omitempty" xml:"X-request-id"`
+	XRequestId     *string `json:"X-request-id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

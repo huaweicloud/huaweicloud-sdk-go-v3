@@ -10,10 +10,10 @@ import (
 type ListSecurityGroupsResponse struct {
 
 	// 安全组列表对象。
-	SecurityGroups *[]SecurityGroup `json:"security_groups,omitempty" xml:"security_groups"`
+	SecurityGroups *[]SecurityGroup `json:"security_groups,omitempty"`
 
 	// 安全组的列表总数。
-	Count          *int32 `json:"count,omitempty" xml:"count"`
+	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

@@ -10,12 +10,12 @@ import (
 type PublishLiveDataApiV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 后端API的编号
-	LdApiId string `json:"ld_api_id" xml:"ld_api_id"`
+	LdApiId string `json:"ld_api_id"`
 
-	Body *LdApiDeploy `json:"body,omitempty" xml:"body"`
+	Body *LdApiDeploy `json:"body,omitempty"`
 }
 
 func (o PublishLiveDataApiV2Request) String() string {

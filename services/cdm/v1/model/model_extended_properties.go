@@ -10,13 +10,13 @@ import (
 type ExtendedProperties struct {
 
 	// 工作空间ID。
-	WorkSpaceId *string `json:"workSpaceId,omitempty" xml:"workSpaceId"`
+	WorkSpaceId *string `json:"workSpaceId,omitempty"`
 
 	// 资源ID。
-	ResourceId *string `json:"resourceId,omitempty" xml:"resourceId"`
+	ResourceId *string `json:"resourceId,omitempty"`
 
 	// 是否是试用集群。
-	Trial *string `json:"trial,omitempty" xml:"trial"`
+	Trial *string `json:"trial,omitempty"`
 }
 
 func (o ExtendedProperties) String() string {

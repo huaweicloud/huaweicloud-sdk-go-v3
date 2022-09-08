@@ -10,10 +10,10 @@ import (
 type ListRolesForGroupOnEnterpriseProjectRequest struct {
 
 	// 待查询企业项目ID。
-	EnterpriseProjectId string `json:"enterprise_project_id" xml:"enterprise_project_id"`
+	EnterpriseProjectId string `json:"enterprise_project_id"`
 
 	// 待查询用户组。
-	GroupId string `json:"group_id" xml:"group_id"`
+	GroupId string `json:"group_id"`
 }
 
 func (o ListRolesForGroupOnEnterpriseProjectRequest) String() string {

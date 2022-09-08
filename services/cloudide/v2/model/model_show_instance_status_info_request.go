@@ -10,7 +10,7 @@ import (
 type ShowInstanceStatusInfoRequest struct {
 
 	// CloudIDE实例id
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 }
 
 func (o ShowInstanceStatusInfoRequest) String() string {

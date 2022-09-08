@@ -10,10 +10,10 @@ import (
 type ListEnginesRequest struct {
 
 	// 偏移量。
-	Offset *int32 `json:"offset,omitempty" xml:"offset"`
+	Offset *int32 `json:"offset,omitempty"`
 
 	// 每页显示的条目数量。
-	Limit *string `json:"limit,omitempty" xml:"limit"`
+	Limit *string `json:"limit,omitempty"`
 }
 
 func (o ListEnginesRequest) String() string {

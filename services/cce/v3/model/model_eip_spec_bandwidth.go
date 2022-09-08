@@ -12,10 +12,10 @@ import (
 type EipSpecBandwidth struct {
 
 	// 带宽大小
-	Size *int32 `json:"size,omitempty" xml:"size"`
+	Size *int32 `json:"size,omitempty"`
 
 	// 带宽类型
-	Sharetype *EipSpecBandwidthSharetype `json:"sharetype,omitempty" xml:"sharetype"`
+	Sharetype *EipSpecBandwidthSharetype `json:"sharetype,omitempty"`
 }
 
 func (o EipSpecBandwidth) String() string {

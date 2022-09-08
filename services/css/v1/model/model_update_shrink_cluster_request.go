@@ -10,9 +10,9 @@ import (
 type UpdateShrinkClusterRequest struct {
 
 	// 指定待缩容的集群ID。
-	ClusterId string `json:"cluster_id" xml:"cluster_id"`
+	ClusterId string `json:"cluster_id"`
 
-	Body *ShrinkClusterReq `json:"body,omitempty" xml:"body"`
+	Body *ShrinkClusterReq `json:"body,omitempty"`
 }
 
 func (o UpdateShrinkClusterRequest) String() string {

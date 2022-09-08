@@ -10,16 +10,16 @@ import (
 type EsMatchInfo struct {
 
 	// 数据字段名
-	FieldName *string `json:"field_name,omitempty" xml:"field_name"`
+	FieldName *string `json:"field_name,omitempty"`
 
 	// 规则名
-	RuleName *string `json:"rule_name,omitempty" xml:"rule_name"`
+	RuleName *string `json:"rule_name,omitempty"`
 
 	// 规则ID
-	RuleId *string `json:"rule_id,omitempty" xml:"rule_id"`
+	RuleId *string `json:"rule_id,omitempty"`
 
 	// 规则风险等级
-	RuleRiskLevel *int32 `json:"rule_risk_level,omitempty" xml:"rule_risk_level"`
+	RuleRiskLevel *int32 `json:"rule_risk_level,omitempty"`
 }
 
 func (o EsMatchInfo) String() string {

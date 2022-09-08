@@ -10,7 +10,7 @@ import (
 type DeleteSecurityGroupRequest struct {
 
 	// 安全组ID
-	SecurityGroupId string `json:"security_group_id" xml:"security_group_id"`
+	SecurityGroupId string `json:"security_group_id"`
 }
 
 func (o DeleteSecurityGroupRequest) String() string {

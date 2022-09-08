@@ -10,9 +10,9 @@ import (
 type AddFacesByUrlRequest struct {
 
 	// 人脸库名称。
-	FaceSetName string `json:"face_set_name" xml:"face_set_name"`
+	FaceSetName string `json:"face_set_name"`
 
-	Body *AddFacesUrlReq `json:"body,omitempty" xml:"body"`
+	Body *AddFacesUrlReq `json:"body,omitempty"`
 }
 
 func (o AddFacesByUrlRequest) String() string {

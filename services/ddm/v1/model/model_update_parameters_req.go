@@ -7,7 +7,7 @@ import (
 )
 
 type UpdateParametersReq struct {
-	Values *UpdateParametersReqValues `json:"values" xml:"values"`
+	Values *UpdateParametersReqValues `json:"values"`
 }
 
 func (o UpdateParametersReq) String() string {

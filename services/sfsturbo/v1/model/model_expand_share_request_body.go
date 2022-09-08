@@ -7,7 +7,7 @@ import (
 )
 
 type ExpandShareRequestBody struct {
-	Extend *Extend `json:"extend" xml:"extend"`
+	Extend *Extend `json:"extend"`
 }
 
 func (o ExpandShareRequestBody) String() string {

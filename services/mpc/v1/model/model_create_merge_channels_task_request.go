@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateMergeChannelsTaskRequest struct {
-	Body *CreateMergeChannelsReq `json:"body,omitempty" xml:"body"`
+	Body *CreateMergeChannelsReq `json:"body,omitempty"`
 }
 
 func (o CreateMergeChannelsTaskRequest) String() string {

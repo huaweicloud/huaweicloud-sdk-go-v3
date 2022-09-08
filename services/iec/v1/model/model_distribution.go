@@ -10,28 +10,28 @@ import (
 type Distribution struct {
 
 	// 所在大区名称。
-	Area *string `json:"area,omitempty" xml:"area"`
+	Area *string `json:"area,omitempty"`
 
 	// 所在城市名称。
-	City *string `json:"city,omitempty" xml:"city"`
+	City *string `json:"city,omitempty"`
 
 	// 所属运营商名称。
-	Operator *string `json:"operator,omitempty" xml:"operator"`
+	Operator *string `json:"operator,omitempty"`
 
 	// 所属省份名称。
-	Province *string `json:"province,omitempty" xml:"province"`
+	Province *string `json:"province,omitempty"`
 
 	// 站点ID。
-	SiteId *string `json:"site_id,omitempty" xml:"site_id"`
+	SiteId *string `json:"site_id,omitempty"`
 
 	// 线路ID。多线路场景下，将在该线路下创建弹性公网IP。
-	PoolId *string `json:"pool_id,omitempty" xml:"pool_id"`
+	PoolId *string `json:"pool_id,omitempty"`
 
 	// 资源组配置模板数目
-	StackCount *int32 `json:"stack_count,omitempty" xml:"stack_count"`
+	StackCount *int32 `json:"stack_count,omitempty"`
 
 	// 城市简称。
-	CityShortName *string `json:"city_short_name,omitempty" xml:"city_short_name"`
+	CityShortName *string `json:"city_short_name,omitempty"`
 }
 
 func (o Distribution) String() string {

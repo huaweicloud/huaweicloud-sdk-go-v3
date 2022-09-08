@@ -9,7 +9,7 @@ import (
 type VaultDissociate struct {
 
 	// 策略ID
-	PolicyId string `json:"policy_id" xml:"policy_id"`
+	PolicyId string `json:"policy_id"`
 }
 
 func (o VaultDissociate) String() string {

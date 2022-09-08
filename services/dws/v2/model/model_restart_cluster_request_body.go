@@ -10,7 +10,7 @@ import (
 type RestartClusterRequestBody struct {
 
 	// 重启标识
-	Restart *interface{} `json:"restart" xml:"restart"`
+	Restart *interface{} `json:"restart"`
 }
 
 func (o RestartClusterRequestBody) String() string {

@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RunNerRequest struct {
-	Body *NerRequest `json:"body,omitempty" xml:"body"`
+	Body *NerRequest `json:"body,omitempty"`
 }
 
 func (o RunNerRequest) String() string {

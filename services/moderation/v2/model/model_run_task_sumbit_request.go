@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RunTaskSumbitRequest struct {
-	Body *TaskSumbitReq `json:"body,omitempty" xml:"body"`
+	Body *TaskSumbitReq `json:"body,omitempty"`
 }
 
 func (o RunTaskSumbitRequest) String() string {

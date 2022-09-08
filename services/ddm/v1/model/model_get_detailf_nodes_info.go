@@ -10,13 +10,13 @@ import (
 type GetDetailfNodesInfo struct {
 
 	// DDM实例节点状态。
-	Status string `json:"status" xml:"status"`
+	Status string `json:"status"`
 
 	// DDM实例节点port。
-	Port string `json:"port" xml:"port"`
+	Port string `json:"port"`
 
 	// DDM实例节点IP。
-	Ip string `json:"ip" xml:"ip"`
+	Ip string `json:"ip"`
 }
 
 func (o GetDetailfNodesInfo) String() string {

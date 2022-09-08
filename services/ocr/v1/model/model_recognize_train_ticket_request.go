@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RecognizeTrainTicketRequest struct {
-	Body *TrainTicketRequestBody `json:"body,omitempty" xml:"body"`
+	Body *TrainTicketRequestBody `json:"body,omitempty"`
 }
 
 func (o RecognizeTrainTicketRequest) String() string {

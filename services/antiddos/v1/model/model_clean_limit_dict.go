@@ -10,13 +10,13 @@ import (
 type CleanLimitDict struct {
 
 	// 清洗时访问限制分段ID
-	CleaningAccessPosId int64 `json:"cleaning_access_pos_id" xml:"cleaning_access_pos_id"`
+	CleaningAccessPosId int64 `json:"cleaning_access_pos_id"`
 
 	// 单一源IP新建连接个数
-	NewConnectionLimited int64 `json:"new_connection_limited" xml:"new_connection_limited"`
+	NewConnectionLimited int64 `json:"new_connection_limited"`
 
 	// 单一源IP连接数总个数
-	TotalConnectionLimited int64 `json:"total_connection_limited" xml:"total_connection_limited"`
+	TotalConnectionLimited int64 `json:"total_connection_limited"`
 }
 
 func (o CleanLimitDict) String() string {

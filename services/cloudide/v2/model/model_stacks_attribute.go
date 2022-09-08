@@ -9,16 +9,16 @@ import (
 type StacksAttribute struct {
 
 	// 规格列表
-	Specs *[]string `json:"specs,omitempty" xml:"specs"`
+	Specs *[]string `json:"specs,omitempty"`
 
 	// 提示id
-	Suggest *string `json:"suggest,omitempty" xml:"suggest"`
+	Suggest *string `json:"suggest,omitempty"`
 
 	// 提示信息
-	SuggestTitle *string `json:"suggest_title,omitempty" xml:"suggest_title"`
+	SuggestTitle *string `json:"suggest_title,omitempty"`
 
 	// 卷容量列表
-	Volumes *[]string `json:"volumes,omitempty" xml:"volumes"`
+	Volumes *[]string `json:"volumes,omitempty"`
 }
 
 func (o StacksAttribute) String() string {

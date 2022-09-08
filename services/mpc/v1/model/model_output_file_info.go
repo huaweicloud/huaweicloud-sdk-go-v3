@@ -9,12 +9,12 @@ import (
 type OutputFileInfo struct {
 
 	// 输出文件名。
-	OutputFileName *string `json:"output_file_name,omitempty" xml:"output_file_name"`
+	OutputFileName *string `json:"output_file_name,omitempty"`
 
 	// 处理信息。
-	ExecDescription *string `json:"exec_description,omitempty" xml:"exec_description"`
+	ExecDescription *string `json:"exec_description,omitempty"`
 
-	MetaData *SourceInfo `json:"meta_data,omitempty" xml:"meta_data"`
+	MetaData *SourceInfo `json:"meta_data,omitempty"`
 }
 
 func (o OutputFileInfo) String() string {

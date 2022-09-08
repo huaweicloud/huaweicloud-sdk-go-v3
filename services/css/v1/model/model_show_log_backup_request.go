@@ -10,9 +10,9 @@ import (
 type ShowLogBackupRequest struct {
 
 	// 指定查询集群ID。
-	ClusterId string `json:"cluster_id" xml:"cluster_id"`
+	ClusterId string `json:"cluster_id"`
 
-	Body *GetLogBackupReq `json:"body,omitempty" xml:"body"`
+	Body *GetLogBackupReq `json:"body,omitempty"`
 }
 
 func (o ShowLogBackupRequest) String() string {

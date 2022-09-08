@@ -13,9 +13,9 @@ import (
 type BatchChangeDataRequest struct {
 
 	// 请求语言类型
-	XLanguage *BatchChangeDataRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *BatchChangeDataRequestXLanguage `json:"X-Language,omitempty"`
 
-	Body *BatchDataTransformationReq `json:"body,omitempty" xml:"body"`
+	Body *BatchDataTransformationReq `json:"body,omitempty"`
 }
 
 func (o BatchChangeDataRequest) String() string {

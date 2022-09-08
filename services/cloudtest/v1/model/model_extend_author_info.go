@@ -9,13 +9,13 @@ import (
 type ExtendAuthorInfo struct {
 
 	// id信息
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 名称信息
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 时间信息
-	Time *string `json:"time,omitempty" xml:"time"`
+	Time *string `json:"time,omitempty"`
 }
 
 func (o ExtendAuthorInfo) String() string {

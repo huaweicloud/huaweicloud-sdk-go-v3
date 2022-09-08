@@ -10,10 +10,10 @@ import (
 type ListProjectDomainsResponse struct {
 
 	// 领域总数
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 
 	// 领域列表
-	Domains        *[]CreateProjectDomainResponseBody `json:"domains,omitempty" xml:"domains"`
+	Domains        *[]CreateProjectDomainResponseBody `json:"domains,omitempty"`
 	HttpStatusCode int                                `json:"-"`
 }
 

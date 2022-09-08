@@ -13,16 +13,16 @@ import (
 type RootVolume struct {
 
 	// 裸金属服务器系统盘对应的磁盘类型，需要与系统所提供的磁盘类型相匹配。SATA：普通IO磁盘类型SAS：高IO磁盘类型SSD：超高IO磁盘类型
-	Volumetype RootVolumeVolumetype `json:"volumetype" xml:"volumetype"`
+	Volumetype RootVolumeVolumetype `json:"volumetype"`
 
 	// 系统盘大小，容量单位为GB，输入大小范围为[40-1024]。约束：系统盘大小取值应不小于镜像中系统盘的最小值（min_disk属性）。
-	Size int32 `json:"size" xml:"size"`
+	Size int32 `json:"size"`
 
 	// 裸金属服务器系统盘对应的存储池的ID。 说明：使用专属分布式存储时需要该字段。存储池ID可以从管理控制台或者参考《专属分布式存储API参考》的“获取专属分布式存储池详情列表”章节获取。
-	ClusterId *string `json:"cluster_id,omitempty" xml:"cluster_id"`
+	ClusterId *string `json:"cluster_id,omitempty"`
 
 	// 裸金属服务器系统盘对应的磁盘存储类型。磁盘存储类型枚举值：DSS（专属分布式存储）。 说明：使用专属分布式存储时需要该字段。存储池类型可以从管理控制台或者参考《专属分布式存储API参考》的“获取专属分布式存储池详情列表”章节获取。
-	ClusterType *RootVolumeClusterType `json:"cluster_type,omitempty" xml:"cluster_type"`
+	ClusterType *RootVolumeClusterType `json:"cluster_type,omitempty"`
 }
 
 func (o RootVolume) String() string {

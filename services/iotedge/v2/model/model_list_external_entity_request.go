@@ -10,13 +10,13 @@ import (
 type ListExternalEntityRequest struct {
 
 	// 边缘节点ID
-	EdgeNodeId string `json:"edge_node_id" xml:"edge_node_id"`
+	EdgeNodeId string `json:"edge_node_id"`
 
 	// 查询的起始位置，取值范围为非负整数，默认为0
-	Offset *int32 `json:"offset,omitempty" xml:"offset"`
+	Offset *int32 `json:"offset,omitempty"`
 
 	// 每页记录数，取值范围为非负整数，默认值为10
-	Limit *int32 `json:"limit,omitempty" xml:"limit"`
+	Limit *int32 `json:"limit,omitempty"`
 }
 
 func (o ListExternalEntityRequest) String() string {

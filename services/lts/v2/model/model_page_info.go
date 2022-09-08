@@ -9,13 +9,13 @@ import (
 type PageInfo struct {
 
 	// 返回下一页查询地址(为空时，代表后面没有数据)
-	NextMarker string `json:"next_marker" xml:"next_marker"`
+	NextMarker string `json:"next_marker"`
 
 	// 返回前一页查询地址
-	PreviousMarker string `json:"previous_marker" xml:"previous_marker"`
+	PreviousMarker string `json:"previous_marker"`
 
 	// 本页返回条目数量
-	CurrentCount string `json:"current_count" xml:"current_count"`
+	CurrentCount string `json:"current_count"`
 }
 
 func (o PageInfo) String() string {

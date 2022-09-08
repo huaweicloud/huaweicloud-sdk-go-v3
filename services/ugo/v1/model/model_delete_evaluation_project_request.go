@@ -10,7 +10,7 @@ import (
 type DeleteEvaluationProjectRequest struct {
 
 	// 评估项目ID。
-	EvaluationProjectId string `json:"evaluation_project_id" xml:"evaluation_project_id"`
+	EvaluationProjectId string `json:"evaluation_project_id"`
 }
 
 func (o DeleteEvaluationProjectRequest) String() string {

@@ -10,12 +10,12 @@ import (
 type UpdateUserRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 用户名。
-	UserName string `json:"user_name" xml:"user_name"`
+	UserName string `json:"user_name"`
 
-	Body *User `json:"body,omitempty" xml:"body"`
+	Body *User `json:"body,omitempty"`
 }
 
 func (o UpdateUserRequest) String() string {

@@ -9,10 +9,10 @@ import (
 type BatchSetAttributesReq struct {
 
 	// 临时文件ID
-	FileTempId *int64 `json:"file_temp_id,omitempty" xml:"file_temp_id"`
+	FileTempId *int64 `json:"file_temp_id,omitempty"`
 
 	// 自定义属性集合
-	Attributes *[]AttributeReq `json:"attributes,omitempty" xml:"attributes"`
+	Attributes *[]AttributeReq `json:"attributes,omitempty"`
 }
 
 func (o BatchSetAttributesReq) String() string {

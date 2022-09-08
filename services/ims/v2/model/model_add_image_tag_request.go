@@ -10,9 +10,9 @@ import (
 type AddImageTagRequest struct {
 
 	// 镜像ID。
-	ImageId string `json:"image_id" xml:"image_id"`
+	ImageId string `json:"image_id"`
 
-	Body *AddImageTagRequestBody `json:"body,omitempty" xml:"body"`
+	Body *AddImageTagRequestBody `json:"body,omitempty"`
 }
 
 func (o AddImageTagRequest) String() string {

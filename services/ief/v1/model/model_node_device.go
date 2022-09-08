@@ -8,10 +8,10 @@ import (
 
 // 边缘节点的终端设备信息
 type NodeDevice struct {
-	Added *DeviceInfos `json:"added,omitempty" xml:"added"`
+	Added *DeviceInfos `json:"added,omitempty"`
 
 	// 要解绑的终端设备ID
-	Removed *[]string `json:"removed,omitempty" xml:"removed"`
+	Removed *[]string `json:"removed,omitempty"`
 }
 
 func (o NodeDevice) String() string {

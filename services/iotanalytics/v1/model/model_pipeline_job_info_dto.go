@@ -10,43 +10,43 @@ import (
 type PipelineJobInfoDto struct {
 
 	// 管道ID
-	PipelineId *string `json:"pipeline_id,omitempty" xml:"pipeline_id"`
+	PipelineId *string `json:"pipeline_id,omitempty"`
 
 	// 管道名称
-	PipelineName *string `json:"pipeline_name,omitempty" xml:"pipeline_name"`
+	PipelineName *string `json:"pipeline_name,omitempty"`
 
 	// 数据源ID
-	DataSourceId *string `json:"data_source_id,omitempty" xml:"data_source_id"`
+	DataSourceId *string `json:"data_source_id,omitempty"`
 
 	// 存储列表
-	DataStoreList *[]DataStoreDto `json:"data_store_list,omitempty" xml:"data_store_list"`
+	DataStoreList *[]DataStoreDto `json:"data_store_list,omitempty"`
 
 	// 管道描述
-	PipelineDescription *string `json:"pipeline_description,omitempty" xml:"pipeline_description"`
+	PipelineDescription *string `json:"pipeline_description,omitempty"`
 
 	// 存储列表
-	TagList *[]TagInfoDto `json:"tag_list,omitempty" xml:"tag_list"`
+	TagList *[]TagInfoDto `json:"tag_list,omitempty"`
 
 	// 管道状态
-	PipelineState *string `json:"pipeline_state,omitempty" xml:"pipeline_state"`
+	PipelineState *string `json:"pipeline_state,omitempty"`
 
 	// 操作状态
-	Status *string `json:"status,omitempty" xml:"status"`
+	Status *string `json:"status,omitempty"`
 
 	// 运行管道的RTU个数
-	Rtu *int32 `json:"rtu,omitempty" xml:"rtu"`
+	Rtu *int32 `json:"rtu,omitempty"`
 
 	// 创建时间
-	CreatedTime *string `json:"created_time,omitempty" xml:"created_time"`
+	CreatedTime *string `json:"created_time,omitempty"`
 
 	// 修改时间
-	ModifiedTime *string `json:"modified_time,omitempty" xml:"modified_time"`
+	ModifiedTime *string `json:"modified_time,omitempty"`
 
 	// 用户ID
-	UserId *string `json:"user_id,omitempty" xml:"user_id"`
+	UserId *string `json:"user_id,omitempty"`
 
 	// 已停止的管道作业是否有历史缓存数据
-	HasSavepoint *bool `json:"has_savepoint,omitempty" xml:"has_savepoint"`
+	HasSavepoint *bool `json:"has_savepoint,omitempty"`
 }
 
 func (o PipelineJobInfoDto) String() string {

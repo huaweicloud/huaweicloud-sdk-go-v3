@@ -12,16 +12,16 @@ import (
 type TaskHostingResultHostingResult struct {
 
 	// 结果文件result.json的过期时间
-	OverdueDate *sdktime.SdkTime `json:"overdue_date,omitempty" xml:"overdue_date"`
+	OverdueDate *sdktime.SdkTime `json:"overdue_date,omitempty"`
 
 	// 结果文件result.json的状态
-	Status *TaskHostingResultHostingResultStatus `json:"status,omitempty" xml:"status"`
+	Status *TaskHostingResultHostingResultStatus `json:"status,omitempty"`
 
 	// 结果文件result.json的具体内容
-	Data *string `json:"data,omitempty" xml:"data"`
+	Data *string `json:"data,omitempty"`
 
 	// 结果文件result.json的大小
-	FileSize *string `json:"file_size,omitempty" xml:"file_size"`
+	FileSize *string `json:"file_size,omitempty"`
 }
 
 func (o TaskHostingResultHostingResult) String() string {

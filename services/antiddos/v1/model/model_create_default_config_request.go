@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateDefaultConfigRequest struct {
-	Body *DdosConfig `json:"body,omitempty" xml:"body"`
+	Body *DdosConfig `json:"body,omitempty"`
 }
 
 func (o CreateDefaultConfigRequest) String() string {

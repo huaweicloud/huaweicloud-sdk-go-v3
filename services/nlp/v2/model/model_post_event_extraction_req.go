@@ -10,7 +10,7 @@ import (
 type PostEventExtractionReq struct {
 
 	// 待分析文本，长度为1~256，文本编码为UTF-8。
-	Text string `json:"text" xml:"text"`
+	Text string `json:"text"`
 }
 
 func (o PostEventExtractionReq) String() string {

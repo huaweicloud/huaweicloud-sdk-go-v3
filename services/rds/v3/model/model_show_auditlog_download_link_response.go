@@ -10,7 +10,7 @@ import (
 type ShowAuditlogDownloadLinkResponse struct {
 
 	// 审计日志下载链接列表。
-	Links          *[]string `json:"links,omitempty" xml:"links"`
+	Links          *[]string `json:"links,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }
 

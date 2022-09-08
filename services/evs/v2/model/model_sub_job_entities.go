@@ -10,16 +10,16 @@ import (
 type SubJobEntities struct {
 
 	// 云硬盘的类型。
-	VolumeType *string `json:"volume_type,omitempty" xml:"volume_type"`
+	VolumeType *string `json:"volume_type,omitempty"`
 
 	// 云硬盘的容量，单位为GB。
-	Size *int32 `json:"size,omitempty" xml:"size"`
+	Size *int32 `json:"size,omitempty"`
 
 	// 云硬盘的ID。
-	VolumeId *string `json:"volume_id,omitempty" xml:"volume_id"`
+	VolumeId *string `json:"volume_id,omitempty"`
 
 	// 云硬盘的名称。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 }
 
 func (o SubJobEntities) String() string {

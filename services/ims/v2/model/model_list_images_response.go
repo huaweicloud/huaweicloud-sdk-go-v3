@@ -10,7 +10,7 @@ import (
 type ListImagesResponse struct {
 
 	// 镜像列表
-	Images         *[]ImageInfo `json:"images,omitempty" xml:"images"`
+	Images         *[]ImageInfo `json:"images,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }
 

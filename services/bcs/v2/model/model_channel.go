@@ -9,22 +9,22 @@ import (
 type Channel struct {
 
 	// 通道名
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 通道细节描述
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 通道创建时间
-	CreateTime *string `json:"create_time,omitempty" xml:"create_time"`
+	CreateTime *string `json:"create_time,omitempty"`
 
 	// 共识策略
-	Consensus *string `json:"consensus,omitempty" xml:"consensus"`
+	Consensus *string `json:"consensus,omitempty"`
 
 	// key:组织名，value:节点名称列表
-	Peers map[string][]string `json:"peers,omitempty" xml:"peers"`
+	Peers map[string][]string `json:"peers,omitempty"`
 
 	// key:组织名，value:节点名称列表
-	ConsensusNodes map[string][]string `json:"consensusNodes,omitempty" xml:"consensusNodes"`
+	ConsensusNodes map[string][]string `json:"consensusNodes,omitempty"`
 }
 
 func (o Channel) String() string {

@@ -10,7 +10,7 @@ import (
 type BatchUpdateServersNameResponse struct {
 
 	// 提交请求成功后返回的响应列表。
-	Response       *[]ServerId `json:"response,omitempty" xml:"response"`
+	Response       *[]ServerId `json:"response,omitempty"`
 	HttpStatusCode int         `json:"-"`
 }
 

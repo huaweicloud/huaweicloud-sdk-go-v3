@@ -10,7 +10,7 @@ import (
 type DeleteDbUserResponse struct {
 
 	// 删除结果，删除成功返回OK
-	Result         *string `json:"result,omitempty" xml:"result"`
+	Result         *string `json:"result,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

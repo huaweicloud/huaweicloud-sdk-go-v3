@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateMbTasksReportRequest struct {
-	Body *MbTasksReportReq `json:"body,omitempty" xml:"body"`
+	Body *MbTasksReportReq `json:"body,omitempty"`
 }
 
 func (o CreateMbTasksReportRequest) String() string {

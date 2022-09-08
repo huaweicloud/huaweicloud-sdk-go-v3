@@ -10,13 +10,13 @@ import (
 type ShowMonitorItemViewConfigRequest struct {
 
 	// 环境id
-	EnvId int64 `json:"env_id" xml:"env_id"`
+	EnvId int64 `json:"env_id"`
 
 	// 采集器id
-	CollectorId int64 `json:"collector_id" xml:"collector_id"`
+	CollectorId int64 `json:"collector_id"`
 
 	// 应用id。
-	XBusinessId int64 `json:"x-business-id" xml:"x-business-id"`
+	XBusinessId int64 `json:"x-business-id"`
 }
 
 func (o ShowMonitorItemViewConfigRequest) String() string {

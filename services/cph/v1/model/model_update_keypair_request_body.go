@@ -9,7 +9,7 @@ import (
 type UpdateKeypairRequestBody struct {
 
 	// 待更改密钥对的云手机服务器信息
-	Servers []UpdateKeypairRequestBodyServers `json:"servers" xml:"servers"`
+	Servers []UpdateKeypairRequestBodyServers `json:"servers"`
 }
 
 func (o UpdateKeypairRequestBody) String() string {

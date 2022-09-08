@@ -9,10 +9,10 @@ import (
 type ProductsCalculation struct {
 
 	// 普通产品数量
-	NormalProductsNumbers *int32 `json:"normal_products_numbers,omitempty" xml:"normal_products_numbers"`
+	NormalProductsNumbers *int32 `json:"normal_products_numbers,omitempty"`
 
 	// 网关产品数量
-	GatewayProductsNumbers *int32 `json:"gateway_products_numbers,omitempty" xml:"gateway_products_numbers"`
+	GatewayProductsNumbers *int32 `json:"gateway_products_numbers,omitempty"`
 }
 
 func (o ProductsCalculation) String() string {

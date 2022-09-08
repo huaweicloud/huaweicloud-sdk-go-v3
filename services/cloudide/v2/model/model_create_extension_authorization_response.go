@@ -10,10 +10,10 @@ import (
 type CreateExtensionAuthorizationResponse struct {
 
 	// 返回值
-	Result *bool `json:"result,omitempty" xml:"result"`
+	Result *bool `json:"result,omitempty"`
 
 	// 状态
-	Status         *string `json:"status,omitempty" xml:"status"`
+	Status         *string `json:"status,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

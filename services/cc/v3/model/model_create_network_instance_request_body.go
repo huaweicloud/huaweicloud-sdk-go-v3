@@ -8,7 +8,7 @@ import (
 
 // 创建网络实例的请求体。
 type CreateNetworkInstanceRequestBody struct {
-	NetworkInstance *CreateNetworkInstance `json:"network_instance" xml:"network_instance"`
+	NetworkInstance *CreateNetworkInstance `json:"network_instance"`
 }
 
 func (o CreateNetworkInstanceRequestBody) String() string {

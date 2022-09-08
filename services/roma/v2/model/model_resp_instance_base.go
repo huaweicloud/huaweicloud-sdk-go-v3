@@ -12,40 +12,40 @@ import (
 type RespInstanceBase struct {
 
 	// 实例编号
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 实例所属项目编号
-	ProjectId *string `json:"project_id,omitempty" xml:"project_id"`
+	ProjectId *string `json:"project_id,omitempty"`
 
 	// 实例名称
-	InstanceName *string `json:"instance_name,omitempty" xml:"instance_name"`
+	InstanceName *string `json:"instance_name,omitempty"`
 
 	// 实例状态： - Creating：创建中 - CreateSuccess：创建成功 - CreateFail：创建失败 - Initing：初始化中 - Registering：注册中 - Running：运行中 - InitingFailed：初始化失败 - RegisterFailed：注册失败 - Installing：安装中 - InstallFailed：安装失败 - Updating：升级中 - UpdateFailed：升级失败 - Rollbacking：回滚中 - RollbackSuccess：回滚成功 - RollbackFailed：回滚失败 - Deleting：删除中 - DeleteFailed：删除失败 - Unregistering：注销中 - UnRegisterFailed：注销失败 - CreateTimeout：创建超时 - InitTimeout：初始化超时 - RegisterTimeout：注册超时 - InstallTimeout：安装超时 - UpdateTimeout：升级超时 - RollbackTimeout：回滚超时 - DeleteTimeout：删除超时 - UnregisterTimeout：注销超时 - Starting：启动中 - Freezing：冻结中 - Frozen：已冻结 - Restarting：重启中 - RestartFail：重启失败 - Unhealthy：实例异常 - RestartTimeout：重启超时
-	Status *RespInstanceBaseStatus `json:"status,omitempty" xml:"status"`
+	Status *RespInstanceBaseStatus `json:"status,omitempty"`
 
 	// 实例状态对应编号 - 1：创建中 - 2：创建成功 - 3：创建失败 - 4：初始化中 - 5：注册中 - 6：运行中 - 7：初始化失败 - 8：注册失败 - 10：安装中 - 11：安装失败 - 12：升级中 - 13：升级失败 - 20：回滚中 - 21：回滚成功 - 22：回滚失败 - 23：删除中 - 24：删除失败 - 25：注销中 - 26：注销失败 - 27：创建超时 - 28：初始化超时 - 29：注册超时 - 30：安装超时 - 31：升级超时 - 32：回滚超时 - 33：删除超时 - 34：注销超时 - 35：启动中 - 36：冻结中 - 37：已冻结 - 38：重启中 - 39：重启失败 - 40：实例异常 - 41：重启超时
-	InstanceStatus *RespInstanceBaseInstanceStatus `json:"instance_status,omitempty" xml:"instance_status"`
+	InstanceStatus *RespInstanceBaseInstanceStatus `json:"instance_status,omitempty"`
 
 	// 实例类型  暂不支持
-	Type *string `json:"type,omitempty" xml:"type"`
+	Type *string `json:"type,omitempty"`
 
 	// 实例规格： - ROMA_BASIC：基础版实例 - ROMA_PROFESSIONAL：专业版实例 - ROMA_ENTERPRISE：企业版实例 - ROMA_PLATINUM：铂金版实例 [- ROMA_BASIC_IPV6：基础版IPV6实例](tag:hcs) [- ROMA_PROFESSIONAL_IPV6：专业版IPV6实例](tag:hcs) [- ROMA_ENTERPRISE_IPV6：企业版IPV6实例](tag:hcs) [- ROMA_PLATINUM_IPV6：铂金版IPV6实例](tag:hcs)
-	Spec *RespInstanceBaseSpec `json:"spec,omitempty" xml:"spec"`
+	Spec *RespInstanceBaseSpec `json:"spec,omitempty"`
 
 	// 实例创建时间。unix时间戳格式。
-	CreateTime *int64 `json:"create_time,omitempty" xml:"create_time"`
+	CreateTime *int64 `json:"create_time,omitempty"`
 
 	// 企业项目ID，企业帐号必填
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 实例绑定的弹性IP地址
-	EipAddress *string `json:"eip_address,omitempty" xml:"eip_address"`
+	EipAddress *string `json:"eip_address,omitempty"`
 
 	// 实例计费方式： - 0：按需计费 - 1：包周期计费
-	ChargingMode *RespInstanceBaseChargingMode `json:"charging_mode,omitempty" xml:"charging_mode"`
+	ChargingMode *RespInstanceBaseChargingMode `json:"charging_mode,omitempty"`
 
 	// 包周期计费订单编号
-	CbcMetadata *string `json:"cbc_metadata,omitempty" xml:"cbc_metadata"`
+	CbcMetadata *string `json:"cbc_metadata,omitempty"`
 }
 
 func (o RespInstanceBase) String() string {

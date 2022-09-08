@@ -12,33 +12,33 @@ import (
 type ShowJobInfosResponse struct {
 
 	// Job的状态。SUCCESS：成功RUNNING：运行中FAIL：失败INIT：正在初始化
-	Status *ShowJobInfosResponseStatus `json:"status,omitempty" xml:"status"`
+	Status *ShowJobInfosResponseStatus `json:"status,omitempty"`
 
-	Entities *Entities `json:"entities,omitempty" xml:"entities"`
+	Entities *Entities `json:"entities,omitempty"`
 
 	// Job ID
-	JobId *string `json:"job_id,omitempty" xml:"job_id"`
+	JobId *string `json:"job_id,omitempty"`
 
 	// Job的类型，包含以下类型：baremetalBatchCreate：批量创建裸金属服务器baremetalBatchOperate：批量修改裸金属服务器电源状态baremetalBatchCreate：批量创建裸金属服务器baremetalChangeOsVolumeBoot：切换快速发放裸金属服务器操作系统baremetalChangeOsLocalDisk：切换本地盘裸金属服务器操作系统baremetalVolumeBootReinstallOs：重装快速发放裸金属服务器操作系统baremetalReinstallOs：重装本地盘裸金属服务器操作系统baremetalAttachVolume：挂载单个磁盘baremetalDetachVolume：卸载单个磁盘baremetalBatchAttachVolume：裸金属服务器批量挂载共享磁盘
-	JobType *string `json:"job_type,omitempty" xml:"job_type"`
+	JobType *string `json:"job_type,omitempty"`
 
 	// 开始时间。时间戳格式为ISO 8601，例如：2019-04-25T20:04:47.591Z
-	BeginTime *sdktime.SdkTime `json:"begin_time,omitempty" xml:"begin_time"`
+	BeginTime *sdktime.SdkTime `json:"begin_time,omitempty"`
 
 	// 结束时间。时间戳格式为ISO 8601，例如：2019-04-26T20:04:47.591Z
-	EndTime *sdktime.SdkTime `json:"end_time,omitempty" xml:"end_time"`
+	EndTime *sdktime.SdkTime `json:"end_time,omitempty"`
 
 	// Job执行失败时的错误码
-	ErrorCode *string `json:"error_code,omitempty" xml:"error_code"`
+	ErrorCode *string `json:"error_code,omitempty"`
 
 	// Job执行失败时的错误原因
-	FailReason *string `json:"fail_reason,omitempty" xml:"fail_reason"`
+	FailReason *string `json:"fail_reason,omitempty"`
 
 	// 出现错误时，返回的错误消息
-	Message *string `json:"message,omitempty" xml:"message"`
+	Message *string `json:"message,omitempty"`
 
 	// 出现错误时，返回的错误码。错误码和其对应的含义请参考8.1-状态码。
-	Code           *string `json:"code,omitempty" xml:"code"`
+	Code           *string `json:"code,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

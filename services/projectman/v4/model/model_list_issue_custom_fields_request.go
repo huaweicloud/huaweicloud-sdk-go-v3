@@ -10,9 +10,9 @@ import (
 type ListIssueCustomFieldsRequest struct {
 
 	// devcloud项目的32位id
-	ProjectId string `json:"project_id" xml:"project_id"`
+	ProjectId string `json:"project_id"`
 
-	Body *ListIssueCustomFieldsRequestBody `json:"body,omitempty" xml:"body"`
+	Body *ListIssueCustomFieldsRequestBody `json:"body,omitempty"`
 }
 
 func (o ListIssueCustomFieldsRequest) String() string {

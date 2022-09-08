@@ -10,9 +10,9 @@ import (
 type AddFavoriteRequest struct {
 
 	// 指定添加自定义模板的集群ID。
-	ClusterId string `json:"cluster_id" xml:"cluster_id"`
+	ClusterId string `json:"cluster_id"`
 
-	Body *AddFavoriteReq `json:"body,omitempty" xml:"body"`
+	Body *AddFavoriteReq `json:"body,omitempty"`
 }
 
 func (o AddFavoriteRequest) String() string {

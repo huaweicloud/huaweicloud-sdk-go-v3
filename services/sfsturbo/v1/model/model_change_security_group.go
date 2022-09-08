@@ -10,7 +10,7 @@ import (
 type ChangeSecurityGroup struct {
 
 	// 需要修改的目标安全组ID。
-	SecurityGroupId string `json:"security_group_id" xml:"security_group_id"`
+	SecurityGroupId string `json:"security_group_id"`
 }
 
 func (o ChangeSecurityGroup) String() string {

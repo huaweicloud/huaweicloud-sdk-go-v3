@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type CreateSecretVersionResponse struct {
-	VersionMetadata *VersionMetadata `json:"version_metadata,omitempty" xml:"version_metadata"`
+	VersionMetadata *VersionMetadata `json:"version_metadata,omitempty"`
 	HttpStatusCode  int              `json:"-"`
 }
 

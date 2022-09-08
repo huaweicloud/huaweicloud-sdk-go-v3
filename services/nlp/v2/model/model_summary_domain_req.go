@@ -13,19 +13,19 @@ import (
 type SummaryDomainReq struct {
 
 	// 生成摘要的长度限制。length_limit > 1，则返回结果为字数不小于该值且最接近该值的摘要。 0 <= length_limit <= 1，则返回结果为长度百分比不小于该值且最接近该值的摘要。
-	LengthLimit *float32 `json:"length_limit,omitempty" xml:"length_limit"`
+	LengthLimit *float32 `json:"length_limit,omitempty"`
 
 	// 文本标题（目前仅支持UTF-8编码），长度不超过1000字。
-	Title *string `json:"title,omitempty" xml:"title"`
+	Title *string `json:"title,omitempty"`
 
 	// 支持的文本语言类型，目前支持中文（zh）。
-	Lang *SummaryDomainReqLang `json:"lang,omitempty" xml:"lang"`
+	Lang *SummaryDomainReqLang `json:"lang,omitempty"`
 
 	// 文本正文（目前仅支持UTF-8编码），长度不超过1000字。
-	Content string `json:"content" xml:"content"`
+	Content string `json:"content"`
 
 	// 支持的领域类型，取值如下（目前只支持通用领域），默认为通用领域： 0：通用领域
-	Type *SummaryDomainReqType `json:"type,omitempty" xml:"type"`
+	Type *SummaryDomainReqType `json:"type,omitempty"`
 }
 
 func (o SummaryDomainReq) String() string {

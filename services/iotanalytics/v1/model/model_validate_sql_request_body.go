@@ -9,7 +9,7 @@ import (
 type ValidateSqlRequestBody struct {
 
 	// 待执行的SQL语句。
-	Sql *string `json:"sql,omitempty" xml:"sql"`
+	Sql *string `json:"sql,omitempty"`
 }
 
 func (o ValidateSqlRequestBody) String() string {

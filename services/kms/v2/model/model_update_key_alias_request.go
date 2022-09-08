@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type UpdateKeyAliasRequest struct {
-	Body *UpdateKeyAliasRequestBody `json:"body,omitempty" xml:"body"`
+	Body *UpdateKeyAliasRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateKeyAliasRequest) String() string {

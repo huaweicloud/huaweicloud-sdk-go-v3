@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ShowScriptRequest struct {
-	ScriptName string `json:"script_name" xml:"script_name"`
+	ScriptName string `json:"script_name"`
 }
 
 func (o ShowScriptRequest) String() string {

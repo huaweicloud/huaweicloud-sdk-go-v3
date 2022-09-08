@@ -10,19 +10,19 @@ import (
 type JobProgressEntities struct {
 
 	// 镜像ID
-	ImageId *string `json:"image_id,omitempty" xml:"image_id"`
+	ImageId *string `json:"image_id,omitempty"`
 
 	// 当前任务名称
-	CurrentTask *string `json:"current_task,omitempty" xml:"current_task"`
+	CurrentTask *string `json:"current_task,omitempty"`
 
 	// 镜像名称
-	ImageName *string `json:"image_name,omitempty" xml:"image_name"`
+	ImageName *string `json:"image_name,omitempty"`
 
 	// 任务执行进度
-	ProcessPercent *float64 `json:"process_percent,omitempty" xml:"process_percent"`
+	ProcessPercent *float64 `json:"process_percent,omitempty"`
 
 	// 子任务ID
-	SubJobId *string `json:"subJobId,omitempty" xml:"subJobId"`
+	SubJobId *string `json:"subJobId,omitempty"`
 }
 
 func (o JobProgressEntities) String() string {

@@ -13,29 +13,29 @@ import (
 type GetJobInfoDetail struct {
 
 	// 任务ID。
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
 	// 任务名称。
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 任务执行状态。  取值： - 值为“Running”，表示任务正在执行。 - 值为“Completed”，表示任务执行成功。 - 值为“Failed”，表示任务执行失败。
-	Status GetJobInfoDetailStatus `json:"status" xml:"status"`
+	Status GetJobInfoDetailStatus `json:"status"`
 
 	// 创建时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为   +0800 说明：创建时返回值为空，数据库实例创建成功后该值不为空。
-	Created string `json:"created" xml:"created"`
+	Created string `json:"created"`
 
 	// 结束时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为   +0800 说明：创建时返回值为空，数据库实例创建成功后该值不为空。
-	Ended *string `json:"ended,omitempty" xml:"ended"`
+	Ended *string `json:"ended,omitempty"`
 
 	// 任务执行进度。执行中状态才返回执行进度，例如60%，否则返回\"\"。
-	Process *string `json:"process,omitempty" xml:"process"`
+	Process *string `json:"process,omitempty"`
 
-	Instance *GetJobInstanceInfoDetail `json:"instance" xml:"instance"`
+	Instance *GetJobInstanceInfoDetail `json:"instance"`
 
-	Entities *GetJobEntitiesInfoDetail `json:"entities,omitempty" xml:"entities"`
+	Entities *GetJobEntitiesInfoDetail `json:"entities,omitempty"`
 
 	// 任务执行失败时的错误信息。
-	FailReason *string `json:"fail_reason,omitempty" xml:"fail_reason"`
+	FailReason *string `json:"fail_reason,omitempty"`
 }
 
 func (o GetJobInfoDetail) String() string {

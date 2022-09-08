@@ -10,10 +10,10 @@ import (
 type ListUsageTypesResponse struct {
 
 	// 总数。
-	TotalCount *int32 `json:"total_count,omitempty" xml:"total_count"`
+	TotalCount *int32 `json:"total_count,omitempty"`
 
 	// 使用量类型列表，具体请参见表3。
-	UsageTypes     *[]UsageType `json:"usage_types,omitempty" xml:"usage_types"`
+	UsageTypes     *[]UsageType `json:"usage_types,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }
 

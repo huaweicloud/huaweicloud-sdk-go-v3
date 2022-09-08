@@ -10,10 +10,10 @@ import (
 type ShowVocabulariesResponse struct {
 
 	// 热词表数。
-	Count *int32 `json:"count,omitempty" xml:"count"`
+	Count *int32 `json:"count,omitempty"`
 
 	// 调用成功返回热词表列表，调用失败时无此字段。
-	Result         *[]VocabInfo `json:"result,omitempty" xml:"result"`
+	Result         *[]VocabInfo `json:"result,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }
 

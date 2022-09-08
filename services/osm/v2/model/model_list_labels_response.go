@@ -10,10 +10,10 @@ import (
 type ListLabelsResponse struct {
 
 	// 总数
-	TotalCount *int32 `json:"total_count,omitempty" xml:"total_count"`
+	TotalCount *int32 `json:"total_count,omitempty"`
 
 	// 标签列表
-	LabelList      *[]CaseLabelInfo `json:"label_list,omitempty" xml:"label_list"`
+	LabelList      *[]CaseLabelInfo `json:"label_list,omitempty"`
 	HttpStatusCode int              `json:"-"`
 }
 

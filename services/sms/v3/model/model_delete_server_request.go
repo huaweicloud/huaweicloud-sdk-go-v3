@@ -10,7 +10,7 @@ import (
 type DeleteServerRequest struct {
 
 	// 源端服务器在主机迁移服务中的id
-	SourceId string `json:"source_id" xml:"source_id"`
+	SourceId string `json:"source_id"`
 }
 
 func (o DeleteServerRequest) String() string {

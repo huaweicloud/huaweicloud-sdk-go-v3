@@ -10,10 +10,10 @@ import (
 type ModCorpBasicInfoDto struct {
 
 	// 企业所在地,最大长度为255个字符。 maxLength：255。
-	Address *string `json:"address,omitempty" xml:"address"`
+	Address *string `json:"address,omitempty"`
 
 	// 企业自动开户开关
-	AutoUserCreate *bool `json:"autoUserCreate,omitempty" xml:"autoUserCreate"`
+	AutoUserCreate *bool `json:"autoUserCreate,omitempty"`
 }
 
 func (o ModCorpBasicInfoDto) String() string {

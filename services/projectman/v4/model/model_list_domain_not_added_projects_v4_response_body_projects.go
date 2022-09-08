@@ -9,27 +9,27 @@ import (
 type ListDomainNotAddedProjectsV4ResponseBodyProjects struct {
 
 	// 项目数字id
-	ProjectNumId *int32 `json:"project_num_id,omitempty" xml:"project_num_id"`
+	ProjectNumId *int32 `json:"project_num_id,omitempty"`
 
 	// 项目id
-	ProjectId *string `json:"project_id,omitempty" xml:"project_id"`
+	ProjectId *string `json:"project_id,omitempty"`
 
 	// 项目名
-	ProjectName *string `json:"project_name,omitempty" xml:"project_name"`
+	ProjectName *string `json:"project_name,omitempty"`
 
 	// 项目描述
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 项目创建时间
-	CreatedTime *int64 `json:"created_time,omitempty" xml:"created_time"`
+	CreatedTime *int64 `json:"created_time,omitempty"`
 
 	// 项目更新时间
-	UpdatedTime *int64 `json:"updated_time,omitempty" xml:"updated_time"`
+	UpdatedTime *int64 `json:"updated_time,omitempty"`
 
 	// 项目类型
-	ProjectType *string `json:"project_type,omitempty" xml:"project_type"`
+	ProjectType *string `json:"project_type,omitempty"`
 
-	Creator *ListDomainNotAddedProjectsV4ResponseBodyCreator `json:"creator,omitempty" xml:"creator"`
+	Creator *ListDomainNotAddedProjectsV4ResponseBodyCreator `json:"creator,omitempty"`
 }
 
 func (o ListDomainNotAddedProjectsV4ResponseBodyProjects) String() string {

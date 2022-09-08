@@ -13,111 +13,111 @@ import (
 type EndpointVo struct {
 
 	// 数据库id。
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 对象id。
-	ObjId *string `json:"obj_id,omitempty" xml:"obj_id"`
+	ObjId *string `json:"obj_id,omitempty"`
 
 	// RDS实例名称。
-	InstanceName *string `json:"instance_name,omitempty" xml:"instance_name"`
+	InstanceName *string `json:"instance_name,omitempty"`
 
 	// 数据库类型
-	DbType *EndpointVoDbType `json:"db_type,omitempty" xml:"db_type"`
+	DbType *EndpointVoDbType `json:"db_type,omitempty"`
 
 	// 数据库用户。
-	DbUser *string `json:"db_user,omitempty" xml:"db_user"`
+	DbUser *string `json:"db_user,omitempty"`
 
 	// 数据库密码。
-	DbPassword *string `json:"db_password,omitempty" xml:"db_password"`
+	DbPassword *string `json:"db_password,omitempty"`
 
 	// 管理IP。
-	ManageIp *string `json:"manage_ip,omitempty" xml:"manage_ip"`
+	ManageIp *string `json:"manage_ip,omitempty"`
 
 	// 流量IP。
-	TrafficIp *string `json:"traffic_ip,omitempty" xml:"traffic_ip"`
+	TrafficIp *string `json:"traffic_ip,omitempty"`
 
 	// 数据库端口。
-	DbPort *int32 `json:"db_port,omitempty" xml:"db_port"`
+	DbPort *int32 `json:"db_port,omitempty"`
 
 	// RDS实例所在region。
-	Region *string `json:"region,omitempty" xml:"region"`
+	Region *string `json:"region,omitempty"`
 
 	// 创建日期，格式yyyy-MM-dd'T'HH:mm:ss'Z'
-	CreatedAt *string `json:"created_at,omitempty" xml:"created_at"`
+	CreatedAt *string `json:"created_at,omitempty"`
 
 	// 修改日期，格式yyyy-MM-dd'T'HH:mm:ss'Z'
-	UpdatedAt *string `json:"updated_at,omitempty" xml:"updated_at"`
+	UpdatedAt *string `json:"updated_at,omitempty"`
 
 	// 迁移实例所在的私有IP。
-	Ip *string `json:"ip,omitempty" xml:"ip"`
+	Ip *string `json:"ip,omitempty"`
 
 	// 迁移实例所在的公网IP。
-	PublicIp *string `json:"public_ip,omitempty" xml:"public_ip"`
+	PublicIp *string `json:"public_ip,omitempty"`
 
 	// 可用区azCode。
-	AzCode *string `json:"az_code,omitempty" xml:"az_code"`
+	AzCode *string `json:"az_code,omitempty"`
 
 	// 源库所在的安全组id。
-	SecurityGroupId *string `json:"security_group_id,omitempty" xml:"security_group_id"`
+	SecurityGroupId *string `json:"security_group_id,omitempty"`
 
 	// 源库所在的子网id。
-	SubnetId *string `json:"subnet_id,omitempty" xml:"subnet_id"`
+	SubnetId *string `json:"subnet_id,omitempty"`
 
 	// 源库所在的虚拟私有云id。
-	VpcId *string `json:"vpc_id,omitempty" xml:"vpc_id"`
+	VpcId *string `json:"vpc_id,omitempty"`
 
 	// 迁移实例的磁盘大小。
-	VolumeSize *int64 `json:"volume_size,omitempty" xml:"volume_size"`
+	VolumeSize *int64 `json:"volume_size,omitempty"`
 
 	// 全量迁移用户密码，密文。
-	FullTransUserPwd *string `json:"full_trans_user_pwd,omitempty" xml:"full_trans_user_pwd"`
+	FullTransUserPwd *string `json:"full_trans_user_pwd,omitempty"`
 
 	// 增量迁移用户密码，密文。
-	IncrementTransUserPwd *string `json:"increment_trans_user_pwd,omitempty" xml:"increment_trans_user_pwd"`
+	IncrementTransUserPwd *string `json:"increment_trans_user_pwd,omitempty"`
 
 	// 是否SSL安全连接。
-	SslLink *bool `json:"ssl_link,omitempty" xml:"ssl_link"`
+	SslLink *bool `json:"ssl_link,omitempty"`
 
 	// SSL证书内容。
-	SslCertKey *string `json:"ssl_cert_key,omitempty" xml:"ssl_cert_key"`
+	SslCertKey *string `json:"ssl_cert_key,omitempty"`
 
 	// SSL证书名字。
-	SslCertName *string `json:"ssl_cert_name,omitempty" xml:"ssl_cert_name"`
+	SslCertName *string `json:"ssl_cert_name,omitempty"`
 
 	// SSL证书内容checksum值。
-	SslCertCheckSum *string `json:"ssl_cert_check_sum,omitempty" xml:"ssl_cert_check_sum"`
+	SslCertCheckSum *string `json:"ssl_cert_check_sum,omitempty"`
 
 	// SSL证书密码，密文。
-	SslCertPassword *string `json:"ssl_cert_password,omitempty" xml:"ssl_cert_password"`
+	SslCertPassword *string `json:"ssl_cert_password,omitempty"`
 
 	// 数据库版本。
-	DbVersion *string `json:"db_version,omitempty" xml:"db_version"`
+	DbVersion *string `json:"db_version,omitempty"`
 
 	// mongoHa模式
-	MongoHaMode *EndpointVoMongoHaMode `json:"mongo_ha_mode,omitempty" xml:"mongo_ha_mode"`
+	MongoHaMode *EndpointVoMongoHaMode `json:"mongo_ha_mode,omitempty"`
 
 	// RDS实例projectId。
-	ProjectId *string `json:"project_id,omitempty" xml:"project_id"`
+	ProjectId *string `json:"project_id,omitempty"`
 
 	// 集群模式
-	ClusterMode *EndpointVoClusterMode `json:"cluster_mode,omitempty" xml:"cluster_mode"`
+	ClusterMode *EndpointVoClusterMode `json:"cluster_mode,omitempty"`
 
 	// RDS实例id。
-	InstanceId *string `json:"instance_id,omitempty" xml:"instance_id"`
+	InstanceId *string `json:"instance_id,omitempty"`
 
 	// Oracle服务名serviceName。
-	DbName *string `json:"db_name,omitempty" xml:"db_name"`
+	DbName *string `json:"db_name,omitempty"`
 
 	// mrskafka topic名称。
-	Topic *string `json:"topic,omitempty" xml:"topic"`
+	Topic *string `json:"topic,omitempty"`
 
 	// MRSkafka是否开启kerberos认证 - 0非安全认证 - 1安全认证
-	SafeMode *int32 `json:"safe_mode,omitempty" xml:"safe_mode"`
+	SafeMode *int32 `json:"safe_mode,omitempty"`
 
-	KerberosVo *KerberosVo `json:"kerberos_vo,omitempty" xml:"kerberos_vo"`
+	KerberosVo *KerberosVo `json:"kerberos_vo,omitempty"`
 
 	// 多写数据库Id。
-	MultiWriteDbId *string `json:"multi_write_db_id,omitempty" xml:"multi_write_db_id"`
+	MultiWriteDbId *string `json:"multi_write_db_id,omitempty"`
 }
 
 func (o EndpointVo) String() string {

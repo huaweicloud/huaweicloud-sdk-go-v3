@@ -9,7 +9,7 @@ import (
 type QuotaResourceResp struct {
 
 	// 错误描述
-	Resources *[]QuotaItemInfo `json:"resources,omitempty" xml:"resources"`
+	Resources *[]QuotaItemInfo `json:"resources,omitempty"`
 }
 
 func (o QuotaResourceResp) String() string {

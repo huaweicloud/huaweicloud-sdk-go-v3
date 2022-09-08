@@ -9,7 +9,7 @@ import (
 type UserRequest struct {
 
 	// 用户32位字符串id
-	UserId string `json:"user_id" xml:"user_id"`
+	UserId string `json:"user_id"`
 }
 
 func (o UserRequest) String() string {

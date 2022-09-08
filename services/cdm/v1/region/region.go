@@ -12,7 +12,11 @@ var CN_EAST_3 = region.NewRegion("cn-east-3", "https://cdm.cn-east-3.myhuaweiclo
 var CN_SOUTH_1 = region.NewRegion("cn-south-1", "https://cdm.cn-south-1.myhuaweicloud.com")
 var AP_SOUTHEAST_2 = region.NewRegion("ap-southeast-2", "https://cdm.ap-southeast-2.myhuaweicloud.com")
 var AP_SOUTHEAST_1 = region.NewRegion("ap-southeast-1", "https://cdm.ap-southeast-1.myhuaweicloud.com")
-var CN_SOUTHWEST_2 = region.NewRegion("cn-southwest-2", "https://cdm.ap-southwest-2.myhuaweicloud.com")
+var CN_SOUTHWEST_2 = region.NewRegion("cn-southwest-2", "https://cdm.cn-southwest-2.myhuaweicloud.com")
+var SA_BRAZIL_1 = region.NewRegion("sa-brazil-1", "https://cdm.sa-brazil-1.myhuaweicloud.com")
+var AF_SOUTH_1 = region.NewRegion("af-south-1", "https://cdm.af-south-1.myhuaweicloud.com")
+var CN_SOUTH_2 = region.NewRegion("cn-south-2", "https://cdm.cn-south-2.myhuaweicloud.com")
+var LA_SOUTH_2 = region.NewRegion("la-south-2", "https://cdm.la-south-2.myhuaweicloud.com")
 var CN_NORTH_9 = region.NewRegion("cn-north-9", "https://cdm.cn-north-9.myhuaweicloud.com")
 var CN_NORTH_2 = region.NewRegion("cn-north-2", "https://cdm.cn-north-2.myhuaweicloud.cn")
 var AP_SOUTHEAST_3 = region.NewRegion("ap-southeast-3", "https://cdm.ap-southeast-3.myhuaweicloud.cn")
@@ -26,6 +30,10 @@ var staticFields = map[string]*region.Region{
 	"ap-southeast-2": AP_SOUTHEAST_2,
 	"ap-southeast-1": AP_SOUTHEAST_1,
 	"cn-southwest-2": CN_SOUTHWEST_2,
+	"sa-brazil-1":    SA_BRAZIL_1,
+	"af-south-1":     AF_SOUTH_1,
+	"cn-south-2":     CN_SOUTH_2,
+	"la-south-2":     LA_SOUTH_2,
 	"cn-north-9":     CN_NORTH_9,
 	"cn-north-2":     CN_NORTH_2,
 	"ap-southeast-3": AP_SOUTHEAST_3,

@@ -10,13 +10,13 @@ import (
 type ListProjectSetsResponse struct {
 
 	// 状态码
-	Code *string `json:"code,omitempty" xml:"code"`
+	Code *string `json:"code,omitempty"`
 
 	// 描述
-	Message *string `json:"message,omitempty" xml:"message"`
+	Message *string `json:"message,omitempty"`
 
 	// 工程集详细信息
-	Projects       *[]ProjectsSet `json:"projects,omitempty" xml:"projects"`
+	Projects       *[]ProjectsSet `json:"projects,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }
 

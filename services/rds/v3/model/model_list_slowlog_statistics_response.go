@@ -10,22 +10,22 @@ import (
 type ListSlowlogStatisticsResponse struct {
 
 	// 当前页码
-	PageNumber *int32 `json:"pageNumber,omitempty" xml:"pageNumber"`
+	PageNumber *int32 `json:"pageNumber,omitempty"`
 
 	// 每页条数
-	PageRecord *int32 `json:"pageRecord,omitempty" xml:"pageRecord"`
+	PageRecord *int32 `json:"pageRecord,omitempty"`
 
 	// 慢日志列表
-	SlowLogList *[]SlowLogStatistics `json:"slowLogList,omitempty" xml:"slowLogList"`
+	SlowLogList *[]SlowLogStatistics `json:"slowLogList,omitempty"`
 
 	// 总条数
-	TotalRecord *int32 `json:"totalRecord,omitempty" xml:"totalRecord"`
+	TotalRecord *int32 `json:"totalRecord,omitempty"`
 
 	// 开始时间
-	StartTime *int64 `json:"startTime,omitempty" xml:"startTime"`
+	StartTime *int64 `json:"startTime,omitempty"`
 
 	// 结束时间
-	EndTime        *int64 `json:"endTime,omitempty" xml:"endTime"`
+	EndTime        *int64 `json:"endTime,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

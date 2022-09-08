@@ -10,13 +10,13 @@ import (
 type CreateLogtankOption struct {
 
 	// 负载均衡器id
-	LoadbalancerId string `json:"loadbalancer_id" xml:"loadbalancer_id"`
+	LoadbalancerId string `json:"loadbalancer_id"`
 
 	// 日志组别id，其他（非ELB）服务提供
-	LogGroupId string `json:"log_group_id" xml:"log_group_id"`
+	LogGroupId string `json:"log_group_id"`
 
 	// 日志订阅主题id，其他（非ELB）服务提供
-	LogTopicId string `json:"log_topic_id" xml:"log_topic_id"`
+	LogTopicId string `json:"log_topic_id"`
 }
 
 func (o CreateLogtankOption) String() string {

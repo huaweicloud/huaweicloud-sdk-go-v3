@@ -8,7 +8,7 @@ import (
 
 // 更新floatingip的请求体
 type NeutronUpdateFloatingIpRequestBody struct {
-	Floatingip *UpdateFloatingIpOption `json:"floatingip" xml:"floatingip"`
+	Floatingip *UpdateFloatingIpOption `json:"floatingip"`
 }
 
 func (o NeutronUpdateFloatingIpRequestBody) String() string {

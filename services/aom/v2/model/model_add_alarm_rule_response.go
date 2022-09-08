@@ -10,7 +10,7 @@ import (
 type AddAlarmRuleResponse struct {
 
 	// 阈值规则id。
-	AlarmRuleId    *int64 `json:"alarm_rule_id,omitempty" xml:"alarm_rule_id"`
+	AlarmRuleId    *int64 `json:"alarm_rule_id,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

@@ -9,25 +9,25 @@ import (
 type ConfigurationParameterList struct {
 
 	// 参数名称。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 参数值。
-	Value *string `json:"value,omitempty" xml:"value"`
+	Value *string `json:"value,omitempty"`
 
 	// 是否需要重启实例。
-	NeedRestart *string `json:"need_restart,omitempty" xml:"need_restart"`
+	NeedRestart *string `json:"need_restart,omitempty"`
 
 	// 参数是否只读。
-	ReadOnly *string `json:"read_only,omitempty" xml:"read_only"`
+	ReadOnly *string `json:"read_only,omitempty"`
 
 	// 参数取值范围。
-	ValueRange *string `json:"value_range,omitempty" xml:"value_range"`
+	ValueRange *string `json:"value_range,omitempty"`
 
 	// 参数类型。
-	DataType *string `json:"data_type,omitempty" xml:"data_type"`
+	DataType *string `json:"data_type,omitempty"`
 
 	// 参数描述。
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 }
 
 func (o ConfigurationParameterList) String() string {

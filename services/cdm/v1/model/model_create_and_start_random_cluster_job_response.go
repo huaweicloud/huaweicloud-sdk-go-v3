@@ -10,7 +10,7 @@ import (
 type CreateAndStartRandomClusterJobResponse struct {
 
 	// 作业运行信息，请参见submission参数说明
-	Submissions    *[]StartJobSubmission `json:"submissions,omitempty" xml:"submissions"`
+	Submissions    *[]StartJobSubmission `json:"submissions,omitempty"`
 	HttpStatusCode int                   `json:"-"`
 }
 

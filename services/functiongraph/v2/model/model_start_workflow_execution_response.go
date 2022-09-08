@@ -10,7 +10,7 @@ import (
 type StartWorkflowExecutionResponse struct {
 
 	// 错误码
-	ExecutionId    *string `json:"execution_id,omitempty" xml:"execution_id"`
+	ExecutionId    *string `json:"execution_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

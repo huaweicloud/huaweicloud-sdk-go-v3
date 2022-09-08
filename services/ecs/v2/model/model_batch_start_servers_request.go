@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type BatchStartServersRequest struct {
-	Body *BatchStartServersRequestBody `json:"body,omitempty" xml:"body"`
+	Body *BatchStartServersRequestBody `json:"body,omitempty"`
 }
 
 func (o BatchStartServersRequest) String() string {

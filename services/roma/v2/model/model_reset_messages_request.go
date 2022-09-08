@@ -13,12 +13,12 @@ import (
 type ResetMessagesRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 重发类型。当前只支持“resend”。
-	ActionId ResetMessagesRequestActionId `json:"action_id" xml:"action_id"`
+	ActionId ResetMessagesRequestActionId `json:"action_id"`
 
-	Body *ResetMessagesReq `json:"body,omitempty" xml:"body"`
+	Body *ResetMessagesReq `json:"body,omitempty"`
 }
 
 func (o ResetMessagesRequest) String() string {

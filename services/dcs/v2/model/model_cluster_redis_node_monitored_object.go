@@ -10,16 +10,16 @@ import (
 type ClusterRedisNodeMonitoredObject struct {
 
 	// 测量对象ID，即节点的ID。
-	DcsInstanceId *string `json:"dcs_instance_id,omitempty" xml:"dcs_instance_id"`
+	DcsInstanceId *string `json:"dcs_instance_id,omitempty"`
 
 	// 测量对象名称，即节点IP。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 维度dcs_cluster_redis_node的测量对象的ID。
-	DcsClusterRedisNode *string `json:"dcs_cluster_redis_node,omitempty" xml:"dcs_cluster_redis_node"`
+	DcsClusterRedisNode *string `json:"dcs_cluster_redis_node,omitempty"`
 
 	// 测量对象状态，即节点状态。
-	Status *string `json:"status,omitempty" xml:"status"`
+	Status *string `json:"status,omitempty"`
 }
 
 func (o ClusterRedisNodeMonitoredObject) String() string {

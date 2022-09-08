@@ -10,7 +10,7 @@ import (
 type CreateInstallCmdRequestDto struct {
 
 	// 安装命令执行的主机标签DEFAULT|MASTER|SLAVE
-	HostTag *string `json:"host_tag,omitempty" xml:"host_tag"`
+	HostTag *string `json:"host_tag,omitempty"`
 }
 
 func (o CreateInstallCmdRequestDto) String() string {

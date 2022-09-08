@@ -10,7 +10,7 @@ import (
 type ImageData struct {
 
 	// 镜像ID
-	ImageId *string `json:"image_id,omitempty" xml:"image_id"`
+	ImageId *string `json:"image_id,omitempty"`
 }
 
 func (o ImageData) String() string {

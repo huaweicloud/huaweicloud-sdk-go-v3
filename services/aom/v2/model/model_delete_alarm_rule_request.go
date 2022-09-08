@@ -10,7 +10,7 @@ import (
 type DeleteAlarmRuleRequest struct {
 
 	// 阈值规则ID。
-	AlarmRuleId string `json:"alarm_rule_id" xml:"alarm_rule_id"`
+	AlarmRuleId string `json:"alarm_rule_id"`
 }
 
 func (o DeleteAlarmRuleRequest) String() string {

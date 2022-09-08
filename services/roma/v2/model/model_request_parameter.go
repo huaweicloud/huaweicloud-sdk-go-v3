@@ -9,10 +9,10 @@ import (
 type RequestParameter struct {
 
 	// 请求参数名
-	ParameterName *string `json:"parameter_name,omitempty" xml:"parameter_name"`
+	ParameterName *string `json:"parameter_name,omitempty"`
 
 	// 请求参数值
-	ParameterValue *string `json:"parameter_value,omitempty" xml:"parameter_value"`
+	ParameterValue *string `json:"parameter_value,omitempty"`
 }
 
 func (o RequestParameter) String() string {

@@ -10,10 +10,10 @@ import (
 type ListDatabaseUsersResponse struct {
 
 	// 数据库用户信息。
-	Users *string `json:"users,omitempty" xml:"users"`
+	Users *string `json:"users,omitempty"`
 
 	// 数据库用户总数。
-	TotalCount     *int32 `json:"total_count,omitempty" xml:"total_count"`
+	TotalCount     *int32 `json:"total_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

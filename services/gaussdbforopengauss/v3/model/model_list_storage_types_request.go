@@ -13,13 +13,13 @@ import (
 type ListStorageTypesRequest struct {
 
 	// 语言
-	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *string `json:"X-Language,omitempty"`
 
 	// 数据库版本号。
-	Version string `json:"version" xml:"version"`
+	Version string `json:"version"`
 
 	// 实例类型： enterprise(企业版)， centralization_standard(主备版)，不区分大小写。
-	HaMode *ListStorageTypesRequestHaMode `json:"ha_mode,omitempty" xml:"ha_mode"`
+	HaMode *ListStorageTypesRequestHaMode `json:"ha_mode,omitempty"`
 }
 
 func (o ListStorageTypesRequest) String() string {

@@ -10,7 +10,7 @@ import (
 type ShowEdgeNodeRequest struct {
 
 	// 边缘节点ID
-	EdgeNodeId string `json:"edge_node_id" xml:"edge_node_id"`
+	EdgeNodeId string `json:"edge_node_id"`
 }
 
 func (o ShowEdgeNodeRequest) String() string {

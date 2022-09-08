@@ -10,7 +10,7 @@ import (
 type ContainerCidr struct {
 
 	// 容器网络网段，建议使用网段10.0.0.0/12~19，172.16.0.0/16~19，192.168.0.0/16~19。
-	Cidr string `json:"cidr" xml:"cidr"`
+	Cidr string `json:"cidr"`
 }
 
 func (o ContainerCidr) String() string {

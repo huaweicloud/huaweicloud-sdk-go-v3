@@ -10,7 +10,7 @@ import (
 type DeleteFunctionAsyncInvokeConfigRequest struct {
 
 	// 函数的URN（Uniform Resource Name），唯一标识函数。
-	FunctionUrn string `json:"function_urn" xml:"function_urn"`
+	FunctionUrn string `json:"function_urn"`
 }
 
 func (o DeleteFunctionAsyncInvokeConfigRequest) String() string {

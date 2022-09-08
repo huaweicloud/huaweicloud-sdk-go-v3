@@ -10,7 +10,7 @@ import (
 type ListNodeTypesResponse struct {
 
 	// 节点类型对象列表。
-	NodeTypes      *[]NodeTypes `json:"node_types,omitempty" xml:"node_types"`
+	NodeTypes      *[]NodeTypes `json:"node_types,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }
 

@@ -9,14 +9,14 @@ import (
 type SubAudioFile struct {
 
 	// 音轨信息
-	TracksInfo *[]TracksInfo `json:"tracks_info,omitempty" xml:"tracks_info"`
+	TracksInfo *[]TracksInfo `json:"tracks_info,omitempty"`
 
-	Input *ObsObjInfo `json:"input,omitempty" xml:"input"`
+	Input *ObsObjInfo `json:"input,omitempty"`
 
-	Output *ObsObjInfo `json:"output,omitempty" xml:"output"`
+	Output *ObsObjInfo `json:"output,omitempty"`
 
 	// 输出文件名。
-	OutputFilename *string `json:"output_filename,omitempty" xml:"output_filename"`
+	OutputFilename *string `json:"output_filename,omitempty"`
 }
 
 func (o SubAudioFile) String() string {

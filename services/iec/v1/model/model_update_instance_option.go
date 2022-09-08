@@ -10,10 +10,10 @@ import (
 type UpdateInstanceOption struct {
 
 	// 修改后的边缘实例名称， 只能由中文字符、英文字母、数字及“_”、“-”、“.”组成。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 描述， 不能包含“<”，“>”。
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 }
 
 func (o UpdateInstanceOption) String() string {

@@ -10,7 +10,7 @@ import (
 type DeleteEvaluationProjectResponse struct {
 
 	// 评估项目ID。
-	EvaluationProjectId *int32 `json:"evaluation_project_id,omitempty" xml:"evaluation_project_id"`
+	EvaluationProjectId *int32 `json:"evaluation_project_id,omitempty"`
 	HttpStatusCode      int    `json:"-"`
 }
 

@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowDedicatedHostResponse struct {
-	DedicatedHost  *RespDedicatedHost `json:"dedicated_host,omitempty" xml:"dedicated_host"`
+	DedicatedHost  *RespDedicatedHost `json:"dedicated_host,omitempty"`
 	HttpStatusCode int                `json:"-"`
 }
 

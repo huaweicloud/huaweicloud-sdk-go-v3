@@ -10,7 +10,7 @@ import (
 type DeleteEventSourceRequest struct {
 
 	// 指定查询的事件源ID
-	SourceId string `json:"source_id" xml:"source_id"`
+	SourceId string `json:"source_id"`
 }
 
 func (o DeleteEventSourceRequest) String() string {

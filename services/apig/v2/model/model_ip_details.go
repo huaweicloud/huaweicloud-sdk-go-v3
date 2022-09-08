@@ -9,10 +9,10 @@ import (
 type IpDetails struct {
 
 	// IP地址
-	IpAddress *string `json:"ip_address,omitempty" xml:"ip_address"`
+	IpAddress *string `json:"ip_address,omitempty"`
 
 	// 带宽大小
-	BandwidthSize *int32 `json:"bandwidth_size,omitempty" xml:"bandwidth_size"`
+	BandwidthSize *int32 `json:"bandwidth_size,omitempty"`
 }
 
 func (o IpDetails) String() string {

@@ -10,10 +10,10 @@ import (
 type MysqlFlavorInfo struct {
 
 	// CPU核数。
-	Vcpus string `json:"vcpus" xml:"vcpus"`
+	Vcpus string `json:"vcpus"`
 
 	// 内存大小，单位GB。
-	Ram string `json:"ram" xml:"ram"`
+	Ram string `json:"ram"`
 }
 
 func (o MysqlFlavorInfo) String() string {

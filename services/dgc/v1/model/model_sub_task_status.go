@@ -10,17 +10,17 @@ import (
 )
 
 type SubTaskStatus struct {
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
-	StartTime *string `json:"startTime,omitempty" xml:"startTime"`
+	StartTime *string `json:"startTime,omitempty"`
 
-	EndTime *string `json:"endTime,omitempty" xml:"endTime"`
+	EndTime *string `json:"endTime,omitempty"`
 
-	LastUpdate *string `json:"lastUpdate,omitempty" xml:"lastUpdate"`
+	LastUpdate *string `json:"lastUpdate,omitempty"`
 
-	Status *SubTaskStatusStatus `json:"status,omitempty" xml:"status"`
+	Status *SubTaskStatusStatus `json:"status,omitempty"`
 }
 
 func (o SubTaskStatus) String() string {

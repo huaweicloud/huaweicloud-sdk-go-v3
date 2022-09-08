@@ -13,13 +13,13 @@ import (
 type RelationModel struct {
 
 	// 指定查询字段的key，对应metadata里面的key 。
-	Key *string `json:"key,omitempty" xml:"key"`
+	Key *string `json:"key,omitempty"`
 
 	// 查询条件中指定key的值。
-	Value *[]string `json:"value,omitempty" xml:"value"`
+	Value *[]string `json:"value,omitempty"`
 
 	// 该条件与其他条件的组合方式。 AND：必须满足所有条件； OR：可以满足其中一个条件； NOT：必须不满足所有条件。
-	Relation *RelationModelRelation `json:"relation,omitempty" xml:"relation"`
+	Relation *RelationModelRelation `json:"relation,omitempty"`
 }
 
 func (o RelationModel) String() string {

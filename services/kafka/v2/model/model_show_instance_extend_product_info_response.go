@@ -10,10 +10,10 @@ import (
 type ShowInstanceExtendProductInfoResponse struct {
 
 	// 表示按需付费的产品列表。
-	Hourly *[]ListProductsRespHourly `json:"hourly,omitempty" xml:"hourly"`
+	Hourly *[]ListProductsRespHourly `json:"hourly,omitempty"`
 
 	// 表示包年包月的产品列表。当前暂不支持通过API创建包年包月的Kafka实例。
-	Monthly        *[]ListProductsRespHourly `json:"monthly,omitempty" xml:"monthly"`
+	Monthly        *[]ListProductsRespHourly `json:"monthly,omitempty"`
 	HttpStatusCode int                       `json:"-"`
 }
 

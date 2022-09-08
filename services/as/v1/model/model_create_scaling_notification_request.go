@@ -10,9 +10,9 @@ import (
 type CreateScalingNotificationRequest struct {
 
 	// 伸缩组标识。
-	ScalingGroupId string `json:"scaling_group_id" xml:"scaling_group_id"`
+	ScalingGroupId string `json:"scaling_group_id"`
 
-	Body *CreateNotificationOption `json:"body,omitempty" xml:"body"`
+	Body *CreateNotificationOption `json:"body,omitempty"`
 }
 
 func (o CreateScalingNotificationRequest) String() string {

@@ -10,15 +10,15 @@ import (
 type TaskDetail struct {
 
 	// 执行批量任务的目标。
-	Target *string `json:"target,omitempty" xml:"target"`
+	Target *string `json:"target,omitempty"`
 
 	// 子任务的执行状态，结果范围：Processing，Success，Fail，Waitting，FailWaitRetry，Stopped。 - Waitting: 等待执行。 - Processing: 执行中。 - Success: 成功。 - Fail: 失败。 - FailWaitRetry: 失败重试。 - Stopped: 已停止。
-	Status *string `json:"status,omitempty" xml:"status"`
+	Status *string `json:"status,omitempty"`
 
 	// 子任务执行的输出信息。
-	Output *string `json:"output,omitempty" xml:"output"`
+	Output *string `json:"output,omitempty"`
 
-	Error *ErrorInfo `json:"error,omitempty" xml:"error"`
+	Error *ErrorInfo `json:"error,omitempty"`
 }
 
 func (o TaskDetail) String() string {

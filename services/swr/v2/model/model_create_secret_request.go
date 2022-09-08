@@ -13,10 +13,10 @@ import (
 type CreateSecretRequest struct {
 
 	// 消息体的类型（格式），下方类型可任选其一使用： application/json;charset=utf-8 application/json
-	ContentType CreateSecretRequestContentType `json:"Content-Type" xml:"Content-Type"`
+	ContentType CreateSecretRequestContentType `json:"Content-Type"`
 
 	// 项目名称，缺省值默认为区域名称，例如：cn-north-1。
-	Projectname *string `json:"projectname,omitempty" xml:"projectname"`
+	Projectname *string `json:"projectname,omitempty"`
 }
 
 func (o CreateSecretRequest) String() string {

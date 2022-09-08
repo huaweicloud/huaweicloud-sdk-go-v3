@@ -10,9 +10,9 @@ import (
 type SearchApplicationRequest struct {
 
 	// 应用id
-	XBusinessId int64 `json:"x-business-id" xml:"x-business-id"`
+	XBusinessId int64 `json:"x-business-id"`
 
-	Body *AppSearchParam `json:"body,omitempty" xml:"body"`
+	Body *AppSearchParam `json:"body,omitempty"`
 }
 
 func (o SearchApplicationRequest) String() string {

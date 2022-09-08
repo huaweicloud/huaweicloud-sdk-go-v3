@@ -10,7 +10,7 @@ import (
 type BatchConfirmConfigsNewResponse struct {
 
 	// 已确认的配置项id
-	Ids            *interface{} `json:"ids,omitempty" xml:"ids"`
+	Ids            *interface{} `json:"ids,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }
 

@@ -10,12 +10,12 @@ import (
 type ListSnapshotDataResponse struct {
 
 	// 采样数据列表。
-	SnapshotList *[]SnapshotData `json:"snapshot_list,omitempty" xml:"snapshot_list"`
+	SnapshotList *[]SnapshotData `json:"snapshot_list,omitempty"`
 
 	// 指定时间区间内截图数量总和。
-	Total *int64 `json:"total,omitempty" xml:"total"`
+	Total *int64 `json:"total,omitempty"`
 
-	XRequestId     *string `json:"X-Request-Id,omitempty" xml:"X-Request-Id"`
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

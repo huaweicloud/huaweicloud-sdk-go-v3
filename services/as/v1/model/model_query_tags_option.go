@@ -13,31 +13,31 @@ import (
 type QueryTagsOption struct {
 
 	// 过滤条件，包含标签，最多包含10个Tag，结构体不能缺失。
-	Tags *[]TagsMultiValue `json:"tags,omitempty" xml:"tags"`
+	Tags *[]TagsMultiValue `json:"tags,omitempty"`
 
 	// 过滤条件，包含任意标签，最多包含10个Tag。
-	TagsAny *[]TagsMultiValue `json:"tags_any,omitempty" xml:"tags_any"`
+	TagsAny *[]TagsMultiValue `json:"tags_any,omitempty"`
 
 	// 过滤条件，不包含标签，最多包含10个Tag。
-	NotTags *[]TagsMultiValue `json:"not_tags,omitempty" xml:"not_tags"`
+	NotTags *[]TagsMultiValue `json:"not_tags,omitempty"`
 
 	// 过滤条件，不包含任意标签，最多包含10个Tag。
-	NotTagsAny *[]TagsMultiValue `json:"not_tags_any,omitempty" xml:"not_tags_any"`
+	NotTagsAny *[]TagsMultiValue `json:"not_tags_any,omitempty"`
 
 	// 查询记录数（action为count时无此参数）如果action为filter默认为1000，limit最多为1000，不能为负数，最小值为1。
-	Limit *string `json:"limit,omitempty" xml:"limit"`
+	Limit *string `json:"limit,omitempty"`
 
 	// 分页位置标识（资源ID或索引位置）。
-	Marker *string `json:"marker,omitempty" xml:"marker"`
+	Marker *string `json:"marker,omitempty"`
 
 	// 操作标识（仅限filter，count）：filter（过滤）：即分页查询。count（查询总条数）：按照条件将总条数返回即可。
-	Action QueryTagsOptionAction `json:"action" xml:"action"`
+	Action QueryTagsOptionAction `json:"action"`
 
 	// （索引位置），从offset指定的下一条数据开始查询。查询第一页数据时，不需要传入此参数。查询后续页码数据时，将查询前一页数据时，不需要传入此参数。查询后续页码数据时，将查询前一页数据时响应体中的值带入此参数。必须为数字，不能为负数。action：count时，无此参数。action：filter时，默认为0
-	Offset *string `json:"offset,omitempty" xml:"offset"`
+	Offset *string `json:"offset,omitempty"`
 
 	// 模糊搜索字段。
-	Matches *[]Matches `json:"matches,omitempty" xml:"matches"`
+	Matches *[]Matches `json:"matches,omitempty"`
 }
 
 func (o QueryTagsOption) String() string {

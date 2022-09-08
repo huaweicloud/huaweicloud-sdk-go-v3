@@ -10,10 +10,10 @@ import (
 type DecryptDataResponse struct {
 
 	// 密钥ID。
-	KeyId *string `json:"key_id,omitempty" xml:"key_id"`
+	KeyId *string `json:"key_id,omitempty"`
 
 	// 明文。
-	PlainText      *string `json:"plain_text,omitempty" xml:"plain_text"`
+	PlainText      *string `json:"plain_text,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

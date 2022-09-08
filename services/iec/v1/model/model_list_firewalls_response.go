@@ -10,10 +10,10 @@ import (
 type ListFirewallsResponse struct {
 
 	// 网络ACL数量。
-	Count *int32 `json:"count,omitempty" xml:"count"`
+	Count *int32 `json:"count,omitempty"`
 
 	// 网络ACL列表。
-	Firewalls      *[]Firewall `json:"firewalls,omitempty" xml:"firewalls"`
+	Firewalls      *[]Firewall `json:"firewalls,omitempty"`
 	HttpStatusCode int         `json:"-"`
 }
 

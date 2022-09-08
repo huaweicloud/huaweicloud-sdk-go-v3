@@ -10,9 +10,9 @@ import (
 type ListKeypairsResponse struct {
 
 	// SSH密钥对信息详情
-	Keypairs *[]Keypairs `json:"keypairs,omitempty" xml:"keypairs"`
+	Keypairs *[]Keypairs `json:"keypairs,omitempty"`
 
-	PageInfo       *PageInfo `json:"page_info,omitempty" xml:"page_info"`
+	PageInfo       *PageInfo `json:"page_info,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }
 

@@ -9,7 +9,7 @@ import (
 type MysqlResizeFlavor struct {
 
 	// 规格码
-	SpecCode string `json:"spec_code" xml:"spec_code"`
+	SpecCode string `json:"spec_code"`
 }
 
 func (o MysqlResizeFlavor) String() string {

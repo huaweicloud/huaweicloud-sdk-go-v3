@@ -10,12 +10,12 @@ import (
 type CreatePartitionRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// Topic名称。
-	Topic string `json:"topic" xml:"topic"`
+	Topic string `json:"topic"`
 
-	Body *CreatePartitionReq `json:"body,omitempty" xml:"body"`
+	Body *CreatePartitionReq `json:"body,omitempty"`
 }
 
 func (o CreatePartitionRequest) String() string {

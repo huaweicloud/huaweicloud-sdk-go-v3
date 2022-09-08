@@ -13,15 +13,15 @@ import (
 type ConfirmDeploymentJobRequest struct {
 
 	// 语言类型 中文:zh-cn 英文:en-us
-	XLanguage *ConfirmDeploymentJobRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *ConfirmDeploymentJobRequestXLanguage `json:"X-Language,omitempty"`
 
 	// 应用id
-	ApplicationId string `json:"application_id" xml:"application_id"`
+	ApplicationId string `json:"application_id"`
 
 	// 环境标识
-	EnvironmentTag string `json:"environment_tag" xml:"environment_tag"`
+	EnvironmentTag string `json:"environment_tag"`
 
-	Body *DeploymentJobConfirmType `json:"body,omitempty" xml:"body"`
+	Body *DeploymentJobConfirmType `json:"body,omitempty"`
 }
 
 func (o ConfirmDeploymentJobRequest) String() string {

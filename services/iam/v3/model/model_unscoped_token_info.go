@@ -10,21 +10,21 @@ import (
 type UnscopedTokenInfo struct {
 
 	// 过期时间。
-	ExpiresAt string `json:"expires_at" xml:"expires_at"`
+	ExpiresAt string `json:"expires_at"`
 
 	// token获取方式，联邦认证默认为mapped。
-	Methods []string `json:"methods" xml:"methods"`
+	Methods []string `json:"methods"`
 
 	// 生成时间。
-	IssuedAt string `json:"issued_at" xml:"issued_at"`
+	IssuedAt string `json:"issued_at"`
 
-	User *FederationUserBody `json:"user" xml:"user"`
+	User *FederationUserBody `json:"user"`
 
 	// roles信息。
-	Roles *[]UnscopedTokenInfoRoles `json:"roles,omitempty" xml:"roles"`
+	Roles *[]UnscopedTokenInfoRoles `json:"roles,omitempty"`
 
 	// catalog信息。
-	Catalog *[]UnscopedTokenInfoCatalog `json:"catalog,omitempty" xml:"catalog"`
+	Catalog *[]UnscopedTokenInfoCatalog `json:"catalog,omitempty"`
 }
 
 func (o UnscopedTokenInfo) String() string {

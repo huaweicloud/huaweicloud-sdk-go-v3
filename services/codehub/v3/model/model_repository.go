@@ -9,7 +9,7 @@ import (
 type Repository struct {
 
 	// 创建仓库的UUID
-	RepositoryUuid *string `json:"repository_uuid,omitempty" xml:"repository_uuid"`
+	RepositoryUuid *string `json:"repository_uuid,omitempty"`
 }
 
 func (o Repository) String() string {

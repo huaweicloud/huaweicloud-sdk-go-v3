@@ -10,7 +10,7 @@ import (
 type ListMeasureUnitsRequest struct {
 
 	// 语言。zh_CN：中文en_US：英文缺省为zh_CN。
-	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *string `json:"X-Language,omitempty"`
 }
 
 func (o ListMeasureUnitsRequest) String() string {

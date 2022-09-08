@@ -10,23 +10,23 @@ import (
 type TraceTopologyLine struct {
 
 	// 开始节点id
-	StartNodeId *int64 `json:"start_node_id,omitempty" xml:"start_node_id"`
+	StartNodeId *int64 `json:"start_node_id,omitempty"`
 
 	// 结束节点id
-	EndNodeId *int64 `json:"end_node_id,omitempty" xml:"end_node_id"`
+	EndNodeId *int64 `json:"end_node_id,omitempty"`
 
 	// 调用跨度id
-	SpanId *string `json:"span_id,omitempty" xml:"span_id"`
+	SpanId *string `json:"span_id,omitempty"`
 
-	ClientInfo *TraceTopologyLineInfo `json:"client_info,omitempty" xml:"client_info"`
+	ClientInfo *TraceTopologyLineInfo `json:"client_info,omitempty"`
 
-	ServerInfo *TraceTopologyLineInfo `json:"server_info,omitempty" xml:"server_info"`
+	ServerInfo *TraceTopologyLineInfo `json:"server_info,omitempty"`
 
 	// id
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 获取一条线的提示信息
-	Hint *string `json:"hint,omitempty" xml:"hint"`
+	Hint *string `json:"hint,omitempty"`
 }
 
 func (o TraceTopologyLine) String() string {

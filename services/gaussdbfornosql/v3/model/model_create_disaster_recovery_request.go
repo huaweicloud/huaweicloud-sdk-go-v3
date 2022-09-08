@@ -10,9 +10,9 @@ import (
 type CreateDisasterRecoveryRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
-	Body *ConstructDisasterRecoveryBody `json:"body,omitempty" xml:"body"`
+	Body *ConstructDisasterRecoveryBody `json:"body,omitempty"`
 }
 
 func (o CreateDisasterRecoveryRequest) String() string {

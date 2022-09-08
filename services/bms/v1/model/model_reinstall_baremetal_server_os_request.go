@@ -10,9 +10,9 @@ import (
 type ReinstallBaremetalServerOsRequest struct {
 
 	// 裸金属服务器ID
-	ServerId string `json:"server_id" xml:"server_id"`
+	ServerId string `json:"server_id"`
 
-	Body *OsReinstallBody `json:"body,omitempty" xml:"body"`
+	Body *OsReinstallBody `json:"body,omitempty"`
 }
 
 func (o ReinstallBaremetalServerOsRequest) String() string {

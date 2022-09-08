@@ -9,7 +9,7 @@ import (
 type Meta struct {
 
 	// 唯一标识此次请求的ID，用户自定义，不超过64位。
-	Uuid *string `json:"uuid,omitempty" xml:"uuid"`
+	Uuid *string `json:"uuid,omitempty"`
 }
 
 func (o Meta) String() string {

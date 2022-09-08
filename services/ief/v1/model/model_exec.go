@@ -9,7 +9,7 @@ import (
 type Exec struct {
 
 	// 探针执行命令，最大长度10240个字符
-	Command string `json:"command" xml:"command"`
+	Command string `json:"command"`
 }
 
 func (o Exec) String() string {

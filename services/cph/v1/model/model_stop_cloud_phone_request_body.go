@@ -9,7 +9,7 @@ import (
 type StopCloudPhoneRequestBody struct {
 
 	// 云手机id列表
-	PhoneIds []string `json:"phone_ids" xml:"phone_ids"`
+	PhoneIds []string `json:"phone_ids"`
 }
 
 func (o StopCloudPhoneRequestBody) String() string {

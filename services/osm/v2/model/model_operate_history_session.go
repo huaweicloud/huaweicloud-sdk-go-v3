@@ -9,16 +9,16 @@ import (
 type OperateHistorySession struct {
 
 	// 会话时长，格式：hh:ii:ss
-	Duration *string `json:"duration,omitempty" xml:"duration"`
+	Duration *string `json:"duration,omitempty"`
 
 	// 会话id
-	SessionId *int64 `json:"session_id,omitempty" xml:"session_id"`
+	SessionId *int64 `json:"session_id,omitempty"`
 
 	// 会话开始时间
-	StartTime *string `json:"start_time,omitempty" xml:"start_time"`
+	StartTime *string `json:"start_time,omitempty"`
 
 	// 会话结束时间
-	EndTime *string `json:"end_time,omitempty" xml:"end_time"`
+	EndTime *string `json:"end_time,omitempty"`
 }
 
 func (o OperateHistorySession) String() string {

@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ListKeyDetailResponse struct {
-	KeyInfo        *KeyDetails `json:"key_info,omitempty" xml:"key_info"`
+	KeyInfo        *KeyDetails `json:"key_info,omitempty"`
 	HttpStatusCode int         `json:"-"`
 }
 

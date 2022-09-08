@@ -10,10 +10,10 @@ import (
 type ListClustersResponse struct {
 
 	// 集群列表总数。
-	ClusterTotal *int32 `json:"clusterTotal,omitempty" xml:"clusterTotal"`
+	ClusterTotal *int32 `json:"clusterTotal,omitempty"`
 
 	// 集群参数。
-	Clusters       *[]Cluster `json:"clusters,omitempty" xml:"clusters"`
+	Clusters       *[]Cluster `json:"clusters,omitempty"`
 	HttpStatusCode int        `json:"-"`
 }
 

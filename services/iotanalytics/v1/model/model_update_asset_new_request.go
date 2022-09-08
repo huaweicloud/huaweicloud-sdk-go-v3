@@ -10,9 +10,9 @@ import (
 type UpdateAssetNewRequest struct {
 
 	// 资产ID
-	AssetId string `json:"asset_id" xml:"asset_id"`
+	AssetId string `json:"asset_id"`
 
-	Body *AssetModRequest `json:"body,omitempty" xml:"body"`
+	Body *AssetModRequest `json:"body,omitempty"`
 }
 
 func (o UpdateAssetNewRequest) String() string {

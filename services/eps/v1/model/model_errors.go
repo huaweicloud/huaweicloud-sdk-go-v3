@@ -10,16 +10,16 @@ import (
 type Errors struct {
 
 	// 错误码
-	ErrorCode *string `json:"error_code,omitempty" xml:"error_code"`
+	ErrorCode *string `json:"error_code,omitempty"`
 
 	// 错误描述
-	ErrorMsg *string `json:"error_msg,omitempty" xml:"error_msg"`
+	ErrorMsg *string `json:"error_msg,omitempty"`
 
 	// ProjectID
-	ProjectId *string `json:"project_id,omitempty" xml:"project_id"`
+	ProjectId *string `json:"project_id,omitempty"`
 
 	// 资源类型
-	ResourceType *string `json:"resource_type,omitempty" xml:"resource_type"`
+	ResourceType *string `json:"resource_type,omitempty"`
 }
 
 func (o Errors) String() string {

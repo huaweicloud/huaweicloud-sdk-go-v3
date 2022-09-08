@@ -9,7 +9,7 @@ import (
 type BatchDeleteDevicesRequestBody struct {
 
 	// 删除设备ID列表，自动向下取整
-	Resources []int32 `json:"resources" xml:"resources"`
+	Resources []int32 `json:"resources"`
 }
 
 func (o BatchDeleteDevicesRequestBody) String() string {

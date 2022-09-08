@@ -10,9 +10,9 @@ import (
 type CreateAomMappingRulesRequest struct {
 
 	// 是否开启自动映射
-	IsBatch bool `json:"isBatch" xml:"isBatch"`
+	IsBatch bool `json:"isBatch"`
 
-	Body *AomMappingRequestInfo `json:"body,omitempty" xml:"body"`
+	Body *AomMappingRequestInfo `json:"body,omitempty"`
 }
 
 func (o CreateAomMappingRulesRequest) String() string {

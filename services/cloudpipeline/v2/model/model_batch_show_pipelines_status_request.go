@@ -10,10 +10,10 @@ import (
 type BatchShowPipelinesStatusRequest struct {
 
 	// 语言类型 中文:zh-cn 英文:en-us，默认en-us
-	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *string `json:"X-Language,omitempty"`
 
 	// 要获取状态的流水线ID，用逗号隔开
-	PipelineIds string `json:"pipeline_ids" xml:"pipeline_ids"`
+	PipelineIds string `json:"pipeline_ids"`
 }
 
 func (o BatchShowPipelinesStatusRequest) String() string {

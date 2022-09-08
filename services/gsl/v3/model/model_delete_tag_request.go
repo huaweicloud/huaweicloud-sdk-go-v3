@@ -10,7 +10,7 @@ import (
 type DeleteTagRequest struct {
 
 	// 标签标识
-	TagId int64 `json:"tag_id" xml:"tag_id"`
+	TagId int64 `json:"tag_id"`
 }
 
 func (o DeleteTagRequest) String() string {

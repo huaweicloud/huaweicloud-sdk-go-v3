@@ -8,7 +8,7 @@ import (
 
 // 修改裸金属服务器名称接口请求结构体
 type ChangeBaremetalNameBody struct {
-	Server *ChangeBaremetalNameServer `json:"server" xml:"server"`
+	Server *ChangeBaremetalNameServer `json:"server"`
 }
 
 func (o ChangeBaremetalNameBody) String() string {

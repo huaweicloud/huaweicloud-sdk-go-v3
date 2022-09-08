@@ -10,10 +10,10 @@ import (
 type UpdateReadAndWriteStrategyResponse struct {
 
 	// 操作是否成功。
-	Success *bool `json:"success,omitempty" xml:"success"`
+	Success *bool `json:"success,omitempty"`
 
 	// DDM实例ID。
-	InstanceId     *string `json:"instance_id,omitempty" xml:"instance_id"`
+	InstanceId     *string `json:"instance_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -10,7 +10,7 @@ import (
 type ListSecurityGroupRulesResponse struct {
 
 	// 安全组规则对象列表
-	SecurityGroupRules *[]SecurityGroupRule `json:"security_group_rules,omitempty" xml:"security_group_rules"`
+	SecurityGroupRules *[]SecurityGroupRule `json:"security_group_rules,omitempty"`
 	HttpStatusCode     int                  `json:"-"`
 }
 

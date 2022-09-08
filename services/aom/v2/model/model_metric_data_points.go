@@ -10,13 +10,13 @@ import (
 type MetricDataPoints struct {
 
 	// 统计方式。
-	Statistics *[]StatisticValue `json:"statistics,omitempty" xml:"statistics"`
+	Statistics *[]StatisticValue `json:"statistics,omitempty"`
 
 	// 时间戳。
-	Timestamp *int64 `json:"timestamp,omitempty" xml:"timestamp"`
+	Timestamp *int64 `json:"timestamp,omitempty"`
 
 	// 时间序列单位。
-	Unit *string `json:"unit,omitempty" xml:"unit"`
+	Unit *string `json:"unit,omitempty"`
 }
 
 func (o MetricDataPoints) String() string {

@@ -10,15 +10,15 @@ import (
 type CreateTagRequest struct {
 
 	// 铂金版实例ID，专业版实例为空值
-	IefInstanceId *string `json:"ief-instance-id,omitempty" xml:"ief-instance-id"`
+	IefInstanceId *string `json:"ief-instance-id,omitempty"`
 
 	// 资源ID
-	ResourceId string `json:"resource_id" xml:"resource_id"`
+	ResourceId string `json:"resource_id"`
 
 	// 资源类型
-	ResourceType string `json:"resource_type" xml:"resource_type"`
+	ResourceType string `json:"resource_type"`
 
-	Body *CreateTagRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreateTagRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateTagRequest) String() string {

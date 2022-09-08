@@ -13,12 +13,12 @@ import (
 type CreateSpaceAnalysisTaskRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 语言
-	XLanguage *CreateSpaceAnalysisTaskRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *CreateSpaceAnalysisTaskRequestXLanguage `json:"X-Language,omitempty"`
 
-	Body *CreateSpaceAnalysisTaskBody `json:"body,omitempty" xml:"body"`
+	Body *CreateSpaceAnalysisTaskBody `json:"body,omitempty"`
 }
 
 func (o CreateSpaceAnalysisTaskRequest) String() string {

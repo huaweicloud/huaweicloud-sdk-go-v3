@@ -10,7 +10,7 @@ import (
 type ShowIpGroupRequest struct {
 
 	// IP地址组ID。
-	IpgroupId string `json:"ipgroup_id" xml:"ipgroup_id"`
+	IpgroupId string `json:"ipgroup_id"`
 }
 
 func (o ShowIpGroupRequest) String() string {

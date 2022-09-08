@@ -13,13 +13,13 @@ import (
 type UpdateUserDetailReq struct {
 
 	// DDM实例帐号的基础权限，默认值为原DDM帐号权限。  取值为：CREATE、DROP、ALTER、INDEX、INSERT、DELETE、UPDATE、SELECT
-	BaseAuthority *[]UpdateUserDetailReqBaseAuthority `json:"base_authority,omitempty" xml:"base_authority"`
+	BaseAuthority *[]UpdateUserDetailReqBaseAuthority `json:"base_authority,omitempty"`
 
 	// DDM实例帐号的描述信息，长度不能超过256个字符。  默认值为空。
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// DDM实例帐号相关信息的集合。
-	Databases *[]UpdateUsersDatabases `json:"databases,omitempty" xml:"databases"`
+	Databases *[]UpdateUsersDatabases `json:"databases,omitempty"`
 }
 
 func (o UpdateUserDetailReq) String() string {

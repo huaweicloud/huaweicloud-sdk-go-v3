@@ -10,37 +10,37 @@ import (
 type ShowPipelineLastStatusV2Response struct {
 
 	// 流水线id
-	PipelineId *string `json:"pipeline_id,omitempty" xml:"pipeline_id"`
+	PipelineId *string `json:"pipeline_id,omitempty"`
 
 	// 流水线名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 执行状态
-	Status *string `json:"status,omitempty" xml:"status"`
+	Status *string `json:"status,omitempty"`
 
 	// 执行结果
-	Result *string `json:"result,omitempty" xml:"result"`
+	Result *string `json:"result,omitempty"`
 
 	// 执行人
-	Executor *string `json:"executor,omitempty" xml:"executor"`
+	Executor *string `json:"executor,omitempty"`
 
 	// 启动时间
-	StartTime *string `json:"start_time,omitempty" xml:"start_time"`
+	StartTime *string `json:"start_time,omitempty"`
 
 	// 结束时间
-	FinishTime *string `json:"finish_time,omitempty" xml:"finish_time"`
+	FinishTime *string `json:"finish_time,omitempty"`
 
 	// 运行详情链接
-	DetailUrl *string `json:"detail_url,omitempty" xml:"detail_url"`
+	DetailUrl *string `json:"detail_url,omitempty"`
 
 	// 编辑链接
-	ModifyUrl *string `json:"modify_url,omitempty" xml:"modify_url"`
+	ModifyUrl *string `json:"modify_url,omitempty"`
 
 	// 流水线执行序号
-	BuildId *string `json:"build_id,omitempty" xml:"build_id"`
+	BuildId *string `json:"build_id,omitempty"`
 
 	// 阶段信息
-	Stages         *[]PipelineStageResp `json:"stages,omitempty" xml:"stages"`
+	Stages         *[]PipelineStageResp `json:"stages,omitempty"`
 	HttpStatusCode int                  `json:"-"`
 }
 

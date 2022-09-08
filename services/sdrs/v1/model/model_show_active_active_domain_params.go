@@ -10,20 +10,20 @@ import (
 type ShowActiveActiveDomainParams struct {
 
 	// 双活域ID。
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
 	// 双活域名称。
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 双活域描述。
-	Description string `json:"description" xml:"description"`
+	Description string `json:"description"`
 
 	// 表示该双活域下的资源是否售罄。
-	SoldOut bool `json:"sold_out" xml:"sold_out"`
+	SoldOut bool `json:"sold_out"`
 
-	LocalReplicationCluster *ReplicationClusterParams `json:"local_replication_cluster" xml:"local_replication_cluster"`
+	LocalReplicationCluster *ReplicationClusterParams `json:"local_replication_cluster"`
 
-	RemoteReplicationCluster *ReplicationClusterParams `json:"remote_replication_cluster" xml:"remote_replication_cluster"`
+	RemoteReplicationCluster *ReplicationClusterParams `json:"remote_replication_cluster"`
 }
 
 func (o ShowActiveActiveDomainParams) String() string {

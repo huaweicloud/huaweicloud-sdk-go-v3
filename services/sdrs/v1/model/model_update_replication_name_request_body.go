@@ -8,7 +8,7 @@ import (
 
 // 更新复制对名称请求体
 type UpdateReplicationNameRequestBody struct {
-	Replication *UpdateReplicationNameRequestParams `json:"replication" xml:"replication"`
+	Replication *UpdateReplicationNameRequestParams `json:"replication"`
 }
 
 func (o UpdateReplicationNameRequestBody) String() string {

@@ -12,28 +12,28 @@ import (
 type ApiPolicyMockCreate struct {
 
 	// 返回结果
-	ResultContent *string `json:"result_content,omitempty" xml:"result_content"`
+	ResultContent *string `json:"result_content,omitempty"`
 
 	// mock后端自定义状态码： \"200\": \"OK\", \"201\": \"Created\", \"202\": \"Accepted\", \"203\": \"NonAuthoritativeInformation\", \"204\": \"NoContent\", \"205\": \"ResetContent\", \"206\": \"PartialContent\", \"300\": \"MultipleChoices\", \"301\": \"MovedPermanently\", \"302\": \"Found\", \"303\": \"SeeOther\", \"304\": \"NotModified\", \"305\": \"UseProxy\", \"306\": \"Unused\", \"307\": \"TemporaryRedirect\", \"400\": \"BadRequest\", \"401\": \"Unauthorized\", \"402\": \"PaymentRequired\", \"403\": \"Forbidden\", \"404\": \"NotFound\", \"405\": \"MethodNotAllowed\", \"406\": \"NotAcceptable\", \"407\": \"ProxyAuthenticationRequired\", \"408\": \"RequestTimeout\", \"409\": \"Conflict\", \"410\": \"Gone\", \"411\": \"LengthRequired\", \"412\": \"PreconditionFailed\", \"413\": \"RequestEntityTooLarge\", \"414\": \"RequestURITooLong\", \"415\": \"UnsupportedMediaType\", \"416\": \"RequestedRangeNotSatisfiable\", \"417\": \"ExpectationFailed\", \"450\": \"ParameterRequried\", \"451\": \"MethodConnectException\", \"500\": \"InternalServerError\", \"501\": \"NotImplemented\", \"502\": \"BadGateway\", \"503\": \"ServiceUnavailable\", \"504\": \"GatewayTimeout\", \"505\": \"HTTPVersionNotSupported\",
-	StatusCode *ApiPolicyMockCreateStatusCode `json:"status_code,omitempty" xml:"status_code"`
+	StatusCode *ApiPolicyMockCreateStatusCode `json:"status_code,omitempty"`
 
 	// mock后端自定义响应头header
-	Header *[]MockApiBaseInfoHeader `json:"header,omitempty" xml:"header"`
+	Header *[]MockApiBaseInfoHeader `json:"header,omitempty"`
 
 	// 关联的策略组合模式： - ALL：满足全部条件 - ANY：满足任一条件
-	EffectMode ApiPolicyMockCreateEffectMode `json:"effect_mode" xml:"effect_mode"`
+	EffectMode ApiPolicyMockCreateEffectMode `json:"effect_mode"`
 
 	// 策略后端名称。字符串由中文、英文字母、数字、下划线组成，且只能以中文或英文开头。
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 后端参数列表
-	BackendParams *[]BackendParamBase `json:"backend_params,omitempty" xml:"backend_params"`
+	BackendParams *[]BackendParamBase `json:"backend_params,omitempty"`
 
 	// 策略条件列表
-	Conditions []ApiConditionCreate `json:"conditions" xml:"conditions"`
+	Conditions []ApiConditionCreate `json:"conditions"`
 
 	// 后端自定义认证对象的ID
-	AuthorizerId *string `json:"authorizer_id,omitempty" xml:"authorizer_id"`
+	AuthorizerId *string `json:"authorizer_id,omitempty"`
 }
 
 func (o ApiPolicyMockCreate) String() string {

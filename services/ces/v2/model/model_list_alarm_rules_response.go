@@ -10,10 +10,10 @@ import (
 type ListAlarmRulesResponse struct {
 
 	// 告警规则列表
-	Alarms *[]ListAlarmResponseAlarms `json:"alarms,omitempty" xml:"alarms"`
+	Alarms *[]ListAlarmResponseAlarms `json:"alarms,omitempty"`
 
 	// 告警规则总数
-	Count          *int32 `json:"count,omitempty" xml:"count"`
+	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

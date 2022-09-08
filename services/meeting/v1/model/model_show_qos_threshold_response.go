@@ -8,15 +8,15 @@ import (
 
 // Response Object
 type ShowQosThresholdResponse struct {
-	Latency *ThresholdData `json:"latency,omitempty" xml:"latency"`
+	Latency *ThresholdData `json:"latency,omitempty"`
 
-	Jitter *ThresholdData `json:"jitter,omitempty" xml:"jitter"`
+	Jitter *ThresholdData `json:"jitter,omitempty"`
 
-	PacketLoss *PacketThresholdData `json:"packetLoss,omitempty" xml:"packetLoss"`
+	PacketLoss *PacketThresholdData `json:"packetLoss,omitempty"`
 
-	ClientCpuMax *CpuThresholdData `json:"clientCpuMax,omitempty" xml:"clientCpuMax"`
+	ClientCpuMax *CpuThresholdData `json:"clientCpuMax,omitempty"`
 
-	SystemCpuMax   *CpuThresholdData `json:"systemCpuMax,omitempty" xml:"systemCpuMax"`
+	SystemCpuMax   *CpuThresholdData `json:"systemCpuMax,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }
 

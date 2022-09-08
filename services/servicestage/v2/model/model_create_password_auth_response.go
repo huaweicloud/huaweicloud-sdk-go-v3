@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type CreatePasswordAuthResponse struct {
-	Authorization  *AuthorizationVo `json:"authorization,omitempty" xml:"authorization"`
+	Authorization  *AuthorizationVo `json:"authorization,omitempty"`
 	HttpStatusCode int              `json:"-"`
 }
 

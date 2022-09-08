@@ -13,28 +13,28 @@ import (
 type BackupInfo struct {
 
 	// 备份ID。
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
 	// 实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 备份名称。
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 备份描述。
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 只支持Microsoft SQL Server，局部备份的用户自建数据库名列表，当有此参数时以局部备份为准。
-	Databases *[]BackupDatabase `json:"databases,omitempty" xml:"databases"`
+	Databases *[]BackupDatabase `json:"databases,omitempty"`
 
 	// 备份开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
-	BeginTime string `json:"begin_time" xml:"begin_time"`
+	BeginTime string `json:"begin_time"`
 
 	// 备份状态，取值：  - BUILDING: 备份中。 - COMPLETED: 备份完成。 - FAILED：备份失败。 - DELETING：备份删除中。
-	Status BackupInfoStatus `json:"status" xml:"status"`
+	Status BackupInfoStatus `json:"status"`
 
 	// 备份类型，取值：  - “auto”: 自动全量备份 - “manual”: 手动全量备份 - “fragment”: 差异全量备份 - “incremental”: 自动增量备份
-	Type BackupInfoType `json:"type" xml:"type"`
+	Type BackupInfoType `json:"type"`
 }
 
 func (o BackupInfo) String() string {

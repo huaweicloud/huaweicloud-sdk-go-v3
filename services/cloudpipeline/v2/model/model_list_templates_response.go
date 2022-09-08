@@ -10,16 +10,16 @@ import (
 type ListTemplatesResponse struct {
 
 	// 总数
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 
 	// 页码数
-	PageNumber *int32 `json:"page_number,omitempty" xml:"page_number"`
+	PageNumber *int32 `json:"page_number,omitempty"`
 
 	// 每页显示数
-	PageSize *int32 `json:"page_size,omitempty" xml:"page_size"`
+	PageSize *int32 `json:"page_size,omitempty"`
 
 	// 模板数据,list类型数据
-	Content        *[]TemplateView `json:"content,omitempty" xml:"content"`
+	Content        *[]TemplateView `json:"content,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }
 

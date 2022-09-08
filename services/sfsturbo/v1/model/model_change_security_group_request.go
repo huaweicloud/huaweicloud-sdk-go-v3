@@ -10,12 +10,12 @@ import (
 type ChangeSecurityGroupRequest struct {
 
 	// MIME类型
-	ContentType string `json:"Content-Type" xml:"Content-Type"`
+	ContentType string `json:"Content-Type"`
 
 	// 文件系统ID
-	ShareId string `json:"share_id" xml:"share_id"`
+	ShareId string `json:"share_id"`
 
-	Body *ChangeSecurityGroupRequestBody `json:"body,omitempty" xml:"body"`
+	Body *ChangeSecurityGroupRequestBody `json:"body,omitempty"`
 }
 
 func (o ChangeSecurityGroupRequest) String() string {

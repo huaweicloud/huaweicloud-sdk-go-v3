@@ -10,10 +10,10 @@ import (
 type UpdateDbUserRequestBody struct {
 
 	// 数据库用户名称
-	DbUsername string `json:"db_username" xml:"db_username"`
+	DbUsername string `json:"db_username"`
 
 	// 数据库用户密码
-	DbUserPassword string `json:"db_user_password" xml:"db_user_password"`
+	DbUserPassword string `json:"db_user_password"`
 }
 
 func (o UpdateDbUserRequestBody) String() string {

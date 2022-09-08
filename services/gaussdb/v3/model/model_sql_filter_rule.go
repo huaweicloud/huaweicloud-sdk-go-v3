@@ -10,10 +10,10 @@ import (
 type SqlFilterRule struct {
 
 	// Sql限流类型。  取值范围： - SELECT - UPDATE - DELETE
-	SqlType string `json:"sql_type" xml:"sql_type"`
+	SqlType string `json:"sql_type"`
 
 	// SQL限流具体规则。
-	Patterns []SqlFilterRulePattern `json:"patterns" xml:"patterns"`
+	Patterns []SqlFilterRulePattern `json:"patterns"`
 }
 
 func (o SqlFilterRule) String() string {

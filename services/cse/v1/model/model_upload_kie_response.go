@@ -10,11 +10,11 @@ import (
 type UploadKieResponse struct {
 
 	// 导入成功的配置项列表。
-	Success *[]GetKieConfigs `json:"success,omitempty" xml:"success"`
+	Success *[]GetKieConfigs `json:"success,omitempty"`
 
 	// 导入失败的配置项及其错误列表。
-	Failure        *[]UploadKieRespFailure `json:"failure,omitempty" xml:"failure"`
-	HttpStatusCode int                     `json:"-"`
+	Failure        *[]DocFailedOfUpload `json:"failure,omitempty"`
+	HttpStatusCode int                  `json:"-"`
 }
 
 func (o UploadKieResponse) String() string {

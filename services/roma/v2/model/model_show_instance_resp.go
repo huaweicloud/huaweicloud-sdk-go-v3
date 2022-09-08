@@ -12,223 +12,223 @@ import (
 type ShowInstanceResp struct {
 
 	// 实例名称。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 描述信息。
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 引擎。
-	Engine *string `json:"engine,omitempty" xml:"engine"`
+	Engine *string `json:"engine,omitempty"`
 
 	// 版本。
-	EngineVersion *string `json:"engine_version,omitempty" xml:"engine_version"`
+	EngineVersion *string `json:"engine_version,omitempty"`
 
 	// 实例规格。
-	Specification *string `json:"specification,omitempty" xml:"specification"`
+	Specification *string `json:"specification,omitempty"`
 
 	// 消息存储空间，单位：GB。
-	StorageSpace *int32 `json:"storage_space,omitempty" xml:"storage_space"`
+	StorageSpace *int32 `json:"storage_space,omitempty"`
 
 	// 最大分区数。不同规格的ROMA Connect实例的最大分区数不相同。
-	PartitionNum *string `json:"partition_num,omitempty" xml:"partition_num"`
+	PartitionNum *string `json:"partition_num,omitempty"`
 
 	// 已使用的消息存储空间，单位：GB。
-	UsedStorageSpace *int32 `json:"used_storage_space,omitempty" xml:"used_storage_space"`
+	UsedStorageSpace *int32 `json:"used_storage_space,omitempty"`
 
 	// 实例连接IP地址。
-	ConnectAddress *string `json:"connect_address,omitempty" xml:"connect_address"`
+	ConnectAddress *string `json:"connect_address,omitempty"`
 
 	// 实例连接端口。
-	Port *int32 `json:"port,omitempty" xml:"port"`
+	Port *int32 `json:"port,omitempty"`
 
 	// 实例的状态。   - CREATING: 申请实例后，在实例状态进入运行中之前的状态。   - RUNNING: 实例正常运行状态。在这个状态的实例可以运行您的业务。
-	Status *string `json:"status,omitempty" xml:"status"`
+	Status *string `json:"status,omitempty"`
 
 	// 实例ID。
-	InstanceId *string `json:"instance_id,omitempty" xml:"instance_id"`
+	InstanceId *string `json:"instance_id,omitempty"`
 
 	// 资源规格标识。  - dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。  - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。  - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。  - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。
-	ResourceSpecCode *string `json:"resource_spec_code,omitempty" xml:"resource_spec_code"`
+	ResourceSpecCode *string `json:"resource_spec_code,omitempty"`
 
 	// 付费模式，1表示按需计费，0表示包周期计费。
-	ChargingMode *int32 `json:"charging_mode,omitempty" xml:"charging_mode"`
+	ChargingMode *int32 `json:"charging_mode,omitempty"`
 
 	// VPC ID。
-	VpcId *string `json:"vpc_id,omitempty" xml:"vpc_id"`
+	VpcId *string `json:"vpc_id,omitempty"`
 
 	// VPC的名称。
-	VpcName *string `json:"vpc_name,omitempty" xml:"vpc_name"`
+	VpcName *string `json:"vpc_name,omitempty"`
 
 	// 完成创建时间。  格式为时间戳，指从格林威治时间 1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。
-	CreatedAt *string `json:"created_at,omitempty" xml:"created_at"`
+	CreatedAt *string `json:"created_at,omitempty"`
 
 	// 用户ID。
-	UserId *string `json:"user_id,omitempty" xml:"user_id"`
+	UserId *string `json:"user_id,omitempty"`
 
 	// 用户名。
-	UserName *string `json:"user_name,omitempty" xml:"user_name"`
+	UserName *string `json:"user_name,omitempty"`
 
 	// 订单ID，只有在包周期计费时才会有order_id值，其他计费方式order_id值为空。
-	OrderId *string `json:"order_id,omitempty" xml:"order_id"`
+	OrderId *string `json:"order_id,omitempty"`
 
 	// 维护时间窗开始时间，格式为HH:mm:ss。
-	MaintainBegin *string `json:"maintain_begin,omitempty" xml:"maintain_begin"`
+	MaintainBegin *string `json:"maintain_begin,omitempty"`
 
 	// 维护时间窗结束时间，格式为HH:mm:ss。
-	MaintainEnd *string `json:"maintain_end,omitempty" xml:"maintain_end"`
+	MaintainEnd *string `json:"maintain_end,omitempty"`
 
 	// 实例是否开启公网访问功能。  - true：开启  - false：未开启
-	EnablePublicip *bool `json:"enable_publicip,omitempty" xml:"enable_publicip"`
+	EnablePublicip *bool `json:"enable_publicip,omitempty"`
 
 	// Kafka实例的KafkaManager连接地址。
-	ManagementConnectAddress *string `json:"management_connect_address,omitempty" xml:"management_connect_address"`
+	ManagementConnectAddress *string `json:"management_connect_address,omitempty"`
 
 	// 是否开启安全认证。 - true：开启 - false：未开启
-	SslEnable *bool `json:"ssl_enable,omitempty" xml:"ssl_enable"`
+	SslEnable *bool `json:"ssl_enable,omitempty"`
 
 	// 企业项目ID。
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 实例扩容时用于区分老实例与新实例。  - true：新创建的实例，允许磁盘动态扩容不需要重启。  - false：老实例
-	IsLogicalVolume *bool `json:"is_logical_volume,omitempty" xml:"is_logical_volume"`
+	IsLogicalVolume *bool `json:"is_logical_volume,omitempty"`
 
 	// 实例扩容磁盘次数，如果超过20次则无法扩容磁盘。
-	ExtendTimes *int32 `json:"extend_times,omitempty" xml:"extend_times"`
+	ExtendTimes *int32 `json:"extend_times,omitempty"`
 
 	// 是否打开kafka自动创建topic功能。  - true：开启  - false：关闭
-	EnableAutoTopic *bool `json:"enable_auto_topic,omitempty" xml:"enable_auto_topic"`
+	EnableAutoTopic *bool `json:"enable_auto_topic,omitempty"`
 
 	// 实例类型：集群，cluster。
-	Type *ShowInstanceRespType `json:"type,omitempty" xml:"type"`
+	Type *ShowInstanceRespType `json:"type,omitempty"`
 
 	// 产品标识。
-	ProductId *string `json:"product_id,omitempty" xml:"product_id"`
+	ProductId *string `json:"product_id,omitempty"`
 
 	// 安全组ID。
-	SecurityGroupId *string `json:"security_group_id,omitempty" xml:"security_group_id"`
+	SecurityGroupId *string `json:"security_group_id,omitempty"`
 
 	// 租户安全组名称。
-	SecurityGroupName *string `json:"security_group_name,omitempty" xml:"security_group_name"`
+	SecurityGroupName *string `json:"security_group_name,omitempty"`
 
 	// 子网ID。
-	SubnetId *string `json:"subnet_id,omitempty" xml:"subnet_id"`
+	SubnetId *string `json:"subnet_id,omitempty"`
 
 	// 子网名称。
-	SubnetName *string `json:"subnet_name,omitempty" xml:"subnet_name"`
+	SubnetName *string `json:"subnet_name,omitempty"`
 
 	// 子网网段。
-	SubnetCidr *string `json:"subnet_cidr,omitempty" xml:"subnet_cidr"`
+	SubnetCidr *string `json:"subnet_cidr,omitempty"`
 
 	// 实例节点所在的可用区，返回“可用区ID”。
-	AvailableZones *[]string `json:"available_zones,omitempty" xml:"available_zones"`
+	AvailableZones *[]string `json:"available_zones,omitempty"`
 
 	// 总共消息存储空间，单位：GB。
-	TotalStorageSpace *int32 `json:"total_storage_space,omitempty" xml:"total_storage_space"`
+	TotalStorageSpace *int32 `json:"total_storage_space,omitempty"`
 
 	// 实例公网连接IP地址。当实例开启了公网访问，实例才包含该参数。
-	PublicConnectAddress *string `json:"public_connect_address,omitempty" xml:"public_connect_address"`
+	PublicConnectAddress *string `json:"public_connect_address,omitempty"`
 
 	// 存储资源ID。
-	StorageResourceId *string `json:"storage_resource_id,omitempty" xml:"storage_resource_id"`
+	StorageResourceId *string `json:"storage_resource_id,omitempty"`
 
 	// IO规格。
-	StorageSpecCode *string `json:"storage_spec_code,omitempty" xml:"storage_spec_code"`
+	StorageSpecCode *string `json:"storage_spec_code,omitempty"`
 
 	// 服务类型。
-	ServiceType *string `json:"service_type,omitempty" xml:"service_type"`
+	ServiceType *string `json:"service_type,omitempty"`
 
 	// 存储类型。
-	StorageType *string `json:"storage_type,omitempty" xml:"storage_type"`
+	StorageType *string `json:"storage_type,omitempty"`
 
 	// 消息老化策略。
-	RetentionPolicy *ShowInstanceRespRetentionPolicy `json:"retention_policy,omitempty" xml:"retention_policy"`
+	RetentionPolicy *ShowInstanceRespRetentionPolicy `json:"retention_policy,omitempty"`
 
 	// Kafka公网开启状态。
-	KafkaPublicStatus *string `json:"kafka_public_status,omitempty" xml:"kafka_public_status"`
+	KafkaPublicStatus *string `json:"kafka_public_status,omitempty"`
 
 	// 公网带宽。
-	PublicBandwidth *int32 `json:"public_bandwidth,omitempty" xml:"public_bandwidth"`
+	PublicBandwidth *int32 `json:"public_bandwidth,omitempty"`
 
 	// 登录Kafka Manager的用户名。
-	KafkaManagerUser *string `json:"kafka_manager_user,omitempty" xml:"kafka_manager_user"`
+	KafkaManagerUser *string `json:"kafka_manager_user,omitempty"`
 
 	// 是否开启消息收集功能。
-	EnableLogCollection *bool `json:"enable_log_collection,omitempty" xml:"enable_log_collection"`
+	EnableLogCollection *bool `json:"enable_log_collection,omitempty"`
 
 	// 跨VPC访问信息。
-	CrossVpcInfo *string `json:"cross_vpc_info,omitempty" xml:"cross_vpc_info"`
+	CrossVpcInfo *string `json:"cross_vpc_info,omitempty"`
 
 	// 是否开启ipv6。
-	Ipv6Enable *bool `json:"ipv6_enable,omitempty" xml:"ipv6_enable"`
+	Ipv6Enable *bool `json:"ipv6_enable,omitempty"`
 
 	// IPv6的连接地址。
-	Ipv6ConnectAddresses *[]string `json:"ipv6_connect_addresses,omitempty" xml:"ipv6_connect_addresses"`
+	Ipv6ConnectAddresses *[]string `json:"ipv6_connect_addresses,omitempty"`
 
 	// 是否开启转储。
-	ConnectorEnable *bool `json:"connector_enable,omitempty" xml:"connector_enable"`
+	ConnectorEnable *bool `json:"connector_enable,omitempty"`
 
 	// 转储任务ID。
-	ConnectorId *string `json:"connector_id,omitempty" xml:"connector_id"`
+	ConnectorId *string `json:"connector_id,omitempty"`
 
 	// 是否开启MQS connector。
-	MqsConnectorEnable *bool `json:"mqs_connector_enable,omitempty" xml:"mqs_connector_enable"`
+	MqsConnectorEnable *bool `json:"mqs_connector_enable,omitempty"`
 
 	// MQS connector地址。
-	MqsConnectorAddress *string `json:"mqs_connector_address,omitempty" xml:"mqs_connector_address"`
+	MqsConnectorAddress *string `json:"mqs_connector_address,omitempty"`
 
 	// 是否开启插件功能。
-	PluginEnable *bool `json:"plugin_enable,omitempty" xml:"plugin_enable"`
+	PluginEnable *bool `json:"plugin_enable,omitempty"`
 
 	// 是否开启Kafka rest功能。
-	RestEnable *bool `json:"rest_enable,omitempty" xml:"rest_enable"`
+	RestEnable *bool `json:"rest_enable,omitempty"`
 
 	// Kafka rest地址。
-	RestConnectAddress *string `json:"rest_connect_address,omitempty" xml:"rest_connect_address"`
+	RestConnectAddress *string `json:"rest_connect_address,omitempty"`
 
 	// 是否开启消息查询功能。
-	MessageQueryInstEnable *bool `json:"message_query_inst_enable,omitempty" xml:"message_query_inst_enable"`
+	MessageQueryInstEnable *bool `json:"message_query_inst_enable,omitempty"`
 
 	// 是否开启VPC明文访问。
-	VpcClientPlain *bool `json:"vpc_client_plain,omitempty" xml:"vpc_client_plain"`
+	VpcClientPlain *bool `json:"vpc_client_plain,omitempty"`
 
 	// Kafka实例支持的特性功能。
-	SupportFeatures *string `json:"support_features,omitempty" xml:"support_features"`
+	SupportFeatures *string `json:"support_features,omitempty"`
 
 	// 是否开启消息轨迹功能。
-	TraceEnable *bool `json:"trace_enable,omitempty" xml:"trace_enable"`
+	TraceEnable *bool `json:"trace_enable,omitempty"`
 
 	// 租户侧连接地址。
-	PodConnectAddress *string `json:"pod_connect_address,omitempty" xml:"pod_connect_address"`
+	PodConnectAddress *string `json:"pod_connect_address,omitempty"`
 
 	// 是否开启磁盘加密。
-	DiskEncrypted *bool `json:"disk_encrypted,omitempty" xml:"disk_encrypted"`
+	DiskEncrypted *bool `json:"disk_encrypted,omitempty"`
 
 	// Kafka实例私有连接地址。
-	KafkaPrivateConnectAddress *string `json:"kafka_private_connect_address,omitempty" xml:"kafka_private_connect_address"`
+	KafkaPrivateConnectAddress *string `json:"kafka_private_connect_address,omitempty"`
 
 	// 云监控版本。
-	CesVersion *string `json:"ces_version,omitempty" xml:"ces_version"`
+	CesVersion *string `json:"ces_version,omitempty"`
 
 	// 节点数量。
-	NodeNum *int32 `json:"node_num,omitempty" xml:"node_num"`
+	NodeNum *int32 `json:"node_num,omitempty"`
 
 	// 公网连接地址。
-	PublicipAddress *string `json:"publicip_address,omitempty" xml:"publicip_address"`
+	PublicipAddress *string `json:"publicip_address,omitempty"`
 
 	// 监听信息。
-	Listeners *interface{} `json:"listeners,omitempty" xml:"listeners"`
+	Listeners *interface{} `json:"listeners,omitempty"`
 
 	// 是否开启公网访问。用于区分何时开启的公网访问。
-	PublicAccessEnabled *string `json:"public_access_enabled,omitempty" xml:"public_access_enabled"`
+	PublicAccessEnabled *string `json:"public_access_enabled,omitempty"`
 
 	// 公网访问带宽。
-	PublicBoundwidth *int32 `json:"public_boundwidth,omitempty" xml:"public_boundwidth"`
+	PublicBoundwidth *int32 `json:"public_boundwidth,omitempty"`
 
 	// 认证用户名。
-	AccessUser *string `json:"access_user,omitempty" xml:"access_user"`
+	AccessUser *string `json:"access_user,omitempty"`
 
 	// 是否开启代理。
-	AgentEnable *bool `json:"agent_enable,omitempty" xml:"agent_enable"`
+	AgentEnable *bool `json:"agent_enable,omitempty"`
 }
 
 func (o ShowInstanceResp) String() string {

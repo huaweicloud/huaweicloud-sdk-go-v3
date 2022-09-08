@@ -63,7 +63,7 @@ func (c *ImageClient) RunImageDescriptionInvoker(request *model.RunImageDescript
 	return &RunImageDescriptionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// RunImageMainObjectDetection 图像主体识别
+// RunImageMainObjectDetection 主体识别
 //
 // 检测图像中的主要内容，返回主要内容的坐标信息，这里的主要内容包括两方面：bounding_box和main_object_box
 //
@@ -79,7 +79,7 @@ func (c *ImageClient) RunImageMainObjectDetection(request *model.RunImageMainObj
 	}
 }
 
-// RunImageMainObjectDetectionInvoker 图像主体识别
+// RunImageMainObjectDetectionInvoker 主体识别
 func (c *ImageClient) RunImageMainObjectDetectionInvoker(request *model.RunImageMainObjectDetectionRequest) *RunImageMainObjectDetectionInvoker {
 	requestDef := GenReqDefForRunImageMainObjectDetection()
 	return &RunImageMainObjectDetectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

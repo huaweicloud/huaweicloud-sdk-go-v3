@@ -10,7 +10,7 @@ import (
 type UpdatePublicIpOption struct {
 
 	// vip对应的port的ID可为空。当为空的时候，代表解绑原有eip的关系。不为空时，代表绑定eip和vip。
-	PortId string `json:"port_id" xml:"port_id"`
+	PortId string `json:"port_id"`
 }
 
 func (o UpdatePublicIpOption) String() string {

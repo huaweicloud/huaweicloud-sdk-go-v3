@@ -8,7 +8,7 @@ import (
 
 //
 type UpdateDomainLoginPolicyRequestBody struct {
-	LoginPolicy *LoginPolicyOption `json:"login_policy" xml:"login_policy"`
+	LoginPolicy *LoginPolicyOption `json:"login_policy"`
 }
 
 func (o UpdateDomainLoginPolicyRequestBody) String() string {

@@ -9,13 +9,13 @@ import (
 type Attributes struct {
 
 	// cpu限制
-	CpuLimit *string `json:"cpu_limit,omitempty" xml:"cpu_limit"`
+	CpuLimit *string `json:"cpu_limit,omitempty"`
 
 	// 内存限制
-	MemoryLimitBytes *string `json:"memory_limit_bytes,omitempty" xml:"memory_limit_bytes"`
+	MemoryLimitBytes *string `json:"memory_limit_bytes,omitempty"`
 
 	// pvc规格
-	PvcQuantity *string `json:"pvc_quantity,omitempty" xml:"pvc_quantity"`
+	PvcQuantity *string `json:"pvc_quantity,omitempty"`
 }
 
 func (o Attributes) String() string {

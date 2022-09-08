@@ -13,19 +13,19 @@ import (
 type PostPreCheckResp struct {
 
 	// 任务id。
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 预检查id。
-	PrecheckId *string `json:"precheck_id,omitempty" xml:"precheck_id"`
+	PrecheckId *string `json:"precheck_id,omitempty"`
 
 	// 成功或失败的状态
-	Status *PostPreCheckRespStatus `json:"status,omitempty" xml:"status"`
+	Status *PostPreCheckRespStatus `json:"status,omitempty"`
 
 	// 错误码。
-	ErrorCode *string `json:"error_code,omitempty" xml:"error_code"`
+	ErrorCode *string `json:"error_code,omitempty"`
 
 	// 错误信息。
-	ErrorMsg *string `json:"error_msg,omitempty" xml:"error_msg"`
+	ErrorMsg *string `json:"error_msg,omitempty"`
 }
 
 func (o PostPreCheckResp) String() string {

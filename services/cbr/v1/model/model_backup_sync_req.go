@@ -9,7 +9,7 @@ import (
 type BackupSyncReq struct {
 
 	// 待同步备份副本列表
-	Sync []BackupSync `json:"sync" xml:"sync"`
+	Sync []BackupSync `json:"sync"`
 }
 
 func (o BackupSyncReq) String() string {

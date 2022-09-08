@@ -13,19 +13,19 @@ import (
 type ShowVocabularyResponse struct {
 
 	// 调用成功返回热词表ID，调用失败时无此字段。
-	VocabularyId *string `json:"vocabulary_id,omitempty" xml:"vocabulary_id"`
+	VocabularyId *string `json:"vocabulary_id,omitempty"`
 
 	// 调用成功返回热词表名，调用失败时无此字段。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 调用成功返回热词表描述，调用失败时无此字段。
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 调用成功返回热词表语言类型，调用失败时无此字段。
-	Language *ShowVocabularyResponseLanguage `json:"language,omitempty" xml:"language"`
+	Language *ShowVocabularyResponseLanguage `json:"language,omitempty"`
 
 	// 调用成功返回热词列表，调用失败时无此字段。
-	Contents       *[]string `json:"contents,omitempty" xml:"contents"`
+	Contents       *[]string `json:"contents,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }
 

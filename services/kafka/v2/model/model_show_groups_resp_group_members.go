@@ -9,16 +9,16 @@ import (
 type ShowGroupsRespGroupMembers struct {
 
 	// 消费组consumer地址。
-	Host *string `json:"host,omitempty" xml:"host"`
+	Host *string `json:"host,omitempty"`
 
 	// consumer分配到的分区信息。
-	Assignment *[]ShowGroupsRespGroupAssignment `json:"assignment,omitempty" xml:"assignment"`
+	Assignment *[]ShowGroupsRespGroupAssignment `json:"assignment,omitempty"`
 
 	// 消费组consumer的ID。
-	MemberId *string `json:"member_id,omitempty" xml:"member_id"`
+	MemberId *string `json:"member_id,omitempty"`
 
 	// 客户端ID。
-	ClientId *string `json:"client_id,omitempty" xml:"client_id"`
+	ClientId *string `json:"client_id,omitempty"`
 }
 
 func (o ShowGroupsRespGroupMembers) String() string {

@@ -9,16 +9,16 @@ import (
 type Column struct {
 
 	// 列名称。
-	ColumnName string `json:"column_name" xml:"column_name"`
+	ColumnName string `json:"column_name"`
 
 	// 列描述。
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 列类型。
-	Type string `json:"type" xml:"type"`
+	Type string `json:"type"`
 
 	// 是否分区列。
-	IsPartitionColumn *bool `json:"is_partition_column,omitempty" xml:"is_partition_column"`
+	IsPartitionColumn *bool `json:"is_partition_column,omitempty"`
 }
 
 func (o Column) String() string {

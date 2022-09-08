@@ -10,19 +10,19 @@ import (
 type CreateTempRequestBody struct {
 
 	// project_id
-	ProjectId int32 `json:"project_id" xml:"project_id"`
+	ProjectId int32 `json:"project_id"`
 
 	// temp_type
-	TempType int32 `json:"temp_type" xml:"temp_type"`
+	TempType int32 `json:"temp_type"`
 
 	// name
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// description
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// contents
-	Contents *[]interface{} `json:"contents,omitempty" xml:"contents"`
+	Contents *[]interface{} `json:"contents,omitempty"`
 }
 
 func (o CreateTempRequestBody) String() string {

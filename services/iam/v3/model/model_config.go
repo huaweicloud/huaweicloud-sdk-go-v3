@@ -8,7 +8,7 @@ import (
 
 //
 type Config struct {
-	SecurityCompliance *SecurityCompliance `json:"security_compliance" xml:"security_compliance"`
+	SecurityCompliance *SecurityCompliance `json:"security_compliance"`
 }
 
 func (o Config) String() string {

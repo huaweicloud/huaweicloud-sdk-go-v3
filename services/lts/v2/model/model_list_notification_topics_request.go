@@ -10,10 +10,10 @@ import (
 type ListNotificationTopicsRequest struct {
 
 	// 查询游标，初始传入0，后续从上一次的返回值中获取
-	Offset int32 `json:"offset" xml:"offset"`
+	Offset int32 `json:"offset"`
 
 	// 每页数据量，最大值为100
-	Limit int32 `json:"limit" xml:"limit"`
+	Limit int32 `json:"limit"`
 }
 
 func (o ListNotificationTopicsRequest) String() string {

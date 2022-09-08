@@ -10,7 +10,7 @@ import (
 type CreateLogGroupResponse struct {
 
 	// 创建的日志组的Id。
-	LogGroupId     *string `json:"log_group_id,omitempty" xml:"log_group_id"`
+	LogGroupId     *string `json:"log_group_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

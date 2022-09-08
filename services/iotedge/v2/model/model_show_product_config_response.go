@@ -10,16 +10,16 @@ import (
 type ShowProductConfigResponse struct {
 
 	// 服务id
-	ServiceId *string `json:"service_id,omitempty" xml:"service_id"`
+	ServiceId *string `json:"service_id,omitempty"`
 
 	// 服务类型
-	ServiceType *string `json:"service_type,omitempty" xml:"service_type"`
+	ServiceType *string `json:"service_type,omitempty"`
 
 	// 描述
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 属性
-	Properties     *[]interface{} `json:"properties,omitempty" xml:"properties"`
+	Properties     *[]interface{} `json:"properties,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }
 

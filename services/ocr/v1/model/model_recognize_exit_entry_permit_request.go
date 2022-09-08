@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RecognizeExitEntryPermitRequest struct {
-	Body *ExitEntryPermitRequestBody `json:"body,omitempty" xml:"body"`
+	Body *ExitEntryPermitRequestBody `json:"body,omitempty"`
 }
 
 func (o RecognizeExitEntryPermitRequest) String() string {

@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListRecordSetsResponse struct {
-	Links *PageLink `json:"links,omitempty" xml:"links"`
+	Links *PageLink `json:"links,omitempty"`
 
-	Recordsets *[]ListRecordSetsWithTags `json:"recordsets,omitempty" xml:"recordsets"`
+	Recordsets *[]ListRecordSetsWithTags `json:"recordsets,omitempty"`
 
-	Metadata       *Metedata `json:"metadata,omitempty" xml:"metadata"`
+	Metadata       *Metedata `json:"metadata,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }
 

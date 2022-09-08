@@ -12,16 +12,16 @@ import (
 type ExtensionAuthorization struct {
 
 	// 插件版本
-	ExtensionVersion string `json:"extension_version" xml:"extension_version"`
+	ExtensionVersion string `json:"extension_version"`
 
 	// 插件标识(发布者.插件名)
-	Identifier string `json:"identifier" xml:"identifier"`
+	Identifier string `json:"identifier"`
 
 	// CloudIDE实例ID
-	InstanceId *string `json:"instance_id,omitempty" xml:"instance_id"`
+	InstanceId *string `json:"instance_id,omitempty"`
 
 	// 插件状态。 - AGREE 同意 - REJECT 不同意 - UNKNOWN 未知（下次重新询问）
-	Status ExtensionAuthorizationStatus `json:"status" xml:"status"`
+	Status ExtensionAuthorizationStatus `json:"status"`
 }
 
 func (o ExtensionAuthorization) String() string {

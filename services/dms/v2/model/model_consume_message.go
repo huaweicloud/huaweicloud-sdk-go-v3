@@ -7,10 +7,10 @@ import (
 )
 
 type ConsumeMessage struct {
-	Message *ConsumeMessageMessage `json:"message,omitempty" xml:"message"`
+	Message *ConsumeMessageMessage `json:"message,omitempty"`
 
 	// 消息handler。
-	Handler *string `json:"handler,omitempty" xml:"handler"`
+	Handler *string `json:"handler,omitempty"`
 }
 
 func (o ConsumeMessage) String() string {

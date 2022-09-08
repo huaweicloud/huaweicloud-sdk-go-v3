@@ -10,18 +10,18 @@ import (
 type DocBotAnswers struct {
 
 	// 答案。
-	Answer string `json:"answer" xml:"answer"`
+	Answer string `json:"answer"`
 
 	// 置信度。
-	Score float64 `json:"score" xml:"score"`
+	Score float64 `json:"score"`
 
 	// 问题。
-	Question string `json:"question" xml:"question"`
+	Question string `json:"question"`
 
-	AnswerDetail *DocQueryAnswerDetail `json:"answer_detail,omitempty" xml:"answer_detail"`
+	AnswerDetail *DocQueryAnswerDetail `json:"answer_detail,omitempty"`
 
 	// 候选答案列表
-	Details *[]DocQueryAnswerDetail `json:"details,omitempty" xml:"details"`
+	Details *[]DocQueryAnswerDetail `json:"details,omitempty"`
 }
 
 func (o DocBotAnswers) String() string {

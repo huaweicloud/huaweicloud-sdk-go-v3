@@ -9,10 +9,10 @@ import (
 // Request Object
 type AddRepoMembersRequest struct {
 
-	// 仓库uuid
-	RepositoryUuid string `json:"repository_uuid" xml:"repository_uuid"`
+	// 仓库uuid(由CreateRepository接口返回)
+	RepositoryUuid string `json:"repository_uuid"`
 
-	Body *CreateRepoMemberRequest `json:"body,omitempty" xml:"body"`
+	Body *CreateRepoMemberRequest `json:"body,omitempty"`
 }
 
 func (o AddRepoMembersRequest) String() string {

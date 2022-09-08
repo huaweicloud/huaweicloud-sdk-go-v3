@@ -10,7 +10,7 @@ import (
 type RunQueryInstanceRequest struct {
 
 	// 实例名称。
-	InstanceName string `json:"instance_name" xml:"instance_name"`
+	InstanceName string `json:"instance_name"`
 }
 
 func (o RunQueryInstanceRequest) String() string {

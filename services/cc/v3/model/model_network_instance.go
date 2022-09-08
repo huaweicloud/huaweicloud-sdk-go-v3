@@ -12,46 +12,46 @@ import (
 type NetworkInstance struct {
 
 	// 网络实例的ID。
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 网络实例的名字。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 网络实例的描述。
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 帐号ID。
-	DomainId *string `json:"domain_id,omitempty" xml:"domain_id"`
+	DomainId *string `json:"domain_id,omitempty"`
 
 	// 网络实例的状态。 - ACTIVE：处理成功。 - PENDING：处理中。 - ERROR：处理失败。
-	Status *NetworkInstanceStatus `json:"status,omitempty" xml:"status"`
+	Status *NetworkInstanceStatus `json:"status,omitempty"`
 
 	// 网络实例的创建时间。 UTC时间格式，yyyy-MM-ddTHH:mm:ss
-	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty" xml:"created_at"`
+	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
 
 	// 网络实例的更新时间。 UTC时间格式，yyyy-MM-ddTHH:mm:ss
-	UpdatedAt *sdktime.SdkTime `json:"updated_at,omitempty" xml:"updated_at"`
+	UpdatedAt *sdktime.SdkTime `json:"updated_at,omitempty"`
 
 	// 网络实例的类型。 - VPC：虚拟私有云。 - VGW：虚拟网关。
-	Type *NetworkInstanceType `json:"type,omitempty" xml:"type"`
+	Type *NetworkInstanceType `json:"type,omitempty"`
 
 	// 云连接实例ID。
-	CloudConnectionId *string `json:"cloud_connection_id,omitempty" xml:"cloud_connection_id"`
+	CloudConnectionId *string `json:"cloud_connection_id,omitempty"`
 
 	// 网络实例的ID。
-	InstanceId *string `json:"instance_id,omitempty" xml:"instance_id"`
+	InstanceId *string `json:"instance_id,omitempty"`
 
 	// 网络实例所属账户ID。
-	InstanceDomainId *string `json:"instance_domain_id,omitempty" xml:"instance_domain_id"`
+	InstanceDomainId *string `json:"instance_domain_id,omitempty"`
 
 	// 网络实例所在Region的ID。
-	RegionId *string `json:"region_id,omitempty" xml:"region_id"`
+	RegionId *string `json:"region_id,omitempty"`
 
 	// 网络实例所在租户的项目ID。
-	ProjectId *string `json:"project_id,omitempty" xml:"project_id"`
+	ProjectId *string `json:"project_id,omitempty"`
 
 	// 网络实例发布的网段路由列表。
-	Cidrs *[]string `json:"cidrs,omitempty" xml:"cidrs"`
+	Cidrs *[]string `json:"cidrs,omitempty"`
 }
 
 func (o NetworkInstance) String() string {

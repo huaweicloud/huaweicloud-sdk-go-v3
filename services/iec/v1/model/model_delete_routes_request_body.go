@@ -10,7 +10,7 @@ import (
 type DeleteRoutesRequestBody struct {
 
 	// 待删除的路由信息
-	Routes []DeleteRouteOption `json:"routes" xml:"routes"`
+	Routes []DeleteRouteOption `json:"routes"`
 }
 
 func (o DeleteRoutesRequestBody) String() string {

@@ -10,9 +10,9 @@ import (
 type CreateVpcChannelV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
-	Body *VpcCreate `json:"body,omitempty" xml:"body"`
+	Body *VpcCreate `json:"body,omitempty"`
 }
 
 func (o CreateVpcChannelV2Request) String() string {

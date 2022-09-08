@@ -10,13 +10,13 @@ import (
 type AddApplyJoinProjectForAgcRequest struct {
 
 	// 租户id
-	DomainId string `json:"Domain-Id" xml:"Domain-Id"`
+	DomainId string `json:"Domain-Id"`
 
 	// 用户id
-	UserId string `json:"User-Id" xml:"User-Id"`
+	UserId string `json:"User-Id"`
 
 	// devcloud项目的32位id
-	ProjectId string `json:"project_id" xml:"project_id"`
+	ProjectId string `json:"project_id"`
 }
 
 func (o AddApplyJoinProjectForAgcRequest) String() string {

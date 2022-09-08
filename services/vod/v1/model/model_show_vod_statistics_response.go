@@ -10,13 +10,13 @@ import (
 type ShowVodStatisticsResponse struct {
 
 	// 统计起始时间。
-	StartTime *string `json:"start_time,omitempty" xml:"start_time"`
+	StartTime *string `json:"start_time,omitempty"`
 
 	// 统计间隔。
-	Interval *int32 `json:"interval,omitempty" xml:"interval"`
+	Interval *int32 `json:"interval,omitempty"`
 
 	// 采样数据数组。从start_time开始，每个间隔对应一个采样数据。
-	SampleData     *[]VodSampleData `json:"sample_data,omitempty" xml:"sample_data"`
+	SampleData     *[]VodSampleData `json:"sample_data,omitempty"`
 	HttpStatusCode int              `json:"-"`
 }
 

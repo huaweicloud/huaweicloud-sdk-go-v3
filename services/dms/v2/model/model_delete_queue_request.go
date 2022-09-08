@@ -10,7 +10,7 @@ import (
 type DeleteQueueRequest struct {
 
 	// 待删除的队列ID
-	QueueId string `json:"queue_id" xml:"queue_id"`
+	QueueId string `json:"queue_id"`
 }
 
 func (o DeleteQueueRequest) String() string {

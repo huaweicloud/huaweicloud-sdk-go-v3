@@ -10,48 +10,48 @@ import (
 type PublicIp struct {
 
 	// 弹性公网IP唯一标识。
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 弹性公网IP的状态。
-	Status *string `json:"status,omitempty" xml:"status"`
+	Status *string `json:"status,omitempty"`
 
 	// 端口的ID。
-	PortId *string `json:"port_id,omitempty" xml:"port_id"`
+	PortId *string `json:"port_id,omitempty"`
 
 	// 弹性公网IP的地址。
-	PublicIpAddress *string `json:"public_ip_address,omitempty" xml:"public_ip_address"`
+	PublicIpAddress *string `json:"public_ip_address,omitempty"`
 
 	// 绑定弹性公网IP的私有IP地址。
-	PrivateIpAddress *string `json:"private_ip_address,omitempty" xml:"private_ip_address"`
+	PrivateIpAddress *string `json:"private_ip_address,omitempty"`
 
 	// 创建时间。
-	CreateTime *string `json:"create_time,omitempty" xml:"create_time"`
+	CreateTime *string `json:"create_time,omitempty"`
 
 	// 带宽的ID。
-	BandwidthId *string `json:"bandwidth_id,omitempty" xml:"bandwidth_id"`
+	BandwidthId *string `json:"bandwidth_id,omitempty"`
 
 	// 带宽的名称。
-	BandwidthName *string `json:"bandwidth_name,omitempty" xml:"bandwidth_name"`
+	BandwidthName *string `json:"bandwidth_name,omitempty"`
 
 	// 带宽的类型。
-	BandwidthShareType *string `json:"bandwidth_share_type,omitempty" xml:"bandwidth_share_type"`
+	BandwidthShareType *string `json:"bandwidth_share_type,omitempty"`
 
 	// 带宽的大小。
-	BandwidthSize *int32 `json:"bandwidth_size,omitempty" xml:"bandwidth_size"`
+	BandwidthSize *int32 `json:"bandwidth_size,omitempty"`
 
 	// IP版本的信息。
-	IpVersion *int32 `json:"ip_version,omitempty" xml:"ip_version"`
+	IpVersion *int32 `json:"ip_version,omitempty"`
 
 	// 子网所属的站点ID。
-	SiteId *string `json:"site_id,omitempty" xml:"site_id"`
+	SiteId *string `json:"site_id,omitempty"`
 
 	// 子网所属的站点信息。
-	SiteInfo *string `json:"site_info,omitempty" xml:"site_info"`
+	SiteInfo *string `json:"site_info,omitempty"`
 
-	Operator *Operator `json:"operator,omitempty" xml:"operator"`
+	Operator *Operator `json:"operator,omitempty"`
 
 	// 弹性公网IP的类型。
-	Type *string `json:"type,omitempty" xml:"type"`
+	Type *string `json:"type,omitempty"`
 }
 
 func (o PublicIp) String() string {

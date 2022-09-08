@@ -10,10 +10,10 @@ import (
 type ListGeoipRuleResponse struct {
 
 	// 该策略下地理位置控制规则数量
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 
 	// 地理位置控制规则数组
-	Items          *[]GeOIpItem `json:"items,omitempty" xml:"items"`
+	Items          *[]GeOIpItem `json:"items,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }
 

@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RunFileTranslationRequest struct {
-	Body *FileTranslationReq `json:"body,omitempty" xml:"body"`
+	Body *FileTranslationReq `json:"body,omitempty"`
 }
 
 func (o RunFileTranslationRequest) String() string {

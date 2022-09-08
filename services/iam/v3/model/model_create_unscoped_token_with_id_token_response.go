@@ -8,9 +8,9 @@ import (
 
 // Response Object
 type CreateUnscopedTokenWithIdTokenResponse struct {
-	Token *UnscopedTokenInfo `json:"token,omitempty" xml:"token"`
+	Token *UnscopedTokenInfo `json:"token,omitempty"`
 
-	XSubjectToken  *string `json:"X-Subject-Token,omitempty" xml:"X-Subject-Token"`
+	XSubjectToken  *string `json:"X-Subject-Token,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

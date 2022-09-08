@@ -10,13 +10,13 @@ import (
 type TaskBotAnswers struct {
 
 	// 答案。
-	Answer string `json:"answer" xml:"answer"`
+	Answer string `json:"answer"`
 
 	// 技能ID。
-	SkillId string `json:"skill_id" xml:"skill_id"`
+	SkillId string `json:"skill_id"`
 
 	// 技能回复信息。
-	SkillResponses []SkillResponse `json:"skill_responses" xml:"skill_responses"`
+	SkillResponses []SkillResponse `json:"skill_responses"`
 }
 
 func (o TaskBotAnswers) String() string {

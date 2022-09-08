@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ExportDlqMessageResponse struct {
-	Body           *[]Message `json:"body,omitempty" xml:"body"`
+	Body           *[]Message `json:"body,omitempty"`
 	HttpStatusCode int        `json:"-"`
 }
 

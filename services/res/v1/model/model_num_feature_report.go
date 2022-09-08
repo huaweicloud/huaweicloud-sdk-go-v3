@@ -10,25 +10,25 @@ import (
 type NumFeatureReport struct {
 
 	// 平均值。
-	Avg *float64 `json:"avg,omitempty" xml:"avg"`
+	Avg *float64 `json:"avg,omitempty"`
 
 	// 最小值。
-	Min *float64 `json:"min,omitempty" xml:"min"`
+	Min *float64 `json:"min,omitempty"`
 
 	// 最大值。
-	Max *float64 `json:"max,omitempty" xml:"max"`
+	Max *float64 `json:"max,omitempty"`
 
 	// 中位数。
-	Median *float64 `json:"median,omitempty" xml:"median"`
+	Median *float64 `json:"median,omitempty"`
 
 	// 百分位统计。
-	PercentsAgg *string `json:"percents_agg,omitempty" xml:"percents_agg"`
+	PercentsAgg *string `json:"percents_agg,omitempty"`
 
 	// 特征名。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 特征类型。
-	DataType *string `json:"data_type,omitempty" xml:"data_type"`
+	DataType *string `json:"data_type,omitempty"`
 }
 
 func (o NumFeatureReport) String() string {

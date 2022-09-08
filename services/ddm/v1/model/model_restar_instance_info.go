@@ -13,7 +13,7 @@ import (
 type RestarInstanceInfo struct {
 
 	// 重启的类型，soft或者hard。 - soft表示软重启（只重启进程）。 - hard表示强制重启（重启虚拟机）。
-	Type *RestarInstanceInfoType `json:"type,omitempty" xml:"type"`
+	Type *RestarInstanceInfoType `json:"type,omitempty"`
 }
 
 func (o RestarInstanceInfo) String() string {

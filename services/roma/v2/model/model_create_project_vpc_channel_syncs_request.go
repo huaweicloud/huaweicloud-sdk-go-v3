@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateProjectVpcChannelSyncsRequest struct {
-	Body *ProjectVpcSync `json:"body,omitempty" xml:"body"`
+	Body *ProjectVpcSync `json:"body,omitempty"`
 }
 
 func (o CreateProjectVpcChannelSyncsRequest) String() string {

@@ -13,27 +13,27 @@ import (
 type SubJob struct {
 
 	// 子job的状态。SUCCESS：成功。RUNNING：运行中。FAIL：失败。INIT：正在初始化。
-	Status SubJobStatus `json:"status" xml:"status"`
+	Status SubJobStatus `json:"status"`
 
-	Entities *SubJobEntities `json:"entities" xml:"entities"`
+	Entities *SubJobEntities `json:"entities"`
 
 	// 子job的ID。
-	JobId string `json:"job_id" xml:"job_id"`
+	JobId string `json:"job_id"`
 
 	// 子job的类型。createVolume：创建单个云硬盘。batchCreateVolume：批量创建云硬盘。deleteVolume：删除单个云硬盘。extendVolume：扩容云硬盘。bulkDeleteVolume：批量删除云硬盘。deleteSingleVolume：批量删除时逐个删除单个云硬盘。retypeVolume：对云硬盘做硬盘类型变更。
-	JobType string `json:"job_type" xml:"job_type"`
+	JobType string `json:"job_type"`
 
 	// 开始时间。
-	BeginTime string `json:"begin_time" xml:"begin_time"`
+	BeginTime string `json:"begin_time"`
 
 	// 结束时间。
-	EndTime string `json:"end_time" xml:"end_time"`
+	EndTime string `json:"end_time"`
 
 	// 子job执行失败时的错误码。
-	ErrorCode string `json:"error_code" xml:"error_code"`
+	ErrorCode string `json:"error_code"`
 
 	// 子job执行失败时的错误原因。
-	FailReason string `json:"fail_reason" xml:"fail_reason"`
+	FailReason string `json:"fail_reason"`
 }
 
 func (o SubJob) String() string {

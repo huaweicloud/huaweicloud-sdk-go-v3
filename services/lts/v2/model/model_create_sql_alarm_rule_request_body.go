@@ -12,31 +12,31 @@ import (
 type CreateSqlAlarmRuleRequestBody struct {
 
 	// SQL告警名称
-	SqlAlarmRuleName string `json:"sql_alarm_rule_name" xml:"sql_alarm_rule_name"`
+	SqlAlarmRuleName string `json:"sql_alarm_rule_name"`
 
 	// SQL告警信息描述
-	SqlAlarmRuleDescription *string `json:"sql_alarm_rule_description,omitempty" xml:"sql_alarm_rule_description"`
+	SqlAlarmRuleDescription *string `json:"sql_alarm_rule_description,omitempty"`
 
 	// SQL详细信息
-	SqlRequests []SqlRequest `json:"sql_requests" xml:"sql_requests"`
+	SqlRequests []SqlRequest `json:"sql_requests"`
 
 	// 告警统计周期
-	Frequency *Frequency `json:"frequency" xml:"frequency"`
+	Frequency *Frequency `json:"frequency"`
 
 	// 条件表达式
-	ConditionExpression string `json:"condition_expression" xml:"condition_expression"`
+	ConditionExpression string `json:"condition_expression"`
 
 	// 告警级别
-	SqlAlarmLevel CreateSqlAlarmRuleRequestBodySqlAlarmLevel `json:"sql_alarm_level" xml:"sql_alarm_level"`
+	SqlAlarmLevel CreateSqlAlarmRuleRequestBodySqlAlarmLevel `json:"sql_alarm_level"`
 
 	// 是否发送
-	SqlAlarmSend bool `json:"sql_alarm_send" xml:"sql_alarm_send"`
+	SqlAlarmSend bool `json:"sql_alarm_send"`
 
 	// domainId
-	DomainId string `json:"domain_id" xml:"domain_id"`
+	DomainId string `json:"domain_id"`
 
 	// 通知主题
-	NotificationSaveRule *NotificationSaveRule `json:"notification_save_rule,omitempty" xml:"notification_save_rule"`
+	NotificationSaveRule *NotificationSaveRule `json:"notification_save_rule,omitempty"`
 }
 
 func (o CreateSqlAlarmRuleRequestBody) String() string {

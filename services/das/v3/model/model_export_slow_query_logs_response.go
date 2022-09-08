@@ -10,10 +10,10 @@ import (
 type ExportSlowQueryLogsResponse struct {
 
 	// 慢SQL集合。当集合为空时，说明慢SQL已全部导出。
-	SlowLogs *[]SlowLog `json:"slow_logs,omitempty" xml:"slow_logs"`
+	SlowLogs *[]SlowLog `json:"slow_logs,omitempty"`
 
 	// 获取下一页所需的标识符。marker仅在3分钟内有效。
-	NextMarker     *string `json:"next_marker,omitempty" xml:"next_marker"`
+	NextMarker     *string `json:"next_marker,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

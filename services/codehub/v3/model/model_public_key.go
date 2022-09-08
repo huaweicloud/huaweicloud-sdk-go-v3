@@ -9,13 +9,13 @@ import (
 type PublicKey struct {
 
 	// 密钥id
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
 	// 密钥
-	Key string `json:"key" xml:"key"`
+	Key string `json:"key"`
 
 	// 密钥名称
-	Title string `json:"title" xml:"title"`
+	Title string `json:"title"`
 }
 
 func (o PublicKey) String() string {

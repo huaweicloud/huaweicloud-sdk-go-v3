@@ -10,13 +10,13 @@ import (
 type StartFailoverResponse struct {
 
 	// 实例Id
-	InstanceId *string `json:"instanceId,omitempty" xml:"instanceId"`
+	InstanceId *string `json:"instanceId,omitempty"`
 
 	// 节点Id
-	NodeId *string `json:"nodeId,omitempty" xml:"nodeId"`
+	NodeId *string `json:"nodeId,omitempty"`
 
 	// 任务Id
-	WorkflowId     *string `json:"workflowId,omitempty" xml:"workflowId"`
+	WorkflowId     *string `json:"workflowId,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

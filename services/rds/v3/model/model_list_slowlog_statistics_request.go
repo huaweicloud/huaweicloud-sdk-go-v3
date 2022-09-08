@@ -13,28 +13,28 @@ import (
 type ListSlowlogStatisticsRequest struct {
 
 	// 语言
-	XLanguage *ListSlowlogStatisticsRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *ListSlowlogStatisticsRequestXLanguage `json:"X-Language,omitempty"`
 
 	// 实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 当前页号
-	CurPage int32 `json:"cur_page" xml:"cur_page"`
+	CurPage int32 `json:"cur_page"`
 
 	// 每页多少条记录，取值范围0~100
-	PerPage int32 `json:"per_page" xml:"per_page"`
+	PerPage int32 `json:"per_page"`
 
 	// 开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
-	StartDate string `json:"start_date" xml:"start_date"`
+	StartDate string `json:"start_date"`
 
 	// 结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
-	EndDate string `json:"end_date" xml:"end_date"`
+	EndDate string `json:"end_date"`
 
 	// 语句类型，ALL表示查询所有语句类型，也可指定日志类型 - INSERT - UPDATE - SELECT - DELETE - CREATE - ALL
-	Type ListSlowlogStatisticsRequestType `json:"type" xml:"type"`
+	Type ListSlowlogStatisticsRequestType `json:"type"`
 
 	// 取值范围：\"executeTime\",表示按执行时间降序排序，不传或者传其他表示按执行次数降序排序
-	Sort *string `json:"sort,omitempty" xml:"sort"`
+	Sort *string `json:"sort,omitempty"`
 }
 
 func (o ListSlowlogStatisticsRequest) String() string {

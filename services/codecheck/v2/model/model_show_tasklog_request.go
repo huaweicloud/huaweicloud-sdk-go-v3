@@ -10,13 +10,13 @@ import (
 type ShowTasklogRequest struct {
 
 	// 项目ID
-	ProjectId string `json:"project_id" xml:"project_id"`
+	ProjectId string `json:"project_id"`
 
 	// 任务ID
-	TaskId string `json:"task_id" xml:"task_id"`
+	TaskId string `json:"task_id"`
 
 	// 任务单次的执行ID
-	ExecuteId *string `json:"execute_id,omitempty" xml:"execute_id"`
+	ExecuteId *string `json:"execute_id,omitempty"`
 }
 
 func (o ShowTasklogRequest) String() string {

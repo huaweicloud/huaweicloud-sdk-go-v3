@@ -8,7 +8,7 @@ import (
 
 // 重启裸金属服务器接口请求结构体
 type RebootBody struct {
-	Reboot *ServersInfoType `json:"reboot" xml:"reboot"`
+	Reboot *ServersInfoType `json:"reboot"`
 }
 
 func (o RebootBody) String() string {

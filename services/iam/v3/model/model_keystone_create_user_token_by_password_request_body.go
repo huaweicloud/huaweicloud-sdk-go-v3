@@ -8,7 +8,7 @@ import (
 
 //
 type KeystoneCreateUserTokenByPasswordRequestBody struct {
-	Auth *PwdAuth `json:"auth" xml:"auth"`
+	Auth *PwdAuth `json:"auth"`
 }
 
 func (o KeystoneCreateUserTokenByPasswordRequestBody) String() string {

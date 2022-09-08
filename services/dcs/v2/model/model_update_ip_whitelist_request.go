@@ -10,9 +10,9 @@ import (
 type UpdateIpWhitelistRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
-	Body *ModifyIpWhitelistBody `json:"body,omitempty" xml:"body"`
+	Body *ModifyIpWhitelistBody `json:"body,omitempty"`
 }
 
 func (o UpdateIpWhitelistRequest) String() string {

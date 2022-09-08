@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ValidateSignatureRequest struct {
-	Body *VerifyRequestBody `json:"body,omitempty" xml:"body"`
+	Body *VerifyRequestBody `json:"body,omitempty"`
 }
 
 func (o ValidateSignatureRequest) String() string {

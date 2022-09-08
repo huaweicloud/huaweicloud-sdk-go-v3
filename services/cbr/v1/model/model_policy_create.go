@@ -12,17 +12,17 @@ import (
 type PolicyCreate struct {
 
 	// 是否启用策略
-	Enabled *bool `json:"enabled,omitempty" xml:"enabled"`
+	Enabled *bool `json:"enabled,omitempty"`
 
 	// 策略名称，长度限制：1- 64，只能由中文、字母、数字、“_”、“-”组成。
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
-	OperationDefinition *PolicyoOdCreate `json:"operation_definition" xml:"operation_definition"`
+	OperationDefinition *PolicyoOdCreate `json:"operation_definition"`
 
 	// 策略类型，如备份，复制 Enum:[ backup，replication]
-	OperationType PolicyCreateOperationType `json:"operation_type" xml:"operation_type"`
+	OperationType PolicyCreateOperationType `json:"operation_type"`
 
-	Trigger *PolicyTriggerReq `json:"trigger" xml:"trigger"`
+	Trigger *PolicyTriggerReq `json:"trigger"`
 }
 
 func (o PolicyCreate) String() string {

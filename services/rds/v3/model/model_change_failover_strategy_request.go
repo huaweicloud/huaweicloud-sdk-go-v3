@@ -13,12 +13,12 @@ import (
 type ChangeFailoverStrategyRequest struct {
 
 	// 语言
-	XLanguage *ChangeFailoverStrategyRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *ChangeFailoverStrategyRequestXLanguage `json:"X-Language,omitempty"`
 
 	// 实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
-	Body *FailoverStrategyRequest `json:"body,omitempty" xml:"body"`
+	Body *FailoverStrategyRequest `json:"body,omitempty"`
 }
 
 func (o ChangeFailoverStrategyRequest) String() string {

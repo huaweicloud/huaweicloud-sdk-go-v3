@@ -10,9 +10,9 @@ import (
 type UpdateWorkFlowRequest struct {
 
 	// 函数工作流ID
-	WorkflowId string `json:"workflow_id" xml:"workflow_id"`
+	WorkflowId string `json:"workflow_id"`
 
-	Body *WorkflowCreateBody `json:"body,omitempty" xml:"body"`
+	Body *WorkflowCreateBody `json:"body,omitempty"`
 }
 
 func (o UpdateWorkFlowRequest) String() string {

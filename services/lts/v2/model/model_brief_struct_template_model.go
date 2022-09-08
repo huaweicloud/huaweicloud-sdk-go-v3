@@ -13,19 +13,19 @@ import (
 type BriefStructTemplateModel struct {
 
 	// 模板创建/更新时间
-	CreateTime int64 `json:"create_time" xml:"create_time"`
+	CreateTime int64 `json:"create_time"`
 
 	// 模板id
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
 	// 模板名称
-	TemplateName string `json:"template_name" xml:"template_name"`
+	TemplateName string `json:"template_name"`
 
 	// 结构化类型，当前支持regex,json,split,nginx
-	TemplateType BriefStructTemplateModelTemplateType `json:"template_type" xml:"template_type"`
+	TemplateType BriefStructTemplateModelTemplateType `json:"template_type"`
 
 	// 项目ID，获取方式请参见：获取账号ID、项目ID、日志组ID、日志流ID（https://support.huaweicloud.com/api-lts/lts_api_0006.html）。
-	ProjectId string `json:"project_id" xml:"project_id"`
+	ProjectId string `json:"project_id"`
 }
 
 func (o BriefStructTemplateModel) String() string {

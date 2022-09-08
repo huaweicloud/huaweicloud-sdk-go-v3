@@ -10,9 +10,9 @@ import (
 type ListTemplatesTwoRequest struct {
 
 	// 仓库id
-	RepositoryUuid string `json:"repository_uuid" xml:"repository_uuid"`
+	RepositoryUuid string `json:"repository_uuid"`
 
-	Body *RepositoryTemplateVo2 `json:"body,omitempty" xml:"body"`
+	Body *RepositoryTemplateVo2 `json:"body,omitempty"`
 }
 
 func (o ListTemplatesTwoRequest) String() string {

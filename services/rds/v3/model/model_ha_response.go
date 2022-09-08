@@ -13,7 +13,7 @@ import (
 type HaResponse struct {
 
 	// 备机同步参数。实例主备模式为Ha时有效。 取值： - MySQL为“async”或“semisync”。 - PostgreSQL为“async”或“sync”。 - Microsoft SQL Server为“sync”。
-	ReplicationMode HaResponseReplicationMode `json:"replication_mode" xml:"replication_mode"`
+	ReplicationMode HaResponseReplicationMode `json:"replication_mode"`
 }
 
 func (o HaResponse) String() string {

@@ -10,15 +10,15 @@ import (
 type ResourceParams struct {
 
 	// 保护实例ID。
-	ResourceId string `json:"resource_id" xml:"resource_id"`
+	ResourceId string `json:"resource_id"`
 
-	ResourceDetail *ShowProtectedInstanceParams `json:"resource_detail" xml:"resource_detail"`
+	ResourceDetail *ShowProtectedInstanceParams `json:"resource_detail"`
 
 	// 标签列表，没有标签默认为空数组。
-	Tags []ResourceTag `json:"tags" xml:"tags"`
+	Tags []ResourceTag `json:"tags"`
 
 	// 保护实例名称，没有名称时默认为空字符串。
-	ResourceName *string `json:"resource_name,omitempty" xml:"resource_name"`
+	ResourceName *string `json:"resource_name,omitempty"`
 }
 
 func (o ResourceParams) String() string {

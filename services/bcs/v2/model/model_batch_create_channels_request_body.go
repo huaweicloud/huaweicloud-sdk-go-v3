@@ -10,7 +10,7 @@ import (
 type BatchCreateChannelsRequestBody struct {
 
 	// 通道列表
-	Channels []ChannelCreateInfo `json:"channels" xml:"channels"`
+	Channels []ChannelCreateInfo `json:"channels"`
 }
 
 func (o BatchCreateChannelsRequestBody) String() string {

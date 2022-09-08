@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RunSentenceEmbeddingRequest struct {
-	Body *PostSentenceEmbeddingReq `json:"body,omitempty" xml:"body"`
+	Body *PostSentenceEmbeddingReq `json:"body,omitempty"`
 }
 
 func (o RunSentenceEmbeddingRequest) String() string {

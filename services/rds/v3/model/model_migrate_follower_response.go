@@ -10,7 +10,7 @@ import (
 type MigrateFollowerResponse struct {
 
 	// 任务ID
-	WorkflowId     *string `json:"workflowId,omitempty" xml:"workflowId"`
+	WorkflowId     *string `json:"workflowId,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

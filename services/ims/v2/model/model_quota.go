@@ -10,7 +10,7 @@ import (
 type Quota struct {
 
 	// 查询的配额信息。
-	Resources []QuotaInfo `json:"resources" xml:"resources"`
+	Resources []QuotaInfo `json:"resources"`
 }
 
 func (o Quota) String() string {

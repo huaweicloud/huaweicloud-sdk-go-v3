@@ -9,10 +9,10 @@ import (
 type MetricList struct {
 
 	// metric 名称
-	MetricName *string `json:"metric_name,omitempty" xml:"metric_name"`
+	MetricName *string `json:"metric_name,omitempty"`
 
 	// 计算结果
-	Values *[]interface{} `json:"values,omitempty" xml:"values"`
+	Values *[]interface{} `json:"values,omitempty"`
 }
 
 func (o MetricList) String() string {

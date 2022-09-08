@@ -10,10 +10,10 @@ import (
 type ListResourceInstancesResponse struct {
 
 	// 资源实例列表，详情请参见resource字段数据结构说明。
-	Resources *[]ActionResources `json:"resources,omitempty" xml:"resources"`
+	Resources *[]ActionResources `json:"resources,omitempty"`
 
 	// 总记录数。
-	TotalCount     *int32 `json:"total_count,omitempty" xml:"total_count"`
+	TotalCount     *int32 `json:"total_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

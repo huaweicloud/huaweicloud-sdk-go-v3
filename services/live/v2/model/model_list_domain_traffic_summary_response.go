@@ -10,9 +10,9 @@ import (
 type ListDomainTrafficSummaryResponse struct {
 
 	// 域名对应的流量汇总列表。
-	TrafficList *[]TrafficSummaryData `json:"traffic_list,omitempty" xml:"traffic_list"`
+	TrafficList *[]TrafficSummaryData `json:"traffic_list,omitempty"`
 
-	XRequestId     *string `json:"X-Request-Id,omitempty" xml:"X-Request-Id"`
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -10,10 +10,10 @@ import (
 type ShowDedicatedResourceInfoRequest struct {
 
 	// 语言。
-	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *string `json:"X-Language,omitempty"`
 
 	// 专属资源池ID。
-	DedicatedResourceId string `json:"dedicated_resource_id" xml:"dedicated_resource_id"`
+	DedicatedResourceId string `json:"dedicated_resource_id"`
 }
 
 func (o ShowDedicatedResourceInfoRequest) String() string {

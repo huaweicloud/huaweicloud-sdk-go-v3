@@ -10,7 +10,7 @@ import (
 type DtStreamRequest struct {
 
 	// 输入参数，最多支持10个
-	Inputs []InputRequest `json:"inputs" xml:"inputs"`
+	Inputs []InputRequest `json:"inputs"`
 }
 
 func (o DtStreamRequest) String() string {

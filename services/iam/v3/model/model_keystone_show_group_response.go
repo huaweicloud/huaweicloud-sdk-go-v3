@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type KeystoneShowGroupResponse struct {
-	Group          *KeystoneGroupResult `json:"group,omitempty" xml:"group"`
+	Group          *KeystoneGroupResult `json:"group,omitempty"`
 	HttpStatusCode int                  `json:"-"`
 }
 

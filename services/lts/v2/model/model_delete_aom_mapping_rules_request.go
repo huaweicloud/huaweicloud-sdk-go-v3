@@ -10,7 +10,7 @@ import (
 type DeleteAomMappingRulesRequest struct {
 
 	// 接入lts规则id
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 }
 
 func (o DeleteAomMappingRulesRequest) String() string {

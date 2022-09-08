@@ -10,7 +10,7 @@ import (
 type CreateSessionRequest struct {
 
 	// 机器人标识符。
-	QabotId string `json:"qabot_id" xml:"qabot_id"`
+	QabotId string `json:"qabot_id"`
 }
 
 func (o CreateSessionRequest) String() string {

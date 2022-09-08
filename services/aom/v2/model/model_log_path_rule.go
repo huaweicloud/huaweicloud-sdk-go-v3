@@ -10,13 +10,13 @@ import (
 type LogPathRule struct {
 
 	// 命令行。
-	Args []string `json:"args" xml:"args"`
+	Args []string `json:"args"`
 
 	// 取值类型。 cmdLineHash
-	NameType string `json:"nameType" xml:"nameType"`
+	NameType string `json:"nameType"`
 
 	// 日志路径。
-	Value []string `json:"value" xml:"value"`
+	Value []string `json:"value"`
 }
 
 func (o LogPathRule) String() string {

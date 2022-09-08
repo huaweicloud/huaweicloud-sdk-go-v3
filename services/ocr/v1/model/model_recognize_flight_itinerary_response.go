@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type RecognizeFlightItineraryResponse struct {
-	Result         *FlightItineraryResult `json:"result,omitempty" xml:"result"`
+	Result         *FlightItineraryResult `json:"result,omitempty"`
 	HttpStatusCode int                    `json:"-"`
 }
 

@@ -10,7 +10,7 @@ import (
 type ReportTaskInfo struct {
 
 	// 分钟*并发数
-	Vum *float64 `json:"vum,omitempty" xml:"vum"`
+	Vum *float64 `json:"vum,omitempty"`
 }
 
 func (o ReportTaskInfo) String() string {

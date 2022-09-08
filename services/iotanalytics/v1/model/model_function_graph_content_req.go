@@ -10,25 +10,25 @@ import (
 type FunctionGraphContentReq struct {
 
 	// 名称
-	FunctionName string `json:"function_name" xml:"function_name"`
+	FunctionName string `json:"function_name"`
 
 	// 原始URL
-	OrigUrl string `json:"orig_url" xml:"orig_url"`
+	OrigUrl string `json:"orig_url"`
 
 	// 转换后的URL
-	FinalUrl string `json:"final_url" xml:"final_url"`
+	FinalUrl string `json:"final_url"`
 
 	// 校验参数
-	VerifyBody string `json:"verify_body" xml:"verify_body"`
+	VerifyBody string `json:"verify_body"`
 
 	// 租户的AK
-	Ak string `json:"ak" xml:"ak"`
+	Ak string `json:"ak"`
 
 	// 租户的SK
-	Sk string `json:"sk" xml:"sk"`
+	Sk string `json:"sk"`
 
 	// 项目id
-	ProjectId string `json:"project_id" xml:"project_id"`
+	ProjectId string `json:"project_id"`
 }
 
 func (o FunctionGraphContentReq) String() string {

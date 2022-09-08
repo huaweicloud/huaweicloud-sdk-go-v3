@@ -9,43 +9,43 @@ import (
 type TemplateRepository struct {
 
 	// 模板唯一标识
-	Id *int32 `json:"id,omitempty" xml:"id"`
+	Id *int32 `json:"id,omitempty"`
 
 	// 模板名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 模板关联仓库名称
-	TemplateName *string `json:"template_name,omitempty" xml:"template_name"`
+	TemplateName *string `json:"template_name,omitempty"`
 
 	// 模板标签
-	Tags *[]string `json:"tags,omitempty" xml:"tags"`
+	Tags *[]string `json:"tags,omitempty"`
 
 	// 模板描述
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 模板简介
-	BriefIntroduction *string `json:"brief_introduction,omitempty" xml:"brief_introduction"`
+	BriefIntroduction *string `json:"brief_introduction,omitempty"`
 
 	// 是否自动创建流水线
-	AutoPendingPipelines *int32 `json:"auto_pending_pipelines,omitempty" xml:"auto_pending_pipelines"`
+	AutoPendingPipelines *int32 `json:"auto_pending_pipelines,omitempty"`
 
 	// 模板语言分类
-	Language *string `json:"language,omitempty" xml:"language"`
+	Language *string `json:"language,omitempty"`
 
 	// 模板创建时间
-	CreatedAt *string `json:"created_at,omitempty" xml:"created_at"`
+	CreatedAt *string `json:"created_at,omitempty"`
 
 	// 模板引用次数
-	UsedTimes *int32 `json:"used_times,omitempty" xml:"used_times"`
+	UsedTimes *int32 `json:"used_times,omitempty"`
 
 	// 模板被点赞次数
-	LikedTimes *int32 `json:"liked_times,omitempty" xml:"liked_times"`
+	LikedTimes *int32 `json:"liked_times,omitempty"`
 
 	// 模板创建人
-	CreatorName *string `json:"creator_name,omitempty" xml:"creator_name"`
+	CreatorName *string `json:"creator_name,omitempty"`
 
 	// 模板https链接
-	HttpsUrl *string `json:"https_url,omitempty" xml:"https_url"`
+	HttpsUrl *string `json:"https_url,omitempty"`
 }
 
 func (o TemplateRepository) String() string {

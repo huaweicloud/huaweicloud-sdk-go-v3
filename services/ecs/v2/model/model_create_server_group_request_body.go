@@ -8,7 +8,7 @@ import (
 
 // This is a auto create Body Object
 type CreateServerGroupRequestBody struct {
-	ServerGroup *CreateServerGroupOption `json:"server_group" xml:"server_group"`
+	ServerGroup *CreateServerGroupOption `json:"server_group"`
 }
 
 func (o CreateServerGroupRequestBody) String() string {

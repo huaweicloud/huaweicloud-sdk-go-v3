@@ -10,7 +10,7 @@ import (
 type ShowRepositoryByCloudIdeResponse struct {
 
 	// CloudIde打开链接:https://xxx/cloudide/loading?instanceId=xxx&scmUrl=xxx
-	Url            *string `json:"url,omitempty" xml:"url"`
+	Url            *string `json:"url,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

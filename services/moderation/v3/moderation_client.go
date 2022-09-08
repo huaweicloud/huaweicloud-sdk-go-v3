@@ -41,6 +41,28 @@ func (c *ModerationClient) RunCreateAudioModerationJobInvoker(request *model.Run
 	return &RunCreateAudioModerationJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RunCreateVideoModerationJob 创建视频内容审核作业
+//
+// 创建视频内容审核作业，创建成功会将作业ID返回给用户
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ModerationClient) RunCreateVideoModerationJob(request *model.RunCreateVideoModerationJobRequest) (*model.RunCreateVideoModerationJobResponse, error) {
+	requestDef := GenReqDefForRunCreateVideoModerationJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RunCreateVideoModerationJobResponse), nil
+	}
+}
+
+// RunCreateVideoModerationJobInvoker 创建视频内容审核作业
+func (c *ModerationClient) RunCreateVideoModerationJobInvoker(request *model.RunCreateVideoModerationJobRequest) *RunCreateVideoModerationJobInvoker {
+	requestDef := GenReqDefForRunCreateVideoModerationJob()
+	return &RunCreateVideoModerationJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RunQueryAudioModerationJob 查询音频内容审核作业
 //
 //
@@ -60,6 +82,28 @@ func (c *ModerationClient) RunQueryAudioModerationJob(request *model.RunQueryAud
 func (c *ModerationClient) RunQueryAudioModerationJobInvoker(request *model.RunQueryAudioModerationJobRequest) *RunQueryAudioModerationJobInvoker {
 	requestDef := GenReqDefForRunQueryAudioModerationJob()
 	return &RunQueryAudioModerationJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RunQueryVideoModerationJob 查询视频内容审核作业
+//
+// 查询视频审核作业处理状态与结果，并将识别结果返回给用户
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ModerationClient) RunQueryVideoModerationJob(request *model.RunQueryVideoModerationJobRequest) (*model.RunQueryVideoModerationJobResponse, error) {
+	requestDef := GenReqDefForRunQueryVideoModerationJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RunQueryVideoModerationJobResponse), nil
+	}
+}
+
+// RunQueryVideoModerationJobInvoker 查询视频内容审核作业
+func (c *ModerationClient) RunQueryVideoModerationJobInvoker(request *model.RunQueryVideoModerationJobRequest) *RunQueryVideoModerationJobInvoker {
+	requestDef := GenReqDefForRunQueryVideoModerationJob()
+	return &RunQueryVideoModerationJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // RunTextModeration 文本内容审核

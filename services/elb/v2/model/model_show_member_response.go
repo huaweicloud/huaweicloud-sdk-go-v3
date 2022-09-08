@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowMemberResponse struct {
-	Member         *MemberResp `json:"member,omitempty" xml:"member"`
+	Member         *MemberResp `json:"member,omitempty"`
 	HttpStatusCode int         `json:"-"`
 }
 

@@ -12,10 +12,10 @@ import (
 type UserTopicPerms struct {
 
 	// 主题名称。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 权限。
-	Perm *UserTopicPermsPerm `json:"perm,omitempty" xml:"perm"`
+	Perm *UserTopicPermsPerm `json:"perm,omitempty"`
 }
 
 func (o UserTopicPerms) String() string {

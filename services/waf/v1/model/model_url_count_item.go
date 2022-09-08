@@ -9,13 +9,13 @@ import (
 type UrlCountItem struct {
 
 	// 攻击类型
-	Key *string `json:"key,omitempty" xml:"key"`
+	Key *string `json:"key,omitempty"`
 
 	// 数量
-	Num *int32 `json:"num,omitempty" xml:"num"`
+	Num *int32 `json:"num,omitempty"`
 
 	// 防护域名
-	Host *string `json:"host,omitempty" xml:"host"`
+	Host *string `json:"host,omitempty"`
 }
 
 func (o UrlCountItem) String() string {

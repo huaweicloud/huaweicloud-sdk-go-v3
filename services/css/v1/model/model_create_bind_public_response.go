@@ -10,7 +10,7 @@ import (
 type CreateBindPublicResponse struct {
 
 	// 操作行为。固定为bindZone，表示绑定成功。
-	Action         *string `json:"action,omitempty" xml:"action"`
+	Action         *string `json:"action,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

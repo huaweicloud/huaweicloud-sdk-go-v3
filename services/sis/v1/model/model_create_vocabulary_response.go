@@ -10,7 +10,7 @@ import (
 type CreateVocabularyResponse struct {
 
 	// 调用成功返回热词表ID，调用失败时无此字段。
-	VocabularyId   *string `json:"vocabulary_id,omitempty" xml:"vocabulary_id"`
+	VocabularyId   *string `json:"vocabulary_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

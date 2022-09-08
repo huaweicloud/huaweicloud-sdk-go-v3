@@ -10,37 +10,37 @@ import (
 type StreamingJobInfoDto struct {
 
 	// 作业ID
-	JobId *string `json:"job_id,omitempty" xml:"job_id"`
+	JobId *string `json:"job_id,omitempty"`
 
 	// 作业名称
-	JobName *string `json:"job_name,omitempty" xml:"job_name"`
+	JobName *string `json:"job_name,omitempty"`
 
 	// 接收数据类型
-	JobInputType *string `json:"job_input_type,omitempty" xml:"job_input_type"`
+	JobInputType *string `json:"job_input_type,omitempty"`
 
 	// 作业描述
-	JobDescription *string `json:"job_description,omitempty" xml:"job_description"`
+	JobDescription *string `json:"job_description,omitempty"`
 
 	// 作业状态
-	JobState *string `json:"job_state,omitempty" xml:"job_state"`
+	JobState *string `json:"job_state,omitempty"`
 
 	// 操作状态
-	Status *string `json:"status,omitempty" xml:"status"`
+	Status *string `json:"status,omitempty"`
 
 	// 运行作业的RTU个数
-	Rtu *int32 `json:"rtu,omitempty" xml:"rtu"`
+	Rtu *int32 `json:"rtu,omitempty"`
 
 	// 创建时间
-	CreatedTime *string `json:"created_time,omitempty" xml:"created_time"`
+	CreatedTime *string `json:"created_time,omitempty"`
 
 	// 修改时间
-	ModifiedTime *string `json:"modified_time,omitempty" xml:"modified_time"`
+	ModifiedTime *string `json:"modified_time,omitempty"`
 
 	// 用户ID
-	UserId *string `json:"user_id,omitempty" xml:"user_id"`
+	UserId *string `json:"user_id,omitempty"`
 
 	// 已停止作业是否有历史缓存数据
-	HasSavepoint *bool `json:"has_savepoint,omitempty" xml:"has_savepoint"`
+	HasSavepoint *bool `json:"has_savepoint,omitempty"`
 }
 
 func (o StreamingJobInfoDto) String() string {

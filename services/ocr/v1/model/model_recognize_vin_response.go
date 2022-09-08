@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type RecognizeVinResponse struct {
-	Result         *VinResult `json:"result,omitempty" xml:"result"`
+	Result         *VinResult `json:"result,omitempty"`
 	HttpStatusCode int        `json:"-"`
 }
 

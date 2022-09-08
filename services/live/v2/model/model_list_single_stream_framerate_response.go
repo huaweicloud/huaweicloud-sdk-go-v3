@@ -10,9 +10,9 @@ import (
 type ListSingleStreamFramerateResponse struct {
 
 	// 用量详情。
-	FramerateInfoList *[]V2FramerateInfo `json:"framerate_info_list,omitempty" xml:"framerate_info_list"`
+	FramerateInfoList *[]V2FramerateInfo `json:"framerate_info_list,omitempty"`
 
-	XRequestId     *string `json:"X-Request-Id,omitempty" xml:"X-Request-Id"`
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

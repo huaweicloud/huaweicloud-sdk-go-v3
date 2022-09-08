@@ -9,10 +9,10 @@ import (
 type BackupRsp struct {
 
 	// 快照id。
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 快照名称。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 }
 
 func (o BackupRsp) String() string {

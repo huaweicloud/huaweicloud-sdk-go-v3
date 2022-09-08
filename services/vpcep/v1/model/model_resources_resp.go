@@ -10,7 +10,7 @@ import (
 type ResourcesResp struct {
 
 	// 资源列表
-	Resources *[]Quotas `json:"resources,omitempty" xml:"resources"`
+	Resources *[]Quotas `json:"resources,omitempty"`
 }
 
 func (o ResourcesResp) String() string {

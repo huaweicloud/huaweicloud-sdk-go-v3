@@ -8,7 +8,7 @@ import (
 
 // change_security_group对象
 type ChangeSecurityGroupRequestBody struct {
-	ChangeSecurityGroup *ChangeSecurityGroup `json:"change_security_group" xml:"change_security_group"`
+	ChangeSecurityGroup *ChangeSecurityGroup `json:"change_security_group"`
 }
 
 func (o ChangeSecurityGroupRequestBody) String() string {

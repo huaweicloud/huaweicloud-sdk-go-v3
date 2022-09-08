@@ -10,10 +10,10 @@ import (
 type SysTags struct {
 
 	// 标签名。
-	Key string `json:"key" xml:"key"`
+	Key string `json:"key"`
 
 	// 标签值。
-	Value string `json:"value" xml:"value"`
+	Value string `json:"value"`
 }
 
 func (o SysTags) String() string {

@@ -10,9 +10,9 @@ import (
 type CreateSystemIssueV4Request struct {
 
 	// devcloud项目的32位id
-	ProjectId string `json:"project_id" xml:"project_id"`
+	ProjectId string `json:"project_id"`
 
-	Body *CreateSystemIssueRequestV4 `json:"body,omitempty" xml:"body"`
+	Body *CreateSystemIssueRequestV4 `json:"body,omitempty"`
 }
 
 func (o CreateSystemIssueV4Request) String() string {

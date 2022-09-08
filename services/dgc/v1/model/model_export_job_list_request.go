@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ExportJobListRequest struct {
-	Body *ExportJobsReq `json:"body,omitempty" xml:"body"`
+	Body *ExportJobsReq `json:"body,omitempty"`
 }
 
 func (o ExportJobListRequest) String() string {

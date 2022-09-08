@@ -10,15 +10,15 @@ import (
 type IssueRecordV4 struct {
 
 	// 操作记录id
-	Id *int32 `json:"id,omitempty" xml:"id"`
+	Id *int32 `json:"id,omitempty"`
 
 	// 操作记录创建时间
-	CreatedTime *int64 `json:"created_time,omitempty" xml:"created_time"`
+	CreatedTime *int64 `json:"created_time,omitempty"`
 
-	User *IssueRecordV4User `json:"user,omitempty" xml:"user"`
+	User *IssueRecordV4User `json:"user,omitempty"`
 
 	// 操作的记录
-	Details *[]IssueRecordV4Details `json:"details,omitempty" xml:"details"`
+	Details *[]IssueRecordV4Details `json:"details,omitempty"`
 }
 
 func (o IssueRecordV4) String() string {

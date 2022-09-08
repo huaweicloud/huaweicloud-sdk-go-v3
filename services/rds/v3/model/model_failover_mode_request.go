@@ -9,7 +9,7 @@ import (
 type FailoverModeRequest struct {
 
 	// 同步模式，各引擎可选择方式具体如下： MySQL： - async：异步。 - semisync：半同步。
-	Mode string `json:"mode" xml:"mode"`
+	Mode string `json:"mode"`
 }
 
 func (o FailoverModeRequest) String() string {

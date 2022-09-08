@@ -10,7 +10,7 @@ import (
 type ShowMasterAddressRequest struct {
 
 	// region英文名称
-	RegionName string `json:"region_name" xml:"region_name"`
+	RegionName string `json:"region_name"`
 }
 
 func (o ShowMasterAddressRequest) String() string {

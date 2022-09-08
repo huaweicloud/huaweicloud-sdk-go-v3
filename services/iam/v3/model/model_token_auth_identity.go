@@ -13,11 +13,11 @@ import (
 type TokenAuthIdentity struct {
 
 	// 认证方法，该字段内容为[\"token\"]。
-	Methods []TokenAuthIdentityMethods `json:"methods" xml:"methods"`
+	Methods []TokenAuthIdentityMethods `json:"methods"`
 
-	Token *IdentityToken `json:"token,omitempty" xml:"token"`
+	Token *IdentityToken `json:"token,omitempty"`
 
-	Policy *ServicePolicy `json:"policy,omitempty" xml:"policy"`
+	Policy *ServicePolicy `json:"policy,omitempty"`
 }
 
 func (o TokenAuthIdentity) String() string {

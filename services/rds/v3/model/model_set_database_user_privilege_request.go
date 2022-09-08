@@ -10,12 +10,12 @@ import (
 type SetDatabaseUserPrivilegeRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 语言
-	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *string `json:"X-Language,omitempty"`
 
-	Body *SetDatabaseUserPrivilegeReqV3 `json:"body,omitempty" xml:"body"`
+	Body *SetDatabaseUserPrivilegeReqV3 `json:"body,omitempty"`
 }
 
 func (o SetDatabaseUserPrivilegeRequest) String() string {

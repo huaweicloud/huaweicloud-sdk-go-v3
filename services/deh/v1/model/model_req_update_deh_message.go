@@ -13,10 +13,10 @@ import (
 type ReqUpdateDehMessage struct {
 
 	// 在创建云服务器时（未指定专属主机ID），是否允许云服务器自动分配在一台可用的专属主机上。  取值范围：“on”或“off”。
-	AutoPlacement *ReqUpdateDehMessageAutoPlacement `json:"auto_placement,omitempty" xml:"auto_placement"`
+	AutoPlacement *ReqUpdateDehMessageAutoPlacement `json:"auto_placement,omitempty"`
 
 	// 专属主机名称。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 }
 
 func (o ReqUpdateDehMessage) String() string {

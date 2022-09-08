@@ -9,14 +9,14 @@ import (
 // Request Object
 type DeleteHooksRequest struct {
 
-	// 组名
-	GroupName string `json:"group_name" xml:"group_name"`
+	// 组名(克隆地址中域名后面项目名前的一段 示例：git@codehub.alpha.devcloud.inhuawei.com:Demo00228/testword.git  组名：Demo00228 )
+	GroupName string `json:"group_name"`
 
 	// 通过id删除指定仓库的hook
-	HookId int32 `json:"hook_id" xml:"hook_id"`
+	HookId int32 `json:"hook_id"`
 
 	// 仓库名
-	RepositoryName string `json:"repository_name" xml:"repository_name"`
+	RepositoryName string `json:"repository_name"`
 }
 
 func (o DeleteHooksRequest) String() string {

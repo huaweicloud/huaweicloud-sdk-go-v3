@@ -10,19 +10,19 @@ import (
 type ExportCertificateResponse struct {
 
 	// 证书内容。
-	Certificate *string `json:"certificate,omitempty" xml:"certificate"`
+	Certificate *string `json:"certificate,omitempty"`
 
 	// 证书链。
-	CertificateChain *string `json:"certificate_chain,omitempty" xml:"certificate_chain"`
+	CertificateChain *string `json:"certificate_chain,omitempty"`
 
 	// 证书私钥。
-	PrivateKey *string `json:"private_key,omitempty" xml:"private_key"`
+	PrivateKey *string `json:"private_key,omitempty"`
 
 	// 国密证书返回，加密证书内容。
-	EncCertificate *string `json:"enc_certificate,omitempty" xml:"enc_certificate"`
+	EncCertificate *string `json:"enc_certificate,omitempty"`
 
 	// 国密证书返回，加密证书私钥。
-	EncPrivateKey  *string `json:"enc_private_key,omitempty" xml:"enc_private_key"`
+	EncPrivateKey  *string `json:"enc_private_key,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

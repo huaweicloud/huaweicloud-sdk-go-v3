@@ -9,13 +9,13 @@ import (
 type RepoDailyCodeline struct {
 
 	// 每日增加代码行
-	Additions *int32 `json:"additions,omitempty" xml:"additions"`
+	Additions *int32 `json:"additions,omitempty"`
 
 	// 日期
-	Date *string `json:"date,omitempty" xml:"date"`
+	Date *string `json:"date,omitempty"`
 
 	// 每日删除代码行
-	Deletions *int32 `json:"deletions,omitempty" xml:"deletions"`
+	Deletions *int32 `json:"deletions,omitempty"`
 }
 
 func (o RepoDailyCodeline) String() string {

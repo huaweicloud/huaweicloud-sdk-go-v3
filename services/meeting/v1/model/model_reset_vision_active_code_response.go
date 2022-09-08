@@ -10,7 +10,7 @@ import (
 type ResetVisionActiveCodeResponse struct {
 
 	// 激活码
-	ActiveCode     *string `json:"activeCode,omitempty" xml:"activeCode"`
+	ActiveCode     *string `json:"activeCode,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

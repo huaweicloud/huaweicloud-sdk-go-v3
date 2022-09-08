@@ -13,31 +13,31 @@ import (
 type ShowBigkeyScanTaskDetailsResponse struct {
 
 	// 大key分析记录ID
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 实例ID
-	InstanceId *string `json:"instance_id,omitempty" xml:"instance_id"`
+	InstanceId *string `json:"instance_id,omitempty"`
 
 	// 分析任务状态
-	Status *ShowBigkeyScanTaskDetailsResponseStatus `json:"status,omitempty" xml:"status"`
+	Status *ShowBigkeyScanTaskDetailsResponseStatus `json:"status,omitempty"`
 
 	// 分析方式
-	ScanType *ShowBigkeyScanTaskDetailsResponseScanType `json:"scan_type,omitempty" xml:"scan_type"`
+	ScanType *ShowBigkeyScanTaskDetailsResponseScanType `json:"scan_type,omitempty"`
 
 	// 分析任务创建时间,格式为：\"2020-06-15T02:21:18.669Z\"
-	CreatedAt *string `json:"created_at,omitempty" xml:"created_at"`
+	CreatedAt *string `json:"created_at,omitempty"`
 
 	// 分析任务开始时间,格式为：\"2020-06-15T02:21:18.669Z\"
-	StartedAt *string `json:"started_at,omitempty" xml:"started_at"`
+	StartedAt *string `json:"started_at,omitempty"`
 
 	// 分析任务结束时间,格式为：\"2020-06-15T02:21:18.669Z\"
-	FinishedAt *string `json:"finished_at,omitempty" xml:"finished_at"`
+	FinishedAt *string `json:"finished_at,omitempty"`
 
 	// 大key的数量
-	Num *int32 `json:"num,omitempty" xml:"num"`
+	Num *int32 `json:"num,omitempty"`
 
 	// 大key记录
-	Keys           *[]BigkeysBody `json:"keys,omitempty" xml:"keys"`
+	Keys           *[]BigkeysBody `json:"keys,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }
 

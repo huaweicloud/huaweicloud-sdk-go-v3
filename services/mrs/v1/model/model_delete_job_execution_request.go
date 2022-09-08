@@ -10,7 +10,7 @@ import (
 type DeleteJobExecutionRequest struct {
 
 	// 作业ID。
-	JobExecutionId string `json:"job_execution_id" xml:"job_execution_id"`
+	JobExecutionId string `json:"job_execution_id"`
 }
 
 func (o DeleteJobExecutionRequest) String() string {

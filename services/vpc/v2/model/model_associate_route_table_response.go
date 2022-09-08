@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type AssociateRouteTableResponse struct {
-	Routetable     *RouteTableResp `json:"routetable,omitempty" xml:"routetable"`
+	Routetable     *RouteTableResp `json:"routetable,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }
 

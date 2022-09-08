@@ -12,10 +12,10 @@ import (
 type StopMigrationTaskResult struct {
 
 	// 下发停止迁移任务操作结果。
-	Result *StopMigrationTaskResultResult `json:"result,omitempty" xml:"result"`
+	Result *StopMigrationTaskResultResult `json:"result,omitempty"`
 
 	// 数据迁移任务ID。
-	TaskId *string `json:"task_id,omitempty" xml:"task_id"`
+	TaskId *string `json:"task_id,omitempty"`
 }
 
 func (o StopMigrationTaskResult) String() string {

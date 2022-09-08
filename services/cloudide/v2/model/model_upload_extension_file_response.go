@@ -8,13 +8,13 @@ import (
 
 // Response Object
 type UploadExtensionFileResponse struct {
-	Error *Error `json:"error,omitempty" xml:"error"`
+	Error *Error `json:"error,omitempty"`
 
 	// 结果
-	Result *interface{} `json:"result,omitempty" xml:"result"`
+	Result *interface{} `json:"result,omitempty"`
 
 	// 状态
-	Status         *string `json:"status,omitempty" xml:"status"`
+	Status         *string `json:"status,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

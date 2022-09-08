@@ -10,10 +10,10 @@ import (
 type ShowAllDataSourceResponse struct {
 
 	// 总数
-	Count *int32 `json:"count,omitempty" xml:"count"`
+	Count *int32 `json:"count,omitempty"`
 
 	// 数据源列表
-	Datasources    *[]DatasourceRestDto `json:"datasources,omitempty" xml:"datasources"`
+	Datasources    *[]DatasourceRestDto `json:"datasources,omitempty"`
 	HttpStatusCode int                  `json:"-"`
 }
 

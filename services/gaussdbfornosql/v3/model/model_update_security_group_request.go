@@ -10,9 +10,9 @@ import (
 type UpdateSecurityGroupRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
-	Body *UpdateSecurityGroupRequestBody `json:"body,omitempty" xml:"body"`
+	Body *UpdateSecurityGroupRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateSecurityGroupRequest) String() string {

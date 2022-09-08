@@ -10,9 +10,9 @@ import (
 type StartFailoverProtectionGroupRequest struct {
 
 	// 保护组的ID。
-	ServerGroupId string `json:"server_group_id" xml:"server_group_id"`
+	ServerGroupId string `json:"server_group_id"`
 
-	Body *FailoverProtectionGroupRequestBody `json:"body,omitempty" xml:"body"`
+	Body *FailoverProtectionGroupRequestBody `json:"body,omitempty"`
 }
 
 func (o StartFailoverProtectionGroupRequest) String() string {

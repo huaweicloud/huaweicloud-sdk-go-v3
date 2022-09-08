@@ -9,10 +9,10 @@ import (
 type KeystoreInfo struct {
 
 	// 密钥库ID
-	KeystoreId *string `json:"keystore_id,omitempty" xml:"keystore_id"`
+	KeystoreId *string `json:"keystore_id,omitempty"`
 
 	// 用户域ID
-	DomainId *string `json:"domain_id,omitempty" xml:"domain_id"`
+	DomainId *string `json:"domain_id,omitempty"`
 }
 
 func (o KeystoreInfo) String() string {

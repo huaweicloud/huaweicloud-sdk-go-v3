@@ -10,13 +10,13 @@ import (
 type StartResSceneJobsRequest struct {
 
 	// 工作空间id。
-	WorkspaceId string `json:"workspace_id" xml:"workspace_id"`
+	WorkspaceId string `json:"workspace_id"`
 
 	// 资源id，可以为数据源id或场景id。
-	ResourceId string `json:"resource_id" xml:"resource_id"`
+	ResourceId string `json:"resource_id"`
 
 	// 动作类型： - START，启动 - STOP，停止
-	Action *string `json:"action,omitempty" xml:"action"`
+	Action *string `json:"action,omitempty"`
 }
 
 func (o StartResSceneJobsRequest) String() string {

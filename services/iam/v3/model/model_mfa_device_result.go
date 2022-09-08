@@ -10,10 +10,10 @@ import (
 type MfaDeviceResult struct {
 
 	// 虚拟MFA的设备序列号。
-	SerialNumber string `json:"serial_number" xml:"serial_number"`
+	SerialNumber string `json:"serial_number"`
 
 	// IAM用户ID。
-	UserId string `json:"user_id" xml:"user_id"`
+	UserId string `json:"user_id"`
 }
 
 func (o MfaDeviceResult) String() string {

@@ -9,15 +9,15 @@ import (
 type ClusterScalingReq struct {
 
 	// 服务ID，为扩展接口，预留此参数。用户不需要配置。
-	ServiceId *string `json:"service_id,omitempty" xml:"service_id"`
+	ServiceId *string `json:"service_id,omitempty"`
 
 	// 套餐ID，为扩展接口，预留此参数。用户不需要配置。
-	PlanId *string `json:"plan_id,omitempty" xml:"plan_id"`
+	PlanId *string `json:"plan_id,omitempty"`
 
-	Parameters *ClusterScalingParams `json:"parameters" xml:"parameters"`
+	Parameters *ClusterScalingParams `json:"parameters"`
 
 	// 扩展接口，预留此参数。用户不需要配置。
-	PreviousValues map[string]string `json:"previous_values,omitempty" xml:"previous_values"`
+	PreviousValues map[string]string `json:"previous_values,omitempty"`
 }
 
 func (o ClusterScalingReq) String() string {

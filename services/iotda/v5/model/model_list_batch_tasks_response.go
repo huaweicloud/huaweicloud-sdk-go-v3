@@ -10,9 +10,9 @@ import (
 type ListBatchTasksResponse struct {
 
 	// 批量任务列表。
-	Batchtasks *[]Task `json:"batchtasks,omitempty" xml:"batchtasks"`
+	Batchtasks *[]Task `json:"batchtasks,omitempty"`
 
-	Page           *Page `json:"page,omitempty" xml:"page"`
+	Page           *Page `json:"page,omitempty"`
 	HttpStatusCode int   `json:"-"`
 }
 

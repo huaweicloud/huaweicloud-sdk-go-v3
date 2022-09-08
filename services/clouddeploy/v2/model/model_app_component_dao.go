@@ -10,28 +10,28 @@ import (
 type AppComponentDao struct {
 
 	// 部署任务id
-	TaskId *string `json:"task_id,omitempty" xml:"task_id"`
+	TaskId *string `json:"task_id,omitempty"`
 
 	// 应用id
-	AppId *string `json:"app_id,omitempty" xml:"app_id"`
+	AppId *string `json:"app_id,omitempty"`
 
 	// 应用名称
-	AppName *string `json:"app_name,omitempty" xml:"app_name"`
+	AppName *string `json:"app_name,omitempty"`
 
 	// 组件id
-	CompId *string `json:"comp_id,omitempty" xml:"comp_id"`
+	CompId *string `json:"comp_id,omitempty"`
 
 	// 组件名称
-	CompName *string `json:"comp_name,omitempty" xml:"comp_name"`
+	CompName *string `json:"comp_name,omitempty"`
 
 	// 租户ID
-	DomainId *string `json:"domain_id,omitempty" xml:"domain_id"`
+	DomainId *string `json:"domain_id,omitempty"`
 
 	// 局点信息
-	Region *string `json:"region,omitempty" xml:"region"`
+	Region *string `json:"region,omitempty"`
 
 	// 组件是否生效，0表示初始化，1表示执行成功，已生效
-	State *string `json:"state,omitempty" xml:"state"`
+	State *string `json:"state,omitempty"`
 }
 
 func (o AppComponentDao) String() string {

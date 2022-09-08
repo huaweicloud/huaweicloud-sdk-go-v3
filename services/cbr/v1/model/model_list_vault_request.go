@@ -13,37 +13,37 @@ import (
 type ListVaultRequest struct {
 
 	// 每页显示条目数，正整数
-	Limit *int32 `json:"limit,omitempty" xml:"limit"`
+	Limit *int32 `json:"limit,omitempty"`
 
 	// 存储库名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 偏移值,正整数
-	Offset *int32 `json:"offset,omitempty" xml:"offset"`
+	Offset *int32 `json:"offset,omitempty"`
 
 	// 云类型
-	CloudType *ListVaultRequestCloudType `json:"cloud_type,omitempty" xml:"cloud_type"`
+	CloudType *ListVaultRequestCloudType `json:"cloud_type,omitempty"`
 
 	// 保护类型
-	ProtectType *ListVaultRequestProtectType `json:"protect_type,omitempty" xml:"protect_type"`
+	ProtectType *ListVaultRequestProtectType `json:"protect_type,omitempty"`
 
 	// 资源类型
-	ObjectType *string `json:"object_type,omitempty" xml:"object_type"`
+	ObjectType *string `json:"object_type,omitempty"`
 
 	// 企业项目id或all_granted_eps，all_granted_eps表示查询用户有权限的所有企业项目id
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 存储库ID
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 策略ID
-	PolicyId *string `json:"policy_id,omitempty" xml:"policy_id"`
+	PolicyId *string `json:"policy_id,omitempty"`
 
 	// 状态
-	Status *string `json:"status,omitempty" xml:"status"`
+	Status *string `json:"status,omitempty"`
 
 	// 资源id
-	ResourceIds *string `json:"resource_ids,omitempty" xml:"resource_ids"`
+	ResourceIds *string `json:"resource_ids,omitempty"`
 }
 
 func (o ListVaultRequest) String() string {

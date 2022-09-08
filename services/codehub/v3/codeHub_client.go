@@ -107,6 +107,28 @@ func (c *CodeHubClient) ShowSingleCommitInvoker(request *model.ShowSingleCommitR
 	return &ShowSingleCommitInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListFilesByQuery 查询某个仓库的文件信息
+//
+// 获取仓库中文件的信息，如名称、大小、内容。请注意，文件内容是Base64编码的。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *CodeHubClient) ListFilesByQuery(request *model.ListFilesByQueryRequest) (*model.ListFilesByQueryResponse, error) {
+	requestDef := GenReqDefForListFilesByQuery()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFilesByQueryResponse), nil
+	}
+}
+
+// ListFilesByQueryInvoker 查询某个仓库的文件信息
+func (c *CodeHubClient) ListFilesByQueryInvoker(request *model.ListFilesByQueryRequest) *ListFilesByQueryInvoker {
+	requestDef := GenReqDefForListFilesByQuery()
+	return &ListFilesByQueryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowFile 查询某个仓库的文件信息
 //
 // 获取仓库中文件的信息，如名称、大小、内容。请注意，文件内容是Base64编码的。
@@ -197,7 +219,7 @@ func (c *CodeHubClient) ListProductTwoTemplatesInvoker(request *model.ListProduc
 
 // ShowRepositoryNameExist 校验指定项目下的仓库名
 //
-// 一般创建仓库时调用。通过传入项目uuid,仓库名，调用CoudeHubAdapter接口，查询数据库来判断仓库是否重名。
+// 一般创建仓库时调用。通过传入项目uuid,仓库名，来判断仓库是否重名。仓库存在result:false,仓库不存在result:true。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -525,6 +547,28 @@ func (c *CodeHubClient) GetTemplatesInvoker(request *model.GetTemplatesRequest) 
 	return &GetTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListBranchesByRepositoryId 获取仓库分支列表
+//
+// 获取仓库分支列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *CodeHubClient) ListBranchesByRepositoryId(request *model.ListBranchesByRepositoryIdRequest) (*model.ListBranchesByRepositoryIdResponse, error) {
+	requestDef := GenReqDefForListBranchesByRepositoryId()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListBranchesByRepositoryIdResponse), nil
+	}
+}
+
+// ListBranchesByRepositoryIdInvoker 获取仓库分支列表
+func (c *CodeHubClient) ListBranchesByRepositoryIdInvoker(request *model.ListBranchesByRepositoryIdRequest) *ListBranchesByRepositoryIdInvoker {
+	requestDef := GenReqDefForListBranchesByRepositoryId()
+	return &ListBranchesByRepositoryIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListCommitStatistics 获取仓库上一次的提交统计信息
 //
 // 获取仓库上一次的提交统计信息
@@ -567,6 +611,28 @@ func (c *CodeHubClient) ListFiles(request *model.ListFilesRequest) (*model.ListF
 func (c *CodeHubClient) ListFilesInvoker(request *model.ListFilesRequest) *ListFilesInvoker {
 	requestDef := GenReqDefForListFiles()
 	return &ListFilesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListMergeRequest 获取仓库合并请求列表
+//
+// 获取仓库合并请求列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *CodeHubClient) ListMergeRequest(request *model.ListMergeRequestRequest) (*model.ListMergeRequestResponse, error) {
+	requestDef := GenReqDefForListMergeRequest()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListMergeRequestResponse), nil
+	}
+}
+
+// ListMergeRequestInvoker 获取仓库合并请求列表
+func (c *CodeHubClient) ListMergeRequestInvoker(request *model.ListMergeRequestRequest) *ListMergeRequestInvoker {
+	requestDef := GenReqDefForListMergeRequest()
+	return &ListMergeRequestInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListRepositoryStatus 查看仓库的创建状态
@@ -833,6 +899,28 @@ func (c *CodeHubClient) ShowMasterInvoker(request *model.ShowMasterRequest) *Sho
 	return &ShowMasterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowMergeRequest 获取仓库合并请求详情
+//
+// 获取仓库合并请求详情
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *CodeHubClient) ShowMergeRequest(request *model.ShowMergeRequestRequest) (*model.ShowMergeRequestResponse, error) {
+	requestDef := GenReqDefForShowMergeRequest()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowMergeRequestResponse), nil
+	}
+}
+
+// ShowMergeRequestInvoker 获取仓库合并请求详情
+func (c *CodeHubClient) ShowMergeRequestInvoker(request *model.ShowMergeRequestRequest) *ShowMergeRequestInvoker {
+	requestDef := GenReqDefForShowMergeRequest()
+	return &ShowMergeRequestInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowRepoId 根据仓库名组名获取仓库短id，用以拼接与commitid对应提交详情页面url
 //
 // 获取仓库短id,用于获取仓库详情页面url
@@ -879,7 +967,7 @@ func (c *CodeHubClient) ShowRepositoryArchiveInvoker(request *model.ShowReposito
 
 // ShowRepositoryByUuid 查询某个仓库的详细信息
 //
-// 根据仓库UUID获取仓库信息仓库信息。返回 包含id，name，组名，仓库访问URL。
+// 根据仓库UUID(由CreateRepository接口返回)获取仓库信息仓库信息。返回 包含id，name，组名，仓库访问URL。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1117,6 +1205,50 @@ func (c *CodeHubClient) ValidateHttpsInfoV2(request *model.ValidateHttpsInfoV2Re
 func (c *CodeHubClient) ValidateHttpsInfoV2Invoker(request *model.ValidateHttpsInfoV2Request) *ValidateHttpsInfoV2Invoker {
 	requestDef := GenReqDefForValidateHttpsInfoV2()
 	return &ValidateHttpsInfoV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateNewBranch 创建分支
+//
+// 根据仓库id在指定仓库中创建分支
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *CodeHubClient) CreateNewBranch(request *model.CreateNewBranchRequest) (*model.CreateNewBranchResponse, error) {
+	requestDef := GenReqDefForCreateNewBranch()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateNewBranchResponse), nil
+	}
+}
+
+// CreateNewBranchInvoker 创建分支
+func (c *CodeHubClient) CreateNewBranchInvoker(request *model.CreateNewBranchRequest) *CreateNewBranchInvoker {
+	requestDef := GenReqDefForCreateNewBranch()
+	return &CreateNewBranchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AssociateIssues 分支关联工作项
+//
+// 分支关联工作项
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *CodeHubClient) AssociateIssues(request *model.AssociateIssuesRequest) (*model.AssociateIssuesResponse, error) {
+	requestDef := GenReqDefForAssociateIssues()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AssociateIssuesResponse), nil
+	}
+}
+
+// AssociateIssuesInvoker 分支关联工作项
+func (c *CodeHubClient) AssociateIssuesInvoker(request *model.AssociateIssuesRequest) *AssociateIssuesInvoker {
+	requestDef := GenReqDefForAssociateIssues()
+	return &AssociateIssuesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateProjectAndRepositories 创建项目、仓库

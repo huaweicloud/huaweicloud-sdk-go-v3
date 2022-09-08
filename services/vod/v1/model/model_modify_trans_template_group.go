@@ -13,27 +13,27 @@ import (
 type ModifyTransTemplateGroup struct {
 
 	// 模板组名称。
-	GroupId string `json:"group_id" xml:"group_id"`
+	GroupId string `json:"group_id"`
 
 	// 模板组名称。
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 是否设置默认。
-	Status *ModifyTransTemplateGroupStatus `json:"status,omitempty" xml:"status"`
+	Status *ModifyTransTemplateGroupStatus `json:"status,omitempty"`
 
 	// 是否自动加密。  取值如下： - 0：表示不加密。 - 1：表示需要加密。  默认值：0。  加密与转码必须要一起进行，当需要加密时，转码参数不能为空，且转码输出格式必须要为HLS。
-	AutoEncrypt *int32 `json:"auto_encrypt,omitempty" xml:"auto_encrypt"`
+	AutoEncrypt *int32 `json:"auto_encrypt,omitempty"`
 
 	// 画质配置信息列表。
-	QualityInfoList *[]QualityInfo `json:"quality_info_list,omitempty" xml:"quality_info_list"`
+	QualityInfoList *[]QualityInfo `json:"quality_info_list,omitempty"`
 
 	// 绑定的水印模板组ID数组。
-	WatermarkTemplateIds *[]string `json:"watermark_template_ids,omitempty" xml:"watermark_template_ids"`
+	WatermarkTemplateIds *[]string `json:"watermark_template_ids,omitempty"`
 
 	// 模板介绍。
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
-	Common *Common `json:"common,omitempty" xml:"common"`
+	Common *Common `json:"common,omitempty"`
 }
 
 func (o ModifyTransTemplateGroup) String() string {

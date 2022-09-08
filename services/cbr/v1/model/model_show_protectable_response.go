@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowProtectableResponse struct {
-	Instance       *ProtectablesResp `json:"instance,omitempty" xml:"instance"`
+	Instance       *ProtectablesResp `json:"instance,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }
 

@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateAnimatedGraphicsTaskRequest struct {
-	Body *CreateAnimatedGraphicsTaskReq `json:"body,omitempty" xml:"body"`
+	Body *CreateAnimatedGraphicsTaskReq `json:"body,omitempty"`
 }
 
 func (o CreateAnimatedGraphicsTaskRequest) String() string {

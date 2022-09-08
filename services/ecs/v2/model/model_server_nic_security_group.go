@@ -10,7 +10,7 @@ import (
 type ServerNicSecurityGroup struct {
 
 	// 安全组ID。
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 }
 
 func (o ServerNicSecurityGroup) String() string {

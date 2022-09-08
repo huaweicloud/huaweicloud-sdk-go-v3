@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateRecordCallbackConfigRequest struct {
-	Body *RecordCallbackConfigRequest `json:"body,omitempty" xml:"body"`
+	Body *RecordCallbackConfigRequest `json:"body,omitempty"`
 }
 
 func (o CreateRecordCallbackConfigRequest) String() string {

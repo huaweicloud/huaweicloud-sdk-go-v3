@@ -10,13 +10,13 @@ import (
 type CheckUserIdentityResponse struct {
 
 	// 状态码。具体请参考状态码。只有失败才会返回这个参数。
-	ErrorCode *string `json:"error_code,omitempty" xml:"error_code"`
+	ErrorCode *string `json:"error_code,omitempty"`
 
 	// 错误描述信息。只有失败才会返回这个参数。
-	ErrorMsg *string `json:"error_msg,omitempty" xml:"error_msg"`
+	ErrorMsg *string `json:"error_msg,omitempty"`
 
 	// available：该登录名称/手机号/邮箱有效。used_by_user：该登录名称/手机号/邮箱已被占用。
-	CheckResult    *string `json:"check_result,omitempty" xml:"check_result"`
+	CheckResult    *string `json:"check_result,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

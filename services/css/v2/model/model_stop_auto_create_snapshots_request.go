@@ -10,7 +10,7 @@ import (
 type StopAutoCreateSnapshotsRequest struct {
 
 	// 快照所属的集群的ID。
-	ClusterId string `json:"cluster_id" xml:"cluster_id"`
+	ClusterId string `json:"cluster_id"`
 }
 
 func (o StopAutoCreateSnapshotsRequest) String() string {

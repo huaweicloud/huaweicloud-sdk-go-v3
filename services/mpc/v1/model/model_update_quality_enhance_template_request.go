@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type UpdateQualityEnhanceTemplateRequest struct {
-	Body *UpdateQualityEnhanceTemplateReq `json:"body,omitempty" xml:"body"`
+	Body *UpdateQualityEnhanceTemplateReq `json:"body,omitempty"`
 }
 
 func (o UpdateQualityEnhanceTemplateRequest) String() string {

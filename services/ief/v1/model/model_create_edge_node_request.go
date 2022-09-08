@@ -10,9 +10,9 @@ import (
 type CreateEdgeNodeRequest struct {
 
 	// 铂金版实例ID，专业版实例为空值
-	IefInstanceId *string `json:"ief-instance-id,omitempty" xml:"ief-instance-id"`
+	IefInstanceId *string `json:"ief-instance-id,omitempty"`
 
-	Body *Node `json:"body,omitempty" xml:"body"`
+	Body *Node `json:"body,omitempty"`
 }
 
 func (o CreateEdgeNodeRequest) String() string {

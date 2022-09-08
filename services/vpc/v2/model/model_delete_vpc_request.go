@@ -10,7 +10,7 @@ import (
 type DeleteVpcRequest struct {
 
 	// 虚拟私有云ID
-	VpcId string `json:"vpc_id" xml:"vpc_id"`
+	VpcId string `json:"vpc_id"`
 }
 
 func (o DeleteVpcRequest) String() string {

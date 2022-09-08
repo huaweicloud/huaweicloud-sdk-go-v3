@@ -10,10 +10,10 @@ import (
 type ShowWorkItemWrokflowConfigRequest struct {
 
 	// devcloud项目的32位id
-	ProjectId string `json:"project_id" xml:"project_id"`
+	ProjectId string `json:"project_id"`
 
 	// 看板id
-	BoardId string `json:"board_id" xml:"board_id"`
+	BoardId string `json:"board_id"`
 }
 
 func (o ShowWorkItemWrokflowConfigRequest) String() string {

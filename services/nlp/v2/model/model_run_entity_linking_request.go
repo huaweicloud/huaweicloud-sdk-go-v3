@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RunEntityLinkingRequest struct {
-	Body *PostEntityLinkingRequest `json:"body,omitempty" xml:"body"`
+	Body *PostEntityLinkingRequest `json:"body,omitempty"`
 }
 
 func (o RunEntityLinkingRequest) String() string {

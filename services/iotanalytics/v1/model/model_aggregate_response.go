@@ -10,16 +10,16 @@ import (
 type AggregateResponse struct {
 
 	// 输入参数
-	Inputs *[]InputResponse `json:"inputs,omitempty" xml:"inputs"`
+	Inputs *[]InputResponse `json:"inputs,omitempty"`
 
-	Expression *Expression `json:"expression,omitempty" xml:"expression"`
+	Expression *Expression `json:"expression,omitempty"`
 
 	// 输出属性名(不推荐使用，待废弃，使用outputs替代)
-	OutputProperty *string `json:"output_property,omitempty" xml:"output_property"`
+	OutputProperty *string `json:"output_property,omitempty"`
 
-	Outputs *[]OutputResponse `json:"outputs,omitempty" xml:"outputs"`
+	Outputs *[]OutputResponse `json:"outputs,omitempty"`
 
-	Schedule *DtSchedule `json:"schedule,omitempty" xml:"schedule"`
+	Schedule *DtSchedule `json:"schedule,omitempty"`
 }
 
 func (o AggregateResponse) String() string {

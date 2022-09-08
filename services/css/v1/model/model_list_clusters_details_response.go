@@ -10,7 +10,7 @@ import (
 type ListClustersDetailsResponse struct {
 
 	// 集群对象列表。
-	Clusters       *[]ClusterList `json:"clusters,omitempty" xml:"clusters"`
+	Clusters       *[]ClusterList `json:"clusters,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }
 

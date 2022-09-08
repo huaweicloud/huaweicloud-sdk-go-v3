@@ -9,7 +9,7 @@ import (
 type FilePath struct {
 
 	// 文件在OBS上的路径
-	Path *string `json:"path,omitempty" xml:"path"`
+	Path *string `json:"path,omitempty"`
 }
 
 func (o FilePath) String() string {

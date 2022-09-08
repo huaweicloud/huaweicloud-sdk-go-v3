@@ -10,9 +10,9 @@ import (
 type UpdatePublicZoneRequest struct {
 
 	// 待修改zone的ID
-	ZoneId string `json:"zone_id" xml:"zone_id"`
+	ZoneId string `json:"zone_id"`
 
-	Body *UpdatePublicZoneInfo `json:"body,omitempty" xml:"body"`
+	Body *UpdatePublicZoneInfo `json:"body,omitempty"`
 }
 
 func (o UpdatePublicZoneRequest) String() string {

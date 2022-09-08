@@ -12,16 +12,16 @@ import (
 type UrlDomainBaseInfo struct {
 
 	// 自定义域名
-	UrlDomain string `json:"url_domain" xml:"url_domain"`
+	UrlDomain string `json:"url_domain"`
 
 	// 自定义域名的编号
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
 	// CNAME解析状态 - 1: 未解析 - 2: 解析中 - 3: 解析成功 - 4: 解析失败
-	Status UrlDomainBaseInfoStatus `json:"status" xml:"status"`
+	Status UrlDomainBaseInfoStatus `json:"status"`
 
 	// 支持的最小SSL版本
-	MinSslVersion string `json:"min_ssl_version" xml:"min_ssl_version"`
+	MinSslVersion string `json:"min_ssl_version"`
 }
 
 func (o UrlDomainBaseInfo) String() string {

@@ -10,9 +10,9 @@ import (
 type CreateFeatureV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
-	Body *FeatureToggle `json:"body,omitempty" xml:"body"`
+	Body *FeatureToggle `json:"body,omitempty"`
 }
 
 func (o CreateFeatureV2Request) String() string {

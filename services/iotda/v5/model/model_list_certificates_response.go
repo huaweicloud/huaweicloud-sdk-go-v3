@@ -10,9 +10,9 @@ import (
 type ListCertificatesResponse struct {
 
 	// 证书列表。
-	Certificates *[]CertificatesRspDto `json:"certificates,omitempty" xml:"certificates"`
+	Certificates *[]CertificatesRspDto `json:"certificates,omitempty"`
 
-	Page           *Page `json:"page,omitempty" xml:"page"`
+	Page           *Page `json:"page,omitempty"`
 	HttpStatusCode int   `json:"-"`
 }
 

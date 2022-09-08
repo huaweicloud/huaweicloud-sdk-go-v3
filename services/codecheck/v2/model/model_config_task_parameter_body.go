@@ -10,19 +10,19 @@ import (
 type ConfigTaskParameterBody struct {
 
 	// 检查工具ID
-	CheckId int32 `json:"check_id" xml:"check_id"`
+	CheckId int32 `json:"check_id"`
 
 	// 规则集ID
-	RulesetId string `json:"ruleset_id" xml:"ruleset_id"`
+	RulesetId string `json:"ruleset_id"`
 
 	// 规则集语言
-	Language string `json:"language" xml:"language"`
+	Language string `json:"language"`
 
 	// off：关闭，on：开启
-	Status string `json:"status" xml:"status"`
+	Status string `json:"status"`
 
 	// 检查参数信息
-	TaskCheckSettings []TaskCheckSettingsItem `json:"task_check_settings" xml:"task_check_settings"`
+	TaskCheckSettings []TaskCheckSettingsItem `json:"task_check_settings"`
 }
 
 func (o ConfigTaskParameterBody) String() string {

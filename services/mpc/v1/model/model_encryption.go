@@ -7,7 +7,7 @@ import (
 )
 
 type Encryption struct {
-	HlsEncrypt *HlsEncrypt `json:"hls_encrypt,omitempty" xml:"hls_encrypt"`
+	HlsEncrypt *HlsEncrypt `json:"hls_encrypt,omitempty"`
 }
 
 func (o Encryption) String() string {

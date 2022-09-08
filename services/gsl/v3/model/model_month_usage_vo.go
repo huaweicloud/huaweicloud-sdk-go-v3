@@ -9,10 +9,10 @@ import (
 type MonthUsageVo struct {
 
 	// SIM卡ID
-	SimCardId *int64 `json:"sim_card_id,omitempty" xml:"sim_card_id"`
+	SimCardId *int64 `json:"sim_card_id,omitempty"`
 
 	// 月用量
-	FlowUsages *[]FlowUsageVo `json:"flow_usages,omitempty" xml:"flow_usages"`
+	FlowUsages *[]FlowUsageVo `json:"flow_usages,omitempty"`
 }
 
 func (o MonthUsageVo) String() string {

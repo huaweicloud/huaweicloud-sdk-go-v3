@@ -10,7 +10,7 @@ import (
 type BatchCreateJobReq struct {
 
 	// 创建任务请求体
-	Jobs []CreateJobReq `json:"jobs" xml:"jobs"`
+	Jobs []CreateJobReq `json:"jobs"`
 }
 
 func (o BatchCreateJobReq) String() string {

@@ -10,10 +10,10 @@ import (
 type NtpConfigs struct {
 
 	// ntp服务是否开启
-	NtpEnabled *bool `json:"ntp_enabled,omitempty" xml:"ntp_enabled"`
+	NtpEnabled *bool `json:"ntp_enabled,omitempty"`
 
 	// ntp server地址
-	Ntpservers *[]string `json:"ntpservers,omitempty" xml:"ntpservers"`
+	Ntpservers *[]string `json:"ntpservers,omitempty"`
 }
 
 func (o NtpConfigs) String() string {

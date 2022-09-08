@@ -10,7 +10,7 @@ import (
 type KeystoneDeleteIdentityProviderRequest struct {
 
 	// 待删除的身份提供商ID。
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 }
 
 func (o KeystoneDeleteIdentityProviderRequest) String() string {

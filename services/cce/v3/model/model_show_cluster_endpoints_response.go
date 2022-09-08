@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ShowClusterEndpointsResponse struct {
-	Metadata *Metadata `json:"metadata,omitempty" xml:"metadata"`
+	Metadata *Metadata `json:"metadata,omitempty"`
 
-	Spec *OpenApiResponseSpec `json:"spec,omitempty" xml:"spec"`
+	Spec *OpenApiResponseSpec `json:"spec,omitempty"`
 
-	Status         *MasterEipResponseStatus `json:"status,omitempty" xml:"status"`
+	Status         *MasterEipResponseStatus `json:"status,omitempty"`
 	HttpStatusCode int                      `json:"-"`
 }
 

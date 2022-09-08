@@ -9,17 +9,17 @@ import (
 type OriginPara struct {
 
 	// 片源时长，单位：秒
-	Duration *int32 `json:"duration,omitempty" xml:"duration"`
+	Duration *int32 `json:"duration,omitempty"`
 
 	// 片源时长，单位：毫秒
-	DurationMs *int64 `json:"duration_ms,omitempty" xml:"duration_ms"`
+	DurationMs *int64 `json:"duration_ms,omitempty"`
 
 	// 文件格式
-	FileFormat *string `json:"file_format,omitempty" xml:"file_format"`
+	FileFormat *string `json:"file_format,omitempty"`
 
-	Video *VideoInfo `json:"video,omitempty" xml:"video"`
+	Video *VideoInfo `json:"video,omitempty"`
 
-	Audio *AudioInfo `json:"audio,omitempty" xml:"audio"`
+	Audio *AudioInfo `json:"audio,omitempty"`
 }
 
 func (o OriginPara) String() string {

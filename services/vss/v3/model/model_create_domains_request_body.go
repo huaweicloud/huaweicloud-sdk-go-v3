@@ -9,10 +9,10 @@ import (
 type CreateDomainsRequestBody struct {
 
 	// 域名
-	DomainName string `json:"domain_name" xml:"domain_name"`
+	DomainName string `json:"domain_name"`
 
 	// 域名的别名
-	Alias string `json:"alias" xml:"alias"`
+	Alias string `json:"alias"`
 }
 
 func (o CreateDomainsRequestBody) String() string {

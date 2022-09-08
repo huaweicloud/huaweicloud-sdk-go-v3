@@ -10,13 +10,13 @@ import (
 type InstanceStatistics struct {
 
 	// 该资源分组中当前处在告警状态的资源个数。
-	Unhealth *int32 `json:"unhealth,omitempty" xml:"unhealth"`
+	Unhealth *int32 `json:"unhealth,omitempty"`
 
 	// 该资源分组中资源的总个数。
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 
 	// 该资源分组中选择的资源类型个数，如资源分组添加了弹性云服务、弹性公网IP和带宽则值为2。
-	TypeStatistics *int32 `json:"type_statistics,omitempty" xml:"type_statistics"`
+	TypeStatistics *int32 `json:"type_statistics,omitempty"`
 }
 
 func (o InstanceStatistics) String() string {

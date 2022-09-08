@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateChannelRequest struct {
-	Body *ChannelCreateReq `json:"body,omitempty" xml:"body"`
+	Body *ChannelCreateReq `json:"body,omitempty"`
 }
 
 func (o CreateChannelRequest) String() string {

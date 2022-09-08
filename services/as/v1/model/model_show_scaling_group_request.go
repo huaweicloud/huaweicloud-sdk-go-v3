@@ -10,7 +10,7 @@ import (
 type ShowScalingGroupRequest struct {
 
 	// 伸缩组ID。
-	ScalingGroupId string `json:"scaling_group_id" xml:"scaling_group_id"`
+	ScalingGroupId string `json:"scaling_group_id"`
 }
 
 func (o ShowScalingGroupRequest) String() string {

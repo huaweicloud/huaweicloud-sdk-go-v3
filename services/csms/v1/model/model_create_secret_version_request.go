@@ -10,9 +10,9 @@ import (
 type CreateSecretVersionRequest struct {
 
 	// 凭据名称。
-	SecretName string `json:"secret_name" xml:"secret_name"`
+	SecretName string `json:"secret_name"`
 
-	Body *CreateSecretVersionRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreateSecretVersionRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateSecretVersionRequest) String() string {

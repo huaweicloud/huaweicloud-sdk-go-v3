@@ -10,9 +10,9 @@ import (
 type ResizeClusterRequest struct {
 
 	// 待调整大小的集群ID
-	ClusterId string `json:"cluster_id" xml:"cluster_id"`
+	ClusterId string `json:"cluster_id"`
 
-	Body *ResizeClusterRequestBody `json:"body,omitempty" xml:"body"`
+	Body *ResizeClusterRequestBody `json:"body,omitempty"`
 }
 
 func (o ResizeClusterRequest) String() string {

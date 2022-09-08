@@ -8,7 +8,7 @@ import (
 
 // 输出为hosting时，hosting结果文件的相关信息
 type TaskHostingResult struct {
-	HostingResult *TaskHostingResultHostingResult `json:"hosting_result,omitempty" xml:"hosting_result"`
+	HostingResult *TaskHostingResultHostingResult `json:"hosting_result,omitempty"`
 }
 
 func (o TaskHostingResult) String() string {

@@ -10,10 +10,10 @@ import (
 type ProtectedInstanceAttachment struct {
 
 	// 复制对ID。
-	Replication string `json:"replication" xml:"replication"`
+	Replication string `json:"replication"`
 
 	// 挂载点。
-	Device string `json:"device" xml:"device"`
+	Device string `json:"device"`
 }
 
 func (o ProtectedInstanceAttachment) String() string {

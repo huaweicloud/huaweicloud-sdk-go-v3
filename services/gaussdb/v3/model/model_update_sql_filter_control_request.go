@@ -10,12 +10,12 @@ import (
 type UpdateSqlFilterControlRequest struct {
 
 	// 语言。
-	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *string `json:"X-Language,omitempty"`
 
 	// 实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
-	Body *OperateSqlFilterControlReq `json:"body,omitempty" xml:"body"`
+	Body *OperateSqlFilterControlReq `json:"body,omitempty"`
 }
 
 func (o UpdateSqlFilterControlRequest) String() string {

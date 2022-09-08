@@ -9,10 +9,10 @@ import (
 type RepoListInfoV2 struct {
 
 	// 仓库列表
-	Repositories *[]RepoInfoV2 `json:"repositories,omitempty" xml:"repositories"`
+	Repositories *[]RepoInfoV2 `json:"repositories,omitempty"`
 
 	// 仓库总数
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 }
 
 func (o RepoListInfoV2) String() string {

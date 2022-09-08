@@ -10,10 +10,10 @@ import (
 type SaslPlainAuthInfo struct {
 
 	// 用户名。支持大小写字母、数字、“.”、“-” 、“_”
-	Username *string `json:"username,omitempty" xml:"username"`
+	Username *string `json:"username,omitempty"`
 
 	// 密码
-	Password *string `json:"password,omitempty" xml:"password"`
+	Password *string `json:"password,omitempty"`
 }
 
 func (o SaslPlainAuthInfo) String() string {

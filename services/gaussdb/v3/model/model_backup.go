@@ -12,25 +12,25 @@ import (
 type Backup struct {
 
 	// 备份ID
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 备份名称。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 备份描述。
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 备份开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”，其中T指时间字段的开始；Z指时区偏移量。
-	BeginTime *string `json:"begin_time,omitempty" xml:"begin_time"`
+	BeginTime *string `json:"begin_time,omitempty"`
 
 	// 备份状态，取值： - BUILDING：备份中。 - COMPLETED：备份完成。 - FAILED：备份失败。 - AVAILABLE：备份可用。
-	Status *BackupStatus `json:"status,omitempty" xml:"status"`
+	Status *BackupStatus `json:"status,omitempty"`
 
 	// 备份类型，取值： - manual：手动全量备份。
-	Type *BackupType `json:"type,omitempty" xml:"type"`
+	Type *BackupType `json:"type,omitempty"`
 
 	// 实例ID。
-	InstanceId *string `json:"instance_id,omitempty" xml:"instance_id"`
+	InstanceId *string `json:"instance_id,omitempty"`
 }
 
 func (o Backup) String() string {

@@ -636,6 +636,28 @@ func (c *GaussDBforopenGaussClient) ShowInstanceConfigurationInvoker(request *mo
 	return &ShowInstanceConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowJobDetail 获取指定ID的任务信息。
+//
+// 获取指定ID的任务信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ShowJobDetail(request *model.ShowJobDetailRequest) (*model.ShowJobDetailResponse, error) {
+	requestDef := GenReqDefForShowJobDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowJobDetailResponse), nil
+	}
+}
+
+// ShowJobDetailInvoker 获取指定ID的任务信息。
+func (c *GaussDBforopenGaussClient) ShowJobDetailInvoker(request *model.ShowJobDetailRequest) *ShowJobDetailInvoker {
+	requestDef := GenReqDefForShowJobDetail()
+	return &ShowJobDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SwitchShard 分片节点主备切换。
 //
 // 支持用户对单个或多个DN分片做主备切换，同一分组内只能指定一个新的备节点进行升主操作。

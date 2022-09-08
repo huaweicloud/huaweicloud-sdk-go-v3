@@ -9,16 +9,16 @@ import (
 type MediaDetail struct {
 
 	// 任务名称
-	Features *[]string `json:"features,omitempty" xml:"features"`
+	Features *[]string `json:"features,omitempty"`
 
-	OriginPara *OriginPara `json:"origin_para,omitempty" xml:"origin_para"`
+	OriginPara *OriginPara `json:"origin_para,omitempty"`
 
 	// 多路输出片源信息
-	OutputVideoParas *[]OutputVideoPara `json:"output_video_paras,omitempty" xml:"output_video_paras"`
+	OutputVideoParas *[]OutputVideoPara `json:"output_video_paras,omitempty"`
 
-	OutputThumbnailPara *OutputThumbnailPara `json:"output_thumbnail_para,omitempty" xml:"output_thumbnail_para"`
+	OutputThumbnailPara *OutputThumbnailPara `json:"output_thumbnail_para,omitempty"`
 
-	OutputWatermarkParas *OutputWatermarkPara `json:"output_watermark_paras,omitempty" xml:"output_watermark_paras"`
+	OutputWatermarkParas *OutputWatermarkPara `json:"output_watermark_paras,omitempty"`
 }
 
 func (o MediaDetail) String() string {

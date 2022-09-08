@@ -8,9 +8,9 @@ import (
 
 // Response Object
 type BatchSetSmnResponse struct {
-	Results *[]ImportSmnResp `json:"results,omitempty" xml:"results"`
+	Results *[]ImportSmnResp `json:"results,omitempty"`
 
-	Count          *int32 `json:"count,omitempty" xml:"count"`
+	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

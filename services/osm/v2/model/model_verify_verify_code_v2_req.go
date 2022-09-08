@@ -9,22 +9,22 @@ import (
 type VerifyVerifyCodeV2Req struct {
 
 	// 验证码
-	VerifyCode string `json:"verify_code" xml:"verify_code"`
+	VerifyCode string `json:"verify_code"`
 
 	// 联系方式的值
-	ContactValue string `json:"contact_value" xml:"contact_value"`
+	ContactValue string `json:"contact_value"`
 
 	// 联系方式的类型。0：短信；1：邮件
-	ContactWay int32 `json:"contact_way" xml:"contact_way"`
+	ContactWay int32 `json:"contact_way"`
 
 	// 国家码
-	AreaCode *string `json:"area_code,omitempty" xml:"area_code"`
+	AreaCode *string `json:"area_code,omitempty"`
 
 	// 子用户id
-	XCustomerId *string `json:"x_customer_id,omitempty" xml:"x_customer_id"`
+	XCustomerId *string `json:"x_customer_id,omitempty"`
 
 	// 客户id
-	CustomerId *string `json:"customer_id,omitempty" xml:"customer_id"`
+	CustomerId *string `json:"customer_id,omitempty"`
 }
 
 func (o VerifyVerifyCodeV2Req) String() string {

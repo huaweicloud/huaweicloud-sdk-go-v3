@@ -10,10 +10,10 @@ import (
 type ExtraDhcpOpt struct {
 
 	// Option名称
-	OptName *string `json:"opt_name,omitempty" xml:"opt_name"`
+	OptName *string `json:"opt_name,omitempty"`
 
 	// Option值
-	OptValue *string `json:"opt_value,omitempty" xml:"opt_value"`
+	OptValue *string `json:"opt_value,omitempty"`
 }
 
 func (o ExtraDhcpOpt) String() string {

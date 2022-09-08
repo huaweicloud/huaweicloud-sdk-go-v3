@@ -10,10 +10,10 @@ import (
 type RelatedIntention struct {
 
 	// 意图名称。
-	Intention string `json:"intention" xml:"intention"`
+	Intention string `json:"intention"`
 
 	// 意图置信度。
-	Confidence *float64 `json:"confidence,omitempty" xml:"confidence"`
+	Confidence *float64 `json:"confidence,omitempty"`
 }
 
 func (o RelatedIntention) String() string {

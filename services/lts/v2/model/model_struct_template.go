@@ -13,30 +13,30 @@ import (
 type StructTemplate struct {
 
 	// 项目id
-	ProjectId string `json:"project_id" xml:"project_id"`
+	ProjectId string `json:"project_id"`
 
 	// 模板名称
-	TemplateName string `json:"template_name" xml:"template_name"`
+	TemplateName string `json:"template_name"`
 
 	// 模板类型，regex,json,split,nginx
-	TemplateType StructTemplateTemplateType `json:"template_type" xml:"template_type"`
+	TemplateType StructTemplateTemplateType `json:"template_type"`
 
 	// 示例日志
-	DemoLog string `json:"demo_log" xml:"demo_log"`
+	DemoLog string `json:"demo_log"`
 
 	// 示例字段数组
-	DemoFields []DemoField `json:"demo_fields" xml:"demo_fields"`
+	DemoFields []DemoField `json:"demo_fields"`
 
 	// Tag字段数组
-	TagFields []TagFieldNew `json:"tag_fields" xml:"tag_fields"`
+	TagFields []TagFieldNew `json:"tag_fields"`
 
-	Rule *TemplateRule `json:"rule" xml:"rule"`
+	Rule *TemplateRule `json:"rule"`
 
 	// 示例日志标签
-	DemoLabel *string `json:"demo_label,omitempty" xml:"demo_label"`
+	DemoLabel *string `json:"demo_label,omitempty"`
 
 	// 创建时间
-	CreateTime *int64 `json:"create_time,omitempty" xml:"create_time"`
+	CreateTime *int64 `json:"create_time,omitempty"`
 }
 
 func (o StructTemplate) String() string {

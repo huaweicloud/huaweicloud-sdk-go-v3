@@ -9,33 +9,33 @@ import (
 type ChileIdCardResult struct {
 
 	// 姓氏。
-	Surname *[]string `json:"surname,omitempty" xml:"surname"`
+	Surname *[]string `json:"surname,omitempty"`
 
 	// 名。
-	GivenName *string `json:"given_name,omitempty" xml:"given_name"`
+	GivenName *string `json:"given_name,omitempty"`
 
 	// 国籍。
-	Nationality *string `json:"nationality,omitempty" xml:"nationality"`
+	Nationality *string `json:"nationality,omitempty"`
 
 	// 性别。
-	Sex *string `json:"sex,omitempty" xml:"sex"`
+	Sex *string `json:"sex,omitempty"`
 
 	// 出生日。
-	Birth *string `json:"birth,omitempty" xml:"birth"`
+	Birth *string `json:"birth,omitempty"`
 
 	// 发行日。
-	IssueDate *string `json:"issue_date,omitempty" xml:"issue_date"`
+	IssueDate *string `json:"issue_date,omitempty"`
 
 	// 有效期。
-	ExpiryDate *string `json:"expiry_date,omitempty" xml:"expiry_date"`
+	ExpiryDate *string `json:"expiry_date,omitempty"`
 
 	// 文档编号。
-	DocumentNumber *string `json:"document_number,omitempty" xml:"document_number"`
+	DocumentNumber *string `json:"document_number,omitempty"`
 
 	// 身份证号。
-	Number *string `json:"number,omitempty" xml:"number"`
+	Number *string `json:"number,omitempty"`
 
-	Confidence *ChileIdCardConfidence `json:"confidence,omitempty" xml:"confidence"`
+	Confidence *ChileIdCardConfidence `json:"confidence,omitempty"`
 }
 
 func (o ChileIdCardResult) String() string {

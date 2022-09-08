@@ -10,9 +10,9 @@ import (
 type UpdateDomainApiAclPolicyRequest struct {
 
 	// 账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
-	DomainId string `json:"domain_id" xml:"domain_id"`
+	DomainId string `json:"domain_id"`
 
-	Body *UpdateDomainApiAclPolicyRequestBody `json:"body,omitempty" xml:"body"`
+	Body *UpdateDomainApiAclPolicyRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateDomainApiAclPolicyRequest) String() string {

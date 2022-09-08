@@ -10,22 +10,22 @@ import (
 type ModelArtsContentRsp struct {
 
 	// 服务名称
-	ServiceName *string `json:"serviceName,omitempty" xml:"serviceName"`
+	ServiceName *string `json:"serviceName,omitempty"`
 
 	// 访问地址
-	AccessAddress *string `json:"accessAddress,omitempty" xml:"accessAddress"`
+	AccessAddress *string `json:"accessAddress,omitempty"`
 
 	// 校验参数
-	VerifyBody *string `json:"verifyBody,omitempty" xml:"verifyBody"`
+	VerifyBody *string `json:"verifyBody,omitempty"`
 
 	// 租户的AK
-	Ak *string `json:"ak,omitempty" xml:"ak"`
+	Ak *string `json:"ak,omitempty"`
 
 	// 租户的SK
-	Sk *string `json:"sk,omitempty" xml:"sk"`
+	Sk *string `json:"sk,omitempty"`
 
 	// 项目id
-	ProjectId *string `json:"projectId,omitempty" xml:"projectId"`
+	ProjectId *string `json:"projectId,omitempty"`
 }
 
 func (o ModelArtsContentRsp) String() string {

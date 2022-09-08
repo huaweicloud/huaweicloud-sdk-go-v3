@@ -8,7 +8,7 @@ import (
 
 // This is a auto create Body Object
 type ResetServerPasswordRequestBody struct {
-	ResetPassword *ResetServerPasswordOption `json:"reset-password" xml:"reset-password"`
+	ResetPassword *ResetServerPasswordOption `json:"reset-password"`
 }
 
 func (o ResetServerPasswordRequestBody) String() string {

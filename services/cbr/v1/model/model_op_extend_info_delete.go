@@ -9,10 +9,10 @@ import (
 type OpExtendInfoDelete struct {
 
 	// 备份副本ID
-	BackupId string `json:"backup_id" xml:"backup_id"`
+	BackupId string `json:"backup_id"`
 
 	// 备份名称
-	BackupName string `json:"backup_name" xml:"backup_name"`
+	BackupName string `json:"backup_name"`
 }
 
 func (o OpExtendInfoDelete) String() string {

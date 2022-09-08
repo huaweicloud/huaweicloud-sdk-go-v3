@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ListSubCustomersRequest struct {
-	Body *QuerySubCustomerListReq `json:"body,omitempty" xml:"body"`
+	Body *QuerySubCustomerListReq `json:"body,omitempty"`
 }
 
 func (o ListSubCustomersRequest) String() string {

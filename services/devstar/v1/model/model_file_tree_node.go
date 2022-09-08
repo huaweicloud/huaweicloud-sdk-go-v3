@@ -9,13 +9,13 @@ import (
 type FileTreeNode struct {
 
 	// 文件路径
-	FilePath *string `json:"file_path,omitempty" xml:"file_path"`
+	FilePath *string `json:"file_path,omitempty"`
 
 	// 文件名称
-	FileName *string `json:"file_name,omitempty" xml:"file_name"`
+	FileName *string `json:"file_name,omitempty"`
 
 	// 是否文件夹
-	FileType *string `json:"file_type,omitempty" xml:"file_type"`
+	FileType *string `json:"file_type,omitempty"`
 }
 
 func (o FileTreeNode) String() string {

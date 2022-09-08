@@ -10,13 +10,13 @@ import (
 type ShowTopicAccessPolicyResponse struct {
 
 	// topic名称。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// topic类型。
-	TopicType *int32 `json:"topic_type,omitempty" xml:"topic_type"`
+	TopicType *int32 `json:"topic_type,omitempty"`
 
 	// 权限列表。
-	Policies       *[]PolicyEntity `json:"policies,omitempty" xml:"policies"`
+	Policies       *[]PolicyEntity `json:"policies,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }
 

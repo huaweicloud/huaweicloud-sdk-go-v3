@@ -9,71 +9,71 @@ import (
 type IssueItemSfV4 struct {
 
 	// 实际工时
-	ActualWorkHours *float64 `json:"actual_work_hours,omitempty" xml:"actual_work_hours"`
+	ActualWorkHours *float64 `json:"actual_work_hours,omitempty"`
 
-	AssignedUser *IssueUser `json:"assigned_user,omitempty" xml:"assigned_user"`
+	AssignedUser *IssueUser `json:"assigned_user,omitempty"`
 
-	Author *IssueUser `json:"author,omitempty" xml:"author"`
+	Author *IssueUser `json:"author,omitempty"`
 
 	// 工作项开始时间
-	BeginTime *int64 `json:"begin_time,omitempty" xml:"begin_time"`
+	BeginTime *int64 `json:"begin_time,omitempty"`
 
 	// 关闭工作项的时间
-	ClosedTime *int64 `json:"closed_time,omitempty" xml:"closed_time"`
+	ClosedTime *int64 `json:"closed_time,omitempty"`
 
 	// 创建时间
-	CreatedTime *int64 `json:"created_time,omitempty" xml:"created_time"`
+	CreatedTime *int64 `json:"created_time,omitempty"`
 
 	// 自定义属性
-	CustomFeilds *[]CustomFeildRecord `json:"custom_feilds,omitempty" xml:"custom_feilds"`
+	CustomFeilds *[]CustomFeildRecord `json:"custom_feilds,omitempty"`
 
-	Developer *IssueUser `json:"developer,omitempty" xml:"developer"`
+	Developer *IssueUser `json:"developer,omitempty"`
 
 	// 发现问题的版本
-	DiscoverVersion *string `json:"discover_version,omitempty" xml:"discover_version"`
+	DiscoverVersion *string `json:"discover_version,omitempty"`
 
 	// 工作项结束时间
-	EndTime *int64 `json:"end_time,omitempty" xml:"end_time"`
+	EndTime *int64 `json:"end_time,omitempty"`
 
 	// 工作项进度值
-	DoneRatio *int32 `json:"done_ratio,omitempty" xml:"done_ratio"`
+	DoneRatio *int32 `json:"done_ratio,omitempty"`
 
 	// 预计工时
-	ExpectedWorkHours *float64 `json:"expected_work_hours,omitempty" xml:"expected_work_hours"`
+	ExpectedWorkHours *float64 `json:"expected_work_hours,omitempty"`
 
 	// 顺序
-	Order *int32 `json:"order,omitempty" xml:"order"`
+	Order *int32 `json:"order,omitempty"`
 
 	// 父工作项的id
-	ParentIssueId *int32 `json:"parent_issue_id,omitempty" xml:"parent_issue_id"`
+	ParentIssueId *int32 `json:"parent_issue_id,omitempty"`
 
 	// 发布的版本
-	ReleaseVersion *string `json:"release_version,omitempty" xml:"release_version"`
+	ReleaseVersion *string `json:"release_version,omitempty"`
 
 	// 根工作项的id
-	RootIssueId *int32 `json:"root_issue_id,omitempty" xml:"root_issue_id"`
+	RootIssueId *int32 `json:"root_issue_id,omitempty"`
 
-	StoryPoint *IssueItemSfV4StoryPoint `json:"story_point,omitempty" xml:"story_point"`
+	StoryPoint *IssueItemSfV4StoryPoint `json:"story_point,omitempty"`
 
-	Domain *IssueItemSfV4Domain `json:"domain,omitempty" xml:"domain"`
+	Domain *IssueItemSfV4Domain `json:"domain,omitempty"`
 
-	Iteration *IssueItemSfV4Iteration `json:"iteration,omitempty" xml:"iteration"`
+	Iteration *IssueItemSfV4Iteration `json:"iteration,omitempty"`
 
-	Module *IssueItemSfV4Module `json:"module,omitempty" xml:"module"`
+	Module *IssueItemSfV4Module `json:"module,omitempty"`
 
-	Priority *IssueItemSfV4Priority `json:"priority,omitempty" xml:"priority"`
+	Priority *IssueItemSfV4Priority `json:"priority,omitempty"`
 
-	Severity *IssueItemSfV4Severity `json:"severity,omitempty" xml:"severity"`
+	Severity *IssueItemSfV4Severity `json:"severity,omitempty"`
 
-	Status *IssueItemSfV4Status `json:"status,omitempty" xml:"status"`
+	Status *IssueItemSfV4Status `json:"status,omitempty"`
 
-	Tracker *IssueItemSfV4Tracker `json:"tracker,omitempty" xml:"tracker"`
+	Tracker *IssueItemSfV4Tracker `json:"tracker,omitempty"`
 
 	// 工作项标题
-	Subject *string `json:"subject,omitempty" xml:"subject"`
+	Subject *string `json:"subject,omitempty"`
 
 	// 工作项更新时间
-	UpdatedTime *int64 `json:"updated_time,omitempty" xml:"updated_time"`
+	UpdatedTime *int64 `json:"updated_time,omitempty"`
 }
 
 func (o IssueItemSfV4) String() string {

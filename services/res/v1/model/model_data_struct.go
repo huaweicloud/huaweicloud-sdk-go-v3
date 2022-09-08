@@ -7,15 +7,15 @@ import (
 )
 
 type DataStruct struct {
-	Behaviors *BehaviorsConfig `json:"behaviors,omitempty" xml:"behaviors"`
+	Behaviors *BehaviorsConfig `json:"behaviors,omitempty"`
 
 	// 物品参数。
-	ItemAttrs *[]ItemAttrs `json:"item_attrs,omitempty" xml:"item_attrs"`
+	ItemAttrs *[]ItemAttrs `json:"item_attrs,omitempty"`
 
 	// 用户参数。
-	UserAttrs *[]UserAttrs `json:"user_attrs,omitempty" xml:"user_attrs"`
+	UserAttrs *[]UserAttrs `json:"user_attrs,omitempty"`
 
-	UserDynamicAttr *UserDynamicAttr `json:"user_dynamic_attr,omitempty" xml:"user_dynamic_attr"`
+	UserDynamicAttr *UserDynamicAttr `json:"user_dynamic_attr,omitempty"`
 }
 
 func (o DataStruct) String() string {

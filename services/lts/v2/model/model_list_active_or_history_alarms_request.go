@@ -13,18 +13,18 @@ import (
 type ListActiveOrHistoryAlarmsRequest struct {
 
 	// domainId
-	DomainId string `json:"domain_id" xml:"domain_id"`
+	DomainId string `json:"domain_id"`
 
 	// 是活动告警还是历史告警
-	Type ListActiveOrHistoryAlarmsRequestType `json:"type" xml:"type"`
+	Type ListActiveOrHistoryAlarmsRequestType `json:"type"`
 
 	// 取值为上一页数据的最后一条记录的id(填写上一页数据返回得previous_marker或者next_marker值。)
-	Marker *string `json:"marker,omitempty" xml:"marker"`
+	Marker *string `json:"marker,omitempty"`
 
 	// 每页数据量
-	Limit *int32 `json:"limit,omitempty" xml:"limit"`
+	Limit *int32 `json:"limit,omitempty"`
 
-	Body *ListActiveOrHistoryAlarmsRequestBody `json:"body,omitempty" xml:"body"`
+	Body *ListActiveOrHistoryAlarmsRequestBody `json:"body,omitempty"`
 }
 
 func (o ListActiveOrHistoryAlarmsRequest) String() string {

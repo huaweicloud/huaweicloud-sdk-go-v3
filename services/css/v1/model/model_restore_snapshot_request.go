@@ -10,12 +10,12 @@ import (
 type RestoreSnapshotRequest struct {
 
 	// 恢复快照所属的集群ID。
-	ClusterId string `json:"cluster_id" xml:"cluster_id"`
+	ClusterId string `json:"cluster_id"`
 
 	// 快照ID。
-	SnapshotId string `json:"snapshot_id" xml:"snapshot_id"`
+	SnapshotId string `json:"snapshot_id"`
 
-	Body *RestoreSnapshotReq `json:"body,omitempty" xml:"body"`
+	Body *RestoreSnapshotReq `json:"body,omitempty"`
 }
 
 func (o RestoreSnapshotRequest) String() string {

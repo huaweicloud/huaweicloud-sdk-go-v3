@@ -10,10 +10,10 @@ import (
 type ListClustersRequest struct {
 
 	// 分页参数，列表的偏移量，默认值为0
-	Offset *int32 `json:"offset,omitempty" xml:"offset"`
+	Offset *int32 `json:"offset,omitempty"`
 
 	// 分页参数，列表当前分页的数量限制，默认为10。
-	Limit *int32 `json:"limit,omitempty" xml:"limit"`
+	Limit *int32 `json:"limit,omitempty"`
 }
 
 func (o ListClustersRequest) String() string {

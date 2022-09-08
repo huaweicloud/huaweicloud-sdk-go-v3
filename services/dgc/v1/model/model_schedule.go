@@ -10,11 +10,11 @@ import (
 )
 
 type Schedule struct {
-	ScheType *ScheduleScheType `json:"scheType,omitempty" xml:"scheType"`
+	ScheType *ScheduleScheType `json:"scheType,omitempty"`
 
-	Cron *Cron `json:"cron,omitempty" xml:"cron"`
+	Cron *Cron `json:"cron,omitempty"`
 
-	Event *Event `json:"event,omitempty" xml:"event"`
+	Event *Event `json:"event,omitempty"`
 }
 
 func (o Schedule) String() string {

@@ -11,28 +11,28 @@ import (
 type ApiMock struct {
 
 	// 描述信息。长度不超过255个字符 > 中文字符必须为UTF-8或者unicode编码。
-	Remark *string `json:"remark,omitempty" xml:"remark"`
+	Remark *string `json:"remark,omitempty"`
 
 	// 返回结果
-	ResultContent *string `json:"result_content,omitempty" xml:"result_content"`
+	ResultContent *string `json:"result_content,omitempty"`
 
 	// 版本。字符长度不超过64
-	Version *string `json:"version,omitempty" xml:"version"`
+	Version *string `json:"version,omitempty"`
 
 	// 后端自定义认证ID
-	AuthorizerId *string `json:"authorizer_id,omitempty" xml:"authorizer_id"`
+	AuthorizerId *string `json:"authorizer_id,omitempty"`
 
 	// 编号
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 注册时间
-	RegisterTime *sdktime.SdkTime `json:"register_time,omitempty" xml:"register_time"`
+	RegisterTime *sdktime.SdkTime `json:"register_time,omitempty"`
 
 	// 后端状态   - 1： 有效
-	Status *int32 `json:"status,omitempty" xml:"status"`
+	Status *int32 `json:"status,omitempty"`
 
 	// 修改时间
-	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty" xml:"update_time"`
+	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
 }
 
 func (o ApiMock) String() string {

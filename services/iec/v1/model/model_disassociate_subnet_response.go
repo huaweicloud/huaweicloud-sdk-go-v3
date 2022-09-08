@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type DisassociateSubnetResponse struct {
-	Routetable     *Routetable `json:"routetable,omitempty" xml:"routetable"`
+	Routetable     *Routetable `json:"routetable,omitempty"`
 	HttpStatusCode int         `json:"-"`
 }
 

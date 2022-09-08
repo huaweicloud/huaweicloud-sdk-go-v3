@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RecognizePassportRequest struct {
-	Body *PassportRequestBody `json:"body,omitempty" xml:"body"`
+	Body *PassportRequestBody `json:"body,omitempty"`
 }
 
 func (o RecognizePassportRequest) String() string {

@@ -10,10 +10,10 @@ import (
 type ShowPriceResponse struct {
 
 	// 技术栈价格列表
-	Prices *[]ResourcePrice `json:"prices,omitempty" xml:"prices"`
+	Prices *[]ResourcePrice `json:"prices,omitempty"`
 
 	// 状态
-	Status         *string `json:"status,omitempty" xml:"status"`
+	Status         *string `json:"status,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

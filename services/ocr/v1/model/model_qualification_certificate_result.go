@@ -10,60 +10,60 @@ import (
 type QualificationCertificateResult struct {
 
 	// 身份证号（非必有，依赖对应从业资格证板式）。
-	IdNumber *string `json:"id_number,omitempty" xml:"id_number"`
+	IdNumber *string `json:"id_number,omitempty"`
 
 	// 考核时间（非必有，依赖对应从业资格证板式）。
-	AssessmentDate *string `json:"assessment_date,omitempty" xml:"assessment_date"`
+	AssessmentDate *string `json:"assessment_date,omitempty"`
 
 	// 从业资格证号。
-	CertificateNumber *string `json:"certificate_number,omitempty" xml:"certificate_number"`
+	CertificateNumber *string `json:"certificate_number,omitempty"`
 
 	// 档案号（非必有，依赖对应从业资格证板式）。
-	FileNumber *string `json:"file_number,omitempty" xml:"file_number"`
+	FileNumber *string `json:"file_number,omitempty"`
 
 	// 福路通号（非必有，依赖对应从业资格证板式）。
-	UnionCardNumber *string `json:"union_card_number,omitempty" xml:"union_card_number"`
+	UnionCardNumber *string `json:"union_card_number,omitempty"`
 
 	// 继续教育信息（非必有，依赖对应从业资格证板式）。
-	ContinuingEducationInfo *string `json:"continuing_education_info,omitempty" xml:"continuing_education_info"`
+	ContinuingEducationInfo *string `json:"continuing_education_info,omitempty"`
 
 	// 性别（非必有，依赖对应从业资格证板式）。
-	Sex *string `json:"sex,omitempty" xml:"sex"`
+	Sex *string `json:"sex,omitempty"`
 
 	// 联系电话（非必有，依赖对应从业资格证板式）。
-	PhoneNumber *string `json:"phone_number,omitempty" xml:"phone_number"`
+	PhoneNumber *string `json:"phone_number,omitempty"`
 
 	// 登记时间（非必有，依赖对应从业资格证板式）。
-	RegistrationDate *string `json:"registration_date,omitempty" xml:"registration_date"`
+	RegistrationDate *string `json:"registration_date,omitempty"`
 
 	// 单位（非必有，依赖对应从业资格证板式）。
-	WorkUnit *string `json:"work_unit,omitempty" xml:"work_unit"`
+	WorkUnit *string `json:"work_unit,omitempty"`
 
 	// 诚信考核信息（非必有，依赖对应从业资格证板式）。
-	IntegrityAssessmentInfo *string `json:"integrity_assessment_info,omitempty" xml:"integrity_assessment_info"`
+	IntegrityAssessmentInfo *string `json:"integrity_assessment_info,omitempty"`
 
 	// 国籍（非必有，依赖对应从业资格证板式）。
-	Nationality *string `json:"nationality,omitempty" xml:"nationality"`
+	Nationality *string `json:"nationality,omitempty"`
 
 	// 姓名。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 住址。
-	Address *string `json:"address,omitempty" xml:"address"`
+	Address *string `json:"address,omitempty"`
 
 	// 准驾车型（非必有，依赖对应从业资格证板式）。
-	DrivingClass *string `json:"driving_class,omitempty" xml:"driving_class"`
+	DrivingClass *string `json:"driving_class,omitempty"`
 
 	// 发证机关（非必有，依赖对应从业资格证板式）。
-	IssuingAuthority *string `json:"issuing_authority,omitempty" xml:"issuing_authority"`
+	IssuingAuthority *string `json:"issuing_authority,omitempty"`
 
 	// 出生日期（非必有，依赖对应从业资格证板式）。
-	BirthDate *string `json:"birth_date,omitempty" xml:"birth_date"`
+	BirthDate *string `json:"birth_date,omitempty"`
 
 	// 从业资格列表。
-	QualificationCategoryList *[]QualificationCategory `json:"qualification_category_list,omitempty" xml:"qualification_category_list"`
+	QualificationCategoryList *[]QualificationCategory `json:"qualification_category_list,omitempty"`
 
-	Confidence *QualificationConfidence `json:"confidence,omitempty" xml:"confidence"`
+	Confidence *QualificationConfidence `json:"confidence,omitempty"`
 }
 
 func (o QualificationCertificateResult) String() string {

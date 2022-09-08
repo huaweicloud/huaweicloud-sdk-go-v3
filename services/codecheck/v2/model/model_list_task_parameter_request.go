@@ -10,12 +10,12 @@ import (
 type ListTaskParameterRequest struct {
 
 	// 项目ID
-	ProjectId string `json:"project_id" xml:"project_id"`
+	ProjectId string `json:"project_id"`
 
 	// 任务ID
-	TaskId string `json:"task_id" xml:"task_id"`
+	TaskId string `json:"task_id"`
 
-	Body *ConfigTaskParameterBody `json:"body,omitempty" xml:"body"`
+	Body *ConfigTaskParameterBody `json:"body,omitempty"`
 }
 
 func (o ListTaskParameterRequest) String() string {

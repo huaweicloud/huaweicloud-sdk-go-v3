@@ -13,12 +13,12 @@ import (
 type UpgradeDbVersionRequest struct {
 
 	// 语言
-	XLanguage *UpgradeDbVersionRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *UpgradeDbVersionRequestXLanguage `json:"X-Language,omitempty"`
 
 	// 实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
-	Body *CustomerUpgradeDatabaseVersionReq `json:"body,omitempty" xml:"body"`
+	Body *CustomerUpgradeDatabaseVersionReq `json:"body,omitempty"`
 }
 
 func (o UpgradeDbVersionRequest) String() string {

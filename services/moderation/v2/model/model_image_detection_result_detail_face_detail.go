@@ -10,16 +10,16 @@ import (
 type ImageDetectionResultDetailFaceDetail struct {
 
 	// 人脸区域高度。
-	H *int32 `json:"h,omitempty" xml:"h"`
+	H *int32 `json:"h,omitempty"`
 
 	// 人脸区域宽度。
-	W *int32 `json:"w,omitempty" xml:"w"`
+	W *int32 `json:"w,omitempty"`
 
 	// 人脸区域左上角到y轴距离。
-	X *int32 `json:"x,omitempty" xml:"x"`
+	X *int32 `json:"x,omitempty"`
 
 	// 人脸区域左上角到x轴距离。
-	Y *int32 `json:"y,omitempty" xml:"y"`
+	Y *int32 `json:"y,omitempty"`
 }
 
 func (o ImageDetectionResultDetailFaceDetail) String() string {

@@ -9,13 +9,13 @@ import (
 type SubscriptionOperateRespEvents struct {
 
 	// 失败的错误码
-	ErrorCode *string `json:"error_code,omitempty" xml:"error_code"`
+	ErrorCode *string `json:"error_code,omitempty"`
 
 	// 失败的原因
-	ErrorMsg *string `json:"error_msg,omitempty" xml:"error_msg"`
+	ErrorMsg *string `json:"error_msg,omitempty"`
 
 	// 订阅ID
-	SubscriptionId *string `json:"subscription_id,omitempty" xml:"subscription_id"`
+	SubscriptionId *string `json:"subscription_id,omitempty"`
 }
 
 func (o SubscriptionOperateRespEvents) String() string {

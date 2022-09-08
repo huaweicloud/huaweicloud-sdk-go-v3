@@ -9,19 +9,19 @@ import (
 type SubPicLayoutInfo struct {
 
 	// 画面索引号
-	Id *int32 `json:"id,omitempty" xml:"id"`
+	Id *int32 `json:"id,omitempty"`
 
 	// 画面从左到右的坐标点
-	Left *int32 `json:"left,omitempty" xml:"left"`
+	Left *int32 `json:"left,omitempty"`
 
 	// 画面从上到下的坐标点
-	Top *int32 `json:"top,omitempty" xml:"top"`
+	Top *int32 `json:"top,omitempty"`
 
 	// 小画面的宽度
-	XSize *int32 `json:"xSize,omitempty" xml:"xSize"`
+	XSize *int32 `json:"xSize,omitempty"`
 
 	// 小画面的高度
-	YSize *int32 `json:"ySize,omitempty" xml:"ySize"`
+	YSize *int32 `json:"ySize,omitempty"`
 }
 
 func (o SubPicLayoutInfo) String() string {

@@ -10,12 +10,12 @@ import (
 type UpdateExternalEntityRequest struct {
 
 	// 边缘节点ID
-	EdgeNodeId string `json:"edge_node_id" xml:"edge_node_id"`
+	EdgeNodeId string `json:"edge_node_id"`
 
 	// 外部实体ID
-	ExternalId string `json:"external_id" xml:"external_id"`
+	ExternalId string `json:"external_id"`
 
-	Body *UpdateExternalEntityReqDto `json:"body,omitempty" xml:"body"`
+	Body *UpdateExternalEntityReqDto `json:"body,omitempty"`
 }
 
 func (o UpdateExternalEntityRequest) String() string {

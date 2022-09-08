@@ -13,7 +13,7 @@ import (
 type ListQuotasRequest struct {
 
 	// 指定查询资源类型的配额
-	Type *ListQuotasRequestType `json:"type,omitempty" xml:"type"`
+	Type *ListQuotasRequestType `json:"type,omitempty"`
 }
 
 func (o ListQuotasRequest) String() string {

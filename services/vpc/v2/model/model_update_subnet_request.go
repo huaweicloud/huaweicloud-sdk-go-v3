@@ -10,12 +10,12 @@ import (
 type UpdateSubnetRequest struct {
 
 	// 子网对应的vpc_id
-	VpcId string `json:"vpc_id" xml:"vpc_id"`
+	VpcId string `json:"vpc_id"`
 
 	// 子网ID
-	SubnetId string `json:"subnet_id" xml:"subnet_id"`
+	SubnetId string `json:"subnet_id"`
 
-	Body *UpdateSubnetRequestBody `json:"body,omitempty" xml:"body"`
+	Body *UpdateSubnetRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateSubnetRequest) String() string {

@@ -13,46 +13,46 @@ import (
 type KeypairDetail struct {
 
 	// SSH密钥对的名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// SSH密钥对的ID
-	Id *int64 `json:"id,omitempty" xml:"id"`
+	Id *int64 `json:"id,omitempty"`
 
 	// SSH密钥对的类型
-	Type *KeypairDetailType `json:"type,omitempty" xml:"type"`
+	Type *KeypairDetailType `json:"type,omitempty"`
 
 	// 租户级或者用户级
-	Scope *KeypairDetailScope `json:"scope,omitempty" xml:"scope"`
+	Scope *KeypairDetailScope `json:"scope,omitempty"`
 
 	// SSH密钥对对应的publicKey信息
-	PublicKey *string `json:"public_key,omitempty" xml:"public_key"`
+	PublicKey *string `json:"public_key,omitempty"`
 
 	// SSH密钥对应指纹信息
-	Fingerprint *string `json:"fingerprint,omitempty" xml:"fingerprint"`
+	Fingerprint *string `json:"fingerprint,omitempty"`
 
 	// 是否托管密钥
-	IsKeyProtection *bool `json:"is_key_protection,omitempty" xml:"is_key_protection"`
+	IsKeyProtection *bool `json:"is_key_protection,omitempty"`
 
 	// SSH密钥对删除的标记
-	Deleted *bool `json:"deleted,omitempty" xml:"deleted"`
+	Deleted *bool `json:"deleted,omitempty"`
 
 	// SSH密钥对的描述信息
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// SSH密钥对所属的用户信息
-	UserId *string `json:"user_id,omitempty" xml:"user_id"`
+	UserId *string `json:"user_id,omitempty"`
 
 	// SSH密钥对创建的时间，时间戳，即从1970年1月1日至该时间的总秒数
-	CreateTime *int64 `json:"create_time,omitempty" xml:"create_time"`
+	CreateTime *int64 `json:"create_time,omitempty"`
 
 	// SSH密钥对删除的时间，时间戳，即从1970年1月1日至该时间的总秒数
-	DeleteTime *int64 `json:"delete_time,omitempty" xml:"delete_time"`
+	DeleteTime *int64 `json:"delete_time,omitempty"`
 
 	// SSH密钥对的更新时间，时间戳，即从1970年1月1日至该时间的总秒数
-	UpdateTime *int64 `json:"update_time,omitempty" xml:"update_time"`
+	UpdateTime *int64 `json:"update_time,omitempty"`
 
 	// 冻结状态 - 0：正常状态 - 1：普通冻结 - 2：公安冻结 - 3：普通冻结及公安冻结 - 4：违规冻结 - 5：普通冻结及违规冻结 - 6：公安冻结及违规冻结 - 7：普通冻结、公安冻结及违规冻结 - 8：未实名认证冻结 - 9：普通冻结及未实名认证冻结 - 10：公安冻结及未实名认证冻结
-	FrozenState *int32 `json:"frozen_state,omitempty" xml:"frozen_state"`
+	FrozenState *int32 `json:"frozen_state,omitempty"`
 }
 
 func (o KeypairDetail) String() string {

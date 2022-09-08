@@ -10,9 +10,9 @@ import (
 type ShowBugsPerDeveloperRequest struct {
 
 	// devcloud项目的32位id
-	ProjectId string `json:"project_id" xml:"project_id"`
+	ProjectId string `json:"project_id"`
 
-	Body *MetricRequest2 `json:"body,omitempty" xml:"body"`
+	Body *MetricRequest2 `json:"body,omitempty"`
 }
 
 func (o ShowBugsPerDeveloperRequest) String() string {

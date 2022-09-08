@@ -10,9 +10,9 @@ import (
 type UpdateEventSourceRequest struct {
 
 	// 指定查询的事件源ID
-	SourceId string `json:"source_id" xml:"source_id"`
+	SourceId string `json:"source_id"`
 
-	Body *CustomizeSourceUpdateReq `json:"body,omitempty" xml:"body"`
+	Body *CustomizeSourceUpdateReq `json:"body,omitempty"`
 }
 
 func (o UpdateEventSourceRequest) String() string {

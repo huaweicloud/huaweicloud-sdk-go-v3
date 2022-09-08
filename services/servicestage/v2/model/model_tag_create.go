@@ -9,10 +9,10 @@ import (
 type TagCreate struct {
 
 	// tag标签名称。
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// tag标签描述信息。
-	Description string `json:"description" xml:"description"`
+	Description string `json:"description"`
 }
 
 func (o TagCreate) String() string {

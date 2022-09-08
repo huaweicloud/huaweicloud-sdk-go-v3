@@ -10,16 +10,16 @@ import (
 type TagQuota struct {
 
 	// 配额键
-	QuotaKey string `json:"quota_key" xml:"quota_key"`
+	QuotaKey string `json:"quota_key"`
 
 	// 配额值
-	QuotaLimit int32 `json:"quota_limit" xml:"quota_limit"`
+	QuotaLimit int32 `json:"quota_limit"`
 
 	// 已使用
-	Used int32 `json:"used" xml:"used"`
+	Used int32 `json:"used"`
 
 	// 单位
-	Unit string `json:"unit" xml:"unit"`
+	Unit string `json:"unit"`
 }
 
 func (o TagQuota) String() string {

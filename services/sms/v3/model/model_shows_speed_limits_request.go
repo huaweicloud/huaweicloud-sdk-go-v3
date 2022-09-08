@@ -10,7 +10,7 @@ import (
 type ShowsSpeedLimitsRequest struct {
 
 	// 查询限速信息的任务id
-	TaskId string `json:"task_id" xml:"task_id"`
+	TaskId string `json:"task_id"`
 }
 
 func (o ShowsSpeedLimitsRequest) String() string {

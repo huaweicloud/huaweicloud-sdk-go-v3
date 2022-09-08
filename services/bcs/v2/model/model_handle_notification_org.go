@@ -9,7 +9,7 @@ import (
 type HandleNotificationOrg struct {
 
 	// 加入的组织
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 }
 
 func (o HandleNotificationOrg) String() string {

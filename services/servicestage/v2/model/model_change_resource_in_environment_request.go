@@ -10,9 +10,9 @@ import (
 type ChangeResourceInEnvironmentRequest struct {
 
 	// 环境ID。
-	EnvironmentId string `json:"environment_id" xml:"environment_id"`
+	EnvironmentId string `json:"environment_id"`
 
-	Body *EnvironmentResourceModify `json:"body,omitempty" xml:"body"`
+	Body *EnvironmentResourceModify `json:"body,omitempty"`
 }
 
 func (o ChangeResourceInEnvironmentRequest) String() string {

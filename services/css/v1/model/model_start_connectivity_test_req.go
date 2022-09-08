@@ -9,7 +9,7 @@ import (
 type StartConnectivityTestReq struct {
 
 	// 地址和端口列表。
-	AddressAndPorts []AddressAndPorts `json:"addressAndPorts" xml:"addressAndPorts"`
+	AddressAndPorts []AddressAndPorts `json:"addressAndPorts"`
 }
 
 func (o StartConnectivityTestReq) String() string {

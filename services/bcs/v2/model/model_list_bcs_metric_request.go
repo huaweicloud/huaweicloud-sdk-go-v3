@@ -10,9 +10,9 @@ import (
 type ListBcsMetricRequest struct {
 
 	// 区块链服务id,当前不支持IEF实例
-	BlockchainId string `json:"blockchain_id" xml:"blockchain_id"`
+	BlockchainId string `json:"blockchain_id"`
 
-	Body *ListBcsMetricRequestBody `json:"body,omitempty" xml:"body"`
+	Body *ListBcsMetricRequestBody `json:"body,omitempty"`
 }
 
 func (o ListBcsMetricRequest) String() string {

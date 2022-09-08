@@ -13,22 +13,22 @@ import (
 type ShowDetailsOfInstanceProgressV2Response struct {
 
 	// 实例创建进度  单位：百分比
-	Progress *ShowDetailsOfInstanceProgressV2ResponseProgress `json:"progress,omitempty" xml:"progress"`
+	Progress *ShowDetailsOfInstanceProgressV2ResponseProgress `json:"progress,omitempty"`
 
 	// 实例创建状态 - creating：创建中 - success：创建成功 - failed：创建失败
-	Status *ShowDetailsOfInstanceProgressV2ResponseStatus `json:"status,omitempty" xml:"status"`
+	Status *ShowDetailsOfInstanceProgressV2ResponseStatus `json:"status,omitempty"`
 
 	// 实例创建失败错误码
-	ErrorCode *string `json:"error_code,omitempty" xml:"error_code"`
+	ErrorCode *string `json:"error_code,omitempty"`
 
 	// 实例创建失败错误信息
-	ErrorMsg *string `json:"error_msg,omitempty" xml:"error_msg"`
+	ErrorMsg *string `json:"error_msg,omitempty"`
 
 	// 实例创建开始时间。unix时间戳格式。
-	StartTime *int64 `json:"start_time,omitempty" xml:"start_time"`
+	StartTime *int64 `json:"start_time,omitempty"`
 
 	// 实例创建结束时间。unix时间戳格式。
-	EndTime        *int64 `json:"end_time,omitempty" xml:"end_time"`
+	EndTime        *int64 `json:"end_time,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

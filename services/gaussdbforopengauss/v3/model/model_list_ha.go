@@ -13,10 +13,10 @@ import (
 type ListHa struct {
 
 	// 数据库一致性类型，分布式模式实例仅有。取值为“strong”、“eventual”，分别表示强一致性、最终一致性。
-	Consistency ListHaConsistency `json:"consistency" xml:"consistency"`
+	Consistency ListHaConsistency `json:"consistency"`
 
 	// 备机同步参数。  取值：非空。  GaussDB(for openGauss)为 “sync” 说明： “sync”为同步模式。
-	ReplicationMode string `json:"replication_mode" xml:"replication_mode"`
+	ReplicationMode string `json:"replication_mode"`
 }
 
 func (o ListHa) String() string {

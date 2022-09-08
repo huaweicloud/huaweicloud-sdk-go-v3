@@ -10,7 +10,7 @@ import (
 type ShowJobExeListNewResponse struct {
 
 	// 作业列表。
-	JobList        *[]JobQueryBean `json:"job_list,omitempty" xml:"job_list"`
+	JobList        *[]JobQueryBean `json:"job_list,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }
 

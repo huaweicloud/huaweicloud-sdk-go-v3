@@ -13,10 +13,10 @@ import (
 type ReqDeletePredefineTag struct {
 
 	// 操作标识（区分大小写）：delete（删除）
-	Action ReqDeletePredefineTagAction `json:"action" xml:"action"`
+	Action ReqDeletePredefineTagAction `json:"action"`
 
 	// 标签列表
-	Tags []PredefineTagRequest `json:"tags" xml:"tags"`
+	Tags []PredefineTagRequest `json:"tags"`
 }
 
 func (o ReqDeletePredefineTag) String() string {

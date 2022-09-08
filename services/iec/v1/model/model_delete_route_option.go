@@ -10,7 +10,7 @@ import (
 type DeleteRouteOption struct {
 
 	// 功能说明：路由的目的网段  约束：合法的CIDR格式
-	Destination string `json:"destination" xml:"destination"`
+	Destination string `json:"destination"`
 }
 
 func (o DeleteRouteOption) String() string {

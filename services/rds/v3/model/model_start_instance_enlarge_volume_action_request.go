@@ -13,12 +13,12 @@ import (
 type StartInstanceEnlargeVolumeActionRequest struct {
 
 	// 语言
-	XLanguage *StartInstanceEnlargeVolumeActionRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *StartInstanceEnlargeVolumeActionRequestXLanguage `json:"X-Language,omitempty"`
 
 	// 实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
-	Body *EnlargeVolume `json:"body,omitempty" xml:"body"`
+	Body *EnlargeVolume `json:"body,omitempty"`
 }
 
 func (o StartInstanceEnlargeVolumeActionRequest) String() string {

@@ -10,9 +10,9 @@ import (
 type DisassociateVaultPolicyRequest struct {
 
 	// 存储库ID
-	VaultId string `json:"vault_id" xml:"vault_id"`
+	VaultId string `json:"vault_id"`
 
-	Body *VaultDissociate `json:"body,omitempty" xml:"body"`
+	Body *VaultDissociate `json:"body,omitempty"`
 }
 
 func (o DisassociateVaultPolicyRequest) String() string {

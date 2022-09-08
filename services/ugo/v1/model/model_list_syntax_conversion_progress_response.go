@@ -10,13 +10,13 @@ import (
 type ListSyntaxConversionProgressResponse struct {
 
 	// 对象总数。
-	TotalObjectsCount *int32 `json:"total_objects_count,omitempty" xml:"total_objects_count"`
+	TotalObjectsCount *int32 `json:"total_objects_count,omitempty"`
 
 	// 完成语法转换的对象数量。
-	CompletedObjectsCount *int32 `json:"completed_objects_count,omitempty" xml:"completed_objects_count"`
+	CompletedObjectsCount *int32 `json:"completed_objects_count,omitempty"`
 
 	// 语法转换的对象列表。
-	ObjectsList    *[]DatabaseObject `json:"objects_list,omitempty" xml:"objects_list"`
+	ObjectsList    *[]DatabaseObject `json:"objects_list,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }
 

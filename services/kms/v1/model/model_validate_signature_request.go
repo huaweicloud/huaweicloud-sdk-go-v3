@@ -10,9 +10,9 @@ import (
 type ValidateSignatureRequest struct {
 
 	// API版本号
-	VersionId string `json:"version_id" xml:"version_id"`
+	VersionId string `json:"version_id"`
 
-	Body *VerifyRequestBody `json:"body,omitempty" xml:"body"`
+	Body *VerifyRequestBody `json:"body,omitempty"`
 }
 
 func (o ValidateSignatureRequest) String() string {

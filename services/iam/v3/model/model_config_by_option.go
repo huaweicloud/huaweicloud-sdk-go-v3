@@ -10,10 +10,10 @@ import (
 type ConfigByOption struct {
 
 	// 密码强度策略的正则表达式。(当option为password_regex时返回)
-	PasswordRegex *string `json:"password_regex,omitempty" xml:"password_regex"`
+	PasswordRegex *string `json:"password_regex,omitempty"`
 
 	// 密码强度策略的描述。(当option为password_regex_description时返回)
-	PasswordRegexDescription *string `json:"password_regex_description,omitempty" xml:"password_regex_description"`
+	PasswordRegexDescription *string `json:"password_regex_description,omitempty"`
 }
 
 func (o ConfigByOption) String() string {

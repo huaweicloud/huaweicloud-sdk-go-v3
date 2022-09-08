@@ -9,7 +9,7 @@ import (
 type DeleteTagsOption struct {
 
 	// 标签键。
-	Key string `json:"key" xml:"key"`
+	Key string `json:"key"`
 }
 
 func (o DeleteTagsOption) String() string {

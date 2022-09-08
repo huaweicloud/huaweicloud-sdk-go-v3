@@ -10,16 +10,16 @@ import (
 type ListSimCardsResponse struct {
 
 	// 每页记录数
-	Limit *int64 `json:"limit,omitempty" xml:"limit"`
+	Limit *int64 `json:"limit,omitempty"`
 
 	// 页码
-	Offset *int64 `json:"offset,omitempty" xml:"offset"`
+	Offset *int64 `json:"offset,omitempty"`
 
 	// 总数
-	Count *int64 `json:"count,omitempty" xml:"count"`
+	Count *int64 `json:"count,omitempty"`
 
 	// sim卡数据集合
-	SimCards       *[]SimDeviceVo `json:"sim_cards,omitempty" xml:"sim_cards"`
+	SimCards       *[]SimDeviceVo `json:"sim_cards,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }
 

@@ -9,10 +9,10 @@ import (
 type AclApiBindingCreate struct {
 
 	// ACL策略编号
-	AclId string `json:"acl_id" xml:"acl_id"`
+	AclId string `json:"acl_id"`
 
 	// API发布记录编号
-	PublishIds []string `json:"publish_ids" xml:"publish_ids"`
+	PublishIds []string `json:"publish_ids"`
 }
 
 func (o AclApiBindingCreate) String() string {

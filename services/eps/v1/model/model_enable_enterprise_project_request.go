@@ -10,9 +10,9 @@ import (
 type EnableEnterpriseProjectRequest struct {
 
 	// 企业项目ID，不能为0。
-	EnterpriseProjectId string `json:"enterprise_project_id" xml:"enterprise_project_id"`
+	EnterpriseProjectId string `json:"enterprise_project_id"`
 
-	Body *EnableAction `json:"body,omitempty" xml:"body"`
+	Body *EnableAction `json:"body,omitempty"`
 }
 
 func (o EnableEnterpriseProjectRequest) String() string {

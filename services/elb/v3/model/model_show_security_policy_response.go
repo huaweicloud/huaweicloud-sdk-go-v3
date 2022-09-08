@@ -8,10 +8,10 @@ import (
 
 // Response Object
 type ShowSecurityPolicyResponse struct {
-	SecurityPolicy *SecurityPolicy `json:"security_policy,omitempty" xml:"security_policy"`
+	SecurityPolicy *SecurityPolicy `json:"security_policy,omitempty"`
 
 	// 请求ID。  注：自动生成 。
-	RequestId      *string `json:"request_id,omitempty" xml:"request_id"`
+	RequestId      *string `json:"request_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

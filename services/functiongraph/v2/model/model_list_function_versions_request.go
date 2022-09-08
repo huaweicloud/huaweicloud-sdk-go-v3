@@ -10,13 +10,13 @@ import (
 type ListFunctionVersionsRequest struct {
 
 	// 函数的URN，详细解释见FunctionGraph函数模型的描述。
-	FunctionUrn string `json:"function_urn" xml:"function_urn"`
+	FunctionUrn string `json:"function_urn"`
 
 	// 上一次查询到的最后的记录位置。
-	Marker *string `json:"marker,omitempty" xml:"marker"`
+	Marker *string `json:"marker,omitempty"`
 
 	// 每次查询获取的最大函数记录数量。
-	Maxitems *string `json:"maxitems,omitempty" xml:"maxitems"`
+	Maxitems *string `json:"maxitems,omitempty"`
 }
 
 func (o ListFunctionVersionsRequest) String() string {

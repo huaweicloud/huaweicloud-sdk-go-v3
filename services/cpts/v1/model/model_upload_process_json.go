@@ -10,10 +10,10 @@ import (
 type UploadProcessJson struct {
 
 	// details
-	Details *[]UploadProcessJsonDetail `json:"details,omitempty" xml:"details"`
+	Details *[]UploadProcessJsonDetail `json:"details,omitempty"`
 
 	// process_status
-	ProcessStatus *int32 `json:"process_status,omitempty" xml:"process_status"`
+	ProcessStatus *int32 `json:"process_status,omitempty"`
 }
 
 func (o UploadProcessJson) String() string {

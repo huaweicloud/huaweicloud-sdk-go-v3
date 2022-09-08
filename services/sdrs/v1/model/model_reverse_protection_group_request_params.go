@@ -13,7 +13,7 @@ import (
 type ReverseProtectionGroupRequestParams struct {
 
 	// 切换方向。target：表示从创建保护组时指定的生产站点切换到创建保护组时指定的容灾站点。source：表示从创建保护组时指定的容灾站点切换到创建保护组时指定的生产站点。
-	PriorityStation ReverseProtectionGroupRequestParamsPriorityStation `json:"priority_station" xml:"priority_station"`
+	PriorityStation ReverseProtectionGroupRequestParamsPriorityStation `json:"priority_station"`
 }
 
 func (o ReverseProtectionGroupRequestParams) String() string {

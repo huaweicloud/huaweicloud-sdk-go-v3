@@ -8,7 +8,7 @@ import (
 
 // 需要关联的Router(VPC)。
 type AssociateRouterReq struct {
-	Router *Router `json:"router" xml:"router"`
+	Router *Router `json:"router"`
 }
 
 func (o AssociateRouterReq) String() string {

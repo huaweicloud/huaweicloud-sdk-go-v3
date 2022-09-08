@@ -10,7 +10,7 @@ import (
 type AssociateAppsForAppQuotaResponse struct {
 
 	// 客户端应用与客户端配额绑定列表
-	Applies        *[]AppQuotaAppBinding `json:"applies,omitempty" xml:"applies"`
+	Applies        *[]AppQuotaAppBinding `json:"applies,omitempty"`
 	HttpStatusCode int                   `json:"-"`
 }
 

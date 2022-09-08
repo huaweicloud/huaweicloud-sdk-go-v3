@@ -8,7 +8,7 @@ import (
 
 //
 type KeystoneUpdateUserByAdminRequestBody struct {
-	User *KeystoneUpdateUserOption `json:"user" xml:"user"`
+	User *KeystoneUpdateUserOption `json:"user"`
 }
 
 func (o KeystoneUpdateUserByAdminRequestBody) String() string {

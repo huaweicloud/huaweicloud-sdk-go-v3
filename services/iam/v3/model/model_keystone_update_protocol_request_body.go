@@ -8,7 +8,7 @@ import (
 
 //
 type KeystoneUpdateProtocolRequestBody struct {
-	Protocol *ProtocolOption `json:"protocol" xml:"protocol"`
+	Protocol *ProtocolOption `json:"protocol"`
 }
 
 func (o KeystoneUpdateProtocolRequestBody) String() string {

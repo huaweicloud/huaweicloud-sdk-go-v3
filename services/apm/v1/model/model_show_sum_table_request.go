@@ -10,9 +10,9 @@ import (
 type ShowSumTableRequest struct {
 
 	// 应用id
-	XBusinessId int64 `json:"x-business-id" xml:"x-business-id"`
+	XBusinessId int64 `json:"x-business-id"`
 
-	Body *SumTableParam `json:"body,omitempty" xml:"body"`
+	Body *SumTableParam `json:"body,omitempty"`
 }
 
 func (o ShowSumTableRequest) String() string {

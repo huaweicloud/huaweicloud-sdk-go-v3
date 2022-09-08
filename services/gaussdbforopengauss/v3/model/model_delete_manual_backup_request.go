@@ -10,10 +10,10 @@ import (
 type DeleteManualBackupRequest struct {
 
 	// 语言
-	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *string `json:"X-Language,omitempty"`
 
 	// 备份ID。
-	BackupId string `json:"backup_id" xml:"backup_id"`
+	BackupId string `json:"backup_id"`
 }
 
 func (o DeleteManualBackupRequest) String() string {

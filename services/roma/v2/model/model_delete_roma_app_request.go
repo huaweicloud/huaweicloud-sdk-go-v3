@@ -10,10 +10,10 @@ import (
 type DeleteRomaAppRequest struct {
 
 	// 应用ID
-	AppId string `json:"app_id" xml:"app_id"`
+	AppId string `json:"app_id"`
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 }
 
 func (o DeleteRomaAppRequest) String() string {

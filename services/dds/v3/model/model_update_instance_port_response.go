@@ -10,10 +10,10 @@ import (
 type UpdateInstancePortResponse struct {
 
 	// 任务ID。
-	JobId *string `json:"job_id,omitempty" xml:"job_id"`
+	JobId *string `json:"job_id,omitempty"`
 
 	// 实例当前端口号。
-	Port           *int32 `json:"port,omitempty" xml:"port"`
+	Port           *int32 `json:"port,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

@@ -10,28 +10,28 @@ import (
 type Ruleset struct {
 
 	// 项目ID
-	ProjectId string `json:"project_id" xml:"project_id"`
+	ProjectId string `json:"project_id"`
 
 	// 新规则集名称
-	TemplateName string `json:"template_name" xml:"template_name"`
+	TemplateName string `json:"template_name"`
 
 	// 规则集语言
-	Language string `json:"language" xml:"language"`
+	Language string `json:"language"`
 
 	// 如果有基于的规则集则是1，没有基于的规则集则是0
-	IsDefault string `json:"is_default" xml:"is_default"`
+	IsDefault string `json:"is_default"`
 
 	// 新启用规则ids
-	RuleIds string `json:"rule_ids" xml:"rule_ids"`
+	RuleIds string `json:"rule_ids"`
 
 	// 新关闭规则id
-	UncheckIds *string `json:"uncheck_ids,omitempty" xml:"uncheck_ids"`
+	UncheckIds *string `json:"uncheck_ids,omitempty"`
 
 	// 规则集ID
-	TemplateId *string `json:"template_id,omitempty" xml:"template_id"`
+	TemplateId *string `json:"template_id,omitempty"`
 
 	// 自定义规则参数项，支持修改规则阈值
-	CustomAttributes *[]CustomAttributes `json:"custom_attributes,omitempty" xml:"custom_attributes"`
+	CustomAttributes *[]CustomAttributes `json:"custom_attributes,omitempty"`
 }
 
 func (o Ruleset) String() string {

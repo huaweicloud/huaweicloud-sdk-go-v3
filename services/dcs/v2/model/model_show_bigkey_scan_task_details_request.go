@@ -10,10 +10,10 @@ import (
 type ShowBigkeyScanTaskDetailsRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 大key分析任务ID。
-	BigkeyId string `json:"bigkey_id" xml:"bigkey_id"`
+	BigkeyId string `json:"bigkey_id"`
 }
 
 func (o ShowBigkeyScanTaskDetailsRequest) String() string {

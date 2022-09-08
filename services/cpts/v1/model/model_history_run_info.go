@@ -9,22 +9,22 @@ import (
 type HistoryRunInfo struct {
 
 	// name
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// run_id
-	RunId *float64 `json:"run_id,omitempty" xml:"run_id"`
+	RunId *float64 `json:"run_id,omitempty"`
 
 	// run_type
-	RunType *float64 `json:"run_type,omitempty" xml:"run_type"`
+	RunType *float64 `json:"run_type,omitempty"`
 
 	// start_time
-	StartTime *string `json:"start_time,omitempty" xml:"start_time"`
+	StartTime *string `json:"start_time,omitempty"`
 
 	// continue_time
-	ContinueTime *float64 `json:"continue_time,omitempty" xml:"continue_time"`
+	ContinueTime *float64 `json:"continue_time,omitempty"`
 
 	// temp_names
-	TempNames *[]TempName `json:"temp_names,omitempty" xml:"temp_names"`
+	TempNames *[]TempName `json:"temp_names,omitempty"`
 }
 
 func (o HistoryRunInfo) String() string {

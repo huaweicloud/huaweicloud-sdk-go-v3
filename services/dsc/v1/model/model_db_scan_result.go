@@ -9,10 +9,10 @@ import (
 type DbScanResult struct {
 
 	// 扫描结果总数
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 
 	// 数据库扫描结果列表
-	DbScanResults *[]DbScanResultInfo `json:"db_scan_results,omitempty" xml:"db_scan_results"`
+	DbScanResults *[]DbScanResultInfo `json:"db_scan_results,omitempty"`
 }
 
 func (o DbScanResult) String() string {

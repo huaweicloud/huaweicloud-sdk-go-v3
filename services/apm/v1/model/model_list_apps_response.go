@@ -10,7 +10,7 @@ import (
 type ListAppsResponse struct {
 
 	// 组件信息列表
-	Apps           *[]AppNodeModel `json:"apps,omitempty" xml:"apps"`
+	Apps           *[]AppNodeModel `json:"apps,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }
 

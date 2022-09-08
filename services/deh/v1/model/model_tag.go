@@ -10,10 +10,10 @@ import (
 type Tag struct {
 
 	// 键。  最大长度127个unicode字符。  key不能为空。
-	Key string `json:"key" xml:"key"`
+	Key string `json:"key"`
 
 	// 值列表。  最多10个value。  value不允许重复。  每个值最大长度255个unicode字符。  如果value缺失则表示any_value。  value之间为“或”的关系。
-	Values *[]string `json:"values,omitempty" xml:"values"`
+	Values *[]string `json:"values,omitempty"`
 }
 
 func (o Tag) String() string {

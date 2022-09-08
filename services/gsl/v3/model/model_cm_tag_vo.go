@@ -9,13 +9,13 @@ import (
 type CmTagVo struct {
 
 	// 标签标识
-	Id *int64 `json:"id,omitempty" xml:"id"`
+	Id *int64 `json:"id,omitempty"`
 
 	// 标签名称
-	TagName *string `json:"tag_name,omitempty" xml:"tag_name"`
+	TagName *string `json:"tag_name,omitempty"`
 
 	// 标签状态，0未使用，1使用中。
-	Status *int32 `json:"status,omitempty" xml:"status"`
+	Status *int32 `json:"status,omitempty"`
 }
 
 func (o CmTagVo) String() string {

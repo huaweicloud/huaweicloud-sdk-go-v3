@@ -9,10 +9,10 @@ import (
 type OrderV3 struct {
 
 	// 可使用折扣的订单ID。
-	OrderId string `json:"order_id" xml:"order_id"`
+	OrderId string `json:"order_id"`
 
 	// 可使用折扣的订单项列表，具体参见表4。
-	OrderLineItems []OrderLineItemV3 `json:"order_line_items" xml:"order_line_items"`
+	OrderLineItems []OrderLineItemV3 `json:"order_line_items"`
 }
 
 func (o OrderV3) String() string {

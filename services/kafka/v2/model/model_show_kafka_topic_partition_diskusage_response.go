@@ -10,7 +10,7 @@ import (
 type ShowKafkaTopicPartitionDiskusageResponse struct {
 
 	// Broker列表。
-	BrokerList     *[]DiskusageEntity `json:"broker_list,omitempty" xml:"broker_list"`
+	BrokerList     *[]DiskusageEntity `json:"broker_list,omitempty"`
 	HttpStatusCode int                `json:"-"`
 }
 

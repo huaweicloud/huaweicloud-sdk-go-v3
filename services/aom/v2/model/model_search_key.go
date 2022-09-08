@@ -10,22 +10,22 @@ import (
 type SearchKey struct {
 
 	// 应用名称。
-	AppName *string `json:"appName,omitempty" xml:"appName"`
+	AppName *string `json:"appName,omitempty"`
 
 	// CCE集群ID。
-	ClusterId string `json:"clusterId" xml:"clusterId"`
+	ClusterId string `json:"clusterId"`
 
 	// 日志所在虚拟机IP。
-	HostIP *string `json:"hostIP,omitempty" xml:"hostIP"`
+	HostIP *string `json:"hostIP,omitempty"`
 
 	// CCE容器集群的命名空间。
-	NameSpace *string `json:"nameSpace,omitempty" xml:"nameSpace"`
+	NameSpace *string `json:"nameSpace,omitempty"`
 
 	// 日志文件名称。
-	PathFile *string `json:"pathFile,omitempty" xml:"pathFile"`
+	PathFile *string `json:"pathFile,omitempty"`
 
 	// 容器实例名称。
-	PodName *string `json:"podName,omitempty" xml:"podName"`
+	PodName *string `json:"podName,omitempty"`
 }
 
 func (o SearchKey) String() string {

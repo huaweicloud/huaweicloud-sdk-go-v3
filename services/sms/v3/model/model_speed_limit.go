@@ -10,7 +10,7 @@ import (
 type SpeedLimit struct {
 
 	// 按时间段限速信息
-	SpeedLimit []SpeedLimitlJson `json:"speed_limit" xml:"speed_limit"`
+	SpeedLimit []SpeedLimitlJson `json:"speed_limit"`
 }
 
 func (o SpeedLimit) String() string {

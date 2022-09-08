@@ -10,7 +10,7 @@ import (
 type DeleteServiceRequest struct {
 
 	// 注册服务唯一标识，该值由注册接口返回
-	ServiceId int32 `json:"service_id" xml:"service_id"`
+	ServiceId int32 `json:"service_id"`
 }
 
 func (o DeleteServiceRequest) String() string {

@@ -10,15 +10,15 @@ import (
 type CreateMeetingRequest struct {
 
 	// 用户的UUID（已在USG注册过的）。
-	UserUUID *string `json:"userUUID,omitempty" xml:"userUUID"`
+	UserUUID *string `json:"userUUID,omitempty"`
 
 	// 标识是否为第三方portal过来的请求。
-	XAuthorizationType *string `json:"X-Authorization-Type,omitempty" xml:"X-Authorization-Type"`
+	XAuthorizationType *string `json:"X-Authorization-Type,omitempty"`
 
 	// 用于区分到哪个HCSO站点鉴权。
-	XSiteId *string `json:"X-Site-Id,omitempty" xml:"X-Site-Id"`
+	XSiteId *string `json:"X-Site-Id,omitempty"`
 
-	Body *RestScheduleConfDto `json:"body,omitempty" xml:"body"`
+	Body *RestScheduleConfDto `json:"body,omitempty"`
 }
 
 func (o CreateMeetingRequest) String() string {

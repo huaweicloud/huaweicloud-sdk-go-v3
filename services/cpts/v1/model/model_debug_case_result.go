@@ -9,32 +9,32 @@ import (
 type DebugCaseResult struct {
 
 	// body
-	Body *string `json:"body,omitempty" xml:"body"`
+	Body *string `json:"body,omitempty"`
 
 	// errorReason
-	ErrorReason *string `json:"errorReason,omitempty" xml:"errorReason"`
+	ErrorReason *string `json:"errorReason,omitempty"`
 
-	Header *DebugCaseResultHeader `json:"header,omitempty" xml:"header"`
+	Header *DebugCaseResultHeader `json:"header,omitempty"`
 
 	// name
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// responseTime
-	ResponseTime *int32 `json:"responseTime,omitempty" xml:"responseTime"`
+	ResponseTime *int32 `json:"responseTime,omitempty"`
 
 	// result
-	Result *int32 `json:"result,omitempty" xml:"result"`
+	Result *int32 `json:"result,omitempty"`
 
 	// returnBody
-	ReturnBody *string `json:"returnBody,omitempty" xml:"returnBody"`
+	ReturnBody *string `json:"returnBody,omitempty"`
 
-	ReturnHeader *DebugCaseReturnHeader `json:"returnHeader,omitempty" xml:"returnHeader"`
+	ReturnHeader *DebugCaseReturnHeader `json:"returnHeader,omitempty"`
 
 	// statusCode
-	StatusCode *string `json:"statusCode,omitempty" xml:"statusCode"`
+	StatusCode *string `json:"statusCode,omitempty"`
 
 	// url
-	Url *string `json:"url,omitempty" xml:"url"`
+	Url *string `json:"url,omitempty"`
 }
 
 func (o DebugCaseResult) String() string {

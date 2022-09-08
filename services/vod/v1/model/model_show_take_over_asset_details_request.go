@@ -10,10 +10,10 @@ import (
 type ShowTakeOverAssetDetailsRequest struct {
 
 	// 媒资原始输入存放的桶。
-	SourceBucket string `json:"source_bucket" xml:"source_bucket"`
+	SourceBucket string `json:"source_bucket"`
 
 	// 媒资原始输入的objectKey。
-	SourceObject string `json:"source_object" xml:"source_object"`
+	SourceObject string `json:"source_object"`
 }
 
 func (o ShowTakeOverAssetDetailsRequest) String() string {

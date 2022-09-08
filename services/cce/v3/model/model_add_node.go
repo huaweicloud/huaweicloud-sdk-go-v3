@@ -10,9 +10,9 @@ import (
 type AddNode struct {
 
 	// 服务器ID，获取方式请参见ECS/BMS相关资料。
-	ServerID string `json:"serverID" xml:"serverID"`
+	ServerID string `json:"serverID"`
 
-	Spec *ReinstallNodeSpec `json:"spec" xml:"spec"`
+	Spec *ReinstallNodeSpec `json:"spec"`
 }
 
 func (o AddNode) String() string {

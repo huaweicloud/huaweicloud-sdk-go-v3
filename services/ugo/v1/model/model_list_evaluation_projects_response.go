@@ -10,10 +10,10 @@ import (
 type ListEvaluationProjectsResponse struct {
 
 	// 评估项目总数。
-	TotalCount *int32 `json:"total_count,omitempty" xml:"total_count"`
+	TotalCount *int32 `json:"total_count,omitempty"`
 
 	// 当前页的评估项目列表。
-	EvaluationProjects *[]EvaluationProject `json:"evaluation_projects,omitempty" xml:"evaluation_projects"`
+	EvaluationProjects *[]EvaluationProject `json:"evaluation_projects,omitempty"`
 	HttpStatusCode     int                  `json:"-"`
 }
 

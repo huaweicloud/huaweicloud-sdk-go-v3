@@ -10,15 +10,15 @@ import (
 type ShowAssetDetailResponse struct {
 
 	// 媒资ID。
-	AssetId *string `json:"asset_id,omitempty" xml:"asset_id"`
+	AssetId *string `json:"asset_id,omitempty"`
 
-	BaseInfo *BaseInfo `json:"base_info,omitempty" xml:"base_info"`
+	BaseInfo *BaseInfo `json:"base_info,omitempty"`
 
-	TranscodeInfo *TranscodeInfo `json:"transcode_info,omitempty" xml:"transcode_info"`
+	TranscodeInfo *TranscodeInfo `json:"transcode_info,omitempty"`
 
-	ThumbnailInfo *ThumbnailInfo `json:"thumbnail_info,omitempty" xml:"thumbnail_info"`
+	ThumbnailInfo *ThumbnailInfo `json:"thumbnail_info,omitempty"`
 
-	ReviewInfo     *ReviewInfo `json:"review_info,omitempty" xml:"review_info"`
+	ReviewInfo     *ReviewInfo `json:"review_info,omitempty"`
 	HttpStatusCode int         `json:"-"`
 }
 

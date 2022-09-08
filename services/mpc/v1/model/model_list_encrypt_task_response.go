@@ -10,13 +10,13 @@ import (
 type ListEncryptTaskResponse struct {
 
 	// 任务列表
-	TaskArray *[]EachEncryptRsp `json:"task_array,omitempty" xml:"task_array"`
+	TaskArray *[]EachEncryptRsp `json:"task_array,omitempty"`
 
 	// 是否截断
-	IsTruncated *int32 `json:"is_truncated,omitempty" xml:"is_truncated"`
+	IsTruncated *int32 `json:"is_truncated,omitempty"`
 
 	// 查询结果数量
-	Total          *int32 `json:"total,omitempty" xml:"total"`
+	Total          *int32 `json:"total,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

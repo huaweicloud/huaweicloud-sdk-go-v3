@@ -10,13 +10,13 @@ import (
 type UploadProductResponse struct {
 
 	// 导入成功的产品数
-	SuccNum *int32 `json:"succ_num,omitempty" xml:"succ_num"`
+	SuccNum *int32 `json:"succ_num,omitempty"`
 
 	// 导入失败的产品数
-	FailNum *int32 `json:"fail_num,omitempty" xml:"fail_num"`
+	FailNum *int32 `json:"fail_num,omitempty"`
 
 	// 导入失败的产品名称列表
-	FailObjectsIds *[]string `json:"fail_objects_ids,omitempty" xml:"fail_objects_ids"`
+	FailObjectsIds *[]string `json:"fail_objects_ids,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }
 

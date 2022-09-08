@@ -13,19 +13,19 @@ import (
 type CreateUsersInfo struct {
 
 	// DDM实例帐号名称，命名要求如下。  - 长度为1-32个字符。 - 必须以字母开头。 - 可以包含字母，数字、下划线，不能包含其它特殊字符。
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// DDM实例帐号密码。
-	Password string `json:"password" xml:"password"`
+	Password string `json:"password"`
 
 	// DDM实例帐号的基础权限。  取值为：CREATE、DROP、ALTER、INDEX、INSERT、DELETE、UPDATE、SELECT
-	BaseAuthority []CreateUsersInfoBaseAuthority `json:"base_authority" xml:"base_authority"`
+	BaseAuthority []CreateUsersInfoBaseAuthority `json:"base_authority"`
 
 	// DDM实例帐号的描述，最大长度不能超过256。默认值为空。
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 关联的逻辑库的集合。 databases字段可以省略，即创建用户时可以不关联逻辑库。
-	Databases *[]CreateUsersDatabases `json:"databases,omitempty" xml:"databases"`
+	Databases *[]CreateUsersDatabases `json:"databases,omitempty"`
 }
 
 func (o CreateUsersInfo) String() string {

@@ -10,25 +10,25 @@ import (
 type ListResponsePropertiesRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 服务ID
-	ServiceId string `json:"service_id" xml:"service_id"`
+	ServiceId string `json:"service_id"`
 
 	// 命令ID
-	CommandId int32 `json:"command_id" xml:"command_id"`
+	CommandId int32 `json:"command_id"`
 
 	// 每页显示条目数量，最大数量999，超过999后只返回999
-	Limit *int32 `json:"limit,omitempty" xml:"limit"`
+	Limit *int32 `json:"limit,omitempty"`
 
 	// 响应属性ID
-	ResponseId *int32 `json:"response_id,omitempty" xml:"response_id"`
+	ResponseId *int32 `json:"response_id,omitempty"`
 
 	// 响应属性名称
-	ResponseName *string `json:"response_name,omitempty" xml:"response_name"`
+	ResponseName *string `json:"response_name,omitempty"`
 
 	// 偏移量，表示从此偏移量开始查询， offset大于等于0
-	Offset *int32 `json:"offset,omitempty" xml:"offset"`
+	Offset *int32 `json:"offset,omitempty"`
 }
 
 func (o ListResponsePropertiesRequest) String() string {

@@ -9,16 +9,16 @@ import (
 type ComponentAmb struct {
 
 	// 组件ID。
-	ComponentId *string `json:"componentId,omitempty" xml:"componentId"`
+	ComponentId *string `json:"componentId,omitempty"`
 
 	// 组件名称。
-	ComponentName *string `json:"componentName,omitempty" xml:"componentName"`
+	ComponentName *string `json:"componentName,omitempty"`
 
 	// 组件版本。
-	ComponentVersion *string `json:"componentVersion,omitempty" xml:"componentVersion"`
+	ComponentVersion *string `json:"componentVersion,omitempty"`
 
 	// 组件描述信息。
-	ComponentDesc *string `json:"componentDesc,omitempty" xml:"componentDesc"`
+	ComponentDesc *string `json:"componentDesc,omitempty"`
 }
 
 func (o ComponentAmb) String() string {

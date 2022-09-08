@@ -10,10 +10,10 @@ import (
 type ListDevicesResponse struct {
 
 	// 终端设备属性
-	Devices *[]Device `json:"devices,omitempty" xml:"devices"`
+	Devices *[]Device `json:"devices,omitempty"`
 
 	// 满足条件的终端设备个数
-	Count          *int32 `json:"count,omitempty" xml:"count"`
+	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

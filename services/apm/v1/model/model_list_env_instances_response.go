@@ -10,19 +10,19 @@ import (
 type ListEnvInstancesResponse struct {
 
 	// 实例信息列表
-	InstanceInfoList *[]InstanceInfo `json:"instance_info_list,omitempty" xml:"instance_info_list"`
+	InstanceInfoList *[]InstanceInfo `json:"instance_info_list,omitempty"`
 
 	// 实例总数
-	TotalCount *int32 `json:"total_count,omitempty" xml:"total_count"`
+	TotalCount *int32 `json:"total_count,omitempty"`
 
 	// 在线实例总数
-	OnlineCount *int32 `json:"online_count,omitempty" xml:"online_count"`
+	OnlineCount *int32 `json:"online_count,omitempty"`
 
 	// 离线实例总数
-	OfflineCount *int32 `json:"offline_count,omitempty" xml:"offline_count"`
+	OfflineCount *int32 `json:"offline_count,omitempty"`
 
 	// 停止实例总受
-	DisableCount   *int32 `json:"disable_count,omitempty" xml:"disable_count"`
+	DisableCount   *int32 `json:"disable_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

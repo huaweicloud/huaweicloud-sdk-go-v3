@@ -10,7 +10,7 @@ import (
 type DeleteUserResponse struct {
 
 	// 信息。
-	Message        *string `json:"message,omitempty" xml:"message"`
+	Message        *string `json:"message,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -10,7 +10,7 @@ import (
 type DeleteQualityEnhanceTemplateRequest struct {
 
 	// 模板ID
-	TemplateId int32 `json:"template_id" xml:"template_id"`
+	TemplateId int32 `json:"template_id"`
 }
 
 func (o DeleteQualityEnhanceTemplateRequest) String() string {

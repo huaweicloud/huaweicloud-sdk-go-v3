@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateSubnetRequest struct {
-	Body *CreateSubnetRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreateSubnetRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateSubnetRequest) String() string {

@@ -10,13 +10,13 @@ import (
 type UpdateAppAclResponse struct {
 
 	// APP编号
-	AppId *string `json:"app_id,omitempty" xml:"app_id"`
+	AppId *string `json:"app_id,omitempty"`
 
 	// 类型 -  PERMIT (白名单类型) -  DENY (黑名单类型)
-	AppAclType *string `json:"app_acl_type,omitempty" xml:"app_acl_type"`
+	AppAclType *string `json:"app_acl_type,omitempty"`
 
 	// ACL策略值，支持IP、IP范围和CIDR方式。IP范围以英文中划线分隔。
-	AppAclValues   *[]string `json:"app_acl_values,omitempty" xml:"app_acl_values"`
+	AppAclValues   *[]string `json:"app_acl_values,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }
 

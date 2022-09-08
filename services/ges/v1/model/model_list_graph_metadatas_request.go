@@ -10,7 +10,7 @@ import (
 type ListGraphMetadatasRequest struct {
 
 	// 元数据ID。
-	MetadataId string `json:"metadata_id" xml:"metadata_id"`
+	MetadataId string `json:"metadata_id"`
 }
 
 func (o ListGraphMetadatasRequest) String() string {

@@ -10,9 +10,9 @@ import (
 type ResizeVolumeRequest struct {
 
 	// 云硬盘ID。
-	VolumeId string `json:"volume_id" xml:"volume_id"`
+	VolumeId string `json:"volume_id"`
 
-	Body *ResizeVolumeRequestBody `json:"body,omitempty" xml:"body"`
+	Body *ResizeVolumeRequestBody `json:"body,omitempty"`
 }
 
 func (o ResizeVolumeRequest) String() string {

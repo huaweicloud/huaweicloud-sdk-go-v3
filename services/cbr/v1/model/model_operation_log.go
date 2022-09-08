@@ -12,47 +12,47 @@ import (
 type OperationLog struct {
 
 	// 备份记录id
-	CheckpointId *string `json:"checkpoint_id,omitempty" xml:"checkpoint_id"`
+	CheckpointId *string `json:"checkpoint_id,omitempty"`
 
 	// 创建时间,例如: \"2020-02-23T01:00:32Z\"
-	CreatedAt string `json:"created_at" xml:"created_at"`
+	CreatedAt string `json:"created_at"`
 
 	// 任务结束时间,例如: \"2020-02-23T01:00:32Z\"
-	EndedAt *string `json:"ended_at,omitempty" xml:"ended_at"`
+	EndedAt *string `json:"ended_at,omitempty"`
 
-	ErrorInfo *OpErrorInfo `json:"error_info" xml:"error_info"`
+	ErrorInfo *OpErrorInfo `json:"error_info"`
 
-	ExtraInfo *OpExtraInfo `json:"extra_info,omitempty" xml:"extra_info"`
+	ExtraInfo *OpExtraInfo `json:"extra_info,omitempty"`
 
 	// 任务id
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
 	// 任务类型
-	OperationType *OperationLogOperationType `json:"operation_type,omitempty" xml:"operation_type"`
+	OperationType *OperationLogOperationType `json:"operation_type,omitempty"`
 
 	// 策略ID
-	PolicyId *string `json:"policy_id,omitempty" xml:"policy_id"`
+	PolicyId *string `json:"policy_id,omitempty"`
 
 	// 项目ID
-	ProjectId string `json:"project_id" xml:"project_id"`
+	ProjectId string `json:"project_id"`
 
 	// 备份提供商ID。用于区分备份对象。
-	ProviderId *string `json:"provider_id,omitempty" xml:"provider_id"`
+	ProviderId *string `json:"provider_id,omitempty"`
 
 	// 任务开始时间,例如: \"2020-02-23T01:00:32Z\"
-	StartedAt string `json:"started_at" xml:"started_at"`
+	StartedAt string `json:"started_at"`
 
 	// 任务状态
-	Status OperationLogStatus `json:"status" xml:"status"`
+	Status OperationLogStatus `json:"status"`
 
 	// 修改时间,例如: \"2020-02-23T01:00:32Z\"
-	UpdatedAt string `json:"updated_at" xml:"updated_at"`
+	UpdatedAt string `json:"updated_at"`
 
 	// 任务操作资源所属存储库ID
-	VaultId *string `json:"vault_id,omitempty" xml:"vault_id"`
+	VaultId *string `json:"vault_id,omitempty"`
 
 	// 任务操作资源所属存储库名称
-	VaultName *string `json:"vault_name,omitempty" xml:"vault_name"`
+	VaultName *string `json:"vault_name,omitempty"`
 }
 
 func (o OperationLog) String() string {

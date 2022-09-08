@@ -10,9 +10,9 @@ import (
 type CreateRoutesRequest struct {
 
 	// 路由表ID
-	RoutetableId string `json:"routetable_id" xml:"routetable_id"`
+	RoutetableId string `json:"routetable_id"`
 
-	Body *CreateRoutesRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreateRoutesRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateRoutesRequest) String() string {

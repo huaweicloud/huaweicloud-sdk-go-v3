@@ -8,7 +8,7 @@ import (
 
 // This is a auto create Body Object
 type CreateListenerTagsRequestBody struct {
-	Tag *ResourceTag `json:"tag,omitempty" xml:"tag"`
+	Tag *ResourceTag `json:"tag,omitempty"`
 }
 
 func (o CreateListenerTagsRequestBody) String() string {

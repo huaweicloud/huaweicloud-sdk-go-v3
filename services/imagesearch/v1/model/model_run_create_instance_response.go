@@ -13,28 +13,28 @@ import (
 type RunCreateInstanceResponse struct {
 
 	// 模型展示名或领域名称。
-	Domain *string `json:"domain,omitempty" xml:"domain"`
+	Domain *string `json:"domain,omitempty"`
 
 	// 描述。
-	Desc *string `json:"desc,omitempty" xml:"desc"`
+	Desc *string `json:"desc,omitempty"`
 
 	// 注册时间。
-	RegisterDate *int64 `json:"registerDate,omitempty" xml:"registerDate"`
+	RegisterDate *int64 `json:"registerDate,omitempty"`
 
 	// 过期时间，-1表示永不过期。
-	ExpiredDate *int64 `json:"expiredDate,omitempty" xml:"expiredDate"`
+	ExpiredDate *int64 `json:"expiredDate,omitempty"`
 
 	// 规格，即实例的图片数量规格，默认为30000000（单位：张）。
-	Level *int32 `json:"level,omitempty" xml:"level"`
+	Level *int32 `json:"level,omitempty"`
 
 	// 图片自定义标签。
-	Tags *[]string `json:"tags,omitempty" xml:"tags"`
+	Tags *[]string `json:"tags,omitempty"`
 
 	// 实例的状态，有以下状态信息：   - NORMAL：正常。   - ARREARAGE：欠费。   - CREATION：创建中。   - CREATION_FAILD：创建失败。   - DELETING：删除中。   - DELETING_FAILED：删除失败。   - ABNORMAL：异常。
-	Status *RunCreateInstanceResponseStatus `json:"status,omitempty" xml:"status"`
+	Status *RunCreateInstanceResponseStatus `json:"status,omitempty"`
 
 	// 实例名称。
-	InstanceName   *string `json:"instanceName,omitempty" xml:"instanceName"`
+	InstanceName   *string `json:"instanceName,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

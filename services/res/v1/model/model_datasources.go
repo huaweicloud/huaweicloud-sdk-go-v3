@@ -9,29 +9,29 @@ import (
 type Datasources struct {
 
 	// 数据源id。
-	DatasourceId *string `json:"datasource_id,omitempty" xml:"datasource_id"`
+	DatasourceId *string `json:"datasource_id,omitempty"`
 
 	// 名称。
-	DatasourceName *string `json:"datasource_name,omitempty" xml:"datasource_name"`
+	DatasourceName *string `json:"datasource_name,omitempty"`
 
 	// 状态。
-	Status *string `json:"status,omitempty" xml:"status"`
+	Status *string `json:"status,omitempty"`
 
 	// 结构。
-	Structure *string `json:"structure,omitempty" xml:"structure"`
+	Structure *string `json:"structure,omitempty"`
 
 	// 工作空间编号。
-	WorkspaceId *string `json:"workspace_id,omitempty" xml:"workspace_id"`
+	WorkspaceId *string `json:"workspace_id,omitempty"`
 
-	DataConfig *DataConfig `json:"data_config,omitempty" xml:"data_config"`
+	DataConfig *DataConfig `json:"data_config,omitempty"`
 
-	SpecsConfig *SpecsConfig `json:"specs_config,omitempty" xml:"specs_config"`
+	SpecsConfig *SpecsConfig `json:"specs_config,omitempty"`
 
 	// 创建时间。
-	CreatedAt *int64 `json:"created_at,omitempty" xml:"created_at"`
+	CreatedAt *int64 `json:"created_at,omitempty"`
 
 	// 更新时间。
-	UpdateAt *int64 `json:"update_at,omitempty" xml:"update_at"`
+	UpdateAt *int64 `json:"update_at,omitempty"`
 }
 
 func (o Datasources) String() string {

@@ -13,9 +13,9 @@ import (
 type ShowMonitoringDataRequest struct {
 
 	// 请求语言类型
-	XLanguage *ShowMonitoringDataRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *ShowMonitoringDataRequestXLanguage `json:"X-Language,omitempty"`
 
-	Body *BatchQueryJobReq `json:"body,omitempty" xml:"body"`
+	Body *BatchQueryJobReq `json:"body,omitempty"`
 }
 
 func (o ShowMonitoringDataRequest) String() string {

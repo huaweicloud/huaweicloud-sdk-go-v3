@@ -10,12 +10,12 @@ import (
 type UpdateSignatureKeyV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 签名密钥编号
-	SignId string `json:"sign_id" xml:"sign_id"`
+	SignId string `json:"sign_id"`
 
-	Body *BaseSignature `json:"body,omitempty" xml:"body"`
+	Body *BaseSignature `json:"body,omitempty"`
 }
 
 func (o UpdateSignatureKeyV2Request) String() string {

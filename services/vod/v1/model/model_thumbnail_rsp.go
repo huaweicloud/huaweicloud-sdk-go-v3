@@ -10,10 +10,10 @@ import (
 type ThumbnailRsp struct {
 
 	// 截图在视频中的时间偏移，单位为秒。
-	Offset int32 `json:"offset" xml:"offset"`
+	Offset int32 `json:"offset"`
 
 	// 截图访问URL
-	Url string `json:"url" xml:"url"`
+	Url string `json:"url"`
 }
 
 func (o ThumbnailRsp) String() string {

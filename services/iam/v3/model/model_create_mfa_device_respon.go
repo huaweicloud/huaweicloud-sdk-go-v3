@@ -10,10 +10,10 @@ import (
 type CreateMfaDeviceRespon struct {
 
 	// MFA设备序列号。
-	SerialNumber string `json:"serial_number" xml:"serial_number"`
+	SerialNumber string `json:"serial_number"`
 
 	// 密钥信息，用于第三方生成图片验证码。
-	Base32StringSeed string `json:"base32_string_seed" xml:"base32_string_seed"`
+	Base32StringSeed string `json:"base32_string_seed"`
 }
 
 func (o CreateMfaDeviceRespon) String() string {

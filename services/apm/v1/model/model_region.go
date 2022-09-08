@@ -10,19 +10,19 @@ import (
 type Region struct {
 
 	// 区域id
-	RegionId *string `json:"region_id,omitempty" xml:"region_id"`
+	RegionId *string `json:"region_id,omitempty"`
 
 	// 区域名称
-	RegionName *string `json:"region_name,omitempty" xml:"region_name"`
+	RegionName *string `json:"region_name,omitempty"`
 
 	// 区域
-	Region *string `json:"region,omitempty" xml:"region"`
+	Region *string `json:"region,omitempty"`
 
 	// 企业项目id
-	ProjectId *string `json:"project_id,omitempty" xml:"project_id"`
+	ProjectId *string `json:"project_id,omitempty"`
 
 	// 区域状态
-	Status *string `json:"status,omitempty" xml:"status"`
+	Status *string `json:"status,omitempty"`
 }
 
 func (o Region) String() string {

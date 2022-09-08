@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type KeystoneShowProjectResponse struct {
-	Project        *ProjectResult `json:"project,omitempty" xml:"project"`
+	Project        *ProjectResult `json:"project,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }
 

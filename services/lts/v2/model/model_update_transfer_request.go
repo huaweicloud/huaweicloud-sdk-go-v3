@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type UpdateTransferRequest struct {
-	Body *UpdateTransferRequestBody `json:"body,omitempty" xml:"body"`
+	Body *UpdateTransferRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateTransferRequest) String() string {

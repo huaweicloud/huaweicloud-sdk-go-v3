@@ -13,25 +13,25 @@ import (
 type LineCompareDetail struct {
 
 	// 源库的表名称。
-	SourceTableName string `json:"source_table_name" xml:"source_table_name"`
+	SourceTableName string `json:"source_table_name"`
 
 	// 目标库的表名称。
-	TargetTableName string `json:"target_table_name" xml:"target_table_name"`
+	TargetTableName string `json:"target_table_name"`
 
 	// 源库的表行数。
-	SourceRowNum int32 `json:"source_row_num" xml:"source_row_num"`
+	SourceRowNum int32 `json:"source_row_num"`
 
 	// 目标库的表行数。
-	TargetRowNum int32 `json:"target_row_num" xml:"target_row_num"`
+	TargetRowNum int32 `json:"target_row_num"`
 
 	// 源库的表和目标库的表的差异值。
-	DiffRowNum int32 `json:"diff_row_num" xml:"diff_row_num"`
+	DiffRowNum int32 `json:"diff_row_num"`
 
 	// 对比结果。
-	LineCompareResult LineCompareDetailLineCompareResult `json:"line_compare_result" xml:"line_compare_result"`
+	LineCompareResult LineCompareDetailLineCompareResult `json:"line_compare_result"`
 
 	// 附加信息。
-	Message *string `json:"message,omitempty" xml:"message"`
+	Message *string `json:"message,omitempty"`
 }
 
 func (o LineCompareDetail) String() string {

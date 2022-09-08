@@ -10,24 +10,24 @@ import (
 type CreateThumbnailsTaskResponse struct {
 
 	// 任务ID。
-	TaskId *string `json:"task_id,omitempty" xml:"task_id"`
+	TaskId *string `json:"task_id,omitempty"`
 
 	// 任务状态
-	Status *string `json:"status,omitempty" xml:"status"`
+	Status *string `json:"status,omitempty"`
 
 	// 任务创建时间
-	CreateTime *string `json:"create_time,omitempty" xml:"create_time"`
+	CreateTime *string `json:"create_time,omitempty"`
 
-	Output *ObsObjInfo `json:"output,omitempty" xml:"output"`
+	Output *ObsObjInfo `json:"output,omitempty"`
 
 	// 截图文件名称
-	OutputFileName *string `json:"output_file_name,omitempty" xml:"output_file_name"`
+	OutputFileName *string `json:"output_file_name,omitempty"`
 
 	// 指定的截图时间点
-	ThumbnailTime *string `json:"thumbnail_time,omitempty" xml:"thumbnail_time"`
+	ThumbnailTime *string `json:"thumbnail_time,omitempty"`
 
 	// 截图任务描述，当截图出现异常时，此字段为异常的原因
-	Description    *string `json:"description,omitempty" xml:"description"`
+	Description    *string `json:"description,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

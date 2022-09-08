@@ -10,13 +10,13 @@ import (
 type DeleteSpecialThrottlingConfigurationV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 流控策略的编号
-	ThrottleId string `json:"throttle_id" xml:"throttle_id"`
+	ThrottleId string `json:"throttle_id"`
 
 	// 特殊配置的编号
-	StrategyId string `json:"strategy_id" xml:"strategy_id"`
+	StrategyId string `json:"strategy_id"`
 }
 
 func (o DeleteSpecialThrottlingConfigurationV2Request) String() string {

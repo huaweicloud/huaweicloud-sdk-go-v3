@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type UpdateDisasterRecoveryDrillNameResponse struct {
-	DisasterRecoveryDrill *ShowDisasterRecoveryDrillParams `json:"disaster_recovery_drill,omitempty" xml:"disaster_recovery_drill"`
+	DisasterRecoveryDrill *ShowDisasterRecoveryDrillParams `json:"disaster_recovery_drill,omitempty"`
 	HttpStatusCode        int                              `json:"-"`
 }
 

@@ -10,13 +10,13 @@ import (
 type PutDiskInfoReq struct {
 
 	// 更新的磁盘信息
-	Disks *[]ServerDisk `json:"disks,omitempty" xml:"disks"`
+	Disks *[]ServerDisk `json:"disks,omitempty"`
 
 	// 更新的卷信息
-	Volumegroups *[]VolumeGroups `json:"volumegroups,omitempty" xml:"volumegroups"`
+	Volumegroups *[]VolumeGroups `json:"volumegroups,omitempty"`
 
 	// 更新的btrfs信息
-	BtrfsList *[]BtrfsFileSystem `json:"btrfs_list,omitempty" xml:"btrfs_list"`
+	BtrfsList *[]BtrfsFileSystem `json:"btrfs_list,omitempty"`
 }
 
 func (o PutDiskInfoReq) String() string {

@@ -10,7 +10,7 @@ import (
 type AttrPairRules struct {
 
 	// 属性对。
-	AttrPairs *[]AttrPair `json:"attr_pairs,omitempty" xml:"attr_pairs"`
+	AttrPairs *[]AttrPair `json:"attr_pairs,omitempty"`
 }
 
 func (o AttrPairRules) String() string {

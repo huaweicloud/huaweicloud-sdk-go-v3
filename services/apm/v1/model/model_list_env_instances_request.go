@@ -10,9 +10,9 @@ import (
 type ListEnvInstancesRequest struct {
 
 	// 应用id
-	XBusinessId int64 `json:"x-business-id" xml:"x-business-id"`
+	XBusinessId int64 `json:"x-business-id"`
 
-	Body *InstanceSearchParam `json:"body,omitempty" xml:"body"`
+	Body *InstanceSearchParam `json:"body,omitempty"`
 }
 
 func (o ListEnvInstancesRequest) String() string {

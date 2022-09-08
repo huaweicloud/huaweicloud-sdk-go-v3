@@ -10,10 +10,10 @@ import (
 type DeleteLoadbalancerRequest struct {
 
 	// 负载均衡器id
-	LoadbalancerId string `json:"loadbalancer_id" xml:"loadbalancer_id"`
+	LoadbalancerId string `json:"loadbalancer_id"`
 
 	// （不再支持）级联删除负载均衡器
-	Cascade *bool `json:"cascade,omitempty" xml:"cascade"`
+	Cascade *bool `json:"cascade,omitempty"`
 }
 
 func (o DeleteLoadbalancerRequest) String() string {

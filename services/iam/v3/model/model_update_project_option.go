@@ -13,7 +13,7 @@ import (
 type UpdateProjectOption struct {
 
 	// 项目的状态信息，参数的值为\"suspended\"或\"normal\"。 - status值为\"suspended\"时，会将项目设置为冻结状态。 - status值为\"normal\"时，会将项目设置为正常（解冻）状态。
-	Status UpdateProjectOptionStatus `json:"status" xml:"status"`
+	Status UpdateProjectOptionStatus `json:"status"`
 }
 
 func (o UpdateProjectOption) String() string {

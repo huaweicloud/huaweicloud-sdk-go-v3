@@ -12,26 +12,26 @@ import (
 type AcceptVpcPeeringResponse struct {
 
 	// 对等连接ID
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 功能说明：对等连接名称 取值范围：支持1~64个字符
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 功能说明：对等连接状态 取值范围： - PENDING_ACCEPTANCE：等待接受 - REJECTED：已拒绝。 - EXPIRED：已过期。 - DELETED：已删除。 - ACTIVE：活动的。
-	Status *AcceptVpcPeeringResponseStatus `json:"status,omitempty" xml:"status"`
+	Status *AcceptVpcPeeringResponseStatus `json:"status,omitempty"`
 
-	RequestVpcInfo *VpcInfo `json:"request_vpc_info,omitempty" xml:"request_vpc_info"`
+	RequestVpcInfo *VpcInfo `json:"request_vpc_info,omitempty"`
 
-	AcceptVpcInfo *VpcInfo `json:"accept_vpc_info,omitempty" xml:"accept_vpc_info"`
+	AcceptVpcInfo *VpcInfo `json:"accept_vpc_info,omitempty"`
 
 	// 功能说明：资源创建UTC时间 格式：yyyy-MM-ddTHH:mm:ss
-	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty" xml:"created_at"`
+	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
 
 	// 功能说明：资源更新UTC时间 格式：yyyy-MM-ddTHH:mm:ss
-	UpdatedAt *sdktime.SdkTime `json:"updated_at,omitempty" xml:"updated_at"`
+	UpdatedAt *sdktime.SdkTime `json:"updated_at,omitempty"`
 
 	// 对等连接描述
-	Description    *string `json:"description,omitempty" xml:"description"`
+	Description    *string `json:"description,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

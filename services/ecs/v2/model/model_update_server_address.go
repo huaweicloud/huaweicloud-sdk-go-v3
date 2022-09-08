@@ -10,10 +10,10 @@ import (
 type UpdateServerAddress struct {
 
 	// IP地址版本。  - 4：代表IPv4。 - 6：代表IPv6。
-	Version int32 `json:"version" xml:"version"`
+	Version int32 `json:"version"`
 
 	// IP地址。
-	Addr string `json:"addr" xml:"addr"`
+	Addr string `json:"addr"`
 }
 
 func (o UpdateServerAddress) String() string {

@@ -13,10 +13,10 @@ import (
 type BatchDeleteSubnetTagsRequestBody struct {
 
 	// 功能说明：操作标识 取值范围：delete
-	Action BatchDeleteSubnetTagsRequestBodyAction `json:"action" xml:"action"`
+	Action BatchDeleteSubnetTagsRequestBodyAction `json:"action"`
 
 	// 标签列表
-	Tags []ResourceTag `json:"tags" xml:"tags"`
+	Tags []ResourceTag `json:"tags"`
 }
 
 func (o BatchDeleteSubnetTagsRequestBody) String() string {

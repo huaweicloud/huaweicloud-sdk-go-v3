@@ -8,12 +8,12 @@ import (
 
 // Response Object
 type ListPublicZonesResponse struct {
-	Links *PageLink `json:"links,omitempty" xml:"links"`
+	Links *PageLink `json:"links,omitempty"`
 
 	// 查询公网Zone的列表响应。
-	Zones *[]PublicZoneResp `json:"zones,omitempty" xml:"zones"`
+	Zones *[]PublicZoneResp `json:"zones,omitempty"`
 
-	Metadata       *Metedata `json:"metadata,omitempty" xml:"metadata"`
+	Metadata       *Metedata `json:"metadata,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }
 

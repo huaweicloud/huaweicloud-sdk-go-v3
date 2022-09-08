@@ -9,10 +9,10 @@ import (
 type MonthUsed struct {
 
 	// 日期
-	Date *string `json:"date,omitempty" xml:"date"`
+	Date *string `json:"date,omitempty"`
 
 	// 使用量
-	Value *int32 `json:"value,omitempty" xml:"value"`
+	Value *int32 `json:"value,omitempty"`
 }
 
 func (o MonthUsed) String() string {

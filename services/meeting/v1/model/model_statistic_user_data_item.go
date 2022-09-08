@@ -10,25 +10,25 @@ import (
 type StatisticUserDataItem struct {
 
 	// 日期/月份。
-	Time *string `json:"time,omitempty" xml:"time"`
+	Time *string `json:"time,omitempty"`
 
 	// 登录用户数。 category = user_login_info时有效。
-	UserLoginCount *string `json:"userLoginCount,omitempty" xml:"userLoginCount"`
+	UserLoginCount *string `json:"userLoginCount,omitempty"`
 
 	// PC端登录用户数。 category = user_login_info时有效。
-	UserPCLoginCount *string `json:"userPCLoginCount,omitempty" xml:"userPCLoginCount"`
+	UserPCLoginCount *string `json:"userPCLoginCount,omitempty"`
 
 	// 移动端登录用户数。 category = user_login_info时有效。
-	UserMobileLoginCount *string `json:"userMobileLoginCount,omitempty" xml:"userMobileLoginCount"`
+	UserMobileLoginCount *string `json:"userMobileLoginCount,omitempty"`
 
 	// 激活用户数。 category = user_activate_info时有效。
-	UserActivatedCount *string `json:"userActivatedCount,omitempty" xml:"userActivatedCount"`
+	UserActivatedCount *string `json:"userActivatedCount,omitempty"`
 
 	// 用户登录设备名称。 category = user_login_device_info时有效。
-	UserLoginDevicesName *string `json:"userLoginDevicesName,omitempty" xml:"userLoginDevicesName"`
+	UserLoginDevicesName *string `json:"userLoginDevicesName,omitempty"`
 
 	// 用户登录设备数。 category = user_login_device_info时有效。
-	UserLoginDevicesCount *string `json:"userLoginDevicesCount,omitempty" xml:"userLoginDevicesCount"`
+	UserLoginDevicesCount *string `json:"userLoginDevicesCount,omitempty"`
 }
 
 func (o StatisticUserDataItem) String() string {

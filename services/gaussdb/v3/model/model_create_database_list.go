@@ -10,10 +10,10 @@ import (
 type CreateDatabaseList struct {
 
 	// 数据库名称。
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 是否为只读权限：true表示只读,false表示可读写。
-	Readonly bool `json:"readonly" xml:"readonly"`
+	Readonly bool `json:"readonly"`
 }
 
 func (o CreateDatabaseList) String() string {

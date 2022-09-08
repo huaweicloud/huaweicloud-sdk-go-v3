@@ -10,10 +10,10 @@ import (
 type CreateTopicOrBatchDeleteTopicResponse struct {
 
 	// 主题名称。
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 删除主题任务ID。
-	JobId          *string `json:"job_id,omitempty" xml:"job_id"`
+	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

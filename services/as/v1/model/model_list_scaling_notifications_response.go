@@ -10,7 +10,7 @@ import (
 type ListScalingNotificationsResponse struct {
 
 	// 伸缩组通知列表。
-	Topics         *[]Topics `json:"topics,omitempty" xml:"topics"`
+	Topics         *[]Topics `json:"topics,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }
 

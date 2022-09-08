@@ -10,13 +10,13 @@ import (
 type TrafficMark struct {
 
 	// IP标记，客户端最原始的IP地址的HTTP请求头字段。
-	Sip *[]string `json:"sip,omitempty" xml:"sip"`
+	Sip *[]string `json:"sip,omitempty"`
 
 	// Session标记，用于Cookie恶意请求的攻击惩罚功能。在选择Cookie拦截的攻击惩罚功能前，必须配置该标识
-	Cookie *string `json:"cookie,omitempty" xml:"cookie"`
+	Cookie *string `json:"cookie,omitempty"`
 
 	// User标记，用于Params恶意请求的攻击惩罚功能。在选择Params拦截的攻击惩罚功能前，必须配置该标识。
-	Params *string `json:"params,omitempty" xml:"params"`
+	Params *string `json:"params,omitempty"`
 }
 
 func (o TrafficMark) String() string {

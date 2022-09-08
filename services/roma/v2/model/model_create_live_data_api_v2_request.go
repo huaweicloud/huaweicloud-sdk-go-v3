@@ -10,9 +10,9 @@ import (
 type CreateLiveDataApiV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
-	Body *LdApiCreate `json:"body,omitempty" xml:"body"`
+	Body *LdApiCreate `json:"body,omitempty"`
 }
 
 func (o CreateLiveDataApiV2Request) String() string {

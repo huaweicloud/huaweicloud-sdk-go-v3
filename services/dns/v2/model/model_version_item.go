@@ -9,22 +9,22 @@ import (
 type VersionItem struct {
 
 	// 版本ID（版本号），如v2。
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 版本状态，为如下3种： CURRENT：表示该版本为主推版本。 SUPPORTED：表示为老版本，但是现在还继续支持。 DEPRECATED：表示为废弃版本，存在后续删除的可能。
-	Status *string `json:"status,omitempty" xml:"status"`
+	Status *string `json:"status,omitempty"`
 
 	// API的URL地址。
-	Links *[]LinksItem `json:"links,omitempty" xml:"links"`
+	Links *[]LinksItem `json:"links,omitempty"`
 
 	// 版本发布时间。
-	Updated *string `json:"updated,omitempty" xml:"updated"`
+	Updated *string `json:"updated,omitempty"`
 
 	// 支持的最大微版本号。若该版本API不支持微版本，则为空。
-	Version *string `json:"version,omitempty" xml:"version"`
+	Version *string `json:"version,omitempty"`
 
 	// 支持的最小微版本号。若该版本API不支持微版本，则为空。
-	MinVersion *string `json:"min_version,omitempty" xml:"min_version"`
+	MinVersion *string `json:"min_version,omitempty"`
 }
 
 func (o VersionItem) String() string {

@@ -10,7 +10,7 @@ import (
 type UnfreezeCertResponse struct {
 
 	// 操作结果
-	Result         *string `json:"result,omitempty" xml:"result"`
+	Result         *string `json:"result,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

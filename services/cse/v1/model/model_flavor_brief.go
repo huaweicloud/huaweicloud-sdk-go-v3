@@ -10,10 +10,10 @@ import (
 type FlavorBrief struct {
 
 	// 微服务引擎专享版规格
-	Flavor *string `json:"flavor,omitempty" xml:"flavor"`
+	Flavor *string `json:"flavor,omitempty"`
 
 	// 微服务引擎专享版规格描述
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 }
 
 func (o FlavorBrief) String() string {

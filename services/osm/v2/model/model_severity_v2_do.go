@@ -9,13 +9,13 @@ import (
 type SeverityV2Do struct {
 
 	// 语言
-	Language *string `json:"language,omitempty" xml:"language"`
+	Language *string `json:"language,omitempty"`
 
 	// 严重性名称
-	SeverityName *string `json:"severity_name,omitempty" xml:"severity_name"`
+	SeverityName *string `json:"severity_name,omitempty"`
 
 	// 严重性id
-	SeverityId *string `json:"severity_id,omitempty" xml:"severity_id"`
+	SeverityId *string `json:"severity_id,omitempty"`
 }
 
 func (o SeverityV2Do) String() string {

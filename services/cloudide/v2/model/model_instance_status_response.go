@@ -12,10 +12,10 @@ import (
 type InstanceStatusResponse struct {
 
 	// 服务链接
-	ServerUrl *string `json:"server_url,omitempty" xml:"server_url"`
+	ServerUrl *string `json:"server_url,omitempty"`
 
 	// 实例状态。 - DELETED 已删除 - DELETE_FAILED 删除失败 - DELETING 删除中 - READY 热实例就绪状态 - RUNNING 正在运行 - STARTING 正在启动 - STOPPED 已停止 - STOPPING 停止中 - UPDATE 更新Schdule信息 - WAITING 热实例创建初始态
-	Status *InstanceStatusResponseStatus `json:"status,omitempty" xml:"status"`
+	Status *InstanceStatusResponseStatus `json:"status,omitempty"`
 }
 
 func (o InstanceStatusResponse) String() string {

@@ -10,10 +10,10 @@ import (
 type DeleteLinkRequest struct {
 
 	// 集群ID
-	ClusterId string `json:"cluster_id" xml:"cluster_id"`
+	ClusterId string `json:"cluster_id"`
 
 	// 需要删除的连接名
-	LinkName string `json:"link_name" xml:"link_name"`
+	LinkName string `json:"link_name"`
 }
 
 func (o DeleteLinkRequest) String() string {

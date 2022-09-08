@@ -10,10 +10,10 @@ import (
 type DownloadProductsRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 待导出产品ID列表
-	ProductIds *[]int32 `json:"product_ids,omitempty" xml:"product_ids"`
+	ProductIds *[]int32 `json:"product_ids,omitempty"`
 }
 
 func (o DownloadProductsRequest) String() string {

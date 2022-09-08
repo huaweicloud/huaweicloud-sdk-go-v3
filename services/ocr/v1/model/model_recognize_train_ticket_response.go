@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type RecognizeTrainTicketResponse struct {
-	Result         *TrainTicketResult `json:"result,omitempty" xml:"result"`
+	Result         *TrainTicketResult `json:"result,omitempty"`
 	HttpStatusCode int                `json:"-"`
 }
 

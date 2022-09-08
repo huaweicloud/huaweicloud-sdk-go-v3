@@ -10,9 +10,9 @@ import (
 type BatchCreateVolumeTagsRequest struct {
 
 	// 云硬盘ID。
-	VolumeId string `json:"volume_id" xml:"volume_id"`
+	VolumeId string `json:"volume_id"`
 
-	Body *BatchCreateVolumeTagsRequestBody `json:"body,omitempty" xml:"body"`
+	Body *BatchCreateVolumeTagsRequestBody `json:"body,omitempty"`
 }
 
 func (o BatchCreateVolumeTagsRequest) String() string {

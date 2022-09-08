@@ -10,7 +10,7 @@ import (
 type CreateTaskResponse struct {
 
 	// 创建成功返回的任务id
-	Id             *string `json:"id,omitempty" xml:"id"`
+	Id             *string `json:"id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

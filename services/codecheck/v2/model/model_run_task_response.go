@@ -10,7 +10,7 @@ import (
 type RunTaskResponse struct {
 
 	// 执行id
-	ExecId         *string `json:"exec_id,omitempty" xml:"exec_id"`
+	ExecId         *string `json:"exec_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

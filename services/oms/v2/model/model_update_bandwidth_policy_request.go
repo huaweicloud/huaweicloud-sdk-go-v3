@@ -10,9 +10,9 @@ import (
 type UpdateBandwidthPolicyRequest struct {
 
 	// 任务ID。
-	TaskId int64 `json:"task_id" xml:"task_id"`
+	TaskId int64 `json:"task_id"`
 
-	Body *UpdateBandwidthPolicyReq `json:"body,omitempty" xml:"body"`
+	Body *UpdateBandwidthPolicyReq `json:"body,omitempty"`
 }
 
 func (o UpdateBandwidthPolicyRequest) String() string {

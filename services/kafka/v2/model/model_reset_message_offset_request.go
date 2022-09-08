@@ -10,12 +10,12 @@ import (
 type ResetMessageOffsetRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 消费组名称。
-	Group string `json:"group" xml:"group"`
+	Group string `json:"group"`
 
-	Body *ResetMessageOffsetReq `json:"body,omitempty" xml:"body"`
+	Body *ResetMessageOffsetReq `json:"body,omitempty"`
 }
 
 func (o ResetMessageOffsetRequest) String() string {

@@ -10,7 +10,7 @@ import (
 type ListRequestTimelineResponse struct {
 
 	// 安全统计的请求时间线数据
-	Body           *[]StatisticsTimelineItem `json:"body,omitempty" xml:"body"`
+	Body           *[]StatisticsTimelineItem `json:"body,omitempty"`
 	HttpStatusCode int                       `json:"-"`
 }
 

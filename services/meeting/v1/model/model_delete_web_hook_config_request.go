@@ -10,7 +10,7 @@ import (
 type DeleteWebHookConfigRequest struct {
 
 	// 订阅配置记录id
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 }
 
 func (o DeleteWebHookConfigRequest) String() string {

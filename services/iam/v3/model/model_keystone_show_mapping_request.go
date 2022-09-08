@@ -10,7 +10,7 @@ import (
 type KeystoneShowMappingRequest struct {
 
 	// 待查询的映射ID。
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 }
 
 func (o KeystoneShowMappingRequest) String() string {

@@ -10,7 +10,7 @@ import (
 type CpuOptions struct {
 
 	// CPU超线程数， 决定CPU是否开启超线程
-	HwcpuThreads *int32 `json:"hw:cpu_threads,omitempty" xml:"hw:cpu_threads"`
+	HwcpuThreads *int32 `json:"hw:cpu_threads,omitempty"`
 }
 
 func (o CpuOptions) String() string {

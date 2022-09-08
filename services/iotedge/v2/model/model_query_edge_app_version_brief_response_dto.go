@@ -12,40 +12,40 @@ import (
 type QueryEdgeAppVersionBriefResponseDto struct {
 
 	// 应用ID
-	EdgeAppId *string `json:"edge_app_id,omitempty" xml:"edge_app_id"`
+	EdgeAppId *string `json:"edge_app_id,omitempty"`
 
 	// 应用名称
-	Version *string `json:"version,omitempty" xml:"version"`
+	Version *string `json:"version,omitempty"`
 
 	// 应用集成的边缘升得快版本
-	SdkVersion *string `json:"sdk_version,omitempty" xml:"sdk_version"`
+	SdkVersion *string `json:"sdk_version,omitempty"`
 
 	// 应用描述
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 部署类型docker|process
-	DeployType *string `json:"deploy_type,omitempty" xml:"deploy_type"`
+	DeployType *string `json:"deploy_type,omitempty"`
 
 	// 是否允许部署多实例
-	DeployMultiInstance *bool `json:"deploy_multi_instance,omitempty" xml:"deploy_multi_instance"`
+	DeployMultiInstance *bool `json:"deploy_multi_instance,omitempty"`
 
 	// 创建时间
-	CreateTime *string `json:"create_time,omitempty" xml:"create_time"`
+	CreateTime *string `json:"create_time,omitempty"`
 
 	// 最后一次修改时间
-	UpdateTime *string `json:"update_time,omitempty" xml:"update_time"`
+	UpdateTime *string `json:"update_time,omitempty"`
 
 	// 应用版本状态
-	State *QueryEdgeAppVersionBriefResponseDtoState `json:"state,omitempty" xml:"state"`
+	State *QueryEdgeAppVersionBriefResponseDtoState `json:"state,omitempty"`
 
 	// 架构
-	Arch *[]string `json:"arch,omitempty" xml:"arch"`
+	Arch *[]string `json:"arch,omitempty"`
 
 	// 发布时间
-	PublishTime *string `json:"publish_time,omitempty" xml:"publish_time"`
+	PublishTime *string `json:"publish_time,omitempty"`
 
 	// 下线时间
-	OffShelfTime *string `json:"off_shelf_time,omitempty" xml:"off_shelf_time"`
+	OffShelfTime *string `json:"off_shelf_time,omitempty"`
 }
 
 func (o QueryEdgeAppVersionBriefResponseDto) String() string {

@@ -11,16 +11,16 @@ import (
 
 // 音频内容审核请求体
 type AudioCreateRequest struct {
-	Data *AudioInputBody `json:"data" xml:"data"`
+	Data *AudioInputBody `json:"data"`
 
 	// 事件类型，可选值如下： default：默认事件 audiobook：有声书 education：教育音频 game：游戏语音房 live：秀场直播 ecommerce：电商直播 voiceroom：交友语音房 private：私密语音聊天
-	EventType AudioCreateRequestEventType `json:"event_type" xml:"event_type"`
+	EventType AudioCreateRequestEventType `json:"event_type"`
 
 	// 需要检测的风险类型，若未传或者传参为空，则表示全场景审核。
-	Categories *[]AudioCreateRequestCategories `json:"categories,omitempty" xml:"categories"`
+	Categories *[]AudioCreateRequestCategories `json:"categories,omitempty"`
 
 	// 回调http接口：当该字段非空时，服务将根据该字段回调通知用户审核结果。
-	Callback *string `json:"callback,omitempty" xml:"callback"`
+	Callback *string `json:"callback,omitempty"`
 }
 
 func (o AudioCreateRequest) String() string {

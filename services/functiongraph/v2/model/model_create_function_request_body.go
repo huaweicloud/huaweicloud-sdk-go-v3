@@ -13,57 +13,57 @@ import (
 type CreateFunctionRequestBody struct {
 
 	// 函数名称。
-	FuncName string `json:"func_name" xml:"func_name"`
+	FuncName string `json:"func_name"`
 
 	// 函数所属的分组Package，用于用户针对函数的自定义分组。
-	Package string `json:"package" xml:"package"`
+	Package string `json:"package"`
 
 	// FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本
-	Runtime CreateFunctionRequestBodyRuntime `json:"runtime" xml:"runtime"`
+	Runtime CreateFunctionRequestBodyRuntime `json:"runtime"`
 
 	// 函数执行超时时间，超时函数将被强行停止，范围3～900秒，可以通过白名单配置延长到12小时，具体可以咨询华为云函数工作流服务进行配置
-	Timeout int32 `json:"timeout" xml:"timeout"`
+	Timeout int32 `json:"timeout"`
 
 	// 函数执行入口 规则：xx.xx，必须包含“. ” 举例：对于node.js函数：myfunction.handler，则表示函数的文件名为myfunction.js，执行的入口函数名为handler。
-	Handler string `json:"handler" xml:"handler"`
+	Handler string `json:"handler"`
 
 	// 函数消耗的内存。 单位M。 取值范围为：128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096。 最小值为128，最大值为4096。
-	MemorySize int32 `json:"memory_size" xml:"memory_size"`
+	MemorySize int32 `json:"memory_size"`
 
 	// 函数代码类型，取值有4种。 inline: UI在线编辑代码。 zip: 函数代码为zip包。 obs: 函数代码来源于obs存储。 jar: 函数代码为jar包，主要针对Java函数。
-	CodeType CreateFunctionRequestBodyCodeType `json:"code_type" xml:"code_type"`
+	CodeType CreateFunctionRequestBodyCodeType `json:"code_type"`
 
 	// 当CodeType为obs时，该值为函数代码包在OBS上的地址，CodeType为其他值时，该字段为空。
-	CodeUrl *string `json:"code_url,omitempty" xml:"code_url"`
+	CodeUrl *string `json:"code_url,omitempty"`
 
 	// 函数的文件名，当CodeType为jar/zip时必须提供该字段，inline和obs不需要提供。
-	CodeFilename *string `json:"code_filename,omitempty" xml:"code_filename"`
+	CodeFilename *string `json:"code_filename,omitempty"`
 
 	// 用户自定义的name/value信息。 在函数中使用的参数。 举例：如函数要访问某个主机，可以设置自定义参数：Host={host_ip}，最多定义20个，总长度不超过4KB。
-	UserData *string `json:"user_data,omitempty" xml:"user_data"`
+	UserData *string `json:"user_data,omitempty"`
 
 	// 函数使用的权限委托名称，需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。
-	Xrole *string `json:"xrole,omitempty" xml:"xrole"`
+	Xrole *string `json:"xrole,omitempty"`
 
 	// 函数app使用的权限委托名称，需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。
-	AppXrole *string `json:"app_xrole,omitempty" xml:"app_xrole"`
+	AppXrole *string `json:"app_xrole,omitempty"`
 
 	// 函数描述。
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
-	FuncCode *FuncCode `json:"func_code,omitempty" xml:"func_code"`
+	FuncCode *FuncCode `json:"func_code,omitempty"`
 
 	// 函数初始化入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
-	InitializerHandler *string `json:"initializer_handler,omitempty" xml:"initializer_handler"`
+	InitializerHandler *string `json:"initializer_handler,omitempty"`
 
 	// 初始化超时时间，超时函数将被强行停止，范围1～300秒。
-	InitializerTimeout *int32 `json:"initializer_timeout,omitempty" xml:"initializer_timeout"`
+	InitializerTimeout *int32 `json:"initializer_timeout,omitempty"`
 
 	// 企业项目ID，在企业用户创建函数时必填。
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 函数版本。
-	Type *CreateFunctionRequestBodyType `json:"type,omitempty" xml:"type"`
+	Type *CreateFunctionRequestBodyType `json:"type,omitempty"`
 }
 
 func (o CreateFunctionRequestBody) String() string {

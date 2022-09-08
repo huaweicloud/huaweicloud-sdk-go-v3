@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type CreateTasksResponse struct {
-	Body           *[]CreateResponseBody `json:"body,omitempty" xml:"body"`
+	Body           *[]CreateResponseBody `json:"body,omitempty"`
 	HttpStatusCode int                   `json:"-"`
 }
 

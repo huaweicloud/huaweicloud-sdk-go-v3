@@ -10,13 +10,13 @@ import (
 type ShowDetailsOfMemberGroupRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// VPC通道的编号
-	VpcChannelId string `json:"vpc_channel_id" xml:"vpc_channel_id"`
+	VpcChannelId string `json:"vpc_channel_id"`
 
 	// VPC通道后端服务器组编号
-	MemberGroupId string `json:"member_group_id" xml:"member_group_id"`
+	MemberGroupId string `json:"member_group_id"`
 }
 
 func (o ShowDetailsOfMemberGroupRequest) String() string {

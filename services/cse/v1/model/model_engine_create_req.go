@@ -13,42 +13,42 @@ import (
 type EngineCreateReq struct {
 
 	// 微服务引擎专享版的名称，名称为字母开头，字母、数字、-组成，且不能以-结尾，3-24个字符。
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 微服务引擎专享版描述，长度0~255。
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 微服务引擎专享版计费方式，1表示按需
-	Payment EngineCreateReqPayment `json:"payment" xml:"payment"`
+	Payment EngineCreateReqPayment `json:"payment"`
 
 	// 微服务引擎专享版的规格
-	Flavor EngineCreateReqFlavor `json:"flavor" xml:"flavor"`
+	Flavor EngineCreateReqFlavor `json:"flavor"`
 
 	// 当前局点可用区列表。
-	AzList []string `json:"azList" xml:"azList"`
+	AzList []string `json:"azList"`
 
 	// 微服务引擎专享版认证方式，RBAC为安全认证，NONE为无认证。
-	AuthType EngineCreateReqAuthType `json:"authType" xml:"authType"`
+	AuthType EngineCreateReqAuthType `json:"authType"`
 
 	// vpc名称
-	Vpc string `json:"vpc" xml:"vpc"`
+	Vpc string `json:"vpc"`
 
 	// 微服务引擎专享版子网ID
-	NetworkId string `json:"networkId" xml:"networkId"`
+	NetworkId string `json:"networkId"`
 
 	// 微服务引擎专享版子网划分
-	SubnetCidr string `json:"subnetCidr" xml:"subnetCidr"`
+	SubnetCidr string `json:"subnetCidr"`
 
 	// 微服务引擎专享版公网地址ID，当前为null
-	PublicIpId *string `json:"publicIpId,omitempty" xml:"publicIpId"`
+	PublicIpId *string `json:"publicIpId,omitempty"`
 
-	AuthCred *EngineRbacPwd `json:"auth_cred,omitempty" xml:"auth_cred"`
+	AuthCred *EngineRbacPwd `json:"auth_cred,omitempty"`
 
 	// 微服务引擎专享版应用部署类型
-	SpecType EngineCreateReqSpecType `json:"specType" xml:"specType"`
+	SpecType EngineCreateReqSpecType `json:"specType"`
 
 	// 引擎附加参数
-	Inputs map[string]string `json:"inputs,omitempty" xml:"inputs"`
+	Inputs map[string]string `json:"inputs,omitempty"`
 }
 
 func (o EngineCreateReq) String() string {

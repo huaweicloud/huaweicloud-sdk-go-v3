@@ -10,28 +10,28 @@ import (
 type QueryCorpBasicResultDto struct {
 
 	// 企业名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 联系号码
-	Phone *string `json:"phone,omitempty" xml:"phone"`
+	Phone *string `json:"phone,omitempty"`
 
 	// 联系号码所属的国家
-	Country *string `json:"country,omitempty" xml:"country"`
+	Country *string `json:"country,omitempty"`
 
 	// 传真号码
-	Fax *string `json:"fax,omitempty" xml:"fax"`
+	Fax *string `json:"fax,omitempty"`
 
 	// 邮箱地址
-	Email *string `json:"email,omitempty" xml:"email"`
+	Email *string `json:"email,omitempty"`
 
 	// 地址
-	Address *string `json:"address,omitempty" xml:"address"`
+	Address *string `json:"address,omitempty"`
 
 	// 备注
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 企业所属spId
-	SpId *string `json:"spId,omitempty" xml:"spId"`
+	SpId *string `json:"spId,omitempty"`
 }
 
 func (o QueryCorpBasicResultDto) String() string {

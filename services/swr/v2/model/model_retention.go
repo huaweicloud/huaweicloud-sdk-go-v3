@@ -10,16 +10,16 @@ import (
 type Retention struct {
 
 	// 回收规则匹配策略，or
-	Algorithm string `json:"algorithm" xml:"algorithm"`
+	Algorithm string `json:"algorithm"`
 
 	// ID
-	Id int32 `json:"id" xml:"id"`
+	Id int32 `json:"id"`
 
 	// 镜像老化规则
-	Rules []Rule `json:"rules" xml:"rules"`
+	Rules []Rule `json:"rules"`
 
 	// 保留字段
-	Scope string `json:"scope" xml:"scope"`
+	Scope string `json:"scope"`
 }
 
 func (o Retention) String() string {

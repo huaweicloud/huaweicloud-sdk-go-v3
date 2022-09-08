@@ -9,10 +9,10 @@ import (
 type XCodeError struct {
 
 	// 错误码
-	Code *string `json:"code,omitempty" xml:"code"`
+	Code *string `json:"code,omitempty"`
 
 	// 错误信息
-	Msg *string `json:"msg,omitempty" xml:"msg"`
+	Msg *string `json:"msg,omitempty"`
 }
 
 func (o XCodeError) String() string {

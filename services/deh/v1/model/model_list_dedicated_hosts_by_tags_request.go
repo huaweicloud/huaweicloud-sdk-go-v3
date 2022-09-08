@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ListDedicatedHostsByTagsRequest struct {
-	Body *ReqListDehByTags `json:"body,omitempty" xml:"body"`
+	Body *ReqListDehByTags `json:"body,omitempty"`
 }
 
 func (o ListDedicatedHostsByTagsRequest) String() string {

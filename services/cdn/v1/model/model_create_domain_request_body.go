@@ -8,7 +8,7 @@ import (
 
 // 域名对象
 type CreateDomainRequestBody struct {
-	Domain *DomainBody `json:"domain" xml:"domain"`
+	Domain *DomainBody `json:"domain"`
 }
 
 func (o CreateDomainRequestBody) String() string {

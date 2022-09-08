@@ -13,13 +13,13 @@ import (
 type ShowDeploymentJobsRequest struct {
 
 	// 语言类型 中文:zh-cn 英文:en-us
-	XLanguage *ShowDeploymentJobsRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *ShowDeploymentJobsRequestXLanguage `json:"X-Language,omitempty"`
 
 	// 应用id
-	ApplicationId string `json:"application_id" xml:"application_id"`
+	ApplicationId string `json:"application_id"`
 
 	// 环境标识，从 [应用详情接口](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=DevStar&api=ShowApplication) 返回报文中的环境信息获取。
-	EnvironmentTag string `json:"environment_tag" xml:"environment_tag"`
+	EnvironmentTag string `json:"environment_tag"`
 }
 
 func (o ShowDeploymentJobsRequest) String() string {

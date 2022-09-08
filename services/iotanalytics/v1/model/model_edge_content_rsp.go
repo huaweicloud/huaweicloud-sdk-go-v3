@@ -10,10 +10,10 @@ import (
 type EdgeContentRsp struct {
 
 	// Edge实例Id
-	IotdaInstanceId string `json:"iotda_instance_id" xml:"iotda_instance_id"`
+	IotdaInstanceId string `json:"iotda_instance_id"`
 
 	// 在Edge实例中要配置的转发规则，包含推送数据的资源空间和产品列表
-	Rules []EdgeContentRuleRsp `json:"rules" xml:"rules"`
+	Rules []EdgeContentRuleRsp `json:"rules"`
 }
 
 func (o EdgeContentRsp) String() string {

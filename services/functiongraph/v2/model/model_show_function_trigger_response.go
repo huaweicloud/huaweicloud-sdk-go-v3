@@ -12,22 +12,22 @@ import (
 type ShowFunctionTriggerResponse struct {
 
 	// 触发器ID。
-	TriggerId *string `json:"trigger_id,omitempty" xml:"trigger_id"`
+	TriggerId *string `json:"trigger_id,omitempty"`
 
 	// 触发器类型。  - TIMER: \"定时触发器。\" - APIG: \"APIG触发器。\" - CTS: \"云审计服务触发器。\" - DDS: \"文档数据库服务触发器。\" - DMS: \"分布式服务触发器。\" - DIS: \"数据接入服务触发器。\" - LTS: \"云日志服务触发器。\" - OBS: \"对象存储触发器。\" - SMN: \"消息通知服务触发器。\" - KAFKA: \"专享版消息通知服务触发器。\"
-	TriggerTypeCode *ShowFunctionTriggerResponseTriggerTypeCode `json:"trigger_type_code,omitempty" xml:"trigger_type_code"`
+	TriggerTypeCode *ShowFunctionTriggerResponseTriggerTypeCode `json:"trigger_type_code,omitempty"`
 
 	// \"触发器状态\"  - ACTIVE: 启用状态。 - DISABLE: 禁用状态。
-	TriggerStatus *ShowFunctionTriggerResponseTriggerStatus `json:"trigger_status,omitempty" xml:"trigger_status"`
+	TriggerStatus *ShowFunctionTriggerResponseTriggerStatus `json:"trigger_status,omitempty"`
 
 	// 触发器源事件。
-	EventData *interface{} `json:"event_data,omitempty" xml:"event_data"`
+	EventData *interface{} `json:"event_data,omitempty"`
 
 	// 最后更新时间。
-	LastUpdatedTime *sdktime.SdkTime `json:"last_updated_time,omitempty" xml:"last_updated_time"`
+	LastUpdatedTime *sdktime.SdkTime `json:"last_updated_time,omitempty"`
 
 	// 触发器创建时间。
-	CreatedTime    *sdktime.SdkTime `json:"created_time,omitempty" xml:"created_time"`
+	CreatedTime    *sdktime.SdkTime `json:"created_time,omitempty"`
 	HttpStatusCode int              `json:"-"`
 }
 

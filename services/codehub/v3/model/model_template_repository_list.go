@@ -9,10 +9,10 @@ import (
 type TemplateRepositoryList struct {
 
 	// 模板列表
-	Projects *[]TemplateRepository `json:"projects,omitempty" xml:"projects"`
+	Projects *[]TemplateRepository `json:"projects,omitempty"`
 
 	// 模板总数
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 }
 
 func (o TemplateRepositoryList) String() string {

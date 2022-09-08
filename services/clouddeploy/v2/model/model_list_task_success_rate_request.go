@@ -10,9 +10,9 @@ import (
 type ListTaskSuccessRateRequest struct {
 
 	// 项目id
-	ProjectId string `json:"project_id" xml:"project_id"`
+	ProjectId string `json:"project_id"`
 
-	Body *TasksSuccessRateQuery `json:"body,omitempty" xml:"body"`
+	Body *TasksSuccessRateQuery `json:"body,omitempty"`
 }
 
 func (o ListTaskSuccessRateRequest) String() string {

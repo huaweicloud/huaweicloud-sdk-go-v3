@@ -9,7 +9,7 @@ import (
 type AclBindingBatchDelete struct {
 
 	// 需要解除绑定的API和ACL绑定关系ID列表
-	AclBindings *[]string `json:"acl_bindings,omitempty" xml:"acl_bindings"`
+	AclBindings *[]string `json:"acl_bindings,omitempty"`
 }
 
 func (o AclBindingBatchDelete) String() string {

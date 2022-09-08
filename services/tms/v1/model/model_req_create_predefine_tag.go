@@ -13,10 +13,10 @@ import (
 type ReqCreatePredefineTag struct {
 
 	// 操作标识（区分大小写）：create（创建）
-	Action ReqCreatePredefineTagAction `json:"action" xml:"action"`
+	Action ReqCreatePredefineTagAction `json:"action"`
 
 	// 标签列表
-	Tags []PredefineTagRequest `json:"tags" xml:"tags"`
+	Tags []PredefineTagRequest `json:"tags"`
 }
 
 func (o ReqCreatePredefineTag) String() string {

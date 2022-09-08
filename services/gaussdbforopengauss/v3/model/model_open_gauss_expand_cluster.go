@@ -10,9 +10,9 @@ import (
 type OpenGaussExpandCluster struct {
 
 	// CN横向扩容时必填
-	Coordinators *[]OpenGaussCoordinators `json:"coordinators,omitempty" xml:"coordinators"`
+	Coordinators *[]OpenGaussCoordinators `json:"coordinators,omitempty"`
 
-	Shard *OpenGaussShard `json:"shard,omitempty" xml:"shard"`
+	Shard *OpenGaussShard `json:"shard,omitempty"`
 }
 
 func (o OpenGaussExpandCluster) String() string {

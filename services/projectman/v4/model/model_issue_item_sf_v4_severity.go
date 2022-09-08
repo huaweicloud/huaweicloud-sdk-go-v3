@@ -10,10 +10,10 @@ import (
 type IssueItemSfV4Severity struct {
 
 	// 重要程度id
-	Id *int32 `json:"id,omitempty" xml:"id"`
+	Id *int32 `json:"id,omitempty"`
 
 	// 重要程度
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 }
 
 func (o IssueItemSfV4Severity) String() string {

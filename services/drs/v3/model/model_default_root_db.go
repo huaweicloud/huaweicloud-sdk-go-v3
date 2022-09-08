@@ -10,10 +10,10 @@ import (
 type DefaultRootDb struct {
 
 	// 库名。
-	DbName *string `json:"db_name,omitempty" xml:"db_name"`
+	DbName *string `json:"db_name,omitempty"`
 
 	// 编码格式。
-	DbEncoding *string `json:"db_encoding,omitempty" xml:"db_encoding"`
+	DbEncoding *string `json:"db_encoding,omitempty"`
 }
 
 func (o DefaultRootDb) String() string {

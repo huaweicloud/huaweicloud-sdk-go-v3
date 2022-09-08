@@ -10,10 +10,10 @@ import (
 type DeleteEngineRequest struct {
 
 	// 如果不带则默认企业项目为\"default\"，ID为\"0\"
-	XEnterpriseProjectID *string `json:"X-Enterprise-Project-ID,omitempty" xml:"X-Enterprise-Project-ID"`
+	XEnterpriseProjectID *string `json:"X-Enterprise-Project-ID,omitempty"`
 
 	// 微服务引擎专享版ID
-	EngineId string `json:"engine_id" xml:"engine_id"`
+	EngineId string `json:"engine_id"`
 }
 
 func (o DeleteEngineRequest) String() string {

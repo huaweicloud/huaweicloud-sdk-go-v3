@@ -9,19 +9,19 @@ import (
 type ClassroomCard struct {
 
 	// 课堂ID
-	ClassroomId string `json:"classroom_id" xml:"classroom_id"`
+	ClassroomId string `json:"classroom_id"`
 
 	// 课堂名称
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 课堂描述
-	Description string `json:"description" xml:"description"`
+	Description string `json:"description"`
 
 	// 课堂学分
-	Credit float32 `json:"credit" xml:"credit"`
+	Credit float32 `json:"credit"`
 
 	// 课堂当前的状态，normal：课堂处于正常状态，archive：课堂已归档
-	Status string `json:"status" xml:"status"`
+	Status string `json:"status"`
 }
 
 func (o ClassroomCard) String() string {

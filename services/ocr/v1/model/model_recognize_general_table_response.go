@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type RecognizeGeneralTableResponse struct {
-	Result         *GeneralTableResult `json:"result,omitempty" xml:"result"`
+	Result         *GeneralTableResult `json:"result,omitempty"`
 	HttpStatusCode int                 `json:"-"`
 }
 

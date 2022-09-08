@@ -10,9 +10,9 @@ import (
 type KeystoneCreateUserTokenByPasswordAndMfaRequest struct {
 
 	// 如果设置该参数，返回的响应体中将不显示catalog信息。任何非空字符串都将解释为true，并使该字段生效。
-	Nocatalog *string `json:"nocatalog,omitempty" xml:"nocatalog"`
+	Nocatalog *string `json:"nocatalog,omitempty"`
 
-	Body *KeystoneCreateUserTokenByPasswordAndMfaRequestBody `json:"body,omitempty" xml:"body"`
+	Body *KeystoneCreateUserTokenByPasswordAndMfaRequestBody `json:"body,omitempty"`
 }
 
 func (o KeystoneCreateUserTokenByPasswordAndMfaRequest) String() string {

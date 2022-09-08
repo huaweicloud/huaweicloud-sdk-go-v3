@@ -13,13 +13,13 @@ import (
 type PostMultiGainedSegmentResponseItem struct {
 
 	// 当前节点对应的文本内容
-	Content string `json:"content" xml:"content"`
+	Content string `json:"content"`
 
 	// 文本类型，取值如下： WORD-词汇类型 CHAR-字符类型
-	Type PostMultiGainedSegmentResponseItemType `json:"type" xml:"type"`
+	Type PostMultiGainedSegmentResponseItemType `json:"type"`
 
 	// 当前节点的子节点列表
-	SubContents *[]PostMultiGainedSegmentResponseItemCopy `json:"sub_contents,omitempty" xml:"sub_contents"`
+	SubContents *[]PostMultiGainedSegmentResponseItemCopy `json:"sub_contents,omitempty"`
 }
 
 func (o PostMultiGainedSegmentResponseItem) String() string {

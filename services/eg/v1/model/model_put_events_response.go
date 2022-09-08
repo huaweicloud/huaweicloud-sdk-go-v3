@@ -10,10 +10,10 @@ import (
 type PutEventsResponse struct {
 
 	// 发布失败的事件个数
-	FailedCount *int32 `json:"failed_count,omitempty" xml:"failed_count"`
+	FailedCount *int32 `json:"failed_count,omitempty"`
 
 	// 事件信息
-	Events         *[]PutEventsRespEvents `json:"events,omitempty" xml:"events"`
+	Events         *[]PutEventsRespEvents `json:"events,omitempty"`
 	HttpStatusCode int                    `json:"-"`
 }
 

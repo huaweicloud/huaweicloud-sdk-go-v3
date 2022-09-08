@@ -10,13 +10,13 @@ import (
 type ListProductTwoTemplatesRequest struct {
 
 	// 项目ID
-	ProjectUuid string `json:"project_uuid" xml:"project_uuid"`
+	ProjectUuid string `json:"project_uuid"`
 
 	// 分页页数
-	PageNo *int32 `json:"page_no,omitempty" xml:"page_no"`
+	PageNo *int32 `json:"page_no,omitempty"`
 
 	// 每页数据数
-	PageSize *int32 `json:"page_size,omitempty" xml:"page_size"`
+	PageSize *int32 `json:"page_size,omitempty"`
 }
 
 func (o ListProductTwoTemplatesRequest) String() string {

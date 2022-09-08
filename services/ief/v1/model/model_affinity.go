@@ -8,11 +8,11 @@ import (
 
 // 应用实例亲和性规则，仅铂金版支持
 type Affinity struct {
-	NodeAffinity *AffinityNodeAffinity `json:"nodeAffinity,omitempty" xml:"nodeAffinity"`
+	NodeAffinity *AffinityNodeAffinity `json:"nodeAffinity,omitempty"`
 
-	PodAffinity *AffinityPodAffinity `json:"podAffinity,omitempty" xml:"podAffinity"`
+	PodAffinity *AffinityPodAffinity `json:"podAffinity,omitempty"`
 
-	PodAntiAffinity *AffinityPodAntiAffinity `json:"podAntiAffinity,omitempty" xml:"podAntiAffinity"`
+	PodAntiAffinity *AffinityPodAntiAffinity `json:"podAntiAffinity,omitempty"`
 }
 
 func (o Affinity) String() string {

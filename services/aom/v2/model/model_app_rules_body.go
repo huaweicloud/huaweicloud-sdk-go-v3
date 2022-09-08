@@ -9,7 +9,7 @@ import (
 type AppRulesBody struct {
 
 	// 服务参数。
-	AppRules *[]AppRules `json:"appRules,omitempty" xml:"appRules"`
+	AppRules *[]AppRules `json:"appRules,omitempty"`
 }
 
 func (o AppRulesBody) String() string {

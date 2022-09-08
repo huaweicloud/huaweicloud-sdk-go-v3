@@ -10,10 +10,10 @@ import (
 type IssueItemSfV4Module struct {
 
 	// 模块id
-	Id *int32 `json:"id,omitempty" xml:"id"`
+	Id *int32 `json:"id,omitempty"`
 
 	// 模块
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 }
 
 func (o IssueItemSfV4Module) String() string {

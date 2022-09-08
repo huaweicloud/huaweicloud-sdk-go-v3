@@ -13,40 +13,40 @@ import (
 type FirewallRule struct {
 
 	// 策略是否允许  取值范围：allow，deny，reject
-	Action FirewallRuleAction `json:"action" xml:"action"`
+	Action FirewallRuleAction `json:"action"`
 
 	// 网络ACL规则描述。
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 目的地IP地址，IPv4[或IPv6](tag:hide)的CIDR格式
-	DestinationIpAddress string `json:"destination_ip_address" xml:"destination_ip_address"`
+	DestinationIpAddress string `json:"destination_ip_address"`
 
 	// 目的地端口范围  取值范围：整数，比如80，或者以\"-\"隔开的范围，比如80-90
-	DestinationPort string `json:"destination_port" xml:"destination_port"`
+	DestinationPort string `json:"destination_port"`
 
 	// 网络ACL规则使能开关。  取值范围：true，false
-	Enabled bool `json:"enabled" xml:"enabled"`
+	Enabled bool `json:"enabled"`
 
 	// 网络ACL规则ID。  进行更新规则时，如果operate_type为add，则该值为空。
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
 	// IP协议版本  取值范围：4[、6](tag:hide)
-	IpVersion int32 `json:"ip_version" xml:"ip_version"`
+	IpVersion int32 `json:"ip_version"`
 
 	// 网络ACL规则名称。
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 网络ACL规则操作状态，作为请求时取值为\"add\"/\"modify\"/\"delete\"，作为返回值时为\"normal\"。 当请求更新规则时，本参数值为delete时，除id之外，本请求体其他参数均可为空。
-	OperateType FirewallRuleOperateType `json:"operate_type" xml:"operate_type"`
+	OperateType FirewallRuleOperateType `json:"operate_type"`
 
 	// IP协议，为any时代表所有协议  取值范围：icmp，tcp，udp，[icmpv6，](tag:hide)any
-	Protocol FirewallRuleProtocol `json:"protocol" xml:"protocol"`
+	Protocol FirewallRuleProtocol `json:"protocol"`
 
 	// 源IP地址，IPv4[或IPv6](tag:hide)的CIDR格式
-	SourceIpAddress string `json:"source_ip_address" xml:"source_ip_address"`
+	SourceIpAddress string `json:"source_ip_address"`
 
 	// 源地端口范围  取值范围：整数，比如80，或者以\"-\"隔开的范围，比如80-90
-	SourcePort string `json:"source_port" xml:"source_port"`
+	SourcePort string `json:"source_port"`
 }
 
 func (o FirewallRule) String() string {

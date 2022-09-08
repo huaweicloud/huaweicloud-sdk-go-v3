@@ -10,10 +10,10 @@ import (
 type RouterRespDto struct {
 
 	// 路由ID，节点下唯一
-	RouteId string `json:"route_id" xml:"route_id"`
+	RouteId string `json:"route_id"`
 
 	// sql參數
-	Sql *string `json:"sql,omitempty" xml:"sql"`
+	Sql *string `json:"sql,omitempty"`
 }
 
 func (o RouterRespDto) String() string {

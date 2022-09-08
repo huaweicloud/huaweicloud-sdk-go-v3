@@ -10,16 +10,16 @@ import (
 type ProgramItemResponseBase struct {
 
 	// 素材ID
-	MaterialId *string `json:"materialId,omitempty" xml:"materialId"`
+	MaterialId *string `json:"materialId,omitempty"`
 
 	// 素材名称
-	MaterialName *string `json:"materialName,omitempty" xml:"materialName"`
+	MaterialName *string `json:"materialName,omitempty"`
 
 	// 素材云盘文件下载路径
-	FilePath *string `json:"filePath,omitempty" xml:"filePath"`
+	FilePath *string `json:"filePath,omitempty"`
 
 	// 播放时长
-	PlayTime *int32 `json:"playTime,omitempty" xml:"playTime"`
+	PlayTime *int32 `json:"playTime,omitempty"`
 }
 
 func (o ProgramItemResponseBase) String() string {

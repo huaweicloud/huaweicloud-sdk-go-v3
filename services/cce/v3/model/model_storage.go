@@ -10,10 +10,10 @@ import (
 type Storage struct {
 
 	// 磁盘选择，根据matchLabels和storageType对匹配的磁盘进行管理。磁盘匹配存在先后顺序，靠前的匹配规则优先匹配。
-	StorageSelectors []StorageSelectors `json:"storageSelectors" xml:"storageSelectors"`
+	StorageSelectors []StorageSelectors `json:"storageSelectors"`
 
 	// 由多个存储设备组成的存储组，用于各个存储空间的划分。
-	StorageGroups []StorageGroups `json:"storageGroups" xml:"storageGroups"`
+	StorageGroups []StorageGroups `json:"storageGroups"`
 }
 
 func (o Storage) String() string {

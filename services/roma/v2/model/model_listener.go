@@ -13,15 +13,15 @@ import (
 type Listener struct {
 
 	// 监听器名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 监听器对外提供服务端口
-	Port *int32 `json:"port,omitempty" xml:"port"`
+	Port *int32 `json:"port,omitempty"`
 
-	Backend *Backend `json:"backend,omitempty" xml:"backend"`
+	Backend *Backend `json:"backend,omitempty"`
 
 	// 创建负载均衡器的IP协议类型
-	IpVersion *ListenerIpVersion `json:"ip_version,omitempty" xml:"ip_version"`
+	IpVersion *ListenerIpVersion `json:"ip_version,omitempty"`
 }
 
 func (o Listener) String() string {

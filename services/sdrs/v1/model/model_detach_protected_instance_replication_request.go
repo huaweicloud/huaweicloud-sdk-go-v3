@@ -10,10 +10,10 @@ import (
 type DetachProtectedInstanceReplicationRequest struct {
 
 	// 保护实例的ID。
-	ProtectedInstanceId string `json:"protected_instance_id" xml:"protected_instance_id"`
+	ProtectedInstanceId string `json:"protected_instance_id"`
 
 	// 复制对的ID。
-	ReplicationId string `json:"replication_id" xml:"replication_id"`
+	ReplicationId string `json:"replication_id"`
 }
 
 func (o DetachProtectedInstanceReplicationRequest) String() string {

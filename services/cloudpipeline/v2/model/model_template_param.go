@@ -10,40 +10,40 @@ import (
 type TemplateParam struct {
 
 	// 是否必须
-	Required string `json:"required" xml:"required"`
+	Required string `json:"required"`
 
 	// 是否可见
-	Visible string `json:"visible" xml:"visible"`
+	Visible string `json:"visible"`
 
 	// 流水线参数名字
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 流水线参数值
-	Value string `json:"value" xml:"value"`
+	Value string `json:"value"`
 
 	// 流水线参数描述
-	Description string `json:"description" xml:"description"`
+	Description string `json:"description"`
 
 	// 流水线参数类型
-	Paramtype string `json:"paramtype" xml:"paramtype"`
+	Paramtype string `json:"paramtype"`
 
 	// 流水线参数展示类型
-	DisplayType string `json:"display_type" xml:"display_type"`
+	DisplayType string `json:"display_type"`
 
 	// 流水线参数展示名字
-	DisplayName string `json:"display_name" xml:"display_name"`
+	DisplayName string `json:"display_name"`
 
 	// 是否静态参数
-	IsStatic bool `json:"is_static" xml:"is_static"`
+	IsStatic bool `json:"is_static"`
 
 	// 是否默认参数
-	IsDefault bool `json:"is_default" xml:"is_default"`
+	IsDefault bool `json:"is_default"`
 
 	// array类型数据
-	Limits []ParamTypeLimits `json:"limits" xml:"limits"`
+	Limits []ParamTypeLimits `json:"limits"`
 
 	// array类型数据
-	Constraints []Constraint `json:"constraints" xml:"constraints"`
+	Constraints []Constraint `json:"constraints"`
 }
 
 func (o TemplateParam) String() string {

@@ -10,16 +10,16 @@ import (
 type WeakPwdListInfoResponseInfo struct {
 
 	// 服务器ID
-	HostId *string `json:"host_id,omitempty" xml:"host_id"`
+	HostId *string `json:"host_id,omitempty"`
 
 	// 服务器名称
-	HostName *string `json:"host_name,omitempty" xml:"host_name"`
+	HostName *string `json:"host_name,omitempty"`
 
 	// 服务器IP
-	HostIp *string `json:"host_ip,omitempty" xml:"host_ip"`
+	HostIp *string `json:"host_ip,omitempty"`
 
 	// 弱口令账号列表
-	WeakPwdAccounts *[]WeakPwdAccountInfoResponseInfo `json:"weak_pwd_accounts,omitempty" xml:"weak_pwd_accounts"`
+	WeakPwdAccounts *[]WeakPwdAccountInfoResponseInfo `json:"weak_pwd_accounts,omitempty"`
 }
 
 func (o WeakPwdListInfoResponseInfo) String() string {

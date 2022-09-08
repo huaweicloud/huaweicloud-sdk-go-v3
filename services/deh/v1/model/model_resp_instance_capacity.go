@@ -10,7 +10,7 @@ import (
 type RespInstanceCapacity struct {
 
 	// 支持创建的云服务器规格。
-	Flavor string `json:"flavor" xml:"flavor"`
+	Flavor string `json:"flavor"`
 }
 
 func (o RespInstanceCapacity) String() string {

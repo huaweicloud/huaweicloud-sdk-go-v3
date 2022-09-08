@@ -9,28 +9,28 @@ import (
 type ListBackgroundTasksRespTasks struct {
 
 	// 任务ID。
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 任务名称。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 用户名。
-	UserName *string `json:"user_name,omitempty" xml:"user_name"`
+	UserName *string `json:"user_name,omitempty"`
 
 	// 用户ID。
-	UserId *string `json:"user_id,omitempty" xml:"user_id"`
+	UserId *string `json:"user_id,omitempty"`
 
 	// 任务参数。
-	Params *string `json:"params,omitempty" xml:"params"`
+	Params *string `json:"params,omitempty"`
 
 	// 任务状态。
-	Status *string `json:"status,omitempty" xml:"status"`
+	Status *string `json:"status,omitempty"`
 
 	// 启动时间。
-	CreatedAt *string `json:"created_at,omitempty" xml:"created_at"`
+	CreatedAt *string `json:"created_at,omitempty"`
 
 	// 结束时间。
-	UpdatedAt *string `json:"updated_at,omitempty" xml:"updated_at"`
+	UpdatedAt *string `json:"updated_at,omitempty"`
 }
 
 func (o ListBackgroundTasksRespTasks) String() string {

@@ -10,9 +10,9 @@ import (
 type CreateSyncEventsRequest struct {
 
 	// 同步任务ID
-	SyncTaskId string `json:"sync_task_id" xml:"sync_task_id"`
+	SyncTaskId string `json:"sync_task_id"`
 
-	Body *SyncObjectReq `json:"body,omitempty" xml:"body"`
+	Body *SyncObjectReq `json:"body,omitempty"`
 }
 
 func (o CreateSyncEventsRequest) String() string {

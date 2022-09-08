@@ -10,10 +10,10 @@ import (
 type BatchCheckResultsResponse struct {
 
 	// 批量查询预检查结果响应体集合。
-	Results *[]QueryPreCheckResp `json:"results,omitempty" xml:"results"`
+	Results *[]QueryPreCheckResp `json:"results,omitempty"`
 
 	// 总记录数。
-	Count          *int32 `json:"count,omitempty" xml:"count"`
+	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

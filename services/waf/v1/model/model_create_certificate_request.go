@@ -10,9 +10,9 @@ import (
 type CreateCertificateRequest struct {
 
 	// 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	Body *CreateCertificateRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreateCertificateRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateCertificateRequest) String() string {

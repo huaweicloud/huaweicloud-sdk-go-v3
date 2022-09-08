@@ -9,13 +9,13 @@ import (
 type EnterprisePersonNew struct {
 
 	// 法人姓名。
-	LegelName string `json:"legel_name" xml:"legel_name"`
+	LegelName string `json:"legel_name"`
 
 	// 法人身份证号。
-	LegelIdNumber string `json:"legel_id_number" xml:"legel_id_number"`
+	LegelIdNumber string `json:"legel_id_number"`
 
 	// 认证人角色。 legalPerson ：法人代表。
-	CertifierRole *string `json:"certifier_role,omitempty" xml:"certifier_role"`
+	CertifierRole *string `json:"certifier_role,omitempty"`
 }
 
 func (o EnterprisePersonNew) String() string {

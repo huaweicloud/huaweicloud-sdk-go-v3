@@ -11,16 +11,16 @@ import (
 type Fault struct {
 
 	// 故障信息
-	Message *string `json:"message,omitempty" xml:"message"`
+	Message *string `json:"message,omitempty"`
 
 	// 故障code
-	Code *int32 `json:"code,omitempty" xml:"code"`
+	Code *int32 `json:"code,omitempty"`
 
 	// 故障详情
-	Details *string `json:"details,omitempty" xml:"details"`
+	Details *string `json:"details,omitempty"`
 
 	// 故障时间。时间戳格式为ISO 8601：YYYY-MM-DDTHH:MM:SSZ，例如：2019-05-22T03:30:52Z
-	Created *sdktime.SdkTime `json:"created,omitempty" xml:"created"`
+	Created *sdktime.SdkTime `json:"created,omitempty"`
 }
 
 func (o Fault) String() string {

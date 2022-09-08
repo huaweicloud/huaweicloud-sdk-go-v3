@@ -10,16 +10,16 @@ import (
 type QosDataElement struct {
 
 	// QoS时间点, UTC时间，格式：yyyy-MM-ddTHH:mm:ss.SSSZ。
-	Time *string `json:"time,omitempty" xml:"time"`
+	Time *string `json:"time,omitempty"`
 
 	// QoS值。
-	Value *int32 `json:"value,omitempty" xml:"value"`
+	Value *int32 `json:"value,omitempty"`
 
 	// 该时间点是否有阈值告警. true: 阈值告警 false: 无阈值告警。
-	Alarm *bool `json:"alarm,omitempty" xml:"alarm"`
+	Alarm *bool `json:"alarm,omitempty"`
 
 	// 该时间点的阈值。
-	Threshold *int32 `json:"threshold,omitempty" xml:"threshold"`
+	Threshold *int32 `json:"threshold,omitempty"`
 }
 
 func (o QosDataElement) String() string {

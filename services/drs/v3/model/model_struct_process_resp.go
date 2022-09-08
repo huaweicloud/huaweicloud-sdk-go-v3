@@ -10,10 +10,10 @@ import (
 type StructProcessResp struct {
 
 	// 数据生成时间
-	CreateTime *string `json:"create_time,omitempty" xml:"create_time"`
+	CreateTime *string `json:"create_time,omitempty"`
 
 	// 对比结果
-	Result *[]StructProcessVo `json:"result,omitempty" xml:"result"`
+	Result *[]StructProcessVo `json:"result,omitempty"`
 }
 
 func (o StructProcessResp) String() string {

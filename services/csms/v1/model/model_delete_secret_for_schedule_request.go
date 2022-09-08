@@ -10,9 +10,9 @@ import (
 type DeleteSecretForScheduleRequest struct {
 
 	// 凭据名称。
-	SecretName string `json:"secret_name" xml:"secret_name"`
+	SecretName string `json:"secret_name"`
 
-	Body *DeleteSecretForScheduleRequestBody `json:"body,omitempty" xml:"body"`
+	Body *DeleteSecretForScheduleRequestBody `json:"body,omitempty"`
 }
 
 func (o DeleteSecretForScheduleRequest) String() string {

@@ -10,10 +10,10 @@ import (
 type ListHostResponse struct {
 
 	// 主机列表
-	Result *[]GetHostListInfo `json:"result,omitempty" xml:"result"`
+	Result *[]GetHostListInfo `json:"result,omitempty"`
 
 	// 主机信息总数量
-	Total          *int64 `json:"total,omitempty" xml:"total"`
+	Total          *int64 `json:"total,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

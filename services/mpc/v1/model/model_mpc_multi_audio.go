@@ -7,13 +7,13 @@ import (
 )
 
 type MpcMultiAudio struct {
-	Output *ObsObjInfo `json:"output,omitempty" xml:"output"`
+	Output *ObsObjInfo `json:"output,omitempty"`
 
 	// 音频文件列表
-	AudioFiles *[]AudioFile `json:"audio_files,omitempty" xml:"audio_files"`
+	AudioFiles *[]AudioFile `json:"audio_files,omitempty"`
 
 	// 输出文件名。
-	OutputFilename *string `json:"output_filename,omitempty" xml:"output_filename"`
+	OutputFilename *string `json:"output_filename,omitempty"`
 }
 
 func (o MpcMultiAudio) String() string {

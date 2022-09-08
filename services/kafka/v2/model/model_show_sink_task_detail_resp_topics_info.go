@@ -9,10 +9,10 @@ import (
 type ShowSinkTaskDetailRespTopicsInfo struct {
 
 	// topic名称。
-	Topic *string `json:"topic,omitempty" xml:"topic"`
+	Topic *string `json:"topic,omitempty"`
 
 	// 分区列表。
-	Partitions *[]ShowSinkTaskDetailRespPartitions `json:"partitions,omitempty" xml:"partitions"`
+	Partitions *[]ShowSinkTaskDetailRespPartitions `json:"partitions,omitempty"`
 }
 
 func (o ShowSinkTaskDetailRespTopicsInfo) String() string {

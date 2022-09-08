@@ -10,13 +10,13 @@ import (
 type ListCostsResponse struct {
 
 	// 货币。 CNY：人民币
-	Currency *string `json:"currency,omitempty" xml:"currency"`
+	Currency *string `json:"currency,omitempty"`
 
 	// 总条数。
-	TotalCount *int32 `json:"total_count,omitempty" xml:"total_count"`
+	TotalCount *int32 `json:"total_count,omitempty"`
 
 	// 按天或按月的明细金额。
-	CostData       *[]CostDataByDimension `json:"cost_data,omitempty" xml:"cost_data"`
+	CostData       *[]CostDataByDimension `json:"cost_data,omitempty"`
 	HttpStatusCode int                    `json:"-"`
 }
 

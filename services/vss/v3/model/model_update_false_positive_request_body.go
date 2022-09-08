@@ -12,16 +12,16 @@ import (
 type UpdateFalsePositiveRequestBody struct {
 
 	// 漏洞ID
-	VulnId string `json:"vuln_id" xml:"vuln_id"`
+	VulnId string `json:"vuln_id"`
 
 	// 误报确认人
-	Provider *string `json:"provider,omitempty" xml:"provider"`
+	Provider *string `json:"provider,omitempty"`
 
 	// 误报确认理由
-	Reason *string `json:"reason,omitempty" xml:"reason"`
+	Reason *string `json:"reason,omitempty"`
 
 	// 对漏洞的操作:   * false_report - 更新漏洞状态为误报，并忽略   * repairing - 更新漏洞状态未修复
-	VulnStatus *UpdateFalsePositiveRequestBodyVulnStatus `json:"vuln_status,omitempty" xml:"vuln_status"`
+	VulnStatus *UpdateFalsePositiveRequestBodyVulnStatus `json:"vuln_status,omitempty"`
 }
 
 func (o UpdateFalsePositiveRequestBody) String() string {

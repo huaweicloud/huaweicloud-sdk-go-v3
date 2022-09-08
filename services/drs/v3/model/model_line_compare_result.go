@@ -10,22 +10,22 @@ import (
 type LineCompareResult struct {
 
 	// 行对比任务的id。
-	CompareTaskId *string `json:"compare_task_id,omitempty" xml:"compare_task_id"`
+	CompareTaskId *string `json:"compare_task_id,omitempty"`
 
 	// 行对比结果概览。
-	LineCompareOverview *[]LineCompareResultOverview `json:"line_compare_overview,omitempty" xml:"line_compare_overview"`
+	LineCompareOverview *[]LineCompareResultOverview `json:"line_compare_overview,omitempty"`
 
 	// 行对比结果概览总数。
-	LineCompareOverviewCount *int32 `json:"line_compare_overview_count,omitempty" xml:"line_compare_overview_count"`
+	LineCompareOverviewCount *int32 `json:"line_compare_overview_count,omitempty"`
 
 	// 行对比结果详情。
-	LineCompareDetails *[]LineCompareResultDetails `json:"line_compare_details,omitempty" xml:"line_compare_details"`
+	LineCompareDetails *[]LineCompareResultDetails `json:"line_compare_details,omitempty"`
 
 	// 错误码。
-	ErrorCode *string `json:"error_code,omitempty" xml:"error_code"`
+	ErrorCode *string `json:"error_code,omitempty"`
 
 	// 错误信息。
-	ErrorMsg *string `json:"error_msg,omitempty" xml:"error_msg"`
+	ErrorMsg *string `json:"error_msg,omitempty"`
 }
 
 func (o LineCompareResult) String() string {

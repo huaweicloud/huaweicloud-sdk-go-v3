@@ -10,7 +10,7 @@ import (
 type ListProjectTagsRequest struct {
 
 	// 语言
-	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *string `json:"X-Language,omitempty"`
 }
 
 func (o ListProjectTagsRequest) String() string {

@@ -9,7 +9,7 @@ import (
 type VpcMemberCreate struct {
 
 	// 后端实例列表
-	Members []MemberInfo `json:"members" xml:"members"`
+	Members []MemberInfo `json:"members"`
 }
 
 func (o VpcMemberCreate) String() string {

@@ -10,14 +10,14 @@ import (
 type CheckDataTransformationReq struct {
 
 	// 任务id
-	JobId *string `json:"job_id,omitempty" xml:"job_id"`
+	JobId *string `json:"job_id,omitempty"`
 
 	// 对象信息，生成加工规则时需要填写。
-	ObjectInfo *[]DatabaseObjectVo `json:"object_info,omitempty" xml:"object_info"`
+	ObjectInfo *[]DatabaseObjectVo `json:"object_info,omitempty"`
 
-	TransformationInfo *TransformationInfo `json:"transformation_info" xml:"transformation_info"`
+	TransformationInfo *TransformationInfo `json:"transformation_info"`
 
-	ConfigTransformation *ConfigTransformationVo `json:"config_transformation,omitempty" xml:"config_transformation"`
+	ConfigTransformation *ConfigTransformationVo `json:"config_transformation,omitempty"`
 }
 
 func (o CheckDataTransformationReq) String() string {

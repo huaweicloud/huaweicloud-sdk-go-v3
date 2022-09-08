@@ -13,37 +13,37 @@ import (
 type UpdateWatermarkTemplateReq struct {
 
 	// 水印模板配置id<br/>
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
 	// 水印模板名称<br/>
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 水印图片相对输出视频的水平偏移量，默认值是0<br/>
-	Dx *string `json:"dx,omitempty" xml:"dx"`
+	Dx *string `json:"dx,omitempty"`
 
 	// 水印图片相对输出视频的垂直偏移量，默认值是0<br/>
-	Dy *string `json:"dy,omitempty" xml:"dy"`
+	Dy *string `json:"dy,omitempty"`
 
 	// 水印的位置<br/>
-	Position *UpdateWatermarkTemplateReqPosition `json:"position,omitempty" xml:"position"`
+	Position *UpdateWatermarkTemplateReqPosition `json:"position,omitempty"`
 
 	// 水印图片宽<br/>
-	Width *string `json:"width,omitempty" xml:"width"`
+	Width *string `json:"width,omitempty"`
 
 	// 水印图片高<br/>
-	Height *string `json:"height,omitempty" xml:"height"`
+	Height *string `json:"height,omitempty"`
 
 	// 水印类型，当前只支持Image（图片水印）<br/>
-	WatermarkType *UpdateWatermarkTemplateReqWatermarkType `json:"watermark_type,omitempty" xml:"watermark_type"`
+	WatermarkType *UpdateWatermarkTemplateReqWatermarkType `json:"watermark_type,omitempty"`
 
 	// type设置为Image时有效。  目前包括： - Original：只做简单缩放，不做其他处理 - Transparent：图片底色透明 - Grayed：彩色图片变灰
-	ImageProcess *UpdateWatermarkTemplateReqImageProcess `json:"image_process,omitempty" xml:"image_process"`
+	ImageProcess *UpdateWatermarkTemplateReqImageProcess `json:"image_process,omitempty"`
 
 	// 水印开始时间，与\"timeline_duration\"配合使用。 取值范围:[0, END)。\"END\"表示视频结束时间。 单位:秒。
-	TimelineStart *string `json:"timeline_start,omitempty" xml:"timeline_start"`
+	TimelineStart *string `json:"timeline_start,omitempty"`
 
 	// 水印持续时间，与\"timeline_start\"配合使用。 取值范围:(0,END-开始时间]。\"END\"表示视频结束时间。 单位:秒。 默认:END。
-	TimelineDuration *string `json:"timeline_duration,omitempty" xml:"timeline_duration"`
+	TimelineDuration *string `json:"timeline_duration,omitempty"`
 }
 
 func (o UpdateWatermarkTemplateReq) String() string {

@@ -9,10 +9,10 @@ import (
 type SignApiBinding struct {
 
 	// 签名密钥编号
-	SignId string `json:"sign_id" xml:"sign_id"`
+	SignId string `json:"sign_id"`
 
 	// API的发布记录编号
-	PublishIds []string `json:"publish_ids" xml:"publish_ids"`
+	PublishIds []string `json:"publish_ids"`
 }
 
 func (o SignApiBinding) String() string {

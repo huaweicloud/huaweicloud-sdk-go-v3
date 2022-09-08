@@ -10,9 +10,9 @@ import (
 type NeutronUpdateFloatingIpRequest struct {
 
 	// floatingip的ID
-	FloatingipId string `json:"floatingip_id" xml:"floatingip_id"`
+	FloatingipId string `json:"floatingip_id"`
 
-	Body *NeutronUpdateFloatingIpRequestBody `json:"body,omitempty" xml:"body"`
+	Body *NeutronUpdateFloatingIpRequestBody `json:"body,omitempty"`
 }
 
 func (o NeutronUpdateFloatingIpRequest) String() string {

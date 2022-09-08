@@ -10,10 +10,10 @@ import (
 type ListAssociatedTestCasesResponse struct {
 
 	// 关联的测试用例列表
-	TestCases *[]AssociatedTestCase `json:"test_cases,omitempty" xml:"test_cases"`
+	TestCases *[]AssociatedTestCase `json:"test_cases,omitempty"`
 
 	// 总数
-	Total          *int32 `json:"total,omitempty" xml:"total"`
+	Total          *int32 `json:"total,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

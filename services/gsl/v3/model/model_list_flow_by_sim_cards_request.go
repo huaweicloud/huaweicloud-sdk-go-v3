@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ListFlowBySimCardsRequest struct {
-	Body *ListFlowBySimCardsReq `json:"body,omitempty" xml:"body"`
+	Body *ListFlowBySimCardsReq `json:"body,omitempty"`
 }
 
 func (o ListFlowBySimCardsRequest) String() string {

@@ -10,9 +10,9 @@ import (
 type ListAlarmHistoriesResponse struct {
 
 	// 一条或者多条告警历史详细信息
-	AlarmHistories *[]AlarmHistoryInfo `json:"alarm_histories,omitempty" xml:"alarm_histories"`
+	AlarmHistories *[]AlarmHistoryInfo `json:"alarm_histories,omitempty"`
 
-	MetaData       *MetaDataForAlarmHistory `json:"meta_data,omitempty" xml:"meta_data"`
+	MetaData       *MetaDataForAlarmHistory `json:"meta_data,omitempty"`
 	HttpStatusCode int                      `json:"-"`
 }
 

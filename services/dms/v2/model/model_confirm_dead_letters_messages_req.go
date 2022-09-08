@@ -9,7 +9,7 @@ import (
 type ConfirmDeadLettersMessagesReq struct {
 
 	// 确认消息数组。
-	Message *[]ConfirmMessageEntity `json:"message,omitempty" xml:"message"`
+	Message *[]ConfirmMessageEntity `json:"message,omitempty"`
 }
 
 func (o ConfirmDeadLettersMessagesReq) String() string {

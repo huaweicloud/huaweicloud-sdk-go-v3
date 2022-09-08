@@ -10,9 +10,9 @@ import (
 type UpdateSecretRequest struct {
 
 	// 凭据名称。
-	SecretName string `json:"secret_name" xml:"secret_name"`
+	SecretName string `json:"secret_name"`
 
-	Body *UpdateSecretRequestBody `json:"body,omitempty" xml:"body"`
+	Body *UpdateSecretRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateSecretRequest) String() string {

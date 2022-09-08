@@ -13,12 +13,12 @@ import (
 type ImportGraphRequest struct {
 
 	// 图ID。
-	GraphId string `json:"graph_id" xml:"graph_id"`
+	GraphId string `json:"graph_id"`
 
 	// 图actionId
-	ActionId ImportGraphRequestActionId `json:"action_id" xml:"action_id"`
+	ActionId ImportGraphRequestActionId `json:"action_id"`
 
-	Body *ImportGraphReq `json:"body,omitempty" xml:"body"`
+	Body *ImportGraphReq `json:"body,omitempty"`
 }
 
 func (o ImportGraphRequest) String() string {

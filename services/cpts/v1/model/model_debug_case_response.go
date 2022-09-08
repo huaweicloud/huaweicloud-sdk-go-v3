@@ -10,16 +10,16 @@ import (
 type DebugCaseResponse struct {
 
 	// code
-	Code *string `json:"code,omitempty" xml:"code"`
+	Code *string `json:"code,omitempty"`
 
 	// message
-	Message *string `json:"message,omitempty" xml:"message"`
+	Message *string `json:"message,omitempty"`
 
 	// extend
-	Extend *string `json:"extend,omitempty" xml:"extend"`
+	Extend *string `json:"extend,omitempty"`
 
 	// result
-	Result         *[]DebugCaseResult `json:"result,omitempty" xml:"result"`
+	Result         *[]DebugCaseResult `json:"result,omitempty"`
 	HttpStatusCode int                `json:"-"`
 }
 

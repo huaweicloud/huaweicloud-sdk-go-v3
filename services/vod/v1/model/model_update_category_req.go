@@ -9,10 +9,10 @@ import (
 type UpdateCategoryReq struct {
 
 	// 媒资分类名称。
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 媒资分类ID。
-	Id int32 `json:"id" xml:"id"`
+	Id int32 `json:"id"`
 }
 
 func (o UpdateCategoryReq) String() string {

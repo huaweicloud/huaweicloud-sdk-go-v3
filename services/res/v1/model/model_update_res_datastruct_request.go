@@ -10,12 +10,12 @@ import (
 type UpdateResDatastructRequest struct {
 
 	// 数据源id。
-	DatasourceId string `json:"datasource_id" xml:"datasource_id"`
+	DatasourceId string `json:"datasource_id"`
 
 	// 工作空间id。
-	WorkspaceId string `json:"workspace_id" xml:"workspace_id"`
+	WorkspaceId string `json:"workspace_id"`
 
-	Body *UpdateResDatastructRequestBodyBody `json:"body,omitempty" xml:"body"`
+	Body *UpdateResDatastructRequestBodyBody `json:"body,omitempty"`
 }
 
 func (o UpdateResDatastructRequest) String() string {

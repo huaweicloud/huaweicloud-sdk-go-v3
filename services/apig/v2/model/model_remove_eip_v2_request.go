@@ -10,7 +10,7 @@ import (
 type RemoveEipV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 }
 
 func (o RemoveEipV2Request) String() string {

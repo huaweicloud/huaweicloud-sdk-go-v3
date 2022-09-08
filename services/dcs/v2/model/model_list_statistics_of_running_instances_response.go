@@ -10,7 +10,7 @@ import (
 type ListStatisticsOfRunningInstancesResponse struct {
 
 	// 该租户下处于“运行中”状态的实例的统计信息。
-	Statistics     *[]InstanceStatistic `json:"statistics,omitempty" xml:"statistics"`
+	Statistics     *[]InstanceStatistic `json:"statistics,omitempty"`
 	HttpStatusCode int                  `json:"-"`
 }
 

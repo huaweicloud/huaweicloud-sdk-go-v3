@@ -10,28 +10,28 @@ import (
 type ListEdgeSitesRequest struct {
 
 	// 每页的数量
-	Limit *int32 `json:"limit,omitempty" xml:"limit"`
+	Limit *int32 `json:"limit,omitempty"`
 
 	// 分页标识
-	Marker *string `json:"marker,omitempty" xml:"marker"`
+	Marker *string `json:"marker,omitempty"`
 
 	// 排序字段
-	SortKey *[]string `json:"sort_key,omitempty" xml:"sort_key"`
+	SortKey *[]string `json:"sort_key,omitempty"`
 
 	// 排序方向，取值范围： - desc：降序 - acs：升序
-	SortDir *[]string `json:"sort_dir,omitempty" xml:"sort_dir"`
+	SortDir *[]string `json:"sort_dir,omitempty"`
 
 	// 根据边缘小站ID查询，支持排序
-	Id *[]string `json:"id,omitempty" xml:"id"`
+	Id *[]string `json:"id,omitempty"`
 
 	// 根据边缘小站名称查询（精确），支持排序
-	Name *[]string `json:"name,omitempty" xml:"name"`
+	Name *[]string `json:"name,omitempty"`
 
 	// 根据边缘可用区ID查询
-	AvailabilityZoneId *[]string `json:"availability_zone_id,omitempty" xml:"availability_zone_id"`
+	AvailabilityZoneId *[]string `json:"availability_zone_id,omitempty"`
 
 	// 根据边缘小站部署状态查询
-	Status *[]string `json:"status,omitempty" xml:"status"`
+	Status *[]string `json:"status,omitempty"`
 }
 
 func (o ListEdgeSitesRequest) String() string {

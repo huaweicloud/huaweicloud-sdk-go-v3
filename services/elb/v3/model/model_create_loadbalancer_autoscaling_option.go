@@ -10,10 +10,10 @@ import (
 type CreateLoadbalancerAutoscalingOption struct {
 
 	// 负载均衡器弹性扩缩容开关
-	Enable bool `json:"enable" xml:"enable"`
+	Enable bool `json:"enable"`
 
 	// 弹性扩缩容的最小七层规格ID，类型为L7_Elastic，有七层监听器时，该字段不能为空。
-	MinL7FlavorId *string `json:"min_l7_flavor_id,omitempty" xml:"min_l7_flavor_id"`
+	MinL7FlavorId *string `json:"min_l7_flavor_id,omitempty"`
 }
 
 func (o CreateLoadbalancerAutoscalingOption) String() string {

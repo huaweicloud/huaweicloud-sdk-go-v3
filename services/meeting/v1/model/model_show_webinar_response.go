@@ -10,70 +10,70 @@ import (
 type ShowWebinarResponse struct {
 
 	// 会议ID。长度限制为32个字符。
-	ConferenceId *string `json:"conferenceId,omitempty" xml:"conferenceId"`
+	ConferenceId *string `json:"conferenceId,omitempty"`
 
 	// 企业id
-	CorpId *string `json:"corpId,omitempty" xml:"corpId"`
+	CorpId *string `json:"corpId,omitempty"`
 
 	// 主题
-	Subject *string `json:"subject,omitempty" xml:"subject"`
+	Subject *string `json:"subject,omitempty"`
 
 	// 描述
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 开始时间
-	StartTime *string `json:"startTime,omitempty" xml:"startTime"`
+	StartTime *string `json:"startTime,omitempty"`
 
 	// 时长，单位分钟
-	Duration *int32 `json:"duration,omitempty" xml:"duration"`
+	Duration *int32 `json:"duration,omitempty"`
 
 	// 时区ID
-	TimeZoneId *int32 `json:"timeZoneId,omitempty" xml:"timeZoneId"`
+	TimeZoneId *int32 `json:"timeZoneId,omitempty"`
 
-	State *MeetingStatus `json:"state,omitempty" xml:"state"`
+	State *MeetingStatus `json:"state,omitempty"`
 
 	// 会议预订者ID
-	ScheduserId *string `json:"scheduserId,omitempty" xml:"scheduserId"`
+	ScheduserId *string `json:"scheduserId,omitempty"`
 
 	// 预订人部门
-	DeptName *string `json:"deptName,omitempty" xml:"deptName"`
+	DeptName *string `json:"deptName,omitempty"`
 
 	// 会议预订者帐号名称。长度最大限制为96个字符。
-	ScheduserName *string `json:"scheduserName,omitempty" xml:"scheduserName"`
+	ScheduserName *string `json:"scheduserName,omitempty"`
 
 	// 网络研讨会资源名
-	VmrPkgName *string `json:"vmrPkgName,omitempty" xml:"vmrPkgName"`
+	VmrPkgName *string `json:"vmrPkgName,omitempty"`
 
 	// 入会范围开关
-	CallRestriction *bool `json:"callRestriction,omitempty" xml:"callRestriction"`
+	CallRestriction *bool `json:"callRestriction,omitempty"`
 
 	// 主持人、嘉宾入会范围  0: 所有用户 1: 非匿名用户（手机pstn入会视为匿名入会） 2: 企业内用户 3: 被邀请用户。
-	Scope *int32 `json:"scope,omitempty" xml:"scope"`
+	Scope *int32 `json:"scope,omitempty"`
 
 	// 观众入会范围 0: 所有用户 2: 企业内用户和被邀请用户。
-	AudienceScope *int32 `json:"audienceScope,omitempty" xml:"audienceScope"`
+	AudienceScope *int32 `json:"audienceScope,omitempty"`
 
 	// 主持人入会地址。
-	ChairJoinUri *string `json:"chairJoinUri,omitempty" xml:"chairJoinUri"`
+	ChairJoinUri *string `json:"chairJoinUri,omitempty"`
 
 	// 主持人密码。
-	ChairPasswd *string `json:"chairPasswd,omitempty" xml:"chairPasswd"`
+	ChairPasswd *string `json:"chairPasswd,omitempty"`
 
 	// 嘉宾入会地址。
-	GuestJoinUri *string `json:"guestJoinUri,omitempty" xml:"guestJoinUri"`
+	GuestJoinUri *string `json:"guestJoinUri,omitempty"`
 
 	// 嘉宾密码。
-	GuestPasswd *string `json:"guestPasswd,omitempty" xml:"guestPasswd"`
+	GuestPasswd *string `json:"guestPasswd,omitempty"`
 
 	// 观众入会地址。
-	AudienceJoinUri *string `json:"audienceJoinUri,omitempty" xml:"audienceJoinUri"`
+	AudienceJoinUri *string `json:"audienceJoinUri,omitempty"`
 
 	// 观众密码。
-	AudiencePasswd *string `json:"audiencePasswd,omitempty" xml:"audiencePasswd"`
+	AudiencePasswd *string `json:"audiencePasswd,omitempty"`
 
-	NotifySetting *OpenNotifySetting `json:"notifySetting,omitempty" xml:"notifySetting"`
+	NotifySetting *OpenNotifySetting `json:"notifySetting,omitempty"`
 
-	Attendees      *[]string `json:"attendees,omitempty" xml:"attendees"`
+	Attendees      *[]string `json:"attendees,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }
 

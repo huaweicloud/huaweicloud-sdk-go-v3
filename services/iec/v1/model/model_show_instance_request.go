@@ -10,7 +10,7 @@ import (
 type ShowInstanceRequest struct {
 
 	// 边缘实例ID。
-	ServerId string `json:"server_id" xml:"server_id"`
+	ServerId string `json:"server_id"`
 }
 
 func (o ShowInstanceRequest) String() string {

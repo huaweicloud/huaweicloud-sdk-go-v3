@@ -10,9 +10,9 @@ import (
 type CreateTaskRequest struct {
 
 	// 项目ID
-	ProjectId string `json:"project_id" xml:"project_id"`
+	ProjectId string `json:"project_id"`
 
-	Body *CreateTaskRequestV2 `json:"body,omitempty" xml:"body"`
+	Body *CreateTaskRequestV2 `json:"body,omitempty"`
 }
 
 func (o CreateTaskRequest) String() string {

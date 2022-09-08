@@ -10,19 +10,19 @@ import (
 type ParamTypeLimits struct {
 
 	// 是否废弃
-	Disable string `json:"disable" xml:"disable"`
+	Disable string `json:"disable"`
 
 	// 语言名字
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 语言展示名字
-	Displayname string `json:"displayname" xml:"displayname"`
+	Displayname string `json:"displayname"`
 
 	// 规则集ID
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
 	// 扫描语言
-	Language string `json:"language" xml:"language"`
+	Language string `json:"language"`
 }
 
 func (o ParamTypeLimits) String() string {

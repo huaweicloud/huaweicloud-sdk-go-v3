@@ -9,13 +9,13 @@ import (
 type BehaviorWeights struct {
 
 	// 行为类型。
-	BehaviorType *string `json:"behavior_type,omitempty" xml:"behavior_type"`
+	BehaviorType *string `json:"behavior_type,omitempty"`
 
 	// 行为权重。
-	Weight *int32 `json:"weight,omitempty" xml:"weight"`
+	Weight *int32 `json:"weight,omitempty"`
 
 	// 其他用途。
-	OtherUses *[]string `json:"other_uses,omitempty" xml:"other_uses"`
+	OtherUses *[]string `json:"other_uses,omitempty"`
 }
 
 func (o BehaviorWeights) String() string {

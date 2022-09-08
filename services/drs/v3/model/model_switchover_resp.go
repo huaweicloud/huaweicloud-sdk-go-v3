@@ -13,26 +13,26 @@ import (
 type SwitchoverResp struct {
 
 	// 任务ID
-	JobId *string `json:"job_id,omitempty" xml:"job_id"`
+	JobId *string `json:"job_id,omitempty"`
 
 	// 更新时间，格式yyyy-MM-dd'T'HH:mm:ss'Z'
-	UpdatedAt *string `json:"updated_at,omitempty" xml:"updated_at"`
+	UpdatedAt *string `json:"updated_at,omitempty"`
 
-	SourceDb *EndpointVo `json:"source_db,omitempty" xml:"source_db"`
+	SourceDb *EndpointVo `json:"source_db,omitempty"`
 
-	TargetDb *EndpointVo `json:"target_db,omitempty" xml:"target_db"`
+	TargetDb *EndpointVo `json:"target_db,omitempty"`
 
 	// 任务方向。
-	JobDirection *SwitchoverRespJobDirection `json:"job_direction,omitempty" xml:"job_direction"`
+	JobDirection *SwitchoverRespJobDirection `json:"job_direction,omitempty"`
 
 	// 目标库是否只读。
-	IsTargetReadonly *bool `json:"is_target_readonly,omitempty" xml:"is_target_readonly"`
+	IsTargetReadonly *bool `json:"is_target_readonly,omitempty"`
 
 	// 错误信息。
-	ErrorMsg *string `json:"error_msg,omitempty" xml:"error_msg"`
+	ErrorMsg *string `json:"error_msg,omitempty"`
 
 	// 错误码。
-	ErrorCode *string `json:"error_code,omitempty" xml:"error_code"`
+	ErrorCode *string `json:"error_code,omitempty"`
 }
 
 func (o SwitchoverResp) String() string {

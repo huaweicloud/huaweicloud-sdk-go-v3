@@ -10,10 +10,10 @@ import (
 type CreateClusterPublicKibanaElbWhiteList struct {
 
 	// 白名单。需要添加白名单的网段或ip，以逗号隔开，不可重复。
-	WhiteList string `json:"whiteList" xml:"whiteList"`
+	WhiteList string `json:"whiteList"`
 
 	// 是否开启kibana访问控制。
-	EnableWhiteList bool `json:"enableWhiteList" xml:"enableWhiteList"`
+	EnableWhiteList bool `json:"enableWhiteList"`
 }
 
 func (o CreateClusterPublicKibanaElbWhiteList) String() string {

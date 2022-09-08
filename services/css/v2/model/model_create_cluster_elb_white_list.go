@@ -10,10 +10,10 @@ import (
 type CreateClusterElbWhiteList struct {
 
 	// 是否开启公网访问控制。
-	EnableWhiteList bool `json:"enableWhiteList" xml:"enableWhiteList"`
+	EnableWhiteList bool `json:"enableWhiteList"`
 
-	// 公网访问控制白名单。白名单。需要添加白名单的网段或ip，以逗号隔开，不可重复。
-	WhiteList *string `json:"whiteList,omitempty" xml:"whiteList"`
+	// 公网访问控制白名单。需要添加白名单的网段或ip，以逗号隔开，不可重复。
+	WhiteList *string `json:"whiteList,omitempty"`
 }
 
 func (o CreateClusterElbWhiteList) String() string {

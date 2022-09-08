@@ -8,7 +8,7 @@ import (
 
 // 设备模板
 type DeviceTemplate struct {
-	DeviceTemplate *EdgemgrDeviceReq `json:"device_template" xml:"device_template"`
+	DeviceTemplate *EdgemgrDeviceReq `json:"device_template"`
 }
 
 func (o DeviceTemplate) String() string {

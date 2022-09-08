@@ -10,19 +10,19 @@ import (
 type ModifyDbPwdResp struct {
 
 	// 任务ID
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 状态
-	Status *string `json:"status,omitempty" xml:"status"`
+	Status *string `json:"status,omitempty"`
 
 	// 源库：so，目标库：ta
-	EndPointType *string `json:"end_point_type,omitempty" xml:"end_point_type"`
+	EndPointType *string `json:"end_point_type,omitempty"`
 
 	// 错误码
-	ErrorCode *string `json:"error_code,omitempty" xml:"error_code"`
+	ErrorCode *string `json:"error_code,omitempty"`
 
 	// 错误信息
-	ErrorMsg *string `json:"error_msg,omitempty" xml:"error_msg"`
+	ErrorMsg *string `json:"error_msg,omitempty"`
 }
 
 func (o ModifyDbPwdResp) String() string {

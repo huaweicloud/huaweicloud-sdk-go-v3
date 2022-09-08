@@ -10,22 +10,22 @@ import (
 type ListAddressGroupRequest struct {
 
 	// 功能说明：每页返回的个数 取值范围：0~2000
-	Limit *int32 `json:"limit,omitempty" xml:"limit"`
+	Limit *int32 `json:"limit,omitempty"`
 
 	// 分页查询起始的资源ID，为空时查询第一页
-	Marker *string `json:"marker,omitempty" xml:"marker"`
+	Marker *string `json:"marker,omitempty"`
 
 	// 地址组唯一标识，填写后接口按照id进行过滤，支持多ID同时过滤
-	Id *[]string `json:"id,omitempty" xml:"id"`
+	Id *[]string `json:"id,omitempty"`
 
 	// 地址组名称，填写后按照名称进行过滤，支持多名称同时过滤
-	Name *[]string `json:"name,omitempty" xml:"name"`
+	Name *[]string `json:"name,omitempty"`
 
 	// IP地址组ip版本，当前只支持ipv4，填写后按照ip版本进行过滤
-	IpVersion *int32 `json:"ip_version,omitempty" xml:"ip_version"`
+	IpVersion *int32 `json:"ip_version,omitempty"`
 
 	// 地址组描述信息，填写后按照地址组描述信息过滤，支持多描述同时过滤
-	Description *[]string `json:"description,omitempty" xml:"description"`
+	Description *[]string `json:"description,omitempty"`
 }
 
 func (o ListAddressGroupRequest) String() string {

@@ -10,9 +10,9 @@ import (
 type BatchImportSmnInfoReq struct {
 
 	// 任务信息
-	Jobs []SelectedSetAlarmTaskReq `json:"jobs" xml:"jobs"`
+	Jobs []SelectedSetAlarmTaskReq `json:"jobs"`
 
-	AlarmNotifyInfo *BatchSetAlarmNotifyInfo `json:"alarm_notify_info" xml:"alarm_notify_info"`
+	AlarmNotifyInfo *BatchSetAlarmNotifyInfo `json:"alarm_notify_info"`
 }
 
 func (o BatchImportSmnInfoReq) String() string {

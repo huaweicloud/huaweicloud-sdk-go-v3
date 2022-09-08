@@ -10,49 +10,49 @@ import (
 type InstanceInfo struct {
 
 	// 实例id
-	InstanceId *int64 `json:"instance_id,omitempty" xml:"instance_id"`
+	InstanceId *int64 `json:"instance_id,omitempty"`
 
 	// 应用名称
-	BusinessName *string `json:"business_name,omitempty" xml:"business_name"`
+	BusinessName *string `json:"business_name,omitempty"`
 
 	// 应用id
-	BusinessId *int64 `json:"business_id,omitempty" xml:"business_id"`
+	BusinessId *int64 `json:"business_id,omitempty"`
 
 	// 组件名称
-	AppName *string `json:"app_name,omitempty" xml:"app_name"`
+	AppName *string `json:"app_name,omitempty"`
 
 	// 主机名称
-	HostName *string `json:"host_name,omitempty" xml:"host_name"`
+	HostName *string `json:"host_name,omitempty"`
 
 	// 实例名称
-	InstanceName *string `json:"instance_name,omitempty" xml:"instance_name"`
+	InstanceName *string `json:"instance_name,omitempty"`
 
 	// 主机ip地址
-	IpAddress *string `json:"ip_address,omitempty" xml:"ip_address"`
+	IpAddress *string `json:"ip_address,omitempty"`
 
 	// 环境ID
-	EnvId *int64 `json:"env_id,omitempty" xml:"env_id"`
+	EnvId *int64 `json:"env_id,omitempty"`
 
 	// Javaagent版本
-	AgentVersion *string `json:"agent_version,omitempty" xml:"agent_version"`
+	AgentVersion *string `json:"agent_version,omitempty"`
 
 	// 最后心跳时间
-	LastHeartbeat *int64 `json:"last_heartbeat,omitempty" xml:"last_heartbeat"`
+	LastHeartbeat *int64 `json:"last_heartbeat,omitempty"`
 
 	// 注册时间
-	RegisterTime *int64 `json:"register_time,omitempty" xml:"register_time"`
+	RegisterTime *int64 `json:"register_time,omitempty"`
 
 	// 最后修改用户id
-	LastModifyUserId *string `json:"last_modify_user_id,omitempty" xml:"last_modify_user_id"`
+	LastModifyUserId *string `json:"last_modify_user_id,omitempty"`
 
 	// 实例状态
-	InstanceStatus *int32 `json:"instance_status,omitempty" xml:"instance_status"`
+	InstanceStatus *int32 `json:"instance_status,omitempty"`
 
 	// 最后修改用户名称
-	LastModifyUserName *string `json:"last_modify_user_name,omitempty" xml:"last_modify_user_name"`
+	LastModifyUserName *string `json:"last_modify_user_name,omitempty"`
 
 	// 最后修改时间
-	LastModifyTime *int64 `json:"last_modify_time,omitempty" xml:"last_modify_time"`
+	LastModifyTime *int64 `json:"last_modify_time,omitempty"`
 }
 
 func (o InstanceInfo) String() string {

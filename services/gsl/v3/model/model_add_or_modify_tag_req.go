@@ -9,7 +9,7 @@ import (
 type AddOrModifyTagReq struct {
 
 	// 标签名称
-	TagName *string `json:"tag_name,omitempty" xml:"tag_name"`
+	TagName *string `json:"tag_name,omitempty"`
 }
 
 func (o AddOrModifyTagReq) String() string {

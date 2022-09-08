@@ -10,10 +10,10 @@ import (
 type GetClobDetailParam struct {
 
 	// 环境id
-	EnvId *int64 `json:"env_id,omitempty" xml:"env_id"`
+	EnvId *int64 `json:"env_id,omitempty"`
 
 	// clobId
-	ClobId *string `json:"clob_id,omitempty" xml:"clob_id"`
+	ClobId *string `json:"clob_id,omitempty"`
 }
 
 func (o GetClobDetailParam) String() string {

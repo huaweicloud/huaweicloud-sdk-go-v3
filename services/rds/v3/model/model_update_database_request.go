@@ -13,12 +13,12 @@ import (
 type UpdateDatabaseRequest struct {
 
 	// 语言
-	XLanguage *UpdateDatabaseRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *UpdateDatabaseRequestXLanguage `json:"X-Language,omitempty"`
 
 	// 实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
-	Body *UpdateDatabaseReq `json:"body,omitempty" xml:"body"`
+	Body *UpdateDatabaseReq `json:"body,omitempty"`
 }
 
 func (o UpdateDatabaseRequest) String() string {

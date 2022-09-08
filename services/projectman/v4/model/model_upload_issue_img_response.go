@@ -10,10 +10,10 @@ import (
 type UploadIssueImgResponse struct {
 
 	// 图片id
-	ImgId *string `json:"img_id,omitempty" xml:"img_id"`
+	ImgId *string `json:"img_id,omitempty"`
 
 	// 图片url v1改成v3作为下载图片请求
-	ImgUrl         *string `json:"img_url,omitempty" xml:"img_url"`
+	ImgUrl         *string `json:"img_url,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -10,10 +10,10 @@ import (
 type PublishDeptResponseDto struct {
 
 	// 部门编码
-	DeptCode *string `json:"deptCode,omitempty" xml:"deptCode"`
+	DeptCode *string `json:"deptCode,omitempty"`
 
 	// 部门名称
-	DeptName *string `json:"deptName,omitempty" xml:"deptName"`
+	DeptName *string `json:"deptName,omitempty"`
 }
 
 func (o PublishDeptResponseDto) String() string {

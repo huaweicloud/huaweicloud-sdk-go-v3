@@ -9,13 +9,13 @@ import (
 type Hook struct {
 
 	// hook ID。
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
 	// hook类型。
-	Type string `json:"type" xml:"type"`
+	Type string `json:"type"`
 
 	// 回滚URL。
-	CallbackUrl string `json:"callback_url" xml:"callback_url"`
+	CallbackUrl string `json:"callback_url"`
 }
 
 func (o Hook) String() string {

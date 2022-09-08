@@ -10,9 +10,9 @@ import (
 type CreateClusterRequest struct {
 
 	// 请求语言。
-	XLanguage string `json:"X-Language" xml:"X-Language"`
+	XLanguage string `json:"X-Language"`
 
-	Body *CdmCreateClusterReq `json:"body,omitempty" xml:"body"`
+	Body *CdmCreateClusterReq `json:"body,omitempty"`
 }
 
 func (o CreateClusterRequest) String() string {

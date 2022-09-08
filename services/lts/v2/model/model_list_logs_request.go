@@ -10,12 +10,12 @@ import (
 type ListLogsRequest struct {
 
 	// 日志组id。
-	LogGroupId string `json:"log_group_id" xml:"log_group_id"`
+	LogGroupId string `json:"log_group_id"`
 
 	// 日志流id。
-	LogStreamId string `json:"log_stream_id" xml:"log_stream_id"`
+	LogStreamId string `json:"log_stream_id"`
 
-	Body *QueryLtsLogParams `json:"body,omitempty" xml:"body"`
+	Body *QueryLtsLogParams `json:"body,omitempty"`
 }
 
 func (o ListLogsRequest) String() string {

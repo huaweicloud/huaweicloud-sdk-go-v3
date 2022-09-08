@@ -8,29 +8,29 @@ import (
 
 // Response Object
 type ShowResDatasourceWorkDetailResponse struct {
-	ErrorCount *ErrorCount `json:"error_count,omitempty" xml:"error_count"`
+	ErrorCount *ErrorCount `json:"error_count,omitempty"`
 
-	DataStruct *DataStruct `json:"data_struct,omitempty" xml:"data_struct"`
+	DataStruct *DataStruct `json:"data_struct,omitempty"`
 
 	// 错误样例(请求类型为DATA_INSPECTION时返回)。
-	ErrorSamples *[]ErrorSample `json:"error_samples,omitempty" xml:"error_samples"`
+	ErrorSamples *[]ErrorSample `json:"error_samples,omitempty"`
 
 	// 数据检测结果(请求类型为DATA_INSPECTION时返回)。
-	InspectResult *[]InspectResult `json:"inspect_result,omitempty" xml:"inspect_result"`
+	InspectResult *[]InspectResult `json:"inspect_result,omitempty"`
 
 	// 是否成功。
-	IsSuccess *bool `json:"is_success,omitempty" xml:"is_success"`
+	IsSuccess *bool `json:"is_success,omitempty"`
 
 	// 返回消息。
-	Message *string `json:"message,omitempty" xml:"message"`
+	Message *string `json:"message,omitempty"`
 
 	// 合法率(请求类型为DATA_INSPECTION时返回)。
-	LegalRate *float64 `json:"legal_rate,omitempty" xml:"legal_rate"`
+	LegalRate *float64 `json:"legal_rate,omitempty"`
 
 	// 检测结果生成时间(请求类型为DATA_INSPECTION时返回)。
-	InspectRstGeneratedTime *string `json:"inspect_rst_generated_time,omitempty" xml:"inspect_rst_generated_time"`
+	InspectRstGeneratedTime *string `json:"inspect_rst_generated_time,omitempty"`
 
-	FinalReport    *FinalReport `json:"final_report,omitempty" xml:"final_report"`
+	FinalReport    *FinalReport `json:"final_report,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }
 

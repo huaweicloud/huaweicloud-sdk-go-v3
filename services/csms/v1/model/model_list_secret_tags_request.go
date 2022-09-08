@@ -10,7 +10,7 @@ import (
 type ListSecretTagsRequest struct {
 
 	// 凭据ID
-	SecretId string `json:"secret_id" xml:"secret_id"`
+	SecretId string `json:"secret_id"`
 }
 
 func (o ListSecretTagsRequest) String() string {

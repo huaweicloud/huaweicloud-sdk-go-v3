@@ -9,10 +9,10 @@ import (
 type ShowCeshierarchyRespQueues1 struct {
 
 	// topic名称。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 分区信息。
-	Partitions *[]ShowCeshierarchyRespPartitions `json:"partitions,omitempty" xml:"partitions"`
+	Partitions *[]ShowCeshierarchyRespPartitions `json:"partitions,omitempty"`
 }
 
 func (o ShowCeshierarchyRespQueues1) String() string {

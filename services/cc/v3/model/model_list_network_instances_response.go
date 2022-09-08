@@ -10,12 +10,12 @@ import (
 type ListNetworkInstancesResponse struct {
 
 	// 网络实例列表。
-	NetworkInstances *[]NetworkInstance `json:"network_instances,omitempty" xml:"network_instances"`
+	NetworkInstances *[]NetworkInstance `json:"network_instances,omitempty"`
 
-	PageInfo *PageInfo `json:"page_info,omitempty" xml:"page_info"`
+	PageInfo *PageInfo `json:"page_info,omitempty"`
 
 	// 请求ID。
-	RequestId      *string `json:"request_id,omitempty" xml:"request_id"`
+	RequestId      *string `json:"request_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -8,9 +8,9 @@ import (
 
 // Request Object
 type ImportEventsRequest struct {
-	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *string `json:"X-Language,omitempty"`
 
-	Body *Events `json:"body,omitempty" xml:"body"`
+	Body *Events `json:"body,omitempty"`
 }
 
 func (o ImportEventsRequest) String() string {

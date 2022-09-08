@@ -8,15 +8,15 @@ import (
 
 // Response Object
 type ListOverviewsClassificationResponse struct {
-	Domain *DomainClassificationItem `json:"domain,omitempty" xml:"domain"`
+	Domain *DomainClassificationItem `json:"domain,omitempty"`
 
-	AttackType *AttackTypeClassificationItem `json:"attack_type,omitempty" xml:"attack_type"`
+	AttackType *AttackTypeClassificationItem `json:"attack_type,omitempty"`
 
-	Ip *IpClassificationItem `json:"ip,omitempty" xml:"ip"`
+	Ip *IpClassificationItem `json:"ip,omitempty"`
 
-	Url *UrlClassificationItem `json:"url,omitempty" xml:"url"`
+	Url *UrlClassificationItem `json:"url,omitempty"`
 
-	Geo            *GeoClassificationItem `json:"geo,omitempty" xml:"geo"`
+	Geo            *GeoClassificationItem `json:"geo,omitempty"`
 	HttpStatusCode int                    `json:"-"`
 }
 

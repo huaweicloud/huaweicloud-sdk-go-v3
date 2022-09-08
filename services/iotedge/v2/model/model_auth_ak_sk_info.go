@@ -9,7 +9,7 @@ import (
 type AuthAkSkInfo struct {
 
 	// 鉴权秘钥
-	Secret *string `json:"secret,omitempty" xml:"secret"`
+	Secret *string `json:"secret,omitempty"`
 }
 
 func (o AuthAkSkInfo) String() string {

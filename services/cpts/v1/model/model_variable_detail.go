@@ -9,22 +9,22 @@ import (
 type VariableDetail struct {
 
 	// file_size
-	FileSize *int32 `json:"file_size,omitempty" xml:"file_size"`
+	FileSize *int32 `json:"file_size,omitempty"`
 
 	// id
-	Id *int32 `json:"id,omitempty" xml:"id"`
+	Id *int32 `json:"id,omitempty"`
 
 	// 是否被引用
-	IsQuoted *bool `json:"is_quoted,omitempty" xml:"is_quoted"`
+	IsQuoted *bool `json:"is_quoted,omitempty"`
 
 	// name
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// variable
-	Variable *[]interface{} `json:"variable,omitempty" xml:"variable"`
+	Variable *[]interface{} `json:"variable,omitempty"`
 
 	// variable_type
-	VariableType *int32 `json:"variable_type,omitempty" xml:"variable_type"`
+	VariableType *int32 `json:"variable_type,omitempty"`
 }
 
 func (o VariableDetail) String() string {

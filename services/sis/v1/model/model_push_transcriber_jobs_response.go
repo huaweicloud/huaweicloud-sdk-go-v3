@@ -10,7 +10,7 @@ import (
 type PushTranscriberJobsResponse struct {
 
 	// 创建的任务标识, 如果创建任务成功时必须存在。
-	JobId          *string `json:"job_id,omitempty" xml:"job_id"`
+	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

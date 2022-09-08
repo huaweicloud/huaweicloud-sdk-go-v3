@@ -8,7 +8,7 @@ import (
 
 // 创建数据库用户的请求信息。
 type CreateDatabaseUserRequest struct {
-	Users []CreateDatabaseUserList `json:"users" xml:"users"`
+	Users []CreateDatabaseUserList `json:"users"`
 }
 
 func (o CreateDatabaseUserRequest) String() string {

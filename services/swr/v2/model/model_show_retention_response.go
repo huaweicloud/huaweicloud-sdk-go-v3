@@ -10,16 +10,16 @@ import (
 type ShowRetentionResponse struct {
 
 	// 回收规则匹配策略，or
-	Algorithm *string `json:"algorithm,omitempty" xml:"algorithm"`
+	Algorithm *string `json:"algorithm,omitempty"`
 
 	// ID
-	Id *int32 `json:"id,omitempty" xml:"id"`
+	Id *int32 `json:"id,omitempty"`
 
 	// 镜像老化规则
-	Rules *[]Rule `json:"rules,omitempty" xml:"rules"`
+	Rules *[]Rule `json:"rules,omitempty"`
 
 	// 保留字段
-	Scope          *string `json:"scope,omitempty" xml:"scope"`
+	Scope          *string `json:"scope,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

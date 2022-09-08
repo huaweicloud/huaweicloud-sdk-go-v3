@@ -8,7 +8,7 @@ import (
 
 // 恢复请求body
 type BackupRestoreReq struct {
-	Restore *BackupRestore `json:"restore" xml:"restore"`
+	Restore *BackupRestore `json:"restore"`
 }
 
 func (o BackupRestoreReq) String() string {

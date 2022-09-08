@@ -10,10 +10,10 @@ import (
 type GetJobInstanceInfoDetail struct {
 
 	// 实例ID。
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
 	// 实例名称。
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 }
 
 func (o GetJobInstanceInfoDetail) String() string {

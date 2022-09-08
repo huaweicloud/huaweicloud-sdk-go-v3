@@ -9,7 +9,7 @@ import (
 type ApplyConfigurationRequest struct {
 
 	// 实例ID列表。
-	InstanceIds []string `json:"instance_ids" xml:"instance_ids"`
+	InstanceIds []string `json:"instance_ids"`
 }
 
 func (o ApplyConfigurationRequest) String() string {

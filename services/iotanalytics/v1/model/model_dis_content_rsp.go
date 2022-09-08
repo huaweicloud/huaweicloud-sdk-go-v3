@@ -10,16 +10,16 @@ import (
 type DisContentRsp struct {
 
 	// 通道名称
-	StreamName *string `json:"streamName,omitempty" xml:"streamName"`
+	StreamName *string `json:"streamName,omitempty"`
 
 	// 租户的AK
-	Ak *string `json:"ak,omitempty" xml:"ak"`
+	Ak *string `json:"ak,omitempty"`
 
 	// 租户的SK
-	Sk *string `json:"sk,omitempty" xml:"sk"`
+	Sk *string `json:"sk,omitempty"`
 
 	// 项目id
-	ProjectId *string `json:"projectId,omitempty" xml:"projectId"`
+	ProjectId *string `json:"projectId,omitempty"`
 }
 
 func (o DisContentRsp) String() string {

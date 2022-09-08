@@ -10,13 +10,13 @@ import (
 type ListDatasourcesResponse struct {
 
 	// 返回所有满足条件的对象个数
-	Total *int64 `json:"total,omitempty" xml:"total"`
+	Total *int64 `json:"total,omitempty"`
 
 	// 返回对象的大小
-	Size *int32 `json:"size,omitempty" xml:"size"`
+	Size *int32 `json:"size,omitempty"`
 
 	// 返回的实体对象
-	Entities       *[]DataSourceRsp `json:"entities,omitempty" xml:"entities"`
+	Entities       *[]DataSourceRsp `json:"entities,omitempty"`
 	HttpStatusCode int              `json:"-"`
 }
 

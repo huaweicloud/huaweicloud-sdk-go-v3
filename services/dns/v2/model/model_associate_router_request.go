@@ -10,9 +10,9 @@ import (
 type AssociateRouterRequest struct {
 
 	// 关联VPC的Zone ID。
-	ZoneId string `json:"zone_id" xml:"zone_id"`
+	ZoneId string `json:"zone_id"`
 
-	Body *AssociateRouterReq `json:"body,omitempty" xml:"body"`
+	Body *AssociateRouterReq `json:"body,omitempty"`
 }
 
 func (o AssociateRouterRequest) String() string {

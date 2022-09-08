@@ -13,28 +13,28 @@ import (
 type ListCloudConnectionsRequest struct {
 
 	// 分页查询时，每页返回的个数。
-	Limit *int32 `json:"limit,omitempty" xml:"limit"`
+	Limit *int32 `json:"limit,omitempty"`
 
 	// 分页查询时，上一页最后一条记录的ID，为空时为查询第一页。 使用说明：必须与limit一起使用。
-	Marker *string `json:"marker,omitempty" xml:"marker"`
+	Marker *string `json:"marker,omitempty"`
 
 	// 根据ID过滤云连接实例列表。
-	Id *[]string `json:"id,omitempty" xml:"id"`
+	Id *[]string `json:"id,omitempty"`
 
 	// 根据名称过滤云连接实例列表。
-	Name *[]string `json:"name,omitempty" xml:"name"`
+	Name *[]string `json:"name,omitempty"`
 
 	// 根据描述过滤云连接实例列表。
-	Description *[]string `json:"description,omitempty" xml:"description"`
+	Description *[]string `json:"description,omitempty"`
 
 	// 根据状态过滤云连接实例列表。ACTIVE：表示状态可用。
-	Status *[]ListCloudConnectionsRequestStatus `json:"status,omitempty" xml:"status"`
+	Status *[]ListCloudConnectionsRequestStatus `json:"status,omitempty"`
 
 	// 根据企业项目ID过滤云连接实例列表。
-	EnterpriseProjectId *[]string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
+	EnterpriseProjectId *[]string `json:"enterprise_project_id,omitempty"`
 
 	// 根据类型过滤云连接实例列表。
-	Type *[]string `json:"type,omitempty" xml:"type"`
+	Type *[]string `json:"type,omitempty"`
 }
 
 func (o ListCloudConnectionsRequest) String() string {

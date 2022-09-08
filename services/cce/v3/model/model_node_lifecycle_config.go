@@ -10,10 +10,10 @@ import (
 type NodeLifecycleConfig struct {
 
 	// 安装前执行脚本 > 输入的值需要经过Base64编码，方法为echo -n \"待编码内容\" | base64。
-	PreInstall *string `json:"preInstall,omitempty" xml:"preInstall"`
+	PreInstall *string `json:"preInstall,omitempty"`
 
 	// 安装后执行脚本 > 输入的值需要经过Base64编码，方法为echo -n \"待编码内容\" | base64。
-	PostInstall *string `json:"postInstall,omitempty" xml:"postInstall"`
+	PostInstall *string `json:"postInstall,omitempty"`
 }
 
 func (o NodeLifecycleConfig) String() string {

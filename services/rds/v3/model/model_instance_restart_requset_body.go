@@ -9,7 +9,7 @@ import (
 type InstanceRestartRequsetBody struct {
 
 	// 在线调试时必填。
-	Restart *interface{} `json:"restart,omitempty" xml:"restart"`
+	Restart *interface{} `json:"restart,omitempty"`
 }
 
 func (o InstanceRestartRequsetBody) String() string {

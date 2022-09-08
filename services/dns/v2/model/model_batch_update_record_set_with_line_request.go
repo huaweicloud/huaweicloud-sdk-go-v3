@@ -10,9 +10,9 @@ import (
 type BatchUpdateRecordSetWithLineRequest struct {
 
 	// 所属zone的ID。
-	ZoneId string `json:"zone_id" xml:"zone_id"`
+	ZoneId string `json:"zone_id"`
 
-	Body *BatchUpdateRecordSetWithLineReq `json:"body,omitempty" xml:"body"`
+	Body *BatchUpdateRecordSetWithLineReq `json:"body,omitempty"`
 }
 
 func (o BatchUpdateRecordSetWithLineRequest) String() string {

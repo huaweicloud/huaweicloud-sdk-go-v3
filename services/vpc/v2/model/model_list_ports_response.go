@@ -10,7 +10,7 @@ import (
 type ListPortsResponse struct {
 
 	// port列表对象
-	Ports          *[]Port `json:"ports,omitempty" xml:"ports"`
+	Ports          *[]Port `json:"ports,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

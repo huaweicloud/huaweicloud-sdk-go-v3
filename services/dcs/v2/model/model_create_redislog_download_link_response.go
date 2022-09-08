@@ -10,10 +10,10 @@ import (
 type CreateRedislogDownloadLinkResponse struct {
 
 	// 日志id
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 日志下载链接，默认有效时间为24小时
-	Link           *string `json:"link,omitempty" xml:"link"`
+	Link           *string `json:"link,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

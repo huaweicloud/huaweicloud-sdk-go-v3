@@ -10,10 +10,10 @@ import (
 type CreateAnonymousAuthRandomRequest struct {
 
 	// 会议ID。
-	ConferenceID string `json:"conferenceID" xml:"conferenceID"`
+	ConferenceID string `json:"conferenceID"`
 
 	// 会议密码。
-	XPassword string `json:"X-Password" xml:"X-Password"`
+	XPassword string `json:"X-Password"`
 }
 
 func (o CreateAnonymousAuthRandomRequest) String() string {

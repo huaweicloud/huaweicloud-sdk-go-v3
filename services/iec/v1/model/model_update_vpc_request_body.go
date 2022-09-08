@@ -8,7 +8,7 @@ import (
 
 // 更新VPC请求体
 type UpdateVpcRequestBody struct {
-	Vpc *UpdateVpcOption `json:"vpc,omitempty" xml:"vpc"`
+	Vpc *UpdateVpcOption `json:"vpc,omitempty"`
 }
 
 func (o UpdateVpcRequestBody) String() string {

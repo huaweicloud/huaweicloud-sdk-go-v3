@@ -10,9 +10,9 @@ import (
 type UpdateTestCaseRequest struct {
 
 	// 测试用例唯一标识，固定长度32位字符
-	TestcaseId string `json:"testcase_id" xml:"testcase_id"`
+	TestcaseId string `json:"testcase_id"`
 
-	Body *UpdateTestCaseRequestBody `json:"body,omitempty" xml:"body"`
+	Body *UpdateTestCaseRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateTestCaseRequest) String() string {

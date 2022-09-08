@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateClusterRequest struct {
-	Body *Cluster `json:"body,omitempty" xml:"body"`
+	Body *Cluster `json:"body,omitempty"`
 }
 
 func (o CreateClusterRequest) String() string {

@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type DetectExtentionByIdCardImageRequest struct {
-	Body *IvsExtentionByIdCardImageRequestBody `json:"body,omitempty" xml:"body"`
+	Body *IvsExtentionByIdCardImageRequestBody `json:"body,omitempty"`
 }
 
 func (o DetectExtentionByIdCardImageRequest) String() string {

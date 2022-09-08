@@ -9,34 +9,34 @@ import (
 type RuleListItem struct {
 
 	// 规则集规范分类
-	RuleSet *string `json:"rule_set,omitempty" xml:"rule_set"`
+	RuleSet *string `json:"rule_set,omitempty"`
 
 	// 规则id
-	RuleId *string `json:"rule_id,omitempty" xml:"rule_id"`
+	RuleId *string `json:"rule_id,omitempty"`
 
 	// 规则所属语言
-	RuleLanguage *string `json:"rule_language,omitempty" xml:"rule_language"`
+	RuleLanguage *string `json:"rule_language,omitempty"`
 
 	// 规则名称
-	RuleName *string `json:"rule_name,omitempty" xml:"rule_name"`
+	RuleName *string `json:"rule_name,omitempty"`
 
 	// 规则问题级别
-	RuleSeverity *string `json:"rule_severity,omitempty" xml:"rule_severity"`
+	RuleSeverity *string `json:"rule_severity,omitempty"`
 
 	// 规则标签
-	RuleTages *string `json:"rule_tages,omitempty" xml:"rule_tages"`
+	RuleTages *string `json:"rule_tages,omitempty"`
 
 	// 正确示例
-	RightExample *string `json:"right_example,omitempty" xml:"right_example"`
+	RightExample *string `json:"right_example,omitempty"`
 
 	// 错误示例
-	ErrorExample *string `json:"error_example,omitempty" xml:"error_example"`
+	ErrorExample *string `json:"error_example,omitempty"`
 
 	// 修改建议
-	ReviseOpinion *string `json:"revise_opinion,omitempty" xml:"revise_opinion"`
+	ReviseOpinion *string `json:"revise_opinion,omitempty"`
 
 	// 规则描述
-	RuleDesc *string `json:"rule_desc,omitempty" xml:"rule_desc"`
+	RuleDesc *string `json:"rule_desc,omitempty"`
 }
 
 func (o RuleListItem) String() string {

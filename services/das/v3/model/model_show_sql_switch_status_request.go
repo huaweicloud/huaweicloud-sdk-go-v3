@@ -13,16 +13,16 @@ import (
 type ShowSqlSwitchStatusRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 开关类型。取值DAS SQL Explorer和DAS Slow Query Log，分别表示DAS收集全量SQL开关和DAS收集慢SQL开关。
-	Type string `json:"type" xml:"type"`
+	Type string `json:"type"`
 
 	// 数据库类型。当前全量SQL支持的数据库类型包括MySQL和GaussDB(for MySQL)，慢SQL支持的类型：MySQL、GaussDB(for MySQL)、PostgreSQL。
-	DatastoreType string `json:"datastore_type" xml:"datastore_type"`
+	DatastoreType string `json:"datastore_type"`
 
 	// 请求语言类型。
-	XLanguage *ShowSqlSwitchStatusRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *ShowSqlSwitchStatusRequestXLanguage `json:"X-Language,omitempty"`
 }
 
 func (o ShowSqlSwitchStatusRequest) String() string {

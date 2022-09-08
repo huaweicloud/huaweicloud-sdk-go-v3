@@ -13,9 +13,9 @@ import (
 type CreateCompareTaskRequest struct {
 
 	// 请求语言类型
-	XLanguage *CreateCompareTaskRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *CreateCompareTaskRequestXLanguage `json:"X-Language,omitempty"`
 
-	Body *CreateCompareTaskReq `json:"body,omitempty" xml:"body"`
+	Body *CreateCompareTaskReq `json:"body,omitempty"`
 }
 
 func (o CreateCompareTaskRequest) String() string {

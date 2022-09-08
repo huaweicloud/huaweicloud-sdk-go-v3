@@ -10,9 +10,9 @@ import (
 type UpdateGroupRequest struct {
 
 	// 存储组 ID
-	GroupId string `json:"group_id" xml:"group_id"`
+	GroupId string `json:"group_id"`
 
-	Body *StorageGroup `json:"body,omitempty" xml:"body"`
+	Body *StorageGroup `json:"body,omitempty"`
 }
 
 func (o UpdateGroupRequest) String() string {

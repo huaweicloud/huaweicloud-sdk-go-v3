@@ -9,22 +9,22 @@ import (
 type MappingInfo struct {
 
 	// 源端字段
-	SourceColumn *string `json:"source_column,omitempty" xml:"source_column"`
+	SourceColumn *string `json:"source_column,omitempty"`
 
 	// 源端字段类型
-	SourceColumnType *string `json:"source_column_type,omitempty" xml:"source_column_type"`
+	SourceColumnType *string `json:"source_column_type,omitempty"`
 
 	// 源端字段长度
-	SourceColumnLength *string `json:"source_column_length,omitempty" xml:"source_column_length"`
+	SourceColumnLength *string `json:"source_column_length,omitempty"`
 
 	// 目标端字段
-	TargetColumn *string `json:"target_column,omitempty" xml:"target_column"`
+	TargetColumn *string `json:"target_column,omitempty"`
 
 	// 目标端字段类型
-	TargetColumnType *string `json:"target_column_type,omitempty" xml:"target_column_type"`
+	TargetColumnType *string `json:"target_column_type,omitempty"`
 
 	// 目标端字段长度
-	TargetColumnLength *string `json:"target_column_length,omitempty" xml:"target_column_length"`
+	TargetColumnLength *string `json:"target_column_length,omitempty"`
 }
 
 func (o MappingInfo) String() string {

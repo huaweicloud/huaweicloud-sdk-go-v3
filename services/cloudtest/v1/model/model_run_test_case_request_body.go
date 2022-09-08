@@ -10,13 +10,13 @@ import (
 type RunTestCaseRequestBody struct {
 
 	// 注册测试类型服务接口返回的服务id
-	ServiceId int32 `json:"service_id" xml:"service_id"`
+	ServiceId int32 `json:"service_id"`
 
 	// 测试计划id
-	PlanId *string `json:"plan_id,omitempty" xml:"plan_id"`
+	PlanId *string `json:"plan_id,omitempty"`
 
 	// 测试用例执行信息，数组长度小于等于50
-	ExecuteList []TestCaseExecuteBean `json:"execute_list" xml:"execute_list"`
+	ExecuteList []TestCaseExecuteBean `json:"execute_list"`
 }
 
 func (o RunTestCaseRequestBody) String() string {

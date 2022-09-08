@@ -9,7 +9,7 @@ import (
 type RevokeRequestBodyUsers struct {
 
 	// 数据库用户名称。
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 }
 
 func (o RevokeRequestBodyUsers) String() string {

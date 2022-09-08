@@ -7,23 +7,23 @@ import (
 )
 
 type OpExtraInfo struct {
-	Backup *OpExtendInfoBckup `json:"backup,omitempty" xml:"backup"`
+	Backup *OpExtendInfoBckup `json:"backup,omitempty"`
 
-	Common *OpExtendInfoCommon `json:"common" xml:"common"`
+	Common *OpExtendInfoCommon `json:"common"`
 
-	Delete *OpExtendInfoDelete `json:"delete,omitempty" xml:"delete"`
+	Delete *OpExtendInfoDelete `json:"delete,omitempty"`
 
-	Sync *OpExtendInfoSync `json:"sync,omitempty" xml:"sync"`
+	Sync *OpExtendInfoSync `json:"sync,omitempty"`
 
-	RemoveResources *OpExtendInfoRemoveResources `json:"remove_resources,omitempty" xml:"remove_resources"`
+	RemoveResources *OpExtendInfoRemoveResources `json:"remove_resources,omitempty"`
 
-	Replication *OpExtendInfoReplication `json:"replication,omitempty" xml:"replication"`
+	Replication *OpExtendInfoReplication `json:"replication,omitempty"`
 
-	Resource *Resource `json:"resource" xml:"resource"`
+	Resource *Resource `json:"resource"`
 
-	Restore *OpExtendInfoRestore `json:"restore,omitempty" xml:"restore"`
+	Restore *OpExtendInfoRestore `json:"restore,omitempty"`
 
-	VaultDelete *OpExtendInfoVaultDelete `json:"vault_delete,omitempty" xml:"vault_delete"`
+	VaultDelete *OpExtendInfoVaultDelete `json:"vault_delete,omitempty"`
 }
 
 func (o OpExtraInfo) String() string {

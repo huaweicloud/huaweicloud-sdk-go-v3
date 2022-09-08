@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type UpdateReferResponse struct {
-	Referer        *RefererRsp `json:"referer,omitempty" xml:"referer"`
+	Referer        *RefererRsp `json:"referer,omitempty"`
 	HttpStatusCode int         `json:"-"`
 }
 

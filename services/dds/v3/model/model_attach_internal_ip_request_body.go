@@ -9,10 +9,10 @@ import (
 type AttachInternalIpRequestBody struct {
 
 	// 节点ID。
-	NodeId string `json:"node_id" xml:"node_id"`
+	NodeId string `json:"node_id"`
 
 	// 新的Ip需要为用户可用vpc中的网段。只支持IPV4。
-	NewIp string `json:"new_ip" xml:"new_ip"`
+	NewIp string `json:"new_ip"`
 }
 
 func (o AttachInternalIpRequestBody) String() string {

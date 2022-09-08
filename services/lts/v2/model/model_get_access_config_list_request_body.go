@@ -10,18 +10,18 @@ import (
 type GetAccessConfigListRequestBody struct {
 
 	// 接入配置名称列表
-	AccessConfigNameList []string `json:"access_config_name_list" xml:"access_config_name_list"`
+	AccessConfigNameList []string `json:"access_config_name_list"`
 
 	// 主机组名称列表
-	HostGroupNameList []string `json:"host_group_name_list" xml:"host_group_name_list"`
+	HostGroupNameList []string `json:"host_group_name_list"`
 
 	// 日志组名称列表
-	LogGroupNameList []string `json:"log_group_name_list" xml:"log_group_name_list"`
+	LogGroupNameList []string `json:"log_group_name_list"`
 
 	// 日志流名称列表
-	LogStreamNameList []string `json:"log_stream_name_list" xml:"log_stream_name_list"`
+	LogStreamNameList []string `json:"log_stream_name_list"`
 
-	AccessConfigTagList []AccessConfigTag `json:"access_config_tag_list" xml:"access_config_tag_list"`
+	AccessConfigTagList []AccessConfigTag `json:"access_config_tag_list"`
 }
 
 func (o GetAccessConfigListRequestBody) String() string {

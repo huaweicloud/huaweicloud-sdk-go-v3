@@ -8,7 +8,7 @@ import (
 
 //
 type UpdateVpcPeeringRequestBody struct {
-	Peering *UpdateVpcPeeringOption `json:"peering" xml:"peering"`
+	Peering *UpdateVpcPeeringOption `json:"peering"`
 }
 
 func (o UpdateVpcPeeringRequestBody) String() string {

@@ -13,10 +13,10 @@ import (
 type ClassificationReq struct {
 
 	// 待分析文本。文本编码要求为utf-8。 限定400个字符以内，文本长度超过400个字符时，只检测前400个字符。
-	Content string `json:"content" xml:"content"`
+	Content string `json:"content"`
 
 	// 1 广告检测
-	Domain *ClassificationReqDomain `json:"domain,omitempty" xml:"domain"`
+	Domain *ClassificationReqDomain `json:"domain,omitempty"`
 }
 
 func (o ClassificationReq) String() string {

@@ -10,7 +10,7 @@ import (
 type ShowGaussMySqlEngineVersionResponse struct {
 
 	// 数据库版本信息列表
-	Datastores     *[]MysqlEngineVersionInfo `json:"datastores,omitempty" xml:"datastores"`
+	Datastores     *[]MysqlEngineVersionInfo `json:"datastores,omitempty"`
 	HttpStatusCode int                       `json:"-"`
 }
 

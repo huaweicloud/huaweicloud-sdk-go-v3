@@ -8,10 +8,10 @@ import (
 
 // Response Object
 type ListMetricItemsResponse struct {
-	MetaData *MetaData `json:"metaData,omitempty" xml:"metaData"`
+	MetaData *MetaData `json:"metaData,omitempty"`
 
 	// 指标对象列表。
-	Metrics        *[]MetricItemResultApi `json:"metrics,omitempty" xml:"metrics"`
+	Metrics        *[]MetricItemResultApi `json:"metrics,omitempty"`
 	HttpStatusCode int                    `json:"-"`
 }
 

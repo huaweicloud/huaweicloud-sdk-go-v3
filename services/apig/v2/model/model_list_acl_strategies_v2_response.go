@@ -10,13 +10,13 @@ import (
 type ListAclStrategiesV2Response struct {
 
 	// 本次返回的列表长度
-	Size int32 `json:"size" xml:"size"`
+	Size int32 `json:"size"`
 
 	// 满足条件的记录数
-	Total int64 `json:"total" xml:"total"`
+	Total int64 `json:"total"`
 
 	// 本次查询返回的ACL策略列表
-	Acls           *[]ApiAclInfoWithBindNum `json:"acls,omitempty" xml:"acls"`
+	Acls           *[]ApiAclInfoWithBindNum `json:"acls,omitempty"`
 	HttpStatusCode int                      `json:"-"`
 }
 

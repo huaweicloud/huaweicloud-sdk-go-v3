@@ -10,13 +10,13 @@ import (
 type DomainItem struct {
 
 	// 域名
-	Key *string `json:"key,omitempty" xml:"key"`
+	Key *string `json:"key,omitempty"`
 
 	// 数量
-	Num *int32 `json:"num,omitempty" xml:"num"`
+	Num *int32 `json:"num,omitempty"`
 
 	// 网站名称，对应WAF控制台域名详情中的网站名称
-	WebTag *string `json:"web_tag,omitempty" xml:"web_tag"`
+	WebTag *string `json:"web_tag,omitempty"`
 }
 
 func (o DomainItem) String() string {

@@ -10,7 +10,7 @@ import (
 type UpdateInstanceMonitorResponse struct {
 
 	// 修改秒级监控的任务流id
-	JobId          *string `json:"job_id,omitempty" xml:"job_id"`
+	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

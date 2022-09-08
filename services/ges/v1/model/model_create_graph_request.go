@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateGraphRequest struct {
-	Body *CreateGraphReq `json:"body,omitempty" xml:"body"`
+	Body *CreateGraphReq `json:"body,omitempty"`
 }
 
 func (o CreateGraphRequest) String() string {

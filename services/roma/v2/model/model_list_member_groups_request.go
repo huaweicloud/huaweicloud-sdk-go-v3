@@ -10,25 +10,25 @@ import (
 type ListMemberGroupsRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// VPC通道的编号
-	VpcChannelId string `json:"vpc_channel_id" xml:"vpc_channel_id"`
+	VpcChannelId string `json:"vpc_channel_id"`
 
 	// 偏移量，表示从此偏移量开始查询，偏移量小于0时，自动转换为0
-	Offset *int64 `json:"offset,omitempty" xml:"offset"`
+	Offset *int64 `json:"offset,omitempty"`
 
 	// 每页显示的条目数量
-	Limit *int32 `json:"limit,omitempty" xml:"limit"`
+	Limit *int32 `json:"limit,omitempty"`
 
 	// 字典编码。  支持英文，数字，特殊字符（-_.）  暂不支持
-	DictCode *string `json:"dict_code,omitempty" xml:"dict_code"`
+	DictCode *string `json:"dict_code,omitempty"`
 
 	// VPC通道后端云服务组的名称
-	MemberGroupName *string `json:"member_group_name,omitempty" xml:"member_group_name"`
+	MemberGroupName *string `json:"member_group_name,omitempty"`
 
 	// 指定需要精确匹配查找的参数名称，多个参数需要支持精确匹配时参数之间使用“,”隔开。  当前支持member_group_name。
-	PreciseSearch *string `json:"precise_search,omitempty" xml:"precise_search"`
+	PreciseSearch *string `json:"precise_search,omitempty"`
 }
 
 func (o ListMemberGroupsRequest) String() string {

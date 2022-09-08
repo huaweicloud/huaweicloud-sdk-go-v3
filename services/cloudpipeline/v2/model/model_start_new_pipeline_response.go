@@ -10,10 +10,10 @@ import (
 type StartNewPipelineResponse struct {
 
 	// 流水线ID
-	PipelineId *string `json:"pipeline_id,omitempty" xml:"pipeline_id"`
+	PipelineId *string `json:"pipeline_id,omitempty"`
 
 	// 流水线构建ID
-	BuildId        *string `json:"build_id,omitempty" xml:"build_id"`
+	BuildId        *string `json:"build_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

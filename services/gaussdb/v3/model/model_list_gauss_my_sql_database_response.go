@@ -10,10 +10,10 @@ import (
 type ListGaussMySqlDatabaseResponse struct {
 
 	// 数据库信息列表。
-	Databases *[]ListGaussMysqlDatabaseInfo `json:"databases,omitempty" xml:"databases"`
+	Databases *[]ListGaussMysqlDatabaseInfo `json:"databases,omitempty"`
 
 	// 数据库总数。
-	TotalCount     *int32 `json:"total_count,omitempty" xml:"total_count"`
+	TotalCount     *int32 `json:"total_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

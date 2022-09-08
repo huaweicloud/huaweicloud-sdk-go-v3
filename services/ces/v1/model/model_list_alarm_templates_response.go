@@ -10,9 +10,9 @@ import (
 type ListAlarmTemplatesResponse struct {
 
 	// 自定义告警模板详细信息。
-	AlarmTemplates *[]AlarmTemplate `json:"alarm_templates,omitempty" xml:"alarm_templates"`
+	AlarmTemplates *[]AlarmTemplate `json:"alarm_templates,omitempty"`
 
-	MetaData       *MetaData `json:"meta_data,omitempty" xml:"meta_data"`
+	MetaData       *MetaData `json:"meta_data,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }
 

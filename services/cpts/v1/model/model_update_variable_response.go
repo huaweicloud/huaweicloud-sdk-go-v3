@@ -10,12 +10,12 @@ import (
 type UpdateVariableResponse struct {
 
 	// code
-	Code *string `json:"code,omitempty" xml:"code"`
+	Code *string `json:"code,omitempty"`
 
-	Json *CreateVariableResultJson `json:"json,omitempty" xml:"json"`
+	Json *CreateVariableResultJson `json:"json,omitempty"`
 
 	// message
-	Message        *string `json:"message,omitempty" xml:"message"`
+	Message        *string `json:"message,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

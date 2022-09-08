@@ -10,7 +10,7 @@ import (
 type ListAvailableZoneResponse struct {
 
 	// 可用区信息
-	AzInfos        *[]AzInfoResp `json:"az_infos,omitempty" xml:"az_infos"`
+	AzInfos        *[]AzInfoResp `json:"az_infos,omitempty"`
 	HttpStatusCode int           `json:"-"`
 }
 

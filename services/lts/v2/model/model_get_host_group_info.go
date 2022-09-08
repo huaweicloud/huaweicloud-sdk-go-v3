@@ -13,25 +13,25 @@ import (
 type GetHostGroupInfo struct {
 
 	// 主机组ID
-	HostGroupId *string `json:"host_group_id,omitempty" xml:"host_group_id"`
+	HostGroupId *string `json:"host_group_id,omitempty"`
 
 	// 主机组名称
-	HostGroupName *string `json:"host_group_name,omitempty" xml:"host_group_name"`
+	HostGroupName *string `json:"host_group_name,omitempty"`
 
 	// 主机组类型。linux：linux类型，windows：windows类型
-	HostGroupType *GetHostGroupInfoHostGroupType `json:"host_group_type,omitempty" xml:"host_group_type"`
+	HostGroupType *GetHostGroupInfoHostGroupType `json:"host_group_type,omitempty"`
 
 	// 主机ID列表
-	HostIdList *[]string `json:"host_id_list,omitempty" xml:"host_id_list"`
+	HostIdList *[]string `json:"host_id_list,omitempty"`
 
 	// 标签信息
-	HostGroupTag *[]HostGroupTag `json:"host_group_tag,omitempty" xml:"host_group_tag"`
+	HostGroupTag *[]HostGroupTag `json:"host_group_tag,omitempty"`
 
 	// 创建时间
-	CreateTime *int64 `json:"create_time,omitempty" xml:"create_time"`
+	CreateTime *int64 `json:"create_time,omitempty"`
 
 	// 更新时间
-	UpdateTime *int64 `json:"update_time,omitempty" xml:"update_time"`
+	UpdateTime *int64 `json:"update_time,omitempty"`
 }
 
 func (o GetHostGroupInfo) String() string {

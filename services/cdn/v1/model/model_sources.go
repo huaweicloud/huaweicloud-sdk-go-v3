@@ -13,16 +13,16 @@ import (
 type Sources struct {
 
 	// 源站IP（非内网IP）或者域名。
-	IpOrDomain string `json:"ip_or_domain" xml:"ip_or_domain"`
+	IpOrDomain string `json:"ip_or_domain"`
 
 	// 源站类型取值：ipaddr、 domain、obs_bucket，分别表示：源站IP、源站域名、OBS桶访问域名。
-	OriginType SourcesOriginType `json:"origin_type" xml:"origin_type"`
+	OriginType SourcesOriginType `json:"origin_type"`
 
 	// 主备状态（1代表主站；0代表备站）,主源站必须存在，备源站可选，OBS桶不能有备源站。
-	ActiveStandby int32 `json:"active_standby" xml:"active_standby"`
+	ActiveStandby int32 `json:"active_standby"`
 
 	// 是否开启Obs静态网站托管(0表示关闭,1表示则为开启)，源站类型为obs_bucket时传递。
-	EnableObsWebHosting *int32 `json:"enable_obs_web_hosting,omitempty" xml:"enable_obs_web_hosting"`
+	EnableObsWebHosting *int32 `json:"enable_obs_web_hosting,omitempty"`
 }
 
 func (o Sources) String() string {

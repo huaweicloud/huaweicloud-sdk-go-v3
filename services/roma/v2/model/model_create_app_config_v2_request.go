@@ -10,12 +10,12 @@ import (
 type CreateAppConfigV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 应用编号
-	AppId string `json:"app_id" xml:"app_id"`
+	AppId string `json:"app_id"`
 
-	Body *AppConfigCreateRequestV2 `json:"body,omitempty" xml:"body"`
+	Body *AppConfigCreateRequestV2 `json:"body,omitempty"`
 }
 
 func (o CreateAppConfigV2Request) String() string {

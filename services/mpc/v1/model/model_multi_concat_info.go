@@ -9,18 +9,18 @@ import (
 type MultiConcatInfo struct {
 
 	// 拼接任务输入源地址。
-	Inputs []ObsObjInfo `json:"inputs" xml:"inputs"`
+	Inputs []ObsObjInfo `json:"inputs"`
 
 	// 拼接完成后转码对应的转码模板ID
-	TransTemplateIds *[]int32 `json:"trans_template_ids,omitempty" xml:"trans_template_ids"`
+	TransTemplateIds *[]int32 `json:"trans_template_ids,omitempty"`
 
 	// 转码参数。 设置“trans_template_id”和此参数，则优先使用此参数进行转码。
-	AvParameters *[]AvParameters `json:"av_parameters,omitempty" xml:"av_parameters"`
+	AvParameters *[]AvParameters `json:"av_parameters,omitempty"`
 
-	Output *ObsObjInfo `json:"output" xml:"output"`
+	Output *ObsObjInfo `json:"output"`
 
 	// 水印信息。
-	ImageWatermarkSettings *[]ImageWatermarkSetting `json:"image_watermark_settings,omitempty" xml:"image_watermark_settings"`
+	ImageWatermarkSettings *[]ImageWatermarkSetting `json:"image_watermark_settings,omitempty"`
 }
 
 func (o MultiConcatInfo) String() string {

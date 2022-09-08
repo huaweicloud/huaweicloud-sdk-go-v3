@@ -10,10 +10,10 @@ import (
 type ServerAppInfoCreatedUser struct {
 
 	// 创建应用的用户ID
-	UserId *string `json:"user_id,omitempty" xml:"user_id"`
+	UserId *string `json:"user_id,omitempty"`
 
 	// 创建应用的用户名称
-	UserName *string `json:"user_name,omitempty" xml:"user_name"`
+	UserName *string `json:"user_name,omitempty"`
 }
 
 func (o ServerAppInfoCreatedUser) String() string {

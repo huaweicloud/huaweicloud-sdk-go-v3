@@ -10,7 +10,7 @@ import (
 type BatchStopMigrationTasksResponse struct {
 
 	// 数据迁移任务列表。
-	MigrationTasks *[]StopMigrationTaskResult `json:"migration_tasks,omitempty" xml:"migration_tasks"`
+	MigrationTasks *[]StopMigrationTaskResult `json:"migration_tasks,omitempty"`
 	HttpStatusCode int                        `json:"-"`
 }
 

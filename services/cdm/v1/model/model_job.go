@@ -12,106 +12,106 @@ import (
 type Job struct {
 
 	// 作业类型： - NORMAL_JOB：表/文件迁移。 - BATCH_JOB：整库迁移。 - SCENARIO_JOB：场景迁移。
-	JobType *JobJobType `json:"job_type,omitempty" xml:"job_type"`
+	JobType *JobJobType `json:"job_type,omitempty"`
 
 	// 源端连接类型
-	FromConnectorName string `json:"from-connector-name" xml:"from-connector-name"`
+	FromConnectorName string `json:"from-connector-name"`
 
-	ToConfigValues *ConfigValues `json:"to-config-values" xml:"to-config-values"`
+	ToConfigValues *ConfigValues `json:"to-config-values"`
 
 	// 目的端连接名称
-	ToLinkName string `json:"to-link-name" xml:"to-link-name"`
+	ToLinkName string `json:"to-link-name"`
 
-	DriverConfigValues *ConfigValues `json:"driver-config-values" xml:"driver-config-values"`
+	DriverConfigValues *ConfigValues `json:"driver-config-values"`
 
-	FromConfigValues *ConfigValues `json:"from-config-values" xml:"from-config-values"`
+	FromConfigValues *ConfigValues `json:"from-config-values"`
 
 	// 目的端连接类型
-	ToConnectorName *string `json:"to-connector-name,omitempty" xml:"to-connector-name"`
+	ToConnectorName *string `json:"to-connector-name,omitempty"`
 
 	// 作业名称，长度在1到240个字符之间
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 源连接名称
-	FromLinkName *string `json:"from-link-name,omitempty" xml:"from-link-name"`
+	FromLinkName *string `json:"from-link-name,omitempty"`
 
 	// 创建的用户。
-	CreationUser *string `json:"creation-user,omitempty" xml:"creation-user"`
+	CreationUser *string `json:"creation-user,omitempty"`
 
 	// 作业创建的时间，单位：毫秒。
-	CreationDate *int64 `json:"creation-date,omitempty" xml:"creation-date"`
+	CreationDate *int64 `json:"creation-date,omitempty"`
 
 	// 作业最后更新的时间，单位：毫秒。
-	UpdateDate *int64 `json:"update-date,omitempty" xml:"update-date"`
+	UpdateDate *int64 `json:"update-date,omitempty"`
 
 	// 是否增量
-	IsIncreJob *bool `json:"is_incre_job,omitempty" xml:"is_incre_job"`
+	IsIncreJob *bool `json:"is_incre_job,omitempty"`
 
 	// 标记
-	Flag *int32 `json:"flag,omitempty" xml:"flag"`
+	Flag *int32 `json:"flag,omitempty"`
 
 	// 已读文件数
-	FilesRead *int32 `json:"files_read,omitempty" xml:"files_read"`
+	FilesRead *int32 `json:"files_read,omitempty"`
 
 	// 作业最后更新的用户。
-	UpdateUser *string `json:"update-user,omitempty" xml:"update-user"`
+	UpdateUser *string `json:"update-user,omitempty"`
 
 	// 外部ID。
-	ExternalId *string `json:"external_id,omitempty" xml:"external_id"`
+	ExternalId *string `json:"external_id,omitempty"`
 
 	// 作业类型
-	Type *string `json:"type,omitempty" xml:"type"`
+	Type *string `json:"type,omitempty"`
 
 	// 执行_开始_日期。
-	ExecuteStartDate *int64 `json:"execute_start_date,omitempty" xml:"execute_start_date"`
+	ExecuteStartDate *int64 `json:"execute_start_date,omitempty"`
 
 	// 删除行数
-	DeleteRows *int32 `json:"delete_rows,omitempty" xml:"delete_rows"`
+	DeleteRows *int32 `json:"delete_rows,omitempty"`
 
 	// 是否激活连接
-	Enabled *bool `json:"enabled,omitempty" xml:"enabled"`
+	Enabled *bool `json:"enabled,omitempty"`
 
 	// 写入字节
-	BytesWritten *int64 `json:"bytes_written,omitempty" xml:"bytes_written"`
+	BytesWritten *int64 `json:"bytes_written,omitempty"`
 
 	// 作业ID
-	Id *int32 `json:"id,omitempty" xml:"id"`
+	Id *int32 `json:"id,omitempty"`
 
 	// 用户是否使用sql
-	IsUseSql *bool `json:"is_use_sql,omitempty" xml:"is_use_sql"`
+	IsUseSql *bool `json:"is_use_sql,omitempty"`
 
 	// 更新行数
-	UpdateRows *int32 `json:"update_rows,omitempty" xml:"update_rows"`
+	UpdateRows *int32 `json:"update_rows,omitempty"`
 
 	// 组_名称
-	GroupName *string `json:"group_name,omitempty" xml:"group_name"`
+	GroupName *string `json:"group_name,omitempty"`
 
 	// 读取字节
-	BytesRead *int64 `json:"bytes_read,omitempty" xml:"bytes_read"`
+	BytesRead *int64 `json:"bytes_read,omitempty"`
 
 	// 执行_更新_日期。
-	ExecuteUpdateDate *int64 `json:"execute_update_date,omitempty" xml:"execute_update_date"`
+	ExecuteUpdateDate *int64 `json:"execute_update_date,omitempty"`
 
 	// 写入数据行数
-	WriteRows *int32 `json:"write_rows,omitempty" xml:"write_rows"`
+	WriteRows *int32 `json:"write_rows,omitempty"`
 
 	// 写入行数
-	RowsWritten *int32 `json:"rows_written,omitempty" xml:"rows_written"`
+	RowsWritten *int32 `json:"rows_written,omitempty"`
 
 	// 读取的行数
-	RowsRead *int64 `json:"rows_read,omitempty" xml:"rows_read"`
+	RowsRead *int64 `json:"rows_read,omitempty"`
 
 	// 写入文件数
-	FilesWritten *int32 `json:"files_written,omitempty" xml:"files_written"`
+	FilesWritten *int32 `json:"files_written,omitempty"`
 
 	// 是否增量
-	IsIncrementing *bool `json:"is_incrementing,omitempty" xml:"is_incrementing"`
+	IsIncrementing *bool `json:"is_incrementing,omitempty"`
 
 	// 执行_创建_日期
-	ExecuteCreateDate *int64 `json:"execute_create_date,omitempty" xml:"execute_create_date"`
+	ExecuteCreateDate *int64 `json:"execute_create_date,omitempty"`
 
 	// 作业最后的执行状态： - BOOTING：启动中。 - RUNNING：运行中。 - SUCCEEDED：成功。 - FAILED：失败。 - NEW：未被执行。
-	Status *string `json:"status,omitempty" xml:"status"`
+	Status *string `json:"status,omitempty"`
 }
 
 func (o Job) String() string {

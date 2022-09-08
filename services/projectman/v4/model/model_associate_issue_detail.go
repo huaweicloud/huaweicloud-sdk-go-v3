@@ -10,16 +10,16 @@ import (
 type AssociateIssueDetail struct {
 
 	// 工作项标题
-	Subject *string `json:"subject,omitempty" xml:"subject"`
+	Subject *string `json:"subject,omitempty"`
 
 	// 工作项ID
-	IssueId *int32 `json:"issue_id,omitempty" xml:"issue_id"`
+	IssueId *int32 `json:"issue_id,omitempty"`
 
-	Project *SimpleProject `json:"project,omitempty" xml:"project"`
+	Project *SimpleProject `json:"project,omitempty"`
 
-	User *SimpleUser `json:"user,omitempty" xml:"user"`
+	User *SimpleUser `json:"user,omitempty"`
 
-	Status *StatusVo `json:"status,omitempty" xml:"status"`
+	Status *StatusVo `json:"status,omitempty"`
 }
 
 func (o AssociateIssueDetail) String() string {

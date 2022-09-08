@@ -10,9 +10,9 @@ import (
 type UpdateDefectStatusRequest struct {
 
 	// 任务id
-	TaskId string `json:"task_id" xml:"task_id"`
+	TaskId string `json:"task_id"`
 
-	Body *UpdateDefectRequestBody `json:"body,omitempty" xml:"body"`
+	Body *UpdateDefectRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateDefectStatusRequest) String() string {

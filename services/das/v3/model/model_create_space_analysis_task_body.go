@@ -12,10 +12,10 @@ import (
 type CreateSpaceAnalysisTaskBody struct {
 
 	// 操作类型
-	Operate CreateSpaceAnalysisTaskBodyOperate `json:"operate" xml:"operate"`
+	Operate CreateSpaceAnalysisTaskBodyOperate `json:"operate"`
 
 	// 引擎类型
-	DatastoreType CreateSpaceAnalysisTaskBodyDatastoreType `json:"datastore_type" xml:"datastore_type"`
+	DatastoreType CreateSpaceAnalysisTaskBodyDatastoreType `json:"datastore_type"`
 }
 
 func (o CreateSpaceAnalysisTaskBody) String() string {

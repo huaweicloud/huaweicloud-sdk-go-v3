@@ -10,9 +10,9 @@ import (
 type CreateListenerResponse struct {
 
 	// 请求ID。  注：自动生成 。
-	RequestId *string `json:"request_id,omitempty" xml:"request_id"`
+	RequestId *string `json:"request_id,omitempty"`
 
-	Listener       *Listener `json:"listener,omitempty" xml:"listener"`
+	Listener       *Listener `json:"listener,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }
 

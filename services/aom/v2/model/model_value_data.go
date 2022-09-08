@@ -13,16 +13,16 @@ import (
 type ValueData struct {
 
 	// 指标名称。长度1~255。
-	MetricName string `json:"metric_name" xml:"metric_name"`
+	MetricName string `json:"metric_name"`
 
 	// 数据的类型。 取值范围 只能是\"int\"或\"float\"。
-	Type *ValueDataType `json:"type,omitempty" xml:"type"`
+	Type *ValueDataType `json:"type,omitempty"`
 
 	// 数据的单位。长度不超过32个字符。
-	Unit *string `json:"unit,omitempty" xml:"unit"`
+	Unit *string `json:"unit,omitempty"`
 
 	// 指标数据的值。 取值范围 有效的数值类型。
-	Value float64 `json:"value" xml:"value"`
+	Value float64 `json:"value"`
 }
 
 func (o ValueData) String() string {

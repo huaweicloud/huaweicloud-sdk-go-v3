@@ -10,7 +10,7 @@ import (
 type SendMessagesResponse struct {
 
 	// 消息列表。
-	Messages       *[]SendMessagesRespMessages `json:"messages,omitempty" xml:"messages"`
+	Messages       *[]SendMessagesRespMessages `json:"messages,omitempty"`
 	HttpStatusCode int                         `json:"-"`
 }
 

@@ -7,7 +7,7 @@ import (
 )
 
 type PolicyCreateReq struct {
-	Policy *PolicyCreate `json:"policy" xml:"policy"`
+	Policy *PolicyCreate `json:"policy"`
 }
 
 func (o PolicyCreateReq) String() string {

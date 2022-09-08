@@ -10,9 +10,9 @@ import (
 type UpdateChannelRequest struct {
 
 	// 指定查询的事件通道ID
-	ChannelId string `json:"channel_id" xml:"channel_id"`
+	ChannelId string `json:"channel_id"`
 
-	Body *ChannelUpdateReq `json:"body,omitempty" xml:"body"`
+	Body *ChannelUpdateReq `json:"body,omitempty"`
 }
 
 func (o UpdateChannelRequest) String() string {

@@ -13,16 +13,16 @@ import (
 type QueryJobStatusResp struct {
 
 	// 任务ID
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 任务状态
-	Status *QueryJobStatusRespStatus `json:"status,omitempty" xml:"status"`
+	Status *QueryJobStatusRespStatus `json:"status,omitempty"`
 
 	// 错误码
-	ErrorCode *string `json:"error_code,omitempty" xml:"error_code"`
+	ErrorCode *string `json:"error_code,omitempty"`
 
 	// 错误信息
-	ErrorMessage *string `json:"error_message,omitempty" xml:"error_message"`
+	ErrorMessage *string `json:"error_message,omitempty"`
 }
 
 func (o QueryJobStatusResp) String() string {

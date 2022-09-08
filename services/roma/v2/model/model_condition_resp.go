@@ -12,28 +12,28 @@ import (
 type ConditionResp struct {
 
 	// 关联的请求参数对象名称。策略类型为param时必选
-	ReqParamName *string `json:"req_param_name,omitempty" xml:"req_param_name"`
+	ReqParamName *string `json:"req_param_name,omitempty"`
 
 	// 系统参数名称。策略类型为system时必选。支持以下系统参数 - req_path：请求路径。如 /a/b - req_method：请求方法。如 GET
-	SysParamName *ConditionRespSysParamName `json:"sys_param_name,omitempty" xml:"sys_param_name"`
+	SysParamName *ConditionRespSysParamName `json:"sys_param_name,omitempty"`
 
 	// 策略条件 - exact：绝对匹配 - enum：枚举 - pattern：正则  策略类型为param时必选
-	ConditionType *ConditionRespConditionType `json:"condition_type,omitempty" xml:"condition_type"`
+	ConditionType *ConditionRespConditionType `json:"condition_type,omitempty"`
 
 	// 策略类型 - param：参数 - source：源IP - system：系统参数
-	ConditionOrigin ConditionRespConditionOrigin `json:"condition_origin" xml:"condition_origin"`
+	ConditionOrigin ConditionRespConditionOrigin `json:"condition_origin"`
 
 	// 策略值
-	ConditionValue string `json:"condition_value" xml:"condition_value"`
+	ConditionValue string `json:"condition_value"`
 
 	// 编号
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 关联的请求参数对象编号
-	ReqParamId *string `json:"req_param_id,omitempty" xml:"req_param_id"`
+	ReqParamId *string `json:"req_param_id,omitempty"`
 
 	// 关联的请求参数对象位置
-	ReqParamLocation *string `json:"req_param_location,omitempty" xml:"req_param_location"`
+	ReqParamLocation *string `json:"req_param_location,omitempty"`
 }
 
 func (o ConditionResp) String() string {

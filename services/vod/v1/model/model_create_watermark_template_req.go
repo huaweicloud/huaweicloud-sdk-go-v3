@@ -12,40 +12,40 @@ import (
 type CreateWatermarkTemplateReq struct {
 
 	// 水印模板名称。
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 水印类型，当前只支持Image（图片水印）。
-	WatermarkType *CreateWatermarkTemplateReqWatermarkType `json:"watermark_type,omitempty" xml:"watermark_type"`
+	WatermarkType *CreateWatermarkTemplateReqWatermarkType `json:"watermark_type,omitempty"`
 
 	// type设置为Image时有效。  目前包括： - Original：只做简单缩放，不做其他处理 - Transparent：图片底色透明 - Grayed：彩色图片变灰
-	ImageProcess *CreateWatermarkTemplateReqImageProcess `json:"image_process,omitempty" xml:"image_process"`
+	ImageProcess *CreateWatermarkTemplateReqImageProcess `json:"image_process,omitempty"`
 
 	// 水印图片相对输出视频的水平偏移量，默认值是0。
-	Dx *string `json:"dx,omitempty" xml:"dx"`
+	Dx *string `json:"dx,omitempty"`
 
 	// 水印图片相对输出视频的垂直偏移量，默认值是0。
-	Dy *string `json:"dy,omitempty" xml:"dy"`
+	Dy *string `json:"dy,omitempty"`
 
 	// 水印的位置。
-	Position *CreateWatermarkTemplateReqPosition `json:"position,omitempty" xml:"position"`
+	Position *CreateWatermarkTemplateReqPosition `json:"position,omitempty"`
 
 	// 水印图片宽。
-	Width *string `json:"width,omitempty" xml:"width"`
+	Width *string `json:"width,omitempty"`
 
 	// 水印图片高。
-	Height *string `json:"height,omitempty" xml:"height"`
+	Height *string `json:"height,omitempty"`
 
 	// 水印开始时间，与\"timeline_duration\"配合使用。 取值范围:[0, END)。\"END\"表示视频结束时间。 单位:秒。
-	TimelineStart *string `json:"timeline_start,omitempty" xml:"timeline_start"`
+	TimelineStart *string `json:"timeline_start,omitempty"`
 
 	// 水印持续时间，与\"timeline_start\"配合使用。 取值范围:(0,END-开始时间]。\"END\"表示视频结束时间。 单位:秒。 默认:END。
-	TimelineDuration *string `json:"timeline_duration,omitempty" xml:"timeline_duration"`
+	TimelineDuration *string `json:"timeline_duration,omitempty"`
 
 	// 水印图片格式类型。
-	Type string `json:"type" xml:"type"`
+	Type string `json:"type"`
 
 	// 水印图片MD5值。
-	Md5 *string `json:"md5,omitempty" xml:"md5"`
+	Md5 *string `json:"md5,omitempty"`
 }
 
 func (o CreateWatermarkTemplateReq) String() string {

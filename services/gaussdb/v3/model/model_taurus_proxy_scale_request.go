@@ -10,7 +10,7 @@ import (
 type TaurusProxyScaleRequest struct {
 
 	// 需要变更的新规格ID。
-	FlavorRef string `json:"flavor_ref" xml:"flavor_ref"`
+	FlavorRef string `json:"flavor_ref"`
 }
 
 func (o TaurusProxyScaleRequest) String() string {

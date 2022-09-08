@@ -10,16 +10,16 @@ import (
 type TaskStatisticDetails struct {
 
 	// 运行任务数量
-	RunningTasksCount *int32 `json:"running_tasks_count,omitempty" xml:"running_tasks_count"`
+	RunningTasksCount *int32 `json:"running_tasks_count,omitempty"`
 
 	// 异常任务数量
-	AbnormalTasksCount *int32 `json:"abnormal_tasks_count,omitempty" xml:"abnormal_tasks_count"`
+	AbnormalTasksCount *int32 `json:"abnormal_tasks_count,omitempty"`
 
 	// 终止任务数量
-	TerminatedTasksCount *int32 `json:"terminated_tasks_count,omitempty" xml:"terminated_tasks_count"`
+	TerminatedTasksCount *int32 `json:"terminated_tasks_count,omitempty"`
 
 	// 成功任务数量
-	CompletedTasksCount *int32 `json:"completed_tasks_count,omitempty" xml:"completed_tasks_count"`
+	CompletedTasksCount *int32 `json:"completed_tasks_count,omitempty"`
 }
 
 func (o TaskStatisticDetails) String() string {

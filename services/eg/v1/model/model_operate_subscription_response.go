@@ -10,10 +10,10 @@ import (
 type OperateSubscriptionResponse struct {
 
 	// 操作失败的订阅个数
-	FailedCount *int32 `json:"failed_count,omitempty" xml:"failed_count"`
+	FailedCount *int32 `json:"failed_count,omitempty"`
 
 	// 失败信息
-	Events         *[]SubscriptionOperateRespEvents `json:"events,omitempty" xml:"events"`
+	Events         *[]SubscriptionOperateRespEvents `json:"events,omitempty"`
 	HttpStatusCode int                              `json:"-"`
 }
 

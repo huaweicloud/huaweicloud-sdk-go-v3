@@ -10,9 +10,9 @@ import (
 type ListAreaDetailResponse struct {
 
 	// 时间戳及相应时间的指标数值
-	DataList *[]AreaDetail `json:"data_list,omitempty" xml:"data_list"`
+	DataList *[]AreaDetail `json:"data_list,omitempty"`
 
-	XRequestId     *string `json:"X-Request-Id,omitempty" xml:"X-Request-Id"`
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

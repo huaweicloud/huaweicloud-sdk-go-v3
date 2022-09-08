@@ -10,9 +10,9 @@ import (
 type UpdateInstanceV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
-	Body *InstanceModReq `json:"body,omitempty" xml:"body"`
+	Body *InstanceModReq `json:"body,omitempty"`
 }
 
 func (o UpdateInstanceV2Request) String() string {

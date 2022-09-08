@@ -10,10 +10,10 @@ import (
 type ServerInfo struct {
 
 	// 指定的生产站点云服务器ID。
-	ServerId string `json:"server_id" xml:"server_id"`
+	ServerId string `json:"server_id"`
 
 	// 指定的容灾站点云服务器的flavor ID。
-	FlavorRef *string `json:"flavorRef,omitempty" xml:"flavorRef"`
+	FlavorRef *string `json:"flavorRef,omitempty"`
 }
 
 func (o ServerInfo) String() string {

@@ -10,7 +10,7 @@ import (
 type DeleteInstanceResponse struct {
 
 	// Job ID。
-	JobId          *string `json:"job_id,omitempty" xml:"job_id"`
+	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

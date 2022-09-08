@@ -10,7 +10,7 @@ import (
 type ShowFunctionAsyncInvokeConfigRequest struct {
 
 	// 函数的URN（Uniform Resource Name），唯一标识函数。
-	FunctionUrn string `json:"function_urn" xml:"function_urn"`
+	FunctionUrn string `json:"function_urn"`
 }
 
 func (o ShowFunctionAsyncInvokeConfigRequest) String() string {

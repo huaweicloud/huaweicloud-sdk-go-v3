@@ -10,7 +10,7 @@ import (
 type ShowLastPropertyValueResponse struct {
 
 	// 查询到的资产属性列表
-	Properties     *[]AssetPropertyLastValue `json:"properties,omitempty" xml:"properties"`
+	Properties     *[]AssetPropertyLastValue `json:"properties,omitempty"`
 	HttpStatusCode int                       `json:"-"`
 }
 

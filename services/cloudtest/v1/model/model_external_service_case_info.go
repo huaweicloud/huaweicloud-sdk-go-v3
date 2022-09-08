@@ -10,31 +10,31 @@ import (
 type ExternalServiceCaseInfo struct {
 
 	// 测试用例描述信息，长度为[0-500]位字符
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 执行该测试用例时需要满足的前置条件，长度为[0-500]位字符
-	Preparation *string `json:"preparation,omitempty" xml:"preparation"`
+	Preparation *string `json:"preparation,omitempty"`
 
 	// 测试步骤，数组长度小于10
-	Steps *[]ExternalServiceCaseStep `json:"steps,omitempty" xml:"steps"`
+	Steps *[]ExternalServiceCaseStep `json:"steps,omitempty"`
 
 	// 标签名称列表，数组长度小于25
-	LabelList *[]string `json:"label_list,omitempty" xml:"label_list"`
+	LabelList *[]string `json:"label_list,omitempty"`
 
 	// 模块号，长度为[0-32]位字符
-	ModuleId *string `json:"module_id,omitempty" xml:"module_id"`
+	ModuleId *string `json:"module_id,omitempty"`
 
 	// 测试版本号，长度为[0-10]位字符
-	TestVersionId *string `json:"test_version_id,omitempty" xml:"test_version_id"`
+	TestVersionId *string `json:"test_version_id,omitempty"`
 
 	// 迭代号，长度为[0-32]位字符
-	FixVersionId *string `json:"fix_version_id,omitempty" xml:"fix_version_id"`
+	FixVersionId *string `json:"fix_version_id,omitempty"`
 
 	// 处理者id信息，固定长度32位字符
-	AssignedId *string `json:"assigned_id,omitempty" xml:"assigned_id"`
+	AssignedId *string `json:"assigned_id,omitempty"`
 
 	// 用例关联的需求id信息，长度为[0-32]位字符
-	IssueId *string `json:"issue_id,omitempty" xml:"issue_id"`
+	IssueId *string `json:"issue_id,omitempty"`
 }
 
 func (o ExternalServiceCaseInfo) String() string {

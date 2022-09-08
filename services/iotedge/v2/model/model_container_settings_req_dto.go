@@ -7,7 +7,7 @@ import (
 )
 
 type ContainerSettingsReqDto struct {
-	Configs *ContainerConfigsReqDto `json:"configs,omitempty" xml:"configs"`
+	Configs *ContainerConfigsReqDto `json:"configs,omitempty"`
 }
 
 func (o ContainerSettingsReqDto) String() string {

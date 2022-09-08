@@ -8,7 +8,7 @@ import (
 
 // This is a auto create Body Object
 type CreateLoadBalancerRequestBody struct {
-	Loadbalancer *CreateLoadBalancerOption `json:"loadbalancer" xml:"loadbalancer"`
+	Loadbalancer *CreateLoadBalancerOption `json:"loadbalancer"`
 }
 
 func (o CreateLoadBalancerRequestBody) String() string {

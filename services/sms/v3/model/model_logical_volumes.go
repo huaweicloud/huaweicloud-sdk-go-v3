@@ -10,31 +10,31 @@ import (
 type LogicalVolumes struct {
 
 	// 块数量
-	BlockCount *int32 `json:"block_count,omitempty" xml:"block_count"`
+	BlockCount *int32 `json:"block_count,omitempty"`
 
 	// 块大小
-	BlockSize *int64 `json:"block_size,omitempty" xml:"block_size"`
+	BlockSize *int64 `json:"block_size,omitempty"`
 
 	// 文件系统
-	FileSystem string `json:"file_system" xml:"file_system"`
+	FileSystem string `json:"file_system"`
 
 	// inode数量
-	InodeSize int32 `json:"inode_size" xml:"inode_size"`
+	InodeSize int32 `json:"inode_size"`
 
 	// 挂载点
-	MountPoint string `json:"mount_point" xml:"mount_point"`
+	MountPoint string `json:"mount_point"`
 
 	// 名称
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 大小
-	Size int64 `json:"size" xml:"size"`
+	Size int64 `json:"size"`
 
 	// 使用大小
-	UsedSize int64 `json:"used_size" xml:"used_size"`
+	UsedSize int64 `json:"used_size"`
 
 	// 剩余空间
-	FreeSize int64 `json:"free_size" xml:"free_size"`
+	FreeSize int64 `json:"free_size"`
 }
 
 func (o LogicalVolumes) String() string {

@@ -10,19 +10,19 @@ import (
 type ReplicationRecordsExtraInfo struct {
 
 	// 复制进度
-	Progress *int32 `json:"progress,omitempty" xml:"progress"`
+	Progress *int32 `json:"progress,omitempty"`
 
 	// 失败错误码，成功时为空
-	FailCode *string `json:"fail_code,omitempty" xml:"fail_code"`
+	FailCode *string `json:"fail_code,omitempty"`
 
 	// 错误原因
-	FailReason *string `json:"fail_reason,omitempty" xml:"fail_reason"`
+	FailReason *string `json:"fail_reason,omitempty"`
 
 	// 是否为自动调度复制
-	AutoTrigger *bool `json:"auto_trigger,omitempty" xml:"auto_trigger"`
+	AutoTrigger *bool `json:"auto_trigger,omitempty"`
 
 	// 目标端的存储库id
-	DestinatioVaultId *string `json:"destinatio_vault_id,omitempty" xml:"destinatio_vault_id"`
+	DestinatioVaultId *string `json:"destinatio_vault_id,omitempty"`
 }
 
 func (o ReplicationRecordsExtraInfo) String() string {

@@ -7,7 +7,7 @@ import (
 )
 
 type ConfigMaps struct {
-	Configmap *ConfigMap `json:"configmap" xml:"configmap"`
+	Configmap *ConfigMap `json:"configmap"`
 }
 
 func (o ConfigMaps) String() string {

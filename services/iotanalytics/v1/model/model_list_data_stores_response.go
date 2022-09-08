@@ -10,10 +10,10 @@ import (
 type ListDataStoresResponse struct {
 
 	// 数据结构列表
-	DataStores *[]GetDataStore `json:"data_stores,omitempty" xml:"data_stores"`
+	DataStores *[]GetDataStore `json:"data_stores,omitempty"`
 
 	// 返回的 data-store 数量
-	Count          *int32 `json:"count,omitempty" xml:"count"`
+	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

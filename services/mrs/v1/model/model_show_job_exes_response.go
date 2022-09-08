@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowJobExesResponse struct {
-	JobExecution   *JobExeResult `json:"job_execution,omitempty" xml:"job_execution"`
+	JobExecution   *JobExeResult `json:"job_execution,omitempty"`
 	HttpStatusCode int           `json:"-"`
 }
 

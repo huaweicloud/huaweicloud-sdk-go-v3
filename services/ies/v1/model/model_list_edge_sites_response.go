@@ -10,9 +10,9 @@ import (
 type ListEdgeSitesResponse struct {
 
 	// 边缘小站列表。
-	EdgeSites *[]EdgeSiteDetail `json:"edge_sites,omitempty" xml:"edge_sites"`
+	EdgeSites *[]EdgeSiteDetail `json:"edge_sites,omitempty"`
 
-	PageInfo       *PageInfo `json:"page_info,omitempty" xml:"page_info"`
+	PageInfo       *PageInfo `json:"page_info,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }
 

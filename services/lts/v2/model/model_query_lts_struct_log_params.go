@@ -10,16 +10,16 @@ import (
 type QueryLtsStructLogParams struct {
 
 	// 搜索起始时间（UTC时间，毫秒级）。
-	StartTime string `json:"start_time" xml:"start_time"`
+	StartTime string `json:"start_time"`
 
 	// 搜索结束时间（UTC时间，毫秒级）。
-	EndTime string `json:"end_time" xml:"end_time"`
+	EndTime string `json:"end_time"`
 
 	// 支持SQL语句搜索， 目前支持\"GROUP BY\", \"LIKE\"和\"WHERE\"。
-	SqlExpression *string `json:"sql_expression,omitempty" xml:"sql_expression"`
+	SqlExpression *string `json:"sql_expression,omitempty"`
 
 	// 返回内容中是否包含原始日志， 默认为false。
-	OriginalContent *bool `json:"original_content,omitempty" xml:"original_content"`
+	OriginalContent *bool `json:"original_content,omitempty"`
 }
 
 func (o QueryLtsStructLogParams) String() string {

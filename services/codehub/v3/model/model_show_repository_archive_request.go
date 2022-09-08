@@ -10,13 +10,13 @@ import (
 type ShowRepositoryArchiveRequest struct {
 
 	// 仓库的uuid
-	RepositoryUuid string `json:"repository_uuid" xml:"repository_uuid"`
+	RepositoryUuid string `json:"repository_uuid"`
 
 	// 分支名称
-	Sha string `json:"sha" xml:"sha"`
+	Sha string `json:"sha"`
 
 	// 下载的压缩包格式
-	Format string `json:"format" xml:"format"`
+	Format string `json:"format"`
 }
 
 func (o ShowRepositoryArchiveRequest) String() string {

@@ -10,9 +10,9 @@ import (
 type CreateAppRequest struct {
 
 	// 铂金版实例ID，专业版实例为空值
-	IefInstanceId *string `json:"ief-instance-id,omitempty" xml:"ief-instance-id"`
+	IefInstanceId *string `json:"ief-instance-id,omitempty"`
 
-	Body *App `json:"body,omitempty" xml:"body"`
+	Body *App `json:"body,omitempty"`
 }
 
 func (o CreateAppRequest) String() string {

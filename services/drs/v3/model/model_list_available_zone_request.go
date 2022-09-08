@@ -13,9 +13,9 @@ import (
 type ListAvailableZoneRequest struct {
 
 	// 请求语言类型
-	XLanguage *ListAvailableZoneRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *ListAvailableZoneRequestXLanguage `json:"X-Language,omitempty"`
 
-	Body *QueryAvailableNodeTypeReq `json:"body,omitempty" xml:"body"`
+	Body *QueryAvailableNodeTypeReq `json:"body,omitempty"`
 }
 
 func (o ListAvailableZoneRequest) String() string {

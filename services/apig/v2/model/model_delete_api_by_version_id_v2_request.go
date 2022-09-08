@@ -10,10 +10,10 @@ import (
 type DeleteApiByVersionIdV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// API版本的编号
-	VersionId string `json:"version_id" xml:"version_id"`
+	VersionId string `json:"version_id"`
 }
 
 func (o DeleteApiByVersionIdV2Request) String() string {

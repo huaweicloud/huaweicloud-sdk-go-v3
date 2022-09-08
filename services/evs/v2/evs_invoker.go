@@ -29,6 +29,42 @@ func (i *BatchDeleteVolumeTagsInvoker) Invoke() (*model.BatchDeleteVolumeTagsRes
 	}
 }
 
+type CinderAcceptVolumeTransferInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CinderAcceptVolumeTransferInvoker) Invoke() (*model.CinderAcceptVolumeTransferResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CinderAcceptVolumeTransferResponse), nil
+	}
+}
+
+type CinderCreateVolumeTransferInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CinderCreateVolumeTransferInvoker) Invoke() (*model.CinderCreateVolumeTransferResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CinderCreateVolumeTransferResponse), nil
+	}
+}
+
+type CinderDeleteVolumeTransferInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CinderDeleteVolumeTransferInvoker) Invoke() (*model.CinderDeleteVolumeTransferResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CinderDeleteVolumeTransferResponse), nil
+	}
+}
+
 type CinderListAvailabilityZonesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -53,6 +89,18 @@ func (i *CinderListQuotasInvoker) Invoke() (*model.CinderListQuotasResponse, err
 	}
 }
 
+type CinderListVolumeTransfersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CinderListVolumeTransfersInvoker) Invoke() (*model.CinderListVolumeTransfersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CinderListVolumeTransfersResponse), nil
+	}
+}
+
 type CinderListVolumeTypesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -62,6 +110,18 @@ func (i *CinderListVolumeTypesInvoker) Invoke() (*model.CinderListVolumeTypesRes
 		return nil, err
 	} else {
 		return result.(*model.CinderListVolumeTypesResponse), nil
+	}
+}
+
+type CinderShowVolumeTransferInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CinderShowVolumeTransferInvoker) Invoke() (*model.CinderShowVolumeTransferResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CinderShowVolumeTransferResponse), nil
 	}
 }
 
@@ -254,5 +314,29 @@ func (i *UpdateVolumeInvoker) Invoke() (*model.UpdateVolumeResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.UpdateVolumeResponse), nil
+	}
+}
+
+type ListVersionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListVersionsInvoker) Invoke() (*model.ListVersionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListVersionsResponse), nil
+	}
+}
+
+type ShowVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowVersionInvoker) Invoke() (*model.ShowVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowVersionResponse), nil
 	}
 }

@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowBandwidthResponse struct {
-	Bandwidth      *Bandwidth `json:"bandwidth,omitempty" xml:"bandwidth"`
+	Bandwidth      *Bandwidth `json:"bandwidth,omitempty"`
 	HttpStatusCode int        `json:"-"`
 }
 

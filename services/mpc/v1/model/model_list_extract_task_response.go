@@ -10,10 +10,10 @@ import (
 type ListExtractTaskResponse struct {
 
 	// 任务总数
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 
 	// 任务列表
-	Tasks          *[]ExtractTask `json:"tasks,omitempty" xml:"tasks"`
+	Tasks          *[]ExtractTask `json:"tasks,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }
 

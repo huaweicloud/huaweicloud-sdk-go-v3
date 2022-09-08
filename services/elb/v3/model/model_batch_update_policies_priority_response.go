@@ -10,7 +10,7 @@ import (
 type BatchUpdatePoliciesPriorityResponse struct {
 
 	// 请求ID。
-	RequestId      *string `json:"request_id,omitempty" xml:"request_id"`
+	RequestId      *string `json:"request_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

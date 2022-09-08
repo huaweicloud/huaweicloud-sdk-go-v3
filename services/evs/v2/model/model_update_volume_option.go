@@ -10,10 +10,10 @@ import (
 type UpdateVolumeOption struct {
 
 	// 新的云硬盘的描述，name和description不能同时为null。最大支持255个字节。
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 新的云硬盘的名字，name和description不能同时为null。最大支持255个字节。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 }
 
 func (o UpdateVolumeOption) String() string {

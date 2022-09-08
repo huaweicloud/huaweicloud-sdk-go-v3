@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type UpdateAlertConfigRequest struct {
-	Body *UpdateAlertConfigRequestBody `json:"body,omitempty" xml:"body"`
+	Body *UpdateAlertConfigRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateAlertConfigRequest) String() string {

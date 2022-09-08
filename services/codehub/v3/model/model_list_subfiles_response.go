@@ -8,13 +8,13 @@ import (
 
 // Response Object
 type ListSubfilesResponse struct {
+	Error *Error `json:"error,omitempty"`
 
-	// 文件日志树
-	Trees *[]LogsTree `json:"trees,omitempty" xml:"trees"`
+	Result *LogsTreeList `json:"result,omitempty"`
 
-	// 记录总数
-	Total          *int32 `json:"total,omitempty" xml:"total"`
-	HttpStatusCode int    `json:"-"`
+	// 响应状态
+	Status         *string `json:"status,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ListSubfilesResponse) String() string {

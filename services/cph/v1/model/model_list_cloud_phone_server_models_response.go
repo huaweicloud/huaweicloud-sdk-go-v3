@@ -10,10 +10,10 @@ import (
 type ListCloudPhoneServerModelsResponse struct {
 
 	// 请求的唯一标识ID
-	RequestId string `json:"request_id" xml:"request_id"`
+	RequestId string `json:"request_id"`
 
 	// 云手机服务器的规格信息
-	ServerModels   []interface{} `json:"server_models" xml:"server_models"`
+	ServerModels   []interface{} `json:"server_models"`
 	HttpStatusCode int           `json:"-"`
 }
 

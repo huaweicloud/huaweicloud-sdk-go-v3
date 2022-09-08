@@ -10,7 +10,7 @@ import (
 type UpdateInstanceTopicReq struct {
 
 	// 修改的topic列表。
-	Topics *[]UpdateInstanceTopicReqTopics `json:"topics,omitempty" xml:"topics"`
+	Topics *[]UpdateInstanceTopicReqTopics `json:"topics,omitempty"`
 }
 
 func (o UpdateInstanceTopicReq) String() string {

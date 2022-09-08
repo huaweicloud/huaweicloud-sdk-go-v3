@@ -10,13 +10,13 @@ import (
 type Rule struct {
 
 	// 候选集表名。
-	TableName string `json:"table_name" xml:"table_name"`
+	TableName string `json:"table_name"`
 
 	// 规则占比。
-	RuleRatio int32 `json:"rule_ratio" xml:"rule_ratio"`
+	RuleRatio int32 `json:"rule_ratio"`
 
 	// 优先级。
-	Priority int32 `json:"priority" xml:"priority"`
+	Priority int32 `json:"priority"`
 }
 
 func (o Rule) String() string {

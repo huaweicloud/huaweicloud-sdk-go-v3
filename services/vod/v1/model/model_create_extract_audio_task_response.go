@@ -10,10 +10,10 @@ import (
 type CreateExtractAudioTaskResponse struct {
 
 	// 视频源媒资ID。
-	AssetId *string `json:"asset_id,omitempty" xml:"asset_id"`
+	AssetId *string `json:"asset_id,omitempty"`
 
 	// 提取的音频媒资ID。
-	AudioAssetId   *string `json:"audio_asset_id,omitempty" xml:"audio_asset_id"`
+	AudioAssetId   *string `json:"audio_asset_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

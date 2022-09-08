@@ -10,22 +10,22 @@ import (
 type UserRoleVo struct {
 
 	// 角色
-	Role string `json:"role" xml:"role"`
+	Role string `json:"role"`
 
 	// 说明
-	Comment *string `json:"comment,omitempty" xml:"comment"`
+	Comment *string `json:"comment,omitempty"`
 
 	// 是否支持迁移。
-	IsTransfer bool `json:"is_transfer" xml:"is_transfer"`
+	IsTransfer bool `json:"is_transfer"`
 
 	// 权限
-	Privileges string `json:"privileges" xml:"privileges"`
+	Privileges string `json:"privileges"`
 
 	// 继承角色列表
-	InheritsRoles *[]string `json:"inherits_roles,omitempty" xml:"inherits_roles"`
+	InheritsRoles *[]string `json:"inherits_roles,omitempty"`
 
 	// 是否选择。
-	Selected *bool `json:"selected,omitempty" xml:"selected"`
+	Selected *bool `json:"selected,omitempty"`
 }
 
 func (o UserRoleVo) String() string {

@@ -13,16 +13,16 @@ import (
 type DeleteGatewayResponseTypeV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 分组的编号
-	GroupId string `json:"group_id" xml:"group_id"`
+	GroupId string `json:"group_id"`
 
 	// 响应编号
-	ResponseId string `json:"response_id" xml:"response_id"`
+	ResponseId string `json:"response_id"`
 
 	// 错误类型
-	ResponseType DeleteGatewayResponseTypeV2RequestResponseType `json:"response_type" xml:"response_type"`
+	ResponseType DeleteGatewayResponseTypeV2RequestResponseType `json:"response_type"`
 }
 
 func (o DeleteGatewayResponseTypeV2Request) String() string {

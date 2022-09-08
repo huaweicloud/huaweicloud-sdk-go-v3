@@ -13,10 +13,10 @@ import (
 type BatchDeleteListenerTagsRequestBody struct {
 
 	// 操作类型。 取值范围：delete- 删除标签。
-	Action BatchDeleteListenerTagsRequestBodyAction `json:"action" xml:"action"`
+	Action BatchDeleteListenerTagsRequestBodyAction `json:"action"`
 
 	// 标签对象列表。
-	Tags *[]ResourceTag `json:"tags,omitempty" xml:"tags"`
+	Tags *[]ResourceTag `json:"tags,omitempty"`
 }
 
 func (o BatchDeleteListenerTagsRequestBody) String() string {

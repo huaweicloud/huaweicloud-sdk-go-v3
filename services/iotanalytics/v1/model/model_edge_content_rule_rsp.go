@@ -10,13 +10,13 @@ import (
 type EdgeContentRuleRsp struct {
 
 	// Edge中的资源空间Id
-	AppId string `json:"app_id" xml:"app_id"`
+	AppId string `json:"app_id"`
 
 	// Edge中某资源空间Id下的产品列表
-	Products []string `json:"products" xml:"products"`
+	Products []string `json:"products"`
 
 	// Edge中rule_id和action_id列表
-	RuleActions []IotdaRuleAction `json:"rule_actions" xml:"rule_actions"`
+	RuleActions []IotdaRuleAction `json:"rule_actions"`
 }
 
 func (o EdgeContentRuleRsp) String() string {

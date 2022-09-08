@@ -10,7 +10,7 @@ import (
 type ListSecurityGroupsResponse struct {
 
 	// 安全组列表对象
-	SecurityGroups *[]SecurityGroup `json:"security_groups,omitempty" xml:"security_groups"`
+	SecurityGroups *[]SecurityGroup `json:"security_groups,omitempty"`
 	HttpStatusCode int              `json:"-"`
 }
 

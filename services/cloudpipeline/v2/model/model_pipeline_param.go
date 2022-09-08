@@ -10,22 +10,22 @@ import (
 type PipelineParam struct {
 
 	// 流水线参数名字
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 流水线参数值
-	Value string `json:"value" xml:"value"`
+	Value string `json:"value"`
 
 	// 流水线参数描述
-	Description string `json:"description" xml:"description"`
+	Description string `json:"description"`
 
 	// 流水线参数类型
-	ParamType string `json:"param_type" xml:"param_type"`
+	ParamType string `json:"param_type"`
 
 	// 是否静态参数
-	IsStatic bool `json:"is_static" xml:"is_static"`
+	IsStatic bool `json:"is_static"`
 
 	// 是否默认参数
-	IsDefault bool `json:"is_default" xml:"is_default"`
+	IsDefault bool `json:"is_default"`
 }
 
 func (o PipelineParam) String() string {

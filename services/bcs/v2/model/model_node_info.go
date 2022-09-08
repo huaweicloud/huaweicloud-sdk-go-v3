@@ -10,10 +10,10 @@ import (
 type NodeInfo struct {
 
 	// 节点名
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 节点ID
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 }
 
 func (o NodeInfo) String() string {

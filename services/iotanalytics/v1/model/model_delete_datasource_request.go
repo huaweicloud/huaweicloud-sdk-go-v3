@@ -10,7 +10,7 @@ import (
 type DeleteDatasourceRequest struct {
 
 	// 数据源id
-	DatasourceId string `json:"datasource_id" xml:"datasource_id"`
+	DatasourceId string `json:"datasource_id"`
 }
 
 func (o DeleteDatasourceRequest) String() string {

@@ -10,10 +10,10 @@ import (
 type ListProjectTagsResponse struct {
 
 	// 总记录数。
-	TotalCount *int32 `json:"total_count,omitempty" xml:"total_count"`
+	TotalCount *int32 `json:"total_count,omitempty"`
 
 	// 标签列表。
-	Tags           *[]ProjectTagItem `json:"tags,omitempty" xml:"tags"`
+	Tags           *[]ProjectTagItem `json:"tags,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }
 

@@ -10,9 +10,9 @@ import (
 type HaConfigDto struct {
 
 	// 节点高可用类型双活或者主备
-	HaType *string `json:"ha_type,omitempty" xml:"ha_type"`
+	HaType *string `json:"ha_type,omitempty"`
 
-	ActiveStandbyConfig *ActiveStandbyConfigDto `json:"active_standby_config,omitempty" xml:"active_standby_config"`
+	ActiveStandbyConfig *ActiveStandbyConfigDto `json:"active_standby_config,omitempty"`
 }
 
 func (o HaConfigDto) String() string {

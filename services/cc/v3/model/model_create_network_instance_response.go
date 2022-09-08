@@ -8,10 +8,10 @@ import (
 
 // Response Object
 type CreateNetworkInstanceResponse struct {
-	NetworkInstance *NetworkInstance `json:"network_instance,omitempty" xml:"network_instance"`
+	NetworkInstance *NetworkInstance `json:"network_instance,omitempty"`
 
 	// 请求ID。
-	RequestId      *string `json:"request_id,omitempty" xml:"request_id"`
+	RequestId      *string `json:"request_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

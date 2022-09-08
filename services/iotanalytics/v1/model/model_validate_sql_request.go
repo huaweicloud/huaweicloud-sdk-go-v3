@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ValidateSqlRequest struct {
-	Body *ValidateSqlRequestBody `json:"body,omitempty" xml:"body"`
+	Body *ValidateSqlRequestBody `json:"body,omitempty"`
 }
 
 func (o ValidateSqlRequest) String() string {

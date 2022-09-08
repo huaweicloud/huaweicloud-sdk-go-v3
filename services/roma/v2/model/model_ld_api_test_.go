@@ -9,7 +9,7 @@ import (
 type LdApiTest struct {
 
 	// 后端API请求参数
-	Parameters *[]LdApiParameter `json:"parameters,omitempty" xml:"parameters"`
+	Parameters *[]LdApiParameter `json:"parameters,omitempty"`
 }
 
 func (o LdApiTest) String() string {

@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RecognizePcrTestRecordRequest struct {
-	Body *PcrTestRecordRequestBody `json:"body,omitempty" xml:"body"`
+	Body *PcrTestRecordRequestBody `json:"body,omitempty"`
 }
 
 func (o RecognizePcrTestRecordRequest) String() string {

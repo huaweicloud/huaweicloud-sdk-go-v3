@@ -10,10 +10,10 @@ import (
 type DeleteListenerRequest struct {
 
 	// （不再支持）级联删除负载均衡器
-	Cascade *bool `json:"cascade,omitempty" xml:"cascade"`
+	Cascade *bool `json:"cascade,omitempty"`
 
 	// 监听器id
-	ListenerId string `json:"listener_id" xml:"listener_id"`
+	ListenerId string `json:"listener_id"`
 }
 
 func (o DeleteListenerRequest) String() string {

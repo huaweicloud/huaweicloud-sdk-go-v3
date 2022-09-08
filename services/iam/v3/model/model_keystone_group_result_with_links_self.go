@@ -10,21 +10,21 @@ import (
 type KeystoneGroupResultWithLinksSelf struct {
 
 	// 用户组描述信息。
-	Description string `json:"description" xml:"description"`
+	Description string `json:"description"`
 
 	// 用户组ID。
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
 	// 用户组所属账号ID。
-	DomainId string `json:"domain_id" xml:"domain_id"`
+	DomainId string `json:"domain_id"`
 
 	// 用户组名称。
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
-	Links *LinksSelf `json:"links" xml:"links"`
+	Links *LinksSelf `json:"links"`
 
 	// 用户组创建时间。
-	CreateTime int64 `json:"create_time" xml:"create_time"`
+	CreateTime int64 `json:"create_time"`
 }
 
 func (o KeystoneGroupResultWithLinksSelf) String() string {

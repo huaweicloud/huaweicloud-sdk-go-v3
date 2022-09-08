@@ -10,12 +10,12 @@ import (
 type AddOrUpdateTagsRequestBody struct {
 
 	// 镜像ID。
-	ImageId string `json:"image_id" xml:"image_id"`
+	ImageId string `json:"image_id"`
 
 	// 标签数据。 tag和image_tag只能使用一个。
-	Tag *string `json:"tag,omitempty" xml:"tag"`
+	Tag *string `json:"tag,omitempty"`
 
-	ImageTag *ResourceTag `json:"image_tag,omitempty" xml:"image_tag"`
+	ImageTag *ResourceTag `json:"image_tag,omitempty"`
 }
 
 func (o AddOrUpdateTagsRequestBody) String() string {

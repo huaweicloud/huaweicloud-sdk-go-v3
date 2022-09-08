@@ -10,7 +10,7 @@ import (
 type ListActionsResponse struct {
 
 	// 操作记录列表。
-	Actions        *[]Actions `json:"actions,omitempty" xml:"actions"`
+	Actions        *[]Actions `json:"actions,omitempty"`
 	HttpStatusCode int        `json:"-"`
 }
 

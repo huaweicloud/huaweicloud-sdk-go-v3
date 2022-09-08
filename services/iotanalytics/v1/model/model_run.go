@@ -12,33 +12,33 @@ import (
 type Run struct {
 
 	// 作业运行ID。
-	RunId string `json:"run_id" xml:"run_id"`
+	RunId string `json:"run_id"`
 
 	// 作业ID。
-	JobId *string `json:"job_id,omitempty" xml:"job_id"`
+	JobId *string `json:"job_id,omitempty"`
 
 	// 作业名称。
-	JobName string `json:"job_name" xml:"job_name"`
+	JobName string `json:"job_name"`
 
 	// 作业类型。
-	JobType RunJobType `json:"job_type" xml:"job_type"`
+	JobType RunJobType `json:"job_type"`
 
 	// 作业开始的时间。时间格式为ISO日期时间格式yyyy-MM-dd'T'HH:mm:ss'Z'
-	StartTime string `json:"start_time" xml:"start_time"`
+	StartTime string `json:"start_time"`
 
 	// 作业运行时长，单位毫秒。
-	Duration int64 `json:"duration" xml:"duration"`
+	Duration int64 `json:"duration"`
 
 	// 此作业的当前状态，包含提交（LAUNCHING）、运行中（RUNNING）、完成（FINISHED）、失败（FAILED）、取消（CANCELLED）。
-	Status string `json:"status" xml:"status"`
+	Status string `json:"status"`
 
 	// 是否定时作业。
-	IsScheduleJob *bool `json:"is_schedule_job,omitempty" xml:"is_schedule_job"`
+	IsScheduleJob *bool `json:"is_schedule_job,omitempty"`
 
 	// 计算资源名称。
-	ComputingResourceName *string `json:"computing_resource_name,omitempty" xml:"computing_resource_name"`
+	ComputingResourceName *string `json:"computing_resource_name,omitempty"`
 
-	SqlJob *SqlJobRun `json:"sql_job,omitempty" xml:"sql_job"`
+	SqlJob *SqlJobRun `json:"sql_job,omitempty"`
 }
 
 func (o Run) String() string {

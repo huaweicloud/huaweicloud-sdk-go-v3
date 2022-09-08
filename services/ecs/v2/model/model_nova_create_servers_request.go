@@ -10,9 +10,9 @@ import (
 type NovaCreateServersRequest struct {
 
 	// 微版本头
-	OpenStackAPIVersion *string `json:"OpenStack-API-Version,omitempty" xml:"OpenStack-API-Version"`
+	OpenStackAPIVersion *string `json:"OpenStack-API-Version,omitempty"`
 
-	Body *NovaCreateServersRequestBody `json:"body,omitempty" xml:"body"`
+	Body *NovaCreateServersRequestBody `json:"body,omitempty"`
 }
 
 func (o NovaCreateServersRequest) String() string {

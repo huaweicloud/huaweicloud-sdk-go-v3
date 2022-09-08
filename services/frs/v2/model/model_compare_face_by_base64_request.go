@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CompareFaceByBase64Request struct {
-	Body *FaceCompareBase64Req `json:"body,omitempty" xml:"body"`
+	Body *FaceCompareBase64Req `json:"body,omitempty"`
 }
 
 func (o CompareFaceByBase64Request) String() string {

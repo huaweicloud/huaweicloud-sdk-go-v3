@@ -9,7 +9,7 @@ import (
 type ConcatInfo struct {
 
 	// 拼接任务输入源地址。
-	Inputs *[]ObsObjInfo `json:"inputs,omitempty" xml:"inputs"`
+	Inputs *[]ObsObjInfo `json:"inputs,omitempty"`
 }
 
 func (o ConcatInfo) String() string {

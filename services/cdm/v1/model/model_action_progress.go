@@ -10,19 +10,19 @@ import (
 type ActionProgress struct {
 
 	// 创建集群进度，例如：29%
-	Creating *string `json:"CREATING,omitempty" xml:"CREATING"`
+	Creating *string `json:"CREATING,omitempty"`
 
 	// 扩容集群进度，例如：29%
-	Growing *string `json:"GROWING,omitempty" xml:"GROWING"`
+	Growing *string `json:"GROWING,omitempty"`
 
 	// 恢复集群进度，例如：29%
-	Restoring *string `json:"RESTORING,omitempty" xml:"RESTORING"`
+	Restoring *string `json:"RESTORING,omitempty"`
 
 	// 集群快照进度，例如：29%
-	Snapshotting *string `json:"SNAPSHOTTING,omitempty" xml:"SNAPSHOTTING"`
+	Snapshotting *string `json:"SNAPSHOTTING,omitempty"`
 
 	// 修复集群进度，例如：29%
-	Repairing *string `json:"REPAIRING,omitempty" xml:"REPAIRING"`
+	Repairing *string `json:"REPAIRING,omitempty"`
 }
 
 func (o ActionProgress) String() string {

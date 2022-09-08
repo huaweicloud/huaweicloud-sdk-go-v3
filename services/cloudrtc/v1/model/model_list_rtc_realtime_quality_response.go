@@ -10,9 +10,9 @@ import (
 type ListRtcRealtimeQualityResponse struct {
 
 	// 时间戳及相应时间的指标数值列表
-	Quality *[]TimeDoubleValueData `json:"quality,omitempty" xml:"quality"`
+	Quality *[]TimeDoubleValueData `json:"quality,omitempty"`
 
-	XRequestId     *string `json:"X-request-id,omitempty" xml:"X-request-id"`
+	XRequestId     *string `json:"X-request-id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -10,15 +10,15 @@ import (
 type UpdateAppConfigV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 应用编号
-	AppId string `json:"app_id" xml:"app_id"`
+	AppId string `json:"app_id"`
 
 	// 应用配置编号
-	AppConfigId string `json:"app_config_id" xml:"app_config_id"`
+	AppConfigId string `json:"app_config_id"`
 
-	Body *AppConfigModifyRequestV2 `json:"body,omitempty" xml:"body"`
+	Body *AppConfigModifyRequestV2 `json:"body,omitempty"`
 }
 
 func (o UpdateAppConfigV2Request) String() string {

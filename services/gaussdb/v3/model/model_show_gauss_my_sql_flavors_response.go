@@ -10,7 +10,7 @@ import (
 type ShowGaussMySqlFlavorsResponse struct {
 
 	// 实例规格信息列表
-	Flavors        *[]MysqlFlavorsInfo `json:"flavors,omitempty" xml:"flavors"`
+	Flavors        *[]MysqlFlavorsInfo `json:"flavors,omitempty"`
 	HttpStatusCode int                 `json:"-"`
 }
 

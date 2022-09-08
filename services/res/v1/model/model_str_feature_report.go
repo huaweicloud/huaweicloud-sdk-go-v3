@@ -10,13 +10,13 @@ import (
 type StrFeatureReport struct {
 
 	// 特征名。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 特征类型。
-	DataType *string `json:"data_type,omitempty" xml:"data_type"`
+	DataType *string `json:"data_type,omitempty"`
 
 	// 离散类型特征出现次数统计。
-	StrCount map[string]int32 `json:"str_count,omitempty" xml:"str_count"`
+	StrCount map[string]int32 `json:"str_count,omitempty"`
 }
 
 func (o StrFeatureReport) String() string {

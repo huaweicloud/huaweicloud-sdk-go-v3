@@ -12,16 +12,16 @@ import (
 type MultiTaskUpdateBody struct {
 
 	// 描述信息
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 任务标签,只能包含字母、数字、中划线、下划线
-	TaskTag *string `json:"task_tag,omitempty" xml:"task_tag"`
+	TaskTag *string `json:"task_tag,omitempty"`
 
 	// 需要支持的操作类型，支持多选，至少需要选择以下一种： - INSERT - UPDATE - DELETE
-	OperationTypes *[]MultiTaskUpdateBodyOperationTypes `json:"operation_types,omitempty" xml:"operation_types"`
+	OperationTypes *[]MultiTaskUpdateBodyOperationTypes `json:"operation_types,omitempty"`
 
 	// 是否同步已有数据，仅在编辑任务时生效
-	RepullingSnapshot *bool `json:"repulling_snapshot,omitempty" xml:"repulling_snapshot"`
+	RepullingSnapshot *bool `json:"repulling_snapshot,omitempty"`
 }
 
 func (o MultiTaskUpdateBody) String() string {

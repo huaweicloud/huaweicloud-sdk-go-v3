@@ -13,10 +13,10 @@ import (
 type CancelSqlResponse struct {
 
 	// 错误信息。
-	Message *string `json:"message,omitempty" xml:"message"`
+	Message *string `json:"message,omitempty"`
 
 	// 取消SQL的执行结果。  说明： 默认返回SUCCEED，对于已经结束的任务也会返回SUCCEED，只有取消正在运行的SQL时没成功才会FAILED。  枚举值： - SUCCEED：成功 - FAILED：失败
-	Status         *CancelSqlResponseStatus `json:"status,omitempty" xml:"status"`
+	Status         *CancelSqlResponseStatus `json:"status,omitempty"`
 	HttpStatusCode int                      `json:"-"`
 }
 

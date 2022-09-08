@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ExecuteScriptResponse struct {
-	InstanceId     *string `json:"instanceId,omitempty" xml:"instanceId"`
+	InstanceId     *string `json:"instanceId,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

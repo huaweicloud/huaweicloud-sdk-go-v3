@@ -9,22 +9,22 @@ import (
 type Chart struct {
 
 	// 统计时间
-	Date *string `json:"date,omitempty" xml:"date"`
+	Date *string `json:"date,omitempty"`
 
 	// 完成story工单
-	FinishedNum *int32 `json:"finished_num,omitempty" xml:"finished_num"`
+	FinishedNum *int32 `json:"finished_num,omitempty"`
 
 	// 迭代id
-	IterationId *int32 `json:"iteration_id,omitempty" xml:"iteration_id"`
+	IterationId *int32 `json:"iteration_id,omitempty"`
 
 	// 项目id
-	ProjectNumId *int32 `json:"project_num_id,omitempty" xml:"project_num_id"`
+	ProjectNumId *int32 `json:"project_num_id,omitempty"`
 
 	// 未完成story数
-	RemainingNum *int32 `json:"remaining_num,omitempty" xml:"remaining_num"`
+	RemainingNum *int32 `json:"remaining_num,omitempty"`
 
 	// 总story数
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 }
 
 func (o Chart) String() string {

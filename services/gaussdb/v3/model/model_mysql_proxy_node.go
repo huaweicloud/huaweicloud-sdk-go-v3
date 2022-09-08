@@ -9,22 +9,22 @@ import (
 type MysqlProxyNode struct {
 
 	// 节点id。
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 实例id。
-	InstanceId *string `json:"instance_id,omitempty" xml:"instance_id"`
+	InstanceId *string `json:"instance_id,omitempty"`
 
 	// 节点状态。
-	Status *string `json:"status,omitempty" xml:"status"`
+	Status *string `json:"status,omitempty"`
 
 	// 节点名称。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 节点读写分离读权重。
-	Weight *int32 `json:"weight,omitempty" xml:"weight"`
+	Weight *int32 `json:"weight,omitempty"`
 
 	// 可用区信息。
-	AvailableZones *[]MysqlProxyAvailable `json:"available_zones,omitempty" xml:"available_zones"`
+	AvailableZones *[]MysqlProxyAvailable `json:"available_zones,omitempty"`
 }
 
 func (o MysqlProxyNode) String() string {

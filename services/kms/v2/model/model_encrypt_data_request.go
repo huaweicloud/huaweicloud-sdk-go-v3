@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type EncryptDataRequest struct {
-	Body *EncryptDataRequestBody `json:"body,omitempty" xml:"body"`
+	Body *EncryptDataRequestBody `json:"body,omitempty"`
 }
 
 func (o EncryptDataRequest) String() string {

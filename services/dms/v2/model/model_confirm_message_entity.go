@@ -12,10 +12,10 @@ import (
 type ConfirmMessageEntity struct {
 
 	// 消费时返回的ID。
-	Handler *string `json:"handler,omitempty" xml:"handler"`
+	Handler *string `json:"handler,omitempty"`
 
 	// 客户端处理数据的状态。 取值为“success”或者“fail”。
-	Status *ConfirmMessageEntityStatus `json:"status,omitempty" xml:"status"`
+	Status *ConfirmMessageEntityStatus `json:"status,omitempty"`
 }
 
 func (o ConfirmMessageEntity) String() string {

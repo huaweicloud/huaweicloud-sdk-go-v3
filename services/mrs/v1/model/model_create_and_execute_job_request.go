@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateAndExecuteJobRequest struct {
-	Body *SubmitJobReqV11 `json:"body,omitempty" xml:"body"`
+	Body *SubmitJobReqV11 `json:"body,omitempty"`
 }
 
 func (o CreateAndExecuteJobRequest) String() string {

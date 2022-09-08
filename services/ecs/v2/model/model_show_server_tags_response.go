@@ -10,7 +10,7 @@ import (
 type ShowServerTagsResponse struct {
 
 	// 标签列表
-	Tags           *[]ServerTag `json:"tags,omitempty" xml:"tags"`
+	Tags           *[]ServerTag `json:"tags,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }
 

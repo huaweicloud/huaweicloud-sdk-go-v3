@@ -10,11 +10,11 @@ import (
 )
 
 type JobParam struct {
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
-	Value *string `json:"value,omitempty" xml:"value"`
+	Value *string `json:"value,omitempty"`
 
-	ParamType *JobParamParamType `json:"paramType,omitempty" xml:"paramType"`
+	ParamType *JobParamParamType `json:"paramType,omitempty"`
 }
 
 func (o JobParam) String() string {

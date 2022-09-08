@@ -10,51 +10,51 @@ import (
 type ShowPrivateZoneResponse struct {
 
 	// zone的ID，uuid形式的一个资源标识。
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// zone名称。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 对zone的描述信息。
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 管理该zone的管理员邮箱。
-	Email *string `json:"email,omitempty" xml:"email"`
+	Email *string `json:"email,omitempty"`
 
 	// zone类型，公网（public）或者内网（private）。
-	ZoneType *string `json:"zone_type,omitempty" xml:"zone_type"`
+	ZoneType *string `json:"zone_type,omitempty"`
 
 	// 该zone下SOA记录中的ttl值。
-	Ttl *int32 `json:"ttl,omitempty" xml:"ttl"`
+	Ttl *int32 `json:"ttl,omitempty"`
 
 	// 该zone下SOA记录中用于标识zone文件变更的序列值，用于主从节点同步。
-	Serial *int32 `json:"serial,omitempty" xml:"serial"`
+	Serial *int32 `json:"serial,omitempty"`
 
 	// 资源状态。
-	Status *string `json:"status,omitempty" xml:"status"`
+	Status *string `json:"status,omitempty"`
 
 	// 该zone下的recordset个数。
-	RecordNum *int32 `json:"record_num,omitempty" xml:"record_num"`
+	RecordNum *int32 `json:"record_num,omitempty"`
 
 	// 托管该zone的pool，由系统分配。
-	PoolId *string `json:"pool_id,omitempty" xml:"pool_id"`
+	PoolId *string `json:"pool_id,omitempty"`
 
 	// zone所属的项目ID。
-	ProjectId *string `json:"project_id,omitempty" xml:"project_id"`
+	ProjectId *string `json:"project_id,omitempty"`
 
 	// 创建时间。
-	CreatedAt *string `json:"created_at,omitempty" xml:"created_at"`
+	CreatedAt *string `json:"created_at,omitempty"`
 
 	// 更新时间。
-	UpdatedAt *string `json:"updated_at,omitempty" xml:"updated_at"`
+	UpdatedAt *string `json:"updated_at,omitempty"`
 
-	Links *PageLink `json:"links,omitempty" xml:"links"`
+	Links *PageLink `json:"links,omitempty"`
 
 	// 主从模式中，从DNS服务器用以获取DNS信息。
-	Masters *[]string `json:"masters,omitempty" xml:"masters"`
+	Masters *[]string `json:"masters,omitempty"`
 
 	// 与该zone关联的Router(VPC)列表。
-	Routers        *[]Router `json:"routers,omitempty" xml:"routers"`
+	Routers        *[]Router `json:"routers,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }
 

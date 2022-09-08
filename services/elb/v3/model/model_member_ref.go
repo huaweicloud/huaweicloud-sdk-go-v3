@@ -10,7 +10,7 @@ import (
 type MemberRef struct {
 
 	// 后端服务器ID。
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 }
 
 func (o MemberRef) String() string {

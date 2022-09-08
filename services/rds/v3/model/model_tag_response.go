@@ -10,10 +10,10 @@ import (
 type TagResponse struct {
 
 	// 标签键。
-	Key string `json:"key" xml:"key"`
+	Key string `json:"key"`
 
 	// 标签值。
-	Value string `json:"value" xml:"value"`
+	Value string `json:"value"`
 }
 
 func (o TagResponse) String() string {

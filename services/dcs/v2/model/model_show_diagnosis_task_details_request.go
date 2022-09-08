@@ -10,7 +10,7 @@ import (
 type ShowDiagnosisTaskDetailsRequest struct {
 
 	// 诊断报告ID
-	ReportId string `json:"report_id" xml:"report_id"`
+	ReportId string `json:"report_id"`
 }
 
 func (o ShowDiagnosisTaskDetailsRequest) String() string {

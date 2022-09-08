@@ -10,10 +10,10 @@ import (
 type ListFlavorsResponse struct {
 
 	// 微服务引擎专享版规格总个数
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 
 	// 微服务引擎专享版规格详情
-	Data           *[]FlavorBrief `json:"data,omitempty" xml:"data"`
+	Data           *[]FlavorBrief `json:"data,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }
 

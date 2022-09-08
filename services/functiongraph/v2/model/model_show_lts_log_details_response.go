@@ -10,16 +10,16 @@ import (
 type ShowLtsLogDetailsResponse struct {
 
 	// 日志组名称
-	GroupName *string `json:"group_name,omitempty" xml:"group_name"`
+	GroupName *string `json:"group_name,omitempty"`
 
 	// 日志组id
-	GroupId *string `json:"group_id,omitempty" xml:"group_id"`
+	GroupId *string `json:"group_id,omitempty"`
 
 	// 日志流id
-	StreamId *string `json:"stream_id,omitempty" xml:"stream_id"`
+	StreamId *string `json:"stream_id,omitempty"`
 
 	// 日志流名称
-	StreamName     *string `json:"stream_name,omitempty" xml:"stream_name"`
+	StreamName     *string `json:"stream_name,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

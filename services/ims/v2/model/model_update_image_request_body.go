@@ -13,13 +13,13 @@ import (
 type UpdateImageRequestBody struct {
 
 	// 操作类型，目前取值为add，replace和remove。
-	Op UpdateImageRequestBodyOp `json:"op" xml:"op"`
+	Op UpdateImageRequestBodyOp `json:"op"`
 
 	// 需要更新的属性名称，需要在属性名称前加“/”。
-	Path string `json:"path" xml:"path"`
+	Path string `json:"path"`
 
 	// 需要更新属性的值。
-	Value string `json:"value" xml:"value"`
+	Value string `json:"value"`
 }
 
 func (o UpdateImageRequestBody) String() string {

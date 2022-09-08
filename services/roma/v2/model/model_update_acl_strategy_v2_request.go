@@ -10,12 +10,12 @@ import (
 type UpdateAclStrategyV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// ACL策略的编号
-	AclId string `json:"acl_id" xml:"acl_id"`
+	AclId string `json:"acl_id"`
 
-	Body *ApiAclCreate `json:"body,omitempty" xml:"body"`
+	Body *ApiAclCreate `json:"body,omitempty"`
 }
 
 func (o UpdateAclStrategyV2Request) String() string {

@@ -8,10 +8,10 @@ import (
 
 // Response Object
 type UpdateTaskResponse struct {
-	Task *TaskBasicRsp `json:"task,omitempty" xml:"task"`
+	Task *TaskBasicRsp `json:"task,omitempty"`
 
 	// 参数类型为string，参数结构参照附录中“数据集成参数说明>RawFormDataResponse”章节
-	TaskDetail     *string `json:"task_detail,omitempty" xml:"task_detail"`
+	TaskDetail     *string `json:"task_detail,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

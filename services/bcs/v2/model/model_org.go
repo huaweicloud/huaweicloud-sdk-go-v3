@@ -9,13 +9,13 @@ import (
 type Org struct {
 
 	// 组织MSP标识
-	OrgMspId *string `json:"org_msp_id,omitempty" xml:"org_msp_id"`
+	OrgMspId *string `json:"org_msp_id,omitempty"`
 
 	// 组织域名
-	OrgDomain *string `json:"org_domain,omitempty" xml:"org_domain"`
+	OrgDomain *string `json:"org_domain,omitempty"`
 
 	// key:节点名称，value：节点详细信息
-	Peers map[string]Node `json:"peers,omitempty" xml:"peers"`
+	Peers map[string]Node `json:"peers,omitempty"`
 }
 
 func (o Org) String() string {

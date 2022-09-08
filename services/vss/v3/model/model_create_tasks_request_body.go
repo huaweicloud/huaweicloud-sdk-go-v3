@@ -12,24 +12,24 @@ import (
 type CreateTasksRequestBody struct {
 
 	// 任务名称
-	TaskName string `json:"task_name" xml:"task_name"`
+	TaskName string `json:"task_name"`
 
 	// 待扫描的目标网址
-	Url string `json:"url" xml:"url"`
+	Url string `json:"url"`
 
 	// 扫描任务类型:   * normal - 普通任务   * monitor - 监测任务
-	TaskType *CreateTasksRequestBodyTaskType `json:"task_type,omitempty" xml:"task_type"`
+	TaskType *CreateTasksRequestBodyTaskType `json:"task_type,omitempty"`
 
 	// 普通任务的定时启动时间
-	Timer *string `json:"timer,omitempty" xml:"timer"`
+	Timer *string `json:"timer,omitempty"`
 
 	// 监测任务的定时触发时间
-	TriggerTime *string `json:"trigger_time,omitempty" xml:"trigger_time"`
+	TriggerTime *string `json:"trigger_time,omitempty"`
 
 	// 监测任务的定时触发周期:   * everyday - 每日   * threedays - 每三天   * everyweek - 每星期   * everymonth - 每月
-	TaskPeriod *CreateTasksRequestBodyTaskPeriod `json:"task_period,omitempty" xml:"task_period"`
+	TaskPeriod *CreateTasksRequestBodyTaskPeriod `json:"task_period,omitempty"`
 
-	TaskConfig *TaskSettingsTaskConfig `json:"task_config,omitempty" xml:"task_config"`
+	TaskConfig *TaskSettingsTaskConfig `json:"task_config,omitempty"`
 }
 
 func (o CreateTasksRequestBody) String() string {

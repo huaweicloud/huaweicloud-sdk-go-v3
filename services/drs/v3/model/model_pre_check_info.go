@@ -13,10 +13,10 @@ import (
 type PreCheckInfo struct {
 
 	// 任务id
-	JobId string `json:"job_id" xml:"job_id"`
+	JobId string `json:"job_id"`
 
 	// 预检查模式
-	PrecheckMode PreCheckInfoPrecheckMode `json:"precheck_mode" xml:"precheck_mode"`
+	PrecheckMode PreCheckInfoPrecheckMode `json:"precheck_mode"`
 }
 
 func (o PreCheckInfo) String() string {

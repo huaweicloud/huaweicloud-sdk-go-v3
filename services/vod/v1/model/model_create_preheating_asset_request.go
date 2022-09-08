@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreatePreheatingAssetRequest struct {
-	Body *CreatePreheatingAssetReq `json:"body,omitempty" xml:"body"`
+	Body *CreatePreheatingAssetReq `json:"body,omitempty"`
 }
 
 func (o CreatePreheatingAssetRequest) String() string {

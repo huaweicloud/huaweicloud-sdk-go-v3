@@ -13,12 +13,12 @@ import (
 type ShowSqlExplainRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 语言
-	XLanguage *ShowSqlExplainRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *ShowSqlExplainRequestXLanguage `json:"X-Language,omitempty"`
 
-	Body *QuerySqlPlanBody `json:"body,omitempty" xml:"body"`
+	Body *QuerySqlPlanBody `json:"body,omitempty"`
 }
 
 func (o ShowSqlExplainRequest) String() string {

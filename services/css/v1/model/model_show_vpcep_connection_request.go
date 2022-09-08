@@ -10,7 +10,7 @@ import (
 type ShowVpcepConnectionRequest struct {
 
 	// 指定待查询的集群ID。
-	ClusterId string `json:"cluster_id" xml:"cluster_id"`
+	ClusterId string `json:"cluster_id"`
 }
 
 func (o ShowVpcepConnectionRequest) String() string {

@@ -9,10 +9,10 @@ import (
 type ScrumCustomField struct {
 
 	// 自定义字段
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 自定义字段值
-	Value *string `json:"value,omitempty" xml:"value"`
+	Value *string `json:"value,omitempty"`
 }
 
 func (o ScrumCustomField) String() string {

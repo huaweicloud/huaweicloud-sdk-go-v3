@@ -10,7 +10,7 @@ import (
 type CreateAlarmRulesResponse struct {
 
 	// 告警规则id，以al开头，包含22个数字或字母
-	AlarmId        *string `json:"alarm_id,omitempty" xml:"alarm_id"`
+	AlarmId        *string `json:"alarm_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -13,19 +13,19 @@ import (
 type Initial struct {
 
 	// 初始化方法。
-	InitialMethod InitialInitialMethod `json:"initial_method" xml:"initial_method"`
+	InitialMethod InitialInitialMethod `json:"initial_method"`
 
 	// 平均值。
-	MeanValue *float64 `json:"mean_value,omitempty" xml:"mean_value"`
+	MeanValue *float64 `json:"mean_value,omitempty"`
 
 	// 标准差。
-	StandardDeviation *float64 `json:"standard_deviation,omitempty" xml:"standard_deviation"`
+	StandardDeviation *float64 `json:"standard_deviation,omitempty"`
 
 	// 最小值。
-	MinValue *float64 `json:"min_value,omitempty" xml:"min_value"`
+	MinValue *float64 `json:"min_value,omitempty"`
 
 	// 最大值。
-	MaxValue *float64 `json:"max_value,omitempty" xml:"max_value"`
+	MaxValue *float64 `json:"max_value,omitempty"`
 }
 
 func (o Initial) String() string {

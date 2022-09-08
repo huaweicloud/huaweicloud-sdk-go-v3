@@ -9,25 +9,25 @@ import (
 type UpdateDomainSettingsRequestBody struct {
 
 	// 域名id
-	DomainId *string `json:"domain_id,omitempty" xml:"domain_id"`
+	DomainId *string `json:"domain_id,omitempty"`
 
 	// 网站需要登录时，设置登录页面
-	LoginUrl *string `json:"login_url,omitempty" xml:"login_url"`
+	LoginUrl *string `json:"login_url,omitempty"`
 
 	// 网站需要登录时，设置登录用户名
-	LoginUsername *string `json:"login_username,omitempty" xml:"login_username"`
+	LoginUsername *string `json:"login_username,omitempty"`
 
 	// 网站需要登录时，设置登录密码
-	LoginPassword *string `json:"login_password,omitempty" xml:"login_password"`
+	LoginPassword *string `json:"login_password,omitempty"`
 
 	// 网站需要登录时，设置登录cookie
-	LoginCookies *string `json:"login_cookies,omitempty" xml:"login_cookies"`
+	LoginCookies *string `json:"login_cookies,omitempty"`
 
 	// 设置用于验证登录是否成功的网址
-	VerifyUrl *string `json:"verify_url,omitempty" xml:"verify_url"`
+	VerifyUrl *string `json:"verify_url,omitempty"`
 
 	// 设置自定义HTTP请求头
-	HttpHeaders map[string]string `json:"http_headers,omitempty" xml:"http_headers"`
+	HttpHeaders map[string]string `json:"http_headers,omitempty"`
 }
 
 func (o UpdateDomainSettingsRequestBody) String() string {

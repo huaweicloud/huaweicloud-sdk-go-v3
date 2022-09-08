@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreatePermanentAccessKeyRequest struct {
-	Body *CreatePermanentAccessKeyRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreatePermanentAccessKeyRequestBody `json:"body,omitempty"`
 }
 
 func (o CreatePermanentAccessKeyRequest) String() string {

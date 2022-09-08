@@ -8,7 +8,7 @@ import (
 
 // 标签对象列表。
 type TagReq struct {
-	Tag *Tag `json:"tag" xml:"tag"`
+	Tag *Tag `json:"tag"`
 }
 
 func (o TagReq) String() string {

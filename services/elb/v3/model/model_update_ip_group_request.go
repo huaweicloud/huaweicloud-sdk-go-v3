@@ -10,9 +10,9 @@ import (
 type UpdateIpGroupRequest struct {
 
 	// 待更新的IP地址组的ID。
-	IpgroupId string `json:"ipgroup_id" xml:"ipgroup_id"`
+	IpgroupId string `json:"ipgroup_id"`
 
-	Body *UpdateIpGroupRequestBody `json:"body,omitempty" xml:"body"`
+	Body *UpdateIpGroupRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateIpGroupRequest) String() string {

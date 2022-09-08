@@ -10,13 +10,13 @@ import (
 type SetDefaulTemplateRequest struct {
 
 	// 项目ID
-	ProjectId string `json:"project_id" xml:"project_id"`
+	ProjectId string `json:"project_id"`
 
 	// 规则集ID
-	RulesetId string `json:"ruleset_id" xml:"ruleset_id"`
+	RulesetId string `json:"ruleset_id"`
 
 	// 规则集语言
-	Language string `json:"language" xml:"language"`
+	Language string `json:"language"`
 }
 
 func (o SetDefaulTemplateRequest) String() string {

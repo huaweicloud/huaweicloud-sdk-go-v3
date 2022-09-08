@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ListOnDemandResourceRatingsRequest struct {
-	Body *RateOnDemandReq `json:"body,omitempty" xml:"body"`
+	Body *RateOnDemandReq `json:"body,omitempty"`
 }
 
 func (o ListOnDemandResourceRatingsRequest) String() string {

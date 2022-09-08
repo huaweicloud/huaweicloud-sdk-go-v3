@@ -10,10 +10,10 @@ import (
 type ShowGaussMySqlQuotasResponse struct {
 
 	// 资源列表对象。
-	QuotaList *[]Quota `json:"quota_list,omitempty" xml:"quota_list"`
+	QuotaList *[]Quota `json:"quota_list,omitempty"`
 
 	// 配额记录的条数。
-	TotalCount     *int32 `json:"total_count,omitempty" xml:"total_count"`
+	TotalCount     *int32 `json:"total_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

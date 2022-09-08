@@ -9,13 +9,13 @@ import (
 type ApiAuthCreate struct {
 
 	// 需要授权的环境编号
-	EnvId string `json:"env_id" xml:"env_id"`
+	EnvId string `json:"env_id"`
 
 	// APP的编号列表
-	AppIds []string `json:"app_ids" xml:"app_ids"`
+	AppIds []string `json:"app_ids"`
 
 	// API的编号列表，可以选择租户自己的API，也可以选择从云市场上购买的API。
-	ApiIds []string `json:"api_ids" xml:"api_ids"`
+	ApiIds []string `json:"api_ids"`
 }
 
 func (o ApiAuthCreate) String() string {

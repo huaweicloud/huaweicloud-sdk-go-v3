@@ -10,9 +10,9 @@ import (
 type ListInstantQueryAomPromGetResponse struct {
 
 	// 响应状态。
-	Status *string `json:"status,omitempty" xml:"status"`
+	Status *string `json:"status,omitempty"`
 
-	Data           *interface{} `json:"data,omitempty" xml:"data"`
+	Data           *interface{} `json:"data,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }
 

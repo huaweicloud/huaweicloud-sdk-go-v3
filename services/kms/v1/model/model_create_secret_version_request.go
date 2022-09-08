@@ -10,9 +10,9 @@ import (
 type CreateSecretVersionRequest struct {
 
 	// 凭据的资源标识符。
-	SecretId string `json:"secret_id" xml:"secret_id"`
+	SecretId string `json:"secret_id"`
 
-	Body *CreateSecretVersionRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreateSecretVersionRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateSecretVersionRequest) String() string {

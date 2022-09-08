@@ -9,13 +9,13 @@ import (
 type MultiTaskColumnInfo struct {
 
 	// 字段名
-	FieldName *string `json:"field_name,omitempty" xml:"field_name"`
+	FieldName *string `json:"field_name,omitempty"`
 
 	// 字段类型
-	FieldType *string `json:"field_type,omitempty" xml:"field_type"`
+	FieldType *string `json:"field_type,omitempty"`
 
 	// 字段长度
-	FieldLength *string `json:"field_length,omitempty" xml:"field_length"`
+	FieldLength *string `json:"field_length,omitempty"`
 }
 
 func (o MultiTaskColumnInfo) String() string {

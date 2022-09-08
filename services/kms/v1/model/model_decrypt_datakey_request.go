@@ -10,9 +10,9 @@ import (
 type DecryptDatakeyRequest struct {
 
 	// API版本号
-	VersionId string `json:"version_id" xml:"version_id"`
+	VersionId string `json:"version_id"`
 
-	Body *DecryptDatakeyRequestBody `json:"body,omitempty" xml:"body"`
+	Body *DecryptDatakeyRequestBody `json:"body,omitempty"`
 }
 
 func (o DecryptDatakeyRequest) String() string {

@@ -10,9 +10,9 @@ import (
 type UpdateClientNetworkRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
-	Body *ClientNetworkRequestBody `json:"body,omitempty" xml:"body"`
+	Body *ClientNetworkRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateClientNetworkRequest) String() string {

@@ -10,16 +10,16 @@ import (
 type ListNodesResponse struct {
 
 	// DDM实例节点信息列表的集合。
-	Nodes *[]NodeList `json:"nodes,omitempty" xml:"nodes"`
+	Nodes *[]NodeList `json:"nodes,omitempty"`
 
 	// 分页参数: 起始值。
-	Offset *int32 `json:"offset,omitempty" xml:"offset"`
+	Offset *int32 `json:"offset,omitempty"`
 
 	// 分页参数：每页多少条。
-	Limit *int32 `json:"limit,omitempty" xml:"limit"`
+	Limit *int32 `json:"limit,omitempty"`
 
 	// DDM实例节点个数。
-	Total          *int32 `json:"total,omitempty" xml:"total"`
+	Total          *int32 `json:"total,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

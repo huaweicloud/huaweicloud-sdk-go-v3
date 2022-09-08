@@ -9,13 +9,13 @@ import (
 type QueryTransTemplate struct {
 
 	// 转码模板名称。
-	TemplateName string `json:"template_name" xml:"template_name"`
+	TemplateName string `json:"template_name"`
 
-	Video *Video `json:"video" xml:"video"`
+	Video *Video `json:"video"`
 
-	Audio *Audio `json:"audio,omitempty" xml:"audio"`
+	Audio *Audio `json:"audio,omitempty"`
 
-	Common *Common `json:"common,omitempty" xml:"common"`
+	Common *Common `json:"common,omitempty"`
 }
 
 func (o QueryTransTemplate) String() string {

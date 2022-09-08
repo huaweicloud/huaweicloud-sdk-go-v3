@@ -7,7 +7,7 @@ import (
 )
 
 type AudioModerationResultRequestParamsData struct {
-	Url *string `json:"url,omitempty" xml:"url"`
+	Url *string `json:"url,omitempty"`
 }
 
 func (o AudioModerationResultRequestParamsData) String() string {

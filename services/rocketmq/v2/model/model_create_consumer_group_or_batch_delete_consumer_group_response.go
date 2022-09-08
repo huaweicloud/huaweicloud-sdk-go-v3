@@ -10,10 +10,10 @@ import (
 type CreateConsumerGroupOrBatchDeleteConsumerGroupResponse struct {
 
 	// 删除消费组的任务ID
-	JobId *string `json:"job_id,omitempty" xml:"job_id"`
+	JobId *string `json:"job_id,omitempty"`
 
 	// 创建成功的消费组名称。
-	Name           *string `json:"name,omitempty" xml:"name"`
+	Name           *string `json:"name,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

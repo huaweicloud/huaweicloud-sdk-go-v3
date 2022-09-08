@@ -10,10 +10,10 @@ import (
 type ListConsumerGroupOfTopicRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 主题名称。
-	Topic string `json:"topic" xml:"topic"`
+	Topic string `json:"topic"`
 }
 
 func (o ListConsumerGroupOfTopicRequest) String() string {

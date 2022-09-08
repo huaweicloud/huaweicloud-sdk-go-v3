@@ -10,10 +10,10 @@ import (
 type ShowClusterTagRequest struct {
 
 	// 指定待查询的集群ID。
-	ClusterId string `json:"cluster_id" xml:"cluster_id"`
+	ClusterId string `json:"cluster_id"`
 
 	// 资源类型，当前固定值为“css-cluster”，表示是集群类型。
-	ResourceType string `json:"resource_type" xml:"resource_type"`
+	ResourceType string `json:"resource_type"`
 }
 
 func (o ShowClusterTagRequest) String() string {

@@ -10,16 +10,16 @@ import (
 type CustomizeParameter struct {
 
 	// 别名。
-	Alias string `json:"alias" xml:"alias"`
+	Alias string `json:"alias"`
 
 	// 行为类型。
-	BehaviorType string `json:"behavior_type" xml:"behavior_type"`
+	BehaviorType string `json:"behavior_type"`
 
 	// 阈值。
-	Threshold *float64 `json:"threshold,omitempty" xml:"threshold"`
+	Threshold *float64 `json:"threshold,omitempty"`
 
 	// 去重。
-	Deduplication string `json:"deduplication" xml:"deduplication"`
+	Deduplication string `json:"deduplication"`
 }
 
 func (o CustomizeParameter) String() string {

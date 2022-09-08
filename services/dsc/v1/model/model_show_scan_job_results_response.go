@@ -10,19 +10,19 @@ import (
 type ShowScanJobResultsResponse struct {
 
 	// 任务ID
-	JobId *string `json:"job_id,omitempty" xml:"job_id"`
+	JobId *string `json:"job_id,omitempty"`
 
 	// 任务名
-	JobName *string `json:"job_name,omitempty" xml:"job_name"`
+	JobName *string `json:"job_name,omitempty"`
 
 	// 查询资产类型
-	Type *string `json:"type,omitempty" xml:"type"`
+	Type *string `json:"type,omitempty"`
 
-	DbScanResult *DbScanResult `json:"db_scan_result,omitempty" xml:"db_scan_result"`
+	DbScanResult *DbScanResult `json:"db_scan_result,omitempty"`
 
-	ObsScanResult *ObsScanResult `json:"obs_scan_result,omitempty" xml:"obs_scan_result"`
+	ObsScanResult *ObsScanResult `json:"obs_scan_result,omitempty"`
 
-	EsScanResult   *EsScanResult `json:"es_scan_result,omitempty" xml:"es_scan_result"`
+	EsScanResult   *EsScanResult `json:"es_scan_result,omitempty"`
 	HttpStatusCode int           `json:"-"`
 }
 

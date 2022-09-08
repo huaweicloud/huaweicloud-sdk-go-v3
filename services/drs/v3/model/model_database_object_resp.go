@@ -10,16 +10,16 @@ import (
 type DatabaseObjectResp struct {
 
 	// 任务ID
-	JobId *string `json:"job_id,omitempty" xml:"job_id"`
+	JobId *string `json:"job_id,omitempty"`
 
 	// 选择对象任务成功标志
-	Status *bool `json:"status,omitempty" xml:"status"`
+	Status *bool `json:"status,omitempty"`
 
 	// 错误码
-	ErrorCode *string `json:"error_code,omitempty" xml:"error_code"`
+	ErrorCode *string `json:"error_code,omitempty"`
 
 	// 错误信息
-	ErrorMsg *string `json:"error_msg,omitempty" xml:"error_msg"`
+	ErrorMsg *string `json:"error_msg,omitempty"`
 }
 
 func (o DatabaseObjectResp) String() string {

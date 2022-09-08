@@ -10,10 +10,10 @@ import (
 type ListHookInstancesRequest struct {
 
 	// 伸缩组ID。
-	ScalingGroupId string `json:"scaling_group_id" xml:"scaling_group_id"`
+	ScalingGroupId string `json:"scaling_group_id"`
 
 	// 伸缩实例ID。
-	InstanceId *string `json:"instance_id,omitempty" xml:"instance_id"`
+	InstanceId *string `json:"instance_id,omitempty"`
 }
 
 func (o ListHookInstancesRequest) String() string {

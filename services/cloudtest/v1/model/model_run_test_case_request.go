@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RunTestCaseRequest struct {
-	Body *RunTestCaseRequestBody `json:"body,omitempty" xml:"body"`
+	Body *RunTestCaseRequestBody `json:"body,omitempty"`
 }
 
 func (o RunTestCaseRequest) String() string {

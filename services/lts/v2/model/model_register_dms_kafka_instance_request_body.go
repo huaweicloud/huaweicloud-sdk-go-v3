@@ -9,12 +9,12 @@ import (
 type RegisterDmsKafkaInstanceRequestBody struct {
 
 	// kafka ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// kafka 名称
-	KafkaName string `json:"kafka_name" xml:"kafka_name"`
+	KafkaName string `json:"kafka_name"`
 
-	ConnectInfo *RegisterDmsKafkaInstanceRequestBodyConnectInfo `json:"connect_info" xml:"connect_info"`
+	ConnectInfo *RegisterDmsKafkaInstanceRequestBodyConnectInfo `json:"connect_info"`
 }
 
 func (o RegisterDmsKafkaInstanceRequestBody) String() string {

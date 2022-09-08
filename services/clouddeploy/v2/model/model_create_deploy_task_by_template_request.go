@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateDeployTaskByTemplateRequest struct {
-	Body *TemplateTaskRequestBody `json:"body,omitempty" xml:"body"`
+	Body *TemplateTaskRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateDeployTaskByTemplateRequest) String() string {

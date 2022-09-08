@@ -10,10 +10,10 @@ import (
 type ListPortResultsResponse struct {
 
 	// 端口总数
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 
 	// 端口信息列表
-	Data           *[]PortItem `json:"data,omitempty" xml:"data"`
+	Data           *[]PortItem `json:"data,omitempty"`
 	HttpStatusCode int         `json:"-"`
 }
 

@@ -10,9 +10,9 @@ import (
 type ChangeServerOsWithCloudInitRequest struct {
 
 	// 云服务器ID。
-	ServerId string `json:"server_id" xml:"server_id"`
+	ServerId string `json:"server_id"`
 
-	Body *ChangeServerOsWithCloudInitRequestBody `json:"body,omitempty" xml:"body"`
+	Body *ChangeServerOsWithCloudInitRequestBody `json:"body,omitempty"`
 }
 
 func (o ChangeServerOsWithCloudInitRequest) String() string {

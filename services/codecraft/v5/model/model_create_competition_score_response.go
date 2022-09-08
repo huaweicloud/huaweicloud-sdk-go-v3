@@ -10,7 +10,7 @@ import (
 type CreateCompetitionScoreResponse struct {
 
 	// 作品ID
-	WorksId        *string `json:"works_id,omitempty" xml:"works_id"`
+	WorksId        *string `json:"works_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

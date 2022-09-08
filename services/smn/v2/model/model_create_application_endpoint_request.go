@@ -10,9 +10,9 @@ import (
 type CreateApplicationEndpointRequest struct {
 
 	// Application的唯一资源标识，可通过[查询Application](https://support.huaweicloud.com/api-smn/ListApplications.html)获取该标识。
-	ApplicationUrn string `json:"application_urn" xml:"application_urn"`
+	ApplicationUrn string `json:"application_urn"`
 
-	Body *CreateApplicationEndpointRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreateApplicationEndpointRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateApplicationEndpointRequest) String() string {

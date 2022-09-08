@@ -10,37 +10,37 @@ import (
 type EnvNodeModel struct {
 
 	// 环境id
-	Id *int64 `json:"id,omitempty" xml:"id"`
+	Id *int64 `json:"id,omitempty"`
 
 	// 创建时间
-	GmtCreate *string `json:"gmt_create,omitempty" xml:"gmt_create"`
+	GmtCreate *string `json:"gmt_create,omitempty"`
 
 	// 修改时间
-	GmtModify *string `json:"gmt_modify,omitempty" xml:"gmt_modify"`
+	GmtModify *string `json:"gmt_modify,omitempty"`
 
 	// 组件id
-	AppId *int64 `json:"app_id,omitempty" xml:"app_id"`
+	AppId *int64 `json:"app_id,omitempty"`
 
 	// 应用名称
-	BusinessName *string `json:"business_name,omitempty" xml:"business_name"`
+	BusinessName *string `json:"business_name,omitempty"`
 
 	// 租户id
-	InnerDomainId *int32 `json:"inner_domain_id,omitempty" xml:"inner_domain_id"`
+	InnerDomainId *int32 `json:"inner_domain_id,omitempty"`
 
 	// 环境名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 是否是默认环境
-	IsDefault *bool `json:"is_default,omitempty" xml:"is_default"`
+	IsDefault *bool `json:"is_default,omitempty"`
 
 	// 组件名称
-	AppName *string `json:"app_name,omitempty" xml:"app_name"`
+	AppName *string `json:"app_name,omitempty"`
 
 	// 应用id
-	BusinessId *int64 `json:"business_id,omitempty" xml:"business_id"`
+	BusinessId *int64 `json:"business_id,omitempty"`
 
 	// 区域
-	Region *string `json:"region,omitempty" xml:"region"`
+	Region *string `json:"region,omitempty"`
 }
 
 func (o EnvNodeModel) String() string {

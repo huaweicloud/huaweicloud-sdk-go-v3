@@ -13,12 +13,12 @@ import (
 type DetachEipRequest struct {
 
 	// 图ID。
-	GraphId string `json:"graph_id" xml:"graph_id"`
+	GraphId string `json:"graph_id"`
 
 	// 图actionId
-	ActionId DetachEipRequestActionId `json:"action_id" xml:"action_id"`
+	ActionId DetachEipRequestActionId `json:"action_id"`
 
-	Body *UnbindEipReq `json:"body,omitempty" xml:"body"`
+	Body *UnbindEipReq `json:"body,omitempty"`
 }
 
 func (o DetachEipRequest) String() string {

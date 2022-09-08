@@ -10,10 +10,10 @@ import (
 type RestResponse struct {
 
 	// 结果码
-	ReturnCode int32 `json:"returnCode" xml:"returnCode"`
+	ReturnCode int32 `json:"returnCode"`
 
 	// 结果描述
-	ReturnDesc *string `json:"returnDesc,omitempty" xml:"returnDesc"`
+	ReturnDesc *string `json:"returnDesc,omitempty"`
 }
 
 func (o RestResponse) String() string {

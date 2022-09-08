@@ -10,10 +10,10 @@ import (
 type ShowTopicAccessPolicyRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// Topic名称。
-	TopicName string `json:"topic_name" xml:"topic_name"`
+	TopicName string `json:"topic_name"`
 }
 
 func (o ShowTopicAccessPolicyRequest) String() string {

@@ -10,16 +10,16 @@ import (
 type ServerExtendVolumeAttachment struct {
 
 	// 磁盘ID，格式为UUID。
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
 	// 删弹性云服务器时是否一并删除该磁盘。  - true：是 - false：否 微版本2.3及以上版本支持。
-	DeleteOnTermination string `json:"delete_on_termination" xml:"delete_on_termination"`
+	DeleteOnTermination string `json:"delete_on_termination"`
 
 	// 启动标识，“0”代表启动盘，“-1“代表非启动盘。
-	BootIndex *string `json:"bootIndex,omitempty" xml:"bootIndex"`
+	BootIndex *string `json:"bootIndex,omitempty"`
 
 	// 云硬盘挂载盘符，即磁盘挂载点。
-	Device string `json:"device" xml:"device"`
+	Device string `json:"device"`
 }
 
 func (o ServerExtendVolumeAttachment) String() string {

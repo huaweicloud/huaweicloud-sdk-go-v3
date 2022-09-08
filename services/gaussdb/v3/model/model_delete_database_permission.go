@@ -10,13 +10,13 @@ import (
 type DeleteDatabasePermission struct {
 
 	// 数据库用户名
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 主机地址
-	Host *string `json:"host,omitempty" xml:"host"`
+	Host *string `json:"host,omitempty"`
 
 	// 数据库列表
-	Databases []string `json:"databases" xml:"databases"`
+	Databases []string `json:"databases"`
 }
 
 func (o DeleteDatabasePermission) String() string {

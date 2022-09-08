@@ -10,19 +10,19 @@ import (
 type AttachEipResponse struct {
 
 	// 任务ID。
-	JobId *string `json:"job_id,omitempty" xml:"job_id"`
+	JobId *string `json:"job_id,omitempty"`
 
 	// 节点ID。
-	NodeId *string `json:"node_id,omitempty" xml:"node_id"`
+	NodeId *string `json:"node_id,omitempty"`
 
 	// 节点名称。
-	NodeName *string `json:"node_name,omitempty" xml:"node_name"`
+	NodeName *string `json:"node_name,omitempty"`
 
 	// 公网IP的ID。
-	PublicIpId *string `json:"public_ip_id,omitempty" xml:"public_ip_id"`
+	PublicIpId *string `json:"public_ip_id,omitempty"`
 
 	// 公网IP。
-	PublicIp       *string `json:"public_ip,omitempty" xml:"public_ip"`
+	PublicIp       *string `json:"public_ip,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

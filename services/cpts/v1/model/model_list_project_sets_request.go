@@ -10,10 +10,10 @@ import (
 type ListProjectSetsRequest struct {
 
 	// 查询偏移
-	Offset *int32 `json:"offset,omitempty" xml:"offset"`
+	Offset *int32 `json:"offset,omitempty"`
 
 	// 查询数量
-	Limit *int32 `json:"limit,omitempty" xml:"limit"`
+	Limit *int32 `json:"limit,omitempty"`
 }
 
 func (o ListProjectSetsRequest) String() string {

@@ -10,10 +10,10 @@ import (
 type StopJobRequest struct {
 
 	// 作业ID
-	JobId string `json:"job_id" xml:"job_id"`
+	JobId string `json:"job_id"`
 
 	// 停止作业触发savepoint
-	TriggerSavepoint *bool `json:"trigger_savepoint,omitempty" xml:"trigger_savepoint"`
+	TriggerSavepoint *bool `json:"trigger_savepoint,omitempty"`
 }
 
 func (o StopJobRequest) String() string {

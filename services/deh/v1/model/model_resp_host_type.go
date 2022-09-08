@@ -10,10 +10,10 @@ import (
 type RespHostType struct {
 
 	// 专属主机类型。
-	HostType string `json:"host_type" xml:"host_type"`
+	HostType string `json:"host_type"`
 
 	// 专属主机类型名字。
-	HostTypeName string `json:"host_type_name" xml:"host_type_name"`
+	HostTypeName string `json:"host_type_name"`
 }
 
 func (o RespHostType) String() string {

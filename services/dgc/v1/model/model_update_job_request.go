@@ -10,9 +10,9 @@ import (
 type UpdateJobRequest struct {
 
 	// 作业名称.
-	JobName string `json:"job_name" xml:"job_name"`
+	JobName string `json:"job_name"`
 
-	Body *JobInfo `json:"body,omitempty" xml:"body"`
+	Body *JobInfo `json:"body,omitempty"`
 }
 
 func (o UpdateJobRequest) String() string {

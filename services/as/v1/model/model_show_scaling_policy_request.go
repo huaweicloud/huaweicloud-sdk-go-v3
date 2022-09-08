@@ -10,7 +10,7 @@ import (
 type ShowScalingPolicyRequest struct {
 
 	// 伸缩组ID。
-	ScalingPolicyId string `json:"scaling_policy_id" xml:"scaling_policy_id"`
+	ScalingPolicyId string `json:"scaling_policy_id"`
 }
 
 func (o ShowScalingPolicyRequest) String() string {

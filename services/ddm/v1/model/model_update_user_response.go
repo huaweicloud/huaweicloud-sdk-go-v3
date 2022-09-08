@@ -10,7 +10,7 @@ import (
 type UpdateUserResponse struct {
 
 	// DDM实例帐号名称。
-	Name           *string `json:"name,omitempty" xml:"name"`
+	Name           *string `json:"name,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

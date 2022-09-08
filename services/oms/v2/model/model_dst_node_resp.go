@@ -10,13 +10,13 @@ import (
 type DstNodeResp struct {
 
 	// 目的端桶的名称。
-	Bucket *string `json:"bucket,omitempty" xml:"bucket"`
+	Bucket *string `json:"bucket,omitempty"`
 
 	// 目的端桶所处的区域。  请与Endpoint对应的区域保持一致。
-	Region *string `json:"region,omitempty" xml:"region"`
+	Region *string `json:"region,omitempty"`
 
 	// 目的端桶内路径前缀（拼接在对象key前面,组成新的key,拼接后不能超过1024个字符）。
-	SavePrefix *string `json:"save_prefix,omitempty" xml:"save_prefix"`
+	SavePrefix *string `json:"save_prefix,omitempty"`
 }
 
 func (o DstNodeResp) String() string {

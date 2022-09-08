@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type BatchCreateProtectedInstancesRequest struct {
-	Body *BatchCreateProtectedInstancesRequestBody `json:"body,omitempty" xml:"body"`
+	Body *BatchCreateProtectedInstancesRequestBody `json:"body,omitempty"`
 }
 
 func (o BatchCreateProtectedInstancesRequest) String() string {

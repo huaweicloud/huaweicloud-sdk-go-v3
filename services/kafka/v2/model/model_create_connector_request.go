@@ -10,9 +10,9 @@ import (
 type CreateConnectorRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
-	Body *CreateConnectorReq `json:"body,omitempty" xml:"body"`
+	Body *CreateConnectorReq `json:"body,omitempty"`
 }
 
 func (o CreateConnectorRequest) String() string {

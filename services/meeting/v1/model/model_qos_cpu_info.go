@@ -10,10 +10,10 @@ import (
 type QosCpuInfo struct {
 
 	// 华为云会议最大CPU使用率。
-	ClientCpuMax *[]QosDataElement `json:"client_cpu_max,omitempty" xml:"client_cpu_max"`
+	ClientCpuMax *[]QosDataElement `json:"client_cpu_max,omitempty"`
 
 	// 系统最大CPU使用率。
-	SystemCpuMax *[]QosDataElement `json:"system_cpu_max,omitempty" xml:"system_cpu_max"`
+	SystemCpuMax *[]QosDataElement `json:"system_cpu_max,omitempty"`
 }
 
 func (o QosCpuInfo) String() string {

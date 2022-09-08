@@ -10,10 +10,10 @@ import (
 type ShowResSceneRequest struct {
 
 	// 工作空间id。
-	WorkspaceId string `json:"workspace_id" xml:"workspace_id"`
+	WorkspaceId string `json:"workspace_id"`
 
 	// 场景id。
-	SceneId string `json:"scene_id" xml:"scene_id"`
+	SceneId string `json:"scene_id"`
 }
 
 func (o ShowResSceneRequest) String() string {

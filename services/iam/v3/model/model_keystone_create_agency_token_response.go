@@ -8,9 +8,9 @@ import (
 
 // Response Object
 type KeystoneCreateAgencyTokenResponse struct {
-	Token *AgencyTokenResult `json:"token,omitempty" xml:"token"`
+	Token *AgencyTokenResult `json:"token,omitempty"`
 
-	XSubjectToken  *string `json:"X-Subject-Token,omitempty" xml:"X-Subject-Token"`
+	XSubjectToken  *string `json:"X-Subject-Token,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

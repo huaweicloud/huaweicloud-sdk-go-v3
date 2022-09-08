@@ -10,19 +10,19 @@ import (
 type ShowInstanceConfigurationResponse struct {
 
 	// 引擎版本。
-	DatastoreVersion *string `json:"datastore_version,omitempty" xml:"datastore_version"`
+	DatastoreVersion *string `json:"datastore_version,omitempty"`
 
 	// 引擎名称。
-	DatastoreName *string `json:"datastore_name,omitempty" xml:"datastore_name"`
+	DatastoreName *string `json:"datastore_name,omitempty"`
 
 	// 创建时间，格式为\"yyyy-MM-dd HH:mm:ss\"。
-	Created *string `json:"created,omitempty" xml:"created"`
+	Created *string `json:"created,omitempty"`
 
 	// 更新时间，格式为\"yyyy-MM-ddHH:mm:ss\"。
-	Updated *string `json:"updated,omitempty" xml:"updated"`
+	Updated *string `json:"updated,omitempty"`
 
 	// 参数对象，用户基于默认参数模板自定义的参数配置。
-	ConfigurationParameters *[]ConfigurationParameter `json:"configuration_parameters,omitempty" xml:"configuration_parameters"`
+	ConfigurationParameters *[]ConfigurationParameter `json:"configuration_parameters,omitempty"`
 	HttpStatusCode          int                       `json:"-"`
 }
 

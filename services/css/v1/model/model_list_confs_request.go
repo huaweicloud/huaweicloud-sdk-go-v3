@@ -10,7 +10,7 @@ import (
 type ListConfsRequest struct {
 
 	// 指定查询集群ID。
-	ClusterId string `json:"cluster_id" xml:"cluster_id"`
+	ClusterId string `json:"cluster_id"`
 }
 
 func (o ListConfsRequest) String() string {

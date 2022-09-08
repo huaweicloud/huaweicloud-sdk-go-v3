@@ -10,10 +10,10 @@ import (
 type RetryInfo struct {
 
 	// 任务ID
-	JobId string `json:"job_id" xml:"job_id"`
+	JobId string `json:"job_id"`
 
 	// 再编辑之后启动，必填为true。
-	IsSyncReEdit *bool `json:"is_sync_re_edit,omitempty" xml:"is_sync_re_edit"`
+	IsSyncReEdit *bool `json:"is_sync_re_edit,omitempty"`
 }
 
 func (o RetryInfo) String() string {

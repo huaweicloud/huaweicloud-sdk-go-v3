@@ -10,10 +10,10 @@ import (
 type RunCodehubTemplateJobResponse struct {
 
 	// 任务id。
-	JobId *string `json:"job_id,omitempty" xml:"job_id"`
+	JobId *string `json:"job_id,omitempty"`
 
 	// 文件列表。
-	FileList       *[]FileTreeNode `json:"file_list,omitempty" xml:"file_list"`
+	FileList       *[]FileTreeNode `json:"file_list,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }
 

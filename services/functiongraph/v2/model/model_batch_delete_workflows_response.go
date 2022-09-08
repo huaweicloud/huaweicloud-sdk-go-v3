@@ -10,10 +10,10 @@ import (
 type BatchDeleteWorkflowsResponse struct {
 
 	// 成功流程URN列表
-	Success *[]string `json:"success,omitempty" xml:"success"`
+	Success *[]string `json:"success,omitempty"`
 
 	// 错误流程详情
-	Fail           *[]OperateErrorInfo `json:"fail,omitempty" xml:"fail"`
+	Fail           *[]OperateErrorInfo `json:"fail,omitempty"`
 	HttpStatusCode int                 `json:"-"`
 }
 

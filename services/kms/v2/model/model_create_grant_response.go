@@ -10,7 +10,7 @@ import (
 type CreateGrantResponse struct {
 
 	// 授权ID，64字节。
-	GrantId        *string `json:"grant_id,omitempty" xml:"grant_id"`
+	GrantId        *string `json:"grant_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

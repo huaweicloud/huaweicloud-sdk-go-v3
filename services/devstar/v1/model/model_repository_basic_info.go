@@ -9,22 +9,22 @@ import (
 type RepositoryBasicInfo struct {
 
 	// 仓库uuid
-	Uuid *string `json:"uuid,omitempty" xml:"uuid"`
+	Uuid *string `json:"uuid,omitempty"`
 
 	// 仓库id
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 仓库名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 仓库git的https下载地址
-	HttpsUrl *string `json:"https_url,omitempty" xml:"https_url"`
+	HttpsUrl *string `json:"https_url,omitempty"`
 
 	// 仓库git的ssh下载地址
-	SshUrl *string `json:"ssh_url,omitempty" xml:"ssh_url"`
+	SshUrl *string `json:"ssh_url,omitempty"`
 
 	// 仓库codehub内容浏览页面地址
-	WebUrl *string `json:"web_url,omitempty" xml:"web_url"`
+	WebUrl *string `json:"web_url,omitempty"`
 }
 
 func (o RepositoryBasicInfo) String() string {

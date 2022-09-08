@@ -10,10 +10,10 @@ import (
 type QaBotAnswers struct {
 
 	// 问答机器人回复。
-	Answers *[]QaBotAnswer `json:"answers,omitempty" xml:"answers"`
+	Answers *[]QaBotAnswer `json:"answers,omitempty"`
 
 	// 请求ID。
-	RequestId string `json:"request_id" xml:"request_id"`
+	RequestId string `json:"request_id"`
 }
 
 func (o QaBotAnswers) String() string {

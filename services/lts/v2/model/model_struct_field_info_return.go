@@ -9,19 +9,19 @@ import (
 type StructFieldInfoReturn struct {
 
 	// 字段名称
-	FieldName *string `json:"fieldName,omitempty" xml:"fieldName"`
+	FieldName *string `json:"fieldName,omitempty"`
 
 	// 字段数据类型
-	Type *string `json:"type,omitempty" xml:"type"`
+	Type *string `json:"type,omitempty"`
 
 	// 字段内容
-	Content *string `json:"content,omitempty" xml:"content"`
+	Content *string `json:"content,omitempty"`
 
 	// 结构化方式
-	IsAnalysis *bool `json:"isAnalysis,omitempty" xml:"isAnalysis"`
+	IsAnalysis *bool `json:"isAnalysis,omitempty"`
 
 	// 序号
-	Index *int32 `json:"index,omitempty" xml:"index"`
+	Index *int32 `json:"index,omitempty"`
 }
 
 func (o StructFieldInfoReturn) String() string {

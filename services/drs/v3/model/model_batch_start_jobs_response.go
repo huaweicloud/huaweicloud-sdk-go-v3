@@ -10,10 +10,10 @@ import (
 type BatchStartJobsResponse struct {
 
 	// 批量启动实时灾备任务返回列表。
-	Results *[]StartJobResp `json:"results,omitempty" xml:"results"`
+	Results *[]StartJobResp `json:"results,omitempty"`
 
 	// 总数。
-	Count          *int32 `json:"count,omitempty" xml:"count"`
+	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

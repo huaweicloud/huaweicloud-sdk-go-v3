@@ -9,7 +9,7 @@ import (
 type ListServerGroupsPageInfoResult struct {
 
 	//
-	NextMarker *string `json:"next_marker,omitempty" xml:"next_marker"`
+	NextMarker *string `json:"next_marker,omitempty"`
 }
 
 func (o ListServerGroupsPageInfoResult) String() string {

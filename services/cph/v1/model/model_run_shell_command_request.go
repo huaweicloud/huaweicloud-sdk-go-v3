@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RunShellCommandRequest struct {
-	Body *RunShellCommandRequestBody `json:"body,omitempty" xml:"body"`
+	Body *RunShellCommandRequestBody `json:"body,omitempty"`
 }
 
 func (o RunShellCommandRequest) String() string {

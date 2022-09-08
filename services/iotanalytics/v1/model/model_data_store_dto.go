@@ -10,13 +10,13 @@ import (
 type DataStoreDto struct {
 
 	// 存储ID
-	DataStoreId *string `json:"data_store_id,omitempty" xml:"data_store_id"`
+	DataStoreId *string `json:"data_store_id,omitempty"`
 
 	// 存储组ID
-	DataStoreGroupId *string `json:"data_store_group_id,omitempty" xml:"data_store_group_id"`
+	DataStoreGroupId *string `json:"data_store_group_id,omitempty"`
 
 	// 产品ID
-	ProductId *string `json:"product_id,omitempty" xml:"product_id"`
+	ProductId *string `json:"product_id,omitempty"`
 }
 
 func (o DataStoreDto) String() string {

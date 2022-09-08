@@ -9,7 +9,7 @@ import (
 type ValidationResult struct {
 
 	// 创建或更新连接校验结果，请参见linkConfig参数说明
-	LinkConfig *[]ValidationLinkConfig `json:"linkConfig,omitempty" xml:"linkConfig"`
+	LinkConfig *[]ValidationLinkConfig `json:"linkConfig,omitempty"`
 }
 
 func (o ValidationResult) String() string {

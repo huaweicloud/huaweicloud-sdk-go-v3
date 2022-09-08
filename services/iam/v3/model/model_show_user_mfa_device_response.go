@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowUserMfaDeviceResponse struct {
-	VirtualMfaDevice *MfaDeviceResult `json:"virtual_mfa_device,omitempty" xml:"virtual_mfa_device"`
+	VirtualMfaDevice *MfaDeviceResult `json:"virtual_mfa_device,omitempty"`
 	HttpStatusCode   int              `json:"-"`
 }
 

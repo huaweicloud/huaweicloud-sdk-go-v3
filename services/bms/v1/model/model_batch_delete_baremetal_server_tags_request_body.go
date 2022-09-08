@@ -13,10 +13,10 @@ import (
 type BatchDeleteBaremetalServerTagsRequestBody struct {
 
 	// 操作标识（仅支持小写）：delete（删除）。
-	Action BatchDeleteBaremetalServerTagsRequestBodyAction `json:"action" xml:"action"`
+	Action BatchDeleteBaremetalServerTagsRequestBodyAction `json:"action"`
 
 	// 标签列表。
-	Tags []BaremetalServerTag `json:"tags" xml:"tags"`
+	Tags []BaremetalServerTag `json:"tags"`
 }
 
 func (o BatchDeleteBaremetalServerTagsRequestBody) String() string {

@@ -10,9 +10,9 @@ import (
 type Authentication struct {
 
 	// 集群认证模式。   - kubernetes 1.11及之前版本的集群支持“x509”、“rbac”和“authenticating_proxy”，默认取值为“x509”。  - kubernetes 1.13及以上版本的集群支持“rbac”和“authenticating_proxy”，默认取值为“rbac”。
-	Mode *string `json:"mode,omitempty" xml:"mode"`
+	Mode *string `json:"mode,omitempty"`
 
-	AuthenticatingProxy *AuthenticatingProxy `json:"authenticatingProxy,omitempty" xml:"authenticatingProxy"`
+	AuthenticatingProxy *AuthenticatingProxy `json:"authenticatingProxy,omitempty"`
 }
 
 func (o Authentication) String() string {

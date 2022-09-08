@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RunAspectSentimentAdvanceRequest struct {
-	Body *AspectSentimentAdvanceRequest `json:"body,omitempty" xml:"body"`
+	Body *AspectSentimentAdvanceRequest `json:"body,omitempty"`
 }
 
 func (o RunAspectSentimentAdvanceRequest) String() string {

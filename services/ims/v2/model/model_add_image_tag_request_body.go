@@ -8,7 +8,7 @@ import (
 
 // 请求参数
 type AddImageTagRequestBody struct {
-	Tag *ResourceTag `json:"tag" xml:"tag"`
+	Tag *ResourceTag `json:"tag"`
 }
 
 func (o AddImageTagRequestBody) String() string {

@@ -10,10 +10,10 @@ import (
 type DeleteImageTagRequest struct {
 
 	// 镜像ID。
-	ImageId string `json:"image_id" xml:"image_id"`
+	ImageId string `json:"image_id"`
 
 	// 要删除的标签的键。
-	Key string `json:"key" xml:"key"`
+	Key string `json:"key"`
 }
 
 func (o DeleteImageTagRequest) String() string {

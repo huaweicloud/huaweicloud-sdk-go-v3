@@ -7,7 +7,7 @@ import (
 )
 
 type UpdateEdgeSiteRequestBody struct {
-	EdgeSite *UpdateEdgeSite `json:"edge_site" xml:"edge_site"`
+	EdgeSite *UpdateEdgeSite `json:"edge_site"`
 }
 
 func (o UpdateEdgeSiteRequestBody) String() string {

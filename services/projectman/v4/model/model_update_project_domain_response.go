@@ -10,10 +10,10 @@ import (
 type UpdateProjectDomainResponse struct {
 
 	// 领域名称
-	DomainName *string `json:"domain_name,omitempty" xml:"domain_name"`
+	DomainName *string `json:"domain_name,omitempty"`
 
 	// 领域id
-	DomainId       *string `json:"domain_id,omitempty" xml:"domain_id"`
+	DomainId       *string `json:"domain_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

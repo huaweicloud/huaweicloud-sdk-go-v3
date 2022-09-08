@@ -10,10 +10,10 @@ import (
 type CreateTestCaseInPlanRequestBody struct {
 
 	// 注册测试类型服务接口返回的服务id
-	ServiceId int32 `json:"service_id" xml:"service_id"`
+	ServiceId int32 `json:"service_id"`
 
 	// 计划下包含的用例个数，数组长度小于50个，只能包含一种测试类型
-	TestcaseIdList []string `json:"testcase_id_list" xml:"testcase_id_list"`
+	TestcaseIdList []string `json:"testcase_id_list"`
 }
 
 func (o CreateTestCaseInPlanRequestBody) String() string {

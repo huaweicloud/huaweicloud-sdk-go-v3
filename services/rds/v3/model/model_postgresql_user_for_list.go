@@ -10,13 +10,13 @@ import (
 type PostgresqlUserForList struct {
 
 	// 帐号名。
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 用户的权限属性。
-	Attributes *interface{} `json:"attributes,omitempty" xml:"attributes"`
+	Attributes *interface{} `json:"attributes,omitempty"`
 
 	// 用户的默认权限。
-	Memberof *[]string `json:"memberof,omitempty" xml:"memberof"`
+	Memberof *[]string `json:"memberof,omitempty"`
 }
 
 func (o PostgresqlUserForList) String() string {

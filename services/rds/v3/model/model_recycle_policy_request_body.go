@@ -7,7 +7,7 @@ import (
 )
 
 type RecyclePolicyRequestBody struct {
-	RecyclePolicy *RecyclePolicy `json:"recycle_policy" xml:"recycle_policy"`
+	RecyclePolicy *RecyclePolicy `json:"recycle_policy"`
 }
 
 func (o RecyclePolicyRequestBody) String() string {

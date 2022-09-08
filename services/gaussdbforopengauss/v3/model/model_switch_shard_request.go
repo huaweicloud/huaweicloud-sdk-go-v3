@@ -13,12 +13,12 @@ import (
 type SwitchShardRequest struct {
 
 	// 语言
-	XLanguage *SwitchShardRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *SwitchShardRequestXLanguage `json:"X-Language,omitempty"`
 
 	// 实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
-	Body *SwitchShardRequestBody `json:"body,omitempty" xml:"body"`
+	Body *SwitchShardRequestBody `json:"body,omitempty"`
 }
 
 func (o SwitchShardRequest) String() string {

@@ -13,17 +13,17 @@ import (
 type HandleNotificationRequestBody struct {
 
 	// 邀请目标通道
-	ChannelName string `json:"channel_name" xml:"channel_name"`
+	ChannelName string `json:"channel_name"`
 
 	// 处理邀请
-	Status HandleNotificationRequestBodyStatus `json:"status" xml:"status"`
+	Status HandleNotificationRequestBodyStatus `json:"status"`
 
-	InvitorInfo *HandleNotificationInvitor `json:"invitor_info" xml:"invitor_info"`
+	InvitorInfo *HandleNotificationInvitor `json:"invitor_info"`
 
-	InviteeInfo *HandleNotificationInvitee `json:"invitee_info,omitempty" xml:"invitee_info"`
+	InviteeInfo *HandleNotificationInvitee `json:"invitee_info,omitempty"`
 
 	// 加入联盟的组织，同意加入时必填
-	InvitedOrgs *[]HandleNotificationOrg `json:"invited_orgs,omitempty" xml:"invited_orgs"`
+	InvitedOrgs *[]HandleNotificationOrg `json:"invited_orgs,omitempty"`
 }
 
 func (o HandleNotificationRequestBody) String() string {

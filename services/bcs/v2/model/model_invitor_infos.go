@@ -10,13 +10,13 @@ import (
 type InvitorInfos struct {
 
 	// 邀请方租户ID
-	TenantId string `json:"tenant_id" xml:"tenant_id"`
+	TenantId string `json:"tenant_id"`
 
 	// 邀请方项目ID
-	ProjectId string `json:"project_id" xml:"project_id"`
+	ProjectId string `json:"project_id"`
 
 	// 邀请方BCS服务实例ID
-	BlockchainId string `json:"blockchain_id" xml:"blockchain_id"`
+	BlockchainId string `json:"blockchain_id"`
 }
 
 func (o InvitorInfos) String() string {

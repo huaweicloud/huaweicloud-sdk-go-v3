@@ -10,16 +10,16 @@ import (
 type NodePool struct {
 
 	// API类型，固定值“NodePool”。
-	Kind string `json:"kind" xml:"kind"`
+	Kind string `json:"kind"`
 
 	// API版本，固定值“v3”。
-	ApiVersion string `json:"apiVersion" xml:"apiVersion"`
+	ApiVersion string `json:"apiVersion"`
 
-	Metadata *NodePoolMetadata `json:"metadata" xml:"metadata"`
+	Metadata *NodePoolMetadata `json:"metadata"`
 
-	Spec *NodePoolSpec `json:"spec" xml:"spec"`
+	Spec *NodePoolSpec `json:"spec"`
 
-	Status *NodePoolStatus `json:"status,omitempty" xml:"status"`
+	Status *NodePoolStatus `json:"status,omitempty"`
 }
 
 func (o NodePool) String() string {

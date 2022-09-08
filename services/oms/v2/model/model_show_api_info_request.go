@@ -10,7 +10,7 @@ import (
 type ShowApiInfoRequest struct {
 
 	// 版本信息。
-	Version string `json:"version" xml:"version"`
+	Version string `json:"version"`
 }
 
 func (o ShowApiInfoRequest) String() string {

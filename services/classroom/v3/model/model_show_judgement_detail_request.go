@@ -10,7 +10,7 @@ import (
 type ShowJudgementDetailRequest struct {
 
 	// 判题任务ID
-	JudgementId string `json:"judgement_id" xml:"judgement_id"`
+	JudgementId string `json:"judgement_id"`
 }
 
 func (o ShowJudgementDetailRequest) String() string {

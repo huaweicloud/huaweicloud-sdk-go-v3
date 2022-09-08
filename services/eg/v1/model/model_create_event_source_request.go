@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateEventSourceRequest struct {
-	Body *CustomizeSourceCreateReq `json:"body,omitempty" xml:"body"`
+	Body *CustomizeSourceCreateReq `json:"body,omitempty"`
 }
 
 func (o CreateEventSourceRequest) String() string {

@@ -10,7 +10,7 @@ import (
 type DeleteMigrateTaskRequest struct {
 
 	// 删除的迁移任务ID列表。
-	TaskIdList []string `json:"task_id_list" xml:"task_id_list"`
+	TaskIdList []string `json:"task_id_list"`
 }
 
 func (o DeleteMigrateTaskRequest) String() string {

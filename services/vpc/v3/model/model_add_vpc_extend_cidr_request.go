@@ -10,9 +10,9 @@ import (
 type AddVpcExtendCidrRequest struct {
 
 	// VPC资源ID
-	VpcId string `json:"vpc_id" xml:"vpc_id"`
+	VpcId string `json:"vpc_id"`
 
-	Body *AddVpcExtendCidrRequestBody `json:"body,omitempty" xml:"body"`
+	Body *AddVpcExtendCidrRequestBody `json:"body,omitempty"`
 }
 
 func (o AddVpcExtendCidrRequest) String() string {

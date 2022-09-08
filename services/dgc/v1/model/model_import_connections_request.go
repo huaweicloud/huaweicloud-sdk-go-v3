@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ImportConnectionsRequest struct {
-	Body *ImportConnectionReq `json:"body,omitempty" xml:"body"`
+	Body *ImportConnectionReq `json:"body,omitempty"`
 }
 
 func (o ImportConnectionsRequest) String() string {

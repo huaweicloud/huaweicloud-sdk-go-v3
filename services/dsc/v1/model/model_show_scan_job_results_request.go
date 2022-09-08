@@ -13,22 +13,22 @@ import (
 type ShowScanJobResultsRequest struct {
 
 	// 任务ID
-	JobId string `json:"job_id" xml:"job_id"`
+	JobId string `json:"job_id"`
 
 	// 页码
-	Offset *int32 `json:"offset,omitempty" xml:"offset"`
+	Offset *int32 `json:"offset,omitempty"`
 
 	// 分页大小
-	Limit *int32 `json:"limit,omitempty" xml:"limit"`
+	Limit *int32 `json:"limit,omitempty"`
 
 	// 资产类型
-	Type *ShowScanJobResultsRequestType `json:"type,omitempty" xml:"type"`
+	Type *ShowScanJobResultsRequestType `json:"type,omitempty"`
 
 	// 预留，待启用
-	StartTime *string `json:"start_time,omitempty" xml:"start_time"`
+	StartTime *string `json:"start_time,omitempty"`
 
 	// 预留，待启用
-	EndTime *string `json:"end_time,omitempty" xml:"end_time"`
+	EndTime *string `json:"end_time,omitempty"`
 }
 
 func (o ShowScanJobResultsRequest) String() string {

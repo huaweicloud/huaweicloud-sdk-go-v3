@@ -9,10 +9,10 @@ import (
 type AttackTypeClassificationItem struct {
 
 	// AttackTypeItem的总数量
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 
 	// AttackTypeItem详细信息
-	Items *[]AttackTypeItem `json:"items,omitempty" xml:"items"`
+	Items *[]AttackTypeItem `json:"items,omitempty"`
 }
 
 func (o AttackTypeClassificationItem) String() string {

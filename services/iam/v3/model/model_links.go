@@ -10,13 +10,13 @@ import (
 type Links struct {
 
 	// 资源链接地址。
-	Self string `json:"self" xml:"self"`
+	Self string `json:"self"`
 
 	// 前一邻接资源链接地址。
-	Previous string `json:"previous" xml:"previous"`
+	Previous string `json:"previous"`
 
 	// 后一邻接资源链接地址。
-	Next string `json:"next" xml:"next"`
+	Next string `json:"next"`
 }
 
 func (o Links) String() string {

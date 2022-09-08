@@ -10,7 +10,7 @@ import (
 type ShowAlarmResponse struct {
 
 	// 告警对象列表。
-	MetricAlarms   *[]MetricAlarms `json:"metric_alarms,omitempty" xml:"metric_alarms"`
+	MetricAlarms   *[]MetricAlarms `json:"metric_alarms,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }
 

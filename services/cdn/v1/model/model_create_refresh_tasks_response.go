@@ -10,7 +10,7 @@ import (
 type CreateRefreshTasksResponse struct {
 
 	// 任务ID
-	RefreshTask    *string `json:"refresh_task,omitempty" xml:"refresh_task"`
+	RefreshTask    *string `json:"refresh_task,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

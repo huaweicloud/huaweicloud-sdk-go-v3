@@ -9,7 +9,7 @@ import (
 type CdmCreateAndUpdateLinkReq struct {
 
 	// 连接列表，请参见links数据结构说明
-	Links []Links `json:"links" xml:"links"`
+	Links []Links `json:"links"`
 }
 
 func (o CdmCreateAndUpdateLinkReq) String() string {

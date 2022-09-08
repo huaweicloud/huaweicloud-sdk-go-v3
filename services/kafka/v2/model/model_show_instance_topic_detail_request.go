@@ -10,10 +10,10 @@ import (
 type ShowInstanceTopicDetailRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// Topic名称。
-	Topic string `json:"topic" xml:"topic"`
+	Topic string `json:"topic"`
 }
 
 func (o ShowInstanceTopicDetailRequest) String() string {

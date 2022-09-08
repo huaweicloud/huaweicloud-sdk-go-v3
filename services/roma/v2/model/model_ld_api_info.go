@@ -12,58 +12,58 @@ import (
 type LdApiInfo struct {
 
 	// 后端API名称。  支持汉字、英文、数字、中划线、下划线、点、斜杠、中英文格式下的小括号和冒号、中文格式下的顿号，且只能以英文、汉字和数字开头。
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 后端API请求路径。  支持英文、数字、中划线、下划线、点等，且以斜杠（/）开头。
-	Path string `json:"path" xml:"path"`
+	Path string `json:"path"`
 
 	// 后端API请求方法。  支持GET、PUT、POST、DELETE
-	Method LdApiInfoMethod `json:"method" xml:"method"`
+	Method LdApiInfoMethod `json:"method"`
 
 	// 后端API描述。  不支持<，>字符
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 后端API版本  支持英文，数字，下划线，中划线，点。
-	Version string `json:"version" xml:"version"`
+	Version string `json:"version"`
 
 	// 后端API返回类型
-	ContentType LdApiInfoContentType `json:"content_type" xml:"content_type"`
+	ContentType LdApiInfoContentType `json:"content_type"`
 
 	// 后端API为签名认证时绑定的签名密钥编号
-	ApiSignatureId *string `json:"api_signature_id,omitempty" xml:"api_signature_id"`
+	ApiSignatureId *string `json:"api_signature_id,omitempty"`
 
 	// 后端API归属的集成应用编号
-	RomaAppId string `json:"roma_app_id" xml:"roma_app_id"`
+	RomaAppId string `json:"roma_app_id"`
 
 	// API响应信息是否格式化  true： 对响应信息进行格式化  false：对响应信息格式化不进行格式化
-	ReturnFormat *bool `json:"return_format,omitempty" xml:"return_format"`
+	ReturnFormat *bool `json:"return_format,omitempty"`
 
 	// 后端API的请求参数列表
-	Parameters *[]LdApiParameter `json:"parameters,omitempty" xml:"parameters"`
+	Parameters *[]LdApiParameter `json:"parameters,omitempty"`
 
 	// 后端API编号
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 后端API所属实例编号
-	Instance *string `json:"instance,omitempty" xml:"instance"`
+	Instance *string `json:"instance,omitempty"`
 
 	// 后端API类型： - data：数据后端 - function： 函数后端
-	Type *LdApiInfoType `json:"type,omitempty" xml:"type"`
+	Type *LdApiInfoType `json:"type,omitempty"`
 
 	// 后端API状态： - 1：待开发 - 3：开发中 - 4：已部署
-	Status *LdApiInfoStatus `json:"status,omitempty" xml:"status"`
+	Status *LdApiInfoStatus `json:"status,omitempty"`
 
 	// 后端API创建时间
-	CreatedTime *sdktime.SdkTime `json:"created_time,omitempty" xml:"created_time"`
+	CreatedTime *sdktime.SdkTime `json:"created_time,omitempty"`
 
 	// 后端API修改时间
-	ModifiedTime *sdktime.SdkTime `json:"modified_time,omitempty" xml:"modified_time"`
+	ModifiedTime *sdktime.SdkTime `json:"modified_time,omitempty"`
 
 	// 后端API脚本信息
-	Scripts *[]LdApiScript `json:"scripts,omitempty" xml:"scripts"`
+	Scripts *[]LdApiScript `json:"scripts,omitempty"`
 
 	// 后端API归属的集成应用名称
-	RomaAppName *string `json:"roma_app_name,omitempty" xml:"roma_app_name"`
+	RomaAppName *string `json:"roma_app_name,omitempty"`
 }
 
 func (o LdApiInfo) String() string {

@@ -8,9 +8,9 @@ import (
 
 //
 type DataConfig struct {
-	Offline *Offline `json:"offline" xml:"offline"`
+	Offline *Offline `json:"offline"`
 
-	Nearline *Nearline `json:"nearline,omitempty" xml:"nearline"`
+	Nearline *Nearline `json:"nearline,omitempty"`
 }
 
 func (o DataConfig) String() string {

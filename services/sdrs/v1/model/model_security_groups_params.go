@@ -10,7 +10,7 @@ import (
 type SecurityGroupsParams struct {
 
 	// 安全组的ID。
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 }
 
 func (o SecurityGroupsParams) String() string {

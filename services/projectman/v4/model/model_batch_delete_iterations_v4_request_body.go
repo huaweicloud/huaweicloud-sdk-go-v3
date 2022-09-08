@@ -9,7 +9,7 @@ import (
 type BatchDeleteIterationsV4RequestBody struct {
 
 	// 迭代的id
-	IterationIds []int32 `json:"iteration_ids" xml:"iteration_ids"`
+	IterationIds []int32 `json:"iteration_ids"`
 }
 
 func (o BatchDeleteIterationsV4RequestBody) String() string {

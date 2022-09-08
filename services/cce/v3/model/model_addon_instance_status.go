@@ -13,18 +13,18 @@ import (
 type AddonInstanceStatus struct {
 
 	// 插件实例状态
-	Status AddonInstanceStatusStatus `json:"status" xml:"status"`
+	Status AddonInstanceStatusStatus `json:"status"`
 
 	// 插件安装失败原因
-	Reason string `json:"Reason" xml:"Reason"`
+	Reason string `json:"Reason"`
 
 	// 安装错误详情
-	Message string `json:"message" xml:"message"`
+	Message string `json:"message"`
 
 	// 此插件版本，支持升级的集群版本
-	TargetVersions *[]string `json:"targetVersions,omitempty" xml:"targetVersions"`
+	TargetVersions *[]string `json:"targetVersions,omitempty"`
 
-	CurrentVersion *Versions `json:"currentVersion" xml:"currentVersion"`
+	CurrentVersion *Versions `json:"currentVersion"`
 }
 
 func (o AddonInstanceStatus) String() string {

@@ -7,10 +7,10 @@ import (
 )
 
 type RemoveNodesSpec struct {
-	Login *Login `json:"login" xml:"login"`
+	Login *Login `json:"login"`
 
 	// 待操作节点列表
-	Nodes []NodeItem `json:"nodes" xml:"nodes"`
+	Nodes []NodeItem `json:"nodes"`
 }
 
 func (o RemoveNodesSpec) String() string {

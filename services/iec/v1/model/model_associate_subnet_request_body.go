@@ -10,7 +10,7 @@ import (
 type AssociateSubnetRequestBody struct {
 
 	// 子网ID
-	SubnetIds []string `json:"subnet_ids" xml:"subnet_ids"`
+	SubnetIds []string `json:"subnet_ids"`
 }
 
 func (o AssociateSubnetRequestBody) String() string {

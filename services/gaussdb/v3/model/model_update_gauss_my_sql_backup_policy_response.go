@@ -10,13 +10,13 @@ import (
 type UpdateGaussMySqlBackupPolicyResponse struct {
 
 	// 状态信息
-	Status *string `json:"status,omitempty" xml:"status"`
+	Status *string `json:"status,omitempty"`
 
 	// 实例ID
-	InstanceId *string `json:"instance_id,omitempty" xml:"instance_id"`
+	InstanceId *string `json:"instance_id,omitempty"`
 
 	// 实例名称
-	InstanceName   *string `json:"instance_name,omitempty" xml:"instance_name"`
+	InstanceName   *string `json:"instance_name,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -10,7 +10,7 @@ import (
 type CreateLogStreamResponse struct {
 
 	// 创建的日志流的Id。
-	LogStreamId    *string `json:"log_stream_id,omitempty" xml:"log_stream_id"`
+	LogStreamId    *string `json:"log_stream_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

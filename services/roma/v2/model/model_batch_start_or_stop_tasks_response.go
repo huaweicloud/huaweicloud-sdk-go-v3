@@ -10,16 +10,16 @@ import (
 type BatchStartOrStopTasksResponse struct {
 
 	// 成功的个数
-	SuccessCount *int32 `json:"success_count,omitempty" xml:"success_count"`
+	SuccessCount *int32 `json:"success_count,omitempty"`
 
 	// 失败的个数
-	FailureCount *int32 `json:"failure_count,omitempty" xml:"failure_count"`
+	FailureCount *int32 `json:"failure_count,omitempty"`
 
 	// 失败的详情
-	Failure *[]TaskBeanFacade `json:"failure,omitempty" xml:"failure"`
+	Failure *[]TaskBeanFacade `json:"failure,omitempty"`
 
 	// 成功的任务信息
-	Success        *[]TaskBeanFacade `json:"success,omitempty" xml:"success"`
+	Success        *[]TaskBeanFacade `json:"success,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }
 

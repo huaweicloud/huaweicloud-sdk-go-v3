@@ -13,18 +13,18 @@ import (
 type Output struct {
 
 	// 协议类型。  取值如下： - hls - dash - mp4
-	PlayType OutputPlayType `json:"play_type" xml:"play_type"`
+	PlayType OutputPlayType `json:"play_type"`
 
 	// 播放URL。
-	Url string `json:"url" xml:"url"`
+	Url string `json:"url"`
 
 	// 标记流是否已被加密。  取值如下： - 0：表示未加密。 - 1：表示已被加密。
-	Encrypted *int32 `json:"encrypted,omitempty" xml:"encrypted"`
+	Encrypted *int32 `json:"encrypted,omitempty"`
 
 	// 清晰度。  取值如下： - FLUENT：流畅 - SD：标清 - HD：高清 - FULL_HD：超清
-	Quality *OutputQuality `json:"quality,omitempty" xml:"quality"`
+	Quality *OutputQuality `json:"quality,omitempty"`
 
-	MetaData *MetaData `json:"meta_data" xml:"meta_data"`
+	MetaData *MetaData `json:"meta_data"`
 }
 
 func (o Output) String() string {

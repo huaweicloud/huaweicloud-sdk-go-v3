@@ -10,22 +10,22 @@ import (
 type PolicyFilterDefinition struct {
 
 	// 区域ID
-	RegionId *string `json:"region_id,omitempty" xml:"region_id"`
+	RegionId *string `json:"region_id,omitempty"`
 
 	// 云服务名称
-	ResourceProvider *string `json:"resource_provider,omitempty" xml:"resource_provider"`
+	ResourceProvider *string `json:"resource_provider,omitempty"`
 
 	// 资源类型
-	ResourceType *string `json:"resource_type,omitempty" xml:"resource_type"`
+	ResourceType *string `json:"resource_type,omitempty"`
 
 	// 资源ID
-	ResourceId *string `json:"resource_id,omitempty" xml:"resource_id"`
+	ResourceId *string `json:"resource_id,omitempty"`
 
 	// 标签键
-	TagKey *string `json:"tag_key,omitempty" xml:"tag_key"`
+	TagKey *string `json:"tag_key,omitempty"`
 
 	// 标签值
-	TagValue *string `json:"tag_value,omitempty" xml:"tag_value"`
+	TagValue *string `json:"tag_value,omitempty"`
 }
 
 func (o PolicyFilterDefinition) String() string {

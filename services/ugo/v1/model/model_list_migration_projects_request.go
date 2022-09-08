@@ -10,10 +10,10 @@ import (
 type ListMigrationProjectsRequest struct {
 
 	// 分页查询的偏移量。
-	Offset *int32 `json:"offset,omitempty" xml:"offset"`
+	Offset *int32 `json:"offset,omitempty"`
 
 	// 每页显示的条目数量。
-	Limit *int32 `json:"limit,omitempty" xml:"limit"`
+	Limit *int32 `json:"limit,omitempty"`
 }
 
 func (o ListMigrationProjectsRequest) String() string {

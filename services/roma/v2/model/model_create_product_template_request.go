@@ -10,9 +10,9 @@ import (
 type CreateProductTemplateRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
-	Body *CreateProductTemplateRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreateProductTemplateRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateProductTemplateRequest) String() string {

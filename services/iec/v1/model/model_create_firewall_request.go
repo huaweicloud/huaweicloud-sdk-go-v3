@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateFirewallRequest struct {
-	Body *CreateFirewallRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreateFirewallRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateFirewallRequest) String() string {

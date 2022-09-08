@@ -9,7 +9,7 @@ import (
 type DownloadKieReqBody struct {
 
 	// 配置ID的集合
-	Ids []string `json:"ids" xml:"ids"`
+	Ids []string `json:"ids"`
 }
 
 func (o DownloadKieReqBody) String() string {

@@ -10,12 +10,12 @@ import (
 type BatchAssociateNaToNodesRequest struct {
 
 	// 北向数据接收端点ID
-	NaId string `json:"na_id" xml:"na_id"`
+	NaId string `json:"na_id"`
 
 	// 批量删除delete，批量添加add
-	Action string `json:"action" xml:"action"`
+	Action string `json:"action"`
 
-	Body *AuthorizeNa2NodesRequestDto `json:"body,omitempty" xml:"body"`
+	Body *AuthorizeNa2NodesRequestDto `json:"body,omitempty"`
 }
 
 func (o BatchAssociateNaToNodesRequest) String() string {

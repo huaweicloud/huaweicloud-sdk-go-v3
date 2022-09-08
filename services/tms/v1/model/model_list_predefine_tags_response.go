@@ -10,13 +10,13 @@ import (
 type ListPredefineTagsResponse struct {
 
 	// 分页位置标识（索引）。
-	Marker *string `json:"marker,omitempty" xml:"marker"`
+	Marker *string `json:"marker,omitempty"`
 
 	// 查询到的标签总数
-	TotalCount *int32 `json:"total_count,omitempty" xml:"total_count"`
+	TotalCount *int32 `json:"total_count,omitempty"`
 
 	// 查询到的标签列表
-	Tags           *[]PredefineTag `json:"tags,omitempty" xml:"tags"`
+	Tags           *[]PredefineTag `json:"tags,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }
 

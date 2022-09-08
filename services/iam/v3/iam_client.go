@@ -15,7 +15,7 @@ func NewIamClient(hcClient *http_client.HcHttpClient) *IamClient {
 }
 
 func IamClientBuilder() *http_client.HcHttpClientBuilder {
-	builder := http_client.NewHcHttpClientBuilder().WithCredentialsType("global.Credentials,basic.Credentials")
+	builder := http_client.NewHcHttpClientBuilder().WithCredentialsType("global.Credentials,basic.Credentials,v3.IamCredentials")
 	return builder
 }
 

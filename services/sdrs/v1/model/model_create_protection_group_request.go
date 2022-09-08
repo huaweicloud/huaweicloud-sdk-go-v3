@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateProtectionGroupRequest struct {
-	Body *CreateProtectionGroupRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreateProtectionGroupRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateProtectionGroupRequest) String() string {

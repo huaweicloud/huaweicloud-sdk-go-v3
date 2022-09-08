@@ -10,7 +10,7 @@ import (
 type RestSetLiveReqBody struct {
 
 	// 默认值为0。 - 0: 停止会议直播。 - 1: 启动会议直播。
-	IsLive int32 `json:"isLive" xml:"isLive"`
+	IsLive int32 `json:"isLive"`
 }
 
 func (o RestSetLiveReqBody) String() string {

@@ -9,11 +9,14 @@ import (
 // Response Object
 type ShowIpWhitelistResponse struct {
 
+	// 实例ID
+	InstanceId *string `json:"instance_id,omitempty"`
+
 	// 是否启用白名单（true/false）。
-	EnableWhitelist *bool `json:"enable_whitelist,omitempty" xml:"enable_whitelist"`
+	EnableWhitelist *bool `json:"enable_whitelist,omitempty"`
 
 	// IP白名单分组列表。
-	Whitelist      *[]Whitelist `json:"whitelist,omitempty" xml:"whitelist"`
+	Whitelist      *[]Whitelist `json:"whitelist,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }
 

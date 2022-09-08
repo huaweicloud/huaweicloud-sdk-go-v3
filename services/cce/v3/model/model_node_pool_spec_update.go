@@ -8,12 +8,12 @@ import (
 
 //
 type NodePoolSpecUpdate struct {
-	NodeTemplate *NodeSpecUpdate `json:"nodeTemplate" xml:"nodeTemplate"`
+	NodeTemplate *NodeSpecUpdate `json:"nodeTemplate"`
 
 	// 节点池初始化节点个数。查询时为节点池目标节点数量。
-	InitialNodeCount int32 `json:"initialNodeCount" xml:"initialNodeCount"`
+	InitialNodeCount int32 `json:"initialNodeCount"`
 
-	Autoscaling *NodePoolNodeAutoscaling `json:"autoscaling" xml:"autoscaling"`
+	Autoscaling *NodePoolNodeAutoscaling `json:"autoscaling"`
 }
 
 func (o NodePoolSpecUpdate) String() string {

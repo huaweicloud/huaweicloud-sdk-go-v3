@@ -10,10 +10,10 @@ import (
 type BatchListStructDetailResponse struct {
 
 	// 总数
-	Count *int32 `json:"count,omitempty" xml:"count"`
+	Count *int32 `json:"count,omitempty"`
 
 	// 批量查询灾备初始化对象详情返回列表
-	Results        *[]QueryStructDetailResp `json:"results,omitempty" xml:"results"`
+	Results        *[]QueryStructDetailResp `json:"results,omitempty"`
 	HttpStatusCode int                      `json:"-"`
 }
 

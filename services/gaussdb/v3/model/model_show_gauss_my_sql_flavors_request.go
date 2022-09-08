@@ -10,19 +10,19 @@ import (
 type ShowGaussMySqlFlavorsRequest struct {
 
 	// 语言。
-	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *string `json:"X-Language,omitempty"`
 
 	// 数据库引擎名称。
-	DatabaseName string `json:"database_name" xml:"database_name"`
+	DatabaseName string `json:"database_name"`
 
 	// 数据库版本号，目前仅支持兼容MySQL 8.0。
-	VersionName *string `json:"version_name,omitempty" xml:"version_name"`
+	VersionName *string `json:"version_name,omitempty"`
 
 	// 规格的可用区模式，现在仅支持\"single\"、\"multi\"，不区分大小写。
-	AvailabilityZoneMode string `json:"availability_zone_mode" xml:"availability_zone_mode"`
+	AvailabilityZoneMode string `json:"availability_zone_mode"`
 
 	// 规格编码。
-	SpecCode *string `json:"spec_code,omitempty" xml:"spec_code"`
+	SpecCode *string `json:"spec_code,omitempty"`
 }
 
 func (o ShowGaussMySqlFlavorsRequest) String() string {

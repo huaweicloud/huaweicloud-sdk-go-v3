@@ -10,7 +10,7 @@ import (
 type DeleteTaskRequest struct {
 
 	// 检查任务ID
-	TaskId string `json:"task_id" xml:"task_id"`
+	TaskId string `json:"task_id"`
 }
 
 func (o DeleteTaskRequest) String() string {

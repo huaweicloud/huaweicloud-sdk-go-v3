@@ -10,12 +10,12 @@ import (
 type Sentences struct {
 
 	// 分句结果信息
-	EndTime *int32 `json:"end_time,omitempty" xml:"end_time"`
+	EndTime *int32 `json:"end_time,omitempty"`
 
-	Result *FlashScoreResult `json:"result,omitempty" xml:"result"`
+	Result *FlashScoreResult `json:"result,omitempty"`
 
 	// 一句话开始时间，单位毫秒
-	StartTime *int32 `json:"start_time,omitempty" xml:"start_time"`
+	StartTime *int32 `json:"start_time,omitempty"`
 }
 
 func (o Sentences) String() string {

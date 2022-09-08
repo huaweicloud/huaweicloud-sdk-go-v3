@@ -10,9 +10,9 @@ import (
 type UpdateMessageTemplateRequest struct {
 
 	// 模板唯一的资源标识，可通过查询[消息模板列表](https://support.huaweicloud.com/api-smn/ListMessageTemplates.html)获取该标识。
-	MessageTemplateId string `json:"message_template_id" xml:"message_template_id"`
+	MessageTemplateId string `json:"message_template_id"`
 
-	Body *UpdateMessageTemplateRequestBody `json:"body,omitempty" xml:"body"`
+	Body *UpdateMessageTemplateRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateMessageTemplateRequest) String() string {

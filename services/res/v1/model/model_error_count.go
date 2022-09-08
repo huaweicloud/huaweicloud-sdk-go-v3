@@ -9,7 +9,7 @@ import (
 type ErrorCount struct {
 
 	// 为空。
-	Empty *bool `json:"empty,omitempty" xml:"empty"`
+	Empty *bool `json:"empty,omitempty"`
 }
 
 func (o ErrorCount) String() string {

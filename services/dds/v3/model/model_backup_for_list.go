@@ -13,36 +13,36 @@ import (
 type BackupForList struct {
 
 	// 备份ID。
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
 	// 备份名称。
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 备份所属的实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 备份所属的实例名称。
-	InstanceName string `json:"instance_name" xml:"instance_name"`
+	InstanceName string `json:"instance_name"`
 
-	Datastore *BackupDatabase `json:"datastore" xml:"datastore"`
+	Datastore *BackupDatabase `json:"datastore"`
 
 	// 备份类型。 - 取值为“Auto”，表示自动全量备份。 - 取值为“Manual”，表示手动全量备份。 - 取值为“Incremental”，表示自动增量备份。
-	Type BackupForListType `json:"type" xml:"type"`
+	Type BackupForListType `json:"type"`
 
 	// 备份开始时间，格式为“yyyy-mm-dd hh:mm:ss”。该时间为UTC时间。
-	BeginTime string `json:"begin_time" xml:"begin_time"`
+	BeginTime string `json:"begin_time"`
 
 	// 备份结束时间，格式为“yyyy-mm-dd hh:mm:ss”。该时间为UTC时间。
-	EndTime string `json:"end_time" xml:"end_time"`
+	EndTime string `json:"end_time"`
 
 	// 备份状态。 取值： - BUILDING：备份中。 - COMPLETED：备份完成。 - FAILED：备份失败。 - DISABLED：备份删除中。
-	Status BackupForListStatus `json:"status" xml:"status"`
+	Status BackupForListStatus `json:"status"`
 
 	// 备份大小，单位：KB。
-	Size int64 `json:"size" xml:"size"`
+	Size int64 `json:"size"`
 
 	// 备份描述。
-	Description string `json:"description" xml:"description"`
+	Description string `json:"description"`
 }
 
 func (o BackupForList) String() string {

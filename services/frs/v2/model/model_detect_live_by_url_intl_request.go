@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type DetectLiveByUrlIntlRequest struct {
-	Body *LiveDetectUrlReq `json:"body,omitempty" xml:"body"`
+	Body *LiveDetectUrlReq `json:"body,omitempty"`
 }
 
 func (o DetectLiveByUrlIntlRequest) String() string {

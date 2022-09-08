@@ -13,27 +13,27 @@ import (
 type ConfirmTargetDbTypeResponse struct {
 
 	// 评估项目ID。
-	EvaluationProjectId *int32 `json:"evaluation_project_id,omitempty" xml:"evaluation_project_id"`
+	EvaluationProjectId *int32 `json:"evaluation_project_id,omitempty"`
 
 	// 评估项目名称。
-	EvaluationProjectName *string `json:"evaluation_project_name,omitempty" xml:"evaluation_project_name"`
+	EvaluationProjectName *string `json:"evaluation_project_name,omitempty"`
 
 	// 评估项目状态。
-	EvaluationProjectStatus *ConfirmTargetDbTypeResponseEvaluationProjectStatus `json:"evaluation_project_status,omitempty" xml:"evaluation_project_status"`
+	EvaluationProjectStatus *ConfirmTargetDbTypeResponseEvaluationProjectStatus `json:"evaluation_project_status,omitempty"`
 
-	ProjectStatusDetail *ProjectStatusDetail `json:"project_status_detail,omitempty" xml:"project_status_detail"`
+	ProjectStatusDetail *ProjectStatusDetail `json:"project_status_detail,omitempty"`
 
 	// 源数据库类型。
-	SourceDbType *string `json:"source_db_type,omitempty" xml:"source_db_type"`
+	SourceDbType *string `json:"source_db_type,omitempty"`
 
 	// 源数据库版本。
-	SourceDbVersion *string `json:"source_db_version,omitempty" xml:"source_db_version"`
+	SourceDbVersion *string `json:"source_db_version,omitempty"`
 
 	// 目标数据库类型。
-	TargetDbType *string `json:"target_db_type,omitempty" xml:"target_db_type"`
+	TargetDbType *string `json:"target_db_type,omitempty"`
 
 	// 目标数据库版本。
-	TargetDbVersion *string `json:"target_db_version,omitempty" xml:"target_db_version"`
+	TargetDbVersion *string `json:"target_db_version,omitempty"`
 	HttpStatusCode  int     `json:"-"`
 }
 

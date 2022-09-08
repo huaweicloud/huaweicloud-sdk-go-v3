@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RecognizeGeneralTextRequest struct {
-	Body *GeneralTextRequestBody `json:"body,omitempty" xml:"body"`
+	Body *GeneralTextRequestBody `json:"body,omitempty"`
 }
 
 func (o RecognizeGeneralTextRequest) String() string {

@@ -10,12 +10,12 @@ import (
 type RestoreInstanceFromCollectionRequest struct {
 
 	// 语言。
-	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *string `json:"X-Language,omitempty"`
 
 	// 实例ID，可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
-	Body *RestoreInstanceFromCollectionRequestBody `json:"body,omitempty" xml:"body"`
+	Body *RestoreInstanceFromCollectionRequestBody `json:"body,omitempty"`
 }
 
 func (o RestoreInstanceFromCollectionRequest) String() string {

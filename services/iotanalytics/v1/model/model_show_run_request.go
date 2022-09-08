@@ -10,13 +10,13 @@ import (
 type ShowRunRequest struct {
 
 	// 作业ID。
-	JobId string `json:"job_id" xml:"job_id"`
+	JobId string `json:"job_id"`
 
 	// 作业运行ID。
-	RunId string `json:"run_id" xml:"run_id"`
+	RunId string `json:"run_id"`
 
 	// 是否查询作业详情。true：查询；false：不查询。details属性为空。默认为false。
-	WithDetails *bool `json:"with_details,omitempty" xml:"with_details"`
+	WithDetails *bool `json:"with_details,omitempty"`
 }
 
 func (o ShowRunRequest) String() string {

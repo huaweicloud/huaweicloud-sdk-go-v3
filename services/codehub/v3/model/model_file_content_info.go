@@ -9,34 +9,34 @@ import (
 type FileContentInfo struct {
 
 	// 文件名
-	FileName *string `json:"file_name,omitempty" xml:"file_name"`
+	FileName *string `json:"file_name,omitempty"`
 
 	// 文件路径
-	FilePath *string `json:"file_path,omitempty" xml:"file_path"`
+	FilePath *string `json:"file_path,omitempty"`
 
 	// 文件大小
-	Size *int32 `json:"size,omitempty" xml:"size"`
+	Size *int32 `json:"size,omitempty"`
 
 	// 文件编码
-	Encoding *string `json:"encoding,omitempty" xml:"encoding"`
+	Encoding *string `json:"encoding,omitempty"`
 
 	// sha256编码的文件内容
-	ContentSha256 *string `json:"content_sha256,omitempty" xml:"content_sha256"`
+	ContentSha256 *string `json:"content_sha256,omitempty"`
 
 	// 分支名
-	Ref *string `json:"ref,omitempty" xml:"ref"`
+	Ref *string `json:"ref,omitempty"`
 
 	// blob sha
-	BlobId *string `json:"blob_id,omitempty" xml:"blob_id"`
+	BlobId *string `json:"blob_id,omitempty"`
 
 	// 提交对应的SHA id
-	CommitId *string `json:"commit_id,omitempty" xml:"commit_id"`
+	CommitId *string `json:"commit_id,omitempty"`
 
 	// 最后一个提交对应的SHA id
-	LastCommitId *string `json:"last_commit_id,omitempty" xml:"last_commit_id"`
+	LastCommitId *string `json:"last_commit_id,omitempty"`
 
 	// base64编码的文件内容
-	Content *string `json:"content,omitempty" xml:"content"`
+	Content *string `json:"content,omitempty"`
 }
 
 func (o FileContentInfo) String() string {

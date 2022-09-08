@@ -10,13 +10,13 @@ import (
 type ListSubscriptionsResponse struct {
 
 	// 事件订阅总数
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 
 	// 本页数量
-	Size *int32 `json:"size,omitempty" xml:"size"`
+	Size *int32 `json:"size,omitempty"`
 
 	// 对象列表
-	Items          *[]SubscriptionInfo `json:"items,omitempty" xml:"items"`
+	Items          *[]SubscriptionInfo `json:"items,omitempty"`
 	HttpStatusCode int                 `json:"-"`
 }
 

@@ -10,49 +10,49 @@ import (
 type Flow struct {
 
 	// 流程id。
-	FlowId string `json:"flow_id" xml:"flow_id"`
+	FlowId string `json:"flow_id"`
 
 	// 属性对过滤。
-	AttrPairRulesFilter *[]AttrPairRules `json:"attr_pair_rules_filter,omitempty" xml:"attr_pair_rules_filter"`
+	AttrPairRulesFilter *[]AttrPairRules `json:"attr_pair_rules_filter,omitempty"`
 
 	// 属性对保留。
-	AttrPairRulesReserve *[]AttrPairRules `json:"attr_pair_rules_reserve,omitempty" xml:"attr_pair_rules_reserve"`
+	AttrPairRulesReserve *[]AttrPairRules `json:"attr_pair_rules_reserve,omitempty"`
 
 	// 属性去重。
-	DeduplicationList *[]Deduplication `json:"deduplication_list,omitempty" xml:"deduplication_list"`
+	DeduplicationList *[]Deduplication `json:"deduplication_list,omitempty"`
 
-	AttributeInfo *AttributeInfo `json:"attribute_info,omitempty" xml:"attribute_info"`
+	AttributeInfo *AttributeInfo `json:"attribute_info,omitempty"`
 
-	BloomFilterConf *BloomFilterConf `json:"bloom_filter_conf,omitempty" xml:"bloom_filter_conf"`
+	BloomFilterConf *BloomFilterConf `json:"bloom_filter_conf,omitempty"`
 
 	// 分组打散属性。
-	GroupAttr *string `json:"group_attr,omitempty" xml:"group_attr"`
+	GroupAttr *string `json:"group_attr,omitempty"`
 
 	// 在排序前去重。
-	PreDeal *bool `json:"pre_deal,omitempty" xml:"pre_deal"`
+	PreDeal *bool `json:"pre_deal,omitempty"`
 
 	// 排序配置信息。
-	RankSetting *string `json:"rank_setting,omitempty" xml:"rank_setting"`
+	RankSetting *string `json:"rank_setting,omitempty"`
 
-	Rules *Rule `json:"rules,omitempty" xml:"rules"`
+	Rules *Rule `json:"rules,omitempty"`
 
 	// 过滤配置信息。
-	FilterSets *[]string `json:"filter_sets,omitempty" xml:"filter_sets"`
+	FilterSets *[]string `json:"filter_sets,omitempty"`
 
 	// 属性值过滤。
-	AttrValueRulesFilter *[]AttrValueRules `json:"attr_value_rules_filter,omitempty" xml:"attr_value_rules_filter"`
+	AttrValueRulesFilter *[]AttrValueRules `json:"attr_value_rules_filter,omitempty"`
 
 	// 属性值保留。
-	AttrValueRulesReserve *[]AttrValueRules `json:"attr_value_rules_reserve,omitempty" xml:"attr_value_rules_reserve"`
+	AttrValueRulesReserve *[]AttrValueRules `json:"attr_value_rules_reserve,omitempty"`
 
 	// 排序作业（使用点击率预估时需要提供此参数）。
-	CtrJob *string `json:"ctr_job,omitempty" xml:"ctr_job"`
+	CtrJob *string `json:"ctr_job,omitempty"`
 
 	// 流量占比。
-	Ratio *int32 `json:"ratio,omitempty" xml:"ratio"`
+	Ratio *int32 `json:"ratio,omitempty"`
 
 	// 需要置顶的候选集列表。
-	Toppings *[]string `json:"toppings,omitempty" xml:"toppings"`
+	Toppings *[]string `json:"toppings,omitempty"`
 }
 
 func (o Flow) String() string {

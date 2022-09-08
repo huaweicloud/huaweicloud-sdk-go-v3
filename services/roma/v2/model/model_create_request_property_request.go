@@ -10,15 +10,15 @@ import (
 type CreateRequestPropertyRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 服务ID
-	ServiceId string `json:"service_id" xml:"service_id"`
+	ServiceId string `json:"service_id"`
 
 	// 命令ID
-	CommandId int32 `json:"command_id" xml:"command_id"`
+	CommandId int32 `json:"command_id"`
 
-	Body *CreatePropertyRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreatePropertyRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateRequestPropertyRequest) String() string {

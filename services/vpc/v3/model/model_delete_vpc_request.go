@@ -10,7 +10,7 @@ import (
 type DeleteVpcRequest struct {
 
 	// VPC的资源ID
-	VpcId string `json:"vpc_id" xml:"vpc_id"`
+	VpcId string `json:"vpc_id"`
 }
 
 func (o DeleteVpcRequest) String() string {

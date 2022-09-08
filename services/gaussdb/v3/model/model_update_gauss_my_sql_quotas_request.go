@@ -10,9 +10,9 @@ import (
 type UpdateGaussMySqlQuotasRequest struct {
 
 	// 语言
-	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *string `json:"X-Language,omitempty"`
 
-	Body *SetQuotasRequestBody `json:"body,omitempty" xml:"body"`
+	Body *SetQuotasRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateGaussMySqlQuotasRequest) String() string {

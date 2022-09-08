@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type KeystoneCreateGroupRequest struct {
-	Body *KeystoneCreateGroupRequestBody `json:"body,omitempty" xml:"body"`
+	Body *KeystoneCreateGroupRequestBody `json:"body,omitempty"`
 }
 
 func (o KeystoneCreateGroupRequest) String() string {

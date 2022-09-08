@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateDatakeyWithoutPlaintextRequest struct {
-	Body *CreateDatakeyRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreateDatakeyRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateDatakeyWithoutPlaintextRequest) String() string {

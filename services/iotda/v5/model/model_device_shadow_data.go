@@ -10,14 +10,14 @@ import (
 type DeviceShadowData struct {
 
 	// 设备的服务ID，在设备关联的产品模型中定义。
-	ServiceId string `json:"service_id" xml:"service_id"`
+	ServiceId string `json:"service_id"`
 
-	Desired *DeviceShadowProperties `json:"desired,omitempty" xml:"desired"`
+	Desired *DeviceShadowProperties `json:"desired,omitempty"`
 
-	Reported *DeviceShadowProperties `json:"reported,omitempty" xml:"reported"`
+	Reported *DeviceShadowProperties `json:"reported,omitempty"`
 
 	// 设备影子的版本，携带该参数时平台会校验值必须等于当前影子版本，初始从0开始。
-	Version *int64 `json:"version,omitempty" xml:"version"`
+	Version *int64 `json:"version,omitempty"`
 }
 
 func (o DeviceShadowData) String() string {

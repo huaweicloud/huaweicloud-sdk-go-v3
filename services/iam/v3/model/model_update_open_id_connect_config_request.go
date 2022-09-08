@@ -10,9 +10,9 @@ import (
 type UpdateOpenIdConnectConfigRequest struct {
 
 	// 身份提供商ID
-	IdpId string `json:"idp_id" xml:"idp_id"`
+	IdpId string `json:"idp_id"`
 
-	Body *UpdateOpenIdConnectConfigRequestBody `json:"body,omitempty" xml:"body"`
+	Body *UpdateOpenIdConnectConfigRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateOpenIdConnectConfigRequest) String() string {

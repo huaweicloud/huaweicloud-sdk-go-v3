@@ -10,16 +10,16 @@ import (
 type TaskBeanFacade struct {
 
 	// 任务ID
-	TaskId *string `json:"task_id,omitempty" xml:"task_id"`
+	TaskId *string `json:"task_id,omitempty"`
 
 	// 任务名称
-	TaskName *string `json:"task_name,omitempty" xml:"task_name"`
+	TaskName *string `json:"task_name,omitempty"`
 
 	// 失败的错误码
-	ErrorCode *string `json:"error_code,omitempty" xml:"error_code"`
+	ErrorCode *string `json:"error_code,omitempty"`
 
 	// 错误详情
-	ErrorMsg *string `json:"error_msg,omitempty" xml:"error_msg"`
+	ErrorMsg *string `json:"error_msg,omitempty"`
 }
 
 func (o TaskBeanFacade) String() string {

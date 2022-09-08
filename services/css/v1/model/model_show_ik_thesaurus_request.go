@@ -10,7 +10,7 @@ import (
 type ShowIkThesaurusRequest struct {
 
 	// 指定需查询词库状态的集群ID。
-	ClusterId string `json:"cluster_id" xml:"cluster_id"`
+	ClusterId string `json:"cluster_id"`
 }
 
 func (o ShowIkThesaurusRequest) String() string {

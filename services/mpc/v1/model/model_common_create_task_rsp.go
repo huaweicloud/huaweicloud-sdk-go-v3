@@ -9,7 +9,7 @@ import (
 type CommonCreateTaskRsp struct {
 
 	// 任务ID
-	TaskId *string `json:"task_id,omitempty" xml:"task_id"`
+	TaskId *string `json:"task_id,omitempty"`
 }
 
 func (o CommonCreateTaskRsp) String() string {

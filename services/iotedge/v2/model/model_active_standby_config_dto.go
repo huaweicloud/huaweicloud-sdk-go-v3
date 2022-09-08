@@ -10,16 +10,16 @@ import (
 type ActiveStandbyConfigDto struct {
 
 	// 当前的工作节点，主节点还是备节点在工作，初始创建时工作节点为DEFAULT节点，(DEFAULT|MASTER|SLAVE)
-	WorkNode *string `json:"work_node,omitempty" xml:"work_node"`
+	WorkNode *string `json:"work_node,omitempty"`
 
 	// 主节点网卡名称
-	MasterInterfaceName *string `json:"master_interface_name,omitempty" xml:"master_interface_name"`
+	MasterInterfaceName *string `json:"master_interface_name,omitempty"`
 
 	// 备节点网卡名称
-	SlaveInterfaceName *string `json:"slave_interface_name,omitempty" xml:"slave_interface_name"`
+	SlaveInterfaceName *string `json:"slave_interface_name,omitempty"`
 
 	// 网卡ip
-	VirtualIpAddress *string `json:"virtual_ip_address,omitempty" xml:"virtual_ip_address"`
+	VirtualIpAddress *string `json:"virtual_ip_address,omitempty"`
 }
 
 func (o ActiveStandbyConfigDto) String() string {

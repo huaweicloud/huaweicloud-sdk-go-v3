@@ -10,16 +10,16 @@ import (
 type PublicipInfo struct {
 
 	//   IP版本的信息
-	IpVersion *int32 `json:"ip_version,omitempty" xml:"ip_version"`
+	IpVersion *int32 `json:"ip_version,omitempty"`
 
 	// 弹性公网IP
-	PublicipAddress *string `json:"publicip_address,omitempty" xml:"publicip_address"`
+	PublicipAddress *string `json:"publicip_address,omitempty"`
 
 	// 弹性公网IP的ID。
-	PublicipId *string `json:"publicip_id,omitempty" xml:"publicip_id"`
+	PublicipId *string `json:"publicip_id,omitempty"`
 
 	// 功能说明：弹性公网IP的类型
-	PublicipType *string `json:"publicip_type,omitempty" xml:"publicip_type"`
+	PublicipType *string `json:"publicip_type,omitempty"`
 }
 
 func (o PublicipInfo) String() string {

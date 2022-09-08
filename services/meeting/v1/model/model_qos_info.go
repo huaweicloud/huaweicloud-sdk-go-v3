@@ -10,13 +10,13 @@ import (
 type QosInfo struct {
 
 	// Qos类型 - aduio：音频 - video：视频 - screen：屏幕共享 - cpu：cpu
-	Type *string `json:"type,omitempty" xml:"type"`
+	Type *string `json:"type,omitempty"`
 
-	Send *QosSendReceiveInfo `json:"send,omitempty" xml:"send"`
+	Send *QosSendReceiveInfo `json:"send,omitempty"`
 
-	Receive *QosSendReceiveInfo `json:"receive,omitempty" xml:"receive"`
+	Receive *QosSendReceiveInfo `json:"receive,omitempty"`
 
-	Cpu *QosCpuInfo `json:"cpu,omitempty" xml:"cpu"`
+	Cpu *QosCpuInfo `json:"cpu,omitempty"`
 }
 
 func (o QosInfo) String() string {

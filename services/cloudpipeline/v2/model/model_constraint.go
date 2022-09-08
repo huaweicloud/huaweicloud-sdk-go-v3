@@ -10,13 +10,13 @@ import (
 type Constraint struct {
 
 	// 校验规则类型
-	Type string `json:"type" xml:"type"`
+	Type string `json:"type"`
 
 	// 校验规则
-	Value string `json:"value" xml:"value"`
+	Value string `json:"value"`
 
 	// 校验失败描述
-	Errormsg string `json:"errormsg" xml:"errormsg"`
+	Errormsg string `json:"errormsg"`
 }
 
 func (o Constraint) String() string {

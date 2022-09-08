@@ -10,9 +10,9 @@ import (
 type BatchCreateOrDeleteKafkaTagRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
-	Body *BatchCreateOrDeleteTagReq `json:"body,omitempty" xml:"body"`
+	Body *BatchCreateOrDeleteTagReq `json:"body,omitempty"`
 }
 
 func (o BatchCreateOrDeleteKafkaTagRequest) String() string {

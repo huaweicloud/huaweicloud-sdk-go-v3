@@ -10,7 +10,7 @@ import (
 type ListVersionRequest struct {
 
 	// 待查询版本号。当前仅支持v2。
-	ApiVersion string `json:"api_version" xml:"api_version"`
+	ApiVersion string `json:"api_version"`
 }
 
 func (o ListVersionRequest) String() string {

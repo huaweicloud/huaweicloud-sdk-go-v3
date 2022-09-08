@@ -11,33 +11,33 @@ import (
 type ApiAuthRelations struct {
 
 	// API编号
-	ApiId *string `json:"api_id,omitempty" xml:"api_id"`
+	ApiId *string `json:"api_id,omitempty"`
 
-	AuthResult *AuthResult `json:"auth_result,omitempty" xml:"auth_result"`
+	AuthResult *AuthResult `json:"auth_result,omitempty"`
 
 	// 授权时间
-	AuthTime *sdktime.SdkTime `json:"auth_time,omitempty" xml:"auth_time"`
+	AuthTime *sdktime.SdkTime `json:"auth_time,omitempty"`
 
 	// 授权关系编号
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// APP编号
-	AppId *string `json:"app_id,omitempty" xml:"app_id"`
+	AppId *string `json:"app_id,omitempty"`
 
 	// 授权者 - PROVIDER：API提供者授权 - CONSUMER：API消费者授权
-	AuthRole *ApiAuthRelationsAuthRole `json:"auth_role,omitempty" xml:"auth_role"`
+	AuthRole *ApiAuthRelationsAuthRole `json:"auth_role,omitempty"`
 
 	// 授权通道类型 - NORMAL：普通通道 - GREEN：绿色通道  暂不支持，默认NORMAL
-	AuthTunnel *ApiAuthRelationsAuthTunnel `json:"auth_tunnel,omitempty" xml:"auth_tunnel"`
+	AuthTunnel *ApiAuthRelationsAuthTunnel `json:"auth_tunnel,omitempty"`
 
 	// 绿色通道的白名单配置
-	AuthWhitelist *[]string `json:"auth_whitelist,omitempty" xml:"auth_whitelist"`
+	AuthWhitelist *[]string `json:"auth_whitelist,omitempty"`
 
 	// 绿色通道的黑名单配置
-	AuthBlacklist *[]string `json:"auth_blacklist,omitempty" xml:"auth_blacklist"`
+	AuthBlacklist *[]string `json:"auth_blacklist,omitempty"`
 
 	// 访问参数。
-	VisitParams *string `json:"visit_params,omitempty" xml:"visit_params"`
+	VisitParams *string `json:"visit_params,omitempty"`
 }
 
 func (o ApiAuthRelations) String() string {

@@ -10,28 +10,28 @@ import (
 type ProjectsSet struct {
 
 	// 创建时间
-	CreateTime *sdktime.SdkTime `json:"CreateTime,omitempty" xml:"CreateTime"`
+	CreateTime *sdktime.SdkTime `json:"CreateTime,omitempty"`
 
 	// 更新时间
-	UpdateTime *sdktime.SdkTime `json:"UpdateTime,omitempty" xml:"UpdateTime"`
+	UpdateTime *sdktime.SdkTime `json:"UpdateTime,omitempty"`
 
 	// 描述
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 工程id
-	Id *int32 `json:"id,omitempty" xml:"id"`
+	Id *int32 `json:"id,omitempty"`
 
 	// 工程名字
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 工程状态
-	Status *int32 `json:"status,omitempty" xml:"status"`
+	Status *int32 `json:"status,omitempty"`
 
 	// 外部参数
-	ExternalParams *interface{} `json:"external_params,omitempty" xml:"external_params"`
+	ExternalParams *interface{} `json:"external_params,omitempty"`
 
 	// 文件变量
-	VariablesNoFile *[]string `json:"variables_no_file,omitempty" xml:"variables_no_file"`
+	VariablesNoFile *[]string `json:"variables_no_file,omitempty"`
 }
 
 func (o ProjectsSet) String() string {

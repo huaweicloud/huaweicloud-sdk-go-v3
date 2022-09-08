@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowNetworkIpAvailabilitiesResponse struct {
-	NetworkIpAvailability *NetworkIpAvailability `json:"network_ip_availability,omitempty" xml:"network_ip_availability"`
+	NetworkIpAvailability *NetworkIpAvailability `json:"network_ip_availability,omitempty"`
 	HttpStatusCode        int                    `json:"-"`
 }
 

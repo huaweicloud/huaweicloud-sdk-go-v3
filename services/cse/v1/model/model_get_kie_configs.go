@@ -9,28 +9,34 @@ import (
 type GetKieConfigs struct {
 
 	// 配置项的id。
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 配置项的key。
-	Key *string `json:"key,omitempty" xml:"key"`
+	Key *string `json:"key,omitempty"`
 
 	// 配置项的标签。
-	Labels *interface{} `json:"labels,omitempty" xml:"labels"`
+	Labels *interface{} `json:"labels,omitempty"`
 
 	// 配置项的值。
-	Value *string `json:"value,omitempty" xml:"value"`
+	Value *string `json:"value,omitempty"`
 
 	// 配置项value的类型。
-	ValueType *string `json:"value_type,omitempty" xml:"value_type"`
+	ValueType *string `json:"value_type,omitempty"`
 
 	// 配置项的状态。
-	Status *string `json:"status,omitempty" xml:"status"`
+	Status *string `json:"status,omitempty"`
 
 	// 创建时间。
-	CreateTime *int32 `json:"create_time,omitempty" xml:"create_time"`
+	CreateTime *int32 `json:"create_time,omitempty"`
 
 	// 更新时间。
-	UpdateTime *int32 `json:"update_time,omitempty" xml:"update_time"`
+	UpdateTime *int32 `json:"update_time,omitempty"`
+
+	// 创建配置的版本号
+	CreateRevision *int64 `json:"create_revision,omitempty"`
+
+	// 修改配置的版本号
+	UpdateRevision *int64 `json:"update_revision,omitempty"`
 }
 
 func (o GetKieConfigs) String() string {

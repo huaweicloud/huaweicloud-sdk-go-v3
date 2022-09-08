@@ -10,7 +10,7 @@ import (
 type ShowApplicationDetailRequest struct {
 
 	// 应用ID。
-	ApplicationId string `json:"application_id" xml:"application_id"`
+	ApplicationId string `json:"application_id"`
 }
 
 func (o ShowApplicationDetailRequest) String() string {

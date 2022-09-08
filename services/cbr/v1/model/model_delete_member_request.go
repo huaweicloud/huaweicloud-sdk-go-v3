@@ -10,10 +10,10 @@ import (
 type DeleteMemberRequest struct {
 
 	// 备份副本id
-	BackupId string `json:"backup_id" xml:"backup_id"`
+	BackupId string `json:"backup_id"`
 
 	// 成员id
-	MemberId string `json:"member_id" xml:"member_id"`
+	MemberId string `json:"member_id"`
 }
 
 func (o DeleteMemberRequest) String() string {

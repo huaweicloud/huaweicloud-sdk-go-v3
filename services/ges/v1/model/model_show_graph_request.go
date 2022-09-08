@@ -10,7 +10,7 @@ import (
 type ShowGraphRequest struct {
 
 	// 图ID。
-	GraphId string `json:"graph_id" xml:"graph_id"`
+	GraphId string `json:"graph_id"`
 }
 
 func (o ShowGraphRequest) String() string {

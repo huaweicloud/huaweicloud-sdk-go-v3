@@ -8,9 +8,9 @@ import (
 
 // Response Object
 type ShowTaskDefectsStatisticResponse struct {
-	Severity *StatisticSeverityV2 `json:"severity,omitempty" xml:"severity"`
+	Severity *StatisticSeverityV2 `json:"severity,omitempty"`
 
-	Status         *StatisticStatusV2 `json:"status,omitempty" xml:"status"`
+	Status         *StatisticStatusV2 `json:"status,omitempty"`
 	HttpStatusCode int                `json:"-"`
 }
 

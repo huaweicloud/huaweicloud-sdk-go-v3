@@ -10,7 +10,7 @@ import (
 type UpdateExtendInstanceStorageResponse struct {
 
 	// 集群ID。
-	Id             *string `json:"id,omitempty" xml:"id"`
+	Id             *string `json:"id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

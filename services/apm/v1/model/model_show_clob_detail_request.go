@@ -10,9 +10,9 @@ import (
 type ShowClobDetailRequest struct {
 
 	// 应用id
-	XBusinessId int64 `json:"x-business-id" xml:"x-business-id"`
+	XBusinessId int64 `json:"x-business-id"`
 
-	Body *GetClobDetailParam `json:"body,omitempty" xml:"body"`
+	Body *GetClobDetailParam `json:"body,omitempty"`
 }
 
 func (o ShowClobDetailRequest) String() string {

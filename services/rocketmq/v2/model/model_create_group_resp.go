@@ -9,7 +9,7 @@ import (
 type CreateGroupResp struct {
 
 	// 创建成功的消费组名称。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 }
 
 func (o CreateGroupResp) String() string {

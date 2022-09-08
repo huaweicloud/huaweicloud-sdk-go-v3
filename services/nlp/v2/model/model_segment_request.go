@@ -13,16 +13,16 @@ import (
 type SegmentRequest struct {
 
 	// 待分词文本，长度为1~512，文本编码为UTF-8。
-	Text string `json:"text" xml:"text"`
+	Text string `json:"text"`
 
 	// 是否开启词性标注功能，1为开启，0为关闭，默认为关闭。
-	PosSwitch *SegmentRequestPosSwitch `json:"pos_switch,omitempty" xml:"pos_switch"`
+	PosSwitch *SegmentRequestPosSwitch `json:"pos_switch,omitempty"`
 
 	// 支持的文本语言类型，目前支持中文（zh）和英文（en），默认为中文。
-	Lang *SegmentRequestLang `json:"lang,omitempty" xml:"lang"`
+	Lang *SegmentRequestLang `json:"lang,omitempty"`
 
 	// 支持的分词规范。 中文分词标准目前支持PKU（北大分词标准）、CTB（宾州中文树库标准），默认为PKU。 英文分词标准默认为Penn TreeBank（宾州树库标准），不需要传入该参数。
-	Criterion *SegmentRequestCriterion `json:"criterion,omitempty" xml:"criterion"`
+	Criterion *SegmentRequestCriterion `json:"criterion,omitempty"`
 }
 
 func (o SegmentRequest) String() string {

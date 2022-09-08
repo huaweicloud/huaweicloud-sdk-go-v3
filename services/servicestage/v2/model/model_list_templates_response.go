@@ -10,7 +10,7 @@ import (
 type ListTemplatesResponse struct {
 
 	// 模板列表。
-	Templates      *[]TemplateView `json:"templates,omitempty" xml:"templates"`
+	Templates      *[]TemplateView `json:"templates,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }
 

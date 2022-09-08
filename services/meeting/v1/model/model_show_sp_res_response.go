@@ -10,7 +10,7 @@ import (
 type ShowSpResResponse struct {
 
 	// 已用的企业并发数
-	UsedAccountsCount *int32 `json:"usedAccountsCount,omitempty" xml:"usedAccountsCount"`
+	UsedAccountsCount *int32 `json:"usedAccountsCount,omitempty"`
 	HttpStatusCode    int    `json:"-"`
 }
 

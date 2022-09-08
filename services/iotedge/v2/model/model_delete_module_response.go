@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type DeleteModuleResponse struct {
-	Body           *string `json:"body,omitempty" xml:"body"`
+	Body           *string `json:"body,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

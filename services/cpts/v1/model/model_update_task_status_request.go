@@ -10,12 +10,12 @@ import (
 type UpdateTaskStatusRequest struct {
 
 	// 测试工程id
-	TestSuiteId int32 `json:"test_suite_id" xml:"test_suite_id"`
+	TestSuiteId int32 `json:"test_suite_id"`
 
 	// 任务id
-	TaskId int32 `json:"task_id" xml:"task_id"`
+	TaskId int32 `json:"task_id"`
 
-	Body *UpdateTaskStatusRequestBody `json:"body,omitempty" xml:"body"`
+	Body *UpdateTaskStatusRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateTaskStatusRequest) String() string {

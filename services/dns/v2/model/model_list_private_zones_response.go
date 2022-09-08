@@ -8,11 +8,11 @@ import (
 
 // Response Object
 type ListPrivateZonesResponse struct {
-	Links *PageLink `json:"links,omitempty" xml:"links"`
+	Links *PageLink `json:"links,omitempty"`
 
-	Metadata *Metedata `json:"metadata,omitempty" xml:"metadata"`
+	Metadata *Metedata `json:"metadata,omitempty"`
 
-	Zones          *[]PrivateZoneResp `json:"zones,omitempty" xml:"zones"`
+	Zones          *[]PrivateZoneResp `json:"zones,omitempty"`
 	HttpStatusCode int                `json:"-"`
 }
 

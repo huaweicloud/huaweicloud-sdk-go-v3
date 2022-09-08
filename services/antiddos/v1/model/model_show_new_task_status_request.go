@@ -10,7 +10,7 @@ import (
 type ShowNewTaskStatusRequest struct {
 
 	// 任务ID（非负整数）的字符串
-	TaskId *string `json:"task_id,omitempty" xml:"task_id"`
+	TaskId *string `json:"task_id,omitempty"`
 }
 
 func (o ShowNewTaskStatusRequest) String() string {

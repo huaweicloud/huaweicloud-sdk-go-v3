@@ -8,9 +8,9 @@ import (
 
 // Response Object
 type ListReposDetailsResponse struct {
-	Body *[]ShowReposResp `json:"body,omitempty" xml:"body"`
+	Body *[]ShowReposResp `json:"body,omitempty"`
 
-	ContentRange   *string `json:"Content-Range,omitempty" xml:"Content-Range"`
+	ContentRange   *string `json:"Content-Range,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

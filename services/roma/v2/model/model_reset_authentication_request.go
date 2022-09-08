@@ -10,10 +10,10 @@ import (
 type ResetAuthenticationRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 设备ID
-	DeviceId int32 `json:"device_id" xml:"device_id"`
+	DeviceId int32 `json:"device_id"`
 }
 
 func (o ResetAuthenticationRequest) String() string {

@@ -10,15 +10,15 @@ import (
 type ShowUrlTaskInfoResponse struct {
 
 	// 查询结果总数
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 
 	// 查询当前页总数
-	Count *int32 `json:"count,omitempty" xml:"count"`
+	Count *int32 `json:"count,omitempty"`
 
 	// url信息
-	Results *[]Urls `json:"results,omitempty" xml:"results"`
+	Result *[]Urls `json:"result,omitempty"`
 
-	XRequestId     *string `json:"X-request-id,omitempty" xml:"X-request-id"`
+	XRequestId     *string `json:"X-request-id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

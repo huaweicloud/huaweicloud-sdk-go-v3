@@ -13,43 +13,43 @@ import (
 type ChildrenJobInfo struct {
 
 	// 计费字段
-	BillingTag bool `json:"billing_tag" xml:"billing_tag"`
+	BillingTag bool `json:"billing_tag"`
 
 	// 任务创建时间
-	CreateTime string `json:"create_time" xml:"create_time"`
+	CreateTime string `json:"create_time"`
 
 	// 复制场景
-	DbUseType ChildrenJobInfoDbUseType `json:"db_use_type" xml:"db_use_type"`
+	DbUseType ChildrenJobInfoDbUseType `json:"db_use_type"`
 
 	// 任务描述
-	Description string `json:"description" xml:"description"`
+	Description string `json:"description"`
 
 	// 引擎类型
-	EngineType ChildrenJobInfoEngineType `json:"engine_type" xml:"engine_type"`
+	EngineType ChildrenJobInfoEngineType `json:"engine_type"`
 
 	// 任务失败原因
-	ErrorMsg string `json:"error_msg" xml:"error_msg"`
+	ErrorMsg string `json:"error_msg"`
 
 	// 任务id
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
 	// 迁移方向
-	JobDirection ChildrenJobInfoJobDirection `json:"job_direction" xml:"job_direction"`
+	JobDirection ChildrenJobInfoJobDirection `json:"job_direction"`
 
 	// 任务名称
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 网络类型
-	NetType ChildrenJobInfoNetType `json:"net_type" xml:"net_type"`
+	NetType ChildrenJobInfoNetType `json:"net_type"`
 
 	// 新框架
-	NodeNewFramework bool `json:"node_newFramework" xml:"node_newFramework"`
+	NodeNewFramework bool `json:"node_newFramework"`
 
 	// 任务状态
-	Status string `json:"status" xml:"status"`
+	Status string `json:"status"`
 
 	// 迁移模式
-	TaskType ChildrenJobInfoTaskType `json:"task_type" xml:"task_type"`
+	TaskType ChildrenJobInfoTaskType `json:"task_type"`
 }
 
 func (o ChildrenJobInfo) String() string {

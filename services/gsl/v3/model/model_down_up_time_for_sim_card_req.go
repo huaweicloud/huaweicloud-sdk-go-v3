@@ -9,7 +9,7 @@ import (
 type DownUpTimeForSimCardReq struct {
 
 	// 启用停用开关
-	DownUpSwitch *int32 `json:"down_up_switch,omitempty" xml:"down_up_switch"`
+	DownUpSwitch *int32 `json:"down_up_switch,omitempty"`
 }
 
 func (o DownUpTimeForSimCardReq) String() string {

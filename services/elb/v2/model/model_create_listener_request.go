@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateListenerRequest struct {
-	Body *CreateListenerRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreateListenerRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateListenerRequest) String() string {

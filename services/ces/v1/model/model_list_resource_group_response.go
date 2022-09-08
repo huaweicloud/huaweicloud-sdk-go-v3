@@ -10,9 +10,9 @@ import (
 type ListResourceGroupResponse struct {
 
 	// 一个或者多个资源分组信息。
-	ResourceGroups *[]ResourceGroupInfo `json:"resource_groups,omitempty" xml:"resource_groups"`
+	ResourceGroups *[]ResourceGroupInfo `json:"resource_groups,omitempty"`
 
-	MetaData       *TotalMetaData `json:"meta_data,omitempty" xml:"meta_data"`
+	MetaData       *TotalMetaData `json:"meta_data,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }
 

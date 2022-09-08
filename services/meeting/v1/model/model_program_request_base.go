@@ -10,7 +10,7 @@ import (
 type ProgramRequestBase struct {
 
 	// 节目名称
-	ProgramName string `json:"programName" xml:"programName"`
+	ProgramName string `json:"programName"`
 }
 
 func (o ProgramRequestBase) String() string {

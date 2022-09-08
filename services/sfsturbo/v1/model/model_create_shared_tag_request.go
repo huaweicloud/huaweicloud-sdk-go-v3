@@ -10,12 +10,12 @@ import (
 type CreateSharedTagRequest struct {
 
 	// MIME类型
-	ContentType string `json:"Content-Type" xml:"Content-Type"`
+	ContentType string `json:"Content-Type"`
 
 	// 共享ID
-	ShareId string `json:"share_id" xml:"share_id"`
+	ShareId string `json:"share_id"`
 
-	Body *CreateSharedTagRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreateSharedTagRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateSharedTagRequest) String() string {

@@ -10,7 +10,7 @@ import (
 type StopSnapshotRequest struct {
 
 	// 停用快照所属的集群的ID。
-	ClusterId string `json:"cluster_id" xml:"cluster_id"`
+	ClusterId string `json:"cluster_id"`
 }
 
 func (o StopSnapshotRequest) String() string {

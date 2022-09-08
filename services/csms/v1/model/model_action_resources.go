@@ -9,15 +9,15 @@ import (
 type ActionResources struct {
 
 	// 资源ID。
-	ResourceId *string `json:"resource_id,omitempty" xml:"resource_id"`
+	ResourceId *string `json:"resource_id,omitempty"`
 
-	ResourceDetail *Secret `json:"resource_detail,omitempty" xml:"resource_detail"`
+	ResourceDetail *Secret `json:"resource_detail,omitempty"`
 
 	// 资源名称，默认为空字符串。
-	ResourceName *string `json:"resource_name,omitempty" xml:"resource_name"`
+	ResourceName *string `json:"resource_name,omitempty"`
 
 	// 标签列表，没有标签，数组默认为空。
-	Tags *[]TagItem `json:"tags,omitempty" xml:"tags"`
+	Tags *[]TagItem `json:"tags,omitempty"`
 }
 
 func (o ActionResources) String() string {

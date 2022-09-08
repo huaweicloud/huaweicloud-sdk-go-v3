@@ -10,16 +10,16 @@ import (
 type PutDisk struct {
 
 	// 磁盘名称
-	NeedMigration *bool `json:"need_migration,omitempty" xml:"need_migration"`
+	NeedMigration *bool `json:"need_migration,omitempty"`
 
 	// 磁盘id
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
 	// 调整大小
-	AdjustSize int64 `json:"adjust_size" xml:"adjust_size"`
+	AdjustSize int64 `json:"adjust_size"`
 
 	// 修改的卷信息
-	PhysicalVolumes *[]PutVolume `json:"physical_volumes,omitempty" xml:"physical_volumes"`
+	PhysicalVolumes *[]PutVolume `json:"physical_volumes,omitempty"`
 }
 
 func (o PutDisk) String() string {

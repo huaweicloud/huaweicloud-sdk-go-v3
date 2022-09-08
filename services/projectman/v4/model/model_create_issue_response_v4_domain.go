@@ -10,10 +10,10 @@ import (
 type CreateIssueResponseV4Domain struct {
 
 	// 领域id
-	Id *int32 `json:"id,omitempty" xml:"id"`
+	Id *int32 `json:"id,omitempty"`
 
 	// 领域
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 }
 
 func (o CreateIssueResponseV4Domain) String() string {

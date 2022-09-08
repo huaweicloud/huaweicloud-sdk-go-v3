@@ -10,19 +10,19 @@ import (
 type ModMemberDto struct {
 
 	// 名称 maxLength：64 minLength：1
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 英文名称 maxLength：64 minLength：0
-	EnglishName *string `json:"englishName,omitempty" xml:"englishName"`
+	EnglishName *string `json:"englishName,omitempty"`
 
 	// 签名 maxLength：512 minLength：0
-	Signature *string `json:"signature,omitempty" xml:"signature"`
+	Signature *string `json:"signature,omitempty"`
 
 	// 职位 maxLength：32 minLength：0
-	Title *string `json:"title,omitempty" xml:"title"`
+	Title *string `json:"title,omitempty"`
 
 	// 备注 maxLength：128 minLength：0
-	Desc *string `json:"desc,omitempty" xml:"desc"`
+	Desc *string `json:"desc,omitempty"`
 }
 
 func (o ModMemberDto) String() string {

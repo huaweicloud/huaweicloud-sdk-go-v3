@@ -10,13 +10,13 @@ import (
 type ListGaussMySqlDatabaseUser struct {
 
 	// 数据库用户名。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 主机地址。
-	Host *string `json:"host,omitempty" xml:"host"`
+	Host *string `json:"host,omitempty"`
 
 	// 数据库列表。
-	Databases *[]ListGaussMySqlDatabase `json:"databases,omitempty" xml:"databases"`
+	Databases *[]ListGaussMySqlDatabase `json:"databases,omitempty"`
 }
 
 func (o ListGaussMySqlDatabaseUser) String() string {

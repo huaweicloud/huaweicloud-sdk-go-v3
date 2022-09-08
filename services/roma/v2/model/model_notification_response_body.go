@@ -12,22 +12,22 @@ import (
 type NotificationResponseBody struct {
 
 	// 订阅ID
-	NotificationId *int64 `json:"notification_id,omitempty" xml:"notification_id"`
+	NotificationId *int64 `json:"notification_id,omitempty"`
 
 	// 订阅类型, 0:设备上线通知类型, 1:设备下线通知类型, 2:设备添加通知类型, 3:设备删除通知类型, 4:设备变更通知类型
-	Type *NotificationResponseBodyType `json:"type,omitempty" xml:"type"`
+	Type *NotificationResponseBodyType `json:"type,omitempty"`
 
 	// 订阅管理状态，0：启用，1：停用
-	Status *NotificationResponseBodyStatus `json:"status,omitempty" xml:"status"`
+	Status *NotificationResponseBodyStatus `json:"status,omitempty"`
 
 	// 订阅的topic名称
-	Topic *string `json:"topic,omitempty" xml:"topic"`
+	Topic *string `json:"topic,omitempty"`
 
 	// 实例ID
-	InstanceId *string `json:"instance_id,omitempty" xml:"instance_id"`
+	InstanceId *string `json:"instance_id,omitempty"`
 
 	// 应用ID
-	AppId *string `json:"app_id,omitempty" xml:"app_id"`
+	AppId *string `json:"app_id,omitempty"`
 }
 
 func (o NotificationResponseBody) String() string {

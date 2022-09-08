@@ -9,33 +9,33 @@ import (
 type AddProtectResponse struct {
 
 	// 分支名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
-	Commit *CommitRepoV2 `json:"commit,omitempty" xml:"commit"`
+	Commit *CommitRepoV2 `json:"commit,omitempty"`
 
 	// 是否保护
-	Protected *bool `json:"protected,omitempty" xml:"protected"`
+	Protected *bool `json:"protected,omitempty"`
 
 	// 是否允许开发者提交
-	DevelopersCanPush *bool `json:"developers_can_push,omitempty" xml:"developers_can_push"`
+	DevelopersCanPush *bool `json:"developers_can_push,omitempty"`
 
 	// 是否允许开发者合并
-	DevelopersCanMerge *bool `json:"developers_can_merge,omitempty" xml:"developers_can_merge"`
+	DevelopersCanMerge *bool `json:"developers_can_merge,omitempty"`
 
 	// 是否允许管理员提交
-	MasterCanPush *bool `json:"master_can_push,omitempty" xml:"master_can_push"`
+	MasterCanPush *bool `json:"master_can_push,omitempty"`
 
 	// 是否允许管理员合并
-	MasterCanMerge *bool `json:"master_can_merge,omitempty" xml:"master_can_merge"`
+	MasterCanMerge *bool `json:"master_can_merge,omitempty"`
 
 	// 没有人允许提交
-	NoOneCanPush *bool `json:"no_one_can_push,omitempty" xml:"no_one_can_push"`
+	NoOneCanPush *bool `json:"no_one_can_push,omitempty"`
 
 	// 没有人允许合并
-	NoOneCanMerge *bool `json:"no_one_can_merge,omitempty" xml:"no_one_can_merge"`
+	NoOneCanMerge *bool `json:"no_one_can_merge,omitempty"`
 
 	// 是否在一个打开的合并请求
-	InAnOpenedMergeRequest *bool `json:"in_an_opened_merge_request,omitempty" xml:"in_an_opened_merge_request"`
+	InAnOpenedMergeRequest *bool `json:"in_an_opened_merge_request,omitempty"`
 }
 
 func (o AddProtectResponse) String() string {

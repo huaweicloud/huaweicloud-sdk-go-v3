@@ -13,78 +13,78 @@ import (
 type EngineSimpleInfo struct {
 
 	// 微服务引擎专享版的ID
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 引擎的名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 微服务引擎专享版所属企业项目ID
-	EnterprisProjectId *string `json:"enterpris_project_id,omitempty" xml:"enterpris_project_id"`
+	EnterprisProjectId *string `json:"enterpris_project_id,omitempty"`
 
 	// 微服务引擎专享版所属企业项目名称
-	EnterpriseProjectName *string `json:"enterprise_project_name,omitempty" xml:"enterprise_project_name"`
+	EnterpriseProjectName *string `json:"enterprise_project_name,omitempty"`
 
 	// 微服务引擎专享版的类型，CSE为专享版引擎，CSE_Share表示为专业版引擎
-	Type *EngineSimpleInfoType `json:"type,omitempty" xml:"type"`
+	Type *EngineSimpleInfoType `json:"type,omitempty"`
 
 	// 微服务引擎专享版的描述
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 微服务引擎专享版的规格
-	Flavor *EngineSimpleInfoFlavor `json:"flavor,omitempty" xml:"flavor"`
+	Flavor *EngineSimpleInfoFlavor `json:"flavor,omitempty"`
 
 	// 微服务引擎专享版的计费方式，0表示包周期，1表示按需，2表示免费
-	Payment *string `json:"payment,omitempty" xml:"payment"`
+	Payment *string `json:"payment,omitempty"`
 
 	// 微服务引擎专享版的认证方式，RBAC/NONE
-	AuthType *EngineSimpleInfoAuthType `json:"auth_type,omitempty" xml:"auth_type"`
+	AuthType *EngineSimpleInfoAuthType `json:"auth_type,omitempty"`
 
 	// 微服务引擎专享版当前的状态
-	Status *EngineSimpleInfoStatus `json:"status,omitempty" xml:"status"`
+	Status *EngineSimpleInfoStatus `json:"status,omitempty"`
 
 	// 微服务引擎专享版暴露的IP地址
-	ExternalAddress *string `json:"external_address,omitempty" xml:"external_address"`
+	ExternalAddress *string `json:"external_address,omitempty"`
 
 	// 微服务引擎专享版组件的访问地址。
-	ServiceEndpoint map[string]EntrypointItem `json:"service_endpoint,omitempty" xml:"service_endpoint"`
+	ServiceEndpoint map[string]EntrypointItem `json:"service_endpoint,omitempty"`
 
 	// 微服务引擎专享版的公网IP地址
-	PublicAddress *string `json:"public_address,omitempty" xml:"public_address"`
+	PublicAddress *string `json:"public_address,omitempty"`
 
 	// 微服务引擎专享版的公网接入地址
-	PublicServiceEndpoint map[string]EntrypointItem `json:"public_service_endpoint,omitempty" xml:"public_service_endpoint"`
+	PublicServiceEndpoint map[string]EntrypointItem `json:"public_service_endpoint,omitempty"`
 
 	// 微服务引擎专享版可支持的实例总数
-	TotalInstance *int32 `json:"total_instance,omitempty" xml:"total_instance"`
+	TotalInstance *int32 `json:"total_instance,omitempty"`
 
 	// 已使用的实例总数
-	UsedInstance *int32 `json:"used_instance,omitempty" xml:"used_instance"`
+	UsedInstance *int32 `json:"used_instance,omitempty"`
 
 	// 可用实例总数
-	AvailableInstance *int32 `json:"available_instance,omitempty" xml:"available_instance"`
+	AvailableInstance *int32 `json:"available_instance,omitempty"`
 
 	// 微服务引擎专享版当前版本
-	Version *string `json:"version,omitempty" xml:"version"`
+	Version *string `json:"version,omitempty"`
 
 	// 微服务引擎专享版最新版本
-	LatestVersion *string `json:"latest_version,omitempty" xml:"latest_version"`
+	LatestVersion *string `json:"latest_version,omitempty"`
 
 	// 微服务引擎专享版创建时间
-	CreateTime *int64 `json:"create_time,omitempty" xml:"create_time"`
+	CreateTime *int64 `json:"create_time,omitempty"`
 
 	// 微服务引擎专享版到期时间
-	DueTo *int64 `json:"due_to,omitempty" xml:"due_to"`
+	DueTo *int64 `json:"due_to,omitempty"`
 
 	// 微服务引擎专享版最近的任务ID
-	LatestJobId *int32 `json:"latest_job_id,omitempty" xml:"latest_job_id"`
+	LatestJobId *int32 `json:"latest_job_id,omitempty"`
 
 	// 微服务引擎专享版允许的附加操作
-	EngineAdditionalActions *[]EngineSimpleInfoEngineAdditionalActions `json:"engine_additional_actions,omitempty" xml:"engine_additional_actions"`
+	EngineAdditionalActions *[]EngineSimpleInfoEngineAdditionalActions `json:"engine_additional_actions,omitempty"`
 
 	// 微服务引擎专享版应用部署类型
-	SpecType *EngineSimpleInfoSpecType `json:"spec_type,omitempty" xml:"spec_type"`
+	SpecType *EngineSimpleInfoSpecType `json:"spec_type,omitempty"`
 
-	Reference *EngineReference `json:"reference,omitempty" xml:"reference"`
+	Reference *EngineReference `json:"reference,omitempty"`
 }
 
 func (o EngineSimpleInfo) String() string {

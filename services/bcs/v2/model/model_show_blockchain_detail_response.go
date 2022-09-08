@@ -8,37 +8,37 @@ import (
 
 // Response Object
 type ShowBlockchainDetailResponse struct {
-	BasicInfo *BasicInfo `json:"basic_info,omitempty" xml:"basic_info"`
+	BasicInfo *BasicInfo `json:"basic_info,omitempty"`
 
 	// 通道信息
-	Channels *[]ChannelInfo `json:"channels,omitempty" xml:"channels"`
+	Channels *[]ChannelInfo `json:"channels,omitempty"`
 
 	// peer组织信息
-	PeerInfo *[]PeerInfo `json:"peer_info,omitempty" xml:"peer_info"`
+	PeerInfo *[]PeerInfo `json:"peer_info,omitempty"`
 
 	// light_peer组织信息
-	LightPeerInfo *[]PeerInfo `json:"light_peer_info,omitempty" xml:"light_peer_info"`
+	LightPeerInfo *[]PeerInfo `json:"light_peer_info,omitempty"`
 
-	OrdererInfo *PeerInfo `json:"orderer_info,omitempty" xml:"orderer_info"`
+	OrdererInfo *PeerInfo `json:"orderer_info,omitempty"`
 
-	CouchDbInfo *CouchDbInfo `json:"couch_db_info,omitempty" xml:"couch_db_info"`
+	CouchDbInfo *CouchDbInfo `json:"couch_db_info,omitempty"`
 
-	DmsKafkaInfo *DmsKafkaInfo `json:"dms_kafka_info,omitempty" xml:"dms_kafka_info"`
+	DmsKafkaInfo *DmsKafkaInfo `json:"dms_kafka_info,omitempty"`
 
-	IefInfo *IefInfo `json:"ief_info,omitempty" xml:"ief_info"`
+	IefInfo *IefInfo `json:"ief_info,omitempty"`
 
-	SfsInfo *SfsInfo `json:"sfs_info,omitempty" xml:"sfs_info"`
+	SfsInfo *SfsInfo `json:"sfs_info,omitempty"`
 
-	AgentInfo *PeerInfo `json:"agent_info,omitempty" xml:"agent_info"`
+	AgentInfo *PeerInfo `json:"agent_info,omitempty"`
 
-	RestapiInfo *PeerInfo `json:"restapi_info,omitempty" xml:"restapi_info"`
+	RestapiInfo *PeerInfo `json:"restapi_info,omitempty"`
 
 	// 云硬盘存储卷信息
-	EvsPvcInfo map[string]map[string]string `json:"evs_pvc_info,omitempty" xml:"evs_pvc_info"`
+	EvsPvcInfo map[string]map[string]string `json:"evs_pvc_info,omitempty"`
 
-	Tc3TaskserverInfo *PeerInfo `json:"tc3_taskserver_info,omitempty" xml:"tc3_taskserver_info"`
+	Tc3TaskserverInfo *PeerInfo `json:"tc3_taskserver_info,omitempty"`
 
-	ObsBucketInfo  *ObsInfo `json:"obs_bucket_info,omitempty" xml:"obs_bucket_info"`
+	ObsBucketInfo  *ObsInfo `json:"obs_bucket_info,omitempty"`
 	HttpStatusCode int      `json:"-"`
 }
 

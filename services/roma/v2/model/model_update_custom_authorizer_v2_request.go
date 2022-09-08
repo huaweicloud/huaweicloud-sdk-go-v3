@@ -10,12 +10,12 @@ import (
 type UpdateCustomAuthorizerV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 自定义认证的编号
-	AuthorizerId string `json:"authorizer_id" xml:"authorizer_id"`
+	AuthorizerId string `json:"authorizer_id"`
 
-	Body *AuthorizerCreate `json:"body,omitempty" xml:"body"`
+	Body *AuthorizerCreate `json:"body,omitempty"`
 }
 
 func (o UpdateCustomAuthorizerV2Request) String() string {

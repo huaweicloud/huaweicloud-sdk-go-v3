@@ -10,10 +10,10 @@ import (
 type IssueItemSfV4Tracker struct {
 
 	// 类型id
-	Id *int32 `json:"id,omitempty" xml:"id"`
+	Id *int32 `json:"id,omitempty"`
 
 	// 类型名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 }
 
 func (o IssueItemSfV4Tracker) String() string {

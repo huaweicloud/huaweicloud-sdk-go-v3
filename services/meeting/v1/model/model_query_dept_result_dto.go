@@ -9,43 +9,43 @@ import (
 type QueryDeptResultDto struct {
 
 	// 部门编码，企业内唯一
-	DeptCode *string `json:"deptCode,omitempty" xml:"deptCode"`
+	DeptCode *string `json:"deptCode,omitempty"`
 
 	// 部门层级
-	DeptLevel *int32 `json:"deptLevel,omitempty" xml:"deptLevel"`
+	DeptLevel *int32 `json:"deptLevel,omitempty"`
 
 	// 部门名称
-	DeptName *string `json:"deptName,omitempty" xml:"deptName"`
+	DeptName *string `json:"deptName,omitempty"`
 
 	// 部门名路径
-	DeptNamePath *string `json:"deptNamePath,omitempty" xml:"deptNamePath"`
+	DeptNamePath *string `json:"deptNamePath,omitempty"`
 
 	// 是否叶子
-	IsLeafNode *bool `json:"isLeafNode,omitempty" xml:"isLeafNode"`
+	IsLeafNode *bool `json:"isLeafNode,omitempty"`
 
 	// 父部门编号
-	ParentDeptCode *string `json:"parentDeptCode,omitempty" xml:"parentDeptCode"`
+	ParentDeptCode *string `json:"parentDeptCode,omitempty"`
 
 	// 部门编码路径
-	DeptCodePath *string `json:"deptCodePath,omitempty" xml:"deptCodePath"`
+	DeptCodePath *string `json:"deptCodePath,omitempty"`
 
 	// 备注
-	Note *string `json:"note,omitempty" xml:"note"`
+	Note *string `json:"note,omitempty"`
 
 	// 企业id
-	CorpId *string `json:"corpId,omitempty" xml:"corpId"`
+	CorpId *string `json:"corpId,omitempty"`
 
 	// 其他用户对该部门下用户的访问权限
-	InPermission *string `json:"inPermission,omitempty" xml:"inPermission"`
+	InPermission *string `json:"inPermission,omitempty"`
 
 	// 该部门下用户访问权限控制
-	OutPermission *string `json:"outPermission,omitempty" xml:"outPermission"`
+	OutPermission *string `json:"outPermission,omitempty"`
 
 	// 允许访问的部门列表，id为部门编码。
-	DesignatedOutDeptCodes *[]IdMarkDto `json:"designatedOutDeptCodes,omitempty" xml:"designatedOutDeptCodes"`
+	DesignatedOutDeptCodes *[]IdMarkDto `json:"designatedOutDeptCodes,omitempty"`
 
 	// 部门排序号
-	SortLevel *int32 `json:"sortLevel,omitempty" xml:"sortLevel"`
+	SortLevel *int32 `json:"sortLevel,omitempty"`
 }
 
 func (o QueryDeptResultDto) String() string {

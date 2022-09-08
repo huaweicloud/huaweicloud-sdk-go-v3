@@ -10,7 +10,7 @@ import (
 type BatchStartJobReq struct {
 
 	// 批量启动任务请求列表。
-	Jobs []StartInfo `json:"jobs" xml:"jobs"`
+	Jobs []StartInfo `json:"jobs"`
 }
 
 func (o BatchStartJobReq) String() string {

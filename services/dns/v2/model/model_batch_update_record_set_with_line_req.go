@@ -9,7 +9,7 @@ import (
 type BatchUpdateRecordSetWithLineReq struct {
 
 	// RecordSet 列表。
-	Recordsets []BatchUpdateRecordSet `json:"recordsets" xml:"recordsets"`
+	Recordsets []BatchUpdateRecordSet `json:"recordsets"`
 }
 
 func (o BatchUpdateRecordSetWithLineReq) String() string {

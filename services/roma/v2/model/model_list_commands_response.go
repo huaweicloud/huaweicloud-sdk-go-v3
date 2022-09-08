@@ -10,13 +10,13 @@ import (
 type ListCommandsResponse struct {
 
 	// 总数
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 
 	// 本次返回数量
-	Size *int32 `json:"size,omitempty" xml:"size"`
+	Size *int32 `json:"size,omitempty"`
 
 	// 命令列表
-	Items          *[]Command `json:"items,omitempty" xml:"items"`
+	Items          *[]Command `json:"items,omitempty"`
 	HttpStatusCode int        `json:"-"`
 }
 

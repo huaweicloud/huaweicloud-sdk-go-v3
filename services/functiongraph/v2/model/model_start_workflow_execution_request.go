@@ -10,18 +10,18 @@ import (
 type StartWorkflowExecutionRequest struct {
 
 	// 函数流定义ID
-	WorkflowId string `json:"workflow_id" xml:"workflow_id"`
+	WorkflowId string `json:"workflow_id"`
 
 	// workflowRun task create time
-	XCreateTime *string `json:"X-Create-Time,omitempty" xml:"X-Create-Time"`
+	XCreateTime *string `json:"X-Create-Time,omitempty"`
 
 	// workflowRun id
-	XWorkflowRunID *string `json:"X-WorkflowRun-ID,omitempty" xml:"X-WorkflowRun-ID"`
+	XWorkflowRunID *string `json:"X-WorkflowRun-ID,omitempty"`
 
 	// Combines the output of the previous node with the input of the next node into an input.
-	XWorkflowRunMergeFnParameters *string `json:"X-WorkflowRun-MergeFnParameters,omitempty" xml:"X-WorkflowRun-MergeFnParameters"`
+	XWorkflowRunMergeFnParameters *string `json:"X-WorkflowRun-MergeFnParameters,omitempty"`
 
-	Body *FlowExecuteBody `json:"body,omitempty" xml:"body"`
+	Body *FlowExecuteBody `json:"body,omitempty"`
 }
 
 func (o StartWorkflowExecutionRequest) String() string {

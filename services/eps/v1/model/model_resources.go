@@ -10,25 +10,25 @@ import (
 type Resources struct {
 
 	// 企业项目ID
-	EnterpriseProjectId string `json:"enterprise_project_id" xml:"enterprise_project_id"`
+	EnterpriseProjectId string `json:"enterprise_project_id"`
 
 	// ProjectID
-	ProjectId string `json:"project_id" xml:"project_id"`
+	ProjectId string `json:"project_id"`
 
 	// Project名称
-	ProjectName string `json:"project_name" xml:"project_name"`
+	ProjectName string `json:"project_name"`
 
 	// 资源详情
-	ResourceDetail *interface{} `json:"resource_detail" xml:"resource_detail"`
+	ResourceDetail *interface{} `json:"resource_detail"`
 
 	// 资源ID
-	ResourceId string `json:"resource_id" xml:"resource_id"`
+	ResourceId string `json:"resource_id"`
 
 	// 资源名称
-	ResourceName string `json:"resource_name" xml:"resource_name"`
+	ResourceName string `json:"resource_name"`
 
 	// 资源类型
-	ResourceType string `json:"resource_type" xml:"resource_type"`
+	ResourceType string `json:"resource_type"`
 }
 
 func (o Resources) String() string {

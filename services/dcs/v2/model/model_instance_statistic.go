@@ -10,31 +10,31 @@ import (
 type InstanceStatistic struct {
 
 	// 缓存实例网络入流量，单位：Kbps。
-	InputKbps *string `json:"input_kbps,omitempty" xml:"input_kbps"`
+	InputKbps *string `json:"input_kbps,omitempty"`
 
 	// 缓存实例网络出流量，单位：Kbps。
-	OutputKbps *string `json:"output_kbps,omitempty" xml:"output_kbps"`
+	OutputKbps *string `json:"output_kbps,omitempty"`
 
 	// 实例ID。
-	InstanceId *string `json:"instance_id,omitempty" xml:"instance_id"`
+	InstanceId *string `json:"instance_id,omitempty"`
 
 	// 缓存存储的数据条数。
-	Keys *int64 `json:"keys,omitempty" xml:"keys"`
+	Keys *int64 `json:"keys,omitempty"`
 
 	// 缓存已经使用内存，单位：MB。
-	UsedMemory *int64 `json:"used_memory,omitempty" xml:"used_memory"`
+	UsedMemory *int64 `json:"used_memory,omitempty"`
 
 	// 缓存的总内存，单位：MB。
-	MaxMemory *int64 `json:"max_memory,omitempty" xml:"max_memory"`
+	MaxMemory *int64 `json:"max_memory,omitempty"`
 
 	// 缓存get命令被调用次数。
-	CmdGetCount *int64 `json:"cmd_get_count,omitempty" xml:"cmd_get_count"`
+	CmdGetCount *int64 `json:"cmd_get_count,omitempty"`
 
 	// 缓存set命令被调用次数。
-	CmdSetCount *int64 `json:"cmd_set_count,omitempty" xml:"cmd_set_count"`
+	CmdSetCount *int64 `json:"cmd_set_count,omitempty"`
 
 	// CPU使用率，单位：百分比。
-	UsedCpu *string `json:"used_cpu,omitempty" xml:"used_cpu"`
+	UsedCpu *string `json:"used_cpu,omitempty"`
 }
 
 func (o InstanceStatistic) String() string {

@@ -10,7 +10,7 @@ import (
 type UpdateAlarmRulePoliciesResponse struct {
 
 	// 策略信息
-	Policies       *[]Policy `json:"policies,omitempty" xml:"policies"`
+	Policies       *[]Policy `json:"policies,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }
 

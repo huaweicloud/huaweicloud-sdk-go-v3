@@ -10,9 +10,9 @@ import (
 type AttachCallbackInstanceLifeCycleHookRequest struct {
 
 	// 伸缩组标识。
-	ScalingGroupId string `json:"scaling_group_id" xml:"scaling_group_id"`
+	ScalingGroupId string `json:"scaling_group_id"`
 
-	Body *CallbackLifeCycleHookOption `json:"body,omitempty" xml:"body"`
+	Body *CallbackLifeCycleHookOption `json:"body,omitempty"`
 }
 
 func (o AttachCallbackInstanceLifeCycleHookRequest) String() string {

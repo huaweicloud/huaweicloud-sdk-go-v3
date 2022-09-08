@@ -10,10 +10,10 @@ import (
 type ShowLogsResponse struct {
 
 	// 总数。
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 
 	// 日志列表数据
-	Logs           *[]LogObject `json:"logs,omitempty" xml:"logs"`
+	Logs           *[]LogObject `json:"logs,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }
 

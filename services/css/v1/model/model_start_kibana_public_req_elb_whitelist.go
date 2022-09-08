@@ -9,10 +9,10 @@ import (
 type StartKibanaPublicReqElbWhitelist struct {
 
 	// 是否开启白名单。 - true: 开启白名单。 - false: 关闭白名单。
-	EnableWhiteList bool `json:"enableWhiteList" xml:"enableWhiteList"`
+	EnableWhiteList bool `json:"enableWhiteList"`
 
 	// 白名单。
-	WhiteList string `json:"whiteList" xml:"whiteList"`
+	WhiteList string `json:"whiteList"`
 }
 
 func (o StartKibanaPublicReqElbWhitelist) String() string {

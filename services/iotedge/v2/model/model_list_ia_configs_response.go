@@ -10,7 +10,7 @@ import (
 type ListIaConfigsResponse struct {
 
 	// 南向3rdIA配置项列表
-	Configs        *[]QueryIaConfigResponseDto `json:"configs,omitempty" xml:"configs"`
+	Configs        *[]QueryIaConfigResponseDto `json:"configs,omitempty"`
 	HttpStatusCode int                         `json:"-"`
 }
 

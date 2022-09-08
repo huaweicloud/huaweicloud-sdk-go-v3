@@ -10,10 +10,10 @@ import (
 type ListPipelineJobsResponse struct {
 
 	// 总数
-	Count *int64 `json:"count,omitempty" xml:"count"`
+	Count *int64 `json:"count,omitempty"`
 
 	// 管道列表
-	Pipelines      *[]PipelineJobInfoDto `json:"pipelines,omitempty" xml:"pipelines"`
+	Pipelines      *[]PipelineJobInfoDto `json:"pipelines,omitempty"`
 	HttpStatusCode int                   `json:"-"`
 }
 

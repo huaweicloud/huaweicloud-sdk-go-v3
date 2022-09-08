@@ -10,7 +10,7 @@ import (
 type ListPublicipsResponse struct {
 
 	// 弹性公网IP对象
-	Publicips      *[]PublicipShowResp `json:"publicips,omitempty" xml:"publicips"`
+	Publicips      *[]PublicipShowResp `json:"publicips,omitempty"`
 	HttpStatusCode int                 `json:"-"`
 }
 

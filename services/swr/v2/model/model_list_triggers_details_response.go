@@ -10,7 +10,7 @@ import (
 type ListTriggersDetailsResponse struct {
 
 	// 触发器列表
-	Body           *[]Trigger `json:"body,omitempty" xml:"body"`
+	Body           *[]Trigger `json:"body,omitempty"`
 	HttpStatusCode int        `json:"-"`
 }
 

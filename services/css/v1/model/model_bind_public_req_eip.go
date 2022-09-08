@@ -8,7 +8,7 @@ import (
 
 // 弹性IP信息。
 type BindPublicReqEip struct {
-	BandWidth *BindPublicReqEipBandWidth `json:"bandWidth" xml:"bandWidth"`
+	BandWidth *BindPublicReqEipBandWidth `json:"bandWidth"`
 }
 
 func (o BindPublicReqEip) String() string {

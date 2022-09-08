@@ -9,10 +9,10 @@ import (
 type BranchList struct {
 
 	// 指定仓库的分支列表
-	Branches *[]Branch `json:"branches,omitempty" xml:"branches"`
+	Branches *[]Branch `json:"branches,omitempty"`
 
 	// 指定仓库的分支总数
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 }
 
 func (o BranchList) String() string {

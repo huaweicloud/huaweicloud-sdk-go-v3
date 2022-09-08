@@ -10,7 +10,7 @@ import (
 type CheckCanAuthUsersOfAppResponse struct {
 
 	// 候选用户成员列表
-	Users          *[]CandidatesUser `json:"users,omitempty" xml:"users"`
+	Users          *[]CandidatesUser `json:"users,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }
 

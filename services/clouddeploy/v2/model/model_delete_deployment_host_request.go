@@ -10,10 +10,10 @@ import (
 type DeleteDeploymentHostRequest struct {
 
 	// 主机组id
-	GroupId string `json:"group_id" xml:"group_id"`
+	GroupId string `json:"group_id"`
 
 	// 主机id
-	HostId string `json:"host_id" xml:"host_id"`
+	HostId string `json:"host_id"`
 }
 
 func (o DeleteDeploymentHostRequest) String() string {

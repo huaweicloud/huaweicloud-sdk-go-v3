@@ -13,31 +13,31 @@ import (
 type CreateNetworkInstance struct {
 
 	// 网络实例的名字。只能由中文、英文字母、数字、下划线、中划线、点组成。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 网络实例的描述。不支持 <>。
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 添加到云连接网络实例的类型，有效值： - vpc：虚拟私有云。 - vgw：虚拟网关。
-	Type CreateNetworkInstanceType `json:"type" xml:"type"`
+	Type CreateNetworkInstanceType `json:"type"`
 
 	// 添加到云连接网络实例的ID，VPC或者VGW的ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 网络实例的账户ID。跨账号加载必填；同账号下资源加载不填。
-	InstanceDomainId *string `json:"instance_domain_id,omitempty" xml:"instance_domain_id"`
+	InstanceDomainId *string `json:"instance_domain_id,omitempty"`
 
 	// 网络实例的项目ID。
-	ProjectId string `json:"project_id" xml:"project_id"`
+	ProjectId string `json:"project_id"`
 
 	// 网络实例的RegionID。
-	RegionId string `json:"region_id" xml:"region_id"`
+	RegionId string `json:"region_id"`
 
 	// 云连接实例ID。
-	CloudConnectionId string `json:"cloud_connection_id" xml:"cloud_connection_id"`
+	CloudConnectionId string `json:"cloud_connection_id"`
 
 	// 网络实例发布的网段路由列表。
-	Cidrs []string `json:"cidrs" xml:"cidrs"`
+	Cidrs []string `json:"cidrs"`
 }
 
 func (o CreateNetworkInstance) String() string {

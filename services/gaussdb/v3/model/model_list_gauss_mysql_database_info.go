@@ -10,13 +10,13 @@ import (
 type ListGaussMysqlDatabaseInfo struct {
 
 	// 数据库名称。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 数据库使用的字符集，如utf8mb4、gbk等。
-	Charset *string `json:"charset,omitempty" xml:"charset"`
+	Charset *string `json:"charset,omitempty"`
 
 	// 已授权数据库用户列表。
-	Users *[]GaussMySqlDatabaseInfo `json:"users,omitempty" xml:"users"`
+	Users *[]GaussMySqlDatabaseInfo `json:"users,omitempty"`
 }
 
 func (o ListGaussMysqlDatabaseInfo) String() string {

@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowAgencyResponse struct {
-	Agency         *AgencyResult `json:"agency,omitempty" xml:"agency"`
+	Agency         *AgencyResult `json:"agency,omitempty"`
 	HttpStatusCode int           `json:"-"`
 }
 

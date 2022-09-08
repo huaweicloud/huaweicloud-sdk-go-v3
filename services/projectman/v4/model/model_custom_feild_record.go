@@ -9,13 +9,13 @@ import (
 type CustomFeildRecord struct {
 
 	// 自定义工作项属性
-	Key *string `json:"key,omitempty" xml:"key"`
+	Key *string `json:"key,omitempty"`
 
 	// 自定义工作项名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 自定义工作项值
-	Value *string `json:"value,omitempty" xml:"value"`
+	Value *string `json:"value,omitempty"`
 }
 
 func (o CustomFeildRecord) String() string {

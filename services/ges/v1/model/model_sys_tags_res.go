@@ -9,10 +9,10 @@ import (
 type SysTagsRes struct {
 
 	// 企业项目的key填：_sys_enterprise_project_id。
-	Key *string `json:"key,omitempty" xml:"key"`
+	Key *string `json:"key,omitempty"`
 
 	// 企业项目的id。可以从企业项目获取。
-	Value *string `json:"value,omitempty" xml:"value"`
+	Value *string `json:"value,omitempty"`
 }
 
 func (o SysTagsRes) String() string {

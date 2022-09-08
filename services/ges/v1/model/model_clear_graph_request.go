@@ -13,13 +13,13 @@ import (
 type ClearGraphRequest struct {
 
 	// 图ID。
-	GraphId string `json:"graph_id" xml:"graph_id"`
+	GraphId string `json:"graph_id"`
 
 	// 图actionId
-	ActionId ClearGraphRequestActionId `json:"action_id" xml:"action_id"`
+	ActionId ClearGraphRequestActionId `json:"action_id"`
 
 	// 是否清空图关联的元数据。建议清除。
-	ClearMetadata *bool `json:"clear-metadata,omitempty" xml:"clear-metadata"`
+	ClearMetadata *bool `json:"clear-metadata,omitempty"`
 }
 
 func (o ClearGraphRequest) String() string {

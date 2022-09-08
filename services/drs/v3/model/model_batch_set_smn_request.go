@@ -13,9 +13,9 @@ import (
 type BatchSetSmnRequest struct {
 
 	// 请求语言类型
-	XLanguage *BatchSetSmnRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *BatchSetSmnRequestXLanguage `json:"X-Language,omitempty"`
 
-	Body *BatchImportSmnInfoReq `json:"body,omitempty" xml:"body"`
+	Body *BatchImportSmnInfoReq `json:"body,omitempty"`
 }
 
 func (o BatchSetSmnRequest) String() string {

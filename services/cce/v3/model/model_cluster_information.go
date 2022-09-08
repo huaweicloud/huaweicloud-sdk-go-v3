@@ -8,7 +8,7 @@ import (
 
 //
 type ClusterInformation struct {
-	Spec *ClusterInformationSpec `json:"spec" xml:"spec"`
+	Spec *ClusterInformationSpec `json:"spec"`
 }
 
 func (o ClusterInformation) String() string {

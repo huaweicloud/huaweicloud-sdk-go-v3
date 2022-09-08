@@ -9,19 +9,19 @@ import (
 type PartnersServiceInfo struct {
 
 	// 客户id
-	CustomerId *string `json:"customer_id,omitempty" xml:"customer_id"`
+	CustomerId *string `json:"customer_id,omitempty"`
 
 	// 客户名称
-	CustomerName *string `json:"customer_name,omitempty" xml:"customer_name"`
+	CustomerName *string `json:"customer_name,omitempty"`
 
 	// 服务时区，GMT+08:00
-	ServiceTimeZone *string `json:"service_time_zone,omitempty" xml:"service_time_zone"`
+	ServiceTimeZone *string `json:"service_time_zone,omitempty"`
 
 	// 每周服务天数
-	ServiceTimeDay *string `json:"service_time_day,omitempty" xml:"service_time_day"`
+	ServiceTimeDay *string `json:"service_time_day,omitempty"`
 
 	// 每天服务小时
-	ServiceTimeHour *string `json:"service_time_hour,omitempty" xml:"service_time_hour"`
+	ServiceTimeHour *string `json:"service_time_hour,omitempty"`
 }
 
 func (o PartnersServiceInfo) String() string {

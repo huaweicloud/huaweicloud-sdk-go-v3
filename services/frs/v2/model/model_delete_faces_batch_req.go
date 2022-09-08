@@ -9,7 +9,7 @@ import (
 type DeleteFacesBatchReq struct {
 
 	// [过滤条件，参考[filter语法](https://support.huaweicloud.com/api-face/face_02_0014.html)。](tag:hc) [过滤条件，参考[filter语法](https://support.huaweicloud.com/intl/zh-cn/api-face/face_02_0014.html)。](tag:hk)
-	Filter string `json:"filter" xml:"filter"`
+	Filter string `json:"filter"`
 }
 
 func (o DeleteFacesBatchReq) String() string {

@@ -10,10 +10,10 @@ import (
 type BatchAddMembersRequestBody struct {
 
 	// 镜像ID列表
-	Images []string `json:"images" xml:"images"`
+	Images []string `json:"images"`
 
 	// 项目ID列表
-	Projects []string `json:"projects" xml:"projects"`
+	Projects []string `json:"projects"`
 }
 
 func (o BatchAddMembersRequestBody) String() string {

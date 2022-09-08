@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateNet2CloudPhoneServerRequest struct {
-	Body *CreateNet2CloudPhoneServerRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreateNet2CloudPhoneServerRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateNet2CloudPhoneServerRequest) String() string {

@@ -10,10 +10,10 @@ import (
 type MultiOracleAddress struct {
 
 	// ORACLE地址
-	OracleAddress *string `json:"oracle_address,omitempty" xml:"oracle_address"`
+	OracleAddress *string `json:"oracle_address,omitempty"`
 
 	// ORACLE端口
-	OraclePort *string `json:"oracle_port,omitempty" xml:"oracle_port"`
+	OraclePort *string `json:"oracle_port,omitempty"`
 }
 
 func (o MultiOracleAddress) String() string {

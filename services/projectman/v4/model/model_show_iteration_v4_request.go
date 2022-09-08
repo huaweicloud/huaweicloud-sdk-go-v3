@@ -10,7 +10,7 @@ import (
 type ShowIterationV4Request struct {
 
 	// 迭代id
-	IterationId int32 `json:"iteration_id" xml:"iteration_id"`
+	IterationId int32 `json:"iteration_id"`
 }
 
 func (o ShowIterationV4Request) String() string {

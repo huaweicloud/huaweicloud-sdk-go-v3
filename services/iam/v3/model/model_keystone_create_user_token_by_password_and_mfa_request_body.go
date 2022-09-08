@@ -8,7 +8,7 @@ import (
 
 //
 type KeystoneCreateUserTokenByPasswordAndMfaRequestBody struct {
-	Auth *MfaAuth `json:"auth" xml:"auth"`
+	Auth *MfaAuth `json:"auth"`
 }
 
 func (o KeystoneCreateUserTokenByPasswordAndMfaRequestBody) String() string {

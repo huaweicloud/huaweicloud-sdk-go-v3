@@ -9,10 +9,10 @@ import (
 type ExerciseGroup struct {
 
 	// 习题列表
-	Exercises []ExerciseCard `json:"exercises" xml:"exercises"`
+	Exercises []ExerciseCard `json:"exercises"`
 
 	// 习题分类
-	Type string `json:"type" xml:"type"`
+	Type string `json:"type"`
 }
 
 func (o ExerciseGroup) String() string {

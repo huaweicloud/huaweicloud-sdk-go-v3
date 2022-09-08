@@ -66,6 +66,73 @@ func (c *EvsClient) BatchDeleteVolumeTagsInvoker(request *model.BatchDeleteVolum
 	return &BatchDeleteVolumeTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CinderAcceptVolumeTransfer 接受云硬盘过户
+//
+// 通过云硬盘过户记录ID以及身份认证密钥来接受云硬盘过户。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *EvsClient) CinderAcceptVolumeTransfer(request *model.CinderAcceptVolumeTransferRequest) (*model.CinderAcceptVolumeTransferResponse, error) {
+	requestDef := GenReqDefForCinderAcceptVolumeTransfer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CinderAcceptVolumeTransferResponse), nil
+	}
+}
+
+// CinderAcceptVolumeTransferInvoker 接受云硬盘过户
+func (c *EvsClient) CinderAcceptVolumeTransferInvoker(request *model.CinderAcceptVolumeTransferRequest) *CinderAcceptVolumeTransferInvoker {
+	requestDef := GenReqDefForCinderAcceptVolumeTransfer()
+	return &CinderAcceptVolumeTransferInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CinderCreateVolumeTransfer 创建云硬盘过户
+//
+// 指定云硬盘来创建云硬盘过户记录，创建成功后，会返回过户记录ID以及身份认证密钥。
+// 云硬盘在过户过程中的状态变化如下：创建云硬盘过户后，云硬盘状态由“available”变为“awaiting-transfer”。当云硬盘过户被接收后，云硬盘状态变为“available”。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *EvsClient) CinderCreateVolumeTransfer(request *model.CinderCreateVolumeTransferRequest) (*model.CinderCreateVolumeTransferResponse, error) {
+	requestDef := GenReqDefForCinderCreateVolumeTransfer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CinderCreateVolumeTransferResponse), nil
+	}
+}
+
+// CinderCreateVolumeTransferInvoker 创建云硬盘过户
+func (c *EvsClient) CinderCreateVolumeTransferInvoker(request *model.CinderCreateVolumeTransferRequest) *CinderCreateVolumeTransferInvoker {
+	requestDef := GenReqDefForCinderCreateVolumeTransfer()
+	return &CinderCreateVolumeTransferInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CinderDeleteVolumeTransfer 删除云硬盘过户
+//
+// 当云硬盘过户未被接受时，您可以删除云硬盘过户记录，接受后则无法执行删除操作。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *EvsClient) CinderDeleteVolumeTransfer(request *model.CinderDeleteVolumeTransferRequest) (*model.CinderDeleteVolumeTransferResponse, error) {
+	requestDef := GenReqDefForCinderDeleteVolumeTransfer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CinderDeleteVolumeTransferResponse), nil
+	}
+}
+
+// CinderDeleteVolumeTransferInvoker 删除云硬盘过户
+func (c *EvsClient) CinderDeleteVolumeTransferInvoker(request *model.CinderDeleteVolumeTransferRequest) *CinderDeleteVolumeTransferInvoker {
+	requestDef := GenReqDefForCinderDeleteVolumeTransfer()
+	return &CinderDeleteVolumeTransferInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CinderListAvailabilityZones 查询所有的可用分区信息
 //
 // 查询所有的可用分区信息。
@@ -110,6 +177,28 @@ func (c *EvsClient) CinderListQuotasInvoker(request *model.CinderListQuotasReque
 	return &CinderListQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CinderListVolumeTransfers 查询云硬盘过户记录列表概要
+//
+// 查询当前租户下所有云硬盘的过户记录列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *EvsClient) CinderListVolumeTransfers(request *model.CinderListVolumeTransfersRequest) (*model.CinderListVolumeTransfersResponse, error) {
+	requestDef := GenReqDefForCinderListVolumeTransfers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CinderListVolumeTransfersResponse), nil
+	}
+}
+
+// CinderListVolumeTransfersInvoker 查询云硬盘过户记录列表概要
+func (c *EvsClient) CinderListVolumeTransfersInvoker(request *model.CinderListVolumeTransfersRequest) *CinderListVolumeTransfersInvoker {
+	requestDef := GenReqDefForCinderListVolumeTransfers()
+	return &CinderListVolumeTransfersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CinderListVolumeTypes 查询云硬盘类型列表
 //
 // 查询云硬盘类型列表。
@@ -130,6 +219,28 @@ func (c *EvsClient) CinderListVolumeTypes(request *model.CinderListVolumeTypesRe
 func (c *EvsClient) CinderListVolumeTypesInvoker(request *model.CinderListVolumeTypesRequest) *CinderListVolumeTypesInvoker {
 	requestDef := GenReqDefForCinderListVolumeTypes()
 	return &CinderListVolumeTypesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CinderShowVolumeTransfer 查询单个云硬盘过户记录详情
+//
+// 查询单个云硬盘的过户记录详情，比如过户记录创建时间、ID以及名称等信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *EvsClient) CinderShowVolumeTransfer(request *model.CinderShowVolumeTransferRequest) (*model.CinderShowVolumeTransferResponse, error) {
+	requestDef := GenReqDefForCinderShowVolumeTransfer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CinderShowVolumeTransferResponse), nil
+	}
+}
+
+// CinderShowVolumeTransferInvoker 查询单个云硬盘过户记录详情
+func (c *EvsClient) CinderShowVolumeTransferInvoker(request *model.CinderShowVolumeTransferRequest) *CinderShowVolumeTransferInvoker {
+	requestDef := GenReqDefForCinderShowVolumeTransfer()
+	return &CinderShowVolumeTransferInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateSnapshot 创建云硬盘快照
@@ -493,4 +604,48 @@ func (c *EvsClient) UpdateVolume(request *model.UpdateVolumeRequest) (*model.Upd
 func (c *EvsClient) UpdateVolumeInvoker(request *model.UpdateVolumeRequest) *UpdateVolumeInvoker {
 	requestDef := GenReqDefForUpdateVolume()
 	return &UpdateVolumeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListVersions 查询接口版本信息列表
+//
+// 查询接口版本信息列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *EvsClient) ListVersions(request *model.ListVersionsRequest) (*model.ListVersionsResponse, error) {
+	requestDef := GenReqDefForListVersions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListVersionsResponse), nil
+	}
+}
+
+// ListVersionsInvoker 查询接口版本信息列表
+func (c *EvsClient) ListVersionsInvoker(request *model.ListVersionsRequest) *ListVersionsInvoker {
+	requestDef := GenReqDefForListVersions()
+	return &ListVersionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowVersion 查询API接口的版本信息
+//
+// 查询接口的指定版本信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *EvsClient) ShowVersion(request *model.ShowVersionRequest) (*model.ShowVersionResponse, error) {
+	requestDef := GenReqDefForShowVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowVersionResponse), nil
+	}
+}
+
+// ShowVersionInvoker 查询API接口的版本信息
+func (c *EvsClient) ShowVersionInvoker(request *model.ShowVersionRequest) *ShowVersionInvoker {
+	requestDef := GenReqDefForShowVersion()
+	return &ShowVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

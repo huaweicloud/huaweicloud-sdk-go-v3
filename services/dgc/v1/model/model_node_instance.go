@@ -7,29 +7,29 @@ import (
 )
 
 type NodeInstance struct {
-	NodeName *string `json:"nodeName,omitempty" xml:"nodeName"`
+	NodeName *string `json:"nodeName,omitempty"`
 
-	Status *string `json:"status,omitempty" xml:"status"`
+	Status *string `json:"status,omitempty"`
 
-	PlanTime *int32 `json:"planTime,omitempty" xml:"planTime"`
+	PlanTime *int32 `json:"planTime,omitempty"`
 
-	StartTime *int32 `json:"startTime,omitempty" xml:"startTime"`
+	StartTime *int32 `json:"startTime,omitempty"`
 
-	EndTime *int32 `json:"endTime,omitempty" xml:"endTime"`
+	EndTime *int32 `json:"endTime,omitempty"`
 
-	ExecuteTime *int32 `json:"executeTime,omitempty" xml:"executeTime"`
+	ExecuteTime *int32 `json:"executeTime,omitempty"`
 
-	NodeType *string `json:"nodeType,omitempty" xml:"nodeType"`
+	NodeType *string `json:"nodeType,omitempty"`
 
-	RetryTimes *int32 `json:"retryTimes,omitempty" xml:"retryTimes"`
+	RetryTimes *int32 `json:"retryTimes,omitempty"`
 
-	InstanceId *int32 `json:"instanceId,omitempty" xml:"instanceId"`
+	InstanceId *int32 `json:"instanceId,omitempty"`
 
-	InputRowCount *int32 `json:"inputRowCount,omitempty" xml:"inputRowCount"`
+	InputRowCount *int32 `json:"inputRowCount,omitempty"`
 
-	OutputRowCount *int32 `json:"outputRowCount,omitempty" xml:"outputRowCount"`
+	OutputRowCount *int32 `json:"outputRowCount,omitempty"`
 
-	LogPath *string `json:"logPath,omitempty" xml:"logPath"`
+	LogPath *string `json:"logPath,omitempty"`
 }
 
 func (o NodeInstance) String() string {

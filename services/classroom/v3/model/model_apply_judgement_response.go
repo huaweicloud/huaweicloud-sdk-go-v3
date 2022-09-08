@@ -10,7 +10,7 @@ import (
 type ApplyJudgementResponse struct {
 
 	// 判题任务ID
-	JudgementId    *string `json:"judgement_id,omitempty" xml:"judgement_id"`
+	JudgementId    *string `json:"judgement_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

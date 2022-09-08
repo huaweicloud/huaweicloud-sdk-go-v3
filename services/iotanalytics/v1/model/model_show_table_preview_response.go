@@ -10,10 +10,10 @@ import (
 type ShowTablePreviewResponse struct {
 
 	// 表的列名称和类型。
-	Schema *[]interface{} `json:"schema,omitempty" xml:"schema"`
+	Schema *[]interface{} `json:"schema,omitempty"`
 
 	// 预览的表内容。
-	Rows           *[]interface{} `json:"rows,omitempty" xml:"rows"`
+	Rows           *[]interface{} `json:"rows,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }
 

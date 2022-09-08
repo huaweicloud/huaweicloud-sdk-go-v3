@@ -10,37 +10,37 @@ import (
 type ListAlarmHistoriesRequest struct {
 
 	// 发送的实体的MIME类型。默认使用application/json; charset=UTF-8。
-	ContentType string `json:"Content-Type" xml:"Content-Type"`
+	ContentType string `json:"Content-Type"`
 
 	// 告警ID,以al开头，后跟22位由字母或数字组成的字符串
-	AlarmId *string `json:"alarm_id,omitempty" xml:"alarm_id"`
+	AlarmId *string `json:"alarm_id,omitempty"`
 
 	// 告警规则名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 告警规则状态, ok为正常，alarm为告警，invalid为已失效
-	Status *string `json:"status,omitempty" xml:"status"`
+	Status *string `json:"status,omitempty"`
 
 	// 告警级别, 1为紧急，2为重要，3为次要，4为提示
-	Level *int32 `json:"level,omitempty" xml:"level"`
+	Level *int32 `json:"level,omitempty"`
 
 	// 查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
-	Namespace *string `json:"namespace,omitempty" xml:"namespace"`
+	Namespace *string `json:"namespace,omitempty"`
 
 	// 告警资源ID，多维度情况按字母升序排列并使用逗号分隔
-	ResourceId *string `json:"resource_id,omitempty" xml:"resource_id"`
+	ResourceId *string `json:"resource_id,omitempty"`
 
 	// 查询告警记录的起始时间，例如：2022-02-10T10:05:46+08:00
-	From *string `json:"from,omitempty" xml:"from"`
+	From *string `json:"from,omitempty"`
 
 	// 查询告警记录的截止时间，例如：2022-02-10T10:05:47+08:00
-	To *string `json:"to,omitempty" xml:"to"`
+	To *string `json:"to,omitempty"`
 
 	// 分页偏移量
-	Offset *int32 `json:"offset,omitempty" xml:"offset"`
+	Offset *int32 `json:"offset,omitempty"`
 
 	// 分页大小
-	Limit *int32 `json:"limit,omitempty" xml:"limit"`
+	Limit *int32 `json:"limit,omitempty"`
 }
 
 func (o ListAlarmHistoriesRequest) String() string {

@@ -10,18 +10,18 @@ import (
 type UpdateRecurringSubMeetingRequest struct {
 
 	// 标识是否为第三方portal过来的请求
-	XAuthorizationType *string `json:"X-Authorization-Type,omitempty" xml:"X-Authorization-Type"`
+	XAuthorizationType *string `json:"X-Authorization-Type,omitempty"`
 
 	// 用户的uuid（已在USG注册过的）
-	UserUUID *string `json:"userUUID,omitempty" xml:"userUUID"`
+	UserUUID *string `json:"userUUID,omitempty"`
 
 	// 用于区分到哪个HCSO站点鉴权。
-	XSiteId *string `json:"X-Site-Id,omitempty" xml:"X-Site-Id"`
+	XSiteId *string `json:"X-Site-Id,omitempty"`
 
 	// 会议标识
-	ConferenceID string `json:"conferenceID" xml:"conferenceID"`
+	ConferenceID string `json:"conferenceID"`
 
-	Body *RestScheduleCycleConfDto `json:"body,omitempty" xml:"body"`
+	Body *RestScheduleCycleConfDto `json:"body,omitempty"`
 }
 
 func (o UpdateRecurringSubMeetingRequest) String() string {

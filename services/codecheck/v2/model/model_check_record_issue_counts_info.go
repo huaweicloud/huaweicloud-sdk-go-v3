@@ -9,16 +9,16 @@ import (
 type CheckRecordIssueCountsInfo struct {
 
 	// 致命问题
-	Critical *int32 `json:"critical,omitempty" xml:"critical"`
+	Critical *int32 `json:"critical,omitempty"`
 
 	// 严重问题
-	Serious *int32 `json:"serious,omitempty" xml:"serious"`
+	Serious *int32 `json:"serious,omitempty"`
 
 	// 常规问题
-	Normal *int32 `json:"normal,omitempty" xml:"normal"`
+	Normal *int32 `json:"normal,omitempty"`
 
 	// 提示问题
-	Prompt *int32 `json:"prompt,omitempty" xml:"prompt"`
+	Prompt *int32 `json:"prompt,omitempty"`
 }
 
 func (o CheckRecordIssueCountsInfo) String() string {

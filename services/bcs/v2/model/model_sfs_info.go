@@ -9,16 +9,16 @@ import (
 type SfsInfo struct {
 
 	// BCS服务下的SFS文件系统名称
-	PvcName *string `json:"pvc_name,omitempty" xml:"pvc_name"`
+	PvcName *string `json:"pvc_name,omitempty"`
 
 	// BCS服务网络存储名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// BCS服务网络存储地址
-	Addr *string `json:"addr,omitempty" xml:"addr"`
+	Addr *string `json:"addr,omitempty"`
 
 	// BCS服务网络存储类型
-	Type *string `json:"type,omitempty" xml:"type"`
+	Type *string `json:"type,omitempty"`
 }
 
 func (o SfsInfo) String() string {

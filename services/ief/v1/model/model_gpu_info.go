@@ -9,13 +9,13 @@ import (
 type GpuInfo struct {
 
 	// GPU名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// GPU类型
-	Type *string `json:"type,omitempty" xml:"type"`
+	Type *string `json:"type,omitempty"`
 
 	// GPU memory大小，单位MB
-	Capacity *string `json:"capacity,omitempty" xml:"capacity"`
+	Capacity *string `json:"capacity,omitempty"`
 }
 
 func (o GpuInfo) String() string {

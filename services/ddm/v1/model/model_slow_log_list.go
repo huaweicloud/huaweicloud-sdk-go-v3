@@ -9,25 +9,25 @@ import (
 type SlowLogList struct {
 
 	// 执行慢sql的DDM账号名称。
-	Users *string `json:"users,omitempty" xml:"users"`
+	Users *string `json:"users,omitempty"`
 
 	// 慢sql所属逻辑库的名称。
-	Database *string `json:"database,omitempty" xml:"database"`
+	Database *string `json:"database,omitempty"`
 
 	// 慢sql执行语法。
-	QuerySample *string `json:"querySample,omitempty" xml:"querySample"`
+	QuerySample *string `json:"querySample,omitempty"`
 
 	// DDM慢sql开始执行时间。
-	LogTime *string `json:"logTime,omitempty" xml:"logTime"`
+	LogTime *string `json:"logTime,omitempty"`
 
 	// 慢sql的执行时长，精确到毫秒。
-	Time *string `json:"time,omitempty" xml:"time"`
+	Time *string `json:"time,omitempty"`
 
 	// 逻辑库物理分片名称。
-	Shards *string `json:"shards,omitempty" xml:"shards"`
+	Shards *string `json:"shards,omitempty"`
 
 	// 慢sql影响行数。
-	RowsExamined *string `json:"rowsExamined,omitempty" xml:"rowsExamined"`
+	RowsExamined *string `json:"rowsExamined,omitempty"`
 }
 
 func (o SlowLogList) String() string {

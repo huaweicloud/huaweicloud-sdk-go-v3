@@ -10,7 +10,7 @@ import (
 type ListBrokersResponse struct {
 
 	// 代理列表。
-	Brokers        *[]ListBrokersRespBrokers `json:"brokers,omitempty" xml:"brokers"`
+	Brokers        *[]ListBrokersRespBrokers `json:"brokers,omitempty"`
 	HttpStatusCode int                       `json:"-"`
 }
 

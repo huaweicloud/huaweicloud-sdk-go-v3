@@ -13,19 +13,19 @@ import (
 type OpenGaussChargeInfoResponse struct {
 
 	// 计费模式。postPaid：后付费，即按需付费。prePaid：预付费，即包年/包月。
-	ChargeMode OpenGaussChargeInfoResponseChargeMode `json:"charge_mode" xml:"charge_mode"`
+	ChargeMode OpenGaussChargeInfoResponseChargeMode `json:"charge_mode"`
 
 	// 订购周期类型。month：包月。year：包年。 说明： “charge_mode”为“prePaid”时生效，且为必选值。
-	PeriodType *OpenGaussChargeInfoResponsePeriodType `json:"period_type,omitempty" xml:"period_type"`
+	PeriodType *OpenGaussChargeInfoResponsePeriodType `json:"period_type,omitempty"`
 
 	// “charge_mode”为“prePaid”时生效，且为必选值，指定订购的时间。  取值范围：  当“period_type”为“month”时，取值为1~9。 当“period_type”为“year”时，取值为1~3。
-	PeriodNum *int32 `json:"period_num,omitempty" xml:"period_num"`
+	PeriodNum *int32 `json:"period_num,omitempty"`
 
 	// 创建包周期实例时可指定，表示是否自动续订，续订的周期和原周期相同，且续订时会自动支付。  true，表示自动续订。 false，表示不自动续订，默认为该方式。
-	IsAutoRenew *bool `json:"is_auto_renew,omitempty" xml:"is_auto_renew"`
+	IsAutoRenew *bool `json:"is_auto_renew,omitempty"`
 
 	// 创建包周期实例时可指定，表示是否自动从账户中支付，该字段不影响自动续订的支付方式。  true，表示自动从账户中支付。 false，表示手动从账户中支付，默认为该支付方式。
-	IsAutoPay *bool `json:"is_auto_pay,omitempty" xml:"is_auto_pay"`
+	IsAutoPay *bool `json:"is_auto_pay,omitempty"`
 }
 
 func (o OpenGaussChargeInfoResponse) String() string {

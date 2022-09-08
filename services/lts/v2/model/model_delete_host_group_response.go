@@ -10,10 +10,10 @@ import (
 type DeleteHostGroupResponse struct {
 
 	// 主机组详细信息
-	Result *[]GetHostGroupInfo `json:"result,omitempty" xml:"result"`
+	Result *[]GetHostGroupInfo `json:"result,omitempty"`
 
 	// 删除主机组数量
-	Total          *int64 `json:"total,omitempty" xml:"total"`
+	Total          *int64 `json:"total,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

@@ -10,10 +10,10 @@ import (
 type ShowDetailsOfCustomAuthorizersV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 自定义认证的编号
-	AuthorizerId string `json:"authorizer_id" xml:"authorizer_id"`
+	AuthorizerId string `json:"authorizer_id"`
 }
 
 func (o ShowDetailsOfCustomAuthorizersV2Request) String() string {

@@ -10,28 +10,28 @@ import (
 type RuleConfig struct {
 
 	// 规则描述，最大长度255，不允许^~#$%&*<>()[]{}'\"\\
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 铂金版实例ID，如果为空则表示是专业版实例。
-	IefInstanceId *string `json:"ief_instance_id,omitempty" xml:"ief_instance_id"`
+	IefInstanceId *string `json:"ief_instance_id,omitempty"`
 
 	// 是否启用规则，默认为true（启用）
-	InUsing *bool `json:"in_using,omitempty" xml:"in_using"`
+	InUsing *bool `json:"in_using,omitempty"`
 
 	// 规则名称，只允许中文字符、英文字符、数字、下划线、中划线，最大长度64 同一个帐号中创建的规则名唯一
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 源端点ID
-	Source string `json:"source" xml:"source"`
+	Source string `json:"source"`
 
 	// 源端点资源。示例： - rest: {\"path\":\"<standard uri format>\"} - eventbus: {\"topic\":\"<project id>/nodes/<node id>/user/<租户自定义且满足eventbus topic要求的字符串>\",\"node_id\":\"<node id>\"}
-	SourceResource map[string]string `json:"source_resource" xml:"source_resource"`
+	SourceResource map[string]string `json:"source_resource"`
 
 	// 目的端点ID
-	Target string `json:"target" xml:"target"`
+	Target string `json:"target"`
 
 	// 目的端点资源。示例： - dis: {\"channel\": \"dis channel name\"} - servicebus: {\"path\": \"/request path\"} - apigw: {\"resource\": \"http://ssss.com\"} - eventbus: {\"topic\": \"/xxxx\"}
-	TargetResource map[string]string `json:"target_resource" xml:"target_resource"`
+	TargetResource map[string]string `json:"target_resource"`
 }
 
 func (o RuleConfig) String() string {

@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowCacheRulesResponse struct {
-	CacheConfig    *CacheConfig `json:"cache_config,omitempty" xml:"cache_config"`
+	CacheConfig    *CacheConfig `json:"cache_config,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }
 

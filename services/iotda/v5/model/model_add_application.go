@@ -10,7 +10,7 @@ import (
 type AddApplication struct {
 
 	// **参数说明**：资源空间名称。 **取值范围**：长度不超过64，允许中文、字母、数字、下划线（_）、连接符（-）等一些特殊字符的组合。
-	AppName string `json:"app_name" xml:"app_name"`
+	AppName string `json:"app_name"`
 }
 
 func (o AddApplication) String() string {

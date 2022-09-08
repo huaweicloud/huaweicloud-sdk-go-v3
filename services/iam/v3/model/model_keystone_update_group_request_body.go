@@ -8,7 +8,7 @@ import (
 
 //
 type KeystoneUpdateGroupRequestBody struct {
-	Group *KeystoneUpdateGroupOption `json:"group" xml:"group"`
+	Group *KeystoneUpdateGroupOption `json:"group"`
 }
 
 func (o KeystoneUpdateGroupRequestBody) String() string {

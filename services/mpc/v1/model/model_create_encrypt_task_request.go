@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateEncryptTaskRequest struct {
-	Body *CreateEncryptReq `json:"body,omitempty" xml:"body"`
+	Body *CreateEncryptReq `json:"body,omitempty"`
 }
 
 func (o CreateEncryptTaskRequest) String() string {

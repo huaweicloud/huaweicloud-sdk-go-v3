@@ -10,13 +10,13 @@ import (
 type SmnContentReq struct {
 
 	// 项目id
-	ProjectId string `json:"project_id" xml:"project_id"`
+	ProjectId string `json:"project_id"`
 
 	// 租户的AK
-	Ak string `json:"ak" xml:"ak"`
+	Ak string `json:"ak"`
 
 	// 租户的SK
-	Sk string `json:"sk" xml:"sk"`
+	Sk string `json:"sk"`
 }
 
 func (o SmnContentReq) String() string {

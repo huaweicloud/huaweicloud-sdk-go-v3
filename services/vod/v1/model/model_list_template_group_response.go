@@ -10,16 +10,16 @@ import (
 type ListTemplateGroupResponse struct {
 
 	// 模板组信息<br/>
-	TemplateGroupList *[]TemplateGroup `json:"template_group_list,omitempty" xml:"template_group_list"`
+	TemplateGroupList *[]TemplateGroup `json:"template_group_list,omitempty"`
 
 	// 总记录条数<br/>
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 
 	// 错误码<br/>
-	ErrorCode *string `json:"error_code,omitempty" xml:"error_code"`
+	ErrorCode *string `json:"error_code,omitempty"`
 
 	// 错误描述<br/>
-	ErrorMsg       *string `json:"error_msg,omitempty" xml:"error_msg"`
+	ErrorMsg       *string `json:"error_msg,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

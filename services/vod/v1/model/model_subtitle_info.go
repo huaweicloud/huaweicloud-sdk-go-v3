@@ -9,16 +9,16 @@ import (
 type SubtitleInfo struct {
 
 	// 字幕文件的下载地址
-	Url *string `json:"url,omitempty" xml:"url"`
+	Url *string `json:"url,omitempty"`
 
 	// 字幕文件id
-	Id *int32 `json:"id,omitempty" xml:"id"`
+	Id *int32 `json:"id,omitempty"`
 
 	// 字幕文件类型
-	Type *string `json:"type,omitempty" xml:"type"`
+	Type *string `json:"type,omitempty"`
 
 	// 字幕文件语言种类
-	Language *string `json:"language,omitempty" xml:"language"`
+	Language *string `json:"language,omitempty"`
 }
 
 func (o SubtitleInfo) String() string {

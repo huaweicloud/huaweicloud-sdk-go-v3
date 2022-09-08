@@ -9,37 +9,37 @@ import (
 type RulesetItem struct {
 
 	// 规则集id
-	TemplateId *string `json:"template_id,omitempty" xml:"template_id"`
+	TemplateId *string `json:"template_id,omitempty"`
 
 	// 规则集语言
-	Language *string `json:"language,omitempty" xml:"language"`
+	Language *string `json:"language,omitempty"`
 
 	// 规则集名称
-	TemplateName *string `json:"template_name,omitempty" xml:"template_name"`
+	TemplateName *string `json:"template_name,omitempty"`
 
 	// 创建人ID
-	CreatorId *string `json:"creator_id,omitempty" xml:"creator_id"`
+	CreatorId *string `json:"creator_id,omitempty"`
 
 	// 创建人名称
-	CreatorName *string `json:"creator_name,omitempty" xml:"creator_name"`
+	CreatorName *string `json:"creator_name,omitempty"`
 
 	// 创建人时间
-	TemplateCreateTime *string `json:"template_create_time,omitempty" xml:"template_create_time"`
+	TemplateCreateTime *string `json:"template_create_time,omitempty"`
 
 	// 使用状态1使用中，0空闲中
-	IsUsed *string `json:"is_used,omitempty" xml:"is_used"`
+	IsUsed *string `json:"is_used,omitempty"`
 
 	// 规则集包含的规则id
-	RuleIds *string `json:"rule_ids,omitempty" xml:"rule_ids"`
+	RuleIds *string `json:"rule_ids,omitempty"`
 
 	// 是否该语言默认规则集，0不是，1是
-	IsDefault *string `json:"is_default,omitempty" xml:"is_default"`
+	IsDefault *string `json:"is_default,omitempty"`
 
 	// 是否是项目下语言默认规则集，0不是，1是
-	IsDevcloudProjectDefault *string `json:"is_devcloud_project_default,omitempty" xml:"is_devcloud_project_default"`
+	IsDevcloudProjectDefault *string `json:"is_devcloud_project_default,omitempty"`
 
 	// 是否是系统规则集，0不是，1是
-	IsDefaultTemplate *string `json:"is_default_template,omitempty" xml:"is_default_template"`
+	IsDefaultTemplate *string `json:"is_default_template,omitempty"`
 }
 
 func (o RulesetItem) String() string {

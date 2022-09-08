@@ -10,9 +10,9 @@ import (
 type CreateGaussMySqlInstanceRequest struct {
 
 	// 语言。
-	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *string `json:"X-Language,omitempty"`
 
-	Body *MysqlInstanceRequest `json:"body,omitempty" xml:"body"`
+	Body *MysqlInstanceRequest `json:"body,omitempty"`
 }
 
 func (o CreateGaussMySqlInstanceRequest) String() string {

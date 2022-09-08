@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type DeleteDomainResponse struct {
-	Domain         *DomainsWithPort `json:"domain,omitempty" xml:"domain"`
+	Domain         *DomainsWithPort `json:"domain,omitempty"`
 	HttpStatusCode int              `json:"-"`
 }
 

@@ -8,9 +8,9 @@ import (
 
 // 更新防火墙规则的参数
 type UpdateFirewallRuleOption struct {
-	EgressFirewallPolicy *FirewallPolicy `json:"egress_firewall_policy" xml:"egress_firewall_policy"`
+	EgressFirewallPolicy *FirewallPolicy `json:"egress_firewall_policy"`
 
-	IngressFirewallPolicy *FirewallPolicy `json:"ingress_firewall_policy" xml:"ingress_firewall_policy"`
+	IngressFirewallPolicy *FirewallPolicy `json:"ingress_firewall_policy"`
 }
 
 func (o UpdateFirewallRuleOption) String() string {

@@ -10,10 +10,10 @@ import (
 type DeleteSubnetTagRequest struct {
 
 	// 子网ID
-	SubnetId string `json:"subnet_id" xml:"subnet_id"`
+	SubnetId string `json:"subnet_id"`
 
 	// 功能说明：键值
-	Key string `json:"key" xml:"key"`
+	Key string `json:"key"`
 }
 
 func (o DeleteSubnetTagRequest) String() string {

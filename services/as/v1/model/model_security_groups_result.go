@@ -10,7 +10,7 @@ import (
 type SecurityGroupsResult struct {
 
 	// 安全组ID
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 }
 
 func (o SecurityGroupsResult) String() string {

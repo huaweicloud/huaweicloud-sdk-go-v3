@@ -10,7 +10,7 @@ import (
 type DeleteNicsRequestBody struct {
 
 	// 待删除网卡信息。
-	Nics []NicId `json:"nics" xml:"nics"`
+	Nics []NicId `json:"nics"`
 }
 
 func (o DeleteNicsRequestBody) String() string {

@@ -7,9 +7,9 @@ import (
 )
 
 type CreateDeploymentJobsParams struct {
-	Function *FgsDeploymentJobsParam `json:"function,omitempty" xml:"function"`
+	Function *FgsDeploymentJobsParam `json:"function,omitempty"`
 
-	Cci *CciDeploymentJobsParam `json:"cci,omitempty" xml:"cci"`
+	Cci *CciDeploymentJobsParam `json:"cci,omitempty"`
 }
 
 func (o CreateDeploymentJobsParams) String() string {

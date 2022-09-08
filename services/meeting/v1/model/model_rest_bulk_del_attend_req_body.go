@@ -10,7 +10,7 @@ import (
 type RestBulkDelAttendReqBody struct {
 
 	// 待删除列表
-	BulkDelAttendInfo []DelAttendInfo `json:"bulkDelAttendInfo" xml:"bulkDelAttendInfo"`
+	BulkDelAttendInfo []DelAttendInfo `json:"bulkDelAttendInfo"`
 }
 
 func (o RestBulkDelAttendReqBody) String() string {

@@ -12,15 +12,15 @@ import (
 type CreateSinkTaskReq struct {
 
 	// 源数据类型，目前只支持BLOB。
-	SourceType CreateSinkTaskReqSourceType `json:"source_type" xml:"source_type"`
+	SourceType CreateSinkTaskReqSourceType `json:"source_type"`
 
 	// 转储任务名称。
-	TaskName string `json:"task_name" xml:"task_name"`
+	TaskName string `json:"task_name"`
 
 	// 转存的目标类型，当前只支持OBS。
-	DestinationType CreateSinkTaskReqDestinationType `json:"destination_type" xml:"destination_type"`
+	DestinationType CreateSinkTaskReqDestinationType `json:"destination_type"`
 
-	ObsDestinationDescriptor *ObsDestinationDescriptor `json:"obs_destination_descriptor" xml:"obs_destination_descriptor"`
+	ObsDestinationDescriptor *ObsDestinationDescriptor `json:"obs_destination_descriptor"`
 }
 
 func (o CreateSinkTaskReq) String() string {

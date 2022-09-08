@@ -13,13 +13,13 @@ import (
 type ListStatisticsRequest struct {
 
 	// 参数过滤器。 monitor_data: 查询统计信息。 monthly_report：查询月度统计信息。
-	Filter ListStatisticsRequestFilter `json:"filter" xml:"filter"`
+	Filter ListStatisticsRequestFilter `json:"filter"`
 
 	// 时间段单位为分钟，与filter参数metric配合使用。
-	Period *string `json:"period,omitempty" xml:"period"`
+	Period *string `json:"period,omitempty"`
 
 	// 月度统计的维度，filter参数取值为monthly_report时才生效。 当取值不在以上范围时，默认取\"0\"。 - \"0\": 表示统计本月。 - \"1\": 表示统计上月。 - \"2\": 表示统计最近三个月。 - \"3\": 表示统计最近六个月。
-	Option *string `json:"option,omitempty" xml:"option"`
+	Option *string `json:"option,omitempty"`
 }
 
 func (o ListStatisticsRequest) String() string {

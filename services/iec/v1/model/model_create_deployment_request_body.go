@@ -8,7 +8,7 @@ import (
 
 // 创建部署计划请求体
 type CreateDeploymentRequestBody struct {
-	Edgecloud *EdgeCloudOption `json:"edgecloud" xml:"edgecloud"`
+	Edgecloud *EdgeCloudOption `json:"edgecloud"`
 }
 
 func (o CreateDeploymentRequestBody) String() string {

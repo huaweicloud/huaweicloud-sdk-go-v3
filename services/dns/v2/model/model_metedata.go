@@ -9,7 +9,7 @@ import (
 type Metedata struct {
 
 	// 满足查询条件的资源总数，不受分页（即limit、offset参数）影响。
-	TotalCount *int32 `json:"total_count,omitempty" xml:"total_count"`
+	TotalCount *int32 `json:"total_count,omitempty"`
 }
 
 func (o Metedata) String() string {

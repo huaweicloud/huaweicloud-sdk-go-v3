@@ -13,18 +13,18 @@ import (
 type DownloadKieRequest struct {
 
 	// 如果不带则默认企业项目为\"default\"，ID为\"0\"
-	XEnterpriseProjectID *string `json:"X-Enterprise-Project-ID,omitempty" xml:"X-Enterprise-Project-ID"`
+	XEnterpriseProjectID *string `json:"X-Enterprise-Project-ID,omitempty"`
 
 	// 微服务引擎专享版ID。
-	XEngineId string `json:"x-engine-id" xml:"x-engine-id"`
+	XEngineId string `json:"x-engine-id"`
 
 	// 按label过滤项导出，格式为：{标签key}:{标签value}
-	Label *string `json:"label,omitempty" xml:"label"`
+	Label *string `json:"label,omitempty"`
 
 	// 对label过滤项的匹配选项，如果值为exact：表示严格匹配，包括label个数和内容相等；不填表示包含匹配
-	Match *DownloadKieRequestMatch `json:"match,omitempty" xml:"match"`
+	Match *DownloadKieRequestMatch `json:"match,omitempty"`
 
-	Body *DownloadKieReqBody `json:"body,omitempty" xml:"body"`
+	Body *DownloadKieReqBody `json:"body,omitempty"`
 }
 
 func (o DownloadKieRequest) String() string {

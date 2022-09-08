@@ -13,67 +13,67 @@ import (
 type TasksResponseBody struct {
 
 	// 迁移任务id
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 任务名称（用户自定义）
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 任务类型，创建迁移任务时必选，更新迁移任务时可选
-	Type *TasksResponseBodyType `json:"type,omitempty" xml:"type"`
+	Type *TasksResponseBodyType `json:"type,omitempty"`
 
 	// 操作系统类型，分为WINDOWS和LINUX，创建时必选，更新时可选
-	OsType *TasksResponseBodyOsType `json:"os_type,omitempty" xml:"os_type"`
+	OsType *TasksResponseBodyOsType `json:"os_type,omitempty"`
 
 	// 任务状态
-	State *string `json:"state,omitempty" xml:"state"`
+	State *string `json:"state,omitempty"`
 
 	// 预估完成时间
-	EstimateCompleteTime *int64 `json:"estimate_complete_time,omitempty" xml:"estimate_complete_time"`
+	EstimateCompleteTime *int64 `json:"estimate_complete_time,omitempty"`
 
 	// 任务创建时间
-	CreateDate *int64 `json:"create_date,omitempty" xml:"create_date"`
+	CreateDate *int64 `json:"create_date,omitempty"`
 
 	// 进程优先级 0：低 1：标准 2：高
-	Priority *TasksResponseBodyPriority `json:"priority,omitempty" xml:"priority"`
+	Priority *TasksResponseBodyPriority `json:"priority,omitempty"`
 
 	// 迁移限速
-	SpeedLimit *int32 `json:"speed_limit,omitempty" xml:"speed_limit"`
+	SpeedLimit *int32 `json:"speed_limit,omitempty"`
 
 	// 迁移速率，单位：MB/S
-	MigrateSpeed *float64 `json:"migrate_speed,omitempty" xml:"migrate_speed"`
+	MigrateSpeed *float64 `json:"migrate_speed,omitempty"`
 
 	// 压缩率
-	CompressRate *float64 `json:"compress_rate,omitempty" xml:"compress_rate"`
+	CompressRate *float64 `json:"compress_rate,omitempty"`
 
 	// 迁移完成后是否启动目的端服务器 true：启动 false：停止
-	StartTargetServer *bool `json:"start_target_server,omitempty" xml:"start_target_server"`
+	StartTargetServer *bool `json:"start_target_server,omitempty"`
 
 	// 错误信息
-	ErrorJson *string `json:"error_json,omitempty" xml:"error_json"`
+	ErrorJson *string `json:"error_json,omitempty"`
 
 	// 任务总耗时
-	TotalTime *int64 `json:"total_time,omitempty" xml:"total_time"`
+	TotalTime *int64 `json:"total_time,omitempty"`
 
 	// 目的端服务器的IP地址。 公网迁移时请填写弹性IP地址 专线迁移时请填写私有IP地址
-	MigrationIp *string `json:"migration_ip,omitempty" xml:"migration_ip"`
+	MigrationIp *string `json:"migration_ip,omitempty"`
 
 	// 任务关联的子任务信息
-	SubTasks *[]SubTaskAssociatedWithTask `json:"sub_tasks,omitempty" xml:"sub_tasks"`
+	SubTasks *[]SubTaskAssociatedWithTask `json:"sub_tasks,omitempty"`
 
-	SourceServer *SourceServerAssociatedWithTask `json:"source_server,omitempty" xml:"source_server"`
+	SourceServer *SourceServerAssociatedWithTask `json:"source_server,omitempty"`
 
 	// 迁移项目id
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	TargetServer *TargetServerAssociatedWithTask `json:"target_server,omitempty" xml:"target_server"`
+	TargetServer *TargetServerAssociatedWithTask `json:"target_server,omitempty"`
 
 	// 日志收集状态
-	LogCollectStatus *TasksResponseBodyLogCollectStatus `json:"log_collect_status,omitempty" xml:"log_collect_status"`
+	LogCollectStatus *TasksResponseBodyLogCollectStatus `json:"log_collect_status,omitempty"`
 
-	CloneServer *CloneServerBrief `json:"clone_server,omitempty" xml:"clone_server"`
+	CloneServer *CloneServerBrief `json:"clone_server,omitempty"`
 
 	// 是否同步
-	Syncing *bool `json:"syncing,omitempty" xml:"syncing"`
+	Syncing *bool `json:"syncing,omitempty"`
 }
 
 func (o TasksResponseBody) String() string {

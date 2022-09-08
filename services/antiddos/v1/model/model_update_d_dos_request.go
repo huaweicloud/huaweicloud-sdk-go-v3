@@ -10,12 +10,12 @@ import (
 type UpdateDDosRequest struct {
 
 	// 用户EIP对应的ID
-	FloatingIpId string `json:"floating_ip_id" xml:"floating_ip_id"`
+	FloatingIpId string `json:"floating_ip_id"`
 
 	// ip
-	Ip *string `json:"ip,omitempty" xml:"ip"`
+	Ip *string `json:"ip,omitempty"`
 
-	Body *UpdateAntiDDosServiceRequestBody `json:"body,omitempty" xml:"body"`
+	Body *UpdateAntiDDosServiceRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateDDosRequest) String() string {

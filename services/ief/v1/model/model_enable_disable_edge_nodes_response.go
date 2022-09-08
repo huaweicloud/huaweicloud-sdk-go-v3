@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type EnableDisableEdgeNodesResponse struct {
-	Node           *Action `json:"node,omitempty" xml:"node"`
+	Node           *Action `json:"node,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

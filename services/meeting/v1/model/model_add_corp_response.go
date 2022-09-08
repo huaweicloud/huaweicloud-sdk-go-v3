@@ -10,7 +10,7 @@ import (
 type AddCorpResponse struct {
 
 	// 返回结果
-	Value          *string `json:"value,omitempty" xml:"value"`
+	Value          *string `json:"value,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

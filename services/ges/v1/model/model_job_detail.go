@@ -10,13 +10,13 @@ import (
 type JobDetail struct {
 
 	// 元数据路径。
-	SchemaPath *[]SchemaPath `json:"schemaPath,omitempty" xml:"schemaPath"`
+	SchemaPath *[]SchemaPath `json:"schemaPath,omitempty"`
 
 	// 边数据集路径。
-	EdgesetPath *[]EdgesetPath `json:"edgesetPath,omitempty" xml:"edgesetPath"`
+	EdgesetPath *[]EdgesetPath `json:"edgesetPath,omitempty"`
 
 	// 点数据集路径。
-	VertexsetPath *[]VertexsetPath `json:"vertexsetPath,omitempty" xml:"vertexsetPath"`
+	VertexsetPath *[]VertexsetPath `json:"vertexsetPath,omitempty"`
 }
 
 func (o JobDetail) String() string {

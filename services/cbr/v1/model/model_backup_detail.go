@@ -11,72 +11,72 @@ import (
 type BackupDetail struct {
 
 	// 还原点ID
-	CheckpointId string `json:"checkpoint_id" xml:"checkpoint_id"`
+	CheckpointId string `json:"checkpoint_id"`
 
 	// 创建时间，例如:\"2020-02-05T10:38:34.209782\"
-	CreatedAt *sdktime.SdkTime `json:"created_at" xml:"created_at"`
+	CreatedAt *sdktime.SdkTime `json:"created_at"`
 
 	// 备份描述
-	Description string `json:"description" xml:"description"`
+	Description string `json:"description"`
 
 	// 过期时间，例如:\"2020-02-05T10:38:34.209782\"
-	ExpiredAt *sdktime.SdkTime `json:"expired_at" xml:"expired_at"`
+	ExpiredAt *sdktime.SdkTime `json:"expired_at"`
 
-	ExtendInfo *BackupExtendInfo `json:"extend_info" xml:"extend_info"`
+	ExtendInfo *BackupExtendInfo `json:"extend_info"`
 
 	// 备份ID
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
 	// 备份类型
-	ImageType BackupDetailImageType `json:"image_type" xml:"image_type"`
+	ImageType BackupDetailImageType `json:"image_type"`
 
 	// 备份名称
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 父备份ID
-	ParentId string `json:"parent_id" xml:"parent_id"`
+	ParentId string `json:"parent_id"`
 
 	// 项目ID
-	ProjectId string `json:"project_id" xml:"project_id"`
+	ProjectId string `json:"project_id"`
 
 	// 备份时间
-	ProtectedAt string `json:"protected_at" xml:"protected_at"`
+	ProtectedAt string `json:"protected_at"`
 
 	// 资源可用区
-	ResourceAz string `json:"resource_az" xml:"resource_az"`
+	ResourceAz string `json:"resource_az"`
 
 	// 资源ID
-	ResourceId string `json:"resource_id" xml:"resource_id"`
+	ResourceId string `json:"resource_id"`
 
 	// 资源名称
-	ResourceName string `json:"resource_name" xml:"resource_name"`
+	ResourceName string `json:"resource_name"`
 
 	// 资源大小，单位为GB
-	ResourceSize int32 `json:"resource_size" xml:"resource_size"`
+	ResourceSize int32 `json:"resource_size"`
 
 	// 资源类型
-	ResourceType BackupDetailResourceType `json:"resource_type" xml:"resource_type"`
+	ResourceType BackupDetailResourceType `json:"resource_type"`
 
 	// 备份状态
-	Status BackupDetailStatus `json:"status" xml:"status"`
+	Status BackupDetailStatus `json:"status"`
 
 	// 更新时间，例如:\"2020-02-05T10:38:34.209782\"
-	UpdatedAt *sdktime.SdkTime `json:"updated_at" xml:"updated_at"`
+	UpdatedAt *sdktime.SdkTime `json:"updated_at"`
 
 	// 存储库ID
-	VaultId string `json:"vault_id" xml:"vault_id"`
+	VaultId string `json:"vault_id"`
 
 	// 复制记录
-	ReplicationRecords *[]ReplicationRecordGet `json:"replication_records,omitempty" xml:"replication_records"`
+	ReplicationRecords *[]ReplicationRecordGet `json:"replication_records,omitempty"`
 
 	// 企业项目id,默认为‘0’。
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 备份提供商ID，用于区分备份对象。当前取值包含  0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。3f3c3220-245c-4805-b811-758870015881， 该值代表备份对象为SFS Turbo。a13639de-00be-4e94-af30-26912d75e4a2，该值代表备份对象为混合云VMware备份。
-	ProviderId string `json:"provider_id" xml:"provider_id"`
+	ProviderId string `json:"provider_id"`
 
 	//
-	Children []BackupResp `json:"children" xml:"children"`
+	Children []BackupResp `json:"children"`
 }
 
 func (o BackupDetail) String() string {

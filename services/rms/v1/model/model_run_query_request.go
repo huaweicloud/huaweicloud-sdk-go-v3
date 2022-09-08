@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RunQueryRequest struct {
-	Body *QueryRunRequestBody `json:"body,omitempty" xml:"body"`
+	Body *QueryRunRequestBody `json:"body,omitempty"`
 }
 
 func (o RunQueryRequest) String() string {

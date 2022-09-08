@@ -10,9 +10,9 @@ import (
 type ShowQuotaResponse struct {
 
 	// 请求ID。  注：自动生成 。
-	RequestId *string `json:"request_id,omitempty" xml:"request_id"`
+	RequestId *string `json:"request_id,omitempty"`
 
-	Quota          *Quota `json:"quota,omitempty" xml:"quota"`
+	Quota          *Quota `json:"quota,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

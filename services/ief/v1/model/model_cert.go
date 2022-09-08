@@ -10,13 +10,13 @@ import (
 type Cert struct {
 
 	// 证书名称
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 证书描述，最大长度255，不允许^ ~ # $ % & * < > ( ) [ ] { } ' \" \\
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 证书类型，包含： - application：应用证书 - device：设备证书
-	Type string `json:"type" xml:"type"`
+	Type string `json:"type"`
 }
 
 func (o Cert) String() string {

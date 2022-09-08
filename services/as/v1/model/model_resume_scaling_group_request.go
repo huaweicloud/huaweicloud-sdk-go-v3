@@ -10,9 +10,9 @@ import (
 type ResumeScalingGroupRequest struct {
 
 	// 伸缩组ID
-	ScalingGroupId string `json:"scaling_group_id" xml:"scaling_group_id"`
+	ScalingGroupId string `json:"scaling_group_id"`
 
-	Body *ResumeScalingGroupOption `json:"body,omitempty" xml:"body"`
+	Body *ResumeScalingGroupOption `json:"body,omitempty"`
 }
 
 func (o ResumeScalingGroupRequest) String() string {

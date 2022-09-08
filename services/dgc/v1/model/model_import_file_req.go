@@ -10,17 +10,17 @@ import (
 )
 
 type ImportFileReq struct {
-	Path *string `json:"path,omitempty" xml:"path"`
+	Path *string `json:"path,omitempty"`
 
 	// 公共作业参数
-	Params *interface{} `json:"params,omitempty" xml:"params"`
+	Params *interface{} `json:"params,omitempty"`
 
-	SameNamePolicy *ImportFileReqSameNamePolicy `json:"sameNamePolicy,omitempty" xml:"sameNamePolicy"`
+	SameNamePolicy *ImportFileReqSameNamePolicy `json:"sameNamePolicy,omitempty"`
 
 	// 指定作业参数
-	JobsParam *interface{} `json:"jobsParam,omitempty" xml:"jobsParam"`
+	JobsParam *interface{} `json:"jobsParam,omitempty"`
 
-	ExecuteUser *string `json:"executeUser,omitempty" xml:"executeUser"`
+	ExecuteUser *string `json:"executeUser,omitempty"`
 }
 
 func (o ImportFileReq) String() string {

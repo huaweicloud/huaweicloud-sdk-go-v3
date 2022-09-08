@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type UpdateSnapshotResponse struct {
-	Snapshot       *SnapshotDetails `json:"snapshot,omitempty" xml:"snapshot"`
+	Snapshot       *SnapshotDetails `json:"snapshot,omitempty"`
 	HttpStatusCode int              `json:"-"`
 }
 

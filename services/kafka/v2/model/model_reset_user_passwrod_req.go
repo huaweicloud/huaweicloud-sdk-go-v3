@@ -9,7 +9,7 @@ import (
 type ResetUserPasswrodReq struct {
 
 	// 用户新密码。
-	NewPassword *string `json:"new_password,omitempty" xml:"new_password"`
+	NewPassword *string `json:"new_password,omitempty"`
 }
 
 func (o ResetUserPasswrodReq) String() string {

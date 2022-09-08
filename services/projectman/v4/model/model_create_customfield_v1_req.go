@@ -9,19 +9,19 @@ import (
 type CreateCustomfieldV1Req struct {
 
 	// 字段名称
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 自定义字段类型 可选类型  textArea|select|radio|text|checkbox|date|time_date|number
-	Type string `json:"type" xml:"type"`
+	Type string `json:"type"`
 
 	// 字段选项
-	Options string `json:"options" xml:"options"`
+	Options string `json:"options"`
 
 	// 描述
-	Memo string `json:"memo" xml:"memo"`
+	Memo string `json:"memo"`
 
 	// 工作项类型
-	ScrumType string `json:"scrum_type" xml:"scrum_type"`
+	ScrumType string `json:"scrum_type"`
 }
 
 func (o CreateCustomfieldV1Req) String() string {

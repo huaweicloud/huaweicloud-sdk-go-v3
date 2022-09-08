@@ -10,9 +10,9 @@ import (
 type NeutronAddFirewallRuleRequest struct {
 
 	// 网络ACL防火墙策略ID
-	FirewallPolicyId string `json:"firewall_policy_id" xml:"firewall_policy_id"`
+	FirewallPolicyId string `json:"firewall_policy_id"`
 
-	Body *NeutronInsertFirewallRuleRequestBody `json:"body,omitempty" xml:"body"`
+	Body *NeutronInsertFirewallRuleRequestBody `json:"body,omitempty"`
 }
 
 func (o NeutronAddFirewallRuleRequest) String() string {

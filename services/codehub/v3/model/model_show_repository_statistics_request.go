@@ -10,9 +10,9 @@ import (
 type ShowRepositoryStatisticsRequest struct {
 
 	// 仓库的主键id
-	RepositoryId int32 `json:"repository_id" xml:"repository_id"`
+	RepositoryId int32 `json:"repository_id"`
 
-	Body *ShowRepositoryStatisticsRequestBody `json:"body,omitempty" xml:"body"`
+	Body *ShowRepositoryStatisticsRequestBody `json:"body,omitempty"`
 }
 
 func (o ShowRepositoryStatisticsRequest) String() string {

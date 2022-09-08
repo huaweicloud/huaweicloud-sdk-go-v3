@@ -10,9 +10,9 @@ import (
 type RestoreInstanceRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
-	Body *RestoreInstanceBody `json:"body,omitempty" xml:"body"`
+	Body *RestoreInstanceBody `json:"body,omitempty"`
 }
 
 func (o RestoreInstanceRequest) String() string {

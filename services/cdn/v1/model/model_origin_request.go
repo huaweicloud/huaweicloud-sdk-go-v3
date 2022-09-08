@@ -7,7 +7,7 @@ import (
 )
 
 type OriginRequest struct {
-	Origin *ResourceBody `json:"origin" xml:"origin"`
+	Origin *ResourceBody `json:"origin"`
 }
 
 func (o OriginRequest) String() string {

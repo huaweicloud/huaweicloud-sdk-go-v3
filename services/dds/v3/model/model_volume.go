@@ -10,10 +10,10 @@ import (
 type Volume struct {
 
 	// 磁盘大小。单位：GB。
-	Size string `json:"size" xml:"size"`
+	Size string `json:"size"`
 
 	// 磁盘使用量。单位：GB。
-	Used string `json:"used" xml:"used"`
+	Used string `json:"used"`
 }
 
 func (o Volume) String() string {

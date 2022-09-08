@@ -10,7 +10,7 @@ import (
 type ShowApiInfoRequest struct {
 
 	// 待查询版本号。以v开头，如v2。
-	Version string `json:"version" xml:"version"`
+	Version string `json:"version"`
 }
 
 func (o ShowApiInfoRequest) String() string {

@@ -10,12 +10,12 @@ import (
 type UpdateApiV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// API的编号
-	ApiId string `json:"api_id" xml:"api_id"`
+	ApiId string `json:"api_id"`
 
-	Body *ApiCreate `json:"body,omitempty" xml:"body"`
+	Body *ApiCreate `json:"body,omitempty"`
 }
 
 func (o UpdateApiV2Request) String() string {

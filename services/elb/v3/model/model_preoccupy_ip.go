@@ -10,7 +10,7 @@ import (
 type PreoccupyIp struct {
 
 	// 预占IP总数
-	Total int32 `json:"total" xml:"total"`
+	Total int32 `json:"total"`
 }
 
 func (o PreoccupyIp) String() string {

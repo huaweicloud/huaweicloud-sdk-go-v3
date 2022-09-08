@@ -8,7 +8,7 @@ import (
 
 // This is a auto create Body Object
 type DeleteServerGroupMemberRequestBody struct {
-	RemoveMember *ServerGroupMember `json:"remove_member" xml:"remove_member"`
+	RemoveMember *ServerGroupMember `json:"remove_member"`
 }
 
 func (o DeleteServerGroupMemberRequestBody) String() string {

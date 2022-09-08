@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowScalingConfigResponse struct {
-	ScalingConfiguration *ScalingConfiguration `json:"scaling_configuration,omitempty" xml:"scaling_configuration"`
+	ScalingConfiguration *ScalingConfiguration `json:"scaling_configuration,omitempty"`
 	HttpStatusCode       int                   `json:"-"`
 }
 

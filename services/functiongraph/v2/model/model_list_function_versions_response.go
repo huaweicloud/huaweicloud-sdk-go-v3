@@ -10,13 +10,13 @@ import (
 type ListFunctionVersionsResponse struct {
 
 	// 版本列表
-	Versions *[]ListFunctionVersionResult `json:"versions,omitempty" xml:"versions"`
+	Versions *[]ListFunctionVersionResult `json:"versions,omitempty"`
 
 	// 下一次记录位置
-	NextMarker *int64 `json:"next_marker,omitempty" xml:"next_marker"`
+	NextMarker *int64 `json:"next_marker,omitempty"`
 
 	// 版本总数
-	Count          *int64 `json:"count,omitempty" xml:"count"`
+	Count          *int64 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

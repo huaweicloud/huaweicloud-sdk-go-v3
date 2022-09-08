@@ -10,10 +10,10 @@ import (
 type ListSubnetsByTagsResponse struct {
 
 	// 资源列表
-	Resources *[]ListResourceResp `json:"resources,omitempty" xml:"resources"`
+	Resources *[]ListResourceResp `json:"resources,omitempty"`
 
 	// 资源数量
-	TotalCount     *int32 `json:"total_count,omitempty" xml:"total_count"`
+	TotalCount     *int32 `json:"total_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

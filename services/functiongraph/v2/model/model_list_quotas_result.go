@@ -10,7 +10,7 @@ import (
 type ListQuotasResult struct {
 
 	// 配额列表
-	Resources []Resources `json:"resources" xml:"resources"`
+	Resources []Resources `json:"resources"`
 }
 
 func (o ListQuotasResult) String() string {

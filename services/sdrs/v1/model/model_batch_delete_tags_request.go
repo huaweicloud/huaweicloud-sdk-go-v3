@@ -10,9 +10,9 @@ import (
 type BatchDeleteTagsRequest struct {
 
 	// 保护实例的ID。
-	ProtectedInstanceId string `json:"protected_instance_id" xml:"protected_instance_id"`
+	ProtectedInstanceId string `json:"protected_instance_id"`
 
-	Body *BatchDeleteTagsRequestBody `json:"body,omitempty" xml:"body"`
+	Body *BatchDeleteTagsRequestBody `json:"body,omitempty"`
 }
 
 func (o BatchDeleteTagsRequest) String() string {

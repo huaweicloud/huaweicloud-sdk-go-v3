@@ -10,7 +10,7 @@ import (
 type DeleteSubNetworkInterfaceRequest struct {
 
 	// 弹性辅助网卡唯一标识
-	SubNetworkInterfaceId string `json:"sub_network_interface_id" xml:"sub_network_interface_id"`
+	SubNetworkInterfaceId string `json:"sub_network_interface_id"`
 }
 
 func (o DeleteSubNetworkInterfaceRequest) String() string {

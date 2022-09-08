@@ -8,9 +8,9 @@ import (
 
 // scope信息
 type GetIdTokenIdScopeBody struct {
-	Domain *GetIdTokenScopeDomainOrProjectBody `json:"domain,omitempty" xml:"domain"`
+	Domain *GetIdTokenScopeDomainOrProjectBody `json:"domain,omitempty"`
 
-	Project *GetIdTokenScopeDomainOrProjectBody `json:"project,omitempty" xml:"project"`
+	Project *GetIdTokenScopeDomainOrProjectBody `json:"project,omitempty"`
 }
 
 func (o GetIdTokenIdScopeBody) String() string {

@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type BatchRebootInstanceRequest struct {
-	Body *BatchRebootInstanceRequestBody `json:"body,omitempty" xml:"body"`
+	Body *BatchRebootInstanceRequestBody `json:"body,omitempty"`
 }
 
 func (o BatchRebootInstanceRequest) String() string {

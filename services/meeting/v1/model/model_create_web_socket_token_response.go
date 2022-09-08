@@ -10,7 +10,7 @@ import (
 type CreateWebSocketTokenResponse struct {
 
 	// websocket建链Token。
-	WebSocketToken *string `json:"webSocketToken,omitempty" xml:"webSocketToken"`
+	WebSocketToken *string `json:"webSocketToken,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -10,7 +10,7 @@ import (
 type ListExternalEntityResponse struct {
 
 	// 外部实体列表
-	Externals      *[]ExternalEntityRespDto `json:"externals,omitempty" xml:"externals"`
+	Externals      *[]ExternalEntityRespDto `json:"externals,omitempty"`
 	HttpStatusCode int                      `json:"-"`
 }
 

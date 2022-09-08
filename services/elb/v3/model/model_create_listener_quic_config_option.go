@@ -10,10 +10,10 @@ import (
 type CreateListenerQuicConfigOption struct {
 
 	// 监听器关联的QUIC监听器ID。指定的listener id必须已存在，且协议类型为QUIC，不能指定为null，否则与enable_quic_upgrade冲突。
-	QuicListenerId string `json:"quic_listener_id" xml:"quic_listener_id"`
+	QuicListenerId string `json:"quic_listener_id"`
 
 	// QUIC升级的开启状态。 True:开启QUIC升级； Flase：关闭QUIC升级（默认）。 开启HTTPS监听器升级QUIC监听器能力
-	EnableQuicUpgrade *bool `json:"enable_quic_upgrade,omitempty" xml:"enable_quic_upgrade"`
+	EnableQuicUpgrade *bool `json:"enable_quic_upgrade,omitempty"`
 }
 
 func (o CreateListenerQuicConfigOption) String() string {

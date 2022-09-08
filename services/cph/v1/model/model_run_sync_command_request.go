@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RunSyncCommandRequest struct {
-	Body *RunSyncCommandRequestBody `json:"body,omitempty" xml:"body"`
+	Body *RunSyncCommandRequestBody `json:"body,omitempty"`
 }
 
 func (o RunSyncCommandRequest) String() string {

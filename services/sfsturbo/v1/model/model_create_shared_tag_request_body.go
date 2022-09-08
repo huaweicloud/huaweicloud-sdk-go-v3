@@ -8,7 +8,7 @@ import (
 
 // 标签
 type CreateSharedTagRequestBody struct {
-	Tag *ResourceTag `json:"tag" xml:"tag"`
+	Tag *ResourceTag `json:"tag"`
 }
 
 func (o CreateSharedTagRequestBody) String() string {

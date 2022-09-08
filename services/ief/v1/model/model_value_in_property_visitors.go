@@ -8,33 +8,33 @@ import (
 
 // 孪生属性配置，与access_protocol关联。
 type ValueInPropertyVisitors struct {
-	RegisterType *ValueInAttributes `json:"register_type,omitempty" xml:"register_type"`
+	RegisterType *ValueInAttributes `json:"register_type,omitempty"`
 
-	AccessMode *ValueInAttributes `json:"access_mode,omitempty" xml:"access_mode"`
+	AccessMode *ValueInAttributes `json:"access_mode,omitempty"`
 
-	RegisterIndex *ValueInAttributes `json:"register_index,omitempty" xml:"register_index"`
+	RegisterIndex *ValueInAttributes `json:"register_index,omitempty"`
 
-	RegisterNum *ValueInAttributes `json:"register_num,omitempty" xml:"register_num"`
+	RegisterNum *ValueInAttributes `json:"register_num,omitempty"`
 
-	ScaleIndex *ValueInAttributes `json:"scale_index,omitempty" xml:"scale_index"`
+	ScaleIndex *ValueInAttributes `json:"scale_index,omitempty"`
 
-	OriginalDatatype *ValueInAttributes `json:"original_datatype,omitempty" xml:"original_datatype"`
+	OriginalDatatype *ValueInAttributes `json:"original_datatype,omitempty"`
 
-	ExpectedDatatype *ValueInAttributes `json:"expected_datatype,omitempty" xml:"expected_datatype"`
+	ExpectedDatatype *ValueInAttributes `json:"expected_datatype,omitempty"`
 
-	IsRegisterswap *ValueInAttributes `json:"is_registerswap,omitempty" xml:"is_registerswap"`
+	IsRegisterswap *ValueInAttributes `json:"is_registerswap,omitempty"`
 
-	IsSwap *ValueInAttributes `json:"is_swap,omitempty" xml:"is_swap"`
+	IsSwap *ValueInAttributes `json:"is_swap,omitempty"`
 
-	SampleInterval *ValueInAttributes `json:"sample_interval,omitempty" xml:"sample_interval"`
+	SampleInterval *ValueInAttributes `json:"sample_interval,omitempty"`
 
-	DataMin *ValueInAttributes `json:"data_min,omitempty" xml:"data_min"`
+	DataMin *ValueInAttributes `json:"data_min,omitempty"`
 
-	DataMax *ValueInAttributes `json:"data_max,omitempty" xml:"data_max"`
+	DataMax *ValueInAttributes `json:"data_max,omitempty"`
 
-	NodeId *ValueInAttributes `json:"node_id,omitempty" xml:"node_id"`
+	NodeId *ValueInAttributes `json:"node_id,omitempty"`
 
-	BrowseName *ValueInAttributes `json:"browse_name,omitempty" xml:"browse_name"`
+	BrowseName *ValueInAttributes `json:"browse_name,omitempty"`
 }
 
 func (o ValueInPropertyVisitors) String() string {

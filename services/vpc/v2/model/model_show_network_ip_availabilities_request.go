@@ -10,7 +10,7 @@ import (
 type ShowNetworkIpAvailabilitiesRequest struct {
 
 	// 网络ID
-	NetworkId string `json:"network_id" xml:"network_id"`
+	NetworkId string `json:"network_id"`
 }
 
 func (o ShowNetworkIpAvailabilitiesRequest) String() string {

@@ -10,12 +10,12 @@ import (
 type UpdateProjectDomainRequest struct {
 
 	// devcloud项目的32位id
-	ProjectId string `json:"project_id" xml:"project_id"`
+	ProjectId string `json:"project_id"`
 
 	// 领域id
-	DomainId string `json:"domain_id" xml:"domain_id"`
+	DomainId string `json:"domain_id"`
 
-	Body *CreateProjectDomainRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreateProjectDomainRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateProjectDomainRequest) String() string {

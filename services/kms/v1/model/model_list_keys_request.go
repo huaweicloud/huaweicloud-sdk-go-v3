@@ -10,9 +10,9 @@ import (
 type ListKeysRequest struct {
 
 	// API版本号
-	VersionId string `json:"version_id" xml:"version_id"`
+	VersionId string `json:"version_id"`
 
-	Body *ListKeysRequestBody `json:"body,omitempty" xml:"body"`
+	Body *ListKeysRequestBody `json:"body,omitempty"`
 }
 
 func (o ListKeysRequest) String() string {

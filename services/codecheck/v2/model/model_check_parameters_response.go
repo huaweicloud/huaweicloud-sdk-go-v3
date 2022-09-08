@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type CheckParametersResponse struct {
-	Body           *[]CheckParametersRes `json:"body,omitempty" xml:"body"`
+	Body           *[]CheckParametersRes `json:"body,omitempty"`
 	HttpStatusCode int                   `json:"-"`
 }
 

@@ -10,7 +10,7 @@ import (
 type ShowPlanJournalsResponse struct {
 
 	// 项目下查询测试计划操作历史返回结构
-	Body           *[]TestPlanJournalList `json:"body,omitempty" xml:"body"`
+	Body           *[]TestPlanJournalList `json:"body,omitempty"`
 	HttpStatusCode int                    `json:"-"`
 }
 

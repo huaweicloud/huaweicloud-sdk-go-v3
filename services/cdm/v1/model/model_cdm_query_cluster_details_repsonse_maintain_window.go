@@ -10,13 +10,13 @@ import (
 type CdmQueryClusterDetailsRepsonseMaintainWindow struct {
 
 	// 周几
-	Day *string `json:"day,omitempty" xml:"day"`
+	Day *string `json:"day,omitempty"`
 
 	// 开始时间。
-	StartTime *string `json:"startTime,omitempty" xml:"startTime"`
+	StartTime *string `json:"startTime,omitempty"`
 
 	// 结束时间。
-	EndTime *string `json:"endTime,omitempty" xml:"endTime"`
+	EndTime *string `json:"endTime,omitempty"`
 }
 
 func (o CdmQueryClusterDetailsRepsonseMaintainWindow) String() string {

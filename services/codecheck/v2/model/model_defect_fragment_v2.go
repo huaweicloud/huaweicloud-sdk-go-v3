@@ -10,16 +10,16 @@ import (
 type DefectFragmentV2 struct {
 
 	// 行号
-	LineNum *string `json:"line_num,omitempty" xml:"line_num"`
+	LineNum *string `json:"line_num,omitempty"`
 
 	// 该行代码内容
-	LineContent *string `json:"line_content,omitempty" xml:"line_content"`
+	LineContent *string `json:"line_content,omitempty"`
 
 	// 缺陷开始列号
-	StartOffset *int32 `json:"start_offset,omitempty" xml:"start_offset"`
+	StartOffset *int32 `json:"start_offset,omitempty"`
 
 	// 缺陷结束列号
-	EndOffset *int32 `json:"end_offset,omitempty" xml:"end_offset"`
+	EndOffset *int32 `json:"end_offset,omitempty"`
 }
 
 func (o DefectFragmentV2) String() string {

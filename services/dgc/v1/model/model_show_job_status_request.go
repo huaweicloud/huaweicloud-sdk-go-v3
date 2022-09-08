@@ -10,7 +10,7 @@ import (
 type ShowJobStatusRequest struct {
 
 	// 作业名称.
-	JobName string `json:"job_name" xml:"job_name"`
+	JobName string `json:"job_name"`
 }
 
 func (o ShowJobStatusRequest) String() string {

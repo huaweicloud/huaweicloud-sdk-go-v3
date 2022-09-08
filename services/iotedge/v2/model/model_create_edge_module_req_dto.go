@@ -10,15 +10,15 @@ import (
 type CreateEdgeModuleReqDto struct {
 
 	// 边缘应用名称
-	EdgeAppId string `json:"edge_app_id" xml:"edge_app_id"`
+	EdgeAppId string `json:"edge_app_id"`
 
 	// 边缘应用版本
-	AppVersion string `json:"app_version" xml:"app_version"`
+	AppVersion string `json:"app_version"`
 
 	// 边缘模块名称
-	ModuleName *string `json:"module_name,omitempty" xml:"module_name"`
+	ModuleName *string `json:"module_name,omitempty"`
 
-	ContainerSettings *ContainerSettingsReqDto `json:"container_settings,omitempty" xml:"container_settings"`
+	ContainerSettings *ContainerSettingsReqDto `json:"container_settings,omitempty"`
 }
 
 func (o CreateEdgeModuleReqDto) String() string {

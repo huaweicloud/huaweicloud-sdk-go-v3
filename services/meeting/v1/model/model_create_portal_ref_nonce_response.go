@@ -10,7 +10,7 @@ import (
 type CreatePortalRefNonceResponse struct {
 
 	// 用于跳转登录的nonce信息。 说明： 通过链接https://bmeeting.huaweicloud.com/?lang=zh-CN&nonce=xxxxxxxxxxxxx#/login进行免登陆跳转。
-	Nonce          *string `json:"nonce,omitempty" xml:"nonce"`
+	Nonce          *string `json:"nonce,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

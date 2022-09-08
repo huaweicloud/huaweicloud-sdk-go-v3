@@ -10,10 +10,10 @@ import (
 type MetricDimension struct {
 
 	// 指标维度名称
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 指标维度值
-	Value *string `json:"value,omitempty" xml:"value"`
+	Value *string `json:"value,omitempty"`
 }
 
 func (o MetricDimension) String() string {

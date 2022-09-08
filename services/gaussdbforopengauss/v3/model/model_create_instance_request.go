@@ -10,9 +10,9 @@ import (
 type CreateInstanceRequest struct {
 
 	// 语言
-	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *string `json:"X-Language,omitempty"`
 
-	Body *OpenGaussInstanceRequest `json:"body,omitempty" xml:"body"`
+	Body *OpenGaussInstanceRequest `json:"body,omitempty"`
 }
 
 func (o CreateInstanceRequest) String() string {

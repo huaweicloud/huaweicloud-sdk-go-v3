@@ -8,15 +8,15 @@ import (
 
 // 探针配置
 type Probe struct {
-	Exec *Exec `json:"exec,omitempty" xml:"exec"`
+	Exec *Exec `json:"exec,omitempty"`
 
-	HttpGet *HttpGetDetail `json:"http_get,omitempty" xml:"http_get"`
+	HttpGet *HttpGetDetail `json:"http_get,omitempty"`
 
 	// 表示从工作负载启动后从多久开始探测，大于0且不大于3600的整数，默认为10
-	InitialDelaySeconds *int32 `json:"initial_delay_seconds,omitempty" xml:"initial_delay_seconds"`
+	InitialDelaySeconds *int32 `json:"initial_delay_seconds,omitempty"`
 
 	// 表示探测超时时间，大于0且不大于3600的整数，默认为1
-	TimeoutSeconds *int32 `json:"timeout_seconds,omitempty" xml:"timeout_seconds"`
+	TimeoutSeconds *int32 `json:"timeout_seconds,omitempty"`
 }
 
 func (o Probe) String() string {

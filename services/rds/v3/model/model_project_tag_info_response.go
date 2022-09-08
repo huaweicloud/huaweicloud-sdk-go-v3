@@ -10,10 +10,10 @@ import (
 type ProjectTagInfoResponse struct {
 
 	// 标签键。
-	Key string `json:"key" xml:"key"`
+	Key string `json:"key"`
 
 	// 标签值列表。
-	Values []string `json:"values" xml:"values"`
+	Values []string `json:"values"`
 }
 
 func (o ProjectTagInfoResponse) String() string {

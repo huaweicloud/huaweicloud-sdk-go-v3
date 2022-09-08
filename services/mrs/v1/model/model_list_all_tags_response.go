@@ -10,7 +10,7 @@ import (
 type ListAllTagsResponse struct {
 
 	// 标签列表信息
-	Tags           *[]TagWithMultiValue `json:"tags,omitempty" xml:"tags"`
+	Tags           *[]TagWithMultiValue `json:"tags,omitempty"`
 	HttpStatusCode int                  `json:"-"`
 }
 

@@ -10,7 +10,7 @@ import (
 type ShowVpcPeeringRequest struct {
 
 	// 对等连接ID
-	PeeringId string `json:"peering_id" xml:"peering_id"`
+	PeeringId string `json:"peering_id"`
 }
 
 func (o ShowVpcPeeringRequest) String() string {

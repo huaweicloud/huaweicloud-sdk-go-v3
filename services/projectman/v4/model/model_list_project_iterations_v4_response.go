@@ -10,10 +10,10 @@ import (
 type ListProjectIterationsV4Response struct {
 
 	// 迭代总数
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 
 	// 迭代信息
-	Iterations     *[]ListProjectVersionsV4ResponseBodyIterations `json:"iterations,omitempty" xml:"iterations"`
+	Iterations     *[]ListProjectVersionsV4ResponseBodyIterations `json:"iterations,omitempty"`
 	HttpStatusCode int                                            `json:"-"`
 }
 

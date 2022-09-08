@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type DeleteHostGroupRequest struct {
-	Body *DeleteHostGroupRequestBody `json:"body,omitempty" xml:"body"`
+	Body *DeleteHostGroupRequestBody `json:"body,omitempty"`
 }
 
 func (o DeleteHostGroupRequest) String() string {

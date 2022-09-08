@@ -10,10 +10,10 @@ import (
 type ListDeployTasksResponse struct {
 
 	// 总数
-	TotalNum *int32 `json:"total_num,omitempty" xml:"total_num"`
+	TotalNum *int32 `json:"total_num,omitempty"`
 
 	// 返回结果
-	Result         *[]TaskInfo `json:"result,omitempty" xml:"result"`
+	Result         *[]TaskInfo `json:"result,omitempty"`
 	HttpStatusCode int         `json:"-"`
 }
 

@@ -13,10 +13,10 @@ import (
 type DependencyParserRequest struct {
 
 	// 待分析文本，长度为1~32，文本编码为utf-8。
-	Text string `json:"text" xml:"text"`
+	Text string `json:"text"`
 
 	// 支持的文本语言类型，目前只支持中文，默认为zh。
-	Lang *DependencyParserRequestLang `json:"lang,omitempty" xml:"lang"`
+	Lang *DependencyParserRequestLang `json:"lang,omitempty"`
 }
 
 func (o DependencyParserRequest) String() string {

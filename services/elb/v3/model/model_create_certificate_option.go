@@ -13,37 +13,37 @@ import (
 type CreateCertificateOption struct {
 
 	// 证书的管理状态。  不支持该字段，请勿使用。
-	AdminStateUp *bool `json:"admin_state_up,omitempty" xml:"admin_state_up"`
+	AdminStateUp *bool `json:"admin_state_up,omitempty"`
 
 	// HTTPS协议使用的证书内容。 取值范围：PEM编码格式。 最大长度65536字符。 支持证书链，最大11层(含证书和证书链)。
-	Certificate string `json:"certificate" xml:"certificate"`
+	Certificate string `json:"certificate"`
 
 	// 证书的描述。
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	//  服务器证书所签域名。该字段仅type为server时有效。 总长度为0-1024，由若干普通域名或泛域名组成，域名之间以\",\"分割，不超过30个域名。  普通域名：由若干字符串组成，字符串间以\".\"分割，单个字符串长度不超过63个字符，只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。例：www.test.com；  泛域名：在普通域名的基础上仅允许首字母为\"\"。例：.test.com
-	Domain *string `json:"domain,omitempty" xml:"domain"`
+	Domain *string `json:"domain,omitempty"`
 
 	// 证书的名称。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// HTTPS协议使用的私钥。当type为server时有效且必选。 取值范围：PEM编码格式。 最大长度8192字符。
-	PrivateKey *string `json:"private_key,omitempty" xml:"private_key"`
+	PrivateKey *string `json:"private_key,omitempty"`
 
 	// 证书所在的项目ID。
-	ProjectId *string `json:"project_id,omitempty" xml:"project_id"`
+	ProjectId *string `json:"project_id,omitempty"`
 
 	// SSL证书的类型。分为服务器证书(server)、CA证书(client)。 默认值：server
-	Type *CreateCertificateOptionType `json:"type,omitempty" xml:"type"`
+	Type *CreateCertificateOptionType `json:"type,omitempty"`
 
 	// 证书所属的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	// HTTPS协议使用的SM加密证书内容。 取值：PEM编码格式。 使用说明：仅type为server_sm时有效且必选。 最大长度65536字符。 支持证书链，最大11层(含证书和证书链)。
-	EncCertificate *string `json:"enc_certificate,omitempty" xml:"enc_certificate"`
+	// HTTPS协议使用的SM加密证书内容。支持证书链，最大11层(含证书和证书链)。  取值：PEM编码格式。最大长度65536字符。  使用说明：仅type为server_sm时有效且必选。
+	EncCertificate *string `json:"enc_certificate,omitempty"`
 
-	// HTTPS协议使用的SM加密证书私钥。 取值：PEM编码格式。 使用说明：仅type为server_sm时有效且必选。 最大长度8192字符。
-	EncPrivateKey *string `json:"enc_private_key,omitempty" xml:"enc_private_key"`
+	// HTTPS协议使用的SM加密证书私钥。  取值：PEM编码格式。最大长度8192字符。  使用说明：仅type为server_sm时有效且必选。
+	EncPrivateKey *string `json:"enc_private_key,omitempty"`
 }
 
 func (o CreateCertificateOption) String() string {

@@ -13,12 +13,12 @@ import (
 type UpdateReadWeightRequest struct {
 
 	// 语言
-	XLanguage *UpdateReadWeightRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *UpdateReadWeightRequestXLanguage `json:"X-Language,omitempty"`
 
 	// 实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
-	Body *ModifyProxyWeightRequest `json:"body,omitempty" xml:"body"`
+	Body *ModifyProxyWeightRequest `json:"body,omitempty"`
 }
 
 func (o UpdateReadWeightRequest) String() string {

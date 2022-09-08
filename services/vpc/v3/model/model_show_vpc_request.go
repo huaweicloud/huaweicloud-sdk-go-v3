@@ -10,7 +10,7 @@ import (
 type ShowVpcRequest struct {
 
 	// VPC资源ID
-	VpcId string `json:"vpc_id" xml:"vpc_id"`
+	VpcId string `json:"vpc_id"`
 }
 
 func (o ShowVpcRequest) String() string {

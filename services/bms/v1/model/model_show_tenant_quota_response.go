@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowTenantQuotaResponse struct {
-	Absolute       *Absolute `json:"absolute,omitempty" xml:"absolute"`
+	Absolute       *Absolute `json:"absolute,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }
 

@@ -9,25 +9,25 @@ import (
 type CustomImage struct {
 
 	// 是否启用
-	Enabled *bool `json:"enabled,omitempty" xml:"enabled"`
+	Enabled *bool `json:"enabled,omitempty"`
 
 	// 镜像地址
-	Image *string `json:"image,omitempty" xml:"image"`
+	Image *string `json:"image,omitempty"`
 
 	// 启动容器镜像的命令
-	Command *string `json:"command,omitempty" xml:"command"`
+	Command *string `json:"command,omitempty"`
 
 	// 启动容器镜像的命令行参数
-	Args *string `json:"args,omitempty" xml:"args"`
+	Args *string `json:"args,omitempty"`
 
 	// 镜像容器工作目录
-	WorkingDir *string `json:"working_dir,omitempty" xml:"working_dir"`
+	WorkingDir *string `json:"working_dir,omitempty"`
 
 	// 镜像容器的用户id
-	Uid *string `json:"uid,omitempty" xml:"uid"`
+	Uid *string `json:"uid,omitempty"`
 
 	// 镜像容器的用户组id
-	Gid *string `json:"gid,omitempty" xml:"gid"`
+	Gid *string `json:"gid,omitempty"`
 }
 
 func (o CustomImage) String() string {

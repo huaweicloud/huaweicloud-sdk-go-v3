@@ -10,7 +10,7 @@ import (
 type CancelEipRequest struct {
 
 	// 节点ID。
-	NodeId string `json:"node_id" xml:"node_id"`
+	NodeId string `json:"node_id"`
 }
 
 func (o CancelEipRequest) String() string {

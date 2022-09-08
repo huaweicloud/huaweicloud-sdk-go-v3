@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RunConstituencyParserRequest struct {
-	Body *ConstituencyParserReq `json:"body,omitempty" xml:"body"`
+	Body *ConstituencyParserReq `json:"body,omitempty"`
 }
 
 func (o RunConstituencyParserRequest) String() string {

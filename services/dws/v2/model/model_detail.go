@@ -10,13 +10,13 @@ import (
 type Detail struct {
 
 	// 属性类型。
-	Type *string `json:"type,omitempty" xml:"type"`
+	Type *string `json:"type,omitempty"`
 
 	// 属性值。
-	Value string `json:"value" xml:"value"`
+	Value string `json:"value"`
 
 	// 属性单位。
-	Unit string `json:"unit" xml:"unit"`
+	Unit string `json:"unit"`
 }
 
 func (o Detail) String() string {

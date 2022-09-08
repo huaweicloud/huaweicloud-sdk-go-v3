@@ -8,7 +8,7 @@ import (
 
 //
 type CreateLoginTokenRequestBody struct {
-	Auth *LoginTokenAuth `json:"auth" xml:"auth"`
+	Auth *LoginTokenAuth `json:"auth"`
 }
 
 func (o CreateLoginTokenRequestBody) String() string {

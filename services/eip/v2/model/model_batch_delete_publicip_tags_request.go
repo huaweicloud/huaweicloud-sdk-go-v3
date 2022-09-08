@@ -10,9 +10,9 @@ import (
 type BatchDeletePublicipTagsRequest struct {
 
 	// 资源ID
-	PublicipId string `json:"publicip_id" xml:"publicip_id"`
+	PublicipId string `json:"publicip_id"`
 
-	Body *BatchDeletePublicipTagsRequestBody `json:"body,omitempty" xml:"body"`
+	Body *BatchDeletePublicipTagsRequestBody `json:"body,omitempty"`
 }
 
 func (o BatchDeletePublicipTagsRequest) String() string {

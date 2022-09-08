@@ -10,37 +10,37 @@ import (
 type SnapshotDetails struct {
 
 	// 云硬盘快照ID。
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 云硬盘快照状态。
-	Status *string `json:"status,omitempty" xml:"status"`
+	Status *string `json:"status,omitempty"`
 
 	// 云硬盘快照名称。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 云硬盘快照描述信息。
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 云硬盘快照创建时间。 时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX
-	CreatedAt *string `json:"created_at,omitempty" xml:"created_at"`
+	CreatedAt *string `json:"created_at,omitempty"`
 
 	// 快照更新时间。 时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX
-	UpdatedAt *string `json:"updated_at,omitempty" xml:"updated_at"`
+	UpdatedAt *string `json:"updated_at,omitempty"`
 
 	// 云硬盘快照的元数据信息。
-	Metadata *interface{} `json:"metadata,omitempty" xml:"metadata"`
+	Metadata *interface{} `json:"metadata,omitempty"`
 
 	// 快照所属的云硬盘ID。
-	VolumeId *string `json:"volume_id,omitempty" xml:"volume_id"`
+	VolumeId *string `json:"volume_id,omitempty"`
 
 	// 云硬盘快照大小，单位为GB。
-	Size *int32 `json:"size,omitempty" xml:"size"`
+	Size *int32 `json:"size,omitempty"`
 
 	// 预留属性。
-	OsExtendedSnapshotAttributesprojectId *string `json:"os-extended-snapshot-attributes:project_id,omitempty" xml:"os-extended-snapshot-attributes:project_id"`
+	OsExtendedSnapshotAttributesprojectId *string `json:"os-extended-snapshot-attributes:project_id,omitempty"`
 
 	// 预留属性。
-	OsExtendedSnapshotAttributesprogress *string `json:"os-extended-snapshot-attributes:progress,omitempty" xml:"os-extended-snapshot-attributes:progress"`
+	OsExtendedSnapshotAttributesprogress *string `json:"os-extended-snapshot-attributes:progress,omitempty"`
 }
 
 func (o SnapshotDetails) String() string {

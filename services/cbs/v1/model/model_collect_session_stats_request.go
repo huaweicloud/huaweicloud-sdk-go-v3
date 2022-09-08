@@ -13,19 +13,19 @@ import (
 type CollectSessionStatsRequest struct {
 
 	// qabot编号，UUID格式。
-	QabotId string `json:"qabot_id" xml:"qabot_id"`
+	QabotId string `json:"qabot_id"`
 
 	// 查询的起始时间，long，UTC时间，默认值为0。
-	StartTime *string `json:"start_time,omitempty" xml:"start_time"`
+	StartTime *string `json:"start_time,omitempty"`
 
 	// 查询的结束时间，long，UTC时间，默认值为当前时间的毫秒数。
-	EndTime *string `json:"end_time,omitempty" xml:"end_time"`
+	EndTime *string `json:"end_time,omitempty"`
 
 	// 统计周期目前支持month,week,day。
-	Interval *CollectSessionStatsRequestInterval `json:"interval,omitempty" xml:"interval"`
+	Interval *CollectSessionStatsRequestInterval `json:"interval,omitempty"`
 
 	// 请求所在时区，例如：中国东八区为\"+08:00\"；美国西五区为\"-05:00\"；默认为\"UTC\"。
-	TimeZone *string `json:"time_zone,omitempty" xml:"time_zone"`
+	TimeZone *string `json:"time_zone,omitempty"`
 }
 
 func (o CollectSessionStatsRequest) String() string {

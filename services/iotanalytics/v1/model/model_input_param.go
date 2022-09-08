@@ -10,10 +10,10 @@ import (
 type InputParam struct {
 
 	// 参数名称
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 属性名称
-	PropertyName string `json:"property_name" xml:"property_name"`
+	PropertyName string `json:"property_name"`
 }
 
 func (o InputParam) String() string {

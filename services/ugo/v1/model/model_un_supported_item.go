@@ -10,16 +10,16 @@ import (
 type UnSupportedItem struct {
 
 	// SQL语句不支持转换的原因。
-	Reason *string `json:"reason,omitempty" xml:"reason"`
+	Reason *string `json:"reason,omitempty"`
 
 	// SQL语句不支持转换的建议。
-	Suggestion *string `json:"suggestion,omitempty" xml:"suggestion"`
+	Suggestion *string `json:"suggestion,omitempty"`
 
 	// 行号。
-	LineNumber *int32 `json:"line_number,omitempty" xml:"line_number"`
+	LineNumber *int32 `json:"line_number,omitempty"`
 
 	// 位置。
-	Position *int32 `json:"position,omitempty" xml:"position"`
+	Position *int32 `json:"position,omitempty"`
 }
 
 func (o UnSupportedItem) String() string {

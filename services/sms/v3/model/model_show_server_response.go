@@ -13,86 +13,86 @@ import (
 type ShowServerResponse struct {
 
 	// 源端服务器id
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 源端服务器的ip
-	Ip *string `json:"ip,omitempty" xml:"ip"`
+	Ip *string `json:"ip,omitempty"`
 
 	// 用来区分不同源端服务器的名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 源端主机名，注册源端必选，更新非必选
-	Hostname *string `json:"hostname,omitempty" xml:"hostname"`
+	Hostname *string `json:"hostname,omitempty"`
 
 	// 企业项目id
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 源端服务器注册的时间
-	AddDate *int64 `json:"add_date,omitempty" xml:"add_date"`
+	AddDate *int64 `json:"add_date,omitempty"`
 
 	// 源端服务器的OS类型，分为Windows和Linux，注册必选，更新非必选
-	OsType *string `json:"os_type,omitempty" xml:"os_type"`
+	OsType *string `json:"os_type,omitempty"`
 
 	// 操作系统版本，注册必选，更新非必选
-	OsVersion *string `json:"os_version,omitempty" xml:"os_version"`
+	OsVersion *string `json:"os_version,omitempty"`
 
 	// 是否是OEM操作系统(Windows)
-	OemSystem *bool `json:"oem_system,omitempty" xml:"oem_system"`
+	OemSystem *bool `json:"oem_system,omitempty"`
 
 	// 当前源端服务器状态
-	State *ShowServerResponseState `json:"state,omitempty" xml:"state"`
+	State *ShowServerResponseState `json:"state,omitempty"`
 
 	// 与Agent连接状态
-	Connected *bool `json:"connected,omitempty" xml:"connected"`
+	Connected *bool `json:"connected,omitempty"`
 
 	// 源端服务器启动类型，如BIOS或者UEFI
-	Firmware *ShowServerResponseFirmware `json:"firmware,omitempty" xml:"firmware"`
+	Firmware *ShowServerResponseFirmware `json:"firmware,omitempty"`
 
-	InitTargetServer *InitTargetServer `json:"init_target_server,omitempty" xml:"init_target_server"`
+	InitTargetServer *InitTargetServer `json:"init_target_server,omitempty"`
 
 	// 源端CPU核心数
-	CpuQuantity *int32 `json:"cpu_quantity,omitempty" xml:"cpu_quantity"`
+	CpuQuantity *int32 `json:"cpu_quantity,omitempty"`
 
 	// 源端服务器物理内存大小，单位MB
-	Memory *int64 `json:"memory,omitempty" xml:"memory"`
+	Memory *int64 `json:"memory,omitempty"`
 
-	CurrentTask *TaskByServerSource `json:"current_task,omitempty" xml:"current_task"`
+	CurrentTask *TaskByServerSource `json:"current_task,omitempty"`
 
 	// 源端服务器磁盘信息
-	Disks *[]ServerDisk `json:"disks,omitempty" xml:"disks"`
+	Disks *[]ServerDisk `json:"disks,omitempty"`
 
 	// 源端服务器的卷组信息，Linux必选，如果没有卷组，输入[]
-	VolumeGroups *[]VolumeGroups `json:"volume_groups,omitempty" xml:"volume_groups"`
+	VolumeGroups *[]VolumeGroups `json:"volume_groups,omitempty"`
 
 	// Linux 必选，源端的Btrfs信息。如果源端不存在Btrfs，则为[]
-	BtrfsList *[]BtrfsFileSystem `json:"btrfs_list,omitempty" xml:"btrfs_list"`
+	BtrfsList *[]BtrfsFileSystem `json:"btrfs_list,omitempty"`
 
 	// 源端服务器的网卡信息
-	Networks *[]NetWork `json:"networks,omitempty" xml:"networks"`
+	Networks *[]NetWork `json:"networks,omitempty"`
 
 	// 源端环境校验信息
-	Checks *[]EnvironmentCheck `json:"checks,omitempty" xml:"checks"`
+	Checks *[]EnvironmentCheck `json:"checks,omitempty"`
 
 	// 迁移周期
-	MigrationCycle *ShowServerResponseMigrationCycle `json:"migration_cycle,omitempty" xml:"migration_cycle"`
+	MigrationCycle *ShowServerResponseMigrationCycle `json:"migration_cycle,omitempty"`
 
 	// 源端状态（state）上次发生变化的时间戳
-	StateActionTime *int64 `json:"state_action_time,omitempty" xml:"state_action_time"`
+	StateActionTime *int64 `json:"state_action_time,omitempty"`
 
 	// 已经完成迁移的大小（B）
-	Replicatesize *int64 `json:"replicatesize,omitempty" xml:"replicatesize"`
+	Replicatesize *int64 `json:"replicatesize,omitempty"`
 
 	// 需要迁移的数据量总大小（B）
-	Totalsize *int64 `json:"totalsize,omitempty" xml:"totalsize"`
+	Totalsize *int64 `json:"totalsize,omitempty"`
 
 	// agent上一次连接状态发生变化的时间戳
-	LastVisitTime *int64 `json:"last_visit_time,omitempty" xml:"last_visit_time"`
+	LastVisitTime *int64 `json:"last_visit_time,omitempty"`
 
 	// 迁移周期（migration_cycle）上一次变化的时间戳
-	StageActionTime *int64 `json:"stage_action_time,omitempty" xml:"stage_action_time"`
+	StageActionTime *int64 `json:"stage_action_time,omitempty"`
 
 	// Agent版本信息
-	AgentVersion   *string `json:"agent_version,omitempty" xml:"agent_version"`
+	AgentVersion   *string `json:"agent_version,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

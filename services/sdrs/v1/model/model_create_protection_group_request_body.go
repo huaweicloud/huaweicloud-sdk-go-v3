@@ -8,7 +8,7 @@ import (
 
 // 创建保护组请求体
 type CreateProtectionGroupRequestBody struct {
-	ServerGroup *CreateProtectionGroupRequestParams `json:"server_group" xml:"server_group"`
+	ServerGroup *CreateProtectionGroupRequestParams `json:"server_group"`
 }
 
 func (o CreateProtectionGroupRequestBody) String() string {

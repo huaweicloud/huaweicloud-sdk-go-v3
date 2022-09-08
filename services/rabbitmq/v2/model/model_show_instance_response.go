@@ -13,133 +13,133 @@ import (
 type ShowInstanceResponse struct {
 
 	// 认证用户名，只能由英文字母、数字、中划线组成，长度为4~64的字符。
-	AccessUser *string `json:"access_user,omitempty" xml:"access_user"`
+	AccessUser *string `json:"access_user,omitempty"`
 
 	// 代理个数。
-	BrokerNum *ShowInstanceResponseBrokerNum `json:"broker_num,omitempty" xml:"broker_num"`
+	BrokerNum *ShowInstanceResponseBrokerNum `json:"broker_num,omitempty"`
 
 	// 实例名称。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 消息引擎。
-	Engine *string `json:"engine,omitempty" xml:"engine"`
+	Engine *string `json:"engine,omitempty"`
 
 	// 消息引擎版本。
-	EngineVersion *string `json:"engine_version,omitempty" xml:"engine_version"`
+	EngineVersion *string `json:"engine_version,omitempty"`
 
 	// 实例规格。   - RabbitMQ实例单机返回vm规格。   - RabbitMQ实例集群返回vm规格和节点数。
-	Specification *string `json:"specification,omitempty" xml:"specification"`
+	Specification *string `json:"specification,omitempty"`
 
 	// 消息存储空间，单位：GB。
-	StorageSpace *int32 `json:"storage_space,omitempty" xml:"storage_space"`
+	StorageSpace *int32 `json:"storage_space,omitempty"`
 
 	// 已使用的消息存储空间，单位：GB。
-	UsedStorageSpace *int32 `json:"used_storage_space,omitempty" xml:"used_storage_space"`
+	UsedStorageSpace *int32 `json:"used_storage_space,omitempty"`
 
 	// 实例连接IP地址。
-	ConnectAddress *string `json:"connect_address,omitempty" xml:"connect_address"`
+	ConnectAddress *string `json:"connect_address,omitempty"`
 
 	// 实例连接端口。
-	Port *int32 `json:"port,omitempty" xml:"port"`
+	Port *int32 `json:"port,omitempty"`
 
 	// 实例的状态。
-	Status *string `json:"status,omitempty" xml:"status"`
+	Status *string `json:"status,omitempty"`
 
 	// 实例描述。
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 实例ID。
-	InstanceId *string `json:"instance_id,omitempty" xml:"instance_id"`
+	InstanceId *string `json:"instance_id,omitempty"`
 
 	// 资源规格标识。   - dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g   - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g   - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g   - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g   - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点
-	ResourceSpecCode *string `json:"resource_spec_code,omitempty" xml:"resource_spec_code"`
+	ResourceSpecCode *string `json:"resource_spec_code,omitempty"`
 
 	// 付费模式，1表示按需计费，0表示包年/包月计费。
-	ChargingMode *int32 `json:"charging_mode,omitempty" xml:"charging_mode"`
+	ChargingMode *int32 `json:"charging_mode,omitempty"`
 
 	// VPC ID。
-	VpcId *string `json:"vpc_id,omitempty" xml:"vpc_id"`
+	VpcId *string `json:"vpc_id,omitempty"`
 
 	// VPC的名称。
-	VpcName *string `json:"vpc_name,omitempty" xml:"vpc_name"`
+	VpcName *string `json:"vpc_name,omitempty"`
 
 	// 完成创建时间。格式为时间戳，指从格林威治时间 1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。
-	CreatedAt *string `json:"created_at,omitempty" xml:"created_at"`
+	CreatedAt *string `json:"created_at,omitempty"`
 
 	// 用户ID。
-	UserId *string `json:"user_id,omitempty" xml:"user_id"`
+	UserId *string `json:"user_id,omitempty"`
 
 	// 用户名。
-	UserName *string `json:"user_name,omitempty" xml:"user_name"`
+	UserName *string `json:"user_name,omitempty"`
 
 	// 订单ID，只有在包周期计费时才会有order_id值，其他计费方式order_id值为空。
-	OrderId *string `json:"order_id,omitempty" xml:"order_id"`
+	OrderId *string `json:"order_id,omitempty"`
 
 	// 维护时间窗开始时间，格式为HH:mm:ss。
-	MaintainBegin *string `json:"maintain_begin,omitempty" xml:"maintain_begin"`
+	MaintainBegin *string `json:"maintain_begin,omitempty"`
 
 	// 维护时间窗结束时间，格式为HH:mm:ss。
-	MaintainEnd *string `json:"maintain_end,omitempty" xml:"maintain_end"`
+	MaintainEnd *string `json:"maintain_end,omitempty"`
 
 	// RabbitMQ实例是否开启公网访问功能。   - true：开启   - false：未开启
-	EnablePublicip *bool `json:"enable_publicip,omitempty" xml:"enable_publicip"`
+	EnablePublicip *bool `json:"enable_publicip,omitempty"`
 
 	// RabbitMQ实例绑定的弹性IP地址。  如果未开启公网访问功能，该字段值为null。
-	PublicipAddress *string `json:"publicip_address,omitempty" xml:"publicip_address"`
+	PublicipAddress *string `json:"publicip_address,omitempty"`
 
 	// RabbitMQ实例绑定的弹性IP地址的ID。  如果未开启公网访问功能，该字段值为null。
-	PublicipId *string `json:"publicip_id,omitempty" xml:"publicip_id"`
+	PublicipId *string `json:"publicip_id,omitempty"`
 
 	// RabbitMQ实例的管理地址。
-	ManagementConnectAddress *string `json:"management_connect_address,omitempty" xml:"management_connect_address"`
+	ManagementConnectAddress *string `json:"management_connect_address,omitempty"`
 
 	// 是否开启安全认证。   - true：开启   - false：未开启
-	SslEnable *bool `json:"ssl_enable,omitempty" xml:"ssl_enable"`
+	SslEnable *bool `json:"ssl_enable,omitempty"`
 
 	// 企业项目ID。
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 实例扩容时用于区分老实例与新实例。 - true：新创建的实例，允许磁盘动态扩容不需要重启。 - false：老实例
-	IsLogicalVolume *bool `json:"is_logical_volume,omitempty" xml:"is_logical_volume"`
+	IsLogicalVolume *bool `json:"is_logical_volume,omitempty"`
 
 	// 实例扩容磁盘次数，如果超过20次则无法扩容磁盘。
-	ExtendTimes *int32 `json:"extend_times,omitempty" xml:"extend_times"`
+	ExtendTimes *int32 `json:"extend_times,omitempty"`
 
 	// 实例类型：集群，cluster。
-	Type *ShowInstanceResponseType `json:"type,omitempty" xml:"type"`
+	Type *ShowInstanceResponseType `json:"type,omitempty"`
 
 	// 产品标识。
-	ProductId *string `json:"product_id,omitempty" xml:"product_id"`
+	ProductId *string `json:"product_id,omitempty"`
 
 	// 安全组ID。
-	SecurityGroupId *string `json:"security_group_id,omitempty" xml:"security_group_id"`
+	SecurityGroupId *string `json:"security_group_id,omitempty"`
 
 	// 租户安全组名称。
-	SecurityGroupName *string `json:"security_group_name,omitempty" xml:"security_group_name"`
+	SecurityGroupName *string `json:"security_group_name,omitempty"`
 
 	// 子网ID。
-	SubnetId *string `json:"subnet_id,omitempty" xml:"subnet_id"`
+	SubnetId *string `json:"subnet_id,omitempty"`
 
 	// 实例节点所在的可用区，返回“可用区ID”。
-	AvailableZones *[]string `json:"available_zones,omitempty" xml:"available_zones"`
+	AvailableZones *[]string `json:"available_zones,omitempty"`
 
 	// 总共消息存储空间，单位：GB。
-	TotalStorageSpace *int32 `json:"total_storage_space,omitempty" xml:"total_storage_space"`
+	TotalStorageSpace *int32 `json:"total_storage_space,omitempty"`
 
 	// 存储资源ID。
-	StorageResourceId *string `json:"storage_resource_id,omitempty" xml:"storage_resource_id"`
+	StorageResourceId *string `json:"storage_resource_id,omitempty"`
 
 	// IO规格。
-	StorageSpecCode *string `json:"storage_spec_code,omitempty" xml:"storage_spec_code"`
+	StorageSpecCode *string `json:"storage_spec_code,omitempty"`
 
 	// 是否开启ipv6。
-	Ipv6Enable *bool `json:"ipv6_enable,omitempty" xml:"ipv6_enable"`
+	Ipv6Enable *bool `json:"ipv6_enable,omitempty"`
 
 	// IPv6的连接地址。
-	Ipv6ConnectAddresses *[]string `json:"ipv6_connect_addresses,omitempty" xml:"ipv6_connect_addresses"`
+	Ipv6ConnectAddresses *[]string `json:"ipv6_connect_addresses,omitempty"`
 
 	// 标签列表。
-	Tags           *[]TagEntity `json:"tags,omitempty" xml:"tags"`
+	Tags           *[]TagEntity `json:"tags,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }
 

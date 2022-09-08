@@ -9,19 +9,19 @@ import (
 type ExitEntryPermitEndorsementInfo struct {
 
 	// 签注种类。
-	EndorsementType *string `json:"endorsement_type,omitempty" xml:"endorsement_type"`
+	EndorsementType *string `json:"endorsement_type,omitempty"`
 
 	// 签注往返有效次数。
-	ValidRoundTrips *string `json:"valid_round_trips,omitempty" xml:"valid_round_trips"`
+	ValidRoundTrips *string `json:"valid_round_trips,omitempty"`
 
 	// 签注有效期。
-	EndorsementValidPeriod *string `json:"endorsement_valid_period,omitempty" xml:"endorsement_valid_period"`
+	EndorsementValidPeriod *string `json:"endorsement_valid_period,omitempty"`
 
 	// 签注备注。
-	Remark *string `json:"remark,omitempty" xml:"remark"`
+	Remark *string `json:"remark,omitempty"`
 
 	// 签注签发信息。
-	IssueInfo *string `json:"issue_info,omitempty" xml:"issue_info"`
+	IssueInfo *string `json:"issue_info,omitempty"`
 }
 
 func (o ExitEntryPermitEndorsementInfo) String() string {

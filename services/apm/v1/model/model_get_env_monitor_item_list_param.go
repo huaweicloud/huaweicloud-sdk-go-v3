@@ -10,13 +10,13 @@ import (
 type GetEnvMonitorItemListParam struct {
 
 	// 环境id
-	EnvId int64 `json:"env_id" xml:"env_id"`
+	EnvId int64 `json:"env_id"`
 
 	// 页码
-	Page int32 `json:"page" xml:"page"`
+	Page int32 `json:"page"`
 
 	// 每页数量
-	PageSize int32 `json:"page_size" xml:"page_size"`
+	PageSize int32 `json:"page_size"`
 }
 
 func (o GetEnvMonitorItemListParam) String() string {

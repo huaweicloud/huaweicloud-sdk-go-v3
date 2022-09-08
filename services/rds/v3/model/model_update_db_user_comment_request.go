@@ -10,12 +10,12 @@ import (
 type UpdateDbUserCommentRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 数据库用户名。
-	UserName string `json:"user_name" xml:"user_name"`
+	UserName string `json:"user_name"`
 
-	Body *UpdateDbUserReq `json:"body,omitempty" xml:"body"`
+	Body *UpdateDbUserReq `json:"body,omitempty"`
 }
 
 func (o UpdateDbUserCommentRequest) String() string {

@@ -13,19 +13,19 @@ import (
 type ShowApiVersionInfoResponse struct {
 
 	// 版本ID。
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 版本详情的URL地址。
-	Links *string `json:"links,omitempty" xml:"links"`
+	Links *string `json:"links,omitempty"`
 
 	// 该版本API的微版本信息。
-	Version *string `json:"version,omitempty" xml:"version"`
+	Version *string `json:"version,omitempty"`
 
 	// 版本的状态。
-	Status *ShowApiVersionInfoResponseStatus `json:"status,omitempty" xml:"status"`
+	Status *ShowApiVersionInfoResponseStatus `json:"status,omitempty"`
 
 	// 版本更新时间。
-	Updated        *string `json:"updated,omitempty" xml:"updated"`
+	Updated        *string `json:"updated,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

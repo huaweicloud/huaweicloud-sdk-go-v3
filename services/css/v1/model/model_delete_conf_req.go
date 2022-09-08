@@ -9,7 +9,7 @@ import (
 type DeleteConfReq struct {
 
 	// 配置文件名称。
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 }
 
 func (o DeleteConfReq) String() string {

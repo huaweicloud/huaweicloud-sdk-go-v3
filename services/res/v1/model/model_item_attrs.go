@@ -9,13 +9,13 @@ import (
 type ItemAttrs struct {
 
 	// 数据类型。
-	DataType *string `json:"data_type,omitempty" xml:"data_type"`
+	DataType *string `json:"data_type,omitempty"`
 
 	// 物品。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 其他用途。
-	OtherUses *[]string `json:"other_uses,omitempty" xml:"other_uses"`
+	OtherUses *[]string `json:"other_uses,omitempty"`
 }
 
 func (o ItemAttrs) String() string {

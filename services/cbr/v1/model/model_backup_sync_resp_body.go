@@ -9,10 +9,10 @@ import (
 type BackupSyncRespBody struct {
 
 	// 备份副本ID
-	BackupId string `json:"backup_id" xml:"backup_id"`
+	BackupId string `json:"backup_id"`
 
 	// 同步任务ID
-	OperationLogId string `json:"operation_log_id" xml:"operation_log_id"`
+	OperationLogId string `json:"operation_log_id"`
 }
 
 func (o BackupSyncRespBody) String() string {

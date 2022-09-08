@@ -10,12 +10,12 @@ import (
 type UpdateApiGroupV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 分组的编号
-	GroupId string `json:"group_id" xml:"group_id"`
+	GroupId string `json:"group_id"`
 
-	Body *ApiGroupBase `json:"body,omitempty" xml:"body"`
+	Body *ApiGroupBase `json:"body,omitempty"`
 }
 
 func (o UpdateApiGroupV2Request) String() string {

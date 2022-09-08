@@ -10,7 +10,7 @@ import (
 type ChangeSecurityGroupResponse struct {
 
 	// SFS Turbo文件系统ID。
-	Id             *string `json:"id,omitempty" xml:"id"`
+	Id             *string `json:"id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

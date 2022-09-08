@@ -10,10 +10,10 @@ import (
 type IssueItemSfV4StoryPoint struct {
 
 	// 故事点id
-	Id *int32 `json:"id,omitempty" xml:"id"`
+	Id *int32 `json:"id,omitempty"`
 
 	// 故事点
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 }
 
 func (o IssueItemSfV4StoryPoint) String() string {

@@ -10,7 +10,7 @@ import (
 type ShowQueueTagsResponse struct {
 
 	// 标签列表
-	Tags           *[]BatchCreateOrDeleteTagReqTags `json:"tags,omitempty" xml:"tags"`
+	Tags           *[]BatchCreateOrDeleteTagReqTags `json:"tags,omitempty"`
 	HttpStatusCode int                              `json:"-"`
 }
 

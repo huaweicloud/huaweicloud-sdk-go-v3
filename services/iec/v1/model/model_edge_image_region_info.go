@@ -10,10 +10,10 @@ import (
 type EdgeImageRegionInfo struct {
 
 	// 区域ID
-	RegionId *string `json:"region_id,omitempty" xml:"region_id"`
+	RegionId *string `json:"region_id,omitempty"`
 
 	// 镜像ID
-	ImageId *string `json:"image_id,omitempty" xml:"image_id"`
+	ImageId *string `json:"image_id,omitempty"`
 }
 
 func (o EdgeImageRegionInfo) String() string {

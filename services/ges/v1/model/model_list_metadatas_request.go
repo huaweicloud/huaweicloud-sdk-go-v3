@@ -10,10 +10,10 @@ import (
 type ListMetadatasRequest struct {
 
 	// 每页资源数量的最大值，默认为10。
-	Limit *int32 `json:"limit,omitempty" xml:"limit"`
+	Limit *int32 `json:"limit,omitempty"`
 
 	// 本次请求的起始位置，默认为0。
-	Offset *int32 `json:"offset,omitempty" xml:"offset"`
+	Offset *int32 `json:"offset,omitempty"`
 }
 
 func (o ListMetadatasRequest) String() string {

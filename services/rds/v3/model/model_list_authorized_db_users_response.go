@@ -10,10 +10,10 @@ import (
 type ListAuthorizedDbUsersResponse struct {
 
 	// 用户及相关权限。
-	Users *[]UserWithPrivilege `json:"users,omitempty" xml:"users"`
+	Users *[]UserWithPrivilege `json:"users,omitempty"`
 
 	// 总数。
-	TotalCount     *int32 `json:"total_count,omitempty" xml:"total_count"`
+	TotalCount     *int32 `json:"total_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

@@ -10,10 +10,10 @@ import (
 type ListAuditlogsResponse struct {
 
 	// 总记录数。
-	TotalRecord *int32 `json:"total_record,omitempty" xml:"total_record"`
+	TotalRecord *int32 `json:"total_record,omitempty"`
 
 	// 审计日志具体信息。
-	AuditLogs      *[]ListAuditlogsResult `json:"audit_logs,omitempty" xml:"audit_logs"`
+	AuditLogs      *[]ListAuditlogsResult `json:"audit_logs,omitempty"`
 	HttpStatusCode int                    `json:"-"`
 }
 

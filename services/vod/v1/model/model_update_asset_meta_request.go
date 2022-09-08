@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type UpdateAssetMetaRequest struct {
-	Body *UpdateAssetMetaReq `json:"body,omitempty" xml:"body"`
+	Body *UpdateAssetMetaReq `json:"body,omitempty"`
 }
 
 func (o UpdateAssetMetaRequest) String() string {

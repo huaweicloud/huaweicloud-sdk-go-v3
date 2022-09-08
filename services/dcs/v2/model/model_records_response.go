@@ -13,22 +13,22 @@ import (
 type RecordsResponse struct {
 
 	// 大key分析记录ID
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 分析任务状态
-	Status *RecordsResponseStatus `json:"status,omitempty" xml:"status"`
+	Status *RecordsResponseStatus `json:"status,omitempty"`
 
 	// 分析方式
-	ScanType *RecordsResponseScanType `json:"scan_type,omitempty" xml:"scan_type"`
+	ScanType *RecordsResponseScanType `json:"scan_type,omitempty"`
 
 	// 分析任务创建时间,格式为：\"2020-06-15T02:21:18.669Z\"
-	CreatedAt *string `json:"created_at,omitempty" xml:"created_at"`
+	CreatedAt *string `json:"created_at,omitempty"`
 
 	// 分析任务开始时间,格式为：\"2020-06-15T02:21:18.669Z\"
-	StartedAt *string `json:"started_at,omitempty" xml:"started_at"`
+	StartedAt *string `json:"started_at,omitempty"`
 
 	// 分析任务结束时间,格式为：\"2020-06-15T02:21:18.669Z\"
-	FinishedAt *string `json:"finished_at,omitempty" xml:"finished_at"`
+	FinishedAt *string `json:"finished_at,omitempty"`
 }
 
 func (o RecordsResponse) String() string {

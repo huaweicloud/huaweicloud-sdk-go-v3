@@ -10,10 +10,10 @@ import (
 type ListOsVersionsResponseBody struct {
 
 	// 操作系统的平台值，如RedHat等
-	Platform string `json:"platform" xml:"platform"`
+	Platform string `json:"platform"`
 
 	// 操作系统的详情值
-	VersionList []OsVersionInfo `json:"version_list" xml:"version_list"`
+	VersionList []OsVersionInfo `json:"version_list"`
 }
 
 func (o ListOsVersionsResponseBody) String() string {

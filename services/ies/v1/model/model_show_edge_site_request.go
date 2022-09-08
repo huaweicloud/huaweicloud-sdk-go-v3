@@ -10,7 +10,7 @@ import (
 type ShowEdgeSiteRequest struct {
 
 	// 边缘小站ID
-	SiteId string `json:"site_id" xml:"site_id"`
+	SiteId string `json:"site_id"`
 }
 
 func (o ShowEdgeSiteRequest) String() string {

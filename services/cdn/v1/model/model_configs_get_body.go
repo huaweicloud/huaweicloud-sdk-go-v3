@@ -10,29 +10,31 @@ import (
 type ConfigsGetBody struct {
 
 	// 回源请求头配置
-	OriginRequestHeader *[]OriginRequestHeader `json:"origin_request_header,omitempty" xml:"origin_request_header"`
+	OriginRequestHeader *[]OriginRequestHeader `json:"origin_request_header,omitempty"`
 
 	// http header配置
-	HttpResponseHeader *[]HttpResponseHeader `json:"http_response_header,omitempty" xml:"http_response_header"`
+	HttpResponseHeader *[]HttpResponseHeader `json:"http_response_header,omitempty"`
 
-	UrlAuth *UrlAuthGetBody `json:"url_auth,omitempty" xml:"url_auth"`
+	UrlAuth *UrlAuthGetBody `json:"url_auth,omitempty"`
 
-	Https *HttpGetBody `json:"https,omitempty" xml:"https"`
+	Https *HttpGetBody `json:"https,omitempty"`
 
 	// 源站配置。
-	Sources *[]SourcesConfig `json:"sources,omitempty" xml:"sources"`
+	Sources *[]SourcesConfig `json:"sources,omitempty"`
 
 	// 回源协议（follow：协议跟随回源，http：HTTP回源(默认)，https：https回源）。
-	OriginProtocol *string `json:"origin_protocol,omitempty" xml:"origin_protocol"`
+	OriginProtocol *string `json:"origin_protocol,omitempty"`
 
-	ForceRedirect *ForceRedirectConfig `json:"force_redirect,omitempty" xml:"force_redirect"`
+	ForceRedirect *ForceRedirectConfig `json:"force_redirect,omitempty"`
 
-	Compress *Compress `json:"compress,omitempty" xml:"compress"`
+	Compress *Compress `json:"compress,omitempty"`
 
-	CacheUrlParameterFilter *CacheUrlParameterFilter `json:"cache_url_parameter_filter,omitempty" xml:"cache_url_parameter_filter"`
+	CacheUrlParameterFilter *CacheUrlParameterFilter `json:"cache_url_parameter_filter,omitempty"`
 
 	// ipv6设置（1：打开；0：关闭）
-	Ipv6Accelerate *int32 `json:"ipv6_accelerate,omitempty" xml:"ipv6_accelerate"`
+	Ipv6Accelerate *int32 `json:"ipv6_accelerate,omitempty"`
+
+	ErrorCodeCache *ErrorCodeCache `json:"error_code_cache,omitempty"`
 }
 
 func (o ConfigsGetBody) String() string {

@@ -10,16 +10,16 @@ import (
 type CheckRepositoryDuplicateNameRequest struct {
 
 	// 语言类型 中文:zh-cn 英文:en-us
-	XLanguage *string `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *string `json:"X-Language,omitempty"`
 
 	// 项目id
-	ProjectId string `json:"project_id" xml:"project_id"`
+	ProjectId string `json:"project_id"`
 
 	// 仓库名称
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 区域id
-	RegionId string `json:"region_id" xml:"region_id"`
+	RegionId string `json:"region_id"`
 }
 
 func (o CheckRepositoryDuplicateNameRequest) String() string {

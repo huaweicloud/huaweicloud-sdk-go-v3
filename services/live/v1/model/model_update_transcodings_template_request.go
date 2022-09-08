@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type UpdateTranscodingsTemplateRequest struct {
-	Body *StreamTranscodingTemplate `json:"body,omitempty" xml:"body"`
+	Body *StreamTranscodingTemplate `json:"body,omitempty"`
 }
 
 func (o UpdateTranscodingsTemplateRequest) String() string {

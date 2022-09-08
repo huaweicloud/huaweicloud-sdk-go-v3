@@ -10,7 +10,7 @@ import (
 type ListEnterpriseProjectsForUserRequest struct {
 
 	// 待查询用户ID。
-	UserId string `json:"user_id" xml:"user_id"`
+	UserId string `json:"user_id"`
 }
 
 func (o ListEnterpriseProjectsForUserRequest) String() string {

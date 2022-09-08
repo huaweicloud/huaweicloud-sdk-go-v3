@@ -10,7 +10,7 @@ import (
 type ListConfsResponse struct {
 
 	// 配置文件列表。
-	Confs          *[]Confs `json:"confs,omitempty" xml:"confs"`
+	Confs          *[]Confs `json:"confs,omitempty"`
 	HttpStatusCode int      `json:"-"`
 }
 

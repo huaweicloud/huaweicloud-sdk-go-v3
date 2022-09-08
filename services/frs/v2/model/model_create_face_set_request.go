@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateFaceSetRequest struct {
-	Body *CreateFaceSetReq `json:"body,omitempty" xml:"body"`
+	Body *CreateFaceSetReq `json:"body,omitempty"`
 }
 
 func (o CreateFaceSetRequest) String() string {

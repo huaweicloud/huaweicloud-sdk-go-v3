@@ -10,7 +10,7 @@ import (
 type CreateScalingGroupResponse struct {
 
 	// 伸缩组ID
-	ScalingGroupId *string `json:"scaling_group_id,omitempty" xml:"scaling_group_id"`
+	ScalingGroupId *string `json:"scaling_group_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

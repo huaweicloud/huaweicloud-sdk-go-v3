@@ -7,7 +7,7 @@ import (
 )
 
 type CdmRestartClusterReq struct {
-	Restart *CdmRestartClusterReqRestart `json:"restart" xml:"restart"`
+	Restart *CdmRestartClusterReqRestart `json:"restart"`
 }
 
 func (o CdmRestartClusterReq) String() string {

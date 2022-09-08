@@ -9,13 +9,13 @@ import (
 type CommitsCommits struct {
 
 	// 提交记录sha值。
-	Sha string `json:"sha" xml:"sha"`
+	Sha string `json:"sha"`
 
 	// 提交记录描述。
-	Message string `json:"message" xml:"message"`
+	Message string `json:"message"`
 
 	// 合入时间。
-	AuthoredDate string `json:"authored_date" xml:"authored_date"`
+	AuthoredDate string `json:"authored_date"`
 }
 
 func (o CommitsCommits) String() string {

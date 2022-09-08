@@ -9,7 +9,7 @@ import (
 type BatchDeleteAlarmsRequestBody struct {
 
 	// 需要批量删除的告警规则的ID列表
-	AlarmIds []string `json:"alarm_ids" xml:"alarm_ids"`
+	AlarmIds []string `json:"alarm_ids"`
 }
 
 func (o BatchDeleteAlarmsRequestBody) String() string {

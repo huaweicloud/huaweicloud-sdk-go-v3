@@ -10,9 +10,9 @@ import (
 type UpdateConnectionRequest struct {
 
 	// 连接名称.
-	ConnectionName string `json:"connection_name" xml:"connection_name"`
+	ConnectionName string `json:"connection_name"`
 
-	Body *ConnectionInfo `json:"body,omitempty" xml:"body"`
+	Body *ConnectionInfo `json:"body,omitempty"`
 }
 
 func (o UpdateConnectionRequest) String() string {

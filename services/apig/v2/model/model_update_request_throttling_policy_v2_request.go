@@ -10,12 +10,12 @@ import (
 type UpdateRequestThrottlingPolicyV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 流控策略的编号
-	ThrottleId string `json:"throttle_id" xml:"throttle_id"`
+	ThrottleId string `json:"throttle_id"`
 
-	Body *ThrottleBaseInfo `json:"body,omitempty" xml:"body"`
+	Body *ThrottleBaseInfo `json:"body,omitempty"`
 }
 
 func (o UpdateRequestThrottlingPolicyV2Request) String() string {

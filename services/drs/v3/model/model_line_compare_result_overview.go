@@ -13,13 +13,13 @@ import (
 type LineCompareResultOverview struct {
 
 	// 源库名称。
-	SourceDbName string `json:"source_db_name" xml:"source_db_name"`
+	SourceDbName string `json:"source_db_name"`
 
 	// 目标库名称。
-	TargetDbName string `json:"target_db_name" xml:"target_db_name"`
+	TargetDbName string `json:"target_db_name"`
 
 	// 对比结果。
-	LineCompareResult LineCompareResultOverviewLineCompareResult `json:"line_compare_result" xml:"line_compare_result"`
+	LineCompareResult LineCompareResultOverviewLineCompareResult `json:"line_compare_result"`
 }
 
 func (o LineCompareResultOverview) String() string {

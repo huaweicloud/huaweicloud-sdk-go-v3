@@ -10,10 +10,10 @@ import (
 type ListEventsResponse struct {
 
 	// 总数
-	TotalNum *int32 `json:"total_num,omitempty" xml:"total_num"`
+	TotalNum *int32 `json:"total_num,omitempty"`
 
 	// 查询弹性云服务器状态列表
-	DataList       *[]Event `json:"data_list,omitempty" xml:"data_list"`
+	DataList       *[]Event `json:"data_list,omitempty"`
 	HttpStatusCode int      `json:"-"`
 }
 

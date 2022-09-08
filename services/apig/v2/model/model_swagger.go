@@ -10,10 +10,10 @@ import (
 type Swagger struct {
 
 	// swagger文档编号
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 导入结果说明
-	Result *string `json:"result,omitempty" xml:"result"`
+	Result *string `json:"result,omitempty"`
 }
 
 func (o Swagger) String() string {

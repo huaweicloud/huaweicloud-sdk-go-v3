@@ -10,10 +10,10 @@ import (
 type CreateBareMetalServersResponse struct {
 
 	// 订单ID
-	OrderId *string `json:"order_id,omitempty" xml:"order_id"`
+	OrderId *string `json:"order_id,omitempty"`
 
 	// 任务ID
-	JobId          *string `json:"job_id,omitempty" xml:"job_id"`
+	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

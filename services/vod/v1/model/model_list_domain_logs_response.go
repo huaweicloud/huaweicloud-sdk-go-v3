@@ -10,10 +10,10 @@ import (
 type ListDomainLogsResponse struct {
 
 	// 日志总数。
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 
 	// 日志列表数据。
-	Logs           *[]CdnLog `json:"logs,omitempty" xml:"logs"`
+	Logs           *[]CdnLog `json:"logs,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }
 

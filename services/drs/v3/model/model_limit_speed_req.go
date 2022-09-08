@@ -10,10 +10,10 @@ import (
 type LimitSpeedReq struct {
 
 	// 任务id
-	JobId string `json:"job_id" xml:"job_id"`
+	JobId string `json:"job_id"`
 
 	// 限速信息请求体
-	SpeedLimit []SpeedLimitInfo `json:"speed_limit" xml:"speed_limit"`
+	SpeedLimit []SpeedLimitInfo `json:"speed_limit"`
 }
 
 func (o LimitSpeedReq) String() string {

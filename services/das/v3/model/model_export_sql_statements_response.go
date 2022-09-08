@@ -10,10 +10,10 @@ import (
 type ExportSqlStatementsResponse struct {
 
 	// 全量SQL集合。当集合为空时，说明SQL已全部导出。
-	Statements *[]FullSql `json:"statements,omitempty" xml:"statements"`
+	Statements *[]FullSql `json:"statements,omitempty"`
 
 	// 获取下一页所需的标识符。marker仅在3分钟内有效。
-	NextMarker     *string `json:"next_marker,omitempty" xml:"next_marker"`
+	NextMarker     *string `json:"next_marker,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

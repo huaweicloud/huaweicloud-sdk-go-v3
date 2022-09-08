@@ -9,19 +9,19 @@ import (
 type TempContentInfo struct {
 
 	// content_id
-	ContentId *int32 `json:"content_id,omitempty" xml:"content_id"`
+	ContentId *int32 `json:"content_id,omitempty"`
 
 	// content
-	Content *[]Content `json:"content,omitempty" xml:"content"`
+	Content *[]Content `json:"content,omitempty"`
 
 	// index
-	Index *int32 `json:"index,omitempty" xml:"index"`
+	Index *int32 `json:"index,omitempty"`
 
 	// data
-	Data *interface{} `json:"data,omitempty" xml:"data"`
+	Data *interface{} `json:"data,omitempty"`
 
 	// data_type
-	DataType *int32 `json:"data_type,omitempty" xml:"data_type"`
+	DataType *int32 `json:"data_type,omitempty"`
 }
 
 func (o TempContentInfo) String() string {

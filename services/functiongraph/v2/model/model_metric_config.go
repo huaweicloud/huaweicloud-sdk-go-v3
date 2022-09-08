@@ -10,16 +10,16 @@ import (
 type MetricConfig struct {
 
 	// 流量配置名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 流量配置类型
-	Type *string `json:"type,omitempty" xml:"type"`
+	Type *string `json:"type,omitempty"`
 
 	// 流量阈值
-	Threshold *int32 `json:"threshold,omitempty" xml:"threshold"`
+	Threshold *int32 `json:"threshold,omitempty"`
 
 	// 流量最小值
-	Min *int32 `json:"min,omitempty" xml:"min"`
+	Min *int32 `json:"min,omitempty"`
 }
 
 func (o MetricConfig) String() string {

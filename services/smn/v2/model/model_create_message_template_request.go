@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateMessageTemplateRequest struct {
-	Body *CreateMessageTemplateRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreateMessageTemplateRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateMessageTemplateRequest) String() string {

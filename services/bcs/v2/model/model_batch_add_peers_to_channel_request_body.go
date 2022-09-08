@@ -10,7 +10,7 @@ import (
 type BatchAddPeersToChannelRequestBody struct {
 
 	// 加入某个通道的节点信息
-	ChannelPeers []PeerChannelInfo `json:"channel_peers" xml:"channel_peers"`
+	ChannelPeers []PeerChannelInfo `json:"channel_peers"`
 }
 
 func (o BatchAddPeersToChannelRequestBody) String() string {

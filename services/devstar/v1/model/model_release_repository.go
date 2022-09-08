@@ -9,25 +9,25 @@ import (
 type ReleaseRepository struct {
 
 	// 软件包id
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 软件包名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 软件包下载地址
-	DownloadPath *string `json:"download_path,omitempty" xml:"download_path"`
+	DownloadPath *string `json:"download_path,omitempty"`
 
 	// 软件包大小
-	Size *string `json:"size,omitempty" xml:"size"`
+	Size *string `json:"size,omitempty"`
 
 	// 文件类型
-	FileType *string `json:"file_type,omitempty" xml:"file_type"`
+	FileType *string `json:"file_type,omitempty"`
 
 	// 创建时间
-	Created *string `json:"created,omitempty" xml:"created"`
+	Created *string `json:"created,omitempty"`
 
 	// 修改时间
-	Updated *string `json:"updated,omitempty" xml:"updated"`
+	Updated *string `json:"updated,omitempty"`
 }
 
 func (o ReleaseRepository) String() string {

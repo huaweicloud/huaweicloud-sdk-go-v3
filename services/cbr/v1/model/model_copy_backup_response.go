@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type CopyBackupResponse struct {
-	Replication    *BackupReplicateRespBody `json:"replication,omitempty" xml:"replication"`
+	Replication    *BackupReplicateRespBody `json:"replication,omitempty"`
 	HttpStatusCode int                      `json:"-"`
 }
 

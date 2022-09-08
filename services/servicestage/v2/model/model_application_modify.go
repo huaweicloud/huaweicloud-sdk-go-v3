@@ -9,10 +9,10 @@ import (
 type ApplicationModify struct {
 
 	// 应用名称。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 应用描述。
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 }
 
 func (o ApplicationModify) String() string {

@@ -10,7 +10,7 @@ import (
 type DeleteIpAddressGroupForceRequest struct {
 
 	// IP地址组的唯一标识，要删除的IP地址组ID
-	AddressGroupId string `json:"address_group_id" xml:"address_group_id"`
+	AddressGroupId string `json:"address_group_id"`
 }
 
 func (o DeleteIpAddressGroupForceRequest) String() string {

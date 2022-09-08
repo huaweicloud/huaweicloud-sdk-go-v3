@@ -13,10 +13,10 @@ import (
 type UpdateTaskStatusReq struct {
 
 	// 操作任务的具体动作
-	Operation UpdateTaskStatusReqOperation `json:"operation" xml:"operation"`
+	Operation UpdateTaskStatusReqOperation `json:"operation"`
 
 	// 操作参数
-	Param map[string]string `json:"param,omitempty" xml:"param"`
+	Param map[string]string `json:"param,omitempty"`
 }
 
 func (o UpdateTaskStatusReq) String() string {

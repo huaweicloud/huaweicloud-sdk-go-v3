@@ -10,45 +10,45 @@ import (
 type AppVersionDetail struct {
 
 	// 应用版本ID
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 应用版本号
-	Version *string `json:"version,omitempty" xml:"version"`
+	Version *string `json:"version,omitempty"`
 
 	// 创建时间
-	CreatedAt *string `json:"created_at,omitempty" xml:"created_at"`
+	CreatedAt *string `json:"created_at,omitempty"`
 
 	// 更新时间 只有更新后才会出现该字段
-	UpdatedAt *string `json:"updated_at,omitempty" xml:"updated_at"`
+	UpdatedAt *string `json:"updated_at,omitempty"`
 
 	// 项目ID
-	ProjectId *string `json:"project_id,omitempty" xml:"project_id"`
+	ProjectId *string `json:"project_id,omitempty"`
 
 	// 镜像存储地址
-	ImageUrl *string `json:"image_url,omitempty" xml:"image_url"`
+	ImageUrl *string `json:"image_url,omitempty"`
 
 	// 环境变量
-	Envs []Env `json:"envs" xml:"envs"`
+	Envs []Env `json:"envs"`
 
 	// 卷配置
-	Volumes []Volumes `json:"volumes" xml:"volumes"`
+	Volumes []Volumes `json:"volumes"`
 
-	Configs *AppConfigs `json:"configs,omitempty" xml:"configs"`
+	Configs *AppConfigs `json:"configs,omitempty"`
 
-	Resources *Resources `json:"resources,omitempty" xml:"resources"`
+	Resources *Resources `json:"resources,omitempty"`
 
 	// 架构
-	Arch *string `json:"arch,omitempty" xml:"arch"`
+	Arch *string `json:"arch,omitempty"`
 
 	// 启动命令
-	Command *[]string `json:"command,omitempty" xml:"command"`
+	Command *[]string `json:"command,omitempty"`
 
 	// 参数
-	Args *[]string `json:"args,omitempty" xml:"args"`
+	Args *[]string `json:"args,omitempty"`
 
-	LivenessProbe *ProbeDetail `json:"liveness_probe,omitempty" xml:"liveness_probe"`
+	LivenessProbe *ProbeDetail `json:"liveness_probe,omitempty"`
 
-	ReadinessProbe *ProbeDetail `json:"readiness_probe,omitempty" xml:"readiness_probe"`
+	ReadinessProbe *ProbeDetail `json:"readiness_probe,omitempty"`
 }
 
 func (o AppVersionDetail) String() string {

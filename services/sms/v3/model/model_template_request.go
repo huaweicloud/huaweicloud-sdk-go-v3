@@ -13,47 +13,47 @@ import (
 type TemplateRequest struct {
 
 	// 模板名称
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 是否是通用模板，如果模板关联一个任务，则不算通用模板
-	IsTemplate bool `json:"is_template" xml:"is_template"`
+	IsTemplate bool `json:"is_template"`
 
 	// Region信息
-	Region string `json:"region" xml:"region"`
+	Region string `json:"region"`
 
 	// 项目ID
-	Projectid string `json:"projectid" xml:"projectid"`
+	Projectid string `json:"projectid"`
 
 	// 目标端服务器名称
-	TargetServerName *string `json:"target_server_name,omitempty" xml:"target_server_name"`
+	TargetServerName *string `json:"target_server_name,omitempty"`
 
 	// 可用区
-	AvailabilityZone *string `json:"availability_zone,omitempty" xml:"availability_zone"`
+	AvailabilityZone *string `json:"availability_zone,omitempty"`
 
 	// 磁盘类型
-	Volumetype *TemplateRequestVolumetype `json:"volumetype,omitempty" xml:"volumetype"`
+	Volumetype *TemplateRequestVolumetype `json:"volumetype,omitempty"`
 
 	// 虚拟机规格
-	Flavor *string `json:"flavor,omitempty" xml:"flavor"`
+	Flavor *string `json:"flavor,omitempty"`
 
-	Vpc *VpcObject `json:"vpc,omitempty" xml:"vpc"`
+	Vpc *VpcObject `json:"vpc,omitempty"`
 
 	// 网卡信息，支持多个网卡，如果是自动创建，只填一个，id使用“autoCreate”
-	Nics *[]Nics `json:"nics,omitempty" xml:"nics"`
+	Nics *[]Nics `json:"nics,omitempty"`
 
 	// 安全组，支持多个安全组，如果是自动创建，只填一个，id使用“autoCreate”
-	SecurityGroups *[]SgObject `json:"security_groups,omitempty" xml:"security_groups"`
+	SecurityGroups *[]SgObject `json:"security_groups,omitempty"`
 
-	Publicip *PublicIp `json:"publicip,omitempty" xml:"publicip"`
+	Publicip *PublicIp `json:"publicip,omitempty"`
 
 	// 磁盘信息
-	Disk *[]TemplateDisk `json:"disk,omitempty" xml:"disk"`
+	Disk *[]TemplateDisk `json:"disk,omitempty"`
 
 	// 数据盘磁盘类型
-	DataVolumeType *TemplateRequestDataVolumeType `json:"data_volume_type,omitempty" xml:"data_volume_type"`
+	DataVolumeType *TemplateRequestDataVolumeType `json:"data_volume_type,omitempty"`
 
 	// 目的端密码
-	TargetPassword *string `json:"target_password,omitempty" xml:"target_password"`
+	TargetPassword *string `json:"target_password,omitempty"`
 }
 
 func (o TemplateRequest) String() string {

@@ -9,7 +9,7 @@ import (
 type AclBatchDelete struct {
 
 	// 需要删除的ACL策略ID列表
-	Acls *[]string `json:"acls,omitempty" xml:"acls"`
+	Acls *[]string `json:"acls,omitempty"`
 }
 
 func (o AclBatchDelete) String() string {

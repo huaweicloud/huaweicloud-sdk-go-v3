@@ -10,20 +10,20 @@ import (
 type Region struct {
 
 	// 区域描述信息。
-	Description string `json:"description" xml:"description"`
+	Description string `json:"description"`
 
 	// null.
-	ParentRegionId string `json:"parent_region_id" xml:"parent_region_id"`
+	ParentRegionId string `json:"parent_region_id"`
 
-	Links *LinksSelf `json:"links" xml:"links"`
+	Links *LinksSelf `json:"links"`
 
-	Locales *RegionLocales `json:"locales" xml:"locales"`
+	Locales *RegionLocales `json:"locales"`
 
 	// 区域ID。
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
 	// 区域类型。
-	Type string `json:"type" xml:"type"`
+	Type string `json:"type"`
 }
 
 func (o Region) String() string {

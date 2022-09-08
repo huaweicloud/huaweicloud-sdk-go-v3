@@ -8,9 +8,9 @@ import (
 
 // Request Object
 type MigrateVaultResourceRequest struct {
-	VaultId string `json:"vault_id" xml:"vault_id"`
+	VaultId string `json:"vault_id"`
 
-	Body *VaultMigrateResourceReq `json:"body,omitempty" xml:"body"`
+	Body *VaultMigrateResourceReq `json:"body,omitempty"`
 }
 
 func (o MigrateVaultResourceRequest) String() string {

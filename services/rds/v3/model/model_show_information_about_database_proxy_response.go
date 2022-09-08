@@ -8,12 +8,12 @@ import (
 
 // Response Object
 type ShowInformationAboutDatabaseProxyResponse struct {
-	Proxy *Proxy `json:"proxy,omitempty" xml:"proxy"`
+	Proxy *Proxy `json:"proxy,omitempty"`
 
-	MasterInstance *MasterInstance `json:"master_instance,omitempty" xml:"master_instance"`
+	MasterInstance *MasterInstance `json:"master_instance,omitempty"`
 
 	// 只读实例信息。
-	ReadonlyInstances *[]ReadonlyInstances `json:"readonly_instances,omitempty" xml:"readonly_instances"`
+	ReadonlyInstances *[]ReadonlyInstances `json:"readonly_instances,omitempty"`
 	HttpStatusCode    int                  `json:"-"`
 }
 

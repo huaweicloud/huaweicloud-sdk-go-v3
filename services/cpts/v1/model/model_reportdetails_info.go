@@ -9,16 +9,16 @@ import (
 type ReportdetailsInfo struct {
 
 	// 表格数据
-	Data *[]ReportdetailItemInfo `json:"data,omitempty" xml:"data"`
+	Data *[]ReportdetailItemInfo `json:"data,omitempty"`
 
 	// 页码
-	PageIndex *int32 `json:"pageIndex,omitempty" xml:"pageIndex"`
+	PageIndex *int32 `json:"pageIndex,omitempty"`
 
 	// 每页大小
-	PageSize *int32 `json:"pageSize,omitempty" xml:"pageSize"`
+	PageSize *int32 `json:"pageSize,omitempty"`
 
 	// 总记录数
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 }
 
 func (o ReportdetailsInfo) String() string {

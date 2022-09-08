@@ -10,7 +10,7 @@ import (
 type DeleteL7policyRequest struct {
 
 	// 转发策略id
-	L7policyId string `json:"l7policy_id" xml:"l7policy_id"`
+	L7policyId string `json:"l7policy_id"`
 }
 
 func (o DeleteL7policyRequest) String() string {

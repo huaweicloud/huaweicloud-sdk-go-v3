@@ -10,9 +10,9 @@ import (
 type PushCertificateRequest struct {
 
 	// 证书id。
-	CertificateId string `json:"certificate_id" xml:"certificate_id"`
+	CertificateId string `json:"certificate_id"`
 
-	Body *PushCertificateRequestBody `json:"body,omitempty" xml:"body"`
+	Body *PushCertificateRequestBody `json:"body,omitempty"`
 }
 
 func (o PushCertificateRequest) String() string {

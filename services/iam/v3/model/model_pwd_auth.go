@@ -8,9 +8,9 @@ import (
 
 //
 type PwdAuth struct {
-	Identity *PwdIdentity `json:"identity" xml:"identity"`
+	Identity *PwdIdentity `json:"identity"`
 
-	Scope *AuthScope `json:"scope" xml:"scope"`
+	Scope *AuthScope `json:"scope"`
 }
 
 func (o PwdAuth) String() string {

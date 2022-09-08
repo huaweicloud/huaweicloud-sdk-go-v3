@@ -9,10 +9,10 @@ import (
 type InsurancePolicyDetail struct {
 
 	// 对应识别出的文本内容
-	Words *string `json:"words,omitempty" xml:"words"`
+	Words *string `json:"words,omitempty"`
 
 	// 对应识别出的四个顶点坐标
-	Location *[][]int32 `json:"location,omitempty" xml:"location"`
+	Location *[][]int32 `json:"location,omitempty"`
 }
 
 func (o InsurancePolicyDetail) String() string {

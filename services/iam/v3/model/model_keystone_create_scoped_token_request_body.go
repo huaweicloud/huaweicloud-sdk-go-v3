@@ -8,7 +8,7 @@ import (
 
 //
 type KeystoneCreateScopedTokenRequestBody struct {
-	Auth *ScopedTokenAuth `json:"auth" xml:"auth"`
+	Auth *ScopedTokenAuth `json:"auth"`
 }
 
 func (o KeystoneCreateScopedTokenRequestBody) String() string {

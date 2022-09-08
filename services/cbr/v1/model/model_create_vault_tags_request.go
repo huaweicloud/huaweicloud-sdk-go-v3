@@ -10,9 +10,9 @@ import (
 type CreateVaultTagsRequest struct {
 
 	// 资源id
-	VaultId string `json:"vault_id" xml:"vault_id"`
+	VaultId string `json:"vault_id"`
 
-	Body *VaultTagsCreateReq `json:"body,omitempty" xml:"body"`
+	Body *VaultTagsCreateReq `json:"body,omitempty"`
 }
 
 func (o CreateVaultTagsRequest) String() string {

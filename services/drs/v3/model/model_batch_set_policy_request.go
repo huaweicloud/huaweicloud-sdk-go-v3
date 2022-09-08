@@ -13,9 +13,9 @@ import (
 type BatchSetPolicyRequest struct {
 
 	// 请求语言类型。
-	XLanguage *BatchSetPolicyRequestXLanguage `json:"X-Language,omitempty" xml:"X-Language"`
+	XLanguage *BatchSetPolicyRequestXLanguage `json:"X-Language,omitempty"`
 
-	Body *BatchSetupSyncPolicyReq `json:"body,omitempty" xml:"body"`
+	Body *BatchSetupSyncPolicyReq `json:"body,omitempty"`
 }
 
 func (o BatchSetPolicyRequest) String() string {

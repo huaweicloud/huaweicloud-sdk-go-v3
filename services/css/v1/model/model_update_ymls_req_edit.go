@@ -8,7 +8,7 @@ import (
 
 // 配置文件信息。
 type UpdateYmlsReqEdit struct {
-	Modify *UpdateYmlsReqEditModify `json:"modify" xml:"modify"`
+	Modify *UpdateYmlsReqEditModify `json:"modify"`
 }
 
 func (o UpdateYmlsReqEdit) String() string {

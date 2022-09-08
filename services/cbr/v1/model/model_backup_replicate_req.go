@@ -8,7 +8,7 @@ import (
 
 //
 type BackupReplicateReq struct {
-	Replicate *BackupReplicateReqBody `json:"replicate" xml:"replicate"`
+	Replicate *BackupReplicateReqBody `json:"replicate"`
 }
 
 func (o BackupReplicateReq) String() string {

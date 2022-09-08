@@ -9,7 +9,7 @@ import (
 type CommonQueryTaskRsp struct {
 
 	// 任务总数
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 }
 
 func (o CommonQueryTaskRsp) String() string {

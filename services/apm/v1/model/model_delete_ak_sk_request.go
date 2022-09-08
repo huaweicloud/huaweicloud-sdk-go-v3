@@ -10,7 +10,7 @@ import (
 type DeleteAkSkRequest struct {
 
 	// 需要删除的ak信息
-	Ak string `json:"ak" xml:"ak"`
+	Ak string `json:"ak"`
 }
 
 func (o DeleteAkSkRequest) String() string {

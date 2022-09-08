@@ -10,9 +10,9 @@ import (
 type KeystoneCreateIdentityProviderRequest struct {
 
 	// 待注册的身份提供商ID。
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
-	Body *KeystoneCreateIdentityProviderRequestBody `json:"body,omitempty" xml:"body"`
+	Body *KeystoneCreateIdentityProviderRequestBody `json:"body,omitempty"`
 }
 
 func (o KeystoneCreateIdentityProviderRequest) String() string {

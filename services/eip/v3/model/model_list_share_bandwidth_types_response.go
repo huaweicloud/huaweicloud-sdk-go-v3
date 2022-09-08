@@ -10,12 +10,12 @@ import (
 type ListShareBandwidthTypesResponse struct {
 
 	// 功能说明：共享带宽类型对象
-	ShareBandwidthTypes *[]ShareBandwidthTypeShowResp `json:"share_bandwidth_types,omitempty" xml:"share_bandwidth_types"`
+	ShareBandwidthTypes *[]ShareBandwidthTypeShowResp `json:"share_bandwidth_types,omitempty"`
 
 	// 本次请求的编号
-	RequestId *string `json:"request_id,omitempty" xml:"request_id"`
+	RequestId *string `json:"request_id,omitempty"`
 
-	PageInfo       *PageInfoOption `json:"page_info,omitempty" xml:"page_info"`
+	PageInfo       *PageInfoOption `json:"page_info,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }
 

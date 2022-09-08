@@ -10,9 +10,9 @@ import (
 type UpdateListenerRequest struct {
 
 	// 监听器id
-	ListenerId string `json:"listener_id" xml:"listener_id"`
+	ListenerId string `json:"listener_id"`
 
-	Body *UpdateListenerRequestBody `json:"body,omitempty" xml:"body"`
+	Body *UpdateListenerRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateListenerRequest) String() string {

@@ -10,10 +10,10 @@ import (
 type SecurityGroupsList struct {
 
 	// 安全组名称或者UUID
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 安全组ID。
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 }
 
 func (o SecurityGroupsList) String() string {

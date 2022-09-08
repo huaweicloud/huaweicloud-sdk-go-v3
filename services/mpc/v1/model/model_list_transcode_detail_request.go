@@ -10,7 +10,7 @@ import (
 type ListTranscodeDetailRequest struct {
 
 	// 转码服务接受任务后产生的任务ID。一次最多10个
-	TaskId *[]string `json:"task_id,omitempty" xml:"task_id"`
+	TaskId *[]string `json:"task_id,omitempty"`
 }
 
 func (o ListTranscodeDetailRequest) String() string {

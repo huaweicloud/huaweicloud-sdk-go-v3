@@ -10,10 +10,10 @@ import (
 type ListRiskConfigCheckRulesResponse struct {
 
 	// 风险总数
-	TotalNum *int64 `json:"total_num,omitempty" xml:"total_num"`
+	TotalNum *int64 `json:"total_num,omitempty"`
 
 	// 数据列表
-	DataList       *[]CheckRuleRiskInfoResponseInfo `json:"data_list,omitempty" xml:"data_list"`
+	DataList       *[]CheckRuleRiskInfoResponseInfo `json:"data_list,omitempty"`
 	HttpStatusCode int                              `json:"-"`
 }
 

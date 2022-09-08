@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -10,18 +13,21 @@ import (
 type PolicyAssignmentRequestBody struct {
 
 	// 规则名字
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 规则描述
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
-	PolicyFilter *PolicyFilterDefinition `json:"policy_filter" xml:"policy_filter"`
+	// 触发周期值，可选值：One_Hour, Three_Hours, Six_Hours, Twelve_Hours, TwentyFour_Hours
+	Period *PolicyAssignmentRequestBodyPeriod `json:"period,omitempty"`
+
+	PolicyFilter *PolicyFilterDefinition `json:"policy_filter,omitempty"`
 
 	// 策略定义ID
-	PolicyDefinitionId string `json:"policy_definition_id" xml:"policy_definition_id"`
+	PolicyDefinitionId string `json:"policy_definition_id"`
 
 	// 规则参数
-	Parameters map[string]PolicyParameterValue `json:"parameters" xml:"parameters"`
+	Parameters map[string]PolicyParameterValue `json:"parameters,omitempty"`
 }
 
 func (o PolicyAssignmentRequestBody) String() string {
@@ -31,4 +37,58 @@ func (o PolicyAssignmentRequestBody) String() string {
 	}
 
 	return strings.Join([]string{"PolicyAssignmentRequestBody", string(data)}, " ")
+}
+
+type PolicyAssignmentRequestBodyPeriod struct {
+	value string
+}
+
+type PolicyAssignmentRequestBodyPeriodEnum struct {
+	ONE_HOUR          PolicyAssignmentRequestBodyPeriod
+	THREE_HOURS       PolicyAssignmentRequestBodyPeriod
+	SIX_HOURS         PolicyAssignmentRequestBodyPeriod
+	TWELVE_HOURS      PolicyAssignmentRequestBodyPeriod
+	TWENTY_FOUR_HOURS PolicyAssignmentRequestBodyPeriod
+}
+
+func GetPolicyAssignmentRequestBodyPeriodEnum() PolicyAssignmentRequestBodyPeriodEnum {
+	return PolicyAssignmentRequestBodyPeriodEnum{
+		ONE_HOUR: PolicyAssignmentRequestBodyPeriod{
+			value: "One_Hour",
+		},
+		THREE_HOURS: PolicyAssignmentRequestBodyPeriod{
+			value: "Three_Hours",
+		},
+		SIX_HOURS: PolicyAssignmentRequestBodyPeriod{
+			value: "Six_Hours",
+		},
+		TWELVE_HOURS: PolicyAssignmentRequestBodyPeriod{
+			value: "Twelve_Hours",
+		},
+		TWENTY_FOUR_HOURS: PolicyAssignmentRequestBodyPeriod{
+			value: "TwentyFour_Hours",
+		},
+	}
+}
+
+func (c PolicyAssignmentRequestBodyPeriod) Value() string {
+	return c.value
+}
+
+func (c PolicyAssignmentRequestBodyPeriod) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *PolicyAssignmentRequestBodyPeriod) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

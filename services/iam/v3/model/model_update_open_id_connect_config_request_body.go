@@ -8,7 +8,7 @@ import (
 
 //
 type UpdateOpenIdConnectConfigRequestBody struct {
-	OpenidConnectConfig *UpdateOpenIdConnectConfig `json:"openid_connect_config" xml:"openid_connect_config"`
+	OpenidConnectConfig *UpdateOpenIdConnectConfig `json:"openid_connect_config"`
 }
 
 func (o UpdateOpenIdConnectConfigRequestBody) String() string {

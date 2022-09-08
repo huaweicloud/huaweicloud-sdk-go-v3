@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateExtractTaskRequest struct {
-	Body *CreateExtractTaskReq `json:"body,omitempty" xml:"body"`
+	Body *CreateExtractTaskReq `json:"body,omitempty"`
 }
 
 func (o CreateExtractTaskRequest) String() string {

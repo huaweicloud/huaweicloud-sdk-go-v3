@@ -10,9 +10,9 @@ import (
 type ShowFlavorResponse struct {
 
 	// 请求ID。  注：自动生成 。
-	RequestId *string `json:"request_id,omitempty" xml:"request_id"`
+	RequestId *string `json:"request_id,omitempty"`
 
-	Flavor         *Flavor `json:"flavor,omitempty" xml:"flavor"`
+	Flavor         *Flavor `json:"flavor,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

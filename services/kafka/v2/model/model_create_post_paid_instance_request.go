@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreatePostPaidInstanceRequest struct {
-	Body *CreatePostPaidInstanceReq `json:"body,omitempty" xml:"body"`
+	Body *CreatePostPaidInstanceReq `json:"body,omitempty"`
 }
 
 func (o CreatePostPaidInstanceRequest) String() string {

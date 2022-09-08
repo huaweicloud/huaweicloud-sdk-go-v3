@@ -10,7 +10,7 @@ import (
 type CreateBackupRequest struct {
 
 	// 图ID。
-	GraphId string `json:"graph_id" xml:"graph_id"`
+	GraphId string `json:"graph_id"`
 }
 
 func (o CreateBackupRequest) String() string {

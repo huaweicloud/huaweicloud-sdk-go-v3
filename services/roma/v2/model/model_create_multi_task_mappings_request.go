@@ -10,12 +10,12 @@ import (
 type CreateMultiTaskMappingsRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 任务ID
-	TaskId string `json:"task_id" xml:"task_id"`
+	TaskId string `json:"task_id"`
 
-	Body *MultiTaskMappingCreateBody `json:"body,omitempty" xml:"body"`
+	Body *MultiTaskMappingCreateBody `json:"body,omitempty"`
 }
 
 func (o CreateMultiTaskMappingsRequest) String() string {

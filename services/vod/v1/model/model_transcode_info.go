@@ -10,16 +10,16 @@ import (
 type TranscodeInfo struct {
 
 	// 转码模板组名称。
-	TemplateGroupName string `json:"template_group_name" xml:"template_group_name"`
+	TemplateGroupName string `json:"template_group_name"`
 
 	// 转码输出数组。 - HLS或DASH格式：此数组的成员个数为n+1，n为转码输出路数。 - MP4格式：此数组的成员个数为n，n为转码输出路数。
-	Output []Output `json:"output" xml:"output"`
+	Output []Output `json:"output"`
 
 	// 执行情况描述。
-	ExecDesc *string `json:"exec_desc,omitempty" xml:"exec_desc"`
+	ExecDesc *string `json:"exec_desc,omitempty"`
 
 	// 转码状态。  取值如下： - UN_TRANSCODE：未转码 - WAITING_TRANSCODE：待转码 - TRANSCODING：转码中 - TRANSCODE_SUCCEED：转码成功 - TRANSCODE_FAILED：转码失败
-	TranscodeStatus *string `json:"transcode_status,omitempty" xml:"transcode_status"`
+	TranscodeStatus *string `json:"transcode_status,omitempty"`
 }
 
 func (o TranscodeInfo) String() string {

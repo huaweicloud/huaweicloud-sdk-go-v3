@@ -9,34 +9,34 @@ import (
 type TollInvoiceResult struct {
 
 	// 发票代码。
-	Code *string `json:"code,omitempty" xml:"code"`
+	Code *string `json:"code,omitempty"`
 
 	// 发票号码。
-	Number *string `json:"number,omitempty" xml:"number"`
+	Number *string `json:"number,omitempty"`
 
 	// 入口。
-	Entry *string `json:"entry,omitempty" xml:"entry"`
+	Entry *string `json:"entry,omitempty"`
 
 	// 出口。
-	Exit *string `json:"exit,omitempty" xml:"exit"`
+	Exit *string `json:"exit,omitempty"`
 
 	// 收费金额。
-	Amount *string `json:"amount,omitempty" xml:"amount"`
+	Amount *string `json:"amount,omitempty"`
 
 	// 收费员。
-	Cashier *string `json:"cashier,omitempty" xml:"cashier"`
+	Cashier *string `json:"cashier,omitempty"`
 
 	// 车辆类型。
-	VehicleType *string `json:"vehicle_type,omitempty" xml:"vehicle_type"`
+	VehicleType *string `json:"vehicle_type,omitempty"`
 
 	// 日期。
-	Date *string `json:"date,omitempty" xml:"date"`
+	Date *string `json:"date,omitempty"`
 
 	// 时间。
-	Time *string `json:"time,omitempty" xml:"time"`
+	Time *string `json:"time,omitempty"`
 
 	// 相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
-	Confidence *interface{} `json:"confidence,omitempty" xml:"confidence"`
+	Confidence *interface{} `json:"confidence,omitempty"`
 }
 
 func (o TollInvoiceResult) String() string {

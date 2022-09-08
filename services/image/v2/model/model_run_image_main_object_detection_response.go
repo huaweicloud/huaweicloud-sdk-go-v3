@@ -10,7 +10,7 @@ import (
 type RunImageMainObjectDetectionResponse struct {
 
 	// 主体列表集合。
-	Result         *[]ImageMainObjectDetectionInstance `json:"result,omitempty" xml:"result"`
+	Result         *[]ImageMainObjectDetectionInstance `json:"result,omitempty"`
 	HttpStatusCode int                                 `json:"-"`
 }
 

@@ -10,9 +10,9 @@ import (
 type QueryDataGuardMonitorAndChartResp struct {
 
 	// 任务id
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
-	DataGuardMinitor *QueryDataGuardMonitorResponse `json:"data_guard_minitor" xml:"data_guard_minitor"`
+	DataGuardMinitor *QueryDataGuardMonitorResponse `json:"data_guard_minitor"`
 }
 
 func (o QueryDataGuardMonitorAndChartResp) String() string {

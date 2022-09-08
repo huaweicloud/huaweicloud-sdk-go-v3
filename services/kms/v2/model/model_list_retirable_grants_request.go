@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ListRetirableGrantsRequest struct {
-	Body *ListRetirableGrantsRequestBody `json:"body,omitempty" xml:"body"`
+	Body *ListRetirableGrantsRequestBody `json:"body,omitempty"`
 }
 
 func (o ListRetirableGrantsRequest) String() string {

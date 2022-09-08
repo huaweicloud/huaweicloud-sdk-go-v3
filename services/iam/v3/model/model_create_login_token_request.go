@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateLoginTokenRequest struct {
-	Body *CreateLoginTokenRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreateLoginTokenRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateLoginTokenRequest) String() string {

@@ -10,13 +10,13 @@ import (
 type InstanceActionParameters struct {
 
 	// 实例数，在scale操作时提供。
-	Replica *int32 `json:"replica,omitempty" xml:"replica"`
+	Replica *int32 `json:"replica,omitempty"`
 
 	// ECS ID列表，指定虚机扩容时部署的ECS主机。
-	Hosts *[]string `json:"hosts,omitempty" xml:"hosts"`
+	Hosts *[]string `json:"hosts,omitempty"`
 
 	// 版本号，在rollback操作时提供，通过查询快照接口获取。
-	Version *string `json:"version,omitempty" xml:"version"`
+	Version *string `json:"version,omitempty"`
 }
 
 func (o InstanceActionParameters) String() string {

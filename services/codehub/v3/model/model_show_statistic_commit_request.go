@@ -10,16 +10,16 @@ import (
 type ShowStatisticCommitRequest struct {
 
 	// 仓库短id
-	RepositoryId int32 `json:"repository_id" xml:"repository_id"`
+	RepositoryId int32 `json:"repository_id"`
 
 	// 分支名称
-	RefName string `json:"ref_name" xml:"ref_name"`
+	RefName string `json:"ref_name"`
 
 	// 起始提交日期,格式为yyyy-MM-dd
-	BeginDate string `json:"begin_date" xml:"begin_date"`
+	BeginDate string `json:"begin_date"`
 
 	// 终止提交日期,格式为yyyy-MM-dd（begin_date和end_date时间间隔不超过60天）
-	EndDate string `json:"end_date" xml:"end_date"`
+	EndDate string `json:"end_date"`
 }
 
 func (o ShowStatisticCommitRequest) String() string {

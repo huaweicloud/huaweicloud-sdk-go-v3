@@ -10,13 +10,13 @@ import (
 type AggregateMetric struct {
 
 	// 声明属性作为表达式参数
-	Inputs []InputParam `json:"inputs" xml:"inputs"`
+	Inputs []InputParam `json:"inputs"`
 
 	// 指标名称
-	MetricName string `json:"metric_name" xml:"metric_name"`
+	MetricName string `json:"metric_name"`
 
 	// 表达式
-	Expression string `json:"expression" xml:"expression"`
+	Expression string `json:"expression"`
 }
 
 func (o AggregateMetric) String() string {

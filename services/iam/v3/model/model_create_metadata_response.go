@@ -10,7 +10,7 @@ import (
 type CreateMetadataResponse struct {
 
 	// 导入结果信息。
-	Message        *string `json:"message,omitempty" xml:"message"`
+	Message        *string `json:"message,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

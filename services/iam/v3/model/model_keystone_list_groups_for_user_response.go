@@ -10,9 +10,9 @@ import (
 type KeystoneListGroupsForUserResponse struct {
 
 	// 用户组信息列表。
-	Groups *[]KeystoneGroupResult `json:"groups,omitempty" xml:"groups"`
+	Groups *[]KeystoneGroupResult `json:"groups,omitempty"`
 
-	Links          *Links `json:"links,omitempty" xml:"links"`
+	Links          *Links `json:"links,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

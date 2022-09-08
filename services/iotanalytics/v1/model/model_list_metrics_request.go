@@ -10,9 +10,9 @@ import (
 type ListMetricsRequest struct {
 
 	// 存储ID
-	DataStoreId string `json:"data_store_id" xml:"data_store_id"`
+	DataStoreId string `json:"data_store_id"`
 
-	Body *GetMetricsRequest `json:"body,omitempty" xml:"body"`
+	Body *GetMetricsRequest `json:"body,omitempty"`
 }
 
 func (o ListMetricsRequest) String() string {

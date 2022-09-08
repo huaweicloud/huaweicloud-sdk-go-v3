@@ -10,10 +10,10 @@ import (
 type ListMigprojectsResponse struct {
 
 	// 查询到的迁移项目的数量
-	Count *int32 `json:"count,omitempty" xml:"count"`
+	Count *int32 `json:"count,omitempty"`
 
 	// 查询到的迁移项目详情
-	Migprojects    *[]MigprojectsResponseBody `json:"migprojects,omitempty" xml:"migprojects"`
+	Migprojects    *[]MigprojectsResponseBody `json:"migprojects,omitempty"`
 	HttpStatusCode int                        `json:"-"`
 }
 

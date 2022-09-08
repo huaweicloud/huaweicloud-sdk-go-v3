@@ -10,9 +10,9 @@ import (
 type CreateHealthMonitorResponse struct {
 
 	// 请求ID。  注：自动生成 。
-	RequestId *string `json:"request_id,omitempty" xml:"request_id"`
+	RequestId *string `json:"request_id,omitempty"`
 
-	Healthmonitor  *HealthMonitor `json:"healthmonitor,omitempty" xml:"healthmonitor"`
+	Healthmonitor  *HealthMonitor `json:"healthmonitor,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }
 

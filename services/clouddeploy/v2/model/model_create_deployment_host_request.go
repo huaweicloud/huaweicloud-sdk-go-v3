@@ -10,9 +10,9 @@ import (
 type CreateDeploymentHostRequest struct {
 
 	// 主机组id
-	GroupId string `json:"group_id" xml:"group_id"`
+	GroupId string `json:"group_id"`
 
-	Body *DeploymentHost `json:"body,omitempty" xml:"body"`
+	Body *DeploymentHost `json:"body,omitempty"`
 }
 
 func (o CreateDeploymentHostRequest) String() string {

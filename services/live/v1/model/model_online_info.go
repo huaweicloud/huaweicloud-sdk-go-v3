@@ -12,40 +12,40 @@ import (
 type OnlineInfo struct {
 
 	// 域名
-	PublishDomain string `json:"publish_domain" xml:"publish_domain"`
+	PublishDomain string `json:"publish_domain"`
 
 	// 应用名
-	App string `json:"app" xml:"app"`
+	App string `json:"app"`
 
 	// 流名
-	Stream string `json:"stream" xml:"stream"`
+	Stream string `json:"stream"`
 
 	// 视频编码方式 - H264 - H265
-	VideoCodec OnlineInfoVideoCodec `json:"video_codec" xml:"video_codec"`
+	VideoCodec OnlineInfoVideoCodec `json:"video_codec"`
 
 	// 音频编码方式 - AAC
-	AudioCodec OnlineInfoAudioCodec `json:"audio_codec" xml:"audio_codec"`
+	AudioCodec OnlineInfoAudioCodec `json:"audio_codec"`
 
 	// 视频帧率
-	VideoFrameRate *int64 `json:"video_frame_rate,omitempty" xml:"video_frame_rate"`
+	VideoFrameRate *int64 `json:"video_frame_rate,omitempty"`
 
 	// 音频帧率
-	AudioFrameRate *int64 `json:"audio_frame_rate,omitempty" xml:"audio_frame_rate"`
+	AudioFrameRate *int64 `json:"audio_frame_rate,omitempty"`
 
 	// 视频码率
-	VideoBitrate *int64 `json:"video_bitrate,omitempty" xml:"video_bitrate"`
+	VideoBitrate *int64 `json:"video_bitrate,omitempty"`
 
 	// 音频码率
-	AudioBitrate *int64 `json:"audio_bitrate,omitempty" xml:"audio_bitrate"`
+	AudioBitrate *int64 `json:"audio_bitrate,omitempty"`
 
 	// 视频分辨率
-	Resolution *string `json:"resolution,omitempty" xml:"resolution"`
+	Resolution *string `json:"resolution,omitempty"`
 
 	// 推流设备的ip
-	ClientIp string `json:"client_ip" xml:"client_ip"`
+	ClientIp string `json:"client_ip"`
 
 	// 开始推流时刻 UTC格式 2006-01-02T15:04:05Z
-	StartTime string `json:"start_time" xml:"start_time"`
+	StartTime string `json:"start_time"`
 }
 
 func (o OnlineInfo) String() string {

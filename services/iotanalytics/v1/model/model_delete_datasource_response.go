@@ -10,7 +10,7 @@ import (
 type DeleteDatasourceResponse struct {
 
 	// 删除数据源的id
-	Body           *string `json:"body,omitempty" xml:"body"`
+	Body           *string `json:"body,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -13,22 +13,22 @@ import (
 type ReqAllocateDeh struct {
 
 	// 专属主机名称。
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 在创建云服务器时（未指定专属主机ID），是否允许云服务器自动分配在一台可用的专属主机上。 取值范围：“on”或“off”。 默认值：“on”。
-	AutoPlacement *ReqAllocateDehAutoPlacement `json:"auto_placement,omitempty" xml:"auto_placement"`
+	AutoPlacement *ReqAllocateDehAutoPlacement `json:"auto_placement,omitempty"`
 
 	// 专属主机所属AZ。
-	AvailabilityZone string `json:"availability_zone" xml:"availability_zone"`
+	AvailabilityZone string `json:"availability_zone"`
 
 	// 专属主机类型。
-	HostType string `json:"host_type" xml:"host_type"`
+	HostType string `json:"host_type"`
 
 	// 待分配的专属主机数量。
-	Quantity int32 `json:"quantity" xml:"quantity"`
+	Quantity int32 `json:"quantity"`
 
 	// 专属主机标签列表。
-	Tags *[]ResourceTag `json:"tags,omitempty" xml:"tags"`
+	Tags *[]ResourceTag `json:"tags,omitempty"`
 }
 
 func (o ReqAllocateDeh) String() string {

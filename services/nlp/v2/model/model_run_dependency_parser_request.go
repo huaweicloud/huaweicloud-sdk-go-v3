@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RunDependencyParserRequest struct {
-	Body *DependencyParserRequest `json:"body,omitempty" xml:"body"`
+	Body *DependencyParserRequest `json:"body,omitempty"`
 }
 
 func (o RunDependencyParserRequest) String() string {

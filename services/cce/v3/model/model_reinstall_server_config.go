@@ -10,9 +10,9 @@ import (
 type ReinstallServerConfig struct {
 
 	// 云服务器标签，键必须唯一，CCE支持的最大用户自定义标签数量依region而定，自定义标签数上限为5个。
-	UserTags *[]UserTag `json:"userTags,omitempty" xml:"userTags"`
+	UserTags *[]UserTag `json:"userTags,omitempty"`
 
-	RootVolume *ReinstallVolumeSpec `json:"rootVolume,omitempty" xml:"rootVolume"`
+	RootVolume *ReinstallVolumeSpec `json:"rootVolume,omitempty"`
 }
 
 func (o ReinstallServerConfig) String() string {

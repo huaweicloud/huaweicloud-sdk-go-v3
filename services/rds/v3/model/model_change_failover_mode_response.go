@@ -10,13 +10,13 @@ import (
 type ChangeFailoverModeResponse struct {
 
 	// 实例Id
-	InstanceId *string `json:"instanceId,omitempty" xml:"instanceId"`
+	InstanceId *string `json:"instanceId,omitempty"`
 
 	// 同步模式
-	ReplicationMode *string `json:"replicationMode,omitempty" xml:"replicationMode"`
+	ReplicationMode *string `json:"replicationMode,omitempty"`
 
 	// 任务id
-	WorkflowId     *string `json:"workflowId,omitempty" xml:"workflowId"`
+	WorkflowId     *string `json:"workflowId,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

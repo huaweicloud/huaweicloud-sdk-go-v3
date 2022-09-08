@@ -9,10 +9,10 @@ import (
 type Links struct {
 
 	// API的URL地址。
-	Href *string `json:"href,omitempty" xml:"href"`
+	Href *string `json:"href,omitempty"`
 
 	// API的URL依赖。
-	Rel *string `json:"rel,omitempty" xml:"rel"`
+	Rel *string `json:"rel,omitempty"`
 }
 
 func (o Links) String() string {

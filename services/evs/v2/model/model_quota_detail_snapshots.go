@@ -10,13 +10,13 @@ import (
 type QuotaDetailSnapshots struct {
 
 	// 已使用的数量。
-	InUse int32 `json:"in_use" xml:"in_use"`
+	InUse int32 `json:"in_use"`
 
 	// 最大的数量。
-	Limit int32 `json:"limit" xml:"limit"`
+	Limit int32 `json:"limit"`
 
 	// 预留属性。
-	Reserved int32 `json:"reserved" xml:"reserved"`
+	Reserved int32 `json:"reserved"`
 }
 
 func (o QuotaDetailSnapshots) String() string {

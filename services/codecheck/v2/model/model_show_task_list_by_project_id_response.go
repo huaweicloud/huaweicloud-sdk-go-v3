@@ -10,10 +10,10 @@ import (
 type ShowTaskListByProjectIdResponse struct {
 
 	// 任务信息
-	Tasks *[]SimpleTaskInfoV2 `json:"tasks,omitempty" xml:"tasks"`
+	Tasks *[]SimpleTaskInfoV2 `json:"tasks,omitempty"`
 
 	// 总数
-	Total          *int32 `json:"total,omitempty" xml:"total"`
+	Total          *int32 `json:"total,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

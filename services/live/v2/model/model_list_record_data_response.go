@@ -10,9 +10,9 @@ import (
 type ListRecordDataResponse struct {
 
 	// 采样数据列表。
-	RecordDataList *[]RecordData `json:"record_data_list,omitempty" xml:"record_data_list"`
+	RecordDataList *[]RecordData `json:"record_data_list,omitempty"`
 
-	XRequestId     *string `json:"X-Request-Id,omitempty" xml:"X-Request-Id"`
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

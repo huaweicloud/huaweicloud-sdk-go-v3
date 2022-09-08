@@ -10,13 +10,13 @@ import (
 type ShowCdnStatisticsResponse struct {
 
 	// 统计起始时间。
-	StartTime *string `json:"start_time,omitempty" xml:"start_time"`
+	StartTime *string `json:"start_time,omitempty"`
 
 	// 统计间隔。
-	Interval *int32 `json:"interval,omitempty" xml:"interval"`
+	Interval *int32 `json:"interval,omitempty"`
 
 	// 采样数据数组。  从start_time开始，每个间隔对应一个采样数据。
-	Values         *[]int64 `json:"values,omitempty" xml:"values"`
+	Values         *[]int64 `json:"values,omitempty"`
 	HttpStatusCode int      `json:"-"`
 }
 

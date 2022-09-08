@@ -10,14 +10,14 @@ import (
 type MigrateNodeResponse struct {
 
 	// API版本，固定值“v3”。
-	ApiVersion *string `json:"apiVersion,omitempty" xml:"apiVersion"`
+	ApiVersion *string `json:"apiVersion,omitempty"`
 
 	// API类型，固定值“MigrateNodesTask”。
-	Kind *string `json:"kind,omitempty" xml:"kind"`
+	Kind *string `json:"kind,omitempty"`
 
-	Spec *MigrateNodesSpec `json:"spec,omitempty" xml:"spec"`
+	Spec *MigrateNodesSpec `json:"spec,omitempty"`
 
-	Status         *TaskStatus `json:"status,omitempty" xml:"status"`
+	Status         *TaskStatus `json:"status,omitempty"`
 	HttpStatusCode int         `json:"-"`
 }
 

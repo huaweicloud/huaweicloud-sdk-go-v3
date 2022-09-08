@@ -10,10 +10,10 @@ import (
 type ShowRealTimeInfoOfMeetingRequest struct {
 
 	// 会议ID。
-	ConferenceID string `json:"conferenceID" xml:"conferenceID"`
+	ConferenceID string `json:"conferenceID"`
 
 	// 会控授权令牌，通过获取会控token接口获得。
-	XConferenceAuthorization string `json:"X-Conference-Authorization" xml:"X-Conference-Authorization"`
+	XConferenceAuthorization string `json:"X-Conference-Authorization"`
 }
 
 func (o ShowRealTimeInfoOfMeetingRequest) String() string {

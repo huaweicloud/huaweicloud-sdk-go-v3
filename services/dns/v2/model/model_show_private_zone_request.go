@@ -10,7 +10,7 @@ import (
 type ShowPrivateZoneRequest struct {
 
 	// 待查询zone的ID。
-	ZoneId string `json:"zone_id" xml:"zone_id"`
+	ZoneId string `json:"zone_id"`
 }
 
 func (o ShowPrivateZoneRequest) String() string {

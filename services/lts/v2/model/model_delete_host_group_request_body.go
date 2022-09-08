@@ -10,7 +10,7 @@ import (
 type DeleteHostGroupRequestBody struct {
 
 	// 主机组ID列表
-	HostGroupIdList []string `json:"host_group_id_list" xml:"host_group_id_list"`
+	HostGroupIdList []string `json:"host_group_id_list"`
 }
 
 func (o DeleteHostGroupRequestBody) String() string {

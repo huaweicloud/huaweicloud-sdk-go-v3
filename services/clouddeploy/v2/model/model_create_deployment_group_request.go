@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateDeploymentGroupRequest struct {
-	Body *DeploymentGroup `json:"body,omitempty" xml:"body"`
+	Body *DeploymentGroup `json:"body,omitempty"`
 }
 
 func (o CreateDeploymentGroupRequest) String() string {

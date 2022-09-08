@@ -10,7 +10,7 @@ import (
 type ShowDetailOfSubscriptionRequest struct {
 
 	// 事件订阅ID
-	SubscriptionId string `json:"subscription_id" xml:"subscription_id"`
+	SubscriptionId string `json:"subscription_id"`
 }
 
 func (o ShowDetailOfSubscriptionRequest) String() string {

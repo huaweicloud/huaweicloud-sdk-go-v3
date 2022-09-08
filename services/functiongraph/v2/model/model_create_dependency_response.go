@@ -10,31 +10,31 @@ import (
 type CreateDependencyResponse struct {
 
 	// 依赖包ID。
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 依赖包拥有者。
-	Owner *string `json:"owner,omitempty" xml:"owner"`
+	Owner *string `json:"owner,omitempty"`
 
 	// 依赖包在obs的存储地址。
-	Link *string `json:"link,omitempty" xml:"link"`
+	Link *string `json:"link,omitempty"`
 
 	// 运行时语言。
-	Runtime *string `json:"runtime,omitempty" xml:"runtime"`
+	Runtime *string `json:"runtime,omitempty"`
 
 	// 依赖包唯一标志。
-	Etag *string `json:"etag,omitempty" xml:"etag"`
+	Etag *string `json:"etag,omitempty"`
 
 	// 依赖包大小。
-	Size *int64 `json:"size,omitempty" xml:"size"`
+	Size *int64 `json:"size,omitempty"`
 
 	// 依赖包名。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 依赖包描述。
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 依赖包文件名。
-	FileName       *string `json:"file_name,omitempty" xml:"file_name"`
+	FileName       *string `json:"file_name,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

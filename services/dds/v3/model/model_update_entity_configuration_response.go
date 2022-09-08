@@ -10,10 +10,10 @@ import (
 type UpdateEntityConfigurationResponse struct {
 
 	// 修改实例参数的异步任务ID。
-	JobId *string `json:"job_id,omitempty" xml:"job_id"`
+	JobId *string `json:"job_id,omitempty"`
 
 	// 参数修改涉及范围（实例，组，节点）否需要重启。 - false不需要重启 - true需要重启。
-	RestartRequired *bool `json:"restart_required,omitempty" xml:"restart_required"`
+	RestartRequired *bool `json:"restart_required,omitempty"`
 	HttpStatusCode  int   `json:"-"`
 }
 

@@ -10,13 +10,13 @@ import (
 type ListRulesResponse struct {
 
 	// 本次分页查询结果中最后一条记录的ID，可在下一次分页查询时使用。
-	Marker *string `json:"marker,omitempty" xml:"marker"`
+	Marker *string `json:"marker,omitempty"`
 
 	// 满足查询条件的记录总数。
-	Count *int64 `json:"count,omitempty" xml:"count"`
+	Count *int64 `json:"count,omitempty"`
 
 	// 规则信息列表。
-	Rules          *[]RuleResponse `json:"rules,omitempty" xml:"rules"`
+	Rules          *[]RuleResponse `json:"rules,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }
 

@@ -10,9 +10,9 @@ import (
 type UpdateVaultRequest struct {
 
 	// 存储库ID
-	VaultId string `json:"vault_id" xml:"vault_id"`
+	VaultId string `json:"vault_id"`
 
-	Body *VaultUpdateReq `json:"body,omitempty" xml:"body"`
+	Body *VaultUpdateReq `json:"body,omitempty"`
 }
 
 func (o UpdateVaultRequest) String() string {

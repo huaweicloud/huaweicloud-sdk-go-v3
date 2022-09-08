@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ListFunctionTriggersResponse struct {
-	Body           *[]ListFunctionTriggerResult `json:"body,omitempty" xml:"body"`
+	Body           *[]ListFunctionTriggerResult `json:"body,omitempty"`
 	HttpStatusCode int                          `json:"-"`
 }
 

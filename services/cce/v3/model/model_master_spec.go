@@ -10,13 +10,13 @@ import (
 type MasterSpec struct {
 
 	// 可用区
-	AvailabilityZone *string `json:"availabilityZone,omitempty" xml:"availabilityZone"`
+	AvailabilityZone *string `json:"availabilityZone,omitempty"`
 
 	// 规格
-	Flavor *string `json:"flavor,omitempty" xml:"flavor"`
+	Flavor *string `json:"flavor,omitempty"`
 
 	// 故障域。 1. 指定该字段需要当前系统已开启故障域特性，否则校验失败。 2. 仅单az场景支持且必须显式指定az。
-	FaultDomain *string `json:"faultDomain,omitempty" xml:"faultDomain"`
+	FaultDomain *string `json:"faultDomain,omitempty"`
 }
 
 func (o MasterSpec) String() string {

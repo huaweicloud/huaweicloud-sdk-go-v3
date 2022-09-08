@@ -8,7 +8,7 @@ import (
 
 // 批量重启边缘实例请求体。
 type BatchRebootInstanceRequestBody struct {
-	Reboot *BatchReboot `json:"reboot,omitempty" xml:"reboot"`
+	Reboot *BatchReboot `json:"reboot,omitempty"`
 }
 
 func (o BatchRebootInstanceRequestBody) String() string {

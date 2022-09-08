@@ -10,25 +10,25 @@ import (
 type Material struct {
 
 	// 素材ID
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 更新者
-	LastUpdatedBy *string `json:"lastUpdatedBy,omitempty" xml:"lastUpdatedBy"`
+	LastUpdatedBy *string `json:"lastUpdatedBy,omitempty"`
 
 	// 更新时间
-	UpdateTime *int64 `json:"updateTime,omitempty" xml:"updateTime"`
+	UpdateTime *int64 `json:"updateTime,omitempty"`
 
 	// 素材名称
-	MaterialName *string `json:"materialName,omitempty" xml:"materialName"`
+	MaterialName *string `json:"materialName,omitempty"`
 
 	// 素材分辨率
-	MaterialResolution *string `json:"materialResolution,omitempty" xml:"materialResolution"`
+	MaterialResolution *string `json:"materialResolution,omitempty"`
 
 	// 素材大小（含单位）
-	MaterialSizeStr *string `json:"materialSizeStr,omitempty" xml:"materialSizeStr"`
+	MaterialSizeStr *string `json:"materialSizeStr,omitempty"`
 
 	// 素材云盘存储文件下载地址
-	FilePath *string `json:"filePath,omitempty" xml:"filePath"`
+	FilePath *string `json:"filePath,omitempty"`
 }
 
 func (o Material) String() string {

@@ -10,9 +10,9 @@ import (
 type UpdateSecretRequest struct {
 
 	// 凭据对象唯一资源标识符。
-	SecretId string `json:"secret_id" xml:"secret_id"`
+	SecretId string `json:"secret_id"`
 
-	Body *UpdateSecretRequestBody `json:"body,omitempty" xml:"body"`
+	Body *UpdateSecretRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateSecretRequest) String() string {

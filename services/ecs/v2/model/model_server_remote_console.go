@@ -10,13 +10,13 @@ import (
 type ServerRemoteConsole struct {
 
 	// 远程登录的协议。
-	Protocol string `json:"protocol" xml:"protocol"`
+	Protocol string `json:"protocol"`
 
 	// 远程登录的类型。
-	Type string `json:"type" xml:"type"`
+	Type string `json:"type"`
 
 	// 远程登录的url。
-	Url string `json:"url" xml:"url"`
+	Url string `json:"url"`
 }
 
 func (o ServerRemoteConsole) String() string {

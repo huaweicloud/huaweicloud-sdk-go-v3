@@ -10,16 +10,16 @@ import (
 type ListPolicyStatesByResourceIdRequest struct {
 
 	// 资源ID
-	ResourceId string `json:"resource_id" xml:"resource_id"`
+	ResourceId string `json:"resource_id"`
 
 	// 合规状态
-	ComplianceState *string `json:"compliance_state,omitempty" xml:"compliance_state"`
+	ComplianceState *string `json:"compliance_state,omitempty"`
 
 	// 最大的返回数量
-	Limit *int32 `json:"limit,omitempty" xml:"limit"`
+	Limit *int32 `json:"limit,omitempty"`
 
 	// 分页参数，通过上一个请求中返回的marker信息作为输入，获取当前页
-	Marker *string `json:"marker,omitempty" xml:"marker"`
+	Marker *string `json:"marker,omitempty"`
 }
 
 func (o ListPolicyStatesByResourceIdRequest) String() string {

@@ -10,19 +10,19 @@ import (
 type ShowEvaluationStateByAssignmentIdResponse struct {
 
 	// 规则ID
-	PolicyAssignmentId *string `json:"policy_assignment_id,omitempty" xml:"policy_assignment_id"`
+	PolicyAssignmentId *string `json:"policy_assignment_id,omitempty"`
 
 	// 评估任务执行状态
-	State *string `json:"state,omitempty" xml:"state"`
+	State *string `json:"state,omitempty"`
 
 	// 评估任务开始时间
-	StartTime *string `json:"start_time,omitempty" xml:"start_time"`
+	StartTime *string `json:"start_time,omitempty"`
 
 	// 评估任务结束时间
-	EndTime *string `json:"end_time,omitempty" xml:"end_time"`
+	EndTime *string `json:"end_time,omitempty"`
 
 	// 评估任务失败信息
-	ErrorMessage   *string `json:"error_message,omitempty" xml:"error_message"`
+	ErrorMessage   *string `json:"error_message,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

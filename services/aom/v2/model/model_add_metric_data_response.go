@@ -10,10 +10,10 @@ import (
 type AddMetricDataResponse struct {
 
 	// 响应码。
-	ErrorCode *string `json:"errorCode,omitempty" xml:"errorCode"`
+	ErrorCode *string `json:"errorCode,omitempty"`
 
 	// 响应信息描述。
-	ErrorMessage   *string `json:"errorMessage,omitempty" xml:"errorMessage"`
+	ErrorMessage   *string `json:"errorMessage,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

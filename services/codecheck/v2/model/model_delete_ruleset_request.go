@@ -10,10 +10,10 @@ import (
 type DeleteRulesetRequest struct {
 
 	// 项目ID
-	ProjectId string `json:"project_id" xml:"project_id"`
+	ProjectId string `json:"project_id"`
 
 	// 规则集ID
-	RulesetId string `json:"ruleset_id" xml:"ruleset_id"`
+	RulesetId string `json:"ruleset_id"`
 }
 
 func (o DeleteRulesetRequest) String() string {

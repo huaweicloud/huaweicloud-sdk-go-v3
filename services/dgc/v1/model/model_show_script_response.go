@@ -11,28 +11,28 @@ import (
 
 // Response Object
 type ShowScriptResponse struct {
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 脚本类型
-	Type *ShowScriptResponseType `json:"type,omitempty" xml:"type"`
+	Type *ShowScriptResponseType `json:"type,omitempty"`
 
 	// 脚本关联的目录
-	Directory *string `json:"directory,omitempty" xml:"directory"`
+	Directory *string `json:"directory,omitempty"`
 
 	// 脚本内容
-	Content *string `json:"content,omitempty" xml:"content"`
+	Content *string `json:"content,omitempty"`
 
 	// 脚本关联的连接名称
-	ConnectionName *string `json:"connectionName,omitempty" xml:"connectionName"`
+	ConnectionName *string `json:"connectionName,omitempty"`
 
 	// 脚本执行所在的数据库
-	Database *string `json:"database,omitempty" xml:"database"`
+	Database *string `json:"database,omitempty"`
 
 	// 脚本关联的DLI队列名称
-	QueueName *string `json:"queueName,omitempty" xml:"queueName"`
+	QueueName *string `json:"queueName,omitempty"`
 
 	// 脚本的配置项参数
-	Configuration  *string `json:"configuration,omitempty" xml:"configuration"`
+	Configuration  *string `json:"configuration,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

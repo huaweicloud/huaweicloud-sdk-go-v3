@@ -9,22 +9,22 @@ import (
 type TemplateGroup struct {
 
 	// 模板组id
-	GroupId *string `json:"group_id,omitempty" xml:"group_id"`
+	GroupId *string `json:"group_id,omitempty"`
 
 	// 模板组名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 模板组模板ID
-	TemplateIds *[]int32 `json:"template_ids,omitempty" xml:"template_ids"`
+	TemplateIds *[]int32 `json:"template_ids,omitempty"`
 
 	// 视频信息列表
-	Videos *[]VideoAndTemplate `json:"videos,omitempty" xml:"videos"`
+	Videos *[]VideoAndTemplate `json:"videos,omitempty"`
 
-	Audio *Audio `json:"audio,omitempty" xml:"audio"`
+	Audio *Audio `json:"audio,omitempty"`
 
-	VideoCommon *VideoCommon `json:"video_common,omitempty" xml:"video_common"`
+	VideoCommon *VideoCommon `json:"video_common,omitempty"`
 
-	Common *Common `json:"common,omitempty" xml:"common"`
+	Common *Common `json:"common,omitempty"`
 }
 
 func (o TemplateGroup) String() string {

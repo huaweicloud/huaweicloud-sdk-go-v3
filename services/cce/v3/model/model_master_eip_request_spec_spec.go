@@ -9,7 +9,7 @@ import (
 type MasterEipRequestSpecSpec struct {
 
 	// 弹性网卡ID
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 }
 
 func (o MasterEipRequestSpecSpec) String() string {

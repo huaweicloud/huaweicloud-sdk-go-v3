@@ -13,22 +13,22 @@ import (
 type ApiFuncCreate struct {
 
 	// 函数URN
-	FunctionUrn string `json:"function_urn" xml:"function_urn"`
+	FunctionUrn string `json:"function_urn"`
 
 	// 描述信息。 > 中文字符必须为UTF-8或者unicode编码。
-	Remark *string `json:"remark,omitempty" xml:"remark"`
+	Remark *string `json:"remark,omitempty"`
 
 	// 调用类型 - async： 异步 - sync：同步
-	InvocationType ApiFuncCreateInvocationType `json:"invocation_type" xml:"invocation_type"`
+	InvocationType ApiFuncCreateInvocationType `json:"invocation_type"`
 
 	// 版本。
-	Version *string `json:"version,omitempty" xml:"version"`
+	Version *string `json:"version,omitempty"`
 
 	// ROMA Connect APIC请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000  单位：毫秒。
-	Timeout int32 `json:"timeout" xml:"timeout"`
+	Timeout int32 `json:"timeout"`
 
 	// 后端自定义认证ID
-	AuthorizerId *string `json:"authorizer_id,omitempty" xml:"authorizer_id"`
+	AuthorizerId *string `json:"authorizer_id,omitempty"`
 }
 
 func (o ApiFuncCreate) String() string {

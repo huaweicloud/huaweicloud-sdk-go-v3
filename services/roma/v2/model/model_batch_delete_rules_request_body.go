@@ -9,7 +9,7 @@ import (
 type BatchDeleteRulesRequestBody struct {
 
 	// 规则ID列表，自动向下取整
-	Resources []int32 `json:"resources" xml:"resources"`
+	Resources []int32 `json:"resources"`
 }
 
 func (o BatchDeleteRulesRequestBody) String() string {

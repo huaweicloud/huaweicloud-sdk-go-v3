@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RunImageTaggingRequest struct {
-	Body *ImageTaggingReq `json:"body,omitempty" xml:"body"`
+	Body *ImageTaggingReq `json:"body,omitempty"`
 }
 
 func (o RunImageTaggingRequest) String() string {

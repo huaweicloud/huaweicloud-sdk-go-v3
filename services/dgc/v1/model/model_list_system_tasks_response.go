@@ -11,21 +11,21 @@ import (
 
 // Response Object
 type ListSystemTasksResponse struct {
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
-	StartTime *string `json:"startTime,omitempty" xml:"startTime"`
+	StartTime *string `json:"startTime,omitempty"`
 
-	EndTime *string `json:"endTime,omitempty" xml:"endTime"`
+	EndTime *string `json:"endTime,omitempty"`
 
-	LastUpdate *string `json:"lastUpdate,omitempty" xml:"lastUpdate"`
+	LastUpdate *string `json:"lastUpdate,omitempty"`
 
-	Status *ListSystemTasksResponseStatus `json:"status,omitempty" xml:"status"`
+	Status *ListSystemTasksResponseStatus `json:"status,omitempty"`
 
-	Message *string `json:"message,omitempty" xml:"message"`
+	Message *string `json:"message,omitempty"`
 
-	SubTasks       *[]SubTaskStatus `json:"subTasks,omitempty" xml:"subTasks"`
+	SubTasks       *[]SubTaskStatus `json:"subTasks,omitempty"`
 	HttpStatusCode int              `json:"-"`
 }
 

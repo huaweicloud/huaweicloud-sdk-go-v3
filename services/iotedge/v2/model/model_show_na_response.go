@@ -10,30 +10,30 @@ import (
 type ShowNaResponse struct {
 
 	// NA系统ID，提供给其他系统访问的唯一标识
-	NaId *string `json:"na_id,omitempty" xml:"na_id"`
+	NaId *string `json:"na_id,omitempty"`
 
 	// NA系统名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 北向NA系统描述
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 访问URL地址
-	Endpoint *string `json:"endpoint,omitempty" xml:"endpoint"`
+	Endpoint *string `json:"endpoint,omitempty"`
 
 	// 鉴权方式
-	AuthType *string `json:"auth_type,omitempty" xml:"auth_type"`
+	AuthType *string `json:"auth_type,omitempty"`
 
 	// 接入类型
-	AccessType *string `json:"access_type,omitempty" xml:"access_type"`
+	AccessType *string `json:"access_type,omitempty"`
 
-	AccessRomaInfo *AccessRomaBriefInfo `json:"access_roma_info,omitempty" xml:"access_roma_info"`
+	AccessRomaInfo *AccessRomaBriefInfo `json:"access_roma_info,omitempty"`
 
 	// 创建时间
-	CreateTime *string `json:"create_time,omitempty" xml:"create_time"`
+	CreateTime *string `json:"create_time,omitempty"`
 
 	// 更新时间
-	UpdateTime     *string `json:"update_time,omitempty" xml:"update_time"`
+	UpdateTime     *string `json:"update_time,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

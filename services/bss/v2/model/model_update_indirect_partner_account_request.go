@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type UpdateIndirectPartnerAccountRequest struct {
-	Body *AdjustToIndirectPartnerReq `json:"body,omitempty" xml:"body"`
+	Body *AdjustToIndirectPartnerReq `json:"body,omitempty"`
 }
 
 func (o UpdateIndirectPartnerAccountRequest) String() string {

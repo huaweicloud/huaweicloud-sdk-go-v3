@@ -9,10 +9,10 @@ import (
 type OperateAuthorizationV2Req struct {
 
 	// 拒绝理由
-	RejectReason *string `json:"reject_reason,omitempty" xml:"reject_reason"`
+	RejectReason *string `json:"reject_reason,omitempty"`
 
 	// 组id
-	GroupId *string `json:"group_id,omitempty" xml:"group_id"`
+	GroupId *string `json:"group_id,omitempty"`
 }
 
 func (o OperateAuthorizationV2Req) String() string {

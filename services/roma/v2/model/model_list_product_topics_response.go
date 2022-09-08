@@ -10,13 +10,13 @@ import (
 type ListProductTopicsResponse struct {
 
 	// 总数
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 
 	// 本次返回数量
-	Size *int32 `json:"size,omitempty" xml:"size"`
+	Size *int32 `json:"size,omitempty"`
 
 	// 产品主题列表
-	Items          *[]ProductTopic `json:"items,omitempty" xml:"items"`
+	Items          *[]ProductTopic `json:"items,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }
 

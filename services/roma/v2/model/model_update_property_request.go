@@ -10,15 +10,15 @@ import (
 type UpdatePropertyRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 服务ID
-	ServiceId string `json:"service_id" xml:"service_id"`
+	ServiceId string `json:"service_id"`
 
 	// 属性/请求属性/响应属性ID
-	PropertyId int32 `json:"property_id" xml:"property_id"`
+	PropertyId int32 `json:"property_id"`
 
-	Body *UpdatePropertyRequestBody `json:"body,omitempty" xml:"body"`
+	Body *UpdatePropertyRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdatePropertyRequest) String() string {

@@ -10,12 +10,12 @@ import (
 type DeleteAttendeesRequest struct {
 
 	// 会议ID
-	ConferenceID string `json:"conferenceID" xml:"conferenceID"`
+	ConferenceID string `json:"conferenceID"`
 
 	// 会控授权令牌，通过获取会控token接口获得。
-	XConferenceAuthorization string `json:"X-Conference-Authorization" xml:"X-Conference-Authorization"`
+	XConferenceAuthorization string `json:"X-Conference-Authorization"`
 
-	Body *RestBulkDelAttendReqBody `json:"body,omitempty" xml:"body"`
+	Body *RestBulkDelAttendReqBody `json:"body,omitempty"`
 }
 
 func (o DeleteAttendeesRequest) String() string {

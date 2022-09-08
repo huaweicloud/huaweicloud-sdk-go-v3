@@ -10,10 +10,10 @@ import (
 type ListOpRecordResponse struct {
 
 	// 操作记录总数
-	Count *int64 `json:"count,omitempty" xml:"count"`
+	Count *int64 `json:"count,omitempty"`
 
 	// 操作记录列表
-	OperationRecords *[]RecordDetailInfo `json:"operation_records,omitempty" xml:"operation_records"`
+	OperationRecords *[]RecordDetailInfo `json:"operation_records,omitempty"`
 	HttpStatusCode   int                 `json:"-"`
 }
 

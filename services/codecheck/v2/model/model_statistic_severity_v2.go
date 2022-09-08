@@ -9,16 +9,16 @@ import (
 type StatisticSeverityV2 struct {
 
 	// 致命问题数
-	Critical *int32 `json:"critical,omitempty" xml:"critical"`
+	Critical *int32 `json:"critical,omitempty"`
 
 	// 严重问题数
-	Major *int32 `json:"major,omitempty" xml:"major"`
+	Major *int32 `json:"major,omitempty"`
 
 	// 一般问题数
-	Minor *int32 `json:"minor,omitempty" xml:"minor"`
+	Minor *int32 `json:"minor,omitempty"`
 
 	// 提示问题数
-	Suggestion *int32 `json:"suggestion,omitempty" xml:"suggestion"`
+	Suggestion *int32 `json:"suggestion,omitempty"`
 }
 
 func (o StatisticSeverityV2) String() string {

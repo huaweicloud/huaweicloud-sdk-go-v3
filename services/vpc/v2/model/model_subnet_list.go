@@ -10,7 +10,7 @@ import (
 type SubnetList struct {
 
 	// 路由表关联的子网ID
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 }
 
 func (o SubnetList) String() string {

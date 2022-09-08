@@ -9,7 +9,7 @@ import (
 type ShowCeshierarchyRespInstanceIds struct {
 
 	// 实例ID。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 }
 
 func (o ShowCeshierarchyRespInstanceIds) String() string {

@@ -13,13 +13,13 @@ import (
 type Filter struct {
 
 	// 多条件关系。 - AND 表示所有过滤条件满足后生效。 - OR 表示有任意一个条件满足时生效。
-	Condition FilterCondition `json:"condition" xml:"condition"`
+	Condition FilterCondition `json:"condition"`
 
 	// 是否打开高级筛选开关。
-	IsSupportFilter bool `json:"is_support_filter" xml:"is_support_filter"`
+	IsSupportFilter bool `json:"is_support_filter"`
 
 	// 高级过滤条件规则，示例如下：\"key != value\"，格式为：字段 规则 值。 -字段取值范围：api_version,code,trace_rating,trace_type,resource_id,resource_name。 -规则：!= 或 =。 - 值：api_version正则约束：^(a-zA-Z0-9_-.){1,64}$；code：最小长度1，最大长度256；trace_rating枚举值：\"normal\", \"warning\", \"incident\"；trace_type枚举值：\"ConsoleAction\", \"ApiCall\", \"SystemAction\"；resource_id：最小长度1，最大长度350；resource_name：最小长度1，最大长度256
-	Rule []string `json:"rule" xml:"rule"`
+	Rule []string `json:"rule"`
 }
 
 func (o Filter) String() string {

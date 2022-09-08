@@ -10,7 +10,7 @@ import (
 type DeleteEdgeCloudRequest struct {
 
 	// 边缘业务ID。
-	EdgecloudId string `json:"edgecloud_id" xml:"edgecloud_id"`
+	EdgecloudId string `json:"edgecloud_id"`
 }
 
 func (o DeleteEdgeCloudRequest) String() string {

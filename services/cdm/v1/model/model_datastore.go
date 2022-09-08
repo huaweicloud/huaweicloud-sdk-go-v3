@@ -10,10 +10,10 @@ import (
 type Datastore struct {
 
 	// 类型，一般为cdm。
-	Type *string `json:"type,omitempty" xml:"type"`
+	Type *string `json:"type,omitempty"`
 
 	// 集群版本。
-	Version *string `json:"version,omitempty" xml:"version"`
+	Version *string `json:"version,omitempty"`
 }
 
 func (o Datastore) String() string {

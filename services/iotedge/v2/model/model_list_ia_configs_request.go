@@ -10,16 +10,16 @@ import (
 type ListIaConfigsRequest struct {
 
 	// 边缘节点ID
-	NodeId string `json:"node_id" xml:"node_id"`
+	NodeId string `json:"node_id"`
 
 	// 边侧第三方应用的模块ID
-	IaId string `json:"ia_id" xml:"ia_id"`
+	IaId string `json:"ia_id"`
 
 	// 查询的起始位置，取值范围为非负整数，默认为0
-	Offset *int32 `json:"offset,omitempty" xml:"offset"`
+	Offset *int32 `json:"offset,omitempty"`
 
 	// 每页记录数，取值范围为非负整数，默认值为10
-	Limit *int32 `json:"limit,omitempty" xml:"limit"`
+	Limit *int32 `json:"limit,omitempty"`
 }
 
 func (o ListIaConfigsRequest) String() string {

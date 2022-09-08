@@ -10,13 +10,13 @@ import (
 type ResourceInstance struct {
 
 	// 资源ID，Endpoint Service ID或Endpoint ID。
-	ResourceId *string `json:"resource_id,omitempty" xml:"resource_id"`
+	ResourceId *string `json:"resource_id,omitempty"`
 
 	// 标签列表。
-	Tags *[]TagList `json:"tags,omitempty" xml:"tags"`
+	Tags *[]TagList `json:"tags,omitempty"`
 
 	// 资源名称，资源没有名称时，返回ID。
-	ResourceName *string `json:"resource_name,omitempty" xml:"resource_name"`
+	ResourceName *string `json:"resource_name,omitempty"`
 }
 
 func (o ResourceInstance) String() string {

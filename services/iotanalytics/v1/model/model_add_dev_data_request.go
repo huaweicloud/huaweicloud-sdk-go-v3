@@ -10,9 +10,9 @@ import (
 type AddDevDataRequest struct {
 
 	// 数据源id
-	DatasourceId string `json:"datasource_id" xml:"datasource_id"`
+	DatasourceId string `json:"datasource_id"`
 
-	Body *interface{} `json:"body,omitempty" xml:"body"`
+	Body *interface{} `json:"body,omitempty"`
 }
 
 func (o AddDevDataRequest) String() string {

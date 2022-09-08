@@ -11,13 +11,13 @@ import (
 
 // Response Object
 type ShowConnectionResponse struct {
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
-	Type *ShowConnectionResponseType `json:"type,omitempty" xml:"type"`
+	Type *ShowConnectionResponseType `json:"type,omitempty"`
 
-	Config *interface{} `json:"config,omitempty" xml:"config"`
+	Config *interface{} `json:"config,omitempty"`
 
-	Description    *string `json:"description,omitempty" xml:"description"`
+	Description    *string `json:"description,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

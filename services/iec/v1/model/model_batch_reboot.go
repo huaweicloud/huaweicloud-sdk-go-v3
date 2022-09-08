@@ -13,10 +13,10 @@ import (
 type BatchReboot struct {
 
 	// 待重启的边缘实例列表。
-	Servers *[]BaseId `json:"servers,omitempty" xml:"servers"`
+	Servers *[]BaseId `json:"servers,omitempty"`
 
 	// 重启类型：   - SOFT：普通重启。  - HARD：强制重启。  > 重启必须指定重启类型。
-	Type *BatchRebootType `json:"type,omitempty" xml:"type"`
+	Type *BatchRebootType `json:"type,omitempty"`
 }
 
 func (o BatchReboot) String() string {

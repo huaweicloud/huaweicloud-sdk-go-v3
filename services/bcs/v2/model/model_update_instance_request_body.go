@@ -10,13 +10,13 @@ import (
 type UpdateInstanceRequestBody struct {
 
 	// 添加节点的组织列表
-	NodeOrgs []NodeOrgs `json:"node_orgs" xml:"node_orgs"`
+	NodeOrgs []NodeOrgs `json:"node_orgs"`
 
 	// ief添加组织时，ief节点信息。绑定模式的IEF服务，新增组织时，该字段必填
-	Publicips *[]IefNodeinfo `json:"publicips,omitempty" xml:"publicips"`
+	Publicips *[]IefNodeinfo `json:"publicips,omitempty"`
 
 	// 是否是删除组织
-	IsDeleteOrg *bool `json:"is_delete_org,omitempty" xml:"is_delete_org"`
+	IsDeleteOrg *bool `json:"is_delete_org,omitempty"`
 }
 
 func (o UpdateInstanceRequestBody) String() string {

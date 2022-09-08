@@ -13,9 +13,9 @@ import (
 type CreatePostPaidInstanceByEngineRequest struct {
 
 	// 消息引擎。
-	Engine CreatePostPaidInstanceByEngineRequestEngine `json:"engine" xml:"engine"`
+	Engine CreatePostPaidInstanceByEngineRequestEngine `json:"engine"`
 
-	Body *CreateInstanceReq `json:"body,omitempty" xml:"body"`
+	Body *CreateInstanceReq `json:"body,omitempty"`
 }
 
 func (o CreatePostPaidInstanceByEngineRequest) String() string {

@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowProtectedInstanceResponse struct {
-	ProtectedInstance *ShowProtectedInstanceParams `json:"protected_instance,omitempty" xml:"protected_instance"`
+	ProtectedInstance *ShowProtectedInstanceParams `json:"protected_instance,omitempty"`
 	HttpStatusCode    int                          `json:"-"`
 }
 

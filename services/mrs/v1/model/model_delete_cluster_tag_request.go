@@ -10,10 +10,10 @@ import (
 type DeleteClusterTagRequest struct {
 
 	// 集群ID。
-	ClusterId string `json:"cluster_id" xml:"cluster_id"`
+	ClusterId string `json:"cluster_id"`
 
 	// 键。标签的key值
-	Key string `json:"key" xml:"key"`
+	Key string `json:"key"`
 }
 
 func (o DeleteClusterTagRequest) String() string {

@@ -10,7 +10,7 @@ import (
 type ListWorkflowExecutionsResponse struct {
 
 	// 流程执行信息列表
-	Executions     *[]FlowExecutionBrief `json:"executions,omitempty" xml:"executions"`
+	Executions     *[]FlowExecutionBrief `json:"executions,omitempty"`
 	HttpStatusCode int                   `json:"-"`
 }
 

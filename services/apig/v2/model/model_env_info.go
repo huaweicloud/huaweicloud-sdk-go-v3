@@ -10,16 +10,16 @@ import (
 type EnvInfo struct {
 
 	// 创建时间
-	CreateTime *sdktime.SdkTime `json:"create_time,omitempty" xml:"create_time"`
+	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
 
 	// 环境名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 描述信息
-	Remark *string `json:"remark,omitempty" xml:"remark"`
+	Remark *string `json:"remark,omitempty"`
 
 	// 环境id
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 }
 
 func (o EnvInfo) String() string {

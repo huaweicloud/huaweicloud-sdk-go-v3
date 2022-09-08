@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowAccessoryLimitsResponse struct {
-	AccessoryLimit *AccessoryLimitVo `json:"accessory_limit,omitempty" xml:"accessory_limit"`
+	AccessoryLimit *AccessoryLimitVo `json:"accessory_limit,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }
 

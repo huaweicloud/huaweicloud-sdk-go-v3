@@ -10,7 +10,7 @@ import (
 type DeletePermanentAccessKeyRequest struct {
 
 	// 待删除的指定AK。
-	AccessKey string `json:"access_key" xml:"access_key"`
+	AccessKey string `json:"access_key"`
 }
 
 func (o DeletePermanentAccessKeyRequest) String() string {

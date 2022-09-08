@@ -10,10 +10,10 @@ import (
 type ListStorageTypeResponse struct {
 
 	// 实例磁盘类型信息。
-	StorageType *[]Storage `json:"storage_type,omitempty" xml:"storage_type"`
+	StorageType *[]Storage `json:"storage_type,omitempty"`
 
 	// 实例专属存储信息。
-	DssPoolInfo    *[]DssPoolInfo `json:"dss_pool_info,omitempty" xml:"dss_pool_info"`
+	DssPoolInfo    *[]DssPoolInfo `json:"dss_pool_info,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }
 

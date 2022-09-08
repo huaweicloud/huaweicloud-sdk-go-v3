@@ -13,44 +13,44 @@ import (
 type PostTask struct {
 
 	// 任务名称
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 任务类型
-	Type PostTaskType `json:"type" xml:"type"`
+	Type PostTaskType `json:"type"`
 
 	// 迁移后是否启动目的端虚拟机
-	StartTargetServer *bool `json:"start_target_server,omitempty" xml:"start_target_server"`
+	StartTargetServer *bool `json:"start_target_server,omitempty"`
 
 	// 操作系统类型
-	OsType string `json:"os_type" xml:"os_type"`
+	OsType string `json:"os_type"`
 
-	SourceServer *SourceServerByTask `json:"source_server" xml:"source_server"`
+	SourceServer *SourceServerByTask `json:"source_server"`
 
-	TargetServer *TargetServerByTask `json:"target_server" xml:"target_server"`
+	TargetServer *TargetServerByTask `json:"target_server"`
 
 	// 迁移ip，如果是自动创建虚拟机，不需要此参数
-	MigrationIp *string `json:"migration_ip,omitempty" xml:"migration_ip"`
+	MigrationIp *string `json:"migration_ip,omitempty"`
 
 	// region的名称
-	RegionName string `json:"region_name" xml:"region_name"`
+	RegionName string `json:"region_name"`
 
 	// region id
-	RegionId string `json:"region_id" xml:"region_id"`
+	RegionId string `json:"region_id"`
 
 	// 项目名称
-	ProjectName string `json:"project_name" xml:"project_name"`
+	ProjectName string `json:"project_name"`
 
 	// 项目id
-	ProjectId string `json:"project_id" xml:"project_id"`
+	ProjectId string `json:"project_id"`
 
 	// 自动创建虚拟机使用模板
-	VmTemplateId *string `json:"vm_template_id,omitempty" xml:"vm_template_id"`
+	VmTemplateId *string `json:"vm_template_id,omitempty"`
 
 	// 是否使用公网ip
-	UsePublicIp *bool `json:"use_public_ip,omitempty" xml:"use_public_ip"`
+	UsePublicIp *bool `json:"use_public_ip,omitempty"`
 
 	// 复制或者同步后是否会继续持续同步，不添加则默认是false
-	Syncing *bool `json:"syncing,omitempty" xml:"syncing"`
+	Syncing *bool `json:"syncing,omitempty"`
 }
 
 func (o PostTask) String() string {

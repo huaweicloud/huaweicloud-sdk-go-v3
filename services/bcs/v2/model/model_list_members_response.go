@@ -10,7 +10,7 @@ import (
 type ListMembersResponse struct {
 
 	// 联盟成员列表
-	Members        *[]Member `json:"members,omitempty" xml:"members"`
+	Members        *[]Member `json:"members,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }
 

@@ -8,7 +8,7 @@ import (
 
 // 更新防火墙规则请求体
 type UpdateFirewallRuleRequestBody struct {
-	Firewall *UpdateFirewallRuleOption `json:"firewall,omitempty" xml:"firewall"`
+	Firewall *UpdateFirewallRuleOption `json:"firewall,omitempty"`
 }
 
 func (o UpdateFirewallRuleRequestBody) String() string {

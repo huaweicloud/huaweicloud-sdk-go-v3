@@ -8,12 +8,12 @@ import (
 
 // Response Object
 type ShowTrackerConfigResponse struct {
-	Channel *ChannelConfigBody `json:"channel,omitempty" xml:"channel"`
+	Channel *ChannelConfigBody `json:"channel,omitempty"`
 
-	Selector *SelectorConfigBody `json:"selector,omitempty" xml:"selector"`
+	Selector *SelectorConfigBody `json:"selector,omitempty"`
 
 	// IAM委托名称
-	AgencyName     *string `json:"agency_name,omitempty" xml:"agency_name"`
+	AgencyName     *string `json:"agency_name,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

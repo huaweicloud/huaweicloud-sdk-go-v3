@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowSecretResponse struct {
-	Secret         *SecretDetailResp `json:"secret,omitempty" xml:"secret"`
+	Secret         *SecretDetailResp `json:"secret,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }
 

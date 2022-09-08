@@ -10,7 +10,7 @@ import (
 type ConfirmAssetUploadResponse struct {
 
 	// 媒资ID
-	AssetId        *string `json:"asset_id,omitempty" xml:"asset_id"`
+	AssetId        *string `json:"asset_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

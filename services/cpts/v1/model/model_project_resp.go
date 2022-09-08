@@ -9,10 +9,10 @@ import (
 type ProjectResp struct {
 
 	// 状态码
-	Code *string `json:"code,omitempty" xml:"code"`
+	Code *string `json:"code,omitempty"`
 
 	// 描述
-	Message *string `json:"message,omitempty" xml:"message"`
+	Message *string `json:"message,omitempty"`
 }
 
 func (o ProjectResp) String() string {

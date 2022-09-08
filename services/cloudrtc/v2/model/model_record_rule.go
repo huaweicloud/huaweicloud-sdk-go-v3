@@ -13,25 +13,25 @@ import (
 type RecordRule struct {
 
 	// 规则id，由服务端返回。创建或修改规则的时候不携带
-	RuleId *string `json:"rule_id,omitempty" xml:"rule_id"`
+	RuleId *string `json:"rule_id,omitempty"`
 
 	// 应用id
-	AppId *string `json:"app_id,omitempty" xml:"app_id"`
+	AppId *string `json:"app_id,omitempty"`
 
-	ObsAddr *RecordObsFileAddr `json:"obs_addr,omitempty" xml:"obs_addr"`
+	ObsAddr *RecordObsFileAddr `json:"obs_addr,omitempty"`
 
 	// 录制格式：hls格式或者mp4格式
-	RecordFormats *[]RecordRuleRecordFormats `json:"record_formats,omitempty" xml:"record_formats"`
+	RecordFormats *[]RecordRuleRecordFormats `json:"record_formats,omitempty"`
 
-	HlsConfig *HlsRecordConfig `json:"hls_config,omitempty" xml:"hls_config"`
+	HlsConfig *HlsRecordConfig `json:"hls_config,omitempty"`
 
-	Mp4Config *Mp4RecordConfig `json:"mp4_config,omitempty" xml:"mp4_config"`
+	Mp4Config *Mp4RecordConfig `json:"mp4_config,omitempty"`
 
 	// 创建时间，形如“2006-01-02T15:04:05.075Z”，时区为：UTC
-	CreateTime *string `json:"create_time,omitempty" xml:"create_time"`
+	CreateTime *string `json:"create_time,omitempty"`
 
 	// 更新时间，形如“2006-01-02T15:04:05.075Z”，时区为：UTC
-	UpdateTime *string `json:"update_time,omitempty" xml:"update_time"`
+	UpdateTime *string `json:"update_time,omitempty"`
 }
 
 func (o RecordRule) String() string {

@@ -10,9 +10,9 @@ import (
 type RestoreBackupRequest struct {
 
 	// 备份id
-	BackupId string `json:"backup_id" xml:"backup_id"`
+	BackupId string `json:"backup_id"`
 
-	Body *BackupRestoreReq `json:"body,omitempty" xml:"body"`
+	Body *BackupRestoreReq `json:"body,omitempty"`
 }
 
 func (o RestoreBackupRequest) String() string {

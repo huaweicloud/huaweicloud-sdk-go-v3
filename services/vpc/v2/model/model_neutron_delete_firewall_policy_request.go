@@ -10,7 +10,7 @@ import (
 type NeutronDeleteFirewallPolicyRequest struct {
 
 	// 网络ACL防火墙策略ID
-	FirewallPolicyId string `json:"firewall_policy_id" xml:"firewall_policy_id"`
+	FirewallPolicyId string `json:"firewall_policy_id"`
 }
 
 func (o NeutronDeleteFirewallPolicyRequest) String() string {

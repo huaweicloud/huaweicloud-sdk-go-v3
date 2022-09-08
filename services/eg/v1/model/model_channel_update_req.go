@@ -9,7 +9,7 @@ import (
 type ChannelUpdateReq struct {
 
 	// 通道描述
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 }
 
 func (o ChannelUpdateReq) String() string {

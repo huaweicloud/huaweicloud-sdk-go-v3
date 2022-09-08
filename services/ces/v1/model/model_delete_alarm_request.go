@@ -10,7 +10,7 @@ import (
 type DeleteAlarmRequest struct {
 
 	// 告警规则的ID。
-	AlarmId string `json:"alarm_id" xml:"alarm_id"`
+	AlarmId string `json:"alarm_id"`
 }
 
 func (o DeleteAlarmRequest) String() string {

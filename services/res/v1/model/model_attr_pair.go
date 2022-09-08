@@ -10,10 +10,10 @@ import (
 type AttrPair struct {
 
 	// 被推荐对象的属性名。
-	PartyA *string `json:"party_a,omitempty" xml:"party_a"`
+	PartyA *string `json:"party_a,omitempty"`
 
 	// 被推荐对象的属性名。
-	PartyB *string `json:"party_b,omitempty" xml:"party_b"`
+	PartyB *string `json:"party_b,omitempty"`
 }
 
 func (o AttrPair) String() string {

@@ -13,10 +13,10 @@ import (
 type OpenGaussDatastore struct {
 
 	// 数据库引擎，不区分大小写，取值如下：  GaussDB(for openGauss)。
-	Type OpenGaussDatastoreType `json:"type" xml:"type"`
+	Type OpenGaussDatastoreType `json:"type"`
 
 	// 数据库版本。不填时，默认为当前最新版本。  GaussDB(for openGauss)支持的版本参考[查询数据库引擎的版本](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=GaussDBforopenGauss&api=ListDatastores)。
-	Version *string `json:"version,omitempty" xml:"version"`
+	Version *string `json:"version,omitempty"`
 }
 
 func (o OpenGaussDatastore) String() string {

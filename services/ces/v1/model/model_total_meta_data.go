@@ -10,7 +10,7 @@ import (
 type TotalMetaData struct {
 
 	// 总条数。
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 }
 
 func (o TotalMetaData) String() string {

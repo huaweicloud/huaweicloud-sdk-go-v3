@@ -10,9 +10,9 @@ import (
 type ShowProjectWorkHoursRequest struct {
 
 	// devcloud项目的32位id
-	ProjectId string `json:"project_id" xml:"project_id"`
+	ProjectId string `json:"project_id"`
 
-	Body *ShowProjectWorkHoursRequestBody `json:"body,omitempty" xml:"body"`
+	Body *ShowProjectWorkHoursRequestBody `json:"body,omitempty"`
 }
 
 func (o ShowProjectWorkHoursRequest) String() string {

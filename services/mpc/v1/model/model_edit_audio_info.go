@@ -9,16 +9,16 @@ import (
 type EditAudioInfo struct {
 
 	// 音频编码格式,取值有：[AAC, HEAAC, MP3]。
-	Codec *string `json:"codec,omitempty" xml:"codec"`
+	Codec *string `json:"codec,omitempty"`
 
 	// 视频码率，单位: bit/s
-	Bitrate *int32 `json:"bitrate,omitempty" xml:"bitrate"`
+	Bitrate *int32 `json:"bitrate,omitempty"`
 
 	// 采样率, 单位: HZ
-	Sample *int32 `json:"sample,omitempty" xml:"sample"`
+	Sample *int32 `json:"sample,omitempty"`
 
 	// 声道数。
-	Channels *string `json:"channels,omitempty" xml:"channels"`
+	Channels *string `json:"channels,omitempty"`
 }
 
 func (o EditAudioInfo) String() string {

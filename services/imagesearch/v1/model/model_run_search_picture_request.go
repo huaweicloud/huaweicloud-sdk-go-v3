@@ -10,9 +10,9 @@ import (
 type RunSearchPictureRequest struct {
 
 	// 实例名称。
-	InstanceName string `json:"instance_name" xml:"instance_name"`
+	InstanceName string `json:"instance_name"`
 
-	Body *SearchPictureReq `json:"body,omitempty" xml:"body"`
+	Body *SearchPictureReq `json:"body,omitempty"`
 }
 
 func (o RunSearchPictureRequest) String() string {

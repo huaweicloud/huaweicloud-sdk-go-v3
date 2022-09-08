@@ -10,10 +10,10 @@ import (
 type ClusterDetailInstanceVolume struct {
 
 	// 节点的磁盘类型，只支持本地磁盘
-	Type *string `json:"type,omitempty" xml:"type"`
+	Type *string `json:"type,omitempty"`
 
 	// 节点磁盘大小，单位G。
-	Size *int64 `json:"size,omitempty" xml:"size"`
+	Size *int64 `json:"size,omitempty"`
 }
 
 func (o ClusterDetailInstanceVolume) String() string {

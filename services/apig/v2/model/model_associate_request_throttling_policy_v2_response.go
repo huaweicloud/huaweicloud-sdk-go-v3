@@ -10,7 +10,7 @@ import (
 type AssociateRequestThrottlingPolicyV2Response struct {
 
 	// API与流控策略的绑定关系列表
-	ThrottleApplys *[]ThrottleApiBinding `json:"throttle_applys,omitempty" xml:"throttle_applys"`
+	ThrottleApplys *[]ThrottleApiBinding `json:"throttle_applys,omitempty"`
 	HttpStatusCode int                   `json:"-"`
 }
 

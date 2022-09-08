@@ -10,10 +10,10 @@ import (
 type AttackTypeItem struct {
 
 	// 攻击事件类型
-	Key *string `json:"key,omitempty" xml:"key"`
+	Key *string `json:"key,omitempty"`
 
 	// 数量
-	Num *int32 `json:"num,omitempty" xml:"num"`
+	Num *int32 `json:"num,omitempty"`
 }
 
 func (o AttackTypeItem) String() string {

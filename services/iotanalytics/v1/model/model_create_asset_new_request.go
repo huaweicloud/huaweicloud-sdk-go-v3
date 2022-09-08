@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateAssetNewRequest struct {
-	Body *AssetAddRequest `json:"body,omitempty" xml:"body"`
+	Body *AssetAddRequest `json:"body,omitempty"`
 }
 
 func (o CreateAssetNewRequest) String() string {

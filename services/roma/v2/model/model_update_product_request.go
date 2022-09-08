@@ -10,12 +10,12 @@ import (
 type UpdateProductRequest struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 产品ID
-	ProductId int32 `json:"product_id" xml:"product_id"`
+	ProductId int32 `json:"product_id"`
 
-	Body *UpdateProductRequestBody `json:"body,omitempty" xml:"body"`
+	Body *UpdateProductRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateProductRequest) String() string {

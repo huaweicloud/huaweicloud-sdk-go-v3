@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type InstallMultiTasksResponse struct {
-	Body           *[]MultiTaskInitElement `json:"body,omitempty" xml:"body"`
+	Body           *[]MultiTaskInitElement `json:"body,omitempty"`
 	HttpStatusCode int                     `json:"-"`
 }
 

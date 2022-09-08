@@ -8,7 +8,7 @@ import (
 
 // This is a auto create Body Object
 type UpdateVolumeRequestBody struct {
-	Volume *UpdateVolumeOption `json:"volume" xml:"volume"`
+	Volume *UpdateVolumeOption `json:"volume"`
 }
 
 func (o UpdateVolumeRequestBody) String() string {

@@ -10,7 +10,7 @@ import (
 type RespAddresses struct {
 
 	// 云服务器的vpc信息。
-	VpcId []RespAddr `json:"vpc_id" xml:"vpc_id"`
+	VpcId []RespAddr `json:"vpc_id"`
 }
 
 func (o RespAddresses) String() string {

@@ -9,10 +9,10 @@ import (
 type MysqlProxyFlavorGroups struct {
 
 	// 规格组类型，如x86、arm。
-	GroupType *string `json:"group_type,omitempty" xml:"group_type"`
+	GroupType *string `json:"group_type,omitempty"`
 
 	// 规格信息。
-	ProxyFlavors *[]MysqlProxyComputeFlavor `json:"proxy_flavors,omitempty" xml:"proxy_flavors"`
+	ProxyFlavors *[]MysqlProxyComputeFlavor `json:"proxy_flavors,omitempty"`
 }
 
 func (o MysqlProxyFlavorGroups) String() string {

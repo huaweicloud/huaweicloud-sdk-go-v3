@@ -10,10 +10,10 @@ import (
 type Link struct {
 
 	// 链接地址。
-	Href *string `json:"href,omitempty" xml:"href"`
+	Href *string `json:"href,omitempty"`
 
 	// 取值为“self”，表示href为本地链接。
-	Rel *string `json:"rel,omitempty" xml:"rel"`
+	Rel *string `json:"rel,omitempty"`
 }
 
 func (o Link) String() string {

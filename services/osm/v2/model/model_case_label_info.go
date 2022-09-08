@@ -9,13 +9,13 @@ import (
 type CaseLabelInfo struct {
 
 	// 标签标识
-	LabelId *int32 `json:"label_id,omitempty" xml:"label_id"`
+	LabelId *int32 `json:"label_id,omitempty"`
 
 	// 标签名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 标签颜色
-	Color *string `json:"color,omitempty" xml:"color"`
+	Color *string `json:"color,omitempty"`
 }
 
 func (o CaseLabelInfo) String() string {

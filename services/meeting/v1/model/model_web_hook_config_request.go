@@ -10,19 +10,19 @@ import (
 type WebHookConfigRequest struct {
 
 	// 企业ID，与spId二者必填一个
-	CorpId *string `json:"corpId,omitempty" xml:"corpId"`
+	CorpId *string `json:"corpId,omitempty"`
 
 	// sp管理员ID，与corpId二者必填一个
-	SpId *string `json:"spId,omitempty" xml:"spId"`
+	SpId *string `json:"spId,omitempty"`
 
 	// 订阅者ID
-	SubscriberId string `json:"subscriberId" xml:"subscriberId"`
+	SubscriberId string `json:"subscriberId"`
 
 	// 订阅者秘钥
-	SubscriberKey string `json:"subscriberKey" xml:"subscriberKey"`
+	SubscriberKey string `json:"subscriberKey"`
 
 	// 订阅url，建议使用HTTPS
-	Url string `json:"url" xml:"url"`
+	Url string `json:"url"`
 }
 
 func (o WebHookConfigRequest) String() string {

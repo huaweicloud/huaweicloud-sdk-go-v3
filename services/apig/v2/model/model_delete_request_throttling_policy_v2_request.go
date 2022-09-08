@@ -10,10 +10,10 @@ import (
 type DeleteRequestThrottlingPolicyV2Request struct {
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 流控策略的编号
-	ThrottleId string `json:"throttle_id" xml:"throttle_id"`
+	ThrottleId string `json:"throttle_id"`
 }
 
 func (o DeleteRequestThrottlingPolicyV2Request) String() string {

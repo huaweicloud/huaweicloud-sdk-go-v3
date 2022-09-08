@@ -10,25 +10,25 @@ import (
 type ConfCtlRecordInfo struct {
 
 	// 操作时间（UTC时间，单位毫秒）。
-	OperateTime *int64 `json:"operateTime,omitempty" xml:"operateTime"`
+	OperateTime *int64 `json:"operateTime,omitempty"`
 
 	// 操作来源。
-	OperateSource *string `json:"operateSource,omitempty" xml:"operateSource"`
+	OperateSource *string `json:"operateSource,omitempty"`
 
 	// 操作者。
-	Operator *string `json:"operator,omitempty" xml:"operator"`
+	Operator *string `json:"operator,omitempty"`
 
 	// 操作描述。
-	OperateCode *string `json:"operateCode,omitempty" xml:"operateCode"`
+	OperateCode *string `json:"operateCode,omitempty"`
 
 	// 被操作对象。
-	OperationObject *string `json:"operationObject,omitempty" xml:"operationObject"`
+	OperationObject *string `json:"operationObject,omitempty"`
 
 	// 操作结果。
-	OperateResult *string `json:"operateResult,omitempty" xml:"operateResult"`
+	OperateResult *string `json:"operateResult,omitempty"`
 
 	// 详情。
-	Detail *string `json:"detail,omitempty" xml:"detail"`
+	Detail *string `json:"detail,omitempty"`
 }
 
 func (o ConfCtlRecordInfo) String() string {

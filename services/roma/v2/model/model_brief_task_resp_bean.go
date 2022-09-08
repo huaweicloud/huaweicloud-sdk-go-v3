@@ -13,49 +13,49 @@ import (
 type BriefTaskRespBean struct {
 
 	// 任务ID
-	TaskId *string `json:"task_id,omitempty" xml:"task_id"`
+	TaskId *string `json:"task_id,omitempty"`
 
 	// 任务名称
-	TaskName *string `json:"task_name,omitempty" xml:"task_name"`
+	TaskName *string `json:"task_name,omitempty"`
 
 	// 任务类型 - REALTIME (实时) - TIMING (定时)
-	TaskType *BriefTaskRespBeanTaskType `json:"task_type,omitempty" xml:"task_type"`
+	TaskType *BriefTaskRespBeanTaskType `json:"task_type,omitempty"`
 
 	// 任务状态 - 0 (停止/未启动) - 1 (运行中)
-	Status *BriefTaskRespBeanStatus `json:"status,omitempty" xml:"status"`
+	Status *BriefTaskRespBeanStatus `json:"status,omitempty"`
 
 	// 创建时间
-	CreatedDate *string `json:"created_date,omitempty" xml:"created_date"`
+	CreatedDate *string `json:"created_date,omitempty"`
 
 	// 任务的版本
-	Version *string `json:"version,omitempty" xml:"version"`
+	Version *string `json:"version,omitempty"`
 
 	// 上次修改时间
-	LastModifiedTime *int64 `json:"last_modified_time,omitempty" xml:"last_modified_time"`
+	LastModifiedTime *int64 `json:"last_modified_time,omitempty"`
 
 	// 任务执行状态  - UNSTARTED (未启动)  - WAITING (等待执行)  - RUNNING (执行中)  - SUCCESS (执行成功)  - CANCELLED (任务取消)  - ERROR (执行异常)
-	ExecuteStatus *string `json:"execute_status,omitempty" xml:"execute_status"`
+	ExecuteStatus *string `json:"execute_status,omitempty"`
 
 	// 源端数据源所属应用ID
-	SourceAppId *string `json:"source_app_id,omitempty" xml:"source_app_id"`
+	SourceAppId *string `json:"source_app_id,omitempty"`
 
 	// 目标端数据源所属应用ID
-	TargetAppId *string `json:"target_app_id,omitempty" xml:"target_app_id"`
+	TargetAppId *string `json:"target_app_id,omitempty"`
 
 	// 源端实例ID
-	SourceInstanceId *string `json:"source_instance_id,omitempty" xml:"source_instance_id"`
+	SourceInstanceId *string `json:"source_instance_id,omitempty"`
 
 	// 目标端实例ID
-	TargetInstanceId *string `json:"target_instance_id,omitempty" xml:"target_instance_id"`
+	TargetInstanceId *string `json:"target_instance_id,omitempty"`
 
 	// 组合任务类型, 可为空
-	ExtType *string `json:"ext_type,omitempty" xml:"ext_type"`
+	ExtType *string `json:"ext_type,omitempty"`
 
 	// 企业项目id
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty" xml:"enterprise_project_id"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 任务标签
-	TaskTag *string `json:"task_tag,omitempty" xml:"task_tag"`
+	TaskTag *string `json:"task_tag,omitempty"`
 }
 
 func (o BriefTaskRespBean) String() string {

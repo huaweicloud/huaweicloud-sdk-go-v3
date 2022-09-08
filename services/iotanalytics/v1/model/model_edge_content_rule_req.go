@@ -10,10 +10,10 @@ import (
 type EdgeContentRuleReq struct {
 
 	// Edge中的资源空间Id
-	AppId string `json:"app_id" xml:"app_id"`
+	AppId string `json:"app_id"`
 
 	// Edge中某资源空间Id下的产品列表
-	Products []string `json:"products" xml:"products"`
+	Products []string `json:"products"`
 }
 
 func (o EdgeContentRuleReq) String() string {

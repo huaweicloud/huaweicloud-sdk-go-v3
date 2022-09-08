@@ -10,9 +10,9 @@ import (
 type AssociateServerVirtualIpRequest struct {
 
 	// 云服务器网卡ID。
-	NicId string `json:"nic_id" xml:"nic_id"`
+	NicId string `json:"nic_id"`
 
-	Body *AssociateServerVirtualIpRequestBody `json:"body,omitempty" xml:"body"`
+	Body *AssociateServerVirtualIpRequestBody `json:"body,omitempty"`
 }
 
 func (o AssociateServerVirtualIpRequest) String() string {

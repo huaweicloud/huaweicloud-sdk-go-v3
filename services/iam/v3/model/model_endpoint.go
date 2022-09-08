@@ -10,27 +10,27 @@ import (
 type Endpoint struct {
 
 	// 终端节点所属服务的ID。
-	ServiceId string `json:"service_id" xml:"service_id"`
+	ServiceId string `json:"service_id"`
 
 	// 终端节点所属区域的ID。
-	RegionId string `json:"region_id" xml:"region_id"`
+	RegionId string `json:"region_id"`
 
-	Links *Links `json:"links" xml:"links"`
+	Links *Links `json:"links"`
 
 	// 终端节点ID。
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
 	// 终端节点平面。
-	Interface string `json:"interface" xml:"interface"`
+	Interface string `json:"interface"`
 
 	// 终端节点所属区域。
-	Region string `json:"region" xml:"region"`
+	Region string `json:"region"`
 
 	// 终端节点的地址。
-	Url string `json:"url" xml:"url"`
+	Url string `json:"url"`
 
 	// 终端节点是否可用。
-	Enabled bool `json:"enabled" xml:"enabled"`
+	Enabled bool `json:"enabled"`
 }
 
 func (o Endpoint) String() string {

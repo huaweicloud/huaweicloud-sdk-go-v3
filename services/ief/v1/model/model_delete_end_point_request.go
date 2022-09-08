@@ -10,10 +10,10 @@ import (
 type DeleteEndPointRequest struct {
 
 	// 铂金版实例ID，专业版实例为空值
-	IefInstanceId *string `json:"ief-instance-id,omitempty" xml:"ief-instance-id"`
+	IefInstanceId *string `json:"ief-instance-id,omitempty"`
 
 	// 端点ID
-	EndpointId string `json:"endpoint_id" xml:"endpoint_id"`
+	EndpointId string `json:"endpoint_id"`
 }
 
 func (o DeleteEndPointRequest) String() string {

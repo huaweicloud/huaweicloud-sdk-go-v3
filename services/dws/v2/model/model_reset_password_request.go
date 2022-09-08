@@ -10,9 +10,9 @@ import (
 type ResetPasswordRequest struct {
 
 	// 指定待重置密码集群的ID
-	ClusterId string `json:"cluster_id" xml:"cluster_id"`
+	ClusterId string `json:"cluster_id"`
 
-	Body *ResetPasswordRequestBody `json:"body,omitempty" xml:"body"`
+	Body *ResetPasswordRequestBody `json:"body,omitempty"`
 }
 
 func (o ResetPasswordRequest) String() string {

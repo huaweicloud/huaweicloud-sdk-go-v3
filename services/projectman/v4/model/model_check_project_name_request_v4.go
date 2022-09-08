@@ -9,7 +9,7 @@ import (
 type CheckProjectNameRequestV4 struct {
 
 	// 项目名
-	ProjectName string `json:"project_name" xml:"project_name"`
+	ProjectName string `json:"project_name"`
 }
 
 func (o CheckProjectNameRequestV4) String() string {

@@ -8,10 +8,10 @@ import (
 
 //
 type ResExecConfig struct {
-	SparkCalcSpec *SparkCalcSpec `json:"spark_calc_spec,omitempty" xml:"spark_calc_spec"`
+	SparkCalcSpec *SparkCalcSpec `json:"spark_calc_spec,omitempty"`
 
 	// spark可选配置项
-	SparkOptionConfs *[]SparkOptionConf `json:"spark_option_confs,omitempty" xml:"spark_option_confs"`
+	SparkOptionConfs *[]SparkOptionConf `json:"spark_option_confs,omitempty"`
 }
 
 func (o ResExecConfig) String() string {

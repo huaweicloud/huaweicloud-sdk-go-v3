@@ -9,16 +9,16 @@ import (
 type WorkitemStatusRecords struct {
 
 	// 工作项的记录id，一个工作项对应一条记录
-	WorkItemRecordId *string `json:"work_item_record_id,omitempty" xml:"work_item_record_id"`
+	WorkItemRecordId *string `json:"work_item_record_id,omitempty"`
 
 	// 工作项id
-	WorkItemId *string `json:"work_item_id,omitempty" xml:"work_item_id"`
+	WorkItemId *string `json:"work_item_id,omitempty"`
 
 	// devcloud项目的32位id
-	ProjectId *string `json:"project_id,omitempty" xml:"project_id"`
+	ProjectId *string `json:"project_id,omitempty"`
 
 	// 操作历史
-	WorkItemStatuses *[]WorkitemStatus `json:"work_item_statuses,omitempty" xml:"work_item_statuses"`
+	WorkItemStatuses *[]WorkitemStatus `json:"work_item_statuses,omitempty"`
 }
 
 func (o WorkitemStatusRecords) String() string {

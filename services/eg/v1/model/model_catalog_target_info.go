@@ -12,28 +12,28 @@ import (
 type CatalogTargetInfo struct {
 
 	// 事件目标分类ID
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 事件目标分类名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 事件目标分类名称展示说明
-	Label *string `json:"label,omitempty" xml:"label"`
+	Label *string `json:"label,omitempty"`
 
 	// 事件目标分类描述
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 提供方类型，OFFICIAL：官方云服务事件目标；CUSTOM：第三方事件目标
-	ProviderType *CatalogTargetInfoProviderType `json:"provider_type,omitempty" xml:"provider_type"`
+	ProviderType *CatalogTargetInfoProviderType `json:"provider_type,omitempty"`
 
 	// 事件目标参数
-	Parameters *[]CatalogTargetParameters `json:"parameters,omitempty" xml:"parameters"`
+	Parameters *[]CatalogTargetParameters `json:"parameters,omitempty"`
 
 	// 创建UTC时间
-	CreatedTime *string `json:"created_time,omitempty" xml:"created_time"`
+	CreatedTime *string `json:"created_time,omitempty"`
 
 	// 更新UTC时间
-	UpdatedTime *string `json:"updated_time,omitempty" xml:"updated_time"`
+	UpdatedTime *string `json:"updated_time,omitempty"`
 }
 
 func (o CatalogTargetInfo) String() string {

@@ -10,19 +10,19 @@ import (
 type ListLatelyGroupStatisticsV2Response struct {
 
 	// 响应码
-	Code *string `json:"code,omitempty" xml:"code"`
+	Code *string `json:"code,omitempty"`
 
 	// 返回消息
-	Msg *string `json:"msg,omitempty" xml:"msg"`
+	Msg *string `json:"msg,omitempty"`
 
 	// 开始时间的UTC的时间戳
-	StartTime *int64 `json:"start_time,omitempty" xml:"start_time"`
+	StartTime *int64 `json:"start_time,omitempty"`
 
 	// 截止时间的UTC的时间戳
-	EndTime *int64 `json:"end_time,omitempty" xml:"end_time"`
+	EndTime *int64 `json:"end_time,omitempty"`
 
 	// 统计指标的数据结构结构体
-	List           *[]StatisticsGroup `json:"list,omitempty" xml:"list"`
+	List           *[]StatisticsGroup `json:"list,omitempty"`
 	HttpStatusCode int                `json:"-"`
 }
 

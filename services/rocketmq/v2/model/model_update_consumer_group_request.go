@@ -10,12 +10,12 @@ import (
 type UpdateConsumerGroupRequest struct {
 
 	// 实例ID。
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
 	// 消费组名称。
-	Group string `json:"group" xml:"group"`
+	Group string `json:"group"`
 
-	Body *ConsumerGroup `json:"body,omitempty" xml:"body"`
+	Body *ConsumerGroup `json:"body,omitempty"`
 }
 
 func (o UpdateConsumerGroupRequest) String() string {

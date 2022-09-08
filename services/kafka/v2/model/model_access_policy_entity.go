@@ -13,10 +13,10 @@ import (
 type AccessPolicyEntity struct {
 
 	// 用户名称。
-	UserName *string `json:"user_name,omitempty" xml:"user_name"`
+	UserName *string `json:"user_name,omitempty"`
 
 	// 权限类型。 - all：拥有发布、订阅权限; - pub：拥有发布权限; - sub：拥有订阅权限。
-	AccessPolicy *AccessPolicyEntityAccessPolicy `json:"access_policy,omitempty" xml:"access_policy"`
+	AccessPolicy *AccessPolicyEntityAccessPolicy `json:"access_policy,omitempty"`
 }
 
 func (o AccessPolicyEntity) String() string {

@@ -10,9 +10,9 @@ import (
 type ListStoredQueriesResponse struct {
 
 	// 高级查询列表
-	Value *[]StoredQuery `json:"value,omitempty" xml:"value"`
+	Value *[]StoredQuery `json:"value,omitempty"`
 
-	PageInfo       *PageInfo `json:"page_info,omitempty" xml:"page_info"`
+	PageInfo       *PageInfo `json:"page_info,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }
 

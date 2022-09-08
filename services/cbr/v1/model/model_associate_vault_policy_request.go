@@ -10,9 +10,9 @@ import (
 type AssociateVaultPolicyRequest struct {
 
 	// 存储库ID
-	VaultId string `json:"vault_id" xml:"vault_id"`
+	VaultId string `json:"vault_id"`
 
-	Body *VaultAssociate `json:"body,omitempty" xml:"body"`
+	Body *VaultAssociate `json:"body,omitempty"`
 }
 
 func (o AssociateVaultPolicyRequest) String() string {

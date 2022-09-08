@@ -10,7 +10,7 @@ import (
 type ListSnapshotDetailsRequest struct {
 
 	// 快照ID。
-	SnapshotId string `json:"snapshot_id" xml:"snapshot_id"`
+	SnapshotId string `json:"snapshot_id"`
 }
 
 func (o ListSnapshotDetailsRequest) String() string {

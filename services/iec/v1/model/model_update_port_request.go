@@ -10,9 +10,9 @@ import (
 type UpdatePortRequest struct {
 
 	// 端口ID
-	PortId string `json:"port_id" xml:"port_id"`
+	PortId string `json:"port_id"`
 
-	Body *UpdatePortRequestBody `json:"body,omitempty" xml:"body"`
+	Body *UpdatePortRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdatePortRequest) String() string {

@@ -9,27 +9,27 @@ import (
 type ListActiveOrHistoryAlarmsRequestBody struct {
 
 	// 关键字检索条件
-	Step *int32 `json:"step,omitempty" xml:"step"`
+	Step *int32 `json:"step,omitempty"`
 
 	// 是否自定义查询时间段
-	WhetherCustomField bool `json:"whether_custom_field" xml:"whether_custom_field"`
+	WhetherCustomField bool `json:"whether_custom_field"`
 
 	// 自定义时间段开始时间(时间戳)
-	StartTime *int64 `json:"start_time,omitempty" xml:"start_time"`
+	StartTime *int64 `json:"start_time,omitempty"`
 
 	// 自定义时间段结束时间(时间戳)
-	EndTime *int64 `json:"end_time,omitempty" xml:"end_time"`
+	EndTime *int64 `json:"end_time,omitempty"`
 
 	// 非自定义时间段时间范围(单位为分钟)
-	TimeRange *string `json:"time_range,omitempty" xml:"time_range"`
+	TimeRange *string `json:"time_range,omitempty"`
 
 	// 关键字检索条件
-	Search *string `json:"search,omitempty" xml:"search"`
+	Search *string `json:"search,omitempty"`
 
 	// 告警级别(\"Critical\",\"Major\",\"Minor\",\"Info\")
-	AlarmLevelIds *[]string `json:"alarm_level_ids,omitempty" xml:"alarm_level_ids"`
+	AlarmLevelIds *[]string `json:"alarm_level_ids,omitempty"`
 
-	Sort *Sort `json:"sort,omitempty" xml:"sort"`
+	Sort *Sort `json:"sort,omitempty"`
 }
 
 func (o ListActiveOrHistoryAlarmsRequestBody) String() string {

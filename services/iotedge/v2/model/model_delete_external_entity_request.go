@@ -10,10 +10,10 @@ import (
 type DeleteExternalEntityRequest struct {
 
 	// 边缘节点ID
-	EdgeNodeId string `json:"edge_node_id" xml:"edge_node_id"`
+	EdgeNodeId string `json:"edge_node_id"`
 
 	// 外部实体ID
-	ExternalId string `json:"external_id" xml:"external_id"`
+	ExternalId string `json:"external_id"`
 }
 
 func (o DeleteExternalEntityRequest) String() string {

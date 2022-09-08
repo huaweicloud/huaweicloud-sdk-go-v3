@@ -9,16 +9,16 @@ import (
 type RepositoryHookRequest struct {
 
 	// 触发url
-	HookUrl string `json:"hook_url" xml:"hook_url"`
+	HookUrl string `json:"hook_url"`
 
 	// 事件来源
-	Service string `json:"service" xml:"service"`
+	Service string `json:"service"`
 
 	// 安全令牌
-	Token *string `json:"token,omitempty" xml:"token"`
+	Token *string `json:"token,omitempty"`
 
 	// 触发事件
-	HookEvents []string `json:"hook_events" xml:"hook_events"`
+	HookEvents []string `json:"hook_events"`
 }
 
 func (o RepositoryHookRequest) String() string {

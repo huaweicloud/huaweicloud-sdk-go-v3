@@ -8,10 +8,10 @@ import (
 
 // Response Object
 type ListErrorLogsNewResponse struct {
-	ErrorLogList *[]ErrorLog `json:"error_log_list,omitempty" xml:"error_log_list"`
+	ErrorLogList *[]ErrorLog `json:"error_log_list,omitempty"`
 
 	// 总记录数。
-	TotalRecord    *int32 `json:"total_record,omitempty" xml:"total_record"`
+	TotalRecord    *int32 `json:"total_record,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

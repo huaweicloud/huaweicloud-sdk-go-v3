@@ -13,13 +13,13 @@ import (
 type OpenGaussHaResponse struct {
 
 	// GaussDB(for openGauss) 分布式模式，返回值为：Enterprise（企业版）；主备版，返回值为：Ha(主备版)。
-	Mode OpenGaussHaResponseMode `json:"mode" xml:"mode"`
+	Mode OpenGaussHaResponseMode `json:"mode"`
 
 	// 备机同步参数。  取值：  GaussDB(for openGauss)为“sync”。 说明： - “sync”为同步模式。
-	ReplicationMode OpenGaussHaResponseReplicationMode `json:"replication_mode" xml:"replication_mode"`
+	ReplicationMode OpenGaussHaResponseReplicationMode `json:"replication_mode"`
 
 	// GaussDB(for openGauss)的预留参数：指定实例一致性类型，取值范围：strong（强一致性） | eventual(最终一致性)。
-	Consistency OpenGaussHaResponseConsistency `json:"consistency" xml:"consistency"`
+	Consistency OpenGaussHaResponseConsistency `json:"consistency"`
 }
 
 func (o OpenGaussHaResponse) String() string {

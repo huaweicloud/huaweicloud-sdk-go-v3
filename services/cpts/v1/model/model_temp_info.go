@@ -9,33 +9,33 @@ import (
 type TempInfo struct {
 
 	// id
-	Id *int32 `json:"id,omitempty" xml:"id"`
+	Id *int32 `json:"id,omitempty"`
 
 	// project_id
-	ProjectId *int32 `json:"project_id,omitempty" xml:"project_id"`
+	ProjectId *int32 `json:"project_id,omitempty"`
 
 	// name
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// description
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// variables
-	Variables *string `json:"variables,omitempty" xml:"variables"`
+	Variables *string `json:"variables,omitempty"`
 
 	// contents
-	Contents *[]interface{} `json:"contents,omitempty" xml:"contents"`
+	Contents *[]interface{} `json:"contents,omitempty"`
 
 	// temp_type
-	TempType *int32 `json:"temp_type,omitempty" xml:"temp_type"`
+	TempType *int32 `json:"temp_type,omitempty"`
 
 	// for_loop_params
-	ForLoopParams *[]interface{} `json:"for_loop_params,omitempty" xml:"for_loop_params"`
+	ForLoopParams *[]interface{} `json:"for_loop_params,omitempty"`
 
-	LogicController *LogicController `json:"logic_controller,omitempty" xml:"logic_controller"`
+	LogicController *LogicController `json:"logic_controller,omitempty"`
 
 	// enable_pre
-	EnablePre *bool `json:"enable_pre,omitempty" xml:"enable_pre"`
+	EnablePre *bool `json:"enable_pre,omitempty"`
 }
 
 func (o TempInfo) String() string {

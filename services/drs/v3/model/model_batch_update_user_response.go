@@ -10,10 +10,10 @@ import (
 type BatchUpdateUserResponse struct {
 
 	// 总数
-	AllCounts *int32 `json:"all_counts,omitempty" xml:"all_counts"`
+	AllCounts *int32 `json:"all_counts,omitempty"`
 
 	// 迁移用户信息
-	Results        *[]QueryUserResp `json:"results,omitempty" xml:"results"`
+	Results        *[]QueryUserResp `json:"results,omitempty"`
 	HttpStatusCode int              `json:"-"`
 }
 

@@ -10,12 +10,12 @@ import (
 type CreateMetadataRequest struct {
 
 	// 身份提供商ID。
-	IdpId string `json:"idp_id" xml:"idp_id"`
+	IdpId string `json:"idp_id"`
 
 	// 协议ID。
-	ProtocolId string `json:"protocol_id" xml:"protocol_id"`
+	ProtocolId string `json:"protocol_id"`
 
-	Body *CreateMetadataRequestBody `json:"body,omitempty" xml:"body"`
+	Body *CreateMetadataRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateMetadataRequest) String() string {

@@ -10,34 +10,34 @@ import (
 type SlowLogStatistics struct {
 
 	// 执行次数。
-	Count string `json:"count" xml:"count"`
+	Count string `json:"count"`
 
 	// 平均执行时间。
-	Time string `json:"time" xml:"time"`
+	Time string `json:"time"`
 
 	// 平均等待锁时间。
-	LockTime string `json:"lockTime" xml:"lockTime"`
+	LockTime string `json:"lockTime"`
 
 	// 平均结果行数量。
-	RowsSent int64 `json:"rowsSent" xml:"rowsSent"`
+	RowsSent int64 `json:"rowsSent"`
 
 	// 平均扫描的行数量。
-	RowsExamined int64 `json:"rowsExamined" xml:"rowsExamined"`
+	RowsExamined int64 `json:"rowsExamined"`
 
 	// 所属数据库。
-	Database string `json:"database" xml:"database"`
+	Database string `json:"database"`
 
 	// 帐号。
-	Users string `json:"users" xml:"users"`
+	Users string `json:"users"`
 
 	// 执行语法。
-	QuerySample string `json:"querySample" xml:"querySample"`
+	QuerySample string `json:"querySample"`
 
 	// 语句类型。
-	Type string `json:"type" xml:"type"`
+	Type string `json:"type"`
 
 	// IP地址。
-	ClientIP string `json:"clientIP" xml:"clientIP"`
+	ClientIP string `json:"clientIP"`
 }
 
 func (o SlowLogStatistics) String() string {

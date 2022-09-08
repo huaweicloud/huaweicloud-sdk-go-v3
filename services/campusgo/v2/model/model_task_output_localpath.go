@@ -10,10 +10,10 @@ import (
 type TaskOutputLocalpath struct {
 
 	// 挂载的源路径，存放作业运行结果的路径，必须为linux路径
-	MountSourcePath string `json:"mount_source_path" xml:"mount_source_path"`
+	MountSourcePath string `json:"mount_source_path"`
 
 	// 作业输出数据类别的列表，当输出类型下有这个列表时，表示希望这个输出类型下存放dataCategory列表内的数据，部分服务需要
-	DataCategory *[]string `json:"data_category,omitempty" xml:"data_category"`
+	DataCategory *[]string `json:"data_category,omitempty"`
 }
 
 func (o TaskOutputLocalpath) String() string {

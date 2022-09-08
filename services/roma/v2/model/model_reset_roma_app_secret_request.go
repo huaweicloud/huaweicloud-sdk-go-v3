@@ -10,12 +10,12 @@ import (
 type ResetRomaAppSecretRequest struct {
 
 	// 应用ID
-	AppId string `json:"app_id" xml:"app_id"`
+	AppId string `json:"app_id"`
 
 	// 实例ID
-	InstanceId string `json:"instance_id" xml:"instance_id"`
+	InstanceId string `json:"instance_id"`
 
-	Body *UpdateAppSecretReq `json:"body,omitempty" xml:"body"`
+	Body *UpdateAppSecretReq `json:"body,omitempty"`
 }
 
 func (o ResetRomaAppSecretRequest) String() string {

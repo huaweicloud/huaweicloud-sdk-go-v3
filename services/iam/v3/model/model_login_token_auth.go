@@ -8,7 +8,7 @@ import (
 
 //
 type LoginTokenAuth struct {
-	Securitytoken *LoginTokenSecurityToken `json:"securitytoken" xml:"securitytoken"`
+	Securitytoken *LoginTokenSecurityToken `json:"securitytoken"`
 }
 
 func (o LoginTokenAuth) String() string {

@@ -10,7 +10,7 @@ import (
 type ShowInstanceUsersResponse struct {
 
 	// 用户列表。
-	Users          *[]ShowInstanceUsersEntity `json:"users,omitempty" xml:"users"`
+	Users          *[]ShowInstanceUsersEntity `json:"users,omitempty"`
 	HttpStatusCode int                        `json:"-"`
 }
 

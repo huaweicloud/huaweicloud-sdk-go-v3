@@ -7,7 +7,7 @@ import (
 )
 
 type CompareFace struct {
-	BoundingBox *BoundingBox `json:"bounding_box" xml:"bounding_box"`
+	BoundingBox *BoundingBox `json:"bounding_box"`
 }
 
 func (o CompareFace) String() string {

@@ -10,9 +10,9 @@ import (
 type DeleteReplicationRequest struct {
 
 	// 复制对的ID。
-	ReplicationId string `json:"replication_id" xml:"replication_id"`
+	ReplicationId string `json:"replication_id"`
 
-	Body *DeleteReplicationRequestBody `json:"body,omitempty" xml:"body"`
+	Body *DeleteReplicationRequestBody `json:"body,omitempty"`
 }
 
 func (o DeleteReplicationRequest) String() string {

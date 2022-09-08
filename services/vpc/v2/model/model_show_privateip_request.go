@@ -10,7 +10,7 @@ import (
 type ShowPrivateipRequest struct {
 
 	// 私有IP ID
-	PrivateipId string `json:"privateip_id" xml:"privateip_id"`
+	PrivateipId string `json:"privateip_id"`
 }
 
 func (o ShowPrivateipRequest) String() string {

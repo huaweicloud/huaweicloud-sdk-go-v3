@@ -9,7 +9,7 @@ import (
 type CreateRepoMemberRequest struct {
 
 	// 添加用户的信息列表
-	Users *[]RepoMemberInfo `json:"users,omitempty" xml:"users"`
+	Users *[]RepoMemberInfo `json:"users,omitempty"`
 }
 
 func (o CreateRepoMemberRequest) String() string {

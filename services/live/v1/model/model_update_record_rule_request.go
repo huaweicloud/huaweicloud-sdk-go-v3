@@ -10,9 +10,9 @@ import (
 type UpdateRecordRuleRequest struct {
 
 	// 规则ID，在创建成功规则后返回
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
-	Body *RecordRuleRequest `json:"body,omitempty" xml:"body"`
+	Body *RecordRuleRequest `json:"body,omitempty"`
 }
 
 func (o UpdateRecordRuleRequest) String() string {

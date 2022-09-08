@@ -13,27 +13,27 @@ import (
 type SubJob struct {
 
 	// Job的状态。  - SUCCESS：成功。  - RUNNING：运行中。  - FAIL：失败。  - INIT：正在初始化。
-	Status *SubJobStatus `json:"status,omitempty" xml:"status"`
+	Status *SubJobStatus `json:"status,omitempty"`
 
-	Entities *SubJobEntities `json:"entities,omitempty" xml:"entities"`
+	Entities *SubJobEntities `json:"entities,omitempty"`
 
 	// 子任务的ID。
-	JobId *string `json:"job_id,omitempty" xml:"job_id"`
+	JobId *string `json:"job_id,omitempty"`
 
 	// 子任务的类型。
-	JobType *string `json:"job_type,omitempty" xml:"job_type"`
+	JobType *string `json:"job_type,omitempty"`
 
 	// 开始时间。
-	BeginTime *string `json:"begin_time,omitempty" xml:"begin_time"`
+	BeginTime *string `json:"begin_time,omitempty"`
 
 	// 结束时间。
-	EndTime *string `json:"end_time,omitempty" xml:"end_time"`
+	EndTime *string `json:"end_time,omitempty"`
 
 	// Job执行失败时的错误码。  Job执行成功后，该值为null。
-	ErrorCode *string `json:"error_code,omitempty" xml:"error_code"`
+	ErrorCode *string `json:"error_code,omitempty"`
 
 	// Job执行失败时的错误原因。  Job执行成功后，该值为null。
-	FailReason *string `json:"fail_reason,omitempty" xml:"fail_reason"`
+	FailReason *string `json:"fail_reason,omitempty"`
 }
 
 func (o SubJob) String() string {

@@ -10,10 +10,10 @@ import (
 type Secrets struct {
 
 	// 密钥的名称
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 
 	// 密钥的属性名
-	Key string `json:"key" xml:"key"`
+	Key string `json:"key"`
 }
 
 func (o Secrets) String() string {

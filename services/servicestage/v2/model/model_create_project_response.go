@@ -10,13 +10,13 @@ import (
 type CreateProjectResponse struct {
 
 	// 项目ID。
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 项目名称。
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 项目的clone url路径。
-	CloneUrl       *string `json:"clone_url,omitempty" xml:"clone_url"`
+	CloneUrl       *string `json:"clone_url,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

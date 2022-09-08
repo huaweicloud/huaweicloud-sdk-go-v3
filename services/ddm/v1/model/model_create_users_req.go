@@ -10,7 +10,7 @@ import (
 type CreateUsersReq struct {
 
 	// DDM实例帐号相关信息的集合。
-	Users []CreateUsersInfo `json:"users" xml:"users"`
+	Users []CreateUsersInfo `json:"users"`
 }
 
 func (o CreateUsersReq) String() string {

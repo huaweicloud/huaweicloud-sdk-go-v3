@@ -10,12 +10,12 @@ import (
 type BatchAddSharedTagsRequest struct {
 
 	// MIME类型
-	ContentType string `json:"Content-Type" xml:"Content-Type"`
+	ContentType string `json:"Content-Type"`
 
 	// 共享ID
-	ShareId string `json:"share_id" xml:"share_id"`
+	ShareId string `json:"share_id"`
 
-	Body *BatchAddSharedTagsRequestBody `json:"body,omitempty" xml:"body"`
+	Body *BatchAddSharedTagsRequestBody `json:"body,omitempty"`
 }
 
 func (o BatchAddSharedTagsRequest) String() string {

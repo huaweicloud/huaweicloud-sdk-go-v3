@@ -13,37 +13,37 @@ import (
 type CreateSubscriptionResponse struct {
 
 	// 事件订阅ID
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 事件订阅名称
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 事件订阅描述
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 事件订阅类型
-	Type *CreateSubscriptionResponseType `json:"type,omitempty" xml:"type"`
+	Type *CreateSubscriptionResponseType `json:"type,omitempty"`
 
 	// 事件订阅状态
-	Status *CreateSubscriptionResponseStatus `json:"status,omitempty" xml:"status"`
+	Status *CreateSubscriptionResponseStatus `json:"status,omitempty"`
 
 	// 通道ID
-	ChannelId *string `json:"channel_id,omitempty" xml:"channel_id"`
+	ChannelId *string `json:"channel_id,omitempty"`
 
 	// 通道名称
-	ChannelName *string `json:"channel_name,omitempty" xml:"channel_name"`
+	ChannelName *string `json:"channel_name,omitempty"`
 
 	// 订阅源列表
-	Sources *[]SubscriptionSourceInfo `json:"sources,omitempty" xml:"sources"`
+	Sources *[]SubscriptionSourceInfo `json:"sources,omitempty"`
 
 	// 订阅目标列表
-	Targets *[]SubscriptionTargetInfo `json:"targets,omitempty" xml:"targets"`
+	Targets *[]SubscriptionTargetInfo `json:"targets,omitempty"`
 
 	// 创建时间
-	CreatedTime *string `json:"created_time,omitempty" xml:"created_time"`
+	CreatedTime *string `json:"created_time,omitempty"`
 
 	// 更新时间
-	UpdatedTime    *string `json:"updated_time,omitempty" xml:"updated_time"`
+	UpdatedTime    *string `json:"updated_time,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -13,16 +13,16 @@ import (
 type InstancesResponseInstancesVoResult struct {
 
 	// 链接
-	Link *string `json:"link,omitempty" xml:"link"`
+	Link *string `json:"link,omitempty"`
 
 	// cpu架构 x86|arm
-	Arch *InstancesResponseInstancesVoResultArch `json:"arch,omitempty" xml:"arch"`
+	Arch *InstancesResponseInstancesVoResultArch `json:"arch,omitempty"`
 
 	// 实例id
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 是否私有平台
-	Private *bool `json:"private,omitempty" xml:"private"`
+	Private *bool `json:"private,omitempty"`
 }
 
 func (o InstancesResponseInstancesVoResult) String() string {

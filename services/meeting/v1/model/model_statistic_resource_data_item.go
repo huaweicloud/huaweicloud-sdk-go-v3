@@ -10,22 +10,22 @@ import (
 type StatisticResourceDataItem struct {
 
 	// 日期/月份。
-	Time *string `json:"time,omitempty" xml:"time"`
+	Time *string `json:"time,omitempty"`
 
 	// VMR方数。 category = used_vmr_info时有效。
-	VmrParties *string `json:"vmrParties,omitempty" xml:"vmrParties"`
+	VmrParties *string `json:"vmrParties,omitempty"`
 
 	// VMR并发使用数。 category = used_vmr_info时有效。
-	MaxConcurrencyVmrCount *string `json:"maxConcurrencyVmrCount,omitempty" xml:"maxConcurrencyVmrCount"`
+	MaxConcurrencyVmrCount *string `json:"maxConcurrencyVmrCount,omitempty"`
 
 	// 直播端口并发使用数。 category = used_live_info时有效。
-	LivePortUsedCount *string `json:"livePortUsedCount,omitempty" xml:"livePortUsedCount"`
+	LivePortUsedCount *string `json:"livePortUsedCount,omitempty"`
 
 	// 录播使用空间(G)。 category = used_record_info时有效。
-	RecordUsedSize *string `json:"recordUsedSize,omitempty" xml:"recordUsedSize"`
+	RecordUsedSize *string `json:"recordUsedSize,omitempty"`
 
 	// PSTN外呼时长(分钟)。 category = used_pstn_info时有效。
-	PstnUsedDuration *string `json:"pstnUsedDuration,omitempty" xml:"pstnUsedDuration"`
+	PstnUsedDuration *string `json:"pstnUsedDuration,omitempty"`
 }
 
 func (o StatisticResourceDataItem) String() string {

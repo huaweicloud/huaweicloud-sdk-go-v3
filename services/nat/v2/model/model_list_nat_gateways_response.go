@@ -10,7 +10,7 @@ import (
 type ListNatGatewaysResponse struct {
 
 	// 查询公网NAT网关实例列表的响应体。 详见NatGateway字段说明。
-	NatGateways    *[]NatGatewayResponseBody `json:"nat_gateways,omitempty" xml:"nat_gateways"`
+	NatGateways    *[]NatGatewayResponseBody `json:"nat_gateways,omitempty"`
 	HttpStatusCode int                       `json:"-"`
 }
 

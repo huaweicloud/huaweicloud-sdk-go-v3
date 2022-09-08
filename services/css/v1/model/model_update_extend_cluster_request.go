@@ -10,9 +10,9 @@ import (
 type UpdateExtendClusterRequest struct {
 
 	// 指定待扩容的集群ID。
-	ClusterId string `json:"cluster_id" xml:"cluster_id"`
+	ClusterId string `json:"cluster_id"`
 
-	Body *ExtendClusterReq `json:"body,omitempty" xml:"body"`
+	Body *ExtendClusterReq `json:"body,omitempty"`
 }
 
 func (o UpdateExtendClusterRequest) String() string {

@@ -10,7 +10,7 @@ import (
 type OperateSqlFilterControlReq struct {
 
 	// SQL限流开关状态。取值：ON|OFF
-	SwitchStatus string `json:"switch_status" xml:"switch_status"`
+	SwitchStatus string `json:"switch_status"`
 }
 
 func (o OperateSqlFilterControlReq) String() string {

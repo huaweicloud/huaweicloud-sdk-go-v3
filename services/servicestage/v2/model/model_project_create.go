@@ -9,7 +9,7 @@ import (
 type ProjectCreate struct {
 
 	// 项目名称。
-	Name string `json:"name" xml:"name"`
+	Name string `json:"name"`
 }
 
 func (o ProjectCreate) String() string {

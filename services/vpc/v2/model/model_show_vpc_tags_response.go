@@ -10,7 +10,7 @@ import (
 type ShowVpcTagsResponse struct {
 
 	// tag对象列表
-	Tags           *[]ResourceTag `json:"tags,omitempty" xml:"tags"`
+	Tags           *[]ResourceTag `json:"tags,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }
 

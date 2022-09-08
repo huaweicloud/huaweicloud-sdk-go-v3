@@ -8,7 +8,7 @@ import (
 
 // This is a auto create Body Object
 type CreateL7policyRequestBody struct {
-	L7policy *CreateL7policyReq `json:"l7policy" xml:"l7policy"`
+	L7policy *CreateL7policyReq `json:"l7policy"`
 }
 
 func (o CreateL7policyRequestBody) String() string {

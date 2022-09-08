@@ -10,10 +10,10 @@ import (
 type PersonalityResult struct {
 
 	// 注入文件路径信息。
-	Path *string `json:"path,omitempty" xml:"path"`
+	Path *string `json:"path,omitempty"`
 
 	// 注入文件内容，base64格式编码。
-	Content *string `json:"content,omitempty" xml:"content"`
+	Content *string `json:"content,omitempty"`
 }
 
 func (o PersonalityResult) String() string {

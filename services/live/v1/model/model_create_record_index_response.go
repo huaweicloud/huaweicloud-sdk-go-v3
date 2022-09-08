@@ -12,42 +12,42 @@ import (
 type CreateRecordIndexResponse struct {
 
 	// 索引文件地址
-	IndexUrl *string `json:"index_url,omitempty" xml:"index_url"`
+	IndexUrl *string `json:"index_url,omitempty"`
 
 	// 直播推流域名
-	PublishDomain *string `json:"publish_domain,omitempty" xml:"publish_domain"`
+	PublishDomain *string `json:"publish_domain,omitempty"`
 
 	// 应用名，如果任意应用填写*。录制规则匹配的时候，优先精确app匹配，如果匹配不到，则匹配*
-	App *string `json:"app,omitempty" xml:"app"`
+	App *string `json:"app,omitempty"`
 
 	// 录制的流名，如果任意流名则填写*。录制规则匹配的时候，优先精确stream匹配，如果匹配不到，则匹配*
-	Stream *string `json:"stream,omitempty" xml:"stream"`
+	Stream *string `json:"stream,omitempty"`
 
 	// 开始时间。格式为：yyyy-MM-ddTHH:mm:ssZ（UTC时间）。(实际视频的开始时间)
-	StartTime *sdktime.SdkTime `json:"start_time,omitempty" xml:"start_time"`
+	StartTime *sdktime.SdkTime `json:"start_time,omitempty"`
 
 	// 结束时间。格式为：yyyy-MM-ddTHH:mm:ssZ（UTC时间）。(实际视频的结束时间)
-	EndTime *sdktime.SdkTime `json:"end_time,omitempty" xml:"end_time"`
+	EndTime *sdktime.SdkTime `json:"end_time,omitempty"`
 
 	// 录制时长。单位：秒。
-	Duration *int32 `json:"duration,omitempty" xml:"duration"`
+	Duration *int32 `json:"duration,omitempty"`
 
 	// 视频宽。
-	Weight *int32 `json:"weight,omitempty" xml:"weight"`
+	Weight *int32 `json:"weight,omitempty"`
 
 	// 视频高。
-	Height *int32 `json:"height,omitempty" xml:"height"`
+	Height *int32 `json:"height,omitempty"`
 
 	// OBS Bucket所在RegionID
-	Location *CreateRecordIndexResponseLocation `json:"location,omitempty" xml:"location"`
+	Location *CreateRecordIndexResponseLocation `json:"location,omitempty"`
 
 	// 桶名称
-	Bucket *string `json:"bucket,omitempty" xml:"bucket"`
+	Bucket *string `json:"bucket,omitempty"`
 
 	// m3u8文件路径。默认Index/{publish_domain}/{app}/{stream}-{start_time}-{end_time}
-	Object *string `json:"object,omitempty" xml:"object"`
+	Object *string `json:"object,omitempty"`
 
-	XRequestId     *string `json:"X-Request-Id,omitempty" xml:"X-Request-Id"`
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

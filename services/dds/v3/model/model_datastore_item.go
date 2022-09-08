@@ -10,10 +10,10 @@ import (
 type DatastoreItem struct {
 
 	// 数据库引擎。
-	Type string `json:"type" xml:"type"`
+	Type string `json:"type"`
 
 	// 数据库版本号。
-	Version string `json:"version" xml:"version"`
+	Version string `json:"version"`
 }
 
 func (o DatastoreItem) String() string {

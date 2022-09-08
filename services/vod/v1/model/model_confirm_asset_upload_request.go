@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type ConfirmAssetUploadRequest struct {
-	Body *ConfirmAssetUploadReq `json:"body,omitempty" xml:"body"`
+	Body *ConfirmAssetUploadReq `json:"body,omitempty"`
 }
 
 func (o ConfirmAssetUploadRequest) String() string {

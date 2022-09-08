@@ -10,9 +10,9 @@ import (
 type ListDeviceAlarmsResponse struct {
 
 	// 满足条件的设备告警总数
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 
-	Data           *[]GetDeviceAlarmArrayObject `json:"data,omitempty" xml:"data"`
+	Data           *[]GetDeviceAlarmArrayObject `json:"data,omitempty"`
 	HttpStatusCode int                          `json:"-"`
 }
 

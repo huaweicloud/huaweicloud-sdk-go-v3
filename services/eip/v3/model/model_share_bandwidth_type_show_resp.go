@@ -10,28 +10,28 @@ import (
 type ShareBandwidthTypeShowResp struct {
 
 	// 支持带宽类型的id
-	Id *string `json:"id,omitempty" xml:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 带宽类型
-	BandwidthType *string `json:"bandwidth_type,omitempty" xml:"bandwidth_type"`
+	BandwidthType *string `json:"bandwidth_type,omitempty"`
 
 	// 中心站点or边缘站点，默认展示
-	PublicBorderGroup *string `json:"public_border_group,omitempty" xml:"public_border_group"`
+	PublicBorderGroup *string `json:"public_border_group,omitempty"`
 
 	// 创建时间
-	CreatedAt *string `json:"created_at,omitempty" xml:"created_at"`
+	CreatedAt *string `json:"created_at,omitempty"`
 
 	// 更新时间
-	UpdatedAt *string `json:"updated_at,omitempty" xml:"updated_at"`
+	UpdatedAt *string `json:"updated_at,omitempty"`
 
 	// 带宽类型的英文表述
-	NameEn *string `json:"name_en,omitempty" xml:"name_en"`
+	NameEn *string `json:"name_en,omitempty"`
 
 	// 带宽类型的中文表述
-	NameZh *string `json:"name_zh,omitempty" xml:"name_zh"`
+	NameZh *string `json:"name_zh,omitempty"`
 
 	// 带宽类型描述信息
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 }
 
 func (o ShareBandwidthTypeShowResp) String() string {

@@ -9,7 +9,7 @@ import (
 type VaultAddResourceReq struct {
 
 	// 资源列表
-	Resources []ResourceCreate `json:"resources" xml:"resources"`
+	Resources []ResourceCreate `json:"resources"`
 }
 
 func (o VaultAddResourceReq) String() string {

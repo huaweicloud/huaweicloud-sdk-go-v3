@@ -10,22 +10,22 @@ import (
 type QueryRoleDetailResp struct {
 
 	// 角色。
-	Role *string `json:"role,omitempty" xml:"role"`
+	Role *string `json:"role,omitempty"`
 
 	// 说明。
-	Comment *string `json:"comment,omitempty" xml:"comment"`
+	Comment *string `json:"comment,omitempty"`
 
 	// 是否支持迁移。
-	IsTransfer *bool `json:"is_transfer,omitempty" xml:"is_transfer"`
+	IsTransfer *bool `json:"is_transfer,omitempty"`
 
 	// 角色权限。
-	Privileges *string `json:"privileges,omitempty" xml:"privileges"`
+	Privileges *string `json:"privileges,omitempty"`
 
 	// 继承的角色。
-	InheritsRoles *[]string `json:"inherits_roles,omitempty" xml:"inherits_roles"`
+	InheritsRoles *[]string `json:"inherits_roles,omitempty"`
 
 	// 是否选择。
-	Selected *bool `json:"selected,omitempty" xml:"selected"`
+	Selected *bool `json:"selected,omitempty"`
 }
 
 func (o QueryRoleDetailResp) String() string {

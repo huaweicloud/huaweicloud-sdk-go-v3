@@ -10,12 +10,12 @@ import (
 type UpdateExternalEntityReqDto struct {
 
 	// 连接外部实体的协议类型
-	Protocol string `json:"protocol" xml:"protocol"`
+	Protocol string `json:"protocol"`
 
 	// 连接类型
-	ConnectionType string `json:"connection_type" xml:"connection_type"`
+	ConnectionType string `json:"connection_type"`
 
-	MqttConnectionInfo *MqttConnectionInfo `json:"mqtt_connection_info,omitempty" xml:"mqtt_connection_info"`
+	MqttConnectionInfo *MqttConnectionInfo `json:"mqtt_connection_info,omitempty"`
 }
 
 func (o UpdateExternalEntityReqDto) String() string {

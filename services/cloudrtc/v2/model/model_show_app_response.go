@@ -13,32 +13,32 @@ import (
 type ShowAppResponse struct {
 
 	// app名称
-	AppName *string `json:"app_name,omitempty" xml:"app_name"`
+	AppName *string `json:"app_name,omitempty"`
 
 	// 应用id
-	AppId *string `json:"app_id,omitempty" xml:"app_id"`
+	AppId *string `json:"app_id,omitempty"`
 
-	State *AppState `json:"state,omitempty" xml:"state"`
+	State *AppState `json:"state,omitempty"`
 
 	// RTC覆盖范围。  取值如下：    - DOMESTIC：国内范围。   - OVERSEA：海外范围。   - GLOBAL：全球范围。
-	Scope *ShowAppResponseScope `json:"scope,omitempty" xml:"scope"`
+	Scope *ShowAppResponseScope `json:"scope,omitempty"`
 
 	// 账号名
-	TenantName *string `json:"tenant_name,omitempty" xml:"tenant_name"`
+	TenantName *string `json:"tenant_name,omitempty"`
 
 	// 域名，App对应域名
-	Domain *string `json:"domain,omitempty" xml:"domain"`
+	Domain *string `json:"domain,omitempty"`
 
 	// 创建时间，形如“2006-01-02T15:04:05.075Z”，时区为：UTC
-	CreateTime *string `json:"create_time,omitempty" xml:"create_time"`
+	CreateTime *string `json:"create_time,omitempty"`
 
-	Authentication *AppAuth `json:"authentication,omitempty" xml:"authentication"`
+	Authentication *AppAuth `json:"authentication,omitempty"`
 
-	Callbacks *AppCallbacks `json:"callbacks,omitempty" xml:"callbacks"`
+	Callbacks *AppCallbacks `json:"callbacks,omitempty"`
 
-	AutoRecordMode *AppAutoRecordMode `json:"auto_record_mode,omitempty" xml:"auto_record_mode"`
+	AutoRecordMode *AppAutoRecordMode `json:"auto_record_mode,omitempty"`
 
-	XRequestId     *string `json:"X-request-Id,omitempty" xml:"X-request-Id"`
+	XRequestId     *string `json:"X-request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

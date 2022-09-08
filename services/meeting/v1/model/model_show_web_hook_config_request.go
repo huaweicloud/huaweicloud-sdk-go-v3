@@ -10,10 +10,10 @@ import (
 type ShowWebHookConfigRequest struct {
 
 	// 企业ID，与spId二者必填一个
-	CorpId *string `json:"corpId,omitempty" xml:"corpId"`
+	CorpId *string `json:"corpId,omitempty"`
 
 	// sp管理员ID，与corpId二者必填一个
-	SpId *string `json:"spId,omitempty" xml:"spId"`
+	SpId *string `json:"spId,omitempty"`
 }
 
 func (o ShowWebHookConfigRequest) String() string {

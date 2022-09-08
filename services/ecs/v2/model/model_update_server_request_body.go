@@ -8,7 +8,7 @@ import (
 
 // This is a auto create Body Object
 type UpdateServerRequestBody struct {
-	Server *UpdateServerOption `json:"server" xml:"server"`
+	Server *UpdateServerOption `json:"server"`
 }
 
 func (o UpdateServerRequestBody) String() string {

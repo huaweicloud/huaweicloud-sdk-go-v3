@@ -10,7 +10,7 @@ import (
 type RequiredDuringScheduling struct {
 
 	// 节点选择规则
-	NodeSelectorTerms *[]MatchExpressions `json:"nodeSelectorTerms,omitempty" xml:"nodeSelectorTerms"`
+	NodeSelectorTerms *[]MatchExpressions `json:"nodeSelectorTerms,omitempty"`
 }
 
 func (o RequiredDuringScheduling) String() string {

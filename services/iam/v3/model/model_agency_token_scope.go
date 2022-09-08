@@ -8,9 +8,9 @@ import (
 
 //
 type AgencyTokenScope struct {
-	Domain *AgencyTokenScopeDomain `json:"domain,omitempty" xml:"domain"`
+	Domain *AgencyTokenScopeDomain `json:"domain,omitempty"`
 
-	Project *AgencyTokenScopeProject `json:"project,omitempty" xml:"project"`
+	Project *AgencyTokenScopeProject `json:"project,omitempty"`
 }
 
 func (o AgencyTokenScope) String() string {

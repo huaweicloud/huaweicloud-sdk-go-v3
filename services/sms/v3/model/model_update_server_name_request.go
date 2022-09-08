@@ -10,9 +10,9 @@ import (
 type UpdateServerNameRequest struct {
 
 	// 源端服务器在主机迁移服务中的id
-	SourceId string `json:"source_id" xml:"source_id"`
+	SourceId string `json:"source_id"`
 
-	Body *PutSourceServerBody `json:"body,omitempty" xml:"body"`
+	Body *PutSourceServerBody `json:"body,omitempty"`
 }
 
 func (o UpdateServerNameRequest) String() string {

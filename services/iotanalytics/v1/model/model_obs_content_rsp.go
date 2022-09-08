@@ -10,13 +10,13 @@ import (
 type ObsContentRsp struct {
 
 	// 桶名称
-	BucketName *string `json:"bucketName,omitempty" xml:"bucketName"`
+	BucketName *string `json:"bucketName,omitempty"`
 
 	// 租户的AK
-	Ak *string `json:"ak,omitempty" xml:"ak"`
+	Ak *string `json:"ak,omitempty"`
 
 	// 租户的SK
-	Sk *string `json:"sk,omitempty" xml:"sk"`
+	Sk *string `json:"sk,omitempty"`
 }
 
 func (o ObsContentRsp) String() string {

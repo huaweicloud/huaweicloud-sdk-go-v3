@@ -10,7 +10,7 @@ import (
 type ChangeSqlSwitchResponse struct {
 
 	// 开关状态。取值： Enabled：已开启， Disabled：已关闭， Switching：开关切换中
-	Status         *string `json:"status,omitempty" xml:"status"`
+	Status         *string `json:"status,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

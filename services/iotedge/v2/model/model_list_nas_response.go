@@ -10,7 +10,7 @@ import (
 type ListNasResponse struct {
 
 	// 北向NA列表
-	Nas            *[]QueryNaBriefResponseDto `json:"nas,omitempty" xml:"nas"`
+	Nas            *[]QueryNaBriefResponseDto `json:"nas,omitempty"`
 	HttpStatusCode int                        `json:"-"`
 }
 

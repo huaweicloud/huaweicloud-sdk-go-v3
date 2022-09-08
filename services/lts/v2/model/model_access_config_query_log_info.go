@@ -10,16 +10,16 @@ import (
 type AccessConfigQueryLogInfo struct {
 
 	// 日志组ID
-	LogGroupId *string `json:"log_group_id,omitempty" xml:"log_group_id"`
+	LogGroupId *string `json:"log_group_id,omitempty"`
 
 	// 日志流ID
-	LogStreamId *string `json:"log_stream_id,omitempty" xml:"log_stream_id"`
+	LogStreamId *string `json:"log_stream_id,omitempty"`
 
 	// 日志组名称
-	LogGroupName *string `json:"log_group_name,omitempty" xml:"log_group_name"`
+	LogGroupName *string `json:"log_group_name,omitempty"`
 
 	// 日志流名称
-	LogStreamName *string `json:"log_stream_name,omitempty" xml:"log_stream_name"`
+	LogStreamName *string `json:"log_stream_name,omitempty"`
 }
 
 func (o AccessConfigQueryLogInfo) String() string {

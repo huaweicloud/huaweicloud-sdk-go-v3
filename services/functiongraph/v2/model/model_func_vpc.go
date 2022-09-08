@@ -10,22 +10,22 @@ import (
 type FuncVpc struct {
 
 	// 虚拟私有云名称。
-	VpcName string `json:"vpc_name" xml:"vpc_name"`
+	VpcName string `json:"vpc_name"`
 
 	// 虚拟私有云唯一标识。
-	VpcId string `json:"vpc_id" xml:"vpc_id"`
+	VpcId string `json:"vpc_id"`
 
 	// 子网名称。
-	SubnetName string `json:"subnet_name" xml:"subnet_name"`
+	SubnetName string `json:"subnet_name"`
 
 	// 子网编号。
-	SubnetId string `json:"subnet_id" xml:"subnet_id"`
+	SubnetId string `json:"subnet_id"`
 
 	// 子网掩码。
-	Cidr string `json:"cidr" xml:"cidr"`
+	Cidr string `json:"cidr"`
 
 	// 网关。
-	Gateway string `json:"gateway" xml:"gateway"`
+	Gateway string `json:"gateway"`
 }
 
 func (o FuncVpc) String() string {

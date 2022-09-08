@@ -10,7 +10,7 @@ import (
 type ShowPublicipTagsRequest struct {
 
 	// 资源ID
-	PublicipId string `json:"publicip_id" xml:"publicip_id"`
+	PublicipId string `json:"publicip_id"`
 }
 
 func (o ShowPublicipTagsRequest) String() string {

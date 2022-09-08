@@ -8,13 +8,13 @@ import (
 
 // Response Object
 type CreateInstanceResponse struct {
-	Instance *OpenGaussInstanceResponse `json:"instance,omitempty" xml:"instance"`
+	Instance *OpenGaussInstanceResponse `json:"instance,omitempty"`
 
 	// 实例创建的任务id。  仅创建按需实例时会返回该参数。
-	JobId *string `json:"job_id,omitempty" xml:"job_id"`
+	JobId *string `json:"job_id,omitempty"`
 
 	// 创建实例的订单ID。  仅创建包周期实例时会返回该参数。
-	OrderId        *string `json:"order_id,omitempty" xml:"order_id"`
+	OrderId        *string `json:"order_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

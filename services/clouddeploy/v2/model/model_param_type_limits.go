@@ -10,7 +10,7 @@ import (
 type ParamTypeLimits struct {
 
 	// 枚举值可选参数
-	Name *string `json:"name,omitempty" xml:"name"`
+	Name *string `json:"name,omitempty"`
 }
 
 func (o ParamTypeLimits) String() string {

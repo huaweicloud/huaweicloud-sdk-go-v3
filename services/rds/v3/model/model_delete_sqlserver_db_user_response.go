@@ -10,7 +10,7 @@ import (
 type DeleteSqlserverDbUserResponse struct {
 
 	// 操作结果。
-	Resp           *string `json:"resp,omitempty" xml:"resp"`
+	Resp           *string `json:"resp,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

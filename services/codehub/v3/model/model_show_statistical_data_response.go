@@ -8,27 +8,12 @@ import (
 
 // Response Object
 type ShowStatisticalDataResponse struct {
+	Error *Error `json:"error,omitempty"`
 
-	// 仓库名称
-	RepoName *string `json:"repoName,omitempty" xml:"repoName"`
+	Result *RepositoryStatisticsVo `json:"result,omitempty"`
 
-	// 提交次数
-	CommitCount *int32 `json:"commitCount,omitempty" xml:"commitCount"`
-
-	// 仓库容量
-	RepoSize *string `json:"repoSize,omitempty" xml:"repoSize"`
-
-	// 最近一次提交时间
-	LastCommitTime *string `json:"lastCommitTime,omitempty" xml:"lastCommitTime"`
-
-	// 代码行数
-	CodeLines *int32 `json:"codeLines,omitempty" xml:"codeLines"`
-
-	// 分支数量
-	BranchCount *int32 `json:"branchCount,omitempty" xml:"branchCount"`
-
-	// 代码仓下载地址
-	ArchiveUrl     *string `json:"archiveUrl,omitempty" xml:"archiveUrl"`
+	// 响应状态
+	Status         *string `json:"status,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -10,10 +10,10 @@ import (
 type TaskExecutorBrief struct {
 
 	// 子任务持续时长
-	Duration *int64 `json:"duration,omitempty" xml:"duration"`
+	Duration *int64 `json:"duration,omitempty"`
 
 	// 子任务描述
-	Description *string `json:"description,omitempty" xml:"description"`
+	Description *string `json:"description,omitempty"`
 }
 
 func (o TaskExecutorBrief) String() string {

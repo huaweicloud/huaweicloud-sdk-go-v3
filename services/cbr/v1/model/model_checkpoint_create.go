@@ -12,20 +12,20 @@ import (
 type CheckpointCreate struct {
 
 	// 创建时间，例如:\"2020-02-05T10:38:34.209782\"
-	CreatedAt string `json:"created_at" xml:"created_at"`
+	CreatedAt string `json:"created_at"`
 
 	// 还原点ID
-	Id string `json:"id" xml:"id"`
+	Id string `json:"id"`
 
 	// 项目ID
-	ProjectId string `json:"project_id" xml:"project_id"`
+	ProjectId string `json:"project_id"`
 
 	// 状态:available,deleting,protecting,deleted,error-deleting,error
-	Status CheckpointCreateStatus `json:"status" xml:"status"`
+	Status CheckpointCreateStatus `json:"status"`
 
-	Vault *CheckpointPlanCreate `json:"vault,omitempty" xml:"vault"`
+	Vault *CheckpointPlanCreate `json:"vault,omitempty"`
 
-	ExtraInfo *CheckpointExtraInfoResp `json:"extra_info,omitempty" xml:"extra_info"`
+	ExtraInfo *CheckpointExtraInfoResp `json:"extra_info,omitempty"`
 }
 
 func (o CheckpointCreate) String() string {

@@ -13,7 +13,7 @@ import (
 type ChargeInfoResponse struct {
 
 	// 计费模式。  取值范围：  - prePaid：预付费，即包年/包月。 - postPaid：后付费，即按需付费。
-	ChargeMode ChargeInfoResponseChargeMode `json:"charge_mode" xml:"charge_mode"`
+	ChargeMode ChargeInfoResponseChargeMode `json:"charge_mode"`
 }
 
 func (o ChargeInfoResponse) String() string {

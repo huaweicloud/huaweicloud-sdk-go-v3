@@ -10,7 +10,7 @@ import (
 type DeleteIds struct {
 
 	// 所有删除对象id的集合
-	Ids []string `json:"ids" xml:"ids"`
+	Ids []string `json:"ids"`
 }
 
 func (o DeleteIds) String() string {

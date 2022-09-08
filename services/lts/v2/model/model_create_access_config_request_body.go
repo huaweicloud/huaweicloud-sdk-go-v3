@@ -13,18 +13,18 @@ import (
 type CreateAccessConfigRequestBody struct {
 
 	// 日志接入名称
-	AccessConfigName string `json:"access_config_name" xml:"access_config_name"`
+	AccessConfigName string `json:"access_config_name"`
 
 	// 日志接入类型。AGENT：主机接入类型
-	AccessConfigType CreateAccessConfigRequestBodyAccessConfigType `json:"access_config_type" xml:"access_config_type"`
+	AccessConfigType CreateAccessConfigRequestBodyAccessConfigType `json:"access_config_type"`
 
-	AccessConfigDetail *AccessConfigDeatilCreate `json:"access_config_detail" xml:"access_config_detail"`
+	AccessConfigDetail *AccessConfigDeatilCreate `json:"access_config_detail"`
 
-	LogInfo *AccessConfigBaseLogInfoCreate `json:"log_info" xml:"log_info"`
+	LogInfo *AccessConfigBaseLogInfoCreate `json:"log_info"`
 
-	HostGroupInfo *AccessConfigHostGroupIdListCreate `json:"host_group_info,omitempty" xml:"host_group_info"`
+	HostGroupInfo *AccessConfigHostGroupIdListCreate `json:"host_group_info,omitempty"`
 
-	AccessConfigTag *[]AccessConfigTag `json:"access_config_tag,omitempty" xml:"access_config_tag"`
+	AccessConfigTag *[]AccessConfigTag `json:"access_config_tag,omitempty"`
 }
 
 func (o CreateAccessConfigRequestBody) String() string {

@@ -10,10 +10,10 @@ import (
 type CdmQueryClusterDetailsRepsonsePublicEndpointStatus struct {
 
 	// 状态
-	Status *string `json:"status,omitempty" xml:"status"`
+	Status *string `json:"status,omitempty"`
 
 	// 错误信息
-	ErrorMessage *string `json:"errorMessage,omitempty" xml:"errorMessage"`
+	ErrorMessage *string `json:"errorMessage,omitempty"`
 }
 
 func (o CdmQueryClusterDetailsRepsonsePublicEndpointStatus) String() string {

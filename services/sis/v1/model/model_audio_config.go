@@ -13,13 +13,13 @@ import (
 type AudioConfig struct {
 
 	// 语音的格式。不填写此字段，则默认为auto。注意音频不论何种格式，均要求采样率在16000Hz以上。  auto  自动判断，系统会自动判断并支持WAV（内部支持pcm/ulaw/alaw编码格式）、MP3、M4A、ogg-opus、AMR等格式。推荐使用此取值。  wav  wav格式。  aac  aac格式。  mp3  mp3格式。  amr  amr格式。  m4a  m4a格式。  opus  ogg-opus格式。
-	AudioFormat *AudioConfigAudioFormat `json:"audio_format,omitempty" xml:"audio_format"`
+	AudioFormat *AudioConfigAudioFormat `json:"audio_format,omitempty"`
 
 	// 评测语言  en_gb  英语-英式口音。
-	Language AudioConfigLanguage `json:"language" xml:"language"`
+	Language AudioConfigLanguage `json:"language"`
 
 	// 评测模式  word 单词模式  sentence 句子模式
-	Mode AudioConfigMode `json:"mode" xml:"mode"`
+	Mode AudioConfigMode `json:"mode"`
 }
 
 func (o AudioConfig) String() string {

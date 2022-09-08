@@ -10,9 +10,9 @@ import (
 type AddFacesByFileRequest struct {
 
 	// 人脸库名称。
-	FaceSetName string `json:"face_set_name" xml:"face_set_name"`
+	FaceSetName string `json:"face_set_name"`
 
-	Body *AddFacesByFileRequestBody `json:"body,omitempty" xml:"body" type:"multipart"`
+	Body *AddFacesByFileRequestBody `json:"body,omitempty" type:"multipart"`
 }
 
 func (o AddFacesByFileRequest) String() string {

@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ListOsVersionsResponse struct {
-	Body           *[]ListOsVersionsResponseBody `json:"body,omitempty" xml:"body"`
+	Body           *[]ListOsVersionsResponseBody `json:"body,omitempty"`
 	HttpStatusCode int                           `json:"-"`
 }
 

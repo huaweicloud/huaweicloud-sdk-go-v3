@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type ShowVolumeResponse struct {
-	Volume         *Volume `json:"volume,omitempty" xml:"volume"`
+	Volume         *Volume `json:"volume,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

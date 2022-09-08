@@ -10,13 +10,13 @@ import (
 type ListNaAuthorizedNodesRequest struct {
 
 	// 北向数据接收端点ID
-	NaId string `json:"na_id" xml:"na_id"`
+	NaId string `json:"na_id"`
 
 	// 查询的起始位置，取值范围为非负整数，默认为0
-	Offset *int32 `json:"offset,omitempty" xml:"offset"`
+	Offset *int32 `json:"offset,omitempty"`
 
 	// 每页记录数，默认值为10，取值区间为1-1000
-	Limit *int32 `json:"limit,omitempty" xml:"limit"`
+	Limit *int32 `json:"limit,omitempty"`
 }
 
 func (o ListNaAuthorizedNodesRequest) String() string {

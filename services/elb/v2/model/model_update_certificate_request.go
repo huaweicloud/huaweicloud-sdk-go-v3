@@ -10,9 +10,9 @@ import (
 type UpdateCertificateRequest struct {
 
 	// SSL证书ID
-	CertificateId string `json:"certificate_id" xml:"certificate_id"`
+	CertificateId string `json:"certificate_id"`
 
-	Body *UpdateCertificateRequestBody `json:"body,omitempty" xml:"body"`
+	Body *UpdateCertificateRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateCertificateRequest) String() string {

@@ -10,9 +10,9 @@ import (
 type ListGrantsRequest struct {
 
 	// API版本号
-	VersionId string `json:"version_id" xml:"version_id"`
+	VersionId string `json:"version_id"`
 
-	Body *ListGrantsRequestBody `json:"body,omitempty" xml:"body"`
+	Body *ListGrantsRequestBody `json:"body,omitempty"`
 }
 
 func (o ListGrantsRequest) String() string {

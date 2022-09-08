@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type RecognizeMacaoIdCardResponse struct {
-	Result         *MacaoIdCardResult `json:"result,omitempty" xml:"result"`
+	Result         *MacaoIdCardResult `json:"result,omitempty"`
 	HttpStatusCode int                `json:"-"`
 }
 

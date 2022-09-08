@@ -10,9 +10,9 @@ import (
 type BatchDeleteIterationsV4Request struct {
 
 	// devcloud项目的32位id
-	ProjectId string `json:"project_id" xml:"project_id"`
+	ProjectId string `json:"project_id"`
 
-	Body *BatchDeleteIterationsV4RequestBody `json:"body,omitempty" xml:"body"`
+	Body *BatchDeleteIterationsV4RequestBody `json:"body,omitempty"`
 }
 
 func (o BatchDeleteIterationsV4Request) String() string {

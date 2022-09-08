@@ -10,10 +10,10 @@ import (
 type ShowHistoryTasksResponse struct {
 
 	// 总共的任务个数。
-	Total *int32 `json:"total,omitempty" xml:"total"`
+	Total *int32 `json:"total,omitempty"`
 
 	// 日志列表数据
-	Tasks          *[]TasksObject `json:"tasks,omitempty" xml:"tasks"`
+	Tasks          *[]TasksObject `json:"tasks,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }
 

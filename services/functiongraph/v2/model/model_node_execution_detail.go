@@ -10,16 +10,16 @@ import (
 type NodeExecutionDetail struct {
 
 	// 流程节点ID
-	NodeId *string `json:"node_id,omitempty" xml:"node_id"`
+	NodeId *string `json:"node_id,omitempty"`
 
 	// 流程节点名称
-	NodeName *string `json:"node_name,omitempty" xml:"node_name"`
+	NodeName *string `json:"node_name,omitempty"`
 
 	// 流程节点执行ID
-	ExecutionId *string `json:"execution_id,omitempty" xml:"execution_id"`
+	ExecutionId *string `json:"execution_id,omitempty"`
 
 	// 节点执行记录
-	Executions *[]NodeExecution `json:"executions,omitempty" xml:"executions"`
+	Executions *[]NodeExecution `json:"executions,omitempty"`
 }
 
 func (o NodeExecutionDetail) String() string {

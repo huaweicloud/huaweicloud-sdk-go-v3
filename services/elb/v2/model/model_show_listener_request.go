@@ -10,7 +10,7 @@ import (
 type ShowListenerRequest struct {
 
 	// 监听器id
-	ListenerId string `json:"listener_id" xml:"listener_id"`
+	ListenerId string `json:"listener_id"`
 }
 
 func (o ShowListenerRequest) String() string {

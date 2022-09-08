@@ -10,9 +10,9 @@ import (
 type GlanceAddImageMemberRequest struct {
 
 	// 镜像id
-	ImageId string `json:"image_id" xml:"image_id"`
+	ImageId string `json:"image_id"`
 
-	Body *GlanceAddImageMemberRequestBody `json:"body,omitempty" xml:"body"`
+	Body *GlanceAddImageMemberRequestBody `json:"body,omitempty"`
 }
 
 func (o GlanceAddImageMemberRequest) String() string {

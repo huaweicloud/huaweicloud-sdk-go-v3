@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RunEventExtractionRequest struct {
-	Body *PostEventExtractionReq `json:"body,omitempty" xml:"body"`
+	Body *PostEventExtractionReq `json:"body,omitempty"`
 }
 
 func (o RunEventExtractionRequest) String() string {

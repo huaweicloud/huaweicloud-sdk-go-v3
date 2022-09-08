@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateTakeOverTaskRequest struct {
-	Body *CreateTakeOverTaskReq `json:"body,omitempty" xml:"body"`
+	Body *CreateTakeOverTaskReq `json:"body,omitempty"`
 }
 
 func (o CreateTakeOverTaskRequest) String() string {

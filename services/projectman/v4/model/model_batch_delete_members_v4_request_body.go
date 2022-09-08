@@ -9,7 +9,7 @@ import (
 type BatchDeleteMembersV4RequestBody struct {
 
 	// 用户id
-	UserIds []string `json:"user_ids" xml:"user_ids"`
+	UserIds []string `json:"user_ids"`
 }
 
 func (o BatchDeleteMembersV4RequestBody) String() string {

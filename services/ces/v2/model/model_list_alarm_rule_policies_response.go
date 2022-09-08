@@ -10,10 +10,10 @@ import (
 type ListAlarmRulePoliciesResponse struct {
 
 	// 策略信息
-	Policies *[]Policy `json:"policies,omitempty" xml:"policies"`
+	Policies *[]Policy `json:"policies,omitempty"`
 
 	// 指定告警规则对应的策略总数
-	Count          *int32 `json:"count,omitempty" xml:"count"`
+	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

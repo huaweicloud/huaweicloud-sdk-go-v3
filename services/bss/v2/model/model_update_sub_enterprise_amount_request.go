@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type UpdateSubEnterpriseAmountRequest struct {
-	Body *TransferEnterpriseMultiAccountReq `json:"body,omitempty" xml:"body"`
+	Body *TransferEnterpriseMultiAccountReq `json:"body,omitempty"`
 }
 
 func (o UpdateSubEnterpriseAmountRequest) String() string {

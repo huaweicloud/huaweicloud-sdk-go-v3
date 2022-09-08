@@ -13,16 +13,16 @@ import (
 type KafkaSecurity struct {
 
 	// 证书名称，使用安全认证时必填。
-	TrustStoreKeyName *string `json:"trust_store_key_name,omitempty" xml:"trust_store_key_name"`
+	TrustStoreKeyName *string `json:"trust_store_key_name,omitempty"`
 
 	// 安全证书base64转码后的值，使用安全认证时必填。
-	TrustStoreKey *string `json:"trust_store_key,omitempty" xml:"trust_store_key"`
+	TrustStoreKey *string `json:"trust_store_key,omitempty"`
 
 	// 证书密码，使用安全认证时必填。
-	TrustStorePassword *string `json:"trust_store_password,omitempty" xml:"trust_store_password"`
+	TrustStorePassword *string `json:"trust_store_password,omitempty"`
 
 	// 认证类型，PLAINTEXT为无认证，，使用安全认证时必填。
-	Type *KafkaSecurityType `json:"type,omitempty" xml:"type"`
+	Type *KafkaSecurityType `json:"type,omitempty"`
 }
 
 func (o KafkaSecurity) String() string {

@@ -10,7 +10,7 @@ import (
 type ListBatchTaskFilesResponse struct {
 
 	// 批量任务文件列表。
-	Files          *[]BatchTaskFile `json:"files,omitempty" xml:"files"`
+	Files          *[]BatchTaskFile `json:"files,omitempty"`
 	HttpStatusCode int              `json:"-"`
 }
 

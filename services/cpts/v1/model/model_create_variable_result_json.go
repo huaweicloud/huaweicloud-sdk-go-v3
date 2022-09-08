@@ -9,7 +9,7 @@ import (
 type CreateVariableResultJson struct {
 
 	// variable_id
-	VariableId *int32 `json:"variable_id,omitempty" xml:"variable_id"`
+	VariableId *int32 `json:"variable_id,omitempty"`
 }
 
 func (o CreateVariableResultJson) String() string {

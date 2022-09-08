@@ -10,37 +10,37 @@ import (
 type VnicInfo struct {
 
 	// 功能说明：私网IP地址
-	PrivateIpAddress *string `json:"private_ip_address,omitempty" xml:"private_ip_address"`
+	PrivateIpAddress *string `json:"private_ip_address,omitempty"`
 
 	// 功能说明：端口所属设备ID 约束：不支持设置和更新,由系统自动维护
-	DeviceId *string `json:"device_id,omitempty" xml:"device_id"`
+	DeviceId *string `json:"device_id,omitempty"`
 
 	// 功能说明：设备所属 取值范围：合法设备所属,如network:dhcp、network:VIP_PORT、network:router_interface_distributed、network:router_centralized_snat 约束：不支持设置和更新,由系统自动维护
-	DeviceOwner *string `json:"device_owner,omitempty" xml:"device_owner"`
+	DeviceOwner *string `json:"device_owner,omitempty"`
 
 	// 功能说明：虚拟私有云ID
-	VpcId *string `json:"vpc_id,omitempty" xml:"vpc_id"`
+	VpcId *string `json:"vpc_id,omitempty"`
 
 	// 功能说明：端口ID
-	PortId *string `json:"port_id,omitempty" xml:"port_id"`
+	PortId *string `json:"port_id,omitempty"`
 
 	// 功能说明：端口profile信息
-	PortProfile *string `json:"port_profile,omitempty" xml:"port_profile"`
+	PortProfile *string `json:"port_profile,omitempty"`
 
 	// 功能说明：端口MAC地址 约束：由系统分配,不支持指定
-	Mac *string `json:"mac,omitempty" xml:"mac"`
+	Mac *string `json:"mac,omitempty"`
 
 	// 功能说明：VTEP IP
-	Vtep *string `json:"vtep,omitempty" xml:"vtep"`
+	Vtep *string `json:"vtep,omitempty"`
 
 	// 功能说明：VXLAN ID
-	Vni *string `json:"vni,omitempty" xml:"vni"`
+	Vni *string `json:"vni,omitempty"`
 
 	// 功能说明：端口所属实例ID,例如RDS实例ID 约束：不支持设置和更新,由系统自动维护
-	InstanceId *string `json:"instance_id,omitempty" xml:"instance_id"`
+	InstanceId *string `json:"instance_id,omitempty"`
 
 	// 功能说明：端口所属实例类型,例如“RDS” 约束：不支持设置和更新,由系统自动维护
-	InstanceType *string `json:"instance_type,omitempty" xml:"instance_type"`
+	InstanceType *string `json:"instance_type,omitempty"`
 }
 
 func (o VnicInfo) String() string {

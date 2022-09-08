@@ -9,10 +9,10 @@ import (
 type CreateAndDeletePrivilegeReq struct {
 
 	// 执行的操作(create|delete)
-	Operation string `json:"operation" xml:"operation"`
+	Operation string `json:"operation"`
 
 	// 权限标识
-	Privilege *string `json:"privilege,omitempty" xml:"privilege"`
+	Privilege *string `json:"privilege,omitempty"`
 }
 
 func (o CreateAndDeletePrivilegeReq) String() string {

@@ -10,9 +10,9 @@ import (
 type ShowJobByIdResponse struct {
 
 	// 实时分析作业详细配置，每个作业可选择不同的算子进行组合，各算子的使用方法详见：实时分析算子配置指南。
-	JobConfig map[string]interface{} `json:"job_config,omitempty" xml:"job_config"`
+	JobConfig map[string]interface{} `json:"job_config,omitempty"`
 
-	JobInfo        *StreamingJobInfoDto `json:"job_info,omitempty" xml:"job_info"`
+	JobInfo        *StreamingJobInfoDto `json:"job_info,omitempty"`
 	HttpStatusCode int                  `json:"-"`
 }
 

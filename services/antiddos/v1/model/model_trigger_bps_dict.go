@@ -10,13 +10,13 @@ import (
 type TriggerBpsDict struct {
 
 	// 流量分段ID
-	TrafficPosId int64 `json:"traffic_pos_id" xml:"traffic_pos_id"`
+	TrafficPosId int64 `json:"traffic_pos_id"`
 
 	// 每秒流量（Mbit/s）阈值
-	TrafficPerSecond int64 `json:"traffic_per_second" xml:"traffic_per_second"`
+	TrafficPerSecond int64 `json:"traffic_per_second"`
 
 	// 每秒报文数（个/s）阈值
-	PacketPerSecond int64 `json:"packet_per_second" xml:"packet_per_second"`
+	PacketPerSecond int64 `json:"packet_per_second"`
 }
 
 func (o TriggerBpsDict) String() string {

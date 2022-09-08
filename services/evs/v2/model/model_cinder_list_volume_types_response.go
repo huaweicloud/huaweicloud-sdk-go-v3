@@ -8,7 +8,7 @@ import (
 
 // Response Object
 type CinderListVolumeTypesResponse struct {
-	VolumeTypes    *[]VolumeType `json:"volume_types,omitempty" xml:"volume_types"`
+	VolumeTypes    *[]VolumeType `json:"volume_types,omitempty"`
 	HttpStatusCode int           `json:"-"`
 }
 

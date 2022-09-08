@@ -13,28 +13,28 @@ import (
 type Optimizer struct {
 
 	// 优化器类型。
-	Type *OptimizerType `json:"type,omitempty" xml:"type"`
+	Type *OptimizerType `json:"type,omitempty"`
 
 	// 学习率。
-	LearningRate *float64 `json:"learning_rate,omitempty" xml:"learning_rate"`
+	LearningRate *float64 `json:"learning_rate,omitempty"`
 
 	// 初始梯度累加和。
-	InitialAccumulatorValue *float64 `json:"initial_accumulator_value,omitempty" xml:"initial_accumulator_value"`
+	InitialAccumulatorValue *float64 `json:"initial_accumulator_value,omitempty"`
 
 	// L1正则项系数。
-	Lambda1 *float64 `json:"lambda1,omitempty" xml:"lambda1"`
+	Lambda1 *float64 `json:"lambda1,omitempty"`
 
 	// L2正则项系数。
-	Lambda2 *float64 `json:"lambda2,omitempty" xml:"lambda2"`
+	Lambda2 *float64 `json:"lambda2,omitempty"`
 
 	// 数值稳定常量。
-	Epsilon *float64 `json:"epsilon,omitempty" xml:"epsilon"`
+	Epsilon *float64 `json:"epsilon,omitempty"`
 
 	// 衰减因子。
-	DecayRate *float64 `json:"decay_rate,omitempty" xml:"decay_rate"`
+	DecayRate *float64 `json:"decay_rate,omitempty"`
 
 	// 衰减步长。
-	DecaySteps *float64 `json:"decay_steps,omitempty" xml:"decay_steps"`
+	DecaySteps *float64 `json:"decay_steps,omitempty"`
 }
 
 func (o Optimizer) String() string {

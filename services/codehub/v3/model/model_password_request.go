@@ -9,7 +9,7 @@ import (
 type PasswordRequest struct {
 
 	// https密码
-	Pwd string `json:"pwd" xml:"pwd"`
+	Pwd string `json:"pwd"`
 }
 
 func (o PasswordRequest) String() string {
