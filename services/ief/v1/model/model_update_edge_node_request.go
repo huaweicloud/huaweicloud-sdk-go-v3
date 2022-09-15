@@ -15,7 +15,7 @@ type UpdateEdgeNodeRequest struct {
 	// 铂金版实例ID，专业版实例为空值
 	IefInstanceId *string `json:"ief-instance-id,omitempty"`
 
-	Body *EdgeNodeUpdate `json:"body,omitempty"`
+	Body *UpdateEdgeNodeBody `json:"body,omitempty"`
 }
 
 func (o UpdateEdgeNodeRequest) String() string {

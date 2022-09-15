@@ -97,6 +97,18 @@ type MonthlyBillRes struct {
 
 	// 周期类型： 19：年20：月24：天25：小时5：一次性
 	PeriodType *int32 `json:"period_type,omitempty"`
+
+	// 根资源标识。
+	RootResourceId *string `json:"root_resource_id,omitempty"`
+
+	// 父资源标识。
+	ParentResourceId *string `json:"parent_resource_id,omitempty"`
+
+	// 订单ID 或 交易ID。 账单类型为1，2，3，4，8时为订单ID；其它场景下为： 交易ID(非月末扣费：应收ID；月末扣费：账单ID)。
+	TradeId *string `json:"trade_id,omitempty"`
+
+	// 产品的规格描述。
+	ProductSpecDesc *string `json:"product_spec_desc,omitempty"`
 }
 
 func (o MonthlyBillRes) String() string {

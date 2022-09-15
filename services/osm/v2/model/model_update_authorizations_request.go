@@ -10,7 +10,7 @@ import (
 type UpdateAuthorizationsRequest struct {
 
 	// 授权id
-	AuthorizationId int64 `json:"authorization_id"`
+	AuthorizationId string `json:"authorization_id"`
 
 	// 操作id，reject，cancel
 	ActionId *string `json:"action_id,omitempty"`

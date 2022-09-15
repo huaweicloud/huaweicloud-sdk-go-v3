@@ -10,7 +10,7 @@ import (
 type IncidentOrderAuthV2 struct {
 
 	// 授权id
-	Id *int64 `json:"id,omitempty"`
+	Id *string `json:"id,omitempty"`
 
 	// 授权状态
 	Status *int32 `json:"status,omitempty"`
@@ -21,8 +21,17 @@ type IncidentOrderAuthV2 struct {
 	// 简要描述
 	SimpleDescription *string `json:"simple_description,omitempty"`
 
+	// 授权描述
+	AuthDescribe *string `json:"auth_describe,omitempty"`
+
+	// 授权资源类型id
+	ResourceTypeId *interface{} `json:"resource_type_id,omitempty"`
+
 	// 授权资源类型名称
 	ResourceTypeName *string `json:"resource_type_name,omitempty"`
+
+	// 授权访问类型id
+	VisitTypeId *string `json:"visit_type_id,omitempty"`
 
 	// 授权访问类型名称
 	VisitTypeName *string `json:"visit_type_name,omitempty"`
@@ -46,7 +55,10 @@ type IncidentOrderAuthV2 struct {
 	XCustomerId *string `json:"x_customer_id,omitempty"`
 
 	// 子用户名称
-	XCustomerName *string `json:"x_customer_name,omitempty"`
+	XcustomerName *string `json:"xcustomer_name,omitempty"`
+
+	// 承诺书内容
+	ContentOfAuthLetter *string `json:"content_of_auth_letter,omitempty"`
 }
 
 func (o IncidentOrderAuthV2) String() string {

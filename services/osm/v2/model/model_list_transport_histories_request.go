@@ -10,7 +10,7 @@ import (
 type ListTransportHistoriesRequest struct {
 
 	// 授权id
-	AuthorizationId int64 `json:"authorization_id"`
+	AuthorizationId string `json:"authorization_id"`
 
 	// 授权详情id
 	AuthorizationDetailId int64 `json:"authorization_detail_id"`

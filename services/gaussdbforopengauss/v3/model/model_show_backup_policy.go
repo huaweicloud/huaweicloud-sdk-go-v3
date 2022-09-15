@@ -30,8 +30,11 @@ type ShowBackupPolicy struct {
 	// 控制差量备份时读取磁盘上表文件差量修改页面的预取页面个数，可设置范围为1~8192，默认64。
 	PrefetchBlock *int32 `json:"prefetch_block,omitempty"`
 
-	// 全量、差量备份时产生的备份文件会根据分片大小进行拆分，可设置范围为0~1024GB，设置需为4的倍数，默认4GB，0GB表示不限制大小。  取值范围：0 ~ 1024
+	// 废弃。
 	FilesplitSize *int32 `json:"filesplit_size,omitempty"`
+
+	// 全量、差量备份时产生的备份文件会根据分片大小进行拆分，可设置范围为0~1024GB，设置需为4的倍数，默认4GB，0GB表示不限制大小。  取值范围：0 ~ 1024
+	FileSplitSize *int32 `json:"file_split_size,omitempty"`
 }
 
 func (o ShowBackupPolicy) String() string {

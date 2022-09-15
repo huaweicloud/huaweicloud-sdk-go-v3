@@ -33,6 +33,9 @@ type EdgemgrDevice struct {
 	// 创建时间
 	CreatedAt string `json:"created_at"`
 
+	// 更新时间
+	UpdatedAt *string `json:"updated_at,omitempty"`
+
 	// 孪生属性配置
 	PropertyVisitors map[string]ValueInPropertyVisitors `json:"property_visitors"`
 

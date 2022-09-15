@@ -1,3 +1,137 @@
+# 0.1.2 2022-09-15
+
+### HuaweiCloud SDK BSS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the response parameters `root_resource_id`, `parent_resource_id`, `trade_id`, `product_spec_desc` to the interface `ListCustomerselfResourceRecordDetails`
+
+### HuaweiCloud SDK CDN
+
+- _Features_
+  - Support the interfaces `ShowTags`, `CreateTags`, `BatchDeleteTags`
+- _Bug Fix_
+  - None
+- _Change_
+  - Changes of the interface `ShowUrlTaskInfo`:
+    - Add the response parameter `result`
+    - Remove the response parameter `results`
+  - Add the response parameter `error_code_cache` to the interface `ShowDomainFullConfig`
+  - Add the request parameter `error_code_cache` to the interface `UpdateDomainFullConfig`
+
+### HuaweiCloud SDK CodeHub
+
+- _Features_
+  - Support the following interfaces：
+    - `ListFilesByQuery`
+    - `ListBranchesByRepositoryId`
+    - `CreateNewBranch`
+    - `AssociateIssues`
+    - `ListMergeRequest`
+    - `ShowMergeRequest`
+- _Bug Fix_
+  - None
+- _Change_
+  - Changes of the interface `ListSubfiles`:
+    - Add the response parameters `error`, `result`, `status`
+    - Remove the response parameters `trees`, `total`
+  - Changes of the interface `ShowStatisticalData`:
+    - Add the response parameters `error`, `result`, `status`
+    - Remove the response parameters `repoName`, `commitCount`, `repoSize`, `lastCommitTime`, `codeLines`, `branchCount`, `archiveUrl`
+  - Modify the type `string` -> `boolean` of the request parameter `force` of the interface `CreateCommit`
+  - Changes of the interface `AddProtectBranchV2`:
+    - Modify the type `int32` -> `enum` of the request parameter `push_access_level`
+    - Modify the type `int32` -> `enum` of the request parameter `merge_access_level`
+
+### HuaweiCloud SDK CSE
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the response parameters `create_revision`, `update_revision` to the interface `UploadKie`
+
+### HuaweiCloud SDK CSS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the request parameter `CloseKibanaPublicReq` to the interface `UpdateCloseKibana`
+  - Add the request parameter `payInfo` to the interface `CreateCluster`
+
+### HuaweiCloud SDK DCS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the response parameters `enterprise_project_name`, `update_at`, `product_type`, `storage_type`, `launched_at`, `cache_mode`, `support_slow_log_flag`, `db_number`, `replica_count`, `sharding_count`, `bandwidth_info` to the interface `ShowInstance`
+  - Add the response parameter `backupId` to the interface `ListRedislog`
+  - Add the response parameter `instance_id` to the interface `ShowIpWhitelist`
+  - Add the request parameter `instance_id` to the interface `UpdateIpWhitelist`
+  - Add the response parameters `updated_at`, `created_at`, `status` to the interface `ListBackgroundTask`
+
+### HuaweiCloud SDK EVS
+
+- _Features_
+  - Support the following interfaces：
+    - `ShowVersion`
+    - `ListVersions`
+    - `CinderShowVolumeTransfer`
+    - `CinderDeleteVolumeTransfer`
+    - `CinderListVolumeTransfers`
+    - `CinderCreateVolumeTransfer`
+    - `CinderAcceptVolumeTransfer`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+### HuaweiCloud SDK IEF
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the response parameters `cpu`, `memory`, `gpu`, `npu`, `cpu`, `memory`, `gpu`, `npu` to the interface `ListApps`
+  - Add the response parameters `cpu`, `memory`, `gpu`, `npu`, `cpu`, `memory`, `gpu`, `npu` to the interface `UpdateApp`
+  - Add the response parameters `cpu`, `memory`, `gpu`, `npu`, `cpu`, `memory`, `gpu`, `npu` to the interface `ShowAppDetail`
+  - Add the response parameters `cpu`, `memory`, `gpu`, `npu`, `cpu`, `memory`, `gpu`, `npu` to the interface `ListAppVersions`
+  - Add the request parameters `cpu`, `memory`, `gpu`, `npu`, `cpu`, `memory`, `gpu`, `npu` to the interface `CreateAppVersions`
+  - Changes of the interface `UpdateAppVersion`:
+    - Add the request parameters `cpu`, `memory`, `gpu`, `npu`, `cpu`, `memory`, `gpu`, `npu`
+    - Add the response parameters `cpu`, `memory`, `gpu`, `npu`, `cpu`, `memory`, `gpu`, `npu`
+  - Add the response parameters `cpu`, `memory`, `gpu`, `npu`, `cpu`, `memory`, `gpu`, `npu` to the interface `ShowAppVersionDetail`
+
+### HuaweiCloud SDK LTS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the request parameter `ttl_in_days` to the interface `CreateLogStream`
+  - Add the request parameter `whether_to_rows` to the interface `ListStructuredLogsWithTimeRange`
+  - The request parameter `isAnalysis` changed to not required of the interface `UpdateStructTemplate`
+  - The request parameter `isAnalysis` changed to not required of the interface `CreateStructTemplate`
+
+### HuaweiCloud SDK Moderation
+
+- _Features_
+  - Support the interfaces `RunCreateVideoModerationJob`, `RunQueryVideoModerationJob`
+- _Bug Fix_
+  - None
+- _Change_
+  - The request parameter `url` changed to not required of the interface `RunCreateAudioModerationJob`
+
 # 0.1.1 2022-09-08
 
 ### HuaweiCloud SDK IAM

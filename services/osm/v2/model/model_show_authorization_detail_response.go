@@ -11,7 +11,7 @@ import (
 type ShowAuthorizationDetailResponse struct {
 
 	// 授权id
-	Id *int64 `json:"id,omitempty"`
+	Id *string `json:"id,omitempty"`
 
 	// 授权状态
 	Status *int32 `json:"status,omitempty"`

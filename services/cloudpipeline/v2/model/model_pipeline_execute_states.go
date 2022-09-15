@@ -9,10 +9,10 @@ import (
 // 流水线执行结果
 type PipelineExecuteStates struct {
 
-	// 流水线执行结果
+	// 流水线执行结果。取值及含义：success：成功；error：失败；aborted：终止
 	Result string `json:"result"`
 
-	// 流水线执行状态
+	// 流水线执行状态.取值和含义:waiting:等待;running:执行中;verifying:待审核;suspending:挂起;completed:完成
 	Status string `json:"status"`
 
 	// 阶段执行情况
@@ -26,6 +26,9 @@ type PipelineExecuteStates struct {
 
 	// 流水线ID
 	PipelineId string `json:"pipeline_id"`
+
+	// 流水线执行ID
+	BuildId string `json:"build_id"`
 
 	// 流水线详情页URL
 	DetailUrl string `json:"detail_url"`

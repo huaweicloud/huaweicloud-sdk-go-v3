@@ -9,6 +9,15 @@ import (
 // 当前规格实例的属性。
 type ListEnginePropertiesEntity struct {
 
+	// 节点增长步长。
+	StepLength *string `json:"step_length,omitempty"`
+
+	// 每个Broker的最大对列。
+	MaxQueuePerBroker *string `json:"max_queue_per_broker,omitempty"`
+
+	// 每个Broker的最大连接数。
+	MaxConnectionPerBroker *string `json:"max_connection_per_broker,omitempty"`
+
 	// 每个Broker的最大分区数。
 	MaxPartitionPerBroker *string `json:"max_partition_per_broker,omitempty"`
 

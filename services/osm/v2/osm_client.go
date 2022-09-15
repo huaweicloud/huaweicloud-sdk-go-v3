@@ -107,6 +107,28 @@ func (c *OsmClient) ConfirmAuthorizationsInvoker(request *model.ConfirmAuthoriza
 	return &ConfirmAuthorizationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateCaseExtendsParam 提交工单扩展参数
+//
+// 提交工单扩展参数
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *OsmClient) CreateCaseExtendsParam(request *model.CreateCaseExtendsParamRequest) (*model.CreateCaseExtendsParamResponse, error) {
+	requestDef := GenReqDefForCreateCaseExtendsParam()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateCaseExtendsParamResponse), nil
+	}
+}
+
+// CreateCaseExtendsParamInvoker 提交工单扩展参数
+func (c *OsmClient) CreateCaseExtendsParamInvoker(request *model.CreateCaseExtendsParamRequest) *CreateCaseExtendsParamInvoker {
+	requestDef := GenReqDefForCreateCaseExtendsParam()
+	return &CreateCaseExtendsParamInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateCaseLabels 添加工单关联标签接口
 //
 // 添加工单关联标签接口
@@ -415,6 +437,28 @@ func (c *OsmClient) DownloadImagesInvoker(request *model.DownloadImagesRequest) 
 	return &DownloadImagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListAccessoryAccessUrls 租户批量获取下载链接
+//
+// 租户批量获取下载链接
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *OsmClient) ListAccessoryAccessUrls(request *model.ListAccessoryAccessUrlsRequest) (*model.ListAccessoryAccessUrlsResponse, error) {
+	requestDef := GenReqDefForListAccessoryAccessUrls()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAccessoryAccessUrlsResponse), nil
+	}
+}
+
+// ListAccessoryAccessUrlsInvoker 租户批量获取下载链接
+func (c *OsmClient) ListAccessoryAccessUrlsInvoker(request *model.ListAccessoryAccessUrlsRequest) *ListAccessoryAccessUrlsInvoker {
+	requestDef := GenReqDefForListAccessoryAccessUrls()
+	return &ListAccessoryAccessUrlsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListAgencies 查询委托
 //
 // 查询委托
@@ -677,6 +721,28 @@ func (c *OsmClient) ListCases(request *model.ListCasesRequest) (*model.ListCases
 func (c *OsmClient) ListCasesInvoker(request *model.ListCasesRequest) *ListCasesInvoker {
 	requestDef := GenReqDefForListCases()
 	return &ListCasesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCustomersRegions 查询用户关联的region
+//
+// 查询用户关联的region
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *OsmClient) ListCustomersRegions(request *model.ListCustomersRegionsRequest) (*model.ListCustomersRegionsResponse, error) {
+	requestDef := GenReqDefForListCustomersRegions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCustomersRegionsResponse), nil
+	}
+}
+
+// ListCustomersRegionsInvoker 查询用户关联的region
+func (c *OsmClient) ListCustomersRegionsInvoker(request *model.ListCustomersRegionsRequest) *ListCustomersRegionsInvoker {
+	requestDef := GenReqDefForListCustomersRegions()
+	return &ListCustomersRegionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListExtendsParams 查询附加参数
@@ -1163,6 +1229,28 @@ func (c *OsmClient) ShowCaseDetailInvoker(request *model.ShowCaseDetailRequest) 
 	return &ShowCaseDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowCaseExtendsParam 查询工单扩展参数
+//
+// 查询工单扩展参数
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *OsmClient) ShowCaseExtendsParam(request *model.ShowCaseExtendsParamRequest) (*model.ShowCaseExtendsParamResponse, error) {
+	requestDef := GenReqDefForShowCaseExtendsParam()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowCaseExtendsParamResponse), nil
+	}
+}
+
+// ShowCaseExtendsParamInvoker 查询工单扩展参数
+func (c *OsmClient) ShowCaseExtendsParamInvoker(request *model.ShowCaseExtendsParamRequest) *ShowCaseExtendsParamInvoker {
+	requestDef := GenReqDefForShowCaseExtendsParam()
+	return &ShowCaseExtendsParamInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowCaseStatus 查询某个工单状态
 //
 // 查询某个工单状态
@@ -1183,6 +1271,50 @@ func (c *OsmClient) ShowCaseStatus(request *model.ShowCaseStatusRequest) (*model
 func (c *OsmClient) ShowCaseStatusInvoker(request *model.ShowCaseStatusRequest) *ShowCaseStatusInvoker {
 	requestDef := GenReqDefForShowCaseStatus()
 	return &ShowCaseStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowCustomerPrivilegePolicy 查询提单权限
+//
+// 查询提单权限
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *OsmClient) ShowCustomerPrivilegePolicy(request *model.ShowCustomerPrivilegePolicyRequest) (*model.ShowCustomerPrivilegePolicyResponse, error) {
+	requestDef := GenReqDefForShowCustomerPrivilegePolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowCustomerPrivilegePolicyResponse), nil
+	}
+}
+
+// ShowCustomerPrivilegePolicyInvoker 查询提单权限
+func (c *OsmClient) ShowCustomerPrivilegePolicyInvoker(request *model.ShowCustomerPrivilegePolicyRequest) *ShowCustomerPrivilegePolicyInvoker {
+	requestDef := GenReqDefForShowCustomerPrivilegePolicy()
+	return &ShowCustomerPrivilegePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowLatestPublishedAgreement 查看最新发布版本协议详情
+//
+// 查看最新发布版本协议详情
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *OsmClient) ShowLatestPublishedAgreement(request *model.ShowLatestPublishedAgreementRequest) (*model.ShowLatestPublishedAgreementResponse, error) {
+	requestDef := GenReqDefForShowLatestPublishedAgreement()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowLatestPublishedAgreementResponse), nil
+	}
+}
+
+// ShowLatestPublishedAgreementInvoker 查看最新发布版本协议详情
+func (c *OsmClient) ShowLatestPublishedAgreementInvoker(request *model.ShowLatestPublishedAgreementRequest) *ShowLatestPublishedAgreementInvoker {
+	requestDef := GenReqDefForShowLatestPublishedAgreement()
+	return &ShowLatestPublishedAgreementInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowPartnersCasesPrivilege 查询伙伴工单权限
@@ -1229,6 +1361,50 @@ func (c *OsmClient) ShowPartnersServiceInfoInvoker(request *model.ShowPartnersSe
 	return &ShowPartnersServiceInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowSignedLatestPublishedAgreement 查询用户是否签署最新协议
+//
+// 查询用户是否签署最新协议
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *OsmClient) ShowSignedLatestPublishedAgreement(request *model.ShowSignedLatestPublishedAgreementRequest) (*model.ShowSignedLatestPublishedAgreementResponse, error) {
+	requestDef := GenReqDefForShowSignedLatestPublishedAgreement()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSignedLatestPublishedAgreementResponse), nil
+	}
+}
+
+// ShowSignedLatestPublishedAgreementInvoker 查询用户是否签署最新协议
+func (c *OsmClient) ShowSignedLatestPublishedAgreementInvoker(request *model.ShowSignedLatestPublishedAgreementRequest) *ShowSignedLatestPublishedAgreementInvoker {
+	requestDef := GenReqDefForShowSignedLatestPublishedAgreement()
+	return &ShowSignedLatestPublishedAgreementInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SignPublishedAgreement 签署协议
+//
+// 签署协议
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *OsmClient) SignPublishedAgreement(request *model.SignPublishedAgreementRequest) (*model.SignPublishedAgreementResponse, error) {
+	requestDef := GenReqDefForSignPublishedAgreement()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SignPublishedAgreementResponse), nil
+	}
+}
+
+// SignPublishedAgreementInvoker 签署协议
+func (c *OsmClient) SignPublishedAgreementInvoker(request *model.SignPublishedAgreementRequest) *SignPublishedAgreementInvoker {
+	requestDef := GenReqDefForSignPublishedAgreement()
+	return &SignPublishedAgreementInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateAuthorizations 拒绝|撤销授权
 //
 // 拒绝|撤销授权
@@ -1249,6 +1425,28 @@ func (c *OsmClient) UpdateAuthorizations(request *model.UpdateAuthorizationsRequ
 func (c *OsmClient) UpdateAuthorizationsInvoker(request *model.UpdateAuthorizationsRequest) *UpdateAuthorizationsInvoker {
 	requestDef := GenReqDefForUpdateAuthorizations()
 	return &UpdateAuthorizationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateCaseContactInfo 修改联系方式
+//
+// 修改联系方式
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *OsmClient) UpdateCaseContactInfo(request *model.UpdateCaseContactInfoRequest) (*model.UpdateCaseContactInfoResponse, error) {
+	requestDef := GenReqDefForUpdateCaseContactInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateCaseContactInfoResponse), nil
+	}
+}
+
+// UpdateCaseContactInfoInvoker 修改联系方式
+func (c *OsmClient) UpdateCaseContactInfoInvoker(request *model.UpdateCaseContactInfoRequest) *UpdateCaseContactInfoInvoker {
+	requestDef := GenReqDefForUpdateCaseContactInfo()
+	return &UpdateCaseContactInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateCases 工单操作

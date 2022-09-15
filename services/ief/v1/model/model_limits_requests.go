@@ -19,7 +19,7 @@ type LimitsRequests struct {
 	Gpu *float32 `json:"gpu,omitempty"`
 
 	// Npu个数，大于0，最大1000；请求不需要带单位
-	Npu *float32 `json:"npu,omitempty"`
+	Npu *int32 `json:"npu,omitempty"`
 }
 
 func (o LimitsRequests) String() string {

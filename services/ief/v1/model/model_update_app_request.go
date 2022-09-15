@@ -15,7 +15,7 @@ type UpdateAppRequest struct {
 	// 应用模板ID
 	AppId string `json:"app_id"`
 
-	Body *AppUpdate `json:"body,omitempty"`
+	Body *UpdateAppBody `json:"body,omitempty"`
 }
 
 func (o UpdateAppRequest) String() string {

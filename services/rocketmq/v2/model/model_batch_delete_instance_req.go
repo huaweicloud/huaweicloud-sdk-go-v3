@@ -17,7 +17,7 @@ type BatchDeleteInstanceReq struct {
 	// 对实例的操作：delete
 	Action BatchDeleteInstanceReqAction `json:"action"`
 
-	// 参数值为RocketMQ，表示删除租户所有创建失败的RocketMQ实例。
+	// 参数值为reliability,表示删除租户所有创建失败的RocketMQ实例。
 	AllFailure *BatchDeleteInstanceReqAllFailure `json:"all_failure,omitempty"`
 }
 
@@ -73,17 +73,13 @@ type BatchDeleteInstanceReqAllFailure struct {
 }
 
 type BatchDeleteInstanceReqAllFailureEnum struct {
-	TRUE  BatchDeleteInstanceReqAllFailure
-	FALSE BatchDeleteInstanceReqAllFailure
+	RELIABILITY BatchDeleteInstanceReqAllFailure
 }
 
 func GetBatchDeleteInstanceReqAllFailureEnum() BatchDeleteInstanceReqAllFailureEnum {
 	return BatchDeleteInstanceReqAllFailureEnum{
-		TRUE: BatchDeleteInstanceReqAllFailure{
-			value: "true",
-		},
-		FALSE: BatchDeleteInstanceReqAllFailure{
-			value: "false",
+		RELIABILITY: BatchDeleteInstanceReqAllFailure{
+			value: "reliability",
 		},
 	}
 }

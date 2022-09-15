@@ -317,6 +317,18 @@ func (i *SetDbUserPwdInvoker) Invoke() (*model.SetDbUserPwdResponse, error) {
 	}
 }
 
+type SetRecyclePolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetRecyclePolicyInvoker) Invoke() (*model.SetRecyclePolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetRecyclePolicyResponse), nil
+	}
+}
+
 type ShowBackupPolicyInvoker struct {
 	*invoker.BaseInvoker
 }

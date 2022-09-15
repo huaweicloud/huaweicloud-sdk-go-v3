@@ -49,6 +49,9 @@ type AppVersionDetail struct {
 	LivenessProbe *ProbeDetail `json:"liveness_probe,omitempty"`
 
 	ReadinessProbe *ProbeDetail `json:"readiness_probe,omitempty"`
+
+	// NPU芯片类型，可填：D310，D910
+	NpuType *string `json:"npu_type,omitempty"`
 }
 
 func (o AppVersionDetail) String() string {

@@ -592,6 +592,28 @@ func (c *GaussDBforopenGaussClient) SetDbUserPwdInvoker(request *model.SetDbUser
 	return &SetDbUserPwdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SetRecyclePolicy 设置回收站策略
+//
+// 设置回收站策略。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) SetRecyclePolicy(request *model.SetRecyclePolicyRequest) (*model.SetRecyclePolicyResponse, error) {
+	requestDef := GenReqDefForSetRecyclePolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetRecyclePolicyResponse), nil
+	}
+}
+
+// SetRecyclePolicyInvoker 设置回收站策略
+func (c *GaussDBforopenGaussClient) SetRecyclePolicyInvoker(request *model.SetRecyclePolicyRequest) *SetRecyclePolicyInvoker {
+	requestDef := GenReqDefForSetRecyclePolicy()
+	return &SetRecyclePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowBackupPolicy 查询自动备份策略
 //
 // 查询自动备份策略。

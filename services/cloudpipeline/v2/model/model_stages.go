@@ -9,16 +9,16 @@ import (
 // 流水线阶段执行信息
 type Stages struct {
 
-	// 阶段执行结果
+	// 阶段执行结果。取值及含义：success：成功；error：失败；aborted：终止
 	Result string `json:"result"`
 
-	// 阶段执行状态
+	// 阶段执行状态。取值和含义:waiting:等待;running:执行中;verifying:待审核;suspending:挂起;completed:完成
 	Status string `json:"status"`
 
 	// 阶段名字
 	Name string `json:"name"`
 
-	// 任务参数
+	// -
 	Parameters *interface{} `json:"parameters"`
 
 	// 阶段顺序

@@ -41,7 +41,7 @@ type CreateClusterInfo struct {
 
 	PublicIp *PublicIp `json:"public_ip,omitempty"`
 
-	// CN部署量，取值范围为2~集群节点数-1，最大值为20，默认值为3。
+	// CN部署量，取值范围为2~集群节点数，最大值为20，默认值为3。
 	NumberOfCn *int32 `json:"number_of_cn,omitempty"`
 
 	// 企业项目ID，对集群指定企业项目，如果未指定，则使用默认企业项目“default”的ID，即0。

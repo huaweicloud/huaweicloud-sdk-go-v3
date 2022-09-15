@@ -1,3 +1,137 @@
+# 0.1.2 2022-09-15
+
+### HuaweiCloud SDK BSS
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`ListCustomerselfResourceRecordDetails`新增响应参数 `root_resource_id`、`parent_resource_id`、`trade_id`、`product_spec_desc`
+
+### HuaweiCloud SDK CDN
+
+- _新增特性_
+  - 支持接口`ShowTags`、`CreateTags`、`BatchDeleteTags`
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`ShowUrlTaskInfo`:
+    - 新增响应参数 `result`
+    - 移除响应参数 `results`
+  - 接口`ShowDomainFullConfig`新增响应参数 `error_code_cache`
+  - 接口`UpdateDomainFullConfig`新增请求参数 `error_code_cache`
+
+### HuaweiCloud SDK CodeHub
+
+- _新增特性_
+  - 支持以下接口：
+    - `ListFilesByQuery`
+    - `ListBranchesByRepositoryId`
+    - `CreateNewBranch`
+    - `AssociateIssues`
+    - `ListMergeRequest`
+    - `ShowMergeRequest`
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`ListSubfiles`:
+    - 新增响应参数 `error`、`result`、`status`
+    - 移除响应参数 `trees`、`total`
+  - 接口`ShowStatisticalData`:
+    - 新增响应参数 `error`、`result`、`status`
+    - 移除响应参数 `repoName`、`commitCount`、`repoSize`、`lastCommitTime`、`codeLines`、`branchCount`、`archiveUrl`
+  - 接口`CreateCommit`请求参数`force`类型调整 `string` -> `boolean`
+  - 接口`AddProtectBranchV2`:
+    - 请求参数`push_access_level`类型调整 `int32` -> `enum`
+    - 请求参数`merge_access_level`类型调整 `int32` -> `enum`
+
+### HuaweiCloud SDK CSE
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`UploadKie`新增响应参数 `create_revision`、`update_revision`
+
+### HuaweiCloud SDK CSS
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`UpdateCloseKibana`新增请求参数 `CloseKibanaPublicReq`
+  - 接口`CreateCluster`新增请求参数 `payInfo`
+
+### HuaweiCloud SDK DCS
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`ShowInstance`新增响应参数 `enterprise_project_name`、`update_at`、`product_type`、`storage_type`、`launched_at`、`cache_mode`、`support_slow_log_flag`、`db_number`、`replica_count`、`sharding_count`、`bandwidth_info`
+  - 接口`ListRedislog`新增响应参数 `backupId`
+  - 接口`ShowIpWhitelist`新增响应参数 `instance_id`
+  - 接口`UpdateIpWhitelist`新增请求参数 `instance_id`
+  - 接口`ListBackgroundTask`新增响应参数 `updated_at`、`created_at`、`status`
+
+### HuaweiCloud SDK EVS
+
+- _新增特性_
+  - 支持以下接口：
+    - `ShowVersion`
+    - `ListVersions`
+    - `CinderShowVolumeTransfer`
+    - `CinderDeleteVolumeTransfer`
+    - `CinderListVolumeTransfers`
+    - `CinderCreateVolumeTransfer`
+    - `CinderAcceptVolumeTransfer`
+- _解决问题_
+  - 无
+- _特性变更_
+  - 无
+
+### HuaweiCloud SDK IEF
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`ListApps`新增响应参数 `cpu`、`memory`、`gpu`、`npu`、`cpu`、`memory`、`gpu`、`npu`
+  - 接口`UpdateApp`新增响应参数 `cpu`、`memory`、`gpu`、`npu`、`cpu`、`memory`、`gpu`、`npu`
+  - 接口`ShowAppDetail`新增响应参数 `cpu`、`memory`、`gpu`、`npu`、`cpu`、`memory`、`gpu`、`npu`
+  - 接口`ListAppVersions`新增响应参数 `cpu`、`memory`、`gpu`、`npu`、`cpu`、`memory`、`gpu`、`npu`
+  - 接口`CreateAppVersions`新增请求参数 `cpu`、`memory`、`gpu`、`npu`、`cpu`、`memory`、`gpu`、`npu`
+  - 接口`UpdateAppVersion`:
+    - 新增请求参数 `cpu`、`memory`、`gpu`、`npu`、`cpu`、`memory`、`gpu`、`npu`
+    - 新增响应参数 `cpu`、`memory`、`gpu`、`npu`、`cpu`、`memory`、`gpu`、`npu`
+  - 接口`ShowAppVersionDetail`新增响应参数 `cpu`、`memory`、`gpu`、`npu`、`cpu`、`memory`、`gpu`、`npu`
+
+### HuaweiCloud SDK LTS
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`CreateLogStream`新增请求参数 `ttl_in_days`
+  - 接口`ListStructuredLogsWithTimeRange`新增请求参数 `whether_to_rows`
+  - 接口`UpdateStructTemplate`请求参数`isAnalysis`改为非必填
+  - 接口`CreateStructTemplate`请求参数`isAnalysis`改为非必填
+
+### HuaweiCloud SDK Moderation
+
+- _新增特性_
+  - 支持接口`RunCreateVideoModerationJob`、`RunQueryVideoModerationJob`
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`RunCreateAudioModerationJob`请求参数`url`改为非必填
+
 # 0.1.1 2022-09-08
 
 ### HuaweiCloud SDK IAM

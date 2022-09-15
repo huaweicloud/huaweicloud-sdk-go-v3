@@ -9,8 +9,8 @@ import (
 // Request Object
 type ConfirmAuthorizationsRequest struct {
 
-	// 授权详情Id
-	AuthorizationId int64 `json:"authorization_id"`
+	// 授权id
+	AuthorizationId string `json:"authorization_id"`
 
 	// 对接站点信息。  0（中国站） 1（国际站），不填的话默认为0。
 	XSite *int32 `json:"X-Site,omitempty"`

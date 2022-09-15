@@ -18,7 +18,7 @@ type UpdateAppVersionRequest struct {
 	// 应用模板版本ID
 	VersionId string `json:"version_id"`
 
-	Body *VersionUpdate `json:"body,omitempty"`
+	Body *UpdataAppVersionBody `json:"body,omitempty"`
 }
 
 func (o UpdateAppVersionRequest) String() string {

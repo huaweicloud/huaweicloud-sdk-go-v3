@@ -8,8 +8,11 @@ import (
 
 type ListAccessPolicyRespPolicies struct {
 
-	// 秘钥。
+	// 用户名。
 	AccessKey *string `json:"access_key,omitempty"`
+
+	// 秘钥。
+	SecretKey *string `json:"secret_key,omitempty"`
 
 	// IP白名单。
 	WhiteRemoteAddress *string `json:"white_remote_address,omitempty"`

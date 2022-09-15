@@ -9,9 +9,9 @@ import (
 // Response Object
 type StopJobResponse struct {
 
-	// 作业运行信息，请参见submission参数说明
-	Submissions    *[]StartJobSubmission `json:"submissions,omitempty"`
-	HttpStatusCode int                   `json:"-"`
+	// 校验结构：如果停止作业接失败，返回失败原因，请参见validation-result参数说明。如果停止成功，返回空列表。
+	ValidationResult *[]JobValidationResult `json:"validation-result,omitempty"`
+	HttpStatusCode   int                    `json:"-"`
 }
 
 func (o StopJobResponse) String() string {

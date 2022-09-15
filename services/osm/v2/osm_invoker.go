@@ -53,6 +53,18 @@ func (i *ConfirmAuthorizationsInvoker) Invoke() (*model.ConfirmAuthorizationsRes
 	}
 }
 
+type CreateCaseExtendsParamInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateCaseExtendsParamInvoker) Invoke() (*model.CreateCaseExtendsParamResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateCaseExtendsParamResponse), nil
+	}
+}
+
 type CreateCaseLabelsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -221,6 +233,18 @@ func (i *DownloadImagesInvoker) Invoke() (*model.DownloadImagesResponse, error) 
 	}
 }
 
+type ListAccessoryAccessUrlsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAccessoryAccessUrlsInvoker) Invoke() (*model.ListAccessoryAccessUrlsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAccessoryAccessUrlsResponse), nil
+	}
+}
+
 type ListAgenciesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -362,6 +386,18 @@ func (i *ListCasesInvoker) Invoke() (*model.ListCasesResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListCasesResponse), nil
+	}
+}
+
+type ListCustomersRegionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCustomersRegionsInvoker) Invoke() (*model.ListCustomersRegionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCustomersRegionsResponse), nil
 	}
 }
 
@@ -629,6 +665,18 @@ func (i *ShowCaseDetailInvoker) Invoke() (*model.ShowCaseDetailResponse, error) 
 	}
 }
 
+type ShowCaseExtendsParamInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowCaseExtendsParamInvoker) Invoke() (*model.ShowCaseExtendsParamResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowCaseExtendsParamResponse), nil
+	}
+}
+
 type ShowCaseStatusInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -638,6 +686,30 @@ func (i *ShowCaseStatusInvoker) Invoke() (*model.ShowCaseStatusResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.ShowCaseStatusResponse), nil
+	}
+}
+
+type ShowCustomerPrivilegePolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowCustomerPrivilegePolicyInvoker) Invoke() (*model.ShowCustomerPrivilegePolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowCustomerPrivilegePolicyResponse), nil
+	}
+}
+
+type ShowLatestPublishedAgreementInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowLatestPublishedAgreementInvoker) Invoke() (*model.ShowLatestPublishedAgreementResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowLatestPublishedAgreementResponse), nil
 	}
 }
 
@@ -665,6 +737,30 @@ func (i *ShowPartnersServiceInfoInvoker) Invoke() (*model.ShowPartnersServiceInf
 	}
 }
 
+type ShowSignedLatestPublishedAgreementInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSignedLatestPublishedAgreementInvoker) Invoke() (*model.ShowSignedLatestPublishedAgreementResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSignedLatestPublishedAgreementResponse), nil
+	}
+}
+
+type SignPublishedAgreementInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SignPublishedAgreementInvoker) Invoke() (*model.SignPublishedAgreementResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SignPublishedAgreementResponse), nil
+	}
+}
+
 type UpdateAuthorizationsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -674,6 +770,18 @@ func (i *UpdateAuthorizationsInvoker) Invoke() (*model.UpdateAuthorizationsRespo
 		return nil, err
 	} else {
 		return result.(*model.UpdateAuthorizationsResponse), nil
+	}
+}
+
+type UpdateCaseContactInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateCaseContactInfoInvoker) Invoke() (*model.UpdateCaseContactInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateCaseContactInfoResponse), nil
 	}
 }
 

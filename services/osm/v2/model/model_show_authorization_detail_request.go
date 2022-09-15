@@ -10,7 +10,7 @@ import (
 type ShowAuthorizationDetailRequest struct {
 
 	// 授权id
-	AuthorizationId int64 `json:"authorization_id"`
+	AuthorizationId string `json:"authorization_id"`
 
 	// 组id
 	GroupId *string `json:"group_id,omitempty"`

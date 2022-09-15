@@ -13,7 +13,7 @@ type NtpConfigs struct {
 	NtpEnabled *bool `json:"ntp_enabled,omitempty"`
 
 	// ntp server地址
-	Ntpservers *[]string `json:"ntpservers,omitempty"`
+	NtpServers *[]string `json:"ntp_servers,omitempty"`
 }
 
 func (o NtpConfigs) String() string {
