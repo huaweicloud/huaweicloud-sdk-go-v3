@@ -30,6 +30,12 @@ type PostSourceServerBody struct {
 	// 操作系统版本，注册必选，更新非必选
 	OsVersion *string `json:"os_version,omitempty"`
 
+	// 操作系统虚拟化方式
+	VirtualizationType *string `json:"virtualization_type,omitempty"`
+
+	// Linux操作系统块检查
+	LinuxBlockCheck *string `json:"linux_block_check,omitempty"`
+
 	// 源端服务器启动类型，如BIOS或者UEFI
 	Firmware *PostSourceServerBodyFirmware `json:"firmware,omitempty"`
 
@@ -80,6 +86,18 @@ type PostSourceServerBody struct {
 
 	// Agent版本
 	AgentVersion string `json:"agent_version"`
+
+	// 内核版本信息
+	KernelVersion *string `json:"kernel_version,omitempty"`
+
+	// 迁移周期 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
+	MigrationCycle *PostSourceServerBodyMigrationCycle `json:"migration_cycle,omitempty"`
+
+	// 源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成
+	State *PostSourceServerBodyState `json:"state,omitempty"`
+
+	// 是否是OEM操作系统(Windows)
+	OemSystem *bool `json:"oem_system,omitempty"`
 }
 
 func (o PostSourceServerBody) String() string {
@@ -204,6 +222,146 @@ func (c PostSourceServerBodyBootLoader) MarshalJSON() ([]byte, error) {
 }
 
 func (c *PostSourceServerBodyBootLoader) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type PostSourceServerBodyMigrationCycle struct {
+	value string
+}
+
+type PostSourceServerBodyMigrationCycleEnum struct {
+	CUTOVERING  PostSourceServerBodyMigrationCycle
+	CUTOVERED   PostSourceServerBodyMigrationCycle
+	CHECKING    PostSourceServerBodyMigrationCycle
+	SETTING     PostSourceServerBodyMigrationCycle
+	REPLICATING PostSourceServerBodyMigrationCycle
+	SYNCING     PostSourceServerBodyMigrationCycle
+}
+
+func GetPostSourceServerBodyMigrationCycleEnum() PostSourceServerBodyMigrationCycleEnum {
+	return PostSourceServerBodyMigrationCycleEnum{
+		CUTOVERING: PostSourceServerBodyMigrationCycle{
+			value: "cutovering",
+		},
+		CUTOVERED: PostSourceServerBodyMigrationCycle{
+			value: "cutovered",
+		},
+		CHECKING: PostSourceServerBodyMigrationCycle{
+			value: "checking",
+		},
+		SETTING: PostSourceServerBodyMigrationCycle{
+			value: "setting",
+		},
+		REPLICATING: PostSourceServerBodyMigrationCycle{
+			value: "replicating",
+		},
+		SYNCING: PostSourceServerBodyMigrationCycle{
+			value: "syncing",
+		},
+	}
+}
+
+func (c PostSourceServerBodyMigrationCycle) Value() string {
+	return c.value
+}
+
+func (c PostSourceServerBodyMigrationCycle) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *PostSourceServerBodyMigrationCycle) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type PostSourceServerBodyState struct {
+	value string
+}
+
+type PostSourceServerBodyStateEnum struct {
+	UNAVAILABLE PostSourceServerBodyState
+	WAITING     PostSourceServerBodyState
+	INITIALIZE  PostSourceServerBodyState
+	REPLICATE   PostSourceServerBodyState
+	SYNCING     PostSourceServerBodyState
+	STOPPING    PostSourceServerBodyState
+	STOPPED     PostSourceServerBodyState
+	DELETING    PostSourceServerBodyState
+	ERROR       PostSourceServerBodyState
+	CLONING     PostSourceServerBodyState
+	CUTOVERING  PostSourceServerBodyState
+	FINISHED    PostSourceServerBodyState
+}
+
+func GetPostSourceServerBodyStateEnum() PostSourceServerBodyStateEnum {
+	return PostSourceServerBodyStateEnum{
+		UNAVAILABLE: PostSourceServerBodyState{
+			value: "unavailable",
+		},
+		WAITING: PostSourceServerBodyState{
+			value: "waiting",
+		},
+		INITIALIZE: PostSourceServerBodyState{
+			value: "initialize",
+		},
+		REPLICATE: PostSourceServerBodyState{
+			value: "replicate",
+		},
+		SYNCING: PostSourceServerBodyState{
+			value: "syncing",
+		},
+		STOPPING: PostSourceServerBodyState{
+			value: "stopping",
+		},
+		STOPPED: PostSourceServerBodyState{
+			value: "stopped",
+		},
+		DELETING: PostSourceServerBodyState{
+			value: "deleting",
+		},
+		ERROR: PostSourceServerBodyState{
+			value: "error",
+		},
+		CLONING: PostSourceServerBodyState{
+			value: "cloning",
+		},
+		CUTOVERING: PostSourceServerBodyState{
+			value: "cutovering",
+		},
+		FINISHED: PostSourceServerBodyState{
+			value: "finished",
+		},
+	}
+}
+
+func (c PostSourceServerBodyState) Value() string {
+	return c.value
+}
+
+func (c PostSourceServerBodyState) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *PostSourceServerBodyState) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

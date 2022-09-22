@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 会议与会者发送/接收QoS数据。当qosType = audio/video/screen 时有效。
+// 会议与会者发送QoS数据。当qosType = audio/video/screen 时有效。
 type QosSendReceiveInfo struct {
 
 	// 码率, 单位kbps，不含阈值告警。当qosType = audio/video/screen 时有效。

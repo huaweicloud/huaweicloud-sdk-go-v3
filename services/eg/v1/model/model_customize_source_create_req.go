@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -14,8 +17,14 @@ type CustomizeSourceCreateReq struct {
 	// 事件源描述
 	Description *string `json:"description,omitempty"`
 
-	// 指定事件源归属的事件通道ID
+	// 指导事件源归属的事件通道ID
 	ChannelId string `json:"channel_id"`
+
+	// 事件源类型
+	Type *CustomizeSourceCreateReqType `json:"type,omitempty"`
+
+	// json格式封装消息实例链接信息：如RabbitMQ实例的instance_id字段、虚拟主机vhost字段、队列queue字段、用户名、密码等
+	Detail *interface{} `json:"detail,omitempty"`
 }
 
 func (o CustomizeSourceCreateReq) String() string {
@@ -25,4 +34,46 @@ func (o CustomizeSourceCreateReq) String() string {
 	}
 
 	return strings.Join([]string{"CustomizeSourceCreateReq", string(data)}, " ")
+}
+
+type CustomizeSourceCreateReqType struct {
+	value string
+}
+
+type CustomizeSourceCreateReqTypeEnum struct {
+	APPLICATION CustomizeSourceCreateReqType
+	RABBITMQ    CustomizeSourceCreateReqType
+}
+
+func GetCustomizeSourceCreateReqTypeEnum() CustomizeSourceCreateReqTypeEnum {
+	return CustomizeSourceCreateReqTypeEnum{
+		APPLICATION: CustomizeSourceCreateReqType{
+			value: "APPLICATION",
+		},
+		RABBITMQ: CustomizeSourceCreateReqType{
+			value: "RABBITMQ",
+		},
+	}
+}
+
+func (c CustomizeSourceCreateReqType) Value() string {
+	return c.value
+}
+
+func (c CustomizeSourceCreateReqType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CustomizeSourceCreateReqType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

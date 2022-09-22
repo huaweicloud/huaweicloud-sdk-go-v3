@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// 分页查询的公共属性
+// 分页查询的公共属性。
 type Pages struct {
 
-	// 页面起始页，从0开始
+	// 页面起始页，从0开始。
 	Offset *int32 `json:"offset,omitempty"`
 
 	// 每页显示的条目数量。 默认值：10。

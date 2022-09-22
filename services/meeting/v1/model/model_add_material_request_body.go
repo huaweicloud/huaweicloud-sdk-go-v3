@@ -13,7 +13,7 @@ import (
 
 type AddMaterialRequestBody struct {
 
-	// 素材文件 - 只能上传jpg/jpeg/png格式文件，分辨率比率16:9，最大分辨率为3840*2160（推荐） - 请先命名完图片名称再上传
+	// 素材文件。 - 只能上传jpg/jpeg/png格式文件，分辨率比率16:9，最大分辨率为3840*2160（推荐） - 请先命名完图片名称再上传
 	File *def.FilePart `json:"file"`
 }
 

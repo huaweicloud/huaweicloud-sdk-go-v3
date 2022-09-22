@@ -5,6 +5,30 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/sms/v3/model"
 )
 
+type CheckNetAclInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckNetAclInvoker) Invoke() (*model.CheckNetAclResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckNetAclResponse), nil
+	}
+}
+
+type CollectLogInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CollectLogInvoker) Invoke() (*model.CollectLogResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CollectLogResponse), nil
+	}
+}
+
 type CreateMigprojectInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -197,6 +221,18 @@ func (i *RegisterServerInvoker) Invoke() (*model.RegisterServerResponse, error) 
 	}
 }
 
+type ShowCertKeyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowCertKeyInvoker) Invoke() (*model.ShowCertKeyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowCertKeyResponse), nil
+	}
+}
+
 type ShowCommandInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -233,6 +269,18 @@ func (i *ShowOverviewInvoker) Invoke() (*model.ShowOverviewResponse, error) {
 	}
 }
 
+type ShowPassphraseInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPassphraseInvoker) Invoke() (*model.ShowPassphraseResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPassphraseResponse), nil
+	}
+}
+
 type ShowServerInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -242,6 +290,30 @@ func (i *ShowServerInvoker) Invoke() (*model.ShowServerResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowServerResponse), nil
+	}
+}
+
+type ShowSha256Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSha256Invoker) Invoke() (*model.ShowSha256Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSha256Response), nil
+	}
+}
+
+type ShowTargetPasswordInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTargetPasswordInvoker) Invoke() (*model.ShowTargetPasswordResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTargetPasswordResponse), nil
 	}
 }
 
@@ -278,6 +350,18 @@ func (i *ShowsSpeedLimitsInvoker) Invoke() (*model.ShowsSpeedLimitsResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ShowsSpeedLimitsResponse), nil
+	}
+}
+
+type UnlockTargetEcsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UnlockTargetEcsInvoker) Invoke() (*model.UnlockTargetEcsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UnlockTargetEcsResponse), nil
 	}
 }
 

@@ -9,10 +9,10 @@ import (
 // Response Object
 type StartMeetingResponse struct {
 
-	// 会议主席鉴权uuid
+	// uuid。 > 废弃参数，请勿使用。
 	Uuid *string `json:"uuid,omitempty"`
 
-	// 区域公网IP地址
+	// 会议所在区域的公网IP地址。
 	RegionIP       *string `json:"regionIP,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

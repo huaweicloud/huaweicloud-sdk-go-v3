@@ -9,7 +9,7 @@ import (
 // This is a auto create Body Object
 type DeleteTasksReq struct {
 
-	// 待删除的任务id列表
+	// 待删除的任务ID列表
 	Ids []string `json:"ids"`
 }
 

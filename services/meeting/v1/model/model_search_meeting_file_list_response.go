@@ -9,7 +9,7 @@ import (
 // Response Object
 type SearchMeetingFileListResponse struct {
 
-	// 页面起始页，从0开始
+	// 页面起始页，从0开始。
 	Offset *int32 `json:"offset,omitempty"`
 
 	// 每页显示的条目数量。 默认值：10。
@@ -18,7 +18,7 @@ type SearchMeetingFileListResponse struct {
 	// 总数量。
 	Count *int32 `json:"count,omitempty"`
 
-	// IdeaHub、终端“查看会议纪要列表”响应
+	// 会议纪要列表。
 	Data           *[]ListMeetingFileResponseDto `json:"data,omitempty"`
 	HttpStatusCode int                           `json:"-"`
 }

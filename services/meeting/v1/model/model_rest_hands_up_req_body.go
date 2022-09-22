@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// 会场举手请求消息
+// 举手请求。
 type RestHandsUpReqBody struct {
 
-	// - 0: 放下手。 - 1: 举手。
+	// - 0: 放下手 - 1: 举手
 	HandsState int32 `json:"handsState"`
 }
 

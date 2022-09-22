@@ -20,6 +20,9 @@ type ResouceInfo struct {
 	// 开通链接。
 	SubscribeLink *string `json:"subscribe_link,omitempty"`
 
+	// 开通指导。
+	SubscribeGuide *string `json:"subscribe_guide,omitempty"`
+
 	// 服务类型。
 	Type *string `json:"type,omitempty"`
 

@@ -50,7 +50,7 @@ type ApplicationV3 struct {
 	// 模板部署信息
 	TemplateDeployment *string `json:"template_deployment,omitempty"`
 
-	// 部署类型, function:函数部署,cci:cci容器部署,ServiceStage(Jar):ServiceStage jar包部署,ServiceStage(Docker):ServiceStage Docker容器部署
+	// 部署类型, function:函数部署,cci:cci容器部署,ServiceStage(Jar):ServiceStage jar包部署,ServiceStage(Docker):ServiceStage Docker容器部署,none不支持部署
 	DeployType *ApplicationV3DeployType `json:"deploy_type,omitempty"`
 
 	// 创建者名称
@@ -84,6 +84,7 @@ type ApplicationV3DeployTypeEnum struct {
 	CCI                  ApplicationV3DeployType
 	SERVICE_STAGE_JAR    ApplicationV3DeployType
 	SERVICE_STAGE_DOCKER ApplicationV3DeployType
+	NONE                 ApplicationV3DeployType
 }
 
 func GetApplicationV3DeployTypeEnum() ApplicationV3DeployTypeEnum {
@@ -99,6 +100,9 @@ func GetApplicationV3DeployTypeEnum() ApplicationV3DeployTypeEnum {
 		},
 		SERVICE_STAGE_DOCKER: ApplicationV3DeployType{
 			value: "ServiceStage(Docker)",
+		},
+		NONE: ApplicationV3DeployType{
+			value: "none",
 		},
 	}
 }

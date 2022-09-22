@@ -6,25 +6,25 @@ import (
 	"strings"
 )
 
-// 终端类型
+// 终端类型。
 type QueryDeviceTypeResultDto struct {
 
-	// 终端类型，区分自研和第三方终端
+	// 终端类型，区分自研和第三方终端。 * TE：华为自研硬终端 * 3rd：第三方硬终端
 	Type *string `json:"type,omitempty"`
 
-	// 终端型号，枚举类型。当前支持TE系列硬件终端，具体的终端类型可以通过获取所有终端类型接口查询。
+	// 终端型号，枚举类型。 * TE10 * TE20 * TE30 * TE40 * TE50 * TE60 * HUAWEI Box 300 * HUAWEI Box 500 * HUAWEI Box 600 * HUAWEI Box 700 * HUAWEI Box 900 * DP300 * HUAWEI Box 200 * HUAWEI Box 300 * HUAWEI Box 500 * HUAWEI Board * polycomcisco
 	Model *string `json:"model,omitempty"`
 
-	// 是否支持激活码
+	// 是否支持激活码。
 	EnableActiveCode *bool `json:"enableActiveCode,omitempty"`
 
 	// 屏幕分辨率。1080P、720P等。
 	Resolution *string `json:"resolution,omitempty"`
 
-	// 是否支持投影码
+	// 是否支持投影码。
 	SupportProjectionCode *bool `json:"supportProjectionCode,omitempty"`
 
-	// 是否支持SVC
+	// 是否支持SVC。
 	SupportSVC *bool `json:"supportSVC,omitempty"`
 }
 

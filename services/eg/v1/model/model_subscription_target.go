@@ -11,7 +11,7 @@ import (
 
 type SubscriptionTarget struct {
 
-	// 订阅目标ID，需保证全局唯一，由小写字母、数字、中划线组成，必须字母或数字开头，长度为32~64字符。  创建订阅目标场景时，指定ID作为待创建的订阅目标对象ID，未指定时由系统自动生成。
+	// 订阅目标ID，需保证全局唯一，由小写字母、数字、中划线组成，必须字母或数字开头。 更新订阅场景时，指定ID的订阅目标存在时则进行更新，否则进行创建； 创建订阅目标场景时，指定ID作为待创建的订阅目标对象ID，未指定时由系统自动生成。 更新订阅目标时，此字段忽略；
 	Id *string `json:"id,omitempty"`
 
 	// 订阅的事件目标名称
@@ -20,7 +20,10 @@ type SubscriptionTarget struct {
 	// 订阅的事件目标的提供方类型
 	ProviderType SubscriptionTargetProviderType `json:"provider_type"`
 
-	// 订阅的事件目标参数列表，该字段序列化后总长度不超过1024字节。
+	// 订阅的事件目标使用的目标链接ID
+	ConnectionId *string `json:"connection_id,omitempty"`
+
+	// 订阅的事件目标参数列表，该字段序列化后总长度不超过1024字节
 	Detail *interface{} `json:"detail,omitempty"`
 
 	Transform *SubscriptionTargetTransform `json:"transform"`

@@ -11,31 +11,31 @@ import (
 
 type UserVmrDto struct {
 
-	// 云会议室的唯一标识
+	// 云会议室的ID。 > 对应[[创建会议](https://support.huaweicloud.com/api-meeting/meeting_21_0014.html)](tag:hws)[[创建会议](https://support.huaweicloud.com/intl/zh-cn/api-meeting/meeting_21_0014.html)](tag:hk)接口中的vmrID。
 	Id *string `json:"id,omitempty"`
 
-	// 云会议室ID即预约会议的id，分为两种，一种是创建用户时生成的，为用户个人的，另一种是企业管理员分配的专用云会议室
+	// 云会议室的固定会议ID。 > 对应[[创建会议](https://support.huaweicloud.com/api-meeting/meeting_21_0014.html)](tag:hws)[[创建会议](https://support.huaweicloud.com/intl/zh-cn/api-meeting/meeting_21_0014.html)](tag:hk)接口返回数据的vmrConferenceID。
 	VmrId *string `json:"vmrId,omitempty"`
 
-	// 云会议室名称
+	// 云会议室名称。
 	VmrName *string `json:"vmrName,omitempty"`
 
 	// VMR模式。 - 0：个人会议ID - 1: 云会议室 - 2: 网络研讨会
 	VmrMode *int32 `json:"vmrMode,omitempty"`
 
-	// 云会议室套餐包的id，仅专用云会议室返回
+	// 云会议室套餐包的id，仅云会议室返回。
 	VmrPkgId *string `json:"vmrPkgId,omitempty"`
 
-	// 云会议室套餐包的名称，仅专用云会议室返回
+	// 云会议室套餐包的名称，仅云会议室返回。
 	VmrPkgName *string `json:"vmrPkgName,omitempty"`
 
-	// 云会议室套餐包的会议并发方数，仅专用云会议室返回
+	// 云会议室套餐包的会议并发方数，仅云会议室返回。
 	VmrPkgParties *int32 `json:"vmrPkgParties,omitempty"`
 
-	// 云会议室套餐包的与会时间，若为0则代表无限时长，仅专用云会议室返回
+	// 云会议室套餐包的与会时间，若为0则代表无限时长，仅云会议室返回。
 	VmrPkgLength *int32 `json:"vmrPkgLength,omitempty"`
 
-	// 云会议室状态。 * 0.正常 * 1.停用 * 2.未分配
+	// 云会议室状态。 * 0：正常 * 1：停用 * 2：未分配
 	Status *UserVmrDtoStatus `json:"status,omitempty"`
 }
 

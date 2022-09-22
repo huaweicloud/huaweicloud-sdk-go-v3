@@ -12,40 +12,40 @@ import (
 // 用户信息。
 type ModUserDto struct {
 
-	// 企业用户姓名。 maxLength：64 minLength：1
+	// 企业用户名称。
 	Name *string `json:"name,omitempty"`
 
-	// 企业用户的英文姓名。 maxLength：64 minLength：0
+	// 企业用户的英文名称。
 	EnglishName *string `json:"englishName,omitempty"`
 
-	// 手机号，必须加上国家码。 例如中国大陆手机为“+86xxxxxxxxxxx”。当填写手机号时 “country”参数必填。 手机号只允许输入纯数字。 说明：手机号或者邮箱至少填写一个。 maxLength：32 minLength：0
+	// 手机号，必须加上国家码。 例如中国大陆手机为“+86xxxxxxxxxxx”。当填写手机号时 “country”参数必填。 手机号只允许输入纯数字。 说明：手机号或者邮箱至少填写一个。
 	Phone *string `json:"phone,omitempty"`
 
-	// 若smsNumber为手机号,则需带上手机号所属的国家。 例如国家为中国大陆则country参数取值为chinaPR 国家和国家码的对应关系请参考：https://support.huaweicloud.com/api-meeting/meeting_21_0109.html
+	// [[手机号所属的国家](https://support.huaweicloud.com/api-meeting/meeting_21_0109.html#ZH-CN_TOPIC_0212714591__table19371178135314)](tag:hws)[[手机号所属的国家](https://support.huaweicloud.com/intl/zh-cn/api-meeting/meeting_21_0109.html#ZH-CN_TOPIC_0212714591__table19371178135314)](tag:hk) 。
 	Country *string `json:"country,omitempty"`
 
-	// 邮箱 maxLength：255 minLength：0
+	// 邮箱地址。
 	Email *string `json:"email,omitempty"`
 
-	// 虚拟会议室ID，若不携带则后台默认生成。 maxLength：32 minLength：0
+	// 个人会议ID，若不携带则后台默认生成。
 	VmrId *string `json:"vmrId,omitempty"`
 
-	// 部门编号，若不携带则默认根部门 默认值：1 maxLength：32 minLength：0
+	// 个人会议ID，若不携带则后台默认生成。 默认值：1
 	DeptCode *string `json:"deptCode,omitempty"`
 
-	// 签名 maxLength：512 minLength：0
+	// 签名。
 	Signature *string `json:"signature,omitempty"`
 
-	// 职位 maxLength：32 minLength：0
+	// 职位。
 	Title *string `json:"title,omitempty"`
 
-	// 备注 maxLength：128 minLength：0
+	// 备注。
 	Desc *string `json:"desc,omitempty"`
 
-	// 用户状态 * 0、正常 * 1、停用 默认值：0
+	// 用户状态。默认值：0。 * 0：正常 * 1：停用
 	Status *ModUserDtoStatus `json:"status,omitempty"`
 
-	// 通讯录排序等级，序号越低优先级越高。 默认值：10000 maximum：10000 minimum：1
+	// 通讯录排序等级，序号越低优先级越高。 默认值：10000
 	SortLevel *int32 `json:"sortLevel,omitempty"`
 
 	// 是否隐藏手机号码 默认值：false

@@ -28,7 +28,9 @@ type CreateChannelResponse struct {
 	CreatedTime *string `json:"created_time,omitempty"`
 
 	// 更新UTC时间
-	UpdatedTime    *string `json:"updated_time,omitempty"`
+	UpdatedTime *string `json:"updated_time,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

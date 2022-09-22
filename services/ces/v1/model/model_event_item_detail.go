@@ -32,6 +32,9 @@ type EventItemDetail struct {
 
 	// 事件用户。  支持字母 数字_ -/空格 ，最大长度64。
 	EventUser *string `json:"event_user,omitempty"`
+
+	// 事件类型。 枚举类型，EVENT.SYS或EVENT.CUSTOM，EVENT.SYS为系统事件，用户自已不能上报，只能传EVENT.CUSTOM。
+	EventType *string `json:"event_type,omitempty"`
 }
 
 func (o EventItemDetail) String() string {

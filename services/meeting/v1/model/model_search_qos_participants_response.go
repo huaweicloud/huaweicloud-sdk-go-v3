@@ -18,7 +18,7 @@ type SearchQosParticipantsResponse struct {
 	// 查询偏移量。
 	Offset *int32 `json:"offset,omitempty"`
 
-	// QoS会议与会者列表。
+	// 会议与会者QoS告警列表。
 	Data           *[]QosParticipantInfo `json:"data,omitempty"`
 	HttpStatusCode int                   `json:"-"`
 }

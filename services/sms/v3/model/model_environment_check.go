@@ -21,11 +21,14 @@ type EnvironmentCheck struct {
 	// 检查项名称
 	Name string `json:"name"`
 
-	// 检查结果
+	// 检查结果 OK：检查通过 WARN：警告 ERROR:检查不通过
 	Result EnvironmentCheckResult `json:"result"`
 
 	// 检查不通过的错误码
 	ErrorCode *string `json:"error_code,omitempty"`
+
+	// 检查的错误或者警告
+	ErrorOrWarn *string `json:"error_or_warn,omitempty"`
 
 	// 检查不通过的错误参数
 	ErrorParams *string `json:"error_params,omitempty"`

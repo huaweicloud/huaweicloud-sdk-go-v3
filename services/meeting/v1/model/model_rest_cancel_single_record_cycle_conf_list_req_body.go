@@ -8,7 +8,7 @@ import (
 
 type RestCancelSingleRecordCycleConfListReqBody struct {
 
-	// 待删除的子会议标识列表
+	// 待删除的子会议UUID列表。
 	CycleSubConfIDs []string `json:"cycleSubConfIDs"`
 }
 

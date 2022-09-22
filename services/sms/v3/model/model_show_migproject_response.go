@@ -12,6 +12,9 @@ import (
 // Response Object
 type ShowMigprojectResponse struct {
 
+	// 迁移项目ID
+	Id *string `json:"id,omitempty"`
+
 	// 迁移项目名称
 	Name *string `json:"name,omitempty"`
 
@@ -20,6 +23,8 @@ type ShowMigprojectResponse struct {
 
 	// 是否为默认模板
 	Isdefault *bool `json:"isdefault,omitempty"`
+
+	Template *TemplateResponseBody `json:"template,omitempty"`
 
 	// 区域名称
 	Region *string `json:"region,omitempty"`
@@ -36,7 +41,7 @@ type ShowMigprojectResponse struct {
 	// 是否是已经存在的服务器
 	ExistServer *bool `json:"exist_server,omitempty"`
 
-	// 迁移项目类型
+	// 迁移项目类型 MIGRATE_BLOCK:块级迁移 MIGRATE_FILE:文件级迁移
 	Type *ShowMigprojectResponseType `json:"type,omitempty"`
 
 	// 企业项目名称

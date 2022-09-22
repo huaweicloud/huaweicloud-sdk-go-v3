@@ -9,7 +9,7 @@ import (
 // Request Object
 type UpdateDiskInfoRequest struct {
 
-	// 源端服务器id
+	// 源端服务器ID
 	SourceId string `json:"source_id"`
 
 	Body *PutDiskInfoReq `json:"body,omitempty"`

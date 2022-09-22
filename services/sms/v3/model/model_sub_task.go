@@ -9,6 +9,9 @@ import (
 // 修改任务进度
 type SubTask struct {
 
+	// 子任务ID
+	Id *int64 `json:"id,omitempty"`
+
 	// 子任务名称
 	Name *string `json:"name,omitempty"`
 

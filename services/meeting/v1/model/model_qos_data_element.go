@@ -15,7 +15,7 @@ type QosDataElement struct {
 	// QoS值。
 	Value *int32 `json:"value,omitempty"`
 
-	// 该时间点是否有阈值告警. true: 阈值告警 false: 无阈值告警。
+	// 该时间点是否有阈值告警。 * true: 阈值告警 * false: 无阈值告警
 	Alarm *bool `json:"alarm,omitempty"`
 
 	// 该时间点的阈值。

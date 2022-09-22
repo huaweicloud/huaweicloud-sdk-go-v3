@@ -16,7 +16,7 @@ type ListTagsV2Response struct {
 	Total int64 `json:"total"`
 
 	// 标签列表
-	Responses      *[]string `json:"responses,omitempty"`
+	Tags           *[]string `json:"tags,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }
 

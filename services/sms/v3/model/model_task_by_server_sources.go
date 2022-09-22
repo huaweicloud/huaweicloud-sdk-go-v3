@@ -9,7 +9,7 @@ import (
 // 源端列表中关联的任务
 type TaskByServerSources struct {
 
-	// 任务id
+	// 任务ID
 	Id *string `json:"id,omitempty"`
 
 	// 任务名称
@@ -39,7 +39,7 @@ type TaskByServerSources struct {
 	// 是否启动虚拟机
 	StartTargetServer *bool `json:"start_target_server,omitempty"`
 
-	// 虚拟机模板id
+	// 虚拟机模板ID
 	VmTemplateId *string `json:"vm_template_id,omitempty"`
 
 	// region_id
@@ -48,7 +48,7 @@ type TaskByServerSources struct {
 	// 项目名称
 	ProjectName *string `json:"project_name,omitempty"`
 
-	// 项目id
+	// 项目ID
 	ProjectId *string `json:"project_id,omitempty"`
 
 	TargetServer *TargetServerById `json:"target_server,omitempty"`
@@ -59,13 +59,25 @@ type TaskByServerSources struct {
 	// 是否使用已有虚拟机
 	ExistServer *bool `json:"exist_server,omitempty"`
 
-	// 是否使用公网ip
+	// 是否使用公网IP
 	UsePublicIp *bool `json:"use_public_ip,omitempty"`
 
 	CloneServer *CloneServer `json:"clone_server,omitempty"`
 
 	// 已迁移时长
 	RemainSeconds *int64 `json:"remain_seconds,omitempty"`
+
+	// 上传日志指定桶名称
+	LogBucket *string `json:"log_bucket,omitempty"`
+
+	// 分享链接有效期
+	LogExpire *int64 `json:"log_expire,omitempty"`
+
+	// 日志上传时间
+	LogUploadTime *int64 `json:"log_upload_time,omitempty"`
+
+	// 分享链接url
+	LogShareUrl *string `json:"log_share_url,omitempty"`
 }
 
 func (o TaskByServerSources) String() string {

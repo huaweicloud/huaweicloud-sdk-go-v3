@@ -36,7 +36,7 @@ type PostMigProjectBody struct {
 	// 是否是已经存在的服务器
 	ExistServer bool `json:"exist_server"`
 
-	// 迁移项目类型
+	// 迁移项目类型 MIGRATE_BLOCK:块级迁移 MIGRATE_FILE:文件级迁移
 	Type PostMigProjectBodyType `json:"type"`
 
 	// 企业项目名称

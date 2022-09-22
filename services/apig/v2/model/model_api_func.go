@@ -20,8 +20,14 @@ type ApiFunc struct {
 	// 调用类型 - async： 异步 - sync：同步
 	InvocationType ApiFuncInvocationType `json:"invocation_type"`
 
-	// 版本。
+	// 对接函数的网络架构类型 - V1：非VPC网络架构 - V2：VPC网络架构
+	NetworkType ApiFuncNetworkType `json:"network_type"`
+
+	// 函数版本  当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
 	Version *string `json:"version,omitempty"`
+
+	// 函数别名URN  当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
+	AliasUrn *string `json:"alias_urn,omitempty"`
 
 	// API网关请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
 	Timeout int32 `json:"timeout"`
@@ -80,6 +86,48 @@ func (c ApiFuncInvocationType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ApiFuncInvocationType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ApiFuncNetworkType struct {
+	value string
+}
+
+type ApiFuncNetworkTypeEnum struct {
+	V1 ApiFuncNetworkType
+	V2 ApiFuncNetworkType
+}
+
+func GetApiFuncNetworkTypeEnum() ApiFuncNetworkTypeEnum {
+	return ApiFuncNetworkTypeEnum{
+		V1: ApiFuncNetworkType{
+			value: "V1",
+		},
+		V2: ApiFuncNetworkType{
+			value: "V2",
+		},
+	}
+}
+
+func (c ApiFuncNetworkType) Value() string {
+	return c.value
+}
+
+func (c ApiFuncNetworkType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ApiFuncNetworkType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

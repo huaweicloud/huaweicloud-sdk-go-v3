@@ -12,19 +12,19 @@ import (
 // Response Object
 type ShowDetailOfSubscriptionResponse struct {
 
-	// 事件订阅ID
+	// 订阅ID
 	Id *string `json:"id,omitempty"`
 
-	// 事件订阅名称
+	// 订阅名称
 	Name *string `json:"name,omitempty"`
 
-	// 事件订阅描述
+	// 订阅描述
 	Description *string `json:"description,omitempty"`
 
-	// 事件订阅类型
+	// 类型
 	Type *ShowDetailOfSubscriptionResponseType `json:"type,omitempty"`
 
-	// 事件订阅状态
+	// 状态
 	Status *ShowDetailOfSubscriptionResponseStatus `json:"status,omitempty"`
 
 	// 通道ID

@@ -18,7 +18,7 @@ type MigrationErrors struct {
 	// 源端在主机迁移服务中的名称
 	Name *string `json:"name,omitempty"`
 
-	// 源端服务器id
+	// 源端服务器ID
 	SourceId *string `json:"source_id,omitempty"`
 
 	// 源端服务器的ip

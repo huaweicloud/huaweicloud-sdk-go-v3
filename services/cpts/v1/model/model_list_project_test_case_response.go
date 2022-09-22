@@ -15,7 +15,7 @@ type ListProjectTestCaseResponse struct {
 	// 描述
 	Message *string `json:"message,omitempty"`
 
-	// 目录集
+	// 用例集
 	Directory      *[]ProjectDirectory `json:"directory,omitempty"`
 	HttpStatusCode int                 `json:"-"`
 }

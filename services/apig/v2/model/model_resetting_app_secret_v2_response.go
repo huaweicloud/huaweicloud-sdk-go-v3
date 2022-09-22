@@ -20,7 +20,7 @@ type ResettingAppSecretV2Response struct {
 	// 描述
 	Remark *string `json:"remark,omitempty"`
 
-	// APP的创建者 - USER：用户自行创建 - MARKET：云市场分配  暂不支持MARKET
+	// APP的创建者 - USER：用户自行创建 - MARKET：云商店分配  暂不支持MARKET
 	Creator *ResettingAppSecretV2ResponseCreator `json:"creator,omitempty"`
 
 	// 更新时间

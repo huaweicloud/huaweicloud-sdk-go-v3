@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// 新增/更新节目信息请求
+// 节目基础信息。
 type ProgramRequestBase struct {
 
-	// 节目名称
+	// 节目名称。
 	ProgramName string `json:"programName"`
 }
 

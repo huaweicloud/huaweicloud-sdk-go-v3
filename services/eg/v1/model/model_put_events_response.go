@@ -12,9 +12,10 @@ type PutEventsResponse struct {
 	// 发布失败的事件个数
 	FailedCount *int32 `json:"failed_count,omitempty"`
 
-	// 事件信息
-	Events         *[]PutEventsRespEvents `json:"events,omitempty"`
-	HttpStatusCode int                    `json:"-"`
+	Events *[]PutEventsRespEvents `json:"events,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o PutEventsResponse) String() string {

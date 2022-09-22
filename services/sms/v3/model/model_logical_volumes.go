@@ -21,6 +21,9 @@ type LogicalVolumes struct {
 	// inode数量
 	InodeSize int32 `json:"inode_size"`
 
+	// 已使用大小
+	DeviceUse *int32 `json:"device_use,omitempty"`
+
 	// 挂载点
 	MountPoint string `json:"mount_point"`
 

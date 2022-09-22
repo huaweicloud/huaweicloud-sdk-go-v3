@@ -12,19 +12,19 @@ import (
 // Response Object
 type UpdateSubscriptionResponse struct {
 
-	// 事件订阅ID
+	// 订阅ID
 	Id *string `json:"id,omitempty"`
 
-	// 事件订阅名称
+	// 订阅名称
 	Name *string `json:"name,omitempty"`
 
-	// 事件订阅描述
+	// 订阅描述
 	Description *string `json:"description,omitempty"`
 
-	// 事件订阅类型
+	// 类型
 	Type *UpdateSubscriptionResponseType `json:"type,omitempty"`
 
-	// 事件订阅状态
+	// 状态
 	Status *UpdateSubscriptionResponseStatus `json:"status,omitempty"`
 
 	// 通道ID
@@ -43,7 +43,9 @@ type UpdateSubscriptionResponse struct {
 	CreatedTime *string `json:"created_time,omitempty"`
 
 	// 更新时间
-	UpdatedTime    *string `json:"updated_time,omitempty"`
+	UpdatedTime *string `json:"updated_time,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

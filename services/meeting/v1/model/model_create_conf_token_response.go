@@ -10,10 +10,10 @@ import (
 type CreateConfTokenResponse struct {
 	Data *TokenInfo `json:"data,omitempty"`
 
-	// 地址本查询临时Token。
+	// 企业通讯录查询临时Token。
 	AddressToken *string `json:"addressToken,omitempty"`
 
-	// global外网IP。
+	// 华为云会议Portal地址。
 	GloablPublicIP *string `json:"gloablPublicIP,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

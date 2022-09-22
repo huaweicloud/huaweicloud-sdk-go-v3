@@ -37,6 +37,12 @@ type UnbindApiForAcl struct {
 
 	// 绑定的其他同类型的ACL策略名称
 	AclName *string `json:"acl_name,omitempty"`
+
+	// API的请求地址
+	ReqUri *string `json:"req_uri,omitempty"`
+
+	// API的认证方式
+	AuthType *string `json:"auth_type,omitempty"`
 }
 
 func (o UnbindApiForAcl) String() string {

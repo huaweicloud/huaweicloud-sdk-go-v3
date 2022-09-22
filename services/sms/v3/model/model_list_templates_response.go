@@ -13,8 +13,8 @@ type ListTemplatesResponse struct {
 	Count *int32 `json:"count,omitempty"`
 
 	// 模板信息
-	Templates      *[]TemplateResponse `json:"templates,omitempty"`
-	HttpStatusCode int                 `json:"-"`
+	Templates      *[]TemplateResponseBody `json:"templates,omitempty"`
+	HttpStatusCode int                     `json:"-"`
 }
 
 func (o ListTemplatesResponse) String() string {

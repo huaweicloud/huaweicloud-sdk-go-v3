@@ -5,6 +5,18 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/moderation/v3/model"
 )
 
+type CheckImageModerationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckImageModerationInvoker) Invoke() (*model.CheckImageModerationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckImageModerationResponse), nil
+	}
+}
+
 type RunCreateAudioModerationJobInvoker struct {
 	*invoker.BaseInvoker
 }

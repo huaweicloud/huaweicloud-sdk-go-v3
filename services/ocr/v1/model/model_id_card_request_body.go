@@ -26,6 +26,9 @@ type IdCardRequestBody struct {
 
 	// 返回判断身份证图像是否经过翻拍的开关，默认false，可选值如下所示：  - true ：返回身份证图像是否经过翻拍  - false：不返回身份证图像是否经过翻拍
 	DetectReproduce *bool `json:"detect_reproduce,omitempty"`
+
+	// 返回判断身份证图像是否是黑白复印件的开关，默认false，可选值如下所示：  - true ：返回身份证图像是否是复印件  - false : 不返回身份证图像是否是复印件
+	DetectCopy *bool `json:"detect_copy,omitempty"`
 }
 
 func (o IdCardRequestBody) String() string {

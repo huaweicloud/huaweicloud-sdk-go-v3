@@ -16,8 +16,8 @@ type ListEventSourcesResponse struct {
 	Size *int32 `json:"size,omitempty"`
 
 	// 对象列表
-	Items          *[]SourceInfo `json:"items,omitempty"`
-	HttpStatusCode int           `json:"-"`
+	Items          *[]CustomizeSourceInfo `json:"items,omitempty"`
+	HttpStatusCode int                    `json:"-"`
 }
 
 func (o ListEventSourcesResponse) String() string {

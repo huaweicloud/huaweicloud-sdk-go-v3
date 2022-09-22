@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询Vmr套餐包分配数量结果
+// 查询Vmr套餐包分配数量结果。
 type QueryVmrPkgResResultDto struct {
 
 	// 云会议室套餐包id。

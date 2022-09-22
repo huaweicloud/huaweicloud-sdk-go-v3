@@ -9,7 +9,7 @@ import (
 // Response Object
 type CreateTaskResponse struct {
 
-	// 创建成功返回的任务id
+	// 创建成功返回的任务ID
 	Id             *string `json:"id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

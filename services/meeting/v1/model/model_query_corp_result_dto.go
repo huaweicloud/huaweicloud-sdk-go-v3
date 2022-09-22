@@ -15,7 +15,7 @@ type QueryCorpResultDto struct {
 
 	GroupDTO *OrgGroupDto `json:"groupDTO,omitempty"`
 
-	// 企业id
+	// 企业id。
 	Id *string `json:"id,omitempty"`
 }
 

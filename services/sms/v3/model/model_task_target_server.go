@@ -21,7 +21,7 @@ type TaskTargetServer struct {
 	// 目的端服务器的名称
 	Name *string `json:"name,omitempty"`
 
-	// 目的端服务器ip
+	// 目的端服务器IP
 	Ip *string `json:"ip,omitempty"`
 
 	// 源端服务器的OS类型，分为Windows和Linux，注册必选，更新非必选
@@ -42,10 +42,10 @@ type TaskTargetServer struct {
 	// Linux 必选，源端的Btrfs信息。如果源端不存在Btrfs，则为[]
 	BtrfsList *[]string `json:"btrfs_list,omitempty"`
 
-	// 目的端代理镜像磁盘id
+	// 目的端代理镜像磁盘ID
 	ImageDiskId *string `json:"image_disk_id,omitempty"`
 
-	// 目的端回滚快照id
+	// 目的端回滚快照ID
 	CutoveredSnapshotIds *string `json:"cutovered_snapshot_ids,omitempty"`
 }
 

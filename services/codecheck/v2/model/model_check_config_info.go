@@ -31,6 +31,9 @@ type CheckConfigInfo struct {
 
 	// 参数状态，on：启用，off：未启用
 	Status *string `json:"status,omitempty"`
+
+	// 检查参数值
+	Value *string `json:"value,omitempty"`
 }
 
 func (o CheckConfigInfo) String() string {

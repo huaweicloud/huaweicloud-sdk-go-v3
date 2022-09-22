@@ -16,8 +16,8 @@ type ListGatewayResponsesV2Response struct {
 	Total int64 `json:"total"`
 
 	// 响应列表
-	Responses      *[]ResponseInfoResp `json:"responses,omitempty"`
-	HttpStatusCode int                 `json:"-"`
+	Responses      *[]ResponsesInfo `json:"responses,omitempty"`
+	HttpStatusCode int              `json:"-"`
 }
 
 func (o ListGatewayResponsesV2Response) String() string {

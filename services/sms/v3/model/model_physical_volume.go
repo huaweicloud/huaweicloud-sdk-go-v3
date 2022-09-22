@@ -30,6 +30,9 @@ type PhysicalVolume struct {
 	// 使用大小
 	UsedSize *int64 `json:"used_size,omitempty"`
 
+	// inode数量
+	InodeSize *int32 `json:"inode_size,omitempty"`
+
 	// GUID，可从源端查询
 	Uuid *string `json:"uuid,omitempty"`
 

@@ -9,7 +9,7 @@ import (
 // Response Object
 type SearchVisionActiveCodeResponse struct {
 
-	// 页面起始页，从0开始
+	// 页面起始页，从0开始。
 	Offset *int32 `json:"offset,omitempty"`
 
 	// 每页显示的条目数量。 默认值：10。

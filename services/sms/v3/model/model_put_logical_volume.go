@@ -9,7 +9,7 @@ import (
 // 修改的逻辑卷信息
 type PutLogicalVolume struct {
 
-	// 逻辑卷id
+	// 逻辑卷ID
 	Id string `json:"id"`
 
 	// 是否迁移

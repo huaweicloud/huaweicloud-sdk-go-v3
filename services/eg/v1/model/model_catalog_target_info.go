@@ -26,8 +26,7 @@ type CatalogTargetInfo struct {
 	// 提供方类型，OFFICIAL：官方云服务事件目标；CUSTOM：第三方事件目标
 	ProviderType *CatalogTargetInfoProviderType `json:"provider_type,omitempty"`
 
-	// 事件目标参数
-	Parameters *[]CatalogTargetParameters `json:"parameters,omitempty"`
+	Parameters *[]interface{} `json:"parameters,omitempty"`
 
 	// 创建UTC时间
 	CreatedTime *string `json:"created_time,omitempty"`

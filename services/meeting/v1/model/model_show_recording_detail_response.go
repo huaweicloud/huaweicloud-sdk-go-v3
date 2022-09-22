@@ -15,7 +15,7 @@ type ShowRecordingDetailResponse struct {
 	// 会议ID。
 	ConfID *string `json:"confID,omitempty"`
 
-	// 点播地址。
+	// 录播观看地址。
 	Url *[]string `json:"url,omitempty"`
 
 	// 录制时长（单位秒）。
@@ -27,7 +27,7 @@ type ShowRecordingDetailResponse struct {
 	// 会议主题。
 	Subject *string `json:"subject,omitempty"`
 
-	// 会议预订者。
+	// 会议预订者名称。
 	ScheduserName *string `json:"scheduserName,omitempty"`
 
 	// 会议开始时间。
@@ -42,7 +42,7 @@ type ShowRecordingDetailResponse struct {
 	// 录播文件是否可观看。
 	Available *bool `json:"available,omitempty"`
 
-	// * 录播鉴权方式，在录播类型为:录播、直播+录播时有效 * 0： 可通过链接观看/下载 * 1： 企业用户可观看/下载 * 2： 与会者可观看/下载
+	// 观看/下载录播的鉴权方式。 - 0: 可通过链接观看/下载 - 1: 企业用户可观看/下载 - 2: 与会者可观看/下载
 	RecordAuthType *int32 `json:"recordAuthType,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

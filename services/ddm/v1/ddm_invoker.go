@@ -209,6 +209,18 @@ func (i *RebuildConfigInvoker) Invoke() (*model.RebuildConfigResponse, error) {
 	}
 }
 
+type ResetAdministratorInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ResetAdministratorInvoker) Invoke() (*model.ResetAdministratorResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ResetAdministratorResponse), nil
+	}
+}
+
 type ResetUserPasswordInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -218,6 +230,18 @@ func (i *ResetUserPasswordInvoker) Invoke() (*model.ResetUserPasswordResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ResetUserPasswordResponse), nil
+	}
+}
+
+type ResizeFlavorInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ResizeFlavorInvoker) Invoke() (*model.ResizeFlavorResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ResizeFlavorResponse), nil
 	}
 }
 
@@ -362,5 +386,17 @@ func (i *UpdateUserInvoker) Invoke() (*model.UpdateUserResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.UpdateUserResponse), nil
+	}
+}
+
+type ValidateWeakPasswordInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ValidateWeakPasswordInvoker) Invoke() (*model.ValidateWeakPasswordResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ValidateWeakPasswordResponse), nil
 	}
 }

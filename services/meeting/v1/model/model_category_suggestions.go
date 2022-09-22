@@ -6,16 +6,16 @@ import (
 	"strings"
 )
 
-// 各项内容审核结果
+// 各项内容审核结果。
 type CategorySuggestions struct {
 
-	// 政治人物审核
+	// 政治人物审核。
 	Politics *string `json:"politics,omitempty"`
 
-	// 暴恐内容审核
+	// 暴恐内容审核。
 	Terrorism *string `json:"terrorism,omitempty"`
 
-	// 情色内容审核
+	// 情色内容审核。
 	Porn *string `json:"porn,omitempty"`
 }
 

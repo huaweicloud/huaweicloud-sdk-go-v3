@@ -9,7 +9,7 @@ import (
 // Request Object
 type UpdateMigprojectRequest struct {
 
-	// 迁移项目id
+	// 迁移项目ID
 	MigProjectId string `json:"mig_project_id"`
 
 	Body *MigProject `json:"body,omitempty"`

@@ -12,16 +12,16 @@ import (
 // 源端服务器列表信息
 type SourceServersResponseBody struct {
 
-	// 源端服务器id
+	// 源端服务器ID
 	Id *string `json:"id,omitempty"`
 
-	// 源端服务器的ip地址
+	// 源端服务器的IP地址
 	Ip *string `json:"ip,omitempty"`
 
 	// 源端服务器名称
 	Name *string `json:"name,omitempty"`
 
-	// 企业项目id
+	// 企业项目ID
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 源端服务器的注册时间
@@ -36,7 +36,7 @@ type SourceServersResponseBody struct {
 	// 是否是OEM操作系统(Windows)
 	OemSystem *bool `json:"oem_system,omitempty"`
 
-	// 源端服务器状态
+	// 源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成
 	State *SourceServersResponseBodyState `json:"state,omitempty"`
 
 	// 源端服务器与主机迁移服务端是否连接
@@ -67,7 +67,7 @@ type SourceServersResponseBody struct {
 	// Agent上一次连接状态发生变化的时间
 	LastVisitTime *int64 `json:"last_visit_time,omitempty"`
 
-	// 迁移周期
+	// 迁移周期 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
 	MigrationCycle *SourceServersResponseBodyMigrationCycle `json:"migration_cycle,omitempty"`
 
 	// 源端状态（state）上次发生变化的时间

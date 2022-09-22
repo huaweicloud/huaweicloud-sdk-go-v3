@@ -9,7 +9,7 @@ import (
 // Request Object
 type UpdateCommandResultRequest struct {
 
-	// 上报命令执行结果的命令所对应的服务端id
+	// 上报命令执行结果的命令所对应的服务端ID
 	ServerId string `json:"server_id"`
 
 	Body *CommandBody `json:"body,omitempty"`

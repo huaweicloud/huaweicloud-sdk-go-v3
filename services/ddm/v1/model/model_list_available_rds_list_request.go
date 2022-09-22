@@ -15,7 +15,7 @@ type ListAvailableRdsListRequest struct {
 	// 分页参数：起始值 [大于等于0] 。默认值是0。
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 分页参数：每页多少条 [大于0且小于等于128]。默认值是128。
+	// 分页参数：每页多少条 [大于0且小于等于1000]。默认值是128。
 	Limit *int32 `json:"limit,omitempty"`
 }
 

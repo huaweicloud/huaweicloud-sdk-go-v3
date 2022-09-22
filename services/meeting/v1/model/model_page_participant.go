@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// 与会者列表
+// 与会者列表。
 type PageParticipant struct {
 
-	// 与会者信息。
+	// 被邀请的与会者信息。包含预约会议时邀请的与会者和会中主持人邀请的与会者。
 	Data *[]ParticipantInfo `json:"data,omitempty"`
 
-	// 记录数偏移，这一页之前共有多少条。
+	// 查询偏移量。
 	Offset *int32 `json:"offset,omitempty"`
 
 	// 每页的记录数。

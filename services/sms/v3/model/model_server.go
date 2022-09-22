@@ -15,7 +15,7 @@ type Server struct {
 	// 源端在SMS数据库中的ID
 	Id *string `json:"id,omitempty"`
 
-	// 源端服务器ip，注册源端时必选，更新非必选
+	// 源端服务器IP，注册源端时必选，更新非必选
 	Ip string `json:"ip"`
 
 	// 用来区分不同源端服务器的名称

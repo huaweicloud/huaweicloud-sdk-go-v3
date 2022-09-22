@@ -12,7 +12,10 @@ import (
 // 物理分区
 type TargetPhysicalVolumes struct {
 
-	// 分区类型
+	// 逻辑卷ID
+	Id *int64 `json:"id,omitempty"`
+
+	// 分区类型 NORMAL:平常 OS：系统设备 BOOT：BOOT设备
 	DeviceUse *TargetPhysicalVolumesDeviceUse `json:"device_use,omitempty"`
 
 	// 文件系统
@@ -35,6 +38,12 @@ type TargetPhysicalVolumes struct {
 
 	// uuid
 	Uuid *string `json:"uuid,omitempty"`
+
+	// Linux系统 目的端ECS中与源端关联的磁盘名称
+	RelationName *string `json:"relation_name,omitempty"`
+
+	// 分区空闲大小
+	FreeSize *int64 `json:"free_size,omitempty"`
 }
 
 func (o TargetPhysicalVolumes) String() string {

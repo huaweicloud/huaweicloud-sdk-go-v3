@@ -9,7 +9,7 @@ import (
 // 命令响应参数
 type ComandParam struct {
 
-	// 任务id
+	// 任务ID
 	TaskId *string `json:"task_id,omitempty"`
 
 	// 桶名

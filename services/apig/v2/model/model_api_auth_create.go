@@ -14,7 +14,7 @@ type ApiAuthCreate struct {
 	// APP的编号列表
 	AppIds []string `json:"app_ids"`
 
-	// API的编号列表，可以选择租户自己的API，也可以选择从云市场上购买的API。
+	// API的编号列表[，可以选择租户自己的API，也可以选择从云商店上购买的API](tag:hws)。
 	ApiIds []string `json:"api_ids"`
 }
 

@@ -548,6 +548,28 @@ func (c *GaussDBClient) ListGaussMySqlErrorLogInvoker(request *model.ListGaussMy
 	return &ListGaussMySqlErrorLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListGaussMySqlInstanceDetailInfo 批量查询实例详情
+//
+// 批量查询实例详情
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GaussDBClient) ListGaussMySqlInstanceDetailInfo(request *model.ListGaussMySqlInstanceDetailInfoRequest) (*model.ListGaussMySqlInstanceDetailInfoResponse, error) {
+	requestDef := GenReqDefForListGaussMySqlInstanceDetailInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListGaussMySqlInstanceDetailInfoResponse), nil
+	}
+}
+
+// ListGaussMySqlInstanceDetailInfoInvoker 批量查询实例详情
+func (c *GaussDBClient) ListGaussMySqlInstanceDetailInfoInvoker(request *model.ListGaussMySqlInstanceDetailInfoRequest) *ListGaussMySqlInstanceDetailInfoInvoker {
+	requestDef := GenReqDefForListGaussMySqlInstanceDetailInfo()
+	return &ListGaussMySqlInstanceDetailInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListGaussMySqlInstances 查询实例列表
 //
 // 根据指定条件查询实例列表。

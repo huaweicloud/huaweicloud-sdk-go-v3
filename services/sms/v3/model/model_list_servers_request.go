@@ -12,7 +12,7 @@ import (
 // Request Object
 type ListServersRequest struct {
 
-	// 源端服务器状态
+	// 源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成
 	State *ListServersRequestState `json:"state,omitempty"`
 
 	// 源端服务器名称
@@ -24,7 +24,7 @@ type ListServersRequest struct {
 	// 源端服务器IP地址
 	Ip *string `json:"ip,omitempty"`
 
-	// 迁移项目id，填写该参数将查询迁移项目下的所有虚拟机
+	// 迁移项目ID，填写该参数将查询迁移项目下的所有虚拟机
 	Migproject *string `json:"migproject,omitempty"`
 
 	// 每一页记录的源端服务器数量，0表示用默认值 200
@@ -33,13 +33,13 @@ type ListServersRequest struct {
 	// 偏移量，默认值0
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 根据迁移周期查询
+	// checking:检查中 setting:设置中 replicating:复制中 syncing:同步中 cutovering:启动目的端中 cutovered:启动目的端完成
 	MigrationCycle *ListServersRequestMigrationCycle `json:"migration_cycle,omitempty"`
 
 	// 查询失去连接的源端
 	Connected *bool `json:"connected,omitempty"`
 
-	// 需要查询的企业项目id
+	// 需要查询的企业项目ID
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 

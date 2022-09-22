@@ -6,22 +6,22 @@ import (
 	"strings"
 )
 
-// 用户自己修改个人信息的DTO，用member命名做区分，当前仅有名称，后续会扩展地址、签名等等。
+// 用户自己修改个人信息。
 type ModMemberDto struct {
 
-	// 名称 maxLength：64 minLength：1
+	// 名称。
 	Name string `json:"name"`
 
-	// 英文名称 maxLength：64 minLength：0
+	// 英文名称。
 	EnglishName *string `json:"englishName,omitempty"`
 
-	// 签名 maxLength：512 minLength：0
+	// 签名。
 	Signature *string `json:"signature,omitempty"`
 
-	// 职位 maxLength：32 minLength：0
+	// 职位。
 	Title *string `json:"title,omitempty"`
 
-	// 备注 maxLength：128 minLength：0
+	// 备注。
 	Desc *string `json:"desc,omitempty"`
 }
 

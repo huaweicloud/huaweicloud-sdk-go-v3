@@ -44,6 +44,9 @@ type DefectInfoV2 struct {
 
 	// 缺陷代码片段详情
 	Fragment *[]DefectFragmentV2 `json:"fragment,omitempty"`
+
+	// 调用链信息
+	Events *[]DefectEvents `json:"events,omitempty"`
 }
 
 func (o DefectInfoV2) String() string {

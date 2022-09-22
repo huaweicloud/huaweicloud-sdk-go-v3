@@ -9,10 +9,10 @@ import (
 // Request Object
 type ShowWebHookConfigRequest struct {
 
-	// 企业ID，与spId二者必填一个
+	// 企业ID。按企业注册回调时需要填写。
 	CorpId *string `json:"corpId,omitempty"`
 
-	// sp管理员ID，与corpId二者必填一个
+	// SP ID。多租户场景下，按SP注册回调时需要填写。
 	SpId *string `json:"spId,omitempty"`
 }
 

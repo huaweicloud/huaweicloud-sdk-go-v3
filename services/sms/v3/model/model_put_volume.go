@@ -9,7 +9,7 @@ import (
 // 更新分区
 type PutVolume struct {
 
-	// 数据库id
+	// 数据库ID
 	Id *string `json:"id,omitempty"`
 
 	// 是否迁移

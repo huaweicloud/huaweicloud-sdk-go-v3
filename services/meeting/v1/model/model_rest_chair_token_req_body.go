@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// 申请释放主持人消息。
+// 申请主持人请求。
 type RestChairTokenReqBody struct {
 
-	// - 0: 释放主持人。 - 1: 申请主持人。
+	// - 0: 释放主持人 - 1: 申请主持人
 	ApplyChair int32 `json:"applyChair"`
 
 	// 当申请主持人时，携带主持人密码。

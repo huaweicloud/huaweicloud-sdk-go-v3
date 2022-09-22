@@ -473,6 +473,18 @@ func (i *DeleteProjectModuleInvoker) Invoke() (*model.DeleteProjectModuleRespons
 	}
 }
 
+type DownloadImageFileInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DownloadImageFileInvoker) Invoke() (*model.DownloadImageFileResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DownloadImageFileResponse), nil
+	}
+}
+
 type ListAssociatedIssuesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -665,6 +677,18 @@ func (i *ListProjectWorkHoursInvoker) Invoke() (*model.ListProjectWorkHoursRespo
 	}
 }
 
+type ListScrumProjectStatusesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListScrumProjectStatusesInvoker) Invoke() (*model.ListScrumProjectStatusesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListScrumProjectStatusesResponse), nil
+	}
+}
+
 type ShowIssueCompletionRateInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -770,6 +794,18 @@ func (i *UpdateProjectModuleInvoker) Invoke() (*model.UpdateProjectModuleRespons
 		return nil, err
 	} else {
 		return result.(*model.UpdateProjectModuleResponse), nil
+	}
+}
+
+type UploadAttachmentsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UploadAttachmentsInvoker) Invoke() (*model.UploadAttachmentsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UploadAttachmentsResponse), nil
 	}
 }
 

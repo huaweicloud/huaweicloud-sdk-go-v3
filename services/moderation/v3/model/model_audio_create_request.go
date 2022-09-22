@@ -17,7 +17,7 @@ type AudioCreateRequest struct {
 	EventType AudioCreateRequestEventType `json:"event_type"`
 
 	// 需要检测的风险类型，若未传或者传参为空，则表示全场景审核。
-	Categories *[]AudioCreateRequestCategories `json:"categories,omitempty"`
+	Categories []AudioCreateRequestCategories `json:"categories"`
 
 	// 回调http接口：当该字段非空时，服务将根据该字段回调通知用户审核结果。
 	Callback *string `json:"callback,omitempty"`

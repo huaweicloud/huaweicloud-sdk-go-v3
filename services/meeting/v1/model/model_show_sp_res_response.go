@@ -9,7 +9,7 @@ import (
 // Response Object
 type ShowSpResResponse struct {
 
-	// 已用的企业并发数
+	// SP下所有企业已使用的会议并发数量。
 	UsedAccountsCount *int32 `json:"usedAccountsCount,omitempty"`
 	HttpStatusCode    int    `json:"-"`
 }

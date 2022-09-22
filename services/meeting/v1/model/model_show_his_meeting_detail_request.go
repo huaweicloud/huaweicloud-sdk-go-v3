@@ -12,16 +12,16 @@ type ShowHisMeetingDetailRequest struct {
 	// 会议UUID。
 	ConfUUID string `json:"confUUID"`
 
-	// 指定返回的与会者列表的记录索引。该值必须大于等于0；默认为0。
+	// 查询偏移量。默认为0。针对PageParticipant 中的与会者分页。
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 指定返回的与会者记录数，默认是20。
+	// 查询数量。默认值20。
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 根据会议主题，预定人和云会议室会议id关键词的字符串，查询历史会议信息。
+	// 查询条件 。会议主题、会议预约人和会议ID等可作为搜索内容。长度限制为1-128个字符。
 	SearchKey *string `json:"searchKey,omitempty"`
 
-	// 用户的UUID（已在USG注册过的）。
+	// 用户的UUID。 > 该参数将废弃，请勿使用。
 	UserUUID *string `json:"userUUID,omitempty"`
 
 	// 默认值为0。 0: 不区分会议室和与会人。 1：分页查询区分会议室和与会人，结果合并返回。 2：单独查询会议室与与会人，结果也是单独返回。
@@ -30,10 +30,10 @@ type ShowHisMeetingDetailRequest struct {
 	// 当X-Type为2时，该字段有效。默认值为0。 0: 查询与会人。 1：查询终端。
 	XQueryType *int32 `json:"X-Query-Type,omitempty"`
 
-	// 标识是否为第三方portal过来的请求。
+	// 标识是否为第三方portal过来的请求。 > 该参数将废弃，请勿使用。
 	XAuthorizationType *string `json:"X-Authorization-Type,omitempty"`
 
-	// 用于区分到哪个HCSO站点鉴权。
+	// 用于区分到哪个HCSO站点鉴权。 > 该参数将废弃，请勿使用。
 	XSiteId *string `json:"X-Site-Id,omitempty"`
 }
 

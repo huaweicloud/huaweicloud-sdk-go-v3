@@ -17,7 +17,7 @@ type BatchRestartOrDeleteInstanceReq struct {
 	// 对实例的操作：restart、delete
 	Action BatchRestartOrDeleteInstanceReqAction `json:"action"`
 
-	// 是否批量删除创建失败的实例。  当参数值为“true”时，删除租户所有创建失败的实例，此时请求参数instances可为空。
+	// 是否批量删除创建失败的实例。  当参数值为“rabbitmq”时，删除租户所有创建失败的实例，此时请求参数instances可为空。
 	AllFailure *BatchRestartOrDeleteInstanceReqAllFailure `json:"all_failure,omitempty"`
 }
 
@@ -77,17 +77,13 @@ type BatchRestartOrDeleteInstanceReqAllFailure struct {
 }
 
 type BatchRestartOrDeleteInstanceReqAllFailureEnum struct {
-	TRUE  BatchRestartOrDeleteInstanceReqAllFailure
-	FALSE BatchRestartOrDeleteInstanceReqAllFailure
+	RABBITMQ BatchRestartOrDeleteInstanceReqAllFailure
 }
 
 func GetBatchRestartOrDeleteInstanceReqAllFailureEnum() BatchRestartOrDeleteInstanceReqAllFailureEnum {
 	return BatchRestartOrDeleteInstanceReqAllFailureEnum{
-		TRUE: BatchRestartOrDeleteInstanceReqAllFailure{
-			value: "true",
-		},
-		FALSE: BatchRestartOrDeleteInstanceReqAllFailure{
-			value: "false",
+		RABBITMQ: BatchRestartOrDeleteInstanceReqAllFailure{
+			value: "rabbitmq",
 		},
 	}
 }

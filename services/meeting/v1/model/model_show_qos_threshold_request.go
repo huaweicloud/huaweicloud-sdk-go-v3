@@ -12,7 +12,7 @@ import (
 // Request Object
 type ShowQosThresholdRequest struct {
 
-	// 阈值类型。 * AUDIO：音频相关阈值。 * VIDEO：视频相关阈值。 * SCREEN：屏幕共享相关阈值。 * CPU：CPU相关阈值。
+	// 阈值类型。 * AUDIO：音频告警阈值 * VIDEO：视频告警阈值 * SCREEN：屏幕共享告警阈值 * CPU：CPU告警阈值
 	ThresholdType ShowQosThresholdRequestThresholdType `json:"thresholdType"`
 }
 

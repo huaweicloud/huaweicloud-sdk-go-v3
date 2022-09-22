@@ -15,7 +15,7 @@ type TargetServer struct {
 	// 源端在SMS数据库中的ID
 	Id *string `json:"id,omitempty"`
 
-	// 源端服务器ip，注册源端时必选，更新非必选
+	// 源端服务器IP，注册源端时必选，更新非必选
 	Ip string `json:"ip"`
 
 	// 目的端服务器名称
@@ -84,13 +84,13 @@ type TargetServer struct {
 	// 目的端服务器的规格
 	Flavor *string `json:"flavor,omitempty"`
 
-	// 目的端代理镜像磁盘id
+	// 目的端代理镜像磁盘ID
 	ImageDiskId *string `json:"image_disk_id,omitempty"`
 
-	// 目的端快照id
+	// 目的端快照ID
 	SnapshotIds *string `json:"snapshot_ids,omitempty"`
 
-	// 目的端回滚快照id
+	// 目的端回滚快照ID
 	CutoveredSnapshotIds *string `json:"cutovered_snapshot_ids,omitempty"`
 }
 

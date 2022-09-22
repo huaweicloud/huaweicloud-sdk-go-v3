@@ -9,40 +9,40 @@ import (
 	"strings"
 )
 
-// 企业的基本信息
+// 企业的基本信息。
 type CorpBasicDto struct {
 
-	// 企业名称，格式必须满足^[^#%&'+;<>=\"'？?\\\\……/]*$
+	// 企业名称，格式必须满足^[^#%&'+;<>=\\\"'？?\\\\\\\\……/]*$。
 	Name string `json:"name"`
 
-	// 企业域名
+	// 企业域名。
 	Domain *string `json:"domain,omitempty"`
 
-	// 手机号，必须加上国家码，例如中国大陆手机+86xxxxxxx，当填写手机号时， “country”参数必填,手机格式必须满足(^$|^[+]?[0-9]+$)
+	// 手机号，必须加上国家码，例如中国大陆手机+86xxxxxxx，当填写手机号时， “country”参数必填,手机格式必须满足(^$|^[+]?[0-9]+$)。
 	Phone *string `json:"phone,omitempty"`
 
-	// 若smsNumber为手机号,则需带上手机号所属的国家。 例如国家为中国大陆则country参数取值为chinaPR 国家和国家码的对应关系请参考：https://support.huaweicloud.com/api-meeting/meeting_21_0109.html
+	// [[手机号所属的国家](https://support.huaweicloud.com/api-meeting/meeting_21_0109.html#ZH-CN_TOPIC_0212714591__table19371178135314)](tag:hws)[[手机号所属的国家](https://support.huaweicloud.com/intl/zh-cn/api-meeting/meeting_21_0109.html#ZH-CN_TOPIC_0212714591__table19371178135314)](tag:hk) 。
 	Country *string `json:"country,omitempty"`
 
-	// 传真号码,格式必须满足(^$|^[+]?[0-9]+$)
+	// 传真号码,格式必须满足(^$|^[+]?[0-9]+$)。
 	Fax *string `json:"fax,omitempty"`
 
-	// 邮箱地址,格式必须满足(^$|^[\\w-+]+(\\.[\\w-+]+)*@[\\w-]+(\\.[\\w-]+)*(\\.[\\w-]{1,})$)
+	// 邮箱地址,格式必须满足(^$|^[\\\\w-+]+(\\\\.[\\\\w-+]+)*@[\\\\w-]+(\\\\.[\\\\w-]+)*(\\\\.[\\\\w-]{1,})$)。
 	Email *string `json:"email,omitempty"`
 
-	// 地址
+	// 地址。
 	Address *string `json:"address,omitempty"`
 
-	// 备注
+	// 备注。
 	Description *string `json:"description,omitempty"`
 
-	// 仅在查询时返回
+	// 企业归属的SP ID。仅在查询时返回。
 	SpId *string `json:"spId,omitempty"`
 
-	// 企业提示音语言设置,zh-CN或en-US
+	// 企业提示音语言设置,zh-CN或en-US。
 	Language *CorpBasicDtoLanguage `json:"language,omitempty"`
 
-	// 时区Id设置,例如北京东8区timeZoneId值为56,时区Id和时区的对应关系请参考: https://support.huaweicloud.com/api-meeting/meeting_21_0110.html
+	// 时区Id设置,例如北京东8区timeZoneId值为56,时区Id和时区的对应关系请参考: [[时区表](https://support.huaweicloud.com/api-meeting/meeting_21_0110.html)](tag:hws)[[时区表](https://support.huaweicloud.com/intl/zh-cn/api-meeting/meeting_21_0110.html)](tag:hk) 。
 	TimeZoneId *string `json:"timeZoneId,omitempty"`
 }
 

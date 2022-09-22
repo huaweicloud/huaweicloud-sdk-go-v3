@@ -12,13 +12,13 @@ import (
 // 批量查询任务时返回体重返回的任务信息。
 type TasksResponseBody struct {
 
-	// 迁移任务id
+	// 迁移任务ID
 	Id *string `json:"id,omitempty"`
 
 	// 任务名称（用户自定义）
 	Name *string `json:"name,omitempty"`
 
-	// 任务类型，创建迁移任务时必选，更新迁移任务时可选
+	// 任务类型，创建时必选，更新时可选 MIGRATE_FILE:文件级迁移 MIGRATE_BLOCK:块级迁移
 	Type *TasksResponseBodyType `json:"type,omitempty"`
 
 	// 操作系统类型，分为WINDOWS和LINUX，创建时必选，更新时可选
@@ -62,12 +62,12 @@ type TasksResponseBody struct {
 
 	SourceServer *SourceServerAssociatedWithTask `json:"source_server,omitempty"`
 
-	// 迁移项目id
+	// 迁移项目ID
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	TargetServer *TargetServerAssociatedWithTask `json:"target_server,omitempty"`
 
-	// 日志收集状态
+	// 日志收集状态 INIT TELL_AGENT_TO_COLLECT WAIT_AGENT_COLLECT_ACK AGENT_COLLECT_FAIL AGENT_COLLECT_SUCCESS WAIT_SERVER_COLLECT SERVER_COLLECT_FAIL SERVER_COLLECT_SUCCESS TELL_AGENT_RESET_ACL WAIT_AGENT_RESET_ACL_ACK
 	LogCollectStatus *TasksResponseBodyLogCollectStatus `json:"log_collect_status,omitempty"`
 
 	CloneServer *CloneServerBrief `json:"clone_server,omitempty"`

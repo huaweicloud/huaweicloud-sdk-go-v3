@@ -9,10 +9,10 @@ import (
 // Request Object
 type UpdateWebHookConfigStatusRequest struct {
 
-	// 订阅配置记录id
+	// 订阅配置记录ID。
 	Id string `json:"id"`
 
-	// 连接状态： 0表示已启用 ；1表示未启动； 2表示已锁定
+	// 事件推送状态。 * 0：启用 * 1：禁用 * 2：锁定
 	Status int32 `json:"status"`
 }
 

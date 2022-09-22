@@ -15,10 +15,10 @@ type ServerDisk struct {
 	// 磁盘名称
 	Name string `json:"name"`
 
-	// 磁盘的分区类型，添加源端时源端磁盘必选
+	// 磁盘的分区类型，添加源端时源端磁盘必选 MBR：mbr格式 GPT：gpt格式
 	PartitionStyle *ServerDiskPartitionStyle `json:"partition_style,omitempty"`
 
-	// 磁盘类型
+	// 磁盘类型 BOOT：BOOT设备 OS：系统设备
 	DeviceUse ServerDiskDeviceUse `json:"device_use"`
 
 	// 磁盘总大小，以字节为单位
@@ -35,6 +35,9 @@ type ServerDisk struct {
 
 	// Linux系统 目的端ECS中与源端关联的磁盘名称
 	RelationName *string `json:"relation_name,omitempty"`
+
+	// inode数量
+	InodeSize *int32 `json:"inode_size,omitempty"`
 }
 
 func (o ServerDisk) String() string {

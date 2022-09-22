@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 重命名会场消息体。
+// 重命名与会者请求。
 type RestRenamePartReqBody struct {
 
 	// 与会者标识。 已入会的必须填写该字段。
@@ -15,7 +15,7 @@ type RestRenamePartReqBody struct {
 	// 与会者号码。
 	Number string `json:"number"`
 
-	// 新名字。
+	// 新名称。
 	NewName string `json:"newName"`
 }
 

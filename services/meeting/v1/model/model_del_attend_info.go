@@ -9,7 +9,7 @@ import (
 // 待删除会场信息
 type DelAttendInfo struct {
 
-	// 会场呼叫号码。
+	// 会场号码。
 	Number string `json:"number"`
 
 	// 与会者标识，已入会的必须填写该字段。

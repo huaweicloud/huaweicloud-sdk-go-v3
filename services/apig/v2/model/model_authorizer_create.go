@@ -23,6 +23,12 @@ type AuthorizerCreate struct {
 	// 函数地址。
 	AuthorizerUri string `json:"authorizer_uri"`
 
+	// 函数版本。  当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
+	AuthorizerVersion *string `json:"authorizer_version,omitempty"`
+
+	// 函数别名地址。  当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
+	AuthorizerAliasUri *string `json:"authorizer_alias_uri,omitempty"`
+
 	// 认证来源
 	Identities *[]Identity `json:"identities,omitempty"`
 

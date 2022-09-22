@@ -12,10 +12,10 @@ import (
 // 目的端磁盘信息
 type TargetDisks struct {
 
-	// 磁盘类型，普通磁盘，OS所在磁盘，BOOT所在磁盘
+	// 磁盘类型，普通磁盘，OS所在磁盘，BOOT所在磁盘 BOOT：BOOT设备 OS：系统设备 NORMAL:平常
 	DeviceUse *TargetDisksDeviceUse `json:"device_use,omitempty"`
 
-	// 磁盘id,自动创建虚拟机不用设置
+	// 磁盘ID,自动创建虚拟机不用设置
 	DiskId *string `json:"disk_id,omitempty"`
 
 	// 名称，根据磁盘顺序设置为disk X

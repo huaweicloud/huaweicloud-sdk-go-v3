@@ -877,6 +877,28 @@ func (c *ProjectManClient) DeleteProjectModuleInvoker(request *model.DeleteProje
 	return &DeleteProjectModuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DownloadImageFile 下载图片
+//
+// 下载图片
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ProjectManClient) DownloadImageFile(request *model.DownloadImageFileRequest) (*model.DownloadImageFileResponse, error) {
+	requestDef := GenReqDefForDownloadImageFile()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DownloadImageFileResponse), nil
+	}
+}
+
+// DownloadImageFileInvoker 下载图片
+func (c *ProjectManClient) DownloadImageFileInvoker(request *model.DownloadImageFileRequest) *DownloadImageFileInvoker {
+	requestDef := GenReqDefForDownloadImageFile()
+	return &DownloadImageFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListAssociatedIssues 查询当前工作项已经关联的工作项
 //
 // 查询当前工作项已经关联的工作项
@@ -899,9 +921,9 @@ func (c *ProjectManClient) ListAssociatedIssuesInvoker(request *model.ListAssoci
 	return &ListAssociatedIssuesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListAssociatedTestCases 查询关联Wiki
+// ListAssociatedTestCases 查询关联用例
 //
-// 查询关联Wiki
+// 查询关联用例
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -915,7 +937,7 @@ func (c *ProjectManClient) ListAssociatedTestCases(request *model.ListAssociated
 	}
 }
 
-// ListAssociatedTestCasesInvoker 查询关联Wiki
+// ListAssociatedTestCasesInvoker 查询关联用例
 func (c *ProjectManClient) ListAssociatedTestCasesInvoker(request *model.ListAssociatedTestCasesRequest) *ListAssociatedTestCasesInvoker {
 	requestDef := GenReqDefForListAssociatedTestCases()
 	return &ListAssociatedTestCasesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1229,6 +1251,28 @@ func (c *ProjectManClient) ListProjectWorkHoursInvoker(request *model.ListProjec
 	return &ListProjectWorkHoursInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListScrumProjectStatuses 查询项目的状态列表
+//
+// 查询项目的状态列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ProjectManClient) ListScrumProjectStatuses(request *model.ListScrumProjectStatusesRequest) (*model.ListScrumProjectStatusesResponse, error) {
+	requestDef := GenReqDefForListScrumProjectStatuses()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListScrumProjectStatusesResponse), nil
+	}
+}
+
+// ListScrumProjectStatusesInvoker 查询项目的状态列表
+func (c *ProjectManClient) ListScrumProjectStatusesInvoker(request *model.ListScrumProjectStatusesRequest) *ListScrumProjectStatusesInvoker {
+	requestDef := GenReqDefForListScrumProjectStatuses()
+	return &ListScrumProjectStatusesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowIssueCompletionRate 获取工作项完成率
 //
 // 获取工作项的完成率
@@ -1425,6 +1469,28 @@ func (c *ProjectManClient) UpdateProjectModule(request *model.UpdateProjectModul
 func (c *ProjectManClient) UpdateProjectModuleInvoker(request *model.UpdateProjectModuleRequest) *UpdateProjectModuleInvoker {
 	requestDef := GenReqDefForUpdateProjectModule()
 	return &UpdateProjectModuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UploadAttachments 上传工作项附件
+//
+// 上传工作项附件
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ProjectManClient) UploadAttachments(request *model.UploadAttachmentsRequest) (*model.UploadAttachmentsResponse, error) {
+	requestDef := GenReqDefForUploadAttachments()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UploadAttachmentsResponse), nil
+	}
+}
+
+// UploadAttachmentsInvoker 上传工作项附件
+func (c *ProjectManClient) UploadAttachmentsInvoker(request *model.UploadAttachmentsRequest) *UploadAttachmentsInvoker {
+	requestDef := GenReqDefForUploadAttachments()
+	return &UploadAttachmentsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UploadIssueImg 上传图片

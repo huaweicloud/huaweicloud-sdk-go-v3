@@ -27,6 +27,9 @@ type PhysicalVolumes struct {
 	// 大小
 	Size *int64 `json:"size,omitempty"`
 
+	// inode数量
+	InodeSize *int64 `json:"inode_size,omitempty"`
+
 	// 使用大小
 	UsedSize *int64 `json:"used_size,omitempty"`
 

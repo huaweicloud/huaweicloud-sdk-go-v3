@@ -30,7 +30,7 @@ type TemplateRequest struct {
 	// 可用区
 	AvailabilityZone *string `json:"availability_zone,omitempty"`
 
-	// 磁盘类型
+	// 磁盘类型 SAS:串行连接SCSI SSD:固态硬盘 SATA:串口硬盘
 	Volumetype *TemplateRequestVolumetype `json:"volumetype,omitempty"`
 
 	// 虚拟机规格
@@ -38,10 +38,10 @@ type TemplateRequest struct {
 
 	Vpc *VpcObject `json:"vpc,omitempty"`
 
-	// 网卡信息，支持多个网卡，如果是自动创建，只填一个，id使用“autoCreate”
+	// 网卡信息，支持多个网卡，如果是自动创建，只填一个，ID使用“autoCreate”
 	Nics *[]Nics `json:"nics,omitempty"`
 
-	// 安全组，支持多个安全组，如果是自动创建，只填一个，id使用“autoCreate”
+	// 安全组，支持多个安全组，如果是自动创建，只填一个，ID使用“autoCreate”
 	SecurityGroups *[]SgObject `json:"security_groups,omitempty"`
 
 	Publicip *PublicIp `json:"publicip,omitempty"`
@@ -49,11 +49,14 @@ type TemplateRequest struct {
 	// 磁盘信息
 	Disk *[]TemplateDisk `json:"disk,omitempty"`
 
-	// 数据盘磁盘类型
+	// 数据盘磁盘类型 SAS:串行连接SCSI SSD:固态硬盘 SATA:串口硬盘
 	DataVolumeType *TemplateRequestDataVolumeType `json:"data_volume_type,omitempty"`
 
 	// 目的端密码
 	TargetPassword *string `json:"target_password,omitempty"`
+
+	// 新建目的虚拟机用户选择的镜像版本Id值
+	ImageId *string `json:"image_id,omitempty"`
 }
 
 func (o TemplateRequest) String() string {

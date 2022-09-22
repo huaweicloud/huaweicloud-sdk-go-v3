@@ -15,10 +15,10 @@ type BtrfsSubvolumn struct {
 	// 子卷是否为快照
 	IsSnapshot string `json:"is_snapshot"`
 
-	// 子卷的id
+	// 子卷的ID
 	SubvolId string `json:"subvol_id"`
 
-	// 父卷id
+	// 父卷ID
 	ParentId string `json:"parent_id"`
 
 	// 子卷的名称

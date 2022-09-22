@@ -9,7 +9,7 @@ import (
 // Response Object
 type ListSubscriptionsResponse struct {
 
-	// 事件订阅总数
+	// 总数
 	Total *int32 `json:"total,omitempty"`
 
 	// 本页数量

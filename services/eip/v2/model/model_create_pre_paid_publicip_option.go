@@ -20,6 +20,9 @@ type CreatePrePaidPublicipOption struct {
 
 	// 功能说明：弹性公网IP名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
 	Alias *string `json:"alias,omitempty"`
+
+	// 功能说明：端口id  约束：必须是存在的端口id，如果该端口不存在或端口已绑定EIP则会提示出错。
+	PortId *string `json:"port_id,omitempty"`
 }
 
 func (o CreatePrePaidPublicipOption) String() string {

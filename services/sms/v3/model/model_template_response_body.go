@@ -33,7 +33,7 @@ type TemplateResponseBody struct {
 	// 可用区
 	AvailabilityZone string `json:"availability_zone"`
 
-	// 磁盘类型
+	// 数据盘磁盘类型 SAS:串行连接SCSI SSD:固态硬盘 SATA:串口硬盘
 	Volumetype TemplateResponseBodyVolumetype `json:"volumetype"`
 
 	// 虚拟机规格
@@ -41,10 +41,10 @@ type TemplateResponseBody struct {
 
 	Vpc *VpcObject `json:"vpc"`
 
-	// 网卡信息，支持多个网卡，如果是自动创建，只填一个，id使用“autoCreate”
+	// 网卡信息，支持多个网卡，如果是自动创建，只填一个，ID使用“autoCreate”
 	Nics []Nics `json:"nics"`
 
-	// 安全组，支持多个安全组，如果是自动创建，只填一个，id使用“autoCreate”
+	// 安全组，支持多个安全组，如果是自动创建，只填一个，ID使用“autoCreate”
 	SecurityGroups []SgObject `json:"security_groups"`
 
 	Publicip *PublicIp `json:"publicip"`
@@ -52,11 +52,14 @@ type TemplateResponseBody struct {
 	// 磁盘信息
 	Disk []TemplateDisk `json:"disk"`
 
-	// 数据盘磁盘类型
+	// 数据盘磁盘类型 SAS:串行连接SCSI SSD:固态硬盘 SATA:串口硬盘
 	DataVolumeType TemplateResponseBodyDataVolumeType `json:"data_volume_type"`
 
 	// 目的端密码
 	TargetPassword string `json:"target_password"`
+
+	// 用户选择镜像版本Id值
+	ImageId *string `json:"image_id,omitempty"`
 }
 
 func (o TemplateResponseBody) String() string {

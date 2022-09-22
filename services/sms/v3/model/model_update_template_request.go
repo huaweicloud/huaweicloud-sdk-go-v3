@@ -9,7 +9,7 @@ import (
 // Request Object
 type UpdateTemplateRequest struct {
 
-	// 需要修改信息的模板的id
+	// 需要修改信息的模板的ID
 	Id string `json:"id"`
 
 	Body *UpdateTemplateReq `json:"body,omitempty"`

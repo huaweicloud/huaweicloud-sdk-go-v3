@@ -8,19 +8,19 @@ import (
 
 type SubPicLayoutInfo struct {
 
-	// 画面索引号
+	// 多画面信息。
 	Id *int32 `json:"id,omitempty"`
 
-	// 画面从左到右的坐标点
+	// 子画面从左到右的索引。
 	Left *int32 `json:"left,omitempty"`
 
-	// 画面从上到下的坐标点
+	// 子画面从上到下的索引。
 	Top *int32 `json:"top,omitempty"`
 
-	// 小画面的宽度
+	// 子画面横向尺寸。
 	XSize *int32 `json:"xSize,omitempty"`
 
-	// 小画面的高度
+	// 子画面横向尺寸。
 	YSize *int32 `json:"ySize,omitempty"`
 }
 

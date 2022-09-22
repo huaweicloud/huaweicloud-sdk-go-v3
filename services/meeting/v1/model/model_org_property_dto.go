@@ -8,10 +8,10 @@ import (
 
 type OrgPropertyDto struct {
 
-	// 配置项key。 开通本地录制功能，参数填写：enableClientRecord
+	// 配置项key。 开通本地录制功能，参数填写：enableClientRecord。
 	PropertyKey *string `json:"propertyKey,omitempty"`
 
-	// 配置项值。 开通本地录制功能，参数填写：true
+	// 配置项值。 开通本地录制功能，参数填写：true。
 	PropertyValue *string `json:"propertyValue,omitempty"`
 }
 

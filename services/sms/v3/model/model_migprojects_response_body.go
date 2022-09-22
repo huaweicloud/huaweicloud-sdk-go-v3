@@ -39,7 +39,7 @@ type MigprojectsResponseBody struct {
 	// 迁移项目描述
 	Description *string `json:"description,omitempty"`
 
-	// 迁移项目默认迁移类型
+	// 迁移项目默认迁移类型 MIGRATE_BLOCK:块级迁移 MIGRATE_FILE:文件级迁移
 	Type *MigprojectsResponseBodyType `json:"type,omitempty"`
 
 	// 迁移项目所属的企业项目名称

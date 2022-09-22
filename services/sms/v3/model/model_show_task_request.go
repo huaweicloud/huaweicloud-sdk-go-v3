@@ -9,7 +9,7 @@ import (
 // Request Object
 type ShowTaskRequest struct {
 
-	// 迁移任务id
+	// 迁移任务ID
 	TaskId string `json:"task_id"`
 }
 

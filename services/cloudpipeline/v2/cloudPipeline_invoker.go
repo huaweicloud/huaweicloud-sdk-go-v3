@@ -65,18 +65,6 @@ func (i *ListTemplatesInvoker) Invoke() (*model.ListTemplatesResponse, error) {
 	}
 }
 
-type RegisterAgentInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *RegisterAgentInvoker) Invoke() (*model.RegisterAgentResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.RegisterAgentResponse), nil
-	}
-}
-
 type RemovePipelineInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -86,18 +74,6 @@ func (i *RemovePipelineInvoker) Invoke() (*model.RemovePipelineResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.RemovePipelineResponse), nil
-	}
-}
-
-type ShowAgentStatusInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowAgentStatusInvoker) Invoke() (*model.ShowAgentStatusResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowAgentStatusResponse), nil
 	}
 }
 

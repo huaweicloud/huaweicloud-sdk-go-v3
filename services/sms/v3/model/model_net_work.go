@@ -27,7 +27,7 @@ type NetWork struct {
 	// Mac地址
 	Mac string `json:"mac"`
 
-	// 数据库Id
+	// 数据库ID
 	Id *string `json:"id,omitempty"`
 }
 

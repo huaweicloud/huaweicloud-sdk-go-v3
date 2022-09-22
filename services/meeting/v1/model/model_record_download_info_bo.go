@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// 单会议录制文件下载链接信息（包含多个录制文件）
+// 会议录制文件下载链接信息。
 type RecordDownloadInfoBo struct {
 
-	// 会议UUID
+	// 会议UUID。
 	ConfUuid *string `json:"confUuid,omitempty"`
 
-	// 录制文件下载URL
+	// 下载链接信息。
 	Urls *[]RecordDownloadUrlDo `json:"urls,omitempty"`
 }
 

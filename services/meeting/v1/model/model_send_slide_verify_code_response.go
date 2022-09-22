@@ -18,7 +18,7 @@ type SendSlideVerifyCodeResponse struct {
 	// 抠出图形的Y轴座标。
 	PointY *int32 `json:"pointY,omitempty"`
 
-	// 验证码token字符串。
+	// 验证码Token字符串。
 	Token *string `json:"token,omitempty"`
 
 	// 验证码有效时间，单位：秒。

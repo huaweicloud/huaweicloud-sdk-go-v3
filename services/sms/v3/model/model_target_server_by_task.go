@@ -18,7 +18,7 @@ type TargetServerByTask struct {
 	// 名称
 	Name string `json:"name"`
 
-	// 虚拟机id
+	// 虚拟机ID
 	VmId string `json:"vm_id"`
 
 	// 卷组，数据从源端获取

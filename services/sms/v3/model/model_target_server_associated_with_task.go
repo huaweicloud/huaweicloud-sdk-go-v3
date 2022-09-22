@@ -15,16 +15,16 @@ type TargetServerAssociatedWithTask struct {
 	// 目的端在SMS数据库中的ID
 	Id *string `json:"id,omitempty"`
 
-	// 目的端虚机id
+	// 目的端虚机ID
 	VmId *string `json:"vm_id,omitempty"`
 
 	// 目的端服务器名称
 	Name *string `json:"name,omitempty"`
 
-	// 目的端服务器ip
+	// 目的端服务器IP
 	Ip *string `json:"ip,omitempty"`
 
-	// 目的端服务器的OS类型
+	// 目的端服务器的OS类型 WINDOWS:WINDOWS系统 LINUX:LINUX系统
 	OsType *TargetServerAssociatedWithTaskOsType `json:"os_type,omitempty"`
 
 	// 操作系统版本

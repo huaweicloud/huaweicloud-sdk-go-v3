@@ -9,7 +9,7 @@ import (
 // Response Object
 type SearchAttendanceRecordsOfHisMeetingResponse struct {
 
-	// 第几条。
+	// 查询偏移量。
 	Offset *int32 `json:"offset,omitempty"`
 
 	// 每页的记录数。

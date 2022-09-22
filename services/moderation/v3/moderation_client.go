@@ -19,6 +19,28 @@ func ModerationClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+// CheckImageModeration 图片内容审核
+//
+// 分析并识别用户上传的图片是否有敏感内容（如色情、政治等），并将识别结果返回给用户
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ModerationClient) CheckImageModeration(request *model.CheckImageModerationRequest) (*model.CheckImageModerationResponse, error) {
+	requestDef := GenReqDefForCheckImageModeration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckImageModerationResponse), nil
+	}
+}
+
+// CheckImageModerationInvoker 图片内容审核
+func (c *ModerationClient) CheckImageModerationInvoker(request *model.CheckImageModerationRequest) *CheckImageModerationInvoker {
+	requestDef := GenReqDefForCheckImageModeration()
+	return &CheckImageModerationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RunCreateAudioModerationJob 创建音频内容审核作业
 //
 // 分析并识别用户上传的音频内容是否有敏感内容（如色情、政治等），并将识别结果返回给用户

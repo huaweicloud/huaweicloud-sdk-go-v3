@@ -12,7 +12,7 @@ type PutDisk struct {
 	// 磁盘名称
 	NeedMigration *bool `json:"need_migration,omitempty"`
 
-	// 磁盘id
+	// 磁盘ID
 	Id string `json:"id"`
 
 	// 调整大小

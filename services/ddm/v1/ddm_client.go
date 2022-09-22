@@ -395,6 +395,28 @@ func (c *DdmClient) RebuildConfigInvoker(request *model.RebuildConfigRequest) *R
 	return &RebuildConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ResetAdministrator DDM管理员账号密码管理
+//
+// 首次调用时新建DDM管理员帐号并设置密码。后续调用时仅更新管理员密码。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DdmClient) ResetAdministrator(request *model.ResetAdministratorRequest) (*model.ResetAdministratorResponse, error) {
+	requestDef := GenReqDefForResetAdministrator()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ResetAdministratorResponse), nil
+	}
+}
+
+// ResetAdministratorInvoker DDM管理员账号密码管理
+func (c *DdmClient) ResetAdministratorInvoker(request *model.ResetAdministratorRequest) *ResetAdministratorInvoker {
+	requestDef := GenReqDefForResetAdministrator()
+	return &ResetAdministratorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ResetUserPassword 重置DDM账号密码
 //
 // 重置现有DDM帐号的密码。
@@ -415,6 +437,28 @@ func (c *DdmClient) ResetUserPassword(request *model.ResetUserPasswordRequest) (
 func (c *DdmClient) ResetUserPasswordInvoker(request *model.ResetUserPasswordRequest) *ResetUserPasswordInvoker {
 	requestDef := GenReqDefForResetUserPassword()
 	return &ResetUserPasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ResizeFlavor 变更DDM实例规格
+//
+// 变更DDM实例规格。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DdmClient) ResizeFlavor(request *model.ResizeFlavorRequest) (*model.ResizeFlavorResponse, error) {
+	requestDef := GenReqDefForResizeFlavor()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ResizeFlavorResponse), nil
+	}
+}
+
+// ResizeFlavorInvoker 变更DDM实例规格
+func (c *DdmClient) ResizeFlavorInvoker(request *model.ResizeFlavorRequest) *ResizeFlavorInvoker {
+	requestDef := GenReqDefForResizeFlavor()
+	return &ResizeFlavorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // RestartInstance 重启DDM实例
@@ -679,4 +723,26 @@ func (c *DdmClient) UpdateUser(request *model.UpdateUserRequest) (*model.UpdateU
 func (c *DdmClient) UpdateUserInvoker(request *model.UpdateUserRequest) *UpdateUserInvoker {
 	requestDef := GenReqDefForUpdateUser()
 	return &UpdateUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ValidateWeakPassword 弱密码校验
+//
+// 弱密码校验
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DdmClient) ValidateWeakPassword(request *model.ValidateWeakPasswordRequest) (*model.ValidateWeakPasswordResponse, error) {
+	requestDef := GenReqDefForValidateWeakPassword()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ValidateWeakPasswordResponse), nil
+	}
+}
+
+// ValidateWeakPasswordInvoker 弱密码校验
+func (c *DdmClient) ValidateWeakPasswordInvoker(request *model.ValidateWeakPasswordRequest) *ValidateWeakPasswordInvoker {
+	requestDef := GenReqDefForValidateWeakPassword()
+	return &ValidateWeakPasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

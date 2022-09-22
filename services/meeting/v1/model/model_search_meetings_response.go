@@ -9,7 +9,7 @@ import (
 // Response Object
 type SearchMeetingsResponse struct {
 
-	// 第几条。
+	// 查询偏移量。
 	Offset *int32 `json:"offset,omitempty"`
 
 	// 每页的记录数。
@@ -18,7 +18,7 @@ type SearchMeetingsResponse struct {
 	// 总记录数。
 	Count *int32 `json:"count,omitempty"`
 
-	// 会议信息列表。
+	// 会议列表。
 	Data           *[]ConferenceInfo `json:"data,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }

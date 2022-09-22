@@ -9,10 +9,10 @@ import (
 // Response Object
 type ShowRealTimeInfoOfMeetingResponse struct {
 
-	// 所有参加会议的与会者列表，包括未入会的以及在线的与会者信息。
+	// 被邀请与会者信息，包括预约会议时邀请的与会者和会中主持人邀请的与会者，已经加入会议的和未加入会议的都返回。
 	Attendees *[]RealTimeAttendee `json:"attendees,omitempty"`
 
-	// 在线会场列表，包括已进入会议、呼叫中、正在加入会议的与会者列表等。
+	// 在线与会者列表信息，包括已加入会议、被邀请正在呼叫中、正在加入会议的与会者列表等。 > * 同一个帐号用不同类型终端（手机端或者PC端等）加入会议时，是不同的在线与会者 > * 未加入或者已离会与会者，不在在线与会者列表中
 	Participants *[]RealTimeParticipant `json:"participants,omitempty"`
 
 	ConfInfo       *RealTimeConfInfo `json:"confInfo,omitempty"`

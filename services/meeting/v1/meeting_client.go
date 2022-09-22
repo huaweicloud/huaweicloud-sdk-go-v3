@@ -43,7 +43,7 @@ func (c *MeetingClient) AddCorpInvoker(request *model.AddCorpRequest) *AddCorpIn
 
 // AddCorpAdmin 添加企业管理员
 //
-// 企业默认管理员添加企业普通管理员
+// 企业默认管理员添加企业普通管理员。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -65,7 +65,7 @@ func (c *MeetingClient) AddCorpAdminInvoker(request *model.AddCorpAdminRequest) 
 
 // AddDepartment 添加部门
 //
-// 企业管理员通过该接口添加部门，最多支持10级部门，每级子部门最多支持100个，默认企业最大部门数量为3000个。
+// 企业管理员通过该接口添加部门，最多支持10级部门，每级子部门最多支持100个，默认企业最大部门数量为10000个。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -87,7 +87,7 @@ func (c *MeetingClient) AddDepartmentInvoker(request *model.AddDepartmentRequest
 
 // AddDevice 增加终端
 //
-// 企业管理员通过该接口添加硬终端。
+// 企业管理员通过该接口添加专业会议终端。专业会议终端包括DP300/HUAWEI Bar系列/HUAWEI Board/TE系列。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -109,7 +109,7 @@ func (c *MeetingClient) AddDeviceInvoker(request *model.AddDeviceRequest) *AddDe
 
 // AddMaterial 新增信息窗素材
 //
-// 新增信息窗素材（上传素材文件）
+// 新增信息窗素材（上传素材文件）。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -131,7 +131,7 @@ func (c *MeetingClient) AddMaterialInvoker(request *model.AddMaterialRequest) *A
 
 // AddProgram 新增信息窗节目
 //
-// 新增信息窗节目
+// 新增信息窗节目。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -153,7 +153,7 @@ func (c *MeetingClient) AddProgramInvoker(request *model.AddProgramRequest) *Add
 
 // AddPublication 新增信息窗发布
 //
-// 新增信息窗发布
+// 新增信息窗发布。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -175,7 +175,7 @@ func (c *MeetingClient) AddPublicationInvoker(request *model.AddPublicationReque
 
 // AddResource SP管理员分配企业资源
 //
-// 企业新增资源发放。优化适配，该接口同时支持修改，带resourceId后会判断该资源是否存在，存在即修改（支持修改的参数见修改接口），否则按新增处理
+// 企业新增资源发放。该接口同时支持修改，带resourceId后会判断该资源是否存在，存在即修改（支持修改的参数见修改接口），否则按新增处理。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -197,7 +197,7 @@ func (c *MeetingClient) AddResourceInvoker(request *model.AddResourceRequest) *A
 
 // AddToPersonalSpace 保存会议纪要到个人云空间
 //
-// 用户使用手机扫码后，手机端请求服务端将当前会议纪要文件保存到个人云空间。二维码内容  cloudlink://cloudlink.huawei.com/h5page?action&#x3D;SAVE_MEETING_FILE&amp;key1&#x3D;value1&amp;key2&#x3D;value2    key/value的个数可能变化，终端解析后，在发起后续请求时，将所有key/value存为map，作为入参即可。
+// 用户使用手机扫码后,手机端请求服务端将当前会议纪要文件保存到个人云空间。二维码内容 ：cloudlink://cloudlink.huawei.com/h5page?action&#x3D;SAVE_MEETING_FILE&amp;key1&#x3D;value1&amp;key2&#x3D;value2 。key/value的个数可能变化，终端解析后，在发起后续请求时，将所有key/value存为map，作为入参即可。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -220,6 +220,7 @@ func (c *MeetingClient) AddToPersonalSpaceInvoker(request *model.AddToPersonalSp
 // AddUser 添加用户
 //
 // 企业管理员通过该接口添加企业用户。
+// &gt; 默认添加用户后，用户第一次登录华为云会议App或者Portal时需要修改密码。若需关闭第一次登录修改密码，请联系华为销售人员，并提供华为云会议企业ID。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -241,7 +242,7 @@ func (c *MeetingClient) AddUserInvoker(request *model.AddUserRequest) *AddUserIn
 
 // AllowGuestUnmute 与会者自己解除静音
 //
-// 决定与会者是否可以自己解除静音。
+// 该接口用于设置与会者是否可以自己解除静音。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -263,7 +264,7 @@ func (c *MeetingClient) AllowGuestUnmuteInvoker(request *model.AllowGuestUnmuteR
 
 // AssociateVmr 分配云会议室
 //
-// 企业管理员通过该接口将云会议室分配给用户、硬终端（当前仅支持分配TE10、TE20、HUAWEI Board、HUAWEI Bar 500及HUAWEI Box系列硬件终端）。云会议室分配给硬件终端后，需要重启或重新激活硬件终端。若需要管理云会议室、预约会议、录制会议或进行完整的会控操作，请同时将该云会议室分配给会议用户。
+// 企业管理员通过该接口将云会议室分配给用户、专业会议终端（TE10、TE20、HUAWEI Board、HUAWEI Bar 500及HUAWEI Box系列）、智慧屏TV、电子白板（SmartRooms）、IdeaHub。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -285,7 +286,7 @@ func (c *MeetingClient) AssociateVmrInvoker(request *model.AssociateVmrRequest) 
 
 // BatchDeleteCorpAdmins 批量删除企业管理员
 //
-// 批量删除企业管理员
+// 通过该接口批量删除企业管理员。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -307,7 +308,8 @@ func (c *MeetingClient) BatchDeleteCorpAdminsInvoker(request *model.BatchDeleteC
 
 // BatchDeleteDevices 批量删除终端
 //
-// 企业管理员通过该接口批量删除终端，返回删除失败的列表。
+// 企业管理员通过该接口批量删除专业会议终端，返回删除失败的列表。
+// &gt; 如果需要删除Ideahub、SmartRooms、智慧屏TV请使用[[批量删除用户](https://support.huaweicloud.com/api-meeting/meeting_21_0070.html)](tag:hws)[[批量删除用户](https://support.huaweicloud.com/intl/zh-cn/api-meeting/meeting_21_0070.html)](tag:hk)接口。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -329,7 +331,7 @@ func (c *MeetingClient) BatchDeleteDevicesInvoker(request *model.BatchDeleteDevi
 
 // BatchDeleteMaterials 删除信息窗素材
 //
-// 删除信息窗素材
+// 删除信息窗素材。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -351,7 +353,7 @@ func (c *MeetingClient) BatchDeleteMaterialsInvoker(request *model.BatchDeleteMa
 
 // BatchDeletePrograms 删除信息窗节目
 //
-// 删除信息窗节目
+// 删除信息窗节目。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -373,7 +375,7 @@ func (c *MeetingClient) BatchDeleteProgramsInvoker(request *model.BatchDeletePro
 
 // BatchDeletePublications 删除信息窗发布
 //
-// 删除信息窗发布
+// 删除信息窗发布。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -395,7 +397,7 @@ func (c *MeetingClient) BatchDeletePublicationsInvoker(request *model.BatchDelet
 
 // BatchDeleteUsers 批量删除用户
 //
-// 企业管理员通过该接口批量删除企业用户，全量成功或全量失败。
+// 企业管理员通过该接口批量删除企业用户。删除多个用户时，全部删除成功或者全部删除失败。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -417,7 +419,7 @@ func (c *MeetingClient) BatchDeleteUsersInvoker(request *model.BatchDeleteUsersR
 
 // BatchUpdateDevicesStatus 批量修改终端状态
 //
-// 批量修改终端状态
+// 企业管理员通过该接口批量修改专业会议终端状态。当硬终端资源到期后，若企业内对应资源的硬终端超过数量后会被系统随机自动停用，此时可通过该接口修改专业会议终端的状态。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -439,7 +441,7 @@ func (c *MeetingClient) BatchUpdateDevicesStatusInvoker(request *model.BatchUpda
 
 // BatchUpdateUserStatus 批量修改用户状态
 //
-// 企业管理员通过该接口批量修改用户状态，当用户账号数资源或者第三方电子白板资源到期后，若企业内对应资源的用户账号超过数量后会被系统随机自动停用，此时可通过该接口修改用户的状态。
+// 企业管理员通过该接口批量修改用户状态，当用户帐号数资源或者电子白板（SmartRooms）资源到期后，若企业内对应资源的用户帐号超过数量后会被系统随机自动停用，此时可通过该接口修改用户的状态。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -461,7 +463,7 @@ func (c *MeetingClient) BatchUpdateUserStatusInvoker(request *model.BatchUpdateU
 
 // BroadcastParticipant 广播会场
 //
-// 同一时间，只允许一个与会者被广播。
+// 该接口用于广播指定的与会者。同一时间，只允许一个与会者被广播。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -483,7 +485,7 @@ func (c *MeetingClient) BroadcastParticipantInvoker(request *model.BroadcastPart
 
 // CancelMeeting 取消预约会议
 //
-// 取消预约会议。
+// 该接口用于取消预约的会议。企业管理员可以取消本企业下用户创建的会议，普通用户只能取消自己创建的会议。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -503,9 +505,9 @@ func (c *MeetingClient) CancelMeetingInvoker(request *model.CancelMeetingRequest
 	return &CancelMeetingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CancelRecurringMeeting 取消周期会议
+// CancelRecurringMeeting 取消周期性会议
 //
-// 管理员或UC账号可以通过该接口取消周期会议
+// 该接口用于取消周期性会议。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -519,15 +521,15 @@ func (c *MeetingClient) CancelRecurringMeeting(request *model.CancelRecurringMee
 	}
 }
 
-// CancelRecurringMeetingInvoker 取消周期会议
+// CancelRecurringMeetingInvoker 取消周期性会议
 func (c *MeetingClient) CancelRecurringMeetingInvoker(request *model.CancelRecurringMeetingRequest) *CancelRecurringMeetingInvoker {
 	requestDef := GenReqDefForCancelRecurringMeeting()
 	return &CancelRecurringMeetingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CancelRecurringSubMeeting 取消周期子会议
+// CancelRecurringSubMeeting 取消周期性会议的子会议
 //
-// 管理员或UC账号可以通过该接口取消周期会议
+// 该接口用于取消周期性会议的子会议。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -541,7 +543,7 @@ func (c *MeetingClient) CancelRecurringSubMeeting(request *model.CancelRecurring
 	}
 }
 
-// CancelRecurringSubMeetingInvoker 取消周期子会议
+// CancelRecurringSubMeetingInvoker 取消周期性会议的子会议
 func (c *MeetingClient) CancelRecurringSubMeetingInvoker(request *model.CancelRecurringSubMeetingRequest) *CancelRecurringSubMeetingInvoker {
 	requestDef := GenReqDefForCancelRecurringSubMeeting()
 	return &CancelRecurringSubMeetingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -637,7 +639,7 @@ func (c *MeetingClient) CheckVerifyCodeInvoker(request *model.CheckVerifyCodeReq
 
 // CreateAnonymousAuthRandom 匿名用户会议鉴权
 //
-// 未登陆终端，通过输入会议ID进行会议鉴权，返回鉴权随机数。如果需要密码则返回需要会议密码错误码，然后终端弹出输入会议ID输入框，用户输入密码后，终端再次调用该接口进行鉴权。
+// 该接口用于匿名用户入会鉴权。请求根据会议ID和密码鉴权，返回鉴权随机数（可以根据该随机数获取匿名用户信息、会议信息等）。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -659,7 +661,7 @@ func (c *MeetingClient) CreateAnonymousAuthRandomInvoker(request *model.CreateAn
 
 // CreateConfToken 获取会控Token
 //
-// 获取会控授权令牌，然后会议会被拉起。
+// 该接口用于获取正在召开会议的会控Token（未开始的会议调用该接口返回失败）。Token有效期是半个小时。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -681,7 +683,7 @@ func (c *MeetingClient) CreateConfTokenInvoker(request *model.CreateConfTokenReq
 
 // CreateMeeting 创建会议
 //
-// 您可根据需要创建立即会议和预约会议。
+// 该接口用于创建立即会议和预约会议。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -703,7 +705,7 @@ func (c *MeetingClient) CreateMeetingInvoker(request *model.CreateMeetingRequest
 
 // CreatePortalRefNonce 获取页面免登陆跳转的nonce信息
 //
-// 通过token生成页面免登陆跳转到华为云会议的Portal的nonce信息。获取到nonce信息后，通过链接https://bmeeting.huaweicloud.com/?lang&#x3D;zh-CN&amp;nonce&#x3D;xxxxxxxxxxxxx#/login进行免登陆跳转。
+// 通过Access Token生成页面免登陆跳转到华为云会议的Portal的nonce信息。获取到nonce信息后，通过链接https://meeting.huaweicloud.com/?lang&#x3D;zh-CN&amp;nonce&#x3D;xxxxxxxxxxxxx#/login进行免登陆跳转。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -723,9 +725,9 @@ func (c *MeetingClient) CreatePortalRefNonceInvoker(request *model.CreatePortalR
 	return &CreatePortalRefNonceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateRecurringMeeting 创建周期会议
+// CreateRecurringMeeting 创建周期性会议
 //
-// 管理员或UC账号可以通过该接口创建周期会议
+// 该接口用于预约周期性会议。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -739,7 +741,7 @@ func (c *MeetingClient) CreateRecurringMeeting(request *model.CreateRecurringMee
 	}
 }
 
-// CreateRecurringMeetingInvoker 创建周期会议
+// CreateRecurringMeetingInvoker 创建周期性会议
 func (c *MeetingClient) CreateRecurringMeetingInvoker(request *model.CreateRecurringMeetingRequest) *CreateRecurringMeetingInvoker {
 	requestDef := GenReqDefForCreateRecurringMeeting()
 	return &CreateRecurringMeetingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -747,7 +749,7 @@ func (c *MeetingClient) CreateRecurringMeetingInvoker(request *model.CreateRecur
 
 // CreateVisionActiveCode 企业管理员生成激活码
 //
-// 企业管理员生成智慧屏、电子白板、Ideahub的激活码
+// 企业管理员生成智慧屏、电子白板（SmartRooms）、Ideahub的激活码。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -767,9 +769,9 @@ func (c *MeetingClient) CreateVisionActiveCodeInvoker(request *model.CreateVisio
 	return &CreateVisionActiveCodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateWebSocketToken 获取websocket鉴权token
+// CreateWebSocketToken 获取websocket建链Token
 //
-// 获取websocket鉴权token。
+// 该接口用于获取会控WebSocket建链的临时Token。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -783,7 +785,7 @@ func (c *MeetingClient) CreateWebSocketToken(request *model.CreateWebSocketToken
 	}
 }
 
-// CreateWebSocketTokenInvoker 获取websocket鉴权token
+// CreateWebSocketTokenInvoker 获取websocket建链Token
 func (c *MeetingClient) CreateWebSocketTokenInvoker(request *model.CreateWebSocketTokenRequest) *CreateWebSocketTokenInvoker {
 	requestDef := GenReqDefForCreateWebSocketToken()
 	return &CreateWebSocketTokenInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -791,7 +793,7 @@ func (c *MeetingClient) CreateWebSocketTokenInvoker(request *model.CreateWebSock
 
 // CreateWebinar 预约网络研讨会
 //
-// 您可根据需要预约网络研讨会。注意：暂不支持添加外部联系人作为与会嘉宾
+// 该接口用于创建网络研讨会。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -813,7 +815,7 @@ func (c *MeetingClient) CreateWebinarInvoker(request *model.CreateWebinarRequest
 
 // DeleteAttendees 删除与会者
 //
-// 删除与会者。
+// 该接口用于删除与会者。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -835,7 +837,7 @@ func (c *MeetingClient) DeleteAttendeesInvoker(request *model.DeleteAttendeesReq
 
 // DeleteCorp SP管理员删除企业
 //
-// 删除企业
+// 删除企业。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -857,7 +859,7 @@ func (c *MeetingClient) DeleteCorpInvoker(request *model.DeleteCorpRequest) *Del
 
 // DeleteCorpVmr 删除云会议室
 //
-// 企业管理员通过该接口删除企业的云会议室
+// 企业管理员通过该接口删除企业的云会议室。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -901,7 +903,7 @@ func (c *MeetingClient) DeleteDepartmentInvoker(request *model.DeleteDepartmentR
 
 // DeleteRecordings 批量删除录制
 //
-// 批量删除录制。
+// 该接口用于批量删除会议的录制。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -923,7 +925,7 @@ func (c *MeetingClient) DeleteRecordingsInvoker(request *model.DeleteRecordingsR
 
 // DeleteResource SP管理员根据删除企业资源
 //
-// 企业删除资源项，删除资源项后，企业资源总数会自动减少
+// 企业删除资源项，删除资源项后，企业资源总数会自动减少。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -945,7 +947,7 @@ func (c *MeetingClient) DeleteResourceInvoker(request *model.DeleteResourceReque
 
 // DeleteVisionActiveCode 企业管理员删除激活码
 //
-// 企业管理员批量删除激活码
+// 企业管理员批量删除激活码。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -965,9 +967,9 @@ func (c *MeetingClient) DeleteVisionActiveCodeInvoker(request *model.DeleteVisio
 	return &DeleteVisionActiveCodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteWebHookConfig 删除事件订阅配置信息
+// DeleteWebHookConfig 删除事件推送
 //
-// 管理员可以通过该接口删除事件订阅(webhook)配置
+// 该接口用于管理员删除已配置的事件推送设置。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -981,7 +983,7 @@ func (c *MeetingClient) DeleteWebHookConfig(request *model.DeleteWebHookConfigRe
 	}
 }
 
-// DeleteWebHookConfigInvoker 删除事件订阅配置信息
+// DeleteWebHookConfigInvoker 删除事件推送
 func (c *MeetingClient) DeleteWebHookConfigInvoker(request *model.DeleteWebHookConfigRequest) *DeleteWebHookConfigInvoker {
 	requestDef := GenReqDefForDeleteWebHookConfig()
 	return &DeleteWebHookConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -989,7 +991,7 @@ func (c *MeetingClient) DeleteWebHookConfigInvoker(request *model.DeleteWebHookC
 
 // DeleteWebinar 取消网络研讨会
 //
-// 您可根据需要取消网络研讨会。
+// 该接口用于取消已预约的网络研讨会。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1011,7 +1013,7 @@ func (c *MeetingClient) DeleteWebinarInvoker(request *model.DeleteWebinarRequest
 
 // DisassociateVmr 回收云会议室
 //
-// 企业管理员通过该接口回收云会议室
+// 企业管理员通过该接口回收云会议室。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1033,7 +1035,7 @@ func (c *MeetingClient) DisassociateVmrInvoker(request *model.DisassociateVmrReq
 
 // Hand 举手
 //
-// 所有来宾可以举手。来宾举手后，可以取消自己的举手。主持人可以取消所有来宾的举手。
+// 该接口用于设置指定与会者的举手/放下举手状态。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1055,7 +1057,7 @@ func (c *MeetingClient) HandInvoker(request *model.HandRequest) *HandInvoker {
 
 // HangUp 挂断与会者
 //
-// 挂断正在通话中的与会者。
+// 该接口用于挂断正在通话中的与会者。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1075,9 +1077,9 @@ func (c *MeetingClient) HangUpInvoker(request *model.HangUpRequest) *HangUpInvok
 	return &HangUpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// InviteOperateVideo 主持人邀请与会者开启、关闭摄像头
+// InviteOperateVideo 主持人邀请与会者开启/关闭摄像头
 //
-// 主持人邀请与会者开启、关闭摄像头
+// 该接口用于邀请指定与会者开启、关闭摄像头。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1091,7 +1093,7 @@ func (c *MeetingClient) InviteOperateVideo(request *model.InviteOperateVideoRequ
 	}
 }
 
-// InviteOperateVideoInvoker 主持人邀请与会者开启、关闭摄像头
+// InviteOperateVideoInvoker 主持人邀请与会者开启/关闭摄像头
 func (c *MeetingClient) InviteOperateVideoInvoker(request *model.InviteOperateVideoRequest) *InviteOperateVideoInvoker {
 	requestDef := GenReqDefForInviteOperateVideo()
 	return &InviteOperateVideoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1099,7 +1101,7 @@ func (c *MeetingClient) InviteOperateVideoInvoker(request *model.InviteOperateVi
 
 // InviteParticipant 邀请与会者
 //
-// 邀请与会者加入会议。
+// 该接口用于邀请与会者加入会议。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1121,7 +1123,7 @@ func (c *MeetingClient) InviteParticipantInvoker(request *model.InviteParticipan
 
 // InviteShare 邀请共享
 //
-// 场景描述：主席邀请、取消邀请会场共享 功能描述：主席邀请、取消邀请会场共享
+// 该接口用于邀请/取消邀请指定与会人共享桌面。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1169,7 +1171,7 @@ func (c *MeetingClient) InviteUserInvoker(request *model.InviteUserRequest) *Inv
 
 // InviteWithPwd 通过会议ID和密码邀请与会者
 //
-// 通过会议ID和密码邀请与会者
+// 该接口用于通过会议ID和密码邀请与会者。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1191,7 +1193,7 @@ func (c *MeetingClient) InviteWithPwdInvoker(request *model.InviteWithPwdRequest
 
 // ListHistoryWebinars 查询历史召开的网络研讨会列表
 //
-// 查询历史召开的网络研讨会列表，企业管理员可查询企业内所有历史召开的网络研讨会，普通账号查询自己历史召开的网络研讨会
+// 该接口用于查询历史网络研讨会。管理员可查询企业内历史网络研讨会，非管理员可查询个人历史网络研讨会。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1213,7 +1215,7 @@ func (c *MeetingClient) ListHistoryWebinarsInvoker(request *model.ListHistoryWeb
 
 // ListOngoingWebinars 查询正在召开的网络研讨会列表
 //
-// 查询正在召开的网络研讨会列表：企业管理员可查询企业内所有正在召开的网络研讨会，普通账号查询自己正在召开的网络研讨会
+// 该接口用于查询正在召开的网络研讨会。管理员可查询企业内正在召开网络研讨会，非管理员可查询自己预订的正在召开的网络研讨会。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1235,7 +1237,7 @@ func (c *MeetingClient) ListOngoingWebinarsInvoker(request *model.ListOngoingWeb
 
 // ListUpComingWebinars 查询即将召开的网络研讨会列表
 //
-// 查询即将召开的网络研讨会列表：企业管理员可查询企业内所有即将召开的网络研讨会，普通账号查询自己即将召开的网络研讨会
+// 该接口用于查询即将召开的网络研讨会。管理员可查询企业内即将召开网络研讨会，非管理员可查询自己预订的即将召开的网络研讨会。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1257,7 +1259,7 @@ func (c *MeetingClient) ListUpComingWebinarsInvoker(request *model.ListUpComingW
 
 // Live 启停会议直播
 //
-// 启动或停止会议直播。
+// 该接口用于启动或停止会议直播。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1279,7 +1281,7 @@ func (c *MeetingClient) LiveInvoker(request *model.LiveRequest) *LiveInvoker {
 
 // LockMeeting 锁定会议
 //
-// 锁定或解锁会议。锁定会议后，不允许与会者加入会议。
+// 该接口用于锁定或解锁会议。锁定会议后，不允许新的来宾主动加入会议。会议锁定后使用主持人密码/主持人链接加入会议或者主持人邀请来宾不受影响。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1301,7 +1303,7 @@ func (c *MeetingClient) LockMeetingInvoker(request *model.LockMeetingRequest) *L
 
 // LockView 锁定会场视频源
 //
-// 锁定或者解锁某在线会场的视频源。
+// 该接口用于锁定或者解锁某在线会场的视频源。只适用于专业会议终端（如TE系列等）。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1323,7 +1325,7 @@ func (c *MeetingClient) LockViewInvoker(request *model.LockViewRequest) *LockVie
 
 // MuteMeeting 全场静音
 //
-// 主持人可以通过该接口静音/取消静音整个会议所有与会者（主持人除外）。
+// 该接口用于设置整个会议所有与会者（主持人除外）的静音/取消静音状态。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1345,7 +1347,7 @@ func (c *MeetingClient) MuteMeetingInvoker(request *model.MuteMeetingRequest) *M
 
 // MuteParticipant 静音与会者
 //
-// 主持人可以静音/取消静音任意与会者，来宾也可静音/取消静音自己。
+// 该接口用于设置指定与会者静音/取消静音状态。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1367,7 +1369,7 @@ func (c *MeetingClient) MuteParticipantInvoker(request *model.MuteParticipantReq
 
 // ProlongMeeting 延长会议
 //
-// 延长会议。
+// 该接口用于延长会议时间。默认会议自动延长。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1389,7 +1391,7 @@ func (c *MeetingClient) ProlongMeetingInvoker(request *model.ProlongMeetingReque
 
 // Record 启停会议录制
 //
-// 启动或停止会议录制。
+// 该接口用于启动或停止会议云录制。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1431,7 +1433,7 @@ func (c *MeetingClient) RenameParticipantInvoker(request *model.RenameParticipan
 	return &RenameParticipantInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ResetActivecode 企业管理员重置硬终端激活码
+// ResetActivecode 企业管理员通过sn重置激活码
 //
 // 当硬终端激活码失效时，企业管理员可以通过该接口重置激活码，使用重新获取的激活码激活终端，每24小时可重新激活5次。
 //
@@ -1447,7 +1449,7 @@ func (c *MeetingClient) ResetActivecode(request *model.ResetActivecodeRequest) (
 	}
 }
 
-// ResetActivecodeInvoker 企业管理员重置硬终端激活码
+// ResetActivecodeInvoker 企业管理员通过sn重置激活码
 func (c *MeetingClient) ResetActivecodeInvoker(request *model.ResetActivecodeRequest) *ResetActivecodeInvoker {
 	requestDef := GenReqDefForResetActivecode()
 	return &ResetActivecodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1497,9 +1499,9 @@ func (c *MeetingClient) ResetPwdByAdminInvoker(request *model.ResetPwdByAdminReq
 	return &ResetPwdByAdminInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ResetVisionActiveCode 企业管理员重置账号的激活码
+// ResetVisionActiveCode 企业管理员重置帐号的激活码
 //
-// 企业管理员重置账号的激活码，重置后，原设备直接解绑，必须重新激活使用,若手机邮箱不填，则不会发送新的激活码
+// 企业管理员重置帐号的激活码，重置后，原设备直接解绑，必须重新激活使用,若手机邮箱不填，则不会发送新的激活码。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1513,7 +1515,7 @@ func (c *MeetingClient) ResetVisionActiveCode(request *model.ResetVisionActiveCo
 	}
 }
 
-// ResetVisionActiveCodeInvoker 企业管理员重置账号的激活码
+// ResetVisionActiveCodeInvoker 企业管理员重置帐号的激活码
 func (c *MeetingClient) ResetVisionActiveCodeInvoker(request *model.ResetVisionActiveCodeRequest) *ResetVisionActiveCodeInvoker {
 	requestDef := GenReqDefForResetVisionActiveCode()
 	return &ResetVisionActiveCodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1521,7 +1523,7 @@ func (c *MeetingClient) ResetVisionActiveCodeInvoker(request *model.ResetVisionA
 
 // RollcallParticipant 点名会场
 //
-// 同一时间，只允许一个与会者被点名。点名会场的效果是除了主持人外，点名与会者为非静音状态，未点名的与会者统一为静音状态。
+// 该接口用于点名指定与会者。点名会场的效果是除了主持人外，点名与会者为非静音状态，未点名的与会者统一为静音状态。同一时间，只允许一个与会者被点名。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1543,7 +1545,7 @@ func (c *MeetingClient) RollcallParticipantInvoker(request *model.RollcallPartic
 
 // SearchAttendanceRecordsOfHisMeeting 查询历史会议的与会者记录
 //
-// 查询指定历史会议的与会者记录。
+// 该接口用于查询指定历史会议的与会者记录。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1565,7 +1567,7 @@ func (c *MeetingClient) SearchAttendanceRecordsOfHisMeetingInvoker(request *mode
 
 // SearchCorp SP管理员分页搜索企业
 //
-// 分页搜索企业,支持名称、企业ID搜索
+// SP管理员分页搜索企业。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1631,7 +1633,7 @@ func (c *MeetingClient) SearchCorpDirInvoker(request *model.SearchCorpDirRequest
 
 // SearchCorpResources 企业管理员分页查询企业资源订单列表
 //
-// 企业管理员根据条件查询企业资源订单列表
+// 企业管理员根据条件查询企业资源订单列表。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1675,7 +1677,7 @@ func (c *MeetingClient) SearchCorpVmrInvoker(request *model.SearchCorpVmrRequest
 
 // SearchCtlRecordsOfHisMeeting 查询历史会议的会控记录
 //
-// 查询指定历史会议的会控记录。
+// 该接口用于查询指定历史会议的会控记录。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1719,7 +1721,8 @@ func (c *MeetingClient) SearchDepartmentByNameInvoker(request *model.SearchDepar
 
 // SearchDevices 分页查询终端
 //
-// 企业管理员通过该接口分页查询终端信息。
+// 企业管理员通过该接口分页查询专业会议终端信息。
+// &gt; 如果需要查询Ideahub、SmartRooms、智慧屏TV请使用[[分页查询用户](https://support.huaweicloud.com/api-meeting/meeting_21_0071.html)](tag:hws)[[分页查询用户](https://support.huaweicloud.com/intl/zh-cn/api-meeting/meeting_21_0071.html)](tag:hk)接口。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1741,7 +1744,10 @@ func (c *MeetingClient) SearchDevicesInvoker(request *model.SearchDevicesRequest
 
 // SearchHisMeetings 查询历史会议列表
 //
-// 管理员可以查询管理权限域内所有的历史会议，普通用户仅能查询当前帐号管理的历史会议。不带查询参数时，默认查询权限范围内的历史会议。
+// 该接口用于查询已经结束的会议。管理员可以查询本企业内所有的历史会议，普通用户仅能查询自己创建或者被邀请的历史会议。不带查询参数时，默认查询权限范围内的历史会议。
+// &gt; * 普通用户如果只是通过会议ID或者会议链接接入会议，不是预定者会前邀请或者会中主持人邀请的，则历史会议中无法查到
+// &gt; * 如果同一个会议召开并结束多次，则会产生多条历史会议（会议ID相同，会议UUID不同）
+// &gt; * 历史会议记录默认保留6个月，最长保留12个月。保留时间管理员可在“会议设置”的“历史会议留存时间”中修改
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1763,7 +1769,7 @@ func (c *MeetingClient) SearchHisMeetingsInvoker(request *model.SearchHisMeeting
 
 // SearchMaterials 分页查询信息窗素材
 //
-// 分页查询信息窗素材
+// 分页查询信息窗素材。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1785,7 +1791,7 @@ func (c *MeetingClient) SearchMaterialsInvoker(request *model.SearchMaterialsReq
 
 // SearchMeetingFileList 查询会议纪要列表
 //
-// 用户查询自己的会议纪要列表
+// 用户查询自己的会议纪要列表。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1807,7 +1813,9 @@ func (c *MeetingClient) SearchMeetingFileListInvoker(request *model.SearchMeetin
 
 // SearchMeetings 查询会议列表
 //
-// 管理员可以查询管理权限域内所有的会议，普通用户仅能查询当前帐号管理的会议。不带查询参数时，默认查询权限范围内正在召开或还未召开的会议。
+// 该接口用于查询尚未结束的会议。
+// * 管理员可以查询管理权限域内所有的会议，普通用户仅能查询自己创建或者需要参加的会议。不带查询参数时，默认查询权限范围内正在召开或还未召开的会议。
+// * 只能查询尚未结束的会议（既正在召开的会议和已预约还未召开的会议）。如果需要查询历史会议列表，请参考[[查询历史会议列表](https://support.huaweicloud.com/api-meeting/meeting_21_0051.html)](tag:hws)[[查询历史会议列表](https://support.huaweicloud.com/intl/zh-cn/api-meeting/meeting_21_0051.html)](tag:hk)。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1851,7 +1859,7 @@ func (c *MeetingClient) SearchMemberVmrInvoker(request *model.SearchMemberVmrReq
 
 // SearchOnlineMeetings 查询在线会议列表
 //
-// 管理员可以查询管理权限域内所有在线会议，普通用户仅能查询当前自己帐号管理的在线会议。不带查询参数时，默认查询权限范围内的在线会议，按开始时间升序排列。
+// 该接口用于查询正在召开的会议列表。管理员可以查询本企业内所有在线会议，普通用户仅能查询当前自己帐号创建或者需要参加的在线会议。不带查询参数时，默认查询权限范围内的在线会议，按开始时间升序排列。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1873,7 +1881,7 @@ func (c *MeetingClient) SearchOnlineMeetingsInvoker(request *model.SearchOnlineM
 
 // SearchPrograms 查询信息窗节目
 //
-// 获取信息窗节目
+// 获取信息窗节目。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1895,7 +1903,7 @@ func (c *MeetingClient) SearchProgramsInvoker(request *model.SearchProgramsReque
 
 // SearchPublications 查询信息窗发布
 //
-// 获取信息窗发布
+// 获取信息窗发布。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1917,7 +1925,7 @@ func (c *MeetingClient) SearchPublicationsInvoker(request *model.SearchPublicati
 
 // SearchRecordings 查询录制列表
 //
-// 管理员可以查询管理权限域内所有的录制，普通用户仅能查询当前帐号管理的录制。不带查询参数时，默认查询权限范围内的录制。
+// 该接口用于查询会议录制列表。管理员可以查询本企业内所有的录制，普通用户仅能查询自己创建的会议的录制。不带查询参数时，默认查询权限范围内的录制。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1939,7 +1947,7 @@ func (c *MeetingClient) SearchRecordingsInvoker(request *model.SearchRecordingsR
 
 // SearchResource SP管理员根据分页查询企业资源
 //
-// SP根据条件查询企业的资源项
+// SP根据条件查询企业的资源项。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1959,9 +1967,9 @@ func (c *MeetingClient) SearchResourceInvoker(request *model.SearchResourceReque
 	return &SearchResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// SearchResourceOpRecord SP管理员根据分页查询企业资源操作记录
+// SearchResourceOpRecord SP管理员分页查询企业资源操作记录
 //
-// SP根据根据条件查询企业的资源操作记录，支持根据resourceId模糊搜索
+// SP根据根据条件查询企业的资源操作记录，支持根据resourceId模糊搜索。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1975,7 +1983,7 @@ func (c *MeetingClient) SearchResourceOpRecord(request *model.SearchResourceOpRe
 	}
 }
 
-// SearchResourceOpRecordInvoker SP管理员根据分页查询企业资源操作记录
+// SearchResourceOpRecordInvoker SP管理员分页查询企业资源操作记录
 func (c *MeetingClient) SearchResourceOpRecordInvoker(request *model.SearchResourceOpRecordRequest) *SearchResourceOpRecordInvoker {
 	requestDef := GenReqDefForSearchResourceOpRecord()
 	return &SearchResourceOpRecordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -2071,7 +2079,7 @@ func (c *MeetingClient) SendVeriCodeForChangePwdInvoker(request *model.SendVeriC
 
 // SendVeriCodeForUpdateUserInfo 获取验证码
 //
-// 获取验证码，向手机或邮箱发送，一分钟内只会发送一次。
+// 修改用户手机或邮箱时，需要获取验证码。企业用户通过该接口获取验证码，系统会向用户的手机或邮箱发送，验证码1分钟内有效。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -2093,7 +2101,7 @@ func (c *MeetingClient) SendVeriCodeForUpdateUserInfoInvoker(request *model.Send
 
 // SetCustomMultiPicture 设置自定义多画面
 //
-// 场景描述：会议管理员在confportal手动设置多画面 功能描述：提供给会议管理员手动设置多画面的功能
+// 该接口用于设置会中多画面。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -2115,7 +2123,7 @@ func (c *MeetingClient) SetCustomMultiPictureInvoker(request *model.SetCustomMul
 
 // SetHostView 主持人选看
 //
-// 用于主持人轮询、主持人选看多画面、主持人选看会场操作。目前只适用于硬终端为主持人的场景。
+// 该接口用于主持人轮询、主持人选看多画面、主持人选看会场操作。只适用于专业会议终端（如TE系列等）为主持人的场景。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -2137,7 +2145,7 @@ func (c *MeetingClient) SetHostViewInvoker(request *model.SetHostViewRequest) *S
 
 // SetMultiPicture 设置多画面
 //
-// 设置会议多画面。
+// 设置会议多画面。该接口废弃不用，请使用“[[设置自定义多画面](https://support.huaweicloud.com/api-meeting/meeting_21_0418.html)](tag:hws)[[设置自定义多画面](https://support.huaweicloud.com/intl/zh-cn/api-meeting/meeting_21_0418.html)](tag:hk)”接口。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -2159,7 +2167,7 @@ func (c *MeetingClient) SetMultiPictureInvoker(request *model.SetMultiPictureReq
 
 // SetParticipantView 会场选看
 //
-// 目前只适用于硬终端选看其他会场人的场景。
+// 该接口用于专业会议终端（如TE系列等）选看其他与会者。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -2181,7 +2189,7 @@ func (c *MeetingClient) SetParticipantViewInvoker(request *model.SetParticipantV
 
 // SetRole 申请主持人
 //
-// 申请或释放主持人。普通用户可申请主持人，主持人可释放主持人权限。
+// 该接口用于设置主持人或释放主持人。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -2201,9 +2209,9 @@ func (c *MeetingClient) SetRoleInvoker(request *model.SetRoleRequest) *SetRoleIn
 	return &SetRoleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// SetSsoConfig 设置SSO鉴权配置
+// SetSsoConfig 设置SSO登录配置
 //
-// 设置SSO鉴权配置
+// 该接口用于设置SSO登录的鉴权配置。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -2217,15 +2225,15 @@ func (c *MeetingClient) SetSsoConfig(request *model.SetSsoConfigRequest) (*model
 	}
 }
 
-// SetSsoConfigInvoker 设置SSO鉴权配置
+// SetSsoConfigInvoker 设置SSO登录配置
 func (c *MeetingClient) SetSsoConfigInvoker(request *model.SetSsoConfigRequest) *SetSsoConfigInvoker {
 	requestDef := GenReqDefForSetSsoConfig()
 	return &SetSsoConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// SetWebHookConfig 设置事件订阅配置信息
+// SetWebHookConfig 设置事件推送
 //
-// 设置企业事件订阅配置设置
+// 该接口用于管理员设置企业级会议事件订阅配置。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -2239,15 +2247,15 @@ func (c *MeetingClient) SetWebHookConfig(request *model.SetWebHookConfigRequest)
 	}
 }
 
-// SetWebHookConfigInvoker 设置事件订阅配置信息
+// SetWebHookConfigInvoker 设置事件推送
 func (c *MeetingClient) SetWebHookConfigInvoker(request *model.SetWebHookConfigRequest) *SetWebHookConfigInvoker {
 	requestDef := GenReqDefForSetWebHookConfig()
 	return &SetWebHookConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowConfOrg 通过会议ID查询企业ID
+// ShowConfOrg SP管理员查询会议归属企业
 //
-// 与某个会议在同一个SP下的用户，可以通过会议ID查询到该会议对应的企业ID。
+// SP管理员根据会议ID查询该会议归属的企业ID。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -2261,7 +2269,7 @@ func (c *MeetingClient) ShowConfOrg(request *model.ShowConfOrgRequest) (*model.S
 	}
 }
 
-// ShowConfOrgInvoker 通过会议ID查询企业ID
+// ShowConfOrgInvoker SP管理员查询会议归属企业
 func (c *MeetingClient) ShowConfOrgInvoker(request *model.ShowConfOrgRequest) *ShowConfOrgInvoker {
 	requestDef := GenReqDefForShowConfOrg()
 	return &ShowConfOrgInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -2269,7 +2277,7 @@ func (c *MeetingClient) ShowConfOrgInvoker(request *model.ShowConfOrgRequest) *S
 
 // ShowCorp SP管理员查询企业
 //
-// 获取企业
+// 获取企业。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -2357,7 +2365,7 @@ func (c *MeetingClient) ShowCorpResourceInvoker(request *model.ShowCorpResourceR
 
 // ShowDepartment 通过部门编码查询部门信息
 //
-// 通过部门编码查询部门信息
+// 通过部门编码查询部门信息。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -2401,7 +2409,8 @@ func (c *MeetingClient) ShowDeptAndChildDeptInvoker(request *model.ShowDeptAndCh
 
 // ShowDeviceDetail 查询终端详情
 //
-// 企业管理员通过该接口查询终端详情。
+// 企业管理员通过该接口查询专业会议终端详情。
+// &gt; 如果需要查询Ideahub、SmartRooms、智慧屏TV详情请使用[[查询用户详情](https://support.huaweicloud.com/api-meeting/meeting_21_0069.html)](tag:hws)[[查询用户详情](https://support.huaweicloud.com/intl/zh-cn/api-meeting/meeting_21_0069.html)](tag:hk)接口。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -2446,7 +2455,7 @@ func (c *MeetingClient) ShowDeviceStatusInvoker(request *model.ShowDeviceStatusR
 
 // ShowDeviceTypes 获取所有终端类型
 //
-// 企业管理员通过该接口获取所有的终端类型。
+// 企业管理员通过该接口获取所有的专业会议终端类型。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -2468,7 +2477,7 @@ func (c *MeetingClient) ShowDeviceTypesInvoker(request *model.ShowDeviceTypesReq
 
 // ShowHisMeetingDetail 查询历史会议详情
 //
-// 管理员可以查询管理权限域内所有的历史会议详情，普通用户仅能查询当前帐号管理的历史会议详情。
+// 该接口用户查询指定历史会议的详情。管理员可以查询本企业内所有的历史会议详情，普通用户仅能查询自己创建或者被邀请的历史会议详情。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -2490,7 +2499,9 @@ func (c *MeetingClient) ShowHisMeetingDetailInvoker(request *model.ShowHisMeetin
 
 // ShowMeetingDetail 查询会议详情
 //
-// 管理员可以查询管理权限域内所有会议的详情，普通用户仅能查询当前帐号管理的会议详情。
+// 查询偏移量
+// * 管理员可以查询管理权限域内所有会议的详情，普通用户仅能查询自己创建或者需要参加的会议详情。
+// * 只能查询尚未结束的会议（既正在召开的会议和已预约还未召开的会议）。如果需要查询历史会议列详情，请参考[[查询历史会议详情](https://support.huaweicloud.com/api-meeting/meeting_21_0052.html)](tag:hws)[[查询历史会议详情](https://support.huaweicloud.com/intl/zh-cn/api-meeting/meeting_21_0052.html)](tag:hk)。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -2512,7 +2523,7 @@ func (c *MeetingClient) ShowMeetingDetailInvoker(request *model.ShowMeetingDetai
 
 // ShowMeetingFile 查询会议纪要详情
 //
-// 用户查询单个会议纪要详情（主要目的是为了得到外链）。 IdeaHub是使用fileCode来查，所以终端保持一致。
+// 用户查询单个会议纪要详情。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -2534,7 +2545,7 @@ func (c *MeetingClient) ShowMeetingFileInvoker(request *model.ShowMeetingFileReq
 
 // ShowMeetingFileList 打开会议纪要文件列表
 //
-// 用户使用手机扫码后，手机端请求服务端，让服务端通知指定IdeaHub打开指定用户的会议纪要文件列表。二维码内容  cloudlink://cloudlink.huawei.com/h5page?action&#x3D;OPEN_MEETING_FILE_LIST&amp;key1&#x3D;value1&amp;key2&#x3D;value2    key/value的个数可能变化，终端解析后，在发起后续请求时，将所有key/value存为map，作为入参即可。
+// 用户使用手机扫码后，手机端请求服务端,让服务端通知指定IdeaHub打开指定用户的会议纪要文件列表。二维码内容 ：cloudlink://cloudlink.huawei.com/h5page?action&#x3D;OPEN_MEETING_FILE_LIST&amp;key1&#x3D;value1&amp;key2&#x3D;value2 。key/value的个数可能变化，终端解析后，在发起后续请求时，将所有key/value存为map，作为入参即可。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -2578,7 +2589,7 @@ func (c *MeetingClient) ShowMyInfoInvoker(request *model.ShowMyInfoRequest) *Sho
 
 // ShowOnlineMeetingDetail 查询在线会议详情
 //
-// 管理员可以查询管理权限域内所有的在线会议详情，普通用户仅能查询当前自己的帐号管理的在线会议详情。
+// 该接口用于查询正在召开的会议详情。管理员可以查询本企业内所有的在线会议详情，普通用户仅能查询自己帐号创建或者需要参加的在线会议详情。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -2598,9 +2609,9 @@ func (c *MeetingClient) ShowOnlineMeetingDetailInvoker(request *model.ShowOnline
 	return &ShowOnlineMeetingDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowOrgRes 查询企业的资源使用信息
+// ShowOrgRes 企业管理员查询企业资源使用信息
 //
-// 企业管理员查询资源使用信息
+// 企业管理员查询所属企业的资源使用信息。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -2614,7 +2625,7 @@ func (c *MeetingClient) ShowOrgRes(request *model.ShowOrgResRequest) (*model.Sho
 	}
 }
 
-// ShowOrgResInvoker 查询企业的资源使用信息
+// ShowOrgResInvoker 企业管理员查询企业资源使用信息
 func (c *MeetingClient) ShowOrgResInvoker(request *model.ShowOrgResRequest) *ShowOrgResInvoker {
 	requestDef := GenReqDefForShowOrgRes()
 	return &ShowOrgResInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -2622,7 +2633,7 @@ func (c *MeetingClient) ShowOrgResInvoker(request *model.ShowOrgResRequest) *Sho
 
 // ShowProgram 根据ID查询节目详情
 //
-// 根据ID获取节目详情
+// 根据ID获取节目详情。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -2644,7 +2655,7 @@ func (c *MeetingClient) ShowProgramInvoker(request *model.ShowProgramRequest) *S
 
 // ShowPublication 根据ID查询信息窗发布详情
 //
-// 根据ID获取发布详情
+// 根据ID获取发布详情。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -2666,7 +2677,7 @@ func (c *MeetingClient) ShowPublicationInvoker(request *model.ShowPublicationReq
 
 // ShowRealTimeInfoOfMeeting 查询会议实时信息
 //
-// 查询会议实时信息
+// 该接口用于查询正在召开的会议实时信息。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -2688,7 +2699,7 @@ func (c *MeetingClient) ShowRealTimeInfoOfMeetingInvoker(request *model.ShowReal
 
 // ShowRecordingDetail 查询录制详情
 //
-// 查询某个录制详情。
+// 改接口用于查询某个会议录制的详情。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -2710,7 +2721,9 @@ func (c *MeetingClient) ShowRecordingDetailInvoker(request *model.ShowRecordingD
 
 // ShowRecordingFileDownloadUrls 查询录制文件下载链接
 //
-// 查询某个录制文件下载链接。
+// 该接口用户查询指定会议录制文件下载链接。
+// &gt; * 仅企业管理员权限的帐号才能查询录制文件的下载链接
+// &gt; * 这个接口需要在华为云会议后台开通白名单后才能调用。请联系华为销售人员，并提供华为云会议企业ID
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -2732,7 +2745,7 @@ func (c *MeetingClient) ShowRecordingFileDownloadUrlsInvoker(request *model.Show
 
 // ShowRegionInfoOfMeeting 查询会议所在区域信息
 //
-// 查询会议所在区域信息，如果会议不存在或者会议未召开，返回对应的错误码。
+// 该接口用于查询会议所在区域的IP和域名。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -2752,9 +2765,9 @@ func (c *MeetingClient) ShowRegionInfoOfMeetingInvoker(request *model.ShowRegion
 	return &ShowRegionInfoOfMeetingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowRoomSetting 查询直播间高级设置
+// ShowRoomSetting 查询网络研讨会高级设置
 //
-// 查询直播间高级设置
+// 该接口用于查询指定网络研讨会的高级设置。管理员可查询企业内的网络研讨会高级设置，非管理员只可查询自己预定的网络研讨会的高级设置。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -2768,15 +2781,15 @@ func (c *MeetingClient) ShowRoomSetting(request *model.ShowRoomSettingRequest) (
 	}
 }
 
-// ShowRoomSettingInvoker 查询直播间高级设置
+// ShowRoomSettingInvoker 查询网络研讨会高级设置
 func (c *MeetingClient) ShowRoomSettingInvoker(request *model.ShowRoomSettingRequest) *ShowRoomSettingInvoker {
 	requestDef := GenReqDefForShowRoomSetting()
 	return &ShowRoomSettingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowSpRes 查询SP的共享资源使用信息
+// ShowSpRes SP管理员查询SP下资源使用信息
 //
-// SP管理查询所属SP的共享资源使用信息
+// SP管理员查询所属SP的共享资源使用信息。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -2790,7 +2803,7 @@ func (c *MeetingClient) ShowSpRes(request *model.ShowSpResRequest) (*model.ShowS
 	}
 }
 
-// ShowSpResInvoker 查询SP的共享资源使用信息
+// ShowSpResInvoker SP管理员查询SP下资源使用信息
 func (c *MeetingClient) ShowSpResInvoker(request *model.ShowSpResRequest) *ShowSpResInvoker {
 	requestDef := GenReqDefForShowSpRes()
 	return &ShowSpResInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -2798,7 +2811,7 @@ func (c *MeetingClient) ShowSpResInvoker(request *model.ShowSpResRequest) *ShowS
 
 // ShowSpResource SP管理员查询资源信息
 //
-// SP管理员查询SP的所有资源，包括已使用的资源
+// SP管理员查询SP的所有资源，包括已使用的资源。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -2818,9 +2831,9 @@ func (c *MeetingClient) ShowSpResourceInvoker(request *model.ShowSpResourceReque
 	return &ShowSpResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowSsoConfig 查询SSO鉴权配置
+// ShowSsoConfig 查询SSO登录配置
 //
-// 查询SSO鉴权配置
+// 该接口用于查询SSO登录的鉴权配置。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -2834,7 +2847,7 @@ func (c *MeetingClient) ShowSsoConfig(request *model.ShowSsoConfigRequest) (*mod
 	}
 }
 
-// ShowSsoConfigInvoker 查询SSO鉴权配置
+// ShowSsoConfigInvoker 查询SSO登录配置
 func (c *MeetingClient) ShowSsoConfigInvoker(request *model.ShowSsoConfigRequest) *ShowSsoConfigInvoker {
 	requestDef := GenReqDefForShowSsoConfig()
 	return &ShowSsoConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -2842,7 +2855,7 @@ func (c *MeetingClient) ShowSsoConfigInvoker(request *model.ShowSsoConfigRequest
 
 // ShowUserDetail 查询用户详情
 //
-// 企业管理员通过该接口查询企业用户详情
+// 企业管理员通过该接口查询企业用户详情。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -2862,9 +2875,9 @@ func (c *MeetingClient) ShowUserDetailInvoker(request *model.ShowUserDetailReque
 	return &ShowUserDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowWebHookConfig 查询事件订阅配置信息
+// ShowWebHookConfig 查询事件推送
 //
-// 查询企业事件订阅配置
+// 该接口用于管理员查询企业事件订阅配置信息。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -2878,7 +2891,7 @@ func (c *MeetingClient) ShowWebHookConfig(request *model.ShowWebHookConfigReques
 	}
 }
 
-// ShowWebHookConfigInvoker 查询事件订阅配置信息
+// ShowWebHookConfigInvoker 查询事件推送
 func (c *MeetingClient) ShowWebHookConfigInvoker(request *model.ShowWebHookConfigRequest) *ShowWebHookConfigInvoker {
 	requestDef := GenReqDefForShowWebHookConfig()
 	return &ShowWebHookConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -2886,7 +2899,7 @@ func (c *MeetingClient) ShowWebHookConfigInvoker(request *model.ShowWebHookConfi
 
 // ShowWebinar 查询网络研讨会详情
 //
-// 根据conference_id查询网络研讨会详情。
+// 该接口用于查询指定网络研讨会的详情。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -2906,9 +2919,10 @@ func (c *MeetingClient) ShowWebinarInvoker(request *model.ShowWebinarRequest) *S
 	return &ShowWebinarInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// StartMeeting 通过会议ID和密码激活会议
+// StartMeeting 激活会议
 //
-// 终端到会管进行鉴权并激活会议，先通过该接口获取会议所在Region信息，该接口需要携带会议主席密码，在会议未召开的情况下，该接口会拉起会议。如果已存在会议，则直接返回在线会议所在Region信息
+// 该接口用于通过会议ID和会议密码激活会议。所有的会控接口都需要在会议激活后才能调用，可以通过该接口先激活会议。
+// &gt; 来宾密码是否可以激活会议取决于会议创建时是否设置了“是否允许来宾启动会议”（allowGuestStartConf&#x3D;true）。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -2922,7 +2936,7 @@ func (c *MeetingClient) StartMeeting(request *model.StartMeetingRequest) (*model
 	}
 }
 
-// StartMeetingInvoker 通过会议ID和密码激活会议
+// StartMeetingInvoker 激活会议
 func (c *MeetingClient) StartMeetingInvoker(request *model.StartMeetingRequest) *StartMeetingInvoker {
 	requestDef := GenReqDefForStartMeeting()
 	return &StartMeetingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -2930,7 +2944,9 @@ func (c *MeetingClient) StartMeetingInvoker(request *model.StartMeetingRequest) 
 
 // StopMeeting 结束会议
 //
-// 结束会议。
+// 该接口用于结束正在召开的会议。
+// &gt; * 如果管理员在企业的会议设置中关闭“结束会议保留预约记录”开关，会议结束后会议列表中将删除该会议，与会者不能再次加入该会议。否则会议预约时间到之前，与会者可以再次加入该会议
+// &gt; * “结束会议保留预约记录”默认是开的
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -2952,7 +2968,7 @@ func (c *MeetingClient) StopMeetingInvoker(request *model.StopMeetingRequest) *S
 
 // SwitchMode 切换视频显示策略
 //
-// 切换视频显示策略
+// 该接口用于切换会中视频画面显示策略，包括广播多画面，广播单画面，声控多画面。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -2996,7 +3012,7 @@ func (c *MeetingClient) UpdateContactInvoker(request *model.UpdateContactRequest
 
 // UpdateCorp SP管理员修改企业
 //
-// 修改企业，若任一参数为null或者不携带则不修改
+// 修改企业，若任一参数为null或者不携带则不修改。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -3018,7 +3034,7 @@ func (c *MeetingClient) UpdateCorpInvoker(request *model.UpdateCorpRequest) *Upd
 
 // UpdateCorpBasicInfo 企业管理员修改企业注册信息
 //
-// 企业管理员通过该接口修改企业注册信息。当前只支持修改地址。
+// 企业管理员通过该接口修改企业注册信息。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -3062,7 +3078,8 @@ func (c *MeetingClient) UpdateDepartmentInvoker(request *model.UpdateDepartmentR
 
 // UpdateDevice 修改终端
 //
-// 企业管理员通过该接口修改终端。
+// 企业管理员通过该接口修改专业会议终端。
+// &gt; 如果需要修改Ideahub、SmartRooms、智慧屏TV请使用[[修改用户](https://support.huaweicloud.com/api-meeting/meeting_21_0068.html)](tag:hws)[[修改用户](https://support.huaweicloud.com/intl/zh-cn/api-meeting/meeting_21_0068.html)](tag:hk)接口。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -3084,7 +3101,7 @@ func (c *MeetingClient) UpdateDeviceInvoker(request *model.UpdateDeviceRequest) 
 
 // UpdateMaterial 更新信息窗素材
 //
-// 更新信息窗素材
+// 更新信息窗素材。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -3106,7 +3123,7 @@ func (c *MeetingClient) UpdateMaterialInvoker(request *model.UpdateMaterialReque
 
 // UpdateMeeting 编辑预约会议
 //
-// 编辑预约会议。会议开始后，不能被编辑。
+// 该接口用于修改已预约的会议。会议开始后，不能被修改。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -3172,7 +3189,7 @@ func (c *MeetingClient) UpdateMyInfoInvoker(request *model.UpdateMyInfoRequest) 
 
 // UpdateProgram 更新信息窗节目
 //
-// 更新信息窗节目
+// 更新信息窗节目。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -3194,7 +3211,7 @@ func (c *MeetingClient) UpdateProgramInvoker(request *model.UpdateProgramRequest
 
 // UpdatePublication 修改信息窗发布
 //
-// 修改信息窗发布
+// 修改信息窗发布。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -3236,9 +3253,9 @@ func (c *MeetingClient) UpdatePwdInvoker(request *model.UpdatePwdRequest) *Updat
 	return &UpdatePwdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateRecurringMeeting 修改预定周期会议
+// UpdateRecurringMeeting 编辑周期性会议
 //
-// 修改预定的周期会议；会议开始时，不能修改会议
+// 该接口用于修改已预约的周期性会议。会议开始后，不能被修改。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -3252,15 +3269,15 @@ func (c *MeetingClient) UpdateRecurringMeeting(request *model.UpdateRecurringMee
 	}
 }
 
-// UpdateRecurringMeetingInvoker 修改预定周期会议
+// UpdateRecurringMeetingInvoker 编辑周期性会议
 func (c *MeetingClient) UpdateRecurringMeetingInvoker(request *model.UpdateRecurringMeetingRequest) *UpdateRecurringMeetingInvoker {
 	requestDef := GenReqDefForUpdateRecurringMeeting()
 	return &UpdateRecurringMeetingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateRecurringSubMeeting 修改预定周期子会议
+// UpdateRecurringSubMeeting 编辑周期性会议的子会议
 //
-// 修改预定的周期子会议；会议开始时，不能修改会议
+// 该接口用于修改已预约的周期性会议的子会议。会议开始后，不能被修改。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -3274,7 +3291,7 @@ func (c *MeetingClient) UpdateRecurringSubMeeting(request *model.UpdateRecurring
 	}
 }
 
-// UpdateRecurringSubMeetingInvoker 修改预定周期子会议
+// UpdateRecurringSubMeetingInvoker 编辑周期性会议的子会议
 func (c *MeetingClient) UpdateRecurringSubMeetingInvoker(request *model.UpdateRecurringSubMeetingRequest) *UpdateRecurringSubMeetingInvoker {
 	requestDef := GenReqDefForUpdateRecurringSubMeeting()
 	return &UpdateRecurringSubMeetingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -3282,7 +3299,7 @@ func (c *MeetingClient) UpdateRecurringSubMeetingInvoker(request *model.UpdateRe
 
 // UpdateResource SP管理员根据修改企业资源
 //
-// 企业修改资源的过期时间、停用状态
+// 企业修改资源的过期时间、停用状态。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -3302,9 +3319,9 @@ func (c *MeetingClient) UpdateResourceInvoker(request *model.UpdateResourceReque
 	return &UpdateResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateRoomSetting 高级设置 - 直播间设置
+// UpdateRoomSetting 修改网络研讨会高级设置
 //
-// 保存直播间高级设置。如有部分配置信息修改，则其他未修改的原始值也需要传入，否则部分字段会替换为默认值(即：只支持全量保存)
+// 该接口用于设置指定网络研讨会的高级设置。管理员可设置企业内的网络研讨会高级设置，非管理员只可设置自己预定的网络研讨会的高级设置。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -3318,7 +3335,7 @@ func (c *MeetingClient) UpdateRoomSetting(request *model.UpdateRoomSettingReques
 	}
 }
 
-// UpdateRoomSettingInvoker 高级设置 - 直播间设置
+// UpdateRoomSettingInvoker 修改网络研讨会高级设置
 func (c *MeetingClient) UpdateRoomSettingInvoker(request *model.UpdateRoomSettingRequest) *UpdateRoomSettingInvoker {
 	requestDef := GenReqDefForUpdateRoomSetting()
 	return &UpdateRoomSettingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -3326,7 +3343,7 @@ func (c *MeetingClient) UpdateRoomSettingInvoker(request *model.UpdateRoomSettin
 
 // UpdateStartedConfConfig 会中修改配置
 //
-// 会中修改配置。
+// 该接口用于修改会议配置，包括会议共享是否锁定，允许呼入范围。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -3390,9 +3407,9 @@ func (c *MeetingClient) UpdateUserInvoker(request *model.UpdateUserRequest) *Upd
 	return &UpdateUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateWebHookConfigStatus 变更订阅配置使用状态
+// UpdateWebHookConfigStatus 开启事件推送
 //
-// 变更订阅配置使用状态
+// 该接口用于管理员变更订阅配置使用状态。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -3406,7 +3423,7 @@ func (c *MeetingClient) UpdateWebHookConfigStatus(request *model.UpdateWebHookCo
 	}
 }
 
-// UpdateWebHookConfigStatusInvoker 变更订阅配置使用状态
+// UpdateWebHookConfigStatusInvoker 开启事件推送
 func (c *MeetingClient) UpdateWebHookConfigStatusInvoker(request *model.UpdateWebHookConfigStatusRequest) *UpdateWebHookConfigStatusInvoker {
 	requestDef := GenReqDefForUpdateWebHookConfigStatus()
 	return &UpdateWebHookConfigStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -3414,7 +3431,7 @@ func (c *MeetingClient) UpdateWebHookConfigStatusInvoker(request *model.UpdateWe
 
 // UpdateWebinar 编辑网络研讨会
 //
-// 您可根据需要修改普通网络研讨会和周期网络研讨会。注意：暂不支持添加外部联系人作为与会嘉宾
+// 该接口用于修改已创建的网络研讨会。网络研讨会开始后不能修改。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -3434,9 +3451,9 @@ func (c *MeetingClient) UpdateWebinarInvoker(request *model.UpdateWebinarRequest
 	return &UpdateWebinarInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UploadFile 开放接口 - 文件上传
+// UploadFile 上传图片
 //
-// 文件上传的开放接口
+// 该接口用户上传网络研讨会高级设置用的图片。图片可用于网络研讨会的封面和Logo。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -3450,7 +3467,7 @@ func (c *MeetingClient) UploadFile(request *model.UploadFileRequest) (*model.Upl
 	}
 }
 
-// UploadFileInvoker 开放接口 - 文件上传
+// UploadFileInvoker 上传图片
 func (c *MeetingClient) UploadFileInvoker(request *model.UploadFileRequest) *UploadFileInvoker {
 	requestDef := GenReqDefForUploadFile()
 	return &UploadFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -3458,9 +3475,8 @@ func (c *MeetingClient) UploadFileInvoker(request *model.UploadFileRequest) *Upl
 
 // SearchQosHistoryMeetings 查询QoS历史会议列表
 //
-// * 查询企业内QoS历史会议列表。
-// * 支持按照时间范围查询，可查询最近3个月内数据。
-// * 权限角色 &#x3D; 旗舰版企业/标准版企业 + 管理员。
+// 该接口用于查询企业内历史会议的QoS告警。仅旗舰版企业/标准版企业的企业管理员有权限查询。可以查询最近3个月内的数据。
+// &gt; 仪表盘的QoS统计功能需要申请才能开通。请联系华为销售人员，并提供华为云会议企业ID。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -3482,8 +3498,8 @@ func (c *MeetingClient) SearchQosHistoryMeetingsInvoker(request *model.SearchQos
 
 // SearchQosOnlineMeetings 查询QoS在线会议列表
 //
-// * 查询企业内QoS在线会议列表。
-// * 权限角色 &#x3D; 旗舰版企业/标准版企业 + 管理员。
+// 该接口用于查询企业内正在召开会议的QoS告警。仅旗舰版企业/标准版企业的企业管理员有权限查询。
+// &gt; 仪表盘的QoS统计功能需要申请才能开通。请联系华为销售人员，并提供华为云会议企业ID。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -3505,9 +3521,8 @@ func (c *MeetingClient) SearchQosOnlineMeetingsInvoker(request *model.SearchQosO
 
 // SearchQosParticipantDetail 查询与会者的QoS数据
 //
-// * 查询企业内指定与会者的QoS数据，按照音频，视频，屏幕共享，CPU分类查询QoS数据。
-// * QoS数据的打点周期为5秒。
-// * 权限角色 &#x3D; 旗舰版企业/标准版企业 + 管理员。
+// 该接口用于查询企业内在线会议或历史会议的与会者QoS数据。仅旗舰版企业/标准版企业的企业管理员有权限查询。
+// &gt; 仪表盘的QoS统计功能需要申请才能开通。请联系华为销售人员，并提供华为云会议企业ID。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -3529,8 +3544,8 @@ func (c *MeetingClient) SearchQosParticipantDetailInvoker(request *model.SearchQ
 
 // SearchQosParticipants 查询QoS会议与会者列表
 //
-// * 查询企业内QoS会议与会者列表。
-// * 权限角色 &#x3D; 旗舰版企业/标准版企业 + 管理员。
+// 该接口用于查询企业内在线会议或历史会议的与会者QoS告警。仅旗舰版企业/标准版企业的企业管理员有权限查询。
+// &gt; 仪表盘的QoS统计功能需要申请才能开通。请联系华为销售人员，并提供华为云会议企业ID。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -3550,10 +3565,10 @@ func (c *MeetingClient) SearchQosParticipantsInvoker(request *model.SearchQosPar
 	return &SearchQosParticipantsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// SetQosThreshold 设置企业租户指定类型的会议质量阈值
+// SetQosThreshold 设置QoS告警阈值
 //
-// * 设置企业租户指定类型的会议质量阈值。
-// * 权限角色 &#x3D; 旗舰版企业/标准版企业 + 管理员。
+// 该接口用于设置QoS告警阈值。仅旗舰版企业/标准版企业的企业管理员有权限设置。
+// &gt; 仪表盘的QoS统计功能需要申请才能开通。请联系华为销售人员，并提供华为云会议企业ID。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -3567,16 +3582,16 @@ func (c *MeetingClient) SetQosThreshold(request *model.SetQosThresholdRequest) (
 	}
 }
 
-// SetQosThresholdInvoker 设置企业租户指定类型的会议质量阈值
+// SetQosThresholdInvoker 设置QoS告警阈值
 func (c *MeetingClient) SetQosThresholdInvoker(request *model.SetQosThresholdRequest) *SetQosThresholdInvoker {
 	requestDef := GenReqDefForSetQosThreshold()
 	return &SetQosThresholdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowQosThreshold 查询企业租户指定类型的会议质量阈值
+// ShowQosThreshold 查询QoS告警阈值
 //
-// * 查询企业租户指定类型的会议质量阈值。
-// * 权限角色 &#x3D; 旗舰版企业/标准版企业 + 管理员。
+// 该接口用于查询QoS告警阈值。仅旗舰版企业/标准版企业的企业管理员有权限查询。
+// &gt; 该接口用于查询QoS告警阈值。仅旗舰版企业/标准版企业的企业管理员有权限查询。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -3590,7 +3605,7 @@ func (c *MeetingClient) ShowQosThreshold(request *model.ShowQosThresholdRequest)
 	}
 }
 
-// ShowQosThresholdInvoker 查询企业租户指定类型的会议质量阈值
+// ShowQosThresholdInvoker 查询QoS告警阈值
 func (c *MeetingClient) ShowQosThresholdInvoker(request *model.ShowQosThresholdRequest) *ShowQosThresholdInvoker {
 	requestDef := GenReqDefForShowQosThreshold()
 	return &ShowQosThresholdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -3598,9 +3613,10 @@ func (c *MeetingClient) ShowQosThresholdInvoker(request *model.ShowQosThresholdR
 
 // SearchStatisticConferenceInfo 查询企业级会议总体统计数据
 //
-// * 查询企业级会议指定时间范围内总体统计数据，按日/按月统计。
-// * 查询企业级会议单日内总体统计数据，按小时统计。
-// * 权限角色 &#x3D; 旗舰版企业/标准版企业 + 管理员。
+// 该接口用于查询企业内：
+// * 单日内按小时统计的会议数据。
+// * 指定日期范围内按日/按月统计的会议数据。
+// &gt; 仅旗舰版企业/标准版企业的企业管理员有权限查询。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -3622,10 +3638,11 @@ func (c *MeetingClient) SearchStatisticConferenceInfoInvoker(request *model.Sear
 
 // SearchStatisticConferenceParticipant 查询企业级会议与会统计数据
 //
-// * 查询企业级会议与会用户统计数据，按日/按月统计。
-// * 查询企业级会议与会硬件终端统计数据，按日/按月统计。
-// * 查询企业级会议与会设备统计数据，按日/按月统计。
-// * 权限角色 &#x3D; 旗舰版企业/标准版企业 + 管理员。
+// 该接口用于查询企业内与会者数据统计：
+// * 查询与会用户统计数据，按日/按月统计。
+// * 查询与会硬件终端统计数据，按日/按月统计。
+// * 查询与会设备统计数据，按日/按月统计。
+// &gt; 仅旗舰版企业/标准版企业的企业管理员有权限查询。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -3647,8 +3664,9 @@ func (c *MeetingClient) SearchStatisticConferenceParticipantInvoker(request *mod
 
 // SearchStatisticResourceInfo 查询企业级会议已购资源使用统计数据
 //
-// * 查询企业级会议的已购资源使用状况，按日/按月统计。
-// * 权限角色 &#x3D; 旗舰版企业/标准版企业 + 管理员。
+// 该接口用于查询企业内已购资源使用状况数据统计：
+// * 查询已购资源使用状况，按日/按月统计。
+// &gt; 仅旗舰版企业/标准版企业的企业管理员有权限查询。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -3670,10 +3688,11 @@ func (c *MeetingClient) SearchStatisticResourceInfoInvoker(request *model.Search
 
 // SearchStatisticUserInfo 查询企业级会议的用户统计数据
 //
-// * 查询企业级会议用户登录数据，按日/按月统计。
-// * 查询企业级会议用户激活数据，按日/按月统计。
-// * 查询企业级会议用户登录设备数据，按日/按月统计。
-// * 权限角色 &#x3D; 旗舰版企业/标准版企业 + 管理员。
+// 该接口用于查询企业内用户数据统计：
+// * 查询会议用户登录数据，按日/按月统计。
+// * 查询会议用户激活数据，按日/按月统计。
+// * 查询会议用户登录设备数据，按日/按月统计。
+// &gt; 仅旗舰版企业/标准版企业的企业管理员有权限查询。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.

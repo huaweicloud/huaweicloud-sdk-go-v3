@@ -32,7 +32,7 @@ type CreateRequestThrottlingPolicyV2Response struct {
 	// 是否开启动态流控： - TRUE - FALSE  暂不支持
 	EnableAdaptiveControl *string `json:"enable_adaptive_control,omitempty"`
 
-	// [用户流量限制是指一个API在时长之内每一个用户能访问的次数上限，该数值不超过API流量限制值。输入的值不超过2147483647。正整数。](tag:hws,hws_hk,hcs,fcs,g42)[site不支持用户流量限制,输入值为0](tag:Site)
+	// 用户流量限制是指一个API在时长之内每一个用户能访问的次数上限，该数值不超过API流量限制值。输入的值不超过2147483647。正整数。
 	UserCallLimits *int32 `json:"user_call_limits,omitempty"`
 
 	// 流量控制的时长单位。与“流量限制次数”配合使用，表示单位时间内的API请求次数上限。输入的值不超过2147483647。正整数。

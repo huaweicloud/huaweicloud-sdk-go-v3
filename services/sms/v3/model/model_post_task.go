@@ -15,7 +15,7 @@ type PostTask struct {
 	// 任务名称
 	Name string `json:"name"`
 
-	// 任务类型
+	// 任务类型 MIGRATE_FILE:文件级迁移 MIGRATE_BLOCK:块级迁移
 	Type PostTaskType `json:"type"`
 
 	// 迁移后是否启动目的端虚拟机
@@ -28,19 +28,19 @@ type PostTask struct {
 
 	TargetServer *TargetServerByTask `json:"target_server"`
 
-	// 迁移ip，如果是自动创建虚拟机，不需要此参数
+	// 迁移IP，如果是自动创建虚拟机，不需要此参数
 	MigrationIp *string `json:"migration_ip,omitempty"`
 
 	// region的名称
 	RegionName string `json:"region_name"`
 
-	// region id
+	// region ID
 	RegionId string `json:"region_id"`
 
 	// 项目名称
 	ProjectName string `json:"project_name"`
 
-	// 项目id
+	// 项目ID
 	ProjectId string `json:"project_id"`
 
 	// 自动创建虚拟机使用模板
@@ -51,6 +51,9 @@ type PostTask struct {
 
 	// 复制或者同步后是否会继续持续同步，不添加则默认是false
 	Syncing *bool `json:"syncing,omitempty"`
+
+	// 是否存在服务，如果存在，则创建任务
+	ExistServer *bool `json:"exist_server,omitempty"`
 }
 
 func (o PostTask) String() string {

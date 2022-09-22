@@ -43,6 +43,9 @@ type IdCardResult struct {
 
 	// 判断身份证图像是否经过翻拍，“true”表示是翻拍，“false”表示未经过翻拍。仅在输入参数detect_reproduce为true时，返回该字段。
 	DetectReproduceResult *bool `json:"detect_reproduce_result,omitempty"`
+
+	// 判断身份证图像是黑白复印件还是原件，“true”表示是复印件，“false”表示是原件。仅在输入参数detect_copy为true时，返回该字段。
+	DetectCopyResult *bool `json:"detect_copy_result,omitempty"`
 }
 
 func (o IdCardResult) String() string {

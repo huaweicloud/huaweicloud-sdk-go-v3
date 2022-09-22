@@ -12,16 +12,16 @@ import (
 // Request Object
 type SearchQosParticipantDetailRequest struct {
 
-	// 会议UUID。最大不超过64个字节。
+	// 会议UUID。
 	ConfUUID string `json:"confUUID"`
 
-	// 会议类别。 * online：在线会议，在召开的会议。 * history：历史会议，已召开的会议。
+	// 会议类别。 * online：在线会议，在召开的会议 * history：历史会议，已召开的会议
 	ConfType SearchQosParticipantDetailRequestConfType `json:"confType"`
 
-	// 与会者ID。最大不超过64个字节。
+	// 与会者标识。
 	ParticipantID string `json:"participantID"`
 
-	// Qos类型。 - audio：音频。 - video：视频。 - screen：屏幕共享。 - cpu：cpu。
+	// Qos类型。 - audio：音频 - video：视频 - screen：屏幕共享 - cpu：cpu
 	QosType SearchQosParticipantDetailRequestQosType `json:"qosType"`
 }
 

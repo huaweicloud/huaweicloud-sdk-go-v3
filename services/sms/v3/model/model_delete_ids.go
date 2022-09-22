@@ -9,7 +9,7 @@ import (
 // 批量删除参数
 type DeleteIds struct {
 
-	// 所有删除对象id的集合
+	// 所有删除对象ID的集合
 	Ids []string `json:"ids"`
 }
 

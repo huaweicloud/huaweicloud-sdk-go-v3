@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListTaskRulesetResponse struct {
-	Body           *[]ListTaskRulesetRes `json:"body,omitempty"`
-	HttpStatusCode int                   `json:"-"`
+	Body           *[]TaskRulesetInfo `json:"body,omitempty"`
+	HttpStatusCode int                `json:"-"`
 }
 
 func (o ListTaskRulesetResponse) String() string {

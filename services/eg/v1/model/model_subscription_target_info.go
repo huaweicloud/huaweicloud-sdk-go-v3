@@ -17,6 +17,9 @@ type SubscriptionTargetInfo struct {
 	// 订阅的事件目标的提供方类型
 	ProviderType *string `json:"provider_type,omitempty"`
 
+	// 订阅的事件目标使用的目标链接ID
+	ConnectionId *string `json:"connection_id,omitempty"`
+
 	// 订阅的事件目标参数列表
 	Detail *interface{} `json:"detail,omitempty"`
 

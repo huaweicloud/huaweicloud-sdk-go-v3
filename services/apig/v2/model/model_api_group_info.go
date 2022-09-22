@@ -28,7 +28,7 @@ type ApiGroupInfo struct {
 	// 最近修改时间
 	UpdateTime *sdktime.SdkTime `json:"update_time"`
 
-	// 是否已上架云市场： - 1：已上架 - 2：未上架 - 3：审核中
+	// 是否已上架云商店： - 1：已上架 - 2：未上架 - 3：审核中
 	OnSellStatus int32 `json:"on_sell_status"`
 
 	// 分组上绑定的独立域名列表

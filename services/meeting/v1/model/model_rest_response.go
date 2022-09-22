@@ -9,10 +9,10 @@ import (
 // Rest请求的响应结果body
 type RestResponse struct {
 
-	// 结果码
+	// 结果码。
 	ReturnCode int32 `json:"returnCode"`
 
-	// 结果描述
+	// 结果描述。
 	ReturnDesc *string `json:"returnDesc,omitempty"`
 }
 

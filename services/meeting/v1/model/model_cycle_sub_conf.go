@@ -8,30 +8,30 @@ import (
 
 type CycleSubConf struct {
 
-	// 子会议ID
+	// 子会议UUID。
 	CycleSubConfID string `json:"cycleSubConfID"`
 
-	// 会议ID，长度限制为不超过32个字符
+	// 会议ID。
 	ConferenceID *string `json:"conferenceID,omitempty"`
 
-	// 会议的媒体类型。 由1个或多个枚举String组成，多个枚举时，每个枚举值之间通过”,”逗号分隔，枚举值如下： “Voice”：语音 “Video”：标清视频 “HDVideo”：高清视频（与Video互斥，如果同时选择Video、HDVideo，则系统默认选择Video） “Telepresence”：智真(与HDVideo、Video互斥，如果同时选择，系统使用Telepresence)—暂不支持 “Data”：多媒体
+	// 会议的媒体类型。 * Voice：语音 * Video：标清视频 * HDVideo：高清视频 * Data：数据
 	MediaType *string `json:"mediaType,omitempty"`
 
-	// 会议起始时间(格式：YYYY-MM-DD HH:MM)
+	// 会议起始时间(格式：YYYY-MM-DD HH:MM)。
 	StartTime *string `json:"startTime,omitempty"`
 
-	// 会议结束时间(格式：YYYY-MM-DD HH:MM)
+	// 会议结束时间(格式：YYYY-MM-DD HH:MM)。
 	EndTime *string `json:"endTime,omitempty"`
 
-	// 是否自动开启录音
+	// 是否自动开启云录制。 - 0: 不自动启动 - 1: 自动启动
 	IsAutoRecord *int32 `json:"isAutoRecord,omitempty"`
 
 	ConfConfigInfo *CycleSubConfConfigDto `json:"confConfigInfo,omitempty"`
 
-	// 录播鉴权方式，在录播类型为:录播、直播+录播时有效。 0为老的鉴权方式，url中携带token鉴权，1为企业内会议用户鉴权，2为会议内会议用户鉴权
+	// 观看/下载录播的鉴权方式。 - 0: 可通过链接观看/下载 - 1: 企业用户可观看/下载 - 2: 与会者可观看/下载
 	RecordAuthType *int32 `json:"recordAuthType,omitempty"`
 
-	// 会议描述，长度限制为200个字符
+	// 会议描述。长度限制为200个字符。
 	Description *string `json:"description,omitempty"`
 }
 

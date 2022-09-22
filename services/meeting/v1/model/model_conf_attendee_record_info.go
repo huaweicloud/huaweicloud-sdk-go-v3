@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// 与会者记录
+// 与会者记录。
 type ConfAttendeeRecordInfo struct {
 
-	// 名称。
+	// 与会者名称。
 	DisplayName *string `json:"displayName,omitempty"`
 
 	// 号码。

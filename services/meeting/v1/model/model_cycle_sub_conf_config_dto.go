@@ -8,16 +8,16 @@ import (
 
 type CycleSubConfConfigDto struct {
 
-	// |参数名称：允许呼入的范围| |参数描述：允许呼入的范围。 0: 所有用户 1: 非匿名用户（手机pstn入会视为匿名入会） 2: 企业内用户 3: 被邀请用户| |取值范围：[0,3]|
+	// 允许加入会议的范围。 - 0: 所有用户 - 2: 企业内用户 - 3: 被邀请用户
 	CallInRestriction *int32 `json:"callInRestriction,omitempty"`
 
-	// |参数名称：网络研讨会观众允许呼入的范围| |参数描述：允许呼入的范围。 0: 所有用户 2: 企业内用户和被邀请用户|
+	// 允许加入网络研讨会的观众范围。 - 0：所有用户 - 2：企业内用户和被邀请用户
 	AudienceCallInRestriction *int32 `json:"audienceCallInRestriction,omitempty"`
 
-	// 参数名称：是否允许来宾启动会议(随机会议) false:禁止来宾启动会议 true：允许来宾启动会议
+	// 是否允许来宾启动会议。 - false:禁止来宾启动会议 - true：允许来宾启动会议 > 仅随机会议ID的会议生效。
 	AllowGuestStartConf *bool `json:"allowGuestStartConf,omitempty"`
 
-	// 是否启用等候室
+	// 是否启用等候室。
 	EnableWaitingRoom *bool `json:"enableWaitingRoom,omitempty"`
 
 	ShowAudienceCountInfo *ShowAudienceCountInfo `json:"showAudienceCountInfo,omitempty"`

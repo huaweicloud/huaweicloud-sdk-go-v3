@@ -15,17 +15,20 @@ type ShowTaskResponse struct {
 	// 任务名称（用户自定义）
 	Name *string `json:"name,omitempty"`
 
-	// 任务类型，创建时必选，更新时可选
+	// 任务类型，创建时必选，更新时可选 MIGRATE_FILE:文件级迁移 MIGRATE_BLOCK:块级迁移
 	Type *ShowTaskResponseType `json:"type,omitempty"`
 
 	// 操作系统类型，分为WINDOWS和LINUX，创建时必选，更新时可选
 	OsType *ShowTaskResponseOsType `json:"os_type,omitempty"`
 
-	// 迁移任务id
+	// 迁移任务ID
 	Id *string `json:"id,omitempty"`
 
 	// 进程优先级  0：低  1：标准（默认）  2：高
 	Priority *ShowTaskResponsePriority `json:"priority,omitempty"`
+
+	// 迁移限速
+	SpeedLimit *int32 `json:"speed_limit,omitempty"`
 
 	// 目的端服务器的区域ID
 	RegionId *string `json:"region_id,omitempty"`
@@ -33,7 +36,7 @@ type ShowTaskResponse struct {
 	// 迁移完成后是否启动目的端服务器  true：启动  false：停止
 	StartTargetServer *bool `json:"start_target_server,omitempty"`
 
-	// 企业项目id
+	// 企业项目ID
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 目的端服务器的IP地址。  公网迁移时请填写弹性IP地址  专线迁移时请填写私有IP地址
@@ -51,7 +54,7 @@ type ShowTaskResponse struct {
 	// 模板ID
 	VmTemplateId *string `json:"vm_template_id,omitempty"`
 
-	SourceServer *SourceServer `json:"source_server,omitempty"`
+	SourceServer *SourceServerResponse `json:"source_server,omitempty"`
 
 	TargetServer *TaskTargetServer `json:"target_server,omitempty"`
 
@@ -91,7 +94,7 @@ type ShowTaskResponse struct {
 	// 迁移剩余时间（秒）
 	RemainSeconds *int64 `json:"remain_seconds,omitempty"`
 
-	// 目的端的快照id
+	// 目的端的快照ID
 	TargetSnapshotId *string `json:"target_snapshot_id,omitempty"`
 
 	CloneServer *CloneServer `json:"clone_server,omitempty"`

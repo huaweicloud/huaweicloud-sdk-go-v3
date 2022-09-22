@@ -70,8 +70,11 @@ type ShowInstanceResponse struct {
 	EngineVersion *string `json:"engine_version,omitempty"`
 
 	// 节点信息。
-	Nodes          *[]GetDetailfNodesInfo `json:"nodes,omitempty"`
-	HttpStatusCode int                    `json:"-"`
+	Nodes *[]GetDetailfNodesInfo `json:"nodes,omitempty"`
+
+	// 管理员账号用户名。 - 长度为1-32个字符。 - 必须以字母开头。 - 可以包含字母，数字、下划线，不能包含其它特殊字符。
+	AdminUserName  *string `json:"admin_user_name,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowInstanceResponse) String() string {

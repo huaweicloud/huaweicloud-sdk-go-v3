@@ -18,16 +18,16 @@ type QuotaItemInfo struct {
 	Type *QuotaItemInfoType `json:"type,omitempty"`
 
 	// 配额最大值
-	Max *string `json:"max,omitempty"`
+	Max *int32 `json:"max,omitempty"`
 
 	// 配额最小值
-	Min *string `json:"min,omitempty"`
+	Min *int32 `json:"min,omitempty"`
 
 	// 当前租户的配额
-	Quota *string `json:"quota,omitempty"`
+	Quota *int32 `json:"quota,omitempty"`
 
 	// 当前租户已使用的配额
-	Used *string `json:"used,omitempty"`
+	Used *int32 `json:"used,omitempty"`
 }
 
 func (o QuotaItemInfo) String() string {
@@ -51,6 +51,9 @@ type QuotaItemInfoTypeEnum struct {
 	SUBSCRIPTION_TARGET  QuotaItemInfoType
 	SCHEMA               QuotaItemInfoType
 	SCHEMA_VERSION       QuotaItemInfoType
+	CONNECTION           QuotaItemInfoType
+	PRIVATE_ENDPOINT     QuotaItemInfoType
+	SOURCE_RABBITMQ      QuotaItemInfoType
 }
 
 func GetQuotaItemInfoTypeEnum() QuotaItemInfoTypeEnum {
@@ -75,6 +78,15 @@ func GetQuotaItemInfoTypeEnum() QuotaItemInfoTypeEnum {
 		},
 		SCHEMA_VERSION: QuotaItemInfoType{
 			value: "SCHEMA_VERSION",
+		},
+		CONNECTION: QuotaItemInfoType{
+			value: "CONNECTION",
+		},
+		PRIVATE_ENDPOINT: QuotaItemInfoType{
+			value: "PRIVATE_ENDPOINT",
+		},
+		SOURCE_RABBITMQ: QuotaItemInfoType{
+			value: "SOURCE_RABBITMQ",
 		},
 	}
 }

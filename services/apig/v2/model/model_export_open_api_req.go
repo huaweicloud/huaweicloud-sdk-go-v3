@@ -12,7 +12,7 @@ import (
 type ExportOpenApiReq struct {
 
 	// API分组发布的环境ID
-	EnvId *string `json:"env_id,omitempty"`
+	EnvId string `json:"env_id"`
 
 	// API分组ID
 	GroupId string `json:"group_id"`

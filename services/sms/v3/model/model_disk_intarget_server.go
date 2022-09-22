@@ -18,8 +18,14 @@ type DiskIntargetServer struct {
 	// 磁盘大小，单位：字节
 	Size int64 `json:"size"`
 
-	// 磁盘的作用
+	// 磁盘的作用 BOOT：BOOT设备 OS：系统设备 NORMAL:平常
 	DeviceUse *DiskIntargetServerDeviceUse `json:"device_use,omitempty"`
+
+	// 磁盘已使用大小，以字节为单位
+	UsedSize *int64 `json:"used_size,omitempty"`
+
+	// 物理卷信息
+	PhysicalVolumes *[]PhysicalVolumes `json:"physical_volumes,omitempty"`
 }
 
 func (o DiskIntargetServer) String() string {

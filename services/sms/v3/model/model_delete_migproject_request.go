@@ -9,7 +9,7 @@ import (
 // Request Object
 type DeleteMigprojectRequest struct {
 
-	// 需要删除的迁移项目的id
+	// 需要删除的迁移项目的ID
 	MigProjectId string `json:"mig_project_id"`
 }
 

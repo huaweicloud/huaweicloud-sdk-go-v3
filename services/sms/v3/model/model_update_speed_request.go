@@ -9,7 +9,7 @@ import (
 // Request Object
 type UpdateSpeedRequest struct {
 
-	// 主机迁移任务的id
+	// 主机迁移任务的ID
 	TaskId string `json:"task_id"`
 
 	Body *SpeedLimit `json:"body,omitempty"`

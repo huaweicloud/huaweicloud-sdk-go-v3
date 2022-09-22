@@ -9,7 +9,7 @@ import (
 // Response Object
 type CreateWebSocketTokenResponse struct {
 
-	// websocket建链Token。
+	// WebSocket建链Token(有效期1分钟，且一次有效)。
 	WebSocketToken *string `json:"webSocketToken,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

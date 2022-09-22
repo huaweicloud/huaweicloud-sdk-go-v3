@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 邀请会场请求消息体。
+// 邀请与会者请求。
 type RestInviteReqBody struct {
 
 	// 邀请的与会者列表。

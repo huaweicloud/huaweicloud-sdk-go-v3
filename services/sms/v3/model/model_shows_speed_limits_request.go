@@ -9,7 +9,7 @@ import (
 // Request Object
 type ShowsSpeedLimitsRequest struct {
 
-	// 查询限速信息的任务id
+	// 查询限速信息的任务ID
 	TaskId string `json:"task_id"`
 }
 

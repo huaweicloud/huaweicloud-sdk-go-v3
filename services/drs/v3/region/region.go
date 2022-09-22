@@ -21,6 +21,7 @@ var NA_MEXICO_1 = region.NewRegion("na-mexico-1", "https://drs.na-mexico-1.myhua
 var AF_SOUTH_1 = region.NewRegion("af-south-1", "https://drs.af-south-1.myhuaweicloud.com")
 var CN_NORTH_9 = region.NewRegion("cn-north-9", "https://drs.cn-north-9.myhuaweicloud.com")
 var CN_SOUTHWEST_2 = region.NewRegion("cn-southwest-2", "https://drs.cn-southwest-2.myhuaweicloud.com")
+var CN_SOUTH_2 = region.NewRegion("cn-south-2", "https://drs.cn-south-2.myhuaweicloud.com")
 
 var staticFields = map[string]*region.Region{
 	"cn-north-4":     CN_NORTH_4,
@@ -39,6 +40,7 @@ var staticFields = map[string]*region.Region{
 	"af-south-1":     AF_SOUTH_1,
 	"cn-north-9":     CN_NORTH_9,
 	"cn-southwest-2": CN_SOUTHWEST_2,
+	"cn-south-2":     CN_SOUTH_2,
 }
 
 var provider = region.DefaultProviderChain("DRS")

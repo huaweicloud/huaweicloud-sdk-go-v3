@@ -18,6 +18,9 @@ type CreateSubscriptionTargetResponse struct {
 	// 订阅的事件目标的提供方类型
 	ProviderType *string `json:"provider_type,omitempty"`
 
+	// 订阅的事件目标使用的目标链接ID
+	ConnectionId *string `json:"connection_id,omitempty"`
+
 	// 订阅的事件目标参数列表
 	Detail *interface{} `json:"detail,omitempty"`
 
@@ -27,7 +30,9 @@ type CreateSubscriptionTargetResponse struct {
 	CreatedTime *string `json:"created_time,omitempty"`
 
 	// 更新时间
-	UpdatedTime    *string `json:"updated_time,omitempty"`
+	UpdatedTime *string `json:"updated_time,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

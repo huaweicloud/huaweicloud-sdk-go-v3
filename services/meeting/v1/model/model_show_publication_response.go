@@ -12,40 +12,40 @@ import (
 // Response Object
 type ShowPublicationResponse struct {
 
-	// 发布ID
+	// 发布ID。
 	Id *string `json:"id,omitempty"`
 
-	// 更新者
+	// 更新者。
 	LastUpdatedBy *string `json:"lastUpdatedBy,omitempty"`
 
-	// 创建时间
+	// 创建时间。
 	CreateTime *int64 `json:"createTime,omitempty"`
 
-	// 更新时间
+	// 更新时间。
 	UpdateTime *int64 `json:"updateTime,omitempty"`
 
-	// 发布名称
+	// 发布名称。
 	PublishName *string `json:"publishName,omitempty"`
 
-	// 发布范围
+	// 发布范围。
 	PublishScope *string `json:"publishScope,omitempty"`
 
-	// 开始时间
+	// 开始时间。
 	StartTime *int64 `json:"startTime,omitempty"`
 
-	// 结束时间
+	// 结束时间。
 	EndTime *int64 `json:"endTime,omitempty"`
 
-	// 根据当前时间确定发布状态 - NOT_ONLINE-未上线 - PUBLISHING-发布中 - ALREADY_OFFLINE-已下线
+	// 根据当前时间确定发布状态。 - NOT_ONLINE-未上线 - PUBLISHING-发布中 - ALREADY_OFFLINE-已下线
 	PublishStatus *ShowPublicationResponsePublishStatus `json:"publishStatus,omitempty"`
 
-	// 发布节目ID列表
+	// 发布节目ID列表。
 	ProgramList *[]ProgramResponseBase `json:"programList,omitempty"`
 
-	// 发布部门列表
+	// 发布部门列表。
 	DeptList *[]PublishDeptResponseDto `json:"deptList,omitempty"`
 
-	// 发布设备列表
+	// 发布设备列表。
 	DeviceList     *[]PublishDeviceResponseDto `json:"deviceList,omitempty"`
 	HttpStatusCode int                         `json:"-"`
 }

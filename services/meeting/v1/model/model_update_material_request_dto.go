@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// 更新素材信息请求（只能修改素材名称）
+// 信息窗素材信息。
 type UpdateMaterialRequestDto struct {
 
-	// 素材名称
+	// 素材名称。
 	MaterialName *string `json:"materialName,omitempty"`
 }
 

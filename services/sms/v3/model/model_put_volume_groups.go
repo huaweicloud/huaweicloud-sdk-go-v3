@@ -12,7 +12,7 @@ type PutVolumeGroups struct {
 	// lv信息
 	LogicalVolumes *[]PutLogicalVolume `json:"logical_volumes,omitempty"`
 
-	// 卷组id
+	// 卷组ID
 	Id string `json:"id"`
 
 	// 是否迁移

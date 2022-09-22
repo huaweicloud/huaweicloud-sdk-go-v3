@@ -9,7 +9,7 @@ import (
 // 任务关联的子任务信息
 type SubTaskAssociatedWithTask struct {
 
-	// 子任务id
+	// 子任务ID
 	Id *int64 `json:"id,omitempty"`
 
 	// 子任务名称

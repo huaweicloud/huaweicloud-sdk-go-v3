@@ -16,6 +16,12 @@ var AP_SOUTHEAST_2 = region.NewRegion("ap-southeast-2", "https://mrs.ap-southeas
 var AP_SOUTHEAST_3 = region.NewRegion("ap-southeast-3", "https://mrs.ap-southeast-3.myhuaweicloud.com")
 var AF_SOUTH_1 = region.NewRegion("af-south-1", "https://mrs.af-south-1.myhuaweicloud.com")
 var RU_NORTHWEST_2 = region.NewRegion("ru-northwest-2", "https://mrs.ru-northwest-2.myhuaweicloud.cn")
+var SA_BRAZIL_1 = region.NewRegion("sa-brazil-1", "https://mrs.sa-brazil-1.myhuaweicloud.cn")
+var LA_SOUTH_2 = region.NewRegion("la-south-2", "https://mrs.la-south-2.myhuaweicloud.cn")
+var LA_NORTH_2 = region.NewRegion("la-north-2", "https://mrs.la-north-2.myhuaweicloud.cn")
+var NA_MEXICO_1 = region.NewRegion("na-mexico-1", "https://mrs.na-mexico-1.myhuaweicloud.cn")
+var CN_NORTH_9 = region.NewRegion("cn-north-9", "https://mrs.cn-north-9.myhuaweicloud.cn")
+var CN_SOUTHWEST_2 = region.NewRegion("cn-southwest-2", "https://mrs.cn-southwest-2.myhuaweicloud.cn")
 
 var staticFields = map[string]*region.Region{
 	"cn-north-1":     CN_NORTH_1,
@@ -29,6 +35,12 @@ var staticFields = map[string]*region.Region{
 	"ap-southeast-3": AP_SOUTHEAST_3,
 	"af-south-1":     AF_SOUTH_1,
 	"ru-northwest-2": RU_NORTHWEST_2,
+	"sa-brazil-1":    SA_BRAZIL_1,
+	"la-south-2":     LA_SOUTH_2,
+	"la-north-2":     LA_NORTH_2,
+	"na-mexico-1":    NA_MEXICO_1,
+	"cn-north-9":     CN_NORTH_9,
+	"cn-southwest-2": CN_SOUTHWEST_2,
 }
 
 var provider = region.DefaultProviderChain("MRS")

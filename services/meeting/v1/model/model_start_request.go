@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// 开始会议请求参数
+// 激活会议请求。
 type StartRequest struct {
 
-	// 会议ID
+	// 会议ID。
 	ConferenceID string `json:"conferenceID"`
 
-	// 主席密码
+	// 会议密码。
 	Password string `json:"password"`
 }
 

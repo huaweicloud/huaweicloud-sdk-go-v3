@@ -19,9 +19,53 @@ func SmsClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+// CheckNetAcl 检查网卡安全组端口是否符合要求
+//
+// 检查网卡安全组。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *SmsClient) CheckNetAcl(request *model.CheckNetAclRequest) (*model.CheckNetAclResponse, error) {
+	requestDef := GenReqDefForCheckNetAcl()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckNetAclResponse), nil
+	}
+}
+
+// CheckNetAclInvoker 检查网卡安全组端口是否符合要求
+func (c *SmsClient) CheckNetAclInvoker(request *model.CheckNetAclRequest) *CheckNetAclInvoker {
+	requestDef := GenReqDefForCheckNetAcl()
+	return &CheckNetAclInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CollectLog 上传迁移任务的日志
+//
+// 上传迁移任务的日志。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *SmsClient) CollectLog(request *model.CollectLogRequest) (*model.CollectLogResponse, error) {
+	requestDef := GenReqDefForCollectLog()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CollectLogResponse), nil
+	}
+}
+
+// CollectLogInvoker 上传迁移任务的日志
+func (c *SmsClient) CollectLogInvoker(request *model.CollectLogRequest) *CollectLogInvoker {
+	requestDef := GenReqDefForCollectLog()
+	return &CollectLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateMigproject 新建迁移项目
 //
-// 新建迁移项目
+// 新建迁移项目。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -65,7 +109,7 @@ func (c *SmsClient) CreateTaskInvoker(request *model.CreateTaskRequest) *CreateT
 
 // CreateTemplate 新增模板信息
 //
-// 新增源端模板信息
+// 新增源端模板信息。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -87,7 +131,7 @@ func (c *SmsClient) CreateTemplateInvoker(request *model.CreateTemplateRequest) 
 
 // DeleteMigproject 删除迁移项目
 //
-// 删除指定ID的迁移项目
+// 删除指定ID的迁移项目。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -371,6 +415,28 @@ func (c *SmsClient) RegisterServerInvoker(request *model.RegisterServerRequest) 
 	return &RegisterServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowCertKey 获取SSL目的端证书和私钥
+//
+// 当源端服务器为Windows操作系统时，安装在源端服务器上的迁移Agent通过SSLSocket同目的端服务器通信，该接口用于下载目的端服务器所需要的证书和私钥(PEM格式)。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *SmsClient) ShowCertKey(request *model.ShowCertKeyRequest) (*model.ShowCertKeyResponse, error) {
+	requestDef := GenReqDefForShowCertKey()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowCertKeyResponse), nil
+	}
+}
+
+// ShowCertKeyInvoker 获取SSL目的端证书和私钥
+func (c *SmsClient) ShowCertKeyInvoker(request *model.ShowCertKeyRequest) *ShowCertKeyInvoker {
+	requestDef := GenReqDefForShowCertKey()
+	return &ShowCertKeyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowCommand 获取服务端命令
 //
 // 迁移Agent调用该接口从SMS服务端获取下发给指定源端迁移Agent的命令。
@@ -437,6 +503,28 @@ func (c *SmsClient) ShowOverviewInvoker(request *model.ShowOverviewRequest) *Sho
 	return &ShowOverviewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowPassphrase 查询指定任务ID的安全传输通道的证书passphrase
+//
+// 查询指定任务ID的安全传输通道的证书passphrase。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *SmsClient) ShowPassphrase(request *model.ShowPassphraseRequest) (*model.ShowPassphraseResponse, error) {
+	requestDef := GenReqDefForShowPassphrase()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPassphraseResponse), nil
+	}
+}
+
+// ShowPassphraseInvoker 查询指定任务ID的安全传输通道的证书passphrase
+func (c *SmsClient) ShowPassphraseInvoker(request *model.ShowPassphraseRequest) *ShowPassphraseInvoker {
+	requestDef := GenReqDefForShowPassphrase()
+	return &ShowPassphraseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowServer 查询指定ID的源端服务器
 //
 // 迁移Agent将源端服务器信息上报到主机迁移服务后，主机迁移服务会对迁移的可行性进行检测，该接口返回源端服务器的基本信息和检查结果。
@@ -457,6 +545,50 @@ func (c *SmsClient) ShowServer(request *model.ShowServerRequest) (*model.ShowSer
 func (c *SmsClient) ShowServerInvoker(request *model.ShowServerRequest) *ShowServerInvoker {
 	requestDef := GenReqDefForShowServer()
 	return &ShowServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSha256 计算sha256
+//
+// 计算sha256
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *SmsClient) ShowSha256(request *model.ShowSha256Request) (*model.ShowSha256Response, error) {
+	requestDef := GenReqDefForShowSha256()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSha256Response), nil
+	}
+}
+
+// ShowSha256Invoker 计算sha256
+func (c *SmsClient) ShowSha256Invoker(request *model.ShowSha256Request) *ShowSha256Invoker {
+	requestDef := GenReqDefForShowSha256()
+	return &ShowSha256Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTargetPassword 查询指定ID的模板中的目的端服务器的密码
+//
+// 查询指定ID的模板中的目的端服务器的密码。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *SmsClient) ShowTargetPassword(request *model.ShowTargetPasswordRequest) (*model.ShowTargetPasswordResponse, error) {
+	requestDef := GenReqDefForShowTargetPassword()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTargetPasswordResponse), nil
+	}
+}
+
+// ShowTargetPasswordInvoker 查询指定ID的模板中的目的端服务器的密码
+func (c *SmsClient) ShowTargetPasswordInvoker(request *model.ShowTargetPasswordRequest) *ShowTargetPasswordInvoker {
+	requestDef := GenReqDefForShowTargetPassword()
+	return &ShowTargetPasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowTask 查询指定ID的迁移任务
@@ -505,7 +637,7 @@ func (c *SmsClient) ShowTemplateInvoker(request *model.ShowTemplateRequest) *Sho
 
 // ShowsSpeedLimits 查询任务限速规则
 //
-// 按时间段查询迁移任务的迁移速率
+// 按时间段查询迁移任务的迁移速率。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -523,6 +655,28 @@ func (c *SmsClient) ShowsSpeedLimits(request *model.ShowsSpeedLimitsRequest) (*m
 func (c *SmsClient) ShowsSpeedLimitsInvoker(request *model.ShowsSpeedLimitsRequest) *ShowsSpeedLimitsInvoker {
 	requestDef := GenReqDefForShowsSpeedLimits()
 	return &ShowsSpeedLimitsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UnlockTargetEcs 解锁指定任务的目的端服务器
+//
+// 解锁指定任务的目的端服务器。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *SmsClient) UnlockTargetEcs(request *model.UnlockTargetEcsRequest) (*model.UnlockTargetEcsResponse, error) {
+	requestDef := GenReqDefForUnlockTargetEcs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UnlockTargetEcsResponse), nil
+	}
+}
+
+// UnlockTargetEcsInvoker 解锁指定任务的目的端服务器
+func (c *SmsClient) UnlockTargetEcsInvoker(request *model.UnlockTargetEcsRequest) *UnlockTargetEcsInvoker {
+	requestDef := GenReqDefForUnlockTargetEcs()
+	return &UnlockTargetEcsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateCommandResult 上报服务端命令执行结果
@@ -549,7 +703,7 @@ func (c *SmsClient) UpdateCommandResultInvoker(request *model.UpdateCommandResul
 
 // UpdateCopyState 更新任务对应源端复制状态
 //
-// 更新任务对应源端复制状态
+// 更新任务对应源端复制状态。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -593,7 +747,7 @@ func (c *SmsClient) UpdateDefaultMigprojectInvoker(request *model.UpdateDefaultM
 
 // UpdateDiskInfo 更新磁盘信息
 //
-// 更新服务器的磁盘信息，此接口会把服务器原有磁盘信息清空，然后更新成新磁盘信息
+// 更新服务器的磁盘信息，此接口会把服务器原有磁盘信息清空，然后更新成新磁盘信息。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -615,7 +769,7 @@ func (c *SmsClient) UpdateDiskInfoInvoker(request *model.UpdateDiskInfoRequest) 
 
 // UpdateMigproject 更新迁移项目信息
 //
-// 更新迁移项目的信息
+// 更新迁移项目的信息。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -727,7 +881,7 @@ func (c *SmsClient) UpdateTaskSpeedInvoker(request *model.UpdateTaskSpeedRequest
 
 // UpdateTaskStatus 管理迁移任务
 //
-// 管理迁移任务，包括启动任务，暂停任务，同步任务，日志上传，回滚失败迁移任务
+// 管理迁移任务，包括启动任务，暂停任务，同步任务，日志上传，回滚失败迁移任务。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.

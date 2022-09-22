@@ -9,7 +9,7 @@ import (
 // Response Object
 type ShowConfOrgResponse struct {
 
-	// 企业ID
+	// SP管理员根据会议ID查询该会议归属的企业ID。
 	OrgID          *string `json:"orgID,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

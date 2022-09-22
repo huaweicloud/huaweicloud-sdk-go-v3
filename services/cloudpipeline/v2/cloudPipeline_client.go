@@ -129,28 +129,6 @@ func (c *CloudPipelineClient) ListTemplatesInvoker(request *model.ListTemplatesR
 	return &ListTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// RegisterAgent register注册Slave接口
-//
-// 注册创建Slave接口
-//
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
-func (c *CloudPipelineClient) RegisterAgent(request *model.RegisterAgentRequest) (*model.RegisterAgentResponse, error) {
-	requestDef := GenReqDefForRegisterAgent()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.RegisterAgentResponse), nil
-	}
-}
-
-// RegisterAgentInvoker register注册Slave接口
-func (c *CloudPipelineClient) RegisterAgentInvoker(request *model.RegisterAgentRequest) *RegisterAgentInvoker {
-	requestDef := GenReqDefForRegisterAgent()
-	return &RegisterAgentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // RemovePipeline 删除流水线
 //
 // 根据id删除流水线
@@ -171,28 +149,6 @@ func (c *CloudPipelineClient) RemovePipeline(request *model.RemovePipelineReques
 func (c *CloudPipelineClient) RemovePipelineInvoker(request *model.RemovePipelineRequest) *RemovePipelineInvoker {
 	requestDef := GenReqDefForRemovePipeline()
 	return &RemovePipelineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowAgentStatus Agent状态查询
-//
-// Agent状态查询
-//
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
-func (c *CloudPipelineClient) ShowAgentStatus(request *model.ShowAgentStatusRequest) (*model.ShowAgentStatusResponse, error) {
-	requestDef := GenReqDefForShowAgentStatus()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowAgentStatusResponse), nil
-	}
-}
-
-// ShowAgentStatusInvoker Agent状态查询
-func (c *CloudPipelineClient) ShowAgentStatusInvoker(request *model.ShowAgentStatusRequest) *ShowAgentStatusInvoker {
-	requestDef := GenReqDefForShowAgentStatus()
-	return &ShowAgentStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowInstanceStatus 检查流水线创建状态

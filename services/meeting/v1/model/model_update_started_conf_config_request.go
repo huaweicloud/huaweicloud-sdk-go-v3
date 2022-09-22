@@ -12,7 +12,7 @@ type UpdateStartedConfConfigRequest struct {
 	// 会议ID。
 	ConferenceID string `json:"conferenceID"`
 
-	// 会控正式Token。 该头域统一为BASE64编码。
+	// 会控Token，通过[[获取会控token](https://support.huaweicloud.com/api-meeting/meeting_21_0027.html)](tag:hws)[[获取会控token](https://support.huaweicloud.com/intl/zh-cn/api-meeting/meeting_21_0027.html)](tag:hk)接口获得。
 	XConferenceAuthorization string `json:"X-Conference-Authorization"`
 
 	Body *UpdateStartedConfigReqBody `json:"body,omitempty"`

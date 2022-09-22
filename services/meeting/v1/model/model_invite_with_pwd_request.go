@@ -9,7 +9,7 @@ import (
 // Request Object
 type InviteWithPwdRequest struct {
 
-	// 会议ID
+	// 会议ID。
 	ConferenceID string `json:"conferenceID"`
 
 	Body *RestInviteWithPwdReqBody `json:"body,omitempty"`

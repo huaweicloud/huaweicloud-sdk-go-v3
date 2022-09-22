@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// 主持人邀请开启、关闭摄像头的请求body
+// 主持人邀请与会者开启/关闭摄像头请求。
 type RestVideoBody struct {
 
-	// 1：关闭视频 0：开启视频
+	// 主持人邀请与会者开启/关闭摄像头请求。 * 1：关闭视频 * 0：开启视频
 	Status int32 `json:"status"`
 }
 

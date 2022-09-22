@@ -12,7 +12,7 @@ import (
 // Request Object
 type ListTasksRequest struct {
 
-	// 迁移任务状态
+	// 迁移任务状态 READY:准备就绪 RUNNING:迁移中 SYNCING:同步中 MIGRATE_SUCCESS:迁移成功 MIGRATE_FAIL:迁移失败 ABORTING:中止中 ABORT:中止 DELETING::删除中 SYNC_F_ROLLBACKING:同步失败回滚中 SYNC_F_ROLLBACK_SUCCESS:同步失败回滚成功
 	State *ListTasksRequestState `json:"state,omitempty"`
 
 	// 任务的名称
@@ -30,7 +30,7 @@ type ListTasksRequest struct {
 	// 偏移量
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 需要查询的企业项目id
+	// 需要查询的企业项目ID
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 

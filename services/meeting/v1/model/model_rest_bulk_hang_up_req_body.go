@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量挂断会场消息体。
+// 邀请与会者请求。
 type RestBulkHangUpReqBody struct {
 
 	// 批量挂断会场列表，列表元素为与会者标识。

@@ -20,6 +20,9 @@ type ReleaseRepository struct {
 	// 软件包大小
 	Size *string `json:"size,omitempty"`
 
+	// 软件包类型名称
+	CategoryName *string `json:"category_name,omitempty"`
+
 	// 文件类型
 	FileType *string `json:"file_type,omitempty"`
 

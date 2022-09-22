@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// 新增/更新节目素材信息请求
+// 节目素材信息 。
 type ProgramItemRequestBase struct {
 
-	// 素材ID
+	// 素材ID。
 	MaterialId string `json:"materialId"`
 
-	// 播放时长
+	// 播放时长。
 	PlayTime int32 `json:"playTime"`
 }
 

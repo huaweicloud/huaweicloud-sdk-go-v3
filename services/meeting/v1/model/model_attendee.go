@@ -6,43 +6,43 @@ import (
 	"strings"
 )
 
-// 与会者信息
+// 与会者信息。
 type Attendee struct {
 
 	// 与会者的用户UUID。
 	UserUUID *string `json:"userUUID,omitempty"`
 
-	// 与会者帐号，兼容终端老版本。如果没有携带userUUID，就通过accountId查询用户信息。
+	// 与会者的华为云会议帐号。
 	AccountId *string `json:"accountId,omitempty"`
 
-	// 与会者名称或昵称，长度限制为96个字符。
+	// 与会者名称，长度限制为96个字符。
 	Name string `json:"name"`
 
-	// 会议中的角色。 - 0: 普通与会者。 - 1: 会议主席。 - 2: 预留字段，暂不对外开放。 default: 0
+	// 会议中的角色。默认为普通与会者。 - 0: 普通与会者 - 1: 会议主持人
 	Role *int32 `json:"role,omitempty"`
 
-	// 电话号码(可支持SIP、TEL号码格式)。最大不超过127个字符。phone、email和sms三者需至少填写一个。当type为telepresence时，且设备为三屏智真，则该字段填写中屏号码。
+	// 号码。支持SIP号码或者手机号码。 > * 号码可以通过[[查询企业通讯](https://support.huaweicloud.com/api-meeting/meeting_21_0512.html)](tag:hws)[[查询企业通讯](https://support.huaweicloud.com/intl/zh-cn/api-meeting/meeting_21_0512.html)](tag:hk)接口录获取。返回的number是SIP号码，phone是手机号码 > * 填SIP号码系统会呼叫对应的软终端或者硬终端；填手机号码系统会呼叫手机 > * 呼叫手机需要开通PSTN权限，否则无法呼叫
 	Phone string `json:"phone"`
 
-	// 预留字段，取值类型同phone。当type为telepresence时，且设备为三屏智真，则该字段填写左屏号码
+	// 预留字段，取值类型同参数“phone”。
 	Phone2 *string `json:"phone2,omitempty"`
 
-	// 预留字段，取值类型同phone。当type为telepresence时，且设备为三屏智真，则该字段填写右屏号码
+	// 预留字段，取值类型同参数“phone”。
 	Phone3 *string `json:"phone3,omitempty"`
 
-	// 邮件地址。最大不超过255个字符。phone、email和sms三者需至少填写一个。
+	// 邮件地址。 > 会中邀请不发会议通知，不用填写。
 	Email *string `json:"email,omitempty"`
 
-	// 短信通知的手机号码。最大不超过32个字符。phone、email和sms三者需至少填写一个。
+	// 短信通知的手机号码。 > 会中邀请不发会议通知，不用填写。
 	Sms *string `json:"sms,omitempty"`
 
-	// 默认值由会议AS定义，号码类型枚举如下： - normal: 软终端。 - telepresence: 智真。单屏、三屏智真均属此类。（预留字段） - terminal: 会议室或硬终端。 - outside: 外部与会人。 - mobile: 用户手机号码。 - telephone: 软终端用户固定电话，暂不使用。
+	// 终端类型，类型枚举如下： * normal：软终端 * terminal：硬终端 * outside：外部与会人 * mobile：用户手机号码 * ideahub：ideahub * board: 电子白板（SmartRooms）。含Maxhub、海信大屏、IdeaHub B2hwvision：华为智慧屏TV
 	Type string `json:"type"`
 
-	// 部门ID。最大不超过64个字符。
+	// 部门编码。
 	DeptUUID *string `json:"deptUUID,omitempty"`
 
-	// 部门名称。最大不超过128个字符。
+	// 部门名称。
 	DeptName *string `json:"deptName,omitempty"`
 }
 

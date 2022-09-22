@@ -28,6 +28,9 @@ type SlowLogList struct {
 
 	// 慢sql影响行数。
 	RowsExamined *string `json:"rowsExamined,omitempty"`
+
+	// 客户端ip，该IP地址可能涉及个人数据，建议用户依据实际IP地址的敏感性做查询后脱敏处理。
+	Host *string `json:"host,omitempty"`
 }
 
 func (o SlowLogList) String() string {

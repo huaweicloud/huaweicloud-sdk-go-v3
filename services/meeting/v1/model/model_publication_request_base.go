@@ -6,22 +6,22 @@ import (
 	"strings"
 )
 
-// 新增/更新发布信息请求
+// 发布信息。
 type PublicationRequestBase struct {
 
-	// 发布名称
+	// 发布名称。
 	PublishName string `json:"publishName"`
 
-	// 开始时间
+	// 开始时间。
 	StartTime int64 `json:"startTime"`
 
-	// 结束时间
+	// 结束时间。
 	EndTime int64 `json:"endTime"`
 
-	// 发布到部门编码列表
+	// 发布到部门编码列表。
 	DeptList []string `json:"deptList"`
 
-	// 发布到设备用户ID列表
+	// 发布到设备用户ID列表。
 	DeviceList []string `json:"deviceList"`
 }
 
