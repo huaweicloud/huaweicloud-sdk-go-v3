@@ -204,6 +204,21 @@ type ShowInstanceResponse struct {
 	// 是否开启磁盘加密。
 	DiskEncrypted *bool `json:"disk_encrypted,omitempty"`
 
+	// 磁盘加密key，未开启磁盘加密时为空。
+	DiskEncryptedKey *string `json:"disk_encrypted_key,omitempty"`
+
+	// 公网访问Kafka Manager连接地址。
+	PublicManagementConnectAddress *string `json:"public_management_connect_address,omitempty"`
+
+	// 子网网段。
+	SubnetCidr *string `json:"subnet_cidr,omitempty"`
+
+	// 子网名称。
+	SubnetName *string `json:"subnet_name,omitempty"`
+
+	// 是否开启访问控制。
+	EnableAcl *bool `json:"enable_acl,omitempty"`
+
 	// Kafka实例私有连接地址。
 	KafkaPrivateConnectAddress *string `json:"kafka_private_connect_address,omitempty"`
 

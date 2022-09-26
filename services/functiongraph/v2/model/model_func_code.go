@@ -9,11 +9,11 @@ import (
 // FuncCode结构返回体。
 type FuncCode struct {
 
-	// 函数代码，当CodeTye为inline/zip/jar时必选，且代码必须要进行base64编码。
-	File string `json:"file"`
+	// 函数代码，如果不为空必须进行base64编码，为空时使用默认的代码。
+	File *string `json:"file,omitempty"`
 
 	// 函数代码链接。
-	Link string `json:"link"`
+	Link *string `json:"link,omitempty"`
 }
 
 func (o FuncCode) String() string {

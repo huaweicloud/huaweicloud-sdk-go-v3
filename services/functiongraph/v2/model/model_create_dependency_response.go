@@ -34,8 +34,14 @@ type CreateDependencyResponse struct {
 	Description *string `json:"description,omitempty"`
 
 	// 依赖包文件名。
-	FileName       *string `json:"file_name,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	FileName *string `json:"file_name,omitempty"`
+
+	// 依赖包版本号
+	Version *int64 `json:"version,omitempty"`
+
+	// 依赖包更新时间
+	LastModified   *int64 `json:"last_modified,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o CreateDependencyResponse) String() string {

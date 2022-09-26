@@ -14,7 +14,8 @@ type ImageDetectionResult struct {
 	// 检测结果的一级标签。 支持category列表如下： politics: 涉政 terrorism: 暴恐 porn: 色情 image_text: 图文审核
 	Category *string `json:"category,omitempty"`
 
-	Details *ImageDetectionResultDetail `json:"details,omitempty"`
+	// 检测详情
+	Details *[]ImageDetectionResultDetail `json:"details,omitempty"`
 
 	// 图文审核检测出的文本，只有在category参数配置image_text且检测出文本时展示该字段。
 	OcrText *string `json:"ocr_text,omitempty"`

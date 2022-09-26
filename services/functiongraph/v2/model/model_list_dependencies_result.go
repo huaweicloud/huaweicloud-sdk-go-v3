@@ -37,6 +37,12 @@ type ListDependenciesResult struct {
 
 	// 依赖包描述。
 	Description *string `json:"description,omitempty"`
+
+	// 依赖包版本号
+	Version *int64 `json:"version,omitempty"`
+
+	// 依赖包更新时间
+	LastModified *int64 `json:"last_modified,omitempty"`
 }
 
 func (o ListDependenciesResult) String() string {
