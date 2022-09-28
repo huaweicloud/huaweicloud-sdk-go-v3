@@ -30,12 +30,13 @@ type Device struct {
 	// 更新时间
 	UpdatedAt string `json:"updated_at"`
 
+	// 终端设备静态属性信息
 	Attributes map[string]ValueInAttributes `json:"attributes"`
 
 	// 连接类型，默认为edge
 	ConnectionType string `json:"connection_type"`
 
-	// 终端设备静态属性信息
+	// 终端设备孪生属性信息
 	Twin map[string]ValueInTwinResponse `json:"twin"`
 
 	AccessConfig *AccessConfig `json:"access_config"`

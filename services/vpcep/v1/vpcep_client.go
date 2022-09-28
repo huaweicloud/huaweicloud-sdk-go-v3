@@ -67,6 +67,54 @@ func (c *VpcepClient) AddOrRemoveServicePermissionsInvoker(request *model.AddOrR
 	return &AddOrRemoveServicePermissionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchAddEndpointServicePermissions 批量添加或移除终端节点服务的白名单
+//
+// 功能介绍
+// 批量添加当前用户下终端节点服务的白名单，支持添加描述信息。
+// 说明
+// 本帐号默认在自身用户的终端节点服务的白名单中。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *VpcepClient) BatchAddEndpointServicePermissions(request *model.BatchAddEndpointServicePermissionsRequest) (*model.BatchAddEndpointServicePermissionsResponse, error) {
+	requestDef := GenReqDefForBatchAddEndpointServicePermissions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchAddEndpointServicePermissionsResponse), nil
+	}
+}
+
+// BatchAddEndpointServicePermissionsInvoker 批量添加或移除终端节点服务的白名单
+func (c *VpcepClient) BatchAddEndpointServicePermissionsInvoker(request *model.BatchAddEndpointServicePermissionsRequest) *BatchAddEndpointServicePermissionsInvoker {
+	requestDef := GenReqDefForBatchAddEndpointServicePermissions()
+	return &BatchAddEndpointServicePermissionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchRemoveEndpointServicePermissions 批量添加或移除终端节点服务的白名单
+//
+// 功能介绍
+// 批量删除当前用户下终端节点服务的白名单
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *VpcepClient) BatchRemoveEndpointServicePermissions(request *model.BatchRemoveEndpointServicePermissionsRequest) (*model.BatchRemoveEndpointServicePermissionsResponse, error) {
+	requestDef := GenReqDefForBatchRemoveEndpointServicePermissions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchRemoveEndpointServicePermissionsResponse), nil
+	}
+}
+
+// BatchRemoveEndpointServicePermissionsInvoker 批量添加或移除终端节点服务的白名单
+func (c *VpcepClient) BatchRemoveEndpointServicePermissionsInvoker(request *model.BatchRemoveEndpointServicePermissionsRequest) *BatchRemoveEndpointServicePermissionsInvoker {
+	requestDef := GenReqDefForBatchRemoveEndpointServicePermissions()
+	return &BatchRemoveEndpointServicePermissionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateEndpoint 创建终端节点
 //
 // 功能介绍
@@ -93,9 +141,11 @@ func (c *VpcepClient) CreateEndpointInvoker(request *model.CreateEndpointRequest
 // CreateEndpointService 创建终端节点服务
 //
 // 功能介绍
-// 创建终端节点服务，允许其他用户创建终端节点连接您创建的终端节点服务，使用您所提供的服务。
+// 创建终端节点服务，允许其他用户创建终端节点连接您创建的终端节点服务，
+// 使用您所提供的服务。
 // 说明
-// 该接口为异步接口，调用成功会返回200状态码，说明请求已正常下发。通常创建终端节点服务需要1~2分钟，可以通过查询终端节点服务详情查看创建结果。
+// 该接口为异步接口，调用成功会返回200状态码，说明请求已正常下发。
+// 通常创建终端节点服务需要1~2分钟，可以通过查询终端节点服务详情查看创建结果。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -136,6 +186,29 @@ func (c *VpcepClient) DeleteEndpoint(request *model.DeleteEndpointRequest) (*mod
 func (c *VpcepClient) DeleteEndpointInvoker(request *model.DeleteEndpointRequest) *DeleteEndpointInvoker {
 	requestDef := GenReqDefForDeleteEndpoint()
 	return &DeleteEndpointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteEndpointPolicy 修改终端节点路由表
+//
+// 功能介绍
+// 删除网关型终端节点policy。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *VpcepClient) DeleteEndpointPolicy(request *model.DeleteEndpointPolicyRequest) (*model.DeleteEndpointPolicyResponse, error) {
+	requestDef := GenReqDefForDeleteEndpointPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteEndpointPolicyResponse), nil
+	}
+}
+
+// DeleteEndpointPolicyInvoker 修改终端节点路由表
+func (c *VpcepClient) DeleteEndpointPolicyInvoker(request *model.DeleteEndpointPolicyRequest) *DeleteEndpointPolicyInvoker {
+	requestDef := GenReqDefForDeleteEndpointPolicy()
+	return &DeleteEndpointPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteEndpointService 删除终端节点服务
@@ -279,7 +352,7 @@ func (c *VpcepClient) ListServiceConnectionsInvoker(request *model.ListServiceCo
 // ListServiceDescribeDetails 查询终端节点服务概要
 //
 // 功能介绍
-// 查询终端节点服务的概要信息，此接口是供创建终端节点的用户来查询需要连接的终端节点服务信息。此接口既可以方便其他用户查询到您的终端节点服务概要信息又可以避免您的终端节点服务的细节信息暴露给其他用户。
+// 查询终端节点服务的概要信息， 此接口是供创建终端节点的用户来查询需要连接的终端节点服务信息。 此接口既可以方便其他用户查询到您的终端节点服务概要信息, 又可以避免您的终端节点服务的细节信息暴露给其他用户。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -350,7 +423,8 @@ func (c *VpcepClient) ListServicePermissionsDetailsInvoker(request *model.ListSe
 // ListServicePublicDetails 查询公共终端节点服务列表
 //
 // 功能介绍
-// 查询公共终端节点服务的列表，公共终端节点服务是所有用户可见且可连接的终端节点服务，由运维人员创建，用户可直接使用，但无权创建。
+// 查询公共终端节点服务的列表，公共终端节点服务是所有用户可见且可连接的终端节点服务，
+// 由运维人员创建，用户可直接使用，但无权创建。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -416,6 +490,52 @@ func (c *VpcepClient) ListVersionDetailsInvoker(request *model.ListVersionDetail
 	return &ListVersionDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateEndpointConnectionsDesc 更新终端节点连接描述
+//
+// 功能介绍：
+//      更新终端节点服务连接的终端节点的描述。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *VpcepClient) UpdateEndpointConnectionsDesc(request *model.UpdateEndpointConnectionsDescRequest) (*model.UpdateEndpointConnectionsDescResponse, error) {
+	requestDef := GenReqDefForUpdateEndpointConnectionsDesc()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateEndpointConnectionsDescResponse), nil
+	}
+}
+
+// UpdateEndpointConnectionsDescInvoker 更新终端节点连接描述
+func (c *VpcepClient) UpdateEndpointConnectionsDescInvoker(request *model.UpdateEndpointConnectionsDescRequest) *UpdateEndpointConnectionsDescInvoker {
+	requestDef := GenReqDefForUpdateEndpointConnectionsDesc()
+	return &UpdateEndpointConnectionsDescInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateEndpointPolicy 修改终端节点路由表
+//
+// 功能介绍
+// 修改网关型终端节点policy。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *VpcepClient) UpdateEndpointPolicy(request *model.UpdateEndpointPolicyRequest) (*model.UpdateEndpointPolicyResponse, error) {
+	requestDef := GenReqDefForUpdateEndpointPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateEndpointPolicyResponse), nil
+	}
+}
+
+// UpdateEndpointPolicyInvoker 修改终端节点路由表
+func (c *VpcepClient) UpdateEndpointPolicyInvoker(request *model.UpdateEndpointPolicyRequest) *UpdateEndpointPolicyInvoker {
+	requestDef := GenReqDefForUpdateEndpointPolicy()
+	return &UpdateEndpointPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateEndpointRoutetable 修改终端节点路由表
 //
 // 功能介绍
@@ -460,6 +580,52 @@ func (c *VpcepClient) UpdateEndpointService(request *model.UpdateEndpointService
 func (c *VpcepClient) UpdateEndpointServiceInvoker(request *model.UpdateEndpointServiceRequest) *UpdateEndpointServiceInvoker {
 	requestDef := GenReqDefForUpdateEndpointService()
 	return &UpdateEndpointServiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateEndpointServiceName 修改终端节点服务名称
+//
+// 功能介绍
+// 修改终端节点服务名称
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *VpcepClient) UpdateEndpointServiceName(request *model.UpdateEndpointServiceNameRequest) (*model.UpdateEndpointServiceNameResponse, error) {
+	requestDef := GenReqDefForUpdateEndpointServiceName()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateEndpointServiceNameResponse), nil
+	}
+}
+
+// UpdateEndpointServiceNameInvoker 修改终端节点服务名称
+func (c *VpcepClient) UpdateEndpointServiceNameInvoker(request *model.UpdateEndpointServiceNameRequest) *UpdateEndpointServiceNameInvoker {
+	requestDef := GenReqDefForUpdateEndpointServiceName()
+	return &UpdateEndpointServiceNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateEndpointServicePermissionDesc 更新终端节点服务白名单描述
+//
+// 功能介绍
+// 更新当前用户下终端节点服务白名单的描述信息
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *VpcepClient) UpdateEndpointServicePermissionDesc(request *model.UpdateEndpointServicePermissionDescRequest) (*model.UpdateEndpointServicePermissionDescResponse, error) {
+	requestDef := GenReqDefForUpdateEndpointServicePermissionDesc()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateEndpointServicePermissionDescResponse), nil
+	}
+}
+
+// UpdateEndpointServicePermissionDescInvoker 更新终端节点服务白名单描述
+func (c *VpcepClient) UpdateEndpointServicePermissionDescInvoker(request *model.UpdateEndpointServicePermissionDescRequest) *UpdateEndpointServicePermissionDescInvoker {
+	requestDef := GenReqDefForUpdateEndpointServicePermissionDesc()
+	return &UpdateEndpointServicePermissionDescInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateEndpointWhite 更新终端节点的白名单

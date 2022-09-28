@@ -1,0 +1,20 @@
+package model
+
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
+	"strings"
+)
+
+// Request Object
+type ListStorageResourcesRequest struct {
+}
+
+func (o ListStorageResourcesRequest) String() string {
+	data, err := utils.Marshal(o)
+	if err != nil {
+		return "ListStorageResourcesRequest struct{}"
+	}
+
+	return strings.Join([]string{"ListStorageResourcesRequest", string(data)}, " ")
+}

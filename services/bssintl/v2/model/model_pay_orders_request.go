@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type PayOrdersRequest struct {
-	Body *PayCustomerOrderReq `json:"body,omitempty"`
+	Body *PayCustomerOrderV3Req `json:"body,omitempty"`
 }
 
 func (o PayOrdersRequest) String() string {

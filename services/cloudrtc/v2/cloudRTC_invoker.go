@@ -101,6 +101,30 @@ func (i *ListRecordRulesInvoker) Invoke() (*model.ListRecordRulesResponse, error
 	}
 }
 
+type RemoveRoomInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RemoveRoomInvoker) Invoke() (*model.RemoveRoomResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RemoveRoomResponse), nil
+	}
+}
+
+type RemoveUsersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RemoveUsersInvoker) Invoke() (*model.RemoveUsersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RemoveUsersResponse), nil
+	}
+}
+
 type ShowAppInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -242,6 +266,18 @@ func (i *UpdateAutoRecordInvoker) Invoke() (*model.UpdateAutoRecordResponse, err
 		return nil, err
 	} else {
 		return result.(*model.UpdateAutoRecordResponse), nil
+	}
+}
+
+type UpdateIndividualStreamJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateIndividualStreamJobInvoker) Invoke() (*model.UpdateIndividualStreamJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateIndividualStreamJobResponse), nil
 	}
 }
 

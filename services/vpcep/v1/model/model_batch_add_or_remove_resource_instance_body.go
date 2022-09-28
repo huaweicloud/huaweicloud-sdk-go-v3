@@ -12,7 +12,7 @@ type BatchAddOrRemoveResourceInstanceBody struct {
 	// 标签列表，没有标签默认为空数组。
 	Tags *[]ResourceTag `json:"tags,omitempty"`
 
-	// 操作标识：仅限于 create（创建）、 delete（删除）。
+	// 操作标识：仅限于 create（创建） delete（删除）
 	Action string `json:"action"`
 }
 

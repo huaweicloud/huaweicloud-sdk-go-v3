@@ -217,6 +217,50 @@ func (c *ApmClient) ShowMasterAddressInvoker(request *model.ShowMasterAddressReq
 	return &ShowMasterAddressInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteApp 根据组件id删除指定的组件
+//
+// 该接口用于删除指定的组件
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ApmClient) DeleteApp(request *model.DeleteAppRequest) (*model.DeleteAppResponse, error) {
+	requestDef := GenReqDefForDeleteApp()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAppResponse), nil
+	}
+}
+
+// DeleteAppInvoker 根据组件id删除指定的组件
+func (c *ApmClient) DeleteAppInvoker(request *model.DeleteAppRequest) *DeleteAppInvoker {
+	requestDef := GenReqDefForDeleteApp()
+	return &DeleteAppInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteEnv 根据环境id删除指定的环境
+//
+// 该接口用于删除指定的环境
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ApmClient) DeleteEnv(request *model.DeleteEnvRequest) (*model.DeleteEnvResponse, error) {
+	requestDef := GenReqDefForDeleteEnv()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteEnvResponse), nil
+	}
+}
+
+// DeleteEnvInvoker 根据环境id删除指定的环境
+func (c *ApmClient) DeleteEnvInvoker(request *model.DeleteEnvRequest) *DeleteEnvInvoker {
+	requestDef := GenReqDefForDeleteEnv()
+	return &DeleteEnvInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListAppEnvs 获取组件下的环境列表
 //
 // 获取组件下的环境列表

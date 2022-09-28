@@ -223,6 +223,28 @@ func (c *IefClient) CreateEdgeNodeCertsInvoker(request *model.CreateEdgeNodeCert
 	return &CreateEdgeNodeCertsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateEncryptdatas 新增加密数据
+//
+// 新增加密数据
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *IefClient) CreateEncryptdatas(request *model.CreateEncryptdatasRequest) (*model.CreateEncryptdatasResponse, error) {
+	requestDef := GenReqDefForCreateEncryptdatas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateEncryptdatasResponse), nil
+	}
+}
+
+// CreateEncryptdatasInvoker 新增加密数据
+func (c *IefClient) CreateEncryptdatasInvoker(request *model.CreateEncryptdatasRequest) *CreateEncryptdatasInvoker {
+	requestDef := GenReqDefForCreateEncryptdatas()
+	return &CreateEncryptdatasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateEndpoint 创建端点
 //
 // 创建一个端点
@@ -243,6 +265,28 @@ func (c *IefClient) CreateEndpoint(request *model.CreateEndpointRequest) (*model
 func (c *IefClient) CreateEndpointInvoker(request *model.CreateEndpointRequest) *CreateEndpointInvoker {
 	requestDef := GenReqDefForCreateEndpoint()
 	return &CreateEndpointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateNodeEncryptdatas 加密数据绑定边缘节点
+//
+// 加密数据绑定边缘节点
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *IefClient) CreateNodeEncryptdatas(request *model.CreateNodeEncryptdatasRequest) (*model.CreateNodeEncryptdatasResponse, error) {
+	requestDef := GenReqDefForCreateNodeEncryptdatas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateNodeEncryptdatasResponse), nil
+	}
+}
+
+// CreateNodeEncryptdatasInvoker 加密数据绑定边缘节点
+func (c *IefClient) CreateNodeEncryptdatasInvoker(request *model.CreateNodeEncryptdatasRequest) *CreateNodeEncryptdatasInvoker {
+	requestDef := GenReqDefForCreateNodeEncryptdatas()
+	return &CreateNodeEncryptdatasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateRule 创建规则
@@ -511,6 +555,28 @@ func (c *IefClient) DeleteEdgeNodeCertsInvoker(request *model.DeleteEdgeNodeCert
 	return &DeleteEdgeNodeCertsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteEncryptdatas 删除加密数据
+//
+// 删除加密数据
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *IefClient) DeleteEncryptdatas(request *model.DeleteEncryptdatasRequest) (*model.DeleteEncryptdatasResponse, error) {
+	requestDef := GenReqDefForDeleteEncryptdatas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteEncryptdatasResponse), nil
+	}
+}
+
+// DeleteEncryptdatasInvoker 删除加密数据
+func (c *IefClient) DeleteEncryptdatasInvoker(request *model.DeleteEncryptdatasRequest) *DeleteEncryptdatasInvoker {
+	requestDef := GenReqDefForDeleteEncryptdatas()
+	return &DeleteEncryptdatasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteEndPoint 删除一个端点
 //
 // 删除一个端点
@@ -531,6 +597,28 @@ func (c *IefClient) DeleteEndPoint(request *model.DeleteEndPointRequest) (*model
 func (c *IefClient) DeleteEndPointInvoker(request *model.DeleteEndPointRequest) *DeleteEndPointInvoker {
 	requestDef := GenReqDefForDeleteEndPoint()
 	return &DeleteEndPointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteNodeEncryptdatas 解绑边缘节点的加密数据
+//
+// 解绑边缘节点的加密数据
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *IefClient) DeleteNodeEncryptdatas(request *model.DeleteNodeEncryptdatasRequest) (*model.DeleteNodeEncryptdatasResponse, error) {
+	requestDef := GenReqDefForDeleteNodeEncryptdatas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteNodeEncryptdatasResponse), nil
+	}
+}
+
+// DeleteNodeEncryptdatasInvoker 解绑边缘节点的加密数据
+func (c *IefClient) DeleteNodeEncryptdatasInvoker(request *model.DeleteNodeEncryptdatasRequest) *DeleteNodeEncryptdatasInvoker {
+	requestDef := GenReqDefForDeleteNodeEncryptdatas()
+	return &DeleteNodeEncryptdatasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteResourceTag 删除资源标签
@@ -821,6 +909,50 @@ func (c *IefClient) ListEdgeNodesInvoker(request *model.ListEdgeNodesRequest) *L
 	return &ListEdgeNodesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListEncryptdataNodes 获取加密数据绑定的边缘节点
+//
+// 获取加密数据绑定的边缘节点
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *IefClient) ListEncryptdataNodes(request *model.ListEncryptdataNodesRequest) (*model.ListEncryptdataNodesResponse, error) {
+	requestDef := GenReqDefForListEncryptdataNodes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListEncryptdataNodesResponse), nil
+	}
+}
+
+// ListEncryptdataNodesInvoker 获取加密数据绑定的边缘节点
+func (c *IefClient) ListEncryptdataNodesInvoker(request *model.ListEncryptdataNodesRequest) *ListEncryptdataNodesInvoker {
+	requestDef := GenReqDefForListEncryptdataNodes()
+	return &ListEncryptdataNodesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListEncryptdatas 获取加密数据列表
+//
+// 获取加密数据列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *IefClient) ListEncryptdatas(request *model.ListEncryptdatasRequest) (*model.ListEncryptdatasResponse, error) {
+	requestDef := GenReqDefForListEncryptdatas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListEncryptdatasResponse), nil
+	}
+}
+
+// ListEncryptdatasInvoker 获取加密数据列表
+func (c *IefClient) ListEncryptdatasInvoker(request *model.ListEncryptdatasRequest) *ListEncryptdatasInvoker {
+	requestDef := GenReqDefForListEncryptdatas()
+	return &ListEncryptdatasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListEndpoints 查询端点列表
 //
 // 获取所有的端点详情。
@@ -843,6 +975,28 @@ func (c *IefClient) ListEndpoints(request *model.ListEndpointsRequest) (*model.L
 func (c *IefClient) ListEndpointsInvoker(request *model.ListEndpointsRequest) *ListEndpointsInvoker {
 	requestDef := GenReqDefForListEndpoints()
 	return &ListEndpointsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListNodeEncryptdatas 获取边缘节点绑定的加密数据
+//
+// 获取边缘节点绑定的加密数据
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *IefClient) ListNodeEncryptdatas(request *model.ListNodeEncryptdatasRequest) (*model.ListNodeEncryptdatasResponse, error) {
+	requestDef := GenReqDefForListNodeEncryptdatas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListNodeEncryptdatasResponse), nil
+	}
+}
+
+// ListNodeEncryptdatasInvoker 获取边缘节点绑定的加密数据
+func (c *IefClient) ListNodeEncryptdatasInvoker(request *model.ListNodeEncryptdatasRequest) *ListNodeEncryptdatasInvoker {
+	requestDef := GenReqDefForListNodeEncryptdatas()
+	return &ListNodeEncryptdatasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListPods 查询应用实例列表
@@ -1021,6 +1175,28 @@ func (c *IefClient) ListTagsByResourceTypeInvoker(request *model.ListTagsByResou
 	return &ListTagsByResourceTypeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RestartDeploymentsPod 容器应用实例重启
+//
+// 重启部署下的应用实例
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *IefClient) RestartDeploymentsPod(request *model.RestartDeploymentsPodRequest) (*model.RestartDeploymentsPodResponse, error) {
+	requestDef := GenReqDefForRestartDeploymentsPod()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RestartDeploymentsPodResponse), nil
+	}
+}
+
+// RestartDeploymentsPodInvoker 容器应用实例重启
+func (c *IefClient) RestartDeploymentsPodInvoker(request *model.RestartDeploymentsPodRequest) *RestartDeploymentsPodInvoker {
+	requestDef := GenReqDefForRestartDeploymentsPod()
+	return &RestartDeploymentsPodInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowAppDetail 查询应用模板详情
 //
 // 查询应用模板详情。
@@ -1195,6 +1371,50 @@ func (c *IefClient) ShowEdgeNodeDetail(request *model.ShowEdgeNodeDetailRequest)
 func (c *IefClient) ShowEdgeNodeDetailInvoker(request *model.ShowEdgeNodeDetailRequest) *ShowEdgeNodeDetailInvoker {
 	requestDef := GenReqDefForShowEdgeNodeDetail()
 	return &ShowEdgeNodeDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowEdgeNodeUpgradeDetails 查看边缘节点升级状态
+//
+// 该API用于查看边缘节点升级状态。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *IefClient) ShowEdgeNodeUpgradeDetails(request *model.ShowEdgeNodeUpgradeDetailsRequest) (*model.ShowEdgeNodeUpgradeDetailsResponse, error) {
+	requestDef := GenReqDefForShowEdgeNodeUpgradeDetails()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowEdgeNodeUpgradeDetailsResponse), nil
+	}
+}
+
+// ShowEdgeNodeUpgradeDetailsInvoker 查看边缘节点升级状态
+func (c *IefClient) ShowEdgeNodeUpgradeDetailsInvoker(request *model.ShowEdgeNodeUpgradeDetailsRequest) *ShowEdgeNodeUpgradeDetailsInvoker {
+	requestDef := GenReqDefForShowEdgeNodeUpgradeDetails()
+	return &ShowEdgeNodeUpgradeDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowEncryptdatas 查询加密数据详情
+//
+// 查询加密数据详情
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *IefClient) ShowEncryptdatas(request *model.ShowEncryptdatasRequest) (*model.ShowEncryptdatasResponse, error) {
+	requestDef := GenReqDefForShowEncryptdatas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowEncryptdatasResponse), nil
+	}
+}
+
+// ShowEncryptdatasInvoker 查询加密数据详情
+func (c *IefClient) ShowEncryptdatasInvoker(request *model.ShowEncryptdatasRequest) *ShowEncryptdatasInvoker {
+	requestDef := GenReqDefForShowEncryptdatas()
+	return &ShowEncryptdatasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowEndPointDetail 查询端点详情
@@ -1527,6 +1747,28 @@ func (c *IefClient) UpdateEdgeNodeDeviceInvoker(request *model.UpdateEdgeNodeDev
 	return &UpdateEdgeNodeDeviceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateEncryptdatas 更新加密数据
+//
+// 更新加密数据
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *IefClient) UpdateEncryptdatas(request *model.UpdateEncryptdatasRequest) (*model.UpdateEncryptdatasResponse, error) {
+	requestDef := GenReqDefForUpdateEncryptdatas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateEncryptdatasResponse), nil
+	}
+}
+
+// UpdateEncryptdatasInvoker 更新加密数据
+func (c *IefClient) UpdateEncryptdatasInvoker(request *model.UpdateEncryptdatasRequest) *UpdateEncryptdatasInvoker {
+	requestDef := GenReqDefForUpdateEncryptdatas()
+	return &UpdateEncryptdatasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateNodeByDeviceId 更新终端设备的边缘节点
 //
 // 该API用于更新终端设备的边缘节点。功能与更新边缘节点的终端设备相同，推荐使用更新边缘节点的终端设备。
@@ -1591,4 +1833,26 @@ func (c *IefClient) UpdateService(request *model.UpdateServiceRequest) (*model.U
 func (c *IefClient) UpdateServiceInvoker(request *model.UpdateServiceRequest) *UpdateServiceInvoker {
 	requestDef := GenReqDefForUpdateService()
 	return &UpdateServiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpgradeEdgeNode 升级边缘节点
+//
+// 该API用于升级边缘节点。边缘节点将自动升级到最新的可用版本
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *IefClient) UpgradeEdgeNode(request *model.UpgradeEdgeNodeRequest) (*model.UpgradeEdgeNodeResponse, error) {
+	requestDef := GenReqDefForUpgradeEdgeNode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpgradeEdgeNodeResponse), nil
+	}
+}
+
+// UpgradeEdgeNodeInvoker 升级边缘节点
+func (c *IefClient) UpgradeEdgeNodeInvoker(request *model.UpgradeEdgeNodeRequest) *UpgradeEdgeNodeInvoker {
+	requestDef := GenReqDefForUpgradeEdgeNode()
+	return &UpgradeEdgeNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

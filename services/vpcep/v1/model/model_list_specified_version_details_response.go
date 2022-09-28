@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListSpecifiedVersionDetailsResponse struct {
-	Version        *Version `json:"version,omitempty"`
-	HttpStatusCode int      `json:"-"`
+	Version        *VersionObject `json:"version,omitempty"`
+	HttpStatusCode int            `json:"-"`
 }
 
 func (o ListSpecifiedVersionDetailsResponse) String() string {

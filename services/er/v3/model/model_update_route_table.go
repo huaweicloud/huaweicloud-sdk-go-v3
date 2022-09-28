@@ -15,9 +15,6 @@ type UpdateRouteTable struct {
 	// 路由器表描述信息
 	Description *string `json:"description,omitempty"`
 
-	// 是否选路忽略as path
-	LoadBalancingAsPathIgnore *bool `json:"load_balancing_as_path_ignore,omitempty"`
-
 	BgpOptions *BgpOptions `json:"bgp_options,omitempty"`
 }
 

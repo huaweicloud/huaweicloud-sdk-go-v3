@@ -113,6 +113,18 @@ func (i *CreateEdgeNodeCertsInvoker) Invoke() (*model.CreateEdgeNodeCertsRespons
 	}
 }
 
+type CreateEncryptdatasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateEncryptdatasInvoker) Invoke() (*model.CreateEncryptdatasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateEncryptdatasResponse), nil
+	}
+}
+
 type CreateEndpointInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -122,6 +134,18 @@ func (i *CreateEndpointInvoker) Invoke() (*model.CreateEndpointResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.CreateEndpointResponse), nil
+	}
+}
+
+type CreateNodeEncryptdatasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateNodeEncryptdatasInvoker) Invoke() (*model.CreateNodeEncryptdatasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateNodeEncryptdatasResponse), nil
 	}
 }
 
@@ -269,6 +293,18 @@ func (i *DeleteEdgeNodeCertsInvoker) Invoke() (*model.DeleteEdgeNodeCertsRespons
 	}
 }
 
+type DeleteEncryptdatasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteEncryptdatasInvoker) Invoke() (*model.DeleteEncryptdatasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteEncryptdatasResponse), nil
+	}
+}
+
 type DeleteEndPointInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -278,6 +314,18 @@ func (i *DeleteEndPointInvoker) Invoke() (*model.DeleteEndPointResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.DeleteEndPointResponse), nil
+	}
+}
+
+type DeleteNodeEncryptdatasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteNodeEncryptdatasInvoker) Invoke() (*model.DeleteNodeEncryptdatasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteNodeEncryptdatasResponse), nil
 	}
 }
 
@@ -437,6 +485,30 @@ func (i *ListEdgeNodesInvoker) Invoke() (*model.ListEdgeNodesResponse, error) {
 	}
 }
 
+type ListEncryptdataNodesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListEncryptdataNodesInvoker) Invoke() (*model.ListEncryptdataNodesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListEncryptdataNodesResponse), nil
+	}
+}
+
+type ListEncryptdatasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListEncryptdatasInvoker) Invoke() (*model.ListEncryptdatasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListEncryptdatasResponse), nil
+	}
+}
+
 type ListEndpointsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -446,6 +518,18 @@ func (i *ListEndpointsInvoker) Invoke() (*model.ListEndpointsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListEndpointsResponse), nil
+	}
+}
+
+type ListNodeEncryptdatasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListNodeEncryptdatasInvoker) Invoke() (*model.ListNodeEncryptdatasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListNodeEncryptdatasResponse), nil
 	}
 }
 
@@ -545,6 +629,18 @@ func (i *ListTagsByResourceTypeInvoker) Invoke() (*model.ListTagsByResourceTypeR
 	}
 }
 
+type RestartDeploymentsPodInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RestartDeploymentsPodInvoker) Invoke() (*model.RestartDeploymentsPodResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RestartDeploymentsPodResponse), nil
+	}
+}
+
 type ShowAppDetailInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -638,6 +734,30 @@ func (i *ShowEdgeNodeDetailInvoker) Invoke() (*model.ShowEdgeNodeDetailResponse,
 		return nil, err
 	} else {
 		return result.(*model.ShowEdgeNodeDetailResponse), nil
+	}
+}
+
+type ShowEdgeNodeUpgradeDetailsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowEdgeNodeUpgradeDetailsInvoker) Invoke() (*model.ShowEdgeNodeUpgradeDetailsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowEdgeNodeUpgradeDetailsResponse), nil
+	}
+}
+
+type ShowEncryptdatasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowEncryptdatasInvoker) Invoke() (*model.ShowEncryptdatasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowEncryptdatasResponse), nil
 	}
 }
 
@@ -821,6 +941,18 @@ func (i *UpdateEdgeNodeDeviceInvoker) Invoke() (*model.UpdateEdgeNodeDeviceRespo
 	}
 }
 
+type UpdateEncryptdatasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateEncryptdatasInvoker) Invoke() (*model.UpdateEncryptdatasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateEncryptdatasResponse), nil
+	}
+}
+
 type UpdateNodeByDeviceIdInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -854,5 +986,17 @@ func (i *UpdateServiceInvoker) Invoke() (*model.UpdateServiceResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.UpdateServiceResponse), nil
+	}
+}
+
+type UpgradeEdgeNodeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpgradeEdgeNodeInvoker) Invoke() (*model.UpgradeEdgeNodeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpgradeEdgeNodeResponse), nil
 	}
 }

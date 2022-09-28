@@ -113,6 +113,30 @@ func (i *ShowMasterAddressInvoker) Invoke() (*model.ShowMasterAddressResponse, e
 	}
 }
 
+type DeleteAppInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAppInvoker) Invoke() (*model.DeleteAppResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAppResponse), nil
+	}
+}
+
+type DeleteEnvInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteEnvInvoker) Invoke() (*model.DeleteEnvResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteEnvResponse), nil
+	}
+}
+
 type ListAppEnvsInvoker struct {
 	*invoker.BaseInvoker
 }

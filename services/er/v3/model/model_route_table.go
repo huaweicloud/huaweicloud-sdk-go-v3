@@ -25,9 +25,6 @@ type RouteTable struct {
 	// 是否为默认传递路由表
 	IsDefaultPropagation bool `json:"is_default_propagation"`
 
-	// 是否选路忽略as path
-	LoadBalancingAsPathIgnore *bool `json:"load_balancing_as_path_ignore,omitempty"`
-
 	// 路由表状态，支持的状态有pending | available | deleting | deleted | failed
 	State string `json:"state"`
 

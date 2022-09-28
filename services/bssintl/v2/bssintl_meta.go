@@ -758,7 +758,7 @@ func GenReqDefForListUsageTypes() *def.HttpRequestDef {
 func GenReqDefForPayOrders() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/v2/orders/customer-orders/pay").
+		WithPath("/v3/orders/customer-orders/pay").
 		WithResponse(new(model.PayOrdersResponse)).
 		WithContentType("application/json")
 

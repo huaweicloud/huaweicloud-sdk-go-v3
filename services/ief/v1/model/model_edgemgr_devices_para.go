@@ -12,6 +12,7 @@ type EdgemgrDevicesPara struct {
 	// 终端设备描述，最大长度255，不允许^ ~ # $ % & * < > ( ) [ ] { } ' \" \\
 	Description *string `json:"description,omitempty"`
 
+	// 终端设备静态属性
 	Attributes map[string]ValueInAttributes `json:"attributes,omitempty"`
 }
 

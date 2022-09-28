@@ -20,6 +20,9 @@ var RU_NORTHWEST_2 = region.NewRegion("ru-northwest-2", "https://aom.ru-northwes
 var LA_SOUTH_2 = region.NewRegion("la-south-2", "https://aom.la-south-2.myhuaweicloud.com")
 var SA_BRAZIL_1 = region.NewRegion("sa-brazil-1", "https://aom.sa-brazil-1.myhuaweicloud.com")
 var LA_NORTH_2 = region.NewRegion("la-north-2", "https://aom.la-north-2.myhuaweicloud.com")
+var CN_NORTH_9 = region.NewRegion("cn-north-9", "https://aom.cn-north-9.myhuaweicloud.com")
+var CN_SOUTH_2 = region.NewRegion("cn-south-2", "https://aom.cn-south-2.myhuaweicloud.com")
+var NA_MEXICO_1 = region.NewRegion("na-mexico-1", "https://aom.na-mexico-1.myhuaweicloud.com")
 
 var staticFields = map[string]*region.Region{
 	"cn-north-4":     CN_NORTH_4,
@@ -37,6 +40,9 @@ var staticFields = map[string]*region.Region{
 	"la-south-2":     LA_SOUTH_2,
 	"sa-brazil-1":    SA_BRAZIL_1,
 	"la-north-2":     LA_NORTH_2,
+	"cn-north-9":     CN_NORTH_9,
+	"cn-south-2":     CN_SOUTH_2,
+	"na-mexico-1":    NA_MEXICO_1,
 }
 
 var provider = region.DefaultProviderChain("AOM")

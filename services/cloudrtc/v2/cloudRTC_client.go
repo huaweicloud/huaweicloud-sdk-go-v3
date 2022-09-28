@@ -218,6 +218,50 @@ func (c *CloudRTCClient) ListRecordRulesInvoker(request *model.ListRecordRulesRe
 	return &ListRecordRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RemoveRoom 解散房间
+//
+// 调用此接口解散房间，将该房间中所有用户踢出房间。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *CloudRTCClient) RemoveRoom(request *model.RemoveRoomRequest) (*model.RemoveRoomResponse, error) {
+	requestDef := GenReqDefForRemoveRoom()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RemoveRoomResponse), nil
+	}
+}
+
+// RemoveRoomInvoker 解散房间
+func (c *CloudRTCClient) RemoveRoomInvoker(request *model.RemoveRoomRequest) *RemoveRoomInvoker {
+	requestDef := GenReqDefForRemoveRoom()
+	return &RemoveRoomInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RemoveUsers 踢除在线用户
+//
+// 调用此接口强制用户离开房间。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *CloudRTCClient) RemoveUsers(request *model.RemoveUsersRequest) (*model.RemoveUsersResponse, error) {
+	requestDef := GenReqDefForRemoveUsers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RemoveUsersResponse), nil
+	}
+}
+
+// RemoveUsersInvoker 踢除在线用户
+func (c *CloudRTCClient) RemoveUsersInvoker(request *model.RemoveUsersRequest) *RemoveUsersInvoker {
+	requestDef := GenReqDefForRemoveUsers()
+	return &RemoveUsersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowApp 查询单个应用
 //
 // 调用此接口查询单个应用详情。
@@ -484,6 +528,30 @@ func (c *CloudRTCClient) UpdateAutoRecord(request *model.UpdateAutoRecordRequest
 func (c *CloudRTCClient) UpdateAutoRecordInvoker(request *model.UpdateAutoRecordRequest) *UpdateAutoRecordInvoker {
 	requestDef := GenReqDefForUpdateAutoRecord()
 	return &UpdateAutoRecordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateIndividualStreamJob 更新单流任务
+//
+// 调用此接口修改单流任务。
+//
+// 仅部分场景支持修改。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *CloudRTCClient) UpdateIndividualStreamJob(request *model.UpdateIndividualStreamJobRequest) (*model.UpdateIndividualStreamJobResponse, error) {
+	requestDef := GenReqDefForUpdateIndividualStreamJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateIndividualStreamJobResponse), nil
+	}
+}
+
+// UpdateIndividualStreamJobInvoker 更新单流任务
+func (c *CloudRTCClient) UpdateIndividualStreamJobInvoker(request *model.UpdateIndividualStreamJobRequest) *UpdateIndividualStreamJobInvoker {
+	requestDef := GenReqDefForUpdateIndividualStreamJob()
+	return &UpdateIndividualStreamJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateMixJob 修改合流任务

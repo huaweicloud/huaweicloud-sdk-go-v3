@@ -15,7 +15,7 @@ type AcceptOrRejectEndpointRequestBody struct {
 	// 允许或拒绝连接。 ● receive：允许连接。 ● reject：拒绝连接。
 	Action AcceptOrRejectEndpointRequestBodyAction `json:"action"`
 
-	// 终端节点ID列表。 每次请求目前支持单条endpoint的 接受或拒绝。
+	// 终端节点ID列表。 每次请求目前支持单条endpoint的接受或拒绝。
 	Endpoints []string `json:"endpoints"`
 }
 

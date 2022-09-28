@@ -12,6 +12,12 @@ var RU_NORTHWEST_2 = region.NewRegion("ru-northwest-2", "https://gaussdb-opengau
 var AP_SOUTHEAST_3 = region.NewRegion("ap-southeast-3", "https://gaussdb-opengauss.ap-southeast-3.myhuaweicloud.com")
 var CN_NORTH_2 = region.NewRegion("cn-north-2", "https://gaussdb-opengauss.cn-north-2.myhuaweicloud.com")
 var AP_SOUTHEAST_2 = region.NewRegion("ap-southeast-2", "https://gaussdb-opengauss.ap-southeast-2.myhuaweicloud.com")
+var AP_SOUTHEAST_1 = region.NewRegion("ap-southeast-1", "https://gaussdb-opengauss.ap-southeast-1.myhuaweicloud.com")
+var CN_EAST_3 = region.NewRegion("cn-east-3", "https://gaussdb-opengauss.cn-east-3.myhuaweicloud.com")
+var SA_BRAZIL_1 = region.NewRegion("sa-brazil-1", "https://gaussdb-opengauss.sa-brazil-1.myhuaweicloud.com")
+var LA_SOUTH_2 = region.NewRegion("la-south-2", "https://gaussdb-opengauss.la-south-2.myhuaweicloud.com")
+var LA_NORTH_2 = region.NewRegion("la-north-2", "https://gaussdb-opengauss.la-north-2.myhuaweicloud.com")
+var AF_SOUTH_1 = region.NewRegion("af-south-1", "https://gaussdb-opengauss.af-south-1.myhuaweicloud.com")
 
 var staticFields = map[string]*region.Region{
 	"cn-north-4":     CN_NORTH_4,
@@ -21,6 +27,12 @@ var staticFields = map[string]*region.Region{
 	"ap-southeast-3": AP_SOUTHEAST_3,
 	"cn-north-2":     CN_NORTH_2,
 	"ap-southeast-2": AP_SOUTHEAST_2,
+	"ap-southeast-1": AP_SOUTHEAST_1,
+	"cn-east-3":      CN_EAST_3,
+	"sa-brazil-1":    SA_BRAZIL_1,
+	"la-south-2":     LA_SOUTH_2,
+	"la-north-2":     LA_NORTH_2,
+	"af-south-1":     AF_SOUTH_1,
 }
 
 var provider = region.DefaultProviderChain("GAUSSDBFOROPENGAUSS")

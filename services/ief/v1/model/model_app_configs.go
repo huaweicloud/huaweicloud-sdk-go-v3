@@ -20,6 +20,9 @@ type AppConfigs struct {
 
 	// 容器端口映射值
 	Ports *[]Ports `json:"ports,omitempty"`
+
+	// 应用实例是否与主机共PID命名空间，默认值false
+	HostPid *string `json:"host_pid,omitempty"`
 }
 
 func (o AppConfigs) String() string {
