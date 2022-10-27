@@ -12,7 +12,7 @@ type ListListenersRequest struct {
 	// 分页查询中每页的监听器个数
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 分页查询的起始的资源id，表示上一页最后一条查询记录的负载均衡器的id。不指定时表示查询第一页。
+	// 分页查询的起始的资源id，表示上一页最后一条查询记录的监听器的id。不指定时表示查询第一页。
 	Marker *string `json:"marker,omitempty"`
 
 	// 分页的顺序，true表示从后往前分页，false表示从前往后分页，默认为false。
@@ -60,7 +60,7 @@ type ListListenersRequest struct {
 	// HTTP2功能的开启状态。取值范围：true/false。true：开启。false：关闭。
 	Http2Enable *bool `json:"http2_enable,omitempty"`
 
-	// 企业项目ID，仅用于基于企业项目的细粒度鉴权使用。 - 如果参数传递default_pool_id，则以pool对应的企业项目ID鉴权。 - 如果default_pool_id和enterprise_project_id都没有传递 ，则进行细粒度鉴权 ，必须在用户
+	// 企业项目ID。  传入all_granted_eps表示查询所有有权限的企业项目资源；\"0\"表示查询默认企业项目资源；或者指定的企业项目ID下的资源。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 

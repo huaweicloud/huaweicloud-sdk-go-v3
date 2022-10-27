@@ -137,7 +137,7 @@ func (c *IefClient) CreateDeploymentsInvoker(request *model.CreateDeploymentsReq
 
 // CreateDevice 注册终端设备
 //
-// 该API用于注册一个终端设备。
+// 注册终端设备。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -711,7 +711,7 @@ func (c *IefClient) DeleteServiceInvoker(request *model.DeleteServiceRequest) *D
 
 // EnableDisableEdgeNodes 启用停用边缘节点
 //
-// 该API用于启用停用边缘节点。被停用的边缘节点将无法连接到云端服务，可用该URI启用边缘节点恢复连接。
+// 启用停用边缘节点。被停用的边缘节点将无法连接到云端服务，可用该URI启用边缘节点恢复连接。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1353,7 +1353,7 @@ func (c *IefClient) ShowDeviceTwinInvoker(request *model.ShowDeviceTwinRequest) 
 
 // ShowEdgeNodeDetail 查询边缘节点详情
 //
-// 该API用于查询边缘节点详情。
+// 查询边缘节点详情。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1371,28 +1371,6 @@ func (c *IefClient) ShowEdgeNodeDetail(request *model.ShowEdgeNodeDetailRequest)
 func (c *IefClient) ShowEdgeNodeDetailInvoker(request *model.ShowEdgeNodeDetailRequest) *ShowEdgeNodeDetailInvoker {
 	requestDef := GenReqDefForShowEdgeNodeDetail()
 	return &ShowEdgeNodeDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowEdgeNodeUpgradeDetails 查看边缘节点升级状态
-//
-// 该API用于查看边缘节点升级状态。
-//
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
-func (c *IefClient) ShowEdgeNodeUpgradeDetails(request *model.ShowEdgeNodeUpgradeDetailsRequest) (*model.ShowEdgeNodeUpgradeDetailsResponse, error) {
-	requestDef := GenReqDefForShowEdgeNodeUpgradeDetails()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowEdgeNodeUpgradeDetailsResponse), nil
-	}
-}
-
-// ShowEdgeNodeUpgradeDetailsInvoker 查看边缘节点升级状态
-func (c *IefClient) ShowEdgeNodeUpgradeDetailsInvoker(request *model.ShowEdgeNodeUpgradeDetailsRequest) *ShowEdgeNodeUpgradeDetailsInvoker {
-	requestDef := GenReqDefForShowEdgeNodeUpgradeDetails()
-	return &ShowEdgeNodeUpgradeDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowEncryptdatas 查询加密数据详情

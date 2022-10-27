@@ -5,6 +5,18 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/dds/v3/model"
 )
 
+type AddReadonlyNodeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddReadonlyNodeInvoker) Invoke() (*model.AddReadonlyNodeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddReadonlyNodeResponse), nil
+	}
+}
+
 type AddShardingNodeInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -62,6 +74,18 @@ func (i *CancelEipInvoker) Invoke() (*model.CancelEipResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.CancelEipResponse), nil
+	}
+}
+
+type ChangeOpsWindowInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeOpsWindowInvoker) Invoke() (*model.ChangeOpsWindowResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeOpsWindowResponse), nil
 	}
 }
 
@@ -242,6 +266,18 @@ func (i *DownloadSlowlogInvoker) Invoke() (*model.DownloadSlowlogResponse, error
 		return nil, err
 	} else {
 		return result.(*model.DownloadSlowlogResponse), nil
+	}
+}
+
+type ExpandReplicasetNodeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExpandReplicasetNodeInvoker) Invoke() (*model.ExpandReplicasetNodeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExpandReplicasetNodeResponse), nil
 	}
 }
 
@@ -641,6 +677,18 @@ func (i *SetBalancerWindowInvoker) Invoke() (*model.SetBalancerWindowResponse, e
 	}
 }
 
+type SetRecyclePolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetRecyclePolicyInvoker) Invoke() (*model.SetRecyclePolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetRecyclePolicyResponse), nil
+	}
+}
+
 type ShowAuditlogPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -737,6 +785,18 @@ func (i *ShowQuotasInvoker) Invoke() (*model.ShowQuotasResponse, error) {
 	}
 }
 
+type ShowSecondLevelMonitoringStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSecondLevelMonitoringStatusInvoker) Invoke() (*model.ShowSecondLevelMonitoringStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSecondLevelMonitoringStatusResponse), nil
+	}
+}
+
 type ShowShardingBalancerInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -758,6 +818,18 @@ func (i *SwitchConfigurationInvoker) Invoke() (*model.SwitchConfigurationRespons
 		return nil, err
 	} else {
 		return result.(*model.SwitchConfigurationResponse), nil
+	}
+}
+
+type SwitchSecondLevelMonitoringInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SwitchSecondLevelMonitoringInvoker) Invoke() (*model.SwitchSecondLevelMonitoringResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SwitchSecondLevelMonitoringResponse), nil
 	}
 }
 
@@ -878,6 +950,18 @@ func (i *UpdateSecurityGroupInvoker) Invoke() (*model.UpdateSecurityGroupRespons
 		return nil, err
 	} else {
 		return result.(*model.UpdateSecurityGroupResponse), nil
+	}
+}
+
+type UpgradeDatabaseVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpgradeDatabaseVersionInvoker) Invoke() (*model.UpgradeDatabaseVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpgradeDatabaseVersionResponse), nil
 	}
 }
 

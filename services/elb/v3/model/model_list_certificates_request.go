@@ -15,7 +15,7 @@ type ListCertificatesRequest struct {
 	// 每页返回的个数。
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 是否反向查询。取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。
+	// 是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。
 	PageReverse *bool `json:"page_reverse,omitempty"`
 
 	// 证书ID。  支持多值查询，查询条件格式：*id=xxx&id=xxx*。

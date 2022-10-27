@@ -45,7 +45,7 @@ type ListLoadbalancersRequest struct {
 	// 负载均衡器所在的虚拟私有云ID。
 	VpcId *string `json:"vpc_id,omitempty"`
 
-	// 企业项目ID。创建负载均衡器时，给负载均衡器绑定企业项目ID。取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。 关于企业项目ID的获取及企业项目特性的详细信息，请参见《企业管理用户指南》。
+	// 企业项目ID。  传入all_granted_eps表示查询所有有权限的企业项目资源；\"0\"表示查询默认企业项目资源；或者指定的企业项目ID下的资源。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 负载均衡器的管理状态。负载均衡器停用时不再接收流量。取值范围：true：启用负载均衡器；false：停用负载均衡器。

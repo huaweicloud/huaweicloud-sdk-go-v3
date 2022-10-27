@@ -15,7 +15,7 @@ type AvailabilityZone struct {
 	// 可用区状态。  取值：ACTIVE。
 	State string `json:"state"`
 
-	// 未售罄的LB规格类别。取值：L4 表示网络型LB未售罄；L7 表示应用型LB未售罄。
+	// 未售罄的LB规格类别。  取值：L4 表示网络型LB未售罄；L7 表示应用型LB未售罄。
 	Protocol []string `json:"protocol"`
 
 	// 可用区组，如：center

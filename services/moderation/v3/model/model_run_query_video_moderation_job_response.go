@@ -24,7 +24,7 @@ type RunQueryVideoModerationJobResponse struct {
 	RequestParams *VideoModerationResultRequestParams `json:"request_params,omitempty"`
 
 	// 作业创建时间
-	CraeteTime *string `json:"craete_time,omitempty"`
+	CreateTime *string `json:"create_time,omitempty"`
 
 	// 作业更新时间
 	UpdateTime *string `json:"update_time,omitempty"`

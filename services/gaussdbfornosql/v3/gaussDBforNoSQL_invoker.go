@@ -77,6 +77,18 @@ func (i *CreateInstanceInvoker) Invoke() (*model.CreateInstanceResponse, error) 
 	}
 }
 
+type DeleteBackupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteBackupInvoker) Invoke() (*model.DeleteBackupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteBackupResponse), nil
+	}
+}
+
 type DeleteConfigurationInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -245,6 +257,18 @@ func (i *ListInstancesByTagsInvoker) Invoke() (*model.ListInstancesByTagsRespons
 	}
 }
 
+type ListRestoreTimeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRestoreTimeInvoker) Invoke() (*model.ListRestoreTimeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRestoreTimeResponse), nil
+	}
+}
+
 type ListSlowLogsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -290,6 +314,18 @@ func (i *ResizeInstanceVolumeInvoker) Invoke() (*model.ResizeInstanceVolumeRespo
 		return nil, err
 	} else {
 		return result.(*model.ResizeInstanceVolumeResponse), nil
+	}
+}
+
+type RestoreExistingInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RestoreExistingInstanceInvoker) Invoke() (*model.RestoreExistingInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RestoreExistingInstanceResponse), nil
 	}
 }
 
@@ -350,6 +386,18 @@ func (i *ShowQuotasInvoker) Invoke() (*model.ShowQuotasResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowQuotasResponse), nil
+	}
+}
+
+type ShowRestorableListInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRestorableListInvoker) Invoke() (*model.ShowRestorableListResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRestorableListResponse), nil
 	}
 }
 

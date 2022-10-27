@@ -12,13 +12,13 @@ import (
 type AudioModerationResultDetail struct {
 
 	// 音频片段开始时间
-	StartTime *int32 `json:"start_time,omitempty"`
+	StartTime *float32 `json:"start_time,omitempty"`
 
 	// 音频片段审核处理建议： block：包含敏感信息，不通过 review：需要人工复检
 	Suggestion *AudioModerationResultDetailSuggestion `json:"suggestion,omitempty"`
 
 	// 音频片段结束时间
-	EndTime *int32 `json:"end_time,omitempty"`
+	EndTime *float32 `json:"end_time,omitempty"`
 
 	// 音频片段标签
 	Label *string `json:"label,omitempty"`

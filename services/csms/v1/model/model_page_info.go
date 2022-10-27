@@ -9,7 +9,7 @@ import (
 // 分页信息。
 type PageInfo struct {
 
-	// 下一页查询地址（下一页起始资源id），如果未指定该参数，则下一页为空。
+	// 下一页查询地址（下一页起始资源id）。
 	NextMarker *string `json:"next_marker,omitempty"`
 
 	// 前一页查询地址（上一页末尾资源id）。

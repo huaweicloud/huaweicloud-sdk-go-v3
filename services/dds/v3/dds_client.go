@@ -19,6 +19,28 @@ func DdsClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+// AddReadonlyNode 实例新增只读节点
+//
+// DDS副本集实例新增只读节点。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DdsClient) AddReadonlyNode(request *model.AddReadonlyNodeRequest) (*model.AddReadonlyNodeResponse, error) {
+	requestDef := GenReqDefForAddReadonlyNode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddReadonlyNodeResponse), nil
+	}
+}
+
+// AddReadonlyNodeInvoker 实例新增只读节点
+func (c *DdsClient) AddReadonlyNodeInvoker(request *model.AddReadonlyNodeRequest) *AddReadonlyNodeInvoker {
+	requestDef := GenReqDefForAddReadonlyNode()
+	return &AddReadonlyNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // AddShardingNode 扩容集群实例的节点数量
 //
 // 扩容指定集群实例的节点数量。
@@ -127,6 +149,28 @@ func (c *DdsClient) CancelEip(request *model.CancelEipRequest) (*model.CancelEip
 func (c *DdsClient) CancelEipInvoker(request *model.CancelEipRequest) *CancelEipInvoker {
 	requestDef := GenReqDefForCancelEip()
 	return &CancelEipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ChangeOpsWindow 设置可维护时间段
+//
+// 修改用户允许启动某项对数据库实例运行有影响的任务的时间范围，例如操作系统升级和数据库软件版本升级的时间窗。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DdsClient) ChangeOpsWindow(request *model.ChangeOpsWindowRequest) (*model.ChangeOpsWindowResponse, error) {
+	requestDef := GenReqDefForChangeOpsWindow()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeOpsWindowResponse), nil
+	}
+}
+
+// ChangeOpsWindowInvoker 设置可维护时间段
+func (c *DdsClient) ChangeOpsWindowInvoker(request *model.ChangeOpsWindowRequest) *ChangeOpsWindowInvoker {
+	requestDef := GenReqDefForChangeOpsWindow()
+	return &ChangeOpsWindowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CheckPassword 检查数据库密码
@@ -239,9 +283,9 @@ func (c *DdsClient) CreateInstanceInvoker(request *model.CreateInstanceRequest) 
 	return &CreateInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateIp 打开集群的Shard/Config IP开关
+// CreateIp 创建集群的Shard/Config IP
 //
-// 打开集群的Shard/Config IP开关
+// 创建集群的Shard/Config IP
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -255,7 +299,7 @@ func (c *DdsClient) CreateIp(request *model.CreateIpRequest) (*model.CreateIpRes
 	}
 }
 
-// CreateIpInvoker 打开集群的Shard/Config IP开关
+// CreateIpInvoker 创建集群的Shard/Config IP
 func (c *DdsClient) CreateIpInvoker(request *model.CreateIpRequest) *CreateIpInvoker {
 	requestDef := GenReqDefForCreateIp()
 	return &CreateIpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -457,6 +501,28 @@ func (c *DdsClient) DownloadSlowlog(request *model.DownloadSlowlogRequest) (*mod
 func (c *DdsClient) DownloadSlowlogInvoker(request *model.DownloadSlowlogRequest) *DownloadSlowlogInvoker {
 	requestDef := GenReqDefForDownloadSlowlog()
 	return &DownloadSlowlogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExpandReplicasetNode 扩容副本集实例的节点数量
+//
+// 扩容指定副本集实例的节点数量，暂不支持包周期实例
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DdsClient) ExpandReplicasetNode(request *model.ExpandReplicasetNodeRequest) (*model.ExpandReplicasetNodeResponse, error) {
+	requestDef := GenReqDefForExpandReplicasetNode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExpandReplicasetNodeResponse), nil
+	}
+}
+
+// ExpandReplicasetNodeInvoker 扩容副本集实例的节点数量
+func (c *DdsClient) ExpandReplicasetNodeInvoker(request *model.ExpandReplicasetNodeRequest) *ExpandReplicasetNodeInvoker {
+	requestDef := GenReqDefForExpandReplicasetNode()
+	return &ExpandReplicasetNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListAuditlogLinks 获取审计日志下载链接
@@ -1185,6 +1251,28 @@ func (c *DdsClient) SetBalancerWindowInvoker(request *model.SetBalancerWindowReq
 	return &SetBalancerWindowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SetRecyclePolicy 设置实例回收站策略
+//
+// 设置实例回收站策略
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DdsClient) SetRecyclePolicy(request *model.SetRecyclePolicyRequest) (*model.SetRecyclePolicyResponse, error) {
+	requestDef := GenReqDefForSetRecyclePolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetRecyclePolicyResponse), nil
+	}
+}
+
+// SetRecyclePolicyInvoker 设置实例回收站策略
+func (c *DdsClient) SetRecyclePolicyInvoker(request *model.SetRecyclePolicyRequest) *SetRecyclePolicyInvoker {
+	requestDef := GenReqDefForSetRecyclePolicy()
+	return &SetRecyclePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowAuditlogPolicy 查询审计日志策略
 //
 // 查询审计日志策略。
@@ -1361,6 +1449,28 @@ func (c *DdsClient) ShowQuotasInvoker(request *model.ShowQuotasRequest) *ShowQuo
 	return &ShowQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowSecondLevelMonitoringStatus 查询秒级监控配置
+//
+// 查询秒级监控配置。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DdsClient) ShowSecondLevelMonitoringStatus(request *model.ShowSecondLevelMonitoringStatusRequest) (*model.ShowSecondLevelMonitoringStatusResponse, error) {
+	requestDef := GenReqDefForShowSecondLevelMonitoringStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSecondLevelMonitoringStatusResponse), nil
+	}
+}
+
+// ShowSecondLevelMonitoringStatusInvoker 查询秒级监控配置
+func (c *DdsClient) ShowSecondLevelMonitoringStatusInvoker(request *model.ShowSecondLevelMonitoringStatusRequest) *ShowSecondLevelMonitoringStatusInvoker {
+	requestDef := GenReqDefForShowSecondLevelMonitoringStatus()
+	return &ShowSecondLevelMonitoringStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowShardingBalancer 查询集群均衡设置
 //
 // 查询集群均衡设置。
@@ -1403,6 +1513,28 @@ func (c *DdsClient) SwitchConfiguration(request *model.SwitchConfigurationReques
 func (c *DdsClient) SwitchConfigurationInvoker(request *model.SwitchConfigurationRequest) *SwitchConfigurationInvoker {
 	requestDef := GenReqDefForSwitchConfiguration()
 	return &SwitchConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SwitchSecondLevelMonitoring 开启/关闭秒级监控
+//
+// 开启或关闭指定实例的秒级监控。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DdsClient) SwitchSecondLevelMonitoring(request *model.SwitchSecondLevelMonitoringRequest) (*model.SwitchSecondLevelMonitoringResponse, error) {
+	requestDef := GenReqDefForSwitchSecondLevelMonitoring()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SwitchSecondLevelMonitoringResponse), nil
+	}
+}
+
+// SwitchSecondLevelMonitoringInvoker 开启/关闭秒级监控
+func (c *DdsClient) SwitchSecondLevelMonitoringInvoker(request *model.SwitchSecondLevelMonitoringRequest) *SwitchSecondLevelMonitoringInvoker {
+	requestDef := GenReqDefForSwitchSecondLevelMonitoring()
+	return &SwitchSecondLevelMonitoringInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SwitchSlowlogDesensitization 设置慢日志明文开关
@@ -1623,6 +1755,28 @@ func (c *DdsClient) UpdateSecurityGroup(request *model.UpdateSecurityGroupReques
 func (c *DdsClient) UpdateSecurityGroupInvoker(request *model.UpdateSecurityGroupRequest) *UpdateSecurityGroupInvoker {
 	requestDef := GenReqDefForUpdateSecurityGroup()
 	return &UpdateSecurityGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpgradeDatabaseVersion 数据库补丁升级
+//
+// 升级数据库补丁版本。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DdsClient) UpgradeDatabaseVersion(request *model.UpgradeDatabaseVersionRequest) (*model.UpgradeDatabaseVersionResponse, error) {
+	requestDef := GenReqDefForUpgradeDatabaseVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpgradeDatabaseVersionResponse), nil
+	}
+}
+
+// UpgradeDatabaseVersionInvoker 数据库补丁升级
+func (c *DdsClient) UpgradeDatabaseVersionInvoker(request *model.UpgradeDatabaseVersionRequest) *UpgradeDatabaseVersionInvoker {
+	requestDef := GenReqDefForUpgradeDatabaseVersion()
+	return &UpgradeDatabaseVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListApiVersion 查询当前支持的API版本信息列表

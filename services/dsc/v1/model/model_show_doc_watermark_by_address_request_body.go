@@ -11,7 +11,7 @@ import (
 
 type ShowDocWatermarkByAddressRequestBody struct {
 
-	// 项目所在region的id，如北京一为：cn-north-1。
+	// 项目所在region的id，如：xx-xx-1。
 	RegionId string `json:"region_id"`
 
 	// 待提取水印的文档类型

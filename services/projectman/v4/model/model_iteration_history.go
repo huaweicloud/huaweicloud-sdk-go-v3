@@ -14,7 +14,7 @@ type IterationHistory struct {
 	// 项目ID
 	ProjectId *string `json:"project_id,omitempty"`
 
-	Operator *VersionHistoryOperator `json:"operator,omitempty"`
+	Operator *IterationHistoryOperator `json:"operator,omitempty"`
 
 	// 操作类型
 	Operate *string `json:"operate,omitempty"`

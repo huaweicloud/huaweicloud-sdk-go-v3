@@ -152,6 +152,28 @@ func (c *GaussDBforNoSQLClient) CreateInstanceInvoker(request *model.CreateInsta
 	return &CreateInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteBackup 删除手动备份
+//
+// 删除手动备份
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) DeleteBackup(request *model.DeleteBackupRequest) (*model.DeleteBackupResponse, error) {
+	requestDef := GenReqDefForDeleteBackup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteBackupResponse), nil
+	}
+}
+
+// DeleteBackupInvoker 删除手动备份
+func (c *GaussDBforNoSQLClient) DeleteBackupInvoker(request *model.DeleteBackupRequest) *DeleteBackupInvoker {
+	requestDef := GenReqDefForDeleteBackup()
+	return &DeleteBackupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteConfiguration 删除参数模板
 //
 // 删除指定参数模板。
@@ -460,6 +482,28 @@ func (c *GaussDBforNoSQLClient) ListInstancesByTagsInvoker(request *model.ListIn
 	return &ListInstancesByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListRestoreTime 查询实例可恢复的时间段
+//
+// 查询实例可恢复的时间段
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ListRestoreTime(request *model.ListRestoreTimeRequest) (*model.ListRestoreTimeResponse, error) {
+	requestDef := GenReqDefForListRestoreTime()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRestoreTimeResponse), nil
+	}
+}
+
+// ListRestoreTimeInvoker 查询实例可恢复的时间段
+func (c *GaussDBforNoSQLClient) ListRestoreTimeInvoker(request *model.ListRestoreTimeRequest) *ListRestoreTimeInvoker {
+	requestDef := GenReqDefForListRestoreTime()
+	return &ListRestoreTimeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListSlowLogs 查询数据库慢日志
 //
 // 查询数据库慢日志信息。
@@ -546,6 +590,28 @@ func (c *GaussDBforNoSQLClient) ResizeInstanceVolume(request *model.ResizeInstan
 func (c *GaussDBforNoSQLClient) ResizeInstanceVolumeInvoker(request *model.ResizeInstanceVolumeRequest) *ResizeInstanceVolumeInvoker {
 	requestDef := GenReqDefForResizeInstanceVolume()
 	return &ResizeInstanceVolumeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RestoreExistingInstance 恢复到已有实例
+//
+// 恢复到已有实例
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) RestoreExistingInstance(request *model.RestoreExistingInstanceRequest) (*model.RestoreExistingInstanceResponse, error) {
+	requestDef := GenReqDefForRestoreExistingInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RestoreExistingInstanceResponse), nil
+	}
+}
+
+// RestoreExistingInstanceInvoker 恢复到已有实例
+func (c *GaussDBforNoSQLClient) RestoreExistingInstanceInvoker(request *model.RestoreExistingInstanceRequest) *RestoreExistingInstanceInvoker {
+	requestDef := GenReqDefForRestoreExistingInstance()
+	return &RestoreExistingInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SetBackupPolicy 设置自动备份策略
@@ -656,6 +722,28 @@ func (c *GaussDBforNoSQLClient) ShowQuotas(request *model.ShowQuotasRequest) (*m
 func (c *GaussDBforNoSQLClient) ShowQuotasInvoker(request *model.ShowQuotasRequest) *ShowQuotasInvoker {
 	requestDef := GenReqDefForShowQuotas()
 	return &ShowQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRestorableList 查询可恢复的实例列表
+//
+// 查询用户可恢复的实例列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ShowRestorableList(request *model.ShowRestorableListRequest) (*model.ShowRestorableListResponse, error) {
+	requestDef := GenReqDefForShowRestorableList()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRestorableListResponse), nil
+	}
+}
+
+// ShowRestorableListInvoker 查询可恢复的实例列表
+func (c *GaussDBforNoSQLClient) ShowRestorableListInvoker(request *model.ShowRestorableListRequest) *ShowRestorableListInvoker {
+	requestDef := GenReqDefForShowRestorableList()
+	return &ShowRestorableListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShrinkInstanceNode 缩容指定集群实例的节点数量

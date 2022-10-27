@@ -19,6 +19,50 @@ func HssClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+// BatchCreateTags 批量创建标签
+//
+// 批量创建标签
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *HssClient) BatchCreateTags(request *model.BatchCreateTagsRequest) (*model.BatchCreateTagsResponse, error) {
+	requestDef := GenReqDefForBatchCreateTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateTagsResponse), nil
+	}
+}
+
+// BatchCreateTagsInvoker 批量创建标签
+func (c *HssClient) BatchCreateTagsInvoker(request *model.BatchCreateTagsRequest) *BatchCreateTagsInvoker {
+	requestDef := GenReqDefForBatchCreateTags()
+	return &BatchCreateTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteResourceInstanceTag 删除资源标签
+//
+// 删除单个资源下的标签
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *HssClient) DeleteResourceInstanceTag(request *model.DeleteResourceInstanceTagRequest) (*model.DeleteResourceInstanceTagResponse, error) {
+	requestDef := GenReqDefForDeleteResourceInstanceTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteResourceInstanceTagResponse), nil
+	}
+}
+
+// DeleteResourceInstanceTagInvoker 删除资源标签
+func (c *HssClient) DeleteResourceInstanceTagInvoker(request *model.DeleteResourceInstanceTagRequest) *DeleteResourceInstanceTagInvoker {
+	requestDef := GenReqDefForDeleteResourceInstanceTag()
+	return &DeleteResourceInstanceTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListHostStatus 查询云服务器列表
 //
 // 查询云服务器列表
@@ -61,6 +105,28 @@ func (c *HssClient) ListPasswordComplexity(request *model.ListPasswordComplexity
 func (c *HssClient) ListPasswordComplexityInvoker(request *model.ListPasswordComplexityRequest) *ListPasswordComplexityInvoker {
 	requestDef := GenReqDefForListPasswordComplexity()
 	return &ListPasswordComplexityInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListQuotasDetail 查询配额详情
+//
+// 查询配额详情
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *HssClient) ListQuotasDetail(request *model.ListQuotasDetailRequest) (*model.ListQuotasDetailResponse, error) {
+	requestDef := GenReqDefForListQuotasDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListQuotasDetailResponse), nil
+	}
+}
+
+// ListQuotasDetailInvoker 查询配额详情
+func (c *HssClient) ListQuotasDetailInvoker(request *model.ListQuotasDetailRequest) *ListQuotasDetailInvoker {
+	requestDef := GenReqDefForListQuotasDetail()
+	return &ListQuotasDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListRiskConfigCheckRules 查询指定安全配置项的检查项列表
@@ -151,6 +217,50 @@ func (c *HssClient) ListSecurityEventsInvoker(request *model.ListSecurityEventsR
 	return &ListSecurityEventsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListUserChangeHistories 获取账户变动历史信息
+//
+// 获取账户变动历史记录信息
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *HssClient) ListUserChangeHistories(request *model.ListUserChangeHistoriesRequest) (*model.ListUserChangeHistoriesResponse, error) {
+	requestDef := GenReqDefForListUserChangeHistories()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListUserChangeHistoriesResponse), nil
+	}
+}
+
+// ListUserChangeHistoriesInvoker 获取账户变动历史信息
+func (c *HssClient) ListUserChangeHistoriesInvoker(request *model.ListUserChangeHistoriesRequest) *ListUserChangeHistoriesInvoker {
+	requestDef := GenReqDefForListUserChangeHistories()
+	return &ListUserChangeHistoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListUsers 获取资产的账号列表
+//
+// 获取资产的账号列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *HssClient) ListUsers(request *model.ListUsersRequest) (*model.ListUsersResponse, error) {
+	requestDef := GenReqDefForListUsers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListUsersResponse), nil
+	}
+}
+
+// ListUsersInvoker 获取资产的账号列表
+func (c *HssClient) ListUsersInvoker(request *model.ListUsersRequest) *ListUsersInvoker {
+	requestDef := GenReqDefForListUsers()
+	return &ListUsersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListVulnerabilities 查询漏洞列表
 //
 // 查询漏洞列表
@@ -217,6 +327,28 @@ func (c *HssClient) ShowCheckRuleDetailInvoker(request *model.ShowCheckRuleDetai
 	return &ShowCheckRuleDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowResourceQuotas 查询配额信息
+//
+// 查询配额信息
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *HssClient) ShowResourceQuotas(request *model.ShowResourceQuotasRequest) (*model.ShowResourceQuotasResponse, error) {
+	requestDef := GenReqDefForShowResourceQuotas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowResourceQuotasResponse), nil
+	}
+}
+
+// ShowResourceQuotasInvoker 查询配额信息
+func (c *HssClient) ShowResourceQuotasInvoker(request *model.ShowResourceQuotasRequest) *ShowResourceQuotasInvoker {
+	requestDef := GenReqDefForShowResourceQuotas()
+	return &ShowResourceQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowRiskConfigDetail 查询指定安全配置项的检查结果
 //
 // 查询指定安全配置项的检查结果
@@ -237,4 +369,26 @@ func (c *HssClient) ShowRiskConfigDetail(request *model.ShowRiskConfigDetailRequ
 func (c *HssClient) ShowRiskConfigDetailInvoker(request *model.ShowRiskConfigDetailRequest) *ShowRiskConfigDetailInvoker {
 	requestDef := GenReqDefForShowRiskConfigDetail()
 	return &ShowRiskConfigDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SwitchHostsProtectStatus 切换防护状态
+//
+// 切换防护状态
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *HssClient) SwitchHostsProtectStatus(request *model.SwitchHostsProtectStatusRequest) (*model.SwitchHostsProtectStatusResponse, error) {
+	requestDef := GenReqDefForSwitchHostsProtectStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SwitchHostsProtectStatusResponse), nil
+	}
+}
+
+// SwitchHostsProtectStatusInvoker 切换防护状态
+func (c *HssClient) SwitchHostsProtectStatusInvoker(request *model.SwitchHostsProtectStatusRequest) *SwitchHostsProtectStatusInvoker {
+	requestDef := GenReqDefForSwitchHostsProtectStatus()
+	return &SwitchHostsProtectStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

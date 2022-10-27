@@ -21,7 +21,7 @@ type SearchCorpDirRequest struct {
 	// 查询数量。 默认值：10。
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 搜索条件。支持帐号、名称、手机、邮箱模糊搜索。
+	// 搜索条件。支持帐号、SIP号码、名称、手机、邮箱模糊搜索。
 	SearchKey *string `json:"searchKey,omitempty"`
 
 	// 部门编码。

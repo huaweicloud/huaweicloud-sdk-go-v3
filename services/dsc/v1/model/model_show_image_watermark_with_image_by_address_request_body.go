@@ -8,7 +8,7 @@ import (
 
 type ShowImageWatermarkWithImageByAddressRequestBody struct {
 
-	// 项目所在region的id，如北京一为：cn-north-1。
+	// 项目所在region的id，如：xx-xx-1。
 	RegionId string `json:"region_id"`
 
 	// 待提取图片暗水印的图片地址，当前只支持华为云OBS对象，格式为 **obs://bucket/object** ，其中bucket为和当前项目处于同一区域的OBS桶名称，object为对象全路径名。例如：**obs://hwbucket/hwinfo/hw.png**，其中obs://表示OBS存储，hwbucket为桶名，hwinfo/hw.png为对象全路径名。

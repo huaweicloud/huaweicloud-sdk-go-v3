@@ -9,11 +9,11 @@ import (
 // Request Object
 type ListRiskConfigHostsRequest struct {
 
-	// 企业项目ID
+	// 企业项目ID，查询所有企业项目时填写：all_granted_eps
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 基线名称
-	CheckType string `json:"check_type"`
+	CheckName string `json:"check_name"`
 
 	// 标准类型，包含如下: - cn_standard : 等保合规标准 - hw_standard : 华为标准 - qt_standard : 青腾标准
 	Standard string `json:"standard"`

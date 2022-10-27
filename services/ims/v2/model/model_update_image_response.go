@@ -27,7 +27,7 @@ type UpdateImageResponse struct {
 	// 镜像后端存储类型，目前只支持uds
 	ImageSourceType *UpdateImageResponseImageSourceType `json:"__image_source_type,omitempty"`
 
-	// 镜像类型，目前支持以下类型： 公共镜像：gold 私有镜像：private 共享镜像：shared
+	// 镜像类型，目前支持以下类型： 公共镜像：gold 私有镜像：private 共享镜像：shared 市场镜像：market
 	Imagetype *UpdateImageResponseImagetype `json:"__imagetype,omitempty"`
 
 	// 是否是注册过的镜像，取值为“true”或者“false”

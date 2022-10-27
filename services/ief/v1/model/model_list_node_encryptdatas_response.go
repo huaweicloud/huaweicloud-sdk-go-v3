@@ -10,7 +10,7 @@ import (
 type ListNodeEncryptdatasResponse struct {
 
 	// 加密数据列表详情
-	EncryptData *[]EncryptData `json:"encrypt_data,omitempty"`
+	EncryptDatas *[]EncryptData `json:"encrypt_datas,omitempty"`
 
 	// 加密数据总数
 	Count          *int32 `json:"count,omitempty"`

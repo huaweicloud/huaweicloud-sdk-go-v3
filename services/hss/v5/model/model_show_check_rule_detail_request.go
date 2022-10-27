@@ -9,11 +9,11 @@ import (
 // Request Object
 type ShowCheckRuleDetailRequest struct {
 
-	// 企业项目ID
+	// 企业项目ID，查询所有企业项目时填写：all_granted_eps
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 基线名称
-	CheckType string `json:"check_type"`
+	CheckName string `json:"check_name"`
 
 	// 检查项ID
 	CheckRuleId string `json:"check_rule_id"`

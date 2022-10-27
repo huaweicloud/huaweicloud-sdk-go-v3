@@ -9,11 +9,11 @@ import (
 // Request Object
 type ListRiskConfigsRequest struct {
 
-	// 企业项目ID
+	// 企业项目ID，查询所有企业项目时填写：all_granted_eps
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 基线名称
-	CheckType *string `json:"check_type,omitempty"`
+	CheckName *string `json:"check_name,omitempty"`
 
 	// 风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危
 	Severity *string `json:"severity,omitempty"`

@@ -28,7 +28,7 @@ type RunlogItem struct {
 	Time *string `json:"time,omitempty"`
 
 	// 日志文件的ID
-	BackupId *string `json:"backupId,omitempty"`
+	BackupId *string `json:"backup_id,omitempty"`
 }
 
 func (o RunlogItem) String() string {

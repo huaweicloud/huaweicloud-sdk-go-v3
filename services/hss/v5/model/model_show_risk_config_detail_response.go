@@ -12,6 +12,9 @@ type ShowRiskConfigDetailResponse struct {
 	// 风险等级，包含如下:   - Low : 低危   - Medium : 中危   - High : 高危
 	Severity *string `json:"severity,omitempty"`
 
+	// 基线类型
+	CheckType *string `json:"check_type,omitempty"`
+
 	// 基线描述
 	CheckTypeDesc *string `json:"check_type_desc,omitempty"`
 

@@ -18,7 +18,7 @@ type ListTagsRequest struct {
 	// 页码，表示需要查询第几页的数据。默认值为1。
 	Page *int32 `json:"page,omitempty"`
 
-	// 镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
+	// 镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared 市场镜像：market
 	Imagetype *ListTagsRequestImagetype `json:"__imagetype,omitempty"`
 
 	// 镜像ID。
@@ -75,6 +75,7 @@ type ListTagsRequestImagetypeEnum struct {
 	GOLD    ListTagsRequestImagetype
 	PRIVATE ListTagsRequestImagetype
 	SHARED  ListTagsRequestImagetype
+	MARKET  ListTagsRequestImagetype
 }
 
 func GetListTagsRequestImagetypeEnum() ListTagsRequestImagetypeEnum {
@@ -87,6 +88,9 @@ func GetListTagsRequestImagetypeEnum() ListTagsRequestImagetypeEnum {
 		},
 		SHARED: ListTagsRequestImagetype{
 			value: "shared",
+		},
+		MARKET: ListTagsRequestImagetype{
+			value: "market",
 		},
 	}
 }

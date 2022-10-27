@@ -11,7 +11,7 @@ type SendVerificationCodeV2Req struct {
 	// 发送验证码的类型： 1：发送短信验证码
 	ReceiverType int32 `json:"receiver_type"`
 
-	// 发送验证码的超时时间。 此参数不携带或携带值为null时，采用系统默认超时时间5分钟。 单位：分钟。
+	// 发送验证码的超时时间。 此参数不携带或携带值为null时，采用系统默认超时时间10分钟。 此参数值超过60时，取默认值5分钟。 单位：分钟。
 	Timeout *int32 `json:"timeout,omitempty"`
 
 	// 指定发送验证码的手机号。 目前系统只支持中国手机号。 示例：13XXXXXXXXX

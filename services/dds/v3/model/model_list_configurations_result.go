@@ -23,6 +23,9 @@ type ListConfigurationsResult struct {
 	// 数据库类型。
 	DatastoreName string `json:"datastore_name"`
 
+	// 参数模板节点类型。 - mongos，表示集群mongos节点类型。 - shard，表示集群shard节点类型。 - config，表示集群config节点类型。 - replica，表示副本集类型。 - single，表示单节点类型。
+	NodeType string `json:"node_type"`
+
 	// 创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
 	Created string `json:"created"`
 

@@ -15,7 +15,7 @@ type ApprovalMergeRequestApproversItem struct {
 	Name *string `json:"name,omitempty"`
 
 	// 用户昵称
-	NickName *string `json:"nickName,omitempty"`
+	NickName *string `json:"nick_name,omitempty"`
 
 	// 用户状态
 	State *string `json:"state,omitempty"`

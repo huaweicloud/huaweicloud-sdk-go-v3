@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type CreateLoadbalancerTagsRequest struct {
+
+	// 负载均衡器ID
 	LoadbalancerId string `json:"loadbalancer_id"`
 
 	Body *CreateLoadbalancerTagsRequestBody `json:"body,omitempty"`

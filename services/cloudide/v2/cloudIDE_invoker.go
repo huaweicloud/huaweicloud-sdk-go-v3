@@ -17,6 +17,18 @@ func (i *CreateExtensionAuthorizationInvoker) Invoke() (*model.CreateExtensionAu
 	}
 }
 
+type ListExtensionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListExtensionsInvoker) Invoke() (*model.ListExtensionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListExtensionsResponse), nil
+	}
+}
+
 type ListProjectTemplatesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -62,6 +74,42 @@ func (i *ShowExtensionAuthorizationInvoker) Invoke() (*model.ShowExtensionAuthor
 		return nil, err
 	} else {
 		return result.(*model.ShowExtensionAuthorizationResponse), nil
+	}
+}
+
+type ShowExtensionDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowExtensionDetailInvoker) Invoke() (*model.ShowExtensionDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowExtensionDetailResponse), nil
+	}
+}
+
+type ShowExtensionEvaluationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowExtensionEvaluationInvoker) Invoke() (*model.ShowExtensionEvaluationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowExtensionEvaluationResponse), nil
+	}
+}
+
+type ShowExtensionEvaluationStarInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowExtensionEvaluationStarInvoker) Invoke() (*model.ShowExtensionEvaluationStarResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowExtensionEvaluationStarResponse), nil
 	}
 }
 

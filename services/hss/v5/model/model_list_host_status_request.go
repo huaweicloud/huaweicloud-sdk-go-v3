@@ -10,9 +10,9 @@ import (
 type ListHostStatusRequest struct {
 
 	// region id
-	Region *string `json:"region,omitempty"`
+	Region string `json:"region"`
 
-	// 企业项目ID
+	// 企业项目ID，查询所有企业项目时填写：all_granted_eps
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 主机开通的版本，包含如下6种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise：容器版。
@@ -27,7 +27,7 @@ type ListHostStatusRequest struct {
 	// 服务器名称
 	HostName *string `json:"host_name,omitempty"`
 
-	// 服务器id
+	// 服务器ID
 	HostId *string `json:"host_id,omitempty"`
 
 	// 主机状态，包含如下4种。   - ACTIVE ：正在运行。   - SHUTOFF ：关机。   - BUILDING ：创建中。   - ERROR ：故障。
@@ -77,6 +77,9 @@ type ListHostStatusRequest struct {
 
 	// 资产标签
 	Label *string `json:"label,omitempty"`
+
+	// 资产服务器组
+	ServerGroup *string `json:"server_group,omitempty"`
 
 	// 每页显示个数，默认10
 	Limit *int32 `json:"limit,omitempty"`

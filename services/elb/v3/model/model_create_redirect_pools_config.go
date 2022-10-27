@@ -12,7 +12,7 @@ type CreateRedirectPoolsConfig struct {
 	// 后端主机组的ID。
 	PoolId string `json:"pool_id"`
 
-	// 后端主机组的权重。 取值：0-100。
+	// 后端主机组的权重。  取值：0-100。
 	Weight int32 `json:"weight"`
 }
 

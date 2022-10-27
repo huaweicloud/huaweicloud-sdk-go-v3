@@ -67,6 +67,28 @@ func (c *SFSTurboClient) ChangeSecurityGroupInvoker(request *model.ChangeSecurit
 	return &ChangeSecurityGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ChangeShareName 修改文件系统名称
+//
+// 修改文件系统名称
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *SFSTurboClient) ChangeShareName(request *model.ChangeShareNameRequest) (*model.ChangeShareNameResponse, error) {
+	requestDef := GenReqDefForChangeShareName()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeShareNameResponse), nil
+	}
+}
+
+// ChangeShareNameInvoker 修改文件系统名称
+func (c *SFSTurboClient) ChangeShareNameInvoker(request *model.ChangeShareNameRequest) *ChangeShareNameInvoker {
+	requestDef := GenReqDefForChangeShareName()
+	return &ChangeShareNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateShare 创建文件系统
 //
 // 创建文件系统。

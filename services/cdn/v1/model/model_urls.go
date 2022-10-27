@@ -10,7 +10,7 @@ import (
 type Urls struct {
 
 	// urlid
-	Id *int32 `json:"id,omitempty"`
+	Id *int64 `json:"id,omitempty"`
 
 	// url具体值
 	Url *string `json:"url,omitempty"`

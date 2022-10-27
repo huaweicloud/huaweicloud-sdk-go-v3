@@ -9,6 +9,9 @@ import (
 // Request Object
 type UpdateNodeByDeviceIdRequest struct {
 
+	// 铂金版实例ID，专业版实例为空值
+	IefInstanceId *string `json:"ief-instance-id,omitempty"`
+
 	// 设备ID
 	DeviceId string `json:"device_id"`
 

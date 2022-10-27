@@ -12,8 +12,8 @@ type VideoCreateRequestData struct {
 	// 视频url地址
 	Url string `json:"url"`
 
-	// 截帧频率间隔，单位为秒，取值范围为0.5~60s；若不传递默认5s截帧一次
-	FrameInterval *float32 `json:"frame_interval,omitempty"`
+	// 截帧频率间隔，单位为秒，取值范围为1~60s；若不传递默认5s截帧一次
+	FrameInterval *int32 `json:"frame_interval,omitempty"`
 }
 
 func (o VideoCreateRequestData) String() string {

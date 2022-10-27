@@ -12,7 +12,7 @@ type MergeResult struct {
 	Closed *float64 `json:"closed,omitempty"`
 
 	// 合并请求详情
-	MergeRequests *[]MergeRequestsItem `json:"mergeRequests,omitempty"`
+	MergeRequests *[]MergeRequestsItem `json:"merge_requests,omitempty"`
 
 	// 已合并合并请求数数
 	Merged *float64 `json:"merged,omitempty"`

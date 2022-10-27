@@ -8,6 +8,10 @@ import (
 
 // Request Object
 type CreatePostPaidServersRequest struct {
+
+	// 保证客户端请求幂等性的标识
+	XClientToken *string `json:"X-Client-Token,omitempty"`
+
 	Body *CreatePostPaidServersRequestBody `json:"body,omitempty"`
 }
 

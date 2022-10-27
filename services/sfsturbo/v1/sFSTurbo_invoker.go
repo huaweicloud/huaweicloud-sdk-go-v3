@@ -29,6 +29,18 @@ func (i *ChangeSecurityGroupInvoker) Invoke() (*model.ChangeSecurityGroupRespons
 	}
 }
 
+type ChangeShareNameInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeShareNameInvoker) Invoke() (*model.ChangeShareNameResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeShareNameResponse), nil
+	}
+}
+
 type CreateShareInvoker struct {
 	*invoker.BaseInvoker
 }

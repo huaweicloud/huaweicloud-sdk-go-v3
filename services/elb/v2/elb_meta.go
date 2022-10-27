@@ -321,11 +321,6 @@ func GenReqDefForDeleteListener() *def.HttpRequestDef {
 		WithJsonTag("listener_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Cascade").
-		WithJsonTag("cascade").
-		WithLocationType(def.Query))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -361,11 +356,6 @@ func GenReqDefForDeleteLoadbalancer() *def.HttpRequestDef {
 		WithName("LoadbalancerId").
 		WithJsonTag("loadbalancer_id").
 		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Cascade").
-		WithJsonTag("cascade").
-		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

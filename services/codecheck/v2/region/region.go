@@ -10,13 +10,17 @@ var CN_NORTH_1 = region.NewRegion("cn-north-1", "https://codecheck-ext.cn-north-
 var CN_EAST_2 = region.NewRegion("cn-east-2", "https://codecheck-ext.cn-east-2.myhuaweicloud.com")
 var CN_SOUTH_1 = region.NewRegion("cn-south-1", "https://codecheck-ext.cn-south-1.myhuaweicloud.com")
 var CN_EAST_3 = region.NewRegion("cn-east-3", "https://codecheck-ext.cn-east-3.myhuaweicloud.com")
+var LA_NORTH_2 = region.NewRegion("la-north-2", "https://codecheck-ext.la-north-2.myhuaweicloud.com")
+var SA_BRAZIL_1 = region.NewRegion("sa-brazil-1", "https://codecheck-ext.sa-brazil-1.myhuaweicloud.com")
 
 var staticFields = map[string]*region.Region{
-	"cn-north-4": CN_NORTH_4,
-	"cn-north-1": CN_NORTH_1,
-	"cn-east-2":  CN_EAST_2,
-	"cn-south-1": CN_SOUTH_1,
-	"cn-east-3":  CN_EAST_3,
+	"cn-north-4":  CN_NORTH_4,
+	"cn-north-1":  CN_NORTH_1,
+	"cn-east-2":   CN_EAST_2,
+	"cn-south-1":  CN_SOUTH_1,
+	"cn-east-3":   CN_EAST_3,
+	"la-north-2":  LA_NORTH_2,
+	"sa-brazil-1": SA_BRAZIL_1,
 }
 
 var provider = region.DefaultProviderChain("CODECHECK")

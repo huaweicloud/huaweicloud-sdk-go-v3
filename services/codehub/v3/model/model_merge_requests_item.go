@@ -10,16 +10,16 @@ type MergeRequestsItem struct {
 	Author *Author `json:"author,omitempty"`
 
 	// 关闭时间
-	ClosedAt *string `json:"closedAt,omitempty"`
+	ClosedAt *string `json:"closed_at,omitempty"`
 
 	// 创建时间
-	CreatedAt *string `json:"createdAt,omitempty"`
+	CreatedAt *string `json:"created_at,omitempty"`
 
 	// 合并请求描述
 	Description *string `json:"description,omitempty"`
 
 	// 源分支
-	DevcloudSourceBranch *string `json:"devcloudSourceBranch,omitempty"`
+	DevcloudSourceBranch *string `json:"devcloud_source_branch,omitempty"`
 
 	// 合并请求id
 	Id *float64 `json:"id,omitempty"`
@@ -28,25 +28,25 @@ type MergeRequestsItem struct {
 	Iid *float64 `json:"iid,omitempty"`
 
 	// 检视人
-	MergeRequestAssigneeList *[]Author `json:"mergeRequestAssigneeList,omitempty"`
+	MergeRequestAssigneeList *[]Author `json:"merge_request_assignee_list,omitempty"`
 
 	// 是否可以被合并
-	MergeStatus *string `json:"mergeStatus,omitempty"`
+	MergeStatus *string `json:"merge_status,omitempty"`
 
 	// 源分支
-	SourceBranch *string `json:"sourceBranch,omitempty"`
+	SourceBranch *string `json:"source_branch,omitempty"`
 
 	// 合并请求状态
 	State *string `json:"state,omitempty"`
 
 	// 目标分支
-	TargetBranch *string `json:"targetBranch,omitempty"`
+	TargetBranch *string `json:"target_branch,omitempty"`
 
 	// 标题
 	Title *string `json:"title,omitempty"`
 
 	// 更新时间
-	UpdatedAt *string `json:"updatedAt,omitempty"`
+	UpdatedAt *string `json:"updated_at,omitempty"`
 }
 
 func (o MergeRequestsItem) String() string {

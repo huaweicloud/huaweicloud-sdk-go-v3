@@ -257,11 +257,65 @@ func GenReqDefForAddUser() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForAllowClientRecord() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v1/mmc/control/conferences/allowClientRecord").
+		WithResponse(new(model.AllowClientRecordResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ConferenceID").
+		WithJsonTag("conferenceID").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ParticipantID").
+		WithJsonTag("participantID").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XConferenceAuthorization").
+		WithJsonTag("X-Conference-Authorization").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForAllowGuestUnmute() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v1/mmc/control/conferences/mute/guestUnMute").
 		WithResponse(new(model.AllowGuestUnmuteResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ConferenceID").
+		WithJsonTag("conferenceID").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XConferenceAuthorization").
+		WithJsonTag("X-Conference-Authorization").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForAllowWaitingParticipant() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v1/mmc/control/conferences/allowWaitingParticipant").
+		WithResponse(new(model.AllowWaitingParticipantResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -470,6 +524,31 @@ func GenReqDefForBatchDeleteUsers() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForBatchHand() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v1/mmc/control/conferences/participants/batch/hands").
+		WithResponse(new(model.BatchHandResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ConferenceID").
+		WithJsonTag("conferenceID").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XConferenceAuthorization").
+		WithJsonTag("X-Conference-Authorization").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForBatchUpdateDevicesStatus() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
@@ -547,6 +626,27 @@ func GenReqDefForBroadcastParticipant() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ParticipantID").
 		WithJsonTag("participantID").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XConferenceAuthorization").
+		WithJsonTag("X-Conference-Authorization").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForCancelBroadcast() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v1/mmc/control/conferences/cancelBroadcast").
+		WithResponse(new(model.CancelBroadcastResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ConferenceID").
+		WithJsonTag("conferenceID").
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1059,6 +1159,31 @@ func GenReqDefForDeleteDepartment() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("AcceptLanguage").
 		WithJsonTag("Accept-Language").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDeleteLayout() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v1/mmc/control/conferences/layOut").
+		WithResponse(new(model.DeleteLayoutResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ConferenceID").
+		WithJsonTag("conferenceID").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("UuID").
+		WithJsonTag("uuID").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XConferenceAuthorization").
+		WithJsonTag("X-Conference-Authorization").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
@@ -1601,6 +1726,31 @@ func GenReqDefForLockView() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForMoveToWaitingRoom() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v1/mmc/control/conferences/moveToWaitingRoom").
+		WithResponse(new(model.MoveToWaitingRoomResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ConferenceID").
+		WithJsonTag("conferenceID").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XConferenceAuthorization").
+		WithJsonTag("X-Conference-Authorization").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForMuteMeeting() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
@@ -1861,6 +2011,31 @@ func GenReqDefForRollcallParticipant() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForSaveLayout() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v1/mmc/control/conferences/layOut").
+		WithResponse(new(model.SaveLayoutResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ConferenceID").
+		WithJsonTag("conferenceID").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XConferenceAuthorization").
+		WithJsonTag("X-Conference-Authorization").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForSearchAttendanceRecordsOfHisMeeting() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -1998,6 +2173,43 @@ func GenReqDefForSearchCorpDir() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("QuerySubDept").
 		WithJsonTag("querySubDept").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SearchScope").
+		WithJsonTag("searchScope").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AcceptLanguage").
+		WithJsonTag("Accept-Language").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForSearchCorpExternalDir() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/usg/abs/external-contacts").
+		WithResponse(new(model.SearchCorpExternalDirResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SearchKey").
+		WithJsonTag("searchKey").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("SearchScope").
@@ -2901,6 +3113,35 @@ func GenReqDefForSendVeriCodeForUpdateUserInfo() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForSetCohost() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v1/mmc/control/conferences/participants/cohost").
+		WithResponse(new(model.SetCohostResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ConferenceID").
+		WithJsonTag("conferenceID").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ParticipantID").
+		WithJsonTag("participantID").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XConferenceAuthorization").
+		WithJsonTag("X-Conference-Authorization").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForSetCustomMultiPicture() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
@@ -3354,6 +3595,27 @@ func GenReqDefForShowHisMeetingDetail() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XSiteId").
 		WithJsonTag("X-Site-Id").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowLayout() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/mmc/control/conferences/layOut").
+		WithResponse(new(model.ShowLayoutResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ConferenceID").
+		WithJsonTag("conferenceID").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XConferenceAuthorization").
+		WithJsonTag("X-Conference-Authorization").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()

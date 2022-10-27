@@ -17,6 +17,8 @@ type DeviceMessageRequest struct {
 	// **参数说明**：消息内容，支持string和json格式。
 	Message *interface{} `json:"message"`
 
+	Properties *PropertiesDto `json:"properties,omitempty"`
+
 	// **参数说明**：消息内容编码格式。默认值none。 **取值范围**： - none  - base64：只能通过topic_full_name字段自定义的topic发送消息,否则会发送失败。
 	Encoding *string `json:"encoding,omitempty"`
 

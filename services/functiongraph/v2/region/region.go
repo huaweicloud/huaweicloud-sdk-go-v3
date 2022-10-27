@@ -15,6 +15,10 @@ var AP_SOUTHEAST_1 = region.NewRegion("ap-southeast-1", "https://functiongraph.a
 var AP_SOUTHEAST_3 = region.NewRegion("ap-southeast-3", "https://functiongraph.ap-southeast-3.myhuaweicloud.com")
 var AF_SOUTH_1 = region.NewRegion("af-south-1", "https://functiongraph.af-south-1.myhuaweicloud.com")
 var CN_SOUTHWEST_2 = region.NewRegion("cn-southwest-2", "https://functiongraph.cn-southwest-2.myhuaweicloud.com")
+var SA_BRAZIL_1 = region.NewRegion("sa-brazil-1", "https://functiongraph.sa-brazil-1.myhuaweicloud.com")
+var LA_SOUTH_2 = region.NewRegion("la-south-2", "https://functiongraph.la-south-2.myhuaweicloud.com")
+var NA_MEXICO_1 = region.NewRegion("na-mexico-1", "https://functiongraph.na-mexico-1.myhuaweicloud.com")
+var LA_NORTH_2 = region.NewRegion("la-north-2", "https://functiongraph.la-north-2.myhuaweicloud.com")
 
 var staticFields = map[string]*region.Region{
 	"cn-north-4":     CN_NORTH_4,
@@ -27,6 +31,10 @@ var staticFields = map[string]*region.Region{
 	"ap-southeast-3": AP_SOUTHEAST_3,
 	"af-south-1":     AF_SOUTH_1,
 	"cn-southwest-2": CN_SOUTHWEST_2,
+	"sa-brazil-1":    SA_BRAZIL_1,
+	"la-south-2":     LA_SOUTH_2,
+	"na-mexico-1":    NA_MEXICO_1,
+	"la-north-2":     LA_NORTH_2,
 }
 
 var provider = region.DefaultProviderChain("FUNCTIONGRAPH")

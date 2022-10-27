@@ -19,7 +19,10 @@ type VulInfo struct {
 	LabelList *[]string `json:"label_list,omitempty"`
 
 	// 修复必要性
-	RepairNecessity *int32 `json:"repair_necessity,omitempty"`
+	RepairNecessity *string `json:"repair_necessity,omitempty"`
+
+	// 漏洞级别
+	SeverityLevel *string `json:"severity_level,omitempty"`
 
 	// 受影响服务器台数
 	HostNum *int32 `json:"host_num,omitempty"`

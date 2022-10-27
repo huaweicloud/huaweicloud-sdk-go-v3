@@ -12,7 +12,7 @@ type ListMembersRequest struct {
 	// 后端云服务器组id
 	PoolId string `json:"pool_id"`
 
-	// 分页查询中每页的监听器个数
+	// 分页查询中每页的后端服务器个数
 	Limit *int32 `json:"limit,omitempty"`
 
 	// 分页查询的起始的资源id，表示上一页最后一条查询记录的负载均衡器的id。不指定时表示查询第一页。

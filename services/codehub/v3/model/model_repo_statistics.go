@@ -24,7 +24,7 @@ type RepoStatistics struct {
 	// 删除代码行
 	DeleteLines *int32 `json:"delete_lines,omitempty"`
 
-	// 仓库id
+	// 仓库统计记录id
 	Id *int32 `json:"id,omitempty"`
 
 	// 仓库id

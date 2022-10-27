@@ -56,7 +56,7 @@ type Host struct {
 	// 收费模式，包含如下2种。   - packet_cycle ：包年/包月。   - on_demand ：按需。
 	ChargingMode *string `json:"charging_mode,omitempty"`
 
-	// 云服务资源实例ID（UUID）
+	// 主机安全配额ID（UUID）
 	ResourceId *string `json:"resource_id,omitempty"`
 
 	// 是否非华为云机器

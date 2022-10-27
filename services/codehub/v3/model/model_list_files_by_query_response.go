@@ -10,8 +10,7 @@ import (
 type ListFilesByQueryResponse struct {
 	Error *Error `json:"error,omitempty"`
 
-	// 差异列表
-	Result *[]FileContentInfo `json:"result,omitempty"`
+	Result *FileContentInfo `json:"result,omitempty"`
 
 	// 响应状态
 	Status         *string `json:"status,omitempty"`

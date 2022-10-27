@@ -8,7 +8,7 @@ import (
 
 type ImportCertificateRequestBody struct {
 
-	// 证书名称。字符长度为0~63位。
+	// 证书名称。字符长度为3~63位。
 	Name string `json:"name"`
 
 	// 证书内容。回车换行需要使用转义字符\\n或者\\r\\n替换。

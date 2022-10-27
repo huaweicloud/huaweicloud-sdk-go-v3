@@ -12,7 +12,7 @@ import (
 // OBS文档嵌入水印请求体
 type CreateDocWatermarkByAddressRequestBody struct {
 
-	// 项目所在region的id，如北京一为：cn-north-1。
+	// 项目所在region的id，如：xx-xx-1。
 	RegionId string `json:"region_id"`
 
 	// 待添加水印的文档地址，当前只支持华为云OBS对象，格式为 **obs://bucket/object** ，其中bucket为和当前项目处于同一区域的OBS桶名称，object为对象全路径名。例如：**obs://hwbucket/hwinfo/hw.png**，其中obs://表示OBS存储，hwbucket为桶名，hwinfo/hw.png为对象全路径名。
@@ -30,7 +30,7 @@ type CreateDocWatermarkByAddressRequestBody struct {
 	// 明文字水印内容，与暗水印“blind_watermark”字段至少有一个不为空。
 	VisibleWatermark *string `json:"visible_watermark,omitempty"`
 
-	// 待嵌入的图形明水印文件的地址, 字段格式要求同src_file字段，图形文件的格式必须为“png”或“jpg”，否则返回参数错误；图像文件大小不超过1MB
+	// 待嵌入的图形明水印文件的地址,  字段格式要求同src_file字段，图形文件的格式必须为“png”或“jpg”，否则返回参数错误；图像文件大小不超过1MB
 	ImageMark *string `json:"image_mark,omitempty"`
 
 	// 该字段控制明水印嵌入文字还是图片。默认为**TEXT**类型，需填写visible_watermark字段设置明文字水印； 当该字段为**IMAGE**时，需填写image_watermark字段设置水印图片地址此时 ，“visible_watermark”，“font_size”，“rotation”和“opacity”字段无效。

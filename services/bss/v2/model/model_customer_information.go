@@ -38,7 +38,7 @@ type CustomerInformation struct {
 	// 客户类型： -1：无类型0：个人1：企业 客户刚注册的时候，没有具体的客户类型，为“-1：无类型”，客户可以在账号中心通过设置客户类型或者在实名认证的时候，选择对应的企业/个人实名认证来决定自己的类型。
 	CustomerType *int32 `json:"customer_type,omitempty"`
 
-	// 是否冻结： 0：否1：是
+	// 是否冻结： 0：否1：客户账号冻结2：客户账号和资源冻结 该字段预留。
 	IsFrozen *int32 `json:"is_frozen,omitempty"`
 
 	// 该客户对应的客户经理信息，目前只支持1个，具体参见表2。

@@ -12,7 +12,7 @@ type ListSecurityEventsRequest struct {
 	// region id
 	Region string `json:"region"`
 
-	// 租户企业项目ID
+	// 租户企业项目ID，查询所有企业项目时填写：all_granted_eps
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 查询时间范围天数，与自定义查询时间begin_time，end_time互斥

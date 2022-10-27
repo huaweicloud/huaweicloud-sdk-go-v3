@@ -12,7 +12,7 @@ import (
 // Request Object
 type GlanceListImagesRequest struct {
 
-	// 镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
+	// 镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared 市场镜像：market
 	Imagetype *GlanceListImagesRequestImagetype `json:"__imagetype,omitempty"`
 
 	// 镜像是否是受保护，取值为true/false。一般查询公共镜像时候取值为true，查询私有镜像可以不指定。
@@ -126,6 +126,7 @@ type GlanceListImagesRequestImagetypeEnum struct {
 	GOLD    GlanceListImagesRequestImagetype
 	PRIVATE GlanceListImagesRequestImagetype
 	SHARED  GlanceListImagesRequestImagetype
+	MARKET  GlanceListImagesRequestImagetype
 }
 
 func GetGlanceListImagesRequestImagetypeEnum() GlanceListImagesRequestImagetypeEnum {
@@ -138,6 +139,9 @@ func GetGlanceListImagesRequestImagetypeEnum() GlanceListImagesRequestImagetypeE
 		},
 		SHARED: GlanceListImagesRequestImagetype{
 			value: "shared",
+		},
+		MARKET: GlanceListImagesRequestImagetype{
+			value: "market",
 		},
 	}
 }

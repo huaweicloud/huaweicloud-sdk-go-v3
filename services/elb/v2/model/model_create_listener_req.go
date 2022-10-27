@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 创建监听器的结构体
+// 创建监听器的请求体
 type CreateListenerReq struct {
 
 	// 监听器关联的负载均衡器 ID
@@ -133,13 +133,13 @@ func GetCreateListenerReqTlsCiphersPolicyEnum() CreateListenerReqTlsCiphersPolic
 			value: "tls-1-0",
 		},
 		TLS_1_1: CreateListenerReqTlsCiphersPolicy{
-			value: " tls-1-1",
+			value: "tls-1-1",
 		},
 		TLS_1_2: CreateListenerReqTlsCiphersPolicy{
-			value: " tls-1-2",
+			value: "tls-1-2",
 		},
 		TLS_1_2_STRICT: CreateListenerReqTlsCiphersPolicy{
-			value: " tls-1-2-strict",
+			value: "tls-1-2-strict",
 		},
 	}
 }

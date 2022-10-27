@@ -19,6 +19,27 @@ func BmsClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+// AddServerNics 裸金属服务器绑定弹性网卡
+//
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *BmsClient) AddServerNics(request *model.AddServerNicsRequest) (*model.AddServerNicsResponse, error) {
+	requestDef := GenReqDefForAddServerNics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddServerNicsResponse), nil
+	}
+}
+
+// AddServerNicsInvoker 裸金属服务器绑定弹性网卡
+func (c *BmsClient) AddServerNicsInvoker(request *model.AddServerNicsRequest) *AddServerNicsInvoker {
+	requestDef := GenReqDefForAddServerNics()
+	return &AddServerNicsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // AttachBaremetalServerVolume 裸金属服务器挂载云硬盘
 //
 // 裸金属服务器创建成功后，如果发现磁盘不够用或者当前磁盘不满足要求，可以将已有云硬盘挂载给裸金属服务器，作为数据盘使用
@@ -215,6 +236,27 @@ func (c *BmsClient) CreateBareMetalServers(request *model.CreateBareMetalServers
 func (c *BmsClient) CreateBareMetalServersInvoker(request *model.CreateBareMetalServersRequest) *CreateBareMetalServersInvoker {
 	requestDef := GenReqDefForCreateBareMetalServers()
 	return &CreateBareMetalServersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteServerNics 裸金属服务器解绑弹性网卡
+//
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *BmsClient) DeleteServerNics(request *model.DeleteServerNicsRequest) (*model.DeleteServerNicsResponse, error) {
+	requestDef := GenReqDefForDeleteServerNics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteServerNicsResponse), nil
+	}
+}
+
+// DeleteServerNicsInvoker 裸金属服务器解绑弹性网卡
+func (c *BmsClient) DeleteServerNicsInvoker(request *model.DeleteServerNicsRequest) *DeleteServerNicsInvoker {
+	requestDef := GenReqDefForDeleteServerNics()
+	return &DeleteServerNicsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteWindowsBareMetalServerPassword Windows裸金属服务器清除密码
@@ -459,6 +501,27 @@ func (c *BmsClient) ShowResetPwdInvoker(request *model.ShowResetPwdRequest) *Sho
 	return &ShowResetPwdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowServerRemoteConsole 获取裸金属服务器远程登录地址
+//
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *BmsClient) ShowServerRemoteConsole(request *model.ShowServerRemoteConsoleRequest) (*model.ShowServerRemoteConsoleResponse, error) {
+	requestDef := GenReqDefForShowServerRemoteConsole()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowServerRemoteConsoleResponse), nil
+	}
+}
+
+// ShowServerRemoteConsoleInvoker 获取裸金属服务器远程登录地址
+func (c *BmsClient) ShowServerRemoteConsoleInvoker(request *model.ShowServerRemoteConsoleRequest) *ShowServerRemoteConsoleInvoker {
+	requestDef := GenReqDefForShowServerRemoteConsole()
+	return &ShowServerRemoteConsoleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowTenantQuota 查询租户配额
 //
 // 查询该租户下，所有资源的配额信息，包括已使用配额
@@ -501,6 +564,27 @@ func (c *BmsClient) ShowWindowsBaremetalServerPwd(request *model.ShowWindowsBare
 func (c *BmsClient) ShowWindowsBaremetalServerPwdInvoker(request *model.ShowWindowsBaremetalServerPwdRequest) *ShowWindowsBaremetalServerPwdInvoker {
 	requestDef := GenReqDefForShowWindowsBaremetalServerPwd()
 	return &ShowWindowsBaremetalServerPwdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateBaremetalServerInterfaceAttachments 修改裸金属服务器弹性网卡的属性
+//
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *BmsClient) UpdateBaremetalServerInterfaceAttachments(request *model.UpdateBaremetalServerInterfaceAttachmentsRequest) (*model.UpdateBaremetalServerInterfaceAttachmentsResponse, error) {
+	requestDef := GenReqDefForUpdateBaremetalServerInterfaceAttachments()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateBaremetalServerInterfaceAttachmentsResponse), nil
+	}
+}
+
+// UpdateBaremetalServerInterfaceAttachmentsInvoker 修改裸金属服务器弹性网卡的属性
+func (c *BmsClient) UpdateBaremetalServerInterfaceAttachmentsInvoker(request *model.UpdateBaremetalServerInterfaceAttachmentsRequest) *UpdateBaremetalServerInterfaceAttachmentsInvoker {
+	requestDef := GenReqDefForUpdateBaremetalServerInterfaceAttachments()
+	return &UpdateBaremetalServerInterfaceAttachmentsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateBaremetalServerMetadata 更新裸金属服务器元数据

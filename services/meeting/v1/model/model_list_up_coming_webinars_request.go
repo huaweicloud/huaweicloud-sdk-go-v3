@@ -21,7 +21,7 @@ type ListUpComingWebinarsRequest struct {
 	// 查询数量。 默认值：10。
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 搜索条件。支持帐号、名称、手机、邮箱模糊搜索。
+	// 搜索条件。支持帐号、SIP号码、名称、手机、邮箱模糊搜索。
 	SearchKey *string `json:"searchKey,omitempty"`
 
 	// 查询结果排序。默认升序。 * ASC_StartTIME：按会议开始时间升序排序 * DSC_StartTIME：按会议开始时间降序排序

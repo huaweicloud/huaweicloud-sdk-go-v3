@@ -7,7 +7,7 @@ import (
 )
 
 // 变更操作人
-type VersionHistoryOperator struct {
+type IterationHistoryOperator struct {
 
 	// 用户uuid
 	UserId *string `json:"user_id,omitempty"`
@@ -25,11 +25,11 @@ type VersionHistoryOperator struct {
 	DomainName *string `json:"domain_name,omitempty"`
 }
 
-func (o VersionHistoryOperator) String() string {
+func (o IterationHistoryOperator) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "VersionHistoryOperator struct{}"
+		return "IterationHistoryOperator struct{}"
 	}
 
-	return strings.Join([]string{"VersionHistoryOperator", string(data)}, " ")
+	return strings.Join([]string{"IterationHistoryOperator", string(data)}, " ")
 }

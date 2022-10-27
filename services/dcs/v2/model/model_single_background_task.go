@@ -34,6 +34,9 @@ type SingleBackgroundTask struct {
 
 	// 任务结束时间，格式为2020-06-17T07:38:42.503Z
 	UpdatedAt *string `json:"updated_at,omitempty"`
+
+	// 是否有详细任务进展，可以展开查看
+	EnableShow *bool `json:"enable_show,omitempty"`
 }
 
 func (o SingleBackgroundTask) String() string {

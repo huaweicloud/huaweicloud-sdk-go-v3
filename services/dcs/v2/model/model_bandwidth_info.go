@@ -9,28 +9,28 @@ import (
 type BandwidthInfo struct {
 
 	// 临时扩容开始时间
-	BeginTime *string `json:"begin_time,omitempty"`
+	BeginTime *int64 `json:"begin_time,omitempty"`
 
 	// 临时扩容结束时间
-	EndTime *string `json:"end_time,omitempty"`
+	EndTime *int64 `json:"end_time,omitempty"`
 
 	// 当前时间
-	CurrentTime *string `json:"current_time,omitempty"`
+	CurrentTime *int64 `json:"current_time,omitempty"`
 
 	// 当前带宽，单位为GB
 	Bandwidth *int32 `json:"bandwidth,omitempty"`
 
 	// 下一个扩容时间
-	NextExpandTime *string `json:"next_expand_time,omitempty"`
+	NextExpandTime *int64 `json:"next_expand_time,omitempty"`
 
 	// 扩容数量
 	ExpandCount *int32 `json:"expand_count,omitempty"`
 
 	// 临时扩容时间间隔
-	ExpandEffectTime *string `json:"expand_effect_time,omitempty"`
+	ExpandEffectTime *int64 `json:"expand_effect_time,omitempty"`
 
 	// 下一次可以扩容间隔时间
-	ExpandIntervalTime *string `json:"expand_interval_time,omitempty"`
+	ExpandIntervalTime *int64 `json:"expand_interval_time,omitempty"`
 
 	// 最大扩容数量
 	MaxExpandCount *int32 `json:"max_expand_count,omitempty"`

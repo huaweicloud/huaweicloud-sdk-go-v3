@@ -240,6 +240,28 @@ func (c *MeetingClient) AddUserInvoker(request *model.AddUserRequest) *AddUserIn
 	return &AddUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AllowClientRecord 允许客户端录制
+//
+// 该接口用于设置允许/禁止与会者客户端本地录制（非云端录制）。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *MeetingClient) AllowClientRecord(request *model.AllowClientRecordRequest) (*model.AllowClientRecordResponse, error) {
+	requestDef := GenReqDefForAllowClientRecord()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AllowClientRecordResponse), nil
+	}
+}
+
+// AllowClientRecordInvoker 允许客户端录制
+func (c *MeetingClient) AllowClientRecordInvoker(request *model.AllowClientRecordRequest) *AllowClientRecordInvoker {
+	requestDef := GenReqDefForAllowClientRecord()
+	return &AllowClientRecordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // AllowGuestUnmute 与会者自己解除静音
 //
 // 该接口用于设置与会者是否可以自己解除静音。
@@ -260,6 +282,28 @@ func (c *MeetingClient) AllowGuestUnmute(request *model.AllowGuestUnmuteRequest)
 func (c *MeetingClient) AllowGuestUnmuteInvoker(request *model.AllowGuestUnmuteRequest) *AllowGuestUnmuteInvoker {
 	requestDef := GenReqDefForAllowGuestUnmute()
 	return &AllowGuestUnmuteInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AllowWaitingParticipant 准入等候者
+//
+// 该接口用于允许等候室中的成员进入会议。可以允许全部成员进入会议，或者允许指定成员进入会议。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *MeetingClient) AllowWaitingParticipant(request *model.AllowWaitingParticipantRequest) (*model.AllowWaitingParticipantResponse, error) {
+	requestDef := GenReqDefForAllowWaitingParticipant()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AllowWaitingParticipantResponse), nil
+	}
+}
+
+// AllowWaitingParticipantInvoker 准入等候者
+func (c *MeetingClient) AllowWaitingParticipantInvoker(request *model.AllowWaitingParticipantRequest) *AllowWaitingParticipantInvoker {
+	requestDef := GenReqDefForAllowWaitingParticipant()
+	return &AllowWaitingParticipantInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // AssociateVmr 分配云会议室
@@ -417,6 +461,28 @@ func (c *MeetingClient) BatchDeleteUsersInvoker(request *model.BatchDeleteUsersR
 	return &BatchDeleteUsersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchHand 批量举手
+//
+// 该接口用于批量设置来宾的举手/放下举手状态。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *MeetingClient) BatchHand(request *model.BatchHandRequest) (*model.BatchHandResponse, error) {
+	requestDef := GenReqDefForBatchHand()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchHandResponse), nil
+	}
+}
+
+// BatchHandInvoker 批量举手
+func (c *MeetingClient) BatchHandInvoker(request *model.BatchHandRequest) *BatchHandInvoker {
+	requestDef := GenReqDefForBatchHand()
+	return &BatchHandInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchUpdateDevicesStatus 批量修改终端状态
 //
 // 企业管理员通过该接口批量修改专业会议终端状态。当硬终端资源到期后，若企业内对应资源的硬终端超过数量后会被系统随机自动停用，此时可通过该接口修改专业会议终端的状态。
@@ -481,6 +547,28 @@ func (c *MeetingClient) BroadcastParticipant(request *model.BroadcastParticipant
 func (c *MeetingClient) BroadcastParticipantInvoker(request *model.BroadcastParticipantRequest) *BroadcastParticipantInvoker {
 	requestDef := GenReqDefForBroadcastParticipant()
 	return &BroadcastParticipantInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CancelBroadcast 取消广播
+//
+// 该接口用于取消广播，包括：取消广播多画面，取消广播会场，取消点名会场。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *MeetingClient) CancelBroadcast(request *model.CancelBroadcastRequest) (*model.CancelBroadcastResponse, error) {
+	requestDef := GenReqDefForCancelBroadcast()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CancelBroadcastResponse), nil
+	}
+}
+
+// CancelBroadcastInvoker 取消广播
+func (c *MeetingClient) CancelBroadcastInvoker(request *model.CancelBroadcastRequest) *CancelBroadcastInvoker {
+	requestDef := GenReqDefForCancelBroadcast()
+	return &CancelBroadcastInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CancelMeeting 取消预约会议
@@ -901,6 +989,28 @@ func (c *MeetingClient) DeleteDepartmentInvoker(request *model.DeleteDepartmentR
 	return &DeleteDepartmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteLayout 删除多画面布局
+//
+// 该接口用于删除当前会议已保存的多画面布局。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *MeetingClient) DeleteLayout(request *model.DeleteLayoutRequest) (*model.DeleteLayoutResponse, error) {
+	requestDef := GenReqDefForDeleteLayout()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteLayoutResponse), nil
+	}
+}
+
+// DeleteLayoutInvoker 删除多画面布局
+func (c *MeetingClient) DeleteLayoutInvoker(request *model.DeleteLayoutRequest) *DeleteLayoutInvoker {
+	requestDef := GenReqDefForDeleteLayout()
+	return &DeleteLayoutInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteRecordings 批量删除录制
 //
 // 该接口用于批量删除会议的录制。
@@ -1171,7 +1281,8 @@ func (c *MeetingClient) InviteUserInvoker(request *model.InviteUserRequest) *Inv
 
 // InviteWithPwd 通过会议ID和密码邀请与会者
 //
-// 该接口用于通过会议ID和密码邀请与会者。
+// 该接口用于通过会议ID和密码邀请与会者。一般用于App已知会议ID和来宾密码，通过扫码等方式获取其他终端的SIP号码后，使用该接口将其他终端邀请加入会议中。
+// &gt; 需要管理员在企业的“会议设置”&gt;“来宾扫码邀请任意硬终端入会”设置成打开，才允许通过来宾密码邀请其他终端入会。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1321,6 +1432,28 @@ func (c *MeetingClient) LockView(request *model.LockViewRequest) (*model.LockVie
 func (c *MeetingClient) LockViewInvoker(request *model.LockViewRequest) *LockViewInvoker {
 	requestDef := GenReqDefForLockView()
 	return &LockViewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// MoveToWaitingRoom 移入等候室
+//
+// 该接口用于将会中的指定与会者移入到等候室。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *MeetingClient) MoveToWaitingRoom(request *model.MoveToWaitingRoomRequest) (*model.MoveToWaitingRoomResponse, error) {
+	requestDef := GenReqDefForMoveToWaitingRoom()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.MoveToWaitingRoomResponse), nil
+	}
+}
+
+// MoveToWaitingRoomInvoker 移入等候室
+func (c *MeetingClient) MoveToWaitingRoomInvoker(request *model.MoveToWaitingRoomRequest) *MoveToWaitingRoomInvoker {
+	requestDef := GenReqDefForMoveToWaitingRoom()
+	return &MoveToWaitingRoomInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // MuteMeeting 全场静音
@@ -1543,6 +1676,28 @@ func (c *MeetingClient) RollcallParticipantInvoker(request *model.RollcallPartic
 	return &RollcallParticipantInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SaveLayout 保存多画面布局
+//
+// 该接口用于保存多画面布局。保存的多画面布局，只能在当前会议使用，会议结束后，保存的多画面布局就会释放。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *MeetingClient) SaveLayout(request *model.SaveLayoutRequest) (*model.SaveLayoutResponse, error) {
+	requestDef := GenReqDefForSaveLayout()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SaveLayoutResponse), nil
+	}
+}
+
+// SaveLayoutInvoker 保存多画面布局
+func (c *MeetingClient) SaveLayoutInvoker(request *model.SaveLayoutRequest) *SaveLayoutInvoker {
+	requestDef := GenReqDefForSaveLayout()
+	return &SaveLayoutInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SearchAttendanceRecordsOfHisMeeting 查询历史会议的与会者记录
 //
 // 该接口用于查询指定历史会议的与会者记录。
@@ -1629,6 +1784,28 @@ func (c *MeetingClient) SearchCorpDir(request *model.SearchCorpDirRequest) (*mod
 func (c *MeetingClient) SearchCorpDirInvoker(request *model.SearchCorpDirRequest) *SearchCorpDirInvoker {
 	requestDef := GenReqDefForSearchCorpDir()
 	return &SearchCorpDirInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SearchCorpExternalDir 查询企业外部联系人
+//
+// 企业用户（含管理员）通过该接口查询该企业的外部联系人或者个人外部联系人。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *MeetingClient) SearchCorpExternalDir(request *model.SearchCorpExternalDirRequest) (*model.SearchCorpExternalDirResponse, error) {
+	requestDef := GenReqDefForSearchCorpExternalDir()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SearchCorpExternalDirResponse), nil
+	}
+}
+
+// SearchCorpExternalDirInvoker 查询企业外部联系人
+func (c *MeetingClient) SearchCorpExternalDirInvoker(request *model.SearchCorpExternalDirRequest) *SearchCorpExternalDirInvoker {
+	requestDef := GenReqDefForSearchCorpExternalDir()
+	return &SearchCorpExternalDirInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SearchCorpResources 企业管理员分页查询企业资源订单列表
@@ -2099,6 +2276,28 @@ func (c *MeetingClient) SendVeriCodeForUpdateUserInfoInvoker(request *model.Send
 	return &SendVeriCodeForUpdateUserInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SetCohost 申请联席主持人
+//
+// 该接口用于设置联席主持人或释放联席主持人。只能将来宾设置为联席主持人。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *MeetingClient) SetCohost(request *model.SetCohostRequest) (*model.SetCohostResponse, error) {
+	requestDef := GenReqDefForSetCohost()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetCohostResponse), nil
+	}
+}
+
+// SetCohostInvoker 申请联席主持人
+func (c *MeetingClient) SetCohostInvoker(request *model.SetCohostRequest) *SetCohostInvoker {
+	requestDef := GenReqDefForSetCohost()
+	return &SetCohostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SetCustomMultiPicture 设置自定义多画面
 //
 // 该接口用于设置会中多画面。
@@ -2495,6 +2694,28 @@ func (c *MeetingClient) ShowHisMeetingDetail(request *model.ShowHisMeetingDetail
 func (c *MeetingClient) ShowHisMeetingDetailInvoker(request *model.ShowHisMeetingDetailRequest) *ShowHisMeetingDetailInvoker {
 	requestDef := GenReqDefForShowHisMeetingDetail()
 	return &ShowHisMeetingDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowLayout 查询多画面布局
+//
+// 该接口用于查询当前会议已保存的多画面布局。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *MeetingClient) ShowLayout(request *model.ShowLayoutRequest) (*model.ShowLayoutResponse, error) {
+	requestDef := GenReqDefForShowLayout()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowLayoutResponse), nil
+	}
+}
+
+// ShowLayoutInvoker 查询多画面布局
+func (c *MeetingClient) ShowLayoutInvoker(request *model.ShowLayoutRequest) *ShowLayoutInvoker {
+	requestDef := GenReqDefForShowLayout()
+	return &ShowLayoutInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowMeetingDetail 查询会议详情

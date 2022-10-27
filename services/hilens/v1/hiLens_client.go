@@ -41,9 +41,9 @@ func (c *HiLensClient) ListDeviceAlarmsInvoker(request *model.ListDeviceAlarmsRe
 	return &ListDeviceAlarmsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListDevices 获取设备列表
+// ListDevices 获取基础版设备列表
 //
-// 获取设备列表
+// 获取基础版设备列表
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -57,7 +57,7 @@ func (c *HiLensClient) ListDevices(request *model.ListDevicesRequest) (*model.Li
 	}
 }
 
-// ListDevicesInvoker 获取设备列表
+// ListDevicesInvoker 获取基础版设备列表
 func (c *HiLensClient) ListDevicesInvoker(request *model.ListDevicesRequest) *ListDevicesInvoker {
 	requestDef := GenReqDefForListDevices()
 	return &ListDevicesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

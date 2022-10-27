@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// ES扫描结果
 type EsScanResult struct {
 
 	// 扫描结果总数

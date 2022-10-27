@@ -15,7 +15,7 @@ type EipInfo struct {
 	// eip_address
 	EipAddress *string `json:"eip_address,omitempty"`
 
-	// IP版本号。取值：4表示IPv4,6表示IPv6。  [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
+	// IP版本号。  取值：4表示IPv4,6表示IPv6。  [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
 	IpVersion *int32 `json:"ip_version,omitempty"`
 }
 

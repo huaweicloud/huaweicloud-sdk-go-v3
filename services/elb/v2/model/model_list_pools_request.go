@@ -9,10 +9,10 @@ import (
 // Request Object
 type ListPoolsRequest struct {
 
-	// 分页查询中每页的监听器个数
+	// 分页查询中每页的后端服务器组个数
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 分页查询的起始的资源id，表示上一页最后一条查询记录的负载均衡器的id。不指定时表示查询第一页。
+	// 分页查询的起始的资源id，表示上一页最后一条查询记录的后端服务器组的id。不指定时表示查询第一页。
 	Marker *string `json:"marker,omitempty"`
 
 	// 分页的顺序，true表示从后往前分页，false表示从前往后分页，默认为false。
@@ -45,7 +45,7 @@ type ListPoolsRequest struct {
 	// 后端云服务器组关联的后端云服务器对应的弹性云服务器的ID。
 	MemberDeviceId *string `json:"member_device_id,omitempty"`
 
-	// 企业项目ID，仅用于基于企业项目的细粒度鉴权使用；如果参数中传递了loadbalancer_id，则用该负载均衡器对应企业项目ID鉴权；如果参数中没有传递loadbalancer_id，而传递了healthmonitor_id，则使用健康检查器对应的企业项目id鉴权。
+	// 企业项目ID。  传入all_granted_eps表示查询所有有权限的企业项目资源；\"0\"表示查询默认企业项目资源；或者指定的企业项目ID下的资源。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 

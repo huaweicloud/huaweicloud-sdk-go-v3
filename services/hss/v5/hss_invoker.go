@@ -5,6 +5,30 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/hss/v5/model"
 )
 
+type BatchCreateTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateTagsInvoker) Invoke() (*model.BatchCreateTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCreateTagsResponse), nil
+	}
+}
+
+type DeleteResourceInstanceTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteResourceInstanceTagInvoker) Invoke() (*model.DeleteResourceInstanceTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteResourceInstanceTagResponse), nil
+	}
+}
+
 type ListHostStatusInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -26,6 +50,18 @@ func (i *ListPasswordComplexityInvoker) Invoke() (*model.ListPasswordComplexityR
 		return nil, err
 	} else {
 		return result.(*model.ListPasswordComplexityResponse), nil
+	}
+}
+
+type ListQuotasDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListQuotasDetailInvoker) Invoke() (*model.ListQuotasDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListQuotasDetailResponse), nil
 	}
 }
 
@@ -77,6 +113,30 @@ func (i *ListSecurityEventsInvoker) Invoke() (*model.ListSecurityEventsResponse,
 	}
 }
 
+type ListUserChangeHistoriesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListUserChangeHistoriesInvoker) Invoke() (*model.ListUserChangeHistoriesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListUserChangeHistoriesResponse), nil
+	}
+}
+
+type ListUsersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListUsersInvoker) Invoke() (*model.ListUsersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListUsersResponse), nil
+	}
+}
+
 type ListVulnerabilitiesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -113,6 +173,18 @@ func (i *ShowCheckRuleDetailInvoker) Invoke() (*model.ShowCheckRuleDetailRespons
 	}
 }
 
+type ShowResourceQuotasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowResourceQuotasInvoker) Invoke() (*model.ShowResourceQuotasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowResourceQuotasResponse), nil
+	}
+}
+
 type ShowRiskConfigDetailInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -122,5 +194,17 @@ func (i *ShowRiskConfigDetailInvoker) Invoke() (*model.ShowRiskConfigDetailRespo
 		return nil, err
 	} else {
 		return result.(*model.ShowRiskConfigDetailResponse), nil
+	}
+}
+
+type SwitchHostsProtectStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SwitchHostsProtectStatusInvoker) Invoke() (*model.SwitchHostsProtectStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SwitchHostsProtectStatusResponse), nil
 	}
 }

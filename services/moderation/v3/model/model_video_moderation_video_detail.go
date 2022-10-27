@@ -21,10 +21,10 @@ type VideoModerationVideoDetail struct {
 	AudioText *string `json:"audio_text,omitempty"`
 
 	// 音频片段结束时间
-	EndTime *int32 `json:"end_time,omitempty"`
+	EndTime *float32 `json:"end_time,omitempty"`
 
 	// 音频片段开始时间
-	StartTime *int32 `json:"start_time,omitempty"`
+	StartTime *float32 `json:"start_time,omitempty"`
 
 	// 音频片段审核详情
 	Detail *[]VideoModerationAudioDetailList `json:"detail,omitempty"`

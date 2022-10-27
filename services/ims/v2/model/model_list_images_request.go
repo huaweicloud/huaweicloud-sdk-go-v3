@@ -12,7 +12,7 @@ import (
 // Request Object
 type ListImagesRequest struct {
 
-	// 镜像类型，目前支持以下类型： 公共镜像：gold 私有镜像：private 共享镜像：shared
+	// 镜像类型，目前支持以下类型： 公共镜像：gold 私有镜像：private 共享镜像：shared 市场镜像：market
 	Imagetype *ListImagesRequestImagetype `json:"__imagetype,omitempty"`
 
 	// 镜像是否可用，取值为true，扩展接口会默认为true，普通用户只能查询取值为true的镜像。

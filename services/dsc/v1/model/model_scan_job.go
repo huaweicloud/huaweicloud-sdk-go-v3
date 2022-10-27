@@ -11,38 +11,38 @@ import (
 
 type ScanJob struct {
 
-	// 任务创建时间
-	CreateTime *int64 `json:"create_time,omitempty"`
-
-	// 任务执行方式
-	Cycle *ScanJobCycle `json:"cycle,omitempty"`
-
 	// 任务ID
 	Id *string `json:"id,omitempty"`
-
-	// 任务上一次执行时间
-	LastRunTime *int64 `json:"last_run_time,omitempty"`
-
-	// 任务上一次扫描风险等级结果
-	LastScanRisk *string `json:"last_scan_risk,omitempty"`
 
 	// 任务名称
 	Name *string `json:"name,omitempty"`
 
-	// 任务开启状态
-	Open *bool `json:"open,omitempty"`
-
 	// 任务使用的规则组
 	RuleGroups *[]string `json:"rule_groups,omitempty"`
+
+	// 任务执行方式
+	Cycle *ScanJobCycle `json:"cycle,omitempty"`
 
 	// 任务当前状态
 	Status *ScanJobStatus `json:"status,omitempty"`
 
-	// SMN服务通知主题
-	TopicUrn *string `json:"topic_urn,omitempty"`
+	// 任务上一次执行时间
+	LastRunTime *int64 `json:"last_run_time,omitempty"`
+
+	// 任务创建时间
+	CreateTime *int64 `json:"create_time,omitempty"`
+
+	// 任务上一次扫描风险等级结果
+	LastScanRisk *string `json:"last_scan_risk,omitempty"`
 
 	// 是否使用了NLP进行扫描
 	UseNlp *bool `json:"use_nlp,omitempty"`
+
+	// 任务开启状态
+	Open *bool `json:"open,omitempty"`
+
+	// SMN服务通知主题
+	TopicUrn *string `json:"topic_urn,omitempty"`
 
 	// 任务启动时间
 	StartTime *int64 `json:"start_time,omitempty"`

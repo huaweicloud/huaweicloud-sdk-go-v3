@@ -125,6 +125,18 @@ func (i *AddUserInvoker) Invoke() (*model.AddUserResponse, error) {
 	}
 }
 
+type AllowClientRecordInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AllowClientRecordInvoker) Invoke() (*model.AllowClientRecordResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AllowClientRecordResponse), nil
+	}
+}
+
 type AllowGuestUnmuteInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -134,6 +146,18 @@ func (i *AllowGuestUnmuteInvoker) Invoke() (*model.AllowGuestUnmuteResponse, err
 		return nil, err
 	} else {
 		return result.(*model.AllowGuestUnmuteResponse), nil
+	}
+}
+
+type AllowWaitingParticipantInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AllowWaitingParticipantInvoker) Invoke() (*model.AllowWaitingParticipantResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AllowWaitingParticipantResponse), nil
 	}
 }
 
@@ -221,6 +245,18 @@ func (i *BatchDeleteUsersInvoker) Invoke() (*model.BatchDeleteUsersResponse, err
 	}
 }
 
+type BatchHandInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchHandInvoker) Invoke() (*model.BatchHandResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchHandResponse), nil
+	}
+}
+
 type BatchUpdateDevicesStatusInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -254,6 +290,18 @@ func (i *BroadcastParticipantInvoker) Invoke() (*model.BroadcastParticipantRespo
 		return nil, err
 	} else {
 		return result.(*model.BroadcastParticipantResponse), nil
+	}
+}
+
+type CancelBroadcastInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CancelBroadcastInvoker) Invoke() (*model.CancelBroadcastResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CancelBroadcastResponse), nil
 	}
 }
 
@@ -485,6 +533,18 @@ func (i *DeleteDepartmentInvoker) Invoke() (*model.DeleteDepartmentResponse, err
 	}
 }
 
+type DeleteLayoutInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteLayoutInvoker) Invoke() (*model.DeleteLayoutResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteLayoutResponse), nil
+	}
+}
+
 type DeleteRecordingsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -713,6 +773,18 @@ func (i *LockViewInvoker) Invoke() (*model.LockViewResponse, error) {
 	}
 }
 
+type MoveToWaitingRoomInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *MoveToWaitingRoomInvoker) Invoke() (*model.MoveToWaitingRoomResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.MoveToWaitingRoomResponse), nil
+	}
+}
+
 type MuteMeetingInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -833,6 +905,18 @@ func (i *RollcallParticipantInvoker) Invoke() (*model.RollcallParticipantRespons
 	}
 }
 
+type SaveLayoutInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SaveLayoutInvoker) Invoke() (*model.SaveLayoutResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SaveLayoutResponse), nil
+	}
+}
+
 type SearchAttendanceRecordsOfHisMeetingInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -878,6 +962,18 @@ func (i *SearchCorpDirInvoker) Invoke() (*model.SearchCorpDirResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.SearchCorpDirResponse), nil
+	}
+}
+
+type SearchCorpExternalDirInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SearchCorpExternalDirInvoker) Invoke() (*model.SearchCorpExternalDirResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SearchCorpExternalDirResponse), nil
 	}
 }
 
@@ -1133,6 +1229,18 @@ func (i *SendVeriCodeForUpdateUserInfoInvoker) Invoke() (*model.SendVeriCodeForU
 	}
 }
 
+type SetCohostInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetCohostInvoker) Invoke() (*model.SetCohostResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetCohostResponse), nil
+	}
+}
+
 type SetCustomMultiPictureInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1346,6 +1454,18 @@ func (i *ShowHisMeetingDetailInvoker) Invoke() (*model.ShowHisMeetingDetailRespo
 		return nil, err
 	} else {
 		return result.(*model.ShowHisMeetingDetailResponse), nil
+	}
+}
+
+type ShowLayoutInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowLayoutInvoker) Invoke() (*model.ShowLayoutResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowLayoutResponse), nil
 	}
 }
 

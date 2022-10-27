@@ -5,6 +5,18 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/bms/v1/model"
 )
 
+type AddServerNicsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddServerNicsInvoker) Invoke() (*model.AddServerNicsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddServerNicsResponse), nil
+	}
+}
+
 type AttachBaremetalServerVolumeInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -110,6 +122,18 @@ func (i *CreateBareMetalServersInvoker) Invoke() (*model.CreateBareMetalServersR
 		return nil, err
 	} else {
 		return result.(*model.CreateBareMetalServersResponse), nil
+	}
+}
+
+type DeleteServerNicsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteServerNicsInvoker) Invoke() (*model.DeleteServerNicsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteServerNicsResponse), nil
 	}
 }
 
@@ -245,6 +269,18 @@ func (i *ShowResetPwdInvoker) Invoke() (*model.ShowResetPwdResponse, error) {
 	}
 }
 
+type ShowServerRemoteConsoleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowServerRemoteConsoleInvoker) Invoke() (*model.ShowServerRemoteConsoleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowServerRemoteConsoleResponse), nil
+	}
+}
+
 type ShowTenantQuotaInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -266,6 +302,18 @@ func (i *ShowWindowsBaremetalServerPwdInvoker) Invoke() (*model.ShowWindowsBarem
 		return nil, err
 	} else {
 		return result.(*model.ShowWindowsBaremetalServerPwdResponse), nil
+	}
+}
+
+type UpdateBaremetalServerInterfaceAttachmentsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateBaremetalServerInterfaceAttachmentsInvoker) Invoke() (*model.UpdateBaremetalServerInterfaceAttachmentsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateBaremetalServerInterfaceAttachmentsResponse), nil
 	}
 }
 

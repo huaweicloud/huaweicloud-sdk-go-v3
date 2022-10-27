@@ -737,18 +737,6 @@ func (i *ShowEdgeNodeDetailInvoker) Invoke() (*model.ShowEdgeNodeDetailResponse,
 	}
 }
 
-type ShowEdgeNodeUpgradeDetailsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowEdgeNodeUpgradeDetailsInvoker) Invoke() (*model.ShowEdgeNodeUpgradeDetailsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowEdgeNodeUpgradeDetailsResponse), nil
-	}
-}
-
 type ShowEncryptdatasInvoker struct {
 	*invoker.BaseInvoker
 }

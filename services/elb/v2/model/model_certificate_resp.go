@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 证书接口增删改查响应体
+// 证书信息
 type CertificateResp struct {
 
 	// SSL证书id

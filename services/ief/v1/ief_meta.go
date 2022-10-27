@@ -1591,27 +1591,6 @@ func GenReqDefForShowEdgeNodeDetail() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForShowEdgeNodeUpgradeDetails() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v2/{project_id}/edgemgr/nodes/{node_id}/upgrade").
-		WithResponse(new(model.ShowEdgeNodeUpgradeDetailsResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("NodeId").
-		WithJsonTag("node_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("IefInstanceId").
-		WithJsonTag("ief-instance-id").
-		WithLocationType(def.Header))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
 func GenReqDefForShowEncryptdatas() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -2024,6 +2003,11 @@ func GenReqDefForUpdateNodeByDeviceId() *def.HttpRequestDef {
 		WithName("DeviceId").
 		WithJsonTag("device_id").
 		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IefInstanceId").
+		WithJsonTag("ief-instance-id").
+		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").

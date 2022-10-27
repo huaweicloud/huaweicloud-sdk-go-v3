@@ -21,7 +21,7 @@ type VideoModerationImageDetail struct {
 	OcrText *string `json:"ocr_text,omitempty"`
 
 	// 截帧在视频文件中的时间，单位为秒
-	Time *int32 `json:"time,omitempty"`
+	Time *float32 `json:"time,omitempty"`
 
 	// 图像帧审核详情
 	Detail *[]VideoModerationImageDetailList `json:"detail,omitempty"`

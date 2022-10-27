@@ -16,8 +16,6 @@ type PodResp struct {
 
 	Configs *PodConfigs `json:"configs"`
 
-	Affinity *Affinity `json:"affinity"`
-
 	// 应用实例init容器
 	InitContainers *[]ContainerResp `json:"init_containers,omitempty"`
 
@@ -41,9 +39,6 @@ type PodResp struct {
 
 	// 应用实例创建时间
 	CreatedAt string `json:"created_at"`
-
-	// 应用实例更新时间
-	UpdatedAt string `json:"updated_at"`
 
 	// 应用实例状态
 	State string `json:"state"`

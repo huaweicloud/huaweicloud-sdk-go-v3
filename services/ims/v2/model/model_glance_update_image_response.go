@@ -27,7 +27,7 @@ type GlanceUpdateImageResponse struct {
 	// 镜像后端存储类型，目前只支持uds
 	ImageSourceType *GlanceUpdateImageResponseImageSourceType `json:"__image_source_type,omitempty"`
 
-	// 镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
+	// 镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared 市场镜像：market
 	Imagetype *GlanceUpdateImageResponseImagetype `json:"__imagetype,omitempty"`
 
 	// 是否是注册过的镜像，取值为“true”或者“false”。
@@ -253,6 +253,7 @@ type GlanceUpdateImageResponseImagetypeEnum struct {
 	GOLD    GlanceUpdateImageResponseImagetype
 	PRIVATE GlanceUpdateImageResponseImagetype
 	SHARED  GlanceUpdateImageResponseImagetype
+	MARKET  GlanceUpdateImageResponseImagetype
 }
 
 func GetGlanceUpdateImageResponseImagetypeEnum() GlanceUpdateImageResponseImagetypeEnum {
@@ -265,6 +266,9 @@ func GetGlanceUpdateImageResponseImagetypeEnum() GlanceUpdateImageResponseImaget
 		},
 		SHARED: GlanceUpdateImageResponseImagetype{
 			value: "shared",
+		},
+		MARKET: GlanceUpdateImageResponseImagetype{
+			value: "market",
 		},
 	}
 }

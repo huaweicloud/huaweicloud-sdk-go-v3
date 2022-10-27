@@ -14,13 +14,13 @@ type UpdatePostalReq struct {
 	// 收件人姓名。 此参数不携带或携带值为null时，取值不更新。
 	Recipient *string `json:"recipient,omitempty"`
 
-	// 省/自治区/直辖市。例如：江苏省。 此参数不携带或携带值为null时，取值不更新。
+	// 省/自治区/直辖市。例如：江苏省。 该参数携带并赋值时，city、district参数也必须赋值。 此参数不携带或携带值为null时，取值不更新。
 	Province *string `json:"province,omitempty"`
 
-	// 市/区。例如：南京市。 此参数不携带或携带值为null时，取值不更新。
+	// 市/区。例如：南京市。 该参数携带并赋值时，province、district参数也必须赋值。 此参数不携带或携带值为null时，取值不更新。
 	City *string `json:"city,omitempty"`
 
-	// 区。例如：雨花区。 此参数不携带或携带值为null时，取值不更新。
+	// 区。例如：雨花区。 该参数携带并赋值时，province、city参数也必须赋值。 此参数不携带或携带值为null时，取值不更新。
 	District *string `json:"district,omitempty"`
 
 	// 邮寄详细地址。 此参数不携带或携带值为null时，取值不更新。

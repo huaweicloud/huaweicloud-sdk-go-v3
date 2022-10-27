@@ -9,16 +9,16 @@ import (
 // This is a auto create Body Object
 type UpdateCertificateRequestBody struct {
 
-	// SSL证书对象 最大长度64KB 支持证书链，最大11层(含证书和证书链)
+	// SSL证书对象 最大长度65536字符。 支持证书链，最大11层(含证书和证书链)
 	Certificate *string `json:"certificate,omitempty"`
 
-	// 服务端的私有密钥。  格式：私钥为PEM格式。 最大长度8KB。
+	// 服务端的私有密钥。  格式：私钥为PEM格式。 最大长度8192字符。
 	PrivateKey *string `json:"private_key,omitempty"`
 
 	// SSL证书的描述信息。  支持的最大字符长度：255
 	Description *string `json:"description,omitempty"`
 
-	// 服务端证书所签的域名。默认值：null。  支持的最大字符长度：1024  取值范围：  普通域名由若干字符串组成，总长度为0-100，字符串间以\".\"分割，单个字符串长度不超过63个字符，只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。 泛域名在普通域名的基础上仅允许首字母为\"*\"。该字段仅type为server时有效。
+	// 服务端证书所签的域名。 取值：总长度为0-1024。  普通域名由若干字符串组成，字符串间以\".\"分割，单个字符串长度不超过63个字符，只能包含英文字母、数字或\"-\"，且必须以字母或数字开头和结尾。  泛域名仅允许首段为\"*\"，其他取值限制与普通域名一致。如：*.domain.com，但不能是：*my.domain.com   该字段仅type为server时有效。
 	Domain *string `json:"domain,omitempty"`
 
 	// SSL证书的名称。  支持的最大字符长度：255

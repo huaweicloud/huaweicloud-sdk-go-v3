@@ -24,7 +24,7 @@ type ListDesktopsDetailRequest struct {
 	// 用于分页查询，查询的起始记录序号，从0开始。
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 用于分页查询，取值范围0-1000，默认值1000。
+	// 用于分页查询，取值范围0-500，默认值500。
 	Limit *int32 `json:"limit,omitempty"`
 
 	// 桌面ID。

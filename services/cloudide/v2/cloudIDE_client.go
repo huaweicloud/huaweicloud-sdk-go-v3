@@ -41,6 +41,28 @@ func (c *CloudIDEClient) CreateExtensionAuthorizationInvoker(request *model.Crea
 	return &CreateExtensionAuthorizationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListExtensions 查询插件列表
+//
+// 查询插件列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *CloudIDEClient) ListExtensions(request *model.ListExtensionsRequest) (*model.ListExtensionsResponse, error) {
+	requestDef := GenReqDefForListExtensions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListExtensionsResponse), nil
+	}
+}
+
+// ListExtensionsInvoker 查询插件列表
+func (c *CloudIDEClient) ListExtensionsInvoker(request *model.ListExtensionsRequest) *ListExtensionsInvoker {
+	requestDef := GenReqDefForListExtensions()
+	return &ListExtensionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListProjectTemplates 查询技术栈模板工程
 //
 // 查询技术栈模板工程
@@ -127,6 +149,72 @@ func (c *CloudIDEClient) ShowExtensionAuthorization(request *model.ShowExtension
 func (c *CloudIDEClient) ShowExtensionAuthorizationInvoker(request *model.ShowExtensionAuthorizationRequest) *ShowExtensionAuthorizationInvoker {
 	requestDef := GenReqDefForShowExtensionAuthorization()
 	return &ShowExtensionAuthorizationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowExtensionDetail 查询插件详细信息
+//
+// 查询插件详细信息
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *CloudIDEClient) ShowExtensionDetail(request *model.ShowExtensionDetailRequest) (*model.ShowExtensionDetailResponse, error) {
+	requestDef := GenReqDefForShowExtensionDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowExtensionDetailResponse), nil
+	}
+}
+
+// ShowExtensionDetailInvoker 查询插件详细信息
+func (c *CloudIDEClient) ShowExtensionDetailInvoker(request *model.ShowExtensionDetailRequest) *ShowExtensionDetailInvoker {
+	requestDef := GenReqDefForShowExtensionDetail()
+	return &ShowExtensionDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowExtensionEvaluation 查询插件评价
+//
+// 查询插件评价
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *CloudIDEClient) ShowExtensionEvaluation(request *model.ShowExtensionEvaluationRequest) (*model.ShowExtensionEvaluationResponse, error) {
+	requestDef := GenReqDefForShowExtensionEvaluation()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowExtensionEvaluationResponse), nil
+	}
+}
+
+// ShowExtensionEvaluationInvoker 查询插件评价
+func (c *CloudIDEClient) ShowExtensionEvaluationInvoker(request *model.ShowExtensionEvaluationRequest) *ShowExtensionEvaluationInvoker {
+	requestDef := GenReqDefForShowExtensionEvaluation()
+	return &ShowExtensionEvaluationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowExtensionEvaluationStar 查询插件评星
+//
+// 查询插件评星
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *CloudIDEClient) ShowExtensionEvaluationStar(request *model.ShowExtensionEvaluationStarRequest) (*model.ShowExtensionEvaluationStarResponse, error) {
+	requestDef := GenReqDefForShowExtensionEvaluationStar()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowExtensionEvaluationStarResponse), nil
+	}
+}
+
+// ShowExtensionEvaluationStarInvoker 查询插件评星
+func (c *CloudIDEClient) ShowExtensionEvaluationStarInvoker(request *model.ShowExtensionEvaluationStarRequest) *ShowExtensionEvaluationStarInvoker {
+	requestDef := GenReqDefForShowExtensionEvaluationStar()
+	return &ShowExtensionEvaluationStarInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowPrice 获取技术栈计费信息

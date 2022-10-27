@@ -1,0 +1,63 @@
+package model
+
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
+	"strings"
+)
+
+type AgencyItem struct {
+
+	// 委托名称。
+	Name *AgencyItemName `json:"name,omitempty"`
+}
+
+func (o AgencyItem) String() string {
+	data, err := utils.Marshal(o)
+	if err != nil {
+		return "AgencyItem struct{}"
+	}
+
+	return strings.Join([]string{"AgencyItem", string(data)}, " ")
+}
+
+type AgencyItemName struct {
+	value string
+}
+
+type AgencyItemNameEnum struct {
+	CAE_TRUST AgencyItemName
+}
+
+func GetAgencyItemNameEnum() AgencyItemNameEnum {
+	return AgencyItemNameEnum{
+		CAE_TRUST: AgencyItemName{
+			value: "cae_trust",
+		},
+	}
+}
+
+func (c AgencyItemName) Value() string {
+	return c.value
+}
+
+func (c AgencyItemName) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *AgencyItemName) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
