@@ -52,6 +52,9 @@ type MysqlProxy struct {
 
 	// Proxy实例名称。
 	Name *string `json:"name,omitempty"`
+
+	// Proxy事务拆分开关状态【ON/OFF】。
+	TransactionSplit *string `json:"transaction_split,omitempty"`
 }
 
 func (o MysqlProxy) String() string {

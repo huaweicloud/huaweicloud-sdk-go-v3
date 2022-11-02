@@ -21,7 +21,7 @@ type ListExecuteJobRequest struct {
 	// 集群编号。
 	ClusterId string `json:"cluster_id"`
 
-	// 作业状态编码：  - -1：Terminated表示已终止的作业状态 - 2：Running表示运行中的作业状态 - 3：Completed表示已完成的作业状态 - 4：Abnormal表示异常的作业状态
+	// 作业状态编码：  - 1：Terminated表示已终止的作业状态 - 2：Running表示运行中的作业状态 - 3：Completed表示已完成的作业状态 - 4：Abnormal表示异常的作业状态
 	State *string `json:"state,omitempty"`
 
 	// 作业执行对象的编号。

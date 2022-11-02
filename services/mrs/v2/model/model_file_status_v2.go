@@ -29,7 +29,7 @@ type FileStatusV2 struct {
 	// 文件长度。
 	Length *int32 `json:"length,omitempty"`
 
-	// 文件类型：  - FILE：文件  - DIRECTORY：目录
+	// 文件类型： - FILE：文件 - DIRECTORY：目录
 	Type *string `json:"type,omitempty"`
 
 	// 该目录下的文件条目数。

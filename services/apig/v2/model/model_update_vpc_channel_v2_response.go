@@ -14,14 +14,17 @@ type UpdateVpcChannelV2Response struct {
 	// VPC通道的名称。  长度为3 ~ 64位的字符串，字符串由中文、英文字母、数字、中划线、下划线组成，且只能以英文或中文开头。 > 中文字符必须为UTF-8或者unicode编码。
 	Name string `json:"name"`
 
-	// VPC通道中主机的端口号。  取值范围1 ~ 65535，仅VPC通道类型为2时有效。  VPC通道类型为2时必选。
-	Port *int32 `json:"port,omitempty"`
+	// VPC通道中主机的端口号。  取值范围1 ~ 65535。
+	Port int32 `json:"port"`
 
-	// 分发算法。 - 1：加权轮询（wrr） - 2：加权最少连接（wleastconn） - 3：源地址哈希（source） - 4：URI哈希（uri）  VPC通道类型为2时必选。
-	BalanceStrategy *UpdateVpcChannelV2ResponseBalanceStrategy `json:"balance_strategy,omitempty"`
+	// 分发算法。 - 1：加权轮询（wrr） - 2：加权最少连接（wleastconn） - 3：源地址哈希（source） - 4：URI哈希（uri）
+	BalanceStrategy UpdateVpcChannelV2ResponseBalanceStrategy `json:"balance_strategy"`
 
-	// VPC通道的成员类型。 - ip - ecs  VPC通道类型为2时必选。
-	MemberType *UpdateVpcChannelV2ResponseMemberType `json:"member_type,omitempty"`
+	// VPC通道的成员类型。 - ip - ecs
+	MemberType UpdateVpcChannelV2ResponseMemberType `json:"member_type"`
+
+	// VPC通道的字典编码  支持英文，数字，特殊字符（-_.）  暂不支持
+	DictCode *string `json:"dict_code,omitempty"`
 
 	// VPC通道的创建时间
 	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
@@ -32,9 +35,14 @@ type UpdateVpcChannelV2Response struct {
 	// VPC通道的状态。 - 1：正常 - 2：异常
 	Status *UpdateVpcChannelV2ResponseStatus `json:"status,omitempty"`
 
-	// 后端云服务器组列表。  暂不支持
-	MemberGroups   *[]MemberGroupInfo `json:"member_groups,omitempty"`
-	HttpStatusCode int                `json:"-"`
+	// 后端云服务器组列表。
+	MemberGroups *[]MemberGroupInfo `json:"member_groups,omitempty"`
+
+	MicroserviceInfo *MicroServiceInfo `json:"microservice_info,omitempty"`
+
+	// vpc通道类型。 - 2：服务器类型 - 3：微服务类型
+	Type           *int32 `json:"type,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o UpdateVpcChannelV2Response) String() string {

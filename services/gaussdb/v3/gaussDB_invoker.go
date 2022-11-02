@@ -629,6 +629,18 @@ func (i *UpdateInstanceMonitorInvoker) Invoke() (*model.UpdateInstanceMonitorRes
 	}
 }
 
+type UpdateTransactionSplitStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateTransactionSplitStatusInvoker) Invoke() (*model.UpdateTransactionSplitStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateTransactionSplitStatusResponse), nil
+	}
+}
+
 type DeleteSqlFilterRuleInvoker struct {
 	*invoker.BaseInvoker
 }

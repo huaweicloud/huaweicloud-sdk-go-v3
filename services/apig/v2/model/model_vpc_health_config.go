@@ -9,18 +9,19 @@ import (
 	"strings"
 )
 
+// 健康检查详情。
 type VpcHealthConfig struct {
 
-	// 使用以下协议，对VPC中主机执行健康检查。
+	// 使用以下协议，对VPC中主机执行健康检查： - TCP - HTTP - HTTPS
 	Protocol VpcHealthConfigProtocol `json:"protocol"`
 
-	// 健康检查时的目标路径。protocol = http时必选
+	// 健康检查时的目标路径。protocol = http或https时必选
 	Path *string `json:"path,omitempty"`
 
 	// 健康检查时的请求方法
 	Method *VpcHealthConfigMethod `json:"method,omitempty"`
 
-	// 健康检查的目标端口，缺省时为VPC中主机的端口号。
+	// 健康检查的目标端口，缺少或port = 0时为VPC中主机的端口号。  若此端口存在非0值，则使用此端口进行健康检查。
 	Port *int32 `json:"port,omitempty"`
 
 	// 正常阈值。判定VPC通道中主机正常的依据为：连续检查x成功，x为您设置的正常阈值。

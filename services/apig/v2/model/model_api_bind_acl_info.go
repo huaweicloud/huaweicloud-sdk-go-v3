@@ -52,8 +52,9 @@ type ApiBindAclInfoEntityType struct {
 }
 
 type ApiBindAclInfoEntityTypeEnum struct {
-	IP     ApiBindAclInfoEntityType
-	DOMAIN ApiBindAclInfoEntityType
+	IP        ApiBindAclInfoEntityType
+	DOMAIN    ApiBindAclInfoEntityType
+	DOMAIN_ID ApiBindAclInfoEntityType
 }
 
 func GetApiBindAclInfoEntityTypeEnum() ApiBindAclInfoEntityTypeEnum {
@@ -63,6 +64,9 @@ func GetApiBindAclInfoEntityTypeEnum() ApiBindAclInfoEntityTypeEnum {
 		},
 		DOMAIN: ApiBindAclInfoEntityType{
 			value: "DOMAIN",
+		},
+		DOMAIN_ID: ApiBindAclInfoEntityType{
+			value: "DOMAIN_ID",
 		},
 	}
 }

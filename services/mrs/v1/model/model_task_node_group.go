@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-type TaskNodeGroups struct {
+type TaskNodeGroup struct {
 
 	// Task节点节点数量，取值范围0～500，Core与Task节点总数最大为500个。
 	NodeNum int32 `json:"node_num"`
@@ -18,7 +18,7 @@ type TaskNodeGroups struct {
 	NodeSize string `json:"node_size"`
 
 	// Task节点数据磁盘存储类别，目前支持SATA、SAS和SSD。 - SATA：普通IO - SAS：高IO - SSD：超高IO - GPSSD：通用型SSD
-	DataVolumeType TaskNodeGroupsDataVolumeType `json:"data_volume_type"`
+	DataVolumeType TaskNodeGroupDataVolumeType `json:"data_volume_type"`
 
 	// Task节点数据磁盘存储数目，取值范围：0～10。
 	DataVolumeCount int32 `json:"data_volume_count"`
@@ -29,52 +29,52 @@ type TaskNodeGroups struct {
 	AutoScalingPolicy *AutoScalingPolicy `json:"auto_scaling_policy,omitempty"`
 }
 
-func (o TaskNodeGroups) String() string {
+func (o TaskNodeGroup) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "TaskNodeGroups struct{}"
+		return "TaskNodeGroup struct{}"
 	}
 
-	return strings.Join([]string{"TaskNodeGroups", string(data)}, " ")
+	return strings.Join([]string{"TaskNodeGroup", string(data)}, " ")
 }
 
-type TaskNodeGroupsDataVolumeType struct {
+type TaskNodeGroupDataVolumeType struct {
 	value string
 }
 
-type TaskNodeGroupsDataVolumeTypeEnum struct {
-	SATA  TaskNodeGroupsDataVolumeType
-	SAS   TaskNodeGroupsDataVolumeType
-	SSD   TaskNodeGroupsDataVolumeType
-	GPSSD TaskNodeGroupsDataVolumeType
+type TaskNodeGroupDataVolumeTypeEnum struct {
+	SATA  TaskNodeGroupDataVolumeType
+	SAS   TaskNodeGroupDataVolumeType
+	SSD   TaskNodeGroupDataVolumeType
+	GPSSD TaskNodeGroupDataVolumeType
 }
 
-func GetTaskNodeGroupsDataVolumeTypeEnum() TaskNodeGroupsDataVolumeTypeEnum {
-	return TaskNodeGroupsDataVolumeTypeEnum{
-		SATA: TaskNodeGroupsDataVolumeType{
+func GetTaskNodeGroupDataVolumeTypeEnum() TaskNodeGroupDataVolumeTypeEnum {
+	return TaskNodeGroupDataVolumeTypeEnum{
+		SATA: TaskNodeGroupDataVolumeType{
 			value: "SATA",
 		},
-		SAS: TaskNodeGroupsDataVolumeType{
+		SAS: TaskNodeGroupDataVolumeType{
 			value: "SAS",
 		},
-		SSD: TaskNodeGroupsDataVolumeType{
+		SSD: TaskNodeGroupDataVolumeType{
 			value: "SSD",
 		},
-		GPSSD: TaskNodeGroupsDataVolumeType{
+		GPSSD: TaskNodeGroupDataVolumeType{
 			value: "GPSSD",
 		},
 	}
 }
 
-func (c TaskNodeGroupsDataVolumeType) Value() string {
+func (c TaskNodeGroupDataVolumeType) Value() string {
 	return c.value
 }
 
-func (c TaskNodeGroupsDataVolumeType) MarshalJSON() ([]byte, error) {
+func (c TaskNodeGroupDataVolumeType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
 
-func (c *TaskNodeGroupsDataVolumeType) UnmarshalJSON(b []byte) error {
+func (c *TaskNodeGroupDataVolumeType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

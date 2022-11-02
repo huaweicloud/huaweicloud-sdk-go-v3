@@ -8,13 +8,13 @@ import (
 
 type SubmitJobReqV11 struct {
 
-	// 作业名称，只能由字母、数字、中划线和下划线组成，并且长度为1～64个字符。   说明： 不同作业的名称允许相同，但不建议设置相同。
+	// 作业名称，只能由字母、数字、中划线和下划线组成，并且长度为1～64个字符。  说明： 不同作业的名称允许相同，但不建议设置相同。
 	JobName string `json:"job_name"`
 
 	// 集群ID。
 	ClusterId string `json:"cluster_id"`
 
-	// 执行程序Jar包或sql文件地址，需要满足如下要求：  - 最多为1023字符，不能包含;|&><'$特殊字符，且不可为空或全空格。 - 需要以“/”或“s3a://”开头。OBS路径不支持KMS加密的文件或程序。 - Spark Script需要以“.sql”结尾，MapReduce和Spark Jar需要以“.jar”结尾，sql和jar不区分大小写。  说明： 作业类型为MapReduce或Spark时，jar_path参数为必选。
+	// 执行程序Jar包或sql文件地址，需要满足如下要求： - 最多为1023字符，不能包含;|&><'$特殊字符，且不可为空或全空格。 - 需要以“/”或“s3a://”开头。OBS路径不支持KMS加密的文件或程序。 - Spark Script需要以“.sql”结尾，MapReduce和Spark Jar需要以“.jar”结尾，sql和jar不区分大小写。 说明： 作业类型为MapReduce或Spark时，jar_path参数为必选。
 	JarPath *string `json:"jar_path,omitempty"`
 
 	// 数据输入地址，必须以“/”或“s3a://”开头。请配置为正确的OBS路径，OBS路径不支持KMS加密的文件或程序。  最多为1023字符，不能包含;|&>'<$特殊字符，可为空。
@@ -29,7 +29,7 @@ type SubmitJobReqV11 struct {
 	// 作业类型码。  - 1：MapReduce - 2：Spark - 3：Hive Script - 4：HiveSQL（当前不支持） - 5：DistCp，导入、导出数据。 - 6：Spark Script - 7：Spark SQL，提交SQL语句（该接口当前不支持）
 	JobType int32 `json:"job_type"`
 
-	//   文件操作类型，包括： export：从HDFS导出数据至OBS import：从OBS导入数据至HDFS
+	// 文件操作类型，包括： - export：从HDFS导出数据至OBS - import：从OBS导入数据至HDFS
 	FileAction *string `json:"file_action,omitempty"`
 
 	// 程序执行的关键参数，该参数由用户程序内的函数指定，MRS只负责参数的传入。 最多为150000字符，不能包含;|&>'<$!\\\"\\特殊字符，可为空。 说明： 用户输入带有敏感信息（如登录密码）的参数时，可通过在参数名前添加“@”的方式，为该参数值加密，以防止敏感信息被明文形式持久化。在查看作业信息时，敏感信息显示为“*”。 例如：username=admin @password=admin_123

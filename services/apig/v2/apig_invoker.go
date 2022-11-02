@@ -317,6 +317,18 @@ func (i *DisassociateSignatureKeyV2Invoker) Invoke() (*model.DisassociateSignatu
 	}
 }
 
+type ImportMicroserviceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ImportMicroserviceInvoker) Invoke() (*model.ImportMicroserviceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ImportMicroserviceResponse), nil
+	}
+}
+
 type ListApiGroupsQuantitiesV2Invoker struct {
 	*invoker.BaseInvoker
 }
@@ -494,6 +506,18 @@ func (i *ListLatelyGroupStatisticsV2Invoker) Invoke() (*model.ListLatelyGroupSta
 		return nil, err
 	} else {
 		return result.(*model.ListLatelyGroupStatisticsV2Response), nil
+	}
+}
+
+type ListMetricDataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListMetricDataInvoker) Invoke() (*model.ListMetricDataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListMetricDataResponse), nil
 	}
 }
 
@@ -1469,6 +1493,126 @@ func (i *ImportApiDefinitionsV2Invoker) Invoke() (*model.ImportApiDefinitionsV2R
 	}
 }
 
+type BatchAssociateCertsV2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchAssociateCertsV2Invoker) Invoke() (*model.BatchAssociateCertsV2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchAssociateCertsV2Response), nil
+	}
+}
+
+type BatchAssociateDomainsV2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchAssociateDomainsV2Invoker) Invoke() (*model.BatchAssociateDomainsV2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchAssociateDomainsV2Response), nil
+	}
+}
+
+type BatchDisassociateCertsV2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDisassociateCertsV2Invoker) Invoke() (*model.BatchDisassociateCertsV2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDisassociateCertsV2Response), nil
+	}
+}
+
+type BatchDisassociateDomainsV2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDisassociateDomainsV2Invoker) Invoke() (*model.BatchDisassociateDomainsV2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDisassociateDomainsV2Response), nil
+	}
+}
+
+type CreateCertificateV2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateCertificateV2Invoker) Invoke() (*model.CreateCertificateV2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateCertificateV2Response), nil
+	}
+}
+
+type DeleteCertificateV2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteCertificateV2Invoker) Invoke() (*model.DeleteCertificateV2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteCertificateV2Response), nil
+	}
+}
+
+type ListAttachedDomainsV2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAttachedDomainsV2Invoker) Invoke() (*model.ListAttachedDomainsV2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAttachedDomainsV2Response), nil
+	}
+}
+
+type ListCertificatesV2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCertificatesV2Invoker) Invoke() (*model.ListCertificatesV2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCertificatesV2Response), nil
+	}
+}
+
+type ShowDetailsOfCertificateV2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDetailsOfCertificateV2Invoker) Invoke() (*model.ShowDetailsOfCertificateV2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDetailsOfCertificateV2Response), nil
+	}
+}
+
+type UpdateCertificateV2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateCertificateV2Invoker) Invoke() (*model.UpdateCertificateV2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateCertificateV2Response), nil
+	}
+}
+
 type AddingBackendInstancesV2Invoker struct {
 	*invoker.BaseInvoker
 }
@@ -1478,6 +1622,42 @@ func (i *AddingBackendInstancesV2Invoker) Invoke() (*model.AddingBackendInstance
 		return nil, err
 	} else {
 		return result.(*model.AddingBackendInstancesV2Response), nil
+	}
+}
+
+type BatchDisableMembersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDisableMembersInvoker) Invoke() (*model.BatchDisableMembersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDisableMembersResponse), nil
+	}
+}
+
+type BatchEnableMembersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchEnableMembersInvoker) Invoke() (*model.BatchEnableMembersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchEnableMembersResponse), nil
+	}
+}
+
+type CreateMemberGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateMemberGroupInvoker) Invoke() (*model.CreateMemberGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateMemberGroupResponse), nil
 	}
 }
 
@@ -1505,6 +1685,18 @@ func (i *DeleteBackendInstanceV2Invoker) Invoke() (*model.DeleteBackendInstanceV
 	}
 }
 
+type DeleteMemberGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteMemberGroupInvoker) Invoke() (*model.DeleteMemberGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteMemberGroupResponse), nil
+	}
+}
+
 type DeleteVpcChannelV2Invoker struct {
 	*invoker.BaseInvoker
 }
@@ -1529,6 +1721,18 @@ func (i *ListBackendInstancesV2Invoker) Invoke() (*model.ListBackendInstancesV2R
 	}
 }
 
+type ListMemberGroupsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListMemberGroupsInvoker) Invoke() (*model.ListMemberGroupsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListMemberGroupsResponse), nil
+	}
+}
+
 type ListVpcChannelsV2Invoker struct {
 	*invoker.BaseInvoker
 }
@@ -1541,6 +1745,18 @@ func (i *ListVpcChannelsV2Invoker) Invoke() (*model.ListVpcChannelsV2Response, e
 	}
 }
 
+type ShowDetailsOfMemberGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDetailsOfMemberGroupInvoker) Invoke() (*model.ShowDetailsOfMemberGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDetailsOfMemberGroupResponse), nil
+	}
+}
+
 type ShowDetailsOfVpcChannelV2Invoker struct {
 	*invoker.BaseInvoker
 }
@@ -1550,6 +1766,42 @@ func (i *ShowDetailsOfVpcChannelV2Invoker) Invoke() (*model.ShowDetailsOfVpcChan
 		return nil, err
 	} else {
 		return result.(*model.ShowDetailsOfVpcChannelV2Response), nil
+	}
+}
+
+type UpdateBackendInstancesV2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateBackendInstancesV2Invoker) Invoke() (*model.UpdateBackendInstancesV2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateBackendInstancesV2Response), nil
+	}
+}
+
+type UpdateHealthCheckInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateHealthCheckInvoker) Invoke() (*model.UpdateHealthCheckResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateHealthCheckResponse), nil
+	}
+}
+
+type UpdateMemberGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateMemberGroupInvoker) Invoke() (*model.UpdateMemberGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateMemberGroupResponse), nil
 	}
 }
 

@@ -1164,6 +1164,28 @@ func (c *GaussDBClient) UpdateInstanceMonitorInvoker(request *model.UpdateInstan
 	return &UpdateInstanceMonitorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateTransactionSplitStatus 开启/关闭proxy事务拆分
+//
+// 开启/关闭proxy事务拆分
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GaussDBClient) UpdateTransactionSplitStatus(request *model.UpdateTransactionSplitStatusRequest) (*model.UpdateTransactionSplitStatusResponse, error) {
+	requestDef := GenReqDefForUpdateTransactionSplitStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateTransactionSplitStatusResponse), nil
+	}
+}
+
+// UpdateTransactionSplitStatusInvoker 开启/关闭proxy事务拆分
+func (c *GaussDBClient) UpdateTransactionSplitStatusInvoker(request *model.UpdateTransactionSplitStatusRequest) *UpdateTransactionSplitStatusInvoker {
+	requestDef := GenReqDefForUpdateTransactionSplitStatus()
+	return &UpdateTransactionSplitStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteSqlFilterRule 删除SQL限流规则
 //
 // 删除SQL限流规则

@@ -19,7 +19,7 @@ type CreateAclStrategyV2Response struct {
 	// ACL策略值
 	AclValue *string `json:"acl_value,omitempty"`
 
-	// 对象类型： - IP - DOMAIN
+	// 对象类型： - IP - DOMAIN - DOMAIN_ID
 	EntityType *string `json:"entity_type,omitempty"`
 
 	// 编号

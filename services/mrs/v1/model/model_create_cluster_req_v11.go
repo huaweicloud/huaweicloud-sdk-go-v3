@@ -9,9 +9,9 @@ import (
 	"strings"
 )
 
-type CreateClusterReq struct {
+type CreateClusterReqV11 struct {
 
-	// 集群版本。 MRS目前支持MRS 1.9.2、MRS 3.1.0版本。
+	// 集群版本。 例如：MRS 3.1.0。
 	ClusterVersion string `json:"cluster_version"`
 
 	// 集群名称，不允许相同。 只能由字母、数字、中划线和下划线组成，并且长度为1～64个字符。
@@ -20,11 +20,11 @@ type CreateClusterReq struct {
 	// Master节点数量。启用集群高可用功能时配置为2，不启用集群高可用功能时配置为1。MRS 3.x版本暂时不支持该参数配置为1。
 	MasterNodeNum int32 `json:"master_node_num"`
 
-	// Core节点数量。 取值范围：[1～500] Core节点默认的最大值为500，如果用户需要的Core节点数大于500，请申请扩大配额。
+	// Core节点数量。  取值范围：[1～500]  Core节点默认的最大值为500，如果用户需要的Core节点数大于500，请申请扩大配额。
 	CoreNodeNum int32 `json:"core_node_num"`
 
 	// 集群的计费模式。  12：表示按需计费。接口调用仅支持创建按需计费集群。
-	BillingType CreateClusterReqBillingType `json:"billing_type"`
+	BillingType CreateClusterReqV11BillingType `json:"billing_type"`
 
 	// 集群区域信息，请参见[终端节点及区域](https://support.huaweicloud.com/api-mrs/mrs_02_0003.html)。
 	DataCenter string `json:"data_center"`
@@ -39,7 +39,7 @@ type CreateClusterReq struct {
 	CoreNodeSize string `json:"core_node_size"`
 
 	// 服务组件安装列表信息。
-	ComponentList []ComponentList `json:"component_list"`
+	ComponentList []ComponentAmbV11 `json:"component_list"`
 
 	// 可用分区ID。  - 华北-北京一可用区1（cn-north-1a）：ae04cf9d61544df3806a3feeb401b204 - 华北-北京一可用区2（cn-north-1b）：d573142f24894ef3bd3664de068b44b0 - 华东-上海二可用区1（cn-east-2a）：72d50cedc49846b9b42c21495f38d81c - 华东-上海二可用区2（cn-east-2b）：38b0f7a602344246bcb0da47b5d548e7 - 华东-上海二可用区3（cn-east-2c）：5547fd6bf8f84bb5a7f9db062ad3d015 - 华南-广州可用区1（cn-south-1a）：34f5ff4865cf4ed6b270f15382ebdec5 - 华南-广州可用区2（cn-south-2b）：043c7e39ecb347a08dc8fcb6c35a274e - 华南-广州可用区3（cn-south-1c）：af1687643e8c4ec1b34b688e4e3b8901 - 华北-北京四可用区1（cn-north-4a）：effdcbc7d4d64a02aa1fa26b42f56533 - 华北-北京四可用区2（cn-north-4b）：a0865121f83b41cbafce65930a22a6e8 - 华北-北京四可用区3（cn-north-4c）：2dcb154ac2724a6d92e9bcc859657c1e
 	AvailableZoneId string `json:"available_zone_id"`
@@ -57,25 +57,25 @@ type CreateClusterReq struct {
 	SecurityGroupsId *string `json:"security_groups_id,omitempty"`
 
 	// 创建集群时可同时提交作业，当前版本暂时只支持新增一个作业。
-	AddJobs *[]AddJobs `json:"add_jobs,omitempty"`
+	AddJobs *[]AddJobsReqV11 `json:"add_jobs,omitempty"`
 
 	// Master和Core节点数据磁盘存储空间。为增大数据存储容量，创建集群时可同时添加磁盘。可以根据如下应用场景合理选择磁盘存储空间大小： - 数据存储和计算分离，数据存储在OBS系统中，集群费用相对较低，计算性能不高，并且集群随时可以删除，建议数据计算不频繁场景下使用。 - 数据存储和计算不分离，数据存储在HDFS中，集群费用相对较高，计算性能高，集群需要长期存在，建议数据计算频繁场景下使用。  取值范围：100GB～32000GB，传值只需填数字，不需要带单位GB。 不建议使用该参数，详情请参考volume_type参数的说明。
 	VolumeSize *int32 `json:"volume_size,omitempty"`
 
 	// Master和Core节点的磁盘存储类别，目前支持SATA、SAS、SSD和GPSSD。磁盘参数可以使用volume_type和volume_size表示，也可以使用多磁盘相关的参数表示。volume_type和volume_size这两个参数如果与多磁盘参数同时出现，系统优先读取volume_type和volume_size参数。建议使用多磁盘参数。 - SATA：普通IO - SAS：高IO - SSD：超高IO - GPSSD：通用型SSD
-	VolumeType *CreateClusterReqVolumeType `json:"volume_type,omitempty"`
+	VolumeType *CreateClusterReqV11VolumeType `json:"volume_type,omitempty"`
 
 	// 该参数为多磁盘参数，表示Master节点数据磁盘存储类别，目前支持SATA、SAS、SSD和GPSSD。
-	MasterDataVolumeType *CreateClusterReqMasterDataVolumeType `json:"master_data_volume_type,omitempty"`
+	MasterDataVolumeType *CreateClusterReqV11MasterDataVolumeType `json:"master_data_volume_type,omitempty"`
 
 	// 该参数为多磁盘参数，表示Master节点数据磁盘存储空间。为增大数据存储容量，创建集群时可同时添加磁盘。  取值范围：100GB～32000GB，传值只需填数字，不需要带单位GB。
 	MasterDataVolumeSize *int32 `json:"master_data_volume_size,omitempty"`
 
 	// 该参数为多磁盘参数，表示Master节点数据磁盘个数。取值只能是1。
-	MasterDataVolumeCount *CreateClusterReqMasterDataVolumeCount `json:"master_data_volume_count,omitempty"`
+	MasterDataVolumeCount *CreateClusterReqV11MasterDataVolumeCount `json:"master_data_volume_count,omitempty"`
 
 	// 该参数为多磁盘参数，表示Core节点数据磁盘存储类别，目前支持SATA、SAS、SSD和GPSSD。
-	CoreDataVolumeType *CreateClusterReqCoreDataVolumeType `json:"core_data_volume_type,omitempty"`
+	CoreDataVolumeType *CreateClusterReqV11CoreDataVolumeType `json:"core_data_volume_type,omitempty"`
 
 	// 该参数为多磁盘参数，表示Core节点数据磁盘存储空间。为增大数据存储容量，创建集群时可同时添加磁盘。  取值范围：100GB～32000GB，传值只需填数字，不需要带单位GB。
 	CoreDataVolumeSize *int32 `json:"core_data_volume_size,omitempty"`
@@ -84,7 +84,7 @@ type CreateClusterReq struct {
 	CoreDataVolumeCount *int32 `json:"core_data_volume_count,omitempty"`
 
 	// Task节点列表信息。
-	TaskNodeGroups *[]TaskNodeGroups `json:"task_node_groups,omitempty"`
+	TaskNodeGroups *[]TaskNodeGroup `json:"task_node_groups,omitempty"`
 
 	// 配置引导操作脚本信息。
 	BootstrapScripts *[]BootstrapScript `json:"bootstrap_scripts,omitempty"`
@@ -99,13 +99,13 @@ type CreateClusterReq struct {
 	ClusterMasterSecret string `json:"cluster_master_secret"`
 
 	// MRS集群运行模式。 - 0：普通集群，表示Kerberos认证关闭，用户可使用集群提供的所有功能。 - 1：安全集群，表示Kerberos认证开启，普通用户无权限使用MRS集群的“文件管理”和“作业管理”功能，并且无法查看Hadoop、Spark的作业记录以及集群资源使用情况。如果需要使用集群更多功能，需要找MRS Manager的管理员分配权限。
-	SafeMode CreateClusterReqSafeMode `json:"safe_mode"`
+	SafeMode CreateClusterReqV11SafeMode `json:"safe_mode"`
 
 	// 集群类型。  默认值为0：分析集群。  说明：暂不支持通过接口方式创建混合集群。  枚举值： - 0：分析集群 - 1：流式集群
-	ClusterType *CreateClusterReqClusterType `json:"cluster_type,omitempty"`
+	ClusterType *CreateClusterReqV11ClusterType `json:"cluster_type,omitempty"`
 
 	// 集群创建失败时，是否收集失败日志。  默认设置为1，将创建OBS桶仅用于MRS集群创建失败时的日志收集。  枚举值： - 0：不收集 - 1：收集
-	LogCollection *CreateClusterReqLogCollection `json:"log_collection,omitempty"`
+	LogCollection *CreateClusterReqV11LogCollection `json:"log_collection,omitempty"`
 
 	// 企业项目ID。  创建集群时，给集群绑定企业项目ID。  默认设置为0，表示为default企业项目。  获取方式请参见《企业管理API参考》的“查询企业项目列表”响应消息表“enterprise_project字段数据结构说明”的“id”。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
@@ -114,46 +114,46 @@ type CreateClusterReq struct {
 	Tags *[]Tag `json:"tags,omitempty"`
 
 	// 集群登录方式。默认设置为1。  - 当“login_mode”配置为“0”时，请求消息体中包含cluster_master_secret字段。 - 当“login_mode”配置为“1”时，请求消息体中包含node_public_cert_name字段。  枚举值： - 0：密码方式 - 1：密钥对方式
-	LoginMode *CreateClusterReqLoginMode `json:"login_mode,omitempty"`
+	LoginMode *CreateClusterReqV11LoginMode `json:"login_mode,omitempty"`
 
-	// 节点列表信息。   说明：如下参数和该参数任选一组进行配置即可。   master_node_num、master_node_size、core_node_num、core_node_size、master_data_volume_type、master_data_volume_size、master_data_volume_count、core_data_volume_type、core_data_volume_size、core_data_volume_count、volume_type、volume_size、task_node_groups。
+	// 节点列表信息。  说明：如下参数和该参数任选一组进行配置即可。  master_node_num、master_node_size、core_node_num、core_node_size、master_data_volume_type、master_data_volume_size、master_data_volume_count、core_data_volume_type、core_data_volume_size、core_data_volume_count、volume_type、volume_size、task_node_groups。
 	NodeGroups *[]NodeGroupV11 `json:"node_groups,omitempty"`
 }
 
-func (o CreateClusterReq) String() string {
+func (o CreateClusterReqV11) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "CreateClusterReq struct{}"
+		return "CreateClusterReqV11 struct{}"
 	}
 
-	return strings.Join([]string{"CreateClusterReq", string(data)}, " ")
+	return strings.Join([]string{"CreateClusterReqV11", string(data)}, " ")
 }
 
-type CreateClusterReqBillingType struct {
+type CreateClusterReqV11BillingType struct {
 	value int32
 }
 
-type CreateClusterReqBillingTypeEnum struct {
-	E_12 CreateClusterReqBillingType
+type CreateClusterReqV11BillingTypeEnum struct {
+	E_12 CreateClusterReqV11BillingType
 }
 
-func GetCreateClusterReqBillingTypeEnum() CreateClusterReqBillingTypeEnum {
-	return CreateClusterReqBillingTypeEnum{
-		E_12: CreateClusterReqBillingType{
+func GetCreateClusterReqV11BillingTypeEnum() CreateClusterReqV11BillingTypeEnum {
+	return CreateClusterReqV11BillingTypeEnum{
+		E_12: CreateClusterReqV11BillingType{
 			value: 12,
 		},
 	}
 }
 
-func (c CreateClusterReqBillingType) Value() int32 {
+func (c CreateClusterReqV11BillingType) Value() int32 {
 	return c.value
 }
 
-func (c CreateClusterReqBillingType) MarshalJSON() ([]byte, error) {
+func (c CreateClusterReqV11BillingType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
 
-func (c *CreateClusterReqBillingType) UnmarshalJSON(b []byte) error {
+func (c *CreateClusterReqV11BillingType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("int32")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
@@ -167,43 +167,43 @@ func (c *CreateClusterReqBillingType) UnmarshalJSON(b []byte) error {
 	}
 }
 
-type CreateClusterReqVolumeType struct {
+type CreateClusterReqV11VolumeType struct {
 	value string
 }
 
-type CreateClusterReqVolumeTypeEnum struct {
-	SATA  CreateClusterReqVolumeType
-	SAS   CreateClusterReqVolumeType
-	SSD   CreateClusterReqVolumeType
-	GPSSD CreateClusterReqVolumeType
+type CreateClusterReqV11VolumeTypeEnum struct {
+	SATA  CreateClusterReqV11VolumeType
+	SAS   CreateClusterReqV11VolumeType
+	SSD   CreateClusterReqV11VolumeType
+	GPSSD CreateClusterReqV11VolumeType
 }
 
-func GetCreateClusterReqVolumeTypeEnum() CreateClusterReqVolumeTypeEnum {
-	return CreateClusterReqVolumeTypeEnum{
-		SATA: CreateClusterReqVolumeType{
+func GetCreateClusterReqV11VolumeTypeEnum() CreateClusterReqV11VolumeTypeEnum {
+	return CreateClusterReqV11VolumeTypeEnum{
+		SATA: CreateClusterReqV11VolumeType{
 			value: "SATA",
 		},
-		SAS: CreateClusterReqVolumeType{
+		SAS: CreateClusterReqV11VolumeType{
 			value: "SAS",
 		},
-		SSD: CreateClusterReqVolumeType{
+		SSD: CreateClusterReqV11VolumeType{
 			value: "SSD",
 		},
-		GPSSD: CreateClusterReqVolumeType{
+		GPSSD: CreateClusterReqV11VolumeType{
 			value: "GPSSD",
 		},
 	}
 }
 
-func (c CreateClusterReqVolumeType) Value() string {
+func (c CreateClusterReqV11VolumeType) Value() string {
 	return c.value
 }
 
-func (c CreateClusterReqVolumeType) MarshalJSON() ([]byte, error) {
+func (c CreateClusterReqV11VolumeType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
 
-func (c *CreateClusterReqVolumeType) UnmarshalJSON(b []byte) error {
+func (c *CreateClusterReqV11VolumeType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
@@ -217,43 +217,43 @@ func (c *CreateClusterReqVolumeType) UnmarshalJSON(b []byte) error {
 	}
 }
 
-type CreateClusterReqMasterDataVolumeType struct {
+type CreateClusterReqV11MasterDataVolumeType struct {
 	value string
 }
 
-type CreateClusterReqMasterDataVolumeTypeEnum struct {
-	SATA  CreateClusterReqMasterDataVolumeType
-	SAS   CreateClusterReqMasterDataVolumeType
-	SSD   CreateClusterReqMasterDataVolumeType
-	GPSSD CreateClusterReqMasterDataVolumeType
+type CreateClusterReqV11MasterDataVolumeTypeEnum struct {
+	SATA  CreateClusterReqV11MasterDataVolumeType
+	SAS   CreateClusterReqV11MasterDataVolumeType
+	SSD   CreateClusterReqV11MasterDataVolumeType
+	GPSSD CreateClusterReqV11MasterDataVolumeType
 }
 
-func GetCreateClusterReqMasterDataVolumeTypeEnum() CreateClusterReqMasterDataVolumeTypeEnum {
-	return CreateClusterReqMasterDataVolumeTypeEnum{
-		SATA: CreateClusterReqMasterDataVolumeType{
+func GetCreateClusterReqV11MasterDataVolumeTypeEnum() CreateClusterReqV11MasterDataVolumeTypeEnum {
+	return CreateClusterReqV11MasterDataVolumeTypeEnum{
+		SATA: CreateClusterReqV11MasterDataVolumeType{
 			value: "SATA",
 		},
-		SAS: CreateClusterReqMasterDataVolumeType{
+		SAS: CreateClusterReqV11MasterDataVolumeType{
 			value: "SAS",
 		},
-		SSD: CreateClusterReqMasterDataVolumeType{
+		SSD: CreateClusterReqV11MasterDataVolumeType{
 			value: "SSD",
 		},
-		GPSSD: CreateClusterReqMasterDataVolumeType{
+		GPSSD: CreateClusterReqV11MasterDataVolumeType{
 			value: "GPSSD",
 		},
 	}
 }
 
-func (c CreateClusterReqMasterDataVolumeType) Value() string {
+func (c CreateClusterReqV11MasterDataVolumeType) Value() string {
 	return c.value
 }
 
-func (c CreateClusterReqMasterDataVolumeType) MarshalJSON() ([]byte, error) {
+func (c CreateClusterReqV11MasterDataVolumeType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
 
-func (c *CreateClusterReqMasterDataVolumeType) UnmarshalJSON(b []byte) error {
+func (c *CreateClusterReqV11MasterDataVolumeType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
@@ -267,31 +267,31 @@ func (c *CreateClusterReqMasterDataVolumeType) UnmarshalJSON(b []byte) error {
 	}
 }
 
-type CreateClusterReqMasterDataVolumeCount struct {
+type CreateClusterReqV11MasterDataVolumeCount struct {
 	value int32
 }
 
-type CreateClusterReqMasterDataVolumeCountEnum struct {
-	E_1 CreateClusterReqMasterDataVolumeCount
+type CreateClusterReqV11MasterDataVolumeCountEnum struct {
+	E_1 CreateClusterReqV11MasterDataVolumeCount
 }
 
-func GetCreateClusterReqMasterDataVolumeCountEnum() CreateClusterReqMasterDataVolumeCountEnum {
-	return CreateClusterReqMasterDataVolumeCountEnum{
-		E_1: CreateClusterReqMasterDataVolumeCount{
+func GetCreateClusterReqV11MasterDataVolumeCountEnum() CreateClusterReqV11MasterDataVolumeCountEnum {
+	return CreateClusterReqV11MasterDataVolumeCountEnum{
+		E_1: CreateClusterReqV11MasterDataVolumeCount{
 			value: 1,
 		},
 	}
 }
 
-func (c CreateClusterReqMasterDataVolumeCount) Value() int32 {
+func (c CreateClusterReqV11MasterDataVolumeCount) Value() int32 {
 	return c.value
 }
 
-func (c CreateClusterReqMasterDataVolumeCount) MarshalJSON() ([]byte, error) {
+func (c CreateClusterReqV11MasterDataVolumeCount) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
 
-func (c *CreateClusterReqMasterDataVolumeCount) UnmarshalJSON(b []byte) error {
+func (c *CreateClusterReqV11MasterDataVolumeCount) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("int32")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
@@ -305,43 +305,43 @@ func (c *CreateClusterReqMasterDataVolumeCount) UnmarshalJSON(b []byte) error {
 	}
 }
 
-type CreateClusterReqCoreDataVolumeType struct {
+type CreateClusterReqV11CoreDataVolumeType struct {
 	value string
 }
 
-type CreateClusterReqCoreDataVolumeTypeEnum struct {
-	SATA  CreateClusterReqCoreDataVolumeType
-	SAS   CreateClusterReqCoreDataVolumeType
-	SSD   CreateClusterReqCoreDataVolumeType
-	GPSSD CreateClusterReqCoreDataVolumeType
+type CreateClusterReqV11CoreDataVolumeTypeEnum struct {
+	SATA  CreateClusterReqV11CoreDataVolumeType
+	SAS   CreateClusterReqV11CoreDataVolumeType
+	SSD   CreateClusterReqV11CoreDataVolumeType
+	GPSSD CreateClusterReqV11CoreDataVolumeType
 }
 
-func GetCreateClusterReqCoreDataVolumeTypeEnum() CreateClusterReqCoreDataVolumeTypeEnum {
-	return CreateClusterReqCoreDataVolumeTypeEnum{
-		SATA: CreateClusterReqCoreDataVolumeType{
+func GetCreateClusterReqV11CoreDataVolumeTypeEnum() CreateClusterReqV11CoreDataVolumeTypeEnum {
+	return CreateClusterReqV11CoreDataVolumeTypeEnum{
+		SATA: CreateClusterReqV11CoreDataVolumeType{
 			value: "SATA",
 		},
-		SAS: CreateClusterReqCoreDataVolumeType{
+		SAS: CreateClusterReqV11CoreDataVolumeType{
 			value: "SAS",
 		},
-		SSD: CreateClusterReqCoreDataVolumeType{
+		SSD: CreateClusterReqV11CoreDataVolumeType{
 			value: "SSD",
 		},
-		GPSSD: CreateClusterReqCoreDataVolumeType{
+		GPSSD: CreateClusterReqV11CoreDataVolumeType{
 			value: "GPSSD",
 		},
 	}
 }
 
-func (c CreateClusterReqCoreDataVolumeType) Value() string {
+func (c CreateClusterReqV11CoreDataVolumeType) Value() string {
 	return c.value
 }
 
-func (c CreateClusterReqCoreDataVolumeType) MarshalJSON() ([]byte, error) {
+func (c CreateClusterReqV11CoreDataVolumeType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
 
-func (c *CreateClusterReqCoreDataVolumeType) UnmarshalJSON(b []byte) error {
+func (c *CreateClusterReqV11CoreDataVolumeType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
@@ -355,34 +355,34 @@ func (c *CreateClusterReqCoreDataVolumeType) UnmarshalJSON(b []byte) error {
 	}
 }
 
-type CreateClusterReqSafeMode struct {
+type CreateClusterReqV11SafeMode struct {
 	value int32
 }
 
-type CreateClusterReqSafeModeEnum struct {
-	E_0 CreateClusterReqSafeMode
-	E_1 CreateClusterReqSafeMode
+type CreateClusterReqV11SafeModeEnum struct {
+	E_0 CreateClusterReqV11SafeMode
+	E_1 CreateClusterReqV11SafeMode
 }
 
-func GetCreateClusterReqSafeModeEnum() CreateClusterReqSafeModeEnum {
-	return CreateClusterReqSafeModeEnum{
-		E_0: CreateClusterReqSafeMode{
+func GetCreateClusterReqV11SafeModeEnum() CreateClusterReqV11SafeModeEnum {
+	return CreateClusterReqV11SafeModeEnum{
+		E_0: CreateClusterReqV11SafeMode{
 			value: 0,
-		}, E_1: CreateClusterReqSafeMode{
+		}, E_1: CreateClusterReqV11SafeMode{
 			value: 1,
 		},
 	}
 }
 
-func (c CreateClusterReqSafeMode) Value() int32 {
+func (c CreateClusterReqV11SafeMode) Value() int32 {
 	return c.value
 }
 
-func (c CreateClusterReqSafeMode) MarshalJSON() ([]byte, error) {
+func (c CreateClusterReqV11SafeMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
 
-func (c *CreateClusterReqSafeMode) UnmarshalJSON(b []byte) error {
+func (c *CreateClusterReqV11SafeMode) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("int32")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
@@ -396,34 +396,34 @@ func (c *CreateClusterReqSafeMode) UnmarshalJSON(b []byte) error {
 	}
 }
 
-type CreateClusterReqClusterType struct {
+type CreateClusterReqV11ClusterType struct {
 	value int32
 }
 
-type CreateClusterReqClusterTypeEnum struct {
-	E_0 CreateClusterReqClusterType
-	E_1 CreateClusterReqClusterType
+type CreateClusterReqV11ClusterTypeEnum struct {
+	E_0 CreateClusterReqV11ClusterType
+	E_1 CreateClusterReqV11ClusterType
 }
 
-func GetCreateClusterReqClusterTypeEnum() CreateClusterReqClusterTypeEnum {
-	return CreateClusterReqClusterTypeEnum{
-		E_0: CreateClusterReqClusterType{
+func GetCreateClusterReqV11ClusterTypeEnum() CreateClusterReqV11ClusterTypeEnum {
+	return CreateClusterReqV11ClusterTypeEnum{
+		E_0: CreateClusterReqV11ClusterType{
 			value: 0,
-		}, E_1: CreateClusterReqClusterType{
+		}, E_1: CreateClusterReqV11ClusterType{
 			value: 1,
 		},
 	}
 }
 
-func (c CreateClusterReqClusterType) Value() int32 {
+func (c CreateClusterReqV11ClusterType) Value() int32 {
 	return c.value
 }
 
-func (c CreateClusterReqClusterType) MarshalJSON() ([]byte, error) {
+func (c CreateClusterReqV11ClusterType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
 
-func (c *CreateClusterReqClusterType) UnmarshalJSON(b []byte) error {
+func (c *CreateClusterReqV11ClusterType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("int32")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
@@ -437,34 +437,34 @@ func (c *CreateClusterReqClusterType) UnmarshalJSON(b []byte) error {
 	}
 }
 
-type CreateClusterReqLogCollection struct {
+type CreateClusterReqV11LogCollection struct {
 	value int32
 }
 
-type CreateClusterReqLogCollectionEnum struct {
-	E_0 CreateClusterReqLogCollection
-	E_1 CreateClusterReqLogCollection
+type CreateClusterReqV11LogCollectionEnum struct {
+	E_0 CreateClusterReqV11LogCollection
+	E_1 CreateClusterReqV11LogCollection
 }
 
-func GetCreateClusterReqLogCollectionEnum() CreateClusterReqLogCollectionEnum {
-	return CreateClusterReqLogCollectionEnum{
-		E_0: CreateClusterReqLogCollection{
+func GetCreateClusterReqV11LogCollectionEnum() CreateClusterReqV11LogCollectionEnum {
+	return CreateClusterReqV11LogCollectionEnum{
+		E_0: CreateClusterReqV11LogCollection{
 			value: 0,
-		}, E_1: CreateClusterReqLogCollection{
+		}, E_1: CreateClusterReqV11LogCollection{
 			value: 1,
 		},
 	}
 }
 
-func (c CreateClusterReqLogCollection) Value() int32 {
+func (c CreateClusterReqV11LogCollection) Value() int32 {
 	return c.value
 }
 
-func (c CreateClusterReqLogCollection) MarshalJSON() ([]byte, error) {
+func (c CreateClusterReqV11LogCollection) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
 
-func (c *CreateClusterReqLogCollection) UnmarshalJSON(b []byte) error {
+func (c *CreateClusterReqV11LogCollection) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("int32")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
@@ -478,34 +478,34 @@ func (c *CreateClusterReqLogCollection) UnmarshalJSON(b []byte) error {
 	}
 }
 
-type CreateClusterReqLoginMode struct {
+type CreateClusterReqV11LoginMode struct {
 	value int32
 }
 
-type CreateClusterReqLoginModeEnum struct {
-	E_0 CreateClusterReqLoginMode
-	E_1 CreateClusterReqLoginMode
+type CreateClusterReqV11LoginModeEnum struct {
+	E_0 CreateClusterReqV11LoginMode
+	E_1 CreateClusterReqV11LoginMode
 }
 
-func GetCreateClusterReqLoginModeEnum() CreateClusterReqLoginModeEnum {
-	return CreateClusterReqLoginModeEnum{
-		E_0: CreateClusterReqLoginMode{
+func GetCreateClusterReqV11LoginModeEnum() CreateClusterReqV11LoginModeEnum {
+	return CreateClusterReqV11LoginModeEnum{
+		E_0: CreateClusterReqV11LoginMode{
 			value: 0,
-		}, E_1: CreateClusterReqLoginMode{
+		}, E_1: CreateClusterReqV11LoginMode{
 			value: 1,
 		},
 	}
 }
 
-func (c CreateClusterReqLoginMode) Value() int32 {
+func (c CreateClusterReqV11LoginMode) Value() int32 {
 	return c.value
 }
 
-func (c CreateClusterReqLoginMode) MarshalJSON() ([]byte, error) {
+func (c CreateClusterReqV11LoginMode) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
 
-func (c *CreateClusterReqLoginMode) UnmarshalJSON(b []byte) error {
+func (c *CreateClusterReqV11LoginMode) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("int32")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

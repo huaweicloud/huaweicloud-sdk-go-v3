@@ -21,7 +21,7 @@ type AutoScalingPolicy struct {
 	ResourcesPlans *[]ResourcesPlan `json:"resources_plans,omitempty"`
 
 	// 自动伸缩的规则列表。  当启用弹性伸缩时，资源计划与自动伸缩规则需至少配置其中一种。
-	Rules *[]Rules `json:"rules,omitempty"`
+	Rules *[]Rule `json:"rules,omitempty"`
 
 	// 弹性伸缩自定义自动化脚本列表。若该参数为空表示不启用自动化脚本。
 	ExecScripts *[]ScaleScript `json:"exec_scripts,omitempty"`

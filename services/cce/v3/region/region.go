@@ -23,6 +23,7 @@ var SA_BRAZIL_1 = region.NewRegion("sa-brazil-1", "https://cce.sa-brazil-1.myhua
 var LA_SOUTH_2 = region.NewRegion("la-south-2", "https://cce.la-south-2.myhuaweicloud.com")
 var LA_NORTH_2 = region.NewRegion("la-north-2", "https://cce.la-north-2.myhuaweicloud.com")
 var NA_MEXICO_1 = region.NewRegion("na-mexico-1", "https://cce.na-mexico-1.myhuaweicloud.com")
+var RU_NORTHWEST_2 = region.NewRegion("ru-northwest-2", "https://cce.ru-northwest-2.myhuaweicloud.com")
 
 var staticFields = map[string]*region.Region{
 	"cn-north-1":     CN_NORTH_1,
@@ -43,6 +44,7 @@ var staticFields = map[string]*region.Region{
 	"la-south-2":     LA_SOUTH_2,
 	"la-north-2":     LA_NORTH_2,
 	"na-mexico-1":    NA_MEXICO_1,
+	"ru-northwest-2": RU_NORTHWEST_2,
 }
 
 var provider = region.DefaultProviderChain("CCE")

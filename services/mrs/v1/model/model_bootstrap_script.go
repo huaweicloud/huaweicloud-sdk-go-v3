@@ -26,11 +26,17 @@ type BootstrapScript struct {
 	// 引导操作脚本是否只运行在主Master节点上。 缺省值为false，表示引导操作脚本可运行在所有Master节点上。
 	ActiveMaster *bool `json:"active_master,omitempty"`
 
-	// 引导操作脚本执行失败后，是否继续执行后续脚本和创建集群。  缺省值为errorout,表示终止操作。   说明： 建议您在调试阶段设置为“继续”，无论此引导操作是否执行成功，则集群都能继续安装和启动。  枚举值： - continue：继续执行后续脚本。 - errorout：终止操作。
+	// 引导操作脚本执行失败后，是否继续执行后续脚本和创建集群。  缺省值为errorout,表示终止操作。  说明： 建议您在调试阶段设置为“继续”，无论此引导操作是否执行成功，则集群都能继续安装和启动。  枚举值： - continue：继续执行后续脚本。 - errorout：终止操作。
 	FailAction BootstrapScriptFailAction `json:"fail_action"`
 
 	// 引导操作脚本执行的时间。目前支持“组件启动前”和“组件启动后”两种类型。 缺省值为false，表示引导操作脚本在组件启动后执行。
 	BeforeComponentStart *bool `json:"before_component_start,omitempty"`
+
+	// 单个引导操作脚本的执行时间。
+	StartTime *int64 `json:"start_time,omitempty"`
+
+	// 单个引导操作脚本的运行状态。  - PENDING - IN_PROGRESS - SUCCESS - FAILURE
+	State *BootstrapScriptState `json:"state,omitempty"`
 
 	// 选择引导操作脚本执行的时间。 - BEFORE_COMPONENT_FIRST_START: 组件首次启动后 - AFTER_COMPONENT_FIRST_START: 组件首次启动前 - BEFORE_SCALE_IN: 缩容前 - AFTER_SCALE_IN: 缩容后 - BEFORE_SCALE_OUT: 扩容前 - AFTER_SCALE_OUT: 扩容后
 	ActionStages *[]BootstrapScriptActionStages `json:"action_stages,omitempty"`
@@ -74,6 +80,56 @@ func (c BootstrapScriptFailAction) MarshalJSON() ([]byte, error) {
 }
 
 func (c *BootstrapScriptFailAction) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type BootstrapScriptState struct {
+	value string
+}
+
+type BootstrapScriptStateEnum struct {
+	PENDING     BootstrapScriptState
+	IN_PROGRESS BootstrapScriptState
+	SUCCESS     BootstrapScriptState
+	FAILURE     BootstrapScriptState
+}
+
+func GetBootstrapScriptStateEnum() BootstrapScriptStateEnum {
+	return BootstrapScriptStateEnum{
+		PENDING: BootstrapScriptState{
+			value: "PENDING",
+		},
+		IN_PROGRESS: BootstrapScriptState{
+			value: "IN_PROGRESS",
+		},
+		SUCCESS: BootstrapScriptState{
+			value: "SUCCESS",
+		},
+		FAILURE: BootstrapScriptState{
+			value: "FAILURE",
+		},
+	}
+}
+
+func (c BootstrapScriptState) Value() string {
+	return c.value
+}
+
+func (c BootstrapScriptState) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *BootstrapScriptState) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

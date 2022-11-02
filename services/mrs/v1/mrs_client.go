@@ -22,8 +22,11 @@ func MrsClientBuilder() *http_client.HcHttpClientBuilder {
 // BatchCreateClusterTags 批量添加集群标签
 //
 // 为指定集群批量添加标签。
+//
 // 一个集群上最多有10个标签。
+//
 // 此接口为幂等接口：
+//
 // - 创建时，同一个集群不允许重复key，如果数据库存在就覆盖。
 //
 // 详细说明请参考华为云API Explorer。
@@ -52,8 +55,8 @@ func (c *MrsClient) BatchCreateClusterTagsInvoker(request *model.BatchCreateClus
 //
 // 此接口为幂等接口：
 //
-//
-// - 删除时，如果删除的标签不存在，默认处理成功，删除时不对标签字符集范围做校验。Key长度36个unicode字符，value为43个unicode字符。删除时tags结构体不能缺失，key不能为空，或者空字符串。
+// -
+// 删除时，如果删除的标签不存在，默认处理成功，删除时不对标签字符集范围做校验。Key长度36个unicode字符，value为43个unicode字符。删除时tags结构体不能缺失，key不能为空，或者空字符串。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -73,8 +76,9 @@ func (c *MrsClient) BatchDeleteClusterTagsInvoker(request *model.BatchDeleteClus
 	return &BatchDeleteClusterTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateAndExecuteJob 新增作业并执行
+// CreateAndExecuteJob 新增作业并执行（废弃）
 //
+// 如需使用作业管理接口请参考apiv2接口使用，本接口后续不再进行维护。
 // 在MRS集群中新增一个作业，并执行作业。该接口不兼容Sahara。
 // 集群ID可参考[查询集群列表](https://support.huaweicloud.com/api-mrs/ListClusters.html)接口获取。
 //
@@ -90,7 +94,7 @@ func (c *MrsClient) CreateAndExecuteJob(request *model.CreateAndExecuteJobReques
 	}
 }
 
-// CreateAndExecuteJobInvoker 新增作业并执行
+// CreateAndExecuteJobInvoker 新增作业并执行（废弃）
 func (c *MrsClient) CreateAndExecuteJobInvoker(request *model.CreateAndExecuteJobRequest) *CreateAndExecuteJobInvoker {
 	requestDef := GenReqDefForCreateAndExecuteJob()
 	return &CreateAndExecuteJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -223,8 +227,9 @@ func (c *MrsClient) DeleteClusterTagInvoker(request *model.DeleteClusterTagReque
 	return &DeleteClusterTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteJobExecution 删除作业执行对象
+// DeleteJobExecution 删除作业执行对象（废弃）
 //
+// 如需使用作业管理接口请参考apiv2接口使用，本接口后续不再进行维护。
 // 删除指定的作业执行对象。该接口兼容Sahara。
 //
 // 详细说明请参考华为云API Explorer。
@@ -239,7 +244,7 @@ func (c *MrsClient) DeleteJobExecution(request *model.DeleteJobExecutionRequest)
 	}
 }
 
-// DeleteJobExecutionInvoker 删除作业执行对象
+// DeleteJobExecutionInvoker 删除作业执行对象（废弃）
 func (c *MrsClient) DeleteJobExecutionInvoker(request *model.DeleteJobExecutionRequest) *DeleteJobExecutionInvoker {
 	requestDef := GenReqDefForDeleteJobExecution()
 	return &DeleteJobExecutionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -335,8 +340,9 @@ func (c *MrsClient) ListClustersByTagsInvoker(request *model.ListClustersByTagsR
 	return &ListClustersByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListExecuteJob 查询作业exe对象列表
+// ListExecuteJob 查询作业exe对象列表（废弃）
 //
+// 如需使用作业管理接口请参考apiv2接口使用，本接口后续不再进行维护。
 // 查询所有作业的exe对象列表。该接口不兼容Sahara。
 //
 // 详细说明请参考华为云API Explorer。
@@ -351,7 +357,7 @@ func (c *MrsClient) ListExecuteJob(request *model.ListExecuteJobRequest) (*model
 	}
 }
 
-// ListExecuteJobInvoker 查询作业exe对象列表
+// ListExecuteJobInvoker 查询作业exe对象列表（废弃）
 func (c *MrsClient) ListExecuteJobInvoker(request *model.ListExecuteJobRequest) *ListExecuteJobInvoker {
 	requestDef := GenReqDefForListExecuteJob()
 	return &ListExecuteJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -401,8 +407,9 @@ func (c *MrsClient) ShowClusterDetailsInvoker(request *model.ShowClusterDetailsR
 	return &ShowClusterDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowJobExes 查询作业exe对象详情
+// ShowJobExes 查询作业exe对象详情（废弃）
 //
+// 如需使用作业管理接口请参考apiv2接口使用，本接口后续不再进行维护。
 // 查询指定作业的exe对象详细信息。该接口不兼容Sahara。
 //
 // 详细说明请参考华为云API Explorer。
@@ -417,7 +424,7 @@ func (c *MrsClient) ShowJobExes(request *model.ShowJobExesRequest) (*model.ShowJ
 	}
 }
 
-// ShowJobExesInvoker 查询作业exe对象详情
+// ShowJobExesInvoker 查询作业exe对象详情（废弃）
 func (c *MrsClient) ShowJobExesInvoker(request *model.ShowJobExesRequest) *ShowJobExesInvoker {
 	requestDef := GenReqDefForShowJobExes()
 	return &ShowJobExesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -426,7 +433,7 @@ func (c *MrsClient) ShowJobExesInvoker(request *model.ShowJobExesRequest) *ShowJ
 // UpdateClusterScaling 调整集群节点
 //
 // 创建集群后，扩容/缩容集群Core节点或者Task节点。MRS集群创建成功后不支持调整Master节点数量，即不支持扩缩容Master节点。该接口不兼容Sahara。
-// 处于running状态的集群才允许扩容/缩容，其他状态则不允许扩容/缩容。 集群状态和集群ID可参考[查询集群列表](https://support.huaweicloud.com/api-mrs/ListClusters.html)接口获取。
+// 处于running状态的集群才允许扩容/缩容，其他状态则不允许扩容/缩容。 集群状态和集群ID可参考[查询集群列表](https://support.huaweicloud.com/api-mrs/ListClusters.html)接口获取。 本章节的接口只支持流式集群、分析集群和混合集群，不支持自定义集群。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.

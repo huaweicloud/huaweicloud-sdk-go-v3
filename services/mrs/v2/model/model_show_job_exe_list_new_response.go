@@ -9,6 +9,9 @@ import (
 // Response Object
 type ShowJobExeListNewResponse struct {
 
+	// 总记录数
+	TotalRecord *int32 `json:"total_record,omitempty"`
+
 	// 作业列表。
 	JobList        *[]JobQueryBean `json:"job_list,omitempty"`
 	HttpStatusCode int             `json:"-"`

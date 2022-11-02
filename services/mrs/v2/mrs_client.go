@@ -43,9 +43,7 @@ func (c *MrsClient) BatchDeleteJobsInvoker(request *model.BatchDeleteJobsRequest
 
 // CreateCluster 创建集群
 //
-// 创建一个MRS集群。
-//
-// 使用接口前，您需要先获取下的资源信息。
+// 创建一个MRS集群。使用接口前，您需要先获取下的资源信息。
 // - 通过VPC创建或查询VPC、子网
 // - 通过ECS创建或查询密钥对
 // - 通过[终端节点](https://support.huaweicloud.com/api-mrs/mrs_02_0003.html)获取区域信息

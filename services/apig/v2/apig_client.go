@@ -650,6 +650,28 @@ func (c *ApigClient) DisassociateSignatureKeyV2Invoker(request *model.Disassocia
 	return &DisassociateSignatureKeyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ImportMicroservice 导入微服务
+//
+// 导入微服务
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ApigClient) ImportMicroservice(request *model.ImportMicroserviceRequest) (*model.ImportMicroserviceResponse, error) {
+	requestDef := GenReqDefForImportMicroservice()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ImportMicroserviceResponse), nil
+	}
+}
+
+// ImportMicroserviceInvoker 导入微服务
+func (c *ApigClient) ImportMicroserviceInvoker(request *model.ImportMicroserviceRequest) *ImportMicroserviceInvoker {
+	requestDef := GenReqDefForImportMicroservice()
+	return &ImportMicroserviceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListApiGroupsQuantitiesV2 查询API分组概况
 //
 // 查询租户名下的API分组概况。
@@ -1025,6 +1047,28 @@ func (c *ApigClient) ListLatelyGroupStatisticsV2(request *model.ListLatelyGroupS
 func (c *ApigClient) ListLatelyGroupStatisticsV2Invoker(request *model.ListLatelyGroupStatisticsV2Request) *ListLatelyGroupStatisticsV2Invoker {
 	requestDef := GenReqDefForListLatelyGroupStatisticsV2()
 	return &ListLatelyGroupStatisticsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListMetricData 查询监控数据
+//
+// 查询指定时间范围指定指标的指定粒度的监控数据，可以通过参数指定需要查询的数据维度。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ApigClient) ListMetricData(request *model.ListMetricDataRequest) (*model.ListMetricDataResponse, error) {
+	requestDef := GenReqDefForListMetricData()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListMetricDataResponse), nil
+	}
+}
+
+// ListMetricDataInvoker 查询监控数据
+func (c *ApigClient) ListMetricDataInvoker(request *model.ListMetricDataRequest) *ListMetricDataInvoker {
+	requestDef := GenReqDefForListMetricData()
+	return &ListMetricDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListProjectCofigsV2 查询某个实例的租户配置列表
@@ -2839,9 +2883,231 @@ func (c *ApigClient) ImportApiDefinitionsV2Invoker(request *model.ImportApiDefin
 	return &ImportApiDefinitionsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// AddingBackendInstancesV2 添加后端实例
+// BatchAssociateCertsV2 域名绑定SSL证书
 //
-// 为指定的VPC通道添加弹性云服务器
+// 域名绑定SSL证书。目前暂时仅支持单个绑定,请求体当中的certificate_ids里面有且只能有一个证书ID
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ApigClient) BatchAssociateCertsV2(request *model.BatchAssociateCertsV2Request) (*model.BatchAssociateCertsV2Response, error) {
+	requestDef := GenReqDefForBatchAssociateCertsV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchAssociateCertsV2Response), nil
+	}
+}
+
+// BatchAssociateCertsV2Invoker 域名绑定SSL证书
+func (c *ApigClient) BatchAssociateCertsV2Invoker(request *model.BatchAssociateCertsV2Request) *BatchAssociateCertsV2Invoker {
+	requestDef := GenReqDefForBatchAssociateCertsV2()
+	return &BatchAssociateCertsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchAssociateDomainsV2 SSL证书绑定域名
+//
+// 域名绑定SSL证书
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ApigClient) BatchAssociateDomainsV2(request *model.BatchAssociateDomainsV2Request) (*model.BatchAssociateDomainsV2Response, error) {
+	requestDef := GenReqDefForBatchAssociateDomainsV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchAssociateDomainsV2Response), nil
+	}
+}
+
+// BatchAssociateDomainsV2Invoker SSL证书绑定域名
+func (c *ApigClient) BatchAssociateDomainsV2Invoker(request *model.BatchAssociateDomainsV2Request) *BatchAssociateDomainsV2Invoker {
+	requestDef := GenReqDefForBatchAssociateDomainsV2()
+	return &BatchAssociateDomainsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDisassociateCertsV2 域名解绑SSL证书
+//
+// 域名解绑SSL证书。目前暂时仅支持单个解绑,请求体当中的certificate_ids里面有且只能有一个证书ID
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ApigClient) BatchDisassociateCertsV2(request *model.BatchDisassociateCertsV2Request) (*model.BatchDisassociateCertsV2Response, error) {
+	requestDef := GenReqDefForBatchDisassociateCertsV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDisassociateCertsV2Response), nil
+	}
+}
+
+// BatchDisassociateCertsV2Invoker 域名解绑SSL证书
+func (c *ApigClient) BatchDisassociateCertsV2Invoker(request *model.BatchDisassociateCertsV2Request) *BatchDisassociateCertsV2Invoker {
+	requestDef := GenReqDefForBatchDisassociateCertsV2()
+	return &BatchDisassociateCertsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDisassociateDomainsV2 SSL证书解绑域名
+//
+// SSL证书解绑域名
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ApigClient) BatchDisassociateDomainsV2(request *model.BatchDisassociateDomainsV2Request) (*model.BatchDisassociateDomainsV2Response, error) {
+	requestDef := GenReqDefForBatchDisassociateDomainsV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDisassociateDomainsV2Response), nil
+	}
+}
+
+// BatchDisassociateDomainsV2Invoker SSL证书解绑域名
+func (c *ApigClient) BatchDisassociateDomainsV2Invoker(request *model.BatchDisassociateDomainsV2Request) *BatchDisassociateDomainsV2Invoker {
+	requestDef := GenReqDefForBatchDisassociateDomainsV2()
+	return &BatchDisassociateDomainsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateCertificateV2 创建SSL证书
+//
+// 创建SSL证书
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ApigClient) CreateCertificateV2(request *model.CreateCertificateV2Request) (*model.CreateCertificateV2Response, error) {
+	requestDef := GenReqDefForCreateCertificateV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateCertificateV2Response), nil
+	}
+}
+
+// CreateCertificateV2Invoker 创建SSL证书
+func (c *ApigClient) CreateCertificateV2Invoker(request *model.CreateCertificateV2Request) *CreateCertificateV2Invoker {
+	requestDef := GenReqDefForCreateCertificateV2()
+	return &CreateCertificateV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteCertificateV2 删除SSL证书
+//
+// 删除ssl证书接口,删除时只有没有关联域名的证书才能被删除
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ApigClient) DeleteCertificateV2(request *model.DeleteCertificateV2Request) (*model.DeleteCertificateV2Response, error) {
+	requestDef := GenReqDefForDeleteCertificateV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteCertificateV2Response), nil
+	}
+}
+
+// DeleteCertificateV2Invoker 删除SSL证书
+func (c *ApigClient) DeleteCertificateV2Invoker(request *model.DeleteCertificateV2Request) *DeleteCertificateV2Invoker {
+	requestDef := GenReqDefForDeleteCertificateV2()
+	return &DeleteCertificateV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAttachedDomainsV2 获取SSL证书已绑定域名列表
+//
+// 获取SSL证书已绑定域名列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ApigClient) ListAttachedDomainsV2(request *model.ListAttachedDomainsV2Request) (*model.ListAttachedDomainsV2Response, error) {
+	requestDef := GenReqDefForListAttachedDomainsV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAttachedDomainsV2Response), nil
+	}
+}
+
+// ListAttachedDomainsV2Invoker 获取SSL证书已绑定域名列表
+func (c *ApigClient) ListAttachedDomainsV2Invoker(request *model.ListAttachedDomainsV2Request) *ListAttachedDomainsV2Invoker {
+	requestDef := GenReqDefForListAttachedDomainsV2()
+	return &ListAttachedDomainsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCertificatesV2 获取SSL证书列表
+//
+// 获取SSL证书列表。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ApigClient) ListCertificatesV2(request *model.ListCertificatesV2Request) (*model.ListCertificatesV2Response, error) {
+	requestDef := GenReqDefForListCertificatesV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCertificatesV2Response), nil
+	}
+}
+
+// ListCertificatesV2Invoker 获取SSL证书列表
+func (c *ApigClient) ListCertificatesV2Invoker(request *model.ListCertificatesV2Request) *ListCertificatesV2Invoker {
+	requestDef := GenReqDefForListCertificatesV2()
+	return &ListCertificatesV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDetailsOfCertificateV2 查看证书详情
+//
+// 查看证书详情
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ApigClient) ShowDetailsOfCertificateV2(request *model.ShowDetailsOfCertificateV2Request) (*model.ShowDetailsOfCertificateV2Response, error) {
+	requestDef := GenReqDefForShowDetailsOfCertificateV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDetailsOfCertificateV2Response), nil
+	}
+}
+
+// ShowDetailsOfCertificateV2Invoker 查看证书详情
+func (c *ApigClient) ShowDetailsOfCertificateV2Invoker(request *model.ShowDetailsOfCertificateV2Request) *ShowDetailsOfCertificateV2Invoker {
+	requestDef := GenReqDefForShowDetailsOfCertificateV2()
+	return &ShowDetailsOfCertificateV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateCertificateV2 修改SSL证书
+//
+// 修改SSL证书
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ApigClient) UpdateCertificateV2(request *model.UpdateCertificateV2Request) (*model.UpdateCertificateV2Response, error) {
+	requestDef := GenReqDefForUpdateCertificateV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateCertificateV2Response), nil
+	}
+}
+
+// UpdateCertificateV2Invoker 修改SSL证书
+func (c *ApigClient) UpdateCertificateV2Invoker(request *model.UpdateCertificateV2Request) *UpdateCertificateV2Invoker {
+	requestDef := GenReqDefForUpdateCertificateV2()
+	return &UpdateCertificateV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AddingBackendInstancesV2 添加或更新后端实例
+//
+// 为指定的VPC通道添加后端实例
+//
+// 若指定地址的后端实例已存在，则更新对应后端实例信息。若请求体中包含多个重复地址的后端实例定义，则使用第一个定义。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -2855,10 +3121,78 @@ func (c *ApigClient) AddingBackendInstancesV2(request *model.AddingBackendInstan
 	}
 }
 
-// AddingBackendInstancesV2Invoker 添加后端实例
+// AddingBackendInstancesV2Invoker 添加或更新后端实例
 func (c *ApigClient) AddingBackendInstancesV2Invoker(request *model.AddingBackendInstancesV2Request) *AddingBackendInstancesV2Invoker {
 	requestDef := GenReqDefForAddingBackendInstancesV2()
 	return &AddingBackendInstancesV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDisableMembers 批量修改后端服务器状态不可用
+//
+// 批量修改后端服务器状态不可用。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ApigClient) BatchDisableMembers(request *model.BatchDisableMembersRequest) (*model.BatchDisableMembersResponse, error) {
+	requestDef := GenReqDefForBatchDisableMembers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDisableMembersResponse), nil
+	}
+}
+
+// BatchDisableMembersInvoker 批量修改后端服务器状态不可用
+func (c *ApigClient) BatchDisableMembersInvoker(request *model.BatchDisableMembersRequest) *BatchDisableMembersInvoker {
+	requestDef := GenReqDefForBatchDisableMembers()
+	return &BatchDisableMembersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchEnableMembers 批量修改后端服务器状态可用
+//
+// 批量修改后端服务器状态可用。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ApigClient) BatchEnableMembers(request *model.BatchEnableMembersRequest) (*model.BatchEnableMembersResponse, error) {
+	requestDef := GenReqDefForBatchEnableMembers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchEnableMembersResponse), nil
+	}
+}
+
+// BatchEnableMembersInvoker 批量修改后端服务器状态可用
+func (c *ApigClient) BatchEnableMembersInvoker(request *model.BatchEnableMembersRequest) *BatchEnableMembersInvoker {
+	requestDef := GenReqDefForBatchEnableMembers()
+	return &BatchEnableMembersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateMemberGroup 添加或更新VPC通道后端服务器组
+//
+// 在服务集成中创建VPC通道后端服务器组，VPC通道后端实例可以选择是否关联后端实例服务器组，以便管理后端服务器节点。
+//
+// 若指定名称的后端服务器组已存在，则更新对应后端服务器组信息。若请求体中包含多个重复名称的后端服务器定义，则使用第一个定义。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ApigClient) CreateMemberGroup(request *model.CreateMemberGroupRequest) (*model.CreateMemberGroupResponse, error) {
+	requestDef := GenReqDefForCreateMemberGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateMemberGroupResponse), nil
+	}
+}
+
+// CreateMemberGroupInvoker 添加或更新VPC通道后端服务器组
+func (c *ApigClient) CreateMemberGroupInvoker(request *model.CreateMemberGroupRequest) *CreateMemberGroupInvoker {
+	requestDef := GenReqDefForCreateMemberGroup()
+	return &CreateMemberGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateVpcChannelV2 创建VPC通道
@@ -2886,7 +3220,7 @@ func (c *ApigClient) CreateVpcChannelV2Invoker(request *model.CreateVpcChannelV2
 
 // DeleteBackendInstanceV2 删除后端实例
 //
-// 删除指定VPC通道中的弹性云服务器
+// 删除指定VPC通道中的后端实例
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -2904,6 +3238,28 @@ func (c *ApigClient) DeleteBackendInstanceV2(request *model.DeleteBackendInstanc
 func (c *ApigClient) DeleteBackendInstanceV2Invoker(request *model.DeleteBackendInstanceV2Request) *DeleteBackendInstanceV2Invoker {
 	requestDef := GenReqDefForDeleteBackendInstanceV2()
 	return &DeleteBackendInstanceV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteMemberGroup 删除VPC通道后端服务器组
+//
+// 删除指定的VPC通道后端服务器组
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ApigClient) DeleteMemberGroup(request *model.DeleteMemberGroupRequest) (*model.DeleteMemberGroupResponse, error) {
+	requestDef := GenReqDefForDeleteMemberGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteMemberGroupResponse), nil
+	}
+}
+
+// DeleteMemberGroupInvoker 删除VPC通道后端服务器组
+func (c *ApigClient) DeleteMemberGroupInvoker(request *model.DeleteMemberGroupRequest) *DeleteMemberGroupInvoker {
+	requestDef := GenReqDefForDeleteMemberGroup()
+	return &DeleteMemberGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteVpcChannelV2 删除VPC通道
@@ -2930,7 +3286,7 @@ func (c *ApigClient) DeleteVpcChannelV2Invoker(request *model.DeleteVpcChannelV2
 
 // ListBackendInstancesV2 查看后端实例列表
 //
-// 查看指定VPC通道的弹性云服务器列表。
+// 查看指定VPC通道的后端实例列表。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -2948,6 +3304,28 @@ func (c *ApigClient) ListBackendInstancesV2(request *model.ListBackendInstancesV
 func (c *ApigClient) ListBackendInstancesV2Invoker(request *model.ListBackendInstancesV2Request) *ListBackendInstancesV2Invoker {
 	requestDef := GenReqDefForListBackendInstancesV2()
 	return &ListBackendInstancesV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListMemberGroups 查询VPC通道后端云服务组列表
+//
+// 查询VPC通道后端云服务组列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ApigClient) ListMemberGroups(request *model.ListMemberGroupsRequest) (*model.ListMemberGroupsResponse, error) {
+	requestDef := GenReqDefForListMemberGroups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListMemberGroupsResponse), nil
+	}
+}
+
+// ListMemberGroupsInvoker 查询VPC通道后端云服务组列表
+func (c *ApigClient) ListMemberGroupsInvoker(request *model.ListMemberGroupsRequest) *ListMemberGroupsInvoker {
+	requestDef := GenReqDefForListMemberGroups()
+	return &ListMemberGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListVpcChannelsV2 查询VPC通道列表
@@ -2972,6 +3350,28 @@ func (c *ApigClient) ListVpcChannelsV2Invoker(request *model.ListVpcChannelsV2Re
 	return &ListVpcChannelsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowDetailsOfMemberGroup 查看VPC通道后端服务器组详情
+//
+// 查看指定的VPC通道后端服务器组详情
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ApigClient) ShowDetailsOfMemberGroup(request *model.ShowDetailsOfMemberGroupRequest) (*model.ShowDetailsOfMemberGroupResponse, error) {
+	requestDef := GenReqDefForShowDetailsOfMemberGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDetailsOfMemberGroupResponse), nil
+	}
+}
+
+// ShowDetailsOfMemberGroupInvoker 查看VPC通道后端服务器组详情
+func (c *ApigClient) ShowDetailsOfMemberGroupInvoker(request *model.ShowDetailsOfMemberGroupRequest) *ShowDetailsOfMemberGroupInvoker {
+	requestDef := GenReqDefForShowDetailsOfMemberGroup()
+	return &ShowDetailsOfMemberGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowDetailsOfVpcChannelV2 查看VPC通道详情
 //
 // 查看指定的VPC通道详情
@@ -2994,9 +3394,79 @@ func (c *ApigClient) ShowDetailsOfVpcChannelV2Invoker(request *model.ShowDetails
 	return &ShowDetailsOfVpcChannelV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateBackendInstancesV2 更新后端实例
+//
+// 更新指定的VPC通道的后端实例。更新时，使用传入的请求参数对对应云服务组的后端实例进行全量覆盖修改。若未指定修改的云服务器组，则进行全量覆盖。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ApigClient) UpdateBackendInstancesV2(request *model.UpdateBackendInstancesV2Request) (*model.UpdateBackendInstancesV2Response, error) {
+	requestDef := GenReqDefForUpdateBackendInstancesV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateBackendInstancesV2Response), nil
+	}
+}
+
+// UpdateBackendInstancesV2Invoker 更新后端实例
+func (c *ApigClient) UpdateBackendInstancesV2Invoker(request *model.UpdateBackendInstancesV2Request) *UpdateBackendInstancesV2Invoker {
+	requestDef := GenReqDefForUpdateBackendInstancesV2()
+	return &UpdateBackendInstancesV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateHealthCheck 修改VPC通道健康检查
+//
+// 修改VPC通道健康检查。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ApigClient) UpdateHealthCheck(request *model.UpdateHealthCheckRequest) (*model.UpdateHealthCheckResponse, error) {
+	requestDef := GenReqDefForUpdateHealthCheck()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateHealthCheckResponse), nil
+	}
+}
+
+// UpdateHealthCheckInvoker 修改VPC通道健康检查
+func (c *ApigClient) UpdateHealthCheckInvoker(request *model.UpdateHealthCheckRequest) *UpdateHealthCheckInvoker {
+	requestDef := GenReqDefForUpdateHealthCheck()
+	return &UpdateHealthCheckInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateMemberGroup 更新VPC通道后端服务器组
+//
+// 更新指定VPC通道后端服务器组
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ApigClient) UpdateMemberGroup(request *model.UpdateMemberGroupRequest) (*model.UpdateMemberGroupResponse, error) {
+	requestDef := GenReqDefForUpdateMemberGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateMemberGroupResponse), nil
+	}
+}
+
+// UpdateMemberGroupInvoker 更新VPC通道后端服务器组
+func (c *ApigClient) UpdateMemberGroupInvoker(request *model.UpdateMemberGroupRequest) *UpdateMemberGroupInvoker {
+	requestDef := GenReqDefForUpdateMemberGroup()
+	return &UpdateMemberGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateVpcChannelV2 更新VPC通道
 //
 // 更新指定VPC通道的参数
+//
+// 使用传入的后端实例列表对VPC通道进行全量覆盖，若后端实例列表为空，则会全量删除已有的后端实例；
+//
+// 使用传入的后端服务器组列表对VPC通道进行全量覆盖，若后端服务器组列表为空，则会全量删除已有的服务器组；
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.

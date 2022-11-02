@@ -17,10 +17,10 @@ type ResourcesPlan struct {
 	// 资源计划的结束时间，格式与“start_time”相同，不早于start_time表示的时间，且与start_time间隔不小于30min。
 	EndTime string `json:"end_time"`
 
-	// 资源计划内该节点组的最小保留节点数。  取值范围：[0～500]
+	// 资源计划内该节点组的最小保留节点数。 取值范围：[0～500]
 	MinCapacity int32 `json:"min_capacity"`
 
-	// 资源计划内该节点组的最大保留节点数。  取值范围：[0～500]
+	// 资源计划内该节点组的最大保留节点数。 取值范围：[0～500]
 	MaxCapacity int32 `json:"max_capacity"`
 }
 

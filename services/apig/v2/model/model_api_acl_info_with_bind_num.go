@@ -21,7 +21,7 @@ type ApiAclInfoWithBindNum struct {
 	// 绑定的API数量
 	BindNum *int32 `json:"bind_num,omitempty"`
 
-	// 对象类型 - IP - DOMAIN
+	// 对象类型 - IP - DOMAIN - DOMAIN_ID
 	EntityType *string `json:"entity_type,omitempty"`
 
 	// ACL策略编号

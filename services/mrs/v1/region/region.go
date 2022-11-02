@@ -5,23 +5,23 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/region"
 )
 
-var CN_NORTH_1 = region.NewRegion("cn-north-1", "https://mrs.cn-north-1.myhuaweicloud.cn")
+var CN_NORTH_1 = region.NewRegion("cn-north-1", "https://mrs.cn-north-1.myhuaweicloud.com")
 var CN_NORTH_2 = region.NewRegion("cn-north-2", "https://mrs.cn-north-2.myhuaweicloud.com")
 var CN_NORTH_4 = region.NewRegion("cn-north-4", "https://mrs.cn-north-4.myhuaweicloud.com")
 var CN_SOUTH_1 = region.NewRegion("cn-south-1", "https://mrs.cn-south-1.myhuaweicloud.com")
-var CN_EAST_2 = region.NewRegion("cn-east-2", "https://mrs.cn-east-2.myhuaweicloud.cn")
+var CN_EAST_2 = region.NewRegion("cn-east-2", "https://mrs.cn-east-2.myhuaweicloud.com")
 var CN_EAST_3 = region.NewRegion("cn-east-3", "https://mrs.cn-east-3.myhuaweicloud.com")
 var AP_SOUTHEAST_1 = region.NewRegion("ap-southeast-1", "https://mrs.ap-southeast-1.myhuaweicloud.cn")
 var AP_SOUTHEAST_2 = region.NewRegion("ap-southeast-2", "https://mrs.ap-southeast-2.myhuaweicloud.com")
 var AP_SOUTHEAST_3 = region.NewRegion("ap-southeast-3", "https://mrs.ap-southeast-3.myhuaweicloud.com")
 var AF_SOUTH_1 = region.NewRegion("af-south-1", "https://mrs.af-south-1.myhuaweicloud.com")
 var RU_NORTHWEST_2 = region.NewRegion("ru-northwest-2", "https://mrs.ru-northwest-2.myhuaweicloud.cn")
-var SA_BRAZIL_1 = region.NewRegion("sa-brazil-1", "https://mrs.sa-brazil-1.myhuaweicloud.cn")
-var LA_SOUTH_2 = region.NewRegion("la-south-2", "https://mrs.la-south-2.myhuaweicloud.cn")
-var LA_NORTH_2 = region.NewRegion("la-north-2", "https://mrs.la-north-2.myhuaweicloud.cn")
-var NA_MEXICO_1 = region.NewRegion("na-mexico-1", "https://mrs.na-mexico-1.myhuaweicloud.cn")
-var CN_NORTH_9 = region.NewRegion("cn-north-9", "https://mrs.cn-north-9.myhuaweicloud.cn")
-var CN_SOUTHWEST_2 = region.NewRegion("cn-southwest-2", "https://mrs.cn-southwest-2.myhuaweicloud.cn")
+var SA_BRAZIL_1 = region.NewRegion("sa-brazil-1", "https://mrs.sa-brazil-1.myhuaweicloud.com")
+var LA_SOUTH_2 = region.NewRegion("la-south-2", "https://mrs.la-south-2.myhuaweicloud.com")
+var LA_NORTH_2 = region.NewRegion("la-north-2", "https://mrs.la-north-2.myhuaweicloud.com")
+var NA_MEXICO_1 = region.NewRegion("na-mexico-1", "https://mrs.na-mexico-1.myhuaweicloud.com")
+var CN_NORTH_9 = region.NewRegion("cn-north-9", "https://mrs.cn-north-9.myhuaweicloud.com")
+var CN_SOUTHWEST_2 = region.NewRegion("cn-southwest-2", "https://mrs.cn-southwest-2.myhuaweicloud.com")
 
 var staticFields = map[string]*region.Region{
 	"cn-north-1":     CN_NORTH_1,

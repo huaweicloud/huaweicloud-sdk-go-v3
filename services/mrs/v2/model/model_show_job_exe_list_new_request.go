@@ -24,7 +24,7 @@ type ShowJobExeListNewRequest struct {
 	// 用户名称、只能由字母、数字、特殊字符(-_.)组成，且不能以数字开头，并且长度为1～32字符。
 	User *string `json:"user,omitempty"`
 
-	// 作业类型。 - MapReduce - SparkSubmit - SparkSubmit：SparkPython类型的作业在查询时作业类型请选择SparkSubmit。 - HiveScript - HiveSql - DistCp，导入、导出数据。 - SparkScript - SparkSql - Flink
+	// 作业类型。 - MapReduce - SparkPython - SparkSubmit：SparkPython类型的作业在查询时作业类型请选择SparkSubmit。 - HiveScript - HiveSql - DistCp，导入、导出数据。 - SparkScript - SparkSql - Flink
 	JobType *string `json:"job_type,omitempty"`
 
 	// 作业运行状态。 - FAILED：失败 - KILLED：已终止 - NEW：已创建 - NEW_SAVING：已创建保存中 - SUBMITTED：已提交 - ACCEPTED：已接受 - RUNNING：运行中 - FINISHED：已完成
@@ -39,7 +39,7 @@ type ShowJobExeListNewRequest struct {
 	// 返回结果中每页显示条数。缺省值：10
 	Limit *string `json:"limit,omitempty"`
 
-	// 表示作业列表从该偏移量开始查询。缺省值：1
+	// 表示作业列表从该偏移量开始查询。缺省值：0
 	Offset *string `json:"offset,omitempty"`
 
 	// 返回结果的排序方式，默认值为desc。 - asc：按升序排列 - desc：按降序排列

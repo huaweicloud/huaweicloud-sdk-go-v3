@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-type Rules struct {
+type Rule struct {
 
 	// 弹性伸缩规则的名称。  只能由字母、数字、中划线和下划线组成，并且长度为1～64个字符。  在一个节点组范围内，不允许重名。
 	Name string `json:"name"`
@@ -18,7 +18,7 @@ type Rules struct {
 	Description *string `json:"description,omitempty"`
 
 	// 弹性伸缩规则的调整类型，只允许以下类型：  枚举值： - scale_out：扩容 - scale_in：缩容
-	AdjustmentType RulesAdjustmentType `json:"adjustment_type"`
+	AdjustmentType RuleAdjustmentType `json:"adjustment_type"`
 
 	// 触发弹性伸缩规则后，该集群处于冷却状态（不再执行弹性伸缩操作）的时长，单位为分钟。  取值范围[0～10080]，10080为一周的分钟数。
 	CoolDownMinutes int32 `json:"cool_down_minutes"`
@@ -29,44 +29,44 @@ type Rules struct {
 	Trigger *Trigger `json:"trigger"`
 }
 
-func (o Rules) String() string {
+func (o Rule) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "Rules struct{}"
+		return "Rule struct{}"
 	}
 
-	return strings.Join([]string{"Rules", string(data)}, " ")
+	return strings.Join([]string{"Rule", string(data)}, " ")
 }
 
-type RulesAdjustmentType struct {
+type RuleAdjustmentType struct {
 	value string
 }
 
-type RulesAdjustmentTypeEnum struct {
-	SCALE_OUT RulesAdjustmentType
-	SCALE_IN  RulesAdjustmentType
+type RuleAdjustmentTypeEnum struct {
+	SCALE_OUT RuleAdjustmentType
+	SCALE_IN  RuleAdjustmentType
 }
 
-func GetRulesAdjustmentTypeEnum() RulesAdjustmentTypeEnum {
-	return RulesAdjustmentTypeEnum{
-		SCALE_OUT: RulesAdjustmentType{
+func GetRuleAdjustmentTypeEnum() RuleAdjustmentTypeEnum {
+	return RuleAdjustmentTypeEnum{
+		SCALE_OUT: RuleAdjustmentType{
 			value: "scale_out",
 		},
-		SCALE_IN: RulesAdjustmentType{
+		SCALE_IN: RuleAdjustmentType{
 			value: "scale_in",
 		},
 	}
 }
 
-func (c RulesAdjustmentType) Value() string {
+func (c RuleAdjustmentType) Value() string {
 	return c.value
 }
 
-func (c RulesAdjustmentType) MarshalJSON() ([]byte, error) {
+func (c RuleAdjustmentType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
 
-func (c *RulesAdjustmentType) UnmarshalJSON(b []byte) error {
+func (c *RuleAdjustmentType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

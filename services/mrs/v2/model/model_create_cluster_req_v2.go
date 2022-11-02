@@ -14,10 +14,10 @@ type CreateClusterReqV2 struct {
 	// 说明是否为专属云的资源，默认为false。
 	IsDecProject *bool `json:"is_dec_project,omitempty"`
 
-	// 集群版本。 MRS目前支持MRS 1.9.2、MRS 3.1.0版本。
+	// 集群版本。例如：MRS 3.1.0。
 	ClusterVersion string `json:"cluster_version"`
 
-	// 集群名称，不允许相同。 只能由字母、数字、中划线和下划线组成，并且长度为1～64个字符。
+	// 集群名称，不允许相同。  只能由字母、数字、中划线和下划线组成，并且长度为1～64个字符。
 	ClusterName string `json:"cluster_name"`
 
 	// 集群类型，取值范围： - ANALYSIS：分析集群 - STREAMING：流式集群 - MIXED：混合集群 - CUSTOM：自定义集群，仅MRS 3.x版本支持。
@@ -28,19 +28,19 @@ type CreateClusterReqV2 struct {
 	// 集群所在区域信息，请参见[终端节点](https://support.huaweicloud.com/api-mrs/mrs_02_0003.html)。
 	Region string `json:"region"`
 
-	// 子网所在VPC名称。 通过VPC管理控制台获取名称： 1) 登录VPC管理控制台。 2) 单击“虚拟私有云”，从左侧列表选择虚拟私有云。  在“虚拟私有云”页面的列表中即可获取VPC名称。
+	// 子网所在VPC名称。 通过VPC管理控制台获取名称： 1) 登录VPC管理控制台。 2) 单击“虚拟私有云”，从左侧列表选择虚拟私有云。 在“虚拟私有云”页面的列表中即可获取VPC名称。
 	VpcName string `json:"vpc_name"`
 
-	// 子网ID。通过VPC管理控制台获取子网ID： 1) 登录VPC管理控制台。 2) 单击“虚拟私有云”，从左侧列表选择虚拟私有云。 3) 单击对应虚拟私有云所在行的“子网个数”查看子网。 4) 单击对应子网名称，获取“网络ID”。  “subnet_id”和“subnet_name”必须至少填写一个，当这两个参数同时配置但是不匹配同一个子网时，集群会创建失败，请仔细填写参数。推荐使用“subnet_id”。
+	// 子网ID。通过VPC管理控制台获取子网ID： 1) 登录VPC管理控制台。 2) 单击“虚拟私有云”，从左侧列表选择虚拟私有云。 3) 单击对应虚拟私有云所在行的“子网个数”查看子网。 4) 单击对应子网名称，获取“网络ID”。 “subnet_id”和“subnet_name”必须至少填写一个，当这两个参数同时配置但是不匹配同一个子网时，集群会创建失败，请仔细填写参数。推荐使用“subnet_id”。
 	SubnetId *string `json:"subnet_id,omitempty"`
 
-	// 子网名称。 通过VPC管理控制台获取子网名称： 1) 登录管理控制台。 2) 单击“虚拟私有云”，从左侧列表选择虚拟私有云。 3) 单击对应虚拟私有云所在行的“子网个数”查看子网，获取子网名称。  “subnet_id”和“subnet_name”必须至少填写一个，当这两个参数同时配置但是不匹配同一个子网时，集群会创建失败，请仔细填写参数。当仅填写“subnet_name”一个参数且VPC下存在同名子网时，创建集群时以VPC平台第一个名称的子网为准。推荐使用“subnet_id”。
+	// 子网名称。 通过VPC管理控制台获取子网名称： 1) 登录管理控制台。 2) 单击“虚拟私有云”，从左侧列表选择虚拟私有云。 3) 单击对应虚拟私有云所在行的“子网个数”查看子网，获取子网名称。 “subnet_id”和“subnet_name”必须至少填写一个，当这两个参数同时配置但是不匹配同一个子网时，集群会创建失败，请仔细填写参数。当仅填写“subnet_name”一个参数且VPC下存在同名子网时，创建集群时以VPC平台第一个名称的子网为准。推荐使用“subnet_id”。
 	SubnetName string `json:"subnet_name"`
 
 	// 组件名称列表，用逗号分隔。支持的组件请参见[获取MRS集群信息](https://support.huaweicloud.com/api-mrs/mrs_02_9001.html)页面的“MRS服务支持的组件”内容。
 	Components string `json:"components"`
 
-	// 可用分区名称。 可用分区信息请参见[终端节点](https://support.huaweicloud.com/api-mrs/mrs_02_0003.html)。
+	// 可用分区名称，不支持多AZ集群。 可用分区信息请参见[终端节点](https://support.huaweicloud.com/api-mrs/mrs_02_0003.html)。
 	AvailabilityZone string `json:"availability_zone"`
 
 	// 集群安全组的ID。 - 当该ID为空时MRS后台会自动创建安全组，自动创建的安全组名称以mrs_{cluster_name}开头。 - 当该ID不为空时，表示使用固定安全组来创建集群，传入的ID必须是当前租户中包含的安全组ID，且该安全组中需要包含一条支持全部协议、全部端口、源地址为指定的管理面节点IP的入方向规则。
@@ -64,7 +64,7 @@ type CreateClusterReqV2 struct {
 	// 密钥对名称。用户可以使用密钥对方式登录集群节点。
 	NodeKeypairName *string `json:"node_keypair_name,omitempty"`
 
-	// 企业项目ID。  创建集群时，给集群绑定企业项目ID。  默认设置为0，表示为default企业项目。  获取方式请参见《企业管理API参考》的“查询企业项目列表”响应消息表“enterprise_project字段数据结构说明”的“id”。
+	// 企业项目ID。 创建集群时，给集群绑定企业项目ID。 默认设置为0，表示为default企业项目。 获取方式请参见《企业管理API参考》的“查询企业项目列表”响应消息表“enterprise_project字段数据结构说明”的“id”。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 与MRS集群绑定的弹性公网IP，可实现使用弹性公网IP访问Manager的目的。该弹性公网IP必须已经创建且与集群在同一区域。
@@ -82,7 +82,7 @@ type CreateClusterReqV2 struct {
 	// 集群的标签信息。 同一个集群最多能使用10个tag，tag的名称（key）不能重复。
 	Tags *[]Tag `json:"tags,omitempty"`
 
-	// 集群创建失败时，是否收集失败日志。 默认设置为1，此时将创建OBS桶仅用于MRS集群创建失败时的日志收集。  枚举值： - 0：不收集 - 1：收集
+	// 集群创建失败时，是否收集失败日志。 默认设置为1，此时将创建OBS桶仅用于MRS集群创建失败时的日志收集。 枚举值： - 0：不收集 - 1：收集
 	LogCollection *CreateClusterReqV2LogCollection `json:"log_collection,omitempty"`
 
 	// 组成集群的节点组信息。
@@ -92,7 +92,7 @@ type CreateClusterReqV2 struct {
 	BootstrapScripts *[]BootstrapScript `json:"bootstrap_scripts,omitempty"`
 
 	// 创建集群时可同时提交作业，当前版本暂时只支持新增一个作业。
-	AddJobs *[]AddJobs `json:"add_jobs,omitempty"`
+	AddJobs *[]AddJobsReqV11 `json:"add_jobs,omitempty"`
 }
 
 func (o CreateClusterReqV2) String() string {

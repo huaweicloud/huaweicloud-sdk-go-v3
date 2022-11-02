@@ -56,7 +56,7 @@ type ShowTasksResponse struct {
 	// 安全分数
 	Score *int32 `json:"score,omitempty"`
 
-	// 安全等级:   * - safety  : 安全   * - average : 中风险   * - highrisk: 高风险
+	// 安全等级:   * safety - 安全   * average - 中风险   * highrisk - 高风险
 	SafeLevel *ShowTasksResponseSafeLevel `json:"safe_level,omitempty"`
 
 	Statistics     *VulnsLevel `json:"statistics,omitempty"`

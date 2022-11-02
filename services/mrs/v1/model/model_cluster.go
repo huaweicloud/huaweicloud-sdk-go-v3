@@ -114,7 +114,7 @@ type Cluster struct {
 	SlaveSecurityGroupsId *string `json:"slaveSecurityGroupsId,omitempty"`
 
 	// 配置引导操作脚本信息。
-	BootstrapScripts *[]BootstrapScriptResp `json:"bootstrapScripts,omitempty"`
+	BootstrapScripts *[]BootstrapScript `json:"bootstrapScripts,omitempty"`
 
 	// MRS集群运行模式。 - 0：普通集群 - 1：安全集群
 	SafeMode *int32 `json:"safeMode,omitempty"`

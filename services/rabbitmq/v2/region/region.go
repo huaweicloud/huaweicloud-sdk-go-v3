@@ -19,6 +19,10 @@ var AP_SOUTHEAST_3 = region.NewRegion("ap-southeast-3", "https://dms.ap-southeas
 var AF_SOUTH_1 = region.NewRegion("af-south-1", "https://dms.af-south-1.myhuaweicloud.com")
 var RU_NORTHWEST_2 = region.NewRegion("ru-northwest-2", "https://dms.ru-northwest-2.myhuaweicloud.com")
 var CN_NORTH_9 = region.NewRegion("cn-north-9", "https://dms.cn-north-9.myhuaweicloud.com")
+var LA_SOUTH_2 = region.NewRegion("la-south-2", "https://dms.la-south-2.myhuaweicloud.com")
+var SA_BRAZIL_1 = region.NewRegion("sa-brazil-1", "https://dms.sa-brazil-1.myhuaweicloud.com")
+var LA_NORTH_2 = region.NewRegion("la-north-2", "https://dms.la-north-2.myhuaweicloud.com")
+var NA_MEXICO_1 = region.NewRegion("na-mexico-1", "https://dms.na-mexico-1.myhuaweicloud.com")
 
 var staticFields = map[string]*region.Region{
 	"cn-north-1":     CN_NORTH_1,
@@ -35,6 +39,10 @@ var staticFields = map[string]*region.Region{
 	"af-south-1":     AF_SOUTH_1,
 	"ru-northwest-2": RU_NORTHWEST_2,
 	"cn-north-9":     CN_NORTH_9,
+	"la-south-2":     LA_SOUTH_2,
+	"sa-brazil-1":    SA_BRAZIL_1,
+	"la-north-2":     LA_NORTH_2,
+	"na-mexico-1":    NA_MEXICO_1,
 }
 
 var provider = region.DefaultProviderChain("RABBITMQ")

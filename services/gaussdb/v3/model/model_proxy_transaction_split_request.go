@@ -1,0 +1,26 @@
+package model
+
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
+	"strings"
+)
+
+// 前端页面请求体
+type ProxyTransactionSplitRequest struct {
+
+	// 开启/关闭事务拆分，取值范围是[ON/OFF]
+	TransactionSplit string `json:"transaction_split"`
+
+	// 目标proxy列表
+	ProxyIdList []string `json:"proxy_id_list"`
+}
+
+func (o ProxyTransactionSplitRequest) String() string {
+	data, err := utils.Marshal(o)
+	if err != nil {
+		return "ProxyTransactionSplitRequest struct{}"
+	}
+
+	return strings.Join([]string{"ProxyTransactionSplitRequest", string(data)}, " ")
+}

@@ -569,6 +569,18 @@ func (i *RegisterServerAutoRecoveryInvoker) Invoke() (*model.RegisterServerAutoR
 	}
 }
 
+type RegisterServerMonitorInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RegisterServerMonitorInvoker) Invoke() (*model.RegisterServerMonitorResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RegisterServerMonitorResponse), nil
+	}
+}
+
 type ReinstallServerWithCloudInitInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -758,6 +770,18 @@ func (i *UpdateServerAutoTerminateTimeInvoker) Invoke() (*model.UpdateServerAuto
 		return nil, err
 	} else {
 		return result.(*model.UpdateServerAutoTerminateTimeResponse), nil
+	}
+}
+
+type UpdateServerBlockDeviceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateServerBlockDeviceInvoker) Invoke() (*model.UpdateServerBlockDeviceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateServerBlockDeviceResponse), nil
 	}
 }
 

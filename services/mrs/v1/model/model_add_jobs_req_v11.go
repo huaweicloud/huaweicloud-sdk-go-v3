@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-type AddJobs struct {
+type AddJobsReqV11 struct {
 
 	// 作业类型码。 - 1：MapReduce - 2：Spark - 3：Hive Script - 4：HiveSQL（当前不支持） - 5：DistCp，导入、导出数据，（当前不支持）。 - 6：Spark Script - 7：Spark SQL，提交SQL语句，（当前不支持）。
 	JobType int32 `json:"job_type"`
@@ -45,11 +45,11 @@ type AddJobs struct {
 	FileAction *string `json:"file_action,omitempty"`
 }
 
-func (o AddJobs) String() string {
+func (o AddJobsReqV11) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "AddJobs struct{}"
+		return "AddJobsReqV11 struct{}"
 	}
 
-	return strings.Join([]string{"AddJobs", string(data)}, " ")
+	return strings.Join([]string{"AddJobsReqV11", string(data)}, " ")
 }
