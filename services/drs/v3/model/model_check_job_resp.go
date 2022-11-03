@@ -15,7 +15,7 @@ type CheckJobResp struct {
 	// 任务id。
 	Id string `json:"id"`
 
-	// 测试结果
+	// 测试结果。 - true：成功 - false：失败
 	Status CheckJobRespStatus `json:"status"`
 
 	// 错误码。
@@ -49,10 +49,10 @@ type CheckJobRespStatusEnum struct {
 func GetCheckJobRespStatusEnum() CheckJobRespStatusEnum {
 	return CheckJobRespStatusEnum{
 		TRUE: CheckJobRespStatus{
-			value: "true表示成功",
+			value: "true",
 		},
 		FALSE: CheckJobRespStatus{
-			value: "false表示失败",
+			value: "false",
 		},
 	}
 }

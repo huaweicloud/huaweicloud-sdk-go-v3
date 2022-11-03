@@ -53,6 +53,36 @@ type DeploymentHostDetail struct {
 	ProjectName *string `json:"project_name,omitempty"`
 
 	Permission *PermissionHostDetail `json:"permission,omitempty"`
+
+	// 更新时间
+	UpdateTime *string `json:"update_time,omitempty"`
+
+	// 最后连接时间
+	LastestConnectionTime *string `json:"lastest_connection_time,omitempty"`
+
+	// 连接状态
+	ConnectionStatus *string `json:"connection_status,omitempty"`
+
+	// 拥有者名称
+	OwnerName *string `json:"owner_name,omitempty"`
+
+	// 维护者id
+	UpdatorId *string `json:"updator_id,omitempty"`
+
+	// 创建时间
+	CreateTime *string `json:"create_time,omitempty"`
+
+	// 昵称
+	NickName *string `json:"nick_name,omitempty"`
+
+	// 拥有者id
+	OwnerId *string `json:"owner_id,omitempty"`
+
+	// 维护者名称
+	UpdatorName *string `json:"updator_name,omitempty"`
+
+	// 连接结果
+	ConnectionResult *string `json:"connection_result,omitempty"`
 }
 
 func (o DeploymentHostDetail) String() string {

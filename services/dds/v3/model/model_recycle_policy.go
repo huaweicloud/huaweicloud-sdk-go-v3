@@ -8,7 +8,7 @@ import (
 
 type RecyclePolicy struct {
 
-	// 是否打开回收策略 - true 打开回收策略 - false 不打开回收策略
+	// 打开回收策略，不可关闭 - true 打开回收策略
 	Enabled bool `json:"enabled"`
 
 	// 策略保持时长（1-7天），天数为正整数，不填默认保留7天

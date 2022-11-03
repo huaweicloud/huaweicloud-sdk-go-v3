@@ -10,7 +10,7 @@ import (
 type CreateClusterResponse struct {
 	Cluster *CreateClusterClusterResponse `json:"cluster,omitempty"`
 
-	// 订单号。只有包周期集群拥有该参数。
+	// 订单号。若创建的是包周期集群，则只返回ordeld参数。
 	OrdeId         *string `json:"ordeId,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

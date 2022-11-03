@@ -9,10 +9,10 @@ import (
 // 分页信息。
 type PageInfo struct {
 
-	// 下一页查询地址（下一页起始资源id）。
+	// 下一页查询地址（本页的末尾凭据名称，下一页起始凭据名称）。
 	NextMarker *string `json:"next_marker,omitempty"`
 
-	// 前一页查询地址（上一页末尾资源id）。
+	// 本页的起始凭据名称，上一页末尾凭据名称。
 	PreviousMarker *string `json:"previous_marker,omitempty"`
 
 	// 本页返回条目数量。

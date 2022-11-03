@@ -509,18 +509,6 @@ func (i *ShowGaussMySqlProjectQuotasInvoker) Invoke() (*model.ShowGaussMySqlProj
 	}
 }
 
-type ShowGaussMySqlProxyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowGaussMySqlProxyInvoker) Invoke() (*model.ShowGaussMySqlProxyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowGaussMySqlProxyResponse), nil
-	}
-}
-
 type ShowGaussMySqlProxyFlavorsInvoker struct {
 	*invoker.BaseInvoker
 }

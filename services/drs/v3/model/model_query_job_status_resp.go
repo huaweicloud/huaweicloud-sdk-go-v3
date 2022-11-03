@@ -15,7 +15,7 @@ type QueryJobStatusResp struct {
 	// 任务ID
 	Id *string `json:"id,omitempty"`
 
-	// 任务状态
+	// 任务状态。 - CREATING：创建中 - CREATE_FAILED：创建失败 - CONFIGURATION：配置中 - STARTJOBING：启动中 - WAITING_FOR_START：等待启动中 - START_JOB_FAILED：启动失败 - PAUSING：已暂停 - FULL_TRANSFER_STARTED：全量开始，灾备场景下为初始化 - FULL_TRANSFER_FAILED：全量失败，灾备场景下为初始化失败 - FULL_TRANSFER_COMPLETE：全量完成，灾备场景下为初始化完成 - INCRE_TRANSFER_STARTED：增量开始，灾备场景下为灾备中 - INCRE_TRANSFER_FAILED：增量失败，灾备场景下为灾备异常 - RELEASE_RESOURCE_STARTED：结束任务中 - RELEASE_RESOURCE_FAILED：结束任务失败 - RELEASE_RESOURCE_COMPLETE：已结束 - REBUILD_NODE_STARTED：故障恢复中 - REBUILD_NODE_FAILED：故障恢复失败 - CHANGE_JOB_STARTED：任务变更中 - CHANGE_JOB_FAILED：任务变更失败 - DELETED：已删除 - CHILD_TRANSFER_STARTING：再编辑子任务启动中 - CHILD_TRANSFER_STARTED：再编辑子任务迁移中 - CHILD_TRANSFER_COMPLETE：再编辑子任务迁移完成 - CHILD_TRANSFER_FAILED：再编辑子任务迁移失败 - RELEASE_CHILD_TRANSFER_STARTED：再编辑子任务结束中 - RELEASE_CHILD_TRANSFER_COMPLETE：再编辑子任务已结束 - NODE_UPGRADE_START：升级开始 - NODE_UPGRADE_COMPLETE：升级完成 - NODE_UPGRADE_FAILED：升级失败
 	Status *QueryJobStatusRespStatus `json:"status,omitempty"`
 
 	// 错误码
@@ -45,6 +45,7 @@ type QueryJobStatusRespStatusEnum struct {
 	STARTJOBING                     QueryJobStatusRespStatus
 	WAITING_FOR_START               QueryJobStatusRespStatus
 	START_JOB_FAILED                QueryJobStatusRespStatus
+	PAUSING                         QueryJobStatusRespStatus
 	FULL_TRANSFER_STARTED           QueryJobStatusRespStatus
 	FULL_TRANSFER_FAILED            QueryJobStatusRespStatus
 	FULL_TRANSFER_COMPLETE          QueryJobStatusRespStatus
@@ -53,83 +54,110 @@ type QueryJobStatusRespStatusEnum struct {
 	RELEASE_RESOURCE_STARTED        QueryJobStatusRespStatus
 	RELEASE_RESOURCE_FAILED         QueryJobStatusRespStatus
 	RELEASE_RESOURCE_COMPLETE       QueryJobStatusRespStatus
+	REBUILD_NODE_STARTED            QueryJobStatusRespStatus
+	REBUILD_NODE_FAILED             QueryJobStatusRespStatus
 	CHANGE_JOB_STARTED              QueryJobStatusRespStatus
 	CHANGE_JOB_FAILED               QueryJobStatusRespStatus
+	DELETED                         QueryJobStatusRespStatus
 	CHILD_TRANSFER_STARTING         QueryJobStatusRespStatus
 	CHILD_TRANSFER_STARTED          QueryJobStatusRespStatus
 	CHILD_TRANSFER_COMPLETE         QueryJobStatusRespStatus
 	CHILD_TRANSFER_FAILED           QueryJobStatusRespStatus
 	RELEASE_CHILD_TRANSFER_STARTED  QueryJobStatusRespStatus
 	RELEASE_CHILD_TRANSFER_COMPLETE QueryJobStatusRespStatus
+	NODE_UPGRADE_START              QueryJobStatusRespStatus
+	NODE_UPGRADE_COMPLETE           QueryJobStatusRespStatus
+	NODE_UPGRADE_FAILED             QueryJobStatusRespStatus
 }
 
 func GetQueryJobStatusRespStatusEnum() QueryJobStatusRespStatusEnum {
 	return QueryJobStatusRespStatusEnum{
 		CREATING: QueryJobStatusRespStatus{
-			value: "CREATING：创建中",
+			value: "CREATING",
 		},
 		CREATE_FAILED: QueryJobStatusRespStatus{
-			value: "CREATE_FAILED: 创建失败",
+			value: "CREATE_FAILED",
 		},
 		CONFIGURATION: QueryJobStatusRespStatus{
-			value: "CONFIGURATION: 配置中",
+			value: "CONFIGURATION",
 		},
 		STARTJOBING: QueryJobStatusRespStatus{
-			value: "STARTJOBING: 启动中",
+			value: "STARTJOBING",
 		},
 		WAITING_FOR_START: QueryJobStatusRespStatus{
-			value: "WAITING_FOR_START：等待启动中",
+			value: "WAITING_FOR_START",
 		},
 		START_JOB_FAILED: QueryJobStatusRespStatus{
-			value: "START_JOB_FAILED：任务启动失败",
+			value: "START_JOB_FAILED",
+		},
+		PAUSING: QueryJobStatusRespStatus{
+			value: "PAUSING",
 		},
 		FULL_TRANSFER_STARTED: QueryJobStatusRespStatus{
-			value: "FULL_TRANSFER_STARTED：全量迁移中，灾备场景为初始化",
+			value: "FULL_TRANSFER_STARTED",
 		},
 		FULL_TRANSFER_FAILED: QueryJobStatusRespStatus{
-			value: "FULL_TRANSFER_FAILED：全量迁移失败，灾备场景为初始化失败",
+			value: "FULL_TRANSFER_FAILED",
 		},
 		FULL_TRANSFER_COMPLETE: QueryJobStatusRespStatus{
-			value: "FULL_TRANSFER_COMPLETE：全量迁移完成，灾备场景为初始化完成",
+			value: "FULL_TRANSFER_COMPLETE",
 		},
 		INCRE_TRANSFER_STARTED: QueryJobStatusRespStatus{
-			value: "INCRE_TRANSFER_STARTED：增量迁移中，灾备场景为灾备中",
+			value: "INCRE_TRANSFER_STARTED",
 		},
 		INCRE_TRANSFER_FAILED: QueryJobStatusRespStatus{
-			value: "INCRE_TRANSFER_FAILED：增量迁移失败，灾备场景为灾备异常",
+			value: "INCRE_TRANSFER_FAILED",
 		},
 		RELEASE_RESOURCE_STARTED: QueryJobStatusRespStatus{
-			value: "RELEASE_RESOURCE_STARTED：结束任务中",
+			value: "RELEASE_RESOURCE_STARTED",
 		},
 		RELEASE_RESOURCE_FAILED: QueryJobStatusRespStatus{
-			value: "RELEASE_RESOURCE_FAILED：结束任务失败",
+			value: "RELEASE_RESOURCE_FAILED",
 		},
 		RELEASE_RESOURCE_COMPLETE: QueryJobStatusRespStatus{
-			value: "RELEASE_RESOURCE_COMPLETE：已结束",
+			value: "RELEASE_RESOURCE_COMPLETE",
+		},
+		REBUILD_NODE_STARTED: QueryJobStatusRespStatus{
+			value: "REBUILD_NODE_STARTED",
+		},
+		REBUILD_NODE_FAILED: QueryJobStatusRespStatus{
+			value: "REBUILD_NODE_FAILED",
 		},
 		CHANGE_JOB_STARTED: QueryJobStatusRespStatus{
-			value: "CHANGE_JOB_STARTED：任务变更中",
+			value: "CHANGE_JOB_STARTED",
 		},
 		CHANGE_JOB_FAILED: QueryJobStatusRespStatus{
-			value: "CHANGE_JOB_FAILED：任务变更失败",
+			value: "CHANGE_JOB_FAILED",
+		},
+		DELETED: QueryJobStatusRespStatus{
+			value: "DELETED",
 		},
 		CHILD_TRANSFER_STARTING: QueryJobStatusRespStatus{
-			value: "CHILD_TRANSFER_STARTING：子任务启动中",
+			value: "CHILD_TRANSFER_STARTING",
 		},
 		CHILD_TRANSFER_STARTED: QueryJobStatusRespStatus{
-			value: "CHILD_TRANSFER_STARTED：子任务迁移中",
+			value: "CHILD_TRANSFER_STARTED",
 		},
 		CHILD_TRANSFER_COMPLETE: QueryJobStatusRespStatus{
-			value: "CHILD_TRANSFER_COMPLETE：子任务迁移完成",
+			value: "CHILD_TRANSFER_COMPLETE",
 		},
 		CHILD_TRANSFER_FAILED: QueryJobStatusRespStatus{
-			value: "CHILD_TRANSFER_FAILED：子任务迁移失败",
+			value: "CHILD_TRANSFER_FAILED",
 		},
 		RELEASE_CHILD_TRANSFER_STARTED: QueryJobStatusRespStatus{
-			value: "RELEASE_CHILD_TRANSFER_STARTED：子任务结束中",
+			value: "RELEASE_CHILD_TRANSFER_STARTED",
 		},
 		RELEASE_CHILD_TRANSFER_COMPLETE: QueryJobStatusRespStatus{
-			value: "RELEASE_CHILD_TRANSFER_COMPLETE：子任务已结束",
+			value: "RELEASE_CHILD_TRANSFER_COMPLETE",
+		},
+		NODE_UPGRADE_START: QueryJobStatusRespStatus{
+			value: "NODE_UPGRADE_START",
+		},
+		NODE_UPGRADE_COMPLETE: QueryJobStatusRespStatus{
+			value: "NODE_UPGRADE_COMPLETE",
+		},
+		NODE_UPGRADE_FAILED: QueryJobStatusRespStatus{
+			value: "NODE_UPGRADE_FAILED",
 		},
 	}
 }

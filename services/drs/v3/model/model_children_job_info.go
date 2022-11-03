@@ -45,8 +45,8 @@ type ChildrenJobInfo struct {
 	// 新框架
 	NodeNewFramework bool `json:"node_newFramework"`
 
-	// 任务状态
-	Status string `json:"status"`
+	// 任务状态。 - CREATING：创建中 - CREATE_FAILED：创建失败 - CONFIGURATION：配置中 - STARTJOBING：启动中 - WAITING_FOR_START：等待启动中 - START_JOB_FAILED：启动失败 - PAUSING：已暂停 - FULL_TRANSFER_STARTED：全量开始，灾备场景下为初始化 - FULL_TRANSFER_FAILED：全量失败，灾备场景下为初始化失败 - FULL_TRANSFER_COMPLETE：全量完成，灾备场景下为初始化完成 - INCRE_TRANSFER_STARTED：增量开始，灾备场景下为灾备中 - INCRE_TRANSFER_FAILED：增量失败，灾备场景下为灾备异常 - RELEASE_RESOURCE_STARTED：结束任务中 - RELEASE_RESOURCE_FAILED：结束任务失败 - RELEASE_RESOURCE_COMPLETE：已结束 - REBUILD_NODE_STARTED：故障恢复中 - REBUILD_NODE_FAILED：故障恢复失败 - CHANGE_JOB_STARTED：任务变更中 - CHANGE_JOB_FAILED：任务变更失败 - DELETED：已删除 - CHILD_TRANSFER_STARTING：再编辑子任务启动中 - CHILD_TRANSFER_STARTED：再编辑子任务迁移中 - CHILD_TRANSFER_COMPLETE：再编辑子任务迁移完成 - CHILD_TRANSFER_FAILED：再编辑子任务迁移失败 - RELEASE_CHILD_TRANSFER_STARTED：再编辑子任务结束中 - RELEASE_CHILD_TRANSFER_COMPLETE：再编辑子任务已结束 - NODE_UPGRADE_START：升级开始 - NODE_UPGRADE_COMPLETE：升级完成 - NODE_UPGRADE_FAILED：升级失败
+	Status ChildrenJobInfoStatus `json:"status"`
 
 	// 迁移模式
 	TaskType ChildrenJobInfoTaskType `json:"task_type"`
@@ -74,13 +74,13 @@ type ChildrenJobInfoDbUseTypeEnum struct {
 func GetChildrenJobInfoDbUseTypeEnum() ChildrenJobInfoDbUseTypeEnum {
 	return ChildrenJobInfoDbUseTypeEnum{
 		MIGRATION: ChildrenJobInfoDbUseType{
-			value: "migration:实时迁移",
+			value: "migration",
 		},
 		SYNC: ChildrenJobInfoDbUseType{
-			value: "sync:实时同步",
+			value: "sync",
 		},
 		CLOUD_DATA_GUARD: ChildrenJobInfoDbUseType{
-			value: "cloudDataGuard:实时灾备",
+			value: "cloudDataGuard",
 		},
 	}
 }
@@ -253,6 +253,156 @@ func (c *ChildrenJobInfoNetType) UnmarshalJSON(b []byte) error {
 	}
 }
 
+type ChildrenJobInfoStatus struct {
+	value string
+}
+
+type ChildrenJobInfoStatusEnum struct {
+	CREATING                        ChildrenJobInfoStatus
+	CREATE_FAILED                   ChildrenJobInfoStatus
+	CONFIGURATION                   ChildrenJobInfoStatus
+	STARTJOBING                     ChildrenJobInfoStatus
+	WAITING_FOR_START               ChildrenJobInfoStatus
+	START_JOB_FAILED                ChildrenJobInfoStatus
+	PAUSING                         ChildrenJobInfoStatus
+	FULL_TRANSFER_STARTED           ChildrenJobInfoStatus
+	FULL_TRANSFER_FAILED            ChildrenJobInfoStatus
+	FULL_TRANSFER_COMPLETE          ChildrenJobInfoStatus
+	INCRE_TRANSFER_STARTED          ChildrenJobInfoStatus
+	INCRE_TRANSFER_FAILED           ChildrenJobInfoStatus
+	RELEASE_RESOURCE_STARTED        ChildrenJobInfoStatus
+	RELEASE_RESOURCE_FAILED         ChildrenJobInfoStatus
+	RELEASE_RESOURCE_COMPLETE       ChildrenJobInfoStatus
+	REBUILD_NODE_STARTED            ChildrenJobInfoStatus
+	REBUILD_NODE_FAILED             ChildrenJobInfoStatus
+	CHANGE_JOB_STARTED              ChildrenJobInfoStatus
+	CHANGE_JOB_FAILED               ChildrenJobInfoStatus
+	DELETED                         ChildrenJobInfoStatus
+	CHILD_TRANSFER_STARTING         ChildrenJobInfoStatus
+	CHILD_TRANSFER_STARTED          ChildrenJobInfoStatus
+	CHILD_TRANSFER_COMPLETE         ChildrenJobInfoStatus
+	CHILD_TRANSFER_FAILED           ChildrenJobInfoStatus
+	RELEASE_CHILD_TRANSFER_STARTED  ChildrenJobInfoStatus
+	RELEASE_CHILD_TRANSFER_COMPLETE ChildrenJobInfoStatus
+	NODE_UPGRADE_START              ChildrenJobInfoStatus
+	NODE_UPGRADE_COMPLETE           ChildrenJobInfoStatus
+	NODE_UPGRADE_FAILED             ChildrenJobInfoStatus
+}
+
+func GetChildrenJobInfoStatusEnum() ChildrenJobInfoStatusEnum {
+	return ChildrenJobInfoStatusEnum{
+		CREATING: ChildrenJobInfoStatus{
+			value: "CREATING",
+		},
+		CREATE_FAILED: ChildrenJobInfoStatus{
+			value: "CREATE_FAILED",
+		},
+		CONFIGURATION: ChildrenJobInfoStatus{
+			value: "CONFIGURATION",
+		},
+		STARTJOBING: ChildrenJobInfoStatus{
+			value: "STARTJOBING",
+		},
+		WAITING_FOR_START: ChildrenJobInfoStatus{
+			value: "WAITING_FOR_START",
+		},
+		START_JOB_FAILED: ChildrenJobInfoStatus{
+			value: "START_JOB_FAILED",
+		},
+		PAUSING: ChildrenJobInfoStatus{
+			value: "PAUSING",
+		},
+		FULL_TRANSFER_STARTED: ChildrenJobInfoStatus{
+			value: "FULL_TRANSFER_STARTED",
+		},
+		FULL_TRANSFER_FAILED: ChildrenJobInfoStatus{
+			value: "FULL_TRANSFER_FAILED",
+		},
+		FULL_TRANSFER_COMPLETE: ChildrenJobInfoStatus{
+			value: "FULL_TRANSFER_COMPLETE",
+		},
+		INCRE_TRANSFER_STARTED: ChildrenJobInfoStatus{
+			value: "INCRE_TRANSFER_STARTED",
+		},
+		INCRE_TRANSFER_FAILED: ChildrenJobInfoStatus{
+			value: "INCRE_TRANSFER_FAILED",
+		},
+		RELEASE_RESOURCE_STARTED: ChildrenJobInfoStatus{
+			value: "RELEASE_RESOURCE_STARTED",
+		},
+		RELEASE_RESOURCE_FAILED: ChildrenJobInfoStatus{
+			value: "RELEASE_RESOURCE_FAILED",
+		},
+		RELEASE_RESOURCE_COMPLETE: ChildrenJobInfoStatus{
+			value: "RELEASE_RESOURCE_COMPLETE",
+		},
+		REBUILD_NODE_STARTED: ChildrenJobInfoStatus{
+			value: "REBUILD_NODE_STARTED",
+		},
+		REBUILD_NODE_FAILED: ChildrenJobInfoStatus{
+			value: "REBUILD_NODE_FAILED",
+		},
+		CHANGE_JOB_STARTED: ChildrenJobInfoStatus{
+			value: "CHANGE_JOB_STARTED",
+		},
+		CHANGE_JOB_FAILED: ChildrenJobInfoStatus{
+			value: "CHANGE_JOB_FAILED",
+		},
+		DELETED: ChildrenJobInfoStatus{
+			value: "DELETED",
+		},
+		CHILD_TRANSFER_STARTING: ChildrenJobInfoStatus{
+			value: "CHILD_TRANSFER_STARTING",
+		},
+		CHILD_TRANSFER_STARTED: ChildrenJobInfoStatus{
+			value: "CHILD_TRANSFER_STARTED",
+		},
+		CHILD_TRANSFER_COMPLETE: ChildrenJobInfoStatus{
+			value: "CHILD_TRANSFER_COMPLETE",
+		},
+		CHILD_TRANSFER_FAILED: ChildrenJobInfoStatus{
+			value: "CHILD_TRANSFER_FAILED",
+		},
+		RELEASE_CHILD_TRANSFER_STARTED: ChildrenJobInfoStatus{
+			value: "RELEASE_CHILD_TRANSFER_STARTED",
+		},
+		RELEASE_CHILD_TRANSFER_COMPLETE: ChildrenJobInfoStatus{
+			value: "RELEASE_CHILD_TRANSFER_COMPLETE",
+		},
+		NODE_UPGRADE_START: ChildrenJobInfoStatus{
+			value: "NODE_UPGRADE_START",
+		},
+		NODE_UPGRADE_COMPLETE: ChildrenJobInfoStatus{
+			value: "NODE_UPGRADE_COMPLETE",
+		},
+		NODE_UPGRADE_FAILED: ChildrenJobInfoStatus{
+			value: "NODE_UPGRADE_FAILED",
+		},
+	}
+}
+
+func (c ChildrenJobInfoStatus) Value() string {
+	return c.value
+}
+
+func (c ChildrenJobInfoStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ChildrenJobInfoStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
 type ChildrenJobInfoTaskType struct {
 	value string
 }
@@ -266,13 +416,13 @@ type ChildrenJobInfoTaskTypeEnum struct {
 func GetChildrenJobInfoTaskTypeEnum() ChildrenJobInfoTaskTypeEnum {
 	return ChildrenJobInfoTaskTypeEnum{
 		FULL_TRANS: ChildrenJobInfoTaskType{
-			value: "FULL_TRANS 全量",
+			value: "FULL_TRANS",
 		},
 		FULL_INCR_TRANS: ChildrenJobInfoTaskType{
-			value: "FULL_INCR_TRANS 全量+增量",
+			value: "FULL_INCR_TRANS",
 		},
 		INCR_TRANS: ChildrenJobInfoTaskType{
-			value: "INCR_TRANS 增量",
+			value: "INCR_TRANS",
 		},
 	}
 }

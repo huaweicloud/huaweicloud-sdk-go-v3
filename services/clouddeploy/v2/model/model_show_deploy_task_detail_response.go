@@ -91,8 +91,29 @@ type ShowDeployTaskDetailResponse struct {
 	AppComponentList *[]AppComponentDao `json:"app_component_list,omitempty"`
 
 	// 角色ID,0：部署任务创建者，-1：项目创建者，3：项目经理，4：开发人员，5：测试经理，6：测试人员，7：参与者，8：浏览者
-	RoleId         *int32 `json:"role_id,omitempty"`
-	HttpStatusCode int    `json:"-"`
+	RoleId *int32 `json:"role_id,omitempty"`
+
+	// 部署任务id
+	Id *string `json:"id,omitempty"`
+
+	// 任务序列id
+	ReleaseId *int32 `json:"release_id,omitempty"`
+
+	// 执行时间
+	Duration *string `json:"duration,omitempty"`
+
+	// 执行状态
+	ExecutionState *string `json:"execution_state,omitempty"`
+
+	// 执行者id
+	ExecutorId *string `json:"executor_id,omitempty"`
+
+	// 执行者名称
+	ExecutorNickName *string `json:"executor_nick_name,omitempty"`
+
+	// 执行步骤
+	Steps          map[string]Step `json:"steps,omitempty"`
+	HttpStatusCode int             `json:"-"`
 }
 
 func (o ShowDeployTaskDetailResponse) String() string {

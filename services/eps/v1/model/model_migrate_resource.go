@@ -9,6 +9,9 @@ import (
 // 迁移资源
 type MigrateResource struct {
 
+	// 资源所属RegionID。迁移OBS服务资源时为必选项。
+	RegionId *string `json:"region_id,omitempty"`
+
 	// 项目ID。resource_type为region级别服务时为必选项。
 	ProjectId *string `json:"project_id,omitempty"`
 

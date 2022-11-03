@@ -21,7 +21,7 @@ type QueryProgressResp struct {
 	// 增量迁移时延
 	IncreTransDelay *string `json:"incre_trans_delay,omitempty"`
 
-	// 迁移模式
+	// 迁移模式。 - FULL_TRANS: 全量 - INCR_TRANS: 增量 - FULL_INCR_TRANS: 全量+增量
 	TaskMode *QueryProgressRespTaskMode `json:"task_mode,omitempty"`
 
 	// 任务状态
@@ -58,20 +58,20 @@ type QueryProgressRespTaskMode struct {
 
 type QueryProgressRespTaskModeEnum struct {
 	FULL_TRANS      QueryProgressRespTaskMode
-	INCR_TRANS      QueryProgressRespTaskMode
 	FULL_INCR_TRANS QueryProgressRespTaskMode
+	INCR_TRANS      QueryProgressRespTaskMode
 }
 
 func GetQueryProgressRespTaskModeEnum() QueryProgressRespTaskModeEnum {
 	return QueryProgressRespTaskModeEnum{
 		FULL_TRANS: QueryProgressRespTaskMode{
-			value: "FULL_TRANS: 全量",
-		},
-		INCR_TRANS: QueryProgressRespTaskMode{
-			value: "INCR_TRANS: 增量",
+			value: "FULL_TRANS",
 		},
 		FULL_INCR_TRANS: QueryProgressRespTaskMode{
-			value: "FULL_INCR_TRANS: 全量+增量",
+			value: "FULL_INCR_TRANS",
+		},
+		INCR_TRANS: QueryProgressRespTaskMode{
+			value: "INCR_TRANS",
 		},
 	}
 }

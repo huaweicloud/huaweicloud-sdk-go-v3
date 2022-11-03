@@ -93,13 +93,13 @@ type EndpointVo struct {
 	// 数据库版本。
 	DbVersion *string `json:"db_version,omitempty"`
 
-	// mongoHa模式
+	// mongoHa模式。 - Sharding 集群 - ReplicaSet 副本集 - ReplicaSingle 单节点
 	MongoHaMode *EndpointVoMongoHaMode `json:"mongo_ha_mode,omitempty"`
 
 	// RDS实例projectId。
 	ProjectId *string `json:"project_id,omitempty"`
 
-	// 集群模式
+	// 集群模式。 - Single：单节点RDS - Ha：主备RDS - GR：金融版RDS - Sharding：mongodb 集群或DDM的模式，均默认为分片 - Sharding4.0+：mongodb 集群版本4.0+，默认为不分片 - ReplicaSet：mongodb 副本集,Replica RDS只读副本 - ReplicaSingle：mongodb 单节点 - Cluster：集群 - Independent：gaussdbv5 independent模式 - Combined：gaussdbv5 Combined模式 - Distributed ：分布式taurus - NoSharding：非集群模式
 	ClusterMode *EndpointVoClusterMode `json:"cluster_mode,omitempty"`
 
 	// RDS实例id。
@@ -184,13 +184,13 @@ type EndpointVoMongoHaModeEnum struct {
 func GetEndpointVoMongoHaModeEnum() EndpointVoMongoHaModeEnum {
 	return EndpointVoMongoHaModeEnum{
 		SHARDING: EndpointVoMongoHaMode{
-			value: "Sharding 集群",
+			value: "Sharding",
 		},
 		REPLICA_SET: EndpointVoMongoHaMode{
-			value: "ReplicaSet 副本集",
+			value: "ReplicaSet",
 		},
 		REPLICA_SINGLE: EndpointVoMongoHaMode{
-			value: "ReplicaSingle 单节点",
+			value: "ReplicaSingle",
 		},
 	}
 }
@@ -222,53 +222,61 @@ type EndpointVoClusterMode struct {
 }
 
 type EndpointVoClusterModeEnum struct {
-	SINGLE_RDS                        EndpointVoClusterMode
-	HA_RDS                            EndpointVoClusterMode
-	GR_RDS                            EndpointVoClusterMode
-	SHARDING_MONGODB_DDM              EndpointVoClusterMode
-	REPLICA_SET_MONGODB               EndpointVoClusterMode
-	REPLICA_RDS                       EndpointVoClusterMode
-	REPLICA_SINGLE_MONGODB            EndpointVoClusterMode
-	CLUSTER                           EndpointVoClusterMode
-	INDEPENDENT_GAUSSDBV5_INDEPENDENT EndpointVoClusterMode
-	COMBINED_GAUSSDBV5_COMBINED       EndpointVoClusterMode
-	DISTRIBUTED_TAURUS                EndpointVoClusterMode
+	SINGLE         EndpointVoClusterMode
+	HA             EndpointVoClusterMode
+	GR             EndpointVoClusterMode
+	SHARDING       EndpointVoClusterMode
+	SHARDING4_0    EndpointVoClusterMode
+	REPLICA_SET    EndpointVoClusterMode
+	REPLICA        EndpointVoClusterMode
+	REPLICA_SINGLE EndpointVoClusterMode
+	CLUSTER        EndpointVoClusterMode
+	INDEPENDENT    EndpointVoClusterMode
+	COMBINED       EndpointVoClusterMode
+	DISTRIBUTED    EndpointVoClusterMode
+	NO_SHARDING    EndpointVoClusterMode
 }
 
 func GetEndpointVoClusterModeEnum() EndpointVoClusterModeEnum {
 	return EndpointVoClusterModeEnum{
-		SINGLE_RDS: EndpointVoClusterMode{
-			value: "Single 单节点RDS",
+		SINGLE: EndpointVoClusterMode{
+			value: "Single",
 		},
-		HA_RDS: EndpointVoClusterMode{
-			value: "Ha 主备RDS",
+		HA: EndpointVoClusterMode{
+			value: "Ha",
 		},
-		GR_RDS: EndpointVoClusterMode{
-			value: "GR 金融版RDS",
+		GR: EndpointVoClusterMode{
+			value: "GR",
 		},
-		SHARDING_MONGODB_DDM: EndpointVoClusterMode{
-			value: "Sharding mongodb 集群或DDM的模式，均默认为分片",
+		SHARDING: EndpointVoClusterMode{
+			value: "Sharding",
 		},
-		REPLICA_SET_MONGODB: EndpointVoClusterMode{
-			value: "ReplicaSet mongodb 副本集",
+		SHARDING4_0: EndpointVoClusterMode{
+			value: "Sharding4.0+",
 		},
-		REPLICA_RDS: EndpointVoClusterMode{
-			value: "Replica RDS只读副本",
+		REPLICA_SET: EndpointVoClusterMode{
+			value: "ReplicaSet",
 		},
-		REPLICA_SINGLE_MONGODB: EndpointVoClusterMode{
-			value: "ReplicaSingle mongodb 单节点",
+		REPLICA: EndpointVoClusterMode{
+			value: "Replica",
+		},
+		REPLICA_SINGLE: EndpointVoClusterMode{
+			value: "ReplicaSingle",
 		},
 		CLUSTER: EndpointVoClusterMode{
-			value: "Cluster 集群",
+			value: "Cluster",
 		},
-		INDEPENDENT_GAUSSDBV5_INDEPENDENT: EndpointVoClusterMode{
-			value: "Independent gaussdbv5 independent模式",
+		INDEPENDENT: EndpointVoClusterMode{
+			value: "Independent",
 		},
-		COMBINED_GAUSSDBV5_COMBINED: EndpointVoClusterMode{
-			value: "Combined gaussdbv5 Combined模式",
+		COMBINED: EndpointVoClusterMode{
+			value: "Combined",
 		},
-		DISTRIBUTED_TAURUS: EndpointVoClusterMode{
-			value: "Distributed 分布式taurus",
+		DISTRIBUTED: EndpointVoClusterMode{
+			value: "Distributed",
+		},
+		NO_SHARDING: EndpointVoClusterMode{
+			value: "NoSharding",
 		},
 	}
 }

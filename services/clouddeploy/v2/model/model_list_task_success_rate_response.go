@@ -16,10 +16,10 @@ type ListTaskSuccessRateResponse struct {
 	ProjectName *string `json:"project_name,omitempty"`
 
 	// 任务执行开始时间范围的左边界（包含），格式yyyy-MM-dd
-	StartTime *string `json:"start_time,omitempty"`
+	StartDate *string `json:"start_date,omitempty"`
 
 	// 任务执行开始时间范围的右边界（包含），格式yyyy-MM-dd 。最大时间范围为1年。
-	EndTime *string `json:"end_time,omitempty"`
+	EndDate *string `json:"end_date,omitempty"`
 
 	// 任务的成功率列表
 	TasksSuccessRate *[]TaskSuccessRate `json:"tasks_success_rate,omitempty"`

@@ -151,6 +151,50 @@ func (c *WafClient) CreateIgnoreRuleInvoker(request *model.CreateIgnoreRuleReque
 	return &CreateIgnoreRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateInstance 创建WAF独享引擎实例
+//
+// 创建WAF独享引擎实例
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *WafClient) CreateInstance(request *model.CreateInstanceRequest) (*model.CreateInstanceResponse, error) {
+	requestDef := GenReqDefForCreateInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateInstanceResponse), nil
+	}
+}
+
+// CreateInstanceInvoker 创建WAF独享引擎实例
+func (c *WafClient) CreateInstanceInvoker(request *model.CreateInstanceRequest) *CreateInstanceInvoker {
+	requestDef := GenReqDefForCreateInstance()
+	return &CreateInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateIpGroup 创建ip地址组
+//
+// 创建ip地址组
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *WafClient) CreateIpGroup(request *model.CreateIpGroupRequest) (*model.CreateIpGroupResponse, error) {
+	requestDef := GenReqDefForCreateIpGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateIpGroupResponse), nil
+	}
+}
+
+// CreateIpGroupInvoker 创建ip地址组
+func (c *WafClient) CreateIpGroupInvoker(request *model.CreateIpGroupRequest) *CreateIpGroupInvoker {
+	requestDef := GenReqDefForCreateIpGroup()
+	return &CreateIpGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreatePolicy 创建防护策略
 //
 // 创建防护策略，系统会在生成策略时配置一些默认的配置项，如果需要修改策略的默认配置项需要通过调用更新防护策略接口实现
@@ -369,6 +413,50 @@ func (c *WafClient) DeleteIgnoreRule(request *model.DeleteIgnoreRuleRequest) (*m
 func (c *WafClient) DeleteIgnoreRuleInvoker(request *model.DeleteIgnoreRuleRequest) *DeleteIgnoreRuleInvoker {
 	requestDef := GenReqDefForDeleteIgnoreRule()
 	return &DeleteIgnoreRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteInstance 删除WAF独享引擎信息
+//
+// 删除WAF独享引擎信息
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *WafClient) DeleteInstance(request *model.DeleteInstanceRequest) (*model.DeleteInstanceResponse, error) {
+	requestDef := GenReqDefForDeleteInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteInstanceResponse), nil
+	}
+}
+
+// DeleteInstanceInvoker 删除WAF独享引擎信息
+func (c *WafClient) DeleteInstanceInvoker(request *model.DeleteInstanceRequest) *DeleteInstanceInvoker {
+	requestDef := GenReqDefForDeleteInstance()
+	return &DeleteInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteIpGroup 删除ip地址组
+//
+// 删除ip地址组
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *WafClient) DeleteIpGroup(request *model.DeleteIpGroupRequest) (*model.DeleteIpGroupResponse, error) {
+	requestDef := GenReqDefForDeleteIpGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteIpGroupResponse), nil
+	}
+}
+
+// DeleteIpGroupInvoker 删除ip地址组
+func (c *WafClient) DeleteIpGroupInvoker(request *model.DeleteIpGroupRequest) *DeleteIpGroupInvoker {
+	requestDef := GenReqDefForDeleteIpGroup()
+	return &DeleteIpGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeletePolicy 删除防护策略
@@ -679,6 +767,50 @@ func (c *WafClient) ListIgnoreRuleInvoker(request *model.ListIgnoreRuleRequest) 
 	return &ListIgnoreRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListInstance 查询WAF独享引擎列表
+//
+// 查询WAF独享引擎列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *WafClient) ListInstance(request *model.ListInstanceRequest) (*model.ListInstanceResponse, error) {
+	requestDef := GenReqDefForListInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstanceResponse), nil
+	}
+}
+
+// ListInstanceInvoker 查询WAF独享引擎列表
+func (c *WafClient) ListInstanceInvoker(request *model.ListInstanceRequest) *ListInstanceInvoker {
+	requestDef := GenReqDefForListInstance()
+	return &ListInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListIpGroup 查询地址组列表
+//
+// 查询地址组列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *WafClient) ListIpGroup(request *model.ListIpGroupRequest) (*model.ListIpGroupResponse, error) {
+	requestDef := GenReqDefForListIpGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListIpGroupResponse), nil
+	}
+}
+
+// ListIpGroupInvoker 查询地址组列表
+func (c *WafClient) ListIpGroupInvoker(request *model.ListIpGroupRequest) *ListIpGroupInvoker {
+	requestDef := GenReqDefForListIpGroup()
+	return &ListIpGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListOverviewsClassification 查询安全总览分类统计top信息
 //
 // 查询安全总览分类统计TOP信息，包含受攻击域名 、攻击源ip、受攻击URL、攻击来源区域、攻击事件分布。需要注意的是，安全总览相关的接口，暂时不能支持任意时间的查询。只能支持 console上显示的 昨天，今天，3天，7天和30天 数据查询。
@@ -899,6 +1031,28 @@ func (c *WafClient) ListWhiteblackipRuleInvoker(request *model.ListWhiteblackipR
 	return &ListWhiteblackipRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RenameInstance 重命名WAF独享引擎
+//
+// 重命名WAF独享引擎
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *WafClient) RenameInstance(request *model.RenameInstanceRequest) (*model.RenameInstanceResponse, error) {
+	requestDef := GenReqDefForRenameInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RenameInstanceResponse), nil
+	}
+}
+
+// RenameInstanceInvoker 重命名WAF独享引擎
+func (c *WafClient) RenameInstanceInvoker(request *model.RenameInstanceRequest) *RenameInstanceInvoker {
+	requestDef := GenReqDefForRenameInstance()
+	return &RenameInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowCertificate 查询证书
 //
 // 查询证书
@@ -1007,6 +1161,72 @@ func (c *WafClient) ShowHost(request *model.ShowHostRequest) (*model.ShowHostRes
 func (c *WafClient) ShowHostInvoker(request *model.ShowHostRequest) *ShowHostInvoker {
 	requestDef := GenReqDefForShowHost()
 	return &ShowHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowInstance 查询WAF独享引擎信息
+//
+// 查询WAF独享引擎信息
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *WafClient) ShowInstance(request *model.ShowInstanceRequest) (*model.ShowInstanceResponse, error) {
+	requestDef := GenReqDefForShowInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowInstanceResponse), nil
+	}
+}
+
+// ShowInstanceInvoker 查询WAF独享引擎信息
+func (c *WafClient) ShowInstanceInvoker(request *model.ShowInstanceRequest) *ShowInstanceInvoker {
+	requestDef := GenReqDefForShowInstance()
+	return &ShowInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowIpGroup 查询ip地址组明细
+//
+// 查询ip地址组明细
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *WafClient) ShowIpGroup(request *model.ShowIpGroupRequest) (*model.ShowIpGroupResponse, error) {
+	requestDef := GenReqDefForShowIpGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowIpGroupResponse), nil
+	}
+}
+
+// ShowIpGroupInvoker 查询ip地址组明细
+func (c *WafClient) ShowIpGroupInvoker(request *model.ShowIpGroupRequest) *ShowIpGroupInvoker {
+	requestDef := GenReqDefForShowIpGroup()
+	return &ShowIpGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowLtsInfoConfig 查询lts配置信息
+//
+// 查询lts配置信息
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *WafClient) ShowLtsInfoConfig(request *model.ShowLtsInfoConfigRequest) (*model.ShowLtsInfoConfigResponse, error) {
+	requestDef := GenReqDefForShowLtsInfoConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowLtsInfoConfigResponse), nil
+	}
+}
+
+// ShowLtsInfoConfigInvoker 查询lts配置信息
+func (c *WafClient) ShowLtsInfoConfigInvoker(request *model.ShowLtsInfoConfigRequest) *ShowLtsInfoConfigInvoker {
+	requestDef := GenReqDefForShowLtsInfoConfig()
+	return &ShowLtsInfoConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowPolicy 根据Id查询防护策略
@@ -1139,6 +1359,50 @@ func (c *WafClient) UpdateHostProtectStatus(request *model.UpdateHostProtectStat
 func (c *WafClient) UpdateHostProtectStatusInvoker(request *model.UpdateHostProtectStatusRequest) *UpdateHostProtectStatusInvoker {
 	requestDef := GenReqDefForUpdateHostProtectStatus()
 	return &UpdateHostProtectStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateIpGroup 修改ip地址组
+//
+// 修改ip地址组
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *WafClient) UpdateIpGroup(request *model.UpdateIpGroupRequest) (*model.UpdateIpGroupResponse, error) {
+	requestDef := GenReqDefForUpdateIpGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateIpGroupResponse), nil
+	}
+}
+
+// UpdateIpGroupInvoker 修改ip地址组
+func (c *WafClient) UpdateIpGroupInvoker(request *model.UpdateIpGroupRequest) *UpdateIpGroupInvoker {
+	requestDef := GenReqDefForUpdateIpGroup()
+	return &UpdateIpGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateLtsInfoConfig 配置全量日志lts
+//
+// 配置全量日志lts，该接口可用来开启与关闭wa全量日志以及配置日志组和日志流。日志组id和日志流id可前往云日志服务获取。配置的日志流id要属于所配置的日志组。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *WafClient) UpdateLtsInfoConfig(request *model.UpdateLtsInfoConfigRequest) (*model.UpdateLtsInfoConfigResponse, error) {
+	requestDef := GenReqDefForUpdateLtsInfoConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateLtsInfoConfigResponse), nil
+	}
+}
+
+// UpdateLtsInfoConfigInvoker 配置全量日志lts
+func (c *WafClient) UpdateLtsInfoConfigInvoker(request *model.UpdateLtsInfoConfigRequest) *UpdateLtsInfoConfigInvoker {
+	requestDef := GenReqDefForUpdateLtsInfoConfig()
+	return &UpdateLtsInfoConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdatePolicy 更新防护策略

@@ -57,6 +57,9 @@ type MysqlInstanceRequest struct {
 
 	Tags *[]MysqlTags `json:"tags,omitempty"`
 
+	// 表名大小写是否敏感，默认值是“1”。  取值范围： - 0：表名被存储成固定且表名称大小写敏感。 - 1：表名将被存储成小写且表名称大小写不敏感。
+	LowerCaseTableNames *int32 `json:"lower_case_table_names,omitempty"`
+
 	// 企业项目ID。如果账户开通企业项目服务则该参数必选，未开启该参数不可选。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 

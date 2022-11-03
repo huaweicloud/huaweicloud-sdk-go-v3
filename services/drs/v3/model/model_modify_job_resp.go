@@ -9,13 +9,12 @@ import (
 	"strings"
 )
 
-//
 type ModifyJobResp struct {
 
 	// 任务ID
 	Id string `json:"id"`
 
-	// 状态
+	// 状态。 - success 成功 - failed 失败
 	Status ModifyJobRespStatus `json:"status"`
 
 	// 错误码
@@ -46,10 +45,10 @@ type ModifyJobRespStatusEnum struct {
 func GetModifyJobRespStatusEnum() ModifyJobRespStatusEnum {
 	return ModifyJobRespStatusEnum{
 		SUCCESS: ModifyJobRespStatus{
-			value: "success 成功",
+			value: "success",
 		},
 		FAILED: ModifyJobRespStatus{
-			value: "failed 失败",
+			value: "failed",
 		},
 	}
 }

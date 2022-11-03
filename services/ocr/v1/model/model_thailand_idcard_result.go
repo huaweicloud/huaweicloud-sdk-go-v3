@@ -66,6 +66,9 @@ type ThailandIdcardResult struct {
 
 	// 身份证的类型。取值如下所示： - normal：身份证原件 - copy：复印的身份证 当输入参数“return_idcard_type”为“true”时，才返回该参数。
 	IdcardType *string `json:"idcard_type,omitempty"`
+
+	// 对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+	TextLocation *interface{} `json:"text_location,omitempty"`
 }
 
 func (o ThailandIdcardResult) String() string {

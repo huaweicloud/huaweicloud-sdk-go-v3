@@ -77,6 +77,30 @@ func (i *CreateIgnoreRuleInvoker) Invoke() (*model.CreateIgnoreRuleResponse, err
 	}
 }
 
+type CreateInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateInstanceInvoker) Invoke() (*model.CreateInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateInstanceResponse), nil
+	}
+}
+
+type CreateIpGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateIpGroupInvoker) Invoke() (*model.CreateIpGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateIpGroupResponse), nil
+	}
+}
+
 type CreatePolicyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -194,6 +218,30 @@ func (i *DeleteIgnoreRuleInvoker) Invoke() (*model.DeleteIgnoreRuleResponse, err
 		return nil, err
 	} else {
 		return result.(*model.DeleteIgnoreRuleResponse), nil
+	}
+}
+
+type DeleteInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteInstanceInvoker) Invoke() (*model.DeleteInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteInstanceResponse), nil
+	}
+}
+
+type DeleteIpGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteIpGroupInvoker) Invoke() (*model.DeleteIpGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteIpGroupResponse), nil
 	}
 }
 
@@ -365,6 +413,30 @@ func (i *ListIgnoreRuleInvoker) Invoke() (*model.ListIgnoreRuleResponse, error) 
 	}
 }
 
+type ListInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceInvoker) Invoke() (*model.ListInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceResponse), nil
+	}
+}
+
+type ListIpGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListIpGroupInvoker) Invoke() (*model.ListIpGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListIpGroupResponse), nil
+	}
+}
+
 type ListOverviewsClassificationInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -485,6 +557,18 @@ func (i *ListWhiteblackipRuleInvoker) Invoke() (*model.ListWhiteblackipRuleRespo
 	}
 }
 
+type RenameInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RenameInstanceInvoker) Invoke() (*model.RenameInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RenameInstanceResponse), nil
+	}
+}
+
 type ShowCertificateInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -542,6 +626,42 @@ func (i *ShowHostInvoker) Invoke() (*model.ShowHostResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowHostResponse), nil
+	}
+}
+
+type ShowInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInstanceInvoker) Invoke() (*model.ShowInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceResponse), nil
+	}
+}
+
+type ShowIpGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowIpGroupInvoker) Invoke() (*model.ShowIpGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowIpGroupResponse), nil
+	}
+}
+
+type ShowLtsInfoConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowLtsInfoConfigInvoker) Invoke() (*model.ShowLtsInfoConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowLtsInfoConfigResponse), nil
 	}
 }
 
@@ -614,6 +734,30 @@ func (i *UpdateHostProtectStatusInvoker) Invoke() (*model.UpdateHostProtectStatu
 		return nil, err
 	} else {
 		return result.(*model.UpdateHostProtectStatusResponse), nil
+	}
+}
+
+type UpdateIpGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateIpGroupInvoker) Invoke() (*model.UpdateIpGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateIpGroupResponse), nil
+	}
+}
+
+type UpdateLtsInfoConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateLtsInfoConfigInvoker) Invoke() (*model.UpdateLtsInfoConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateLtsInfoConfigResponse), nil
 	}
 }
 

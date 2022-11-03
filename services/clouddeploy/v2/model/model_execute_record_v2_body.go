@@ -32,6 +32,9 @@ type ExecuteRecordV2Body struct {
 
 	// 执行序列号
 	ReleaseId *int64 `json:"release_id,omitempty"`
+
+	// 类型
+	Type *string `json:"type,omitempty"`
 }
 
 func (o ExecuteRecordV2Body) String() string {

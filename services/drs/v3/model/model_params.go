@@ -18,7 +18,7 @@ type Params struct {
 	// 参数类型
 	DataType *string `json:"data_type,omitempty"`
 
-	// 分组
+	// 分组。 - common-常规参数 - performance-性能参数
 	Group *ParamsGroup `json:"group,omitempty"`
 
 	// 参数名
@@ -106,10 +106,10 @@ type ParamsGroupEnum struct {
 func GetParamsGroupEnum() ParamsGroupEnum {
 	return ParamsGroupEnum{
 		COMMON: ParamsGroup{
-			value: "common-常规参数",
+			value: "common",
 		},
 		PERFORMANCE: ParamsGroup{
-			value: "performance-性能参数",
+			value: "performance",
 		},
 	}
 }

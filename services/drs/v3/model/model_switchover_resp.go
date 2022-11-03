@@ -22,7 +22,7 @@ type SwitchoverResp struct {
 
 	TargetDb *EndpointVo `json:"target_db,omitempty"`
 
-	// 任务方向。
+	// 任务方向。 - up 入云 灾备场景时对应本云为备 - down 出云 灾备场景时对应本云为主 - non-dbs 自建
 	JobDirection *SwitchoverRespJobDirection `json:"job_direction,omitempty"`
 
 	// 目标库是否只读。
@@ -49,21 +49,21 @@ type SwitchoverRespJobDirection struct {
 }
 
 type SwitchoverRespJobDirectionEnum struct {
-	UP_     SwitchoverRespJobDirection
-	DOWN_   SwitchoverRespJobDirection
+	UP      SwitchoverRespJobDirection
+	DOWN    SwitchoverRespJobDirection
 	NON_DBS SwitchoverRespJobDirection
 }
 
 func GetSwitchoverRespJobDirectionEnum() SwitchoverRespJobDirectionEnum {
 	return SwitchoverRespJobDirectionEnum{
-		UP_: SwitchoverRespJobDirection{
-			value: "up 入云 灾备场景时对应本云为备",
+		UP: SwitchoverRespJobDirection{
+			value: "up",
 		},
-		DOWN_: SwitchoverRespJobDirection{
-			value: "down 出云 灾备场景时对应本云为主",
+		DOWN: SwitchoverRespJobDirection{
+			value: "down",
 		},
 		NON_DBS: SwitchoverRespJobDirection{
-			value: "non-dbs 自建",
+			value: "non-dbs",
 		},
 	}
 }

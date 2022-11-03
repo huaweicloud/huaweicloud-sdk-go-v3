@@ -47,7 +47,7 @@ type DeploymentGroupDetail struct {
 
 	CreatedBy *UserInfo `json:"created_by,omitempty"`
 
-	UpdateBy *UserInfo `json:"update_by,omitempty"`
+	UpdatedBy *UserInfo `json:"updated_by,omitempty"`
 
 	// 描述
 	Description *string `json:"description,omitempty"`

@@ -36,7 +36,7 @@ type QueryJobsReq struct {
 	// 开启EPS时使用，值为eps
 	ServiceName *string `json:"service_name,omitempty"`
 
-	// 状态，CREATING：创建中,CREATE_FAILED: 创建失败,CONFIGURATION: 配置中,STARTJOBING: 启动中,WAITING_FOR_START：等待启动中,START_JOB_FAILED：任务启动失败,FULL_TRANSFER_STARTED：全量迁移中 灾备场景为初始化,FULL_TRANSFER_FAILED：全量迁移失败  灾备场景为初始化失败,FULL_TRANSFER_COMPLETE：全量迁移完成 灾备场景为初始化完成,INCRE_TRANSFER_STARTED：增量迁移中 灾备场景为灾备中,INCRE_TRANSFER_FAILED：增量迁移失败 灾备场景为灾备异常,RELEASE_RESOURCE_STARTED：结束任务中,RELEASE_RESOURCE_FAILED：结束任务失败,RELEASE_RESOURCE_COMPLETE：已结束,CHANGE_JOB_STARTED：任务变更中,CHANGE_JOB_FAILED：任务变更失败,CHILD_TRANSFER_STARTING：子任务启动中,CHILD_TRANSFER_STARTED：子任务迁移中,CHILD_TRANSFER_COMPLETE：子任务迁移完成,CHILD_TRANSFER_FAILED：子任务迁移失败,RELEASE_CHILD_TRANSFER_STARTED：子任务结束中,RELEASE_CHILD_TRANSFER_COMPLETE：子任务已结束
+	// 任务状态。 - CREATING：创建中 - CREATE_FAILED：创建失败 - CONFIGURATION：配置中 - STARTJOBING：启动中 - WAITING_FOR_START：等待启动中 - START_JOB_FAILED：启动失败 - PAUSING：已暂停 - FULL_TRANSFER_STARTED：全量开始，灾备场景下为初始化 - FULL_TRANSFER_FAILED：全量失败，灾备场景下为初始化失败 - FULL_TRANSFER_COMPLETE：全量完成，灾备场景下为初始化完成 - INCRE_TRANSFER_STARTED：增量开始，灾备场景下为灾备中 - INCRE_TRANSFER_FAILED：增量失败，灾备场景下为灾备异常 - RELEASE_RESOURCE_STARTED：结束任务中 - RELEASE_RESOURCE_FAILED：结束任务失败 - RELEASE_RESOURCE_COMPLETE：已结束 - REBUILD_NODE_STARTED：故障恢复中 - REBUILD_NODE_FAILED：故障恢复失败 - CHANGE_JOB_STARTED：任务变更中 - CHANGE_JOB_FAILED：任务变更失败 - DELETED：已删除 - CHILD_TRANSFER_STARTING：再编辑子任务启动中 - CHILD_TRANSFER_STARTED：再编辑子任务迁移中 - CHILD_TRANSFER_COMPLETE：再编辑子任务迁移完成 - CHILD_TRANSFER_FAILED：再编辑子任务迁移失败 - RELEASE_CHILD_TRANSFER_STARTED：再编辑子任务结束中 - RELEASE_CHILD_TRANSFER_COMPLETE：再编辑子任务已结束 - NODE_UPGRADE_START：升级开始 - NODE_UPGRADE_COMPLETE：升级完成 - NODE_UPGRADE_FAILED：升级失败
 	Status *QueryJobsReqStatus `json:"status,omitempty"`
 
 	// 标签
@@ -201,6 +201,7 @@ type QueryJobsReqStatusEnum struct {
 	STARTJOBING                     QueryJobsReqStatus
 	WAITING_FOR_START               QueryJobsReqStatus
 	START_JOB_FAILED                QueryJobsReqStatus
+	PAUSING                         QueryJobsReqStatus
 	FULL_TRANSFER_STARTED           QueryJobsReqStatus
 	FULL_TRANSFER_FAILED            QueryJobsReqStatus
 	FULL_TRANSFER_COMPLETE          QueryJobsReqStatus
@@ -209,14 +210,20 @@ type QueryJobsReqStatusEnum struct {
 	RELEASE_RESOURCE_STARTED        QueryJobsReqStatus
 	RELEASE_RESOURCE_FAILED         QueryJobsReqStatus
 	RELEASE_RESOURCE_COMPLETE       QueryJobsReqStatus
+	REBUILD_NODE_STARTED            QueryJobsReqStatus
+	REBUILD_NODE_FAILED             QueryJobsReqStatus
 	CHANGE_JOB_STARTED              QueryJobsReqStatus
 	CHANGE_JOB_FAILED               QueryJobsReqStatus
+	DELETED                         QueryJobsReqStatus
 	CHILD_TRANSFER_STARTING         QueryJobsReqStatus
 	CHILD_TRANSFER_STARTED          QueryJobsReqStatus
 	CHILD_TRANSFER_COMPLETE         QueryJobsReqStatus
 	CHILD_TRANSFER_FAILED           QueryJobsReqStatus
 	RELEASE_CHILD_TRANSFER_STARTED  QueryJobsReqStatus
 	RELEASE_CHILD_TRANSFER_COMPLETE QueryJobsReqStatus
+	NODE_UPGRADE_START              QueryJobsReqStatus
+	NODE_UPGRADE_COMPLETE           QueryJobsReqStatus
+	NODE_UPGRADE_FAILED             QueryJobsReqStatus
 }
 
 func GetQueryJobsReqStatusEnum() QueryJobsReqStatusEnum {
@@ -238,6 +245,9 @@ func GetQueryJobsReqStatusEnum() QueryJobsReqStatusEnum {
 		},
 		START_JOB_FAILED: QueryJobsReqStatus{
 			value: "START_JOB_FAILED",
+		},
+		PAUSING: QueryJobsReqStatus{
+			value: "PAUSING",
 		},
 		FULL_TRANSFER_STARTED: QueryJobsReqStatus{
 			value: "FULL_TRANSFER_STARTED",
@@ -263,11 +273,20 @@ func GetQueryJobsReqStatusEnum() QueryJobsReqStatusEnum {
 		RELEASE_RESOURCE_COMPLETE: QueryJobsReqStatus{
 			value: "RELEASE_RESOURCE_COMPLETE",
 		},
+		REBUILD_NODE_STARTED: QueryJobsReqStatus{
+			value: "REBUILD_NODE_STARTED",
+		},
+		REBUILD_NODE_FAILED: QueryJobsReqStatus{
+			value: "REBUILD_NODE_FAILED",
+		},
 		CHANGE_JOB_STARTED: QueryJobsReqStatus{
 			value: "CHANGE_JOB_STARTED",
 		},
 		CHANGE_JOB_FAILED: QueryJobsReqStatus{
 			value: "CHANGE_JOB_FAILED",
+		},
+		DELETED: QueryJobsReqStatus{
+			value: "DELETED",
 		},
 		CHILD_TRANSFER_STARTING: QueryJobsReqStatus{
 			value: "CHILD_TRANSFER_STARTING",
@@ -286,6 +305,15 @@ func GetQueryJobsReqStatusEnum() QueryJobsReqStatusEnum {
 		},
 		RELEASE_CHILD_TRANSFER_COMPLETE: QueryJobsReqStatus{
 			value: "RELEASE_CHILD_TRANSFER_COMPLETE",
+		},
+		NODE_UPGRADE_START: QueryJobsReqStatus{
+			value: "NODE_UPGRADE_START",
+		},
+		NODE_UPGRADE_COMPLETE: QueryJobsReqStatus{
+			value: "NODE_UPGRADE_COMPLETE",
+		},
+		NODE_UPGRADE_FAILED: QueryJobsReqStatus{
+			value: "NODE_UPGRADE_FAILED",
 		},
 	}
 }

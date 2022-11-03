@@ -944,28 +944,6 @@ func (c *GaussDBClient) ShowGaussMySqlProjectQuotasInvoker(request *model.ShowGa
 	return &ShowGaussMySqlProjectQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowGaussMySqlProxy 查询数据库代理信息
-//
-// 查询数据库代理信息。
-//
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
-func (c *GaussDBClient) ShowGaussMySqlProxy(request *model.ShowGaussMySqlProxyRequest) (*model.ShowGaussMySqlProxyResponse, error) {
-	requestDef := GenReqDefForShowGaussMySqlProxy()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowGaussMySqlProxyResponse), nil
-	}
-}
-
-// ShowGaussMySqlProxyInvoker 查询数据库代理信息
-func (c *GaussDBClient) ShowGaussMySqlProxyInvoker(request *model.ShowGaussMySqlProxyRequest) *ShowGaussMySqlProxyInvoker {
-	requestDef := GenReqDefForShowGaussMySqlProxy()
-	return &ShowGaussMySqlProxyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // ShowGaussMySqlProxyFlavors 查询数据库代理规格信息
 //
 // 查询数据库代理规格信息。

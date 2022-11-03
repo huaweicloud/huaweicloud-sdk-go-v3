@@ -18,7 +18,7 @@ type JobInfo struct {
 	// 任务名称
 	Name string `json:"name"`
 
-	// 任务状态
+	// 任务状态。 - CREATING：创建中 - CREATE_FAILED：创建失败 - CONFIGURATION：配置中 - STARTJOBING：启动中 - WAITING_FOR_START：等待启动中 - START_JOB_FAILED：启动失败 - PAUSING：已暂停 - FULL_TRANSFER_STARTED：全量开始，灾备场景下为初始化 - FULL_TRANSFER_FAILED：全量失败，灾备场景下为初始化失败 - FULL_TRANSFER_COMPLETE：全量完成，灾备场景下为初始化完成 - INCRE_TRANSFER_STARTED：增量开始，灾备场景下为灾备中 - INCRE_TRANSFER_FAILED：增量失败，灾备场景下为灾备异常 - RELEASE_RESOURCE_STARTED：结束任务中 - RELEASE_RESOURCE_FAILED：结束任务失败 - RELEASE_RESOURCE_COMPLETE：已结束 - REBUILD_NODE_STARTED：故障恢复中 - REBUILD_NODE_FAILED：故障恢复失败 - CHANGE_JOB_STARTED：任务变更中 - CHANGE_JOB_FAILED：任务变更失败 - DELETED：已删除 - CHILD_TRANSFER_STARTING：再编辑子任务启动中 - CHILD_TRANSFER_STARTED：再编辑子任务迁移中 - CHILD_TRANSFER_COMPLETE：再编辑子任务迁移完成 - CHILD_TRANSFER_FAILED：再编辑子任务迁移失败 - RELEASE_CHILD_TRANSFER_STARTED：再编辑子任务结束中 - RELEASE_CHILD_TRANSFER_COMPLETE：再编辑子任务已结束 - NODE_UPGRADE_START：升级开始 - NODE_UPGRADE_COMPLETE：升级完成 - NODE_UPGRADE_FAILED：升级失败
 	Status JobInfoStatus `json:"status"`
 
 	// 任务描述
@@ -39,10 +39,10 @@ type JobInfo struct {
 	// 迁移方向
 	JobDirection JobInfoJobDirection `json:"job_direction"`
 
-	// 迁移场景
+	// 迁移场景。 - migration:实时迁移 - sync:实时同步 - cloudDataGuard:实时灾备
 	DbUseType JobInfoDbUseType `json:"db_use_type"`
 
-	// 迁移模式
+	// 迁移模式。 - FULL_TRANS 全量 - FULL_INCR_TRANS 全量+增量 - INCR_TRANS 增量
 	TaskType JobInfoTaskType `json:"task_type"`
 
 	// 子任务信息体
@@ -72,6 +72,7 @@ type JobInfoStatusEnum struct {
 	STARTJOBING                     JobInfoStatus
 	WAITING_FOR_START               JobInfoStatus
 	START_JOB_FAILED                JobInfoStatus
+	PAUSING                         JobInfoStatus
 	FULL_TRANSFER_STARTED           JobInfoStatus
 	FULL_TRANSFER_FAILED            JobInfoStatus
 	FULL_TRANSFER_COMPLETE          JobInfoStatus
@@ -80,83 +81,110 @@ type JobInfoStatusEnum struct {
 	RELEASE_RESOURCE_STARTED        JobInfoStatus
 	RELEASE_RESOURCE_FAILED         JobInfoStatus
 	RELEASE_RESOURCE_COMPLETE       JobInfoStatus
+	REBUILD_NODE_STARTED            JobInfoStatus
+	REBUILD_NODE_FAILED             JobInfoStatus
 	CHANGE_JOB_STARTED              JobInfoStatus
 	CHANGE_JOB_FAILED               JobInfoStatus
+	DELETED                         JobInfoStatus
 	CHILD_TRANSFER_STARTING         JobInfoStatus
 	CHILD_TRANSFER_STARTED          JobInfoStatus
 	CHILD_TRANSFER_COMPLETE         JobInfoStatus
 	CHILD_TRANSFER_FAILED           JobInfoStatus
 	RELEASE_CHILD_TRANSFER_STARTED  JobInfoStatus
 	RELEASE_CHILD_TRANSFER_COMPLETE JobInfoStatus
+	NODE_UPGRADE_START              JobInfoStatus
+	NODE_UPGRADE_COMPLETE           JobInfoStatus
+	NODE_UPGRADE_FAILED             JobInfoStatus
 }
 
 func GetJobInfoStatusEnum() JobInfoStatusEnum {
 	return JobInfoStatusEnum{
 		CREATING: JobInfoStatus{
-			value: "CREATING：创建中",
+			value: "CREATING",
 		},
 		CREATE_FAILED: JobInfoStatus{
-			value: "CREATE_FAILED: 创建失败",
+			value: "CREATE_FAILED",
 		},
 		CONFIGURATION: JobInfoStatus{
-			value: "CONFIGURATION: 配置中",
+			value: "CONFIGURATION",
 		},
 		STARTJOBING: JobInfoStatus{
-			value: "STARTJOBING: 启动中",
+			value: "STARTJOBING",
 		},
 		WAITING_FOR_START: JobInfoStatus{
-			value: "WAITING_FOR_START：等待启动中",
+			value: "WAITING_FOR_START",
 		},
 		START_JOB_FAILED: JobInfoStatus{
-			value: "START_JOB_FAILED：任务启动失败",
+			value: "START_JOB_FAILED",
+		},
+		PAUSING: JobInfoStatus{
+			value: "PAUSING",
 		},
 		FULL_TRANSFER_STARTED: JobInfoStatus{
-			value: "FULL_TRANSFER_STARTED：全量迁移中，灾备场景为初始化",
+			value: "FULL_TRANSFER_STARTED",
 		},
 		FULL_TRANSFER_FAILED: JobInfoStatus{
-			value: "FULL_TRANSFER_FAILED：全量迁移失败，灾备场景为初始化失败",
+			value: "FULL_TRANSFER_FAILED",
 		},
 		FULL_TRANSFER_COMPLETE: JobInfoStatus{
-			value: "FULL_TRANSFER_COMPLETE：全量迁移完成，灾备场景为初始化完成",
+			value: "FULL_TRANSFER_COMPLETE",
 		},
 		INCRE_TRANSFER_STARTED: JobInfoStatus{
-			value: "INCRE_TRANSFER_STARTED：增量迁移中，灾备场景为灾备中",
+			value: "INCRE_TRANSFER_STARTED",
 		},
 		INCRE_TRANSFER_FAILED: JobInfoStatus{
-			value: "INCRE_TRANSFER_FAILED：增量迁移失败，灾备场景为灾备异常",
+			value: "INCRE_TRANSFER_FAILED",
 		},
 		RELEASE_RESOURCE_STARTED: JobInfoStatus{
-			value: "RELEASE_RESOURCE_STARTED：结束任务中",
+			value: "RELEASE_RESOURCE_STARTED",
 		},
 		RELEASE_RESOURCE_FAILED: JobInfoStatus{
-			value: "RELEASE_RESOURCE_FAILED：结束任务失败",
+			value: "RELEASE_RESOURCE_FAILED",
 		},
 		RELEASE_RESOURCE_COMPLETE: JobInfoStatus{
-			value: "RELEASE_RESOURCE_COMPLETE：已结束",
+			value: "RELEASE_RESOURCE_COMPLETE",
+		},
+		REBUILD_NODE_STARTED: JobInfoStatus{
+			value: "REBUILD_NODE_STARTED",
+		},
+		REBUILD_NODE_FAILED: JobInfoStatus{
+			value: "REBUILD_NODE_FAILED",
 		},
 		CHANGE_JOB_STARTED: JobInfoStatus{
-			value: "CHANGE_JOB_STARTED：任务变更中",
+			value: "CHANGE_JOB_STARTED",
 		},
 		CHANGE_JOB_FAILED: JobInfoStatus{
-			value: "CHANGE_JOB_FAILED：任务变更失败",
+			value: "CHANGE_JOB_FAILED",
+		},
+		DELETED: JobInfoStatus{
+			value: "DELETED",
 		},
 		CHILD_TRANSFER_STARTING: JobInfoStatus{
-			value: "CHILD_TRANSFER_STARTING：子任务启动中",
+			value: "CHILD_TRANSFER_STARTING",
 		},
 		CHILD_TRANSFER_STARTED: JobInfoStatus{
-			value: "CHILD_TRANSFER_STARTED：子任务迁移中",
+			value: "CHILD_TRANSFER_STARTED",
 		},
 		CHILD_TRANSFER_COMPLETE: JobInfoStatus{
-			value: "CHILD_TRANSFER_COMPLETE：子任务迁移完成",
+			value: "CHILD_TRANSFER_COMPLETE",
 		},
 		CHILD_TRANSFER_FAILED: JobInfoStatus{
-			value: "CHILD_TRANSFER_FAILED：子任务迁移失败",
+			value: "CHILD_TRANSFER_FAILED",
 		},
 		RELEASE_CHILD_TRANSFER_STARTED: JobInfoStatus{
-			value: "RELEASE_CHILD_TRANSFER_STARTED：子任务结束中",
+			value: "RELEASE_CHILD_TRANSFER_STARTED",
 		},
 		RELEASE_CHILD_TRANSFER_COMPLETE: JobInfoStatus{
-			value: "RELEASE_CHILD_TRANSFER_COMPLETE：子任务已结束",
+			value: "RELEASE_CHILD_TRANSFER_COMPLETE",
+		},
+		NODE_UPGRADE_START: JobInfoStatus{
+			value: "NODE_UPGRADE_START",
+		},
+		NODE_UPGRADE_COMPLETE: JobInfoStatus{
+			value: "NODE_UPGRADE_COMPLETE",
+		},
+		NODE_UPGRADE_FAILED: JobInfoStatus{
+			value: "NODE_UPGRADE_FAILED",
 		},
 	}
 }
@@ -338,13 +366,13 @@ type JobInfoDbUseTypeEnum struct {
 func GetJobInfoDbUseTypeEnum() JobInfoDbUseTypeEnum {
 	return JobInfoDbUseTypeEnum{
 		MIGRATION: JobInfoDbUseType{
-			value: "migration:实时迁移",
+			value: "migration",
 		},
 		SYNC: JobInfoDbUseType{
-			value: "sync:实时同步",
+			value: "sync",
 		},
 		CLOUD_DATA_GUARD: JobInfoDbUseType{
-			value: "cloudDataGuard:实时灾备",
+			value: "cloudDataGuard",
 		},
 	}
 }
@@ -384,13 +412,13 @@ type JobInfoTaskTypeEnum struct {
 func GetJobInfoTaskTypeEnum() JobInfoTaskTypeEnum {
 	return JobInfoTaskTypeEnum{
 		FULL_TRANS: JobInfoTaskType{
-			value: "FULL_TRANS 全量",
+			value: "FULL_TRANS",
 		},
 		FULL_INCR_TRANS: JobInfoTaskType{
-			value: "FULL_INCR_TRANS 全量+增量",
+			value: "FULL_INCR_TRANS",
 		},
 		INCR_TRANS: JobInfoTaskType{
-			value: "INCR_TRANS 增量",
+			value: "INCR_TRANS",
 		},
 	}
 }

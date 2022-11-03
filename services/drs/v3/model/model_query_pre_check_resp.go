@@ -27,7 +27,7 @@ type QueryPreCheckResp struct {
 	// RDS实例id。
 	RdsInstanceId *string `json:"rds_instance_id,omitempty"`
 
-	// 迁移方向
+	// 迁移方向。 - up-入云 灾备场景时对应本云为备 - down-出云 灾备场景时对应本云为主 - non-dbs-自建
 	JobDirection *QueryPreCheckRespJobDirection `json:"job_direction,omitempty"`
 
 	// 预检查各项结果。
@@ -54,21 +54,21 @@ type QueryPreCheckRespJobDirection struct {
 }
 
 type QueryPreCheckRespJobDirectionEnum struct {
-	UP_     QueryPreCheckRespJobDirection
-	DOWN_   QueryPreCheckRespJobDirection
+	UP      QueryPreCheckRespJobDirection
+	DOWN    QueryPreCheckRespJobDirection
 	NON_DBS QueryPreCheckRespJobDirection
 }
 
 func GetQueryPreCheckRespJobDirectionEnum() QueryPreCheckRespJobDirectionEnum {
 	return QueryPreCheckRespJobDirectionEnum{
-		UP_: QueryPreCheckRespJobDirection{
-			value: "up-入云 灾备场景时对应本云为备",
+		UP: QueryPreCheckRespJobDirection{
+			value: "up",
 		},
-		DOWN_: QueryPreCheckRespJobDirection{
-			value: "down-出云 灾备场景时对应本云为主",
+		DOWN: QueryPreCheckRespJobDirection{
+			value: "down",
 		},
 		NON_DBS: QueryPreCheckRespJobDirection{
-			value: "non-dbs-自建",
+			value: "non-dbs",
 		},
 	}
 }

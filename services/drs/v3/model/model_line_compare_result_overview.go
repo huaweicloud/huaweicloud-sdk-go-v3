@@ -9,7 +9,6 @@ import (
 	"strings"
 )
 
-//
 type LineCompareResultOverview struct {
 
 	// 源库名称。
@@ -18,7 +17,7 @@ type LineCompareResultOverview struct {
 	// 目标库名称。
 	TargetDbName string `json:"target_db_name"`
 
-	// 对比结果。
+	// 对比结果。 - CONSISTENT-一致 - INCONSISTENT-不一致 - COMPARING-正在对比 - WAITING_FOR_COMPARISON-等待对比 - FAILED_TO_COMPARE-对比失败 - TARGET_DB_NOT_EXIT-目标库不存在 - CAN_NOT_COMPARE-无法对比
 	LineCompareResult LineCompareResultOverviewLineCompareResult `json:"line_compare_result"`
 }
 
@@ -48,25 +47,25 @@ type LineCompareResultOverviewLineCompareResultEnum struct {
 func GetLineCompareResultOverviewLineCompareResultEnum() LineCompareResultOverviewLineCompareResultEnum {
 	return LineCompareResultOverviewLineCompareResultEnum{
 		CONSISTENT: LineCompareResultOverviewLineCompareResult{
-			value: "CONSISTENT-一致",
+			value: "CONSISTENT",
 		},
 		INCONSISTENT: LineCompareResultOverviewLineCompareResult{
-			value: "INCONSISTENT-不一致",
+			value: "INCONSISTENT",
 		},
 		COMPARING: LineCompareResultOverviewLineCompareResult{
-			value: "COMPARING-正在对比",
+			value: "COMPARING",
 		},
 		WAITING_FOR_COMPARISON: LineCompareResultOverviewLineCompareResult{
-			value: "WAITING_FOR_COMPARISON-等待对比",
+			value: "WAITING_FOR_COMPARISON",
 		},
 		FAILED_TO_COMPARE: LineCompareResultOverviewLineCompareResult{
-			value: "FAILED_TO_COMPARE-对比失败",
+			value: "FAILED_TO_COMPARE",
 		},
 		TARGET_DB_NOT_EXIT: LineCompareResultOverviewLineCompareResult{
-			value: "TARGET_DB_NOT_EXIT-目标库不存在",
+			value: "TARGET_DB_NOT_EXIT",
 		},
 		CAN_NOT_COMPARE: LineCompareResultOverviewLineCompareResult{
-			value: "CAN_NOT_COMPARE-无法对比",
+			value: "CAN_NOT_COMPARE",
 		},
 	}
 }

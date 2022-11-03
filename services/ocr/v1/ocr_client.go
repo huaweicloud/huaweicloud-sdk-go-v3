@@ -673,7 +673,7 @@ func (c *OcrClient) RecognizePcrTestRecordInvoker(request *model.RecognizePcrTes
 	return &RecognizePcrTestRecordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// RecognizeQualificationCertificate 从业资格证识别
+// RecognizeQualificationCertificate 道路运输从业资格证识别
 //
 // 识别道路运输从业资格证上的关键文字信息，并返回识别的结构化结果。
 //
@@ -693,7 +693,7 @@ func (c *OcrClient) RecognizeQualificationCertificate(request *model.RecognizeQu
 	}
 }
 
-// RecognizeQualificationCertificateInvoker 从业资格证识别
+// RecognizeQualificationCertificateInvoker 道路运输从业资格证识别
 func (c *OcrClient) RecognizeQualificationCertificateInvoker(request *model.RecognizeQualificationCertificateRequest) *RecognizeQualificationCertificateInvoker {
 	requestDef := GenReqDefForRecognizeQualificationCertificate()
 	return &RecognizeQualificationCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

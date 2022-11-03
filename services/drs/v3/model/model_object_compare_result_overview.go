@@ -9,13 +9,12 @@ import (
 	"strings"
 )
 
-//
 type ObjectCompareResultOverview struct {
 
-	// 对象类型。
+	// 对象类型。 - DB-数据库 - TABLE-表 - VIEW-视图 - EVENT-事件 - ROUTINE-存储过程和函数 - INDEX-索引,TRIGGER-触发器 - SYNONYM-同义词 - FUNCTION-函数 - PROCEDURE-存储过程 - TYPE-自定义类型 - RULE-规则 - DEFAULT_TYPE-缺省值 - PLAN_GUIDE-执行计划 - CONSTRAINT-约束 - FILE_GROUP-文件组 - PARTITION_FUNCTION-分区函数 - PARTITION_SCHEME-分区方案 - TABLE_COLLATION-表的排序规则
 	ObjectType ObjectCompareResultOverviewObjectType `json:"object_type"`
 
-	// 对比结果。
+	// 对比结果。 - CONSISTENT-一致 - INCONSISTENT-不一致 - COMPARING-正在对比 - WAITING_FOR_COMPARISON-等待对比 - FAILED_TO_COMPARE-对比失败 - TARGET_DB_NOT_EXIT-目标库不存在 - CAN_NOT_COMPARE-无法对比
 	ObjectCompareResult ObjectCompareResultOverviewObjectCompareResult `json:"object_compare_result"`
 
 	// 该类型的对象在目标库的个数。
@@ -66,61 +65,61 @@ type ObjectCompareResultOverviewObjectTypeEnum struct {
 func GetObjectCompareResultOverviewObjectTypeEnum() ObjectCompareResultOverviewObjectTypeEnum {
 	return ObjectCompareResultOverviewObjectTypeEnum{
 		DB: ObjectCompareResultOverviewObjectType{
-			value: "DB-数据库",
+			value: "DB",
 		},
 		TABLE: ObjectCompareResultOverviewObjectType{
-			value: "TABLE-表",
+			value: "TABLE",
 		},
 		VIEW: ObjectCompareResultOverviewObjectType{
-			value: "VIEW-视图",
+			value: "VIEW",
 		},
 		EVENT: ObjectCompareResultOverviewObjectType{
-			value: "EVENT-事件",
+			value: "EVENT",
 		},
 		ROUTINE: ObjectCompareResultOverviewObjectType{
-			value: "ROUTINE-存储过程和函数",
+			value: "ROUTINE",
 		},
 		INDEX: ObjectCompareResultOverviewObjectType{
-			value: "INDEX-索引",
+			value: "INDEX",
 		},
 		TRIGGER: ObjectCompareResultOverviewObjectType{
-			value: "TRIGGER-触发器",
+			value: "TRIGGER",
 		},
 		SYNONYM: ObjectCompareResultOverviewObjectType{
-			value: "SYNONYM-同义词",
+			value: "SYNONYM",
 		},
 		FUNCTION: ObjectCompareResultOverviewObjectType{
-			value: "FUNCTION-函数",
+			value: "FUNCTION",
 		},
 		PROCEDURE: ObjectCompareResultOverviewObjectType{
-			value: "PROCEDURE-存储过程",
+			value: "PROCEDURE",
 		},
 		TYPE: ObjectCompareResultOverviewObjectType{
-			value: "TYPE-自定义类型",
+			value: "TYPE",
 		},
 		RULE: ObjectCompareResultOverviewObjectType{
-			value: "RULE-规则",
+			value: "RULE",
 		},
 		DEFAULT_TYPE: ObjectCompareResultOverviewObjectType{
-			value: "DEFAULT_TYPE-缺省值",
+			value: "DEFAULT_TYPE",
 		},
 		PLAN_GUIDE: ObjectCompareResultOverviewObjectType{
-			value: "PLAN_GUIDE-执行计划",
+			value: "PLAN_GUIDE",
 		},
 		CONSTRAINT: ObjectCompareResultOverviewObjectType{
-			value: "CONSTRAINT-约束",
+			value: "CONSTRAINT",
 		},
 		FILE_GROUP: ObjectCompareResultOverviewObjectType{
-			value: "FILE_GROUP-文件组",
+			value: "FILE_GROUP",
 		},
 		PARTITION_FUNCTION: ObjectCompareResultOverviewObjectType{
-			value: "PARTITION_FUNCTION-分区函数",
+			value: "PARTITION_FUNCTION",
 		},
 		PARTITION_SCHEME: ObjectCompareResultOverviewObjectType{
-			value: "PARTITION_SCHEME-分区方案",
+			value: "PARTITION_SCHEME",
 		},
 		TABLE_COLLATION: ObjectCompareResultOverviewObjectType{
-			value: "TABLE_COLLATION-表的排序规则",
+			value: "TABLE_COLLATION",
 		},
 	}
 }
@@ -164,25 +163,25 @@ type ObjectCompareResultOverviewObjectCompareResultEnum struct {
 func GetObjectCompareResultOverviewObjectCompareResultEnum() ObjectCompareResultOverviewObjectCompareResultEnum {
 	return ObjectCompareResultOverviewObjectCompareResultEnum{
 		CONSISTENT: ObjectCompareResultOverviewObjectCompareResult{
-			value: "CONSISTENT-一致",
+			value: "CONSISTENT",
 		},
 		INCONSISTENT: ObjectCompareResultOverviewObjectCompareResult{
-			value: "INCONSISTENT-不一致",
+			value: "INCONSISTENT",
 		},
 		COMPARING: ObjectCompareResultOverviewObjectCompareResult{
-			value: "COMPARING-正在对比",
+			value: "COMPARING",
 		},
 		WAITING_FOR_COMPARISON: ObjectCompareResultOverviewObjectCompareResult{
-			value: "WAITING_FOR_COMPARISON-等待对比",
+			value: "WAITING_FOR_COMPARISON",
 		},
 		FAILED_TO_COMPARE: ObjectCompareResultOverviewObjectCompareResult{
-			value: "FAILED_TO_COMPARE-对比失败",
+			value: "FAILED_TO_COMPARE",
 		},
 		TARGET_DB_NOT_EXIT: ObjectCompareResultOverviewObjectCompareResult{
-			value: "TARGET_DB_NOT_EXIT-目标库不存在",
+			value: "TARGET_DB_NOT_EXIT",
 		},
 		CAN_NOT_COMPARE: ObjectCompareResultOverviewObjectCompareResult{
-			value: "CAN_NOT_COMPARE-无法对比",
+			value: "CAN_NOT_COMPARE",
 		},
 	}
 }

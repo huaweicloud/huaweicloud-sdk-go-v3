@@ -9,7 +9,6 @@ import (
 	"strings"
 )
 
-//
 type CompareTaskList struct {
 
 	// 对比任务的id。
@@ -18,7 +17,7 @@ type CompareTaskList struct {
 	// 对比任务的类型。
 	CompareType string `json:"compare_type"`
 
-	// 对比任务的状态。
+	// 对比任务的状态。 - RUNNING-运行中 - WAITING_FOR_RUNNING-等待启动中 - SUCCESSFUL-完成 - FAILED-失败 - CANCELLED-已取消 - TIMEOUT_INTERRUPT-超时中断 - FULL_DOING-全量校验中 - INCRE_DOING-增量校验中
 	CompareTaskStatus CompareTaskListCompareTaskStatus `json:"compare_task_status"`
 
 	// 对比开始时间。
@@ -55,28 +54,28 @@ type CompareTaskListCompareTaskStatusEnum struct {
 func GetCompareTaskListCompareTaskStatusEnum() CompareTaskListCompareTaskStatusEnum {
 	return CompareTaskListCompareTaskStatusEnum{
 		RUNNING: CompareTaskListCompareTaskStatus{
-			value: "RUNNING-运行中",
+			value: "RUNNING",
 		},
 		WAITING_FOR_RUNNING: CompareTaskListCompareTaskStatus{
-			value: "WAITING_FOR_RUNNING-等待启动中",
+			value: "WAITING_FOR_RUNNING",
 		},
 		SUCCESSFUL: CompareTaskListCompareTaskStatus{
-			value: "SUCCESSFUL-完成",
+			value: "SUCCESSFUL",
 		},
 		FAILED: CompareTaskListCompareTaskStatus{
-			value: "FAILED-失败",
+			value: "FAILED",
 		},
 		CANCELLED: CompareTaskListCompareTaskStatus{
-			value: "CANCELLED-已取消",
+			value: "CANCELLED",
 		},
 		TIMEOUT_INTERRUPT: CompareTaskListCompareTaskStatus{
-			value: "TIMEOUT_INTERRUPT-超时中断",
+			value: "TIMEOUT_INTERRUPT",
 		},
 		FULL_DOING: CompareTaskListCompareTaskStatus{
-			value: "FULL_DOING-全量校验中",
+			value: "FULL_DOING",
 		},
 		INCRE_DOING: CompareTaskListCompareTaskStatus{
-			value: "INCRE_DOING-增量校验中",
+			value: "INCRE_DOING",
 		},
 	}
 }

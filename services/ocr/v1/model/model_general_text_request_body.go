@@ -20,6 +20,9 @@ type GeneralTextRequestBody struct {
 
 	// 快速模式开关，针对单行文字图片（要求图片只包含一行文字，且文字区域占比超过50%），打开时可以更快返回识别。可选值包括：  - true：打开快速模式；  - false：关闭快速模式。  > 说明：  - 未传入该参数时默认为false，即关闭快速模式。
 	QuickMode *bool `json:"quick_mode,omitempty"`
+
+	// 单字符模式开关。可选值包括： - true：打开单字符模式 - false：关闭单字符模式  未传入该参数时默认为false，即不返回单个文本行的单字符信息。
+	CharacterMode *bool `json:"character_mode,omitempty"`
 }
 
 func (o GeneralTextRequestBody) String() string {
