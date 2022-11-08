@@ -44,6 +44,12 @@ type RestConfConfigDto struct {
 
 	// 开启或者关闭等候室。 * true：开启 * false：不开启
 	EnableWaitingRoom *bool `json:"enableWaitingRoom,omitempty"`
+
+	// 主持人入会是否开启摄像头。 * true：开启 * false：不开启
+	IsHostCameraOn *bool `json:"isHostCameraOn,omitempty"`
+
+	// 来宾入会是否开启摄像头。 * true：开启 * false：不开启
+	IsGuestCameraOn *bool `json:"isGuestCameraOn,omitempty"`
 }
 
 func (o RestConfConfigDto) String() string {

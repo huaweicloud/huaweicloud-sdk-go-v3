@@ -127,6 +127,9 @@ type ConferenceInfo struct {
 	// 是否是网络研讨会。
 	Webinar *bool `json:"webinar,omitempty"`
 
+	// 当前在线与会人数。包含被邀入会和主动入会的与会者。 > 仅在“[[查询在线会议列表](https://support.huaweicloud.com/api-meeting/meeting_21_0025.html)](tag:hws)[[查询在线会议列表](https://support.huaweicloud.com/intl/zh-cn/api-meeting/meeting_21_0025.html)](tag:hk)”接口中返回。
+	OnlineAttendeeAmount *int32 `json:"onlineAttendeeAmount,omitempty"`
+
 	// 标识是否为多流视频会议。 * 1：多流会议
 	MultiStreamFlag *int32 `json:"multiStreamFlag,omitempty"`
 

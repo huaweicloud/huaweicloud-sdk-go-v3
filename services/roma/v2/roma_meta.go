@@ -7115,7 +7115,7 @@ func GenReqDefForImportAsset() *def.HttpRequestDef {
 func GenReqDefForCheckDictionary() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2{project_id}/instances/{instance_id}/dictionaries/{dict_id}").
+		WithPath("/v2/{project_id}/instances/{instance_id}/dictionaries/{dict_id}").
 		WithResponse(new(model.CheckDictionaryResponse)).
 		WithContentType("application/json")
 
@@ -7155,7 +7155,7 @@ func GenReqDefForCreateDictionary() *def.HttpRequestDef {
 func GenReqDefForDeleteDictionary() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/v2{project_id}/instances/{instance_id}/dictionaries/{dict_id}").
+		WithPath("/v2/{project_id}/instances/{instance_id}/dictionaries/{dict_id}").
 		WithResponse(new(model.DeleteDictionaryResponse)).
 		WithContentType("application/json")
 
@@ -7212,7 +7212,7 @@ func GenReqDefForListDictionary() *def.HttpRequestDef {
 func GenReqDefForUpdateDictionary() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
-		WithPath("/v2{project_id}/instances/{instance_id}/dictionaries/{dict_id}").
+		WithPath("/v2/{project_id}/instances/{instance_id}/dictionaries/{dict_id}").
 		WithResponse(new(model.UpdateDictionaryResponse)).
 		WithContentType("application/json;charset=UTF-8")
 

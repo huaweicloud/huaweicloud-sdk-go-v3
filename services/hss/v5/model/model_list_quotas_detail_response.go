@@ -13,7 +13,7 @@ type ListQuotasDetailResponse struct {
 	PacketCycleNum *int32 `json:"packet_cycle_num,omitempty"`
 
 	// 按需配额数
-	OnDemandNumn *int32 `json:"on_demand_numn,omitempty"`
+	OnDemandNum *int32 `json:"on_demand_num,omitempty"`
 
 	// 已使用配额数
 	UsedNum *int32 `json:"used_num,omitempty"`
