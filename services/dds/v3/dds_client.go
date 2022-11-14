@@ -195,6 +195,28 @@ func (c *DdsClient) CheckPasswordInvoker(request *model.CheckPasswordRequest) *C
 	return &CheckPasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CheckWeakPassword 检查弱密码
+//
+// 检查弱密码
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DdsClient) CheckWeakPassword(request *model.CheckWeakPasswordRequest) (*model.CheckWeakPasswordResponse, error) {
+	requestDef := GenReqDefForCheckWeakPassword()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckWeakPasswordResponse), nil
+	}
+}
+
+// CheckWeakPasswordInvoker 检查弱密码
+func (c *DdsClient) CheckWeakPasswordInvoker(request *model.CheckWeakPasswordRequest) *CheckWeakPasswordInvoker {
+	requestDef := GenReqDefForCheckWeakPassword()
+	return &CheckWeakPasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateConfiguration 创建参数模板
 //
 // 创建参数模板。
@@ -325,6 +347,28 @@ func (c *DdsClient) CreateManualBackup(request *model.CreateManualBackupRequest)
 func (c *DdsClient) CreateManualBackupInvoker(request *model.CreateManualBackupRequest) *CreateManualBackupInvoker {
 	requestDef := GenReqDefForCreateManualBackup()
 	return &CreateManualBackupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAuditLog 删除审计日志
+//
+// 删除审计日志
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DdsClient) DeleteAuditLog(request *model.DeleteAuditLogRequest) (*model.DeleteAuditLogResponse, error) {
+	requestDef := GenReqDefForDeleteAuditLog()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAuditLogResponse), nil
+	}
+}
+
+// DeleteAuditLogInvoker 删除审计日志
+func (c *DdsClient) DeleteAuditLogInvoker(request *model.DeleteAuditLogRequest) *DeleteAuditLogInvoker {
+	requestDef := GenReqDefForDeleteAuditLog()
+	return &DeleteAuditLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteConfiguration 删除参数模板
@@ -505,7 +549,7 @@ func (c *DdsClient) DownloadSlowlogInvoker(request *model.DownloadSlowlogRequest
 
 // ExpandReplicasetNode 扩容副本集实例的节点数量
 //
-// 扩容指定副本集实例的节点数量，暂不支持包周期实例
+// 扩容指定副本集实例的节点数量
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -855,6 +899,28 @@ func (c *DdsClient) ListProjectTagsInvoker(request *model.ListProjectTagsRequest
 	return &ListProjectTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListRecycleInstances 查询回收站实例列表
+//
+// 查询回收站实例列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DdsClient) ListRecycleInstances(request *model.ListRecycleInstancesRequest) (*model.ListRecycleInstancesResponse, error) {
+	requestDef := GenReqDefForListRecycleInstances()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRecycleInstancesResponse), nil
+	}
+}
+
+// ListRecycleInstancesInvoker 查询回收站实例列表
+func (c *DdsClient) ListRecycleInstancesInvoker(request *model.ListRecycleInstancesRequest) *ListRecycleInstancesInvoker {
+	requestDef := GenReqDefForListRecycleInstances()
+	return &ListRecycleInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListRestoreCollections 获取可恢复的数据库集合列表
 //
 // 获取可恢复的数据库集合列表。
@@ -963,6 +1029,28 @@ func (c *DdsClient) ListSlowLogs(request *model.ListSlowLogsRequest) (*model.Lis
 func (c *DdsClient) ListSlowLogsInvoker(request *model.ListSlowLogsRequest) *ListSlowLogsInvoker {
 	requestDef := GenReqDefForListSlowLogs()
 	return &ListSlowLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSslCertDownloadAddress 获取SSL证书下载地址
+//
+// 获取SSL证书下载地址
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DdsClient) ListSslCertDownloadAddress(request *model.ListSslCertDownloadAddressRequest) (*model.ListSslCertDownloadAddressResponse, error) {
+	requestDef := GenReqDefForListSslCertDownloadAddress()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSslCertDownloadAddressResponse), nil
+	}
+}
+
+// ListSslCertDownloadAddressInvoker 获取SSL证书下载地址
+func (c *DdsClient) ListSslCertDownloadAddressInvoker(request *model.ListSslCertDownloadAddressRequest) *ListSslCertDownloadAddressInvoker {
+	requestDef := GenReqDefForListSslCertDownloadAddress()
+	return &ListSslCertDownloadAddressInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListStorageType 查询数据库磁盘类型
@@ -1383,6 +1471,28 @@ func (c *DdsClient) ShowConnectionStatisticsInvoker(request *model.ShowConnectio
 	return &ShowConnectionStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowDiskUsage 查询实例磁盘信息
+//
+// 查询实例磁盘信息
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DdsClient) ShowDiskUsage(request *model.ShowDiskUsageRequest) (*model.ShowDiskUsageResponse, error) {
+	requestDef := GenReqDefForShowDiskUsage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDiskUsageResponse), nil
+	}
+}
+
+// ShowDiskUsageInvoker 查询实例磁盘信息
+func (c *DdsClient) ShowDiskUsageInvoker(request *model.ShowDiskUsageRequest) *ShowDiskUsageInvoker {
+	requestDef := GenReqDefForShowDiskUsage()
+	return &ShowDiskUsageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowEntityConfiguration 获取指定实例的参数信息
 //
 // 获取指定实例的参数，可以是实例，组，节点的参数模板。
@@ -1449,6 +1559,28 @@ func (c *DdsClient) ShowQuotasInvoker(request *model.ShowQuotasRequest) *ShowQuo
 	return &ShowQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowRecyclePolicy 查询实例回收站策略
+//
+// 查询实例回收站策略
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DdsClient) ShowRecyclePolicy(request *model.ShowRecyclePolicyRequest) (*model.ShowRecyclePolicyResponse, error) {
+	requestDef := GenReqDefForShowRecyclePolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRecyclePolicyResponse), nil
+	}
+}
+
+// ShowRecyclePolicyInvoker 查询实例回收站策略
+func (c *DdsClient) ShowRecyclePolicyInvoker(request *model.ShowRecyclePolicyRequest) *ShowRecyclePolicyInvoker {
+	requestDef := GenReqDefForShowRecyclePolicy()
+	return &ShowRecyclePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowSecondLevelMonitoringStatus 查询秒级监控配置
 //
 // 查询秒级监控配置。
@@ -1491,6 +1623,50 @@ func (c *DdsClient) ShowShardingBalancer(request *model.ShowShardingBalancerRequ
 func (c *DdsClient) ShowShardingBalancerInvoker(request *model.ShowShardingBalancerRequest) *ShowShardingBalancerInvoker {
 	requestDef := GenReqDefForShowShardingBalancer()
 	return &ShowShardingBalancerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSlowlogDesensitizationSwitch 查询慢日志明文开关
+//
+// 查询慢日志明文开关
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DdsClient) ShowSlowlogDesensitizationSwitch(request *model.ShowSlowlogDesensitizationSwitchRequest) (*model.ShowSlowlogDesensitizationSwitchResponse, error) {
+	requestDef := GenReqDefForShowSlowlogDesensitizationSwitch()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSlowlogDesensitizationSwitchResponse), nil
+	}
+}
+
+// ShowSlowlogDesensitizationSwitchInvoker 查询慢日志明文开关
+func (c *DdsClient) ShowSlowlogDesensitizationSwitchInvoker(request *model.ShowSlowlogDesensitizationSwitchRequest) *ShowSlowlogDesensitizationSwitchInvoker {
+	requestDef := GenReqDefForShowSlowlogDesensitizationSwitch()
+	return &ShowSlowlogDesensitizationSwitchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowUpgradeDuration 查询数据库补丁升级预估时长
+//
+// 查询数据库补丁升级预估时长
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DdsClient) ShowUpgradeDuration(request *model.ShowUpgradeDurationRequest) (*model.ShowUpgradeDurationResponse, error) {
+	requestDef := GenReqDefForShowUpgradeDuration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowUpgradeDurationResponse), nil
+	}
+}
+
+// ShowUpgradeDurationInvoker 查询数据库补丁升级预估时长
+func (c *DdsClient) ShowUpgradeDurationInvoker(request *model.ShowUpgradeDurationRequest) *ShowUpgradeDurationInvoker {
+	requestDef := GenReqDefForShowUpgradeDuration()
+	return &ShowUpgradeDurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SwitchConfiguration 应用参数模板

@@ -8,7 +8,9 @@ import (
 
 // This is a auto create Body Object
 type AddServerNicsReq struct {
-	Nics *ServerNicsReq `json:"nics"`
+
+	//
+	Nics []ServerNicsReq `json:"nics"`
 }
 
 func (o AddServerNicsReq) String() string {

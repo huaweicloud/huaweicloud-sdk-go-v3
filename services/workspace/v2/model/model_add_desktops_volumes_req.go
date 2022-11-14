@@ -10,7 +10,7 @@ import (
 type AddDesktopsVolumesReq struct {
 
 	// 新增磁盘参数。
-	AddDesktopVolumesReq *[]AddDesktopVolumesReq `json:"addDesktopVolumesReq,omitempty"`
+	DesktopVolumes *[]AddDesktopVolumesReq `json:"desktop_volumes,omitempty"`
 }
 
 func (o AddDesktopsVolumesReq) String() string {

@@ -16,7 +16,7 @@ type LtsIdInfo struct {
 	LtsAccessStreamID *string `json:"ltsAccessStreamID,omitempty"`
 
 	// 攻击日志流id
-	LtsAttackStreamID *interface{} `json:"ltsAttackStreamID,omitempty"`
+	LtsAttackStreamID *string `json:"ltsAttackStreamID,omitempty"`
 }
 
 func (o LtsIdInfo) String() string {

@@ -811,6 +811,28 @@ func (c *WafClient) ListIpGroupInvoker(request *model.ListIpGroupRequest) *ListI
 	return &ListIpGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListNoticeConfigs 查询告警通知配置
+//
+// 查询告警通知配置
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *WafClient) ListNoticeConfigs(request *model.ListNoticeConfigsRequest) (*model.ListNoticeConfigsResponse, error) {
+	requestDef := GenReqDefForListNoticeConfigs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListNoticeConfigsResponse), nil
+	}
+}
+
+// ListNoticeConfigsInvoker 查询告警通知配置
+func (c *WafClient) ListNoticeConfigsInvoker(request *model.ListNoticeConfigsRequest) *ListNoticeConfigsInvoker {
+	requestDef := GenReqDefForListNoticeConfigs()
+	return &ListNoticeConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListOverviewsClassification 查询安全总览分类统计top信息
 //
 // 查询安全总览分类统计TOP信息，包含受攻击域名 、攻击源ip、受攻击URL、攻击来源区域、攻击事件分布。需要注意的是，安全总览相关的接口，暂时不能支持任意时间的查询。只能支持 console上显示的 昨天，今天，3天，7天和30天 数据查询。
@@ -1029,6 +1051,28 @@ func (c *WafClient) ListWhiteblackipRule(request *model.ListWhiteblackipRuleRequ
 func (c *WafClient) ListWhiteblackipRuleInvoker(request *model.ListWhiteblackipRuleRequest) *ListWhiteblackipRuleInvoker {
 	requestDef := GenReqDefForListWhiteblackipRule()
 	return &ListWhiteblackipRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// MigrateCompositeHosts 按企业项目迁移防护域名
+//
+// 按企业项目迁移防护域名，仅专业版与独享版支持该功能
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *WafClient) MigrateCompositeHosts(request *model.MigrateCompositeHostsRequest) (*model.MigrateCompositeHostsResponse, error) {
+	requestDef := GenReqDefForMigrateCompositeHosts()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.MigrateCompositeHostsResponse), nil
+	}
+}
+
+// MigrateCompositeHostsInvoker 按企业项目迁移防护域名
+func (c *WafClient) MigrateCompositeHostsInvoker(request *model.MigrateCompositeHostsRequest) *MigrateCompositeHostsInvoker {
+	requestDef := GenReqDefForMigrateCompositeHosts()
+	return &MigrateCompositeHostsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // RenameInstance 重命名WAF独享引擎
@@ -1273,6 +1317,50 @@ func (c *WafClient) ShowPremiumHostInvoker(request *model.ShowPremiumHostRequest
 	return &ShowPremiumHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowSourceIp 查询WAF回源Ip信息
+//
+// 查询WAF回源Ip信息
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *WafClient) ShowSourceIp(request *model.ShowSourceIpRequest) (*model.ShowSourceIpResponse, error) {
+	requestDef := GenReqDefForShowSourceIp()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSourceIpResponse), nil
+	}
+}
+
+// ShowSourceIpInvoker 查询WAF回源Ip信息
+func (c *WafClient) ShowSourceIpInvoker(request *model.ShowSourceIpRequest) *ShowSourceIpInvoker {
+	requestDef := GenReqDefForShowSourceIp()
+	return &ShowSourceIpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAlertNoticeConfig 更新告警通知配置
+//
+// 更新告警通知配置
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *WafClient) UpdateAlertNoticeConfig(request *model.UpdateAlertNoticeConfigRequest) (*model.UpdateAlertNoticeConfigResponse, error) {
+	requestDef := GenReqDefForUpdateAlertNoticeConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAlertNoticeConfigResponse), nil
+	}
+}
+
+// UpdateAlertNoticeConfigInvoker 更新告警通知配置
+func (c *WafClient) UpdateAlertNoticeConfigInvoker(request *model.UpdateAlertNoticeConfigRequest) *UpdateAlertNoticeConfigInvoker {
+	requestDef := GenReqDefForUpdateAlertNoticeConfig()
+	return &UpdateAlertNoticeConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateCertificate 修改证书
 //
 // 修改证书
@@ -1385,7 +1473,7 @@ func (c *WafClient) UpdateIpGroupInvoker(request *model.UpdateIpGroupRequest) *U
 
 // UpdateLtsInfoConfig 配置全量日志lts
 //
-// 配置全量日志lts，该接口可用来开启与关闭wa全量日志以及配置日志组和日志流。日志组id和日志流id可前往云日志服务获取。配置的日志流id要属于所配置的日志组。
+// 配置全量日志lts，该接口可用来开启与关闭waf全量日志以及配置日志组和日志流。日志组id和日志流id可前往云日志服务获取。配置的日志流id要属于所配置的日志组。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.

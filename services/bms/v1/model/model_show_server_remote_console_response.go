@@ -8,7 +8,8 @@ import (
 
 // Response Object
 type ShowServerRemoteConsoleResponse struct {
-	HttpStatusCode int `json:"-"`
+	RemoteConsole  *ServerRemoteConsole `json:"remote_console,omitempty"`
+	HttpStatusCode int                  `json:"-"`
 }
 
 func (o ShowServerRemoteConsoleResponse) String() string {

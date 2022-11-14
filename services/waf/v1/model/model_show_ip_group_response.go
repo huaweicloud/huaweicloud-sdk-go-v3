@@ -24,8 +24,11 @@ type ShowIpGroupResponse struct {
 	// ip地址组绑定的规则列表
 	Rules *[]RuleInfo `json:"rules,omitempty"`
 
-	ShareInfo      *ShareInfo `json:"share_info,omitempty"`
-	HttpStatusCode int        `json:"-"`
+	ShareInfo *ShareInfo `json:"share_info,omitempty"`
+
+	// 地址组描述
+	Description    *string `json:"description,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowIpGroupResponse) String() string {

@@ -13,7 +13,7 @@ type PolicyStatement struct {
 	Effect string `json:"Effect"`
 
 	// obs访问权限
-	Action string `json:"Action"`
+	Action []string `json:"Action"`
 
 	// obs对象
 	Resource []string `json:"Resource"`

@@ -101,6 +101,18 @@ func (i *CheckPasswordInvoker) Invoke() (*model.CheckPasswordResponse, error) {
 	}
 }
 
+type CheckWeakPasswordInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckWeakPasswordInvoker) Invoke() (*model.CheckWeakPasswordResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckWeakPasswordResponse), nil
+	}
+}
+
 type CreateConfigurationInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -170,6 +182,18 @@ func (i *CreateManualBackupInvoker) Invoke() (*model.CreateManualBackupResponse,
 		return nil, err
 	} else {
 		return result.(*model.CreateManualBackupResponse), nil
+	}
+}
+
+type DeleteAuditLogInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAuditLogInvoker) Invoke() (*model.DeleteAuditLogResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAuditLogResponse), nil
 	}
 }
 
@@ -461,6 +485,18 @@ func (i *ListProjectTagsInvoker) Invoke() (*model.ListProjectTagsResponse, error
 	}
 }
 
+type ListRecycleInstancesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRecycleInstancesInvoker) Invoke() (*model.ListRecycleInstancesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRecycleInstancesResponse), nil
+	}
+}
+
 type ListRestoreCollectionsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -518,6 +554,18 @@ func (i *ListSlowLogsInvoker) Invoke() (*model.ListSlowLogsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListSlowLogsResponse), nil
+	}
+}
+
+type ListSslCertDownloadAddressInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSslCertDownloadAddressInvoker) Invoke() (*model.ListSslCertDownloadAddressResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSslCertDownloadAddressResponse), nil
 	}
 }
 
@@ -749,6 +797,18 @@ func (i *ShowConnectionStatisticsInvoker) Invoke() (*model.ShowConnectionStatist
 	}
 }
 
+type ShowDiskUsageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDiskUsageInvoker) Invoke() (*model.ShowDiskUsageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDiskUsageResponse), nil
+	}
+}
+
 type ShowEntityConfigurationInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -785,6 +845,18 @@ func (i *ShowQuotasInvoker) Invoke() (*model.ShowQuotasResponse, error) {
 	}
 }
 
+type ShowRecyclePolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRecyclePolicyInvoker) Invoke() (*model.ShowRecyclePolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRecyclePolicyResponse), nil
+	}
+}
+
 type ShowSecondLevelMonitoringStatusInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -806,6 +878,30 @@ func (i *ShowShardingBalancerInvoker) Invoke() (*model.ShowShardingBalancerRespo
 		return nil, err
 	} else {
 		return result.(*model.ShowShardingBalancerResponse), nil
+	}
+}
+
+type ShowSlowlogDesensitizationSwitchInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSlowlogDesensitizationSwitchInvoker) Invoke() (*model.ShowSlowlogDesensitizationSwitchResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSlowlogDesensitizationSwitchResponse), nil
+	}
+}
+
+type ShowUpgradeDurationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowUpgradeDurationInvoker) Invoke() (*model.ShowUpgradeDurationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowUpgradeDurationResponse), nil
 	}
 }
 

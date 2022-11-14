@@ -9,6 +9,9 @@ import (
 // 函数流详情
 type WorkflowSimpleInfo struct {
 
+	// 函数流是否返回流式数据
+	EnableStreamResponse bool `json:"enable_stream_response"`
+
 	// 唯一标识ID，流程定义ID
 	Id string `json:"id"`
 

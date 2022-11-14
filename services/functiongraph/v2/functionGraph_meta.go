@@ -1036,6 +1036,26 @@ func GenReqDefForShowWorkflowExecution() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowWorkflowExecutionForPage() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/{project_id}/fgs/workflows/{workflow_id}/executions-history").
+		WithResponse(new(model.ShowWorkflowExecutionForPageResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("WorkflowId").
+		WithJsonTag("workflow_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForStartSyncWorkflowExecution() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).

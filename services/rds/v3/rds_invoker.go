@@ -293,6 +293,18 @@ func (i *ListDatastoresInvoker) Invoke() (*model.ListDatastoresResponse, error) 
 	}
 }
 
+type ListDrRelationsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDrRelationsInvoker) Invoke() (*model.ListDrRelationsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDrRelationsResponse), nil
+	}
+}
+
 type ListErrorLogsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1337,6 +1349,18 @@ func (i *ShowInformationAboutDatabaseProxyInvoker) Invoke() (*model.ShowInformat
 	}
 }
 
+type ShowPostgresqlParamValueInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPostgresqlParamValueInvoker) Invoke() (*model.ShowPostgresqlParamValueResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPostgresqlParamValueResponse), nil
+	}
+}
+
 type StartDatabaseProxyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1358,6 +1382,18 @@ func (i *StopDatabaseProxyInvoker) Invoke() (*model.StopDatabaseProxyResponse, e
 		return nil, err
 	} else {
 		return result.(*model.StopDatabaseProxyResponse), nil
+	}
+}
+
+type UpdatePostgresqlParameterValueInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdatePostgresqlParameterValueInvoker) Invoke() (*model.UpdatePostgresqlParameterValueResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdatePostgresqlParameterValueResponse), nil
 	}
 }
 

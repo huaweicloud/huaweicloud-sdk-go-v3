@@ -437,6 +437,18 @@ func (i *ListIpGroupInvoker) Invoke() (*model.ListIpGroupResponse, error) {
 	}
 }
 
+type ListNoticeConfigsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListNoticeConfigsInvoker) Invoke() (*model.ListNoticeConfigsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListNoticeConfigsResponse), nil
+	}
+}
+
 type ListOverviewsClassificationInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -554,6 +566,18 @@ func (i *ListWhiteblackipRuleInvoker) Invoke() (*model.ListWhiteblackipRuleRespo
 		return nil, err
 	} else {
 		return result.(*model.ListWhiteblackipRuleResponse), nil
+	}
+}
+
+type MigrateCompositeHostsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *MigrateCompositeHostsInvoker) Invoke() (*model.MigrateCompositeHostsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.MigrateCompositeHostsResponse), nil
 	}
 }
 
@@ -686,6 +710,30 @@ func (i *ShowPremiumHostInvoker) Invoke() (*model.ShowPremiumHostResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ShowPremiumHostResponse), nil
+	}
+}
+
+type ShowSourceIpInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSourceIpInvoker) Invoke() (*model.ShowSourceIpResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSourceIpResponse), nil
+	}
+}
+
+type UpdateAlertNoticeConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAlertNoticeConfigInvoker) Invoke() (*model.UpdateAlertNoticeConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAlertNoticeConfigResponse), nil
 	}
 }
 

@@ -547,6 +547,28 @@ func (c *RdsClient) ListDatastoresInvoker(request *model.ListDatastoresRequest) 
 	return &ListDatastoresInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListDrRelations
+//
+// 批量查询容灾实例信息
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *RdsClient) ListDrRelations(request *model.ListDrRelationsRequest) (*model.ListDrRelationsResponse, error) {
+	requestDef := GenReqDefForListDrRelations()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDrRelationsResponse), nil
+	}
+}
+
+// ListDrRelationsInvoker
+func (c *RdsClient) ListDrRelationsInvoker(request *model.ListDrRelationsRequest) *ListDrRelationsInvoker {
+	requestDef := GenReqDefForListDrRelations()
+	return &ListDrRelationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListErrorLogs 查询数据库错误日志
 //
 // 查询数据库错误日志。
@@ -2470,6 +2492,28 @@ func (c *RdsClient) ShowInformationAboutDatabaseProxyInvoker(request *model.Show
 	return &ShowInformationAboutDatabaseProxyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowPostgresqlParamValue 获取实例指定参数的值
+//
+// 获取实例指定参数的值。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *RdsClient) ShowPostgresqlParamValue(request *model.ShowPostgresqlParamValueRequest) (*model.ShowPostgresqlParamValueResponse, error) {
+	requestDef := GenReqDefForShowPostgresqlParamValue()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPostgresqlParamValueResponse), nil
+	}
+}
+
+// ShowPostgresqlParamValueInvoker 获取实例指定参数的值
+func (c *RdsClient) ShowPostgresqlParamValueInvoker(request *model.ShowPostgresqlParamValueRequest) *ShowPostgresqlParamValueInvoker {
+	requestDef := GenReqDefForShowPostgresqlParamValue()
+	return &ShowPostgresqlParamValueInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // StartDatabaseProxy 开启数据库代理
 //
 // 为指定实例开启数据库代理。
@@ -2512,6 +2556,28 @@ func (c *RdsClient) StopDatabaseProxy(request *model.StopDatabaseProxyRequest) (
 func (c *RdsClient) StopDatabaseProxyInvoker(request *model.StopDatabaseProxyRequest) *StopDatabaseProxyInvoker {
 	requestDef := GenReqDefForStopDatabaseProxy()
 	return &StopDatabaseProxyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePostgresqlParameterValue 修改实例指定参数的值
+//
+// 修改实例指定参数的值。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *RdsClient) UpdatePostgresqlParameterValue(request *model.UpdatePostgresqlParameterValueRequest) (*model.UpdatePostgresqlParameterValueResponse, error) {
+	requestDef := GenReqDefForUpdatePostgresqlParameterValue()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdatePostgresqlParameterValueResponse), nil
+	}
+}
+
+// UpdatePostgresqlParameterValueInvoker 修改实例指定参数的值
+func (c *RdsClient) UpdatePostgresqlParameterValueInvoker(request *model.UpdatePostgresqlParameterValueRequest) *UpdatePostgresqlParameterValueInvoker {
+	requestDef := GenReqDefForUpdatePostgresqlParameterValue()
+	return &UpdatePostgresqlParameterValueInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateReadWeight 修改读写分离权重

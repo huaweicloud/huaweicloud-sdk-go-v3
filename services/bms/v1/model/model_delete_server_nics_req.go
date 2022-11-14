@@ -10,7 +10,7 @@ import (
 type DeleteServerNicsReq struct {
 
 	//
-	Nics *[]ServerNics `json:"nics,omitempty"`
+	Nics []ServerNics `json:"nics"`
 }
 
 func (o DeleteServerNicsReq) String() string {

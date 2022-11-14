@@ -37,7 +37,7 @@ type DecoupledLiveDomainInfo struct {
 	// 状态描述
 	StatusDescribe *string `json:"status_describe,omitempty"`
 
-	// 域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
+	// 域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域
 	ServiceArea *DecoupledLiveDomainInfoServiceArea `json:"service_area,omitempty"`
 }
 
@@ -215,7 +215,6 @@ type DecoupledLiveDomainInfoServiceArea struct {
 type DecoupledLiveDomainInfoServiceAreaEnum struct {
 	MAINLAND_CHINA         DecoupledLiveDomainInfoServiceArea
 	OUTSIDE_MAINLAND_CHINA DecoupledLiveDomainInfoServiceArea
-	GLOBAL                 DecoupledLiveDomainInfoServiceArea
 }
 
 func GetDecoupledLiveDomainInfoServiceAreaEnum() DecoupledLiveDomainInfoServiceAreaEnum {
@@ -225,9 +224,6 @@ func GetDecoupledLiveDomainInfoServiceAreaEnum() DecoupledLiveDomainInfoServiceA
 		},
 		OUTSIDE_MAINLAND_CHINA: DecoupledLiveDomainInfoServiceArea{
 			value: "outside_mainland_china",
-		},
-		GLOBAL: DecoupledLiveDomainInfoServiceArea{
-			value: "global",
 		},
 	}
 }

@@ -173,6 +173,28 @@ func (c *CphClient) DeleteShareAppsInvoker(request *model.DeleteShareAppsRequest
 	return &DeleteShareAppsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteShareFiles 删除共享存储文件
+//
+// 删除共享存储目录中文件，该功能仅在支持共享存储的云手机规格上可实现。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *CphClient) DeleteShareFiles(request *model.DeleteShareFilesRequest) (*model.DeleteShareFilesResponse, error) {
+	requestDef := GenReqDefForDeleteShareFiles()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteShareFilesResponse), nil
+	}
+}
+
+// DeleteShareFilesInvoker 删除共享存储文件
+func (c *CphClient) DeleteShareFilesInvoker(request *model.DeleteShareFilesRequest) *DeleteShareFilesInvoker {
+	requestDef := GenReqDefForDeleteShareFiles()
+	return &DeleteShareFilesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ImportTraffic 云手机流量导流
 //
 // 手机流量路由修改。
@@ -393,9 +415,9 @@ func (c *CphClient) PushShareAppsInvoker(request *model.PushShareAppsRequest) *P
 	return &PushShareAppsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// PushShareFiles 推送删除共享存储文件
+// PushShareFiles 推送共享存储文件
 //
-// 推送文件至共享存储目录中，删除共享存储目录中文件，该功能仅在支持共享存储的云手机规格上可实现。
+// 推送文件至共享存储目录中，该功能仅在支持共享存储的云手机规格上可实现。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -409,7 +431,7 @@ func (c *CphClient) PushShareFiles(request *model.PushShareFilesRequest) (*model
 	}
 }
 
-// PushShareFilesInvoker 推送删除共享存储文件
+// PushShareFilesInvoker 推送共享存储文件
 func (c *CphClient) PushShareFilesInvoker(request *model.PushShareFilesRequest) *PushShareFilesInvoker {
 	requestDef := GenReqDefForPushShareFiles()
 	return &PushShareFilesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

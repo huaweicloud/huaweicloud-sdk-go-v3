@@ -349,6 +349,28 @@ func (c *WorkspaceClient) ListProductsInvoker(request *model.ListProductsRequest
 	return &ListProductsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ChangeUserStatus 操作用户
+//
+// 该接口用于操作用户，包含三种操作：锁定、解锁和重置密码。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *WorkspaceClient) ChangeUserStatus(request *model.ChangeUserStatusRequest) (*model.ChangeUserStatusResponse, error) {
+	requestDef := GenReqDefForChangeUserStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeUserStatusResponse), nil
+	}
+}
+
+// ChangeUserStatusInvoker 操作用户
+func (c *WorkspaceClient) ChangeUserStatusInvoker(request *model.ChangeUserStatusRequest) *ChangeUserStatusInvoker {
+	requestDef := GenReqDefForChangeUserStatus()
+	return &ChangeUserStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateDesktopUser 创建用户
 //
 // 该接口用于创建桌面用户。

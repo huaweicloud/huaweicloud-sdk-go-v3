@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type SetRecyclePolicyRequest struct {
-	Body *RecyclePolicyResponseBody `json:"body,omitempty"`
+	Body *RecyclePolicyRequestBody `json:"body,omitempty"`
 }
 
 func (o SetRecyclePolicyRequest) String() string {

@@ -593,6 +593,18 @@ func (i *ShowWorkflowExecutionInvoker) Invoke() (*model.ShowWorkflowExecutionRes
 	}
 }
 
+type ShowWorkflowExecutionForPageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowWorkflowExecutionForPageInvoker) Invoke() (*model.ShowWorkflowExecutionForPageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowWorkflowExecutionForPageResponse), nil
+	}
+}
+
 type StartSyncWorkflowExecutionInvoker struct {
 	*invoker.BaseInvoker
 }

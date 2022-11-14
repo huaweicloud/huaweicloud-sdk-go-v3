@@ -19,6 +19,50 @@ func GslClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+// ListBackPoolMembers 查询后向流量池成员列表
+//
+// 查询后向流量池成员列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GslClient) ListBackPoolMembers(request *model.ListBackPoolMembersRequest) (*model.ListBackPoolMembersResponse, error) {
+	requestDef := GenReqDefForListBackPoolMembers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListBackPoolMembersResponse), nil
+	}
+}
+
+// ListBackPoolMembersInvoker 查询后向流量池成员列表
+func (c *GslClient) ListBackPoolMembersInvoker(request *model.ListBackPoolMembersRequest) *ListBackPoolMembersInvoker {
+	requestDef := GenReqDefForListBackPoolMembers()
+	return &ListBackPoolMembersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListBackPools 查询后向流量池列表
+//
+// 查询后向流量池列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GslClient) ListBackPools(request *model.ListBackPoolsRequest) (*model.ListBackPoolsResponse, error) {
+	requestDef := GenReqDefForListBackPools()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListBackPoolsResponse), nil
+	}
+}
+
+// ListBackPoolsInvoker 查询后向流量池列表
+func (c *GslClient) ListBackPoolsInvoker(request *model.ListBackPoolsRequest) *ListBackPoolsInvoker {
+	requestDef := GenReqDefForListBackPools()
+	return &ListBackPoolsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListProPricePlans 查询套餐列表信息
 //
 // 查询套餐列表信息

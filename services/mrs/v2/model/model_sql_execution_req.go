@@ -8,7 +8,7 @@ import (
 
 type SqlExecutionReq struct {
 
-	// SQL类型。目前仅支持“presto”类型的SQL。 说明： 只有包含Presto组件的集群才能提交执行presto类型的SQL。
+	// SQL类型。目前仅支持“presto”类型的SQL。 说明： - 只有包含Presto组件的集群才能提交执行presto类型的SQL。 - 当前仅MRS 2.0.6版本的MRS 2.0.6.1补丁、MRS 2.1.0版本的MRS 2.1.0.7补丁、MRS 3.1.2及之后版本集群支持。
 	SqlType string `json:"sql_type"`
 
 	// 待执行的SQL语句。 说明： 目前仅支持执行单条语句，语句中不包含“;”。

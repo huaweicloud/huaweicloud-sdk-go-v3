@@ -9,7 +9,7 @@ import (
 // Request Object
 type CreateInstanceRequest struct {
 
-	// 通过企业项目管理服务的查询企业项目列表接口ListEnterpriseProject查询通过企业项目管理服务的查询企业项目列表接口ListEnterpriseProject查询企业项目ID
+	// 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	Body *CreateInstanceRequestBody `json:"body,omitempty"`

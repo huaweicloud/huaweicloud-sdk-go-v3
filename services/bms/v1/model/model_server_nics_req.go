@@ -15,7 +15,8 @@ type ServerNicsReq struct {
 	//
 	IpAddress *string `json:"ip_address,omitempty"`
 
-	SecurityGroups *SecurityGroupInfo `json:"security_groups,omitempty"`
+	//
+	SecurityGroups *[]SecurityGroupInfo `json:"security_groups,omitempty"`
 }
 
 func (o ServerNicsReq) String() string {

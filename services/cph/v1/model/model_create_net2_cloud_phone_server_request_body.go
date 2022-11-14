@@ -26,8 +26,6 @@ type CreateNet2CloudPhoneServerRequestBody struct {
 	// 密钥对名称，不超过64个字节，用于云手机ADB登录
 	KeypairName *string `json:"keypair_name,omitempty"`
 
-	BrCidr *string `json:"br_cidr,omitempty"`
-
 	// 云手机启用的应用端口，云手机服务会做端口转发
 	Ports *[]CreateNet2CloudPhoneServerRequestBodyPorts `json:"ports,omitempty"`
 

@@ -26,6 +26,9 @@ type HostModel struct {
 	// 虚拟机当前状态
 	Status *string `json:"status,omitempty"`
 
+	// 节点资源ID
+	ResourceId *string `json:"resource_id,omitempty"`
+
 	// 虚拟机规格ID
 	Flavor *string `json:"flavor,omitempty"`
 

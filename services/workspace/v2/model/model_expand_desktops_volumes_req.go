@@ -10,7 +10,7 @@ import (
 type ExpandDesktopsVolumesReq struct {
 
 	// 扩容磁盘参数。
-	ExpandVolumesReq *[]ExpandVolumesReq `json:"expandVolumesReq,omitempty"`
+	DesktopVolumesExpansion *[]ExpandVolumesReq `json:"desktop_volumes_expansion,omitempty"`
 }
 
 func (o ExpandDesktopsVolumesReq) String() string {

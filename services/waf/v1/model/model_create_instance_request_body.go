@@ -24,7 +24,7 @@ type CreateInstanceRequestBody struct {
 	// 独享引擎名称前缀
 	Instancename string `json:"instancename"`
 
-	// 独享引擎版本规格，枚举值（企业版：waf.instance.enterprise，专业版：waf.instance.professional）
+	// 独享引擎版本规格   - 企业版：waf.instance.enterprise   - 专业版：waf.instance.professional
 	Specification string `json:"specification"`
 
 	// 独享引擎ECS规格，实例规格企业版对应8U16G的ecs规格，专业版对应2U4G的ecs规格（通过调用ECS的ListFlavors接口获取应8U16G的ecs和2U4G的ecs对应规格id）
@@ -42,7 +42,7 @@ type CreateInstanceRequestBody struct {
 	// 申请的独享引擎数量
 	Count int32 `json:"count"`
 
-	// 是否为资源租户类   - true: 资源租户类   -false: 普通租户类
+	// 是否为资源租户类   - true: 资源租户类   - false: 普通租户类
 	ResTenant bool `json:"res_tenant"`
 }
 

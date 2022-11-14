@@ -9,9 +9,12 @@ import (
 type UpdateLtsInfoConfigRequestBody struct {
 
 	// 是否开启全量日志   - false: 不开启   - true: 开启
-	Enabale bool `json:"enabale"`
+	Enabled *bool `json:"enabled,omitempty"`
 
 	LtsIdInfo *LtsIdInfo `json:"ltsIdInfo,omitempty"`
+
+	// 该参数废弃，请忽略
+	Enabale *bool `json:"enabale,omitempty"`
 }
 
 func (o UpdateLtsInfoConfigRequestBody) String() string {

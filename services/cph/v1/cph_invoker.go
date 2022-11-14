@@ -89,6 +89,18 @@ func (i *DeleteShareAppsInvoker) Invoke() (*model.DeleteShareAppsResponse, error
 	}
 }
 
+type DeleteShareFilesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteShareFilesInvoker) Invoke() (*model.DeleteShareFilesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteShareFilesResponse), nil
+	}
+}
+
 type ImportTrafficInvoker struct {
 	*invoker.BaseInvoker
 }

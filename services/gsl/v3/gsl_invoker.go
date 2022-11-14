@@ -5,6 +5,30 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/gsl/v3/model"
 )
 
+type ListBackPoolMembersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBackPoolMembersInvoker) Invoke() (*model.ListBackPoolMembersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBackPoolMembersResponse), nil
+	}
+}
+
+type ListBackPoolsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBackPoolsInvoker) Invoke() (*model.ListBackPoolsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBackPoolsResponse), nil
+	}
+}
+
 type ListProPricePlansInvoker struct {
 	*invoker.BaseInvoker
 }

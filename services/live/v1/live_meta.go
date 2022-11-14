@@ -30,11 +30,6 @@ func GenReqDefForCreateDomainMapping() *def.HttpRequestDef {
 		WithContentType("application/json; charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("SpecifyProject").
-		WithJsonTag("specify_project").
-		WithLocationType(def.Query))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -101,11 +96,6 @@ func GenReqDefForCreateStreamForbidden() *def.HttpRequestDef {
 		WithContentType("application/json; charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("SpecifyProject").
-		WithJsonTag("specify_project").
-		WithLocationType(def.Query))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -151,10 +141,6 @@ func GenReqDefForDeleteDomainMapping() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteDomainMappingResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("SpecifyProject").
-		WithJsonTag("specify_project").
-		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PullDomain").
 		WithJsonTag("pull_domain").
@@ -207,10 +193,6 @@ func GenReqDefForDeleteStreamForbidden() *def.HttpRequestDef {
 		WithResponse(new(model.DeleteStreamForbiddenResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("SpecifyProject").
-		WithJsonTag("specify_project").
-		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Domain").
 		WithJsonTag("domain").
@@ -426,10 +408,6 @@ func GenReqDefForListStreamForbidden() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("SpecifyProject").
-		WithJsonTag("specify_project").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Domain").
 		WithJsonTag("domain").
 		WithLocationType(def.Query))
@@ -617,11 +595,6 @@ func GenReqDefForUpdateStreamForbidden() *def.HttpRequestDef {
 		WithPath("/v1/{project_id}/stream/blocks").
 		WithResponse(new(model.UpdateStreamForbiddenResponse)).
 		WithContentType("application/json; charset=UTF-8")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("SpecifyProject").
-		WithJsonTag("specify_project").
-		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").

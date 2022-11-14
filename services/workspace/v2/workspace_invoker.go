@@ -185,6 +185,18 @@ func (i *ListProductsInvoker) Invoke() (*model.ListProductsResponse, error) {
 	}
 }
 
+type ChangeUserStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeUserStatusInvoker) Invoke() (*model.ChangeUserStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeUserStatusResponse), nil
+	}
+}
+
 type CreateDesktopUserInvoker struct {
 	*invoker.BaseInvoker
 }

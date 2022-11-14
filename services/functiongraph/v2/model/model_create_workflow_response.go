@@ -9,6 +9,9 @@ import (
 // Response Object
 type CreateWorkflowResponse struct {
 
+	// 函数流是否返回流式数据
+	EnableStreamResponse *bool `json:"enable_stream_response,omitempty"`
+
 	// 唯一标识ID，流程定义ID
 	Id *string `json:"id,omitempty"`
 

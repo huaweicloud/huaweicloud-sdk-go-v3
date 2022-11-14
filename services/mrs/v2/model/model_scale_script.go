@@ -20,7 +20,7 @@ type ScaleScript struct {
 	// 自定义自动化脚本参数。 多个参数间用空格隔开。 可以传入以下系统预定义参数： - ${mrs_scale_node_num}：扩缩容节点数 - ${mrs_scale_type}：扩缩容类型，扩容为scale_out，缩容为scale_in - ${mrs_scale_node_hostnames}：扩缩容的节点主机名称 - ${mrs_scale_node_ips}：扩缩容的节点IP - ${mrs_scale_rule_name}：触发扩缩容的规则名 其他用户自定义参数使用方式与普通shell脚本相同，多个参数中间用空格隔开。
 	Parameters *string `json:"parameters,omitempty"`
 
-	// 自定义自动化脚本所执行的节点组类型，包含Master、Core和Task三种类型。
+	// 自定义自动化脚本所执行的节点组名称。
 	Nodes []string `json:"nodes"`
 
 	// 自定义自动化脚本是否只运行在主Master节点上。 缺省值为false，表示自定义自动化脚本可运行在所有Master节点上。
