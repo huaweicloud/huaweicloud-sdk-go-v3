@@ -65,6 +65,30 @@ func (i *AssociateSignatureKeyV2Invoker) Invoke() (*model.AssociateSignatureKeyV
 	}
 }
 
+type AttachApiToPluginInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AttachApiToPluginInvoker) Invoke() (*model.AttachApiToPluginResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AttachApiToPluginResponse), nil
+	}
+}
+
+type AttachPluginToApiInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AttachPluginToApiInvoker) Invoke() (*model.AttachPluginToApiResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AttachPluginToApiResponse), nil
+	}
+}
+
 type CreateCustomAuthorizerV2Invoker struct {
 	*invoker.BaseInvoker
 }
@@ -134,6 +158,18 @@ func (i *CreateInstanceV2Invoker) Invoke() (*model.CreateInstanceV2Response, err
 		return nil, err
 	} else {
 		return result.(*model.CreateInstanceV2Response), nil
+	}
+}
+
+type CreatePluginInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePluginInvoker) Invoke() (*model.CreatePluginResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePluginResponse), nil
 	}
 }
 
@@ -245,6 +281,18 @@ func (i *DeleteInstancesV2Invoker) Invoke() (*model.DeleteInstancesV2Response, e
 	}
 }
 
+type DeletePluginInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeletePluginInvoker) Invoke() (*model.DeletePluginResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeletePluginResponse), nil
+	}
+}
+
 type DeleteRequestThrottlingPolicyV2Invoker struct {
 	*invoker.BaseInvoker
 }
@@ -278,6 +326,30 @@ func (i *DeleteSpecialThrottlingConfigurationV2Invoker) Invoke() (*model.DeleteS
 		return nil, err
 	} else {
 		return result.(*model.DeleteSpecialThrottlingConfigurationV2Response), nil
+	}
+}
+
+type DetachApiFromPluginInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DetachApiFromPluginInvoker) Invoke() (*model.DetachApiFromPluginResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DetachApiFromPluginResponse), nil
+	}
+}
+
+type DetachPluginFromApiInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DetachPluginFromApiInvoker) Invoke() (*model.DetachPluginFromApiResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DetachPluginFromApiResponse), nil
 	}
 }
 
@@ -326,6 +398,30 @@ func (i *ImportMicroserviceInvoker) Invoke() (*model.ImportMicroserviceResponse,
 		return nil, err
 	} else {
 		return result.(*model.ImportMicroserviceResponse), nil
+	}
+}
+
+type ListApiAttachablePluginsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListApiAttachablePluginsInvoker) Invoke() (*model.ListApiAttachablePluginsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListApiAttachablePluginsResponse), nil
+	}
+}
+
+type ListApiAttachedPluginsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListApiAttachedPluginsInvoker) Invoke() (*model.ListApiAttachedPluginsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListApiAttachedPluginsResponse), nil
 	}
 }
 
@@ -521,6 +617,42 @@ func (i *ListMetricDataInvoker) Invoke() (*model.ListMetricDataResponse, error) 
 	}
 }
 
+type ListPluginAttachableApisInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPluginAttachableApisInvoker) Invoke() (*model.ListPluginAttachableApisResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPluginAttachableApisResponse), nil
+	}
+}
+
+type ListPluginAttachedApisInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPluginAttachedApisInvoker) Invoke() (*model.ListPluginAttachedApisResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPluginAttachedApisResponse), nil
+	}
+}
+
+type ListPluginsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPluginsInvoker) Invoke() (*model.ListPluginsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPluginsResponse), nil
+	}
+}
+
 type ListProjectCofigsV2Invoker struct {
 	*invoker.BaseInvoker
 }
@@ -713,6 +845,18 @@ func (i *ShowDetailsOfRequestThrottlingPolicyV2Invoker) Invoke() (*model.ShowDet
 	}
 }
 
+type ShowPluginInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPluginInvoker) Invoke() (*model.ShowPluginResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPluginResponse), nil
+	}
+}
+
 type UpdateCustomAuthorizerV2Invoker struct {
 	*invoker.BaseInvoker
 }
@@ -794,6 +938,18 @@ func (i *UpdateInstanceV2Invoker) Invoke() (*model.UpdateInstanceV2Response, err
 		return nil, err
 	} else {
 		return result.(*model.UpdateInstanceV2Response), nil
+	}
+}
+
+type UpdatePluginInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdatePluginInvoker) Invoke() (*model.UpdatePluginResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdatePluginResponse), nil
 	}
 }
 

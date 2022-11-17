@@ -3785,7 +3785,7 @@ func GenReqDefForResetAuthentication() *def.HttpRequestDef {
 		WithMethod(http.MethodPut).
 		WithPath("/v2/{project_id}/link/instances/{instance_id}/devices/{device_id}/authentication").
 		WithResponse(new(model.ResetAuthenticationResponse)).
-		WithContentType("application/json")
+		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
@@ -3795,6 +3795,10 @@ func GenReqDefForResetAuthentication() *def.HttpRequestDef {
 		WithName("DeviceId").
 		WithJsonTag("device_id").
 		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -3854,7 +3858,7 @@ func GenReqDefForResetProductAuthentication() *def.HttpRequestDef {
 		WithMethod(http.MethodPut).
 		WithPath("/v2/{project_id}/link/instances/{instance_id}/products/{product_id}/authentication").
 		WithResponse(new(model.ResetProductAuthenticationResponse)).
-		WithContentType("application/json")
+		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
@@ -3864,6 +3868,10 @@ func GenReqDefForResetProductAuthentication() *def.HttpRequestDef {
 		WithName("ProductId").
 		WithJsonTag("product_id").
 		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

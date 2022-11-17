@@ -6,14 +6,13 @@ import (
 	"strings"
 )
 
-//
 type LineCompareResultDetails struct {
 
 	// 源库名称。
 	SourceDbName string `json:"source_db_name"`
 
 	// 该库的表的行对比详情。
-	LineCompareDetail []LineCompareDetail `json:"LineCompareDetail"`
+	LineCompareDetail []LineCompareDetail `json:"line_compare_detail"`
 
 	// 该库的行对比结果详情总数。
 	LineCompareDetailCount int32 `json:"line_compare_detail_count"`

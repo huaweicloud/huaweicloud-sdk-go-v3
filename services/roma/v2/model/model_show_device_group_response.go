@@ -37,7 +37,7 @@ type ShowDeviceGroupResponse struct {
 	// 最后修改时间
 	LastUpdatedDatetime *string `json:"last_updated_datetime,omitempty"`
 
-	// 应用名称
+	// 分组归属应用名称
 	AppName        *string `json:"app_name,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

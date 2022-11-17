@@ -243,7 +243,10 @@ func (httpRequest *DefaultHttpRequest) fillQueryParams(req *http.Request) {
 
 	q := req.URL.Query()
 	for key, value := range httpRequest.GetQueryParams() {
-		valueWithType := value.(reflect.Value)
+		valueWithType, ok := value.(reflect.Value)
+		if !ok {
+			continue
+		}
 
 		if valueWithType.Kind() == reflect.Slice {
 			params := httpRequest.CanonicalSliceQueryParamsToMulti(valueWithType)

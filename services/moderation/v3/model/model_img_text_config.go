@@ -9,10 +9,10 @@ import (
 // 图文审核场景的黑白词库传入参数设置。
 type ImgTextConfig struct {
 
-	// 用户输入的console界面自定义的黑词库名，支持传入多个。
+	// 检测时使用的自定义黑名单词库列表。
 	BlackGlossaryNames *[]string `json:"black_glossary_names,omitempty"`
 
-	// 用户输入的console界面自定义的白词库名，支持传入多个。
+	// 检测时使用的自定义白名单词库列表。
 	WhiteGlossaryNames *[]string `json:"white_glossary_names,omitempty"`
 }
 

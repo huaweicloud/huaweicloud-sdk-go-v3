@@ -1816,6 +1816,39 @@ func GenReqDefForListUnreadNewInstantMessages() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForRevokeMessage() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/servicerequest/cases/{case_id}/instant-messages/{message_id}/withdraw").
+		WithResponse(new(model.RevokeMessageResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CaseId").
+		WithJsonTag("case_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("MessageId").
+		WithJsonTag("message_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XSite").
+		WithJsonTag("X-Site").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XTimeZone").
+		WithJsonTag("X-Time-Zone").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForSendVerifyCodes() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).

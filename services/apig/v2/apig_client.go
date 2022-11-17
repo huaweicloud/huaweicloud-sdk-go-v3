@@ -135,6 +135,58 @@ func (c *ApigClient) AssociateSignatureKeyV2Invoker(request *model.AssociateSign
 	return &AssociateSignatureKeyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AttachApiToPlugin 插件绑定API
+//
+// 绑定插件到API上。
+// - 只能选择发布状态的API
+// - 绑定以后及时生效
+// - 修改插件后及时生效
+// - 相同类型的插件只能绑定一个，原来已经绑定的通类型插件，会直接覆盖。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ApigClient) AttachApiToPlugin(request *model.AttachApiToPluginRequest) (*model.AttachApiToPluginResponse, error) {
+	requestDef := GenReqDefForAttachApiToPlugin()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AttachApiToPluginResponse), nil
+	}
+}
+
+// AttachApiToPluginInvoker 插件绑定API
+func (c *ApigClient) AttachApiToPluginInvoker(request *model.AttachApiToPluginRequest) *AttachApiToPluginInvoker {
+	requestDef := GenReqDefForAttachApiToPlugin()
+	return &AttachApiToPluginInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AttachPluginToApi API绑定插件
+//
+// 绑定插件到API上。
+// - 只能选择发布状态的API
+// - 绑定以后及时生效
+// - 修改插件后及时生效
+// - 相同类型的插件只能绑定一个，原来已经绑定的通类型插件，会直接覆盖。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ApigClient) AttachPluginToApi(request *model.AttachPluginToApiRequest) (*model.AttachPluginToApiResponse, error) {
+	requestDef := GenReqDefForAttachPluginToApi()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AttachPluginToApiResponse), nil
+	}
+}
+
+// AttachPluginToApiInvoker API绑定插件
+func (c *ApigClient) AttachPluginToApiInvoker(request *model.AttachPluginToApiRequest) *AttachPluginToApiInvoker {
+	requestDef := GenReqDefForAttachPluginToApi()
+	return &AttachPluginToApiInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateCustomAuthorizerV2 创建自定义认证
 //
 // 创建自定义认证
@@ -306,6 +358,30 @@ func (c *ApigClient) CreateInstanceV2(request *model.CreateInstanceV2Request) (*
 func (c *ApigClient) CreateInstanceV2Invoker(request *model.CreateInstanceV2Request) *CreateInstanceV2Invoker {
 	requestDef := GenReqDefForCreateInstanceV2()
 	return &CreateInstanceV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreatePlugin 创建插件
+//
+// 创建插件信息。
+// - 插件不允许重名
+// - 插件创建后未绑定API前是无意义的，绑定API后，对绑定的API即时生效
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ApigClient) CreatePlugin(request *model.CreatePluginRequest) (*model.CreatePluginResponse, error) {
+	requestDef := GenReqDefForCreatePlugin()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePluginResponse), nil
+	}
+}
+
+// CreatePluginInvoker 创建插件
+func (c *ApigClient) CreatePluginInvoker(request *model.CreatePluginRequest) *CreatePluginInvoker {
+	requestDef := GenReqDefForCreatePlugin()
+	return &CreatePluginInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateRequestThrottlingPolicyV2 创建流控策略
@@ -518,6 +594,29 @@ func (c *ApigClient) DeleteInstancesV2Invoker(request *model.DeleteInstancesV2Re
 	return &DeleteInstancesV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeletePlugin 删除插件
+//
+// 删除插件。
+// - 必须先解除API和插件的绑定关系，否则删除报错
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ApigClient) DeletePlugin(request *model.DeletePluginRequest) (*model.DeletePluginResponse, error) {
+	requestDef := GenReqDefForDeletePlugin()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeletePluginResponse), nil
+	}
+}
+
+// DeletePluginInvoker 删除插件
+func (c *ApigClient) DeletePluginInvoker(request *model.DeletePluginRequest) *DeletePluginInvoker {
+	requestDef := GenReqDefForDeletePlugin()
+	return &DeletePluginInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteRequestThrottlingPolicyV2 删除流控策略
 //
 // 删除指定的流控策略，以及该流控策略与API的所有绑定关系。
@@ -582,6 +681,52 @@ func (c *ApigClient) DeleteSpecialThrottlingConfigurationV2(request *model.Delet
 func (c *ApigClient) DeleteSpecialThrottlingConfigurationV2Invoker(request *model.DeleteSpecialThrottlingConfigurationV2Request) *DeleteSpecialThrottlingConfigurationV2Invoker {
 	requestDef := GenReqDefForDeleteSpecialThrottlingConfigurationV2()
 	return &DeleteSpecialThrottlingConfigurationV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DetachApiFromPlugin 解除绑定插件的API
+//
+// 解除绑定在插件上的API
+// - 解绑及时生效
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ApigClient) DetachApiFromPlugin(request *model.DetachApiFromPluginRequest) (*model.DetachApiFromPluginResponse, error) {
+	requestDef := GenReqDefForDetachApiFromPlugin()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DetachApiFromPluginResponse), nil
+	}
+}
+
+// DetachApiFromPluginInvoker 解除绑定插件的API
+func (c *ApigClient) DetachApiFromPluginInvoker(request *model.DetachApiFromPluginRequest) *DetachApiFromPluginInvoker {
+	requestDef := GenReqDefForDetachApiFromPlugin()
+	return &DetachApiFromPluginInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DetachPluginFromApi 解除绑定API的插件
+//
+// 解除绑定在API上的插件
+// - 解绑及时生效
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ApigClient) DetachPluginFromApi(request *model.DetachPluginFromApiRequest) (*model.DetachPluginFromApiResponse, error) {
+	requestDef := GenReqDefForDetachPluginFromApi()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DetachPluginFromApiResponse), nil
+	}
+}
+
+// DetachPluginFromApiInvoker 解除绑定API的插件
+func (c *ApigClient) DetachPluginFromApiInvoker(request *model.DetachPluginFromApiRequest) *DetachPluginFromApiInvoker {
+	requestDef := GenReqDefForDetachPluginFromApi()
+	return &DetachPluginFromApiInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DisassociateCertificateV2 删除域名证书
@@ -670,6 +815,55 @@ func (c *ApigClient) ImportMicroservice(request *model.ImportMicroserviceRequest
 func (c *ApigClient) ImportMicroserviceInvoker(request *model.ImportMicroserviceRequest) *ImportMicroserviceInvoker {
 	requestDef := GenReqDefForImportMicroservice()
 	return &ImportMicroserviceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApiAttachablePlugins 查询可绑定当前API的插件
+//
+// 查询可绑定当前API的插件信息。
+// - 支持分页返回
+// - 支持插件名称模糊查询
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ApigClient) ListApiAttachablePlugins(request *model.ListApiAttachablePluginsRequest) (*model.ListApiAttachablePluginsResponse, error) {
+	requestDef := GenReqDefForListApiAttachablePlugins()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListApiAttachablePluginsResponse), nil
+	}
+}
+
+// ListApiAttachablePluginsInvoker 查询可绑定当前API的插件
+func (c *ApigClient) ListApiAttachablePluginsInvoker(request *model.ListApiAttachablePluginsRequest) *ListApiAttachablePluginsInvoker {
+	requestDef := GenReqDefForListApiAttachablePlugins()
+	return &ListApiAttachablePluginsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApiAttachedPlugins 查询API下绑定的插件
+//
+// 查询指定API下绑定的插件信息
+// - 用于查询指定API下已经绑定的插件列表信息
+// - 支持分页返回
+// - 支持插件名称模糊查询
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ApigClient) ListApiAttachedPlugins(request *model.ListApiAttachedPluginsRequest) (*model.ListApiAttachedPluginsResponse, error) {
+	requestDef := GenReqDefForListApiAttachedPlugins()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListApiAttachedPluginsResponse), nil
+	}
+}
+
+// ListApiAttachedPluginsInvoker 查询API下绑定的插件
+func (c *ApigClient) ListApiAttachedPluginsInvoker(request *model.ListApiAttachedPluginsRequest) *ListApiAttachedPluginsInvoker {
+	requestDef := GenReqDefForListApiAttachedPlugins()
+	return &ListApiAttachedPluginsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListApiGroupsQuantitiesV2 查询API分组概况
@@ -1071,6 +1265,84 @@ func (c *ApigClient) ListMetricDataInvoker(request *model.ListMetricDataRequest)
 	return &ListMetricDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListPluginAttachableApis 查询可绑定当前插件的API
+//
+// 查询可绑定当前插件的API信息。
+// - 支持分页返回
+// - 支持API名称模糊查询
+// - 支持已绑定其他插件的API查询返回
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ApigClient) ListPluginAttachableApis(request *model.ListPluginAttachableApisRequest) (*model.ListPluginAttachableApisResponse, error) {
+	requestDef := GenReqDefForListPluginAttachableApis()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPluginAttachableApisResponse), nil
+	}
+}
+
+// ListPluginAttachableApisInvoker 查询可绑定当前插件的API
+func (c *ApigClient) ListPluginAttachableApisInvoker(request *model.ListPluginAttachableApisRequest) *ListPluginAttachableApisInvoker {
+	requestDef := GenReqDefForListPluginAttachableApis()
+	return &ListPluginAttachableApisInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPluginAttachedApis 查询插件下绑定的API
+//
+// 查询指定插件下绑定的API信息
+// - 用于查询指定插件下已经绑定的API列表信息
+// - 支持分页返回
+// - 支持API名称模糊查询
+// - 绑定关系列表中返回的API在对应的环境中可能已经下线
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ApigClient) ListPluginAttachedApis(request *model.ListPluginAttachedApisRequest) (*model.ListPluginAttachedApisResponse, error) {
+	requestDef := GenReqDefForListPluginAttachedApis()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPluginAttachedApisResponse), nil
+	}
+}
+
+// ListPluginAttachedApisInvoker 查询插件下绑定的API
+func (c *ApigClient) ListPluginAttachedApisInvoker(request *model.ListPluginAttachedApisRequest) *ListPluginAttachedApisInvoker {
+	requestDef := GenReqDefForListPluginAttachedApis()
+	return &ListPluginAttachedApisInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPlugins 查询插件列表
+//
+// 查询一组符合条件的API网关插件详情。
+// - 支持分页
+// - 支持根据插件类型查询
+// - 支持根据插件可见范围查询
+// - 支持根据插件编码查询
+// - 支持根据名称模糊查询
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ApigClient) ListPlugins(request *model.ListPluginsRequest) (*model.ListPluginsResponse, error) {
+	requestDef := GenReqDefForListPlugins()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPluginsResponse), nil
+	}
+}
+
+// ListPluginsInvoker 查询插件列表
+func (c *ApigClient) ListPluginsInvoker(request *model.ListPluginsRequest) *ListPluginsInvoker {
+	requestDef := GenReqDefForListPlugins()
+	return &ListPluginsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListProjectCofigsV2 查询某个实例的租户配置列表
 //
 // 查询某个实例的租户配置列表，用户可以通过此接口查看各类型资源配置及使用情况。
@@ -1423,6 +1695,28 @@ func (c *ApigClient) ShowDetailsOfRequestThrottlingPolicyV2Invoker(request *mode
 	return &ShowDetailsOfRequestThrottlingPolicyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowPlugin 查询插件详情
+//
+// 查询插件详情。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ApigClient) ShowPlugin(request *model.ShowPluginRequest) (*model.ShowPluginResponse, error) {
+	requestDef := GenReqDefForShowPlugin()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPluginResponse), nil
+	}
+}
+
+// ShowPluginInvoker 查询插件详情
+func (c *ApigClient) ShowPluginInvoker(request *model.ShowPluginRequest) *ShowPluginInvoker {
+	requestDef := GenReqDefForShowPlugin()
+	return &ShowPluginInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateCustomAuthorizerV2 修改自定义认证
 //
 // 修改自定义认证
@@ -1575,6 +1869,30 @@ func (c *ApigClient) UpdateInstanceV2(request *model.UpdateInstanceV2Request) (*
 func (c *ApigClient) UpdateInstanceV2Invoker(request *model.UpdateInstanceV2Request) *UpdateInstanceV2Invoker {
 	requestDef := GenReqDefForUpdateInstanceV2()
 	return &UpdateInstanceV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePlugin 修改插件
+//
+// 修改插件信息。
+// - 插件不允许重名
+// - 插件不支持修改类型和可见范围
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ApigClient) UpdatePlugin(request *model.UpdatePluginRequest) (*model.UpdatePluginResponse, error) {
+	requestDef := GenReqDefForUpdatePlugin()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdatePluginResponse), nil
+	}
+}
+
+// UpdatePluginInvoker 修改插件
+func (c *ApigClient) UpdatePluginInvoker(request *model.UpdatePluginRequest) *UpdatePluginInvoker {
+	requestDef := GenReqDefForUpdatePlugin()
+	return &UpdatePluginInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateRequestThrottlingPolicyV2 修改流控策略
@@ -3173,7 +3491,7 @@ func (c *ApigClient) BatchEnableMembersInvoker(request *model.BatchEnableMembers
 
 // CreateMemberGroup 添加或更新VPC通道后端服务器组
 //
-// 在服务集成中创建VPC通道后端服务器组，VPC通道后端实例可以选择是否关联后端实例服务器组，以便管理后端服务器节点。
+// 在APIG中创建VPC通道后端服务器组，VPC通道后端实例可以选择是否关联后端实例服务器组，以便管理后端服务器节点。
 //
 // 若指定名称的后端服务器组已存在，则更新对应后端服务器组信息。若请求体中包含多个重复名称的后端服务器定义，则使用第一个定义。
 //

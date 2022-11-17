@@ -21,7 +21,7 @@ type UpdatePropertyResponse struct {
 	// 属性描述，长度0-200
 	Description *string `json:"description,omitempty"`
 
-	// 属性数据类型，枚举值大小写敏感；number格式为数字，范围±1.0 x 10^-28 to ±7.9228 x 10^28；sting为字符串；integer为整数；datetime为时间，格式为yyyyMMddTHHmmss；json为自定义json格式
+	// 属性数据类型，boolean枚举值大小写敏感；number格式为数字，范围±1.0 x 10^-28 to ±7.9228 x 10^28；string为字符串；integer为整数；datetime为时间，格式为yyyyMMddTHHmmss；json为自定义json格式; array为数组类型
 	DataType *UpdatePropertyResponseDataType `json:"data_type,omitempty"`
 
 	// 是否必填 0-非必填 1-必填
@@ -43,7 +43,12 @@ type UpdatePropertyResponse struct {
 	Unit *string `json:"unit,omitempty"`
 
 	// string的枚举值数组，使用逗号分隔
-	EnumList       *string `json:"enum_list,omitempty"`
+	EnumList *string `json:"enum_list,omitempty"`
+
+	EnumDict *PropertyDataEnum `json:"enum_dict,omitempty"`
+
+	// 访问模式（兼容20.0，R属性可读，W属性可写，E属性可执行）
+	Method         *string `json:"method,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 
@@ -66,6 +71,8 @@ type UpdatePropertyResponseDataTypeEnum struct {
 	STRING   UpdatePropertyResponseDataType
 	DATETIME UpdatePropertyResponseDataType
 	JSON     UpdatePropertyResponseDataType
+	BOOLEAN  UpdatePropertyResponseDataType
+	ARRAY    UpdatePropertyResponseDataType
 }
 
 func GetUpdatePropertyResponseDataTypeEnum() UpdatePropertyResponseDataTypeEnum {
@@ -84,6 +91,12 @@ func GetUpdatePropertyResponseDataTypeEnum() UpdatePropertyResponseDataTypeEnum 
 		},
 		JSON: UpdatePropertyResponseDataType{
 			value: "json",
+		},
+		BOOLEAN: UpdatePropertyResponseDataType{
+			value: "boolean",
+		},
+		ARRAY: UpdatePropertyResponseDataType{
+			value: "array",
 		},
 	}
 }

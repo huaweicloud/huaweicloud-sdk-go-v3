@@ -18,7 +18,7 @@ type SendSmVerificationCodeReq struct {
 	Language *string `json:"language,omitempty"`
 
 	// 短信发送模板中的变量，具体参见表1。
-	SmTemplateArgs *[]TemplateArgs `json:"sm_template_args,omitempty"`
+	SmTemplateArgs []TemplateArgs `json:"sm_template_args"`
 }
 
 func (o SendSmVerificationCodeReq) String() string {

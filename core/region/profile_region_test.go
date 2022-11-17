@@ -48,9 +48,14 @@ func TestProfileProvider_GetRegion(t *testing.T) {
 
 	file, err := os.Create(path)
 	assert.Nil(t, err)
-	file.WriteString(regionStr)
-	file.Close()
-	defer os.Remove(path)
+	_, err = file.WriteString(regionStr)
+	assert.Nil(t, err)
+	err = file.Close()
+	assert.Nil(t, err)
+	defer func(name string) {
+		err = os.Remove(name)
+		assert.Nil(t, err)
+	}(path)
 
 	p1 := NewProfileProvider("NotExist")
 	reg1 := p1.GetRegion(serviceName)

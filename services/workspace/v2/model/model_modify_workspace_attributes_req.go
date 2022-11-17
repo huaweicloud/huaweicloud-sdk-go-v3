@@ -28,6 +28,9 @@ type ModifyWorkspaceAttributesReq struct {
 
 	// 企业ID。
 	EnterpriseId *string `json:"enterprise_id,omitempty"`
+
+	// 桌面退订是否发送邮件通知。
+	IsSendEmail *bool `json:"is_send_email,omitempty"`
 }
 
 func (o ModifyWorkspaceAttributesReq) String() string {

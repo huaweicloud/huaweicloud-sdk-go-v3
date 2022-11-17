@@ -34,6 +34,7 @@ type DisassociatePublicipsOptionAssociateInstanceType struct {
 type DisassociatePublicipsOptionAssociateInstanceTypeEnum struct {
 	PORT  DisassociatePublicipsOptionAssociateInstanceType
 	NATGW DisassociatePublicipsOptionAssociateInstanceType
+	VPN   DisassociatePublicipsOptionAssociateInstanceType
 	ELB   DisassociatePublicipsOptionAssociateInstanceType
 	EMPTY DisassociatePublicipsOptionAssociateInstanceType
 }
@@ -45,6 +46,9 @@ func GetDisassociatePublicipsOptionAssociateInstanceTypeEnum() DisassociatePubli
 		},
 		NATGW: DisassociatePublicipsOptionAssociateInstanceType{
 			value: "NATGW",
+		},
+		VPN: DisassociatePublicipsOptionAssociateInstanceType{
+			value: "VPN",
 		},
 		ELB: DisassociatePublicipsOptionAssociateInstanceType{
 			value: "ELB",

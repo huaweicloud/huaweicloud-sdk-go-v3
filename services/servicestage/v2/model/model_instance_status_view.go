@@ -21,6 +21,9 @@ type InstanceStatusView struct {
 	// 最近Job ID。
 	LastJobId *string `json:"last_job_id,omitempty"`
 
+	// 最近Job的状态
+	LastJobStatus *string `json:"last_job_status,omitempty"`
+
 	// 企业项目ID。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }

@@ -24,6 +24,8 @@ type SourceOrArtifact struct {
 	// 认证方式，支持iam，none，默认是iam。
 	Auth *string `json:"auth,omitempty"`
 
+	Properties *ObsProperties `json:"properties,omitempty"`
+
 	RepoType *SourceRepoType `json:"repo_type,omitempty"`
 
 	// 代码仓url，如：https://github.com/example/demo.git

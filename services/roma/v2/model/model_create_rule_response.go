@@ -24,9 +24,6 @@ type CreateRuleResponse struct {
 	// 应用ID
 	AppId *string `json:"app_id,omitempty"`
 
-	// 应用名称
-	AppName *string `json:"app_name,omitempty"`
-
 	// 描述
 	Description *string `json:"description,omitempty"`
 
@@ -35,15 +32,6 @@ type CreateRuleResponse struct {
 
 	// 数据解析状态，ENABLE时data_parsing必填 0-启用 1-停用
 	DataParsingStatus *CreateRuleResponseDataParsingStatus `json:"data_parsing_status,omitempty"`
-
-	// SQL查询字段
-	SqlField *string `json:"sql_field,omitempty"`
-
-	// SQL查询条件
-	SqlWhere *string `json:"sql_where,omitempty"`
-
-	// 完整的规则表达式
-	RuleExpress *string `json:"rule_express,omitempty"`
 
 	CreatedUser *CreatedUser `json:"created_user,omitempty"`
 

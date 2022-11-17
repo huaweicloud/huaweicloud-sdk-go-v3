@@ -14,6 +14,8 @@ type ResetAuthenticationRequest struct {
 
 	// 设备ID
 	DeviceId int32 `json:"device_id"`
+
+	Body *ResetAuthenticationRequestBody `json:"body,omitempty"`
 }
 
 func (o ResetAuthenticationRequest) String() string {

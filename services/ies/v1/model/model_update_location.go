@@ -12,7 +12,7 @@ import (
 // 场地信息
 type UpdateLocation struct {
 
-	// 场地名称，0-64位。只包含中文字符、英文字母（a-z、A-Z）、数字（0-9）、下划线（_）、中划线（-）。
+	// 场地名称（已废弃），传入该参数不会再生效，新建站点也不会再返回该字段
 	Name *string `json:"name,omitempty"`
 
 	// 场地所在国家

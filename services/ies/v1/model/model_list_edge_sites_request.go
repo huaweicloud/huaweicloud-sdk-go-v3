@@ -31,7 +31,7 @@ type ListEdgeSitesRequest struct {
 	AvailabilityZoneId *[]string `json:"availability_zone_id,omitempty"`
 
 	// 根据边缘小站部署状态查询
-	Status *[]string `json:"status,omitempty"`
+	Status *[]SiteStatus `json:"status,omitempty"`
 }
 
 func (o ListEdgeSitesRequest) String() string {

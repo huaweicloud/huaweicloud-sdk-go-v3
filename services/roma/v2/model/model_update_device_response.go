@@ -18,6 +18,9 @@ type UpdateDeviceResponse struct {
 	// 设备ID
 	Id *int32 `json:"id,omitempty"`
 
+	// 设备ID（兼容20.0）
+	DeviceId *int32 `json:"device_id,omitempty"`
+
 	// 父设备ID
 	ParentDeviceId *int32 `json:"parent_device_id,omitempty"`
 
@@ -97,9 +100,6 @@ type UpdateDeviceResponse struct {
 
 	// 设备版本
 	Version *string `json:"version,omitempty"`
-
-	// modbus和opcua设备特有,表示设备所属产品的类型 0-普通产品 1-modbus网关产品 2-opcua网关产品
-	PluginId *UpdateDeviceResponsePluginId `json:"plugin_id,omitempty"`
 
 	// 应用ID
 	AppId          *string `json:"app_id,omitempty"`
@@ -231,50 +231,6 @@ func (c UpdateDeviceResponseDeviceType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *UpdateDeviceResponseDeviceType) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("int32")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(int32)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to int32 error")
-	}
-}
-
-type UpdateDeviceResponsePluginId struct {
-	value int32
-}
-
-type UpdateDeviceResponsePluginIdEnum struct {
-	E_0 UpdateDeviceResponsePluginId
-	E_1 UpdateDeviceResponsePluginId
-	E_2 UpdateDeviceResponsePluginId
-}
-
-func GetUpdateDeviceResponsePluginIdEnum() UpdateDeviceResponsePluginIdEnum {
-	return UpdateDeviceResponsePluginIdEnum{
-		E_0: UpdateDeviceResponsePluginId{
-			value: 0,
-		}, E_1: UpdateDeviceResponsePluginId{
-			value: 1,
-		}, E_2: UpdateDeviceResponsePluginId{
-			value: 2,
-		},
-	}
-}
-
-func (c UpdateDeviceResponsePluginId) Value() int32 {
-	return c.value
-}
-
-func (c UpdateDeviceResponsePluginId) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *UpdateDeviceResponsePluginId) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("int32")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

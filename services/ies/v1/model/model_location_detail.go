@@ -9,7 +9,7 @@ import (
 // 场地详情
 type LocationDetail struct {
 
-	// 场地名称
+	// 场地名称（已废弃），传入该参数不会再生效，新建站点也不会再返回该字段
 	Name *string `json:"name,omitempty"`
 
 	// 场地描述

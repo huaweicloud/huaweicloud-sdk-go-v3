@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type AddSubsetsToGatewayResponse struct {
-	Body           *[]Device `json:"body,omitempty"`
-	HttpStatusCode int       `json:"-"`
+	Body           *[]AddSubsetsToGatewayResponseBody `json:"body,omitempty"`
+	HttpStatusCode int                                `json:"-"`
 }
 
 func (o AddSubsetsToGatewayResponse) String() string {

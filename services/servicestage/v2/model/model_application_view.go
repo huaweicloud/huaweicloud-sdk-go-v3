@@ -11,6 +11,9 @@ type ApplicationView struct {
 	// 组件个数。
 	ComponentCount *int32 `json:"component_count,omitempty"`
 
+	// 是否开启统一模型
+	UnifiedModel *string `json:"unified_model,omitempty"`
+
 	// 应用ID。
 	Id *string `json:"id,omitempty"`
 

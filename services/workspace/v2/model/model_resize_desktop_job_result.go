@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// 变更桌面规格Job响应
+// 变更桌面规格Job响应。
 type ResizeDesktopJobResult struct {
 
-	// 桌面ID
+	// 桌面ID。
 	DesktopId *string `json:"desktop_id,omitempty"`
 
-	// 任务ID
+	// 任务ID。
 	JobId *string `json:"job_id,omitempty"`
 }
 

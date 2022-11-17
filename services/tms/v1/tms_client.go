@@ -107,6 +107,28 @@ func (c *TmsClient) ListPredefineTagsInvoker(request *model.ListPredefineTagsReq
 	return &ListPredefineTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListProviders 查询标签管理支持的服务
+//
+// 查询标签管理支持的服务
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *TmsClient) ListProviders(request *model.ListProvidersRequest) (*model.ListProvidersResponse, error) {
+	requestDef := GenReqDefForListProviders()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListProvidersResponse), nil
+	}
+}
+
+// ListProvidersInvoker 查询标签管理支持的服务
+func (c *TmsClient) ListProvidersInvoker(request *model.ListProvidersRequest) *ListProvidersInvoker {
+	requestDef := GenReqDefForListProviders()
+	return &ListProvidersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowApiVersion 查询API版本号详情
 //
 // 查询指定的标签管理服务API版本号详情。

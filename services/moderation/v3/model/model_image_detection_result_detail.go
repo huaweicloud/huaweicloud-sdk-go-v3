@@ -12,7 +12,7 @@ type ImageDetectionResultDetail struct {
 	// 审核结果是否通过。 block：包含敏感信息，不通过 review：需要人工复检
 	Suggestion string `json:"suggestion"`
 
-	// 检测结果的一级标签。 支持category列表如下： politics: 涉政 terrorism: 暴恐 porn: 色情 image_text: 图文审核
+	// 检测结果的一级标签。 支持category列表如下： terrorism: 暴恐 porn: 色情 image_text: 图文审核
 	Category string `json:"category"`
 
 	// 置信度，可选值在0-1之间，值越大，可信度越高。

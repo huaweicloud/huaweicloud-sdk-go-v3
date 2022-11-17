@@ -9,7 +9,7 @@ import (
 // Request Object
 type UpdateUserInfoRequest struct {
 
-	// 用户id。
+	// 用户ID。
 	UserId string `json:"user_id"`
 
 	Body *EditUserReq `json:"body,omitempty"`

@@ -6,11 +6,10 @@ import (
 	"strings"
 )
 
-//
 type CompareTaskListResult struct {
 
 	// 对比任务列表。
-	CompareTaskList *[]CompareTaskList `json:"CompareTaskList,omitempty"`
+	CompareTaskList *[]CompareTaskList `json:"compare_task_list,omitempty"`
 
 	// 对比任务列表总数。
 	CompareTaskListCount *int32 `json:"compare_task_list_count,omitempty"`

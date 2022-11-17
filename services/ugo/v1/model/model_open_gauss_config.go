@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// GaussDB(for openGauss) 的特殊配置。
+// GaussDB Centralized 的特殊配置。
 type OpenGaussConfig struct {
 
 	// 权限检查类型。

@@ -31,8 +31,11 @@ type ChangeApplicationResponse struct {
 	CreateTime *int64 `json:"create_time,omitempty"`
 
 	// 修改时间。
-	UpdateTime     *int64 `json:"update_time,omitempty"`
-	HttpStatusCode int    `json:"-"`
+	UpdateTime *int64 `json:"update_time,omitempty"`
+
+	// 是否统一模型
+	UnifiedModel   *string `json:"unified_model,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ChangeApplicationResponse) String() string {

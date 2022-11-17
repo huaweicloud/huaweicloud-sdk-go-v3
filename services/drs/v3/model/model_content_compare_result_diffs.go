@@ -6,7 +6,6 @@ import (
 	"strings"
 )
 
-//
 type ContentCompareResultDiffs struct {
 
 	// 源库名称。
@@ -16,7 +15,7 @@ type ContentCompareResultDiffs struct {
 	SourceTableName string `json:"source_table_name"`
 
 	// 内容对比结果差异。
-	ContentCompareDiff []ContentCompareDiff `json:"ContentCompareDiff"`
+	ContentCompareDiff []ContentCompareDiff `json:"content_compare_diff"`
 
 	// 内容对比结果差异总数。
 	ContentCompareDiffCount int32 `json:"content_compare_diff_count"`

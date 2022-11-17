@@ -65,6 +65,18 @@ func (i *ListEnterpriseProjectInvoker) Invoke() (*model.ListEnterpriseProjectRes
 	}
 }
 
+type ListProvidersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListProvidersInvoker) Invoke() (*model.ListProvidersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListProvidersResponse), nil
+	}
+}
+
 type MigrateResourceInvoker struct {
 	*invoker.BaseInvoker
 }

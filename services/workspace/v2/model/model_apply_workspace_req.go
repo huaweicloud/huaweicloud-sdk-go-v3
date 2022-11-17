@@ -17,19 +17,22 @@ type ApplyWorkspaceReq struct {
 	EnterpriseId *string `json:"enterprise_id,omitempty"`
 
 	// VPC ID。
-	VpcId string `json:"vpc_id"`
+	VpcId *string `json:"vpc_id,omitempty"`
 
 	// 指定业务子网的网络ID，子网不能与172.16.0.0/12冲突。
-	SubnetIds []Subnet `json:"subnet_ids"`
+	SubnetIds *[]Subnet `json:"subnet_ids,omitempty"`
 
 	// 管理子网网段。 注：不能与172.16.0.0/12以及subnet_ids参数下子网的网段冲突。
 	ManageSubnetCidr *string `json:"manage_subnet_cidr,omitempty"`
 
 	// 接入方式。 - INTERNET：表示Internet接入。 - DEDICATED：表示专线接入。 - BOTH：表示两种接入方式都支持。
-	AccessMode ApplyWorkspaceReqAccessMode `json:"access_mode"`
+	AccessMode *ApplyWorkspaceReqAccessMode `json:"access_mode,omitempty"`
 
 	// 专线接入网段列表，多个网段信息用分号隔开，列表长度不超过5。
 	DedicatedSubnets *string `json:"dedicated_subnets,omitempty"`
+
+	// 桌面退订是否发送邮件通知。
+	IsSendEmail *bool `json:"is_send_email,omitempty"`
 }
 
 func (o ApplyWorkspaceReq) String() string {

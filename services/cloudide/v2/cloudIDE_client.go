@@ -19,6 +19,94 @@ func CloudIDEClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+// AddExtensionEvaluation 添加插件评论
+//
+// 添加插件评论
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *CloudIDEClient) AddExtensionEvaluation(request *model.AddExtensionEvaluationRequest) (*model.AddExtensionEvaluationResponse, error) {
+	requestDef := GenReqDefForAddExtensionEvaluation()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddExtensionEvaluationResponse), nil
+	}
+}
+
+// AddExtensionEvaluationInvoker 添加插件评论
+func (c *CloudIDEClient) AddExtensionEvaluationInvoker(request *model.AddExtensionEvaluationRequest) *AddExtensionEvaluationInvoker {
+	requestDef := GenReqDefForAddExtensionEvaluation()
+	return &AddExtensionEvaluationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AddExtensionEvaluationReply 添加评论回复、回复评论回复
+//
+// 添加评论回复、回复评论回复
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *CloudIDEClient) AddExtensionEvaluationReply(request *model.AddExtensionEvaluationReplyRequest) (*model.AddExtensionEvaluationReplyResponse, error) {
+	requestDef := GenReqDefForAddExtensionEvaluationReply()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddExtensionEvaluationReplyResponse), nil
+	}
+}
+
+// AddExtensionEvaluationReplyInvoker 添加评论回复、回复评论回复
+func (c *CloudIDEClient) AddExtensionEvaluationReplyInvoker(request *model.AddExtensionEvaluationReplyRequest) *AddExtensionEvaluationReplyInvoker {
+	requestDef := GenReqDefForAddExtensionEvaluationReply()
+	return &AddExtensionEvaluationReplyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AddExtensionStar 添加新评星
+//
+// 添加新评星
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *CloudIDEClient) AddExtensionStar(request *model.AddExtensionStarRequest) (*model.AddExtensionStarResponse, error) {
+	requestDef := GenReqDefForAddExtensionStar()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddExtensionStarResponse), nil
+	}
+}
+
+// AddExtensionStarInvoker 添加新评星
+func (c *CloudIDEClient) AddExtensionStarInvoker(request *model.AddExtensionStarRequest) *AddExtensionStarInvoker {
+	requestDef := GenReqDefForAddExtensionStar()
+	return &AddExtensionStarInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CheckMaliciousExtensionEvaluation 举报评论,举报回复
+//
+// 举报评论,举报回复
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *CloudIDEClient) CheckMaliciousExtensionEvaluation(request *model.CheckMaliciousExtensionEvaluationRequest) (*model.CheckMaliciousExtensionEvaluationResponse, error) {
+	requestDef := GenReqDefForCheckMaliciousExtensionEvaluation()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckMaliciousExtensionEvaluationResponse), nil
+	}
+}
+
+// CheckMaliciousExtensionEvaluationInvoker 举报评论,举报回复
+func (c *CloudIDEClient) CheckMaliciousExtensionEvaluationInvoker(request *model.CheckMaliciousExtensionEvaluationRequest) *CheckMaliciousExtensionEvaluationInvoker {
+	requestDef := GenReqDefForCheckMaliciousExtensionEvaluation()
+	return &CheckMaliciousExtensionEvaluationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateExtensionAuthorization 设置ide实例对插件的授权
 //
 // 设置ide实例对插件的授权。同意、不同意、未知（下次重新询问）
@@ -39,6 +127,50 @@ func (c *CloudIDEClient) CreateExtensionAuthorization(request *model.CreateExten
 func (c *CloudIDEClient) CreateExtensionAuthorizationInvoker(request *model.CreateExtensionAuthorizationRequest) *CreateExtensionAuthorizationInvoker {
 	requestDef := GenReqDefForCreateExtensionAuthorization()
 	return &CreateExtensionAuthorizationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteEvaluation 删除评论
+//
+// 删除评论
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *CloudIDEClient) DeleteEvaluation(request *model.DeleteEvaluationRequest) (*model.DeleteEvaluationResponse, error) {
+	requestDef := GenReqDefForDeleteEvaluation()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteEvaluationResponse), nil
+	}
+}
+
+// DeleteEvaluationInvoker 删除评论
+func (c *CloudIDEClient) DeleteEvaluationInvoker(request *model.DeleteEvaluationRequest) *DeleteEvaluationInvoker {
+	requestDef := GenReqDefForDeleteEvaluation()
+	return &DeleteEvaluationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteEvaluationReply 删除回复
+//
+// 删除回复
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *CloudIDEClient) DeleteEvaluationReply(request *model.DeleteEvaluationReplyRequest) (*model.DeleteEvaluationReplyResponse, error) {
+	requestDef := GenReqDefForDeleteEvaluationReply()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteEvaluationReplyResponse), nil
+	}
+}
+
+// DeleteEvaluationReplyInvoker 删除回复
+func (c *CloudIDEClient) DeleteEvaluationReplyInvoker(request *model.DeleteEvaluationReplyRequest) *DeleteEvaluationReplyInvoker {
+	requestDef := GenReqDefForDeleteEvaluationReply()
+	return &DeleteEvaluationReplyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListExtensions 查询插件列表

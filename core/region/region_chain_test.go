@@ -74,9 +74,14 @@ func TestProviderChain_GetRegion3(t *testing.T) {
 
 	file, err := os.Create(path)
 	assert.Nil(t, err)
-	file.WriteString(regionStr)
-	file.Close()
-	defer os.Remove(path)
+	_, err = file.WriteString(regionStr)
+	assert.Nil(t, err)
+	err = file.Close()
+	assert.Nil(t, err)
+	defer func(name string) {
+		err = os.Remove(name)
+		assert.Nil(t, err)
+	}(path)
 
 	chain := DefaultProviderChain(serviceName)
 	reg := chain.GetRegion(regionId)

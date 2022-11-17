@@ -617,6 +617,18 @@ func (i *ListUnreadNewInstantMessagesInvoker) Invoke() (*model.ListUnreadNewInst
 	}
 }
 
+type RevokeMessageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RevokeMessageInvoker) Invoke() (*model.RevokeMessageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RevokeMessageResponse), nil
+	}
+}
+
 type SendVerifyCodesInvoker struct {
 	*invoker.BaseInvoker
 }

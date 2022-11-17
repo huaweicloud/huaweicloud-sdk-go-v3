@@ -16,8 +16,8 @@ type ListPropertiesResponse struct {
 	Size *int32 `json:"size,omitempty"`
 
 	// 属性列表
-	Items          *[]Property `json:"items,omitempty"`
-	HttpStatusCode int         `json:"-"`
+	Items          *[]PropertyResponseBody `json:"items,omitempty"`
+	HttpStatusCode int                     `json:"-"`
 }
 
 func (o ListPropertiesResponse) String() string {

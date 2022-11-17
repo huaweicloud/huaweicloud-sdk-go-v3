@@ -132,9 +132,12 @@ type TestEndPointDbType struct {
 }
 
 type TestEndPointDbTypeEnum struct {
-	MYSQL      TestEndPointDbType
-	MONGODB    TestEndPointDbType
-	POSTGRESQL TestEndPointDbType
+	MYSQL       TestEndPointDbType
+	MONGODB     TestEndPointDbType
+	GAUSSDBV5   TestEndPointDbType
+	POSTGRESQL  TestEndPointDbType
+	KAFKA       TestEndPointDbType
+	GAUSSDBV5HA TestEndPointDbType
 }
 
 func GetTestEndPointDbTypeEnum() TestEndPointDbTypeEnum {
@@ -145,8 +148,17 @@ func GetTestEndPointDbTypeEnum() TestEndPointDbTypeEnum {
 		MONGODB: TestEndPointDbType{
 			value: "mongodb",
 		},
+		GAUSSDBV5: TestEndPointDbType{
+			value: "gaussdbv5",
+		},
 		POSTGRESQL: TestEndPointDbType{
 			value: "postgresql",
+		},
+		KAFKA: TestEndPointDbType{
+			value: "kafka",
+		},
+		GAUSSDBV5HA: TestEndPointDbType{
+			value: "gaussdbv5ha",
 		},
 	}
 }

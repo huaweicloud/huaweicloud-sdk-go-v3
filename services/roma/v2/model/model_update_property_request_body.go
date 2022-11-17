@@ -40,6 +40,8 @@ type UpdatePropertyRequestBody struct {
 
 	// string的枚举值数组，使用逗号分隔
 	EnumList *string `json:"enum_list,omitempty"`
+
+	EnumDict *PropertyDataEnum `json:"enum_dict,omitempty"`
 }
 
 func (o UpdatePropertyRequestBody) String() string {

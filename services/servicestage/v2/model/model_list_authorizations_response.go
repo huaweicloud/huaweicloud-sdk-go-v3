@@ -11,7 +11,10 @@ type ListAuthorizationsResponse struct {
 
 	// 授权列表。
 	Authorizations *[]AuthorizationVo `json:"authorizations,omitempty"`
-	HttpStatusCode int                `json:"-"`
+
+	// 仓库授权数量。
+	Count          *int32 `json:"count,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ListAuthorizationsResponse) String() string {

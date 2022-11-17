@@ -11,6 +11,9 @@ type Resource struct {
 	// 资源ID
 	Id string `json:"id"`
 
+	// 资源名称
+	Name *string `json:"name,omitempty"`
+
 	Type *ResourceType `json:"type"`
 }
 

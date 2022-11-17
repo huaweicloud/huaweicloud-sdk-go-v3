@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// 图像信息
 type FinancialStatementResultImageSize struct {
 
 	// 矫正后图像的高。

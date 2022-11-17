@@ -12,7 +12,7 @@ type CreateHookRequest struct {
 	// 授权名称。
 	XRepoAuth string `json:"X-Repo-Auth"`
 
-	// 组织ID。
+	// 命名空间ID或者URL编码名称。
 	Namespace string `json:"namespace"`
 
 	// 仓库项目ID，如果含有“/”，需要将“/”替换为“:”。

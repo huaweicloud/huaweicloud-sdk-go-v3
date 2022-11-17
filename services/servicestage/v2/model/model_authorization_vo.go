@@ -38,6 +38,9 @@ type AuthorizationVo struct {
 
 	// 状态。
 	Status int32 `json:"status"`
+
+	// 授权局点的类型，默认为null。
+	Tag string `json:"tag"`
 }
 
 func (o AuthorizationVo) String() string {

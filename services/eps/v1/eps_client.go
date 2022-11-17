@@ -129,6 +129,28 @@ func (c *EpsClient) ListEnterpriseProjectInvoker(request *model.ListEnterprisePr
 	return &ListEnterpriseProjectInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListProviders 查询企业项目支持的服务
+//
+// 查询企业项目支持的服务
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *EpsClient) ListProviders(request *model.ListProvidersRequest) (*model.ListProvidersResponse, error) {
+	requestDef := GenReqDefForListProviders()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListProvidersResponse), nil
+	}
+}
+
+// ListProvidersInvoker 查询企业项目支持的服务
+func (c *EpsClient) ListProvidersInvoker(request *model.ListProvidersRequest) *ListProvidersInvoker {
+	requestDef := GenReqDefForListProviders()
+	return &ListProvidersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // MigrateResource 迁移资源
 //
 // 迁移资源到目标企业项目。

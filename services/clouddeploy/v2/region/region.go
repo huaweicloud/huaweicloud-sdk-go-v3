@@ -10,6 +10,8 @@ var CN_SOUTH_1 = region.NewRegion("cn-south-1", "https://clouddeploy.cn-south-1.
 var CN_EAST_3 = region.NewRegion("cn-east-3", "https://clouddeploy.cn-east-3.myhuaweicloud.com")
 var CN_EAST_2 = region.NewRegion("cn-east-2", "https://clouddeploy.cn-east-2.myhuaweicloud.com")
 var CN_NORTH_4 = region.NewRegion("cn-north-4", "https://clouddeploy.cn-north-4.myhuaweicloud.com")
+var SA_BRAZIL_1 = region.NewRegion("sa-brazil-1", "https://clouddeploy.sa-brazil-1.myhuaweicloud.com")
+var LA_NORTH_2 = region.NewRegion("la-north-2", "https://clouddeploy.la-north-2.myhuaweicloud.com")
 
 var staticFields = map[string]*region.Region{
 	"ap-southeast-3": AP_SOUTHEAST_3,
@@ -17,6 +19,8 @@ var staticFields = map[string]*region.Region{
 	"cn-east-3":      CN_EAST_3,
 	"cn-east-2":      CN_EAST_2,
 	"cn-north-4":     CN_NORTH_4,
+	"sa-brazil-1":    SA_BRAZIL_1,
+	"la-north-2":     LA_NORTH_2,
 }
 
 var provider = region.DefaultProviderChain("CLOUDDEPLOY")

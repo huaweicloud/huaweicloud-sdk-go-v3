@@ -42,7 +42,7 @@ type CreateSubnetOption struct {
 	// 功能说明：子网所在的可用分区标识 约束：系统存在的可用分区标识
 	AvailabilityZone *string `json:"availability_zone,omitempty"`
 
-	// 子网配置的NTP地址
+	// 子网配置的NTP地址或租约时间
 	ExtraDhcpOpts *[]ExtraDhcpOption `json:"extra_dhcp_opts,omitempty"`
 }
 

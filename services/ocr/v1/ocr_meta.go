@@ -15,6 +15,11 @@ func GenReqDefForRecognizeAutoClassification() *def.HttpRequestDef {
 		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -28,6 +33,11 @@ func GenReqDefForRecognizeBankcard() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/ocr/bankcard").
 		WithResponse(new(model.RecognizeBankcardResponse)).
 		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -45,6 +55,11 @@ func GenReqDefForRecognizeBusinessCard() *def.HttpRequestDef {
 		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -58,6 +73,11 @@ func GenReqDefForRecognizeBusinessLicense() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/ocr/business-license").
 		WithResponse(new(model.RecognizeBusinessLicenseResponse)).
 		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -75,6 +95,11 @@ func GenReqDefForRecognizeCambodianIdCard() *def.HttpRequestDef {
 		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -88,6 +113,11 @@ func GenReqDefForRecognizeChileIdCard() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/ocr/chile-id-card").
 		WithResponse(new(model.RecognizeChileIdCardResponse)).
 		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -105,6 +135,11 @@ func GenReqDefForRecognizeDriverLicense() *def.HttpRequestDef {
 		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -118,6 +153,11 @@ func GenReqDefForRecognizeExitEntryPermit() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/ocr/exit-entry-permit").
 		WithResponse(new(model.RecognizeExitEntryPermitResponse)).
 		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -135,6 +175,11 @@ func GenReqDefForRecognizeFinancialStatement() *def.HttpRequestDef {
 		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -148,6 +193,11 @@ func GenReqDefForRecognizeFlightItinerary() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/ocr/flight-itinerary").
 		WithResponse(new(model.RecognizeFlightItineraryResponse)).
 		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -165,6 +215,11 @@ func GenReqDefForRecognizeGeneralTable() *def.HttpRequestDef {
 		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -178,6 +233,11 @@ func GenReqDefForRecognizeGeneralText() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/ocr/general-text").
 		WithResponse(new(model.RecognizeGeneralTextResponse)).
 		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -195,6 +255,11 @@ func GenReqDefForRecognizeHandwriting() *def.HttpRequestDef {
 		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -208,6 +273,11 @@ func GenReqDefForRecognizeHealthCode() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/ocr/health-code").
 		WithResponse(new(model.RecognizeHealthCodeResponse)).
 		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -225,6 +295,11 @@ func GenReqDefForRecognizeHkIdCard() *def.HttpRequestDef {
 		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -238,6 +313,11 @@ func GenReqDefForRecognizeIdCard() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/ocr/id-card").
 		WithResponse(new(model.RecognizeIdCardResponse)).
 		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -255,6 +335,11 @@ func GenReqDefForRecognizeIdDocument() *def.HttpRequestDef {
 		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -268,6 +353,11 @@ func GenReqDefForRecognizeInsurancePolicy() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/ocr/insurance-policy").
 		WithResponse(new(model.RecognizeInsurancePolicyResponse)).
 		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -285,6 +375,11 @@ func GenReqDefForRecognizeInvoiceVerification() *def.HttpRequestDef {
 		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -298,6 +393,11 @@ func GenReqDefForRecognizeLicensePlate() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/ocr/license-plate").
 		WithResponse(new(model.RecognizeLicensePlateResponse)).
 		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -315,6 +415,11 @@ func GenReqDefForRecognizeMacaoIdCard() *def.HttpRequestDef {
 		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -328,6 +433,11 @@ func GenReqDefForRecognizeMainlandTravelPermit() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/ocr/mainland-travel-permit").
 		WithResponse(new(model.RecognizeMainlandTravelPermitResponse)).
 		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -345,6 +455,11 @@ func GenReqDefForRecognizeMvsInvoice() *def.HttpRequestDef {
 		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -358,6 +473,11 @@ func GenReqDefForRecognizeMyanmarDriverLicense() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/ocr/myanmar-driver-license").
 		WithResponse(new(model.RecognizeMyanmarDriverLicenseResponse)).
 		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -375,6 +495,11 @@ func GenReqDefForRecognizeMyanmarIdcard() *def.HttpRequestDef {
 		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -388,6 +513,11 @@ func GenReqDefForRecognizePassport() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/ocr/passport").
 		WithResponse(new(model.RecognizePassportResponse)).
 		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -405,6 +535,11 @@ func GenReqDefForRecognizePcrTestRecord() *def.HttpRequestDef {
 		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -418,6 +553,11 @@ func GenReqDefForRecognizeQualificationCertificate() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/ocr/transportation-qualification-certificate").
 		WithResponse(new(model.RecognizeQualificationCertificateResponse)).
 		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -435,6 +575,11 @@ func GenReqDefForRecognizeQuotaInvoice() *def.HttpRequestDef {
 		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -448,6 +593,11 @@ func GenReqDefForRecognizeTaxiInvoice() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/ocr/taxi-invoice").
 		WithResponse(new(model.RecognizeTaxiInvoiceResponse)).
 		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -465,6 +615,11 @@ func GenReqDefForRecognizeThailandIdcard() *def.HttpRequestDef {
 		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -478,6 +633,11 @@ func GenReqDefForRecognizeThailandLicensePlate() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/ocr/thailand-license-plate").
 		WithResponse(new(model.RecognizeThailandLicensePlateResponse)).
 		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -495,6 +655,11 @@ func GenReqDefForRecognizeTollInvoice() *def.HttpRequestDef {
 		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -508,6 +673,11 @@ func GenReqDefForRecognizeTrainTicket() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/ocr/train-ticket").
 		WithResponse(new(model.RecognizeTrainTicketResponse)).
 		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -525,6 +695,11 @@ func GenReqDefForRecognizeTransportationLicense() *def.HttpRequestDef {
 		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -538,6 +713,11 @@ func GenReqDefForRecognizeVatInvoice() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/ocr/vat-invoice").
 		WithResponse(new(model.RecognizeVatInvoiceResponse)).
 		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -555,6 +735,11 @@ func GenReqDefForRecognizeVehicleLicense() *def.HttpRequestDef {
 		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -568,6 +753,11 @@ func GenReqDefForRecognizeWaybillElectronic() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/ocr/waybill-electronic").
 		WithResponse(new(model.RecognizeWaybillElectronicResponse)).
 		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -585,6 +775,11 @@ func GenReqDefForRecognizeWebImage() *def.HttpRequestDef {
 		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -598,6 +793,11 @@ func GenReqDefForRecognizeVin() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/ocr/vin").
 		WithResponse(new(model.RecognizeVinResponse)).
 		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").

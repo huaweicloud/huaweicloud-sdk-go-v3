@@ -12,8 +12,8 @@ import (
 // 场地信息
 type CreateLocation struct {
 
-	// 场地名称，最大支持长度为64个字节。只包含中文字符、英文字母（a-z、A-Z）、数字（0-9）、下划线（_）、中划线（-）
-	Name string `json:"name"`
+	// 场地名称（已废弃）,该参数不会再持久化存储，新建站点也不会再返回该字段
+	Name *string `json:"name,omitempty"`
 
 	// 场地所在省/自治区/直辖市
 	Province string `json:"province"`

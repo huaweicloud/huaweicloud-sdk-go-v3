@@ -28,6 +28,9 @@ type UpdateMemberGroupResponse struct {
 	// VPC通道后端服务器组的端口号，仅VPC通道类型为微服务时支持。端口号为0时后端服务器组下的所有地址沿用原来负载端口继承逻辑。
 	MicroservicePort *int32 `json:"microservice_port,omitempty"`
 
+	// VPC通道后端服务器组的标签，仅VPC通道类型为微服务时支持。
+	MicroserviceLabels *[]MicroserviceLabel `json:"microservice_labels,omitempty"`
+
 	// VPC通道后端服务器组编号
 	MemberGroupId *string `json:"member_group_id,omitempty"`
 

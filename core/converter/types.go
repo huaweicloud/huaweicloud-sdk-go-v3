@@ -1,6 +1,8 @@
 package converter
 
 import (
+	"errors"
+	"fmt"
 	"reflect"
 	"strconv"
 )
@@ -20,12 +22,12 @@ func (i Int32Converter) CovertStringToPrimitiveTypeAndSetField(field reflect.Val
 	if err != nil {
 		return err
 	}
-	val := v.(int32)
-	if isPtr {
-		field.Set(reflect.ValueOf(&val))
-	} else {
-		field.Set(reflect.ValueOf(val))
+	val, ok := v.(int32)
+	if !ok {
+		return errors.New(fmt.Sprintf("failed to convert string (%s) to int32", value))
 	}
+
+	setFieldValue(field, val, isPtr)
 	return nil
 }
 
@@ -44,12 +46,12 @@ func (i Int64Converter) CovertStringToPrimitiveTypeAndSetField(field reflect.Val
 	if err != nil {
 		return err
 	}
-	val := v.(int64)
-	if isPtr {
-		field.Set(reflect.ValueOf(&val))
-	} else {
-		field.Set(reflect.ValueOf(val))
+	val, ok := v.(int64)
+	if !ok {
+		return errors.New(fmt.Sprintf("failed to convert string (%s) to int64", value))
 	}
+
+	setFieldValue(field, val, isPtr)
 	return nil
 }
 
@@ -68,12 +70,12 @@ func (i Float32Converter) CovertStringToPrimitiveTypeAndSetField(field reflect.V
 	if err != nil {
 		return err
 	}
-	val := v.(float32)
-	if isPtr {
-		field.Set(reflect.ValueOf(&val))
-	} else {
-		field.Set(reflect.ValueOf(val))
+	val, ok := v.(float32)
+	if !ok {
+		return errors.New(fmt.Sprintf("failed to convert string (%s) to float32", value))
 	}
+
+	setFieldValue(field, val, isPtr)
 	return nil
 }
 
@@ -92,12 +94,12 @@ func (i Float64Converter) CovertStringToPrimitiveTypeAndSetField(field reflect.V
 	if err != nil {
 		return err
 	}
-	val := v.(float64)
-	if isPtr {
-		field.Set(reflect.ValueOf(&val))
-	} else {
-		field.Set(reflect.ValueOf(val))
+	val, ok := v.(float64)
+	if !ok {
+		return errors.New(fmt.Sprintf("failed to convert string (%s) to float64", value))
 	}
+
+	setFieldValue(field, val, isPtr)
 	return nil
 }
 
@@ -116,12 +118,12 @@ func (i BooleanConverter) CovertStringToPrimitiveTypeAndSetField(field reflect.V
 	if err != nil {
 		return err
 	}
-	val := v.(bool)
-	if isPtr {
-		field.Set(reflect.ValueOf(&val))
-	} else {
-		field.Set(reflect.ValueOf(val))
+	val, ok := v.(bool)
+	if !ok {
+		return errors.New(fmt.Sprintf("failed to convert string (%s) to bool", value))
 	}
+
+	setFieldValue(field, val, isPtr)
 	return nil
 }
 
@@ -132,11 +134,15 @@ func (i StringConverter) CovertStringToInterface(value string) (interface{}, err
 }
 
 func (i StringConverter) CovertStringToPrimitiveTypeAndSetField(field reflect.Value, value string, isPtr bool) error {
+	setFieldValue(field, value, isPtr)
+	return nil
+}
+
+func setFieldValue(field reflect.Value, value interface{}, isPtr bool) {
 	val := value
 	if isPtr {
 		field.Set(reflect.ValueOf(&val))
 	} else {
 		field.Set(reflect.ValueOf(val))
 	}
-	return nil
 }

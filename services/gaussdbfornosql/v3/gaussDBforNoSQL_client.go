@@ -702,6 +702,28 @@ func (c *GaussDBforNoSQLClient) ShowInstanceConfigurationInvoker(request *model.
 	return &ShowInstanceConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowInstanceRole 获取容灾实例主/备角色信息
+//
+// 该接口用于获取容灾实例主/备角色信息，以便后续容灾实例备升主和容灾实例主降备接口调用。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ShowInstanceRole(request *model.ShowInstanceRoleRequest) (*model.ShowInstanceRoleResponse, error) {
+	requestDef := GenReqDefForShowInstanceRole()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowInstanceRoleResponse), nil
+	}
+}
+
+// ShowInstanceRoleInvoker 获取容灾实例主/备角色信息
+func (c *GaussDBforNoSQLClient) ShowInstanceRoleInvoker(request *model.ShowInstanceRoleRequest) *ShowInstanceRoleInvoker {
+	requestDef := GenReqDefForShowInstanceRole()
+	return &ShowInstanceRoleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowQuotas 查询配额
 //
 // 查询单租户在GaussDBforNoSQL服务下的资源配额。
@@ -766,6 +788,50 @@ func (c *GaussDBforNoSQLClient) ShrinkInstanceNode(request *model.ShrinkInstance
 func (c *GaussDBforNoSQLClient) ShrinkInstanceNodeInvoker(request *model.ShrinkInstanceNodeRequest) *ShrinkInstanceNodeInvoker {
 	requestDef := GenReqDefForShrinkInstanceNode()
 	return &ShrinkInstanceNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SwitchToMaster 容灾实例备升主
+//
+// 该接口用于对已经搭建容灾关系的实例，将备实例升级为主实例。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) SwitchToMaster(request *model.SwitchToMasterRequest) (*model.SwitchToMasterResponse, error) {
+	requestDef := GenReqDefForSwitchToMaster()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SwitchToMasterResponse), nil
+	}
+}
+
+// SwitchToMasterInvoker 容灾实例备升主
+func (c *GaussDBforNoSQLClient) SwitchToMasterInvoker(request *model.SwitchToMasterRequest) *SwitchToMasterInvoker {
+	requestDef := GenReqDefForSwitchToMaster()
+	return &SwitchToMasterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SwitchToSlave 容灾实例主降备
+//
+// 该接口用于对已经搭建容灾关系的实例，将主实例降级为备实例。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) SwitchToSlave(request *model.SwitchToSlaveRequest) (*model.SwitchToSlaveResponse, error) {
+	requestDef := GenReqDefForSwitchToSlave()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SwitchToSlaveResponse), nil
+	}
+}
+
+// SwitchToSlaveInvoker 容灾实例主降备
+func (c *GaussDBforNoSQLClient) SwitchToSlaveInvoker(request *model.SwitchToSlaveRequest) *SwitchToSlaveInvoker {
+	requestDef := GenReqDefForSwitchToSlave()
+	return &SwitchToSlaveInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateConfiguration 修改参数模板参数

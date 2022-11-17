@@ -1141,6 +1141,28 @@ func (c *OsmClient) ListUnreadNewInstantMessagesInvoker(request *model.ListUnrea
 	return &ListUnreadNewInstantMessagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RevokeMessage 撤回留言
+//
+// 撤回留言
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *OsmClient) RevokeMessage(request *model.RevokeMessageRequest) (*model.RevokeMessageResponse, error) {
+	requestDef := GenReqDefForRevokeMessage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RevokeMessageResponse), nil
+	}
+}
+
+// RevokeMessageInvoker 撤回留言
+func (c *OsmClient) RevokeMessageInvoker(request *model.RevokeMessageRequest) *RevokeMessageInvoker {
+	requestDef := GenReqDefForRevokeMessage()
+	return &RevokeMessageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SendVerifyCodes 获取验证码
 //
 // 获取验证码

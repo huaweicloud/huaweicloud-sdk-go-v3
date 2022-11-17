@@ -22,7 +22,7 @@ type MicroserviceImportReq struct {
 	// 导入的api列表
 	Apis []MicroserviceApiCreate `json:"apis"`
 
-	// 服务集成请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000，默认5000  单位：毫秒。
+	// APIG请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000，默认5000  单位：毫秒。
 	BackendTimeout *int32 `json:"backend_timeout,omitempty"`
 
 	// API的认证方式，默认无认证[，site暂不支持IAM认证。](tag:Site) - NONE：无认证 - APP：APP认证 - IAM：IAM认证

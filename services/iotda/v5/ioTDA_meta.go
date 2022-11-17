@@ -407,6 +407,14 @@ func GenReqDefForAddCertificate() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SpAuthToken").
+		WithJsonTag("Sp-Auth-Token").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("StageAuthToken").
+		WithJsonTag("Stage-Auth-Token").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("Instance-Id").
 		WithLocationType(def.Header))
@@ -437,6 +445,14 @@ func GenReqDefForCheckCertificate() *def.HttpRequestDef {
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SpAuthToken").
+		WithJsonTag("Sp-Auth-Token").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("StageAuthToken").
+		WithJsonTag("Stage-Auth-Token").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("Instance-Id").
 		WithLocationType(def.Header))
@@ -465,6 +481,14 @@ func GenReqDefForDeleteCertificate() *def.HttpRequestDef {
 		WithJsonTag("certificate_id").
 		WithLocationType(def.Path))
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SpAuthToken").
+		WithJsonTag("Sp-Auth-Token").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("StageAuthToken").
+		WithJsonTag("Stage-Auth-Token").
+		WithLocationType(def.Header))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("Instance-Id").
@@ -502,6 +526,14 @@ func GenReqDefForListCertificates() *def.HttpRequestDef {
 		WithJsonTag("offset").
 		WithLocationType(def.Query))
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SpAuthToken").
+		WithJsonTag("Sp-Auth-Token").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("StageAuthToken").
+		WithJsonTag("Stage-Auth-Token").
+		WithLocationType(def.Header))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("Instance-Id").

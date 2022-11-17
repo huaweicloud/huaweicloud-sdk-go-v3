@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// 对应票证的状态信息及状态码
 type AutoClassificationResultStatus struct {
 
 	// 指示各对应票证的状态码

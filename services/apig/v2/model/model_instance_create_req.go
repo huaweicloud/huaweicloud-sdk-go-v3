@@ -55,6 +55,9 @@ type InstanceCreateReq struct {
 
 	// 实例使用的负载均衡器类型 - lvs Linux虚拟服务器 - elb 弹性负载均衡，elb仅部分region支持
 	LoadbalancerProvider *InstanceCreateReqLoadbalancerProvider `json:"loadbalancer_provider,omitempty"`
+
+	// 标签列表。  一个实例默认最多支持创建20个标签
+	Tags *[]TmsKeyValue `json:"tags,omitempty"`
 }
 
 func (o InstanceCreateReq) String() string {

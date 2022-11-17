@@ -66,7 +66,7 @@ type Subnet struct {
 	// 对应IPv6子网（OpenStack Neutron接口）id，如果子网为IPv4子网，则不返回此参数
 	NeutronSubnetIdV6 string `json:"neutron_subnet_id_v6"`
 
-	// 子网配置的NTP地址
+	// 子网配置的NTP地址或DHCP租约时间
 	ExtraDhcpOpts []ExtraDhcpOption `json:"extra_dhcp_opts"`
 
 	// 功能说明：子网作用域 取值范围：center-表示作用域为中心；{azId}表示作用域为具体的AZ

@@ -27,7 +27,7 @@ type MyanmarDriverLicenseConfidence struct {
 	NrcIdEn *float32 `json:"nrc_id_en,omitempty"`
 
 	// 缅文出生日期置信度。
-	Birth *float32 `json:"Birth,omitempty"`
+	Birth *float32 `json:"birth,omitempty"`
 
 	// 英文出生日期置信度。
 	BirthEn *float32 `json:"birth_en,omitempty"`

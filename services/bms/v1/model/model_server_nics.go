@@ -8,7 +8,7 @@ import (
 
 // 网卡Port ID
 type ServerNics struct {
-	Id *string `json:"id,omitempty"`
+	Id string `json:"id"`
 }
 
 func (o ServerNics) String() string {

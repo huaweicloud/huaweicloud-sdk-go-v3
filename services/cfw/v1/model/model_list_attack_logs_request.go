@@ -1,0 +1,214 @@
+package model
+
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
+	"strings"
+)
+
+// Request Object
+type ListAttackLogsRequest struct {
+
+	// 开始时间
+	StartTime int64 `json:"start_time"`
+
+	// 结束时间
+	EndTime int64 `json:"end_time"`
+
+	// 源IP
+	SrcIp *string `json:"src_ip,omitempty"`
+
+	// 源端口号
+	SrcPort *int32 `json:"src_port,omitempty"`
+
+	// 目的IP
+	DstIp *string `json:"dst_ip,omitempty"`
+
+	// 目的端口号
+	DstPort *int32 `json:"dst_port,omitempty"`
+
+	// 协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+	Protocol *ListAttackLogsRequestProtocol `json:"protocol,omitempty"`
+
+	// 应用协议
+	App *string `json:"app,omitempty"`
+
+	// 日志ID，当是第一页时为空，不是第一页时不为空
+	LogId *string `json:"log_id,omitempty"`
+
+	// 下个日期，当是第一页时为空，不是第一页时不为空
+	NextDate *int64 `json:"next_date,omitempty"`
+
+	// 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+	Offset *int32 `json:"offset,omitempty"`
+
+	// 每页显示个数
+	Limit int32 `json:"limit"`
+
+	// 防火墙实例ID
+	FwInstanceId *string `json:"fw_instance_id,omitempty"`
+
+	// 动作0：permit,1：deny
+	Action *ListAttackLogsRequestAction `json:"action,omitempty"`
+
+	// 方向0：外到内1：内到外
+	Direction *ListAttackLogsRequestDirection `json:"direction,omitempty"`
+
+	// 入侵事件类型
+	AttackType *string `json:"attack_type,omitempty"`
+
+	// 入侵事件规则
+	AttackRule *string `json:"attack_rule,omitempty"`
+
+	// 威胁等级
+	Level *string `json:"level,omitempty"`
+
+	// 判断来源
+	Source *string `json:"source,omitempty"`
+}
+
+func (o ListAttackLogsRequest) String() string {
+	data, err := utils.Marshal(o)
+	if err != nil {
+		return "ListAttackLogsRequest struct{}"
+	}
+
+	return strings.Join([]string{"ListAttackLogsRequest", string(data)}, " ")
+}
+
+type ListAttackLogsRequestProtocol struct {
+	value string
+}
+
+type ListAttackLogsRequestProtocolEnum struct {
+	E_6  ListAttackLogsRequestProtocol
+	E_17 ListAttackLogsRequestProtocol
+	E_1  ListAttackLogsRequestProtocol
+	E_58 ListAttackLogsRequestProtocol
+}
+
+func GetListAttackLogsRequestProtocolEnum() ListAttackLogsRequestProtocolEnum {
+	return ListAttackLogsRequestProtocolEnum{
+		E_6: ListAttackLogsRequestProtocol{
+			value: "6",
+		},
+		E_17: ListAttackLogsRequestProtocol{
+			value: "17",
+		},
+		E_1: ListAttackLogsRequestProtocol{
+			value: "1",
+		},
+		E_58: ListAttackLogsRequestProtocol{
+			value: "58",
+		},
+	}
+}
+
+func (c ListAttackLogsRequestProtocol) Value() string {
+	return c.value
+}
+
+func (c ListAttackLogsRequestProtocol) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListAttackLogsRequestProtocol) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ListAttackLogsRequestAction struct {
+	value string
+}
+
+type ListAttackLogsRequestActionEnum struct {
+	E_0 ListAttackLogsRequestAction
+	E_1 ListAttackLogsRequestAction
+}
+
+func GetListAttackLogsRequestActionEnum() ListAttackLogsRequestActionEnum {
+	return ListAttackLogsRequestActionEnum{
+		E_0: ListAttackLogsRequestAction{
+			value: "0",
+		},
+		E_1: ListAttackLogsRequestAction{
+			value: "1",
+		},
+	}
+}
+
+func (c ListAttackLogsRequestAction) Value() string {
+	return c.value
+}
+
+func (c ListAttackLogsRequestAction) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListAttackLogsRequestAction) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ListAttackLogsRequestDirection struct {
+	value string
+}
+
+type ListAttackLogsRequestDirectionEnum struct {
+	E_0 ListAttackLogsRequestDirection
+	E_1 ListAttackLogsRequestDirection
+}
+
+func GetListAttackLogsRequestDirectionEnum() ListAttackLogsRequestDirectionEnum {
+	return ListAttackLogsRequestDirectionEnum{
+		E_0: ListAttackLogsRequestDirection{
+			value: "0",
+		},
+		E_1: ListAttackLogsRequestDirection{
+			value: "1",
+		},
+	}
+}
+
+func (c ListAttackLogsRequestDirection) Value() string {
+	return c.value
+}
+
+func (c ListAttackLogsRequestDirection) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListAttackLogsRequestDirection) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}

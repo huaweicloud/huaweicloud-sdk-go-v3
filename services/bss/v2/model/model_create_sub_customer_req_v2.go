@@ -15,7 +15,7 @@ type CreateSubCustomerReqV2 struct {
 	DisplayName *string `json:"display_name,omitempty"`
 
 	// 子账号关联类型：1：同一法人。 关联类型目前只能是同一法人。
-	SubCustomerAssociationType *int32 `json:"sub_customer_association_type,omitempty"`
+	SubCustomerAssociationType int32 `json:"sub_customer_association_type"`
 
 	// 申请的权限列表。 支持的权限项请参见下表。
 	PermissionIds *[]string `json:"permission_ids,omitempty"`

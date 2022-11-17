@@ -19,12 +19,6 @@ type GroupTreeResponse struct {
 
 	// 子分组
 	Children *[]GroupTreeResponse `json:"children,omitempty"`
-
-	// 应用id
-	AppId *string `json:"app_id,omitempty"`
-
-	// 权限
-	Permissions *[]string `json:"permissions,omitempty"`
 }
 
 func (o GroupTreeResponse) String() string {

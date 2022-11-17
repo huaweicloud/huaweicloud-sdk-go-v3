@@ -1,0 +1,50 @@
+package model
+
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
+	"strings"
+)
+
+// 查询东西向防火墙接口响应Body体
+type GetEastWestFirewallResponseBody struct {
+
+	// 东西向防火墙object_id
+	ObjectId *string `json:"object_id,omitempty"`
+
+	// 租户project_id
+	ProjectId *string `json:"project_id,omitempty"`
+
+	// 防护状态：0 未开启防护， 1 已开启防护
+	Status *int32 `json:"status,omitempty"`
+
+	ErAssociatedSubnet *SubnetInfo `json:"er_associated_subnet,omitempty"`
+
+	// 云防火墙关联子网信息
+	FirewallAssociatedSubnets *[]SubnetInfo `json:"firewall_associated_subnets,omitempty"`
+
+	Er *ErInstance `json:"er,omitempty"`
+
+	InspectionVpc *VpcDetail `json:"inspection_vpc,omitempty"`
+
+	// 东西向防护资源信息
+	ProtectedInfos *[]EwProtectResourceInfo `json:"protected_infos,omitempty"`
+
+	// 防护VPC总数
+	Total *int32 `json:"total,omitempty"`
+
+	// 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+	Offset *int32 `json:"offset,omitempty"`
+
+	// 每页显示个数
+	Limit *int32 `json:"limit,omitempty"`
+}
+
+func (o GetEastWestFirewallResponseBody) String() string {
+	data, err := utils.Marshal(o)
+	if err != nil {
+		return "GetEastWestFirewallResponseBody struct{}"
+	}
+
+	return strings.Join([]string{"GetEastWestFirewallResponseBody", string(data)}, " ")
+}

@@ -53,6 +53,18 @@ func (i *ListPredefineTagsInvoker) Invoke() (*model.ListPredefineTagsResponse, e
 	}
 }
 
+type ListProvidersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListProvidersInvoker) Invoke() (*model.ListProvidersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListProvidersResponse), nil
+	}
+}
+
 type ShowApiVersionInvoker struct {
 	*invoker.BaseInvoker
 }

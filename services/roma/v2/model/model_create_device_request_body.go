@@ -19,6 +19,9 @@ type CreateDeviceRequestBody struct {
 	// 设备密码，输入要求：至少1数字，1大写字母，1小写字母，1特殊字符(~!@#$%^&*()-_=+|[{}];:<>/?)，长度8-32个字符
 	Password *string `json:"password,omitempty"`
 
+	// 设备用户名，支持英文大小写、英文符号(-)及数字，长度10-50
+	UserName *string `json:"user_name,omitempty"`
+
 	// 设备名称，支持中文、中文标点符号（）。；，：“”、？《》及英文大小写、数字及英文符号()_,#.?'-@%&!, 长度2-64
 	DeviceName string `json:"device_name"`
 

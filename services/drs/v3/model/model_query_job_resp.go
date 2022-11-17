@@ -145,6 +145,21 @@ type QueryJobResp struct {
 
 	// 增量任务启动位点
 	IncreStartPosition *string `json:"incre_start_position,omitempty"`
+
+	// 是否是主备任务。
+	IsMultiAz *bool `json:"is_multi_az,omitempty"`
+
+	// node所在节点AZ名称。
+	AzName *string `json:"az_name,omitempty"`
+
+	// 主备任务主AZ。
+	MasterAz *string `json:"master_az,omitempty"`
+
+	// 主备任务备AZ。
+	SlaveAz *string `json:"slave_az,omitempty"`
+
+	// 任务主备角色。
+	NodeRole *string `json:"node_role,omitempty"`
 }
 
 func (o QueryJobResp) String() string {

@@ -67,9 +67,14 @@ func TestProfileCredentialProvider_GetCredentials(t *testing.T) {
 
 	file, err := os.Create(path)
 	assert.Nil(t, err)
-	file.WriteString(credentialStr)
-	file.Close()
-	defer os.Remove(path)
+	_, err = file.WriteString(credentialStr)
+	assert.Nil(t, err)
+	err = file.Close()
+	assert.Nil(t, err)
+	defer func(name string) {
+		err = os.Remove(name)
+		assert.Nil(t, err)
+	}(path)
 
 	basicProvider := BasicCredentialProfileProvider()
 	basicCred, err := basicProvider.GetCredentials()

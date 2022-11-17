@@ -15,13 +15,13 @@ type ConfigInfoDo struct {
 	// 部署参数名称，用户可自定义
 	Name *string `json:"name,omitempty"`
 
-	// 类型，如果填写name字段，则type必选
+	// 类型，如果填写name字段，则type必选,若type为空则默认为text
 	Type *ConfigInfoDoType `json:"type,omitempty"`
 
 	// 描述
 	Description *string `json:"description,omitempty"`
 
-	// 部署参数值，如果填写name字段，则value必选
+	// 部署参数值
 	Value *string `json:"value,omitempty"`
 
 	// 部署任务id，创建部署任务后由系统自动生成
@@ -51,6 +51,7 @@ type ConfigInfoDoTypeEnum struct {
 	TEXT       ConfigInfoDoType
 	HOST_GROUP ConfigInfoDoType
 	ENUM       ConfigInfoDoType
+	ENCRYPT    ConfigInfoDoType
 }
 
 func GetConfigInfoDoTypeEnum() ConfigInfoDoTypeEnum {
@@ -63,6 +64,9 @@ func GetConfigInfoDoTypeEnum() ConfigInfoDoTypeEnum {
 		},
 		ENUM: ConfigInfoDoType{
 			value: "enum",
+		},
+		ENCRYPT: ConfigInfoDoType{
+			value: "encrypt",
 		},
 	}
 }

@@ -14,6 +14,8 @@ type ResetProductAuthenticationRequest struct {
 
 	// 产品ID
 	ProductId int32 `json:"product_id"`
+
+	Body *ResetProductAuthenticationRequestBody `json:"body,omitempty"`
 }
 
 func (o ResetProductAuthenticationRequest) String() string {

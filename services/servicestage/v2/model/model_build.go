@@ -8,7 +8,7 @@ import (
 
 // 构建工程。
 type Build struct {
-	Parameters *BuildInfoParameters `json:"parameters,omitempty"`
+	Parameters *BuildParameters `json:"parameters,omitempty"`
 }
 
 func (o Build) String() string {

@@ -5,6 +5,54 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/cloudide/v2/model"
 )
 
+type AddExtensionEvaluationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddExtensionEvaluationInvoker) Invoke() (*model.AddExtensionEvaluationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddExtensionEvaluationResponse), nil
+	}
+}
+
+type AddExtensionEvaluationReplyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddExtensionEvaluationReplyInvoker) Invoke() (*model.AddExtensionEvaluationReplyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddExtensionEvaluationReplyResponse), nil
+	}
+}
+
+type AddExtensionStarInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddExtensionStarInvoker) Invoke() (*model.AddExtensionStarResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddExtensionStarResponse), nil
+	}
+}
+
+type CheckMaliciousExtensionEvaluationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckMaliciousExtensionEvaluationInvoker) Invoke() (*model.CheckMaliciousExtensionEvaluationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckMaliciousExtensionEvaluationResponse), nil
+	}
+}
+
 type CreateExtensionAuthorizationInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -14,6 +62,30 @@ func (i *CreateExtensionAuthorizationInvoker) Invoke() (*model.CreateExtensionAu
 		return nil, err
 	} else {
 		return result.(*model.CreateExtensionAuthorizationResponse), nil
+	}
+}
+
+type DeleteEvaluationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteEvaluationInvoker) Invoke() (*model.DeleteEvaluationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteEvaluationResponse), nil
+	}
+}
+
+type DeleteEvaluationReplyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteEvaluationReplyInvoker) Invoke() (*model.DeleteEvaluationReplyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteEvaluationReplyResponse), nil
 	}
 }
 

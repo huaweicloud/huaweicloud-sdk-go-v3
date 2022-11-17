@@ -377,6 +377,18 @@ func (i *ShowInstanceConfigurationInvoker) Invoke() (*model.ShowInstanceConfigur
 	}
 }
 
+type ShowInstanceRoleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInstanceRoleInvoker) Invoke() (*model.ShowInstanceRoleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceRoleResponse), nil
+	}
+}
+
 type ShowQuotasInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -410,6 +422,30 @@ func (i *ShrinkInstanceNodeInvoker) Invoke() (*model.ShrinkInstanceNodeResponse,
 		return nil, err
 	} else {
 		return result.(*model.ShrinkInstanceNodeResponse), nil
+	}
+}
+
+type SwitchToMasterInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SwitchToMasterInvoker) Invoke() (*model.SwitchToMasterResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SwitchToMasterResponse), nil
+	}
+}
+
+type SwitchToSlaveInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SwitchToSlaveInvoker) Invoke() (*model.SwitchToSlaveResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SwitchToSlaveResponse), nil
 	}
 }
 

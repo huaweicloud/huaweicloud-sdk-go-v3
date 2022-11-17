@@ -16,8 +16,8 @@ type ListSubsetsResponse struct {
 	Size *int32 `json:"size,omitempty"`
 
 	// 设备ID列表
-	Items          *[]Device `json:"items,omitempty"`
-	HttpStatusCode int       `json:"-"`
+	Items          *[]SubDevice `json:"items,omitempty"`
+	HttpStatusCode int          `json:"-"`
 }
 
 func (o ListSubsetsResponse) String() string {

@@ -26,6 +26,9 @@ type FlavorView struct {
 
 	// 展示标签。
 	Label *string `json:"label,omitempty"`
+
+	// 是否是自定义资源规格。
+	Custom *bool `json:"custom,omitempty"`
 }
 
 func (o FlavorView) String() string {

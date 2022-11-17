@@ -30,7 +30,7 @@ type UpdateSubnetOption struct {
 	// 功能说明：子网dns服务器地址的集合；如果想使用两个以上dns服务器，请使用该字段。 约束：是子网dns服务器地址1跟子网dns服务器地址2的合集的父集 默认值：不填时为空，无法使用云内网DNS功能 [内网DNS地址请参见](https://support.huaweicloud.com/dns_faq/dns_faq_002.html) [通过API获取请参见](https://support.huaweicloud.com/api-dns/dns_api_69001.html)
 	DnsList *[]string `json:"dnsList,omitempty"`
 
-	// 子网配置的NTP地址
+	// 子网配置的NTP地址或租约时间
 	ExtraDhcpOpts *[]ExtraDhcpOption `json:"extra_dhcp_opts,omitempty"`
 }
 

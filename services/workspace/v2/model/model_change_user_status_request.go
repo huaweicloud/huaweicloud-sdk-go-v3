@@ -9,7 +9,7 @@ import (
 // Request Object
 type ChangeUserStatusRequest struct {
 
-	// 用户id。
+	// 用户ID。
 	UserId string `json:"user_id"`
 
 	Body *OperateUserReq `json:"body,omitempty"`

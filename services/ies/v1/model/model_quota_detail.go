@@ -9,7 +9,7 @@ import (
 // 资源配额详情
 type QuotaDetail struct {
 
-	// 资源类型 取值范围：  - edge_site：边缘小站
+	// 资源类型 取值范围：  - edge_site：边缘小站  - compute_device：计算设备
 	Type *string `json:"type,omitempty"`
 
 	// 资源的总配额 约束：资源的默认配额数可以修改，默认配置：边缘小站（10）

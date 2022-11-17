@@ -15,7 +15,7 @@ type ResizeInstanceBody struct {
 	SpecCode string `json:"spec_code"`
 
 	// 新的缓存实例规格，单位：GB。 Redis4.0和Redis5.0：单机和主备类型实例取值：0.125、0.25、0.5、1、2、4、8、16、32、64。Cluster集群实例规格支持24、32、48、64、96、128、192、256、384、512、768、1024。 Memcached：单机和主备类型实例取值：2、4、8、16、32、64。
-	NewCapacity float32 `json:"new_capacity"`
+	NewCapacity int32 `json:"new_capacity"`
 
 	BssParam *BssParamEntity `json:"bss_param,omitempty"`
 

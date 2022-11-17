@@ -27,7 +27,7 @@ type MyanmarDriverLicenseResult struct {
 	NrcIdEn *string `json:"nrc_id_en,omitempty"`
 
 	// 缅文出生日期。
-	Birth *string `json:"Birth,omitempty"`
+	Birth *string `json:"birth,omitempty"`
 
 	// 英文出生日期。
 	BirthEn *string `json:"birth_en,omitempty"`

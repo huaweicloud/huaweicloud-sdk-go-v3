@@ -9,7 +9,7 @@ import (
 // 变更规格的桌面对象。
 type ResizeDesktopData struct {
 
-	// 桌面ID
+	// 桌面ID。
 	DesktopId *string `json:"desktop_id,omitempty"`
 }
 

@@ -23,6 +23,9 @@ type VpcBase struct {
 	// VPC通道的成员类型。 - ip - ecs
 	MemberType VpcBaseMemberType `json:"member_type"`
 
+	// vpc通道类型，默认为服务器类型。 - 2：服务器类型 - 3：微服务类型
+	Type *int32 `json:"type,omitempty"`
+
 	// VPC通道的字典编码  支持英文，数字，特殊字符（-_.）  暂不支持
 	DictCode *string `json:"dict_code,omitempty"`
 }

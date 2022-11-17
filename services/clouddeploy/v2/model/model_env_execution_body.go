@@ -10,10 +10,13 @@ import (
 type EnvExecutionBody struct {
 
 	// 部署任务执行时传递的参数
-	Params []DynamicConfigInfo `json:"params"`
+	Params *[]DynamicConfigInfo `json:"params,omitempty"`
 
-	// 部署任务的执行id，可通过record_id回滚至之前的部署状态。选中部署历史执行记录，在URL中获取。
+	// 部署任务的执行id，可通过record_id回滚至之前的部署状态。选中部署历史执行记录，在URL中获取
 	RecordId *string `json:"record_id,omitempty"`
+
+	// 限制触发来源,0不限制任何执行请求来源,1时只允许通过流水线触发执行
+	TriggerSource *string `json:"trigger_source,omitempty"`
 }
 
 func (o EnvExecutionBody) String() string {

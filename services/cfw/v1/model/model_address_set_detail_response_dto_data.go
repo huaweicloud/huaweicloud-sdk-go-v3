@@ -1,0 +1,76 @@
+package model
+
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
+	"strings"
+)
+
+// 查询地址组详情数据
+type AddressSetDetailResponseDtoData struct {
+
+	// 地址组id
+	Id *string `json:"id,omitempty"`
+
+	// 地址组名称
+	Name *string `json:"name,omitempty"`
+
+	// 地址组描述
+	Description *string `json:"description,omitempty"`
+
+	// 地址类型0 ipv4,1 ipv6
+	AddressType *AddressSetDetailResponseDtoDataAddressType `json:"address_type,omitempty"`
+}
+
+func (o AddressSetDetailResponseDtoData) String() string {
+	data, err := utils.Marshal(o)
+	if err != nil {
+		return "AddressSetDetailResponseDtoData struct{}"
+	}
+
+	return strings.Join([]string{"AddressSetDetailResponseDtoData", string(data)}, " ")
+}
+
+type AddressSetDetailResponseDtoDataAddressType struct {
+	value int32
+}
+
+type AddressSetDetailResponseDtoDataAddressTypeEnum struct {
+	E_0 AddressSetDetailResponseDtoDataAddressType
+	E_1 AddressSetDetailResponseDtoDataAddressType
+}
+
+func GetAddressSetDetailResponseDtoDataAddressTypeEnum() AddressSetDetailResponseDtoDataAddressTypeEnum {
+	return AddressSetDetailResponseDtoDataAddressTypeEnum{
+		E_0: AddressSetDetailResponseDtoDataAddressType{
+			value: 0,
+		}, E_1: AddressSetDetailResponseDtoDataAddressType{
+			value: 1,
+		},
+	}
+}
+
+func (c AddressSetDetailResponseDtoDataAddressType) Value() int32 {
+	return c.value
+}
+
+func (c AddressSetDetailResponseDtoDataAddressType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *AddressSetDetailResponseDtoDataAddressType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
+}
