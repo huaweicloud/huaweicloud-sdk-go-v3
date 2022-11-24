@@ -8,13 +8,13 @@ import (
 
 type ConfigItem struct {
 
-	// 配置项名称
+	// 配置项名称。
 	ConfigName *string `json:"config_name,omitempty"`
 
-	// 配置项值
+	// 配置项值。
 	ConfigValue *string `json:"config_value,omitempty"`
 
-	// 是否重写
+	// 是否重写。
 	ShouldOverride *bool `json:"should_override,omitempty"`
 }
 

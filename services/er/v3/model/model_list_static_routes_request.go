@@ -27,7 +27,7 @@ type ListStaticRoutesRequest struct {
 	// 连接ID
 	AttachmentId *[]string `json:"attachment_id,omitempty"`
 
-	// 连接资源类型:vpc|vpn|vgw|peering|can|gdgw
+	// 连接资源类型:vpc|vpn|vgw|peering
 	ResourceType *[]ListStaticRoutesRequestResourceType `json:"resource_type,omitempty"`
 
 	// 按关键字排序，默认按照id排序，可选值:id|name|state

@@ -9,7 +9,7 @@ import (
 // Response Object
 type DeleteAppResponse struct {
 
-	// 返回ok的结果，表示删除成功
+	// 返回ok的结果，表示删除成功。
 	Ok             *string `json:"ok,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

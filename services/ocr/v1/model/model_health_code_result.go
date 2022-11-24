@@ -33,8 +33,11 @@ type HealthCodeResult struct {
 	// 健康码或行程卡颜色。 健康码颜色可选值包括：  - \"green\"，绿码 - \"yellow\"，黄码 - \"red\"，红码 - \"gray\"，灰码  行程卡颜色可选值包括：  - \"green\"，绿码 - \"yellow\"，黄码 - \"red\"，红码
 	Color string `json:"color"`
 
-	// 疫苗接种情况
+	// 疫苗接种情况，可选值包括：  - 未接种 - 接种中 - 无接种记录 - 已接种1针 - 已接种2针 - 已接种3针 - 已完成新冠疫苗接种
 	VaccinationStatus string `json:"vaccination_status"`
+
+	// 核酸检测间隔时长，可选值包括： - 24小时内 - 48小时内 - 72小时内 - 5天内 - 7天内 - 7天外
+	TestInterval string `json:"test_interval"`
 
 	// 核酸检测结果，可选值包括： - \"positive\",即阳性 - \"negative\",即阴性 - \"unknown\",未知
 	PcrTestResult string `json:"pcr_test_result"`

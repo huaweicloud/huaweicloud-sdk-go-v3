@@ -19,6 +19,28 @@ func CdnClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+// BatchCopyDomain 批量域名复制
+//
+// 批量域名复制接口
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *CdnClient) BatchCopyDomain(request *model.BatchCopyDomainRequest) (*model.BatchCopyDomainResponse, error) {
+	requestDef := GenReqDefForBatchCopyDomain()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCopyDomainResponse), nil
+	}
+}
+
+// BatchCopyDomainInvoker 批量域名复制
+func (c *CdnClient) BatchCopyDomainInvoker(request *model.BatchCopyDomainRequest) *BatchCopyDomainInvoker {
+	requestDef := GenReqDefForBatchCopyDomain()
+	return &BatchCopyDomainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DownloadRegionCarrierExcel 下载区域运营商指标数据表格文件
 //
 // - 下载区域运营商指标数据表格文件。

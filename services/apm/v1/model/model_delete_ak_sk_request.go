@@ -9,7 +9,7 @@ import (
 // Request Object
 type DeleteAkSkRequest struct {
 
-	// 需要删除的ak信息
+	// 需要删除的ak信息。
 	Ak string `json:"ak"`
 }
 

@@ -701,6 +701,30 @@ func (i *ShowConfigurationInvoker) Invoke() (*model.ShowConfigurationResponse, e
 	}
 }
 
+type ShowDnsNameInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDnsNameInvoker) Invoke() (*model.ShowDnsNameResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDnsNameResponse), nil
+	}
+}
+
+type ShowDomainNameInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDomainNameInvoker) Invoke() (*model.ShowDomainNameResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDomainNameResponse), nil
+	}
+}
+
 type ShowDrReplicaStatusInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -746,6 +770,18 @@ func (i *ShowQuotasInvoker) Invoke() (*model.ShowQuotasResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowQuotasResponse), nil
+	}
+}
+
+type ShowReplicationStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowReplicationStatusInvoker) Invoke() (*model.ShowReplicationStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowReplicationStatusResponse), nil
 	}
 }
 

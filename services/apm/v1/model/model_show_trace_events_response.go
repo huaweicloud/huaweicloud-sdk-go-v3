@@ -9,7 +9,7 @@ import (
 // Response Object
 type ShowTraceEventsResponse struct {
 
-	// span event信息列表
+	// span event信息列表。
 	SpanEventList  *[]SpanEventInfo `json:"span_event_list,omitempty"`
 	HttpStatusCode int              `json:"-"`
 }

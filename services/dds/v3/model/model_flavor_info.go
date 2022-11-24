@@ -12,7 +12,7 @@ type FlavorInfo struct {
 	// 引擎名称。
 	EngineName string `json:"engine_name"`
 
-	// 节点类型。文档数据库包含以下几种节点类型： - mongos - shard - config - replica - single
+	// 节点类型。文档数据库包含以下几种节点类型： - mongos - shard - config - replica - single - readonly
 	Type string `json:"type"`
 
 	// CPU核数。

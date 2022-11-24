@@ -9,7 +9,7 @@ import (
 // Response Object
 type ShowClobDetailResponse struct {
 
-	// clob详情
+	// clob详情。
 	ClobString     *string `json:"clob_string,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

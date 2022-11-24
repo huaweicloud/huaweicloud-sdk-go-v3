@@ -13,19 +13,19 @@ import (
 type ShowRawTableResponse struct {
 	RowList *[]FrontRow `json:"row_list,omitempty"`
 
-	// 最近一笔数据的时间
+	// 最近一笔数据的时间。
 	LatestDataTime *string `json:"latest_data_Time,omitempty"`
 
-	// 表格的方向，H：默认，表头横向，V：表头纵向
+	// 表格的方向，H：默认，表头横向，V：表头纵向。
 	TableDirection *ShowRawTableResponseTableDirection `json:"table_direction,omitempty"`
 
-	// 上次请求id
+	// 上次请求id。
 	ResultId *string `json:"result_id,omitempty"`
 
-	// 实际开始的时间，主要用于下一次调用，特别是分页调用的时候传的参数
+	// 实际开始的时间，主要用于下一次调用，特别是分页调用的时候传的参数。
 	RealStartTime *int64 `json:"real_start_time,omitempty"`
 
-	// 实际结束的时间
+	// 实际结束的时间。
 	RealEndTime    *int64 `json:"real_end_time,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

@@ -329,6 +329,54 @@ func (i *UpdateRouteTableInvoker) Invoke() (*model.UpdateRouteTableResponse, err
 	}
 }
 
+type CreateResourceTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateResourceTagInvoker) Invoke() (*model.CreateResourceTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateResourceTagResponse), nil
+	}
+}
+
+type DeleteResourceTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteResourceTagInvoker) Invoke() (*model.DeleteResourceTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteResourceTagResponse), nil
+	}
+}
+
+type ListProjectTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListProjectTagsInvoker) Invoke() (*model.ListProjectTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListProjectTagsResponse), nil
+	}
+}
+
+type ShowResourceTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowResourceTagInvoker) Invoke() (*model.ShowResourceTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowResourceTagResponse), nil
+	}
+}
+
 type CreateVpcAttachmentInvoker struct {
 	*invoker.BaseInvoker
 }

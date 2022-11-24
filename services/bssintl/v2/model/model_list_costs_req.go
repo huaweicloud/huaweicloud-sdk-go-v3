@@ -12,7 +12,7 @@ type ListCostsReq struct {
 	// 查询维度，具体请参见表 GroupBy。
 	Groupby []GroupBy `json:"groupby"`
 
-	// 成本类型。UNBLENDED_COST：原始成本AMORTIZED_COST：摊销成本
+	// 成本类型。ORIGINAL_COST：原始成本AMORTIZED_COST：摊销成本
 	CostType string `json:"cost_type"`
 
 	// 展示的金额类型。PAYMENT_AMOUNT：应付NET_AMOUNT：实付

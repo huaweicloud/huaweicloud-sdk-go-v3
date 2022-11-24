@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// 用户容器镜像。
 type CustomImage struct {
 
 	// 是否启用

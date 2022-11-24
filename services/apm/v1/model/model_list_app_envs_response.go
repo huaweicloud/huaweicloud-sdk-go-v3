@@ -9,7 +9,7 @@ import (
 // Response Object
 type ListAppEnvsResponse struct {
 
-	// 环境信息列表
+	// 环境信息列表。
 	Envs           *[]EnvNodeModel `json:"envs,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }

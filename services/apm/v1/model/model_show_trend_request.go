@@ -9,7 +9,7 @@ import (
 // Request Object
 type ShowTrendRequest struct {
 
-	// 应用id
+	// 应用id。
 	XBusinessId int64 `json:"x-business-id"`
 
 	Body *TrendParam `json:"body,omitempty"`

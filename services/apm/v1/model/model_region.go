@@ -6,22 +6,22 @@ import (
 	"strings"
 )
 
-// region信息
+// region信息。
 type Region struct {
 
-	// 区域id
+	// 区域id。
 	RegionId *string `json:"region_id,omitempty"`
 
-	// 区域名称
+	// 区域名称。
 	RegionName *string `json:"region_name,omitempty"`
 
-	// 区域
+	// 区域。
 	Region *string `json:"region,omitempty"`
 
-	// 企业项目id
+	// 企业项目id。
 	ProjectId *string `json:"project_id,omitempty"`
 
-	// 区域状态
+	// 区域状态。
 	Status *string `json:"status,omitempty"`
 }
 

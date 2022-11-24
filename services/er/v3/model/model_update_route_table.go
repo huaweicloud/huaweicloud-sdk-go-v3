@@ -14,8 +14,6 @@ type UpdateRouteTable struct {
 
 	// 路由器表描述信息
 	Description *string `json:"description,omitempty"`
-
-	BgpOptions *BgpOptions `json:"bgp_options,omitempty"`
 }
 
 func (o UpdateRouteTable) String() string {

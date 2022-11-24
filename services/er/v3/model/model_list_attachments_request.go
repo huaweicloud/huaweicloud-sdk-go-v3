@@ -24,7 +24,7 @@ type ListAttachmentsRequest struct {
 	// 连接状态:pending|available|modifying|deleting|deleted|failed|pending_acceptance|rejected|initiating_request
 	State *[]ListAttachmentsRequestState `json:"state,omitempty"`
 
-	// 连接资源类型:vpc|vpn|vgw|peering|can|gdgw
+	// 连接资源类型:vpc|vpn|vgw|peering
 	ResourceType *[]ListAttachmentsRequestResourceType `json:"resource_type,omitempty"`
 
 	// 连接对应的资源ID列表

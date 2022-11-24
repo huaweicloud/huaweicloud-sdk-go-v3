@@ -6,14 +6,14 @@ import (
 	"strings"
 )
 
-// 获取clob数据的请求参数
+// 获取clob数据的请求参数。
 type GetClobDetailParam struct {
 
-	// 环境id
-	EnvId *int64 `json:"env_id,omitempty"`
+	// 环境id。
+	EnvId int64 `json:"env_id"`
 
-	// clobId
-	ClobId *string `json:"clob_id,omitempty"`
+	// clobId。
+	ClobId string `json:"clob_id"`
 }
 
 func (o GetClobDetailParam) String() string {

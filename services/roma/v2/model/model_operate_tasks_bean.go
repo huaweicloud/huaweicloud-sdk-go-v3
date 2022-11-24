@@ -12,7 +12,7 @@ import (
 type OperateTasksBean struct {
 
 	// 操作类型 - start (启动) - stop (停止)
-	ActionId *OperateTasksBeanActionId `json:"action_id,omitempty"`
+	ActionId OperateTasksBeanActionId `json:"action_id"`
 
 	// 需要启动或者停止的任务ID列表
 	List *[]TaskBean `json:"list,omitempty"`

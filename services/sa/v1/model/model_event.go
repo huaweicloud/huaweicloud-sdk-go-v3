@@ -1,6 +1,7 @@
 package model
 
 import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
@@ -17,16 +18,16 @@ type Event struct {
 	DataSource *DataSource `json:"data_source"`
 
 	// 首次发现时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区。
-	FirstObservedTime string `json:"first_observed_time"`
+	FirstObservedTime *sdktime.SdkTime `json:"first_observed_time"`
 
 	// 最新发现时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区。
-	LastObservedTime *string `json:"last_observed_time,omitempty"`
+	LastObservedTime *sdktime.SdkTime `json:"last_observed_time,omitempty"`
 
 	// 记录时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区。
-	CreateTime string `json:"create_time"`
+	CreateTime *sdktime.SdkTime `json:"create_time"`
 
 	// 数据接收时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区。  是指事件数据被SA侧接收的时间，由SA接收时填写，产品上报数据时不用填写。
-	ArriveTime *string `json:"arrive_time,omitempty"`
+	ArriveTime *sdktime.SdkTime `json:"arrive_time,omitempty"`
 
 	// 事件唯一标识，UUID格式。
 	EventId string `json:"event_id"`

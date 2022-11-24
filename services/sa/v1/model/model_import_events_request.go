@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type ImportEventsRequest struct {
+
+	// 语言。
 	XLanguage *string `json:"X-Language,omitempty"`
 
 	Body *Events `json:"body,omitempty"`

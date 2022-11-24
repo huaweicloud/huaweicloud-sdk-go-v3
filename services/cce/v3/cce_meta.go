@@ -269,6 +269,10 @@ func GenReqDefForDeleteCluster() *def.HttpRequestDef {
 		WithJsonTag("delete_sfs").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DeleteSfs30").
+		WithJsonTag("delete_sfs30").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Tobedeleted").
 		WithJsonTag("tobedeleted").
 		WithLocationType(def.Query))

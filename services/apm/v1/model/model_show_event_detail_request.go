@@ -9,16 +9,16 @@ import (
 // Request Object
 type ShowEventDetailRequest struct {
 
-	// trace id
+	// trace id。
 	TraceId string `json:"trace_id"`
 
-	// span id
+	// span id。
 	SpanId string `json:"span_id"`
 
-	// event id
+	// event id。
 	EventId string `json:"event_id"`
 
-	// 环境id
+	// 环境id。
 	EnvId int64 `json:"env_id"`
 }
 

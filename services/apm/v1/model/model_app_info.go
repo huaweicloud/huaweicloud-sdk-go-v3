@@ -6,28 +6,28 @@ import (
 	"strings"
 )
 
-// 应用信息
+// 应用信息。
 type AppInfo struct {
 
-	// 环境名称
+	// 环境名称。
 	EnvName *string `json:"env_name,omitempty"`
 
-	// 环境id
+	// 环境id。
 	EnvId *int64 `json:"env_id,omitempty"`
 
-	// 应用空名称
+	// 组件名称。
 	AppName *string `json:"app_name,omitempty"`
 
-	// 应用id
+	// 组件id。
 	AppId *int64 `json:"app_id,omitempty"`
 
-	// 在线探针数
+	// 在线探针数。
 	OnlineCount *int32 `json:"online_count,omitempty"`
 
-	// 手动停止探针数
+	// 手动停止探针数。
 	DisableCount *int32 `json:"disable_count,omitempty"`
 
-	// 离线探针数
+	// 离线探针数。
 	OfflineCount *int32 `json:"offline_count,omitempty"`
 }
 

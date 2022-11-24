@@ -9,16 +9,16 @@ import (
 // Response Object
 type ShowMonitorItemViewConfigResponse struct {
 
-	// 标题
+	// 标题。
 	Title *string `json:"title,omitempty"`
 
-	// 采集器名称
+	// 采集器名称。
 	CollectorName *string `json:"collector_name,omitempty"`
 
-	// 视图的列表，内部每个List代表的是一行图表
+	// 视图的列表，内部每个List代表的是一行图表。
 	ViewRowList *[]ViewRow `json:"view_row_list,omitempty"`
 
-	// 类型
+	// 类型。
 	Style          *string `json:"style,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

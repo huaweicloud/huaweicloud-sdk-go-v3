@@ -65,7 +65,7 @@ func (c *ErClient) DisassociateRouteTableInvoker(request *model.DisassociateRout
 
 // ListAssociations 查询路由关联列表
 //
-// 支持分页查询, 支持过滤查询：state, resource_type, attachment_id。支持单字段排序，排序字段有[id,created_at,updated_at]，不支持多字段排序。
+// 查询路由关联列表。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -87,10 +87,7 @@ func (c *ErClient) ListAssociationsInvoker(request *model.ListAssociationsReques
 
 // ListAttachments 查询连接列表
 //
-// 查询企业路由器实例下的连接列表：
-//  1，支持过滤查询，过滤条件有state，resource_type，resource_id过滤条件可以重复和组合
-// 2，支持分页查询，limit和marker组合实现分页查询
-// 3，支持单字段排序，排序字段有[id,name,description,created_at,updated_at]，不支持多字段排序。
+// 查询企业路由器实例下的连接列表。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -222,8 +219,7 @@ func (c *ErClient) CreateEnterpriseRouterInvoker(request *model.CreateEnterprise
 
 // DeleteEnterpriseRouter 删除企业路由器
 //
-// 1. 只能删除企业路由器实例和其创建的默认路由表，如果存在其他路由表和连接，那么需要先删除其他路由表、连接、关联、传播和路由条目等。
-// 2. 企业路由器实例状态为available，deleting和failed的时候才能删除。
+// 删除企业路由器。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -243,9 +239,9 @@ func (c *ErClient) DeleteEnterpriseRouterInvoker(request *model.DeleteEnterprise
 	return &DeleteEnterpriseRouterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListEnterpriseRouters 查询企业路由器实例列表
+// ListEnterpriseRouters 查询企业路由器列表
 //
-// 分页查询使用的参数为marker、limit。marker和limit一起使用时才会生效，单独使用无效。支持单字段排序，排序字段有[id,name,description,created_at,updated_at]，不支持多字段排序。
+// 查询企业路由器列表
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -259,7 +255,7 @@ func (c *ErClient) ListEnterpriseRouters(request *model.ListEnterpriseRoutersReq
 	}
 }
 
-// ListEnterpriseRoutersInvoker 查询企业路由器实例列表
+// ListEnterpriseRoutersInvoker 查询企业路由器列表
 func (c *ErClient) ListEnterpriseRoutersInvoker(request *model.ListEnterpriseRoutersRequest) *ListEnterpriseRoutersInvoker {
 	requestDef := GenReqDefForListEnterpriseRouters()
 	return &ListEnterpriseRoutersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -289,7 +285,7 @@ func (c *ErClient) ShowEnterpriseRouterInvoker(request *model.ShowEnterpriseRout
 
 // UpdateEnterpriseRouter 更新企业路由器
 //
-// 除了name和description，其它信息只有在企业路由器实例状态为available的时候才能更新。
+// 更新企业路由器基本信息。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -355,7 +351,7 @@ func (c *ErClient) EnablePropagationInvoker(request *model.EnablePropagationRequ
 
 // ListPropagations 查询路由传播列表
 //
-// 支持分页查询, 支持过滤查询：state, resource_type, attachment_id。支持单字段排序，排序字段有[id,created_at,updated_at]，不支持多字段排序。
+// 查询路由传播列表。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -443,7 +439,7 @@ func (c *ErClient) ListEffectiveRoutesInvoker(request *model.ListEffectiveRoutes
 
 // ListStaticRoutes 查询静态路由列表
 //
-// 支持分页查询，支持过滤查询：destination，attachment_id, resource_type, type.支持单字段排序，排序字段有[id,destination,created_at,updated_at]，不支持多字段排序。
+// 查询静态路由列表。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -463,9 +459,9 @@ func (c *ErClient) ListStaticRoutesInvoker(request *model.ListStaticRoutesReques
 	return &ListStaticRoutesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowStaticRoute 查询路由详情
+// ShowStaticRoute 查询静态路由详情
 //
-// 查询路由详情
+// 查询静态路由详情
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -479,15 +475,15 @@ func (c *ErClient) ShowStaticRoute(request *model.ShowStaticRouteRequest) (*mode
 	}
 }
 
-// ShowStaticRouteInvoker 查询路由详情
+// ShowStaticRouteInvoker 查询静态路由详情
 func (c *ErClient) ShowStaticRouteInvoker(request *model.ShowStaticRouteRequest) *ShowStaticRouteInvoker {
 	requestDef := GenReqDefForShowStaticRoute()
 	return &ShowStaticRouteInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateStaticRoute 修改路由
+// UpdateStaticRoute 更新静态路由
 //
-// 修改静态路由
+// 更新静态路由
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -501,7 +497,7 @@ func (c *ErClient) UpdateStaticRoute(request *model.UpdateStaticRouteRequest) (*
 	}
 }
 
-// UpdateStaticRouteInvoker 修改路由
+// UpdateStaticRouteInvoker 更新静态路由
 func (c *ErClient) UpdateStaticRouteInvoker(request *model.UpdateStaticRouteRequest) *UpdateStaticRouteInvoker {
 	requestDef := GenReqDefForUpdateStaticRoute()
 	return &UpdateStaticRouteInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -553,7 +549,7 @@ func (c *ErClient) DeleteRouteTableInvoker(request *model.DeleteRouteTableReques
 
 // ListRouteTables 查询路由表列表
 //
-// 支持分页查询, 支持过滤查询：state, is_default_propagation_route_table, is_default_association_route_table。支持单字段排序，排序字段有[id,name,description,created_at,updated_at]，不支持多字段排序。
+// 查询路由表列表。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -617,6 +613,94 @@ func (c *ErClient) UpdateRouteTableInvoker(request *model.UpdateRouteTableReques
 	return &UpdateRouteTableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateResourceTag 创建资源标签
+//
+// 为特定类型的资源创建标签。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ErClient) CreateResourceTag(request *model.CreateResourceTagRequest) (*model.CreateResourceTagResponse, error) {
+	requestDef := GenReqDefForCreateResourceTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateResourceTagResponse), nil
+	}
+}
+
+// CreateResourceTagInvoker 创建资源标签
+func (c *ErClient) CreateResourceTagInvoker(request *model.CreateResourceTagRequest) *CreateResourceTagInvoker {
+	requestDef := GenReqDefForCreateResourceTag()
+	return &CreateResourceTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteResourceTag 删除资源标签
+//
+// 删除特定类型资源的标签。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ErClient) DeleteResourceTag(request *model.DeleteResourceTagRequest) (*model.DeleteResourceTagResponse, error) {
+	requestDef := GenReqDefForDeleteResourceTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteResourceTagResponse), nil
+	}
+}
+
+// DeleteResourceTagInvoker 删除资源标签
+func (c *ErClient) DeleteResourceTagInvoker(request *model.DeleteResourceTagRequest) *DeleteResourceTagInvoker {
+	requestDef := GenReqDefForDeleteResourceTag()
+	return &DeleteResourceTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProjectTags 查询项目标签
+//
+// 查询特定类型资源的标签集合。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ErClient) ListProjectTags(request *model.ListProjectTagsRequest) (*model.ListProjectTagsResponse, error) {
+	requestDef := GenReqDefForListProjectTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListProjectTagsResponse), nil
+	}
+}
+
+// ListProjectTagsInvoker 查询项目标签
+func (c *ErClient) ListProjectTagsInvoker(request *model.ListProjectTagsRequest) *ListProjectTagsInvoker {
+	requestDef := GenReqDefForListProjectTags()
+	return &ListProjectTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowResourceTag 查询资源标签
+//
+// 查询特定类型资源的标签信息。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *ErClient) ShowResourceTag(request *model.ShowResourceTagRequest) (*model.ShowResourceTagResponse, error) {
+	requestDef := GenReqDefForShowResourceTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowResourceTagResponse), nil
+	}
+}
+
+// ShowResourceTagInvoker 查询资源标签
+func (c *ErClient) ShowResourceTagInvoker(request *model.ShowResourceTagRequest) *ShowResourceTagInvoker {
+	requestDef := GenReqDefForShowResourceTag()
+	return &ShowResourceTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateVpcAttachment 创建VPC连接
 //
 // 给ER实例创建VPC连接。
@@ -641,7 +725,7 @@ func (c *ErClient) CreateVpcAttachmentInvoker(request *model.CreateVpcAttachment
 
 // DeleteVpcAttachment 删除VPC连接
 //
-// VPC连接状态为available，deleting和failed的时候才能删除。
+// 删除VPC连接。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -663,10 +747,7 @@ func (c *ErClient) DeleteVpcAttachmentInvoker(request *model.DeleteVpcAttachment
 
 // ListVpcAttachments 查询VPC连接列表
 //
-// 查询企业路由器实例下的VPC连接列表：
-// 1，支持过滤查询，过滤条件有id，state，enterprise_project_id，vpc_id，过滤条件可以重复和组合
-// 2，支持分页查询，limit和marker组合实现分页查询
-// 3，支持单字段排序功能，排序字段有[id,name,description,created_at,updated_at]，不支持多字段排序。
+// 查询企业路由器实例下的VPC连接列表。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.

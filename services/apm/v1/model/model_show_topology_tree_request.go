@@ -9,19 +9,19 @@ import (
 // Request Object
 type ShowTopologyTreeRequest struct {
 
-	// 区域id
+	// 区域id。
 	RegionId *string `json:"region_id,omitempty"`
 
-	// 应用id
-	BusinessId *int64 `json:"business_id,omitempty"`
+	// 应用id。
+	BusinessId int64 `json:"business_id"`
 
-	// 环境标签id
+	// 环境标签id。
 	EnvTagId *int64 `json:"env_tag_id,omitempty"`
 
-	// 环境关键字
+	// 环境关键字。
 	EnvKeyword *string `json:"env_keyword,omitempty"`
 
-	// 应用id
+	// 应用id。
 	XBusinessId int64 `json:"x-business-id"`
 }
 

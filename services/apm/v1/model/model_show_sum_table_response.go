@@ -12,28 +12,28 @@ import (
 // Response Object
 type ShowSumTableResponse struct {
 
-	// 结果的ID信息，分页查询的时候带过来
+	// 结果的ID信息，分页查询的时候带过来。
 	ResultId *string `json:"result_id,omitempty"`
 
-	// 数据行列表
+	// 数据行列表。
 	RowList *[]FrontRow `json:"row_list,omitempty"`
 
-	// 最近一笔数据的时间
+	// 最近一笔数据的时间。
 	LatestDataTime *int64 `json:"latest_data_Time,omitempty"`
 
-	// 表格的方向，H：默认，表头横向，V：表头纵向
+	// 表格的方向，H：默认，表头横向，V：表头纵向。
 	TableDirection *ShowSumTableResponseTableDirection `json:"table_direction,omitempty"`
 
-	// 实际开始的时间
+	// 实际开始的时间。
 	RealStartTime *int64 `json:"real_start_time,omitempty"`
 
-	// 实际结束的时间
+	// 实际结束的时间。
 	RealEndTime *int64 `json:"real_end_time,omitempty"`
 
-	// 提示信息
+	// 提示信息。
 	NoticeMsg *string `json:"notice_msg,omitempty"`
 
-	// 总数
+	// 总数。
 	TotalCount     *int32 `json:"total_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

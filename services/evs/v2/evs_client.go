@@ -336,7 +336,7 @@ func (c *EvsClient) DeleteVolumeInvoker(request *model.DeleteVolumeRequest) *Del
 	return &DeleteVolumeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListSnapshots 查询云硬盘快照详细列表信息
+// ListSnapshots 查询云硬盘快照详情列表
 //
 // 查询云硬盘快照详细列表信息。
 //
@@ -352,7 +352,7 @@ func (c *EvsClient) ListSnapshots(request *model.ListSnapshotsRequest) (*model.L
 	}
 }
 
-// ListSnapshotsInvoker 查询云硬盘快照详细列表信息
+// ListSnapshotsInvoker 查询云硬盘快照详情列表
 func (c *EvsClient) ListSnapshotsInvoker(request *model.ListSnapshotsRequest) *ListSnapshotsInvoker {
 	requestDef := GenReqDefForListSnapshots()
 	return &ListSnapshotsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -496,7 +496,7 @@ func (c *EvsClient) ShowJobInvoker(request *model.ShowJobRequest) *ShowJobInvoke
 	return &ShowJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowSnapshot 查询单个云硬盘快照详细信息
+// ShowSnapshot 查询单个云硬盘快照详情
 //
 // 查询单个云硬盘快照信息。支持企业项目授权功能。
 //
@@ -512,7 +512,7 @@ func (c *EvsClient) ShowSnapshot(request *model.ShowSnapshotRequest) (*model.Sho
 	}
 }
 
-// ShowSnapshotInvoker 查询单个云硬盘快照详细信息
+// ShowSnapshotInvoker 查询单个云硬盘快照详情
 func (c *EvsClient) ShowSnapshotInvoker(request *model.ShowSnapshotRequest) *ShowSnapshotInvoker {
 	requestDef := GenReqDefForShowSnapshot()
 	return &ShowSnapshotInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

@@ -41,6 +41,31 @@ func (c *WafClient) ApplyCertificateToHostInvoker(request *model.ApplyCertificat
 	return &ApplyCertificateToHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ChangePrepaidCloudWaf 变更包周期云模式waf规格
+//
+// 变更包周期云模式waf规格。注：
+//  - 1.变更某产品规格的前提是必须已购买该产品
+//  - 2.waf版本只支持升配，不支持降配；扩展包数量可以增加或者减少，但不支持数量减少为0
+//  - 3.不支持同时升降配，如增加域名扩展包数量，同时减少规则扩展包数量
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *WafClient) ChangePrepaidCloudWaf(request *model.ChangePrepaidCloudWafRequest) (*model.ChangePrepaidCloudWafResponse, error) {
+	requestDef := GenReqDefForChangePrepaidCloudWaf()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangePrepaidCloudWafResponse), nil
+	}
+}
+
+// ChangePrepaidCloudWafInvoker 变更包周期云模式waf规格
+func (c *WafClient) ChangePrepaidCloudWafInvoker(request *model.ChangePrepaidCloudWafRequest) *ChangePrepaidCloudWafInvoker {
+	requestDef := GenReqDefForChangePrepaidCloudWaf()
+	return &ChangePrepaidCloudWafInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateAntiTamperRule 创建防篡改规则
 //
 // 创建防篡改规则
@@ -153,7 +178,7 @@ func (c *WafClient) CreateIgnoreRuleInvoker(request *model.CreateIgnoreRuleReque
 
 // CreateInstance 创建WAF独享引擎实例
 //
-// 创建WAF独享引擎实例
+// 创建WAF独享引擎实例。独享模式只在部分局点支持，包括：华北-北京四、华东-上海一、华南-广州、华南-深圳  、中国-香港、亚太-曼谷、 亚太-新加坡。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -237,6 +262,28 @@ func (c *WafClient) CreatePremiumHost(request *model.CreatePremiumHostRequest) (
 func (c *WafClient) CreatePremiumHostInvoker(request *model.CreatePremiumHostRequest) *CreatePremiumHostInvoker {
 	requestDef := GenReqDefForCreatePremiumHost()
 	return &CreatePremiumHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreatePrepaidCloudWaf 购买包周期云模式waf
+//
+// 购买包周期云模式waf
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *WafClient) CreatePrepaidCloudWaf(request *model.CreatePrepaidCloudWafRequest) (*model.CreatePrepaidCloudWafResponse, error) {
+	requestDef := GenReqDefForCreatePrepaidCloudWaf()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePrepaidCloudWafResponse), nil
+	}
+}
+
+// CreatePrepaidCloudWafInvoker 购买包周期云模式waf
+func (c *WafClient) CreatePrepaidCloudWafInvoker(request *model.CreatePrepaidCloudWafRequest) *CreatePrepaidCloudWafInvoker {
+	requestDef := GenReqDefForCreatePrepaidCloudWaf()
+	return &CreatePrepaidCloudWafInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreatePrivacyRule 创建隐私屏蔽防护规则
@@ -417,7 +464,7 @@ func (c *WafClient) DeleteIgnoreRuleInvoker(request *model.DeleteIgnoreRuleReque
 
 // DeleteInstance 删除WAF独享引擎信息
 //
-// 删除WAF独享引擎信息
+// 删除WAF独享引擎信息。独享模式只在部分局点支持，包括：华北-北京四、华东-上海一、华南-广州、华南-深圳  、中国-香港、亚太-曼谷、 亚太-新加坡。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -769,7 +816,7 @@ func (c *WafClient) ListIgnoreRuleInvoker(request *model.ListIgnoreRuleRequest) 
 
 // ListInstance 查询WAF独享引擎列表
 //
-// 查询WAF独享引擎列表
+// 查询WAF独享引擎列表。独享模式只在部分局点支持，包括：华北-北京四、华东-上海一、华南-广州、华南-深圳  、中国-香港、亚太-曼谷、 亚太-新加坡。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1077,7 +1124,7 @@ func (c *WafClient) MigrateCompositeHostsInvoker(request *model.MigrateComposite
 
 // RenameInstance 重命名WAF独享引擎
 //
-// 重命名WAF独享引擎
+// 重命名WAF独享引擎。独享模式只在部分局点支持，包括：华北-北京四、华东-上海一、华南-广州、华南-深圳  、中国-香港、亚太-曼谷、 亚太-新加坡。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1209,7 +1256,7 @@ func (c *WafClient) ShowHostInvoker(request *model.ShowHostRequest) *ShowHostInv
 
 // ShowInstance 查询WAF独享引擎信息
 //
-// 查询WAF独享引擎信息
+// 查询WAF独享引擎信息。独享模式只在部分局点支持，包括：华北-北京四、华东-上海一、华南-广州、华南-深圳  、中国-香港、亚太-曼谷、 亚太-新加坡。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -1337,6 +1384,28 @@ func (c *WafClient) ShowSourceIp(request *model.ShowSourceIpRequest) (*model.Sho
 func (c *WafClient) ShowSourceIpInvoker(request *model.ShowSourceIpRequest) *ShowSourceIpInvoker {
 	requestDef := GenReqDefForShowSourceIp()
 	return &ShowSourceIpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSubscriptionInfo 查询租户订购信息
+//
+// 查询租户订购信息，包括云模式包周期、按需计费、独享模式
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *WafClient) ShowSubscriptionInfo(request *model.ShowSubscriptionInfoRequest) (*model.ShowSubscriptionInfoResponse, error) {
+	requestDef := GenReqDefForShowSubscriptionInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSubscriptionInfoResponse), nil
+	}
+}
+
+// ShowSubscriptionInfoInvoker 查询租户订购信息
+func (c *WafClient) ShowSubscriptionInfoInvoker(request *model.ShowSubscriptionInfoRequest) *ShowSubscriptionInfoInvoker {
+	requestDef := GenReqDefForShowSubscriptionInfo()
+	return &ShowSubscriptionInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateAlertNoticeConfig 更新告警通知配置

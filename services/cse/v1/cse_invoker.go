@@ -65,6 +65,18 @@ func (i *ListFlavorsInvoker) Invoke() (*model.ListFlavorsResponse, error) {
 	}
 }
 
+type RetryEngineInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RetryEngineInvoker) Invoke() (*model.RetryEngineResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RetryEngineResponse), nil
+	}
+}
+
 type ShowEngineInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -86,6 +98,18 @@ func (i *ShowEngineJobInvoker) Invoke() (*model.ShowEngineJobResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowEngineJobResponse), nil
+	}
+}
+
+type UpgradeEngineInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpgradeEngineInvoker) Invoke() (*model.UpgradeEngineResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpgradeEngineResponse), nil
 	}
 }
 

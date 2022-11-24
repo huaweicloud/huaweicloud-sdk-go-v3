@@ -41,28 +41,6 @@ func (c *FunctionGraphClient) AsyncInvokeFunctionInvoker(request *model.AsyncInv
 	return &AsyncInvokeFunctionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// AsyncInvokeReservedFunction 函数异步执行并返回预留实例ID
-//
-// 函数异步执行并返回预留实例ID用于场景指客户端请求执行比较费时任务，不需要同步等待执行完成返回结果，该方法提前返回任务执行对应的预留实例ID, 如果预留实例有异常，可以通过该实例ID把对应实例删除（该接口主要针对白名单用户）。
-//
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
-func (c *FunctionGraphClient) AsyncInvokeReservedFunction(request *model.AsyncInvokeReservedFunctionRequest) (*model.AsyncInvokeReservedFunctionResponse, error) {
-	requestDef := GenReqDefForAsyncInvokeReservedFunction()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.AsyncInvokeReservedFunctionResponse), nil
-	}
-}
-
-// AsyncInvokeReservedFunctionInvoker 函数异步执行并返回预留实例ID
-func (c *FunctionGraphClient) AsyncInvokeReservedFunctionInvoker(request *model.AsyncInvokeReservedFunctionRequest) *AsyncInvokeReservedFunctionInvoker {
-	requestDef := GenReqDefForAsyncInvokeReservedFunction()
-	return &AsyncInvokeReservedFunctionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // BatchDeleteFunctionTriggers 删除指定函数的所有触发器
 //
 // 删除指定函数所有触发器设置。
@@ -153,6 +131,28 @@ func (c *FunctionGraphClient) CreateDependency(request *model.CreateDependencyRe
 func (c *FunctionGraphClient) CreateDependencyInvoker(request *model.CreateDependencyRequest) *CreateDependencyInvoker {
 	requestDef := GenReqDefForCreateDependency()
 	return &CreateDependencyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateDependencyVersion 创建依赖包版本
+//
+// 创建依赖包版本
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *FunctionGraphClient) CreateDependencyVersion(request *model.CreateDependencyVersionRequest) (*model.CreateDependencyVersionResponse, error) {
+	requestDef := GenReqDefForCreateDependencyVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDependencyVersionResponse), nil
+	}
+}
+
+// CreateDependencyVersionInvoker 创建依赖包版本
+func (c *FunctionGraphClient) CreateDependencyVersionInvoker(request *model.CreateDependencyVersionRequest) *CreateDependencyVersionInvoker {
+	requestDef := GenReqDefForCreateDependencyVersion()
+	return &CreateDependencyVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateEvent 创建测试事件
@@ -311,6 +311,28 @@ func (c *FunctionGraphClient) DeleteDependency(request *model.DeleteDependencyRe
 func (c *FunctionGraphClient) DeleteDependencyInvoker(request *model.DeleteDependencyRequest) *DeleteDependencyInvoker {
 	requestDef := GenReqDefForDeleteDependency()
 	return &DeleteDependencyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDependencyVersion 删除依赖包版本
+//
+// 删除依赖包版本
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *FunctionGraphClient) DeleteDependencyVersion(request *model.DeleteDependencyVersionRequest) (*model.DeleteDependencyVersionResponse, error) {
+	requestDef := GenReqDefForDeleteDependencyVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDependencyVersionResponse), nil
+	}
+}
+
+// DeleteDependencyVersionInvoker 删除依赖包版本
+func (c *FunctionGraphClient) DeleteDependencyVersionInvoker(request *model.DeleteDependencyVersionRequest) *DeleteDependencyVersionInvoker {
+	requestDef := GenReqDefForDeleteDependencyVersion()
+	return &DeleteDependencyVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteEvent 删除指定测试事件
@@ -558,6 +580,28 @@ func (c *FunctionGraphClient) ListDependenciesInvoker(request *model.ListDepende
 	return &ListDependenciesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListDependencyVersion 获取依赖包版本列表
+//
+// 获取依赖包版本列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *FunctionGraphClient) ListDependencyVersion(request *model.ListDependencyVersionRequest) (*model.ListDependencyVersionResponse, error) {
+	requestDef := GenReqDefForListDependencyVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDependencyVersionResponse), nil
+	}
+}
+
+// ListDependencyVersionInvoker 获取依赖包版本列表
+func (c *FunctionGraphClient) ListDependencyVersionInvoker(request *model.ListDependencyVersionRequest) *ListDependencyVersionInvoker {
+	requestDef := GenReqDefForListDependencyVersion()
+	return &ListDependencyVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListEvents 获取指定函数的测试事件列表
 //
 // 获取指定函数的测试事件列表
@@ -580,6 +624,30 @@ func (c *FunctionGraphClient) ListEventsInvoker(request *model.ListEventsRequest
 	return &ListEventsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListFunctionAsMetric 获取按指定指标排序的函数列表
+//
+// 按指定指标排序的函数列表。
+//
+// 默认统计按错误次数指标统计最近一天失败次数最多的前10个函数
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *FunctionGraphClient) ListFunctionAsMetric(request *model.ListFunctionAsMetricRequest) (*model.ListFunctionAsMetricResponse, error) {
+	requestDef := GenReqDefForListFunctionAsMetric()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFunctionAsMetricResponse), nil
+	}
+}
+
+// ListFunctionAsMetricInvoker 获取按指定指标排序的函数列表
+func (c *FunctionGraphClient) ListFunctionAsMetricInvoker(request *model.ListFunctionAsMetricRequest) *ListFunctionAsMetricInvoker {
+	requestDef := GenReqDefForListFunctionAsMetric()
+	return &ListFunctionAsMetricInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListFunctionAsyncInvokeConfig 获取函数异步配置列表
 //
 // 获取指定函数所有版本的异步配置列表。。
@@ -600,6 +668,28 @@ func (c *FunctionGraphClient) ListFunctionAsyncInvokeConfig(request *model.ListF
 func (c *FunctionGraphClient) ListFunctionAsyncInvokeConfigInvoker(request *model.ListFunctionAsyncInvokeConfigRequest) *ListFunctionAsyncInvokeConfigInvoker {
 	requestDef := GenReqDefForListFunctionAsyncInvokeConfig()
 	return &ListFunctionAsyncInvokeConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListFunctionReservedInstances 获取函数预留实例数量
+//
+// 获取函数预留实例数量。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *FunctionGraphClient) ListFunctionReservedInstances(request *model.ListFunctionReservedInstancesRequest) (*model.ListFunctionReservedInstancesResponse, error) {
+	requestDef := GenReqDefForListFunctionReservedInstances()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFunctionReservedInstancesResponse), nil
+	}
+}
+
+// ListFunctionReservedInstancesInvoker 获取函数预留实例数量
+func (c *FunctionGraphClient) ListFunctionReservedInstancesInvoker(request *model.ListFunctionReservedInstancesRequest) *ListFunctionReservedInstancesInvoker {
+	requestDef := GenReqDefForListFunctionReservedInstances()
+	return &ListFunctionReservedInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListFunctionStatistics 获取指定时间段的函数运行指标
@@ -710,6 +800,28 @@ func (c *FunctionGraphClient) ListQuotas(request *model.ListQuotasRequest) (*mod
 func (c *FunctionGraphClient) ListQuotasInvoker(request *model.ListQuotasRequest) *ListQuotasInvoker {
 	requestDef := GenReqDefForListQuotas()
 	return &ListQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListReservedInstanceConfigs 获取函数预留实例配置列表
+//
+// 获取函数预留实例配置列表
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *FunctionGraphClient) ListReservedInstanceConfigs(request *model.ListReservedInstanceConfigsRequest) (*model.ListReservedInstanceConfigsResponse, error) {
+	requestDef := GenReqDefForListReservedInstanceConfigs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListReservedInstanceConfigsResponse), nil
+	}
+}
+
+// ListReservedInstanceConfigsInvoker 获取函数预留实例配置列表
+func (c *FunctionGraphClient) ListReservedInstanceConfigsInvoker(request *model.ListReservedInstanceConfigsRequest) *ListReservedInstanceConfigsInvoker {
+	requestDef := GenReqDefForListReservedInstanceConfigs()
+	return &ListReservedInstanceConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListStatistics 租户函数统计信息
@@ -845,6 +957,28 @@ func (c *FunctionGraphClient) ShowDependcy(request *model.ShowDependcyRequest) (
 func (c *FunctionGraphClient) ShowDependcyInvoker(request *model.ShowDependcyRequest) *ShowDependcyInvoker {
 	requestDef := GenReqDefForShowDependcy()
 	return &ShowDependcyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDependencyVersion 获取依赖包版本详情
+//
+// 获取依赖包版本详情
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *FunctionGraphClient) ShowDependencyVersion(request *model.ShowDependencyVersionRequest) (*model.ShowDependencyVersionResponse, error) {
+	requestDef := GenReqDefForShowDependencyVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDependencyVersionResponse), nil
+	}
+}
+
+// ShowDependencyVersionInvoker 获取依赖包版本详情
+func (c *FunctionGraphClient) ShowDependencyVersionInvoker(request *model.ShowDependencyVersionRequest) *ShowDependencyVersionInvoker {
+	requestDef := GenReqDefForShowDependencyVersion()
+	return &ShowDependencyVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowEvent 获取测试事件详细信息

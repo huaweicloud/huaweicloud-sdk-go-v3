@@ -79,6 +79,9 @@ type Content struct {
 	// KAFKA、ACTIVEMQ的服务器地址，多个IP:PORT, 使用\",\"分隔
 	Broker *string `json:"broker,omitempty"`
 
+	// 是否开启SSL认证 - 连接MQS内网地址时，若MQS开启了SSL，请选择“是”
+	Ssl *bool `json:"ssl,omitempty"`
+
 	// 是否开启SSL认证 - 数据源为KAFKA时需要配置，连接MQS内网地址时，若MQS同时开启了SSL与VPC内网明文访问，请选择“否” - 数据源为ARTEMISMQ、ACTIVEMQ、RABBITMQ、IBMMQ时需要配置， - 数据源为HL7时且作为源端时需要配置
 	SslEnable *bool `json:"ssl_enable,omitempty"`
 

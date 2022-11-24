@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// 数据点模型
+// 数据点模型。
 type FrontPoint struct {
 
-	// 时间
+	// 时间。
 	Time *int64 `json:"time,omitempty"`
 
-	// 值
+	// 值。
 	Value *interface{} `json:"value,omitempty"`
 }
 

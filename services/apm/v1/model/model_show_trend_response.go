@@ -9,10 +9,10 @@ import (
 // Response Object
 type ShowTrendResponse struct {
 
-	// 趋势图数据列表
+	// 趋势图数据列表。
 	LineList *[]FrontLine `json:"line_list,omitempty"`
 
-	// 最后日期时间
+	// 最后日期时间。
 	LatestDataTime *int64 `json:"latest_data_Time,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

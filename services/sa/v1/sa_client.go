@@ -21,7 +21,7 @@ func SaClientBuilder() *http_client.HcHttpClientBuilder {
 
 // CheckProductHealthy 检查心跳健康
 //
-// SA提供心跳接口，集成产品定时（例如：每五分钟）发送心跳报文到SA，用来确认集成产品与SA之间的通路是否健康。
+// SA提供心跳接口，集成产品定时（每五分钟）发送心跳报文到态势感知，用来确认集成产品与态势感知之间的通路是否健康。
 //
 // 详细说明请参考华为云API Explorer。
 // Please refer to Huawei cloud API Explorer for details.
@@ -41,7 +41,7 @@ func (c *SaClient) CheckProductHealthyInvoker(request *model.CheckProductHealthy
 	return &CheckProductHealthyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ImportEvents 上报安全产品数据(V2)
+// ImportEvents 上报安全产品数据
 //
 // 批量数据上报，每批次最多不超过50条。
 //
@@ -57,7 +57,7 @@ func (c *SaClient) ImportEvents(request *model.ImportEventsRequest) (*model.Impo
 	}
 }
 
-// ImportEventsInvoker 上报安全产品数据(V2)
+// ImportEventsInvoker 上报安全产品数据
 func (c *SaClient) ImportEventsInvoker(request *model.ImportEventsRequest) *ImportEventsInvoker {
 	requestDef := GenReqDefForImportEvents()
 	return &ImportEventsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

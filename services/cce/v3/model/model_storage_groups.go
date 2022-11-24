@@ -8,7 +8,7 @@ import (
 
 type StorageGroups struct {
 
-	// storageGroups的名字，作为虚拟存储组的名字，因此各个group个名字不能重复。
+	// storageGroups的名字，作为虚拟存储组的名字，因此各个group名字不能重复。
 	Name string `json:"name"`
 
 	// k8s及runtime所属存储空间。有且仅有一个group被设置为true，不填默认false。

@@ -15,8 +15,6 @@ type CreateRouteTable struct {
 	// 路由器表描述信息
 	Description *string `json:"description,omitempty"`
 
-	BgpOptions *BgpOptions `json:"bgp_options,omitempty"`
-
 	// 标签信息
 	Tags *[]Tag `json:"tags,omitempty"`
 }

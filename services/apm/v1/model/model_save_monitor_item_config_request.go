@@ -9,7 +9,7 @@ import (
 // Request Object
 type SaveMonitorItemConfigRequest struct {
 
-	// 业务id
+	// 应用id。
 	XBusinessId int64 `json:"x-business-id"`
 
 	Body *SaveMonitorItemParam `json:"body,omitempty"`

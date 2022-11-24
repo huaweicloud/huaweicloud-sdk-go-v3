@@ -41,6 +41,30 @@ func (i *ShowAkSksInvoker) Invoke() (*model.ShowAkSksResponse, error) {
 	}
 }
 
+type ListAlarmDataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAlarmDataInvoker) Invoke() (*model.ListAlarmDataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAlarmDataResponse), nil
+	}
+}
+
+type ListAlarmNotifyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAlarmNotifyInvoker) Invoke() (*model.ListAlarmNotifyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAlarmNotifyResponse), nil
+	}
+}
+
 type ListAkSkInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -125,18 +149,6 @@ func (i *DeleteAppInvoker) Invoke() (*model.DeleteAppResponse, error) {
 	}
 }
 
-type DeleteEnvInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteEnvInvoker) Invoke() (*model.DeleteEnvResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteEnvResponse), nil
-	}
-}
-
 type ListAppEnvsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -173,6 +185,30 @@ func (i *ListEnvTagsInvoker) Invoke() (*model.ListEnvTagsResponse, error) {
 	}
 }
 
+type ShowBusinessDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowBusinessDetailInvoker) Invoke() (*model.ShowBusinessDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowBusinessDetailResponse), nil
+	}
+}
+
+type ShowSubBusinessDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSubBusinessDetailInvoker) Invoke() (*model.ShowSubBusinessDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSubBusinessDetailResponse), nil
+	}
+}
+
 type ShowTopologyTreeInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -206,6 +242,78 @@ func (i *ListSupportedRegionInvoker) Invoke() (*model.ListSupportedRegionRespons
 		return nil, err
 	} else {
 		return result.(*model.ListSupportedRegionResponse), nil
+	}
+}
+
+type SearchBusinessTopologyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SearchBusinessTopologyInvoker) Invoke() (*model.SearchBusinessTopologyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SearchBusinessTopologyResponse), nil
+	}
+}
+
+type SearchEnvTopologyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SearchEnvTopologyInvoker) Invoke() (*model.SearchEnvTopologyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SearchEnvTopologyResponse), nil
+	}
+}
+
+type ListBusinessEnvInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBusinessEnvInvoker) Invoke() (*model.ListBusinessEnvResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBusinessEnvResponse), nil
+	}
+}
+
+type SearchTransactionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SearchTransactionInvoker) Invoke() (*model.SearchTransactionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SearchTransactionResponse), nil
+	}
+}
+
+type SearchTransactionConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SearchTransactionConfigInvoker) Invoke() (*model.SearchTransactionConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SearchTransactionConfigResponse), nil
+	}
+}
+
+type ShowTransactionDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTransactionDetailInvoker) Invoke() (*model.ShowTransactionDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTransactionDetailResponse), nil
 	}
 }
 

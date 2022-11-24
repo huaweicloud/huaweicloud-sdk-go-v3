@@ -9,7 +9,7 @@ import (
 // Request Object
 type ShowTopologyRequest struct {
 
-	// 调用链tracId
+	// 调用链traceId。
 	TraceId string `json:"trace_id"`
 }
 

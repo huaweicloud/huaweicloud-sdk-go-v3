@@ -10,7 +10,7 @@ import (
 func GenReqDefForCreateSecAppTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/hmcontrol/v1/{project_id}/secapp/task").
+		WithPath("/v1/{project_id}/secapp/task").
 		WithResponse(new(model.CreateSecAppTaskResponse)).
 		WithContentType("multipart/form-data")
 
@@ -25,7 +25,7 @@ func GenReqDefForCreateSecAppTask() *def.HttpRequestDef {
 func GenReqDefForDeleteSecAppTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/hmcontrol/v1/{project_id}/secapp/task").
+		WithPath("/v1/{project_id}/secapp/task").
 		WithResponse(new(model.DeleteSecAppTaskResponse)).
 		WithContentType("application/json")
 
@@ -41,7 +41,7 @@ func GenReqDefForDeleteSecAppTask() *def.HttpRequestDef {
 func GenReqDefForShowSecAppTaskResult() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/hmcontrol/v1/{project_id}/secapp/task-result").
+		WithPath("/v1/{project_id}/secapp/task-result").
 		WithResponse(new(model.ShowSecAppTaskResultResponse)).
 		WithContentType("application/json")
 
@@ -57,7 +57,7 @@ func GenReqDefForShowSecAppTaskResult() *def.HttpRequestDef {
 func GenReqDefForShowSecAppTaskStatus() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/hmcontrol/v1/{project_id}/secapp/task-status").
+		WithPath("/v1/{project_id}/secapp/task-status").
 		WithResponse(new(model.ShowSecAppTaskStatusResponse)).
 		WithContentType("application/json")
 

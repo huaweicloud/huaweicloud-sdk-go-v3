@@ -47,6 +47,8 @@ type UpdateFunctionConfigRequestBody struct {
 
 	StrategyConfig *StrategyConfig `json:"strategy_config,omitempty"`
 
+	CustomImage *CustomImage `json:"custom_image,omitempty"`
+
 	// 函数扩展配置。
 	ExtendConfig *string `json:"extend_config,omitempty"`
 

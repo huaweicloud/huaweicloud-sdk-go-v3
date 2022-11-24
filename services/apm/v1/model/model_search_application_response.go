@@ -9,13 +9,13 @@ import (
 // Response Object
 type SearchApplicationResponse struct {
 
-	// 应用列表
+	// 组件列表。
 	AppInfoList *[]AppInfo `json:"app_info_list,omitempty"`
 
-	// 应用总数目
+	// 组件总数目。
 	AppTotalCount *int32 `json:"app_total_count,omitempty"`
 
-	// 应用名称和应用详情map表
+	// 组件名称和组件详情map表。
 	AppInfoMap     map[string]AppInfo `json:"app_info_map,omitempty"`
 	HttpStatusCode int                `json:"-"`
 }

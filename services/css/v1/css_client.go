@@ -19,6 +19,50 @@ func CssClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+// AddIndependentNode 添加独立master、client
+//
+// 由于集群数据面业务的增长或者不确定性，很难在一开始就能够把集群的规模形态想明白，该接口能够在非独立master和client的集群上面独立master、client角色。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *CssClient) AddIndependentNode(request *model.AddIndependentNodeRequest) (*model.AddIndependentNodeResponse, error) {
+	requestDef := GenReqDefForAddIndependentNode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddIndependentNodeResponse), nil
+	}
+}
+
+// AddIndependentNodeInvoker 添加独立master、client
+func (c *CssClient) AddIndependentNodeInvoker(request *model.AddIndependentNodeRequest) *AddIndependentNodeInvoker {
+	requestDef := GenReqDefForAddIndependentNode()
+	return &AddIndependentNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ChangeMode 安全模式修改
+//
+// 该接口用于切换集群的安全模式。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *CssClient) ChangeMode(request *model.ChangeModeRequest) (*model.ChangeModeResponse, error) {
+	requestDef := GenReqDefForChangeMode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeModeResponse), nil
+	}
+}
+
+// ChangeModeInvoker 安全模式修改
+func (c *CssClient) ChangeModeInvoker(request *model.ChangeModeRequest) *ChangeModeInvoker {
+	requestDef := GenReqDefForChangeMode()
+	return &ChangeModeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateAutoCreatePolicy 设置自动创建快照策略
 //
 // 该接口用于设置自动创建快照，默认一天创建一个快照。
@@ -1021,6 +1065,28 @@ func (c *CssClient) UpdateFlavorByType(request *model.UpdateFlavorByTypeRequest)
 func (c *CssClient) UpdateFlavorByTypeInvoker(request *model.UpdateFlavorByTypeRequest) *UpdateFlavorByTypeInvoker {
 	requestDef := GenReqDefForUpdateFlavorByType()
 	return &UpdateFlavorByTypeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateInstance 节点替换
+//
+// 该接口用于替换失败节点。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *CssClient) UpdateInstance(request *model.UpdateInstanceRequest) (*model.UpdateInstanceResponse, error) {
+	requestDef := GenReqDefForUpdateInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateInstanceResponse), nil
+	}
+}
+
+// UpdateInstanceInvoker 节点替换
+func (c *CssClient) UpdateInstanceInvoker(request *model.UpdateInstanceRequest) *UpdateInstanceInvoker {
+	requestDef := GenReqDefForUpdateInstance()
+	return &UpdateInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateLogSetting 修改日志基础配置

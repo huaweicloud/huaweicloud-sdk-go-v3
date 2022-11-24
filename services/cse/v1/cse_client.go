@@ -129,6 +129,28 @@ func (c *CseClient) ListFlavorsInvoker(request *model.ListFlavorsRequest) *ListF
 	return &ListFlavorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RetryEngine 对微服务引擎专享版进行重试
+//
+// 对微服务引擎专享版进行重试
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *CseClient) RetryEngine(request *model.RetryEngineRequest) (*model.RetryEngineResponse, error) {
+	requestDef := GenReqDefForRetryEngine()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RetryEngineResponse), nil
+	}
+}
+
+// RetryEngineInvoker 对微服务引擎专享版进行重试
+func (c *CseClient) RetryEngineInvoker(request *model.RetryEngineRequest) *RetryEngineInvoker {
+	requestDef := GenReqDefForRetryEngine()
+	return &RetryEngineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowEngine 查询微服务引擎专享版详情
 //
 // 查询微服务引擎专享版详情
@@ -171,6 +193,28 @@ func (c *CseClient) ShowEngineJob(request *model.ShowEngineJobRequest) (*model.S
 func (c *CseClient) ShowEngineJobInvoker(request *model.ShowEngineJobRequest) *ShowEngineJobInvoker {
 	requestDef := GenReqDefForShowEngineJob()
 	return &ShowEngineJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpgradeEngine 升级微服务引擎专享版
+//
+// 升级微服务引擎专享版
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *CseClient) UpgradeEngine(request *model.UpgradeEngineRequest) (*model.UpgradeEngineResponse, error) {
+	requestDef := GenReqDefForUpgradeEngine()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpgradeEngineResponse), nil
+	}
+}
+
+// UpgradeEngineInvoker 升级微服务引擎专享版
+func (c *CseClient) UpgradeEngineInvoker(request *model.UpgradeEngineRequest) *UpgradeEngineInvoker {
+	requestDef := GenReqDefForUpgradeEngine()
+	return &UpgradeEngineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UploadKie 导入kie配置

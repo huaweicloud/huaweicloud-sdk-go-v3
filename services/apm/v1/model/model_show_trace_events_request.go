@@ -9,7 +9,7 @@ import (
 // Request Object
 type ShowTraceEventsRequest struct {
 
-	// 调用链ID
+	// 调用链ID。
 	TraceId string `json:"trace_id"`
 }
 

@@ -5,6 +5,18 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/cdn/v2/model"
 )
 
+type BatchCopyDomainInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCopyDomainInvoker) Invoke() (*model.BatchCopyDomainResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCopyDomainResponse), nil
+	}
+}
+
 type DownloadRegionCarrierExcelInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -8,7 +8,7 @@ import (
 
 type TopologyTree struct {
 
-	// 拓扑树节点
+	// 拓扑树节点。
 	Tree *[]TreeNode `json:"tree,omitempty"`
 }
 

@@ -12,7 +12,7 @@ import (
 type MultiTaskRequestBody struct {
 
 	// 任务名称，只能以字母、数字为开头，包含字母、数字和 . _ -  3~100个字符
-	TaskName *string `json:"task_name,omitempty"`
+	TaskName string `json:"task_name"`
 
 	// 任务ID，可以为空
 	TaskId *string `json:"task_id,omitempty"`
@@ -27,7 +27,7 @@ type MultiTaskRequestBody struct {
 	TaskTag *string `json:"task_tag,omitempty"`
 
 	// 需要支持的操作类型，支持多选，至少需要选择以下一种： - INSERT - UPDATE - DELETE
-	OperationTypes *[]MultiTaskRequestBodyOperationTypes `json:"operation_types,omitempty"`
+	OperationTypes []MultiTaskRequestBodyOperationTypes `json:"operation_types"`
 
 	// 源端数据源所属集成应用ID
 	SourceAppId *string `json:"source_app_id,omitempty"`

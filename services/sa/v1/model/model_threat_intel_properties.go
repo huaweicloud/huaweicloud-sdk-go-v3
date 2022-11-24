@@ -1,6 +1,7 @@
 package model
 
 import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
@@ -21,7 +22,7 @@ type ThreatIntelProperties struct {
 	FileName *string `json:"file_name,omitempty"`
 
 	// 编译时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区。
-	CreateTime *string `json:"create_time,omitempty"`
+	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
 
 	// 文件类别，TEXT|XCODE。
 	FileClass *string `json:"file_class,omitempty"`

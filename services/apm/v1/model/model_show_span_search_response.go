@@ -9,10 +9,10 @@ import (
 // Response Object
 type ShowSpanSearchResponse struct {
 
-	// 返回的总数
+	// 返回的总数。
 	Total *int32 `json:"total,omitempty"`
 
-	// span信息
+	// span信息。
 	SpanInfoList   *[]ClientSpanInfo `json:"span_info_list,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }

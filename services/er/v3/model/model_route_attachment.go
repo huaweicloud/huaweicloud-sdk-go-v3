@@ -11,7 +11,7 @@ type RouteAttachment struct {
 	// 连接关联的资源ID
 	ResourceId string `json:"resource_id"`
 
-	// 连接关联的资源类型：vpc|vgw|vpn|peering|gdgw
+	// 连接关联的资源类型：vpc|vgw|vpn|peering
 	ResourceType string `json:"resource_type"`
 
 	// 连接ID

@@ -16,6 +16,9 @@ type AddReadonlyNodeRequestBody struct {
 
 	// 同步延迟时间。取值范围：0~1200毫秒。默认取值为0。
 	Delay *int32 `json:"delay,omitempty"`
+
+	// 扩容包年包月实例的存储容量时可指定，表示是否自动从账户中支付，此字段不影响自动续订的支付方式。 - true，表示自动从账户中支付。 - false，表示手动从账户中支付，默认为该方式。
+	IsAutoPay *bool `json:"is_auto_pay,omitempty"`
 }
 
 func (o AddReadonlyNodeRequestBody) String() string {

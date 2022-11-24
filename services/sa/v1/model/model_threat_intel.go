@@ -1,6 +1,7 @@
 package model
 
 import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
@@ -30,7 +31,7 @@ type ThreatIntel struct {
 	Description string `json:"description"`
 
 	// 威胁情报的更新时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区。
-	Modified *string `json:"modified,omitempty"`
+	Modified *sdktime.SdkTime `json:"modified,omitempty"`
 
 	// 有效期开始（可读字符串）。
 	ValidFrom *string `json:"valid_from,omitempty"`

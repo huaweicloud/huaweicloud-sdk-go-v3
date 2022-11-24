@@ -1,0 +1,24 @@
+package model
+
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
+	"strings"
+)
+
+// Response Object
+type CreateResolveRuleResponse struct {
+
+	// 查询resolver_rule的列表响应。
+	ResolverRules  *[]ResolveRuleParam `json:"resolver_rules,omitempty"`
+	HttpStatusCode int                 `json:"-"`
+}
+
+func (o CreateResolveRuleResponse) String() string {
+	data, err := utils.Marshal(o)
+	if err != nil {
+		return "CreateResolveRuleResponse struct{}"
+	}
+
+	return strings.Join([]string{"CreateResolveRuleResponse", string(data)}, " ")
+}

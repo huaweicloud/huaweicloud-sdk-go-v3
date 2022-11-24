@@ -8,7 +8,9 @@ import (
 
 // Request Object
 type ListEnvMonitorItemRequest struct {
-	XBusinessId *int64 `json:"x-business-id,omitempty"`
+
+	// 应用id。
+	XBusinessId int64 `json:"x-business-id"`
 
 	Body *GetEnvMonitorItemListParam `json:"body,omitempty"`
 }

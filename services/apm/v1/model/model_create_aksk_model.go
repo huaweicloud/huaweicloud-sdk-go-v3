@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// 新增ak-sk入参
+// 新增ak-sk入参。
 type CreateAkskModel struct {
 
-	// 描述信息
+	// 描述信息。
 	Descp *string `json:"descp,omitempty"`
 }
 

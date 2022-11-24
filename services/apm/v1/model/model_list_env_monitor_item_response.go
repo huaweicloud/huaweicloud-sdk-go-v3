@@ -9,13 +9,13 @@ import (
 // Response Object
 type ListEnvMonitorItemResponse struct {
 
-	// 监控项列表
+	// 监控项列表。
 	MonitorItemList *[]MonitorItem `json:"monitor_item_list,omitempty"`
 
-	// 总数
+	// 总数。
 	TotalCount *int32 `json:"total_count,omitempty"`
 
-	// 总页数
+	// 总页数。
 	TotalPage      *int32 `json:"totalPage,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

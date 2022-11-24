@@ -113,6 +113,30 @@ func (i *CheckWeakPasswordInvoker) Invoke() (*model.CheckWeakPasswordResponse, e
 	}
 }
 
+type CompareConfigurationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CompareConfigurationInvoker) Invoke() (*model.CompareConfigurationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CompareConfigurationResponse), nil
+	}
+}
+
+type CopyConfigurationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CopyConfigurationInvoker) Invoke() (*model.CopyConfigurationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CopyConfigurationResponse), nil
+	}
+}
+
 type CreateConfigurationInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -302,6 +326,18 @@ func (i *ExpandReplicasetNodeInvoker) Invoke() (*model.ExpandReplicasetNodeRespo
 		return nil, err
 	} else {
 		return result.(*model.ExpandReplicasetNodeResponse), nil
+	}
+}
+
+type ListAppliedInstancesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAppliedInstancesInvoker) Invoke() (*model.ListAppliedInstancesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAppliedInstancesResponse), nil
 	}
 }
 
@@ -581,6 +617,18 @@ func (i *ListStorageTypeInvoker) Invoke() (*model.ListStorageTypeResponse, error
 	}
 }
 
+type ListTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTasksInvoker) Invoke() (*model.ListTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTasksResponse), nil
+	}
+}
+
 type MigrateAzInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -590,6 +638,18 @@ func (i *MigrateAzInvoker) Invoke() (*model.MigrateAzResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.MigrateAzResponse), nil
+	}
+}
+
+type ResetConfigurationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ResetConfigurationInvoker) Invoke() (*model.ResetConfigurationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ResetConfigurationResponse), nil
 	}
 }
 
@@ -770,6 +830,30 @@ func (i *ShowBackupPolicyInvoker) Invoke() (*model.ShowBackupPolicyResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ShowBackupPolicyResponse), nil
+	}
+}
+
+type ShowConfigurationAppliedHistoryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowConfigurationAppliedHistoryInvoker) Invoke() (*model.ShowConfigurationAppliedHistoryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowConfigurationAppliedHistoryResponse), nil
+	}
+}
+
+type ShowConfigurationModifyHistoryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowConfigurationModifyHistoryInvoker) Invoke() (*model.ShowConfigurationModifyHistoryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowConfigurationModifyHistoryResponse), nil
 	}
 }
 

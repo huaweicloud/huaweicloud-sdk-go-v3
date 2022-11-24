@@ -15,7 +15,7 @@ func NewScmClient(hcClient *http_client.HcHttpClient) *ScmClient {
 }
 
 func ScmClientBuilder() *http_client.HcHttpClientBuilder {
-	builder := http_client.NewHcHttpClientBuilder()
+	builder := http_client.NewHcHttpClientBuilder().WithCredentialsType("global.Credentials,basic.Credentials")
 	return builder
 }
 

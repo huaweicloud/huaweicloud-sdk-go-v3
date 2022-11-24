@@ -9,10 +9,10 @@ import (
 // Response Object
 type ListEnvTagsResponse struct {
 
-	// 环境标签数据模型
+	// 环境标签数据列表。
 	EnvTags *[]CmdbTagEntity `json:"env_tags,omitempty"`
 
-	// 总条数
+	// 总条数。
 	TotalCount     *int32 `json:"total_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

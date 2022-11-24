@@ -8,9 +8,11 @@ import (
 
 // Request Object
 type DeleteAppRequest struct {
+
+	// 组件id。
 	ApplicationId int64 `json:"application_id"`
 
-	// 应用id，用于鉴权
+	// 应用id，用于鉴权。
 	XBusinessId int64 `json:"x-business-id"`
 }
 

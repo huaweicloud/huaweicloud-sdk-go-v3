@@ -8,10 +8,10 @@ import (
 
 type ViewRow struct {
 
-	// 视图行，包含多个视图，展示的时候根据实际的长度适配
+	// 视图行，包含多个视图，展示的时候根据实际的长度适配。
 	ViewList *[]ViewBase `json:"view_list,omitempty"`
 
-	// 标题
+	// 标题。
 	Title *string `json:"title,omitempty"`
 }
 

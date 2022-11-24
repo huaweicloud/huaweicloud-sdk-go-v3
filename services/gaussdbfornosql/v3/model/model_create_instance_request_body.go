@@ -53,6 +53,11 @@ type CreateInstanceRequestBody struct {
 	SslOption *string `json:"ssl_option,omitempty"`
 
 	ChargeInfo *ChargeInfoOption `json:"charge_info,omitempty"`
+
+	RestoreInfo *RestoreInfo `json:"restore_info,omitempty"`
+
+	// 数据库访问端口号。 目前仅支持GaussDB(for Redis)实例支持自定义端口，取值范围为：1024~65535，禁用端口号为：2180、2887、3887、6377、6378、6380、8018、8079、8091、8479、8484、8999、12017、12333、50069。 不指定端口时，创建GaussDB(for Redis)实例的访问端口默认为6379。 如果该实例计划用于搭建双活容灾场景，请配置为8635端口。
+	Port *string `json:"port,omitempty"`
 }
 
 func (o CreateInstanceRequestBody) String() string {

@@ -27,7 +27,7 @@ type ListAssociationsRequest struct {
 	// 连接ID
 	AttachmentId *[]string `json:"attachment_id,omitempty"`
 
-	// 连接资源类型:vpc|vpn|vgw|peering|can|gdgw
+	// 连接资源类型:vpc|vpn|vgw|peering
 	ResourceType *[]ListAssociationsRequestResourceType `json:"resource_type,omitempty"`
 
 	// 状态

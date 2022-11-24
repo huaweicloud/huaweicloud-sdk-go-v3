@@ -31,8 +31,6 @@ type RouteTable struct {
 	// 标签
 	Tags *[]Tag `json:"tags,omitempty"`
 
-	BgpOptions *BgpOptions `json:"bgp_options,omitempty"`
-
 	// 创建时间
 	CreatedAt *sdktime.SdkTime `json:"created_at"`
 

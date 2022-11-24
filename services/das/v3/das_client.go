@@ -63,6 +63,28 @@ func (c *DasClient) ShowApiVersionInvoker(request *model.ShowApiVersionRequest) 
 	return &ShowApiVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ChangeSqlLimitSwitchStatus 设置SQL限流开关状态
+//
+// 设置SQL限流开关状态。目前仅支持MySQL数据库。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DasClient) ChangeSqlLimitSwitchStatus(request *model.ChangeSqlLimitSwitchStatusRequest) (*model.ChangeSqlLimitSwitchStatusResponse, error) {
+	requestDef := GenReqDefForChangeSqlLimitSwitchStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeSqlLimitSwitchStatusResponse), nil
+	}
+}
+
+// ChangeSqlLimitSwitchStatusInvoker 设置SQL限流开关状态
+func (c *DasClient) ChangeSqlLimitSwitchStatusInvoker(request *model.ChangeSqlLimitSwitchStatusRequest) *ChangeSqlLimitSwitchStatusInvoker {
+	requestDef := GenReqDefForChangeSqlLimitSwitchStatus()
+	return &ChangeSqlLimitSwitchStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ChangeSqlSwitch 开启/关闭全量SQL、慢SQL开关
 //
 // 打开或者关闭DAS收集全量SQL开关，开启后，实例的性能损耗在5%以内。开启全量SQL后，本服务会对SQL的文本内容进行存储，以便进行分析。用户可自行设置全量SQL的保存时间范围，到期后会自动删除；如果未设置，数据默认保留7天。
@@ -106,6 +128,35 @@ func (c *DasClient) CreateSpaceAnalysisTask(request *model.CreateSpaceAnalysisTa
 func (c *DasClient) CreateSpaceAnalysisTaskInvoker(request *model.CreateSpaceAnalysisTaskRequest) *CreateSpaceAnalysisTaskInvoker {
 	requestDef := GenReqDefForCreateSpaceAnalysisTask()
 	return &CreateSpaceAnalysisTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSqlLimitRules 创建SQL限流规则
+//
+// 添加SQL限流规则。目前仅支持MySQL数据库。
+// 使用限制如下：
+// 1.规则举例详细说明：例如关键字是\&quot;select~a\&quot;, 含义为：select以及a为该并发控制所包含的两个关键字，~为关键字间隔符，即若执行SQL命令包含select与a两个关键字视为命中此条并发控制规则。
+// 2.当SQL语句匹配多条限流规则时，优先生效最新添加的规则，之前的规则不再生效。
+// 3.限流规则关键字有顺序要求，只会按顺序匹配。如：a~and~b 只会匹配 xxx a&gt;1 and b&gt;2，而不会匹配 xxx b&gt;2 and a&gt;1。
+// 4.关键字可能大小写敏感，请执行 \&quot;show variables like &#39;rds_sqlfilter_case_sensitive&#39;或者到实例参数设置页面进行确认。
+// 5.部分版本只读实例不允许设置限流规则，如果要设置限流规则，请到主实例上进行添加。
+// 6.系统表不限制、不涉及数据查询的不限制、root账号在特定版本下不限制。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DasClient) CreateSqlLimitRules(request *model.CreateSqlLimitRulesRequest) (*model.CreateSqlLimitRulesResponse, error) {
+	requestDef := GenReqDefForCreateSqlLimitRules()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSqlLimitRulesResponse), nil
+	}
+}
+
+// CreateSqlLimitRulesInvoker 创建SQL限流规则
+func (c *DasClient) CreateSqlLimitRulesInvoker(request *model.CreateSqlLimitRulesRequest) *CreateSqlLimitRulesInvoker {
+	requestDef := GenReqDefForCreateSqlLimitRules()
+	return &CreateSqlLimitRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteDbUser 删除数据库用户
@@ -154,6 +205,28 @@ func (c *DasClient) DeleteProcessInvoker(request *model.DeleteProcessRequest) *D
 	return &DeleteProcessInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteSqlLimitRules 删除SQL限流规则
+//
+// 删除SQL限流规则。目前仅支持MySQL数据库
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DasClient) DeleteSqlLimitRules(request *model.DeleteSqlLimitRulesRequest) (*model.DeleteSqlLimitRulesResponse, error) {
+	requestDef := GenReqDefForDeleteSqlLimitRules()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteSqlLimitRulesResponse), nil
+	}
+}
+
+// DeleteSqlLimitRulesInvoker 删除SQL限流规则
+func (c *DasClient) DeleteSqlLimitRulesInvoker(request *model.DeleteSqlLimitRulesRequest) *DeleteSqlLimitRulesInvoker {
+	requestDef := GenReqDefForDeleteSqlLimitRules()
+	return &DeleteSqlLimitRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ExportSlowQueryLogs 导出慢SQL数据
 //
 // DAS收集慢SQL开关打开后，一次性导出指定时间范围内的慢SQL数据，支持分页滚动获取。该功能仅支持付费实例。
@@ -176,6 +249,28 @@ func (c *DasClient) ExportSlowQueryLogsInvoker(request *model.ExportSlowQueryLog
 	return &ExportSlowQueryLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ExportSlowSqlTemplatesDetails 导出慢SQL模板列表。
+//
+// 慢SQL开关打开后，导出慢SQL模板列表。该功能仅支持付费实例。查询时间间隔最长一天。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DasClient) ExportSlowSqlTemplatesDetails(request *model.ExportSlowSqlTemplatesDetailsRequest) (*model.ExportSlowSqlTemplatesDetailsResponse, error) {
+	requestDef := GenReqDefForExportSlowSqlTemplatesDetails()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExportSlowSqlTemplatesDetailsResponse), nil
+	}
+}
+
+// ExportSlowSqlTemplatesDetailsInvoker 导出慢SQL模板列表。
+func (c *DasClient) ExportSlowSqlTemplatesDetailsInvoker(request *model.ExportSlowSqlTemplatesDetailsRequest) *ExportSlowSqlTemplatesDetailsInvoker {
+	requestDef := GenReqDefForExportSlowSqlTemplatesDetails()
+	return &ExportSlowSqlTemplatesDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ExportSqlStatements 导出全量SQL
 //
 // 全量SQL开关打开后，一次性导出指定时间范围内的全量SQL数据，支持分页滚动获取。该功能仅支持付费实例。
@@ -196,6 +291,50 @@ func (c *DasClient) ExportSqlStatements(request *model.ExportSqlStatementsReques
 func (c *DasClient) ExportSqlStatementsInvoker(request *model.ExportSqlStatementsRequest) *ExportSqlStatementsInvoker {
 	requestDef := GenReqDefForExportSqlStatements()
 	return &ExportSqlStatementsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExportTopSqlTemplatesDetails 导出TopSQL模板列表。
+//
+// TopSQL开关打开后，导出TopSQL模板列表。该功能仅支持付费实例。查询时间间隔最长一小时。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DasClient) ExportTopSqlTemplatesDetails(request *model.ExportTopSqlTemplatesDetailsRequest) (*model.ExportTopSqlTemplatesDetailsResponse, error) {
+	requestDef := GenReqDefForExportTopSqlTemplatesDetails()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExportTopSqlTemplatesDetailsResponse), nil
+	}
+}
+
+// ExportTopSqlTemplatesDetailsInvoker 导出TopSQL模板列表。
+func (c *DasClient) ExportTopSqlTemplatesDetailsInvoker(request *model.ExportTopSqlTemplatesDetailsRequest) *ExportTopSqlTemplatesDetailsInvoker {
+	requestDef := GenReqDefForExportTopSqlTemplatesDetails()
+	return &ExportTopSqlTemplatesDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExportTopSqlTrendDetails 导出SQL执行耗时区间数据。
+//
+// TopSQL开关打开后，导出SQL执行耗时区间数据。该功能仅支持付费实例。查询时间间隔最长六小时。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DasClient) ExportTopSqlTrendDetails(request *model.ExportTopSqlTrendDetailsRequest) (*model.ExportTopSqlTrendDetailsResponse, error) {
+	requestDef := GenReqDefForExportTopSqlTrendDetails()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExportTopSqlTrendDetailsResponse), nil
+	}
+}
+
+// ExportTopSqlTrendDetailsInvoker 导出SQL执行耗时区间数据。
+func (c *DasClient) ExportTopSqlTrendDetailsInvoker(request *model.ExportTopSqlTrendDetailsRequest) *ExportTopSqlTrendDetailsInvoker {
+	requestDef := GenReqDefForExportTopSqlTrendDetails()
+	return &ExportTopSqlTrendDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListDbUsers 查询数据库用户列表
@@ -312,6 +451,28 @@ func (c *DasClient) ListSpaceAnalysisInvoker(request *model.ListSpaceAnalysisReq
 	return &ListSpaceAnalysisInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSqlLimitRules 查询SQL限流规则列表
+//
+// 查询SQL限流规则。目前仅支持MySQL数据库。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DasClient) ListSqlLimitRules(request *model.ListSqlLimitRulesRequest) (*model.ListSqlLimitRulesResponse, error) {
+	requestDef := GenReqDefForListSqlLimitRules()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSqlLimitRulesResponse), nil
+	}
+}
+
+// ListSqlLimitRulesInvoker 查询SQL限流规则列表
+func (c *DasClient) ListSqlLimitRulesInvoker(request *model.ListSqlLimitRulesRequest) *ListSqlLimitRulesInvoker {
+	requestDef := GenReqDefForListSqlLimitRules()
+	return &ListSqlLimitRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RegisterDbUser 注册数据库用户
 //
 // 此接口是将数据库用户和密码注册进DAS系统，同时会返回一个数据库用户ID ，后续调用其他接口时（如查询实例会话列表接口）需要用到此数据库用户ID。密码为加密存储，且仅用于DAS API相关功能。此接口不会在数据库实例上创建数据库用户对象。请确保输入的用户名和密码是已经存在并且是正确的。
@@ -425,6 +586,50 @@ func (c *DasClient) ShowSqlExplain(request *model.ShowSqlExplainRequest) (*model
 func (c *DasClient) ShowSqlExplainInvoker(request *model.ShowSqlExplainRequest) *ShowSqlExplainInvoker {
 	requestDef := GenReqDefForShowSqlExplain()
 	return &ShowSqlExplainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSqlLimitJobInfo 查询SQL限流任务
+//
+// 查询指定ID的SQL限流任务信息
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DasClient) ShowSqlLimitJobInfo(request *model.ShowSqlLimitJobInfoRequest) (*model.ShowSqlLimitJobInfoResponse, error) {
+	requestDef := GenReqDefForShowSqlLimitJobInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSqlLimitJobInfoResponse), nil
+	}
+}
+
+// ShowSqlLimitJobInfoInvoker 查询SQL限流任务
+func (c *DasClient) ShowSqlLimitJobInfoInvoker(request *model.ShowSqlLimitJobInfoRequest) *ShowSqlLimitJobInfoInvoker {
+	requestDef := GenReqDefForShowSqlLimitJobInfo()
+	return &ShowSqlLimitJobInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSqlLimitSwitchStatus 查看SQL限流开关状态
+//
+// 查询SQL限流的开关状态。目前仅支持MySQL实例
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DasClient) ShowSqlLimitSwitchStatus(request *model.ShowSqlLimitSwitchStatusRequest) (*model.ShowSqlLimitSwitchStatusResponse, error) {
+	requestDef := GenReqDefForShowSqlLimitSwitchStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSqlLimitSwitchStatusResponse), nil
+	}
+}
+
+// ShowSqlLimitSwitchStatusInvoker 查看SQL限流开关状态
+func (c *DasClient) ShowSqlLimitSwitchStatusInvoker(request *model.ShowSqlLimitSwitchStatusRequest) *ShowSqlLimitSwitchStatusInvoker {
+	requestDef := GenReqDefForShowSqlLimitSwitchStatus()
+	return &ShowSqlLimitSwitchStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowSqlSwitchStatus 查询全量SQL和慢SQL的开关状态。

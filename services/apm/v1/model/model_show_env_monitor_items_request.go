@@ -9,10 +9,10 @@ import (
 // Request Object
 type ShowEnvMonitorItemsRequest struct {
 
-	// 环境id
+	// 环境id。
 	EnvId int64 `json:"env_id"`
 
-	// 应用id
+	// 应用id。
 	XBusinessId int64 `json:"x-business-id"`
 }
 

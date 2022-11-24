@@ -16,6 +16,10 @@ type ClusterInformationSpec struct {
 	CustomSan *[]string `json:"customSan,omitempty"`
 
 	ContainerNetwork *ContainerNetworkUpdate `json:"containerNetwork,omitempty"`
+
+	EniNetwork *EniNetworkUpdate `json:"eniNetwork,omitempty"`
+
+	HostNetwork *ClusterInformationSpecHostNetwork `json:"hostNetwork,omitempty"`
 }
 
 func (o ClusterInformationSpec) String() string {

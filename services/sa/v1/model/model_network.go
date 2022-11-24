@@ -26,7 +26,7 @@ type Network struct {
 	SrcGeo *Geo `json:"src_geo,omitempty"`
 
 	// 目标IP地址。
-	DestcIp *string `json:"destc_ip,omitempty"`
+	DestIp *string `json:"dest_ip,omitempty"`
 
 	// 目标端口，0–65535。
 	DestPort *int32 `json:"dest_port,omitempty"`

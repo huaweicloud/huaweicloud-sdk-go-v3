@@ -17,6 +17,18 @@ func (i *ApplyCertificateToHostInvoker) Invoke() (*model.ApplyCertificateToHostR
 	}
 }
 
+type ChangePrepaidCloudWafInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangePrepaidCloudWafInvoker) Invoke() (*model.ChangePrepaidCloudWafResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangePrepaidCloudWafResponse), nil
+	}
+}
+
 type CreateAntiTamperRuleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -122,6 +134,18 @@ func (i *CreatePremiumHostInvoker) Invoke() (*model.CreatePremiumHostResponse, e
 		return nil, err
 	} else {
 		return result.(*model.CreatePremiumHostResponse), nil
+	}
+}
+
+type CreatePrepaidCloudWafInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePrepaidCloudWafInvoker) Invoke() (*model.CreatePrepaidCloudWafResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePrepaidCloudWafResponse), nil
 	}
 }
 
@@ -722,6 +746,18 @@ func (i *ShowSourceIpInvoker) Invoke() (*model.ShowSourceIpResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowSourceIpResponse), nil
+	}
+}
+
+type ShowSubscriptionInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSubscriptionInfoInvoker) Invoke() (*model.ShowSubscriptionInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSubscriptionInfoResponse), nil
 	}
 }
 

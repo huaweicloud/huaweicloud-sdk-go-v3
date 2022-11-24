@@ -17,7 +17,7 @@ type PostAlarmsReqV2 struct {
 	// 查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
 	Namespace string `json:"namespace"`
 
-	// 资源分组ID，监控范围为资源分组时必传
+	// 资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
 	ResourceGroupId *string `json:"resource_group_id,omitempty"`
 
 	// 资源列表，监控范围为指定资源时必传

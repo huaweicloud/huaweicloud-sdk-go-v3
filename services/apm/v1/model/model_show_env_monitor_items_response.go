@@ -9,10 +9,10 @@ import (
 // Response Object
 type ShowEnvMonitorItemsResponse struct {
 
-	// 采集器类别集合
+	// 采集器类别集合。
 	CategoryInfoList *[]CollectorCategoryInfo `json:"category_info_list,omitempty"`
 
-	// 监控项集合
+	// 监控项集合。
 	MonitorItemInfoList *[]MonitorItemEntity `json:"monitor_item_info_list,omitempty"`
 	HttpStatusCode      int                  `json:"-"`
 }

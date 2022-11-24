@@ -17,18 +17,6 @@ func (i *AsyncInvokeFunctionInvoker) Invoke() (*model.AsyncInvokeFunctionRespons
 	}
 }
 
-type AsyncInvokeReservedFunctionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *AsyncInvokeReservedFunctionInvoker) Invoke() (*model.AsyncInvokeReservedFunctionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.AsyncInvokeReservedFunctionResponse), nil
-	}
-}
-
 type BatchDeleteFunctionTriggersInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -74,6 +62,18 @@ func (i *CreateDependencyInvoker) Invoke() (*model.CreateDependencyResponse, err
 		return nil, err
 	} else {
 		return result.(*model.CreateDependencyResponse), nil
+	}
+}
+
+type CreateDependencyVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDependencyVersionInvoker) Invoke() (*model.CreateDependencyVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDependencyVersionResponse), nil
 	}
 }
 
@@ -158,6 +158,18 @@ func (i *DeleteDependencyInvoker) Invoke() (*model.DeleteDependencyResponse, err
 		return nil, err
 	} else {
 		return result.(*model.DeleteDependencyResponse), nil
+	}
+}
+
+type DeleteDependencyVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDependencyVersionInvoker) Invoke() (*model.DeleteDependencyVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDependencyVersionResponse), nil
 	}
 }
 
@@ -293,6 +305,18 @@ func (i *ListDependenciesInvoker) Invoke() (*model.ListDependenciesResponse, err
 	}
 }
 
+type ListDependencyVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDependencyVersionInvoker) Invoke() (*model.ListDependencyVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDependencyVersionResponse), nil
+	}
+}
+
 type ListEventsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -305,6 +329,18 @@ func (i *ListEventsInvoker) Invoke() (*model.ListEventsResponse, error) {
 	}
 }
 
+type ListFunctionAsMetricInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListFunctionAsMetricInvoker) Invoke() (*model.ListFunctionAsMetricResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListFunctionAsMetricResponse), nil
+	}
+}
+
 type ListFunctionAsyncInvokeConfigInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -314,6 +350,18 @@ func (i *ListFunctionAsyncInvokeConfigInvoker) Invoke() (*model.ListFunctionAsyn
 		return nil, err
 	} else {
 		return result.(*model.ListFunctionAsyncInvokeConfigResponse), nil
+	}
+}
+
+type ListFunctionReservedInstancesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListFunctionReservedInstancesInvoker) Invoke() (*model.ListFunctionReservedInstancesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListFunctionReservedInstancesResponse), nil
 	}
 }
 
@@ -374,6 +422,18 @@ func (i *ListQuotasInvoker) Invoke() (*model.ListQuotasResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListQuotasResponse), nil
+	}
+}
+
+type ListReservedInstanceConfigsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListReservedInstanceConfigsInvoker) Invoke() (*model.ListReservedInstanceConfigsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListReservedInstanceConfigsResponse), nil
 	}
 }
 
@@ -446,6 +506,18 @@ func (i *ShowDependcyInvoker) Invoke() (*model.ShowDependcyResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowDependcyResponse), nil
+	}
+}
+
+type ShowDependencyVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDependencyVersionInvoker) Invoke() (*model.ShowDependencyVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDependencyVersionResponse), nil
 	}
 }
 

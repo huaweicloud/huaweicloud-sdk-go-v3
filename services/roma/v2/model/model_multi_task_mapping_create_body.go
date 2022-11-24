@@ -10,10 +10,10 @@ type MultiTaskMappingCreateBody struct {
 	ExtInfo *MultiTaskInitElementExtInfo `json:"ext_info,omitempty"`
 
 	// 源端数据源ID
-	SourceDatasourceId *string `json:"source_datasource_id,omitempty"`
+	SourceDatasourceId string `json:"source_datasource_id"`
 
 	// 目标端数据源ID
-	TargetDatasourceId *string `json:"target_datasource_id,omitempty"`
+	TargetDatasourceId string `json:"target_datasource_id"`
 
 	// 源端字段列表
 	SourceColumns *[]MultiTaskColumnInfo `json:"source_columns,omitempty"`

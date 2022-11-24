@@ -127,6 +127,24 @@ type SubCustomerMonthlyBillDetail struct {
 
 	// 云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
 	RegionName *string `json:"region_name,omitempty"`
+
+	// 该字段为预留字段。
+	SubServiceTypeCode *string `json:"sub_service_type_code,omitempty"`
+
+	// 该字段为预留字段。
+	SubServiceTypeName *string `json:"sub_service_type_name,omitempty"`
+
+	// 该字段为预留字段。
+	SubResourceTypeCode *string `json:"sub_resource_type_code,omitempty"`
+
+	// 该字段为预留字段。
+	SubResourceTypeName *string `json:"sub_resource_type_name,omitempty"`
+
+	// 该字段为预留字段。
+	SubResourceId *string `json:"sub_resource_id,omitempty"`
+
+	// 该字段为预留字段。
+	SubResourceName *string `json:"sub_resource_name,omitempty"`
 }
 
 func (o SubCustomerMonthlyBillDetail) String() string {

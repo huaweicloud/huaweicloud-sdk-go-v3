@@ -1298,6 +1298,50 @@ func (c *RdsClient) ShowConfigurationInvoker(request *model.ShowConfigurationReq
 	return &ShowConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowDnsName 查询实例ipv6域名。
+//
+// 查询实例ipv6域名。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *RdsClient) ShowDnsName(request *model.ShowDnsNameRequest) (*model.ShowDnsNameResponse, error) {
+	requestDef := GenReqDefForShowDnsName()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDnsNameResponse), nil
+	}
+}
+
+// ShowDnsNameInvoker 查询实例ipv6域名。
+func (c *RdsClient) ShowDnsNameInvoker(request *model.ShowDnsNameRequest) *ShowDnsNameInvoker {
+	requestDef := GenReqDefForShowDnsName()
+	return &ShowDnsNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDomainName
+//
+// 查询实例ipv4域名
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *RdsClient) ShowDomainName(request *model.ShowDomainNameRequest) (*model.ShowDomainNameResponse, error) {
+	requestDef := GenReqDefForShowDomainName()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDomainNameResponse), nil
+	}
+}
+
+// ShowDomainNameInvoker
+func (c *RdsClient) ShowDomainNameInvoker(request *model.ShowDomainNameRequest) *ShowDomainNameInvoker {
+	requestDef := GenReqDefForShowDomainName()
+	return &ShowDomainNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowDrReplicaStatus 查询跨云容灾复制状态
 //
 // 建立跨云容灾关系后，查询主实例和灾备实例间的复制状态及延迟。
@@ -1384,6 +1428,28 @@ func (c *RdsClient) ShowQuotas(request *model.ShowQuotasRequest) (*model.ShowQuo
 func (c *RdsClient) ShowQuotasInvoker(request *model.ShowQuotasRequest) *ShowQuotasInvoker {
 	requestDef := GenReqDefForShowQuotas()
 	return &ShowQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowReplicationStatus 获取实例的复制状态。
+//
+// 获取实例的复制状态。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *RdsClient) ShowReplicationStatus(request *model.ShowReplicationStatusRequest) (*model.ShowReplicationStatusResponse, error) {
+	requestDef := GenReqDefForShowReplicationStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowReplicationStatusResponse), nil
+	}
+}
+
+// ShowReplicationStatusInvoker 获取实例的复制状态。
+func (c *RdsClient) ShowReplicationStatusInvoker(request *model.ShowReplicationStatusRequest) *ShowReplicationStatusInvoker {
+	requestDef := GenReqDefForShowReplicationStatus()
+	return &ShowReplicationStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // StartFailover 手动倒换主备

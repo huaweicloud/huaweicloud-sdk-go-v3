@@ -9,10 +9,10 @@ import (
 // Request Object
 type ListAppsRequest struct {
 
-	// 应用id
+	// 应用id。
 	BusinessId int64 `json:"business_id"`
 
-	// 应用id
+	// 应用id。
 	XBusinessId int64 `json:"x-business-id"`
 }
 

@@ -6,26 +6,26 @@ import (
 	"strings"
 )
 
-// 拓扑图上的组件调用指向线
+// 拓扑图上的组件调用指向线。
 type TraceTopologyLine struct {
 
-	// 开始节点id
+	// 开始节点id。
 	StartNodeId *int64 `json:"start_node_id,omitempty"`
 
-	// 结束节点id
+	// 结束节点id。
 	EndNodeId *int64 `json:"end_node_id,omitempty"`
 
-	// 调用跨度id
+	// 调用跨度id。
 	SpanId *string `json:"span_id,omitempty"`
 
 	ClientInfo *TraceTopologyLineInfo `json:"client_info,omitempty"`
 
 	ServerInfo *TraceTopologyLineInfo `json:"server_info,omitempty"`
 
-	// id
+	// id。
 	Id *string `json:"id,omitempty"`
 
-	// 获取一条线的提示信息
+	// 获取一条线的提示信息。
 	Hint *string `json:"hint,omitempty"`
 }
 

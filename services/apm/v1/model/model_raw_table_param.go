@@ -6,40 +6,40 @@ import (
 	"strings"
 )
 
-// 获取原始数据表格入参
+// 获取原始数据表格入参。
 type RawTableParam struct {
 
-	// 上一次扫描的数据ID
+	// 上一次扫描的数据ID。
 	LastRowId *string `json:"lastRowId,omitempty"`
 
-	ViewConfig *RawTableView `json:"view_config,omitempty"`
+	ViewConfig *RawTableView `json:"view_config"`
 
-	// 当前页码
-	Page *int32 `json:"page,omitempty"`
+	// 当前页码。
+	Page int32 `json:"page"`
 
-	// 每页数据总数
-	PageSize *int32 `json:"page_size,omitempty"`
+	// 每页数据总数。
+	PageSize int32 `json:"page_size"`
 
-	// 排序
+	// 排序。
 	OrderBy *string `json:"order_by,omitempty"`
 
-	// 搜索关键字
-	SearchWord *string `json:"search_word,omitempty"`
+	// 搜索关键字。
+	SearchWord string `json:"search_word"`
 
-	// 实例id
-	InstanceId *int64 `json:"instance_id,omitempty"`
+	// 实例id。
+	InstanceId int64 `json:"instance_id"`
 
-	// 监控项id
-	MonitorItemId *int64 `json:"monitor_item_id,omitempty"`
+	// 监控项id。
+	MonitorItemId int64 `json:"monitor_item_id"`
 
-	// 环境id
-	EnvId *int64 `json:"env_id,omitempty"`
+	// 环境id。
+	EnvId int64 `json:"env_id"`
 
-	// 开始时间
-	StartTime *string `json:"start_time,omitempty"`
+	// 开始时间。
+	StartTime string `json:"start_time"`
 
-	// 结束时间
-	EndTime *string `json:"end_time,omitempty"`
+	// 结束时间。
+	EndTime string `json:"end_time"`
 }
 
 func (o RawTableParam) String() string {

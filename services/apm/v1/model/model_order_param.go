@@ -10,8 +10,11 @@ import (
 )
 
 type OrderParam struct {
+
+	// timeUsed：响应时间，startTime：产生时间。
 	Field *string `json:"field,omitempty"`
 
+	// ASC：正序，DESC：逆序。
 	Order *OrderParamOrder `json:"order,omitempty"`
 }
 

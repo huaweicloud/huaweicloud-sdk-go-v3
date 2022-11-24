@@ -61,9 +61,6 @@ type TaskBasicRsp struct {
 
 	// 任务标签,只能包含字母、数字、中划线、下划线
 	TaskTag *string `json:"task_tag,omitempty"`
-
-	// 任务的创建者
-	CreatedBy *string `json:"created_by,omitempty"`
 }
 
 func (o TaskBasicRsp) String() string {

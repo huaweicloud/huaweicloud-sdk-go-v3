@@ -6,23 +6,23 @@ import (
 	"strings"
 )
 
-// 查询趋势图入参
+// 查询趋势图入参。
 type TrendParam struct {
 	ViewConfig *TrendView `json:"view_config,omitempty"`
 
-	// 实例id
+	// 实例id。
 	InstanceId *int64 `json:"instance_id,omitempty"`
 
-	// 监控项id
+	// 监控项id。
 	MonitorItemId *int64 `json:"monitor_item_id,omitempty"`
 
-	// 环境id
+	// 环境id。
 	EnvId *int64 `json:"env_id,omitempty"`
 
-	// 开始时间
+	// 开始时间。
 	StartTime *string `json:"start_time,omitempty"`
 
-	// 结束时间
+	// 结束时间。
 	EndTime *string `json:"end_time,omitempty"`
 }
 

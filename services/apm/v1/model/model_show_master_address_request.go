@@ -9,7 +9,7 @@ import (
 // Request Object
 type ShowMasterAddressRequest struct {
 
-	// region英文名称
+	// region英文名称。
 	RegionName string `json:"region_name"`
 }
 

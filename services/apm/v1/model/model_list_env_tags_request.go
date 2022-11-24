@@ -9,7 +9,7 @@ import (
 // Request Object
 type ListEnvTagsRequest struct {
 
-	// 应用id
+	// 应用id。
 	XBusinessId int64 `json:"x-business-id"`
 
 	Body *TagParam `json:"body,omitempty"`

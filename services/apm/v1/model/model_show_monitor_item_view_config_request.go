@@ -9,10 +9,10 @@ import (
 // Request Object
 type ShowMonitorItemViewConfigRequest struct {
 
-	// 环境id
+	// 环境id。
 	EnvId int64 `json:"env_id"`
 
-	// 采集器id
+	// 采集器id。
 	CollectorId int64 `json:"collector_id"`
 
 	// 应用id。

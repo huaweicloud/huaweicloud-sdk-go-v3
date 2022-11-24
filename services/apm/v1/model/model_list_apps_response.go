@@ -9,7 +9,7 @@ import (
 // Response Object
 type ListAppsResponse struct {
 
-	// 组件信息列表
+	// 组件信息列表。
 	Apps           *[]AppNodeModel `json:"apps,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }

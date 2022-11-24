@@ -63,6 +63,28 @@ func (c *AosClient) CreateExecutionPlanInvoker(request *model.CreateExecutionPla
 	return &CreateExecutionPlanInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteStack 删除堆栈
+//
+// 删除堆栈
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *AosClient) DeleteStack(request *model.DeleteStackRequest) (*model.DeleteStackResponse, error) {
+	requestDef := GenReqDefForDeleteStack()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteStackResponse), nil
+	}
+}
+
+// DeleteStackInvoker 删除堆栈
+func (c *AosClient) DeleteStackInvoker(request *model.DeleteStackRequest) *DeleteStackInvoker {
+	requestDef := GenReqDefForDeleteStack()
+	return &DeleteStackInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // EstimateExecutionPlanPrice 预估执行计划的价格
 //
 // 预估执行计划的价格
@@ -129,6 +151,28 @@ func (c *AosClient) ListExecutionPlansInvoker(request *model.ListExecutionPlansR
 	return &ListExecutionPlansInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListStackEvents 获取栈的细节更新状态
+//
+// 获取栈的细节更新状态，可以获取整个栈从生成到当前时间点的所有状态
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *AosClient) ListStackEvents(request *model.ListStackEventsRequest) (*model.ListStackEventsResponse, error) {
+	requestDef := GenReqDefForListStackEvents()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListStackEventsResponse), nil
+	}
+}
+
+// ListStackEventsInvoker 获取栈的细节更新状态
+func (c *AosClient) ListStackEventsInvoker(request *model.ListStackEventsRequest) *ListStackEventsInvoker {
+	requestDef := GenReqDefForListStackEvents()
+	return &ListStackEventsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListStackOutputs 列举堆栈的输出
 //
 // 列举堆栈的输出
@@ -149,6 +193,28 @@ func (c *AosClient) ListStackOutputs(request *model.ListStackOutputsRequest) (*m
 func (c *AosClient) ListStackOutputsInvoker(request *model.ListStackOutputsRequest) *ListStackOutputsInvoker {
 	requestDef := GenReqDefForListStackOutputs()
 	return &ListStackOutputsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListStackResources 获取堆栈的资源列表
+//
+// 获取堆栈的资源列表，可以获取整个栈从生成到当前时间点的所有状态
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *AosClient) ListStackResources(request *model.ListStackResourcesRequest) (*model.ListStackResourcesResponse, error) {
+	requestDef := GenReqDefForListStackResources()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListStackResourcesResponse), nil
+	}
+}
+
+// ListStackResourcesInvoker 获取堆栈的资源列表
+func (c *AosClient) ListStackResourcesInvoker(request *model.ListStackResourcesRequest) *ListStackResourcesInvoker {
+	requestDef := GenReqDefForListStackResources()
+	return &ListStackResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ParseTemplateVariables 此命令用于解析模板参数

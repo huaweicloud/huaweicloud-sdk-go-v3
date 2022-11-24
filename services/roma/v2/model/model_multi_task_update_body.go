@@ -18,10 +18,10 @@ type MultiTaskUpdateBody struct {
 	TaskTag *string `json:"task_tag,omitempty"`
 
 	// 需要支持的操作类型，支持多选，至少需要选择以下一种： - INSERT - UPDATE - DELETE
-	OperationTypes *[]MultiTaskUpdateBodyOperationTypes `json:"operation_types,omitempty"`
+	OperationTypes []MultiTaskUpdateBodyOperationTypes `json:"operation_types"`
 
 	// 是否同步已有数据，仅在编辑任务时生效
-	RepullingSnapshot *bool `json:"repulling_snapshot,omitempty"`
+	RepullingSnapshot bool `json:"repulling_snapshot"`
 }
 
 func (o MultiTaskUpdateBody) String() string {

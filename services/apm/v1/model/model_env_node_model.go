@@ -6,40 +6,40 @@ import (
 	"strings"
 )
 
-// 环境信息
+// 环境信息。
 type EnvNodeModel struct {
 
-	// 环境id
+	// 环境id。
 	Id *int64 `json:"id,omitempty"`
 
-	// 创建时间
+	// 创建时间。
 	GmtCreate *string `json:"gmt_create,omitempty"`
 
-	// 修改时间
+	// 修改时间。
 	GmtModify *string `json:"gmt_modify,omitempty"`
 
-	// 组件id
+	// 组件id。
 	AppId *int64 `json:"app_id,omitempty"`
 
-	// 应用名称
+	// 应用名称。
 	BusinessName *string `json:"business_name,omitempty"`
 
-	// 租户id
+	// 租户id。
 	InnerDomainId *int32 `json:"inner_domain_id,omitempty"`
 
-	// 环境名称
+	// 环境名称。
 	Name *string `json:"name,omitempty"`
 
-	// 是否是默认环境
+	// 是否是默认环境。
 	IsDefault *bool `json:"is_default,omitempty"`
 
-	// 组件名称
+	// 组件名称。
 	AppName *string `json:"app_name,omitempty"`
 
-	// 应用id
+	// 应用id。
 	BusinessId *int64 `json:"business_id,omitempty"`
 
-	// 区域
+	// 区域。
 	Region *string `json:"region,omitempty"`
 }
 

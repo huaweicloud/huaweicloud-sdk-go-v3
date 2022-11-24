@@ -9,7 +9,7 @@ import (
 // Request Object
 type SearchApplicationRequest struct {
 
-	// 应用id
+	// 应用id。
 	XBusinessId int64 `json:"x-business-id"`
 
 	Body *AppSearchParam `json:"body,omitempty"`

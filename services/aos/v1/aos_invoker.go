@@ -29,6 +29,18 @@ func (i *CreateExecutionPlanInvoker) Invoke() (*model.CreateExecutionPlanRespons
 	}
 }
 
+type DeleteStackInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteStackInvoker) Invoke() (*model.DeleteStackResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteStackResponse), nil
+	}
+}
+
 type EstimateExecutionPlanPriceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -65,6 +77,18 @@ func (i *ListExecutionPlansInvoker) Invoke() (*model.ListExecutionPlansResponse,
 	}
 }
 
+type ListStackEventsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListStackEventsInvoker) Invoke() (*model.ListStackEventsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListStackEventsResponse), nil
+	}
+}
+
 type ListStackOutputsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -74,6 +98,18 @@ func (i *ListStackOutputsInvoker) Invoke() (*model.ListStackOutputsResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ListStackOutputsResponse), nil
+	}
+}
+
+type ListStackResourcesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListStackResourcesInvoker) Invoke() (*model.ListStackResourcesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListStackResourcesResponse), nil
 	}
 }
 

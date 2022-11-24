@@ -217,6 +217,50 @@ func (c *DdsClient) CheckWeakPasswordInvoker(request *model.CheckWeakPasswordReq
 	return &CheckWeakPasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CompareConfiguration 参数模板比较
+//
+// 比较两个参数模板之间的差异。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DdsClient) CompareConfiguration(request *model.CompareConfigurationRequest) (*model.CompareConfigurationResponse, error) {
+	requestDef := GenReqDefForCompareConfiguration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CompareConfigurationResponse), nil
+	}
+}
+
+// CompareConfigurationInvoker 参数模板比较
+func (c *DdsClient) CompareConfigurationInvoker(request *model.CompareConfigurationRequest) *CompareConfigurationInvoker {
+	requestDef := GenReqDefForCompareConfiguration()
+	return &CompareConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CopyConfiguration 复制参数模板
+//
+// 复制参数模板。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DdsClient) CopyConfiguration(request *model.CopyConfigurationRequest) (*model.CopyConfigurationResponse, error) {
+	requestDef := GenReqDefForCopyConfiguration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CopyConfigurationResponse), nil
+	}
+}
+
+// CopyConfigurationInvoker 复制参数模板
+func (c *DdsClient) CopyConfigurationInvoker(request *model.CopyConfigurationRequest) *CopyConfigurationInvoker {
+	requestDef := GenReqDefForCopyConfiguration()
+	return &CopyConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateConfiguration 创建参数模板
 //
 // 创建参数模板。
@@ -567,6 +611,28 @@ func (c *DdsClient) ExpandReplicasetNode(request *model.ExpandReplicasetNodeRequ
 func (c *DdsClient) ExpandReplicasetNodeInvoker(request *model.ExpandReplicasetNodeRequest) *ExpandReplicasetNodeInvoker {
 	requestDef := GenReqDefForExpandReplicasetNode()
 	return &ExpandReplicasetNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAppliedInstances 查询可应用的实例
+//
+// 查询指定参数模板可被应用的实例。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DdsClient) ListAppliedInstances(request *model.ListAppliedInstancesRequest) (*model.ListAppliedInstancesResponse, error) {
+	requestDef := GenReqDefForListAppliedInstances()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAppliedInstancesResponse), nil
+	}
+}
+
+// ListAppliedInstancesInvoker 查询可应用的实例
+func (c *DdsClient) ListAppliedInstancesInvoker(request *model.ListAppliedInstancesRequest) *ListAppliedInstancesInvoker {
+	requestDef := GenReqDefForListAppliedInstances()
+	return &ListAppliedInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListAuditlogLinks 获取审计日志下载链接
@@ -1075,6 +1141,28 @@ func (c *DdsClient) ListStorageTypeInvoker(request *model.ListStorageTypeRequest
 	return &ListStorageTypeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListTasks 查询任务列表和详情
+//
+// 根据指定条件查询任务中心中的任务列表和详情。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DdsClient) ListTasks(request *model.ListTasksRequest) (*model.ListTasksResponse, error) {
+	requestDef := GenReqDefForListTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTasksResponse), nil
+	}
+}
+
+// ListTasksInvoker 查询任务列表和详情
+func (c *DdsClient) ListTasksInvoker(request *model.ListTasksRequest) *ListTasksInvoker {
+	requestDef := GenReqDefForListTasks()
+	return &ListTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // MigrateAz 实例可用区迁移
 //
 // 实例可用区迁移。
@@ -1095,6 +1183,28 @@ func (c *DdsClient) MigrateAz(request *model.MigrateAzRequest) (*model.MigrateAz
 func (c *DdsClient) MigrateAzInvoker(request *model.MigrateAzRequest) *MigrateAzInvoker {
 	requestDef := GenReqDefForMigrateAz()
 	return &MigrateAzInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ResetConfiguration 重置参数模板
+//
+// 重置参数模板。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DdsClient) ResetConfiguration(request *model.ResetConfigurationRequest) (*model.ResetConfigurationResponse, error) {
+	requestDef := GenReqDefForResetConfiguration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ResetConfigurationResponse), nil
+	}
+}
+
+// ResetConfigurationInvoker 重置参数模板
+func (c *DdsClient) ResetConfigurationInvoker(request *model.ResetConfigurationRequest) *ResetConfigurationInvoker {
+	requestDef := GenReqDefForResetConfiguration()
+	return &ResetConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ResetPassword 修改数据库用户密码
@@ -1425,6 +1535,50 @@ func (c *DdsClient) ShowBackupPolicy(request *model.ShowBackupPolicyRequest) (*m
 func (c *DdsClient) ShowBackupPolicyInvoker(request *model.ShowBackupPolicyRequest) *ShowBackupPolicyInvoker {
 	requestDef := GenReqDefForShowBackupPolicy()
 	return &ShowBackupPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowConfigurationAppliedHistory 查询参数模板被应用历史
+//
+// 查询参数模板应用历史
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DdsClient) ShowConfigurationAppliedHistory(request *model.ShowConfigurationAppliedHistoryRequest) (*model.ShowConfigurationAppliedHistoryResponse, error) {
+	requestDef := GenReqDefForShowConfigurationAppliedHistory()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowConfigurationAppliedHistoryResponse), nil
+	}
+}
+
+// ShowConfigurationAppliedHistoryInvoker 查询参数模板被应用历史
+func (c *DdsClient) ShowConfigurationAppliedHistoryInvoker(request *model.ShowConfigurationAppliedHistoryRequest) *ShowConfigurationAppliedHistoryInvoker {
+	requestDef := GenReqDefForShowConfigurationAppliedHistory()
+	return &ShowConfigurationAppliedHistoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowConfigurationModifyHistory 查询参数模板修改历史
+//
+// 查询参数模板修改历史。
+//
+// 详细说明请参考华为云API Explorer。
+// Please refer to Huawei cloud API Explorer for details.
+func (c *DdsClient) ShowConfigurationModifyHistory(request *model.ShowConfigurationModifyHistoryRequest) (*model.ShowConfigurationModifyHistoryResponse, error) {
+	requestDef := GenReqDefForShowConfigurationModifyHistory()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowConfigurationModifyHistoryResponse), nil
+	}
+}
+
+// ShowConfigurationModifyHistoryInvoker 查询参数模板修改历史
+func (c *DdsClient) ShowConfigurationModifyHistoryInvoker(request *model.ShowConfigurationModifyHistoryRequest) *ShowConfigurationModifyHistoryInvoker {
+	requestDef := GenReqDefForShowConfigurationModifyHistory()
+	return &ShowConfigurationModifyHistoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowConfigurationParameter 获取参数模板的详情

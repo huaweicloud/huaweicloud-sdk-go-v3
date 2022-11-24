@@ -62,6 +62,9 @@ type NodeSpec struct {
 
 	Runtime *Runtime `json:"runtime,omitempty"`
 
+	// 自定义初始化标记。CCE节点在初始化完成之前，会打上初始化未完成污点（node.cloudprovider.kubernetes.io/uninitialized）防止pod调度到节点上。cce支持自定义初始化标记，在接收到initializedConditions参数后，会将参数值转换成节点标签，随节点下发，例如：cloudprovider.openvessel.io/inject-initialized-conditions=CCEInitial_CustomedInitial。当节点上设置了此标签，会轮询节点的status.Conditions，查看conditions的type是否存在标记名，如CCEInitial、CustomedInitial标记，如果存在所有传入的标记，且状态为True，认为节点初始化完成，则移除初始化污点。 - 必须以字母、数字组成，长度范围1-20位。 - 标记数量不超过2个
+	InitializedConditions *[]string `json:"initializedConditions,omitempty"`
+
 	ExtendParam *NodeExtendParam `json:"extendParam,omitempty"`
 }
 

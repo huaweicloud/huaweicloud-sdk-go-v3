@@ -6,46 +6,46 @@ import (
 	"strings"
 )
 
-// 监控项数据结构
+// 监控项数据结构。
 type MonitorItem struct {
 
-	// 监控项id
+	// 监控项id。
 	Id *int64 `json:"id,omitempty"`
 
-	// 环境id
+	// 环境id。
 	EnvId *int64 `json:"env_id,omitempty"`
 
-	// 采集器id
+	// 采集器id。
 	CollectorId *int32 `json:"collector_id,omitempty"`
 
-	// 采集器名称
+	// 采集器名称。
 	CollectorName *string `json:"collector_name,omitempty"`
 
-	// 采集器展示名称
+	// 采集器展示名称。
 	DisplayName *string `json:"display_name,omitempty"`
 
-	// 采集间隔
+	// 采集间隔。
 	CollectInterval *int32 `json:"collect_interval,omitempty"`
 
-	// 是否禁用
+	// 是否禁用。
 	Disabled *bool `json:"disabled,omitempty"`
 
-	// 修改采集状态用户id
+	// 修改采集状态用户id。
 	StatusChangeUserId *string `json:"status_change_user_id,omitempty"`
 
-	// 修改采集状态用户名称
+	// 修改采集状态用户名称。
 	StatusChangeUserName *string `json:"status_change_user_name,omitempty"`
 
-	// 修改采集状态时间
+	// 修改采集状态时间。
 	StatusChangeTime *string `json:"status_change_time,omitempty"`
 
-	// 修改采集配置用户id
+	// 修改采集配置用户id。
 	ConfigChangeUserId *string `json:"config_change_user_id,omitempty"`
 
-	// 修改采集配置用户名称
+	// 修改采集配置用户名称。
 	ConfigChangeUserName *string `json:"config_change_user_name,omitempty"`
 
-	// 修改采集配置时间
+	// 修改采集配置时间。
 	ConfigChangeTime *string `json:"config_change_time,omitempty"`
 }
 

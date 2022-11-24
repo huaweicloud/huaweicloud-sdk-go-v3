@@ -41,6 +41,18 @@ func (i *CheckDisasterRecoveryOperationInvoker) Invoke() (*model.CheckDisasterRe
 	}
 }
 
+type CreateColdVolumeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateColdVolumeInvoker) Invoke() (*model.CreateColdVolumeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateColdVolumeResponse), nil
+	}
+}
+
 type CreateConfigurationInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -281,6 +293,18 @@ func (i *ListSlowLogsInvoker) Invoke() (*model.ListSlowLogsResponse, error) {
 	}
 }
 
+type ModifyPublicIpInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifyPublicIpInvoker) Invoke() (*model.ModifyPublicIpResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifyPublicIpResponse), nil
+	}
+}
+
 type ResetPasswordInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -290,6 +314,18 @@ func (i *ResetPasswordInvoker) Invoke() (*model.ResetPasswordResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ResetPasswordResponse), nil
+	}
+}
+
+type ResizeColdVolumeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ResizeColdVolumeInvoker) Invoke() (*model.ResizeColdVolumeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ResizeColdVolumeResponse), nil
 	}
 }
 
@@ -317,6 +353,18 @@ func (i *ResizeInstanceVolumeInvoker) Invoke() (*model.ResizeInstanceVolumeRespo
 	}
 }
 
+type RestartInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RestartInstanceInvoker) Invoke() (*model.RestartInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RestartInstanceResponse), nil
+	}
+}
+
 type RestoreExistingInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -329,6 +377,18 @@ func (i *RestoreExistingInstanceInvoker) Invoke() (*model.RestoreExistingInstanc
 	}
 }
 
+type SetAutoEnlargePolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetAutoEnlargePolicyInvoker) Invoke() (*model.SetAutoEnlargePolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetAutoEnlargePolicyResponse), nil
+	}
+}
+
 type SetBackupPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -338,6 +398,30 @@ func (i *SetBackupPolicyInvoker) Invoke() (*model.SetBackupPolicyResponse, error
 		return nil, err
 	} else {
 		return result.(*model.SetBackupPolicyResponse), nil
+	}
+}
+
+type ShowApplicableInstancesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowApplicableInstancesInvoker) Invoke() (*model.ShowApplicableInstancesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowApplicableInstancesResponse), nil
+	}
+}
+
+type ShowApplyHistoryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowApplyHistoryInvoker) Invoke() (*model.ShowApplyHistoryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowApplyHistoryResponse), nil
 	}
 }
 
@@ -389,6 +473,18 @@ func (i *ShowInstanceRoleInvoker) Invoke() (*model.ShowInstanceRoleResponse, err
 	}
 }
 
+type ShowModifyHistoryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowModifyHistoryInvoker) Invoke() (*model.ShowModifyHistoryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowModifyHistoryResponse), nil
+	}
+}
+
 type ShowQuotasInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -422,6 +518,18 @@ func (i *ShrinkInstanceNodeInvoker) Invoke() (*model.ShrinkInstanceNodeResponse,
 		return nil, err
 	} else {
 		return result.(*model.ShrinkInstanceNodeResponse), nil
+	}
+}
+
+type SwitchSslInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SwitchSslInvoker) Invoke() (*model.SwitchSslResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SwitchSslResponse), nil
 	}
 }
 

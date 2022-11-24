@@ -13,18 +13,15 @@ import (
 type DatasourceInfo struct {
 
 	// 数据源名称，数据源名称不能包含&、<、>、\"、'、(、) ，长度为1~255字符
-	DatasourceName *string `json:"datasource_name,omitempty"`
+	DatasourceName string `json:"datasource_name"`
 
 	// 数据源类型 - DWS - MYSQL - KAFKA - API - OBS - SAP - MRSHBASE - MRSHDFS - MRSHIVE - WEBSOCKET - SQLSERVER - ORACLE - POSTGRESQL - REDIS - MONGODB - DIS - HL7 - RABBITMQ - SNMP - IBMMQ - CUSTOMIZED (自定义类型) - ACTIVEMQ - ARTEMISMQ - FTP - HIVE - HANA - FIKAFKA - MRSKAFKA - FIHDFS - FIHIVE - GAUSS200 - GAUSS100 - LDAP - DB2 - TAURUS
-	DatasourceType *DatasourceInfoDatasourceType `json:"datasource_type,omitempty"`
+	DatasourceType DatasourceInfoDatasourceType `json:"datasource_type"`
 
 	// 数据源所属应用ID
-	AppId *string `json:"app_id,omitempty"`
+	AppId string `json:"app_id"`
 
-	// 数据源所属连接器Id，自定义数据源必填
-	CustomPluginId *string `json:"custom_plugin_id,omitempty"`
-
-	Content *Content `json:"content,omitempty"`
+	Content *Content `json:"content"`
 
 	// 数据源描述
 	Description *string `json:"description,omitempty"`

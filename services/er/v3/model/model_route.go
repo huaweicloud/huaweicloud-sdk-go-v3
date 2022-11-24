@@ -13,7 +13,7 @@ type Route struct {
 	// 路由id
 	Id string `json:"id"`
 
-	// 路由表类型，只支持static和propagated
+	// 路由类型
 	Type string `json:"type"`
 
 	// 路由状态

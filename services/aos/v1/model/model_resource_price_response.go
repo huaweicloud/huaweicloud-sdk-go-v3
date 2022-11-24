@@ -15,13 +15,13 @@ type ResourcePriceResponse struct {
 	// 计费模式，包周期计费、按需计费、免费的返回，不支持的资源不返回 PRE_PAID 包周期计费 POST_PAID 按需计费 FREE 免费
 	ChargeMode *ResourcePriceResponseChargeMode `json:"charge_mode,omitempty"`
 
-	// 执行计划中的每个资源部署后最终优惠后的金额，保留小数点后2位，向下取整，默认单位是元
+	// 执行计划中的每个资源部署后最终优惠后的金额（只考虑商务折扣以及伙伴折扣，不包含促销折扣及优惠券），保留小数点后2位，向上取整，默认单位是元
 	SalePrice *interface{} `json:"sale_price,omitempty"`
 
-	// 执行计划中的每个资源部署后的优惠额，保留小数点后2位，向下取整，默认单位是元
+	// 执行计划中的每个资源部署后的优惠额，保留小数点后2位，向上取整，默认单位是元
 	Discount *interface{} `json:"discount,omitempty"`
 
-	// 执行计划中的每个资源部署后的原价，保留小数点后2位，向下取整，默认单位是元
+	// 执行计划中的每个资源部署后的原价，保留小数点后2位，向上取整，默认单位是元
 	OriginalPrice *interface{} `json:"original_price,omitempty"`
 
 	// 包周期和按需的计费单位，包周期计费和按需计费返回，免费不会返回 HOUR：小时，包周期计费和按需计费返回，免费不会返回 DAY：天，包周期计费返回，按需计费和免费不会返回 WEEK：周，包周期计费返回，按需计费和免费不会返回 MONTH：月，包周期计费返回，按需计费和免费不会返回 YEAR：年，包周期计费返回，按需计费和免费不会返回 BYTE：字节，按需计费返回，包周期计费和免费不会返回 MB：百万字节，按需计费返回，包周期计费和免费不会返回 GB：千兆字节，按需计费返回，包周期计费和免费不会返回

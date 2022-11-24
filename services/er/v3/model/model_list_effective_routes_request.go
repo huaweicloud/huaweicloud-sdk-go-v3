@@ -24,7 +24,7 @@ type ListEffectiveRoutesRequest struct {
 	// 路由目的地址
 	Destination *[]string `json:"destination,omitempty"`
 
-	// 连接资源类型:vpc|vpn|vgw|peering|can|gdgw
+	// 连接资源类型:vpc|vpn|vgw|peering
 	ResourceType *[]ListEffectiveRoutesRequestResourceType `json:"resource_type,omitempty"`
 }
 

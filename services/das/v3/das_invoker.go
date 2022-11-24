@@ -29,6 +29,18 @@ func (i *ShowApiVersionInvoker) Invoke() (*model.ShowApiVersionResponse, error) 
 	}
 }
 
+type ChangeSqlLimitSwitchStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeSqlLimitSwitchStatusInvoker) Invoke() (*model.ChangeSqlLimitSwitchStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeSqlLimitSwitchStatusResponse), nil
+	}
+}
+
 type ChangeSqlSwitchInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -50,6 +62,18 @@ func (i *CreateSpaceAnalysisTaskInvoker) Invoke() (*model.CreateSpaceAnalysisTas
 		return nil, err
 	} else {
 		return result.(*model.CreateSpaceAnalysisTaskResponse), nil
+	}
+}
+
+type CreateSqlLimitRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSqlLimitRulesInvoker) Invoke() (*model.CreateSqlLimitRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSqlLimitRulesResponse), nil
 	}
 }
 
@@ -77,6 +101,18 @@ func (i *DeleteProcessInvoker) Invoke() (*model.DeleteProcessResponse, error) {
 	}
 }
 
+type DeleteSqlLimitRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteSqlLimitRulesInvoker) Invoke() (*model.DeleteSqlLimitRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteSqlLimitRulesResponse), nil
+	}
+}
+
 type ExportSlowQueryLogsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -89,6 +125,18 @@ func (i *ExportSlowQueryLogsInvoker) Invoke() (*model.ExportSlowQueryLogsRespons
 	}
 }
 
+type ExportSlowSqlTemplatesDetailsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExportSlowSqlTemplatesDetailsInvoker) Invoke() (*model.ExportSlowSqlTemplatesDetailsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExportSlowSqlTemplatesDetailsResponse), nil
+	}
+}
+
 type ExportSqlStatementsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -98,6 +146,30 @@ func (i *ExportSqlStatementsInvoker) Invoke() (*model.ExportSqlStatementsRespons
 		return nil, err
 	} else {
 		return result.(*model.ExportSqlStatementsResponse), nil
+	}
+}
+
+type ExportTopSqlTemplatesDetailsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExportTopSqlTemplatesDetailsInvoker) Invoke() (*model.ExportTopSqlTemplatesDetailsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExportTopSqlTemplatesDetailsResponse), nil
+	}
+}
+
+type ExportTopSqlTrendDetailsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExportTopSqlTrendDetailsInvoker) Invoke() (*model.ExportTopSqlTrendDetailsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExportTopSqlTrendDetailsResponse), nil
 	}
 }
 
@@ -161,6 +233,18 @@ func (i *ListSpaceAnalysisInvoker) Invoke() (*model.ListSpaceAnalysisResponse, e
 	}
 }
 
+type ListSqlLimitRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSqlLimitRulesInvoker) Invoke() (*model.ListSqlLimitRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSqlLimitRulesResponse), nil
+	}
+}
+
 type RegisterDbUserInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -218,6 +302,30 @@ func (i *ShowSqlExplainInvoker) Invoke() (*model.ShowSqlExplainResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.ShowSqlExplainResponse), nil
+	}
+}
+
+type ShowSqlLimitJobInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSqlLimitJobInfoInvoker) Invoke() (*model.ShowSqlLimitJobInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSqlLimitJobInfoResponse), nil
+	}
+}
+
+type ShowSqlLimitSwitchStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSqlLimitSwitchStatusInvoker) Invoke() (*model.ShowSqlLimitSwitchStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSqlLimitSwitchStatusResponse), nil
 	}
 }
 
