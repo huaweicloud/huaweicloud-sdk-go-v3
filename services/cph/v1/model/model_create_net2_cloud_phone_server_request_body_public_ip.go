@@ -10,9 +10,9 @@ import (
 type CreateNet2CloudPhoneServerRequestBodyPublicIp struct {
 
 	// 指定已有的EIP进行服务器创建，当前只支持传入一个已有的EIP ID
-	Ids []string `json:"ids"`
+	Ids *[]string `json:"ids,omitempty"`
 
-	Eip *CreateNet2CloudPhoneServerRequestBodyPublicIpEip `json:"eip"`
+	Eip *CreateNet2CloudPhoneServerRequestBodyPublicIpEip `json:"eip,omitempty"`
 }
 
 func (o CreateNet2CloudPhoneServerRequestBodyPublicIp) String() string {

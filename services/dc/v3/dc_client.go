@@ -24,8 +24,7 @@ func DcClientBuilder() *http_client.HcHttpClientBuilder {
 // 用于合作伙伴用户最终租户创建托管专线
 // 创建者必须拥有合作伙伴资质，并且已经构建好运营(hosting)专线
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DcClient) CreateHostedDirectConnect(request *model.CreateHostedDirectConnectRequest) (*model.CreateHostedDirectConnectResponse, error) {
 	requestDef := GenReqDefForCreateHostedDirectConnect()
 
@@ -46,8 +45,7 @@ func (c *DcClient) CreateHostedDirectConnectInvoker(request *model.CreateHostedD
 //
 // 删除物理连接，本接口只适用于按需计费物理专线，对于包周期购买的专线通过订单退订的方式删除物理连接
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DcClient) DeleteDirectConnect(request *model.DeleteDirectConnectRequest) (*model.DeleteDirectConnectResponse, error) {
 	requestDef := GenReqDefForDeleteDirectConnect()
 
@@ -68,8 +66,7 @@ func (c *DcClient) DeleteDirectConnectInvoker(request *model.DeleteDirectConnect
 //
 // 合作伙伴删除托管专线
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DcClient) DeleteHostedDirectConnect(request *model.DeleteHostedDirectConnectRequest) (*model.DeleteHostedDirectConnectResponse, error) {
 	requestDef := GenReqDefForDeleteHostedDirectConnect()
 
@@ -90,8 +87,7 @@ func (c *DcClient) DeleteHostedDirectConnectInvoker(request *model.DeleteHostedD
 //
 // 查询租户创建的所有的direct connect对象.
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DcClient) ListDirectConnects(request *model.ListDirectConnectsRequest) (*model.ListDirectConnectsResponse, error) {
 	requestDef := GenReqDefForListDirectConnects()
 
@@ -112,8 +108,7 @@ func (c *DcClient) ListDirectConnectsInvoker(request *model.ListDirectConnectsRe
 //
 // 查询合作伙伴创建的托管专线连接列表.
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DcClient) ListHostedDirectConnects(request *model.ListHostedDirectConnectsRequest) (*model.ListHostedDirectConnectsResponse, error) {
 	requestDef := GenReqDefForListHostedDirectConnects()
 
@@ -134,8 +129,7 @@ func (c *DcClient) ListHostedDirectConnectsInvoker(request *model.ListHostedDire
 //
 // 查询物理连接详细信息.
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DcClient) ShowDirectConnect(request *model.ShowDirectConnectRequest) (*model.ShowDirectConnectResponse, error) {
 	requestDef := GenReqDefForShowDirectConnect()
 
@@ -156,8 +150,7 @@ func (c *DcClient) ShowDirectConnectInvoker(request *model.ShowDirectConnectRequ
 //
 // 查询合法作伙伴的Hosted专线类型.
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DcClient) ShowHostedDirectConnect(request *model.ShowHostedDirectConnectRequest) (*model.ShowHostedDirectConnectResponse, error) {
 	requestDef := GenReqDefForShowHostedDirectConnect()
 
@@ -178,8 +171,7 @@ func (c *DcClient) ShowHostedDirectConnectInvoker(request *model.ShowHostedDirec
 //
 // 更新物理连接信息，包括名字,描述等信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DcClient) UpdateDirectConnect(request *model.UpdateDirectConnectRequest) (*model.UpdateDirectConnectResponse, error) {
 	requestDef := GenReqDefForUpdateDirectConnect()
 
@@ -200,8 +192,7 @@ func (c *DcClient) UpdateDirectConnectInvoker(request *model.UpdateDirectConnect
 //
 // 合作伙伴创建托管专线.
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DcClient) UpdateHostedDirectConnect(request *model.UpdateHostedDirectConnectRequest) (*model.UpdateHostedDirectConnectResponse, error) {
 	requestDef := GenReqDefForUpdateHostedDirectConnect()
 
@@ -224,8 +215,7 @@ func (c *DcClient) UpdateHostedDirectConnectInvoker(request *model.UpdateHostedD
 // - 标签管理服务需要使用该接口批量管理实例的标签。
 // - 一个资源上最多有10个标签。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DcClient) BatchCreateResourceTags(request *model.BatchCreateResourceTagsRequest) (*model.BatchCreateResourceTagsResponse, error) {
 	requestDef := GenReqDefForBatchCreateResourceTags()
 
@@ -248,8 +238,7 @@ func (c *DcClient) BatchCreateResourceTagsInvoker(request *model.BatchCreateReso
 // - 此接口为幂等接口：
 // - 创建时，如果创建的标签已经存在（key相同），则覆盖。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DcClient) CreateResourceTag(request *model.CreateResourceTagRequest) (*model.CreateResourceTagResponse, error) {
 	requestDef := GenReqDefForCreateResourceTag()
 
@@ -270,8 +259,7 @@ func (c *DcClient) CreateResourceTagInvoker(request *model.CreateResourceTagRequ
 //
 // 删除时,不对标签字符集做校验，调用接口前必须要做encodeURI，服务端需要对接口uri做decodeURI。删除的key不存在报404，Key不能为空或者空字符串。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DcClient) DeleteResourceTag(request *model.DeleteResourceTagRequest) (*model.DeleteResourceTagResponse, error) {
 	requestDef := GenReqDefForDeleteResourceTag()
 
@@ -293,8 +281,7 @@ func (c *DcClient) DeleteResourceTagInvoker(request *model.DeleteResourceTagRequ
 // - 查询租户在指定Project中实例类型的所有资源标签集合。
 // - 标签管理服务需要能够列出当前租户全部已使用的资源标签集合，为各服务打资源标签和过滤实例时提供标签联想功能。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DcClient) ListProjectTags(request *model.ListProjectTagsRequest) (*model.ListProjectTagsResponse, error) {
 	requestDef := GenReqDefForListProjectTags()
 
@@ -315,8 +302,7 @@ func (c *DcClient) ListProjectTagsInvoker(request *model.ListProjectTagsRequest)
 //
 // 通过标签查询资源实例
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DcClient) ListTagResourceInstances(request *model.ListTagResourceInstancesRequest) (*model.ListTagResourceInstancesResponse, error) {
 	requestDef := GenReqDefForListTagResourceInstances()
 
@@ -337,8 +323,7 @@ func (c *DcClient) ListTagResourceInstancesInvoker(request *model.ListTagResourc
 //
 // 查询资源标签
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DcClient) ShowResourceTag(request *model.ShowResourceTagRequest) (*model.ShowResourceTagResponse, error) {
 	requestDef := GenReqDefForShowResourceTag()
 
@@ -359,8 +344,7 @@ func (c *DcClient) ShowResourceTagInvoker(request *model.ShowResourceTagRequest)
 //
 // 创建虑拟网关
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DcClient) CreateVirtualGateway(request *model.CreateVirtualGatewayRequest) (*model.CreateVirtualGatewayResponse, error) {
 	requestDef := GenReqDefForCreateVirtualGateway()
 
@@ -381,8 +365,7 @@ func (c *DcClient) CreateVirtualGatewayInvoker(request *model.CreateVirtualGatew
 //
 // 删除指定的虚拟网关
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DcClient) DeleteVirtualGateway(request *model.DeleteVirtualGatewayRequest) (*model.DeleteVirtualGatewayResponse, error) {
 	requestDef := GenReqDefForDeleteVirtualGateway()
 
@@ -403,8 +386,7 @@ func (c *DcClient) DeleteVirtualGatewayInvoker(request *model.DeleteVirtualGatew
 //
 // 查询虚拟网关列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DcClient) ListVirtualGateways(request *model.ListVirtualGatewaysRequest) (*model.ListVirtualGatewaysResponse, error) {
 	requestDef := GenReqDefForListVirtualGateways()
 
@@ -425,8 +407,7 @@ func (c *DcClient) ListVirtualGatewaysInvoker(request *model.ListVirtualGateways
 //
 // 查询指定虚拟网关的详细信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DcClient) ShowVirtualGateway(request *model.ShowVirtualGatewayRequest) (*model.ShowVirtualGatewayResponse, error) {
 	requestDef := GenReqDefForShowVirtualGateway()
 
@@ -447,8 +428,7 @@ func (c *DcClient) ShowVirtualGatewayInvoker(request *model.ShowVirtualGatewayRe
 //
 // 修改虚拟网关的信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DcClient) UpdateVirtualGateway(request *model.UpdateVirtualGatewayRequest) (*model.UpdateVirtualGatewayResponse, error) {
 	requestDef := GenReqDefForUpdateVirtualGateway()
 
@@ -469,8 +449,7 @@ func (c *DcClient) UpdateVirtualGatewayInvoker(request *model.UpdateVirtualGatew
 //
 // 虚拟接口配置物理专线上与客户互联的IP和路由等相关信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DcClient) CreateVirtualInterface(request *model.CreateVirtualInterfaceRequest) (*model.CreateVirtualInterfaceResponse, error) {
 	requestDef := GenReqDefForCreateVirtualInterface()
 
@@ -491,8 +470,7 @@ func (c *DcClient) CreateVirtualInterfaceInvoker(request *model.CreateVirtualInt
 //
 // 删除虚拟接口
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DcClient) DeleteVirtualInterface(request *model.DeleteVirtualInterfaceRequest) (*model.DeleteVirtualInterfaceResponse, error) {
 	requestDef := GenReqDefForDeleteVirtualInterface()
 
@@ -513,8 +491,7 @@ func (c *DcClient) DeleteVirtualInterfaceInvoker(request *model.DeleteVirtualInt
 //
 // 查询租户所有的虚拟接口列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DcClient) ListVirtualInterfaces(request *model.ListVirtualInterfacesRequest) (*model.ListVirtualInterfacesResponse, error) {
 	requestDef := GenReqDefForListVirtualInterfaces()
 
@@ -535,8 +512,7 @@ func (c *DcClient) ListVirtualInterfacesInvoker(request *model.ListVirtualInterf
 //
 // 查询虚拟接口详细信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DcClient) ShowVirtualInterface(request *model.ShowVirtualInterfaceRequest) (*model.ShowVirtualInterfaceResponse, error) {
 	requestDef := GenReqDefForShowVirtualInterface()
 
@@ -557,8 +533,7 @@ func (c *DcClient) ShowVirtualInterfaceInvoker(request *model.ShowVirtualInterfa
 //
 // 修改虚拟接口的详细信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DcClient) UpdateVirtualInterface(request *model.UpdateVirtualInterfaceRequest) (*model.UpdateVirtualInterfaceResponse, error) {
 	requestDef := GenReqDefForUpdateVirtualInterface()
 

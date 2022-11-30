@@ -14,6 +14,9 @@ type UrlDomainCreate struct {
 	// 最小ssl协议版本号。支持TLSv1.1或TLSv1.2
 	MinSslVersion *UrlDomainCreateMinSslVersion `json:"min_ssl_version,omitempty"`
 
+	// 是否开启http到https的重定向，false为关闭，true为开启，默认为false
+	IsHttpRedirectToHttps *bool `json:"is_http_redirect_to_https,omitempty"`
+
 	// 自定义域名。长度为0-255位的字符串，需要符合域名规范。
 	UrlDomain *string `json:"url_domain,omitempty"`
 }

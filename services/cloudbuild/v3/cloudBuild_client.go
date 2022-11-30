@@ -23,8 +23,7 @@ func CloudBuildClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 下载指定租户下的KeyStore文件
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudBuildClient) DownloadKeystore(request *model.DownloadKeystoreRequest) (*model.DownloadKeystoreResponse, error) {
 	requestDef := GenReqDefForDownloadKeystore()
 
@@ -45,8 +44,7 @@ func (c *CloudBuildClient) DownloadKeystoreInvoker(request *model.DownloadKeysto
 //
 // 执行构建任务,可传自定义参数。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudBuildClient) RunJob(request *model.RunJobRequest) (*model.RunJobResponse, error) {
 	requestDef := GenReqDefForRunJob()
 
@@ -67,8 +65,7 @@ func (c *CloudBuildClient) RunJobInvoker(request *model.RunJobRequest) *RunJobIn
 //
 // 获取构建历史详情信息接口
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudBuildClient) ShowHistoryDetails(request *model.ShowHistoryDetailsRequest) (*model.ShowHistoryDetailsResponse, error) {
 	requestDef := GenReqDefForShowHistoryDetails()
 
@@ -89,8 +86,7 @@ func (c *CloudBuildClient) ShowHistoryDetailsInvoker(request *model.ShowHistoryD
 //
 // 查看项目下用户的构建任务列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudBuildClient) ShowJobListByProjectId(request *model.ShowJobListByProjectIdRequest) (*model.ShowJobListByProjectIdResponse, error) {
 	requestDef := GenReqDefForShowJobListByProjectId()
 
@@ -111,8 +107,7 @@ func (c *CloudBuildClient) ShowJobListByProjectIdInvoker(request *model.ShowJobL
 //
 // 查看任务运行状态
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudBuildClient) ShowJobStatus(request *model.ShowJobStatusRequest) (*model.ShowJobStatusResponse, error) {
 	requestDef := GenReqDefForShowJobStatus()
 
@@ -133,8 +128,7 @@ func (c *CloudBuildClient) ShowJobStatusInvoker(request *model.ShowJobStatusRequ
 //
 // 根据开始时间和结束时间查看构建任务的构建成功率
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudBuildClient) ShowJobSuccessRatio(request *model.ShowJobSuccessRatioRequest) (*model.ShowJobSuccessRatioResponse, error) {
 	requestDef := GenReqDefForShowJobSuccessRatio()
 
@@ -155,8 +149,7 @@ func (c *CloudBuildClient) ShowJobSuccessRatioInvoker(request *model.ShowJobSucc
 //
 // 查询指定代码仓库最近一次成功的构建历史
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudBuildClient) ShowLastHistory(request *model.ShowLastHistoryRequest) (*model.ShowLastHistoryResponse, error) {
 	requestDef := GenReqDefForShowLastHistory()
 
@@ -177,8 +170,7 @@ func (c *CloudBuildClient) ShowLastHistoryInvoker(request *model.ShowLastHistory
 //
 // 查看构建任务的构建历史列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudBuildClient) ShowListHistory(request *model.ShowListHistoryRequest) (*model.ShowListHistoryResponse, error) {
 	requestDef := GenReqDefForShowListHistory()
 
@@ -199,8 +191,7 @@ func (c *CloudBuildClient) ShowListHistoryInvoker(request *model.ShowListHistory
 //
 // 根据开始时间和结束时间查看构建任务的构建历史列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudBuildClient) ShowListPeriodHistory(request *model.ShowListPeriodHistoryRequest) (*model.ShowListPeriodHistoryResponse, error) {
 	requestDef := GenReqDefForShowListPeriodHistory()
 

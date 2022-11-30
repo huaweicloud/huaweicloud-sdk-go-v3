@@ -185,6 +185,18 @@ func (i *UpdatePolicyAssignmentInvoker) Invoke() (*model.UpdatePolicyAssignmentR
 	}
 }
 
+type UpdatePolicyStateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdatePolicyStateInvoker) Invoke() (*model.UpdatePolicyStateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdatePolicyStateResponse), nil
+	}
+}
+
 type CreateStoredQueryInvoker struct {
 	*invoker.BaseInvoker
 }

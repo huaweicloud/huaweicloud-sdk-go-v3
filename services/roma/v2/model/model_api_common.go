@@ -131,7 +131,7 @@ type ApiCommon struct {
 	// API的后端参数列表
 	BackendParams *[]BackendParam `json:"backend_params,omitempty"`
 
-	// [函数工作流策略后端列表](tag:hws;hws_hk;hcs;fcs;g42;)[暂不支持](tag:Site)
+	// [函数工作流策略后端列表](tag:hws,hws_hk,hcs,fcs,g42)[暂不支持](tag:Site)
 	PolicyFunctions *[]ApiPolicyFunctionResp `json:"policy_functions,omitempty"`
 
 	// mock策略后端列表

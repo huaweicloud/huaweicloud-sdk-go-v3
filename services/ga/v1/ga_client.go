@@ -23,8 +23,7 @@ func GaClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 创建全球加速器
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) CreateAccelerator(request *model.CreateAcceleratorRequest) (*model.CreateAcceleratorResponse, error) {
 	requestDef := GenReqDefForCreateAccelerator()
 
@@ -45,8 +44,7 @@ func (c *GaClient) CreateAcceleratorInvoker(request *model.CreateAcceleratorRequ
 //
 // 删除全球加速器。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) DeleteAccelerator(request *model.DeleteAcceleratorRequest) (*model.DeleteAcceleratorResponse, error) {
 	requestDef := GenReqDefForDeleteAccelerator()
 
@@ -67,8 +65,7 @@ func (c *GaClient) DeleteAcceleratorInvoker(request *model.DeleteAcceleratorRequ
 //
 // 查询全球加速器列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) ListAccelerators(request *model.ListAcceleratorsRequest) (*model.ListAcceleratorsResponse, error) {
 	requestDef := GenReqDefForListAccelerators()
 
@@ -89,8 +86,7 @@ func (c *GaClient) ListAcceleratorsInvoker(request *model.ListAcceleratorsReques
 //
 // 查询全球加速器详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) ShowAccelerator(request *model.ShowAcceleratorRequest) (*model.ShowAcceleratorResponse, error) {
 	requestDef := GenReqDefForShowAccelerator()
 
@@ -111,8 +107,7 @@ func (c *GaClient) ShowAcceleratorInvoker(request *model.ShowAcceleratorRequest)
 //
 // 更新全球加速器
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) UpdateAccelerator(request *model.UpdateAcceleratorRequest) (*model.UpdateAcceleratorResponse, error) {
 	requestDef := GenReqDefForUpdateAccelerator()
 
@@ -133,8 +128,7 @@ func (c *GaClient) UpdateAcceleratorInvoker(request *model.UpdateAcceleratorRequ
 //
 // 创建终端节点
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) CreateEndpoint(request *model.CreateEndpointRequest) (*model.CreateEndpointResponse, error) {
 	requestDef := GenReqDefForCreateEndpoint()
 
@@ -155,8 +149,7 @@ func (c *GaClient) CreateEndpointInvoker(request *model.CreateEndpointRequest) *
 //
 // 删除终端节点
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) DeleteEndpoint(request *model.DeleteEndpointRequest) (*model.DeleteEndpointResponse, error) {
 	requestDef := GenReqDefForDeleteEndpoint()
 
@@ -177,8 +170,7 @@ func (c *GaClient) DeleteEndpointInvoker(request *model.DeleteEndpointRequest) *
 //
 // 查询终端节点组下终端节点列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) ListEndpoints(request *model.ListEndpointsRequest) (*model.ListEndpointsResponse, error) {
 	requestDef := GenReqDefForListEndpoints()
 
@@ -199,8 +191,7 @@ func (c *GaClient) ListEndpointsInvoker(request *model.ListEndpointsRequest) *Li
 //
 // 查询终端节点详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) ShowEndpoint(request *model.ShowEndpointRequest) (*model.ShowEndpointResponse, error) {
 	requestDef := GenReqDefForShowEndpoint()
 
@@ -221,8 +212,7 @@ func (c *GaClient) ShowEndpointInvoker(request *model.ShowEndpointRequest) *Show
 //
 // 更新终端节点
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) UpdateEndpoint(request *model.UpdateEndpointRequest) (*model.UpdateEndpointResponse, error) {
 	requestDef := GenReqDefForUpdateEndpoint()
 
@@ -243,8 +233,7 @@ func (c *GaClient) UpdateEndpointInvoker(request *model.UpdateEndpointRequest) *
 //
 // 创建终端节点组
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) CreateEndpointGroup(request *model.CreateEndpointGroupRequest) (*model.CreateEndpointGroupResponse, error) {
 	requestDef := GenReqDefForCreateEndpointGroup()
 
@@ -265,8 +254,7 @@ func (c *GaClient) CreateEndpointGroupInvoker(request *model.CreateEndpointGroup
 //
 // 删除终端节点组。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) DeleteEndpointGroup(request *model.DeleteEndpointGroupRequest) (*model.DeleteEndpointGroupResponse, error) {
 	requestDef := GenReqDefForDeleteEndpointGroup()
 
@@ -287,8 +275,7 @@ func (c *GaClient) DeleteEndpointGroupInvoker(request *model.DeleteEndpointGroup
 //
 // 查询终端节点组列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) ListEndpointGroups(request *model.ListEndpointGroupsRequest) (*model.ListEndpointGroupsResponse, error) {
 	requestDef := GenReqDefForListEndpointGroups()
 
@@ -309,8 +296,7 @@ func (c *GaClient) ListEndpointGroupsInvoker(request *model.ListEndpointGroupsRe
 //
 // 查询终端节点组详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) ShowEndpointGroup(request *model.ShowEndpointGroupRequest) (*model.ShowEndpointGroupResponse, error) {
 	requestDef := GenReqDefForShowEndpointGroup()
 
@@ -331,8 +317,7 @@ func (c *GaClient) ShowEndpointGroupInvoker(request *model.ShowEndpointGroupRequ
 //
 // 更新终端节点组
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) UpdateEndpointGroup(request *model.UpdateEndpointGroupRequest) (*model.UpdateEndpointGroupResponse, error) {
 	requestDef := GenReqDefForUpdateEndpointGroup()
 
@@ -353,8 +338,7 @@ func (c *GaClient) UpdateEndpointGroupInvoker(request *model.UpdateEndpointGroup
 //
 // 创建健康检查
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) CreateHealthCheck(request *model.CreateHealthCheckRequest) (*model.CreateHealthCheckResponse, error) {
 	requestDef := GenReqDefForCreateHealthCheck()
 
@@ -375,8 +359,7 @@ func (c *GaClient) CreateHealthCheckInvoker(request *model.CreateHealthCheckRequ
 //
 // 删除健康检查
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) DeleteHealthCheck(request *model.DeleteHealthCheckRequest) (*model.DeleteHealthCheckResponse, error) {
 	requestDef := GenReqDefForDeleteHealthCheck()
 
@@ -397,8 +380,7 @@ func (c *GaClient) DeleteHealthCheckInvoker(request *model.DeleteHealthCheckRequ
 //
 // 查询健康检查列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) ListHealthChecks(request *model.ListHealthChecksRequest) (*model.ListHealthChecksResponse, error) {
 	requestDef := GenReqDefForListHealthChecks()
 
@@ -419,8 +401,7 @@ func (c *GaClient) ListHealthChecksInvoker(request *model.ListHealthChecksReques
 //
 // 查询健康检查详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) ShowHealthCheck(request *model.ShowHealthCheckRequest) (*model.ShowHealthCheckResponse, error) {
 	requestDef := GenReqDefForShowHealthCheck()
 
@@ -441,8 +422,7 @@ func (c *GaClient) ShowHealthCheckInvoker(request *model.ShowHealthCheckRequest)
 //
 // 更新健康检查
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) UpdateHealthCheck(request *model.UpdateHealthCheckRequest) (*model.UpdateHealthCheckResponse, error) {
 	requestDef := GenReqDefForUpdateHealthCheck()
 
@@ -463,8 +443,7 @@ func (c *GaClient) UpdateHealthCheckInvoker(request *model.UpdateHealthCheckRequ
 //
 // 创建监听器
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) CreateListener(request *model.CreateListenerRequest) (*model.CreateListenerResponse, error) {
 	requestDef := GenReqDefForCreateListener()
 
@@ -485,8 +464,7 @@ func (c *GaClient) CreateListenerInvoker(request *model.CreateListenerRequest) *
 //
 // 删除监听器
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) DeleteListener(request *model.DeleteListenerRequest) (*model.DeleteListenerResponse, error) {
 	requestDef := GenReqDefForDeleteListener()
 
@@ -507,8 +485,7 @@ func (c *GaClient) DeleteListenerInvoker(request *model.DeleteListenerRequest) *
 //
 // 查询监听器列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) ListListeners(request *model.ListListenersRequest) (*model.ListListenersResponse, error) {
 	requestDef := GenReqDefForListListeners()
 
@@ -529,8 +506,7 @@ func (c *GaClient) ListListenersInvoker(request *model.ListListenersRequest) *Li
 //
 // 查询监听器详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) ShowListener(request *model.ShowListenerRequest) (*model.ShowListenerResponse, error) {
 	requestDef := GenReqDefForShowListener()
 
@@ -551,8 +527,7 @@ func (c *GaClient) ShowListenerInvoker(request *model.ShowListenerRequest) *Show
 //
 // 更新监听器
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) UpdateListener(request *model.UpdateListenerRequest) (*model.UpdateListenerResponse, error) {
 	requestDef := GenReqDefForUpdateListener()
 
@@ -573,8 +548,7 @@ func (c *GaClient) UpdateListenerInvoker(request *model.UpdateListenerRequest) *
 //
 // 查询区域列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) ListRegions(request *model.ListRegionsRequest) (*model.ListRegionsResponse, error) {
 	requestDef := GenReqDefForListRegions()
 

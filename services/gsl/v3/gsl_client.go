@@ -23,8 +23,7 @@ func GslClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 查询后向流量池成员列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GslClient) ListBackPoolMembers(request *model.ListBackPoolMembersRequest) (*model.ListBackPoolMembersResponse, error) {
 	requestDef := GenReqDefForListBackPoolMembers()
 
@@ -45,8 +44,7 @@ func (c *GslClient) ListBackPoolMembersInvoker(request *model.ListBackPoolMember
 //
 // 查询后向流量池列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GslClient) ListBackPools(request *model.ListBackPoolsRequest) (*model.ListBackPoolsResponse, error) {
 	requestDef := GenReqDefForListBackPools()
 
@@ -67,8 +65,7 @@ func (c *GslClient) ListBackPoolsInvoker(request *model.ListBackPoolsRequest) *L
 //
 // 查询套餐列表信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GslClient) ListProPricePlans(request *model.ListProPricePlansRequest) (*model.ListProPricePlansResponse, error) {
 	requestDef := GenReqDefForListProPricePlans()
 
@@ -89,8 +86,7 @@ func (c *GslClient) ListProPricePlansInvoker(request *model.ListProPricePlansReq
 //
 // 批量设置自定义属性接口
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GslClient) BatchSetAttributes(request *model.BatchSetAttributesRequest) (*model.BatchSetAttributesResponse, error) {
 	requestDef := GenReqDefForBatchSetAttributes()
 
@@ -111,8 +107,7 @@ func (c *GslClient) BatchSetAttributesInvoker(request *model.BatchSetAttributesR
 //
 // 用户新增自定义属性接口
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GslClient) CreateAttribute(request *model.CreateAttributeRequest) (*model.CreateAttributeResponse, error) {
 	requestDef := GenReqDefForCreateAttribute()
 
@@ -133,8 +128,7 @@ func (c *GslClient) CreateAttributeInvoker(request *model.CreateAttributeRequest
 //
 // 停用自定义属性接口
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GslClient) DisableAttribute(request *model.DisableAttributeRequest) (*model.DisableAttributeResponse, error) {
 	requestDef := GenReqDefForDisableAttribute()
 
@@ -155,8 +149,7 @@ func (c *GslClient) DisableAttributeInvoker(request *model.DisableAttributeReque
 //
 // 启用自定义属性接口
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GslClient) EnableAttribute(request *model.EnableAttributeRequest) (*model.EnableAttributeResponse, error) {
 	requestDef := GenReqDefForEnableAttribute()
 
@@ -177,8 +170,7 @@ func (c *GslClient) EnableAttributeInvoker(request *model.EnableAttributeRequest
 //
 // 查询自定义属性列表接口
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GslClient) ListAttributes(request *model.ListAttributesRequest) (*model.ListAttributesResponse, error) {
 	requestDef := GenReqDefForListAttributes()
 
@@ -199,8 +191,7 @@ func (c *GslClient) ListAttributesInvoker(request *model.ListAttributesRequest) 
 //
 // 修改自定义属性接口
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GslClient) UpdateAttribute(request *model.UpdateAttributeRequest) (*model.UpdateAttributeResponse, error) {
 	requestDef := GenReqDefForUpdateAttribute()
 
@@ -221,8 +212,7 @@ func (c *GslClient) UpdateAttributeInvoker(request *model.UpdateAttributeRequest
 //
 // 清除实名认证信息，接口只支持电信卡调用
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GslClient) DeleteRealName(request *model.DeleteRealNameRequest) (*model.DeleteRealNameResponse, error) {
 	requestDef := GenReqDefForDeleteRealName()
 
@@ -243,8 +233,7 @@ func (c *GslClient) DeleteRealNameInvoker(request *model.DeleteRealNameRequest) 
 //
 // 创建激活实体卡申请，返回业务受理单号。1~2个工作日完成激活操作。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GslClient) EnableSimCard(request *model.EnableSimCardRequest) (*model.EnableSimCardResponse, error) {
 	requestDef := GenReqDefForEnableSimCard()
 
@@ -265,8 +254,7 @@ func (c *GslClient) EnableSimCardInvoker(request *model.EnableSimCardRequest) *E
 //
 // 查询SIM卡列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GslClient) ListSimCards(request *model.ListSimCardsRequest) (*model.ListSimCardsResponse, error) {
 	requestDef := GenReqDefForListSimCards()
 
@@ -287,8 +275,7 @@ func (c *GslClient) ListSimCardsInvoker(request *model.ListSimCardsRequest) *Lis
 //
 // 支持固定机卡重绑(需要上传IMEI，将SIM卡绑定到指定IMEI的设备)和普通机卡重绑(会清除之前绑定的设备,将SIM卡绑定到正在使用的设备)，单卡每月只允许重绑2次，接口只支持电信卡调用。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GslClient) RegisterImei(request *model.RegisterImeiRequest) (*model.RegisterImeiResponse, error) {
 	requestDef := GenReqDefForRegisterImei()
 
@@ -309,8 +296,7 @@ func (c *GslClient) RegisterImeiInvoker(request *model.RegisterImeiRequest) *Reg
 //
 // 创建复机申请，返回业务受理单号。1~2个工作日完成复机操作。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GslClient) ResetSimCard(request *model.ResetSimCardRequest) (*model.ResetSimCardResponse, error) {
 	requestDef := GenReqDefForResetSimCard()
 
@@ -331,8 +317,7 @@ func (c *GslClient) ResetSimCardInvoker(request *model.ResetSimCardRequest) *Res
 //
 // SIM卡达量断网/恢复在用,只支持电信卡。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GslClient) SetExceedCutNet(request *model.SetExceedCutNetRequest) (*model.SetExceedCutNetResponse, error) {
 	requestDef := GenReqDefForSetExceedCutNet()
 
@@ -353,8 +338,7 @@ func (c *GslClient) SetExceedCutNetInvoker(request *model.SetExceedCutNetRequest
 //
 // 实体卡限速接口,支持电信和联通实体卡调用。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GslClient) SetSpeedValue(request *model.SetSpeedValueRequest) (*model.SetSpeedValueResponse, error) {
 	requestDef := GenReqDefForSetSpeedValue()
 
@@ -375,8 +359,7 @@ func (c *GslClient) SetSpeedValueInvoker(request *model.SetSpeedValueRequest) *S
 //
 // 设备月用量统计
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GslClient) ShowMonthUsages(request *model.ShowMonthUsagesRequest) (*model.ShowMonthUsagesResponse, error) {
 	requestDef := GenReqDefForShowMonthUsages()
 
@@ -397,8 +380,7 @@ func (c *GslClient) ShowMonthUsagesInvoker(request *model.ShowMonthUsagesRequest
 //
 // 实时查询SIM卡实名认证信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GslClient) ShowRealNamed(request *model.ShowRealNamedRequest) (*model.ShowRealNamedResponse, error) {
 	requestDef := GenReqDefForShowRealNamed()
 
@@ -419,8 +401,7 @@ func (c *GslClient) ShowRealNamedInvoker(request *model.ShowRealNamedRequest) *S
 //
 // 查询SIM卡详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GslClient) ShowSimCard(request *model.ShowSimCardRequest) (*model.ShowSimCardResponse, error) {
 	requestDef := GenReqDefForShowSimCard()
 
@@ -441,8 +422,7 @@ func (c *GslClient) ShowSimCardInvoker(request *model.ShowSimCardRequest) *ShowS
 //
 // SIM卡申请断网/恢复在用,只支持电信卡。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GslClient) StartStopNet(request *model.StartStopNetRequest) (*model.StartStopNetResponse, error) {
 	requestDef := GenReqDefForStartStopNet()
 
@@ -463,8 +443,7 @@ func (c *GslClient) StartStopNetInvoker(request *model.StartStopNetRequest) *Sta
 //
 // 创建停机申请，返回业务受理单号。1~2个工作日完成停机操作。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GslClient) StopSimCard(request *model.StopSimCardRequest) (*model.StopSimCardResponse, error) {
 	requestDef := GenReqDefForStopSimCard()
 
@@ -485,8 +464,7 @@ func (c *GslClient) StopSimCardInvoker(request *model.StopSimCardRequest) *StopS
 //
 // 查询流量池成员列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GslClient) ListSimPoolMembers(request *model.ListSimPoolMembersRequest) (*model.ListSimPoolMembersResponse, error) {
 	requestDef := GenReqDefForListSimPoolMembers()
 
@@ -507,8 +485,7 @@ func (c *GslClient) ListSimPoolMembersInvoker(request *model.ListSimPoolMembersR
 //
 // 查询流量池列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GslClient) ListSimPools(request *model.ListSimPoolsRequest) (*model.ListSimPoolsResponse, error) {
 	requestDef := GenReqDefForListSimPools()
 
@@ -529,8 +506,7 @@ func (c *GslClient) ListSimPoolsInvoker(request *model.ListSimPoolsRequest) *Lis
 //
 // 批量查询实体卡流量
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GslClient) ListFlowBySimCards(request *model.ListFlowBySimCardsRequest) (*model.ListFlowBySimCardsResponse, error) {
 	requestDef := GenReqDefForListFlowBySimCards()
 
@@ -551,8 +527,7 @@ func (c *GslClient) ListFlowBySimCardsInvoker(request *model.ListFlowBySimCardsR
 //
 // SIM卡套餐列表查询，实体卡只会有一个套餐，eSIM/vSIM可能会有多个套餐
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GslClient) ListSimPricePlans(request *model.ListSimPricePlansRequest) (*model.ListSimPricePlansResponse, error) {
 	requestDef := GenReqDefForListSimPricePlans()
 
@@ -573,8 +548,7 @@ func (c *GslClient) ListSimPricePlansInvoker(request *model.ListSimPricePlansReq
 //
 // 批量设置/取消设置标签接口
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GslClient) BatchSetTags(request *model.BatchSetTagsRequest) (*model.BatchSetTagsResponse, error) {
 	requestDef := GenReqDefForBatchSetTags()
 
@@ -595,8 +569,7 @@ func (c *GslClient) BatchSetTagsInvoker(request *model.BatchSetTagsRequest) *Bat
 //
 // 添加标签接口
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GslClient) CreateTag(request *model.CreateTagRequest) (*model.CreateTagResponse, error) {
 	requestDef := GenReqDefForCreateTag()
 
@@ -617,8 +590,7 @@ func (c *GslClient) CreateTagInvoker(request *model.CreateTagRequest) *CreateTag
 //
 // 删除标签
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GslClient) DeleteTag(request *model.DeleteTagRequest) (*model.DeleteTagResponse, error) {
 	requestDef := GenReqDefForDeleteTag()
 
@@ -639,8 +611,7 @@ func (c *GslClient) DeleteTagInvoker(request *model.DeleteTagRequest) *DeleteTag
 //
 // 查询标签列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GslClient) ListTags(request *model.ListTagsRequest) (*model.ListTagsResponse, error) {
 	requestDef := GenReqDefForListTags()
 

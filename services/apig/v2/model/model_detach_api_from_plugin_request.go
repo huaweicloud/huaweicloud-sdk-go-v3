@@ -9,7 +9,7 @@ import (
 // Request Object
 type DetachApiFromPluginRequest struct {
 
-	// 实例ID
+	// 实例ID，在API网关控制台的“实例信息”中获取。
 	InstanceId string `json:"instance_id"`
 
 	// 插件编号

@@ -27,7 +27,7 @@ type CreateNet2CloudPhoneServerRequestBody struct {
 	KeypairName *string `json:"keypair_name,omitempty"`
 
 	// 云手机启用的应用端口，云手机服务会做端口转发
-	Ports *[]CreateNet2CloudPhoneServerRequestBodyPorts `json:"ports,omitempty"`
+	Ports *[]Port `json:"ports,omitempty"`
 
 	ExtendParam *CreateNet2CloudPhoneServerRequestBodyExtendParam `json:"extend_param"`
 
@@ -35,7 +35,7 @@ type CreateNet2CloudPhoneServerRequestBody struct {
 	TenantVpcId string `json:"tenant_vpc_id"`
 
 	// 租户自定义的网卡的结构体，为待创建的云服务器的网卡信息
-	Nics []CreateNet2CloudPhoneServerRequestBodyNics `json:"nics"`
+	Nics []Nic `json:"nics"`
 
 	PublicIp *CreateNet2CloudPhoneServerRequestBodyPublicIp `json:"public_ip"`
 

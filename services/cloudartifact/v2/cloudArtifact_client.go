@@ -23,8 +23,7 @@ func CloudArtifactClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 获取项目下文件版本信息列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudArtifactClient) ShowProjectReleaseFiles(request *model.ShowProjectReleaseFilesRequest) (*model.ShowProjectReleaseFilesResponse, error) {
 	requestDef := GenReqDefForShowProjectReleaseFiles()
 
@@ -45,8 +44,7 @@ func (c *CloudArtifactClient) ShowProjectReleaseFilesInvoker(request *model.Show
 //
 // 获取项目下文件版本信息列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudArtifactClient) ShowReleaseProjectFiles(request *model.ShowReleaseProjectFilesRequest) (*model.ShowReleaseProjectFilesResponse, error) {
 	requestDef := GenReqDefForShowReleaseProjectFiles()
 

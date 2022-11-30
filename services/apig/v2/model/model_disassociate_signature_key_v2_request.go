@@ -9,7 +9,7 @@ import (
 // Request Object
 type DisassociateSignatureKeyV2Request struct {
 
-	// 实例ID
+	// 实例ID，在API网关控制台的“实例信息”中获取。
 	InstanceId string `json:"instance_id"`
 
 	// API与签名密钥的绑定关系编号

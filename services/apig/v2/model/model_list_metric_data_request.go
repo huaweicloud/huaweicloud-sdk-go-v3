@@ -12,7 +12,7 @@ import (
 // Request Object
 type ListMetricDataRequest struct {
 
-	// 实例ID
+	// 实例ID，在API网关控制台的“实例信息”中获取。
 	InstanceId string `json:"instance_id"`
 
 	// 指标维度 - inbound_eip：入口公网带宽，仅ELB类型实例支持 - outbound_eip：出口公网带宽

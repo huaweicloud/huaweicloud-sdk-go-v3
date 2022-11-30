@@ -22,8 +22,11 @@ type AssociateDomainV2Response struct {
 	Status *AssociateDomainV2ResponseStatus `json:"status,omitempty"`
 
 	// 支持的最小SSL版本
-	MinSslVersion  *string `json:"min_ssl_version,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	MinSslVersion *string `json:"min_ssl_version,omitempty"`
+
+	// 是否开启http到https的重定向，false为关闭，true为开启，默认为false
+	IsHttpRedirectToHttps *bool `json:"is_http_redirect_to_https,omitempty"`
+	HttpStatusCode        int   `json:"-"`
 }
 
 func (o AssociateDomainV2Response) String() string {

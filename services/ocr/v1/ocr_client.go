@@ -27,8 +27,7 @@ func OcrClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 只对识别成功的票证进行计费，识别失败的票证不计费。例如图片中包含三张票证，有两张识别成功，一张识别失败，此时接口计费两次。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OcrClient) RecognizeAutoClassification(request *model.RecognizeAutoClassificationRequest) (*model.RecognizeAutoClassificationResponse, error) {
 	requestDef := GenReqDefForRecognizeAutoClassification()
 
@@ -53,8 +52,7 @@ func (c *OcrClient) RecognizeAutoClassificationInvoker(request *model.RecognizeA
 //
 // 如果图片中包含多张卡证票据，请调用[智能分类识别](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product&#x3D;OCR&amp;api&#x3D;AutoClassification)服务。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OcrClient) RecognizeBankcard(request *model.RecognizeBankcardRequest) (*model.RecognizeBankcardResponse, error) {
 	requestDef := GenReqDefForRecognizeBankcard()
 
@@ -75,8 +73,7 @@ func (c *OcrClient) RecognizeBankcardInvoker(request *model.RecognizeBankcardReq
 //
 // 识别名片图片上的文字信息，并返回识别的结构化结果。支持对多种不同版式名片进行结构化信息提取。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OcrClient) RecognizeBusinessCard(request *model.RecognizeBusinessCardRequest) (*model.RecognizeBusinessCardResponse, error) {
 	requestDef := GenReqDefForRecognizeBusinessCard()
 
@@ -101,8 +98,7 @@ func (c *OcrClient) RecognizeBusinessCardInvoker(request *model.RecognizeBusines
 //
 // 如果图片中包含多张卡证票据，请调用[智能分类识别](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product&#x3D;OCR&amp;api&#x3D;AutoClassification)服务。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OcrClient) RecognizeBusinessLicense(request *model.RecognizeBusinessLicenseRequest) (*model.RecognizeBusinessLicenseResponse, error) {
 	requestDef := GenReqDefForRecognizeBusinessLicense()
 
@@ -123,8 +119,7 @@ func (c *OcrClient) RecognizeBusinessLicenseInvoker(request *model.RecognizeBusi
 //
 // 识别柬文身份证图片中的文字内容，并将识别的结构化结果返回给用户。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OcrClient) RecognizeCambodianIdCard(request *model.RecognizeCambodianIdCardRequest) (*model.RecognizeCambodianIdCardResponse, error) {
 	requestDef := GenReqDefForRecognizeCambodianIdCard()
 
@@ -145,8 +140,7 @@ func (c *OcrClient) RecognizeCambodianIdCardInvoker(request *model.RecognizeCamb
 //
 // 识别智利身份证图片中的文字内容，并返回识别的结构化结果。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OcrClient) RecognizeChileIdCard(request *model.RecognizeChileIdCardRequest) (*model.RecognizeChileIdCardResponse, error) {
 	requestDef := GenReqDefForRecognizeChileIdCard()
 
@@ -171,8 +165,7 @@ func (c *OcrClient) RecognizeChileIdCardInvoker(request *model.RecognizeChileIdC
 //
 // 如果图片中包含多张卡证票据，请调用智能分类识别服务。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OcrClient) RecognizeDriverLicense(request *model.RecognizeDriverLicenseRequest) (*model.RecognizeDriverLicenseResponse, error) {
 	requestDef := GenReqDefForRecognizeDriverLicense()
 
@@ -193,8 +186,7 @@ func (c *OcrClient) RecognizeDriverLicenseInvoker(request *model.RecognizeDriver
 //
 // 识别往来港澳台证件图片中的文字内容，并将识别的结构化结果返回给用户。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OcrClient) RecognizeExitEntryPermit(request *model.RecognizeExitEntryPermitRequest) (*model.RecognizeExitEntryPermitResponse, error) {
 	requestDef := GenReqDefForRecognizeExitEntryPermit()
 
@@ -215,8 +207,7 @@ func (c *OcrClient) RecognizeExitEntryPermitInvoker(request *model.RecognizeExit
 //
 // 识别用户上传的表格图片中的文字内容，并将识别的结果返回给用户。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OcrClient) RecognizeFinancialStatement(request *model.RecognizeFinancialStatementRequest) (*model.RecognizeFinancialStatementResponse, error) {
 	requestDef := GenReqDefForRecognizeFinancialStatement()
 
@@ -241,8 +232,7 @@ func (c *OcrClient) RecognizeFinancialStatementInvoker(request *model.RecognizeF
 //
 // 如果图片中包含多张卡证票据，请调用智能分类识别服务。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OcrClient) RecognizeFlightItinerary(request *model.RecognizeFlightItineraryRequest) (*model.RecognizeFlightItineraryResponse, error) {
 	requestDef := GenReqDefForRecognizeFlightItinerary()
 
@@ -263,8 +253,7 @@ func (c *OcrClient) RecognizeFlightItineraryInvoker(request *model.RecognizeFlig
 //
 // 识别用于识别用户上传的通用表格图片（或者用户提供的华为云上OBS的通用表格图片文件的URL）中的文字内容，并将识别的结果返回给用户。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OcrClient) RecognizeGeneralTable(request *model.RecognizeGeneralTableRequest) (*model.RecognizeGeneralTableResponse, error) {
 	requestDef := GenReqDefForRecognizeGeneralTable()
 
@@ -285,8 +274,7 @@ func (c *OcrClient) RecognizeGeneralTableInvoker(request *model.RecognizeGeneral
 //
 // 识别图片上的文字信息，返回识别的文字和坐标。支持扫描文件、电子文档、书籍、票据和表单等多种场景的文字识别。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OcrClient) RecognizeGeneralText(request *model.RecognizeGeneralTextRequest) (*model.RecognizeGeneralTextResponse, error) {
 	requestDef := GenReqDefForRecognizeGeneralText()
 
@@ -307,8 +295,7 @@ func (c *OcrClient) RecognizeGeneralTextInvoker(request *model.RecognizeGeneralT
 //
 // 识别文档中的手写文字信息，并将识别的结构化结果返回给用户。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OcrClient) RecognizeHandwriting(request *model.RecognizeHandwritingRequest) (*model.RecognizeHandwritingResponse, error) {
 	requestDef := GenReqDefForRecognizeHandwriting()
 
@@ -329,8 +316,7 @@ func (c *OcrClient) RecognizeHandwritingInvoker(request *model.RecognizeHandwrit
 //
 // 支持对全国各地区不同版式的防疫健康码、核酸检测记录、行程卡中的14个关键字段进行结构化识别；支持识别4种健康码颜色，包括绿码、黄码、红码、灰码；支持返回各个关键字段的置信度，以便提高人工校验效率。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OcrClient) RecognizeHealthCode(request *model.RecognizeHealthCodeRequest) (*model.RecognizeHealthCodeResponse, error) {
 	requestDef := GenReqDefForRecognizeHealthCode()
 
@@ -351,8 +337,7 @@ func (c *OcrClient) RecognizeHealthCodeInvoker(request *model.RecognizeHealthCod
 //
 // 识别香港身份证中的文字内容，并将识别的结果返回给用户。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OcrClient) RecognizeHkIdCard(request *model.RecognizeHkIdCardRequest) (*model.RecognizeHkIdCardResponse, error) {
 	requestDef := GenReqDefForRecognizeHkIdCard()
 
@@ -379,8 +364,7 @@ func (c *OcrClient) RecognizeHkIdCardInvoker(request *model.RecognizeHkIdCardReq
 //
 // 如果图片中包含多张卡证票据，请调用[智能分类识别](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product&#x3D;OCR&amp;api&#x3D;AutoClassification)服务。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OcrClient) RecognizeIdCard(request *model.RecognizeIdCardRequest) (*model.RecognizeIdCardResponse, error) {
 	requestDef := GenReqDefForRecognizeIdCard()
 
@@ -425,8 +409,7 @@ func (c *OcrClient) RecognizeIdCardInvoker(request *model.RecognizeIdCardRequest
 // - DL: driving license,驾驶证
 // - ID: identification card,各国颁发的身份证类型证件，比如身份证、选民证、社保卡等。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OcrClient) RecognizeIdDocument(request *model.RecognizeIdDocumentRequest) (*model.RecognizeIdDocumentResponse, error) {
 	requestDef := GenReqDefForRecognizeIdDocument()
 
@@ -447,8 +430,7 @@ func (c *OcrClient) RecognizeIdDocumentInvoker(request *model.RecognizeIdDocumen
 //
 // 识别保险单图片上的文字信息，并将识别的结构化结果返回给用户。支持对多板式保险单的扫描图片及手机照片进行结构化信息提取。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OcrClient) RecognizeInsurancePolicy(request *model.RecognizeInsurancePolicyRequest) (*model.RecognizeInsurancePolicyResponse, error) {
 	requestDef := GenReqDefForRecognizeInsurancePolicy()
 
@@ -469,8 +451,7 @@ func (c *OcrClient) RecognizeInsurancePolicyInvoker(request *model.RecognizeInsu
 //
 // 发票验真服务支持10种增值税发票的信息核验，包括增值税专用发票、增值税普通发票、增值税普通发票（卷式）、增值税电子专用发票、增值税电子普通发票、增值税电子普通发票（通行费）、二手车销售统一发票、机动车销售统一发票、区块链电子发票、全电发票，支持返回票面的全部信息。该接口的使用限制请参见[约束与限制](https://support.huaweicloud.com/productdesc-ocr/ocr_01_0006.html)，详细使用指导请参见[OCR服务使用简介](https://support.huaweicloud.com/qs-ocr/ocr_05_0001.html)章节。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OcrClient) RecognizeInvoiceVerification(request *model.RecognizeInvoiceVerificationRequest) (*model.RecognizeInvoiceVerificationResponse, error) {
 	requestDef := GenReqDefForRecognizeInvoiceVerification()
 
@@ -491,8 +472,7 @@ func (c *OcrClient) RecognizeInvoiceVerificationInvoker(request *model.Recognize
 //
 // 识别输入图片中的车牌信息，并返回其坐标和内容。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OcrClient) RecognizeLicensePlate(request *model.RecognizeLicensePlateRequest) (*model.RecognizeLicensePlateResponse, error) {
 	requestDef := GenReqDefForRecognizeLicensePlate()
 
@@ -513,8 +493,7 @@ func (c *OcrClient) RecognizeLicensePlateInvoker(request *model.RecognizeLicense
 //
 // 识别澳门身份证图片中的文字内容，并将识别的结果返回给用户。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OcrClient) RecognizeMacaoIdCard(request *model.RecognizeMacaoIdCardRequest) (*model.RecognizeMacaoIdCardResponse, error) {
 	requestDef := GenReqDefForRecognizeMacaoIdCard()
 
@@ -535,8 +514,7 @@ func (c *OcrClient) RecognizeMacaoIdCardInvoker(request *model.RecognizeMacaoIdC
 //
 // 识别港澳居民来往内地通行证上的文字内容，并将识别的结构化结果返回给用户。支持港澳居民来往内地通行证和台湾居民来往内地通行证两种卡证。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OcrClient) RecognizeMainlandTravelPermit(request *model.RecognizeMainlandTravelPermitRequest) (*model.RecognizeMainlandTravelPermitResponse, error) {
 	requestDef := GenReqDefForRecognizeMainlandTravelPermit()
 
@@ -563,8 +541,7 @@ func (c *OcrClient) RecognizeMainlandTravelPermitInvoker(request *model.Recogniz
 //
 // 如果图片中包含多张卡证票据，请调用[智能分类识别](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product&#x3D;OCR&amp;api&#x3D;AutoClassification)服务。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OcrClient) RecognizeMvsInvoice(request *model.RecognizeMvsInvoiceRequest) (*model.RecognizeMvsInvoiceResponse, error) {
 	requestDef := GenReqDefForRecognizeMvsInvoice()
 
@@ -585,8 +562,7 @@ func (c *OcrClient) RecognizeMvsInvoiceInvoker(request *model.RecognizeMvsInvoic
 //
 // 识别缅甸驾驶证中的文字信息，并返回识别的结构化结果。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OcrClient) RecognizeMyanmarDriverLicense(request *model.RecognizeMyanmarDriverLicenseRequest) (*model.RecognizeMyanmarDriverLicenseResponse, error) {
 	requestDef := GenReqDefForRecognizeMyanmarDriverLicense()
 
@@ -607,8 +583,7 @@ func (c *OcrClient) RecognizeMyanmarDriverLicenseInvoker(request *model.Recogniz
 //
 // 识别缅文身份证中的文字信息，并返回识别的结构化结果。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OcrClient) RecognizeMyanmarIdcard(request *model.RecognizeMyanmarIdcardRequest) (*model.RecognizeMyanmarIdcardResponse, error) {
 	requestDef := GenReqDefForRecognizeMyanmarIdcard()
 
@@ -633,8 +608,7 @@ func (c *OcrClient) RecognizeMyanmarIdcardInvoker(request *model.RecognizeMyanma
 //
 // 如果图片中包含多张卡证票据，请调用[智能分类识别](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product&#x3D;OCR&amp;api&#x3D;AutoClassification)服务。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OcrClient) RecognizePassport(request *model.RecognizePassportRequest) (*model.RecognizePassportResponse, error) {
 	requestDef := GenReqDefForRecognizePassport()
 
@@ -655,8 +629,7 @@ func (c *OcrClient) RecognizePassportInvoker(request *model.RecognizePassportReq
 //
 // 识别核酸检测记录中的文字信息，并将识别的结构化结果返回给用户。PCR，全称Polymerase chain reaction,即聚合酶链式反应.PCR-test也为大众所认知为新型冠状病毒核酸检测测试。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OcrClient) RecognizePcrTestRecord(request *model.RecognizePcrTestRecordRequest) (*model.RecognizePcrTestRecordResponse, error) {
 	requestDef := GenReqDefForRecognizePcrTestRecord()
 
@@ -681,8 +654,7 @@ func (c *OcrClient) RecognizePcrTestRecordInvoker(request *model.RecognizePcrTes
 //
 // 如果图片中包含多张卡证票据，请调用[智能分类识别](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product&#x3D;OCR&amp;api&#x3D;AutoClassification)服务。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OcrClient) RecognizeQualificationCertificate(request *model.RecognizeQualificationCertificateRequest) (*model.RecognizeQualificationCertificateResponse, error) {
 	requestDef := GenReqDefForRecognizeQualificationCertificate()
 
@@ -707,8 +679,7 @@ func (c *OcrClient) RecognizeQualificationCertificateInvoker(request *model.Reco
 //
 // 如果图片中包含多张卡证票据，请调用[智能分类识别](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product&#x3D;OCR&amp;api&#x3D;AutoClassification)服务。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OcrClient) RecognizeQuotaInvoice(request *model.RecognizeQuotaInvoiceRequest) (*model.RecognizeQuotaInvoiceResponse, error) {
 	requestDef := GenReqDefForRecognizeQuotaInvoice()
 
@@ -733,8 +704,7 @@ func (c *OcrClient) RecognizeQuotaInvoiceInvoker(request *model.RecognizeQuotaIn
 //
 // 如果图片中包含多张卡证票据，请调用智能分类识别服务。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OcrClient) RecognizeTaxiInvoice(request *model.RecognizeTaxiInvoiceRequest) (*model.RecognizeTaxiInvoiceResponse, error) {
 	requestDef := GenReqDefForRecognizeTaxiInvoice()
 
@@ -755,8 +725,7 @@ func (c *OcrClient) RecognizeTaxiInvoiceInvoker(request *model.RecognizeTaxiInvo
 //
 // 识别泰国身份证中的文字信息，并返回识别的结构化结果。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OcrClient) RecognizeThailandIdcard(request *model.RecognizeThailandIdcardRequest) (*model.RecognizeThailandIdcardResponse, error) {
 	requestDef := GenReqDefForRecognizeThailandIdcard()
 
@@ -777,8 +746,7 @@ func (c *OcrClient) RecognizeThailandIdcardInvoker(request *model.RecognizeThail
 //
 // 识别泰国车牌图片中的车牌信息，并返回识别的结构化结果。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OcrClient) RecognizeThailandLicensePlate(request *model.RecognizeThailandLicensePlateRequest) (*model.RecognizeThailandLicensePlateResponse, error) {
 	requestDef := GenReqDefForRecognizeThailandLicensePlate()
 
@@ -803,8 +771,7 @@ func (c *OcrClient) RecognizeThailandLicensePlateInvoker(request *model.Recogniz
 //
 // 如果图片中包含多张卡证票据，请调用[智能分类识别](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product&#x3D;OCR&amp;api&#x3D;AutoClassification)服务。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OcrClient) RecognizeTollInvoice(request *model.RecognizeTollInvoiceRequest) (*model.RecognizeTollInvoiceResponse, error) {
 	requestDef := GenReqDefForRecognizeTollInvoice()
 
@@ -829,8 +796,7 @@ func (c *OcrClient) RecognizeTollInvoiceInvoker(request *model.RecognizeTollInvo
 //
 // 如果图片中包含多张卡证票据，请调用[智能分类识别](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product&#x3D;OCR&amp;api&#x3D;AutoClassification)服务。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OcrClient) RecognizeTrainTicket(request *model.RecognizeTrainTicketRequest) (*model.RecognizeTrainTicketResponse, error) {
 	requestDef := GenReqDefForRecognizeTrainTicket()
 
@@ -853,8 +819,7 @@ func (c *OcrClient) RecognizeTrainTicketInvoker(request *model.RecognizeTrainTic
 //
 // 说明： 如果图片中包含多张卡证票据，请调用智能分类识别服务。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OcrClient) RecognizeTransportationLicense(request *model.RecognizeTransportationLicenseRequest) (*model.RecognizeTransportationLicenseResponse, error) {
 	requestDef := GenReqDefForRecognizeTransportationLicense()
 
@@ -883,8 +848,7 @@ func (c *OcrClient) RecognizeTransportationLicenseInvoker(request *model.Recogni
 //
 // 如果图片中包含多张卡证票据，请调用智能分类识别服务。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OcrClient) RecognizeVatInvoice(request *model.RecognizeVatInvoiceRequest) (*model.RecognizeVatInvoiceResponse, error) {
 	requestDef := GenReqDefForRecognizeVatInvoice()
 
@@ -909,8 +873,7 @@ func (c *OcrClient) RecognizeVatInvoiceInvoker(request *model.RecognizeVatInvoic
 //
 // 如果图片中包含多张卡证票据，请调用智能分类识别服务。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OcrClient) RecognizeVehicleLicense(request *model.RecognizeVehicleLicenseRequest) (*model.RecognizeVehicleLicenseResponse, error) {
 	requestDef := GenReqDefForRecognizeVehicleLicense()
 
@@ -931,8 +894,7 @@ func (c *OcrClient) RecognizeVehicleLicenseInvoker(request *model.RecognizeVehic
 //
 // 识别用户上传的韵达电子面单图片中的文字内容，并将识别的结果以json格式返回给用户。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OcrClient) RecognizeWaybillElectronic(request *model.RecognizeWaybillElectronicRequest) (*model.RecognizeWaybillElectronicResponse, error) {
 	requestDef := GenReqDefForRecognizeWaybillElectronic()
 
@@ -953,8 +915,7 @@ func (c *OcrClient) RecognizeWaybillElectronicInvoker(request *model.RecognizeWa
 //
 // 识别网络图片中的文字内容，并返回识别的结构化结果。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OcrClient) RecognizeWebImage(request *model.RecognizeWebImageRequest) (*model.RecognizeWebImageResponse, error) {
 	requestDef := GenReqDefForRecognizeWebImage()
 
@@ -975,8 +936,7 @@ func (c *OcrClient) RecognizeWebImageInvoker(request *model.RecognizeWebImageReq
 //
 // 识别图片中的车架号信息，并将识别结果返回给用户。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OcrClient) RecognizeVin(request *model.RecognizeVinRequest) (*model.RecognizeVinResponse, error) {
 	requestDef := GenReqDefForRecognizeVin()
 

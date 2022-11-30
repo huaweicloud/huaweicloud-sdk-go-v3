@@ -23,8 +23,7 @@ func SmnClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 为指定Topic添加一个订阅者，如果订阅者的状态为未确认，则向订阅者发送一个确认的消息。待订阅者进行ConfirmSubscription确认后，该订阅者才能收到Topic发布的消息。单Topic默认可添加10000个订阅者，高并发场景下，可能会出现订阅者数量超过10000仍添加成功的情况，此为正常现象。接口是幂等的，如果添加已存在的订阅者，则返回成功，且status code为200，否则status code为201。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmnClient) AddSubscription(request *model.AddSubscriptionRequest) (*model.AddSubscriptionResponse, error) {
 	requestDef := GenReqDefForAddSubscription()
 
@@ -48,8 +47,7 @@ func (c *SmnClient) AddSubscriptionInvoker(request *model.AddSubscriptionRequest
 // 创建时，不允许重复key，如果数据库存在就覆盖。
 // 删除时，如果删除的标签不存在，默认处理成功，删除时不对标签字符集范围做校验。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmnClient) BatchCreateOrDeleteResourceTags(request *model.BatchCreateOrDeleteResourceTagsRequest) (*model.BatchCreateOrDeleteResourceTagsResponse, error) {
 	requestDef := GenReqDefForBatchCreateOrDeleteResourceTags()
 
@@ -70,8 +68,7 @@ func (c *SmnClient) BatchCreateOrDeleteResourceTagsInvoker(request *model.BatchC
 //
 // 删除指定的订阅者。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmnClient) CancelSubscription(request *model.CancelSubscriptionRequest) (*model.CancelSubscriptionResponse, error) {
 	requestDef := GenReqDefForCancelSubscription()
 
@@ -93,8 +90,7 @@ func (c *SmnClient) CancelSubscriptionInvoker(request *model.CancelSubscriptionR
 // 创建一个模板，用户可以按照模板去发送消息，这样可以减少请求的数据量。
 // 单用户默认可创建100个消息模板，高并发场景下，可能会出现消息模板数量超过100仍创建成功的情况，此为正常现象。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmnClient) CreateMessageTemplate(request *model.CreateMessageTemplateRequest) (*model.CreateMessageTemplateResponse, error) {
 	requestDef := GenReqDefForCreateMessageTemplate()
 
@@ -115,8 +111,7 @@ func (c *SmnClient) CreateMessageTemplateInvoker(request *model.CreateMessageTem
 //
 // 一个资源上最多有10个标签。此接口为幂等接口：创建时，如果创建的标签已经存在（key相同），则覆盖。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmnClient) CreateResourceTag(request *model.CreateResourceTagRequest) (*model.CreateResourceTagResponse, error) {
 	requestDef := GenReqDefForCreateResourceTag()
 
@@ -138,8 +133,7 @@ func (c *SmnClient) CreateResourceTagInvoker(request *model.CreateResourceTagReq
 // 创建Topic，单用户默认配额为3000。高并发场景下，可能会出现Topic数量超过3000仍创建成功的情况，此为正常现象。
 // 接口是幂等的，接口调用返回成功时，若已存在同名的Topic，返回的status code为200，否则返回的status code为201
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmnClient) CreateTopic(request *model.CreateTopicRequest) (*model.CreateTopicResponse, error) {
 	requestDef := GenReqDefForCreateTopic()
 
@@ -160,8 +154,7 @@ func (c *SmnClient) CreateTopicInvoker(request *model.CreateTopicRequest) *Creat
 //
 // 删除消息模板。删除模板之前的消息请求都可以使用该模板发送，删除之后无法再使用该模板发送消息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmnClient) DeleteMessageTemplate(request *model.DeleteMessageTemplateRequest) (*model.DeleteMessageTemplateResponse, error) {
 	requestDef := GenReqDefForDeleteMessageTemplate()
 
@@ -182,8 +175,7 @@ func (c *SmnClient) DeleteMessageTemplateInvoker(request *model.DeleteMessageTem
 //
 // 幂等接口：删除时，不对标签做校验。删除的key不存在报404，key不能为空或者空字符串。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmnClient) DeleteResourceTag(request *model.DeleteResourceTagRequest) (*model.DeleteResourceTagResponse, error) {
 	requestDef := GenReqDefForDeleteResourceTag()
 
@@ -204,8 +196,7 @@ func (c *SmnClient) DeleteResourceTagInvoker(request *model.DeleteResourceTagReq
 //
 // 删除主题。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmnClient) DeleteTopic(request *model.DeleteTopicRequest) (*model.DeleteTopicResponse, error) {
 	requestDef := GenReqDefForDeleteTopic()
 
@@ -226,8 +217,7 @@ func (c *SmnClient) DeleteTopicInvoker(request *model.DeleteTopicRequest) *Delet
 //
 // 删除指定名称的主题策略。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmnClient) DeleteTopicAttributeByName(request *model.DeleteTopicAttributeByNameRequest) (*model.DeleteTopicAttributeByNameResponse, error) {
 	requestDef := GenReqDefForDeleteTopicAttributeByName()
 
@@ -248,8 +238,7 @@ func (c *SmnClient) DeleteTopicAttributeByNameInvoker(request *model.DeleteTopic
 //
 // 删除所有主题策略。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmnClient) DeleteTopicAttributes(request *model.DeleteTopicAttributesRequest) (*model.DeleteTopicAttributesResponse, error) {
 	requestDef := GenReqDefForDeleteTopicAttributes()
 
@@ -270,8 +259,7 @@ func (c *SmnClient) DeleteTopicAttributesInvoker(request *model.DeleteTopicAttri
 //
 // 查询模板详情，包括模板内容。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmnClient) ListMessageTemplateDetails(request *model.ListMessageTemplateDetailsRequest) (*model.ListMessageTemplateDetailsResponse, error) {
 	requestDef := GenReqDefForListMessageTemplateDetails()
 
@@ -292,8 +280,7 @@ func (c *SmnClient) ListMessageTemplateDetailsInvoker(request *model.ListMessage
 //
 // 分页查询模板列表，模板列表按照创建时间进行升序排列。分页查询可以指定offset以及limit。如果不存在模板，则返回空列表。额外的查询参数分别有message_template_name和protocol。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmnClient) ListMessageTemplates(request *model.ListMessageTemplatesRequest) (*model.ListMessageTemplatesResponse, error) {
 	requestDef := GenReqDefForListMessageTemplates()
 
@@ -314,8 +301,7 @@ func (c *SmnClient) ListMessageTemplatesInvoker(request *model.ListMessageTempla
 //
 // 查询租户在指定Region和实例类型的所有标签集合。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmnClient) ListProjectTags(request *model.ListProjectTagsRequest) (*model.ListProjectTagsResponse, error) {
 	requestDef := GenReqDefForListProjectTags()
 
@@ -336,8 +322,7 @@ func (c *SmnClient) ListProjectTagsInvoker(request *model.ListProjectTagsRequest
 //
 // 使用标签过滤实例。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmnClient) ListResourceInstances(request *model.ListResourceInstancesRequest) (*model.ListResourceInstancesResponse, error) {
 	requestDef := GenReqDefForListResourceInstances()
 
@@ -358,8 +343,7 @@ func (c *SmnClient) ListResourceInstancesInvoker(request *model.ListResourceInst
 //
 // 查询指定实例的标签信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmnClient) ListResourceTags(request *model.ListResourceTagsRequest) (*model.ListResourceTagsResponse, error) {
 	requestDef := GenReqDefForListResourceTags()
 
@@ -380,8 +364,7 @@ func (c *SmnClient) ListResourceTagsInvoker(request *model.ListResourceTagsReque
 //
 // 分页返回请求者的所有的订阅列表，订阅列表按照订阅创建时间进行升序排列。分页查询可以指定offset以及limit。如果订阅者不存在，返回空列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmnClient) ListSubscriptions(request *model.ListSubscriptionsRequest) (*model.ListSubscriptionsResponse, error) {
 	requestDef := GenReqDefForListSubscriptions()
 
@@ -402,8 +385,7 @@ func (c *SmnClient) ListSubscriptionsInvoker(request *model.ListSubscriptionsReq
 //
 // 分页获取特定Topic的订阅列表，订阅列表按照订阅创建时间进行升序排列。分页查询可以指定offset以及limit。如果指定Topic不存在订阅者，返回空列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmnClient) ListSubscriptionsByTopic(request *model.ListSubscriptionsByTopicRequest) (*model.ListSubscriptionsByTopicResponse, error) {
 	requestDef := GenReqDefForListSubscriptionsByTopic()
 
@@ -424,8 +406,7 @@ func (c *SmnClient) ListSubscriptionsByTopicInvoker(request *model.ListSubscript
 //
 // 查询主题的策略信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmnClient) ListTopicAttributes(request *model.ListTopicAttributesRequest) (*model.ListTopicAttributesResponse, error) {
 	requestDef := GenReqDefForListTopicAttributes()
 
@@ -446,8 +427,7 @@ func (c *SmnClient) ListTopicAttributesInvoker(request *model.ListTopicAttribute
 //
 // 查询Topic的详细信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmnClient) ListTopicDetails(request *model.ListTopicDetailsRequest) (*model.ListTopicDetailsResponse, error) {
 	requestDef := GenReqDefForListTopicDetails()
 
@@ -468,8 +448,7 @@ func (c *SmnClient) ListTopicDetailsInvoker(request *model.ListTopicDetailsReque
 //
 // 分页查询Topic列表，Topic列表按照Topic创建时间进行降序排列。分页查询可以指定offset以及limit。如果不存在Topic，则返回空列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmnClient) ListTopics(request *model.ListTopicsRequest) (*model.ListTopicsResponse, error) {
 	requestDef := GenReqDefForListTopics()
 
@@ -490,8 +469,7 @@ func (c *SmnClient) ListTopicsInvoker(request *model.ListTopicsRequest) *ListTop
 //
 // 查询SMN API V2版本信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmnClient) ListVersion(request *model.ListVersionRequest) (*model.ListVersionResponse, error) {
 	requestDef := GenReqDefForListVersion()
 
@@ -512,8 +490,7 @@ func (c *SmnClient) ListVersionInvoker(request *model.ListVersionRequest) *ListV
 //
 // 查询SMN开放API支持的版本号。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmnClient) ListVersions(request *model.ListVersionsRequest) (*model.ListVersionsResponse, error) {
 	requestDef := GenReqDefForListVersions()
 
@@ -543,8 +520,7 @@ func (c *SmnClient) ListVersionsInvoker(request *model.ListVersionsRequest) *Lis
 // 只需要设置其中一个，如果同时设置，生效的优先级为
 // message_structure &gt; message_template_name &gt; message。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmnClient) PublishMessage(request *model.PublishMessageRequest) (*model.PublishMessageResponse, error) {
 	requestDef := GenReqDefForPublishMessage()
 
@@ -565,8 +541,7 @@ func (c *SmnClient) PublishMessageInvoker(request *model.PublishMessageRequest) 
 //
 // 修改消息模板的内容。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmnClient) UpdateMessageTemplate(request *model.UpdateMessageTemplateRequest) (*model.UpdateMessageTemplateResponse, error) {
 	requestDef := GenReqDefForUpdateMessageTemplate()
 
@@ -587,8 +562,7 @@ func (c *SmnClient) UpdateMessageTemplateInvoker(request *model.UpdateMessageTem
 //
 // 更新显示名。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmnClient) UpdateTopic(request *model.UpdateTopicRequest) (*model.UpdateTopicResponse, error) {
 	requestDef := GenReqDefForUpdateTopic()
 
@@ -609,8 +583,7 @@ func (c *SmnClient) UpdateTopicInvoker(request *model.UpdateTopicRequest) *Updat
 //
 // 更新主题的策略信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmnClient) UpdateTopicAttribute(request *model.UpdateTopicAttributeRequest) (*model.UpdateTopicAttributeResponse, error) {
 	requestDef := GenReqDefForUpdateTopicAttribute()
 
@@ -631,8 +604,7 @@ func (c *SmnClient) UpdateTopicAttributeInvoker(request *model.UpdateTopicAttrib
 //
 // 创建平台应用。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmnClient) CreateApplication(request *model.CreateApplicationRequest) (*model.CreateApplicationResponse, error) {
 	requestDef := GenReqDefForCreateApplication()
 
@@ -653,8 +625,7 @@ func (c *SmnClient) CreateApplicationInvoker(request *model.CreateApplicationReq
 //
 // 删除平台应用。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmnClient) DeleteApplication(request *model.DeleteApplicationRequest) (*model.DeleteApplicationResponse, error) {
 	requestDef := GenReqDefForDeleteApplication()
 
@@ -675,8 +646,7 @@ func (c *SmnClient) DeleteApplicationInvoker(request *model.DeleteApplicationReq
 //
 // 获取应用平台属性。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmnClient) ListApplicationAttributes(request *model.ListApplicationAttributesRequest) (*model.ListApplicationAttributesResponse, error) {
 	requestDef := GenReqDefForListApplicationAttributes()
 
@@ -697,8 +667,7 @@ func (c *SmnClient) ListApplicationAttributesInvoker(request *model.ListApplicat
 //
 // 查询应用平台列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmnClient) ListApplications(request *model.ListApplicationsRequest) (*model.ListApplicationsResponse, error) {
 	requestDef := GenReqDefForListApplications()
 
@@ -719,8 +688,7 @@ func (c *SmnClient) ListApplicationsInvoker(request *model.ListApplicationsReque
 //
 // 将消息直发给endpoint设备。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmnClient) PublishAppMessage(request *model.PublishAppMessageRequest) (*model.PublishAppMessageResponse, error) {
 	requestDef := GenReqDefForPublishAppMessage()
 
@@ -741,8 +709,7 @@ func (c *SmnClient) PublishAppMessageInvoker(request *model.PublishAppMessageReq
 //
 // 更新应用平台。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmnClient) UpdateApplication(request *model.UpdateApplicationRequest) (*model.UpdateApplicationResponse, error) {
 	requestDef := GenReqDefForUpdateApplication()
 
@@ -763,8 +730,7 @@ func (c *SmnClient) UpdateApplicationInvoker(request *model.UpdateApplicationReq
 //
 // 创建应用平台的endpoint终端。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmnClient) CreateApplicationEndpoint(request *model.CreateApplicationEndpointRequest) (*model.CreateApplicationEndpointResponse, error) {
 	requestDef := GenReqDefForCreateApplicationEndpoint()
 
@@ -785,8 +751,7 @@ func (c *SmnClient) CreateApplicationEndpointInvoker(request *model.CreateApplic
 //
 // 删除设备。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmnClient) DeleteApplicationEndpoint(request *model.DeleteApplicationEndpointRequest) (*model.DeleteApplicationEndpointResponse, error) {
 	requestDef := GenReqDefForDeleteApplicationEndpoint()
 
@@ -807,8 +772,7 @@ func (c *SmnClient) DeleteApplicationEndpointInvoker(request *model.DeleteApplic
 //
 // 获取endpoint的属性。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmnClient) ListApplicationEndpointAttributes(request *model.ListApplicationEndpointAttributesRequest) (*model.ListApplicationEndpointAttributesResponse, error) {
 	requestDef := GenReqDefForListApplicationEndpointAttributes()
 
@@ -829,8 +793,7 @@ func (c *SmnClient) ListApplicationEndpointAttributesInvoker(request *model.List
 //
 // 查询平台的endpoint列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmnClient) ListApplicationEndpoints(request *model.ListApplicationEndpointsRequest) (*model.ListApplicationEndpointsResponse, error) {
 	requestDef := GenReqDefForListApplicationEndpoints()
 
@@ -851,8 +814,7 @@ func (c *SmnClient) ListApplicationEndpointsInvoker(request *model.ListApplicati
 //
 // 更新设备属性。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmnClient) UpdateApplicationEndpoint(request *model.UpdateApplicationEndpointRequest) (*model.UpdateApplicationEndpointResponse, error) {
 	requestDef := GenReqDefForUpdateApplicationEndpoint()
 

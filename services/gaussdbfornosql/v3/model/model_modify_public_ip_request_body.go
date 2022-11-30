@@ -12,10 +12,10 @@ type ModifyPublicIpRequestBody struct {
 	Action string `json:"action"`
 
 	// 弹性公网IP。
-	PublicIp string `json:"public_ip"`
+	PublicIp *string `json:"public_ip,omitempty"`
 
 	// 弹性公网IP的ID。
-	PublicIpId string `json:"public_ip_id"`
+	PublicIpId *string `json:"public_ip_id,omitempty"`
 }
 
 func (o ModifyPublicIpRequestBody) String() string {

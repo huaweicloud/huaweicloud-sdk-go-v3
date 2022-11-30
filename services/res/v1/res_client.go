@@ -23,8 +23,7 @@ func ResClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 在指定的工作空间下面创建一个新的数据源。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ResClient) CreateResDatasource(request *model.CreateResDatasourceRequest) (*model.CreateResDatasourceResponse, error) {
 	requestDef := GenReqDefForCreateResDatasource()
 
@@ -45,8 +44,7 @@ func (c *ResClient) CreateResDatasourceInvoker(request *model.CreateResDatasourc
 //
 // 在指定工作空间下面创建智能场景。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ResClient) CreateResIntelligentScene(request *model.CreateResIntelligentSceneRequest) (*model.CreateResIntelligentSceneResponse, error) {
 	requestDef := GenReqDefForCreateResIntelligentScene()
 
@@ -67,8 +65,7 @@ func (c *ResClient) CreateResIntelligentSceneInvoker(request *model.CreateResInt
 //
 // 新建训练作业元数据，新建成功之后可手动执行此任务。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ResClient) CreateResJob(request *model.CreateResJobRequest) (*model.CreateResJobResponse, error) {
 	requestDef := GenReqDefForCreateResJob()
 
@@ -89,8 +86,7 @@ func (c *ResClient) CreateResJobInvoker(request *model.CreateResJobRequest) *Cre
 //
 // 批量新建作业。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ResClient) CreateResJobs(request *model.CreateResJobsRequest) (*model.CreateResJobsResponse, error) {
 	requestDef := GenReqDefForCreateResJobs()
 
@@ -111,8 +107,7 @@ func (c *ResClient) CreateResJobsInvoker(request *model.CreateResJobsRequest) *C
 //
 // 新建在线服务元数据，新建成功之后可手动发布此服务。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ResClient) CreateResOnlineInstance(request *model.CreateResOnlineInstanceRequest) (*model.CreateResOnlineInstanceResponse, error) {
 	requestDef := GenReqDefForCreateResOnlineInstance()
 
@@ -133,8 +128,7 @@ func (c *ResClient) CreateResOnlineInstanceInvoker(request *model.CreateResOnlin
 //
 // 在指定工作空间下面创建自定义场景。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ResClient) CreateResScene(request *model.CreateResSceneRequest) (*model.CreateResSceneResponse, error) {
 	requestDef := GenReqDefForCreateResScene()
 
@@ -155,8 +149,7 @@ func (c *ResClient) CreateResSceneInvoker(request *model.CreateResSceneRequest) 
 //
 // 用于在推荐系统下面创建独立的工作空间，用于资源的隔离，用户可以在工作空间下面继续创建数据源、场景以及推荐任务等。是否有工作空间的操作权限取决于用户是否属于当前工作空间绑定的企业项目。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ResClient) CreateResWorkspace(request *model.CreateResWorkspaceRequest) (*model.CreateResWorkspaceResponse, error) {
 	requestDef := GenReqDefForCreateResWorkspace()
 
@@ -177,8 +170,7 @@ func (c *ResClient) CreateResWorkspaceInvoker(request *model.CreateResWorkspaceR
 //
 // 删除数据源。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ResClient) DeleteResDatasource(request *model.DeleteResDatasourceRequest) (*model.DeleteResDatasourceResponse, error) {
 	requestDef := GenReqDefForDeleteResDatasource()
 
@@ -199,8 +191,7 @@ func (c *ResClient) DeleteResDatasourceInvoker(request *model.DeleteResDatasourc
 //
 // 删除指定作业。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ResClient) DeleteResJob(request *model.DeleteResJobRequest) (*model.DeleteResJobResponse, error) {
 	requestDef := GenReqDefForDeleteResJob()
 
@@ -221,8 +212,7 @@ func (c *ResClient) DeleteResJobInvoker(request *model.DeleteResJobRequest) *Del
 //
 // 删除在线服务实例。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ResClient) DeleteResOnlineInstance(request *model.DeleteResOnlineInstanceRequest) (*model.DeleteResOnlineInstanceResponse, error) {
 	requestDef := GenReqDefForDeleteResOnlineInstance()
 
@@ -243,8 +233,7 @@ func (c *ResClient) DeleteResOnlineInstanceInvoker(request *model.DeleteResOnlin
 //
 // 该接口用于删除场景，删除之后不能恢复，请您谨慎操作。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ResClient) DeleteResScene(request *model.DeleteResSceneRequest) (*model.DeleteResSceneResponse, error) {
 	requestDef := GenReqDefForDeleteResScene()
 
@@ -265,8 +254,7 @@ func (c *ResClient) DeleteResSceneInvoker(request *model.DeleteResSceneRequest) 
 //
 // 删除指定工作空间。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ResClient) DeleteResWorkspace(request *model.DeleteResWorkspaceRequest) (*model.DeleteResWorkspaceResponse, error) {
 	requestDef := GenReqDefForDeleteResWorkspace()
 
@@ -287,8 +275,7 @@ func (c *ResClient) DeleteResWorkspaceInvoker(request *model.DeleteResWorkspaceR
 //
 // 查询当前工作空间下的数据源列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ResClient) ListResDatasources(request *model.ListResDatasourcesRequest) (*model.ListResDatasourcesResponse, error) {
 	requestDef := GenReqDefForListResDatasources()
 
@@ -309,8 +296,7 @@ func (c *ResClient) ListResDatasourcesInvoker(request *model.ListResDatasourcesR
 //
 // 查询用户在当前项目id下的企业项目列表。在创建工作空间时需要提供企业项目id。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ResClient) ListResEnterprises(request *model.ListResEnterprisesRequest) (*model.ListResEnterprisesResponse, error) {
 	requestDef := GenReqDefForListResEnterprises()
 
@@ -331,8 +317,7 @@ func (c *ResClient) ListResEnterprisesInvoker(request *model.ListResEnterprisesR
 //
 // 根据给定的workspace_id和resource_id及category查询在线服务。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ResClient) ListResOnlineServiceDetails(request *model.ListResOnlineServiceDetailsRequest) (*model.ListResOnlineServiceDetailsResponse, error) {
 	requestDef := GenReqDefForListResOnlineServiceDetails()
 
@@ -353,8 +338,7 @@ func (c *ResClient) ListResOnlineServiceDetailsInvoker(request *model.ListResOnl
 //
 // 查询当前推荐系统所提供的离线计算规格，实时计算规格和排序模型训练规格。在创建数据源和场景时，需要提供此信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ResClient) ListResResourceSpec(request *model.ListResResourceSpecRequest) (*model.ListResResourceSpecResponse, error) {
 	requestDef := GenReqDefForListResResourceSpec()
 
@@ -375,8 +359,7 @@ func (c *ResClient) ListResResourceSpecInvoker(request *model.ListResResourceSpe
 //
 // 查询当前工作空间下的场景列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ResClient) ListResScenes(request *model.ListResScenesRequest) (*model.ListResScenesResponse, error) {
 	requestDef := GenReqDefForListResScenes()
 
@@ -397,8 +380,7 @@ func (c *ResClient) ListResScenesInvoker(request *model.ListResScenesRequest) *L
 //
 // 用于查询当前用户具有操作权限的工作空间列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ResClient) ListResWorkspaces(request *model.ListResWorkspacesRequest) (*model.ListResWorkspacesResponse, error) {
 	requestDef := GenReqDefForListResWorkspaces()
 
@@ -419,8 +401,7 @@ func (c *ResClient) ListResWorkspacesInvoker(request *model.ListResWorkspacesReq
 //
 // 查询指定数据源的详情信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ResClient) ShowResDatasource(request *model.ShowResDatasourceRequest) (*model.ShowResDatasourceResponse, error) {
 	requestDef := GenReqDefForShowResDatasource()
 
@@ -441,8 +422,7 @@ func (c *ResClient) ShowResDatasourceInvoker(request *model.ShowResDatasourceReq
 //
 // 查询指定数据源下离线任务的结果。其中包括数据格式，数据检测、数据探索及效果评估的内容。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ResClient) ShowResDatasourceWorkDetail(request *model.ShowResDatasourceWorkDetailRequest) (*model.ShowResDatasourceWorkDetailResponse, error) {
 	requestDef := GenReqDefForShowResDatasourceWorkDetail()
 
@@ -463,8 +443,7 @@ func (c *ResClient) ShowResDatasourceWorkDetailInvoker(request *model.ShowResDat
 //
 // 查询resource_id（数据源id或场景id）下的指定类型的作业。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ResClient) ShowResJob(request *model.ShowResJobRequest) (*model.ShowResJobResponse, error) {
 	requestDef := GenReqDefForShowResJob()
 
@@ -485,8 +464,7 @@ func (c *ResClient) ShowResJobInvoker(request *model.ShowResJobRequest) *ShowRes
 //
 // 查询给定workspaces_id和指定resource_id下的候选集。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ResClient) ShowResRecallSet(request *model.ShowResRecallSetRequest) (*model.ShowResRecallSetResponse, error) {
 	requestDef := GenReqDefForShowResRecallSet()
 
@@ -507,8 +485,7 @@ func (c *ResClient) ShowResRecallSetInvoker(request *model.ShowResRecallSetReque
 //
 // 查询指定场景的详情。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ResClient) ShowResScene(request *model.ShowResSceneRequest) (*model.ShowResSceneResponse, error) {
 	requestDef := GenReqDefForShowResScene()
 
@@ -529,8 +506,7 @@ func (c *ResClient) ShowResSceneInvoker(request *model.ShowResSceneRequest) *Sho
 //
 // 查询指定工作空间的具体信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ResClient) ShowResWrokspace(request *model.ShowResWrokspaceRequest) (*model.ShowResWrokspaceResponse, error) {
 	requestDef := GenReqDefForShowResWrokspace()
 
@@ -551,8 +527,7 @@ func (c *ResClient) ShowResWrokspaceInvoker(request *model.ShowResWrokspaceReque
 //
 // 执行独立的作业。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ResClient) StartResJob(request *model.StartResJobRequest) (*model.StartResJobResponse, error) {
 	requestDef := GenReqDefForStartResJob()
 
@@ -573,8 +548,7 @@ func (c *ResClient) StartResJobInvoker(request *model.StartResJobRequest) *Start
 //
 // 执行场景下面的所有作业和服务。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ResClient) StartResSceneJobs(request *model.StartResSceneJobsRequest) (*model.StartResSceneJobsResponse, error) {
 	requestDef := GenReqDefForStartResSceneJobs()
 
@@ -595,8 +569,7 @@ func (c *ResClient) StartResSceneJobsInvoker(request *model.StartResSceneJobsReq
 //
 // 修改指定数据源的配置内容。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ResClient) UpdateResDatasource(request *model.UpdateResDatasourceRequest) (*model.UpdateResDatasourceResponse, error) {
 	requestDef := GenReqDefForUpdateResDatasource()
 
@@ -617,8 +590,7 @@ func (c *ResClient) UpdateResDatasourceInvoker(request *model.UpdateResDatasourc
 //
 // 修改数据源中的特征。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ResClient) UpdateResDatastruct(request *model.UpdateResDatastructRequest) (*model.UpdateResDatastructResponse, error) {
 	requestDef := GenReqDefForUpdateResDatastruct()
 
@@ -639,8 +611,7 @@ func (c *ResClient) UpdateResDatastructInvoker(request *model.UpdateResDatastruc
 //
 // 更新智能场景的内容信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ResClient) UpdateResIntelligentScene(request *model.UpdateResIntelligentSceneRequest) (*model.UpdateResIntelligentSceneResponse, error) {
 	requestDef := GenReqDefForUpdateResIntelligentScene()
 
@@ -661,8 +632,7 @@ func (c *ResClient) UpdateResIntelligentSceneInvoker(request *model.UpdateResInt
 //
 // 修改指定作业的元数据信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ResClient) UpdateResJob(request *model.UpdateResJobRequest) (*model.UpdateResJobResponse, error) {
 	requestDef := GenReqDefForUpdateResJob()
 
@@ -683,8 +653,7 @@ func (c *ResClient) UpdateResJobInvoker(request *model.UpdateResJobRequest) *Upd
 //
 // 修改指定在线服务的元数据内容。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ResClient) UpdateResOnlineInstance(request *model.UpdateResOnlineInstanceRequest) (*model.UpdateResOnlineInstanceResponse, error) {
 	requestDef := GenReqDefForUpdateResOnlineInstance()
 
@@ -705,8 +674,7 @@ func (c *ResClient) UpdateResOnlineInstanceInvoker(request *model.UpdateResOnlin
 //
 // 更新自定义场景的内容信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ResClient) UpdateResScene(request *model.UpdateResSceneRequest) (*model.UpdateResSceneResponse, error) {
 	requestDef := GenReqDefForUpdateResScene()
 
@@ -727,8 +695,7 @@ func (c *ResClient) UpdateResSceneInvoker(request *model.UpdateResSceneRequest) 
 //
 // 更新工作空间信息, 只允许更新描述信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ResClient) UpdateResWorkspace(request *model.UpdateResWorkspaceRequest) (*model.UpdateResWorkspaceResponse, error) {
 	requestDef := GenReqDefForUpdateResWorkspace()
 

@@ -23,8 +23,7 @@ func DnsClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 绑定单个IP地址到终端节点
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) AssociateEndpointIpaddress(request *model.AssociateEndpointIpaddressRequest) (*model.AssociateEndpointIpaddressResponse, error) {
 	requestDef := GenReqDefForAssociateEndpointIpaddress()
 
@@ -45,8 +44,7 @@ func (c *DnsClient) AssociateEndpointIpaddressInvoker(request *model.AssociateEn
 //
 // 批量删除PTR。本接口为原子操作，所有记录应全部删除成功或全部失败。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) BatchDeletePtrRecords(request *model.BatchDeletePtrRecordsRequest) (*model.BatchDeletePtrRecordsResponse, error) {
 	requestDef := GenReqDefForBatchDeletePtrRecords()
 
@@ -69,8 +67,7 @@ func (c *DnsClient) BatchDeletePtrRecordsInvoker(request *model.BatchDeletePtrRe
 // 响应结果中只包含本次实际删除的Record Set。
 // 支持批量删除公网域名和内网域名的记录集。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) BatchDeleteRecordSets(request *model.BatchDeleteRecordSetsRequest) (*model.BatchDeleteRecordSetsResponse, error) {
 	requestDef := GenReqDefForBatchDeleteRecordSets()
 
@@ -93,8 +90,7 @@ func (c *DnsClient) BatchDeleteRecordSetsInvoker(request *model.BatchDeleteRecor
 // 本接口为原子操作，所有记录应全部删除成功或全部失败。
 // 仅支持公网Zone、内网Zone。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) BatchDeleteZones(request *model.BatchDeleteZonesRequest) (*model.BatchDeleteZonesResponse, error) {
 	requestDef := GenReqDefForBatchDeleteZones()
 
@@ -117,8 +113,7 @@ func (c *DnsClient) BatchDeleteZonesInvoker(request *model.BatchDeleteZonesReque
 // 响应结果中只包含本次实际更新的Record Set。
 // 仅支持公网域名记录集。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) BatchSetRecordSetsStatus(request *model.BatchSetRecordSetsStatusRequest) (*model.BatchSetRecordSetsStatusResponse, error) {
 	requestDef := GenReqDefForBatchSetRecordSetsStatus()
 
@@ -141,8 +136,7 @@ func (c *DnsClient) BatchSetRecordSetsStatusInvoker(request *model.BatchSetRecor
 // 响应结果中只包含本次实际更新的Zone。
 // 仅支持公网Zone。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) BatchSetZonesStatus(request *model.BatchSetZonesStatusRequest) (*model.BatchSetZonesStatusResponse, error) {
 	requestDef := GenReqDefForBatchSetZonesStatus()
 
@@ -163,8 +157,7 @@ func (c *DnsClient) BatchSetZonesStatusInvoker(request *model.BatchSetZonesStatu
 //
 // 创建单个自定义线路
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) CreateCustomLine(request *model.CreateCustomLineRequest) (*model.CreateCustomLineResponse, error) {
 	requestDef := GenReqDefForCreateCustomLine()
 
@@ -185,8 +178,7 @@ func (c *DnsClient) CreateCustomLineInvoker(request *model.CreateCustomLineReque
 //
 // 创建单个终端节点。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) CreateEndpoint(request *model.CreateEndpointRequest) (*model.CreateEndpointResponse, error) {
 	requestDef := GenReqDefForCreateEndpoint()
 
@@ -207,8 +199,7 @@ func (c *DnsClient) CreateEndpointInvoker(request *model.CreateEndpointRequest) 
 //
 // 创建一个线路分组。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) CreateLineGroup(request *model.CreateLineGroupRequest) (*model.CreateLineGroupResponse, error) {
 	requestDef := GenReqDefForCreateLineGroup()
 
@@ -229,8 +220,7 @@ func (c *DnsClient) CreateLineGroupInvoker(request *model.CreateLineGroupRequest
 //
 // 创建一个解析规则。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) CreateResolveRule(request *model.CreateResolveRuleRequest) (*model.CreateResolveRuleResponse, error) {
 	requestDef := GenReqDefForCreateResolveRule()
 
@@ -251,8 +241,7 @@ func (c *DnsClient) CreateResolveRuleInvoker(request *model.CreateResolveRuleReq
 //
 // 创建公网域名找回请求。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) CreateRetrieval(request *model.CreateRetrievalRequest) (*model.CreateRetrievalResponse, error) {
 	requestDef := GenReqDefForCreateRetrieval()
 
@@ -273,8 +262,7 @@ func (c *DnsClient) CreateRetrievalInvoker(request *model.CreateRetrievalRequest
 //
 // 请求服务器立即执行找回验证。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) CreateRetrievalVerification(request *model.CreateRetrievalVerificationRequest) (*model.CreateRetrievalVerificationResponse, error) {
 	requestDef := GenReqDefForCreateRetrievalVerification()
 
@@ -295,8 +283,7 @@ func (c *DnsClient) CreateRetrievalVerificationInvoker(request *model.CreateRetr
 //
 // 删除单个自定义线路
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) DeleteCustomLine(request *model.DeleteCustomLineRequest) (*model.DeleteCustomLineResponse, error) {
 	requestDef := GenReqDefForDeleteCustomLine()
 
@@ -317,8 +304,7 @@ func (c *DnsClient) DeleteCustomLineInvoker(request *model.DeleteCustomLineReque
 //
 // 删除终端节点。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) DeleteEndpoint(request *model.DeleteEndpointRequest) (*model.DeleteEndpointResponse, error) {
 	requestDef := GenReqDefForDeleteEndpoint()
 
@@ -339,8 +325,7 @@ func (c *DnsClient) DeleteEndpointInvoker(request *model.DeleteEndpointRequest) 
 //
 // 删除单个线路分组。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) DeleteLineGroup(request *model.DeleteLineGroupRequest) (*model.DeleteLineGroupResponse, error) {
 	requestDef := GenReqDefForDeleteLineGroup()
 
@@ -361,8 +346,7 @@ func (c *DnsClient) DeleteLineGroupInvoker(request *model.DeleteLineGroupRequest
 //
 // 删除解析规则。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) DeleteResolveRule(request *model.DeleteResolveRuleRequest) (*model.DeleteResolveRuleResponse, error) {
 	requestDef := GenReqDefForDeleteResolveRule()
 
@@ -383,8 +367,7 @@ func (c *DnsClient) DeleteResolveRuleInvoker(request *model.DeleteResolveRuleReq
 //
 // 解除endpoint绑定的IP。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) DisassociateEndpointIpaddress(request *model.DisassociateEndpointIpaddressRequest) (*model.DisassociateEndpointIpaddressResponse, error) {
 	requestDef := GenReqDefForDisassociateEndpointIpaddress()
 
@@ -405,8 +388,7 @@ func (c *DnsClient) DisassociateEndpointIpaddressInvoker(request *model.Disassoc
 //
 // 查询所有的云解析服务API版本号列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ListApiVersions(request *model.ListApiVersionsRequest) (*model.ListApiVersionsResponse, error) {
 	requestDef := GenReqDefForListApiVersions()
 
@@ -427,8 +409,7 @@ func (c *DnsClient) ListApiVersionsInvoker(request *model.ListApiVersionsRequest
 //
 // 查询自定义线路
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ListCustomLine(request *model.ListCustomLineRequest) (*model.ListCustomLineResponse, error) {
 	requestDef := GenReqDefForListCustomLine()
 
@@ -449,8 +430,7 @@ func (c *DnsClient) ListCustomLineInvoker(request *model.ListCustomLineRequest) 
 //
 // 查询某个endpoint下的ip地址列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ListEndpointIpaddresses(request *model.ListEndpointIpaddressesRequest) (*model.ListEndpointIpaddressesResponse, error) {
 	requestDef := GenReqDefForListEndpointIpaddresses()
 
@@ -471,8 +451,7 @@ func (c *DnsClient) ListEndpointIpaddressesInvoker(request *model.ListEndpointIp
 //
 // 查询vpc的终端节点信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ListEndpointVpcs(request *model.ListEndpointVpcsRequest) (*model.ListEndpointVpcsResponse, error) {
 	requestDef := GenReqDefForListEndpointVpcs()
 
@@ -493,8 +472,7 @@ func (c *DnsClient) ListEndpointVpcsInvoker(request *model.ListEndpointVpcsReque
 //
 // 查询终端节点列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ListEndpoints(request *model.ListEndpointsRequest) (*model.ListEndpointsResponse, error) {
 	requestDef := GenReqDefForListEndpoints()
 
@@ -515,8 +493,7 @@ func (c *DnsClient) ListEndpointsInvoker(request *model.ListEndpointsRequest) *L
 //
 // 查询线路分组列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ListLineGroups(request *model.ListLineGroupsRequest) (*model.ListLineGroupsResponse, error) {
 	requestDef := GenReqDefForListLineGroups()
 
@@ -537,8 +514,7 @@ func (c *DnsClient) ListLineGroupsInvoker(request *model.ListLineGroupsRequest) 
 //
 // 查询名称服务器列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ListNameServers(request *model.ListNameServersRequest) (*model.ListNameServersResponse, error) {
 	requestDef := GenReqDefForListNameServers()
 
@@ -559,8 +535,7 @@ func (c *DnsClient) ListNameServersInvoker(request *model.ListNameServersRequest
 //
 // 查询解析规则的列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ListResoleRules(request *model.ListResoleRulesRequest) (*model.ListResoleRulesResponse, error) {
 	requestDef := GenReqDefForListResoleRules()
 
@@ -581,8 +556,7 @@ func (c *DnsClient) ListResoleRulesInvoker(request *model.ListResoleRulesRequest
 //
 // 查询指定的云解析服务API版本号
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ShowApiInfo(request *model.ShowApiInfoRequest) (*model.ShowApiInfoResponse, error) {
 	requestDef := GenReqDefForShowApiInfo()
 
@@ -603,8 +577,7 @@ func (c *DnsClient) ShowApiInfoInvoker(request *model.ShowApiInfoRequest) *ShowA
 //
 // 查询单租户在DNS服务下的资源配额，包括公网zone配额、内网zone配额、Record Set配额、PTR Record配额、入站终端节点配额、出站终端节点配额、自定义线路配额、线路分组配额等。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ShowDomainQuota(request *model.ShowDomainQuotaRequest) (*model.ShowDomainQuotaResponse, error) {
 	requestDef := GenReqDefForShowDomainQuota()
 
@@ -625,8 +598,7 @@ func (c *DnsClient) ShowDomainQuotaInvoker(request *model.ShowDomainQuotaRequest
 //
 // 查询终端单个节点。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ShowEndpoint(request *model.ShowEndpointRequest) (*model.ShowEndpointResponse, error) {
 	requestDef := GenReqDefForShowEndpoint()
 
@@ -647,8 +619,7 @@ func (c *DnsClient) ShowEndpointInvoker(request *model.ShowEndpointRequest) *Sho
 //
 // 查询线路分组。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ShowLineGroup(request *model.ShowLineGroupRequest) (*model.ShowLineGroupResponse, error) {
 	requestDef := GenReqDefForShowLineGroup()
 
@@ -669,8 +640,7 @@ func (c *DnsClient) ShowLineGroupInvoker(request *model.ShowLineGroupRequest) *S
 //
 // 查询单个解析规则。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ShowResoleRule(request *model.ShowResoleRuleRequest) (*model.ShowResoleRuleResponse, error) {
 	requestDef := GenReqDefForShowResoleRule()
 
@@ -691,8 +661,7 @@ func (c *DnsClient) ShowResoleRuleInvoker(request *model.ShowResoleRuleRequest) 
 //
 // 查询域名找回请求。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ShowRetrieval(request *model.ShowRetrievalRequest) (*model.ShowRetrievalResponse, error) {
 	requestDef := GenReqDefForShowRetrieval()
 
@@ -713,8 +682,7 @@ func (c *DnsClient) ShowRetrievalInvoker(request *model.ShowRetrievalRequest) *S
 //
 // 查询域名找回结果。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ShowRetrievalVerification(request *model.ShowRetrievalVerificationRequest) (*model.ShowRetrievalVerificationResponse, error) {
 	requestDef := GenReqDefForShowRetrievalVerification()
 
@@ -735,8 +703,7 @@ func (c *DnsClient) ShowRetrievalVerificationInvoker(request *model.ShowRetrieva
 //
 // 更新单个自定义线路
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) UpdateCustomLine(request *model.UpdateCustomLineRequest) (*model.UpdateCustomLineResponse, error) {
 	requestDef := GenReqDefForUpdateCustomLine()
 
@@ -757,8 +724,7 @@ func (c *DnsClient) UpdateCustomLineInvoker(request *model.UpdateCustomLineReque
 //
 // 修改终端节点
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) UpdateEndpoint(request *model.UpdateEndpointRequest) (*model.UpdateEndpointResponse, error) {
 	requestDef := GenReqDefForUpdateEndpoint()
 
@@ -779,8 +745,7 @@ func (c *DnsClient) UpdateEndpointInvoker(request *model.UpdateEndpointRequest) 
 //
 // 更新单个线路分组。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) UpdateLineGroups(request *model.UpdateLineGroupsRequest) (*model.UpdateLineGroupsResponse, error) {
 	requestDef := GenReqDefForUpdateLineGroups()
 
@@ -801,8 +766,7 @@ func (c *DnsClient) UpdateLineGroupsInvoker(request *model.UpdateLineGroupsReque
 //
 // 修改一个解析规则。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) UpdateResolveRule(request *model.UpdateResolveRuleRequest) (*model.UpdateResolveRuleResponse, error) {
 	requestDef := GenReqDefForUpdateResolveRule()
 
@@ -823,8 +787,7 @@ func (c *DnsClient) UpdateResolveRuleInvoker(request *model.UpdateResolveRuleReq
 //
 // 设置弹性IP的PTR记录
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) CreateEipRecordSet(request *model.CreateEipRecordSetRequest) (*model.CreateEipRecordSetResponse, error) {
 	requestDef := GenReqDefForCreateEipRecordSet()
 
@@ -845,8 +808,7 @@ func (c *DnsClient) CreateEipRecordSetInvoker(request *model.CreateEipRecordSetR
 //
 // 查询租户弹性IP的PTR记录列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ListPtrRecords(request *model.ListPtrRecordsRequest) (*model.ListPtrRecordsResponse, error) {
 	requestDef := GenReqDefForListPtrRecords()
 
@@ -867,8 +829,7 @@ func (c *DnsClient) ListPtrRecordsInvoker(request *model.ListPtrRecordsRequest) 
 //
 // 将弹性IP的PTR记录恢复为默认值
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) RestorePtrRecord(request *model.RestorePtrRecordRequest) (*model.RestorePtrRecordResponse, error) {
 	requestDef := GenReqDefForRestorePtrRecord()
 
@@ -889,8 +850,7 @@ func (c *DnsClient) RestorePtrRecordInvoker(request *model.RestorePtrRecordReque
 //
 // 查询单个弹性IP的PTR记录
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ShowPtrRecordSet(request *model.ShowPtrRecordSetRequest) (*model.ShowPtrRecordSetResponse, error) {
 	requestDef := GenReqDefForShowPtrRecordSet()
 
@@ -911,8 +871,7 @@ func (c *DnsClient) ShowPtrRecordSetInvoker(request *model.ShowPtrRecordSetReque
 //
 // 修改弹性IP的PTR记录
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) UpdatePtrRecord(request *model.UpdatePtrRecordRequest) (*model.UpdatePtrRecordResponse, error) {
 	requestDef := GenReqDefForUpdatePtrRecord()
 
@@ -933,8 +892,7 @@ func (c *DnsClient) UpdatePtrRecordInvoker(request *model.UpdatePtrRecordRequest
 //
 // Record Set关联健康检查。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) AssociateHealthCheck(request *model.AssociateHealthCheckRequest) (*model.AssociateHealthCheckResponse, error) {
 	requestDef := GenReqDefForAssociateHealthCheck()
 
@@ -956,8 +914,7 @@ func (c *DnsClient) AssociateHealthCheckInvoker(request *model.AssociateHealthCh
 // 批量删除某个Zone下的Record Set资源，当删除的资源不存在时，则默认删除成功。
 // 响应结果中只包含本次实际删除的资源。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) BatchDeleteRecordSetWithLine(request *model.BatchDeleteRecordSetWithLineRequest) (*model.BatchDeleteRecordSetWithLineResponse, error) {
 	requestDef := GenReqDefForBatchDeleteRecordSetWithLine()
 
@@ -979,8 +936,7 @@ func (c *DnsClient) BatchDeleteRecordSetWithLineInvoker(request *model.BatchDele
 // 批量修改RecordSet。属于原子性操作，请求Record Set将全部完成修改，或不做任何修改。
 // 仅公网Zone支持。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) BatchUpdateRecordSetWithLine(request *model.BatchUpdateRecordSetWithLineRequest) (*model.BatchUpdateRecordSetWithLineResponse, error) {
 	requestDef := GenReqDefForBatchUpdateRecordSetWithLine()
 
@@ -1001,8 +957,7 @@ func (c *DnsClient) BatchUpdateRecordSetWithLineInvoker(request *model.BatchUpda
 //
 // 创建单个Record Set
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) CreateRecordSet(request *model.CreateRecordSetRequest) (*model.CreateRecordSetResponse, error) {
 	requestDef := GenReqDefForCreateRecordSet()
 
@@ -1023,8 +978,7 @@ func (c *DnsClient) CreateRecordSetInvoker(request *model.CreateRecordSetRequest
 //
 // 批量线路创建RecordSet。属于原子性操作，如果存在一个参数校验不通过，则创建失败。仅公网Zone支持。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) CreateRecordSetWithBatchLines(request *model.CreateRecordSetWithBatchLinesRequest) (*model.CreateRecordSetWithBatchLinesResponse, error) {
 	requestDef := GenReqDefForCreateRecordSetWithBatchLines()
 
@@ -1045,8 +999,7 @@ func (c *DnsClient) CreateRecordSetWithBatchLinesInvoker(request *model.CreateRe
 //
 // 创建单个Record Set，仅适用于公网DNS
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) CreateRecordSetWithLine(request *model.CreateRecordSetWithLineRequest) (*model.CreateRecordSetWithLineResponse, error) {
 	requestDef := GenReqDefForCreateRecordSetWithLine()
 
@@ -1067,8 +1020,7 @@ func (c *DnsClient) CreateRecordSetWithLineInvoker(request *model.CreateRecordSe
 //
 // 删除单个Record Set
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) DeleteRecordSet(request *model.DeleteRecordSetRequest) (*model.DeleteRecordSetResponse, error) {
 	requestDef := GenReqDefForDeleteRecordSet()
 
@@ -1089,8 +1041,7 @@ func (c *DnsClient) DeleteRecordSetInvoker(request *model.DeleteRecordSetRequest
 //
 // 删除单个Record Set
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) DeleteRecordSets(request *model.DeleteRecordSetsRequest) (*model.DeleteRecordSetsResponse, error) {
 	requestDef := GenReqDefForDeleteRecordSets()
 
@@ -1111,8 +1062,7 @@ func (c *DnsClient) DeleteRecordSetsInvoker(request *model.DeleteRecordSetsReque
 //
 // Record Set解关联健康检查。。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) DisassociateHealthCheck(request *model.DisassociateHealthCheckRequest) (*model.DisassociateHealthCheckResponse, error) {
 	requestDef := GenReqDefForDisassociateHealthCheck()
 
@@ -1133,8 +1083,7 @@ func (c *DnsClient) DisassociateHealthCheckInvoker(request *model.DisassociateHe
 //
 // 查询租户Record Set资源列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ListRecordSets(request *model.ListRecordSetsRequest) (*model.ListRecordSetsResponse, error) {
 	requestDef := GenReqDefForListRecordSets()
 
@@ -1155,8 +1104,7 @@ func (c *DnsClient) ListRecordSetsInvoker(request *model.ListRecordSetsRequest) 
 //
 // 查询单个Zone下Record Set列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ListRecordSetsByZone(request *model.ListRecordSetsByZoneRequest) (*model.ListRecordSetsByZoneResponse, error) {
 	requestDef := GenReqDefForListRecordSetsByZone()
 
@@ -1177,8 +1125,7 @@ func (c *DnsClient) ListRecordSetsByZoneInvoker(request *model.ListRecordSetsByZ
 //
 // 查询租户Record Set资源列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ListRecordSetsWithLine(request *model.ListRecordSetsWithLineRequest) (*model.ListRecordSetsWithLineResponse, error) {
 	requestDef := GenReqDefForListRecordSetsWithLine()
 
@@ -1199,8 +1146,7 @@ func (c *DnsClient) ListRecordSetsWithLineInvoker(request *model.ListRecordSetsW
 //
 // 设置Record Set状态
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) SetRecordSetsStatus(request *model.SetRecordSetsStatusRequest) (*model.SetRecordSetsStatusResponse, error) {
 	requestDef := GenReqDefForSetRecordSetsStatus()
 
@@ -1221,8 +1167,7 @@ func (c *DnsClient) SetRecordSetsStatusInvoker(request *model.SetRecordSetsStatu
 //
 // 查询单个Record Set
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ShowRecordSet(request *model.ShowRecordSetRequest) (*model.ShowRecordSetResponse, error) {
 	requestDef := GenReqDefForShowRecordSet()
 
@@ -1243,8 +1188,7 @@ func (c *DnsClient) ShowRecordSetInvoker(request *model.ShowRecordSetRequest) *S
 //
 // 查询单个Zone下Record Set列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ShowRecordSetByZone(request *model.ShowRecordSetByZoneRequest) (*model.ShowRecordSetByZoneResponse, error) {
 	requestDef := GenReqDefForShowRecordSetByZone()
 
@@ -1265,8 +1209,7 @@ func (c *DnsClient) ShowRecordSetByZoneInvoker(request *model.ShowRecordSetByZon
 //
 // 查询单个Record Set，仅适用于公网DNS
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ShowRecordSetWithLine(request *model.ShowRecordSetWithLineRequest) (*model.ShowRecordSetWithLineResponse, error) {
 	requestDef := GenReqDefForShowRecordSetWithLine()
 
@@ -1287,8 +1230,7 @@ func (c *DnsClient) ShowRecordSetWithLineInvoker(request *model.ShowRecordSetWit
 //
 // 修改单个Record Set
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) UpdateRecordSet(request *model.UpdateRecordSetRequest) (*model.UpdateRecordSetResponse, error) {
 	requestDef := GenReqDefForUpdateRecordSet()
 
@@ -1309,8 +1251,7 @@ func (c *DnsClient) UpdateRecordSetInvoker(request *model.UpdateRecordSetRequest
 //
 // 修改单个Record Set
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) UpdateRecordSets(request *model.UpdateRecordSetsRequest) (*model.UpdateRecordSetsResponse, error) {
 	requestDef := GenReqDefForUpdateRecordSets()
 
@@ -1331,8 +1272,7 @@ func (c *DnsClient) UpdateRecordSetsInvoker(request *model.UpdateRecordSetsReque
 //
 // 为指定实例批量添加或删除标签
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) BatchCreateTag(request *model.BatchCreateTagRequest) (*model.BatchCreateTagResponse, error) {
 	requestDef := GenReqDefForBatchCreateTag()
 
@@ -1353,8 +1293,7 @@ func (c *DnsClient) BatchCreateTagInvoker(request *model.BatchCreateTagRequest) 
 //
 // 为指定实例添加标签
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) CreateTag(request *model.CreateTagRequest) (*model.CreateTagResponse, error) {
 	requestDef := GenReqDefForCreateTag()
 
@@ -1375,8 +1314,7 @@ func (c *DnsClient) CreateTagInvoker(request *model.CreateTagRequest) *CreateTag
 //
 // 删除资源标签
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) DeleteTag(request *model.DeleteTagRequest) (*model.DeleteTagResponse, error) {
 	requestDef := GenReqDefForDeleteTag()
 
@@ -1397,8 +1335,7 @@ func (c *DnsClient) DeleteTagInvoker(request *model.DeleteTagRequest) *DeleteTag
 //
 // 使用标签查询资源实例
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ListTag(request *model.ListTagRequest) (*model.ListTagResponse, error) {
 	requestDef := GenReqDefForListTag()
 
@@ -1419,8 +1356,7 @@ func (c *DnsClient) ListTagInvoker(request *model.ListTagRequest) *ListTagInvoke
 //
 // 查询指定实例类型的所有标签集合
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ListTags(request *model.ListTagsRequest) (*model.ListTagsResponse, error) {
 	requestDef := GenReqDefForListTags()
 
@@ -1441,8 +1377,7 @@ func (c *DnsClient) ListTagsInvoker(request *model.ListTagsRequest) *ListTagsInv
 //
 // 查询指定实例的标签信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ShowResourceTag(request *model.ShowResourceTagRequest) (*model.ShowResourceTagResponse, error) {
 	requestDef := GenReqDefForShowResourceTag()
 
@@ -1463,8 +1398,7 @@ func (c *DnsClient) ShowResourceTagInvoker(request *model.ShowResourceTagRequest
 //
 // 在内网Zone上关联VPC
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) AssociateRouter(request *model.AssociateRouterRequest) (*model.AssociateRouterResponse, error) {
 	requestDef := GenReqDefForAssociateRouter()
 
@@ -1485,8 +1419,7 @@ func (c *DnsClient) AssociateRouterInvoker(request *model.AssociateRouterRequest
 //
 // 创建单个内网Zone
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) CreatePrivateZone(request *model.CreatePrivateZoneRequest) (*model.CreatePrivateZoneResponse, error) {
 	requestDef := GenReqDefForCreatePrivateZone()
 
@@ -1507,8 +1440,7 @@ func (c *DnsClient) CreatePrivateZoneInvoker(request *model.CreatePrivateZoneReq
 //
 // 创建单个公网Zone
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) CreatePublicZone(request *model.CreatePublicZoneRequest) (*model.CreatePublicZoneResponse, error) {
 	requestDef := GenReqDefForCreatePublicZone()
 
@@ -1529,8 +1461,7 @@ func (c *DnsClient) CreatePublicZoneInvoker(request *model.CreatePublicZoneReque
 //
 // 删除单个内网Zone
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) DeletePrivateZone(request *model.DeletePrivateZoneRequest) (*model.DeletePrivateZoneResponse, error) {
 	requestDef := GenReqDefForDeletePrivateZone()
 
@@ -1551,8 +1482,7 @@ func (c *DnsClient) DeletePrivateZoneInvoker(request *model.DeletePrivateZoneReq
 //
 // 删除单个公网Zone
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) DeletePublicZone(request *model.DeletePublicZoneRequest) (*model.DeletePublicZoneResponse, error) {
 	requestDef := GenReqDefForDeletePublicZone()
 
@@ -1573,8 +1503,7 @@ func (c *DnsClient) DeletePublicZoneInvoker(request *model.DeletePublicZoneReque
 //
 // 在内网Zone上解关联VPC
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) DisassociateRouter(request *model.DisassociateRouterRequest) (*model.DisassociateRouterResponse, error) {
 	requestDef := GenReqDefForDisassociateRouter()
 
@@ -1595,8 +1524,7 @@ func (c *DnsClient) DisassociateRouterInvoker(request *model.DisassociateRouterR
 //
 // 查询内网Zone的列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ListPrivateZones(request *model.ListPrivateZonesRequest) (*model.ListPrivateZonesResponse, error) {
 	requestDef := GenReqDefForListPrivateZones()
 
@@ -1617,8 +1545,7 @@ func (c *DnsClient) ListPrivateZonesInvoker(request *model.ListPrivateZonesReque
 //
 // 查询公网Zone的列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ListPublicZones(request *model.ListPublicZonesRequest) (*model.ListPublicZonesResponse, error) {
 	requestDef := GenReqDefForListPublicZones()
 
@@ -1639,8 +1566,7 @@ func (c *DnsClient) ListPublicZonesInvoker(request *model.ListPublicZonesRequest
 //
 // 设置单个内网Zone的子域名递归解析代理
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) SetPrivateZoneProxyPattern(request *model.SetPrivateZoneProxyPatternRequest) (*model.SetPrivateZoneProxyPatternResponse, error) {
 	requestDef := GenReqDefForSetPrivateZoneProxyPattern()
 
@@ -1661,8 +1587,7 @@ func (c *DnsClient) SetPrivateZoneProxyPatternInvoker(request *model.SetPrivateZ
 //
 // 查询单个内网Zone
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ShowPrivateZone(request *model.ShowPrivateZoneRequest) (*model.ShowPrivateZoneResponse, error) {
 	requestDef := GenReqDefForShowPrivateZone()
 
@@ -1683,8 +1608,7 @@ func (c *DnsClient) ShowPrivateZoneInvoker(request *model.ShowPrivateZoneRequest
 //
 // 查询单个内网Zone的名称服务器
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ShowPrivateZoneNameServer(request *model.ShowPrivateZoneNameServerRequest) (*model.ShowPrivateZoneNameServerResponse, error) {
 	requestDef := GenReqDefForShowPrivateZoneNameServer()
 
@@ -1705,8 +1629,7 @@ func (c *DnsClient) ShowPrivateZoneNameServerInvoker(request *model.ShowPrivateZ
 //
 // 查询单个公网Zone
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ShowPublicZone(request *model.ShowPublicZoneRequest) (*model.ShowPublicZoneResponse, error) {
 	requestDef := GenReqDefForShowPublicZone()
 
@@ -1727,8 +1650,7 @@ func (c *DnsClient) ShowPublicZoneInvoker(request *model.ShowPublicZoneRequest) 
 //
 // 查询单个公网Zone的名称服务器
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ShowPublicZoneNameServer(request *model.ShowPublicZoneNameServerRequest) (*model.ShowPublicZoneNameServerResponse, error) {
 	requestDef := GenReqDefForShowPublicZoneNameServer()
 
@@ -1749,8 +1671,7 @@ func (c *DnsClient) ShowPublicZoneNameServerInvoker(request *model.ShowPublicZon
 //
 // 修改单个内网Zone
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) UpdatePrivateZone(request *model.UpdatePrivateZoneRequest) (*model.UpdatePrivateZoneResponse, error) {
 	requestDef := GenReqDefForUpdatePrivateZone()
 
@@ -1771,8 +1692,7 @@ func (c *DnsClient) UpdatePrivateZoneInvoker(request *model.UpdatePrivateZoneReq
 //
 // 修改单个公网Zone
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) UpdatePublicZone(request *model.UpdatePublicZoneRequest) (*model.UpdatePublicZoneResponse, error) {
 	requestDef := GenReqDefForUpdatePublicZone()
 
@@ -1793,8 +1713,7 @@ func (c *DnsClient) UpdatePublicZoneInvoker(request *model.UpdatePublicZoneReque
 //
 // 设置单个公网Zone状态，支持暂停、启用Zone
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) UpdatePublicZoneStatus(request *model.UpdatePublicZoneStatusRequest) (*model.UpdatePublicZoneStatusResponse, error) {
 	requestDef := GenReqDefForUpdatePublicZoneStatus()
 

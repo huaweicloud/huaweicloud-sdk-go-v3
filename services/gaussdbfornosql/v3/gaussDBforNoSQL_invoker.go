@@ -41,6 +41,54 @@ func (i *CheckDisasterRecoveryOperationInvoker) Invoke() (*model.CheckDisasterRe
 	}
 }
 
+type CheckWeekPasswordInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckWeekPasswordInvoker) Invoke() (*model.CheckWeekPasswordResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckWeekPasswordResponse), nil
+	}
+}
+
+type CompareConfigurationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CompareConfigurationInvoker) Invoke() (*model.CompareConfigurationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CompareConfigurationResponse), nil
+	}
+}
+
+type CopyConfigurationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CopyConfigurationInvoker) Invoke() (*model.CopyConfigurationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CopyConfigurationResponse), nil
+	}
+}
+
+type CreateBackInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateBackInvoker) Invoke() (*model.CreateBackResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateBackResponse), nil
+	}
+}
+
 type CreateColdVolumeInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -125,6 +173,18 @@ func (i *DeleteDisasterRecoveryInvoker) Invoke() (*model.DeleteDisasterRecoveryR
 	}
 }
 
+type DeleteEnlargeFailNodeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteEnlargeFailNodeInvoker) Invoke() (*model.DeleteEnlargeFailNodeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteEnlargeFailNodeResponse), nil
+	}
+}
+
 type DeleteInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -146,6 +206,30 @@ func (i *ExpandInstanceNodeInvoker) Invoke() (*model.ExpandInstanceNodeResponse,
 		return nil, err
 	} else {
 		return result.(*model.ExpandInstanceNodeResponse), nil
+	}
+}
+
+type ListAvailableFlavorInfosInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAvailableFlavorInfosInvoker) Invoke() (*model.ListAvailableFlavorInfosResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAvailableFlavorInfosResponse), nil
+	}
+}
+
+type ListConfigurationDatastoresInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListConfigurationDatastoresInvoker) Invoke() (*model.ListConfigurationDatastoresResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListConfigurationDatastoresResponse), nil
 	}
 }
 
@@ -194,6 +278,18 @@ func (i *ListDedicatedResourcesInvoker) Invoke() (*model.ListDedicatedResourcesR
 		return nil, err
 	} else {
 		return result.(*model.ListDedicatedResourcesResponse), nil
+	}
+}
+
+type ListEpsQuotasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListEpsQuotasInvoker) Invoke() (*model.ListEpsQuotasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListEpsQuotasResponse), nil
 	}
 }
 
@@ -269,6 +365,30 @@ func (i *ListInstancesByTagsInvoker) Invoke() (*model.ListInstancesByTagsRespons
 	}
 }
 
+type ListProjectTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListProjectTagsInvoker) Invoke() (*model.ListProjectTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListProjectTagsResponse), nil
+	}
+}
+
+type ListRecycleInstancesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRecycleInstancesInvoker) Invoke() (*model.ListRecycleInstancesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRecycleInstancesResponse), nil
+	}
+}
+
 type ListRestoreTimeInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -293,6 +413,30 @@ func (i *ListSlowLogsInvoker) Invoke() (*model.ListSlowLogsResponse, error) {
 	}
 }
 
+type ModifyEpsQuotasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifyEpsQuotasInvoker) Invoke() (*model.ModifyEpsQuotasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifyEpsQuotasResponse), nil
+	}
+}
+
+type ModifyPortInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifyPortInvoker) Invoke() (*model.ModifyPortResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifyPortResponse), nil
+	}
+}
+
 type ModifyPublicIpInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -302,6 +446,18 @@ func (i *ModifyPublicIpInvoker) Invoke() (*model.ModifyPublicIpResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.ModifyPublicIpResponse), nil
+	}
+}
+
+type PauseResumeDataSynchronizationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *PauseResumeDataSynchronizationInvoker) Invoke() (*model.PauseResumeDataSynchronizationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.PauseResumeDataSynchronizationResponse), nil
 	}
 }
 
@@ -401,6 +557,30 @@ func (i *SetBackupPolicyInvoker) Invoke() (*model.SetBackupPolicyResponse, error
 	}
 }
 
+type SetRecyclePolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetRecyclePolicyInvoker) Invoke() (*model.SetRecyclePolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetRecyclePolicyResponse), nil
+	}
+}
+
+type ShowAllInstancesBackupsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAllInstancesBackupsInvoker) Invoke() (*model.ShowAllInstancesBackupsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAllInstancesBackupsResponse), nil
+	}
+}
+
 type ShowApplicableInstancesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -422,6 +602,18 @@ func (i *ShowApplyHistoryInvoker) Invoke() (*model.ShowApplyHistoryResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ShowApplyHistoryResponse), nil
+	}
+}
+
+type ShowAutoEnlargePolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAutoEnlargePolicyInvoker) Invoke() (*model.ShowAutoEnlargePolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAutoEnlargePolicyResponse), nil
 	}
 }
 
@@ -449,6 +641,18 @@ func (i *ShowConfigurationDetailInvoker) Invoke() (*model.ShowConfigurationDetai
 	}
 }
 
+type ShowErrorLogInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowErrorLogInvoker) Invoke() (*model.ShowErrorLogResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowErrorLogResponse), nil
+	}
+}
+
 type ShowInstanceConfigurationInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -473,6 +677,18 @@ func (i *ShowInstanceRoleInvoker) Invoke() (*model.ShowInstanceRoleResponse, err
 	}
 }
 
+type ShowIpNumRequirementInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowIpNumRequirementInvoker) Invoke() (*model.ShowIpNumRequirementResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowIpNumRequirementResponse), nil
+	}
+}
+
 type ShowModifyHistoryInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -482,6 +698,18 @@ func (i *ShowModifyHistoryInvoker) Invoke() (*model.ShowModifyHistoryResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ShowModifyHistoryResponse), nil
+	}
+}
+
+type ShowPauseResumeStutusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPauseResumeStutusInvoker) Invoke() (*model.ShowPauseResumeStutusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPauseResumeStutusResponse), nil
 	}
 }
 
@@ -497,6 +725,18 @@ func (i *ShowQuotasInvoker) Invoke() (*model.ShowQuotasResponse, error) {
 	}
 }
 
+type ShowRecyclePolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRecyclePolicyInvoker) Invoke() (*model.ShowRecyclePolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRecyclePolicyResponse), nil
+	}
+}
+
 type ShowRestorableListInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -509,6 +749,18 @@ func (i *ShowRestorableListInvoker) Invoke() (*model.ShowRestorableListResponse,
 	}
 }
 
+type ShowSlowLogDesensitizationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSlowLogDesensitizationInvoker) Invoke() (*model.ShowSlowLogDesensitizationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSlowLogDesensitizationResponse), nil
+	}
+}
+
 type ShrinkInstanceNodeInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -518,6 +770,18 @@ func (i *ShrinkInstanceNodeInvoker) Invoke() (*model.ShrinkInstanceNodeResponse,
 		return nil, err
 	} else {
 		return result.(*model.ShrinkInstanceNodeResponse), nil
+	}
+}
+
+type SwitchSlowlogDesensitizationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SwitchSlowlogDesensitizationInvoker) Invoke() (*model.SwitchSlowlogDesensitizationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SwitchSlowlogDesensitizationResponse), nil
 	}
 }
 
@@ -554,6 +818,18 @@ func (i *SwitchToSlaveInvoker) Invoke() (*model.SwitchToSlaveResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.SwitchToSlaveResponse), nil
+	}
+}
+
+type UpdateClientNetworkInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateClientNetworkInvoker) Invoke() (*model.UpdateClientNetworkResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateClientNetworkResponse), nil
 	}
 }
 

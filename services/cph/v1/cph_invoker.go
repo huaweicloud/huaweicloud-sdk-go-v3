@@ -401,6 +401,30 @@ func (i *UpdateServerNameInvoker) Invoke() (*model.UpdateServerNameResponse, err
 	}
 }
 
+type InstallApkInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *InstallApkInvoker) Invoke() (*model.InstallApkResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.InstallApkResponse), nil
+	}
+}
+
+type PushFileInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *PushFileInvoker) Invoke() (*model.PushFileResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.PushFileResponse), nil
+	}
+}
+
 type RunShellCommandInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -422,5 +446,17 @@ func (i *RunSyncCommandInvoker) Invoke() (*model.RunSyncCommandResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.RunSyncCommandResponse), nil
+	}
+}
+
+type UninstallApkInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UninstallApkInvoker) Invoke() (*model.UninstallApkResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UninstallApkResponse), nil
 	}
 }

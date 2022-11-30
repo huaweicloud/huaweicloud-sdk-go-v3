@@ -23,8 +23,7 @@ func NatClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 批量创建DNAT规则。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *NatClient) BatchCreateNatGatewayDnatRules(request *model.BatchCreateNatGatewayDnatRulesRequest) (*model.BatchCreateNatGatewayDnatRulesResponse, error) {
 	requestDef := GenReqDefForBatchCreateNatGatewayDnatRules()
 
@@ -45,8 +44,7 @@ func (c *NatClient) BatchCreateNatGatewayDnatRulesInvoker(request *model.BatchCr
 //
 // 创建DNAT规则。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *NatClient) CreateNatGatewayDnatRule(request *model.CreateNatGatewayDnatRuleRequest) (*model.CreateNatGatewayDnatRuleResponse, error) {
 	requestDef := GenReqDefForCreateNatGatewayDnatRule()
 
@@ -67,8 +65,7 @@ func (c *NatClient) CreateNatGatewayDnatRuleInvoker(request *model.CreateNatGate
 //
 // 删除指定的DNAT规则。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *NatClient) DeleteNatGatewayDnatRule(request *model.DeleteNatGatewayDnatRuleRequest) (*model.DeleteNatGatewayDnatRuleResponse, error) {
 	requestDef := GenReqDefForDeleteNatGatewayDnatRule()
 
@@ -89,8 +86,7 @@ func (c *NatClient) DeleteNatGatewayDnatRuleInvoker(request *model.DeleteNatGate
 //
 // 查询DNAT规则列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *NatClient) ListNatGatewayDnatRules(request *model.ListNatGatewayDnatRulesRequest) (*model.ListNatGatewayDnatRulesResponse, error) {
 	requestDef := GenReqDefForListNatGatewayDnatRules()
 
@@ -111,8 +107,7 @@ func (c *NatClient) ListNatGatewayDnatRulesInvoker(request *model.ListNatGateway
 //
 // 查询指定的DNAT规则详情。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *NatClient) ShowNatGatewayDnatRule(request *model.ShowNatGatewayDnatRuleRequest) (*model.ShowNatGatewayDnatRuleResponse, error) {
 	requestDef := GenReqDefForShowNatGatewayDnatRule()
 
@@ -133,8 +128,7 @@ func (c *NatClient) ShowNatGatewayDnatRuleInvoker(request *model.ShowNatGatewayD
 //
 // 更新指定的DNAT规则。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *NatClient) UpdateNatGatewayDnatRule(request *model.UpdateNatGatewayDnatRuleRequest) (*model.UpdateNatGatewayDnatRuleResponse, error) {
 	requestDef := GenReqDefForUpdateNatGatewayDnatRule()
 
@@ -155,8 +149,7 @@ func (c *NatClient) UpdateNatGatewayDnatRuleInvoker(request *model.UpdateNatGate
 //
 // 创建公网NAT网关实例。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *NatClient) CreateNatGateway(request *model.CreateNatGatewayRequest) (*model.CreateNatGatewayResponse, error) {
 	requestDef := GenReqDefForCreateNatGateway()
 
@@ -177,8 +170,7 @@ func (c *NatClient) CreateNatGatewayInvoker(request *model.CreateNatGatewayReque
 //
 // 删除公网NAT网关实例。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *NatClient) DeleteNatGateway(request *model.DeleteNatGatewayRequest) (*model.DeleteNatGatewayResponse, error) {
 	requestDef := GenReqDefForDeleteNatGateway()
 
@@ -199,8 +191,7 @@ func (c *NatClient) DeleteNatGatewayInvoker(request *model.DeleteNatGatewayReque
 //
 // 查询公网NAT网关实例列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *NatClient) ListNatGateways(request *model.ListNatGatewaysRequest) (*model.ListNatGatewaysResponse, error) {
 	requestDef := GenReqDefForListNatGateways()
 
@@ -221,8 +212,7 @@ func (c *NatClient) ListNatGatewaysInvoker(request *model.ListNatGatewaysRequest
 //
 // 查询指定的公网NAT网关实例详情。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *NatClient) ShowNatGateway(request *model.ShowNatGatewayRequest) (*model.ShowNatGatewayResponse, error) {
 	requestDef := GenReqDefForShowNatGateway()
 
@@ -243,8 +233,7 @@ func (c *NatClient) ShowNatGatewayInvoker(request *model.ShowNatGatewayRequest) 
 //
 // 更新公网NAT网关实例。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *NatClient) UpdateNatGateway(request *model.UpdateNatGatewayRequest) (*model.UpdateNatGatewayResponse, error) {
 	requestDef := GenReqDefForUpdateNatGateway()
 
@@ -265,8 +254,7 @@ func (c *NatClient) UpdateNatGatewayInvoker(request *model.UpdateNatGatewayReque
 //
 // 创建SNAT规则。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *NatClient) CreateNatGatewaySnatRule(request *model.CreateNatGatewaySnatRuleRequest) (*model.CreateNatGatewaySnatRuleResponse, error) {
 	requestDef := GenReqDefForCreateNatGatewaySnatRule()
 
@@ -287,8 +275,7 @@ func (c *NatClient) CreateNatGatewaySnatRuleInvoker(request *model.CreateNatGate
 //
 // 删除指定的SNAT规则。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *NatClient) DeleteNatGatewaySnatRule(request *model.DeleteNatGatewaySnatRuleRequest) (*model.DeleteNatGatewaySnatRuleResponse, error) {
 	requestDef := GenReqDefForDeleteNatGatewaySnatRule()
 
@@ -309,8 +296,7 @@ func (c *NatClient) DeleteNatGatewaySnatRuleInvoker(request *model.DeleteNatGate
 //
 // 查询SNAT规则列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *NatClient) ListNatGatewaySnatRules(request *model.ListNatGatewaySnatRulesRequest) (*model.ListNatGatewaySnatRulesResponse, error) {
 	requestDef := GenReqDefForListNatGatewaySnatRules()
 
@@ -331,8 +317,7 @@ func (c *NatClient) ListNatGatewaySnatRulesInvoker(request *model.ListNatGateway
 //
 // 查询指定的SNAT规则详情。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *NatClient) ShowNatGatewaySnatRule(request *model.ShowNatGatewaySnatRuleRequest) (*model.ShowNatGatewaySnatRuleResponse, error) {
 	requestDef := GenReqDefForShowNatGatewaySnatRule()
 
@@ -353,8 +338,7 @@ func (c *NatClient) ShowNatGatewaySnatRuleInvoker(request *model.ShowNatGatewayS
 //
 // 更新指定的SNAT规则。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *NatClient) UpdateNatGatewaySnatRule(request *model.UpdateNatGatewaySnatRuleRequest) (*model.UpdateNatGatewaySnatRuleResponse, error) {
 	requestDef := GenReqDefForUpdateNatGatewaySnatRule()
 

@@ -27,8 +27,7 @@ func LiveClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 支持查询当天，当前数据延时少于1分钟。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LiveClient) ListAreaDetail(request *model.ListAreaDetailRequest) (*model.ListAreaDetailResponse, error) {
 	requestDef := GenReqDefForListAreaDetail()
 
@@ -49,8 +48,7 @@ func (c *LiveClient) ListAreaDetailInvoker(request *model.ListAreaDetailRequest)
 //
 // 查询播放域名带宽数据。  最大查询跨度31天，最大查询周期一年。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LiveClient) ListBandwidthDetail(request *model.ListBandwidthDetailRequest) (*model.ListBandwidthDetailResponse, error) {
 	requestDef := GenReqDefForListBandwidthDetail()
 
@@ -71,8 +69,7 @@ func (c *LiveClient) ListBandwidthDetailInvoker(request *model.ListBandwidthDeta
 //
 // 查询指定时间范围内播放带宽峰值。  最大查询跨度31天，最大查询周期一年。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LiveClient) ListDomainBandwidthPeak(request *model.ListDomainBandwidthPeakRequest) (*model.ListDomainBandwidthPeakResponse, error) {
 	requestDef := GenReqDefForListDomainBandwidthPeak()
 
@@ -93,8 +90,7 @@ func (c *LiveClient) ListDomainBandwidthPeakInvoker(request *model.ListDomainBan
 //
 // 查询播放域名流量数据。  最大查询跨度31天，最大查询周期一年。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LiveClient) ListDomainTrafficDetail(request *model.ListDomainTrafficDetailRequest) (*model.ListDomainTrafficDetailResponse, error) {
 	requestDef := GenReqDefForListDomainTrafficDetail()
 
@@ -115,8 +111,7 @@ func (c *LiveClient) ListDomainTrafficDetailInvoker(request *model.ListDomainTra
 //
 // 查询指定时间范围内流量汇总量。  最大查询跨度31天，最大查询周期一年。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LiveClient) ListDomainTrafficSummary(request *model.ListDomainTrafficSummaryRequest) (*model.ListDomainTrafficSummaryResponse, error) {
 	requestDef := GenReqDefForListDomainTrafficSummary()
 
@@ -141,8 +136,7 @@ func (c *LiveClient) ListDomainTrafficSummaryInvoker(request *model.ListDomainTr
 //
 // 最大查询跨度1天。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LiveClient) ListHistoryStreams(request *model.ListHistoryStreamsRequest) (*model.ListHistoryStreamsResponse, error) {
 	requestDef := GenReqDefForListHistoryStreams()
 
@@ -163,8 +157,7 @@ func (c *LiveClient) ListHistoryStreamsInvoker(request *model.ListHistoryStreams
 //
 // 查询直播拉流HTTP状态码接口。  获取加速域名1分钟粒度的HTTP返回码  最大查询跨度不能超过24小时，最大查询周期7天。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LiveClient) ListQueryHttpCode(request *model.ListQueryHttpCodeRequest) (*model.ListQueryHttpCodeResponse, error) {
 	requestDef := GenReqDefForListQueryHttpCode()
 
@@ -185,8 +178,7 @@ func (c *LiveClient) ListQueryHttpCodeInvoker(request *model.ListQueryHttpCodeRe
 //
 // 查询直播租户每小时录制的最大并发数，计算1小时内每分钟的并发总路数，取最大值做为统计值。  最大查询跨度31天，最大查询周期90天。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LiveClient) ListRecordData(request *model.ListRecordDataRequest) (*model.ListRecordDataResponse, error) {
 	requestDef := GenReqDefForListRecordData()
 
@@ -207,8 +199,7 @@ func (c *LiveClient) ListRecordDataInvoker(request *model.ListRecordDataRequest)
 //
 // 查询直播域名每小时的截图数量。  最大查询跨度31天，最大查询周期90天。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LiveClient) ListSnapshotData(request *model.ListSnapshotDataRequest) (*model.ListSnapshotDataResponse, error) {
 	requestDef := GenReqDefForListSnapshotData()
 
@@ -229,8 +220,7 @@ func (c *LiveClient) ListSnapshotDataInvoker(request *model.ListSnapshotDataRequ
 //
 // 查询直播域名每小时的转码时长数据。  最大查询跨度31天，最大查询周期90天。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LiveClient) ListTranscodeData(request *model.ListTranscodeDataRequest) (*model.ListTranscodeDataResponse, error) {
 	requestDef := GenReqDefForListTranscodeData()
 
@@ -251,8 +241,7 @@ func (c *LiveClient) ListTranscodeDataInvoker(request *model.ListTranscodeDataRe
 //
 // 查询观众趋势。  最大查询跨度31天，最大查询周期一年。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LiveClient) ListUsersOfStream(request *model.ListUsersOfStreamRequest) (*model.ListUsersOfStreamResponse, error) {
 	requestDef := GenReqDefForListUsersOfStream()
 
@@ -273,8 +262,7 @@ func (c *LiveClient) ListUsersOfStreamInvoker(request *model.ListUsersOfStreamRe
 //
 // 查询域名维度推流路数接口。  最大查询跨度31天，最大查询周期1年。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LiveClient) ShowStreamCount(request *model.ShowStreamCountRequest) (*model.ShowStreamCountResponse, error) {
 	requestDef := GenReqDefForShowStreamCount()
 
@@ -296,8 +284,7 @@ func (c *LiveClient) ShowStreamCountInvoker(request *model.ShowStreamCountReques
 // 查询播放画像信息。  最大查询跨度1天，最大查询周期31天。
 // 不统计协议为HLS的播放时长（play_duration）信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LiveClient) ShowStreamPortrait(request *model.ShowStreamPortraitRequest) (*model.ShowStreamPortraitResponse, error) {
 	requestDef := GenReqDefForShowStreamPortrait()
 
@@ -318,8 +305,7 @@ func (c *LiveClient) ShowStreamPortraitInvoker(request *model.ShowStreamPortrait
 //
 // 查询上行带宽数据。  最大查询跨度31天，最大查询周期1年。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LiveClient) ShowUpBandwidth(request *model.ShowUpBandwidthRequest) (*model.ShowUpBandwidthResponse, error) {
 	requestDef := GenReqDefForShowUpBandwidth()
 
@@ -344,8 +330,7 @@ func (c *LiveClient) ShowUpBandwidthInvoker(request *model.ShowUpBandwidthReques
 //
 // 返回的码率数据列表粒度为1秒钟。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LiveClient) ListSingleStreamBitrate(request *model.ListSingleStreamBitrateRequest) (*model.ListSingleStreamBitrateResponse, error) {
 	requestDef := GenReqDefForListSingleStreamBitrate()
 
@@ -370,8 +355,7 @@ func (c *LiveClient) ListSingleStreamBitrateInvoker(request *model.ListSingleStr
 //
 // 返回的码率数据列表粒度为1秒钟。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LiveClient) ListSingleStreamDetail(request *model.ListSingleStreamDetailRequest) (*model.ListSingleStreamDetailResponse, error) {
 	requestDef := GenReqDefForListSingleStreamDetail()
 
@@ -396,8 +380,7 @@ func (c *LiveClient) ListSingleStreamDetailInvoker(request *model.ListSingleStre
 //
 // 返回的帧率数据列表粒度为1秒钟。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LiveClient) ListSingleStreamFramerate(request *model.ListSingleStreamFramerateRequest) (*model.ListSingleStreamFramerateResponse, error) {
 	requestDef := GenReqDefForListSingleStreamFramerate()
 

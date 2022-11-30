@@ -23,8 +23,7 @@ func MrsClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 在MRS集群中批量删除作业。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *MrsClient) BatchDeleteJobs(request *model.BatchDeleteJobsRequest) (*model.BatchDeleteJobsResponse, error) {
 	requestDef := GenReqDefForBatchDeleteJobs()
 
@@ -49,8 +48,7 @@ func (c *MrsClient) BatchDeleteJobsInvoker(request *model.BatchDeleteJobsRequest
 // - 通过[终端节点](https://support.huaweicloud.com/api-mrs/mrs_02_0003.html)获取区域信息
 // - 参考[MRS服务支持的组件](https://support.huaweicloud.com/api-mrs/mrs_02_9001.html)获取MRS版本及对应版本支持的组件信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *MrsClient) CreateCluster(request *model.CreateClusterRequest) (*model.CreateClusterResponse, error) {
 	requestDef := GenReqDefForCreateCluster()
 
@@ -77,8 +75,7 @@ func (c *MrsClient) CreateClusterInvoker(request *model.CreateClusterRequest) *C
 //
 // 所有示例中涉及的OBS路径、样例文件及终端节点和AKSK，请提前准备并在提交请求时根据实际情况替换。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *MrsClient) CreateExecuteJob(request *model.CreateExecuteJobRequest) (*model.CreateExecuteJobResponse, error) {
 	requestDef := GenReqDefForCreateExecuteJob()
 
@@ -99,8 +96,7 @@ func (c *MrsClient) CreateExecuteJobInvoker(request *model.CreateExecuteJobReque
 //
 // 获取用户（组）与IAM委托之间的映射关系的详细信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *MrsClient) ShowAgencyMapping(request *model.ShowAgencyMappingRequest) (*model.ShowAgencyMappingResponse, error) {
 	requestDef := GenReqDefForShowAgencyMapping()
 
@@ -117,12 +113,32 @@ func (c *MrsClient) ShowAgencyMappingInvoker(request *model.ShowAgencyMappingReq
 	return &ShowAgencyMappingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowAutoScalingPolicy 查看弹性伸缩策略
+//
+// 查看指定集群的所有的弹性伸缩策略信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MrsClient) ShowAutoScalingPolicy(request *model.ShowAutoScalingPolicyRequest) (*model.ShowAutoScalingPolicyResponse, error) {
+	requestDef := GenReqDefForShowAutoScalingPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAutoScalingPolicyResponse), nil
+	}
+}
+
+// ShowAutoScalingPolicyInvoker 查看弹性伸缩策略
+func (c *MrsClient) ShowAutoScalingPolicyInvoker(request *model.ShowAutoScalingPolicyRequest) *ShowAutoScalingPolicyInvoker {
+	requestDef := GenReqDefForShowAutoScalingPolicy()
+	return &ShowAutoScalingPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowJobExeListNew 查询作业列表信息
 //
 // 在MRS指定集群中查询作业列表信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *MrsClient) ShowJobExeListNew(request *model.ShowJobExeListNewRequest) (*model.ShowJobExeListNewResponse, error) {
 	requestDef := GenReqDefForShowJobExeListNew()
 
@@ -143,8 +159,7 @@ func (c *MrsClient) ShowJobExeListNewInvoker(request *model.ShowJobExeListNewReq
 //
 // 在MRS集群中查询指定作业的详细信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *MrsClient) ShowSingleJobExe(request *model.ShowSingleJobExeRequest) (*model.ShowSingleJobExeResponse, error) {
 	requestDef := GenReqDefForShowSingleJobExe()
 
@@ -165,8 +180,7 @@ func (c *MrsClient) ShowSingleJobExeInvoker(request *model.ShowSingleJobExeReque
 //
 // 在MRS集群中查询SparkSql和SparkScript两种类型作业的SQL语句运行完成后返回的查询结果。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *MrsClient) ShowSqlResultWithJob(request *model.ShowSqlResultWithJobRequest) (*model.ShowSqlResultWithJobResponse, error) {
 	requestDef := GenReqDefForShowSqlResultWithJob()
 
@@ -187,8 +201,7 @@ func (c *MrsClient) ShowSqlResultWithJobInvoker(request *model.ShowSqlResultWith
 //
 // 在MRS集群中终止指定作业。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *MrsClient) StopJob(request *model.StopJobRequest) (*model.StopJobResponse, error) {
 	requestDef := GenReqDefForStopJob()
 
@@ -209,8 +222,7 @@ func (c *MrsClient) StopJobInvoker(request *model.StopJobRequest) *StopJobInvoke
 //
 // 更新用户（组）与IAM委托之间的映射关系。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *MrsClient) UpdateAgencyMapping(request *model.UpdateAgencyMappingRequest) (*model.UpdateAgencyMappingResponse, error) {
 	requestDef := GenReqDefForUpdateAgencyMapping()
 
@@ -227,12 +239,32 @@ func (c *MrsClient) UpdateAgencyMappingInvoker(request *model.UpdateAgencyMappin
 	return &UpdateAgencyMappingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateClusterName 修改集群名称
+//
+// 修改集群名称
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MrsClient) UpdateClusterName(request *model.UpdateClusterNameRequest) (*model.UpdateClusterNameResponse, error) {
+	requestDef := GenReqDefForUpdateClusterName()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateClusterNameResponse), nil
+	}
+}
+
+// UpdateClusterNameInvoker 修改集群名称
+func (c *MrsClient) UpdateClusterNameInvoker(request *model.UpdateClusterNameRequest) *UpdateClusterNameInvoker {
+	requestDef := GenReqDefForUpdateClusterName()
+	return &UpdateClusterNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowHdfsFileList 获取指定目录文件列表
 //
 // 在MRS集群中获取指定目录文件列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *MrsClient) ShowHdfsFileList(request *model.ShowHdfsFileListRequest) (*model.ShowHdfsFileListResponse, error) {
 	requestDef := GenReqDefForShowHdfsFileList()
 
@@ -253,8 +285,7 @@ func (c *MrsClient) ShowHdfsFileListInvoker(request *model.ShowHdfsFileListReque
 //
 // 在MRS集群中取消一条SQL的执行任务。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *MrsClient) CancelSql(request *model.CancelSqlRequest) (*model.CancelSqlResponse, error) {
 	requestDef := GenReqDefForCancelSql()
 
@@ -275,8 +306,7 @@ func (c *MrsClient) CancelSqlInvoker(request *model.CancelSqlRequest) *CancelSql
 //
 // 在MRS集群中提交并执行一条SQL语句。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *MrsClient) ExecuteSql(request *model.ExecuteSqlRequest) (*model.ExecuteSqlResponse, error) {
 	requestDef := GenReqDefForExecuteSql()
 
@@ -297,8 +327,7 @@ func (c *MrsClient) ExecuteSqlInvoker(request *model.ExecuteSqlRequest) *Execute
 //
 // 在MRS集群中查询一条SQL的执行结果。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *MrsClient) ShowSqlResult(request *model.ShowSqlResultRequest) (*model.ShowSqlResultResponse, error) {
 	requestDef := GenReqDefForShowSqlResult()
 

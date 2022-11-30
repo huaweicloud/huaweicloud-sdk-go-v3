@@ -23,8 +23,7 @@ func SisClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 该接口用于获取录音文件识别结果及识别状态。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SisClient) CollectTranscriberJob(request *model.CollectTranscriberJobRequest) (*model.CollectTranscriberJobResponse, error) {
 	requestDef := GenReqDefForCollectTranscriberJob()
 
@@ -45,8 +44,7 @@ func (c *SisClient) CollectTranscriberJobInvoker(request *model.CollectTranscrib
 //
 // 新建一个热词表，创建成功返回id。每个用户限制创建10个热词表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SisClient) CreateVocabulary(request *model.CreateVocabularyRequest) (*model.CreateVocabularyResponse, error) {
 	requestDef := GenReqDefForCreateVocabulary()
 
@@ -67,8 +65,7 @@ func (c *SisClient) CreateVocabularyInvoker(request *model.CreateVocabularyReque
 //
 // 通过热词表id删除热词表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SisClient) DeleteVocabulary(request *model.DeleteVocabularyRequest) (*model.DeleteVocabularyResponse, error) {
 	requestDef := GenReqDefForDeleteVocabulary()
 
@@ -98,8 +95,7 @@ func (c *SisClient) DeleteVocabularyInvoker(request *model.DeleteVocabularyReque
 // 接口约束
 // 录音时长不超过5小时，文件大小不超过300M，识别结果保存72小时（从识别完成的时间算起）。72小时后如果再访问，将会返回 \&quot;task id is not found\&quot;错误。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SisClient) PushTranscriberJobs(request *model.PushTranscriberJobsRequest) (*model.PushTranscriberJobsResponse, error) {
 	requestDef := GenReqDefForPushTranscriberJobs()
 
@@ -121,8 +117,7 @@ func (c *SisClient) PushTranscriberJobsInvoker(request *model.PushTranscriberJob
 // 极速版ASR(Restful API 接口, 适用于音频(文件大小&lt;&#x3D;100M,语音时长&lt;&#x3D;30分钟)文件的同步识别。
 // 此接口以POST方式一次性上传整个音频或从华为OBS中下载音频， 识别结果将在请求响应中即刻返回，用于语音文件极速转写，质检分析的离线场景。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SisClient) RecognizeFlashAsr(request *model.RecognizeFlashAsrRequest) (*model.RecognizeFlashAsrResponse, error) {
 	requestDef := GenReqDefForRecognizeFlashAsr()
 
@@ -143,8 +138,7 @@ func (c *SisClient) RecognizeFlashAsrInvoker(request *model.RecognizeFlashAsrReq
 //
 // 一句话识别接口，用于短语音的同步识别。一次性上传整个音频，响应中即返回识别结果。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SisClient) RecognizeShortAudio(request *model.RecognizeShortAudioRequest) (*model.RecognizeShortAudioResponse, error) {
 	requestDef := GenReqDefForRecognizeShortAudio()
 
@@ -165,8 +159,7 @@ func (c *SisClient) RecognizeShortAudioInvoker(request *model.RecognizeShortAudi
 //
 // 口语评测接口，基于一小段朗读语音和预期文本，评价朗读者发音质量。当前仅支持华北-北京四。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SisClient) RunAudioAssessment(request *model.RunAudioAssessmentRequest) (*model.RunAudioAssessmentResponse, error) {
 	requestDef := GenReqDefForRunAudioAssessment()
 
@@ -187,8 +180,7 @@ func (c *SisClient) RunAudioAssessmentInvoker(request *model.RunAudioAssessmentR
 //
 // 多模态评测接口，根据朗读视频数据、视频对应的音频数据和试题文本，综合给出朗读者口语的评测分数。当前仅支持华北-北京四。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SisClient) RunMultiModalAssessment(request *model.RunMultiModalAssessmentRequest) (*model.RunMultiModalAssessmentResponse, error) {
 	requestDef := GenReqDefForRunMultiModalAssessment()
 
@@ -209,8 +201,7 @@ func (c *SisClient) RunMultiModalAssessmentInvoker(request *model.RunMultiModalA
 //
 // 语音合成，是一种将文本转换成逼真语音的服务。用户通过实时访问和调用API获取语音合成结果，将用户输入的文字合成为音频。通过音色选择、自定义音量、语速，为企业和个人提供个性化的发音服务
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SisClient) RunTts(request *model.RunTtsRequest) (*model.RunTtsResponse, error) {
 	requestDef := GenReqDefForRunTts()
 
@@ -231,8 +222,7 @@ func (c *SisClient) RunTtsInvoker(request *model.RunTtsRequest) *RunTtsInvoker {
 //
 // 查询用户所有热词表列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SisClient) ShowVocabularies(request *model.ShowVocabulariesRequest) (*model.ShowVocabulariesResponse, error) {
 	requestDef := GenReqDefForShowVocabularies()
 
@@ -253,8 +243,7 @@ func (c *SisClient) ShowVocabulariesInvoker(request *model.ShowVocabulariesReque
 //
 // 通过热词表id查询热词表的信息和内容。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SisClient) ShowVocabulary(request *model.ShowVocabularyRequest) (*model.ShowVocabularyResponse, error) {
 	requestDef := GenReqDefForShowVocabulary()
 
@@ -275,8 +264,7 @@ func (c *SisClient) ShowVocabularyInvoker(request *model.ShowVocabularyRequest) 
 //
 // 更新一个热词表，更新成功返回id。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SisClient) UpdateVocabulary(request *model.UpdateVocabularyRequest) (*model.UpdateVocabularyResponse, error) {
 	requestDef := GenReqDefForUpdateVocabulary()
 

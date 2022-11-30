@@ -23,8 +23,7 @@ func IoTEdgeClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 创建边缘节点
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) CreateEdgeNode(request *model.CreateEdgeNodeRequest) (*model.CreateEdgeNodeResponse, error) {
 	requestDef := GenReqDefForCreateEdgeNode()
 
@@ -45,8 +44,7 @@ func (c *IoTEdgeClient) CreateEdgeNodeInvoker(request *model.CreateEdgeNodeReque
 //
 // 生成边缘节点安装命令，命令有效时间30分钟，超过后需要重新生成
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) CreateInstallCmd(request *model.CreateInstallCmdRequest) (*model.CreateInstallCmdResponse, error) {
 	requestDef := GenReqDefForCreateInstallCmd()
 
@@ -67,8 +65,7 @@ func (c *IoTEdgeClient) CreateInstallCmdInvoker(request *model.CreateInstallCmdR
 //
 // 删除指定边缘节点
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) DeleteEdgeNode(request *model.DeleteEdgeNodeRequest) (*model.DeleteEdgeNodeResponse, error) {
 	requestDef := GenReqDefForDeleteEdgeNode()
 
@@ -89,8 +86,7 @@ func (c *IoTEdgeClient) DeleteEdgeNodeInvoker(request *model.DeleteEdgeNodeReque
 //
 // 查询边缘节点列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) ListEdgeNodes(request *model.ListEdgeNodesRequest) (*model.ListEdgeNodesResponse, error) {
 	requestDef := GenReqDefForListEdgeNodes()
 
@@ -111,8 +107,7 @@ func (c *IoTEdgeClient) ListEdgeNodesInvoker(request *model.ListEdgeNodesRequest
 //
 // 查询边缘节点详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) ShowEdgeNode(request *model.ShowEdgeNodeRequest) (*model.ShowEdgeNodeResponse, error) {
 	requestDef := GenReqDefForShowEdgeNode()
 
@@ -133,8 +128,7 @@ func (c *IoTEdgeClient) ShowEdgeNodeInvoker(request *model.ShowEdgeNodeRequest) 
 //
 // 添加设备
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) AddDevice(request *model.AddDeviceRequest) (*model.AddDeviceResponse, error) {
 	requestDef := GenReqDefForAddDevice()
 
@@ -155,8 +149,7 @@ func (c *IoTEdgeClient) AddDeviceInvoker(request *model.AddDeviceRequest) *AddDe
 //
 // 删除设备
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) DeleteDevice(request *model.DeleteDeviceRequest) (*model.DeleteDeviceResponse, error) {
 	requestDef := GenReqDefForDeleteDevice()
 
@@ -177,8 +170,7 @@ func (c *IoTEdgeClient) DeleteDeviceInvoker(request *model.DeleteDeviceRequest) 
 //
 // 查询设备列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) ListDevices(request *model.ListDevicesRequest) (*model.ListDevicesResponse, error) {
 	requestDef := GenReqDefForListDevices()
 
@@ -199,8 +191,7 @@ func (c *IoTEdgeClient) ListDevicesInvoker(request *model.ListDevicesRequest) *L
 //
 // 获取协议配置
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) ShowProductConfig(request *model.ShowProductConfigRequest) (*model.ShowProductConfigResponse, error) {
 	requestDef := GenReqDefForShowProductConfig()
 
@@ -221,8 +212,7 @@ func (c *IoTEdgeClient) ShowProductConfigInvoker(request *model.ShowProductConfi
 //
 // 修改设备
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) UpdateDevice(request *model.UpdateDeviceRequest) (*model.UpdateDeviceResponse, error) {
 	requestDef := GenReqDefForUpdateDevice()
 
@@ -243,8 +233,7 @@ func (c *IoTEdgeClient) UpdateDeviceInvoker(request *model.UpdateDeviceRequest) 
 //
 // 查询应用列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) BatchListEdgeApps(request *model.BatchListEdgeAppsRequest) (*model.BatchListEdgeAppsResponse, error) {
 	requestDef := GenReqDefForBatchListEdgeApps()
 
@@ -265,8 +254,7 @@ func (c *IoTEdgeClient) BatchListEdgeAppsInvoker(request *model.BatchListEdgeApp
 //
 // 创建应用
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) CreateEdgeApp(request *model.CreateEdgeAppRequest) (*model.CreateEdgeAppResponse, error) {
 	requestDef := GenReqDefForCreateEdgeApp()
 
@@ -287,8 +275,7 @@ func (c *IoTEdgeClient) CreateEdgeAppInvoker(request *model.CreateEdgeAppRequest
 //
 // 删除应用
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) DeleteEdgeApp(request *model.DeleteEdgeAppRequest) (*model.DeleteEdgeAppResponse, error) {
 	requestDef := GenReqDefForDeleteEdgeApp()
 
@@ -309,8 +296,7 @@ func (c *IoTEdgeClient) DeleteEdgeAppInvoker(request *model.DeleteEdgeAppRequest
 //
 // 查询应用
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) ShowEdgeApp(request *model.ShowEdgeAppRequest) (*model.ShowEdgeAppResponse, error) {
 	requestDef := GenReqDefForShowEdgeApp()
 
@@ -331,8 +317,7 @@ func (c *IoTEdgeClient) ShowEdgeAppInvoker(request *model.ShowEdgeAppRequest) *S
 //
 // 查询应用版本列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) BatchListEdgeAppVersions(request *model.BatchListEdgeAppVersionsRequest) (*model.BatchListEdgeAppVersionsResponse, error) {
 	requestDef := GenReqDefForBatchListEdgeAppVersions()
 
@@ -353,8 +338,7 @@ func (c *IoTEdgeClient) BatchListEdgeAppVersionsInvoker(request *model.BatchList
 //
 // 创建应用版本
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) CreateEdgeApplicationVersion(request *model.CreateEdgeApplicationVersionRequest) (*model.CreateEdgeApplicationVersionResponse, error) {
 	requestDef := GenReqDefForCreateEdgeApplicationVersion()
 
@@ -375,8 +359,7 @@ func (c *IoTEdgeClient) CreateEdgeApplicationVersionInvoker(request *model.Creat
 //
 // 删除应用版本
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) DeleteEdgeApplicationVersion(request *model.DeleteEdgeApplicationVersionRequest) (*model.DeleteEdgeApplicationVersionResponse, error) {
 	requestDef := GenReqDefForDeleteEdgeApplicationVersion()
 
@@ -397,8 +380,7 @@ func (c *IoTEdgeClient) DeleteEdgeApplicationVersionInvoker(request *model.Delet
 //
 // 查询应用版本详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) ShowEdgeApplicationVersion(request *model.ShowEdgeApplicationVersionRequest) (*model.ShowEdgeApplicationVersionResponse, error) {
 	requestDef := GenReqDefForShowEdgeApplicationVersion()
 
@@ -419,8 +401,7 @@ func (c *IoTEdgeClient) ShowEdgeApplicationVersionInvoker(request *model.ShowEdg
 //
 // 修改应用版本
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) UpdateEdgeApplicationVersion(request *model.UpdateEdgeApplicationVersionRequest) (*model.UpdateEdgeApplicationVersionResponse, error) {
 	requestDef := GenReqDefForUpdateEdgeApplicationVersion()
 
@@ -441,8 +422,7 @@ func (c *IoTEdgeClient) UpdateEdgeApplicationVersionInvoker(request *model.Updat
 //
 // 更新应用版本状态。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) UpdateEdgeApplicationVersionState(request *model.UpdateEdgeApplicationVersionStateRequest) (*model.UpdateEdgeApplicationVersionStateResponse, error) {
 	requestDef := GenReqDefForUpdateEdgeApplicationVersionState()
 
@@ -463,8 +443,7 @@ func (c *IoTEdgeClient) UpdateEdgeApplicationVersionStateInvoker(request *model.
 //
 // 用户通过在指定边缘节点上设置外部实体的接入信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) CreateExternalEntity(request *model.CreateExternalEntityRequest) (*model.CreateExternalEntityResponse, error) {
 	requestDef := GenReqDefForCreateExternalEntity()
 
@@ -485,8 +464,7 @@ func (c *IoTEdgeClient) CreateExternalEntityInvoker(request *model.CreateExterna
 //
 // 删除节点下外部实体
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) DeleteExternalEntity(request *model.DeleteExternalEntityRequest) (*model.DeleteExternalEntityResponse, error) {
 	requestDef := GenReqDefForDeleteExternalEntity()
 
@@ -507,8 +485,7 @@ func (c *IoTEdgeClient) DeleteExternalEntityInvoker(request *model.DeleteExterna
 //
 // 用户在指定边缘节点上查询外部实体列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) ListExternalEntity(request *model.ListExternalEntityRequest) (*model.ListExternalEntityResponse, error) {
 	requestDef := GenReqDefForListExternalEntity()
 
@@ -529,8 +506,7 @@ func (c *IoTEdgeClient) ListExternalEntityInvoker(request *model.ListExternalEnt
 //
 // 用户通过在指定边缘节点上修改指定外部实体的接入信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) UpdateExternalEntity(request *model.UpdateExternalEntityRequest) (*model.UpdateExternalEntityResponse, error) {
 	requestDef := GenReqDefForUpdateExternalEntity()
 
@@ -551,8 +527,7 @@ func (c *IoTEdgeClient) UpdateExternalEntityInvoker(request *model.UpdateExterna
 //
 // 用户通过Console接口查询指定边缘节点上边缘模块列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) BatchListModules(request *model.BatchListModulesRequest) (*model.BatchListModulesResponse, error) {
 	requestDef := GenReqDefForBatchListModules()
 
@@ -573,8 +548,7 @@ func (c *IoTEdgeClient) BatchListModulesInvoker(request *model.BatchListModulesR
 //
 // 用户通过Console接口在指定边缘节点上创建边缘模块
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) CreateModule(request *model.CreateModuleRequest) (*model.CreateModuleResponse, error) {
 	requestDef := GenReqDefForCreateModule()
 
@@ -595,8 +569,7 @@ func (c *IoTEdgeClient) CreateModuleInvoker(request *model.CreateModuleRequest) 
 //
 // 用户通过过Console接口在指定边缘节点上删除边缘模块
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) DeleteModule(request *model.DeleteModuleRequest) (*model.DeleteModuleResponse, error) {
 	requestDef := GenReqDefForDeleteModule()
 
@@ -617,8 +590,7 @@ func (c *IoTEdgeClient) DeleteModuleInvoker(request *model.DeleteModuleRequest) 
 //
 // 用户通过Console接口查询指定边缘节点上指定边缘模块
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) ShowModule(request *model.ShowModuleRequest) (*model.ShowModuleResponse, error) {
 	requestDef := GenReqDefForShowModule()
 
@@ -639,8 +611,7 @@ func (c *IoTEdgeClient) ShowModuleInvoker(request *model.ShowModuleRequest) *Sho
 //
 // 用户通过Console接口查询指定边缘节点上指定边缘模块
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) UpdateModule(request *model.UpdateModuleRequest) (*model.UpdateModuleResponse, error) {
 	requestDef := GenReqDefForUpdateModule()
 
@@ -661,8 +632,7 @@ func (c *IoTEdgeClient) UpdateModuleInvoker(request *model.UpdateModuleRequest) 
 //
 // 用户在指定边缘节点上查询边缘路由列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) ListRoutes(request *model.ListRoutesRequest) (*model.ListRoutesResponse, error) {
 	requestDef := GenReqDefForListRoutes()
 
@@ -683,8 +653,7 @@ func (c *IoTEdgeClient) ListRoutesInvoker(request *model.ListRoutesRequest) *Lis
 //
 // 用户通过在指定边缘节点上设置边缘路由
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) UpdateRoutes(request *model.UpdateRoutesRequest) (*model.UpdateRoutesResponse, error) {
 	requestDef := GenReqDefForUpdateRoutes()
 
@@ -705,8 +674,7 @@ func (c *IoTEdgeClient) UpdateRoutesInvoker(request *model.UpdateRoutesRequest) 
 //
 // 南向3rdIA对下发的配置项进行批量确认
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) BatchConfirmConfigsNew(request *model.BatchConfirmConfigsNewRequest) (*model.BatchConfirmConfigsNewResponse, error) {
 	requestDef := GenReqDefForBatchConfirmConfigsNew()
 
@@ -727,8 +695,7 @@ func (c *IoTEdgeClient) BatchConfirmConfigsNewInvoker(request *model.BatchConfir
 //
 // 批量导入南向3rdIA配置项
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) BatchImportConfigs(request *model.BatchImportConfigsRequest) (*model.BatchImportConfigsResponse, error) {
 	requestDef := GenReqDefForBatchImportConfigs()
 
@@ -749,8 +716,7 @@ func (c *IoTEdgeClient) BatchImportConfigsInvoker(request *model.BatchImportConf
 //
 // 删除南向3rdIA配置项
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) DeleteIaConfig(request *model.DeleteIaConfigRequest) (*model.DeleteIaConfigResponse, error) {
 	requestDef := GenReqDefForDeleteIaConfig()
 
@@ -771,8 +737,7 @@ func (c *IoTEdgeClient) DeleteIaConfigInvoker(request *model.DeleteIaConfigReque
 //
 // 查询南向3rdIA配置项列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) ListIaConfigs(request *model.ListIaConfigsRequest) (*model.ListIaConfigsResponse, error) {
 	requestDef := GenReqDefForListIaConfigs()
 
@@ -793,8 +758,7 @@ func (c *IoTEdgeClient) ListIaConfigsInvoker(request *model.ListIaConfigsRequest
 //
 // 查询南向3rdIA配置项详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) ShowIaConfig(request *model.ShowIaConfigRequest) (*model.ShowIaConfigResponse, error) {
 	requestDef := GenReqDefForShowIaConfig()
 
@@ -815,8 +779,7 @@ func (c *IoTEdgeClient) ShowIaConfigInvoker(request *model.ShowIaConfigRequest) 
 //
 // 创建&amp;更新南向3rdIA配置项信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) UpdateIaConfig(request *model.UpdateIaConfigRequest) (*model.UpdateIaConfigResponse, error) {
 	requestDef := GenReqDefForUpdateIaConfig()
 
@@ -838,8 +801,7 @@ func (c *IoTEdgeClient) UpdateIaConfigInvoker(request *model.UpdateIaConfigReque
 // 批量授权北向NA信息到边缘节点。
 // 已授权的边缘节点上的南向IA应用，可以通过部署在边缘节点上的api网关访问北向NA提供的接口。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) BatchAssociateNaToNodes(request *model.BatchAssociateNaToNodesRequest) (*model.BatchAssociateNaToNodesResponse, error) {
 	requestDef := GenReqDefForBatchAssociateNaToNodes()
 
@@ -860,8 +822,7 @@ func (c *IoTEdgeClient) BatchAssociateNaToNodesInvoker(request *model.BatchAssoc
 //
 // 删除北向NA信息，如果有边缘节点已分配该NA信息，会通知到该边缘节点。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) DeleteNa(request *model.DeleteNaRequest) (*model.DeleteNaResponse, error) {
 	requestDef := GenReqDefForDeleteNa()
 
@@ -882,8 +843,7 @@ func (c *IoTEdgeClient) DeleteNaInvoker(request *model.DeleteNaRequest) *DeleteN
 //
 // 查询该北向NA信息的已分配节点
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) ListNaAuthorizedNodes(request *model.ListNaAuthorizedNodesRequest) (*model.ListNaAuthorizedNodesResponse, error) {
 	requestDef := GenReqDefForListNaAuthorizedNodes()
 
@@ -904,8 +864,7 @@ func (c *IoTEdgeClient) ListNaAuthorizedNodesInvoker(request *model.ListNaAuthor
 //
 // 查询北向NA信息列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) ListNas(request *model.ListNasRequest) (*model.ListNasResponse, error) {
 	requestDef := GenReqDefForListNas()
 
@@ -926,8 +885,7 @@ func (c *IoTEdgeClient) ListNasInvoker(request *model.ListNasRequest) *ListNasIn
 //
 // 查询北向NA信息详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) ShowNa(request *model.ShowNaRequest) (*model.ShowNaResponse, error) {
 	requestDef := GenReqDefForShowNa()
 
@@ -948,8 +906,7 @@ func (c *IoTEdgeClient) ShowNaInvoker(request *model.ShowNaRequest) *ShowNaInvok
 //
 // 创建&amp;更新北向NA信息，当更新北向NA信息时，会通知到已分配该北向NA的所有边缘节点。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) UpdateNa(request *model.UpdateNaRequest) (*model.UpdateNaResponse, error) {
 	requestDef := GenReqDefForUpdateNa()
 

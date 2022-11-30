@@ -28,6 +28,9 @@ type MicroServiceInfoCceCreate struct {
 
 	// 工作负载的监听端口号
 	Port int32 `json:"port"`
+
+	// 工作负载的标签列表。
+	Labels *[]MicroserviceLabel `json:"labels,omitempty"`
 }
 
 func (o MicroServiceInfoCceCreate) String() string {

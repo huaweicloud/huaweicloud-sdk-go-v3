@@ -23,8 +23,7 @@ func DevStarClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 通过应用Id获取软件发布仓库列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DevStarClient) ShowApplicationReleaseRepositories(request *model.ShowApplicationReleaseRepositoriesRequest) (*model.ShowApplicationReleaseRepositoriesResponse, error) {
 	requestDef := GenReqDefForShowApplicationReleaseRepositories()
 
@@ -45,8 +44,7 @@ func (c *DevStarClient) ShowApplicationReleaseRepositoriesInvoker(request *model
 //
 // 根据应用Id查询应用关联的代码仓、流水线删除状态 使用场景：用户删除应用关联的资源（如代码仓、流水线...）后，通过该接口实时查询代码仓、流水线删除状态
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DevStarClient) ShowApplicationResDeleteStatus(request *model.ShowApplicationResDeleteStatusRequest) (*model.ShowApplicationResDeleteStatusResponse, error) {
 	requestDef := GenReqDefForShowApplicationResDeleteStatus()
 
@@ -67,8 +65,7 @@ func (c *DevStarClient) ShowApplicationResDeleteStatusInvoker(request *model.Sho
 //
 // 根据应用Id获取依赖元数据资源
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DevStarClient) ShowApplicationDependentResources(request *model.ShowApplicationDependentResourcesRequest) (*model.ShowApplicationDependentResourcesResponse, error) {
 	requestDef := GenReqDefForShowApplicationDependentResources()
 
@@ -89,8 +86,7 @@ func (c *DevStarClient) ShowApplicationDependentResourcesInvoker(request *model.
 //
 // 根据应用Id获取应用详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DevStarClient) ShowApplicationV3(request *model.ShowApplicationV3Request) (*model.ShowApplicationV3Response, error) {
 	requestDef := GenReqDefForShowApplicationV3()
 
@@ -113,8 +109,7 @@ func (c *DevStarClient) ShowApplicationV3Invoker(request *model.ShowApplicationV
 // - 允许更新信息的信息包含
 // name,description,icon
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DevStarClient) UpdateApplication(request *model.UpdateApplicationRequest) (*model.UpdateApplicationResponse, error) {
 	requestDef := GenReqDefForUpdateApplication()
 
@@ -135,8 +130,7 @@ func (c *DevStarClient) UpdateApplicationInvoker(request *model.UpdateApplicatio
 //
 // 根据应用Id删除应用，并可以选择删除其关联的代码仓、流水线资源
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DevStarClient) DeleteApplicationV4(request *model.DeleteApplicationV4Request) (*model.DeleteApplicationV4Response, error) {
 	requestDef := GenReqDefForDeleteApplicationV4()
 
@@ -158,8 +152,7 @@ func (c *DevStarClient) DeleteApplicationV4Invoker(request *model.DeleteApplicat
 // 获取我创建的应用列表
 // 当前只支持查询我创建的应用，其中请求参数is_created_by_self需为true
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DevStarClient) ListApplicationsV6(request *model.ListApplicationsV6Request) (*model.ListApplicationsV6Response, error) {
 	requestDef := GenReqDefForListApplicationsV6()
 
@@ -180,8 +173,7 @@ func (c *DevStarClient) ListApplicationsV6Invoker(request *model.ListApplication
 //
 // 下载模板产物。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DevStarClient) DownloadApplicationCode(request *model.DownloadApplicationCodeRequest) (*model.DownloadApplicationCodeResponse, error) {
 	requestDef := GenReqDefForDownloadApplicationCode()
 
@@ -202,8 +194,7 @@ func (c *DevStarClient) DownloadApplicationCodeInvoker(request *model.DownloadAp
 //
 // 部署任务执行变更人工审核，终止或者继续部署任务
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DevStarClient) ConfirmDeploymentJob(request *model.ConfirmDeploymentJobRequest) (*model.ConfirmDeploymentJobResponse, error) {
 	requestDef := GenReqDefForConfirmDeploymentJob()
 
@@ -227,8 +218,7 @@ func (c *DevStarClient) ConfirmDeploymentJobInvoker(request *model.ConfirmDeploy
 // handler为在函数部署方式下，入口函数名称，从应用代码中获取，格式为“包名.类名.函数名称”，例如：com.example.demo.APIGTrigger.handler。
 // 也可以从应用详情接口返回结构template_deployment中直接获取。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DevStarClient) CreateDeploymentJobs(request *model.CreateDeploymentJobsRequest) (*model.CreateDeploymentJobsResponse, error) {
 	requestDef := GenReqDefForCreateDeploymentJobs()
 
@@ -249,8 +239,7 @@ func (c *DevStarClient) CreateDeploymentJobsInvoker(request *model.CreateDeploym
 //
 // 查询应用环境部署任务详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DevStarClient) ShowDeploymentJobs(request *model.ShowDeploymentJobsRequest) (*model.ShowDeploymentJobsResponse, error) {
 	requestDef := GenReqDefForShowDeploymentJobs()
 
@@ -279,8 +268,7 @@ func (c *DevStarClient) ShowDeploymentJobsInvoker(request *model.ShowDeploymentJ
 // - 代码生成位置
 // 应用代码生成后的地址，目前支持codehub地址和压缩包下载地址。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DevStarClient) RunCodehubTemplateJob(request *model.RunCodehubTemplateJobRequest) (*model.RunCodehubTemplateJobResponse, error) {
 	requestDef := GenReqDefForRunCodehubTemplateJob()
 
@@ -309,8 +297,7 @@ func (c *DevStarClient) RunCodehubTemplateJobInvoker(request *model.RunCodehubTe
 // - 代码生成位置
 // 应用代码生成后的地址，目前支持codehub地址和压缩包下载地址。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DevStarClient) RunDevstarTemplateJob(request *model.RunDevstarTemplateJobRequest) (*model.RunDevstarTemplateJobResponse, error) {
 	requestDef := GenReqDefForRunDevstarTemplateJob()
 
@@ -340,8 +327,7 @@ func (c *DevStarClient) RunDevstarTemplateJobInvoker(request *model.RunDevstarTe
 // - 代码生成位置
 // 应用代码生成后的地址，目前支持codehub地址和压缩包下载地址。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DevStarClient) ShowJobDetail(request *model.ShowJobDetailRequest) (*model.ShowJobDetailResponse, error) {
 	requestDef := GenReqDefForShowJobDetail()
 
@@ -362,8 +348,7 @@ func (c *DevStarClient) ShowJobDetailInvoker(request *model.ShowJobDetailRequest
 //
 // 流水线模板列表查询
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DevStarClient) ListPipelineTemplates(request *model.ListPipelineTemplatesRequest) (*model.ListPipelineTemplatesResponse, error) {
 	requestDef := GenReqDefForListPipelineTemplates()
 
@@ -384,8 +369,7 @@ func (c *DevStarClient) ListPipelineTemplatesInvoker(request *model.ListPipeline
 //
 // 查询应用流水线最近一次运行状态查询接口
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DevStarClient) ShowPipelineLastStatusV2(request *model.ShowPipelineLastStatusV2Request) (*model.ShowPipelineLastStatusV2Response, error) {
 	requestDef := GenReqDefForShowPipelineLastStatusV2()
 
@@ -406,8 +390,7 @@ func (c *DevStarClient) ShowPipelineLastStatusV2Invoker(request *model.ShowPipel
 //
 // 根据流水线Id操作流水线启动
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DevStarClient) StartPipeline(request *model.StartPipelineRequest) (*model.StartPipelineResponse, error) {
 	requestDef := GenReqDefForStartPipeline()
 
@@ -429,8 +412,7 @@ func (c *DevStarClient) StartPipelineInvoker(request *model.StartPipelineRequest
 // 获取用户有权限的DevStar存量DevCloud项目列表。
 // 来源包括：1.DevStar创建的DevCloud项目；2.DevStar应用有关联DevCloud项目。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DevStarClient) ListProjectsV4(request *model.ListProjectsV4Request) (*model.ListProjectsV4Response, error) {
 	requestDef := GenReqDefForListProjectsV4()
 
@@ -455,8 +437,7 @@ func (c *DevStarClient) ListProjectsV4Invoker(request *model.ListProjectsV4Reque
 // - 必传参数
 //     project_id,name,region_id
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DevStarClient) CheckRepositoryDuplicateName(request *model.CheckRepositoryDuplicateNameRequest) (*model.CheckRepositoryDuplicateNameResponse, error) {
 	requestDef := GenReqDefForCheckRepositoryDuplicateName()
 
@@ -479,8 +460,7 @@ func (c *DevStarClient) CheckRepositoryDuplicateNameInvoker(request *model.Check
 // - 用户需为登录状态。
 // - 拥有仓库权限。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DevStarClient) ShowRepositoryByCloudIde(request *model.ShowRepositoryByCloudIdeRequest) (*model.ShowRepositoryByCloudIdeResponse, error) {
 	requestDef := GenReqDefForShowRepositoryByCloudIde()
 
@@ -501,8 +481,7 @@ func (c *DevStarClient) ShowRepositoryByCloudIdeInvoker(request *model.ShowRepos
 //
 // 查询代码仓库的统计信息,包括代码仓的名称,代码行数等信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DevStarClient) ShowRepositoryStatisticalDataV2(request *model.ShowRepositoryStatisticalDataV2Request) (*model.ShowRepositoryStatisticalDataV2Response, error) {
 	requestDef := GenReqDefForShowRepositoryStatisticalDataV2()
 
@@ -523,8 +502,7 @@ func (c *DevStarClient) ShowRepositoryStatisticalDataV2Invoker(request *model.Sh
 //
 // 该接口可以用于模板作者或模板维护人读取模板文件内容。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DevStarClient) ShowTemplateFile(request *model.ShowTemplateFileRequest) (*model.ShowTemplateFileResponse, error) {
 	requestDef := GenReqDefForShowTemplateFile()
 
@@ -545,8 +523,7 @@ func (c *DevStarClient) ShowTemplateFileInvoker(request *model.ShowTemplateFileR
 //
 // 未登录状态下，将用户浏览过的模板缓存在浏览器中，登录时，调用该接口同步模板浏览记录。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DevStarClient) CreateTemplateViewHistories(request *model.CreateTemplateViewHistoriesRequest) (*model.CreateTemplateViewHistoriesResponse, error) {
 	requestDef := GenReqDefForCreateTemplateViewHistories()
 
@@ -567,8 +544,7 @@ func (c *DevStarClient) CreateTemplateViewHistoriesInvoker(request *model.Create
 //
 // 查询模板列表，推荐使用/v1/templates/query接口。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DevStarClient) ListPublishedTemplates(request *model.ListPublishedTemplatesRequest) (*model.ListPublishedTemplatesResponse, error) {
 	requestDef := GenReqDefForListPublishedTemplates()
 
@@ -589,8 +565,7 @@ func (c *DevStarClient) ListPublishedTemplatesInvoker(request *model.ListPublish
 //
 // 查询DevStar或者CodeLabs登录用户浏览过的模板（只返回最近浏览的5个模板）。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DevStarClient) ListTemplateViewHistories(request *model.ListTemplateViewHistoriesRequest) (*model.ListTemplateViewHistoriesResponse, error) {
 	requestDef := GenReqDefForListTemplateViewHistories()
 
@@ -611,8 +586,7 @@ func (c *DevStarClient) ListTemplateViewHistoriesInvoker(request *model.ListTemp
 //
 // 查询模板列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DevStarClient) ListTemplates(request *model.ListTemplatesRequest) (*model.ListTemplatesResponse, error) {
 	requestDef := GenReqDefForListTemplates()
 
@@ -633,8 +607,7 @@ func (c *DevStarClient) ListTemplatesInvoker(request *model.ListTemplatesRequest
 //
 // 查询模板列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DevStarClient) ListTemplatesV2(request *model.ListTemplatesV2Request) (*model.ListTemplatesV2Response, error) {
 	requestDef := GenReqDefForListTemplatesV2()
 
@@ -655,8 +628,7 @@ func (c *DevStarClient) ListTemplatesV2Invoker(request *model.ListTemplatesV2Req
 //
 // 获取指定模板详情，包括模板id、名称、描述、作者、标签、上架时间等信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DevStarClient) ShowTemplateV3(request *model.ShowTemplateV3Request) (*model.ShowTemplateV3Response, error) {
 	requestDef := GenReqDefForShowTemplateV3()
 
@@ -677,8 +649,7 @@ func (c *DevStarClient) ShowTemplateV3Invoker(request *model.ShowTemplateV3Reque
 //
 // 查询模板详情，推荐使用V3版本接口。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DevStarClient) ShowTemplateDetail(request *model.ShowTemplateDetailRequest) (*model.ShowTemplateDetailResponse, error) {
 	requestDef := GenReqDefForShowTemplateDetail()
 

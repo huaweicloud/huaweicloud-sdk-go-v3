@@ -23,8 +23,7 @@ func KmsClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // - 功能介绍：批量添加删除密钥标签。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) BatchCreateKmsTags(request *model.BatchCreateKmsTagsRequest) (*model.BatchCreateKmsTagsResponse, error) {
 	requestDef := GenReqDefForBatchCreateKmsTags()
 
@@ -47,8 +46,7 @@ func (c *KmsClient) BatchCreateKmsTagsInvoker(request *model.BatchCreateKmsTagsR
 // - 说明：
 //    - 创建密钥的用户才能撤销该密钥授权。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) CancelGrant(request *model.CancelGrantRequest) (*model.CancelGrantResponse, error) {
 	requestDef := GenReqDefForCancelGrant()
 
@@ -70,8 +68,7 @@ func (c *KmsClient) CancelGrantInvoker(request *model.CancelGrantRequest) *Cance
 // - 功能介绍：取消计划删除密钥。
 // - 说明：密钥处于“计划删除”状态才能取消计划删除密钥。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) CancelKeyDeletion(request *model.CancelKeyDeletionRequest) (*model.CancelKeyDeletionResponse, error) {
 	requestDef := GenReqDefForCancelKeyDeletion()
 
@@ -99,8 +96,7 @@ func (c *KmsClient) CancelKeyDeletionInvoker(request *model.CancelKeyDeletionReq
 //    - 授权中retiring_principal指向的用户；
 //    - 当授权的操作列表中包含retire-grant时，grantee_principal指向的用户。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) CancelSelfGrant(request *model.CancelSelfGrantRequest) (*model.CancelSelfGrantResponse, error) {
 	requestDef := GenReqDefForCancelSelfGrant()
 
@@ -121,8 +117,7 @@ func (c *KmsClient) CancelSelfGrantInvoker(request *model.CancelSelfGrantRequest
 //
 // - 功能介绍：创建数据密钥，返回结果包含明文和密文。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) CreateDatakey(request *model.CreateDatakeyRequest) (*model.CreateDatakeyResponse, error) {
 	requestDef := GenReqDefForCreateDatakey()
 
@@ -143,8 +138,7 @@ func (c *KmsClient) CreateDatakeyInvoker(request *model.CreateDatakeyRequest) *C
 //
 // - 功能介绍：创建数据密钥，返回结果只包含密文。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) CreateDatakeyWithoutPlaintext(request *model.CreateDatakeyWithoutPlaintextRequest) (*model.CreateDatakeyWithoutPlaintextResponse, error) {
 	requestDef := GenReqDefForCreateDatakeyWithoutPlaintext()
 
@@ -167,8 +161,7 @@ func (c *KmsClient) CreateDatakeyWithoutPlaintextInvoker(request *model.CreateDa
 // - 说明：
 //    - 服务默认主密钥（密钥别名后缀为“/default”）不可以授权。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) CreateGrant(request *model.CreateGrantRequest) (*model.CreateGrantResponse, error) {
 	requestDef := GenReqDefForCreateGrant()
 
@@ -191,8 +184,7 @@ func (c *KmsClient) CreateGrantInvoker(request *model.CreateGrantRequest) *Creat
 // - 对称密钥为长度为256位AES密钥或者128位SM4密钥，可用于小量数据的加密或者用于加密数据密钥。
 // - 非对称密钥可以为RSA密钥对或者ECC密钥对（包含SM2密钥对），可用于加解密数据、数字签名及验签。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) CreateKey(request *model.CreateKeyRequest) (*model.CreateKeyResponse, error) {
 	requestDef := GenReqDefForCreateKey()
 
@@ -213,8 +205,7 @@ func (c *KmsClient) CreateKeyInvoker(request *model.CreateKeyRequest) *CreateKey
 //
 // - \&quot;创建租户专属密钥库，专属密钥库使用DHSM实例作为密钥的存储\&quot;
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) CreateKeyStore(request *model.CreateKeyStoreRequest) (*model.CreateKeyStoreResponse, error) {
 	requestDef := GenReqDefForCreateKeyStore()
 
@@ -235,8 +226,7 @@ func (c *KmsClient) CreateKeyStoreInvoker(request *model.CreateKeyStoreRequest) 
 //
 // - 功能介绍：添加密钥标签。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) CreateKmsTag(request *model.CreateKmsTagRequest) (*model.CreateKmsTagResponse, error) {
 	requestDef := GenReqDefForCreateKmsTag()
 
@@ -258,8 +248,7 @@ func (c *KmsClient) CreateKmsTagInvoker(request *model.CreateKmsTagRequest) *Cre
 // - 功能介绍：获取导入密钥的必要参数，包括密钥导入令牌和密钥加密公钥。
 // - 说明：返回的公钥类型默认为RSA_2048。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) CreateParametersForImport(request *model.CreateParametersForImportRequest) (*model.CreateParametersForImportResponse, error) {
 	requestDef := GenReqDefForCreateParametersForImport()
 
@@ -281,8 +270,7 @@ func (c *KmsClient) CreateParametersForImportInvoker(request *model.CreateParame
 // - 功能介绍：
 //   生成8~8192bit范围内的随机数。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) CreateRandom(request *model.CreateRandomRequest) (*model.CreateRandomResponse, error) {
 	requestDef := GenReqDefForCreateRandom()
 
@@ -303,8 +291,7 @@ func (c *KmsClient) CreateRandomInvoker(request *model.CreateRandomRequest) *Cre
 //
 // - 功能介绍：解密数据。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) DecryptData(request *model.DecryptDataRequest) (*model.DecryptDataResponse, error) {
 	requestDef := GenReqDefForDecryptData()
 
@@ -325,8 +312,7 @@ func (c *KmsClient) DecryptDataInvoker(request *model.DecryptDataRequest) *Decry
 //
 // - 功能介绍：解密数据密钥，用指定的主密钥解密数据密钥。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) DecryptDatakey(request *model.DecryptDatakeyRequest) (*model.DecryptDatakeyResponse, error) {
 	requestDef := GenReqDefForDecryptDatakey()
 
@@ -347,8 +333,7 @@ func (c *KmsClient) DecryptDatakeyInvoker(request *model.DecryptDatakeyRequest) 
 //
 // - 功能介绍：删除密钥材料信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) DeleteImportedKeyMaterial(request *model.DeleteImportedKeyMaterialRequest) (*model.DeleteImportedKeyMaterialResponse, error) {
 	requestDef := GenReqDefForDeleteImportedKeyMaterial()
 
@@ -369,8 +354,7 @@ func (c *KmsClient) DeleteImportedKeyMaterialInvoker(request *model.DeleteImport
 //
 // - 功能介绍：计划多少天后删除密钥，可设置7天～1096天内删除密钥。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) DeleteKey(request *model.DeleteKeyRequest) (*model.DeleteKeyResponse, error) {
 	requestDef := GenReqDefForDeleteKey()
 
@@ -391,8 +375,7 @@ func (c *KmsClient) DeleteKeyInvoker(request *model.DeleteKeyRequest) *DeleteKey
 //
 // 删除租户专属密钥库
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) DeleteKeyStore(request *model.DeleteKeyStoreRequest) (*model.DeleteKeyStoreResponse, error) {
 	requestDef := GenReqDefForDeleteKeyStore()
 
@@ -413,8 +396,7 @@ func (c *KmsClient) DeleteKeyStoreInvoker(request *model.DeleteKeyStoreRequest) 
 //
 // - 功能介绍：删除密钥标签。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) DeleteTag(request *model.DeleteTagRequest) (*model.DeleteTagResponse, error) {
 	requestDef := GenReqDefForDeleteTag()
 
@@ -436,8 +418,7 @@ func (c *KmsClient) DeleteTagInvoker(request *model.DeleteTagRequest) *DeleteTag
 // - 功能介绍：禁用密钥，密钥禁用后不可以使用。
 // - 说明：密钥为启用状态才能禁用密钥。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) DisableKey(request *model.DisableKeyRequest) (*model.DisableKeyResponse, error) {
 	requestDef := GenReqDefForDisableKey()
 
@@ -458,8 +439,7 @@ func (c *KmsClient) DisableKeyInvoker(request *model.DisableKeyRequest) *Disable
 //
 // - 功能介绍：关闭用户主密钥轮换。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) DisableKeyRotation(request *model.DisableKeyRotationRequest) (*model.DisableKeyRotationResponse, error) {
 	requestDef := GenReqDefForDisableKeyRotation()
 
@@ -480,8 +460,7 @@ func (c *KmsClient) DisableKeyRotationInvoker(request *model.DisableKeyRotationR
 //
 // 禁用租户专属密钥库
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) DisableKeyStore(request *model.DisableKeyStoreRequest) (*model.DisableKeyStoreResponse, error) {
 	requestDef := GenReqDefForDisableKeyStore()
 
@@ -503,8 +482,7 @@ func (c *KmsClient) DisableKeyStoreInvoker(request *model.DisableKeyStoreRequest
 // - 功能介绍：启用密钥，密钥启用后才可以使用。
 // - 说明：密钥为禁用状态才能启用密钥。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) EnableKey(request *model.EnableKeyRequest) (*model.EnableKeyResponse, error) {
 	requestDef := GenReqDefForEnableKey()
 
@@ -528,8 +506,7 @@ func (c *KmsClient) EnableKeyInvoker(request *model.EnableKeyRequest) *EnableKey
 //   - 开启密钥轮换后，默认轮换间隔时间为365天。
 //   - 默认主密钥及外部导入密钥不支持轮换操作。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) EnableKeyRotation(request *model.EnableKeyRotationRequest) (*model.EnableKeyRotationResponse, error) {
 	requestDef := GenReqDefForEnableKeyRotation()
 
@@ -550,8 +527,7 @@ func (c *KmsClient) EnableKeyRotationInvoker(request *model.EnableKeyRotationReq
 //
 // 启用租户专属密钥库
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) EnableKeyStore(request *model.EnableKeyStoreRequest) (*model.EnableKeyStoreResponse, error) {
 	requestDef := GenReqDefForEnableKeyStore()
 
@@ -572,8 +548,7 @@ func (c *KmsClient) EnableKeyStoreInvoker(request *model.EnableKeyStoreRequest) 
 //
 // - 功能介绍：加密数据，用指定的用户主密钥加密数据。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) EncryptData(request *model.EncryptDataRequest) (*model.EncryptDataResponse, error) {
 	requestDef := GenReqDefForEncryptData()
 
@@ -594,8 +569,7 @@ func (c *KmsClient) EncryptDataInvoker(request *model.EncryptDataRequest) *Encry
 //
 // - 功能介绍：加密数据密钥，用指定的主密钥加密数据密钥。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) EncryptDatakey(request *model.EncryptDatakeyRequest) (*model.EncryptDatakeyResponse, error) {
 	requestDef := GenReqDefForEncryptDatakey()
 
@@ -616,8 +590,7 @@ func (c *KmsClient) EncryptDatakeyInvoker(request *model.EncryptDatakeyRequest) 
 //
 // - 功能介绍：导入密钥材料。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) ImportKeyMaterial(request *model.ImportKeyMaterialRequest) (*model.ImportKeyMaterialResponse, error) {
 	requestDef := GenReqDefForImportKeyMaterial()
 
@@ -638,8 +611,7 @@ func (c *KmsClient) ImportKeyMaterialInvoker(request *model.ImportKeyMaterialReq
 //
 // - 功能介绍：查询密钥的授权列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) ListGrants(request *model.ListGrantsRequest) (*model.ListGrantsResponse, error) {
 	requestDef := GenReqDefForListGrants()
 
@@ -660,8 +632,7 @@ func (c *KmsClient) ListGrantsInvoker(request *model.ListGrantsRequest) *ListGra
 //
 // - 功能介绍：查询密钥详细信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) ListKeyDetail(request *model.ListKeyDetailRequest) (*model.ListKeyDetailResponse, error) {
 	requestDef := GenReqDefForListKeyDetail()
 
@@ -682,8 +653,7 @@ func (c *KmsClient) ListKeyDetailInvoker(request *model.ListKeyDetailRequest) *L
 //
 // 查询租户专属密钥库列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) ListKeyStores(request *model.ListKeyStoresRequest) (*model.ListKeyStoresResponse, error) {
 	requestDef := GenReqDefForListKeyStores()
 
@@ -704,8 +674,7 @@ func (c *KmsClient) ListKeyStoresInvoker(request *model.ListKeyStoresRequest) *L
 //
 // - 功能介绍：查询用户所有密钥列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) ListKeys(request *model.ListKeysRequest) (*model.ListKeysResponse, error) {
 	requestDef := GenReqDefForListKeys()
 
@@ -726,8 +695,7 @@ func (c *KmsClient) ListKeysInvoker(request *model.ListKeysRequest) *ListKeysInv
 //
 // - 功能介绍：查询密钥实例。通过标签过滤，查询指定用户主密钥的详细信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) ListKmsByTags(request *model.ListKmsByTagsRequest) (*model.ListKmsByTagsResponse, error) {
 	requestDef := GenReqDefForListKmsByTags()
 
@@ -748,8 +716,7 @@ func (c *KmsClient) ListKmsByTagsInvoker(request *model.ListKmsByTagsRequest) *L
 //
 // - 功能介绍：查询用户在指定项目下的所有标签集合。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) ListKmsTags(request *model.ListKmsTagsRequest) (*model.ListKmsTagsResponse, error) {
 	requestDef := GenReqDefForListKmsTags()
 
@@ -770,8 +737,7 @@ func (c *KmsClient) ListKmsTagsInvoker(request *model.ListKmsTagsRequest) *ListK
 //
 // - 功能介绍：查询用户可以退役的授权列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) ListRetirableGrants(request *model.ListRetirableGrantsRequest) (*model.ListRetirableGrantsResponse, error) {
 	requestDef := GenReqDefForListRetirableGrants()
 
@@ -792,8 +758,7 @@ func (c *KmsClient) ListRetirableGrantsInvoker(request *model.ListRetirableGrant
 //
 // - 功能介绍：查询用户主密钥轮换状态。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) ShowKeyRotationStatus(request *model.ShowKeyRotationStatusRequest) (*model.ShowKeyRotationStatusResponse, error) {
 	requestDef := GenReqDefForShowKeyRotationStatus()
 
@@ -814,8 +779,7 @@ func (c *KmsClient) ShowKeyRotationStatusInvoker(request *model.ShowKeyRotationS
 //
 // 获取租户专属密钥库
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) ShowKeyStore(request *model.ShowKeyStoreRequest) (*model.ShowKeyStoreResponse, error) {
 	requestDef := GenReqDefForShowKeyStore()
 
@@ -836,8 +800,7 @@ func (c *KmsClient) ShowKeyStoreInvoker(request *model.ShowKeyStoreRequest) *Sho
 //
 // - 功能介绍：查询密钥标签。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) ShowKmsTags(request *model.ShowKmsTagsRequest) (*model.ShowKmsTagsResponse, error) {
 	requestDef := GenReqDefForShowKmsTags()
 
@@ -858,8 +821,7 @@ func (c *KmsClient) ShowKmsTagsInvoker(request *model.ShowKmsTagsRequest) *ShowK
 //
 // - 查询用户指定非对称密钥的公钥信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) ShowPublicKey(request *model.ShowPublicKeyRequest) (*model.ShowPublicKeyResponse, error) {
 	requestDef := GenReqDefForShowPublicKey()
 
@@ -880,8 +842,7 @@ func (c *KmsClient) ShowPublicKeyInvoker(request *model.ShowPublicKeyRequest) *S
 //
 // - 功能介绍：查询实例数，获取用户已经创建的用户主密钥数量。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) ShowUserInstances(request *model.ShowUserInstancesRequest) (*model.ShowUserInstancesResponse, error) {
 	requestDef := GenReqDefForShowUserInstances()
 
@@ -902,8 +863,7 @@ func (c *KmsClient) ShowUserInstancesInvoker(request *model.ShowUserInstancesReq
 //
 // - 功能介绍：查询配额，查询用户可以创建的用户主密钥配额总数及当前使用量信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) ShowUserQuotas(request *model.ShowUserQuotasRequest) (*model.ShowUserQuotasResponse, error) {
 	requestDef := GenReqDefForShowUserQuotas()
 
@@ -924,8 +884,7 @@ func (c *KmsClient) ShowUserQuotasInvoker(request *model.ShowUserQuotasRequest) 
 //
 // - 功能介绍：使用非对称密钥的私钥对消息或消息摘要进行数字签名。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) Sign(request *model.SignRequest) (*model.SignResponse, error) {
 	requestDef := GenReqDefForSign()
 
@@ -949,8 +908,7 @@ func (c *KmsClient) SignInvoker(request *model.SignRequest) *SignInvoker {
 //    - 服务默认主密钥（密钥别名后缀为“/default”）不可以修改。
 //    - 密钥处于“计划删除”状态，密钥别名不可以修改。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) UpdateKeyAlias(request *model.UpdateKeyAliasRequest) (*model.UpdateKeyAliasResponse, error) {
 	requestDef := GenReqDefForUpdateKeyAlias()
 
@@ -974,8 +932,7 @@ func (c *KmsClient) UpdateKeyAliasInvoker(request *model.UpdateKeyAliasRequest) 
 //    - 服务默认主密钥（密钥别名后缀为“/default”）不可以修改。
 //    - 密钥处于“计划删除”状态，密钥描述不可以修改。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) UpdateKeyDescription(request *model.UpdateKeyDescriptionRequest) (*model.UpdateKeyDescriptionResponse, error) {
 	requestDef := GenReqDefForUpdateKeyDescription()
 
@@ -996,8 +953,7 @@ func (c *KmsClient) UpdateKeyDescriptionInvoker(request *model.UpdateKeyDescript
 //
 // - 功能介绍：修改用户主密钥轮换周期。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) UpdateKeyRotationInterval(request *model.UpdateKeyRotationIntervalRequest) (*model.UpdateKeyRotationIntervalResponse, error) {
 	requestDef := GenReqDefForUpdateKeyRotationInterval()
 
@@ -1018,8 +974,7 @@ func (c *KmsClient) UpdateKeyRotationIntervalInvoker(request *model.UpdateKeyRot
 //
 // - 功能介绍：使用非对称密钥的私钥对消息或消息摘要进行签名验证。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) ValidateSignature(request *model.ValidateSignatureRequest) (*model.ValidateSignatureResponse, error) {
 	requestDef := GenReqDefForValidateSignature()
 
@@ -1040,8 +995,7 @@ func (c *KmsClient) ValidateSignatureInvoker(request *model.ValidateSignatureReq
 //
 // - 功能介绍：查指定API版本信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) ShowVersion(request *model.ShowVersionRequest) (*model.ShowVersionResponse, error) {
 	requestDef := GenReqDefForShowVersion()
 
@@ -1062,8 +1016,7 @@ func (c *KmsClient) ShowVersionInvoker(request *model.ShowVersionRequest) *ShowV
 //
 // - 功能介绍：查询API版本信息列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) ShowVersions(request *model.ShowVersionsRequest) (*model.ShowVersionsResponse, error) {
 	requestDef := GenReqDefForShowVersions()
 

@@ -25,6 +25,9 @@ type ApiPolicyHttpBase struct {
 
 	// API网关请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
 	Timeout *int32 `json:"timeout,omitempty"`
+
+	// 请求后端服务的重试次数，默认为-1，范围[-1,10]
+	RetryCount *string `json:"retry_count,omitempty"`
 }
 
 func (o ApiPolicyHttpBase) String() string {

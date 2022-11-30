@@ -17,6 +17,9 @@ type ShowTenantMetricRequest struct {
 
 	// 结束时间，精确到ms的时间戳
 	EndTime *string `json:"end_time,omitempty"`
+
+	// 指标类型，为空或不在取值范围内时，查询所有指标。取值范围：totalCount 调用次数；errorCount 错误次数； averageDuration 运行时间；running 运行中个数；rejectCount  拒绝个数。
+	MetricType *string `json:"metric_type,omitempty"`
 }
 
 func (o ShowTenantMetricRequest) String() string {

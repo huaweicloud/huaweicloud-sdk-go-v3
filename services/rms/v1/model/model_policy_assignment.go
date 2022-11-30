@@ -3,11 +3,17 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // 规则
 type PolicyAssignment struct {
+
+	// 规则类型，包括预定义合规规则(builtin)和用户自定义合规规则(custom)
+	PolicyAssignmentType *PolicyAssignmentPolicyAssignmentType `json:"policy_assignment_type,omitempty"`
 
 	// 规则ID
 	Id *string `json:"id,omitempty"`
@@ -35,6 +41,8 @@ type PolicyAssignment struct {
 	// 规则的策略ID
 	PolicyDefinitionId *string `json:"policy_definition_id,omitempty"`
 
+	CustomPolicy *CustomPolicy `json:"custom_policy,omitempty"`
+
 	// 规则参数
 	Parameters map[string]PolicyParameterValue `json:"parameters,omitempty"`
 }
@@ -46,4 +54,46 @@ func (o PolicyAssignment) String() string {
 	}
 
 	return strings.Join([]string{"PolicyAssignment", string(data)}, " ")
+}
+
+type PolicyAssignmentPolicyAssignmentType struct {
+	value string
+}
+
+type PolicyAssignmentPolicyAssignmentTypeEnum struct {
+	BUILTIN PolicyAssignmentPolicyAssignmentType
+	CUSTOM  PolicyAssignmentPolicyAssignmentType
+}
+
+func GetPolicyAssignmentPolicyAssignmentTypeEnum() PolicyAssignmentPolicyAssignmentTypeEnum {
+	return PolicyAssignmentPolicyAssignmentTypeEnum{
+		BUILTIN: PolicyAssignmentPolicyAssignmentType{
+			value: "builtin",
+		},
+		CUSTOM: PolicyAssignmentPolicyAssignmentType{
+			value: "custom",
+		},
+	}
+}
+
+func (c PolicyAssignmentPolicyAssignmentType) Value() string {
+	return c.value
+}
+
+func (c PolicyAssignmentPolicyAssignmentType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *PolicyAssignmentPolicyAssignmentType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

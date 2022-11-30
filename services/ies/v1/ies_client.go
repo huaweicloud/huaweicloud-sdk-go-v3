@@ -24,8 +24,7 @@ func IesClientBuilder() *http_client.HcHttpClientBuilder {
 // 创建边缘小站。
 // - 一个边缘小站关联一个华为云指定的区域。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IesClient) CreateEdgeSite(request *model.CreateEdgeSiteRequest) (*model.CreateEdgeSiteResponse, error) {
 	requestDef := GenReqDefForCreateEdgeSite()
 
@@ -46,8 +45,7 @@ func (c *IesClient) CreateEdgeSiteInvoker(request *model.CreateEdgeSiteRequest) 
 //
 // 删除指定的边缘小站。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IesClient) DeleteEdgeSite(request *model.DeleteEdgeSiteRequest) (*model.DeleteEdgeSiteResponse, error) {
 	requestDef := GenReqDefForDeleteEdgeSite()
 
@@ -68,8 +66,7 @@ func (c *IesClient) DeleteEdgeSiteInvoker(request *model.DeleteEdgeSiteRequest) 
 //
 // 查询边缘小站列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IesClient) ListEdgeSites(request *model.ListEdgeSitesRequest) (*model.ListEdgeSitesResponse, error) {
 	requestDef := GenReqDefForListEdgeSites()
 
@@ -90,8 +87,7 @@ func (c *IesClient) ListEdgeSitesInvoker(request *model.ListEdgeSitesRequest) *L
 //
 // 查询边缘小站详情。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IesClient) ShowEdgeSite(request *model.ShowEdgeSiteRequest) (*model.ShowEdgeSiteResponse, error) {
 	requestDef := GenReqDefForShowEdgeSite()
 
@@ -113,8 +109,7 @@ func (c *IesClient) ShowEdgeSiteInvoker(request *model.ShowEdgeSiteRequest) *Sho
 // 更新边缘小站。
 // - 允许更新边缘小站描述或场地信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IesClient) UpdateEdgeSite(request *model.UpdateEdgeSiteRequest) (*model.UpdateEdgeSiteResponse, error) {
 	requestDef := GenReqDefForUpdateEdgeSite()
 
@@ -135,8 +130,7 @@ func (c *IesClient) UpdateEdgeSiteInvoker(request *model.UpdateEdgeSiteRequest) 
 //
 // 查看站点容量信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IesClient) ListEdgeSiteMetrics(request *model.ListEdgeSiteMetricsRequest) (*model.ListEdgeSiteMetricsResponse, error) {
 	requestDef := GenReqDefForListEdgeSiteMetrics()
 
@@ -157,8 +151,7 @@ func (c *IesClient) ListEdgeSiteMetricsInvoker(request *model.ListEdgeSiteMetric
 //
 // 查询租户资源配额。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IesClient) ListQuotas(request *model.ListQuotasRequest) (*model.ListQuotasResponse, error) {
 	requestDef := GenReqDefForListQuotas()
 
@@ -179,8 +172,7 @@ func (c *IesClient) ListQuotasInvoker(request *model.ListQuotasRequest) *ListQuo
 //
 // 查询支持智能边缘小站接入的华为云区域（region）列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *IesClient) ListSupportedRegions(request *model.ListSupportedRegionsRequest) (*model.ListSupportedRegionsResponse, error) {
 	requestDef := GenReqDefForListSupportedRegions()
 

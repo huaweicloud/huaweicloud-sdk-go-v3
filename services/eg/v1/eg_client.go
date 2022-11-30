@@ -23,8 +23,7 @@ func EgClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 按照业务场景，一键创建服务委托授权
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) CreateAgencies(request *model.CreateAgenciesRequest) (*model.CreateAgenciesResponse, error) {
 	requestDef := GenReqDefForCreateAgencies()
 
@@ -45,8 +44,7 @@ func (c *EgClient) CreateAgenciesInvoker(request *model.CreateAgenciesRequest) *
 //
 // 创建自定义事件通道
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) CreateChannel(request *model.CreateChannelRequest) (*model.CreateChannelResponse, error) {
 	requestDef := GenReqDefForCreateChannel()
 
@@ -67,8 +65,7 @@ func (c *EgClient) CreateChannelInvoker(request *model.CreateChannelRequest) *Cr
 //
 // 创建目标连接
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) CreateConnection(request *model.CreateConnectionRequest) (*model.CreateConnectionResponse, error) {
 	requestDef := GenReqDefForCreateConnection()
 
@@ -89,8 +86,7 @@ func (c *EgClient) CreateConnectionInvoker(request *model.CreateConnectionReques
 //
 // create endpoint
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) CreateEndpoint(request *model.CreateEndpointRequest) (*model.CreateEndpointResponse, error) {
 	requestDef := GenReqDefForCreateEndpoint()
 
@@ -111,8 +107,7 @@ func (c *EgClient) CreateEndpointInvoker(request *model.CreateEndpointRequest) *
 //
 // 创建自定义事件模型
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) CreateEventSchema(request *model.CreateEventSchemaRequest) (*model.CreateEventSchemaResponse, error) {
 	requestDef := GenReqDefForCreateEventSchema()
 
@@ -133,8 +128,7 @@ func (c *EgClient) CreateEventSchemaInvoker(request *model.CreateEventSchemaRequ
 //
 // 创建自定义事件模型版本，版本号后台自动生成
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) CreateEventSchemaVersion(request *model.CreateEventSchemaVersionRequest) (*model.CreateEventSchemaVersionResponse, error) {
 	requestDef := GenReqDefForCreateEventSchemaVersion()
 
@@ -155,8 +149,7 @@ func (c *EgClient) CreateEventSchemaVersionInvoker(request *model.CreateEventSch
 //
 // 创建用户自定义类型的事件源，只能指定自定义通道，不能指定系统通道
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) CreateEventSource(request *model.CreateEventSourceRequest) (*model.CreateEventSourceResponse, error) {
 	requestDef := GenReqDefForCreateEventSource()
 
@@ -177,8 +170,7 @@ func (c *EgClient) CreateEventSourceInvoker(request *model.CreateEventSourceRequ
 //
 // 创建事件订阅
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) CreateSubscription(request *model.CreateSubscriptionRequest) (*model.CreateSubscriptionResponse, error) {
 	requestDef := GenReqDefForCreateSubscription()
 
@@ -199,8 +191,7 @@ func (c *EgClient) CreateSubscriptionInvoker(request *model.CreateSubscriptionRe
 //
 // 创建单个事件订阅目标
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) CreateSubscriptionTarget(request *model.CreateSubscriptionTargetRequest) (*model.CreateSubscriptionTargetResponse, error) {
 	requestDef := GenReqDefForCreateSubscriptionTarget()
 
@@ -221,8 +212,7 @@ func (c *EgClient) CreateSubscriptionTargetInvoker(request *model.CreateSubscrip
 //
 // 删除指定自定义事件通道
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) DeleteChannel(request *model.DeleteChannelRequest) (*model.DeleteChannelResponse, error) {
 	requestDef := GenReqDefForDeleteChannel()
 
@@ -243,8 +233,7 @@ func (c *EgClient) DeleteChannelInvoker(request *model.DeleteChannelRequest) *De
 //
 // 删除目标连接
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) DeleteConnection(request *model.DeleteConnectionRequest) (*model.DeleteConnectionResponse, error) {
 	requestDef := GenReqDefForDeleteConnection()
 
@@ -264,8 +253,7 @@ func (c *EgClient) DeleteConnectionInvoker(request *model.DeleteConnectionReques
 // DeleteEndpoint 删除访问端点
 //
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) DeleteEndpoint(request *model.DeleteEndpointRequest) (*model.DeleteEndpointResponse, error) {
 	requestDef := GenReqDefForDeleteEndpoint()
 
@@ -286,8 +274,7 @@ func (c *EgClient) DeleteEndpointInvoker(request *model.DeleteEndpointRequest) *
 //
 // 删除事件模型
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) DeleteEventSchema(request *model.DeleteEventSchemaRequest) (*model.DeleteEventSchemaResponse, error) {
 	requestDef := GenReqDefForDeleteEventSchema()
 
@@ -308,8 +295,7 @@ func (c *EgClient) DeleteEventSchemaInvoker(request *model.DeleteEventSchemaRequ
 //
 // 删除事件模型指定版本
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) DeleteEventSchemaVersion(request *model.DeleteEventSchemaVersionRequest) (*model.DeleteEventSchemaVersionResponse, error) {
 	requestDef := GenReqDefForDeleteEventSchemaVersion()
 
@@ -330,8 +316,7 @@ func (c *EgClient) DeleteEventSchemaVersionInvoker(request *model.DeleteEventSch
 //
 // 删除指定的自定义事件源
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) DeleteEventSource(request *model.DeleteEventSourceRequest) (*model.DeleteEventSourceResponse, error) {
 	requestDef := GenReqDefForDeleteEventSource()
 
@@ -352,8 +337,7 @@ func (c *EgClient) DeleteEventSourceInvoker(request *model.DeleteEventSourceRequ
 //
 // 删除事件订阅
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) DeleteSubscription(request *model.DeleteSubscriptionRequest) (*model.DeleteSubscriptionResponse, error) {
 	requestDef := GenReqDefForDeleteSubscription()
 
@@ -374,8 +358,7 @@ func (c *EgClient) DeleteSubscriptionInvoker(request *model.DeleteSubscriptionRe
 //
 // 删除事件订阅目标
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) DeleteSubscriptionTarget(request *model.DeleteSubscriptionTargetRequest) (*model.DeleteSubscriptionTargetResponse, error) {
 	requestDef := GenReqDefForDeleteSubscriptionTarget()
 
@@ -396,8 +379,7 @@ func (c *EgClient) DeleteSubscriptionTargetInvoker(request *model.DeleteSubscrip
 //
 // 事件模型自动发现
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) DiscoverEventSchemaFromData(request *model.DiscoverEventSchemaFromDataRequest) (*model.DiscoverEventSchemaFromDataResponse, error) {
 	requestDef := GenReqDefForDiscoverEventSchemaFromData()
 
@@ -417,8 +399,7 @@ func (c *EgClient) DiscoverEventSchemaFromDataInvoker(request *model.DiscoverEve
 // ListAgencies 查询服务委托
 //
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ListAgencies(request *model.ListAgenciesRequest) (*model.ListAgenciesResponse, error) {
 	requestDef := GenReqDefForListAgencies()
 
@@ -439,8 +420,7 @@ func (c *EgClient) ListAgenciesInvoker(request *model.ListAgenciesRequest) *List
 //
 // 查询事件通道列表，包括系统通道和自定义通道
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ListChannels(request *model.ListChannelsRequest) (*model.ListChannelsResponse, error) {
 	requestDef := GenReqDefForListChannels()
 
@@ -461,8 +441,7 @@ func (c *EgClient) ListChannelsInvoker(request *model.ListChannelsRequest) *List
 //
 // 查询目标连接列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ListConnections(request *model.ListConnectionsRequest) (*model.ListConnectionsResponse, error) {
 	requestDef := GenReqDefForListConnections()
 
@@ -483,8 +462,7 @@ func (c *EgClient) ListConnectionsInvoker(request *model.ListConnectionsRequest)
 //
 // list all endpoints
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ListEndpoints(request *model.ListEndpointsRequest) (*model.ListEndpointsResponse, error) {
 	requestDef := GenReqDefForListEndpoints()
 
@@ -505,8 +483,7 @@ func (c *EgClient) ListEndpointsInvoker(request *model.ListEndpointsRequest) *Li
 //
 // 查询事件模型列表，包括系统事件模型和自定义事件模型
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ListEventSchema(request *model.ListEventSchemaRequest) (*model.ListEventSchemaResponse, error) {
 	requestDef := GenReqDefForListEventSchema()
 
@@ -527,8 +504,7 @@ func (c *EgClient) ListEventSchemaInvoker(request *model.ListEventSchemaRequest)
 //
 // 查询事件模型版本列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ListEventSchemaVersions(request *model.ListEventSchemaVersionsRequest) (*model.ListEventSchemaVersionsResponse, error) {
 	requestDef := GenReqDefForListEventSchemaVersions()
 
@@ -549,8 +525,7 @@ func (c *EgClient) ListEventSchemaVersionsInvoker(request *model.ListEventSchema
 //
 // 支持条件查询，如可以指定事件通道ID来查询某个事件通道下的所有事件源
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ListEventSources(request *model.ListEventSourcesRequest) (*model.ListEventSourcesResponse, error) {
 	requestDef := GenReqDefForListEventSources()
 
@@ -571,8 +546,7 @@ func (c *EgClient) ListEventSourcesInvoker(request *model.ListEventSourcesReques
 //
 // 查询预置的事件目标分类，获取每个事件目标分类的字段定义
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ListEventTarget(request *model.ListEventTargetRequest) (*model.ListEventTargetResponse, error) {
 	requestDef := GenReqDefForListEventTarget()
 
@@ -593,8 +567,7 @@ func (c *EgClient) ListEventTargetInvoker(request *model.ListEventTargetRequest)
 //
 // 查询当前租户的配额，未特殊配置过的会返回默认配额
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ListQuotas(request *model.ListQuotasRequest) (*model.ListQuotasResponse, error) {
 	requestDef := GenReqDefForListQuotas()
 
@@ -615,8 +588,7 @@ func (c *EgClient) ListQuotasInvoker(request *model.ListQuotasRequest) *ListQuot
 //
 // 查询事件订阅列表，支持指定事件通道
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ListSubscriptions(request *model.ListSubscriptionsRequest) (*model.ListSubscriptionsResponse, error) {
 	requestDef := GenReqDefForListSubscriptions()
 
@@ -637,8 +609,7 @@ func (c *EgClient) ListSubscriptionsInvoker(request *model.ListSubscriptionsRequ
 //
 // 查询触发器，支持指定函数urn。一个以函数urn为目标的订阅为一个触发器。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ListTriggers(request *model.ListTriggersRequest) (*model.ListTriggersResponse, error) {
 	requestDef := GenReqDefForListTriggers()
 
@@ -659,8 +630,7 @@ func (c *EgClient) ListTriggersInvoker(request *model.ListTriggersRequest) *List
 //
 // 操作事件订阅，支持启用、禁用
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) OperateSubscription(request *model.OperateSubscriptionRequest) (*model.OperateSubscriptionResponse, error) {
 	requestDef := GenReqDefForOperateSubscription()
 
@@ -681,8 +651,7 @@ func (c *EgClient) OperateSubscriptionInvoker(request *model.OperateSubscription
 //
 // 发布事件到事件通道
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) PutEvents(request *model.PutEventsRequest) (*model.PutEventsResponse, error) {
 	requestDef := GenReqDefForPutEvents()
 
@@ -702,8 +671,7 @@ func (c *EgClient) PutEventsInvoker(request *model.PutEventsRequest) *PutEventsI
 // ShowDetailOfChannel 查询事件通道详情
 //
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ShowDetailOfChannel(request *model.ShowDetailOfChannelRequest) (*model.ShowDetailOfChannelResponse, error) {
 	requestDef := GenReqDefForShowDetailOfChannel()
 
@@ -723,8 +691,7 @@ func (c *EgClient) ShowDetailOfChannelInvoker(request *model.ShowDetailOfChannel
 // ShowDetailOfConnection 查询目标连接详情
 //
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ShowDetailOfConnection(request *model.ShowDetailOfConnectionRequest) (*model.ShowDetailOfConnectionResponse, error) {
 	requestDef := GenReqDefForShowDetailOfConnection()
 
@@ -745,8 +712,7 @@ func (c *EgClient) ShowDetailOfConnectionInvoker(request *model.ShowDetailOfConn
 //
 // 查询事件模型详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ShowDetailOfEventSchema(request *model.ShowDetailOfEventSchemaRequest) (*model.ShowDetailOfEventSchemaResponse, error) {
 	requestDef := GenReqDefForShowDetailOfEventSchema()
 
@@ -767,8 +733,7 @@ func (c *EgClient) ShowDetailOfEventSchemaInvoker(request *model.ShowDetailOfEve
 //
 // 查询事件模型指定版本详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ShowDetailOfEventSchemaVersion(request *model.ShowDetailOfEventSchemaVersionRequest) (*model.ShowDetailOfEventSchemaVersionResponse, error) {
 	requestDef := GenReqDefForShowDetailOfEventSchemaVersion()
 
@@ -789,8 +754,7 @@ func (c *EgClient) ShowDetailOfEventSchemaVersionInvoker(request *model.ShowDeta
 //
 // 查询事件源详情信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ShowDetailOfEventSource(request *model.ShowDetailOfEventSourceRequest) (*model.ShowDetailOfEventSourceResponse, error) {
 	requestDef := GenReqDefForShowDetailOfEventSource()
 
@@ -811,8 +775,7 @@ func (c *EgClient) ShowDetailOfEventSourceInvoker(request *model.ShowDetailOfEve
 //
 // 查询事件订阅详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ShowDetailOfSubscription(request *model.ShowDetailOfSubscriptionRequest) (*model.ShowDetailOfSubscriptionResponse, error) {
 	requestDef := GenReqDefForShowDetailOfSubscription()
 
@@ -833,8 +796,7 @@ func (c *EgClient) ShowDetailOfSubscriptionInvoker(request *model.ShowDetailOfSu
 //
 // 查询事件订阅目标详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ShowDetailOfSubscriptionTarget(request *model.ShowDetailOfSubscriptionTargetRequest) (*model.ShowDetailOfSubscriptionTargetResponse, error) {
 	requestDef := GenReqDefForShowDetailOfSubscriptionTarget()
 
@@ -855,8 +817,7 @@ func (c *EgClient) ShowDetailOfSubscriptionTargetInvoker(request *model.ShowDeta
 //
 // 更新自定义事件通道定义
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) UpdateChannel(request *model.UpdateChannelRequest) (*model.UpdateChannelResponse, error) {
 	requestDef := GenReqDefForUpdateChannel()
 
@@ -877,8 +838,7 @@ func (c *EgClient) UpdateChannelInvoker(request *model.UpdateChannelRequest) *Up
 //
 // 更新目标连接
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) UpdateConnection(request *model.UpdateConnectionRequest) (*model.UpdateConnectionResponse, error) {
 	requestDef := GenReqDefForUpdateConnection()
 
@@ -899,8 +859,7 @@ func (c *EgClient) UpdateConnectionInvoker(request *model.UpdateConnectionReques
 //
 // update endpoint
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) UpdateEndpoint(request *model.UpdateEndpointRequest) (*model.UpdateEndpointResponse, error) {
 	requestDef := GenReqDefForUpdateEndpoint()
 
@@ -921,8 +880,7 @@ func (c *EgClient) UpdateEndpointInvoker(request *model.UpdateEndpointRequest) *
 //
 // 更新自定义事件模型定义
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) UpdateEventSchema(request *model.UpdateEventSchemaRequest) (*model.UpdateEventSchemaResponse, error) {
 	requestDef := GenReqDefForUpdateEventSchema()
 
@@ -943,8 +901,7 @@ func (c *EgClient) UpdateEventSchemaInvoker(request *model.UpdateEventSchemaRequ
 //
 // 更新自定义事件源定义
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) UpdateEventSource(request *model.UpdateEventSourceRequest) (*model.UpdateEventSourceResponse, error) {
 	requestDef := GenReqDefForUpdateEventSource()
 
@@ -965,8 +922,7 @@ func (c *EgClient) UpdateEventSourceInvoker(request *model.UpdateEventSourceRequ
 //
 // 更新事件订阅定义
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) UpdateSubscription(request *model.UpdateSubscriptionRequest) (*model.UpdateSubscriptionResponse, error) {
 	requestDef := GenReqDefForUpdateSubscription()
 
@@ -987,8 +943,7 @@ func (c *EgClient) UpdateSubscriptionInvoker(request *model.UpdateSubscriptionRe
 //
 // 更新事件订阅源定义
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) UpdateSubscriptionSource(request *model.UpdateSubscriptionSourceRequest) (*model.UpdateSubscriptionSourceResponse, error) {
 	requestDef := GenReqDefForUpdateSubscriptionSource()
 
@@ -1009,8 +964,7 @@ func (c *EgClient) UpdateSubscriptionSourceInvoker(request *model.UpdateSubscrip
 //
 // 更新事件订阅目标定义
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) UpdateSubscriptionTarget(request *model.UpdateSubscriptionTargetRequest) (*model.UpdateSubscriptionTargetResponse, error) {
 	requestDef := GenReqDefForUpdateSubscriptionTarget()
 
@@ -1031,8 +985,7 @@ func (c *EgClient) UpdateSubscriptionTargetInvoker(request *model.UpdateSubscrip
 //
 // 获取服务支持的API版本列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ListApiVersions(request *model.ListApiVersionsRequest) (*model.ListApiVersionsResponse, error) {
 	requestDef := GenReqDefForListApiVersions()
 

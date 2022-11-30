@@ -24,7 +24,7 @@ type PostPaidServerRootVolume struct {
 	// 云服务器系统盘对应的磁盘存储类型。 磁盘存储类型枚举值： DSS：专属存储类型
 	ClusterType *PostPaidServerRootVolumeClusterType `json:"cluster_type,omitempty"`
 
-	// 使用SDI规格创建虚拟机时请关注该参数，如果该参数值为true，说明创建的为scsi类型的卷
+	// 云服务器数据盘对应的存储池的ID。
 	ClusterId *string `json:"cluster_id,omitempty"`
 
 	Extendparam *PostPaidServerRootVolumeExtendParam `json:"extendparam,omitempty"`

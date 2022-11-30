@@ -23,8 +23,7 @@ func CcmClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 申请证书。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CcmClient) CreateCertificate(request *model.CreateCertificateRequest) (*model.CreateCertificateResponse, error) {
 	requestDef := GenReqDefForCreateCertificate()
 
@@ -46,8 +45,7 @@ func (c *CcmClient) CreateCertificateInvoker(request *model.CreateCertificateReq
 // 用户给PCA创建OBS委托授权，用于访问OBS桶，更新吊销列表。
 // &gt; 用户所使用账号token需要具备安全管理员（secu_admin）权限。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CcmClient) CreateCertificateAuthorityObsAgency(request *model.CreateCertificateAuthorityObsAgencyRequest) (*model.CreateCertificateAuthorityObsAgencyResponse, error) {
 	requestDef := GenReqDefForCreateCertificateAuthorityObsAgency()
 
@@ -87,8 +85,7 @@ func (c *CcmClient) CreateCertificateAuthorityObsAgencyInvoker(request *model.Cr
 //   - 除了导出时不包含密钥信息（密钥在用户端），其余用法与其它私有证书一致。
 // &gt; 注：需要使用“\\r\\n”或“\\n”代替换行符，将CSR转换成一串字符，可参考示例请求。注：目前，证书的组织信息、公钥算法以及公钥内容等均来自CSR文件，暂不支持API传入。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CcmClient) CreateCertificateByCsr(request *model.CreateCertificateByCsrRequest) (*model.CreateCertificateByCsrResponse, error) {
 	requestDef := GenReqDefForCreateCertificateByCsr()
 
@@ -109,8 +106,7 @@ func (c *CcmClient) CreateCertificateByCsrInvoker(request *model.CreateCertifica
 //
 // 删除证书。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CcmClient) DeleteCertificate(request *model.DeleteCertificateRequest) (*model.DeleteCertificateResponse, error) {
 	requestDef := GenReqDefForDeleteCertificate()
 
@@ -145,8 +141,7 @@ func (c *CcmClient) DeleteCertificateInvoker(request *model.DeleteCertificateReq
 //       - type &#x3D; \&quot;**IIS**\&quot;或\&quot;**TOMCAT**\&quot;时，暂时未定义。
 // &gt; 只有当证书状态为“已签发”时，可进行导出操作。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CcmClient) ExportCertificate(request *model.ExportCertificateRequest) (*model.ExportCertificateResponse, error) {
 	requestDef := GenReqDefForExportCertificate()
 
@@ -167,8 +162,7 @@ func (c *CcmClient) ExportCertificateInvoker(request *model.ExportCertificateReq
 //
 // 查询私有证书列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CcmClient) ListCertificate(request *model.ListCertificateRequest) (*model.ListCertificateResponse, error) {
 	requestDef := GenReqDefForListCertificate()
 
@@ -190,8 +184,7 @@ func (c *CcmClient) ListCertificateInvoker(request *model.ListCertificateRequest
 // 查询OBS桶列表。
 // &gt; 只有用户创建了委托授权，方可使用此接口。创建委托授权参见本文档：**证书吊销处理&gt;创建委托**。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CcmClient) ListCertificateAuthorityObsBucket(request *model.ListCertificateAuthorityObsBucketRequest) (*model.ListCertificateAuthorityObsBucketResponse, error) {
 	requestDef := GenReqDefForListCertificateAuthorityObsBucket()
 
@@ -212,8 +205,7 @@ func (c *CcmClient) ListCertificateAuthorityObsBucketInvoker(request *model.List
 //
 // 解析CSR。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CcmClient) ParseCertificateSigningRequest(request *model.ParseCertificateSigningRequestRequest) (*model.ParseCertificateSigningRequestResponse, error) {
 	requestDef := GenReqDefForParseCertificateSigningRequest()
 
@@ -235,8 +227,7 @@ func (c *CcmClient) ParseCertificateSigningRequestInvoker(request *model.ParseCe
 // 吊销证书。
 // &gt; 注：当不想填写吊销理由时，请求body体请置为\&quot;**{}**\&quot;，否则将会报错。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CcmClient) RevokeCertificate(request *model.RevokeCertificateRequest) (*model.RevokeCertificateResponse, error) {
 	requestDef := GenReqDefForRevokeCertificate()
 
@@ -257,8 +248,7 @@ func (c *CcmClient) RevokeCertificateInvoker(request *model.RevokeCertificateReq
 //
 // 查询证书详情。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CcmClient) ShowCertificate(request *model.ShowCertificateRequest) (*model.ShowCertificateResponse, error) {
 	requestDef := GenReqDefForShowCertificate()
 
@@ -280,8 +270,7 @@ func (c *CcmClient) ShowCertificateInvoker(request *model.ShowCertificateRequest
 // 查看是否具有委托权限。
 // &gt; 用户所使用账号token需要具备安全管理员（secu_admin）权限。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CcmClient) ShowCertificateAuthorityObsAgency(request *model.ShowCertificateAuthorityObsAgencyRequest) (*model.ShowCertificateAuthorityObsAgencyResponse, error) {
 	requestDef := GenReqDefForShowCertificateAuthorityObsAgency()
 
@@ -302,8 +291,7 @@ func (c *CcmClient) ShowCertificateAuthorityObsAgencyInvoker(request *model.Show
 //
 // 查询私有证书配额。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CcmClient) ShowCertificateQuota(request *model.ShowCertificateQuotaRequest) (*model.ShowCertificateQuotaResponse, error) {
 	requestDef := GenReqDefForShowCertificateQuota()
 
@@ -327,8 +315,7 @@ func (c *CcmClient) ShowCertificateQuotaInvoker(request *model.ShowCertificateQu
 // - 创建从属CA，并需要直接激活该证书，根据参数介绍中，填写必选值；
 // - 创建从属CA，不需要直接激活该证书，请求body中只需要缺少此三个参数之一即可：issuer_id、signature_algorithm、validity。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CcmClient) CreateCertificateAuthority(request *model.CreateCertificateAuthorityRequest) (*model.CreateCertificateAuthorityResponse, error) {
 	requestDef := GenReqDefForCreateCertificateAuthority()
 
@@ -350,8 +337,7 @@ func (c *CcmClient) CreateCertificateAuthorityInvoker(request *model.CreateCerti
 // 计划删除CA。计划多少天后删除CA证书，可设置7天～30天内删除。
 // &gt; 只有当证书状态为”待激活“或”已禁用“状态时，才可删除。”待激活“状态下，将会立即删除证书，不支持延迟删除。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CcmClient) DeleteCertificateAuthority(request *model.DeleteCertificateAuthorityRequest) (*model.DeleteCertificateAuthorityResponse, error) {
 	requestDef := GenReqDefForDeleteCertificateAuthority()
 
@@ -373,8 +359,7 @@ func (c *CcmClient) DeleteCertificateAuthorityInvoker(request *model.DeleteCerti
 // 禁用CA。
 // &gt; 只有当证书处于\&quot;已激活\&quot;或\&quot;已过期\&quot;状态时，可进行禁用操作。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CcmClient) DisableCertificateAuthority(request *model.DisableCertificateAuthorityRequest) (*model.DisableCertificateAuthorityResponse, error) {
 	requestDef := GenReqDefForDisableCertificateAuthority()
 
@@ -396,8 +381,7 @@ func (c *CcmClient) DisableCertificateAuthorityInvoker(request *model.DisableCer
 // 启用CA。
 // &gt; 注：只有当证书处于\&quot;已禁用\&quot;状态时，可进行启用操作。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CcmClient) EnableCertificateAuthority(request *model.EnableCertificateAuthorityRequest) (*model.EnableCertificateAuthorityResponse, error) {
 	requestDef := GenReqDefForEnableCertificateAuthority()
 
@@ -419,8 +403,7 @@ func (c *CcmClient) EnableCertificateAuthorityInvoker(request *model.EnableCerti
 // 导出CA证书。
 // &gt; 注：只有当证书处于\&quot;已激活\&quot;或\&quot;已过期\&quot;时，可进行导出操作。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CcmClient) ExportCertificateAuthorityCertificate(request *model.ExportCertificateAuthorityCertificateRequest) (*model.ExportCertificateAuthorityCertificateResponse, error) {
 	requestDef := GenReqDefForExportCertificateAuthorityCertificate()
 
@@ -442,8 +425,7 @@ func (c *CcmClient) ExportCertificateAuthorityCertificateInvoker(request *model.
 // 导出CA的证书签名请求。
 // &gt; 只有当CA处于\&quot;待激活\&quot;状态时，可导出证书签名请求。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CcmClient) ExportCertificateAuthorityCsr(request *model.ExportCertificateAuthorityCsrRequest) (*model.ExportCertificateAuthorityCsrResponse, error) {
 	requestDef := GenReqDefForExportCertificateAuthorityCsr()
 
@@ -469,8 +451,7 @@ func (c *CcmClient) ExportCertificateAuthorityCsrInvoker(request *model.ExportCe
 //       - b、其证书链虽然允许不上传，但后期若想要导出完整的证书链，应导入完整的证书链；
 //       - c、证书体与证书链必须为PEM编码。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CcmClient) ImportCertificateAuthorityCertificate(request *model.ImportCertificateAuthorityCertificateRequest) (*model.ImportCertificateAuthorityCertificateResponse, error) {
 	requestDef := GenReqDefForImportCertificateAuthorityCertificate()
 
@@ -492,8 +473,7 @@ func (c *CcmClient) ImportCertificateAuthorityCertificateInvoker(request *model.
 // 激活CA。
 // &gt; 只有当证书处于\&quot;待激活\&quot;状态时，可进行激活操作。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CcmClient) IssueCertificateAuthorityCertificate(request *model.IssueCertificateAuthorityCertificateRequest) (*model.IssueCertificateAuthorityCertificateResponse, error) {
 	requestDef := GenReqDefForIssueCertificateAuthorityCertificate()
 
@@ -514,8 +494,7 @@ func (c *CcmClient) IssueCertificateAuthorityCertificateInvoker(request *model.I
 //
 // 查询CA列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CcmClient) ListCertificateAuthority(request *model.ListCertificateAuthorityRequest) (*model.ListCertificateAuthorityResponse, error) {
 	requestDef := GenReqDefForListCertificateAuthority()
 
@@ -537,8 +516,7 @@ func (c *CcmClient) ListCertificateAuthorityInvoker(request *model.ListCertifica
 // 恢复CA，将处于“计划删除”状态的CA证书，重新恢复为“已禁用”状态。
 // &gt; 注：只有处于“计划删除”状态的CA证书，才可进行恢复操作。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CcmClient) RestoreCertificateAuthority(request *model.RestoreCertificateAuthorityRequest) (*model.RestoreCertificateAuthorityResponse, error) {
 	requestDef := GenReqDefForRestoreCertificateAuthority()
 
@@ -560,8 +538,7 @@ func (c *CcmClient) RestoreCertificateAuthorityInvoker(request *model.RestoreCer
 // 吊销子CA。
 // &gt; 注：当不想填写吊销理由时，请求body体请置为\&quot;**{}**\&quot;，否则将会报错。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CcmClient) RevokeCertificateAuthority(request *model.RevokeCertificateAuthorityRequest) (*model.RevokeCertificateAuthorityResponse, error) {
 	requestDef := GenReqDefForRevokeCertificateAuthority()
 
@@ -582,8 +559,7 @@ func (c *CcmClient) RevokeCertificateAuthorityInvoker(request *model.RevokeCerti
 //
 // 查询CA详情。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CcmClient) ShowCertificateAuthority(request *model.ShowCertificateAuthorityRequest) (*model.ShowCertificateAuthorityResponse, error) {
 	requestDef := GenReqDefForShowCertificateAuthority()
 
@@ -604,8 +580,7 @@ func (c *CcmClient) ShowCertificateAuthorityInvoker(request *model.ShowCertifica
 //
 // 查询CA证书配额。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CcmClient) ShowCertificateAuthorityQuota(request *model.ShowCertificateAuthorityQuotaRequest) (*model.ShowCertificateAuthorityQuotaResponse, error) {
 	requestDef := GenReqDefForShowCertificateAuthorityQuota()
 

@@ -23,8 +23,7 @@ func CsmsClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // - 功能介绍：批量添加或删除凭据标签。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CsmsClient) BatchCreateOrDeleteTags(request *model.BatchCreateOrDeleteTagsRequest) (*model.BatchCreateOrDeleteTagsResponse, error) {
 	requestDef := GenReqDefForBatchCreateOrDeleteTags()
 
@@ -49,8 +48,7 @@ func (c *CsmsClient) BatchCreateOrDeleteTagsInvoker(request *model.BatchCreateOr
 //
 // 初始版本的状态被标记为SYSCURRENT。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CsmsClient) CreateSecret(request *model.CreateSecretRequest) (*model.CreateSecretResponse, error) {
 	requestDef := GenReqDefForCreateSecret()
 
@@ -71,8 +69,7 @@ func (c *CsmsClient) CreateSecretInvoker(request *model.CreateSecretRequest) *Cr
 //
 // - 功能介绍：添加凭据标签。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CsmsClient) CreateSecretTag(request *model.CreateSecretTagRequest) (*model.CreateSecretTagResponse, error) {
 	requestDef := GenReqDefForCreateSecretTag()
 
@@ -93,8 +90,7 @@ func (c *CsmsClient) CreateSecretTagInvoker(request *model.CreateSecretTagReques
 //
 // 在指定的凭据中，创建一个新的凭据版本，用于加密保管新的凭据值。默认情况下，新创建的凭据版本被标记为SYSCURRENT状态，而SYSCURRENT标记的前一个凭据版本被标记为SYSPREVIOUS状态。您可以通过指定VersionStage参数来覆盖默认行为。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CsmsClient) CreateSecretVersion(request *model.CreateSecretVersionRequest) (*model.CreateSecretVersionResponse, error) {
 	requestDef := GenReqDefForCreateSecretVersion()
 
@@ -115,8 +111,7 @@ func (c *CsmsClient) CreateSecretVersionInvoker(request *model.CreateSecretVersi
 //
 // 立即删除指定的凭据，且无法恢复。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CsmsClient) DeleteSecret(request *model.DeleteSecretRequest) (*model.DeleteSecretResponse, error) {
 	requestDef := GenReqDefForDeleteSecret()
 
@@ -137,8 +132,7 @@ func (c *CsmsClient) DeleteSecretInvoker(request *model.DeleteSecretRequest) *De
 //
 // 指定延迟删除时间，创建删除凭据的定时任务，可设置7~30天的的延迟删除时间。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CsmsClient) DeleteSecretForSchedule(request *model.DeleteSecretForScheduleRequest) (*model.DeleteSecretForScheduleResponse, error) {
 	requestDef := GenReqDefForDeleteSecretForSchedule()
 
@@ -159,8 +153,7 @@ func (c *CsmsClient) DeleteSecretForScheduleInvoker(request *model.DeleteSecretF
 //
 // 删除指定的凭据版本状态。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CsmsClient) DeleteSecretStage(request *model.DeleteSecretStageRequest) (*model.DeleteSecretStageResponse, error) {
 	requestDef := GenReqDefForDeleteSecretStage()
 
@@ -181,8 +174,7 @@ func (c *CsmsClient) DeleteSecretStageInvoker(request *model.DeleteSecretStageRe
 //
 // - 功能介绍：删除凭据标签。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CsmsClient) DeleteSecretTag(request *model.DeleteSecretTagRequest) (*model.DeleteSecretTagResponse, error) {
 	requestDef := GenReqDefForDeleteSecretTag()
 
@@ -203,8 +195,7 @@ func (c *CsmsClient) DeleteSecretTagInvoker(request *model.DeleteSecretTagReques
 //
 // 下载指定凭据的备份文件
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CsmsClient) DownloadSecretBlob(request *model.DownloadSecretBlobRequest) (*model.DownloadSecretBlobResponse, error) {
 	requestDef := GenReqDefForDownloadSecretBlob()
 
@@ -225,8 +216,7 @@ func (c *CsmsClient) DownloadSecretBlobInvoker(request *model.DownloadSecretBlob
 //
 // - 功能介绍：查询用户在指定项目下的所有凭据标签集合。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CsmsClient) ListProjectSecretsTags(request *model.ListProjectSecretsTagsRequest) (*model.ListProjectSecretsTagsResponse, error) {
 	requestDef := GenReqDefForListProjectSecretsTags()
 
@@ -247,8 +237,7 @@ func (c *CsmsClient) ListProjectSecretsTagsInvoker(request *model.ListProjectSec
 //
 // - 功能介绍：查询凭据实例。通过标签过滤，筛选用户凭据,返回凭据列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CsmsClient) ListResourceInstances(request *model.ListResourceInstancesRequest) (*model.ListResourceInstancesResponse, error) {
 	requestDef := GenReqDefForListResourceInstances()
 
@@ -269,8 +258,7 @@ func (c *CsmsClient) ListResourceInstancesInvoker(request *model.ListResourceIns
 //
 // - 功能介绍：查询凭据标签。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CsmsClient) ListSecretTags(request *model.ListSecretTagsRequest) (*model.ListSecretTagsResponse, error) {
 	requestDef := GenReqDefForListSecretTags()
 
@@ -291,8 +279,7 @@ func (c *CsmsClient) ListSecretTagsInvoker(request *model.ListSecretTagsRequest)
 //
 // 查询指定凭据下的版本列表信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CsmsClient) ListSecretVersions(request *model.ListSecretVersionsRequest) (*model.ListSecretVersionsResponse, error) {
 	requestDef := GenReqDefForListSecretVersions()
 
@@ -313,8 +300,7 @@ func (c *CsmsClient) ListSecretVersionsInvoker(request *model.ListSecretVersions
 //
 // 查询当前用户在本项目下创建的所有凭据。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CsmsClient) ListSecrets(request *model.ListSecretsRequest) (*model.ListSecretsResponse, error) {
 	requestDef := GenReqDefForListSecrets()
 
@@ -335,8 +321,7 @@ func (c *CsmsClient) ListSecretsInvoker(request *model.ListSecretsRequest) *List
 //
 // 取消凭据的定时删除任务，凭据对象恢复可使用状态。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CsmsClient) RestoreSecret(request *model.RestoreSecretRequest) (*model.RestoreSecretResponse, error) {
 	requestDef := GenReqDefForRestoreSecret()
 
@@ -357,8 +342,7 @@ func (c *CsmsClient) RestoreSecretInvoker(request *model.RestoreSecretRequest) *
 //
 // 查询指定凭据的信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CsmsClient) ShowSecret(request *model.ShowSecretRequest) (*model.ShowSecretResponse, error) {
 	requestDef := GenReqDefForShowSecret()
 
@@ -379,8 +363,7 @@ func (c *CsmsClient) ShowSecretInvoker(request *model.ShowSecretRequest) *ShowSe
 //
 // 查询指定凭据版本状态标记的版本信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CsmsClient) ShowSecretStage(request *model.ShowSecretStageRequest) (*model.ShowSecretStageResponse, error) {
 	requestDef := GenReqDefForShowSecretStage()
 
@@ -402,8 +385,7 @@ func (c *CsmsClient) ShowSecretStageInvoker(request *model.ShowSecretStageReques
 // 查询指定凭据版本的信息和版本中的明文凭据值，只能查询ENABLED状态的凭据。
 // 通过/v1/{project_id}/secrets/{secret_name}/versions/latest （即将当前接口URL中的{version_id}赋值为latest）可访问凭据最新版本的凭据值。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CsmsClient) ShowSecretVersion(request *model.ShowSecretVersionRequest) (*model.ShowSecretVersionResponse, error) {
 	requestDef := GenReqDefForShowSecretVersion()
 
@@ -424,8 +406,7 @@ func (c *CsmsClient) ShowSecretVersionInvoker(request *model.ShowSecretVersionRe
 //
 // 更新指定凭据的元数据信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CsmsClient) UpdateSecret(request *model.UpdateSecretRequest) (*model.UpdateSecretResponse, error) {
 	requestDef := GenReqDefForUpdateSecret()
 
@@ -446,8 +427,7 @@ func (c *CsmsClient) UpdateSecretInvoker(request *model.UpdateSecretRequest) *Up
 //
 // 更新凭据的版本状态。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CsmsClient) UpdateSecretStage(request *model.UpdateSecretStageRequest) (*model.UpdateSecretStageResponse, error) {
 	requestDef := GenReqDefForUpdateSecretStage()
 
@@ -468,8 +448,7 @@ func (c *CsmsClient) UpdateSecretStageInvoker(request *model.UpdateSecretStageRe
 //
 // 通过上传凭据备份文件，恢复凭据对象
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CsmsClient) UploadSecretBlob(request *model.UploadSecretBlobRequest) (*model.UploadSecretBlobResponse, error) {
 	requestDef := GenReqDefForUploadSecretBlob()
 

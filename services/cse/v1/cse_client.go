@@ -23,8 +23,7 @@ func CseClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 创建微服务引擎专享版。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CseClient) CreateEngine(request *model.CreateEngineRequest) (*model.CreateEngineResponse, error) {
 	requestDef := GenReqDefForCreateEngine()
 
@@ -45,8 +44,7 @@ func (c *CseClient) CreateEngineInvoker(request *model.CreateEngineRequest) *Cre
 //
 // 删除微服务引擎专享版。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CseClient) DeleteEngine(request *model.DeleteEngineRequest) (*model.DeleteEngineResponse, error) {
 	requestDef := GenReqDefForDeleteEngine()
 
@@ -67,8 +65,7 @@ func (c *CseClient) DeleteEngineInvoker(request *model.DeleteEngineRequest) *Del
 //
 // 导出kie配置
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CseClient) DownloadKie(request *model.DownloadKieRequest) (*model.DownloadKieResponse, error) {
 	requestDef := GenReqDefForDownloadKie()
 
@@ -89,8 +86,7 @@ func (c *CseClient) DownloadKieInvoker(request *model.DownloadKieRequest) *Downl
 //
 // 查询微服务引擎列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CseClient) ListEngines(request *model.ListEnginesRequest) (*model.ListEnginesResponse, error) {
 	requestDef := GenReqDefForListEngines()
 
@@ -111,8 +107,7 @@ func (c *CseClient) ListEnginesInvoker(request *model.ListEnginesRequest) *ListE
 //
 // 查询微服务引擎专享版的规格列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CseClient) ListFlavors(request *model.ListFlavorsRequest) (*model.ListFlavorsResponse, error) {
 	requestDef := GenReqDefForListFlavors()
 
@@ -133,8 +128,7 @@ func (c *CseClient) ListFlavorsInvoker(request *model.ListFlavorsRequest) *ListF
 //
 // 对微服务引擎专享版进行重试
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CseClient) RetryEngine(request *model.RetryEngineRequest) (*model.RetryEngineResponse, error) {
 	requestDef := GenReqDefForRetryEngine()
 
@@ -155,8 +149,7 @@ func (c *CseClient) RetryEngineInvoker(request *model.RetryEngineRequest) *Retry
 //
 // 查询微服务引擎专享版详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CseClient) ShowEngine(request *model.ShowEngineRequest) (*model.ShowEngineResponse, error) {
 	requestDef := GenReqDefForShowEngine()
 
@@ -177,8 +170,7 @@ func (c *CseClient) ShowEngineInvoker(request *model.ShowEngineRequest) *ShowEng
 //
 // 查询微服务引擎任务详情。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CseClient) ShowEngineJob(request *model.ShowEngineJobRequest) (*model.ShowEngineJobResponse, error) {
 	requestDef := GenReqDefForShowEngineJob()
 
@@ -199,8 +191,7 @@ func (c *CseClient) ShowEngineJobInvoker(request *model.ShowEngineJobRequest) *S
 //
 // 升级微服务引擎专享版
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CseClient) UpgradeEngine(request *model.UpgradeEngineRequest) (*model.UpgradeEngineResponse, error) {
 	requestDef := GenReqDefForUpgradeEngine()
 
@@ -221,8 +212,7 @@ func (c *CseClient) UpgradeEngineInvoker(request *model.UpgradeEngineRequest) *U
 //
 // 导入kie配置
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CseClient) UploadKie(request *model.UploadKieRequest) (*model.UploadKieResponse, error) {
 	requestDef := GenReqDefForUploadKie()
 

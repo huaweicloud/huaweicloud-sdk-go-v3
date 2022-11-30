@@ -23,8 +23,7 @@ func ApmClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 创建aksk。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApmClient) CreateAkSk(request *model.CreateAkSkRequest) (*model.CreateAkSkResponse, error) {
 	requestDef := GenReqDefForCreateAkSk()
 
@@ -45,8 +44,7 @@ func (c *ApmClient) CreateAkSkInvoker(request *model.CreateAkSkRequest) *CreateA
 //
 // 删除aksk。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApmClient) DeleteAkSk(request *model.DeleteAkSkRequest) (*model.DeleteAkSkResponse, error) {
 	requestDef := GenReqDefForDeleteAkSk()
 
@@ -67,8 +65,7 @@ func (c *ApmClient) DeleteAkSkInvoker(request *model.DeleteAkSkRequest) *DeleteA
 //
 // 查询租户的aksk。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApmClient) ShowAkSks(request *model.ShowAkSksRequest) (*model.ShowAkSksResponse, error) {
 	requestDef := GenReqDefForShowAkSks()
 
@@ -89,8 +86,7 @@ func (c *ApmClient) ShowAkSksInvoker(request *model.ShowAkSksRequest) *ShowAkSks
 //
 // 查询系统中存在的告警。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApmClient) ListAlarmData(request *model.ListAlarmDataRequest) (*model.ListAlarmDataResponse, error) {
 	requestDef := GenReqDefForListAlarmData()
 
@@ -111,8 +107,7 @@ func (c *ApmClient) ListAlarmDataInvoker(request *model.ListAlarmDataRequest) *L
 //
 // 查询单个告警的触发详情与历史。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApmClient) ListAlarmNotify(request *model.ListAlarmNotifyRequest) (*model.ListAlarmNotifyResponse, error) {
 	requestDef := GenReqDefForListAlarmNotify()
 
@@ -133,8 +128,7 @@ func (c *ApmClient) ListAlarmNotifyInvoker(request *model.ListAlarmNotifyRequest
 //
 // 获取该用户创建的ak/sk列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApmClient) ListAkSk(request *model.ListAkSkRequest) (*model.ListAkSkResponse, error) {
 	requestDef := GenReqDefForListAkSk()
 
@@ -155,8 +149,7 @@ func (c *ApmClient) ListAkSkInvoker(request *model.ListAkSkRequest) *ListAkSkInv
 //
 // 该接口用于查询对应用户下的应用。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApmClient) ListBusiness(request *model.ListBusinessRequest) (*model.ListBusinessResponse, error) {
 	requestDef := GenReqDefForListBusiness()
 
@@ -177,8 +170,7 @@ func (c *ApmClient) ListBusinessInvoker(request *model.ListBusinessRequest) *Lis
 //
 // 查询监控项列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApmClient) ListEnvMonitorItem(request *model.ListEnvMonitorItemRequest) (*model.ListEnvMonitorItemResponse, error) {
 	requestDef := GenReqDefForListEnvMonitorItem()
 
@@ -199,8 +191,7 @@ func (c *ApmClient) ListEnvMonitorItemInvoker(request *model.ListEnvMonitorItemR
 //
 // 保存监控项。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApmClient) SaveMonitorItemConfig(request *model.SaveMonitorItemConfigRequest) (*model.SaveMonitorItemConfigResponse, error) {
 	requestDef := GenReqDefForSaveMonitorItemConfig()
 
@@ -221,8 +212,7 @@ func (c *ApmClient) SaveMonitorItemConfigInvoker(request *model.SaveMonitorItemC
 //
 // 对指定区域下的组件和环境及其探针情况进行搜索。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApmClient) SearchApplication(request *model.SearchApplicationRequest) (*model.SearchApplicationResponse, error) {
 	requestDef := GenReqDefForSearchApplication()
 
@@ -243,8 +233,7 @@ func (c *ApmClient) SearchApplicationInvoker(request *model.SearchApplicationReq
 //
 // 根据region名称获取该region下的master服务podlb地址信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApmClient) ShowMasterAddress(request *model.ShowMasterAddressRequest) (*model.ShowMasterAddressResponse, error) {
 	requestDef := GenReqDefForShowMasterAddress()
 
@@ -265,8 +254,7 @@ func (c *ApmClient) ShowMasterAddressInvoker(request *model.ShowMasterAddressReq
 //
 // 该接口用于删除指定的组件。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApmClient) DeleteApp(request *model.DeleteAppRequest) (*model.DeleteAppResponse, error) {
 	requestDef := GenReqDefForDeleteApp()
 
@@ -287,8 +275,7 @@ func (c *ApmClient) DeleteAppInvoker(request *model.DeleteAppRequest) *DeleteApp
 //
 // 获取组件下的环境列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApmClient) ListAppEnvs(request *model.ListAppEnvsRequest) (*model.ListAppEnvsResponse, error) {
 	requestDef := GenReqDefForListAppEnvs()
 
@@ -309,8 +296,7 @@ func (c *ApmClient) ListAppEnvsInvoker(request *model.ListAppEnvsRequest) *ListA
 //
 // 获取组件列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApmClient) ListApps(request *model.ListAppsRequest) (*model.ListAppsResponse, error) {
 	requestDef := GenReqDefForListApps()
 
@@ -331,8 +317,7 @@ func (c *ApmClient) ListAppsInvoker(request *model.ListAppsRequest) *ListAppsInv
 //
 // 查询环境标签接口。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApmClient) ListEnvTags(request *model.ListEnvTagsRequest) (*model.ListEnvTagsResponse, error) {
 	requestDef := GenReqDefForListEnvTags()
 
@@ -353,8 +338,7 @@ func (c *ApmClient) ListEnvTagsInvoker(request *model.ListEnvTagsRequest) *ListE
 //
 // 查询单个应用的详情。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApmClient) ShowBusinessDetail(request *model.ShowBusinessDetailRequest) (*model.ShowBusinessDetailResponse, error) {
 	requestDef := GenReqDefForShowBusinessDetail()
 
@@ -375,8 +359,7 @@ func (c *ApmClient) ShowBusinessDetailInvoker(request *model.ShowBusinessDetailR
 //
 // 查询单个子应用详情。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApmClient) ShowSubBusinessDetail(request *model.ShowSubBusinessDetailRequest) (*model.ShowSubBusinessDetailResponse, error) {
 	requestDef := GenReqDefForShowSubBusinessDetail()
 
@@ -397,8 +380,7 @@ func (c *ApmClient) ShowSubBusinessDetailInvoker(request *model.ShowSubBusinessD
 //
 // 获取应用树。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApmClient) ShowTopologyTree(request *model.ShowTopologyTreeRequest) (*model.ShowTopologyTreeResponse, error) {
 	requestDef := GenReqDefForShowTopologyTree()
 
@@ -419,8 +401,7 @@ func (c *ApmClient) ShowTopologyTreeInvoker(request *model.ShowTopologyTreeReque
 //
 // 该接口用于查询用户开通的region信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApmClient) ListOpenRegion(request *model.ListOpenRegionRequest) (*model.ListOpenRegionResponse, error) {
 	requestDef := GenReqDefForListOpenRegion()
 
@@ -441,8 +422,7 @@ func (c *ApmClient) ListOpenRegionInvoker(request *model.ListOpenRegionRequest) 
 //
 // 查询所有的支持的region信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApmClient) ListSupportedRegion(request *model.ListSupportedRegionRequest) (*model.ListSupportedRegionResponse, error) {
 	requestDef := GenReqDefForListSupportedRegion()
 
@@ -463,8 +443,7 @@ func (c *ApmClient) ListSupportedRegionInvoker(request *model.ListSupportedRegio
 //
 // 查询应用级别全局拓扑图信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApmClient) SearchBusinessTopology(request *model.SearchBusinessTopologyRequest) (*model.SearchBusinessTopologyResponse, error) {
 	requestDef := GenReqDefForSearchBusinessTopology()
 
@@ -485,8 +464,7 @@ func (c *ApmClient) SearchBusinessTopologyInvoker(request *model.SearchBusinessT
 //
 // 查询组件环境级别全局拓扑图信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApmClient) SearchEnvTopology(request *model.SearchEnvTopologyRequest) (*model.SearchEnvTopologyResponse, error) {
 	requestDef := GenReqDefForSearchEnvTopology()
 
@@ -507,8 +485,7 @@ func (c *ApmClient) SearchEnvTopologyInvoker(request *model.SearchEnvTopologyReq
 //
 // 查询所选Region下设置了URL跟踪的环境列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApmClient) ListBusinessEnv(request *model.ListBusinessEnvRequest) (*model.ListBusinessEnvResponse, error) {
 	requestDef := GenReqDefForListBusinessEnv()
 
@@ -529,8 +506,7 @@ func (c *ApmClient) ListBusinessEnvInvoker(request *model.ListBusinessEnvRequest
 //
 // 查询当前被调用的URL跟踪视图列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApmClient) SearchTransaction(request *model.SearchTransactionRequest) (*model.SearchTransactionResponse, error) {
 	requestDef := GenReqDefForSearchTransaction()
 
@@ -551,8 +527,7 @@ func (c *ApmClient) SearchTransactionInvoker(request *model.SearchTransactionReq
 //
 // 查询已配置好的URL跟踪配置列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApmClient) SearchTransactionConfig(request *model.SearchTransactionConfigRequest) (*model.SearchTransactionConfigResponse, error) {
 	requestDef := GenReqDefForSearchTransactionConfig()
 
@@ -573,8 +548,7 @@ func (c *ApmClient) SearchTransactionConfigInvoker(request *model.SearchTransact
 //
 // 查询某条URL跟踪视图详情。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApmClient) ShowTransactionDetail(request *model.ShowTransactionDetailRequest) (*model.ShowTransactionDetailResponse, error) {
 	requestDef := GenReqDefForShowTransactionDetail()
 
@@ -595,8 +569,7 @@ func (c *ApmClient) ShowTransactionDetailInvoker(request *model.ShowTransactionD
 //
 // 获取实例信息列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApmClient) ListEnvInstances(request *model.ListEnvInstancesRequest) (*model.ListEnvInstancesResponse, error) {
 	requestDef := GenReqDefForListEnvInstances()
 
@@ -617,8 +590,7 @@ func (c *ApmClient) ListEnvInstancesInvoker(request *model.ListEnvInstancesReque
 //
 // 获取原始数据详情。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApmClient) ShowClobDetail(request *model.ShowClobDetailRequest) (*model.ShowClobDetailResponse, error) {
 	requestDef := GenReqDefForShowClobDetail()
 
@@ -639,8 +611,7 @@ func (c *ApmClient) ShowClobDetailInvoker(request *model.ShowClobDetailRequest) 
 //
 // 获取监控项信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApmClient) ShowEnvMonitorItems(request *model.ShowEnvMonitorItemsRequest) (*model.ShowEnvMonitorItemsResponse, error) {
 	requestDef := GenReqDefForShowEnvMonitorItems()
 
@@ -661,8 +632,7 @@ func (c *ApmClient) ShowEnvMonitorItemsInvoker(request *model.ShowEnvMonitorItem
 //
 // 获取event的详情。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApmClient) ShowEventDetail(request *model.ShowEventDetailRequest) (*model.ShowEventDetailResponse, error) {
 	requestDef := GenReqDefForShowEventDetail()
 
@@ -683,8 +653,7 @@ func (c *ApmClient) ShowEventDetailInvoker(request *model.ShowEventDetailRequest
 //
 // 查询监控项配置信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApmClient) ShowMonitorItemViewConfig(request *model.ShowMonitorItemViewConfigRequest) (*model.ShowMonitorItemViewConfigResponse, error) {
 	requestDef := GenReqDefForShowMonitorItemViewConfig()
 
@@ -705,8 +674,7 @@ func (c *ApmClient) ShowMonitorItemViewConfigInvoker(request *model.ShowMonitorI
 //
 // 获取原始数据表格。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApmClient) ShowRawTable(request *model.ShowRawTableRequest) (*model.ShowRawTableResponse, error) {
 	requestDef := GenReqDefForShowRawTable()
 
@@ -727,8 +695,7 @@ func (c *ApmClient) ShowRawTableInvoker(request *model.ShowRawTableRequest) *Sho
 //
 // span数据查询接口。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApmClient) ShowSpanSearch(request *model.ShowSpanSearchRequest) (*model.ShowSpanSearchResponse, error) {
 	requestDef := GenReqDefForShowSpanSearch()
 
@@ -749,8 +716,7 @@ func (c *ApmClient) ShowSpanSearchInvoker(request *model.ShowSpanSearchRequest) 
 //
 // 获取汇总表格数据。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApmClient) ShowSumTable(request *model.ShowSumTableRequest) (*model.ShowSumTableResponse, error) {
 	requestDef := GenReqDefForShowSumTable()
 
@@ -771,8 +737,7 @@ func (c *ApmClient) ShowSumTableInvoker(request *model.ShowSumTableRequest) *Sho
 //
 // 调用链拓扑图。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApmClient) ShowTopology(request *model.ShowTopologyRequest) (*model.ShowTopologyResponse, error) {
 	requestDef := GenReqDefForShowTopology()
 
@@ -793,8 +758,7 @@ func (c *ApmClient) ShowTopologyInvoker(request *model.ShowTopologyRequest) *Sho
 //
 // 获取一个trace的所有调用链数据。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApmClient) ShowTraceEvents(request *model.ShowTraceEventsRequest) (*model.ShowTraceEventsResponse, error) {
 	requestDef := GenReqDefForShowTraceEvents()
 
@@ -815,8 +779,7 @@ func (c *ApmClient) ShowTraceEventsInvoker(request *model.ShowTraceEventsRequest
 //
 // 获取趋势图。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApmClient) ShowTrend(request *model.ShowTrendRequest) (*model.ShowTrendResponse, error) {
 	requestDef := GenReqDefForShowTrend()
 

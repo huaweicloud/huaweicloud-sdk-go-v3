@@ -24,6 +24,9 @@ type UrlDomainRefInfo struct {
 	// 支持的最小SSL版本
 	MinSslVersion string `json:"min_ssl_version"`
 
+	// 是否开启http到https的重定向，false为关闭，true为开启，默认为false
+	IsHttpRedirectToHttps *bool `json:"is_http_redirect_to_https,omitempty"`
+
 	// 证书ID
 	SslId *string `json:"ssl_id,omitempty"`
 

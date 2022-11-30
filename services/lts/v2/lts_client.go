@@ -23,8 +23,7 @@ func LtsClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 创建日志接入
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) CreateAccessConfig(request *model.CreateAccessConfigRequest) (*model.CreateAccessConfigResponse, error) {
 	requestDef := GenReqDefForCreateAccessConfig()
 
@@ -45,8 +44,7 @@ func (c *LtsClient) CreateAccessConfigInvoker(request *model.CreateAccessConfigR
 //
 // 创建主机组
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) CreateHostGroup(request *model.CreateHostGroupRequest) (*model.CreateHostGroupResponse, error) {
 	requestDef := GenReqDefForCreateHostGroup()
 
@@ -67,8 +65,7 @@ func (c *LtsClient) CreateHostGroupInvoker(request *model.CreateHostGroupRequest
 //
 // 该接口用于创建关键词告警，目前每个帐户最多可以创建共200个关键词告警与SQL告警。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) CreateKeywordsAlarmRule(request *model.CreateKeywordsAlarmRuleRequest) (*model.CreateKeywordsAlarmRuleResponse, error) {
 	requestDef := GenReqDefForCreateKeywordsAlarmRule()
 
@@ -89,8 +86,7 @@ func (c *LtsClient) CreateKeywordsAlarmRuleInvoker(request *model.CreateKeywords
 //
 // 该接口用于将指定的一个或多个日志流的日志转储到OBS服务。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) CreateLogDumpObs(request *model.CreateLogDumpObsRequest) (*model.CreateLogDumpObsResponse, error) {
 	requestDef := GenReqDefForCreateLogDumpObs()
 
@@ -111,8 +107,7 @@ func (c *LtsClient) CreateLogDumpObsInvoker(request *model.CreateLogDumpObsReque
 //
 // 该接口用于创建一个日志组
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) CreateLogGroup(request *model.CreateLogGroupRequest) (*model.CreateLogGroupResponse, error) {
 	requestDef := GenReqDefForCreateLogGroup()
 
@@ -133,8 +128,7 @@ func (c *LtsClient) CreateLogGroupInvoker(request *model.CreateLogGroupRequest) 
 //
 // 该接口用于创建某个指定日志组下的日志流
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) CreateLogStream(request *model.CreateLogStreamRequest) (*model.CreateLogStreamResponse, error) {
 	requestDef := GenReqDefForCreateLogStream()
 
@@ -155,8 +149,7 @@ func (c *LtsClient) CreateLogStreamInvoker(request *model.CreateLogStreamRequest
 //
 // 该接口用于创建通知模板，目前每个帐户最多可以创建共100个通知模板，创建后名称不可修改。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) CreateNotificationTemplate(request *model.CreateNotificationTemplateRequest) (*model.CreateNotificationTemplateResponse, error) {
 	requestDef := GenReqDefForCreateNotificationTemplate()
 
@@ -177,8 +170,7 @@ func (c *LtsClient) CreateNotificationTemplateInvoker(request *model.CreateNotif
 //
 // 该接口通过结构化模板创建结构化配置。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) CreateStructConfig(request *model.CreateStructConfigRequest) (*model.CreateStructConfigResponse, error) {
 	requestDef := GenReqDefForCreateStructConfig()
 
@@ -199,8 +191,7 @@ func (c *LtsClient) CreateStructConfigInvoker(request *model.CreateStructConfigR
 //
 // 该接口用于创建指定日志流下的结构化配置。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) CreateStructTemplate(request *model.CreateStructTemplateRequest) (*model.CreateStructTemplateResponse, error) {
 	requestDef := GenReqDefForCreateStructTemplate()
 
@@ -221,8 +212,7 @@ func (c *LtsClient) CreateStructTemplateInvoker(request *model.CreateStructTempl
 //
 // 该接口用于创建OBS转储，DIS转储，DMS转储。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) CreateTransfer(request *model.CreateTransferRequest) (*model.CreateTransferResponse, error) {
 	requestDef := GenReqDefForCreateTransfer()
 
@@ -243,8 +233,7 @@ func (c *LtsClient) CreateTransferInvoker(request *model.CreateTransferRequest) 
 //
 // 删除日志接入
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) DeleteAccessConfig(request *model.DeleteAccessConfigRequest) (*model.DeleteAccessConfigResponse, error) {
 	requestDef := GenReqDefForDeleteAccessConfig()
 
@@ -265,8 +254,7 @@ func (c *LtsClient) DeleteAccessConfigInvoker(request *model.DeleteAccessConfigR
 //
 // 该接口用于删除活动告警
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) DeleteActiveAlarms(request *model.DeleteActiveAlarmsRequest) (*model.DeleteActiveAlarmsResponse, error) {
 	requestDef := GenReqDefForDeleteActiveAlarms()
 
@@ -287,8 +275,7 @@ func (c *LtsClient) DeleteActiveAlarmsInvoker(request *model.DeleteActiveAlarmsR
 //
 // 删除主机组
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) DeleteHostGroup(request *model.DeleteHostGroupRequest) (*model.DeleteHostGroupResponse, error) {
 	requestDef := GenReqDefForDeleteHostGroup()
 
@@ -309,8 +296,7 @@ func (c *LtsClient) DeleteHostGroupInvoker(request *model.DeleteHostGroupRequest
 //
 // 该接口用于删除关键词告警。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) DeleteKeywordsAlarmRule(request *model.DeleteKeywordsAlarmRuleRequest) (*model.DeleteKeywordsAlarmRuleResponse, error) {
 	requestDef := GenReqDefForDeleteKeywordsAlarmRule()
 
@@ -331,8 +317,7 @@ func (c *LtsClient) DeleteKeywordsAlarmRuleInvoker(request *model.DeleteKeywords
 //
 // 该接口用于删除指定日志组。当日志组中的日志流配置了日志转储，需要取消日志转储后才可删除。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) DeleteLogGroup(request *model.DeleteLogGroupRequest) (*model.DeleteLogGroupResponse, error) {
 	requestDef := GenReqDefForDeleteLogGroup()
 
@@ -353,8 +338,7 @@ func (c *LtsClient) DeleteLogGroupInvoker(request *model.DeleteLogGroupRequest) 
 //
 // 该接口用于删除指定日志组下的指定日志流。当该日志流配置了日志转储，需要取消日志转储后才可删除。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) DeleteLogStream(request *model.DeleteLogStreamRequest) (*model.DeleteLogStreamResponse, error) {
 	requestDef := GenReqDefForDeleteLogStream()
 
@@ -375,8 +359,7 @@ func (c *LtsClient) DeleteLogStreamInvoker(request *model.DeleteLogStreamRequest
 //
 // 该接口用于删除通知模板。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) DeleteNotificationTemplate(request *model.DeleteNotificationTemplateRequest) (*model.DeleteNotificationTemplateResponse, error) {
 	requestDef := GenReqDefForDeleteNotificationTemplate()
 
@@ -397,8 +380,7 @@ func (c *LtsClient) DeleteNotificationTemplateInvoker(request *model.DeleteNotif
 //
 // 该接口用于删除指定日志流下的结构化配置。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) DeleteStructTemplate(request *model.DeleteStructTemplateRequest) (*model.DeleteStructTemplateResponse, error) {
 	requestDef := GenReqDefForDeleteStructTemplate()
 
@@ -419,8 +401,7 @@ func (c *LtsClient) DeleteStructTemplateInvoker(request *model.DeleteStructTempl
 //
 // 该接口用于删除OBS转储，DIS转储，DMS转储。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) DeleteTransfer(request *model.DeleteTransferRequest) (*model.DeleteTransferResponse, error) {
 	requestDef := GenReqDefForDeleteTransfer()
 
@@ -441,8 +422,7 @@ func (c *LtsClient) DeleteTransferInvoker(request *model.DeleteTransferRequest) 
 //
 // 该接口用于将超额采集日志功能关闭。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) DisableLogCollection(request *model.DisableLogCollectionRequest) (*model.DisableLogCollectionResponse, error) {
 	requestDef := GenReqDefForDisableLogCollection()
 
@@ -463,8 +443,7 @@ func (c *LtsClient) DisableLogCollectionInvoker(request *model.DisableLogCollect
 //
 // 该接口用于将超额采集日志功能打开。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) EnableLogCollection(request *model.EnableLogCollectionRequest) (*model.EnableLogCollectionResponse, error) {
 	requestDef := GenReqDefForEnableLogCollection()
 
@@ -485,8 +464,7 @@ func (c *LtsClient) EnableLogCollectionInvoker(request *model.EnableLogCollectio
 //
 // 查询日志接入列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) ListAccessConfig(request *model.ListAccessConfigRequest) (*model.ListAccessConfigResponse, error) {
 	requestDef := GenReqDefForListAccessConfig()
 
@@ -507,8 +485,7 @@ func (c *LtsClient) ListAccessConfigInvoker(request *model.ListAccessConfigReque
 //
 // 该接口用于查询告警列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) ListActiveOrHistoryAlarms(request *model.ListActiveOrHistoryAlarmsRequest) (*model.ListActiveOrHistoryAlarmsResponse, error) {
 	requestDef := GenReqDefForListActiveOrHistoryAlarms()
 
@@ -529,8 +506,7 @@ func (c *LtsClient) ListActiveOrHistoryAlarmsInvoker(request *model.ListActiveOr
 //
 // 该接口用于查询结构化模板简略列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) ListBreifStructTemplate(request *model.ListBreifStructTemplateRequest) (*model.ListBreifStructTemplateResponse, error) {
 	requestDef := GenReqDefForListBreifStructTemplate()
 
@@ -551,8 +527,7 @@ func (c *LtsClient) ListBreifStructTemplateInvoker(request *model.ListBreifStruc
 //
 // 该接口用于查询日志流图表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) ListCharts(request *model.ListChartsRequest) (*model.ListChartsResponse, error) {
 	requestDef := GenReqDefForListCharts()
 
@@ -573,8 +548,7 @@ func (c *LtsClient) ListChartsInvoker(request *model.ListChartsRequest) *ListCha
 //
 // 查询主机列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) ListHost(request *model.ListHostRequest) (*model.ListHostResponse, error) {
 	requestDef := GenReqDefForListHost()
 
@@ -595,8 +569,7 @@ func (c *LtsClient) ListHostInvoker(request *model.ListHostRequest) *ListHostInv
 //
 // 查询主机组列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) ListHostGroup(request *model.ListHostGroupRequest) (*model.ListHostGroupResponse, error) {
 	requestDef := GenReqDefForListHostGroup()
 
@@ -617,8 +590,7 @@ func (c *LtsClient) ListHostGroupInvoker(request *model.ListHostGroupRequest) *L
 //
 // 该接口用于查询关键词告警。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) ListKeywordsAlarmRules(request *model.ListKeywordsAlarmRulesRequest) (*model.ListKeywordsAlarmRulesResponse, error) {
 	requestDef := GenReqDefForListKeywordsAlarmRules()
 
@@ -639,8 +611,7 @@ func (c *LtsClient) ListKeywordsAlarmRulesInvoker(request *model.ListKeywordsAla
 //
 // 该接口用于查询账号下所有日志组。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) ListLogGroups(request *model.ListLogGroupsRequest) (*model.ListLogGroupsResponse, error) {
 	requestDef := GenReqDefForListLogGroups()
 
@@ -661,8 +632,7 @@ func (c *LtsClient) ListLogGroupsInvoker(request *model.ListLogGroupsRequest) *L
 //
 // 查询关键词搜索条数
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) ListLogHistogram(request *model.ListLogHistogramRequest) (*model.ListLogHistogramResponse, error) {
 	requestDef := GenReqDefForListLogHistogram()
 
@@ -683,8 +653,7 @@ func (c *LtsClient) ListLogHistogramInvoker(request *model.ListLogHistogramReque
 //
 // 该接口用于查询指定日志组下的所有日志流信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) ListLogStream(request *model.ListLogStreamRequest) (*model.ListLogStreamResponse, error) {
 	requestDef := GenReqDefForListLogStream()
 
@@ -705,8 +674,7 @@ func (c *LtsClient) ListLogStreamInvoker(request *model.ListLogStreamRequest) *L
 //
 // 该接口用于查询LTS日志流信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) ListLogStreams(request *model.ListLogStreamsRequest) (*model.ListLogStreamsResponse, error) {
 	requestDef := GenReqDefForListLogStreams()
 
@@ -727,8 +695,7 @@ func (c *LtsClient) ListLogStreamsInvoker(request *model.ListLogStreamsRequest) 
 //
 // 该接口用于查询指定日志流下的日志内容。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) ListLogs(request *model.ListLogsRequest) (*model.ListLogsResponse, error) {
 	requestDef := GenReqDefForListLogs()
 
@@ -749,8 +716,7 @@ func (c *LtsClient) ListLogsInvoker(request *model.ListLogsRequest) *ListLogsInv
 //
 // 该接口用于预览通知模板邮件格式
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) ListNotificationTemplate(request *model.ListNotificationTemplateRequest) (*model.ListNotificationTemplateResponse, error) {
 	requestDef := GenReqDefForListNotificationTemplate()
 
@@ -771,8 +737,7 @@ func (c *LtsClient) ListNotificationTemplateInvoker(request *model.ListNotificat
 //
 // 该接口用于查询通知模板。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) ListNotificationTemplates(request *model.ListNotificationTemplatesRequest) (*model.ListNotificationTemplatesResponse, error) {
 	requestDef := GenReqDefForListNotificationTemplates()
 
@@ -793,8 +758,7 @@ func (c *LtsClient) ListNotificationTemplatesInvoker(request *model.ListNotifica
 //
 // 该接口用于查询SMN主题
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) ListNotificationTopics(request *model.ListNotificationTopicsRequest) (*model.ListNotificationTopicsResponse, error) {
 	requestDef := GenReqDefForListNotificationTopics()
 
@@ -815,8 +779,7 @@ func (c *LtsClient) ListNotificationTopicsInvoker(request *model.ListNotificatio
 //
 // 该接口用于查询指定日志流下的结构化日志内容。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) ListQueryStructuredLogs(request *model.ListQueryStructuredLogsRequest) (*model.ListQueryStructuredLogsResponse, error) {
 	requestDef := GenReqDefForListQueryStructuredLogs()
 
@@ -837,8 +800,7 @@ func (c *LtsClient) ListQueryStructuredLogsInvoker(request *model.ListQueryStruc
 //
 // 该接口用于查询结构化模板。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) ListStructTemplate(request *model.ListStructTemplateRequest) (*model.ListStructTemplateResponse, error) {
 	requestDef := GenReqDefForListStructTemplate()
 
@@ -859,8 +821,7 @@ func (c *LtsClient) ListStructTemplateInvoker(request *model.ListStructTemplateR
 //
 // 该接口用于查询指定日志流下的结构化日志内容（新版）。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) ListStructuredLogsWithTimeRange(request *model.ListStructuredLogsWithTimeRangeRequest) (*model.ListStructuredLogsWithTimeRangeResponse, error) {
 	requestDef := GenReqDefForListStructuredLogsWithTimeRange()
 
@@ -881,8 +842,7 @@ func (c *LtsClient) ListStructuredLogsWithTimeRangeInvoker(request *model.ListSt
 //
 // 该接口用于查询OBS转储，DIS转储，DMS转储配置。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) ListTransfers(request *model.ListTransfersRequest) (*model.ListTransfersResponse, error) {
 	requestDef := GenReqDefForListTransfers()
 
@@ -903,8 +863,7 @@ func (c *LtsClient) ListTransfersInvoker(request *model.ListTransfersRequest) *L
 //
 // 该接口用于注册DMS kafka实例。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) RegisterDmsKafkaInstance(request *model.RegisterDmsKafkaInstanceRequest) (*model.RegisterDmsKafkaInstanceResponse, error) {
 	requestDef := GenReqDefForRegisterDmsKafkaInstance()
 
@@ -925,8 +884,7 @@ func (c *LtsClient) RegisterDmsKafkaInstanceInvoker(request *model.RegisterDmsKa
 //
 // 该接口用于查询单个通知模板
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) ShowNotificationTemplate(request *model.ShowNotificationTemplateRequest) (*model.ShowNotificationTemplateResponse, error) {
 	requestDef := GenReqDefForShowNotificationTemplate()
 
@@ -947,8 +905,7 @@ func (c *LtsClient) ShowNotificationTemplateInvoker(request *model.ShowNotificat
 //
 // 该接口用于查询指定日志流下的结构化配置内容。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) ShowStructTemplate(request *model.ShowStructTemplateRequest) (*model.ShowStructTemplateResponse, error) {
 	requestDef := GenReqDefForShowStructTemplate()
 
@@ -969,8 +926,7 @@ func (c *LtsClient) ShowStructTemplateInvoker(request *model.ShowStructTemplateR
 //
 // 修改日志接入
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) UpdateAccessConfig(request *model.UpdateAccessConfigRequest) (*model.UpdateAccessConfigResponse, error) {
 	requestDef := GenReqDefForUpdateAccessConfig()
 
@@ -991,8 +947,7 @@ func (c *LtsClient) UpdateAccessConfigInvoker(request *model.UpdateAccessConfigR
 //
 // 修改主机组
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) UpdateHostGroup(request *model.UpdateHostGroupRequest) (*model.UpdateHostGroupResponse, error) {
 	requestDef := GenReqDefForUpdateHostGroup()
 
@@ -1013,8 +968,7 @@ func (c *LtsClient) UpdateHostGroupInvoker(request *model.UpdateHostGroupRequest
 //
 // 该接口用于修改关键词告警。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) UpdateKeywordsAlarmRule(request *model.UpdateKeywordsAlarmRuleRequest) (*model.UpdateKeywordsAlarmRuleResponse, error) {
 	requestDef := GenReqDefForUpdateKeywordsAlarmRule()
 
@@ -1035,8 +989,7 @@ func (c *LtsClient) UpdateKeywordsAlarmRuleInvoker(request *model.UpdateKeywords
 //
 // 该接口用于修改指定日志组下的日志存储时长。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) UpdateLogGroup(request *model.UpdateLogGroupRequest) (*model.UpdateLogGroupResponse, error) {
 	requestDef := GenReqDefForUpdateLogGroup()
 
@@ -1057,8 +1010,7 @@ func (c *LtsClient) UpdateLogGroupInvoker(request *model.UpdateLogGroupRequest) 
 //
 // 该接口用于修改通知模板,根据名称进行修改。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) UpdateNotificationTemplate(request *model.UpdateNotificationTemplateRequest) (*model.UpdateNotificationTemplateResponse, error) {
 	requestDef := GenReqDefForUpdateNotificationTemplate()
 
@@ -1079,8 +1031,7 @@ func (c *LtsClient) UpdateNotificationTemplateInvoker(request *model.UpdateNotif
 //
 // 该接口通过结构化模板修改结构化配置
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) UpdateStructConfig(request *model.UpdateStructConfigRequest) (*model.UpdateStructConfigResponse, error) {
 	requestDef := GenReqDefForUpdateStructConfig()
 
@@ -1101,8 +1052,7 @@ func (c *LtsClient) UpdateStructConfigInvoker(request *model.UpdateStructConfigR
 //
 // 该接口用于修改指定日志流下的结构化配置。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) UpdateStructTemplate(request *model.UpdateStructTemplateRequest) (*model.UpdateStructTemplateResponse, error) {
 	requestDef := GenReqDefForUpdateStructTemplate()
 
@@ -1123,8 +1073,7 @@ func (c *LtsClient) UpdateStructTemplateInvoker(request *model.UpdateStructTempl
 //
 // 该接口用于更新OBS转储，DIS转储，DMS转储。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) UpdateTransfer(request *model.UpdateTransferRequest) (*model.UpdateTransferResponse, error) {
 	requestDef := GenReqDefForUpdateTransfer()
 
@@ -1145,8 +1094,7 @@ func (c *LtsClient) UpdateTransferInvoker(request *model.UpdateTransferRequest) 
 //
 // 该接口用于创建aom日志接入lts规则
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) CreateAomMappingRules(request *model.CreateAomMappingRulesRequest) (*model.CreateAomMappingRulesResponse, error) {
 	requestDef := GenReqDefForCreateAomMappingRules()
 
@@ -1167,8 +1115,7 @@ func (c *LtsClient) CreateAomMappingRulesInvoker(request *model.CreateAomMapping
 //
 // 该接口用于删除lts接入规则。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) DeleteAomMappingRules(request *model.DeleteAomMappingRulesRequest) (*model.DeleteAomMappingRulesResponse, error) {
 	requestDef := GenReqDefForDeleteAomMappingRules()
 
@@ -1189,8 +1136,7 @@ func (c *LtsClient) DeleteAomMappingRulesInvoker(request *model.DeleteAomMapping
 //
 // 该接口用于查询单个aom日志接入lts
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) ShowAomMappingRule(request *model.ShowAomMappingRuleRequest) (*model.ShowAomMappingRuleResponse, error) {
 	requestDef := GenReqDefForShowAomMappingRule()
 
@@ -1211,8 +1157,7 @@ func (c *LtsClient) ShowAomMappingRuleInvoker(request *model.ShowAomMappingRuleR
 //
 // 该接口用于查询aom日志所有接入lts规则
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) ShowAomMappingRules(request *model.ShowAomMappingRulesRequest) (*model.ShowAomMappingRulesResponse, error) {
 	requestDef := GenReqDefForShowAomMappingRules()
 
@@ -1233,8 +1178,7 @@ func (c *LtsClient) ShowAomMappingRulesInvoker(request *model.ShowAomMappingRule
 //
 // 该接口用于修改接入规则
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) UpdateAomMappingRules(request *model.UpdateAomMappingRulesRequest) (*model.UpdateAomMappingRulesResponse, error) {
 	requestDef := GenReqDefForUpdateAomMappingRules()
 
@@ -1255,8 +1199,7 @@ func (c *LtsClient) UpdateAomMappingRulesInvoker(request *model.UpdateAomMapping
 //
 // 该接口用于创建SQL告警，目前每个帐户最多可以创建共200个关键词告警与SQL告警
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) CreateSqlAlarmRule(request *model.CreateSqlAlarmRuleRequest) (*model.CreateSqlAlarmRuleResponse, error) {
 	requestDef := GenReqDefForCreateSqlAlarmRule()
 
@@ -1277,8 +1220,7 @@ func (c *LtsClient) CreateSqlAlarmRuleInvoker(request *model.CreateSqlAlarmRuleR
 //
 // 该接口用于删除SQL告警
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) DeleteSqlAlarmRule(request *model.DeleteSqlAlarmRuleRequest) (*model.DeleteSqlAlarmRuleResponse, error) {
 	requestDef := GenReqDefForDeleteSqlAlarmRule()
 
@@ -1299,8 +1241,7 @@ func (c *LtsClient) DeleteSqlAlarmRuleInvoker(request *model.DeleteSqlAlarmRuleR
 //
 // 该接口用于查询SQL告警
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) ListSqlAlarmRules(request *model.ListSqlAlarmRulesRequest) (*model.ListSqlAlarmRulesResponse, error) {
 	requestDef := GenReqDefForListSqlAlarmRules()
 
@@ -1321,8 +1262,7 @@ func (c *LtsClient) ListSqlAlarmRulesInvoker(request *model.ListSqlAlarmRulesReq
 //
 // 改变告警规则状态
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) UpdateAlarmRuleStatus(request *model.UpdateAlarmRuleStatusRequest) (*model.UpdateAlarmRuleStatusResponse, error) {
 	requestDef := GenReqDefForUpdateAlarmRuleStatus()
 
@@ -1343,8 +1283,7 @@ func (c *LtsClient) UpdateAlarmRuleStatusInvoker(request *model.UpdateAlarmRuleS
 //
 // 该接口用于修改SQL告警
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *LtsClient) UpdateSqlAlarmRule(request *model.UpdateSqlAlarmRuleRequest) (*model.UpdateSqlAlarmRuleResponse, error) {
 	requestDef := GenReqDefForUpdateSqlAlarmRule()
 

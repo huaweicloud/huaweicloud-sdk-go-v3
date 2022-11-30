@@ -9,12 +9,12 @@ import (
 // Response Object
 type ShowBandwidthDetailResponse struct {
 
-	// 请求的唯一标识ID
-	RequestId string `json:"request_id"`
+	// 请求的唯一标识ID。
+	RequestId *string `json:"request_id,omitempty"`
 
 	// 带宽信息
-	BandWidths     []interface{} `json:"band_widths"`
-	HttpStatusCode int           `json:"-"`
+	BandWidths     *[]Bandwidth `json:"band_widths,omitempty"`
+	HttpStatusCode int          `json:"-"`
 }
 
 func (o ShowBandwidthDetailResponse) String() string {

@@ -23,8 +23,7 @@ func GaussDBforNoSQLClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 将参数模板应用到实例，可以指定一个或多个实例。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) ApplyConfiguration(request *model.ApplyConfigurationRequest) (*model.ApplyConfigurationResponse, error) {
 	requestDef := GenReqDefForApplyConfiguration()
 
@@ -45,8 +44,7 @@ func (c *GaussDBforNoSQLClient) ApplyConfigurationInvoker(request *model.ApplyCo
 //
 // 批量添加或删除指定数据库实例的标签。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) BatchTagAction(request *model.BatchTagActionRequest) (*model.BatchTagActionResponse, error) {
 	requestDef := GenReqDefForBatchTagAction()
 
@@ -68,8 +66,7 @@ func (c *GaussDBforNoSQLClient) BatchTagActionInvoker(request *model.BatchTagAct
 // 校验实例是否可以与指定实例建立/解除容灾关系。若接口返回成功，表示可以与指定实例建立/解除容灾关系。
 // 该接口需要对建立/解除容灾关系的两个实例各调用一次，2次调用都响应成功才能进行容灾关系的搭建/解除。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) CheckDisasterRecoveryOperation(request *model.CheckDisasterRecoveryOperationRequest) (*model.CheckDisasterRecoveryOperationResponse, error) {
 	requestDef := GenReqDefForCheckDisasterRecoveryOperation()
 
@@ -86,12 +83,95 @@ func (c *GaussDBforNoSQLClient) CheckDisasterRecoveryOperationInvoker(request *m
 	return &CheckDisasterRecoveryOperationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CheckWeekPassword 判断弱密码
+//
+// 判断弱密码。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) CheckWeekPassword(request *model.CheckWeekPasswordRequest) (*model.CheckWeekPasswordResponse, error) {
+	requestDef := GenReqDefForCheckWeekPassword()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckWeekPasswordResponse), nil
+	}
+}
+
+// CheckWeekPasswordInvoker 判断弱密码
+func (c *GaussDBforNoSQLClient) CheckWeekPasswordInvoker(request *model.CheckWeekPasswordRequest) *CheckWeekPasswordInvoker {
+	requestDef := GenReqDefForCheckWeekPassword()
+	return &CheckWeekPasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CompareConfiguration 参数模板比较
+//
+// 比较两个参数模板之间的差异
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) CompareConfiguration(request *model.CompareConfigurationRequest) (*model.CompareConfigurationResponse, error) {
+	requestDef := GenReqDefForCompareConfiguration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CompareConfigurationResponse), nil
+	}
+}
+
+// CompareConfigurationInvoker 参数模板比较
+func (c *GaussDBforNoSQLClient) CompareConfigurationInvoker(request *model.CompareConfigurationRequest) *CompareConfigurationInvoker {
+	requestDef := GenReqDefForCompareConfiguration()
+	return &CompareConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CopyConfiguration 复制参数模板
+//
+// 复制参数模板
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) CopyConfiguration(request *model.CopyConfigurationRequest) (*model.CopyConfigurationResponse, error) {
+	requestDef := GenReqDefForCopyConfiguration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CopyConfigurationResponse), nil
+	}
+}
+
+// CopyConfigurationInvoker 复制参数模板
+func (c *GaussDBforNoSQLClient) CopyConfigurationInvoker(request *model.CopyConfigurationRequest) *CopyConfigurationInvoker {
+	requestDef := GenReqDefForCopyConfiguration()
+	return &CopyConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateBack 创建手动备份
+//
+// 创建手动备份。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) CreateBack(request *model.CreateBackRequest) (*model.CreateBackResponse, error) {
+	requestDef := GenReqDefForCreateBack()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateBackResponse), nil
+	}
+}
+
+// CreateBackInvoker 创建手动备份
+func (c *GaussDBforNoSQLClient) CreateBackInvoker(request *model.CreateBackRequest) *CreateBackInvoker {
+	requestDef := GenReqDefForCreateBack()
+	return &CreateBackInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateColdVolume ‘创建冷数据存储’
 //
 // ‘创建冷数据存储’
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) CreateColdVolume(request *model.CreateColdVolumeRequest) (*model.CreateColdVolumeResponse, error) {
 	requestDef := GenReqDefForCreateColdVolume()
 
@@ -112,8 +192,7 @@ func (c *GaussDBforNoSQLClient) CreateColdVolumeInvoker(request *model.CreateCol
 //
 // 创建参数模板。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) CreateConfiguration(request *model.CreateConfigurationRequest) (*model.CreateConfigurationResponse, error) {
 	requestDef := GenReqDefForCreateConfiguration()
 
@@ -134,8 +213,7 @@ func (c *GaussDBforNoSQLClient) CreateConfigurationInvoker(request *model.Create
 //
 // 搭建实例与特定实例的容灾关系。 该接口需要对搭建容灾关系的两个实例分别各调用一次，2次接口都调用成功才能成功搭建容灾关系。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) CreateDisasterRecovery(request *model.CreateDisasterRecoveryRequest) (*model.CreateDisasterRecoveryResponse, error) {
 	requestDef := GenReqDefForCreateDisasterRecovery()
 
@@ -156,8 +234,7 @@ func (c *GaussDBforNoSQLClient) CreateDisasterRecoveryInvoker(request *model.Cre
 //
 // 创建数据库实例。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) CreateInstance(request *model.CreateInstanceRequest) (*model.CreateInstanceResponse, error) {
 	requestDef := GenReqDefForCreateInstance()
 
@@ -178,8 +255,7 @@ func (c *GaussDBforNoSQLClient) CreateInstanceInvoker(request *model.CreateInsta
 //
 // 删除手动备份
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) DeleteBackup(request *model.DeleteBackupRequest) (*model.DeleteBackupResponse, error) {
 	requestDef := GenReqDefForDeleteBackup()
 
@@ -200,8 +276,7 @@ func (c *GaussDBforNoSQLClient) DeleteBackupInvoker(request *model.DeleteBackupR
 //
 // 删除指定参数模板。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) DeleteConfiguration(request *model.DeleteConfigurationRequest) (*model.DeleteConfigurationResponse, error) {
 	requestDef := GenReqDefForDeleteConfiguration()
 
@@ -222,8 +297,7 @@ func (c *GaussDBforNoSQLClient) DeleteConfigurationInvoker(request *model.Delete
 //
 // 解除实例与特定实例的容灾关系。 该接口需要对搭建容灾关系的两个实例分别各调用一次，2次接口都调用成功才能成功解除容灾关系。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) DeleteDisasterRecovery(request *model.DeleteDisasterRecoveryRequest) (*model.DeleteDisasterRecoveryResponse, error) {
 	requestDef := GenReqDefForDeleteDisasterRecovery()
 
@@ -240,12 +314,32 @@ func (c *GaussDBforNoSQLClient) DeleteDisasterRecoveryInvoker(request *model.Del
 	return &DeleteDisasterRecoveryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteEnlargeFailNode 删除扩容失败的节点
+//
+// 删除扩容失败的节点
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) DeleteEnlargeFailNode(request *model.DeleteEnlargeFailNodeRequest) (*model.DeleteEnlargeFailNodeResponse, error) {
+	requestDef := GenReqDefForDeleteEnlargeFailNode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteEnlargeFailNodeResponse), nil
+	}
+}
+
+// DeleteEnlargeFailNodeInvoker 删除扩容失败的节点
+func (c *GaussDBforNoSQLClient) DeleteEnlargeFailNodeInvoker(request *model.DeleteEnlargeFailNodeRequest) *DeleteEnlargeFailNodeInvoker {
+	requestDef := GenReqDefForDeleteEnlargeFailNode()
+	return &DeleteEnlargeFailNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteInstance 删除实例
 //
 // 删除数据库实例。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) DeleteInstance(request *model.DeleteInstanceRequest) (*model.DeleteInstanceResponse, error) {
 	requestDef := GenReqDefForDeleteInstance()
 
@@ -266,8 +360,7 @@ func (c *GaussDBforNoSQLClient) DeleteInstanceInvoker(request *model.DeleteInsta
 //
 // 扩容指定集群实例的节点数量。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) ExpandInstanceNode(request *model.ExpandInstanceNodeRequest) (*model.ExpandInstanceNodeResponse, error) {
 	requestDef := GenReqDefForExpandInstanceNode()
 
@@ -284,12 +377,53 @@ func (c *GaussDBforNoSQLClient) ExpandInstanceNodeInvoker(request *model.ExpandI
 	return &ExpandInstanceNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListAvailableFlavorInfos 查询实例可变更规格
+//
+// 查询实例可变更规格。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ListAvailableFlavorInfos(request *model.ListAvailableFlavorInfosRequest) (*model.ListAvailableFlavorInfosResponse, error) {
+	requestDef := GenReqDefForListAvailableFlavorInfos()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAvailableFlavorInfosResponse), nil
+	}
+}
+
+// ListAvailableFlavorInfosInvoker 查询实例可变更规格
+func (c *GaussDBforNoSQLClient) ListAvailableFlavorInfosInvoker(request *model.ListAvailableFlavorInfosRequest) *ListAvailableFlavorInfosInvoker {
+	requestDef := GenReqDefForListAvailableFlavorInfos()
+	return &ListAvailableFlavorInfosInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListConfigurationDatastores 查询支持参数模板的引擎信息
+//
+// 查询支持参数模板的引擎信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ListConfigurationDatastores(request *model.ListConfigurationDatastoresRequest) (*model.ListConfigurationDatastoresResponse, error) {
+	requestDef := GenReqDefForListConfigurationDatastores()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListConfigurationDatastoresResponse), nil
+	}
+}
+
+// ListConfigurationDatastoresInvoker 查询支持参数模板的引擎信息
+func (c *GaussDBforNoSQLClient) ListConfigurationDatastoresInvoker(request *model.ListConfigurationDatastoresRequest) *ListConfigurationDatastoresInvoker {
+	requestDef := GenReqDefForListConfigurationDatastores()
+	return &ListConfigurationDatastoresInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListConfigurationTemplates 获取参数模板列表
 //
 // 获取参数模板列表，包括所有数据库的默认参数模板和用户创建的参数模板。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) ListConfigurationTemplates(request *model.ListConfigurationTemplatesRequest) (*model.ListConfigurationTemplatesResponse, error) {
 	requestDef := GenReqDefForListConfigurationTemplates()
 
@@ -310,8 +444,7 @@ func (c *GaussDBforNoSQLClient) ListConfigurationTemplatesInvoker(request *model
 //
 // 获取参数模板列表，包括所有数据库的默认参数模板和用户创建的参数模板。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) ListConfigurations(request *model.ListConfigurationsRequest) (*model.ListConfigurationsResponse, error) {
 	requestDef := GenReqDefForListConfigurations()
 
@@ -332,8 +465,7 @@ func (c *GaussDBforNoSQLClient) ListConfigurationsInvoker(request *model.ListCon
 //
 // 查询指定实例类型的数据库版本信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) ListDatastores(request *model.ListDatastoresRequest) (*model.ListDatastoresResponse, error) {
 	requestDef := GenReqDefForListDatastores()
 
@@ -354,8 +486,7 @@ func (c *GaussDBforNoSQLClient) ListDatastoresInvoker(request *model.ListDatasto
 //
 // 查询专属资源列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) ListDedicatedResources(request *model.ListDedicatedResourcesRequest) (*model.ListDedicatedResourcesResponse, error) {
 	requestDef := GenReqDefForListDedicatedResources()
 
@@ -372,12 +503,32 @@ func (c *GaussDBforNoSQLClient) ListDedicatedResourcesInvoker(request *model.Lis
 	return &ListDedicatedResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListEpsQuotas 查询企业项目配额
+//
+// 查询企业项目配额。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ListEpsQuotas(request *model.ListEpsQuotasRequest) (*model.ListEpsQuotasResponse, error) {
+	requestDef := GenReqDefForListEpsQuotas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListEpsQuotasResponse), nil
+	}
+}
+
+// ListEpsQuotasInvoker 查询企业项目配额
+func (c *GaussDBforNoSQLClient) ListEpsQuotasInvoker(request *model.ListEpsQuotasRequest) *ListEpsQuotasInvoker {
+	requestDef := GenReqDefForListEpsQuotas()
+	return &ListEpsQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListFlavorInfos 查询数据库规格
 //
 // 查询指定条件下的实例规格信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) ListFlavorInfos(request *model.ListFlavorInfosRequest) (*model.ListFlavorInfosResponse, error) {
 	requestDef := GenReqDefForListFlavorInfos()
 
@@ -398,8 +549,7 @@ func (c *GaussDBforNoSQLClient) ListFlavorInfosInvoker(request *model.ListFlavor
 //
 // 查询指定条件下的所有实例规格信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) ListFlavors(request *model.ListFlavorsRequest) (*model.ListFlavorsResponse, error) {
 	requestDef := GenReqDefForListFlavors()
 
@@ -420,8 +570,7 @@ func (c *GaussDBforNoSQLClient) ListFlavorsInvoker(request *model.ListFlavorsReq
 //
 // 查询指定实例的标签信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) ListInstanceTags(request *model.ListInstanceTagsRequest) (*model.ListInstanceTagsResponse, error) {
 	requestDef := GenReqDefForListInstanceTags()
 
@@ -442,8 +591,7 @@ func (c *GaussDBforNoSQLClient) ListInstanceTagsInvoker(request *model.ListInsta
 //
 // 根据指定条件查询数据库实例列表和详情。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) ListInstances(request *model.ListInstancesRequest) (*model.ListInstancesResponse, error) {
 	requestDef := GenReqDefForListInstances()
 
@@ -464,8 +612,7 @@ func (c *GaussDBforNoSQLClient) ListInstancesInvoker(request *model.ListInstance
 //
 // 根据标签查询指定的数据库实例。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) ListInstancesByResourceTags(request *model.ListInstancesByResourceTagsRequest) (*model.ListInstancesByResourceTagsResponse, error) {
 	requestDef := GenReqDefForListInstancesByResourceTags()
 
@@ -486,8 +633,7 @@ func (c *GaussDBforNoSQLClient) ListInstancesByResourceTagsInvoker(request *mode
 //
 // 根据标签查询指定的数据库实例。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) ListInstancesByTags(request *model.ListInstancesByTagsRequest) (*model.ListInstancesByTagsResponse, error) {
 	requestDef := GenReqDefForListInstancesByTags()
 
@@ -504,12 +650,53 @@ func (c *GaussDBforNoSQLClient) ListInstancesByTagsInvoker(request *model.ListIn
 	return &ListInstancesByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListProjectTags 查询项目标签
+//
+// 查询指定项目的标签信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ListProjectTags(request *model.ListProjectTagsRequest) (*model.ListProjectTagsResponse, error) {
+	requestDef := GenReqDefForListProjectTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListProjectTagsResponse), nil
+	}
+}
+
+// ListProjectTagsInvoker 查询项目标签
+func (c *GaussDBforNoSQLClient) ListProjectTagsInvoker(request *model.ListProjectTagsRequest) *ListProjectTagsInvoker {
+	requestDef := GenReqDefForListProjectTags()
+	return &ListProjectTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRecycleInstances 查询回收站实例列表
+//
+// 查询回收站所有引擎的实例列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ListRecycleInstances(request *model.ListRecycleInstancesRequest) (*model.ListRecycleInstancesResponse, error) {
+	requestDef := GenReqDefForListRecycleInstances()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRecycleInstancesResponse), nil
+	}
+}
+
+// ListRecycleInstancesInvoker 查询回收站实例列表
+func (c *GaussDBforNoSQLClient) ListRecycleInstancesInvoker(request *model.ListRecycleInstancesRequest) *ListRecycleInstancesInvoker {
+	requestDef := GenReqDefForListRecycleInstances()
+	return &ListRecycleInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListRestoreTime 查询实例可恢复的时间段
 //
 // 查询实例可恢复的时间段
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) ListRestoreTime(request *model.ListRestoreTimeRequest) (*model.ListRestoreTimeResponse, error) {
 	requestDef := GenReqDefForListRestoreTime()
 
@@ -530,8 +717,7 @@ func (c *GaussDBforNoSQLClient) ListRestoreTimeInvoker(request *model.ListRestor
 //
 // 查询数据库慢日志信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) ListSlowLogs(request *model.ListSlowLogsRequest) (*model.ListSlowLogsResponse, error) {
 	requestDef := GenReqDefForListSlowLogs()
 
@@ -548,12 +734,53 @@ func (c *GaussDBforNoSQLClient) ListSlowLogsInvoker(request *model.ListSlowLogsR
 	return &ListSlowLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ModifyEpsQuotas 修改企业项目配额
+//
+// 修改企业项目配额。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ModifyEpsQuotas(request *model.ModifyEpsQuotasRequest) (*model.ModifyEpsQuotasResponse, error) {
+	requestDef := GenReqDefForModifyEpsQuotas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifyEpsQuotasResponse), nil
+	}
+}
+
+// ModifyEpsQuotasInvoker 修改企业项目配额
+func (c *GaussDBforNoSQLClient) ModifyEpsQuotasInvoker(request *model.ModifyEpsQuotasRequest) *ModifyEpsQuotasInvoker {
+	requestDef := GenReqDefForModifyEpsQuotas()
+	return &ModifyEpsQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ModifyPort 修改数据库端口
+//
+// 修改数据库实例的端口。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ModifyPort(request *model.ModifyPortRequest) (*model.ModifyPortResponse, error) {
+	requestDef := GenReqDefForModifyPort()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifyPortResponse), nil
+	}
+}
+
+// ModifyPortInvoker 修改数据库端口
+func (c *GaussDBforNoSQLClient) ModifyPortInvoker(request *model.ModifyPortRequest) *ModifyPortInvoker {
+	requestDef := GenReqDefForModifyPort()
+	return &ModifyPortInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ModifyPublicIp 绑定/解绑弹性公网IP
 //
 // 实例下的节点绑定弹性公网IP/解绑弹性公网IP
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) ModifyPublicIp(request *model.ModifyPublicIpRequest) (*model.ModifyPublicIpResponse, error) {
 	requestDef := GenReqDefForModifyPublicIp()
 
@@ -570,12 +797,34 @@ func (c *GaussDBforNoSQLClient) ModifyPublicIpInvoker(request *model.ModifyPubli
 	return &ModifyPublicIpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// PauseResumeDataSynchronization 暂停/恢复具备容灾关系的实例数据同步
+//
+// 该接口用于暂停/恢复具备容灾关系的实例数据同步。
+//
+// 该接口需要对具备容灾关系的两个实例分别各调用一次，2次接口都调用成功才能成功暂停/恢复容灾实例数据同步。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) PauseResumeDataSynchronization(request *model.PauseResumeDataSynchronizationRequest) (*model.PauseResumeDataSynchronizationResponse, error) {
+	requestDef := GenReqDefForPauseResumeDataSynchronization()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.PauseResumeDataSynchronizationResponse), nil
+	}
+}
+
+// PauseResumeDataSynchronizationInvoker 暂停/恢复具备容灾关系的实例数据同步
+func (c *GaussDBforNoSQLClient) PauseResumeDataSynchronizationInvoker(request *model.PauseResumeDataSynchronizationRequest) *PauseResumeDataSynchronizationInvoker {
+	requestDef := GenReqDefForPauseResumeDataSynchronization()
+	return &PauseResumeDataSynchronizationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ResetPassword 修改实例的管理员密码
 //
 // 修改实例的管理员密码。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) ResetPassword(request *model.ResetPasswordRequest) (*model.ResetPasswordResponse, error) {
 	requestDef := GenReqDefForResetPassword()
 
@@ -596,8 +845,7 @@ func (c *GaussDBforNoSQLClient) ResetPasswordInvoker(request *model.ResetPasswor
 //
 // 扩容冷数据存储。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) ResizeColdVolume(request *model.ResizeColdVolumeRequest) (*model.ResizeColdVolumeResponse, error) {
 	requestDef := GenReqDefForResizeColdVolume()
 
@@ -618,8 +866,7 @@ func (c *GaussDBforNoSQLClient) ResizeColdVolumeInvoker(request *model.ResizeCol
 //
 // 变更实例的规格。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) ResizeInstance(request *model.ResizeInstanceRequest) (*model.ResizeInstanceResponse, error) {
 	requestDef := GenReqDefForResizeInstance()
 
@@ -640,8 +887,7 @@ func (c *GaussDBforNoSQLClient) ResizeInstanceInvoker(request *model.ResizeInsta
 //
 // 扩容实例的存储容量大小。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) ResizeInstanceVolume(request *model.ResizeInstanceVolumeRequest) (*model.ResizeInstanceVolumeResponse, error) {
 	requestDef := GenReqDefForResizeInstanceVolume()
 
@@ -662,8 +908,7 @@ func (c *GaussDBforNoSQLClient) ResizeInstanceVolumeInvoker(request *model.Resiz
 //
 // 重启实例的数据库服务。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) RestartInstance(request *model.RestartInstanceRequest) (*model.RestartInstanceResponse, error) {
 	requestDef := GenReqDefForRestartInstance()
 
@@ -684,8 +929,7 @@ func (c *GaussDBforNoSQLClient) RestartInstanceInvoker(request *model.RestartIns
 //
 // 恢复到已有实例
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) RestoreExistingInstance(request *model.RestoreExistingInstanceRequest) (*model.RestoreExistingInstanceResponse, error) {
 	requestDef := GenReqDefForRestoreExistingInstance()
 
@@ -706,8 +950,7 @@ func (c *GaussDBforNoSQLClient) RestoreExistingInstanceInvoker(request *model.Re
 //
 // 设置磁盘自动扩容策略。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) SetAutoEnlargePolicy(request *model.SetAutoEnlargePolicyRequest) (*model.SetAutoEnlargePolicyResponse, error) {
 	requestDef := GenReqDefForSetAutoEnlargePolicy()
 
@@ -728,8 +971,7 @@ func (c *GaussDBforNoSQLClient) SetAutoEnlargePolicyInvoker(request *model.SetAu
 //
 // 设置自动备份策略。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) SetBackupPolicy(request *model.SetBackupPolicyRequest) (*model.SetBackupPolicyResponse, error) {
 	requestDef := GenReqDefForSetBackupPolicy()
 
@@ -746,12 +988,53 @@ func (c *GaussDBforNoSQLClient) SetBackupPolicyInvoker(request *model.SetBackupP
 	return &SetBackupPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SetRecyclePolicy 设置回收策略
+//
+// 设置已删除实例保留天数，修改保留天数后删除的实例按照新的天数保留，修改之前已在回收站的实例保留天数不变。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) SetRecyclePolicy(request *model.SetRecyclePolicyRequest) (*model.SetRecyclePolicyResponse, error) {
+	requestDef := GenReqDefForSetRecyclePolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetRecyclePolicyResponse), nil
+	}
+}
+
+// SetRecyclePolicyInvoker 设置回收策略
+func (c *GaussDBforNoSQLClient) SetRecyclePolicyInvoker(request *model.SetRecyclePolicyRequest) *SetRecyclePolicyInvoker {
+	requestDef := GenReqDefForSetRecyclePolicy()
+	return &SetRecyclePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAllInstancesBackups 查询备份列表
+//
+// 根据指定条件查询备份列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ShowAllInstancesBackups(request *model.ShowAllInstancesBackupsRequest) (*model.ShowAllInstancesBackupsResponse, error) {
+	requestDef := GenReqDefForShowAllInstancesBackups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAllInstancesBackupsResponse), nil
+	}
+}
+
+// ShowAllInstancesBackupsInvoker 查询备份列表
+func (c *GaussDBforNoSQLClient) ShowAllInstancesBackupsInvoker(request *model.ShowAllInstancesBackupsRequest) *ShowAllInstancesBackupsInvoker {
+	requestDef := GenReqDefForShowAllInstancesBackups()
+	return &ShowAllInstancesBackupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowApplicableInstances 查询参数模板可应用的实例列表
 //
 // 查询参数模板可应用的实例列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) ShowApplicableInstances(request *model.ShowApplicableInstancesRequest) (*model.ShowApplicableInstancesResponse, error) {
 	requestDef := GenReqDefForShowApplicableInstances()
 
@@ -771,8 +1054,7 @@ func (c *GaussDBforNoSQLClient) ShowApplicableInstancesInvoker(request *model.Sh
 // ShowApplyHistory 查询参数模板应用历史
 //
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) ShowApplyHistory(request *model.ShowApplyHistoryRequest) (*model.ShowApplyHistoryResponse, error) {
 	requestDef := GenReqDefForShowApplyHistory()
 
@@ -789,12 +1071,32 @@ func (c *GaussDBforNoSQLClient) ShowApplyHistoryInvoker(request *model.ShowApply
 	return &ShowApplyHistoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowAutoEnlargePolicy 查询磁盘自动扩容策略
+//
+// 查询磁盘自动扩容策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ShowAutoEnlargePolicy(request *model.ShowAutoEnlargePolicyRequest) (*model.ShowAutoEnlargePolicyResponse, error) {
+	requestDef := GenReqDefForShowAutoEnlargePolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAutoEnlargePolicyResponse), nil
+	}
+}
+
+// ShowAutoEnlargePolicyInvoker 查询磁盘自动扩容策略
+func (c *GaussDBforNoSQLClient) ShowAutoEnlargePolicyInvoker(request *model.ShowAutoEnlargePolicyRequest) *ShowAutoEnlargePolicyInvoker {
+	requestDef := GenReqDefForShowAutoEnlargePolicy()
+	return &ShowAutoEnlargePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowBackupPolicy 查询自动备份策略
 //
 // 查询自动备份策略。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) ShowBackupPolicy(request *model.ShowBackupPolicyRequest) (*model.ShowBackupPolicyResponse, error) {
 	requestDef := GenReqDefForShowBackupPolicy()
 
@@ -815,8 +1117,7 @@ func (c *GaussDBforNoSQLClient) ShowBackupPolicyInvoker(request *model.ShowBacku
 //
 // 获取指定参数模板的详细信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) ShowConfigurationDetail(request *model.ShowConfigurationDetailRequest) (*model.ShowConfigurationDetailResponse, error) {
 	requestDef := GenReqDefForShowConfigurationDetail()
 
@@ -833,12 +1134,32 @@ func (c *GaussDBforNoSQLClient) ShowConfigurationDetailInvoker(request *model.Sh
 	return &ShowConfigurationDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowErrorLog 查询数据库错误日志信息
+//
+// 查询数据库错误日志
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ShowErrorLog(request *model.ShowErrorLogRequest) (*model.ShowErrorLogResponse, error) {
+	requestDef := GenReqDefForShowErrorLog()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowErrorLogResponse), nil
+	}
+}
+
+// ShowErrorLogInvoker 查询数据库错误日志信息
+func (c *GaussDBforNoSQLClient) ShowErrorLogInvoker(request *model.ShowErrorLogRequest) *ShowErrorLogInvoker {
+	requestDef := GenReqDefForShowErrorLog()
+	return &ShowErrorLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowInstanceConfiguration 获取指定实例的参数
 //
 // 获取指定实例的参数信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) ShowInstanceConfiguration(request *model.ShowInstanceConfigurationRequest) (*model.ShowInstanceConfigurationResponse, error) {
 	requestDef := GenReqDefForShowInstanceConfiguration()
 
@@ -859,8 +1180,7 @@ func (c *GaussDBforNoSQLClient) ShowInstanceConfigurationInvoker(request *model.
 //
 // 该接口用于获取容灾实例主/备角色信息，以便后续容灾实例备升主和容灾实例主降备接口调用。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) ShowInstanceRole(request *model.ShowInstanceRoleRequest) (*model.ShowInstanceRoleResponse, error) {
 	requestDef := GenReqDefForShowInstanceRole()
 
@@ -877,12 +1197,32 @@ func (c *GaussDBforNoSQLClient) ShowInstanceRoleInvoker(request *model.ShowInsta
 	return &ShowInstanceRoleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowIpNumRequirement 查询创建实例或扩容节点时需要的IP数量
+//
+// 查询创建实例或扩容节点时需要的IP数量
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ShowIpNumRequirement(request *model.ShowIpNumRequirementRequest) (*model.ShowIpNumRequirementResponse, error) {
+	requestDef := GenReqDefForShowIpNumRequirement()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowIpNumRequirementResponse), nil
+	}
+}
+
+// ShowIpNumRequirementInvoker 查询创建实例或扩容节点时需要的IP数量
+func (c *GaussDBforNoSQLClient) ShowIpNumRequirementInvoker(request *model.ShowIpNumRequirementRequest) *ShowIpNumRequirementInvoker {
+	requestDef := GenReqDefForShowIpNumRequirement()
+	return &ShowIpNumRequirementInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowModifyHistory 查询实例参数的修改历史
 //
 // 查询实例参数的修改历史
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) ShowModifyHistory(request *model.ShowModifyHistoryRequest) (*model.ShowModifyHistoryResponse, error) {
 	requestDef := GenReqDefForShowModifyHistory()
 
@@ -899,12 +1239,32 @@ func (c *GaussDBforNoSQLClient) ShowModifyHistoryInvoker(request *model.ShowModi
 	return &ShowModifyHistoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowPauseResumeStutus 获取容灾实例数据同步状态
+//
+// 获取容灾实例数据同步状态。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ShowPauseResumeStutus(request *model.ShowPauseResumeStutusRequest) (*model.ShowPauseResumeStutusResponse, error) {
+	requestDef := GenReqDefForShowPauseResumeStutus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPauseResumeStutusResponse), nil
+	}
+}
+
+// ShowPauseResumeStutusInvoker 获取容灾实例数据同步状态
+func (c *GaussDBforNoSQLClient) ShowPauseResumeStutusInvoker(request *model.ShowPauseResumeStutusRequest) *ShowPauseResumeStutusInvoker {
+	requestDef := GenReqDefForShowPauseResumeStutus()
+	return &ShowPauseResumeStutusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowQuotas 查询配额
 //
 // 查询单租户在GaussDBforNoSQL服务下的资源配额。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) ShowQuotas(request *model.ShowQuotasRequest) (*model.ShowQuotasResponse, error) {
 	requestDef := GenReqDefForShowQuotas()
 
@@ -921,12 +1281,32 @@ func (c *GaussDBforNoSQLClient) ShowQuotasInvoker(request *model.ShowQuotasReque
 	return &ShowQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowRecyclePolicy 查询回收策略
+//
+// 查询回收策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ShowRecyclePolicy(request *model.ShowRecyclePolicyRequest) (*model.ShowRecyclePolicyResponse, error) {
+	requestDef := GenReqDefForShowRecyclePolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRecyclePolicyResponse), nil
+	}
+}
+
+// ShowRecyclePolicyInvoker 查询回收策略
+func (c *GaussDBforNoSQLClient) ShowRecyclePolicyInvoker(request *model.ShowRecyclePolicyRequest) *ShowRecyclePolicyInvoker {
+	requestDef := GenReqDefForShowRecyclePolicy()
+	return &ShowRecyclePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowRestorableList 查询可恢复的实例列表
 //
 // 查询用户可恢复的实例列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) ShowRestorableList(request *model.ShowRestorableListRequest) (*model.ShowRestorableListResponse, error) {
 	requestDef := GenReqDefForShowRestorableList()
 
@@ -943,12 +1323,32 @@ func (c *GaussDBforNoSQLClient) ShowRestorableListInvoker(request *model.ShowRes
 	return &ShowRestorableListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowSlowLogDesensitization 查询慢日志脱敏状态
+//
+// 查询慢日志脱敏状态。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ShowSlowLogDesensitization(request *model.ShowSlowLogDesensitizationRequest) (*model.ShowSlowLogDesensitizationResponse, error) {
+	requestDef := GenReqDefForShowSlowLogDesensitization()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSlowLogDesensitizationResponse), nil
+	}
+}
+
+// ShowSlowLogDesensitizationInvoker 查询慢日志脱敏状态
+func (c *GaussDBforNoSQLClient) ShowSlowLogDesensitizationInvoker(request *model.ShowSlowLogDesensitizationRequest) *ShowSlowLogDesensitizationInvoker {
+	requestDef := GenReqDefForShowSlowLogDesensitization()
+	return &ShowSlowLogDesensitizationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShrinkInstanceNode 缩容指定集群实例的节点数量
 //
 // 缩容指定集群实例的节点数量。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) ShrinkInstanceNode(request *model.ShrinkInstanceNodeRequest) (*model.ShrinkInstanceNodeResponse, error) {
 	requestDef := GenReqDefForShrinkInstanceNode()
 
@@ -965,12 +1365,32 @@ func (c *GaussDBforNoSQLClient) ShrinkInstanceNodeInvoker(request *model.ShrinkI
 	return &ShrinkInstanceNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SwitchSlowlogDesensitization 设置慢日志脱敏状态
+//
+// 设置慢日志脱敏状态
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) SwitchSlowlogDesensitization(request *model.SwitchSlowlogDesensitizationRequest) (*model.SwitchSlowlogDesensitizationResponse, error) {
+	requestDef := GenReqDefForSwitchSlowlogDesensitization()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SwitchSlowlogDesensitizationResponse), nil
+	}
+}
+
+// SwitchSlowlogDesensitizationInvoker 设置慢日志脱敏状态
+func (c *GaussDBforNoSQLClient) SwitchSlowlogDesensitizationInvoker(request *model.SwitchSlowlogDesensitizationRequest) *SwitchSlowlogDesensitizationInvoker {
+	requestDef := GenReqDefForSwitchSlowlogDesensitization()
+	return &SwitchSlowlogDesensitizationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SwitchSsl 切换实例SSL开关
 //
 // 切换实例SSL开关。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) SwitchSsl(request *model.SwitchSslRequest) (*model.SwitchSslResponse, error) {
 	requestDef := GenReqDefForSwitchSsl()
 
@@ -991,8 +1411,7 @@ func (c *GaussDBforNoSQLClient) SwitchSslInvoker(request *model.SwitchSslRequest
 //
 // 该接口用于对已经搭建容灾关系的实例，将备实例升级为主实例。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) SwitchToMaster(request *model.SwitchToMasterRequest) (*model.SwitchToMasterResponse, error) {
 	requestDef := GenReqDefForSwitchToMaster()
 
@@ -1013,8 +1432,7 @@ func (c *GaussDBforNoSQLClient) SwitchToMasterInvoker(request *model.SwitchToMas
 //
 // 该接口用于对已经搭建容灾关系的实例，将主实例降级为备实例。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) SwitchToSlave(request *model.SwitchToSlaveRequest) (*model.SwitchToSlaveResponse, error) {
 	requestDef := GenReqDefForSwitchToSlave()
 
@@ -1031,12 +1449,32 @@ func (c *GaussDBforNoSQLClient) SwitchToSlaveInvoker(request *model.SwitchToSlav
 	return &SwitchToSlaveInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateClientNetwork 修改副本集跨网段访问配置
+//
+// 修改副本集跨网段访问配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) UpdateClientNetwork(request *model.UpdateClientNetworkRequest) (*model.UpdateClientNetworkResponse, error) {
+	requestDef := GenReqDefForUpdateClientNetwork()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateClientNetworkResponse), nil
+	}
+}
+
+// UpdateClientNetworkInvoker 修改副本集跨网段访问配置
+func (c *GaussDBforNoSQLClient) UpdateClientNetworkInvoker(request *model.UpdateClientNetworkRequest) *UpdateClientNetworkInvoker {
+	requestDef := GenReqDefForUpdateClientNetwork()
+	return &UpdateClientNetworkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateConfiguration 修改参数模板参数
 //
 // 修改参数模板参数。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) UpdateConfiguration(request *model.UpdateConfigurationRequest) (*model.UpdateConfigurationResponse, error) {
 	requestDef := GenReqDefForUpdateConfiguration()
 
@@ -1057,8 +1495,7 @@ func (c *GaussDBforNoSQLClient) UpdateConfigurationInvoker(request *model.Update
 //
 // 修改指定实例的参数。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) UpdateInstanceConfiguration(request *model.UpdateInstanceConfigurationRequest) (*model.UpdateInstanceConfigurationResponse, error) {
 	requestDef := GenReqDefForUpdateInstanceConfiguration()
 
@@ -1079,8 +1516,7 @@ func (c *GaussDBforNoSQLClient) UpdateInstanceConfigurationInvoker(request *mode
 //
 // 修改实例名称
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) UpdateInstanceName(request *model.UpdateInstanceNameRequest) (*model.UpdateInstanceNameResponse, error) {
 	requestDef := GenReqDefForUpdateInstanceName()
 
@@ -1101,8 +1537,7 @@ func (c *GaussDBforNoSQLClient) UpdateInstanceNameInvoker(request *model.UpdateI
 //
 // 变更实例关联的安全组
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) UpdateSecurityGroup(request *model.UpdateSecurityGroupRequest) (*model.UpdateSecurityGroupResponse, error) {
 	requestDef := GenReqDefForUpdateSecurityGroup()
 
@@ -1123,8 +1558,7 @@ func (c *GaussDBforNoSQLClient) UpdateSecurityGroupInvoker(request *model.Update
 //
 // 升级数据库补丁版本
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) UpgradeDbVersion(request *model.UpgradeDbVersionRequest) (*model.UpgradeDbVersionResponse, error) {
 	requestDef := GenReqDefForUpgradeDbVersion()
 
@@ -1145,8 +1579,7 @@ func (c *GaussDBforNoSQLClient) UpgradeDbVersionInvoker(request *model.UpgradeDb
 //
 // 查询当前支持的API版本信息列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) ListApiVersion(request *model.ListApiVersionRequest) (*model.ListApiVersionResponse, error) {
 	requestDef := GenReqDefForListApiVersion()
 
@@ -1167,8 +1600,7 @@ func (c *GaussDBforNoSQLClient) ListApiVersionInvoker(request *model.ListApiVers
 //
 // 查询指定API版本信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) ShowApiVersion(request *model.ShowApiVersionRequest) (*model.ShowApiVersionResponse, error) {
 	requestDef := GenReqDefForShowApiVersion()
 

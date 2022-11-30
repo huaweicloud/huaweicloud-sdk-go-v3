@@ -23,8 +23,7 @@ func VasClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 该接口用于创建服务作业
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VasClient) CreateTasks(request *model.CreateTasksRequest) (*model.CreateTasksResponse, error) {
 	requestDef := GenReqDefForCreateTasks()
 
@@ -45,8 +44,7 @@ func (c *VasClient) CreateTasksInvoker(request *model.CreateTasksRequest) *Creat
 //
 // 该接口用于删除服务作业
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VasClient) DeleteTask(request *model.DeleteTaskRequest) (*model.DeleteTaskResponse, error) {
 	requestDef := GenReqDefForDeleteTask()
 
@@ -67,8 +65,7 @@ func (c *VasClient) DeleteTaskInvoker(request *model.DeleteTaskRequest) *DeleteT
 //
 // 该接口用于获取服务作业列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VasClient) ListTasksDetails(request *model.ListTasksDetailsRequest) (*model.ListTasksDetailsResponse, error) {
 	requestDef := GenReqDefForListTasksDetails()
 
@@ -89,8 +86,7 @@ func (c *VasClient) ListTasksDetailsInvoker(request *model.ListTasksDetailsReque
 //
 // 该接口用于查询服务作业
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VasClient) ShowTask(request *model.ShowTaskRequest) (*model.ShowTaskResponse, error) {
 	requestDef := GenReqDefForShowTask()
 
@@ -111,8 +107,7 @@ func (c *VasClient) ShowTaskInvoker(request *model.ShowTaskRequest) *ShowTaskInv
 //
 // 该接口用于启动服务作业
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VasClient) StartTask(request *model.StartTaskRequest) (*model.StartTaskResponse, error) {
 	requestDef := GenReqDefForStartTask()
 
@@ -133,8 +128,7 @@ func (c *VasClient) StartTaskInvoker(request *model.StartTaskRequest) *StartTask
 //
 // 该接口用于停止服务作业
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VasClient) StopTask(request *model.StopTaskRequest) (*model.StopTaskResponse, error) {
 	requestDef := GenReqDefForStopTask()
 
@@ -155,8 +149,7 @@ func (c *VasClient) StopTaskInvoker(request *model.StopTaskRequest) *StopTaskInv
 //
 // 该接口用于更新服务作业
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VasClient) UpdateTask(request *model.UpdateTaskRequest) (*model.UpdateTaskResponse, error) {
 	requestDef := GenReqDefForUpdateTask()
 

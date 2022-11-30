@@ -23,8 +23,7 @@ func FrsClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 添加人脸到人脸库中。将单张图片中的人脸添加至人脸库中，支持添加最大人脸或所有人脸。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *FrsClient) AddFacesByBase64(request *model.AddFacesByBase64Request) (*model.AddFacesByBase64Response, error) {
 	requestDef := GenReqDefForAddFacesByBase64()
 
@@ -45,8 +44,7 @@ func (c *FrsClient) AddFacesByBase64Invoker(request *model.AddFacesByBase64Reque
 //
 // 添加人脸到人脸库中。将单张图片中的人脸添加至人脸库中，支持添加最大人脸或所有人脸。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *FrsClient) AddFacesByFile(request *model.AddFacesByFileRequest) (*model.AddFacesByFileResponse, error) {
 	requestDef := GenReqDefForAddFacesByFile()
 
@@ -67,8 +65,7 @@ func (c *FrsClient) AddFacesByFileInvoker(request *model.AddFacesByFileRequest) 
 //
 // 添加人脸到人脸库中。将单张图片中的人脸添加至人脸库中，支持添加最大人脸或所有人脸。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *FrsClient) AddFacesByUrl(request *model.AddFacesByUrlRequest) (*model.AddFacesByUrlResponse, error) {
 	requestDef := GenReqDefForAddFacesByUrl()
 
@@ -89,8 +86,7 @@ func (c *FrsClient) AddFacesByUrlInvoker(request *model.AddFacesByUrlRequest) *A
 //
 // 自定义筛选条件，批量删除人脸库中的符合指定条件的多张人脸。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *FrsClient) BatchDeleteFaces(request *model.BatchDeleteFacesRequest) (*model.BatchDeleteFacesResponse, error) {
 	requestDef := GenReqDefForBatchDeleteFaces()
 
@@ -111,8 +107,7 @@ func (c *FrsClient) BatchDeleteFacesInvoker(request *model.BatchDeleteFacesReque
 //
 // 人脸比对是将两个人脸进行比对，来判断是否为同一个人，返回比对置信度。如果传入的图片中包含多个人脸，选取最大的人脸进行比对。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *FrsClient) CompareFaceByBase64(request *model.CompareFaceByBase64Request) (*model.CompareFaceByBase64Response, error) {
 	requestDef := GenReqDefForCompareFaceByBase64()
 
@@ -133,8 +128,7 @@ func (c *FrsClient) CompareFaceByBase64Invoker(request *model.CompareFaceByBase6
 //
 // 人脸比对是将两个人脸进行比对，来判断是否为同一个人，返回比对置信度。如果传入的图片中包含多个人脸，选取最大的人脸进行比对。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *FrsClient) CompareFaceByFile(request *model.CompareFaceByFileRequest) (*model.CompareFaceByFileResponse, error) {
 	requestDef := GenReqDefForCompareFaceByFile()
 
@@ -155,8 +149,7 @@ func (c *FrsClient) CompareFaceByFileInvoker(request *model.CompareFaceByFileReq
 //
 // 人脸比对是将两个人脸进行比对，来判断是否为同一个人，返回比对置信度。如果传入的图片中包含多个人脸，选取最大的人脸进行比对。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *FrsClient) CompareFaceByUrl(request *model.CompareFaceByUrlRequest) (*model.CompareFaceByUrlResponse, error) {
 	requestDef := GenReqDefForCompareFaceByUrl()
 
@@ -177,8 +170,7 @@ func (c *FrsClient) CompareFaceByUrlInvoker(request *model.CompareFaceByUrlReque
 //
 // 创建用于存储人脸特征的人脸库。您最多可以创建10个人脸库，每个人脸库最大容量为10万个人脸特征。如有更大规格的需求请联系客服。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *FrsClient) CreateFaceSet(request *model.CreateFaceSetRequest) (*model.CreateFaceSetResponse, error) {
 	requestDef := GenReqDefForCreateFaceSet()
 
@@ -199,8 +191,7 @@ func (c *FrsClient) CreateFaceSetInvoker(request *model.CreateFaceSetRequest) *C
 //
 // 根据external_image_id删除人脸。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *FrsClient) DeleteFaceByExternalImageId(request *model.DeleteFaceByExternalImageIdRequest) (*model.DeleteFaceByExternalImageIdResponse, error) {
 	requestDef := GenReqDefForDeleteFaceByExternalImageId()
 
@@ -221,8 +212,7 @@ func (c *FrsClient) DeleteFaceByExternalImageIdInvoker(request *model.DeleteFace
 //
 // 根据face_id删除人脸。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *FrsClient) DeleteFaceByFaceId(request *model.DeleteFaceByFaceIdRequest) (*model.DeleteFaceByFaceIdResponse, error) {
 	requestDef := GenReqDefForDeleteFaceByFaceId()
 
@@ -243,8 +233,7 @@ func (c *FrsClient) DeleteFaceByFaceIdInvoker(request *model.DeleteFaceByFaceIdR
 //
 // 删除人脸库以及其中所有的人脸。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *FrsClient) DeleteFaceSet(request *model.DeleteFaceSetRequest) (*model.DeleteFaceSetResponse, error) {
 	requestDef := GenReqDefForDeleteFaceSet()
 
@@ -265,8 +254,7 @@ func (c *FrsClient) DeleteFaceSetInvoker(request *model.DeleteFaceSetRequest) *D
 //
 // 人脸检测是对输入图片进行人脸检测和分析，输出人脸在图像中的位置、人脸关键点位置和人脸关键属性。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *FrsClient) DetectFaceByBase64(request *model.DetectFaceByBase64Request) (*model.DetectFaceByBase64Response, error) {
 	requestDef := GenReqDefForDetectFaceByBase64()
 
@@ -287,8 +275,7 @@ func (c *FrsClient) DetectFaceByBase64Invoker(request *model.DetectFaceByBase64R
 //
 // 人脸检测是对输入图片进行人脸检测和分析，输出人脸在图像中的位置、人脸关键点位置和人脸关键属性。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *FrsClient) DetectFaceByBase64Intl(request *model.DetectFaceByBase64IntlRequest) (*model.DetectFaceByBase64IntlResponse, error) {
 	requestDef := GenReqDefForDetectFaceByBase64Intl()
 
@@ -309,8 +296,7 @@ func (c *FrsClient) DetectFaceByBase64IntlInvoker(request *model.DetectFaceByBas
 //
 // 人脸检测是对输入图片进行人脸检测和分析，输出人脸在图像中的位置、人脸关键点位置和人脸关键属性。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *FrsClient) DetectFaceByFile(request *model.DetectFaceByFileRequest) (*model.DetectFaceByFileResponse, error) {
 	requestDef := GenReqDefForDetectFaceByFile()
 
@@ -331,8 +317,7 @@ func (c *FrsClient) DetectFaceByFileInvoker(request *model.DetectFaceByFileReque
 //
 // 人脸检测是对输入图片进行人脸检测和分析，输出人脸在图像中的位置、人脸关键点位置和人脸关键属性。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *FrsClient) DetectFaceByFileIntl(request *model.DetectFaceByFileIntlRequest) (*model.DetectFaceByFileIntlResponse, error) {
 	requestDef := GenReqDefForDetectFaceByFileIntl()
 
@@ -353,8 +338,7 @@ func (c *FrsClient) DetectFaceByFileIntlInvoker(request *model.DetectFaceByFileI
 //
 // 人脸检测是对输入图片进行人脸检测和分析，输出人脸在图像中的位置、人脸关键点位置和人脸关键属性。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *FrsClient) DetectFaceByUrl(request *model.DetectFaceByUrlRequest) (*model.DetectFaceByUrlResponse, error) {
 	requestDef := GenReqDefForDetectFaceByUrl()
 
@@ -375,8 +359,7 @@ func (c *FrsClient) DetectFaceByUrlInvoker(request *model.DetectFaceByUrlRequest
 //
 // 人脸检测是对输入图片进行人脸检测和分析，输出人脸在图像中的位置、人脸关键点位置和人脸关键属性。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *FrsClient) DetectFaceByUrlIntl(request *model.DetectFaceByUrlIntlRequest) (*model.DetectFaceByUrlIntlResponse, error) {
 	requestDef := GenReqDefForDetectFaceByUrlIntl()
 
@@ -397,8 +380,7 @@ func (c *FrsClient) DetectFaceByUrlIntlInvoker(request *model.DetectFaceByUrlInt
 //
 // 动作活体检测是通过判断视频中的人物动作与传入动作列表是否一致来识别视频中人物是否为活体。如果有多张人脸出现，则选取最大的人脸进行判定。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *FrsClient) DetectLiveByBase64(request *model.DetectLiveByBase64Request) (*model.DetectLiveByBase64Response, error) {
 	requestDef := GenReqDefForDetectLiveByBase64()
 
@@ -419,8 +401,7 @@ func (c *FrsClient) DetectLiveByBase64Invoker(request *model.DetectLiveByBase64R
 //
 // 动作活体检测是通过判断视频中的人物动作与传入动作列表是否一致来识别视频中人物是否为活体。如果有多张人脸出现，则选取最大的人脸进行判定。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *FrsClient) DetectLiveByBase64Intl(request *model.DetectLiveByBase64IntlRequest) (*model.DetectLiveByBase64IntlResponse, error) {
 	requestDef := GenReqDefForDetectLiveByBase64Intl()
 
@@ -441,8 +422,7 @@ func (c *FrsClient) DetectLiveByBase64IntlInvoker(request *model.DetectLiveByBas
 //
 // 动作活体检测是通过判断视频中的人物动作与传入动作列表是否一致来识别视频中人物是否为活体。如果有多张人脸出现，则选取最大的人脸进行判定。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *FrsClient) DetectLiveByFile(request *model.DetectLiveByFileRequest) (*model.DetectLiveByFileResponse, error) {
 	requestDef := GenReqDefForDetectLiveByFile()
 
@@ -463,8 +443,7 @@ func (c *FrsClient) DetectLiveByFileInvoker(request *model.DetectLiveByFileReque
 //
 // 动作活体检测是通过判断视频中的人物动作与传入动作列表是否一致来识别视频中人物是否为活体。如果有多张人脸出现，则选取最大的人脸进行判定。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *FrsClient) DetectLiveByFileIntl(request *model.DetectLiveByFileIntlRequest) (*model.DetectLiveByFileIntlResponse, error) {
 	requestDef := GenReqDefForDetectLiveByFileIntl()
 
@@ -485,8 +464,7 @@ func (c *FrsClient) DetectLiveByFileIntlInvoker(request *model.DetectLiveByFileI
 //
 // 动作活体检测是通过判断视频中的人物动作与传入动作列表是否一致来识别视频中人物是否为活体。如果有多张人脸出现，则选取最大的人脸进行判定。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *FrsClient) DetectLiveByUrl(request *model.DetectLiveByUrlRequest) (*model.DetectLiveByUrlResponse, error) {
 	requestDef := GenReqDefForDetectLiveByUrl()
 
@@ -507,8 +485,7 @@ func (c *FrsClient) DetectLiveByUrlInvoker(request *model.DetectLiveByUrlRequest
 //
 // 动作活体检测是通过判断视频中的人物动作与传入动作列表是否一致来识别视频中人物是否为活体。如果有多张人脸出现，则选取最大的人脸进行判定。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *FrsClient) DetectLiveByUrlIntl(request *model.DetectLiveByUrlIntlRequest) (*model.DetectLiveByUrlIntlResponse, error) {
 	requestDef := GenReqDefForDetectLiveByUrlIntl()
 
@@ -529,8 +506,7 @@ func (c *FrsClient) DetectLiveByUrlIntlInvoker(request *model.DetectLiveByUrlInt
 //
 // 静默活体检测是基于人脸图片中可能存在的畸变、摩尔纹、反光、倒影、边框等信息，判断图片中的人脸是否来自于真人活体，有效抵御纸质翻拍照、电子翻拍照以及视频翻拍等各种攻击方式。静默活体检测支持单张图片，不支持多人脸图片。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *FrsClient) DetectLiveFaceByBase64(request *model.DetectLiveFaceByBase64Request) (*model.DetectLiveFaceByBase64Response, error) {
 	requestDef := GenReqDefForDetectLiveFaceByBase64()
 
@@ -551,8 +527,7 @@ func (c *FrsClient) DetectLiveFaceByBase64Invoker(request *model.DetectLiveFaceB
 //
 // 静默活体检测是基于人脸图片中可能存在的畸变、摩尔纹、反光、倒影、边框等信息，判断图片中的人脸是否来自于真人活体，有效抵御纸质翻拍照、电子翻拍照以及视频翻拍等各种攻击方式。静默活体检测支持单张图片，不支持多人脸图片。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *FrsClient) DetectLiveFaceByFile(request *model.DetectLiveFaceByFileRequest) (*model.DetectLiveFaceByFileResponse, error) {
 	requestDef := GenReqDefForDetectLiveFaceByFile()
 
@@ -573,8 +548,7 @@ func (c *FrsClient) DetectLiveFaceByFileInvoker(request *model.DetectLiveFaceByF
 //
 // 静默活体检测是基于人脸图片中可能存在的畸变、摩尔纹、反光、倒影、边框等信息，判断图片中的人脸是否来自于真人活体，有效抵御纸质翻拍照、电子翻拍照以及视频翻拍等各种攻击方式。静默活体检测支持单张图片，不支持多人脸图片。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *FrsClient) DetectLiveFaceByUrl(request *model.DetectLiveFaceByUrlRequest) (*model.DetectLiveFaceByUrlResponse, error) {
 	requestDef := GenReqDefForDetectLiveFaceByUrl()
 
@@ -596,8 +570,7 @@ func (c *FrsClient) DetectLiveFaceByUrlInvoker(request *model.DetectLiveFaceByUr
 // 人脸搜索是指在已有的人脸库中，查询与目标人脸相似的一张或者多张人脸，并返回相应的置信度。
 // 支持传入图片或者faceID进行人脸搜索，如果传入的是多张人脸图片，选取图片中检测到的最大尺寸人脸作为检索的输入。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *FrsClient) SearchFaceByBase64(request *model.SearchFaceByBase64Request) (*model.SearchFaceByBase64Response, error) {
 	requestDef := GenReqDefForSearchFaceByBase64()
 
@@ -619,8 +592,7 @@ func (c *FrsClient) SearchFaceByBase64Invoker(request *model.SearchFaceByBase64R
 // 人脸搜索是指在已有的人脸库中，查询与目标人脸相似的一张或者多张人脸，并返回相应的置信度。
 // 支持传入图片或者faceID进行人脸搜索，如果传入的是多张人脸图片，选取图片中检测到的最大尺寸人脸作为检索的输入。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *FrsClient) SearchFaceByFaceId(request *model.SearchFaceByFaceIdRequest) (*model.SearchFaceByFaceIdResponse, error) {
 	requestDef := GenReqDefForSearchFaceByFaceId()
 
@@ -642,8 +614,7 @@ func (c *FrsClient) SearchFaceByFaceIdInvoker(request *model.SearchFaceByFaceIdR
 // 人脸搜索是指在已有的人脸库中，查询与目标人脸相似的一张或者多张人脸，并返回相应的置信度。
 // 支持传入图片或者faceID进行人脸搜索，如果传入的是多张人脸图片，选取图片中检测到的最大尺寸人脸作为检索的输入。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *FrsClient) SearchFaceByFile(request *model.SearchFaceByFileRequest) (*model.SearchFaceByFileResponse, error) {
 	requestDef := GenReqDefForSearchFaceByFile()
 
@@ -665,8 +636,7 @@ func (c *FrsClient) SearchFaceByFileInvoker(request *model.SearchFaceByFileReque
 // 人脸搜索是指在已有的人脸库中，查询与目标人脸相似的一张或者多张人脸，并返回相应的置信度。
 // 支持传入图片或者faceID进行人脸搜索，如果传入的是多张人脸图片，选取图片中检测到的最大尺寸人脸作为检索的输入。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *FrsClient) SearchFaceByUrl(request *model.SearchFaceByUrlRequest) (*model.SearchFaceByUrlResponse, error) {
 	requestDef := GenReqDefForSearchFaceByUrl()
 
@@ -687,8 +657,7 @@ func (c *FrsClient) SearchFaceByUrlInvoker(request *model.SearchFaceByUrlRequest
 //
 // 查询当前用户所有人脸库的状态信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *FrsClient) ShowAllFaceSets(request *model.ShowAllFaceSetsRequest) (*model.ShowAllFaceSetsResponse, error) {
 	requestDef := GenReqDefForShowAllFaceSets()
 
@@ -709,8 +678,7 @@ func (c *FrsClient) ShowAllFaceSetsInvoker(request *model.ShowAllFaceSetsRequest
 //
 // 查询人脸库当前的状态。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *FrsClient) ShowFaceSet(request *model.ShowFaceSetRequest) (*model.ShowFaceSetResponse, error) {
 	requestDef := GenReqDefForShowFaceSet()
 
@@ -731,8 +699,7 @@ func (c *FrsClient) ShowFaceSetInvoker(request *model.ShowFaceSetRequest) *ShowF
 //
 // 查询指定人脸库中人脸信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *FrsClient) ShowFacesByFaceId(request *model.ShowFacesByFaceIdRequest) (*model.ShowFacesByFaceIdResponse, error) {
 	requestDef := GenReqDefForShowFacesByFaceId()
 
@@ -753,8 +720,7 @@ func (c *FrsClient) ShowFacesByFaceIdInvoker(request *model.ShowFacesByFaceIdReq
 //
 // 查询指定人脸库中人脸信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *FrsClient) ShowFacesByLimit(request *model.ShowFacesByLimitRequest) (*model.ShowFacesByLimitResponse, error) {
 	requestDef := GenReqDefForShowFacesByLimit()
 
@@ -775,8 +741,7 @@ func (c *FrsClient) ShowFacesByLimitInvoker(request *model.ShowFacesByLimitReque
 //
 // 根据人脸ID（face_id）更新单张人脸信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *FrsClient) UpdateFace(request *model.UpdateFaceRequest) (*model.UpdateFaceResponse, error) {
 	requestDef := GenReqDefForUpdateFace()
 

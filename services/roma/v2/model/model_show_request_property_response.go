@@ -45,8 +45,9 @@ type ShowRequestPropertyResponse struct {
 	// string的枚举值数组，使用逗号分隔
 	EnumList *string `json:"enum_list,omitempty"`
 
-	EnumDict       *PropertyDataEnum `json:"enum_dict,omitempty"`
-	HttpStatusCode int               `json:"-"`
+	// 当数据类型为boolean枚举值时填写json格式数据，形如\"enum_dict\":{\"0\":\"xxx\",\"1\":\"xxx\"}
+	EnumDict       *interface{} `json:"enum_dict,omitempty"`
+	HttpStatusCode int          `json:"-"`
 }
 
 func (o ShowRequestPropertyResponse) String() string {

@@ -23,8 +23,7 @@ func EiHealthClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 批量导入应用
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) BatchImportApp(request *model.BatchImportAppRequest) (*model.BatchImportAppResponse, error) {
 	requestDef := GenReqDefForBatchImportApp()
 
@@ -45,8 +44,7 @@ func (c *EiHealthClient) BatchImportAppInvoker(request *model.BatchImportAppRequ
 //
 // 创建应用
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) CreateApp(request *model.CreateAppRequest) (*model.CreateAppResponse, error) {
 	requestDef := GenReqDefForCreateApp()
 
@@ -67,8 +65,7 @@ func (c *EiHealthClient) CreateAppInvoker(request *model.CreateAppRequest) *Crea
 //
 // 删除应用
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) DeleteApp(request *model.DeleteAppRequest) (*model.DeleteAppResponse, error) {
 	requestDef := GenReqDefForDeleteApp()
 
@@ -89,8 +86,7 @@ func (c *EiHealthClient) DeleteAppInvoker(request *model.DeleteAppRequest) *Dele
 //
 // 获取应用列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ListApp(request *model.ListAppRequest) (*model.ListAppResponse, error) {
 	requestDef := GenReqDefForListApp()
 
@@ -111,8 +107,7 @@ func (c *EiHealthClient) ListAppInvoker(request *model.ListAppRequest) *ListAppI
 //
 // 获取应用详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ShowApp(request *model.ShowAppRequest) (*model.ShowAppResponse, error) {
 	requestDef := GenReqDefForShowApp()
 
@@ -133,8 +128,7 @@ func (c *EiHealthClient) ShowAppInvoker(request *model.ShowAppRequest) *ShowAppI
 //
 // 订阅应用
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) SubscribeApp(request *model.SubscribeAppRequest) (*model.SubscribeAppResponse, error) {
 	requestDef := GenReqDefForSubscribeApp()
 
@@ -155,8 +149,7 @@ func (c *EiHealthClient) SubscribeAppInvoker(request *model.SubscribeAppRequest)
 //
 // 更新应用
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) UpdateApp(request *model.UpdateAppRequest) (*model.UpdateAppResponse, error) {
 	requestDef := GenReqDefForUpdateApp()
 
@@ -177,8 +170,7 @@ func (c *EiHealthClient) UpdateAppInvoker(request *model.UpdateAppRequest) *Upda
 //
 // 获取资产列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ListAsset(request *model.ListAssetRequest) (*model.ListAssetResponse, error) {
 	requestDef := GenReqDefForListAsset()
 
@@ -199,8 +191,7 @@ func (c *EiHealthClient) ListAssetInvoker(request *model.ListAssetRequest) *List
 //
 // 获取属性值列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ListProperty(request *model.ListPropertyRequest) (*model.ListPropertyResponse, error) {
 	requestDef := GenReqDefForListProperty()
 
@@ -221,8 +212,7 @@ func (c *EiHealthClient) ListPropertyInvoker(request *model.ListPropertyRequest)
 //
 // 查询资产详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ShowAsset(request *model.ShowAssetRequest) (*model.ShowAssetResponse, error) {
 	requestDef := GenReqDefForShowAsset()
 
@@ -243,8 +233,7 @@ func (c *EiHealthClient) ShowAssetInvoker(request *model.ShowAssetRequest) *Show
 //
 // 查询资产版本详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ShowAssetVersion(request *model.ShowAssetVersionRequest) (*model.ShowAssetVersionResponse, error) {
 	requestDef := GenReqDefForShowAssetVersion()
 
@@ -265,8 +254,7 @@ func (c *EiHealthClient) ShowAssetVersionInvoker(request *model.ShowAssetVersion
 //
 // 创建自动作业模板
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) CreateAutoJob(request *model.CreateAutoJobRequest) (*model.CreateAutoJobResponse, error) {
 	requestDef := GenReqDefForCreateAutoJob()
 
@@ -287,8 +275,7 @@ func (c *EiHealthClient) CreateAutoJobInvoker(request *model.CreateAutoJobReques
 //
 // 删除自动作业模板
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) DeleteAutoJob(request *model.DeleteAutoJobRequest) (*model.DeleteAutoJobResponse, error) {
 	requestDef := GenReqDefForDeleteAutoJob()
 
@@ -309,8 +296,7 @@ func (c *EiHealthClient) DeleteAutoJobInvoker(request *model.DeleteAutoJobReques
 //
 // 获取自动作业模板列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ListAutoJob(request *model.ListAutoJobRequest) (*model.ListAutoJobResponse, error) {
 	requestDef := GenReqDefForListAutoJob()
 
@@ -331,8 +317,7 @@ func (c *EiHealthClient) ListAutoJobInvoker(request *model.ListAutoJobRequest) *
 //
 // 查询自动作业模板
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ShowAutoJob(request *model.ShowAutoJobRequest) (*model.ShowAutoJobResponse, error) {
 	requestDef := GenReqDefForShowAutoJob()
 
@@ -353,8 +338,7 @@ func (c *EiHealthClient) ShowAutoJobInvoker(request *model.ShowAutoJobRequest) *
 //
 // 启动自动作业
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) StartAutoJob(request *model.StartAutoJobRequest) (*model.StartAutoJobResponse, error) {
 	requestDef := GenReqDefForStartAutoJob()
 
@@ -375,8 +359,7 @@ func (c *EiHealthClient) StartAutoJobInvoker(request *model.StartAutoJobRequest)
 //
 // 停止自动作业
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) StopAutoJob(request *model.StopAutoJobRequest) (*model.StopAutoJobResponse, error) {
 	requestDef := GenReqDefForStopAutoJob()
 
@@ -397,8 +380,7 @@ func (c *EiHealthClient) StopAutoJobInvoker(request *model.StopAutoJobRequest) *
 //
 // 更新自动作业模板
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) UpdateAutoJob(request *model.UpdateAutoJobRequest) (*model.UpdateAutoJobResponse, error) {
 	requestDef := GenReqDefForUpdateAutoJob()
 
@@ -419,8 +401,7 @@ func (c *EiHealthClient) UpdateAutoJobInvoker(request *model.UpdateAutoJobReques
 //
 // 购买计算资源
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) CreateComputingResource(request *model.CreateComputingResourceRequest) (*model.CreateComputingResourceResponse, error) {
 	requestDef := GenReqDefForCreateComputingResource()
 
@@ -441,8 +422,7 @@ func (c *EiHealthClient) CreateComputingResourceInvoker(request *model.CreateCom
 //
 // 删除计算资源
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) DeleteComputingResource(request *model.DeleteComputingResourceRequest) (*model.DeleteComputingResourceResponse, error) {
 	requestDef := GenReqDefForDeleteComputingResource()
 
@@ -463,8 +443,7 @@ func (c *EiHealthClient) DeleteComputingResourceInvoker(request *model.DeleteCom
 //
 // 查询计算资源规格
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ListComputingResourceFlavors(request *model.ListComputingResourceFlavorsRequest) (*model.ListComputingResourceFlavorsResponse, error) {
 	requestDef := GenReqDefForListComputingResourceFlavors()
 
@@ -485,8 +464,7 @@ func (c *EiHealthClient) ListComputingResourceFlavorsInvoker(request *model.List
 //
 // 查询计算资源
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ListComputingResources(request *model.ListComputingResourcesRequest) (*model.ListComputingResourcesResponse, error) {
 	requestDef := GenReqDefForListComputingResources()
 
@@ -507,8 +485,7 @@ func (c *EiHealthClient) ListComputingResourcesInvoker(request *model.ListComput
 //
 // 重启计算资源
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) RebootNode(request *model.RebootNodeRequest) (*model.RebootNodeResponse, error) {
 	requestDef := GenReqDefForRebootNode()
 
@@ -529,8 +506,7 @@ func (c *EiHealthClient) RebootNodeInvoker(request *model.RebootNodeRequest) *Re
 //
 // 查询bms计算资源显卡id列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ShowBmsDevices(request *model.ShowBmsDevicesRequest) (*model.ShowBmsDevicesResponse, error) {
 	requestDef := GenReqDefForShowBmsDevices()
 
@@ -551,8 +527,7 @@ func (c *EiHealthClient) ShowBmsDevicesInvoker(request *model.ShowBmsDevicesRequ
 //
 // 获取EVS配额及使用情况
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ShowEvsQuota(request *model.ShowEvsQuotaRequest) (*model.ShowEvsQuotaResponse, error) {
 	requestDef := GenReqDefForShowEvsQuota()
 
@@ -573,8 +548,7 @@ func (c *EiHealthClient) ShowEvsQuotaInvoker(request *model.ShowEvsQuotaRequest)
 //
 // 获取节点剩余配额
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ShowLeftQuota(request *model.ShowLeftQuotaRequest) (*model.ShowLeftQuotaResponse, error) {
 	requestDef := GenReqDefForShowLeftQuota()
 
@@ -595,8 +569,7 @@ func (c *EiHealthClient) ShowLeftQuotaInvoker(request *model.ShowLeftQuotaReques
 //
 // 查询计算资源调度信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ShowSchedule(request *model.ShowScheduleRequest) (*model.ShowScheduleResponse, error) {
 	requestDef := GenReqDefForShowSchedule()
 
@@ -617,8 +590,7 @@ func (c *EiHealthClient) ShowScheduleInvoker(request *model.ShowScheduleRequest)
 //
 // 启动计算资源
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) StartNode(request *model.StartNodeRequest) (*model.StartNodeResponse, error) {
 	requestDef := GenReqDefForStartNode()
 
@@ -639,8 +611,7 @@ func (c *EiHealthClient) StartNodeInvoker(request *model.StartNodeRequest) *Star
 //
 // 关闭计算资源
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) StopNode(request *model.StopNodeRequest) (*model.StopNodeResponse, error) {
 	requestDef := GenReqDefForStopNode()
 
@@ -661,8 +632,7 @@ func (c *EiHealthClient) StopNodeInvoker(request *model.StopNodeRequest) *StopNo
 //
 // 修改计算资源调度信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) UpdateSchedule(request *model.UpdateScheduleRequest) (*model.UpdateScheduleResponse, error) {
 	requestDef := GenReqDefForUpdateSchedule()
 
@@ -683,8 +653,7 @@ func (c *EiHealthClient) UpdateScheduleInvoker(request *model.UpdateScheduleRequ
 //
 // 将需要归档的重要数据拷贝到数据归档桶
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) CreateBackup(request *model.CreateBackupRequest) (*model.CreateBackupResponse, error) {
 	requestDef := GenReqDefForCreateBackup()
 
@@ -705,8 +674,7 @@ func (c *EiHealthClient) CreateBackupInvoker(request *model.CreateBackupRequest)
 //
 // 删除指定的归档
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) DeleteBackup(request *model.DeleteBackupRequest) (*model.DeleteBackupResponse, error) {
 	requestDef := GenReqDefForDeleteBackup()
 
@@ -727,8 +695,7 @@ func (c *EiHealthClient) DeleteBackupInvoker(request *model.DeleteBackupRequest)
 //
 // 分页查询用户管理的项目的所有历史归档记录
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ListBackup(request *model.ListBackupRequest) (*model.ListBackupResponse, error) {
 	requestDef := GenReqDefForListBackup()
 
@@ -749,8 +716,7 @@ func (c *EiHealthClient) ListBackupInvoker(request *model.ListBackupRequest) *Li
 //
 // 将指定的归档数据拷贝到目标项目的某个目录下
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) RestoreBackup(request *model.RestoreBackupRequest) (*model.RestoreBackupResponse, error) {
 	requestDef := GenReqDefForRestoreBackup()
 
@@ -771,8 +737,7 @@ func (c *EiHealthClient) RestoreBackupInvoker(request *model.RestoreBackupReques
 //
 // 根据归档ID获取该归档的全数据清单
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ShowBackupPath(request *model.ShowBackupPathRequest) (*model.ShowBackupPathResponse, error) {
 	requestDef := GenReqDefForShowBackupPath()
 
@@ -793,8 +758,7 @@ func (c *EiHealthClient) ShowBackupPathInvoker(request *model.ShowBackupPathRequ
 //
 // 复制项目数据
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) CopyData(request *model.CopyDataRequest) (*model.CopyDataResponse, error) {
 	requestDef := GenReqDefForCopyData()
 
@@ -815,8 +779,7 @@ func (c *EiHealthClient) CopyDataInvoker(request *model.CopyDataRequest) *CopyDa
 //
 // 创建文件夹
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) CreateData(request *model.CreateDataRequest) (*model.CreateDataResponse, error) {
 	requestDef := GenReqDefForCreateData()
 
@@ -837,8 +800,7 @@ func (c *EiHealthClient) CreateDataInvoker(request *model.CreateDataRequest) *Cr
 //
 // 批量删除项目数据
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) DeleteData(request *model.DeleteDataRequest) (*model.DeleteDataResponse, error) {
 	requestDef := GenReqDefForDeleteData()
 
@@ -859,8 +821,7 @@ func (c *EiHealthClient) DeleteDataInvoker(request *model.DeleteDataRequest) *De
 //
 // 导入项目数据
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ImportData(request *model.ImportDataRequest) (*model.ImportDataResponse, error) {
 	requestDef := GenReqDefForImportData()
 
@@ -881,8 +842,7 @@ func (c *EiHealthClient) ImportDataInvoker(request *model.ImportDataRequest) *Im
 //
 // 导入网上数据
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ImportNetworkData(request *model.ImportNetworkDataRequest) (*model.ImportNetworkDataResponse, error) {
 	requestDef := GenReqDefForImportNetworkData()
 
@@ -903,8 +863,7 @@ func (c *EiHealthClient) ImportNetworkDataInvoker(request *model.ImportNetworkDa
 //
 // 获取桶列表(包含当前项目桶和引用项目桶)
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ListBucket(request *model.ListBucketRequest) (*model.ListBucketResponse, error) {
 	requestDef := GenReqDefForListBucket()
 
@@ -925,8 +884,7 @@ func (c *EiHealthClient) ListBucketInvoker(request *model.ListBucketRequest) *Li
 //
 // 查询指定目录下的数据列表，如果不指定默认查询根目录
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ListData(request *model.ListDataRequest) (*model.ListDataResponse, error) {
 	requestDef := GenReqDefForListData()
 
@@ -947,8 +905,7 @@ func (c *EiHealthClient) ListDataInvoker(request *model.ListDataRequest) *ListDa
 //
 // 引用项目数据
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) QuoteData(request *model.QuoteDataRequest) (*model.QuoteDataResponse, error) {
 	requestDef := GenReqDefForQuoteData()
 
@@ -969,8 +926,7 @@ func (c *EiHealthClient) QuoteDataInvoker(request *model.QuoteDataRequest) *Quot
 //
 // 获取桶存量信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ShowBucketStorage(request *model.ShowBucketStorageRequest) (*model.ShowBucketStorageResponse, error) {
 	requestDef := GenReqDefForShowBucketStorage()
 
@@ -991,8 +947,7 @@ func (c *EiHealthClient) ShowBucketStorageInvoker(request *model.ShowBucketStora
 //
 // 获取指定数据对象的详细信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ShowData(request *model.ShowDataRequest) (*model.ShowDataResponse, error) {
 	requestDef := GenReqDefForShowData()
 
@@ -1013,8 +968,7 @@ func (c *EiHealthClient) ShowDataInvoker(request *model.ShowDataRequest) *ShowDa
 //
 // 查询项目级数据权限控制策略
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ShowDataPolicy(request *model.ShowDataPolicyRequest) (*model.ShowDataPolicyResponse, error) {
 	requestDef := GenReqDefForShowDataPolicy()
 
@@ -1035,8 +989,7 @@ func (c *EiHealthClient) ShowDataPolicyInvoker(request *model.ShowDataPolicyRequ
 //
 // 订阅资产市场数据
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) SubscribeData(request *model.SubscribeDataRequest) (*model.SubscribeDataResponse, error) {
 	requestDef := GenReqDefForSubscribeData()
 
@@ -1057,8 +1010,7 @@ func (c *EiHealthClient) SubscribeDataInvoker(request *model.SubscribeDataReques
 //
 // 设置项目级权限控制策略
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) UpdateDataPolicy(request *model.UpdateDataPolicyRequest) (*model.UpdateDataPolicyResponse, error) {
 	requestDef := GenReqDefForUpdateDataPolicy()
 
@@ -1079,8 +1031,7 @@ func (c *EiHealthClient) UpdateDataPolicyInvoker(request *model.UpdateDataPolicy
 //
 // 上传数据文件
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) UploadData(request *model.UploadDataRequest) (*model.UploadDataResponse, error) {
 	requestDef := GenReqDefForUploadData()
 
@@ -1101,8 +1052,7 @@ func (c *EiHealthClient) UploadDataInvoker(request *model.UploadDataRequest) *Up
 //
 // 取消数据作业
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) CancelDataJob(request *model.CancelDataJobRequest) (*model.CancelDataJobResponse, error) {
 	requestDef := GenReqDefForCancelDataJob()
 
@@ -1123,8 +1073,7 @@ func (c *EiHealthClient) CancelDataJobInvoker(request *model.CancelDataJobReques
 //
 // 删除数据作业
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) DeleteDataJob(request *model.DeleteDataJobRequest) (*model.DeleteDataJobResponse, error) {
 	requestDef := GenReqDefForDeleteDataJob()
 
@@ -1145,8 +1094,7 @@ func (c *EiHealthClient) DeleteDataJobInvoker(request *model.DeleteDataJobReques
 //
 // 下载数据作业执行日志
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) DownloadDataJobLog(request *model.DownloadDataJobLogRequest) (*model.DownloadDataJobLogResponse, error) {
 	requestDef := GenReqDefForDownloadDataJobLog()
 
@@ -1167,8 +1115,7 @@ func (c *EiHealthClient) DownloadDataJobLogInvoker(request *model.DownloadDataJo
 //
 // 获取数据作业执行日志
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ListCheckpoint(request *model.ListCheckpointRequest) (*model.ListCheckpointResponse, error) {
 	requestDef := GenReqDefForListCheckpoint()
 
@@ -1189,8 +1136,7 @@ func (c *EiHealthClient) ListCheckpointInvoker(request *model.ListCheckpointRequ
 //
 // 获取数据作业列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ListDataJob(request *model.ListDataJobRequest) (*model.ListDataJobResponse, error) {
 	requestDef := GenReqDefForListDataJob()
 
@@ -1211,8 +1157,7 @@ func (c *EiHealthClient) ListDataJobInvoker(request *model.ListDataJobRequest) *
 //
 // 重试数据作业
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) RetryDataJob(request *model.RetryDataJobRequest) (*model.RetryDataJobResponse, error) {
 	requestDef := GenReqDefForRetryDataJob()
 
@@ -1233,8 +1178,7 @@ func (c *EiHealthClient) RetryDataJobInvoker(request *model.RetryDataJobRequest)
 //
 // 获取数据作业详细信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ShowDataJob(request *model.ShowDataJobRequest) (*model.ShowDataJobResponse, error) {
 	requestDef := GenReqDefForShowDataJob()
 
@@ -1255,8 +1199,7 @@ func (c *EiHealthClient) ShowDataJobInvoker(request *model.ShowDataJobRequest) *
 //
 // 插入单条数据
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) CreateDatabaseData(request *model.CreateDatabaseDataRequest) (*model.CreateDatabaseDataResponse, error) {
 	requestDef := GenReqDefForCreateDatabaseData()
 
@@ -1277,8 +1220,7 @@ func (c *EiHealthClient) CreateDatabaseDataInvoker(request *model.CreateDatabase
 //
 // 创建数据库实例
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) CreateInstance(request *model.CreateInstanceRequest) (*model.CreateInstanceResponse, error) {
 	requestDef := GenReqDefForCreateInstance()
 
@@ -1299,8 +1241,7 @@ func (c *EiHealthClient) CreateInstanceInvoker(request *model.CreateInstanceRequ
 //
 // 删除指定行数据
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) DeleteDatabaseData(request *model.DeleteDatabaseDataRequest) (*model.DeleteDatabaseDataResponse, error) {
 	requestDef := GenReqDefForDeleteDatabaseData()
 
@@ -1321,8 +1262,7 @@ func (c *EiHealthClient) DeleteDatabaseDataInvoker(request *model.DeleteDatabase
 //
 // 删除实例
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) DeleteInstance(request *model.DeleteInstanceRequest) (*model.DeleteInstanceResponse, error) {
 	requestDef := GenReqDefForDeleteInstance()
 
@@ -1343,8 +1283,7 @@ func (c *EiHealthClient) DeleteInstanceInvoker(request *model.DeleteInstanceRequ
 //
 // 导入数据
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ImportDatabaseData(request *model.ImportDatabaseDataRequest) (*model.ImportDatabaseDataResponse, error) {
 	requestDef := GenReqDefForImportDatabaseData()
 
@@ -1365,8 +1304,7 @@ func (c *EiHealthClient) ImportDatabaseDataInvoker(request *model.ImportDatabase
 //
 // 查询数据
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ListDatabaseData(request *model.ListDatabaseDataRequest) (*model.ListDatabaseDataResponse, error) {
 	requestDef := GenReqDefForListDatabaseData()
 
@@ -1387,8 +1325,7 @@ func (c *EiHealthClient) ListDatabaseDataInvoker(request *model.ListDatabaseData
 //
 // 获取实例列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ListInstance(request *model.ListInstanceRequest) (*model.ListInstanceResponse, error) {
 	requestDef := GenReqDefForListInstance()
 
@@ -1409,8 +1346,7 @@ func (c *EiHealthClient) ListInstanceInvoker(request *model.ListInstanceRequest)
 //
 // 引用数据库实例
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) QuoteInstance(request *model.QuoteInstanceRequest) (*model.QuoteInstanceResponse, error) {
 	requestDef := GenReqDefForQuoteInstance()
 
@@ -1431,8 +1367,7 @@ func (c *EiHealthClient) QuoteInstanceInvoker(request *model.QuoteInstanceReques
 //
 // 查询实例详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ShowInstance(request *model.ShowInstanceRequest) (*model.ShowInstanceResponse, error) {
 	requestDef := GenReqDefForShowInstance()
 
@@ -1453,8 +1388,7 @@ func (c *EiHealthClient) ShowInstanceInvoker(request *model.ShowInstanceRequest)
 //
 // 更新数据
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) UpdateDatabaseData(request *model.UpdateDatabaseDataRequest) (*model.UpdateDatabaseDataResponse, error) {
 	requestDef := GenReqDefForUpdateDatabaseData()
 
@@ -1475,8 +1409,7 @@ func (c *EiHealthClient) UpdateDatabaseDataInvoker(request *model.UpdateDatabase
 //
 // 购买数据库资源
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) CreateDatabaseResource(request *model.CreateDatabaseResourceRequest) (*model.CreateDatabaseResourceResponse, error) {
 	requestDef := GenReqDefForCreateDatabaseResource()
 
@@ -1497,8 +1430,7 @@ func (c *EiHealthClient) CreateDatabaseResourceInvoker(request *model.CreateData
 //
 // 删除数据库资源
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) DeleteDatabaseResource(request *model.DeleteDatabaseResourceRequest) (*model.DeleteDatabaseResourceResponse, error) {
 	requestDef := GenReqDefForDeleteDatabaseResource()
 
@@ -1519,8 +1451,7 @@ func (c *EiHealthClient) DeleteDatabaseResourceInvoker(request *model.DeleteData
 //
 // 查询数据库资源
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ListDatabaseResource(request *model.ListDatabaseResourceRequest) (*model.ListDatabaseResourceResponse, error) {
 	requestDef := GenReqDefForListDatabaseResource()
 
@@ -1541,8 +1472,7 @@ func (c *EiHealthClient) ListDatabaseResourceInvoker(request *model.ListDatabase
 //
 // 获取数据库资源规格列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ListDatabaseResourceFlavor(request *model.ListDatabaseResourceFlavorRequest) (*model.ListDatabaseResourceFlavorResponse, error) {
 	requestDef := GenReqDefForListDatabaseResourceFlavor()
 
@@ -1563,8 +1493,7 @@ func (c *EiHealthClient) ListDatabaseResourceFlavorInvoker(request *model.ListDa
 //
 // 批量删除镜像tag
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) BatchDeleteTag(request *model.BatchDeleteTagRequest) (*model.BatchDeleteTagResponse, error) {
 	requestDef := GenReqDefForBatchDeleteTag()
 
@@ -1585,8 +1514,7 @@ func (c *EiHealthClient) BatchDeleteTagInvoker(request *model.BatchDeleteTagRequ
 //
 // 创建镜像
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) CreateImage(request *model.CreateImageRequest) (*model.CreateImageResponse, error) {
 	requestDef := GenReqDefForCreateImage()
 
@@ -1607,8 +1535,7 @@ func (c *EiHealthClient) CreateImageInvoker(request *model.CreateImageRequest) *
 //
 // 删除镜像仓库
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) DeleteImage(request *model.DeleteImageRequest) (*model.DeleteImageResponse, error) {
 	requestDef := GenReqDefForDeleteImage()
 
@@ -1629,8 +1556,7 @@ func (c *EiHealthClient) DeleteImageInvoker(request *model.DeleteImageRequest) *
 //
 // 删除指定镜像tag
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) DeleteTag(request *model.DeleteTagRequest) (*model.DeleteTagResponse, error) {
 	requestDef := GenReqDefForDeleteTag()
 
@@ -1651,8 +1577,7 @@ func (c *EiHealthClient) DeleteTagInvoker(request *model.DeleteTagRequest) *Dele
 //
 // 导入镜像
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ImportImage(request *model.ImportImageRequest) (*model.ImportImageResponse, error) {
 	requestDef := GenReqDefForImportImage()
 
@@ -1673,8 +1598,7 @@ func (c *EiHealthClient) ImportImageInvoker(request *model.ImportImageRequest) *
 //
 // 获取镜像列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ListImage(request *model.ListImageRequest) (*model.ListImageResponse, error) {
 	requestDef := GenReqDefForListImage()
 
@@ -1695,8 +1619,7 @@ func (c *EiHealthClient) ListImageInvoker(request *model.ListImageRequest) *List
 //
 // 获取指定镜像的tag列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ListImageTag(request *model.ListImageTagRequest) (*model.ListImageTagResponse, error) {
 	requestDef := GenReqDefForListImageTag()
 
@@ -1717,8 +1640,7 @@ func (c *EiHealthClient) ListImageTagInvoker(request *model.ListImageTagRequest)
 //
 // 获取docker login指令
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ShowDockerLogin(request *model.ShowDockerLoginRequest) (*model.ShowDockerLoginResponse, error) {
 	requestDef := GenReqDefForShowDockerLogin()
 
@@ -1739,8 +1661,7 @@ func (c *EiHealthClient) ShowDockerLoginInvoker(request *model.ShowDockerLoginRe
 //
 // 订阅镜像
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) SubscribeImage(request *model.SubscribeImageRequest) (*model.SubscribeImageResponse, error) {
 	requestDef := GenReqDefForSubscribeImage()
 
@@ -1761,8 +1682,7 @@ func (c *EiHealthClient) SubscribeImageInvoker(request *model.SubscribeImageRequ
 //
 // 更新镜像描述信息或者类型
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) UpdateImage(request *model.UpdateImageRequest) (*model.UpdateImageResponse, error) {
 	requestDef := GenReqDefForUpdateImage()
 
@@ -1783,8 +1703,7 @@ func (c *EiHealthClient) UpdateImageInvoker(request *model.UpdateImageRequest) *
 //
 // 获取作业配置
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ShowJobConfig(request *model.ShowJobConfigRequest) (*model.ShowJobConfigResponse, error) {
 	requestDef := GenReqDefForShowJobConfig()
 
@@ -1805,8 +1724,7 @@ func (c *EiHealthClient) ShowJobConfigInvoker(request *model.ShowJobConfigReques
 //
 // 设置作业配置，目前支持修改保存时长(180天 - 10年)、记录数(1W-500W)
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) UpdateJobConfig(request *model.UpdateJobConfigRequest) (*model.UpdateJobConfigResponse, error) {
 	requestDef := GenReqDefForUpdateJobConfig()
 
@@ -1827,8 +1745,7 @@ func (c *EiHealthClient) UpdateJobConfigInvoker(request *model.UpdateJobConfigRe
 //
 // 取消或强制作业调度
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) CancelJob(request *model.CancelJobRequest) (*model.CancelJobResponse, error) {
 	requestDef := GenReqDefForCancelJob()
 
@@ -1849,8 +1766,7 @@ func (c *EiHealthClient) CancelJobInvoker(request *model.CancelJobRequest) *Canc
 //
 // 删除作业
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) DeleteJob(request *model.DeleteJobRequest) (*model.DeleteJobResponse, error) {
 	requestDef := GenReqDefForDeleteJob()
 
@@ -1871,8 +1787,7 @@ func (c *EiHealthClient) DeleteJobInvoker(request *model.DeleteJobRequest) *Dele
 //
 // 启动作业
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ExecuteJob(request *model.ExecuteJobRequest) (*model.ExecuteJobResponse, error) {
 	requestDef := GenReqDefForExecuteJob()
 
@@ -1893,8 +1808,7 @@ func (c *EiHealthClient) ExecuteJobInvoker(request *model.ExecuteJobRequest) *Ex
 //
 // 获取作业列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ListJob(request *model.ListJobRequest) (*model.ListJobResponse, error) {
 	requestDef := GenReqDefForListJob()
 
@@ -1915,8 +1829,7 @@ func (c *EiHealthClient) ListJobInvoker(request *model.ListJobRequest) *ListJobI
 //
 // 重试作业
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) RetryJob(request *model.RetryJobRequest) (*model.RetryJobResponse, error) {
 	requestDef := GenReqDefForRetryJob()
 
@@ -1937,8 +1850,7 @@ func (c *EiHealthClient) RetryJobInvoker(request *model.RetryJobRequest) *RetryJ
 //
 // 获取作业详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ShowJob(request *model.ShowJobRequest) (*model.ShowJobResponse, error) {
 	requestDef := GenReqDefForShowJob()
 
@@ -1959,8 +1871,7 @@ func (c *EiHealthClient) ShowJobInvoker(request *model.ShowJobRequest) *ShowJobI
 //
 // 获取作业事件
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ShowJobEvent(request *model.ShowJobEventRequest) (*model.ShowJobEventResponse, error) {
 	requestDef := GenReqDefForShowJobEvent()
 
@@ -1981,8 +1892,7 @@ func (c *EiHealthClient) ShowJobEventInvoker(request *model.ShowJobEventRequest)
 //
 // 获取作业日志
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ShowJobLog(request *model.ShowJobLogRequest) (*model.ShowJobLogResponse, error) {
 	requestDef := GenReqDefForShowJobLog()
 
@@ -2003,8 +1913,7 @@ func (c *EiHealthClient) ShowJobLogInvoker(request *model.ShowJobLogRequest) *Sh
 //
 // 获取子任务启动事件
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ShowTaskEvents(request *model.ShowTaskEventsRequest) (*model.ShowTaskEventsResponse, error) {
 	requestDef := GenReqDefForShowTaskEvents()
 
@@ -2025,8 +1934,7 @@ func (c *EiHealthClient) ShowTaskEventsInvoker(request *model.ShowTaskEventsRequ
 //
 // 获取子任务中实例的事件
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ShowTaskInstanceEvents(request *model.ShowTaskInstanceEventsRequest) (*model.ShowTaskInstanceEventsResponse, error) {
 	requestDef := GenReqDefForShowTaskInstanceEvents()
 
@@ -2047,8 +1955,7 @@ func (c *EiHealthClient) ShowTaskInstanceEventsInvoker(request *model.ShowTaskIn
 //
 // 获取子任务中实例的pod信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ShowTaskInstancePod(request *model.ShowTaskInstancePodRequest) (*model.ShowTaskInstancePodResponse, error) {
 	requestDef := GenReqDefForShowTaskInstancePod()
 
@@ -2069,8 +1976,7 @@ func (c *EiHealthClient) ShowTaskInstancePodInvoker(request *model.ShowTaskInsta
 //
 // 获取子任务实例信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ShowTaskInstances(request *model.ShowTaskInstancesRequest) (*model.ShowTaskInstancesResponse, error) {
 	requestDef := GenReqDefForShowTaskInstances()
 
@@ -2091,8 +1997,7 @@ func (c *EiHealthClient) ShowTaskInstancesInvoker(request *model.ShowTaskInstanc
 //
 // 创建标签
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) CreateLabel(request *model.CreateLabelRequest) (*model.CreateLabelResponse, error) {
 	requestDef := GenReqDefForCreateLabel()
 
@@ -2113,8 +2018,7 @@ func (c *EiHealthClient) CreateLabelInvoker(request *model.CreateLabelRequest) *
 //
 // 删除标签
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) DeleteLabel(request *model.DeleteLabelRequest) (*model.DeleteLabelResponse, error) {
 	requestDef := GenReqDefForDeleteLabel()
 
@@ -2135,8 +2039,7 @@ func (c *EiHealthClient) DeleteLabelInvoker(request *model.DeleteLabelRequest) *
 //
 // 获取标签列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ListLabel(request *model.ListLabelRequest) (*model.ListLabelResponse, error) {
 	requestDef := GenReqDefForListLabel()
 
@@ -2157,8 +2060,7 @@ func (c *EiHealthClient) ListLabelInvoker(request *model.ListLabelRequest) *List
 //
 // 创建标签页面
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) CreateLabelPage(request *model.CreateLabelPageRequest) (*model.CreateLabelPageResponse, error) {
 	requestDef := GenReqDefForCreateLabelPage()
 
@@ -2179,8 +2081,7 @@ func (c *EiHealthClient) CreateLabelPageInvoker(request *model.CreateLabelPageRe
 //
 // 删除标签页面
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) DeleteLabelPage(request *model.DeleteLabelPageRequest) (*model.DeleteLabelPageResponse, error) {
 	requestDef := GenReqDefForDeleteLabelPage()
 
@@ -2201,8 +2102,7 @@ func (c *EiHealthClient) DeleteLabelPageInvoker(request *model.DeleteLabelPageRe
 //
 // 获取标签页面列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ListLabelPage(request *model.ListLabelPageRequest) (*model.ListLabelPageResponse, error) {
 	requestDef := GenReqDefForListLabelPage()
 
@@ -2223,8 +2123,7 @@ func (c *EiHealthClient) ListLabelPageInvoker(request *model.ListLabelPageReques
 //
 // 邮箱连通性测试
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) CheckEmailConnection(request *model.CheckEmailConnectionRequest) (*model.CheckEmailConnectionResponse, error) {
 	requestDef := GenReqDefForCheckEmailConnection()
 
@@ -2245,8 +2144,7 @@ func (c *EiHealthClient) CheckEmailConnectionInvoker(request *model.CheckEmailCo
 //
 // 删除消息邮件配置
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) DeleteMessageEmailConfig(request *model.DeleteMessageEmailConfigRequest) (*model.DeleteMessageEmailConfigResponse, error) {
 	requestDef := GenReqDefForDeleteMessageEmailConfig()
 
@@ -2267,8 +2165,7 @@ func (c *EiHealthClient) DeleteMessageEmailConfigInvoker(request *model.DeleteMe
 //
 // 从消息中心获取当前用户有权限查看的消息列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ListMessage(request *model.ListMessageRequest) (*model.ListMessageResponse, error) {
 	requestDef := GenReqDefForListMessage()
 
@@ -2289,8 +2186,7 @@ func (c *EiHealthClient) ListMessageInvoker(request *model.ListMessageRequest) *
 //
 // 获取消息清理规则
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ShowMessageClearRule(request *model.ShowMessageClearRuleRequest) (*model.ShowMessageClearRuleResponse, error) {
 	requestDef := GenReqDefForShowMessageClearRule()
 
@@ -2311,8 +2207,7 @@ func (c *EiHealthClient) ShowMessageClearRuleInvoker(request *model.ShowMessageC
 //
 // 获取消息邮件配置
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ShowMessageEmailConfig(request *model.ShowMessageEmailConfigRequest) (*model.ShowMessageEmailConfigResponse, error) {
 	requestDef := GenReqDefForShowMessageEmailConfig()
 
@@ -2333,8 +2228,7 @@ func (c *EiHealthClient) ShowMessageEmailConfigInvoker(request *model.ShowMessag
 //
 // 获取用户邮件配置
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ShowMessageReceiveConfig(request *model.ShowMessageReceiveConfigRequest) (*model.ShowMessageReceiveConfigResponse, error) {
 	requestDef := GenReqDefForShowMessageReceiveConfig()
 
@@ -2355,8 +2249,7 @@ func (c *EiHealthClient) ShowMessageReceiveConfigInvoker(request *model.ShowMess
 //
 // 设置消息清理规则，支持修改保存时长(180天 - 10年)、记录数(1W-500W)
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) UpdateMessageClearRule(request *model.UpdateMessageClearRuleRequest) (*model.UpdateMessageClearRuleResponse, error) {
 	requestDef := GenReqDefForUpdateMessageClearRule()
 
@@ -2377,8 +2270,7 @@ func (c *EiHealthClient) UpdateMessageClearRuleInvoker(request *model.UpdateMess
 //
 // 设置消息邮件配置
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) UpdateMessageEmailConfig(request *model.UpdateMessageEmailConfigRequest) (*model.UpdateMessageEmailConfigResponse, error) {
 	requestDef := GenReqDefForUpdateMessageEmailConfig()
 
@@ -2399,8 +2291,7 @@ func (c *EiHealthClient) UpdateMessageEmailConfigInvoker(request *model.UpdateMe
 //
 // 设置用户邮件配置
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) UpdateMessageReceiveConfig(request *model.UpdateMessageReceiveConfigRequest) (*model.UpdateMessageReceiveConfigResponse, error) {
 	requestDef := GenReqDefForUpdateMessageReceiveConfig()
 
@@ -2421,8 +2312,7 @@ func (c *EiHealthClient) UpdateMessageReceiveConfigInvoker(request *model.Update
 //
 // 设置节点标签
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) BatchUpdateNodeLabel(request *model.BatchUpdateNodeLabelRequest) (*model.BatchUpdateNodeLabelResponse, error) {
 	requestDef := GenReqDefForBatchUpdateNodeLabel()
 
@@ -2443,8 +2333,7 @@ func (c *EiHealthClient) BatchUpdateNodeLabelInvoker(request *model.BatchUpdateN
 //
 // 获取节点标签集
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ListClusterAllNodeLabel(request *model.ListClusterAllNodeLabelRequest) (*model.ListClusterAllNodeLabelResponse, error) {
 	requestDef := GenReqDefForListClusterAllNodeLabel()
 
@@ -2465,8 +2354,7 @@ func (c *EiHealthClient) ListClusterAllNodeLabelInvoker(request *model.ListClust
 //
 // 获取节点标签集
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ListNodeLabel(request *model.ListNodeLabelRequest) (*model.ListNodeLabelResponse, error) {
 	requestDef := GenReqDefForListNodeLabel()
 
@@ -2487,8 +2375,7 @@ func (c *EiHealthClient) ListNodeLabelInvoker(request *model.ListNodeLabelReques
 //
 // 获取预置标签列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ListPresetLabel(request *model.ListPresetLabelRequest) (*model.ListPresetLabelResponse, error) {
 	requestDef := GenReqDefForListPresetLabel()
 
@@ -2509,8 +2396,7 @@ func (c *EiHealthClient) ListPresetLabelInvoker(request *model.ListPresetLabelRe
 //
 // 创建notebook
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) CreateNotebook(request *model.CreateNotebookRequest) (*model.CreateNotebookResponse, error) {
 	requestDef := GenReqDefForCreateNotebook()
 
@@ -2531,8 +2417,7 @@ func (c *EiHealthClient) CreateNotebookInvoker(request *model.CreateNotebookRequ
 //
 // 删除notebook
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) DeleteNotebook(request *model.DeleteNotebookRequest) (*model.DeleteNotebookResponse, error) {
 	requestDef := GenReqDefForDeleteNotebook()
 
@@ -2553,8 +2438,7 @@ func (c *EiHealthClient) DeleteNotebookInvoker(request *model.DeleteNotebookRequ
 //
 // 获取notebook列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ListNotebook(request *model.ListNotebookRequest) (*model.ListNotebookResponse, error) {
 	requestDef := GenReqDefForListNotebook()
 
@@ -2575,8 +2459,7 @@ func (c *EiHealthClient) ListNotebookInvoker(request *model.ListNotebookRequest)
 //
 // 获取notebook工作环境
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ListNotebookTool(request *model.ListNotebookToolRequest) (*model.ListNotebookToolResponse, error) {
 	requestDef := GenReqDefForListNotebookTool()
 
@@ -2597,8 +2480,7 @@ func (c *EiHealthClient) ListNotebookToolInvoker(request *model.ListNotebookTool
 //
 // 获取notebook详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ShowNotebook(request *model.ShowNotebookRequest) (*model.ShowNotebookResponse, error) {
 	requestDef := GenReqDefForShowNotebook()
 
@@ -2619,8 +2501,7 @@ func (c *EiHealthClient) ShowNotebookInvoker(request *model.ShowNotebookRequest)
 //
 // 获取notebook鉴权信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ShowNotebookToken(request *model.ShowNotebookTokenRequest) (*model.ShowNotebookTokenResponse, error) {
 	requestDef := GenReqDefForShowNotebookToken()
 
@@ -2641,8 +2522,7 @@ func (c *EiHealthClient) ShowNotebookTokenInvoker(request *model.ShowNotebookTok
 //
 // 启停notebook
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) StopOrStartNotebook(request *model.StopOrStartNotebookRequest) (*model.StopOrStartNotebookResponse, error) {
 	requestDef := GenReqDefForStopOrStartNotebook()
 
@@ -2663,8 +2543,7 @@ func (c *EiHealthClient) StopOrStartNotebookInvoker(request *model.StopOrStartNo
 //
 // 更新notebook
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) UpdateNotebook(request *model.UpdateNotebookRequest) (*model.UpdateNotebookResponse, error) {
 	requestDef := GenReqDefForUpdateNotebook()
 
@@ -2685,8 +2564,7 @@ func (c *EiHealthClient) UpdateNotebookInvoker(request *model.UpdateNotebookRequ
 //
 // 获取用户OBS桶列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ListObsBucket(request *model.ListObsBucketRequest) (*model.ListObsBucketResponse, error) {
 	requestDef := GenReqDefForListObsBucket()
 
@@ -2707,8 +2585,7 @@ func (c *EiHealthClient) ListObsBucketInvoker(request *model.ListObsBucketReques
 //
 // 获取用户OBS桶内对象
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ListObsBucketObject(request *model.ListObsBucketObjectRequest) (*model.ListObsBucketObjectResponse, error) {
 	requestDef := GenReqDefForListObsBucketObject()
 
@@ -2729,8 +2606,7 @@ func (c *EiHealthClient) ListObsBucketObjectInvoker(request *model.ListObsBucket
 //
 // 获取医疗平台信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ShowOverview(request *model.ShowOverviewRequest) (*model.ShowOverviewResponse, error) {
 	requestDef := GenReqDefForShowOverview()
 
@@ -2751,8 +2627,7 @@ func (c *EiHealthClient) ShowOverviewInvoker(request *model.ShowOverviewRequest)
 //
 // 购买性能加速资源
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) CreatePerformanceResource(request *model.CreatePerformanceResourceRequest) (*model.CreatePerformanceResourceResponse, error) {
 	requestDef := GenReqDefForCreatePerformanceResource()
 
@@ -2773,8 +2648,7 @@ func (c *EiHealthClient) CreatePerformanceResourceInvoker(request *model.CreateP
 //
 // 删除性能加速资源
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) DeletePerformanceResource(request *model.DeletePerformanceResourceRequest) (*model.DeletePerformanceResourceResponse, error) {
 	requestDef := GenReqDefForDeletePerformanceResource()
 
@@ -2795,8 +2669,7 @@ func (c *EiHealthClient) DeletePerformanceResourceInvoker(request *model.DeleteP
 //
 // 查询性能加速资源
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ListPerformanceResources(request *model.ListPerformanceResourcesRequest) (*model.ListPerformanceResourcesResponse, error) {
 	requestDef := GenReqDefForListPerformanceResources()
 
@@ -2817,8 +2690,7 @@ func (c *EiHealthClient) ListPerformanceResourcesInvoker(request *model.ListPerf
 //
 // 更新性能加速资源配置
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) UpdatePerformanceResource(request *model.UpdatePerformanceResourceRequest) (*model.UpdatePerformanceResourceResponse, error) {
 	requestDef := GenReqDefForUpdatePerformanceResource()
 
@@ -2839,8 +2711,7 @@ func (c *EiHealthClient) UpdatePerformanceResourceInvoker(request *model.UpdateP
 //
 // 批量删除项目成员
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) BatchDeleteMember(request *model.BatchDeleteMemberRequest) (*model.BatchDeleteMemberResponse, error) {
 	requestDef := GenReqDefForBatchDeleteMember()
 
@@ -2861,8 +2732,7 @@ func (c *EiHealthClient) BatchDeleteMemberInvoker(request *model.BatchDeleteMemb
 //
 // 创建项目
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) CreateProject(request *model.CreateProjectRequest) (*model.CreateProjectResponse, error) {
 	requestDef := GenReqDefForCreateProject()
 
@@ -2883,8 +2753,7 @@ func (c *EiHealthClient) CreateProjectInvoker(request *model.CreateProjectReques
 //
 // 移除项目成员
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) DeleteMember(request *model.DeleteMemberRequest) (*model.DeleteMemberResponse, error) {
 	requestDef := GenReqDefForDeleteMember()
 
@@ -2905,8 +2774,7 @@ func (c *EiHealthClient) DeleteMemberInvoker(request *model.DeleteMemberRequest)
 //
 // 删除项目
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) DeleteProject(request *model.DeleteProjectRequest) (*model.DeleteProjectResponse, error) {
 	requestDef := GenReqDefForDeleteProject()
 
@@ -2927,8 +2795,7 @@ func (c *EiHealthClient) DeleteProjectInvoker(request *model.DeleteProjectReques
 //
 // 获取项目列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ListProject(request *model.ListProjectRequest) (*model.ListProjectResponse, error) {
 	requestDef := GenReqDefForListProject()
 
@@ -2949,8 +2816,7 @@ func (c *EiHealthClient) ListProjectInvoker(request *model.ListProjectRequest) *
 //
 // 获取最近的作业列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ListRecentJob(request *model.ListRecentJobRequest) (*model.ListRecentJobResponse, error) {
 	requestDef := GenReqDefForListRecentJob()
 
@@ -2971,8 +2837,7 @@ func (c *EiHealthClient) ListRecentJobInvoker(request *model.ListRecentJobReques
 //
 // 获取项目详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ShowProject(request *model.ShowProjectRequest) (*model.ShowProjectResponse, error) {
 	requestDef := GenReqDefForShowProject()
 
@@ -2993,8 +2858,7 @@ func (c *EiHealthClient) ShowProjectInvoker(request *model.ShowProjectRequest) *
 //
 // 转移项目
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) TransferProject(request *model.TransferProjectRequest) (*model.TransferProjectResponse, error) {
 	requestDef := GenReqDefForTransferProject()
 
@@ -3015,8 +2879,7 @@ func (c *EiHealthClient) TransferProjectInvoker(request *model.TransferProjectRe
 //
 // 更新或者添加项目成员角色
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) UpdateMember(request *model.UpdateMemberRequest) (*model.UpdateMemberResponse, error) {
 	requestDef := GenReqDefForUpdateMember()
 
@@ -3037,8 +2900,7 @@ func (c *EiHealthClient) UpdateMemberInvoker(request *model.UpdateMemberRequest)
 //
 // 更新项目
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) UpdateProject(request *model.UpdateProjectRequest) (*model.UpdateProjectResponse, error) {
 	requestDef := GenReqDefForUpdateProject()
 
@@ -3059,8 +2921,7 @@ func (c *EiHealthClient) UpdateProjectInvoker(request *model.UpdateProjectReques
 //
 // 下载近一万条审计日志
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) DownloadDataTrace(request *model.DownloadDataTraceRequest) (*model.DownloadDataTraceResponse, error) {
 	requestDef := GenReqDefForDownloadDataTrace()
 
@@ -3081,8 +2942,7 @@ func (c *EiHealthClient) DownloadDataTraceInvoker(request *model.DownloadDataTra
 //
 // 获取项目审计日志
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ShowProjectTrace(request *model.ShowProjectTraceRequest) (*model.ShowProjectTraceResponse, error) {
 	requestDef := GenReqDefForShowProjectTrace()
 
@@ -3103,8 +2963,7 @@ func (c *EiHealthClient) ShowProjectTraceInvoker(request *model.ShowProjectTrace
 //
 // 获取指定审计日志
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ShowProjectTraceData(request *model.ShowProjectTraceDataRequest) (*model.ShowProjectTraceDataResponse, error) {
 	requestDef := GenReqDefForShowProjectTraceData()
 
@@ -3125,8 +2984,7 @@ func (c *EiHealthClient) ShowProjectTraceDataInvoker(request *model.ShowProjectT
 //
 // 获取项目审计日志追踪器
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ShowProjectTracker(request *model.ShowProjectTrackerRequest) (*model.ShowProjectTrackerResponse, error) {
 	requestDef := GenReqDefForShowProjectTracker()
 
@@ -3147,8 +3005,7 @@ func (c *EiHealthClient) ShowProjectTrackerInvoker(request *model.ShowProjectTra
 //
 // 更新项目审计日志追踪器配置
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) UpdateProjectTracker(request *model.UpdateProjectTrackerRequest) (*model.UpdateProjectTrackerResponse, error) {
 	requestDef := GenReqDefForUpdateProjectTracker()
 
@@ -3169,8 +3026,7 @@ func (c *EiHealthClient) UpdateProjectTrackerInvoker(request *model.UpdateProjec
 //
 // 获取资源监控数据
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ShowResourceMetricData(request *model.ShowResourceMetricDataRequest) (*model.ShowResourceMetricDataResponse, error) {
 	requestDef := GenReqDefForShowResourceMetricData()
 
@@ -3191,8 +3047,7 @@ func (c *EiHealthClient) ShowResourceMetricDataInvoker(request *model.ShowResour
 //
 // 取消收藏
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) DeleteStar(request *model.DeleteStarRequest) (*model.DeleteStarResponse, error) {
 	requestDef := GenReqDefForDeleteStar()
 
@@ -3213,8 +3068,7 @@ func (c *EiHealthClient) DeleteStarInvoker(request *model.DeleteStarRequest) *De
 //
 // 获取收藏资产列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ListStar(request *model.ListStarRequest) (*model.ListStarResponse, error) {
 	requestDef := GenReqDefForListStar()
 
@@ -3235,8 +3089,7 @@ func (c *EiHealthClient) ListStarInvoker(request *model.ListStarRequest) *ListSt
 //
 // 收藏资产
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) UpdateStar(request *model.UpdateStarRequest) (*model.UpdateStarResponse, error) {
 	requestDef := GenReqDefForUpdateStar()
 
@@ -3257,8 +3110,7 @@ func (c *EiHealthClient) UpdateStarInvoker(request *model.UpdateStarRequest) *Up
 //
 // 获取性能加速资源上统计信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ListPerformanceResourceStat(request *model.ListPerformanceResourceStatRequest) (*model.ListPerformanceResourceStatResponse, error) {
 	requestDef := GenReqDefForListPerformanceResourceStat()
 
@@ -3279,8 +3131,7 @@ func (c *EiHealthClient) ListPerformanceResourceStatInvoker(request *model.ListP
 //
 // 统计应用、流程、作业数目
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ListWorkflowStatistic(request *model.ListWorkflowStatisticRequest) (*model.ListWorkflowStatisticResponse, error) {
 	requestDef := GenReqDefForListWorkflowStatistic()
 
@@ -3301,8 +3152,7 @@ func (c *EiHealthClient) ListWorkflowStatisticInvoker(request *model.ListWorkflo
 //
 // 查询存储资源
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ListStorageResources(request *model.ListStorageResourcesRequest) (*model.ListStorageResourcesResponse, error) {
 	requestDef := GenReqDefForListStorageResources()
 
@@ -3323,8 +3173,7 @@ func (c *EiHealthClient) ListStorageResourcesInvoker(request *model.ListStorageR
 //
 // 创建study
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) CreateStudy(request *model.CreateStudyRequest) (*model.CreateStudyResponse, error) {
 	requestDef := GenReqDefForCreateStudy()
 
@@ -3345,8 +3194,7 @@ func (c *EiHealthClient) CreateStudyInvoker(request *model.CreateStudyRequest) *
 //
 // 创建study作业
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) CreateStudyJob(request *model.CreateStudyJobRequest) (*model.CreateStudyJobResponse, error) {
 	requestDef := GenReqDefForCreateStudyJob()
 
@@ -3367,8 +3215,7 @@ func (c *EiHealthClient) CreateStudyJobInvoker(request *model.CreateStudyJobRequ
 //
 // 删除study
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) DeleteStudy(request *model.DeleteStudyRequest) (*model.DeleteStudyResponse, error) {
 	requestDef := GenReqDefForDeleteStudy()
 
@@ -3389,8 +3236,7 @@ func (c *EiHealthClient) DeleteStudyInvoker(request *model.DeleteStudyRequest) *
 //
 // 列举study
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ListStudy(request *model.ListStudyRequest) (*model.ListStudyResponse, error) {
 	requestDef := GenReqDefForListStudy()
 
@@ -3411,8 +3257,7 @@ func (c *EiHealthClient) ListStudyInvoker(request *model.ListStudyRequest) *List
 //
 // 列举study所有作业
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ListStudyJob(request *model.ListStudyJobRequest) (*model.ListStudyJobResponse, error) {
 	requestDef := GenReqDefForListStudyJob()
 
@@ -3433,8 +3278,7 @@ func (c *EiHealthClient) ListStudyJobInvoker(request *model.ListStudyJobRequest)
 //
 // 获取生成study作业3D结构的内容
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) Show3dStructureContent(request *model.Show3dStructureContentRequest) (*model.Show3dStructureContentResponse, error) {
 	requestDef := GenReqDefForShow3dStructureContent()
 
@@ -3455,8 +3299,7 @@ func (c *EiHealthClient) Show3dStructureContentInvoker(request *model.Show3dStru
 //
 // 获取study作业的最值信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ShowExtremumInfo(request *model.ShowExtremumInfoRequest) (*model.ShowExtremumInfoResponse, error) {
 	requestDef := GenReqDefForShowExtremumInfo()
 
@@ -3477,8 +3320,7 @@ func (c *EiHealthClient) ShowExtremumInfoInvoker(request *model.ShowExtremumInfo
 //
 // 获取跨域归档配置
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ListArchiveConfigs(request *model.ListArchiveConfigsRequest) (*model.ListArchiveConfigsResponse, error) {
 	requestDef := GenReqDefForListArchiveConfigs()
 
@@ -3499,8 +3341,7 @@ func (c *EiHealthClient) ListArchiveConfigsInvoker(request *model.ListArchiveCon
 //
 // 获取系统配置列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ShowEnv(request *model.ShowEnvRequest) (*model.ShowEnvResponse, error) {
 	requestDef := GenReqDefForShowEnv()
 
@@ -3521,8 +3362,7 @@ func (c *EiHealthClient) ShowEnvInvoker(request *model.ShowEnvRequest) *ShowEnvI
 //
 // 获取供应商配置
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ShowVendor(request *model.ShowVendorRequest) (*model.ShowVendorResponse, error) {
 	requestDef := GenReqDefForShowVendor()
 
@@ -3543,8 +3383,7 @@ func (c *EiHealthClient) ShowVendorInvoker(request *model.ShowVendorRequest) *Sh
 //
 // 修改跨域归档设置
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) UpdateArchiveConfig(request *model.UpdateArchiveConfigRequest) (*model.UpdateArchiveConfigResponse, error) {
 	requestDef := GenReqDefForUpdateArchiveConfig()
 
@@ -3565,8 +3404,7 @@ func (c *EiHealthClient) UpdateArchiveConfigInvoker(request *model.UpdateArchive
 //
 // 设置供应商配置
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) UpdateVendor(request *model.UpdateVendorRequest) (*model.UpdateVendorResponse, error) {
 	requestDef := GenReqDefForUpdateVendor()
 
@@ -3587,8 +3425,7 @@ func (c *EiHealthClient) UpdateVendorInvoker(request *model.UpdateVendorRequest)
 //
 // 获取当前系统配额及资源使用情况
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ListQuota(request *model.ListQuotaRequest) (*model.ListQuotaResponse, error) {
 	requestDef := GenReqDefForListQuota()
 
@@ -3609,8 +3446,7 @@ func (c *EiHealthClient) ListQuotaInvoker(request *model.ListQuotaRequest) *List
 //
 // 创建模板
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) CreateTemplate(request *model.CreateTemplateRequest) (*model.CreateTemplateResponse, error) {
 	requestDef := GenReqDefForCreateTemplate()
 
@@ -3631,8 +3467,7 @@ func (c *EiHealthClient) CreateTemplateInvoker(request *model.CreateTemplateRequ
 //
 // 删除模板
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) DeleteTemplate(request *model.DeleteTemplateRequest) (*model.DeleteTemplateResponse, error) {
 	requestDef := GenReqDefForDeleteTemplate()
 
@@ -3653,8 +3488,7 @@ func (c *EiHealthClient) DeleteTemplateInvoker(request *model.DeleteTemplateRequ
 //
 // 从其他项目导入模板
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ImportTemplate(request *model.ImportTemplateRequest) (*model.ImportTemplateResponse, error) {
 	requestDef := GenReqDefForImportTemplate()
 
@@ -3675,8 +3509,7 @@ func (c *EiHealthClient) ImportTemplateInvoker(request *model.ImportTemplateRequ
 //
 // 查询模板列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ListTemplate(request *model.ListTemplateRequest) (*model.ListTemplateResponse, error) {
 	requestDef := GenReqDefForListTemplate()
 
@@ -3697,8 +3530,7 @@ func (c *EiHealthClient) ListTemplateInvoker(request *model.ListTemplateRequest)
 //
 // 查询模板详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ShowTemplate(request *model.ShowTemplateRequest) (*model.ShowTemplateResponse, error) {
 	requestDef := GenReqDefForShowTemplate()
 
@@ -3719,8 +3551,7 @@ func (c *EiHealthClient) ShowTemplateInvoker(request *model.ShowTemplateRequest)
 //
 // 上传模板
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) UploadTemplate(request *model.UploadTemplateRequest) (*model.UploadTemplateResponse, error) {
 	requestDef := GenReqDefForUploadTemplate()
 
@@ -3741,8 +3572,7 @@ func (c *EiHealthClient) UploadTemplateInvoker(request *model.UploadTemplateRequ
 //
 // 发送验证码
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) CreateCode(request *model.CreateCodeRequest) (*model.CreateCodeResponse, error) {
 	requestDef := GenReqDefForCreateCode()
 
@@ -3763,8 +3593,7 @@ func (c *EiHealthClient) CreateCodeInvoker(request *model.CreateCodeRequest) *Cr
 //
 // 创建用户
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) CreateUser(request *model.CreateUserRequest) (*model.CreateUserResponse, error) {
 	requestDef := GenReqDefForCreateUser()
 
@@ -3785,8 +3614,7 @@ func (c *EiHealthClient) CreateUserInvoker(request *model.CreateUserRequest) *Cr
 //
 // 删除用户
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) DeleteUser(request *model.DeleteUserRequest) (*model.DeleteUserResponse, error) {
 	requestDef := GenReqDefForDeleteUser()
 
@@ -3807,8 +3635,7 @@ func (c *EiHealthClient) DeleteUserInvoker(request *model.DeleteUserRequest) *De
 //
 // 获取可用的认证方法
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ListMfa(request *model.ListMfaRequest) (*model.ListMfaResponse, error) {
 	requestDef := GenReqDefForListMfa()
 
@@ -3829,8 +3656,7 @@ func (c *EiHealthClient) ListMfaInvoker(request *model.ListMfaRequest) *ListMfaI
 //
 // 获取用户列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ListUser(request *model.ListUserRequest) (*model.ListUserResponse, error) {
 	requestDef := GenReqDefForListUser()
 
@@ -3851,8 +3677,7 @@ func (c *EiHealthClient) ListUserInvoker(request *model.ListUserRequest) *ListUs
 //
 // 校验token是否可访问当前环境
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ShowTokenVerification(request *model.ShowTokenVerificationRequest) (*model.ShowTokenVerificationResponse, error) {
 	requestDef := GenReqDefForShowTokenVerification()
 
@@ -3873,8 +3698,7 @@ func (c *EiHealthClient) ShowTokenVerificationInvoker(request *model.ShowTokenVe
 //
 // 获取指定用户详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ShowUser(request *model.ShowUserRequest) (*model.ShowUserResponse, error) {
 	requestDef := GenReqDefForShowUser()
 
@@ -3895,8 +3719,7 @@ func (c *EiHealthClient) ShowUserInvoker(request *model.ShowUserRequest) *ShowUs
 //
 // 查询用户设置
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ShowUserSetting(request *model.ShowUserSettingRequest) (*model.ShowUserSettingResponse, error) {
 	requestDef := GenReqDefForShowUserSetting()
 
@@ -3917,8 +3740,7 @@ func (c *EiHealthClient) ShowUserSettingInvoker(request *model.ShowUserSettingRe
 //
 // 新用户重置密码
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) UpdateInitPassword(request *model.UpdateInitPasswordRequest) (*model.UpdateInitPasswordResponse, error) {
 	requestDef := GenReqDefForUpdateInitPassword()
 
@@ -3939,8 +3761,7 @@ func (c *EiHealthClient) UpdateInitPasswordInvoker(request *model.UpdateInitPass
 //
 // 修改密码
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) UpdatePassword(request *model.UpdatePasswordRequest) (*model.UpdatePasswordResponse, error) {
 	requestDef := GenReqDefForUpdatePassword()
 
@@ -3961,8 +3782,7 @@ func (c *EiHealthClient) UpdatePasswordInvoker(request *model.UpdatePasswordRequ
 //
 // 修改用户基本信息（邮箱，手机）
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) UpdateUser(request *model.UpdateUserRequest) (*model.UpdateUserResponse, error) {
 	requestDef := GenReqDefForUpdateUser()
 
@@ -3983,8 +3803,7 @@ func (c *EiHealthClient) UpdateUserInvoker(request *model.UpdateUserRequest) *Up
 //
 // 最终租户修改子用户
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) UpdateUserByDomain(request *model.UpdateUserByDomainRequest) (*model.UpdateUserByDomainResponse, error) {
 	requestDef := GenReqDefForUpdateUserByDomain()
 
@@ -4005,8 +3824,7 @@ func (c *EiHealthClient) UpdateUserByDomainInvoker(request *model.UpdateUserByDo
 //
 // 更新用户角色
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) UpdateUserRole(request *model.UpdateUserRoleRequest) (*model.UpdateUserRoleResponse, error) {
 	requestDef := GenReqDefForUpdateUserRole()
 
@@ -4027,8 +3845,7 @@ func (c *EiHealthClient) UpdateUserRoleInvoker(request *model.UpdateUserRoleRequ
 //
 // 更新用户设置
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) UpdateUserSetting(request *model.UpdateUserSettingRequest) (*model.UpdateUserSettingResponse, error) {
 	requestDef := GenReqDefForUpdateUserSetting()
 
@@ -4049,8 +3866,7 @@ func (c *EiHealthClient) UpdateUserSettingInvoker(request *model.UpdateUserSetti
 //
 // 预验证
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ValidateCode(request *model.ValidateCodeRequest) (*model.ValidateCodeResponse, error) {
 	requestDef := GenReqDefForValidateCode()
 
@@ -4071,8 +3887,7 @@ func (c *EiHealthClient) ValidateCodeInvoker(request *model.ValidateCodeRequest)
 //
 // 获取供应商列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ListVendor(request *model.ListVendorRequest) (*model.ListVendorResponse, error) {
 	requestDef := GenReqDefForListVendor()
 
@@ -4093,8 +3908,7 @@ func (c *EiHealthClient) ListVendorInvoker(request *model.ListVendorRequest) *Li
 //
 // 创建流程
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) CreateWorkflow(request *model.CreateWorkflowRequest) (*model.CreateWorkflowResponse, error) {
 	requestDef := GenReqDefForCreateWorkflow()
 
@@ -4115,8 +3929,7 @@ func (c *EiHealthClient) CreateWorkflowInvoker(request *model.CreateWorkflowRequ
 //
 // 删除流程
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) DeleteWorkflow(request *model.DeleteWorkflowRequest) (*model.DeleteWorkflowResponse, error) {
 	requestDef := GenReqDefForDeleteWorkflow()
 
@@ -4137,8 +3950,7 @@ func (c *EiHealthClient) DeleteWorkflowInvoker(request *model.DeleteWorkflowRequ
 //
 // 导入流程
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ImportWorkflow(request *model.ImportWorkflowRequest) (*model.ImportWorkflowResponse, error) {
 	requestDef := GenReqDefForImportWorkflow()
 
@@ -4159,8 +3971,7 @@ func (c *EiHealthClient) ImportWorkflowInvoker(request *model.ImportWorkflowRequ
 //
 // 获取流程列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ListWorkflow(request *model.ListWorkflowRequest) (*model.ListWorkflowResponse, error) {
 	requestDef := GenReqDefForListWorkflow()
 
@@ -4181,8 +3992,7 @@ func (c *EiHealthClient) ListWorkflowInvoker(request *model.ListWorkflowRequest)
 //
 // 获取流程详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ShowWorkflow(request *model.ShowWorkflowRequest) (*model.ShowWorkflowResponse, error) {
 	requestDef := GenReqDefForShowWorkflow()
 
@@ -4203,8 +4013,7 @@ func (c *EiHealthClient) ShowWorkflowInvoker(request *model.ShowWorkflowRequest)
 //
 // 订阅流程
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) SubscribeWorkflow(request *model.SubscribeWorkflowRequest) (*model.SubscribeWorkflowResponse, error) {
 	requestDef := GenReqDefForSubscribeWorkflow()
 
@@ -4225,8 +4034,7 @@ func (c *EiHealthClient) SubscribeWorkflowInvoker(request *model.SubscribeWorkfl
 //
 // 更新流程
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) UpdateWorkflow(request *model.UpdateWorkflowRequest) (*model.UpdateWorkflowResponse, error) {
 	requestDef := GenReqDefForUpdateWorkflow()
 

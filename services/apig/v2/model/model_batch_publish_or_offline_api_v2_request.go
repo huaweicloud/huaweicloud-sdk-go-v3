@@ -9,7 +9,7 @@ import (
 // Request Object
 type BatchPublishOrOfflineApiV2Request struct {
 
-	// 实例ID
+	// 实例ID，在API网关控制台的“实例信息”中获取。
 	InstanceId string `json:"instance_id"`
 
 	// - online：发布 - offline：下线

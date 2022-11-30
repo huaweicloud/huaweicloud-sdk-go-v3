@@ -23,8 +23,7 @@ func CloudRTCClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 调用此接口创建应用。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudRTCClient) CreateApp(request *model.CreateAppRequest) (*model.CreateAppResponse, error) {
 	requestDef := GenReqDefForCreateApp()
 
@@ -49,8 +48,7 @@ func (c *CloudRTCClient) CreateAppInvoker(request *model.CreateAppRequest) *Crea
 //
 // jobtype取值为&#39;s&#39;代表单流录制。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudRTCClient) CreateIndividualStreamJob(request *model.CreateIndividualStreamJobRequest) (*model.CreateIndividualStreamJobResponse, error) {
 	requestDef := GenReqDefForCreateIndividualStreamJob()
 
@@ -87,8 +85,7 @@ func (c *CloudRTCClient) CreateIndividualStreamJobInvoker(request *model.CreateI
 //
 //   API触发合流录制流名规则：{jobtype}\\_{jobid}\\_{roomid}，其中jobtype取值为&#39;m&#39;代表合流录制。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudRTCClient) CreateMixJob(request *model.CreateMixJobRequest) (*model.CreateMixJobResponse, error) {
 	requestDef := GenReqDefForCreateMixJob()
 
@@ -112,8 +109,7 @@ func (c *CloudRTCClient) CreateMixJobInvoker(request *model.CreateMixJobRequest)
 // - 若当前app在请求的location中无录制规则，则会创建新的录制规则
 // - 若当前app在请求的location中已有录制规则，则会更新原来的录制规则
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudRTCClient) CreateRecordRule(request *model.CreateRecordRuleRequest) (*model.CreateRecordRuleResponse, error) {
 	requestDef := GenReqDefForCreateRecordRule()
 
@@ -134,8 +130,7 @@ func (c *CloudRTCClient) CreateRecordRuleInvoker(request *model.CreateRecordRule
 //
 // 调用此接口删除单个应用。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudRTCClient) DeleteApp(request *model.DeleteAppRequest) (*model.DeleteAppResponse, error) {
 	requestDef := GenReqDefForDeleteApp()
 
@@ -156,8 +151,7 @@ func (c *CloudRTCClient) DeleteAppInvoker(request *model.DeleteAppRequest) *Dele
 //
 // 调用此接口删除录制规则，对于正在使用的录制规则，不允许删除。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudRTCClient) DeleteRecordRule(request *model.DeleteRecordRuleRequest) (*model.DeleteRecordRuleResponse, error) {
 	requestDef := GenReqDefForDeleteRecordRule()
 
@@ -178,8 +172,7 @@ func (c *CloudRTCClient) DeleteRecordRuleInvoker(request *model.DeleteRecordRule
 //
 // 调用此接口查询应用列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudRTCClient) ListApps(request *model.ListAppsRequest) (*model.ListAppsResponse, error) {
 	requestDef := GenReqDefForListApps()
 
@@ -200,8 +193,7 @@ func (c *CloudRTCClient) ListAppsInvoker(request *model.ListAppsRequest) *ListAp
 //
 // 调用此接口查询录制规则列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudRTCClient) ListRecordRules(request *model.ListRecordRulesRequest) (*model.ListRecordRulesResponse, error) {
 	requestDef := GenReqDefForListRecordRules()
 
@@ -222,8 +214,7 @@ func (c *CloudRTCClient) ListRecordRulesInvoker(request *model.ListRecordRulesRe
 //
 // 调用此接口解散房间，将该房间中所有用户踢出房间。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudRTCClient) RemoveRoom(request *model.RemoveRoomRequest) (*model.RemoveRoomResponse, error) {
 	requestDef := GenReqDefForRemoveRoom()
 
@@ -244,8 +235,7 @@ func (c *CloudRTCClient) RemoveRoomInvoker(request *model.RemoveRoomRequest) *Re
 //
 // 调用此接口强制用户离开房间。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudRTCClient) RemoveUsers(request *model.RemoveUsersRequest) (*model.RemoveUsersResponse, error) {
 	requestDef := GenReqDefForRemoveUsers()
 
@@ -266,8 +256,7 @@ func (c *CloudRTCClient) RemoveUsersInvoker(request *model.RemoveUsersRequest) *
 //
 // 调用此接口查询单个应用详情。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudRTCClient) ShowApp(request *model.ShowAppRequest) (*model.ShowAppResponse, error) {
 	requestDef := GenReqDefForShowApp()
 
@@ -288,8 +277,7 @@ func (c *CloudRTCClient) ShowAppInvoker(request *model.ShowAppRequest) *ShowAppI
 //
 // 调用此接口查询自动录制配置
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudRTCClient) ShowAutoRecord(request *model.ShowAutoRecordRequest) (*model.ShowAutoRecordResponse, error) {
 	requestDef := GenReqDefForShowAutoRecord()
 
@@ -312,8 +300,7 @@ func (c *CloudRTCClient) ShowAutoRecordInvoker(request *model.ShowAutoRecordRequ
 //
 // 租户的OBS桶内的情况，暂不支持查询。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudRTCClient) ShowIndividualStreamJob(request *model.ShowIndividualStreamJobRequest) (*model.ShowIndividualStreamJobResponse, error) {
 	requestDef := GenReqDefForShowIndividualStreamJob()
 
@@ -334,8 +321,7 @@ func (c *CloudRTCClient) ShowIndividualStreamJobInvoker(request *model.ShowIndiv
 //
 // 调用此接口查询合流转码任务状态。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudRTCClient) ShowMixJob(request *model.ShowMixJobRequest) (*model.ShowMixJobResponse, error) {
 	requestDef := GenReqDefForShowMixJob()
 
@@ -356,8 +342,7 @@ func (c *CloudRTCClient) ShowMixJobInvoker(request *model.ShowMixJobRequest) *Sh
 //
 // 调用此接口查询增值（录制）事件回调配置
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudRTCClient) ShowRecordCallback(request *model.ShowRecordCallbackRequest) (*model.ShowRecordCallbackResponse, error) {
 	requestDef := GenReqDefForShowRecordCallback()
 
@@ -378,8 +363,7 @@ func (c *CloudRTCClient) ShowRecordCallbackInvoker(request *model.ShowRecordCall
 //
 // 调用此接口查询指定录制规则。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudRTCClient) ShowRecordRule(request *model.ShowRecordRuleRequest) (*model.ShowRecordRuleResponse, error) {
 	requestDef := GenReqDefForShowRecordRule()
 
@@ -400,8 +384,7 @@ func (c *CloudRTCClient) ShowRecordRuleInvoker(request *model.ShowRecordRuleRequ
 //
 // 查询应用鉴权配置参数
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudRTCClient) ShowUrlAuth(request *model.ShowUrlAuthRequest) (*model.ShowUrlAuthResponse, error) {
 	requestDef := GenReqDefForShowUrlAuth()
 
@@ -422,8 +405,7 @@ func (c *CloudRTCClient) ShowUrlAuthInvoker(request *model.ShowUrlAuthRequest) *
 //
 // 调用此接口启用单个应用。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudRTCClient) StartApp(request *model.StartAppRequest) (*model.StartAppResponse, error) {
 	requestDef := GenReqDefForStartApp()
 
@@ -446,8 +428,7 @@ func (c *CloudRTCClient) StartAppInvoker(request *model.StartAppRequest) *StartA
 //
 // 应用停用后，新房间无法新增和加入，已加入的房间可以继续使用。合流、录制功能等也不可用。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudRTCClient) StopApp(request *model.StopAppRequest) (*model.StopAppResponse, error) {
 	requestDef := GenReqDefForStopApp()
 
@@ -468,8 +449,7 @@ func (c *CloudRTCClient) StopAppInvoker(request *model.StopAppRequest) *StopAppI
 //
 // 调用此接口停止单流任务
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudRTCClient) StopIndividualStreamJob(request *model.StopIndividualStreamJobRequest) (*model.StopIndividualStreamJobResponse, error) {
 	requestDef := GenReqDefForStopIndividualStreamJob()
 
@@ -490,8 +470,7 @@ func (c *CloudRTCClient) StopIndividualStreamJobInvoker(request *model.StopIndiv
 //
 // 调用此接口停止已下发的合流转码任务。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudRTCClient) StopMixJob(request *model.StopMixJobRequest) (*model.StopMixJobResponse, error) {
 	requestDef := GenReqDefForStopMixJob()
 
@@ -512,8 +491,7 @@ func (c *CloudRTCClient) StopMixJobInvoker(request *model.StopMixJobRequest) *St
 //
 // 更新自动录制配置，租户可以开启自动单流录制或者停用自动单流录制。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudRTCClient) UpdateAutoRecord(request *model.UpdateAutoRecordRequest) (*model.UpdateAutoRecordResponse, error) {
 	requestDef := GenReqDefForUpdateAutoRecord()
 
@@ -536,8 +514,7 @@ func (c *CloudRTCClient) UpdateAutoRecordInvoker(request *model.UpdateAutoRecord
 //
 // 仅部分场景支持修改。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudRTCClient) UpdateIndividualStreamJob(request *model.UpdateIndividualStreamJobRequest) (*model.UpdateIndividualStreamJobResponse, error) {
 	requestDef := GenReqDefForUpdateIndividualStreamJob()
 
@@ -558,8 +535,7 @@ func (c *CloudRTCClient) UpdateIndividualStreamJobInvoker(request *model.UpdateI
 //
 // 调用此接口更新合流任务布局。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudRTCClient) UpdateMixJob(request *model.UpdateMixJobRequest) (*model.UpdateMixJobResponse, error) {
 	requestDef := GenReqDefForUpdateMixJob()
 
@@ -584,8 +560,7 @@ func (c *CloudRTCClient) UpdateMixJobInvoker(request *model.UpdateMixJobRequest)
 //
 // 回调格式参考/customer-record-notify-url定义。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudRTCClient) UpdateRecordCallback(request *model.UpdateRecordCallbackRequest) (*model.UpdateRecordCallbackResponse, error) {
 	requestDef := GenReqDefForUpdateRecordCallback()
 
@@ -606,8 +581,7 @@ func (c *CloudRTCClient) UpdateRecordCallbackInvoker(request *model.UpdateRecord
 //
 // 调用此接口更新录制规则。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudRTCClient) UpdateRecordRule(request *model.UpdateRecordRuleRequest) (*model.UpdateRecordRuleResponse, error) {
 	requestDef := GenReqDefForUpdateRecordRule()
 
@@ -628,8 +602,7 @@ func (c *CloudRTCClient) UpdateRecordRuleInvoker(request *model.UpdateRecordRule
 //
 // 调用此接口开启或关闭URL鉴权。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudRTCClient) UpdateUrlAuth(request *model.UpdateUrlAuthRequest) (*model.UpdateUrlAuthResponse, error) {
 	requestDef := GenReqDefForUpdateUrlAuth()
 

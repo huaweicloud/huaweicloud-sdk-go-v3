@@ -23,8 +23,7 @@ func VpcClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 租户A名下的VPC申请和租户B的VPC建立对等连接，需要等待租户B接受该请求。此接口用于租户接受其他租户发起的对等连接请求。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) AcceptVpcPeering(request *model.AcceptVpcPeeringRequest) (*model.AcceptVpcPeeringResponse, error) {
 	requestDef := GenReqDefForAcceptVpcPeering()
 
@@ -45,8 +44,7 @@ func (c *VpcClient) AcceptVpcPeeringInvoker(request *model.AcceptVpcPeeringReque
 //
 // 路由表关联子网。子网关联路由表A后，再关联B，不需要先跟路由表A解关联再关联路由表B
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) AssociateRouteTable(request *model.AssociateRouteTableRequest) (*model.AssociateRouteTableResponse, error) {
 	requestDef := GenReqDefForAssociateRouteTable()
 
@@ -68,8 +66,7 @@ func (c *VpcClient) AssociateRouteTableInvoker(request *model.AssociateRouteTabl
 // 为指定的子网资源实例批量添加标签。
 // 此接口为幂等接口：创建时如果请求体中存在重复key则报错。创建时，不允许设置重复key数据，如果数据库已存在该key，就覆盖value的值。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) BatchCreateSubnetTags(request *model.BatchCreateSubnetTagsRequest) (*model.BatchCreateSubnetTagsResponse, error) {
 	requestDef := GenReqDefForBatchCreateSubnetTags()
 
@@ -91,8 +88,7 @@ func (c *VpcClient) BatchCreateSubnetTagsInvoker(request *model.BatchCreateSubne
 // 为指定的子网资源实例批量删除标签
 // 此接口为幂等接口：删除时，如果删除的标签不存在，默认处理成功；删除时不对标签字符集范围做校验。删除时tags结构体不能缺失，key不能为空，或者空字符串。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) BatchDeleteSubnetTags(request *model.BatchDeleteSubnetTagsRequest) (*model.BatchDeleteSubnetTagsResponse, error) {
 	requestDef := GenReqDefForBatchDeleteSubnetTags()
 
@@ -113,8 +109,7 @@ func (c *VpcClient) BatchDeleteSubnetTagsInvoker(request *model.BatchDeleteSubne
 //
 // 创建端口。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) CreatePort(request *model.CreatePortRequest) (*model.CreatePortResponse, error) {
 	requestDef := GenReqDefForCreatePort()
 
@@ -135,8 +130,7 @@ func (c *VpcClient) CreatePortInvoker(request *model.CreatePortRequest) *CreateP
 //
 // 创建路由表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) CreateRouteTable(request *model.CreateRouteTableRequest) (*model.CreateRouteTableResponse, error) {
 	requestDef := GenReqDefForCreateRouteTable()
 
@@ -157,8 +151,7 @@ func (c *VpcClient) CreateRouteTableInvoker(request *model.CreateRouteTableReque
 //
 // 创建安全组。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) CreateSecurityGroup(request *model.CreateSecurityGroupRequest) (*model.CreateSecurityGroupResponse, error) {
 	requestDef := GenReqDefForCreateSecurityGroup()
 
@@ -179,8 +172,7 @@ func (c *VpcClient) CreateSecurityGroupInvoker(request *model.CreateSecurityGrou
 //
 // 创建安全组规则。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) CreateSecurityGroupRule(request *model.CreateSecurityGroupRuleRequest) (*model.CreateSecurityGroupRuleResponse, error) {
 	requestDef := GenReqDefForCreateSecurityGroupRule()
 
@@ -201,8 +193,7 @@ func (c *VpcClient) CreateSecurityGroupRuleInvoker(request *model.CreateSecurity
 //
 // 创建子网。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) CreateSubnet(request *model.CreateSubnetRequest) (*model.CreateSubnetResponse, error) {
 	requestDef := GenReqDefForCreateSubnet()
 
@@ -224,8 +215,7 @@ func (c *VpcClient) CreateSubnetInvoker(request *model.CreateSubnetRequest) *Cre
 // 给指定子网资源实例增加标签信息。
 // 此接口为幂等接口：创建时，如果创建的标签已经存在（key相同），则覆盖。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) CreateSubnetTag(request *model.CreateSubnetTagRequest) (*model.CreateSubnetTagResponse, error) {
 	requestDef := GenReqDefForCreateSubnetTag()
 
@@ -246,8 +236,7 @@ func (c *VpcClient) CreateSubnetTagInvoker(request *model.CreateSubnetTagRequest
 //
 // 创建对等连接。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) CreateVpcPeering(request *model.CreateVpcPeeringRequest) (*model.CreateVpcPeeringResponse, error) {
 	requestDef := GenReqDefForCreateVpcPeering()
 
@@ -268,8 +257,7 @@ func (c *VpcClient) CreateVpcPeeringInvoker(request *model.CreateVpcPeeringReque
 //
 // 删除端口。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) DeletePort(request *model.DeletePortRequest) (*model.DeletePortResponse, error) {
 	requestDef := GenReqDefForDeletePort()
 
@@ -290,8 +278,7 @@ func (c *VpcClient) DeletePortInvoker(request *model.DeletePortRequest) *DeleteP
 //
 // 删除路由表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) DeleteRouteTable(request *model.DeleteRouteTableRequest) (*model.DeleteRouteTableResponse, error) {
 	requestDef := GenReqDefForDeleteRouteTable()
 
@@ -312,8 +299,7 @@ func (c *VpcClient) DeleteRouteTableInvoker(request *model.DeleteRouteTableReque
 //
 // 删除安全组。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) DeleteSecurityGroup(request *model.DeleteSecurityGroupRequest) (*model.DeleteSecurityGroupResponse, error) {
 	requestDef := GenReqDefForDeleteSecurityGroup()
 
@@ -334,8 +320,7 @@ func (c *VpcClient) DeleteSecurityGroupInvoker(request *model.DeleteSecurityGrou
 //
 // 删除安全组规则。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) DeleteSecurityGroupRule(request *model.DeleteSecurityGroupRuleRequest) (*model.DeleteSecurityGroupRuleResponse, error) {
 	requestDef := GenReqDefForDeleteSecurityGroupRule()
 
@@ -356,8 +341,7 @@ func (c *VpcClient) DeleteSecurityGroupRuleInvoker(request *model.DeleteSecurity
 //
 // 删除子网
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) DeleteSubnet(request *model.DeleteSubnetRequest) (*model.DeleteSubnetResponse, error) {
 	requestDef := GenReqDefForDeleteSubnet()
 
@@ -379,8 +363,7 @@ func (c *VpcClient) DeleteSubnetInvoker(request *model.DeleteSubnetRequest) *Del
 // 删除指定子网资源实例的标签信息。
 // 该接口为幂等接口：删除的key不存在报404，Key不能为空或者空字符串
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) DeleteSubnetTag(request *model.DeleteSubnetTagRequest) (*model.DeleteSubnetTagResponse, error) {
 	requestDef := GenReqDefForDeleteSubnetTag()
 
@@ -402,8 +385,7 @@ func (c *VpcClient) DeleteSubnetTagInvoker(request *model.DeleteSubnetTagRequest
 // 删除对等连接。
 // 可以在在本端或对端任何一端删除对等连接。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) DeleteVpcPeering(request *model.DeleteVpcPeeringRequest) (*model.DeleteVpcPeeringResponse, error) {
 	requestDef := GenReqDefForDeleteVpcPeering()
 
@@ -424,8 +406,7 @@ func (c *VpcClient) DeleteVpcPeeringInvoker(request *model.DeleteVpcPeeringReque
 //
 // 子网解关联路由表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) DisassociateRouteTable(request *model.DisassociateRouteTableRequest) (*model.DisassociateRouteTableResponse, error) {
 	requestDef := GenReqDefForDisassociateRouteTable()
 
@@ -446,8 +427,7 @@ func (c *VpcClient) DisassociateRouteTableInvoker(request *model.DisassociateRou
 //
 // 查询提交请求的租户的所有端口，单次查询最多返回2000条数据。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) ListPorts(request *model.ListPortsRequest) (*model.ListPortsResponse, error) {
 	requestDef := GenReqDefForListPorts()
 
@@ -468,8 +448,7 @@ func (c *VpcClient) ListPortsInvoker(request *model.ListPortsRequest) *ListPorts
 //
 // 查询提交请求的帐户的所有路由表列表，并根据过滤条件进行过滤
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) ListRouteTables(request *model.ListRouteTablesRequest) (*model.ListRouteTablesResponse, error) {
 	requestDef := GenReqDefForListRouteTables()
 
@@ -490,8 +469,7 @@ func (c *VpcClient) ListRouteTablesInvoker(request *model.ListRouteTablesRequest
 //
 // 查询安全组规则列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) ListSecurityGroupRules(request *model.ListSecurityGroupRulesRequest) (*model.ListSecurityGroupRulesResponse, error) {
 	requestDef := GenReqDefForListSecurityGroupRules()
 
@@ -512,8 +490,7 @@ func (c *VpcClient) ListSecurityGroupRulesInvoker(request *model.ListSecurityGro
 //
 // 查询安全组列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) ListSecurityGroups(request *model.ListSecurityGroupsRequest) (*model.ListSecurityGroupsResponse, error) {
 	requestDef := GenReqDefForListSecurityGroups()
 
@@ -534,8 +511,7 @@ func (c *VpcClient) ListSecurityGroupsInvoker(request *model.ListSecurityGroupsR
 //
 // 查询租户在指定区域和实例类型的所有标签集合
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) ListSubnetTags(request *model.ListSubnetTagsRequest) (*model.ListSubnetTagsResponse, error) {
 	requestDef := GenReqDefForListSubnetTags()
 
@@ -556,8 +532,7 @@ func (c *VpcClient) ListSubnetTagsInvoker(request *model.ListSubnetTagsRequest) 
 //
 // 查询子网列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) ListSubnets(request *model.ListSubnetsRequest) (*model.ListSubnetsResponse, error) {
 	requestDef := GenReqDefForListSubnets()
 
@@ -578,8 +553,7 @@ func (c *VpcClient) ListSubnetsInvoker(request *model.ListSubnetsRequest) *ListS
 //
 // 使用标签过滤实例
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) ListSubnetsByTags(request *model.ListSubnetsByTagsRequest) (*model.ListSubnetsByTagsResponse, error) {
 	requestDef := GenReqDefForListSubnetsByTags()
 
@@ -600,8 +574,7 @@ func (c *VpcClient) ListSubnetsByTagsInvoker(request *model.ListSubnetsByTagsReq
 //
 // 查询提交请求的租户的所有对等连接。根据过滤条件进行过滤。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) ListVpcPeerings(request *model.ListVpcPeeringsRequest) (*model.ListVpcPeeringsResponse, error) {
 	requestDef := GenReqDefForListVpcPeerings()
 
@@ -622,8 +595,7 @@ func (c *VpcClient) ListVpcPeeringsInvoker(request *model.ListVpcPeeringsRequest
 //
 // 租户A名下的VPC申请和租户B的VPC建立对等连接，需要等待租户B接受该请求。此接口用于租户拒绝其他租户发起的对等连接请求。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) RejectVpcPeering(request *model.RejectVpcPeeringRequest) (*model.RejectVpcPeeringResponse, error) {
 	requestDef := GenReqDefForRejectVpcPeering()
 
@@ -644,8 +616,7 @@ func (c *VpcClient) RejectVpcPeeringInvoker(request *model.RejectVpcPeeringReque
 //
 // 查询单个端口详情。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) ShowPort(request *model.ShowPortRequest) (*model.ShowPortResponse, error) {
 	requestDef := GenReqDefForShowPort()
 
@@ -666,8 +637,7 @@ func (c *VpcClient) ShowPortInvoker(request *model.ShowPortRequest) *ShowPortInv
 //
 // 查询单租户在VPC服务下的网络资源配额，包括vpc配额、子网配额、安全组配额、安全组规则配额、弹性公网IP配额，vpn配额等。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) ShowQuota(request *model.ShowQuotaRequest) (*model.ShowQuotaResponse, error) {
 	requestDef := GenReqDefForShowQuota()
 
@@ -688,8 +658,7 @@ func (c *VpcClient) ShowQuotaInvoker(request *model.ShowQuotaRequest) *ShowQuota
 //
 // 查询路由表详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) ShowRouteTable(request *model.ShowRouteTableRequest) (*model.ShowRouteTableResponse, error) {
 	requestDef := GenReqDefForShowRouteTable()
 
@@ -710,8 +679,7 @@ func (c *VpcClient) ShowRouteTableInvoker(request *model.ShowRouteTableRequest) 
 //
 // 查询单个安全组详情。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) ShowSecurityGroup(request *model.ShowSecurityGroupRequest) (*model.ShowSecurityGroupResponse, error) {
 	requestDef := GenReqDefForShowSecurityGroup()
 
@@ -732,8 +700,7 @@ func (c *VpcClient) ShowSecurityGroupInvoker(request *model.ShowSecurityGroupReq
 //
 // 查询单个安全组规则详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) ShowSecurityGroupRule(request *model.ShowSecurityGroupRuleRequest) (*model.ShowSecurityGroupRuleResponse, error) {
 	requestDef := GenReqDefForShowSecurityGroupRule()
 
@@ -754,8 +721,7 @@ func (c *VpcClient) ShowSecurityGroupRuleInvoker(request *model.ShowSecurityGrou
 //
 // 查询子网详情。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) ShowSubnet(request *model.ShowSubnetRequest) (*model.ShowSubnetResponse, error) {
 	requestDef := GenReqDefForShowSubnet()
 
@@ -776,8 +742,7 @@ func (c *VpcClient) ShowSubnetInvoker(request *model.ShowSubnetRequest) *ShowSub
 //
 // 查询指定子网实例的标签信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) ShowSubnetTags(request *model.ShowSubnetTagsRequest) (*model.ShowSubnetTagsResponse, error) {
 	requestDef := GenReqDefForShowSubnetTags()
 
@@ -798,8 +763,7 @@ func (c *VpcClient) ShowSubnetTagsInvoker(request *model.ShowSubnetTagsRequest) 
 //
 // 查询对等连接详情。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) ShowVpcPeering(request *model.ShowVpcPeeringRequest) (*model.ShowVpcPeeringResponse, error) {
 	requestDef := GenReqDefForShowVpcPeering()
 
@@ -820,8 +784,7 @@ func (c *VpcClient) ShowVpcPeeringInvoker(request *model.ShowVpcPeeringRequest) 
 //
 // 更新端口。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) UpdatePort(request *model.UpdatePortRequest) (*model.UpdatePortResponse, error) {
 	requestDef := GenReqDefForUpdatePort()
 
@@ -842,8 +805,7 @@ func (c *VpcClient) UpdatePortInvoker(request *model.UpdatePortRequest) *UpdateP
 //
 // 更新路由表，包括可以更新路由表的名称，描述，以及新增、更新、删除路由条目
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) UpdateRouteTable(request *model.UpdateRouteTableRequest) (*model.UpdateRouteTableResponse, error) {
 	requestDef := GenReqDefForUpdateRouteTable()
 
@@ -864,8 +826,7 @@ func (c *VpcClient) UpdateRouteTableInvoker(request *model.UpdateRouteTableReque
 //
 // 更新子网。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) UpdateSubnet(request *model.UpdateSubnetRequest) (*model.UpdateSubnetResponse, error) {
 	requestDef := GenReqDefForUpdateSubnet()
 
@@ -886,8 +847,7 @@ func (c *VpcClient) UpdateSubnetInvoker(request *model.UpdateSubnetRequest) *Upd
 //
 // 更新对等连接。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) UpdateVpcPeering(request *model.UpdateVpcPeeringRequest) (*model.UpdateVpcPeeringResponse, error) {
 	requestDef := GenReqDefForUpdateVpcPeering()
 
@@ -908,8 +868,7 @@ func (c *VpcClient) UpdateVpcPeeringInvoker(request *model.UpdateVpcPeeringReque
 //
 // 申请私有IP。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) CreatePrivateip(request *model.CreatePrivateipRequest) (*model.CreatePrivateipResponse, error) {
 	requestDef := GenReqDefForCreatePrivateip()
 
@@ -930,8 +889,7 @@ func (c *VpcClient) CreatePrivateipInvoker(request *model.CreatePrivateipRequest
 //
 // 删除私有IP。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) DeletePrivateip(request *model.DeletePrivateipRequest) (*model.DeletePrivateipResponse, error) {
 	requestDef := GenReqDefForDeletePrivateip()
 
@@ -952,8 +910,7 @@ func (c *VpcClient) DeletePrivateipInvoker(request *model.DeletePrivateipRequest
 //
 // 查询指定子网下的私有IP列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) ListPrivateips(request *model.ListPrivateipsRequest) (*model.ListPrivateipsResponse, error) {
 	requestDef := GenReqDefForListPrivateips()
 
@@ -981,8 +938,7 @@ func (c *VpcClient) ListPrivateipsInvoker(request *model.ListPrivateipsRequest) 
 // - 这里以及下文描述的IP地址总数、已用IP地址总数不包含系统预留地址。
 // - 在分配IP时，用户可以指定系统预留的IP地址。但是不论IP是如何分配的，只要是处于系统预留IP地址段的IP均不会被统计到已用IP地址数目和IP地址总数中。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) ShowNetworkIpAvailabilities(request *model.ShowNetworkIpAvailabilitiesRequest) (*model.ShowNetworkIpAvailabilitiesResponse, error) {
 	requestDef := GenReqDefForShowNetworkIpAvailabilities()
 
@@ -1003,8 +959,7 @@ func (c *VpcClient) ShowNetworkIpAvailabilitiesInvoker(request *model.ShowNetwor
 //
 // 指定ID查询私有IP。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) ShowPrivateip(request *model.ShowPrivateipRequest) (*model.ShowPrivateipResponse, error) {
 	requestDef := GenReqDefForShowPrivateip()
 
@@ -1025,8 +980,7 @@ func (c *VpcClient) ShowPrivateipInvoker(request *model.ShowPrivateipRequest) *S
 //
 // 创建安全组
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) NeutronCreateSecurityGroup(request *model.NeutronCreateSecurityGroupRequest) (*model.NeutronCreateSecurityGroupResponse, error) {
 	requestDef := GenReqDefForNeutronCreateSecurityGroup()
 
@@ -1047,8 +1001,7 @@ func (c *VpcClient) NeutronCreateSecurityGroupInvoker(request *model.NeutronCrea
 //
 // 创建安全组规则
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) NeutronCreateSecurityGroupRule(request *model.NeutronCreateSecurityGroupRuleRequest) (*model.NeutronCreateSecurityGroupRuleResponse, error) {
 	requestDef := GenReqDefForNeutronCreateSecurityGroupRule()
 
@@ -1069,8 +1022,7 @@ func (c *VpcClient) NeutronCreateSecurityGroupRuleInvoker(request *model.Neutron
 //
 // 删除安全组
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) NeutronDeleteSecurityGroup(request *model.NeutronDeleteSecurityGroupRequest) (*model.NeutronDeleteSecurityGroupResponse, error) {
 	requestDef := GenReqDefForNeutronDeleteSecurityGroup()
 
@@ -1091,8 +1043,7 @@ func (c *VpcClient) NeutronDeleteSecurityGroupInvoker(request *model.NeutronDele
 //
 // 删除安全组规则
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) NeutronDeleteSecurityGroupRule(request *model.NeutronDeleteSecurityGroupRuleRequest) (*model.NeutronDeleteSecurityGroupRuleResponse, error) {
 	requestDef := GenReqDefForNeutronDeleteSecurityGroupRule()
 
@@ -1113,8 +1064,7 @@ func (c *VpcClient) NeutronDeleteSecurityGroupRuleInvoker(request *model.Neutron
 //
 // 查询提交请求的租户有权限查看的所有安全组规则。单次查询最多返回2000条数据，超过2000后会返回分页标记。分页查询请参考分页查询
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) NeutronListSecurityGroupRules(request *model.NeutronListSecurityGroupRulesRequest) (*model.NeutronListSecurityGroupRulesResponse, error) {
 	requestDef := GenReqDefForNeutronListSecurityGroupRules()
 
@@ -1135,8 +1085,7 @@ func (c *VpcClient) NeutronListSecurityGroupRulesInvoker(request *model.NeutronL
 //
 // 查询提交请求租户的所有安全组，单次查询最多返回2000条数据，超过2000后会返回分页标记。分页查询请参考分页查询 。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) NeutronListSecurityGroups(request *model.NeutronListSecurityGroupsRequest) (*model.NeutronListSecurityGroupsResponse, error) {
 	requestDef := GenReqDefForNeutronListSecurityGroups()
 
@@ -1157,8 +1106,7 @@ func (c *VpcClient) NeutronListSecurityGroupsInvoker(request *model.NeutronListS
 //
 // 查询安全组详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) NeutronShowSecurityGroup(request *model.NeutronShowSecurityGroupRequest) (*model.NeutronShowSecurityGroupResponse, error) {
 	requestDef := GenReqDefForNeutronShowSecurityGroup()
 
@@ -1179,8 +1127,7 @@ func (c *VpcClient) NeutronShowSecurityGroupInvoker(request *model.NeutronShowSe
 //
 // 查询安全组规则详情。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) NeutronShowSecurityGroupRule(request *model.NeutronShowSecurityGroupRuleRequest) (*model.NeutronShowSecurityGroupRuleResponse, error) {
 	requestDef := GenReqDefForNeutronShowSecurityGroupRule()
 
@@ -1201,8 +1148,7 @@ func (c *VpcClient) NeutronShowSecurityGroupRuleInvoker(request *model.NeutronSh
 //
 // 更新安全组
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) NeutronUpdateSecurityGroup(request *model.NeutronUpdateSecurityGroupRequest) (*model.NeutronUpdateSecurityGroupResponse, error) {
 	requestDef := GenReqDefForNeutronUpdateSecurityGroup()
 
@@ -1223,8 +1169,7 @@ func (c *VpcClient) NeutronUpdateSecurityGroupInvoker(request *model.NeutronUpda
 //
 // 插入一条网络ACL规则到某一网络ACL策略中。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) NeutronAddFirewallRule(request *model.NeutronAddFirewallRuleRequest) (*model.NeutronAddFirewallRuleResponse, error) {
 	requestDef := GenReqDefForNeutronAddFirewallRule()
 
@@ -1245,8 +1190,7 @@ func (c *VpcClient) NeutronAddFirewallRuleInvoker(request *model.NeutronAddFirew
 //
 // 创建网络ACL组
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) NeutronCreateFirewallGroup(request *model.NeutronCreateFirewallGroupRequest) (*model.NeutronCreateFirewallGroupResponse, error) {
 	requestDef := GenReqDefForNeutronCreateFirewallGroup()
 
@@ -1267,8 +1211,7 @@ func (c *VpcClient) NeutronCreateFirewallGroupInvoker(request *model.NeutronCrea
 //
 // 创建网络ACL策略。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) NeutronCreateFirewallPolicy(request *model.NeutronCreateFirewallPolicyRequest) (*model.NeutronCreateFirewallPolicyResponse, error) {
 	requestDef := GenReqDefForNeutronCreateFirewallPolicy()
 
@@ -1289,8 +1232,7 @@ func (c *VpcClient) NeutronCreateFirewallPolicyInvoker(request *model.NeutronCre
 //
 // 创建网络ACL规则。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) NeutronCreateFirewallRule(request *model.NeutronCreateFirewallRuleRequest) (*model.NeutronCreateFirewallRuleResponse, error) {
 	requestDef := GenReqDefForNeutronCreateFirewallRule()
 
@@ -1311,8 +1253,7 @@ func (c *VpcClient) NeutronCreateFirewallRuleInvoker(request *model.NeutronCreat
 //
 // 删除网络ACL组
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) NeutronDeleteFirewallGroup(request *model.NeutronDeleteFirewallGroupRequest) (*model.NeutronDeleteFirewallGroupResponse, error) {
 	requestDef := GenReqDefForNeutronDeleteFirewallGroup()
 
@@ -1333,8 +1274,7 @@ func (c *VpcClient) NeutronDeleteFirewallGroupInvoker(request *model.NeutronDele
 //
 // 删除网络ACL策略。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) NeutronDeleteFirewallPolicy(request *model.NeutronDeleteFirewallPolicyRequest) (*model.NeutronDeleteFirewallPolicyResponse, error) {
 	requestDef := GenReqDefForNeutronDeleteFirewallPolicy()
 
@@ -1355,8 +1295,7 @@ func (c *VpcClient) NeutronDeleteFirewallPolicyInvoker(request *model.NeutronDel
 //
 // 删除网络ACL规则。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) NeutronDeleteFirewallRule(request *model.NeutronDeleteFirewallRuleRequest) (*model.NeutronDeleteFirewallRuleResponse, error) {
 	requestDef := GenReqDefForNeutronDeleteFirewallRule()
 
@@ -1377,8 +1316,7 @@ func (c *VpcClient) NeutronDeleteFirewallRuleInvoker(request *model.NeutronDelet
 //
 // 查询提交请求的租户有权限操作的所有网络ACL组信息。单次查询最多返回2000条数据，超过2000后会返回分页标记。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) NeutronListFirewallGroups(request *model.NeutronListFirewallGroupsRequest) (*model.NeutronListFirewallGroupsResponse, error) {
 	requestDef := GenReqDefForNeutronListFirewallGroups()
 
@@ -1399,8 +1337,7 @@ func (c *VpcClient) NeutronListFirewallGroupsInvoker(request *model.NeutronListF
 //
 // 查询提交请求的租户有权限操作的所有网络ACL策略信息。单次查询最多返回2000条数据，超过2000后会返回分页标记。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) NeutronListFirewallPolicies(request *model.NeutronListFirewallPoliciesRequest) (*model.NeutronListFirewallPoliciesResponse, error) {
 	requestDef := GenReqDefForNeutronListFirewallPolicies()
 
@@ -1421,8 +1358,7 @@ func (c *VpcClient) NeutronListFirewallPoliciesInvoker(request *model.NeutronLis
 //
 // 查询提交请求的租户有权限操作的所有网络ACL规则信息。单次查询最多返回2000条数据，超过2000后会返回分页标记。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) NeutronListFirewallRules(request *model.NeutronListFirewallRulesRequest) (*model.NeutronListFirewallRulesResponse, error) {
 	requestDef := GenReqDefForNeutronListFirewallRules()
 
@@ -1443,8 +1379,7 @@ func (c *VpcClient) NeutronListFirewallRulesInvoker(request *model.NeutronListFi
 //
 // 从某一网络ACL策略中移除一条网络ACL规则。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) NeutronRemoveFirewallRule(request *model.NeutronRemoveFirewallRuleRequest) (*model.NeutronRemoveFirewallRuleResponse, error) {
 	requestDef := GenReqDefForNeutronRemoveFirewallRule()
 
@@ -1465,8 +1400,7 @@ func (c *VpcClient) NeutronRemoveFirewallRuleInvoker(request *model.NeutronRemov
 //
 // 查询特定网络ACL组详情。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) NeutronShowFirewallGroup(request *model.NeutronShowFirewallGroupRequest) (*model.NeutronShowFirewallGroupResponse, error) {
 	requestDef := GenReqDefForNeutronShowFirewallGroup()
 
@@ -1487,8 +1421,7 @@ func (c *VpcClient) NeutronShowFirewallGroupInvoker(request *model.NeutronShowFi
 //
 // 查询特定网络ACL策略详情。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) NeutronShowFirewallPolicy(request *model.NeutronShowFirewallPolicyRequest) (*model.NeutronShowFirewallPolicyResponse, error) {
 	requestDef := GenReqDefForNeutronShowFirewallPolicy()
 
@@ -1509,8 +1442,7 @@ func (c *VpcClient) NeutronShowFirewallPolicyInvoker(request *model.NeutronShowF
 //
 // 查询特定网络ACL规则。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) NeutronShowFirewallRule(request *model.NeutronShowFirewallRuleRequest) (*model.NeutronShowFirewallRuleResponse, error) {
 	requestDef := GenReqDefForNeutronShowFirewallRule()
 
@@ -1531,8 +1463,7 @@ func (c *VpcClient) NeutronShowFirewallRuleInvoker(request *model.NeutronShowFir
 //
 // 更新网络ACL组。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) NeutronUpdateFirewallGroup(request *model.NeutronUpdateFirewallGroupRequest) (*model.NeutronUpdateFirewallGroupResponse, error) {
 	requestDef := GenReqDefForNeutronUpdateFirewallGroup()
 
@@ -1553,8 +1484,7 @@ func (c *VpcClient) NeutronUpdateFirewallGroupInvoker(request *model.NeutronUpda
 //
 // 更新网络ACL策略。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) NeutronUpdateFirewallPolicy(request *model.NeutronUpdateFirewallPolicyRequest) (*model.NeutronUpdateFirewallPolicyResponse, error) {
 	requestDef := GenReqDefForNeutronUpdateFirewallPolicy()
 
@@ -1575,8 +1505,7 @@ func (c *VpcClient) NeutronUpdateFirewallPolicyInvoker(request *model.NeutronUpd
 //
 // 更新网络ACL规则。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) NeutronUpdateFirewallRule(request *model.NeutronUpdateFirewallRuleRequest) (*model.NeutronUpdateFirewallRuleResponse, error) {
 	requestDef := GenReqDefForNeutronUpdateFirewallRule()
 
@@ -1598,8 +1527,7 @@ func (c *VpcClient) NeutronUpdateFirewallRuleInvoker(request *model.NeutronUpdat
 // 为指定的VPC资源实例批量添加标签。
 // 此接口为幂等接口：创建时如果请求体中存在重复key则报错。创建时，不允许设置重复key数据，如果数据库已存在该key，就覆盖value的值。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) BatchCreateVpcTags(request *model.BatchCreateVpcTagsRequest) (*model.BatchCreateVpcTagsResponse, error) {
 	requestDef := GenReqDefForBatchCreateVpcTags()
 
@@ -1621,8 +1549,7 @@ func (c *VpcClient) BatchCreateVpcTagsInvoker(request *model.BatchCreateVpcTagsR
 // 为指定的VPC资源实例批量删除标签。
 // 此接口为幂等接口：删除时，如果删除的标签不存在，默认处理成功；删除时不对标签字符集范围做校验。删除时tags结构体不能缺失，key不能为空，或者空字符串。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) BatchDeleteVpcTags(request *model.BatchDeleteVpcTagsRequest) (*model.BatchDeleteVpcTagsResponse, error) {
 	requestDef := GenReqDefForBatchDeleteVpcTags()
 
@@ -1643,8 +1570,7 @@ func (c *VpcClient) BatchDeleteVpcTagsInvoker(request *model.BatchDeleteVpcTagsR
 //
 // 创建虚拟私有云。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) CreateVpc(request *model.CreateVpcRequest) (*model.CreateVpcResponse, error) {
 	requestDef := GenReqDefForCreateVpc()
 
@@ -1666,8 +1592,7 @@ func (c *VpcClient) CreateVpcInvoker(request *model.CreateVpcRequest) *CreateVpc
 // 给指定VPC资源实例增加标签信息
 // 此接口为幂等接口：创建时，如果创建的标签已经存在（key相同），则覆盖。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) CreateVpcResourceTag(request *model.CreateVpcResourceTagRequest) (*model.CreateVpcResourceTagResponse, error) {
 	requestDef := GenReqDefForCreateVpcResourceTag()
 
@@ -1688,8 +1613,7 @@ func (c *VpcClient) CreateVpcResourceTagInvoker(request *model.CreateVpcResource
 //
 // 创建路由
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) CreateVpcRoute(request *model.CreateVpcRouteRequest) (*model.CreateVpcRouteResponse, error) {
 	requestDef := GenReqDefForCreateVpcRoute()
 
@@ -1710,8 +1634,7 @@ func (c *VpcClient) CreateVpcRouteInvoker(request *model.CreateVpcRouteRequest) 
 //
 // 删除虚拟私有云。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) DeleteVpc(request *model.DeleteVpcRequest) (*model.DeleteVpcResponse, error) {
 	requestDef := GenReqDefForDeleteVpc()
 
@@ -1732,8 +1655,7 @@ func (c *VpcClient) DeleteVpcInvoker(request *model.DeleteVpcRequest) *DeleteVpc
 //
 // 删除路由
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) DeleteVpcRoute(request *model.DeleteVpcRouteRequest) (*model.DeleteVpcRouteResponse, error) {
 	requestDef := GenReqDefForDeleteVpcRoute()
 
@@ -1755,8 +1677,7 @@ func (c *VpcClient) DeleteVpcRouteInvoker(request *model.DeleteVpcRouteRequest) 
 // 删除指定VPC资源实例的标签信息
 // 该接口为幂等接口：删除的key不存在报404，Key不能为空或者空字符串
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) DeleteVpcTag(request *model.DeleteVpcTagRequest) (*model.DeleteVpcTagResponse, error) {
 	requestDef := GenReqDefForDeleteVpcTag()
 
@@ -1777,8 +1698,7 @@ func (c *VpcClient) DeleteVpcTagInvoker(request *model.DeleteVpcTagRequest) *Del
 //
 // 查询提交请求的租户的所有路由列表，并根据过滤条件进行过滤。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) ListVpcRoutes(request *model.ListVpcRoutesRequest) (*model.ListVpcRoutesResponse, error) {
 	requestDef := GenReqDefForListVpcRoutes()
 
@@ -1799,8 +1719,7 @@ func (c *VpcClient) ListVpcRoutesInvoker(request *model.ListVpcRoutesRequest) *L
 //
 // 查询租户在指定区域和实例类型的所有标签集合
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) ListVpcTags(request *model.ListVpcTagsRequest) (*model.ListVpcTagsResponse, error) {
 	requestDef := GenReqDefForListVpcTags()
 
@@ -1821,8 +1740,7 @@ func (c *VpcClient) ListVpcTagsInvoker(request *model.ListVpcTagsRequest) *ListV
 //
 // 查询虚拟私有云列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) ListVpcs(request *model.ListVpcsRequest) (*model.ListVpcsResponse, error) {
 	requestDef := GenReqDefForListVpcs()
 
@@ -1843,8 +1761,7 @@ func (c *VpcClient) ListVpcsInvoker(request *model.ListVpcsRequest) *ListVpcsInv
 //
 // 使用标签过滤实例。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) ListVpcsByTags(request *model.ListVpcsByTagsRequest) (*model.ListVpcsByTagsResponse, error) {
 	requestDef := GenReqDefForListVpcsByTags()
 
@@ -1865,8 +1782,7 @@ func (c *VpcClient) ListVpcsByTagsInvoker(request *model.ListVpcsByTagsRequest) 
 //
 // 查询虚拟私有云。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) ShowVpc(request *model.ShowVpcRequest) (*model.ShowVpcResponse, error) {
 	requestDef := GenReqDefForShowVpc()
 
@@ -1887,8 +1803,7 @@ func (c *VpcClient) ShowVpcInvoker(request *model.ShowVpcRequest) *ShowVpcInvoke
 //
 // 查询路由详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) ShowVpcRoute(request *model.ShowVpcRouteRequest) (*model.ShowVpcRouteResponse, error) {
 	requestDef := GenReqDefForShowVpcRoute()
 
@@ -1909,8 +1824,7 @@ func (c *VpcClient) ShowVpcRouteInvoker(request *model.ShowVpcRouteRequest) *Sho
 //
 // 查询指定VPC实例的标签信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) ShowVpcTags(request *model.ShowVpcTagsRequest) (*model.ShowVpcTagsResponse, error) {
 	requestDef := GenReqDefForShowVpcTags()
 
@@ -1931,8 +1845,7 @@ func (c *VpcClient) ShowVpcTagsInvoker(request *model.ShowVpcTagsRequest) *ShowV
 //
 // 更新虚拟私有云。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) UpdateVpc(request *model.UpdateVpcRequest) (*model.UpdateVpcResponse, error) {
 	requestDef := GenReqDefForUpdateVpc()
 

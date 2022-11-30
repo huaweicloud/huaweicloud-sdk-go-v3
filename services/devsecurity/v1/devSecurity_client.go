@@ -23,8 +23,7 @@ func DevSecurityClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 创建移动应用安全任务并启动
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DevSecurityClient) CreateSecAppTask(request *model.CreateSecAppTaskRequest) (*model.CreateSecAppTaskResponse, error) {
 	requestDef := GenReqDefForCreateSecAppTask()
 
@@ -45,8 +44,7 @@ func (c *DevSecurityClient) CreateSecAppTaskInvoker(request *model.CreateSecAppT
 //
 // 删除移动应用安全任务
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DevSecurityClient) DeleteSecAppTask(request *model.DeleteSecAppTaskRequest) (*model.DeleteSecAppTaskResponse, error) {
 	requestDef := GenReqDefForDeleteSecAppTask()
 
@@ -67,8 +65,7 @@ func (c *DevSecurityClient) DeleteSecAppTaskInvoker(request *model.DeleteSecAppT
 //
 // 获取移动应用安全任务结果
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DevSecurityClient) ShowSecAppTaskResult(request *model.ShowSecAppTaskResultRequest) (*model.ShowSecAppTaskResultResponse, error) {
 	requestDef := GenReqDefForShowSecAppTaskResult()
 
@@ -89,8 +86,7 @@ func (c *DevSecurityClient) ShowSecAppTaskResultInvoker(request *model.ShowSecAp
 //
 // 查询移动应用安全任务状态
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DevSecurityClient) ShowSecAppTaskStatus(request *model.ShowSecAppTaskStatusRequest) (*model.ShowSecAppTaskStatusResponse, error) {
 	requestDef := GenReqDefForShowSecAppTaskStatus()
 

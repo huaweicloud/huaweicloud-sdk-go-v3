@@ -23,8 +23,7 @@ func CodeHubClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 能够一次提交位于不同目录的多个文件，目录不存在时，能自动创建目录。支持强制覆盖选项，当选择强制覆盖标志为true时，忽略冲突，强制提交。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) CreateCommit(request *model.CreateCommitRequest) (*model.CreateCommitResponse, error) {
 	requestDef := GenReqDefForCreateCommit()
 
@@ -45,8 +44,7 @@ func (c *CodeHubClient) CreateCommitInvoker(request *model.CreateCommitRequest) 
 //
 // 根据仓库短ID获取提交信息，支持根据文件路径，查询这个路径下所有的commits列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) ListCommits(request *model.ListCommitsRequest) (*model.ListCommitsResponse, error) {
 	requestDef := GenReqDefForListCommits()
 
@@ -67,8 +65,7 @@ func (c *CodeHubClient) ListCommitsInvoker(request *model.ListCommitsRequest) *L
 //
 // 根据commit id查询提交差异信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) ShowDiffCommit(request *model.ShowDiffCommitRequest) (*model.ShowDiffCommitResponse, error) {
 	requestDef := GenReqDefForShowDiffCommit()
 
@@ -89,8 +86,7 @@ func (c *CodeHubClient) ShowDiffCommitInvoker(request *model.ShowDiffCommitReque
 //
 // 获取由commit id或分支或标记的名称标识的特定提交。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) ShowSingleCommit(request *model.ShowSingleCommitRequest) (*model.ShowSingleCommitResponse, error) {
 	requestDef := GenReqDefForShowSingleCommit()
 
@@ -111,8 +107,7 @@ func (c *CodeHubClient) ShowSingleCommitInvoker(request *model.ShowSingleCommitR
 //
 // 获取仓库中文件的信息，如名称、大小、内容。请注意，文件内容是Base64编码的。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) ListFilesByQuery(request *model.ListFilesByQueryRequest) (*model.ListFilesByQueryResponse, error) {
 	requestDef := GenReqDefForListFilesByQuery()
 
@@ -133,8 +128,7 @@ func (c *CodeHubClient) ListFilesByQueryInvoker(request *model.ListFilesByQueryR
 //
 // 获取仓库中文件的信息，如名称、大小、内容。请注意，文件内容是Base64编码的。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) ShowFile(request *model.ShowFileRequest) (*model.ShowFileResponse, error) {
 	requestDef := GenReqDefForShowFile()
 
@@ -155,8 +149,7 @@ func (c *CodeHubClient) ShowFileInvoker(request *model.ShowFileRequest) *ShowFil
 //
 // 获取仓库列表 模糊查询支持范围,如果未传入project_id，则支持按仓库名或项目名模糊查询，否则，只按仓库名模糊匹配。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) GetAllRepositoryByProjectId(request *model.GetAllRepositoryByProjectIdRequest) (*model.GetAllRepositoryByProjectIdResponse, error) {
 	requestDef := GenReqDefForGetAllRepositoryByProjectId()
 
@@ -177,8 +170,7 @@ func (c *CodeHubClient) GetAllRepositoryByProjectIdInvoker(request *model.GetAll
 //
 // 获取一个项目下可以设置为公开状态的仓库列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) GetProductTemplates(request *model.GetProductTemplatesRequest) (*model.GetProductTemplatesResponse, error) {
 	requestDef := GenReqDefForGetProductTemplates()
 
@@ -199,8 +191,7 @@ func (c *CodeHubClient) GetProductTemplatesInvoker(request *model.GetProductTemp
 //
 // 获取一个项目下可以设置为公开状态的仓库列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) ListProductTwoTemplates(request *model.ListProductTwoTemplatesRequest) (*model.ListProductTwoTemplatesResponse, error) {
 	requestDef := GenReqDefForListProductTwoTemplates()
 
@@ -221,8 +212,7 @@ func (c *CodeHubClient) ListProductTwoTemplatesInvoker(request *model.ListProduc
 //
 // 一般创建仓库时调用。通过传入项目uuid,仓库名，来判断仓库是否重名。仓库存在result:false,仓库不存在result:true。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) ShowRepositoryNameExist(request *model.ShowRepositoryNameExistRequest) (*model.ShowRepositoryNameExistResponse, error) {
 	requestDef := GenReqDefForShowRepositoryNameExist()
 
@@ -243,8 +233,7 @@ func (c *CodeHubClient) ShowRepositoryNameExistInvoker(request *model.ShowReposi
 //
 // 调用方codehubportal,添加仓库成员。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) AddRepoMembers(request *model.AddRepoMembersRequest) (*model.AddRepoMembersResponse, error) {
 	requestDef := GenReqDefForAddRepoMembers()
 
@@ -265,8 +254,7 @@ func (c *CodeHubClient) AddRepoMembersInvoker(request *model.AddRepoMembersReque
 //
 // 删除仓库成员
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) DeleteRepoMember(request *model.DeleteRepoMemberRequest) (*model.DeleteRepoMemberResponse, error) {
 	requestDef := GenReqDefForDeleteRepoMember()
 
@@ -287,8 +275,7 @@ func (c *CodeHubClient) DeleteRepoMemberInvoker(request *model.DeleteRepoMemberR
 //
 // 获取仓库成员列表,可通过关键字搜索某成员。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) ListRepoMembers(request *model.ListRepoMembersRequest) (*model.ListRepoMembersResponse, error) {
 	requestDef := GenReqDefForListRepoMembers()
 
@@ -309,8 +296,7 @@ func (c *CodeHubClient) ListRepoMembersInvoker(request *model.ListRepoMembersReq
 //
 // 给仓库中成员设置仓库的操作权限，
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) SetRepoRole(request *model.SetRepoRoleRequest) (*model.SetRepoRoleResponse, error) {
 	requestDef := GenReqDefForSetRepoRole()
 
@@ -331,8 +317,7 @@ func (c *CodeHubClient) SetRepoRoleInvoker(request *model.SetRepoRoleRequest) *S
 //
 // 添加部署密钥
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) AddDeployKey(request *model.AddDeployKeyRequest) (*model.AddDeployKeyResponse, error) {
 	requestDef := GenReqDefForAddDeployKey()
 
@@ -353,8 +338,7 @@ func (c *CodeHubClient) AddDeployKeyInvoker(request *model.AddDeployKeyRequest) 
 //
 // 添加部署密钥
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) AddDeployKeyV2(request *model.AddDeployKeyV2Request) (*model.AddDeployKeyV2Response, error) {
 	requestDef := GenReqDefForAddDeployKeyV2()
 
@@ -375,8 +359,7 @@ func (c *CodeHubClient) AddDeployKeyV2Invoker(request *model.AddDeployKeyV2Reque
 //
 // 新建保护分支
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) AddProtectBranchV2(request *model.AddProtectBranchV2Request) (*model.AddProtectBranchV2Response, error) {
 	requestDef := GenReqDefForAddProtectBranchV2()
 
@@ -397,8 +380,7 @@ func (c *CodeHubClient) AddProtectBranchV2Invoker(request *model.AddProtectBranc
 //
 // 新建标签
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) AddTagV2(request *model.AddTagV2Request) (*model.AddTagV2Response, error) {
 	requestDef := GenReqDefForAddTagV2()
 
@@ -419,8 +401,7 @@ func (c *CodeHubClient) AddTagV2Invoker(request *model.AddTagV2Request) *AddTagV
 //
 // 用指定的名称在指定项目上创建仓库。传入参数：仓库名、模板id、是否导入项目成员、归属项目
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) CreateRepository(request *model.CreateRepositoryRequest) (*model.CreateRepositoryResponse, error) {
 	requestDef := GenReqDefForCreateRepository()
 
@@ -441,8 +422,7 @@ func (c *CodeHubClient) CreateRepositoryInvoker(request *model.CreateRepositoryR
 //
 // 删除仓库部署密钥
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) DeleteDeployKey(request *model.DeleteDeployKeyRequest) (*model.DeleteDeployKeyResponse, error) {
 	requestDef := GenReqDefForDeleteDeployKey()
 
@@ -463,8 +443,7 @@ func (c *CodeHubClient) DeleteDeployKeyInvoker(request *model.DeleteDeployKeyReq
 //
 // 删除仓库部署密钥
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) DeleteDeployKeyV2(request *model.DeleteDeployKeyV2Request) (*model.DeleteDeployKeyV2Response, error) {
 	requestDef := GenReqDefForDeleteDeployKeyV2()
 
@@ -485,8 +464,7 @@ func (c *CodeHubClient) DeleteDeployKeyV2Invoker(request *model.DeleteDeployKeyV
 //
 // 根据仓库32位uuid删除指定的仓库
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) DeleteRepository(request *model.DeleteRepositoryRequest) (*model.DeleteRepositoryResponse, error) {
 	requestDef := GenReqDefForDeleteRepository()
 
@@ -507,8 +485,7 @@ func (c *CodeHubClient) DeleteRepositoryInvoker(request *model.DeleteRepositoryR
 //
 // 不建议再使用,建议使用/{repository_uuid}/status
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) GetRepositoryByProjectId(request *model.GetRepositoryByProjectIdRequest) (*model.GetRepositoryByProjectIdResponse, error) {
 	requestDef := GenReqDefForGetRepositoryByProjectId()
 
@@ -529,8 +506,7 @@ func (c *CodeHubClient) GetRepositoryByProjectIdInvoker(request *model.GetReposi
 //
 // 获取公开示例模板列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) GetTemplates(request *model.GetTemplatesRequest) (*model.GetTemplatesResponse, error) {
 	requestDef := GenReqDefForGetTemplates()
 
@@ -551,8 +527,7 @@ func (c *CodeHubClient) GetTemplatesInvoker(request *model.GetTemplatesRequest) 
 //
 // 获取仓库分支列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) ListBranchesByRepositoryId(request *model.ListBranchesByRepositoryIdRequest) (*model.ListBranchesByRepositoryIdResponse, error) {
 	requestDef := GenReqDefForListBranchesByRepositoryId()
 
@@ -573,8 +548,7 @@ func (c *CodeHubClient) ListBranchesByRepositoryIdInvoker(request *model.ListBra
 //
 // 获取仓库上一次的提交统计信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) ListCommitStatistics(request *model.ListCommitStatisticsRequest) (*model.ListCommitStatisticsResponse, error) {
 	requestDef := GenReqDefForListCommitStatistics()
 
@@ -595,8 +569,7 @@ func (c *CodeHubClient) ListCommitStatisticsInvoker(request *model.ListCommitSta
 //
 // 获取一个仓库下特定分支指定文件内容
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) ListFiles(request *model.ListFilesRequest) (*model.ListFilesResponse, error) {
 	requestDef := GenReqDefForListFiles()
 
@@ -617,8 +590,7 @@ func (c *CodeHubClient) ListFilesInvoker(request *model.ListFilesRequest) *ListF
 //
 // 获取仓库合并请求列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) ListMergeRequest(request *model.ListMergeRequestRequest) (*model.ListMergeRequestResponse, error) {
 	requestDef := GenReqDefForListMergeRequest()
 
@@ -639,8 +611,7 @@ func (c *CodeHubClient) ListMergeRequestInvoker(request *model.ListMergeRequestR
 //
 // 获取仓库状态。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) ListRepositoryStatus(request *model.ListRepositoryStatusRequest) (*model.ListRepositoryStatusResponse, error) {
 	requestDef := GenReqDefForListRepositoryStatus()
 
@@ -661,8 +632,7 @@ func (c *CodeHubClient) ListRepositoryStatusInvoker(request *model.ListRepositor
 //
 // 获取分支目录下的文件
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) ListSubfiles(request *model.ListSubfilesRequest) (*model.ListSubfilesResponse, error) {
 	requestDef := GenReqDefForListSubfiles()
 
@@ -683,8 +653,7 @@ func (c *CodeHubClient) ListSubfilesInvoker(request *model.ListSubfilesRequest) 
 //
 // 设置仓库是公开状态还是私有状态
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) ListTemplatesTwo(request *model.ListTemplatesTwoRequest) (*model.ListTemplatesTwoResponse, error) {
 	requestDef := GenReqDefForListTemplatesTwo()
 
@@ -705,8 +674,7 @@ func (c *CodeHubClient) ListTemplatesTwoInvoker(request *model.ListTemplatesTwoR
 //
 // 获取公开示例模板列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) ListTwoTemplates(request *model.ListTwoTemplatesRequest) (*model.ListTwoTemplatesResponse, error) {
 	requestDef := GenReqDefForListTwoTemplates()
 
@@ -727,8 +695,7 @@ func (c *CodeHubClient) ListTwoTemplatesInvoker(request *model.ListTwoTemplatesR
 //
 // 设置仓库是公开状态还是私有状态
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) ShareTemplates(request *model.ShareTemplatesRequest) (*model.ShareTemplatesResponse, error) {
 	requestDef := GenReqDefForShareTemplates()
 
@@ -749,8 +716,7 @@ func (c *CodeHubClient) ShareTemplatesInvoker(request *model.ShareTemplatesReque
 //
 // 根据仓库id获取指定仓库的分支列表.
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) ShowBranchesByRepositoryId(request *model.ShowBranchesByRepositoryIdRequest) (*model.ShowBranchesByRepositoryIdResponse, error) {
 	requestDef := GenReqDefForShowBranchesByRepositoryId()
 
@@ -771,8 +737,7 @@ func (c *CodeHubClient) ShowBranchesByRepositoryIdInvoker(request *model.ShowBra
 //
 // 查询指定仓库对应的分支。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) ShowBranchesByTwoRepositoryId(request *model.ShowBranchesByTwoRepositoryIdRequest) (*model.ShowBranchesByTwoRepositoryIdResponse, error) {
 	requestDef := GenReqDefForShowBranchesByTwoRepositoryId()
 
@@ -793,8 +758,7 @@ func (c *CodeHubClient) ShowBranchesByTwoRepositoryIdInvoker(request *model.Show
 //
 // 根据仓库组名、仓库名和分支获取提交列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) ShowCommitsByBranch(request *model.ShowCommitsByBranchRequest) (*model.ShowCommitsByBranchResponse, error) {
 	requestDef := GenReqDefForShowCommitsByBranch()
 
@@ -815,8 +779,7 @@ func (c *CodeHubClient) ShowCommitsByBranchInvoker(request *model.ShowCommitsByB
 //
 // 根据仓库id查询仓库某分支对应的提交.
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) ShowCommitsByRepoId(request *model.ShowCommitsByRepoIdRequest) (*model.ShowCommitsByRepoIdResponse, error) {
 	requestDef := GenReqDefForShowCommitsByRepoId()
 
@@ -837,8 +800,7 @@ func (c *CodeHubClient) ShowCommitsByRepoIdInvoker(request *model.ShowCommitsByR
 //
 // 修改被流水线引用的仓库状态
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) ShowHasPipeline(request *model.ShowHasPipelineRequest) (*model.ShowHasPipelineResponse, error) {
 	requestDef := GenReqDefForShowHasPipeline()
 
@@ -859,8 +821,7 @@ func (c *CodeHubClient) ShowHasPipelineInvoker(request *model.ShowHasPipelineReq
 //
 // 获取一个仓库下特定分支的图片文件
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) ShowImageBlob(request *model.ShowImageBlobRequest) (*model.ShowImageBlobResponse, error) {
 	requestDef := GenReqDefForShowImageBlob()
 
@@ -881,8 +842,7 @@ func (c *CodeHubClient) ShowImageBlobInvoker(request *model.ShowImageBlobRequest
 //
 // 判断用户是否有仓库的管理员权限
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) ShowMaster(request *model.ShowMasterRequest) (*model.ShowMasterResponse, error) {
 	requestDef := GenReqDefForShowMaster()
 
@@ -903,8 +863,7 @@ func (c *CodeHubClient) ShowMasterInvoker(request *model.ShowMasterRequest) *Sho
 //
 // 获取仓库合并请求详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) ShowMergeRequest(request *model.ShowMergeRequestRequest) (*model.ShowMergeRequestResponse, error) {
 	requestDef := GenReqDefForShowMergeRequest()
 
@@ -925,8 +884,7 @@ func (c *CodeHubClient) ShowMergeRequestInvoker(request *model.ShowMergeRequestR
 //
 // 获取仓库短id,用于获取仓库详情页面url
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) ShowRepoId(request *model.ShowRepoIdRequest) (*model.ShowRepoIdResponse, error) {
 	requestDef := GenReqDefForShowRepoId()
 
@@ -947,8 +905,7 @@ func (c *CodeHubClient) ShowRepoIdInvoker(request *model.ShowRepoIdRequest) *Sho
 //
 // 按照指定格式下载仓库
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) ShowRepositoryArchive(request *model.ShowRepositoryArchiveRequest) (*model.ShowRepositoryArchiveResponse, error) {
 	requestDef := GenReqDefForShowRepositoryArchive()
 
@@ -969,8 +926,7 @@ func (c *CodeHubClient) ShowRepositoryArchiveInvoker(request *model.ShowReposito
 //
 // 根据仓库UUID(由CreateRepository接口返回)获取仓库信息仓库信息。返回 包含id，name，组名，仓库访问URL。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) ShowRepositoryByUuid(request *model.ShowRepositoryByUuidRequest) (*model.ShowRepositoryByUuidResponse, error) {
 	requestDef := GenReqDefForShowRepositoryByUuid()
 
@@ -991,8 +947,7 @@ func (c *CodeHubClient) ShowRepositoryByUuidInvoker(request *model.ShowRepositor
 //
 // 根据仓库短id，查询仓库的代码提交记录统计
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) ShowRepositoryStatistics(request *model.ShowRepositoryStatisticsRequest) (*model.ShowRepositoryStatisticsResponse, error) {
 	requestDef := GenReqDefForShowRepositoryStatistics()
 
@@ -1013,8 +968,7 @@ func (c *CodeHubClient) ShowRepositoryStatisticsInvoker(request *model.ShowRepos
 //
 // 获取指定日期内代码仓指定分支的代码提交行数
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) ShowStatisticCommit(request *model.ShowStatisticCommitRequest) (*model.ShowStatisticCommitResponse, error) {
 	requestDef := GenReqDefForShowStatisticCommit()
 
@@ -1035,8 +989,7 @@ func (c *CodeHubClient) ShowStatisticCommitInvoker(request *model.ShowStatisticC
 //
 // 获取指定日期内代码仓指定分支的代码提交行数
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) ShowStatisticCommitV3(request *model.ShowStatisticCommitV3Request) (*model.ShowStatisticCommitV3Response, error) {
 	requestDef := GenReqDefForShowStatisticCommitV3()
 
@@ -1057,8 +1010,7 @@ func (c *CodeHubClient) ShowStatisticCommitV3Invoker(request *model.ShowStatisti
 //
 // 获取仓库统计数据
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) ShowStatisticalData(request *model.ShowStatisticalDataRequest) (*model.ShowStatisticalDataResponse, error) {
 	requestDef := GenReqDefForShowStatisticalData()
 
@@ -1079,8 +1031,7 @@ func (c *CodeHubClient) ShowStatisticalDataInvoker(request *model.ShowStatistica
 //
 // 添加ssh key
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) AddSshKey(request *model.AddSshKeyRequest) (*model.AddSshKeyResponse, error) {
 	requestDef := GenReqDefForAddSshKey()
 
@@ -1101,8 +1052,7 @@ func (c *CodeHubClient) AddSshKeyInvoker(request *model.AddSshKeyRequest) *AddSs
 //
 // 调用gitlab原生接口删除用户公钥。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) DeleteSShkey(request *model.DeleteSShkeyRequest) (*model.DeleteSShkeyResponse, error) {
 	requestDef := GenReqDefForDeleteSShkey()
 
@@ -1123,8 +1073,7 @@ func (c *CodeHubClient) DeleteSShkeyInvoker(request *model.DeleteSShkeyRequest) 
 //
 // 获取ssh key列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) ListSshKeys(request *model.ListSshKeysRequest) (*model.ListSshKeysResponse, error) {
 	requestDef := GenReqDefForListSshKeys()
 
@@ -1145,8 +1094,7 @@ func (c *CodeHubClient) ListSshKeysInvoker(request *model.ListSshKeysRequest) *L
 //
 // 检验私钥是否有拉取代码的权限
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) ShowPrivateKeyVerify(request *model.ShowPrivateKeyVerifyRequest) (*model.ShowPrivateKeyVerifyResponse, error) {
 	requestDef := GenReqDefForShowPrivateKeyVerify()
 
@@ -1167,8 +1115,7 @@ func (c *CodeHubClient) ShowPrivateKeyVerifyInvoker(request *model.ShowPrivateKe
 //
 // 调用 gitlab 接口判断用户使用 https 上传/下载代码时输入的用户名和密码是否合法。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) ValidateHttpsInfo(request *model.ValidateHttpsInfoRequest) (*model.ValidateHttpsInfoResponse, error) {
 	requestDef := GenReqDefForValidateHttpsInfo()
 
@@ -1189,8 +1136,7 @@ func (c *CodeHubClient) ValidateHttpsInfoInvoker(request *model.ValidateHttpsInf
 //
 // 调用 gitlab 接口判断用户使用 https 上传/下载代码时输入的用户名和密码是否合法。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) ValidateHttpsInfoV2(request *model.ValidateHttpsInfoV2Request) (*model.ValidateHttpsInfoV2Response, error) {
 	requestDef := GenReqDefForValidateHttpsInfoV2()
 
@@ -1211,8 +1157,7 @@ func (c *CodeHubClient) ValidateHttpsInfoV2Invoker(request *model.ValidateHttpsI
 //
 // 根据仓库id在指定仓库中创建分支
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) CreateNewBranch(request *model.CreateNewBranchRequest) (*model.CreateNewBranchResponse, error) {
 	requestDef := GenReqDefForCreateNewBranch()
 
@@ -1233,8 +1178,7 @@ func (c *CodeHubClient) CreateNewBranchInvoker(request *model.CreateNewBranchReq
 //
 // 分支关联工作项
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) AssociateIssues(request *model.AssociateIssuesRequest) (*model.AssociateIssuesResponse, error) {
 	requestDef := GenReqDefForAssociateIssues()
 
@@ -1255,8 +1199,7 @@ func (c *CodeHubClient) AssociateIssuesInvoker(request *model.AssociateIssuesReq
 //
 // 创建项目后，创建仓库组由后台生成方式 传入参数：仓库名、模板id、是否导入项目成员、归属项目
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) CreateProjectAndRepositories(request *model.CreateProjectAndRepositoriesRequest) (*model.CreateProjectAndRepositoriesResponse, error) {
 	requestDef := GenReqDefForCreateProjectAndRepositories()
 
@@ -1277,8 +1220,7 @@ func (c *CodeHubClient) CreateProjectAndRepositoriesInvoker(request *model.Creat
 //
 // 创建仓库后fork仓库 传入参数：仓库名、是否导入项目成员、归属项目
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) CreateProjectAndforkRepositories(request *model.CreateProjectAndforkRepositoriesRequest) (*model.CreateProjectAndforkRepositoriesResponse, error) {
 	requestDef := GenReqDefForCreateProjectAndforkRepositories()
 
@@ -1299,8 +1241,7 @@ func (c *CodeHubClient) CreateProjectAndforkRepositoriesInvoker(request *model.C
 //
 // 获取用户的所有仓库信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) ListUserAllRepositories(request *model.ListUserAllRepositoriesRequest) (*model.ListUserAllRepositoriesResponse, error) {
 	requestDef := GenReqDefForListUserAllRepositories()
 
@@ -1321,8 +1262,7 @@ func (c *CodeHubClient) ListUserAllRepositoriesInvoker(request *model.ListUserAl
 //
 // 获取仓库列表,模糊查询支持范围,如果未传入project uuid，则支持按仓库名或项目名模糊查询，否则，只按仓库名模糊匹配
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) ShowAllRepositoryByTwoProjectId(request *model.ShowAllRepositoryByTwoProjectIdRequest) (*model.ShowAllRepositoryByTwoProjectIdResponse, error) {
 	requestDef := GenReqDefForShowAllRepositoryByTwoProjectId()
 
@@ -1343,8 +1283,7 @@ func (c *CodeHubClient) ShowAllRepositoryByTwoProjectIdInvoker(request *model.Sh
 //
 // 提交代码自动触发编译构建，添加仓库钩子
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) AddHooks(request *model.AddHooksRequest) (*model.AddHooksResponse, error) {
 	requestDef := GenReqDefForAddHooks()
 
@@ -1365,8 +1304,7 @@ func (c *CodeHubClient) AddHooksInvoker(request *model.AddHooksRequest) *AddHook
 //
 // 提交代码自动触发编译构建，删除仓库钩子
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) DeleteHooks(request *model.DeleteHooksRequest) (*model.DeleteHooksResponse, error) {
 	requestDef := GenReqDefForDeleteHooks()
 
@@ -1387,8 +1325,7 @@ func (c *CodeHubClient) DeleteHooksInvoker(request *model.DeleteHooksRequest) *D
 //
 // 获取仓库webhook
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) ListHooks(request *model.ListHooksRequest) (*model.ListHooksResponse, error) {
 	requestDef := GenReqDefForListHooks()
 

@@ -9,7 +9,7 @@ import (
 // Request Object
 type UpdateServerNameRequest struct {
 
-	// 服务器id。
+	// 云手机服务器的唯一标识。
 	ServerId string `json:"server_id"`
 
 	Body *UpdateServerNameRequestBody `json:"body,omitempty"`

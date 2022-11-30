@@ -9,12 +9,12 @@ import (
 // Response Object
 type BatchMigrateCloudPhoneResponse struct {
 
-	// 请求的唯一标识ID
-	RequestId string `json:"request_id"`
+	// 请求的唯一标识ID。
+	RequestId *string `json:"request_id,omitempty"`
 
 	// 任务列表
-	Jobs           []interface{} `json:"jobs"`
-	HttpStatusCode int           `json:"-"`
+	Jobs           *[]PhoneMigrateJob `json:"jobs,omitempty"`
+	HttpStatusCode int                `json:"-"`
 }
 
 func (o BatchMigrateCloudPhoneResponse) String() string {

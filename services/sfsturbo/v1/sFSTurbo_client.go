@@ -27,8 +27,7 @@ func SFSTurboClientBuilder() *http_client.HcHttpClientBuilder {
 // 一个共享上的多个标签的key不允许重复。
 // 此接口为幂等接口：如果要添加的key在共享上已存在，则覆盖更新标签。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SFSTurboClient) BatchAddSharedTags(request *model.BatchAddSharedTagsRequest) (*model.BatchAddSharedTagsResponse, error) {
 	requestDef := GenReqDefForBatchAddSharedTags()
 
@@ -49,8 +48,7 @@ func (c *SFSTurboClient) BatchAddSharedTagsInvoker(request *model.BatchAddShared
 //
 // 修改SFS Turbo文件系统绑定的安全组。修改安全组为异步任务，可以通过“查询单个文件系统”返回的子状态字段“sub_status”来判断是否修改安全组状态，子状态为“232”即为修改安全组成功。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SFSTurboClient) ChangeSecurityGroup(request *model.ChangeSecurityGroupRequest) (*model.ChangeSecurityGroupResponse, error) {
 	requestDef := GenReqDefForChangeSecurityGroup()
 
@@ -71,8 +69,7 @@ func (c *SFSTurboClient) ChangeSecurityGroupInvoker(request *model.ChangeSecurit
 //
 // 修改文件系统名称
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SFSTurboClient) ChangeShareName(request *model.ChangeShareNameRequest) (*model.ChangeShareNameResponse, error) {
 	requestDef := GenReqDefForChangeShareName()
 
@@ -93,8 +90,7 @@ func (c *SFSTurboClient) ChangeShareNameInvoker(request *model.ChangeShareNameRe
 //
 // 创建文件系统。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SFSTurboClient) CreateShare(request *model.CreateShareRequest) (*model.CreateShareResponse, error) {
 	requestDef := GenReqDefForCreateShare()
 
@@ -118,8 +114,7 @@ func (c *SFSTurboClient) CreateShareInvoker(request *model.CreateShareRequest) *
 // 一个共享上的多个标签的key不允许重复。
 // 此接口为幂等接口：如果要添加的key在共享上已存在，则覆盖更新标签。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SFSTurboClient) CreateSharedTag(request *model.CreateSharedTagRequest) (*model.CreateSharedTagResponse, error) {
 	requestDef := GenReqDefForCreateSharedTag()
 
@@ -140,8 +135,7 @@ func (c *SFSTurboClient) CreateSharedTagInvoker(request *model.CreateSharedTagRe
 //
 // 删除文件系统。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SFSTurboClient) DeleteShare(request *model.DeleteShareRequest) (*model.DeleteShareResponse, error) {
 	requestDef := GenReqDefForDeleteShare()
 
@@ -162,8 +156,7 @@ func (c *SFSTurboClient) DeleteShareInvoker(request *model.DeleteShareRequest) *
 //
 // 指定共享删除一个标签。当共享中不存在指定要删除的key时，接口调用将会返回404错误。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SFSTurboClient) DeleteSharedTag(request *model.DeleteSharedTagRequest) (*model.DeleteSharedTagResponse, error) {
 	requestDef := GenReqDefForDeleteSharedTag()
 
@@ -184,8 +177,7 @@ func (c *SFSTurboClient) DeleteSharedTagInvoker(request *model.DeleteSharedTagRe
 //
 // 扩容文件系统。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SFSTurboClient) ExpandShare(request *model.ExpandShareRequest) (*model.ExpandShareResponse, error) {
 	requestDef := GenReqDefForExpandShare()
 
@@ -206,8 +198,7 @@ func (c *SFSTurboClient) ExpandShareInvoker(request *model.ExpandShareRequest) *
 //
 // 查询租户所有共享的标签集合。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SFSTurboClient) ListSharedTags(request *model.ListSharedTagsRequest) (*model.ListSharedTagsResponse, error) {
 	requestDef := GenReqDefForListSharedTags()
 
@@ -228,8 +219,7 @@ func (c *SFSTurboClient) ListSharedTagsInvoker(request *model.ListSharedTagsRequ
 //
 // 获取文件系统列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SFSTurboClient) ListShares(request *model.ListSharesRequest) (*model.ListSharesResponse, error) {
 	requestDef := GenReqDefForListShares()
 
@@ -250,8 +240,7 @@ func (c *SFSTurboClient) ListSharesInvoker(request *model.ListSharesRequest) *Li
 //
 // 查询SFS Turbo文件系统详细信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SFSTurboClient) ShowShare(request *model.ShowShareRequest) (*model.ShowShareResponse, error) {
 	requestDef := GenReqDefForShowShare()
 
@@ -272,8 +261,7 @@ func (c *SFSTurboClient) ShowShareInvoker(request *model.ShowShareRequest) *Show
 //
 // 查询指定共享的所有标签信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *SFSTurboClient) ShowSharedTags(request *model.ShowSharedTagsRequest) (*model.ShowSharedTagsResponse, error) {
 	requestDef := GenReqDefForShowSharedTags()
 

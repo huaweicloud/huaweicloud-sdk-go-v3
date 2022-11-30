@@ -23,8 +23,7 @@ func WorkspaceClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 该接口用于查询云桌面支持的可用分区列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ListAvailabilityZones(request *model.ListAvailabilityZonesRequest) (*model.ListAvailabilityZonesResponse, error) {
 	requestDef := GenReqDefForListAvailabilityZones()
 
@@ -45,8 +44,7 @@ func (c *WorkspaceClient) ListAvailabilityZonesInvoker(request *model.ListAvaila
 //
 // 该接口用于导出连接记录。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ExportUserLoginInfoNew(request *model.ExportUserLoginInfoNewRequest) (*model.ExportUserLoginInfoNewResponse, error) {
 	requestDef := GenReqDefForExportUserLoginInfoNew()
 
@@ -67,8 +65,7 @@ func (c *WorkspaceClient) ExportUserLoginInfoNewInvoker(request *model.ExportUse
 //
 // 该接口用于查询登录人数，注意查询参数不可全空。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ListHistoryOnlineInfoNew(request *model.ListHistoryOnlineInfoNewRequest) (*model.ListHistoryOnlineInfoNewResponse, error) {
 	requestDef := GenReqDefForListHistoryOnlineInfoNew()
 
@@ -89,8 +86,7 @@ func (c *WorkspaceClient) ListHistoryOnlineInfoNewInvoker(request *model.ListHis
 //
 // 该接口用于查询登录信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ListLoginRecordsNew(request *model.ListLoginRecordsNewRequest) (*model.ListLoginRecordsNewResponse, error) {
 	requestDef := GenReqDefForListLoginRecordsNew()
 
@@ -111,8 +107,7 @@ func (c *WorkspaceClient) ListLoginRecordsNewInvoker(request *model.ListLoginRec
 //
 // 批量删除桌面，删除后无法恢复。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) BatchDeleteDesktops(request *model.BatchDeleteDesktopsRequest) (*model.BatchDeleteDesktopsResponse, error) {
 	requestDef := GenReqDefForBatchDeleteDesktops()
 
@@ -133,8 +128,7 @@ func (c *WorkspaceClient) BatchDeleteDesktopsInvoker(request *model.BatchDeleteD
 //
 // 批量操作桌面，用于批量开机、关机和重启。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) BatchRunDesktops(request *model.BatchRunDesktopsRequest) (*model.BatchRunDesktopsResponse, error) {
 	requestDef := GenReqDefForBatchRunDesktops()
 
@@ -155,8 +149,7 @@ func (c *WorkspaceClient) BatchRunDesktopsInvoker(request *model.BatchRunDesktop
 //
 // 创建桌面，并将此桌面分配给用户，当桌面创建成功后用户可以登录使用。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) CreateDesktop(request *model.CreateDesktopRequest) (*model.CreateDesktopResponse, error) {
 	requestDef := GenReqDefForCreateDesktop()
 
@@ -177,8 +170,7 @@ func (c *WorkspaceClient) CreateDesktopInvoker(request *model.CreateDesktopReque
 //
 // 删除单个桌面，删除后无法恢复。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) DeleteDesktop(request *model.DeleteDesktopRequest) (*model.DeleteDesktopResponse, error) {
 	requestDef := GenReqDefForDeleteDesktop()
 
@@ -199,8 +191,7 @@ func (c *WorkspaceClient) DeleteDesktopInvoker(request *model.DeleteDesktopReque
 //
 // 该接口用于查询桌面虚拟机列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ListDesktops(request *model.ListDesktopsRequest) (*model.ListDesktopsResponse, error) {
 	requestDef := GenReqDefForListDesktops()
 
@@ -221,8 +212,7 @@ func (c *WorkspaceClient) ListDesktopsInvoker(request *model.ListDesktopsRequest
 //
 // 查询桌面详情信息列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ListDesktopsDetail(request *model.ListDesktopsDetailRequest) (*model.ListDesktopsDetailResponse, error) {
 	requestDef := GenReqDefForListDesktopsDetail()
 
@@ -243,8 +233,7 @@ func (c *WorkspaceClient) ListDesktopsDetailInvoker(request *model.ListDesktopsD
 //
 // 变更云桌面规格，只支持变更CPU和内存，不支持变更磁盘，不支持同规格互相变更。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ResizeDesktop(request *model.ResizeDesktopRequest) (*model.ResizeDesktopResponse, error) {
 	requestDef := GenReqDefForResizeDesktop()
 
@@ -265,8 +254,7 @@ func (c *WorkspaceClient) ResizeDesktopInvoker(request *model.ResizeDesktopReque
 //
 // 指定桌面Id查询详细信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ShowDesktopDetail(request *model.ShowDesktopDetailRequest) (*model.ShowDesktopDetailResponse, error) {
 	requestDef := GenReqDefForShowDesktopDetail()
 
@@ -287,8 +275,7 @@ func (c *WorkspaceClient) ShowDesktopDetailInvoker(request *model.ShowDesktopDet
 //
 // 该接口用于查询云桌面支持的产品镜像列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ListImages(request *model.ListImagesRequest) (*model.ListImagesResponse, error) {
 	requestDef := GenReqDefForListImages()
 
@@ -309,8 +296,7 @@ func (c *WorkspaceClient) ListImagesInvoker(request *model.ListImagesRequest) *L
 //
 // 该接口用于查询异步任务执行情况，比如查询创建桌面的执行状态。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ListItaSubJobs(request *model.ListItaSubJobsRequest) (*model.ListItaSubJobsResponse, error) {
 	requestDef := GenReqDefForListItaSubJobs()
 
@@ -331,8 +317,7 @@ func (c *WorkspaceClient) ListItaSubJobsInvoker(request *model.ListItaSubJobsReq
 //
 // 该接口用于查询云桌面支持的产品套餐列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ListProducts(request *model.ListProductsRequest) (*model.ListProductsResponse, error) {
 	requestDef := GenReqDefForListProducts()
 
@@ -353,8 +338,7 @@ func (c *WorkspaceClient) ListProductsInvoker(request *model.ListProductsRequest
 //
 // 该接口用于操作用户，包含三种操作：锁定、解锁和重置密码。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ChangeUserStatus(request *model.ChangeUserStatusRequest) (*model.ChangeUserStatusResponse, error) {
 	requestDef := GenReqDefForChangeUserStatus()
 
@@ -375,8 +359,7 @@ func (c *WorkspaceClient) ChangeUserStatusInvoker(request *model.ChangeUserStatu
 //
 // 该接口用于创建桌面用户。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) CreateDesktopUser(request *model.CreateDesktopUserRequest) (*model.CreateDesktopUserResponse, error) {
 	requestDef := GenReqDefForCreateDesktopUser()
 
@@ -397,8 +380,7 @@ func (c *WorkspaceClient) CreateDesktopUserInvoker(request *model.CreateDesktopU
 //
 // 删除指定的桌面用户。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) DeleteUser(request *model.DeleteUserRequest) (*model.DeleteUserResponse, error) {
 	requestDef := GenReqDefForDeleteUser()
 
@@ -419,8 +401,7 @@ func (c *WorkspaceClient) DeleteUserInvoker(request *model.DeleteUserRequest) *D
 //
 // 该接口用于查询指定的桌面用户详情。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ListUserDetail(request *model.ListUserDetailRequest) (*model.ListUserDetailResponse, error) {
 	requestDef := GenReqDefForListUserDetail()
 
@@ -441,8 +422,7 @@ func (c *WorkspaceClient) ListUserDetailInvoker(request *model.ListUserDetailReq
 //
 // 该接口用于查询桌面用户列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ListUsers(request *model.ListUsersRequest) (*model.ListUsersResponse, error) {
 	requestDef := GenReqDefForListUsers()
 
@@ -463,8 +443,7 @@ func (c *WorkspaceClient) ListUsersInvoker(request *model.ListUsersRequest) *Lis
 //
 // 该接口用于修改桌面用户信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) UpdateUserInfo(request *model.UpdateUserInfoRequest) (*model.UpdateUserInfoResponse, error) {
 	requestDef := GenReqDefForUpdateUserInfo()
 
@@ -485,8 +464,7 @@ func (c *WorkspaceClient) UpdateUserInfoInvoker(request *model.UpdateUserInfoReq
 //
 // 增加桌面磁盘。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) AddVolumes(request *model.AddVolumesRequest) (*model.AddVolumesResponse, error) {
 	requestDef := GenReqDefForAddVolumes()
 
@@ -507,8 +485,7 @@ func (c *WorkspaceClient) AddVolumesInvoker(request *model.AddVolumesRequest) *A
 //
 // 扩容桌面磁盘。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ExpandVolumes(request *model.ExpandVolumesRequest) (*model.ExpandVolumesResponse, error) {
 	requestDef := GenReqDefForExpandVolumes()
 
@@ -531,8 +508,7 @@ func (c *WorkspaceClient) ExpandVolumesInvoker(request *model.ExpandVolumesReque
 //
 // 作为异步接口，调用成功说明云办公服务后台收到了开通请求，但服务是否开通成功需要通过任务查询接口(GET /v2/{project_id}/workspace-sub-jobs)查询该任务的执行状态。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ApplyWorkspace(request *model.ApplyWorkspaceRequest) (*model.ApplyWorkspaceResponse, error) {
 	requestDef := GenReqDefForApplyWorkspace()
 
@@ -553,8 +529,7 @@ func (c *WorkspaceClient) ApplyWorkspaceInvoker(request *model.ApplyWorkspaceReq
 //
 // 该接口用于注销云办公服务。注销前请确保当前用户下的云桌面已经删除，注销后无法恢复。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) CancelWorkspace(request *model.CancelWorkspaceRequest) (*model.CancelWorkspaceResponse, error) {
 	requestDef := GenReqDefForCancelWorkspace()
 
@@ -575,8 +550,7 @@ func (c *WorkspaceClient) CancelWorkspaceInvoker(request *model.CancelWorkspaceR
 //
 // 该接口用于查询云办公服务详情。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ListWorkspaces(request *model.ListWorkspacesRequest) (*model.ListWorkspacesResponse, error) {
 	requestDef := GenReqDefForListWorkspaces()
 
@@ -597,8 +571,7 @@ func (c *WorkspaceClient) ListWorkspacesInvoker(request *model.ListWorkspacesReq
 //
 // 该接口目前支持修改云办公服务属性。单次请求仅支持修改一种属性类型。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) UpdateWorkspace(request *model.UpdateWorkspaceRequest) (*model.UpdateWorkspaceResponse, error) {
 	requestDef := GenReqDefForUpdateWorkspace()
 

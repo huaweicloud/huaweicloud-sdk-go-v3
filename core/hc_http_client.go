@@ -254,6 +254,16 @@ func (hc *HcHttpClient) deserializeResponse(resp *response.DefaultHttpResponse, 
 		return nil
 	}
 
+	err := hc.deserializeResponseFields(resp, reqDef)
+	if err != nil {
+		return err
+	}
+
+	addStatusCode()
+	return nil
+}
+
+func (hc *HcHttpClient) deserializeResponseFields(resp *response.DefaultHttpResponse, reqDef *def.HttpRequestDef) error {
 	data, err := ioutil.ReadAll(resp.Response.Body)
 	if err != nil {
 		if closeErr := resp.Response.Body.Close(); closeErr != nil {
@@ -305,7 +315,6 @@ func (hc *HcHttpClient) deserializeResponse(resp *response.DefaultHttpResponse, 
 		}
 	}
 
-	addStatusCode()
 	return nil
 }
 

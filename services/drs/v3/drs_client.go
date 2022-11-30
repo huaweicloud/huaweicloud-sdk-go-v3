@@ -23,8 +23,7 @@ func DrsClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 数据复制服务支持对同步的对象进行加工，即可以为选择的对象添加规则。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DrsClient) BatchChangeData(request *model.BatchChangeDataRequest) (*model.BatchChangeDataResponse, error) {
 	requestDef := GenReqDefForBatchChangeData()
 
@@ -45,8 +44,7 @@ func (c *DrsClient) BatchChangeDataInvoker(request *model.BatchChangeDataRequest
 //
 // 批量预检查，校验是否可进行迁移。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DrsClient) BatchCheckJobs(request *model.BatchCheckJobsRequest) (*model.BatchCheckJobsResponse, error) {
 	requestDef := GenReqDefForBatchCheckJobs()
 
@@ -67,8 +65,7 @@ func (c *DrsClient) BatchCheckJobsInvoker(request *model.BatchCheckJobsRequest) 
 //
 // 批量查询任务的预检查结果。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DrsClient) BatchCheckResults(request *model.BatchCheckResultsRequest) (*model.BatchCheckResultsResponse, error) {
 	requestDef := GenReqDefForBatchCheckResults()
 
@@ -89,8 +86,7 @@ func (c *DrsClient) BatchCheckResultsInvoker(request *model.BatchCheckResultsReq
 //
 // 根据请求参数不同，可以批量创建实时迁移、实时同步、实时灾备任务。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DrsClient) BatchCreateJobs(request *model.BatchCreateJobsRequest) (*model.BatchCreateJobsResponse, error) {
 	requestDef := GenReqDefForBatchCreateJobs()
 
@@ -111,8 +107,7 @@ func (c *DrsClient) BatchCreateJobsInvoker(request *model.BatchCreateJobsRequest
 //
 // 批量结束任务或删除实时迁移、实时同步、实时灾备任务。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DrsClient) BatchDeleteJobs(request *model.BatchDeleteJobsRequest) (*model.BatchDeleteJobsResponse, error) {
 	requestDef := GenReqDefForBatchDeleteJobs()
 
@@ -133,8 +128,7 @@ func (c *DrsClient) BatchDeleteJobsInvoker(request *model.BatchDeleteJobsRequest
 //
 // 根据任务ID批量查询任务详情。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DrsClient) BatchListJobDetails(request *model.BatchListJobDetailsRequest) (*model.BatchListJobDetailsResponse, error) {
 	requestDef := GenReqDefForBatchListJobDetails()
 
@@ -155,8 +149,7 @@ func (c *DrsClient) BatchListJobDetailsInvoker(request *model.BatchListJobDetail
 //
 // 根据任务ID批量查询任务状态。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DrsClient) BatchListJobStatus(request *model.BatchListJobStatusRequest) (*model.BatchListJobStatusResponse, error) {
 	requestDef := GenReqDefForBatchListJobStatus()
 
@@ -177,8 +170,7 @@ func (c *DrsClient) BatchListJobStatusInvoker(request *model.BatchListJobStatusR
 //
 // 根据任务ID批量查询全量进度、增量时延信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DrsClient) BatchListProgresses(request *model.BatchListProgressesRequest) (*model.BatchListProgressesResponse, error) {
 	requestDef := GenReqDefForBatchListProgresses()
 
@@ -199,8 +191,7 @@ func (c *DrsClient) BatchListProgressesInvoker(request *model.BatchListProgresse
 //
 // 批量查询RPO和RTO。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DrsClient) BatchListRposAndRtos(request *model.BatchListRposAndRtosRequest) (*model.BatchListRposAndRtosResponse, error) {
 	requestDef := GenReqDefForBatchListRposAndRtos()
 
@@ -221,8 +212,7 @@ func (c *DrsClient) BatchListRposAndRtosInvoker(request *model.BatchListRposAndR
 //
 // 根据任务ID批量查询灾备初始化对象详情。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DrsClient) BatchListStructDetail(request *model.BatchListStructDetailRequest) (*model.BatchListStructDetailResponse, error) {
 	requestDef := GenReqDefForBatchListStructDetail()
 
@@ -243,8 +233,7 @@ func (c *DrsClient) BatchListStructDetailInvoker(request *model.BatchListStructD
 //
 // 根据任务ID批量查询灾备初始化进度，虚拟id不支持查询。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DrsClient) BatchListStructProcess(request *model.BatchListStructProcessRequest) (*model.BatchListStructProcessResponse, error) {
 	requestDef := GenReqDefForBatchListStructProcess()
 
@@ -265,8 +254,7 @@ func (c *DrsClient) BatchListStructProcessInvoker(request *model.BatchListStruct
 //
 // 任务启动之后需要修改源库/目标库密码时调用此接口。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DrsClient) BatchResetPassword(request *model.BatchResetPasswordRequest) (*model.BatchResetPasswordResponse, error) {
 	requestDef := GenReqDefForBatchResetPassword()
 
@@ -287,8 +275,7 @@ func (c *DrsClient) BatchResetPasswordInvoker(request *model.BatchResetPasswordR
 //
 // 在迁移过程中由于不确定因素导致迁移任务失败，可通过重试功能，重新提交迁移任务。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DrsClient) BatchRestoreTask(request *model.BatchRestoreTaskRequest) (*model.BatchRestoreTaskResponse, error) {
 	requestDef := GenReqDefForBatchRestoreTask()
 
@@ -311,8 +298,7 @@ func (c *DrsClient) BatchRestoreTaskInvoker(request *model.BatchRestoreTaskReque
 // - 选择是：迁移后，所有源数据库对象的Definer都会迁移至该用户下，其他用户需要授权后才具有数据库对象权限。
 // - 选择否：迁移后，将保持源数据库对象Definer定义不变，选择此选项，需要配合下一步用户权限迁移功能，将源数据库的用户全部迁移，这样才能保持源数据库的权限体系完全不变。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DrsClient) BatchSetDefiner(request *model.BatchSetDefinerRequest) (*model.BatchSetDefinerResponse, error) {
 	requestDef := GenReqDefForBatchSetDefiner()
 
@@ -333,8 +319,7 @@ func (c *DrsClient) BatchSetDefinerInvoker(request *model.BatchSetDefinerRequest
 //
 // 迁移之前，选择需要迁移的数据库或者表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DrsClient) BatchSetObjects(request *model.BatchSetObjectsRequest) (*model.BatchSetObjectsResponse, error) {
 	requestDef := GenReqDefForBatchSetObjects()
 
@@ -356,8 +341,7 @@ func (c *DrsClient) BatchSetObjectsInvoker(request *model.BatchSetObjectsRequest
 // - 批量设置同步策略，包括冲突策略、过滤DROP Datase、对象同步范围。
 // - 设置kafka同步策略
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DrsClient) BatchSetPolicy(request *model.BatchSetPolicyRequest) (*model.BatchSetPolicyResponse, error) {
 	requestDef := GenReqDefForBatchSetPolicy()
 
@@ -379,8 +363,7 @@ func (c *DrsClient) BatchSetPolicyInvoker(request *model.BatchSetPolicyRequest) 
 // 批量设置告警信息，已结束的任务不支持设置。
 // - 支持选择已有的SMN主题和手动输入手机号、邮箱两种方式，具体根据自己使用情况选择
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DrsClient) BatchSetSmn(request *model.BatchSetSmnRequest) (*model.BatchSetSmnResponse, error) {
 	requestDef := GenReqDefForBatchSetSmn()
 
@@ -403,8 +386,7 @@ func (c *DrsClient) BatchSetSmnInvoker(request *model.BatchSetSmnRequest) *Batch
 // - 限速：自定义的最大迁移速度，迁移过程中的迁移速度将不会超过该速度。
 // - 不限速：对迁移速度不进行限制，通常会最大化使用源数据库的出口带宽。该流速模式同时会对源数据库造成读消耗，消耗取决于源数据库的出口带宽。比如：源数据库的出口带宽为100MB/s，假设高速模式使用了80%带宽，则迁移对源数据库将造成80MB/s的读操作IO消耗。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DrsClient) BatchSetSpeed(request *model.BatchSetSpeedRequest) (*model.BatchSetSpeedResponse, error) {
 	requestDef := GenReqDefForBatchSetSpeed()
 
@@ -425,8 +407,7 @@ func (c *DrsClient) BatchSetSpeedInvoker(request *model.BatchSetSpeedRequest) *B
 //
 // 在进行数据库迁移时，为了确保迁移成功后业务应用的使用不受影响，数据复制服务提供了参数对比功能帮助您进行源库和目标库参数一致性对比，此接口可以获取源库和目标库的数据库参数。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DrsClient) BatchShowParams(request *model.BatchShowParamsRequest) (*model.BatchShowParamsResponse, error) {
 	requestDef := GenReqDefForBatchShowParams()
 
@@ -447,8 +428,7 @@ func (c *DrsClient) BatchShowParamsInvoker(request *model.BatchShowParamsRequest
 //
 // 批量启动实时迁移、同步、灾备任务。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DrsClient) BatchStartJobs(request *model.BatchStartJobsRequest) (*model.BatchStartJobsResponse, error) {
 	requestDef := GenReqDefForBatchStartJobs()
 
@@ -469,8 +449,7 @@ func (c *DrsClient) BatchStartJobsInvoker(request *model.BatchStartJobsRequest) 
 //
 // 批量暂停任务。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DrsClient) BatchStopJobs(request *model.BatchStopJobsRequest) (*model.BatchStopJobsResponse, error) {
 	requestDef := GenReqDefForBatchStopJobs()
 
@@ -491,8 +470,7 @@ func (c *DrsClient) BatchStopJobsInvoker(request *model.BatchStopJobsRequest) *B
 //
 // 批量主备倒换。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DrsClient) BatchSwitchover(request *model.BatchSwitchoverRequest) (*model.BatchSwitchoverResponse, error) {
 	requestDef := GenReqDefForBatchSwitchover()
 
@@ -513,8 +491,7 @@ func (c *DrsClient) BatchSwitchoverInvoker(request *model.BatchSwitchoverRequest
 //
 // 批量修改任务名称或描述，设置异常通知信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DrsClient) BatchUpdateJob(request *model.BatchUpdateJobRequest) (*model.BatchUpdateJobResponse, error) {
 	requestDef := GenReqDefForBatchUpdateJob()
 
@@ -535,8 +512,7 @@ func (c *DrsClient) BatchUpdateJobInvoker(request *model.BatchUpdateJobRequest) 
 //
 // 数据库的迁移过程中，迁移用户需要进行单独处理，该接口可以批量设置需要迁移的用户和角色。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DrsClient) BatchUpdateUser(request *model.BatchUpdateUserRequest) (*model.BatchUpdateUserResponse, error) {
 	requestDef := GenReqDefForBatchUpdateUser()
 
@@ -558,8 +534,7 @@ func (c *DrsClient) BatchUpdateUserInvoker(request *model.BatchUpdateUserRequest
 // - 批量测试连接（集群模式）。
 // - 主备任务测试连接
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DrsClient) BatchValidateClustersConnections(request *model.BatchValidateClustersConnectionsRequest) (*model.BatchValidateClustersConnectionsResponse, error) {
 	requestDef := GenReqDefForBatchValidateClustersConnections()
 
@@ -580,8 +555,7 @@ func (c *DrsClient) BatchValidateClustersConnectionsInvoker(request *model.Batch
 //
 // 批量测试连接。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DrsClient) BatchValidateConnections(request *model.BatchValidateConnectionsRequest) (*model.BatchValidateConnectionsResponse, error) {
 	requestDef := GenReqDefForBatchValidateConnections()
 
@@ -602,8 +576,7 @@ func (c *DrsClient) BatchValidateConnectionsInvoker(request *model.BatchValidate
 //
 // 创建对比任务。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DrsClient) CreateCompareTask(request *model.CreateCompareTaskRequest) (*model.CreateCompareTaskResponse, error) {
 	requestDef := GenReqDefForCreateCompareTask()
 
@@ -624,8 +597,7 @@ func (c *DrsClient) CreateCompareTaskInvoker(request *model.CreateCompareTaskReq
 //
 // 查询规格未售罄的可用区
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DrsClient) ListAvailableZone(request *model.ListAvailableZoneRequest) (*model.ListAvailableZoneResponse, error) {
 	requestDef := GenReqDefForListAvailableZone()
 
@@ -646,8 +618,7 @@ func (c *DrsClient) ListAvailableZoneInvoker(request *model.ListAvailableZoneReq
 //
 // 查询对比结果。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DrsClient) ListCompareResult(request *model.ListCompareResultRequest) (*model.ListCompareResultResponse, error) {
 	requestDef := GenReqDefForListCompareResult()
 
@@ -668,8 +639,7 @@ func (c *DrsClient) ListCompareResultInvoker(request *model.ListCompareResultReq
 //
 // 数据库的迁移过程中，迁移用户需要进行单独处理，该接口可以查询源库的用户信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DrsClient) ListUsers(request *model.ListUsersRequest) (*model.ListUsersResponse, error) {
 	requestDef := GenReqDefForListUsers()
 
@@ -690,8 +660,7 @@ func (c *DrsClient) ListUsersInvoker(request *model.ListUsersRequest) *ListUsers
 //
 // 查询租户任务列表，可以根据引擎类型，网络类型，任务状态，任务名称，任务ID进行查询。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DrsClient) ShowJobList(request *model.ShowJobListRequest) (*model.ShowJobListResponse, error) {
 	requestDef := GenReqDefForShowJobList()
 
@@ -712,8 +681,7 @@ func (c *DrsClient) ShowJobListInvoker(request *model.ShowJobListRequest) *ShowJ
 //
 // 根据任务ID查询容灾监控数据。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DrsClient) ShowMonitoringData(request *model.ShowMonitoringDataRequest) (*model.ShowMonitoringDataResponse, error) {
 	requestDef := GenReqDefForShowMonitoringData()
 
@@ -734,8 +702,7 @@ func (c *DrsClient) ShowMonitoringDataInvoker(request *model.ShowMonitoringDataR
 //
 // 查询单租户在DRS服务下的配额信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DrsClient) ShowQuotas(request *model.ShowQuotasRequest) (*model.ShowQuotasResponse, error) {
 	requestDef := GenReqDefForShowQuotas()
 
@@ -756,8 +723,7 @@ func (c *DrsClient) ShowQuotasInvoker(request *model.ShowQuotasRequest) *ShowQuo
 //
 // 修改数据库参数。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DrsClient) UpdateParams(request *model.UpdateParamsRequest) (*model.UpdateParamsResponse, error) {
 	requestDef := GenReqDefForUpdateParams()
 
@@ -778,8 +744,7 @@ func (c *DrsClient) UpdateParamsInvoker(request *model.UpdateParamsRequest) *Upd
 //
 // 修改调优参数的值。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DrsClient) UpdateTuningParams(request *model.UpdateTuningParamsRequest) (*model.UpdateTuningParamsResponse, error) {
 	requestDef := GenReqDefForUpdateTuningParams()
 

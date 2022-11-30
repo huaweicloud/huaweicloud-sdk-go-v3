@@ -23,8 +23,7 @@ func DmsClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 批量添加或删除队列标签。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DmsClient) BatchCreateOrDeleteQueueTag(request *model.BatchCreateOrDeleteQueueTagRequest) (*model.BatchCreateOrDeleteQueueTagResponse, error) {
 	requestDef := GenReqDefForBatchCreateOrDeleteQueueTag()
 
@@ -53,8 +52,7 @@ func (c *DmsClient) BatchCreateOrDeleteQueueTagInvoker(request *model.BatchCreat
 //
 // 确认消费失败后，可以再次重新消费和确认。当开启死信时，消息进行多次重复消费仍然失败后，DMS会将该条消息转存到死信队列中，有效期为72小时，用户可以根据需要对死信消息进行重新消费。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DmsClient) ConfirmConsumptionMessages(request *model.ConfirmConsumptionMessagesRequest) (*model.ConfirmConsumptionMessagesResponse, error) {
 	requestDef := GenReqDefForConfirmConsumptionMessages()
 
@@ -83,8 +81,7 @@ func (c *DmsClient) ConfirmConsumptionMessagesInvoker(request *model.ConfirmCons
 //
 // 仅NORMAL队列和FIFO队列可以开启死信消息，因为只有NORMAL队列和FIFO队列可消费死信消息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DmsClient) ConfirmDeadLettersMessages(request *model.ConfirmDeadLettersMessagesRequest) (*model.ConfirmDeadLettersMessagesResponse, error) {
 	requestDef := GenReqDefForConfirmDeadLettersMessages()
 
@@ -107,8 +104,7 @@ func (c *DmsClient) ConfirmDeadLettersMessagesInvoker(request *model.ConfirmDead
 //
 // 仅NORMAL队列和FIFO队列可以开启死信消息，因为只有NORMAL队列和FIFO队列可消费死信消息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DmsClient) ConsumeDeadlettersMessage(request *model.ConsumeDeadlettersMessageRequest) (*model.ConsumeDeadlettersMessageResponse, error) {
 	requestDef := GenReqDefForConsumeDeadlettersMessage()
 
@@ -133,8 +129,7 @@ func (c *DmsClient) ConsumeDeadlettersMessageInvoker(request *model.ConsumeDeadl
 //
 // 每个消费组只支持一种Label规则，如果第二次消费更换了Label规则，则消费失败。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DmsClient) ConsumeMessages(request *model.ConsumeMessagesRequest) (*model.ConsumeMessagesResponse, error) {
 	requestDef := GenReqDefForConsumeMessages()
 
@@ -159,8 +154,7 @@ func (c *DmsClient) ConsumeMessagesInvoker(request *model.ConsumeMessagesRequest
 //
 // &gt; 创建消费组后系统内部完成初始化需要1-3秒，如果创建消费组后立即进行操作，可能会导致消费失败。建议3秒后再操作该队列。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DmsClient) CreateConsumerGroup(request *model.CreateConsumerGroupRequest) (*model.CreateConsumerGroupResponse, error) {
 	requestDef := GenReqDefForCreateConsumerGroup()
 
@@ -182,8 +176,7 @@ func (c *DmsClient) CreateConsumerGroupInvoker(request *model.CreateConsumerGrou
 // 每个project_id默认只能创建30个队列。
 // &gt; 创建队列时系统内部完成初始化需要1-3秒，如果创建队列后立即进行操作，可能会导致生产消息、消费消息、查询队列详情、创建消费组和删除队列等操作失败。建议3秒后再操作该队列。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DmsClient) CreateQueue(request *model.CreateQueueRequest) (*model.CreateQueueResponse, error) {
 	requestDef := GenReqDefForCreateQueue()
 
@@ -204,8 +197,7 @@ func (c *DmsClient) CreateQueueInvoker(request *model.CreateQueueRequest) *Creat
 //
 // 删除指定的队列。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DmsClient) DeleteQueue(request *model.DeleteQueueRequest) (*model.DeleteQueueResponse, error) {
 	requestDef := GenReqDefForDeleteQueue()
 
@@ -226,8 +218,7 @@ func (c *DmsClient) DeleteQueueInvoker(request *model.DeleteQueueRequest) *Delet
 //
 // 删除指定消费组。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DmsClient) DeleteSpecifiedConsumerGroup(request *model.DeleteSpecifiedConsumerGroupRequest) (*model.DeleteSpecifiedConsumerGroupResponse, error) {
 	requestDef := GenReqDefForDeleteSpecifiedConsumerGroup()
 
@@ -248,8 +239,7 @@ func (c *DmsClient) DeleteSpecifiedConsumerGroupInvoker(request *model.DeleteSpe
 //
 // 获取指定队列的所有消费组。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DmsClient) ListConsumerGroups(request *model.ListConsumerGroupsRequest) (*model.ListConsumerGroupsResponse, error) {
 	requestDef := GenReqDefForListConsumerGroups()
 
@@ -270,8 +260,7 @@ func (c *DmsClient) ListConsumerGroupsInvoker(request *model.ListConsumerGroupsR
 //
 // 查看所有队列。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DmsClient) ListQueues(request *model.ListQueuesRequest) (*model.ListQueuesResponse, error) {
 	requestDef := GenReqDefForListQueues()
 
@@ -296,8 +285,7 @@ func (c *DmsClient) ListQueuesInvoker(request *model.ListQueuesRequest) *ListQue
 // - 每次发送的消息总负载不超过512KB。
 // - Kafka队列的消息保存时间在创建队列时可以设置，可设置范围为1~72小时。其他队列的消息最大保存时长为72小时。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DmsClient) SendMessages(request *model.SendMessagesRequest) (*model.SendMessagesResponse, error) {
 	requestDef := GenReqDefForSendMessages()
 
@@ -318,8 +306,7 @@ func (c *DmsClient) SendMessagesInvoker(request *model.SendMessagesRequest) *Sen
 //
 // 查看指定的队列。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DmsClient) ShowQueue(request *model.ShowQueueRequest) (*model.ShowQueueResponse, error) {
 	requestDef := GenReqDefForShowQueue()
 
@@ -340,8 +327,7 @@ func (c *DmsClient) ShowQueueInvoker(request *model.ShowQueueRequest) *ShowQueue
 //
 // 查询项目标签。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DmsClient) ShowQueueProjectTags(request *model.ShowQueueProjectTagsRequest) (*model.ShowQueueProjectTagsResponse, error) {
 	requestDef := GenReqDefForShowQueueProjectTags()
 
@@ -362,8 +348,7 @@ func (c *DmsClient) ShowQueueProjectTagsInvoker(request *model.ShowQueueProjectT
 //
 // 查询队列标签。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DmsClient) ShowQueueTags(request *model.ShowQueueTagsRequest) (*model.ShowQueueTagsResponse, error) {
 	requestDef := GenReqDefForShowQueueTags()
 
@@ -384,8 +369,7 @@ func (c *DmsClient) ShowQueueTagsInvoker(request *model.ShowQueueTagsRequest) *S
 //
 // 查看当前项目的配额。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DmsClient) ShowQuotas(request *model.ShowQuotasRequest) (*model.ShowQuotasResponse, error) {
 	requestDef := GenReqDefForShowQuotas()
 

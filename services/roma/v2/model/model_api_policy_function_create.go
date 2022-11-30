@@ -23,6 +23,9 @@ type ApiPolicyFunctionCreate struct {
 	// 版本。字符长度不超过64
 	Version *string `json:"version,omitempty"`
 
+	// 函数别名URN  当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
+	AliasUrn *string `json:"alias_urn,omitempty"`
+
 	// 关联的策略组合模式： - ALL：满足全部条件 - ANY：满足任一条件
 	EffectMode ApiPolicyFunctionCreateEffectMode `json:"effect_mode"`
 

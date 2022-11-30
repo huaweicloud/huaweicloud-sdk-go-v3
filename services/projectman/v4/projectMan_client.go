@@ -23,8 +23,7 @@ func ProjectManClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // AGC调用 当前用户申请加入项目, 申请的用户id写在header中
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) AddApplyJoinProjectForAgc(request *model.AddApplyJoinProjectForAgcRequest) (*model.AddApplyJoinProjectForAgcResponse, error) {
 	requestDef := GenReqDefForAddApplyJoinProjectForAgc()
 
@@ -45,8 +44,7 @@ func (c *ProjectManClient) AddApplyJoinProjectForAgcInvoker(request *model.AddAp
 //
 // 添加项目成员,可以添加跨租户成员
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) AddMemberV4(request *model.AddMemberV4Request) (*model.AddMemberV4Response, error) {
 	requestDef := GenReqDefForAddMemberV4()
 
@@ -67,8 +65,7 @@ func (c *ProjectManClient) AddMemberV4Invoker(request *model.AddMemberV4Request)
 //
 // 批量添加项目成员，只能添加和项目创建者同一租户下的成员，不正确的用户id会略过，添加的用户超过权限的，默认角色设置为7
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) BatchAddMembersV4(request *model.BatchAddMembersV4Request) (*model.BatchAddMembersV4Response, error) {
 	requestDef := GenReqDefForBatchAddMembersV4()
 
@@ -89,8 +86,7 @@ func (c *ProjectManClient) BatchAddMembersV4Invoker(request *model.BatchAddMembe
 //
 // 批量删除项目成员
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) BatchDeleteMembersV4(request *model.BatchDeleteMembersV4Request) (*model.BatchDeleteMembersV4Response, error) {
 	requestDef := GenReqDefForBatchDeleteMembersV4()
 
@@ -111,8 +107,7 @@ func (c *ProjectManClient) BatchDeleteMembersV4Invoker(request *model.BatchDelet
 //
 // 拥有te_admin角色的用户可以更新其他用户的昵称
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) BatchUpdateChildNickNames(request *model.BatchUpdateChildNickNamesRequest) (*model.BatchUpdateChildNickNamesResponse, error) {
 	requestDef := GenReqDefForBatchUpdateChildNickNames()
 
@@ -133,8 +128,7 @@ func (c *ProjectManClient) BatchUpdateChildNickNamesInvoker(request *model.Batch
 //
 // 检查项目名称是否存在
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) CheckProjectNameV4(request *model.CheckProjectNameV4Request) (*model.CheckProjectNameV4Response, error) {
 	requestDef := GenReqDefForCheckProjectNameV4()
 
@@ -155,8 +149,7 @@ func (c *ProjectManClient) CheckProjectNameV4Invoker(request *model.CheckProject
 //
 // 创建项目
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) CreateProjectV4(request *model.CreateProjectV4Request) (*model.CreateProjectV4Response, error) {
 	requestDef := GenReqDefForCreateProjectV4()
 
@@ -177,8 +170,7 @@ func (c *ProjectManClient) CreateProjectV4Invoker(request *model.CreateProjectV4
 //
 // 删除项目
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) DeleteProjectV4(request *model.DeleteProjectV4Request) (*model.DeleteProjectV4Response, error) {
 	requestDef := GenReqDefForDeleteProjectV4()
 
@@ -199,8 +191,7 @@ func (c *ProjectManClient) DeleteProjectV4Invoker(request *model.DeleteProjectV4
 //
 // 获取租户没有加入的项目
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) ListDomainNotAddedProjectsV4(request *model.ListDomainNotAddedProjectsV4Request) (*model.ListDomainNotAddedProjectsV4Response, error) {
 	requestDef := GenReqDefForListDomainNotAddedProjectsV4()
 
@@ -221,8 +212,7 @@ func (c *ProjectManClient) ListDomainNotAddedProjectsV4Invoker(request *model.Li
 //
 // 获取bug统计信息，按模块统计
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) ListProjectBugStaticsV4(request *model.ListProjectBugStaticsV4Request) (*model.ListProjectBugStaticsV4Response, error) {
 	requestDef := GenReqDefForListProjectBugStaticsV4()
 
@@ -243,8 +233,7 @@ func (c *ProjectManClient) ListProjectBugStaticsV4Invoker(request *model.ListPro
 //
 // 获取需求统计信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) ListProjectDemandStaticV4(request *model.ListProjectDemandStaticV4Request) (*model.ListProjectDemandStaticV4Response, error) {
 	requestDef := GenReqDefForListProjectDemandStaticV4()
 
@@ -265,8 +254,7 @@ func (c *ProjectManClient) ListProjectDemandStaticV4Invoker(request *model.ListP
 //
 // 获取项目成员列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) ListProjectMembersV4(request *model.ListProjectMembersV4Request) (*model.ListProjectMembersV4Response, error) {
 	requestDef := GenReqDefForListProjectMembersV4()
 
@@ -287,8 +275,7 @@ func (c *ProjectManClient) ListProjectMembersV4Invoker(request *model.ListProjec
 //
 // 查询项目列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) ListProjectsV4(request *model.ListProjectsV4Request) (*model.ListProjectsV4Response, error) {
 	requestDef := GenReqDefForListProjectsV4()
 
@@ -309,8 +296,7 @@ func (c *ProjectManClient) ListProjectsV4Invoker(request *model.ListProjectsV4Re
 //
 // 分页查询看板项目下工作项的状态历史记录
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) ListWorkitemStatusRecordsV4(request *model.ListWorkitemStatusRecordsV4Request) (*model.ListWorkitemStatusRecordsV4Response, error) {
 	requestDef := GenReqDefForListWorkitemStatusRecordsV4()
 
@@ -331,8 +317,7 @@ func (c *ProjectManClient) ListWorkitemStatusRecordsV4Invoker(request *model.Lis
 //
 // 查询看板项目下的工作项
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) ListWorkitems(request *model.ListWorkitemsRequest) (*model.ListWorkitemsResponse, error) {
 	requestDef := GenReqDefForListWorkitems()
 
@@ -353,8 +338,7 @@ func (c *ProjectManClient) ListWorkitemsInvoker(request *model.ListWorkitemsRequ
 //
 // 项目成员主动退出项目，项目创建者不能退出
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) RemoveProject(request *model.RemoveProjectRequest) (*model.RemoveProjectResponse, error) {
 	requestDef := GenReqDefForRemoveProject()
 
@@ -375,8 +359,7 @@ func (c *ProjectManClient) RemoveProjectInvoker(request *model.RemoveProjectRequ
 //
 // 查询缺陷密度
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) ShowBugDensityV2(request *model.ShowBugDensityV2Request) (*model.ShowBugDensityV2Response, error) {
 	requestDef := GenReqDefForShowBugDensityV2()
 
@@ -397,8 +380,7 @@ func (c *ProjectManClient) ShowBugDensityV2Invoker(request *model.ShowBugDensity
 //
 // 查询人均bug
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) ShowBugsPerDeveloper(request *model.ShowBugsPerDeveloperRequest) (*model.ShowBugsPerDeveloperResponse, error) {
 	requestDef := GenReqDefForShowBugsPerDeveloper()
 
@@ -419,8 +401,7 @@ func (c *ProjectManClient) ShowBugsPerDeveloperInvoker(request *model.ShowBugsPe
 //
 // 查询需求按时完成率
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) ShowCompletionRate(request *model.ShowCompletionRateRequest) (*model.ShowCompletionRateResponse, error) {
 	requestDef := GenReqDefForShowCompletionRate()
 
@@ -441,8 +422,7 @@ func (c *ProjectManClient) ShowCompletionRateInvoker(request *model.ShowCompleti
 //
 // 获取当前用户信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) ShowCurUserInfo(request *model.ShowCurUserInfoRequest) (*model.ShowCurUserInfoResponse, error) {
 	requestDef := GenReqDefForShowCurUserInfo()
 
@@ -463,8 +443,7 @@ func (c *ProjectManClient) ShowCurUserInfoInvoker(request *model.ShowCurUserInfo
 //
 // 获取用户在项目中的角色
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) ShowCurUserRole(request *model.ShowCurUserRoleRequest) (*model.ShowCurUserRoleResponse, error) {
 	requestDef := GenReqDefForShowCurUserRole()
 
@@ -485,8 +464,7 @@ func (c *ProjectManClient) ShowCurUserRoleInvoker(request *model.ShowCurUserRole
 //
 // 获取项目详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) ShowProjectInfoV4(request *model.ShowProjectInfoV4Request) (*model.ShowProjectInfoV4Response, error) {
 	requestDef := GenReqDefForShowProjectInfoV4()
 
@@ -507,8 +485,7 @@ func (c *ProjectManClient) ShowProjectInfoV4Invoker(request *model.ShowProjectIn
 //
 // 获取项目概览
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) ShowProjectSummaryV4(request *model.ShowProjectSummaryV4Request) (*model.ShowProjectSummaryV4Response, error) {
 	requestDef := GenReqDefForShowProjectSummaryV4()
 
@@ -529,8 +506,7 @@ func (c *ProjectManClient) ShowProjectSummaryV4Invoker(request *model.ShowProjec
 //
 // 查询看板项目的工作项流转配置
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) ShowWorkItemWrokflowConfig(request *model.ShowWorkItemWrokflowConfigRequest) (*model.ShowWorkItemWrokflowConfigResponse, error) {
 	requestDef := GenReqDefForShowWorkItemWrokflowConfig()
 
@@ -551,8 +527,7 @@ func (c *ProjectManClient) ShowWorkItemWrokflowConfigInvoker(request *model.Show
 //
 // 更新成员在项目中的角色
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) UpdateMembesRoleV4(request *model.UpdateMembesRoleV4Request) (*model.UpdateMembesRoleV4Response, error) {
 	requestDef := GenReqDefForUpdateMembesRoleV4()
 
@@ -573,8 +548,7 @@ func (c *ProjectManClient) UpdateMembesRoleV4Invoker(request *model.UpdateMembes
 //
 // 更新用户昵称
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) UpdateNickNameV4(request *model.UpdateNickNameV4Request) (*model.UpdateNickNameV4Response, error) {
 	requestDef := GenReqDefForUpdateNickNameV4()
 
@@ -595,8 +569,7 @@ func (c *ProjectManClient) UpdateNickNameV4Invoker(request *model.UpdateNickName
 //
 // 更新项目
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) UpdateProjectV4(request *model.UpdateProjectV4Request) (*model.UpdateProjectV4Response, error) {
 	requestDef := GenReqDefForUpdateProjectV4()
 
@@ -617,8 +590,7 @@ func (c *ProjectManClient) UpdateProjectV4Invoker(request *model.UpdateProjectV4
 //
 // 批量删除工作项
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) BatchDeleteIssuesV4(request *model.BatchDeleteIssuesV4Request) (*model.BatchDeleteIssuesV4Response, error) {
 	requestDef := GenReqDefForBatchDeleteIssuesV4()
 
@@ -639,8 +611,7 @@ func (c *ProjectManClient) BatchDeleteIssuesV4Invoker(request *model.BatchDelete
 //
 // 批量删除项目的迭代
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) BatchDeleteIterationsV4(request *model.BatchDeleteIterationsV4Request) (*model.BatchDeleteIterationsV4Response, error) {
 	requestDef := GenReqDefForBatchDeleteIterationsV4()
 
@@ -661,8 +632,7 @@ func (c *ProjectManClient) BatchDeleteIterationsV4Invoker(request *model.BatchDe
 //
 // 取消领域与项目的关联关系
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) CancelProjectDomain(request *model.CancelProjectDomainRequest) (*model.CancelProjectDomainResponse, error) {
 	requestDef := GenReqDefForCancelProjectDomain()
 
@@ -683,8 +653,7 @@ func (c *ProjectManClient) CancelProjectDomainInvoker(request *model.CancelProje
 //
 // 创建工作项类型自定义字段
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) CreateCustomfields(request *model.CreateCustomfieldsRequest) (*model.CreateCustomfieldsResponse, error) {
 	requestDef := GenReqDefForCreateCustomfields()
 
@@ -705,8 +674,7 @@ func (c *ProjectManClient) CreateCustomfieldsInvoker(request *model.CreateCustom
 //
 // 创建工作项
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) CreateIssueV4(request *model.CreateIssueV4Request) (*model.CreateIssueV4Response, error) {
 	requestDef := GenReqDefForCreateIssueV4()
 
@@ -727,8 +695,7 @@ func (c *ProjectManClient) CreateIssueV4Invoker(request *model.CreateIssueV4Requ
 //
 // 创建Scrum项目迭代
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) CreateIterationV4(request *model.CreateIterationV4Request) (*model.CreateIterationV4Response, error) {
 	requestDef := GenReqDefForCreateIterationV4()
 
@@ -749,8 +716,7 @@ func (c *ProjectManClient) CreateIterationV4Invoker(request *model.CreateIterati
 //
 // 查询项目的领域列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) CreateProjectDomain(request *model.CreateProjectDomainRequest) (*model.CreateProjectDomainResponse, error) {
 	requestDef := GenReqDefForCreateProjectDomain()
 
@@ -771,8 +737,7 @@ func (c *ProjectManClient) CreateProjectDomainInvoker(request *model.CreateProje
 //
 // 查询项目的模块列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) CreateProjectModule(request *model.CreateProjectModuleRequest) (*model.CreateProjectModuleResponse, error) {
 	requestDef := GenReqDefForCreateProjectModule()
 
@@ -793,8 +758,7 @@ func (c *ProjectManClient) CreateProjectModuleInvoker(request *model.CreateProje
 //
 // 拥有IAM细粒度权限（projectmanConfig:systemSettingField:set）且在devcloud项目中有创建工作项的权限的用户可以设置工作项的创建者
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) CreateSystemIssueV4(request *model.CreateSystemIssueV4Request) (*model.CreateSystemIssueV4Response, error) {
 	requestDef := GenReqDefForCreateSystemIssueV4()
 
@@ -815,8 +779,7 @@ func (c *ProjectManClient) CreateSystemIssueV4Invoker(request *model.CreateSyste
 //
 // 删除工作项
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) DeleteIssueV4(request *model.DeleteIssueV4Request) (*model.DeleteIssueV4Response, error) {
 	requestDef := GenReqDefForDeleteIssueV4()
 
@@ -837,8 +800,7 @@ func (c *ProjectManClient) DeleteIssueV4Invoker(request *model.DeleteIssueV4Requ
 //
 // 删除项目迭代
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) DeleteIterationV4(request *model.DeleteIterationV4Request) (*model.DeleteIterationV4Response, error) {
 	requestDef := GenReqDefForDeleteIterationV4()
 
@@ -859,8 +821,7 @@ func (c *ProjectManClient) DeleteIterationV4Invoker(request *model.DeleteIterati
 //
 // 删除项目的模块
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) DeleteProjectModule(request *model.DeleteProjectModuleRequest) (*model.DeleteProjectModuleResponse, error) {
 	requestDef := GenReqDefForDeleteProjectModule()
 
@@ -881,8 +842,7 @@ func (c *ProjectManClient) DeleteProjectModuleInvoker(request *model.DeleteProje
 //
 // 下载图片
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) DownloadImageFile(request *model.DownloadImageFileRequest) (*model.DownloadImageFileResponse, error) {
 	requestDef := GenReqDefForDownloadImageFile()
 
@@ -903,8 +863,7 @@ func (c *ProjectManClient) DownloadImageFileInvoker(request *model.DownloadImage
 //
 // 查询当前工作项已经关联的工作项
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) ListAssociatedIssues(request *model.ListAssociatedIssuesRequest) (*model.ListAssociatedIssuesResponse, error) {
 	requestDef := GenReqDefForListAssociatedIssues()
 
@@ -925,8 +884,7 @@ func (c *ProjectManClient) ListAssociatedIssuesInvoker(request *model.ListAssoci
 //
 // 查询关联用例
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) ListAssociatedTestCases(request *model.ListAssociatedTestCasesRequest) (*model.ListAssociatedTestCasesResponse, error) {
 	requestDef := GenReqDefForListAssociatedTestCases()
 
@@ -947,8 +905,7 @@ func (c *ProjectManClient) ListAssociatedTestCasesInvoker(request *model.ListAss
 //
 // 查询当前工作项已经关联的关联Wiki
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) ListAssociatedWikis(request *model.ListAssociatedWikisRequest) (*model.ListAssociatedWikisResponse, error) {
 	requestDef := GenReqDefForListAssociatedWikis()
 
@@ -969,8 +926,7 @@ func (c *ProjectManClient) ListAssociatedWikisInvoker(request *model.ListAssocia
 //
 // 获取子工作项
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) ListChildIssuesV4(request *model.ListChildIssuesV4Request) (*model.ListChildIssuesV4Response, error) {
 	requestDef := GenReqDefForListChildIssuesV4()
 
@@ -991,8 +947,7 @@ func (c *ProjectManClient) ListChildIssuesV4Invoker(request *model.ListChildIssu
 //
 // 查询当前工作项已经关联的代码提交记录 / 分支创建记录
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) ListIssueAssociatedCommits(request *model.ListIssueAssociatedCommitsRequest) (*model.ListIssueAssociatedCommitsResponse, error) {
 	requestDef := GenReqDefForListIssueAssociatedCommits()
 
@@ -1013,8 +968,7 @@ func (c *ProjectManClient) ListIssueAssociatedCommitsInvoker(request *model.List
 //
 // 获取工作项的评论
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) ListIssueCommentsV4(request *model.ListIssueCommentsV4Request) (*model.ListIssueCommentsV4Response, error) {
 	requestDef := GenReqDefForListIssueCommentsV4()
 
@@ -1035,8 +989,7 @@ func (c *ProjectManClient) ListIssueCommentsV4Invoker(request *model.ListIssueCo
 //
 // 查询Scrum工作项自定义字段的可选列表,符合custom_fields或者names条件的都返回,2个值都不传，返回所有的自定义字段列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) ListIssueCustomFields(request *model.ListIssueCustomFieldsRequest) (*model.ListIssueCustomFieldsResponse, error) {
 	requestDef := GenReqDefForListIssueCustomFields()
 
@@ -1057,8 +1010,7 @@ func (c *ProjectManClient) ListIssueCustomFieldsInvoker(request *model.ListIssue
 //
 // 获取工作项历史记录
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) ListIssueRecordsV4(request *model.ListIssueRecordsV4Request) (*model.ListIssueRecordsV4Response, error) {
 	requestDef := GenReqDefForListIssueRecordsV4()
 
@@ -1079,8 +1031,7 @@ func (c *ProjectManClient) ListIssueRecordsV4Invoker(request *model.ListIssueRec
 //
 // 工作项类型id, 分页参数，创建时间查询项目的工作项
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) ListIssuesSfV4(request *model.ListIssuesSfV4Request) (*model.ListIssuesSfV4Response, error) {
 	requestDef := GenReqDefForListIssuesSfV4()
 
@@ -1101,8 +1052,7 @@ func (c *ProjectManClient) ListIssuesSfV4Invoker(request *model.ListIssuesSfV4Re
 //
 // 根据筛选条件查询工作项
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) ListIssuesV4(request *model.ListIssuesV4Request) (*model.ListIssuesV4Response, error) {
 	requestDef := GenReqDefForListIssuesV4()
 
@@ -1123,8 +1073,7 @@ func (c *ProjectManClient) ListIssuesV4Invoker(request *model.ListIssuesV4Reques
 //
 // 查看迭代历史记录
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) ListIterationHistories(request *model.ListIterationHistoriesRequest) (*model.ListIterationHistoriesResponse, error) {
 	requestDef := GenReqDefForListIterationHistories()
 
@@ -1145,8 +1094,7 @@ func (c *ProjectManClient) ListIterationHistoriesInvoker(request *model.ListIter
 //
 // 查询项目的领域列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) ListProjectDomains(request *model.ListProjectDomainsRequest) (*model.ListProjectDomainsResponse, error) {
 	requestDef := GenReqDefForListProjectDomains()
 
@@ -1167,8 +1115,7 @@ func (c *ProjectManClient) ListProjectDomainsInvoker(request *model.ListProjectD
 //
 // 查询项目下所有工作项的历史记录
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) ListProjectIssuesRecordsV4(request *model.ListProjectIssuesRecordsV4Request) (*model.ListProjectIssuesRecordsV4Response, error) {
 	requestDef := GenReqDefForListProjectIssuesRecordsV4()
 
@@ -1189,8 +1136,7 @@ func (c *ProjectManClient) ListProjectIssuesRecordsV4Invoker(request *model.List
 //
 // 获取项目迭代
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) ListProjectIterationsV4(request *model.ListProjectIterationsV4Request) (*model.ListProjectIterationsV4Response, error) {
 	requestDef := GenReqDefForListProjectIterationsV4()
 
@@ -1211,8 +1157,7 @@ func (c *ProjectManClient) ListProjectIterationsV4Invoker(request *model.ListPro
 //
 // 查询项目的模块列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) ListProjectModules(request *model.ListProjectModulesRequest) (*model.ListProjectModulesResponse, error) {
 	requestDef := GenReqDefForListProjectModules()
 
@@ -1233,8 +1178,7 @@ func (c *ProjectManClient) ListProjectModulesInvoker(request *model.ListProjectM
 //
 // 按用户查询工时（多项目）
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) ListProjectWorkHours(request *model.ListProjectWorkHoursRequest) (*model.ListProjectWorkHoursResponse, error) {
 	requestDef := GenReqDefForListProjectWorkHours()
 
@@ -1255,8 +1199,7 @@ func (c *ProjectManClient) ListProjectWorkHoursInvoker(request *model.ListProjec
 //
 // 查询项目的状态列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) ListScrumProjectStatuses(request *model.ListScrumProjectStatusesRequest) (*model.ListScrumProjectStatusesResponse, error) {
 	requestDef := GenReqDefForListScrumProjectStatuses()
 
@@ -1277,8 +1220,7 @@ func (c *ProjectManClient) ListScrumProjectStatusesInvoker(request *model.ListSc
 //
 // 获取工作项的完成率
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) ShowIssueCompletionRate(request *model.ShowIssueCompletionRateRequest) (*model.ShowIssueCompletionRateResponse, error) {
 	requestDef := GenReqDefForShowIssueCompletionRate()
 
@@ -1299,8 +1241,7 @@ func (c *ProjectManClient) ShowIssueCompletionRateInvoker(request *model.ShowIss
 //
 // 查询工作项详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) ShowIssueV4(request *model.ShowIssueV4Request) (*model.ShowIssueV4Response, error) {
 	requestDef := GenReqDefForShowIssueV4()
 
@@ -1321,8 +1262,7 @@ func (c *ProjectManClient) ShowIssueV4Invoker(request *model.ShowIssueV4Request)
 //
 // 查询Scrum项目的工作项流转配置
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) ShowIssuesWrokFlowConfig(request *model.ShowIssuesWrokFlowConfigRequest) (*model.ShowIssuesWrokFlowConfigResponse, error) {
 	requestDef := GenReqDefForShowIssuesWrokFlowConfig()
 
@@ -1343,8 +1283,7 @@ func (c *ProjectManClient) ShowIssuesWrokFlowConfigInvoker(request *model.ShowIs
 //
 // 查看迭代详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) ShowIterationV4(request *model.ShowIterationV4Request) (*model.ShowIterationV4Response, error) {
 	requestDef := GenReqDefForShowIterationV4()
 
@@ -1365,8 +1304,7 @@ func (c *ProjectManClient) ShowIterationV4Invoker(request *model.ShowIterationV4
 //
 // 按用户查询工时（单项目）
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) ShowProjectWorkHours(request *model.ShowProjectWorkHoursRequest) (*model.ShowProjectWorkHoursResponse, error) {
 	requestDef := GenReqDefForShowProjectWorkHours()
 
@@ -1387,8 +1325,7 @@ func (c *ProjectManClient) ShowProjectWorkHoursInvoker(request *model.ShowProjec
 //
 // 更新工作项
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) UpdateIssueV4(request *model.UpdateIssueV4Request) (*model.UpdateIssueV4Response, error) {
 	requestDef := GenReqDefForUpdateIssueV4()
 
@@ -1409,8 +1346,7 @@ func (c *ProjectManClient) UpdateIssueV4Invoker(request *model.UpdateIssueV4Requ
 //
 // 更新Scrum项目迭代
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) UpdateIterationV4(request *model.UpdateIterationV4Request) (*model.UpdateIterationV4Response, error) {
 	requestDef := GenReqDefForUpdateIterationV4()
 
@@ -1431,8 +1367,7 @@ func (c *ProjectManClient) UpdateIterationV4Invoker(request *model.UpdateIterati
 //
 // 更新项目的领域
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) UpdateProjectDomain(request *model.UpdateProjectDomainRequest) (*model.UpdateProjectDomainResponse, error) {
 	requestDef := GenReqDefForUpdateProjectDomain()
 
@@ -1453,8 +1388,7 @@ func (c *ProjectManClient) UpdateProjectDomainInvoker(request *model.UpdateProje
 //
 // 更新项目的模块
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) UpdateProjectModule(request *model.UpdateProjectModuleRequest) (*model.UpdateProjectModuleResponse, error) {
 	requestDef := GenReqDefForUpdateProjectModule()
 
@@ -1475,8 +1409,7 @@ func (c *ProjectManClient) UpdateProjectModuleInvoker(request *model.UpdateProje
 //
 // 上传工作项附件
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) UploadAttachments(request *model.UploadAttachmentsRequest) (*model.UploadAttachmentsResponse, error) {
 	requestDef := GenReqDefForUploadAttachments()
 
@@ -1497,8 +1430,7 @@ func (c *ProjectManClient) UploadAttachmentsInvoker(request *model.UploadAttachm
 //
 // 上传图片
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) UploadIssueImg(request *model.UploadIssueImgRequest) (*model.UploadIssueImgResponse, error) {
 	requestDef := GenReqDefForUploadIssueImg()
 

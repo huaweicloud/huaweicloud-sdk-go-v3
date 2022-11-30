@@ -45,7 +45,8 @@ type CreatePropertyResponse struct {
 	// string的枚举值数组，使用逗号分隔
 	EnumList *string `json:"enum_list,omitempty"`
 
-	EnumDict *PropertyDataEnum `json:"enum_dict,omitempty"`
+	// 当数据类型为boolean枚举值时填写json格式数据，形如\"enum_dict\":{\"0\":\"xxx\",\"1\":\"xxx\"}
+	EnumDict *interface{} `json:"enum_dict,omitempty"`
 
 	// 访问模式（兼容20.0，R属性可读，W属性可写，E属性可执行）
 	Method         *string `json:"method,omitempty"`

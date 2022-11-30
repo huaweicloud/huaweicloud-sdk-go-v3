@@ -23,8 +23,7 @@ func ImsClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 该接口用于为指定镜像添加或更新指定的单个标签
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImsClient) AddImageTag(request *model.AddImageTagRequest) (*model.AddImageTagResponse, error) {
 	requestDef := GenReqDefForAddImageTag()
 
@@ -46,8 +45,7 @@ func (c *ImsClient) AddImageTagInvoker(request *model.AddImageTagRequest) *AddIm
 // 该接口为扩展接口，主要用于镜像共享时用户将多个镜像共享给多个用户。
 // 该接口为异步接口，返回job_id说明任务下发成功，查询异步任务状态，如果是success说明任务执行成功，如果是failed说明任务执行失败。如何查询异步任务，请参见异步任务查询。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImsClient) BatchAddMembers(request *model.BatchAddMembersRequest) (*model.BatchAddMembersResponse, error) {
 	requestDef := GenReqDefForBatchAddMembers()
 
@@ -68,8 +66,7 @@ func (c *ImsClient) BatchAddMembersInvoker(request *model.BatchAddMembersRequest
 //
 // 该接口用于为指定镜像批量添加/更新、删除标签。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImsClient) BatchAddOrDeleteTags(request *model.BatchAddOrDeleteTagsRequest) (*model.BatchAddOrDeleteTagsResponse, error) {
 	requestDef := GenReqDefForBatchAddOrDeleteTags()
 
@@ -91,8 +88,7 @@ func (c *ImsClient) BatchAddOrDeleteTagsInvoker(request *model.BatchAddOrDeleteT
 // 该接口为扩展接口，主要用于取消镜像共享。
 // 该接口为异步接口，返回job_id说明任务下发成功，查询异步任务状态，如果是success说明任务执行成功，如果是failed说明任务执行失败。如何查询异步任务，请参见异步任务查询。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImsClient) BatchDeleteMembers(request *model.BatchDeleteMembersRequest) (*model.BatchDeleteMembersResponse, error) {
 	requestDef := GenReqDefForBatchDeleteMembers()
 
@@ -114,8 +110,7 @@ func (c *ImsClient) BatchDeleteMembersInvoker(request *model.BatchDeleteMembersR
 // 该接口为扩展接口，主要用于用户接受或者拒绝多个共享镜像时批量更新镜像成员的状态。
 // 该接口为异步接口，返回job_id说明任务下发成功，查询异步任务状态，如果是success说明任务执行成功，如果是failed说明任务执行失败。如何查询异步任务，请参见异步任务查询。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImsClient) BatchUpdateMembers(request *model.BatchUpdateMembersRequest) (*model.BatchUpdateMembersResponse, error) {
 	requestDef := GenReqDefForBatchUpdateMembers()
 
@@ -138,8 +133,7 @@ func (c *ImsClient) BatchUpdateMembersInvoker(request *model.BatchUpdateMembersR
 // 该接口为异步接口，返回job_id说明任务下发成功，查询异步任务状态，如果是success说明任务执行成功，如果是failed说明任务执行失败。
 // 如何查询异步任务，请参见异步任务进度查询。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImsClient) CopyImageCrossRegion(request *model.CopyImageCrossRegionRequest) (*model.CopyImageCrossRegionResponse, error) {
 	requestDef := GenReqDefForCopyImageCrossRegion()
 
@@ -161,8 +155,7 @@ func (c *ImsClient) CopyImageCrossRegionInvoker(request *model.CopyImageCrossReg
 // 该接口为扩展接口，主要用于用户将一个已有镜像复制为另一个镜像。复制镜像时，可以更改镜像的加密等属性，以满足不同的场景。
 // 该接口为异步接口，返回job_id说明任务下发成功，查询异步任务状态，如果是success说明任务执行成功，如果是failed说明任务执行失败。如何查询异步任务，请参见异步任务查询。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImsClient) CopyImageInRegion(request *model.CopyImageInRegionRequest) (*model.CopyImageInRegionResponse, error) {
 	requestDef := GenReqDefForCopyImageInRegion()
 
@@ -183,8 +176,7 @@ func (c *ImsClient) CopyImageInRegionInvoker(request *model.CopyImageInRegionReq
 //
 // 使用上传至OBS桶中的外部数据卷镜像文件制作数据镜像。作为异步接口，调用成功，只是说明后台收到了制作请求，镜像是否制作成功需要通过异步任务查询接口查询该任务的执行状态。具体请参考异步任务查询。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImsClient) CreateDataImage(request *model.CreateDataImageRequest) (*model.CreateDataImageResponse, error) {
 	requestDef := GenReqDefForCreateDataImage()
 
@@ -216,8 +208,7 @@ func (c *ImsClient) CreateDataImageInvoker(request *model.CreateDataImageRequest
 // - 使用上传至OBS桶中的外部镜像文件时的请求必选参数：name,image_url,min_disk。
 // - 使用数据卷制作系统盘镜像时的请求必选参数：name,volume_id,os_version
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImsClient) CreateImage(request *model.CreateImageRequest) (*model.CreateImageResponse, error) {
 	requestDef := GenReqDefForCreateImage()
 
@@ -238,8 +229,7 @@ func (c *ImsClient) CreateImageInvoker(request *model.CreateImageRequest) *Creat
 //
 // 该接口主要用于为某个镜像增加或修改一个自定义标签。通过自定义标签，用户可以将镜像进行分类。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImsClient) CreateOrUpdateTags(request *model.CreateOrUpdateTagsRequest) (*model.CreateOrUpdateTagsResponse, error) {
 	requestDef := GenReqDefForCreateOrUpdateTags()
 
@@ -260,8 +250,7 @@ func (c *ImsClient) CreateOrUpdateTagsInvoker(request *model.CreateOrUpdateTagsR
 //
 // 使用云服务器或者云服务器备份制作整机镜像。作为异步接口，调用成功，只是说明后台收到了制作整机镜像的请求，镜像是否制作成功需要通过异步任务查询接口查询该任务的执行状态，具体请参考异步任务查询。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImsClient) CreateWholeImage(request *model.CreateWholeImageRequest) (*model.CreateWholeImageResponse, error) {
 	requestDef := GenReqDefForCreateWholeImage()
 
@@ -282,8 +271,7 @@ func (c *ImsClient) CreateWholeImageInvoker(request *model.CreateWholeImageReque
 //
 // 该接口用于为镜像删除指定的标签
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImsClient) DeleteImageTag(request *model.DeleteImageTagRequest) (*model.DeleteImageTagResponse, error) {
 	requestDef := GenReqDefForDeleteImageTag()
 
@@ -304,8 +292,7 @@ func (c *ImsClient) DeleteImageTagInvoker(request *model.DeleteImageTagRequest) 
 //
 // 该接口为扩展接口，用于用户将自己的私有镜像导出到指定的OBS桶中。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImsClient) ExportImage(request *model.ExportImageRequest) (*model.ExportImageResponse, error) {
 	requestDef := GenReqDefForExportImage()
 
@@ -328,8 +315,7 @@ func (c *ImsClient) ExportImageInvoker(request *model.ExportImageRequest) *Expor
 // 由于快速导入功能要求提前转换镜像文件格式为RAW或ZVHD2格式，因此镜像文件小于128GB时推荐您优先使用常规的创建私有镜像的方式。
 // 作为异步接口，调用成功，只是说明后台收到了制作请求，镜像是否制作成功需要通过异步任务查询接口查询该任务的执行状态，具体请参考异步任务查询。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImsClient) ImportImageQuick(request *model.ImportImageQuickRequest) (*model.ImportImageQuickResponse, error) {
 	requestDef := GenReqDefForImportImageQuick()
 
@@ -350,8 +336,7 @@ func (c *ImsClient) ImportImageQuickInvoker(request *model.ImportImageQuickReque
 //
 // 该接口用于按标签或其他条件对镜像进行过滤或者计数使用。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImsClient) ListImageByTags(request *model.ListImageByTagsRequest) (*model.ListImageByTagsResponse, error) {
 	requestDef := GenReqDefForListImageByTags()
 
@@ -372,8 +357,7 @@ func (c *ImsClient) ListImageByTagsInvoker(request *model.ListImageByTagsRequest
 //
 // 该接口用于为查询指定镜像上的所有标签
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImsClient) ListImageTags(request *model.ListImageTagsRequest) (*model.ListImageTagsResponse, error) {
 	requestDef := GenReqDefForListImageTags()
 
@@ -395,8 +379,7 @@ func (c *ImsClient) ListImageTagsInvoker(request *model.ListImageTagsRequest) *L
 // 根据不同条件查询镜像列表信息。
 // 可以在URI后面用‘?’和‘&amp;’添加不同的查询条件组合，请参考请求样例。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImsClient) ListImages(request *model.ListImagesRequest) (*model.ListImagesResponse, error) {
 	requestDef := GenReqDefForListImages()
 
@@ -417,8 +400,7 @@ func (c *ImsClient) ListImagesInvoker(request *model.ListImagesRequest) *ListIma
 //
 // 该接口用于为查询租户的所有镜像上的标签。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImsClient) ListImagesTags(request *model.ListImagesTagsRequest) (*model.ListImagesTagsResponse, error) {
 	requestDef := GenReqDefForListImagesTags()
 
@@ -439,8 +421,7 @@ func (c *ImsClient) ListImagesTagsInvoker(request *model.ListImagesTagsRequest) 
 //
 // 查询当前区域弹性云服务器的OS兼容性列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImsClient) ListOsVersions(request *model.ListOsVersionsRequest) (*model.ListOsVersionsResponse, error) {
 	requestDef := GenReqDefForListOsVersions()
 
@@ -461,8 +442,7 @@ func (c *ImsClient) ListOsVersionsInvoker(request *model.ListOsVersionsRequest) 
 //
 // 根据不同条件查询镜像标签列表信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImsClient) ListTags(request *model.ListTagsRequest) (*model.ListTagsResponse, error) {
 	requestDef := GenReqDefForListTags()
 
@@ -489,8 +469,7 @@ func (c *ImsClient) ListTagsInvoker(request *model.ListTagsRequest) *ListTagsInv
 // 注册镜像接口作为异步接口，调用成功后，说明后台收到了注册请求。需要根据镜像ID查询该镜像状态验证镜像注册是否成功。当镜像状态变为“active”时，表示镜像注册成功。
 // 如何查询异步任务，请参见异步任务查询。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImsClient) RegisterImage(request *model.RegisterImageRequest) (*model.RegisterImageResponse, error) {
 	requestDef := GenReqDefForRegisterImage()
 
@@ -511,8 +490,7 @@ func (c *ImsClient) RegisterImageInvoker(request *model.RegisterImageRequest) *R
 //
 // 该接口为扩展接口，主要用于查询租户在当前Region的私有镜像的配额数量。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImsClient) ShowImageQuota(request *model.ShowImageQuotaRequest) (*model.ShowImageQuotaResponse, error) {
 	requestDef := GenReqDefForShowImageQuota()
 
@@ -533,8 +511,7 @@ func (c *ImsClient) ShowImageQuotaInvoker(request *model.ShowImageQuotaRequest) 
 //
 // 该接口为扩展接口，主要用于查询异步接口执行情况，比如查询导出镜像任务的执行状态。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImsClient) ShowJob(request *model.ShowJobRequest) (*model.ShowJobResponse, error) {
 	requestDef := GenReqDefForShowJob()
 
@@ -555,8 +532,7 @@ func (c *ImsClient) ShowJobInvoker(request *model.ShowJobRequest) *ShowJobInvoke
 //
 // 该接口为扩展接口，主要用于查询异步任务进度。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImsClient) ShowJobProgress(request *model.ShowJobProgressRequest) (*model.ShowJobProgressResponse, error) {
 	requestDef := GenReqDefForShowJobProgress()
 
@@ -577,8 +553,7 @@ func (c *ImsClient) ShowJobProgressInvoker(request *model.ShowJobProgressRequest
 //
 // 更新镜像信息接口，主要用于镜像属性的修改。当前仅支持可用（active）状态的镜像更新相关信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImsClient) UpdateImage(request *model.UpdateImageRequest) (*model.UpdateImageResponse, error) {
 	requestDef := GenReqDefForUpdateImage()
 
@@ -599,8 +574,7 @@ func (c *ImsClient) UpdateImageInvoker(request *model.UpdateImageRequest) *Updat
 //
 // 查询API的版本信息列表，包括API的版本兼容性、域名信息等。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImsClient) ListVersions(request *model.ListVersionsRequest) (*model.ListVersionsResponse, error) {
 	requestDef := GenReqDefForListVersions()
 
@@ -621,8 +595,7 @@ func (c *ImsClient) ListVersionsInvoker(request *model.ListVersionsRequest) *Lis
 //
 // 查询API的版本信息列表，包括API的版本兼容性、域名信息等。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImsClient) ShowVersion(request *model.ShowVersionRequest) (*model.ShowVersionResponse, error) {
 	requestDef := GenReqDefForShowVersion()
 
@@ -643,8 +616,7 @@ func (c *ImsClient) ShowVersionInvoker(request *model.ShowVersionRequest) *ShowV
 //
 // 用户共享镜像给其他用户时，使用该接口向该镜像成员中添加接受镜像用户的项目ID。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImsClient) GlanceAddImageMember(request *model.GlanceAddImageMemberRequest) (*model.GlanceAddImageMemberResponse, error) {
 	requestDef := GenReqDefForGlanceAddImageMember()
 
@@ -665,8 +637,7 @@ func (c *ImsClient) GlanceAddImageMemberInvoker(request *model.GlanceAddImageMem
 //
 // 创建镜像元数据。调用创建镜像元数据接口成功后，只是创建了镜像的元数据，镜像对应的实际镜像文件并不存在
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImsClient) GlanceCreateImageMetadata(request *model.GlanceCreateImageMetadataRequest) (*model.GlanceCreateImageMetadataResponse, error) {
 	requestDef := GenReqDefForGlanceCreateImageMetadata()
 
@@ -687,8 +658,7 @@ func (c *ImsClient) GlanceCreateImageMetadataInvoker(request *model.GlanceCreate
 //
 // 该接口主要用于为某个镜像添加一个自定义标签。通过自定义标签，用户可以将镜像进行分类。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImsClient) GlanceCreateTag(request *model.GlanceCreateTagRequest) (*model.GlanceCreateTagResponse, error) {
 	requestDef := GenReqDefForGlanceCreateTag()
 
@@ -709,8 +679,7 @@ func (c *ImsClient) GlanceCreateTagInvoker(request *model.GlanceCreateTagRequest
 //
 // 该接口主要用于删除镜像，用户可以通过该接口将自己的私有镜像删除。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImsClient) GlanceDeleteImage(request *model.GlanceDeleteImageRequest) (*model.GlanceDeleteImageResponse, error) {
 	requestDef := GenReqDefForGlanceDeleteImage()
 
@@ -731,8 +700,7 @@ func (c *ImsClient) GlanceDeleteImageInvoker(request *model.GlanceDeleteImageReq
 //
 // 该接口用于取消对某个用户的镜像共享。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImsClient) GlanceDeleteImageMember(request *model.GlanceDeleteImageMemberRequest) (*model.GlanceDeleteImageMemberResponse, error) {
 	requestDef := GenReqDefForGlanceDeleteImageMember()
 
@@ -753,8 +721,7 @@ func (c *ImsClient) GlanceDeleteImageMemberInvoker(request *model.GlanceDeleteIm
 //
 // 该接口主要用于删除某个镜像的自定义标签，通过该接口，用户可以将私有镜像中一些不用的标签删除。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImsClient) GlanceDeleteTag(request *model.GlanceDeleteTagRequest) (*model.GlanceDeleteTagResponse, error) {
 	requestDef := GenReqDefForGlanceDeleteTag()
 
@@ -775,8 +742,7 @@ func (c *ImsClient) GlanceDeleteTagInvoker(request *model.GlanceDeleteTagRequest
 //
 // 该接口主要用于查询镜像成员列表视图，通过视图，用户可以了解到镜像成员包含哪些属性，同时也可以了解每个属性的数据类型。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImsClient) GlanceListImageMemberSchemas(request *model.GlanceListImageMemberSchemasRequest) (*model.GlanceListImageMemberSchemasResponse, error) {
 	requestDef := GenReqDefForGlanceListImageMemberSchemas()
 
@@ -797,8 +763,7 @@ func (c *ImsClient) GlanceListImageMemberSchemasInvoker(request *model.GlanceLis
 //
 // 该接口用于共享镜像过程中，获取接受该镜像的成员列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImsClient) GlanceListImageMembers(request *model.GlanceListImageMembersRequest) (*model.GlanceListImageMembersResponse, error) {
 	requestDef := GenReqDefForGlanceListImageMembers()
 
@@ -819,8 +784,7 @@ func (c *ImsClient) GlanceListImageMembersInvoker(request *model.GlanceListImage
 //
 // 该接口主要用于查询镜像列表视图，通过该接口用户可以了解到镜像列表的详细情况和数据结构。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImsClient) GlanceListImageSchemas(request *model.GlanceListImageSchemasRequest) (*model.GlanceListImageSchemasResponse, error) {
 	requestDef := GenReqDefForGlanceListImageSchemas()
 
@@ -845,8 +809,7 @@ func (c *ImsClient) GlanceListImageSchemasInvoker(request *model.GlanceListImage
 // 分页是指返回一组镜像的一个子集，在返回的时候会存在下个子集的链接和首个子集的链接，默认返回的子集中数量为25，用户也可以通过使用limit和marker两个参数自己分页，指定返回子集中需要返回的数量。
 // 响应中的参数first是查询首页的URL。next是查询下一页的URL。当查询镜像列表最后一页时，不存在next。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImsClient) GlanceListImages(request *model.GlanceListImagesRequest) (*model.GlanceListImagesResponse, error) {
 	requestDef := GenReqDefForGlanceListImages()
 
@@ -867,8 +830,7 @@ func (c *ImsClient) GlanceListImagesInvoker(request *model.GlanceListImagesReque
 //
 // 查询单个镜像详情，用户可以通过该接口查询单个私有或者公共镜像的详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImsClient) GlanceShowImage(request *model.GlanceShowImageRequest) (*model.GlanceShowImageResponse, error) {
 	requestDef := GenReqDefForGlanceShowImage()
 
@@ -889,8 +851,7 @@ func (c *ImsClient) GlanceShowImageInvoker(request *model.GlanceShowImageRequest
 //
 // 该接口主要用于镜像共享中查询某个镜像成员的详情。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImsClient) GlanceShowImageMember(request *model.GlanceShowImageMemberRequest) (*model.GlanceShowImageMemberResponse, error) {
 	requestDef := GenReqDefForGlanceShowImageMember()
 
@@ -911,8 +872,7 @@ func (c *ImsClient) GlanceShowImageMemberInvoker(request *model.GlanceShowImageM
 //
 // 该接口主要用于查询镜像成员视图，通过视图，用户可以了解到镜像成员包含哪些属性，同时也可以了解每个属性的数据类型。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImsClient) GlanceShowImageMemberSchemas(request *model.GlanceShowImageMemberSchemasRequest) (*model.GlanceShowImageMemberSchemasResponse, error) {
 	requestDef := GenReqDefForGlanceShowImageMemberSchemas()
 
@@ -933,8 +893,7 @@ func (c *ImsClient) GlanceShowImageMemberSchemasInvoker(request *model.GlanceSho
 //
 // 该接口主要用于查询镜像视图，通过视图，用户可以了解到镜像包含哪些属性，同时也可以了解每个属性的数据类型等。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImsClient) GlanceShowImageSchemas(request *model.GlanceShowImageSchemasRequest) (*model.GlanceShowImageSchemasResponse, error) {
 	requestDef := GenReqDefForGlanceShowImageSchemas()
 
@@ -955,8 +914,7 @@ func (c *ImsClient) GlanceShowImageSchemasInvoker(request *model.GlanceShowImage
 //
 // 修改镜像信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImsClient) GlanceUpdateImage(request *model.GlanceUpdateImageRequest) (*model.GlanceUpdateImageResponse, error) {
 	requestDef := GenReqDefForGlanceUpdateImage()
 
@@ -977,8 +935,7 @@ func (c *ImsClient) GlanceUpdateImageInvoker(request *model.GlanceUpdateImageReq
 //
 // 用户接受或者拒绝共享镜像时，使用该接口更新镜像成员的状态。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImsClient) GlanceUpdateImageMember(request *model.GlanceUpdateImageMemberRequest) (*model.GlanceUpdateImageMemberResponse, error) {
 	requestDef := GenReqDefForGlanceUpdateImageMember()
 

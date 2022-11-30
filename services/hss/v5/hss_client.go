@@ -23,8 +23,7 @@ func HssClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 批量创建标签
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) BatchCreateTags(request *model.BatchCreateTagsRequest) (*model.BatchCreateTagsResponse, error) {
 	requestDef := GenReqDefForBatchCreateTags()
 
@@ -45,8 +44,7 @@ func (c *HssClient) BatchCreateTagsInvoker(request *model.BatchCreateTagsRequest
 //
 // 删除单个资源下的标签
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) DeleteResourceInstanceTag(request *model.DeleteResourceInstanceTagRequest) (*model.DeleteResourceInstanceTagResponse, error) {
 	requestDef := GenReqDefForDeleteResourceInstanceTag()
 
@@ -67,8 +65,7 @@ func (c *HssClient) DeleteResourceInstanceTagInvoker(request *model.DeleteResour
 //
 // 查询云服务器列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListHostStatus(request *model.ListHostStatusRequest) (*model.ListHostStatusResponse, error) {
 	requestDef := GenReqDefForListHostStatus()
 
@@ -89,8 +86,7 @@ func (c *HssClient) ListHostStatusInvoker(request *model.ListHostStatusRequest) 
 //
 // 查询口令复杂度策略检测报告
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListPasswordComplexity(request *model.ListPasswordComplexityRequest) (*model.ListPasswordComplexityResponse, error) {
 	requestDef := GenReqDefForListPasswordComplexity()
 
@@ -111,8 +107,7 @@ func (c *HssClient) ListPasswordComplexityInvoker(request *model.ListPasswordCom
 //
 // 查询配额详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListQuotasDetail(request *model.ListQuotasDetailRequest) (*model.ListQuotasDetailResponse, error) {
 	requestDef := GenReqDefForListQuotasDetail()
 
@@ -133,8 +128,7 @@ func (c *HssClient) ListQuotasDetailInvoker(request *model.ListQuotasDetailReque
 //
 // 查询指定安全配置项的检查项列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListRiskConfigCheckRules(request *model.ListRiskConfigCheckRulesRequest) (*model.ListRiskConfigCheckRulesResponse, error) {
 	requestDef := GenReqDefForListRiskConfigCheckRules()
 
@@ -155,8 +149,7 @@ func (c *HssClient) ListRiskConfigCheckRulesInvoker(request *model.ListRiskConfi
 //
 // 查询指定安全配置项的受影响服务器列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListRiskConfigHosts(request *model.ListRiskConfigHostsRequest) (*model.ListRiskConfigHostsResponse, error) {
 	requestDef := GenReqDefForListRiskConfigHosts()
 
@@ -177,8 +170,7 @@ func (c *HssClient) ListRiskConfigHostsInvoker(request *model.ListRiskConfigHost
 //
 // 查询租户的服务器安全配置检测结果列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListRiskConfigs(request *model.ListRiskConfigsRequest) (*model.ListRiskConfigsResponse, error) {
 	requestDef := GenReqDefForListRiskConfigs()
 
@@ -199,8 +191,7 @@ func (c *HssClient) ListRiskConfigsInvoker(request *model.ListRiskConfigsRequest
 //
 // 查入侵事件列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListSecurityEvents(request *model.ListSecurityEventsRequest) (*model.ListSecurityEventsResponse, error) {
 	requestDef := GenReqDefForListSecurityEvents()
 
@@ -221,8 +212,7 @@ func (c *HssClient) ListSecurityEventsInvoker(request *model.ListSecurityEventsR
 //
 // 获取账户变动历史记录信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListUserChangeHistories(request *model.ListUserChangeHistoriesRequest) (*model.ListUserChangeHistoriesResponse, error) {
 	requestDef := GenReqDefForListUserChangeHistories()
 
@@ -243,8 +233,7 @@ func (c *HssClient) ListUserChangeHistoriesInvoker(request *model.ListUserChange
 //
 // 获取资产的账号列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListUsers(request *model.ListUsersRequest) (*model.ListUsersResponse, error) {
 	requestDef := GenReqDefForListUsers()
 
@@ -265,8 +254,7 @@ func (c *HssClient) ListUsersInvoker(request *model.ListUsersRequest) *ListUsers
 //
 // 查询漏洞列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListVulnerabilities(request *model.ListVulnerabilitiesRequest) (*model.ListVulnerabilitiesResponse, error) {
 	requestDef := GenReqDefForListVulnerabilities()
 
@@ -287,8 +275,7 @@ func (c *HssClient) ListVulnerabilitiesInvoker(request *model.ListVulnerabilitie
 //
 // 查询弱口令检测结果列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListWeakPasswordUsers(request *model.ListWeakPasswordUsersRequest) (*model.ListWeakPasswordUsersResponse, error) {
 	requestDef := GenReqDefForListWeakPasswordUsers()
 
@@ -309,8 +296,7 @@ func (c *HssClient) ListWeakPasswordUsersInvoker(request *model.ListWeakPassword
 //
 // 查询配置检查项检测报告
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowCheckRuleDetail(request *model.ShowCheckRuleDetailRequest) (*model.ShowCheckRuleDetailResponse, error) {
 	requestDef := GenReqDefForShowCheckRuleDetail()
 
@@ -331,8 +317,7 @@ func (c *HssClient) ShowCheckRuleDetailInvoker(request *model.ShowCheckRuleDetai
 //
 // 查询配额信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowResourceQuotas(request *model.ShowResourceQuotasRequest) (*model.ShowResourceQuotasResponse, error) {
 	requestDef := GenReqDefForShowResourceQuotas()
 
@@ -353,8 +338,7 @@ func (c *HssClient) ShowResourceQuotasInvoker(request *model.ShowResourceQuotasR
 //
 // 查询指定安全配置项的检查结果
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowRiskConfigDetail(request *model.ShowRiskConfigDetailRequest) (*model.ShowRiskConfigDetailResponse, error) {
 	requestDef := GenReqDefForShowRiskConfigDetail()
 
@@ -375,8 +359,7 @@ func (c *HssClient) ShowRiskConfigDetailInvoker(request *model.ShowRiskConfigDet
 //
 // 切换防护状态
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) SwitchHostsProtectStatus(request *model.SwitchHostsProtectStatusRequest) (*model.SwitchHostsProtectStatusResponse, error) {
 	requestDef := GenReqDefForSwitchHostsProtectStatus()
 

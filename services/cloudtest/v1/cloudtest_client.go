@@ -23,8 +23,7 @@ func CloudtestClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 批量删除自定义测试服务类型用例
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudtestClient) BatchDeleteTestCase(request *model.BatchDeleteTestCaseRequest) (*model.BatchDeleteTestCaseResponse, error) {
 	requestDef := GenReqDefForBatchDeleteTestCase()
 
@@ -45,8 +44,7 @@ func (c *CloudtestClient) BatchDeleteTestCaseInvoker(request *model.BatchDeleteT
 //
 // 项目下创建计划
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudtestClient) CreatePlan(request *model.CreatePlanRequest) (*model.CreatePlanResponse, error) {
 	requestDef := GenReqDefForCreatePlan()
 
@@ -67,8 +65,7 @@ func (c *CloudtestClient) CreatePlanInvoker(request *model.CreatePlanRequest) *C
 //
 // 通过接口CreateService注册成为云测的自定义服务。 注册完成后云测界面将会出现此自定义测试类型。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudtestClient) CreateService(request *model.CreateServiceRequest) (*model.CreateServiceResponse, error) {
 	requestDef := GenReqDefForCreateService()
 
@@ -89,8 +86,7 @@ func (c *CloudtestClient) CreateServiceInvoker(request *model.CreateServiceReque
 //
 // 创建自定义测试服务类型用例
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudtestClient) CreateTestCase(request *model.CreateTestCaseRequest) (*model.CreateTestCaseResponse, error) {
 	requestDef := GenReqDefForCreateTestCase()
 
@@ -111,8 +107,7 @@ func (c *CloudtestClient) CreateTestCaseInvoker(request *model.CreateTestCaseReq
 //
 // 计划中批量添加测试用例
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudtestClient) CreateTestCaseInPlan(request *model.CreateTestCaseInPlanRequest) (*model.CreateTestCaseInPlanResponse, error) {
 	requestDef := GenReqDefForCreateTestCaseInPlan()
 
@@ -133,8 +128,7 @@ func (c *CloudtestClient) CreateTestCaseInPlanInvoker(request *model.CreateTestC
 //
 // 删除已注册服务
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudtestClient) DeleteService(request *model.DeleteServiceRequest) (*model.DeleteServiceResponse, error) {
 	requestDef := GenReqDefForDeleteService()
 
@@ -155,8 +149,7 @@ func (c *CloudtestClient) DeleteServiceInvoker(request *model.DeleteServiceReque
 //
 // 批量执行测试用例
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudtestClient) RunTestCase(request *model.RunTestCaseRequest) (*model.RunTestCaseResponse, error) {
 	requestDef := GenReqDefForRunTestCase()
 
@@ -177,8 +170,7 @@ func (c *CloudtestClient) RunTestCaseInvoker(request *model.RunTestCaseRequest) 
 //
 // 查询某个测试计划下的需求列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudtestClient) ShowIssuesByPlanId(request *model.ShowIssuesByPlanIdRequest) (*model.ShowIssuesByPlanIdResponse, error) {
 	requestDef := GenReqDefForShowIssuesByPlanId()
 
@@ -199,8 +191,7 @@ func (c *CloudtestClient) ShowIssuesByPlanIdInvoker(request *model.ShowIssuesByP
 //
 // 查询某测试计划下的操作历史
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudtestClient) ShowPlanJournals(request *model.ShowPlanJournalsRequest) (*model.ShowPlanJournalsResponse, error) {
 	requestDef := GenReqDefForShowPlanJournals()
 
@@ -221,8 +212,7 @@ func (c *CloudtestClient) ShowPlanJournalsInvoker(request *model.ShowPlanJournal
 //
 // 项目下查询测试计划列表v2
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudtestClient) ShowPlanList(request *model.ShowPlanListRequest) (*model.ShowPlanListResponse, error) {
 	requestDef := GenReqDefForShowPlanList()
 
@@ -243,8 +233,7 @@ func (c *CloudtestClient) ShowPlanListInvoker(request *model.ShowPlanListRequest
 //
 // 项目下查询测试计划列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudtestClient) ShowPlans(request *model.ShowPlansRequest) (*model.ShowPlansResponse, error) {
 	requestDef := GenReqDefForShowPlans()
 
@@ -265,8 +254,7 @@ func (c *CloudtestClient) ShowPlansInvoker(request *model.ShowPlansRequest) *Sho
 //
 // 用户获取自己当前已经注册的服务
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudtestClient) ShowRegisterService(request *model.ShowRegisterServiceRequest) (*model.ShowRegisterServiceResponse, error) {
 	requestDef := GenReqDefForShowRegisterService()
 
@@ -287,8 +275,7 @@ func (c *CloudtestClient) ShowRegisterServiceInvoker(request *model.ShowRegister
 //
 // 获取测试用例详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudtestClient) ShowTestCaseDetail(request *model.ShowTestCaseDetailRequest) (*model.ShowTestCaseDetailResponse, error) {
 	requestDef := GenReqDefForShowTestCaseDetail()
 
@@ -309,8 +296,7 @@ func (c *CloudtestClient) ShowTestCaseDetailInvoker(request *model.ShowTestCaseD
 //
 // 通过用例编号获取测试用例详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudtestClient) ShowTestCaseDetailV2(request *model.ShowTestCaseDetailV2Request) (*model.ShowTestCaseDetailV2Response, error) {
 	requestDef := GenReqDefForShowTestCaseDetailV2()
 
@@ -331,8 +317,7 @@ func (c *CloudtestClient) ShowTestCaseDetailV2Invoker(request *model.ShowTestCas
 //
 // 更新已注册服务
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudtestClient) UpdateService(request *model.UpdateServiceRequest) (*model.UpdateServiceResponse, error) {
 	requestDef := GenReqDefForUpdateService()
 
@@ -353,8 +338,7 @@ func (c *CloudtestClient) UpdateServiceInvoker(request *model.UpdateServiceReque
 //
 // 更新自定义测试服务类型用例
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudtestClient) UpdateTestCase(request *model.UpdateTestCaseRequest) (*model.UpdateTestCaseResponse, error) {
 	requestDef := GenReqDefForUpdateTestCase()
 
@@ -375,8 +359,7 @@ func (c *CloudtestClient) UpdateTestCaseInvoker(request *model.UpdateTestCaseReq
 //
 // 批量更新测试用例结果
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudtestClient) UpdateTestCaseResult(request *model.UpdateTestCaseResultRequest) (*model.UpdateTestCaseResultResponse, error) {
 	requestDef := GenReqDefForUpdateTestCaseResult()
 
@@ -397,8 +380,7 @@ func (c *CloudtestClient) UpdateTestCaseResultInvoker(request *model.UpdateTestC
 //
 // 通过导入仓库中的文件生成接口测试套
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudtestClient) CreateApiTestSuiteByRepoFile(request *model.CreateApiTestSuiteByRepoFileRequest) (*model.CreateApiTestSuiteByRepoFileResponse, error) {
 	requestDef := GenReqDefForCreateApiTestSuiteByRepoFile()
 
@@ -419,8 +401,7 @@ func (c *CloudtestClient) CreateApiTestSuiteByRepoFileInvoker(request *model.Cre
 //
 // 获取云测的环境参数分组列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudtestClient) ListEnvironments(request *model.ListEnvironmentsRequest) (*model.ListEnvironmentsResponse, error) {
 	requestDef := GenReqDefForListEnvironments()
 

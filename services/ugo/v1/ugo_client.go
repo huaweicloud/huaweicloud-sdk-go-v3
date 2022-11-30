@@ -23,8 +23,7 @@ func UgoClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 目标库权限检查。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *UgoClient) CheckPermission(request *model.CheckPermissionRequest) (*model.CheckPermissionResponse, error) {
 	requestDef := GenReqDefForCheckPermission()
 
@@ -45,8 +44,7 @@ func (c *UgoClient) CheckPermissionInvoker(request *model.CheckPermissionRequest
 //
 // 提交语法转换。只有migration_project_status为\&quot;READY\&quot;时才能调用该接口。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *UgoClient) CommitSyntaxConversion(request *model.CommitSyntaxConversionRequest) (*model.CommitSyntaxConversionResponse, error) {
 	requestDef := GenReqDefForCommitSyntaxConversion()
 
@@ -67,8 +65,7 @@ func (c *UgoClient) CommitSyntaxConversionInvoker(request *model.CommitSyntaxCon
 //
 // 提交验证。语法转换完成后，才能调用该接口。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *UgoClient) CommitVerification(request *model.CommitVerificationRequest) (*model.CommitVerificationResponse, error) {
 	requestDef := GenReqDefForCommitVerification()
 
@@ -89,8 +86,7 @@ func (c *UgoClient) CommitVerificationInvoker(request *model.CommitVerificationR
 //
 // 评估项目确认目标数据库类型。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *UgoClient) ConfirmTargetDbType(request *model.ConfirmTargetDbTypeRequest) (*model.ConfirmTargetDbTypeResponse, error) {
 	requestDef := GenReqDefForConfirmTargetDbType()
 
@@ -111,8 +107,7 @@ func (c *UgoClient) ConfirmTargetDbTypeInvoker(request *model.ConfirmTargetDbTyp
 //
 // 创建评估项目。评估项目分2个阶段：采集、评估。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *UgoClient) CreateEvaluationProject(request *model.CreateEvaluationProjectRequest) (*model.CreateEvaluationProjectResponse, error) {
 	requestDef := GenReqDefForCreateEvaluationProject()
 
@@ -133,8 +128,7 @@ func (c *UgoClient) CreateEvaluationProjectInvoker(request *model.CreateEvaluati
 //
 // 创建迁移项目。创建迁移项目需要关联状态为“COMPLETED”的评估项目。迁移项目依次经历以下几个阶段：目标库权限检查、语法转换、验证、下载迁移失败的报告、删除。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *UgoClient) CreateMigrationProject(request *model.CreateMigrationProjectRequest) (*model.CreateMigrationProjectResponse, error) {
 	requestDef := GenReqDefForCreateMigrationProject()
 
@@ -155,8 +149,7 @@ func (c *UgoClient) CreateMigrationProjectInvoker(request *model.CreateMigration
 //
 // 删除评估项目。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *UgoClient) DeleteEvaluationProject(request *model.DeleteEvaluationProjectRequest) (*model.DeleteEvaluationProjectResponse, error) {
 	requestDef := GenReqDefForDeleteEvaluationProject()
 
@@ -177,8 +170,7 @@ func (c *UgoClient) DeleteEvaluationProjectInvoker(request *model.DeleteEvaluati
 //
 // 删除迁移项目。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *UgoClient) DeleteMigrationProject(request *model.DeleteMigrationProjectRequest) (*model.DeleteMigrationProjectResponse, error) {
 	requestDef := GenReqDefForDeleteMigrationProject()
 
@@ -199,8 +191,7 @@ func (c *UgoClient) DeleteMigrationProjectInvoker(request *model.DeleteMigration
 //
 // 下载迁移错误报告。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *UgoClient) DownloadFailureReport(request *model.DownloadFailureReportRequest) (*model.DownloadFailureReportResponse, error) {
 	requestDef := GenReqDefForDownloadFailureReport()
 
@@ -221,8 +212,7 @@ func (c *UgoClient) DownloadFailureReportInvoker(request *model.DownloadFailureR
 //
 // 查询评估项目列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *UgoClient) ListEvaluationProjects(request *model.ListEvaluationProjectsRequest) (*model.ListEvaluationProjectsResponse, error) {
 	requestDef := GenReqDefForListEvaluationProjects()
 
@@ -243,8 +233,7 @@ func (c *UgoClient) ListEvaluationProjectsInvoker(request *model.ListEvaluationP
 //
 // 查询迁移项目列表。创建迁移项目之后，调用该接口，根据项目名称，获取项目ID。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *UgoClient) ListMigrationProjects(request *model.ListMigrationProjectsRequest) (*model.ListMigrationProjectsResponse, error) {
 	requestDef := GenReqDefForListMigrationProjects()
 
@@ -265,8 +254,7 @@ func (c *UgoClient) ListMigrationProjectsInvoker(request *model.ListMigrationPro
 //
 // 查询权限检查结果。permission_check_status 为 \&quot;SUCCESS\&quot; 或者 \&quot;FAILED\&quot; 时，才能调用该接口。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *UgoClient) ListPermissionCheckResult(request *model.ListPermissionCheckResultRequest) (*model.ListPermissionCheckResultResponse, error) {
 	requestDef := GenReqDefForListPermissionCheckResult()
 
@@ -287,8 +275,7 @@ func (c *UgoClient) ListPermissionCheckResultInvoker(request *model.ListPermissi
 //
 // 查询单租户的配额，包括评估项目配额、迁移项目配额。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *UgoClient) ListQuotas(request *model.ListQuotasRequest) (*model.ListQuotasResponse, error) {
 	requestDef := GenReqDefForListQuotas()
 
@@ -309,8 +296,7 @@ func (c *UgoClient) ListQuotasInvoker(request *model.ListQuotasRequest) *ListQuo
 //
 // 查询语法转换的进度。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *UgoClient) ListSyntaxConversionProgress(request *model.ListSyntaxConversionProgressRequest) (*model.ListSyntaxConversionProgressResponse, error) {
 	requestDef := GenReqDefForListSyntaxConversionProgress()
 
@@ -331,8 +317,7 @@ func (c *UgoClient) ListSyntaxConversionProgressInvoker(request *model.ListSynta
 //
 // 查询验证进度。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *UgoClient) ListVerificationProgress(request *model.ListVerificationProgressRequest) (*model.ListVerificationProgressResponse, error) {
 	requestDef := GenReqDefForListVerificationProgress()
 
@@ -353,8 +338,7 @@ func (c *UgoClient) ListVerificationProgressInvoker(request *model.ListVerificat
 //
 // 查询评估项目详情。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *UgoClient) ShowEvaluationProjectDetail(request *model.ShowEvaluationProjectDetailRequest) (*model.ShowEvaluationProjectDetailResponse, error) {
 	requestDef := GenReqDefForShowEvaluationProjectDetail()
 
@@ -375,8 +359,7 @@ func (c *UgoClient) ShowEvaluationProjectDetailInvoker(request *model.ShowEvalua
 //
 // 查询评估项目状态。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *UgoClient) ShowEvaluationProjectStatus(request *model.ShowEvaluationProjectStatusRequest) (*model.ShowEvaluationProjectStatusResponse, error) {
 	requestDef := GenReqDefForShowEvaluationProjectStatus()
 
@@ -397,8 +380,7 @@ func (c *UgoClient) ShowEvaluationProjectStatusInvoker(request *model.ShowEvalua
 //
 // 查询迁移项目详情。只有migration_project_status为\&quot;READY\&quot;时才能调用该接口。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *UgoClient) ShowMigrationProjectDetail(request *model.ShowMigrationProjectDetailRequest) (*model.ShowMigrationProjectDetailResponse, error) {
 	requestDef := GenReqDefForShowMigrationProjectDetail()
 
@@ -419,8 +401,7 @@ func (c *UgoClient) ShowMigrationProjectDetailInvoker(request *model.ShowMigrati
 //
 // 查询迁移项目状态。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *UgoClient) ShowMigrationProjectStatus(request *model.ShowMigrationProjectStatusRequest) (*model.ShowMigrationProjectStatusResponse, error) {
 	requestDef := GenReqDefForShowMigrationProjectStatus()
 
@@ -441,8 +422,7 @@ func (c *UgoClient) ShowMigrationProjectStatusInvoker(request *model.ShowMigrati
 //
 // 查询API版本信息列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *UgoClient) ListApiVersions(request *model.ListApiVersionsRequest) (*model.ListApiVersionsResponse, error) {
 	requestDef := GenReqDefForListApiVersions()
 
@@ -463,8 +443,7 @@ func (c *UgoClient) ListApiVersionsInvoker(request *model.ListApiVersionsRequest
 //
 // 查询指定版本号的API版本信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *UgoClient) ShowApiVersionInfo(request *model.ShowApiVersionInfoRequest) (*model.ShowApiVersionInfoResponse, error) {
 	requestDef := GenReqDefForShowApiVersionInfo()
 
@@ -485,8 +464,7 @@ func (c *UgoClient) ShowApiVersionInfoInvoker(request *model.ShowApiVersionInfoR
 //
 // SQL语句转换。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *UgoClient) RunSqlConversion(request *model.RunSqlConversionRequest) (*model.RunSqlConversionResponse, error) {
 	requestDef := GenReqDefForRunSqlConversion()
 

@@ -97,7 +97,7 @@ func GenReqDefForListShareBandwidthTypes() *def.HttpRequestDef {
 
 func GenReqDefForAssociatePublicips() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPut).
+		WithMethod(http.MethodPost).
 		WithPath("/v3/{project_id}/eip/publicips/{publicip_id}/associate-instance").
 		WithResponse(new(model.AssociatePublicipsResponse)).
 		WithContentType("application/json;charset=UTF-8")
@@ -117,19 +117,15 @@ func GenReqDefForAssociatePublicips() *def.HttpRequestDef {
 
 func GenReqDefForDisassociatePublicips() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPut).
+		WithMethod(http.MethodPost).
 		WithPath("/v3/{project_id}/eip/publicips/{publicip_id}/disassociate-instance").
 		WithResponse(new(model.DisassociatePublicipsResponse)).
-		WithContentType("application/json;charset=UTF-8")
+		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PublicipId").
 		WithJsonTag("publicip_id").
 		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -408,6 +404,46 @@ func GenReqDefForShowPublicipPool() *def.HttpRequestDef {
 		WithName("Fields").
 		WithJsonTag("fields").
 		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateAssociatePublicip() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v3/{project_id}/eip/publicips/{publicip_id}/associate-instance").
+		WithResponse(new(model.UpdateAssociatePublicipResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PublicipId").
+		WithJsonTag("publicip_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateDisassociatePublicip() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v3/{project_id}/eip/publicips/{publicip_id}/disassociate-instance").
+		WithResponse(new(model.UpdateDisassociatePublicipResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PublicipId").
+		WithJsonTag("publicip_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

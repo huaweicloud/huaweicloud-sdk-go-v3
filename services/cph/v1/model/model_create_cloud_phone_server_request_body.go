@@ -27,7 +27,7 @@ type CreateCloudPhoneServerRequestBody struct {
 	KeypairName *string `json:"keypair_name,omitempty"`
 
 	// 云手机启用的应用端口，云手机服务会做端口转发
-	Ports *[]CreateCloudPhoneServerRequestBodyPorts `json:"ports,omitempty"`
+	Ports *[]Port `json:"ports,omitempty"`
 
 	BandWidth *CreateCloudPhoneServerRequestBodyBandWidth `json:"band_width"`
 

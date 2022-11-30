@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type RestartCloudPhoneRequest struct {
-	Body *ResetRestartRequestBody `json:"body,omitempty"`
+	Body *RestartCloudPhoneRequestBody `json:"body,omitempty"`
 }
 
 func (o RestartCloudPhoneRequest) String() string {

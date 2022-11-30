@@ -10,11 +10,11 @@ import (
 type RestartEncodeServerResponse struct {
 
 	// 请求的唯一标识ID
-	RequestId string `json:"request_id"`
+	RequestId *string `json:"request_id,omitempty"`
 
 	// 任务信息
-	Jobs           []interface{} `json:"jobs"`
-	HttpStatusCode int           `json:"-"`
+	Jobs           *[]EncodeServerJob `json:"jobs,omitempty"`
+	HttpStatusCode int                `json:"-"`
 }
 
 func (o RestartEncodeServerResponse) String() string {

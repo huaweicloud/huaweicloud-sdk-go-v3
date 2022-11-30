@@ -32,8 +32,7 @@ func BssClientBuilder() *http_client.HcHttpClientBuilder {
 // &gt;-   自动续费将于产品到期前7天的凌晨3:00开始扣款，请保持账户余额充足。若由于账户中余额不足等原因导致第一次未扣费成功，系统将每天凌晨3:00尝试进行一次扣款，直到扣款成功或保留产品资源的最后一天。
 // &gt;-   续费周期与原资源的购买周期一致。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) AutoRenewalResources(request *model.AutoRenewalResourcesRequest) (*model.AutoRenewalResourcesResponse, error) {
 	requestDef := GenReqDefForAutoRenewalResources()
 
@@ -61,8 +60,7 @@ func (c *BssClient) AutoRenewalResourcesInvoker(request *model.AutoRenewalResour
 // &gt;-   目前支持取消自动续费的包年/包月产品同支持自动续费的包年/包月产品。
 // &gt;-   在调用本接口前，您可以调用“[查询客户包年/包月资源列表](https://support.huaweicloud.com/api-bpconsole/api_order_00021.html)”接口获取资源ID、资源过期时间以及资源过期后扣费策略等信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) CancelAutoRenewalResources(request *model.CancelAutoRenewalResourcesRequest) (*model.CancelAutoRenewalResourcesResponse, error) {
 	requestDef := GenReqDefForCancelAutoRenewalResources()
 
@@ -88,8 +86,7 @@ func (c *BssClient) CancelAutoRenewalResourcesInvoker(request *model.CancelAutoR
 // &gt;![](public_sys-resources/icon-note.gif) **说明：**
 // &gt;只有订单状态是“待支付”的时候，才能取消订单。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) CancelCustomerOrder(request *model.CancelCustomerOrderRequest) (*model.CancelCustomerOrderResponse, error) {
 	requestDef := GenReqDefForCancelCustomerOrder()
 
@@ -120,8 +117,7 @@ func (c *BssClient) CancelCustomerOrderInvoker(request *model.CancelCustomerOrde
 // &gt;-   该接口支持5天无理由全额退订，具体规则请参见“[退订规则说明](https://support.huaweicloud.com/usermanual-billing/unsubscription_topic_20000081.html)”。
 // &gt;-   您正在退订使用中的资源，请仔细确认资源信息和退款信息。未放入回收站的资源退订后无法恢复，若您要保留资源，仅退订未使用的续费周期，请退订续费周期。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) CancelResourcesSubscription(request *model.CancelResourcesSubscriptionRequest) (*model.CancelResourcesSubscriptionResponse, error) {
 	requestDef := GenReqDefForCancelResourcesSubscription()
 
@@ -144,8 +140,7 @@ func (c *BssClient) CancelResourcesSubscriptionInvoker(request *model.CancelReso
 //
 // 个人客户登录帐号中心通过实名认证变更为企业帐号的方式及流程请参见[这里](https://support.huaweicloud.com/usermanual-account/zh-cn_topic_0103532632.html)。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ChangeEnterpriseRealnameAuthentication(request *model.ChangeEnterpriseRealnameAuthenticationRequest) (*model.ChangeEnterpriseRealnameAuthenticationResponse, error) {
 	requestDef := GenReqDefForChangeEnterpriseRealnameAuthentication()
 
@@ -169,8 +164,7 @@ func (c *BssClient) ChangeEnterpriseRealnameAuthenticationInvoker(request *model
 // &gt;![](public_sys-resources/icon-note.gif) **说明：**
 // &gt;针对校验手机号场景，目前仅支持校验手机号注册数量是否超过上限。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) CheckUserIdentity(request *model.CheckUserIdentityRequest) (*model.CheckUserIdentityResponse, error) {
 	requestDef := GenReqDefForCheckUserIdentity()
 
@@ -191,8 +185,7 @@ func (c *BssClient) CheckUserIdentityInvoker(request *model.CheckUserIdentityReq
 //
 // 客户在自建平台开通客户企业项目权限。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) CreateEnterpriseProjectAuth(request *model.CreateEnterpriseProjectAuthRequest) (*model.CreateEnterpriseProjectAuthResponse, error) {
 	requestDef := GenReqDefForCreateEnterpriseProjectAuth()
 
@@ -215,8 +208,7 @@ func (c *BssClient) CreateEnterpriseProjectAuthInvoker(request *model.CreateEnte
 //
 // 客户登录帐号中心进行企业实名认证的方式及流程请参见[这里](https://support.huaweicloud.com/usermanual-account/zh-cn_topic_0077914253.html)。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) CreateEnterpriseRealnameAuthentication(request *model.CreateEnterpriseRealnameAuthenticationRequest) (*model.CreateEnterpriseRealnameAuthenticationResponse, error) {
 	requestDef := GenReqDefForCreateEnterpriseRealnameAuthentication()
 
@@ -242,8 +234,7 @@ func (c *BssClient) CreateEnterpriseRealnameAuthenticationInvoker(request *model
 // &gt;![](public_sys-resources/icon-note.gif) **说明：**
 // &gt;只能给代售子客户发放优惠券。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) CreatePartnerCoupons(request *model.CreatePartnerCouponsRequest) (*model.CreatePartnerCouponsResponse, error) {
 	requestDef := GenReqDefForCreatePartnerCoupons()
 
@@ -266,8 +257,7 @@ func (c *BssClient) CreatePartnerCouponsInvoker(request *model.CreatePartnerCoup
 //
 // 客户登录帐号中心进行个人实名认证的方式及流程请参见[这里](https://support.huaweicloud.com/usermanual-account/zh-cn_topic_0077914254.html)。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) CreatePersonalRealnameAuth(request *model.CreatePersonalRealnameAuthRequest) (*model.CreatePersonalRealnameAuthResponse, error) {
 	requestDef := GenReqDefForCreatePersonalRealnameAuth()
 
@@ -290,8 +280,7 @@ func (c *BssClient) CreatePersonalRealnameAuthInvoker(request *model.CreatePerso
 //
 // 伙伴登录伙伴中心新增邮寄地址请参见[向华为云索取发票](https://support.huaweicloud.com/usermanual-bpconsole/zh-cn_topic_0072435143.html)，进入索取发票页面，选择纸质发票，即可设置邮件地址。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) CreatePostal(request *model.CreatePostalRequest) (*model.CreatePostalResponse, error) {
 	requestDef := GenReqDefForCreatePostal()
 
@@ -319,8 +308,7 @@ func (c *BssClient) CreatePostalInvoker(request *model.CreatePostalRequest) *Cre
 // &gt;-   如果创建的时候不输入手机号，那么客户将无法收到华为云发出的任何提醒短信，需要客户自己登录到华为云平台补充手机号。
 // &gt;-   调用“创建客户”接口时，华为云会同步创建华为云客户账号，将客户ID及账号名返回给伙伴平台，然后华为云异步完成客户与伙伴的关联。伙伴与客户的关联结果可通过“[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)”查询。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) CreateSubCustomer(request *model.CreateSubCustomerRequest) (*model.CreateSubCustomerResponse, error) {
 	requestDef := GenReqDefForCreateSubCustomer()
 
@@ -343,8 +331,7 @@ func (c *BssClient) CreateSubCustomerInvoker(request *model.CreateSubCustomerReq
 //
 // 企业主账号创建企业子账号请参见[这里](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0104194162.html)。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) CreateSubEnterpriseAccount(request *model.CreateSubEnterpriseAccountRequest) (*model.CreateSubEnterpriseAccountResponse, error) {
 	requestDef := GenReqDefForCreateSubEnterpriseAccount()
 
@@ -367,8 +354,7 @@ func (c *BssClient) CreateSubEnterpriseAccountInvoker(request *model.CreateSubEn
 //
 // 伙伴登录伙伴中心修改邮寄地址请参见[向华为云索取发票](https://support.huaweicloud.com/usermanual-bpconsole/zh-cn_topic_0072435143.html)，进入索取发票页面，选择删除邮寄地址，即可删除邮件地址。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) DeletePostal(request *model.DeletePostalRequest) (*model.DeletePostalResponse, error) {
 	requestDef := GenReqDefForDeletePostal()
 
@@ -389,8 +375,7 @@ func (c *BssClient) DeletePostalInvoker(request *model.DeletePostalRequest) *Del
 //
 // 伙伴在伙伴销售平台上查询城市信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListCities(request *model.ListCitiesRequest) (*model.ListCitiesResponse, error) {
 	requestDef := GenReqDefForListCities()
 
@@ -414,8 +399,7 @@ func (c *BssClient) ListCitiesInvoker(request *model.ListCitiesRequest) *ListCit
 // &gt;![](public_sys-resources/icon-note.gif) **说明：**
 // &gt;若当前子客户与伙伴无关联关系，仍可查询账期内处于关联状态且有消费的子客户列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListConsumeSubCustomers(request *model.ListConsumeSubCustomersRequest) (*model.ListConsumeSubCustomersResponse, error) {
 	requestDef := GenReqDefForListConsumeSubCustomers()
 
@@ -436,8 +420,7 @@ func (c *BssClient) ListConsumeSubCustomersInvoker(request *model.ListConsumeSub
 //
 // 伙伴在伙伴销售平台上查询度量单位的进制转换信息，用于不同度量单位之间的转换。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListConversions(request *model.ListConversionsRequest) (*model.ListConversionsResponse, error) {
 	requestDef := GenReqDefForListConversions()
 
@@ -458,8 +441,7 @@ func (c *BssClient) ListConversionsInvoker(request *model.ListConversionsRequest
 //
 // 客户在自建平台查询成本分析数据。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListCosts(request *model.ListCostsRequest) (*model.ListCostsResponse, error) {
 	requestDef := GenReqDefForListCosts()
 
@@ -480,8 +462,7 @@ func (c *BssClient) ListCostsInvoker(request *model.ListCostsRequest) *ListCosts
 //
 // 伙伴在伙伴销售平台上查询区县信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListCounties(request *model.ListCountiesRequest) (*model.ListCountiesResponse, error) {
 	requestDef := GenReqDefForListCounties()
 
@@ -507,8 +488,7 @@ func (c *BssClient) ListCountiesInvoker(request *model.ListCountiesRequest) *Lis
 // &gt;![](public_sys-resources/icon-note.gif) **说明：**
 // &gt;伙伴也可以单击代金券额度所在行的“操作记录”，查看该代金券额度对应的操作记录日志。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListCouponQuotasRecords(request *model.ListCouponQuotasRecordsRequest) (*model.ListCouponQuotasRecordsResponse, error) {
 	requestDef := GenReqDefForListCouponQuotasRecords()
 
@@ -531,8 +511,7 @@ func (c *BssClient) ListCouponQuotasRecordsInvoker(request *model.ListCouponQuot
 //
 // 客户登录费用中心查询自己的消费流水账单请参见[这里](https://support.huaweicloud.com/usermanual-billing/bills-topic_80000001.html#bills-topic_80000001__zh-cn_topic_0000001162496407_s716e04d5d0ba4e9d9a76a8bcbfbcfe73)的“**查看流水账单**”。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListCustomerBillsFeeRecords(request *model.ListCustomerBillsFeeRecordsRequest) (*model.ListCustomerBillsFeeRecordsResponse, error) {
 	requestDef := GenReqDefForListCustomerBillsFeeRecords()
 
@@ -560,8 +539,7 @@ func (c *BssClient) ListCustomerBillsFeeRecordsInvoker(request *model.ListCustom
 // &gt;![](public_sys-resources/icon-note.gif) **说明：**
 // &gt;该接口仅面向已开通成本中心的客户开放。如何开启成本中心请参见[这里](https://support.huaweicloud.com/usermanual-cost/costcenter_000004.html)。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListCustomerBillsMonthlyBreakDown(request *model.ListCustomerBillsMonthlyBreakDownRequest) (*model.ListCustomerBillsMonthlyBreakDownResponse, error) {
 	requestDef := GenReqDefForListCustomerBillsMonthlyBreakDown()
 
@@ -582,8 +560,7 @@ func (c *BssClient) ListCustomerBillsMonthlyBreakDownInvoker(request *model.List
 //
 // 合作伙伴可以查询关联的代售类客户已开通的按需资源。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListCustomerOnDemandResources(request *model.ListCustomerOnDemandResourcesRequest) (*model.ListCustomerOnDemandResourcesResponse, error) {
 	requestDef := GenReqDefForListCustomerOnDemandResources()
 
@@ -609,8 +586,7 @@ func (c *BssClient) ListCustomerOnDemandResourcesInvoker(request *model.ListCust
 // &gt;![](public_sys-resources/icon-note.gif) **说明：**
 // &gt;如果想查询某条订单下的资源信息，在调用本接口获取订单ID后，请调用“[查询客户包年/包月资源列表](https://support.huaweicloud.com/api-oce/api_order_00021.html)”接口在请求参数输入订单号进行查询。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListCustomerOrders(request *model.ListCustomerOrdersRequest) (*model.ListCustomerOrdersResponse, error) {
 	requestDef := GenReqDefForListCustomerOrders()
 
@@ -636,8 +612,7 @@ func (c *BssClient) ListCustomerOrdersInvoker(request *model.ListCustomerOrdersR
 // &gt;![](public_sys-resources/icon-note.gif) **说明：**
 // &gt;顾问销售类客户是客户在华为云充值，合作伙伴无法调用此接口查询其账户余额。代售类客户的账户由合作伙伴拨款，所以可以查询到。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListCustomersBalancesDetail(request *model.ListCustomersBalancesDetailRequest) (*model.ListCustomersBalancesDetailResponse, error) {
 	requestDef := GenReqDefForListCustomersBalancesDetail()
 
@@ -663,8 +638,7 @@ func (c *BssClient) ListCustomersBalancesDetailInvoker(request *model.ListCustom
 // &gt;![](public_sys-resources/icon-note.gif) **说明：**
 // &gt;由于资源消费呈现的是资源维度的8位小数原始消费金额，实际从账户扣费时按2位小数进行扣费（即扣到分），会存在精度差异，所以，不推荐消费汇总和资源消费直接对账。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListCustomerselfResourceRecordDetails(request *model.ListCustomerselfResourceRecordDetailsRequest) (*model.ListCustomerselfResourceRecordDetailsResponse, error) {
 	requestDef := GenReqDefForListCustomerselfResourceRecordDetails()
 
@@ -687,8 +661,7 @@ func (c *BssClient) ListCustomerselfResourceRecordDetailsInvoker(request *model.
 //
 // 客户登录费用中心查询资源消费记录请参见[这里](https://support.huaweicloud.com/usermanual-billing/bills_topic_100000061.html)。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListCustomerselfResourceRecords(request *model.ListCustomerselfResourceRecordsRequest) (*model.ListCustomerselfResourceRecordsResponse, error) {
 	requestDef := GenReqDefForListCustomerselfResourceRecords()
 
@@ -709,8 +682,7 @@ func (c *BssClient) ListCustomerselfResourceRecordsInvoker(request *model.ListCu
 //
 // 企业主账号在自建平台查询企业子账号的可回收余额。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListEnterpriseMultiAccount(request *model.ListEnterpriseMultiAccountRequest) (*model.ListEnterpriseMultiAccountResponse, error) {
 	requestDef := GenReqDefForListEnterpriseMultiAccount()
 
@@ -731,8 +703,7 @@ func (c *BssClient) ListEnterpriseMultiAccountInvoker(request *model.ListEnterpr
 //
 // 企业主账号在自建平台查询企业组织结构。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListEnterpriseOrganizations(request *model.ListEnterpriseOrganizationsRequest) (*model.ListEnterpriseOrganizationsResponse, error) {
 	requestDef := GenReqDefForListEnterpriseOrganizations()
 
@@ -753,8 +724,7 @@ func (c *BssClient) ListEnterpriseOrganizationsInvoker(request *model.ListEnterp
 //
 // 企业主账号在自建平台查询企业子账号信息列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListEnterpriseSubCustomers(request *model.ListEnterpriseSubCustomersRequest) (*model.ListEnterpriseSubCustomersResponse, error) {
 	requestDef := GenReqDefForListEnterpriseSubCustomers()
 
@@ -775,8 +745,7 @@ func (c *BssClient) ListEnterpriseSubCustomersInvoker(request *model.ListEnterpr
 //
 // 客户在伙伴销售平台查询客户的资源包列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListFreeResourceInfos(request *model.ListFreeResourceInfosRequest) (*model.ListFreeResourceInfosResponse, error) {
 	requestDef := GenReqDefForListFreeResourceInfos()
 
@@ -797,8 +766,7 @@ func (c *BssClient) ListFreeResourceInfosInvoker(request *model.ListFreeResource
 //
 // 客户在伙伴销售平台根据资源项维度查询客户的资源包使用量。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListFreeResourceUsages(request *model.ListFreeResourceUsagesRequest) (*model.ListFreeResourceUsagesResponse, error) {
 	requestDef := GenReqDefForListFreeResourceUsages()
 
@@ -821,8 +789,7 @@ func (c *BssClient) ListFreeResourceUsagesInvoker(request *model.ListFreeResourc
 //
 // 伙伴登录合作伙伴中心查看产品的折扣和激励策略请参见[这里](https://support.huaweicloud.com/usermanual-bpconsole/dp_120400.html)。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListIncentiveDiscountPolicies(request *model.ListIncentiveDiscountPoliciesRequest) (*model.ListIncentiveDiscountPoliciesResponse, error) {
 	requestDef := GenReqDefForListIncentiveDiscountPolicies()
 
@@ -845,8 +812,7 @@ func (c *BssClient) ListIncentiveDiscountPoliciesInvoker(request *model.ListInce
 //
 // 一级经销商在伙伴中心查询二级经销商列表的方式请参见[这里](https://support.huaweicloud.com/usermanual-bpconsole/dp_120210.html)。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListIndirectPartners(request *model.ListIndirectPartnersRequest) (*model.ListIndirectPartnersResponse, error) {
 	requestDef := GenReqDefForListIndirectPartners()
 
@@ -872,8 +838,7 @@ func (c *BssClient) ListIndirectPartnersInvoker(request *model.ListIndirectPartn
 // &gt;![](public_sys-resources/icon-note.gif) **说明：**
 // &gt;调用该接口之前，需通过客户经理联系华为运营人员，为合作伙伴设置代金券发放额度。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListIssuedCouponQuotas(request *model.ListIssuedCouponQuotasRequest) (*model.ListIssuedCouponQuotasResponse, error) {
 	requestDef := GenReqDefForListIssuedCouponQuotas()
 
@@ -896,8 +861,7 @@ func (c *BssClient) ListIssuedCouponQuotasInvoker(request *model.ListIssuedCoupo
 //
 // 伙伴登录伙伴中心，进入“客户业务** **\\&gt; 代金券管理”，选择“已发放代金券”页签，即可查询已发放的代金券。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListIssuedPartnerCoupons(request *model.ListIssuedPartnerCouponsRequest) (*model.ListIssuedPartnerCouponsResponse, error) {
 	requestDef := GenReqDefForListIssuedPartnerCoupons()
 
@@ -918,8 +882,7 @@ func (c *BssClient) ListIssuedPartnerCouponsInvoker(request *model.ListIssuedPar
 //
 // 伙伴在伙伴销售平台上查询资源使用量，包年包月资源的时长及金额的度量单位及名称，度量单位类型等。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListMeasureUnits(request *model.ListMeasureUnitsRequest) (*model.ListMeasureUnitsResponse, error) {
 	requestDef := GenReqDefForListMeasureUnits()
 
@@ -947,8 +910,7 @@ func (c *BssClient) ListMeasureUnitsInvoker(request *model.ListMeasureUnitsReque
 // &gt;![](public_sys-resources/icon-caution.gif) **注意：**
 // &gt;华为云根据云服务类型、资源类型、云服务区和资源规格四个条件来查询产品，查询时请确认这4个查询条件均输入正确，否则该接口会返回无法找到产品的错误。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListOnDemandResourceRatings(request *model.ListOnDemandResourceRatingsRequest) (*model.ListOnDemandResourceRatingsResponse, error) {
 	requestDef := GenReqDefForListOnDemandResourceRatings()
 
@@ -969,8 +931,7 @@ func (c *BssClient) ListOnDemandResourceRatingsInvoker(request *model.ListOnDema
 //
 // 客户在伙伴销售平台支付待支付订单时，查询可使用的优惠券列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListOrderCouponsByOrderId(request *model.ListOrderCouponsByOrderIdRequest) (*model.ListOrderCouponsByOrderIdResponse, error) {
 	requestDef := GenReqDefForListOrderCouponsByOrderId()
 
@@ -991,8 +952,7 @@ func (c *BssClient) ListOrderCouponsByOrderIdInvoker(request *model.ListOrderCou
 //
 // 客户在伙伴销售平台支付待支付订单时，查询可使用的折扣信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListOrderDiscounts(request *model.ListOrderDiscountsRequest) (*model.ListOrderDiscountsResponse, error) {
 	requestDef := GenReqDefForListOrderDiscounts()
 
@@ -1013,8 +973,7 @@ func (c *BssClient) ListOrderDiscountsInvoker(request *model.ListOrderDiscountsR
 //
 // 伙伴在伙伴销售平台上查询自身的收支明细情况。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListPartnerAccountChangeRecords(request *model.ListPartnerAccountChangeRecordsRequest) (*model.ListPartnerAccountChangeRecordsResponse, error) {
 	requestDef := GenReqDefForListPartnerAccountChangeRecords()
 
@@ -1037,8 +996,7 @@ func (c *BssClient) ListPartnerAccountChangeRecordsInvoker(request *model.ListPa
 //
 // 伙伴登录伙伴中心，在“拨款”或“回收”页面，单击“调账记录”，可以查看一级经销商为二级经销商调账的记录。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListPartnerAdjustRecords(request *model.ListPartnerAdjustRecordsRequest) (*model.ListPartnerAdjustRecordsResponse, error) {
 	requestDef := GenReqDefForListPartnerAdjustRecords()
 
@@ -1059,8 +1017,7 @@ func (c *BssClient) ListPartnerAdjustRecordsInvoker(request *model.ListPartnerAd
 //
 // 华为云总经销商（一级经销商）可以查询关联的云经销商（二级经销商）的账户余额；云经销商伙伴可以查询自己的账户余额。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListPartnerBalances(request *model.ListPartnerBalancesRequest) (*model.ListPartnerBalancesResponse, error) {
 	requestDef := GenReqDefForListPartnerBalances()
 
@@ -1083,8 +1040,7 @@ func (c *BssClient) ListPartnerBalancesInvoker(request *model.ListPartnerBalance
 //
 // 合作伙伴登录伙伴中心查看、导出代金券操作日志请参见[这里](https://support.huaweicloud.com/usermanual-bpconsole/zh-cn_topic_0072435103.html)。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListPartnerCouponsRecord(request *model.ListPartnerCouponsRecordRequest) (*model.ListPartnerCouponsRecordResponse, error) {
 	requestDef := GenReqDefForListPartnerCouponsRecord()
 
@@ -1108,8 +1064,7 @@ func (c *BssClient) ListPartnerCouponsRecordInvoker(request *model.ListPartnerCo
 // &gt;![](public_sys-resources/icon-note.gif) **说明：**
 // &gt;成功调用本接口后，如果您需要对已生效状态的资源进行续订，您可以调用“[查询包年/包月产品价格](https://support.huaweicloud.com/api-bpconsole/bcloud_01002.html)”接口对查询到的包年/包月资源进行续订询价，然后再调用“[续订包年/包月资源](https://support.huaweicloud.com/api-bpconsole/api_order_00018.html)”接口进行续订。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListPayPerUseCustomerResources(request *model.ListPayPerUseCustomerResourcesRequest) (*model.ListPayPerUseCustomerResourcesResponse, error) {
 	requestDef := GenReqDefForListPayPerUseCustomerResources()
 
@@ -1132,8 +1087,7 @@ func (c *BssClient) ListPayPerUseCustomerResourcesInvoker(request *model.ListPay
 //
 // 伙伴登录伙伴中心查询邮寄地址请参见[向华为云索取发票](https://support.huaweicloud.com/usermanual-bpconsole/zh-cn_topic_0072435143.html)，进入索取发票页面，即可查看邮寄地址。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListPostalAddress(request *model.ListPostalAddressRequest) (*model.ListPostalAddressResponse, error) {
 	requestDef := GenReqDefForListPostalAddress()
 
@@ -1154,8 +1108,7 @@ func (c *BssClient) ListPostalAddressInvoker(request *model.ListPostalAddressReq
 //
 // 伙伴在伙伴销售平台上查询省份信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListProvinces(request *model.ListProvincesRequest) (*model.ListProvincesResponse, error) {
 	requestDef := GenReqDefForListProvinces()
 
@@ -1178,8 +1131,7 @@ func (c *BssClient) ListProvincesInvoker(request *model.ListProvincesRequest) *L
 //
 // 伙伴登录合作伙伴中心查看所拥有的代金券额度请参见[这里](https://support.huaweicloud.com/usermanual-bpconsole/zh-cn_topic_0072435100.html)。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListQuotaCoupons(request *model.ListQuotaCouponsRequest) (*model.ListQuotaCouponsResponse, error) {
 	requestDef := GenReqDefForListQuotaCoupons()
 
@@ -1207,8 +1159,7 @@ func (c *BssClient) ListQuotaCouponsInvoker(request *model.ListQuotaCouponsReque
 // &gt;![](public_sys-resources/icon-caution.gif) **注意：**
 // &gt;华为云根据云服务类型、资源类型、云服务区和资源规格四个条件来查询产品，查询时请确认这4个查询条件均输入正确，否则该接口会返回无法找到产品的错误。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListRateOnPeriodDetail(request *model.ListRateOnPeriodDetailRequest) (*model.ListRateOnPeriodDetailResponse, error) {
 	requestDef := GenReqDefForListRateOnPeriodDetail()
 
@@ -1229,8 +1180,7 @@ func (c *BssClient) ListRateOnPeriodDetailInvoker(request *model.ListRateOnPerio
 //
 // 伙伴在伙伴销售平台查询资源类型的列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListResourceTypes(request *model.ListResourceTypesRequest) (*model.ListResourceTypesResponse, error) {
 	requestDef := GenReqDefForListResourceTypes()
 
@@ -1254,8 +1204,7 @@ func (c *BssClient) ListResourceTypesInvoker(request *model.ListResourceTypesReq
 // &gt;![](public_sys-resources/icon-note.gif) **说明：**
 // &gt;当前仅支持查询CDN和OBS两种云服务类型的资源用量明细，仅针对95计费场景。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListResourceUsage(request *model.ListResourceUsageRequest) (*model.ListResourceUsageResponse, error) {
 	requestDef := GenReqDefForListResourceUsage()
 
@@ -1280,8 +1229,7 @@ func (c *BssClient) ListResourceUsageInvoker(request *model.ListResourceUsageReq
 // &gt;-   当前仅支持查询CDN和OBS两种云服务类型的资源用量汇总，仅针对95计费场景。
 // &gt;-   使用量汇总列表只包含月汇总金额和资源ID，若要查询具体某个资源的用量明细，请调用[查询资源用量明细](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001190606757.html)接口获取。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListResourceUsageSummary(request *model.ListResourceUsageSummaryRequest) (*model.ListResourceUsageSummaryResponse, error) {
 	requestDef := GenReqDefForListResourceUsageSummary()
 
@@ -1302,8 +1250,7 @@ func (c *BssClient) ListResourceUsageSummaryInvoker(request *model.ListResourceU
 //
 // 伙伴在伙伴销售平台根据云服务类型查询关联的资源类型编码和名称，用于查询按需产品的价格或包年/包月产品的价格。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListServiceResources(request *model.ListServiceResourcesRequest) (*model.ListServiceResourcesResponse, error) {
 	requestDef := GenReqDefForListServiceResources()
 
@@ -1324,8 +1271,7 @@ func (c *BssClient) ListServiceResourcesInvoker(request *model.ListServiceResour
 //
 // 伙伴在伙伴销售平台查询云服务类型的列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListServiceTypes(request *model.ListServiceTypesRequest) (*model.ListServiceTypesResponse, error) {
 	requestDef := GenReqDefForListServiceTypes()
 
@@ -1346,8 +1292,7 @@ func (c *BssClient) ListServiceTypesInvoker(request *model.ListServiceTypesReque
 //
 // 客户可以查询已购买的储值卡列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListStoredValueCards(request *model.ListStoredValueCardsRequest) (*model.ListStoredValueCardsResponse, error) {
 	requestDef := GenReqDefForListStoredValueCards()
 
@@ -1375,8 +1320,7 @@ func (c *BssClient) ListStoredValueCardsInvoker(request *model.ListStoredValueCa
 // &gt;-   如果是客户经理主管来查询，只支持按照单个客户经理查询，必须输入客户经理ID。
 // &gt;-   目前支持伙伴查询所有子客户（包含代售类和顾问销售类）的消费记录。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListSubCustomerBillDetail(request *model.ListSubCustomerBillDetailRequest) (*model.ListSubCustomerBillDetailResponse, error) {
 	requestDef := GenReqDefForListSubCustomerBillDetail()
 
@@ -1399,8 +1343,7 @@ func (c *BssClient) ListSubCustomerBillDetailInvoker(request *model.ListSubCusto
 //
 // 伙伴登录伙伴中心查询已发放代金券列表请参见[这里](https://support.huaweicloud.com/usermanual-bpconsole/zh-cn_topic_0072435101.html)，查看已下发代金券的内容。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListSubCustomerCoupons(request *model.ListSubCustomerCouponsRequest) (*model.ListSubCustomerCouponsResponse, error) {
 	requestDef := GenReqDefForListSubCustomerCoupons()
 
@@ -1423,8 +1366,7 @@ func (c *BssClient) ListSubCustomerCouponsInvoker(request *model.ListSubCustomer
 //
 // 伙伴登录合作伙伴中心查询客户信息列表请参见[这里](https://support.huaweicloud.com/usermanual-bpconsole/zh-cn_topic_0072435115.html)。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListSubCustomers(request *model.ListSubCustomersRequest) (*model.ListSubCustomersResponse, error) {
 	requestDef := GenReqDefForListSubCustomers()
 
@@ -1451,8 +1393,7 @@ func (c *BssClient) ListSubCustomersInvoker(request *model.ListSubCustomersReque
 // &gt;消费汇总数据仅包含前一天24点前的数据。每天刷新一次，更新前一天的数据。
 // &gt;该接口用于合作伙伴查询其代售类客户在华为的消费情况，如果输入某个客户ID，则是查询单个客户的，否则是查询该伙伴下所有使用伙伴拨款消费的客户的消费记录（包括退订记录）。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListSubcustomerMonthlyBills(request *model.ListSubcustomerMonthlyBillsRequest) (*model.ListSubcustomerMonthlyBillsResponse, error) {
 	requestDef := GenReqDefForListSubcustomerMonthlyBills()
 
@@ -1473,8 +1414,7 @@ func (c *BssClient) ListSubcustomerMonthlyBillsInvoker(request *model.ListSubcus
 //
 // 伙伴在伙伴销售平台查询资源的使用量类型列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListUsageTypes(request *model.ListUsageTypesRequest) (*model.ListUsageTypesResponse, error) {
 	requestDef := GenReqDefForListUsageTypes()
 
@@ -1504,8 +1444,7 @@ func (c *BssClient) ListUsageTypesInvoker(request *model.ListUsageTypesRequest) 
 // &gt;    -   如果优惠券的限制属性上存在simultaneousUseWithEmpowerDiscount字段，并且值为0，则折扣和优惠券不能同时使用。
 // &gt;    -   如果优惠券的限制属性上存在minConsumeDiscount字段，当折扣ID包含的所有订单项上的折扣率discount\\_ratio都小于minConsumeDiscount字段时，则折扣ID和优惠券不能同时使用。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) PayOrders(request *model.PayOrdersRequest) (*model.PayOrdersResponse, error) {
 	requestDef := GenReqDefForPayOrders()
 
@@ -1528,8 +1467,7 @@ func (c *BssClient) PayOrdersInvoker(request *model.PayOrdersRequest) *PayOrders
 //
 // 一级经销商在伙伴中心回收已发放给二级经销商的代金券额度请参见[这里](https://support.huaweicloud.com/usermanual-bpconsole/dp_120206.html)。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ReclaimCouponQuotas(request *model.ReclaimCouponQuotasRequest) (*model.ReclaimCouponQuotasResponse, error) {
 	requestDef := GenReqDefForReclaimCouponQuotas()
 
@@ -1552,8 +1490,7 @@ func (c *BssClient) ReclaimCouponQuotasInvoker(request *model.ReclaimCouponQuota
 //
 // 一级经销商在伙伴中心回收二级经销商账户拨款请参见[这里](https://support.huaweicloud.com/usermanual-bpconsole/dp_120205.html)。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ReclaimIndirectPartnerAccount(request *model.ReclaimIndirectPartnerAccountRequest) (*model.ReclaimIndirectPartnerAccountResponse, error) {
 	requestDef := GenReqDefForReclaimIndirectPartnerAccount()
 
@@ -1579,8 +1516,7 @@ func (c *BssClient) ReclaimIndirectPartnerAccountInvoker(request *model.ReclaimI
 // &gt;![](public_sys-resources/icon-note.gif) **说明：**
 // &gt;只能回收代售类子客户的优惠券。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ReclaimPartnerCoupons(request *model.ReclaimPartnerCouponsRequest) (*model.ReclaimPartnerCouponsResponse, error) {
 	requestDef := GenReqDefForReclaimPartnerCoupons()
 
@@ -1603,8 +1539,7 @@ func (c *BssClient) ReclaimPartnerCouponsInvoker(request *model.ReclaimPartnerCo
 //
 // 如果回收的是企业子账户的信用账户，可以回收所有额度；如果回收金额大于子账户信用余额的时候，可能会导致子账户欠费，请慎重选择。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ReclaimSubEnterpriseAmount(request *model.ReclaimSubEnterpriseAmountRequest) (*model.ReclaimSubEnterpriseAmountResponse, error) {
 	requestDef := GenReqDefForReclaimSubEnterpriseAmount()
 
@@ -1627,8 +1562,7 @@ func (c *BssClient) ReclaimSubEnterpriseAmountInvoker(request *model.ReclaimSubE
 //
 // 伙伴登录伙伴中心回收代售类客户账户余额请参见[这里](https://support.huaweicloud.com/usermanual-bpconsole/zh-cn_topic_0072435147.html)。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ReclaimToPartnerAccount(request *model.ReclaimToPartnerAccountRequest) (*model.ReclaimToPartnerAccountResponse, error) {
 	requestDef := GenReqDefForReclaimToPartnerAccount()
 
@@ -1656,8 +1590,7 @@ func (c *BssClient) ReclaimToPartnerAccountInvoker(request *model.ReclaimToPartn
 // &gt;-   注意：如ECS主机挂载新购的云硬盘，但此硬盘不是该ECS主资源的从资源，主从资源信息必须以调用[查询客户包年/包月资源列表](https://support.huaweicloud.com/api-oce/api_order_00021.html)接口获取的信息为准。
 // &gt;-   本接口支持自动支付，支付时使用折扣或优惠券的说明，请参见[支付使用折扣或优惠券说明](https://support.huaweicloud.com/api-oce/appendix_00001.html)。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) RenewalResources(request *model.RenewalResourcesRequest) (*model.RenewalResourcesResponse, error) {
 	requestDef := GenReqDefForRenewalResources()
 
@@ -1678,8 +1611,7 @@ func (c *BssClient) RenewalResourcesInvoker(request *model.RenewalResourcesReque
 //
 // 企业主账号在自建平台发送短信验证码。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) SendSmsVerificationCode(request *model.SendSmsVerificationCodeRequest) (*model.SendSmsVerificationCodeResponse, error) {
 	requestDef := GenReqDefForSendSmsVerificationCode()
 
@@ -1700,8 +1632,7 @@ func (c *BssClient) SendSmsVerificationCodeInvoker(request *model.SendSmsVerific
 //
 // 客户注册时，如果填写了手机号，可以向对应的手机发送注册验证码，校验信息的正确性。使用个人银行卡方式进行实名认证时，通过该接口向指定的手机发送验证码。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) SendVerificationMessageCode(request *model.SendVerificationMessageCodeRequest) (*model.SendVerificationMessageCodeResponse, error) {
 	requestDef := GenReqDefForSendVerificationMessageCode()
 
@@ -1724,8 +1655,7 @@ func (c *BssClient) SendVerificationMessageCodeInvoker(request *model.SendVerifi
 //
 // 客户可以登录费用中心进入“[总览](https://account.huaweicloud.com/usercenter/#/userindex/allview)”页面，在“可用额度”区域可以查询自身的账户余额。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ShowCustomerAccountBalances(request *model.ShowCustomerAccountBalancesRequest) (*model.ShowCustomerAccountBalancesResponse, error) {
 	requestDef := GenReqDefForShowCustomerAccountBalances()
 
@@ -1751,8 +1681,7 @@ func (c *BssClient) ShowCustomerAccountBalancesInvoker(request *model.ShowCustom
 // &gt;![](public_sys-resources/icon-note.gif) **说明：**
 // &gt;当前支持查看2019/01月份至今的费用账单。企业主账号展示的费用账单，包含关联的统一还款企业子账号的消费数据。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ShowCustomerMonthlySum(request *model.ShowCustomerMonthlySumRequest) (*model.ShowCustomerMonthlySumResponse, error) {
 	requestDef := GenReqDefForShowCustomerMonthlySum()
 
@@ -1778,8 +1707,7 @@ func (c *BssClient) ShowCustomerMonthlySumInvoker(request *model.ShowCustomerMon
 // &gt;![](public_sys-resources/icon-note.gif) **说明：**
 // &gt;如果想查询某条订单下的资源信息，请调用“[查询客户包年/包月资源列表](https://support.huaweicloud.com/api-oce/api_order_00021.html)”接口在请求参数输入订单号进行查询。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ShowCustomerOrderDetails(request *model.ShowCustomerOrderDetailsRequest) (*model.ShowCustomerOrderDetailsResponse, error) {
 	requestDef := GenReqDefForShowCustomerOrderDetails()
 
@@ -1800,8 +1728,7 @@ func (c *BssClient) ShowCustomerOrderDetailsInvoker(request *model.ShowCustomerO
 //
 // 企业主账号在自建平台查询自己的可拨款余额。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ShowMultiAccountTransferAmount(request *model.ShowMultiAccountTransferAmountRequest) (*model.ShowMultiAccountTransferAmountResponse, error) {
 	requestDef := GenReqDefForShowMultiAccountTransferAmount()
 
@@ -1822,8 +1749,7 @@ func (c *BssClient) ShowMultiAccountTransferAmountInvoker(request *model.ShowMul
 //
 // 如果实名认证申请或实名认证变更申请的响应中，显示需要人工审核，使用该接口查询审核结果。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ShowRealnameAuthenticationReviewResult(request *model.ShowRealnameAuthenticationReviewResultRequest) (*model.ShowRealnameAuthenticationReviewResultResponse, error) {
 	requestDef := GenReqDefForShowRealnameAuthenticationReviewResult()
 
@@ -1848,8 +1774,7 @@ func (c *BssClient) ShowRealnameAuthenticationReviewResultInvoker(request *model
 // &gt;-   可以在调用完“[退订包年/包月资源](https://support.huaweicloud.com/api-oce/api_order_00019.html)”接口生成退订订单ID后，调用该接口查询退订订单对应的金额所属资源和订单。例如，调用“[退订包年/包月资源](https://support.huaweicloud.com/api-oce/api_order_00019.html)”接口退订资源及其已续费周期后，您可以调用本小节的接口查询到退订金额归属的原开通订单ID和原续费订单ID。
 // &gt;-   2018年5月份之后退订的订单才能查询到归属的原订单ID。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ShowRefundOrderDetails(request *model.ShowRefundOrderDetailsRequest) (*model.ShowRefundOrderDetailsResponse, error) {
 	requestDef := GenReqDefForShowRefundOrderDetails()
 
@@ -1872,8 +1797,7 @@ func (c *BssClient) ShowRefundOrderDetailsInvoker(request *model.ShowRefundOrder
 //
 // 一级经销商在伙伴中心向二级经销商发放代金券额度请参见[这里](https://support.huaweicloud.com/usermanual-bpconsole/dp_120206.html)。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) UpdateCouponQuotas(request *model.UpdateCouponQuotasRequest) (*model.UpdateCouponQuotasResponse, error) {
 	requestDef := GenReqDefForUpdateCouponQuotas()
 
@@ -1896,8 +1820,7 @@ func (c *BssClient) UpdateCouponQuotasInvoker(request *model.UpdateCouponQuotasR
 //
 // 伙伴登录伙伴中心为代售类客户账户拨款请参见[这里](https://support.huaweicloud.com/usermanual-bpconsole/zh-cn_topic_0072435147.html)。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) UpdateCustomerAccountAmount(request *model.UpdateCustomerAccountAmountRequest) (*model.UpdateCustomerAccountAmountResponse, error) {
 	requestDef := GenReqDefForUpdateCustomerAccountAmount()
 
@@ -1920,8 +1843,7 @@ func (c *BssClient) UpdateCustomerAccountAmountInvoker(request *model.UpdateCust
 //
 // 一级经销商在伙伴中心向二级经销商拨款请参见[这里](https://support.huaweicloud.com/usermanual-bpconsole/dp_120205.html)。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) UpdateIndirectPartnerAccount(request *model.UpdateIndirectPartnerAccountRequest) (*model.UpdateIndirectPartnerAccountResponse, error) {
 	requestDef := GenReqDefForUpdateIndirectPartnerAccount()
 
@@ -1951,8 +1873,7 @@ func (c *BssClient) UpdateIndirectPartnerAccountInvoker(request *model.UpdateInd
 // &gt;-   设置包年/包月资源到期转按需后，包年/包月资源到期后将自动变成按需计费。
 // &gt;-   取消包年/包月资源到期转按需的前提是已经调用“[设置或取消包年/包月资源到期转按需](https://support.huaweicloud.com/api-oce/api_order_00024.html)”接口设置包年/包月资源的到期转按需或在调用“[续订包年/包月资源](https://support.huaweicloud.com/api-oce/api_order_00018.html)”接口时设置到期策略为到期转按需。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) UpdatePeriodToOnDemand(request *model.UpdatePeriodToOnDemandRequest) (*model.UpdatePeriodToOnDemandResponse, error) {
 	requestDef := GenReqDefForUpdatePeriodToOnDemand()
 
@@ -1975,8 +1896,7 @@ func (c *BssClient) UpdatePeriodToOnDemandInvoker(request *model.UpdatePeriodToO
 //
 // 伙伴登录伙伴中心修改邮寄地址请参见[向华为云索取发票](https://support.huaweicloud.com/usermanual-bpconsole/zh-cn_topic_0072435143.html)，进入索取发票页面，选择修改邮寄地址，即可修改邮件地址。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) UpdatePostal(request *model.UpdatePostalRequest) (*model.UpdatePostalResponse, error) {
 	requestDef := GenReqDefForUpdatePostal()
 
@@ -1997,8 +1917,7 @@ func (c *BssClient) UpdatePostalInvoker(request *model.UpdatePostalRequest) *Upd
 //
 // 企业主账号在自建平台向企业子账号拨款。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) UpdateSubEnterpriseAmount(request *model.UpdateSubEnterpriseAmountRequest) (*model.UpdateSubEnterpriseAmountResponse, error) {
 	requestDef := GenReqDefForUpdateSubEnterpriseAmount()
 

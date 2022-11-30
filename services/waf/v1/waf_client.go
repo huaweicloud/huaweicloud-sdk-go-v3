@@ -23,8 +23,7 @@ func WafClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 绑定证书到域名
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) ApplyCertificateToHost(request *model.ApplyCertificateToHostRequest) (*model.ApplyCertificateToHostResponse, error) {
 	requestDef := GenReqDefForApplyCertificateToHost()
 
@@ -48,8 +47,7 @@ func (c *WafClient) ApplyCertificateToHostInvoker(request *model.ApplyCertificat
 //  - 2.waf版本只支持升配，不支持降配；扩展包数量可以增加或者减少，但不支持数量减少为0
 //  - 3.不支持同时升降配，如增加域名扩展包数量，同时减少规则扩展包数量
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) ChangePrepaidCloudWaf(request *model.ChangePrepaidCloudWafRequest) (*model.ChangePrepaidCloudWafResponse, error) {
 	requestDef := GenReqDefForChangePrepaidCloudWaf()
 
@@ -70,8 +68,7 @@ func (c *WafClient) ChangePrepaidCloudWafInvoker(request *model.ChangePrepaidClo
 //
 // 创建防篡改规则
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) CreateAntiTamperRule(request *model.CreateAntiTamperRuleRequest) (*model.CreateAntiTamperRuleResponse, error) {
 	requestDef := GenReqDefForCreateAntiTamperRule()
 
@@ -92,8 +89,7 @@ func (c *WafClient) CreateAntiTamperRuleInvoker(request *model.CreateAntiTamperR
 //
 // 创建证书
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) CreateCertificate(request *model.CreateCertificateRequest) (*model.CreateCertificateResponse, error) {
 	requestDef := GenReqDefForCreateCertificate()
 
@@ -114,8 +110,7 @@ func (c *WafClient) CreateCertificateInvoker(request *model.CreateCertificateReq
 //
 // 创建地理位置控制规则
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) CreateGeoipRule(request *model.CreateGeoipRuleRequest) (*model.CreateGeoipRuleResponse, error) {
 	requestDef := GenReqDefForCreateGeoipRule()
 
@@ -136,8 +131,7 @@ func (c *WafClient) CreateGeoipRuleInvoker(request *model.CreateGeoipRuleRequest
 //
 // 创建云模式防护域名
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) CreateHost(request *model.CreateHostRequest) (*model.CreateHostResponse, error) {
 	requestDef := GenReqDefForCreateHost()
 
@@ -158,8 +152,7 @@ func (c *WafClient) CreateHostInvoker(request *model.CreateHostRequest) *CreateH
 //
 // 创建全局白名单(原误报屏蔽)规则
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) CreateIgnoreRule(request *model.CreateIgnoreRuleRequest) (*model.CreateIgnoreRuleResponse, error) {
 	requestDef := GenReqDefForCreateIgnoreRule()
 
@@ -180,8 +173,7 @@ func (c *WafClient) CreateIgnoreRuleInvoker(request *model.CreateIgnoreRuleReque
 //
 // 创建WAF独享引擎实例。独享模式只在部分局点支持，包括：华北-北京四、华东-上海一、华南-广州、华南-深圳  、中国-香港、亚太-曼谷、 亚太-新加坡。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) CreateInstance(request *model.CreateInstanceRequest) (*model.CreateInstanceResponse, error) {
 	requestDef := GenReqDefForCreateInstance()
 
@@ -202,8 +194,7 @@ func (c *WafClient) CreateInstanceInvoker(request *model.CreateInstanceRequest) 
 //
 // 创建ip地址组
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) CreateIpGroup(request *model.CreateIpGroupRequest) (*model.CreateIpGroupResponse, error) {
 	requestDef := GenReqDefForCreateIpGroup()
 
@@ -224,8 +215,7 @@ func (c *WafClient) CreateIpGroupInvoker(request *model.CreateIpGroupRequest) *C
 //
 // 创建防护策略，系统会在生成策略时配置一些默认的配置项，如果需要修改策略的默认配置项需要通过调用更新防护策略接口实现
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) CreatePolicy(request *model.CreatePolicyRequest) (*model.CreatePolicyResponse, error) {
 	requestDef := GenReqDefForCreatePolicy()
 
@@ -246,8 +236,7 @@ func (c *WafClient) CreatePolicyInvoker(request *model.CreatePolicyRequest) *Cre
 //
 // 创建独享模式域名
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) CreatePremiumHost(request *model.CreatePremiumHostRequest) (*model.CreatePremiumHostResponse, error) {
 	requestDef := GenReqDefForCreatePremiumHost()
 
@@ -268,8 +257,7 @@ func (c *WafClient) CreatePremiumHostInvoker(request *model.CreatePremiumHostReq
 //
 // 购买包周期云模式waf
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) CreatePrepaidCloudWaf(request *model.CreatePrepaidCloudWafRequest) (*model.CreatePrepaidCloudWafResponse, error) {
 	requestDef := GenReqDefForCreatePrepaidCloudWaf()
 
@@ -290,8 +278,7 @@ func (c *WafClient) CreatePrepaidCloudWafInvoker(request *model.CreatePrepaidClo
 //
 // 创建隐私屏蔽防护规则
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) CreatePrivacyRule(request *model.CreatePrivacyRuleRequest) (*model.CreatePrivacyRuleResponse, error) {
 	requestDef := GenReqDefForCreatePrivacyRule()
 
@@ -312,8 +299,7 @@ func (c *WafClient) CreatePrivacyRuleInvoker(request *model.CreatePrivacyRuleReq
 //
 // 创建引用表，引用表能够被CC攻击防护规则和精准访问防护中的规则所引用。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) CreateValueList(request *model.CreateValueListRequest) (*model.CreateValueListResponse, error) {
 	requestDef := GenReqDefForCreateValueList()
 
@@ -334,8 +320,7 @@ func (c *WafClient) CreateValueListInvoker(request *model.CreateValueListRequest
 //
 // 创建黑白名单规则
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) CreateWhiteblackipRule(request *model.CreateWhiteblackipRuleRequest) (*model.CreateWhiteblackipRuleResponse, error) {
 	requestDef := GenReqDefForCreateWhiteblackipRule()
 
@@ -356,8 +341,7 @@ func (c *WafClient) CreateWhiteblackipRuleInvoker(request *model.CreateWhiteblac
 //
 // 删除防篡改防护规则
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) DeleteAntitamperRule(request *model.DeleteAntitamperRuleRequest) (*model.DeleteAntitamperRuleResponse, error) {
 	requestDef := GenReqDefForDeleteAntitamperRule()
 
@@ -378,8 +362,7 @@ func (c *WafClient) DeleteAntitamperRuleInvoker(request *model.DeleteAntitamperR
 //
 // 删除证书
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) DeleteCertificate(request *model.DeleteCertificateRequest) (*model.DeleteCertificateResponse, error) {
 	requestDef := GenReqDefForDeleteCertificate()
 
@@ -400,8 +383,7 @@ func (c *WafClient) DeleteCertificateInvoker(request *model.DeleteCertificateReq
 //
 // 删除地理位置控制防护规则
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) DeleteGeoipRule(request *model.DeleteGeoipRuleRequest) (*model.DeleteGeoipRuleResponse, error) {
 	requestDef := GenReqDefForDeleteGeoipRule()
 
@@ -422,8 +404,7 @@ func (c *WafClient) DeleteGeoipRuleInvoker(request *model.DeleteGeoipRuleRequest
 //
 // 删除云模式防护域名
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) DeleteHost(request *model.DeleteHostRequest) (*model.DeleteHostResponse, error) {
 	requestDef := GenReqDefForDeleteHost()
 
@@ -444,8 +425,7 @@ func (c *WafClient) DeleteHostInvoker(request *model.DeleteHostRequest) *DeleteH
 //
 // 删除全局白名单(原误报屏蔽)防护规则
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) DeleteIgnoreRule(request *model.DeleteIgnoreRuleRequest) (*model.DeleteIgnoreRuleResponse, error) {
 	requestDef := GenReqDefForDeleteIgnoreRule()
 
@@ -466,8 +446,7 @@ func (c *WafClient) DeleteIgnoreRuleInvoker(request *model.DeleteIgnoreRuleReque
 //
 // 删除WAF独享引擎信息。独享模式只在部分局点支持，包括：华北-北京四、华东-上海一、华南-广州、华南-深圳  、中国-香港、亚太-曼谷、 亚太-新加坡。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) DeleteInstance(request *model.DeleteInstanceRequest) (*model.DeleteInstanceResponse, error) {
 	requestDef := GenReqDefForDeleteInstance()
 
@@ -488,8 +467,7 @@ func (c *WafClient) DeleteInstanceInvoker(request *model.DeleteInstanceRequest) 
 //
 // 删除ip地址组
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) DeleteIpGroup(request *model.DeleteIpGroupRequest) (*model.DeleteIpGroupResponse, error) {
 	requestDef := GenReqDefForDeleteIpGroup()
 
@@ -510,8 +488,7 @@ func (c *WafClient) DeleteIpGroupInvoker(request *model.DeleteIpGroupRequest) *D
 //
 // 删除防护策略，若策略正在使用，则需要先接解除域名与策略的绑定关系才能删除策略。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) DeletePolicy(request *model.DeletePolicyRequest) (*model.DeletePolicyResponse, error) {
 	requestDef := GenReqDefForDeletePolicy()
 
@@ -532,8 +509,7 @@ func (c *WafClient) DeletePolicyInvoker(request *model.DeletePolicyRequest) *Del
 //
 // 删除独享模式域名
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) DeletePremiumHost(request *model.DeletePremiumHostRequest) (*model.DeletePremiumHostResponse, error) {
 	requestDef := GenReqDefForDeletePremiumHost()
 
@@ -554,8 +530,7 @@ func (c *WafClient) DeletePremiumHostInvoker(request *model.DeletePremiumHostReq
 //
 // 删除隐私屏蔽防护规则
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) DeletePrivacyRule(request *model.DeletePrivacyRuleRequest) (*model.DeletePrivacyRuleResponse, error) {
 	requestDef := GenReqDefForDeletePrivacyRule()
 
@@ -576,8 +551,7 @@ func (c *WafClient) DeletePrivacyRuleInvoker(request *model.DeletePrivacyRuleReq
 //
 // 删除引用表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) DeleteValueList(request *model.DeleteValueListRequest) (*model.DeleteValueListResponse, error) {
 	requestDef := GenReqDefForDeleteValueList()
 
@@ -598,8 +572,7 @@ func (c *WafClient) DeleteValueListInvoker(request *model.DeleteValueListRequest
 //
 // 删除黑白名单防护规则
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) DeleteWhiteBlackIpRule(request *model.DeleteWhiteBlackIpRuleRequest) (*model.DeleteWhiteBlackIpRuleResponse, error) {
 	requestDef := GenReqDefForDeleteWhiteBlackIpRule()
 
@@ -620,8 +593,7 @@ func (c *WafClient) DeleteWhiteBlackIpRuleInvoker(request *model.DeleteWhiteBlac
 //
 // 查询防篡改规则列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) ListAntitamperRule(request *model.ListAntitamperRuleRequest) (*model.ListAntitamperRuleResponse, error) {
 	requestDef := GenReqDefForListAntitamperRule()
 
@@ -642,8 +614,7 @@ func (c *WafClient) ListAntitamperRuleInvoker(request *model.ListAntitamperRuleR
 //
 // 查询安全统计带宽数据。需要注意的是，安全统计相关的接口，暂时不能支持任意时间的查询。只能支持 console上显示的 昨天，今天，3天，7天和30天 数据查询。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) ListBandwidthTimeline(request *model.ListBandwidthTimelineRequest) (*model.ListBandwidthTimelineResponse, error) {
 	requestDef := GenReqDefForListBandwidthTimeline()
 
@@ -664,8 +635,7 @@ func (c *WafClient) ListBandwidthTimelineInvoker(request *model.ListBandwidthTim
 //
 // 查询证书列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) ListCertificates(request *model.ListCertificatesRequest) (*model.ListCertificatesResponse, error) {
 	requestDef := GenReqDefForListCertificates()
 
@@ -686,8 +656,7 @@ func (c *WafClient) ListCertificatesInvoker(request *model.ListCertificatesReque
 //
 // 查询全部防护域名列表，包括云模式和独享模式
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) ListCompositeHosts(request *model.ListCompositeHostsRequest) (*model.ListCompositeHostsResponse, error) {
 	requestDef := GenReqDefForListCompositeHosts()
 
@@ -708,8 +677,7 @@ func (c *WafClient) ListCompositeHostsInvoker(request *model.ListCompositeHostsR
 //
 // 查询攻击事件列表，该API暂时不支持查询全部防护事件，pagesize参数不可设为-1，由于性能原因，数据量越大消耗的内存越大，后端最多限制查询10000条数据，例如：自定义时间段内的数据超过了10000条，就无法查出page为101，pagesize为100之后的数据，需要调整时间区间，再进行查询
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) ListEvent(request *model.ListEventRequest) (*model.ListEventResponse, error) {
 	requestDef := GenReqDefForListEvent()
 
@@ -730,8 +698,7 @@ func (c *WafClient) ListEventInvoker(request *model.ListEventRequest) *ListEvent
 //
 // 查询地理位置访问控制规则列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) ListGeoipRule(request *model.ListGeoipRuleRequest) (*model.ListGeoipRuleResponse, error) {
 	requestDef := GenReqDefForListGeoipRule()
 
@@ -752,8 +719,7 @@ func (c *WafClient) ListGeoipRuleInvoker(request *model.ListGeoipRuleRequest) *L
 //
 // 查询云模式防护域名列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) ListHost(request *model.ListHostRequest) (*model.ListHostResponse, error) {
 	requestDef := GenReqDefForListHost()
 
@@ -774,8 +740,7 @@ func (c *WafClient) ListHostInvoker(request *model.ListHostRequest) *ListHostInv
 //
 // 返回路由信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) ListHostRoute(request *model.ListHostRouteRequest) (*model.ListHostRouteResponse, error) {
 	requestDef := GenReqDefForListHostRoute()
 
@@ -796,8 +761,7 @@ func (c *WafClient) ListHostRouteInvoker(request *model.ListHostRouteRequest) *L
 //
 // 查询全局白名单(原误报屏蔽)规则列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) ListIgnoreRule(request *model.ListIgnoreRuleRequest) (*model.ListIgnoreRuleResponse, error) {
 	requestDef := GenReqDefForListIgnoreRule()
 
@@ -818,8 +782,7 @@ func (c *WafClient) ListIgnoreRuleInvoker(request *model.ListIgnoreRuleRequest) 
 //
 // 查询WAF独享引擎列表。独享模式只在部分局点支持，包括：华北-北京四、华东-上海一、华南-广州、华南-深圳  、中国-香港、亚太-曼谷、 亚太-新加坡。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) ListInstance(request *model.ListInstanceRequest) (*model.ListInstanceResponse, error) {
 	requestDef := GenReqDefForListInstance()
 
@@ -840,8 +803,7 @@ func (c *WafClient) ListInstanceInvoker(request *model.ListInstanceRequest) *Lis
 //
 // 查询地址组列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) ListIpGroup(request *model.ListIpGroupRequest) (*model.ListIpGroupResponse, error) {
 	requestDef := GenReqDefForListIpGroup()
 
@@ -862,8 +824,7 @@ func (c *WafClient) ListIpGroupInvoker(request *model.ListIpGroupRequest) *ListI
 //
 // 查询告警通知配置
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) ListNoticeConfigs(request *model.ListNoticeConfigsRequest) (*model.ListNoticeConfigsResponse, error) {
 	requestDef := GenReqDefForListNoticeConfigs()
 
@@ -884,8 +845,7 @@ func (c *WafClient) ListNoticeConfigsInvoker(request *model.ListNoticeConfigsReq
 //
 // 查询安全总览分类统计TOP信息，包含受攻击域名 、攻击源ip、受攻击URL、攻击来源区域、攻击事件分布。需要注意的是，安全总览相关的接口，暂时不能支持任意时间的查询。只能支持 console上显示的 昨天，今天，3天，7天和30天 数据查询。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) ListOverviewsClassification(request *model.ListOverviewsClassificationRequest) (*model.ListOverviewsClassificationResponse, error) {
 	requestDef := GenReqDefForListOverviewsClassification()
 
@@ -906,8 +866,7 @@ func (c *WafClient) ListOverviewsClassificationInvoker(request *model.ListOvervi
 //
 // 查询防护策略列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) ListPolicy(request *model.ListPolicyRequest) (*model.ListPolicyResponse, error) {
 	requestDef := GenReqDefForListPolicy()
 
@@ -928,8 +887,7 @@ func (c *WafClient) ListPolicyInvoker(request *model.ListPolicyRequest) *ListPol
 //
 // 独享模式域名列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) ListPremiumHost(request *model.ListPremiumHostRequest) (*model.ListPremiumHostResponse, error) {
 	requestDef := GenReqDefForListPremiumHost()
 
@@ -950,8 +908,7 @@ func (c *WafClient) ListPremiumHostInvoker(request *model.ListPremiumHostRequest
 //
 // 查询隐私屏蔽防护规则
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) ListPrivacyRule(request *model.ListPrivacyRuleRequest) (*model.ListPrivacyRuleResponse, error) {
 	requestDef := GenReqDefForListPrivacyRule()
 
@@ -972,8 +929,7 @@ func (c *WafClient) ListPrivacyRuleInvoker(request *model.ListPrivacyRuleRequest
 //
 // 查询安全统计qps次数。需要注意的是，安全统计相关的接口，暂时不能支持任意时间的查询。只能支持 console上显示的 昨天，今天，3天，7天和30天 数据查询。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) ListQpsTimeline(request *model.ListQpsTimelineRequest) (*model.ListQpsTimelineResponse, error) {
 	requestDef := GenReqDefForListQpsTimeline()
 
@@ -994,8 +950,7 @@ func (c *WafClient) ListQpsTimelineInvoker(request *model.ListQpsTimelineRequest
 //
 // 查询安全总览中请求次数时间线统计数据。需要注意的是，安全总览相关的接口，暂时不能支持任意时间的查询。只能支持 console上显示的 昨天，今天，3天，7天和30天 数据查询。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) ListRequestTimeline(request *model.ListRequestTimelineRequest) (*model.ListRequestTimelineResponse, error) {
 	requestDef := GenReqDefForListRequestTimeline()
 
@@ -1016,8 +971,7 @@ func (c *WafClient) ListRequestTimelineInvoker(request *model.ListRequestTimelin
 //
 // 查询安全总览请求与攻击数量。需要注意的是，安全总览相关的接口，暂时不能支持任意时间的查询。只能支持 console上显示的 昨天，今天，3天，7天和30天 数据查询。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) ListStatistics(request *model.ListStatisticsRequest) (*model.ListStatisticsResponse, error) {
 	requestDef := GenReqDefForListStatistics()
 
@@ -1038,8 +992,7 @@ func (c *WafClient) ListStatisticsInvoker(request *model.ListStatisticsRequest) 
 //
 // 查询业务异常TOP统计信息。需要注意的是，安全总览相关的接口，暂时不能支持任意时间的查询。只能支持 console上显示的 昨天，今天，3天，7天和30天 数据查询。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) ListTopAbnormal(request *model.ListTopAbnormalRequest) (*model.ListTopAbnormalResponse, error) {
 	requestDef := GenReqDefForListTopAbnormal()
 
@@ -1060,8 +1013,7 @@ func (c *WafClient) ListTopAbnormalInvoker(request *model.ListTopAbnormalRequest
 //
 // 查询引用表列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) ListValueList(request *model.ListValueListRequest) (*model.ListValueListResponse, error) {
 	requestDef := GenReqDefForListValueList()
 
@@ -1082,8 +1034,7 @@ func (c *WafClient) ListValueListInvoker(request *model.ListValueListRequest) *L
 //
 // 查询黑白名单规则列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) ListWhiteblackipRule(request *model.ListWhiteblackipRuleRequest) (*model.ListWhiteblackipRuleResponse, error) {
 	requestDef := GenReqDefForListWhiteblackipRule()
 
@@ -1104,8 +1055,7 @@ func (c *WafClient) ListWhiteblackipRuleInvoker(request *model.ListWhiteblackipR
 //
 // 按企业项目迁移防护域名，仅专业版与独享版支持该功能
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) MigrateCompositeHosts(request *model.MigrateCompositeHostsRequest) (*model.MigrateCompositeHostsResponse, error) {
 	requestDef := GenReqDefForMigrateCompositeHosts()
 
@@ -1126,8 +1076,7 @@ func (c *WafClient) MigrateCompositeHostsInvoker(request *model.MigrateComposite
 //
 // 重命名WAF独享引擎。独享模式只在部分局点支持，包括：华北-北京四、华东-上海一、华南-广州、华南-深圳  、中国-香港、亚太-曼谷、 亚太-新加坡。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) RenameInstance(request *model.RenameInstanceRequest) (*model.RenameInstanceResponse, error) {
 	requestDef := GenReqDefForRenameInstance()
 
@@ -1148,8 +1097,7 @@ func (c *WafClient) RenameInstanceInvoker(request *model.RenameInstanceRequest) 
 //
 // 查询证书
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) ShowCertificate(request *model.ShowCertificateRequest) (*model.ShowCertificateResponse, error) {
 	requestDef := GenReqDefForShowCertificate()
 
@@ -1170,8 +1118,7 @@ func (c *WafClient) ShowCertificateInvoker(request *model.ShowCertificateRequest
 //
 // 根据Id查询防护域名
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) ShowCompositeHost(request *model.ShowCompositeHostRequest) (*model.ShowCompositeHostResponse, error) {
 	requestDef := GenReqDefForShowCompositeHost()
 
@@ -1192,8 +1139,7 @@ func (c *WafClient) ShowCompositeHostInvoker(request *model.ShowCompositeHostReq
 //
 // 局点支持特性查询
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) ShowConsoleConfig(request *model.ShowConsoleConfigRequest) (*model.ShowConsoleConfigResponse, error) {
 	requestDef := GenReqDefForShowConsoleConfig()
 
@@ -1214,8 +1160,7 @@ func (c *WafClient) ShowConsoleConfigInvoker(request *model.ShowConsoleConfigReq
 //
 // 查询指定事件id的防护事件详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) ShowEvent(request *model.ShowEventRequest) (*model.ShowEventResponse, error) {
 	requestDef := GenReqDefForShowEvent()
 
@@ -1236,8 +1181,7 @@ func (c *WafClient) ShowEventInvoker(request *model.ShowEventRequest) *ShowEvent
 //
 // 根据防护域名Id查询云模式防护域名详细信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) ShowHost(request *model.ShowHostRequest) (*model.ShowHostResponse, error) {
 	requestDef := GenReqDefForShowHost()
 
@@ -1258,8 +1202,7 @@ func (c *WafClient) ShowHostInvoker(request *model.ShowHostRequest) *ShowHostInv
 //
 // 查询WAF独享引擎信息。独享模式只在部分局点支持，包括：华北-北京四、华东-上海一、华南-广州、华南-深圳  、中国-香港、亚太-曼谷、 亚太-新加坡。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) ShowInstance(request *model.ShowInstanceRequest) (*model.ShowInstanceResponse, error) {
 	requestDef := GenReqDefForShowInstance()
 
@@ -1280,8 +1223,7 @@ func (c *WafClient) ShowInstanceInvoker(request *model.ShowInstanceRequest) *Sho
 //
 // 查询ip地址组明细
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) ShowIpGroup(request *model.ShowIpGroupRequest) (*model.ShowIpGroupResponse, error) {
 	requestDef := GenReqDefForShowIpGroup()
 
@@ -1302,8 +1244,7 @@ func (c *WafClient) ShowIpGroupInvoker(request *model.ShowIpGroupRequest) *ShowI
 //
 // 查询lts配置信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) ShowLtsInfoConfig(request *model.ShowLtsInfoConfigRequest) (*model.ShowLtsInfoConfigResponse, error) {
 	requestDef := GenReqDefForShowLtsInfoConfig()
 
@@ -1324,8 +1265,7 @@ func (c *WafClient) ShowLtsInfoConfigInvoker(request *model.ShowLtsInfoConfigReq
 //
 // 根据Id查询防护策略
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) ShowPolicy(request *model.ShowPolicyRequest) (*model.ShowPolicyResponse, error) {
 	requestDef := GenReqDefForShowPolicy()
 
@@ -1346,8 +1286,7 @@ func (c *WafClient) ShowPolicyInvoker(request *model.ShowPolicyRequest) *ShowPol
 //
 // 查看独享模式域名配置
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) ShowPremiumHost(request *model.ShowPremiumHostRequest) (*model.ShowPremiumHostResponse, error) {
 	requestDef := GenReqDefForShowPremiumHost()
 
@@ -1368,8 +1307,7 @@ func (c *WafClient) ShowPremiumHostInvoker(request *model.ShowPremiumHostRequest
 //
 // 查询WAF回源Ip信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) ShowSourceIp(request *model.ShowSourceIpRequest) (*model.ShowSourceIpResponse, error) {
 	requestDef := GenReqDefForShowSourceIp()
 
@@ -1390,8 +1328,7 @@ func (c *WafClient) ShowSourceIpInvoker(request *model.ShowSourceIpRequest) *Sho
 //
 // 查询租户订购信息，包括云模式包周期、按需计费、独享模式
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) ShowSubscriptionInfo(request *model.ShowSubscriptionInfoRequest) (*model.ShowSubscriptionInfoResponse, error) {
 	requestDef := GenReqDefForShowSubscriptionInfo()
 
@@ -1412,8 +1349,7 @@ func (c *WafClient) ShowSubscriptionInfoInvoker(request *model.ShowSubscriptionI
 //
 // 更新告警通知配置
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) UpdateAlertNoticeConfig(request *model.UpdateAlertNoticeConfigRequest) (*model.UpdateAlertNoticeConfigResponse, error) {
 	requestDef := GenReqDefForUpdateAlertNoticeConfig()
 
@@ -1434,8 +1370,7 @@ func (c *WafClient) UpdateAlertNoticeConfigInvoker(request *model.UpdateAlertNot
 //
 // 修改证书
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) UpdateCertificate(request *model.UpdateCertificateRequest) (*model.UpdateCertificateResponse, error) {
 	requestDef := GenReqDefForUpdateCertificate()
 
@@ -1456,8 +1391,7 @@ func (c *WafClient) UpdateCertificateInvoker(request *model.UpdateCertificateReq
 //
 // 更新地理位置控制防护规则
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) UpdateGeoipRule(request *model.UpdateGeoipRuleRequest) (*model.UpdateGeoipRuleResponse, error) {
 	requestDef := GenReqDefForUpdateGeoipRule()
 
@@ -1478,8 +1412,7 @@ func (c *WafClient) UpdateGeoipRuleInvoker(request *model.UpdateGeoipRuleRequest
 //
 // 更新云模式防护域名配置，在没有填入源站信息server的原始数据的情况下，则新的源站信息server会覆盖源站信息，而不是新增源站。此外，请求体可只传需要更新的部分。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) UpdateHost(request *model.UpdateHostRequest) (*model.UpdateHostResponse, error) {
 	requestDef := GenReqDefForUpdateHost()
 
@@ -1500,8 +1433,7 @@ func (c *WafClient) UpdateHostInvoker(request *model.UpdateHostRequest) *UpdateH
 //
 // 修改域名防护状态
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) UpdateHostProtectStatus(request *model.UpdateHostProtectStatusRequest) (*model.UpdateHostProtectStatusResponse, error) {
 	requestDef := GenReqDefForUpdateHostProtectStatus()
 
@@ -1522,8 +1454,7 @@ func (c *WafClient) UpdateHostProtectStatusInvoker(request *model.UpdateHostProt
 //
 // 修改ip地址组
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) UpdateIpGroup(request *model.UpdateIpGroupRequest) (*model.UpdateIpGroupResponse, error) {
 	requestDef := GenReqDefForUpdateIpGroup()
 
@@ -1544,8 +1475,7 @@ func (c *WafClient) UpdateIpGroupInvoker(request *model.UpdateIpGroupRequest) *U
 //
 // 配置全量日志lts，该接口可用来开启与关闭waf全量日志以及配置日志组和日志流。日志组id和日志流id可前往云日志服务获取。配置的日志流id要属于所配置的日志组。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) UpdateLtsInfoConfig(request *model.UpdateLtsInfoConfigRequest) (*model.UpdateLtsInfoConfigResponse, error) {
 	requestDef := GenReqDefForUpdateLtsInfoConfig()
 
@@ -1566,8 +1496,7 @@ func (c *WafClient) UpdateLtsInfoConfigInvoker(request *model.UpdateLtsInfoConfi
 //
 // 更新防护策略，请求体可只传需要更新的部分
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) UpdatePolicy(request *model.UpdatePolicyRequest) (*model.UpdatePolicyResponse, error) {
 	requestDef := GenReqDefForUpdatePolicy()
 
@@ -1588,8 +1517,7 @@ func (c *WafClient) UpdatePolicyInvoker(request *model.UpdatePolicyRequest) *Upd
 //
 // 更新防护策略的防护域名
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) UpdatePolicyProtectHost(request *model.UpdatePolicyProtectHostRequest) (*model.UpdatePolicyProtectHostResponse, error) {
 	requestDef := GenReqDefForUpdatePolicyProtectHost()
 
@@ -1610,8 +1538,7 @@ func (c *WafClient) UpdatePolicyProtectHostInvoker(request *model.UpdatePolicyPr
 //
 // 修改单条规则的状态，用于开启或者关闭单条规则，比如关闭精准防护中某一条规则
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) UpdatePolicyRuleStatus(request *model.UpdatePolicyRuleStatusRequest) (*model.UpdatePolicyRuleStatusResponse, error) {
 	requestDef := GenReqDefForUpdatePolicyRuleStatus()
 
@@ -1632,8 +1559,7 @@ func (c *WafClient) UpdatePolicyRuleStatusInvoker(request *model.UpdatePolicyRul
 //
 // 修改独享模式域名配置，在没有填入源站信息server的原始数据的情况下，则新的源站信息server会覆盖源站信息，而不是新增源站。此外，请求体可只传需要更新的部分。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) UpdatePremiumHost(request *model.UpdatePremiumHostRequest) (*model.UpdatePremiumHostResponse, error) {
 	requestDef := GenReqDefForUpdatePremiumHost()
 
@@ -1654,8 +1580,7 @@ func (c *WafClient) UpdatePremiumHostInvoker(request *model.UpdatePremiumHostReq
 //
 // 修改独享模式域名防护状态
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) UpdatePremiumHostProtectStatus(request *model.UpdatePremiumHostProtectStatusRequest) (*model.UpdatePremiumHostProtectStatusResponse, error) {
 	requestDef := GenReqDefForUpdatePremiumHostProtectStatus()
 
@@ -1676,8 +1601,7 @@ func (c *WafClient) UpdatePremiumHostProtectStatusInvoker(request *model.UpdateP
 //
 // 更新隐私屏蔽防护规则
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) UpdatePrivacyRule(request *model.UpdatePrivacyRuleRequest) (*model.UpdatePrivacyRuleResponse, error) {
 	requestDef := GenReqDefForUpdatePrivacyRule()
 
@@ -1698,8 +1622,7 @@ func (c *WafClient) UpdatePrivacyRuleInvoker(request *model.UpdatePrivacyRuleReq
 //
 // 修改引用表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) UpdateValueList(request *model.UpdateValueListRequest) (*model.UpdateValueListResponse, error) {
 	requestDef := GenReqDefForUpdateValueList()
 
@@ -1720,8 +1643,7 @@ func (c *WafClient) UpdateValueListInvoker(request *model.UpdateValueListRequest
 //
 // 更新黑白名单防护规则，可以更新ip/ip段以及防护动作等信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) UpdateWhiteblackipRule(request *model.UpdateWhiteblackipRuleRequest) (*model.UpdateWhiteblackipRuleResponse, error) {
 	requestDef := GenReqDefForUpdateWhiteblackipRule()
 

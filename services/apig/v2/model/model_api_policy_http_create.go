@@ -26,6 +26,9 @@ type ApiPolicyHttpCreate struct {
 	// API网关请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
 	Timeout *int32 `json:"timeout,omitempty"`
 
+	// 请求后端服务的重试次数，默认为-1，范围[-1,10]
+	RetryCount *string `json:"retry_count,omitempty"`
+
 	// 关联的策略组合模式： - ALL：满足全部条件 - ANY：满足任一条件
 	EffectMode ApiPolicyHttpCreateEffectMode `json:"effect_mode"`
 

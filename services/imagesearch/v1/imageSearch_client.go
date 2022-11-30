@@ -26,8 +26,7 @@ func ImageSearchClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // &gt; - 添加或搜索的图片存储在OBS的桶中时，需要对OBS的桶授权。在图像搜索服务管理控制台“实例管理”页面，单击实例操作列的“离线导入”，进入“离线导入”页面。选择存放数据的OBS桶，单击“授权”按钮，字体显示为灰色即完成OBS授权访问。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImageSearchClient) RunAddPicture(request *model.RunAddPictureRequest) (*model.RunAddPictureResponse, error) {
 	requestDef := GenReqDefForRunAddPicture()
 
@@ -48,8 +47,7 @@ func (c *ImageSearchClient) RunAddPictureInvoker(request *model.RunAddPictureReq
 //
 // 通过图片路径查询索引库中对应图片是否存在。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImageSearchClient) RunCheckPicture(request *model.RunCheckPictureRequest) (*model.RunCheckPictureResponse, error) {
 	requestDef := GenReqDefForRunCheckPicture()
 
@@ -70,8 +68,7 @@ func (c *ImageSearchClient) RunCheckPictureInvoker(request *model.RunCheckPictur
 //
 // 创建实例，实例中会生成图片索引库，用来存放图片特征。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImageSearchClient) RunCreateInstance(request *model.RunCreateInstanceRequest) (*model.RunCreateInstanceResponse, error) {
 	requestDef := GenReqDefForRunCreateInstance()
 
@@ -92,8 +89,7 @@ func (c *ImageSearchClient) RunCreateInstanceInvoker(request *model.RunCreateIns
 //
 // 删除已存在的实例。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImageSearchClient) RunDeleteInstance(request *model.RunDeleteInstanceRequest) (*model.RunDeleteInstanceResponse, error) {
 	requestDef := GenReqDefForRunDeleteInstance()
 
@@ -114,8 +110,7 @@ func (c *ImageSearchClient) RunDeleteInstanceInvoker(request *model.RunDeleteIns
 //
 // 通过图片路径删除索引库中对应图片。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImageSearchClient) RunDeletePicture(request *model.RunDeletePictureRequest) (*model.RunDeletePictureResponse, error) {
 	requestDef := GenReqDefForRunDeletePicture()
 
@@ -136,8 +131,7 @@ func (c *ImageSearchClient) RunDeletePictureInvoker(request *model.RunDeletePict
 //
 // 修改图像索引库中已存在的图片信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImageSearchClient) RunModifyPicture(request *model.RunModifyPictureRequest) (*model.RunModifyPictureResponse, error) {
 	requestDef := GenReqDefForRunModifyPicture()
 
@@ -158,8 +152,7 @@ func (c *ImageSearchClient) RunModifyPictureInvoker(request *model.RunModifyPict
 //
 // 查看用户指定实例详细信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImageSearchClient) RunQueryInstance(request *model.RunQueryInstanceRequest) (*model.RunQueryInstanceResponse, error) {
 	requestDef := GenReqDefForRunQueryInstance()
 
@@ -180,8 +173,7 @@ func (c *ImageSearchClient) RunQueryInstanceInvoker(request *model.RunQueryInsta
 //
 // 从图片索引库中搜索相似图片。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ImageSearchClient) RunSearchPicture(request *model.RunSearchPictureRequest) (*model.RunSearchPictureResponse, error) {
 	requestDef := GenReqDefForRunSearchPicture()
 

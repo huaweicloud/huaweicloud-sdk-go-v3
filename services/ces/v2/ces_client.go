@@ -23,8 +23,7 @@ func CesClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 批量增加告警规则资源(资源分组类型的告警规则不支持)，资源分组类型的修改请使用资源分组管理相关接口
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CesClient) AddAlarmRuleResources(request *model.AddAlarmRuleResourcesRequest) (*model.AddAlarmRuleResourcesResponse, error) {
 	requestDef := GenReqDefForAddAlarmRuleResources()
 
@@ -45,8 +44,7 @@ func (c *CesClient) AddAlarmRuleResourcesInvoker(request *model.AddAlarmRuleReso
 //
 // 给自定义资源分组,即类型为手动添加的资源分组,批量增加关联资源
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CesClient) BatchCreateResources(request *model.BatchCreateResourcesRequest) (*model.BatchCreateResourcesResponse, error) {
 	requestDef := GenReqDefForBatchCreateResources()
 
@@ -67,8 +65,7 @@ func (c *CesClient) BatchCreateResourcesInvoker(request *model.BatchCreateResour
 //
 // 批量删除告警规则V2接口
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CesClient) BatchDeleteAlarmRules(request *model.BatchDeleteAlarmRulesRequest) (*model.BatchDeleteAlarmRulesResponse, error) {
 	requestDef := GenReqDefForBatchDeleteAlarmRules()
 
@@ -89,8 +86,7 @@ func (c *CesClient) BatchDeleteAlarmRulesInvoker(request *model.BatchDeleteAlarm
 //
 // 批量删除自定义告警模板
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CesClient) BatchDeleteAlarmTemplates(request *model.BatchDeleteAlarmTemplatesRequest) (*model.BatchDeleteAlarmTemplatesResponse, error) {
 	requestDef := GenReqDefForBatchDeleteAlarmTemplates()
 
@@ -111,8 +107,7 @@ func (c *CesClient) BatchDeleteAlarmTemplatesInvoker(request *model.BatchDeleteA
 //
 // 批量删除资源分组
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CesClient) BatchDeleteResourceGroups(request *model.BatchDeleteResourceGroupsRequest) (*model.BatchDeleteResourceGroupsResponse, error) {
 	requestDef := GenReqDefForBatchDeleteResourceGroups()
 
@@ -133,8 +128,7 @@ func (c *CesClient) BatchDeleteResourceGroupsInvoker(request *model.BatchDeleteR
 //
 // 给自定义资源分组,即类型为手动添加的资源分组,批量删除关联资源
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CesClient) BatchDeleteResources(request *model.BatchDeleteResourcesRequest) (*model.BatchDeleteResourcesResponse, error) {
 	requestDef := GenReqDefForBatchDeleteResources()
 
@@ -155,8 +149,7 @@ func (c *CesClient) BatchDeleteResourcesInvoker(request *model.BatchDeleteResour
 //
 // 批量启停告警规则
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CesClient) BatchEnableAlarmRules(request *model.BatchEnableAlarmRulesRequest) (*model.BatchEnableAlarmRulesResponse, error) {
 	requestDef := GenReqDefForBatchEnableAlarmRules()
 
@@ -177,8 +170,7 @@ func (c *CesClient) BatchEnableAlarmRulesInvoker(request *model.BatchEnableAlarm
 //
 // 创建告警规则
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CesClient) CreateAlarmRules(request *model.CreateAlarmRulesRequest) (*model.CreateAlarmRulesResponse, error) {
 	requestDef := GenReqDefForCreateAlarmRules()
 
@@ -199,8 +191,7 @@ func (c *CesClient) CreateAlarmRulesInvoker(request *model.CreateAlarmRulesReque
 //
 // 创建自定义告警模板
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CesClient) CreateAlarmTemplate(request *model.CreateAlarmTemplateRequest) (*model.CreateAlarmTemplateResponse, error) {
 	requestDef := GenReqDefForCreateAlarmTemplate()
 
@@ -221,8 +212,7 @@ func (c *CesClient) CreateAlarmTemplateInvoker(request *model.CreateAlarmTemplat
 //
 // 创建资源分组
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CesClient) CreateResourceGroup(request *model.CreateResourceGroupRequest) (*model.CreateResourceGroupResponse, error) {
 	requestDef := GenReqDefForCreateResourceGroup()
 
@@ -243,8 +233,7 @@ func (c *CesClient) CreateResourceGroupInvoker(request *model.CreateResourceGrou
 //
 // 批量删除告警规则资源（资源分组类型的告警规则不支持），资源分组类型的修改请使用资源分组管理相关接口
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CesClient) DeleteAlarmRuleResources(request *model.DeleteAlarmRuleResourcesRequest) (*model.DeleteAlarmRuleResourcesResponse, error) {
 	requestDef := GenReqDefForDeleteAlarmRuleResources()
 
@@ -265,8 +254,7 @@ func (c *CesClient) DeleteAlarmRuleResourcesInvoker(request *model.DeleteAlarmRu
 //
 // 根据ECS/BMS资源ID查询磁盘、挂载点、进程、显卡、RAID控制器维度指标信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CesClient) ListAgentDimensionInfo(request *model.ListAgentDimensionInfoRequest) (*model.ListAgentDimensionInfoResponse, error) {
 	requestDef := GenReqDefForListAgentDimensionInfo()
 
@@ -287,8 +275,7 @@ func (c *CesClient) ListAgentDimensionInfoInvoker(request *model.ListAgentDimens
 //
 // 查询告警记录列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CesClient) ListAlarmHistories(request *model.ListAlarmHistoriesRequest) (*model.ListAlarmHistoriesResponse, error) {
 	requestDef := GenReqDefForListAlarmHistories()
 
@@ -309,8 +296,7 @@ func (c *CesClient) ListAlarmHistoriesInvoker(request *model.ListAlarmHistoriesR
 //
 // 根据告警规则ID查询策略列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CesClient) ListAlarmRulePolicies(request *model.ListAlarmRulePoliciesRequest) (*model.ListAlarmRulePoliciesResponse, error) {
 	requestDef := GenReqDefForListAlarmRulePolicies()
 
@@ -331,8 +317,7 @@ func (c *CesClient) ListAlarmRulePoliciesInvoker(request *model.ListAlarmRulePol
 //
 // 根据告警规则ID查询告警规则资源列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CesClient) ListAlarmRuleResources(request *model.ListAlarmRuleResourcesRequest) (*model.ListAlarmRuleResourcesResponse, error) {
 	requestDef := GenReqDefForListAlarmRuleResources()
 
@@ -353,8 +338,7 @@ func (c *CesClient) ListAlarmRuleResourcesInvoker(request *model.ListAlarmRuleRe
 //
 // 查询告警规则列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CesClient) ListAlarmRules(request *model.ListAlarmRulesRequest) (*model.ListAlarmRulesResponse, error) {
 	requestDef := GenReqDefForListAlarmRules()
 
@@ -375,8 +359,7 @@ func (c *CesClient) ListAlarmRulesInvoker(request *model.ListAlarmRulesRequest) 
 //
 // 查询告警模板关联的告警规则列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CesClient) ListAlarmTemplateAssociationAlarms(request *model.ListAlarmTemplateAssociationAlarmsRequest) (*model.ListAlarmTemplateAssociationAlarmsResponse, error) {
 	requestDef := GenReqDefForListAlarmTemplateAssociationAlarms()
 
@@ -397,8 +380,7 @@ func (c *CesClient) ListAlarmTemplateAssociationAlarmsInvoker(request *model.Lis
 //
 // 查询告警模板列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CesClient) ListAlarmTemplates(request *model.ListAlarmTemplatesRequest) (*model.ListAlarmTemplatesResponse, error) {
 	requestDef := GenReqDefForListAlarmTemplates()
 
@@ -419,8 +401,7 @@ func (c *CesClient) ListAlarmTemplatesInvoker(request *model.ListAlarmTemplatesR
 //
 // 查询资源分组列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CesClient) ListResourceGroups(request *model.ListResourceGroupsRequest) (*model.ListResourceGroupsResponse, error) {
 	requestDef := GenReqDefForListResourceGroups()
 
@@ -441,8 +422,7 @@ func (c *CesClient) ListResourceGroupsInvoker(request *model.ListResourceGroupsR
 //
 // 查询资源分组下指定服务类别特定维度的资源列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CesClient) ListResourceGroupsServicesResources(request *model.ListResourceGroupsServicesResourcesRequest) (*model.ListResourceGroupsServicesResourcesResponse, error) {
 	requestDef := GenReqDefForListResourceGroupsServicesResources()
 
@@ -463,8 +443,7 @@ func (c *CesClient) ListResourceGroupsServicesResourcesInvoker(request *model.Li
 //
 // 查询告警模板详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CesClient) ShowAlarmTemplate(request *model.ShowAlarmTemplateRequest) (*model.ShowAlarmTemplateResponse, error) {
 	requestDef := GenReqDefForShowAlarmTemplate()
 
@@ -485,8 +464,7 @@ func (c *CesClient) ShowAlarmTemplateInvoker(request *model.ShowAlarmTemplateReq
 //
 // 查询指定资源分组详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CesClient) ShowResourceGroup(request *model.ShowResourceGroupRequest) (*model.ShowResourceGroupResponse, error) {
 	requestDef := GenReqDefForShowResourceGroup()
 
@@ -507,8 +485,7 @@ func (c *CesClient) ShowResourceGroupInvoker(request *model.ShowResourceGroupReq
 //
 // 修改告警规则策略(全量修改)
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CesClient) UpdateAlarmRulePolicies(request *model.UpdateAlarmRulePoliciesRequest) (*model.UpdateAlarmRulePoliciesResponse, error) {
 	requestDef := GenReqDefForUpdateAlarmRulePolicies()
 
@@ -529,8 +506,7 @@ func (c *CesClient) UpdateAlarmRulePoliciesInvoker(request *model.UpdateAlarmRul
 //
 // 修改自定义告警模板
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CesClient) UpdateAlarmTemplate(request *model.UpdateAlarmTemplateRequest) (*model.UpdateAlarmTemplateResponse, error) {
 	requestDef := GenReqDefForUpdateAlarmTemplate()
 
@@ -551,8 +527,7 @@ func (c *CesClient) UpdateAlarmTemplateInvoker(request *model.UpdateAlarmTemplat
 //
 // 修改资源分组
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CesClient) UpdateResourceGroup(request *model.UpdateResourceGroupRequest) (*model.UpdateResourceGroupResponse, error) {
 	requestDef := GenReqDefForUpdateResourceGroup()
 

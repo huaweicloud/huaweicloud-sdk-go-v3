@@ -112,3 +112,27 @@ func (i *ShowPublicipPoolInvoker) Invoke() (*model.ShowPublicipPoolResponse, err
 		return result.(*model.ShowPublicipPoolResponse), nil
 	}
 }
+
+type UpdateAssociatePublicipInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAssociatePublicipInvoker) Invoke() (*model.UpdateAssociatePublicipResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAssociatePublicipResponse), nil
+	}
+}
+
+type UpdateDisassociatePublicipInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDisassociatePublicipInvoker) Invoke() (*model.UpdateDisassociatePublicipResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDisassociatePublicipResponse), nil
+	}
+}

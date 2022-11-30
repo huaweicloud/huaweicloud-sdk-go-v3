@@ -3,14 +3,17 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Request Object
 type ShowBackupPolicyRequest struct {
 
-	// 语言
-	XLanguage *string `json:"X-Language,omitempty"`
+	// 语言。默认值：en-us。
+	XLanguage *ShowBackupPolicyRequestXLanguage `json:"X-Language,omitempty"`
 
 	// 实例ID。
 	InstanceId string `json:"instance_id"`
@@ -23,4 +26,46 @@ func (o ShowBackupPolicyRequest) String() string {
 	}
 
 	return strings.Join([]string{"ShowBackupPolicyRequest", string(data)}, " ")
+}
+
+type ShowBackupPolicyRequestXLanguage struct {
+	value string
+}
+
+type ShowBackupPolicyRequestXLanguageEnum struct {
+	ZH_CN ShowBackupPolicyRequestXLanguage
+	EN_US ShowBackupPolicyRequestXLanguage
+}
+
+func GetShowBackupPolicyRequestXLanguageEnum() ShowBackupPolicyRequestXLanguageEnum {
+	return ShowBackupPolicyRequestXLanguageEnum{
+		ZH_CN: ShowBackupPolicyRequestXLanguage{
+			value: "zh-cn",
+		},
+		EN_US: ShowBackupPolicyRequestXLanguage{
+			value: "en-us",
+		},
+	}
+}
+
+func (c ShowBackupPolicyRequestXLanguage) Value() string {
+	return c.value
+}
+
+func (c ShowBackupPolicyRequestXLanguage) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ShowBackupPolicyRequestXLanguage) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

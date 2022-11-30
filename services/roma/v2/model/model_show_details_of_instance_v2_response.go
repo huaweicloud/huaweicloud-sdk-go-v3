@@ -105,8 +105,11 @@ type ShowDetailsOfInstanceV2Response struct {
 	// 实例入口（IPV6）  当前仅部分region部分可用区支持IPv6
 	IngressIpV6 *string `json:"ingress_ip_v6,omitempty"`
 
-	NodeIps        *NodeIps `json:"node_ips,omitempty"`
-	HttpStatusCode int      `json:"-"`
+	NodeIps *NodeIps `json:"node_ips,omitempty"`
+
+	// 实例集群全量入口（多入口实例）
+	IngressIps     *string `json:"ingress_ips,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowDetailsOfInstanceV2Response) String() string {

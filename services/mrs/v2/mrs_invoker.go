@@ -53,6 +53,18 @@ func (i *ShowAgencyMappingInvoker) Invoke() (*model.ShowAgencyMappingResponse, e
 	}
 }
 
+type ShowAutoScalingPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAutoScalingPolicyInvoker) Invoke() (*model.ShowAutoScalingPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAutoScalingPolicyResponse), nil
+	}
+}
+
 type ShowJobExeListNewInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -110,6 +122,18 @@ func (i *UpdateAgencyMappingInvoker) Invoke() (*model.UpdateAgencyMappingRespons
 		return nil, err
 	} else {
 		return result.(*model.UpdateAgencyMappingResponse), nil
+	}
+}
+
+type UpdateClusterNameInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateClusterNameInvoker) Invoke() (*model.UpdateClusterNameResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateClusterNameResponse), nil
 	}
 }
 

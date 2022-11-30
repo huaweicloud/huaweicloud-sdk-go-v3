@@ -23,8 +23,7 @@ func CaeClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 本接口用于创建cae_trust委托
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CaeClient) CreateAgency(request *model.CreateAgencyRequest) (*model.CreateAgencyResponse, error) {
 	requestDef := GenReqDefForCreateAgency()
 
@@ -45,8 +44,7 @@ func (c *CaeClient) CreateAgencyInvoker(request *model.CreateAgencyRequest) *Cre
 //
 // 本接口用于获取cae_trust委托，如果委托不存在则创建委托
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CaeClient) ShowAgency(request *model.ShowAgencyRequest) (*model.ShowAgencyResponse, error) {
 	requestDef := GenReqDefForShowAgency()
 
@@ -67,8 +65,7 @@ func (c *CaeClient) ShowAgencyInvoker(request *model.ShowAgencyRequest) *ShowAge
 //
 // 本接口用于创建一个应用
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CaeClient) CreateApplication(request *model.CreateApplicationRequest) (*model.CreateApplicationResponse, error) {
 	requestDef := GenReqDefForCreateApplication()
 
@@ -89,8 +86,7 @@ func (c *CaeClient) CreateApplicationInvoker(request *model.CreateApplicationReq
 //
 // 本接口用于删除指定应用
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CaeClient) DeleteApplication(request *model.DeleteApplicationRequest) (*model.DeleteApplicationResponse, error) {
 	requestDef := GenReqDefForDeleteApplication()
 
@@ -111,8 +107,7 @@ func (c *CaeClient) DeleteApplicationInvoker(request *model.DeleteApplicationReq
 //
 // 本接口用于获取当前环境下的应用列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CaeClient) ListApplications(request *model.ListApplicationsRequest) (*model.ListApplicationsResponse, error) {
 	requestDef := GenReqDefForListApplications()
 
@@ -133,8 +128,7 @@ func (c *CaeClient) ListApplicationsInvoker(request *model.ListApplicationsReque
 //
 // 本接口用于获取指定应用详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CaeClient) ShowApplication(request *model.ShowApplicationRequest) (*model.ShowApplicationResponse, error) {
 	requestDef := GenReqDefForShowApplication()
 
@@ -155,8 +149,7 @@ func (c *CaeClient) ShowApplicationInvoker(request *model.ShowApplicationRequest
 //
 // 本接口用于创建一个组件，组件是CAE的最小部署单位，支持将用户的源码，部署包，镜像等资源部署到组件上
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CaeClient) CreateComponent(request *model.CreateComponentRequest) (*model.CreateComponentResponse, error) {
 	requestDef := GenReqDefForCreateComponent()
 
@@ -177,8 +170,7 @@ func (c *CaeClient) CreateComponentInvoker(request *model.CreateComponentRequest
 //
 // 本接口用于删除指定的组件，组件是CAE的最小部署单位，支持将用户的源码，部署包，镜像等资源部署到组件上
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CaeClient) DeleteComponent(request *model.DeleteComponentRequest) (*model.DeleteComponentResponse, error) {
 	requestDef := GenReqDefForDeleteComponent()
 
@@ -199,8 +191,7 @@ func (c *CaeClient) DeleteComponentInvoker(request *model.DeleteComponentRequest
 //
 // 本接口用于对组件执行指定操作，如部署、升级、重启、停止、启动、伸缩、重试、配置、回滚
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CaeClient) ExecuteAction(request *model.ExecuteActionRequest) (*model.ExecuteActionResponse, error) {
 	requestDef := GenReqDefForExecuteAction()
 
@@ -221,8 +212,7 @@ func (c *CaeClient) ExecuteActionInvoker(request *model.ExecuteActionRequest) *E
 //
 // 本接口用于获取组件快照版本
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CaeClient) ListComponentSnapshots(request *model.ListComponentSnapshotsRequest) (*model.ListComponentSnapshotsResponse, error) {
 	requestDef := GenReqDefForListComponentSnapshots()
 
@@ -243,8 +233,7 @@ func (c *CaeClient) ListComponentSnapshotsInvoker(request *model.ListComponentSn
 //
 // 本接口用于获取组件列表，组件是CAE的最小部署单位，支持将用户的源码，部署包，镜像等资源部署到组件上
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CaeClient) ListComponents(request *model.ListComponentsRequest) (*model.ListComponentsResponse, error) {
 	requestDef := GenReqDefForListComponents()
 
@@ -264,8 +253,7 @@ func (c *CaeClient) ListComponentsInvoker(request *model.ListComponentsRequest) 
 // ListEvents 获取事件列表
 //
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CaeClient) ListEvents(request *model.ListEventsRequest) (*model.ListEventsResponse, error) {
 	requestDef := GenReqDefForListEvents()
 
@@ -286,8 +274,7 @@ func (c *CaeClient) ListEventsInvoker(request *model.ListEventsRequest) *ListEve
 //
 // 本接口用于获取组件实例列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CaeClient) ListInstances(request *model.ListInstancesRequest) (*model.ListInstancesResponse, error) {
 	requestDef := GenReqDefForListInstances()
 
@@ -308,8 +295,7 @@ func (c *CaeClient) ListInstancesInvoker(request *model.ListInstancesRequest) *L
 //
 // 本接口用于获取指定的组件，组件是CAE的最小部署单位，支持将用户的源码，部署包，镜像等资源部署到组件上
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CaeClient) ShowComponent(request *model.ShowComponentRequest) (*model.ShowComponentResponse, error) {
 	requestDef := GenReqDefForShowComponent()
 
@@ -330,8 +316,7 @@ func (c *CaeClient) ShowComponentInvoker(request *model.ShowComponentRequest) *S
 //
 // 本接口用于更新指定的组件，组件是CAE的最小部署单位，支持将用户的源码，部署包，镜像等资源部署到组件上
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CaeClient) UpdateComponent(request *model.UpdateComponentRequest) (*model.UpdateComponentResponse, error) {
 	requestDef := GenReqDefForUpdateComponent()
 
@@ -352,8 +337,7 @@ func (c *CaeClient) UpdateComponentInvoker(request *model.UpdateComponentRequest
 //
 // 本接口用于创建组件配置
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CaeClient) CreateComponentConfiguration(request *model.CreateComponentConfigurationRequest) (*model.CreateComponentConfigurationResponse, error) {
 	requestDef := GenReqDefForCreateComponentConfiguration()
 
@@ -373,8 +357,7 @@ func (c *CaeClient) CreateComponentConfigurationInvoker(request *model.CreateCom
 // DeleteComponentConfiguration 删除组件配置
 //
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CaeClient) DeleteComponentConfiguration(request *model.DeleteComponentConfigurationRequest) (*model.DeleteComponentConfigurationResponse, error) {
 	requestDef := GenReqDefForDeleteComponentConfiguration()
 
@@ -395,8 +378,7 @@ func (c *CaeClient) DeleteComponentConfigurationInvoker(request *model.DeleteCom
 //
 // 本接口用于获取组件配置
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CaeClient) ListConfigurations(request *model.ListConfigurationsRequest) (*model.ListConfigurationsResponse, error) {
 	requestDef := GenReqDefForListConfigurations()
 
@@ -417,8 +399,7 @@ func (c *CaeClient) ListConfigurationsInvoker(request *model.ListConfigurationsR
 //
 // 本接口用于创建一个环境，环境是CAE定义的一个资源维度，所有的用户组件都放在环境下
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CaeClient) CreateEnvironment(request *model.CreateEnvironmentRequest) (*model.CreateEnvironmentResponse, error) {
 	requestDef := GenReqDefForCreateEnvironment()
 
@@ -439,8 +420,7 @@ func (c *CaeClient) CreateEnvironmentInvoker(request *model.CreateEnvironmentReq
 //
 // 本接口用于删除环境，暂未开放。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CaeClient) DeleteEnvironment(request *model.DeleteEnvironmentRequest) (*model.DeleteEnvironmentResponse, error) {
 	requestDef := GenReqDefForDeleteEnvironment()
 
@@ -461,8 +441,7 @@ func (c *CaeClient) DeleteEnvironmentInvoker(request *model.DeleteEnvironmentReq
 //
 // 本接口用于获取当前租户环境信息，环境是CAE定义的一个资源维度，所有的用户组件都放在环境下
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CaeClient) ListEnvironments(request *model.ListEnvironmentsRequest) (*model.ListEnvironmentsResponse, error) {
 	requestDef := GenReqDefForListEnvironments()
 
@@ -483,8 +462,7 @@ func (c *CaeClient) ListEnvironmentsInvoker(request *model.ListEnvironmentsReque
 //
 // 本接口用于重试任务
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CaeClient) RetryJob(request *model.RetryJobRequest) (*model.RetryJobResponse, error) {
 	requestDef := GenReqDefForRetryJob()
 
@@ -505,8 +483,7 @@ func (c *CaeClient) RetryJobInvoker(request *model.RetryJobRequest) *RetryJobInv
 //
 // 本接口用于获取任务详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CaeClient) ShowJob(request *model.ShowJobRequest) (*model.ShowJobResponse, error) {
 	requestDef := GenReqDefForShowJob()
 
@@ -527,8 +504,7 @@ func (c *CaeClient) ShowJobInvoker(request *model.ShowJobRequest) *ShowJobInvoke
 //
 // 本接口用于创建卷
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CaeClient) CreateVolume(request *model.CreateVolumeRequest) (*model.CreateVolumeResponse, error) {
 	requestDef := GenReqDefForCreateVolume()
 
@@ -549,8 +525,7 @@ func (c *CaeClient) CreateVolumeInvoker(request *model.CreateVolumeRequest) *Cre
 //
 // 本接口用于创建卷
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CaeClient) DeleteVolume(request *model.DeleteVolumeRequest) (*model.DeleteVolumeResponse, error) {
 	requestDef := GenReqDefForDeleteVolume()
 
@@ -571,8 +546,7 @@ func (c *CaeClient) DeleteVolumeInvoker(request *model.DeleteVolumeRequest) *Del
 //
 // 本接口用于获取卷列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CaeClient) ListVolumes(request *model.ListVolumesRequest) (*model.ListVolumesResponse, error) {
 	requestDef := GenReqDefForListVolumes()
 

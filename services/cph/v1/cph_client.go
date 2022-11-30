@@ -23,8 +23,7 @@ func CphClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 批量导出云手机中的数据。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CphClient) BatchExportCloudPhoneData(request *model.BatchExportCloudPhoneDataRequest) (*model.BatchExportCloudPhoneDataResponse, error) {
 	requestDef := GenReqDefForBatchExportCloudPhoneData()
 
@@ -45,8 +44,7 @@ func (c *CphClient) BatchExportCloudPhoneDataInvoker(request *model.BatchExportC
 //
 // 导入数据到手机中。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CphClient) BatchImportCloudPhoneData(request *model.BatchImportCloudPhoneDataRequest) (*model.BatchImportCloudPhoneDataResponse, error) {
 	requestDef := GenReqDefForBatchImportCloudPhoneData()
 
@@ -67,8 +65,7 @@ func (c *CphClient) BatchImportCloudPhoneDataInvoker(request *model.BatchImportC
 //
 // 批量迁移整台云手机，包括云手机的系统盘数据和数据盘数据。该接口为异步接口，迁移完成的时间和手机的数据量有一定关系，整机数据大小为11G时，迁移时间大约为3-5分钟。迁移前请关闭云手机。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CphClient) BatchMigrateCloudPhone(request *model.BatchMigrateCloudPhoneRequest) (*model.BatchMigrateCloudPhoneResponse, error) {
 	requestDef := GenReqDefForBatchMigrateCloudPhone()
 
@@ -89,8 +86,7 @@ func (c *CphClient) BatchMigrateCloudPhoneInvoker(request *model.BatchMigrateClo
 //
 // 变更云手机服务器规格。只有能使用physical.rx1.xlarge.special私有规格的租户才可使用本接口。变更的目标规格也必须为特殊的规格才可变更。接口调用成功后，大约2分钟左右规格会变更结束，在订单中心可以查看到变更的订单状态为成功，且查询服务器的详细信息，可以查看到服务器规格名称已经变成新的规格名称。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CphClient) ChangeCloudPhoneServerModel(request *model.ChangeCloudPhoneServerModelRequest) (*model.ChangeCloudPhoneServerModelResponse, error) {
 	requestDef := GenReqDefForChangeCloudPhoneServerModel()
 
@@ -107,12 +103,11 @@ func (c *CphClient) ChangeCloudPhoneServerModelInvoker(request *model.ChangeClou
 	return &ChangeCloudPhoneServerModelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateCloudPhoneServer 购买系统定义网络的云手机服务器
+// CreateCloudPhoneServer 购买系统定义网络云手机服务器
 //
 // 购买系统定义网络云手机服务器。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CphClient) CreateCloudPhoneServer(request *model.CreateCloudPhoneServerRequest) (*model.CreateCloudPhoneServerResponse, error) {
 	requestDef := GenReqDefForCreateCloudPhoneServer()
 
@@ -123,7 +118,7 @@ func (c *CphClient) CreateCloudPhoneServer(request *model.CreateCloudPhoneServer
 	}
 }
 
-// CreateCloudPhoneServerInvoker 购买系统定义网络的云手机服务器
+// CreateCloudPhoneServerInvoker 购买系统定义网络云手机服务器
 func (c *CphClient) CreateCloudPhoneServerInvoker(request *model.CreateCloudPhoneServerRequest) *CreateCloudPhoneServerInvoker {
 	requestDef := GenReqDefForCreateCloudPhoneServer()
 	return &CreateCloudPhoneServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -133,8 +128,7 @@ func (c *CphClient) CreateCloudPhoneServerInvoker(request *model.CreateCloudPhon
 //
 // 购买自定义网络的云手机服务器。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CphClient) CreateNet2CloudPhoneServer(request *model.CreateNet2CloudPhoneServerRequest) (*model.CreateNet2CloudPhoneServerResponse, error) {
 	requestDef := GenReqDefForCreateNet2CloudPhoneServer()
 
@@ -155,8 +149,7 @@ func (c *CphClient) CreateNet2CloudPhoneServerInvoker(request *model.CreateNet2C
 //
 // 在共享应用存储目录中删除共享应用，该功能仅在支持共享应用的云手机规格上可实现。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CphClient) DeleteShareApps(request *model.DeleteShareAppsRequest) (*model.DeleteShareAppsResponse, error) {
 	requestDef := GenReqDefForDeleteShareApps()
 
@@ -177,8 +170,7 @@ func (c *CphClient) DeleteShareAppsInvoker(request *model.DeleteShareAppsRequest
 //
 // 删除共享存储目录中文件，该功能仅在支持共享存储的云手机规格上可实现。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CphClient) DeleteShareFiles(request *model.DeleteShareFilesRequest) (*model.DeleteShareFilesResponse, error) {
 	requestDef := GenReqDefForDeleteShareFiles()
 
@@ -199,8 +191,7 @@ func (c *CphClient) DeleteShareFilesInvoker(request *model.DeleteShareFilesReque
 //
 // 手机流量路由修改。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CphClient) ImportTraffic(request *model.ImportTrafficRequest) (*model.ImportTrafficResponse, error) {
 	requestDef := GenReqDefForImportTraffic()
 
@@ -221,8 +212,7 @@ func (c *CphClient) ImportTrafficInvoker(request *model.ImportTrafficRequest) *I
 //
 // 根据项目ID查询可用的手机镜像。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CphClient) ListCloudPhoneImages(request *model.ListCloudPhoneImagesRequest) (*model.ListCloudPhoneImagesResponse, error) {
 	requestDef := GenReqDefForListCloudPhoneImages()
 
@@ -243,8 +233,7 @@ func (c *CphClient) ListCloudPhoneImagesInvoker(request *model.ListCloudPhoneIma
 //
 // 查询或统计云手机的规格列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CphClient) ListCloudPhoneModels(request *model.ListCloudPhoneModelsRequest) (*model.ListCloudPhoneModelsResponse, error) {
 	requestDef := GenReqDefForListCloudPhoneModels()
 
@@ -265,8 +254,7 @@ func (c *CphClient) ListCloudPhoneModelsInvoker(request *model.ListCloudPhoneMod
 //
 // 查询云手机服务器的规格列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CphClient) ListCloudPhoneServerModels(request *model.ListCloudPhoneServerModelsRequest) (*model.ListCloudPhoneServerModelsResponse, error) {
 	requestDef := GenReqDefForListCloudPhoneServerModels()
 
@@ -287,8 +275,7 @@ func (c *CphClient) ListCloudPhoneServerModelsInvoker(request *model.ListCloudPh
 //
 // 分页查询云手机服务器，云手机服务器列表按照创建时间进行降序排列。分页查询可以指定offset以及limit。如果不存在云手机服务器，则返回空列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CphClient) ListCloudPhoneServers(request *model.ListCloudPhoneServersRequest) (*model.ListCloudPhoneServersResponse, error) {
 	requestDef := GenReqDefForListCloudPhoneServers()
 
@@ -309,8 +296,7 @@ func (c *CphClient) ListCloudPhoneServersInvoker(request *model.ListCloudPhoneSe
 //
 // 分页查询云手机，云手机列表按照创建时间进行降序排列。分页查询可以指定offset以及limit。如果不存在云手机，则返回空列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CphClient) ListCloudPhones(request *model.ListCloudPhonesRequest) (*model.ListCloudPhonesResponse, error) {
 	requestDef := GenReqDefForListCloudPhones()
 
@@ -331,8 +317,7 @@ func (c *CphClient) ListCloudPhonesInvoker(request *model.ListCloudPhonesRequest
 //
 // 查询编码服务列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CphClient) ListEncodeServers(request *model.ListEncodeServersRequest) (*model.ListEncodeServersResponse, error) {
 	requestDef := GenReqDefForListEncodeServers()
 
@@ -353,8 +338,7 @@ func (c *CphClient) ListEncodeServersInvoker(request *model.ListEncodeServersReq
 //
 // 查询同一个request id下的任务。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CphClient) ListJobs(request *model.ListJobsRequest) (*model.ListJobsResponse, error) {
 	requestDef := GenReqDefForListJobs()
 
@@ -375,8 +359,7 @@ func (c *CphClient) ListJobsInvoker(request *model.ListJobsRequest) *ListJobsInv
 //
 // 查询共享存储指定路径下的文件列表，该功能仅在支持共享存储的云手机规格上可实现。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CphClient) ListShareFiles(request *model.ListShareFilesRequest) (*model.ListShareFilesResponse, error) {
 	requestDef := GenReqDefForListShareFiles()
 
@@ -397,8 +380,7 @@ func (c *CphClient) ListShareFilesInvoker(request *model.ListShareFilesRequest) 
 //
 // 推送应用tar文件至共享应用存储目录中，该功能仅在支持共享应用的云手机规格上可实现。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CphClient) PushShareApps(request *model.PushShareAppsRequest) (*model.PushShareAppsResponse, error) {
 	requestDef := GenReqDefForPushShareApps()
 
@@ -419,8 +401,7 @@ func (c *CphClient) PushShareAppsInvoker(request *model.PushShareAppsRequest) *P
 //
 // 推送文件至共享存储目录中，该功能仅在支持共享存储的云手机规格上可实现。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CphClient) PushShareFiles(request *model.PushShareFilesRequest) (*model.PushShareFilesResponse, error) {
 	requestDef := GenReqDefForPushShareFiles()
 
@@ -441,8 +422,7 @@ func (c *CphClient) PushShareFilesInvoker(request *model.PushShareFilesRequest) 
 //
 // 批量重置云手机，将云手机恢复出厂设置。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CphClient) ResetCloudPhone(request *model.ResetCloudPhoneRequest) (*model.ResetCloudPhoneResponse, error) {
 	requestDef := GenReqDefForResetCloudPhone()
 
@@ -463,8 +443,7 @@ func (c *CphClient) ResetCloudPhoneInvoker(request *model.ResetCloudPhoneRequest
 //
 // 批量重启云手机，也可用于开启云手机。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CphClient) RestartCloudPhone(request *model.RestartCloudPhoneRequest) (*model.RestartCloudPhoneResponse, error) {
 	requestDef := GenReqDefForRestartCloudPhone()
 
@@ -485,8 +464,7 @@ func (c *CphClient) RestartCloudPhoneInvoker(request *model.RestartCloudPhoneReq
 //
 // 批量重启云手机服务器。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CphClient) RestartCloudPhoneServer(request *model.RestartCloudPhoneServerRequest) (*model.RestartCloudPhoneServerResponse, error) {
 	requestDef := GenReqDefForRestartCloudPhoneServer()
 
@@ -507,8 +485,7 @@ func (c *CphClient) RestartCloudPhoneServerInvoker(request *model.RestartCloudPh
 //
 // 批量重启编码服务。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CphClient) RestartEncodeServer(request *model.RestartEncodeServerRequest) (*model.RestartEncodeServerResponse, error) {
 	requestDef := GenReqDefForRestartEncodeServer()
 
@@ -529,8 +506,7 @@ func (c *CphClient) RestartEncodeServerInvoker(request *model.RestartEncodeServe
 //
 // 查询云手机使用的带宽信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CphClient) ShowBandwidthDetail(request *model.ShowBandwidthDetailRequest) (*model.ShowBandwidthDetailResponse, error) {
 	requestDef := GenReqDefForShowBandwidthDetail()
 
@@ -551,8 +527,7 @@ func (c *CphClient) ShowBandwidthDetailInvoker(request *model.ShowBandwidthDetai
 //
 // 查询云手机的详细信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CphClient) ShowCloudPhoneDetail(request *model.ShowCloudPhoneDetailRequest) (*model.ShowCloudPhoneDetailResponse, error) {
 	requestDef := GenReqDefForShowCloudPhoneDetail()
 
@@ -573,8 +548,7 @@ func (c *CphClient) ShowCloudPhoneDetailInvoker(request *model.ShowCloudPhoneDet
 //
 // 根据server_id查询云手机服务器的详细信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CphClient) ShowCloudPhoneServerDetail(request *model.ShowCloudPhoneServerDetailRequest) (*model.ShowCloudPhoneServerDetailResponse, error) {
 	requestDef := GenReqDefForShowCloudPhoneServerDetail()
 
@@ -595,8 +569,7 @@ func (c *CphClient) ShowCloudPhoneServerDetailInvoker(request *model.ShowCloudPh
 //
 // 查询任务的执行状态。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CphClient) ShowJob(request *model.ShowJobRequest) (*model.ShowJobResponse, error) {
 	requestDef := GenReqDefForShowJob()
 
@@ -617,8 +590,7 @@ func (c *CphClient) ShowJobInvoker(request *model.ShowJobRequest) *ShowJobInvoke
 //
 // 批量关闭云手机。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CphClient) StopCloudPhone(request *model.StopCloudPhoneRequest) (*model.StopCloudPhoneResponse, error) {
 	requestDef := GenReqDefForStopCloudPhone()
 
@@ -639,8 +611,7 @@ func (c *CphClient) StopCloudPhoneInvoker(request *model.StopCloudPhoneRequest) 
 //
 // 修改云手机使用的共享带宽大小。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CphClient) UpdateBandwidth(request *model.UpdateBandwidthRequest) (*model.UpdateBandwidthResponse, error) {
 	requestDef := GenReqDefForUpdateBandwidth()
 
@@ -661,8 +632,7 @@ func (c *CphClient) UpdateBandwidthInvoker(request *model.UpdateBandwidthRequest
 //
 // 部分云手机属性开放更新能力，部分属性无法更新，部分属性需要重启手机生效，属性约束请云手机属性列表。如果手机处于异常状态，属性更新后需恢复手机状态为运行中才可生效。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CphClient) UpdateCloudPhoneProperty(request *model.UpdateCloudPhonePropertyRequest) (*model.UpdateCloudPhonePropertyResponse, error) {
 	requestDef := GenReqDefForUpdateCloudPhoneProperty()
 
@@ -683,8 +653,7 @@ func (c *CphClient) UpdateCloudPhonePropertyInvoker(request *model.UpdateCloudPh
 //
 // 修改连接云手机的密钥对。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CphClient) UpdateKeypair(request *model.UpdateKeypairRequest) (*model.UpdateKeypairResponse, error) {
 	requestDef := GenReqDefForUpdateKeypair()
 
@@ -705,8 +674,7 @@ func (c *CphClient) UpdateKeypairInvoker(request *model.UpdateKeypairRequest) *U
 //
 // 根据phoneId修改phoneName。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CphClient) UpdatePhoneName(request *model.UpdatePhoneNameRequest) (*model.UpdatePhoneNameResponse, error) {
 	requestDef := GenReqDefForUpdatePhoneName()
 
@@ -727,8 +695,7 @@ func (c *CphClient) UpdatePhoneNameInvoker(request *model.UpdatePhoneNameRequest
 //
 // 根据serverId修改serverName。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CphClient) UpdateServerName(request *model.UpdateServerNameRequest) (*model.UpdateServerNameResponse, error) {
 	requestDef := GenReqDefForUpdateServerName()
 
@@ -745,12 +712,54 @@ func (c *CphClient) UpdateServerNameInvoker(request *model.UpdateServerNameReque
 	return &UpdateServerNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// InstallApk 安装apk
+//
+// 在云手机中安装apk。系统会将指定的apk文件下载后直接安装到云手机中。
+// 支持安装单apk应用和多apk应用。可使用install命令安装单apk应用，一次只支持安装一个apk；可使用install-multiple命令安装多apk应用（多apk应用为单个应用拆分成多个apk），一次只支持同一个应用的多个apk。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CphClient) InstallApk(request *model.InstallApkRequest) (*model.InstallApkResponse, error) {
+	requestDef := GenReqDefForInstallApk()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.InstallApkResponse), nil
+	}
+}
+
+// InstallApkInvoker 安装apk
+func (c *CphClient) InstallApkInvoker(request *model.InstallApkRequest) *InstallApkInvoker {
+	requestDef := GenReqDefForInstallApk()
+	return &InstallApkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// PushFile 推送文件
+//
+// 推送文件到云手机文件系统中。系统会将所指定的文件下载解压后，将解压后的内容全部推送到云手机的根目录下。只支持指定tar格式的文件进行推送，您需要将tar文件提前上传至您的OBS桶中。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CphClient) PushFile(request *model.PushFileRequest) (*model.PushFileResponse, error) {
+	requestDef := GenReqDefForPushFile()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.PushFileResponse), nil
+	}
+}
+
+// PushFileInvoker 推送文件
+func (c *CphClient) PushFileInvoker(request *model.PushFileRequest) *PushFileInvoker {
+	requestDef := GenReqDefForPushFile()
+	return &PushFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RunShellCommand 执行异步adb命令
 //
-// 在云手机中执行异步执行命令并返回任务，可调用查询任务执行状态和查询任务执行状态列表获取任务执行结果。该接口支持push、install、uninstall和shell命令的执行。
+// 在云手机中执行shell命令。该接口为异步接口。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CphClient) RunShellCommand(request *model.RunShellCommandRequest) (*model.RunShellCommandResponse, error) {
 	requestDef := GenReqDefForRunShellCommand()
 
@@ -771,8 +780,7 @@ func (c *CphClient) RunShellCommandInvoker(request *model.RunShellCommandRequest
 //
 // 在云手机中同步执行命令并返回命令执行的输出信息，该接口仅支持adb shell命令的执行。1分钟内每个用户调用接口次数上限为6次，每个云手机允许执行命令超时时间为2秒，接口时间不超过30秒，执行云手机数越多，接口耗时相应越长。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CphClient) RunSyncCommand(request *model.RunSyncCommandRequest) (*model.RunSyncCommandResponse, error) {
 	requestDef := GenReqDefForRunSyncCommand()
 
@@ -787,4 +795,25 @@ func (c *CphClient) RunSyncCommand(request *model.RunSyncCommandRequest) (*model
 func (c *CphClient) RunSyncCommandInvoker(request *model.RunSyncCommandRequest) *RunSyncCommandInvoker {
 	requestDef := GenReqDefForRunSyncCommand()
 	return &RunSyncCommandInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UninstallApk 卸载apk
+//
+// 在云手机中卸载apk。该接口为异步接口。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CphClient) UninstallApk(request *model.UninstallApkRequest) (*model.UninstallApkResponse, error) {
+	requestDef := GenReqDefForUninstallApk()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UninstallApkResponse), nil
+	}
+}
+
+// UninstallApkInvoker 卸载apk
+func (c *CphClient) UninstallApkInvoker(request *model.UninstallApkRequest) *UninstallApkInvoker {
+	requestDef := GenReqDefForUninstallApk()
+	return &UninstallApkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

@@ -21,7 +21,7 @@ type ListEncodeServersRequest struct {
 	// 状态列表 - 1：运行中 - 2：异常 - 3：重启中 - 4：冻结 - 5：关机 - 100、1014、0：创建中
 	Status *int32 `json:"status,omitempty"`
 
-	// 服务器id。
+	// 云手机服务器的唯一标识。
 	ServerId *string `json:"server_id,omitempty"`
 }
 

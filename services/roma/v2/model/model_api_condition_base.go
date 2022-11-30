@@ -17,6 +17,9 @@ type ApiConditionBase struct {
 	// 系统参数名称。策略类型为system时必选。支持以下系统参数 - req_path：请求路径。如 /a/b - req_method：请求方法。如 GET
 	SysParamName *ApiConditionBaseSysParamName `json:"sys_param_name,omitempty"`
 
+	// COOKIE参数名称;策略类型为cookie时必选
+	CookieParamName *string `json:"cookie_param_name,omitempty"`
+
 	// 策略条件 - exact：绝对匹配 - enum：枚举 - pattern：正则  策略类型为param时必选
 	ConditionType *ApiConditionBaseConditionType `json:"condition_type,omitempty"`
 

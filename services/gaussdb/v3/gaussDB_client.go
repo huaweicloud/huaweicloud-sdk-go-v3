@@ -23,8 +23,7 @@ func GaussDBClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 授予云数据库 GaussDB(for MySQL)实例数据库用户数据库权限
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) AddDatabasePermission(request *model.AddDatabasePermissionRequest) (*model.AddDatabasePermissionResponse, error) {
 	requestDef := GenReqDefForAddDatabasePermission()
 
@@ -45,8 +44,7 @@ func (c *GaussDBClient) AddDatabasePermissionInvoker(request *model.AddDatabaseP
 //
 // 批量添加或删除指定实例的标签。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) BatchTagAction(request *model.BatchTagActionRequest) (*model.BatchTagActionResponse, error) {
 	requestDef := GenReqDefForBatchTagAction()
 
@@ -67,8 +65,7 @@ func (c *GaussDBClient) BatchTagActionInvoker(request *model.BatchTagActionReque
 //
 // 变更数据库实例的规格。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) ChangeGaussMySqlInstanceSpecification(request *model.ChangeGaussMySqlInstanceSpecificationRequest) (*model.ChangeGaussMySqlInstanceSpecificationResponse, error) {
 	requestDef := GenReqDefForChangeGaussMySqlInstanceSpecification()
 
@@ -89,8 +86,7 @@ func (c *GaussDBClient) ChangeGaussMySqlInstanceSpecificationInvoker(request *mo
 //
 // 数据库代理规格变更。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) ChangeGaussMySqlProxySpecification(request *model.ChangeGaussMySqlProxySpecificationRequest) (*model.ChangeGaussMySqlProxySpecificationResponse, error) {
 	requestDef := GenReqDefForChangeGaussMySqlProxySpecification()
 
@@ -111,8 +107,7 @@ func (c *GaussDBClient) ChangeGaussMySqlProxySpecificationInvoker(request *model
 //
 // 创建手动备份
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) CreateGaussMySqlBackup(request *model.CreateGaussMySqlBackupRequest) (*model.CreateGaussMySqlBackupResponse, error) {
 	requestDef := GenReqDefForCreateGaussMySqlBackup()
 
@@ -133,8 +128,7 @@ func (c *GaussDBClient) CreateGaussMySqlBackupInvoker(request *model.CreateGauss
 //
 // 创建云数据库 GaussDB(for MySQL)实例数据库。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) CreateGaussMySqlDatabase(request *model.CreateGaussMySqlDatabaseRequest) (*model.CreateGaussMySqlDatabaseResponse, error) {
 	requestDef := GenReqDefForCreateGaussMySqlDatabase()
 
@@ -155,8 +149,7 @@ func (c *GaussDBClient) CreateGaussMySqlDatabaseInvoker(request *model.CreateGau
 //
 // 创建云数据库 GaussDB(for MySQL)实例数据库用户。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) CreateGaussMySqlDatabaseUser(request *model.CreateGaussMySqlDatabaseUserRequest) (*model.CreateGaussMySqlDatabaseUserResponse, error) {
 	requestDef := GenReqDefForCreateGaussMySqlDatabaseUser()
 
@@ -177,8 +170,7 @@ func (c *GaussDBClient) CreateGaussMySqlDatabaseUserInvoker(request *model.Creat
 //
 // 创建云数据库 GaussDB(for MySQL)实例。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) CreateGaussMySqlInstance(request *model.CreateGaussMySqlInstanceRequest) (*model.CreateGaussMySqlInstanceResponse, error) {
 	requestDef := GenReqDefForCreateGaussMySqlInstance()
 
@@ -199,8 +191,7 @@ func (c *GaussDBClient) CreateGaussMySqlInstanceInvoker(request *model.CreateGau
 //
 // 开启数据库代理，只支持ELB模式。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) CreateGaussMySqlProxy(request *model.CreateGaussMySqlProxyRequest) (*model.CreateGaussMySqlProxyResponse, error) {
 	requestDef := GenReqDefForCreateGaussMySqlProxy()
 
@@ -221,8 +212,7 @@ func (c *GaussDBClient) CreateGaussMySqlProxyInvoker(request *model.CreateGaussM
 //
 // 创建只读节点。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) CreateGaussMySqlReadonlyNode(request *model.CreateGaussMySqlReadonlyNodeRequest) (*model.CreateGaussMySqlReadonlyNodeResponse, error) {
 	requestDef := GenReqDefForCreateGaussMySqlReadonlyNode()
 
@@ -243,8 +233,7 @@ func (c *GaussDBClient) CreateGaussMySqlReadonlyNodeInvoker(request *model.Creat
 //
 // 删除云数据库 GaussDB(for MySQL)实例数据库用户的数据库权限
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) DeleteDatabasePermission(request *model.DeleteDatabasePermissionRequest) (*model.DeleteDatabasePermissionResponse, error) {
 	requestDef := GenReqDefForDeleteDatabasePermission()
 
@@ -265,8 +254,7 @@ func (c *GaussDBClient) DeleteDatabasePermissionInvoker(request *model.DeleteDat
 //
 // 删除云数据库 GaussDB(for MySQL)实例数据库。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) DeleteGaussMySqlDatabase(request *model.DeleteGaussMySqlDatabaseRequest) (*model.DeleteGaussMySqlDatabaseResponse, error) {
 	requestDef := GenReqDefForDeleteGaussMySqlDatabase()
 
@@ -287,8 +275,7 @@ func (c *GaussDBClient) DeleteGaussMySqlDatabaseInvoker(request *model.DeleteGau
 //
 // 删除云数据库 GaussDB(for MySQL)实例数据库用户。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) DeleteGaussMySqlDatabaseUser(request *model.DeleteGaussMySqlDatabaseUserRequest) (*model.DeleteGaussMySqlDatabaseUserResponse, error) {
 	requestDef := GenReqDefForDeleteGaussMySqlDatabaseUser()
 
@@ -309,8 +296,7 @@ func (c *GaussDBClient) DeleteGaussMySqlDatabaseUserInvoker(request *model.Delet
 //
 // 删除数据库实例，不支持删除包周期实例。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) DeleteGaussMySqlInstance(request *model.DeleteGaussMySqlInstanceRequest) (*model.DeleteGaussMySqlInstanceResponse, error) {
 	requestDef := GenReqDefForDeleteGaussMySqlInstance()
 
@@ -331,8 +317,7 @@ func (c *GaussDBClient) DeleteGaussMySqlInstanceInvoker(request *model.DeleteGau
 //
 // 关闭数据库代理。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) DeleteGaussMySqlProxy(request *model.DeleteGaussMySqlProxyRequest) (*model.DeleteGaussMySqlProxyResponse, error) {
 	requestDef := GenReqDefForDeleteGaussMySqlProxy()
 
@@ -353,8 +338,7 @@ func (c *GaussDBClient) DeleteGaussMySqlProxyInvoker(request *model.DeleteGaussM
 //
 // 删除实例的只读节点。多可用区模式删除只读节点时，要保证删除后，剩余的只读节点和主节点在不同的可用区中，否则无法删除该只读节点。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) DeleteGaussMySqlReadonlyNode(request *model.DeleteGaussMySqlReadonlyNodeRequest) (*model.DeleteGaussMySqlReadonlyNodeResponse, error) {
 	requestDef := GenReqDefForDeleteGaussMySqlReadonlyNode()
 
@@ -375,8 +359,7 @@ func (c *GaussDBClient) DeleteGaussMySqlReadonlyNodeInvoker(request *model.Delet
 //
 // 包周期存储扩容
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) ExpandGaussMySqlInstanceVolume(request *model.ExpandGaussMySqlInstanceVolumeRequest) (*model.ExpandGaussMySqlInstanceVolumeResponse, error) {
 	requestDef := GenReqDefForExpandGaussMySqlInstanceVolume()
 
@@ -398,8 +381,7 @@ func (c *GaussDBClient) ExpandGaussMySqlInstanceVolumeInvoker(request *model.Exp
 // 扩容数据库代理节点的数量。
 // DeC专属云账号暂不支持数据库代理。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) ExpandGaussMySqlProxy(request *model.ExpandGaussMySqlProxyRequest) (*model.ExpandGaussMySqlProxyResponse, error) {
 	requestDef := GenReqDefForExpandGaussMySqlProxy()
 
@@ -420,8 +402,7 @@ func (c *GaussDBClient) ExpandGaussMySqlProxyInvoker(request *model.ExpandGaussM
 //
 // 获取参数模板列表，包括所有数据库的默认参数模板和用户创建的参数模板。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) ListGaussMySqlConfigurations(request *model.ListGaussMySqlConfigurationsRequest) (*model.ListGaussMySqlConfigurationsResponse, error) {
 	requestDef := GenReqDefForListGaussMySqlConfigurations()
 
@@ -442,8 +423,7 @@ func (c *GaussDBClient) ListGaussMySqlConfigurationsInvoker(request *model.ListG
 //
 // 查询 GaussDB(for MySQL)实例数据库。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) ListGaussMySqlDatabase(request *model.ListGaussMySqlDatabaseRequest) (*model.ListGaussMySqlDatabaseResponse, error) {
 	requestDef := GenReqDefForListGaussMySqlDatabase()
 
@@ -464,8 +444,7 @@ func (c *GaussDBClient) ListGaussMySqlDatabaseInvoker(request *model.ListGaussMy
 //
 // 查询云数据库 GaussDB(for MySQL)实例数据库可用字符集。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) ListGaussMySqlDatabaseCharsets(request *model.ListGaussMySqlDatabaseCharsetsRequest) (*model.ListGaussMySqlDatabaseCharsetsResponse, error) {
 	requestDef := GenReqDefForListGaussMySqlDatabaseCharsets()
 
@@ -486,8 +465,7 @@ func (c *GaussDBClient) ListGaussMySqlDatabaseCharsetsInvoker(request *model.Lis
 //
 // 查询云数据库 GaussDB(for MySQL)实例数据库用户。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) ListGaussMySqlDatabaseUser(request *model.ListGaussMySqlDatabaseUserRequest) (*model.ListGaussMySqlDatabaseUserResponse, error) {
 	requestDef := GenReqDefForListGaussMySqlDatabaseUser()
 
@@ -508,8 +486,7 @@ func (c *GaussDBClient) ListGaussMySqlDatabaseUserInvoker(request *model.ListGau
 //
 // 获取专属资源池列表，包括用户开通的所有专属资源池信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) ListGaussMySqlDedicatedResources(request *model.ListGaussMySqlDedicatedResourcesRequest) (*model.ListGaussMySqlDedicatedResourcesResponse, error) {
 	requestDef := GenReqDefForListGaussMySqlDedicatedResources()
 
@@ -530,8 +507,7 @@ func (c *GaussDBClient) ListGaussMySqlDedicatedResourcesInvoker(request *model.L
 //
 // 查询数据库错误日志。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) ListGaussMySqlErrorLog(request *model.ListGaussMySqlErrorLogRequest) (*model.ListGaussMySqlErrorLogResponse, error) {
 	requestDef := GenReqDefForListGaussMySqlErrorLog()
 
@@ -552,8 +528,7 @@ func (c *GaussDBClient) ListGaussMySqlErrorLogInvoker(request *model.ListGaussMy
 //
 // 批量查询实例详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) ListGaussMySqlInstanceDetailInfo(request *model.ListGaussMySqlInstanceDetailInfoRequest) (*model.ListGaussMySqlInstanceDetailInfoResponse, error) {
 	requestDef := GenReqDefForListGaussMySqlInstanceDetailInfo()
 
@@ -574,8 +549,7 @@ func (c *GaussDBClient) ListGaussMySqlInstanceDetailInfoInvoker(request *model.L
 //
 // 根据指定条件查询实例列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) ListGaussMySqlInstances(request *model.ListGaussMySqlInstancesRequest) (*model.ListGaussMySqlInstancesResponse, error) {
 	requestDef := GenReqDefForListGaussMySqlInstances()
 
@@ -596,8 +570,7 @@ func (c *GaussDBClient) ListGaussMySqlInstancesInvoker(request *model.ListGaussM
 //
 // 查询数据库慢日志
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) ListGaussMySqlSlowLog(request *model.ListGaussMySqlSlowLogRequest) (*model.ListGaussMySqlSlowLogResponse, error) {
 	requestDef := GenReqDefForListGaussMySqlSlowLog()
 
@@ -618,8 +591,7 @@ func (c *GaussDBClient) ListGaussMySqlSlowLogInvoker(request *model.ListGaussMyS
 //
 // 查询指定实例的标签信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) ListInstanceTags(request *model.ListInstanceTagsRequest) (*model.ListInstanceTagsResponse, error) {
 	requestDef := GenReqDefForListInstanceTags()
 
@@ -640,8 +612,7 @@ func (c *GaussDBClient) ListInstanceTagsInvoker(request *model.ListInstanceTagsR
 //
 // 查询指定project ID下实例的所有标签集合。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) ListProjectTags(request *model.ListProjectTagsRequest) (*model.ListProjectTagsResponse, error) {
 	requestDef := GenReqDefForListProjectTags()
 
@@ -662,8 +633,7 @@ func (c *GaussDBClient) ListProjectTagsInvoker(request *model.ListProjectTagsReq
 //
 // 修改云数据库 GaussDB(for MySQL)实例数据库用户密码。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) ResetGaussMySqlDatabasePassword(request *model.ResetGaussMySqlDatabasePasswordRequest) (*model.ResetGaussMySqlDatabasePasswordResponse, error) {
 	requestDef := GenReqDefForResetGaussMySqlDatabasePassword()
 
@@ -684,8 +654,7 @@ func (c *GaussDBClient) ResetGaussMySqlDatabasePasswordInvoker(request *model.Re
 //
 // 重置数据库密码
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) ResetGaussMySqlPassword(request *model.ResetGaussMySqlPasswordRequest) (*model.ResetGaussMySqlPasswordResponse, error) {
 	requestDef := GenReqDefForResetGaussMySqlPassword()
 
@@ -706,8 +675,7 @@ func (c *GaussDBClient) ResetGaussMySqlPasswordInvoker(request *model.ResetGauss
 //
 // 设置读写分离权重
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) SetGaussMySqlProxyWeight(request *model.SetGaussMySqlProxyWeightRequest) (*model.SetGaussMySqlProxyWeightResponse, error) {
 	requestDef := GenReqDefForSetGaussMySqlProxyWeight()
 
@@ -728,8 +696,7 @@ func (c *GaussDBClient) SetGaussMySqlProxyWeightInvoker(request *model.SetGaussM
 //
 // 设置指定企业项目的资源配额。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) SetGaussMySqlQuotas(request *model.SetGaussMySqlQuotasRequest) (*model.SetGaussMySqlQuotasResponse, error) {
 	requestDef := GenReqDefForSetGaussMySqlQuotas()
 
@@ -750,8 +717,7 @@ func (c *GaussDBClient) SetGaussMySqlQuotasInvoker(request *model.SetGaussMySqlQ
 //
 // 查询审计日志开关状态
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) ShowAuditLog(request *model.ShowAuditLogRequest) (*model.ShowAuditLogResponse, error) {
 	requestDef := GenReqDefForShowAuditLog()
 
@@ -772,8 +738,7 @@ func (c *GaussDBClient) ShowAuditLogInvoker(request *model.ShowAuditLogRequest) 
 //
 // 查询专属资源信息详情。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) ShowDedicatedResourceInfo(request *model.ShowDedicatedResourceInfoRequest) (*model.ShowDedicatedResourceInfoResponse, error) {
 	requestDef := GenReqDefForShowDedicatedResourceInfo()
 
@@ -794,8 +759,7 @@ func (c *GaussDBClient) ShowDedicatedResourceInfoInvoker(request *model.ShowDedi
 //
 // 查询备份列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) ShowGaussMySqlBackupList(request *model.ShowGaussMySqlBackupListRequest) (*model.ShowGaussMySqlBackupListResponse, error) {
 	requestDef := GenReqDefForShowGaussMySqlBackupList()
 
@@ -816,8 +780,7 @@ func (c *GaussDBClient) ShowGaussMySqlBackupListInvoker(request *model.ShowGauss
 //
 // 查询自动备份策略。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) ShowGaussMySqlBackupPolicy(request *model.ShowGaussMySqlBackupPolicyRequest) (*model.ShowGaussMySqlBackupPolicyResponse, error) {
 	requestDef := GenReqDefForShowGaussMySqlBackupPolicy()
 
@@ -838,8 +801,7 @@ func (c *GaussDBClient) ShowGaussMySqlBackupPolicyInvoker(request *model.ShowGau
 //
 // 获取指定数据库引擎对应的数据库版本信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) ShowGaussMySqlEngineVersion(request *model.ShowGaussMySqlEngineVersionRequest) (*model.ShowGaussMySqlEngineVersionResponse, error) {
 	requestDef := GenReqDefForShowGaussMySqlEngineVersion()
 
@@ -860,8 +822,7 @@ func (c *GaussDBClient) ShowGaussMySqlEngineVersionInvoker(request *model.ShowGa
 //
 // 获取指定数据库引擎版本对应的规格信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) ShowGaussMySqlFlavors(request *model.ShowGaussMySqlFlavorsRequest) (*model.ShowGaussMySqlFlavorsResponse, error) {
 	requestDef := GenReqDefForShowGaussMySqlFlavors()
 
@@ -882,8 +843,7 @@ func (c *GaussDBClient) ShowGaussMySqlFlavorsInvoker(request *model.ShowGaussMyS
 //
 // 查询实例详情信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) ShowGaussMySqlInstanceInfo(request *model.ShowGaussMySqlInstanceInfoRequest) (*model.ShowGaussMySqlInstanceInfoResponse, error) {
 	requestDef := GenReqDefForShowGaussMySqlInstanceInfo()
 
@@ -904,8 +864,7 @@ func (c *GaussDBClient) ShowGaussMySqlInstanceInfoInvoker(request *model.ShowGau
 //
 // 获取GaussDB(for MySQL)任务中心指定ID的任务信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) ShowGaussMySqlJobInfo(request *model.ShowGaussMySqlJobInfoRequest) (*model.ShowGaussMySqlJobInfoResponse, error) {
 	requestDef := GenReqDefForShowGaussMySqlJobInfo()
 
@@ -926,8 +885,7 @@ func (c *GaussDBClient) ShowGaussMySqlJobInfoInvoker(request *model.ShowGaussMyS
 //
 // 获取指定租户的资源配额。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) ShowGaussMySqlProjectQuotas(request *model.ShowGaussMySqlProjectQuotasRequest) (*model.ShowGaussMySqlProjectQuotasResponse, error) {
 	requestDef := GenReqDefForShowGaussMySqlProjectQuotas()
 
@@ -948,8 +906,7 @@ func (c *GaussDBClient) ShowGaussMySqlProjectQuotasInvoker(request *model.ShowGa
 //
 // 查询数据库代理规格信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) ShowGaussMySqlProxyFlavors(request *model.ShowGaussMySqlProxyFlavorsRequest) (*model.ShowGaussMySqlProxyFlavorsResponse, error) {
 	requestDef := GenReqDefForShowGaussMySqlProxyFlavors()
 
@@ -970,8 +927,7 @@ func (c *GaussDBClient) ShowGaussMySqlProxyFlavorsInvoker(request *model.ShowGau
 //
 // 查询数据库代理信息列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) ShowGaussMySqlProxyList(request *model.ShowGaussMySqlProxyListRequest) (*model.ShowGaussMySqlProxyListResponse, error) {
 	requestDef := GenReqDefForShowGaussMySqlProxyList()
 
@@ -992,8 +948,7 @@ func (c *GaussDBClient) ShowGaussMySqlProxyListInvoker(request *model.ShowGaussM
 //
 // 获取指定企业项目的资源配额。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) ShowGaussMySqlQuotas(request *model.ShowGaussMySqlQuotasRequest) (*model.ShowGaussMySqlQuotasResponse, error) {
 	requestDef := GenReqDefForShowGaussMySqlQuotas()
 
@@ -1014,8 +969,7 @@ func (c *GaussDBClient) ShowGaussMySqlQuotasInvoker(request *model.ShowGaussMySq
 //
 // 查询实例秒级监控频率。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) ShowInstanceMonitorExtend(request *model.ShowInstanceMonitorExtendRequest) (*model.ShowInstanceMonitorExtendResponse, error) {
 	requestDef := GenReqDefForShowInstanceMonitorExtend()
 
@@ -1036,8 +990,7 @@ func (c *GaussDBClient) ShowInstanceMonitorExtendInvoker(request *model.ShowInst
 //
 // 开启或者关闭审计日志
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) UpdateAuditLog(request *model.UpdateAuditLogRequest) (*model.UpdateAuditLogResponse, error) {
 	requestDef := GenReqDefForUpdateAuditLog()
 
@@ -1058,8 +1011,7 @@ func (c *GaussDBClient) UpdateAuditLogInvoker(request *model.UpdateAuditLogReque
 //
 // 修改备份策略
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) UpdateGaussMySqlBackupPolicy(request *model.UpdateGaussMySqlBackupPolicyRequest) (*model.UpdateGaussMySqlBackupPolicyResponse, error) {
 	requestDef := GenReqDefForUpdateGaussMySqlBackupPolicy()
 
@@ -1080,8 +1032,7 @@ func (c *GaussDBClient) UpdateGaussMySqlBackupPolicyInvoker(request *model.Updat
 //
 // 修改实例名称
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) UpdateGaussMySqlInstanceName(request *model.UpdateGaussMySqlInstanceNameRequest) (*model.UpdateGaussMySqlInstanceNameResponse, error) {
 	requestDef := GenReqDefForUpdateGaussMySqlInstanceName()
 
@@ -1102,8 +1053,7 @@ func (c *GaussDBClient) UpdateGaussMySqlInstanceNameInvoker(request *model.Updat
 //
 // 修改指定企业项目的资源配额。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) UpdateGaussMySqlQuotas(request *model.UpdateGaussMySqlQuotasRequest) (*model.UpdateGaussMySqlQuotasResponse, error) {
 	requestDef := GenReqDefForUpdateGaussMySqlQuotas()
 
@@ -1124,8 +1074,7 @@ func (c *GaussDBClient) UpdateGaussMySqlQuotasInvoker(request *model.UpdateGauss
 //
 // 打开/关闭/修改实例秒级监控。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) UpdateInstanceMonitor(request *model.UpdateInstanceMonitorRequest) (*model.UpdateInstanceMonitorResponse, error) {
 	requestDef := GenReqDefForUpdateInstanceMonitor()
 
@@ -1146,8 +1095,7 @@ func (c *GaussDBClient) UpdateInstanceMonitorInvoker(request *model.UpdateInstan
 //
 // 开启/关闭proxy事务拆分
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) UpdateTransactionSplitStatus(request *model.UpdateTransactionSplitStatusRequest) (*model.UpdateTransactionSplitStatusResponse, error) {
 	requestDef := GenReqDefForUpdateTransactionSplitStatus()
 
@@ -1168,8 +1116,7 @@ func (c *GaussDBClient) UpdateTransactionSplitStatusInvoker(request *model.Updat
 //
 // 删除SQL限流规则
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) DeleteSqlFilterRule(request *model.DeleteSqlFilterRuleRequest) (*model.DeleteSqlFilterRuleResponse, error) {
 	requestDef := GenReqDefForDeleteSqlFilterRule()
 
@@ -1190,8 +1137,7 @@ func (c *GaussDBClient) DeleteSqlFilterRuleInvoker(request *model.DeleteSqlFilte
 //
 // 设置SQL限流规则
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) SetSqlFilterRule(request *model.SetSqlFilterRuleRequest) (*model.SetSqlFilterRuleResponse, error) {
 	requestDef := GenReqDefForSetSqlFilterRule()
 
@@ -1212,8 +1158,7 @@ func (c *GaussDBClient) SetSqlFilterRuleInvoker(request *model.SetSqlFilterRuleR
 //
 // 查询SQL限流开关状态
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) ShowSqlFilterControl(request *model.ShowSqlFilterControlRequest) (*model.ShowSqlFilterControlResponse, error) {
 	requestDef := GenReqDefForShowSqlFilterControl()
 
@@ -1234,8 +1179,7 @@ func (c *GaussDBClient) ShowSqlFilterControlInvoker(request *model.ShowSqlFilter
 //
 // 查询SQL限流规则
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) ShowSqlFilterRule(request *model.ShowSqlFilterRuleRequest) (*model.ShowSqlFilterRuleResponse, error) {
 	requestDef := GenReqDefForShowSqlFilterRule()
 
@@ -1256,8 +1200,7 @@ func (c *GaussDBClient) ShowSqlFilterRuleInvoker(request *model.ShowSqlFilterRul
 //
 // 开启或者关闭SQL限流
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) UpdateSqlFilterControl(request *model.UpdateSqlFilterControlRequest) (*model.UpdateSqlFilterControlResponse, error) {
 	requestDef := GenReqDefForUpdateSqlFilterControl()
 

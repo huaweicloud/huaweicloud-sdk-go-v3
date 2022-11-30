@@ -23,8 +23,7 @@ func TmsClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 用于创建预定标签。用户创建预定义标签后，可以使用预定义标签来给资源创建标签。该接口支持幂等特性和处理批量数据。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *TmsClient) CreatePredefineTags(request *model.CreatePredefineTagsRequest) (*model.CreatePredefineTagsResponse, error) {
 	requestDef := GenReqDefForCreatePredefineTags()
 
@@ -45,8 +44,7 @@ func (c *TmsClient) CreatePredefineTagsInvoker(request *model.CreatePredefineTag
 //
 // 用于删除预定标签。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *TmsClient) DeletePredefineTags(request *model.DeletePredefineTagsRequest) (*model.DeletePredefineTagsResponse, error) {
 	requestDef := GenReqDefForDeletePredefineTags()
 
@@ -67,8 +65,7 @@ func (c *TmsClient) DeletePredefineTagsInvoker(request *model.DeletePredefineTag
 //
 // 查询标签管理服务的API版本列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *TmsClient) ListApiVersions(request *model.ListApiVersionsRequest) (*model.ListApiVersionsResponse, error) {
 	requestDef := GenReqDefForListApiVersions()
 
@@ -89,8 +86,7 @@ func (c *TmsClient) ListApiVersionsInvoker(request *model.ListApiVersionsRequest
 //
 // 用于查询预定义标签列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *TmsClient) ListPredefineTags(request *model.ListPredefineTagsRequest) (*model.ListPredefineTagsResponse, error) {
 	requestDef := GenReqDefForListPredefineTags()
 
@@ -111,8 +107,7 @@ func (c *TmsClient) ListPredefineTagsInvoker(request *model.ListPredefineTagsReq
 //
 // 查询标签管理支持的服务
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *TmsClient) ListProviders(request *model.ListProvidersRequest) (*model.ListProvidersResponse, error) {
 	requestDef := GenReqDefForListProviders()
 
@@ -133,8 +128,7 @@ func (c *TmsClient) ListProvidersInvoker(request *model.ListProvidersRequest) *L
 //
 // 查询指定的标签管理服务API版本号详情。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *TmsClient) ShowApiVersion(request *model.ShowApiVersionRequest) (*model.ShowApiVersionResponse, error) {
 	requestDef := GenReqDefForShowApiVersion()
 
@@ -155,8 +149,7 @@ func (c *TmsClient) ShowApiVersionInvoker(request *model.ShowApiVersionRequest) 
 //
 // 查询标签的配额信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *TmsClient) ShowTagQuota(request *model.ShowTagQuotaRequest) (*model.ShowTagQuotaResponse, error) {
 	requestDef := GenReqDefForShowTagQuota()
 
@@ -177,8 +170,7 @@ func (c *TmsClient) ShowTagQuotaInvoker(request *model.ShowTagQuotaRequest) *Sho
 //
 // 修改预定义标签。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *TmsClient) UpdatePredefineTags(request *model.UpdatePredefineTagsRequest) (*model.UpdatePredefineTagsResponse, error) {
 	requestDef := GenReqDefForUpdatePredefineTags()
 

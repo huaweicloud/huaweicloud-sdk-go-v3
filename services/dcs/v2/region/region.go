@@ -20,6 +20,9 @@ var AP_SOUTHEAST_3 = region.NewRegion("ap-southeast-3", "https://dcs.ap-southeas
 var RU_NORTHWEST_2 = region.NewRegion("ru-northwest-2", "https://dcs.ru-northwest-2.myhuaweicloud.com")
 var SA_BRAZIL_1 = region.NewRegion("sa-brazil-1", "https://dcs.sa-brazil-1.myhuaweicloud.com")
 var LA_NORTH_2 = region.NewRegion("la-north-2", "https://dcs.la-north-2.myhuaweicloud.com")
+var LA_SOUTH_2 = region.NewRegion("la-south-2", "https://dcs.la-south-2.myhuaweicloud.com")
+var CN_NORTH_9 = region.NewRegion("cn-north-9", "https://dcs.cn-north-9.myhuaweicloud.com")
+var NA_MEXICO_1 = region.NewRegion("na-mexico-1", "https://dcs.na-mexico-1.myhuaweicloud.com")
 
 var staticFields = map[string]*region.Region{
 	"af-south-1":     AF_SOUTH_1,
@@ -37,6 +40,9 @@ var staticFields = map[string]*region.Region{
 	"ru-northwest-2": RU_NORTHWEST_2,
 	"sa-brazil-1":    SA_BRAZIL_1,
 	"la-north-2":     LA_NORTH_2,
+	"la-south-2":     LA_SOUTH_2,
+	"cn-north-9":     CN_NORTH_9,
+	"na-mexico-1":    NA_MEXICO_1,
 }
 
 var provider = region.DefaultProviderChain("DCS")

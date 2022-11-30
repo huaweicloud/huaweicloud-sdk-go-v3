@@ -17,6 +17,9 @@ type EnlargeRequest struct {
 
 	// 组id，指定当前进行节点扩容的组。当实例的组>1时，必填。
 	GroupId *string `json:"group_id,omitempty"`
+
+	// 变更包年包月实例规格时可指定，表示是否自动从账户中支付，此字段不影响自动续订的支付方式。true，表示自动从账户中支付。false，表示手动从账户中支付，默认为该方式。
+	IsAutoPay *bool `json:"is_auto_pay,omitempty"`
 }
 
 func (o EnlargeRequest) String() string {

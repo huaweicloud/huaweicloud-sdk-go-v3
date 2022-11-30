@@ -23,8 +23,7 @@ func OsmClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 验证授权主机密码是否正确
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) CheckHosts(request *model.CheckHostsRequest) (*model.CheckHostsResponse, error) {
 	requestDef := GenReqDefForCheckHosts()
 
@@ -45,8 +44,7 @@ func (c *OsmClient) CheckHostsInvoker(request *model.CheckHostsRequest) *CheckHo
 //
 // 是否需要验证
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) CheckNeedVerify(request *model.CheckNeedVerifyRequest) (*model.CheckNeedVerifyResponse, error) {
 	requestDef := GenReqDefForCheckNeedVerify()
 
@@ -67,8 +65,7 @@ func (c *OsmClient) CheckNeedVerifyInvoker(request *model.CheckNeedVerifyRequest
 //
 // 验证联系方式
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) CheckVerifyCodes(request *model.CheckVerifyCodesRequest) (*model.CheckVerifyCodesResponse, error) {
 	requestDef := GenReqDefForCheckVerifyCodes()
 
@@ -89,8 +86,7 @@ func (c *OsmClient) CheckVerifyCodesInvoker(request *model.CheckVerifyCodesReque
 //
 // 租户确认授权
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) ConfirmAuthorizations(request *model.ConfirmAuthorizationsRequest) (*model.ConfirmAuthorizationsResponse, error) {
 	requestDef := GenReqDefForConfirmAuthorizations()
 
@@ -111,8 +107,7 @@ func (c *OsmClient) ConfirmAuthorizationsInvoker(request *model.ConfirmAuthoriza
 //
 // 提交工单扩展参数
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) CreateCaseExtendsParam(request *model.CreateCaseExtendsParamRequest) (*model.CreateCaseExtendsParamResponse, error) {
 	requestDef := GenReqDefForCreateCaseExtendsParam()
 
@@ -133,8 +128,7 @@ func (c *OsmClient) CreateCaseExtendsParamInvoker(request *model.CreateCaseExten
 //
 // 添加工单关联标签接口
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) CreateCaseLabels(request *model.CreateCaseLabelsRequest) (*model.CreateCaseLabelsResponse, error) {
 	requestDef := GenReqDefForCreateCaseLabels()
 
@@ -155,8 +149,7 @@ func (c *OsmClient) CreateCaseLabelsInvoker(request *model.CreateCaseLabelsReque
 //
 // 创建工单
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) CreateCases(request *model.CreateCasesRequest) (*model.CreateCasesResponse, error) {
 	requestDef := GenReqDefForCreateCases()
 
@@ -177,8 +170,7 @@ func (c *OsmClient) CreateCasesInvoker(request *model.CreateCasesRequest) *Creat
 //
 // 创建标签
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) CreateLabels(request *model.CreateLabelsRequest) (*model.CreateLabelsResponse, error) {
 	requestDef := GenReqDefForCreateLabels()
 
@@ -199,8 +191,7 @@ func (c *OsmClient) CreateLabelsInvoker(request *model.CreateLabelsRequest) *Cre
 //
 // 提交留言
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) CreateMessages(request *model.CreateMessagesRequest) (*model.CreateMessagesResponse, error) {
 	requestDef := GenReqDefForCreateMessages()
 
@@ -221,8 +212,7 @@ func (c *OsmClient) CreateMessagesInvoker(request *model.CreateMessagesRequest) 
 //
 // 创建授权
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) CreatePrivileges(request *model.CreatePrivilegesRequest) (*model.CreatePrivilegesResponse, error) {
 	requestDef := GenReqDefForCreatePrivileges()
 
@@ -243,8 +233,7 @@ func (c *OsmClient) CreatePrivilegesInvoker(request *model.CreatePrivilegesReque
 //
 // 创建关联，一个工单最多支持3个关联
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) CreateRelations(request *model.CreateRelationsRequest) (*model.CreateRelationsResponse, error) {
 	requestDef := GenReqDefForCreateRelations()
 
@@ -265,8 +254,7 @@ func (c *OsmClient) CreateRelationsInvoker(request *model.CreateRelationsRequest
 //
 // 提交评分
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) CreateScores(request *model.CreateScoresRequest) (*model.CreateScoresResponse, error) {
 	requestDef := GenReqDefForCreateScores()
 
@@ -287,8 +275,7 @@ func (c *OsmClient) CreateScoresInvoker(request *model.CreateScoresRequest) *Cre
 //
 // 删除附件
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) DeleteAccessories(request *model.DeleteAccessoriesRequest) (*model.DeleteAccessoriesResponse, error) {
 	requestDef := GenReqDefForDeleteAccessories()
 
@@ -309,8 +296,7 @@ func (c *OsmClient) DeleteAccessoriesInvoker(request *model.DeleteAccessoriesReq
 //
 // 删除指定工单关联标签接口
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) DeleteCaseLabels(request *model.DeleteCaseLabelsRequest) (*model.DeleteCaseLabelsResponse, error) {
 	requestDef := GenReqDefForDeleteCaseLabels()
 
@@ -331,8 +317,7 @@ func (c *OsmClient) DeleteCaseLabelsInvoker(request *model.DeleteCaseLabelsReque
 //
 // 删除标签，同时会删除工单与标签关联关系
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) DeleteLabels(request *model.DeleteLabelsRequest) (*model.DeleteLabelsResponse, error) {
 	requestDef := GenReqDefForDeleteLabels()
 
@@ -353,8 +338,7 @@ func (c *OsmClient) DeleteLabelsInvoker(request *model.DeleteLabelsRequest) *Del
 //
 // 删除关联
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) DeleteRelation(request *model.DeleteRelationRequest) (*model.DeleteRelationResponse, error) {
 	requestDef := GenReqDefForDeleteRelation()
 
@@ -375,8 +359,7 @@ func (c *OsmClient) DeleteRelationInvoker(request *model.DeleteRelationRequest) 
 //
 // 下载附件
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) DownloadAccessories(request *model.DownloadAccessoriesRequest) (*model.DownloadAccessoriesResponse, error) {
 	requestDef := GenReqDefForDownloadAccessories()
 
@@ -397,8 +380,7 @@ func (c *OsmClient) DownloadAccessoriesInvoker(request *model.DownloadAccessorie
 //
 // 工单导出
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) DownloadCases(request *model.DownloadCasesRequest) (*model.DownloadCasesResponse, error) {
 	requestDef := GenReqDefForDownloadCases()
 
@@ -419,8 +401,7 @@ func (c *OsmClient) DownloadCasesInvoker(request *model.DownloadCasesRequest) *D
 //
 // 返回图片内容，用于页面直接展示
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) DownloadImages(request *model.DownloadImagesRequest) (*model.DownloadImagesResponse, error) {
 	requestDef := GenReqDefForDownloadImages()
 
@@ -441,8 +422,7 @@ func (c *OsmClient) DownloadImagesInvoker(request *model.DownloadImagesRequest) 
 //
 // 租户批量获取下载链接
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) ListAccessoryAccessUrls(request *model.ListAccessoryAccessUrlsRequest) (*model.ListAccessoryAccessUrlsResponse, error) {
 	requestDef := GenReqDefForListAccessoryAccessUrls()
 
@@ -463,8 +443,7 @@ func (c *OsmClient) ListAccessoryAccessUrlsInvoker(request *model.ListAccessoryA
 //
 // 查询委托
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) ListAgencies(request *model.ListAgenciesRequest) (*model.ListAgenciesResponse, error) {
 	requestDef := GenReqDefForListAgencies()
 
@@ -485,8 +464,7 @@ func (c *OsmClient) ListAgenciesInvoker(request *model.ListAgenciesRequest) *Lis
 //
 // 查询国家码，用于提交工单页面填写联系方式使用
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) ListAreaCodes(request *model.ListAreaCodesRequest) (*model.ListAreaCodesResponse, error) {
 	requestDef := GenReqDefForListAreaCodes()
 
@@ -507,8 +485,7 @@ func (c *OsmClient) ListAreaCodesInvoker(request *model.ListAreaCodesRequest) *L
 //
 // 查询授权列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) ListAuthorizations(request *model.ListAuthorizationsRequest) (*model.ListAuthorizationsResponse, error) {
 	requestDef := GenReqDefForListAuthorizations()
 
@@ -529,8 +506,7 @@ func (c *OsmClient) ListAuthorizationsInvoker(request *model.ListAuthorizationsR
 //
 // 查询工单类目列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) ListCaseCategories(request *model.ListCaseCategoriesRequest) (*model.ListCaseCategoriesResponse, error) {
 	requestDef := GenReqDefForListCaseCategories()
 
@@ -551,8 +527,7 @@ func (c *OsmClient) ListCaseCategoriesInvoker(request *model.ListCaseCategoriesR
 //
 // 查询工单抄送邮箱
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) ListCaseCcEmails(request *model.ListCaseCcEmailsRequest) (*model.ListCaseCcEmailsResponse, error) {
 	requestDef := GenReqDefForListCaseCcEmails()
 
@@ -573,8 +548,7 @@ func (c *OsmClient) ListCaseCcEmailsInvoker(request *model.ListCaseCcEmailsReque
 //
 // 统计各状态工单数量
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) ListCaseCounts(request *model.ListCaseCountsRequest) (*model.ListCaseCountsResponse, error) {
 	requestDef := GenReqDefForListCaseCounts()
 
@@ -595,8 +569,7 @@ func (c *OsmClient) ListCaseCountsInvoker(request *model.ListCaseCountsRequest) 
 //
 // 查询工单关联标签接口
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) ListCaseLabels(request *model.ListCaseLabelsRequest) (*model.ListCaseLabelsResponse, error) {
 	requestDef := GenReqDefForListCaseLabels()
 
@@ -617,8 +590,7 @@ func (c *OsmClient) ListCaseLabelsInvoker(request *model.ListCaseLabelsRequest) 
 //
 // 查询工单限制，比如抄送邮箱个数等
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) ListCaseLimits(request *model.ListCaseLimitsRequest) (*model.ListCaseLimitsResponse, error) {
 	requestDef := GenReqDefForListCaseLimits()
 
@@ -639,8 +611,7 @@ func (c *OsmClient) ListCaseLimitsInvoker(request *model.ListCaseLimitsRequest) 
 //
 // 查询工单操作日志
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) ListCaseOperateLogs(request *model.ListCaseOperateLogsRequest) (*model.ListCaseOperateLogsResponse, error) {
 	requestDef := GenReqDefForListCaseOperateLogs()
 
@@ -661,8 +632,7 @@ func (c *OsmClient) ListCaseOperateLogsInvoker(request *model.ListCaseOperateLog
 //
 // 查询工单配额
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) ListCaseQuotas(request *model.ListCaseQuotasRequest) (*model.ListCaseQuotasResponse, error) {
 	requestDef := GenReqDefForListCaseQuotas()
 
@@ -683,8 +653,7 @@ func (c *OsmClient) ListCaseQuotasInvoker(request *model.ListCaseQuotasRequest) 
 //
 // 查询问题类型对应模板
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) ListCaseTemplates(request *model.ListCaseTemplatesRequest) (*model.ListCaseTemplatesResponse, error) {
 	requestDef := GenReqDefForListCaseTemplates()
 
@@ -705,8 +674,7 @@ func (c *OsmClient) ListCaseTemplatesInvoker(request *model.ListCaseTemplatesReq
 //
 // 查询工单列表接口
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) ListCases(request *model.ListCasesRequest) (*model.ListCasesResponse, error) {
 	requestDef := GenReqDefForListCases()
 
@@ -727,8 +695,7 @@ func (c *OsmClient) ListCasesInvoker(request *model.ListCasesRequest) *ListCases
 //
 // 查询用户关联的region
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) ListCustomersRegions(request *model.ListCustomersRegionsRequest) (*model.ListCustomersRegionsResponse, error) {
 	requestDef := GenReqDefForListCustomersRegions()
 
@@ -749,8 +716,7 @@ func (c *OsmClient) ListCustomersRegionsInvoker(request *model.ListCustomersRegi
 //
 // 提单时，根据不同的产品或者问题类型，会存在不同的一些附加参数填写
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) ListExtendsParams(request *model.ListExtendsParamsRequest) (*model.ListExtendsParamsResponse, error) {
 	requestDef := GenReqDefForListExtendsParams()
 
@@ -771,8 +737,7 @@ func (c *OsmClient) ListExtendsParamsInvoker(request *model.ListExtendsParamsReq
 //
 // 查询已验证的列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) ListHasVerifiedContacts(request *model.ListHasVerifiedContactsRequest) (*model.ListHasVerifiedContactsResponse, error) {
 	requestDef := GenReqDefForListHasVerifiedContacts()
 
@@ -793,8 +758,7 @@ func (c *OsmClient) ListHasVerifiedContactsInvoker(request *model.ListHasVerifie
 //
 // 查询堡垒机历史操作记录
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) ListHistoryOperateLogs(request *model.ListHistoryOperateLogsRequest) (*model.ListHistoryOperateLogsResponse, error) {
 	requestDef := GenReqDefForListHistoryOperateLogs()
 
@@ -815,8 +779,7 @@ func (c *OsmClient) ListHistoryOperateLogsInvoker(request *model.ListHistoryOper
 //
 // 查询堡垒机历史会话列
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) ListHistorySessions(request *model.ListHistorySessionsRequest) (*model.ListHistorySessionsResponse, error) {
 	requestDef := GenReqDefForListHistorySessions()
 
@@ -837,8 +800,7 @@ func (c *OsmClient) ListHistorySessionsInvoker(request *model.ListHistorySession
 //
 // 查询标签
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) ListLabels(request *model.ListLabelsRequest) (*model.ListLabelsResponse, error) {
 	requestDef := GenReqDefForListLabels()
 
@@ -859,8 +821,7 @@ func (c *OsmClient) ListLabelsInvoker(request *model.ListLabelsRequest) *ListLab
 //
 // 查询留言
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) ListMessages(request *model.ListMessagesRequest) (*model.ListMessagesResponse, error) {
 	requestDef := GenReqDefForListMessages()
 
@@ -881,8 +842,7 @@ func (c *OsmClient) ListMessagesInvoker(request *model.ListMessagesRequest) *Lis
 //
 // 查询更多留言
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) ListMoreInstantMessages(request *model.ListMoreInstantMessagesRequest) (*model.ListMoreInstantMessagesResponse, error) {
 	requestDef := GenReqDefForListMoreInstantMessages()
 
@@ -903,8 +863,7 @@ func (c *OsmClient) ListMoreInstantMessagesInvoker(request *model.ListMoreInstan
 //
 // 轮询查询即时消息接口
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) ListNewInstantMessages(request *model.ListNewInstantMessagesRequest) (*model.ListNewInstantMessagesResponse, error) {
 	requestDef := GenReqDefForListNewInstantMessages()
 
@@ -925,8 +884,7 @@ func (c *OsmClient) ListNewInstantMessagesInvoker(request *model.ListNewInstantM
 //
 // 查询工单权限
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) ListPrivileges(request *model.ListPrivilegesRequest) (*model.ListPrivilegesResponse, error) {
 	requestDef := GenReqDefForListPrivileges()
 
@@ -947,8 +905,7 @@ func (c *OsmClient) ListPrivilegesInvoker(request *model.ListPrivilegesRequest) 
 //
 // 提交工单时，选择产品类型之后选择对应的问题列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) ListProblemTypes(request *model.ListProblemTypesRequest) (*model.ListProblemTypesResponse, error) {
 	requestDef := GenReqDefForListProblemTypes()
 
@@ -969,8 +926,7 @@ func (c *OsmClient) ListProblemTypesInvoker(request *model.ListProblemTypesReque
 //
 // 查询产品类型列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) ListProductCategories(request *model.ListProductCategoriesRequest) (*model.ListProductCategoriesResponse, error) {
 	requestDef := GenReqDefForListProductCategories()
 
@@ -991,8 +947,7 @@ func (c *OsmClient) ListProductCategoriesInvoker(request *model.ListProductCateg
 //
 // 查询区域列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) ListRegions(request *model.ListRegionsRequest) (*model.ListRegionsResponse, error) {
 	requestDef := GenReqDefForListRegions()
 
@@ -1013,8 +968,7 @@ func (c *OsmClient) ListRegionsInvoker(request *model.ListRegionsRequest) *ListR
 //
 // 查询工单的关联，返回关联工单的简要信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) ListRelation(request *model.ListRelationRequest) (*model.ListRelationResponse, error) {
 	requestDef := GenReqDefForListRelation()
 
@@ -1035,8 +989,7 @@ func (c *OsmClient) ListRelationInvoker(request *model.ListRelationRequest) *Lis
 //
 // 工单满意度分类列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) ListSatisfactionDimensions(request *model.ListSatisfactionDimensionsRequest) (*model.ListSatisfactionDimensionsResponse, error) {
 	requestDef := GenReqDefForListSatisfactionDimensions()
 
@@ -1057,8 +1010,7 @@ func (c *OsmClient) ListSatisfactionDimensionsInvoker(request *model.ListSatisfa
 //
 // 查询问题严重性列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) ListSeverities(request *model.ListSeveritiesRequest) (*model.ListSeveritiesResponse, error) {
 	requestDef := GenReqDefForListSeverities()
 
@@ -1079,8 +1031,7 @@ func (c *OsmClient) ListSeveritiesInvoker(request *model.ListSeveritiesRequest) 
 //
 // 查询子用户信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) ListSubCustomers(request *model.ListSubCustomersRequest) (*model.ListSubCustomersResponse, error) {
 	requestDef := GenReqDefForListSubCustomers()
 
@@ -1101,8 +1052,7 @@ func (c *OsmClient) ListSubCustomersInvoker(request *model.ListSubCustomersReque
 //
 // 查询堡垒机文件传输记录
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) ListTransportHistories(request *model.ListTransportHistoriesRequest) (*model.ListTransportHistoriesResponse, error) {
 	requestDef := GenReqDefForListTransportHistories()
 
@@ -1123,8 +1073,7 @@ func (c *OsmClient) ListTransportHistoriesInvoker(request *model.ListTransportHi
 //
 // 查询未读消息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) ListUnreadNewInstantMessages(request *model.ListUnreadNewInstantMessagesRequest) (*model.ListUnreadNewInstantMessagesResponse, error) {
 	requestDef := GenReqDefForListUnreadNewInstantMessages()
 
@@ -1145,8 +1094,7 @@ func (c *OsmClient) ListUnreadNewInstantMessagesInvoker(request *model.ListUnrea
 //
 // 撤回留言
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) RevokeMessage(request *model.RevokeMessageRequest) (*model.RevokeMessageResponse, error) {
 	requestDef := GenReqDefForRevokeMessage()
 
@@ -1167,8 +1115,7 @@ func (c *OsmClient) RevokeMessageInvoker(request *model.RevokeMessageRequest) *R
 //
 // 获取验证码
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) SendVerifyCodes(request *model.SendVerifyCodesRequest) (*model.SendVerifyCodesResponse, error) {
 	requestDef := GenReqDefForSendVerifyCodes()
 
@@ -1189,8 +1136,7 @@ func (c *OsmClient) SendVerifyCodesInvoker(request *model.SendVerifyCodesRequest
 //
 // 查询附件的一下限制，比如大小，数量，文件类型
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) ShowAccessoryLimits(request *model.ShowAccessoryLimitsRequest) (*model.ShowAccessoryLimitsResponse, error) {
 	requestDef := GenReqDefForShowAccessoryLimits()
 
@@ -1211,8 +1157,7 @@ func (c *OsmClient) ShowAccessoryLimitsInvoker(request *model.ShowAccessoryLimit
 //
 // 查询授权详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) ShowAuthorizationDetail(request *model.ShowAuthorizationDetailRequest) (*model.ShowAuthorizationDetailResponse, error) {
 	requestDef := GenReqDefForShowAuthorizationDetail()
 
@@ -1233,8 +1178,7 @@ func (c *OsmClient) ShowAuthorizationDetailInvoker(request *model.ShowAuthorizat
 //
 // 查询工单详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) ShowCaseDetail(request *model.ShowCaseDetailRequest) (*model.ShowCaseDetailResponse, error) {
 	requestDef := GenReqDefForShowCaseDetail()
 
@@ -1255,8 +1199,7 @@ func (c *OsmClient) ShowCaseDetailInvoker(request *model.ShowCaseDetailRequest) 
 //
 // 查询工单扩展参数
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) ShowCaseExtendsParam(request *model.ShowCaseExtendsParamRequest) (*model.ShowCaseExtendsParamResponse, error) {
 	requestDef := GenReqDefForShowCaseExtendsParam()
 
@@ -1277,8 +1220,7 @@ func (c *OsmClient) ShowCaseExtendsParamInvoker(request *model.ShowCaseExtendsPa
 //
 // 查询某个工单状态
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) ShowCaseStatus(request *model.ShowCaseStatusRequest) (*model.ShowCaseStatusResponse, error) {
 	requestDef := GenReqDefForShowCaseStatus()
 
@@ -1299,8 +1241,7 @@ func (c *OsmClient) ShowCaseStatusInvoker(request *model.ShowCaseStatusRequest) 
 //
 // 查询提单权限
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) ShowCustomerPrivilegePolicy(request *model.ShowCustomerPrivilegePolicyRequest) (*model.ShowCustomerPrivilegePolicyResponse, error) {
 	requestDef := GenReqDefForShowCustomerPrivilegePolicy()
 
@@ -1321,8 +1262,7 @@ func (c *OsmClient) ShowCustomerPrivilegePolicyInvoker(request *model.ShowCustom
 //
 // 查看最新发布版本协议详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) ShowLatestPublishedAgreement(request *model.ShowLatestPublishedAgreementRequest) (*model.ShowLatestPublishedAgreementResponse, error) {
 	requestDef := GenReqDefForShowLatestPublishedAgreement()
 
@@ -1343,8 +1283,7 @@ func (c *OsmClient) ShowLatestPublishedAgreementInvoker(request *model.ShowLates
 //
 // 查询伙伴工单权限
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) ShowPartnersCasesPrivilege(request *model.ShowPartnersCasesPrivilegeRequest) (*model.ShowPartnersCasesPrivilegeResponse, error) {
 	requestDef := GenReqDefForShowPartnersCasesPrivilege()
 
@@ -1365,8 +1304,7 @@ func (c *OsmClient) ShowPartnersCasesPrivilegeInvoker(request *model.ShowPartner
 //
 // 查询关联伙伴服务信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) ShowPartnersServiceInfo(request *model.ShowPartnersServiceInfoRequest) (*model.ShowPartnersServiceInfoResponse, error) {
 	requestDef := GenReqDefForShowPartnersServiceInfo()
 
@@ -1387,8 +1325,7 @@ func (c *OsmClient) ShowPartnersServiceInfoInvoker(request *model.ShowPartnersSe
 //
 // 查询用户是否签署最新协议
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) ShowSignedLatestPublishedAgreement(request *model.ShowSignedLatestPublishedAgreementRequest) (*model.ShowSignedLatestPublishedAgreementResponse, error) {
 	requestDef := GenReqDefForShowSignedLatestPublishedAgreement()
 
@@ -1409,8 +1346,7 @@ func (c *OsmClient) ShowSignedLatestPublishedAgreementInvoker(request *model.Sho
 //
 // 签署协议
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) SignPublishedAgreement(request *model.SignPublishedAgreementRequest) (*model.SignPublishedAgreementResponse, error) {
 	requestDef := GenReqDefForSignPublishedAgreement()
 
@@ -1431,8 +1367,7 @@ func (c *OsmClient) SignPublishedAgreementInvoker(request *model.SignPublishedAg
 //
 // 拒绝|撤销授权
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) UpdateAuthorizations(request *model.UpdateAuthorizationsRequest) (*model.UpdateAuthorizationsResponse, error) {
 	requestDef := GenReqDefForUpdateAuthorizations()
 
@@ -1453,8 +1388,7 @@ func (c *OsmClient) UpdateAuthorizationsInvoker(request *model.UpdateAuthorizati
 //
 // 修改联系方式
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) UpdateCaseContactInfo(request *model.UpdateCaseContactInfoRequest) (*model.UpdateCaseContactInfoResponse, error) {
 	requestDef := GenReqDefForUpdateCaseContactInfo()
 
@@ -1475,8 +1409,7 @@ func (c *OsmClient) UpdateCaseContactInfoInvoker(request *model.UpdateCaseContac
 //
 // 工单操作
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) UpdateCases(request *model.UpdateCasesRequest) (*model.UpdateCasesResponse, error) {
 	requestDef := GenReqDefForUpdateCases()
 
@@ -1497,8 +1430,7 @@ func (c *OsmClient) UpdateCasesInvoker(request *model.UpdateCasesRequest) *Updat
 //
 // 修改标签
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) UpdateLabels(request *model.UpdateLabelsRequest) (*model.UpdateLabelsResponse, error) {
 	requestDef := GenReqDefForUpdateLabels()
 
@@ -1519,8 +1451,7 @@ func (c *OsmClient) UpdateLabelsInvoker(request *model.UpdateLabelsRequest) *Upd
 //
 // 设置消息已读
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) UpdateNewInstantMessagesRead(request *model.UpdateNewInstantMessagesReadRequest) (*model.UpdateNewInstantMessagesReadResponse, error) {
 	requestDef := GenReqDefForUpdateNewInstantMessagesRead()
 
@@ -1541,8 +1472,7 @@ func (c *OsmClient) UpdateNewInstantMessagesReadInvoker(request *model.UpdateNew
 //
 // 上传附件给SDK使用
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) UploadJsonAccessories(request *model.UploadJsonAccessoriesRequest) (*model.UploadJsonAccessoriesResponse, error) {
 	requestDef := GenReqDefForUploadJsonAccessories()
 

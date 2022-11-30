@@ -25,8 +25,7 @@ func DwsClientBuilder() *http_client.HcHttpClientBuilder {
 // 集群必须要运行在VPC之内，创建集群前，您需要先创建VPC，并获取VPC和子网的id。
 // 该接口为异步接口，创建集群需要10～15分钟。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) CreateCluster(request *model.CreateClusterRequest) (*model.CreateClusterResponse, error) {
 	requestDef := GenReqDefForCreateCluster()
 
@@ -47,8 +46,7 @@ func (c *DwsClient) CreateClusterInvoker(request *model.CreateClusterRequest) *C
 //
 // 该接口用于为指定集群创建快照。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) CreateSnapshot(request *model.CreateSnapshotRequest) (*model.CreateSnapshotResponse, error) {
 	requestDef := GenReqDefForCreateSnapshot()
 
@@ -69,8 +67,7 @@ func (c *DwsClient) CreateSnapshotInvoker(request *model.CreateSnapshotRequest) 
 //
 // 此接口用于删除集群。集群删除后将释放此集群的所有资源，包括客户数据。为了安全起见，请在删除集群前为这个集群创建快照。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) DeleteCluster(request *model.DeleteClusterRequest) (*model.DeleteClusterResponse, error) {
 	requestDef := GenReqDefForDeleteCluster()
 
@@ -91,8 +88,7 @@ func (c *DwsClient) DeleteClusterInvoker(request *model.DeleteClusterRequest) *D
 //
 // 该接口用于删除一个指定手动快照。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) DeleteSnapshot(request *model.DeleteSnapshotRequest) (*model.DeleteSnapshotResponse, error) {
 	requestDef := GenReqDefForDeleteSnapshot()
 
@@ -113,8 +109,7 @@ func (c *DwsClient) DeleteSnapshotInvoker(request *model.DeleteSnapshotRequest) 
 //
 // 该接口用于查询集群详情。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) ListClusterDetails(request *model.ListClusterDetailsRequest) (*model.ListClusterDetailsResponse, error) {
 	requestDef := GenReqDefForListClusterDetails()
 
@@ -135,8 +130,7 @@ func (c *DwsClient) ListClusterDetailsInvoker(request *model.ListClusterDetailsR
 //
 // 该接口用于查询并显示集群列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) ListClusters(request *model.ListClustersRequest) (*model.ListClustersResponse, error) {
 	requestDef := GenReqDefForListClusters()
 
@@ -157,8 +151,7 @@ func (c *DwsClient) ListClustersInvoker(request *model.ListClustersRequest) *Lis
 //
 // 该接口用于查询所有GaussDB(DWS)服务支持的节点类型。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) ListNodeTypes(request *model.ListNodeTypesRequest) (*model.ListNodeTypesResponse, error) {
 	requestDef := GenReqDefForListNodeTypes()
 
@@ -179,8 +172,7 @@ func (c *DwsClient) ListNodeTypesInvoker(request *model.ListNodeTypesRequest) *L
 //
 // 该接口用于使用快照ID查询快照详情。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) ListSnapshotDetails(request *model.ListSnapshotDetailsRequest) (*model.ListSnapshotDetailsResponse, error) {
 	requestDef := GenReqDefForListSnapshotDetails()
 
@@ -201,8 +193,7 @@ func (c *DwsClient) ListSnapshotDetailsInvoker(request *model.ListSnapshotDetail
 //
 // 该接口用于查询快照列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) ListSnapshots(request *model.ListSnapshotsRequest) (*model.ListSnapshotsResponse, error) {
 	requestDef := GenReqDefForListSnapshots()
 
@@ -223,8 +214,7 @@ func (c *DwsClient) ListSnapshotsInvoker(request *model.ListSnapshotsRequest) *L
 //
 // 此接口用于重置集群管理员密码。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) ResetPassword(request *model.ResetPasswordRequest) (*model.ResetPasswordResponse, error) {
 	requestDef := GenReqDefForResetPassword()
 
@@ -245,8 +235,7 @@ func (c *DwsClient) ResetPasswordInvoker(request *model.ResetPasswordRequest) *R
 //
 // 此接口用于扩容集群。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) ResizeCluster(request *model.ResizeClusterRequest) (*model.ResizeClusterResponse, error) {
 	requestDef := GenReqDefForResizeCluster()
 
@@ -267,8 +256,7 @@ func (c *DwsClient) ResizeClusterInvoker(request *model.ResizeClusterRequest) *R
 //
 // 此接口用于重启集群。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) RestartCluster(request *model.RestartClusterRequest) (*model.RestartClusterResponse, error) {
 	requestDef := GenReqDefForRestartCluster()
 
@@ -289,8 +277,7 @@ func (c *DwsClient) RestartClusterInvoker(request *model.RestartClusterRequest) 
 //
 // 该接口用于使用快照恢复集群。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) RestoreCluster(request *model.RestoreClusterRequest) (*model.RestoreClusterResponse, error) {
 	requestDef := GenReqDefForRestoreCluster()
 

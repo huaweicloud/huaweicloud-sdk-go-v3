@@ -23,8 +23,7 @@ func ModerationClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 分析并识别用户上传的图像内容是否有敏感内容（如涉及暴恐元素、涉黄内容等），并将识别结果返回给用户。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ModerationClient) CheckImageModeration(request *model.CheckImageModerationRequest) (*model.CheckImageModerationResponse, error) {
 	requestDef := GenReqDefForCheckImageModeration()
 
@@ -45,8 +44,7 @@ func (c *ModerationClient) CheckImageModerationInvoker(request *model.CheckImage
 //
 // 分析并识别用户上传的音频内容是否有敏感内容（如色情、政治等），并将识别结果返回给用户
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ModerationClient) RunCreateAudioModerationJob(request *model.RunCreateAudioModerationJobRequest) (*model.RunCreateAudioModerationJobResponse, error) {
 	requestDef := GenReqDefForRunCreateAudioModerationJob()
 
@@ -67,8 +65,7 @@ func (c *ModerationClient) RunCreateAudioModerationJobInvoker(request *model.Run
 //
 // 创建视频内容审核作业，创建成功会将作业ID返回给用户
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ModerationClient) RunCreateVideoModerationJob(request *model.RunCreateVideoModerationJobRequest) (*model.RunCreateVideoModerationJobResponse, error) {
 	requestDef := GenReqDefForRunCreateVideoModerationJob()
 
@@ -88,8 +85,7 @@ func (c *ModerationClient) RunCreateVideoModerationJobInvoker(request *model.Run
 // RunQueryAudioModerationJob 查询音频内容审核作业
 //
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ModerationClient) RunQueryAudioModerationJob(request *model.RunQueryAudioModerationJobRequest) (*model.RunQueryAudioModerationJobResponse, error) {
 	requestDef := GenReqDefForRunQueryAudioModerationJob()
 
@@ -110,8 +106,7 @@ func (c *ModerationClient) RunQueryAudioModerationJobInvoker(request *model.RunQ
 //
 // 查询视频审核作业处理状态与结果，并将识别结果返回给用户
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ModerationClient) RunQueryVideoModerationJob(request *model.RunQueryVideoModerationJobRequest) (*model.RunQueryVideoModerationJobResponse, error) {
 	requestDef := GenReqDefForRunQueryVideoModerationJob()
 
@@ -132,8 +127,7 @@ func (c *ModerationClient) RunQueryVideoModerationJobInvoker(request *model.RunQ
 //
 // 分析并识别用户上传的文本内容是否有敏感内容（如色情、政治等），并将识别结果返回给用户
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ModerationClient) RunTextModeration(request *model.RunTextModerationRequest) (*model.RunTextModerationResponse, error) {
 	requestDef := GenReqDefForRunTextModeration()
 

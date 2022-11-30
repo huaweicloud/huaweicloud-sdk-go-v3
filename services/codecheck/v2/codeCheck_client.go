@@ -23,8 +23,7 @@ func CodeCheckClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 查询任务规则集的检查参数
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeCheckClient) CheckParameters(request *model.CheckParametersRequest) (*model.CheckParametersResponse, error) {
 	requestDef := GenReqDefForCheckParameters()
 
@@ -45,8 +44,7 @@ func (c *CodeCheckClient) CheckParametersInvoker(request *model.CheckParametersR
 //
 // 提供每次扫描的问题数量统计
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeCheckClient) CheckRecord(request *model.CheckRecordRequest) (*model.CheckRecordResponse, error) {
 	requestDef := GenReqDefForCheckRecord()
 
@@ -67,8 +65,7 @@ func (c *CodeCheckClient) CheckRecordInvoker(request *model.CheckRecordRequest) 
 //
 // 查询任务规则集的检查参数
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeCheckClient) CheckRulesetParameters(request *model.CheckRulesetParametersRequest) (*model.CheckRulesetParametersResponse, error) {
 	requestDef := GenReqDefForCheckRulesetParameters()
 
@@ -89,8 +86,7 @@ func (c *CodeCheckClient) CheckRulesetParametersInvoker(request *model.CheckRule
 //
 // 可根据需求灵活的组合规则。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeCheckClient) CreateRuleset(request *model.CreateRulesetRequest) (*model.CreateRulesetResponse, error) {
 	requestDef := GenReqDefForCreateRuleset()
 
@@ -111,8 +107,7 @@ func (c *CodeCheckClient) CreateRulesetInvoker(request *model.CreateRulesetReque
 //
 // 新建检查任务但是不执行。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeCheckClient) CreateTask(request *model.CreateTaskRequest) (*model.CreateTaskResponse, error) {
 	requestDef := GenReqDefForCreateTask()
 
@@ -133,8 +128,7 @@ func (c *CodeCheckClient) CreateTaskInvoker(request *model.CreateTaskRequest) *C
 //
 // 删除自定义规则集，正在使用中的或默认规则集不能删除
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeCheckClient) DeleteRuleset(request *model.DeleteRulesetRequest) (*model.DeleteRulesetResponse, error) {
 	requestDef := GenReqDefForDeleteRuleset()
 
@@ -155,8 +149,7 @@ func (c *CodeCheckClient) DeleteRulesetInvoker(request *model.DeleteRulesetReque
 //
 // 删除检查任务，执行中的任务删除无法再查看
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeCheckClient) DeleteTask(request *model.DeleteTaskRequest) (*model.DeleteTaskResponse, error) {
 	requestDef := GenReqDefForDeleteTask()
 
@@ -177,8 +170,7 @@ func (c *CodeCheckClient) DeleteTaskInvoker(request *model.DeleteTaskRequest) *D
 //
 // 根据语言、问题级别等条件查询规则列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeCheckClient) ListRules(request *model.ListRulesRequest) (*model.ListRulesResponse, error) {
 	requestDef := GenReqDefForListRules()
 
@@ -199,8 +191,7 @@ func (c *CodeCheckClient) ListRulesInvoker(request *model.ListRulesRequest) *Lis
 //
 // 根据项目ID、语言等条件查询规则集列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeCheckClient) ListRulesets(request *model.ListRulesetsRequest) (*model.ListRulesetsResponse, error) {
 	requestDef := GenReqDefForListRulesets()
 
@@ -221,8 +212,7 @@ func (c *CodeCheckClient) ListRulesetsInvoker(request *model.ListRulesetsRequest
 //
 // 任务配置检查参数
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeCheckClient) ListTaskParameter(request *model.ListTaskParameterRequest) (*model.ListTaskParameterResponse, error) {
 	requestDef := GenReqDefForListTaskParameter()
 
@@ -243,8 +233,7 @@ func (c *CodeCheckClient) ListTaskParameterInvoker(request *model.ListTaskParame
 //
 // 查询任务的已选规则集列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeCheckClient) ListTaskRuleset(request *model.ListTaskRulesetRequest) (*model.ListTaskRulesetResponse, error) {
 	requestDef := GenReqDefForListTaskRuleset()
 
@@ -265,8 +254,7 @@ func (c *CodeCheckClient) ListTaskRulesetInvoker(request *model.ListTaskRulesetR
 //
 // 根据项目ID、规则集ID等条件查询规则列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeCheckClient) ListTemplateRules(request *model.ListTemplateRulesRequest) (*model.ListTemplateRulesResponse, error) {
 	requestDef := GenReqDefForListTemplateRules()
 
@@ -287,8 +275,7 @@ func (c *CodeCheckClient) ListTemplateRulesInvoker(request *model.ListTemplateRu
 //
 // 执行检查任务。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeCheckClient) RunTask(request *model.RunTaskRequest) (*model.RunTaskResponse, error) {
 	requestDef := GenReqDefForRunTask()
 
@@ -309,8 +296,7 @@ func (c *CodeCheckClient) RunTaskInvoker(request *model.RunTaskRequest) *RunTask
 //
 // 设置每个项目对应语言的默认规则集配置。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeCheckClient) SetDefaulTemplate(request *model.SetDefaulTemplateRequest) (*model.SetDefaulTemplateResponse, error) {
 	requestDef := GenReqDefForSetDefaulTemplate()
 
@@ -331,8 +317,7 @@ func (c *CodeCheckClient) SetDefaulTemplateInvoker(request *model.SetDefaulTempl
 //
 // 根据任务ID查询任务执行状态。任务状态：0表示检查中，1表示检查失败，2表示检查成功，3表示任务中止。只有正在检查中才有进度的详细信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeCheckClient) ShowProgressDetail(request *model.ShowProgressDetailRequest) (*model.ShowProgressDetailResponse, error) {
 	requestDef := GenReqDefForShowProgressDetail()
 
@@ -353,8 +338,7 @@ func (c *CodeCheckClient) ShowProgressDetailInvoker(request *model.ShowProgressD
 //
 // 根据检查任务ID查询cmertrics缺陷概要。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeCheckClient) ShowTaskCmetrics(request *model.ShowTaskCmetricsRequest) (*model.ShowTaskCmetricsResponse, error) {
 	requestDef := GenReqDefForShowTaskCmetrics()
 
@@ -375,8 +359,7 @@ func (c *CodeCheckClient) ShowTaskCmetricsInvoker(request *model.ShowTaskCmetric
 //
 // 根据检查任务ID分页查询缺陷结果详情。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeCheckClient) ShowTaskDefects(request *model.ShowTaskDefectsRequest) (*model.ShowTaskDefectsResponse, error) {
 	requestDef := GenReqDefForShowTaskDefects()
 
@@ -397,8 +380,7 @@ func (c *CodeCheckClient) ShowTaskDefectsInvoker(request *model.ShowTaskDefectsR
 //
 // 根据检查任务ID查询缺陷详情的统计
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeCheckClient) ShowTaskDefectsStatistic(request *model.ShowTaskDefectsStatisticRequest) (*model.ShowTaskDefectsStatisticResponse, error) {
 	requestDef := GenReqDefForShowTaskDefectsStatistic()
 
@@ -419,8 +401,7 @@ func (c *CodeCheckClient) ShowTaskDefectsStatisticInvoker(request *model.ShowTas
 //
 // 根据检查任务ID查询缺陷结果的概要。包括问题概述、问题状态、圈复杂度、代码重复率等。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeCheckClient) ShowTaskDetail(request *model.ShowTaskDetailRequest) (*model.ShowTaskDetailResponse, error) {
 	requestDef := GenReqDefForShowTaskDetail()
 
@@ -441,8 +422,7 @@ func (c *CodeCheckClient) ShowTaskDetailInvoker(request *model.ShowTaskDetailReq
 //
 // 根据DEVCLOUD_PROJECT_UUID查询该项目下的任务列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeCheckClient) ShowTaskListByProjectId(request *model.ShowTaskListByProjectIdRequest) (*model.ShowTaskListByProjectIdResponse, error) {
 	requestDef := GenReqDefForShowTaskListByProjectId()
 
@@ -463,8 +443,7 @@ func (c *CodeCheckClient) ShowTaskListByProjectIdInvoker(request *model.ShowTask
 //
 // 查询任务检查失败日志，不传execute_id则查询最近一次的检查日志
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeCheckClient) ShowTasklog(request *model.ShowTasklogRequest) (*model.ShowTasklogResponse, error) {
 	requestDef := GenReqDefForShowTasklog()
 
@@ -485,8 +464,7 @@ func (c *CodeCheckClient) ShowTasklogInvoker(request *model.ShowTasklogRequest) 
 //
 // 查询任务的已选规则集列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeCheckClient) ShowTasksRulesets(request *model.ShowTasksRulesetsRequest) (*model.ShowTasksRulesetsResponse, error) {
 	requestDef := GenReqDefForShowTasksRulesets()
 
@@ -507,8 +485,7 @@ func (c *CodeCheckClient) ShowTasksRulesetsInvoker(request *model.ShowTasksRules
 //
 // 根据任务ID终止检查任务。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeCheckClient) StopTaskById(request *model.StopTaskByIdRequest) (*model.StopTaskByIdResponse, error) {
 	requestDef := GenReqDefForStopTaskById()
 
@@ -529,8 +506,7 @@ func (c *CodeCheckClient) StopTaskByIdInvoker(request *model.StopTaskByIdRequest
 //
 // 修改检查出的缺陷的状态为已解决、已忽略
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeCheckClient) UpdateDefectStatus(request *model.UpdateDefectStatusRequest) (*model.UpdateDefectStatusResponse, error) {
 	requestDef := GenReqDefForUpdateDefectStatus()
 
@@ -551,8 +527,7 @@ func (c *CodeCheckClient) UpdateDefectStatusInvoker(request *model.UpdateDefectS
 //
 // 修改任务规则集。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeCheckClient) UpdateTaskRuleset(request *model.UpdateTaskRulesetRequest) (*model.UpdateTaskRulesetResponse, error) {
 	requestDef := GenReqDefForUpdateTaskRuleset()
 

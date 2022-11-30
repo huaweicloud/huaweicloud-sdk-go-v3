@@ -6,10 +6,11 @@ import (
 	"strings"
 )
 
+// 导出云手机数据请求体。
 type BatchExportCloudPhoneDataRequestBody struct {
 
 	// 待导出数据的云手机信息
-	StorageInfos []BatchExportCloudPhoneDataRequestBodyStorageInfos `json:"storage_infos"`
+	StorageInfos []StorageInfo `json:"storage_infos"`
 }
 
 func (o BatchExportCloudPhoneDataRequestBody) String() string {

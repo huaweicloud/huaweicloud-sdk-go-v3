@@ -9,12 +9,12 @@ import (
 // Response Object
 type ListEncodeServersResponse struct {
 
-	// 请求的唯一标识ID
-	RequestId string `json:"request_id"`
+	// 请求的唯一标识ID。
+	RequestId *string `json:"request_id,omitempty"`
 
-	// 编码服务信息
-	EncodeServers  []interface{} `json:"encode_servers"`
-	HttpStatusCode int           `json:"-"`
+	// 编码服务信息。
+	EncodeServers  *[]EncodeServer `json:"encode_servers,omitempty"`
+	HttpStatusCode int             `json:"-"`
 }
 
 func (o ListEncodeServersResponse) String() string {

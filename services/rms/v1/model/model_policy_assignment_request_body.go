@@ -12,6 +12,9 @@ import (
 // 规则请求体
 type PolicyAssignmentRequestBody struct {
 
+	// 规则类型，包括预定义合规规则(builtin)和用户自定义合规规则(custom)
+	PolicyAssignmentType *PolicyAssignmentRequestBodyPolicyAssignmentType `json:"policy_assignment_type,omitempty"`
+
 	// 规则名字
 	Name string `json:"name"`
 
@@ -23,8 +26,10 @@ type PolicyAssignmentRequestBody struct {
 
 	PolicyFilter *PolicyFilterDefinition `json:"policy_filter,omitempty"`
 
+	CustomPolicy *CustomPolicy `json:"custom_policy,omitempty"`
+
 	// 策略定义ID
-	PolicyDefinitionId string `json:"policy_definition_id"`
+	PolicyDefinitionId *string `json:"policy_definition_id,omitempty"`
 
 	// 规则参数
 	Parameters map[string]PolicyParameterValue `json:"parameters,omitempty"`
@@ -37,6 +42,48 @@ func (o PolicyAssignmentRequestBody) String() string {
 	}
 
 	return strings.Join([]string{"PolicyAssignmentRequestBody", string(data)}, " ")
+}
+
+type PolicyAssignmentRequestBodyPolicyAssignmentType struct {
+	value string
+}
+
+type PolicyAssignmentRequestBodyPolicyAssignmentTypeEnum struct {
+	BUILTIN PolicyAssignmentRequestBodyPolicyAssignmentType
+	CUSTOM  PolicyAssignmentRequestBodyPolicyAssignmentType
+}
+
+func GetPolicyAssignmentRequestBodyPolicyAssignmentTypeEnum() PolicyAssignmentRequestBodyPolicyAssignmentTypeEnum {
+	return PolicyAssignmentRequestBodyPolicyAssignmentTypeEnum{
+		BUILTIN: PolicyAssignmentRequestBodyPolicyAssignmentType{
+			value: "builtin",
+		},
+		CUSTOM: PolicyAssignmentRequestBodyPolicyAssignmentType{
+			value: "custom",
+		},
+	}
+}
+
+func (c PolicyAssignmentRequestBodyPolicyAssignmentType) Value() string {
+	return c.value
+}
+
+func (c PolicyAssignmentRequestBodyPolicyAssignmentType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *PolicyAssignmentRequestBodyPolicyAssignmentType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type PolicyAssignmentRequestBodyPeriod struct {

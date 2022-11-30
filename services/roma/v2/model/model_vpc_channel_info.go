@@ -36,6 +36,11 @@ type VpcChannelInfo struct {
 
 	// 后端云服务器组列表。  [暂不支持](tag:Site)
 	MemberGroups *[]MemberGroupInfo `json:"member_groups,omitempty"`
+
+	MicroserviceInfo *MicroServiceInfo `json:"microservice_info,omitempty"`
+
+	// vpc通道类型。 - BUILTIN：BUILTIN通道类型 - MICROSERVICE：微服务类型
+	Type *VpcChannelInfoType `json:"type,omitempty"`
 }
 
 func (o VpcChannelInfo) String() string {
@@ -174,5 +179,47 @@ func (c *VpcChannelInfoStatus) UnmarshalJSON(b []byte) error {
 		return err
 	} else {
 		return errors.New("convert enum data to int32 error")
+	}
+}
+
+type VpcChannelInfoType struct {
+	value string
+}
+
+type VpcChannelInfoTypeEnum struct {
+	BUILTIN      VpcChannelInfoType
+	MICROSERVICE VpcChannelInfoType
+}
+
+func GetVpcChannelInfoTypeEnum() VpcChannelInfoTypeEnum {
+	return VpcChannelInfoTypeEnum{
+		BUILTIN: VpcChannelInfoType{
+			value: "BUILTIN",
+		},
+		MICROSERVICE: VpcChannelInfoType{
+			value: "MICROSERVICE",
+		},
+	}
+}
+
+func (c VpcChannelInfoType) Value() string {
+	return c.value
+}
+
+func (c VpcChannelInfoType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *VpcChannelInfoType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
 	}
 }

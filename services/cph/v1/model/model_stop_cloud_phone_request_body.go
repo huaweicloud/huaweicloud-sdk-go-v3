@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// 关闭云手机请求体。
 type StopCloudPhoneRequestBody struct {
 
 	// 云手机id列表

@@ -3,11 +3,17 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // Response Object
 type ShowPolicyAssignmentResponse struct {
+
+	// 规则类型，包括预定义合规规则(builtin)和用户自定义合规规则(custom)
+	PolicyAssignmentType *ShowPolicyAssignmentResponsePolicyAssignmentType `json:"policy_assignment_type,omitempty"`
 
 	// 规则ID
 	Id *string `json:"id,omitempty"`
@@ -35,6 +41,8 @@ type ShowPolicyAssignmentResponse struct {
 	// 规则的策略ID
 	PolicyDefinitionId *string `json:"policy_definition_id,omitempty"`
 
+	CustomPolicy *CustomPolicy `json:"custom_policy,omitempty"`
+
 	// 规则参数
 	Parameters     map[string]PolicyParameterValue `json:"parameters,omitempty"`
 	HttpStatusCode int                             `json:"-"`
@@ -47,4 +55,46 @@ func (o ShowPolicyAssignmentResponse) String() string {
 	}
 
 	return strings.Join([]string{"ShowPolicyAssignmentResponse", string(data)}, " ")
+}
+
+type ShowPolicyAssignmentResponsePolicyAssignmentType struct {
+	value string
+}
+
+type ShowPolicyAssignmentResponsePolicyAssignmentTypeEnum struct {
+	BUILTIN ShowPolicyAssignmentResponsePolicyAssignmentType
+	CUSTOM  ShowPolicyAssignmentResponsePolicyAssignmentType
+}
+
+func GetShowPolicyAssignmentResponsePolicyAssignmentTypeEnum() ShowPolicyAssignmentResponsePolicyAssignmentTypeEnum {
+	return ShowPolicyAssignmentResponsePolicyAssignmentTypeEnum{
+		BUILTIN: ShowPolicyAssignmentResponsePolicyAssignmentType{
+			value: "builtin",
+		},
+		CUSTOM: ShowPolicyAssignmentResponsePolicyAssignmentType{
+			value: "custom",
+		},
+	}
+}
+
+func (c ShowPolicyAssignmentResponsePolicyAssignmentType) Value() string {
+	return c.value
+}
+
+func (c ShowPolicyAssignmentResponsePolicyAssignmentType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ShowPolicyAssignmentResponsePolicyAssignmentType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

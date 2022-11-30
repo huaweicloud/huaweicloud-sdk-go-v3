@@ -23,8 +23,7 @@ func CdnClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 批量域名复制接口
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CdnClient) BatchCopyDomain(request *model.BatchCopyDomainRequest) (*model.BatchCopyDomainResponse, error) {
 	requestDef := GenReqDefForBatchCopyDomain()
 
@@ -55,8 +54,7 @@ func (c *CdnClient) BatchCopyDomainInvoker(request *model.BatchCopyDomainRequest
 //
 // - 单租户调用频率：10次/min。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CdnClient) DownloadRegionCarrierExcel(request *model.DownloadRegionCarrierExcelRequest) (*model.DownloadRegionCarrierExcelResponse, error) {
 	requestDef := GenReqDefForDownloadRegionCarrierExcel()
 
@@ -87,8 +85,7 @@ func (c *CdnClient) DownloadRegionCarrierExcelInvoker(request *model.DownloadReg
 //
 // - 单租户调用频率：10次/min。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CdnClient) DownloadStatisticsExcel(request *model.DownloadStatisticsExcelRequest) (*model.DownloadStatisticsExcelResponse, error) {
 	requestDef := GenReqDefForDownloadStatisticsExcel()
 
@@ -117,8 +114,7 @@ func (c *CdnClient) DownloadStatisticsExcelInvoker(request *model.DownloadStatis
 //
 // - 单租户调用频率：10次/min。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CdnClient) SetChargeModes(request *model.SetChargeModesRequest) (*model.SetChargeModesResponse, error) {
 	requestDef := GenReqDefForSetChargeModes()
 
@@ -151,8 +147,7 @@ func (c *CdnClient) SetChargeModesInvoker(request *model.SetChargeModesRequest) 
 //
 // - 单租户调用频率：2次/s。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CdnClient) ShowBandwidthCalc(request *model.ShowBandwidthCalcRequest) (*model.ShowBandwidthCalcResponse, error) {
 	requestDef := GenReqDefForShowBandwidthCalc()
 
@@ -181,8 +176,7 @@ func (c *CdnClient) ShowBandwidthCalcInvoker(request *model.ShowBandwidthCalcReq
 //
 // - 单租户调用频率：5次/s。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CdnClient) ShowChargeModes(request *model.ShowChargeModesRequest) (*model.ShowChargeModesResponse, error) {
 	requestDef := GenReqDefForShowChargeModes()
 
@@ -216,8 +210,7 @@ func (c *CdnClient) ShowChargeModesInvoker(request *model.ShowChargeModesRequest
 //
 // - 单租户调用频率：15次/s。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CdnClient) ShowDomainLocationStats(request *model.ShowDomainLocationStatsRequest) (*model.ShowDomainLocationStatsResponse, error) {
 	requestDef := GenReqDefForShowDomainLocationStats()
 
@@ -251,8 +244,7 @@ func (c *CdnClient) ShowDomainLocationStatsInvoker(request *model.ShowDomainLoca
 //
 // - 单租户调用频率：15次/s。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CdnClient) ShowDomainStats(request *model.ShowDomainStatsRequest) (*model.ShowDomainStatsResponse, error) {
 	requestDef := GenReqDefForShowDomainStats()
 
@@ -285,8 +277,7 @@ func (c *CdnClient) ShowDomainStatsInvoker(request *model.ShowDomainStatsRequest
 //
 // - 单租户调用频率：5次/s。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CdnClient) ShowTopDomainNames(request *model.ShowTopDomainNamesRequest) (*model.ShowTopDomainNamesResponse, error) {
 	requestDef := GenReqDefForShowTopDomainNames()
 
@@ -319,8 +310,7 @@ func (c *CdnClient) ShowTopDomainNamesInvoker(request *model.ShowTopDomainNamesR
 //
 // - 单租户调用频率：5次/s。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CdnClient) ShowTopUrl(request *model.ShowTopUrlRequest) (*model.ShowTopUrlResponse, error) {
 	requestDef := GenReqDefForShowTopUrl()
 

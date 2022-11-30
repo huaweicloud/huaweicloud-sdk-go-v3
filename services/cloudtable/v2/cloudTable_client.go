@@ -28,8 +28,7 @@ func CloudTableClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 本接口是一个同步接口，当创建CloudTable集群成功后会返回集群id。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudTableClient) CreateCluster(request *model.CreateClusterRequest) (*model.CreateClusterResponse, error) {
 	requestDef := GenReqDefForCreateCluster()
 
@@ -53,8 +52,7 @@ func (c *CloudTableClient) CreateClusterInvoker(request *model.CreateClusterRequ
 // - 创建中
 // - 扩容中
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudTableClient) DeleteCluster(request *model.DeleteClusterRequest) (*model.DeleteClusterResponse, error) {
 	requestDef := GenReqDefForDeleteCluster()
 
@@ -75,8 +73,7 @@ func (c *CloudTableClient) DeleteClusterInvoker(request *model.DeleteClusterRequ
 //
 // 查看用户创建的集群列表信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudTableClient) ListClusters(request *model.ListClustersRequest) (*model.ListClustersResponse, error) {
 	requestDef := GenReqDefForListClusters()
 
@@ -97,8 +94,7 @@ func (c *CloudTableClient) ListClustersInvoker(request *model.ListClustersReques
 //
 // 通过集群ID唯一标识一个集群，根据集群ID查询特定CloudTable集群的详情信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudTableClient) ShowClusterDetail(request *model.ShowClusterDetailRequest) (*model.ShowClusterDetailResponse, error) {
 	requestDef := GenReqDefForShowClusterDetail()
 

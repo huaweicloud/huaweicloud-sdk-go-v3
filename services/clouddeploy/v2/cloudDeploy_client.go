@@ -23,8 +23,7 @@ func CloudDeployClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 通过模板新建部署任务cloudpipeline流水线调用。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudDeployClient) CreateDeployTaskByTemplate(request *model.CreateDeployTaskByTemplateRequest) (*model.CreateDeployTaskByTemplateResponse, error) {
 	requestDef := GenReqDefForCreateDeployTaskByTemplate()
 
@@ -45,8 +44,7 @@ func (c *CloudDeployClient) CreateDeployTaskByTemplateInvoker(request *model.Cre
 //
 // 根据部署任务id删除部署任务。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudDeployClient) DeleteDeployTask(request *model.DeleteDeployTaskRequest) (*model.DeleteDeployTaskResponse, error) {
 	requestDef := GenReqDefForDeleteDeployTask()
 
@@ -67,8 +65,7 @@ func (c *CloudDeployClient) DeleteDeployTaskInvoker(request *model.DeleteDeployT
 //
 // 根据开始时间和结束时间查询项目下指定任务的历史执行记录列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudDeployClient) ListDeployTaskHistoryByDate(request *model.ListDeployTaskHistoryByDateRequest) (*model.ListDeployTaskHistoryByDateResponse, error) {
 	requestDef := GenReqDefForListDeployTaskHistoryByDate()
 
@@ -89,8 +86,7 @@ func (c *CloudDeployClient) ListDeployTaskHistoryByDateInvoker(request *model.Li
 //
 // 查询项目下部署任务列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudDeployClient) ListDeployTasks(request *model.ListDeployTasksRequest) (*model.ListDeployTasksResponse, error) {
 	requestDef := GenReqDefForListDeployTasks()
 
@@ -111,8 +107,7 @@ func (c *CloudDeployClient) ListDeployTasksInvoker(request *model.ListDeployTask
 //
 // 根据部署任务id获取部署任务详情。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudDeployClient) ShowDeployTaskDetail(request *model.ShowDeployTaskDetailRequest) (*model.ShowDeployTaskDetailResponse, error) {
 	requestDef := GenReqDefForShowDeployTaskDetail()
 
@@ -133,8 +128,7 @@ func (c *CloudDeployClient) ShowDeployTaskDetailInvoker(request *model.ShowDeplo
 //
 // 根据部署任务id启动部署任务。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudDeployClient) StartDeployTask(request *model.StartDeployTaskRequest) (*model.StartDeployTaskResponse, error) {
 	requestDef := GenReqDefForStartDeployTask()
 
@@ -155,8 +149,7 @@ func (c *CloudDeployClient) StartDeployTaskInvoker(request *model.StartDeployTas
 //
 // 在指定主机组下新建主机。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudDeployClient) CreateDeploymentHost(request *model.CreateDeploymentHostRequest) (*model.CreateDeploymentHostResponse, error) {
 	requestDef := GenReqDefForCreateDeploymentHost()
 
@@ -177,8 +170,7 @@ func (c *CloudDeployClient) CreateDeploymentHostInvoker(request *model.CreateDep
 //
 // 根据主机id删除主机。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudDeployClient) DeleteDeploymentHost(request *model.DeleteDeploymentHostRequest) (*model.DeleteDeploymentHostResponse, error) {
 	requestDef := GenReqDefForDeleteDeploymentHost()
 
@@ -199,8 +191,7 @@ func (c *CloudDeployClient) DeleteDeploymentHostInvoker(request *model.DeleteDep
 //
 // 根据主机组id查询指定主机组下的主机列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudDeployClient) ListHosts(request *model.ListHostsRequest) (*model.ListHostsResponse, error) {
 	requestDef := GenReqDefForListHosts()
 
@@ -221,8 +212,7 @@ func (c *CloudDeployClient) ListHostsInvoker(request *model.ListHostsRequest) *L
 //
 // 根据主机id查询主机详情。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudDeployClient) ShowDeploymentHostDetail(request *model.ShowDeploymentHostDetailRequest) (*model.ShowDeploymentHostDetailResponse, error) {
 	requestDef := GenReqDefForShowDeploymentHostDetail()
 
@@ -243,8 +233,7 @@ func (c *CloudDeployClient) ShowDeploymentHostDetailInvoker(request *model.ShowD
 //
 // 根据主机id修改主机信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudDeployClient) UpdateDeploymentHost(request *model.UpdateDeploymentHostRequest) (*model.UpdateDeploymentHostResponse, error) {
 	requestDef := GenReqDefForUpdateDeploymentHost()
 
@@ -265,8 +254,7 @@ func (c *CloudDeployClient) UpdateDeploymentHostInvoker(request *model.UpdateDep
 //
 // 在项目下新建主机组。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudDeployClient) CreateDeploymentGroup(request *model.CreateDeploymentGroupRequest) (*model.CreateDeploymentGroupResponse, error) {
 	requestDef := GenReqDefForCreateDeploymentGroup()
 
@@ -287,8 +275,7 @@ func (c *CloudDeployClient) CreateDeploymentGroupInvoker(request *model.CreateDe
 //
 // 根据主机组id删除主机组。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudDeployClient) DeleteDeploymentGroup(request *model.DeleteDeploymentGroupRequest) (*model.DeleteDeploymentGroupResponse, error) {
 	requestDef := GenReqDefForDeleteDeploymentGroup()
 
@@ -309,8 +296,7 @@ func (c *CloudDeployClient) DeleteDeploymentGroupInvoker(request *model.DeleteDe
 //
 // 按条件查询主机组列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudDeployClient) ListHostGroups(request *model.ListHostGroupsRequest) (*model.ListHostGroupsResponse, error) {
 	requestDef := GenReqDefForListHostGroups()
 
@@ -331,8 +317,7 @@ func (c *CloudDeployClient) ListHostGroupsInvoker(request *model.ListHostGroupsR
 //
 // 根据主机组id查询主机组详情。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudDeployClient) ShowDeploymentGroupDetail(request *model.ShowDeploymentGroupDetailRequest) (*model.ShowDeploymentGroupDetailResponse, error) {
 	requestDef := GenReqDefForShowDeploymentGroupDetail()
 
@@ -353,8 +338,7 @@ func (c *CloudDeployClient) ShowDeploymentGroupDetailInvoker(request *model.Show
 //
 // 根据主机组id修改主机组信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudDeployClient) UpdateDeploymentGroup(request *model.UpdateDeploymentGroupRequest) (*model.UpdateDeploymentGroupResponse, error) {
 	requestDef := GenReqDefForUpdateDeploymentGroup()
 
@@ -375,8 +359,7 @@ func (c *CloudDeployClient) UpdateDeploymentGroupInvoker(request *model.UpdateDe
 //
 // 获取指定任务的部署任务执行成功率
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudDeployClient) ListTaskSuccessRate(request *model.ListTaskSuccessRateRequest) (*model.ListTaskSuccessRateResponse, error) {
 	requestDef := GenReqDefForListTaskSuccessRate()
 
@@ -397,8 +380,7 @@ func (c *CloudDeployClient) ListTaskSuccessRateInvoker(request *model.ListTaskSu
 //
 // 获取指定项目的部署任务执行成功率
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudDeployClient) ShowProjectSuccessRate(request *model.ShowProjectSuccessRateRequest) (*model.ShowProjectSuccessRateResponse, error) {
 	requestDef := GenReqDefForShowProjectSuccessRate()
 

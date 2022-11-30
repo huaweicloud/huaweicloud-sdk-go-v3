@@ -12,7 +12,7 @@ type AddReadonlyNodeRequestBody struct {
 	SpecCode string `json:"spec_code"`
 
 	// 待新增只读节点个数。 取值范围：1-5。
-	Num string `json:"num"`
+	Num int32 `json:"num"`
 
 	// 同步延迟时间。取值范围：0~1200毫秒。默认取值为0。
 	Delay *int32 `json:"delay,omitempty"`

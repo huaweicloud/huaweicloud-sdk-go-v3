@@ -62,11 +62,8 @@ type UpdateProductResponse struct {
 	AppName *string `json:"app_name,omitempty"`
 
 	// data_format 0-JSON 1-USER_DEFINED
-	DataFormat *int32 `json:"data_format,omitempty"`
-
-	// 产品状态 0-启用 1-禁用
-	Status         *UpdateProductResponseStatus `json:"status,omitempty"`
-	HttpStatusCode int                          `json:"-"`
+	DataFormat     *int32 `json:"data_format,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o UpdateProductResponse) String() string {
@@ -150,47 +147,6 @@ func (c UpdateProductResponseProtocolType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *UpdateProductResponseProtocolType) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("int32")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(int32)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to int32 error")
-	}
-}
-
-type UpdateProductResponseStatus struct {
-	value int32
-}
-
-type UpdateProductResponseStatusEnum struct {
-	E_0 UpdateProductResponseStatus
-	E_1 UpdateProductResponseStatus
-}
-
-func GetUpdateProductResponseStatusEnum() UpdateProductResponseStatusEnum {
-	return UpdateProductResponseStatusEnum{
-		E_0: UpdateProductResponseStatus{
-			value: 0,
-		}, E_1: UpdateProductResponseStatus{
-			value: 1,
-		},
-	}
-}
-
-func (c UpdateProductResponseStatus) Value() int32 {
-	return c.value
-}
-
-func (c UpdateProductResponseStatus) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *UpdateProductResponseStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("int32")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

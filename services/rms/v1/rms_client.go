@@ -23,8 +23,7 @@ func RmsClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 查询资源与资源关系的变更历史
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *RmsClient) ShowResourceHistory(request *model.ShowResourceHistoryRequest) (*model.ShowResourceHistoryResponse, error) {
 	requestDef := GenReqDefForShowResourceHistory()
 
@@ -45,8 +44,7 @@ func (c *RmsClient) ShowResourceHistoryInvoker(request *model.ShowResourceHistor
 //
 // 创建新的合规规则
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *RmsClient) CreatePolicyAssignments(request *model.CreatePolicyAssignmentsRequest) (*model.CreatePolicyAssignmentsResponse, error) {
 	requestDef := GenReqDefForCreatePolicyAssignments()
 
@@ -67,8 +65,7 @@ func (c *RmsClient) CreatePolicyAssignmentsInvoker(request *model.CreatePolicyAs
 //
 // 根据规则ID删除此规则
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *RmsClient) DeletePolicyAssignment(request *model.DeletePolicyAssignmentRequest) (*model.DeletePolicyAssignmentResponse, error) {
 	requestDef := GenReqDefForDeletePolicyAssignment()
 
@@ -89,8 +86,7 @@ func (c *RmsClient) DeletePolicyAssignmentInvoker(request *model.DeletePolicyAss
 //
 // 根据规则ID停用此规则
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *RmsClient) DisablePolicyAssignment(request *model.DisablePolicyAssignmentRequest) (*model.DisablePolicyAssignmentResponse, error) {
 	requestDef := GenReqDefForDisablePolicyAssignment()
 
@@ -111,8 +107,7 @@ func (c *RmsClient) DisablePolicyAssignmentInvoker(request *model.DisablePolicyA
 //
 // 根据规则ID启用此规则
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *RmsClient) EnablePolicyAssignment(request *model.EnablePolicyAssignmentRequest) (*model.EnablePolicyAssignmentResponse, error) {
 	requestDef := GenReqDefForEnablePolicyAssignment()
 
@@ -133,8 +128,7 @@ func (c *RmsClient) EnablePolicyAssignmentInvoker(request *model.EnablePolicyAss
 //
 // 列出用户的内置策略
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *RmsClient) ListBuiltInPolicyDefinitions(request *model.ListBuiltInPolicyDefinitionsRequest) (*model.ListBuiltInPolicyDefinitionsResponse, error) {
 	requestDef := GenReqDefForListBuiltInPolicyDefinitions()
 
@@ -155,8 +149,7 @@ func (c *RmsClient) ListBuiltInPolicyDefinitionsInvoker(request *model.ListBuilt
 //
 // 列出用户的合规规则
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *RmsClient) ListPolicyAssignments(request *model.ListPolicyAssignmentsRequest) (*model.ListPolicyAssignmentsResponse, error) {
 	requestDef := GenReqDefForListPolicyAssignments()
 
@@ -177,8 +170,7 @@ func (c *RmsClient) ListPolicyAssignmentsInvoker(request *model.ListPolicyAssign
 //
 // 根据规则ID查询所有的合规结果
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *RmsClient) ListPolicyStatesByAssignmentId(request *model.ListPolicyStatesByAssignmentIdRequest) (*model.ListPolicyStatesByAssignmentIdResponse, error) {
 	requestDef := GenReqDefForListPolicyStatesByAssignmentId()
 
@@ -199,8 +191,7 @@ func (c *RmsClient) ListPolicyStatesByAssignmentIdInvoker(request *model.ListPol
 //
 // 查询用户所有的合规结果
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *RmsClient) ListPolicyStatesByDomainId(request *model.ListPolicyStatesByDomainIdRequest) (*model.ListPolicyStatesByDomainIdResponse, error) {
 	requestDef := GenReqDefForListPolicyStatesByDomainId()
 
@@ -221,8 +212,7 @@ func (c *RmsClient) ListPolicyStatesByDomainIdInvoker(request *model.ListPolicyS
 //
 // 根据资源ID查询所有合规结果
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *RmsClient) ListPolicyStatesByResourceId(request *model.ListPolicyStatesByResourceIdRequest) (*model.ListPolicyStatesByResourceIdResponse, error) {
 	requestDef := GenReqDefForListPolicyStatesByResourceId()
 
@@ -243,8 +233,7 @@ func (c *RmsClient) ListPolicyStatesByResourceIdInvoker(request *model.ListPolic
 //
 // 根据规则ID评估此规则
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *RmsClient) RunEvaluationByPolicyAssignmentId(request *model.RunEvaluationByPolicyAssignmentIdRequest) (*model.RunEvaluationByPolicyAssignmentIdResponse, error) {
 	requestDef := GenReqDefForRunEvaluationByPolicyAssignmentId()
 
@@ -265,8 +254,7 @@ func (c *RmsClient) RunEvaluationByPolicyAssignmentIdInvoker(request *model.RunE
 //
 // 根据策略ID查询单个内置策略
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *RmsClient) ShowBuiltInPolicyDefinition(request *model.ShowBuiltInPolicyDefinitionRequest) (*model.ShowBuiltInPolicyDefinitionResponse, error) {
 	requestDef := GenReqDefForShowBuiltInPolicyDefinition()
 
@@ -287,8 +275,7 @@ func (c *RmsClient) ShowBuiltInPolicyDefinitionInvoker(request *model.ShowBuiltI
 //
 // 根据规则ID查询此规则的评估状态
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *RmsClient) ShowEvaluationStateByAssignmentId(request *model.ShowEvaluationStateByAssignmentIdRequest) (*model.ShowEvaluationStateByAssignmentIdResponse, error) {
 	requestDef := GenReqDefForShowEvaluationStateByAssignmentId()
 
@@ -309,8 +296,7 @@ func (c *RmsClient) ShowEvaluationStateByAssignmentIdInvoker(request *model.Show
 //
 // 根据规则ID获取单个规则
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *RmsClient) ShowPolicyAssignment(request *model.ShowPolicyAssignmentRequest) (*model.ShowPolicyAssignmentResponse, error) {
 	requestDef := GenReqDefForShowPolicyAssignment()
 
@@ -331,8 +317,7 @@ func (c *RmsClient) ShowPolicyAssignmentInvoker(request *model.ShowPolicyAssignm
 //
 // 更新用户的合规规则
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *RmsClient) UpdatePolicyAssignment(request *model.UpdatePolicyAssignmentRequest) (*model.UpdatePolicyAssignmentResponse, error) {
 	requestDef := GenReqDefForUpdatePolicyAssignment()
 
@@ -349,12 +334,32 @@ func (c *RmsClient) UpdatePolicyAssignmentInvoker(request *model.UpdatePolicyAss
 	return &UpdatePolicyAssignmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdatePolicyState 更新合规评估结果
+//
+// 更新用户自定义合规规则的合规评估结果
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RmsClient) UpdatePolicyState(request *model.UpdatePolicyStateRequest) (*model.UpdatePolicyStateResponse, error) {
+	requestDef := GenReqDefForUpdatePolicyState()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdatePolicyStateResponse), nil
+	}
+}
+
+// UpdatePolicyStateInvoker 更新合规评估结果
+func (c *RmsClient) UpdatePolicyStateInvoker(request *model.UpdatePolicyStateRequest) *UpdatePolicyStateInvoker {
+	requestDef := GenReqDefForUpdatePolicyState()
+	return &UpdatePolicyStateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateStoredQuery 创建高级查询
 //
 // 创建新的高级查询
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *RmsClient) CreateStoredQuery(request *model.CreateStoredQueryRequest) (*model.CreateStoredQueryResponse, error) {
 	requestDef := GenReqDefForCreateStoredQuery()
 
@@ -375,8 +380,7 @@ func (c *RmsClient) CreateStoredQueryInvoker(request *model.CreateStoredQueryReq
 //
 // 删除单个高级查询
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *RmsClient) DeleteStoredQuery(request *model.DeleteStoredQueryRequest) (*model.DeleteStoredQueryResponse, error) {
 	requestDef := GenReqDefForDeleteStoredQuery()
 
@@ -397,8 +401,7 @@ func (c *RmsClient) DeleteStoredQueryInvoker(request *model.DeleteStoredQueryReq
 //
 // List Schemas
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *RmsClient) ListSchemas(request *model.ListSchemasRequest) (*model.ListSchemasResponse, error) {
 	requestDef := GenReqDefForListSchemas()
 
@@ -419,8 +422,7 @@ func (c *RmsClient) ListSchemasInvoker(request *model.ListSchemasRequest) *ListS
 //
 // 列举所有高级查询
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *RmsClient) ListStoredQueries(request *model.ListStoredQueriesRequest) (*model.ListStoredQueriesResponse, error) {
 	requestDef := GenReqDefForListStoredQueries()
 
@@ -441,8 +443,7 @@ func (c *RmsClient) ListStoredQueriesInvoker(request *model.ListStoredQueriesReq
 //
 // 执行高级查询
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *RmsClient) RunQuery(request *model.RunQueryRequest) (*model.RunQueryResponse, error) {
 	requestDef := GenReqDefForRunQuery()
 
@@ -463,8 +464,7 @@ func (c *RmsClient) RunQueryInvoker(request *model.RunQueryRequest) *RunQueryInv
 //
 // Show Resource Query Language
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *RmsClient) ShowStoredQuery(request *model.ShowStoredQueryRequest) (*model.ShowStoredQueryResponse, error) {
 	requestDef := GenReqDefForShowStoredQuery()
 
@@ -485,8 +485,7 @@ func (c *RmsClient) ShowStoredQueryInvoker(request *model.ShowStoredQueryRequest
 //
 // 更新自定义查询
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *RmsClient) UpdateStoredQuery(request *model.UpdateStoredQueryRequest) (*model.UpdateStoredQueryResponse, error) {
 	requestDef := GenReqDefForUpdateStoredQuery()
 
@@ -507,8 +506,7 @@ func (c *RmsClient) UpdateStoredQueryInvoker(request *model.UpdateStoredQueryReq
 //
 // 查询用户可见的区域
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *RmsClient) ListRegions(request *model.ListRegionsRequest) (*model.ListRegionsResponse, error) {
 	requestDef := GenReqDefForListRegions()
 
@@ -529,8 +527,7 @@ func (c *RmsClient) ListRegionsInvoker(request *model.ListRegionsRequest) *ListR
 //
 // 指定资源ID，查询该资源与其他资源的关联关系，可以指定关系方向为\&quot;in\&quot; 或者\&quot;out\&quot;
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *RmsClient) ShowResourceRelations(request *model.ShowResourceRelationsRequest) (*model.ShowResourceRelationsResponse, error) {
 	requestDef := GenReqDefForShowResourceRelations()
 
@@ -551,8 +548,7 @@ func (c *RmsClient) ShowResourceRelationsInvoker(request *model.ShowResourceRela
 //
 // 返回当前用户下所有资源，需要当前用户有rms:resources:list权限。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *RmsClient) ListAllResources(request *model.ListAllResourcesRequest) (*model.ListAllResourcesResponse, error) {
 	requestDef := GenReqDefForListAllResources()
 
@@ -573,8 +569,7 @@ func (c *RmsClient) ListAllResourcesInvoker(request *model.ListAllResourcesReque
 //
 // 查询RMS支持的云服务、资源、区域列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *RmsClient) ListProviders(request *model.ListProvidersRequest) (*model.ListProvidersResponse, error) {
 	requestDef := GenReqDefForListProviders()
 
@@ -595,8 +590,7 @@ func (c *RmsClient) ListProvidersInvoker(request *model.ListProvidersRequest) *L
 //
 // 返回当前租户下特定资源类型的资源，需要当前用户有rms:resources:list权限。比如查询云服务器，对应的RMS资源类型是ecs.cloudservers，其中provider为ecs，type为cloudservers。 RMS支持的服务和资源类型参见[支持的服务和区域](https://console.huaweicloud.com/eps/#/resources/supported)。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *RmsClient) ListResources(request *model.ListResourcesRequest) (*model.ListResourcesResponse, error) {
 	requestDef := GenReqDefForListResources()
 
@@ -617,8 +611,7 @@ func (c *RmsClient) ListResourcesInvoker(request *model.ListResourcesRequest) *L
 //
 // 指定资源ID，返回该资源的详细信息，需要当前用户有rms:resources:get权限。比如查询云服务器，对应的RMS资源类型是ecs.cloudservers，其中provider为ecs，type为cloudservers。RMS支持的服务和资源类型参见[支持的服务和区域](https://console.huaweicloud.com/eps/#/resources/supported)。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *RmsClient) ShowResourceById(request *model.ShowResourceByIdRequest) (*model.ShowResourceByIdResponse, error) {
 	requestDef := GenReqDefForShowResourceById()
 
@@ -639,8 +632,7 @@ func (c *RmsClient) ShowResourceByIdInvoker(request *model.ShowResourceByIdReque
 //
 // 创建或更新资源记录器，只能存在一个资源记录器
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *RmsClient) CreateTrackerConfig(request *model.CreateTrackerConfigRequest) (*model.CreateTrackerConfigResponse, error) {
 	requestDef := GenReqDefForCreateTrackerConfig()
 
@@ -661,8 +653,7 @@ func (c *RmsClient) CreateTrackerConfigInvoker(request *model.CreateTrackerConfi
 //
 // 删除资源记录器
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *RmsClient) DeleteTrackerConfig(request *model.DeleteTrackerConfigRequest) (*model.DeleteTrackerConfigResponse, error) {
 	requestDef := GenReqDefForDeleteTrackerConfig()
 
@@ -683,8 +674,7 @@ func (c *RmsClient) DeleteTrackerConfigInvoker(request *model.DeleteTrackerConfi
 //
 // 查询资源记录器的详细信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *RmsClient) ShowTrackerConfig(request *model.ShowTrackerConfigRequest) (*model.ShowTrackerConfigResponse, error) {
 	requestDef := GenReqDefForShowTrackerConfig()
 

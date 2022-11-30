@@ -11,6 +11,8 @@ type SwitchToMasterRequest struct {
 
 	// 实例ID。
 	InstanceId string `json:"instance_id"`
+
+	Body *SwitchToMasterDisasterRecoveryBody `json:"body,omitempty"`
 }
 
 func (o SwitchToMasterRequest) String() string {

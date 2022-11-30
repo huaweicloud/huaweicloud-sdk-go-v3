@@ -23,8 +23,7 @@ func ApigClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 实例更新或绑定EIP
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) AddEipV2(request *model.AddEipV2Request) (*model.AddEipV2Response, error) {
 	requestDef := GenReqDefForAddEipV2()
 
@@ -45,8 +44,7 @@ func (c *ApigClient) AddEipV2Invoker(request *model.AddEipV2Request) *AddEipV2In
 //
 // 实例开启公网出口
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) AddEngressEipV2(request *model.AddEngressEipV2Request) (*model.AddEngressEipV2Response, error) {
 	requestDef := GenReqDefForAddEngressEipV2()
 
@@ -68,8 +66,7 @@ func (c *ApigClient) AddEngressEipV2Invoker(request *model.AddEngressEipV2Reques
 // 如果创建API时，“定义API请求”使用HTTPS请求协议，那么在独立域名中需要添加SSL证书。
 // 本章节主要介绍为特定域名绑定证书。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) AssociateCertificateV2(request *model.AssociateCertificateV2Request) (*model.AssociateCertificateV2Response, error) {
 	requestDef := GenReqDefForAssociateCertificateV2()
 
@@ -91,8 +88,7 @@ func (c *ApigClient) AssociateCertificateV2Invoker(request *model.AssociateCerti
 // 用户自定义的域名，需要增加A记录才能生效，具体方法请参见《云解析服务用户指南》的“添加A类型记录集”章节。
 // 每个API分组下最多可绑定5个域名。绑定域名后，用户可通过自定义域名调用API。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) AssociateDomainV2(request *model.AssociateDomainV2Request) (*model.AssociateDomainV2Response, error) {
 	requestDef := GenReqDefForAssociateDomainV2()
 
@@ -117,8 +113,7 @@ func (c *ApigClient) AssociateDomainV2Invoker(request *model.AssociateDomainV2Re
 //
 // 将指定的签名密钥绑定到一个或多个已发布的API上。同一个API发布到不同的环境可以绑定不同的签名密钥；一个API在发布到特定环境后只能绑定一个签名密钥。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) AssociateSignatureKeyV2(request *model.AssociateSignatureKeyV2Request) (*model.AssociateSignatureKeyV2Response, error) {
 	requestDef := GenReqDefForAssociateSignatureKeyV2()
 
@@ -143,8 +138,7 @@ func (c *ApigClient) AssociateSignatureKeyV2Invoker(request *model.AssociateSign
 // - 修改插件后及时生效
 // - 相同类型的插件只能绑定一个，原来已经绑定的通类型插件，会直接覆盖。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) AttachApiToPlugin(request *model.AttachApiToPluginRequest) (*model.AttachApiToPluginResponse, error) {
 	requestDef := GenReqDefForAttachApiToPlugin()
 
@@ -169,8 +163,7 @@ func (c *ApigClient) AttachApiToPluginInvoker(request *model.AttachApiToPluginRe
 // - 修改插件后及时生效
 // - 相同类型的插件只能绑定一个，原来已经绑定的通类型插件，会直接覆盖。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) AttachPluginToApi(request *model.AttachPluginToApiRequest) (*model.AttachPluginToApiResponse, error) {
 	requestDef := GenReqDefForAttachPluginToApi()
 
@@ -191,8 +184,7 @@ func (c *ApigClient) AttachPluginToApiInvoker(request *model.AttachPluginToApiRe
 //
 // 创建自定义认证
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) CreateCustomAuthorizerV2(request *model.CreateCustomAuthorizerV2Request) (*model.CreateCustomAuthorizerV2Response, error) {
 	requestDef := GenReqDefForCreateCustomAuthorizerV2()
 
@@ -217,8 +209,7 @@ func (c *ApigClient) CreateCustomAuthorizerV2Invoker(request *model.CreateCustom
 //
 // 为此，API网关提供多环境管理功能，使租户能够最大化的模拟实际场景，低成本的接入API网关。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) CreateEnvironmentV2(request *model.CreateEnvironmentV2Request) (*model.CreateEnvironmentV2Response, error) {
 	requestDef := GenReqDefForCreateEnvironmentV2()
 
@@ -250,8 +241,7 @@ func (c *ApigClient) CreateEnvironmentV2Invoker(request *model.CreateEnvironment
 // &gt; 3. 设置了环境变量后，使用到该变量的API的调试功能将不可使用。
 // &gt; 4. 定义了环境变量后，使用到环境变量的地方应该以对称的#标识环境变量，当API发布到相应的环境后，会对环境变量的值进行替换，如：定义的API的URL为：https://#address#:8080，环境变量address在RELEASE环境上的值为：192.168.1.5，则API发布到RELEASE环境后的真实的URL为：https://192.168.1.5:8080。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) CreateEnvironmentVariableV2(request *model.CreateEnvironmentVariableV2Request) (*model.CreateEnvironmentVariableV2Response, error) {
 	requestDef := GenReqDefForCreateEnvironmentVariableV2()
 
@@ -298,8 +288,7 @@ func (c *ApigClient) CreateEnvironmentVariableV2Invoker(request *model.CreateEnv
 // | real_ip_header_getter | 是否开启通过用户自定义的Header获取用户源IP地址。 |{\&quot;name\&quot;:\&quot;real_ip_header_getter\&quot;,\&quot;enable\&quot;:true,\&quot;config\&quot;: \&quot;{\\\\\&quot;enable\\\\\&quot;: \\\\\&quot;on\\\\\&quot;,\\\\\&quot;header_getter\\\\\&quot;: \\\\\&quot;header:testIP\\\\\&quot;}\&quot;} | (1) enable &lt;br/&gt;(2) header_getter | (1) 是否开启 &lt;br/&gt;(2) 获取用户源IP地址的自定义Header | (1) off | (1) on/off |
 // | policy_cookie_param | 是否开启策略后端条件支持cookie类型。 |{\&quot;name\&quot;:\&quot;policy_cookie_param\&quot;,\&quot;enable\&quot;:true,\&quot;config\&quot;: \&quot;on\&quot;} | - | - | off | on/off |
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) CreateFeatureV2(request *model.CreateFeatureV2Request) (*model.CreateFeatureV2Response, error) {
 	requestDef := GenReqDefForCreateFeatureV2()
 
@@ -320,8 +309,7 @@ func (c *ApigClient) CreateFeatureV2Invoker(request *model.CreateFeatureV2Reques
 //
 // 新增分组下自定义响应
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) CreateGatewayResponseV2(request *model.CreateGatewayResponseV2Request) (*model.CreateGatewayResponseV2Response, error) {
 	requestDef := GenReqDefForCreateGatewayResponseV2()
 
@@ -342,8 +330,7 @@ func (c *ApigClient) CreateGatewayResponseV2Invoker(request *model.CreateGateway
 //
 // 创建专享版实例
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) CreateInstanceV2(request *model.CreateInstanceV2Request) (*model.CreateInstanceV2Response, error) {
 	requestDef := GenReqDefForCreateInstanceV2()
 
@@ -366,8 +353,7 @@ func (c *ApigClient) CreateInstanceV2Invoker(request *model.CreateInstanceV2Requ
 // - 插件不允许重名
 // - 插件创建后未绑定API前是无意义的，绑定API后，对绑定的API即时生效
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) CreatePlugin(request *model.CreatePluginRequest) (*model.CreatePluginResponse, error) {
 	requestDef := GenReqDefForCreatePlugin()
 
@@ -388,8 +374,7 @@ func (c *ApigClient) CreatePluginInvoker(request *model.CreatePluginRequest) *Cr
 //
 // 当API上线后，系统会默认给每个API提供一个流控策略，API提供者可以根据自身API的服务能力及负载情况变更这个流控策略。 流控策略即限制API在一定长度的时间内，能够允许被访问的最大次数。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) CreateRequestThrottlingPolicyV2(request *model.CreateRequestThrottlingPolicyV2Request) (*model.CreateRequestThrottlingPolicyV2Response, error) {
 	requestDef := GenReqDefForCreateRequestThrottlingPolicyV2()
 
@@ -414,8 +399,7 @@ func (c *ApigClient) CreateRequestThrottlingPolicyV2Invoker(request *model.Creat
 //
 // 租户创建一个签名密钥，并将签名密钥与API进行绑定，则API网关在请求这个API时，就会使用绑定的签名密钥对请求参数进行数据加密，生成签名。当租户的后端服务收到请求时，可以校验这个签名，如果签名校验不通过，则该请求不是API网关发出的请求，租户可以拒绝这个请求，从而保证API的安全性，避免API被未知来源的请求攻击。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) CreateSignatureKeyV2(request *model.CreateSignatureKeyV2Request) (*model.CreateSignatureKeyV2Response, error) {
 	requestDef := GenReqDefForCreateSignatureKeyV2()
 
@@ -440,8 +424,7 @@ func (c *ApigClient) CreateSignatureKeyV2Invoker(request *model.CreateSignatureK
 //
 // 为流控策略添加一个特殊设置的对象，可以是APP，也可以是租户。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) CreateSpecialThrottlingConfigurationV2(request *model.CreateSpecialThrottlingConfigurationV2Request) (*model.CreateSpecialThrottlingConfigurationV2Response, error) {
 	requestDef := GenReqDefForCreateSpecialThrottlingConfigurationV2()
 
@@ -462,8 +445,7 @@ func (c *ApigClient) CreateSpecialThrottlingConfigurationV2Invoker(request *mode
 //
 // 删除自定义认证
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) DeleteCustomAuthorizerV2(request *model.DeleteCustomAuthorizerV2Request) (*model.DeleteCustomAuthorizerV2Response, error) {
 	requestDef := GenReqDefForDeleteCustomAuthorizerV2()
 
@@ -488,8 +470,7 @@ func (c *ApigClient) DeleteCustomAuthorizerV2Invoker(request *model.DeleteCustom
 //
 // 环境上存在已发布的API时，该环境不能被删除。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) DeleteEnvironmentV2(request *model.DeleteEnvironmentV2Request) (*model.DeleteEnvironmentV2Response, error) {
 	requestDef := GenReqDefForDeleteEnvironmentV2()
 
@@ -510,8 +491,7 @@ func (c *ApigClient) DeleteEnvironmentV2Invoker(request *model.DeleteEnvironment
 //
 // 删除指定的环境变量。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) DeleteEnvironmentVariableV2(request *model.DeleteEnvironmentVariableV2Request) (*model.DeleteEnvironmentVariableV2Response, error) {
 	requestDef := GenReqDefForDeleteEnvironmentVariableV2()
 
@@ -532,8 +512,7 @@ func (c *ApigClient) DeleteEnvironmentVariableV2Invoker(request *model.DeleteEnv
 //
 // 删除分组指定错误类型的自定义响应配置，还原为使用默认值的配置。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) DeleteGatewayResponseTypeV2(request *model.DeleteGatewayResponseTypeV2Request) (*model.DeleteGatewayResponseTypeV2Response, error) {
 	requestDef := GenReqDefForDeleteGatewayResponseTypeV2()
 
@@ -554,8 +533,7 @@ func (c *ApigClient) DeleteGatewayResponseTypeV2Invoker(request *model.DeleteGat
 //
 // 删除分组自定义响应
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) DeleteGatewayResponseV2(request *model.DeleteGatewayResponseV2Request) (*model.DeleteGatewayResponseV2Response, error) {
 	requestDef := GenReqDefForDeleteGatewayResponseV2()
 
@@ -576,8 +554,7 @@ func (c *ApigClient) DeleteGatewayResponseV2Invoker(request *model.DeleteGateway
 //
 // 删除专享版实例
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) DeleteInstancesV2(request *model.DeleteInstancesV2Request) (*model.DeleteInstancesV2Response, error) {
 	requestDef := GenReqDefForDeleteInstancesV2()
 
@@ -599,8 +576,7 @@ func (c *ApigClient) DeleteInstancesV2Invoker(request *model.DeleteInstancesV2Re
 // 删除插件。
 // - 必须先解除API和插件的绑定关系，否则删除报错
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) DeletePlugin(request *model.DeletePluginRequest) (*model.DeletePluginResponse, error) {
 	requestDef := GenReqDefForDeletePlugin()
 
@@ -621,8 +597,7 @@ func (c *ApigClient) DeletePluginInvoker(request *model.DeletePluginRequest) *De
 //
 // 删除指定的流控策略，以及该流控策略与API的所有绑定关系。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) DeleteRequestThrottlingPolicyV2(request *model.DeleteRequestThrottlingPolicyV2Request) (*model.DeleteRequestThrottlingPolicyV2Response, error) {
 	requestDef := GenReqDefForDeleteRequestThrottlingPolicyV2()
 
@@ -643,8 +618,7 @@ func (c *ApigClient) DeleteRequestThrottlingPolicyV2Invoker(request *model.Delet
 //
 // 删除指定的签名密钥，删除签名密钥时，其配置的绑定关系会一并删除，相应的签名密钥会失效。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) DeleteSignatureKeyV2(request *model.DeleteSignatureKeyV2Request) (*model.DeleteSignatureKeyV2Response, error) {
 	requestDef := GenReqDefForDeleteSignatureKeyV2()
 
@@ -665,8 +639,7 @@ func (c *ApigClient) DeleteSignatureKeyV2Invoker(request *model.DeleteSignatureK
 //
 // 删除某个流控策略的某个特殊配置。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) DeleteSpecialThrottlingConfigurationV2(request *model.DeleteSpecialThrottlingConfigurationV2Request) (*model.DeleteSpecialThrottlingConfigurationV2Response, error) {
 	requestDef := GenReqDefForDeleteSpecialThrottlingConfigurationV2()
 
@@ -688,8 +661,7 @@ func (c *ApigClient) DeleteSpecialThrottlingConfigurationV2Invoker(request *mode
 // 解除绑定在插件上的API
 // - 解绑及时生效
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) DetachApiFromPlugin(request *model.DetachApiFromPluginRequest) (*model.DetachApiFromPluginResponse, error) {
 	requestDef := GenReqDefForDetachApiFromPlugin()
 
@@ -711,8 +683,7 @@ func (c *ApigClient) DetachApiFromPluginInvoker(request *model.DetachApiFromPlug
 // 解除绑定在API上的插件
 // - 解绑及时生效
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) DetachPluginFromApi(request *model.DetachPluginFromApiRequest) (*model.DetachPluginFromApiResponse, error) {
 	requestDef := GenReqDefForDetachPluginFromApi()
 
@@ -733,8 +704,7 @@ func (c *ApigClient) DetachPluginFromApiInvoker(request *model.DetachPluginFromA
 //
 // 如果域名证书不再需要或者已过期，则可以删除证书内容。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) DisassociateCertificateV2(request *model.DisassociateCertificateV2Request) (*model.DisassociateCertificateV2Response, error) {
 	requestDef := GenReqDefForDisassociateCertificateV2()
 
@@ -755,8 +725,7 @@ func (c *ApigClient) DisassociateCertificateV2Invoker(request *model.Disassociat
 //
 // 如果API分组不再需要绑定某个自定义域名，则可以为此API分组解绑此域名。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) DisassociateDomainV2(request *model.DisassociateDomainV2Request) (*model.DisassociateDomainV2Response, error) {
 	requestDef := GenReqDefForDisassociateDomainV2()
 
@@ -777,8 +746,7 @@ func (c *ApigClient) DisassociateDomainV2Invoker(request *model.DisassociateDoma
 //
 // 解除API与签名密钥的绑定关系。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) DisassociateSignatureKeyV2(request *model.DisassociateSignatureKeyV2Request) (*model.DisassociateSignatureKeyV2Response, error) {
 	requestDef := GenReqDefForDisassociateSignatureKeyV2()
 
@@ -799,8 +767,7 @@ func (c *ApigClient) DisassociateSignatureKeyV2Invoker(request *model.Disassocia
 //
 // 导入微服务
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ImportMicroservice(request *model.ImportMicroserviceRequest) (*model.ImportMicroserviceResponse, error) {
 	requestDef := GenReqDefForImportMicroservice()
 
@@ -823,8 +790,7 @@ func (c *ApigClient) ImportMicroserviceInvoker(request *model.ImportMicroservice
 // - 支持分页返回
 // - 支持插件名称模糊查询
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListApiAttachablePlugins(request *model.ListApiAttachablePluginsRequest) (*model.ListApiAttachablePluginsResponse, error) {
 	requestDef := GenReqDefForListApiAttachablePlugins()
 
@@ -848,8 +814,7 @@ func (c *ApigClient) ListApiAttachablePluginsInvoker(request *model.ListApiAttac
 // - 支持分页返回
 // - 支持插件名称模糊查询
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListApiAttachedPlugins(request *model.ListApiAttachedPluginsRequest) (*model.ListApiAttachedPluginsResponse, error) {
 	requestDef := GenReqDefForListApiAttachedPlugins()
 
@@ -870,8 +835,7 @@ func (c *ApigClient) ListApiAttachedPluginsInvoker(request *model.ListApiAttache
 //
 // 查询租户名下的API分组概况。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListApiGroupsQuantitiesV2(request *model.ListApiGroupsQuantitiesV2Request) (*model.ListApiGroupsQuantitiesV2Response, error) {
 	requestDef := GenReqDefForListApiGroupsQuantitiesV2()
 
@@ -892,8 +856,7 @@ func (c *ApigClient) ListApiGroupsQuantitiesV2Invoker(request *model.ListApiGrou
 //
 // 查询租户名下的API概况：已发布到RELEASE环境的API个数，未发布到RELEASE环境的API个数。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListApiQuantitiesV2(request *model.ListApiQuantitiesV2Request) (*model.ListApiQuantitiesV2Response, error) {
 	requestDef := GenReqDefForListApiQuantitiesV2()
 
@@ -914,8 +877,7 @@ func (c *ApigClient) ListApiQuantitiesV2Invoker(request *model.ListApiQuantities
 //
 // 查询某个签名密钥上已经绑定的API列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListApisBindedToSignatureKeyV2(request *model.ListApisBindedToSignatureKeyV2Request) (*model.ListApisBindedToSignatureKeyV2Response, error) {
 	requestDef := GenReqDefForListApisBindedToSignatureKeyV2()
 
@@ -936,8 +898,7 @@ func (c *ApigClient) ListApisBindedToSignatureKeyV2Invoker(request *model.ListAp
 //
 // 查询所有未绑定到该签名密钥上的API列表。需要API已经发布，未发布的API不予展示。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListApisNotBoundWithSignatureKeyV2(request *model.ListApisNotBoundWithSignatureKeyV2Request) (*model.ListApisNotBoundWithSignatureKeyV2Response, error) {
 	requestDef := GenReqDefForListApisNotBoundWithSignatureKeyV2()
 
@@ -958,8 +919,7 @@ func (c *ApigClient) ListApisNotBoundWithSignatureKeyV2Invoker(request *model.Li
 //
 // 查询租户名下的APP概况：已进行API访问授权的APP个数，未进行API访问授权的APP个数。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListAppQuantitiesV2(request *model.ListAppQuantitiesV2Request) (*model.ListAppQuantitiesV2Response, error) {
 	requestDef := GenReqDefForListAppQuantitiesV2()
 
@@ -980,8 +940,7 @@ func (c *ApigClient) ListAppQuantitiesV2Invoker(request *model.ListAppQuantities
 //
 // 查看可用区信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListAvailableZonesV2(request *model.ListAvailableZonesV2Request) (*model.ListAvailableZonesV2Response, error) {
 	requestDef := GenReqDefForListAvailableZonesV2()
 
@@ -1002,8 +961,7 @@ func (c *ApigClient) ListAvailableZonesV2Invoker(request *model.ListAvailableZon
 //
 // 查询自定义认证列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListCustomAuthorizersV2(request *model.ListCustomAuthorizersV2Request) (*model.ListCustomAuthorizersV2Response, error) {
 	requestDef := GenReqDefForListCustomAuthorizersV2()
 
@@ -1024,8 +982,7 @@ func (c *ApigClient) ListCustomAuthorizersV2Invoker(request *model.ListCustomAut
 //
 // 查询分组下的所有环境变量的列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListEnvironmentVariablesV2(request *model.ListEnvironmentVariablesV2Request) (*model.ListEnvironmentVariablesV2Response, error) {
 	requestDef := GenReqDefForListEnvironmentVariablesV2()
 
@@ -1046,8 +1003,7 @@ func (c *ApigClient) ListEnvironmentVariablesV2Invoker(request *model.ListEnviro
 //
 // 查询符合条件的环境列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListEnvironmentsV2(request *model.ListEnvironmentsV2Request) (*model.ListEnvironmentsV2Response, error) {
 	requestDef := GenReqDefForListEnvironmentsV2()
 
@@ -1113,8 +1069,7 @@ func (c *ApigClient) ListEnvironmentsV2Invoker(request *model.ListEnvironmentsV2
 // sm_cipher_type | 加密本地敏感数据时，是否支持应用商密加密算法。 | 否 |
 // rate_limit_algorithm | 是否支持切换流控算法。 | 否 |
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListFeaturesV2(request *model.ListFeaturesV2Request) (*model.ListFeaturesV2Response, error) {
 	requestDef := GenReqDefForListFeaturesV2()
 
@@ -1135,8 +1090,7 @@ func (c *ApigClient) ListFeaturesV2Invoker(request *model.ListFeaturesV2Request)
 //
 // 查询分组自定义响应列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListGatewayResponsesV2(request *model.ListGatewayResponsesV2Request) (*model.ListGatewayResponsesV2Response, error) {
 	requestDef := GenReqDefForListGatewayResponsesV2()
 
@@ -1157,8 +1111,7 @@ func (c *ApigClient) ListGatewayResponsesV2Invoker(request *model.ListGatewayRes
 //
 // 查询租户实例配置列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListInstanceConfigsV2(request *model.ListInstanceConfigsV2Request) (*model.ListInstanceConfigsV2Response, error) {
 	requestDef := GenReqDefForListInstanceConfigsV2()
 
@@ -1179,8 +1132,7 @@ func (c *ApigClient) ListInstanceConfigsV2Invoker(request *model.ListInstanceCon
 //
 // 查询专享版实例列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListInstancesV2(request *model.ListInstancesV2Request) (*model.ListInstancesV2Response, error) {
 	requestDef := GenReqDefForListInstancesV2()
 
@@ -1202,8 +1154,7 @@ func (c *ApigClient) ListInstancesV2Invoker(request *model.ListInstancesV2Reques
 // 根据API的id和最近的一段时间查询API被调用的次数，统计周期为1分钟。查询范围一小时以内，一分钟一个样本，其样本值为一分钟内的累计值。
 // &gt; 为了安全起见，在服务器上使用curl命令调用接口查询信息后，需要清理历史操作记录，包括但不限于“~/.bash_history”、“/var/log/messages”（如有）。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListLatelyApiStatisticsV2(request *model.ListLatelyApiStatisticsV2Request) (*model.ListLatelyApiStatisticsV2Response, error) {
 	requestDef := GenReqDefForListLatelyApiStatisticsV2()
 
@@ -1225,8 +1176,7 @@ func (c *ApigClient) ListLatelyApiStatisticsV2Invoker(request *model.ListLatelyA
 // 根据API分组的编号查询该分组下所有API被调用的总次数，统计周期为1分钟。查询范围一小时以内，一分钟一个样本，其样本值为一分钟内的累计值。
 // &gt; 为了安全起见，在服务器上使用curl命令调用接口查询信息后，需要清理历史操作记录，包括但不限于“~/.bash_history”、“/var/log/messages”（如有）。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListLatelyGroupStatisticsV2(request *model.ListLatelyGroupStatisticsV2Request) (*model.ListLatelyGroupStatisticsV2Response, error) {
 	requestDef := GenReqDefForListLatelyGroupStatisticsV2()
 
@@ -1247,8 +1197,7 @@ func (c *ApigClient) ListLatelyGroupStatisticsV2Invoker(request *model.ListLatel
 //
 // 查询指定时间范围指定指标的指定粒度的监控数据，可以通过参数指定需要查询的数据维度。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListMetricData(request *model.ListMetricDataRequest) (*model.ListMetricDataResponse, error) {
 	requestDef := GenReqDefForListMetricData()
 
@@ -1272,8 +1221,7 @@ func (c *ApigClient) ListMetricDataInvoker(request *model.ListMetricDataRequest)
 // - 支持API名称模糊查询
 // - 支持已绑定其他插件的API查询返回
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListPluginAttachableApis(request *model.ListPluginAttachableApisRequest) (*model.ListPluginAttachableApisResponse, error) {
 	requestDef := GenReqDefForListPluginAttachableApis()
 
@@ -1298,8 +1246,7 @@ func (c *ApigClient) ListPluginAttachableApisInvoker(request *model.ListPluginAt
 // - 支持API名称模糊查询
 // - 绑定关系列表中返回的API在对应的环境中可能已经下线
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListPluginAttachedApis(request *model.ListPluginAttachedApisRequest) (*model.ListPluginAttachedApisResponse, error) {
 	requestDef := GenReqDefForListPluginAttachedApis()
 
@@ -1325,8 +1272,7 @@ func (c *ApigClient) ListPluginAttachedApisInvoker(request *model.ListPluginAtta
 // - 支持根据插件编码查询
 // - 支持根据名称模糊查询
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListPlugins(request *model.ListPluginsRequest) (*model.ListPluginsResponse, error) {
 	requestDef := GenReqDefForListPlugins()
 
@@ -1347,8 +1293,7 @@ func (c *ApigClient) ListPluginsInvoker(request *model.ListPluginsRequest) *List
 //
 // 查询某个实例的租户配置列表，用户可以通过此接口查看各类型资源配置及使用情况。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListProjectCofigsV2(request *model.ListProjectCofigsV2Request) (*model.ListProjectCofigsV2Response, error) {
 	requestDef := GenReqDefForListProjectCofigsV2()
 
@@ -1369,8 +1314,7 @@ func (c *ApigClient) ListProjectCofigsV2Invoker(request *model.ListProjectCofigs
 //
 // 查询所有流控策略的信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListRequestThrottlingPolicyV2(request *model.ListRequestThrottlingPolicyV2Request) (*model.ListRequestThrottlingPolicyV2Response, error) {
 	requestDef := GenReqDefForListRequestThrottlingPolicyV2()
 
@@ -1391,8 +1335,7 @@ func (c *ApigClient) ListRequestThrottlingPolicyV2Invoker(request *model.ListReq
 //
 // 查询某个API绑定的签名密钥列表。每个API在每个环境上应该最多只会绑定一个签名密钥。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListSignatureKeysBindedToApiV2(request *model.ListSignatureKeysBindedToApiV2Request) (*model.ListSignatureKeysBindedToApiV2Response, error) {
 	requestDef := GenReqDefForListSignatureKeysBindedToApiV2()
 
@@ -1413,8 +1356,7 @@ func (c *ApigClient) ListSignatureKeysBindedToApiV2Invoker(request *model.ListSi
 //
 // 查询所有签名密钥的信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListSignatureKeysV2(request *model.ListSignatureKeysV2Request) (*model.ListSignatureKeysV2Response, error) {
 	requestDef := GenReqDefForListSignatureKeysV2()
 
@@ -1435,8 +1377,7 @@ func (c *ApigClient) ListSignatureKeysV2Invoker(request *model.ListSignatureKeys
 //
 // 查看给流控策略设置的特殊配置。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListSpecialThrottlingConfigurationsV2(request *model.ListSpecialThrottlingConfigurationsV2Request) (*model.ListSpecialThrottlingConfigurationsV2Response, error) {
 	requestDef := GenReqDefForListSpecialThrottlingConfigurationsV2()
 
@@ -1457,8 +1398,7 @@ func (c *ApigClient) ListSpecialThrottlingConfigurationsV2Invoker(request *model
 //
 // 查询标签列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListTagsV2(request *model.ListTagsV2Request) (*model.ListTagsV2Response, error) {
 	requestDef := GenReqDefForListTagsV2()
 
@@ -1479,8 +1419,7 @@ func (c *ApigClient) ListTagsV2Invoker(request *model.ListTagsV2Request) *ListTa
 //
 // 实例解绑EIP
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) RemoveEipV2(request *model.RemoveEipV2Request) (*model.RemoveEipV2Response, error) {
 	requestDef := GenReqDefForRemoveEipV2()
 
@@ -1501,8 +1440,7 @@ func (c *ApigClient) RemoveEipV2Invoker(request *model.RemoveEipV2Request) *Remo
 //
 // 关闭实例公网出口
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) RemoveEngressEipV2(request *model.RemoveEngressEipV2Request) (*model.RemoveEngressEipV2Response, error) {
 	requestDef := GenReqDefForRemoveEngressEipV2()
 
@@ -1523,8 +1461,7 @@ func (c *ApigClient) RemoveEngressEipV2Invoker(request *model.RemoveEngressEipV2
 //
 // 查看自定义认证详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ShowDetailsOfCustomAuthorizersV2(request *model.ShowDetailsOfCustomAuthorizersV2Request) (*model.ShowDetailsOfCustomAuthorizersV2Response, error) {
 	requestDef := GenReqDefForShowDetailsOfCustomAuthorizersV2()
 
@@ -1545,8 +1482,7 @@ func (c *ApigClient) ShowDetailsOfCustomAuthorizersV2Invoker(request *model.Show
 //
 // 查看域名下绑定的证书详情。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ShowDetailsOfDomainNameCertificateV2(request *model.ShowDetailsOfDomainNameCertificateV2Request) (*model.ShowDetailsOfDomainNameCertificateV2Response, error) {
 	requestDef := GenReqDefForShowDetailsOfDomainNameCertificateV2()
 
@@ -1567,8 +1503,7 @@ func (c *ApigClient) ShowDetailsOfDomainNameCertificateV2Invoker(request *model.
 //
 // 查看指定的环境变量的详情。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ShowDetailsOfEnvironmentVariableV2(request *model.ShowDetailsOfEnvironmentVariableV2Request) (*model.ShowDetailsOfEnvironmentVariableV2Response, error) {
 	requestDef := GenReqDefForShowDetailsOfEnvironmentVariableV2()
 
@@ -1589,8 +1524,7 @@ func (c *ApigClient) ShowDetailsOfEnvironmentVariableV2Invoker(request *model.Sh
 //
 // 查看分组下指定错误类型的自定义响应
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ShowDetailsOfGatewayResponseTypeV2(request *model.ShowDetailsOfGatewayResponseTypeV2Request) (*model.ShowDetailsOfGatewayResponseTypeV2Response, error) {
 	requestDef := GenReqDefForShowDetailsOfGatewayResponseTypeV2()
 
@@ -1611,8 +1545,7 @@ func (c *ApigClient) ShowDetailsOfGatewayResponseTypeV2Invoker(request *model.Sh
 //
 // 查询分组自定义响应详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ShowDetailsOfGatewayResponseV2(request *model.ShowDetailsOfGatewayResponseV2Request) (*model.ShowDetailsOfGatewayResponseV2Response, error) {
 	requestDef := GenReqDefForShowDetailsOfGatewayResponseV2()
 
@@ -1633,8 +1566,7 @@ func (c *ApigClient) ShowDetailsOfGatewayResponseV2Invoker(request *model.ShowDe
 //
 // 查看专享版实例创建进度
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ShowDetailsOfInstanceProgressV2(request *model.ShowDetailsOfInstanceProgressV2Request) (*model.ShowDetailsOfInstanceProgressV2Response, error) {
 	requestDef := GenReqDefForShowDetailsOfInstanceProgressV2()
 
@@ -1655,8 +1587,7 @@ func (c *ApigClient) ShowDetailsOfInstanceProgressV2Invoker(request *model.ShowD
 //
 // 查看专享版实例详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ShowDetailsOfInstanceV2(request *model.ShowDetailsOfInstanceV2Request) (*model.ShowDetailsOfInstanceV2Response, error) {
 	requestDef := GenReqDefForShowDetailsOfInstanceV2()
 
@@ -1677,8 +1608,7 @@ func (c *ApigClient) ShowDetailsOfInstanceV2Invoker(request *model.ShowDetailsOf
 //
 // 查看指定流控策略的详细信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ShowDetailsOfRequestThrottlingPolicyV2(request *model.ShowDetailsOfRequestThrottlingPolicyV2Request) (*model.ShowDetailsOfRequestThrottlingPolicyV2Response, error) {
 	requestDef := GenReqDefForShowDetailsOfRequestThrottlingPolicyV2()
 
@@ -1699,8 +1629,7 @@ func (c *ApigClient) ShowDetailsOfRequestThrottlingPolicyV2Invoker(request *mode
 //
 // 查询插件详情。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ShowPlugin(request *model.ShowPluginRequest) (*model.ShowPluginResponse, error) {
 	requestDef := GenReqDefForShowPlugin()
 
@@ -1721,8 +1650,7 @@ func (c *ApigClient) ShowPluginInvoker(request *model.ShowPluginRequest) *ShowPl
 //
 // 修改自定义认证
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) UpdateCustomAuthorizerV2(request *model.UpdateCustomAuthorizerV2Request) (*model.UpdateCustomAuthorizerV2Response, error) {
 	requestDef := GenReqDefForUpdateCustomAuthorizerV2()
 
@@ -1743,8 +1671,7 @@ func (c *ApigClient) UpdateCustomAuthorizerV2Invoker(request *model.UpdateCustom
 //
 // 修改绑定的域名所对应的配置信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) UpdateDomainV2(request *model.UpdateDomainV2Request) (*model.UpdateDomainV2Response, error) {
 	requestDef := GenReqDefForUpdateDomainV2()
 
@@ -1765,8 +1692,7 @@ func (c *ApigClient) UpdateDomainV2Invoker(request *model.UpdateDomainV2Request)
 //
 // 更新实例出公网带宽
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) UpdateEngressEipV2(request *model.UpdateEngressEipV2Request) (*model.UpdateEngressEipV2Response, error) {
 	requestDef := GenReqDefForUpdateEngressEipV2()
 
@@ -1787,8 +1713,7 @@ func (c *ApigClient) UpdateEngressEipV2Invoker(request *model.UpdateEngressEipV2
 //
 // 修改指定环境的信息。其中可修改的属性为：name、remark，其它属性不可修改。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) UpdateEnvironmentV2(request *model.UpdateEnvironmentV2Request) (*model.UpdateEnvironmentV2Response, error) {
 	requestDef := GenReqDefForUpdateEnvironmentV2()
 
@@ -1809,8 +1734,7 @@ func (c *ApigClient) UpdateEnvironmentV2Invoker(request *model.UpdateEnvironment
 //
 // 修改分组下指定错误类型的自定义响应。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) UpdateGatewayResponseTypeV2(request *model.UpdateGatewayResponseTypeV2Request) (*model.UpdateGatewayResponseTypeV2Response, error) {
 	requestDef := GenReqDefForUpdateGatewayResponseTypeV2()
 
@@ -1831,8 +1755,7 @@ func (c *ApigClient) UpdateGatewayResponseTypeV2Invoker(request *model.UpdateGat
 //
 // 修改分组自定义响应
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) UpdateGatewayResponseV2(request *model.UpdateGatewayResponseV2Request) (*model.UpdateGatewayResponseV2Response, error) {
 	requestDef := GenReqDefForUpdateGatewayResponseV2()
 
@@ -1853,8 +1776,7 @@ func (c *ApigClient) UpdateGatewayResponseV2Invoker(request *model.UpdateGateway
 //
 // 更新专享版实例
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) UpdateInstanceV2(request *model.UpdateInstanceV2Request) (*model.UpdateInstanceV2Response, error) {
 	requestDef := GenReqDefForUpdateInstanceV2()
 
@@ -1877,8 +1799,7 @@ func (c *ApigClient) UpdateInstanceV2Invoker(request *model.UpdateInstanceV2Requ
 // - 插件不允许重名
 // - 插件不支持修改类型和可见范围
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) UpdatePlugin(request *model.UpdatePluginRequest) (*model.UpdatePluginResponse, error) {
 	requestDef := GenReqDefForUpdatePlugin()
 
@@ -1899,8 +1820,7 @@ func (c *ApigClient) UpdatePluginInvoker(request *model.UpdatePluginRequest) *Up
 //
 // 修改指定流控策略的详细信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) UpdateRequestThrottlingPolicyV2(request *model.UpdateRequestThrottlingPolicyV2Request) (*model.UpdateRequestThrottlingPolicyV2Response, error) {
 	requestDef := GenReqDefForUpdateRequestThrottlingPolicyV2()
 
@@ -1921,8 +1841,7 @@ func (c *ApigClient) UpdateRequestThrottlingPolicyV2Invoker(request *model.Updat
 //
 // 修改指定签名密钥的详细信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) UpdateSignatureKeyV2(request *model.UpdateSignatureKeyV2Request) (*model.UpdateSignatureKeyV2Response, error) {
 	requestDef := GenReqDefForUpdateSignatureKeyV2()
 
@@ -1943,8 +1862,7 @@ func (c *ApigClient) UpdateSignatureKeyV2Invoker(request *model.UpdateSignatureK
 //
 // 修改某个流控策略下的某个特殊设置。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) UpdateSpecialThrottlingConfigurationV2(request *model.UpdateSpecialThrottlingConfigurationV2Request) (*model.UpdateSpecialThrottlingConfigurationV2Response, error) {
 	requestDef := GenReqDefForUpdateSpecialThrottlingConfigurationV2()
 
@@ -1967,8 +1885,7 @@ func (c *ApigClient) UpdateSpecialThrottlingConfigurationV2Invoker(request *mode
 //
 // 删除ACL策略时，如果存在ACL策略与API绑定关系，则无法删除。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) BatchDeleteAclV2(request *model.BatchDeleteAclV2Request) (*model.BatchDeleteAclV2Response, error) {
 	requestDef := GenReqDefForBatchDeleteAclV2()
 
@@ -1989,8 +1906,7 @@ func (c *ApigClient) BatchDeleteAclV2Invoker(request *model.BatchDeleteAclV2Requ
 //
 // 增加一个ACL策略，策略类型通过字段acl_type来确定（permit或者deny），限制的对象的类型可以为IP或者DOMAIN，这里的DOMAIN对应的acl_value的值为租户名称，而非“www.exampleDomain.com\&quot;之类的网络域名。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) CreateAclStrategyV2(request *model.CreateAclStrategyV2Request) (*model.CreateAclStrategyV2Response, error) {
 	requestDef := GenReqDefForCreateAclStrategyV2()
 
@@ -2011,8 +1927,7 @@ func (c *ApigClient) CreateAclStrategyV2Invoker(request *model.CreateAclStrategy
 //
 // 删除指定的ACL策略， 如果存在api与该ACL策略的绑定关系，则无法删除
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) DeleteAclV2(request *model.DeleteAclV2Request) (*model.DeleteAclV2Response, error) {
 	requestDef := GenReqDefForDeleteAclV2()
 
@@ -2033,8 +1948,7 @@ func (c *ApigClient) DeleteAclV2Invoker(request *model.DeleteAclV2Request) *Dele
 //
 // 查询所有的ACL策略列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListAclStrategiesV2(request *model.ListAclStrategiesV2Request) (*model.ListAclStrategiesV2Response, error) {
 	requestDef := GenReqDefForListAclStrategiesV2()
 
@@ -2055,8 +1969,7 @@ func (c *ApigClient) ListAclStrategiesV2Invoker(request *model.ListAclStrategies
 //
 // 查询指定ACL策略的详情。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ShowDetailsOfAclPolicyV2(request *model.ShowDetailsOfAclPolicyV2Request) (*model.ShowDetailsOfAclPolicyV2Response, error) {
 	requestDef := GenReqDefForShowDetailsOfAclPolicyV2()
 
@@ -2077,8 +1990,7 @@ func (c *ApigClient) ShowDetailsOfAclPolicyV2Invoker(request *model.ShowDetailsO
 //
 // 修改指定的ACL策略，其中可修改的属性为：acl_name、acl_type、acl_value，其它属性不可修改。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) UpdateAclStrategyV2(request *model.UpdateAclStrategyV2Request) (*model.UpdateAclStrategyV2Response, error) {
 	requestDef := GenReqDefForUpdateAclStrategyV2()
 
@@ -2103,8 +2015,7 @@ func (c *ApigClient) UpdateAclStrategyV2Invoker(request *model.UpdateAclStrategy
 //
 // 为指定的API绑定流控策略，绑定时，需要指定在哪个环境上生效。同一个API发布到不同的环境可以绑定不同的流控策略；一个API在发布到特定环境后只能绑定一个默认的流控策略。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) AssociateRequestThrottlingPolicyV2(request *model.AssociateRequestThrottlingPolicyV2Request) (*model.AssociateRequestThrottlingPolicyV2Response, error) {
 	requestDef := GenReqDefForAssociateRequestThrottlingPolicyV2()
 
@@ -2125,8 +2036,7 @@ func (c *ApigClient) AssociateRequestThrottlingPolicyV2Invoker(request *model.As
 //
 // 批量解除API与流控策略的绑定关系
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) BatchDisassociateThrottlingPolicyV2(request *model.BatchDisassociateThrottlingPolicyV2Request) (*model.BatchDisassociateThrottlingPolicyV2Response, error) {
 	requestDef := GenReqDefForBatchDisassociateThrottlingPolicyV2()
 
@@ -2147,8 +2057,7 @@ func (c *ApigClient) BatchDisassociateThrottlingPolicyV2Invoker(request *model.B
 //
 // 将多个API发布到一个指定的环境，或将多个API从指定的环境下线。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) BatchPublishOrOfflineApiV2(request *model.BatchPublishOrOfflineApiV2Request) (*model.BatchPublishOrOfflineApiV2Response, error) {
 	requestDef := GenReqDefForBatchPublishOrOfflineApiV2()
 
@@ -2171,8 +2080,7 @@ func (c *ApigClient) BatchPublishOrOfflineApiV2Invoker(request *model.BatchPubli
 //
 // 多个版本之间可以进行随意切换。但一个API在一个环境上，只能有一个版本生效。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ChangeApiVersionV2(request *model.ChangeApiVersionV2Request) (*model.ChangeApiVersionV2Response, error) {
 	requestDef := GenReqDefForChangeApiVersionV2()
 
@@ -2193,8 +2101,7 @@ func (c *ApigClient) ChangeApiVersionV2Invoker(request *model.ChangeApiVersionV2
 //
 // API分组是API的管理单元，一个API分组等同于一个服务入口，创建API分组时，返回一个子域名作为访问入口。建议一个API分组下的API具有一定的相关性。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) CreateApiGroupV2(request *model.CreateApiGroupV2Request) (*model.CreateApiGroupV2Response, error) {
 	requestDef := GenReqDefForCreateApiGroupV2()
 
@@ -2217,8 +2124,7 @@ func (c *ApigClient) CreateApiGroupV2Invoker(request *model.CreateApiGroupV2Requ
 //
 // API分为两部分，第一部分为面向API使用者的API接口，定义了使用者如何调用这个API。第二部分面向API提供者，由API提供者定义这个API的真实的后端情况，定义了API网关如何去访问真实的后端服务。API的真实后端服务目前支持三种类型：传统的HTTP/HTTPS形式的web后端、函数工作流、MOCK。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) CreateApiV2(request *model.CreateApiV2Request) (*model.CreateApiV2Response, error) {
 	requestDef := GenReqDefForCreateApiV2()
 
@@ -2243,8 +2149,7 @@ func (c *ApigClient) CreateApiV2Invoker(request *model.CreateApiV2Request) *Crea
 //
 // 下线操作是将API从某个已发布的环境上下线，下线后，API将无法再被调用。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) CreateOrDeletePublishRecordForApiV2(request *model.CreateOrDeletePublishRecordForApiV2Request) (*model.CreateOrDeletePublishRecordForApiV2Response, error) {
 	requestDef := GenReqDefForCreateOrDeletePublishRecordForApiV2()
 
@@ -2265,8 +2170,7 @@ func (c *ApigClient) CreateOrDeletePublishRecordForApiV2Invoker(request *model.C
 //
 // 调试一个API在指定运行环境下的定义，接口调用者需要具有操作该API的权限。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) DebugApiV2(request *model.DebugApiV2Request) (*model.DebugApiV2Response, error) {
 	requestDef := GenReqDefForDebugApiV2()
 
@@ -2287,8 +2191,7 @@ func (c *ApigClient) DebugApiV2Invoker(request *model.DebugApiV2Request) *DebugA
 //
 // 对某个生效中的API版本进行下线操作，下线后，API在该版本生效的环境中将不再能够被调用。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) DeleteApiByVersionIdV2(request *model.DeleteApiByVersionIdV2Request) (*model.DeleteApiByVersionIdV2Response, error) {
 	requestDef := GenReqDefForDeleteApiByVersionIdV2()
 
@@ -2311,8 +2214,7 @@ func (c *ApigClient) DeleteApiByVersionIdV2Invoker(request *model.DeleteApiByVer
 // 删除API分组前，要先下线并删除分组下的所有API。
 // 删除时，会一并删除直接或间接关联到该分组下的所有资源，包括独立域名、SSL证书信息等等。并会将外部域名与子域名的绑定关系进行解除（取决于域名cname方式）。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) DeleteApiGroupV2(request *model.DeleteApiGroupV2Request) (*model.DeleteApiGroupV2Response, error) {
 	requestDef := GenReqDefForDeleteApiGroupV2()
 
@@ -2335,8 +2237,7 @@ func (c *ApigClient) DeleteApiGroupV2Invoker(request *model.DeleteApiGroupV2Requ
 //
 // 删除API时，会删除该API所有相关的资源信息或绑定关系，如API的发布记录，绑定的后端服务，对APP的授权信息等。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) DeleteApiV2(request *model.DeleteApiV2Request) (*model.DeleteApiV2Response, error) {
 	requestDef := GenReqDefForDeleteApiV2()
 
@@ -2357,8 +2258,7 @@ func (c *ApigClient) DeleteApiV2Invoker(request *model.DeleteApiV2Request) *Dele
 //
 // 解除API与流控策略的绑定关系。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) DisassociateRequestThrottlingPolicyV2(request *model.DisassociateRequestThrottlingPolicyV2Request) (*model.DisassociateRequestThrottlingPolicyV2Response, error) {
 	requestDef := GenReqDefForDisassociateRequestThrottlingPolicyV2()
 
@@ -2381,8 +2281,7 @@ func (c *ApigClient) DisassociateRequestThrottlingPolicyV2Invoker(request *model
 //
 // 如果是租户操作，则查询该租户下所有的分组；如果是管理员权限帐号操作，则查询的是所有租户的分组。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListApiGroupsV2(request *model.ListApiGroupsV2Request) (*model.ListApiGroupsV2Response, error) {
 	requestDef := GenReqDefForListApiGroupsV2()
 
@@ -2409,8 +2308,7 @@ func (c *ApigClient) ListApiGroupsV2Invoker(request *model.ListApiGroupsV2Reques
 //
 // 访问某个环境上的API，其实访问的就是其运行时的定义
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListApiRuntimeDefinitionV2(request *model.ListApiRuntimeDefinitionV2Request) (*model.ListApiRuntimeDefinitionV2Response, error) {
 	requestDef := GenReqDefForListApiRuntimeDefinitionV2()
 
@@ -2431,8 +2329,7 @@ func (c *ApigClient) ListApiRuntimeDefinitionV2Invoker(request *model.ListApiRun
 //
 // 查询某个指定的版本详情。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListApiVersionDetailV2(request *model.ListApiVersionDetailV2Request) (*model.ListApiVersionDetailV2Response, error) {
 	requestDef := GenReqDefForListApiVersionDetailV2()
 
@@ -2453,8 +2350,7 @@ func (c *ApigClient) ListApiVersionDetailV2Invoker(request *model.ListApiVersion
 //
 // 查询某个API的历史版本。每个API在一个环境上最多存在10个历史版本。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListApiVersionsV2(request *model.ListApiVersionsV2Request) (*model.ListApiVersionsV2Response, error) {
 	requestDef := GenReqDefForListApiVersionsV2()
 
@@ -2475,8 +2371,7 @@ func (c *ApigClient) ListApiVersionsV2Invoker(request *model.ListApiVersionsV2Re
 //
 // 查询某个流控策略上已经绑定的API列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListApisBindedToRequestThrottlingPolicyV2(request *model.ListApisBindedToRequestThrottlingPolicyV2Request) (*model.ListApisBindedToRequestThrottlingPolicyV2Response, error) {
 	requestDef := GenReqDefForListApisBindedToRequestThrottlingPolicyV2()
 
@@ -2497,8 +2392,7 @@ func (c *ApigClient) ListApisBindedToRequestThrottlingPolicyV2Invoker(request *m
 //
 // 查询所有未绑定到该流控策略上的自有API列表。需要API已经发布，未发布的API不予展示。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListApisUnbindedToRequestThrottlingPolicyV2(request *model.ListApisUnbindedToRequestThrottlingPolicyV2Request) (*model.ListApisUnbindedToRequestThrottlingPolicyV2Response, error) {
 	requestDef := GenReqDefForListApisUnbindedToRequestThrottlingPolicyV2()
 
@@ -2519,8 +2413,7 @@ func (c *ApigClient) ListApisUnbindedToRequestThrottlingPolicyV2Invoker(request 
 //
 // 查看API列表，返回API详细信息、发布信息等，但不能查看到后端服务信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListApisV2(request *model.ListApisV2Request) (*model.ListApisV2Response, error) {
 	requestDef := GenReqDefForListApisV2()
 
@@ -2541,8 +2434,7 @@ func (c *ApigClient) ListApisV2Invoker(request *model.ListApisV2Request) *ListAp
 //
 // 查询某个API绑定的流控策略列表。每个环境上应该最多只有一个流控策略。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListRequestThrottlingPoliciesBindedToApiV2(request *model.ListRequestThrottlingPoliciesBindedToApiV2Request) (*model.ListRequestThrottlingPoliciesBindedToApiV2Response, error) {
 	requestDef := GenReqDefForListRequestThrottlingPoliciesBindedToApiV2()
 
@@ -2563,8 +2455,7 @@ func (c *ApigClient) ListRequestThrottlingPoliciesBindedToApiV2Invoker(request *
 //
 // 查询指定分组的详细信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ShowDetailsOfApiGroupV2(request *model.ShowDetailsOfApiGroupV2Request) (*model.ShowDetailsOfApiGroupV2Response, error) {
 	requestDef := GenReqDefForShowDetailsOfApiGroupV2()
 
@@ -2585,8 +2476,7 @@ func (c *ApigClient) ShowDetailsOfApiGroupV2Invoker(request *model.ShowDetailsOf
 //
 // 查看指定的API的详细信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ShowDetailsOfApiV2(request *model.ShowDetailsOfApiV2Request) (*model.ShowDetailsOfApiV2Response, error) {
 	requestDef := GenReqDefForShowDetailsOfApiV2()
 
@@ -2607,8 +2497,7 @@ func (c *ApigClient) ShowDetailsOfApiV2Invoker(request *model.ShowDetailsOfApiV2
 //
 // 修改API分组属性。其中name和remark可修改，其他属性不可修改。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) UpdateApiGroupV2(request *model.UpdateApiGroupV2Request) (*model.UpdateApiGroupV2Response, error) {
 	requestDef := GenReqDefForUpdateApiGroupV2()
 
@@ -2629,8 +2518,7 @@ func (c *ApigClient) UpdateApiGroupV2Invoker(request *model.UpdateApiGroupV2Requ
 //
 // 修改指定API的信息，包括后端服务信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) UpdateApiV2(request *model.UpdateApiV2Request) (*model.UpdateApiV2Response, error) {
 	requestDef := GenReqDefForUpdateApiV2()
 
@@ -2651,8 +2539,7 @@ func (c *ApigClient) UpdateApiV2Invoker(request *model.UpdateApiV2Request) *Upda
 //
 // 批量解除API与ACL策略的绑定
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) BatchDeleteApiAclBindingV2(request *model.BatchDeleteApiAclBindingV2Request) (*model.BatchDeleteApiAclBindingV2Response, error) {
 	requestDef := GenReqDefForBatchDeleteApiAclBindingV2()
 
@@ -2675,8 +2562,7 @@ func (c *ApigClient) BatchDeleteApiAclBindingV2Invoker(request *model.BatchDelet
 //
 // 同一个API发布到不同的环境可以绑定不同的ACL策略；一个API在发布到特定环境后只能绑定一个同一种类型的ACL策略。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) CreateApiAclBindingV2(request *model.CreateApiAclBindingV2Request) (*model.CreateApiAclBindingV2Response, error) {
 	requestDef := GenReqDefForCreateApiAclBindingV2()
 
@@ -2697,8 +2583,7 @@ func (c *ApigClient) CreateApiAclBindingV2Invoker(request *model.CreateApiAclBin
 //
 // 解除某条API与ACL策略的绑定关系
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) DeleteApiAclBindingV2(request *model.DeleteApiAclBindingV2Request) (*model.DeleteApiAclBindingV2Response, error) {
 	requestDef := GenReqDefForDeleteApiAclBindingV2()
 
@@ -2719,8 +2604,7 @@ func (c *ApigClient) DeleteApiAclBindingV2Invoker(request *model.DeleteApiAclBin
 //
 // 查看API绑定的ACL策略列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListAclPolicyBindedToApiV2(request *model.ListAclPolicyBindedToApiV2Request) (*model.ListAclPolicyBindedToApiV2Response, error) {
 	requestDef := GenReqDefForListAclPolicyBindedToApiV2()
 
@@ -2741,8 +2625,7 @@ func (c *ApigClient) ListAclPolicyBindedToApiV2Invoker(request *model.ListAclPol
 //
 // 查看ACL策略绑定的API列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListApisBindedToAclPolicyV2(request *model.ListApisBindedToAclPolicyV2Request) (*model.ListApisBindedToAclPolicyV2Response, error) {
 	requestDef := GenReqDefForListApisBindedToAclPolicyV2()
 
@@ -2763,8 +2646,7 @@ func (c *ApigClient) ListApisBindedToAclPolicyV2Invoker(request *model.ListApisB
 //
 // 查看ACL策略未绑定的API列表，需要API已发布
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListApisUnbindedToAclPolicyV2(request *model.ListApisUnbindedToAclPolicyV2Request) (*model.ListApisUnbindedToAclPolicyV2Response, error) {
 	requestDef := GenReqDefForListApisUnbindedToAclPolicyV2()
 
@@ -2785,8 +2667,7 @@ func (c *ApigClient) ListApisUnbindedToAclPolicyV2Invoker(request *model.ListApi
 //
 // 解除API对APP的授权关系。解除授权后，APP将不再能够调用该API。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) CancelingAuthorizationV2(request *model.CancelingAuthorizationV2Request) (*model.CancelingAuthorizationV2Response, error) {
 	requestDef := GenReqDefForCancelingAuthorizationV2()
 
@@ -2807,8 +2688,7 @@ func (c *ApigClient) CancelingAuthorizationV2Invoker(request *model.CancelingAut
 //
 // 校验app是否存在，非APP所有者可以调用该接口校验APP是否真实存在。这个接口只展示app的基本信息id 、name、 remark，其他信息不显示。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) CheckAppV2(request *model.CheckAppV2Request) (*model.CheckAppV2Response, error) {
 	requestDef := GenReqDefForCheckAppV2()
 
@@ -2830,8 +2710,7 @@ func (c *ApigClient) CheckAppV2Invoker(request *model.CheckAppV2Request) *CheckA
 // APP即应用，是一个可以访问API的身份标识。将API授权给APP后，APP即可调用API。
 // 创建一个APP。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) CreateAnAppV2(request *model.CreateAnAppV2Request) (*model.CreateAnAppV2Response, error) {
 	requestDef := GenReqDefForCreateAnAppV2()
 
@@ -2852,8 +2731,7 @@ func (c *ApigClient) CreateAnAppV2Invoker(request *model.CreateAnAppV2Request) *
 //
 // 创建App Code时，可以不指定具体值，由后台自动生成随机字符串填充。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) CreateAppCodeAutoV2(request *model.CreateAppCodeAutoV2Request) (*model.CreateAppCodeAutoV2Response, error) {
 	requestDef := GenReqDefForCreateAppCodeAutoV2()
 
@@ -2874,8 +2752,7 @@ func (c *ApigClient) CreateAppCodeAutoV2Invoker(request *model.CreateAppCodeAuto
 //
 // App Code为APP应用下的子模块，创建App Code之后，可以实现简易的APP认证。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) CreateAppCodeV2(request *model.CreateAppCodeV2Request) (*model.CreateAppCodeV2Response, error) {
 	requestDef := GenReqDefForCreateAppCodeV2()
 
@@ -2896,8 +2773,7 @@ func (c *ApigClient) CreateAppCodeV2Invoker(request *model.CreateAppCodeV2Reques
 //
 // APP创建成功后，还不能访问API，如果想要访问某个环境上的API，需要将该API在该环境上授权给APP。授权成功后，APP即可访问该环境上的这个API。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) CreateAuthorizingAppsV2(request *model.CreateAuthorizingAppsV2Request) (*model.CreateAuthorizingAppsV2Response, error) {
 	requestDef := GenReqDefForCreateAuthorizingAppsV2()
 
@@ -2918,8 +2794,7 @@ func (c *ApigClient) CreateAuthorizingAppsV2Invoker(request *model.CreateAuthori
 //
 // 删除App Code，App Code删除后，将无法再通过简易认证访问对应的API。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) DeleteAppCodeV2(request *model.DeleteAppCodeV2Request) (*model.DeleteAppCodeV2Response, error) {
 	requestDef := GenReqDefForDeleteAppCodeV2()
 
@@ -2941,8 +2816,7 @@ func (c *ApigClient) DeleteAppCodeV2Invoker(request *model.DeleteAppCodeV2Reques
 // 删除指定的APP。
 // APP删除后，将无法再调用任何API[；其中，云商店自动创建的APP无法被删除](tag:hws)。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) DeleteAppV2(request *model.DeleteAppV2Request) (*model.DeleteAppV2Response, error) {
 	requestDef := GenReqDefForDeleteAppV2()
 
@@ -2963,8 +2837,7 @@ func (c *ApigClient) DeleteAppV2Invoker(request *model.DeleteAppV2Request) *Dele
 //
 // 查询APP已经绑定的API列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListApisBindedToAppV2(request *model.ListApisBindedToAppV2Request) (*model.ListApisBindedToAppV2Response, error) {
 	requestDef := GenReqDefForListApisBindedToAppV2()
 
@@ -2985,8 +2858,7 @@ func (c *ApigClient) ListApisBindedToAppV2Invoker(request *model.ListApisBindedT
 //
 // 查询指定环境上某个APP未绑定的API列表[，包括自有API和从云商店购买的API](tag:hws)。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListApisUnbindedToAppV2(request *model.ListApisUnbindedToAppV2Request) (*model.ListApisUnbindedToAppV2Response, error) {
 	requestDef := GenReqDefForListApisUnbindedToAppV2()
 
@@ -3007,8 +2879,7 @@ func (c *ApigClient) ListApisUnbindedToAppV2Invoker(request *model.ListApisUnbin
 //
 // 查询App Code列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListAppCodesV2(request *model.ListAppCodesV2Request) (*model.ListAppCodesV2Response, error) {
 	requestDef := GenReqDefForListAppCodesV2()
 
@@ -3029,8 +2900,7 @@ func (c *ApigClient) ListAppCodesV2Invoker(request *model.ListAppCodesV2Request)
 //
 // 查询API绑定的APP列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListAppsBindedToApiV2(request *model.ListAppsBindedToApiV2Request) (*model.ListAppsBindedToApiV2Response, error) {
 	requestDef := GenReqDefForListAppsBindedToApiV2()
 
@@ -3051,8 +2921,7 @@ func (c *ApigClient) ListAppsBindedToApiV2Invoker(request *model.ListAppsBindedT
 //
 // 查询APP列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListAppsV2(request *model.ListAppsV2Request) (*model.ListAppsV2Response, error) {
 	requestDef := GenReqDefForListAppsV2()
 
@@ -3073,8 +2942,7 @@ func (c *ApigClient) ListAppsV2Invoker(request *model.ListAppsV2Request) *ListAp
 //
 // 重置指定APP的密钥。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ResettingAppSecretV2(request *model.ResettingAppSecretV2Request) (*model.ResettingAppSecretV2Response, error) {
 	requestDef := GenReqDefForResettingAppSecretV2()
 
@@ -3095,8 +2963,7 @@ func (c *ApigClient) ResettingAppSecretV2Invoker(request *model.ResettingAppSecr
 //
 // App Code为APP应用下的子模块，创建App Code之后，可以实现简易的APP认证。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ShowDetailsOfAppCodeV2(request *model.ShowDetailsOfAppCodeV2Request) (*model.ShowDetailsOfAppCodeV2Response, error) {
 	requestDef := GenReqDefForShowDetailsOfAppCodeV2()
 
@@ -3117,8 +2984,7 @@ func (c *ApigClient) ShowDetailsOfAppCodeV2Invoker(request *model.ShowDetailsOfA
 //
 // 查看指定APP的详细信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ShowDetailsOfAppV2(request *model.ShowDetailsOfAppV2Request) (*model.ShowDetailsOfAppV2Response, error) {
 	requestDef := GenReqDefForShowDetailsOfAppV2()
 
@@ -3139,8 +3005,7 @@ func (c *ApigClient) ShowDetailsOfAppV2Invoker(request *model.ShowDetailsOfAppV2
 //
 // 修改指定APP的信息。其中可修改的属性为：name、remark，当支持用户自定义key和secret的开关开启时，app_key和app_secret也支持修改，其它属性不可修改。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) UpdateAppV2(request *model.UpdateAppV2Request) (*model.UpdateAppV2Response, error) {
 	requestDef := GenReqDefForUpdateAppV2()
 
@@ -3161,8 +3026,7 @@ func (c *ApigClient) UpdateAppV2Invoker(request *model.UpdateAppV2Request) *Upda
 //
 // 导出分组下API的定义信息。导出文件内容符合swagger标准规范，API网关自定义扩展字段请参考《API网关开发指南》的“导入导出API：扩展定义”章节。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ExportApiDefinitionsV2(request *model.ExportApiDefinitionsV2Request) (*model.ExportApiDefinitionsV2Response, error) {
 	requestDef := GenReqDefForExportApiDefinitionsV2()
 
@@ -3183,8 +3047,7 @@ func (c *ApigClient) ExportApiDefinitionsV2Invoker(request *model.ExportApiDefin
 //
 // 导入API。导入文件内容需要符合swagger标准规范，API网关自定义扩展字段请参考《API网关开发指南》的“导入导出API：扩展定义”章节。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ImportApiDefinitionsV2(request *model.ImportApiDefinitionsV2Request) (*model.ImportApiDefinitionsV2Response, error) {
 	requestDef := GenReqDefForImportApiDefinitionsV2()
 
@@ -3205,8 +3068,7 @@ func (c *ApigClient) ImportApiDefinitionsV2Invoker(request *model.ImportApiDefin
 //
 // 域名绑定SSL证书。目前暂时仅支持单个绑定,请求体当中的certificate_ids里面有且只能有一个证书ID
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) BatchAssociateCertsV2(request *model.BatchAssociateCertsV2Request) (*model.BatchAssociateCertsV2Response, error) {
 	requestDef := GenReqDefForBatchAssociateCertsV2()
 
@@ -3227,8 +3089,7 @@ func (c *ApigClient) BatchAssociateCertsV2Invoker(request *model.BatchAssociateC
 //
 // 域名绑定SSL证书
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) BatchAssociateDomainsV2(request *model.BatchAssociateDomainsV2Request) (*model.BatchAssociateDomainsV2Response, error) {
 	requestDef := GenReqDefForBatchAssociateDomainsV2()
 
@@ -3249,8 +3110,7 @@ func (c *ApigClient) BatchAssociateDomainsV2Invoker(request *model.BatchAssociat
 //
 // 域名解绑SSL证书。目前暂时仅支持单个解绑,请求体当中的certificate_ids里面有且只能有一个证书ID
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) BatchDisassociateCertsV2(request *model.BatchDisassociateCertsV2Request) (*model.BatchDisassociateCertsV2Response, error) {
 	requestDef := GenReqDefForBatchDisassociateCertsV2()
 
@@ -3271,8 +3131,7 @@ func (c *ApigClient) BatchDisassociateCertsV2Invoker(request *model.BatchDisasso
 //
 // SSL证书解绑域名
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) BatchDisassociateDomainsV2(request *model.BatchDisassociateDomainsV2Request) (*model.BatchDisassociateDomainsV2Response, error) {
 	requestDef := GenReqDefForBatchDisassociateDomainsV2()
 
@@ -3293,8 +3152,7 @@ func (c *ApigClient) BatchDisassociateDomainsV2Invoker(request *model.BatchDisas
 //
 // 创建SSL证书
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) CreateCertificateV2(request *model.CreateCertificateV2Request) (*model.CreateCertificateV2Response, error) {
 	requestDef := GenReqDefForCreateCertificateV2()
 
@@ -3315,8 +3173,7 @@ func (c *ApigClient) CreateCertificateV2Invoker(request *model.CreateCertificate
 //
 // 删除ssl证书接口,删除时只有没有关联域名的证书才能被删除
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) DeleteCertificateV2(request *model.DeleteCertificateV2Request) (*model.DeleteCertificateV2Response, error) {
 	requestDef := GenReqDefForDeleteCertificateV2()
 
@@ -3337,8 +3194,7 @@ func (c *ApigClient) DeleteCertificateV2Invoker(request *model.DeleteCertificate
 //
 // 获取SSL证书已绑定域名列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListAttachedDomainsV2(request *model.ListAttachedDomainsV2Request) (*model.ListAttachedDomainsV2Response, error) {
 	requestDef := GenReqDefForListAttachedDomainsV2()
 
@@ -3359,8 +3215,7 @@ func (c *ApigClient) ListAttachedDomainsV2Invoker(request *model.ListAttachedDom
 //
 // 获取SSL证书列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListCertificatesV2(request *model.ListCertificatesV2Request) (*model.ListCertificatesV2Response, error) {
 	requestDef := GenReqDefForListCertificatesV2()
 
@@ -3381,8 +3236,7 @@ func (c *ApigClient) ListCertificatesV2Invoker(request *model.ListCertificatesV2
 //
 // 查看证书详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ShowDetailsOfCertificateV2(request *model.ShowDetailsOfCertificateV2Request) (*model.ShowDetailsOfCertificateV2Response, error) {
 	requestDef := GenReqDefForShowDetailsOfCertificateV2()
 
@@ -3403,8 +3257,7 @@ func (c *ApigClient) ShowDetailsOfCertificateV2Invoker(request *model.ShowDetail
 //
 // 修改SSL证书
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) UpdateCertificateV2(request *model.UpdateCertificateV2Request) (*model.UpdateCertificateV2Response, error) {
 	requestDef := GenReqDefForUpdateCertificateV2()
 
@@ -3427,8 +3280,7 @@ func (c *ApigClient) UpdateCertificateV2Invoker(request *model.UpdateCertificate
 //
 // 若指定地址的后端实例已存在，则更新对应后端实例信息。若请求体中包含多个重复地址的后端实例定义，则使用第一个定义。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) AddingBackendInstancesV2(request *model.AddingBackendInstancesV2Request) (*model.AddingBackendInstancesV2Response, error) {
 	requestDef := GenReqDefForAddingBackendInstancesV2()
 
@@ -3449,8 +3301,7 @@ func (c *ApigClient) AddingBackendInstancesV2Invoker(request *model.AddingBacken
 //
 // 批量修改后端服务器状态不可用。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) BatchDisableMembers(request *model.BatchDisableMembersRequest) (*model.BatchDisableMembersResponse, error) {
 	requestDef := GenReqDefForBatchDisableMembers()
 
@@ -3471,8 +3322,7 @@ func (c *ApigClient) BatchDisableMembersInvoker(request *model.BatchDisableMembe
 //
 // 批量修改后端服务器状态可用。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) BatchEnableMembers(request *model.BatchEnableMembersRequest) (*model.BatchEnableMembersResponse, error) {
 	requestDef := GenReqDefForBatchEnableMembers()
 
@@ -3495,8 +3345,7 @@ func (c *ApigClient) BatchEnableMembersInvoker(request *model.BatchEnableMembers
 //
 // 若指定名称的后端服务器组已存在，则更新对应后端服务器组信息。若请求体中包含多个重复名称的后端服务器定义，则使用第一个定义。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) CreateMemberGroup(request *model.CreateMemberGroupRequest) (*model.CreateMemberGroupResponse, error) {
 	requestDef := GenReqDefForCreateMemberGroup()
 
@@ -3518,8 +3367,7 @@ func (c *ApigClient) CreateMemberGroupInvoker(request *model.CreateMemberGroupRe
 // 在API网关中创建连接私有VPC资源的通道，并在创建API时将后端节点配置为使用这些VPC通道，以便API网关直接访问私有VPC资源。
 // &gt; 每个用户最多创建30个VPC通道。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) CreateVpcChannelV2(request *model.CreateVpcChannelV2Request) (*model.CreateVpcChannelV2Response, error) {
 	requestDef := GenReqDefForCreateVpcChannelV2()
 
@@ -3540,8 +3388,7 @@ func (c *ApigClient) CreateVpcChannelV2Invoker(request *model.CreateVpcChannelV2
 //
 // 删除指定VPC通道中的后端实例
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) DeleteBackendInstanceV2(request *model.DeleteBackendInstanceV2Request) (*model.DeleteBackendInstanceV2Response, error) {
 	requestDef := GenReqDefForDeleteBackendInstanceV2()
 
@@ -3562,8 +3409,7 @@ func (c *ApigClient) DeleteBackendInstanceV2Invoker(request *model.DeleteBackend
 //
 // 删除指定的VPC通道后端服务器组
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) DeleteMemberGroup(request *model.DeleteMemberGroupRequest) (*model.DeleteMemberGroupResponse, error) {
 	requestDef := GenReqDefForDeleteMemberGroup()
 
@@ -3584,8 +3430,7 @@ func (c *ApigClient) DeleteMemberGroupInvoker(request *model.DeleteMemberGroupRe
 //
 // 删除指定的VPC通道
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) DeleteVpcChannelV2(request *model.DeleteVpcChannelV2Request) (*model.DeleteVpcChannelV2Response, error) {
 	requestDef := GenReqDefForDeleteVpcChannelV2()
 
@@ -3606,8 +3451,7 @@ func (c *ApigClient) DeleteVpcChannelV2Invoker(request *model.DeleteVpcChannelV2
 //
 // 查看指定VPC通道的后端实例列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListBackendInstancesV2(request *model.ListBackendInstancesV2Request) (*model.ListBackendInstancesV2Response, error) {
 	requestDef := GenReqDefForListBackendInstancesV2()
 
@@ -3628,8 +3472,7 @@ func (c *ApigClient) ListBackendInstancesV2Invoker(request *model.ListBackendIns
 //
 // 查询VPC通道后端云服务组列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListMemberGroups(request *model.ListMemberGroupsRequest) (*model.ListMemberGroupsResponse, error) {
 	requestDef := GenReqDefForListMemberGroups()
 
@@ -3650,8 +3493,7 @@ func (c *ApigClient) ListMemberGroupsInvoker(request *model.ListMemberGroupsRequ
 //
 // 查看VPC通道列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListVpcChannelsV2(request *model.ListVpcChannelsV2Request) (*model.ListVpcChannelsV2Response, error) {
 	requestDef := GenReqDefForListVpcChannelsV2()
 
@@ -3672,8 +3514,7 @@ func (c *ApigClient) ListVpcChannelsV2Invoker(request *model.ListVpcChannelsV2Re
 //
 // 查看指定的VPC通道后端服务器组详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ShowDetailsOfMemberGroup(request *model.ShowDetailsOfMemberGroupRequest) (*model.ShowDetailsOfMemberGroupResponse, error) {
 	requestDef := GenReqDefForShowDetailsOfMemberGroup()
 
@@ -3694,8 +3535,7 @@ func (c *ApigClient) ShowDetailsOfMemberGroupInvoker(request *model.ShowDetailsO
 //
 // 查看指定的VPC通道详情
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ShowDetailsOfVpcChannelV2(request *model.ShowDetailsOfVpcChannelV2Request) (*model.ShowDetailsOfVpcChannelV2Response, error) {
 	requestDef := GenReqDefForShowDetailsOfVpcChannelV2()
 
@@ -3716,8 +3556,7 @@ func (c *ApigClient) ShowDetailsOfVpcChannelV2Invoker(request *model.ShowDetails
 //
 // 更新指定的VPC通道的后端实例。更新时，使用传入的请求参数对对应云服务组的后端实例进行全量覆盖修改。若未指定修改的云服务器组，则进行全量覆盖。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) UpdateBackendInstancesV2(request *model.UpdateBackendInstancesV2Request) (*model.UpdateBackendInstancesV2Response, error) {
 	requestDef := GenReqDefForUpdateBackendInstancesV2()
 
@@ -3738,8 +3577,7 @@ func (c *ApigClient) UpdateBackendInstancesV2Invoker(request *model.UpdateBacken
 //
 // 修改VPC通道健康检查。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) UpdateHealthCheck(request *model.UpdateHealthCheckRequest) (*model.UpdateHealthCheckResponse, error) {
 	requestDef := GenReqDefForUpdateHealthCheck()
 
@@ -3760,8 +3598,7 @@ func (c *ApigClient) UpdateHealthCheckInvoker(request *model.UpdateHealthCheckRe
 //
 // 更新指定VPC通道后端服务器组
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) UpdateMemberGroup(request *model.UpdateMemberGroupRequest) (*model.UpdateMemberGroupResponse, error) {
 	requestDef := GenReqDefForUpdateMemberGroup()
 
@@ -3786,8 +3623,7 @@ func (c *ApigClient) UpdateMemberGroupInvoker(request *model.UpdateMemberGroupRe
 //
 // 使用传入的后端服务器组列表对VPC通道进行全量覆盖，若后端服务器组列表为空，则会全量删除已有的服务器组；
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) UpdateVpcChannelV2(request *model.UpdateVpcChannelV2Request) (*model.UpdateVpcChannelV2Response, error) {
 	requestDef := GenReqDefForUpdateVpcChannelV2()
 

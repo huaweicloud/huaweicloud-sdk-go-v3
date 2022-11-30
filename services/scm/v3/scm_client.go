@@ -23,8 +23,7 @@ func ScmClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 删除证书实例，即将证书资源从华为云系统中删除。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ScmClient) DeleteCertificate(request *model.DeleteCertificateRequest) (*model.DeleteCertificateResponse, error) {
 	requestDef := GenReqDefForDeleteCertificate()
 
@@ -45,8 +44,7 @@ func (c *ScmClient) DeleteCertificateInvoker(request *model.DeleteCertificateReq
 //
 // 导出证书。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ScmClient) ExportCertificate(request *model.ExportCertificateRequest) (*model.ExportCertificateResponse, error) {
 	requestDef := GenReqDefForExportCertificate()
 
@@ -67,8 +65,7 @@ func (c *ScmClient) ExportCertificateInvoker(request *model.ExportCertificateReq
 //
 // 导入证书到SCM服务管理。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ScmClient) ImportCertificate(request *model.ImportCertificateRequest) (*model.ImportCertificateResponse, error) {
 	requestDef := GenReqDefForImportCertificate()
 
@@ -89,8 +86,7 @@ func (c *ScmClient) ImportCertificateInvoker(request *model.ImportCertificateReq
 //
 // 根据证书名称或绑定域名查询证书列表。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ScmClient) ListCertificates(request *model.ListCertificatesRequest) (*model.ListCertificatesResponse, error) {
 	requestDef := GenReqDefForListCertificates()
 
@@ -111,8 +107,7 @@ func (c *ScmClient) ListCertificatesInvoker(request *model.ListCertificatesReque
 //
 // 推送SSL证书到弹性负载均衡（Elastic Load Balance，简称ELB）、Web应用防火墙（Web Application Firewall，WAF）、CDN（Content Delivery Network，内容分发网络）等其它华为云产品中。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ScmClient) PushCertificate(request *model.PushCertificateRequest) (*model.PushCertificateResponse, error) {
 	requestDef := GenReqDefForPushCertificate()
 
@@ -133,8 +128,7 @@ func (c *ScmClient) PushCertificateInvoker(request *model.PushCertificateRequest
 //
 // 查询某张证书的详细信息。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *ScmClient) ShowCertificate(request *model.ShowCertificateRequest) (*model.ShowCertificateResponse, error) {
 	requestDef := GenReqDefForShowCertificate()
 

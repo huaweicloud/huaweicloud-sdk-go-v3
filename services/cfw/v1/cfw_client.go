@@ -23,8 +23,7 @@ func CfwClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 添加地址组成员
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) AddAddressItemsUsingPost(request *model.AddAddressItemsUsingPostRequest) (*model.AddAddressItemsUsingPostResponse, error) {
 	requestDef := GenReqDefForAddAddressItemsUsingPost()
 
@@ -45,8 +44,7 @@ func (c *CfwClient) AddAddressItemsUsingPostInvoker(request *model.AddAddressIte
 //
 // 添加地址组
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) AddAddressSetInfoUsingPost(request *model.AddAddressSetInfoUsingPostRequest) (*model.AddAddressSetInfoUsingPostResponse, error) {
 	requestDef := GenReqDefForAddAddressSetInfoUsingPost()
 
@@ -67,8 +65,7 @@ func (c *CfwClient) AddAddressSetInfoUsingPostInvoker(request *model.AddAddressS
 //
 // 创建黑白名单规则
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) AddBlackWhiteListUsingPost(request *model.AddBlackWhiteListUsingPostRequest) (*model.AddBlackWhiteListUsingPostResponse, error) {
 	requestDef := GenReqDefForAddBlackWhiteListUsingPost()
 
@@ -89,8 +86,7 @@ func (c *CfwClient) AddBlackWhiteListUsingPostInvoker(request *model.AddBlackWhi
 //
 // 批量添加服务组成员
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) AddServiceItemsUsingPost(request *model.AddServiceItemsUsingPostRequest) (*model.AddServiceItemsUsingPostResponse, error) {
 	requestDef := GenReqDefForAddServiceItemsUsingPost()
 
@@ -111,8 +107,7 @@ func (c *CfwClient) AddServiceItemsUsingPostInvoker(request *model.AddServiceIte
 //
 // 创建服务组
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) AddServiceSetUsingPost(request *model.AddServiceSetUsingPostRequest) (*model.AddServiceSetUsingPostResponse, error) {
 	requestDef := GenReqDefForAddServiceSetUsingPost()
 
@@ -133,8 +128,7 @@ func (c *CfwClient) AddServiceSetUsingPostInvoker(request *model.AddServiceSetUs
 //
 // 东西向防护资源防护开启/关闭
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) ChangeEwProtectStatus(request *model.ChangeEwProtectStatusRequest) (*model.ChangeEwProtectStatusResponse, error) {
 	requestDef := GenReqDefForChangeEwProtectStatus()
 
@@ -155,8 +149,7 @@ func (c *CfwClient) ChangeEwProtectStatusInvoker(request *model.ChangeEwProtectS
 //
 // 切换防护模式
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) ChangeIpsProtectModeUsingPost(request *model.ChangeIpsProtectModeUsingPostRequest) (*model.ChangeIpsProtectModeUsingPostResponse, error) {
 	requestDef := GenReqDefForChangeIpsProtectModeUsingPost()
 
@@ -177,8 +170,7 @@ func (c *CfwClient) ChangeIpsProtectModeUsingPostInvoker(request *model.ChangeIp
 //
 // 清除规则击中次数
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) DeleteAclRuleCount(request *model.DeleteAclRuleCountRequest) (*model.DeleteAclRuleCountResponse, error) {
 	requestDef := GenReqDefForDeleteAclRuleCount()
 
@@ -199,8 +191,7 @@ func (c *CfwClient) DeleteAclRuleCountInvoker(request *model.DeleteAclRuleCountR
 //
 // 删除地址组成员
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) DeleteAddressItemUsingDelete(request *model.DeleteAddressItemUsingDeleteRequest) (*model.DeleteAddressItemUsingDeleteResponse, error) {
 	requestDef := GenReqDefForDeleteAddressItemUsingDelete()
 
@@ -221,8 +212,7 @@ func (c *CfwClient) DeleteAddressItemUsingDeleteInvoker(request *model.DeleteAdd
 //
 // 删除地址组
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) DeleteAddressSetInfoUsingDelete(request *model.DeleteAddressSetInfoUsingDeleteRequest) (*model.DeleteAddressSetInfoUsingDeleteResponse, error) {
 	requestDef := GenReqDefForDeleteAddressSetInfoUsingDelete()
 
@@ -243,8 +233,7 @@ func (c *CfwClient) DeleteAddressSetInfoUsingDeleteInvoker(request *model.Delete
 //
 // 删除黑白名单规则
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) DeleteBlackWhiteListUsingDelete(request *model.DeleteBlackWhiteListUsingDeleteRequest) (*model.DeleteBlackWhiteListUsingDeleteResponse, error) {
 	requestDef := GenReqDefForDeleteBlackWhiteListUsingDelete()
 
@@ -265,8 +254,7 @@ func (c *CfwClient) DeleteBlackWhiteListUsingDeleteInvoker(request *model.Delete
 //
 // 删除服务组成员
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) DeleteServiceItemUsingDelete(request *model.DeleteServiceItemUsingDeleteRequest) (*model.DeleteServiceItemUsingDeleteResponse, error) {
 	requestDef := GenReqDefForDeleteServiceItemUsingDelete()
 
@@ -287,8 +275,7 @@ func (c *CfwClient) DeleteServiceItemUsingDeleteInvoker(request *model.DeleteSer
 //
 // 删除服务组
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) DeleteServiceSetUsingDelete(request *model.DeleteServiceSetUsingDeleteRequest) (*model.DeleteServiceSetUsingDeleteResponse, error) {
 	requestDef := GenReqDefForDeleteServiceSetUsingDelete()
 
@@ -309,8 +296,7 @@ func (c *CfwClient) DeleteServiceSetUsingDeleteInvoker(request *model.DeleteServ
 //
 // 查询访问控制日志
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) ListAccessControlLogs(request *model.ListAccessControlLogsRequest) (*model.ListAccessControlLogsResponse, error) {
 	requestDef := GenReqDefForListAccessControlLogs()
 
@@ -331,8 +317,7 @@ func (c *CfwClient) ListAccessControlLogsInvoker(request *model.ListAccessContro
 //
 // 查询地址组成员
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) ListAddressItemsUsingGet(request *model.ListAddressItemsUsingGetRequest) (*model.ListAddressItemsUsingGetResponse, error) {
 	requestDef := GenReqDefForListAddressItemsUsingGet()
 
@@ -353,8 +338,7 @@ func (c *CfwClient) ListAddressItemsUsingGetInvoker(request *model.ListAddressIt
 //
 // 查询地址组详细
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) ListAddressSetDetailUsingGet(request *model.ListAddressSetDetailUsingGetRequest) (*model.ListAddressSetDetailUsingGetResponse, error) {
 	requestDef := GenReqDefForListAddressSetDetailUsingGet()
 
@@ -375,8 +359,7 @@ func (c *CfwClient) ListAddressSetDetailUsingGetInvoker(request *model.ListAddre
 //
 // 查询地址组列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) ListAddressSetListUsingGet(request *model.ListAddressSetListUsingGetRequest) (*model.ListAddressSetListUsingGetResponse, error) {
 	requestDef := GenReqDefForListAddressSetListUsingGet()
 
@@ -397,8 +380,7 @@ func (c *CfwClient) ListAddressSetListUsingGetInvoker(request *model.ListAddress
 //
 // 查询攻击日志
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) ListAttackLogs(request *model.ListAttackLogsRequest) (*model.ListAttackLogsResponse, error) {
 	requestDef := GenReqDefForListAttackLogs()
 
@@ -419,8 +401,7 @@ func (c *CfwClient) ListAttackLogsInvoker(request *model.ListAttackLogsRequest) 
 //
 // 查询黑白名单列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) ListBlackWhiteListsUsingGet(request *model.ListBlackWhiteListsUsingGetRequest) (*model.ListBlackWhiteListsUsingGetResponse, error) {
 	requestDef := GenReqDefForListBlackWhiteListsUsingGet()
 
@@ -441,8 +422,7 @@ func (c *CfwClient) ListBlackWhiteListsUsingGetInvoker(request *model.ListBlackW
 //
 // 查询dns服务器列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) ListDnsServers(request *model.ListDnsServersRequest) (*model.ListDnsServersResponse, error) {
 	requestDef := GenReqDefForListDnsServers()
 
@@ -463,8 +443,7 @@ func (c *CfwClient) ListDnsServersInvoker(request *model.ListDnsServersRequest) 
 //
 // 查询东西向防火墙信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) ListEastWestFirewall(request *model.ListEastWestFirewallRequest) (*model.ListEastWestFirewallResponse, error) {
 	requestDef := GenReqDefForListEastWestFirewall()
 
@@ -485,8 +464,7 @@ func (c *CfwClient) ListEastWestFirewallInvoker(request *model.ListEastWestFirew
 //
 // 查询防火墙实例
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) ListFirewallUsingGet(request *model.ListFirewallUsingGetRequest) (*model.ListFirewallUsingGetResponse, error) {
 	requestDef := GenReqDefForListFirewallUsingGet()
 
@@ -507,8 +485,7 @@ func (c *CfwClient) ListFirewallUsingGetInvoker(request *model.ListFirewallUsing
 //
 // 查询流日志
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) ListFlowLogs(request *model.ListFlowLogsRequest) (*model.ListFlowLogsResponse, error) {
 	requestDef := GenReqDefForListFlowLogs()
 
@@ -529,8 +506,7 @@ func (c *CfwClient) ListFlowLogsInvoker(request *model.ListFlowLogsRequest) *Lis
 //
 // 查询防护模式
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) ListIpsProtectModeUsingPost(request *model.ListIpsProtectModeUsingPostRequest) (*model.ListIpsProtectModeUsingPostResponse, error) {
 	requestDef := GenReqDefForListIpsProtectModeUsingPost()
 
@@ -551,8 +527,7 @@ func (c *CfwClient) ListIpsProtectModeUsingPostInvoker(request *model.ListIpsPro
 //
 // 测试域名有效性
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) ListParseDomainDetails(request *model.ListParseDomainDetailsRequest) (*model.ListParseDomainDetailsResponse, error) {
 	requestDef := GenReqDefForListParseDomainDetails()
 
@@ -573,8 +548,7 @@ func (c *CfwClient) ListParseDomainDetailsInvoker(request *model.ListParseDomain
 //
 // 获取规则击中次数
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) ListRuleHitCount(request *model.ListRuleHitCountRequest) (*model.ListRuleHitCountResponse, error) {
 	requestDef := GenReqDefForListRuleHitCount()
 
@@ -595,8 +569,7 @@ func (c *CfwClient) ListRuleHitCountInvoker(request *model.ListRuleHitCountReque
 //
 // 查询服务组成员列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) ListServiceItemsDetails(request *model.ListServiceItemsDetailsRequest) (*model.ListServiceItemsDetailsResponse, error) {
 	requestDef := GenReqDefForListServiceItemsDetails()
 
@@ -617,8 +590,7 @@ func (c *CfwClient) ListServiceItemsDetailsInvoker(request *model.ListServiceIte
 //
 // 获取服务组列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) ListServiceSet(request *model.ListServiceSetRequest) (*model.ListServiceSetResponse, error) {
 	requestDef := GenReqDefForListServiceSet()
 
@@ -639,8 +611,7 @@ func (c *CfwClient) ListServiceSetInvoker(request *model.ListServiceSetRequest) 
 //
 // 查询服务组细节
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) ListServiceSetDetails(request *model.ListServiceSetDetailsRequest) (*model.ListServiceSetDetailsResponse, error) {
 	requestDef := GenReqDefForListServiceSetDetails()
 
@@ -661,8 +632,7 @@ func (c *CfwClient) ListServiceSetDetailsInvoker(request *model.ListServiceSetDe
 //
 // 更新地址组信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) UpdateAddressSetInfoUsingPut(request *model.UpdateAddressSetInfoUsingPutRequest) (*model.UpdateAddressSetInfoUsingPutResponse, error) {
 	requestDef := GenReqDefForUpdateAddressSetInfoUsingPut()
 
@@ -683,8 +653,7 @@ func (c *CfwClient) UpdateAddressSetInfoUsingPutInvoker(request *model.UpdateAdd
 //
 // 更新黑白名单列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) UpdateBlackWhiteListUsingPut(request *model.UpdateBlackWhiteListUsingPutRequest) (*model.UpdateBlackWhiteListUsingPutResponse, error) {
 	requestDef := GenReqDefForUpdateBlackWhiteListUsingPut()
 
@@ -705,8 +674,7 @@ func (c *CfwClient) UpdateBlackWhiteListUsingPutInvoker(request *model.UpdateBla
 //
 // 更新dns服务器列表
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) UpdateDnsServers(request *model.UpdateDnsServersRequest) (*model.UpdateDnsServersResponse, error) {
 	requestDef := GenReqDefForUpdateDnsServers()
 
@@ -727,8 +695,7 @@ func (c *CfwClient) UpdateDnsServersInvoker(request *model.UpdateDnsServersReque
 //
 // 更新服务组
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) UpdateServiceSetUsingPut(request *model.UpdateServiceSetUsingPutRequest) (*model.UpdateServiceSetUsingPutResponse, error) {
 	requestDef := GenReqDefForUpdateServiceSetUsingPut()
 
@@ -749,8 +716,7 @@ func (c *CfwClient) UpdateServiceSetUsingPutInvoker(request *model.UpdateService
 //
 // 创建ACL规则
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) AddRuleAclUsingPost(request *model.AddRuleAclUsingPostRequest) (*model.AddRuleAclUsingPostResponse, error) {
 	requestDef := GenReqDefForAddRuleAclUsingPost()
 
@@ -771,8 +737,7 @@ func (c *CfwClient) AddRuleAclUsingPostInvoker(request *model.AddRuleAclUsingPos
 //
 // 删除ACL规则组
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) DeleteRuleAclUsingDelete(request *model.DeleteRuleAclUsingDeleteRequest) (*model.DeleteRuleAclUsingDeleteResponse, error) {
 	requestDef := GenReqDefForDeleteRuleAclUsingDelete()
 
@@ -793,8 +758,7 @@ func (c *CfwClient) DeleteRuleAclUsingDeleteInvoker(request *model.DeleteRuleAcl
 //
 // ACL防护规则优先级设置
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) ListRuleAclUsingPut(request *model.ListRuleAclUsingPutRequest) (*model.ListRuleAclUsingPutResponse, error) {
 	requestDef := GenReqDefForListRuleAclUsingPut()
 
@@ -815,8 +779,7 @@ func (c *CfwClient) ListRuleAclUsingPutInvoker(request *model.ListRuleAclUsingPu
 //
 // 查询防护规则
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) ListRuleAclsUsingGet(request *model.ListRuleAclsUsingGetRequest) (*model.ListRuleAclsUsingGetResponse, error) {
 	requestDef := GenReqDefForListRuleAclsUsingGet()
 
@@ -837,8 +800,7 @@ func (c *CfwClient) ListRuleAclsUsingGetInvoker(request *model.ListRuleAclsUsing
 //
 // 更新ACL规则
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) UpdateRuleAclUsingPut(request *model.UpdateRuleAclUsingPutRequest) (*model.UpdateRuleAclUsingPutResponse, error) {
 	requestDef := GenReqDefForUpdateRuleAclUsingPut()
 
@@ -859,8 +821,7 @@ func (c *CfwClient) UpdateRuleAclUsingPutInvoker(request *model.UpdateRuleAclUsi
 //
 // 开启关闭EIP
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) ChangeProtectEip(request *model.ChangeProtectEipRequest) (*model.ChangeProtectEipResponse, error) {
 	requestDef := GenReqDefForChangeProtectEip()
 
@@ -881,8 +842,7 @@ func (c *CfwClient) ChangeProtectEipInvoker(request *model.ChangeProtectEipReque
 //
 // 查询Eip个数
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) CountEips(request *model.CountEipsRequest) (*model.CountEipsResponse, error) {
 	requestDef := GenReqDefForCountEips()
 
@@ -903,8 +863,7 @@ func (c *CfwClient) CountEipsInvoker(request *model.CountEipsRequest) *CountEips
 //
 // 弹性IP列表查询
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) ListEipResources(request *model.ListEipResourcesRequest) (*model.ListEipResourcesResponse, error) {
 	requestDef := GenReqDefForListEipResources()
 
@@ -925,8 +884,7 @@ func (c *CfwClient) ListEipResourcesInvoker(request *model.ListEipResourcesReque
 //
 // 切换开关状态
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) ChangeIpsSwitchUsingPost(request *model.ChangeIpsSwitchUsingPostRequest) (*model.ChangeIpsSwitchUsingPostResponse, error) {
 	requestDef := GenReqDefForChangeIpsSwitchUsingPost()
 
@@ -947,8 +905,7 @@ func (c *CfwClient) ChangeIpsSwitchUsingPostInvoker(request *model.ChangeIpsSwit
 //
 // 查询IPS特性开关状态
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) ListIpsSwitchStatusUsingGet(request *model.ListIpsSwitchStatusUsingGetRequest) (*model.ListIpsSwitchStatusUsingGetResponse, error) {
 	requestDef := GenReqDefForListIpsSwitchStatusUsingGet()
 
@@ -969,8 +926,7 @@ func (c *CfwClient) ListIpsSwitchStatusUsingGetInvoker(request *model.ListIpsSwi
 //
 // 查询防护vpc信息
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) ListVpcProtects(request *model.ListVpcProtectsRequest) (*model.ListVpcProtectsResponse, error) {
 	requestDef := GenReqDefForListVpcProtects()
 

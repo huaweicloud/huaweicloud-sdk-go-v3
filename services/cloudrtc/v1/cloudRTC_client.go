@@ -25,8 +25,7 @@ func CloudRTCClientBuilder() *http_client.HcHttpClientBuilder {
 //
 // 最大查询跨度1天。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudRTCClient) ListRtcAbnormalEventDimension(request *model.ListRtcAbnormalEventDimensionRequest) (*model.ListRtcAbnormalEventDimensionResponse, error) {
 	requestDef := GenReqDefForListRtcAbnormalEventDimension()
 
@@ -49,8 +48,7 @@ func (c *CloudRTCClient) ListRtcAbnormalEventDimensionInvoker(request *model.Lis
 //
 // 最大查询跨度1天。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudRTCClient) ListRtcAbnormalEvents(request *model.ListRtcAbnormalEventsRequest) (*model.ListRtcAbnormalEventsResponse, error) {
 	requestDef := GenReqDefForListRtcAbnormalEvents()
 
@@ -73,8 +71,7 @@ func (c *CloudRTCClient) ListRtcAbnormalEventsInvoker(request *model.ListRtcAbno
 //
 // 可查询5天内的数据，mid 不为null，查询实时数据时，查询起止时间不超过24个小时，每次查询单个用户时，支持跨天查询。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudRTCClient) ListRtcClientQosDetails(request *model.ListRtcClientQosDetailsRequest) (*model.ListRtcClientQosDetailsResponse, error) {
 	requestDef := GenReqDefForListRtcClientQosDetails()
 
@@ -97,8 +94,7 @@ func (c *CloudRTCClient) ListRtcClientQosDetailsInvoker(request *model.ListRtcCl
 //
 // 最大查询跨度31天。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudRTCClient) ListRtcHistoryQuality(request *model.ListRtcHistoryQualityRequest) (*model.ListRtcHistoryQualityResponse, error) {
 	requestDef := GenReqDefForListRtcHistoryQuality()
 
@@ -121,8 +117,7 @@ func (c *CloudRTCClient) ListRtcHistoryQualityInvoker(request *model.ListRtcHist
 //
 // 最大查询跨度31天。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudRTCClient) ListRtcHistoryScale(request *model.ListRtcHistoryScaleRequest) (*model.ListRtcHistoryScaleResponse, error) {
 	requestDef := GenReqDefForListRtcHistoryScale()
 
@@ -143,8 +138,7 @@ func (c *CloudRTCClient) ListRtcHistoryScaleInvoker(request *model.ListRtcHistor
 //
 // 查询过去的某一时间段内各种业务的用量数据
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudRTCClient) ListRtcHistoryUsage(request *model.ListRtcHistoryUsageRequest) (*model.ListRtcHistoryUsageResponse, error) {
 	requestDef := GenReqDefForListRtcHistoryUsage()
 
@@ -167,8 +161,7 @@ func (c *CloudRTCClient) ListRtcHistoryUsageInvoker(request *model.ListRtcHistor
 //
 // 最大查询跨度1天。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudRTCClient) ListRtcRealtimeNetwork(request *model.ListRtcRealtimeNetworkRequest) (*model.ListRtcRealtimeNetworkResponse, error) {
 	requestDef := GenReqDefForListRtcRealtimeNetwork()
 
@@ -191,8 +184,7 @@ func (c *CloudRTCClient) ListRtcRealtimeNetworkInvoker(request *model.ListRtcRea
 //
 // 最大查询跨度1天。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudRTCClient) ListRtcRealtimeQuality(request *model.ListRtcRealtimeQualityRequest) (*model.ListRtcRealtimeQualityResponse, error) {
 	requestDef := GenReqDefForListRtcRealtimeQuality()
 
@@ -215,8 +207,7 @@ func (c *CloudRTCClient) ListRtcRealtimeQualityInvoker(request *model.ListRtcRea
 //
 // 最大查询跨度1天。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudRTCClient) ListRtcRealtimeScale(request *model.ListRtcRealtimeScaleRequest) (*model.ListRtcRealtimeScaleResponse, error) {
 	requestDef := GenReqDefForListRtcRealtimeScale()
 
@@ -237,8 +228,7 @@ func (c *CloudRTCClient) ListRtcRealtimeScaleInvoker(request *model.ListRtcRealt
 //
 // 对规模相关的数据，根据指定维度按在线用户数排名，获取规模相关的指标在指定维度下的统计数据
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudRTCClient) ListRtcRealtimeScaleDimension(request *model.ListRtcRealtimeScaleDimensionRequest) (*model.ListRtcRealtimeScaleDimensionResponse, error) {
 	requestDef := GenReqDefForListRtcRealtimeScaleDimension()
 
@@ -261,8 +251,7 @@ func (c *CloudRTCClient) ListRtcRealtimeScaleDimensionInvoker(request *model.Lis
 //
 // 最大查询跨度90天。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudRTCClient) ListRtcRoomList(request *model.ListRtcRoomListRequest) (*model.ListRtcRoomListResponse, error) {
 	requestDef := GenReqDefForListRtcRoomList()
 
@@ -285,8 +274,7 @@ func (c *CloudRTCClient) ListRtcRoomListInvoker(request *model.ListRtcRoomListRe
 //
 // 最大查询跨度90天。
 //
-// 详细说明请参考华为云API Explorer。
-// Please refer to Huawei cloud API Explorer for details.
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudRTCClient) ListRtcUserList(request *model.ListRtcUserListRequest) (*model.ListRtcUserListResponse, error) {
 	requestDef := GenReqDefForListRtcUserList()
 

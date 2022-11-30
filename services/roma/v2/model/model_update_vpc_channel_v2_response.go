@@ -36,8 +36,13 @@ type UpdateVpcChannelV2Response struct {
 	Status *UpdateVpcChannelV2ResponseStatus `json:"status,omitempty"`
 
 	// 后端云服务器组列表。  [暂不支持](tag:Site)
-	MemberGroups   *[]MemberGroupInfo `json:"member_groups,omitempty"`
-	HttpStatusCode int                `json:"-"`
+	MemberGroups *[]MemberGroupInfo `json:"member_groups,omitempty"`
+
+	MicroserviceInfo *MicroServiceInfo `json:"microservice_info,omitempty"`
+
+	// vpc通道类型。 - BUILTIN：BUILTIN通道类型 - MICROSERVICE：微服务类型
+	Type           *UpdateVpcChannelV2ResponseType `json:"type,omitempty"`
+	HttpStatusCode int                             `json:"-"`
 }
 
 func (o UpdateVpcChannelV2Response) String() string {
@@ -176,5 +181,47 @@ func (c *UpdateVpcChannelV2ResponseStatus) UnmarshalJSON(b []byte) error {
 		return err
 	} else {
 		return errors.New("convert enum data to int32 error")
+	}
+}
+
+type UpdateVpcChannelV2ResponseType struct {
+	value string
+}
+
+type UpdateVpcChannelV2ResponseTypeEnum struct {
+	BUILTIN      UpdateVpcChannelV2ResponseType
+	MICROSERVICE UpdateVpcChannelV2ResponseType
+}
+
+func GetUpdateVpcChannelV2ResponseTypeEnum() UpdateVpcChannelV2ResponseTypeEnum {
+	return UpdateVpcChannelV2ResponseTypeEnum{
+		BUILTIN: UpdateVpcChannelV2ResponseType{
+			value: "BUILTIN",
+		},
+		MICROSERVICE: UpdateVpcChannelV2ResponseType{
+			value: "MICROSERVICE",
+		},
+	}
+}
+
+func (c UpdateVpcChannelV2ResponseType) Value() string {
+	return c.value
+}
+
+func (c UpdateVpcChannelV2ResponseType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *UpdateVpcChannelV2ResponseType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
 	}
 }

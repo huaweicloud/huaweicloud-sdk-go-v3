@@ -15,7 +15,7 @@ type CreateDomainResponseBodyContent struct {
 	// 加速域名。
 	DomainName *string `json:"domain_name,omitempty"`
 
-	// 域名业务类型:-web:网站加速；-download:文件下载加速；-video:点播加速；-wholeSite:全站加速。
+	// 域名业务类型： - web:网站加速； - download:文件下载加速； - video:点播加速； - wholeSite:全站加速。
 	BusinessType *string `json:"business_type,omitempty"`
 
 	// 域名服务范围，若为mainland_china，则表示服务范围为中国大陆；若为outside_mainland_china，则表示服务范围为中国大陆境外；若为global，则表示服务范围为全球。

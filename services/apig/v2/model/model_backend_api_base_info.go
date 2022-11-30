@@ -37,6 +37,9 @@ type BackendApiBaseInfo struct {
 
 	// 是否开启双向认证
 	EnableClientSsl *bool `json:"enable_client_ssl,omitempty"`
+
+	// 请求后端服务的重试次数，默认为-1，范围[-1,10]
+	RetryCount *string `json:"retry_count,omitempty"`
 }
 
 func (o BackendApiBaseInfo) String() string {
