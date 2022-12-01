@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -14,6 +17,9 @@ type UpdateAddressSetDto struct {
 
 	// 地址组描述
 	Description *string `json:"description,omitempty"`
+
+	// 地址类型0 ipv4,1 ipv6,2 domain
+	AddressType *UpdateAddressSetDtoAddressType `json:"address_type,omitempty"`
 }
 
 func (o UpdateAddressSetDto) String() string {
@@ -23,4 +29,48 @@ func (o UpdateAddressSetDto) String() string {
 	}
 
 	return strings.Join([]string{"UpdateAddressSetDto", string(data)}, " ")
+}
+
+type UpdateAddressSetDtoAddressType struct {
+	value int32
+}
+
+type UpdateAddressSetDtoAddressTypeEnum struct {
+	E_0 UpdateAddressSetDtoAddressType
+	E_1 UpdateAddressSetDtoAddressType
+	E_2 UpdateAddressSetDtoAddressType
+}
+
+func GetUpdateAddressSetDtoAddressTypeEnum() UpdateAddressSetDtoAddressTypeEnum {
+	return UpdateAddressSetDtoAddressTypeEnum{
+		E_0: UpdateAddressSetDtoAddressType{
+			value: 0,
+		}, E_1: UpdateAddressSetDtoAddressType{
+			value: 1,
+		}, E_2: UpdateAddressSetDtoAddressType{
+			value: 2,
+		},
+	}
+}
+
+func (c UpdateAddressSetDtoAddressType) Value() int32 {
+	return c.value
+}
+
+func (c UpdateAddressSetDtoAddressType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *UpdateAddressSetDtoAddressType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
 }

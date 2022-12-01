@@ -8,16 +8,8 @@ import (
 
 // Response Object
 type ListServiceSetDetailsResponse struct {
-
-	// 服务组id
-	Id *string `json:"id,omitempty"`
-
-	// 服务组名称
-	Name *string `json:"name,omitempty"`
-
-	// 服务组描述信息
-	Description    *string `json:"description,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	Data           *ServiceSetDetailResponseDto `json:"data,omitempty"`
+	HttpStatusCode int                          `json:"-"`
 }
 
 func (o ListServiceSetDetailsResponse) String() string {

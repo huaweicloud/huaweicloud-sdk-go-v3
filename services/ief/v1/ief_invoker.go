@@ -41,6 +41,18 @@ func (i *CreateAppVersionsInvoker) Invoke() (*model.CreateAppVersionsResponse, e
 	}
 }
 
+type CreateBatchJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateBatchJobInvoker) Invoke() (*model.CreateBatchJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateBatchJobResponse), nil
+	}
+}
+
 type CreateConfigMapInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -86,6 +98,30 @@ func (i *CreateDeviceTemplateInvoker) Invoke() (*model.CreateDeviceTemplateRespo
 		return nil, err
 	} else {
 		return result.(*model.CreateDeviceTemplateResponse), nil
+	}
+}
+
+type CreateEdgeGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateEdgeGroupInvoker) Invoke() (*model.CreateEdgeGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateEdgeGroupResponse), nil
+	}
+}
+
+type CreateEdgeGroupCertInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateEdgeGroupCertInvoker) Invoke() (*model.CreateEdgeGroupCertResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateEdgeGroupCertResponse), nil
 	}
 }
 
@@ -149,6 +185,18 @@ func (i *CreateNodeEncryptdatasInvoker) Invoke() (*model.CreateNodeEncryptdatasR
 	}
 }
 
+type CreateProductInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateProductInvoker) Invoke() (*model.CreateProductResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateProductResponse), nil
+	}
+}
+
 type CreateRuleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -185,6 +233,18 @@ func (i *CreateServiceInvoker) Invoke() (*model.CreateServiceResponse, error) {
 	}
 }
 
+type CreateSystemEventInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSystemEventInvoker) Invoke() (*model.CreateSystemEventResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSystemEventResponse), nil
+	}
+}
+
 type CreateTagInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -218,6 +278,18 @@ func (i *DeleteAppVersionInvoker) Invoke() (*model.DeleteAppVersionResponse, err
 		return nil, err
 	} else {
 		return result.(*model.DeleteAppVersionResponse), nil
+	}
+}
+
+type DeleteBatchJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteBatchJobInvoker) Invoke() (*model.DeleteBatchJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteBatchJobResponse), nil
 	}
 }
 
@@ -266,6 +338,30 @@ func (i *DeleteDeviceTemplateInvoker) Invoke() (*model.DeleteDeviceTemplateRespo
 		return nil, err
 	} else {
 		return result.(*model.DeleteDeviceTemplateResponse), nil
+	}
+}
+
+type DeleteEdgeGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteEdgeGroupInvoker) Invoke() (*model.DeleteEdgeGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteEdgeGroupResponse), nil
+	}
+}
+
+type DeleteEdgeGroupCertInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteEdgeGroupCertInvoker) Invoke() (*model.DeleteEdgeGroupCertResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteEdgeGroupCertResponse), nil
 	}
 }
 
@@ -329,6 +425,18 @@ func (i *DeleteNodeEncryptdatasInvoker) Invoke() (*model.DeleteNodeEncryptdatasR
 	}
 }
 
+type DeleteProductInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteProductInvoker) Invoke() (*model.DeleteProductResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteProductResponse), nil
+	}
+}
+
 type DeleteResourceTagInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -377,6 +485,18 @@ func (i *DeleteServiceInvoker) Invoke() (*model.DeleteServiceResponse, error) {
 	}
 }
 
+type DeleteSystemEventInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteSystemEventInvoker) Invoke() (*model.DeleteSystemEventResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteSystemEventResponse), nil
+	}
+}
+
 type EnableDisableEdgeNodesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -410,6 +530,18 @@ func (i *ListAppsInvoker) Invoke() (*model.ListAppsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListAppsResponse), nil
+	}
+}
+
+type ListBatchJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBatchJobInvoker) Invoke() (*model.ListBatchJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBatchJobResponse), nil
 	}
 }
 
@@ -458,6 +590,30 @@ func (i *ListDevicesInvoker) Invoke() (*model.ListDevicesResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListDevicesResponse), nil
+	}
+}
+
+type ListEdgeGroupCertsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListEdgeGroupCertsInvoker) Invoke() (*model.ListEdgeGroupCertsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListEdgeGroupCertsResponse), nil
+	}
+}
+
+type ListEdgeGroupsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListEdgeGroupsInvoker) Invoke() (*model.ListEdgeGroupsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListEdgeGroupsResponse), nil
 	}
 }
 
@@ -545,6 +701,18 @@ func (i *ListPodsInvoker) Invoke() (*model.ListPodsResponse, error) {
 	}
 }
 
+type ListProductsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListProductsInvoker) Invoke() (*model.ListProductsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListProductsResponse), nil
+	}
+}
+
 type ListResourceByTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -605,6 +773,18 @@ func (i *ListServicesInvoker) Invoke() (*model.ListServicesResponse, error) {
 	}
 }
 
+type ListSystemEventsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSystemEventsInvoker) Invoke() (*model.ListSystemEventsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSystemEventsResponse), nil
+	}
+}
+
 type ListTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -641,6 +821,30 @@ func (i *RestartDeploymentsPodInvoker) Invoke() (*model.RestartDeploymentsPodRes
 	}
 }
 
+type RestoreBatchJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RestoreBatchJobInvoker) Invoke() (*model.RestoreBatchJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RestoreBatchJobResponse), nil
+	}
+}
+
+type RetryBatchJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RetryBatchJobInvoker) Invoke() (*model.RetryBatchJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RetryBatchJobResponse), nil
+	}
+}
+
 type ShowAppDetailInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -662,6 +866,18 @@ func (i *ShowAppVersionDetailInvoker) Invoke() (*model.ShowAppVersionDetailRespo
 		return nil, err
 	} else {
 		return result.(*model.ShowAppVersionDetailResponse), nil
+	}
+}
+
+type ShowBatchJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowBatchJobInvoker) Invoke() (*model.ShowBatchJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowBatchJobResponse), nil
 	}
 }
 
@@ -725,6 +941,30 @@ func (i *ShowDeviceTwinInvoker) Invoke() (*model.ShowDeviceTwinResponse, error) 
 	}
 }
 
+type ShowEdgeGroupCertDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowEdgeGroupCertDetailInvoker) Invoke() (*model.ShowEdgeGroupCertDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowEdgeGroupCertDetailResponse), nil
+	}
+}
+
+type ShowEdgeGroupDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowEdgeGroupDetailInvoker) Invoke() (*model.ShowEdgeGroupDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowEdgeGroupDetailResponse), nil
+	}
+}
+
 type ShowEdgeNodeDetailInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -758,6 +998,30 @@ func (i *ShowEndPointDetailInvoker) Invoke() (*model.ShowEndPointDetailResponse,
 		return nil, err
 	} else {
 		return result.(*model.ShowEndPointDetailResponse), nil
+	}
+}
+
+type ShowProductDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowProductDetailInvoker) Invoke() (*model.ShowProductDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowProductDetailResponse), nil
+	}
+}
+
+type ShowQuotaInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowQuotaInvoker) Invoke() (*model.ShowQuotaResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowQuotaResponse), nil
 	}
 }
 
@@ -797,6 +1061,18 @@ func (i *ShowServiceDetailInvoker) Invoke() (*model.ShowServiceDetailResponse, e
 	}
 }
 
+type ShowSystemEventDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSystemEventDetailInvoker) Invoke() (*model.ShowSystemEventDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSystemEventDetailResponse), nil
+	}
+}
+
 type StartRuleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -809,6 +1085,30 @@ func (i *StartRuleInvoker) Invoke() (*model.StartRuleResponse, error) {
 	}
 }
 
+type StartSystemEventInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StartSystemEventInvoker) Invoke() (*model.StartSystemEventResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StartSystemEventResponse), nil
+	}
+}
+
+type StopBatchJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StopBatchJobInvoker) Invoke() (*model.StopBatchJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StopBatchJobResponse), nil
+	}
+}
+
 type StopRuleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -818,6 +1118,18 @@ func (i *StopRuleInvoker) Invoke() (*model.StopRuleResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.StopRuleResponse), nil
+	}
+}
+
+type StopSystemEventInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StopSystemEventInvoker) Invoke() (*model.StopSystemEventResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StopSystemEventResponse), nil
 	}
 }
 
@@ -902,6 +1214,30 @@ func (i *UpdateDeviceTwinInvoker) Invoke() (*model.UpdateDeviceTwinResponse, err
 		return nil, err
 	} else {
 		return result.(*model.UpdateDeviceTwinResponse), nil
+	}
+}
+
+type UpdateEdgeGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateEdgeGroupInvoker) Invoke() (*model.UpdateEdgeGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateEdgeGroupResponse), nil
+	}
+}
+
+type UpdateEdgeGroupNodeBindingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateEdgeGroupNodeBindingInvoker) Invoke() (*model.UpdateEdgeGroupNodeBindingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateEdgeGroupNodeBindingResponse), nil
 	}
 }
 

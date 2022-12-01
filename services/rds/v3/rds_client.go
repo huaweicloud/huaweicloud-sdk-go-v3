@@ -166,6 +166,27 @@ func (c *RdsClient) ChangeOpsWindowInvoker(request *model.ChangeOpsWindowRequest
 	return &ChangeOpsWindowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CopyConfiguration 复制参数模板
+//
+// 复制参数模板
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) CopyConfiguration(request *model.CopyConfigurationRequest) (*model.CopyConfigurationResponse, error) {
+	requestDef := GenReqDefForCopyConfiguration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CopyConfigurationResponse), nil
+	}
+}
+
+// CopyConfigurationInvoker 复制参数模板
+func (c *RdsClient) CopyConfigurationInvoker(request *model.CopyConfigurationRequest) *CopyConfigurationInvoker {
+	requestDef := GenReqDefForCopyConfiguration()
+	return &CopyConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateConfiguration 创建参数模板
 //
 // 创建参数模板。
@@ -605,6 +626,27 @@ func (c *RdsClient) ListFlavors(request *model.ListFlavorsRequest) (*model.ListF
 func (c *RdsClient) ListFlavorsInvoker(request *model.ListFlavorsRequest) *ListFlavorsInvoker {
 	requestDef := GenReqDefForListFlavors()
 	return &ListFlavorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListInstanceParamHistories 查询实例参数修改历史
+//
+// 实例参数修改历史。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListInstanceParamHistories(request *model.ListInstanceParamHistoriesRequest) (*model.ListInstanceParamHistoriesResponse, error) {
+	requestDef := GenReqDefForListInstanceParamHistories()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstanceParamHistoriesResponse), nil
+	}
+}
+
+// ListInstanceParamHistoriesInvoker 查询实例参数修改历史
+func (c *RdsClient) ListInstanceParamHistoriesInvoker(request *model.ListInstanceParamHistoriesRequest) *ListInstanceParamHistoriesInvoker {
+	requestDef := GenReqDefForListInstanceParamHistories()
+	return &ListInstanceParamHistoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListInstances 查询数据库实例列表
@@ -2569,6 +2611,27 @@ func (c *RdsClient) AllowSqlserverDbUserPrivilegeInvoker(request *model.AllowSql
 	return &AllowSqlserverDbUserPrivilegeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchAddMsdtcs 添加MSDTC
+//
+// 添加MSDTC相关主机host地址
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) BatchAddMsdtcs(request *model.BatchAddMsdtcsRequest) (*model.BatchAddMsdtcsResponse, error) {
+	requestDef := GenReqDefForBatchAddMsdtcs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchAddMsdtcsResponse), nil
+	}
+}
+
+// BatchAddMsdtcsInvoker 添加MSDTC
+func (c *RdsClient) BatchAddMsdtcsInvoker(request *model.BatchAddMsdtcsRequest) *BatchAddMsdtcsInvoker {
+	requestDef := GenReqDefForBatchAddMsdtcs()
+	return &BatchAddMsdtcsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateSqlserverDatabase 创建数据库
 //
 // 创建数据库。
@@ -2693,6 +2756,27 @@ func (c *RdsClient) ListAuthorizedSqlserverDbUsers(request *model.ListAuthorized
 func (c *RdsClient) ListAuthorizedSqlserverDbUsersInvoker(request *model.ListAuthorizedSqlserverDbUsersRequest) *ListAuthorizedSqlserverDbUsersInvoker {
 	requestDef := GenReqDefForListAuthorizedSqlserverDbUsers()
 	return &ListAuthorizedSqlserverDbUsersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListMsdtcHosts 查询MSDTC的hosts信息
+//
+// 查询MSDTC的hosts信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListMsdtcHosts(request *model.ListMsdtcHostsRequest) (*model.ListMsdtcHostsResponse, error) {
+	requestDef := GenReqDefForListMsdtcHosts()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListMsdtcHostsResponse), nil
+	}
+}
+
+// ListMsdtcHostsInvoker 查询MSDTC的hosts信息
+func (c *RdsClient) ListMsdtcHostsInvoker(request *model.ListMsdtcHostsRequest) *ListMsdtcHostsInvoker {
+	requestDef := GenReqDefForListMsdtcHosts()
+	return &ListMsdtcHostsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListSqlserverDatabases 查询数据库列表

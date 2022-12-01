@@ -55,6 +55,9 @@ type RuleAclListResponseDtoDataRecords struct {
 	Destination *RuleAddressDto `json:"destination,omitempty"`
 
 	Service *RuleServiceDto `json:"service,omitempty"`
+
+	// 规则type，0：互联网规则，1：vpc规则，2nat规则
+	Type *RuleAclListResponseDtoDataRecordsType `json:"type,omitempty"`
 }
 
 func (o RuleAclListResponseDtoDataRecords) String() string {
@@ -94,6 +97,50 @@ func (c RuleAclListResponseDtoDataRecordsDirection) MarshalJSON() ([]byte, error
 }
 
 func (c *RuleAclListResponseDtoDataRecordsDirection) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
+}
+
+type RuleAclListResponseDtoDataRecordsType struct {
+	value int32
+}
+
+type RuleAclListResponseDtoDataRecordsTypeEnum struct {
+	E_0 RuleAclListResponseDtoDataRecordsType
+	E_1 RuleAclListResponseDtoDataRecordsType
+	E_2 RuleAclListResponseDtoDataRecordsType
+}
+
+func GetRuleAclListResponseDtoDataRecordsTypeEnum() RuleAclListResponseDtoDataRecordsTypeEnum {
+	return RuleAclListResponseDtoDataRecordsTypeEnum{
+		E_0: RuleAclListResponseDtoDataRecordsType{
+			value: 0,
+		}, E_1: RuleAclListResponseDtoDataRecordsType{
+			value: 1,
+		}, E_2: RuleAclListResponseDtoDataRecordsType{
+			value: 2,
+		},
+	}
+}
+
+func (c RuleAclListResponseDtoDataRecordsType) Value() int32 {
+	return c.value
+}
+
+func (c RuleAclListResponseDtoDataRecordsType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *RuleAclListResponseDtoDataRecordsType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("int32")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

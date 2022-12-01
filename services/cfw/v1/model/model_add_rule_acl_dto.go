@@ -15,7 +15,7 @@ type AddRuleAclDto struct {
 	// 防护对象id
 	ObjectId string `json:"object_id"`
 
-	// 规则type，0：互联网规则,1：vpc规则, 2:nat规则
+	// 规则type，0：互联网规则，1:vpc规则，2：nat规则
 	Type AddRuleAclDtoType `json:"type"`
 
 	// rules

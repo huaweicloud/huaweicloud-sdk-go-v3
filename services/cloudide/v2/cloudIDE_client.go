@@ -376,6 +376,76 @@ func (c *CloudIDEClient) UploadExtensionFileInvoker(request *model.UploadExtensi
 	return &UploadExtensionFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateAcceptance CreateAcceptance接口
+//
+// create a acceptance
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudIDEClient) CreateAcceptance(request *model.CreateAcceptanceRequest) (*model.CreateAcceptanceResponse, error) {
+	requestDef := GenReqDefForCreateAcceptance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAcceptanceResponse), nil
+	}
+}
+
+// CreateAcceptanceInvoker CreateAcceptance接口
+func (c *CloudIDEClient) CreateAcceptanceInvoker(request *model.CreateAcceptanceRequest) *CreateAcceptanceInvoker {
+	requestDef := GenReqDefForCreateAcceptance()
+	return &CreateAcceptanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateRequest Create Request接口
+//
+// create a code generation request.
+//
+// if agent receives a code generation request, it will:
+// - record the request into mysql,
+// - decompose the request into &#x60;topn&#x60; tasks.
+// - send the tasks to kafka.
+//
+// if agent receives a duplicated code generation request, it will not decompose request and send to kafka.
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudIDEClient) CreateRequest(request *model.CreateRequestRequest) (*model.CreateRequestResponse, error) {
+	requestDef := GenReqDefForCreateRequest()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateRequestResponse), nil
+	}
+}
+
+// CreateRequestInvoker Create Request接口
+func (c *CloudIDEClient) CreateRequestInvoker(request *model.CreateRequestRequest) *CreateRequestInvoker {
+	requestDef := GenReqDefForCreateRequest()
+	return &CreateRequestInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowResult Show Result接口
+//
+// get the result of the code generation request.
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudIDEClient) ShowResult(request *model.ShowResultRequest) (*model.ShowResultResponse, error) {
+	requestDef := GenReqDefForShowResult()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowResultResponse), nil
+	}
+}
+
+// ShowResultInvoker Show Result接口
+func (c *CloudIDEClient) ShowResultInvoker(request *model.ShowResultRequest) *ShowResultInvoker {
+	requestDef := GenReqDefForShowResult()
+	return &ShowResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CheckInstanceAccess 查询用户是否有权限访问某个IDE实例
 //
 // 查询用户是否有权限访问某个IDE实例

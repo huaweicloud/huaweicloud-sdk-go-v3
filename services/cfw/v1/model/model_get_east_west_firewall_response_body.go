@@ -28,7 +28,7 @@ type GetEastWestFirewallResponseBody struct {
 	InspectionVpc *VpcDetail `json:"inspection_vpc,omitempty"`
 
 	// 东西向防护资源信息
-	ProtectedInfos *[]EwProtectResourceInfo `json:"protected_infos,omitempty"`
+	ProtectInfos *[]EwProtectResourceInfo `json:"protect_infos,omitempty"`
 
 	// 防护VPC总数
 	Total *int32 `json:"total,omitempty"`

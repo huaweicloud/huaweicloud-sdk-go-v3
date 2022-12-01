@@ -9,7 +9,7 @@ import (
 // 动态属性的期望信息
 type Excepted struct {
 
-	// 动态属性的初始值，最大长度512， value允许英文字母、数字、下划线、中划线、点、逗号、冒号、/、@、#
+	// 动态属性的初始值，最大长度512，value允许英文字母、数字、下划线、中划线、点、逗号、冒号、/、@、+、?、^、=、%、&、~、#、!、*
 	Value *string `json:"value,omitempty"`
 
 	Metadata *ExceptedMetadata `json:"metadata,omitempty"`

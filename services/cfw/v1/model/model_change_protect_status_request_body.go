@@ -12,7 +12,7 @@ import (
 // 修改东西向防护状态请求体
 type ChangeProtectStatusRequestBody struct {
 
-	// 防护对象ID
+	// 防护对象id
 	ObjectId string `json:"object_id"`
 
 	// 防护状态：0 开启，1 关闭

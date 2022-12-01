@@ -9,23 +9,14 @@ import (
 // Response Object
 type ListReservedInstanceConfigsResponse struct {
 
-	// 函数URN
-	FunctionUrn *string `json:"function_urn,omitempty"`
+	// 函数预留实例列表
+	Reservedinstances *[]ReservedInstanceConfigs `json:"reservedinstances,omitempty"`
 
-	// 限定类型, 支持version和alias
-	QualifierType *string `json:"qualifier_type,omitempty"`
+	PageInfo *PageInfo `json:"page_info,omitempty"`
 
-	// 限定类型对应的取值
-	QualifierName *string `json:"qualifier_name,omitempty"`
-
-	// 预留实例个数
-	MinCount *int32 `json:"min_count,omitempty"`
-
-	// 是否开启闲置模式配置
-	IdleMode *bool `json:"idle_mode,omitempty"`
-
-	TacticsConfig  *TacticsConfig `json:"tactics_config,omitempty"`
-	HttpStatusCode int            `json:"-"`
+	// 函数个数
+	Count          *int64 `json:"count,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ListReservedInstanceConfigsResponse) String() string {

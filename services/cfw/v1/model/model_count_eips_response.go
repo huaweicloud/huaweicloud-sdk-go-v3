@@ -8,16 +8,8 @@ import (
 
 // Response Object
 type CountEipsResponse struct {
-
-	// 防护对象ID
-	ObjectId *string `json:"object_id,omitempty"`
-
-	// EIP总数
-	EipTotal *int32 `json:"eip_total,omitempty"`
-
-	// EIP防护数
-	EipProtected   *int32 `json:"eip_protected,omitempty"`
-	HttpStatusCode int    `json:"-"`
+	Data           *EipCountRespData `json:"data,omitempty"`
+	HttpStatusCode int               `json:"-"`
 }
 
 func (o CountEipsResponse) String() string {

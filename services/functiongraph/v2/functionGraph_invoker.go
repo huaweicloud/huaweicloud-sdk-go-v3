@@ -17,6 +17,18 @@ func (i *AsyncInvokeFunctionInvoker) Invoke() (*model.AsyncInvokeFunctionRespons
 	}
 }
 
+type AsyncInvokeReservedFunctionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AsyncInvokeReservedFunctionInvoker) Invoke() (*model.AsyncInvokeReservedFunctionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AsyncInvokeReservedFunctionResponse), nil
+	}
+}
+
 type BatchDeleteFunctionTriggersInvoker struct {
 	*invoker.BaseInvoker
 }

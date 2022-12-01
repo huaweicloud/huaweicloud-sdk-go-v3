@@ -89,6 +89,18 @@ func (i *ChangeOpsWindowInvoker) Invoke() (*model.ChangeOpsWindowResponse, error
 	}
 }
 
+type CopyConfigurationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CopyConfigurationInvoker) Invoke() (*model.CopyConfigurationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CopyConfigurationResponse), nil
+	}
+}
+
 type CreateConfigurationInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -338,6 +350,18 @@ func (i *ListFlavorsInvoker) Invoke() (*model.ListFlavorsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListFlavorsResponse), nil
+	}
+}
+
+type ListInstanceParamHistoriesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceParamHistoriesInvoker) Invoke() (*model.ListInstanceParamHistoriesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceParamHistoriesResponse), nil
 	}
 }
 
@@ -1457,6 +1481,18 @@ func (i *AllowSqlserverDbUserPrivilegeInvoker) Invoke() (*model.AllowSqlserverDb
 	}
 }
 
+type BatchAddMsdtcsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchAddMsdtcsInvoker) Invoke() (*model.BatchAddMsdtcsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchAddMsdtcsResponse), nil
+	}
+}
+
 type CreateSqlserverDatabaseInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1526,6 +1562,18 @@ func (i *ListAuthorizedSqlserverDbUsersInvoker) Invoke() (*model.ListAuthorizedS
 		return nil, err
 	} else {
 		return result.(*model.ListAuthorizedSqlserverDbUsersResponse), nil
+	}
+}
+
+type ListMsdtcHostsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListMsdtcHostsInvoker) Invoke() (*model.ListMsdtcHostsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListMsdtcHostsResponse), nil
 	}
 }
 

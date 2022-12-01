@@ -52,6 +52,9 @@ type UpdateRuleAclDto struct {
 	Destination *RuleAddressDto `json:"destination,omitempty"`
 
 	Service *RuleServiceDto `json:"service,omitempty"`
+
+	// 规则type，0：互联网规则，1:vpc规则，2：nat规则
+	Type *UpdateRuleAclDtoType `json:"type,omitempty"`
 }
 
 func (o UpdateRuleAclDto) String() string {
@@ -214,6 +217,50 @@ func (c UpdateRuleAclDtoLongConnectEnable) MarshalJSON() ([]byte, error) {
 }
 
 func (c *UpdateRuleAclDtoLongConnectEnable) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(int32)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
+}
+
+type UpdateRuleAclDtoType struct {
+	value int32
+}
+
+type UpdateRuleAclDtoTypeEnum struct {
+	E_0 UpdateRuleAclDtoType
+	E_1 UpdateRuleAclDtoType
+	E_2 UpdateRuleAclDtoType
+}
+
+func GetUpdateRuleAclDtoTypeEnum() UpdateRuleAclDtoTypeEnum {
+	return UpdateRuleAclDtoTypeEnum{
+		E_0: UpdateRuleAclDtoType{
+			value: 0,
+		}, E_1: UpdateRuleAclDtoType{
+			value: 1,
+		}, E_2: UpdateRuleAclDtoType{
+			value: 2,
+		},
+	}
+}
+
+func (c UpdateRuleAclDtoType) Value() int32 {
+	return c.value
+}
+
+func (c UpdateRuleAclDtoType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *UpdateRuleAclDtoType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("int32")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

@@ -209,6 +209,42 @@ func (i *UploadExtensionFileInvoker) Invoke() (*model.UploadExtensionFileRespons
 	}
 }
 
+type CreateAcceptanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAcceptanceInvoker) Invoke() (*model.CreateAcceptanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAcceptanceResponse), nil
+	}
+}
+
+type CreateRequestInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateRequestInvoker) Invoke() (*model.CreateRequestResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateRequestResponse), nil
+	}
+}
+
+type ShowResultInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowResultInvoker) Invoke() (*model.ShowResultResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowResultResponse), nil
+	}
+}
+
 type CheckInstanceAccessInvoker struct {
 	*invoker.BaseInvoker
 }

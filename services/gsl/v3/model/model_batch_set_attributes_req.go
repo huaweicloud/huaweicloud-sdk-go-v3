@@ -8,7 +8,7 @@ import (
 
 type BatchSetAttributesReq struct {
 
-	// 临时文件ID
+	// 临时文件ID，如果通过接口调用，此字段为空
 	FileTempId *int64 `json:"file_temp_id,omitempty"`
 
 	// 自定义属性集合

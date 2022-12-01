@@ -31,6 +31,9 @@ type ContainerDef struct {
 	// 是否启用特权容器,默认值false
 	Privileged *bool `json:"privileged,omitempty"`
 
+	// 容器运行用户ID，输入范围为0~65534的整数
+	RunAsUser *int32 `json:"run_as_user,omitempty"`
+
 	ReadinessProbe *Probe `json:"readiness_probe,omitempty"`
 
 	LivenessProbe *Probe `json:"liveness_probe,omitempty"`

@@ -20,7 +20,7 @@ type UpdateFunctionCodeResponse struct {
 	// 域名id。
 	DomainId *string `json:"domain_id,omitempty"`
 
-	// FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本
+	// FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。
 	Runtime *UpdateFunctionCodeResponseRuntime `json:"runtime,omitempty"`
 
 	// 函数代码类型，取值有4种。 inline: UI在线编辑代码。 zip: 函数代码为zip包。 obs: 函数代码来源于obs存储。 jar: 函数代码为jar包，主要针对Java函数。
@@ -83,6 +83,7 @@ type UpdateFunctionCodeResponseRuntimeEnum struct {
 	C__NET_CORE_3_1 UpdateFunctionCodeResponseRuntime
 	PHP7_3          UpdateFunctionCodeResponseRuntime
 	PYTHON3_9       UpdateFunctionCodeResponseRuntime
+	HTTP            UpdateFunctionCodeResponseRuntime
 }
 
 func GetUpdateFunctionCodeResponseRuntimeEnum() UpdateFunctionCodeResponseRuntimeEnum {
@@ -134,6 +135,9 @@ func GetUpdateFunctionCodeResponseRuntimeEnum() UpdateFunctionCodeResponseRuntim
 		},
 		PYTHON3_9: UpdateFunctionCodeResponseRuntime{
 			value: "Python3.9",
+		},
+		HTTP: UpdateFunctionCodeResponseRuntime{
+			value: "http",
 		},
 	}
 }

@@ -1,0 +1,26 @@
+package model
+
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
+	"strings"
+)
+
+// 计算资源
+type TaskSourceUsageEstimate struct {
+
+	// cpu消耗
+	Cpu float32 `json:"cpu"`
+
+	// 内存消耗
+	Memory int32 `json:"memory"`
+}
+
+func (o TaskSourceUsageEstimate) String() string {
+	data, err := utils.Marshal(o)
+	if err != nil {
+		return "TaskSourceUsageEstimate struct{}"
+	}
+
+	return strings.Join([]string{"TaskSourceUsageEstimate", string(data)}, " ")
+}

@@ -8,8 +8,10 @@ import (
 
 // Response Object
 type CreateAttributeResponse struct {
-	Body           *string `json:"body,omitempty"`
-	HttpStatusCode int     `json:"-"`
+
+	// 自定义属性标识
+	Id             *int64 `json:"id,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o CreateAttributeResponse) String() string {

@@ -88,6 +88,27 @@ func (c *IefClient) CreateAppVersionsInvoker(request *model.CreateAppVersionsReq
 	return &CreateAppVersionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateBatchJob 创建批量处理任务
+//
+// 创建批量处理作业。该API用于创建批量处理作业，当前支持：批量节点升级、批量应用部署、批量应用升级
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IefClient) CreateBatchJob(request *model.CreateBatchJobRequest) (*model.CreateBatchJobResponse, error) {
+	requestDef := GenReqDefForCreateBatchJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateBatchJobResponse), nil
+	}
+}
+
+// CreateBatchJobInvoker 创建批量处理任务
+func (c *IefClient) CreateBatchJobInvoker(request *model.CreateBatchJobRequest) *CreateBatchJobInvoker {
+	requestDef := GenReqDefForCreateBatchJob()
+	return &CreateBatchJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateConfigMap 创建配置项
 //
 // 创建配置项
@@ -170,6 +191,48 @@ func (c *IefClient) CreateDeviceTemplate(request *model.CreateDeviceTemplateRequ
 func (c *IefClient) CreateDeviceTemplateInvoker(request *model.CreateDeviceTemplateRequest) *CreateDeviceTemplateInvoker {
 	requestDef := GenReqDefForCreateDeviceTemplate()
 	return &CreateDeviceTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateEdgeGroup 边缘节点组管理
+//
+// 创建边缘节点组。该API只能在铂金版实例中使用
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IefClient) CreateEdgeGroup(request *model.CreateEdgeGroupRequest) (*model.CreateEdgeGroupResponse, error) {
+	requestDef := GenReqDefForCreateEdgeGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateEdgeGroupResponse), nil
+	}
+}
+
+// CreateEdgeGroupInvoker 边缘节点组管理
+func (c *IefClient) CreateEdgeGroupInvoker(request *model.CreateEdgeGroupRequest) *CreateEdgeGroupInvoker {
+	requestDef := GenReqDefForCreateEdgeGroup()
+	return &CreateEdgeGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateEdgeGroupCert 创建边缘节点组证书
+//
+// 创建边缘节点组证书。边缘节点组证书.tar.gz文件仅在调用该API时提供压缩包下载，请及时下载证书文件
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IefClient) CreateEdgeGroupCert(request *model.CreateEdgeGroupCertRequest) (*model.CreateEdgeGroupCertResponse, error) {
+	requestDef := GenReqDefForCreateEdgeGroupCert()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateEdgeGroupCertResponse), nil
+	}
+}
+
+// CreateEdgeGroupCertInvoker 创建边缘节点组证书
+func (c *IefClient) CreateEdgeGroupCertInvoker(request *model.CreateEdgeGroupCertRequest) *CreateEdgeGroupCertInvoker {
+	requestDef := GenReqDefForCreateEdgeGroupCert()
+	return &CreateEdgeGroupCertInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateEdgeNode 注册边缘节点
@@ -277,6 +340,27 @@ func (c *IefClient) CreateNodeEncryptdatasInvoker(request *model.CreateNodeEncry
 	return &CreateNodeEncryptdatasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateProduct 创建批量节点注册作业
+//
+// 创建批量节点注册作业。接口调用成功后，您可以将响应消息体中product.package字段使用base64解码成tar.gz产品证书文件，并在控制台下载边缘注册软件edge-register和edge-installer，使用该产品证书批量纳管边缘节点。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IefClient) CreateProduct(request *model.CreateProductRequest) (*model.CreateProductResponse, error) {
+	requestDef := GenReqDefForCreateProduct()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateProductResponse), nil
+	}
+}
+
+// CreateProductInvoker 创建批量节点注册作业
+func (c *IefClient) CreateProductInvoker(request *model.CreateProductRequest) *CreateProductInvoker {
+	requestDef := GenReqDefForCreateProduct()
+	return &CreateProductInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateRule 创建规则
 //
 // 创建一条规则
@@ -338,6 +422,27 @@ func (c *IefClient) CreateService(request *model.CreateServiceRequest) (*model.C
 func (c *IefClient) CreateServiceInvoker(request *model.CreateServiceRequest) *CreateServiceInvoker {
 	requestDef := GenReqDefForCreateService()
 	return &CreateServiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSystemEvent 创建系统订阅
+//
+// 创建系统订阅
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IefClient) CreateSystemEvent(request *model.CreateSystemEventRequest) (*model.CreateSystemEventResponse, error) {
+	requestDef := GenReqDefForCreateSystemEvent()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSystemEventResponse), nil
+	}
+}
+
+// CreateSystemEventInvoker 创建系统订阅
+func (c *IefClient) CreateSystemEventInvoker(request *model.CreateSystemEventRequest) *CreateSystemEventInvoker {
+	requestDef := GenReqDefForCreateSystemEvent()
+	return &CreateSystemEventInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateTag 添加资源标签
@@ -403,6 +508,27 @@ func (c *IefClient) DeleteAppVersion(request *model.DeleteAppVersionRequest) (*m
 func (c *IefClient) DeleteAppVersionInvoker(request *model.DeleteAppVersionRequest) *DeleteAppVersionInvoker {
 	requestDef := GenReqDefForDeleteAppVersion()
 	return &DeleteAppVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteBatchJob 删除批量处理作业
+//
+// 删除批量处理作业
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IefClient) DeleteBatchJob(request *model.DeleteBatchJobRequest) (*model.DeleteBatchJobResponse, error) {
+	requestDef := GenReqDefForDeleteBatchJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteBatchJobResponse), nil
+	}
+}
+
+// DeleteBatchJobInvoker 删除批量处理作业
+func (c *IefClient) DeleteBatchJobInvoker(request *model.DeleteBatchJobRequest) *DeleteBatchJobInvoker {
+	requestDef := GenReqDefForDeleteBatchJob()
+	return &DeleteBatchJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteConfigMap 删除配置项
@@ -487,6 +613,48 @@ func (c *IefClient) DeleteDeviceTemplate(request *model.DeleteDeviceTemplateRequ
 func (c *IefClient) DeleteDeviceTemplateInvoker(request *model.DeleteDeviceTemplateRequest) *DeleteDeviceTemplateInvoker {
 	requestDef := GenReqDefForDeleteDeviceTemplate()
 	return &DeleteDeviceTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteEdgeGroup 删除边缘节点组
+//
+// 删除边缘节点组。该API只能在铂金版实例中使用
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IefClient) DeleteEdgeGroup(request *model.DeleteEdgeGroupRequest) (*model.DeleteEdgeGroupResponse, error) {
+	requestDef := GenReqDefForDeleteEdgeGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteEdgeGroupResponse), nil
+	}
+}
+
+// DeleteEdgeGroupInvoker 删除边缘节点组
+func (c *IefClient) DeleteEdgeGroupInvoker(request *model.DeleteEdgeGroupRequest) *DeleteEdgeGroupInvoker {
+	requestDef := GenReqDefForDeleteEdgeGroup()
+	return &DeleteEdgeGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteEdgeGroupCert 删除边缘节点组证书
+//
+// 删除边缘节点组证书
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IefClient) DeleteEdgeGroupCert(request *model.DeleteEdgeGroupCertRequest) (*model.DeleteEdgeGroupCertResponse, error) {
+	requestDef := GenReqDefForDeleteEdgeGroupCert()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteEdgeGroupCertResponse), nil
+	}
+}
+
+// DeleteEdgeGroupCertInvoker 删除边缘节点组证书
+func (c *IefClient) DeleteEdgeGroupCertInvoker(request *model.DeleteEdgeGroupCertRequest) *DeleteEdgeGroupCertInvoker {
+	requestDef := GenReqDefForDeleteEdgeGroupCert()
+	return &DeleteEdgeGroupCertInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteEdgeNode 删除边缘节点
@@ -594,6 +762,27 @@ func (c *IefClient) DeleteNodeEncryptdatasInvoker(request *model.DeleteNodeEncry
 	return &DeleteNodeEncryptdatasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteProduct 删除批量节点注册作业
+//
+// 删除批量节点注册作业。接口调用成功后，与该批量注册任务关联的批量注册凭证将会失效
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IefClient) DeleteProduct(request *model.DeleteProductRequest) (*model.DeleteProductResponse, error) {
+	requestDef := GenReqDefForDeleteProduct()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteProductResponse), nil
+	}
+}
+
+// DeleteProductInvoker 删除批量节点注册作业
+func (c *IefClient) DeleteProductInvoker(request *model.DeleteProductRequest) *DeleteProductInvoker {
+	requestDef := GenReqDefForDeleteProduct()
+	return &DeleteProductInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteResourceTag 删除资源标签
 //
 // 删除资源标签。删除时不对标签字符集做校验，调用前必须要做encodeURI，服务端需要对接口uri做decodeURI。删除的key不存在报404，Key不能为空或者空字符串。
@@ -678,6 +867,27 @@ func (c *IefClient) DeleteServiceInvoker(request *model.DeleteServiceRequest) *D
 	return &DeleteServiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteSystemEvent 删除系统订阅列表
+//
+// 删除系统订阅列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IefClient) DeleteSystemEvent(request *model.DeleteSystemEventRequest) (*model.DeleteSystemEventResponse, error) {
+	requestDef := GenReqDefForDeleteSystemEvent()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteSystemEventResponse), nil
+	}
+}
+
+// DeleteSystemEventInvoker 删除系统订阅列表
+func (c *IefClient) DeleteSystemEventInvoker(request *model.DeleteSystemEventRequest) *DeleteSystemEventInvoker {
+	requestDef := GenReqDefForDeleteSystemEvent()
+	return &DeleteSystemEventInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // EnableDisableEdgeNodes 启用停用边缘节点
 //
 // 启用停用边缘节点。被停用的边缘节点将无法连接到云端服务，可用该URI启用边缘节点恢复连接。
@@ -739,6 +949,27 @@ func (c *IefClient) ListApps(request *model.ListAppsRequest) (*model.ListAppsRes
 func (c *IefClient) ListAppsInvoker(request *model.ListAppsRequest) *ListAppsInvoker {
 	requestDef := GenReqDefForListApps()
 	return &ListAppsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListBatchJob 查询批量处理作业列表
+//
+// 查询批量处理作业列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IefClient) ListBatchJob(request *model.ListBatchJobRequest) (*model.ListBatchJobResponse, error) {
+	requestDef := GenReqDefForListBatchJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListBatchJobResponse), nil
+	}
+}
+
+// ListBatchJobInvoker 查询批量处理作业列表
+func (c *IefClient) ListBatchJobInvoker(request *model.ListBatchJobRequest) *ListBatchJobInvoker {
+	requestDef := GenReqDefForListBatchJob()
+	return &ListBatchJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListConfigMaps 查询配置项列表
@@ -823,6 +1054,48 @@ func (c *IefClient) ListDevices(request *model.ListDevicesRequest) (*model.ListD
 func (c *IefClient) ListDevicesInvoker(request *model.ListDevicesRequest) *ListDevicesInvoker {
 	requestDef := GenReqDefForListDevices()
 	return &ListDevicesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListEdgeGroupCerts 查询边缘节点组证书列表
+//
+// 查询边缘节点组证书列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IefClient) ListEdgeGroupCerts(request *model.ListEdgeGroupCertsRequest) (*model.ListEdgeGroupCertsResponse, error) {
+	requestDef := GenReqDefForListEdgeGroupCerts()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListEdgeGroupCertsResponse), nil
+	}
+}
+
+// ListEdgeGroupCertsInvoker 查询边缘节点组证书列表
+func (c *IefClient) ListEdgeGroupCertsInvoker(request *model.ListEdgeGroupCertsRequest) *ListEdgeGroupCertsInvoker {
+	requestDef := GenReqDefForListEdgeGroupCerts()
+	return &ListEdgeGroupCertsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListEdgeGroups 查询边缘节点组列表
+//
+// 查询边缘节点组列表。该API只能在铂金版实例中使用
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IefClient) ListEdgeGroups(request *model.ListEdgeGroupsRequest) (*model.ListEdgeGroupsResponse, error) {
+	requestDef := GenReqDefForListEdgeGroups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListEdgeGroupsResponse), nil
+	}
+}
+
+// ListEdgeGroupsInvoker 查询边缘节点组列表
+func (c *IefClient) ListEdgeGroupsInvoker(request *model.ListEdgeGroupsRequest) *ListEdgeGroupsInvoker {
+	requestDef := GenReqDefForListEdgeGroups()
+	return &ListEdgeGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListEdgeNodeCerts 查询节点证书
@@ -976,6 +1249,27 @@ func (c *IefClient) ListPodsInvoker(request *model.ListPodsRequest) *ListPodsInv
 	return &ListPodsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListProducts 查询批量节点注册作业列表
+//
+// 查询批量节点注册作业列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IefClient) ListProducts(request *model.ListProductsRequest) (*model.ListProductsResponse, error) {
+	requestDef := GenReqDefForListProducts()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListProductsResponse), nil
+	}
+}
+
+// ListProductsInvoker 查询批量节点注册作业列表
+func (c *IefClient) ListProductsInvoker(request *model.ListProductsRequest) *ListProductsInvoker {
+	requestDef := GenReqDefForListProducts()
+	return &ListProductsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListResourceByTags 查询资源实例
 //
 // 使用标签过滤实例
@@ -1081,6 +1375,27 @@ func (c *IefClient) ListServicesInvoker(request *model.ListServicesRequest) *Lis
 	return &ListServicesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSystemEvents 查询系统订阅列表
+//
+// 查询系统订阅列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IefClient) ListSystemEvents(request *model.ListSystemEventsRequest) (*model.ListSystemEventsResponse, error) {
+	requestDef := GenReqDefForListSystemEvents()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSystemEventsResponse), nil
+	}
+}
+
+// ListSystemEventsInvoker 查询系统订阅列表
+func (c *IefClient) ListSystemEventsInvoker(request *model.ListSystemEventsRequest) *ListSystemEventsInvoker {
+	requestDef := GenReqDefForListSystemEvents()
+	return &ListSystemEventsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListTags 查询资源标签
 //
 // 查询指定实例的标签信息
@@ -1144,6 +1459,48 @@ func (c *IefClient) RestartDeploymentsPodInvoker(request *model.RestartDeploymen
 	return &RestartDeploymentsPodInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RestoreBatchJob 继续批量处理作业
+//
+// 继续执行批量处理作业。该API只对停止的批量处理作业生效
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IefClient) RestoreBatchJob(request *model.RestoreBatchJobRequest) (*model.RestoreBatchJobResponse, error) {
+	requestDef := GenReqDefForRestoreBatchJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RestoreBatchJobResponse), nil
+	}
+}
+
+// RestoreBatchJobInvoker 继续批量处理作业
+func (c *IefClient) RestoreBatchJobInvoker(request *model.RestoreBatchJobRequest) *RestoreBatchJobInvoker {
+	requestDef := GenReqDefForRestoreBatchJob()
+	return &RestoreBatchJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RetryBatchJob 重试批量处理作业
+//
+// 重试批量处理作业。该API仅对执行状态失败的批量处理作业生效
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IefClient) RetryBatchJob(request *model.RetryBatchJobRequest) (*model.RetryBatchJobResponse, error) {
+	requestDef := GenReqDefForRetryBatchJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RetryBatchJobResponse), nil
+	}
+}
+
+// RetryBatchJobInvoker 重试批量处理作业
+func (c *IefClient) RetryBatchJobInvoker(request *model.RetryBatchJobRequest) *RetryBatchJobInvoker {
+	requestDef := GenReqDefForRetryBatchJob()
+	return &RetryBatchJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowAppDetail 查询应用模板详情
 //
 // 查询应用模板详情。
@@ -1184,6 +1541,27 @@ func (c *IefClient) ShowAppVersionDetail(request *model.ShowAppVersionDetailRequ
 func (c *IefClient) ShowAppVersionDetailInvoker(request *model.ShowAppVersionDetailRequest) *ShowAppVersionDetailInvoker {
 	requestDef := GenReqDefForShowAppVersionDetail()
 	return &ShowAppVersionDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowBatchJob 查询批量处理作业详情
+//
+// 查询批量处理作业详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IefClient) ShowBatchJob(request *model.ShowBatchJobRequest) (*model.ShowBatchJobResponse, error) {
+	requestDef := GenReqDefForShowBatchJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowBatchJobResponse), nil
+	}
+}
+
+// ShowBatchJobInvoker 查询批量处理作业详情
+func (c *IefClient) ShowBatchJobInvoker(request *model.ShowBatchJobRequest) *ShowBatchJobInvoker {
+	requestDef := GenReqDefForShowBatchJob()
+	return &ShowBatchJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowConfigMap 查询配置项详情
@@ -1291,6 +1669,48 @@ func (c *IefClient) ShowDeviceTwinInvoker(request *model.ShowDeviceTwinRequest) 
 	return &ShowDeviceTwinInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowEdgeGroupCertDetail 查询边缘节点组证书列表
+//
+// 查询边缘节点组证书详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IefClient) ShowEdgeGroupCertDetail(request *model.ShowEdgeGroupCertDetailRequest) (*model.ShowEdgeGroupCertDetailResponse, error) {
+	requestDef := GenReqDefForShowEdgeGroupCertDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowEdgeGroupCertDetailResponse), nil
+	}
+}
+
+// ShowEdgeGroupCertDetailInvoker 查询边缘节点组证书列表
+func (c *IefClient) ShowEdgeGroupCertDetailInvoker(request *model.ShowEdgeGroupCertDetailRequest) *ShowEdgeGroupCertDetailInvoker {
+	requestDef := GenReqDefForShowEdgeGroupCertDetail()
+	return &ShowEdgeGroupCertDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowEdgeGroupDetail 查询边缘节点组详情
+//
+// 查询边缘节点组详情。该API只能在铂金版实例中使用
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IefClient) ShowEdgeGroupDetail(request *model.ShowEdgeGroupDetailRequest) (*model.ShowEdgeGroupDetailResponse, error) {
+	requestDef := GenReqDefForShowEdgeGroupDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowEdgeGroupDetailResponse), nil
+	}
+}
+
+// ShowEdgeGroupDetailInvoker 查询边缘节点组详情
+func (c *IefClient) ShowEdgeGroupDetailInvoker(request *model.ShowEdgeGroupDetailRequest) *ShowEdgeGroupDetailInvoker {
+	requestDef := GenReqDefForShowEdgeGroupDetail()
+	return &ShowEdgeGroupDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowEdgeNodeDetail 查询边缘节点详情
 //
 // 查询边缘节点详情。
@@ -1352,6 +1772,48 @@ func (c *IefClient) ShowEndPointDetail(request *model.ShowEndPointDetailRequest)
 func (c *IefClient) ShowEndPointDetailInvoker(request *model.ShowEndPointDetailRequest) *ShowEndPointDetailInvoker {
 	requestDef := GenReqDefForShowEndPointDetail()
 	return &ShowEndPointDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowProductDetail 查询批量节点注册作业详情
+//
+// 查询批量节点注册作业详情。该接口无法查询产品证书文件
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IefClient) ShowProductDetail(request *model.ShowProductDetailRequest) (*model.ShowProductDetailResponse, error) {
+	requestDef := GenReqDefForShowProductDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowProductDetailResponse), nil
+	}
+}
+
+// ShowProductDetailInvoker 查询批量节点注册作业详情
+func (c *IefClient) ShowProductDetailInvoker(request *model.ShowProductDetailRequest) *ShowProductDetailInvoker {
+	requestDef := GenReqDefForShowProductDetail()
+	return &ShowProductDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowQuota 查询IEF服务下的资源配额
+//
+// 查询IEF服务下的资源配额
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IefClient) ShowQuota(request *model.ShowQuotaRequest) (*model.ShowQuotaResponse, error) {
+	requestDef := GenReqDefForShowQuota()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowQuotaResponse), nil
+	}
+}
+
+// ShowQuotaInvoker 查询IEF服务下的资源配额
+func (c *IefClient) ShowQuotaInvoker(request *model.ShowQuotaRequest) *ShowQuotaInvoker {
+	requestDef := GenReqDefForShowQuota()
+	return &ShowQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowRuleDetail 查询规则详情
@@ -1417,6 +1879,27 @@ func (c *IefClient) ShowServiceDetailInvoker(request *model.ShowServiceDetailReq
 	return &ShowServiceDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowSystemEventDetail 查询系统订阅列表
+//
+// 查询系统订阅列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IefClient) ShowSystemEventDetail(request *model.ShowSystemEventDetailRequest) (*model.ShowSystemEventDetailResponse, error) {
+	requestDef := GenReqDefForShowSystemEventDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSystemEventDetailResponse), nil
+	}
+}
+
+// ShowSystemEventDetailInvoker 查询系统订阅列表
+func (c *IefClient) ShowSystemEventDetailInvoker(request *model.ShowSystemEventDetailRequest) *ShowSystemEventDetailInvoker {
+	requestDef := GenReqDefForShowSystemEventDetail()
+	return &ShowSystemEventDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // StartRule 启用规则
 //
 // 启用一条规则
@@ -1438,6 +1921,48 @@ func (c *IefClient) StartRuleInvoker(request *model.StartRuleRequest) *StartRule
 	return &StartRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// StartSystemEvent 启用系统订阅
+//
+// 启用系统订阅
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IefClient) StartSystemEvent(request *model.StartSystemEventRequest) (*model.StartSystemEventResponse, error) {
+	requestDef := GenReqDefForStartSystemEvent()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StartSystemEventResponse), nil
+	}
+}
+
+// StartSystemEventInvoker 启用系统订阅
+func (c *IefClient) StartSystemEventInvoker(request *model.StartSystemEventRequest) *StartSystemEventInvoker {
+	requestDef := GenReqDefForStartSystemEvent()
+	return &StartSystemEventInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StopBatchJob 停止批量处理作业
+//
+// 停止批量处理作业。该API仅对运行中的批量处理作业生效
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IefClient) StopBatchJob(request *model.StopBatchJobRequest) (*model.StopBatchJobResponse, error) {
+	requestDef := GenReqDefForStopBatchJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StopBatchJobResponse), nil
+	}
+}
+
+// StopBatchJobInvoker 停止批量处理作业
+func (c *IefClient) StopBatchJobInvoker(request *model.StopBatchJobRequest) *StopBatchJobInvoker {
+	requestDef := GenReqDefForStopBatchJob()
+	return &StopBatchJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // StopRule 停用规则
 //
 // 停用一条规则
@@ -1457,6 +1982,27 @@ func (c *IefClient) StopRule(request *model.StopRuleRequest) (*model.StopRuleRes
 func (c *IefClient) StopRuleInvoker(request *model.StopRuleRequest) *StopRuleInvoker {
 	requestDef := GenReqDefForStopRule()
 	return &StopRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StopSystemEvent 停用系统订阅
+//
+// 停用系统订阅
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IefClient) StopSystemEvent(request *model.StopSystemEventRequest) (*model.StopSystemEventResponse, error) {
+	requestDef := GenReqDefForStopSystemEvent()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StopSystemEventResponse), nil
+	}
+}
+
+// StopSystemEventInvoker 停用系统订阅
+func (c *IefClient) StopSystemEventInvoker(request *model.StopSystemEventRequest) *StopSystemEventInvoker {
+	requestDef := GenReqDefForStopSystemEvent()
+	return &StopSystemEventInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateApp 更新应用模板
@@ -1604,6 +2150,48 @@ func (c *IefClient) UpdateDeviceTwin(request *model.UpdateDeviceTwinRequest) (*m
 func (c *IefClient) UpdateDeviceTwinInvoker(request *model.UpdateDeviceTwinRequest) *UpdateDeviceTwinInvoker {
 	requestDef := GenReqDefForUpdateDeviceTwin()
 	return &UpdateDeviceTwinInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateEdgeGroup 更新边缘节点组
+//
+// 更新边缘节点组描述。该API只能在铂金版实例中使用
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IefClient) UpdateEdgeGroup(request *model.UpdateEdgeGroupRequest) (*model.UpdateEdgeGroupResponse, error) {
+	requestDef := GenReqDefForUpdateEdgeGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateEdgeGroupResponse), nil
+	}
+}
+
+// UpdateEdgeGroupInvoker 更新边缘节点组
+func (c *IefClient) UpdateEdgeGroupInvoker(request *model.UpdateEdgeGroupRequest) *UpdateEdgeGroupInvoker {
+	requestDef := GenReqDefForUpdateEdgeGroup()
+	return &UpdateEdgeGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateEdgeGroupNodeBinding 绑定或解绑边缘节点
+//
+// 边缘节点组绑定或解绑边缘节点。该API只能在铂金版实例中使用
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IefClient) UpdateEdgeGroupNodeBinding(request *model.UpdateEdgeGroupNodeBindingRequest) (*model.UpdateEdgeGroupNodeBindingResponse, error) {
+	requestDef := GenReqDefForUpdateEdgeGroupNodeBinding()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateEdgeGroupNodeBindingResponse), nil
+	}
+}
+
+// UpdateEdgeGroupNodeBindingInvoker 绑定或解绑边缘节点
+func (c *IefClient) UpdateEdgeGroupNodeBindingInvoker(request *model.UpdateEdgeGroupNodeBindingRequest) *UpdateEdgeGroupNodeBindingInvoker {
+	requestDef := GenReqDefForUpdateEdgeGroupNodeBinding()
+	return &UpdateEdgeGroupNodeBindingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateEdgeNode 更新边缘节点

@@ -160,6 +160,9 @@ type EdgeNodeResp struct {
 
 	// 容器运行时版本
 	ContainerRuntimeVersion string `json:"container_runtime_version"`
+
+	// 边缘节点使用token注册时的凭证
+	Identifier *string `json:"identifier,omitempty"`
 }
 
 func (o EdgeNodeResp) String() string {

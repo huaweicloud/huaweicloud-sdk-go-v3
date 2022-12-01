@@ -18,6 +18,9 @@ type ServiceItemListResponseDtoData struct {
 	// 记录的总数
 	Total *int32 `json:"total,omitempty"`
 
+	// 服务组id
+	SetId *string `json:"set_id,omitempty"`
+
 	// 记录
 	Records *[]ServiceItemListResponseDtoDataRecords `json:"records,omitempty"`
 }

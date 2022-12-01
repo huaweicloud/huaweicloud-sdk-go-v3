@@ -49,7 +49,7 @@ type ListAttackLogsRequest struct {
 	Limit int32 `json:"limit"`
 
 	// 防火墙实例ID
-	FwInstanceId *string `json:"fw_instance_id,omitempty"`
+	FwInstanceId string `json:"fw_instance_id"`
 
 	// 动作0：permit,1：deny
 	Action *ListAttackLogsRequestAction `json:"action,omitempty"`

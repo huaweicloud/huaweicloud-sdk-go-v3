@@ -27,16 +27,16 @@ type AddRuleAclDtoRules struct {
 	Status AddRuleAclDtoRulesStatus `json:"status"`
 
 	// 长连接时长
-	LongConnectTime int64 `json:"long_connect_time"`
+	LongConnectTime *int64 `json:"long_connect_time,omitempty"`
 
 	// 长连接时长小时
-	LongConnectTimeHour int64 `json:"long_connect_time_hour"`
+	LongConnectTimeHour *int64 `json:"long_connect_time_hour,omitempty"`
 
 	// 长连接时长分钟
-	LongConnectTimeMinute int64 `json:"long_connect_time_minute"`
+	LongConnectTimeMinute *int64 `json:"long_connect_time_minute,omitempty"`
 
 	// 长连接时长秒
-	LongConnectTimeSecond int64 `json:"long_connect_time_second"`
+	LongConnectTimeSecond *int64 `json:"long_connect_time_second,omitempty"`
 
 	// 是否支持长连接，0表示支持长连接，1表示不支持长连接
 	LongConnectEnable AddRuleAclDtoRulesLongConnectEnable `json:"long_connect_enable"`

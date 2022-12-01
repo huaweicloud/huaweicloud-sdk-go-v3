@@ -151,6 +151,9 @@ type ResFeeRecordV2 struct {
 
 	// 金额单位。 1：元
 	MeasureId *int32 `json:"measure_id,omitempty"`
+
+	// 实付金额计算公式。当前只包含如下场景： 按需简单定价 按需线性定价 包年包月新购和续费的简单定价 包年包月新购和续费的线性定价  说明： 实付金额计算公式得到的金额值等于amount - coupon_amount的差值。
+	Formula *string `json:"formula,omitempty"`
 }
 
 func (o ResFeeRecordV2) String() string {

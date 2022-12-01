@@ -20,7 +20,7 @@ type BackPoolMemVo struct {
 	// 已用流量(查询账期所在月份), 单位MB
 	FlowUsed *float64 `json:"flow_used,omitempty"`
 
-	// 卡当前状态：10-可测试，11-未激活，13-可激活，14-已停用，20-在用，30-已拆机
+	// 卡当前状态：11-未激活，13-可激活，14-已停用，20-在用，30-已拆机
 	SimStatus *int32 `json:"sim_status,omitempty"`
 }
 

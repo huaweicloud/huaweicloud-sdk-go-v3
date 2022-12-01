@@ -29,7 +29,7 @@ type UpdateFunctionConfigResponse struct {
 	// 函数所属的分组Package，用于用户针对函数的自定义分组。
 	Package *string `json:"package,omitempty"`
 
-	// FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本
+	// FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。
 	Runtime *UpdateFunctionConfigResponseRuntime `json:"runtime,omitempty"`
 
 	// 函数执行超时时间，超时函数将被强行停止，范围3～900秒，可以通过白名单配置延长到12小时，具体可以咨询华为云函数工作流服务进行配置
@@ -159,6 +159,7 @@ type UpdateFunctionConfigResponseRuntimeEnum struct {
 	C__NET_CORE_3_1 UpdateFunctionConfigResponseRuntime
 	PHP7_3          UpdateFunctionConfigResponseRuntime
 	PYTHON3_9       UpdateFunctionConfigResponseRuntime
+	HTTP            UpdateFunctionConfigResponseRuntime
 }
 
 func GetUpdateFunctionConfigResponseRuntimeEnum() UpdateFunctionConfigResponseRuntimeEnum {
@@ -210,6 +211,9 @@ func GetUpdateFunctionConfigResponseRuntimeEnum() UpdateFunctionConfigResponseRu
 		},
 		PYTHON3_9: UpdateFunctionConfigResponseRuntime{
 			value: "Python3.9",
+		},
+		HTTP: UpdateFunctionConfigResponseRuntime{
+			value: "http",
 		},
 	}
 }

@@ -63,6 +63,9 @@ type HttpQueryCfwAttackLogsResponseDtoDataRecords struct {
 
 	// 应用协议
 	App *string `json:"app,omitempty"`
+
+	// 攻击报文信息
+	PacketMessages *[]PacketMessage `json:"packetMessages,omitempty"`
 }
 
 func (o HttpQueryCfwAttackLogsResponseDtoDataRecords) String() string {

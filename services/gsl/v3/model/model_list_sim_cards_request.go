@@ -30,7 +30,7 @@ type ListSimCardsRequest struct {
 	// 设备状态: 1.注册 2.重启 3.在线 4.离线
 	DeviceStatus *int32 `json:"device_status,omitempty"`
 
-	// 标签ID，最多支持传50个
+	// 标签ID，最多支持传10个
 	TagId *[]int64 `json:"tag_id,omitempty"`
 
 	// sim卡类型：  1.vSIM  2.eSIM  3.实体卡
