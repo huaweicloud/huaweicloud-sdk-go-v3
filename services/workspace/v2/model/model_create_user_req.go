@@ -14,7 +14,7 @@ type CreateUserReq struct {
 	// 用户邮箱。
 	UserEmail *string `json:"user_email,omitempty"`
 
-	// 账户过期时间，0表示永远不过期。时间格式：yyyy-MM-ddTHH:mm:ssZ。
+	// 账户过期时间，0表示永远不过期。时间格式：yyyy-MM-ddTHH:mm:ssZ或yyyy-MM-ddTHH:mm:ss.SSSZ。
 	AccountExpires *string `json:"account_expires,omitempty"`
 
 	// 是否允许用户更改密码，缺省值为true。

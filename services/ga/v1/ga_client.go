@@ -21,7 +21,7 @@ func GaClientBuilder() *http_client.HcHttpClientBuilder {
 
 // CreateAccelerator 创建全球加速器
 //
-// 创建全球加速器
+// 创建全球加速器。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) CreateAccelerator(request *model.CreateAcceleratorRequest) (*model.CreateAcceleratorResponse, error) {
@@ -63,7 +63,7 @@ func (c *GaClient) DeleteAcceleratorInvoker(request *model.DeleteAcceleratorRequ
 
 // ListAccelerators 查询全球加速器列表
 //
-// 查询全球加速器列表
+// 查询全球加速器列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) ListAccelerators(request *model.ListAcceleratorsRequest) (*model.ListAcceleratorsResponse, error) {
@@ -84,7 +84,7 @@ func (c *GaClient) ListAcceleratorsInvoker(request *model.ListAcceleratorsReques
 
 // ShowAccelerator 查询全球加速器详情
 //
-// 查询全球加速器详情
+// 查询全球加速器详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) ShowAccelerator(request *model.ShowAcceleratorRequest) (*model.ShowAcceleratorResponse, error) {
@@ -105,7 +105,7 @@ func (c *GaClient) ShowAcceleratorInvoker(request *model.ShowAcceleratorRequest)
 
 // UpdateAccelerator 更新全球加速器
 //
-// 更新全球加速器
+// 更新全球加速器。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) UpdateAccelerator(request *model.UpdateAcceleratorRequest) (*model.UpdateAcceleratorResponse, error) {
@@ -126,7 +126,7 @@ func (c *GaClient) UpdateAcceleratorInvoker(request *model.UpdateAcceleratorRequ
 
 // CreateEndpoint 创建终端节点
 //
-// 创建终端节点
+// 创建终端节点。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) CreateEndpoint(request *model.CreateEndpointRequest) (*model.CreateEndpointResponse, error) {
@@ -147,7 +147,7 @@ func (c *GaClient) CreateEndpointInvoker(request *model.CreateEndpointRequest) *
 
 // DeleteEndpoint 删除终端节点
 //
-// 删除终端节点
+// 删除终端节点。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) DeleteEndpoint(request *model.DeleteEndpointRequest) (*model.DeleteEndpointResponse, error) {
@@ -168,7 +168,7 @@ func (c *GaClient) DeleteEndpointInvoker(request *model.DeleteEndpointRequest) *
 
 // ListEndpoints 查询终端节点组下终端节点列表
 //
-// 查询终端节点组下终端节点列表
+// 查询终端节点组下终端节点列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) ListEndpoints(request *model.ListEndpointsRequest) (*model.ListEndpointsResponse, error) {
@@ -189,7 +189,7 @@ func (c *GaClient) ListEndpointsInvoker(request *model.ListEndpointsRequest) *Li
 
 // ShowEndpoint 查询终端节点详情
 //
-// 查询终端节点详情
+// 查询终端节点详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) ShowEndpoint(request *model.ShowEndpointRequest) (*model.ShowEndpointResponse, error) {
@@ -210,7 +210,7 @@ func (c *GaClient) ShowEndpointInvoker(request *model.ShowEndpointRequest) *Show
 
 // UpdateEndpoint 更新终端节点
 //
-// 更新终端节点
+// 更新终端节点。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) UpdateEndpoint(request *model.UpdateEndpointRequest) (*model.UpdateEndpointResponse, error) {
@@ -231,7 +231,7 @@ func (c *GaClient) UpdateEndpointInvoker(request *model.UpdateEndpointRequest) *
 
 // CreateEndpointGroup 创建终端节点组
 //
-// 创建终端节点组
+// 创建终端节点组。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) CreateEndpointGroup(request *model.CreateEndpointGroupRequest) (*model.CreateEndpointGroupResponse, error) {
@@ -273,7 +273,7 @@ func (c *GaClient) DeleteEndpointGroupInvoker(request *model.DeleteEndpointGroup
 
 // ListEndpointGroups 查询终端节点组列表
 //
-// 查询终端节点组列表
+// 查询终端节点组列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) ListEndpointGroups(request *model.ListEndpointGroupsRequest) (*model.ListEndpointGroupsResponse, error) {
@@ -294,7 +294,7 @@ func (c *GaClient) ListEndpointGroupsInvoker(request *model.ListEndpointGroupsRe
 
 // ShowEndpointGroup 查询终端节点组详情
 //
-// 查询终端节点组详情
+// 查询终端节点组详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) ShowEndpointGroup(request *model.ShowEndpointGroupRequest) (*model.ShowEndpointGroupResponse, error) {
@@ -315,7 +315,7 @@ func (c *GaClient) ShowEndpointGroupInvoker(request *model.ShowEndpointGroupRequ
 
 // UpdateEndpointGroup 更新终端节点组
 //
-// 更新终端节点组
+// 更新终端节点组。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) UpdateEndpointGroup(request *model.UpdateEndpointGroupRequest) (*model.UpdateEndpointGroupResponse, error) {
@@ -336,7 +336,7 @@ func (c *GaClient) UpdateEndpointGroupInvoker(request *model.UpdateEndpointGroup
 
 // CreateHealthCheck 创建健康检查
 //
-// 创建健康检查
+// 创建健康检查。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) CreateHealthCheck(request *model.CreateHealthCheckRequest) (*model.CreateHealthCheckResponse, error) {
@@ -357,7 +357,7 @@ func (c *GaClient) CreateHealthCheckInvoker(request *model.CreateHealthCheckRequ
 
 // DeleteHealthCheck 删除健康检查
 //
-// 删除健康检查
+// 删除健康检查。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) DeleteHealthCheck(request *model.DeleteHealthCheckRequest) (*model.DeleteHealthCheckResponse, error) {
@@ -378,7 +378,7 @@ func (c *GaClient) DeleteHealthCheckInvoker(request *model.DeleteHealthCheckRequ
 
 // ListHealthChecks 查询健康检查列表
 //
-// 查询健康检查列表
+// 查询健康检查列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) ListHealthChecks(request *model.ListHealthChecksRequest) (*model.ListHealthChecksResponse, error) {
@@ -399,7 +399,7 @@ func (c *GaClient) ListHealthChecksInvoker(request *model.ListHealthChecksReques
 
 // ShowHealthCheck 查询健康检查详情
 //
-// 查询健康检查详情
+// 查询健康检查详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) ShowHealthCheck(request *model.ShowHealthCheckRequest) (*model.ShowHealthCheckResponse, error) {
@@ -420,7 +420,7 @@ func (c *GaClient) ShowHealthCheckInvoker(request *model.ShowHealthCheckRequest)
 
 // UpdateHealthCheck 更新健康检查
 //
-// 更新健康检查
+// 更新健康检查。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) UpdateHealthCheck(request *model.UpdateHealthCheckRequest) (*model.UpdateHealthCheckResponse, error) {
@@ -441,7 +441,7 @@ func (c *GaClient) UpdateHealthCheckInvoker(request *model.UpdateHealthCheckRequ
 
 // CreateListener 创建监听器
 //
-// 创建监听器
+// 创建监听器。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) CreateListener(request *model.CreateListenerRequest) (*model.CreateListenerResponse, error) {
@@ -462,7 +462,7 @@ func (c *GaClient) CreateListenerInvoker(request *model.CreateListenerRequest) *
 
 // DeleteListener 删除监听器
 //
-// 删除监听器
+// 删除监听器。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) DeleteListener(request *model.DeleteListenerRequest) (*model.DeleteListenerResponse, error) {
@@ -483,7 +483,7 @@ func (c *GaClient) DeleteListenerInvoker(request *model.DeleteListenerRequest) *
 
 // ListListeners 查询监听器列表
 //
-// 查询监听器列表
+// 查询监听器列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) ListListeners(request *model.ListListenersRequest) (*model.ListListenersResponse, error) {
@@ -504,7 +504,7 @@ func (c *GaClient) ListListenersInvoker(request *model.ListListenersRequest) *Li
 
 // ShowListener 查询监听器详情
 //
-// 查询监听器详情
+// 查询监听器详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) ShowListener(request *model.ShowListenerRequest) (*model.ShowListenerResponse, error) {
@@ -525,7 +525,7 @@ func (c *GaClient) ShowListenerInvoker(request *model.ShowListenerRequest) *Show
 
 // UpdateListener 更新监听器
 //
-// 更新监听器
+// 更新监听器。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) UpdateListener(request *model.UpdateListenerRequest) (*model.UpdateListenerResponse, error) {
@@ -546,7 +546,7 @@ func (c *GaClient) UpdateListenerInvoker(request *model.UpdateListenerRequest) *
 
 // ListRegions 查询区域列表
 //
-// 查询区域列表
+// 查询区域列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) ListRegions(request *model.ListRegionsRequest) (*model.ListRegionsResponse, error) {
@@ -563,4 +563,67 @@ func (c *GaClient) ListRegions(request *model.ListRegionsRequest) (*model.ListRe
 func (c *GaClient) ListRegionsInvoker(request *model.ListRegionsRequest) *ListRegionsInvoker {
 	requestDef := GenReqDefForListRegions()
 	return &ListRegionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateTags 批量添加标签
+//
+// 批量添加标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaClient) CreateTags(request *model.CreateTagsRequest) (*model.CreateTagsResponse, error) {
+	requestDef := GenReqDefForCreateTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateTagsResponse), nil
+	}
+}
+
+// CreateTagsInvoker 批量添加标签
+func (c *GaClient) CreateTagsInvoker(request *model.CreateTagsRequest) *CreateTagsInvoker {
+	requestDef := GenReqDefForCreateTags()
+	return &CreateTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteTags 批量删除标签
+//
+// 批量删除标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaClient) DeleteTags(request *model.DeleteTagsRequest) (*model.DeleteTagsResponse, error) {
+	requestDef := GenReqDefForDeleteTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteTagsResponse), nil
+	}
+}
+
+// DeleteTagsInvoker 批量删除标签
+func (c *GaClient) DeleteTagsInvoker(request *model.DeleteTagsRequest) *DeleteTagsInvoker {
+	requestDef := GenReqDefForDeleteTags()
+	return &DeleteTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowResourceTags 查询资源已打标签
+//
+// 查询资源已打标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaClient) ShowResourceTags(request *model.ShowResourceTagsRequest) (*model.ShowResourceTagsResponse, error) {
+	requestDef := GenReqDefForShowResourceTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowResourceTagsResponse), nil
+	}
+}
+
+// ShowResourceTagsInvoker 查询资源已打标签
+func (c *GaClient) ShowResourceTagsInvoker(request *model.ShowResourceTagsRequest) *ShowResourceTagsInvoker {
+	requestDef := GenReqDefForShowResourceTags()
+	return &ShowResourceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

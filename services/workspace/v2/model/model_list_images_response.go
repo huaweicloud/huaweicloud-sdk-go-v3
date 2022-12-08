@@ -10,8 +10,11 @@ import (
 type ListImagesResponse struct {
 
 	// 云桌面支持的产品镜像列表。
-	Images         *[]ImageInfo `json:"images,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	Images *[]ImageInfo `json:"images,omitempty"`
+
+	// 对象总数。
+	TotalCount     *int32 `json:"total_count,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ListImagesResponse) String() string {

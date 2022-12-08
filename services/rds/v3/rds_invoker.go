@@ -593,6 +593,18 @@ func (i *SetAuditlogPolicyInvoker) Invoke() (*model.SetAuditlogPolicyResponse, e
 	}
 }
 
+type SetAutoEnlargePolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetAutoEnlargePolicyInvoker) Invoke() (*model.SetAutoEnlargePolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetAutoEnlargePolicyResponse), nil
+	}
+}
+
 type SetBackupPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -626,6 +638,18 @@ func (i *SetOffSiteBackupPolicyInvoker) Invoke() (*model.SetOffSiteBackupPolicyR
 		return nil, err
 	} else {
 		return result.(*model.SetOffSiteBackupPolicyResponse), nil
+	}
+}
+
+type SetSecondLevelMonitorInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetSecondLevelMonitorInvoker) Invoke() (*model.SetSecondLevelMonitorResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetSecondLevelMonitorResponse), nil
 	}
 }
 
@@ -674,6 +698,18 @@ func (i *ShowAuditlogPolicyInvoker) Invoke() (*model.ShowAuditlogPolicyResponse,
 		return nil, err
 	} else {
 		return result.(*model.ShowAuditlogPolicyResponse), nil
+	}
+}
+
+type ShowAutoEnlargePolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAutoEnlargePolicyInvoker) Invoke() (*model.ShowAutoEnlargePolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAutoEnlargePolicyResponse), nil
 	}
 }
 
@@ -806,6 +842,18 @@ func (i *ShowReplicationStatusInvoker) Invoke() (*model.ShowReplicationStatusRes
 		return nil, err
 	} else {
 		return result.(*model.ShowReplicationStatusResponse), nil
+	}
+}
+
+type ShowSecondLevelMonitoringInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSecondLevelMonitoringInvoker) Invoke() (*model.ShowSecondLevelMonitoringResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSecondLevelMonitoringResponse), nil
 	}
 }
 

@@ -9,7 +9,7 @@ import (
 // Request Object
 type SwitchRiskRuleRequest struct {
 
-	// instance_id
+	// 实例ID
 	InstanceId string `json:"instance_id"`
 
 	Body *BatchSwitchesRequest `json:"body,omitempty"`

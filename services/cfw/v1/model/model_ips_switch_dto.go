@@ -16,7 +16,7 @@ type IpsSwitchDto struct {
 	ObjectId string `json:"object_id"`
 
 	// 补丁类型，1-基础补丁 2=虚拟补丁
-	IpsType *IpsSwitchDtoIpsType `json:"ips_type,omitempty"`
+	IpsType IpsSwitchDtoIpsType `json:"ips_type"`
 
 	// ips特性开关状态
 	Status int32 `json:"status"`

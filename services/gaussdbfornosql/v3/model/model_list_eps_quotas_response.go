@@ -13,8 +13,8 @@ type ListEpsQuotasResponse struct {
 	TotalCount *int32 `json:"total_count,omitempty"`
 
 	// 企业项目配额信息列表。
-	Quotas         *[]NoSqlQueryEpsQuotaInfoList `json:"quotas,omitempty"`
-	HttpStatusCode int                           `json:"-"`
+	Quotas         *[]NoSqlQueryEpsQuotaInfo `json:"quotas,omitempty"`
+	HttpStatusCode int                       `json:"-"`
 }
 
 func (o ListEpsQuotasResponse) String() string {

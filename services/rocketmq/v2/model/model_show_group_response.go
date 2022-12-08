@@ -9,7 +9,7 @@ import (
 // Response Object
 type ShowGroupResponse struct {
 
-	// 是否启用。
+	// 是否可以消费。
 	Enabled *bool `json:"enabled,omitempty"`
 
 	// 是否广播。
@@ -24,9 +24,15 @@ type ShowGroupResponse struct {
 	// 最大重试次数。
 	RetryMaxTime float32 `json:"retry_max_time,omitempty"`
 
-	// 是否重头消费。
-	FromBeginning  *bool `json:"from_beginning,omitempty"`
-	HttpStatusCode int   `json:"-"`
+	// 应用id。
+	AppId *string `json:"app_id,omitempty"`
+
+	// 应用名称。
+	AppName *string `json:"app_name,omitempty"`
+
+	// 权限。
+	Permissions    *[]string `json:"permissions,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o ShowGroupResponse) String() string {

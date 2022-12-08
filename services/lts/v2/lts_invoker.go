@@ -473,6 +473,18 @@ func (i *ListStructuredLogsWithTimeRangeInvoker) Invoke() (*model.ListStructured
 	}
 }
 
+type ListTimeLineTrafficStatisticsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTimeLineTrafficStatisticsInvoker) Invoke() (*model.ListTimeLineTrafficStatisticsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTimeLineTrafficStatisticsResponse), nil
+	}
+}
+
 type ListTransfersInvoker struct {
 	*invoker.BaseInvoker
 }

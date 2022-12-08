@@ -13,31 +13,31 @@ import (
 type JobBaseInfo struct {
 
 	// 任务名称。 约束：任务名称在4位到50位之间，不区分大小写，可以包含字母、数字、中划线或下划线，不能包括其他特殊字符。 - 最小长度：4 - 最大长度：50
-	Name string `json:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 任务场景。取值： - migration：实时迁移。 - sync：实时同步。 - cloudDataGuard：实时灾备。
-	JobType JobBaseInfoJobType `json:"job_type"`
+	JobType *JobBaseInfoJobType `json:"job_type,omitempty"`
 
 	// 灾备类型是否双主灾备。说明： - job_type 是cloudDataGuard时，必填，灾备类型是双主灾备时，multi_write取值true, 否则为false。 - job_type 是其他类型时，multi_write是非必选参数。
 	MultiWrite *bool `json:"multi_write,omitempty"`
 
 	// 引擎类型。取值： - oracle-to-gaussdbv5：Oracle同步到GaussDB分布式版，实时同步场景使用。
-	EngineType JobBaseInfoEngineType `json:"engine_type"`
+	EngineType *JobBaseInfoEngineType `json:"engine_type,omitempty"`
 
 	// 迁移方向。取值： - up：入云 ，灾备场景时对应本云为备。 - down：出云，灾备场景时对应本云为主。 - non-dbs：自建。
-	JobDirection JobBaseInfoJobDirection `json:"job_direction"`
+	JobDirection *JobBaseInfoJobDirection `json:"job_direction,omitempty"`
 
 	// 迁移模式。取值： - FULL_TRANS ：全量。 - FULL_INCR_TRANS：全量+增量。 - INCR_TRANS：增量。
-	TaskType JobBaseInfoTaskType `json:"task_type"`
+	TaskType *JobBaseInfoTaskType `json:"task_type,omitempty"`
 
 	// 网络类型。取值： - eip：公网网络。 - vpc：VPC网络，灾备场景不支持选择VPC网络。 - vpn：VPN、专线网络。
-	NetType JobBaseInfoNetType `json:"net_type"`
+	NetType *JobBaseInfoNetType `json:"net_type,omitempty"`
 
 	// 计费模式，默认按需。取值： - period：包周期。 - on_demand：按需。
 	ChargingMode *JobBaseInfoChargingMode `json:"charging_mode,omitempty"`
 
 	// 企业项目ID。 缺省值：\"0\"，表示\"default\"企业项目。
-	EnterpriseProjectId string `json:"enterprise_project_id"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 任务描述。 约束：任务描述不能超过256位，且不能包含!<>&'\"\\特殊字符。
 	Description *string `json:"description,omitempty"`

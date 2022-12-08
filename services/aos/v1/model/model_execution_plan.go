@@ -18,7 +18,7 @@ type ExecutionPlan struct {
 	// 栈的名字
 	StackName *string `json:"stack_name,omitempty"`
 
-	// 执行计划的唯一Id，由IaC随机生成,为uuid
+	// 执行计划的唯一Id，由资源编排服务随机生成,为uuid
 	ExecutionPlanId *string `json:"execution_plan_id,omitempty"`
 
 	// 执行计划的名字

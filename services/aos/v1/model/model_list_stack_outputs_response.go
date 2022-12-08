@@ -9,12 +9,9 @@ import (
 // Response Object
 type ListStackOutputsResponse struct {
 
-	// 堆栈输出
-	Outputs *[]StackOutput `json:"outputs,omitempty"`
-
-	// 下一页的标记信息
-	NextMarker     *string `json:"next_marker,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	// 资源栈输出
+	Outputs        *[]StackOutput `json:"outputs,omitempty"`
+	HttpStatusCode int            `json:"-"`
 }
 
 func (o ListStackOutputsResponse) String() string {

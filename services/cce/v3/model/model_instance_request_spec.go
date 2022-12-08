@@ -9,8 +9,8 @@ import (
 // spec是集合类的元素类型，内容为插件实例安装/升级的具体请求信息
 type InstanceRequestSpec struct {
 
-	// 待安装、升级插件的具体版本版本号，例如1.0.0
-	Version string `json:"version"`
+	// 待安装、升级插件的具体版本版本号，例如1.0.0，如果不传，匹配集群支持的稳定版本
+	Version *string `json:"version,omitempty"`
 
 	// 集群id
 	ClusterID string `json:"clusterID"`

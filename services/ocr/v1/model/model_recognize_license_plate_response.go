@@ -8,8 +8,10 @@ import (
 
 // Response Object
 type RecognizeLicensePlateResponse struct {
-	Result         *LicensePlateResult `json:"result,omitempty"`
-	HttpStatusCode int                 `json:"-"`
+
+	// 调用成功时表示调用结果。  调用失败时无此字段。
+	Result         *[]LicensePlateResult `json:"result,omitempty"`
+	HttpStatusCode int                   `json:"-"`
 }
 
 func (o RecognizeLicensePlateResponse) String() string {

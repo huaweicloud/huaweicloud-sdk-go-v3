@@ -21,7 +21,7 @@ type SummaryDomainReq struct {
 	// 支持的文本语言类型，目前支持中文（zh）。
 	Lang *SummaryDomainReqLang `json:"lang,omitempty"`
 
-	// 文本正文（目前仅支持UTF-8编码），长度不超过1000字。
+	// 文本正文（目前仅支持UTF-8编码），长度不超过10000字。
 	Content string `json:"content"`
 
 	// 支持的领域类型，取值如下（目前只支持通用领域），默认为通用领域： 0：通用领域

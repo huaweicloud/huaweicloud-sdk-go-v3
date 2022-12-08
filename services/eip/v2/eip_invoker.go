@@ -53,6 +53,18 @@ func (i *DeleteSharedBandwidthInvoker) Invoke() (*model.DeleteSharedBandwidthRes
 	}
 }
 
+type ListBandwidthPkgInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBandwidthPkgInvoker) Invoke() (*model.ListBandwidthPkgResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBandwidthPkgResponse), nil
+	}
+}
+
 type ListBandwidthsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -137,6 +149,30 @@ func (i *BatchCreatePublicipTagsInvoker) Invoke() (*model.BatchCreatePublicipTag
 	}
 }
 
+type BatchCreatePublicipsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCreatePublicipsInvoker) Invoke() (*model.BatchCreatePublicipsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCreatePublicipsResponse), nil
+	}
+}
+
+type BatchDeletePublicIpInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeletePublicIpInvoker) Invoke() (*model.BatchDeletePublicIpResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeletePublicIpResponse), nil
+	}
+}
+
 type BatchDeletePublicipTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -146,6 +182,42 @@ func (i *BatchDeletePublicipTagsInvoker) Invoke() (*model.BatchDeletePublicipTag
 		return nil, err
 	} else {
 		return result.(*model.BatchDeletePublicipTagsResponse), nil
+	}
+}
+
+type BatchDisassociatePublicipsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDisassociatePublicipsInvoker) Invoke() (*model.BatchDisassociatePublicipsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDisassociatePublicipsResponse), nil
+	}
+}
+
+type CountPublicIpInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CountPublicIpInvoker) Invoke() (*model.CountPublicIpResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CountPublicIpResponse), nil
+	}
+}
+
+type CountPublicIpInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CountPublicIpInstanceInvoker) Invoke() (*model.CountPublicIpInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CountPublicIpInstanceResponse), nil
 	}
 }
 
@@ -242,6 +314,18 @@ func (i *ListPublicipsByTagsInvoker) Invoke() (*model.ListPublicipsByTagsRespons
 		return nil, err
 	} else {
 		return result.(*model.ListPublicipsByTagsResponse), nil
+	}
+}
+
+type ShowPublicIpTypeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPublicIpTypeInvoker) Invoke() (*model.ShowPublicIpTypeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPublicIpTypeResponse), nil
 	}
 }
 

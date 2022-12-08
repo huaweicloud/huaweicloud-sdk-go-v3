@@ -29,6 +29,18 @@ func (i *CreateExecutionPlanInvoker) Invoke() (*model.CreateExecutionPlanRespons
 	}
 }
 
+type DeleteExecutionPlanInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteExecutionPlanInvoker) Invoke() (*model.DeleteExecutionPlanResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteExecutionPlanResponse), nil
+	}
+}
+
 type DeleteStackInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -41,6 +53,18 @@ func (i *DeleteStackInvoker) Invoke() (*model.DeleteStackResponse, error) {
 	}
 }
 
+type DescribeExecutionPlanInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DescribeExecutionPlanInvoker) Invoke() (*model.DescribeExecutionPlanResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DescribeExecutionPlanResponse), nil
+	}
+}
+
 type EstimateExecutionPlanPriceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -50,6 +74,30 @@ func (i *EstimateExecutionPlanPriceInvoker) Invoke() (*model.EstimateExecutionPl
 		return nil, err
 	} else {
 		return result.(*model.EstimateExecutionPlanPriceResponse), nil
+	}
+}
+
+type GetExecutionPlanInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *GetExecutionPlanInvoker) Invoke() (*model.GetExecutionPlanResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.GetExecutionPlanResponse), nil
+	}
+}
+
+type GetStackMetadataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *GetStackMetadataInvoker) Invoke() (*model.GetStackMetadataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.GetStackMetadataResponse), nil
 	}
 }
 

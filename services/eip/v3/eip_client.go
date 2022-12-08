@@ -61,6 +61,27 @@ func (c *EipClient) ListPublicBorderGroupsInvoker(request *model.ListPublicBorde
 	return &ListPublicBorderGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListPublicipPool 查询公网IP池列表
+//
+// 全量查询公网IP池列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EipClient) ListPublicipPool(request *model.ListPublicipPoolRequest) (*model.ListPublicipPoolResponse, error) {
+	requestDef := GenReqDefForListPublicipPool()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPublicipPoolResponse), nil
+	}
+}
+
+// ListPublicipPoolInvoker 查询公网IP池列表
+func (c *EipClient) ListPublicipPoolInvoker(request *model.ListPublicipPoolRequest) *ListPublicipPoolInvoker {
+	requestDef := GenReqDefForListPublicipPool()
+	return &ListPublicipPoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListShareBandwidthTypes 查询指定租户下的共享带宽类型列表
 //
 // 查询指定租户下的共享带宽类型列表
@@ -80,6 +101,27 @@ func (c *EipClient) ListShareBandwidthTypes(request *model.ListShareBandwidthTyp
 func (c *EipClient) ListShareBandwidthTypesInvoker(request *model.ListShareBandwidthTypesRequest) *ListShareBandwidthTypesInvoker {
 	requestDef := GenReqDefForListShareBandwidthTypes()
 	return &ListShareBandwidthTypesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPublicipPool 查询公网IP池详情
+//
+// 查询公网IP池详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EipClient) ShowPublicipPool(request *model.ShowPublicipPoolRequest) (*model.ShowPublicipPoolResponse, error) {
+	requestDef := GenReqDefForShowPublicipPool()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPublicipPoolResponse), nil
+	}
+}
+
+// ShowPublicipPoolInvoker 查询公网IP池详情
+func (c *EipClient) ShowPublicipPoolInvoker(request *model.ShowPublicipPoolRequest) *ShowPublicipPoolInvoker {
+	requestDef := GenReqDefForShowPublicipPool()
+	return &ShowPublicipPoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // AssociatePublicips 绑定弹性公网IP
@@ -103,6 +145,27 @@ func (c *EipClient) AssociatePublicipsInvoker(request *model.AssociatePublicipsR
 	return &AssociatePublicipsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CountEipAvailableResources 查询弹性公网IP可用数
+//
+// IP池用于查询公网可用ip个数
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EipClient) CountEipAvailableResources(request *model.CountEipAvailableResourcesRequest) (*model.CountEipAvailableResourcesResponse, error) {
+	requestDef := GenReqDefForCountEipAvailableResources()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CountEipAvailableResourcesResponse), nil
+	}
+}
+
+// CountEipAvailableResourcesInvoker 查询弹性公网IP可用数
+func (c *EipClient) CountEipAvailableResourcesInvoker(request *model.CountEipAvailableResourcesRequest) *CountEipAvailableResourcesInvoker {
+	requestDef := GenReqDefForCountEipAvailableResources()
+	return &CountEipAvailableResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DisassociatePublicips 解绑弹性公网IP
 //
 // 解绑弹性公网IP
@@ -122,27 +185,6 @@ func (c *EipClient) DisassociatePublicips(request *model.DisassociatePublicipsRe
 func (c *EipClient) DisassociatePublicipsInvoker(request *model.DisassociatePublicipsRequest) *DisassociatePublicipsInvoker {
 	requestDef := GenReqDefForDisassociatePublicips()
 	return &DisassociatePublicipsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListPublicipPool 查询公网IP池列表
-//
-// 全量查询公网IP池列表
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *EipClient) ListPublicipPool(request *model.ListPublicipPoolRequest) (*model.ListPublicipPoolResponse, error) {
-	requestDef := GenReqDefForListPublicipPool()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListPublicipPoolResponse), nil
-	}
-}
-
-// ListPublicipPoolInvoker 查询公网IP池列表
-func (c *EipClient) ListPublicipPoolInvoker(request *model.ListPublicipPoolRequest) *ListPublicipPoolInvoker {
-	requestDef := GenReqDefForListPublicipPool()
-	return &ListPublicipPoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListPublicips 全量查询弹性公网IP列表
@@ -185,27 +227,6 @@ func (c *EipClient) ShowPublicip(request *model.ShowPublicipRequest) (*model.Sho
 func (c *EipClient) ShowPublicipInvoker(request *model.ShowPublicipRequest) *ShowPublicipInvoker {
 	requestDef := GenReqDefForShowPublicip()
 	return &ShowPublicipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowPublicipPool 查询公网IP池详情
-//
-// 查询公网IP池详情
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *EipClient) ShowPublicipPool(request *model.ShowPublicipPoolRequest) (*model.ShowPublicipPoolResponse, error) {
-	requestDef := GenReqDefForShowPublicipPool()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowPublicipPoolResponse), nil
-	}
-}
-
-// ShowPublicipPoolInvoker 查询公网IP池详情
-func (c *EipClient) ShowPublicipPoolInvoker(request *model.ShowPublicipPoolRequest) *ShowPublicipPoolInvoker {
-	requestDef := GenReqDefForShowPublicipPool()
-	return &ShowPublicipPoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateAssociatePublicip 绑定弹性公网IP

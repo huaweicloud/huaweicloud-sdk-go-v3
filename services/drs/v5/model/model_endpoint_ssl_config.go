@@ -10,16 +10,16 @@ import (
 type EndpointSslConfig struct {
 
 	// 是否SSL安全连接。如果数据库启用了SSL安全连接，参数值为true。
-	SslLink bool `json:"ssl_link"`
+	SslLink *bool `json:"ssl_link,omitempty"`
 
 	// SSL证书名字。
-	SslCertName string `json:"ssl_cert_name"`
+	SslCertName *string `json:"ssl_cert_name,omitempty"`
 
 	// SSL证书内容，用base64加密。
-	SslCertKey string `json:"ssl_cert_key"`
+	SslCertKey *string `json:"ssl_cert_key,omitempty"`
 
 	// SSL证书内容checksum值，后端校验，源库安全连接必选。
-	SslCertCheckSum string `json:"ssl_cert_check_sum"`
+	SslCertCheckSum *string `json:"ssl_cert_check_sum,omitempty"`
 
 	// SSL证书密码，证书文件后缀为.p12时必填。
 	SslCertPassword *string `json:"ssl_cert_password,omitempty"`

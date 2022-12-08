@@ -11,7 +11,7 @@ type ResourceTypeBody struct {
 	// 资源类型
 	ResourceType string `json:"resource_type"`
 
-	// 资源类型显示名称，可以通过参数中'locale'设置语言
+	// 资源类型显示名称，可以通过参数中“locale”设置语言。
 	ResourceTypeI18nDisplayName string `json:"resource_type_i18n_display_name"`
 
 	// 支持的region列表

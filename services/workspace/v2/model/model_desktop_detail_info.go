@@ -61,6 +61,12 @@ type DesktopDetailInfo struct {
 	// 可用分区。
 	AvailabilityZone *string `json:"availability_zone,omitempty"`
 
+	// 站点类型
+	SiteType *string `json:"site_type,omitempty"`
+
+	// 站点名字
+	SiteName *string `json:"site_name,omitempty"`
+
 	Product *ProductDetailInfo `json:"product,omitempty"`
 
 	// 创建桌面时加入的OU名称。

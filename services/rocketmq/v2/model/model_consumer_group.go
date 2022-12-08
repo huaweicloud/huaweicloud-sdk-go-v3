@@ -8,7 +8,7 @@ import (
 
 type ConsumerGroup struct {
 
-	// 是否启用。
+	// 是否可以消费。
 	Enabled *bool `json:"enabled,omitempty"`
 
 	// 是否广播。

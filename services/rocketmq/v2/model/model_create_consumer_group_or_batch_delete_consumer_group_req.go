@@ -11,7 +11,7 @@ type CreateConsumerGroupOrBatchDeleteConsumerGroupReq struct {
 	// 待删除的消费组列表。
 	Groups *[]string `json:"groups,omitempty"`
 
-	// 是否启用。
+	// 是否可以消费。
 	Enabled *bool `json:"enabled,omitempty"`
 
 	// 是否广播。

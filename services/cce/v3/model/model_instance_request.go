@@ -9,10 +9,10 @@ import (
 // 插件安装/升级-request结构体
 type InstanceRequest struct {
 
-	// API类型，固定值“Addon”，该值不可修改。
+	// API类型，固定值“Addon”，该值不可修改，该字段传入无效。
 	Kind string `json:"kind"`
 
-	// API版本，固定值“v3”，该值不可修改。
+	// API版本，固定值“v3”，该值不可修改，该字段传入无效。
 	ApiVersion string `json:"apiVersion"`
 
 	Metadata *Metadata `json:"metadata"`

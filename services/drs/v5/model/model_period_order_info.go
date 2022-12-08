@@ -19,7 +19,7 @@ type PeriodOrderInfo struct {
 	PeriodNum int32 `json:"period_num"`
 
 	// 是否自动续订。取值： - 0：否（默认值，需要客户手动去支付）。 - 1：是（自动支付）。
-	IsAutoRenew PeriodOrderInfoIsAutoRenew `json:"is_auto_renew"`
+	IsAutoRenew *PeriodOrderInfoIsAutoRenew `json:"is_auto_renew,omitempty"`
 }
 
 func (o PeriodOrderInfo) String() string {

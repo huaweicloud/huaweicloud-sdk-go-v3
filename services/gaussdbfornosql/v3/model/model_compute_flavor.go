@@ -9,19 +9,19 @@ import (
 type ComputeFlavor struct {
 
 	// cpu核数。
-	Vcpus *string `json:"vcpus,omitempty"`
+	Vcpus string `json:"vcpus"`
 
 	// 内存大小，单位为GB。
-	Ram *string `json:"ram,omitempty"`
+	Ram string `json:"ram"`
 
 	// 规格码。
-	SpecCode *string `json:"spec_code,omitempty"`
+	SpecCode string `json:"spec_code"`
 
 	// 可用区状态。
-	AzStatus map[string]string `json:"az_status,omitempty"`
+	AzStatus map[string]string `json:"az_status"`
 
 	// Region状态。
-	RegionStatus *string `json:"region_status,omitempty"`
+	RegionStatus string `json:"region_status"`
 }
 
 func (o ComputeFlavor) String() string {

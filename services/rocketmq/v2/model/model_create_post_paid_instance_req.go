@@ -58,7 +58,7 @@ type CreatePostPaidInstanceReq struct {
 	PublicipId *string `json:"publicip_id,omitempty"`
 
 	// 代理个数
-	BrokerNum *int32 `json:"broker_num,omitempty"`
+	BrokerNum int32 `json:"broker_num"`
 }
 
 func (o CreatePostPaidInstanceReq) String() string {

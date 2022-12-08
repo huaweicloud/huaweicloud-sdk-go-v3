@@ -32,7 +32,7 @@ type NetworkInstance struct {
 	// 网络实例的更新时间。 UTC时间格式，yyyy-MM-ddTHH:mm:ss
 	UpdatedAt *sdktime.SdkTime `json:"updated_at,omitempty"`
 
-	// 网络实例的类型。 - VPC：虚拟私有云。 - VGW：虚拟网关。
+	// 网络实例的类型。 - vpc：虚拟私有云。 - vgw：虚拟网关。
 	Type *NetworkInstanceType `json:"type,omitempty"`
 
 	// 云连接实例ID。

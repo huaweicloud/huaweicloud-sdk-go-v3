@@ -10,10 +10,10 @@ import (
 type QuotaDetail struct {
 
 	// 中文配额描述
-	ZhCn *string `json:"zh_cn,omitempty"`
+	ZhCn string `json:"zh_cn"`
 
 	// 英文配额描述
-	EnUs *string `json:"en_us,omitempty"`
+	EnUs string `json:"en_us"`
 
 	// 租户剩余配额数量
 	Remaining int32 `json:"remaining"`

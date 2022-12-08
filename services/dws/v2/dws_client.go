@@ -1138,6 +1138,8 @@ func (c *DwsClient) ListEventsInvoker(request *model.ListEventsRequest) *ListEve
 // ListHostDisk openApi查询磁盘信息
 //
 // openApi查询磁盘信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) ListHostDisk(request *model.ListHostDiskRequest) (*model.ListHostDiskResponse, error) {
 	requestDef := GenReqDefForListHostDisk()
 
@@ -1157,6 +1159,8 @@ func (c *DwsClient) ListHostDiskInvoker(request *model.ListHostDiskRequest) *Lis
 // ListHostNet openapi获取网卡状态
 //
 // openapi获取网卡状态
+//
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) ListHostNet(request *model.ListHostNetRequest) (*model.ListHostNetResponse, error) {
 	requestDef := GenReqDefForListHostNet()
 
@@ -1176,6 +1180,8 @@ func (c *DwsClient) ListHostNetInvoker(request *model.ListHostNetRequest) *ListH
 // ListHostOverview openApi查询主机概览
 //
 // openApi查询主机概览
+//
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) ListHostOverview(request *model.ListHostOverviewRequest) (*model.ListHostOverviewResponse, error) {
 	requestDef := GenReqDefForListHostOverview()
 

@@ -9,7 +9,7 @@ import (
 // Response Object
 type CreateDependencyResponse struct {
 
-	// 依赖包ID。
+	// 依赖包版本ID。
 	Id *string `json:"id,omitempty"`
 
 	// 依赖包拥有者。
@@ -38,6 +38,9 @@ type CreateDependencyResponse struct {
 
 	// 依赖包版本号
 	Version *int64 `json:"version,omitempty"`
+
+	// 依赖包ID
+	DepId *string `json:"dep_id,omitempty"`
 
 	// 依赖包更新时间
 	LastModified   *int64 `json:"last_modified,omitempty"`

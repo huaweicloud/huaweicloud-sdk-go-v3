@@ -124,6 +124,48 @@ func (c *ApmClient) ListAlarmNotifyInvoker(request *model.ListAlarmNotifyRequest
 	return &ListAlarmNotifyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ChangeAgentStatus 更改实例的采集状态
+//
+// 改变指定实例的采集状态：开启和关闭。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApmClient) ChangeAgentStatus(request *model.ChangeAgentStatusRequest) (*model.ChangeAgentStatusResponse, error) {
+	requestDef := GenReqDefForChangeAgentStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeAgentStatusResponse), nil
+	}
+}
+
+// ChangeAgentStatusInvoker 更改实例的采集状态
+func (c *ApmClient) ChangeAgentStatusInvoker(request *model.ChangeAgentStatusRequest) *ChangeAgentStatusInvoker {
+	requestDef := GenReqDefForChangeAgentStatus()
+	return &ChangeAgentStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAgent 删除agent
+//
+// 删除agent
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApmClient) DeleteAgent(request *model.DeleteAgentRequest) (*model.DeleteAgentResponse, error) {
+	requestDef := GenReqDefForDeleteAgent()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAgentResponse), nil
+	}
+}
+
+// DeleteAgentInvoker 删除agent
+func (c *ApmClient) DeleteAgentInvoker(request *model.DeleteAgentRequest) *DeleteAgentInvoker {
+	requestDef := GenReqDefForDeleteAgent()
+	return &DeleteAgentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListAkSk 获取ak/sk
 //
 // 获取该用户创建的ak/sk列表。
@@ -206,6 +248,27 @@ func (c *ApmClient) SaveMonitorItemConfig(request *model.SaveMonitorItemConfigRe
 func (c *ApmClient) SaveMonitorItemConfigInvoker(request *model.SaveMonitorItemConfigRequest) *SaveMonitorItemConfigInvoker {
 	requestDef := GenReqDefForSaveMonitorItemConfig()
 	return &SaveMonitorItemConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SearchAgent 搜索业务下所有探针
+//
+// 该接口用于搜索业务下所有探针情况。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApmClient) SearchAgent(request *model.SearchAgentRequest) (*model.SearchAgentResponse, error) {
+	requestDef := GenReqDefForSearchAgent()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SearchAgentResponse), nil
+	}
+}
+
+// SearchAgentInvoker 搜索业务下所有探针
+func (c *ApmClient) SearchAgentInvoker(request *model.SearchAgentRequest) *SearchAgentInvoker {
+	requestDef := GenReqDefForSearchAgent()
+	return &SearchAgentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SearchApplication 对指定区域下的组件和环境及其探针情况进行搜索

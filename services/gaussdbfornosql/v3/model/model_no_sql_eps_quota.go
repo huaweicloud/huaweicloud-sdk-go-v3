@@ -9,13 +9,13 @@ import (
 type NoSqlEpsQuota struct {
 
 	// 实例配额。
-	Instance *int32 `json:"instance,omitempty"`
+	Instance int32 `json:"instance"`
 
 	// vcpus配额。
-	Vcpus *int32 `json:"vcpus,omitempty"`
+	Vcpus int32 `json:"vcpus"`
 
 	// ram配额。
-	Ram *int32 `json:"ram,omitempty"`
+	Ram int32 `json:"ram"`
 }
 
 func (o NoSqlEpsQuota) String() string {

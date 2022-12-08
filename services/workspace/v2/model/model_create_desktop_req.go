@@ -44,9 +44,6 @@ type CreateDesktopReq struct {
 	// 创建成功后是否发送邮件通知桌面用户，默认为true。此参数仅在开通云桌面服务的domain_type为LOCAL_AD时有效，为LITE_AS时无效，因为LITE_AS首次创建桌面时必须发送邮件通知桌面用户修改登录密码。
 	EmailNotification *bool `json:"email_notification,omitempty"`
 
-	// 在非对接AD场景首次创建桌面时使用。
-	VpcId *string `json:"vpc_id,omitempty"`
-
 	// 标签列表。
 	Tags *[]Tag `json:"tags,omitempty"`
 }

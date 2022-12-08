@@ -19,10 +19,10 @@ type BaseEndpoint struct {
 	EndpointName BaseEndpointEndpointName `json:"endpoint_name"`
 
 	// 数据库IP。 约束： - 数据库为自建MongoDB时，数据库IP与端口之间用“:”英文冒号拼接，多个值之间请用“,”英文逗号隔开，最多支持填写3个IP地址或域名。 - 数据库为DDS实例时，数据库IP与端口之间用“:”英文冒号拼接，多个IP端口之间请用“,”英文逗号分隔。 示例： - MySQL：192.168.0.10 - MongoDB：192.168.0.10:8080,192.168.0.11:8080,192.168.0.12:8080 - DDS：192.168.205.130:8635,192.168.250.64:8635
-	Ip string `json:"ip"`
+	Ip *string `json:"ip,omitempty"`
 
 	// 数据库端口。  约束：输入范围为1-65535之间的整数。
-	DbPort string `json:"db_port"`
+	DbPort *string `json:"db_port,omitempty"`
 
 	// 数据库用户名。
 	DbUser string `json:"db_user"`

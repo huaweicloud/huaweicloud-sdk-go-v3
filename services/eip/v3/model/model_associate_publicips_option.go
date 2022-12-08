@@ -11,7 +11,7 @@ import (
 
 type AssociatePublicipsOption struct {
 
-	// 功能说明：端口所属实例类型 取值范围：PORT、NATGW、VPN、ELB、null 约束：associate_instance_type和associate_instance_id都不为空时表示绑定实例； associate_instance_type和associate_instance_id都为null时解绑实例 约束：双栈公网IP不允许修改绑定的实例
+	// 功能说明：端口所属实例类型 取值范围：PORT、NATGW、VPN、ELB 约束：associate_instance_type和associate_instance_id都不为空时表示绑定实例 约束：associate_instance_type字段不允许为空 约束：双栈公网IP不允许修改绑定的实例
 	AssociateInstanceType *AssociatePublicipsOptionAssociateInstanceType `json:"associate_instance_type,omitempty"`
 
 	// 功能说明：端口所属实例ID，例如RDS实例ID 约束：associate_instance_type和associate_instance_id都不为空时表示绑定实例； associate_instance_type和associate_instance_id都为null时解绑实例 约束：双栈公网IP不允许修改绑定的实例
@@ -36,7 +36,6 @@ type AssociatePublicipsOptionAssociateInstanceTypeEnum struct {
 	NATGW AssociatePublicipsOptionAssociateInstanceType
 	VPN   AssociatePublicipsOptionAssociateInstanceType
 	ELB   AssociatePublicipsOptionAssociateInstanceType
-	EMPTY AssociatePublicipsOptionAssociateInstanceType
 }
 
 func GetAssociatePublicipsOptionAssociateInstanceTypeEnum() AssociatePublicipsOptionAssociateInstanceTypeEnum {
@@ -52,9 +51,6 @@ func GetAssociatePublicipsOptionAssociateInstanceTypeEnum() AssociatePublicipsOp
 		},
 		ELB: AssociatePublicipsOptionAssociateInstanceType{
 			value: "ELB",
-		},
-		EMPTY: AssociatePublicipsOptionAssociateInstanceType{
-			value: "",
 		},
 	}
 }

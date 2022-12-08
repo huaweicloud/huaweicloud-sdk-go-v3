@@ -5,6 +5,54 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/dsc/v1/model"
 )
 
+type AddBucketsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddBucketsInvoker) Invoke() (*model.AddBucketsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddBucketsResponse), nil
+	}
+}
+
+type AddRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddRuleInvoker) Invoke() (*model.AddRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddRuleResponse), nil
+	}
+}
+
+type AddRuleGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddRuleGroupInvoker) Invoke() (*model.AddRuleGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddRuleGroupResponse), nil
+	}
+}
+
+type AddScanJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddScanJobInvoker) Invoke() (*model.AddScanJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddScanJobResponse), nil
+	}
+}
+
 type BatchAddDataMaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -14,6 +62,30 @@ func (i *BatchAddDataMaskInvoker) Invoke() (*model.BatchAddDataMaskResponse, err
 		return nil, err
 	} else {
 		return result.(*model.BatchAddDataMaskResponse), nil
+	}
+}
+
+type ChangeDbTemplateOperationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeDbTemplateOperationInvoker) Invoke() (*model.ChangeDbTemplateOperationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeDbTemplateOperationResponse), nil
+	}
+}
+
+type ChangeRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeRuleInvoker) Invoke() (*model.ChangeRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeRuleResponse), nil
 	}
 }
 
@@ -74,6 +146,150 @@ func (i *CreateImageWatermarkByAddressInvoker) Invoke() (*model.CreateImageWater
 		return nil, err
 	} else {
 		return result.(*model.CreateImageWatermarkByAddressResponse), nil
+	}
+}
+
+type CreateProductOrderInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateProductOrderInvoker) Invoke() (*model.CreateProductOrderResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateProductOrderResponse), nil
+	}
+}
+
+type DeleteBucketInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteBucketInvoker) Invoke() (*model.DeleteBucketResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteBucketResponse), nil
+	}
+}
+
+type DeleteRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteRuleInvoker) Invoke() (*model.DeleteRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteRuleResponse), nil
+	}
+}
+
+type DeleteRuleGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteRuleGroupInvoker) Invoke() (*model.DeleteRuleGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteRuleGroupResponse), nil
+	}
+}
+
+type ListBucketsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBucketsInvoker) Invoke() (*model.ListBucketsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBucketsResponse), nil
+	}
+}
+
+type ListDbMaskTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDbMaskTaskInvoker) Invoke() (*model.ListDbMaskTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDbMaskTaskResponse), nil
+	}
+}
+
+type ListRelationBucketsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRelationBucketsInvoker) Invoke() (*model.ListRelationBucketsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRelationBucketsResponse), nil
+	}
+}
+
+type ListRelationColumnInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRelationColumnInvoker) Invoke() (*model.ListRelationColumnResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRelationColumnResponse), nil
+	}
+}
+
+type ListRelationDbInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRelationDbInvoker) Invoke() (*model.ListRelationDbResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRelationDbResponse), nil
+	}
+}
+
+type ListRelationFileInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRelationFileInvoker) Invoke() (*model.ListRelationFileResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRelationFileResponse), nil
+	}
+}
+
+type ListRelationTableInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRelationTableInvoker) Invoke() (*model.ListRelationTableResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRelationTableResponse), nil
+	}
+}
+
+type ListRuleGroupsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRuleGroupsInvoker) Invoke() (*model.ListRuleGroupsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRuleGroupsResponse), nil
 	}
 }
 
@@ -161,6 +377,18 @@ func (i *ShowImageWatermarkWithImageByAddressInvoker) Invoke() (*model.ShowImage
 	}
 }
 
+type ShowRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRulesInvoker) Invoke() (*model.ShowRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRulesResponse), nil
+	}
+}
+
 type ShowScanJobResultsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -182,6 +410,54 @@ func (i *ShowScanJobsInvoker) Invoke() (*model.ShowScanJobsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowScanJobsResponse), nil
+	}
+}
+
+type ShowSpecificationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSpecificationInvoker) Invoke() (*model.ShowSpecificationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSpecificationResponse), nil
+	}
+}
+
+type ShowTopicsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTopicsInvoker) Invoke() (*model.ShowTopicsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTopicsResponse), nil
+	}
+}
+
+type UpdateAssetNameInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAssetNameInvoker) Invoke() (*model.UpdateAssetNameResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAssetNameResponse), nil
+	}
+}
+
+type UpdateDefaultTopicInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDefaultTopicInvoker) Invoke() (*model.UpdateDefaultTopicResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDefaultTopicResponse), nil
 	}
 }
 

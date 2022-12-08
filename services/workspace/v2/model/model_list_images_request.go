@@ -20,6 +20,15 @@ type ListImagesRequest struct {
 
 	// 镜像架构：x86。
 	Architecture *string `json:"architecture,omitempty"`
+
+	// 套餐系列
+	PackageType *string `json:"package_type,omitempty"`
+
+	// 每页数量，范围0-100，默认100。
+	Limit *int32 `json:"limit,omitempty"`
+
+	// 偏移量,默认0。
+	Offset *int32 `json:"offset,omitempty"`
 }
 
 func (o ListImagesRequest) String() string {

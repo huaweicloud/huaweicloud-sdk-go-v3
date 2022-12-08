@@ -61,6 +61,48 @@ func (c *GaussDBClient) BatchTagActionInvoker(request *model.BatchTagActionReque
 	return &BatchTagActionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CancelGaussMySqlInstanceEip 解绑弹性公网IP
+//
+// 实例解绑弹性公网IP。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) CancelGaussMySqlInstanceEip(request *model.CancelGaussMySqlInstanceEipRequest) (*model.CancelGaussMySqlInstanceEipResponse, error) {
+	requestDef := GenReqDefForCancelGaussMySqlInstanceEip()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CancelGaussMySqlInstanceEipResponse), nil
+	}
+}
+
+// CancelGaussMySqlInstanceEipInvoker 解绑弹性公网IP
+func (c *GaussDBClient) CancelGaussMySqlInstanceEipInvoker(request *model.CancelGaussMySqlInstanceEipRequest) *CancelGaussMySqlInstanceEipInvoker {
+	requestDef := GenReqDefForCancelGaussMySqlInstanceEip()
+	return &CancelGaussMySqlInstanceEipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CancelScheduleTask 取消定时任务
+//
+// 取消定时任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) CancelScheduleTask(request *model.CancelScheduleTaskRequest) (*model.CancelScheduleTaskResponse, error) {
+	requestDef := GenReqDefForCancelScheduleTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CancelScheduleTaskResponse), nil
+	}
+}
+
+// CancelScheduleTaskInvoker 取消定时任务
+func (c *GaussDBClient) CancelScheduleTaskInvoker(request *model.CancelScheduleTaskRequest) *CancelScheduleTaskInvoker {
+	requestDef := GenReqDefForCancelScheduleTask()
+	return &CancelScheduleTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ChangeGaussMySqlInstanceSpecification 变更实例规格
 //
 // 变更数据库实例的规格。
@@ -122,6 +164,27 @@ func (c *GaussDBClient) CreateGaussMySqlBackup(request *model.CreateGaussMySqlBa
 func (c *GaussDBClient) CreateGaussMySqlBackupInvoker(request *model.CreateGaussMySqlBackupRequest) *CreateGaussMySqlBackupInvoker {
 	requestDef := GenReqDefForCreateGaussMySqlBackup()
 	return &CreateGaussMySqlBackupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateGaussMySqlConfiguration 创建参数模板
+//
+// 创建参数模板信息，包含参数模板名称、描述、数据库版本信息、参数值。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) CreateGaussMySqlConfiguration(request *model.CreateGaussMySqlConfigurationRequest) (*model.CreateGaussMySqlConfigurationResponse, error) {
+	requestDef := GenReqDefForCreateGaussMySqlConfiguration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateGaussMySqlConfigurationResponse), nil
+	}
+}
+
+// CreateGaussMySqlConfigurationInvoker 创建参数模板
+func (c *GaussDBClient) CreateGaussMySqlConfigurationInvoker(request *model.CreateGaussMySqlConfigurationRequest) *CreateGaussMySqlConfigurationInvoker {
+	requestDef := GenReqDefForCreateGaussMySqlConfiguration()
+	return &CreateGaussMySqlConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateGaussMySqlDatabase 创建数据库
@@ -250,6 +313,48 @@ func (c *GaussDBClient) DeleteDatabasePermissionInvoker(request *model.DeleteDat
 	return &DeleteDatabasePermissionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteGaussMySqlBackup 删除手动备份
+//
+// 删除手动备份。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) DeleteGaussMySqlBackup(request *model.DeleteGaussMySqlBackupRequest) (*model.DeleteGaussMySqlBackupResponse, error) {
+	requestDef := GenReqDefForDeleteGaussMySqlBackup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteGaussMySqlBackupResponse), nil
+	}
+}
+
+// DeleteGaussMySqlBackupInvoker 删除手动备份
+func (c *GaussDBClient) DeleteGaussMySqlBackupInvoker(request *model.DeleteGaussMySqlBackupRequest) *DeleteGaussMySqlBackupInvoker {
+	requestDef := GenReqDefForDeleteGaussMySqlBackup()
+	return &DeleteGaussMySqlBackupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteGaussMySqlConfiguration 删除参数模板
+//
+// 删除指定参数模板。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) DeleteGaussMySqlConfiguration(request *model.DeleteGaussMySqlConfigurationRequest) (*model.DeleteGaussMySqlConfigurationResponse, error) {
+	requestDef := GenReqDefForDeleteGaussMySqlConfiguration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteGaussMySqlConfigurationResponse), nil
+	}
+}
+
+// DeleteGaussMySqlConfigurationInvoker 删除参数模板
+func (c *GaussDBClient) DeleteGaussMySqlConfigurationInvoker(request *model.DeleteGaussMySqlConfigurationRequest) *DeleteGaussMySqlConfigurationInvoker {
+	requestDef := GenReqDefForDeleteGaussMySqlConfiguration()
+	return &DeleteGaussMySqlConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteGaussMySqlDatabase 删除数据库
 //
 // 删除云数据库 GaussDB(for MySQL)实例数据库。
@@ -355,6 +460,27 @@ func (c *GaussDBClient) DeleteGaussMySqlReadonlyNodeInvoker(request *model.Delet
 	return &DeleteGaussMySqlReadonlyNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteTaskRecord 删除指定任务记录
+//
+// 删除指定任务记录。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) DeleteTaskRecord(request *model.DeleteTaskRecordRequest) (*model.DeleteTaskRecordResponse, error) {
+	requestDef := GenReqDefForDeleteTaskRecord()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteTaskRecordResponse), nil
+	}
+}
+
+// DeleteTaskRecordInvoker 删除指定任务记录
+func (c *GaussDBClient) DeleteTaskRecordInvoker(request *model.DeleteTaskRecordRequest) *DeleteTaskRecordInvoker {
+	requestDef := GenReqDefForDeleteTaskRecord()
+	return &DeleteTaskRecordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ExpandGaussMySqlInstanceVolume 包周期存储扩容
 //
 // 包周期存储扩容
@@ -396,6 +522,27 @@ func (c *GaussDBClient) ExpandGaussMySqlProxy(request *model.ExpandGaussMySqlPro
 func (c *GaussDBClient) ExpandGaussMySqlProxyInvoker(request *model.ExpandGaussMySqlProxyRequest) *ExpandGaussMySqlProxyInvoker {
 	requestDef := GenReqDefForExpandGaussMySqlProxy()
 	return &ExpandGaussMySqlProxyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// InvokeGaussMySqlInstanceSwitchOver 手动主备倒换
+//
+// 用户手动进行主备倒换。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) InvokeGaussMySqlInstanceSwitchOver(request *model.InvokeGaussMySqlInstanceSwitchOverRequest) (*model.InvokeGaussMySqlInstanceSwitchOverResponse, error) {
+	requestDef := GenReqDefForInvokeGaussMySqlInstanceSwitchOver()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.InvokeGaussMySqlInstanceSwitchOverResponse), nil
+	}
+}
+
+// InvokeGaussMySqlInstanceSwitchOverInvoker 手动主备倒换
+func (c *GaussDBClient) InvokeGaussMySqlInstanceSwitchOverInvoker(request *model.InvokeGaussMySqlInstanceSwitchOverRequest) *InvokeGaussMySqlInstanceSwitchOverInvoker {
+	requestDef := GenReqDefForInvokeGaussMySqlInstanceSwitchOver()
+	return &InvokeGaussMySqlInstanceSwitchOverInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListGaussMySqlConfigurations 查询参数模板
@@ -587,6 +734,27 @@ func (c *GaussDBClient) ListGaussMySqlSlowLogInvoker(request *model.ListGaussMyS
 	return &ListGaussMySqlSlowLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListImmediateJobs 获取即时任务列表
+//
+// 获取即时任务列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ListImmediateJobs(request *model.ListImmediateJobsRequest) (*model.ListImmediateJobsResponse, error) {
+	requestDef := GenReqDefForListImmediateJobs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListImmediateJobsResponse), nil
+	}
+}
+
+// ListImmediateJobsInvoker 获取即时任务列表
+func (c *GaussDBClient) ListImmediateJobsInvoker(request *model.ListImmediateJobsRequest) *ListImmediateJobsInvoker {
+	requestDef := GenReqDefForListImmediateJobs()
+	return &ListImmediateJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListInstanceTags 查询资源标签
 //
 // 查询指定实例的标签信息。
@@ -629,6 +797,27 @@ func (c *GaussDBClient) ListProjectTagsInvoker(request *model.ListProjectTagsReq
 	return &ListProjectTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListScheduleJobs 获取定时任务列表
+//
+// 获取定时任务列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ListScheduleJobs(request *model.ListScheduleJobsRequest) (*model.ListScheduleJobsResponse, error) {
+	requestDef := GenReqDefForListScheduleJobs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListScheduleJobsResponse), nil
+	}
+}
+
+// ListScheduleJobsInvoker 获取定时任务列表
+func (c *GaussDBClient) ListScheduleJobsInvoker(request *model.ListScheduleJobsRequest) *ListScheduleJobsInvoker {
+	requestDef := GenReqDefForListScheduleJobs()
+	return &ListScheduleJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ResetGaussMySqlDatabasePassword 修改数据库用户密码
 //
 // 修改云数据库 GaussDB(for MySQL)实例数据库用户密码。
@@ -669,6 +858,48 @@ func (c *GaussDBClient) ResetGaussMySqlPassword(request *model.ResetGaussMySqlPa
 func (c *GaussDBClient) ResetGaussMySqlPasswordInvoker(request *model.ResetGaussMySqlPasswordRequest) *ResetGaussMySqlPasswordInvoker {
 	requestDef := GenReqDefForResetGaussMySqlPassword()
 	return &ResetGaussMySqlPasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RestartGaussMySqlInstance 重启数据库实例
+//
+// 重启数据库实例。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) RestartGaussMySqlInstance(request *model.RestartGaussMySqlInstanceRequest) (*model.RestartGaussMySqlInstanceResponse, error) {
+	requestDef := GenReqDefForRestartGaussMySqlInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RestartGaussMySqlInstanceResponse), nil
+	}
+}
+
+// RestartGaussMySqlInstanceInvoker 重启数据库实例
+func (c *GaussDBClient) RestartGaussMySqlInstanceInvoker(request *model.RestartGaussMySqlInstanceRequest) *RestartGaussMySqlInstanceInvoker {
+	requestDef := GenReqDefForRestartGaussMySqlInstance()
+	return &RestartGaussMySqlInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RestartGaussMySqlNode 节点重启
+//
+// 节点重启。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) RestartGaussMySqlNode(request *model.RestartGaussMySqlNodeRequest) (*model.RestartGaussMySqlNodeResponse, error) {
+	requestDef := GenReqDefForRestartGaussMySqlNode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RestartGaussMySqlNodeResponse), nil
+	}
+}
+
+// RestartGaussMySqlNodeInvoker 节点重启
+func (c *GaussDBClient) RestartGaussMySqlNodeInvoker(request *model.RestartGaussMySqlNodeRequest) *RestartGaussMySqlNodeInvoker {
+	requestDef := GenReqDefForRestartGaussMySqlNode()
+	return &RestartGaussMySqlNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SetGaussMySqlProxyWeight 设置读写分离权重
@@ -795,6 +1026,27 @@ func (c *GaussDBClient) ShowGaussMySqlBackupPolicy(request *model.ShowGaussMySql
 func (c *GaussDBClient) ShowGaussMySqlBackupPolicyInvoker(request *model.ShowGaussMySqlBackupPolicyRequest) *ShowGaussMySqlBackupPolicyInvoker {
 	requestDef := GenReqDefForShowGaussMySqlBackupPolicy()
 	return &ShowGaussMySqlBackupPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowGaussMySqlConfiguration 获取参数模板详情
+//
+// 获取指定参数模板的参数信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowGaussMySqlConfiguration(request *model.ShowGaussMySqlConfigurationRequest) (*model.ShowGaussMySqlConfigurationResponse, error) {
+	requestDef := GenReqDefForShowGaussMySqlConfiguration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowGaussMySqlConfigurationResponse), nil
+	}
+}
+
+// ShowGaussMySqlConfigurationInvoker 获取参数模板详情
+func (c *GaussDBClient) ShowGaussMySqlConfigurationInvoker(request *model.ShowGaussMySqlConfigurationRequest) *ShowGaussMySqlConfigurationInvoker {
+	requestDef := GenReqDefForShowGaussMySqlConfiguration()
+	return &ShowGaussMySqlConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowGaussMySqlEngineVersion 查询数据库引擎的版本
@@ -986,6 +1238,48 @@ func (c *GaussDBClient) ShowInstanceMonitorExtendInvoker(request *model.ShowInst
 	return &ShowInstanceMonitorExtendInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SwitchGaussMySqlConfiguration 应用参数模板
+//
+// 指定实例变更参数模板。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) SwitchGaussMySqlConfiguration(request *model.SwitchGaussMySqlConfigurationRequest) (*model.SwitchGaussMySqlConfigurationResponse, error) {
+	requestDef := GenReqDefForSwitchGaussMySqlConfiguration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SwitchGaussMySqlConfigurationResponse), nil
+	}
+}
+
+// SwitchGaussMySqlConfigurationInvoker 应用参数模板
+func (c *GaussDBClient) SwitchGaussMySqlConfigurationInvoker(request *model.SwitchGaussMySqlConfigurationRequest) *SwitchGaussMySqlConfigurationInvoker {
+	requestDef := GenReqDefForSwitchGaussMySqlConfiguration()
+	return &SwitchGaussMySqlConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SwitchGaussMySqlInstanceSsl 开关SSL
+//
+// 为实例设置SSL数据加密。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) SwitchGaussMySqlInstanceSsl(request *model.SwitchGaussMySqlInstanceSslRequest) (*model.SwitchGaussMySqlInstanceSslResponse, error) {
+	requestDef := GenReqDefForSwitchGaussMySqlInstanceSsl()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SwitchGaussMySqlInstanceSslResponse), nil
+	}
+}
+
+// SwitchGaussMySqlInstanceSslInvoker 开关SSL
+func (c *GaussDBClient) SwitchGaussMySqlInstanceSslInvoker(request *model.SwitchGaussMySqlInstanceSslRequest) *SwitchGaussMySqlInstanceSslInvoker {
+	requestDef := GenReqDefForSwitchGaussMySqlInstanceSsl()
+	return &SwitchGaussMySqlInstanceSslInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateAuditLog 开启或者关闭审计日志
 //
 // 开启或者关闭审计日志
@@ -1028,6 +1322,90 @@ func (c *GaussDBClient) UpdateGaussMySqlBackupPolicyInvoker(request *model.Updat
 	return &UpdateGaussMySqlBackupPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateGaussMySqlConfiguration 修改参数模板
+//
+// 修改指定参数模板的参数信息，包括名称、描述、指定参数的值。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) UpdateGaussMySqlConfiguration(request *model.UpdateGaussMySqlConfigurationRequest) (*model.UpdateGaussMySqlConfigurationResponse, error) {
+	requestDef := GenReqDefForUpdateGaussMySqlConfiguration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateGaussMySqlConfigurationResponse), nil
+	}
+}
+
+// UpdateGaussMySqlConfigurationInvoker 修改参数模板
+func (c *GaussDBClient) UpdateGaussMySqlConfigurationInvoker(request *model.UpdateGaussMySqlConfigurationRequest) *UpdateGaussMySqlConfigurationInvoker {
+	requestDef := GenReqDefForUpdateGaussMySqlConfiguration()
+	return &UpdateGaussMySqlConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateGaussMySqlInstanceAlias 修改实例备注
+//
+// 修改实例备注。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) UpdateGaussMySqlInstanceAlias(request *model.UpdateGaussMySqlInstanceAliasRequest) (*model.UpdateGaussMySqlInstanceAliasResponse, error) {
+	requestDef := GenReqDefForUpdateGaussMySqlInstanceAlias()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateGaussMySqlInstanceAliasResponse), nil
+	}
+}
+
+// UpdateGaussMySqlInstanceAliasInvoker 修改实例备注
+func (c *GaussDBClient) UpdateGaussMySqlInstanceAliasInvoker(request *model.UpdateGaussMySqlInstanceAliasRequest) *UpdateGaussMySqlInstanceAliasInvoker {
+	requestDef := GenReqDefForUpdateGaussMySqlInstanceAlias()
+	return &UpdateGaussMySqlInstanceAliasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateGaussMySqlInstanceEip 绑定弹性公网IP
+//
+// 实例绑定弹性公网IP，供外网连接使用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) UpdateGaussMySqlInstanceEip(request *model.UpdateGaussMySqlInstanceEipRequest) (*model.UpdateGaussMySqlInstanceEipResponse, error) {
+	requestDef := GenReqDefForUpdateGaussMySqlInstanceEip()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateGaussMySqlInstanceEipResponse), nil
+	}
+}
+
+// UpdateGaussMySqlInstanceEipInvoker 绑定弹性公网IP
+func (c *GaussDBClient) UpdateGaussMySqlInstanceEipInvoker(request *model.UpdateGaussMySqlInstanceEipRequest) *UpdateGaussMySqlInstanceEipInvoker {
+	requestDef := GenReqDefForUpdateGaussMySqlInstanceEip()
+	return &UpdateGaussMySqlInstanceEipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateGaussMySqlInstanceInternalIp 修改内网地址
+//
+// 修改实例内网地址。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) UpdateGaussMySqlInstanceInternalIp(request *model.UpdateGaussMySqlInstanceInternalIpRequest) (*model.UpdateGaussMySqlInstanceInternalIpResponse, error) {
+	requestDef := GenReqDefForUpdateGaussMySqlInstanceInternalIp()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateGaussMySqlInstanceInternalIpResponse), nil
+	}
+}
+
+// UpdateGaussMySqlInstanceInternalIpInvoker 修改内网地址
+func (c *GaussDBClient) UpdateGaussMySqlInstanceInternalIpInvoker(request *model.UpdateGaussMySqlInstanceInternalIpRequest) *UpdateGaussMySqlInstanceInternalIpInvoker {
+	requestDef := GenReqDefForUpdateGaussMySqlInstanceInternalIp()
+	return &UpdateGaussMySqlInstanceInternalIpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateGaussMySqlInstanceName 修改实例名称
 //
 // 修改实例名称
@@ -1047,6 +1425,69 @@ func (c *GaussDBClient) UpdateGaussMySqlInstanceName(request *model.UpdateGaussM
 func (c *GaussDBClient) UpdateGaussMySqlInstanceNameInvoker(request *model.UpdateGaussMySqlInstanceNameRequest) *UpdateGaussMySqlInstanceNameInvoker {
 	requestDef := GenReqDefForUpdateGaussMySqlInstanceName()
 	return &UpdateGaussMySqlInstanceNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateGaussMySqlInstanceOpsWindow 设置可维护时间段
+//
+// 设置可维护时间段。建议将可维护时间段设置在业务低峰期，避免业务在维护过程中异常中断。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) UpdateGaussMySqlInstanceOpsWindow(request *model.UpdateGaussMySqlInstanceOpsWindowRequest) (*model.UpdateGaussMySqlInstanceOpsWindowResponse, error) {
+	requestDef := GenReqDefForUpdateGaussMySqlInstanceOpsWindow()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateGaussMySqlInstanceOpsWindowResponse), nil
+	}
+}
+
+// UpdateGaussMySqlInstanceOpsWindowInvoker 设置可维护时间段
+func (c *GaussDBClient) UpdateGaussMySqlInstanceOpsWindowInvoker(request *model.UpdateGaussMySqlInstanceOpsWindowRequest) *UpdateGaussMySqlInstanceOpsWindowInvoker {
+	requestDef := GenReqDefForUpdateGaussMySqlInstanceOpsWindow()
+	return &UpdateGaussMySqlInstanceOpsWindowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateGaussMySqlInstancePort 修改实例端口
+//
+// 修改实例数据库端口。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) UpdateGaussMySqlInstancePort(request *model.UpdateGaussMySqlInstancePortRequest) (*model.UpdateGaussMySqlInstancePortResponse, error) {
+	requestDef := GenReqDefForUpdateGaussMySqlInstancePort()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateGaussMySqlInstancePortResponse), nil
+	}
+}
+
+// UpdateGaussMySqlInstancePortInvoker 修改实例端口
+func (c *GaussDBClient) UpdateGaussMySqlInstancePortInvoker(request *model.UpdateGaussMySqlInstancePortRequest) *UpdateGaussMySqlInstancePortInvoker {
+	requestDef := GenReqDefForUpdateGaussMySqlInstancePort()
+	return &UpdateGaussMySqlInstancePortInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateGaussMySqlInstanceSecurityGroup 修改安全组
+//
+// 修改指定实例安全组。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) UpdateGaussMySqlInstanceSecurityGroup(request *model.UpdateGaussMySqlInstanceSecurityGroupRequest) (*model.UpdateGaussMySqlInstanceSecurityGroupResponse, error) {
+	requestDef := GenReqDefForUpdateGaussMySqlInstanceSecurityGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateGaussMySqlInstanceSecurityGroupResponse), nil
+	}
+}
+
+// UpdateGaussMySqlInstanceSecurityGroupInvoker 修改安全组
+func (c *GaussDBClient) UpdateGaussMySqlInstanceSecurityGroupInvoker(request *model.UpdateGaussMySqlInstanceSecurityGroupRequest) *UpdateGaussMySqlInstanceSecurityGroupInvoker {
+	requestDef := GenReqDefForUpdateGaussMySqlInstanceSecurityGroup()
+	return &UpdateGaussMySqlInstanceSecurityGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateGaussMySqlQuotas 修改租户基于企业项目的资源配额
@@ -1091,6 +1532,27 @@ func (c *GaussDBClient) UpdateInstanceMonitorInvoker(request *model.UpdateInstan
 	return &UpdateInstanceMonitorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateProxySessionConsistence 修改代理会话一致性
+//
+// 修改代理会话一致性。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) UpdateProxySessionConsistence(request *model.UpdateProxySessionConsistenceRequest) (*model.UpdateProxySessionConsistenceResponse, error) {
+	requestDef := GenReqDefForUpdateProxySessionConsistence()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateProxySessionConsistenceResponse), nil
+	}
+}
+
+// UpdateProxySessionConsistenceInvoker 修改代理会话一致性
+func (c *GaussDBClient) UpdateProxySessionConsistenceInvoker(request *model.UpdateProxySessionConsistenceRequest) *UpdateProxySessionConsistenceInvoker {
+	requestDef := GenReqDefForUpdateProxySessionConsistence()
+	return &UpdateProxySessionConsistenceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateTransactionSplitStatus 开启/关闭proxy事务拆分
 //
 // 开启/关闭proxy事务拆分
@@ -1110,6 +1572,27 @@ func (c *GaussDBClient) UpdateTransactionSplitStatus(request *model.UpdateTransa
 func (c *GaussDBClient) UpdateTransactionSplitStatusInvoker(request *model.UpdateTransactionSplitStatusRequest) *UpdateTransactionSplitStatusInvoker {
 	requestDef := GenReqDefForUpdateTransactionSplitStatus()
 	return &UpdateTransactionSplitStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpgradeGaussMySqlInstanceDatabase 内核版本升级
+//
+// 内核版本升级。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) UpgradeGaussMySqlInstanceDatabase(request *model.UpgradeGaussMySqlInstanceDatabaseRequest) (*model.UpgradeGaussMySqlInstanceDatabaseResponse, error) {
+	requestDef := GenReqDefForUpgradeGaussMySqlInstanceDatabase()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpgradeGaussMySqlInstanceDatabaseResponse), nil
+	}
+}
+
+// UpgradeGaussMySqlInstanceDatabaseInvoker 内核版本升级
+func (c *GaussDBClient) UpgradeGaussMySqlInstanceDatabaseInvoker(request *model.UpgradeGaussMySqlInstanceDatabaseRequest) *UpgradeGaussMySqlInstanceDatabaseInvoker {
+	requestDef := GenReqDefForUpgradeGaussMySqlInstanceDatabase()
+	return &UpgradeGaussMySqlInstanceDatabaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteSqlFilterRule 删除SQL限流规则

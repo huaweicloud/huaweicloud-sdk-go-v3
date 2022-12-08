@@ -71,7 +71,7 @@ type ProductInfo struct {
 	// 专属主机的子产品。
 	SubProductList *[]string `json:"sub_product_list,omitempty"`
 
-	// 套餐系列。
+	// 套餐类型。 - ultimate：尊享版 - enterprise：企业版 - general: 通用办公版 - workstation: 云工作站 - dedicated: 专属办公版 - solver: 解算版 - agile: 敏捷办公版
 	PackageType *string `json:"package_type,omitempty"`
 }
 

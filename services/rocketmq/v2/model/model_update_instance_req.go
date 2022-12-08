@@ -18,7 +18,7 @@ type UpdateInstanceReq struct {
 	SecurityGroupId *string `json:"security_group_id,omitempty"`
 
 	// ACL访问控制。
-	RetentionPolicy *bool `json:"retention_policy,omitempty"`
+	EnableAcl *bool `json:"enable_acl,omitempty"`
 }
 
 func (o UpdateInstanceReq) String() string {

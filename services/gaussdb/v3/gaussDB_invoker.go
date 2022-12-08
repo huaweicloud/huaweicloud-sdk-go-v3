@@ -29,6 +29,30 @@ func (i *BatchTagActionInvoker) Invoke() (*model.BatchTagActionResponse, error) 
 	}
 }
 
+type CancelGaussMySqlInstanceEipInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CancelGaussMySqlInstanceEipInvoker) Invoke() (*model.CancelGaussMySqlInstanceEipResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CancelGaussMySqlInstanceEipResponse), nil
+	}
+}
+
+type CancelScheduleTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CancelScheduleTaskInvoker) Invoke() (*model.CancelScheduleTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CancelScheduleTaskResponse), nil
+	}
+}
+
 type ChangeGaussMySqlInstanceSpecificationInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -62,6 +86,18 @@ func (i *CreateGaussMySqlBackupInvoker) Invoke() (*model.CreateGaussMySqlBackupR
 		return nil, err
 	} else {
 		return result.(*model.CreateGaussMySqlBackupResponse), nil
+	}
+}
+
+type CreateGaussMySqlConfigurationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateGaussMySqlConfigurationInvoker) Invoke() (*model.CreateGaussMySqlConfigurationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateGaussMySqlConfigurationResponse), nil
 	}
 }
 
@@ -137,6 +173,30 @@ func (i *DeleteDatabasePermissionInvoker) Invoke() (*model.DeleteDatabasePermiss
 	}
 }
 
+type DeleteGaussMySqlBackupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteGaussMySqlBackupInvoker) Invoke() (*model.DeleteGaussMySqlBackupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteGaussMySqlBackupResponse), nil
+	}
+}
+
+type DeleteGaussMySqlConfigurationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteGaussMySqlConfigurationInvoker) Invoke() (*model.DeleteGaussMySqlConfigurationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteGaussMySqlConfigurationResponse), nil
+	}
+}
+
 type DeleteGaussMySqlDatabaseInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -197,6 +257,18 @@ func (i *DeleteGaussMySqlReadonlyNodeInvoker) Invoke() (*model.DeleteGaussMySqlR
 	}
 }
 
+type DeleteTaskRecordInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteTaskRecordInvoker) Invoke() (*model.DeleteTaskRecordResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteTaskRecordResponse), nil
+	}
+}
+
 type ExpandGaussMySqlInstanceVolumeInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -218,6 +290,18 @@ func (i *ExpandGaussMySqlProxyInvoker) Invoke() (*model.ExpandGaussMySqlProxyRes
 		return nil, err
 	} else {
 		return result.(*model.ExpandGaussMySqlProxyResponse), nil
+	}
+}
+
+type InvokeGaussMySqlInstanceSwitchOverInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *InvokeGaussMySqlInstanceSwitchOverInvoker) Invoke() (*model.InvokeGaussMySqlInstanceSwitchOverResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.InvokeGaussMySqlInstanceSwitchOverResponse), nil
 	}
 }
 
@@ -329,6 +413,18 @@ func (i *ListGaussMySqlSlowLogInvoker) Invoke() (*model.ListGaussMySqlSlowLogRes
 	}
 }
 
+type ListImmediateJobsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListImmediateJobsInvoker) Invoke() (*model.ListImmediateJobsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListImmediateJobsResponse), nil
+	}
+}
+
 type ListInstanceTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -353,6 +449,18 @@ func (i *ListProjectTagsInvoker) Invoke() (*model.ListProjectTagsResponse, error
 	}
 }
 
+type ListScheduleJobsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListScheduleJobsInvoker) Invoke() (*model.ListScheduleJobsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListScheduleJobsResponse), nil
+	}
+}
+
 type ResetGaussMySqlDatabasePasswordInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -374,6 +482,30 @@ func (i *ResetGaussMySqlPasswordInvoker) Invoke() (*model.ResetGaussMySqlPasswor
 		return nil, err
 	} else {
 		return result.(*model.ResetGaussMySqlPasswordResponse), nil
+	}
+}
+
+type RestartGaussMySqlInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RestartGaussMySqlInstanceInvoker) Invoke() (*model.RestartGaussMySqlInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RestartGaussMySqlInstanceResponse), nil
+	}
+}
+
+type RestartGaussMySqlNodeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RestartGaussMySqlNodeInvoker) Invoke() (*model.RestartGaussMySqlNodeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RestartGaussMySqlNodeResponse), nil
 	}
 }
 
@@ -446,6 +578,18 @@ func (i *ShowGaussMySqlBackupPolicyInvoker) Invoke() (*model.ShowGaussMySqlBacku
 		return nil, err
 	} else {
 		return result.(*model.ShowGaussMySqlBackupPolicyResponse), nil
+	}
+}
+
+type ShowGaussMySqlConfigurationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowGaussMySqlConfigurationInvoker) Invoke() (*model.ShowGaussMySqlConfigurationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowGaussMySqlConfigurationResponse), nil
 	}
 }
 
@@ -557,6 +701,30 @@ func (i *ShowInstanceMonitorExtendInvoker) Invoke() (*model.ShowInstanceMonitorE
 	}
 }
 
+type SwitchGaussMySqlConfigurationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SwitchGaussMySqlConfigurationInvoker) Invoke() (*model.SwitchGaussMySqlConfigurationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SwitchGaussMySqlConfigurationResponse), nil
+	}
+}
+
+type SwitchGaussMySqlInstanceSslInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SwitchGaussMySqlInstanceSslInvoker) Invoke() (*model.SwitchGaussMySqlInstanceSslResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SwitchGaussMySqlInstanceSslResponse), nil
+	}
+}
+
 type UpdateAuditLogInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -581,6 +749,54 @@ func (i *UpdateGaussMySqlBackupPolicyInvoker) Invoke() (*model.UpdateGaussMySqlB
 	}
 }
 
+type UpdateGaussMySqlConfigurationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateGaussMySqlConfigurationInvoker) Invoke() (*model.UpdateGaussMySqlConfigurationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateGaussMySqlConfigurationResponse), nil
+	}
+}
+
+type UpdateGaussMySqlInstanceAliasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateGaussMySqlInstanceAliasInvoker) Invoke() (*model.UpdateGaussMySqlInstanceAliasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateGaussMySqlInstanceAliasResponse), nil
+	}
+}
+
+type UpdateGaussMySqlInstanceEipInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateGaussMySqlInstanceEipInvoker) Invoke() (*model.UpdateGaussMySqlInstanceEipResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateGaussMySqlInstanceEipResponse), nil
+	}
+}
+
+type UpdateGaussMySqlInstanceInternalIpInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateGaussMySqlInstanceInternalIpInvoker) Invoke() (*model.UpdateGaussMySqlInstanceInternalIpResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateGaussMySqlInstanceInternalIpResponse), nil
+	}
+}
+
 type UpdateGaussMySqlInstanceNameInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -590,6 +806,42 @@ func (i *UpdateGaussMySqlInstanceNameInvoker) Invoke() (*model.UpdateGaussMySqlI
 		return nil, err
 	} else {
 		return result.(*model.UpdateGaussMySqlInstanceNameResponse), nil
+	}
+}
+
+type UpdateGaussMySqlInstanceOpsWindowInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateGaussMySqlInstanceOpsWindowInvoker) Invoke() (*model.UpdateGaussMySqlInstanceOpsWindowResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateGaussMySqlInstanceOpsWindowResponse), nil
+	}
+}
+
+type UpdateGaussMySqlInstancePortInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateGaussMySqlInstancePortInvoker) Invoke() (*model.UpdateGaussMySqlInstancePortResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateGaussMySqlInstancePortResponse), nil
+	}
+}
+
+type UpdateGaussMySqlInstanceSecurityGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateGaussMySqlInstanceSecurityGroupInvoker) Invoke() (*model.UpdateGaussMySqlInstanceSecurityGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateGaussMySqlInstanceSecurityGroupResponse), nil
 	}
 }
 
@@ -617,6 +869,18 @@ func (i *UpdateInstanceMonitorInvoker) Invoke() (*model.UpdateInstanceMonitorRes
 	}
 }
 
+type UpdateProxySessionConsistenceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateProxySessionConsistenceInvoker) Invoke() (*model.UpdateProxySessionConsistenceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateProxySessionConsistenceResponse), nil
+	}
+}
+
 type UpdateTransactionSplitStatusInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -626,6 +890,18 @@ func (i *UpdateTransactionSplitStatusInvoker) Invoke() (*model.UpdateTransaction
 		return nil, err
 	} else {
 		return result.(*model.UpdateTransactionSplitStatusResponse), nil
+	}
+}
+
+type UpgradeGaussMySqlInstanceDatabaseInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpgradeGaussMySqlInstanceDatabaseInvoker) Invoke() (*model.UpgradeGaussMySqlInstanceDatabaseResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpgradeGaussMySqlInstanceDatabaseResponse), nil
 	}
 }
 

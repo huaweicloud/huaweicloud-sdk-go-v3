@@ -38,7 +38,7 @@ type UserDetail struct {
 	// 帐号类型(0：用户；1：用户组)。
 	AccountType *int32 `json:"account_type,omitempty"`
 
-	// UTC时间毫秒数对应的字符。
+	// UTC时间毫秒数对应的字符，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ。
 	WhenCreated *string `json:"when_created,omitempty"`
 
 	// 账号有效期最后一天对应的UTC时间，以毫秒为单位。

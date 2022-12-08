@@ -8,7 +8,7 @@ import (
 
 type MasterEipRequestSpecSpec struct {
 
-	// 弹性网卡ID
+	// 弹性网卡ID，必选参数
 	Id *string `json:"id,omitempty"`
 }
 

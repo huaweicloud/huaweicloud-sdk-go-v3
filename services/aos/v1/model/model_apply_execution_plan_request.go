@@ -15,7 +15,7 @@ type ApplyExecutionPlanRequest struct {
 	// 用户希望操作的资源栈名
 	StackName string `json:"stack_name"`
 
-	// 执行计划的名字。如果未指定，则使用execution_plan_id作为execution_plan_name。
+	// 执行计划的名字。
 	ExecutionPlanName string `json:"execution_plan_name"`
 
 	Body *ApplyExecutionPlanRequestBody `json:"body,omitempty"`

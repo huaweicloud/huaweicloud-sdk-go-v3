@@ -64,6 +64,12 @@ type UpdateFunctionConfigRequestBody struct {
 	// 是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
 	IsStatefulFunction *bool `json:"is_stateful_function,omitempty"`
 
+	// 是否启动动态内存配置
+	EnableDynamicMemory *bool `json:"enable_dynamic_memory,omitempty"`
+
+	// 是否允许在请求头中添加鉴权信息
+	EnableAuthInHeader *bool `json:"enable_auth_in_header,omitempty"`
+
 	// 内网域名配置。
 	DomainNames *string `json:"domain_names,omitempty"`
 }

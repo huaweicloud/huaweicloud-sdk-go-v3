@@ -89,6 +89,46 @@ func GenReqDefForListAlarmNotify() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForChangeAgentStatus() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/apm2/openapi/apm-service/agent-mgr/change-status").
+		WithResponse(new(model.ChangeAgentStatusResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XBusinessId").
+		WithJsonTag("x-business-id").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDeleteAgent() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/apm2/openapi/apm-service/agent-mgr/delete-agent").
+		WithResponse(new(model.DeleteAgentResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XBusinessId").
+		WithJsonTag("x-business-id").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListAkSk() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -136,6 +176,26 @@ func GenReqDefForSaveMonitorItemConfig() *def.HttpRequestDef {
 		WithMethod(http.MethodPost).
 		WithPath("/v1/apm2/openapi/apm-service/monitor-item-mgr/save-monitor-item-config").
 		WithResponse(new(model.SaveMonitorItemConfigResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XBusinessId").
+		WithJsonTag("x-business-id").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForSearchAgent() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/apm2/openapi/apm-service/agent-mgr/search").
+		WithResponse(new(model.SearchAgentResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

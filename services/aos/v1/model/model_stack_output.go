@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// 堆栈输出
+// 资源栈输出
 type StackOutput struct {
 
-	// 堆栈输出的name，由用户自己在模板中定义
+	// 资源栈输出的name，由用户自己在模板中定义
 	Name *string `json:"name,omitempty"`
 
 	// 描述

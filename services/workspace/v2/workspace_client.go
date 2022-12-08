@@ -19,6 +19,153 @@ func WorkspaceClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+// BatchDeleteAccessPolicies 删除接入策略
+//
+// 该接口用于删除指定接入策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) BatchDeleteAccessPolicies(request *model.BatchDeleteAccessPoliciesRequest) (*model.BatchDeleteAccessPoliciesResponse, error) {
+	requestDef := GenReqDefForBatchDeleteAccessPolicies()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteAccessPoliciesResponse), nil
+	}
+}
+
+// BatchDeleteAccessPoliciesInvoker 删除接入策略
+func (c *WorkspaceClient) BatchDeleteAccessPoliciesInvoker(request *model.BatchDeleteAccessPoliciesRequest) *BatchDeleteAccessPoliciesInvoker {
+	requestDef := GenReqDefForBatchDeleteAccessPolicies()
+	return &BatchDeleteAccessPoliciesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateAccessPolicy 创建接入策略
+//
+// 该接口用于创建接入策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) CreateAccessPolicy(request *model.CreateAccessPolicyRequest) (*model.CreateAccessPolicyResponse, error) {
+	requestDef := GenReqDefForCreateAccessPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAccessPolicyResponse), nil
+	}
+}
+
+// CreateAccessPolicyInvoker 创建接入策略
+func (c *WorkspaceClient) CreateAccessPolicyInvoker(request *model.CreateAccessPolicyRequest) *CreateAccessPolicyInvoker {
+	requestDef := GenReqDefForCreateAccessPolicy()
+	return &CreateAccessPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAccessPolicies 查询接入策略
+//
+// 该接口用于查询接入策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListAccessPolicies(request *model.ListAccessPoliciesRequest) (*model.ListAccessPoliciesResponse, error) {
+	requestDef := GenReqDefForListAccessPolicies()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAccessPoliciesResponse), nil
+	}
+}
+
+// ListAccessPoliciesInvoker 查询接入策略
+func (c *WorkspaceClient) ListAccessPoliciesInvoker(request *model.ListAccessPoliciesRequest) *ListAccessPoliciesInvoker {
+	requestDef := GenReqDefForListAccessPolicies()
+	return &ListAccessPoliciesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAccessPolicyObjects 查询指定接入策略的应用对象
+//
+// 该接口用于查询指定接入策略的应用对象。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListAccessPolicyObjects(request *model.ListAccessPolicyObjectsRequest) (*model.ListAccessPolicyObjectsResponse, error) {
+	requestDef := GenReqDefForListAccessPolicyObjects()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAccessPolicyObjectsResponse), nil
+	}
+}
+
+// ListAccessPolicyObjectsInvoker 查询指定接入策略的应用对象
+func (c *WorkspaceClient) ListAccessPolicyObjectsInvoker(request *model.ListAccessPolicyObjectsRequest) *ListAccessPolicyObjectsInvoker {
+	requestDef := GenReqDefForListAccessPolicyObjects()
+	return &ListAccessPolicyObjectsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAccessPolicyObjects 更新指定接入策略的应用对象
+//
+// 该接口用于更新指定接入策略的应用对象。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) UpdateAccessPolicyObjects(request *model.UpdateAccessPolicyObjectsRequest) (*model.UpdateAccessPolicyObjectsResponse, error) {
+	requestDef := GenReqDefForUpdateAccessPolicyObjects()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAccessPolicyObjectsResponse), nil
+	}
+}
+
+// UpdateAccessPolicyObjectsInvoker 更新指定接入策略的应用对象
+func (c *WorkspaceClient) UpdateAccessPolicyObjectsInvoker(request *model.UpdateAccessPolicyObjectsRequest) *UpdateAccessPolicyObjectsInvoker {
+	requestDef := GenReqDefForUpdateAccessPolicyObjects()
+	return &UpdateAccessPolicyObjectsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAssistAuthConfig 查询辅助认证配置
+//
+// 查询辅助认证的配置信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ShowAssistAuthConfig(request *model.ShowAssistAuthConfigRequest) (*model.ShowAssistAuthConfigResponse, error) {
+	requestDef := GenReqDefForShowAssistAuthConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAssistAuthConfigResponse), nil
+	}
+}
+
+// ShowAssistAuthConfigInvoker 查询辅助认证配置
+func (c *WorkspaceClient) ShowAssistAuthConfigInvoker(request *model.ShowAssistAuthConfigRequest) *ShowAssistAuthConfigInvoker {
+	requestDef := GenReqDefForShowAssistAuthConfig()
+	return &ShowAssistAuthConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAssistAuthMethodConfig 更新辅助认证策略配置
+//
+// 更新辅助认证策略配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) UpdateAssistAuthMethodConfig(request *model.UpdateAssistAuthMethodConfigRequest) (*model.UpdateAssistAuthMethodConfigResponse, error) {
+	requestDef := GenReqDefForUpdateAssistAuthMethodConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAssistAuthMethodConfigResponse), nil
+	}
+}
+
+// UpdateAssistAuthMethodConfigInvoker 更新辅助认证策略配置
+func (c *WorkspaceClient) UpdateAssistAuthMethodConfigInvoker(request *model.UpdateAssistAuthMethodConfigRequest) *UpdateAssistAuthMethodConfigInvoker {
+	requestDef := GenReqDefForUpdateAssistAuthMethodConfig()
+	return &UpdateAssistAuthMethodConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListAvailabilityZones 查询可用分区列表
 //
 // 该接口用于查询云桌面支持的可用分区列表。
@@ -334,6 +481,153 @@ func (c *WorkspaceClient) ListProductsInvoker(request *model.ListProductsRequest
 	return &ListProductsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateTerminalsBindingDesktops 增加终端与桌面绑定配置
+//
+// 增加终端与桌面绑定配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) CreateTerminalsBindingDesktops(request *model.CreateTerminalsBindingDesktopsRequest) (*model.CreateTerminalsBindingDesktopsResponse, error) {
+	requestDef := GenReqDefForCreateTerminalsBindingDesktops()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateTerminalsBindingDesktopsResponse), nil
+	}
+}
+
+// CreateTerminalsBindingDesktopsInvoker 增加终端与桌面绑定配置
+func (c *WorkspaceClient) CreateTerminalsBindingDesktopsInvoker(request *model.CreateTerminalsBindingDesktopsRequest) *CreateTerminalsBindingDesktopsInvoker {
+	requestDef := GenReqDefForCreateTerminalsBindingDesktops()
+	return &CreateTerminalsBindingDesktopsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteTerminalsBindingDesktops 删除终端与桌面绑定配置
+//
+// 删除终端与桌面绑定配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) DeleteTerminalsBindingDesktops(request *model.DeleteTerminalsBindingDesktopsRequest) (*model.DeleteTerminalsBindingDesktopsResponse, error) {
+	requestDef := GenReqDefForDeleteTerminalsBindingDesktops()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteTerminalsBindingDesktopsResponse), nil
+	}
+}
+
+// DeleteTerminalsBindingDesktopsInvoker 删除终端与桌面绑定配置
+func (c *WorkspaceClient) DeleteTerminalsBindingDesktopsInvoker(request *model.DeleteTerminalsBindingDesktopsRequest) *DeleteTerminalsBindingDesktopsInvoker {
+	requestDef := GenReqDefForDeleteTerminalsBindingDesktops()
+	return &DeleteTerminalsBindingDesktopsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTerminalsBindingDesktops 查询终端与桌面绑定配置列表
+//
+// 查询终端与桌面绑定配置列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListTerminalsBindingDesktops(request *model.ListTerminalsBindingDesktopsRequest) (*model.ListTerminalsBindingDesktopsResponse, error) {
+	requestDef := GenReqDefForListTerminalsBindingDesktops()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTerminalsBindingDesktopsResponse), nil
+	}
+}
+
+// ListTerminalsBindingDesktopsInvoker 查询终端与桌面绑定配置列表
+func (c *WorkspaceClient) ListTerminalsBindingDesktopsInvoker(request *model.ListTerminalsBindingDesktopsRequest) *ListTerminalsBindingDesktopsInvoker {
+	requestDef := GenReqDefForListTerminalsBindingDesktops()
+	return &ListTerminalsBindingDesktopsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTerminalsBindingDesktopsConfig 查询终端与桌面绑定的开关配置信息
+//
+// 查询终端与桌面绑定的开关配置信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListTerminalsBindingDesktopsConfig(request *model.ListTerminalsBindingDesktopsConfigRequest) (*model.ListTerminalsBindingDesktopsConfigResponse, error) {
+	requestDef := GenReqDefForListTerminalsBindingDesktopsConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTerminalsBindingDesktopsConfigResponse), nil
+	}
+}
+
+// ListTerminalsBindingDesktopsConfigInvoker 查询终端与桌面绑定的开关配置信息
+func (c *WorkspaceClient) ListTerminalsBindingDesktopsConfigInvoker(request *model.ListTerminalsBindingDesktopsConfigRequest) *ListTerminalsBindingDesktopsConfigInvoker {
+	requestDef := GenReqDefForListTerminalsBindingDesktopsConfig()
+	return &ListTerminalsBindingDesktopsConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateTerminalsBindingDesktops 修改终端与桌面绑定配置
+//
+// 修改终端与桌面绑定配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) UpdateTerminalsBindingDesktops(request *model.UpdateTerminalsBindingDesktopsRequest) (*model.UpdateTerminalsBindingDesktopsResponse, error) {
+	requestDef := GenReqDefForUpdateTerminalsBindingDesktops()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateTerminalsBindingDesktopsResponse), nil
+	}
+}
+
+// UpdateTerminalsBindingDesktopsInvoker 修改终端与桌面绑定配置
+func (c *WorkspaceClient) UpdateTerminalsBindingDesktopsInvoker(request *model.UpdateTerminalsBindingDesktopsRequest) *UpdateTerminalsBindingDesktopsInvoker {
+	requestDef := GenReqDefForUpdateTerminalsBindingDesktops()
+	return &UpdateTerminalsBindingDesktopsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateTerminalsBindingDesktopsConfig 设置终端与桌面绑定的开关配置
+//
+// 设置终端与桌面绑定的开关配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) UpdateTerminalsBindingDesktopsConfig(request *model.UpdateTerminalsBindingDesktopsConfigRequest) (*model.UpdateTerminalsBindingDesktopsConfigResponse, error) {
+	requestDef := GenReqDefForUpdateTerminalsBindingDesktopsConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateTerminalsBindingDesktopsConfigResponse), nil
+	}
+}
+
+// UpdateTerminalsBindingDesktopsConfigInvoker 设置终端与桌面绑定的开关配置
+func (c *WorkspaceClient) UpdateTerminalsBindingDesktopsConfigInvoker(request *model.UpdateTerminalsBindingDesktopsConfigRequest) *UpdateTerminalsBindingDesktopsConfigInvoker {
+	requestDef := GenReqDefForUpdateTerminalsBindingDesktopsConfig()
+	return &UpdateTerminalsBindingDesktopsConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteOtpDevices 解绑OTP设备
+//
+// 该接口用于解绑用户的OTP设备
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) BatchDeleteOtpDevices(request *model.BatchDeleteOtpDevicesRequest) (*model.BatchDeleteOtpDevicesResponse, error) {
+	requestDef := GenReqDefForBatchDeleteOtpDevices()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteOtpDevicesResponse), nil
+	}
+}
+
+// BatchDeleteOtpDevicesInvoker 解绑OTP设备
+func (c *WorkspaceClient) BatchDeleteOtpDevicesInvoker(request *model.BatchDeleteOtpDevicesRequest) *BatchDeleteOtpDevicesInvoker {
+	requestDef := GenReqDefForBatchDeleteOtpDevices()
+	return &BatchDeleteOtpDevicesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ChangeUserStatus 操作用户
 //
 // 该接口用于操作用户，包含三种操作：锁定、解锁和重置密码。
@@ -395,6 +689,27 @@ func (c *WorkspaceClient) DeleteUser(request *model.DeleteUserRequest) (*model.D
 func (c *WorkspaceClient) DeleteUserInvoker(request *model.DeleteUserRequest) *DeleteUserInvoker {
 	requestDef := GenReqDefForDeleteUser()
 	return &DeleteUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListOtpDevicesByUserId 查询MFA设备
+//
+// 该接口用于查询相应用户下面的MFA设备
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListOtpDevicesByUserId(request *model.ListOtpDevicesByUserIdRequest) (*model.ListOtpDevicesByUserIdResponse, error) {
+	requestDef := GenReqDefForListOtpDevicesByUserId()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListOtpDevicesByUserIdResponse), nil
+	}
+}
+
+// ListOtpDevicesByUserIdInvoker 查询MFA设备
+func (c *WorkspaceClient) ListOtpDevicesByUserIdInvoker(request *model.ListOtpDevicesByUserIdRequest) *ListOtpDevicesByUserIdInvoker {
+	requestDef := GenReqDefForListOtpDevicesByUserId()
+	return &ListOtpDevicesByUserIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListUserDetail 查询用户详情信息
@@ -481,6 +796,27 @@ func (c *WorkspaceClient) AddVolumesInvoker(request *model.AddVolumesRequest) *A
 	return &AddVolumesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteDesktopVolumes 删除桌面数据盘
+//
+// 删除桌面数据盘，删除后无法恢复。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) DeleteDesktopVolumes(request *model.DeleteDesktopVolumesRequest) (*model.DeleteDesktopVolumesResponse, error) {
+	requestDef := GenReqDefForDeleteDesktopVolumes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDesktopVolumesResponse), nil
+	}
+}
+
+// DeleteDesktopVolumesInvoker 删除桌面数据盘
+func (c *WorkspaceClient) DeleteDesktopVolumesInvoker(request *model.DeleteDesktopVolumesRequest) *DeleteDesktopVolumesInvoker {
+	requestDef := GenReqDefForDeleteDesktopVolumes()
+	return &DeleteDesktopVolumesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ExpandVolumes 扩容桌面磁盘
 //
 // 扩容桌面磁盘。
@@ -565,6 +901,48 @@ func (c *WorkspaceClient) ListWorkspaces(request *model.ListWorkspacesRequest) (
 func (c *WorkspaceClient) ListWorkspacesInvoker(request *model.ListWorkspacesRequest) *ListWorkspacesInvoker {
 	requestDef := GenReqDefForListWorkspaces()
 	return &ListWorkspacesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowWorkspaceLock 查询云办公服务是否被锁定
+//
+// 查询云办公服务是否被锁定。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ShowWorkspaceLock(request *model.ShowWorkspaceLockRequest) (*model.ShowWorkspaceLockResponse, error) {
+	requestDef := GenReqDefForShowWorkspaceLock()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowWorkspaceLockResponse), nil
+	}
+}
+
+// ShowWorkspaceLockInvoker 查询云办公服务是否被锁定
+func (c *WorkspaceClient) ShowWorkspaceLockInvoker(request *model.ShowWorkspaceLockRequest) *ShowWorkspaceLockInvoker {
+	requestDef := GenReqDefForShowWorkspaceLock()
+	return &ShowWorkspaceLockInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UnlockWorkspace 解除云办公服务锁定状态
+//
+// 该接口目前支持解除云办公服务锁定状态。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) UnlockWorkspace(request *model.UnlockWorkspaceRequest) (*model.UnlockWorkspaceResponse, error) {
+	requestDef := GenReqDefForUnlockWorkspace()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UnlockWorkspaceResponse), nil
+	}
+}
+
+// UnlockWorkspaceInvoker 解除云办公服务锁定状态
+func (c *WorkspaceClient) UnlockWorkspaceInvoker(request *model.UnlockWorkspaceRequest) *UnlockWorkspaceInvoker {
+	requestDef := GenReqDefForUnlockWorkspace()
+	return &UnlockWorkspaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateWorkspace 修改云办公服务属性

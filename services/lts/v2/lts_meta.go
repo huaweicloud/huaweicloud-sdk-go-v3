@@ -719,6 +719,26 @@ func GenReqDefForListStructuredLogsWithTimeRange() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListTimeLineTrafficStatistics() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/lts/timeline-traffic-statistics").
+		WithResponse(new(model.ListTimeLineTrafficStatisticsResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Timezone").
+		WithJsonTag("timezone").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListTransfers() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).

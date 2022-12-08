@@ -316,3 +316,39 @@ func (i *ListRegionsInvoker) Invoke() (*model.ListRegionsResponse, error) {
 		return result.(*model.ListRegionsResponse), nil
 	}
 }
+
+type CreateTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateTagsInvoker) Invoke() (*model.CreateTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateTagsResponse), nil
+	}
+}
+
+type DeleteTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteTagsInvoker) Invoke() (*model.DeleteTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteTagsResponse), nil
+	}
+}
+
+type ShowResourceTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowResourceTagsInvoker) Invoke() (*model.ShowResourceTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowResourceTagsResponse), nil
+	}
+}

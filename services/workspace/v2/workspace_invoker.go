@@ -5,6 +5,90 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/workspace/v2/model"
 )
 
+type BatchDeleteAccessPoliciesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteAccessPoliciesInvoker) Invoke() (*model.BatchDeleteAccessPoliciesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteAccessPoliciesResponse), nil
+	}
+}
+
+type CreateAccessPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAccessPolicyInvoker) Invoke() (*model.CreateAccessPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAccessPolicyResponse), nil
+	}
+}
+
+type ListAccessPoliciesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAccessPoliciesInvoker) Invoke() (*model.ListAccessPoliciesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAccessPoliciesResponse), nil
+	}
+}
+
+type ListAccessPolicyObjectsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAccessPolicyObjectsInvoker) Invoke() (*model.ListAccessPolicyObjectsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAccessPolicyObjectsResponse), nil
+	}
+}
+
+type UpdateAccessPolicyObjectsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAccessPolicyObjectsInvoker) Invoke() (*model.UpdateAccessPolicyObjectsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAccessPolicyObjectsResponse), nil
+	}
+}
+
+type ShowAssistAuthConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAssistAuthConfigInvoker) Invoke() (*model.ShowAssistAuthConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAssistAuthConfigResponse), nil
+	}
+}
+
+type UpdateAssistAuthMethodConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAssistAuthMethodConfigInvoker) Invoke() (*model.UpdateAssistAuthMethodConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAssistAuthMethodConfigResponse), nil
+	}
+}
+
 type ListAvailabilityZonesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -185,6 +269,90 @@ func (i *ListProductsInvoker) Invoke() (*model.ListProductsResponse, error) {
 	}
 }
 
+type CreateTerminalsBindingDesktopsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateTerminalsBindingDesktopsInvoker) Invoke() (*model.CreateTerminalsBindingDesktopsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateTerminalsBindingDesktopsResponse), nil
+	}
+}
+
+type DeleteTerminalsBindingDesktopsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteTerminalsBindingDesktopsInvoker) Invoke() (*model.DeleteTerminalsBindingDesktopsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteTerminalsBindingDesktopsResponse), nil
+	}
+}
+
+type ListTerminalsBindingDesktopsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTerminalsBindingDesktopsInvoker) Invoke() (*model.ListTerminalsBindingDesktopsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTerminalsBindingDesktopsResponse), nil
+	}
+}
+
+type ListTerminalsBindingDesktopsConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTerminalsBindingDesktopsConfigInvoker) Invoke() (*model.ListTerminalsBindingDesktopsConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTerminalsBindingDesktopsConfigResponse), nil
+	}
+}
+
+type UpdateTerminalsBindingDesktopsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateTerminalsBindingDesktopsInvoker) Invoke() (*model.UpdateTerminalsBindingDesktopsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateTerminalsBindingDesktopsResponse), nil
+	}
+}
+
+type UpdateTerminalsBindingDesktopsConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateTerminalsBindingDesktopsConfigInvoker) Invoke() (*model.UpdateTerminalsBindingDesktopsConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateTerminalsBindingDesktopsConfigResponse), nil
+	}
+}
+
+type BatchDeleteOtpDevicesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteOtpDevicesInvoker) Invoke() (*model.BatchDeleteOtpDevicesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteOtpDevicesResponse), nil
+	}
+}
+
 type ChangeUserStatusInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -218,6 +386,18 @@ func (i *DeleteUserInvoker) Invoke() (*model.DeleteUserResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.DeleteUserResponse), nil
+	}
+}
+
+type ListOtpDevicesByUserIdInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListOtpDevicesByUserIdInvoker) Invoke() (*model.ListOtpDevicesByUserIdResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListOtpDevicesByUserIdResponse), nil
 	}
 }
 
@@ -269,6 +449,18 @@ func (i *AddVolumesInvoker) Invoke() (*model.AddVolumesResponse, error) {
 	}
 }
 
+type DeleteDesktopVolumesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDesktopVolumesInvoker) Invoke() (*model.DeleteDesktopVolumesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDesktopVolumesResponse), nil
+	}
+}
+
 type ExpandVolumesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -314,6 +506,30 @@ func (i *ListWorkspacesInvoker) Invoke() (*model.ListWorkspacesResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.ListWorkspacesResponse), nil
+	}
+}
+
+type ShowWorkspaceLockInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowWorkspaceLockInvoker) Invoke() (*model.ShowWorkspaceLockResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowWorkspaceLockResponse), nil
+	}
+}
+
+type UnlockWorkspaceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UnlockWorkspaceInvoker) Invoke() (*model.UnlockWorkspaceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UnlockWorkspaceResponse), nil
 	}
 }
 

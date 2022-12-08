@@ -8,9 +8,14 @@ import (
 
 // Response Object
 type ShowWorkflowExecutionForPageResponse struct {
-	Pager *Pager `json:"pager,omitempty"`
 
-	HisRecords     *FlowExecutionBriefV2 `json:"hisRecords,omitempty"`
+	// 返回所有满足条件的对象个数
+	Total *int64 `json:"total,omitempty"`
+
+	// 返回对象的大小
+	Size *int32 `json:"size,omitempty"`
+
+	Executions     *FlowExecutionBriefV2 `json:"executions,omitempty"`
 	HttpStatusCode int                   `json:"-"`
 }
 

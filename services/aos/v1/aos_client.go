@@ -61,9 +61,30 @@ func (c *AosClient) CreateExecutionPlanInvoker(request *model.CreateExecutionPla
 	return &CreateExecutionPlanInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteStack 删除堆栈
+// DeleteExecutionPlan 此命令用于删除已有的执行计划(execution plan)
 //
-// 删除堆栈
+// 此命令用于删除已有的执行计划(execution plan)
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AosClient) DeleteExecutionPlan(request *model.DeleteExecutionPlanRequest) (*model.DeleteExecutionPlanResponse, error) {
+	requestDef := GenReqDefForDeleteExecutionPlan()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteExecutionPlanResponse), nil
+	}
+}
+
+// DeleteExecutionPlanInvoker 此命令用于删除已有的执行计划(execution plan)
+func (c *AosClient) DeleteExecutionPlanInvoker(request *model.DeleteExecutionPlanRequest) *DeleteExecutionPlanInvoker {
+	requestDef := GenReqDefForDeleteExecutionPlan()
+	return &DeleteExecutionPlanInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteStack 删除资源栈
+//
+// 删除资源栈
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) DeleteStack(request *model.DeleteStackRequest) (*model.DeleteStackResponse, error) {
@@ -76,10 +97,31 @@ func (c *AosClient) DeleteStack(request *model.DeleteStackRequest) (*model.Delet
 	}
 }
 
-// DeleteStackInvoker 删除堆栈
+// DeleteStackInvoker 删除资源栈
 func (c *AosClient) DeleteStackInvoker(request *model.DeleteStackRequest) *DeleteStackInvoker {
 	requestDef := GenReqDefForDeleteStack()
 	return &DeleteStackInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DescribeExecutionPlan 描述执行计划当前的状态，返回执行计划的元数据
+//
+// 描述执行计划当前的状态，返回执行计划的元数据
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AosClient) DescribeExecutionPlan(request *model.DescribeExecutionPlanRequest) (*model.DescribeExecutionPlanResponse, error) {
+	requestDef := GenReqDefForDescribeExecutionPlan()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DescribeExecutionPlanResponse), nil
+	}
+}
+
+// DescribeExecutionPlanInvoker 描述执行计划当前的状态，返回执行计划的元数据
+func (c *AosClient) DescribeExecutionPlanInvoker(request *model.DescribeExecutionPlanRequest) *DescribeExecutionPlanInvoker {
+	requestDef := GenReqDefForDescribeExecutionPlan()
+	return &DescribeExecutionPlanInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // EstimateExecutionPlanPrice 预估执行计划的价格
@@ -103,9 +145,51 @@ func (c *AosClient) EstimateExecutionPlanPriceInvoker(request *model.EstimateExe
 	return &EstimateExecutionPlanPriceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// GetStackTemplate 获取堆栈模板
+// GetExecutionPlan 此接口用于获取执行计划的详细内容
 //
-// 获取堆栈当前使用的模板
+// 此接口用于获取执行计划的详细内容
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AosClient) GetExecutionPlan(request *model.GetExecutionPlanRequest) (*model.GetExecutionPlanResponse, error) {
+	requestDef := GenReqDefForGetExecutionPlan()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.GetExecutionPlanResponse), nil
+	}
+}
+
+// GetExecutionPlanInvoker 此接口用于获取执行计划的详细内容
+func (c *AosClient) GetExecutionPlanInvoker(request *model.GetExecutionPlanRequest) *GetExecutionPlanInvoker {
+	requestDef := GenReqDefForGetExecutionPlan()
+	return &GetExecutionPlanInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GetStackMetadata 描述栈的状态，返回栈的元数据
+//
+// 描述栈的状态，返回栈的元数据
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AosClient) GetStackMetadata(request *model.GetStackMetadataRequest) (*model.GetStackMetadataResponse, error) {
+	requestDef := GenReqDefForGetStackMetadata()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.GetStackMetadataResponse), nil
+	}
+}
+
+// GetStackMetadataInvoker 描述栈的状态，返回栈的元数据
+func (c *AosClient) GetStackMetadataInvoker(request *model.GetStackMetadataRequest) *GetStackMetadataInvoker {
+	requestDef := GenReqDefForGetStackMetadata()
+	return &GetStackMetadataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GetStackTemplate 获取资源栈模板
+//
+// 获取资源栈当前使用的模板
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) GetStackTemplate(request *model.GetStackTemplateRequest) (*model.GetStackTemplateResponse, error) {
@@ -118,7 +202,7 @@ func (c *AosClient) GetStackTemplate(request *model.GetStackTemplateRequest) (*m
 	}
 }
 
-// GetStackTemplateInvoker 获取堆栈模板
+// GetStackTemplateInvoker 获取资源栈模板
 func (c *AosClient) GetStackTemplateInvoker(request *model.GetStackTemplateRequest) *GetStackTemplateInvoker {
 	requestDef := GenReqDefForGetStackTemplate()
 	return &GetStackTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -166,9 +250,9 @@ func (c *AosClient) ListStackEventsInvoker(request *model.ListStackEventsRequest
 	return &ListStackEventsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListStackOutputs 列举堆栈的输出
+// ListStackOutputs 列举资源栈的输出
 //
-// 列举堆栈的输出
+// 列举资源栈的输出
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) ListStackOutputs(request *model.ListStackOutputsRequest) (*model.ListStackOutputsResponse, error) {
@@ -181,15 +265,15 @@ func (c *AosClient) ListStackOutputs(request *model.ListStackOutputsRequest) (*m
 	}
 }
 
-// ListStackOutputsInvoker 列举堆栈的输出
+// ListStackOutputsInvoker 列举资源栈的输出
 func (c *AosClient) ListStackOutputsInvoker(request *model.ListStackOutputsRequest) *ListStackOutputsInvoker {
 	requestDef := GenReqDefForListStackOutputs()
 	return &ListStackOutputsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListStackResources 获取堆栈的资源列表
+// ListStackResources 获取资源栈的资源列表
 //
-// 获取堆栈的资源列表，可以获取整个栈从生成到当前时间点的所有状态
+// 获取资源栈的资源列表，可以获取整个栈从生成到当前时间点的所有状态
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) ListStackResources(request *model.ListStackResourcesRequest) (*model.ListStackResourcesResponse, error) {
@@ -202,7 +286,7 @@ func (c *AosClient) ListStackResources(request *model.ListStackResourcesRequest)
 	}
 }
 
-// ListStackResourcesInvoker 获取堆栈的资源列表
+// ListStackResourcesInvoker 获取资源栈的资源列表
 func (c *AosClient) ListStackResourcesInvoker(request *model.ListStackResourcesRequest) *ListStackResourcesInvoker {
 	requestDef := GenReqDefForListStackResources()
 	return &ListStackResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -287,7 +371,7 @@ func (c *AosClient) CreateStackInvoker(request *model.CreateStackRequest) *Creat
 //
 // * 此API为全量API，即用户每次部署都需要给予所想要使用的template、vars的全量
 //
-// * 当触发的部署失败时，如果堆栈开启了自动回滚，会触发自动回滚的流程，否则就会停留在部署失败时的状态
+// * 当触发的部署失败时，如果资源栈开启了自动回滚，会触发自动回滚的流程，否则就会停留在部署失败时的状态
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) DeployStack(request *model.DeployStackRequest) (*model.DeployStackResponse, error) {
@@ -306,13 +390,13 @@ func (c *AosClient) DeployStackInvoker(request *model.DeployStackRequest) *Deplo
 	return &DeployStackInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListStacks 列举堆栈
+// ListStacks 列举资源栈
 //
-// ListStacks 列举当前局点下用户所有的堆栈
+// ListStacks 列举当前局点下用户所有的资源栈
 //
 //   * 默认按照生成时间排序，最早生成的在最前
-//   * 注意：目前暂时返回全量堆栈信息，即不支持分页
-//   * 如果没有任何堆栈，则返回空list
+//   * 注意：目前暂时返回全量资源栈信息，即不支持分页
+//   * 如果没有任何资源栈，则返回空list
 //
 // ListStacks返回的只有摘要信息（具体摘要信息见ListStacksResponseBody），如果用户需要详细的资源栈元数据请调用GetStackMetadata
 //
@@ -327,7 +411,7 @@ func (c *AosClient) ListStacks(request *model.ListStacksRequest) (*model.ListSta
 	}
 }
 
-// ListStacksInvoker 列举堆栈
+// ListStacksInvoker 列举资源栈
 func (c *AosClient) ListStacksInvoker(request *model.ListStacksRequest) *ListStacksInvoker {
 	requestDef := GenReqDefForListStacks()
 	return &ListStacksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

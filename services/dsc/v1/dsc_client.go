@@ -19,6 +19,90 @@ func DscClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+// AddBuckets 添加资产授权
+//
+// 添加数据资产扫描授权
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DscClient) AddBuckets(request *model.AddBucketsRequest) (*model.AddBucketsResponse, error) {
+	requestDef := GenReqDefForAddBuckets()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddBucketsResponse), nil
+	}
+}
+
+// AddBucketsInvoker 添加资产授权
+func (c *DscClient) AddBucketsInvoker(request *model.AddBucketsRequest) *AddBucketsInvoker {
+	requestDef := GenReqDefForAddBuckets()
+	return &AddBucketsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AddRule 创建扫描规则
+//
+// 根据指定的规则名称、规则类型、风险等级、最小匹配次数等参数创建自定义的敏感数据识别规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DscClient) AddRule(request *model.AddRuleRequest) (*model.AddRuleResponse, error) {
+	requestDef := GenReqDefForAddRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddRuleResponse), nil
+	}
+}
+
+// AddRuleInvoker 创建扫描规则
+func (c *DscClient) AddRuleInvoker(request *model.AddRuleRequest) *AddRuleInvoker {
+	requestDef := GenReqDefForAddRule()
+	return &AddRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AddRuleGroup 创建扫描规则组
+//
+// 根据指定的规则组名称和扫描规则列表创建敏感数据扫描规则组
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DscClient) AddRuleGroup(request *model.AddRuleGroupRequest) (*model.AddRuleGroupResponse, error) {
+	requestDef := GenReqDefForAddRuleGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddRuleGroupResponse), nil
+	}
+}
+
+// AddRuleGroupInvoker 创建扫描规则组
+func (c *DscClient) AddRuleGroupInvoker(request *model.AddRuleGroupRequest) *AddRuleGroupInvoker {
+	requestDef := GenReqDefForAddRuleGroup()
+	return &AddRuleGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AddScanJob 创建扫描任务
+//
+// 根据指定的任务名称、扫描方式、扫描周期、扫描规则组、扫描时间创建扫描任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DscClient) AddScanJob(request *model.AddScanJobRequest) (*model.AddScanJobResponse, error) {
+	requestDef := GenReqDefForAddScanJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddScanJobResponse), nil
+	}
+}
+
+// AddScanJobInvoker 创建扫描任务
+func (c *DscClient) AddScanJobInvoker(request *model.AddScanJobRequest) *AddScanJobInvoker {
+	requestDef := GenReqDefForAddScanJob()
+	return &AddScanJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchAddDataMask 对数据进行脱敏
 //
 // 对数据进行脱敏
@@ -38,6 +122,48 @@ func (c *DscClient) BatchAddDataMask(request *model.BatchAddDataMaskRequest) (*m
 func (c *DscClient) BatchAddDataMaskInvoker(request *model.BatchAddDataMaskRequest) *BatchAddDataMaskInvoker {
 	requestDef := GenReqDefForBatchAddDataMask()
 	return &BatchAddDataMaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ChangeDbTemplateOperation 开启/停止脱敏任务
+//
+// 开启/停止脱敏任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DscClient) ChangeDbTemplateOperation(request *model.ChangeDbTemplateOperationRequest) (*model.ChangeDbTemplateOperationResponse, error) {
+	requestDef := GenReqDefForChangeDbTemplateOperation()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeDbTemplateOperationResponse), nil
+	}
+}
+
+// ChangeDbTemplateOperationInvoker 开启/停止脱敏任务
+func (c *DscClient) ChangeDbTemplateOperationInvoker(request *model.ChangeDbTemplateOperationRequest) *ChangeDbTemplateOperationInvoker {
+	requestDef := GenReqDefForChangeDbTemplateOperation()
+	return &ChangeDbTemplateOperationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ChangeRule 修改扫描规则
+//
+// 修改自定义的敏感数据识别规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DscClient) ChangeRule(request *model.ChangeRuleRequest) (*model.ChangeRuleResponse, error) {
+	requestDef := GenReqDefForChangeRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeRuleResponse), nil
+	}
+}
+
+// ChangeRuleInvoker 修改扫描规则
+func (c *DscClient) ChangeRuleInvoker(request *model.ChangeRuleRequest) *ChangeRuleInvoker {
+	requestDef := GenReqDefForChangeRule()
+	return &ChangeRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateDatabaseWaterMark 嵌入数据水印
@@ -143,6 +269,258 @@ func (c *DscClient) CreateImageWatermarkByAddress(request *model.CreateImageWate
 func (c *DscClient) CreateImageWatermarkByAddressInvoker(request *model.CreateImageWatermarkByAddressRequest) *CreateImageWatermarkByAddressInvoker {
 	requestDef := GenReqDefForCreateImageWatermarkByAddress()
 	return &CreateImageWatermarkByAddressInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateProductOrder 实例下单
+//
+// 根据计费方式、计费周期等信息进行实例下单
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DscClient) CreateProductOrder(request *model.CreateProductOrderRequest) (*model.CreateProductOrderResponse, error) {
+	requestDef := GenReqDefForCreateProductOrder()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateProductOrderResponse), nil
+	}
+}
+
+// CreateProductOrderInvoker 实例下单
+func (c *DscClient) CreateProductOrderInvoker(request *model.CreateProductOrderRequest) *CreateProductOrderInvoker {
+	requestDef := GenReqDefForCreateProductOrder()
+	return &CreateProductOrderInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteBucket 删除资产授权
+//
+// 删除数据资产扫描授权
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DscClient) DeleteBucket(request *model.DeleteBucketRequest) (*model.DeleteBucketResponse, error) {
+	requestDef := GenReqDefForDeleteBucket()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteBucketResponse), nil
+	}
+}
+
+// DeleteBucketInvoker 删除资产授权
+func (c *DscClient) DeleteBucketInvoker(request *model.DeleteBucketRequest) *DeleteBucketInvoker {
+	requestDef := GenReqDefForDeleteBucket()
+	return &DeleteBucketInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteRule 删除扫描规则
+//
+// 删除指定的敏感数据识别规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DscClient) DeleteRule(request *model.DeleteRuleRequest) (*model.DeleteRuleResponse, error) {
+	requestDef := GenReqDefForDeleteRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteRuleResponse), nil
+	}
+}
+
+// DeleteRuleInvoker 删除扫描规则
+func (c *DscClient) DeleteRuleInvoker(request *model.DeleteRuleRequest) *DeleteRuleInvoker {
+	requestDef := GenReqDefForDeleteRule()
+	return &DeleteRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteRuleGroup 删除扫描规则组
+//
+// 根据扫描规则组ID删除指定的扫描规则组
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DscClient) DeleteRuleGroup(request *model.DeleteRuleGroupRequest) (*model.DeleteRuleGroupResponse, error) {
+	requestDef := GenReqDefForDeleteRuleGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteRuleGroupResponse), nil
+	}
+}
+
+// DeleteRuleGroupInvoker 删除扫描规则组
+func (c *DscClient) DeleteRuleGroupInvoker(request *model.DeleteRuleGroupRequest) *DeleteRuleGroupInvoker {
+	requestDef := GenReqDefForDeleteRuleGroup()
+	return &DeleteRuleGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListBuckets 查看资产列表
+//
+// 查询数据资产扫描授权列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DscClient) ListBuckets(request *model.ListBucketsRequest) (*model.ListBucketsResponse, error) {
+	requestDef := GenReqDefForListBuckets()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListBucketsResponse), nil
+	}
+}
+
+// ListBucketsInvoker 查看资产列表
+func (c *DscClient) ListBucketsInvoker(request *model.ListBucketsRequest) *ListBucketsInvoker {
+	requestDef := GenReqDefForListBuckets()
+	return &ListBucketsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDbMaskTask 查询脱敏任务执行列表
+//
+// 查询脱敏任务执行列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DscClient) ListDbMaskTask(request *model.ListDbMaskTaskRequest) (*model.ListDbMaskTaskResponse, error) {
+	requestDef := GenReqDefForListDbMaskTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDbMaskTaskResponse), nil
+	}
+}
+
+// ListDbMaskTaskInvoker 查询脱敏任务执行列表
+func (c *DscClient) ListDbMaskTaskInvoker(request *model.ListDbMaskTaskRequest) *ListDbMaskTaskInvoker {
+	requestDef := GenReqDefForListDbMaskTask()
+	return &ListDbMaskTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRelationBuckets OBS血缘图桶级查询
+//
+// OBS血缘图桶级查询
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DscClient) ListRelationBuckets(request *model.ListRelationBucketsRequest) (*model.ListRelationBucketsResponse, error) {
+	requestDef := GenReqDefForListRelationBuckets()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRelationBucketsResponse), nil
+	}
+}
+
+// ListRelationBucketsInvoker OBS血缘图桶级查询
+func (c *DscClient) ListRelationBucketsInvoker(request *model.ListRelationBucketsRequest) *ListRelationBucketsInvoker {
+	requestDef := GenReqDefForListRelationBuckets()
+	return &ListRelationBucketsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRelationColumn 数据库血缘图表字段级查询
+//
+// 数据库血缘图表字段级查询
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DscClient) ListRelationColumn(request *model.ListRelationColumnRequest) (*model.ListRelationColumnResponse, error) {
+	requestDef := GenReqDefForListRelationColumn()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRelationColumnResponse), nil
+	}
+}
+
+// ListRelationColumnInvoker 数据库血缘图表字段级查询
+func (c *DscClient) ListRelationColumnInvoker(request *model.ListRelationColumnRequest) *ListRelationColumnInvoker {
+	requestDef := GenReqDefForListRelationColumn()
+	return &ListRelationColumnInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRelationDb 数据库血缘图数据库级查询
+//
+// 数据库血缘图数据库级查询
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DscClient) ListRelationDb(request *model.ListRelationDbRequest) (*model.ListRelationDbResponse, error) {
+	requestDef := GenReqDefForListRelationDb()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRelationDbResponse), nil
+	}
+}
+
+// ListRelationDbInvoker 数据库血缘图数据库级查询
+func (c *DscClient) ListRelationDbInvoker(request *model.ListRelationDbRequest) *ListRelationDbInvoker {
+	requestDef := GenReqDefForListRelationDb()
+	return &ListRelationDbInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRelationFile OBS血缘图文件分页查询
+//
+// OBS血缘图文件分页查询
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DscClient) ListRelationFile(request *model.ListRelationFileRequest) (*model.ListRelationFileResponse, error) {
+	requestDef := GenReqDefForListRelationFile()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRelationFileResponse), nil
+	}
+}
+
+// ListRelationFileInvoker OBS血缘图文件分页查询
+func (c *DscClient) ListRelationFileInvoker(request *model.ListRelationFileRequest) *ListRelationFileInvoker {
+	requestDef := GenReqDefForListRelationFile()
+	return &ListRelationFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRelationTable 数据库血缘图表分页查询
+//
+// 数据库血缘图表分页查询
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DscClient) ListRelationTable(request *model.ListRelationTableRequest) (*model.ListRelationTableResponse, error) {
+	requestDef := GenReqDefForListRelationTable()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRelationTableResponse), nil
+	}
+}
+
+// ListRelationTableInvoker 数据库血缘图表分页查询
+func (c *DscClient) ListRelationTableInvoker(request *model.ListRelationTableRequest) *ListRelationTableInvoker {
+	requestDef := GenReqDefForListRelationTable()
+	return &ListRelationTableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRuleGroups 查询扫描规则组列表
+//
+// 根据指定的项目ID查询扫描规则组列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DscClient) ListRuleGroups(request *model.ListRuleGroupsRequest) (*model.ListRuleGroupsResponse, error) {
+	requestDef := GenReqDefForListRuleGroups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRuleGroupsResponse), nil
+	}
+}
+
+// ListRuleGroupsInvoker 查询扫描规则组列表
+func (c *DscClient) ListRuleGroupsInvoker(request *model.ListRuleGroupsRequest) *ListRuleGroupsInvoker {
+	requestDef := GenReqDefForListRuleGroups()
+	return &ListRuleGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowDatabaseWaterMark 提取数据水印
@@ -292,6 +670,27 @@ func (c *DscClient) ShowImageWatermarkWithImageByAddressInvoker(request *model.S
 	return &ShowImageWatermarkWithImageByAddressInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowRules 查看规则列表
+//
+// 查询扫描规则列表，返回扫描规则总数和扫描规则列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DscClient) ShowRules(request *model.ShowRulesRequest) (*model.ShowRulesResponse, error) {
+	requestDef := GenReqDefForShowRules()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRulesResponse), nil
+	}
+}
+
+// ShowRulesInvoker 查看规则列表
+func (c *DscClient) ShowRulesInvoker(request *model.ShowRulesRequest) *ShowRulesInvoker {
+	requestDef := GenReqDefForShowRules()
+	return &ShowRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowScanJobResults 查询指定任务扫描结果
 //
 // 查询指定任务扫描结果
@@ -332,6 +731,90 @@ func (c *DscClient) ShowScanJobs(request *model.ShowScanJobsRequest) (*model.Sho
 func (c *DscClient) ShowScanJobsInvoker(request *model.ShowScanJobsRequest) *ShowScanJobsInvoker {
 	requestDef := GenReqDefForShowScanJobs()
 	return &ShowScanJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSpecification 查询资源开通信息
+//
+// 查询资源开通信息，根据项目ID查询订单详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DscClient) ShowSpecification(request *model.ShowSpecificationRequest) (*model.ShowSpecificationResponse, error) {
+	requestDef := GenReqDefForShowSpecification()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSpecificationResponse), nil
+	}
+}
+
+// ShowSpecificationInvoker 查询资源开通信息
+func (c *DscClient) ShowSpecificationInvoker(request *model.ShowSpecificationRequest) *ShowSpecificationInvoker {
+	requestDef := GenReqDefForShowSpecification()
+	return &ShowSpecificationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTopics 查询告警通知主题
+//
+// 查询告警通知主题，返回默认主题、已确认主题数量及列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DscClient) ShowTopics(request *model.ShowTopicsRequest) (*model.ShowTopicsResponse, error) {
+	requestDef := GenReqDefForShowTopics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTopicsResponse), nil
+	}
+}
+
+// ShowTopicsInvoker 查询告警通知主题
+func (c *DscClient) ShowTopicsInvoker(request *model.ShowTopicsRequest) *ShowTopicsInvoker {
+	requestDef := GenReqDefForShowTopics()
+	return &ShowTopicsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAssetName 编辑资产名称
+//
+// 编辑数据资产名称
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DscClient) UpdateAssetName(request *model.UpdateAssetNameRequest) (*model.UpdateAssetNameResponse, error) {
+	requestDef := GenReqDefForUpdateAssetName()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAssetNameResponse), nil
+	}
+}
+
+// UpdateAssetNameInvoker 编辑资产名称
+func (c *DscClient) UpdateAssetNameInvoker(request *model.UpdateAssetNameRequest) *UpdateAssetNameInvoker {
+	requestDef := GenReqDefForUpdateAssetName()
+	return &UpdateAssetNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDefaultTopic 修改告警通知主题
+//
+// 修改告警通知的关联项目ID、通知主题、通知状态(0为关闭通知，1为开启通知)等通用配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DscClient) UpdateDefaultTopic(request *model.UpdateDefaultTopicRequest) (*model.UpdateDefaultTopicResponse, error) {
+	requestDef := GenReqDefForUpdateDefaultTopic()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDefaultTopicResponse), nil
+	}
+}
+
+// UpdateDefaultTopicInvoker 修改告警通知主题
+func (c *DscClient) UpdateDefaultTopicInvoker(request *model.UpdateDefaultTopicRequest) *UpdateDefaultTopicInvoker {
+	requestDef := GenReqDefForUpdateDefaultTopic()
+	return &UpdateDefaultTopicInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowOpenApiCalledRecords 查询OpenApi调用记录

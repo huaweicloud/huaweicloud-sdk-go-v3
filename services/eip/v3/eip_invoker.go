@@ -29,6 +29,18 @@ func (i *ListPublicBorderGroupsInvoker) Invoke() (*model.ListPublicBorderGroupsR
 	}
 }
 
+type ListPublicipPoolInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPublicipPoolInvoker) Invoke() (*model.ListPublicipPoolResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPublicipPoolResponse), nil
+	}
+}
+
 type ListShareBandwidthTypesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -38,6 +50,18 @@ func (i *ListShareBandwidthTypesInvoker) Invoke() (*model.ListShareBandwidthType
 		return nil, err
 	} else {
 		return result.(*model.ListShareBandwidthTypesResponse), nil
+	}
+}
+
+type ShowPublicipPoolInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPublicipPoolInvoker) Invoke() (*model.ShowPublicipPoolResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPublicipPoolResponse), nil
 	}
 }
 
@@ -53,6 +77,18 @@ func (i *AssociatePublicipsInvoker) Invoke() (*model.AssociatePublicipsResponse,
 	}
 }
 
+type CountEipAvailableResourcesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CountEipAvailableResourcesInvoker) Invoke() (*model.CountEipAvailableResourcesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CountEipAvailableResourcesResponse), nil
+	}
+}
+
 type DisassociatePublicipsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -62,18 +98,6 @@ func (i *DisassociatePublicipsInvoker) Invoke() (*model.DisassociatePublicipsRes
 		return nil, err
 	} else {
 		return result.(*model.DisassociatePublicipsResponse), nil
-	}
-}
-
-type ListPublicipPoolInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListPublicipPoolInvoker) Invoke() (*model.ListPublicipPoolResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListPublicipPoolResponse), nil
 	}
 }
 
@@ -98,18 +122,6 @@ func (i *ShowPublicipInvoker) Invoke() (*model.ShowPublicipResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowPublicipResponse), nil
-	}
-}
-
-type ShowPublicipPoolInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowPublicipPoolInvoker) Invoke() (*model.ShowPublicipPoolResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowPublicipPoolResponse), nil
 	}
 }
 

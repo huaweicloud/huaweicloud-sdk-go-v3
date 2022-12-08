@@ -838,6 +838,27 @@ func (c *LtsClient) ListStructuredLogsWithTimeRangeInvoker(request *model.ListSt
 	return &ListStructuredLogsWithTimeRangeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListTimeLineTrafficStatistics 按时间段统计查询资源
+//
+// 按时间段统计查询资源
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LtsClient) ListTimeLineTrafficStatistics(request *model.ListTimeLineTrafficStatisticsRequest) (*model.ListTimeLineTrafficStatisticsResponse, error) {
+	requestDef := GenReqDefForListTimeLineTrafficStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTimeLineTrafficStatisticsResponse), nil
+	}
+}
+
+// ListTimeLineTrafficStatisticsInvoker 按时间段统计查询资源
+func (c *LtsClient) ListTimeLineTrafficStatisticsInvoker(request *model.ListTimeLineTrafficStatisticsRequest) *ListTimeLineTrafficStatisticsInvoker {
+	requestDef := GenReqDefForListTimeLineTrafficStatistics()
+	return &ListTimeLineTrafficStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListTransfers 查询日志转储
 //
 // 该接口用于查询OBS转储，DIS转储，DMS转储配置。

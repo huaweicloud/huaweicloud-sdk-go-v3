@@ -103,6 +103,27 @@ func (c *EipClient) DeleteSharedBandwidthInvoker(request *model.DeleteSharedBand
 	return &DeleteSharedBandwidthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListBandwidthPkg 查询带宽加油包列表
+//
+// 查询带宽加油包列表信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EipClient) ListBandwidthPkg(request *model.ListBandwidthPkgRequest) (*model.ListBandwidthPkgResponse, error) {
+	requestDef := GenReqDefForListBandwidthPkg()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListBandwidthPkgResponse), nil
+	}
+}
+
+// ListBandwidthPkgInvoker 查询带宽加油包列表
+func (c *EipClient) ListBandwidthPkgInvoker(request *model.ListBandwidthPkgRequest) *ListBandwidthPkgInvoker {
+	requestDef := GenReqDefForListBandwidthPkg()
+	return &ListBandwidthPkgInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListBandwidths 查询带宽列表
 //
 // 查询带宽列表。
@@ -250,6 +271,48 @@ func (c *EipClient) BatchCreatePublicipTagsInvoker(request *model.BatchCreatePub
 	return &BatchCreatePublicipTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchCreatePublicips 批量创建弹性公网IP
+//
+// 批量创建弹性公网IP
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EipClient) BatchCreatePublicips(request *model.BatchCreatePublicipsRequest) (*model.BatchCreatePublicipsResponse, error) {
+	requestDef := GenReqDefForBatchCreatePublicips()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreatePublicipsResponse), nil
+	}
+}
+
+// BatchCreatePublicipsInvoker 批量创建弹性公网IP
+func (c *EipClient) BatchCreatePublicipsInvoker(request *model.BatchCreatePublicipsRequest) *BatchCreatePublicipsInvoker {
+	requestDef := GenReqDefForBatchCreatePublicips()
+	return &BatchCreatePublicipsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeletePublicIp 批量删除弹性公网IP
+//
+// 批量删除弹性公网IP
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EipClient) BatchDeletePublicIp(request *model.BatchDeletePublicIpRequest) (*model.BatchDeletePublicIpResponse, error) {
+	requestDef := GenReqDefForBatchDeletePublicIp()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeletePublicIpResponse), nil
+	}
+}
+
+// BatchDeletePublicIpInvoker 批量删除弹性公网IP
+func (c *EipClient) BatchDeletePublicIpInvoker(request *model.BatchDeletePublicIpRequest) *BatchDeletePublicIpInvoker {
+	requestDef := GenReqDefForBatchDeletePublicIp()
+	return &BatchDeletePublicIpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchDeletePublicipTags 批量删除弹性公网IP资源标签
 //
 // 为指定的弹性公网IP资源实例批量删除标签。
@@ -269,6 +332,69 @@ func (c *EipClient) BatchDeletePublicipTags(request *model.BatchDeletePublicipTa
 func (c *EipClient) BatchDeletePublicipTagsInvoker(request *model.BatchDeletePublicipTagsRequest) *BatchDeletePublicipTagsInvoker {
 	requestDef := GenReqDefForBatchDeletePublicipTags()
 	return &BatchDeletePublicipTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDisassociatePublicips 批量解绑弹性公网IP
+//
+// 批量解绑弹性公网IP
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EipClient) BatchDisassociatePublicips(request *model.BatchDisassociatePublicipsRequest) (*model.BatchDisassociatePublicipsResponse, error) {
+	requestDef := GenReqDefForBatchDisassociatePublicips()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDisassociatePublicipsResponse), nil
+	}
+}
+
+// BatchDisassociatePublicipsInvoker 批量解绑弹性公网IP
+func (c *EipClient) BatchDisassociatePublicipsInvoker(request *model.BatchDisassociatePublicipsRequest) *BatchDisassociatePublicipsInvoker {
+	requestDef := GenReqDefForBatchDisassociatePublicips()
+	return &BatchDisassociatePublicipsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CountPublicIp 查询PublicIp数量
+//
+// 查询PublicIp数量
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EipClient) CountPublicIp(request *model.CountPublicIpRequest) (*model.CountPublicIpResponse, error) {
+	requestDef := GenReqDefForCountPublicIp()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CountPublicIpResponse), nil
+	}
+}
+
+// CountPublicIpInvoker 查询PublicIp数量
+func (c *EipClient) CountPublicIpInvoker(request *model.CountPublicIpRequest) *CountPublicIpInvoker {
+	requestDef := GenReqDefForCountPublicIp()
+	return &CountPublicIpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CountPublicIpInstance 查询PublicIp实例数
+//
+// 查询PublicIp实例数
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EipClient) CountPublicIpInstance(request *model.CountPublicIpInstanceRequest) (*model.CountPublicIpInstanceResponse, error) {
+	requestDef := GenReqDefForCountPublicIpInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CountPublicIpInstanceResponse), nil
+	}
+}
+
+// CountPublicIpInstanceInvoker 查询PublicIp实例数
+func (c *EipClient) CountPublicIpInstanceInvoker(request *model.CountPublicIpInstanceRequest) *CountPublicIpInstanceInvoker {
+	requestDef := GenReqDefForCountPublicIpInstance()
+	return &CountPublicIpInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreatePrePaidPublicip 申请包周期弹性公网IP
@@ -438,6 +564,27 @@ func (c *EipClient) ListPublicipsByTags(request *model.ListPublicipsByTagsReques
 func (c *EipClient) ListPublicipsByTagsInvoker(request *model.ListPublicipsByTagsRequest) *ListPublicipsByTagsInvoker {
 	requestDef := GenReqDefForListPublicipsByTags()
 	return &ListPublicipsByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPublicIpType 查询PublicIp类型
+//
+// 查询PublicIp类型
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EipClient) ShowPublicIpType(request *model.ShowPublicIpTypeRequest) (*model.ShowPublicIpTypeResponse, error) {
+	requestDef := GenReqDefForShowPublicIpType()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPublicIpTypeResponse), nil
+	}
+}
+
+// ShowPublicIpTypeInvoker 查询PublicIp类型
+func (c *EipClient) ShowPublicIpTypeInvoker(request *model.ShowPublicIpTypeRequest) *ShowPublicIpTypeInvoker {
+	requestDef := GenReqDefForShowPublicIpType()
+	return &ShowPublicIpTypeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowPublicip 查询弹性公网IP

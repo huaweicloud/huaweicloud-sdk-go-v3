@@ -8,11 +8,11 @@ import (
 
 type QueryRunListParam struct {
 
-	// 页码
-	Page int32 `json:"page"`
+	// 偏移量,表示从此偏移量开始查询,默认值为0
+	Offset *int32 `json:"offset,omitempty"`
 
 	// 每页大小
-	PageSize int32 `json:"page_size"`
+	Limit int32 `json:"limit"`
 
 	// 查询开始时间
 	StartTime *string `json:"start_time,omitempty"`

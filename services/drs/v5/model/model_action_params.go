@@ -24,6 +24,12 @@ type ActionParams struct {
 	StartTime *string `json:"start_time,omitempty"`
 
 	CompareTaskParam *CompareTaskParams `json:"compare_task_param,omitempty"`
+
+	// 再编辑任务启动时取值true。
+	IsSyncReEdit *bool `json:"is_sync_re_edit,omitempty"`
+
+	// 强制结束任务时取值true。
+	ForceDelete *bool `json:"force_delete,omitempty"`
 }
 
 func (o ActionParams) String() string {

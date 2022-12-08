@@ -8,11 +8,11 @@ import (
 
 type OptionalFlavorsInfo struct {
 
-	// 扩容节点时可用的规格列表。
-	OptionalFlavorList *[]ComputeFlavor `json:"optional_flavor_list,omitempty"`
+	// 实例规格变更时可用的规格列表。
+	List []ComputeFlavor `json:"list"`
 
 	// 总记录数。
-	TotalCount *int32 `json:"total_count,omitempty"`
+	TotalCount int32 `json:"total_count"`
 }
 
 func (o OptionalFlavorsInfo) String() string {

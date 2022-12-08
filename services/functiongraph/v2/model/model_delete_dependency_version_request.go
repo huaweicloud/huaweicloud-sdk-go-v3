@@ -12,7 +12,7 @@ type DeleteDependencyVersionRequest struct {
 	// 依赖包的ID。
 	DependId string `json:"depend_id"`
 
-	// 依赖包的ID。
+	// 依赖包版本号。
 	Version string `json:"version"`
 }
 

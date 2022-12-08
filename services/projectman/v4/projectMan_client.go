@@ -775,6 +775,27 @@ func (c *ProjectManClient) CreateSystemIssueV4Invoker(request *model.CreateSyste
 	return &CreateSystemIssueV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteAttachment 删除附件
+//
+// 取消工作项与附件关联，如附件为工作项页面上传则删除附件
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) DeleteAttachment(request *model.DeleteAttachmentRequest) (*model.DeleteAttachmentResponse, error) {
+	requestDef := GenReqDefForDeleteAttachment()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAttachmentResponse), nil
+	}
+}
+
+// DeleteAttachmentInvoker 删除附件
+func (c *ProjectManClient) DeleteAttachmentInvoker(request *model.DeleteAttachmentRequest) *DeleteAttachmentInvoker {
+	requestDef := GenReqDefForDeleteAttachment()
+	return &DeleteAttachmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteIssueV4 删除工作项
 //
 // 删除工作项
@@ -836,6 +857,27 @@ func (c *ProjectManClient) DeleteProjectModule(request *model.DeleteProjectModul
 func (c *ProjectManClient) DeleteProjectModuleInvoker(request *model.DeleteProjectModuleRequest) *DeleteProjectModuleInvoker {
 	requestDef := GenReqDefForDeleteProjectModule()
 	return &DeleteProjectModuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DownloadAttachment 下载工作项附件
+//
+// 下载工作项附件
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) DownloadAttachment(request *model.DownloadAttachmentRequest) (*model.DownloadAttachmentResponse, error) {
+	requestDef := GenReqDefForDownloadAttachment()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DownloadAttachmentResponse), nil
+	}
+}
+
+// DownloadAttachmentInvoker 下载工作项附件
+func (c *ProjectManClient) DownloadAttachmentInvoker(request *model.DownloadAttachmentRequest) *DownloadAttachmentInvoker {
+	requestDef := GenReqDefForDownloadAttachment()
+	return &DownloadAttachmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DownloadImageFile 下载图片
@@ -1214,6 +1256,27 @@ func (c *ProjectManClient) ListScrumProjectStatuses(request *model.ListScrumProj
 func (c *ProjectManClient) ListScrumProjectStatusesInvoker(request *model.ListScrumProjectStatusesRequest) *ListScrumProjectStatusesInvoker {
 	requestDef := GenReqDefForListScrumProjectStatuses()
 	return &ListScrumProjectStatusesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListStatusStatistic 查询迭代下工作项状态的统计数据（处理人维度）
+//
+// 查询迭代下工作项状态的统计数据（处理人维度）
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) ListStatusStatistic(request *model.ListStatusStatisticRequest) (*model.ListStatusStatisticResponse, error) {
+	requestDef := GenReqDefForListStatusStatistic()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListStatusStatisticResponse), nil
+	}
+}
+
+// ListStatusStatisticInvoker 查询迭代下工作项状态的统计数据（处理人维度）
+func (c *ProjectManClient) ListStatusStatisticInvoker(request *model.ListStatusStatisticRequest) *ListStatusStatisticInvoker {
+	requestDef := GenReqDefForListStatusStatistic()
+	return &ListStatusStatisticInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowIssueCompletionRate 获取工作项完成率

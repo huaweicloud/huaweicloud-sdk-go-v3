@@ -19,7 +19,7 @@ type JobNodeVpcInfo struct {
 	CustomNodeIp *string `json:"custom_node_ip,omitempty"`
 
 	// 任务实例所在的安全组ID。
-	SecurityGroupId string `json:"security_group_id"`
+	SecurityGroupId *string `json:"security_group_id,omitempty"`
 }
 
 func (o JobNodeVpcInfo) String() string {

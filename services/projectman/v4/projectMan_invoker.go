@@ -437,6 +437,18 @@ func (i *CreateSystemIssueV4Invoker) Invoke() (*model.CreateSystemIssueV4Respons
 	}
 }
 
+type DeleteAttachmentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAttachmentInvoker) Invoke() (*model.DeleteAttachmentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAttachmentResponse), nil
+	}
+}
+
 type DeleteIssueV4Invoker struct {
 	*invoker.BaseInvoker
 }
@@ -470,6 +482,18 @@ func (i *DeleteProjectModuleInvoker) Invoke() (*model.DeleteProjectModuleRespons
 		return nil, err
 	} else {
 		return result.(*model.DeleteProjectModuleResponse), nil
+	}
+}
+
+type DownloadAttachmentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DownloadAttachmentInvoker) Invoke() (*model.DownloadAttachmentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DownloadAttachmentResponse), nil
 	}
 }
 
@@ -686,6 +710,18 @@ func (i *ListScrumProjectStatusesInvoker) Invoke() (*model.ListScrumProjectStatu
 		return nil, err
 	} else {
 		return result.(*model.ListScrumProjectStatusesResponse), nil
+	}
+}
+
+type ListStatusStatisticInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListStatusStatisticInvoker) Invoke() (*model.ListStatusStatisticResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListStatusStatisticResponse), nil
 	}
 }
 

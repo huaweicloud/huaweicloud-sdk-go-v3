@@ -1051,6 +1051,29 @@ func (c *RdsClient) SetAuditlogPolicyInvoker(request *model.SetAuditlogPolicyReq
 	return &SetAuditlogPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SetAutoEnlargePolicy 设置自动扩容策略
+//
+// 设置实例存储空间自动扩容策略，按扩容量扣除存储费用。
+// 可用存储空间小于设置值或者10GB时，自动扩容当前存储空间的15%（非10倍数向上取整，账户余额不足，会导致自动扩容失败）。
+// 设置只读实例自动扩容与主实例自动扩容互不影响，对只读实例设置自动扩容时，可选择大于或等于主实例的存储空间。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) SetAutoEnlargePolicy(request *model.SetAutoEnlargePolicyRequest) (*model.SetAutoEnlargePolicyResponse, error) {
+	requestDef := GenReqDefForSetAutoEnlargePolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetAutoEnlargePolicyResponse), nil
+	}
+}
+
+// SetAutoEnlargePolicyInvoker 设置自动扩容策略
+func (c *RdsClient) SetAutoEnlargePolicyInvoker(request *model.SetAutoEnlargePolicyRequest) *SetAutoEnlargePolicyInvoker {
+	requestDef := GenReqDefForSetAutoEnlargePolicy()
+	return &SetAutoEnlargePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SetBackupPolicy 设置自动备份策略
 //
 // 设置自动备份策略。
@@ -1112,6 +1135,29 @@ func (c *RdsClient) SetOffSiteBackupPolicy(request *model.SetOffSiteBackupPolicy
 func (c *RdsClient) SetOffSiteBackupPolicyInvoker(request *model.SetOffSiteBackupPolicyRequest) *SetOffSiteBackupPolicyInvoker {
 	requestDef := GenReqDefForSetOffSiteBackupPolicy()
 	return &SetOffSiteBackupPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SetSecondLevelMonitor 设置秒级监控策略
+//
+// 设置实例秒级监控策略，约五分钟后生效，对于1秒监控和5秒监控，计费方式为按需付费（每小时扣费一次）。
+// 设置只读实例秒级监控与主实例互不影响。
+// 规格变更到4U以下的实例，秒级监控功能会自动关闭。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) SetSecondLevelMonitor(request *model.SetSecondLevelMonitorRequest) (*model.SetSecondLevelMonitorResponse, error) {
+	requestDef := GenReqDefForSetSecondLevelMonitor()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetSecondLevelMonitorResponse), nil
+	}
+}
+
+// SetSecondLevelMonitorInvoker 设置秒级监控策略
+func (c *RdsClient) SetSecondLevelMonitorInvoker(request *model.SetSecondLevelMonitorRequest) *SetSecondLevelMonitorInvoker {
+	requestDef := GenReqDefForSetSecondLevelMonitor()
+	return &SetSecondLevelMonitorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SetSecurityGroup 修改安全组
@@ -1196,6 +1242,27 @@ func (c *RdsClient) ShowAuditlogPolicy(request *model.ShowAuditlogPolicyRequest)
 func (c *RdsClient) ShowAuditlogPolicyInvoker(request *model.ShowAuditlogPolicyRequest) *ShowAuditlogPolicyInvoker {
 	requestDef := GenReqDefForShowAuditlogPolicy()
 	return &ShowAuditlogPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAutoEnlargePolicy 查询自动扩容策略
+//
+// 查询实例存储空间自动扩容策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ShowAutoEnlargePolicy(request *model.ShowAutoEnlargePolicyRequest) (*model.ShowAutoEnlargePolicyResponse, error) {
+	requestDef := GenReqDefForShowAutoEnlargePolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAutoEnlargePolicyResponse), nil
+	}
+}
+
+// ShowAutoEnlargePolicyInvoker 查询自动扩容策略
+func (c *RdsClient) ShowAutoEnlargePolicyInvoker(request *model.ShowAutoEnlargePolicyRequest) *ShowAutoEnlargePolicyInvoker {
+	requestDef := GenReqDefForShowAutoEnlargePolicy()
+	return &ShowAutoEnlargePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowBackupDownloadLink 获取备份下载链接
@@ -1427,6 +1494,27 @@ func (c *RdsClient) ShowReplicationStatus(request *model.ShowReplicationStatusRe
 func (c *RdsClient) ShowReplicationStatusInvoker(request *model.ShowReplicationStatusRequest) *ShowReplicationStatusInvoker {
 	requestDef := GenReqDefForShowReplicationStatus()
 	return &ShowReplicationStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSecondLevelMonitoring 查询秒级监控策略
+//
+// 查询实例秒级监控策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ShowSecondLevelMonitoring(request *model.ShowSecondLevelMonitoringRequest) (*model.ShowSecondLevelMonitoringResponse, error) {
+	requestDef := GenReqDefForShowSecondLevelMonitoring()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSecondLevelMonitoringResponse), nil
+	}
+}
+
+// ShowSecondLevelMonitoringInvoker 查询秒级监控策略
+func (c *RdsClient) ShowSecondLevelMonitoringInvoker(request *model.ShowSecondLevelMonitoringRequest) *ShowSecondLevelMonitoringInvoker {
+	requestDef := GenReqDefForShowSecondLevelMonitoring()
+	return &ShowSecondLevelMonitoringInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // StartFailover 手动倒换主备

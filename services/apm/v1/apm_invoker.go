@@ -65,6 +65,30 @@ func (i *ListAlarmNotifyInvoker) Invoke() (*model.ListAlarmNotifyResponse, error
 	}
 }
 
+type ChangeAgentStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeAgentStatusInvoker) Invoke() (*model.ChangeAgentStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeAgentStatusResponse), nil
+	}
+}
+
+type DeleteAgentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAgentInvoker) Invoke() (*model.DeleteAgentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAgentResponse), nil
+	}
+}
+
 type ListAkSkInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -110,6 +134,18 @@ func (i *SaveMonitorItemConfigInvoker) Invoke() (*model.SaveMonitorItemConfigRes
 		return nil, err
 	} else {
 		return result.(*model.SaveMonitorItemConfigResponse), nil
+	}
+}
+
+type SearchAgentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SearchAgentInvoker) Invoke() (*model.SearchAgentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SearchAgentResponse), nil
 	}
 }
 

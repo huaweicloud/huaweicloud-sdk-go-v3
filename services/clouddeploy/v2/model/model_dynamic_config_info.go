@@ -39,6 +39,7 @@ type DynamicConfigInfoTypeEnum struct {
 	TEXT       DynamicConfigInfoType
 	HOST_GROUP DynamicConfigInfoType
 	ENCRYPT    DynamicConfigInfoType
+	ENUM       DynamicConfigInfoType
 }
 
 func GetDynamicConfigInfoTypeEnum() DynamicConfigInfoTypeEnum {
@@ -51,6 +52,9 @@ func GetDynamicConfigInfoTypeEnum() DynamicConfigInfoTypeEnum {
 		},
 		ENCRYPT: DynamicConfigInfoType{
 			value: "encrypt",
+		},
+		ENUM: DynamicConfigInfoType{
+			value: "enum",
 		},
 	}
 }

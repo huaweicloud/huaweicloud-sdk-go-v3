@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type ListFirewallUsingGetResponse struct {
-	Data           *GetFirewallInstanceResponseData `json:"data,omitempty"`
-	HttpStatusCode int                              `json:"-"`
+	Data           *GetFirewallInstanceData `json:"data,omitempty"`
+	HttpStatusCode int                      `json:"-"`
 }
 
 func (o ListFirewallUsingGetResponse) String() string {

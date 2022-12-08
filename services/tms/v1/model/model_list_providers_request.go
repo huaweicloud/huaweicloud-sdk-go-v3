@@ -15,10 +15,10 @@ type ListProvidersRequest struct {
 	// 指定显示语言
 	Locale *ListProvidersRequestLocale `json:"locale,omitempty"`
 
-	// 查询记录数默认为200，limit最多为200, 最小值为1
+	// 查询记录数默认为200，limit最多为200，最小值为1。
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 索引位置，从offset指定的下一条数据开始查询，必须为数字，不能为负数，默认为0
+	// 索引位置，从offset指定的下一条数据开始查询，必须为数字，不能为负数，默认为0。
 	Offset *int32 `json:"offset,omitempty"`
 
 	// 云服务名称

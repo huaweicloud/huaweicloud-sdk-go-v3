@@ -9,7 +9,7 @@ import (
 // authenticatingProxy模式相关配置。认证模式为authenticating_proxy时必选
 type AuthenticatingProxy struct {
 
-	// authenticating_proxy模式配置的x509格式CA证书(base64编码)。当集群认证模式为authenticating_proxy时，此项必须填写。  最大长度：1M
+	// authenticating_proxy模式配置的x509格式CA证书(base64编码)。当集群认证模式为authenticating_proxy时，此项必须填写。   最大长度：1M
 	Ca *string `json:"ca,omitempty"`
 
 	// authenticating_proxy模式配置的x509格式CA证书签发的客户端证书，用于kube-apiserver到扩展apiserver的认证。(base64编码)。当集群认证模式为authenticating_proxy时，此项必须填写。
