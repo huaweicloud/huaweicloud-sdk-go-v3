@@ -13,7 +13,7 @@ type FieldModel struct {
 	FieldName string `json:"field_name"`
 
 	// 是否开启快速分析。
-	IsAnalysis bool `json:"is_analysis"`
+	IsAnalysis *bool `json:"is_analysis,omitempty"`
 }
 
 func (o FieldModel) String() string {

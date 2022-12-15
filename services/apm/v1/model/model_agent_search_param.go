@@ -25,7 +25,7 @@ type AgentSearchParam struct {
 	Region string `json:"region"`
 
 	// 是否按照采集状态排序,默认不填则不按状态排序，填y则按照状态排序。
-	OrderByStatus *string `json:"orderByStatus,omitempty"`
+	OrderByStatus *string `json:"order_by_status,omitempty"`
 
 	// 需要查询的页码，最小数为1。
 	Page int32 `json:"page"`

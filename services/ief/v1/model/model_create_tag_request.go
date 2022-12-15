@@ -15,7 +15,7 @@ type CreateTagRequest struct {
 	// 资源ID
 	ResourceId string `json:"resource_id"`
 
-	// 资源类型
+	// 资源类型 1. ief-edge_node 2. ief-deployment 3. ief-application 4. ief-device
 	ResourceType string `json:"resource_type"`
 
 	Body *CreateTagRequestBody `json:"body,omitempty"`

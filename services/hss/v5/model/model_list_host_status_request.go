@@ -9,16 +9,13 @@ import (
 // Request Object
 type ListHostStatusRequest struct {
 
-	// region id
-	Region string `json:"region"`
-
 	// 企业项目ID，查询所有企业项目时填写：all_granted_eps
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 主机开通的版本，包含如下6种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise：容器版。
 	Version *string `json:"version,omitempty"`
 
-	// Agent状态，包含如下5种。   - not_installed ：未安装。   - online ：在线。   - offline ：离线。   - install_failed ：安装失败。   - installing ：安装中。   - not_online ：不在线的（除了在线以外的所有状态，仅作为查询条件）。
+	// Agent状态，包含如下6种。   - installed ：已安装。   - not_installed ：未安装。   - online ：在线。   - offline ：离线。   - install_failed ：安装失败。   - installing ：安装中。   - not_online ：不在线的（除了在线以外的所有状态，仅作为查询条件）。
 	AgentStatus *string `json:"agent_status,omitempty"`
 
 	// 检测结果，包含如下4种。   - undetected ：未检测。   - clean ：无风险。   - risk ：有风险。   - scanning ：检测中。
@@ -53,6 +50,9 @@ type ListHostStatusRequest struct {
 
 	// 服务器组名称
 	GroupName *string `json:"group_name,omitempty"`
+
+	// region id
+	Region *string `json:"region,omitempty"`
 
 	// 策略组ID
 	PolicyGroupId *string `json:"policy_group_id,omitempty"`

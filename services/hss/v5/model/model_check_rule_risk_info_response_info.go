@@ -35,6 +35,15 @@ type CheckRuleRiskInfoResponseInfo struct {
 
 	// 状态，包含如下：   - safe : 无需处理   - ignored : 已忽略   - unhandled : 未处理
 	Status *string `json:"status,omitempty"`
+
+	// 修复状态，包含如下：   - fixing :正在修复中   - fix_failed :修复失败   - fix_success :修复成功
+	FixStatus *string `json:"fix_status,omitempty"`
+
+	// 是否支持一键修复
+	EnableAutoFix *bool `json:"enable_auto_fix,omitempty"`
+
+	// 支持传递参数修复的检查项可传递参数的范围
+	RuleParams *[]CheckRuleFixParamInfo `json:"rule_params,omitempty"`
 }
 
 func (o CheckRuleRiskInfoResponseInfo) String() string {

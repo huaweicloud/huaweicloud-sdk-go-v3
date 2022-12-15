@@ -25,7 +25,7 @@ type IncidentOrderAuthV2 struct {
 	AuthDescribe *string `json:"auth_describe,omitempty"`
 
 	// 授权资源类型id
-	ResourceTypeId *interface{} `json:"resource_type_id,omitempty"`
+	ResourceTypeId *string `json:"resource_type_id,omitempty"`
 
 	// 授权资源类型名称
 	ResourceTypeName *string `json:"resource_type_name,omitempty"`

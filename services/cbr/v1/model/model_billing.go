@@ -23,7 +23,7 @@ type Billing struct {
 	// 崩溃一致性（crash_consistent）或应用一致性（app_consistent）
 	ConsistentLevel BillingConsistentLevel `json:"consistent_level"`
 
-	// 对象类型
+	// 对象类型: 云服务器（server），云硬盘（disk），云桌面（workspace）。
 	ObjectType *BillingObjectType `json:"object_type,omitempty"`
 
 	// 订单ID
@@ -197,8 +197,9 @@ type BillingObjectType struct {
 }
 
 type BillingObjectTypeEnum struct {
-	SERVER BillingObjectType
-	DISK   BillingObjectType
+	SERVER    BillingObjectType
+	DISK      BillingObjectType
+	WORKSPACE BillingObjectType
 }
 
 func GetBillingObjectTypeEnum() BillingObjectTypeEnum {
@@ -208,6 +209,9 @@ func GetBillingObjectTypeEnum() BillingObjectTypeEnum {
 		},
 		DISK: BillingObjectType{
 			value: "disk",
+		},
+		WORKSPACE: BillingObjectType{
+			value: "workspace",
 		},
 	}
 }

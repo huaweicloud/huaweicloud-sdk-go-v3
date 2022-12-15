@@ -6,13 +6,12 @@ import (
 	"strings"
 )
 
-// 前端页面请求体
 type ProxyTransactionSplitRequest struct {
 
 	// 开启/关闭事务拆分，取值范围是[ON/OFF]
 	TransactionSplit string `json:"transaction_split"`
 
-	// 目标proxy列表
+	// 实例的proxy列表
 	ProxyIdList []string `json:"proxy_id_list"`
 }
 

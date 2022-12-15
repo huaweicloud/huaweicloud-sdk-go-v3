@@ -9,7 +9,7 @@ import (
 // Request Object
 type ListBcsMetricRequest struct {
 
-	// 区块链服务id,当前不支持IEF实例
+	// 区块链服务id
 	BlockchainId string `json:"blockchain_id"`
 
 	Body *ListBcsMetricRequestBody `json:"body,omitempty"`

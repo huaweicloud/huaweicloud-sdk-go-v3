@@ -54,7 +54,7 @@ type BackupResp struct {
 	// 资源大小，单位为GB
 	ResourceSize int32 `json:"resource_size"`
 
-	// 资源类型
+	// 资源类型: 云服务器: OS::Nova::Server, 云硬盘: OS::Cinder::Volume, 云桌面：OS::Workspace::DesktopV2
 	ResourceType BackupRespResourceType `json:"resource_type"`
 
 	// 备份状态
@@ -135,8 +135,9 @@ type BackupRespResourceType struct {
 }
 
 type BackupRespResourceTypeEnum struct {
-	OSNOVASERVER   BackupRespResourceType
-	OSCINDERVOLUME BackupRespResourceType
+	OSNOVASERVER          BackupRespResourceType
+	OSCINDERVOLUME        BackupRespResourceType
+	OSWORKSPACEDESKTOP_V2 BackupRespResourceType
 }
 
 func GetBackupRespResourceTypeEnum() BackupRespResourceTypeEnum {
@@ -146,6 +147,9 @@ func GetBackupRespResourceTypeEnum() BackupRespResourceTypeEnum {
 		},
 		OSCINDERVOLUME: BackupRespResourceType{
 			value: "OS::Cinder::Volume",
+		},
+		OSWORKSPACEDESKTOP_V2: BackupRespResourceType{
+			value: "OS::Workspace::DesktopV2",
 		},
 	}
 }

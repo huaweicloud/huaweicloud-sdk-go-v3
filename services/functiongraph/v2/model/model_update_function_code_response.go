@@ -46,6 +46,9 @@ type UpdateFunctionCodeResponse struct {
 	// 依赖id列表
 	DependList *[]string `json:"depend_list,omitempty"`
 
+	// 依赖版本id列表
+	DependVersionList *[]string `json:"depend_version_list,omitempty"`
+
 	StrategyConfig *StrategyConfig `json:"strategy_config,omitempty"`
 
 	// 函数依赖代码包列表。

@@ -12,7 +12,7 @@ type UpdateProxySessionConsistenceRequest struct {
 	// 语言。
 	XLanguage *string `json:"X-Language,omitempty"`
 
-	// 租户在某一project下的实例id。
+	// 租户在某一project下的实例ID。
 	InstanceId string `json:"instance_id"`
 
 	// 租户在某一instance下的数据库代理id。

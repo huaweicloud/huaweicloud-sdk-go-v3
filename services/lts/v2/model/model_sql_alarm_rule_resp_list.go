@@ -50,6 +50,18 @@ type SqlAlarmRuleRespList struct {
 	TemplateName *string `json:"template_name,omitempty"`
 
 	Status *SqlAlarmRuleRespListStatus `json:"status,omitempty"`
+
+	// 触发条件：触发次数;默认为1
+	TriggerConditionCount *int32 `json:"trigger_condition_count,omitempty"`
+
+	// 触发条件：触发周期;默认为1
+	TriggerConditionFrequency *int32 `json:"trigger_condition_frequency,omitempty"`
+
+	// 是否打开恢复通知;默认false
+	WhetherRecoveryPolicy *bool `json:"whether_recovery_policy,omitempty"`
+
+	// 恢复策略周期;默认为3
+	RecoveryPolicy *int32 `json:"recovery_policy,omitempty"`
 }
 
 func (o SqlAlarmRuleRespList) String() string {

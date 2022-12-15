@@ -13,7 +13,7 @@ type TaurusModifyProxyWeightRequest struct {
 	MasterWeight *int32 `json:"master_weight,omitempty"`
 
 	// 只读节点权重配置信息
-	ReadonlyNodes *[]TaurusModifyProxyWeightReadonlyNode `json:"readonly_nodes,omitempty"`
+	ReadonlyNodes *[]ModifyProxyWeightReadonlyNode `json:"readonly_nodes,omitempty"`
 }
 
 func (o TaurusModifyProxyWeightRequest) String() string {

@@ -334,9 +334,9 @@ func (c *BcsClient) HandleUnionMemberQuitListInvoker(request *model.HandleUnionM
 	return &HandleUnionMemberQuitListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListBcsMetric 查询BCS服务实例监控数据
+// ListBcsMetric 查询服务实例监控数据
 //
-// 该接口用于查询BCS服务的监控数据，可以指定相应的指标名称。[目前不支持IEF节点](tag:hasief)
+// 该接口用于查询BCS服务的监控数据，可以指定相应的指标名称。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *BcsClient) ListBcsMetric(request *model.ListBcsMetricRequest) (*model.ListBcsMetricResponse, error) {
@@ -349,7 +349,7 @@ func (c *BcsClient) ListBcsMetric(request *model.ListBcsMetricRequest) (*model.L
 	}
 }
 
-// ListBcsMetricInvoker 查询BCS服务实例监控数据
+// ListBcsMetricInvoker 查询服务实例监控数据
 func (c *BcsClient) ListBcsMetricInvoker(request *model.ListBcsMetricRequest) *ListBcsMetricInvoker {
 	requestDef := GenReqDefForListBcsMetric()
 	return &ListBcsMetricInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

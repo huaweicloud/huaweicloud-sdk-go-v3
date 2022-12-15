@@ -15,7 +15,7 @@ type TaurusModifyInstanceMonitorRequestBody struct {
 	// 实例秒级监控开关。为true时表示开启，为false时表示关闭。
 	MonitorSwitch bool `json:"monitor_switch"`
 
-	// 采集周期，仅在monitor_switch为true时生效。默认为5s。monitor_switch为false时，不传该参数。  取值： 1：采集周期为1s； 5：采集周期为5s。
+	// 采集周期，仅在monitor_switch为true时生效。默认为5s。monitor_switch为false时，不传该参数。  取值： 1：采集周期为1s。 5：采集周期为5s。
 	Period *TaurusModifyInstanceMonitorRequestBodyPeriod `json:"period,omitempty"`
 }
 

@@ -15,13 +15,13 @@ type ListOpRecordRequest struct {
 	// 区块链ID
 	BlockchainId *string `json:"blockchain_id,omitempty"`
 
-	// 操作状态, 可选数值如下（括号中为该数值对应的操作类型含义）：waiting(等待执行)，processing（处理中），finished（操作完成，成功），failed（操作失败），stop（操作中断）
+	// 操作状态, 可选数值如下（括号中为该数值对应的操作状态含义）：waiting(等待执行)，processing（处理中），finished（操作完成，成功），failed（操作失败），stop（操作中断）
 	OperationStatus *ListOpRecordRequestOperationStatus `json:"operation_status,omitempty"`
 
-	// 资源类型, 可选数值如下（括号中为该数值对应的操作类型含义）：BCSSVC01（BCS变更操作），BCSSVC02（UGBaaS变更操作），PLUGIN01（RestAPI插件变更操作），PLUGIN02（TC3插件变更操作），PLUGIN03（轻节点插件变更操作）
+	// 资源类型, 可选数值如下（括号中为该数值对应的资源类型含义）：BCSSVC01（BCS变更操作），BCSSVC02（UGBaaS变更操作），PLUGIN01（RestAPI插件变更操作），PLUGIN02（TC3插件变更操作），PLUGIN03（轻节点插件变更操作）
 	ResourceType *ListOpRecordRequestResourceType `json:"resource_type,omitempty"`
 
-	// 操作类型,  可选数值如下（括号中为该数值对应的操作类型含义）：99（OpCreate）,00（OpDelete）,01（OpUpgrade）,91（OpUpgradeRb）,02（OpAddOrg）,03（OpScaleOrg）,04（OpJoinChannel）,05（OpJoinUnion）
+	// 操作类型, 可选数值如下（括号中为该数值对应的操作类型含义）：99（OpCreate）,00（OpDelete）,01（OpUpgrade）,91（OpUpgradeRb）,02（OpAddOrg）,03（OpScaleOrg）,04（OpJoinChannel）,05（OpJoinUnion）
 	OperationType *ListOpRecordRequestOperationType `json:"operation_type,omitempty"`
 
 	// 操作记录ID

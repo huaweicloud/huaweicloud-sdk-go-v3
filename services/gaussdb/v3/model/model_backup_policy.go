@@ -18,7 +18,7 @@ type BackupPolicy struct {
 	// 备份周期配置。自动备份将在每星期指定的天进行。 取值范围：格式为逗号隔开的数字，数字代表星期。
 	Period *string `json:"period,omitempty"`
 
-	// 1级备份保留数量。当一级备份开关开启时，返回此参数。
+	// 一级备份保留数量。当一级备份开关开启时，返回此参数。
 	RetentionNumBackupLevel1 *int32 `json:"retention_num_backup_level1,omitempty"`
 }
 

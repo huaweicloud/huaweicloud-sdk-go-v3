@@ -12,7 +12,7 @@ type ShowEdgeGroupDetailResponse struct {
 	// 边缘节点组ID
 	Id *string `json:"id,omitempty"`
 
-	// 边缘节点组名称
+	// 边缘节点组名称，小写英文字母、数字、中划线，以小写字母或数字开头，最大长度为32个字符，不能为空
 	Name *string `json:"name,omitempty"`
 
 	// 描述
@@ -40,7 +40,7 @@ type ShowEdgeGroupDetailResponse struct {
 	GpuNum *int32 `json:"gpu_num,omitempty"`
 
 	// 绑定的边缘节点详情
-	Nodes *[]EdgeNode `json:"nodes,omitempty"`
+	Nodes *[]EdgeNodeResp `json:"nodes,omitempty"`
 
 	// 绑定的边缘应用详情
 	Deployments *[]GroupDeployment `json:"deployments,omitempty"`

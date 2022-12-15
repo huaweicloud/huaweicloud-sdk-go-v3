@@ -17,7 +17,7 @@ type HandleNotificationInvitor struct {
 	// 邀请方project id
 	InvitorProjectId string `json:"invitor_project_id"`
 
-	// 邀请方租户id。控制台->邀请方账号->我的凭证->API凭证->账号ID
+	// 邀请方租户id。控制台->邀请方帐号->我的凭证->API凭证->帐号ID
 	InvitorUserId string `json:"invitor_user_id"`
 }
 

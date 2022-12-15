@@ -8,6 +8,15 @@ import (
 
 type DmsKafkaInfo struct {
 
+	// 状态
+	Status *string `json:"status,omitempty"`
+
+	// 状态详情
+	StatusDetail *string `json:"status_detail,omitempty"`
+
+	// 是否允许order老化
+	OrderFadeEnabled *bool `json:"order_fade_enabled,omitempty"`
+
 	// Kafka连接地址
 	Addr *[]string `json:"addr,omitempty"`
 

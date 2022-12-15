@@ -27,7 +27,7 @@ type ListVaultRequest struct {
 	// 保护类型
 	ProtectType *ListVaultRequestProtectType `json:"protect_type,omitempty"`
 
-	// 资源类型
+	// 资源类型：云服务器（server），云硬盘（disk），文件系统（turbo），云桌面（workspace）。
 	ObjectType *string `json:"object_type,omitempty"`
 
 	// 企业项目id或all_granted_eps，all_granted_eps表示查询用户有权限的所有企业项目id

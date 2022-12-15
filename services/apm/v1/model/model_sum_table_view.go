@@ -13,13 +13,13 @@ import (
 type SumTableView struct {
 
 	// 视图类型。
-	ViewType *SumTableViewViewType `json:"view_type,omitempty"`
+	ViewType SumTableViewViewType `json:"view_type"`
 
 	// 采集器名称。
-	CollectorName *string `json:"collector_name,omitempty"`
+	CollectorName string `json:"collector_name"`
 
 	// 视图对应的指标集的名称。
-	MetricSet *string `json:"metric_set,omitempty"`
+	MetricSet string `json:"metric_set"`
 
 	// 图标所需展示的标题。
 	Title *string `json:"title,omitempty"`
@@ -34,7 +34,7 @@ type SumTableView struct {
 	Filter *string `json:"filter,omitempty"`
 
 	// 所需展示的字段列表模型列表。
-	FieldItemList *[]FieldItem `json:"field_item_list,omitempty"`
+	FieldItemList []FieldItem `json:"field_item_list"`
 
 	// 跨度。
 	Span *bool `json:"span,omitempty"`

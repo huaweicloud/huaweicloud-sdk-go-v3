@@ -250,9 +250,9 @@ func (c *ApmClient) SaveMonitorItemConfigInvoker(request *model.SaveMonitorItemC
 	return &SaveMonitorItemConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// SearchAgent 搜索业务下所有探针
+// SearchAgent 查询应用下所有探针
 //
-// 该接口用于搜索业务下所有探针情况。
+// 该接口用于搜索应用下所有探针情况。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApmClient) SearchAgent(request *model.SearchAgentRequest) (*model.SearchAgentResponse, error) {
@@ -265,7 +265,7 @@ func (c *ApmClient) SearchAgent(request *model.SearchAgentRequest) (*model.Searc
 	}
 }
 
-// SearchAgentInvoker 搜索业务下所有探针
+// SearchAgentInvoker 查询应用下所有探针
 func (c *ApmClient) SearchAgentInvoker(request *model.SearchAgentRequest) *SearchAgentInvoker {
 	requestDef := GenReqDefForSearchAgent()
 	return &SearchAgentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

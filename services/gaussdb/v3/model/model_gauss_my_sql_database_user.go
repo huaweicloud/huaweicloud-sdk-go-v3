@@ -15,7 +15,7 @@ type GaussMySqlDatabaseUser struct {
 	// 主机地址
 	Host *string `json:"host,omitempty"`
 
-	// 是否为只读权限：true表示只读,false表示可读写。
+	// 是否为只读权限： - true，表示只读。 - false，表示可读写。
 	Readonly *bool `json:"readonly,omitempty"`
 }
 

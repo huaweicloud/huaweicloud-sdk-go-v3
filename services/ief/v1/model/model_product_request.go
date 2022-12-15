@@ -9,7 +9,7 @@ import (
 // 产品详情请求体
 type ProductRequest struct {
 
-	// 产品名称
+	// 产品名称，允许输入小写字母，数字，中划线，不能以中划线开头或结尾，最大长度为26位
 	Name string `json:"name"`
 
 	// 产品描述

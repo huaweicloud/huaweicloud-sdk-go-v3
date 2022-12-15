@@ -38,7 +38,7 @@ type MysqlSlowLogList struct {
 	// 语句类型。
 	Type *string `json:"type,omitempty"`
 
-	// 发生时间,UTC时间
+	// 发生时间，UTC时间
 	StartTime *string `json:"start_time,omitempty"`
 
 	// IP地址。

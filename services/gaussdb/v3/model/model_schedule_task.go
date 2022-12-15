@@ -36,7 +36,7 @@ type ScheduleTask struct {
 	EndTime *string `json:"end_time,omitempty"`
 
 	// 任务执行状态。 取值： - 值为“Pending”，表示延时任务，未执行。 - 值为“Running”，表示任务正在执行。 - 值为“Completed”，表示任务执行成功。 - 值为“Failed”，表示任务执行失败。
-	TaskStatus *string `json:"task_status,omitempty"`
+	JobStatus *string `json:"job_status,omitempty"`
 
 	// 数据库类型。
 	DatastoreType *string `json:"datastore_type,omitempty"`

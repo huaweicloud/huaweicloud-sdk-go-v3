@@ -10,7 +10,7 @@ import (
 type FieldItem struct {
 
 	// 表达式。
-	Function *string `json:"function,omitempty"`
+	Function string `json:"function"`
 
 	// 作为。
 	As *string `json:"as,omitempty"`

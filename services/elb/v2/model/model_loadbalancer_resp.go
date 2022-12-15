@@ -24,7 +24,7 @@ type LoadbalancerResp struct {
 	// 负载均衡器的描述信息
 	Description string `json:"description"`
 
-	// 负载均衡器所在的子网ID。仅支持内网类型。
+	// 负载均衡器所在的子网的IPv4网络ID。仅支持内网类型。
 	VipSubnetId string `json:"vip_subnet_id"`
 
 	// 负载均衡器虚拟IP对应的端口ID

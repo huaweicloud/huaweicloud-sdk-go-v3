@@ -8,9 +8,9 @@ import (
 
 // 终端设备动态属性
 type ValueInTwin struct {
-	Excepted *Excepted `json:"excepted"`
+	Excepted *Excepted `json:"excepted,omitempty"`
 
-	// 动态属性的期望信息
+	// 动态属性的实际信息
 	Optional *bool `json:"optional,omitempty"`
 
 	Metadata *Metadata `json:"metadata,omitempty"`

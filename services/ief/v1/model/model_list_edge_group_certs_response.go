@@ -8,13 +8,8 @@ import (
 
 // Response Object
 type ListEdgeGroupCertsResponse struct {
-
-	// 边缘节点组数目
-	Count *int32 `json:"count,omitempty"`
-
-	// 边缘节点组详情
-	EdgeGroups     *[]EdgeGroupResp `json:"edge_groups,omitempty"`
-	HttpStatusCode int              `json:"-"`
+	Body           *[]EdgeGroupCertListResp `json:"body,omitempty"`
+	HttpStatusCode int                      `json:"-"`
 }
 
 func (o ListEdgeGroupCertsResponse) String() string {

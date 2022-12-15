@@ -42,6 +42,21 @@ func GenReqDefForBatchCreateSharedBandwidths() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForChangeBandwidthToPeriod() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2.0/{project_id}/bandwidths/change-to-period").
+		WithResponse(new(model.ChangeBandwidthToPeriodResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForCreateSharedBandwidth() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -279,6 +294,21 @@ func GenReqDefForBatchDisassociatePublicips() *def.HttpRequestDef {
 		WithMethod(http.MethodPatch).
 		WithPath("/v2/{project_id}/batchpublicips").
 		WithResponse(new(model.BatchDisassociatePublicipsResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForChangePublicipToPeriod() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2.0/{project_id}/publicips/change-to-period").
+		WithResponse(new(model.ChangePublicipToPeriodResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -537,6 +567,22 @@ func GenReqDefForUpdatePublicip() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowResourcesJobDetail() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/jobs/{job_id}").
+		WithResponse(new(model.ShowResourcesJobDetailResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("JobId").
+		WithJsonTag("job_id").
+		WithLocationType(def.Path))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

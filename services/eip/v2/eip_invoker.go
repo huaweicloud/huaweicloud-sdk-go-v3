@@ -29,6 +29,18 @@ func (i *BatchCreateSharedBandwidthsInvoker) Invoke() (*model.BatchCreateSharedB
 	}
 }
 
+type ChangeBandwidthToPeriodInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeBandwidthToPeriodInvoker) Invoke() (*model.ChangeBandwidthToPeriodResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeBandwidthToPeriodResponse), nil
+	}
+}
+
 type CreateSharedBandwidthInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -197,6 +209,18 @@ func (i *BatchDisassociatePublicipsInvoker) Invoke() (*model.BatchDisassociatePu
 	}
 }
 
+type ChangePublicipToPeriodInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangePublicipToPeriodInvoker) Invoke() (*model.ChangePublicipToPeriodResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangePublicipToPeriodResponse), nil
+	}
+}
+
 type CountPublicIpInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -362,6 +386,18 @@ func (i *UpdatePublicipInvoker) Invoke() (*model.UpdatePublicipResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.UpdatePublicipResponse), nil
+	}
+}
+
+type ShowResourcesJobDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowResourcesJobDetailInvoker) Invoke() (*model.ShowResourcesJobDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowResourcesJobDetailResponse), nil
 	}
 }
 

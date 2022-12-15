@@ -39,7 +39,7 @@ type ListLoadbalancersRequest struct {
 	// 负载均衡器内网IP对应的端口ID。
 	VipPortId *string `json:"vip_port_id,omitempty"`
 
-	// 负载均衡器所在的子网ID。
+	// 负载均衡器所在的子网IPv4网络ID。
 	VipSubnetId *string `json:"vip_subnet_id,omitempty"`
 
 	// 负载均衡器所在的虚拟私有云ID。

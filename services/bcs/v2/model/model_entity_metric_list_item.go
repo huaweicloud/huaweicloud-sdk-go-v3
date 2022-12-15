@@ -12,7 +12,7 @@ type EntityMetricListItem struct {
 	// cpu使用率
 	CpuUsage *string `json:"cpuUsage,omitempty"`
 
-	// 磁盘使用率
+	// 磁盘读取速率
 	DiskReadRate *string `json:"diskReadRate,omitempty"`
 
 	// 磁盘写入速率
@@ -26,6 +26,9 @@ type EntityMetricListItem struct {
 
 	// 上行BPs
 	SendBytesRate *string `json:"sendBytesRate,omitempty"`
+
+	// 文件系统使用率
+	FilesystemUsage *string `json:"filesystemUsage,omitempty"`
 }
 
 func (o EntityMetricListItem) String() string {

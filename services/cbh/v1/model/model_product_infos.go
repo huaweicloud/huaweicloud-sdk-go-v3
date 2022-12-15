@@ -22,7 +22,7 @@ type ProductInfos struct {
 	ResourceSpecCode string `json:"resource_spec_code"`
 
 	// 可用区id
-	AvailableZoneId string `json:"available_zone_id"`
+	AvailableZoneId *string `json:"available_zone_id,omitempty"`
 
 	// 资源容量度量标识
 	ResourceSizeMeasureId string `json:"resource_size_measure_id"`

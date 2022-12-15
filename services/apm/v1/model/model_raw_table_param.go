@@ -10,7 +10,7 @@ import (
 type RawTableParam struct {
 
 	// 上一次扫描的数据ID。
-	LastRowId *string `json:"lastRowId,omitempty"`
+	LastRowId *string `json:"last_row_id,omitempty"`
 
 	ViewConfig *RawTableView `json:"view_config"`
 

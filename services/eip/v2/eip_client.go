@@ -61,6 +61,27 @@ func (c *EipClient) BatchCreateSharedBandwidthsInvoker(request *model.BatchCreat
 	return &BatchCreateSharedBandwidthsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ChangeBandwidthToPeriod 按需转包API
+//
+// 租户按需转包接口。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EipClient) ChangeBandwidthToPeriod(request *model.ChangeBandwidthToPeriodRequest) (*model.ChangeBandwidthToPeriodResponse, error) {
+	requestDef := GenReqDefForChangeBandwidthToPeriod()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeBandwidthToPeriodResponse), nil
+	}
+}
+
+// ChangeBandwidthToPeriodInvoker 按需转包API
+func (c *EipClient) ChangeBandwidthToPeriodInvoker(request *model.ChangeBandwidthToPeriodRequest) *ChangeBandwidthToPeriodInvoker {
+	requestDef := GenReqDefForChangeBandwidthToPeriod()
+	return &ChangeBandwidthToPeriodInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateSharedBandwidth 创建共享带宽
 //
 // 创建共享带宽。
@@ -353,6 +374,27 @@ func (c *EipClient) BatchDisassociatePublicips(request *model.BatchDisassociateP
 func (c *EipClient) BatchDisassociatePublicipsInvoker(request *model.BatchDisassociatePublicipsRequest) *BatchDisassociatePublicipsInvoker {
 	requestDef := GenReqDefForBatchDisassociatePublicips()
 	return &BatchDisassociatePublicipsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ChangePublicipToPeriod 按需转包接口
+//
+// 租户按需转包接口。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EipClient) ChangePublicipToPeriod(request *model.ChangePublicipToPeriodRequest) (*model.ChangePublicipToPeriodResponse, error) {
+	requestDef := GenReqDefForChangePublicipToPeriod()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangePublicipToPeriodResponse), nil
+	}
+}
+
+// ChangePublicipToPeriodInvoker 按需转包接口
+func (c *EipClient) ChangePublicipToPeriodInvoker(request *model.ChangePublicipToPeriodRequest) *ChangePublicipToPeriodInvoker {
+	requestDef := GenReqDefForChangePublicipToPeriod()
+	return &ChangePublicipToPeriodInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CountPublicIp 查询PublicIp数量
@@ -648,6 +690,27 @@ func (c *EipClient) UpdatePublicip(request *model.UpdatePublicipRequest) (*model
 func (c *EipClient) UpdatePublicipInvoker(request *model.UpdatePublicipRequest) *UpdatePublicipInvoker {
 	requestDef := GenReqDefForUpdatePublicip()
 	return &UpdatePublicipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowResourcesJobDetail 查询Job状态接口
+//
+// 查询Job状态接口
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EipClient) ShowResourcesJobDetail(request *model.ShowResourcesJobDetailRequest) (*model.ShowResourcesJobDetailResponse, error) {
+	requestDef := GenReqDefForShowResourcesJobDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowResourcesJobDetailResponse), nil
+	}
+}
+
+// ShowResourcesJobDetailInvoker 查询Job状态接口
+func (c *EipClient) ShowResourcesJobDetailInvoker(request *model.ShowResourcesJobDetailRequest) *ShowResourcesJobDetailInvoker {
+	requestDef := GenReqDefForShowResourcesJobDetail()
+	return &ShowResourcesJobDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // NeutronCreateFloatingIp 创建浮动IP

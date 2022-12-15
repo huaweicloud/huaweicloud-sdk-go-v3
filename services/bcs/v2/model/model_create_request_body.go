@@ -44,7 +44,7 @@ type CreateRequestBody struct {
 	// BCS服务资源、区块链管理密码
 	ResourcePassword string `json:"resource_password"`
 
-	// 共识组织节点数，被邀请方创实例时可不填。购买fabric2.2服务时必填。
+	// 共识组织节点数，被邀请方创实例时可不填。购买fabric2.2服务时必填，若共识策略为Raft（CFT），节点数为3；若共识策略为快速拜占庭容错共识算法（FBFT），节点数为4。
 	OrdererNodeNumber *int64 `json:"orderer_node_number,omitempty"`
 
 	// 是否使用集群节点弹性IP

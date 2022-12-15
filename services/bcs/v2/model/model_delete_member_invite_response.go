@@ -8,7 +8,10 @@ import (
 
 // Response Object
 type DeleteMemberInviteResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// 请求成功的结果
+	Result         *string `json:"result,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o DeleteMemberInviteResponse) String() string {

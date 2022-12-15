@@ -9,7 +9,7 @@ import (
 // 切换防护的请求信息
 type SwitchHostsProtectStatusRequestInfo struct {
 
-	// 开通的版本，包含如下:   - hss.version.null : VERSION_NULL   - hss.version.basic : VERSION_BASIC   - hss.version.enterprise : VERSION_ENTERPRISE   - hss.version.premium : VERSION_PREMIUM   - hss.version.wtp : VERSION_WTP
+	// 主机开通的版本，包含如下:   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。
 	Version *string `json:"version,omitempty"`
 
 	// 付费模式   - packet_cycle : 包周期   - on_demand : 按需

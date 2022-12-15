@@ -8,7 +8,9 @@ import (
 
 // Response Object
 type PauseResumeDataSynchronizationResponse struct {
-	Body           *string `json:"body,omitempty"`
+
+	// 暂停/恢复具备容灾关系的实例数据同步的工作ID
+	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新监听器的结构体
+// 更新监听器的请求体。
 type UpdateListenerReq struct {
 
 	// 监听器名称。
@@ -35,7 +35,7 @@ type UpdateListenerReq struct {
 
 	InsertHeaders *InsertHeader `json:"insert_headers,omitempty"`
 
-	// 监听器使用的安全策略，仅对TERMINATED_HTTPS协议类型的监听器有效。  取值包括：tls-1-0, tls-1-1, tls-1-2, tls-1-2-strict多种安全策略。
+	// 监听器使用的安全策略，仅对TERMINATED_HTTPS协议类型的监听器有效。  取值包括：tls-1-0, tls-1-1, tls-1-2, tls-1-2-strict多种安全策略。  加密套件的排序为国密套件、ecc套件、rsa套件、tls1.3协议的套件（即支持ecc又支持rsa）
 	TlsCiphersPolicy *string `json:"tls_ciphers_policy,omitempty"`
 
 	// 监听器的管理状态。  该字段为预留字段，暂未启动。只支持设定为true

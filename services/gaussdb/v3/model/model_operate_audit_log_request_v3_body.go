@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// 开启/关闭审计日志参数体
+// 开启/关闭全量SQL参数体
 type OperateAuditLogRequestV3Body struct {
 
-	// 审计日志开关状态。取值：ON|OFF
+	// 全量SQL开关状态。 取值： - ON，表示开启 - OFF，表示关闭
 	SwitchStatus string `json:"switch_status"`
 }
 

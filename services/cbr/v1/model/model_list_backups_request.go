@@ -45,7 +45,7 @@ type ListBackupsRequest struct {
 	// 资源名称
 	ResourceName *string `json:"resource_name,omitempty"`
 
-	// 资源类型
+	// 资源类型: 云服务器: OS::Nova::Server, 云硬盘: OS::Cinder::Volume, 云桌面：OS::Workspace::DesktopV2
 	ResourceType *ListBackupsRequestResourceType `json:"resource_type,omitempty"`
 
 	// sort的内容为一组由逗号分隔的属性及可选排序方向组成，形如<key1>[:<direction>],<key2>[:<direction>],其中direction的取值为asc (升序) 或 desc (降序),如没有传入direction参数，默认为降序，sort内容的长度限制为255个字符。key取值范围:[created_at，updated_at，name，status，protected_at，id]
@@ -135,8 +135,9 @@ type ListBackupsRequestResourceType struct {
 }
 
 type ListBackupsRequestResourceTypeEnum struct {
-	OSCINDERVOLUME ListBackupsRequestResourceType
-	OSNOVASERVER   ListBackupsRequestResourceType
+	OSCINDERVOLUME        ListBackupsRequestResourceType
+	OSNOVASERVER          ListBackupsRequestResourceType
+	OSWORKSPACEDESKTOP_V2 ListBackupsRequestResourceType
 }
 
 func GetListBackupsRequestResourceTypeEnum() ListBackupsRequestResourceTypeEnum {
@@ -146,6 +147,9 @@ func GetListBackupsRequestResourceTypeEnum() ListBackupsRequestResourceTypeEnum 
 		},
 		OSNOVASERVER: ListBackupsRequestResourceType{
 			value: "OS::Nova::Server",
+		},
+		OSWORKSPACEDESKTOP_V2: ListBackupsRequestResourceType{
+			value: "OS::Workspace::DesktopV2",
 		},
 	}
 }

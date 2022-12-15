@@ -26,7 +26,7 @@ type CheckpointResourceResp struct {
 	// 资源已分配容量,单位为GB
 	ResourceSize *string `json:"resource_size,omitempty"`
 
-	// 待备份资源的类型: OS::Nova::Server, OS::Cinder::Volume, OS::Ironic::BareMetalServer, OS::Native::Server, OS::Sfs::Turbo
+	// 待备份资源的类型: OS::Nova::Server, OS::Cinder::Volume, OS::Ironic::BareMetalServer, OS::Native::Server, OS::Sfs::Turbo, OS::Workspace::DesktopV2
 	Type string `json:"type"`
 
 	// 副本大小

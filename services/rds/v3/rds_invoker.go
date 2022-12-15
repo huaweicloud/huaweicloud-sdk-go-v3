@@ -149,18 +149,6 @@ func (i *CreateManualBackupInvoker) Invoke() (*model.CreateManualBackupResponse,
 	}
 }
 
-type CreatePostgresqlExtensionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreatePostgresqlExtensionInvoker) Invoke() (*model.CreatePostgresqlExtensionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreatePostgresqlExtensionResponse), nil
-	}
-}
-
 type CreateRestoreInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -206,18 +194,6 @@ func (i *DeleteManualBackupInvoker) Invoke() (*model.DeleteManualBackupResponse,
 		return nil, err
 	} else {
 		return result.(*model.DeleteManualBackupResponse), nil
-	}
-}
-
-type DeletePostgresqlExtensionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeletePostgresqlExtensionInvoker) Invoke() (*model.DeletePostgresqlExtensionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeletePostgresqlExtensionResponse), nil
 	}
 }
 
@@ -434,18 +410,6 @@ func (i *ListOffSiteRestoreTimesInvoker) Invoke() (*model.ListOffSiteRestoreTime
 		return nil, err
 	} else {
 		return result.(*model.ListOffSiteRestoreTimesResponse), nil
-	}
-}
-
-type ListPostgresqlExtensionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListPostgresqlExtensionInvoker) Invoke() (*model.ListPostgresqlExtensionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListPostgresqlExtensionResponse), nil
 	}
 }
 
@@ -1361,6 +1325,30 @@ func (i *CreatePostgresqlDbUserInvoker) Invoke() (*model.CreatePostgresqlDbUserR
 	}
 }
 
+type CreatePostgresqlExtensionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePostgresqlExtensionInvoker) Invoke() (*model.CreatePostgresqlExtensionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePostgresqlExtensionResponse), nil
+	}
+}
+
+type DeletePostgresqlExtensionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeletePostgresqlExtensionInvoker) Invoke() (*model.DeletePostgresqlExtensionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeletePostgresqlExtensionResponse), nil
+	}
+}
+
 type ListPostgresqlDatabaseSchemasInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1394,6 +1382,18 @@ func (i *ListPostgresqlDbUserPaginatedInvoker) Invoke() (*model.ListPostgresqlDb
 		return nil, err
 	} else {
 		return result.(*model.ListPostgresqlDbUserPaginatedResponse), nil
+	}
+}
+
+type ListPostgresqlExtensionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPostgresqlExtensionInvoker) Invoke() (*model.ListPostgresqlExtensionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPostgresqlExtensionResponse), nil
 	}
 }
 

@@ -20,6 +20,9 @@ type EdgeGroupRequest struct {
 
 	// 节点组标签
 	Tags *[]Attributes `json:"tags,omitempty"`
+
+	// 节点组绑定的终端设备ID列表
+	DeviceIds *[]string `json:"device_ids,omitempty"`
 }
 
 func (o EdgeGroupRequest) String() string {

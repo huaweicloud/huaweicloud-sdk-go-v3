@@ -269,6 +269,18 @@ func (i *ListProductsInvoker) Invoke() (*model.ListProductsResponse, error) {
 	}
 }
 
+type ShowQuotasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowQuotasInvoker) Invoke() (*model.ShowQuotasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowQuotasResponse), nil
+	}
+}
+
 type CreateTerminalsBindingDesktopsInvoker struct {
 	*invoker.BaseInvoker
 }

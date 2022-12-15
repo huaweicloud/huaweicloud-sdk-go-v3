@@ -12,16 +12,16 @@ type SumTableParam struct {
 	// 上次请求的id。
 	RequestId *string `json:"request_id,omitempty"`
 
-	ViewConfig *SumTableView `json:"view_config,omitempty"`
+	ViewConfig *SumTableView `json:"view_config"`
 
 	// 策略。
 	Strategy *string `json:"strategy,omitempty"`
 
 	// 当前页码。
-	Page *int32 `json:"page,omitempty"`
+	Page int32 `json:"page"`
 
 	// 每页数据总数。
-	PageSize *int32 `json:"page_size,omitempty"`
+	PageSize int32 `json:"page_size"`
 
 	// 排序规则。
 	OrderBy *string `json:"order_by,omitempty"`
@@ -36,13 +36,13 @@ type SumTableParam struct {
 	MonitorItemId *int64 `json:"monitor_item_id,omitempty"`
 
 	// 环境id。
-	EnvId *int64 `json:"env_id,omitempty"`
+	EnvId int64 `json:"env_id"`
 
 	// 起始时间。
-	StartTime *string `json:"start_time,omitempty"`
+	StartTime string `json:"start_time"`
 
 	// 结束时间。
-	EndTime *string `json:"end_time,omitempty"`
+	EndTime string `json:"end_time"`
 }
 
 func (o SumTableParam) String() string {

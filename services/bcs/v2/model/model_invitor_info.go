@@ -15,10 +15,10 @@ type InvitorInfo struct {
 	// 邀请方用户名
 	InvitorName *string `json:"invitor_name,omitempty"`
 
-	// 邀请方的BCS服务实例id
+	// 邀请方的服务实例id
 	InvitorBcsId *string `json:"invitor_bcs_id,omitempty"`
 
-	// 邀请方的BCS服务实例名
+	// 邀请方的服务实例名
 	InvitorBcsName *string `json:"invitor_bcs_name,omitempty"`
 
 	// 邀请方的共识
@@ -39,10 +39,10 @@ type InvitorInfo struct {
 	// 邀请方的fabric版本
 	InvitorFabricVersion *string `json:"invitor_fabric_version,omitempty"`
 
-	// 是否允许order老化
+	// 是否允许共识节点老化
 	OrderFadeEnabled *bool `json:"order_fade_enabled,omitempty"`
 
-	// order老化阈值
+	// 共识节点的老化阈值
 	OrderFadeCache *int64 `json:"order_fade_cache,omitempty"`
 }
 

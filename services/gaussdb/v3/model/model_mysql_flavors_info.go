@@ -29,7 +29,7 @@ type MysqlFlavorsInfo struct {
 	// 实例类型。目前仅支持Cluster。
 	InstanceMode string `json:"instance_mode"`
 
-	// 规格所在az的状态，包含以下状态： - normal，在售 - unsupported，暂不支持该规格 - sellout，售罄。
+	// 规格所在az的状态，包含以下状态：  - normal，在售 - unsupported，暂不支持该规格 - sellout，售罄。
 	AzStatus map[string]string `json:"az_status"`
 }
 

@@ -9,7 +9,7 @@ import (
 // Request Object
 type ListBatchJobRequest struct {
 
-	// 批量处理作业类型
+	// 批量处理作业类型，支持以下选项： - node_upgrade： 节点升级 - deployment_deploy：应用部署 - deployment_upgrade：应用升级
 	JobType *string `json:"job_type,omitempty"`
 
 	// 查询返回记录的数量限制

@@ -25,16 +25,19 @@ type BatchJobForList struct {
 	Status *string `json:"status,omitempty"`
 
 	// 任务总数
-	TaskCount *int32 `json:"task_count,omitempty"`
+	TaskTotalCount *int32 `json:"task_total_count,omitempty"`
 
 	// 任务项执行成功数
-	SuccessCount *int32 `json:"success_count,omitempty"`
+	TaskSuccessCount *int32 `json:"task_success_count,omitempty"`
 
 	// 任务项执行失败数
-	FailedCount *int32 `json:"failed_count,omitempty"`
+	TaskFailedCount *int32 `json:"task_failed_count,omitempty"`
 
 	// 状态更新时间戳
-	UpdatedAt *int32 `json:"updated_at,omitempty"`
+	StatusLastUpdatedAt *int32 `json:"status_last_updated_at,omitempty"`
+
+	// 任务描述
+	Description *string `json:"description,omitempty"`
 }
 
 func (o BatchJobForList) String() string {

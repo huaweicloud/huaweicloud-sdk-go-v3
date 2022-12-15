@@ -9,7 +9,7 @@ import (
 // Response Object
 type UpdateAuditLogResponse struct {
 
-	// 开启/关闭审计日志操作结果。
+	// 开启/关闭全量SQL操作结果。
 	Result         *string `json:"result,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

@@ -8,7 +8,10 @@ import (
 
 // Response Object
 type CreateBlockchainCertByUserNameResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// 请求成功的结果
+	Result         *string `json:"result,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o CreateBlockchainCertByUserNameResponse) String() string {

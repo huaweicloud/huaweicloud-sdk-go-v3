@@ -9,7 +9,7 @@ import (
 type DataStoreList struct {
 
 	// 数据库引擎。
-	DatastoreType string `json:"datastore_type"`
+	DatastoreName string `json:"datastore_name"`
 
 	// 数据库引擎版本。
 	Version string `json:"version"`

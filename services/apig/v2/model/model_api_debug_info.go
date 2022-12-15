@@ -15,7 +15,7 @@ type ApiDebugInfo struct {
 	Body *string `json:"body,omitempty"`
 
 	// 头域参数，每个参数值为字符串数组，每个参数名称有如下约束： - 英文字母、数字、点、中连线组成 - 必须以英文字母开头，最长32字节 - 不支持以\"X-Apig-\"或\"X-Sdk-\"开头，不区分大小写 - 不支持取值为\"X-Stage\"，不区分大小写 - mode为MARKET或CONSUMER时，不支持取值为\"X-Auth-Token\"和\"Authorization\"，不区分大小写 > 头域名称在使用前会被规范化，如：\"x-MY-hEaDer\"会被规范化为\"X-My-Header\"
-	Header map[string]string `json:"header,omitempty"`
+	Header map[string][]string `json:"header,omitempty"`
 
 	// API的请求方法
 	Method ApiDebugInfoMethod `json:"method"`
@@ -27,7 +27,7 @@ type ApiDebugInfo struct {
 	Path string `json:"path"`
 
 	// 查询参数，每个参数值为字符串数组，每个参数名称有如下约束： - 英文字母、数字、点、下划线、中连线组成 - 必须以英文字母开头，最长32字节 - 不支持以\"X-Apig-\"或\"X-Sdk-\"开头，不区分大小写 - 不支持取值为\"X-Stage\"，不区分大小写
-	Query map[string]string `json:"query,omitempty"`
+	Query map[string][]string `json:"query,omitempty"`
 
 	// API的请求协议 - HTTP - HTTPS
 	Scheme string `json:"scheme"`

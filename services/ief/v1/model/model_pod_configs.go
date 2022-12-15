@@ -10,7 +10,7 @@ import (
 type PodConfigs struct {
 
 	// 应用实例是否启用主机网络，不启用则使用端口映射，默认值false
-	HostNetwork bool `json:"host_network"`
+	HostNetwork *bool `json:"host_network,omitempty"`
 
 	// 应用实例是否与主机共PID命名空间，默认值false
 	HostPid *bool `json:"host_pid,omitempty"`

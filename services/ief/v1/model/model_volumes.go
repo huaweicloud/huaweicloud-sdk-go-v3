@@ -22,7 +22,7 @@ type Volumes struct {
 	Destination string `json:"destination"`
 
 	// 读写权限，configMap和secret类型只支持读权限
-	ReadOnly bool `json:"read_only"`
+	ReadOnly *bool `json:"read_only,omitempty"`
 }
 
 func (o Volumes) String() string {

@@ -49,8 +49,8 @@ type ShowBatchJobResponse struct {
 	Targets *[]Target `json:"targets,omitempty"`
 
 	// 状态更新时间戳
-	UpdatedAt      *int32 `json:"updated_at,omitempty"`
-	HttpStatusCode int    `json:"-"`
+	StatusLastUpdatedAt *int32 `json:"status_last_updated_at,omitempty"`
+	HttpStatusCode      int    `json:"-"`
 }
 
 func (o ShowBatchJobResponse) String() string {

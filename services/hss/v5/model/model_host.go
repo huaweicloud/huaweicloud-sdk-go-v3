@@ -23,13 +23,16 @@ type Host struct {
 	// 弹性公网IP地址
 	PublicIp *string `json:"public_ip,omitempty"`
 
+	// 企业项目ID
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
 	// 所属企业项目名称
 	EnterpriseProjectName *string `json:"enterprise_project_name,omitempty"`
 
 	// 服务器状态，包含如下4种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。   - BUILDING ：创建中。   - ERROR ：故障。
 	HostStatus *string `json:"host_status,omitempty"`
 
-	// Agent状态，包含如下5种。   - not_installed ：未安装。   - online ：在线。   - offline ：离线。   - install_failed ：安装失败。   - installing ：安装中。
+	// Agent状态，包含如下5种。   - installed ：已安装。   - not_installed ：未安装。   - online ：在线。   - offline ：离线。   - install_failed ：安装失败。   - installing ：安装中。
 	AgentStatus *string `json:"agent_status,omitempty"`
 
 	// 安装结果，包含如下12种。   - install_succeed ：安装成功。   - network_access_timeout ：网络不通，访问超时。   - invalid_port ：无效端口。   - auth_failed ：认证错误，口令不正确。   - permission_denied ：权限错误，被拒绝。   - no_available_vpc ：没有相同VPC的agent在线虚拟机。   - install_exception ：安装异常。   - invalid_param ：参数错误。   - install_failed ：安装失败。   - package_unavailable ：安装包失效。   - os_type_not_support ：系统类型错误。   - os_arch_not_support ：架构类型错误。
@@ -91,6 +94,24 @@ type Host struct {
 
 	// 标签列表
 	Labels *[]string `json:"labels,omitempty"`
+
+	// agent安装时间，采用时间戳，默认毫秒，
+	AgentCreateTime *int64 `json:"agent_create_time,omitempty"`
+
+	// agent状态修改时间，采用时间戳，默认毫秒，
+	AgentUpdateTime *int64 `json:"agent_update_time,omitempty"`
+
+	// agent版本
+	AgentVersion *string `json:"agent_version,omitempty"`
+
+	// 升级状态，包含如下4种。   - not_upgrade ：未升级，也就是默认状态，客户还没有给这台机器下发过升级。   - upgrading ：正在升级中。   - upgrade_failed ：升级失败。   - upgrade_succeed ：升级成功。
+	UpgradeStatus *string `json:"upgrade_status,omitempty"`
+
+	// 升级失败原因，只有当 upgrade_status 为 upgrade_failed 时才显示，包含如下12种。   - package_unavailable ：升级包解析失败，升级文件有错误。   - network_access_timeout ：下载升级包失败，网络异常。   - agent_offline ：agent离线。   - hostguard_abnormal ：agent工作进程异常。   - insufficient_disk_space ：磁盘空间不足。   - failed_to_replace_file ：替换文件失败。
+	UpgradeResultCode *string `json:"upgrade_result_code,omitempty"`
+
+	// 该服务器agent是否可升级
+	Upgradable *bool `json:"upgradable,omitempty"`
 }
 
 func (o Host) String() string {

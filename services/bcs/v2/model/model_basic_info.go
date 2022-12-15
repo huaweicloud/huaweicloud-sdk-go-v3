@@ -56,6 +56,9 @@ type BasicInfo struct {
 	// BCS服务联盟链下生效，分为邀请方（create），被邀请方（invite）
 	DeployType *string `json:"deploy_type,omitempty"`
 
+	// 是否允许order老化
+	OrderFadeEnabled *bool `json:"order_fade_enabled,omitempty"`
+
 	// BCS服务是否跨region
 	IsCrossRegion *bool `json:"is_cross_region,omitempty"`
 
@@ -64,6 +67,9 @@ type BasicInfo struct {
 
 	// BCS服务是否添加RESTful APIs支持，分为支持（true），不支持（false）
 	IsSupportRestful *bool `json:"is_support_restful,omitempty"`
+
+	// BCS服务是否支持可信计算平台，分为支持（true），不支持（false）
+	IsSupportTc3 *bool `json:"is_support_tc3,omitempty"`
 
 	// 区分BCS是否新服务，分为老服务（true），新服务（false）
 	IsOldService *bool `json:"is_old_service,omitempty"`
@@ -82,6 +88,17 @@ type BasicInfo struct {
 
 	// BCS服务为包周期模式时，返回值为0（订单未成功）,1（订单异常）,2（订单正常）
 	OrderStatus *int64 `json:"order_status,omitempty"`
+
+	// 共识节点的老化阈值
+	OrderFadeCache *int64 `json:"order_fade_cache,omitempty"`
+
+	// BCS服务部署状态，分为进行中（0），成功（1），失败（2），结束（3）
+	DeployStatus *int32 `json:"deploy_status,omitempty"`
+
+	BlockInfo *CreateRequestBodyBlockInfo `json:"block_info,omitempty"`
+
+	// 集群CPU架构类型：X86（VirtualMachine），ARM（ARM64）
+	ClusterPlatformType *string `json:"cluster_platform_type,omitempty"`
 }
 
 func (o BasicInfo) String() string {

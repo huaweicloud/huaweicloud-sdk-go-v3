@@ -271,27 +271,6 @@ func (c *RdsClient) CreateManualBackupInvoker(request *model.CreateManualBackupR
 	return &CreateManualBackupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreatePostgresqlExtension 创建插件
-//
-// 在指定数据库上创建插件。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *RdsClient) CreatePostgresqlExtension(request *model.CreatePostgresqlExtensionRequest) (*model.CreatePostgresqlExtensionResponse, error) {
-	requestDef := GenReqDefForCreatePostgresqlExtension()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreatePostgresqlExtensionResponse), nil
-	}
-}
-
-// CreatePostgresqlExtensionInvoker 创建插件
-func (c *RdsClient) CreatePostgresqlExtensionInvoker(request *model.CreatePostgresqlExtensionRequest) *CreatePostgresqlExtensionInvoker {
-	requestDef := GenReqDefForCreatePostgresqlExtension()
-	return &CreatePostgresqlExtensionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // CreateRestoreInstance 恢复到新实例
 //
 // 恢复到新实例。
@@ -374,27 +353,6 @@ func (c *RdsClient) DeleteManualBackup(request *model.DeleteManualBackupRequest)
 func (c *RdsClient) DeleteManualBackupInvoker(request *model.DeleteManualBackupRequest) *DeleteManualBackupInvoker {
 	requestDef := GenReqDefForDeleteManualBackup()
 	return &DeleteManualBackupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DeletePostgresqlExtension 删除插件
-//
-// 在指定数据库上删除插件。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *RdsClient) DeletePostgresqlExtension(request *model.DeletePostgresqlExtensionRequest) (*model.DeletePostgresqlExtensionResponse, error) {
-	requestDef := GenReqDefForDeletePostgresqlExtension()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeletePostgresqlExtensionResponse), nil
-	}
-}
-
-// DeletePostgresqlExtensionInvoker 删除插件
-func (c *RdsClient) DeletePostgresqlExtensionInvoker(request *model.DeletePostgresqlExtensionRequest) *DeletePostgresqlExtensionInvoker {
-	requestDef := GenReqDefForDeletePostgresqlExtension()
-	return &DeletePostgresqlExtensionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DownloadSlowlog 获取慢日志下载链接
@@ -774,27 +732,6 @@ func (c *RdsClient) ListOffSiteRestoreTimes(request *model.ListOffSiteRestoreTim
 func (c *RdsClient) ListOffSiteRestoreTimesInvoker(request *model.ListOffSiteRestoreTimesRequest) *ListOffSiteRestoreTimesInvoker {
 	requestDef := GenReqDefForListOffSiteRestoreTimes()
 	return &ListOffSiteRestoreTimesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListPostgresqlExtension 查询插件
-//
-// 获取指定数据库的插件信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *RdsClient) ListPostgresqlExtension(request *model.ListPostgresqlExtensionRequest) (*model.ListPostgresqlExtensionResponse, error) {
-	requestDef := GenReqDefForListPostgresqlExtension()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListPostgresqlExtensionResponse), nil
-	}
-}
-
-// ListPostgresqlExtensionInvoker 查询插件
-func (c *RdsClient) ListPostgresqlExtensionInvoker(request *model.ListPostgresqlExtensionRequest) *ListPostgresqlExtensionInvoker {
-	requestDef := GenReqDefForListPostgresqlExtension()
-	return &ListPostgresqlExtensionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListProjectTags 查询项目标签
@@ -2401,6 +2338,48 @@ func (c *RdsClient) CreatePostgresqlDbUserInvoker(request *model.CreatePostgresq
 	return &CreatePostgresqlDbUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreatePostgresqlExtension 创建插件
+//
+// 在指定数据库上创建插件。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) CreatePostgresqlExtension(request *model.CreatePostgresqlExtensionRequest) (*model.CreatePostgresqlExtensionResponse, error) {
+	requestDef := GenReqDefForCreatePostgresqlExtension()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePostgresqlExtensionResponse), nil
+	}
+}
+
+// CreatePostgresqlExtensionInvoker 创建插件
+func (c *RdsClient) CreatePostgresqlExtensionInvoker(request *model.CreatePostgresqlExtensionRequest) *CreatePostgresqlExtensionInvoker {
+	requestDef := GenReqDefForCreatePostgresqlExtension()
+	return &CreatePostgresqlExtensionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeletePostgresqlExtension 删除插件
+//
+// 在指定数据库上删除插件。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) DeletePostgresqlExtension(request *model.DeletePostgresqlExtensionRequest) (*model.DeletePostgresqlExtensionResponse, error) {
+	requestDef := GenReqDefForDeletePostgresqlExtension()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeletePostgresqlExtensionResponse), nil
+	}
+}
+
+// DeletePostgresqlExtensionInvoker 删除插件
+func (c *RdsClient) DeletePostgresqlExtensionInvoker(request *model.DeletePostgresqlExtensionRequest) *DeletePostgresqlExtensionInvoker {
+	requestDef := GenReqDefForDeletePostgresqlExtension()
+	return &DeletePostgresqlExtensionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListPostgresqlDatabaseSchemas 查询数据库SCHEMA列表
 //
 // 查询指定实例的数据库SCHEMA列表。
@@ -2462,6 +2441,27 @@ func (c *RdsClient) ListPostgresqlDbUserPaginated(request *model.ListPostgresqlD
 func (c *RdsClient) ListPostgresqlDbUserPaginatedInvoker(request *model.ListPostgresqlDbUserPaginatedRequest) *ListPostgresqlDbUserPaginatedInvoker {
 	requestDef := GenReqDefForListPostgresqlDbUserPaginated()
 	return &ListPostgresqlDbUserPaginatedInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPostgresqlExtension 查询插件
+//
+// 获取指定数据库的插件信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListPostgresqlExtension(request *model.ListPostgresqlExtensionRequest) (*model.ListPostgresqlExtensionResponse, error) {
+	requestDef := GenReqDefForListPostgresqlExtension()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPostgresqlExtensionResponse), nil
+	}
+}
+
+// ListPostgresqlExtensionInvoker 查询插件
+func (c *RdsClient) ListPostgresqlExtensionInvoker(request *model.ListPostgresqlExtensionRequest) *ListPostgresqlExtensionInvoker {
+	requestDef := GenReqDefForListPostgresqlExtension()
+	return &ListPostgresqlExtensionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SearchQueryScaleComputeFlavors 查询数据库代理可变更的规格

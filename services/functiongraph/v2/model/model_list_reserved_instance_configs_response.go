@@ -10,7 +10,7 @@ import (
 type ListReservedInstanceConfigsResponse struct {
 
 	// 函数预留实例列表
-	Reservedinstances *[]ReservedInstanceConfigs `json:"reservedinstances,omitempty"`
+	ReservedInstances *[]ReservedInstanceConfigs `json:"reserved_instances,omitempty"`
 
 	PageInfo *PageInfo `json:"page_info,omitempty"`
 

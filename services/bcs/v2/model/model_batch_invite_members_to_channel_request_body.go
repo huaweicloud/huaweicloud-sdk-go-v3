@@ -9,7 +9,7 @@ import (
 // 邀请联盟成员
 type BatchInviteMembersToChannelRequestBody struct {
 
-	// 发出邀请的BCS服务实例id
+	// 发出邀请的服务实例ID
 	BcsId string `json:"bcs_id"`
 
 	// 邀请加入的通道名

@@ -16,7 +16,7 @@ type ListVulnerabilitiesRequest struct {
 	Type *string `json:"type,omitempty"`
 
 	// 漏洞ID
-	VulId string `json:"vul_id"`
+	VulId *string `json:"vul_id,omitempty"`
 
 	// 漏洞名称
 	VulName *string `json:"vul_name,omitempty"`

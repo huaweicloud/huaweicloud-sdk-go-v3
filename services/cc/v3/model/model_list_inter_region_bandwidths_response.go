@@ -10,7 +10,7 @@ import (
 type ListInterRegionBandwidthsResponse struct {
 
 	// 域间带宽实例列表。
-	InterRegionBandwidth *[]InterRegionBandwidth `json:"inter_region_bandwidth,omitempty"`
+	InterRegionBandwidths *[]InterRegionBandwidth `json:"inter_region_bandwidths,omitempty"`
 
 	PageInfo *PageInfo `json:"page_info,omitempty"`
 

@@ -44,6 +44,9 @@ type CreateBandwidthPackage struct {
 
 	// 带宽包实例绑定的资源类型。  cloud_connection: 云连接实例。
 	ResourceType *CreateBandwidthPackageResourceType `json:"resource_type,omitempty"`
+
+	// 互通类型: - Area: 大区互通 - Region: 城域互通
+	InterflowMode *CreateBandwidthPackageInterflowMode `json:"interflow_mode,omitempty"`
 }
 
 func (o CreateBandwidthPackage) String() string {
@@ -281,6 +284,48 @@ func (c CreateBandwidthPackageResourceType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CreateBandwidthPackageResourceType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type CreateBandwidthPackageInterflowMode struct {
+	value string
+}
+
+type CreateBandwidthPackageInterflowModeEnum struct {
+	AREA   CreateBandwidthPackageInterflowMode
+	REGION CreateBandwidthPackageInterflowMode
+}
+
+func GetCreateBandwidthPackageInterflowModeEnum() CreateBandwidthPackageInterflowModeEnum {
+	return CreateBandwidthPackageInterflowModeEnum{
+		AREA: CreateBandwidthPackageInterflowMode{
+			value: "Area",
+		},
+		REGION: CreateBandwidthPackageInterflowMode{
+			value: "Region",
+		},
+	}
+}
+
+func (c CreateBandwidthPackageInterflowMode) Value() string {
+	return c.value
+}
+
+func (c CreateBandwidthPackageInterflowMode) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CreateBandwidthPackageInterflowMode) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

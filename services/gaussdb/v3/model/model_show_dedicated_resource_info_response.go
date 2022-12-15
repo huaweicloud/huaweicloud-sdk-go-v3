@@ -9,22 +9,22 @@ import (
 // Response Object
 type ShowDedicatedResourceInfoResponse struct {
 
-	// 专属资源池id
+	// 专属资源池id。
 	Id *string `json:"id,omitempty"`
 
-	// 专属资源池名称
+	// 专属资源池名称。
 	Name *string `json:"name,omitempty"`
 
-	// 引擎名称
+	// 引擎名称。
 	EngineName *string `json:"engine_name,omitempty"`
 
-	// 可用区
+	// 可用区。
 	AvailabilityZoneIds *[]string `json:"availability_zone_ids,omitempty"`
 
-	// 资源规格类型
+	// 资源规格类型。
 	Architecture *string `json:"architecture,omitempty"`
 
-	// 专属资源池状态
+	// 专属资源池状态。
 	Status *string `json:"status,omitempty"`
 
 	DedicatedComputeInfo *DedicatedComputeInfo `json:"dedicated_compute_info,omitempty"`

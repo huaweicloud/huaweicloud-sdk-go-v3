@@ -6,11 +6,10 @@ import (
 	"strings"
 )
 
-// 静态属性的元数据信息，默认为{\"type\": \"string\"}
 type Metadata struct {
 
 	// 属性类型标识，string|int|float|boolean（boolean类型为true或false），默认为string
-	Type string `json:"type"`
+	Type *string `json:"type,omitempty"`
 }
 
 func (o Metadata) String() string {

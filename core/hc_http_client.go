@@ -83,10 +83,6 @@ func (hc *HcHttpClient) SyncInvoke(req interface{}, reqDef *def.HttpRequestDef,
 		return nil, err
 	}
 
-	for k, v := range hc.extraHeader {
-		httpRequest.AddHeaderParam(k, v)
-	}
-
 	resp, err := hc.httpClient.SyncInvokeHttpWithExchange(httpRequest, exchange)
 	if err != nil {
 		return nil, err
@@ -104,15 +100,24 @@ func (hc *HcHttpClient) buildRequest(req interface{}, reqDef *def.HttpRequestDef
 	if reqDef.ContentType != "" {
 		builder.AddHeaderParam("Content-Type", reqDef.ContentType)
 	}
-	builder.AddHeaderParam("User-Agent", "huaweicloud-usdk-go/3.0")
+
+	uaKey := "User-Agent"
+	uaValue := "huaweicloud-usdk-go/3.0"
+	for k, v := range hc.extraHeader {
+		if strings.ToLower(k) == strings.ToLower(uaKey) {
+			uaValue = uaValue + ";" + v
+		} else {
+			builder.AddHeaderParam(k, v)
+		}
+	}
+	builder.AddHeaderParam(uaKey, uaValue)
 
 	builder, err := hc.fillParamsFromReq(req, reqDef, builder)
 	if err != nil {
 		return nil, err
 	}
 
-	var httpRequest *request.DefaultHttpRequest = builder.Build()
-
+	var httpRequest = builder.Build()
 	currentHeaderParams := httpRequest.GetHeaderParams()
 	if _, ok := currentHeaderParams["Authorization"]; !ok {
 		httpRequest, err = hc.credential.ProcessAuthRequest(hc.httpClient, httpRequest)

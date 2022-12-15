@@ -18,13 +18,13 @@ type GetJobInfoDetail struct {
 	// 任务名称。
 	Name string `json:"name"`
 
-	// 任务执行状态。  取值： - 值为“Running”，表示任务正在执行。 - 值为“Completed”，表示任务执行成功。 - 值为“Failed”，表示任务执行失败。
+	// 任务执行状态。  取值： - 值为“Pending”，表示延时任务，未执行。 - 值为“Running”，表示任务正在执行。 - 值为“Completed”，表示任务执行成功。 - 值为“Failed”，表示任务执行失败。
 	Status GetJobInfoDetailStatus `json:"status"`
 
-	// 创建时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为   +0800 说明：创建时返回值为空，数据库实例创建成功后该值不为空。
+	// 创建时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。  说明：创建时返回值为空，数据库实例创建成功后该值不为空。
 	Created string `json:"created"`
 
-	// 结束时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为   +0800 说明：创建时返回值为空，数据库实例创建成功后该值不为空。
+	// 结束时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。  说明：创建时返回值为空，数据库实例创建成功后该值不为空。
 	Ended *string `json:"ended,omitempty"`
 
 	// 任务执行进度。执行中状态才返回执行进度，例如60%，否则返回\"\"。
@@ -52,6 +52,7 @@ type GetJobInfoDetailStatus struct {
 }
 
 type GetJobInfoDetailStatusEnum struct {
+	PENDING   GetJobInfoDetailStatus
 	RUNNING   GetJobInfoDetailStatus
 	COMPLETED GetJobInfoDetailStatus
 	FAILED    GetJobInfoDetailStatus
@@ -59,6 +60,9 @@ type GetJobInfoDetailStatusEnum struct {
 
 func GetGetJobInfoDetailStatusEnum() GetJobInfoDetailStatusEnum {
 	return GetJobInfoDetailStatusEnum{
+		PENDING: GetJobInfoDetailStatus{
+			value: "Pending",
+		},
 		RUNNING: GetJobInfoDetailStatus{
 			value: "Running",
 		},

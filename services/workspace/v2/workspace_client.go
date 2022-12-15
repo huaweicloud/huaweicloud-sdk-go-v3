@@ -481,6 +481,27 @@ func (c *WorkspaceClient) ListProductsInvoker(request *model.ListProductsRequest
 	return &ListProductsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowQuotas 查询租户配额
+//
+// Console Framework和WKSDesktopManager调用该接口查询租户配额。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ShowQuotas(request *model.ShowQuotasRequest) (*model.ShowQuotasResponse, error) {
+	requestDef := GenReqDefForShowQuotas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowQuotasResponse), nil
+	}
+}
+
+// ShowQuotasInvoker 查询租户配额
+func (c *WorkspaceClient) ShowQuotasInvoker(request *model.ShowQuotasRequest) *ShowQuotasInvoker {
+	requestDef := GenReqDefForShowQuotas()
+	return &ShowQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateTerminalsBindingDesktops 增加终端与桌面绑定配置
 //
 // 增加终端与桌面绑定配置。

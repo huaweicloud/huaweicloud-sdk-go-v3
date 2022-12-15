@@ -1669,7 +1669,7 @@ func (c *IefClient) ShowDeviceTwinInvoker(request *model.ShowDeviceTwinRequest) 
 	return &ShowDeviceTwinInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowEdgeGroupCertDetail 查询边缘节点组证书列表
+// ShowEdgeGroupCertDetail 查询边缘节点组证书详情
 //
 // 查询边缘节点组证书详情
 //
@@ -1684,7 +1684,7 @@ func (c *IefClient) ShowEdgeGroupCertDetail(request *model.ShowEdgeGroupCertDeta
 	}
 }
 
-// ShowEdgeGroupCertDetailInvoker 查询边缘节点组证书列表
+// ShowEdgeGroupCertDetailInvoker 查询边缘节点组证书详情
 func (c *IefClient) ShowEdgeGroupCertDetailInvoker(request *model.ShowEdgeGroupCertDetailRequest) *ShowEdgeGroupCertDetailInvoker {
 	requestDef := GenReqDefForShowEdgeGroupCertDetail()
 	return &ShowEdgeGroupCertDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

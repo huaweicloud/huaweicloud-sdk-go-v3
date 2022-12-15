@@ -36,12 +36,16 @@ type Event struct {
 
 	Target *EndpointObjResp `json:"target,omitempty"`
 
+	// 目的端点资源属性
 	TargetResource map[string]string `json:"target_resource,omitempty"`
 
+	// 成功次数
 	SuccessMessages *int32 `json:"success_messages,omitempty"`
 
+	// 失败次数
 	FailMessages *int32 `json:"fail_messages,omitempty"`
 
+	// 删除时间
 	DeleteAt *int32 `json:"delete_at,omitempty"`
 }
 

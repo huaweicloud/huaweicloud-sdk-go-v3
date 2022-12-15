@@ -27,7 +27,7 @@ type EventDetailResponseInfo struct {
 	// 文件属性
 	FileAttr *string `json:"file_attr,omitempty"`
 
-	// 服务器私网IP
+	// 服务器私有IP
 	PrivateIp *string `json:"private_ip,omitempty"`
 
 	// 登录源IP

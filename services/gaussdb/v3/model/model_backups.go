@@ -17,10 +17,10 @@ type Backups struct {
 	// 备份名称。
 	Name *string `json:"name,omitempty"`
 
-	// 备份开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
+	// 备份开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
 	BeginTime *string `json:"begin_time,omitempty"`
 
-	// 备份结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
+	// 备份结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
 	EndTime *string `json:"end_time,omitempty"`
 
 	// 备份状态，取值： - BUILDING：备份中。 - COMPLETED：备份完成。 - FAILED：备份失败。 - AVAILABLE：备份可用。
@@ -29,7 +29,7 @@ type Backups struct {
 	// 备份花费时间(单位：minutes)
 	TakeUpTime *int32 `json:"take_up_time,omitempty"`
 
-	// 备份类型，取值： - auto：自动全量备份。 - manual：手动全量备份
+	// 备份类型，取值：  - auto：自动全量备份。 - manual：手动全量备份。
 	Type *BackupsType `json:"type,omitempty"`
 
 	// 备份大小，(单位：MB)
