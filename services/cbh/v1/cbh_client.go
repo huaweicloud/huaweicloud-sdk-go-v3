@@ -271,6 +271,27 @@ func (c *CbhClient) ResetPasswordInvoker(request *model.ResetPasswordRequest) *R
 	return &ResetPasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ChangeInstanceOrder 创建变更CBH订单
+//
+// 创建变更CBH订单
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbhClient) ChangeInstanceOrder(request *model.ChangeInstanceOrderRequest) (*model.ChangeInstanceOrderResponse, error) {
+	requestDef := GenReqDefForChangeInstanceOrder()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeInstanceOrderResponse), nil
+	}
+}
+
+// ChangeInstanceOrderInvoker 创建变更CBH订单
+func (c *CbhClient) ChangeInstanceOrderInvoker(request *model.ChangeInstanceOrderRequest) *ChangeInstanceOrderInvoker {
+	requestDef := GenReqDefForChangeInstanceOrder()
+	return &ChangeInstanceOrderInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // StopCbhInstance 关闭CBH实例
 //
 // 关闭CBH实例

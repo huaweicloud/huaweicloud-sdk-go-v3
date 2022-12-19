@@ -19,7 +19,7 @@ func SaClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// CheckProductHealthy 检查心跳健康
+// CheckProductHealthy 检查心跳健康（仅支持华北-北京四使用）
 //
 // SA提供心跳接口，集成产品定时（每五分钟）发送心跳报文到态势感知，用来确认集成产品与态势感知之间的通路是否健康。
 //
@@ -34,13 +34,13 @@ func (c *SaClient) CheckProductHealthy(request *model.CheckProductHealthyRequest
 	}
 }
 
-// CheckProductHealthyInvoker 检查心跳健康
+// CheckProductHealthyInvoker 检查心跳健康（仅支持华北-北京四使用）
 func (c *SaClient) CheckProductHealthyInvoker(request *model.CheckProductHealthyRequest) *CheckProductHealthyInvoker {
 	requestDef := GenReqDefForCheckProductHealthy()
 	return &CheckProductHealthyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ImportEvents 上报安全产品数据
+// ImportEvents 上报安全产品数据（仅支持华北-北京四使用）
 //
 // 批量数据上报，每批次最多不超过50条。
 //
@@ -55,7 +55,7 @@ func (c *SaClient) ImportEvents(request *model.ImportEventsRequest) (*model.Impo
 	}
 }
 
-// ImportEventsInvoker 上报安全产品数据
+// ImportEventsInvoker 上报安全产品数据（仅支持华北-北京四使用）
 func (c *SaClient) ImportEventsInvoker(request *model.ImportEventsRequest) *ImportEventsInvoker {
 	requestDef := GenReqDefForImportEvents()
 	return &ImportEventsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

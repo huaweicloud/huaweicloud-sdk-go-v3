@@ -62,6 +62,29 @@ func (c *CceClient) AwakeClusterInvoker(request *model.AwakeClusterRequest) *Awa
 	return &AwakeClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ContinueUpgradeClusterTask 继续执行集群升级任务
+//
+// 继续执行被暂停的集群升级任务。
+// &gt; - 集群升级涉及多维度的组件升级操作，强烈建议统一通过CCE控制台执行交互式升级，降低集群升级过程的业务意外受损风险；
+// &gt; - 当前集群升级相关接口受限开放。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) ContinueUpgradeClusterTask(request *model.ContinueUpgradeClusterTaskRequest) (*model.ContinueUpgradeClusterTaskResponse, error) {
+	requestDef := GenReqDefForContinueUpgradeClusterTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ContinueUpgradeClusterTaskResponse), nil
+	}
+}
+
+// ContinueUpgradeClusterTaskInvoker 继续执行集群升级任务
+func (c *CceClient) ContinueUpgradeClusterTaskInvoker(request *model.ContinueUpgradeClusterTaskRequest) *ContinueUpgradeClusterTaskInvoker {
+	requestDef := GenReqDefForContinueUpgradeClusterTask()
+	return &ContinueUpgradeClusterTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateAddonInstance 创建AddonInstance
 //
 // 根据提供的插件模板，安装插件实例。
@@ -466,6 +489,29 @@ func (c *CceClient) MigrateNodeInvoker(request *model.MigrateNodeRequest) *Migra
 	return &MigrateNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// PauseUpgradeClusterTask 暂停集群升级任务
+//
+// 暂停集群升级任务。
+// &gt; - 集群升级涉及多维度的组件升级操作，强烈建议统一通过CCE控制台执行交互式升级，降低集群升级过程的业务意外受损风险；
+// &gt; - 当前集群升级相关接口受限开放。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) PauseUpgradeClusterTask(request *model.PauseUpgradeClusterTaskRequest) (*model.PauseUpgradeClusterTaskResponse, error) {
+	requestDef := GenReqDefForPauseUpgradeClusterTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.PauseUpgradeClusterTaskResponse), nil
+	}
+}
+
+// PauseUpgradeClusterTaskInvoker 暂停集群升级任务
+func (c *CceClient) PauseUpgradeClusterTaskInvoker(request *model.PauseUpgradeClusterTaskRequest) *PauseUpgradeClusterTaskInvoker {
+	requestDef := GenReqDefForPauseUpgradeClusterTask()
+	return &PauseUpgradeClusterTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RemoveNode 节点移除
 //
 // 该API用于在指定集群下移除节点。
@@ -508,6 +554,29 @@ func (c *CceClient) ResetNode(request *model.ResetNodeRequest) (*model.ResetNode
 func (c *CceClient) ResetNodeInvoker(request *model.ResetNodeRequest) *ResetNodeInvoker {
 	requestDef := GenReqDefForResetNode()
 	return &ResetNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RetryUpgradeClusterTask 重试集群升级任务
+//
+// 重新执行失败的集群升级任务。
+// &gt; - 集群升级涉及多维度的组件升级操作，强烈建议统一通过CCE控制台执行交互式升级，降低集群升级过程的业务意外受损风险；
+// &gt; - 当前集群升级相关接口受限开放。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) RetryUpgradeClusterTask(request *model.RetryUpgradeClusterTaskRequest) (*model.RetryUpgradeClusterTaskResponse, error) {
+	requestDef := GenReqDefForRetryUpgradeClusterTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RetryUpgradeClusterTaskResponse), nil
+	}
+}
+
+// RetryUpgradeClusterTaskInvoker 重试集群升级任务
+func (c *CceClient) RetryUpgradeClusterTaskInvoker(request *model.RetryUpgradeClusterTaskRequest) *RetryUpgradeClusterTaskInvoker {
+	requestDef := GenReqDefForRetryUpgradeClusterTask()
+	return &RetryUpgradeClusterTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowAddonInstance 获取AddonInstance详情
@@ -665,6 +734,29 @@ func (c *CceClient) ShowQuotasInvoker(request *model.ShowQuotasRequest) *ShowQuo
 	return &ShowQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowUpgradeClusterTask 获取集群升级任务详情
+//
+// 获取集群升级任务详情，任务ID由调用集群升级API后从响应体中uid字段获取。
+// &gt; - 集群升级涉及多维度的组件升级操作，强烈建议统一通过CCE控制台执行交互式升级，降低集群升级过程的业务意外受损风险；
+// &gt; - 当前集群升级相关接口受限开放。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) ShowUpgradeClusterTask(request *model.ShowUpgradeClusterTaskRequest) (*model.ShowUpgradeClusterTaskResponse, error) {
+	requestDef := GenReqDefForShowUpgradeClusterTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowUpgradeClusterTaskResponse), nil
+	}
+}
+
+// ShowUpgradeClusterTaskInvoker 获取集群升级任务详情
+func (c *CceClient) ShowUpgradeClusterTaskInvoker(request *model.ShowUpgradeClusterTaskRequest) *ShowUpgradeClusterTaskInvoker {
+	requestDef := GenReqDefForShowUpgradeClusterTask()
+	return &ShowUpgradeClusterTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateAddonInstance 更新AddonInstance
 //
 // 更新插件实例的功能。
@@ -777,6 +869,29 @@ func (c *CceClient) UpdateNodePool(request *model.UpdateNodePoolRequest) (*model
 func (c *CceClient) UpdateNodePoolInvoker(request *model.UpdateNodePoolRequest) *UpdateNodePoolInvoker {
 	requestDef := GenReqDefForUpdateNodePool()
 	return &UpdateNodePoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpgradeCluster 集群升级
+//
+// 集群升级。
+// &gt; - 集群升级涉及多维度的组件升级操作，强烈建议统一通过CCE控制台执行交互式升级，降低集群升级过程的业务意外受损风险；
+// &gt; - 当前集群升级相关接口受限开放。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) UpgradeCluster(request *model.UpgradeClusterRequest) (*model.UpgradeClusterResponse, error) {
+	requestDef := GenReqDefForUpgradeCluster()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpgradeClusterResponse), nil
+	}
+}
+
+// UpgradeClusterInvoker 集群升级
+func (c *CceClient) UpgradeClusterInvoker(request *model.UpgradeClusterRequest) *UpgradeClusterInvoker {
+	requestDef := GenReqDefForUpgradeCluster()
+	return &UpgradeClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowVersion 查询API版本信息列表。

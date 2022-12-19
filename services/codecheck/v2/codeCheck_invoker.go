@@ -245,6 +245,30 @@ func (i *ShowTaskListByProjectIdInvoker) Invoke() (*model.ShowTaskListByProjectI
 	}
 }
 
+type ShowTaskPathTreeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTaskPathTreeInvoker) Invoke() (*model.ShowTaskPathTreeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTaskPathTreeResponse), nil
+	}
+}
+
+type ShowTaskSettingsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTaskSettingsInvoker) Invoke() (*model.ShowTaskSettingsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTaskSettingsResponse), nil
+	}
+}
+
 type ShowTasklogInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -293,6 +317,18 @@ func (i *UpdateDefectStatusInvoker) Invoke() (*model.UpdateDefectStatusResponse,
 	}
 }
 
+type UpdateIgnorePathInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateIgnorePathInvoker) Invoke() (*model.UpdateIgnorePathResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateIgnorePathResponse), nil
+	}
+}
+
 type UpdateTaskRulesetInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -302,5 +338,17 @@ func (i *UpdateTaskRulesetInvoker) Invoke() (*model.UpdateTaskRulesetResponse, e
 		return nil, err
 	} else {
 		return result.(*model.UpdateTaskRulesetResponse), nil
+	}
+}
+
+type UpdateTaskSettingsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateTaskSettingsInvoker) Invoke() (*model.UpdateTaskSettingsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateTaskSettingsResponse), nil
 	}
 }

@@ -11,6 +11,9 @@ type SlowSqlTemplate struct {
 	// SQL模板。
 	SqlTemplate string `json:"sql_template"`
 
+	// SQL样本。
+	SqlSample string `json:"sql_sample"`
+
 	// 库名。
 	DbNames []string `json:"db_names"`
 

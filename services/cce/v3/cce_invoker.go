@@ -29,6 +29,18 @@ func (i *AwakeClusterInvoker) Invoke() (*model.AwakeClusterResponse, error) {
 	}
 }
 
+type ContinueUpgradeClusterTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ContinueUpgradeClusterTaskInvoker) Invoke() (*model.ContinueUpgradeClusterTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ContinueUpgradeClusterTaskResponse), nil
+	}
+}
+
 type CreateAddonInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -245,6 +257,18 @@ func (i *MigrateNodeInvoker) Invoke() (*model.MigrateNodeResponse, error) {
 	}
 }
 
+type PauseUpgradeClusterTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *PauseUpgradeClusterTaskInvoker) Invoke() (*model.PauseUpgradeClusterTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.PauseUpgradeClusterTaskResponse), nil
+	}
+}
+
 type RemoveNodeInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -266,6 +290,18 @@ func (i *ResetNodeInvoker) Invoke() (*model.ResetNodeResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ResetNodeResponse), nil
+	}
+}
+
+type RetryUpgradeClusterTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RetryUpgradeClusterTaskInvoker) Invoke() (*model.RetryUpgradeClusterTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RetryUpgradeClusterTaskResponse), nil
 	}
 }
 
@@ -353,6 +389,18 @@ func (i *ShowQuotasInvoker) Invoke() (*model.ShowQuotasResponse, error) {
 	}
 }
 
+type ShowUpgradeClusterTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowUpgradeClusterTaskInvoker) Invoke() (*model.ShowUpgradeClusterTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowUpgradeClusterTaskResponse), nil
+	}
+}
+
 type UpdateAddonInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -410,6 +458,18 @@ func (i *UpdateNodePoolInvoker) Invoke() (*model.UpdateNodePoolResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.UpdateNodePoolResponse), nil
+	}
+}
+
+type UpgradeClusterInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpgradeClusterInvoker) Invoke() (*model.UpgradeClusterResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpgradeClusterResponse), nil
 	}
 }
 

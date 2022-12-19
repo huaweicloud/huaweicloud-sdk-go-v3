@@ -14,6 +14,13 @@ var AP_SOUTHEAST_2 = region.NewRegion("ap-southeast-2", "https://apig.ap-southea
 var AP_SOUTHEAST_1 = region.NewRegion("ap-southeast-1", "https://apig.ap-southeast-1.myhuaweicloud.com")
 var AP_SOUTHEAST_3 = region.NewRegion("ap-southeast-3", "https://apig.ap-southeast-3.myhuaweicloud.com")
 var RU_NORTHWEST_2 = region.NewRegion("ru-northwest-2", "https://apig.ru-northwest-2.myhuaweicloud.com")
+var SA_BRAZIL_1 = region.NewRegion("sa-brazil-1", "https://apig.sa-brazil-1.myhuaweicloud.com")
+var LA_SOUTH_2 = region.NewRegion("la-south-2", "https://apig.la-south-2.myhuaweicloud.com")
+var LA_NORTH_2 = region.NewRegion("la-north-2", "https://apig.la-north-2.myhuaweicloud.com")
+var NA_MEXICO_1 = region.NewRegion("na-mexico-1", "https://apig.na-mexico-1.myhuaweicloud.com")
+var AF_SOUTH_1 = region.NewRegion("af-south-1", "https://apig.af-south-1.myhuaweicloud.com")
+var CN_NORTH_9 = region.NewRegion("cn-north-9", "https://apig.cn-north-9.myhuaweicloud.com")
+var CN_SOUTHWEST_2 = region.NewRegion("cn-southwest-2", "https://apig.cn-southwest-2.myhuaweicloud.com")
 
 var staticFields = map[string]*region.Region{
 	"cn-north-4":     CN_NORTH_4,
@@ -25,6 +32,13 @@ var staticFields = map[string]*region.Region{
 	"ap-southeast-1": AP_SOUTHEAST_1,
 	"ap-southeast-3": AP_SOUTHEAST_3,
 	"ru-northwest-2": RU_NORTHWEST_2,
+	"sa-brazil-1":    SA_BRAZIL_1,
+	"la-south-2":     LA_SOUTH_2,
+	"la-north-2":     LA_NORTH_2,
+	"na-mexico-1":    NA_MEXICO_1,
+	"af-south-1":     AF_SOUTH_1,
+	"cn-north-9":     CN_NORTH_9,
+	"cn-southwest-2": CN_SOUTHWEST_2,
 }
 
 var provider = region.DefaultProviderChain("APIG")

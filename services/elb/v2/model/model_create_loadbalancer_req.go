@@ -21,7 +21,7 @@ type CreateLoadbalancerReq struct {
 	// 负载均衡器的描述信息
 	Description *string `json:"description,omitempty"`
 
-	// 负载均衡器所在的子网IPv4网络ID
+	// 负载均衡器所在的子网IPv4子网ID
 	VipSubnetId string `json:"vip_subnet_id"`
 
 	// 负载均衡器的虚拟IP。

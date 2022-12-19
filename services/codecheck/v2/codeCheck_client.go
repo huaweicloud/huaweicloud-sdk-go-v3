@@ -439,6 +439,48 @@ func (c *CodeCheckClient) ShowTaskListByProjectIdInvoker(request *model.ShowTask
 	return &ShowTaskListByProjectIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowTaskPathTree 获取任务的目录树
+//
+// 获取任务的目录树
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeCheckClient) ShowTaskPathTree(request *model.ShowTaskPathTreeRequest) (*model.ShowTaskPathTreeResponse, error) {
+	requestDef := GenReqDefForShowTaskPathTree()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTaskPathTreeResponse), nil
+	}
+}
+
+// ShowTaskPathTreeInvoker 获取任务的目录树
+func (c *CodeCheckClient) ShowTaskPathTreeInvoker(request *model.ShowTaskPathTreeRequest) *ShowTaskPathTreeInvoker {
+	requestDef := GenReqDefForShowTaskPathTree()
+	return &ShowTaskPathTreeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTaskSettings 查询任务的高级选项
+//
+// 查询任务的高级选项
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeCheckClient) ShowTaskSettings(request *model.ShowTaskSettingsRequest) (*model.ShowTaskSettingsResponse, error) {
+	requestDef := GenReqDefForShowTaskSettings()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTaskSettingsResponse), nil
+	}
+}
+
+// ShowTaskSettingsInvoker 查询任务的高级选项
+func (c *CodeCheckClient) ShowTaskSettingsInvoker(request *model.ShowTaskSettingsRequest) *ShowTaskSettingsInvoker {
+	requestDef := GenReqDefForShowTaskSettings()
+	return &ShowTaskSettingsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowTasklog 查询任务检查失败日志
 //
 // 查询任务检查失败日志，不传execute_id则查询最近一次的检查日志
@@ -523,6 +565,27 @@ func (c *CodeCheckClient) UpdateDefectStatusInvoker(request *model.UpdateDefectS
 	return &UpdateDefectStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateIgnorePath 任务配置屏蔽目录
+//
+// 任务配置屏蔽目录
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeCheckClient) UpdateIgnorePath(request *model.UpdateIgnorePathRequest) (*model.UpdateIgnorePathResponse, error) {
+	requestDef := GenReqDefForUpdateIgnorePath()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateIgnorePathResponse), nil
+	}
+}
+
+// UpdateIgnorePathInvoker 任务配置屏蔽目录
+func (c *CodeCheckClient) UpdateIgnorePathInvoker(request *model.UpdateIgnorePathRequest) *UpdateIgnorePathInvoker {
+	requestDef := GenReqDefForUpdateIgnorePath()
+	return &UpdateIgnorePathInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateTaskRuleset 修改任务规则集
 //
 // 修改任务规则集。
@@ -542,4 +605,25 @@ func (c *CodeCheckClient) UpdateTaskRuleset(request *model.UpdateTaskRulesetRequ
 func (c *CodeCheckClient) UpdateTaskRulesetInvoker(request *model.UpdateTaskRulesetRequest) *UpdateTaskRulesetInvoker {
 	requestDef := GenReqDefForUpdateTaskRuleset()
 	return &UpdateTaskRulesetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateTaskSettings 任务配置高级选项
+//
+// 任务配置高级选项，如自定义镜像
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeCheckClient) UpdateTaskSettings(request *model.UpdateTaskSettingsRequest) (*model.UpdateTaskSettingsResponse, error) {
+	requestDef := GenReqDefForUpdateTaskSettings()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateTaskSettingsResponse), nil
+	}
+}
+
+// UpdateTaskSettingsInvoker 任务配置高级选项
+func (c *CodeCheckClient) UpdateTaskSettingsInvoker(request *model.UpdateTaskSettingsRequest) *UpdateTaskSettingsInvoker {
+	requestDef := GenReqDefForUpdateTaskSettings()
+	return &UpdateTaskSettingsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

@@ -12,7 +12,7 @@ type UpdateHealthmonitorReq struct {
 	// 健康检查名称。
 	Name *string `json:"name,omitempty"`
 
-	// 健康检查的管理状态；该字段虽然支持创建、更新，但实际取值决定于后端云服务器对应的弹性云服务器是否存在。该字段虽然支持创建、更新，但实际取值决定于member对应的弹性云服务器是否存在。若存在，该值为true，否则，该值为false。
+	// 健康检查的管理状态；该字段虽然支持创建、更新，但实际取值决定于后端云服务器对应的弹性云服务器是否存在。若存在，该值为true，否则，该值为false。
 	AdminStateUp *bool `json:"admin_state_up,omitempty"`
 
 	// 健康检查端口号。默认为空，表示使用后端云服务器组的端口。

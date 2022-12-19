@@ -149,6 +149,18 @@ func (i *ResetPasswordInvoker) Invoke() (*model.ResetPasswordResponse, error) {
 	}
 }
 
+type ChangeInstanceOrderInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeInstanceOrderInvoker) Invoke() (*model.ChangeInstanceOrderResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeInstanceOrderResponse), nil
+	}
+}
+
 type StopCbhInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
