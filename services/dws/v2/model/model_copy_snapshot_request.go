@@ -12,7 +12,7 @@ type CopySnapshotRequest struct {
 	// 快照ID
 	SnapshotId string `json:"snapshot_id"`
 
-	Body *interface{} `json:"body,omitempty"`
+	Body *LinkCopyReq `json:"body,omitempty"`
 }
 
 func (o CopySnapshotRequest) String() string {

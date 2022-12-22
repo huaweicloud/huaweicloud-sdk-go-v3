@@ -9,6 +9,8 @@ import (
 // 创建文件系统参数body
 type CreateShareRequestBody struct {
 	Share *Share `json:"share"`
+
+	BssParam *BssInfo `json:"bss_param,omitempty"`
 }
 
 func (o CreateShareRequestBody) String() string {

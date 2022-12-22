@@ -12,14 +12,14 @@ func GenReqDefForAddWorkloadQueue() *def.HttpRequestDef {
 		WithMethod(http.MethodPut).
 		WithPath("/v2/{project_id}/clusters/{cluster_id}/workload/queues").
 		WithResponse(new(model.AddWorkloadQueueResponse)).
-		WithContentType("application/x-www-form-urlencoded")
+		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClusterId").
 		WithJsonTag("cluster_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -183,14 +183,14 @@ func GenReqDefForCopySnapshot() *def.HttpRequestDef {
 		WithMethod(http.MethodPost).
 		WithPath("/v1.0/{project_id}/snapshots/{snapshot_id}/linked-copy").
 		WithResponse(new(model.CopySnapshotResponse)).
-		WithContentType("application/x-www-form-urlencoded")
+		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("SnapshotId").
 		WithJsonTag("snapshot_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -253,14 +253,14 @@ func GenReqDefForCreateClusterWorkload() *def.HttpRequestDef {
 		WithMethod(http.MethodPost).
 		WithPath("/v2/{project_id}/clusters/{cluster_id}/workload").
 		WithResponse(new(model.CreateClusterWorkloadResponse)).
-		WithContentType("application/x-www-form-urlencoded")
+		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClusterId").
 		WithJsonTag("cluster_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -273,14 +273,14 @@ func GenReqDefForCreateDataSource() *def.HttpRequestDef {
 		WithMethod(http.MethodPost).
 		WithPath("/v1.0/{project_id}/clusters/{cluster_id}/ext-data-sources").
 		WithResponse(new(model.CreateDataSourceResponse)).
-		WithContentType("application/x-www-form-urlencoded")
+		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClusterId").
 		WithJsonTag("cluster_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -296,10 +296,6 @@ func GenReqDefForCreateDisasterRecovery() *def.HttpRequestDef {
 		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -342,12 +338,16 @@ func GenReqDefForCreateSnapshotPolicy() *def.HttpRequestDef {
 		WithMethod(http.MethodPut).
 		WithPath("/v2/{project_id}/clusters/{cluster_id}/snapshot-policies").
 		WithResponse(new(model.CreateSnapshotPolicyResponse)).
-		WithContentType("application/x-www-form-urlencoded")
+		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClusterId").
 		WithJsonTag("cluster_id").
 		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").
@@ -362,14 +362,14 @@ func GenReqDefForCreateWorkloadPlan() *def.HttpRequestDef {
 		WithMethod(http.MethodPost).
 		WithPath("/v2/{project_id}/clusters/{cluster_id}/workload/plans").
 		WithResponse(new(model.CreateWorkloadPlanResponse)).
-		WithContentType("application/x-www-form-urlencoded")
+		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClusterId").
 		WithJsonTag("cluster_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -429,6 +429,26 @@ func GenReqDefForDeleteClusterDns() *def.HttpRequestDef {
 		WithName("Type").
 		WithJsonTag("type").
 		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDeleteDataSource() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v1.0/{project_id}/clusters/{cluster_id}/ext-data-sources/{ext_data_source_id}").
+		WithResponse(new(model.DeleteDataSourceResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ClusterId").
+		WithJsonTag("cluster_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ExtDataSourceId").
+		WithJsonTag("ext_data_source_id").
+		WithLocationType(def.Path))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -527,10 +547,6 @@ func GenReqDefForDeleteWorkloadQueue() *def.HttpRequestDef {
 		WithJsonTag("workload_queue_name").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -580,14 +596,38 @@ func GenReqDefForExecuteRedistributionCluster() *def.HttpRequestDef {
 		WithMethod(http.MethodPost).
 		WithPath("/v2/{project_id}/clusters/{cluster_id}/redistribution").
 		WithResponse(new(model.ExecuteRedistributionClusterResponse)).
-		WithContentType("application/x-www-form-urlencoded")
+		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClusterId").
 		WithJsonTag("cluster_id").
 		WithLocationType(def.Path))
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForExpandInstanceStorage() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1.0/{project_id}/clusters/{cluster_id}/expand-instance-storage").
+		WithResponse(new(model.ExpandInstanceStorageResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ClusterId").
+		WithJsonTag("cluster_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -771,7 +811,7 @@ func GenReqDefForListClusterScaleInNumbers() *def.HttpRequestDef {
 func GenReqDefForListClusterSnapshots() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1.0/{project_id}/cluster/{cluster_id}/snapshots").
+		WithPath("/v1.0/{project_id}/clusters/{cluster_id}/snapshots").
 		WithResponse(new(model.ListClusterSnapshotsResponse)).
 		WithContentType("application/json")
 
@@ -779,6 +819,23 @@ func GenReqDefForListClusterSnapshots() *def.HttpRequestDef {
 		WithName("ClusterId").
 		WithJsonTag("cluster_id").
 		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SortKey").
+		WithJsonTag("sort_key").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SortDir").
+		WithJsonTag("sort_dir").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -849,10 +906,6 @@ func GenReqDefForListDisasterRecover() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/disaster-recoveries").
 		WithResponse(new(model.ListDisasterRecoverResponse)).
 		WithContentType("application/json")
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1287,14 +1340,14 @@ func GenReqDefForShrinkCluster() *def.HttpRequestDef {
 		WithMethod(http.MethodPost).
 		WithPath("/v1.0/{project_id}/clusters/{cluster_id}/cluster-shrink").
 		WithResponse(new(model.ShrinkClusterResponse)).
-		WithContentType("application/x-www-form-urlencoded")
+		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClusterId").
 		WithJsonTag("cluster_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -1435,7 +1488,7 @@ func GenReqDefForUpdateDataSource() *def.HttpRequestDef {
 		WithMethod(http.MethodPut).
 		WithPath("/v1.0/{project_id}/clusters/{cluster_id}/ext-data-sources/{ext_data_source_id}").
 		WithResponse(new(model.UpdateDataSourceResponse)).
-		WithContentType("application/x-www-form-urlencoded")
+		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClusterId").
@@ -1446,7 +1499,7 @@ func GenReqDefForUpdateDataSource() *def.HttpRequestDef {
 		WithJsonTag("ext_data_source_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 

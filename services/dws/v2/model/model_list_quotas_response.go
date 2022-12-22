@@ -8,10 +8,8 @@ import (
 
 // Response Object
 type ListQuotasResponse struct {
-
-	// 配额列表对象。
-	Quotas         *interface{} `json:"quotas,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	Quotas         *QuotasQuotas `json:"quotas,omitempty"`
+	HttpStatusCode int           `json:"-"`
 }
 
 func (o ListQuotasResponse) String() string {

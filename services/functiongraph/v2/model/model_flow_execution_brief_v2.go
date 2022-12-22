@@ -28,7 +28,7 @@ type FlowExecutionBriefV2 struct {
 	// 结束时间（格式为yyyy-MM-dd'T'HH:mm:ss'Z',UTC时间）。
 	LastUpdateTime *sdktime.SdkTime `json:"last_update_time,omitempty"`
 
-	CreateBy *string `json:"create_by,omitempty"`
+	CreatedBy *string `json:"created_by,omitempty"`
 
 	// 函数流执行urn
 	WorkflowUrn *string `json:"workflow_urn,omitempty"`

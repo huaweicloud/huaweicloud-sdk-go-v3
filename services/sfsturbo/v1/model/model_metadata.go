@@ -20,6 +20,9 @@ type Metadata struct {
 
 	// 扩展类型。当前有效值为bandwidth，即创建增强型的文件系统。
 	ExpandType *string `json:"expand_type,omitempty"`
+
+	// hpc型带宽,仅创建hpc型需要
+	HpcBw *string `json:"hpc_bw,omitempty"`
 }
 
 func (o Metadata) String() string {

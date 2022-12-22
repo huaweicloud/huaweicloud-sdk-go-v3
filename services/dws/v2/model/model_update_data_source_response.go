@@ -8,7 +8,9 @@ import (
 
 // Response Object
 type UpdateDataSourceResponse struct {
-	Body           *string `json:"body,omitempty"`
+
+	// 更新数据源job_id。
+	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -23,7 +23,7 @@ type RuleResponse struct {
 	// 规则的动作列表，单个规则最多支持设置10个动作。
 	Actions []RuleAction `json:"actions"`
 
-	// 规则的类型 - DEVICE_LINKAGE：设备联动。
+	// 规则的类型 - DEVICE_LINKAGE：云端联动规则。 - DEVICE_SIDE：端侧规则。
 	RuleType string `json:"rule_type"`
 
 	// 规则的状态，默认值：active。 - active：激活。 - inactive：未激活。
@@ -37,6 +37,8 @@ type RuleResponse struct {
 
 	// 规则最后更新时间，使用UTC时区，格式：yyyyMMdd'T'HHmmss'Z'。
 	LastUpdateTime *string `json:"last_update_time,omitempty"`
+
+	DeviceSide *DeviceSide `json:"device_side,omitempty"`
 }
 
 func (o RuleResponse) String() string {

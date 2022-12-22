@@ -89,6 +89,18 @@ func (i *AttachPluginToApiInvoker) Invoke() (*model.AttachPluginToApiResponse, e
 	}
 }
 
+type BatchCreateOrDeleteInstanceTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateOrDeleteInstanceTagsInvoker) Invoke() (*model.BatchCreateOrDeleteInstanceTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCreateOrDeleteInstanceTagsResponse), nil
+	}
+}
+
 type CreateCustomAuthorizerV2Invoker struct {
 	*invoker.BaseInvoker
 }
@@ -569,6 +581,18 @@ func (i *ListInstanceConfigsV2Invoker) Invoke() (*model.ListInstanceConfigsV2Res
 	}
 }
 
+type ListInstanceTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceTagsInvoker) Invoke() (*model.ListInstanceTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceTagsResponse), nil
+	}
+}
+
 type ListInstancesV2Invoker struct {
 	*invoker.BaseInvoker
 }
@@ -662,6 +686,18 @@ func (i *ListProjectCofigsV2Invoker) Invoke() (*model.ListProjectCofigsV2Respons
 		return nil, err
 	} else {
 		return result.(*model.ListProjectCofigsV2Response), nil
+	}
+}
+
+type ListProjectInstanceTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListProjectInstanceTagsInvoker) Invoke() (*model.ListProjectInstanceTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListProjectInstanceTagsResponse), nil
 	}
 }
 

@@ -12,7 +12,7 @@ type ShrinkClusterRequest struct {
 	// 集群ID
 	ClusterId string `json:"cluster_id"`
 
-	Body *interface{} `json:"body,omitempty"`
+	Body *ClusterShrinkReq `json:"body,omitempty"`
 }
 
 func (o ShrinkClusterRequest) String() string {

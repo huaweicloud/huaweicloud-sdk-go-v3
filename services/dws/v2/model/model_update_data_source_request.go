@@ -15,7 +15,7 @@ type UpdateDataSourceRequest struct {
 	// 数据源id
 	ExtDataSourceId string `json:"ext_data_source_id"`
 
-	Body *ReconfigureExtDataSourceAction `json:"body,omitempty"`
+	Body *ReconfigureExtDataSourceActionReq `json:"body,omitempty"`
 }
 
 func (o UpdateDataSourceRequest) String() string {

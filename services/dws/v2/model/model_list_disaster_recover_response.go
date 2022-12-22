@@ -8,8 +8,10 @@ import (
 
 // Response Object
 type ListDisasterRecoverResponse struct {
-	Body           *string `json:"body,omitempty"`
-	HttpStatusCode int     `json:"-"`
+
+	// 容灾对象
+	DisasterRecovery *[]DisasterRecovery `json:"disaster_recovery,omitempty"`
+	HttpStatusCode   int                 `json:"-"`
 }
 
 func (o ListDisasterRecoverResponse) String() string {

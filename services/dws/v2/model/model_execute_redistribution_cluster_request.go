@@ -12,7 +12,7 @@ type ExecuteRedistributionClusterRequest struct {
 	// 集群ID
 	ClusterId string `json:"cluster_id"`
 
-	Body *interface{} `json:"body,omitempty"`
+	Body *RedistributionReq `json:"body,omitempty"`
 }
 
 func (o ExecuteRedistributionClusterRequest) String() string {

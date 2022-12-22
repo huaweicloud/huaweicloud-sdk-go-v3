@@ -8,7 +8,9 @@ import (
 
 // Response Object
 type CopySnapshotResponse struct {
-	Body           *string `json:"body,omitempty"`
+
+	// 快照id。
+	SnapshotId     *string `json:"snapshot_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

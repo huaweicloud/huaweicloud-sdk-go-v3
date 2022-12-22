@@ -48,6 +48,12 @@ type CreatePostPaidInstanceReq struct {
 	// 存储IO规格。   - dms.physical.storage.high.v2: 高IO类型磁盘   - dms.physical.storage.ultra.v2: 超高IO类型磁盘
 	StorageSpecCode CreatePostPaidInstanceReqStorageSpecCode `json:"storage_spec_code"`
 
+	// 企业项目ID。若为企业项目帐号，该参数必填。
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	// 是否开启访问控制列表。
+	EnableAcl *bool `json:"enable_acl,omitempty"`
+
 	// 是否支持IPV6。   - true: 支持   - false：不支持
 	Ipv6Enable *bool `json:"ipv6_enable,omitempty"`
 

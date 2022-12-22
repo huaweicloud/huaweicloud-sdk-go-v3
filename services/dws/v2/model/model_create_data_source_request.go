@@ -12,7 +12,7 @@ type CreateDataSourceRequest struct {
 	// 集群ID
 	ClusterId string `json:"cluster_id"`
 
-	Body *interface{} `json:"body,omitempty"`
+	Body *ExtDataSourceReq `json:"body,omitempty"`
 }
 
 func (o CreateDataSourceRequest) String() string {

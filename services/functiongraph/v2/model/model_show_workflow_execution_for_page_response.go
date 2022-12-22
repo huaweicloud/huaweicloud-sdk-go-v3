@@ -15,8 +15,9 @@ type ShowWorkflowExecutionForPageResponse struct {
 	// 返回对象的大小
 	Size *int32 `json:"size,omitempty"`
 
-	Executions     *FlowExecutionBriefV2 `json:"executions,omitempty"`
-	HttpStatusCode int                   `json:"-"`
+	// 函数流返回体信息
+	Executions     *[]FlowExecutionBriefV2 `json:"executions,omitempty"`
+	HttpStatusCode int                     `json:"-"`
 }
 
 func (o ShowWorkflowExecutionForPageResponse) String() string {

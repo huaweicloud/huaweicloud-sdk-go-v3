@@ -281,6 +281,18 @@ func (i *DeleteClusterDnsInvoker) Invoke() (*model.DeleteClusterDnsResponse, err
 	}
 }
 
+type DeleteDataSourceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDataSourceInvoker) Invoke() (*model.DeleteDataSourceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDataSourceResponse), nil
+	}
+}
+
 type DeleteDisasterRecoveryInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -374,6 +386,18 @@ func (i *ExecuteRedistributionClusterInvoker) Invoke() (*model.ExecuteRedistribu
 		return nil, err
 	} else {
 		return result.(*model.ExecuteRedistributionClusterResponse), nil
+	}
+}
+
+type ExpandInstanceStorageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExpandInstanceStorageInvoker) Invoke() (*model.ExpandInstanceStorageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExpandInstanceStorageResponse), nil
 	}
 }
 

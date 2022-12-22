@@ -346,6 +346,8 @@ func (c *DwsClient) CreateDataSourceInvoker(request *model.CreateDataSourceReque
 // CreateDisasterRecovery 创建容灾
 //
 // 创建容灾
+//
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) CreateDisasterRecovery(request *model.CreateDisasterRecoveryRequest) (*model.CreateDisasterRecoveryResponse, error) {
 	requestDef := GenReqDefForCreateDisasterRecovery()
 
@@ -507,6 +509,27 @@ func (c *DwsClient) DeleteClusterDns(request *model.DeleteClusterDnsRequest) (*m
 func (c *DwsClient) DeleteClusterDnsInvoker(request *model.DeleteClusterDnsRequest) *DeleteClusterDnsInvoker {
 	requestDef := GenReqDefForDeleteClusterDns()
 	return &DeleteClusterDnsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDataSource 删除数据源
+//
+// 该接口用于删除一个数据源。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) DeleteDataSource(request *model.DeleteDataSourceRequest) (*model.DeleteDataSourceResponse, error) {
+	requestDef := GenReqDefForDeleteDataSource()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDataSourceResponse), nil
+	}
+}
+
+// DeleteDataSourceInvoker 删除数据源
+func (c *DwsClient) DeleteDataSourceInvoker(request *model.DeleteDataSourceRequest) *DeleteDataSourceInvoker {
+	requestDef := GenReqDefForDeleteDataSource()
+	return &DeleteDataSourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteDisasterRecovery 删除容灾
@@ -675,6 +698,29 @@ func (c *DwsClient) ExecuteRedistributionCluster(request *model.ExecuteRedistrib
 func (c *DwsClient) ExecuteRedistributionClusterInvoker(request *model.ExecuteRedistributionClusterRequest) *ExecuteRedistributionClusterInvoker {
 	requestDef := GenReqDefForExecuteRedistributionCluster()
 	return &ExecuteRedistributionClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExpandInstanceStorage 磁盘扩容
+//
+// 随着客户业务的发展，磁盘空间往往最先出现资源瓶颈，在其他资源尚且充足的情况下，通过磁盘扩容可快速缓解存储资源瓶颈现象，操作过程中无需暂停业务，并且不会造成CPU、内存等资源浪费。
+// - 磁盘扩容功能仅8.1.1.203及以上版本支持，并且创建集群规格需要为云数仓SSD云盘或实时数仓类型。
+// - 按需+折扣套餐包消费模式下，存储扩容后超出折扣套餐包部分将按需收费。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ExpandInstanceStorage(request *model.ExpandInstanceStorageRequest) (*model.ExpandInstanceStorageResponse, error) {
+	requestDef := GenReqDefForExpandInstanceStorage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExpandInstanceStorageResponse), nil
+	}
+}
+
+// ExpandInstanceStorageInvoker 磁盘扩容
+func (c *DwsClient) ExpandInstanceStorageInvoker(request *model.ExpandInstanceStorageRequest) *ExpandInstanceStorageInvoker {
+	requestDef := GenReqDefForExpandInstanceStorage()
+	return &ExpandInstanceStorageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListAlarmConfigs 查询告警配置
@@ -890,6 +936,8 @@ func (c *DwsClient) ListClusterDetailsInvoker(request *model.ListClusterDetailsR
 // ListClusterScaleInNumbers 查询合适的缩容数
 //
 // 查询合适的缩容数
+//
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) ListClusterScaleInNumbers(request *model.ListClusterScaleInNumbersRequest) (*model.ListClusterScaleInNumbersResponse, error) {
 	requestDef := GenReqDefForListClusterScaleInNumbers()
 
@@ -1014,6 +1062,8 @@ func (c *DwsClient) ListDataSourceInvoker(request *model.ListDataSourceRequest) 
 // ListDisasterRecover 查询容灾列表
 //
 // 查询容灾列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) ListDisasterRecover(request *model.ListDisasterRecoverRequest) (*model.ListDisasterRecoverResponse, error) {
 	requestDef := GenReqDefForListDisasterRecover()
 

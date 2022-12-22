@@ -10,7 +10,7 @@ import (
 type WorkloadStatus struct {
 
 	// 开关。
-	WorkloadSwitch *string `json:"workload_switch,omitempty"`
+	WorkloadSwitch string `json:"workload_switch"`
 
 	// 最大并发数。
 	MaxConcurrencyNum *string `json:"max_concurrency_num,omitempty"`

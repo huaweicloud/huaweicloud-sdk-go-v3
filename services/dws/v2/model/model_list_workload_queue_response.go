@@ -11,7 +11,13 @@ type ListWorkloadQueueResponse struct {
 
 	// 工作负载队列名称。
 	WorkloadQueueNameList *[]string `json:"workload_queue_name_list,omitempty"`
-	HttpStatusCode        int       `json:"-"`
+
+	// 结果状态码。
+	WorkloadResCode *int32 `json:"workload_res_code,omitempty"`
+
+	// 结果描述。
+	WorkloadResStr *string `json:"workload_res_str,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ListWorkloadQueueResponse) String() string {

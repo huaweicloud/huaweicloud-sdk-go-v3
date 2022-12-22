@@ -22,6 +22,9 @@ type CopyImageCrossRegionRequestBody struct {
 
 	// 目的区域的Region ID。
 	Region string `json:"region"`
+
+	// 存储库ID。如果是整机镜像，则在跨Region复制镜像时，为必选参数，需传入该值。
+	VaultId *string `json:"vault_id,omitempty"`
 }
 
 func (o CopyImageCrossRegionRequestBody) String() string {

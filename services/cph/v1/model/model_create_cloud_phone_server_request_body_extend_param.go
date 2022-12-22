@@ -20,6 +20,9 @@ type CreateCloudPhoneServerRequestBodyExtendParam struct {
 
 	// 是否自动付款。默认不自动付款。 - 1 表示自动付款 - 0 表示不自动付款
 	IsAutoPay *int32 `json:"is_auto_pay,omitempty"`
+
+	// 是否自动续订。默认不自动续订。 - 1 表示自动续订 - 0 表示不自动续订
+	IsAutoRenew *int32 `json:"is_auto_renew,omitempty"`
 }
 
 func (o CreateCloudPhoneServerRequestBodyExtendParam) String() string {

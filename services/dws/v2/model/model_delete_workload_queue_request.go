@@ -13,7 +13,7 @@ type DeleteWorkloadQueueRequest struct {
 	ClusterId string `json:"cluster_id"`
 
 	// 逻辑集群名称。
-	LogicalClusterName string `json:"logical_cluster_name"`
+	LogicalClusterName *string `json:"logical_cluster_name,omitempty"`
 
 	// 工作负载队列名称。
 	WorkloadQueueName string `json:"workload_queue_name"`

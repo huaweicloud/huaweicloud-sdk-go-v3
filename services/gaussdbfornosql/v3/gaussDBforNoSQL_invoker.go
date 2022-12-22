@@ -449,6 +449,18 @@ func (i *ModifyPublicIpInvoker) Invoke() (*model.ModifyPublicIpResponse, error) 
 	}
 }
 
+type ModifyVolumeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifyVolumeInvoker) Invoke() (*model.ModifyVolumeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifyVolumeResponse), nil
+	}
+}
+
 type PauseResumeDataSynchronizationInvoker struct {
 	*invoker.BaseInvoker
 }

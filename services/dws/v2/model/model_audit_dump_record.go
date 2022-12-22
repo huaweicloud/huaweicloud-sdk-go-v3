@@ -24,12 +24,6 @@ type AuditDumpRecord struct {
 	// 桶名。
 	BucketName *string `json:"bucket_name,omitempty"`
 
-	// 版本。
-	Version *string `json:"version,omitempty"`
-
-	// 配置状态。
-	ConfigureStatus *string `json:"configure_status,omitempty"`
-
 	// 前缀。
 	LocationPrefix *string `json:"location_prefix,omitempty"`
 

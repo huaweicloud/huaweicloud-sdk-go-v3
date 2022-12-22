@@ -10,10 +10,10 @@ import (
 type WorkloadResource struct {
 
 	// 资源名称。
-	ResourceName *string `json:"resource_name,omitempty"`
+	ResourceName string `json:"resource_name"`
 
 	// 资源属性值。
-	ResourceValue *int32 `json:"resource_value,omitempty"`
+	ResourceValue int32 `json:"resource_value"`
 }
 
 func (o WorkloadResource) String() string {

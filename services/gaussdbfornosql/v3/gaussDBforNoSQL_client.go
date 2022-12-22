@@ -797,6 +797,27 @@ func (c *GaussDBforNoSQLClient) ModifyPublicIpInvoker(request *model.ModifyPubli
 	return &ModifyPublicIpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ModifyVolume 变更实例存储容量
+//
+// 变更实例的存储容量大小
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ModifyVolume(request *model.ModifyVolumeRequest) (*model.ModifyVolumeResponse, error) {
+	requestDef := GenReqDefForModifyVolume()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifyVolumeResponse), nil
+	}
+}
+
+// ModifyVolumeInvoker 变更实例存储容量
+func (c *GaussDBforNoSQLClient) ModifyVolumeInvoker(request *model.ModifyVolumeRequest) *ModifyVolumeInvoker {
+	requestDef := GenReqDefForModifyVolume()
+	return &ModifyVolumeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // PauseResumeDataSynchronization 暂停/恢复具备容灾关系的实例数据同步
 //
 // 该接口用于暂停/恢复具备容灾关系的实例数据同步。

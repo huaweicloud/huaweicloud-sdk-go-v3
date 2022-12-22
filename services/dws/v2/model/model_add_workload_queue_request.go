@@ -12,7 +12,7 @@ type AddWorkloadQueueRequest struct {
 	// 集群ID
 	ClusterId string `json:"cluster_id"`
 
-	Body *WorkloadQueue `json:"body,omitempty"`
+	Body *WorkloadQueueReq `json:"body,omitempty"`
 }
 
 func (o AddWorkloadQueueRequest) String() string {

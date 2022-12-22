@@ -180,6 +180,27 @@ func (c *ApigClient) AttachPluginToApiInvoker(request *model.AttachPluginToApiRe
 	return &AttachPluginToApiInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchCreateOrDeleteInstanceTags 批量添加或删除单个实例的标签
+//
+// 批量添加或删除单个实例的标签
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) BatchCreateOrDeleteInstanceTags(request *model.BatchCreateOrDeleteInstanceTagsRequest) (*model.BatchCreateOrDeleteInstanceTagsResponse, error) {
+	requestDef := GenReqDefForBatchCreateOrDeleteInstanceTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateOrDeleteInstanceTagsResponse), nil
+	}
+}
+
+// BatchCreateOrDeleteInstanceTagsInvoker 批量添加或删除单个实例的标签
+func (c *ApigClient) BatchCreateOrDeleteInstanceTagsInvoker(request *model.BatchCreateOrDeleteInstanceTagsRequest) *BatchCreateOrDeleteInstanceTagsInvoker {
+	requestDef := GenReqDefForBatchCreateOrDeleteInstanceTags()
+	return &BatchCreateOrDeleteInstanceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateCustomAuthorizerV2 创建自定义认证
 //
 // 创建自定义认证
@@ -1128,6 +1149,27 @@ func (c *ApigClient) ListInstanceConfigsV2Invoker(request *model.ListInstanceCon
 	return &ListInstanceConfigsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListInstanceTags 查询单个实例标签
+//
+// 查询单个实例的标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) ListInstanceTags(request *model.ListInstanceTagsRequest) (*model.ListInstanceTagsResponse, error) {
+	requestDef := GenReqDefForListInstanceTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstanceTagsResponse), nil
+	}
+}
+
+// ListInstanceTagsInvoker 查询单个实例标签
+func (c *ApigClient) ListInstanceTagsInvoker(request *model.ListInstanceTagsRequest) *ListInstanceTagsInvoker {
+	requestDef := GenReqDefForListInstanceTags()
+	return &ListInstanceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListInstancesV2 查询专享版实例列表
 //
 // 查询专享版实例列表
@@ -1308,6 +1350,27 @@ func (c *ApigClient) ListProjectCofigsV2(request *model.ListProjectCofigsV2Reque
 func (c *ApigClient) ListProjectCofigsV2Invoker(request *model.ListProjectCofigsV2Request) *ListProjectCofigsV2Invoker {
 	requestDef := GenReqDefForListProjectCofigsV2()
 	return &ListProjectCofigsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProjectInstanceTags 查询项目下所有实例标签
+//
+// 查询项目下所有实例标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) ListProjectInstanceTags(request *model.ListProjectInstanceTagsRequest) (*model.ListProjectInstanceTagsResponse, error) {
+	requestDef := GenReqDefForListProjectInstanceTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListProjectInstanceTagsResponse), nil
+	}
+}
+
+// ListProjectInstanceTagsInvoker 查询项目下所有实例标签
+func (c *ApigClient) ListProjectInstanceTagsInvoker(request *model.ListProjectInstanceTagsRequest) *ListProjectInstanceTagsInvoker {
+	requestDef := GenReqDefForListProjectInstanceTags()
+	return &ListProjectInstanceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListRequestThrottlingPolicyV2 查询流控策略列表

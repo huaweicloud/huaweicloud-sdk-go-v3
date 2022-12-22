@@ -18,7 +18,7 @@ type CreateEndpointOption struct {
 	Weight *int32 `json:"weight,omitempty"`
 
 	// IP地址。
-	IpAddress *string `json:"ip_address,omitempty"`
+	IpAddress string `json:"ip_address"`
 }
 
 func (o CreateEndpointOption) String() string {

@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateDisasterRecoveryRequest struct {
-	Body *CreateDisasterRecovery `json:"body,omitempty"`
+	Body *CreateDisasterRecoveryReq `json:"body,omitempty"`
 }
 
 func (o CreateDisasterRecoveryRequest) String() string {

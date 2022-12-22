@@ -10,7 +10,7 @@ import (
 type ReconfigureExtDataSourceAction struct {
 
 	// 重启。
-	Database *bool `json:"database,omitempty"`
+	Reboot *bool `json:"reboot,omitempty"`
 
 	// 委托。
 	Agency *string `json:"agency,omitempty"`

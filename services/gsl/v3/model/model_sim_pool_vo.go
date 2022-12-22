@@ -42,6 +42,9 @@ type SimPoolVo struct {
 	// 流量池成员数量
 	Quantity *int32 `json:"quantity,omitempty"`
 
+	// 批次号
+	OrderId *int64 `json:"order_id,omitempty"`
+
 	// 更新时间
 	ModifyTime *sdktime.SdkTime `json:"modify_time,omitempty"`
 

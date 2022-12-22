@@ -163,6 +163,14 @@ type EdgeNodeResp struct {
 
 	// 边缘节点使用token注册时的凭证
 	Identifier *string `json:"identifier,omitempty"`
+
+	// IEC/IES节点id
+	PurchaseId *string `json:"purchase_id,omitempty"`
+
+	StateDetails *StateDetails `json:"state_details,omitempty"`
+
+	// 证书有效期持续时间
+	CertRemainingValidTime *int32 `json:"cert_remaining_valid_time,omitempty"`
 }
 
 func (o EdgeNodeResp) String() string {

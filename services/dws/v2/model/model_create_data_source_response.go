@@ -8,7 +8,12 @@ import (
 
 // Response Object
 type CreateDataSourceResponse struct {
-	Body           *string `json:"body,omitempty"`
+
+	// 数据源id。
+	Id *string `json:"id,omitempty"`
+
+	// 创建数据源job_id。
+	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -21,9 +21,6 @@ type ClusterSnapshots struct {
 	// 快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。
 	Started *string `json:"started,omitempty"`
 
-	// 快照完成的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。
-	Finished *string `json:"finished,omitempty"`
-
 	// 快照大小，单位 GB。
 	Size *float64 `json:"size,omitempty"`
 
@@ -72,7 +69,7 @@ type ClusterSnapshots struct {
 	BackupDevice *string `json:"backup_device,omitempty"`
 
 	// 累计快照大小。
-	TotalBackupSize *string `json:"total_backup_size,omitempty"`
+	TotalBackupSize *int32 `json:"total_backup_size,omitempty"`
 
 	// 对应全量快照名称。
 	BaseBackupName *string `json:"base_backup_name,omitempty"`
@@ -84,7 +81,7 @@ type ClusterSnapshots struct {
 	FineGrainedBackup *bool `json:"fine_grained_backup,omitempty"`
 
 	// 备份级别。
-	BackupLevel *bool `json:"backup_level,omitempty"`
+	BackupLevel *string `json:"backup_level,omitempty"`
 
 	FineGrainedBackupDetail *FineGrainedSnapshotDetail `json:"fine_grained_backup_detail,omitempty"`
 

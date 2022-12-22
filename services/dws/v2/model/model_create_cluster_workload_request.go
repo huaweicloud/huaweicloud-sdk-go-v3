@@ -12,7 +12,7 @@ type CreateClusterWorkloadRequest struct {
 	// 集群ID
 	ClusterId string `json:"cluster_id"`
 
-	Body *WorkloadStatus `json:"body,omitempty"`
+	Body *WorkloadStatusReq `json:"body,omitempty"`
 }
 
 func (o CreateClusterWorkloadRequest) String() string {

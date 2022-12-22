@@ -8,7 +8,9 @@ import (
 
 // Response Object
 type ShrinkClusterResponse struct {
-	Body           *string `json:"body,omitempty"`
+
+	// 缩容job_id。
+	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

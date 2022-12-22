@@ -8,7 +8,12 @@ import (
 
 // Response Object
 type CreateClusterWorkloadResponse struct {
-	Body           *string `json:"body,omitempty"`
+
+	// 响应编码。
+	WorkloadResCode *int32 `json:"workload_res_code,omitempty"`
+
+	// 响应信息。
+	WorkloadResStr *string `json:"workload_res_str,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

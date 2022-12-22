@@ -81,6 +81,9 @@ type CreatePostPaidInstanceReq struct {
 	// 是否打开SSL加密访问。  实例创建后将不支持动态开启和关闭。  - true：打开SSL加密访问。 - false：不打开SSL加密访问。
 	SslEnable *bool `json:"ssl_enable,omitempty"`
 
+	// 开启SASL后使用的认证机制，如果开启了SASL认证功能（即ssl_enable=true），该字段为必选。  若该字段值为空，默认开启PLAIN认证机制。  选择其一进行SASL认证即可,支持同时开启两种认证机制。 取值如下： - PLAIN: 简单的用户名密码校验。 - SCRAM-SHA-512: 用户凭证校验，安全性比PLAIN机制更高。
+	SaslEnabledMechanisms *[]CreatePostPaidInstanceReqSaslEnabledMechanisms `json:"sasl_enabled_mechanisms,omitempty"`
+
 	// 磁盘的容量到达容量阈值后，对于消息的处理策略。  取值如下： - produce_reject：表示拒绝消息写入。 - time_base：表示自动删除最老消息。
 	RetentionPolicy *CreatePostPaidInstanceReqRetentionPolicy `json:"retention_policy,omitempty"`
 
@@ -325,6 +328,48 @@ func (c *CreatePostPaidInstanceReqPartitionNum) UnmarshalJSON(b []byte) error {
 		return err
 	} else {
 		return errors.New("convert enum data to int32 error")
+	}
+}
+
+type CreatePostPaidInstanceReqSaslEnabledMechanisms struct {
+	value string
+}
+
+type CreatePostPaidInstanceReqSaslEnabledMechanismsEnum struct {
+	PLAIN         CreatePostPaidInstanceReqSaslEnabledMechanisms
+	SCRAM_SHA_512 CreatePostPaidInstanceReqSaslEnabledMechanisms
+}
+
+func GetCreatePostPaidInstanceReqSaslEnabledMechanismsEnum() CreatePostPaidInstanceReqSaslEnabledMechanismsEnum {
+	return CreatePostPaidInstanceReqSaslEnabledMechanismsEnum{
+		PLAIN: CreatePostPaidInstanceReqSaslEnabledMechanisms{
+			value: "PLAIN",
+		},
+		SCRAM_SHA_512: CreatePostPaidInstanceReqSaslEnabledMechanisms{
+			value: "SCRAM-SHA-512",
+		},
+	}
+}
+
+func (c CreatePostPaidInstanceReqSaslEnabledMechanisms) Value() string {
+	return c.value
+}
+
+func (c CreatePostPaidInstanceReqSaslEnabledMechanisms) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CreatePostPaidInstanceReqSaslEnabledMechanisms) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
 	}
 }
 

@@ -13,10 +13,10 @@ type ListSharesRequest struct {
 	ContentType string `json:"Content-Type"`
 
 	// 返回的文件系统个数，最大值为200。
-	Limit *int32 `json:"limit,omitempty"`
+	Limit *int64 `json:"limit,omitempty"`
 
 	// 文件系统查询个数的偏移量。
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int64 `json:"offset,omitempty"`
 }
 
 func (o ListSharesRequest) String() string {
