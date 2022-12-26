@@ -20,6 +20,9 @@ type AvailabilityZones struct {
 
 	// 可用区状态
 	Status string `json:"status"`
+
+	// 可用区类型
+	Type *string `json:"type,omitempty"`
 }
 
 func (o AvailabilityZones) String() string {

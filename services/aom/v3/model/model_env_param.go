@@ -9,7 +9,7 @@ import (
 type EnvParam struct {
 
 	// 环境关联组件id
-	ComponentId *string `json:"component_id,omitempty"`
+	ComponentId string `json:"component_id"`
 
 	// 描述
 	Description *string `json:"description,omitempty"`
@@ -21,10 +21,10 @@ type EnvParam struct {
 	EnvType string `json:"env_type"`
 
 	// OS类型，取值：LINUX、WINDOWS
-	OsType *string `json:"os_type,omitempty"`
+	OsType string `json:"os_type"`
 
-	// 环境关联region
-	Region string `json:"region"`
+	// 环境关联region。创建环境必传
+	Region *string `json:"region,omitempty"`
 
 	// 注册类型，取值：API、SERVICE_DISCOVERY、CONSOLE，默认值：API
 	RegisterType *string `json:"register_type,omitempty"`

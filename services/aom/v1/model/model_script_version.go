@@ -27,13 +27,13 @@ type ScriptVersion struct {
 	// 租户从IAM申请到的projectid，一般为32位字符串
 	ProjectId *string `json:"project_id,omitempty"`
 
-	// 脚本引用次数，脚本被任务和模板引用的次数默认是0次,引用次数未非负整数，不能出现负数
+	// 脚本引用次数，脚本被任务和模板引用的次数。默认是0次,引用次数未非负整数，不能出现负数
 	ReferenceNumber *int32 `json:"reference_number,omitempty"`
 
 	// 版本所在的脚本id,根据project_id、脚本名称的和，用guava计算hash(md5)方式获取，比如为：d648c682ef5750f700c050b41692b2b8
 	ScriptId *string `json:"script_id,omitempty"`
 
-	// 脚本语言，目前支持四种，分别是：[\"Shell\",\"Bat\",\"Python\",\"Powershell\"]
+	// 脚本语言，目前支持四种，分别是：SHELL BAT PYTHON POWER_SHELL
 	ScriptLanguage *string `json:"script_language,omitempty"`
 
 	// 状态说明  0代表 未上线，1代表已上线  2代表已下线   3代表已禁用

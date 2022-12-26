@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -15,7 +18,7 @@ type Event2alarmRuleBodyTriggerPolicies struct {
 	Name *string `json:"name,omitempty"`
 
 	// 触发类型
-	TriggerType *string `json:"trigger_type,omitempty"`
+	TriggerType *Event2alarmRuleBodyTriggerPoliciesTriggerType `json:"trigger_type,omitempty"`
 
 	// 触发周期
 	Period *int32 `json:"period,omitempty"`
@@ -37,4 +40,46 @@ func (o Event2alarmRuleBodyTriggerPolicies) String() string {
 	}
 
 	return strings.Join([]string{"Event2alarmRuleBodyTriggerPolicies", string(data)}, " ")
+}
+
+type Event2alarmRuleBodyTriggerPoliciesTriggerType struct {
+	value string
+}
+
+type Event2alarmRuleBodyTriggerPoliciesTriggerTypeEnum struct {
+	ACCUMULATIVE Event2alarmRuleBodyTriggerPoliciesTriggerType
+	NOTIFICATION Event2alarmRuleBodyTriggerPoliciesTriggerType
+}
+
+func GetEvent2alarmRuleBodyTriggerPoliciesTriggerTypeEnum() Event2alarmRuleBodyTriggerPoliciesTriggerTypeEnum {
+	return Event2alarmRuleBodyTriggerPoliciesTriggerTypeEnum{
+		ACCUMULATIVE: Event2alarmRuleBodyTriggerPoliciesTriggerType{
+			value: "accumulative",
+		},
+		NOTIFICATION: Event2alarmRuleBodyTriggerPoliciesTriggerType{
+			value: "notification",
+		},
+	}
+}
+
+func (c Event2alarmRuleBodyTriggerPoliciesTriggerType) Value() string {
+	return c.value
+}
+
+func (c Event2alarmRuleBodyTriggerPoliciesTriggerType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *Event2alarmRuleBodyTriggerPoliciesTriggerType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

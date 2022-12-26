@@ -54,7 +54,7 @@ type CbhInstances struct {
 	AvailabilityZone string `json:"availability_zone"`
 
 	// 备用区
-	SlaveAvailabilityZone string `json:"slave_availability_zone"`
+	SlaveAvailabilityZone *string `json:"slave_availability_zone,omitempty"`
 
 	ExtendParam *ExtendParam `json:"extend_param,omitempty"`
 

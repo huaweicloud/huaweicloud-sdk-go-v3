@@ -10,7 +10,7 @@ import (
 type ChangeInstanceOrderResponse struct {
 
 	// 订单ID
-	OrderId        *string `json:"order_id,omitempty"`
+	OrderId        *string `json:"orderId,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

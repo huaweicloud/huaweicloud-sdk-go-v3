@@ -31,6 +31,9 @@ type ResponseGroup struct {
 
 	// 扫描任务名称
 	TaskNames *string `json:"task_names,omitempty"`
+
+	// 是否为默认规则组
+	IsDefault *bool `json:"is_default,omitempty"`
 }
 
 func (o ResponseGroup) String() string {

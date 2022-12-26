@@ -22,16 +22,16 @@ type Script struct {
 	// 企业项目id
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	// 项目id,根据project_id、脚本名称的和，用guava计算hash(md5)方式获取，比如为：c279d73a0b4e0f0927721e366c736880
+	// 脚本id,根据project_id、脚本名称的和，用guava计算hash(md5)方式获取，比如为：c279d73a0b4e0f0927721e366c736880
 	Id *string `json:"id,omitempty"`
 
 	// 脚本名称，支持数字，下划线，大小写字母 ,中文
 	Name string `json:"name"`
 
-	// 脚本中是否有已上线的版本，true表示有已上线的版本，false表示灭没有已上线的版本
+	// 脚本中是否有已上线的版本，true表示有已上线的版本，false表示没有已上线的版本
 	OnlineExistStatus *bool `json:"online_exist_status,omitempty"`
 
-	// 正在上线版本id
+	// 已上线版本id
 	OnlineId *string `json:"online_id,omitempty"`
 
 	// 租户从IAM申请到的projectid，一般为32位字符串
@@ -39,13 +39,13 @@ type Script struct {
 
 	RateControl *RateControl `json:"rate_control,omitempty"`
 
-	// 脚本语言，目前支持四种，分别是：[\"Shell\",\"Bat\",\"Python\",\"Powershell\"]
+	// 脚本语言，目前支持四种，分别是：SHELL BAT PYTHON POWER_SHELL
 	ScriptLanguage string `json:"script_language"`
 
 	// 修改人
 	UpdateBy *string `json:"update_by,omitempty"`
 
-	// 实体的最后更新时间戳。 注意：执行创建/修补/删除操作时，update_time将更新。
+	// 实体的最后更新时间戳。 注意：执行创建/修改/删除操作时，update_time将更新。
 	UpdateTime *int64 `json:"update_time,omitempty"`
 }
 

@@ -9,9 +9,6 @@ import (
 // 查询工作流列表。
 type WorkflowQueryParam struct {
 
-	// 模板名称列表。
-	TemplateNameList *[]string `json:"template_name_list,omitempty"`
-
 	// 搜索内容，可以针对工作流名称和描述内容进行搜索。
 	Search *string `json:"search,omitempty"`
 
@@ -24,7 +21,7 @@ type WorkflowQueryParam struct {
 	// 查询当前的页数，默认值为0。
 	Page *int32 `json:"page,omitempty"`
 
-	// 查询当前页的大小，默认值为1000。
+	// 查询当前页的大小，默认值为10。
 	Size *int32 `json:"size,omitempty"`
 
 	// 企业项目id。
@@ -45,7 +42,7 @@ type WorkflowQueryParam struct {
 	// 更新时间，时间范围查询的结束时间。
 	SearchTimeEnd *int64 `json:"search_time_end,omitempty"`
 
-	// 任务的状态
+	// 任务的状态 [\"success\",\"fail\",\"executing\",\"cancel\",\"waitExecute\",\"waitApproval\",\"approvalFailed\",\"pausing\",\"canceling\"]
 	Status *string `json:"status,omitempty"`
 }
 

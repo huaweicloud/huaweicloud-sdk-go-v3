@@ -10,7 +10,7 @@ import (
 type ShowSpecificationResponse struct {
 
 	// 订单列表
-	OrderInfos     *[]ProductOrderInfo `json:"order_infos,omitempty"`
+	OrderInfos     *[]ProductOrderInfo `json:"orderInfos,omitempty"`
 	HttpStatusCode int                 `json:"-"`
 }
 

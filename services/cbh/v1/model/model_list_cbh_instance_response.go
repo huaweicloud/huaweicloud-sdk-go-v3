@@ -12,7 +12,7 @@ type ListCbhInstanceResponse struct {
 	// 实例总数
 	Total *int32 `json:"total,omitempty"`
 
-	QuotaDetail *QuotaDetail `json:"quota_detail,omitempty"`
+	QuotaDetail *QuotaDetail `json:"quotaDetail,omitempty"`
 
 	// 实例列表
 	Instance       *[]InstanceDetail `json:"instance,omitempty"`

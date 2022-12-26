@@ -25,7 +25,7 @@ type Event2alarmRuleBody struct {
 	UpdateTime *int32 `json:"update_time,omitempty"`
 
 	// 事件源
-	ResourceProvider string `json:"resource_provider"`
+	ResourceProvider *string `json:"resource_provider,omitempty"`
 
 	Metadata *Event2alarmRuleBodyMetadata `json:"metadata"`
 

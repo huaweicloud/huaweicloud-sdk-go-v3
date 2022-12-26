@@ -21,7 +21,7 @@ func AomClientBuilder() *http_client.HcHttpClientBuilder {
 
 // AddActionRule 新增告警行动规则
 //
-// 新增告警行动规则
+// 新增告警行动规则。（注：接口目前开放的region为：上海一）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AomClient) AddActionRule(request *model.AddActionRuleRequest) (*model.AddActionRuleResponse, error) {
@@ -63,7 +63,7 @@ func (c *AomClient) AddAlarmRuleInvoker(request *model.AddAlarmRuleRequest) *Add
 
 // AddEvent2alarmRule 新增一条事件类告警规则
 //
-// 新增一条事件类告警规则。
+// 新增一条事件类告警规则。（注：接口目前开放的region为：上海一）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AomClient) AddEvent2alarmRule(request *model.AddEvent2alarmRuleRequest) (*model.AddEvent2alarmRuleResponse, error) {
@@ -105,7 +105,7 @@ func (c *AomClient) AddMetricDataInvoker(request *model.AddMetricDataRequest) *A
 
 // AddMuteRules 新增静默规则
 //
-// 新增静默规则
+// 新增静默规则。（注：接口目前开放的region为：上海一）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AomClient) AddMuteRules(request *model.AddMuteRulesRequest) (*model.AddMuteRulesResponse, error) {
@@ -168,7 +168,7 @@ func (c *AomClient) CountEventsInvoker(request *model.CountEventsRequest) *Count
 
 // DeleteActionRule 删除告警行动规则
 //
-// 删除告警行动规则
+// 删除告警行动规则。（注：接口目前开放的region为：上海一）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AomClient) DeleteActionRule(request *model.DeleteActionRuleRequest) (*model.DeleteActionRuleResponse, error) {
@@ -231,7 +231,7 @@ func (c *AomClient) DeleteAlarmRulesInvoker(request *model.DeleteAlarmRulesReque
 
 // DeleteEvent2alarmRule 删除事件类告警规则
 //
-// 删除一条事件类告警规则。
+// 删除一条事件类告警规则。（注：接口目前开放的region为：上海一）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AomClient) DeleteEvent2alarmRule(request *model.DeleteEvent2alarmRuleRequest) (*model.DeleteEvent2alarmRuleResponse, error) {
@@ -252,7 +252,7 @@ func (c *AomClient) DeleteEvent2alarmRuleInvoker(request *model.DeleteEvent2alar
 
 // DeleteMuteRules 删除静默规则
 //
-// 删除静默规则
+// 删除静默规则。（注：接口目前开放的region为：上海一）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AomClient) DeleteMuteRules(request *model.DeleteMuteRulesRequest) (*model.DeleteMuteRulesResponse, error) {
@@ -294,7 +294,7 @@ func (c *AomClient) DeleteserviceDiscoveryRulesInvoker(request *model.Deleteserv
 
 // ListActionRule 获取告警行动规则列表
 //
-// 获取告警行动规则列表
+// 获取告警行动规则列表。（注：接口目前开放的region为：上海一）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AomClient) ListActionRule(request *model.ListActionRuleRequest) (*model.ListActionRuleResponse, error) {
@@ -336,7 +336,7 @@ func (c *AomClient) ListAlarmRuleInvoker(request *model.ListAlarmRuleRequest) *L
 
 // ListEvent2alarmRule 查询事件类告警规则列表
 //
-// 查询事件类告警规则列表。
+// 查询事件类告警规则列表。（注：接口目前开放的region为：上海一）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AomClient) ListEvent2alarmRule(request *model.ListEvent2alarmRuleRequest) (*model.ListEvent2alarmRuleResponse, error) {
@@ -420,7 +420,7 @@ func (c *AomClient) ListMetricItemsInvoker(request *model.ListMetricItemsRequest
 
 // ListMuteRule 获取静默规则列表
 //
-// 获取静默规则列表
+// 获取静默规则列表。（注：接口目前开放的region为：上海一）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AomClient) ListMuteRule(request *model.ListMuteRuleRequest) (*model.ListMuteRuleResponse, error) {
@@ -441,7 +441,7 @@ func (c *AomClient) ListMuteRuleInvoker(request *model.ListMuteRuleRequest) *Lis
 
 // ListNotifiedHistories 获取告警发送结果
 //
-// 获取告警发送结果
+// 获取告警发送结果。（注：接口目前开放的region为：上海一）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AomClient) ListNotifiedHistories(request *model.ListNotifiedHistoriesRequest) (*model.ListNotifiedHistoriesResponse, error) {
@@ -546,7 +546,7 @@ func (c *AomClient) PushEventsInvoker(request *model.PushEventsRequest) *PushEve
 
 // ShowActionRule 通过规则名称获取告警行动规则
 //
-// 通过规则名称获取告警行动规则
+// 通过规则名称获取告警行动规则。（注：接口目前开放的region为：上海一）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AomClient) ShowActionRule(request *model.ShowActionRuleRequest) (*model.ShowActionRuleResponse, error) {
@@ -609,7 +609,7 @@ func (c *AomClient) ShowMetricsDataInvoker(request *model.ShowMetricsDataRequest
 
 // UpdateActionRule 修改告警行动规则
 //
-// 修改告警行动规则
+// 修改告警行动规则。（注：接口目前开放的region为：上海一）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AomClient) UpdateActionRule(request *model.UpdateActionRuleRequest) (*model.UpdateActionRuleResponse, error) {
@@ -651,7 +651,7 @@ func (c *AomClient) UpdateAlarmRuleInvoker(request *model.UpdateAlarmRuleRequest
 
 // UpdateEventRule 更新事件类告警规则
 //
-// 更新事件类告警规则。
+// 更新事件类告警规则。（注：接口目前开放的region为：上海一）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AomClient) UpdateEventRule(request *model.UpdateEventRuleRequest) (*model.UpdateEventRuleResponse, error) {
@@ -672,7 +672,7 @@ func (c *AomClient) UpdateEventRuleInvoker(request *model.UpdateEventRuleRequest
 
 // UpdateMuteRule 修改静默规则
 //
-// 修改静默规则
+// 修改静默规则。（注：接口目前开放的region为：上海一）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AomClient) UpdateMuteRule(request *model.UpdateMuteRuleRequest) (*model.UpdateMuteRuleResponse, error) {

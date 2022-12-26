@@ -9,7 +9,7 @@ import (
 type ModifyTemplateGroupCollection struct {
 
 	// 模板组集合名称<br/>
-	Name *string `json:"name,omitempty"`
+	Name string `json:"name"`
 
 	// 模板组集合ID<br/>
 	CollectionId *string `json:"collection_id,omitempty"`
@@ -18,7 +18,7 @@ type ModifyTemplateGroupCollection struct {
 	Description *string `json:"description,omitempty"`
 
 	// 模板组列表<br/>
-	TemplateGroupList *[]string `json:"template_group_list,omitempty"`
+	TemplateGroupList []string `json:"template_group_list"`
 }
 
 func (o ModifyTemplateGroupCollection) String() string {

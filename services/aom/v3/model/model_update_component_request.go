@@ -12,7 +12,7 @@ type UpdateComponentRequest struct {
 	// 组件id
 	ComponentId string `json:"component_id"`
 
-	Body *ComponentParam `json:"body,omitempty"`
+	Body *ComponentUpdateParam `json:"body,omitempty"`
 }
 
 func (o UpdateComponentRequest) String() string {

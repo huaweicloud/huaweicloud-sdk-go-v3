@@ -12,8 +12,8 @@ type SearchTemplateByIdRequest struct {
 	// 方案id。
 	TemplateId string `json:"template_id"`
 
-	// 模板共享类型，默认为private。
-	ShareType *string `json:"share_type,omitempty"`
+	// 模板共享类型，默认为private。可选public private
+	ShareType string `json:"share_type"`
 }
 
 func (o SearchTemplateByIdRequest) String() string {

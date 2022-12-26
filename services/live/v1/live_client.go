@@ -544,6 +544,27 @@ func (c *LiveClient) UpdateDomainInvoker(request *model.UpdateDomainRequest) *Up
 	return &UpdateDomainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateDomainIp6Switch 配置域名IPV6开关
+//
+// 配置IPV6开关
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) UpdateDomainIp6Switch(request *model.UpdateDomainIp6SwitchRequest) (*model.UpdateDomainIp6SwitchResponse, error) {
+	requestDef := GenReqDefForUpdateDomainIp6Switch()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDomainIp6SwitchResponse), nil
+	}
+}
+
+// UpdateDomainIp6SwitchInvoker 配置域名IPV6开关
+func (c *LiveClient) UpdateDomainIp6SwitchInvoker(request *model.UpdateDomainIp6SwitchRequest) *UpdateDomainIp6SwitchInvoker {
+	requestDef := GenReqDefForUpdateDomainIp6Switch()
+	return &UpdateDomainIp6SwitchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateRecordCallbackConfig 修改录制回调配置
 //
 // 修改录制回调配置接口

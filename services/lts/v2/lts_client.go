@@ -40,6 +40,48 @@ func (c *LtsClient) CreateAccessConfigInvoker(request *model.CreateAccessConfigR
 	return &CreateAccessConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateDashBoard 创建仪表盘
+//
+// 创建仪表盘
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LtsClient) CreateDashBoard(request *model.CreateDashBoardRequest) (*model.CreateDashBoardResponse, error) {
+	requestDef := GenReqDefForCreateDashBoard()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDashBoardResponse), nil
+	}
+}
+
+// CreateDashBoardInvoker 创建仪表盘
+func (c *LtsClient) CreateDashBoardInvoker(request *model.CreateDashBoardRequest) *CreateDashBoardInvoker {
+	requestDef := GenReqDefForCreateDashBoard()
+	return &CreateDashBoardInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateDashboardGroup 创建仪表盘分组
+//
+// 创建仪表盘分组
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LtsClient) CreateDashboardGroup(request *model.CreateDashboardGroupRequest) (*model.CreateDashboardGroupResponse, error) {
+	requestDef := GenReqDefForCreateDashboardGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDashboardGroupResponse), nil
+	}
+}
+
+// CreateDashboardGroupInvoker 创建仪表盘分组
+func (c *LtsClient) CreateDashboardGroupInvoker(request *model.CreateDashboardGroupRequest) *CreateDashboardGroupInvoker {
+	requestDef := GenReqDefForCreateDashboardGroup()
+	return &CreateDashboardGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateHostGroup 创建主机组
 //
 // 创建主机组
@@ -166,6 +208,27 @@ func (c *LtsClient) CreateNotificationTemplateInvoker(request *model.CreateNotif
 	return &CreateNotificationTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateSearchCriterias 添加快速查询
+//
+// 添加快速查询
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LtsClient) CreateSearchCriterias(request *model.CreateSearchCriteriasRequest) (*model.CreateSearchCriteriasResponse, error) {
+	requestDef := GenReqDefForCreateSearchCriterias()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSearchCriteriasResponse), nil
+	}
+}
+
+// CreateSearchCriteriasInvoker 添加快速查询
+func (c *LtsClient) CreateSearchCriteriasInvoker(request *model.CreateSearchCriteriasRequest) *CreateSearchCriteriasInvoker {
+	requestDef := GenReqDefForCreateSearchCriterias()
+	return &CreateSearchCriteriasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateStructConfig 通过结构化模板创建结构化配置（新）
 //
 // 该接口通过结构化模板创建结构化配置。
@@ -208,6 +271,27 @@ func (c *LtsClient) CreateStructTemplateInvoker(request *model.CreateStructTempl
 	return &CreateStructTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateTags
+//
+// 添加标签
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LtsClient) CreateTags(request *model.CreateTagsRequest) (*model.CreateTagsResponse, error) {
+	requestDef := GenReqDefForCreateTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateTagsResponse), nil
+	}
+}
+
+// CreateTagsInvoker
+func (c *LtsClient) CreateTagsInvoker(request *model.CreateTagsRequest) *CreateTagsInvoker {
+	requestDef := GenReqDefForCreateTags()
+	return &CreateTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateTransfer 创建日志转储（新版）
 //
 // 该接口用于创建OBS转储，DIS转储，DMS转储。
@@ -227,6 +311,27 @@ func (c *LtsClient) CreateTransfer(request *model.CreateTransferRequest) (*model
 func (c *LtsClient) CreateTransferInvoker(request *model.CreateTransferRequest) *CreateTransferInvoker {
 	requestDef := GenReqDefForCreateTransfer()
 	return &CreateTransferInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// Createfavorite 查询Demo
+//
+// 创建日志收藏
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LtsClient) Createfavorite(request *model.CreatefavoriteRequest) (*model.CreatefavoriteResponse, error) {
+	requestDef := GenReqDefForCreatefavorite()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatefavoriteResponse), nil
+	}
+}
+
+// CreatefavoriteInvoker 查询Demo
+func (c *LtsClient) CreatefavoriteInvoker(request *model.CreatefavoriteRequest) *CreatefavoriteInvoker {
+	requestDef := GenReqDefForCreatefavorite()
+	return &CreatefavoriteInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteAccessConfig 删除日志接入
@@ -376,6 +481,27 @@ func (c *LtsClient) DeleteNotificationTemplateInvoker(request *model.DeleteNotif
 	return &DeleteNotificationTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteSearchCriterias 删除快速查询
+//
+// 删除快速查询
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LtsClient) DeleteSearchCriterias(request *model.DeleteSearchCriteriasRequest) (*model.DeleteSearchCriteriasResponse, error) {
+	requestDef := GenReqDefForDeleteSearchCriterias()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteSearchCriteriasResponse), nil
+	}
+}
+
+// DeleteSearchCriteriasInvoker 删除快速查询
+func (c *LtsClient) DeleteSearchCriteriasInvoker(request *model.DeleteSearchCriteriasRequest) *DeleteSearchCriteriasInvoker {
+	requestDef := GenReqDefForDeleteSearchCriterias()
+	return &DeleteSearchCriteriasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteStructTemplate 删除结构化配置
 //
 // 该接口用于删除指定日志流下的结构化配置。
@@ -416,6 +542,27 @@ func (c *LtsClient) DeleteTransfer(request *model.DeleteTransferRequest) (*model
 func (c *LtsClient) DeleteTransferInvoker(request *model.DeleteTransferRequest) *DeleteTransferInvoker {
 	requestDef := GenReqDefForDeleteTransfer()
 	return &DeleteTransferInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// Deletefavorite 取消收藏
+//
+// 取消收藏
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LtsClient) Deletefavorite(request *model.DeletefavoriteRequest) (*model.DeletefavoriteResponse, error) {
+	requestDef := GenReqDefForDeletefavorite()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeletefavoriteResponse), nil
+	}
+}
+
+// DeletefavoriteInvoker 取消收藏
+func (c *LtsClient) DeletefavoriteInvoker(request *model.DeletefavoriteRequest) *DeletefavoriteInvoker {
+	requestDef := GenReqDefForDeletefavorite()
+	return &DeletefavoriteInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DisableLogCollection 关闭超额采集开关
@@ -542,6 +689,48 @@ func (c *LtsClient) ListCharts(request *model.ListChartsRequest) (*model.ListCha
 func (c *LtsClient) ListChartsInvoker(request *model.ListChartsRequest) *ListChartsInvoker {
 	requestDef := GenReqDefForListCharts()
 	return &ListChartsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCriterias 获取快速查询
+//
+// 获取快速查询
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LtsClient) ListCriterias(request *model.ListCriteriasRequest) (*model.ListCriteriasResponse, error) {
+	requestDef := GenReqDefForListCriterias()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCriteriasResponse), nil
+	}
+}
+
+// ListCriteriasInvoker 获取快速查询
+func (c *LtsClient) ListCriteriasInvoker(request *model.ListCriteriasRequest) *ListCriteriasInvoker {
+	requestDef := GenReqDefForListCriterias()
+	return &ListCriteriasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListHistorySql 查询用户历史sql
+//
+// 查询用户历史sql
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LtsClient) ListHistorySql(request *model.ListHistorySqlRequest) (*model.ListHistorySqlResponse, error) {
+	requestDef := GenReqDefForListHistorySql()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListHistorySqlResponse), nil
+	}
+}
+
+// ListHistorySqlInvoker 查询用户历史sql
+func (c *LtsClient) ListHistorySqlInvoker(request *model.ListHistorySqlRequest) *ListHistorySqlInvoker {
+	requestDef := GenReqDefForListHistorySql()
+	return &ListHistorySqlInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListHost 查询主机信息
@@ -775,6 +964,27 @@ func (c *LtsClient) ListNotificationTopicsInvoker(request *model.ListNotificatio
 	return &ListNotificationTopicsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListQueryAllSearchCriterias 查询日志组下所有快速查询
+//
+// 查询日志组下所有快速查询
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LtsClient) ListQueryAllSearchCriterias(request *model.ListQueryAllSearchCriteriasRequest) (*model.ListQueryAllSearchCriteriasResponse, error) {
+	requestDef := GenReqDefForListQueryAllSearchCriterias()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListQueryAllSearchCriteriasResponse), nil
+	}
+}
+
+// ListQueryAllSearchCriteriasInvoker 查询日志组下所有快速查询
+func (c *LtsClient) ListQueryAllSearchCriteriasInvoker(request *model.ListQueryAllSearchCriteriasRequest) *ListQueryAllSearchCriteriasInvoker {
+	requestDef := GenReqDefForListQueryAllSearchCriterias()
+	return &ListQueryAllSearchCriteriasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListQueryStructuredLogs 查询结构化日志
 //
 // 该接口用于查询指定日志流下的结构化日志内容。
@@ -857,6 +1067,27 @@ func (c *LtsClient) ListTimeLineTrafficStatistics(request *model.ListTimeLineTra
 func (c *LtsClient) ListTimeLineTrafficStatisticsInvoker(request *model.ListTimeLineTrafficStatisticsRequest) *ListTimeLineTrafficStatisticsInvoker {
 	requestDef := GenReqDefForListTimeLineTrafficStatistics()
 	return &ListTimeLineTrafficStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTopnTrafficStatistics 统计top n的日志组或日志流流量
+//
+// 统计top n的日志组或日志流流量
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LtsClient) ListTopnTrafficStatistics(request *model.ListTopnTrafficStatisticsRequest) (*model.ListTopnTrafficStatisticsResponse, error) {
+	requestDef := GenReqDefForListTopnTrafficStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTopnTrafficStatisticsResponse), nil
+	}
+}
+
+// ListTopnTrafficStatisticsInvoker 统计top n的日志组或日志流流量
+func (c *LtsClient) ListTopnTrafficStatisticsInvoker(request *model.ListTopnTrafficStatisticsRequest) *ListTopnTrafficStatisticsInvoker {
+	requestDef := GenReqDefForListTopnTrafficStatistics()
+	return &ListTopnTrafficStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListTransfers 查询日志转储

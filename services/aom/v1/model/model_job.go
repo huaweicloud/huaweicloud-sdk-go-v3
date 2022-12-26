@@ -27,7 +27,7 @@ type Job struct {
 	// 修改人。
 	UpdateBy *string `json:"update_by,omitempty"`
 
-	// 作业描述,对脚本进行描述，最大长度为1000。
+	// 作业描述，最大长度为1000。
 	Description *string `json:"description,omitempty"`
 
 	// 企业项目id。
@@ -45,6 +45,12 @@ type Job struct {
 	RateControl *RateControl `json:"rate_control"`
 
 	ApproveInfo *ApproveInfo `json:"approve_info"`
+
+	// 是否为最新版本的作业
+	IsLatestVersion *bool `json:"is_latest_version,omitempty"`
+
+	// 版本号
+	VersionNumber *int32 `json:"version_number,omitempty"`
 }
 
 func (o Job) String() string {

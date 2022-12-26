@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// 关闭实例
+// 重启方式
 type RebootType struct {
 
-	// 关闭实例
+	// 重启方式
 	Type string `json:"type"`
 }
 

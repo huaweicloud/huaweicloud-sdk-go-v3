@@ -12,10 +12,10 @@ type CreateWorkflowResponse struct {
 	// 工作流id，唯一标识，根据project_id和workflow_name生成。
 	Id *string `json:"id,omitempty"`
 
-	// 工作流名称，需要满足：[^\\\\>+<^;#\"\\s&?%='$￥@*_/\\]\\[【】{}|:,.，。：‘’“、—！!~`·？《》…]{1,64}。
+	// 工作流名称，满足：[^\\\\>+<^;#\"\\s&?%='$￥@*_/\\]\\[【】{}|:,.，。：‘’“、—！!~`·？《》…]{1,64}。
 	Name *string `json:"name,omitempty"`
 
-	// 工作流类型，可以为cron/manul/event
+	// 工作流类型，可以为cron、manual
 	Type *string `json:"type,omitempty"`
 
 	// 工作流描述信息。
@@ -44,9 +44,6 @@ type CreateWorkflowResponse struct {
 
 	// 任务执行时需要的参数列表。
 	Input map[string]interface{} `json:"input,omitempty"`
-
-	// 参数名，该字段已经被删除，不再使用
-	ParamName *string `json:"param_name,omitempty"`
 
 	// 最近一次执行id，也是工作流id
 	LastExecutionId *string `json:"last_execution_id,omitempty"`
@@ -80,12 +77,6 @@ type CreateWorkflowResponse struct {
 
 	// 任务类型
 	TaskType *string `json:"task_type,omitempty"`
-
-	// functiongraph返回的DOMAIN_ID
-	DomainId *string `json:"domain_id,omitempty"`
-
-	// functiongraph返回的DOMAIN_NAME
-	DomainName *string `json:"domain_name,omitempty"`
 
 	// functiongraph返回的PROJECT_ID
 	ProjectId *string `json:"project_id,omitempty"`

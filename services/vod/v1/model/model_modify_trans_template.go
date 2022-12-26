@@ -9,10 +9,10 @@ import (
 type ModifyTransTemplate struct {
 
 	// 模板组名称<br/>
-	GroupId *string `json:"group_id,omitempty"`
+	GroupId string `json:"group_id"`
 
 	// 模板组名称<br/>
-	Name *string `json:"name,omitempty"`
+	Name string `json:"name"`
 
 	// 是否是默认转码模板<br/>
 	IsDefault *bool `json:"is_default,omitempty"`

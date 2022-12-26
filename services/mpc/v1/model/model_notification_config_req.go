@@ -9,7 +9,7 @@ import (
 type NotificationConfigReq struct {
 
 	// 事件通知模板信息
-	Notifications *[]Notification `json:"notifications,omitempty"`
+	Notifications []Notification `json:"notifications"`
 }
 
 func (o NotificationConfigReq) String() string {

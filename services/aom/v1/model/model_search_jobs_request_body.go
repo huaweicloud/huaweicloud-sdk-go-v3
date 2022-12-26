@@ -9,7 +9,7 @@ import (
 // 分页查询作业列表请求参数
 type SearchJobsRequestBody struct {
 
-	// 查询接收的的参数，版本管理时，name为脚本名称（版本管理查询时name不能为空），页面查询时，name为接收模糊查询的参数，name是null，表示查询所有默认脚本。
+	// name为作业名称。
 	Name *string `json:"name,omitempty"`
 
 	// 当前页，查询的当前页，page_num为正整数，不能是0和负数，当输入参数为负数，0和大于1000，自动修正参数为1，默认值是1（用户不传，值是1）。
@@ -19,10 +19,13 @@ type SearchJobsRequestBody struct {
 	PageSize *int32 `json:"page_size,omitempty"`
 
 	// 需要排序的字段(默认为更新时间),支持字段有create_time。
-	OrderByColumn *string `json:"order_by_column,omitempty"`
+	OrderByColumn string `json:"order_by_column"`
 
 	// 排序规则(默认降序) 传入升序或降序，升序：ASC，降序：DESC。
 	SortOrder *string `json:"sort_order,omitempty"`
+
+	// 企业项目id
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 
 func (o SearchJobsRequestBody) String() string {

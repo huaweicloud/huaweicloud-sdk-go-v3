@@ -9,7 +9,7 @@ import (
 // 审批信息
 type ApproveInfo struct {
 
-	// 审批人主题选择，当是否审核,默认是审核时，不能为空。
+	// 审批人主题选择。
 	TopicSelected *string `json:"topic_selected,omitempty"`
 
 	// 是否审核,默认是不审核，true，false。

@@ -34,7 +34,7 @@ type SearchTemplateByIdResponse struct {
 	// 作业版本
 	JobVersion *int32 `json:"job_version,omitempty"`
 
-	// 模板名称，需要满足：。 不允许更新模板时修改
+	// 模板名称
 	Name *string `json:"name,omitempty"`
 
 	// 是否需要同步

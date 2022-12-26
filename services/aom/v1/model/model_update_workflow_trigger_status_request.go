@@ -12,11 +12,11 @@ import (
 // Request Object
 type UpdateWorkflowTriggerStatusRequest struct {
 
-	// 任务id， 待修改任务的id。
+	// 任务id，待修改任务的id。
 	WorkflowId string `json:"workflow_id"`
 
 	// 启动或暂停任务的定时执行。enable为开启定时任务，disable为关闭定时任务
-	Action *UpdateWorkflowTriggerStatusRequestAction `json:"action,omitempty"`
+	Action UpdateWorkflowTriggerStatusRequestAction `json:"action"`
 }
 
 func (o UpdateWorkflowTriggerStatusRequest) String() string {

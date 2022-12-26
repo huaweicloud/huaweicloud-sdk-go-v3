@@ -17,6 +17,30 @@ func (i *CreateAccessConfigInvoker) Invoke() (*model.CreateAccessConfigResponse,
 	}
 }
 
+type CreateDashBoardInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDashBoardInvoker) Invoke() (*model.CreateDashBoardResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDashBoardResponse), nil
+	}
+}
+
+type CreateDashboardGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDashboardGroupInvoker) Invoke() (*model.CreateDashboardGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDashboardGroupResponse), nil
+	}
+}
+
 type CreateHostGroupInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -89,6 +113,18 @@ func (i *CreateNotificationTemplateInvoker) Invoke() (*model.CreateNotificationT
 	}
 }
 
+type CreateSearchCriteriasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSearchCriteriasInvoker) Invoke() (*model.CreateSearchCriteriasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSearchCriteriasResponse), nil
+	}
+}
+
 type CreateStructConfigInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -113,6 +149,18 @@ func (i *CreateStructTemplateInvoker) Invoke() (*model.CreateStructTemplateRespo
 	}
 }
 
+type CreateTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateTagsInvoker) Invoke() (*model.CreateTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateTagsResponse), nil
+	}
+}
+
 type CreateTransferInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -122,6 +170,18 @@ func (i *CreateTransferInvoker) Invoke() (*model.CreateTransferResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.CreateTransferResponse), nil
+	}
+}
+
+type CreatefavoriteInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatefavoriteInvoker) Invoke() (*model.CreatefavoriteResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatefavoriteResponse), nil
 	}
 }
 
@@ -209,6 +269,18 @@ func (i *DeleteNotificationTemplateInvoker) Invoke() (*model.DeleteNotificationT
 	}
 }
 
+type DeleteSearchCriteriasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteSearchCriteriasInvoker) Invoke() (*model.DeleteSearchCriteriasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteSearchCriteriasResponse), nil
+	}
+}
+
 type DeleteStructTemplateInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -230,6 +302,18 @@ func (i *DeleteTransferInvoker) Invoke() (*model.DeleteTransferResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.DeleteTransferResponse), nil
+	}
+}
+
+type DeletefavoriteInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeletefavoriteInvoker) Invoke() (*model.DeletefavoriteResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeletefavoriteResponse), nil
 	}
 }
 
@@ -302,6 +386,30 @@ func (i *ListChartsInvoker) Invoke() (*model.ListChartsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListChartsResponse), nil
+	}
+}
+
+type ListCriteriasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCriteriasInvoker) Invoke() (*model.ListCriteriasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCriteriasResponse), nil
+	}
+}
+
+type ListHistorySqlInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListHistorySqlInvoker) Invoke() (*model.ListHistorySqlResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListHistorySqlResponse), nil
 	}
 }
 
@@ -437,6 +545,18 @@ func (i *ListNotificationTopicsInvoker) Invoke() (*model.ListNotificationTopicsR
 	}
 }
 
+type ListQueryAllSearchCriteriasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListQueryAllSearchCriteriasInvoker) Invoke() (*model.ListQueryAllSearchCriteriasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListQueryAllSearchCriteriasResponse), nil
+	}
+}
+
 type ListQueryStructuredLogsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -482,6 +602,18 @@ func (i *ListTimeLineTrafficStatisticsInvoker) Invoke() (*model.ListTimeLineTraf
 		return nil, err
 	} else {
 		return result.(*model.ListTimeLineTrafficStatisticsResponse), nil
+	}
+}
+
+type ListTopnTrafficStatisticsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTopnTrafficStatisticsInvoker) Invoke() (*model.ListTopnTrafficStatisticsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTopnTrafficStatisticsResponse), nil
 	}
 }
 

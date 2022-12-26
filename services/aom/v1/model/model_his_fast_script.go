@@ -9,7 +9,7 @@ import (
 // HIS 用户快速执行脚本实体类。
 type HisFastScript struct {
 
-	// 脚本类型。
+	// 脚本类型。SHELL BAT PYTHON POWER_SHELL
 	ScriptType string `json:"script_type"`
 
 	// 执行脚本的ECS机器用户。

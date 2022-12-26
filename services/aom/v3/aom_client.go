@@ -21,7 +21,7 @@ func AomClientBuilder() *http_client.HcHttpClientBuilder {
 
 // CreateApp 新增应用
 //
-// 新增应用
+// 新增应用。（注：接口目前开放的region为：上海一）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AomClient) CreateApp(request *model.CreateAppRequest) (*model.CreateAppResponse, error) {
@@ -42,7 +42,7 @@ func (c *AomClient) CreateAppInvoker(request *model.CreateAppRequest) *CreateApp
 
 // CreateComponent 新增组件
 //
-// 新增组件
+// 新增组件。（注：接口目前开放的region为：上海一）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AomClient) CreateComponent(request *model.CreateComponentRequest) (*model.CreateComponentResponse, error) {
@@ -63,7 +63,7 @@ func (c *AomClient) CreateComponentInvoker(request *model.CreateComponentRequest
 
 // CreateEnv 创建环境
 //
-// 创建环境
+// 创建环境。（注：接口目前开放的region为：上海一）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AomClient) CreateEnv(request *model.CreateEnvRequest) (*model.CreateEnvResponse, error) {
@@ -84,7 +84,7 @@ func (c *AomClient) CreateEnvInvoker(request *model.CreateEnvRequest) *CreateEnv
 
 // DeleteApp 删除应用
 //
-// 删除应用
+// 删除应用。（注：接口目前开放的region为：上海一）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AomClient) DeleteApp(request *model.DeleteAppRequest) (*model.DeleteAppResponse, error) {
@@ -105,7 +105,7 @@ func (c *AomClient) DeleteAppInvoker(request *model.DeleteAppRequest) *DeleteApp
 
 // DeleteComponent 删除组件
 //
-// 删除组件
+// 删除组件。（注：接口目前开放的region为：上海一）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AomClient) DeleteComponent(request *model.DeleteComponentRequest) (*model.DeleteComponentResponse, error) {
@@ -126,7 +126,7 @@ func (c *AomClient) DeleteComponentInvoker(request *model.DeleteComponentRequest
 
 // DeleteEnv 删除环境
 //
-// 删除环境
+// 删除环境。（注：接口目前开放的region为：上海一）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AomClient) DeleteEnv(request *model.DeleteEnvRequest) (*model.DeleteEnvResponse, error) {
@@ -147,7 +147,7 @@ func (c *AomClient) DeleteEnvInvoker(request *model.DeleteEnvRequest) *DeleteEnv
 
 // ListResourceUnderNode 查询绑定在节点上的资源列表
 //
-// 查询绑定在节点上的资源列表
+// 查询绑定在节点上的资源列表。（注：接口目前开放的region为：上海一）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AomClient) ListResourceUnderNode(request *model.ListResourceUnderNodeRequest) (*model.ListResourceUnderNodeResponse, error) {
@@ -168,7 +168,7 @@ func (c *AomClient) ListResourceUnderNodeInvoker(request *model.ListResourceUnde
 
 // ShowApp 查询应用详情
 //
-// 获取应用详情
+// 获取应用详情。（注：接口目前开放的region为：上海一）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AomClient) ShowApp(request *model.ShowAppRequest) (*model.ShowAppResponse, error) {
@@ -189,7 +189,7 @@ func (c *AomClient) ShowAppInvoker(request *model.ShowAppRequest) *ShowAppInvoke
 
 // ShowAppByName 查询应用详情
 //
-// 获取应用详情
+// 获取应用详情。（注：接口目前开放的region为：上海一）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AomClient) ShowAppByName(request *model.ShowAppByNameRequest) (*model.ShowAppByNameResponse, error) {
@@ -210,7 +210,7 @@ func (c *AomClient) ShowAppByNameInvoker(request *model.ShowAppByNameRequest) *S
 
 // ShowComponent 查询组件详情
 //
-// 查询组件详情
+// 查询组件详情。（注：接口目前开放的region为：上海一）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AomClient) ShowComponent(request *model.ShowComponentRequest) (*model.ShowComponentResponse, error) {
@@ -231,7 +231,7 @@ func (c *AomClient) ShowComponentInvoker(request *model.ShowComponentRequest) *S
 
 // ShowComponentByName 查询组件详情
 //
-// 查询组件详情
+// 查询组件详情。（注：接口目前开放的region为：上海一）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AomClient) ShowComponentByName(request *model.ShowComponentByNameRequest) (*model.ShowComponentByNameResponse, error) {
@@ -252,7 +252,7 @@ func (c *AomClient) ShowComponentByNameInvoker(request *model.ShowComponentByNam
 
 // ShowEnv 查询环境详情
 //
-// 查询环境详情
+// 查询环境详情。（注：接口目前开放的region为：上海一）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AomClient) ShowEnv(request *model.ShowEnvRequest) (*model.ShowEnvResponse, error) {
@@ -273,7 +273,7 @@ func (c *AomClient) ShowEnvInvoker(request *model.ShowEnvRequest) *ShowEnvInvoke
 
 // ShowEnvByName 查询环境详情
 //
-// 查询环境详情
+// 查询环境详情。（注：接口目前开放的region为：上海一）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AomClient) ShowEnvByName(request *model.ShowEnvByNameRequest) (*model.ShowEnvByNameResponse, error) {
@@ -294,7 +294,7 @@ func (c *AomClient) ShowEnvByNameInvoker(request *model.ShowEnvByNameRequest) *S
 
 // UpdateApp 修改应用
 //
-// 修改应用
+// 修改应用。（注：接口目前开放的region为：上海一）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AomClient) UpdateApp(request *model.UpdateAppRequest) (*model.UpdateAppResponse, error) {
@@ -315,7 +315,7 @@ func (c *AomClient) UpdateAppInvoker(request *model.UpdateAppRequest) *UpdateApp
 
 // UpdateComponent 修改组件
 //
-// 修改组件
+// 修改组件。（注：接口目前开放的region为：上海一）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AomClient) UpdateComponent(request *model.UpdateComponentRequest) (*model.UpdateComponentResponse, error) {
@@ -336,7 +336,7 @@ func (c *AomClient) UpdateComponentInvoker(request *model.UpdateComponentRequest
 
 // UpdateEnv 修改环境
 //
-// 修改环境
+// 修改环境。（注：接口目前开放的region为：上海一）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AomClient) UpdateEnv(request *model.UpdateEnvRequest) (*model.UpdateEnvResponse, error) {

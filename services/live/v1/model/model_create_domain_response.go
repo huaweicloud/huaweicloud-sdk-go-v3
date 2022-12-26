@@ -33,8 +33,11 @@ type CreateDomainResponse struct {
 	StatusDescribe *string `json:"status_describe,omitempty"`
 
 	// 域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域
-	ServiceArea    *CreateDomainResponseServiceArea `json:"service_area,omitempty"`
-	HttpStatusCode int                              `json:"-"`
+	ServiceArea *CreateDomainResponseServiceArea `json:"service_area,omitempty"`
+
+	// 企业项目ID
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	HttpStatusCode      int     `json:"-"`
 }
 
 func (o CreateDomainResponse) String() string {

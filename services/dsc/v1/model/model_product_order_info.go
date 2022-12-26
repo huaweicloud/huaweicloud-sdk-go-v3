@@ -9,19 +9,19 @@ import (
 type ProductOrderInfo struct {
 
 	// 租户ID
-	TenantId *string `json:"tenant_id,omitempty"`
+	TenantId *string `json:"tenantId,omitempty"`
 
 	// 订购周期类型
-	PeriodType *string `json:"period_type,omitempty"`
+	PeriodType *string `json:"periodType,omitempty"`
 
 	// 订购周期数量
-	PeriodNum *int32 `json:"period_num,omitempty"`
+	PeriodNum *int32 `json:"periodNum,omitempty"`
 
 	// 资源ID
-	ResourceId *string `json:"resource_id,omitempty"`
+	ResourceId *string `json:"resourceId,omitempty"`
 
 	// 产品信息
-	ProductInfo *[]ProductInfoBean `json:"product_info,omitempty"`
+	ProductInfo *[]ProductInfoBean `json:"productInfo,omitempty"`
 }
 
 func (o ProductOrderInfo) String() string {

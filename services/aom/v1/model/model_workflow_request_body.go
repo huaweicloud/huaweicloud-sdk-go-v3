@@ -9,10 +9,10 @@ import (
 // 自动化运维工作流工作流元数据。
 type WorkflowRequestBody struct {
 
-	// 工作流名称，需要满足：[^\\\\>+<^;#\"\\s&?%='$￥@*_/\\]\\[【】{}|:,.，。：‘’“、—！!~`·？《》…]{1,64}。
+	// 工作流名称，需要满足中文、英文大小写、数字、中划线和下划线{1,64}。
 	Name *string `json:"name,omitempty"`
 
-	// 工作流类型，可以为cron/manul/event。
+	// 工作流类型，可以为cron、manual
 	Type *string `json:"type,omitempty"`
 
 	// 工作流描述信息。
@@ -21,7 +21,7 @@ type WorkflowRequestBody struct {
 	// 标签键和值列表，标签键值对数量范围是0至20。
 	Tags *interface{} `json:"tags,omitempty"`
 
-	// 模板名称，需要满足：[^\\\\>+<^;#\"\\s&?%='$￥@*_/\\]\\[【】{}|:,.，。：‘’“、—！!~`·？《》…]{1,64}。
+	// 模板名称，示例：CMS::ECS::BulkyRunScript  CMS::ECS::BulkyStartECSInstances CMS::ECS::BulkyCleanDisks
 	TemplateName *string `json:"template_name,omitempty"`
 
 	// 模板id。
@@ -29,9 +29,6 @@ type WorkflowRequestBody struct {
 
 	// 任务执行时需要的参数列表。
 	Input map[string]interface{} `json:"input,omitempty"`
-
-	// 引用链接,workflow引用的工作链接。
-	CitationUrns *[]string `json:"citation_urns,omitempty"`
 
 	// 引用，参数引用。
 	Quote *[]string `json:"quote,omitempty"`
@@ -50,7 +47,7 @@ type WorkflowRequestBody struct {
 	// 服务名称。
 	ServiceName *string `json:"service_name,omitempty"`
 
-	// 任务类型。
+	// 任务类型。package,script,job,cloud,standard,customize
 	TaskType *string `json:"task_type,omitempty"`
 }
 

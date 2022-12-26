@@ -9,17 +9,8 @@ import (
 // Response Object
 type ResetPasswordResponse struct {
 
-	// 操作结果
-	Code *int32 `json:"code,omitempty"`
-
-	// 描述
-	Description *string `json:"description,omitempty"`
-
-	// 任务 id
-	TaskId *string `json:"task_id,omitempty"`
-
-	// 订单 id
-	OrderId        *string `json:"order_id,omitempty"`
+	// 请求得到的信息
+	RequestInfo    *string `json:"request_info,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 
