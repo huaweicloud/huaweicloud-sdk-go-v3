@@ -638,9 +638,18 @@ func GenReqDefForExpandInstanceStorage() *def.HttpRequestDef {
 func GenReqDefForListAlarmConfigs() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/alarm-configs").
+		WithPath("/v2/{project_id}/alarm-configs").
 		WithResponse(new(model.ListAlarmConfigsResponse)).
 		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -692,6 +701,15 @@ func GenReqDefForListAlarmSubs() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/alarm-subs").
 		WithResponse(new(model.ListAlarmSubsResponse)).
 		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -941,7 +959,7 @@ func GenReqDefForListElbs() *def.HttpRequestDef {
 func GenReqDefForListEventSpecs() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/event-specs").
+		WithPath("/v2/{project_id}/event-specs").
 		WithResponse(new(model.ListEventSpecsResponse)).
 		WithContentType("application/json")
 
@@ -965,6 +983,14 @@ func GenReqDefForListEventSpecs() *def.HttpRequestDef {
 		WithName("Tag").
 		WithJsonTag("tag").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -977,6 +1003,15 @@ func GenReqDefForListEventSubs() *def.HttpRequestDef {
 		WithResponse(new(model.ListEventSubsResponse)).
 		WithContentType("application/json")
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -987,6 +1022,15 @@ func GenReqDefForListEvents() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/events").
 		WithResponse(new(model.ListEventsResponse)).
 		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1161,7 +1205,7 @@ func GenReqDefForListSnapshotPolicy() *def.HttpRequestDef {
 func GenReqDefForListSnapshotStatistics() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1.0/{project_id}/clusters/{cluster_id}/snapshots/statistics").
+		WithPath("/v1.0/{project_id}/cluster/{cluster_id}/snapshots/statistics").
 		WithResponse(new(model.ListSnapshotStatisticsResponse)).
 		WithContentType("application/json")
 

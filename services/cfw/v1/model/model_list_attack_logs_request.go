@@ -68,6 +68,9 @@ type ListAttackLogsRequest struct {
 
 	// 判断来源
 	Source *string `json:"source,omitempty"`
+
+	// 企业项目id，用户支持企业项目后，由企业项目生成的id。
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 
 func (o ListAttackLogsRequest) String() string {

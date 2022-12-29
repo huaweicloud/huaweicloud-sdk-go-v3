@@ -12,9 +12,6 @@ type UpdateResolveRuleReq struct {
 	Name *string `json:"name,omitempty"`
 
 	Ipaddresses *IpInfo `json:"ipaddresses,omitempty"`
-
-	// 规则关联的目标ip地址。
-	Routers *[]Router `json:"routers,omitempty"`
 }
 
 func (o UpdateResolveRuleReq) String() string {

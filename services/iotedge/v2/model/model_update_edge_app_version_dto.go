@@ -43,6 +43,9 @@ type UpdateEdgeAppVersionDto struct {
 
 	// 应用实现的服务列表
 	Services *interface{} `json:"services,omitempty"`
+
+	// 模板id
+	TplId *string `json:"tpl_id,omitempty"`
 }
 
 func (o UpdateEdgeAppVersionDto) String() string {

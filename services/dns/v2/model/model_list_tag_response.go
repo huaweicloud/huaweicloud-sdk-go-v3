@@ -8,8 +8,11 @@ import (
 
 // Response Object
 type ListTagResponse struct {
+
+	// 标签资源信息列表。
 	Resources *[]ResourceItem `json:"resources,omitempty"`
 
+	// 资源总数。
 	TotalCount     *int32 `json:"total_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

@@ -9,12 +9,9 @@ import (
 // Response Object
 type CreateOrderFormResponse struct {
 
-	// 技能列表
-	Data *[]SkillInfo `json:"data,omitempty"`
-
-	// 总数量
-	Total          *int32 `json:"total,omitempty"`
-	HttpStatusCode int    `json:"-"`
+	// 订单ID
+	OrderId        *string `json:"order_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o CreateOrderFormResponse) String() string {

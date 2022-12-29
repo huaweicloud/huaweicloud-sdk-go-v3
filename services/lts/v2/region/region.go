@@ -21,6 +21,7 @@ var SA_BRAZIL_1 = region.NewRegion("sa-brazil-1", "https://lts.sa-brazil-1.myhua
 var LA_NORTH_2 = region.NewRegion("la-north-2", "https://lts.la-north-2.myhuaweicloud.com")
 var CN_NORTH_9 = region.NewRegion("cn-north-9", "https://lts-pctest.cn-north-9.myhuaweicloud.cn")
 var CN_SOUTH_2 = region.NewRegion("cn-south-2", "https://lts.cn-south-2.myhuaweicloud.com")
+var NA_MEXICO_1 = region.NewRegion("na-mexico-1", "https://lts.na-mexico-1.myhuaweicloud.com")
 
 var staticFields = map[string]*region.Region{
 	"cn-east-2":      CN_EAST_2,
@@ -39,6 +40,7 @@ var staticFields = map[string]*region.Region{
 	"la-north-2":     LA_NORTH_2,
 	"cn-north-9":     CN_NORTH_9,
 	"cn-south-2":     CN_SOUTH_2,
+	"na-mexico-1":    NA_MEXICO_1,
 }
 
 var provider = region.DefaultProviderChain("LTS")

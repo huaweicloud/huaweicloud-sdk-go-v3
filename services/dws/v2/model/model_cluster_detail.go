@@ -93,6 +93,8 @@ type ClusterDetail struct {
 	ResizeInfo *ResizeInfo `json:"resize_info,omitempty"`
 
 	FailedReasons *FailedReason `json:"failed_reasons,omitempty"`
+
+	Elb *ElbResp `json:"elb,omitempty"`
 }
 
 func (o ClusterDetail) String() string {

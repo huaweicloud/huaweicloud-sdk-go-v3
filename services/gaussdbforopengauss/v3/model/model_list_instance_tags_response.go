@@ -10,8 +10,11 @@ import (
 type ListInstanceTagsResponse struct {
 
 	// 用户标签列表。
-	Tags           *[]TagsResult `json:"tags,omitempty"`
-	HttpStatusCode int           `json:"-"`
+	Tags *[]TagsResult `json:"tags,omitempty"`
+
+	// 总记录数。
+	TotalCount     *int32 `json:"total_count,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ListInstanceTagsResponse) String() string {

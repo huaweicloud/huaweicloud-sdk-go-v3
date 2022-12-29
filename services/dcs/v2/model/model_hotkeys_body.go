@@ -25,7 +25,7 @@ type HotkeysBody struct {
 	Db *int32 `json:"db,omitempty"`
 
 	// key的value大小。
-	Size *int32 `json:"size,omitempty"`
+	Size *int64 `json:"size,omitempty"`
 
 	// key大小的单位。type为string时，单位是：byte；type为list/set/zset/hash时，单位是：count
 	Unit *string `json:"unit,omitempty"`

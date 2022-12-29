@@ -56,6 +56,9 @@ type ListAccessControlLogsRequest struct {
 
 	// 日志类型
 	LogType *ListAccessControlLogsRequestLogType `json:"log_type,omitempty"`
+
+	// 企业项目id，用户支持企业项目后，由企业项目生成的id。
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 
 func (o ListAccessControlLogsRequest) String() string {

@@ -41,6 +41,12 @@ type Quota struct {
 
 	// 自定义安全策略配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
 	SecurityPolicy int32 `json:"security_policy"`
+
+	// ipgroup最大可关联的监听器数量。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
+	IpgroupBindings string `json:"ipgroup_bindings"`
+
+	// 单个ipgroup最多可设置的ip地址数量。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
+	IpgroupMaxLength string `json:"ipgroup_max_length"`
 }
 
 func (o Quota) String() string {

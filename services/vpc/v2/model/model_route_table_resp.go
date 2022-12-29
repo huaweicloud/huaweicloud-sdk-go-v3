@@ -1,6 +1,7 @@
 package model
 
 import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
@@ -32,6 +33,12 @@ type RouteTableResp struct {
 
 	// 功能说明：路由表描述信息  取值范围：0-255个字符，不能包含“<”和“>”
 	Description string `json:"description"`
+
+	// 功能说明：资源创建UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+	CreatedAt *sdktime.SdkTime `json:"created_at"`
+
+	// 功能说明：资源更新UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+	UpdatedAt *sdktime.SdkTime `json:"updated_at"`
 }
 
 func (o RouteTableResp) String() string {

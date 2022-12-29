@@ -22,6 +22,9 @@ type InstanceModReq struct {
 
 	// 指定实例所属的安全组。  获取方法如下： - 方法1：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体方法请参见《虚拟私有云服务API参考》的“查询安全组列表”章节。
 	SecurityGroupId *string `json:"security_group_id,omitempty"`
+
+	// 终端节点服务的名称。  长度不超过16个字符，允许输入大小写字母、数字、下划线、中划线。  如果您不填写该参数，系统生成的终端节点服务的名称为{region}.apig.{service_id}。 如果您填写该参数，系统生成的终端节点服务的名称为{region}.{vpcep_service_name}.{service_id}。
+	VpcepServiceName *string `json:"vpcep_service_name,omitempty"`
 }
 
 func (o InstanceModReq) String() string {

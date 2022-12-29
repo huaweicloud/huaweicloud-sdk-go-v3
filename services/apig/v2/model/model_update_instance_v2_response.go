@@ -119,8 +119,11 @@ type UpdateInstanceV2Response struct {
 	Publicips *[]IpDetails `json:"publicips,omitempty"`
 
 	// 私网入口地址列表
-	Privateips     *[]IpDetails `json:"privateips,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	Privateips *[]IpDetails `json:"privateips,omitempty"`
+
+	// 实例是否可释放 - true：可释放 - false：不可释放
+	IsReleasable   *bool `json:"is_releasable,omitempty"`
+	HttpStatusCode int   `json:"-"`
 }
 
 func (o UpdateInstanceV2Response) String() string {

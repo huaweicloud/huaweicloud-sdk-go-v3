@@ -70,7 +70,13 @@ type CreateEdgeApplicationVersionResponse struct {
 	PublishTime *string `json:"publish_time,omitempty"`
 
 	// 下线时间
-	OffShelfTime   *string `json:"off_shelf_time,omitempty"`
+	OffShelfTime *string `json:"off_shelf_time,omitempty"`
+
+	// 驱动厂商
+	Supplier *string `json:"supplier,omitempty"`
+
+	// 模板id
+	TplId          *string `json:"tpl_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -12,7 +12,7 @@ type ListLineGroupsResponse struct {
 	// 列表对象。
 	Linegroups *[]CreateLineGroupsResp `json:"linegroups,omitempty"`
 
-	Metadata       *Metedata `json:"metadata,omitempty"`
+	Metadata       *Metadata `json:"metadata,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }
 

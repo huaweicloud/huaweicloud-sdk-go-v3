@@ -12,7 +12,7 @@ type ListEndpointVpcsResponse struct {
 	// 查询公网Zone的列表响应。
 	Vpcs *[]VpcsData `json:"vpcs,omitempty"`
 
-	Metadata       *Metedata `json:"metadata,omitempty"`
+	Metadata       *Metadata `json:"metadata,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }
 

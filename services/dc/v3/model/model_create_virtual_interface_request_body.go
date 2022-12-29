@@ -6,11 +6,8 @@ import (
 	"strings"
 )
 
+// 创建虚拟接口请求参数
 type CreateVirtualInterfaceRequestBody struct {
-
-	// 操作请求ID
-	RequestId string `json:"request_id"`
-
 	VirtualInterface *CreateVirtualInterface `json:"virtual_interface"`
 }
 

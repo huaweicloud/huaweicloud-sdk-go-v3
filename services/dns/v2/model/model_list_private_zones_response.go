@@ -10,8 +10,9 @@ import (
 type ListPrivateZonesResponse struct {
 	Links *PageLink `json:"links,omitempty"`
 
-	Metadata *Metedata `json:"metadata,omitempty"`
+	Metadata *Metadata `json:"metadata,omitempty"`
 
+	// zone列表信息。
 	Zones          *[]PrivateZoneResp `json:"zones,omitempty"`
 	HttpStatusCode int                `json:"-"`
 }

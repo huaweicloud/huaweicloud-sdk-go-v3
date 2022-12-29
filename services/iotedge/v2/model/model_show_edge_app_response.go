@@ -9,7 +9,7 @@ import (
 // Response Object
 type ShowEdgeAppResponse struct {
 
-	// 应用名称
+	// 应用id
 	EdgeAppId *string `json:"edge_app_id,omitempty"`
 
 	// 应用描述
@@ -31,7 +31,13 @@ type ShowEdgeAppResponse struct {
 	FunctionType *string `json:"function_type,omitempty"`
 
 	// 部署类型docker|process
-	DeployType     *string `json:"deploy_type,omitempty"`
+	DeployType *string `json:"deploy_type,omitempty"`
+
+	// 驱动协议类型OPCUA|Modbus-TCP
+	Protocol *string `json:"protocol,omitempty"`
+
+	// 应用名称
+	EdgeAppName    *string `json:"edge_app_name,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -160,6 +160,11 @@ type QueryJobResp struct {
 
 	// 任务主备角色。
 	NodeRole *string `json:"node_role,omitempty"`
+
+	PeriodOrder *PeriodOrderResp `json:"period_order,omitempty"`
+
+	// 已同步对象信息。
+	ObjectInfos *[]DatabaseObjectInfo `json:"object_infos,omitempty"`
 }
 
 func (o QueryJobResp) String() string {

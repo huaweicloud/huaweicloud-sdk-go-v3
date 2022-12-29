@@ -37,7 +37,7 @@ type NodeResponse struct {
 	UpgradeFirmwareVersion *string `json:"upgrade_firmware_version,omitempty"`
 
 	// 固件升级状态，1、2、3分别代表升级中，升级失败，升级成功
-	FirmwareStatus *string `json:"firmware_status,omitempty"`
+	FirmwareStatus *int32 `json:"firmware_status,omitempty"`
 
 	FirmwareUpgradeRecord *[]FirmwareUpdateRecord `json:"firmware_upgrade_record,omitempty"`
 
@@ -54,16 +54,13 @@ type NodeResponse struct {
 	Cpu *int32 `json:"cpu,omitempty"`
 
 	// 设备GPU个数
-	GpuNum *interface{} `json:"gpu_num,omitempty"`
+	GpuNum *int32 `json:"gpu_num,omitempty"`
 
 	// 设备NPU个数
-	NpuNum *interface{} `json:"npu_num,omitempty"`
+	NpuNum *int32 `json:"npu_num,omitempty"`
 
 	// 主机IP列表
 	HostIps *[]string `json:"host_ips,omitempty"`
-
-	// 设备标签对列表
-	Tags *[]TagObject `json:"tags,omitempty"`
 }
 
 func (o NodeResponse) String() string {

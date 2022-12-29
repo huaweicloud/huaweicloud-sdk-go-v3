@@ -6,7 +6,6 @@ import (
 	"strings"
 )
 
-// 需要关联的Router(VPC)。
 type AssociateRouterReq struct {
 	Router *Router `json:"router"`
 }

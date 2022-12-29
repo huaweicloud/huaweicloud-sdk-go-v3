@@ -86,8 +86,12 @@ type ShowEdgeNodeResponse struct {
 	BasePath *BasePathDto `json:"base_path,omitempty"`
 
 	// 注册节点网关配置
-	HardwareModel  *string `json:"hardware_model,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	HardwareModel *string `json:"hardware_model,omitempty"`
+
+	OfflineCacheConfigs *OfflineCacheConfigsDto `json:"offline_cache_configs,omitempty"`
+
+	DeviceAuthInfo *DeviceAuthInfoDisplayDto `json:"device_auth_info,omitempty"`
+	HttpStatusCode int                       `json:"-"`
 }
 
 func (o ShowEdgeNodeResponse) String() string {

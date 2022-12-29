@@ -9,8 +9,8 @@ import (
 // Response Object
 type CreateWorkSpaceResponse struct {
 
-	// 创建的工作空间名
-	Name           *string `json:"name,omitempty"`
+	// 工作空间id
+	WorkspaceId    *string `json:"workspace_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -12,8 +12,10 @@ type StartTimeInfo struct {
 	// 任务启动时间
 	StartTime string `json:"start_time"`
 
+	// 任务运行频率（定时任务频率，每天运行还是单次运行）
 	Frequency *string `json:"frequency,omitempty"`
 
+	// 任务运行模式（按时间段运行还是按频率运行）
 	Mode *string `json:"mode,omitempty"`
 
 	// 每天运行时间段

@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type ShowRecordSetWithLineRequest struct {
+
+	// 所属zone的ID。
 	ZoneId string `json:"zone_id"`
 
 	RecordsetId string `json:"recordset_id"`

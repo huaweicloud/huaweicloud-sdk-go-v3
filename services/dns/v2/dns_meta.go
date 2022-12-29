@@ -27,6 +27,26 @@ func GenReqDefForAssociateEndpointIpaddress() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForAssociateResolveRuleRouter() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2.1/resolverrule/{resolverrule_id}/associaterouter").
+		WithResponse(new(model.AssociateResolveRuleRouterResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ResolverruleId").
+		WithJsonTag("resolverrule_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForBatchDeletePtrRecords() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
@@ -179,7 +199,7 @@ func GenReqDefForCreateRetrieval() *def.HttpRequestDef {
 
 func GenReqDefForCreateRetrievalVerification() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
+		WithMethod(http.MethodPost).
 		WithPath("/v2/retrieval/verification/{id}").
 		WithResponse(new(model.CreateRetrievalVerificationResponse)).
 		WithContentType("application/json")
@@ -260,7 +280,7 @@ func GenReqDefForDeleteResolveRule() *def.HttpRequestDef {
 func GenReqDefForDisassociateEndpointIpaddress() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("v2.1/endpoint/{endpoint_id}/ipaddress/{ipaddress_id}").
+		WithPath("/v2.1/endpoint/{endpoint_id}/ipaddress/{ipaddress_id}").
 		WithResponse(new(model.DisassociateEndpointIpaddressResponse)).
 		WithContentType("application/json")
 
@@ -272,6 +292,26 @@ func GenReqDefForDisassociateEndpointIpaddress() *def.HttpRequestDef {
 		WithName("IpaddressId").
 		WithJsonTag("ipaddress_id").
 		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDisassociateResolveRuleRouter() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2.1/resolverrule/{resolverrule_id}/disassociaterouter").
+		WithResponse(new(model.DisassociateResolveRuleRouterResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ResolverruleId").
+		WithJsonTag("resolverrule_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -615,6 +655,10 @@ func GenReqDefForUpdateLineGroups() *def.HttpRequestDef {
 		WithJsonTag("linegroup_id").
 		WithLocationType(def.Path))
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -770,7 +814,7 @@ func GenReqDefForUpdatePtrRecord() *def.HttpRequestDef {
 func GenReqDefForAssociateHealthCheck() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath(" /v2.1/recordsets/{recordset_id}/associatehealthcheck").
+		WithPath("/v2.1/recordsets/{recordset_id}/associatehealthcheck").
 		WithResponse(new(model.AssociateHealthCheckResponse)).
 		WithContentType("application/json")
 
@@ -930,7 +974,7 @@ func GenReqDefForDeleteRecordSets() *def.HttpRequestDef {
 func GenReqDefForDisassociateHealthCheck() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/v2.1/recordsets/{recordset_id}/associatehealthcheck").
+		WithPath("/v2.1/recordsets/{recordset_id}/disassociatehealthcheck").
 		WithResponse(new(model.DisassociateHealthCheckResponse)).
 		WithContentType("application/json")
 

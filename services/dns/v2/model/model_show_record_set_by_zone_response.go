@@ -10,9 +10,10 @@ import (
 type ShowRecordSetByZoneResponse struct {
 	Links *PageLink `json:"links,omitempty"`
 
+	// recordset列表。
 	Recordsets *[]ShowRecordSetByZoneResp `json:"recordsets,omitempty"`
 
-	Metadata       *Metedata `json:"metadata,omitempty"`
+	Metadata       *Metadata `json:"metadata,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }
 

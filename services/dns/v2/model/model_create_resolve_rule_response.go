@@ -8,10 +8,8 @@ import (
 
 // Response Object
 type CreateResolveRuleResponse struct {
-
-	// 查询resolver_rule的列表响应。
-	ResolverRules  *[]ResolveRuleParam `json:"resolver_rules,omitempty"`
-	HttpStatusCode int                 `json:"-"`
+	ResolverRule   *ResolveRuleParam `json:"resolver_rule,omitempty"`
+	HttpStatusCode int               `json:"-"`
 }
 
 func (o CreateResolveRuleResponse) String() string {

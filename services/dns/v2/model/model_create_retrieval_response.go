@@ -15,7 +15,7 @@ type CreateRetrievalResponse struct {
 	// 域名名称。
 	ZoneName *string `json:"zone_name,omitempty"`
 
-	Record *CreatePublicZoneFindRespRecord `json:"record,omitempty"`
+	Record *RecordInfo `json:"record,omitempty"`
 
 	// 状态，(PENDING,VERIFIED,CREATED,EXPIRED)
 	Status *string `json:"status,omitempty"`

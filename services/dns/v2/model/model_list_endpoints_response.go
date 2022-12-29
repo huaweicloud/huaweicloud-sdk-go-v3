@@ -9,10 +9,10 @@ import (
 // Response Object
 type ListEndpointsResponse struct {
 
-	// 查询公网Zone的列表响应。
+	// 查询终端节点响应列表。
 	Endpoints *[]EndpointResp `json:"endpoints,omitempty"`
 
-	Metadata       *Metedata `json:"metadata,omitempty"`
+	Metadata       *Metadata `json:"metadata,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }
 

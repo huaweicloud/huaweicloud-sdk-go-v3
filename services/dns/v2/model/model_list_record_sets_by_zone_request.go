@@ -12,7 +12,7 @@ type ListRecordSetsByZoneRequest struct {
 	// 所属zone id。
 	ZoneId string `json:"zone_id"`
 
-	// 分页查询起始的资源ID，为空时为查询第一页。
+	// 分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
 	Marker *string `json:"marker,omitempty"`
 
 	// 每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。

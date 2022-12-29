@@ -8,6 +8,8 @@ import (
 
 // Response Object
 type ListNameServersResponse struct {
+
+	// name server列表对象。
 	Nameservers    *[]NameServersResp `json:"nameservers,omitempty"`
 	HttpStatusCode int                `json:"-"`
 }

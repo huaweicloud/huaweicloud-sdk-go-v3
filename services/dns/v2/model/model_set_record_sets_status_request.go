@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type SetRecordSetsStatusRequest struct {
+
+	// 待设置Record Set的ID信息。
 	RecordsetId string `json:"recordset_id"`
 
 	Body *SetRecordSetsStatusReq `json:"body,omitempty"`

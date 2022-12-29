@@ -55,8 +55,6 @@ type UpdateDeploymentUsingPatchResponse struct {
 	// 部署的节点数，最小为1，集群部署也为1
 	NodeNum *int32 `json:"node_num,omitempty"`
 
-	DeploymentTags *string `json:"deployment_tags,omitempty"`
-
 	// 每个节点的部署结果
 	Result         *[]NodeResult `json:"result,omitempty"`
 	HttpStatusCode int           `json:"-"`

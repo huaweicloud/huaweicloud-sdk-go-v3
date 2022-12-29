@@ -16,7 +16,7 @@ type BatchDeleteLoadbalancerTagsRequestBody struct {
 	Action BatchDeleteLoadbalancerTagsRequestBodyAction `json:"action"`
 
 	// 标签对象列表。
-	Tags *[]ResourceTag `json:"tags,omitempty"`
+	Tags []ResourceTag `json:"tags"`
 }
 
 func (o BatchDeleteLoadbalancerTagsRequestBody) String() string {

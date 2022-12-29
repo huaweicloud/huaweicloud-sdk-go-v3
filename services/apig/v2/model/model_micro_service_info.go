@@ -14,6 +14,9 @@ type MicroServiceInfo struct {
 	// 微服务编号
 	Id *string `json:"id,omitempty"`
 
+	// 实例编号
+	InstanceId *string `json:"instance_id,omitempty"`
+
 	// 微服务类型： - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎
 	ServiceType *MicroServiceInfoServiceType `json:"service_type,omitempty"`
 

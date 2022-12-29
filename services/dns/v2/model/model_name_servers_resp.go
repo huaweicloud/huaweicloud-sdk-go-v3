@@ -14,6 +14,7 @@ type NameServersResp struct {
 	// 待查询的region ID。  当查询公网的名称服务器时，此处不填。
 	Region *string `json:"region,omitempty"`
 
+	// 名称服务器列表。
 	NsRecords *[]NsRecords `json:"ns_records,omitempty"`
 }
 

@@ -12,7 +12,7 @@ func GenReqDefForCreateHostedDirectConnect() *def.HttpRequestDef {
 		WithMethod(http.MethodPost).
 		WithPath("/v3/{project_id}/dcaas/hosted-connects").
 		WithResponse(new(model.CreateHostedDirectConnectResponse)).
-		WithContentType("application/json; charset=utf-8")
+		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").

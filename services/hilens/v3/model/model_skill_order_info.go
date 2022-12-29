@@ -31,7 +31,7 @@ type SkillOrderInfo struct {
 	MeasureType *string `json:"measure_type,omitempty"`
 
 	// 更新时间
-	UpdateTime *int32 `json:"update_time,omitempty"`
+	UpdateTime *int64 `json:"update_time,omitempty"`
 
 	// 通道数限制
 	ChannelLimit *int32 `json:"channel_limit,omitempty"`
@@ -55,7 +55,7 @@ type SkillOrderInfo struct {
 	ResourceType *string `json:"resource_type,omitempty"`
 
 	// 到期时间
-	ExpireTime *int32 `json:"expire_time,omitempty"`
+	ExpireTime *int64 `json:"expire_time,omitempty"`
 
 	// 计费单位 qps 表示按qps收费，road表示技能路数instance 表示按实例收费
 	MeasureUnit *string `json:"measure_unit,omitempty"`
@@ -88,7 +88,7 @@ type SkillOrderInfo struct {
 	SkillPlatform *string `json:"skill_platform,omitempty"`
 
 	// 订单购买限制
-	OrderLimit *string `json:"order_limit,omitempty"`
+	OrderLimit *int32 `json:"order_limit,omitempty"`
 
 	// 订单ID
 	OrderId *string `json:"order_id,omitempty"`

@@ -12,8 +12,7 @@ type BwChangeToPeriodReq struct {
 	// 待按需转包带宽列表
 	BandwidthIds []string `json:"bandwidth_ids"`
 
-	// 按需转包周期参数
-	ExtendParam *interface{} `json:"extendParam"`
+	ExtendParam *CreatePrePaidPublicipExtendParamOption `json:"extendParam"`
 }
 
 func (o BwChangeToPeriodReq) String() string {

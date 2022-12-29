@@ -10,9 +10,10 @@ import (
 type CreateRecordSetWithBatchLinesResponse struct {
 	Links *PageLink `json:"links,omitempty"`
 
+	// recordset的列表信息。
 	Recordsets *[]QueryRecordSetWithLineResp `json:"recordsets,omitempty"`
 
-	Metadata       *Metedata `json:"metadata,omitempty"`
+	Metadata       *Metadata `json:"metadata,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }
 

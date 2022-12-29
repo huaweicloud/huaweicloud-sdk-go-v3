@@ -20,7 +20,7 @@ type ApiAclCreate struct {
 	// ACL策略值，支持一个或多个值，使用英文半角逗号分隔
 	AclValue string `json:"acl_value"`
 
-	// 对象类型： - IP：IP地址 - DOMAIN：账号名 - DOMAIN_ID：账号ID
+	// 对象类型： - IP：IP地址 - DOMAIN：帐号名 - DOMAIN_ID：帐号ID
 	EntityType ApiAclCreateEntityType `json:"entity_type"`
 }
 

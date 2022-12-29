@@ -12,7 +12,7 @@ type BatchSetZonesStatusResponse struct {
 	// 待删除zone类型，当前仅支持 public 或 private
 	Zones *[]ZoneData `json:"zones,omitempty"`
 
-	Metadata       *Metedata `json:"metadata,omitempty"`
+	Metadata       *Metadata `json:"metadata,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }
 

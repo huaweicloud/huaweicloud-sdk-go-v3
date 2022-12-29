@@ -15,6 +15,9 @@ type QueryEdgeAppVersionBriefResponseDto struct {
 	EdgeAppId *string `json:"edge_app_id,omitempty"`
 
 	// 应用名称
+	Name *string `json:"name,omitempty"`
+
+	// 应用名称
 	Version *string `json:"version,omitempty"`
 
 	// 应用集成的边缘升得快版本

@@ -27,6 +27,9 @@ type EdgeNodeCreation struct {
 	// 系统架构。包括：arm64，arm32，x86_64。
 	Arch *string `json:"arch,omitempty"`
 
+	// 系统类型。包括：generalLinux通用系统，openHarmony。
+	OsType *string `json:"os_type,omitempty"`
+
 	// 实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
 	InstanceId *string `json:"instance_id,omitempty"`
 
@@ -38,6 +41,9 @@ type EdgeNodeCreation struct {
 
 	// 节点的安全等级，MEDIUM表示本地明文存储，HIGH表示本地加密存储。
 	SecurityLevel *string `json:"security_level,omitempty"`
+
+	// 节点的可靠性等级。
+	ReliabilityLevel *string `json:"reliability_level,omitempty"`
 
 	// 节点的存储周期，默认0天，取值范围0~7天，0天则不存储。
 	StoragePeriod *int32 `json:"storage_period,omitempty"`
@@ -53,8 +59,15 @@ type EdgeNodeCreation struct {
 	// 用户预置第三方边缘应用
 	Apps *[]EdgeAppInstanceDto `json:"apps,omitempty"`
 
+	// 网络接入方式类型
+	NetworkAccessPoint *string `json:"network_access_point,omitempty"`
+
 	// 网关型号
 	HardwareModel *string `json:"hardware_model,omitempty"`
+
+	OfflineCacheConfigs *OfflineCacheConfigsDto `json:"offline_cache_configs,omitempty"`
+
+	DeviceAuthInfo *DeviceAuthInfoDto `json:"device_auth_info,omitempty"`
 }
 
 func (o EdgeNodeCreation) String() string {

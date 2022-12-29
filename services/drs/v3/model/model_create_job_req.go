@@ -72,6 +72,11 @@ type CreateJobReq struct {
 
 	// 主备任务备任务所在可用区code，可以通过查询规格未售罄的可用区接口获取 - master_az和slave_az同时填写时生效 - 目前支持mysql，gaussdbv5ha-to-kafka
 	SlaveAz *string `json:"slave_az,omitempty"`
+
+	// 计费模式，不填默认为按需计费。 取值范围： - period：包年包月。 - on_demand：按需计费。
+	ChargingMode *CreateJobReqChargingMode `json:"charging_mode,omitempty"`
+
+	PeriodOrder *PeriodOrderInfo `json:"period_order,omitempty"`
 }
 
 func (o CreateJobReq) String() string {
@@ -346,6 +351,48 @@ func (c CreateJobReqTaskType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CreateJobReqTaskType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type CreateJobReqChargingMode struct {
+	value string
+}
+
+type CreateJobReqChargingModeEnum struct {
+	PERIOD    CreateJobReqChargingMode
+	ON_DEMAND CreateJobReqChargingMode
+}
+
+func GetCreateJobReqChargingModeEnum() CreateJobReqChargingModeEnum {
+	return CreateJobReqChargingModeEnum{
+		PERIOD: CreateJobReqChargingMode{
+			value: "period",
+		},
+		ON_DEMAND: CreateJobReqChargingMode{
+			value: "on_demand",
+		},
+	}
+}
+
+func (c CreateJobReqChargingMode) Value() string {
+	return c.value
+}
+
+func (c CreateJobReqChargingMode) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CreateJobReqChargingMode) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

@@ -9,9 +9,11 @@ import (
 // Response Object
 type ListResoleRulesResponse struct {
 
-	// 查询resolver_rule的列表响应。
-	ResolverRules  *[]ResolveRuleParam `json:"resolver_rules,omitempty"`
-	HttpStatusCode int                 `json:"-"`
+	// 解析记录资源列表。
+	ResolverRules *[]ResolveRuleParam `json:"resolver_rules,omitempty"`
+
+	Metadata       *Metadata `json:"metadata,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o ListResoleRulesResponse) String() string {

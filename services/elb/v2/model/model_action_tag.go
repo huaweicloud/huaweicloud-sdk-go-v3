@@ -13,7 +13,7 @@ type ActionTag struct {
 	Key string `json:"key"`
 
 	// 标签的值列表。每个值最大长度255个unicode字符， value之间为或的关系。
-	Values *[]string `json:"values,omitempty"`
+	Values []string `json:"values"`
 }
 
 func (o ActionTag) String() string {

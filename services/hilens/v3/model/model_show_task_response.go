@@ -18,7 +18,8 @@ type ShowTaskResponse struct {
 	// 作业描述
 	Description *string `json:"description,omitempty"`
 
-	Streams *TaskStream `json:"streams,omitempty"`
+	// 作业流详情
+	Streams *[]TaskStream `json:"streams,omitempty"`
 
 	// 在实例上运行成功的作业数
 	OkPodNumber *int32 `json:"ok_pod_number,omitempty"`

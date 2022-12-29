@@ -29,6 +29,7 @@ type ResolveRuleParam struct {
 	// 当前规则下的ip地址数量。
 	IpaddressCount *int32 `json:"ipaddress_count,omitempty"`
 
+	// 规则关联的vpc信息。
 	Routers *[]Router `json:"routers,omitempty"`
 
 	// 创建时间。

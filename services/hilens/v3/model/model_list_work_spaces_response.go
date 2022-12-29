@@ -12,8 +12,9 @@ type ListWorkSpacesResponse struct {
 	// 返回总条目数
 	Count *int32 `json:"count,omitempty"`
 
-	Workspaces     *WorkspaceListElem `json:"workspaces,omitempty"`
-	HttpStatusCode int                `json:"-"`
+	// 工作空间列表
+	Workspaces     *[]WorkspaceListElem `json:"workspaces,omitempty"`
+	HttpStatusCode int                  `json:"-"`
 }
 
 func (o ListWorkSpacesResponse) String() string {

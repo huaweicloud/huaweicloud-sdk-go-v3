@@ -5,6 +5,18 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/hilens/v3/model"
 )
 
+type AddDeploymentNodesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddDeploymentNodesInvoker) Invoke() (*model.AddDeploymentNodesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddDeploymentNodesResponse), nil
+	}
+}
+
 type BatchCreateNodeTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -26,6 +38,18 @@ func (i *CreateConfigMapInvoker) Invoke() (*model.CreateConfigMapResponse, error
 		return nil, err
 	} else {
 		return result.(*model.CreateConfigMapResponse), nil
+	}
+}
+
+type CreateDeploymentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDeploymentInvoker) Invoke() (*model.CreateDeploymentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDeploymentResponse), nil
 	}
 }
 
@@ -137,6 +161,18 @@ func (i *DeleteNodeInvoker) Invoke() (*model.DeleteNodeResponse, error) {
 	}
 }
 
+type DeletePodInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeletePodInvoker) Invoke() (*model.DeletePodResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeletePodResponse), nil
+	}
+}
+
 type DeleteResourceTagInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -206,6 +242,30 @@ func (i *ListConfigMapsInvoker) Invoke() (*model.ListConfigMapsResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.ListConfigMapsResponse), nil
+	}
+}
+
+type ListFirmwaresInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListFirmwaresInvoker) Invoke() (*model.ListFirmwaresResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListFirmwaresResponse), nil
+	}
+}
+
+type ListPlatformManagerInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPlatformManagerInvoker) Invoke() (*model.ListPlatformManagerResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPlatformManagerResponse), nil
 	}
 }
 
@@ -281,6 +341,18 @@ func (i *ShowConfigMapInvoker) Invoke() (*model.ShowConfigMapResponse, error) {
 	}
 }
 
+type ShowDeploymentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDeploymentInvoker) Invoke() (*model.ShowDeploymentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDeploymentResponse), nil
+	}
+}
+
 type ShowDeploymentPodsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -290,6 +362,18 @@ func (i *ShowDeploymentPodsInvoker) Invoke() (*model.ShowDeploymentPodsResponse,
 		return nil, err
 	} else {
 		return result.(*model.ShowDeploymentPodsResponse), nil
+	}
+}
+
+type ShowDeploymentsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDeploymentsInvoker) Invoke() (*model.ShowDeploymentsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDeploymentsResponse), nil
 	}
 }
 
@@ -437,6 +521,30 @@ func (i *ShowWorkSpaceInvoker) Invoke() (*model.ShowWorkSpaceResponse, error) {
 	}
 }
 
+type StartAndStopDeploymentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StartAndStopDeploymentInvoker) Invoke() (*model.StartAndStopDeploymentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StartAndStopDeploymentResponse), nil
+	}
+}
+
+type StartAndStopDeploymentPodInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StartAndStopDeploymentPodInvoker) Invoke() (*model.StartAndStopDeploymentPodResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StartAndStopDeploymentPodResponse), nil
+	}
+}
+
 type SwitchNodeConnectionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -470,6 +578,18 @@ func (i *UpdateConfigMapInvoker) Invoke() (*model.UpdateConfigMapResponse, error
 		return nil, err
 	} else {
 		return result.(*model.UpdateConfigMapResponse), nil
+	}
+}
+
+type UpdateDeploymentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDeploymentInvoker) Invoke() (*model.UpdateDeploymentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDeploymentResponse), nil
 	}
 }
 

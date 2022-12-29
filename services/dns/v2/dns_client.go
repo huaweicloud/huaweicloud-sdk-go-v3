@@ -19,7 +19,7 @@ func DnsClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// AssociateEndpointIpaddress 绑定ip地址。
+// AssociateEndpointIpaddress 绑定ip地址
 //
 // 绑定单个IP地址到终端节点
 //
@@ -34,10 +34,31 @@ func (c *DnsClient) AssociateEndpointIpaddress(request *model.AssociateEndpointI
 	}
 }
 
-// AssociateEndpointIpaddressInvoker 绑定ip地址。
+// AssociateEndpointIpaddressInvoker 绑定ip地址
 func (c *DnsClient) AssociateEndpointIpaddressInvoker(request *model.AssociateEndpointIpaddressRequest) *AssociateEndpointIpaddressInvoker {
 	requestDef := GenReqDefForAssociateEndpointIpaddress()
 	return &AssociateEndpointIpaddressInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AssociateResolveRuleRouter 在解析规则上关联VPC
+//
+// 在解析规则上关联VPC
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) AssociateResolveRuleRouter(request *model.AssociateResolveRuleRouterRequest) (*model.AssociateResolveRuleRouterResponse, error) {
+	requestDef := GenReqDefForAssociateResolveRuleRouter()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AssociateResolveRuleRouterResponse), nil
+	}
+}
+
+// AssociateResolveRuleRouterInvoker 在解析规则上关联VPC
+func (c *DnsClient) AssociateResolveRuleRouterInvoker(request *model.AssociateResolveRuleRouterRequest) *AssociateResolveRuleRouterInvoker {
+	requestDef := GenReqDefForAssociateResolveRuleRouter()
+	return &AssociateResolveRuleRouterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // BatchDeletePtrRecords 批量删除PTR
@@ -174,7 +195,7 @@ func (c *DnsClient) CreateCustomLineInvoker(request *model.CreateCustomLineReque
 	return &CreateCustomLineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateEndpoint 创建终端节点。
+// CreateEndpoint 创建终端节点
 //
 // 创建单个终端节点。
 //
@@ -189,13 +210,13 @@ func (c *DnsClient) CreateEndpoint(request *model.CreateEndpointRequest) (*model
 	}
 }
 
-// CreateEndpointInvoker 创建终端节点。
+// CreateEndpointInvoker 创建终端节点
 func (c *DnsClient) CreateEndpointInvoker(request *model.CreateEndpointRequest) *CreateEndpointInvoker {
 	requestDef := GenReqDefForCreateEndpoint()
 	return &CreateEndpointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateLineGroup 创建线路分组。
+// CreateLineGroup 创建线路分组
 //
 // 创建一个线路分组。
 //
@@ -210,13 +231,13 @@ func (c *DnsClient) CreateLineGroup(request *model.CreateLineGroupRequest) (*mod
 	}
 }
 
-// CreateLineGroupInvoker 创建线路分组。
+// CreateLineGroupInvoker 创建线路分组
 func (c *DnsClient) CreateLineGroupInvoker(request *model.CreateLineGroupRequest) *CreateLineGroupInvoker {
 	requestDef := GenReqDefForCreateLineGroup()
 	return &CreateLineGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateResolveRule 创建解析规则。
+// CreateResolveRule 创建解析规则
 //
 // 创建一个解析规则。
 //
@@ -231,13 +252,13 @@ func (c *DnsClient) CreateResolveRule(request *model.CreateResolveRuleRequest) (
 	}
 }
 
-// CreateResolveRuleInvoker 创建解析规则。
+// CreateResolveRuleInvoker 创建解析规则
 func (c *DnsClient) CreateResolveRuleInvoker(request *model.CreateResolveRuleRequest) *CreateResolveRuleInvoker {
 	requestDef := GenReqDefForCreateResolveRule()
 	return &CreateResolveRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateRetrieval 创建公网域名找回请求。
+// CreateRetrieval 创建公网域名找回请求
 //
 // 创建公网域名找回请求。
 //
@@ -252,13 +273,13 @@ func (c *DnsClient) CreateRetrieval(request *model.CreateRetrievalRequest) (*mod
 	}
 }
 
-// CreateRetrievalInvoker 创建公网域名找回请求。
+// CreateRetrievalInvoker 创建公网域名找回请求
 func (c *DnsClient) CreateRetrievalInvoker(request *model.CreateRetrievalRequest) *CreateRetrievalInvoker {
 	requestDef := GenReqDefForCreateRetrieval()
 	return &CreateRetrievalInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateRetrievalVerification 请求立即验证域名找回。
+// CreateRetrievalVerification 请求立即验证域名找回
 //
 // 请求服务器立即执行找回验证。
 //
@@ -273,7 +294,7 @@ func (c *DnsClient) CreateRetrievalVerification(request *model.CreateRetrievalVe
 	}
 }
 
-// CreateRetrievalVerificationInvoker 请求立即验证域名找回。
+// CreateRetrievalVerificationInvoker 请求立即验证域名找回
 func (c *DnsClient) CreateRetrievalVerificationInvoker(request *model.CreateRetrievalVerificationRequest) *CreateRetrievalVerificationInvoker {
 	requestDef := GenReqDefForCreateRetrievalVerification()
 	return &CreateRetrievalVerificationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -300,7 +321,7 @@ func (c *DnsClient) DeleteCustomLineInvoker(request *model.DeleteCustomLineReque
 	return &DeleteCustomLineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteEndpoint 删除终端节点。
+// DeleteEndpoint 删除终端节点
 //
 // 删除终端节点。
 //
@@ -315,13 +336,13 @@ func (c *DnsClient) DeleteEndpoint(request *model.DeleteEndpointRequest) (*model
 	}
 }
 
-// DeleteEndpointInvoker 删除终端节点。
+// DeleteEndpointInvoker 删除终端节点
 func (c *DnsClient) DeleteEndpointInvoker(request *model.DeleteEndpointRequest) *DeleteEndpointInvoker {
 	requestDef := GenReqDefForDeleteEndpoint()
 	return &DeleteEndpointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteLineGroup 删除线路分组。
+// DeleteLineGroup 删除线路分组
 //
 // 删除单个线路分组。
 //
@@ -336,13 +357,13 @@ func (c *DnsClient) DeleteLineGroup(request *model.DeleteLineGroupRequest) (*mod
 	}
 }
 
-// DeleteLineGroupInvoker 删除线路分组。
+// DeleteLineGroupInvoker 删除线路分组
 func (c *DnsClient) DeleteLineGroupInvoker(request *model.DeleteLineGroupRequest) *DeleteLineGroupInvoker {
 	requestDef := GenReqDefForDeleteLineGroup()
 	return &DeleteLineGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteResolveRule 删除解析规则。
+// DeleteResolveRule 删除解析规则
 //
 // 删除解析规则。
 //
@@ -357,13 +378,13 @@ func (c *DnsClient) DeleteResolveRule(request *model.DeleteResolveRuleRequest) (
 	}
 }
 
-// DeleteResolveRuleInvoker 删除解析规则。
+// DeleteResolveRuleInvoker 删除解析规则
 func (c *DnsClient) DeleteResolveRuleInvoker(request *model.DeleteResolveRuleRequest) *DeleteResolveRuleInvoker {
 	requestDef := GenReqDefForDeleteResolveRule()
 	return &DeleteResolveRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DisassociateEndpointIpaddress 解关联ip地址。
+// DisassociateEndpointIpaddress 解关联ip地址
 //
 // 解除endpoint绑定的IP。
 //
@@ -378,10 +399,31 @@ func (c *DnsClient) DisassociateEndpointIpaddress(request *model.DisassociateEnd
 	}
 }
 
-// DisassociateEndpointIpaddressInvoker 解关联ip地址。
+// DisassociateEndpointIpaddressInvoker 解关联ip地址
 func (c *DnsClient) DisassociateEndpointIpaddressInvoker(request *model.DisassociateEndpointIpaddressRequest) *DisassociateEndpointIpaddressInvoker {
 	requestDef := GenReqDefForDisassociateEndpointIpaddress()
 	return &DisassociateEndpointIpaddressInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DisassociateResolveRuleRouter 在解析规则上解关联VPC
+//
+// 在解析规则上解关联VPC
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) DisassociateResolveRuleRouter(request *model.DisassociateResolveRuleRouterRequest) (*model.DisassociateResolveRuleRouterResponse, error) {
+	requestDef := GenReqDefForDisassociateResolveRuleRouter()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DisassociateResolveRuleRouterResponse), nil
+	}
+}
+
+// DisassociateResolveRuleRouterInvoker 在解析规则上解关联VPC
+func (c *DnsClient) DisassociateResolveRuleRouterInvoker(request *model.DisassociateResolveRuleRouterRequest) *DisassociateResolveRuleRouterInvoker {
+	requestDef := GenReqDefForDisassociateResolveRuleRouter()
+	return &DisassociateResolveRuleRouterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListApiVersions 查询所有的云解析服务API版本号
@@ -426,7 +468,7 @@ func (c *DnsClient) ListCustomLineInvoker(request *model.ListCustomLineRequest) 
 	return &ListCustomLineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListEndpointIpaddresses 查询ip地址列表。
+// ListEndpointIpaddresses 查询ip地址列表
 //
 // 查询某个endpoint下的ip地址列表。
 //
@@ -441,13 +483,13 @@ func (c *DnsClient) ListEndpointIpaddresses(request *model.ListEndpointIpaddress
 	}
 }
 
-// ListEndpointIpaddressesInvoker 查询ip地址列表。
+// ListEndpointIpaddressesInvoker 查询ip地址列表
 func (c *DnsClient) ListEndpointIpaddressesInvoker(request *model.ListEndpointIpaddressesRequest) *ListEndpointIpaddressesInvoker {
 	requestDef := GenReqDefForListEndpointIpaddresses()
 	return &ListEndpointIpaddressesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListEndpointVpcs 查询vpc信息。
+// ListEndpointVpcs 查询vpc信息
 //
 // 查询vpc的终端节点信息。
 //
@@ -462,13 +504,13 @@ func (c *DnsClient) ListEndpointVpcs(request *model.ListEndpointVpcsRequest) (*m
 	}
 }
 
-// ListEndpointVpcsInvoker 查询vpc信息。
+// ListEndpointVpcsInvoker 查询vpc信息
 func (c *DnsClient) ListEndpointVpcsInvoker(request *model.ListEndpointVpcsRequest) *ListEndpointVpcsInvoker {
 	requestDef := GenReqDefForListEndpointVpcs()
 	return &ListEndpointVpcsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListEndpoints 查询终端节点列表。
+// ListEndpoints 查询终端节点列表
 //
 // 查询终端节点列表。
 //
@@ -483,13 +525,13 @@ func (c *DnsClient) ListEndpoints(request *model.ListEndpointsRequest) (*model.L
 	}
 }
 
-// ListEndpointsInvoker 查询终端节点列表。
+// ListEndpointsInvoker 查询终端节点列表
 func (c *DnsClient) ListEndpointsInvoker(request *model.ListEndpointsRequest) *ListEndpointsInvoker {
 	requestDef := GenReqDefForListEndpoints()
 	return &ListEndpointsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListLineGroups 查询线路分组列表。
+// ListLineGroups 查询线路分组列表
 //
 // 查询线路分组列表。
 //
@@ -504,7 +546,7 @@ func (c *DnsClient) ListLineGroups(request *model.ListLineGroupsRequest) (*model
 	}
 }
 
-// ListLineGroupsInvoker 查询线路分组列表。
+// ListLineGroupsInvoker 查询线路分组列表
 func (c *DnsClient) ListLineGroupsInvoker(request *model.ListLineGroupsRequest) *ListLineGroupsInvoker {
 	requestDef := GenReqDefForListLineGroups()
 	return &ListLineGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -531,7 +573,7 @@ func (c *DnsClient) ListNameServersInvoker(request *model.ListNameServersRequest
 	return &ListNameServersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListResoleRules 查询解析规则列表。
+// ListResoleRules 查询解析规则列表
 //
 // 查询解析规则的列表。
 //
@@ -546,7 +588,7 @@ func (c *DnsClient) ListResoleRules(request *model.ListResoleRulesRequest) (*mod
 	}
 }
 
-// ListResoleRulesInvoker 查询解析规则列表。
+// ListResoleRulesInvoker 查询解析规则列表
 func (c *DnsClient) ListResoleRulesInvoker(request *model.ListResoleRulesRequest) *ListResoleRulesInvoker {
 	requestDef := GenReqDefForListResoleRules()
 	return &ListResoleRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -594,7 +636,7 @@ func (c *DnsClient) ShowDomainQuotaInvoker(request *model.ShowDomainQuotaRequest
 	return &ShowDomainQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowEndpoint 查询endpoint。
+// ShowEndpoint 查询终端节点
 //
 // 查询终端单个节点。
 //
@@ -609,13 +651,13 @@ func (c *DnsClient) ShowEndpoint(request *model.ShowEndpointRequest) (*model.Sho
 	}
 }
 
-// ShowEndpointInvoker 查询endpoint。
+// ShowEndpointInvoker 查询终端节点
 func (c *DnsClient) ShowEndpointInvoker(request *model.ShowEndpointRequest) *ShowEndpointInvoker {
 	requestDef := GenReqDefForShowEndpoint()
 	return &ShowEndpointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowLineGroup 查询线路分组。
+// ShowLineGroup 查询线路分组
 //
 // 查询线路分组。
 //
@@ -630,13 +672,13 @@ func (c *DnsClient) ShowLineGroup(request *model.ShowLineGroupRequest) (*model.S
 	}
 }
 
-// ShowLineGroupInvoker 查询线路分组。
+// ShowLineGroupInvoker 查询线路分组
 func (c *DnsClient) ShowLineGroupInvoker(request *model.ShowLineGroupRequest) *ShowLineGroupInvoker {
 	requestDef := GenReqDefForShowLineGroup()
 	return &ShowLineGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowResoleRule 查询单个解析规则。
+// ShowResoleRule 查询单个解析规则
 //
 // 查询单个解析规则。
 //
@@ -651,13 +693,13 @@ func (c *DnsClient) ShowResoleRule(request *model.ShowResoleRuleRequest) (*model
 	}
 }
 
-// ShowResoleRuleInvoker 查询单个解析规则。
+// ShowResoleRuleInvoker 查询单个解析规则
 func (c *DnsClient) ShowResoleRuleInvoker(request *model.ShowResoleRuleRequest) *ShowResoleRuleInvoker {
 	requestDef := GenReqDefForShowResoleRule()
 	return &ShowResoleRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowRetrieval 查询域名找回。
+// ShowRetrieval 查询域名找回
 //
 // 查询域名找回请求。
 //
@@ -672,13 +714,13 @@ func (c *DnsClient) ShowRetrieval(request *model.ShowRetrievalRequest) (*model.S
 	}
 }
 
-// ShowRetrievalInvoker 查询域名找回。
+// ShowRetrievalInvoker 查询域名找回
 func (c *DnsClient) ShowRetrievalInvoker(request *model.ShowRetrievalRequest) *ShowRetrievalInvoker {
 	requestDef := GenReqDefForShowRetrieval()
 	return &ShowRetrievalInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowRetrievalVerification 查询域名找回结果。
+// ShowRetrievalVerification 查询域名找回结果
 //
 // 查询域名找回结果。
 //
@@ -693,7 +735,7 @@ func (c *DnsClient) ShowRetrievalVerification(request *model.ShowRetrievalVerifi
 	}
 }
 
-// ShowRetrievalVerificationInvoker 查询域名找回结果。
+// ShowRetrievalVerificationInvoker 查询域名找回结果
 func (c *DnsClient) ShowRetrievalVerificationInvoker(request *model.ShowRetrievalVerificationRequest) *ShowRetrievalVerificationInvoker {
 	requestDef := GenReqDefForShowRetrievalVerification()
 	return &ShowRetrievalVerificationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -741,7 +783,7 @@ func (c *DnsClient) UpdateEndpointInvoker(request *model.UpdateEndpointRequest) 
 	return &UpdateEndpointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateLineGroups 更新线路分组。
+// UpdateLineGroups 更新线路分组
 //
 // 更新单个线路分组。
 //
@@ -756,13 +798,13 @@ func (c *DnsClient) UpdateLineGroups(request *model.UpdateLineGroupsRequest) (*m
 	}
 }
 
-// UpdateLineGroupsInvoker 更新线路分组。
+// UpdateLineGroupsInvoker 更新线路分组
 func (c *DnsClient) UpdateLineGroupsInvoker(request *model.UpdateLineGroupsRequest) *UpdateLineGroupsInvoker {
 	requestDef := GenReqDefForUpdateLineGroups()
 	return &UpdateLineGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateResolveRule 修改解析规则。
+// UpdateResolveRule 修改解析规则
 //
 // 修改一个解析规则。
 //
@@ -777,7 +819,7 @@ func (c *DnsClient) UpdateResolveRule(request *model.UpdateResolveRuleRequest) (
 	}
 }
 
-// UpdateResolveRuleInvoker 修改解析规则。
+// UpdateResolveRuleInvoker 修改解析规则
 func (c *DnsClient) UpdateResolveRuleInvoker(request *model.UpdateResolveRuleRequest) *UpdateResolveRuleInvoker {
 	requestDef := GenReqDefForUpdateResolveRule()
 	return &UpdateResolveRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -888,7 +930,7 @@ func (c *DnsClient) UpdatePtrRecordInvoker(request *model.UpdatePtrRecordRequest
 	return &UpdatePtrRecordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// AssociateHealthCheck Record Set关联健康检查。
+// AssociateHealthCheck Record Set关联健康检查
 //
 // Record Set关联健康检查。
 //
@@ -903,13 +945,13 @@ func (c *DnsClient) AssociateHealthCheck(request *model.AssociateHealthCheckRequ
 	}
 }
 
-// AssociateHealthCheckInvoker Record Set关联健康检查。
+// AssociateHealthCheckInvoker Record Set关联健康检查
 func (c *DnsClient) AssociateHealthCheckInvoker(request *model.AssociateHealthCheckRequest) *AssociateHealthCheckInvoker {
 	requestDef := GenReqDefForAssociateHealthCheck()
 	return &AssociateHealthCheckInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// BatchDeleteRecordSetWithLine 批量删除某个Zone下的Record Set资源。
+// BatchDeleteRecordSetWithLine 批量删除某个Zone下的Record Set资源
 //
 // 批量删除某个Zone下的Record Set资源，当删除的资源不存在时，则默认删除成功。
 // 响应结果中只包含本次实际删除的资源。
@@ -925,13 +967,13 @@ func (c *DnsClient) BatchDeleteRecordSetWithLine(request *model.BatchDeleteRecor
 	}
 }
 
-// BatchDeleteRecordSetWithLineInvoker 批量删除某个Zone下的Record Set资源。
+// BatchDeleteRecordSetWithLineInvoker 批量删除某个Zone下的Record Set资源
 func (c *DnsClient) BatchDeleteRecordSetWithLineInvoker(request *model.BatchDeleteRecordSetWithLineRequest) *BatchDeleteRecordSetWithLineInvoker {
 	requestDef := GenReqDefForBatchDeleteRecordSetWithLine()
 	return &BatchDeleteRecordSetWithLineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// BatchUpdateRecordSetWithLine 批量修改RecordSet。
+// BatchUpdateRecordSetWithLine 批量修改RecordSet
 //
 // 批量修改RecordSet。属于原子性操作，请求Record Set将全部完成修改，或不做任何修改。
 // 仅公网Zone支持。
@@ -947,7 +989,7 @@ func (c *DnsClient) BatchUpdateRecordSetWithLine(request *model.BatchUpdateRecor
 	}
 }
 
-// BatchUpdateRecordSetWithLineInvoker 批量修改RecordSet。
+// BatchUpdateRecordSetWithLineInvoker 批量修改RecordSet
 func (c *DnsClient) BatchUpdateRecordSetWithLineInvoker(request *model.BatchUpdateRecordSetWithLineRequest) *BatchUpdateRecordSetWithLineInvoker {
 	requestDef := GenReqDefForBatchUpdateRecordSetWithLine()
 	return &BatchUpdateRecordSetWithLineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -974,7 +1016,7 @@ func (c *DnsClient) CreateRecordSetInvoker(request *model.CreateRecordSetRequest
 	return &CreateRecordSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateRecordSetWithBatchLines 批量线路创建RecordSet。仅公网Zone支持。
+// CreateRecordSetWithBatchLines 批量线路创建RecordSet
 //
 // 批量线路创建RecordSet。属于原子性操作，如果存在一个参数校验不通过，则创建失败。仅公网Zone支持。
 //
@@ -989,13 +1031,13 @@ func (c *DnsClient) CreateRecordSetWithBatchLines(request *model.CreateRecordSet
 	}
 }
 
-// CreateRecordSetWithBatchLinesInvoker 批量线路创建RecordSet。仅公网Zone支持。
+// CreateRecordSetWithBatchLinesInvoker 批量线路创建RecordSet
 func (c *DnsClient) CreateRecordSetWithBatchLinesInvoker(request *model.CreateRecordSetWithBatchLinesRequest) *CreateRecordSetWithBatchLinesInvoker {
 	requestDef := GenReqDefForCreateRecordSetWithBatchLines()
 	return &CreateRecordSetWithBatchLinesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateRecordSetWithLine 创建单个Record Set，仅适用于公网DNS
+// CreateRecordSetWithLine 创建单个Record Set
 //
 // 创建单个Record Set，仅适用于公网DNS
 //
@@ -1010,7 +1052,7 @@ func (c *DnsClient) CreateRecordSetWithLine(request *model.CreateRecordSetWithLi
 	}
 }
 
-// CreateRecordSetWithLineInvoker 创建单个Record Set，仅适用于公网DNS
+// CreateRecordSetWithLineInvoker 创建单个Record Set
 func (c *DnsClient) CreateRecordSetWithLineInvoker(request *model.CreateRecordSetWithLineRequest) *CreateRecordSetWithLineInvoker {
 	requestDef := GenReqDefForCreateRecordSetWithLine()
 	return &CreateRecordSetWithLineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1058,9 +1100,9 @@ func (c *DnsClient) DeleteRecordSetsInvoker(request *model.DeleteRecordSetsReque
 	return &DeleteRecordSetsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DisassociateHealthCheck Record Set解关联健康检查。
+// DisassociateHealthCheck Record Set解关联健康检查
 //
-// Record Set解关联健康检查。。
+// Record Set解关联健康检查。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) DisassociateHealthCheck(request *model.DisassociateHealthCheckRequest) (*model.DisassociateHealthCheckResponse, error) {
@@ -1073,7 +1115,7 @@ func (c *DnsClient) DisassociateHealthCheck(request *model.DisassociateHealthChe
 	}
 }
 
-// DisassociateHealthCheckInvoker Record Set解关联健康检查。
+// DisassociateHealthCheckInvoker Record Set解关联健康检查
 func (c *DnsClient) DisassociateHealthCheckInvoker(request *model.DisassociateHealthCheckRequest) *DisassociateHealthCheckInvoker {
 	requestDef := GenReqDefForDisassociateHealthCheck()
 	return &DisassociateHealthCheckInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1165,7 +1207,7 @@ func (c *DnsClient) SetRecordSetsStatusInvoker(request *model.SetRecordSetsStatu
 
 // ShowRecordSet 查询单个Record Set
 //
-// 查询单个Record Set
+// 查询单个Record Set。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ShowRecordSet(request *model.ShowRecordSetRequest) (*model.ShowRecordSetResponse, error) {
@@ -1205,7 +1247,7 @@ func (c *DnsClient) ShowRecordSetByZoneInvoker(request *model.ShowRecordSetByZon
 	return &ShowRecordSetByZoneInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowRecordSetWithLine 查询单个Record Set，仅适用于公网DNS
+// ShowRecordSetWithLine 查询单个Record Set
 //
 // 查询单个Record Set，仅适用于公网DNS
 //
@@ -1220,7 +1262,7 @@ func (c *DnsClient) ShowRecordSetWithLine(request *model.ShowRecordSetWithLineRe
 	}
 }
 
-// ShowRecordSetWithLineInvoker 查询单个Record Set，仅适用于公网DNS
+// ShowRecordSetWithLineInvoker 查询单个Record Set
 func (c *DnsClient) ShowRecordSetWithLineInvoker(request *model.ShowRecordSetWithLineRequest) *ShowRecordSetWithLineInvoker {
 	requestDef := GenReqDefForShowRecordSetWithLine()
 	return &ShowRecordSetWithLineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1709,7 +1751,7 @@ func (c *DnsClient) UpdatePublicZoneInvoker(request *model.UpdatePublicZoneReque
 	return &UpdatePublicZoneInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdatePublicZoneStatus 设置单个公网Zone状态，支持暂停、启用Zone
+// UpdatePublicZoneStatus 设置单个公网Zone状态
 //
 // 设置单个公网Zone状态，支持暂停、启用Zone
 //
@@ -1724,7 +1766,7 @@ func (c *DnsClient) UpdatePublicZoneStatus(request *model.UpdatePublicZoneStatus
 	}
 }
 
-// UpdatePublicZoneStatusInvoker 设置单个公网Zone状态，支持暂停、启用Zone
+// UpdatePublicZoneStatusInvoker 设置单个公网Zone状态
 func (c *DnsClient) UpdatePublicZoneStatusInvoker(request *model.UpdatePublicZoneStatusRequest) *UpdatePublicZoneStatusInvoker {
 	requestDef := GenReqDefForUpdatePublicZoneStatus()
 	return &UpdatePublicZoneStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

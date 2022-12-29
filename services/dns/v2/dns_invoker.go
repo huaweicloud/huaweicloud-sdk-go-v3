@@ -17,6 +17,18 @@ func (i *AssociateEndpointIpaddressInvoker) Invoke() (*model.AssociateEndpointIp
 	}
 }
 
+type AssociateResolveRuleRouterInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AssociateResolveRuleRouterInvoker) Invoke() (*model.AssociateResolveRuleRouterResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AssociateResolveRuleRouterResponse), nil
+	}
+}
+
 type BatchDeletePtrRecordsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -206,6 +218,18 @@ func (i *DisassociateEndpointIpaddressInvoker) Invoke() (*model.DisassociateEndp
 		return nil, err
 	} else {
 		return result.(*model.DisassociateEndpointIpaddressResponse), nil
+	}
+}
+
+type DisassociateResolveRuleRouterInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DisassociateResolveRuleRouterInvoker) Invoke() (*model.DisassociateResolveRuleRouterResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DisassociateResolveRuleRouterResponse), nil
 	}
 }
 

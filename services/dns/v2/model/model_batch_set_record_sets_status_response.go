@@ -9,10 +9,10 @@ import (
 // Response Object
 type BatchSetRecordSetsStatusResponse struct {
 
-	// 待删除zone类型，当前仅支持 public 或 private
+	// 待删除zone类型，当前仅支持public或private。
 	Recordsets *[]RecordsetData `json:"recordsets,omitempty"`
 
-	Metadata       *Metedata `json:"metadata,omitempty"`
+	Metadata       *Metadata `json:"metadata,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }
 

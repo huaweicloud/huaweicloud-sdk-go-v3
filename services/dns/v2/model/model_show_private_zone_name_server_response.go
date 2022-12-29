@@ -8,6 +8,8 @@ import (
 
 // Response Object
 type ShowPrivateZoneNameServerResponse struct {
+
+	// 名称服务器列表信息。
 	Nameservers    *[]PrivateNameServer `json:"nameservers,omitempty"`
 	HttpStatusCode int                  `json:"-"`
 }

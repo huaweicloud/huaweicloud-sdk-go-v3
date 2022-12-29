@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type ShowRecordSetByZoneRequest struct {
+
+	// 所属zone的ID。
 	ZoneId string `json:"zone_id"`
 
 	// 分页查询起始的资源ID，为空时为查询第一页。  默认值为空。

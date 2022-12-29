@@ -23,6 +23,12 @@ type JobEntities struct {
 
 	// 批量任务执行结果
 	Results *[]JobEntitiesResult `json:"results,omitempty"`
+
+	// 子任务结果列表
+	SubJobsResult *[]SubJobResult `json:"sub_jobs_result,omitempty"`
+
+	// 子任务ID列表
+	SubJobsList *[]string `json:"sub_jobs_list,omitempty"`
 }
 
 func (o JobEntities) String() string {

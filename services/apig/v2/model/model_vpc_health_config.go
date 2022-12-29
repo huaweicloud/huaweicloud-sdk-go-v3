@@ -27,7 +27,7 @@ type VpcHealthConfig struct {
 	// 正常阈值。判定VPC通道中主机正常的依据为：连续检查x成功，x为您设置的正常阈值。
 	ThresholdNormal int32 `json:"threshold_normal"`
 
-	// 异常阙值。判定VPC通道中主机异常的依据为：连续检查x失败，x为您设置的异常阈值。
+	// 异常阈值。判定VPC通道中主机异常的依据为：连续检查x失败，x为您设置的异常阈值。
 	ThresholdAbnormal int32 `json:"threshold_abnormal"`
 
 	// 间隔时间：连续两次检查的间隔时间，单位为秒。必须大于timeout字段取值。

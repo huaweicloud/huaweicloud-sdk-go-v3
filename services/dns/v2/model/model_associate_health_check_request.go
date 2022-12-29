@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type AssociateHealthCheckRequest struct {
+
+	// 待查询的recordset ID。
 	RecordsetId string `json:"recordset_id"`
 
 	Body *AssociateHealthCheckReq `json:"body,omitempty"`

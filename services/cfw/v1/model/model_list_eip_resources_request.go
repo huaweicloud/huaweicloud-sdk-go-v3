@@ -30,7 +30,7 @@ type ListEipResourcesRequest struct {
 	// 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
 	Offset int32 `json:"offset"`
 
-	// 企业项目id
+	// 企业项目id，用户支持企业项目后，由企业项目生成的id。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 设备键
@@ -38,6 +38,15 @@ type ListEipResourcesRequest struct {
 
 	// 地址类型0 ipv4,1 ipv6
 	AddressType *int32 `json:"address_type,omitempty"`
+
+	// 防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
+	FwInstanceId *string `json:"fw_instance_id,omitempty"`
+
+	// 所绑定防火墙id防火墙名称
+	FwKeyWord *string `json:"fw_key_word,omitempty"`
+
+	// 弹性公网ip的企业项目id
+	EpsId *string `json:"eps_id,omitempty"`
 }
 
 func (o ListEipResourcesRequest) String() string {

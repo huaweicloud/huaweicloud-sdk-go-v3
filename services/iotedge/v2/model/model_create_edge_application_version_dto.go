@@ -49,6 +49,12 @@ type CreateEdgeApplicationVersionDto struct {
 
 	// 应用实现的服务列表
 	Services *interface{} `json:"services,omitempty"`
+
+	// 驱动厂商
+	Supplier *string `json:"supplier,omitempty"`
+
+	// 模板id
+	TplId *string `json:"tpl_id,omitempty"`
 }
 
 func (o CreateEdgeApplicationVersionDto) String() string {

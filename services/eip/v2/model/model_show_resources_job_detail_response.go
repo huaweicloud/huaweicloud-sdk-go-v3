@@ -30,8 +30,8 @@ type ShowResourcesJobDetailResponse struct {
 	// 错误信息
 	FailReason *string `json:"fail_reason,omitempty"`
 
-	Entities       *SubJobs `json:"entities,omitempty"`
-	HttpStatusCode int      `json:"-"`
+	Entities       *SubJobsInfo `json:"entities,omitempty"`
+	HttpStatusCode int          `json:"-"`
 }
 
 func (o ShowResourcesJobDetailResponse) String() string {

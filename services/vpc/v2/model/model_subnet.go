@@ -1,11 +1,10 @@
 package model
 
 import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
-
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"strings"
 )
 
@@ -71,6 +70,15 @@ type Subnet struct {
 
 	// 功能说明：子网作用域 取值范围：center-表示作用域为中心；{azId}表示作用域为具体的AZ
 	Scope *string `json:"scope,omitempty"`
+
+	// 项目ID
+	TenantId string `json:"tenant_id"`
+
+	// 功能说明：资源创建UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+	CreatedAt *sdktime.SdkTime `json:"created_at"`
+
+	// 功能说明：资源更新UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+	UpdatedAt *sdktime.SdkTime `json:"updated_at"`
 }
 
 func (o Subnet) String() string {

@@ -13,7 +13,7 @@ type ShowUpgradeProgressResponse struct {
 	Version *string `json:"version,omitempty"`
 
 	// 固件升级状态，1:升级中 2:升级失败 3:升级成功
-	Status *string `json:"status,omitempty"`
+	Status *int32 `json:"status,omitempty"`
 
 	// 固件升级进度，用数字0-100表示
 	Progress *string `json:"progress,omitempty"`

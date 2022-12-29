@@ -12,7 +12,7 @@ import (
 // 创建负载均衡器参数。
 type CreateLoadBalancerOption struct {
 
-	// 负载均衡器ID（UUID）
+	// 负载均衡器ID（UUID）。不支持该字段，请勿使用。
 	Id *string `json:"id,omitempty"`
 
 	// 负载均衡器所在的项目ID。
@@ -60,7 +60,7 @@ type CreateLoadBalancerOption struct {
 	// 负载均衡器的管理状态。只能设置为true。默认：true。  [不支持该字段，请勿使用。](tag:dt,dt_test)
 	AdminStateUp *bool `json:"admin_state_up,omitempty"`
 
-	// 资源账单信息。  取值： - 空：按需计费。 - 非空：包周期计费。  格式为： order_id:product_id:region_id:project_id，如：  CS2107161019CDJZZ:OFFI569702121789763584:az1: 057ef081eb00d2732fd1c01a9be75e6f  [不支持该字段，请勿使用](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt)
+	// 资源账单信息。  取值： - 空：按需计费。 - 非空：包周期计费。  格式为： order_id:product_id:region_id:project_id，如：  CS2107161019CDJZZ:OFFI569702121789763584:az1: 057ef081eb00d2732fd1c01a9be75e6f  [不支持该字段，请勿使用](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,fcs)
 	BillingInfo *string `json:"billing_info,omitempty"`
 
 	Ipv6Bandwidth *BandwidthRef `json:"ipv6_bandwidth,omitempty"`
@@ -73,17 +73,17 @@ type CreateLoadBalancerOption struct {
 	// 下联面子网的网络ID列表。可以通过GET https://{VPC_Endpoint}/v1/{project_id}/subnets 响应参数中的neutron_network_id得到。  若不指定该字段，则按如下规则选择下联面网络： 1. 如果ELB实例开启ipv6，则选择ipv6_vip_virsubnet_id子网对应的网络ID。 2. 如果ELB实例没有开启ipv6，开启ipv4，则选择vip_subnet_cidr_id子网对应的网络ID。 3. 如果ELB实例没有选择私网，只开启公网，则会在当前负载均衡器所在的VPC中任意选一个子网，优选可用IP多的网络。  若指定多个下联面子网，则按顺序优先使用第一个子网来为负载均衡器下联面端口分配ip地址。  下联面子网必须属于该LB所在的VPC。
 	ElbVirsubnetIds *[]string `json:"elb_virsubnet_ids,omitempty"`
 
-	// 是否启用跨VPC后端转发。  开启跨VPC后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、其他公有云、云下数据中心的服务器。  [仅独享型负载均衡器支持该特性。 ](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,fcs,dt)  取值： - true：开启。 - false：不开启。  使用说明： - 开启不能关闭。
+	// 是否启用跨VPC后端转发。  开启跨VPC后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加 [其他VPC、](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,fcs) 其他公有云、云下数据中心的服务器。  [仅独享型负载均衡器支持该特性。 ](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,fcs,dt)  取值： - true：开启。 - false：不开启。  使用说明： - 开启不能关闭。  [荷兰region不支持该字段，请勿使用。](tag:dt)
 	IpTargetEnable *bool `json:"ip_target_enable,omitempty"`
 
-	// 是否开启删除保护。  取值：false不开启，true开启。默认false不开启。  > 退场时需要先关闭所有资源的删除保护开关。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42)
+	// 是否开启删除保护。  取值：false不开启，true开启。默认false不开启。  > 退场时需要先关闭所有资源的删除保护开关。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42)  [荷兰region不支持该字段，请勿使用。](tag:dt)
 	DeletionProtectionEnable *bool `json:"deletion_protection_enable,omitempty"`
 
 	PrepaidOptions *PrepaidCreateOption `json:"prepaid_options,omitempty"`
 
 	Autoscaling *CreateLoadbalancerAutoscalingOption `json:"autoscaling,omitempty"`
 
-	// WAF故障时的流量处理策略。discard:丢弃，forward: 转发到后端（默认）  使用说明：只有绑定了waf的LB实例，该字段才会生效。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt)
+	// WAF故障时的流量处理策略。discard:丢弃，forward: 转发到后端（默认）  使用说明：只有绑定了waf的LB实例，该字段才会生效。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,fcs,ctc)
 	WafFailureAction *CreateLoadBalancerOptionWafFailureAction `json:"waf_failure_action,omitempty"`
 }
 

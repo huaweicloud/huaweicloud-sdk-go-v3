@@ -11,6 +11,8 @@ type UpdateLineGroupsRequest struct {
 
 	// 待更新的线路分组ID。
 	LinegroupId string `json:"linegroup_id"`
+
+	Body *UpdateLineGroupsBody `json:"body,omitempty"`
 }
 
 func (o UpdateLineGroupsRequest) String() string {

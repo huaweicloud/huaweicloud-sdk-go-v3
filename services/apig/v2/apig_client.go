@@ -182,7 +182,7 @@ func (c *ApigClient) AttachPluginToApiInvoker(request *model.AttachPluginToApiRe
 
 // BatchCreateOrDeleteInstanceTags 批量添加或删除单个实例的标签
 //
-// 批量添加或删除单个实例的标签
+// 批量添加或删除单个实例的标签。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) BatchCreateOrDeleteInstanceTags(request *model.BatchCreateOrDeleteInstanceTagsRequest) (*model.BatchCreateOrDeleteInstanceTagsResponse, error) {
@@ -679,7 +679,7 @@ func (c *ApigClient) DeleteSpecialThrottlingConfigurationV2Invoker(request *mode
 
 // DetachApiFromPlugin 解除绑定插件的API
 //
-// 解除绑定在插件上的API
+// 解除绑定在插件上的API。
 // - 解绑及时生效
 //
 // Please refer to HUAWEI cloud API Explorer for details.
@@ -701,7 +701,7 @@ func (c *ApigClient) DetachApiFromPluginInvoker(request *model.DetachApiFromPlug
 
 // DetachPluginFromApi 解除绑定API的插件
 //
-// 解除绑定在API上的插件
+// 解除绑定在API上的插件。
 // - 解绑及时生效
 //
 // Please refer to HUAWEI cloud API Explorer for details.
@@ -786,7 +786,7 @@ func (c *ApigClient) DisassociateSignatureKeyV2Invoker(request *model.Disassocia
 
 // ImportMicroservice 导入微服务
 //
-// 导入微服务
+// 导入微服务。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ImportMicroservice(request *model.ImportMicroserviceRequest) (*model.ImportMicroserviceResponse, error) {
@@ -830,7 +830,7 @@ func (c *ApigClient) ListApiAttachablePluginsInvoker(request *model.ListApiAttac
 
 // ListApiAttachedPlugins 查询API下绑定的插件
 //
-// 查询指定API下绑定的插件信息
+// 查询指定API下绑定的插件信息。
 // - 用于查询指定API下已经绑定的插件列表信息
 // - 支持分页返回
 // - 支持插件名称模糊查询
@@ -1061,7 +1061,7 @@ func (c *ApigClient) ListEnvironmentsV2Invoker(request *model.ListEnvironmentsV2
 // app_jwt | 是否支持app_jwt认证方式。| 是 |
 // public_key | 是否支持public_key类型的后端签名。| 是 |
 // backend_token_allow | 是否支持普通租户透传token到后端。| 是 |
-// sign_basic | 签名秘钥是否支持basic类型。| 否 |
+// sign_basic | 签名密钥是否支持basic类型。| 否 |
 // multi_auth | API是否支持双重认证方式。| 否 |
 // backend_client_certificate | 是否开启后端双向认证。| 是 |
 // ssl_ciphers | 是否支持https加密套件。  | 是 |
@@ -1079,7 +1079,7 @@ func (c *ApigClient) ListEnvironmentsV2Invoker(request *model.ListEnvironmentsV2
 // app_acl | 是否支持流控策略。 | 否 |
 // set_resp_headers | 是否支持响应header插件。 | 否 |
 // vpc_backup | 是否支持VPC通道的主备配置。 | 否 |
-// sign_aes | 签名秘钥是否支持AES加密方式。 | 否 |
+// sign_aes | 签名密钥是否支持AES加密方式。 | 否 |
 // kafka_log | 是否支持增删改查kafka日志插件。 | 否 |
 // backend_retry_count | 是否支持API配置重试次数。 | 否 |
 // policy_sys_param | 策略后端条件来源是否支持系统参数。 | 否 |
@@ -1282,7 +1282,7 @@ func (c *ApigClient) ListPluginAttachableApisInvoker(request *model.ListPluginAt
 
 // ListPluginAttachedApis 查询插件下绑定的API
 //
-// 查询指定插件下绑定的API信息
+// 查询指定插件下绑定的API信息。
 // - 用于查询指定插件下已经绑定的API列表信息
 // - 支持分页返回
 // - 支持API名称模糊查询
@@ -3129,7 +3129,7 @@ func (c *ApigClient) ImportApiDefinitionsV2Invoker(request *model.ImportApiDefin
 
 // BatchAssociateCertsV2 域名绑定SSL证书
 //
-// 域名绑定SSL证书。目前暂时仅支持单个绑定,请求体当中的certificate_ids里面有且只能有一个证书ID
+// 域名绑定SSL证书。目前暂时仅支持单个绑定，请求体当中的certificate_ids里面有且只能有一个证书ID。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) BatchAssociateCertsV2(request *model.BatchAssociateCertsV2Request) (*model.BatchAssociateCertsV2Response, error) {
@@ -3150,7 +3150,7 @@ func (c *ApigClient) BatchAssociateCertsV2Invoker(request *model.BatchAssociateC
 
 // BatchAssociateDomainsV2 SSL证书绑定域名
 //
-// 域名绑定SSL证书
+// SSL证书绑定域名。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) BatchAssociateDomainsV2(request *model.BatchAssociateDomainsV2Request) (*model.BatchAssociateDomainsV2Response, error) {
@@ -3171,7 +3171,7 @@ func (c *ApigClient) BatchAssociateDomainsV2Invoker(request *model.BatchAssociat
 
 // BatchDisassociateCertsV2 域名解绑SSL证书
 //
-// 域名解绑SSL证书。目前暂时仅支持单个解绑,请求体当中的certificate_ids里面有且只能有一个证书ID
+// 域名解绑SSL证书。目前暂时仅支持单个解绑，请求体当中的certificate_ids里面有且只能有一个证书ID。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) BatchDisassociateCertsV2(request *model.BatchDisassociateCertsV2Request) (*model.BatchDisassociateCertsV2Response, error) {
@@ -3192,7 +3192,7 @@ func (c *ApigClient) BatchDisassociateCertsV2Invoker(request *model.BatchDisasso
 
 // BatchDisassociateDomainsV2 SSL证书解绑域名
 //
-// SSL证书解绑域名
+// SSL证书解绑域名。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) BatchDisassociateDomainsV2(request *model.BatchDisassociateDomainsV2Request) (*model.BatchDisassociateDomainsV2Response, error) {
@@ -3213,7 +3213,7 @@ func (c *ApigClient) BatchDisassociateDomainsV2Invoker(request *model.BatchDisas
 
 // CreateCertificateV2 创建SSL证书
 //
-// 创建SSL证书
+// 创建SSL证书。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) CreateCertificateV2(request *model.CreateCertificateV2Request) (*model.CreateCertificateV2Response, error) {
@@ -3234,7 +3234,7 @@ func (c *ApigClient) CreateCertificateV2Invoker(request *model.CreateCertificate
 
 // DeleteCertificateV2 删除SSL证书
 //
-// 删除ssl证书接口,删除时只有没有关联域名的证书才能被删除
+// 删除ssl证书接口，删除时只有没有关联域名的证书才能被删除。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) DeleteCertificateV2(request *model.DeleteCertificateV2Request) (*model.DeleteCertificateV2Response, error) {
@@ -3297,7 +3297,7 @@ func (c *ApigClient) ListCertificatesV2Invoker(request *model.ListCertificatesV2
 
 // ShowDetailsOfCertificateV2 查看证书详情
 //
-// 查看证书详情
+// 查看证书详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ShowDetailsOfCertificateV2(request *model.ShowDetailsOfCertificateV2Request) (*model.ShowDetailsOfCertificateV2Response, error) {
@@ -3318,7 +3318,7 @@ func (c *ApigClient) ShowDetailsOfCertificateV2Invoker(request *model.ShowDetail
 
 // UpdateCertificateV2 修改SSL证书
 //
-// 修改SSL证书
+// 修改SSL证书。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) UpdateCertificateV2(request *model.UpdateCertificateV2Request) (*model.UpdateCertificateV2Response, error) {

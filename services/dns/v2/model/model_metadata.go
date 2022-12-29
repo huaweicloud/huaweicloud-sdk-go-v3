@@ -6,17 +6,18 @@ import (
 	"strings"
 )
 
-type Metedata struct {
+// 返回满足过滤条件的资源总数。
+type Metadata struct {
 
 	// 满足查询条件的资源总数，不受分页（即limit、offset参数）影响。
 	TotalCount *int32 `json:"total_count,omitempty"`
 }
 
-func (o Metedata) String() string {
+func (o Metadata) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "Metedata struct{}"
+		return "Metadata struct{}"
 	}
 
-	return strings.Join([]string{"Metedata", string(data)}, " ")
+	return strings.Join([]string{"Metadata", string(data)}, " ")
 }

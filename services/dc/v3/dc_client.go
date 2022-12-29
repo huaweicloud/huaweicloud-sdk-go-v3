@@ -125,7 +125,7 @@ func (c *DcClient) ListHostedDirectConnectsInvoker(request *model.ListHostedDire
 	return &ListHostedDirectConnectsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowDirectConnect 查询物理连接详细信息
+// ShowDirectConnect 查询物理连接详情
 //
 // 查询物理连接详细信息.
 //
@@ -140,7 +140,7 @@ func (c *DcClient) ShowDirectConnect(request *model.ShowDirectConnectRequest) (*
 	}
 }
 
-// ShowDirectConnectInvoker 查询物理连接详细信息
+// ShowDirectConnectInvoker 查询物理连接详情
 func (c *DcClient) ShowDirectConnectInvoker(request *model.ShowDirectConnectRequest) *ShowDirectConnectInvoker {
 	requestDef := GenReqDefForShowDirectConnect()
 	return &ShowDirectConnectInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -340,9 +340,9 @@ func (c *DcClient) ShowResourceTagInvoker(request *model.ShowResourceTagRequest)
 	return &ShowResourceTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateVirtualGateway 创建虑拟网关
+// CreateVirtualGateway 创建虚拟网关
 //
-// 创建虑拟网关
+// 创建虚拟网关
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DcClient) CreateVirtualGateway(request *model.CreateVirtualGatewayRequest) (*model.CreateVirtualGatewayResponse, error) {
@@ -355,7 +355,7 @@ func (c *DcClient) CreateVirtualGateway(request *model.CreateVirtualGatewayReque
 	}
 }
 
-// CreateVirtualGatewayInvoker 创建虑拟网关
+// CreateVirtualGatewayInvoker 创建虚拟网关
 func (c *DcClient) CreateVirtualGatewayInvoker(request *model.CreateVirtualGatewayRequest) *CreateVirtualGatewayInvoker {
 	requestDef := GenReqDefForCreateVirtualGateway()
 	return &CreateVirtualGatewayInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -424,9 +424,9 @@ func (c *DcClient) ShowVirtualGatewayInvoker(request *model.ShowVirtualGatewayRe
 	return &ShowVirtualGatewayInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateVirtualGateway 修改虚拟网关信息
+// UpdateVirtualGateway 更新虚拟网关信息
 //
-// 修改虚拟网关的信息
+// 更新虚拟网关的信息
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DcClient) UpdateVirtualGateway(request *model.UpdateVirtualGatewayRequest) (*model.UpdateVirtualGatewayResponse, error) {
@@ -439,7 +439,7 @@ func (c *DcClient) UpdateVirtualGateway(request *model.UpdateVirtualGatewayReque
 	}
 }
 
-// UpdateVirtualGatewayInvoker 修改虚拟网关信息
+// UpdateVirtualGatewayInvoker 更新虚拟网关信息
 func (c *DcClient) UpdateVirtualGatewayInvoker(request *model.UpdateVirtualGatewayRequest) *UpdateVirtualGatewayInvoker {
 	requestDef := GenReqDefForUpdateVirtualGateway()
 	return &UpdateVirtualGatewayInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -529,9 +529,9 @@ func (c *DcClient) ShowVirtualInterfaceInvoker(request *model.ShowVirtualInterfa
 	return &ShowVirtualInterfaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateVirtualInterface 修改虚拟接口virtual_interface
+// UpdateVirtualInterface 更新虚拟接口
 //
-// 修改虚拟接口的详细信息
+// 更新虚拟接口的详细信息
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DcClient) UpdateVirtualInterface(request *model.UpdateVirtualInterfaceRequest) (*model.UpdateVirtualInterfaceResponse, error) {
@@ -544,7 +544,7 @@ func (c *DcClient) UpdateVirtualInterface(request *model.UpdateVirtualInterfaceR
 	}
 }
 
-// UpdateVirtualInterfaceInvoker 修改虚拟接口virtual_interface
+// UpdateVirtualInterfaceInvoker 更新虚拟接口
 func (c *DcClient) UpdateVirtualInterfaceInvoker(request *model.UpdateVirtualInterfaceRequest) *UpdateVirtualInterfaceInvoker {
 	requestDef := GenReqDefForUpdateVirtualInterface()
 	return &UpdateVirtualInterfaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

@@ -8,9 +8,11 @@ import (
 
 // Response Object
 type ListCustomLineResponse struct {
+
+	// 线路列表。
 	Lines *[]Line `json:"lines,omitempty"`
 
-	Metadata       *Metedata `json:"metadata,omitempty"`
+	Metadata       *Metadata `json:"metadata,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }
 

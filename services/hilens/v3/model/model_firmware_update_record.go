@@ -18,7 +18,7 @@ type FirmwareUpdateRecord struct {
 	FirmwareSize *int32 `json:"firmware_size,omitempty"`
 
 	// 固件升级时间
-	FirmwareUpgradeTime *int32 `json:"firmware_upgrade_time,omitempty"`
+	FirmwareUpgradeTime *string `json:"firmware_upgrade_time,omitempty"`
 
 	// 固件升级状态
 	Status *int32 `json:"status,omitempty"`

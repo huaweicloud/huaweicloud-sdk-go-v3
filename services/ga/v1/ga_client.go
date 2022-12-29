@@ -565,9 +565,9 @@ func (c *GaClient) ListRegionsInvoker(request *model.ListRegionsRequest) *ListRe
 	return &ListRegionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateTags 批量添加标签
+// CreateTags 创建资源标签
 //
-// 批量添加标签。
+// 创建资源标签。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) CreateTags(request *model.CreateTagsRequest) (*model.CreateTagsResponse, error) {
@@ -580,15 +580,15 @@ func (c *GaClient) CreateTags(request *model.CreateTagsRequest) (*model.CreateTa
 	}
 }
 
-// CreateTagsInvoker 批量添加标签
+// CreateTagsInvoker 创建资源标签
 func (c *GaClient) CreateTagsInvoker(request *model.CreateTagsRequest) *CreateTagsInvoker {
 	requestDef := GenReqDefForCreateTags()
 	return &CreateTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteTags 批量删除标签
+// DeleteTags 删除资源标签
 //
-// 批量删除标签。
+// 删除资源标签。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) DeleteTags(request *model.DeleteTagsRequest) (*model.DeleteTagsResponse, error) {
@@ -601,15 +601,15 @@ func (c *GaClient) DeleteTags(request *model.DeleteTagsRequest) (*model.DeleteTa
 	}
 }
 
-// DeleteTagsInvoker 批量删除标签
+// DeleteTagsInvoker 删除资源标签
 func (c *GaClient) DeleteTagsInvoker(request *model.DeleteTagsRequest) *DeleteTagsInvoker {
 	requestDef := GenReqDefForDeleteTags()
 	return &DeleteTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowResourceTags 查询资源已打标签
+// ShowResourceTags 查询特定资源标签
 //
-// 查询资源已打标签。
+// 查询特定资源标签。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaClient) ShowResourceTags(request *model.ShowResourceTagsRequest) (*model.ShowResourceTagsResponse, error) {
@@ -622,7 +622,7 @@ func (c *GaClient) ShowResourceTags(request *model.ShowResourceTagsRequest) (*mo
 	}
 }
 
-// ShowResourceTagsInvoker 查询资源已打标签
+// ShowResourceTagsInvoker 查询特定资源标签
 func (c *GaClient) ShowResourceTagsInvoker(request *model.ShowResourceTagsRequest) *ShowResourceTagsInvoker {
 	requestDef := GenReqDefForShowResourceTags()
 	return &ShowResourceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

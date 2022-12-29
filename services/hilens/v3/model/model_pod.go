@@ -38,7 +38,8 @@ type Pod struct {
 
 	Affinity *PodAffinity `json:"affinity,omitempty"`
 
-	Apps *AppDef `json:"apps,omitempty"`
+	// 应用部署信息
+	Apps *[]AppDef `json:"apps,omitempty"`
 
 	// 节点ID
 	NodeId *string `json:"node_id,omitempty"`

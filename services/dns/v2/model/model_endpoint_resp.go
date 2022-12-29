@@ -14,7 +14,7 @@ type EndpointResp struct {
 	// endpoint的名称。
 	Name *string `json:"name,omitempty"`
 
-	// endpoint的ID，uuid形式的一个资源标识。
+	// 终端节点方向。 取值： inbound，表示入站规则。 outbound，表示出站规则。
 	Direction *string `json:"direction,omitempty"`
 
 	// 资源状态。 取值范围：PENDING_CREATE, ACTIVE, PENDING_DELETE, ERROR。

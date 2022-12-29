@@ -7,12 +7,7 @@ import (
 )
 
 type Ipaddresses struct {
-
-	// 子网的网络id。
-	SubnetId string `json:"subnet_id"`
-
-	// 自定义ip地址，需在子网的网段内部。
-	Ip *string `json:"ip,omitempty"`
+	Ipaddress *IpaddressData `json:"ipaddress,omitempty"`
 }
 
 func (o Ipaddresses) String() string {

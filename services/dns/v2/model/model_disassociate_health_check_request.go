@@ -8,6 +8,8 @@ import (
 
 // Request Object
 type DisassociateHealthCheckRequest struct {
+
+	// Record Set关联健康检查。
 	RecordsetId string `json:"recordset_id"`
 
 	Body *AssociateHealthCheckReq `json:"body,omitempty"`

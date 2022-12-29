@@ -7,9 +7,7 @@ import (
 )
 
 type CreateCredentialRequestBody struct {
-
-	// 凭证的描述信息。
-	Description *string `json:"description,omitempty"`
+	Credential *CreateCredentialRequestBodyCredential `json:"credential,omitempty"`
 }
 
 func (o CreateCredentialRequestBody) String() string {

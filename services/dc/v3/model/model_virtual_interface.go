@@ -44,7 +44,7 @@ type VirtualInterface struct {
 	// 租户ID
 	TenantId *string `json:"tenant_id,omitempty"`
 
-	// 接口类型：private/public,
+	// 表示接口类型：private
 	Type *VirtualInterfaceType `json:"type,omitempty"`
 
 	// 虚拟网关的ID

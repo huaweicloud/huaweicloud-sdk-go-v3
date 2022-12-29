@@ -8,10 +8,8 @@ import (
 
 // Response Object
 type ShowEndpointResponse struct {
-
-	// 查询endpoint响应。
-	Endpoint       *interface{} `json:"endpoint,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	Endpoint       *EndpointResp `json:"endpoint,omitempty"`
+	HttpStatusCode int           `json:"-"`
 }
 
 func (o ShowEndpointResponse) String() string {

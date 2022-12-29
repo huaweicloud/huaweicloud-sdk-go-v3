@@ -48,6 +48,12 @@ type GetFirewallInstanceResponseRecord struct {
 
 	// 防火墙资源列表
 	Resources *[]FirewallInstanceResource `json:"resources,omitempty"`
+
+	// 防火墙名称
+	FwInstanceName *string `json:"fw_instance_name,omitempty"`
+
+	// 企业项目id，用户支持企业项目后，由企业项目生成的id。
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 
 func (o GetFirewallInstanceResponseRecord) String() string {

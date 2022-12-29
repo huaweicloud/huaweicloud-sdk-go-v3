@@ -8,8 +8,8 @@ import (
 
 // Response Object
 type UpdateEndpointResponse struct {
-	Endpoints      *[]EndpointResp `json:"endpoints,omitempty"`
-	HttpStatusCode int             `json:"-"`
+	Endpoint       *EndpointResp `json:"endpoint,omitempty"`
+	HttpStatusCode int           `json:"-"`
 }
 
 func (o UpdateEndpointResponse) String() string {

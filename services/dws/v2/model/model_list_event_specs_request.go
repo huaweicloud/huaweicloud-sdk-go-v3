@@ -23,6 +23,12 @@ type ListEventSpecsRequest struct {
 
 	// 事件标签
 	Tag *string `json:"tag,omitempty"`
+
+	// 偏移量
+	Offset *string `json:"offset,omitempty"`
+
+	// 限制条目数
+	Limit *string `json:"limit,omitempty"`
 }
 
 func (o ListEventSpecsRequest) String() string {

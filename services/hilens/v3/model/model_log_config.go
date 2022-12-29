@@ -10,7 +10,7 @@ import (
 type LogConfig struct {
 
 	// app：应用日志。 system：系统的日志
-	Component *string `json:"component,omitempty"`
+	Component string `json:"component"`
 
 	// 系统级日志可配置为/error/warning/info/debug ; 不传会默认为info。
 	Level *string `json:"level,omitempty"`
@@ -25,9 +25,7 @@ type LogConfig struct {
 	Size *int32 `json:"size,omitempty"`
 
 	// - LTS 将日志发送到云日志服务（Log Tank Service，简称LTS） - local 本地日志
-	Type *string `json:"type,omitempty"`
-
-	LogGroupId *string `json:"log_group_id,omitempty"`
+	Type string `json:"type"`
 }
 
 func (o LogConfig) String() string {

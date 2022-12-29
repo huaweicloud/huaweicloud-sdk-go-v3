@@ -23,6 +23,12 @@ type JobProgressEntities struct {
 
 	// 子任务ID
 	SubJobId *string `json:"subJobId,omitempty"`
+
+	// 子任务结果列表
+	SubJobsResult *[]SubJobResult `json:"sub_jobs_result,omitempty"`
+
+	// 子任务ID列表
+	SubJobsList *[]string `json:"sub_jobs_list,omitempty"`
 }
 
 func (o JobProgressEntities) String() string {

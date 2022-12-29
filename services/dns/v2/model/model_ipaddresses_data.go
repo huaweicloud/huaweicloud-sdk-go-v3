@@ -14,6 +14,9 @@ type IpaddressesData struct {
 	// endpoint的ID，uuid形式的一个资源标识。
 	Id *string `json:"id,omitempty"`
 
+	// ip地址信息。
+	Ip *string `json:"ip,omitempty"`
+
 	// 创建时间。
 	CreateTime *string `json:"create_time,omitempty"`
 

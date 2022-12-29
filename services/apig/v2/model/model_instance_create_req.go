@@ -58,6 +58,9 @@ type InstanceCreateReq struct {
 
 	// 标签列表。  一个实例默认最多支持创建20个标签
 	Tags *[]TmsKeyValue `json:"tags,omitempty"`
+
+	// 终端节点服务的名称。  长度不超过16个字符，允许输入大小写字母、数字、下划线、中划线。  如果您不填写该参数，系统生成的终端节点服务的名称为{region}.apig.{service_id}。 如果您填写该参数，系统生成的终端节点服务的名称为{region}.{vpcep_service_name}.{service_id}。 实例创建完成后，可以在实例管理->终端节点管理页面修改该名称。
+	VpcepServiceName *string `json:"vpcep_service_name,omitempty"`
 }
 
 func (o InstanceCreateReq) String() string {

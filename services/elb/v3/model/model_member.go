@@ -18,7 +18,7 @@ type Member struct {
 	// 后端服务器所在的项目ID。
 	ProjectId string `json:"project_id"`
 
-	// 所在后端服务器组ID。  注意：该字段当前仅GET /v3/{project_id}/elb/members 接口可见。
+	// 所在后端服务器组ID。  不支持该字段，请勿使用。
 	PoolId *string `json:"pool_id,omitempty"`
 
 	// 后端云服务器的管理状态。  取值：true、false。  虽然创建、更新请求支持该字段，但实际取值决定于后端云服务器对应的弹性云服务器是否存在。若存在，该值为true，否则，该值为false。
@@ -39,10 +39,10 @@ type Member struct {
 	// 当前后端服务器的IP地址版本，由后端系统自动根据传入的address字段确定。取值：v4、v6。
 	IpVersion string `json:"ip_version"`
 
-	// 设备所有者。  取值： - 空，表示后端服务器未关联到ECS。 - compute:{az_name}，表示关联到ECS，其中{az_name}表示ECS所在可用区名。  注意：该字段当前仅GET /v3/{project_id}/elb/members 接口可见。
+	// 设备所有者。  取值： - 空，表示后端服务器未关联到ECS。 - compute:{az_name}，表示关联到ECS，其中{az_name}表示ECS所在可用区名。  不支持该字段，请勿使用。
 	DeviceOwner *string `json:"device_owner,omitempty"`
 
-	// 关联的ECS ID，为空表示后端服务器未关联到ECS。  注意：该字段当前仅GET /v3/{project_id}/elb/members 接口可见。
+	// 关联的ECS ID，为空表示后端服务器未关联到ECS。  不支持该字段，请勿使用。
 	DeviceId *string `json:"device_id,omitempty"`
 
 	// 后端云服务器的健康状态。  取值： - ONLINE：后端云服务器正常。 - NO_MONITOR：后端云服务器所在的服务器组没有健康检查器。 - OFFLINE：后端云服务器关联的ECS服务器不存在或已关机。
@@ -51,10 +51,10 @@ type Member struct {
 	// 后端云服务器监听器粒度的的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_stauts为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。
 	Status []MemberStatus `json:"status"`
 
-	// 所属负载均衡器ID。  注意：该字段当前仅GET /v3/{project_id}/elb/members 接口可见。
+	// 所属负载均衡器ID。  不支持该字段，请勿使用。
 	LoadbalancerId *string `json:"loadbalancer_id,omitempty"`
 
-	// 后端云服务器关联的负载均衡器ID列表。  注意：该字段当前仅GET /v3/{project_id}/elb/members 接口可见。
+	// 后端云服务器关联的负载均衡器ID列表。  不支持该字段，请勿使用。
 	Loadbalancers *[]ResourceId `json:"loadbalancers,omitempty"`
 
 	// 创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,fcs,dt,hk_tm)

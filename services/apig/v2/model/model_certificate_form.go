@@ -26,6 +26,9 @@ type CertificateForm struct {
 
 	// 所属实例ID，当type=instance时必填
 	InstanceId *string `json:"instance_id,omitempty"`
+
+	// 信任的根证书CA
+	TrustedRootCa *string `json:"trusted_root_ca,omitempty"`
 }
 
 func (o CertificateForm) String() string {

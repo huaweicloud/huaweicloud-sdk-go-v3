@@ -10,7 +10,7 @@ import (
 type ListSecretsResponse struct {
 
 	// 数量
-	Count *string `json:"count,omitempty"`
+	Count *int32 `json:"count,omitempty"`
 
 	// 缪瑶详情列表
 	Secrets        *[]SecretDetail `json:"secrets,omitempty"`

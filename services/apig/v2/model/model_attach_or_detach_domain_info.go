@@ -14,6 +14,9 @@ type AttachOrDetachDomainInfo struct {
 
 	// 实例ID集合
 	InstanceIds *[]string `json:"instance_ids,omitempty"`
+
+	// 是否开启客户端证书校验。当绑定证书存在trusted_root_ca时，默认开启；当绑定证书不存在trusted_root_ca时，默认关闭。
+	VerifiedClientCertificateEnabled *bool `json:"verified_client_certificate_enabled,omitempty"`
 }
 
 func (o AttachOrDetachDomainInfo) String() string {

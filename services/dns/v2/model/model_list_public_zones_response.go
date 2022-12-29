@@ -13,7 +13,7 @@ type ListPublicZonesResponse struct {
 	// 查询公网Zone的列表响应。
 	Zones *[]PublicZoneResp `json:"zones,omitempty"`
 
-	Metadata       *Metedata `json:"metadata,omitempty"`
+	Metadata       *Metadata `json:"metadata,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }
 

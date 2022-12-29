@@ -56,6 +56,9 @@ type ListFlowLogsRequest struct {
 
 	// 每页显示个数
 	Limit int32 `json:"limit"`
+
+	// 企业项目id，用户支持企业项目后，由企业项目生成的id。
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 
 func (o ListFlowLogsRequest) String() string {

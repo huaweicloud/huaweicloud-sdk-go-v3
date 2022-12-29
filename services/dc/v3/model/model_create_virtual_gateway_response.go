@@ -9,7 +9,10 @@ import (
 // Response Object
 type CreateVirtualGatewayResponse struct {
 	VirtualGateway *VirtualGateway `json:"virtual_gateway,omitempty"`
-	HttpStatusCode int             `json:"-"`
+
+	// 操作请求ID
+	RequestId      *string `json:"request_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o CreateVirtualGatewayResponse) String() string {

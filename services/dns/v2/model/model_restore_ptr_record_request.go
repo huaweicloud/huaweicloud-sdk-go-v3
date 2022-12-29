@@ -8,8 +8,11 @@ import (
 
 // Request Object
 type RestorePtrRecordRequest struct {
+
+	// 域名所属的区域。
 	Region string `json:"region"`
 
+	// 待删除PTR ID。
 	FloatingipId string `json:"floatingip_id"`
 
 	Body *RestorePtrReq `json:"body,omitempty"`

@@ -19,6 +19,27 @@ func HiLensClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+// AddDeploymentNodes 批量部署
+//
+// 通过指定设备id列表或者设备标签将应用部署下发到多个设备上。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HiLensClient) AddDeploymentNodes(request *model.AddDeploymentNodesRequest) (*model.AddDeploymentNodesResponse, error) {
+	requestDef := GenReqDefForAddDeploymentNodes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddDeploymentNodesResponse), nil
+	}
+}
+
+// AddDeploymentNodesInvoker 批量部署
+func (c *HiLensClient) AddDeploymentNodesInvoker(request *model.AddDeploymentNodesRequest) *AddDeploymentNodesInvoker {
+	requestDef := GenReqDefForAddDeploymentNodes()
+	return &AddDeploymentNodesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchCreateNodeTags 批量添加节点标签
 //
 // 专业版HiLens控制台标签管理，用户选择多个设备，批量添加多个标签。
@@ -59,6 +80,27 @@ func (c *HiLensClient) CreateConfigMap(request *model.CreateConfigMapRequest) (*
 func (c *HiLensClient) CreateConfigMapInvoker(request *model.CreateConfigMapRequest) *CreateConfigMapInvoker {
 	requestDef := GenReqDefForCreateConfigMap()
 	return &CreateConfigMapInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateDeployment 创建应用部署
+//
+// 创建应用部署。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HiLensClient) CreateDeployment(request *model.CreateDeploymentRequest) (*model.CreateDeploymentResponse, error) {
+	requestDef := GenReqDefForCreateDeployment()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDeploymentResponse), nil
+	}
+}
+
+// CreateDeploymentInvoker 创建应用部署
+func (c *HiLensClient) CreateDeploymentInvoker(request *model.CreateDeploymentRequest) *CreateDeploymentInvoker {
+	requestDef := GenReqDefForCreateDeployment()
+	return &CreateDeploymentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateNode 注册设备
@@ -250,6 +292,27 @@ func (c *HiLensClient) DeleteNodeInvoker(request *model.DeleteNodeRequest) *Dele
 	return &DeleteNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeletePod 删除应用实例
+//
+// 删除指定实例。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HiLensClient) DeletePod(request *model.DeletePodRequest) (*model.DeletePodResponse, error) {
+	requestDef := GenReqDefForDeletePod()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeletePodResponse), nil
+	}
+}
+
+// DeletePodInvoker 删除应用实例
+func (c *HiLensClient) DeletePodInvoker(request *model.DeletePodRequest) *DeletePodInvoker {
+	requestDef := GenReqDefForDeletePod()
+	return &DeletePodInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteResourceTag 删除资源标签
 //
 // 专业版HiLens控制台标签管理，删除对应资源的标签
@@ -374,6 +437,48 @@ func (c *HiLensClient) ListConfigMaps(request *model.ListConfigMapsRequest) (*mo
 func (c *HiLensClient) ListConfigMapsInvoker(request *model.ListConfigMapsRequest) *ListConfigMapsInvoker {
 	requestDef := GenReqDefForListConfigMaps()
 	return &ListConfigMapsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListFirmwares 查询固件列表
+//
+// 查看指定固件历史版本信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HiLensClient) ListFirmwares(request *model.ListFirmwaresRequest) (*model.ListFirmwaresResponse, error) {
+	requestDef := GenReqDefForListFirmwares()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFirmwaresResponse), nil
+	}
+}
+
+// ListFirmwaresInvoker 查询固件列表
+func (c *HiLensClient) ListFirmwaresInvoker(request *model.ListFirmwaresRequest) *ListFirmwaresInvoker {
+	requestDef := GenReqDefForListFirmwares()
+	return &ListFirmwaresInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPlatformManager 获取运行服务费订单列表
+//
+// 获取平台管理费列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HiLensClient) ListPlatformManager(request *model.ListPlatformManagerRequest) (*model.ListPlatformManagerResponse, error) {
+	requestDef := GenReqDefForListPlatformManager()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPlatformManagerResponse), nil
+	}
+}
+
+// ListPlatformManagerInvoker 获取运行服务费订单列表
+func (c *HiLensClient) ListPlatformManagerInvoker(request *model.ListPlatformManagerRequest) *ListPlatformManagerInvoker {
+	requestDef := GenReqDefForListPlatformManager()
+	return &ListPlatformManagerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListResourceTags 查询某资源类型的标签
@@ -502,6 +607,27 @@ func (c *HiLensClient) ShowConfigMapInvoker(request *model.ShowConfigMapRequest)
 	return &ShowConfigMapInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowDeployment 查询应用部署详情
+//
+// 获取部署的详情信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HiLensClient) ShowDeployment(request *model.ShowDeploymentRequest) (*model.ShowDeploymentResponse, error) {
+	requestDef := GenReqDefForShowDeployment()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDeploymentResponse), nil
+	}
+}
+
+// ShowDeploymentInvoker 查询应用部署详情
+func (c *HiLensClient) ShowDeploymentInvoker(request *model.ShowDeploymentRequest) *ShowDeploymentInvoker {
+	requestDef := GenReqDefForShowDeployment()
+	return &ShowDeploymentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowDeploymentPods 查询应用实例列表
 //
 // 获取用户实例列表。
@@ -521,6 +647,27 @@ func (c *HiLensClient) ShowDeploymentPods(request *model.ShowDeploymentPodsReque
 func (c *HiLensClient) ShowDeploymentPodsInvoker(request *model.ShowDeploymentPodsRequest) *ShowDeploymentPodsInvoker {
 	requestDef := GenReqDefForShowDeploymentPods()
 	return &ShowDeploymentPodsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDeployments 查询应用部署列表
+//
+// 获取部署列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HiLensClient) ShowDeployments(request *model.ShowDeploymentsRequest) (*model.ShowDeploymentsResponse, error) {
+	requestDef := GenReqDefForShowDeployments()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDeploymentsResponse), nil
+	}
+}
+
+// ShowDeploymentsInvoker 查询应用部署列表
+func (c *HiLensClient) ShowDeploymentsInvoker(request *model.ShowDeploymentsRequest) *ShowDeploymentsInvoker {
+	requestDef := GenReqDefForShowDeployments()
+	return &ShowDeploymentsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowNode 查询设备详情
@@ -775,6 +922,48 @@ func (c *HiLensClient) ShowWorkSpaceInvoker(request *model.ShowWorkSpaceRequest)
 	return &ShowWorkSpaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// StartAndStopDeployment 暂停、继续部署负载
+//
+// 启动/暂停应用部署。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HiLensClient) StartAndStopDeployment(request *model.StartAndStopDeploymentRequest) (*model.StartAndStopDeploymentResponse, error) {
+	requestDef := GenReqDefForStartAndStopDeployment()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StartAndStopDeploymentResponse), nil
+	}
+}
+
+// StartAndStopDeploymentInvoker 暂停、继续部署负载
+func (c *HiLensClient) StartAndStopDeploymentInvoker(request *model.StartAndStopDeploymentRequest) *StartAndStopDeploymentInvoker {
+	requestDef := GenReqDefForStartAndStopDeployment()
+	return &StartAndStopDeploymentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StartAndStopDeploymentPod 启动/停止部署下的指定实例
+//
+// 启动/停止部署下的指定实例。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HiLensClient) StartAndStopDeploymentPod(request *model.StartAndStopDeploymentPodRequest) (*model.StartAndStopDeploymentPodResponse, error) {
+	requestDef := GenReqDefForStartAndStopDeploymentPod()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StartAndStopDeploymentPodResponse), nil
+	}
+}
+
+// StartAndStopDeploymentPodInvoker 启动/停止部署下的指定实例
+func (c *HiLensClient) StartAndStopDeploymentPodInvoker(request *model.StartAndStopDeploymentPodRequest) *StartAndStopDeploymentPodInvoker {
+	requestDef := GenReqDefForStartAndStopDeploymentPod()
+	return &StartAndStopDeploymentPodInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SwitchNodeConnection 启停设备
 //
 // 该API用于启用停用设备。被停用的设备将无法连接到云端服务，重新启用设备恢复连接。
@@ -836,6 +1025,27 @@ func (c *HiLensClient) UpdateConfigMap(request *model.UpdateConfigMapRequest) (*
 func (c *HiLensClient) UpdateConfigMapInvoker(request *model.UpdateConfigMapRequest) *UpdateConfigMapInvoker {
 	requestDef := GenReqDefForUpdateConfigMap()
 	return &UpdateConfigMapInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDeployment 更新应用部署
+//
+// 更新应用部署相关信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HiLensClient) UpdateDeployment(request *model.UpdateDeploymentRequest) (*model.UpdateDeploymentResponse, error) {
+	requestDef := GenReqDefForUpdateDeployment()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDeploymentResponse), nil
+	}
+}
+
+// UpdateDeploymentInvoker 更新应用部署
+func (c *HiLensClient) UpdateDeploymentInvoker(request *model.UpdateDeploymentRequest) *UpdateDeploymentInvoker {
+	requestDef := GenReqDefForUpdateDeployment()
+	return &UpdateDeploymentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateDeploymentUsingPatch 部分更新应用部署

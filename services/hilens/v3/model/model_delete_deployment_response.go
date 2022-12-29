@@ -8,8 +8,10 @@ import (
 
 // Response Object
 type DeleteDeploymentResponse struct {
-	Body           map[string]string `json:"body,omitempty"`
-	HttpStatusCode int               `json:"-"`
+
+	// 部署Id
+	DeploymentId   *string `json:"deployment_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o DeleteDeploymentResponse) String() string {

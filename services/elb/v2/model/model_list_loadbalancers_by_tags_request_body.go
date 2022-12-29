@@ -23,9 +23,6 @@ type ListLoadbalancersByTagsRequestBody struct {
 
 	// 要搜索的标签值
 	Tags *[]ActionTag `json:"tags,omitempty"`
-
-	// 查询不包含任何标签的资源，该字段为true时，忽略tags字段的查询条件。
-	WithoutAnyTag *bool `json:"without_any_tag,omitempty"`
 }
 
 func (o ListLoadbalancersByTagsRequestBody) String() string {

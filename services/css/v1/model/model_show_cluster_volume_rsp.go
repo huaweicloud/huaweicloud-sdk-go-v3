@@ -13,7 +13,7 @@ type ShowClusterVolumeRsp struct {
 	Type *string `json:"type,omitempty"`
 
 	// 实例磁盘大小。
-	Size *string `json:"size,omitempty"`
+	Size *int32 `json:"size,omitempty"`
 }
 
 func (o ShowClusterVolumeRsp) String() string {

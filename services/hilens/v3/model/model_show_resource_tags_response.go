@@ -10,7 +10,7 @@ import (
 type ShowResourceTagsResponse struct {
 
 	// 满足条件的总数
-	Total *int32 `json:"total,omitempty"`
+	Count *int32 `json:"count,omitempty"`
 
 	// 资源标签对列表
 	Tags           *[]TagObject `json:"tags,omitempty"`

@@ -9,12 +9,6 @@ import (
 // 创建技能订单请求体
 type CreateSkillOrderFrom struct {
 
-	// 技能列表
-	Data *[]SkillInfo `json:"data,omitempty"`
-
-	// 总数量
-	Total *int32 `json:"total,omitempty"`
-
 	// 技能ID
 	SkillId string `json:"skill_id"`
 

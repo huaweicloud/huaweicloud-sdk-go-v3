@@ -8,6 +8,12 @@ import (
 
 // Request Object
 type ListAlarmSubsRequest struct {
+
+	// 偏移量
+	Offset *string `json:"offset,omitempty"`
+
+	// 限制条目数
+	Limit *string `json:"limit,omitempty"`
 }
 
 func (o ListAlarmSubsRequest) String() string {

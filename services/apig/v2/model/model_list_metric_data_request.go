@@ -48,17 +48,17 @@ type ListMetricDataRequestDim struct {
 }
 
 type ListMetricDataRequestDimEnum struct {
-	INBOUND  ListMetricDataRequestDim
-	OUTBOUND ListMetricDataRequestDim
+	INBOUND_EIP  ListMetricDataRequestDim
+	OUTBOUND_EIP ListMetricDataRequestDim
 }
 
 func GetListMetricDataRequestDimEnum() ListMetricDataRequestDimEnum {
 	return ListMetricDataRequestDimEnum{
-		INBOUND: ListMetricDataRequestDim{
-			value: "inbound",
+		INBOUND_EIP: ListMetricDataRequestDim{
+			value: "inbound_eip",
 		},
-		OUTBOUND: ListMetricDataRequestDim{
-			value: "outbound",
+		OUTBOUND_EIP: ListMetricDataRequestDim{
+			value: "outbound_eip",
 		},
 	}
 }

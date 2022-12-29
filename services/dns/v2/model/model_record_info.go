@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-type CreatePublicZoneFindRespRecord struct {
+type RecordInfo struct {
 
 	// 找回记录host名称。
 	Host *string `json:"host,omitempty"`
@@ -15,11 +15,11 @@ type CreatePublicZoneFindRespRecord struct {
 	Value *string `json:"value,omitempty"`
 }
 
-func (o CreatePublicZoneFindRespRecord) String() string {
+func (o RecordInfo) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "CreatePublicZoneFindRespRecord struct{}"
+		return "RecordInfo struct{}"
 	}
 
-	return strings.Join([]string{"CreatePublicZoneFindRespRecord", string(data)}, " ")
+	return strings.Join([]string{"RecordInfo", string(data)}, " ")
 }

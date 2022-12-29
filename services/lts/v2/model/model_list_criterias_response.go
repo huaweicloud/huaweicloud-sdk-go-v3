@@ -8,10 +8,8 @@ import (
 
 // Response Object
 type ListCriteriasResponse struct {
-
-	// 快速查询id
-	Id             *string `json:"id,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	SearchCriterias *[]GetQuerySearchCriteriasBody `json:"search_criterias,omitempty"`
+	HttpStatusCode  int                            `json:"-"`
 }
 
 func (o ListCriteriasResponse) String() string {

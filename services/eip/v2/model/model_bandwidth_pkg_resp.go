@@ -25,7 +25,7 @@ type BandwidthPkgResp struct {
 	PkgSize int32 `json:"pkgSize"`
 
 	// - 功能说明：租户id
-	TenantId *string `json:"tenant_id,omitempty"`
+	TenantId string `json:"tenantId"`
 
 	// - 功能说明：加油包订单相关信息格式：非空时值为''orderId:productId''
 	BillingInfo string `json:"billingInfo"`

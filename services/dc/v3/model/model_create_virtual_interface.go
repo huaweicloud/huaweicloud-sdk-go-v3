@@ -21,7 +21,7 @@ type CreateVirtualInterface struct {
 	// 虚拟接口关联的物理专线ID
 	DirectConnectId *string `json:"direct_connect_id,omitempty"`
 
-	// 虚拟接口的类型,private/public
+	// 虚拟接口的类型,private
 	Type CreateVirtualInterfaceType `json:"type"`
 
 	// 接入网关类型：VGW/GDGW/LGW
@@ -33,19 +33,19 @@ type CreateVirtualInterface struct {
 	// 虚拟接口接入带宽
 	Bandwidth int32 `json:"bandwidth"`
 
-	// 云侧网关IPv4接口地址
+	// 云侧网关IPv4接口地址,如果address_family是IPv4，是必选参数
 	LocalGatewayV4Ip *string `json:"local_gateway_v4_ip,omitempty"`
 
-	// 客户侧网关IPv4接口地址
+	// 客户侧网关IPv4接口地址,如果address_family是IPv4，是必选参数
 	RemoteGatewayV4Ip *string `json:"remote_gateway_v4_ip,omitempty"`
 
 	// 接口的地址簇类型，ipv4，ipv6
 	AddressFamily *string `json:"address_family,omitempty"`
 
-	// 云侧网关IPv6接口地址
+	// 云侧网关IPv6接口地址,如果address_family是IPv6，是必选参数
 	LocalGatewayV6Ip *string `json:"local_gateway_v6_ip,omitempty"`
 
-	// 客户侧网关IPv6接口地址
+	// 客户侧网关IPv6接口地址,如果address_family是IPv6，是必选参数
 	RemoteGatewayV6Ip *string `json:"remote_gateway_v6_ip,omitempty"`
 
 	// 虚拟风关连接的虚拟网关的ID

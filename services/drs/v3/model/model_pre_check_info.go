@@ -34,12 +34,16 @@ type PreCheckInfoPrecheckMode struct {
 
 type PreCheckInfoPrecheckModeEnum struct {
 	FOR_START_JOB PreCheckInfoPrecheckMode
+	FOR_RETRY_JOB PreCheckInfoPrecheckMode
 }
 
 func GetPreCheckInfoPrecheckModeEnum() PreCheckInfoPrecheckModeEnum {
 	return PreCheckInfoPrecheckModeEnum{
 		FOR_START_JOB: PreCheckInfoPrecheckMode{
 			value: "forStartJob",
+		},
+		FOR_RETRY_JOB: PreCheckInfoPrecheckMode{
+			value: "forRetryJob",
 		},
 	}
 }

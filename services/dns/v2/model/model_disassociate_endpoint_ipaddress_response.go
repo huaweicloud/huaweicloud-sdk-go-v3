@@ -8,10 +8,8 @@ import (
 
 // Response Object
 type DisassociateEndpointIpaddressResponse struct {
-
-	// 查询公网Zone的列表响应。
-	Endpoints      *[]EndpointResp `json:"endpoints,omitempty"`
-	HttpStatusCode int             `json:"-"`
+	Endpoint       *EndpointResp `json:"endpoint,omitempty"`
+	HttpStatusCode int           `json:"-"`
 }
 
 func (o DisassociateEndpointIpaddressResponse) String() string {

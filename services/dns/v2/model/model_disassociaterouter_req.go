@@ -6,7 +6,6 @@ import (
 	"strings"
 )
 
-// 需要解关联的Router(VPC)。
 type DisassociaterouterReq struct {
 	Router *Router `json:"router"`
 }

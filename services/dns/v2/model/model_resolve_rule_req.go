@@ -17,14 +17,8 @@ type ResolveRuleReq struct {
 	// 当前规则所属的endpoint_id。
 	EndpointId string `json:"endpoint_id"`
 
-	// 当前规则所在的region。
-	Region string `json:"region"`
-
 	// 规则关联的目标ip地址。
 	Ipaddresses []IpInfo `json:"ipaddresses"`
-
-	// 规则关联的目标ip地址。
-	Routers []Router `json:"routers"`
 }
 
 func (o ResolveRuleReq) String() string {
