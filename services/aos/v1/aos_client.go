@@ -82,27 +82,6 @@ func (c *AosClient) DeleteExecutionPlanInvoker(request *model.DeleteExecutionPla
 	return &DeleteExecutionPlanInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteStack 删除资源栈
-//
-// 删除资源栈
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *AosClient) DeleteStack(request *model.DeleteStackRequest) (*model.DeleteStackResponse, error) {
-	requestDef := GenReqDefForDeleteStack()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeleteStackResponse), nil
-	}
-}
-
-// DeleteStackInvoker 删除资源栈
-func (c *AosClient) DeleteStackInvoker(request *model.DeleteStackRequest) *DeleteStackInvoker {
-	requestDef := GenReqDefForDeleteStack()
-	return &DeleteStackInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // DescribeExecutionPlan 描述执行计划当前的状态，返回执行计划的元数据
 //
 // 描述执行计划当前的状态，返回执行计划的元数据
@@ -166,6 +145,125 @@ func (c *AosClient) GetExecutionPlanInvoker(request *model.GetExecutionPlanReque
 	return &GetExecutionPlanInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListExecutionPlans 列举执行计划
+//
+// 列举执行计划
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AosClient) ListExecutionPlans(request *model.ListExecutionPlansRequest) (*model.ListExecutionPlansResponse, error) {
+	requestDef := GenReqDefForListExecutionPlans()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListExecutionPlansResponse), nil
+	}
+}
+
+// ListExecutionPlansInvoker 列举执行计划
+func (c *AosClient) ListExecutionPlansInvoker(request *model.ListExecutionPlansRequest) *ListExecutionPlansInvoker {
+	requestDef := GenReqDefForListExecutionPlans()
+	return &ListExecutionPlansInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ContinueRollbackStack 继续回滚资源栈
+//
+// 如果资源栈开启了自动回滚，在部署失败的时候则会自动回滚。但是自动回滚依然有可能失败，用户可以根据错误信息修复后，调用ContinueRollbackStack触发继续回滚，即重试回滚
+//
+// * 如果资源栈当前可以回滚，即处于&#x60;ROLLBACK_FAILED&#x60;，则返回202与对应生成的deploymentId，否则将不允许回滚并返回响应的错误码
+// * 继续回滚也有可能会回滚失败。如果失败，用户可以从ListStackEvents获取对应的log，解决后可再次调用ContinueRollbackStack去继续触发回滚
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AosClient) ContinueRollbackStack(request *model.ContinueRollbackStackRequest) (*model.ContinueRollbackStackResponse, error) {
+	requestDef := GenReqDefForContinueRollbackStack()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ContinueRollbackStackResponse), nil
+	}
+}
+
+// ContinueRollbackStackInvoker 继续回滚资源栈
+func (c *AosClient) ContinueRollbackStackInvoker(request *model.ContinueRollbackStackRequest) *ContinueRollbackStackInvoker {
+	requestDef := GenReqDefForContinueRollbackStack()
+	return &ContinueRollbackStackInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateStack 创建资源栈
+//
+// CreateStack用于生成一个资源栈
+//
+// * 当请求中不含有模板（template）、参数（vars）等信息，将生成一个无任何资源的空资源栈，返回资源栈ID（stack_id）
+// * 当请求中携带了模板（template）、参数（vars）等信息，则会同时创建并部署资源栈，返回资源栈ID（stack_id）和部署ID（deployment_id）
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AosClient) CreateStack(request *model.CreateStackRequest) (*model.CreateStackResponse, error) {
+	requestDef := GenReqDefForCreateStack()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateStackResponse), nil
+	}
+}
+
+// CreateStackInvoker 创建资源栈
+func (c *AosClient) CreateStackInvoker(request *model.CreateStackRequest) *CreateStackInvoker {
+	requestDef := GenReqDefForCreateStack()
+	return &CreateStackInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteStack 删除资源栈
+//
+// 删除资源栈
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AosClient) DeleteStack(request *model.DeleteStackRequest) (*model.DeleteStackResponse, error) {
+	requestDef := GenReqDefForDeleteStack()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteStackResponse), nil
+	}
+}
+
+// DeleteStackInvoker 删除资源栈
+func (c *AosClient) DeleteStackInvoker(request *model.DeleteStackRequest) *DeleteStackInvoker {
+	requestDef := GenReqDefForDeleteStack()
+	return &DeleteStackInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeployStack 部署一个已有的资源栈
+//
+// 部署一个已有的资源栈
+//
+// * 用户可以使用此API更新模板、参数等并触发一个新的部署
+//
+// * 此API会直接触发部署，如果用户希望先确认部署会发生的时间，请使用执行计划，即使用CreateExecutionPlan以创建执行计划、使用GetExecutionPlan以获取执行计划
+//
+// * 此API为全量API，即用户每次部署都需要给予所想要使用的template、vars的全量
+//
+// * 当触发的部署失败时，如果资源栈开启了自动回滚，会触发自动回滚的流程，否则就会停留在部署失败时的状态
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AosClient) DeployStack(request *model.DeployStackRequest) (*model.DeployStackResponse, error) {
+	requestDef := GenReqDefForDeployStack()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeployStackResponse), nil
+	}
+}
+
+// DeployStackInvoker 部署一个已有的资源栈
+func (c *AosClient) DeployStackInvoker(request *model.DeployStackRequest) *DeployStackInvoker {
+	requestDef := GenReqDefForDeployStack()
+	return &DeployStackInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // GetStackMetadata 描述栈的状态，返回栈的元数据
 //
 // 描述栈的状态，返回栈的元数据
@@ -206,27 +304,6 @@ func (c *AosClient) GetStackTemplate(request *model.GetStackTemplateRequest) (*m
 func (c *AosClient) GetStackTemplateInvoker(request *model.GetStackTemplateRequest) *GetStackTemplateInvoker {
 	requestDef := GenReqDefForGetStackTemplate()
 	return &GetStackTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListExecutionPlans 列举执行计划
-//
-// 列举执行计划
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *AosClient) ListExecutionPlans(request *model.ListExecutionPlansRequest) (*model.ListExecutionPlansResponse, error) {
-	requestDef := GenReqDefForListExecutionPlans()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListExecutionPlansResponse), nil
-	}
-}
-
-// ListExecutionPlansInvoker 列举执行计划
-func (c *AosClient) ListExecutionPlansInvoker(request *model.ListExecutionPlansRequest) *ListExecutionPlansInvoker {
-	requestDef := GenReqDefForListExecutionPlans()
-	return &ListExecutionPlansInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListStackEvents 获取栈的细节更新状态
@@ -292,104 +369,6 @@ func (c *AosClient) ListStackResourcesInvoker(request *model.ListStackResourcesR
 	return &ListStackResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ParseTemplateVariables 此命令用于解析模板参数
-//
-// 此命令用于解析模板参数
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *AosClient) ParseTemplateVariables(request *model.ParseTemplateVariablesRequest) (*model.ParseTemplateVariablesResponse, error) {
-	requestDef := GenReqDefForParseTemplateVariables()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ParseTemplateVariablesResponse), nil
-	}
-}
-
-// ParseTemplateVariablesInvoker 此命令用于解析模板参数
-func (c *AosClient) ParseTemplateVariablesInvoker(request *model.ParseTemplateVariablesRequest) *ParseTemplateVariablesInvoker {
-	requestDef := GenReqDefForParseTemplateVariables()
-	return &ParseTemplateVariablesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ContinueRollbackStack 继续回滚资源栈
-//
-// 如果资源栈开启了自动回滚，在部署失败的时候则会自动回滚。但是自动回滚依然有可能失败，用户可以根据错误信息修复后，调用ContinueRollbackStack触发继续回滚，即重试回滚
-//
-// * 如果资源栈当前可以回滚，即处于&#x60;ROLLBACK_FAILED&#x60;，则返回202与对应生成的deploymentId，否则将不允许回滚并返回响应的错误码
-// * 继续回滚也有可能会回滚失败。如果失败，用户可以从ListStackEvents获取对应的log，解决后可再次调用ContinueRollbackStack去继续触发回滚
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *AosClient) ContinueRollbackStack(request *model.ContinueRollbackStackRequest) (*model.ContinueRollbackStackResponse, error) {
-	requestDef := GenReqDefForContinueRollbackStack()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ContinueRollbackStackResponse), nil
-	}
-}
-
-// ContinueRollbackStackInvoker 继续回滚资源栈
-func (c *AosClient) ContinueRollbackStackInvoker(request *model.ContinueRollbackStackRequest) *ContinueRollbackStackInvoker {
-	requestDef := GenReqDefForContinueRollbackStack()
-	return &ContinueRollbackStackInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// CreateStack 创建资源栈
-//
-// CreateStack用于生成一个资源栈
-//
-// * 当请求中不含有模板（template）、参数（vars）等信息，将生成一个无任何资源的空资源栈，返回资源栈ID（stack_id）
-// * 当请求中携带了模板（template）、参数（vars）等信息，则会同时创建并部署资源栈，返回资源栈ID（stack_id）和部署ID（deployment_id）
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *AosClient) CreateStack(request *model.CreateStackRequest) (*model.CreateStackResponse, error) {
-	requestDef := GenReqDefForCreateStack()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateStackResponse), nil
-	}
-}
-
-// CreateStackInvoker 创建资源栈
-func (c *AosClient) CreateStackInvoker(request *model.CreateStackRequest) *CreateStackInvoker {
-	requestDef := GenReqDefForCreateStack()
-	return &CreateStackInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DeployStack 部署一个已有的资源栈
-//
-// 部署一个已有的资源栈
-//
-// * 用户可以使用此API更新模板、参数等并触发一个新的部署
-//
-// * 此API会直接触发部署，如果用户希望先确认部署会发生的时间，请使用执行计划，即使用CreateExecutionPlan以创建执行计划、使用GetExecutionPlan以获取执行计划
-//
-// * 此API为全量API，即用户每次部署都需要给予所想要使用的template、vars的全量
-//
-// * 当触发的部署失败时，如果资源栈开启了自动回滚，会触发自动回滚的流程，否则就会停留在部署失败时的状态
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *AosClient) DeployStack(request *model.DeployStackRequest) (*model.DeployStackResponse, error) {
-	requestDef := GenReqDefForDeployStack()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeployStackResponse), nil
-	}
-}
-
-// DeployStackInvoker 部署一个已有的资源栈
-func (c *AosClient) DeployStackInvoker(request *model.DeployStackRequest) *DeployStackInvoker {
-	requestDef := GenReqDefForDeployStack()
-	return &DeployStackInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // ListStacks 列举资源栈
 //
 // ListStacks 列举当前局点下用户所有的资源栈
@@ -415,4 +394,25 @@ func (c *AosClient) ListStacks(request *model.ListStacksRequest) (*model.ListSta
 func (c *AosClient) ListStacksInvoker(request *model.ListStacksRequest) *ListStacksInvoker {
 	requestDef := GenReqDefForListStacks()
 	return &ListStacksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ParseTemplateVariables 此命令用于解析模板参数
+//
+// 此命令用于解析模板参数
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AosClient) ParseTemplateVariables(request *model.ParseTemplateVariablesRequest) (*model.ParseTemplateVariablesResponse, error) {
+	requestDef := GenReqDefForParseTemplateVariables()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ParseTemplateVariablesResponse), nil
+	}
+}
+
+// ParseTemplateVariablesInvoker 此命令用于解析模板参数
+func (c *AosClient) ParseTemplateVariablesInvoker(request *model.ParseTemplateVariablesRequest) *ParseTemplateVariablesInvoker {
+	requestDef := GenReqDefForParseTemplateVariables()
+	return &ParseTemplateVariablesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

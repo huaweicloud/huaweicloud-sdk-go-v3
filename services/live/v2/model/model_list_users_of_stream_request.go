@@ -41,6 +41,9 @@ type ListUsersOfStreamRequest struct {
 
 	// 结束时间。日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间。结束时间需大于起始时间。
 	EndTime *string `json:"end_time,omitempty"`
+
+	// 服务类型： - Live：直播 - LLL：超低时延直播 - ALL: 默认所有直播
+	ServiceType *ListUsersOfStreamRequestServiceType `json:"service_type,omitempty"`
 }
 
 func (o ListUsersOfStreamRequest) String() string {
@@ -132,5 +135,51 @@ func (c *ListUsersOfStreamRequestInterval) UnmarshalJSON(b []byte) error {
 		return err
 	} else {
 		return errors.New("convert enum data to int32 error")
+	}
+}
+
+type ListUsersOfStreamRequestServiceType struct {
+	value string
+}
+
+type ListUsersOfStreamRequestServiceTypeEnum struct {
+	LIVE ListUsersOfStreamRequestServiceType
+	LLL  ListUsersOfStreamRequestServiceType
+	ALL  ListUsersOfStreamRequestServiceType
+}
+
+func GetListUsersOfStreamRequestServiceTypeEnum() ListUsersOfStreamRequestServiceTypeEnum {
+	return ListUsersOfStreamRequestServiceTypeEnum{
+		LIVE: ListUsersOfStreamRequestServiceType{
+			value: "Live",
+		},
+		LLL: ListUsersOfStreamRequestServiceType{
+			value: "LLL",
+		},
+		ALL: ListUsersOfStreamRequestServiceType{
+			value: "ALL",
+		},
+	}
+}
+
+func (c ListUsersOfStreamRequestServiceType) Value() string {
+	return c.value
+}
+
+func (c ListUsersOfStreamRequestServiceType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListUsersOfStreamRequestServiceType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
 	}
 }

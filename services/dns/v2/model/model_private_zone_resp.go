@@ -35,6 +35,9 @@ type PrivateZoneResp struct {
 	// 该zone下的recordset个数。
 	RecordNum *int32 `json:"record_num,omitempty"`
 
+	// 内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone不进行递归解析 RECURSIVE：开启递归解析代理
+	ProxyPattern *string `json:"proxy_pattern,omitempty"`
+
 	// 托管该zone的pool，由系统分配。
 	PoolId *string `json:"pool_id,omitempty"`
 

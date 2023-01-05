@@ -23,6 +23,9 @@ type CreateCloudPhoneServerRequestBodyExtendParam struct {
 
 	// 是否自动续订。默认不自动续订。 - 1 表示自动续订 - 0 表示不自动续订
 	IsAutoRenew *int32 `json:"is_auto_renew,omitempty"`
+
+	// 企业项目ID。 该字段不传（或传为字符串“0”），则将资源绑定给默认企业项目。
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 
 func (o CreateCloudPhoneServerRequestBodyExtendParam) String() string {

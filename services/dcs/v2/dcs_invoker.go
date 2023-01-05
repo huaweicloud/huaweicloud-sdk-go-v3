@@ -317,6 +317,18 @@ func (i *ListBigkeyScanTasksInvoker) Invoke() (*model.ListBigkeyScanTasksRespons
 	}
 }
 
+type ListConfigHistoriesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListConfigHistoriesInvoker) Invoke() (*model.ListConfigHistoriesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListConfigHistoriesResponse), nil
+	}
+}
+
 type ListConfigurationsInvoker struct {
 	*invoker.BaseInvoker
 }

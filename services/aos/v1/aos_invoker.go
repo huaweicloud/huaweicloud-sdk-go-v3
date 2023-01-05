@@ -41,18 +41,6 @@ func (i *DeleteExecutionPlanInvoker) Invoke() (*model.DeleteExecutionPlanRespons
 	}
 }
 
-type DeleteStackInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteStackInvoker) Invoke() (*model.DeleteStackResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteStackResponse), nil
-	}
-}
-
 type DescribeExecutionPlanInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -89,6 +77,66 @@ func (i *GetExecutionPlanInvoker) Invoke() (*model.GetExecutionPlanResponse, err
 	}
 }
 
+type ListExecutionPlansInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListExecutionPlansInvoker) Invoke() (*model.ListExecutionPlansResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListExecutionPlansResponse), nil
+	}
+}
+
+type ContinueRollbackStackInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ContinueRollbackStackInvoker) Invoke() (*model.ContinueRollbackStackResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ContinueRollbackStackResponse), nil
+	}
+}
+
+type CreateStackInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateStackInvoker) Invoke() (*model.CreateStackResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateStackResponse), nil
+	}
+}
+
+type DeleteStackInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteStackInvoker) Invoke() (*model.DeleteStackResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteStackResponse), nil
+	}
+}
+
+type DeployStackInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeployStackInvoker) Invoke() (*model.DeployStackResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeployStackResponse), nil
+	}
+}
+
 type GetStackMetadataInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -110,18 +158,6 @@ func (i *GetStackTemplateInvoker) Invoke() (*model.GetStackTemplateResponse, err
 		return nil, err
 	} else {
 		return result.(*model.GetStackTemplateResponse), nil
-	}
-}
-
-type ListExecutionPlansInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListExecutionPlansInvoker) Invoke() (*model.ListExecutionPlansResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListExecutionPlansResponse), nil
 	}
 }
 
@@ -161,54 +197,6 @@ func (i *ListStackResourcesInvoker) Invoke() (*model.ListStackResourcesResponse,
 	}
 }
 
-type ParseTemplateVariablesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ParseTemplateVariablesInvoker) Invoke() (*model.ParseTemplateVariablesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ParseTemplateVariablesResponse), nil
-	}
-}
-
-type ContinueRollbackStackInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ContinueRollbackStackInvoker) Invoke() (*model.ContinueRollbackStackResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ContinueRollbackStackResponse), nil
-	}
-}
-
-type CreateStackInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateStackInvoker) Invoke() (*model.CreateStackResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateStackResponse), nil
-	}
-}
-
-type DeployStackInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeployStackInvoker) Invoke() (*model.DeployStackResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeployStackResponse), nil
-	}
-}
-
 type ListStacksInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -218,5 +206,17 @@ func (i *ListStacksInvoker) Invoke() (*model.ListStacksResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListStacksResponse), nil
+	}
+}
+
+type ParseTemplateVariablesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ParseTemplateVariablesInvoker) Invoke() (*model.ParseTemplateVariablesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ParseTemplateVariablesResponse), nil
 	}
 }

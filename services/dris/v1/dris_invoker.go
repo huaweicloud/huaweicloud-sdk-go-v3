@@ -233,6 +233,18 @@ func (i *ShowIpcInvoker) Invoke() (*model.ShowIpcResponse, error) {
 	}
 }
 
+type BatchShowRadarsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchShowRadarsInvoker) Invoke() (*model.BatchShowRadarsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchShowRadarsResponse), nil
+	}
+}
+
 type BatchShowRsusInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -9,7 +9,7 @@ import (
 // Response Object
 type ListBandwidthTimelineResponse struct {
 
-	// 安全统计的带宽时间线数据
+	// 带宽时间线统计数据，包括带宽（BANDWIDTH）、入带宽（IN_BANDWIDTH）以及出带宽（OUT_BANDWIDTH）统计数据。
 	Body           *[]BandwidthStatisticsTimelineItem `json:"body,omitempty"`
 	HttpStatusCode int                                `json:"-"`
 }

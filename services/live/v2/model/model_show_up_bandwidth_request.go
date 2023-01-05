@@ -30,6 +30,9 @@ type ShowUpBandwidthRequest struct {
 	// 查询数据的时间粒度。支持300（默认值），3600和86400秒。不传值时，使用默认值300秒。
 	Interval *ShowUpBandwidthRequestInterval `json:"interval,omitempty"`
 
+	// 类型： - RELAY：转推 不填默认查询推流
+	Type *ShowUpBandwidthRequestType `json:"type,omitempty"`
+
 	// 起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。 最大查询跨度31天，最大查询周期1年。  若参数为空，默认查询7天数据。
 	StartTime *string `json:"start_time,omitempty"`
 
@@ -87,5 +90,43 @@ func (c *ShowUpBandwidthRequestInterval) UnmarshalJSON(b []byte) error {
 		return err
 	} else {
 		return errors.New("convert enum data to int32 error")
+	}
+}
+
+type ShowUpBandwidthRequestType struct {
+	value string
+}
+
+type ShowUpBandwidthRequestTypeEnum struct {
+	RELAY ShowUpBandwidthRequestType
+}
+
+func GetShowUpBandwidthRequestTypeEnum() ShowUpBandwidthRequestTypeEnum {
+	return ShowUpBandwidthRequestTypeEnum{
+		RELAY: ShowUpBandwidthRequestType{
+			value: "RELAY",
+		},
+	}
+}
+
+func (c ShowUpBandwidthRequestType) Value() string {
+	return c.value
+}
+
+func (c ShowUpBandwidthRequestType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ShowUpBandwidthRequestType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
 	}
 }

@@ -41,6 +41,18 @@ func (i *BatchExecuteJobActionsInvoker) Invoke() (*model.BatchExecuteJobActionsR
 	}
 }
 
+type CollectDbObjectsAsyncInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CollectDbObjectsAsyncInvoker) Invoke() (*model.CollectDbObjectsAsyncResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CollectDbObjectsAsyncResponse), nil
+	}
+}
+
 type CommitAsyncJobInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -161,6 +173,18 @@ func (i *ListLinksInvoker) Invoke() (*model.ListLinksResponse, error) {
 	}
 }
 
+type ShowDbObjectCollectionStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDbObjectCollectionStatusInvoker) Invoke() (*model.ShowDbObjectCollectionStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDbObjectCollectionStatusResponse), nil
+	}
+}
+
 type ShowDbObjectTemplateProgressInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -194,6 +218,18 @@ func (i *ShowJobDetailInvoker) Invoke() (*model.ShowJobDetailResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowJobDetailResponse), nil
+	}
+}
+
+type ShowUpdateObjectSavingStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowUpdateObjectSavingStatusInvoker) Invoke() (*model.ShowUpdateObjectSavingStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowUpdateObjectSavingStatusResponse), nil
 	}
 }
 

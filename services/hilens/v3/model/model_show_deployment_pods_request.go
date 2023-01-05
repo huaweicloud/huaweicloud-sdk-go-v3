@@ -23,6 +23,12 @@ type ShowDeploymentPodsRequest struct {
 
 	// 工作空间ID，默认为注册账号/子账号的default工作空间。主账号默认ID为0，子账号默认空间id为该子账号user_id
 	WorkspaceId *string `json:"workspace_id,omitempty"`
+
+	// 查询的起始位置，取值范围为非负整数，默认为0
+	Offset *int32 `json:"offset,omitempty"`
+
+	// 每页显示的条目数量，取值范围1~100，默认为100
+	Limit *int32 `json:"limit,omitempty"`
 }
 
 func (o ShowDeploymentPodsRequest) String() string {

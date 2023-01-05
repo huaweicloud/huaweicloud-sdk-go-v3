@@ -43,6 +43,9 @@ type WorkflowCreateBody struct {
 
 	// 企业项目ID
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	// 是否返回流数据
+	EnableStreamResponse *bool `json:"enable_stream_response,omitempty"`
 }
 
 func (o WorkflowCreateBody) String() string {

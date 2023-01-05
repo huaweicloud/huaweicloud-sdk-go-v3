@@ -40,7 +40,7 @@ type ShowNodeResponse struct {
 	ClusterNodeState *string `json:"cluster_node_state,omitempty"`
 
 	// 当该设备处于集群时，显示所属的集群设备类型。 - cluster_controller 控制设备 - cluster_worker 工作设备
-	ClusterNodeType *interface{} `json:"cluster_node_type,omitempty"`
+	ClusterNodeType *string `json:"cluster_node_type,omitempty"`
 
 	// 固件名称。可包含大小写字母、数字、下划线、中划线,长度不超过60字符。必须以字母开头,字母或数字结尾
 	FirmwareName *string `json:"firmware_name,omitempty"`

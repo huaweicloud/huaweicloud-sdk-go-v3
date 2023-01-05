@@ -24,8 +24,11 @@ type ListDbObjectsRequest struct {
 	// 每页显示的条目数量
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 查询对象信息类型。取值： - source：查询源库对象信息。 - modified：查询已选择的（未下发与已同步的）对象信息。 - synchronized：查询已同步的（已下发的）对象信息 。
+	// 查询对象信息类型。取值： - source：查询源库对象信息。 - modified：查询已选择的（已同步的和未下发的）对象信息。 - synchronized：查询已同步的（已下发的）对象信息 ， 使用场景在任务处于全量中或者增量中。
 	Type string `json:"type"`
+
+	// 查询指定库的信息
+	DbNames *[]string `json:"db_names,omitempty"`
 }
 
 func (o ListDbObjectsRequest) String() string {

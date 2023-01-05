@@ -29,6 +29,9 @@ type DatabaseObject struct {
 
 	// 库下的表的数量，表的数量超过阈值就不显示。
 	TotalTableNum *int32 `json:"total_table_num,omitempty"`
+
+	// 是否已同步
+	IsSynchronized *bool `json:"is_synchronized,omitempty"`
 }
 
 func (o DatabaseObject) String() string {

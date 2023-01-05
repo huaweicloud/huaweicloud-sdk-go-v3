@@ -12,7 +12,7 @@ type EdgeAppInstanceDto struct {
 	EdgeAppId string `json:"edge_app_id"`
 
 	// 边缘应用版本，只允许数字、英文小写、中划线，切必须以字母或数字结尾
-	AppVersion string `json:"app_version"`
+	AppVersion *string `json:"app_version,omitempty"`
 }
 
 func (o EdgeAppInstanceDto) String() string {

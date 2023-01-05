@@ -9,7 +9,7 @@ import (
 type DeleteSearchCriterias struct {
 
 	// 企业项目id
-	EpsId *string `json:"epsId,omitempty"`
+	EpsId *string `json:"eps_id,omitempty"`
 
 	// 快速查询id
 	Id string `json:"id"`

@@ -19,161 +19,6 @@ func DnsClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// AssociateEndpointIpaddress 绑定ip地址
-//
-// 绑定单个IP地址到终端节点
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) AssociateEndpointIpaddress(request *model.AssociateEndpointIpaddressRequest) (*model.AssociateEndpointIpaddressResponse, error) {
-	requestDef := GenReqDefForAssociateEndpointIpaddress()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.AssociateEndpointIpaddressResponse), nil
-	}
-}
-
-// AssociateEndpointIpaddressInvoker 绑定ip地址
-func (c *DnsClient) AssociateEndpointIpaddressInvoker(request *model.AssociateEndpointIpaddressRequest) *AssociateEndpointIpaddressInvoker {
-	requestDef := GenReqDefForAssociateEndpointIpaddress()
-	return &AssociateEndpointIpaddressInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// AssociateResolveRuleRouter 在解析规则上关联VPC
-//
-// 在解析规则上关联VPC
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) AssociateResolveRuleRouter(request *model.AssociateResolveRuleRouterRequest) (*model.AssociateResolveRuleRouterResponse, error) {
-	requestDef := GenReqDefForAssociateResolveRuleRouter()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.AssociateResolveRuleRouterResponse), nil
-	}
-}
-
-// AssociateResolveRuleRouterInvoker 在解析规则上关联VPC
-func (c *DnsClient) AssociateResolveRuleRouterInvoker(request *model.AssociateResolveRuleRouterRequest) *AssociateResolveRuleRouterInvoker {
-	requestDef := GenReqDefForAssociateResolveRuleRouter()
-	return &AssociateResolveRuleRouterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// BatchDeletePtrRecords 批量删除PTR
-//
-// 批量删除PTR。本接口为原子操作，所有记录应全部删除成功或全部失败。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) BatchDeletePtrRecords(request *model.BatchDeletePtrRecordsRequest) (*model.BatchDeletePtrRecordsResponse, error) {
-	requestDef := GenReqDefForBatchDeletePtrRecords()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.BatchDeletePtrRecordsResponse), nil
-	}
-}
-
-// BatchDeletePtrRecordsInvoker 批量删除PTR
-func (c *DnsClient) BatchDeletePtrRecordsInvoker(request *model.BatchDeletePtrRecordsRequest) *BatchDeletePtrRecordsInvoker {
-	requestDef := GenReqDefForBatchDeletePtrRecords()
-	return &BatchDeletePtrRecordsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// BatchDeleteRecordSets 批量删除Record Set
-//
-// 批量删除Record Set。
-// 响应结果中只包含本次实际删除的Record Set。
-// 支持批量删除公网域名和内网域名的记录集。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) BatchDeleteRecordSets(request *model.BatchDeleteRecordSetsRequest) (*model.BatchDeleteRecordSetsResponse, error) {
-	requestDef := GenReqDefForBatchDeleteRecordSets()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.BatchDeleteRecordSetsResponse), nil
-	}
-}
-
-// BatchDeleteRecordSetsInvoker 批量删除Record Set
-func (c *DnsClient) BatchDeleteRecordSetsInvoker(request *model.BatchDeleteRecordSetsRequest) *BatchDeleteRecordSetsInvoker {
-	requestDef := GenReqDefForBatchDeleteRecordSets()
-	return &BatchDeleteRecordSetsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// BatchDeleteZones 批量删除Zone
-//
-// 批量删除Zone。
-// 本接口为原子操作，所有记录应全部删除成功或全部失败。
-// 仅支持公网Zone、内网Zone。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) BatchDeleteZones(request *model.BatchDeleteZonesRequest) (*model.BatchDeleteZonesResponse, error) {
-	requestDef := GenReqDefForBatchDeleteZones()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.BatchDeleteZonesResponse), nil
-	}
-}
-
-// BatchDeleteZonesInvoker 批量删除Zone
-func (c *DnsClient) BatchDeleteZonesInvoker(request *model.BatchDeleteZonesRequest) *BatchDeleteZonesInvoker {
-	requestDef := GenReqDefForBatchDeleteZones()
-	return &BatchDeleteZonesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// BatchSetRecordSetsStatus 批量设置Record Set状态
-//
-// 批量设置Record Set状态。
-// 响应结果中只包含本次实际更新的Record Set。
-// 仅支持公网域名记录集。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) BatchSetRecordSetsStatus(request *model.BatchSetRecordSetsStatusRequest) (*model.BatchSetRecordSetsStatusResponse, error) {
-	requestDef := GenReqDefForBatchSetRecordSetsStatus()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.BatchSetRecordSetsStatusResponse), nil
-	}
-}
-
-// BatchSetRecordSetsStatusInvoker 批量设置Record Set状态
-func (c *DnsClient) BatchSetRecordSetsStatusInvoker(request *model.BatchSetRecordSetsStatusRequest) *BatchSetRecordSetsStatusInvoker {
-	requestDef := GenReqDefForBatchSetRecordSetsStatus()
-	return &BatchSetRecordSetsStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// BatchSetZonesStatus 批量设置Zone状态
-//
-// 批量设置Zone状态。
-// 响应结果中只包含本次实际更新的Zone。
-// 仅支持公网Zone。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) BatchSetZonesStatus(request *model.BatchSetZonesStatusRequest) (*model.BatchSetZonesStatusResponse, error) {
-	requestDef := GenReqDefForBatchSetZonesStatus()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.BatchSetZonesStatusResponse), nil
-	}
-}
-
-// BatchSetZonesStatusInvoker 批量设置Zone状态
-func (c *DnsClient) BatchSetZonesStatusInvoker(request *model.BatchSetZonesStatusRequest) *BatchSetZonesStatusInvoker {
-	requestDef := GenReqDefForBatchSetZonesStatus()
-	return &BatchSetZonesStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // CreateCustomLine 创建单个自定义线路
 //
 // 创建单个自定义线路
@@ -193,27 +38,6 @@ func (c *DnsClient) CreateCustomLine(request *model.CreateCustomLineRequest) (*m
 func (c *DnsClient) CreateCustomLineInvoker(request *model.CreateCustomLineRequest) *CreateCustomLineInvoker {
 	requestDef := GenReqDefForCreateCustomLine()
 	return &CreateCustomLineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// CreateEndpoint 创建终端节点
-//
-// 创建单个终端节点。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) CreateEndpoint(request *model.CreateEndpointRequest) (*model.CreateEndpointResponse, error) {
-	requestDef := GenReqDefForCreateEndpoint()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateEndpointResponse), nil
-	}
-}
-
-// CreateEndpointInvoker 创建终端节点
-func (c *DnsClient) CreateEndpointInvoker(request *model.CreateEndpointRequest) *CreateEndpointInvoker {
-	requestDef := GenReqDefForCreateEndpoint()
-	return &CreateEndpointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateLineGroup 创建线路分组
@@ -237,69 +61,6 @@ func (c *DnsClient) CreateLineGroupInvoker(request *model.CreateLineGroupRequest
 	return &CreateLineGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateResolveRule 创建解析规则
-//
-// 创建一个解析规则。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) CreateResolveRule(request *model.CreateResolveRuleRequest) (*model.CreateResolveRuleResponse, error) {
-	requestDef := GenReqDefForCreateResolveRule()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateResolveRuleResponse), nil
-	}
-}
-
-// CreateResolveRuleInvoker 创建解析规则
-func (c *DnsClient) CreateResolveRuleInvoker(request *model.CreateResolveRuleRequest) *CreateResolveRuleInvoker {
-	requestDef := GenReqDefForCreateResolveRule()
-	return &CreateResolveRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// CreateRetrieval 创建公网域名找回请求
-//
-// 创建公网域名找回请求。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) CreateRetrieval(request *model.CreateRetrievalRequest) (*model.CreateRetrievalResponse, error) {
-	requestDef := GenReqDefForCreateRetrieval()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateRetrievalResponse), nil
-	}
-}
-
-// CreateRetrievalInvoker 创建公网域名找回请求
-func (c *DnsClient) CreateRetrievalInvoker(request *model.CreateRetrievalRequest) *CreateRetrievalInvoker {
-	requestDef := GenReqDefForCreateRetrieval()
-	return &CreateRetrievalInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// CreateRetrievalVerification 请求立即验证域名找回
-//
-// 请求服务器立即执行找回验证。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) CreateRetrievalVerification(request *model.CreateRetrievalVerificationRequest) (*model.CreateRetrievalVerificationResponse, error) {
-	requestDef := GenReqDefForCreateRetrievalVerification()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateRetrievalVerificationResponse), nil
-	}
-}
-
-// CreateRetrievalVerificationInvoker 请求立即验证域名找回
-func (c *DnsClient) CreateRetrievalVerificationInvoker(request *model.CreateRetrievalVerificationRequest) *CreateRetrievalVerificationInvoker {
-	requestDef := GenReqDefForCreateRetrievalVerification()
-	return &CreateRetrievalVerificationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // DeleteCustomLine 删除单个自定义线路
 //
 // 删除单个自定义线路
@@ -321,27 +82,6 @@ func (c *DnsClient) DeleteCustomLineInvoker(request *model.DeleteCustomLineReque
 	return &DeleteCustomLineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteEndpoint 删除终端节点
-//
-// 删除终端节点。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) DeleteEndpoint(request *model.DeleteEndpointRequest) (*model.DeleteEndpointResponse, error) {
-	requestDef := GenReqDefForDeleteEndpoint()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeleteEndpointResponse), nil
-	}
-}
-
-// DeleteEndpointInvoker 删除终端节点
-func (c *DnsClient) DeleteEndpointInvoker(request *model.DeleteEndpointRequest) *DeleteEndpointInvoker {
-	requestDef := GenReqDefForDeleteEndpoint()
-	return &DeleteEndpointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // DeleteLineGroup 删除线路分组
 //
 // 删除单个线路分组。
@@ -361,69 +101,6 @@ func (c *DnsClient) DeleteLineGroup(request *model.DeleteLineGroupRequest) (*mod
 func (c *DnsClient) DeleteLineGroupInvoker(request *model.DeleteLineGroupRequest) *DeleteLineGroupInvoker {
 	requestDef := GenReqDefForDeleteLineGroup()
 	return &DeleteLineGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DeleteResolveRule 删除解析规则
-//
-// 删除解析规则。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) DeleteResolveRule(request *model.DeleteResolveRuleRequest) (*model.DeleteResolveRuleResponse, error) {
-	requestDef := GenReqDefForDeleteResolveRule()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeleteResolveRuleResponse), nil
-	}
-}
-
-// DeleteResolveRuleInvoker 删除解析规则
-func (c *DnsClient) DeleteResolveRuleInvoker(request *model.DeleteResolveRuleRequest) *DeleteResolveRuleInvoker {
-	requestDef := GenReqDefForDeleteResolveRule()
-	return &DeleteResolveRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DisassociateEndpointIpaddress 解关联ip地址
-//
-// 解除endpoint绑定的IP。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) DisassociateEndpointIpaddress(request *model.DisassociateEndpointIpaddressRequest) (*model.DisassociateEndpointIpaddressResponse, error) {
-	requestDef := GenReqDefForDisassociateEndpointIpaddress()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DisassociateEndpointIpaddressResponse), nil
-	}
-}
-
-// DisassociateEndpointIpaddressInvoker 解关联ip地址
-func (c *DnsClient) DisassociateEndpointIpaddressInvoker(request *model.DisassociateEndpointIpaddressRequest) *DisassociateEndpointIpaddressInvoker {
-	requestDef := GenReqDefForDisassociateEndpointIpaddress()
-	return &DisassociateEndpointIpaddressInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DisassociateResolveRuleRouter 在解析规则上解关联VPC
-//
-// 在解析规则上解关联VPC
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) DisassociateResolveRuleRouter(request *model.DisassociateResolveRuleRouterRequest) (*model.DisassociateResolveRuleRouterResponse, error) {
-	requestDef := GenReqDefForDisassociateResolveRuleRouter()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DisassociateResolveRuleRouterResponse), nil
-	}
-}
-
-// DisassociateResolveRuleRouterInvoker 在解析规则上解关联VPC
-func (c *DnsClient) DisassociateResolveRuleRouterInvoker(request *model.DisassociateResolveRuleRouterRequest) *DisassociateResolveRuleRouterInvoker {
-	requestDef := GenReqDefForDisassociateResolveRuleRouter()
-	return &DisassociateResolveRuleRouterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListApiVersions 查询所有的云解析服务API版本号
@@ -468,69 +145,6 @@ func (c *DnsClient) ListCustomLineInvoker(request *model.ListCustomLineRequest) 
 	return &ListCustomLineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListEndpointIpaddresses 查询ip地址列表
-//
-// 查询某个endpoint下的ip地址列表。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) ListEndpointIpaddresses(request *model.ListEndpointIpaddressesRequest) (*model.ListEndpointIpaddressesResponse, error) {
-	requestDef := GenReqDefForListEndpointIpaddresses()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListEndpointIpaddressesResponse), nil
-	}
-}
-
-// ListEndpointIpaddressesInvoker 查询ip地址列表
-func (c *DnsClient) ListEndpointIpaddressesInvoker(request *model.ListEndpointIpaddressesRequest) *ListEndpointIpaddressesInvoker {
-	requestDef := GenReqDefForListEndpointIpaddresses()
-	return &ListEndpointIpaddressesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListEndpointVpcs 查询vpc信息
-//
-// 查询vpc的终端节点信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) ListEndpointVpcs(request *model.ListEndpointVpcsRequest) (*model.ListEndpointVpcsResponse, error) {
-	requestDef := GenReqDefForListEndpointVpcs()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListEndpointVpcsResponse), nil
-	}
-}
-
-// ListEndpointVpcsInvoker 查询vpc信息
-func (c *DnsClient) ListEndpointVpcsInvoker(request *model.ListEndpointVpcsRequest) *ListEndpointVpcsInvoker {
-	requestDef := GenReqDefForListEndpointVpcs()
-	return &ListEndpointVpcsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListEndpoints 查询终端节点列表
-//
-// 查询终端节点列表。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) ListEndpoints(request *model.ListEndpointsRequest) (*model.ListEndpointsResponse, error) {
-	requestDef := GenReqDefForListEndpoints()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListEndpointsResponse), nil
-	}
-}
-
-// ListEndpointsInvoker 查询终端节点列表
-func (c *DnsClient) ListEndpointsInvoker(request *model.ListEndpointsRequest) *ListEndpointsInvoker {
-	requestDef := GenReqDefForListEndpoints()
-	return &ListEndpointsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // ListLineGroups 查询线路分组列表
 //
 // 查询线路分组列表。
@@ -573,27 +187,6 @@ func (c *DnsClient) ListNameServersInvoker(request *model.ListNameServersRequest
 	return &ListNameServersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListResoleRules 查询解析规则列表
-//
-// 查询解析规则的列表。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) ListResoleRules(request *model.ListResoleRulesRequest) (*model.ListResoleRulesResponse, error) {
-	requestDef := GenReqDefForListResoleRules()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListResoleRulesResponse), nil
-	}
-}
-
-// ListResoleRulesInvoker 查询解析规则列表
-func (c *DnsClient) ListResoleRulesInvoker(request *model.ListResoleRulesRequest) *ListResoleRulesInvoker {
-	requestDef := GenReqDefForListResoleRules()
-	return &ListResoleRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // ShowApiInfo 查询指定的云解析服务API版本号
 //
 // 查询指定的云解析服务API版本号
@@ -613,48 +206,6 @@ func (c *DnsClient) ShowApiInfo(request *model.ShowApiInfoRequest) (*model.ShowA
 func (c *DnsClient) ShowApiInfoInvoker(request *model.ShowApiInfoRequest) *ShowApiInfoInvoker {
 	requestDef := GenReqDefForShowApiInfo()
 	return &ShowApiInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowDomainQuota 查询租户配额
-//
-// 查询单租户在DNS服务下的资源配额，包括公网zone配额、内网zone配额、Record Set配额、PTR Record配额、入站终端节点配额、出站终端节点配额、自定义线路配额、线路分组配额等。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) ShowDomainQuota(request *model.ShowDomainQuotaRequest) (*model.ShowDomainQuotaResponse, error) {
-	requestDef := GenReqDefForShowDomainQuota()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowDomainQuotaResponse), nil
-	}
-}
-
-// ShowDomainQuotaInvoker 查询租户配额
-func (c *DnsClient) ShowDomainQuotaInvoker(request *model.ShowDomainQuotaRequest) *ShowDomainQuotaInvoker {
-	requestDef := GenReqDefForShowDomainQuota()
-	return &ShowDomainQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowEndpoint 查询终端节点
-//
-// 查询终端单个节点。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) ShowEndpoint(request *model.ShowEndpointRequest) (*model.ShowEndpointResponse, error) {
-	requestDef := GenReqDefForShowEndpoint()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowEndpointResponse), nil
-	}
-}
-
-// ShowEndpointInvoker 查询终端节点
-func (c *DnsClient) ShowEndpointInvoker(request *model.ShowEndpointRequest) *ShowEndpointInvoker {
-	requestDef := GenReqDefForShowEndpoint()
-	return &ShowEndpointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowLineGroup 查询线路分组
@@ -678,69 +229,6 @@ func (c *DnsClient) ShowLineGroupInvoker(request *model.ShowLineGroupRequest) *S
 	return &ShowLineGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowResoleRule 查询单个解析规则
-//
-// 查询单个解析规则。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) ShowResoleRule(request *model.ShowResoleRuleRequest) (*model.ShowResoleRuleResponse, error) {
-	requestDef := GenReqDefForShowResoleRule()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowResoleRuleResponse), nil
-	}
-}
-
-// ShowResoleRuleInvoker 查询单个解析规则
-func (c *DnsClient) ShowResoleRuleInvoker(request *model.ShowResoleRuleRequest) *ShowResoleRuleInvoker {
-	requestDef := GenReqDefForShowResoleRule()
-	return &ShowResoleRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowRetrieval 查询域名找回
-//
-// 查询域名找回请求。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) ShowRetrieval(request *model.ShowRetrievalRequest) (*model.ShowRetrievalResponse, error) {
-	requestDef := GenReqDefForShowRetrieval()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowRetrievalResponse), nil
-	}
-}
-
-// ShowRetrievalInvoker 查询域名找回
-func (c *DnsClient) ShowRetrievalInvoker(request *model.ShowRetrievalRequest) *ShowRetrievalInvoker {
-	requestDef := GenReqDefForShowRetrieval()
-	return &ShowRetrievalInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowRetrievalVerification 查询域名找回结果
-//
-// 查询域名找回结果。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) ShowRetrievalVerification(request *model.ShowRetrievalVerificationRequest) (*model.ShowRetrievalVerificationResponse, error) {
-	requestDef := GenReqDefForShowRetrievalVerification()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowRetrievalVerificationResponse), nil
-	}
-}
-
-// ShowRetrievalVerificationInvoker 查询域名找回结果
-func (c *DnsClient) ShowRetrievalVerificationInvoker(request *model.ShowRetrievalVerificationRequest) *ShowRetrievalVerificationInvoker {
-	requestDef := GenReqDefForShowRetrievalVerification()
-	return &ShowRetrievalVerificationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // UpdateCustomLine 更新单个自定义线路
 //
 // 更新单个自定义线路
@@ -762,27 +250,6 @@ func (c *DnsClient) UpdateCustomLineInvoker(request *model.UpdateCustomLineReque
 	return &UpdateCustomLineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateEndpoint 修改终端节点
-//
-// 修改终端节点
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) UpdateEndpoint(request *model.UpdateEndpointRequest) (*model.UpdateEndpointResponse, error) {
-	requestDef := GenReqDefForUpdateEndpoint()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.UpdateEndpointResponse), nil
-	}
-}
-
-// UpdateEndpointInvoker 修改终端节点
-func (c *DnsClient) UpdateEndpointInvoker(request *model.UpdateEndpointRequest) *UpdateEndpointInvoker {
-	requestDef := GenReqDefForUpdateEndpoint()
-	return &UpdateEndpointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // UpdateLineGroups 更新线路分组
 //
 // 更新单个线路分组。
@@ -802,27 +269,6 @@ func (c *DnsClient) UpdateLineGroups(request *model.UpdateLineGroupsRequest) (*m
 func (c *DnsClient) UpdateLineGroupsInvoker(request *model.UpdateLineGroupsRequest) *UpdateLineGroupsInvoker {
 	requestDef := GenReqDefForUpdateLineGroups()
 	return &UpdateLineGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// UpdateResolveRule 修改解析规则
-//
-// 修改一个解析规则。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) UpdateResolveRule(request *model.UpdateResolveRuleRequest) (*model.UpdateResolveRuleResponse, error) {
-	requestDef := GenReqDefForUpdateResolveRule()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.UpdateResolveRuleResponse), nil
-	}
-}
-
-// UpdateResolveRuleInvoker 修改解析规则
-func (c *DnsClient) UpdateResolveRuleInvoker(request *model.UpdateResolveRuleRequest) *UpdateResolveRuleInvoker {
-	requestDef := GenReqDefForUpdateResolveRule()
-	return &UpdateResolveRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateEipRecordSet 设置弹性IP的PTR记录
@@ -1602,27 +1048,6 @@ func (c *DnsClient) ListPublicZones(request *model.ListPublicZonesRequest) (*mod
 func (c *DnsClient) ListPublicZonesInvoker(request *model.ListPublicZonesRequest) *ListPublicZonesInvoker {
 	requestDef := GenReqDefForListPublicZones()
 	return &ListPublicZonesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// SetPrivateZoneProxyPattern 设置单个内网Zone的子域名递归解析代理
-//
-// 设置单个内网Zone的子域名递归解析代理
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) SetPrivateZoneProxyPattern(request *model.SetPrivateZoneProxyPatternRequest) (*model.SetPrivateZoneProxyPatternResponse, error) {
-	requestDef := GenReqDefForSetPrivateZoneProxyPattern()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.SetPrivateZoneProxyPatternResponse), nil
-	}
-}
-
-// SetPrivateZoneProxyPatternInvoker 设置单个内网Zone的子域名递归解析代理
-func (c *DnsClient) SetPrivateZoneProxyPatternInvoker(request *model.SetPrivateZoneProxyPatternRequest) *SetPrivateZoneProxyPatternInvoker {
-	requestDef := GenReqDefForSetPrivateZoneProxyPattern()
-	return &SetPrivateZoneProxyPatternInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowPrivateZone 查询单个内网Zone

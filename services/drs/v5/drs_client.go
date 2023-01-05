@@ -82,6 +82,30 @@ func (c *DrsClient) BatchExecuteJobActionsInvoker(request *model.BatchExecuteJob
 	return &BatchExecuteJobActionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CollectDbObjectsAsync 提交查询数据库对象信息
+//
+// 提交查询数据库对象信息。例如：
+// - 当type取值为source时，表示查询源库库表信息。
+// - 当源库库表信息有变化时，则type取值为source，is_refresh取值为true。
+// - 当已同步到目标库的库表信息过大，需要提前将数据加载到缓存中时，type取值为synchronized。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) CollectDbObjectsAsync(request *model.CollectDbObjectsAsyncRequest) (*model.CollectDbObjectsAsyncResponse, error) {
+	requestDef := GenReqDefForCollectDbObjectsAsync()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CollectDbObjectsAsyncResponse), nil
+	}
+}
+
+// CollectDbObjectsAsyncInvoker 提交查询数据库对象信息
+func (c *DrsClient) CollectDbObjectsAsyncInvoker(request *model.CollectDbObjectsAsyncRequest) *CollectDbObjectsAsyncInvoker {
+	requestDef := GenReqDefForCollectDbObjectsAsync()
+	return &CollectDbObjectsAsyncInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CommitAsyncJob 提交批量创建异步任务
 //
 // 提交批量创建异步任务，当批量异步任务创建或更新参数后，系统会自动开始进行参数校验，待所有任务成功完成参数校验后并且无报错时，可调用此接口开始创建DRS任务实例。
@@ -292,6 +316,27 @@ func (c *DrsClient) ListLinksInvoker(request *model.ListLinksRequest) *ListLinks
 	return &ListLinksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowDbObjectCollectionStatus 获取数据库对象信息的结果
+//
+// 获取数据库对象信息的结果
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) ShowDbObjectCollectionStatus(request *model.ShowDbObjectCollectionStatusRequest) (*model.ShowDbObjectCollectionStatusResponse, error) {
+	requestDef := GenReqDefForShowDbObjectCollectionStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDbObjectCollectionStatusResponse), nil
+	}
+}
+
+// ShowDbObjectCollectionStatusInvoker 获取数据库对象信息的结果
+func (c *DrsClient) ShowDbObjectCollectionStatusInvoker(request *model.ShowDbObjectCollectionStatusRequest) *ShowDbObjectCollectionStatusInvoker {
+	requestDef := GenReqDefForShowDbObjectCollectionStatus()
+	return &ShowDbObjectCollectionStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowDbObjectTemplateProgress 对象选择（文件导入 - 进度查询）
 //
 // 对象选择（文件导入 - 进度查询）。
@@ -355,6 +400,27 @@ func (c *DrsClient) ShowJobDetailInvoker(request *model.ShowJobDetailRequest) *S
 	return &ShowJobDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowUpdateObjectSavingStatus 获取对象保存进度
+//
+// 获取对象保存进度。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) ShowUpdateObjectSavingStatus(request *model.ShowUpdateObjectSavingStatusRequest) (*model.ShowUpdateObjectSavingStatusResponse, error) {
+	requestDef := GenReqDefForShowUpdateObjectSavingStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowUpdateObjectSavingStatusResponse), nil
+	}
+}
+
+// ShowUpdateObjectSavingStatusInvoker 获取对象保存进度
+func (c *DrsClient) ShowUpdateObjectSavingStatusInvoker(request *model.ShowUpdateObjectSavingStatusRequest) *ShowUpdateObjectSavingStatusInvoker {
+	requestDef := GenReqDefForShowUpdateObjectSavingStatus()
+	return &ShowUpdateObjectSavingStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateBatchAsyncJobs 更新指定ID批量异步任务详情
 //
 // 更新租户指定ID批量异步任务详情。
@@ -379,6 +445,7 @@ func (c *DrsClient) UpdateBatchAsyncJobsInvoker(request *model.UpdateBatchAsyncJ
 // UpdateJob 更新指定ID任务详情
 //
 // 更新租户指定ID任务详情。
+// 当type取值为db_object， 进行异步处理。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DrsClient) UpdateJob(request *model.UpdateJobRequest) (*model.UpdateJobResponse, error) {

@@ -12,6 +12,7 @@ type ShowRecordSetWithLineRequest struct {
 	// 所属zone的ID。
 	ZoneId string `json:"zone_id"`
 
+	// 待查询recordset的ID信息。
 	RecordsetId string `json:"recordset_id"`
 }
 

@@ -1,0 +1,76 @@
+package model
+
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
+	"strings"
+)
+
+// Response Object
+type ShowUpdateObjectSavingStatusResponse struct {
+
+	// 查询结果id
+	Id *string `json:"id,omitempty"`
+
+	// 查询状态
+	Status         *ShowUpdateObjectSavingStatusResponseStatus `json:"status,omitempty"`
+	HttpStatusCode int                                         `json:"-"`
+}
+
+func (o ShowUpdateObjectSavingStatusResponse) String() string {
+	data, err := utils.Marshal(o)
+	if err != nil {
+		return "ShowUpdateObjectSavingStatusResponse struct{}"
+	}
+
+	return strings.Join([]string{"ShowUpdateObjectSavingStatusResponse", string(data)}, " ")
+}
+
+type ShowUpdateObjectSavingStatusResponseStatus struct {
+	value string
+}
+
+type ShowUpdateObjectSavingStatusResponseStatusEnum struct {
+	PENDING ShowUpdateObjectSavingStatusResponseStatus
+	FAILED  ShowUpdateObjectSavingStatusResponseStatus
+	SUCCESS ShowUpdateObjectSavingStatusResponseStatus
+}
+
+func GetShowUpdateObjectSavingStatusResponseStatusEnum() ShowUpdateObjectSavingStatusResponseStatusEnum {
+	return ShowUpdateObjectSavingStatusResponseStatusEnum{
+		PENDING: ShowUpdateObjectSavingStatusResponseStatus{
+			value: "pending",
+		},
+		FAILED: ShowUpdateObjectSavingStatusResponseStatus{
+			value: "failed",
+		},
+		SUCCESS: ShowUpdateObjectSavingStatusResponseStatus{
+			value: "success",
+		},
+	}
+}
+
+func (c ShowUpdateObjectSavingStatusResponseStatus) Value() string {
+	return c.value
+}
+
+func (c ShowUpdateObjectSavingStatusResponseStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ShowUpdateObjectSavingStatusResponseStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}

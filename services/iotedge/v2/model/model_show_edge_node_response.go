@@ -80,6 +80,9 @@ type ShowEdgeNodeResponse struct {
 	// 节点的安全等级，MEDIUM边缘节数据上报不进行加密，HIGH对数据上报进行加密。
 	SecurityLevel *string `json:"security_level,omitempty"`
 
+	// 节点的可靠性等级。
+	ReliabilityLevel *string `json:"reliability_level,omitempty"`
+
 	// 节点的存储周期，默认0天，取值范围0~7天，0天则不存储。
 	StoragePeriod *int32 `json:"storage_period,omitempty"`
 

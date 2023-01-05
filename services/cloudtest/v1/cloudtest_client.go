@@ -61,9 +61,9 @@ func (c *CloudtestClient) CreatePlanInvoker(request *model.CreatePlanRequest) *C
 	return &CreatePlanInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateService 新测试类型服务注册到云测
+// CreateService 新测试类型服务注册
 //
-// 通过接口CreateService注册成为云测的自定义服务。 注册完成后云测界面将会出现此自定义测试类型。
+// 通过接口CreateService注册成为自定义服务。 注册完成后界面将会出现此自定义测试类型。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudtestClient) CreateService(request *model.CreateServiceRequest) (*model.CreateServiceResponse, error) {
@@ -76,7 +76,7 @@ func (c *CloudtestClient) CreateService(request *model.CreateServiceRequest) (*m
 	}
 }
 
-// CreateServiceInvoker 新测试类型服务注册到云测
+// CreateServiceInvoker 新测试类型服务注册
 func (c *CloudtestClient) CreateServiceInvoker(request *model.CreateServiceRequest) *CreateServiceInvoker {
 	requestDef := GenReqDefForCreateService()
 	return &CreateServiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -397,9 +397,9 @@ func (c *CloudtestClient) CreateApiTestSuiteByRepoFileInvoker(request *model.Cre
 	return &CreateApiTestSuiteByRepoFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListEnvironments 获取云测的环境参数分组列表
+// ListEnvironments 获取环境参数分组列表
 //
-// 获取云测的环境参数分组列表
+// 获取环境参数分组列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudtestClient) ListEnvironments(request *model.ListEnvironmentsRequest) (*model.ListEnvironmentsResponse, error) {
@@ -412,7 +412,7 @@ func (c *CloudtestClient) ListEnvironments(request *model.ListEnvironmentsReques
 	}
 }
 
-// ListEnvironmentsInvoker 获取云测的环境参数分组列表
+// ListEnvironmentsInvoker 获取环境参数分组列表
 func (c *CloudtestClient) ListEnvironmentsInvoker(request *model.ListEnvironmentsRequest) *ListEnvironmentsInvoker {
 	requestDef := GenReqDefForListEnvironments()
 	return &ListEnvironmentsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

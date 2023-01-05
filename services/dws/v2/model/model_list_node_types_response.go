@@ -10,8 +10,11 @@ import (
 type ListNodeTypesResponse struct {
 
 	// 节点类型对象列表。
-	NodeTypes      *[]NodeTypes `json:"node_types,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	NodeTypes *[]NodeTypes `json:"node_types,omitempty"`
+
+	// 节点类型总数
+	Count          *int32 `json:"count,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ListNodeTypesResponse) String() string {

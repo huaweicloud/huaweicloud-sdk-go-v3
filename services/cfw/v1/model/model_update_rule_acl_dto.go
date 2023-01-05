@@ -44,7 +44,7 @@ type UpdateRuleAclDto struct {
 	// 长连接时长
 	LongConnectTime *int64 `json:"long_connect_time,omitempty"`
 
-	// 是否支持长连接，0表示支持，1表示不支持
+	// 是否支持长连接，0表示不支持，1表示支持
 	LongConnectEnable *UpdateRuleAclDtoLongConnectEnable `json:"long_connect_enable,omitempty"`
 
 	Source *RuleAddressDto `json:"source,omitempty"`

@@ -12,7 +12,7 @@ type CreateSearchCriteriasBody struct {
 	Criteria string `json:"criteria"`
 
 	// 企业项目id
-	EpsId string `json:"epsId"`
+	EpsId *string `json:"eps_id,omitempty"`
 
 	// 创建快速查询名称
 	Name string `json:"name"`

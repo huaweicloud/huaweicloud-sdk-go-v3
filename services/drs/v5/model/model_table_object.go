@@ -40,7 +40,7 @@ type TableObject struct {
 	ConfigConditions *[]string `json:"config_conditions,omitempty"`
 
 	// 是否已经进行同步。
-	HasBeenSent *bool `json:"has_been_sent,omitempty"`
+	IsSynchronized *bool `json:"is_synchronized,omitempty"`
 
 	// 需要同步/映射/过滤/新增的列，当需要列过滤、列映射、附加列功能时填写，仅在实时同步任务中生效，当整表同步为false时需要填写。
 	Columns map[string]ColumnObject `json:"columns,omitempty"`

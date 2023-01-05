@@ -16,6 +16,9 @@ type TextDetectionReq struct {
 	GlossaryNames *[]string `json:"glossary_names,omitempty"`
 
 	Data *TextDetectionDataReq `json:"data"`
+
+	// 检测时使用的自定义白名单词库列表。
+	WhiteGlossaryNames *[]string `json:"white_glossary_names,omitempty"`
 }
 
 func (o TextDetectionReq) String() string {

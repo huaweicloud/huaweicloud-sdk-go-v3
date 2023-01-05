@@ -61,6 +61,9 @@ type NodeResponse struct {
 
 	// 主机IP列表
 	HostIps *[]string `json:"host_ips,omitempty"`
+
+	// 节点中部署的数量
+	DeploymentNum *int32 `json:"deployment_num,omitempty"`
 }
 
 func (o NodeResponse) String() string {

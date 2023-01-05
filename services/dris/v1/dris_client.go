@@ -418,6 +418,27 @@ func (c *DrisClient) ShowIpcInvoker(request *model.ShowIpcRequest) *ShowIpcInvok
 	return &ShowIpcInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchShowRadars 查询雷达列表
+//
+// 查询雷达列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrisClient) BatchShowRadars(request *model.BatchShowRadarsRequest) (*model.BatchShowRadarsResponse, error) {
+	requestDef := GenReqDefForBatchShowRadars()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchShowRadarsResponse), nil
+	}
+}
+
+// BatchShowRadarsInvoker 查询雷达列表
+func (c *DrisClient) BatchShowRadarsInvoker(request *model.BatchShowRadarsRequest) *BatchShowRadarsInvoker {
+	requestDef := GenReqDefForBatchShowRadars()
+	return &BatchShowRadarsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchShowRsus 查询RSU列表
 //
 // 查询RSU列表

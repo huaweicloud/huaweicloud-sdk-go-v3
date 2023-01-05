@@ -572,6 +572,27 @@ func (c *DcsClient) ListBigkeyScanTasksInvoker(request *model.ListBigkeyScanTask
 	return &ListBigkeyScanTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListConfigHistories 查询实例参数修改记录列表
+//
+// 查询实例的参数修改记录列表，支持按照关键字查询
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) ListConfigHistories(request *model.ListConfigHistoriesRequest) (*model.ListConfigHistoriesResponse, error) {
+	requestDef := GenReqDefForListConfigHistories()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListConfigHistoriesResponse), nil
+	}
+}
+
+// ListConfigHistoriesInvoker 查询实例参数修改记录列表
+func (c *DcsClient) ListConfigHistoriesInvoker(request *model.ListConfigHistoriesRequest) *ListConfigHistoriesInvoker {
+	requestDef := GenReqDefForListConfigHistories()
+	return &ListConfigHistoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListConfigurations 查询实例配置参数
 //
 // 查询指定实例的配置参数信息。

@@ -56,6 +56,9 @@ type Server struct {
 	// 是否为自定义网络的云手机服务器标识。  \"v1\"，非自定义网络的云手机服务器。  v2\"，自定义网络的云手机服务器。 支持按照网络版本字段进行筛选
 	NetworkVersion *string `json:"network_version,omitempty"`
 
+	// 云手机服务器所属企业项目ID。
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
 	// 创建时间 时间格式为UTC，YYYY-MM-DDTHH:MM:SSZ
 	CreateTime *string `json:"create_time,omitempty"`
 

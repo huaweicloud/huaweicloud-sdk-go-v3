@@ -12,8 +12,8 @@ import (
 // Request Object
 type ListDomainBandwidthPeakRequest struct {
 
-	// 播放域名列表，最多支持查询100个域名，多个域名以逗号分隔。
-	PlayDomains []string `json:"play_domains"`
+	// 播放域名列表，最多支持查询100个域名，多个域名以逗号分隔。  如果不传入域名，则查询租户下所有播放域名的带宽峰值。
+	PlayDomains *[]string `json:"play_domains,omitempty"`
 
 	// 应用名称。
 	App *string `json:"app,omitempty"`
@@ -35,6 +35,9 @@ type ListDomainBandwidthPeakRequest struct {
 
 	// 结束时间。日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间。结束时间需大于起始时间。
 	EndTime *string `json:"end_time,omitempty"`
+
+	// 服务类型： - Live：直播 - LLL：超低时延直播 - ALL: 默认所有直播
+	ServiceType *ListDomainBandwidthPeakRequestServiceType `json:"service_type,omitempty"`
 }
 
 func (o ListDomainBandwidthPeakRequest) String() string {
@@ -75,6 +78,52 @@ func (c ListDomainBandwidthPeakRequestProtocol) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ListDomainBandwidthPeakRequestProtocol) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ListDomainBandwidthPeakRequestServiceType struct {
+	value string
+}
+
+type ListDomainBandwidthPeakRequestServiceTypeEnum struct {
+	LIVE ListDomainBandwidthPeakRequestServiceType
+	LLL  ListDomainBandwidthPeakRequestServiceType
+	ALL  ListDomainBandwidthPeakRequestServiceType
+}
+
+func GetListDomainBandwidthPeakRequestServiceTypeEnum() ListDomainBandwidthPeakRequestServiceTypeEnum {
+	return ListDomainBandwidthPeakRequestServiceTypeEnum{
+		LIVE: ListDomainBandwidthPeakRequestServiceType{
+			value: "Live",
+		},
+		LLL: ListDomainBandwidthPeakRequestServiceType{
+			value: "LLL",
+		},
+		ALL: ListDomainBandwidthPeakRequestServiceType{
+			value: "ALL",
+		},
+	}
+}
+
+func (c ListDomainBandwidthPeakRequestServiceType) Value() string {
+	return c.value
+}
+
+func (c ListDomainBandwidthPeakRequestServiceType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListDomainBandwidthPeakRequestServiceType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

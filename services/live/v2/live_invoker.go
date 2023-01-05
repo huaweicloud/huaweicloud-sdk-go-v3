@@ -208,3 +208,15 @@ func (i *ListSingleStreamFramerateInvoker) Invoke() (*model.ListSingleStreamFram
 		return result.(*model.ListSingleStreamFramerateResponse), nil
 	}
 }
+
+type ListUpStreamDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListUpStreamDetailInvoker) Invoke() (*model.ListUpStreamDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListUpStreamDetailResponse), nil
+	}
+}

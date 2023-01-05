@@ -9,7 +9,7 @@ import (
 // 攻击事件统计结果
 type CountItem struct {
 
-	// 类型，包括请求总量（ACCESS）、Bot攻击防护（CRAWLER）、攻击总量（TOTAL_ATTACK）、Web基础防护（WEB_ATTACK）、精准防护（PRECISE）以及CC攻击防护（CC）
+	// 类型，包括请求总量（ACCESS）、Bot攻击防护（CRAWLER）、攻击总量（ATTACK）、Web基础防护（WEB_ATTACK）、精准防护（PRECISE）以及CC攻击防护（CC）
 	Key *string `json:"key,omitempty"`
 
 	// 数量

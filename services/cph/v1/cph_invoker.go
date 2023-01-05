@@ -5,6 +5,30 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/cph/v1/model"
 )
 
+type BatchCreateTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateTagsInvoker) Invoke() (*model.BatchCreateTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCreateTagsResponse), nil
+	}
+}
+
+type BatchDeleteTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteTagsInvoker) Invoke() (*model.BatchDeleteTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteTagsResponse), nil
+	}
+}
+
 type BatchExportCloudPhoneDataInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -194,6 +218,42 @@ func (i *ListJobsInvoker) Invoke() (*model.ListJobsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListJobsResponse), nil
+	}
+}
+
+type ListProjectTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListProjectTagsInvoker) Invoke() (*model.ListProjectTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListProjectTagsResponse), nil
+	}
+}
+
+type ListResourceInstancesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListResourceInstancesInvoker) Invoke() (*model.ListResourceInstancesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListResourceInstancesResponse), nil
+	}
+}
+
+type ListResourceTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListResourceTagsInvoker) Invoke() (*model.ListResourceTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListResourceTagsResponse), nil
 	}
 }
 

@@ -39,11 +39,14 @@ type ListPortsRequest struct {
 	// 功能说明：按照status过滤查询  取值范围：ACTIVE、BUILD、DOWN
 	Status *ListPortsRequestStatus `json:"status,omitempty"`
 
+	// 按照安全组ID列表过滤查询
+	SecurityGroups *[]string `json:"security_groups,omitempty"`
+
 	// 分页查询起始的资源ID，为空时查询第一页
 	Marker *string `json:"marker,omitempty"`
 
 	// 按照fixed_ips=ip_address或者fixed_ips=subnet_id过滤查询
-	FixedIps *string `json:"fixed_ips,omitempty"`
+	FixedIps *[]string `json:"fixed_ips,omitempty"`
 
 	// 功能说明：企业项目ID，用于基于企业项目的权限管理。  取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。  若需要查询当前用户所有企业项目绑定的端口，请传参all_granted_eps。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`

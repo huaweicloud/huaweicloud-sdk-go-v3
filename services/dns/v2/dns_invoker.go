@@ -5,90 +5,6 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/dns/v2/model"
 )
 
-type AssociateEndpointIpaddressInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *AssociateEndpointIpaddressInvoker) Invoke() (*model.AssociateEndpointIpaddressResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.AssociateEndpointIpaddressResponse), nil
-	}
-}
-
-type AssociateResolveRuleRouterInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *AssociateResolveRuleRouterInvoker) Invoke() (*model.AssociateResolveRuleRouterResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.AssociateResolveRuleRouterResponse), nil
-	}
-}
-
-type BatchDeletePtrRecordsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchDeletePtrRecordsInvoker) Invoke() (*model.BatchDeletePtrRecordsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchDeletePtrRecordsResponse), nil
-	}
-}
-
-type BatchDeleteRecordSetsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchDeleteRecordSetsInvoker) Invoke() (*model.BatchDeleteRecordSetsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchDeleteRecordSetsResponse), nil
-	}
-}
-
-type BatchDeleteZonesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchDeleteZonesInvoker) Invoke() (*model.BatchDeleteZonesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchDeleteZonesResponse), nil
-	}
-}
-
-type BatchSetRecordSetsStatusInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchSetRecordSetsStatusInvoker) Invoke() (*model.BatchSetRecordSetsStatusResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchSetRecordSetsStatusResponse), nil
-	}
-}
-
-type BatchSetZonesStatusInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchSetZonesStatusInvoker) Invoke() (*model.BatchSetZonesStatusResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchSetZonesStatusResponse), nil
-	}
-}
-
 type CreateCustomLineInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -98,18 +14,6 @@ func (i *CreateCustomLineInvoker) Invoke() (*model.CreateCustomLineResponse, err
 		return nil, err
 	} else {
 		return result.(*model.CreateCustomLineResponse), nil
-	}
-}
-
-type CreateEndpointInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateEndpointInvoker) Invoke() (*model.CreateEndpointResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateEndpointResponse), nil
 	}
 }
 
@@ -125,42 +29,6 @@ func (i *CreateLineGroupInvoker) Invoke() (*model.CreateLineGroupResponse, error
 	}
 }
 
-type CreateResolveRuleInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateResolveRuleInvoker) Invoke() (*model.CreateResolveRuleResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateResolveRuleResponse), nil
-	}
-}
-
-type CreateRetrievalInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateRetrievalInvoker) Invoke() (*model.CreateRetrievalResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateRetrievalResponse), nil
-	}
-}
-
-type CreateRetrievalVerificationInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateRetrievalVerificationInvoker) Invoke() (*model.CreateRetrievalVerificationResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateRetrievalVerificationResponse), nil
-	}
-}
-
 type DeleteCustomLineInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -173,18 +41,6 @@ func (i *DeleteCustomLineInvoker) Invoke() (*model.DeleteCustomLineResponse, err
 	}
 }
 
-type DeleteEndpointInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteEndpointInvoker) Invoke() (*model.DeleteEndpointResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteEndpointResponse), nil
-	}
-}
-
 type DeleteLineGroupInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -194,42 +50,6 @@ func (i *DeleteLineGroupInvoker) Invoke() (*model.DeleteLineGroupResponse, error
 		return nil, err
 	} else {
 		return result.(*model.DeleteLineGroupResponse), nil
-	}
-}
-
-type DeleteResolveRuleInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteResolveRuleInvoker) Invoke() (*model.DeleteResolveRuleResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteResolveRuleResponse), nil
-	}
-}
-
-type DisassociateEndpointIpaddressInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DisassociateEndpointIpaddressInvoker) Invoke() (*model.DisassociateEndpointIpaddressResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DisassociateEndpointIpaddressResponse), nil
-	}
-}
-
-type DisassociateResolveRuleRouterInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DisassociateResolveRuleRouterInvoker) Invoke() (*model.DisassociateResolveRuleRouterResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DisassociateResolveRuleRouterResponse), nil
 	}
 }
 
@@ -257,42 +77,6 @@ func (i *ListCustomLineInvoker) Invoke() (*model.ListCustomLineResponse, error) 
 	}
 }
 
-type ListEndpointIpaddressesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListEndpointIpaddressesInvoker) Invoke() (*model.ListEndpointIpaddressesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListEndpointIpaddressesResponse), nil
-	}
-}
-
-type ListEndpointVpcsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListEndpointVpcsInvoker) Invoke() (*model.ListEndpointVpcsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListEndpointVpcsResponse), nil
-	}
-}
-
-type ListEndpointsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListEndpointsInvoker) Invoke() (*model.ListEndpointsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListEndpointsResponse), nil
-	}
-}
-
 type ListLineGroupsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -317,18 +101,6 @@ func (i *ListNameServersInvoker) Invoke() (*model.ListNameServersResponse, error
 	}
 }
 
-type ListResoleRulesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListResoleRulesInvoker) Invoke() (*model.ListResoleRulesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListResoleRulesResponse), nil
-	}
-}
-
 type ShowApiInfoInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -338,30 +110,6 @@ func (i *ShowApiInfoInvoker) Invoke() (*model.ShowApiInfoResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowApiInfoResponse), nil
-	}
-}
-
-type ShowDomainQuotaInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowDomainQuotaInvoker) Invoke() (*model.ShowDomainQuotaResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowDomainQuotaResponse), nil
-	}
-}
-
-type ShowEndpointInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowEndpointInvoker) Invoke() (*model.ShowEndpointResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowEndpointResponse), nil
 	}
 }
 
@@ -377,42 +125,6 @@ func (i *ShowLineGroupInvoker) Invoke() (*model.ShowLineGroupResponse, error) {
 	}
 }
 
-type ShowResoleRuleInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowResoleRuleInvoker) Invoke() (*model.ShowResoleRuleResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowResoleRuleResponse), nil
-	}
-}
-
-type ShowRetrievalInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowRetrievalInvoker) Invoke() (*model.ShowRetrievalResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowRetrievalResponse), nil
-	}
-}
-
-type ShowRetrievalVerificationInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowRetrievalVerificationInvoker) Invoke() (*model.ShowRetrievalVerificationResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowRetrievalVerificationResponse), nil
-	}
-}
-
 type UpdateCustomLineInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -425,18 +137,6 @@ func (i *UpdateCustomLineInvoker) Invoke() (*model.UpdateCustomLineResponse, err
 	}
 }
 
-type UpdateEndpointInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateEndpointInvoker) Invoke() (*model.UpdateEndpointResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateEndpointResponse), nil
-	}
-}
-
 type UpdateLineGroupsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -446,18 +146,6 @@ func (i *UpdateLineGroupsInvoker) Invoke() (*model.UpdateLineGroupsResponse, err
 		return nil, err
 	} else {
 		return result.(*model.UpdateLineGroupsResponse), nil
-	}
-}
-
-type UpdateResolveRuleInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateResolveRuleInvoker) Invoke() (*model.UpdateResolveRuleResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateResolveRuleResponse), nil
 	}
 }
 
@@ -902,18 +590,6 @@ func (i *ListPublicZonesInvoker) Invoke() (*model.ListPublicZonesResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ListPublicZonesResponse), nil
-	}
-}
-
-type SetPrivateZoneProxyPatternInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *SetPrivateZoneProxyPatternInvoker) Invoke() (*model.SetPrivateZoneProxyPatternResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.SetPrivateZoneProxyPatternResponse), nil
 	}
 }
 

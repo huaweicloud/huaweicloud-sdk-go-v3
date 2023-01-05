@@ -19,6 +19,48 @@ func CphClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+// BatchCreateTags 批量添加标签
+//
+// 批量添加标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CphClient) BatchCreateTags(request *model.BatchCreateTagsRequest) (*model.BatchCreateTagsResponse, error) {
+	requestDef := GenReqDefForBatchCreateTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateTagsResponse), nil
+	}
+}
+
+// BatchCreateTagsInvoker 批量添加标签
+func (c *CphClient) BatchCreateTagsInvoker(request *model.BatchCreateTagsRequest) *BatchCreateTagsInvoker {
+	requestDef := GenReqDefForBatchCreateTags()
+	return &BatchCreateTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteTags 批量删除标签
+//
+// 批量删除标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CphClient) BatchDeleteTags(request *model.BatchDeleteTagsRequest) (*model.BatchDeleteTagsResponse, error) {
+	requestDef := GenReqDefForBatchDeleteTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteTagsResponse), nil
+	}
+}
+
+// BatchDeleteTagsInvoker 批量删除标签
+func (c *CphClient) BatchDeleteTagsInvoker(request *model.BatchDeleteTagsRequest) *BatchDeleteTagsInvoker {
+	requestDef := GenReqDefForBatchDeleteTags()
+	return &BatchDeleteTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchExportCloudPhoneData 导出云手机数据
 //
 // 批量导出云手机中的数据。
@@ -353,6 +395,69 @@ func (c *CphClient) ListJobs(request *model.ListJobsRequest) (*model.ListJobsRes
 func (c *CphClient) ListJobsInvoker(request *model.ListJobsRequest) *ListJobsInvoker {
 	requestDef := GenReqDefForListJobs()
 	return &ListJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProjectTags 查询项目标签
+//
+// 查询租户在指定区域和资源类型的所有标签集合。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CphClient) ListProjectTags(request *model.ListProjectTagsRequest) (*model.ListProjectTagsResponse, error) {
+	requestDef := GenReqDefForListProjectTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListProjectTagsResponse), nil
+	}
+}
+
+// ListProjectTagsInvoker 查询项目标签
+func (c *CphClient) ListProjectTagsInvoker(request *model.ListProjectTagsRequest) *ListProjectTagsInvoker {
+	requestDef := GenReqDefForListProjectTags()
+	return &ListProjectTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListResourceInstances 查询资源实例
+//
+// 查询资源实例。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CphClient) ListResourceInstances(request *model.ListResourceInstancesRequest) (*model.ListResourceInstancesResponse, error) {
+	requestDef := GenReqDefForListResourceInstances()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListResourceInstancesResponse), nil
+	}
+}
+
+// ListResourceInstancesInvoker 查询资源实例
+func (c *CphClient) ListResourceInstancesInvoker(request *model.ListResourceInstancesRequest) *ListResourceInstancesInvoker {
+	requestDef := GenReqDefForListResourceInstances()
+	return &ListResourceInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListResourceTags 查询资源标签
+//
+// 查询资源标签列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CphClient) ListResourceTags(request *model.ListResourceTagsRequest) (*model.ListResourceTagsResponse, error) {
+	requestDef := GenReqDefForListResourceTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListResourceTagsResponse), nil
+	}
+}
+
+// ListResourceTagsInvoker 查询资源标签
+func (c *CphClient) ListResourceTagsInvoker(request *model.ListResourceTagsRequest) *ListResourceTagsInvoker {
+	requestDef := GenReqDefForListResourceTags()
+	return &ListResourceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListShareFiles 查询共享存储文件

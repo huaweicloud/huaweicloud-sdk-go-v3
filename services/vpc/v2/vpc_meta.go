@@ -377,6 +377,10 @@ func GenReqDefForListPorts() *def.HttpRequestDef {
 		WithJsonTag("status").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SecurityGroups").
+		WithJsonTag("security_groups").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Marker").
 		WithJsonTag("marker").
 		WithLocationType(def.Query))

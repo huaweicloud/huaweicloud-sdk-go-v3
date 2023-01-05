@@ -255,7 +255,7 @@ func (c *WafClient) CreatePremiumHostInvoker(request *model.CreatePremiumHostReq
 
 // CreatePrepaidCloudWaf 购买包周期云模式waf
 //
-// 购买包周期云模式waf
+// 购买包周期云模式waf。入门版waf不支持购买扩展包
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) CreatePrepaidCloudWaf(request *model.CreatePrepaidCloudWafRequest) (*model.CreatePrepaidCloudWafResponse, error) {
@@ -612,7 +612,7 @@ func (c *WafClient) ListAntitamperRuleInvoker(request *model.ListAntitamperRuleR
 
 // ListBandwidthTimeline 查询安全统计带宽数据
 //
-// 查询安全统计带宽数据。需要注意的是，安全统计相关的接口，暂时不能支持任意时间的查询。只能支持 console上显示的 昨天，今天，3天，7天和30天 数据查询。
+// 查询安全统计带宽数据，统计的带宽数据为平均值，单位为bit/s。需要注意的是，安全统计相关的接口，暂时不能支持任意时间的查询。只能支持 console上显示的 昨天，今天，3天，7天和30天 数据查询。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) ListBandwidthTimeline(request *model.ListBandwidthTimelineRequest) (*model.ListBandwidthTimelineResponse, error) {
