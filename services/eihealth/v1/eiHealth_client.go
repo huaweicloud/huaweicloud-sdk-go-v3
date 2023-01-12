@@ -103,6 +103,27 @@ func (c *EiHealthClient) ListAppInvoker(request *model.ListAppRequest) *ListAppI
 	return &ListAppInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// PublishApp 发布应用
+//
+// 发布应用
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) PublishApp(request *model.PublishAppRequest) (*model.PublishAppResponse, error) {
+	requestDef := GenReqDefForPublishApp()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.PublishAppResponse), nil
+	}
+}
+
+// PublishAppInvoker 发布应用
+func (c *EiHealthClient) PublishAppInvoker(request *model.PublishAppRequest) *PublishAppInvoker {
+	requestDef := GenReqDefForPublishApp()
+	return &PublishAppInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowApp 获取应用详情
 //
 // 获取应用详情
@@ -164,6 +185,48 @@ func (c *EiHealthClient) UpdateApp(request *model.UpdateAppRequest) (*model.Upda
 func (c *EiHealthClient) UpdateAppInvoker(request *model.UpdateAppRequest) *UpdateAppInvoker {
 	requestDef := GenReqDefForUpdateApp()
 	return &UpdateAppInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAssetVersion 删除资产指定版本
+//
+// 删除资产指定版本
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) DeleteAssetVersion(request *model.DeleteAssetVersionRequest) (*model.DeleteAssetVersionResponse, error) {
+	requestDef := GenReqDefForDeleteAssetVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAssetVersionResponse), nil
+	}
+}
+
+// DeleteAssetVersionInvoker 删除资产指定版本
+func (c *EiHealthClient) DeleteAssetVersionInvoker(request *model.DeleteAssetVersionRequest) *DeleteAssetVersionInvoker {
+	requestDef := GenReqDefForDeleteAssetVersion()
+	return &DeleteAssetVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExecuteAssetAction 操作资产发布状态
+//
+// 操作资产发布状态
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) ExecuteAssetAction(request *model.ExecuteAssetActionRequest) (*model.ExecuteAssetActionResponse, error) {
+	requestDef := GenReqDefForExecuteAssetAction()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteAssetActionResponse), nil
+	}
+}
+
+// ExecuteAssetActionInvoker 操作资产发布状态
+func (c *EiHealthClient) ExecuteAssetActionInvoker(request *model.ExecuteAssetActionRequest) *ExecuteAssetActionInvoker {
+	requestDef := GenReqDefForExecuteAssetAction()
+	return &ExecuteAssetActionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListAsset 获取资产列表
@@ -248,6 +311,27 @@ func (c *EiHealthClient) ShowAssetVersion(request *model.ShowAssetVersionRequest
 func (c *EiHealthClient) ShowAssetVersionInvoker(request *model.ShowAssetVersionRequest) *ShowAssetVersionInvoker {
 	requestDef := GenReqDefForShowAssetVersion()
 	return &ShowAssetVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAssetVersion 更新资产指定版本的信息
+//
+// 更新资产指定版本的信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) UpdateAssetVersion(request *model.UpdateAssetVersionRequest) (*model.UpdateAssetVersionResponse, error) {
+	requestDef := GenReqDefForUpdateAssetVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAssetVersionResponse), nil
+	}
+}
+
+// UpdateAssetVersionInvoker 更新资产指定版本的信息
+func (c *EiHealthClient) UpdateAssetVersionInvoker(request *model.UpdateAssetVersionRequest) *UpdateAssetVersionInvoker {
+	requestDef := GenReqDefForUpdateAssetVersion()
+	return &UpdateAssetVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateAutoJob 创建自动作业模板
@@ -901,6 +985,27 @@ func (c *EiHealthClient) ListDataInvoker(request *model.ListDataRequest) *ListDa
 	return &ListDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// PublishData 发布数据资产
+//
+// 发布数据资产
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) PublishData(request *model.PublishDataRequest) (*model.PublishDataResponse, error) {
+	requestDef := GenReqDefForPublishData()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.PublishDataResponse), nil
+	}
+}
+
+// PublishDataInvoker 发布数据资产
+func (c *EiHealthClient) PublishDataInvoker(request *model.PublishDataRequest) *PublishDataInvoker {
+	requestDef := GenReqDefForPublishData()
+	return &PublishDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // QuoteData 引用项目数据
 //
 // 引用项目数据
@@ -1004,6 +1109,27 @@ func (c *EiHealthClient) SubscribeData(request *model.SubscribeDataRequest) (*mo
 func (c *EiHealthClient) SubscribeDataInvoker(request *model.SubscribeDataRequest) *SubscribeDataInvoker {
 	requestDef := GenReqDefForSubscribeData()
 	return &SubscribeDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDataPathPolicy 设置数据对象策略
+//
+// 设置数据对象策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) UpdateDataPathPolicy(request *model.UpdateDataPathPolicyRequest) (*model.UpdateDataPathPolicyResponse, error) {
+	requestDef := GenReqDefForUpdateDataPathPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDataPathPolicyResponse), nil
+	}
+}
+
+// UpdateDataPathPolicyInvoker 设置数据对象策略
+func (c *EiHealthClient) UpdateDataPathPolicyInvoker(request *model.UpdateDataPathPolicyRequest) *UpdateDataPathPolicyInvoker {
+	requestDef := GenReqDefForUpdateDataPathPolicy()
+	return &UpdateDataPathPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateDataPolicy 设置项目级权限控制策略
@@ -1636,6 +1762,27 @@ func (c *EiHealthClient) ListImageTagInvoker(request *model.ListImageTagRequest)
 	return &ListImageTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// PublishImage 发布镜像
+//
+// 发布镜像
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) PublishImage(request *model.PublishImageRequest) (*model.PublishImageResponse, error) {
+	requestDef := GenReqDefForPublishImage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.PublishImageResponse), nil
+	}
+}
+
+// PublishImageInvoker 发布镜像
+func (c *EiHealthClient) PublishImageInvoker(request *model.PublishImageRequest) *PublishImageInvoker {
+	requestDef := GenReqDefForPublishImage()
+	return &PublishImageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowDockerLogin 获取docker login指令
 //
 // 获取docker login指令
@@ -1722,7 +1869,7 @@ func (c *EiHealthClient) ShowJobConfigInvoker(request *model.ShowJobConfigReques
 
 // UpdateJobConfig 设置作业配置
 //
-// 设置作业配置，目前支持修改保存时长(180天 - 10年)、记录数(1W-500W)
+// 设置作业配置，目前支持修改作业保存条数(1万条-1000万条)，默认设置为500万条；
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) UpdateJobConfig(request *model.UpdateJobConfigRequest) (*model.UpdateJobConfigResponse, error) {
@@ -1739,6 +1886,69 @@ func (c *EiHealthClient) UpdateJobConfig(request *model.UpdateJobConfigRequest) 
 func (c *EiHealthClient) UpdateJobConfigInvoker(request *model.UpdateJobConfigRequest) *UpdateJobConfigInvoker {
 	requestDef := GenReqDefForUpdateJobConfig()
 	return &UpdateJobConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchCancelJob 批量取消作业
+//
+// 批量取消作业
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) BatchCancelJob(request *model.BatchCancelJobRequest) (*model.BatchCancelJobResponse, error) {
+	requestDef := GenReqDefForBatchCancelJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCancelJobResponse), nil
+	}
+}
+
+// BatchCancelJobInvoker 批量取消作业
+func (c *EiHealthClient) BatchCancelJobInvoker(request *model.BatchCancelJobRequest) *BatchCancelJobInvoker {
+	requestDef := GenReqDefForBatchCancelJob()
+	return &BatchCancelJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteJob 批量删除作业
+//
+// 批量删除作业
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) BatchDeleteJob(request *model.BatchDeleteJobRequest) (*model.BatchDeleteJobResponse, error) {
+	requestDef := GenReqDefForBatchDeleteJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteJobResponse), nil
+	}
+}
+
+// BatchDeleteJobInvoker 批量删除作业
+func (c *EiHealthClient) BatchDeleteJobInvoker(request *model.BatchDeleteJobRequest) *BatchDeleteJobInvoker {
+	requestDef := GenReqDefForBatchDeleteJob()
+	return &BatchDeleteJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchRetryJob 批量重试作业
+//
+// 批量重试作业
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) BatchRetryJob(request *model.BatchRetryJobRequest) (*model.BatchRetryJobResponse, error) {
+	requestDef := GenReqDefForBatchRetryJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchRetryJobResponse), nil
+	}
+}
+
+// BatchRetryJobInvoker 批量重试作业
+func (c *EiHealthClient) BatchRetryJobInvoker(request *model.BatchRetryJobRequest) *BatchRetryJobInvoker {
+	requestDef := GenReqDefForBatchRetryJob()
+	return &BatchRetryJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CancelJob 取消或强制停止作业调度
@@ -1951,6 +2161,27 @@ func (c *EiHealthClient) ShowTaskInstanceEventsInvoker(request *model.ShowTaskIn
 	return &ShowTaskInstanceEventsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowTaskInstanceMetricData 获取子任务中实例的资源监控数据
+//
+// 获取子任务中实例的资源监控数据
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) ShowTaskInstanceMetricData(request *model.ShowTaskInstanceMetricDataRequest) (*model.ShowTaskInstanceMetricDataResponse, error) {
+	requestDef := GenReqDefForShowTaskInstanceMetricData()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTaskInstanceMetricDataResponse), nil
+	}
+}
+
+// ShowTaskInstanceMetricDataInvoker 获取子任务中实例的资源监控数据
+func (c *EiHealthClient) ShowTaskInstanceMetricDataInvoker(request *model.ShowTaskInstanceMetricDataRequest) *ShowTaskInstanceMetricDataInvoker {
+	requestDef := GenReqDefForShowTaskInstanceMetricData()
+	return &ShowTaskInstanceMetricDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowTaskInstancePod 获取子任务中实例的pod信息
 //
 // 获取子任务中实例的pod信息
@@ -1991,6 +2222,48 @@ func (c *EiHealthClient) ShowTaskInstances(request *model.ShowTaskInstancesReque
 func (c *EiHealthClient) ShowTaskInstancesInvoker(request *model.ShowTaskInstancesRequest) *ShowTaskInstancesInvoker {
 	requestDef := GenReqDefForShowTaskInstances()
 	return &ShowTaskInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateJob 更新作业
+//
+// 更新作业
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) UpdateJob(request *model.UpdateJobRequest) (*model.UpdateJobResponse, error) {
+	requestDef := GenReqDefForUpdateJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateJobResponse), nil
+	}
+}
+
+// UpdateJobInvoker 更新作业
+func (c *EiHealthClient) UpdateJobInvoker(request *model.UpdateJobRequest) *UpdateJobInvoker {
+	requestDef := GenReqDefForUpdateJob()
+	return &UpdateJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteLabel 批量删除标签
+//
+// 批量删除标签
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) BatchDeleteLabel(request *model.BatchDeleteLabelRequest) (*model.BatchDeleteLabelResponse, error) {
+	requestDef := GenReqDefForBatchDeleteLabel()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteLabelResponse), nil
+	}
+}
+
+// BatchDeleteLabelInvoker 批量删除标签
+func (c *EiHealthClient) BatchDeleteLabelInvoker(request *model.BatchDeleteLabelRequest) *BatchDeleteLabelInvoker {
+	requestDef := GenReqDefForBatchDeleteLabel()
+	return &BatchDeleteLabelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateLabel 创建标签
@@ -2812,27 +3085,6 @@ func (c *EiHealthClient) ListProjectInvoker(request *model.ListProjectRequest) *
 	return &ListProjectInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListRecentJob 获取最近的作业列表
-//
-// 获取最近的作业列表
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *EiHealthClient) ListRecentJob(request *model.ListRecentJobRequest) (*model.ListRecentJobResponse, error) {
-	requestDef := GenReqDefForListRecentJob()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListRecentJobResponse), nil
-	}
-}
-
-// ListRecentJobInvoker 获取最近的作业列表
-func (c *EiHealthClient) ListRecentJobInvoker(request *model.ListRecentJobRequest) *ListRecentJobInvoker {
-	requestDef := GenReqDefForListRecentJob()
-	return &ListRecentJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // ShowProject 获取项目详情
 //
 // 获取项目详情
@@ -3020,6 +3272,27 @@ func (c *EiHealthClient) UpdateProjectTracker(request *model.UpdateProjectTracke
 func (c *EiHealthClient) UpdateProjectTrackerInvoker(request *model.UpdateProjectTrackerRequest) *UpdateProjectTrackerInvoker {
 	requestDef := GenReqDefForUpdateProjectTracker()
 	return &UpdateProjectTrackerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDownloadResourceStatData 批量获取资源统计数据
+//
+// 批量获取资源统计数据
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) BatchDownloadResourceStatData(request *model.BatchDownloadResourceStatDataRequest) (*model.BatchDownloadResourceStatDataResponse, error) {
+	requestDef := GenReqDefForBatchDownloadResourceStatData()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDownloadResourceStatDataResponse), nil
+	}
+}
+
+// BatchDownloadResourceStatDataInvoker 批量获取资源统计数据
+func (c *EiHealthClient) BatchDownloadResourceStatDataInvoker(request *model.BatchDownloadResourceStatDataRequest) *BatchDownloadResourceStatDataInvoker {
+	requestDef := GenReqDefForBatchDownloadResourceStatData()
+	return &BatchDownloadResourceStatDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowResourceMetricData 获取资源监控数据
@@ -3568,6 +3841,27 @@ func (c *EiHealthClient) UploadTemplateInvoker(request *model.UploadTemplateRequ
 	return &UploadTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CheckTokenVerification 校验token
+//
+// 校验token是否可访问当前环境
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) CheckTokenVerification(request *model.CheckTokenVerificationRequest) (*model.CheckTokenVerificationResponse, error) {
+	requestDef := GenReqDefForCheckTokenVerification()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckTokenVerificationResponse), nil
+	}
+}
+
+// CheckTokenVerificationInvoker 校验token
+func (c *EiHealthClient) CheckTokenVerificationInvoker(request *model.CheckTokenVerificationRequest) *CheckTokenVerificationInvoker {
+	requestDef := GenReqDefForCheckTokenVerification()
+	return &CheckTokenVerificationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateCode 发送验证码
 //
 // 发送验证码
@@ -3671,27 +3965,6 @@ func (c *EiHealthClient) ListUser(request *model.ListUserRequest) (*model.ListUs
 func (c *EiHealthClient) ListUserInvoker(request *model.ListUserRequest) *ListUserInvoker {
 	requestDef := GenReqDefForListUser()
 	return &ListUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowTokenVerification 校验token
-//
-// 校验token是否可访问当前环境
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *EiHealthClient) ShowTokenVerification(request *model.ShowTokenVerificationRequest) (*model.ShowTokenVerificationResponse, error) {
-	requestDef := GenReqDefForShowTokenVerification()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowTokenVerificationResponse), nil
-	}
-}
-
-// ShowTokenVerificationInvoker 校验token
-func (c *EiHealthClient) ShowTokenVerificationInvoker(request *model.ShowTokenVerificationRequest) *ShowTokenVerificationInvoker {
-	requestDef := GenReqDefForShowTokenVerification()
-	return &ShowTokenVerificationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowUser 获取指定用户详情
@@ -3986,6 +4259,27 @@ func (c *EiHealthClient) ListWorkflow(request *model.ListWorkflowRequest) (*mode
 func (c *EiHealthClient) ListWorkflowInvoker(request *model.ListWorkflowRequest) *ListWorkflowInvoker {
 	requestDef := GenReqDefForListWorkflow()
 	return &ListWorkflowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// PublishWorkflow 发布流程
+//
+// 发布流程
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) PublishWorkflow(request *model.PublishWorkflowRequest) (*model.PublishWorkflowResponse, error) {
+	requestDef := GenReqDefForPublishWorkflow()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.PublishWorkflowResponse), nil
+	}
+}
+
+// PublishWorkflowInvoker 发布流程
+func (c *EiHealthClient) PublishWorkflowInvoker(request *model.PublishWorkflowRequest) *PublishWorkflowInvoker {
+	requestDef := GenReqDefForPublishWorkflow()
+	return &PublishWorkflowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowWorkflow 获取流程详情

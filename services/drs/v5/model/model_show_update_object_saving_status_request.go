@@ -9,13 +9,13 @@ import (
 // Request Object
 type ShowUpdateObjectSavingStatusRequest struct {
 
-	// 任务id
+	// 任务ID。
 	JobId string `json:"job_id"`
 
-	// 请求语言类型
+	// 请求语言类型。
 	XLanguage *string `json:"X-Language,omitempty"`
 
-	// 指保存对象接口返回的id
+	// 保存对象接口返回的ID。
 	QueryId string `json:"query_id"`
 }
 

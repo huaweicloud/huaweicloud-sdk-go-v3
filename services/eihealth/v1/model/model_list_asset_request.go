@@ -27,7 +27,7 @@ type ListAssetRequest struct {
 	// 发布者，支持查询多个，以','分割
 	Publishers *string `json:"publishers,omitempty"`
 
-	// 查询范围，支持PUBLIC/INTERNAL
+	// 查询范围，支持PUBLIC/INTERNAL/SELF
 	Scope string `json:"scope"`
 
 	// 供应商，支持查询多个，以','分割

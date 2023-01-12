@@ -44,6 +44,9 @@ type ShowDetailsOfCertificateV2Response struct {
 	// 更新时间
 	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
 
+	// 是否存在信任的根证书CA。当绑定证书存在trusted_root_ca时为true。
+	IsHasTrustedRootCa *bool `json:"is_has_trusted_root_ca,omitempty"`
+
 	// 版本
 	Version *int32 `json:"version,omitempty"`
 

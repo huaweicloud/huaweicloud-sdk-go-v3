@@ -24,8 +24,14 @@ type ShowProjectTraceDataResponse struct {
 	CreateTime *string `json:"create_time,omitempty"`
 
 	// 下载链接
-	DownloadUrl    *string `json:"download_url,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	DownloadUrl *string `json:"download_url,omitempty"`
+
+	// 可操作标记
+	AllowedOperate *bool `json:"allowed_operate,omitempty"`
+
+	// 可删除标记
+	Deletable      *bool `json:"deletable,omitempty"`
+	HttpStatusCode int   `json:"-"`
 }
 
 func (o ShowProjectTraceDataResponse) String() string {

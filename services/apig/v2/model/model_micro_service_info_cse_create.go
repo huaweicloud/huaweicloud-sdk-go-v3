@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// CSE微服务详细信息，service_type为CSE时必填
 type MicroServiceInfoCseCreate struct {
 
 	// 微服务引擎编号

@@ -783,6 +783,27 @@ func (c *BssClient) ListFreeResourceUsagesInvoker(request *model.ListFreeResourc
 	return &ListFreeResourceUsagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListFreeResourcesUsageRecords 查询资源包使用明细
+//
+// 客户在自建平台查询资源包使用明细。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *BssClient) ListFreeResourcesUsageRecords(request *model.ListFreeResourcesUsageRecordsRequest) (*model.ListFreeResourcesUsageRecordsResponse, error) {
+	requestDef := GenReqDefForListFreeResourcesUsageRecords()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFreeResourcesUsageRecordsResponse), nil
+	}
+}
+
+// ListFreeResourcesUsageRecordsInvoker 查询资源包使用明细
+func (c *BssClient) ListFreeResourcesUsageRecordsInvoker(request *model.ListFreeResourcesUsageRecordsRequest) *ListFreeResourcesUsageRecordsInvoker {
+	requestDef := GenReqDefForListFreeResourcesUsageRecords()
+	return &ListFreeResourcesUsageRecordsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListIncentiveDiscountPolicies 查询产品的折扣和激励策略
 //
 // 伙伴在伙伴销售平台上查询产品的折扣和激励策略。

@@ -24,6 +24,7 @@ type NotebookStatusEnum struct {
 	CREATED_FAILED NotebookStatus
 	DELETED_FAILED NotebookStatus
 	UPDATED_FAILED NotebookStatus
+	UNKNOWN        NotebookStatus
 }
 
 func GetNotebookStatusEnum() NotebookStatusEnum {
@@ -57,6 +58,9 @@ func GetNotebookStatusEnum() NotebookStatusEnum {
 		},
 		UPDATED_FAILED: NotebookStatus{
 			value: "UpdatedFailed",
+		},
+		UNKNOWN: NotebookStatus{
+			value: "Unknown",
 		},
 	}
 }

@@ -26,6 +26,15 @@ type VersionRsp struct {
 	// 资产状态
 	Status *string `json:"status,omitempty"`
 
+	// 资产发布失败原因
+	FailedReason *string `json:"failed_reason,omitempty"`
+
+	// 资产标签列表
+	Labels *[]string `json:"labels,omitempty"`
+
+	// 资产封面图访问链接
+	Picture *string `json:"picture,omitempty"`
+
 	// 创建时间
 	CreateTime *string `json:"create_time,omitempty"`
 

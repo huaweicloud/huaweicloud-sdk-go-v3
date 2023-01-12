@@ -53,6 +53,18 @@ func (i *ListAppInvoker) Invoke() (*model.ListAppResponse, error) {
 	}
 }
 
+type PublishAppInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *PublishAppInvoker) Invoke() (*model.PublishAppResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.PublishAppResponse), nil
+	}
+}
+
 type ShowAppInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -86,6 +98,30 @@ func (i *UpdateAppInvoker) Invoke() (*model.UpdateAppResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.UpdateAppResponse), nil
+	}
+}
+
+type DeleteAssetVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAssetVersionInvoker) Invoke() (*model.DeleteAssetVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAssetVersionResponse), nil
+	}
+}
+
+type ExecuteAssetActionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExecuteAssetActionInvoker) Invoke() (*model.ExecuteAssetActionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExecuteAssetActionResponse), nil
 	}
 }
 
@@ -134,6 +170,18 @@ func (i *ShowAssetVersionInvoker) Invoke() (*model.ShowAssetVersionResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ShowAssetVersionResponse), nil
+	}
+}
+
+type UpdateAssetVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAssetVersionInvoker) Invoke() (*model.UpdateAssetVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAssetVersionResponse), nil
 	}
 }
 
@@ -509,6 +557,18 @@ func (i *ListDataInvoker) Invoke() (*model.ListDataResponse, error) {
 	}
 }
 
+type PublishDataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *PublishDataInvoker) Invoke() (*model.PublishDataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.PublishDataResponse), nil
+	}
+}
+
 type QuoteDataInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -566,6 +626,18 @@ func (i *SubscribeDataInvoker) Invoke() (*model.SubscribeDataResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.SubscribeDataResponse), nil
+	}
+}
+
+type UpdateDataPathPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDataPathPolicyInvoker) Invoke() (*model.UpdateDataPathPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDataPathPolicyResponse), nil
 	}
 }
 
@@ -929,6 +1001,18 @@ func (i *ListImageTagInvoker) Invoke() (*model.ListImageTagResponse, error) {
 	}
 }
 
+type PublishImageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *PublishImageInvoker) Invoke() (*model.PublishImageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.PublishImageResponse), nil
+	}
+}
+
 type ShowDockerLoginInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -986,6 +1070,42 @@ func (i *UpdateJobConfigInvoker) Invoke() (*model.UpdateJobConfigResponse, error
 		return nil, err
 	} else {
 		return result.(*model.UpdateJobConfigResponse), nil
+	}
+}
+
+type BatchCancelJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCancelJobInvoker) Invoke() (*model.BatchCancelJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCancelJobResponse), nil
+	}
+}
+
+type BatchDeleteJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteJobInvoker) Invoke() (*model.BatchDeleteJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteJobResponse), nil
+	}
+}
+
+type BatchRetryJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchRetryJobInvoker) Invoke() (*model.BatchRetryJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchRetryJobResponse), nil
 	}
 }
 
@@ -1109,6 +1229,18 @@ func (i *ShowTaskInstanceEventsInvoker) Invoke() (*model.ShowTaskInstanceEventsR
 	}
 }
 
+type ShowTaskInstanceMetricDataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTaskInstanceMetricDataInvoker) Invoke() (*model.ShowTaskInstanceMetricDataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTaskInstanceMetricDataResponse), nil
+	}
+}
+
 type ShowTaskInstancePodInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1130,6 +1262,30 @@ func (i *ShowTaskInstancesInvoker) Invoke() (*model.ShowTaskInstancesResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ShowTaskInstancesResponse), nil
+	}
+}
+
+type UpdateJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateJobInvoker) Invoke() (*model.UpdateJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateJobResponse), nil
+	}
+}
+
+type BatchDeleteLabelInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteLabelInvoker) Invoke() (*model.BatchDeleteLabelResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteLabelResponse), nil
 	}
 }
 
@@ -1601,18 +1757,6 @@ func (i *ListProjectInvoker) Invoke() (*model.ListProjectResponse, error) {
 	}
 }
 
-type ListRecentJobInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListRecentJobInvoker) Invoke() (*model.ListRecentJobResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListRecentJobResponse), nil
-	}
-}
-
 type ShowProjectInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1718,6 +1862,18 @@ func (i *UpdateProjectTrackerInvoker) Invoke() (*model.UpdateProjectTrackerRespo
 		return nil, err
 	} else {
 		return result.(*model.UpdateProjectTrackerResponse), nil
+	}
+}
+
+type BatchDownloadResourceStatDataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDownloadResourceStatDataInvoker) Invoke() (*model.BatchDownloadResourceStatDataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDownloadResourceStatDataResponse), nil
 	}
 }
 
@@ -2033,6 +2189,18 @@ func (i *UploadTemplateInvoker) Invoke() (*model.UploadTemplateResponse, error) 
 	}
 }
 
+type CheckTokenVerificationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckTokenVerificationInvoker) Invoke() (*model.CheckTokenVerificationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckTokenVerificationResponse), nil
+	}
+}
+
 type CreateCodeInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2090,18 +2258,6 @@ func (i *ListUserInvoker) Invoke() (*model.ListUserResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListUserResponse), nil
-	}
-}
-
-type ShowTokenVerificationInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowTokenVerificationInvoker) Invoke() (*model.ShowTokenVerificationResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowTokenVerificationResponse), nil
 	}
 }
 
@@ -2270,6 +2426,18 @@ func (i *ListWorkflowInvoker) Invoke() (*model.ListWorkflowResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListWorkflowResponse), nil
+	}
+}
+
+type PublishWorkflowInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *PublishWorkflowInvoker) Invoke() (*model.PublishWorkflowResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.PublishWorkflowResponse), nil
 	}
 }
 

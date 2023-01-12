@@ -9,6 +9,7 @@ import (
 	"strings"
 )
 
+// 微服务详情。
 type MicroServiceCreate struct {
 
 	// 微服务类型： - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎

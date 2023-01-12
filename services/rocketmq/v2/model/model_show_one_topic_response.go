@@ -12,6 +12,9 @@ import (
 // Response Object
 type ShowOneTopicResponse struct {
 
+	// topic名称。
+	Name *string `json:"name,omitempty"`
+
 	// 总读队列个数。
 	TotalReadQueueNum float32 `json:"total_read_queue_num,omitempty"`
 

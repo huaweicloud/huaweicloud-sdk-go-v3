@@ -30,7 +30,7 @@ type CollectDbObjectsAsyncRequest struct {
 	// 是否强制刷新。取值： - true：是，表示从源库重新查询。    - false：否，表示从已缓存中数据查询。
 	IsRefresh *bool `json:"is_refresh,omitempty"`
 
-	// 查询指定库的信息
+	// 查询指定库的信息。
 	DbNames *[]string `json:"db_names,omitempty"`
 }
 

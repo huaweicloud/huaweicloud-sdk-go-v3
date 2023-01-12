@@ -11,9 +11,6 @@ type UpdateJobConfigReq struct {
 
 	// 作业保存条数
 	JobRetainNumber *int32 `json:"job_retain_number,omitempty"`
-
-	// 作业保存时长，单位天
-	JobRetainTime *int32 `json:"job_retain_time,omitempty"`
 }
 
 func (o UpdateJobConfigReq) String() string {

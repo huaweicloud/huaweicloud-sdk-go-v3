@@ -353,6 +353,18 @@ func (i *ListConsumerGroupOfTopicInvoker) Invoke() (*model.ListConsumerGroupOfTo
 	}
 }
 
+type ListRocketInstanceTopicsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRocketInstanceTopicsInvoker) Invoke() (*model.ListRocketInstanceTopicsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRocketInstanceTopicsResponse), nil
+	}
+}
+
 type ShowOneTopicInvoker struct {
 	*invoker.BaseInvoker
 }

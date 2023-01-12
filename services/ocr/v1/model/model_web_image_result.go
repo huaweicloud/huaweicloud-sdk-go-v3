@@ -14,6 +14,8 @@ type WebImageResult struct {
 
 	// 识别文字块列表，输出顺序从左到右，从上到下。
 	WordsBlockList []WebImageWordsBlockList `json:"words_block_list"`
+
+	ExtractedData *WebImageExtractedData `json:"extracted_data"`
 }
 
 func (o WebImageResult) String() string {

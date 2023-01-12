@@ -17,7 +17,7 @@ type TaskDto struct {
 	// 流程的子任务展示名称，最大长度64
 	DisplayName *string `json:"display_name,omitempty"`
 
-	// 子任务的输出存放路径，用户可显示指定;必须以/开头，结尾不能有/.;不能包含以下特殊字符\\:*?<\">|。
+	// 子任务的输出存放路径，用户可显式指定;输出路径必须以斜杠（/）开头且不能以斜杠（/）结尾，不能包含两个以上相邻的斜杠（/），不能包含以下特殊字符：\\ : ; * ? < \" > | 。其中单个文件夹名称不能以中划线（-）开头，不能以英文句号（.）或斜杠（/）或空格开头或结尾
 	OutputDir *string `json:"output_dir,omitempty"`
 
 	Resources *TaskResourceDto `json:"resources,omitempty"`

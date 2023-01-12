@@ -23,7 +23,10 @@ type ListDbObjectsResponse struct {
 	Status *ListDbObjectsResponseStatus `json:"status,omitempty"`
 
 	// 任务id
-	Id             *string `json:"id,omitempty"`
+	Id *string `json:"id,omitempty"`
+
+	// 该数据库在实时同步场景下的类型
+	ObjectScope    *string `json:"object_scope,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -28,6 +28,9 @@ type ShowDataResponse struct {
 
 	// 可操作标记
 	AllowedOperate *bool `json:"allowed_operate,omitempty"`
+
+	// 可删除标记
+	Deletable      *bool `json:"deletable,omitempty"`
 	HttpStatusCode int   `json:"-"`
 }
 

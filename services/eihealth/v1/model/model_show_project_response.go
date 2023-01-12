@@ -52,8 +52,11 @@ type ShowProjectResponse struct {
 	DeleteTime *string `json:"delete_time,omitempty"`
 
 	// 是否为核心项目
-	IsCore         *bool `json:"is_core,omitempty"`
-	HttpStatusCode int   `json:"-"`
+	IsCore *bool `json:"is_core,omitempty"`
+
+	// 项目数据容量配额，-1表示无容量限制
+	StorageQuota   *int64 `json:"storage_quota,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ShowProjectResponse) String() string {

@@ -90,6 +90,9 @@ type UpdateInstanceV2Response struct {
 	// 出公网带宽
 	BandwidthSize *int32 `json:"bandwidth_size,omitempty"`
 
+	// 出公网带宽计费模式
+	BandwidthChargingMode *string `json:"bandwidth_charging_mode,omitempty"`
+
 	// 可用区
 	AvailableZoneIds *string `json:"available_zone_ids,omitempty"`
 
@@ -122,8 +125,11 @@ type UpdateInstanceV2Response struct {
 	Privateips *[]IpDetails `json:"privateips,omitempty"`
 
 	// 实例是否可释放 - true：可释放 - false：不可释放
-	IsReleasable   *bool `json:"is_releasable,omitempty"`
-	HttpStatusCode int   `json:"-"`
+	IsReleasable *bool `json:"is_releasable,omitempty"`
+
+	// 入公网带宽计费模式
+	IngressBandwidthChargingMode *string `json:"ingress_bandwidth_charging_mode,omitempty"`
+	HttpStatusCode               int     `json:"-"`
 }
 
 func (o UpdateInstanceV2Response) String() string {

@@ -13,7 +13,7 @@ type ShowProjectTraceResponse struct {
 	Count *int64 `json:"count,omitempty"`
 
 	// 数据对象列表
-	Datas *[]TraceDataRsp `json:"datas,omitempty"`
+	Datas *[]DataRsp `json:"datas,omitempty"`
 
 	// 桶存量
 	BucketSize     *int64 `json:"bucket_size,omitempty"`

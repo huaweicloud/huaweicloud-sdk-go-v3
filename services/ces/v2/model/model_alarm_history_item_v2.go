@@ -51,7 +51,7 @@ type AlarmHistoryItemV2 struct {
 	OkActions *[]Notification `json:"ok_actions,omitempty"`
 
 	// 计算出该条告警记录的资源监控数据上报时间和监控数值。
-	Datapoints *[]DataPointInfo `json:"datapoints,omitempty"`
+	DataPoints *[]DataPointInfo `json:"data_points,omitempty"`
 }
 
 func (o AlarmHistoryItemV2) String() string {

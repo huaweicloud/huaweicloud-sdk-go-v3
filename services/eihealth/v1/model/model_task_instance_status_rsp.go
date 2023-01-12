@@ -17,6 +17,9 @@ type TaskInstanceStatusRsp struct {
 	// 实例所在节点IP
 	HostIp *string `json:"host_ip,omitempty"`
 
+	// 计算节点的名称
+	HostName *string `json:"host_name,omitempty"`
+
 	// 实例创建时间
 	StartTime *string `json:"start_time,omitempty"`
 

@@ -35,6 +35,9 @@ type DataJobRsp struct {
 
 	// 数据作业类型
 	Type *string `json:"type,omitempty"`
+
+	// 数据作业失败原因
+	FailedReason *string `json:"failed_reason,omitempty"`
 }
 
 func (o DataJobRsp) String() string {

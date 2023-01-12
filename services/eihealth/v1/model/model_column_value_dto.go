@@ -9,7 +9,7 @@ import (
 type ColumnValueDto struct {
 
 	// 列名
-	Column *string `json:"column,omitempty"`
+	Column string `json:"column"`
 
 	// 该列对应的值
 	Value *string `json:"value,omitempty"`

@@ -11,10 +11,7 @@ type ShowJobConfigResponse struct {
 
 	// 作业保存条数
 	JobRetainNumber *int32 `json:"job_retain_number,omitempty"`
-
-	// 作业保存时长，单位天
-	JobRetainTime  *int32 `json:"job_retain_time,omitempty"`
-	HttpStatusCode int    `json:"-"`
+	HttpStatusCode  int    `json:"-"`
 }
 
 func (o ShowJobConfigResponse) String() string {

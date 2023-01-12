@@ -9,6 +9,7 @@ import (
 	"strings"
 )
 
+// CCE云容器引擎详细信息，service_type为CCE时必填
 type MicroServiceInfoCceCreate struct {
 
 	// 云容器引擎集群编号
@@ -24,7 +25,7 @@ type MicroServiceInfoCceCreate struct {
 	AppName string `json:"app_name"`
 
 	// 工作负载的版本
-	Version string `json:"version"`
+	Version *string `json:"version,omitempty"`
 
 	// 工作负载的监听端口号
 	Port int32 `json:"port"`

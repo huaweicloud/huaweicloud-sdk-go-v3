@@ -109,6 +109,24 @@ type MonthlyBillRes struct {
 
 	// 产品的规格描述。
 	ProductSpecDesc *string `json:"product_spec_desc,omitempty"`
+
+	// 该字段为预留字段。
+	SubServiceTypeCode *string `json:"sub_service_type_code,omitempty"`
+
+	// 该字段为预留字段。
+	SubServiceTypeName *string `json:"sub_service_type_name,omitempty"`
+
+	// 该字段为预留字段。
+	SubResourceTypeCode *string `json:"sub_resource_type_code,omitempty"`
+
+	// 该字段为预留字段。
+	SubResourceTypeName *string `json:"sub_resource_type_name,omitempty"`
+
+	// 该字段为预留字段。
+	SubResourceId *string `json:"sub_resource_id,omitempty"`
+
+	// 该字段为预留字段。
+	SubResourceName *string `json:"sub_resource_name,omitempty"`
 }
 
 func (o MonthlyBillRes) String() string {

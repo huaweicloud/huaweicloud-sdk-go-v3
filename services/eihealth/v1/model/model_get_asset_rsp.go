@@ -29,10 +29,8 @@ type GetAssetRsp struct {
 	// 供应商id
 	VendorId *string `json:"vendor_id,omitempty"`
 
-	LatestVersion *VersionRsp `json:"latest_version,omitempty"`
-
 	// 资产版本号列表
-	Versions *[]string `json:"versions,omitempty"`
+	Versions *[]VersionRsp `json:"versions,omitempty"`
 
 	// 创建时间
 	CreateTime *string `json:"create_time,omitempty"`

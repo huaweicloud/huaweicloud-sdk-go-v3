@@ -33,7 +33,7 @@ type IdCardResult struct {
 	// 有效起始日期。
 	ValidFrom *string `json:"valid_from,omitempty"`
 
-	// 有效结束日期。   > 说明：  - 身份证识别支持中华人民共和国居民身份证识别。
+	// 有效结束日期。  > 说明： - 身份证识别支持中华人民共和国居民身份证识别。
 	ValidTo *string `json:"valid_to,omitempty"`
 
 	VerificationResult *IdcardVerificationResult `json:"verification_result,omitempty"`

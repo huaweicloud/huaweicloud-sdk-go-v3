@@ -15,6 +15,11 @@ func GenReqDefForDetectExtentionByIdCardImage() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -28,6 +33,11 @@ func GenReqDefForDetectExtentionByNameAndId() *def.HttpRequestDef {
 		WithPath("/v2.0/ivs-idcard-extention").
 		WithResponse(new(model.DetectExtentionByNameAndIdResponse)).
 		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -45,6 +55,11 @@ func GenReqDefForDetectStandardByIdCardImage() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -58,6 +73,11 @@ func GenReqDefForDetectStandardByNameAndId() *def.HttpRequestDef {
 		WithPath("/v2.0/ivs-standard").
 		WithResponse(new(model.DetectStandardByNameAndIdResponse)).
 		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").

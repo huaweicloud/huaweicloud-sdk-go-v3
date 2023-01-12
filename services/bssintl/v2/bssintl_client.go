@@ -397,6 +397,27 @@ func (c *BssintlClient) ListFreeResourceUsagesInvoker(request *model.ListFreeRes
 	return &ListFreeResourceUsagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListFreeResourcesUsageRecords 查询资源包使用明细
+//
+// 客户在自建平台查询资源包使用明细。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *BssintlClient) ListFreeResourcesUsageRecords(request *model.ListFreeResourcesUsageRecordsRequest) (*model.ListFreeResourcesUsageRecordsResponse, error) {
+	requestDef := GenReqDefForListFreeResourcesUsageRecords()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFreeResourcesUsageRecordsResponse), nil
+	}
+}
+
+// ListFreeResourcesUsageRecordsInvoker 查询资源包使用明细
+func (c *BssintlClient) ListFreeResourcesUsageRecordsInvoker(request *model.ListFreeResourcesUsageRecordsRequest) *ListFreeResourcesUsageRecordsInvoker {
+	requestDef := GenReqDefForListFreeResourcesUsageRecords()
+	return &ListFreeResourcesUsageRecordsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListIndirectPartners 查询云经销商列表
 //
 // 华为云总经销商（一级经销商）可以查询云经销商（二级经销商）列表。

@@ -11,9 +11,6 @@ type DeleteUserRequest struct {
 
 	// 用户id
 	UserId string `json:"user_id"`
-
-	// 删除类型，通过(name或id)删除
-	UserIdType string `json:"user_id_type"`
 }
 
 func (o DeleteUserRequest) String() string {

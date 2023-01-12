@@ -18,7 +18,7 @@ type ShowResourceMetricDataRequest struct {
 	// 监控数据周期。枚举值，取值范围：real_time（实时数据）、five_minutes（5分钟粒度）、fifteen_to_twenty_minutes（15-20分钟粒度）、one_hour（1小时粒度），不填时默认为real_time
 	Period *string `json:"period,omitempty"`
 
-	// 统计方法。枚举值，取值范围：max（最大值）、min（最小值）、sum（求和值）、average（平均值），不填时默认为max
+	// 统计方法。枚举值，取值范围：max（最大值）、min（最小值）、average（平均值），不填时默认为max
 	Method *string `json:"method,omitempty"`
 
 	// 查询的监控指标名称

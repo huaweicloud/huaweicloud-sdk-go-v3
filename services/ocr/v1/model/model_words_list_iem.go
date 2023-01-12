@@ -17,6 +17,9 @@ type WordsListIem struct {
 
 	// 文字块位置信息，列表形式，分别表示文字块4个顶点的x, y坐标;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
 	Location *[][]int32 `json:"location,omitempty"`
+
+	// 单元格内文字段列表。输出顺序从左到右，从上到下。仅当入参\"return_text_location\"和\"return_char_location\"同时为true时存在。
+	CharList *[]CharListIem `json:"char_list,omitempty"`
 }
 
 func (o WordsListIem) String() string {

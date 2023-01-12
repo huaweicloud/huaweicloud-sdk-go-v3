@@ -628,6 +628,27 @@ func (c *RocketMQClient) ListConsumerGroupOfTopicInvoker(request *model.ListCons
 	return &ListConsumerGroupOfTopicInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListRocketInstanceTopics 查询主题列表
+//
+// 该接口用于查询指定RocketMQ实例的Topic列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RocketMQClient) ListRocketInstanceTopics(request *model.ListRocketInstanceTopicsRequest) (*model.ListRocketInstanceTopicsResponse, error) {
+	requestDef := GenReqDefForListRocketInstanceTopics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRocketInstanceTopicsResponse), nil
+	}
+}
+
+// ListRocketInstanceTopicsInvoker 查询主题列表
+func (c *RocketMQClient) ListRocketInstanceTopicsInvoker(request *model.ListRocketInstanceTopicsRequest) *ListRocketInstanceTopicsInvoker {
+	requestDef := GenReqDefForListRocketInstanceTopics()
+	return &ListRocketInstanceTopicsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowOneTopic 查询单个主题
 //
 // 查询单个主题。

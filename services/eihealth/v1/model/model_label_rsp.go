@@ -17,9 +17,6 @@ type LabelRsp struct {
 	// 标签描述
 	Description *string `json:"description,omitempty"`
 
-	// 标签使用次数
-	Count *int32 `json:"count,omitempty"`
-
 	// 标签创建者
 	Creator *string `json:"creator,omitempty"`
 

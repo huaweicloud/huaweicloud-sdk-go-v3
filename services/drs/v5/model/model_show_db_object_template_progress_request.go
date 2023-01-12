@@ -18,10 +18,10 @@ type ShowDbObjectTemplateProgressRequest struct {
 	// 请求语言类型。
 	XLanguage *ShowDbObjectTemplateProgressRequestXLanguage `json:"X-Language,omitempty"`
 
-	// 偏移量，表示从此偏移量开始查询， offset大于等于0
+	// 偏移量，表示查询该偏移量后面的记录。
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 每页显示的条目数量
+	// 查询返回记录的数量限制。
 	Limit *int32 `json:"limit,omitempty"`
 }
 

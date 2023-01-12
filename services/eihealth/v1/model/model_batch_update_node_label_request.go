@@ -12,7 +12,7 @@ type BatchUpdateNodeLabelRequest struct {
 	// 节点id
 	ServerId string `json:"server_id"`
 
-	Body *BatchUpadteNodeLabelReq `json:"body,omitempty"`
+	Body *BatchUpdateNodeLabelReq `json:"body,omitempty"`
 }
 
 func (o BatchUpdateNodeLabelRequest) String() string {

@@ -9,9 +9,9 @@ import (
 type FilterV2 struct {
 
 	// 运算符。0：仅包含1：仅排除 此参数不携带或携带值为null时，不作为筛选条件。
-	Operator *int32 `json:"operator,omitempty"`
+	Operator int32 `json:"operator"`
 
-	FilterFactor *FilterFactor `json:"filter_factor,omitempty"`
+	FilterFactor *FilterFactor `json:"filter_factor"`
 }
 
 func (o FilterV2) String() string {

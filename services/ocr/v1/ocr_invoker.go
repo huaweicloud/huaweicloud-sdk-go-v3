@@ -473,6 +473,18 @@ func (i *RecognizeWebImageInvoker) Invoke() (*model.RecognizeWebImageResponse, e
 	}
 }
 
+type RecognizeCustomTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RecognizeCustomTemplateInvoker) Invoke() (*model.RecognizeCustomTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RecognizeCustomTemplateResponse), nil
+	}
+}
+
 type RecognizeVinInvoker struct {
 	*invoker.BaseInvoker
 }

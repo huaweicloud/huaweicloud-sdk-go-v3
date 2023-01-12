@@ -221,6 +221,18 @@ func (i *ListFreeResourceUsagesInvoker) Invoke() (*model.ListFreeResourceUsagesR
 	}
 }
 
+type ListFreeResourcesUsageRecordsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListFreeResourcesUsageRecordsInvoker) Invoke() (*model.ListFreeResourcesUsageRecordsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListFreeResourcesUsageRecordsResponse), nil
+	}
+}
+
 type ListIndirectPartnersInvoker struct {
 	*invoker.BaseInvoker
 }

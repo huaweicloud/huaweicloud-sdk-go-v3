@@ -46,6 +46,9 @@ type ComputingResourceRsp struct {
 
 	// 资源是否可调度
 	Schedulable *bool `json:"schedulable,omitempty"`
+
+	// 计算节点标签列表
+	NodeLabels []string `json:"node_labels"`
 }
 
 func (o ComputingResourceRsp) String() string {

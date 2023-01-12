@@ -42,7 +42,7 @@ type ListJobsRequest struct {
 	// 返回结果按该关键字排序，默认为“create_time”。
 	SortKey *string `json:"sort_key,omitempty"`
 
-	// 降序或升序（分别对应desc和asc，默认为“desc”）
+	// 降序或升序（分别对应desc和asc，默认为“desc”）。
 	SortDir *string `json:"sort_dir,omitempty"`
 }
 

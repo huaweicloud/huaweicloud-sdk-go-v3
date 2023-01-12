@@ -316,9 +316,9 @@ func (c *DrsClient) ListLinksInvoker(request *model.ListLinksRequest) *ListLinks
 	return &ListLinksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowDbObjectCollectionStatus 获取数据库对象信息的结果
+// ShowDbObjectCollectionStatus 获取提交查询数据库对象信息的结果
 //
-// 获取数据库对象信息的结果
+// 获取提交查询数据库对象信息的结果。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DrsClient) ShowDbObjectCollectionStatus(request *model.ShowDbObjectCollectionStatusRequest) (*model.ShowDbObjectCollectionStatusResponse, error) {
@@ -331,7 +331,7 @@ func (c *DrsClient) ShowDbObjectCollectionStatus(request *model.ShowDbObjectColl
 	}
 }
 
-// ShowDbObjectCollectionStatusInvoker 获取数据库对象信息的结果
+// ShowDbObjectCollectionStatusInvoker 获取提交查询数据库对象信息的结果
 func (c *DrsClient) ShowDbObjectCollectionStatusInvoker(request *model.ShowDbObjectCollectionStatusRequest) *ShowDbObjectCollectionStatusInvoker {
 	requestDef := GenReqDefForShowDbObjectCollectionStatus()
 	return &ShowDbObjectCollectionStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
