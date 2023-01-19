@@ -49,7 +49,9 @@ type ShowCertificateResponse struct {
 	NotAfter *int64 `json:"not_after,omitempty"`
 
 	DistinguishedName *DistinguishedName `json:"distinguished_name,omitempty"`
-	HttpStatusCode    int                `json:"-"`
+
+	EncCertInfo    *EncCertInfo `json:"enc_cert_info,omitempty"`
+	HttpStatusCode int          `json:"-"`
 }
 
 func (o ShowCertificateResponse) String() string {

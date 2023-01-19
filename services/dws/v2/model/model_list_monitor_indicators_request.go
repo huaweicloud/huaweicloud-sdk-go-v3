@@ -1,0 +1,20 @@
+package model
+
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
+	"strings"
+)
+
+// Request Object
+type ListMonitorIndicatorsRequest struct {
+}
+
+func (o ListMonitorIndicatorsRequest) String() string {
+	data, err := utils.Marshal(o)
+	if err != nil {
+		return "ListMonitorIndicatorsRequest struct{}"
+	}
+
+	return strings.Join([]string{"ListMonitorIndicatorsRequest", string(data)}, " ")
+}

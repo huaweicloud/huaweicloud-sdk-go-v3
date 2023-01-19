@@ -12,7 +12,7 @@ type ListAuditLogResponse struct {
 	// 审计日志列表。
 	Records *[]AuditDumpRecord `json:"records,omitempty"`
 
-	// 项目ID。
+	// 集群ID。
 	ClusterId *string `json:"cluster_id,omitempty"`
 
 	// 总数。

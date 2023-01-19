@@ -356,6 +356,37 @@ func (c *IoTDAClient) ListBatchTaskFilesInvoker(request *model.ListBatchTaskFile
 	return &ListBatchTaskFilesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UploadBatchTaskFile 上传批量任务文件
+//
+// 应用服务器可调用此接口上传批量任务文件，用于创建批量任务。当前支持批量创建设备任务、批量删除设备任务、批量冻结设备任务、批量解冻设备任务的文件上传。
+// - [批量注册设备模板](https://developer.obs.cn-north-4.myhuaweicloud.com/template/BatchCreateDevices_Template.xlsx)
+//
+//
+// - [批量删除设备模板](https://developer.obs.cn-north-4.myhuaweicloud.com/template/BatchDeleteDevices_Template.xlsx)
+//
+//
+// - [批量冻结设备模板](https://developer.obs.cn-north-4.myhuaweicloud.com/template/BatchFreezeDevices_Template.xlsx)
+//
+//
+// - [批量解冻设备模板](https://developer.obs.cn-north-4.myhuaweicloud.com/template/BatchUnfreezeDevices_Template.xlsx)
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) UploadBatchTaskFile(request *model.UploadBatchTaskFileRequest) (*model.UploadBatchTaskFileResponse, error) {
+	requestDef := GenReqDefForUploadBatchTaskFile()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UploadBatchTaskFileResponse), nil
+	}
+}
+
+// UploadBatchTaskFileInvoker 上传批量任务文件
+func (c *IoTDAClient) UploadBatchTaskFileInvoker(request *model.UploadBatchTaskFileRequest) *UploadBatchTaskFileInvoker {
+	requestDef := GenReqDefForUploadBatchTaskFile()
+	return &UploadBatchTaskFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // AddCertificate 上传设备CA证书
 //
 // 应用服务器可调用此接口在物联网平台上传设备CA证书

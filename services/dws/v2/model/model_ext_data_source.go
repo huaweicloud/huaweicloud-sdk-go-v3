@@ -12,7 +12,7 @@ type ExtDataSource struct {
 	// id。
 	Id *string `json:"id,omitempty"`
 
-	// 项目ID。
+	// 数据源名称。
 	Name *string `json:"name,omitempty"`
 
 	// 类型。

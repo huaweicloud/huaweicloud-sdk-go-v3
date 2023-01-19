@@ -24,7 +24,7 @@ type ListCertificateAuthorityRequest struct {
 	// CA证书类型： - **ROOT** : 根CA证书 - **SUBORDINATE** : 从属CA证书
 	Type *string `json:"type,omitempty"`
 
-	// 排序属性，目前支持以下属性： - **create_time** : 证书创建时间（默认） - **common_name** : 证书名称 - **ca_type** : CA证书类型 - **not_after** : 证书到期时间
+	// 排序属性，目前支持以下属性： - **create_time** : 证书创建时间（默认） - **common_name** : 证书名称 - **type** : CA证书类型 - **not_after** : 证书到期时间
 	SortKey *string `json:"sort_key,omitempty"`
 
 	// 排序方向，支持以下值： - **DESC** : 降序（默认） - **ASC** : 升序

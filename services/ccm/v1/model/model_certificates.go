@@ -48,6 +48,8 @@ type Certificates struct {
 	NotAfter int64 `json:"not_after"`
 
 	DistinguishedName *DistinguishedName `json:"distinguished_name"`
+
+	EncCertInfo *EncCertInfo `json:"enc_cert_info,omitempty"`
 }
 
 func (o Certificates) String() string {

@@ -20,6 +20,9 @@ type ActiveStandbyConfigDto struct {
 
 	// 网卡ip
 	VirtualIpAddress *string `json:"virtual_ip_address,omitempty"`
+
+	// 网卡ipv6地址
+	VirtualIpv6Address *string `json:"virtual_ipv6_address,omitempty"`
 }
 
 func (o ActiveStandbyConfigDto) String() string {

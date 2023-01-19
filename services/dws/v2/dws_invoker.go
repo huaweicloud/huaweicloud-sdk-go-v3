@@ -713,6 +713,30 @@ func (i *ListJobDetailsInvoker) Invoke() (*model.ListJobDetailsResponse, error) 
 	}
 }
 
+type ListMonitorIndicatorDataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListMonitorIndicatorDataInvoker) Invoke() (*model.ListMonitorIndicatorDataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListMonitorIndicatorDataResponse), nil
+	}
+}
+
+type ListMonitorIndicatorsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListMonitorIndicatorsInvoker) Invoke() (*model.ListMonitorIndicatorsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListMonitorIndicatorsResponse), nil
+	}
+}
+
 type ListNodeTypesInvoker struct {
 	*invoker.BaseInvoker
 }

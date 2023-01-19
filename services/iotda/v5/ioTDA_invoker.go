@@ -197,6 +197,18 @@ func (i *ListBatchTaskFilesInvoker) Invoke() (*model.ListBatchTaskFilesResponse,
 	}
 }
 
+type UploadBatchTaskFileInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UploadBatchTaskFileInvoker) Invoke() (*model.UploadBatchTaskFileResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UploadBatchTaskFileResponse), nil
+	}
+}
+
 type AddCertificateInvoker struct {
 	*invoker.BaseInvoker
 }

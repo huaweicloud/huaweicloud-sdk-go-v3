@@ -15,7 +15,7 @@ type ListDataSourceResponse struct {
 	// 项目ID。
 	ProjectId *string `json:"project_id,omitempty"`
 
-	// 项目ID。
+	// 集群ID。
 	ClusterId *string `json:"cluster_id,omitempty"`
 
 	// 数据源类型。

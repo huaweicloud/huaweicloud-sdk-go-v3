@@ -53,6 +53,30 @@ func (i *DeleteCertificateInvoker) Invoke() (*model.DeleteCertificateResponse, e
 	}
 }
 
+type DisableCertificateAuthorityCrlInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DisableCertificateAuthorityCrlInvoker) Invoke() (*model.DisableCertificateAuthorityCrlResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DisableCertificateAuthorityCrlResponse), nil
+	}
+}
+
+type EnableCertificateAuthorityCrlInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *EnableCertificateAuthorityCrlInvoker) Invoke() (*model.EnableCertificateAuthorityCrlResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.EnableCertificateAuthorityCrlResponse), nil
+	}
+}
+
 type ExportCertificateInvoker struct {
 	*invoker.BaseInvoker
 }

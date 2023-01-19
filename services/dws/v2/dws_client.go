@@ -1269,6 +1269,48 @@ func (c *DwsClient) ListJobDetailsInvoker(request *model.ListJobDetailsRequest) 
 	return &ListJobDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListMonitorIndicatorData openApi查询历史监控数据
+//
+// openApi查询历史监控数据
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ListMonitorIndicatorData(request *model.ListMonitorIndicatorDataRequest) (*model.ListMonitorIndicatorDataResponse, error) {
+	requestDef := GenReqDefForListMonitorIndicatorData()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListMonitorIndicatorDataResponse), nil
+	}
+}
+
+// ListMonitorIndicatorDataInvoker openApi查询历史监控数据
+func (c *DwsClient) ListMonitorIndicatorDataInvoker(request *model.ListMonitorIndicatorDataRequest) *ListMonitorIndicatorDataInvoker {
+	requestDef := GenReqDefForListMonitorIndicatorData()
+	return &ListMonitorIndicatorDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListMonitorIndicators openApi查询性能监控指标
+//
+// openApi查询性能监控指标
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ListMonitorIndicators(request *model.ListMonitorIndicatorsRequest) (*model.ListMonitorIndicatorsResponse, error) {
+	requestDef := GenReqDefForListMonitorIndicators()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListMonitorIndicatorsResponse), nil
+	}
+}
+
+// ListMonitorIndicatorsInvoker openApi查询性能监控指标
+func (c *DwsClient) ListMonitorIndicatorsInvoker(request *model.ListMonitorIndicatorsRequest) *ListMonitorIndicatorsInvoker {
+	requestDef := GenReqDefForListMonitorIndicators()
+	return &ListMonitorIndicatorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListNodeTypes 查询节点类型
 //
 // 该接口用于查询所有GaussDB(DWS)服务支持的节点类型。
