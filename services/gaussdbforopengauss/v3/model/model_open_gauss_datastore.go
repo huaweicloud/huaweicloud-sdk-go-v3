@@ -12,10 +12,10 @@ import (
 // 数据库信息。
 type OpenGaussDatastore struct {
 
-	// 数据库引擎，不区分大小写，取值如下：  GaussDB(for openGauss)。
+	// 数据库引擎，不区分大小写，取值如下：  GaussDB。
 	Type OpenGaussDatastoreType `json:"type"`
 
-	// 数据库版本。不填时，默认为当前最新版本。  GaussDB(for openGauss)支持的版本参考[查询数据库引擎的版本](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=GaussDBforopenGauss&api=ListDatastores)。
+	// 数据库版本。不填时，默认为当前最新版本。  GaussDB支持的版本参考[查询数据库引擎的版本](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=GaussDBforopenGauss&api=ListDatastores)。
 	Version *string `json:"version,omitempty"`
 }
 
@@ -34,12 +34,16 @@ type OpenGaussDatastoreType struct {
 
 type OpenGaussDatastoreTypeEnum struct {
 	GAUSS_DB_FOR_OPEN_GAUSS OpenGaussDatastoreType
+	GAUSS_DB                OpenGaussDatastoreType
 }
 
 func GetOpenGaussDatastoreTypeEnum() OpenGaussDatastoreTypeEnum {
 	return OpenGaussDatastoreTypeEnum{
 		GAUSS_DB_FOR_OPEN_GAUSS: OpenGaussDatastoreType{
 			value: "GaussDB(for openGauss)",
+		},
+		GAUSS_DB: OpenGaussDatastoreType{
+			value: "GaussDB",
 		},
 	}
 }

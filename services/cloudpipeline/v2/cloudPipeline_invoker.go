@@ -5,6 +5,18 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/cloudpipeline/v2/model"
 )
 
+type BatchShowPipelinesLatestStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchShowPipelinesLatestStatusInvoker) Invoke() (*model.BatchShowPipelinesLatestStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchShowPipelinesLatestStatusResponse), nil
+	}
+}
+
 type BatchShowPipelinesStatusInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -29,6 +41,30 @@ func (i *CreatePipelineByTemplateInvoker) Invoke() (*model.CreatePipelineByTempl
 	}
 }
 
+type DeletePipelineInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeletePipelineInvoker) Invoke() (*model.DeletePipelineResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeletePipelineResponse), nil
+	}
+}
+
+type ListPipelineRunsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPipelineRunsInvoker) Invoke() (*model.ListPipelineRunsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPipelineRunsResponse), nil
+	}
+}
+
 type ListPipelineSimpleInfoInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -38,6 +74,18 @@ func (i *ListPipelineSimpleInfoInvoker) Invoke() (*model.ListPipelineSimpleInfoR
 		return nil, err
 	} else {
 		return result.(*model.ListPipelineSimpleInfoResponse), nil
+	}
+}
+
+type ListPipelinesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPipelinesInvoker) Invoke() (*model.ListPipelinesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPipelinesResponse), nil
 	}
 }
 
@@ -77,6 +125,18 @@ func (i *RemovePipelineInvoker) Invoke() (*model.RemovePipelineResponse, error) 
 	}
 }
 
+type RunPipelineInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RunPipelineInvoker) Invoke() (*model.RunPipelineResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RunPipelineResponse), nil
+	}
+}
+
 type ShowInstanceStatusInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -86,6 +146,18 @@ func (i *ShowInstanceStatusInvoker) Invoke() (*model.ShowInstanceStatusResponse,
 		return nil, err
 	} else {
 		return result.(*model.ShowInstanceStatusResponse), nil
+	}
+}
+
+type ShowPipelineRunDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPipelineRunDetailInvoker) Invoke() (*model.ShowPipelineRunDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPipelineRunDetailResponse), nil
 	}
 }
 
@@ -134,5 +206,17 @@ func (i *StopPipelineNewInvoker) Invoke() (*model.StopPipelineNewResponse, error
 		return nil, err
 	} else {
 		return result.(*model.StopPipelineNewResponse), nil
+	}
+}
+
+type StopPipelineRunInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StopPipelineRunInvoker) Invoke() (*model.StopPipelineRunResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StopPipelineRunResponse), nil
 	}
 }

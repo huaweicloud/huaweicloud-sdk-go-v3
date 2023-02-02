@@ -391,6 +391,14 @@ func GenReqDefForListStackEvents() *def.HttpRequestDef {
 		WithName("DeploymentId").
 		WithJsonTag("deployment_id").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Filter").
+		WithJsonTag("filter").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Field").
+		WithJsonTag("field").
+		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClientRequestId").
@@ -464,6 +472,31 @@ func GenReqDefForListStacks() *def.HttpRequestDef {
 		WithName("ClientRequestId").
 		WithJsonTag("Client-Request-Id").
 		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateStack() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPatch).
+		WithPath("/v1/{project_id}/stacks/{stack_name}").
+		WithResponse(new(model.UpdateStackResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("StackName").
+		WithJsonTag("stack_name").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ClientRequestId").
+		WithJsonTag("Client-Request-Id").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

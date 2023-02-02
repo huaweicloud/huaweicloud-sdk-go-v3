@@ -12,7 +12,7 @@ type DeployStackRequest struct {
 	// 用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
 	ClientRequestId string `json:"Client-Request-Id"`
 
-	// 用户希望操作的资源栈名
+	// 用户希望操作的资源栈名称
 	StackName string `json:"stack_name"`
 
 	Body *DeployStackRequestBody `json:"body,omitempty"`

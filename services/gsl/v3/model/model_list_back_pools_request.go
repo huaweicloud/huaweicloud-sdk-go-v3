@@ -20,6 +20,9 @@ type ListBackPoolsRequest struct {
 
 	// 账期，例如：2021-04
 	BillingCycle *string `json:"billing_cycle,omitempty"`
+
+	// 是否查询近六个月账期标识
+	AllBillingCycle *bool `json:"all_billing_cycle,omitempty"`
 }
 
 func (o ListBackPoolsRequest) String() string {

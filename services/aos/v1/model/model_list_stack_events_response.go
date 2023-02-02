@@ -9,9 +9,9 @@ import (
 // Response Object
 type ListStackEventsResponse struct {
 
-	// 栈的更新状态
-	StackEvents    *[]StackEventResponse `json:"stack_events,omitempty"`
-	HttpStatusCode int                   `json:"-"`
+	// 资源栈事件列表
+	StackEvents    *[]StackEvent `json:"stack_events,omitempty"`
+	HttpStatusCode int           `json:"-"`
 }
 
 func (o ListStackEventsResponse) String() string {

@@ -9,7 +9,7 @@ import (
 // Response Object
 type ListStackOutputsResponse struct {
 
-	// 资源栈输出
+	// 资源栈输出列表
 	Outputs        *[]StackOutput `json:"outputs,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }

@@ -9,7 +9,7 @@ import (
 // Response Object
 type ListStackResourcesResponse struct {
 
-	// 资源栈输出
+	// 资源栈中所管理的资源信息列表
 	StackResources *[]StackResource `json:"stack_resources,omitempty"`
 	HttpStatusCode int              `json:"-"`
 }

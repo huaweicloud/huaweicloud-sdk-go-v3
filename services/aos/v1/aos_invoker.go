@@ -209,6 +209,18 @@ func (i *ListStacksInvoker) Invoke() (*model.ListStacksResponse, error) {
 	}
 }
 
+type UpdateStackInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateStackInvoker) Invoke() (*model.UpdateStackResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateStackResponse), nil
+	}
+}
+
 type ParseTemplateVariablesInvoker struct {
 	*invoker.BaseInvoker
 }

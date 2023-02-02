@@ -22,7 +22,7 @@ type OpenGaussInstanceRequest struct {
 	// 参数模板ID。当不传该参数时，使用系统默认的参数模板。
 	ConfigurationId *string `json:"configuration_id,omitempty"`
 
-	// 数据库对外开放的端口，不填默认为8000，可选范围为：1024-39998。限制端口： 2378,2379,2380,4999,5000,5999,6000,6001,8097,8098,12016,12017,20049,20050,21731,21732,32122,32123,32124。  - GaussDB(for openGauss)数据库端口当前只支持设置为8000，当不传该参数时，默认端口为8000。
+	// 数据库对外开放的端口，不填默认为8000，可选范围为：1024-39998。限制端口： 2378,2379,2380,4999,5000,5999,6000,6001,8097,8098,12016,12017,20049,20050,21731,21732,32122,32123,32124。  - GaussDB数据库端口当前只支持设置为8000，当不传该参数时，默认端口为8000。
 	Port *string `json:"port,omitempty"`
 
 	// 数据库密码。必选。  取值范围：  '非空； 至少包含大写字母（A-Z），小写字母（a-z），数字（0-9），非字母数字字符（限定为~!@#%^*-_=+?,）四类字符中的三类字符；长度8~32个字符。'  '建议您输入高强度密码，以提高安全性，防止出现密码被暴力破解等安全风险。'
@@ -36,7 +36,7 @@ type OpenGaussInstanceRequest struct {
 	// 用于磁盘加密的密钥ID，默认为空。
 	DiskEncryptionId *string `json:"disk_encryption_id,omitempty"`
 
-	// 规格码，取值范围：非空。参考[表1](https://support.huaweicloud.com/api-opengauss/opengauss_api_0037.html#opengauss_api_0037__ted9b9d433c8a4c52884e199e17f94479)中GaussDB(for openGauss)的“规格编码”列内容获取。
+	// 规格码，取值范围：非空。参考[表1](https://support.huaweicloud.com/api-opengauss/opengauss_api_0037.html#opengauss_api_0037__ted9b9d433c8a4c52884e199e17f94479)中GaussDB 的“规格编码”列内容获取。
 	FlavorRef string `json:"flavor_ref"`
 
 	Volume *OpenGaussVolume `json:"volume"`
@@ -44,7 +44,7 @@ type OpenGaussInstanceRequest struct {
 	// 区域ID。  取值范围：非空，请参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)。
 	Region string `json:"region"`
 
-	// 可用区ID。  GaussDB(for openGauss)取值范围：非空，可选部署在同一可用区或三个不同可用区，可用区之间用逗号隔开。详见示例。  - 部署在同一可用区：需要输入三个相同的可用区。例如：部署在“cn-north-4a”可用区，则需要在此处输入\"cn-north-4a,cn-north-4a,cn-north-4a\"。 - 部署在三个不同可用区：需要分别输入三个不同的可用区。 取值范围：非空，请参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)。
+	// 可用区ID。  GaussDB取值范围：非空，可选部署在同一可用区或三个不同可用区，可用区之间用逗号隔开。详见示例。  - 部署在同一可用区：需要输入三个相同的可用区。例如：部署在“cn-north-4a”可用区，则需要在此处输入\"cn-north-4a,cn-north-4a,cn-north-4a\"。 - 部署在三个不同可用区：需要分别输入三个不同的可用区。 取值范围：非空，请参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)。
 	AvailabilityZone string `json:"availability_zone"`
 
 	// 虚拟私有云ID，获取方法如下：  - 方法1：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。 - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询VPC列表](https://support.huaweicloud.com/api-vpc/vpc_api01_0003.html)。
@@ -58,7 +58,7 @@ type OpenGaussInstanceRequest struct {
 
 	ChargeInfo *OpenGaussChargeInfo `json:"charge_info,omitempty"`
 
-	// UTC时区。  - 不选择时，GaussDB(for openGauss)国内站、默认为UTC时间。 - 选择填写时，取值范围为UTC-12:00~UTC+12:00，且只支持整段时间，如UTC+08:00，不支持UTC+08:30。
+	// UTC时区。  - 不选择时，GaussDB国内站、默认为UTC时间。 - 选择填写时，取值范围为UTC-12:00~UTC+12:00，且只支持整段时间，如UTC+08:00，不支持UTC+08:30。
 	TimeZone *string `json:"time_zone,omitempty"`
 
 	// 仅分布式形态需要填写该参数。分片数量，取值范围1~9。

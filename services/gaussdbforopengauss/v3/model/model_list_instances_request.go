@@ -24,7 +24,7 @@ type ListInstancesRequest struct {
 	// 按照实例类型查询。目前仅支持取值“Enterprise”（区分大小写），对应分布式实例（企业版）。当前支持取值\"Ha\"（区分大小写），对应主备式实例。
 	Type *ListInstancesRequestType `json:"type,omitempty"`
 
-	// 数据库类型，区分大小写。  - GaussDB(for openGauss)
+	// 数据库类型，区分大小写。  - GaussDB
 	DatastoreType *ListInstancesRequestDatastoreType `json:"datastore_type,omitempty"`
 
 	// 虚拟私有云ID。  方法1：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考[查询VPC列表](https://support.huaweicloud.com/api-vpc/vpc_api01_0003.html)。
@@ -100,12 +100,16 @@ type ListInstancesRequestDatastoreType struct {
 
 type ListInstancesRequestDatastoreTypeEnum struct {
 	GAUSS_DB_FOR_OPEN_GAUSS ListInstancesRequestDatastoreType
+	GAUSS_DB                ListInstancesRequestDatastoreType
 }
 
 func GetListInstancesRequestDatastoreTypeEnum() ListInstancesRequestDatastoreTypeEnum {
 	return ListInstancesRequestDatastoreTypeEnum{
 		GAUSS_DB_FOR_OPEN_GAUSS: ListInstancesRequestDatastoreType{
 			value: "GaussDB(for openGauss)",
+		},
+		GAUSS_DB: ListInstancesRequestDatastoreType{
+			value: "GaussDB",
 		},
 	}
 }

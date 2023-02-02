@@ -63,6 +63,10 @@ func GenReqDefForListBackPools() *def.HttpRequestDef {
 		WithName("BillingCycle").
 		WithJsonTag("billing_cycle").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AllBillingCycle").
+		WithJsonTag("all_billing_cycle").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -600,6 +604,10 @@ func GenReqDefForListSimPools() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("BillingCycle").
 		WithJsonTag("billing_cycle").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AllBillingCycle").
+		WithJsonTag("all_billing_cycle").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()

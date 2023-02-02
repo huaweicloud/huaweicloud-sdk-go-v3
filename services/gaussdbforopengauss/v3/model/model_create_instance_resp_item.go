@@ -38,7 +38,7 @@ type CreateInstanceRespItem struct {
 	// 规格码。
 	FlavorRef string `json:"flavor_ref"`
 
-	// 可用区ID。GaussDB(for openGauss)取值范围：非空，可选部署在同一可用区或三个不同可用区，可用区之间用逗号隔开。 取值参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)。
+	// 可用区ID。GaussDB取值范围：非空，可选部署在同一可用区或三个不同可用区，可用区之间用逗号隔开。 取值参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)。
 	AvailabilityZone string `json:"availability_zone"`
 
 	// 虚拟私有云ID。

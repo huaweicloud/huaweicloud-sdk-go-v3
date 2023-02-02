@@ -24,7 +24,7 @@ type ListInstanceResponse struct {
 	// 实例外网IP地址列表。绑定弹性公网IP后，该值不为空。
 	PublicIps []string `json:"public_ips"`
 
-	// 数据库端口号。GaussDB(for openGauss)数据库端口设置范围为1024~39998（其中2378,2379,2380,4999,5000,5999,6000,6001,8097,8098,20049,20050,21731,21732被系统占用不可设置）。  当不传该参数时，默认端口如下：8000。
+	// 数据库端口号。GaussDB 数据库端口设置范围为1024~39998（其中2378,2379,2380,4999,5000,5999,6000,6001,8097,8098,20049,20050,21731,21732被系统占用不可设置）。  当不传该参数时，默认端口如下：8000。
 	Port int32 `json:"port"`
 
 	// 实例类型，取值为 \"enterprise\"，对应于分布式实例（企业版）。取值为\"Ha\"，对应于主备版实例。
@@ -58,7 +58,7 @@ type ListInstanceResponse struct {
 	// 安全组ID。
 	SecurityGroupId string `json:"security_group_id"`
 
-	// 规格码。参考[表1](https://support.huaweicloud.com/api-opengauss/opengauss_api_0037.html#opengauss_api_0037__ted9b9d433c8a4c52884e199e17f94479)中GaussDB(for openGauss)的“规格编码”列内容获取。
+	// 规格码。参考[表1](https://support.huaweicloud.com/api-opengauss/opengauss_api_0037.html#opengauss_api_0037__ted9b9d433c8a4c52884e199e17f94479)中GaussDB 的“规格编码”列内容获取。
 	FlavorRef string `json:"flavor_ref"`
 
 	FlavorInfo *ListFlavorInfo `json:"flavor_info"`

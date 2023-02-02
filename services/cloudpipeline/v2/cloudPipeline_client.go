@@ -19,6 +19,27 @@ func CloudPipelineClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+// BatchShowPipelinesLatestStatus 批量获取流水线状态
+//
+// 批量获取流水线状态
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudPipelineClient) BatchShowPipelinesLatestStatus(request *model.BatchShowPipelinesLatestStatusRequest) (*model.BatchShowPipelinesLatestStatusResponse, error) {
+	requestDef := GenReqDefForBatchShowPipelinesLatestStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchShowPipelinesLatestStatusResponse), nil
+	}
+}
+
+// BatchShowPipelinesLatestStatusInvoker 批量获取流水线状态
+func (c *CloudPipelineClient) BatchShowPipelinesLatestStatusInvoker(request *model.BatchShowPipelinesLatestStatusRequest) *BatchShowPipelinesLatestStatusInvoker {
+	requestDef := GenReqDefForBatchShowPipelinesLatestStatus()
+	return &BatchShowPipelinesLatestStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchShowPipelinesStatus 批量获取流水线状态
 //
 // 批量获取流水线状态和阶段信息
@@ -61,6 +82,48 @@ func (c *CloudPipelineClient) CreatePipelineByTemplateInvoker(request *model.Cre
 	return &CreatePipelineByTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeletePipeline 删除流水线
+//
+// 删除流水线
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudPipelineClient) DeletePipeline(request *model.DeletePipelineRequest) (*model.DeletePipelineResponse, error) {
+	requestDef := GenReqDefForDeletePipeline()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeletePipelineResponse), nil
+	}
+}
+
+// DeletePipelineInvoker 删除流水线
+func (c *CloudPipelineClient) DeletePipelineInvoker(request *model.DeletePipelineRequest) *DeletePipelineInvoker {
+	requestDef := GenReqDefForDeletePipeline()
+	return &DeletePipelineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPipelineRuns 获取流水线执行记录
+//
+// 获取流水线执行记录
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudPipelineClient) ListPipelineRuns(request *model.ListPipelineRunsRequest) (*model.ListPipelineRunsResponse, error) {
+	requestDef := GenReqDefForListPipelineRuns()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPipelineRunsResponse), nil
+	}
+}
+
+// ListPipelineRunsInvoker 获取流水线执行记录
+func (c *CloudPipelineClient) ListPipelineRunsInvoker(request *model.ListPipelineRunsRequest) *ListPipelineRunsInvoker {
+	requestDef := GenReqDefForListPipelineRuns()
+	return &ListPipelineRunsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListPipelineSimpleInfo 获取流水线列表接口
 //
 // 获取流水线列表接口
@@ -80,6 +143,27 @@ func (c *CloudPipelineClient) ListPipelineSimpleInfo(request *model.ListPipeline
 func (c *CloudPipelineClient) ListPipelineSimpleInfoInvoker(request *model.ListPipelineSimpleInfoRequest) *ListPipelineSimpleInfoInvoker {
 	requestDef := GenReqDefForListPipelineSimpleInfo()
 	return &ListPipelineSimpleInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPipelines 获取流水线列表/获取项目下流水线执行状况
+//
+// 获取流水线列表/获取项目下流水线执行状况
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudPipelineClient) ListPipelines(request *model.ListPipelinesRequest) (*model.ListPipelinesResponse, error) {
+	requestDef := GenReqDefForListPipelines()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPipelinesResponse), nil
+	}
+}
+
+// ListPipelinesInvoker 获取流水线列表/获取项目下流水线执行状况
+func (c *CloudPipelineClient) ListPipelinesInvoker(request *model.ListPipelinesRequest) *ListPipelinesInvoker {
+	requestDef := GenReqDefForListPipelines()
+	return &ListPipelinesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListPipleineBuildResult 获取项目下流水线执行状况
@@ -145,6 +229,27 @@ func (c *CloudPipelineClient) RemovePipelineInvoker(request *model.RemovePipelin
 	return &RemovePipelineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RunPipeline 启动流水线
+//
+// 启动流水线
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudPipelineClient) RunPipeline(request *model.RunPipelineRequest) (*model.RunPipelineResponse, error) {
+	requestDef := GenReqDefForRunPipeline()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RunPipelineResponse), nil
+	}
+}
+
+// RunPipelineInvoker 启动流水线
+func (c *CloudPipelineClient) RunPipelineInvoker(request *model.RunPipelineRequest) *RunPipelineInvoker {
+	requestDef := GenReqDefForRunPipeline()
+	return &RunPipelineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowInstanceStatus 检查流水线创建状态
 //
 // 检查流水线创建状态
@@ -164,6 +269,27 @@ func (c *CloudPipelineClient) ShowInstanceStatus(request *model.ShowInstanceStat
 func (c *CloudPipelineClient) ShowInstanceStatusInvoker(request *model.ShowInstanceStatusRequest) *ShowInstanceStatusInvoker {
 	requestDef := GenReqDefForShowInstanceStatus()
 	return &ShowInstanceStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPipelineRunDetail 获取流水线状态/获取流水线执行详情
+//
+// 获取流水线状态/获取流水线执行详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudPipelineClient) ShowPipelineRunDetail(request *model.ShowPipelineRunDetailRequest) (*model.ShowPipelineRunDetailResponse, error) {
+	requestDef := GenReqDefForShowPipelineRunDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPipelineRunDetailResponse), nil
+	}
+}
+
+// ShowPipelineRunDetailInvoker 获取流水线状态/获取流水线执行详情
+func (c *CloudPipelineClient) ShowPipelineRunDetailInvoker(request *model.ShowPipelineRunDetailRequest) *ShowPipelineRunDetailInvoker {
+	requestDef := GenReqDefForShowPipelineRunDetail()
+	return &ShowPipelineRunDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowPipleineStatus 获取流水线状态
@@ -248,4 +374,25 @@ func (c *CloudPipelineClient) StopPipelineNew(request *model.StopPipelineNewRequ
 func (c *CloudPipelineClient) StopPipelineNewInvoker(request *model.StopPipelineNewRequest) *StopPipelineNewInvoker {
 	requestDef := GenReqDefForStopPipelineNew()
 	return &StopPipelineNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StopPipelineRun 停止流水线
+//
+// 停止流水线
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudPipelineClient) StopPipelineRun(request *model.StopPipelineRunRequest) (*model.StopPipelineRunResponse, error) {
+	requestDef := GenReqDefForStopPipelineRun()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StopPipelineRunResponse), nil
+	}
+}
+
+// StopPipelineRunInvoker 停止流水线
+func (c *CloudPipelineClient) StopPipelineRunInvoker(request *model.StopPipelineRunRequest) *StopPipelineRunInvoker {
+	requestDef := GenReqDefForStopPipelineRun()
+	return &StopPipelineRunInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

@@ -923,9 +923,9 @@ func (c *GaussDBforopenGaussClient) ResetPwdInvoker(request *model.ResetPwdReque
 	return &ResetPwdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ResizeInstanceFlavor GaussDB(for openGauss)数据库实例规格变更
+// ResizeInstanceFlavor GaussDB数据库实例规格变更
 //
-// GaussDB(for openGauss)数据库实例规格变更
+// GaussDB数据库实例规格变更
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforopenGaussClient) ResizeInstanceFlavor(request *model.ResizeInstanceFlavorRequest) (*model.ResizeInstanceFlavorResponse, error) {
@@ -938,7 +938,7 @@ func (c *GaussDBforopenGaussClient) ResizeInstanceFlavor(request *model.ResizeIn
 	}
 }
 
-// ResizeInstanceFlavorInvoker GaussDB(for openGauss)数据库实例规格变更
+// ResizeInstanceFlavorInvoker GaussDB数据库实例规格变更
 func (c *GaussDBforopenGaussClient) ResizeInstanceFlavorInvoker(request *model.ResizeInstanceFlavorRequest) *ResizeInstanceFlavorInvoker {
 	requestDef := GenReqDefForResizeInstanceFlavor()
 	return &ResizeInstanceFlavorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
