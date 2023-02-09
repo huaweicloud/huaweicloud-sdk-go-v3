@@ -565,6 +565,27 @@ func (c *RdsClient) ListErrorLogsNewInvoker(request *model.ListErrorLogsNewReque
 	return &ListErrorLogsNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListErrorlogForLts
+//
+// 查询实例的错误日志数据。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListErrorlogForLts(request *model.ListErrorlogForLtsRequest) (*model.ListErrorlogForLtsResponse, error) {
+	requestDef := GenReqDefForListErrorlogForLts()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListErrorlogForLtsResponse), nil
+	}
+}
+
+// ListErrorlogForLtsInvoker
+func (c *RdsClient) ListErrorlogForLtsInvoker(request *model.ListErrorlogForLtsRequest) *ListErrorlogForLtsInvoker {
+	requestDef := GenReqDefForListErrorlogForLts()
+	return &ListErrorlogForLtsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListFlavors 查询数据库规格
 //
 // 查询数据库规格。
@@ -799,6 +820,27 @@ func (c *RdsClient) ListSlowLogFileInvoker(request *model.ListSlowLogFileRequest
 	return &ListSlowLogFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSlowLogStatisticsForLts
+//
+// 查询实例慢日志的统计数据。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListSlowLogStatisticsForLts(request *model.ListSlowLogStatisticsForLtsRequest) (*model.ListSlowLogStatisticsForLtsResponse, error) {
+	requestDef := GenReqDefForListSlowLogStatisticsForLts()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSlowLogStatisticsForLtsResponse), nil
+	}
+}
+
+// ListSlowLogStatisticsForLtsInvoker
+func (c *RdsClient) ListSlowLogStatisticsForLtsInvoker(request *model.ListSlowLogStatisticsForLtsRequest) *ListSlowLogStatisticsForLtsInvoker {
+	requestDef := GenReqDefForListSlowLogStatisticsForLts()
+	return &ListSlowLogStatisticsForLtsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListSlowLogs 查询数据库慢日志
 //
 // 查询数据库慢日志。
@@ -839,6 +881,27 @@ func (c *RdsClient) ListSlowLogsNew(request *model.ListSlowLogsNewRequest) (*mod
 func (c *RdsClient) ListSlowLogsNewInvoker(request *model.ListSlowLogsNewRequest) *ListSlowLogsNewInvoker {
 	requestDef := GenReqDefForListSlowLogsNew()
 	return &ListSlowLogsNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSlowlogForLts
+//
+// 查询实例的慢日志数据。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListSlowlogForLts(request *model.ListSlowlogForLtsRequest) (*model.ListSlowlogForLtsResponse, error) {
+	requestDef := GenReqDefForListSlowlogForLts()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSlowlogForLtsResponse), nil
+	}
+}
+
+// ListSlowlogForLtsInvoker
+func (c *RdsClient) ListSlowlogForLtsInvoker(request *model.ListSlowlogForLtsRequest) *ListSlowlogForLtsInvoker {
+	requestDef := GenReqDefForListSlowlogForLts()
+	return &ListSlowlogForLtsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListSlowlogStatistics 获取慢日志统计信息

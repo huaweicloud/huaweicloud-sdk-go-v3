@@ -3,7 +3,7 @@ package v3
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
 
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/cloudbuild/v3/model"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/codeartsbuild/v3/model"
 	"net/http"
 )
 

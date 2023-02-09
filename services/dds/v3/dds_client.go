@@ -901,6 +901,27 @@ func (c *DdsClient) ListInstancesByTagsInvoker(request *model.ListInstancesByTag
 	return &ListInstancesByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListLtsSlowLogs 查询数据库慢日志
+//
+// 查询数据库慢日志信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdsClient) ListLtsSlowLogs(request *model.ListLtsSlowLogsRequest) (*model.ListLtsSlowLogsResponse, error) {
+	requestDef := GenReqDefForListLtsSlowLogs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListLtsSlowLogsResponse), nil
+	}
+}
+
+// ListLtsSlowLogsInvoker 查询数据库慢日志
+func (c *DdsClient) ListLtsSlowLogsInvoker(request *model.ListLtsSlowLogsRequest) *ListLtsSlowLogsInvoker {
+	requestDef := GenReqDefForListLtsSlowLogs()
+	return &ListLtsSlowLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListProjectTags 查询项目标签
 //
 // 查询指定project ID下实例的所有标签集合。

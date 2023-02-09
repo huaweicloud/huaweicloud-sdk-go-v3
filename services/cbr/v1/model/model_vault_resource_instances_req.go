@@ -39,7 +39,7 @@ type VaultResourceInstancesReq struct {
 	// 操作标识取值范围为：\"filter\", \"count\"。如果是filter就是分页查询，如果是count只需按照条件将总条数返回即可
 	Action string `json:"action"`
 
-	// 资源本身支持的查询条件。  matches不允许为空列表。  matches中key不允许重复。
+	// 资源本身支持的查询条件。  matches中key不允许重复。  数组长度最大值为 1，后续再扩展。
 	Matches *[]Match `json:"matches,omitempty"`
 
 	// 云类型

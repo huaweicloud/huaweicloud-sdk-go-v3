@@ -509,6 +509,18 @@ func (i *ListInstancesByTagsInvoker) Invoke() (*model.ListInstancesByTagsRespons
 	}
 }
 
+type ListLtsSlowLogsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListLtsSlowLogsInvoker) Invoke() (*model.ListLtsSlowLogsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListLtsSlowLogsResponse), nil
+	}
+}
+
 type ListProjectTagsInvoker struct {
 	*invoker.BaseInvoker
 }

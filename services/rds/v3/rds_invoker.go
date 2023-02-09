@@ -317,6 +317,18 @@ func (i *ListErrorLogsNewInvoker) Invoke() (*model.ListErrorLogsNewResponse, err
 	}
 }
 
+type ListErrorlogForLtsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListErrorlogForLtsInvoker) Invoke() (*model.ListErrorlogForLtsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListErrorlogForLtsResponse), nil
+	}
+}
+
 type ListFlavorsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -449,6 +461,18 @@ func (i *ListSlowLogFileInvoker) Invoke() (*model.ListSlowLogFileResponse, error
 	}
 }
 
+type ListSlowLogStatisticsForLtsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSlowLogStatisticsForLtsInvoker) Invoke() (*model.ListSlowLogStatisticsForLtsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSlowLogStatisticsForLtsResponse), nil
+	}
+}
+
 type ListSlowLogsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -470,6 +494,18 @@ func (i *ListSlowLogsNewInvoker) Invoke() (*model.ListSlowLogsNewResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ListSlowLogsNewResponse), nil
+	}
+}
+
+type ListSlowlogForLtsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSlowlogForLtsInvoker) Invoke() (*model.ListSlowlogForLtsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSlowlogForLtsResponse), nil
 	}
 }
 

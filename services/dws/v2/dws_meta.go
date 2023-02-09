@@ -829,7 +829,7 @@ func GenReqDefForListClusterScaleInNumbers() *def.HttpRequestDef {
 func GenReqDefForListClusterSnapshots() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1.0/{project_id}/cluster/{cluster_id}/snapshots").
+		WithPath("/v1.0/{project_id}/clusters/{cluster_id}/snapshots").
 		WithResponse(new(model.ListClusterSnapshotsResponse)).
 		WithContentType("application/json")
 

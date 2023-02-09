@@ -9,7 +9,7 @@ import (
 // 测试计划需求列表详情
 type TestPlanIssueDetail struct {
 
-	// DevCloud项目id，项目唯一标识，固定长度32位字符
+	// 项目id，项目唯一标识，固定长度32位字符
 	ProjectId *string `json:"project_id,omitempty"`
 
 	// 测试计划id

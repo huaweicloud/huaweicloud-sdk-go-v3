@@ -3,18 +3,18 @@ package v2
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/cloudartifact/v2/model"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/codeartsartifact/v2/model"
 )
 
-type CloudArtifactClient struct {
+type CodeArtsArtifactClient struct {
 	HcClient *http_client.HcHttpClient
 }
 
-func NewCloudArtifactClient(hcClient *http_client.HcHttpClient) *CloudArtifactClient {
-	return &CloudArtifactClient{HcClient: hcClient}
+func NewCodeArtsArtifactClient(hcClient *http_client.HcHttpClient) *CodeArtsArtifactClient {
+	return &CodeArtsArtifactClient{HcClient: hcClient}
 }
 
-func CloudArtifactClientBuilder() *http_client.HcHttpClientBuilder {
+func CodeArtsArtifactClientBuilder() *http_client.HcHttpClientBuilder {
 	builder := http_client.NewHcHttpClientBuilder()
 	return builder
 }
@@ -24,7 +24,7 @@ func CloudArtifactClientBuilder() *http_client.HcHttpClientBuilder {
 // 获取项目下文件版本信息列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *CloudArtifactClient) ShowProjectReleaseFiles(request *model.ShowProjectReleaseFilesRequest) (*model.ShowProjectReleaseFilesResponse, error) {
+func (c *CodeArtsArtifactClient) ShowProjectReleaseFiles(request *model.ShowProjectReleaseFilesRequest) (*model.ShowProjectReleaseFilesResponse, error) {
 	requestDef := GenReqDefForShowProjectReleaseFiles()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
@@ -35,7 +35,7 @@ func (c *CloudArtifactClient) ShowProjectReleaseFiles(request *model.ShowProject
 }
 
 // ShowProjectReleaseFilesInvoker 获取项目下文件版本信息列表
-func (c *CloudArtifactClient) ShowProjectReleaseFilesInvoker(request *model.ShowProjectReleaseFilesRequest) *ShowProjectReleaseFilesInvoker {
+func (c *CodeArtsArtifactClient) ShowProjectReleaseFilesInvoker(request *model.ShowProjectReleaseFilesRequest) *ShowProjectReleaseFilesInvoker {
 	requestDef := GenReqDefForShowProjectReleaseFiles()
 	return &ShowProjectReleaseFilesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
@@ -45,7 +45,7 @@ func (c *CloudArtifactClient) ShowProjectReleaseFilesInvoker(request *model.Show
 // 获取项目下文件版本信息列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *CloudArtifactClient) ShowReleaseProjectFiles(request *model.ShowReleaseProjectFilesRequest) (*model.ShowReleaseProjectFilesResponse, error) {
+func (c *CodeArtsArtifactClient) ShowReleaseProjectFiles(request *model.ShowReleaseProjectFilesRequest) (*model.ShowReleaseProjectFilesResponse, error) {
 	requestDef := GenReqDefForShowReleaseProjectFiles()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
@@ -56,7 +56,7 @@ func (c *CloudArtifactClient) ShowReleaseProjectFiles(request *model.ShowRelease
 }
 
 // ShowReleaseProjectFilesInvoker 获取项目下文件版本信息列表
-func (c *CloudArtifactClient) ShowReleaseProjectFilesInvoker(request *model.ShowReleaseProjectFilesRequest) *ShowReleaseProjectFilesInvoker {
+func (c *CodeArtsArtifactClient) ShowReleaseProjectFilesInvoker(request *model.ShowReleaseProjectFilesRequest) *ShowReleaseProjectFilesInvoker {
 	requestDef := GenReqDefForShowReleaseProjectFiles()
 	return &ShowReleaseProjectFilesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

@@ -3,18 +3,18 @@ package v3
 import (
 	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/cloudbuild/v3/model"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/codeartsbuild/v3/model"
 )
 
-type CloudBuildClient struct {
+type CodeArtsBuildClient struct {
 	HcClient *http_client.HcHttpClient
 }
 
-func NewCloudBuildClient(hcClient *http_client.HcHttpClient) *CloudBuildClient {
-	return &CloudBuildClient{HcClient: hcClient}
+func NewCodeArtsBuildClient(hcClient *http_client.HcHttpClient) *CodeArtsBuildClient {
+	return &CodeArtsBuildClient{HcClient: hcClient}
 }
 
-func CloudBuildClientBuilder() *http_client.HcHttpClientBuilder {
+func CodeArtsBuildClientBuilder() *http_client.HcHttpClientBuilder {
 	builder := http_client.NewHcHttpClientBuilder()
 	return builder
 }
@@ -24,7 +24,7 @@ func CloudBuildClientBuilder() *http_client.HcHttpClientBuilder {
 // 下载指定租户下的KeyStore文件
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *CloudBuildClient) DownloadKeystore(request *model.DownloadKeystoreRequest) (*model.DownloadKeystoreResponse, error) {
+func (c *CodeArtsBuildClient) DownloadKeystore(request *model.DownloadKeystoreRequest) (*model.DownloadKeystoreResponse, error) {
 	requestDef := GenReqDefForDownloadKeystore()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
@@ -35,7 +35,7 @@ func (c *CloudBuildClient) DownloadKeystore(request *model.DownloadKeystoreReque
 }
 
 // DownloadKeystoreInvoker KeyStore文件下载
-func (c *CloudBuildClient) DownloadKeystoreInvoker(request *model.DownloadKeystoreRequest) *DownloadKeystoreInvoker {
+func (c *CodeArtsBuildClient) DownloadKeystoreInvoker(request *model.DownloadKeystoreRequest) *DownloadKeystoreInvoker {
 	requestDef := GenReqDefForDownloadKeystore()
 	return &DownloadKeystoreInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
@@ -45,7 +45,7 @@ func (c *CloudBuildClient) DownloadKeystoreInvoker(request *model.DownloadKeysto
 // 执行构建任务,可传自定义参数。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *CloudBuildClient) RunJob(request *model.RunJobRequest) (*model.RunJobResponse, error) {
+func (c *CodeArtsBuildClient) RunJob(request *model.RunJobRequest) (*model.RunJobResponse, error) {
 	requestDef := GenReqDefForRunJob()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
@@ -56,7 +56,7 @@ func (c *CloudBuildClient) RunJob(request *model.RunJobRequest) (*model.RunJobRe
 }
 
 // RunJobInvoker 执行构建任务
-func (c *CloudBuildClient) RunJobInvoker(request *model.RunJobRequest) *RunJobInvoker {
+func (c *CodeArtsBuildClient) RunJobInvoker(request *model.RunJobRequest) *RunJobInvoker {
 	requestDef := GenReqDefForRunJob()
 	return &RunJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
@@ -66,7 +66,7 @@ func (c *CloudBuildClient) RunJobInvoker(request *model.RunJobRequest) *RunJobIn
 // 获取构建历史详情信息接口
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *CloudBuildClient) ShowHistoryDetails(request *model.ShowHistoryDetailsRequest) (*model.ShowHistoryDetailsResponse, error) {
+func (c *CodeArtsBuildClient) ShowHistoryDetails(request *model.ShowHistoryDetailsRequest) (*model.ShowHistoryDetailsResponse, error) {
 	requestDef := GenReqDefForShowHistoryDetails()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
@@ -77,7 +77,7 @@ func (c *CloudBuildClient) ShowHistoryDetails(request *model.ShowHistoryDetailsR
 }
 
 // ShowHistoryDetailsInvoker 获取构建历史详情信息接口
-func (c *CloudBuildClient) ShowHistoryDetailsInvoker(request *model.ShowHistoryDetailsRequest) *ShowHistoryDetailsInvoker {
+func (c *CodeArtsBuildClient) ShowHistoryDetailsInvoker(request *model.ShowHistoryDetailsRequest) *ShowHistoryDetailsInvoker {
 	requestDef := GenReqDefForShowHistoryDetails()
 	return &ShowHistoryDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
@@ -87,7 +87,7 @@ func (c *CloudBuildClient) ShowHistoryDetailsInvoker(request *model.ShowHistoryD
 // 查看项目下用户的构建任务列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *CloudBuildClient) ShowJobListByProjectId(request *model.ShowJobListByProjectIdRequest) (*model.ShowJobListByProjectIdResponse, error) {
+func (c *CodeArtsBuildClient) ShowJobListByProjectId(request *model.ShowJobListByProjectIdRequest) (*model.ShowJobListByProjectIdResponse, error) {
 	requestDef := GenReqDefForShowJobListByProjectId()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
@@ -98,7 +98,7 @@ func (c *CloudBuildClient) ShowJobListByProjectId(request *model.ShowJobListByPr
 }
 
 // ShowJobListByProjectIdInvoker 查看项目下用户的构建任务列表
-func (c *CloudBuildClient) ShowJobListByProjectIdInvoker(request *model.ShowJobListByProjectIdRequest) *ShowJobListByProjectIdInvoker {
+func (c *CodeArtsBuildClient) ShowJobListByProjectIdInvoker(request *model.ShowJobListByProjectIdRequest) *ShowJobListByProjectIdInvoker {
 	requestDef := GenReqDefForShowJobListByProjectId()
 	return &ShowJobListByProjectIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
@@ -108,7 +108,7 @@ func (c *CloudBuildClient) ShowJobListByProjectIdInvoker(request *model.ShowJobL
 // 查看任务运行状态
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *CloudBuildClient) ShowJobStatus(request *model.ShowJobStatusRequest) (*model.ShowJobStatusResponse, error) {
+func (c *CodeArtsBuildClient) ShowJobStatus(request *model.ShowJobStatusRequest) (*model.ShowJobStatusResponse, error) {
 	requestDef := GenReqDefForShowJobStatus()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
@@ -119,7 +119,7 @@ func (c *CloudBuildClient) ShowJobStatus(request *model.ShowJobStatusRequest) (*
 }
 
 // ShowJobStatusInvoker 查看任务运行状态
-func (c *CloudBuildClient) ShowJobStatusInvoker(request *model.ShowJobStatusRequest) *ShowJobStatusInvoker {
+func (c *CodeArtsBuildClient) ShowJobStatusInvoker(request *model.ShowJobStatusRequest) *ShowJobStatusInvoker {
 	requestDef := GenReqDefForShowJobStatus()
 	return &ShowJobStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
@@ -129,7 +129,7 @@ func (c *CloudBuildClient) ShowJobStatusInvoker(request *model.ShowJobStatusRequ
 // 根据开始时间和结束时间查看构建任务的构建成功率
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *CloudBuildClient) ShowJobSuccessRatio(request *model.ShowJobSuccessRatioRequest) (*model.ShowJobSuccessRatioResponse, error) {
+func (c *CodeArtsBuildClient) ShowJobSuccessRatio(request *model.ShowJobSuccessRatioRequest) (*model.ShowJobSuccessRatioResponse, error) {
 	requestDef := GenReqDefForShowJobSuccessRatio()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
@@ -140,7 +140,7 @@ func (c *CloudBuildClient) ShowJobSuccessRatio(request *model.ShowJobSuccessRati
 }
 
 // ShowJobSuccessRatioInvoker 根据开始时间和结束时间查看构建任务的构建成功率
-func (c *CloudBuildClient) ShowJobSuccessRatioInvoker(request *model.ShowJobSuccessRatioRequest) *ShowJobSuccessRatioInvoker {
+func (c *CodeArtsBuildClient) ShowJobSuccessRatioInvoker(request *model.ShowJobSuccessRatioRequest) *ShowJobSuccessRatioInvoker {
 	requestDef := GenReqDefForShowJobSuccessRatio()
 	return &ShowJobSuccessRatioInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
@@ -150,7 +150,7 @@ func (c *CloudBuildClient) ShowJobSuccessRatioInvoker(request *model.ShowJobSucc
 // 查询指定代码仓库最近一次成功的构建历史
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *CloudBuildClient) ShowLastHistory(request *model.ShowLastHistoryRequest) (*model.ShowLastHistoryResponse, error) {
+func (c *CodeArtsBuildClient) ShowLastHistory(request *model.ShowLastHistoryRequest) (*model.ShowLastHistoryResponse, error) {
 	requestDef := GenReqDefForShowLastHistory()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
@@ -161,7 +161,7 @@ func (c *CloudBuildClient) ShowLastHistory(request *model.ShowLastHistoryRequest
 }
 
 // ShowLastHistoryInvoker 查询指定代码仓库最近一次成功的构建历史
-func (c *CloudBuildClient) ShowLastHistoryInvoker(request *model.ShowLastHistoryRequest) *ShowLastHistoryInvoker {
+func (c *CodeArtsBuildClient) ShowLastHistoryInvoker(request *model.ShowLastHistoryRequest) *ShowLastHistoryInvoker {
 	requestDef := GenReqDefForShowLastHistory()
 	return &ShowLastHistoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
@@ -171,7 +171,7 @@ func (c *CloudBuildClient) ShowLastHistoryInvoker(request *model.ShowLastHistory
 // 查看构建任务的构建历史列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *CloudBuildClient) ShowListHistory(request *model.ShowListHistoryRequest) (*model.ShowListHistoryResponse, error) {
+func (c *CodeArtsBuildClient) ShowListHistory(request *model.ShowListHistoryRequest) (*model.ShowListHistoryResponse, error) {
 	requestDef := GenReqDefForShowListHistory()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
@@ -182,7 +182,7 @@ func (c *CloudBuildClient) ShowListHistory(request *model.ShowListHistoryRequest
 }
 
 // ShowListHistoryInvoker 查看构建任务的构建历史列表
-func (c *CloudBuildClient) ShowListHistoryInvoker(request *model.ShowListHistoryRequest) *ShowListHistoryInvoker {
+func (c *CodeArtsBuildClient) ShowListHistoryInvoker(request *model.ShowListHistoryRequest) *ShowListHistoryInvoker {
 	requestDef := GenReqDefForShowListHistory()
 	return &ShowListHistoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
@@ -192,7 +192,7 @@ func (c *CloudBuildClient) ShowListHistoryInvoker(request *model.ShowListHistory
 // 根据开始时间和结束时间查看构建任务的构建历史列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *CloudBuildClient) ShowListPeriodHistory(request *model.ShowListPeriodHistoryRequest) (*model.ShowListPeriodHistoryResponse, error) {
+func (c *CodeArtsBuildClient) ShowListPeriodHistory(request *model.ShowListPeriodHistoryRequest) (*model.ShowListPeriodHistoryResponse, error) {
 	requestDef := GenReqDefForShowListPeriodHistory()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
@@ -203,7 +203,7 @@ func (c *CloudBuildClient) ShowListPeriodHistory(request *model.ShowListPeriodHi
 }
 
 // ShowListPeriodHistoryInvoker 根据开始时间和结束时间查看构建任务的构建历史列表
-func (c *CloudBuildClient) ShowListPeriodHistoryInvoker(request *model.ShowListPeriodHistoryRequest) *ShowListPeriodHistoryInvoker {
+func (c *CodeArtsBuildClient) ShowListPeriodHistoryInvoker(request *model.ShowListPeriodHistoryRequest) *ShowListPeriodHistoryInvoker {
 	requestDef := GenReqDefForShowListPeriodHistory()
 	return &ShowListPeriodHistoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

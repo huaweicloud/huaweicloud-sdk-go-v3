@@ -12,9 +12,20 @@ import (
 // Response Object
 type ShowPauseResumeStutusResponse struct {
 
+	// 主实例id
+	MasterInstanceId *string `json:"master_instance_id,omitempty"`
+
+	// 备实例id
+	SlaveInstanceId *string `json:"slave_instance_id,omitempty"`
+
 	// 容灾实例数据同步状态 - NA：实例尚未搭建容灾关系 - NEW：尚未启动的数据同步状态 - SYNCING：数据同步正常进行中 - SUSPENDING：正在暂停数据同步 - SUSPENDED：数据同步已暂停 - RECOVERYING：正在恢复数据同步
-	Status         *ShowPauseResumeStutusResponseStatus `json:"status,omitempty"`
-	HttpStatusCode int                                  `json:"-"`
+	Status *ShowPauseResumeStutusResponseStatus `json:"status,omitempty"`
+
+	DataSyncIndicators *NoSqlDrDateSyncIndicators `json:"data_sync_indicators,omitempty"`
+
+	// 切换或倒换RPO和RTO值，仅当请求实例id为主实例时有值
+	RtoAndRpoIndicators *[]NoSqlDrRpoAndRto `json:"rto_and_rpo_indicators,omitempty"`
+	HttpStatusCode      int                 `json:"-"`
 }
 
 func (o ShowPauseResumeStutusResponse) String() string {

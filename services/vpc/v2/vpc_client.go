@@ -105,6 +105,29 @@ func (c *VpcClient) BatchDeleteSubnetTagsInvoker(request *model.BatchDeleteSubne
 	return &BatchDeleteSubnetTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateFlowLog 创建流日志
+//
+// 创建流日志。
+// 流日志功能可以记录虚拟私有云中的流量信息，帮助您检查和优化安全组和网络ACL防火墙控制规则、监控网络流量、进行网络攻击分析等。
+// VPC流日志功能需要与云日志服务LTS结合使用，请先在云日志服务中创建日志组和日志主题，然后再创建VPC流日志。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) CreateFlowLog(request *model.CreateFlowLogRequest) (*model.CreateFlowLogResponse, error) {
+	requestDef := GenReqDefForCreateFlowLog()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateFlowLogResponse), nil
+	}
+}
+
+// CreateFlowLogInvoker 创建流日志
+func (c *VpcClient) CreateFlowLogInvoker(request *model.CreateFlowLogRequest) *CreateFlowLogInvoker {
+	requestDef := GenReqDefForCreateFlowLog()
+	return &CreateFlowLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreatePort 创建端口
 //
 // 创建端口。
@@ -251,6 +274,27 @@ func (c *VpcClient) CreateVpcPeering(request *model.CreateVpcPeeringRequest) (*m
 func (c *VpcClient) CreateVpcPeeringInvoker(request *model.CreateVpcPeeringRequest) *CreateVpcPeeringInvoker {
 	requestDef := GenReqDefForCreateVpcPeering()
 	return &CreateVpcPeeringInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteFlowLog 删除流日志
+//
+// 删除流日志
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) DeleteFlowLog(request *model.DeleteFlowLogRequest) (*model.DeleteFlowLogResponse, error) {
+	requestDef := GenReqDefForDeleteFlowLog()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteFlowLogResponse), nil
+	}
+}
+
+// DeleteFlowLogInvoker 删除流日志
+func (c *VpcClient) DeleteFlowLogInvoker(request *model.DeleteFlowLogRequest) *DeleteFlowLogInvoker {
+	requestDef := GenReqDefForDeleteFlowLog()
+	return &DeleteFlowLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeletePort 删除端口
@@ -421,6 +465,27 @@ func (c *VpcClient) DisassociateRouteTable(request *model.DisassociateRouteTable
 func (c *VpcClient) DisassociateRouteTableInvoker(request *model.DisassociateRouteTableRequest) *DisassociateRouteTableInvoker {
 	requestDef := GenReqDefForDisassociateRouteTable()
 	return &DisassociateRouteTableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListFlowLogs 查询流日志列表
+//
+// 查询提交请求的租户的所有流日志列表，并根据过滤条件进行过滤
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) ListFlowLogs(request *model.ListFlowLogsRequest) (*model.ListFlowLogsResponse, error) {
+	requestDef := GenReqDefForListFlowLogs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFlowLogsResponse), nil
+	}
+}
+
+// ListFlowLogsInvoker 查询流日志列表
+func (c *VpcClient) ListFlowLogsInvoker(request *model.ListFlowLogsRequest) *ListFlowLogsInvoker {
+	requestDef := GenReqDefForListFlowLogs()
+	return &ListFlowLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListPorts 查询端口列表
@@ -612,6 +677,27 @@ func (c *VpcClient) RejectVpcPeeringInvoker(request *model.RejectVpcPeeringReque
 	return &RejectVpcPeeringInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowFlowLog 查询流日志
+//
+// 查询流日志详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) ShowFlowLog(request *model.ShowFlowLogRequest) (*model.ShowFlowLogResponse, error) {
+	requestDef := GenReqDefForShowFlowLog()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowFlowLogResponse), nil
+	}
+}
+
+// ShowFlowLogInvoker 查询流日志
+func (c *VpcClient) ShowFlowLogInvoker(request *model.ShowFlowLogRequest) *ShowFlowLogInvoker {
+	requestDef := GenReqDefForShowFlowLog()
+	return &ShowFlowLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowPort 查询端口
 //
 // 查询单个端口详情。
@@ -778,6 +864,27 @@ func (c *VpcClient) ShowVpcPeering(request *model.ShowVpcPeeringRequest) (*model
 func (c *VpcClient) ShowVpcPeeringInvoker(request *model.ShowVpcPeeringRequest) *ShowVpcPeeringInvoker {
 	requestDef := GenReqDefForShowVpcPeering()
 	return &ShowVpcPeeringInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateFlowLog 更新流日志
+//
+// 更新流日志
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) UpdateFlowLog(request *model.UpdateFlowLogRequest) (*model.UpdateFlowLogResponse, error) {
+	requestDef := GenReqDefForUpdateFlowLog()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateFlowLogResponse), nil
+	}
+}
+
+// UpdateFlowLogInvoker 更新流日志
+func (c *VpcClient) UpdateFlowLogInvoker(request *model.UpdateFlowLogRequest) *UpdateFlowLogInvoker {
+	requestDef := GenReqDefForUpdateFlowLog()
+	return &UpdateFlowLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdatePort 更新端口

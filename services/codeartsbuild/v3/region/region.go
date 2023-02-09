@@ -29,7 +29,7 @@ var staticFields = map[string]*region.Region{
 	"la-north-2":     LA_NORTH_2,
 }
 
-var provider = region.DefaultProviderChain("CLOUDBUILD")
+var provider = region.DefaultProviderChain("CODEARTSBUILD")
 
 func ValueOf(regionId string) *region.Region {
 	if regionId == "" {

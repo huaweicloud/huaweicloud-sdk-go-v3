@@ -20,6 +20,9 @@ type ListFunctionAsyncInvocationsResult struct {
 	// 异步调用错误信息，如果执行成功，则返回空
 	ErrorMessage *string `json:"error_message,omitempty"`
 
+	// 异步调用错误码，如果执行成功，则返回0
+	ErrorCode *int32 `json:"error_code,omitempty"`
+
 	// 异步调用开始时间（格式为YYYY-MM-DD'T'HH:mm:ss,UTC时间）。
 	StartTime *sdktime.SdkTime `json:"start_time,omitempty"`
 

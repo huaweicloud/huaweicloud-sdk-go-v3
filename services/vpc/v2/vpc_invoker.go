@@ -53,6 +53,18 @@ func (i *BatchDeleteSubnetTagsInvoker) Invoke() (*model.BatchDeleteSubnetTagsRes
 	}
 }
 
+type CreateFlowLogInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateFlowLogInvoker) Invoke() (*model.CreateFlowLogResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateFlowLogResponse), nil
+	}
+}
+
 type CreatePortInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -134,6 +146,18 @@ func (i *CreateVpcPeeringInvoker) Invoke() (*model.CreateVpcPeeringResponse, err
 		return nil, err
 	} else {
 		return result.(*model.CreateVpcPeeringResponse), nil
+	}
+}
+
+type DeleteFlowLogInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteFlowLogInvoker) Invoke() (*model.DeleteFlowLogResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteFlowLogResponse), nil
 	}
 }
 
@@ -230,6 +254,18 @@ func (i *DisassociateRouteTableInvoker) Invoke() (*model.DisassociateRouteTableR
 		return nil, err
 	} else {
 		return result.(*model.DisassociateRouteTableResponse), nil
+	}
+}
+
+type ListFlowLogsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListFlowLogsInvoker) Invoke() (*model.ListFlowLogsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListFlowLogsResponse), nil
 	}
 }
 
@@ -341,6 +377,18 @@ func (i *RejectVpcPeeringInvoker) Invoke() (*model.RejectVpcPeeringResponse, err
 	}
 }
 
+type ShowFlowLogInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowFlowLogInvoker) Invoke() (*model.ShowFlowLogResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowFlowLogResponse), nil
+	}
+}
+
 type ShowPortInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -434,6 +482,18 @@ func (i *ShowVpcPeeringInvoker) Invoke() (*model.ShowVpcPeeringResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.ShowVpcPeeringResponse), nil
+	}
+}
+
+type UpdateFlowLogInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateFlowLogInvoker) Invoke() (*model.UpdateFlowLogResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateFlowLogResponse), nil
 	}
 }
 
