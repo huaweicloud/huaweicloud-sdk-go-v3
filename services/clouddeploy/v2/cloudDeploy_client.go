@@ -19,9 +19,9 @@ func CloudDeployClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// CreateDeployTaskByTemplate 通过模板新建部署任务
+// CreateDeployTaskByTemplate 通过模板新建应用
 //
-// 通过模板新建部署任务cloudpipeline流水线调用。
+// 通过模板新建应用。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudDeployClient) CreateDeployTaskByTemplate(request *model.CreateDeployTaskByTemplateRequest) (*model.CreateDeployTaskByTemplateResponse, error) {
@@ -34,15 +34,15 @@ func (c *CloudDeployClient) CreateDeployTaskByTemplate(request *model.CreateDepl
 	}
 }
 
-// CreateDeployTaskByTemplateInvoker 通过模板新建部署任务
+// CreateDeployTaskByTemplateInvoker 通过模板新建应用
 func (c *CloudDeployClient) CreateDeployTaskByTemplateInvoker(request *model.CreateDeployTaskByTemplateRequest) *CreateDeployTaskByTemplateInvoker {
 	requestDef := GenReqDefForCreateDeployTaskByTemplate()
 	return &CreateDeployTaskByTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteDeployTask 删除部署任务
+// DeleteDeployTask 删除应用
 //
-// 根据部署任务id删除部署任务。
+// 根据部署任务id删除应用。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudDeployClient) DeleteDeployTask(request *model.DeleteDeployTaskRequest) (*model.DeleteDeployTaskResponse, error) {
@@ -55,15 +55,15 @@ func (c *CloudDeployClient) DeleteDeployTask(request *model.DeleteDeployTaskRequ
 	}
 }
 
-// DeleteDeployTaskInvoker 删除部署任务
+// DeleteDeployTaskInvoker 删除应用
 func (c *CloudDeployClient) DeleteDeployTaskInvoker(request *model.DeleteDeployTaskRequest) *DeleteDeployTaskInvoker {
 	requestDef := GenReqDefForDeleteDeployTask()
 	return &DeleteDeployTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListDeployTaskHistoryByDate 根据开始时间和结束时间查询项目下指定任务的历史执行记录列表
+// ListDeployTaskHistoryByDate 根据开始时间和结束时间查询项目下指定应用的历史部署记录列表
 //
-// 根据开始时间和结束时间查询项目下指定任务的历史执行记录列表
+// 根据开始时间和结束时间查询项目下指定应用的历史部署记录列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudDeployClient) ListDeployTaskHistoryByDate(request *model.ListDeployTaskHistoryByDateRequest) (*model.ListDeployTaskHistoryByDateResponse, error) {
@@ -76,15 +76,15 @@ func (c *CloudDeployClient) ListDeployTaskHistoryByDate(request *model.ListDeplo
 	}
 }
 
-// ListDeployTaskHistoryByDateInvoker 根据开始时间和结束时间查询项目下指定任务的历史执行记录列表
+// ListDeployTaskHistoryByDateInvoker 根据开始时间和结束时间查询项目下指定应用的历史部署记录列表
 func (c *CloudDeployClient) ListDeployTaskHistoryByDateInvoker(request *model.ListDeployTaskHistoryByDateRequest) *ListDeployTaskHistoryByDateInvoker {
 	requestDef := GenReqDefForListDeployTaskHistoryByDate()
 	return &ListDeployTaskHistoryByDateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListDeployTasks 获取部署任务列表
+// ListDeployTasks 获取应用列表
 //
-// 查询项目下部署任务列表
+// 查询项目下应用列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudDeployClient) ListDeployTasks(request *model.ListDeployTasksRequest) (*model.ListDeployTasksResponse, error) {
@@ -97,15 +97,15 @@ func (c *CloudDeployClient) ListDeployTasks(request *model.ListDeployTasksReques
 	}
 }
 
-// ListDeployTasksInvoker 获取部署任务列表
+// ListDeployTasksInvoker 获取应用列表
 func (c *CloudDeployClient) ListDeployTasksInvoker(request *model.ListDeployTasksRequest) *ListDeployTasksInvoker {
 	requestDef := GenReqDefForListDeployTasks()
 	return &ListDeployTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowDeployTaskDetail 获取部署任务详情
+// ShowDeployTaskDetail 获取应用详情
 //
-// 根据部署任务id获取部署任务详情。
+// 根据部署任务id获取应用详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudDeployClient) ShowDeployTaskDetail(request *model.ShowDeployTaskDetailRequest) (*model.ShowDeployTaskDetailResponse, error) {
@@ -118,15 +118,15 @@ func (c *CloudDeployClient) ShowDeployTaskDetail(request *model.ShowDeployTaskDe
 	}
 }
 
-// ShowDeployTaskDetailInvoker 获取部署任务详情
+// ShowDeployTaskDetailInvoker 获取应用详情
 func (c *CloudDeployClient) ShowDeployTaskDetailInvoker(request *model.ShowDeployTaskDetailRequest) *ShowDeployTaskDetailInvoker {
 	requestDef := GenReqDefForShowDeployTaskDetail()
 	return &ShowDeployTaskDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// StartDeployTask 启动部署任务
+// StartDeployTask 部署应用
 //
-// 根据部署任务id启动部署任务。
+// 根据部署任务id部署应用。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudDeployClient) StartDeployTask(request *model.StartDeployTaskRequest) (*model.StartDeployTaskResponse, error) {
@@ -139,7 +139,7 @@ func (c *CloudDeployClient) StartDeployTask(request *model.StartDeployTaskReques
 	}
 }
 
-// StartDeployTaskInvoker 启动部署任务
+// StartDeployTaskInvoker 部署应用
 func (c *CloudDeployClient) StartDeployTaskInvoker(request *model.StartDeployTaskRequest) *StartDeployTaskInvoker {
 	requestDef := GenReqDefForStartDeployTask()
 	return &StartDeployTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -355,9 +355,9 @@ func (c *CloudDeployClient) UpdateDeploymentGroupInvoker(request *model.UpdateDe
 	return &UpdateDeploymentGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListTaskSuccessRate 获取指定任务的部署任务执行成功率
+// ListTaskSuccessRate 获取指定应用的应用部署成功率
 //
-// 获取指定任务的部署任务执行成功率
+// 获取指定应用的应用部署成功率
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudDeployClient) ListTaskSuccessRate(request *model.ListTaskSuccessRateRequest) (*model.ListTaskSuccessRateResponse, error) {
@@ -370,15 +370,15 @@ func (c *CloudDeployClient) ListTaskSuccessRate(request *model.ListTaskSuccessRa
 	}
 }
 
-// ListTaskSuccessRateInvoker 获取指定任务的部署任务执行成功率
+// ListTaskSuccessRateInvoker 获取指定应用的应用部署成功率
 func (c *CloudDeployClient) ListTaskSuccessRateInvoker(request *model.ListTaskSuccessRateRequest) *ListTaskSuccessRateInvoker {
 	requestDef := GenReqDefForListTaskSuccessRate()
 	return &ListTaskSuccessRateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowProjectSuccessRate 获取指定项目的部署任务执行成功率
+// ShowProjectSuccessRate 获取指定项目的应用部署成功率
 //
-// 获取指定项目的部署任务执行成功率
+// 获取指定项目的应用部署成功率
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudDeployClient) ShowProjectSuccessRate(request *model.ShowProjectSuccessRateRequest) (*model.ShowProjectSuccessRateResponse, error) {
@@ -391,7 +391,7 @@ func (c *CloudDeployClient) ShowProjectSuccessRate(request *model.ShowProjectSuc
 	}
 }
 
-// ShowProjectSuccessRateInvoker 获取指定项目的部署任务执行成功率
+// ShowProjectSuccessRateInvoker 获取指定项目的应用部署成功率
 func (c *CloudDeployClient) ShowProjectSuccessRateInvoker(request *model.ShowProjectSuccessRateRequest) *ShowProjectSuccessRateInvoker {
 	requestDef := GenReqDefForShowProjectSuccessRate()
 	return &ShowProjectSuccessRateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

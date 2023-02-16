@@ -21,6 +21,9 @@ type DetectLiveByFileIntlRequestBody struct {
 
 	// 该参数为动作时间数组拼接的字符串，数组的长度和actions的数量一致，每一项代表了对应次序动作的起始时间和结束时间，单位为距视频开始的毫秒数。
 	ActionTime *def.MultiPart `json:"action_time,omitempty"`
+
+	// 该参数为点头动作幅度的判断门限，取值范围：[1,90]，默认为10，单位为度。该值设置越大，则越难判断为点头。
+	NodThreshold *def.MultiPart `json:"nod_threshold,omitempty"`
 }
 
 func (o DetectLiveByFileIntlRequestBody) String() string {

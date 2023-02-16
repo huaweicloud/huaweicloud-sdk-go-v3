@@ -88,8 +88,8 @@ type ExtensionVersionSnake struct {
 	// 依赖插件
 	Depends *[]string `json:"depends,omitempty"`
 
-	// cloudide插件版本参数
-	PropertyList *[]CloudIdeExtensionVersionProperty `json:"property_list,omitempty"`
+	// CodeArtsIDEOnline插件版本参数
+	PropertyList *[]CodeArtsIdeOnlineExtensionVersionProperty `json:"property_list,omitempty"`
 
 	// 版本发布者
 	Uploader *string `json:"uploader,omitempty"`

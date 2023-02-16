@@ -77,6 +77,18 @@ func (i *CopyInstanceInvoker) Invoke() (*model.CopyInstanceResponse, error) {
 	}
 }
 
+type CreateAutoExpireScanTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAutoExpireScanTaskInvoker) Invoke() (*model.CreateAutoExpireScanTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAutoExpireScanTaskResponse), nil
+	}
+}
+
 type CreateBigkeyScanTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -86,6 +98,18 @@ func (i *CreateBigkeyScanTaskInvoker) Invoke() (*model.CreateBigkeyScanTaskRespo
 		return nil, err
 	} else {
 		return result.(*model.CreateBigkeyScanTaskResponse), nil
+	}
+}
+
+type CreateCustomTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateCustomTemplateInvoker) Invoke() (*model.CreateCustomTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateCustomTemplateResponse), nil
 	}
 }
 

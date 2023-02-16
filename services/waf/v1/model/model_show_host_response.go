@@ -116,7 +116,6 @@ type ShowHostResponseTlsEnum struct {
 	TLS_V1_0 ShowHostResponseTls
 	TLS_V1_1 ShowHostResponseTls
 	TLS_V1_2 ShowHostResponseTls
-	TLS_V1_3 ShowHostResponseTls
 }
 
 func GetShowHostResponseTlsEnum() ShowHostResponseTlsEnum {
@@ -129,9 +128,6 @@ func GetShowHostResponseTlsEnum() ShowHostResponseTlsEnum {
 		},
 		TLS_V1_2: ShowHostResponseTls{
 			value: "TLS v1.2",
-		},
-		TLS_V1_3: ShowHostResponseTls{
-			value: "TLS v1.3",
 		},
 	}
 }

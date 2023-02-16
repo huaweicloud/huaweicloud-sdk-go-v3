@@ -29,7 +29,7 @@ type InstanceParam struct {
 	// 是否页面显示（以标签配置为准）
 	IsTemporary *bool `json:"is_temporary,omitempty"`
 
-	// 实例标签（不同的第三方需要和CloudIDE服务共同设定标签），不传默认为default
+	// 实例标签（不同的第三方需要和CodeArtsIDEOnline服务共同设定标签），不传默认为default
 	LabelTag *string `json:"label_tag,omitempty"`
 
 	// 预装插件列表

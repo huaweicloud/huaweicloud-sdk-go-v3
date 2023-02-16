@@ -9,7 +9,7 @@ import (
 // Request Object
 type CreateExtensionAuthorizationRequest struct {
 
-	// CloudIDE实例ID
+	// CodeArtsIDEOnline实例ID
 	InstanceId string `json:"instance_id"`
 
 	Body *ExtensionAuthorization `json:"body,omitempty"`

@@ -187,7 +187,7 @@ func (c *AomClient) ShowAppInvoker(request *model.ShowAppRequest) *ShowAppInvoke
 	return &ShowAppInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowAppByName 查询应用详情
+// ShowAppByName 根据应用名称查询应用详情
 //
 // 获取应用详情。（注：接口目前开放的region为：上海一）。
 //
@@ -202,7 +202,7 @@ func (c *AomClient) ShowAppByName(request *model.ShowAppByNameRequest) (*model.S
 	}
 }
 
-// ShowAppByNameInvoker 查询应用详情
+// ShowAppByNameInvoker 根据应用名称查询应用详情
 func (c *AomClient) ShowAppByNameInvoker(request *model.ShowAppByNameRequest) *ShowAppByNameInvoker {
 	requestDef := GenReqDefForShowAppByName()
 	return &ShowAppByNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -229,7 +229,7 @@ func (c *AomClient) ShowComponentInvoker(request *model.ShowComponentRequest) *S
 	return &ShowComponentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowComponentByName 查询组件详情
+// ShowComponentByName 根据组件名称查询组件详情
 //
 // 查询组件详情。（注：接口目前开放的region为：上海一）。
 //
@@ -244,7 +244,7 @@ func (c *AomClient) ShowComponentByName(request *model.ShowComponentByNameReques
 	}
 }
 
-// ShowComponentByNameInvoker 查询组件详情
+// ShowComponentByNameInvoker 根据组件名称查询组件详情
 func (c *AomClient) ShowComponentByNameInvoker(request *model.ShowComponentByNameRequest) *ShowComponentByNameInvoker {
 	requestDef := GenReqDefForShowComponentByName()
 	return &ShowComponentByNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -271,7 +271,7 @@ func (c *AomClient) ShowEnvInvoker(request *model.ShowEnvRequest) *ShowEnvInvoke
 	return &ShowEnvInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowEnvByName 查询环境详情
+// ShowEnvByName 根据环境名称查询环境详情
 //
 // 查询环境详情。（注：接口目前开放的region为：上海一）。
 //
@@ -286,7 +286,7 @@ func (c *AomClient) ShowEnvByName(request *model.ShowEnvByNameRequest) (*model.S
 	}
 }
 
-// ShowEnvByNameInvoker 查询环境详情
+// ShowEnvByNameInvoker 根据环境名称查询环境详情
 func (c *AomClient) ShowEnvByNameInvoker(request *model.ShowEnvByNameRequest) *ShowEnvByNameInvoker {
 	requestDef := GenReqDefForShowEnvByName()
 	return &ShowEnvByNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

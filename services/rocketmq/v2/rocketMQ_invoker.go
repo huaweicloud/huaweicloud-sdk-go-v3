@@ -5,6 +5,18 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/rocketmq/v2/model"
 )
 
+type BatchCreateOrDeleteRocketmqTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateOrDeleteRocketmqTagInvoker) Invoke() (*model.BatchCreateOrDeleteRocketmqTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCreateOrDeleteRocketmqTagResponse), nil
+	}
+}
+
 type BatchDeleteInstancesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -38,6 +50,18 @@ func (i *CreateConsumerGroupOrBatchDeleteConsumerGroupInvoker) Invoke() (*model.
 		return nil, err
 	} else {
 		return result.(*model.CreateConsumerGroupOrBatchDeleteConsumerGroupResponse), nil
+	}
+}
+
+type CreateInstanceByEngineInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateInstanceByEngineInvoker) Invoke() (*model.CreateInstanceByEngineResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateInstanceByEngineResponse), nil
 	}
 }
 
@@ -266,6 +290,30 @@ func (i *ShowInstanceInvoker) Invoke() (*model.ShowInstanceResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowInstanceResponse), nil
+	}
+}
+
+type ShowRocketmqProjectTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRocketmqProjectTagsInvoker) Invoke() (*model.ShowRocketmqProjectTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRocketmqProjectTagsResponse), nil
+	}
+}
+
+type ShowRocketmqTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRocketmqTagsInvoker) Invoke() (*model.ShowRocketmqTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRocketmqTagsResponse), nil
 	}
 }
 

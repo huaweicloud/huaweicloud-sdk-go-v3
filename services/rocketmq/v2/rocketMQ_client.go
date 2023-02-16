@@ -19,6 +19,27 @@ func RocketMQClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+// BatchCreateOrDeleteRocketmqTag 批量添加或删除实例标签
+//
+// 批量添加或删除实例标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RocketMQClient) BatchCreateOrDeleteRocketmqTag(request *model.BatchCreateOrDeleteRocketmqTagRequest) (*model.BatchCreateOrDeleteRocketmqTagResponse, error) {
+	requestDef := GenReqDefForBatchCreateOrDeleteRocketmqTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateOrDeleteRocketmqTagResponse), nil
+	}
+}
+
+// BatchCreateOrDeleteRocketmqTagInvoker 批量添加或删除实例标签
+func (c *RocketMQClient) BatchCreateOrDeleteRocketmqTagInvoker(request *model.BatchCreateOrDeleteRocketmqTagRequest) *BatchCreateOrDeleteRocketmqTagInvoker {
+	requestDef := GenReqDefForBatchCreateOrDeleteRocketmqTag()
+	return &BatchCreateOrDeleteRocketmqTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchDeleteInstances 批量删除实例
 //
 // 批量删除实例。**实例删除后，实例中原有的数据将被删除，且没有备份，请谨慎操作。**
@@ -80,6 +101,27 @@ func (c *RocketMQClient) CreateConsumerGroupOrBatchDeleteConsumerGroup(request *
 func (c *RocketMQClient) CreateConsumerGroupOrBatchDeleteConsumerGroupInvoker(request *model.CreateConsumerGroupOrBatchDeleteConsumerGroupRequest) *CreateConsumerGroupOrBatchDeleteConsumerGroupInvoker {
 	requestDef := GenReqDefForCreateConsumerGroupOrBatchDeleteConsumerGroup()
 	return &CreateConsumerGroupOrBatchDeleteConsumerGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateInstanceByEngine 创建实例
+//
+// 该接口支持创建按需和包周期两种计费方式的实例。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RocketMQClient) CreateInstanceByEngine(request *model.CreateInstanceByEngineRequest) (*model.CreateInstanceByEngineResponse, error) {
+	requestDef := GenReqDefForCreateInstanceByEngine()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateInstanceByEngineResponse), nil
+	}
+}
+
+// CreateInstanceByEngineInvoker 创建实例
+func (c *RocketMQClient) CreateInstanceByEngineInvoker(request *model.CreateInstanceByEngineRequest) *CreateInstanceByEngineInvoker {
+	requestDef := GenReqDefForCreateInstanceByEngine()
+	return &CreateInstanceByEngineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreatePostPaidInstance 创建实例（按需）
@@ -479,6 +521,48 @@ func (c *RocketMQClient) ShowInstance(request *model.ShowInstanceRequest) (*mode
 func (c *RocketMQClient) ShowInstanceInvoker(request *model.ShowInstanceRequest) *ShowInstanceInvoker {
 	requestDef := GenReqDefForShowInstance()
 	return &ShowInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRocketmqProjectTags 查询项目标签
+//
+// 查询项目标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RocketMQClient) ShowRocketmqProjectTags(request *model.ShowRocketmqProjectTagsRequest) (*model.ShowRocketmqProjectTagsResponse, error) {
+	requestDef := GenReqDefForShowRocketmqProjectTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRocketmqProjectTagsResponse), nil
+	}
+}
+
+// ShowRocketmqProjectTagsInvoker 查询项目标签
+func (c *RocketMQClient) ShowRocketmqProjectTagsInvoker(request *model.ShowRocketmqProjectTagsRequest) *ShowRocketmqProjectTagsInvoker {
+	requestDef := GenReqDefForShowRocketmqProjectTags()
+	return &ShowRocketmqProjectTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRocketmqTags 查询实例标签
+//
+// 查询实例标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RocketMQClient) ShowRocketmqTags(request *model.ShowRocketmqTagsRequest) (*model.ShowRocketmqTagsResponse, error) {
+	requestDef := GenReqDefForShowRocketmqTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRocketmqTagsResponse), nil
+	}
+}
+
+// ShowRocketmqTagsInvoker 查询实例标签
+func (c *RocketMQClient) ShowRocketmqTagsInvoker(request *model.ShowRocketmqTagsRequest) *ShowRocketmqTagsInvoker {
+	requestDef := GenReqDefForShowRocketmqTags()
+	return &ShowRocketmqTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowUser 查询用户详情

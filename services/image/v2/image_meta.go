@@ -93,6 +93,21 @@ func GenReqDefForRunImageMediaTaggingDet() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForRunImageSuperResolution() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/image/image-super-resolution").
+		WithResponse(new(model.RunImageSuperResolutionResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForRunImageTagging() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -114,6 +129,21 @@ func GenReqDefForRunQueryCustomTags() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/image/media-tagging/custom-tags/check").
 		WithResponse(new(model.RunQueryCustomTagsResponse)).
 		WithContentType("application/json")
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForRunRecaptureDetect() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/image/recapture-detect").
+		WithResponse(new(model.RunRecaptureDetectResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

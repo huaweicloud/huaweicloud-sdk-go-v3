@@ -9,10 +9,10 @@ import (
 // Request Object
 type ListResourceUnderNodeRequest struct {
 
-	// 资源种类
+	// 云服务资源；同rms服务的provider
 	RfResourceType string `json:"rf_resource_type"`
 
-	// 资源种类下的类型区分
+	// 云服务资源类型；同rms服务的type
 	Type string `json:"type"`
 
 	Body *PageResourceListParam `json:"body,omitempty"`

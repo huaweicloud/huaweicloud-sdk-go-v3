@@ -77,6 +77,18 @@ func (i *RunImageMediaTaggingDetInvoker) Invoke() (*model.RunImageMediaTaggingDe
 	}
 }
 
+type RunImageSuperResolutionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RunImageSuperResolutionInvoker) Invoke() (*model.RunImageSuperResolutionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RunImageSuperResolutionResponse), nil
+	}
+}
+
 type RunImageTaggingInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -98,5 +110,17 @@ func (i *RunQueryCustomTagsInvoker) Invoke() (*model.RunQueryCustomTagsResponse,
 		return nil, err
 	} else {
 		return result.(*model.RunQueryCustomTagsResponse), nil
+	}
+}
+
+type RunRecaptureDetectInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RunRecaptureDetectInvoker) Invoke() (*model.RunRecaptureDetectResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RunRecaptureDetectResponse), nil
 	}
 }

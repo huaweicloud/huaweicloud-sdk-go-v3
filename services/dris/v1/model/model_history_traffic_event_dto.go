@@ -17,6 +17,9 @@ type HistoryTrafficEventDto struct {
 	// **参数说明**：事件来源ID。
 	EventSourceId *string `json:"event_source_id,omitempty"`
 
+	// **参数说明**：设备编码。 **取值范围**：长度不超过64，只允许字母、数字、以及_等字符的组合。
+	Esn *string `json:"esn,omitempty"`
+
 	// **参数说明**：区域码。
 	AreaCode *int32 `json:"area_code,omitempty"`
 

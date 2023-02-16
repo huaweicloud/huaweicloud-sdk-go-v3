@@ -18,19 +18,19 @@ type ShowProjectSuccessRateResponse struct {
 	// 项目名称
 	ProjectName *string `json:"project_name,omitempty"`
 
-	// 任务执行开始时间范围的左边界（包含），格式yyyy-MM-dd
+	// 应用部署开始时间范围的左边界（包含），格式yyyy-MM-dd
 	StartDate *string `json:"start_date,omitempty"`
 
-	// 任务执行开始时间范围的右边界（包含），格式yyyy-MM-dd
+	// 应用部署开始时间范围的右边界（包含），格式yyyy-MM-dd
 	EndDate *string `json:"end_date,omitempty"`
 
-	// 查询到的任务数
+	// 查询到的应用数
 	TaskCount *int32 `json:"task_count,omitempty"`
 
-	// 查询到的任务执行记录数
+	// 查询到的应用部署记录数
 	RecordCount *int32 `json:"record_count,omitempty"`
 
-	// 成功的任务执行记录数
+	// 成功的应用部署记录数
 	SuccessRecordCount *int32 `json:"success_record_count,omitempty"`
 	HttpStatusCode     int    `json:"-"`
 }

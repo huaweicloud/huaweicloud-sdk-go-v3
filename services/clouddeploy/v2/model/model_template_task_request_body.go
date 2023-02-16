@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 通过模板创建部署任务请求体
+// 通过模板创建应用请求体
 type TemplateTaskRequestBody struct {
 
 	// devcloud创建的项目id
@@ -18,7 +18,7 @@ type TemplateTaskRequestBody struct {
 	// 部署模板id
 	TemplateId string `json:"template_id"`
 
-	// 部署任务名称
+	// 应用名称
 	TaskName string `json:"task_name"`
 
 	// 自定义slave资源池id

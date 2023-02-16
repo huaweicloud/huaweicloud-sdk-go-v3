@@ -6,31 +6,31 @@ import (
 	"strings"
 )
 
-// 任务执行记录Body
+// 应用部署记录Body
 type ExecuteRecordV2Body struct {
 
-	// 执行用时
+	// 部署用时
 	Duration *string `json:"duration,omitempty"`
 
-	// 任务状态
+	// 应用状态
 	State *string `json:"state,omitempty"`
 
 	// 操作人用户名
 	Operator *string `json:"operator,omitempty"`
 
-	// 执行记录ID
+	// 部署记录ID
 	ExecutionId *string `json:"execution_id,omitempty"`
 
-	// 执行任务的开始时间
+	// 部署应用的开始时间
 	StartTime *string `json:"start_time,omitempty"`
 
 	// 操作人昵称
 	Nickname *string `json:"nickname,omitempty"`
 
-	// 执行任务的结束时间
+	// 部署应用的结束时间
 	EndTime *string `json:"end_time,omitempty"`
 
-	// 执行序列号
+	// 部署记录序列号
 	ReleaseId *int64 `json:"release_id,omitempty"`
 
 	// 类型

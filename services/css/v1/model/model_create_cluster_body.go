@@ -20,7 +20,7 @@ type CreateClusterBody struct {
 
 	BackupStrategy *CreateClusterBackupStrategyBody `json:"backupStrategy,omitempty"`
 
-	// 设置是否进行通信加密。取值范围为true或false。默认关闭通信加密功能。当httpsEnable设置为true时，authorityEnable字段需要设置为true。  - true：表示集群进行通信加密。 - false：表示集群不进行通信加密。  >此参数只有6.5.4及之后版本支持。
+	// 设置是否进行通信加密。取值范围为true或false。默认关闭通信加密功能。当httpsEnable设置为true时，authorityEnable字段需要设置为true。   - true：表示集群进行通信加密。  - false：表示集群不进行通信加密。   >此参数只有6.5.4及之后版本支持。
 	HttpsEnable *bool `json:"httpsEnable,omitempty"`
 
 	// 是否开启认证，取值范围为true或false。默认关闭认证功能。  - true：表示集群开启认证。 - false：表示集群不开启认证。  >此参数只有6.5.4及之后版本支持。

@@ -132,7 +132,6 @@ type CreatePremiumHostResponseTlsEnum struct {
 	TLS_V1_0 CreatePremiumHostResponseTls
 	TLS_V1_1 CreatePremiumHostResponseTls
 	TLS_V1_2 CreatePremiumHostResponseTls
-	TLS_V1_3 CreatePremiumHostResponseTls
 }
 
 func GetCreatePremiumHostResponseTlsEnum() CreatePremiumHostResponseTlsEnum {
@@ -145,9 +144,6 @@ func GetCreatePremiumHostResponseTlsEnum() CreatePremiumHostResponseTlsEnum {
 		},
 		TLS_V1_2: CreatePremiumHostResponseTls{
 			value: "TLS v1.2",
-		},
-		TLS_V1_3: CreatePremiumHostResponseTls{
-			value: "TLS v1.3",
 		},
 	}
 }

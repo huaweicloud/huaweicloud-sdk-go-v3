@@ -8,7 +8,7 @@ import (
 
 type WaterfallPageListParam struct {
 
-	// 页面的分页标志位
+	// 页面的分页标志位；为分页的最后一条记录的id
 	Maker *string `json:"maker,omitempty"`
 
 	// 查询返回记录的数量限制

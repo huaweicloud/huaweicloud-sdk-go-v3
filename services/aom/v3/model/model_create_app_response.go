@@ -8,9 +8,7 @@ import (
 
 // Response Object
 type CreateAppResponse struct {
-
-	// 对象id
-	Id             *string `json:"id,omitempty"`
+	Body           *string `json:"body,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

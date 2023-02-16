@@ -33,7 +33,7 @@ type CreateHostRequestBody struct {
 	// 是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
 	ExclusiveIp *bool `json:"exclusive_ip,omitempty"`
 
-	// 套餐付费模式，目前只支持prePaid预付款模式
+	// 套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
 	PaidType *string `json:"paid_type,omitempty"`
 
 	// 防护域名是否使用代理   - false：不使用代理   - true：使用代理

@@ -71,7 +71,6 @@ type UpdatePremiumHostRequestBodyTlsEnum struct {
 	TLS_V1_0 UpdatePremiumHostRequestBodyTls
 	TLS_V1_1 UpdatePremiumHostRequestBodyTls
 	TLS_V1_2 UpdatePremiumHostRequestBodyTls
-	TLS_V1_3 UpdatePremiumHostRequestBodyTls
 }
 
 func GetUpdatePremiumHostRequestBodyTlsEnum() UpdatePremiumHostRequestBodyTlsEnum {
@@ -84,9 +83,6 @@ func GetUpdatePremiumHostRequestBodyTlsEnum() UpdatePremiumHostRequestBodyTlsEnu
 		},
 		TLS_V1_2: UpdatePremiumHostRequestBodyTls{
 			value: "TLS v1.2",
-		},
-		TLS_V1_3: UpdatePremiumHostRequestBodyTls{
-			value: "TLS v1.3",
 		},
 	}
 }

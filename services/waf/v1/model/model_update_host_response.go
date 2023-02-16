@@ -116,7 +116,6 @@ type UpdateHostResponseTlsEnum struct {
 	TLS_V1_0 UpdateHostResponseTls
 	TLS_V1_1 UpdateHostResponseTls
 	TLS_V1_2 UpdateHostResponseTls
-	TLS_V1_3 UpdateHostResponseTls
 }
 
 func GetUpdateHostResponseTlsEnum() UpdateHostResponseTlsEnum {
@@ -129,9 +128,6 @@ func GetUpdateHostResponseTlsEnum() UpdateHostResponseTlsEnum {
 		},
 		TLS_V1_2: UpdateHostResponseTls{
 			value: "TLS v1.2",
-		},
-		TLS_V1_3: UpdateHostResponseTls{
-			value: "TLS v1.3",
 		},
 	}
 }

@@ -8,7 +8,7 @@ import (
 
 type EnvParam struct {
 
-	// 环境关联组件id
+	// 环境关联组件id；id长度不能超过36位，由大小写字母、数字组成
 	ComponentId string `json:"component_id"`
 
 	// 描述

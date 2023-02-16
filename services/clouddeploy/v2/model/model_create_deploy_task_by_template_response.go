@@ -9,7 +9,7 @@ import (
 // Response Object
 type CreateDeployTaskByTemplateResponse struct {
 
-	// 部署任务名称
+	// 应用名称
 	TaskName *string `json:"task_name,omitempty"`
 
 	// 部署任务id

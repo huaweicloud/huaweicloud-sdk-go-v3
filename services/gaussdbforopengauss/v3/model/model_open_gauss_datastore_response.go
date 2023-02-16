@@ -12,7 +12,7 @@ import (
 // 数据库版本。不填时，默认为当前最新版本。  数据库支持版本可根据查询数据库引擎版本接口获取
 type OpenGaussDatastoreResponse struct {
 
-	// 数据库引擎，不区分大小写，取值如下：  GaussDB
+	// 数据库引擎，不区分大小写，取值如下：  GaussDB(for openGauss)
 	Type OpenGaussDatastoreResponseType `json:"type"`
 
 	// 数据库版本。

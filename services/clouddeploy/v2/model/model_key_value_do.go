@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// 执行部署任务时传递的动态参数
+// 部署应用时传递的动态参数
 type KeyValueDo struct {
 
-	// 执行部署任务时传递的参数名称
+	// 部署应用时传递的参数名称
 	Key *string `json:"key,omitempty"`
 
-	// 执行部署任务时传递的参数值
+	// 部署应用时传递的参数值
 	Value *string `json:"value,omitempty"`
 }
 

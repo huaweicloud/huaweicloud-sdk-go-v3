@@ -11,7 +11,7 @@ type ComponentParam struct {
 	// 组件描述
 	Description *string `json:"description,omitempty"`
 
-	// 应用Id、子应用Id
+	// 应用Id、子应用Id；id长度不能超过36位，由大小写字母、数字组成
 	ModelId string `json:"model_id"`
 
 	// 应用、子应用，取值：APPLICATION、SUB_APPLICATION

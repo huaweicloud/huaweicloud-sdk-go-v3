@@ -103,6 +103,48 @@ func (c *OsmClient) ConfirmAuthorizationsInvoker(request *model.ConfirmAuthoriza
 	return &ConfirmAuthorizationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateAskQuestion 语料提问
+//
+// 基于语料的一次问答
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OsmClient) CreateAskQuestion(request *model.CreateAskQuestionRequest) (*model.CreateAskQuestionResponse, error) {
+	requestDef := GenReqDefForCreateAskQuestion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAskQuestionResponse), nil
+	}
+}
+
+// CreateAskQuestionInvoker 语料提问
+func (c *OsmClient) CreateAskQuestionInvoker(request *model.CreateAskQuestionRequest) *CreateAskQuestionInvoker {
+	requestDef := GenReqDefForCreateAskQuestion()
+	return &CreateAskQuestionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateAuthorization 创建授权
+//
+// 创建授权
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OsmClient) CreateAuthorization(request *model.CreateAuthorizationRequest) (*model.CreateAuthorizationResponse, error) {
+	requestDef := GenReqDefForCreateAuthorization()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAuthorizationResponse), nil
+	}
+}
+
+// CreateAuthorizationInvoker 创建授权
+func (c *OsmClient) CreateAuthorizationInvoker(request *model.CreateAuthorizationRequest) *CreateAuthorizationInvoker {
+	requestDef := GenReqDefForCreateAuthorization()
+	return &CreateAuthorizationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateCaseExtendsParam 提交工单扩展参数
 //
 // 提交工单扩展参数
@@ -164,6 +206,90 @@ func (c *OsmClient) CreateCases(request *model.CreateCasesRequest) (*model.Creat
 func (c *OsmClient) CreateCasesInvoker(request *model.CreateCasesRequest) *CreateCasesInvoker {
 	requestDef := GenReqDefForCreateCases()
 	return &CreateCasesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateDiagnoseFeedback 用户反馈是否有帮助
+//
+// 用户反馈是否有帮助
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OsmClient) CreateDiagnoseFeedback(request *model.CreateDiagnoseFeedbackRequest) (*model.CreateDiagnoseFeedbackResponse, error) {
+	requestDef := GenReqDefForCreateDiagnoseFeedback()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDiagnoseFeedbackResponse), nil
+	}
+}
+
+// CreateDiagnoseFeedbackInvoker 用户反馈是否有帮助
+func (c *OsmClient) CreateDiagnoseFeedbackInvoker(request *model.CreateDiagnoseFeedbackRequest) *CreateDiagnoseFeedbackInvoker {
+	requestDef := GenReqDefForCreateDiagnoseFeedback()
+	return &CreateDiagnoseFeedbackInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateDiagnoseJob 开始一键诊断
+//
+// 开始一键诊断
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OsmClient) CreateDiagnoseJob(request *model.CreateDiagnoseJobRequest) (*model.CreateDiagnoseJobResponse, error) {
+	requestDef := GenReqDefForCreateDiagnoseJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDiagnoseJobResponse), nil
+	}
+}
+
+// CreateDiagnoseJobInvoker 开始一键诊断
+func (c *OsmClient) CreateDiagnoseJobInvoker(request *model.CreateDiagnoseJobRequest) *CreateDiagnoseJobInvoker {
+	requestDef := GenReqDefForCreateDiagnoseJob()
+	return &CreateDiagnoseJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateEvaluate 问答满意度评价
+//
+// 一次问答完毕后, 针对这一次问答提交满意度评价
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OsmClient) CreateEvaluate(request *model.CreateEvaluateRequest) (*model.CreateEvaluateResponse, error) {
+	requestDef := GenReqDefForCreateEvaluate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateEvaluateResponse), nil
+	}
+}
+
+// CreateEvaluateInvoker 问答满意度评价
+func (c *OsmClient) CreateEvaluateInvoker(request *model.CreateEvaluateRequest) *CreateEvaluateInvoker {
+	requestDef := GenReqDefForCreateEvaluate()
+	return &CreateEvaluateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateFeedback 创建举报反馈
+//
+// 创建举报反馈
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OsmClient) CreateFeedback(request *model.CreateFeedbackRequest) (*model.CreateFeedbackResponse, error) {
+	requestDef := GenReqDefForCreateFeedback()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateFeedbackResponse), nil
+	}
+}
+
+// CreateFeedbackInvoker 创建举报反馈
+func (c *OsmClient) CreateFeedbackInvoker(request *model.CreateFeedbackRequest) *CreateFeedbackInvoker {
+	requestDef := GenReqDefForCreateFeedback()
+	return &CreateFeedbackInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateLabels 创建标签
@@ -229,6 +355,69 @@ func (c *OsmClient) CreatePrivilegesInvoker(request *model.CreatePrivilegesReque
 	return &CreatePrivilegesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateQaAsk 新问答接口
+//
+// 支持多轮流程问答接口
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OsmClient) CreateQaAsk(request *model.CreateQaAskRequest) (*model.CreateQaAskResponse, error) {
+	requestDef := GenReqDefForCreateQaAsk()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateQaAskResponse), nil
+	}
+}
+
+// CreateQaAskInvoker 新问答接口
+func (c *OsmClient) CreateQaAskInvoker(request *model.CreateQaAskRequest) *CreateQaAskInvoker {
+	requestDef := GenReqDefForCreateQaAsk()
+	return &CreateQaAskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateQaFeedbacks 反馈评价
+//
+// 提交/取消反馈评价
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OsmClient) CreateQaFeedbacks(request *model.CreateQaFeedbacksRequest) (*model.CreateQaFeedbacksResponse, error) {
+	requestDef := GenReqDefForCreateQaFeedbacks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateQaFeedbacksResponse), nil
+	}
+}
+
+// CreateQaFeedbacksInvoker 反馈评价
+func (c *OsmClient) CreateQaFeedbacksInvoker(request *model.CreateQaFeedbacksRequest) *CreateQaFeedbacksInvoker {
+	requestDef := GenReqDefForCreateQaFeedbacks()
+	return &CreateQaFeedbacksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateQuestionInSession 提问（在制定的会话中）
+//
+// 提问（在制定的会话中）
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OsmClient) CreateQuestionInSession(request *model.CreateQuestionInSessionRequest) (*model.CreateQuestionInSessionResponse, error) {
+	requestDef := GenReqDefForCreateQuestionInSession()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateQuestionInSessionResponse), nil
+	}
+}
+
+// CreateQuestionInSessionInvoker 提问（在制定的会话中）
+func (c *OsmClient) CreateQuestionInSessionInvoker(request *model.CreateQuestionInSessionRequest) *CreateQuestionInSessionInvoker {
+	requestDef := GenReqDefForCreateQuestionInSession()
+	return &CreateQuestionInSessionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateRelations 创建关联
 //
 // 创建关联，一个工单最多支持3个关联
@@ -269,6 +458,27 @@ func (c *OsmClient) CreateScores(request *model.CreateScoresRequest) (*model.Cre
 func (c *OsmClient) CreateScoresInvoker(request *model.CreateScoresRequest) *CreateScoresInvoker {
 	requestDef := GenReqDefForCreateScores()
 	return &CreateScoresInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSession 创建问答会话
+//
+// 用于创建问答会话, 创建会话后可开始问答
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OsmClient) CreateSession(request *model.CreateSessionRequest) (*model.CreateSessionResponse, error) {
+	requestDef := GenReqDefForCreateSession()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSessionResponse), nil
+	}
+}
+
+// CreateSessionInvoker 创建问答会话
+func (c *OsmClient) CreateSessionInvoker(request *model.CreateSessionRequest) *CreateSessionInvoker {
+	requestDef := GenReqDefForCreateSession()
+	return &CreateSessionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteAccessories 删除附件
@@ -479,6 +689,27 @@ func (c *OsmClient) ListAreaCodes(request *model.ListAreaCodesRequest) (*model.L
 func (c *OsmClient) ListAreaCodesInvoker(request *model.ListAreaCodesRequest) *ListAreaCodesInvoker {
 	requestDef := GenReqDefForListAreaCodes()
 	return &ListAreaCodesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListArticles 查询案例
+//
+// 查询满足指定条件的案例列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OsmClient) ListArticles(request *model.ListArticlesRequest) (*model.ListArticlesResponse, error) {
+	requestDef := GenReqDefForListArticles()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListArticlesResponse), nil
+	}
+}
+
+// ListArticlesInvoker 查询案例
+func (c *OsmClient) ListArticlesInvoker(request *model.ListArticlesRequest) *ListArticlesInvoker {
+	requestDef := GenReqDefForListArticles()
+	return &ListArticlesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListAuthorizations 查看授权列表
@@ -712,6 +943,69 @@ func (c *OsmClient) ListCustomersRegionsInvoker(request *model.ListCustomersRegi
 	return &ListCustomersRegionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListDiagnoseItems 根据itemIds查询指定的诊断检查项执行结果
+//
+// 根据itemIds查询指定的诊断检查项执行结果
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OsmClient) ListDiagnoseItems(request *model.ListDiagnoseItemsRequest) (*model.ListDiagnoseItemsResponse, error) {
+	requestDef := GenReqDefForListDiagnoseItems()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDiagnoseItemsResponse), nil
+	}
+}
+
+// ListDiagnoseItemsInvoker 根据itemIds查询指定的诊断检查项执行结果
+func (c *OsmClient) ListDiagnoseItemsInvoker(request *model.ListDiagnoseItemsRequest) *ListDiagnoseItemsInvoker {
+	requestDef := GenReqDefForListDiagnoseItems()
+	return &ListDiagnoseItemsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDiagnoseJob 查询诊断任务执行结果
+//
+// 查询诊断任务执行结果
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OsmClient) ListDiagnoseJob(request *model.ListDiagnoseJobRequest) (*model.ListDiagnoseJobResponse, error) {
+	requestDef := GenReqDefForListDiagnoseJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDiagnoseJobResponse), nil
+	}
+}
+
+// ListDiagnoseJobInvoker 查询诊断任务执行结果
+func (c *OsmClient) ListDiagnoseJobInvoker(request *model.ListDiagnoseJobRequest) *ListDiagnoseJobInvoker {
+	requestDef := GenReqDefForListDiagnoseJob()
+	return &ListDiagnoseJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDiagnoseRecords 查询诊断历史记录列表
+//
+// 查询诊断历史记录列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OsmClient) ListDiagnoseRecords(request *model.ListDiagnoseRecordsRequest) (*model.ListDiagnoseRecordsResponse, error) {
+	requestDef := GenReqDefForListDiagnoseRecords()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDiagnoseRecordsResponse), nil
+	}
+}
+
+// ListDiagnoseRecordsInvoker 查询诊断历史记录列表
+func (c *OsmClient) ListDiagnoseRecordsInvoker(request *model.ListDiagnoseRecordsRequest) *ListDiagnoseRecordsInvoker {
+	requestDef := GenReqDefForListDiagnoseRecords()
+	return &ListDiagnoseRecordsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListExtendsParams 查询附加参数
 //
 // 提单时，根据不同的产品或者问题类型，会存在不同的一些附加参数填写
@@ -731,6 +1025,27 @@ func (c *OsmClient) ListExtendsParams(request *model.ListExtendsParamsRequest) (
 func (c *OsmClient) ListExtendsParamsInvoker(request *model.ListExtendsParamsRequest) *ListExtendsParamsInvoker {
 	requestDef := GenReqDefForListExtendsParams()
 	return &ListExtendsParamsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListFeedbackOption 查询反馈选项
+//
+// 查询符合条件的反馈选项
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OsmClient) ListFeedbackOption(request *model.ListFeedbackOptionRequest) (*model.ListFeedbackOptionResponse, error) {
+	requestDef := GenReqDefForListFeedbackOption()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFeedbackOptionResponse), nil
+	}
+}
+
+// ListFeedbackOptionInvoker 查询反馈选项
+func (c *OsmClient) ListFeedbackOptionInvoker(request *model.ListFeedbackOptionRequest) *ListFeedbackOptionInvoker {
+	requestDef := GenReqDefForListFeedbackOption()
+	return &ListFeedbackOptionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListHasVerifiedContacts 查询已验证的列表
@@ -880,6 +1195,27 @@ func (c *OsmClient) ListNewInstantMessagesInvoker(request *model.ListNewInstantM
 	return &ListNewInstantMessagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListNotices 查询公告
+//
+// 查询满足指定条件的公告列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OsmClient) ListNotices(request *model.ListNoticesRequest) (*model.ListNoticesResponse, error) {
+	requestDef := GenReqDefForListNotices()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListNoticesResponse), nil
+	}
+}
+
+// ListNoticesInvoker 查询公告
+func (c *OsmClient) ListNoticesInvoker(request *model.ListNoticesRequest) *ListNoticesInvoker {
+	requestDef := GenReqDefForListNotices()
+	return &ListNoticesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListPrivileges 查询工单权限
 //
 // 查询工单权限
@@ -941,6 +1277,27 @@ func (c *OsmClient) ListProductCategories(request *model.ListProductCategoriesRe
 func (c *OsmClient) ListProductCategoriesInvoker(request *model.ListProductCategoriesRequest) *ListProductCategoriesInvoker {
 	requestDef := GenReqDefForListProductCategories()
 	return &ListProductCategoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRecommendWords 查询推荐热词
+//
+// 查询指定条件的推荐热词
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OsmClient) ListRecommendWords(request *model.ListRecommendWordsRequest) (*model.ListRecommendWordsResponse, error) {
+	requestDef := GenReqDefForListRecommendWords()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRecommendWordsResponse), nil
+	}
+}
+
+// ListRecommendWordsInvoker 查询推荐热词
+func (c *OsmClient) ListRecommendWordsInvoker(request *model.ListRecommendWordsRequest) *ListRecommendWordsInvoker {
+	requestDef := GenReqDefForListRecommendWords()
+	return &ListRecommendWordsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListRegions 查询区域列表
@@ -1048,6 +1405,27 @@ func (c *OsmClient) ListSubCustomersInvoker(request *model.ListSubCustomersReque
 	return &ListSubCustomersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListTools 查询工具
+//
+// 查询满足指定条件的工具列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OsmClient) ListTools(request *model.ListToolsRequest) (*model.ListToolsResponse, error) {
+	requestDef := GenReqDefForListTools()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListToolsResponse), nil
+	}
+}
+
+// ListToolsInvoker 查询工具
+func (c *OsmClient) ListToolsInvoker(request *model.ListToolsRequest) *ListToolsInvoker {
+	requestDef := GenReqDefForListTools()
+	return &ListToolsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListTransportHistories 查询堡垒机文件传输记录
 //
 // 查询堡垒机文件传输记录
@@ -1151,6 +1529,27 @@ func (c *OsmClient) ShowAccessoryLimits(request *model.ShowAccessoryLimitsReques
 func (c *OsmClient) ShowAccessoryLimitsInvoker(request *model.ShowAccessoryLimitsRequest) *ShowAccessoryLimitsInvoker {
 	requestDef := GenReqDefForShowAccessoryLimits()
 	return &ShowAccessoryLimitsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAssociatedQuestions 查询联想问题
+//
+// 根据当前输入, 联想相关的问题
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OsmClient) ShowAssociatedQuestions(request *model.ShowAssociatedQuestionsRequest) (*model.ShowAssociatedQuestionsResponse, error) {
+	requestDef := GenReqDefForShowAssociatedQuestions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAssociatedQuestionsResponse), nil
+	}
+}
+
+// ShowAssociatedQuestionsInvoker 查询联想问题
+func (c *OsmClient) ShowAssociatedQuestionsInvoker(request *model.ShowAssociatedQuestionsRequest) *ShowAssociatedQuestionsInvoker {
+	requestDef := GenReqDefForShowAssociatedQuestions()
+	return &ShowAssociatedQuestionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowAuthorizationDetail 查询授权详情
@@ -1258,6 +1657,27 @@ func (c *OsmClient) ShowCustomerPrivilegePolicyInvoker(request *model.ShowCustom
 	return &ShowCustomerPrivilegePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowDownloadAccessoryUrl 附件下载地址
+//
+// 附件下载地址
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OsmClient) ShowDownloadAccessoryUrl(request *model.ShowDownloadAccessoryUrlRequest) (*model.ShowDownloadAccessoryUrlResponse, error) {
+	requestDef := GenReqDefForShowDownloadAccessoryUrl()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDownloadAccessoryUrlResponse), nil
+	}
+}
+
+// ShowDownloadAccessoryUrlInvoker 附件下载地址
+func (c *OsmClient) ShowDownloadAccessoryUrlInvoker(request *model.ShowDownloadAccessoryUrlRequest) *ShowDownloadAccessoryUrlInvoker {
+	requestDef := GenReqDefForShowDownloadAccessoryUrl()
+	return &ShowDownloadAccessoryUrlInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowLatestPublishedAgreement 查看最新发布版本协议详情
 //
 // 查看最新发布版本协议详情
@@ -1321,6 +1741,48 @@ func (c *OsmClient) ShowPartnersServiceInfoInvoker(request *model.ShowPartnersSe
 	return &ShowPartnersServiceInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowQaPairDetail 查询语料详情
+//
+// 查询指定语料的详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OsmClient) ShowQaPairDetail(request *model.ShowQaPairDetailRequest) (*model.ShowQaPairDetailResponse, error) {
+	requestDef := GenReqDefForShowQaPairDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowQaPairDetailResponse), nil
+	}
+}
+
+// ShowQaPairDetailInvoker 查询语料详情
+func (c *OsmClient) ShowQaPairDetailInvoker(request *model.ShowQaPairDetailRequest) *ShowQaPairDetailInvoker {
+	requestDef := GenReqDefForShowQaPairDetail()
+	return &ShowQaPairDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowQaPairs 查询语料
+//
+// 查询满足指定条件的语料列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OsmClient) ShowQaPairs(request *model.ShowQaPairsRequest) (*model.ShowQaPairsResponse, error) {
+	requestDef := GenReqDefForShowQaPairs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowQaPairsResponse), nil
+	}
+}
+
+// ShowQaPairsInvoker 查询语料
+func (c *OsmClient) ShowQaPairsInvoker(request *model.ShowQaPairsRequest) *ShowQaPairsInvoker {
+	requestDef := GenReqDefForShowQaPairs()
+	return &ShowQaPairsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowSignedLatestPublishedAgreement 查询用户是否签署最新协议
 //
 // 查询用户是否签署最新协议
@@ -1340,6 +1802,27 @@ func (c *OsmClient) ShowSignedLatestPublishedAgreement(request *model.ShowSigned
 func (c *OsmClient) ShowSignedLatestPublishedAgreementInvoker(request *model.ShowSignedLatestPublishedAgreementRequest) *ShowSignedLatestPublishedAgreementInvoker {
 	requestDef := GenReqDefForShowSignedLatestPublishedAgreement()
 	return &ShowSignedLatestPublishedAgreementInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTheme 产品类型转为主题
+//
+// 产品类型转为主题
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OsmClient) ShowTheme(request *model.ShowThemeRequest) (*model.ShowThemeResponse, error) {
+	requestDef := GenReqDefForShowTheme()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowThemeResponse), nil
+	}
+}
+
+// ShowThemeInvoker 产品类型转为主题
+func (c *OsmClient) ShowThemeInvoker(request *model.ShowThemeRequest) *ShowThemeInvoker {
+	requestDef := GenReqDefForShowTheme()
+	return &ShowThemeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SignPublishedAgreement 签署协议

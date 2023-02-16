@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 执行步骤
+// 部署步骤
 type Step struct {
 
 	// id

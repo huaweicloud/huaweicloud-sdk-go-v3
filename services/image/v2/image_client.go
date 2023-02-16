@@ -145,6 +145,27 @@ func (c *ImageClient) RunImageMediaTaggingDetInvoker(request *model.RunImageMedi
 	return &RunImageMediaTaggingDetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RunImageSuperResolution 图像超分
+//
+// 图像数据，base64编码，输入图像范围200px ~ 1080px，支持JPG/PNG/BMP/JPEG/WEBP格式
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ImageClient) RunImageSuperResolution(request *model.RunImageSuperResolutionRequest) (*model.RunImageSuperResolutionResponse, error) {
+	requestDef := GenReqDefForRunImageSuperResolution()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RunImageSuperResolutionResponse), nil
+	}
+}
+
+// RunImageSuperResolutionInvoker 图像超分
+func (c *ImageClient) RunImageSuperResolutionInvoker(request *model.RunImageSuperResolutionRequest) *RunImageSuperResolutionInvoker {
+	requestDef := GenReqDefForRunImageSuperResolution()
+	return &RunImageSuperResolutionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RunImageTagging 图像标签
 //
 // 自然图像的语义内容非常丰富，一个图像包含多个标签内容，图像标签服务准确识别自然图片中数百种场景、上千种通用物体及其属性，让智能相册管理、照片检索和分类、基于场景内容或者物体的广告推荐等功能更加直观。使用时用户发送待处理图片，返回图片标签内容及相应置信度。
@@ -185,4 +206,25 @@ func (c *ImageClient) RunQueryCustomTags(request *model.RunQueryCustomTagsReques
 func (c *ImageClient) RunQueryCustomTagsInvoker(request *model.RunQueryCustomTagsRequest) *RunQueryCustomTagsInvoker {
 	requestDef := GenReqDefForRunQueryCustomTags()
 	return &RunQueryCustomTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RunRecaptureDetect 翻拍识别
+//
+// 零售行业通常根据零售店的销售量进行销售奖励，拍摄售出商品的条形码上传后台是常用的统计方式。翻拍识别利用深度神经网络算法判断条形码图片为原始拍摄，还是经过二次翻拍、打印翻拍等手法二次处理的图片。利用翻拍识别，可以检测出经过二次处理的不合规范图片，使得统计数据更准确、有效。。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ImageClient) RunRecaptureDetect(request *model.RunRecaptureDetectRequest) (*model.RunRecaptureDetectResponse, error) {
+	requestDef := GenReqDefForRunRecaptureDetect()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RunRecaptureDetectResponse), nil
+	}
+}
+
+// RunRecaptureDetectInvoker 翻拍识别
+func (c *ImageClient) RunRecaptureDetectInvoker(request *model.RunRecaptureDetectRequest) *RunRecaptureDetectInvoker {
+	requestDef := GenReqDefForRunRecaptureDetect()
+	return &RunRecaptureDetectInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

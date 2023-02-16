@@ -24,10 +24,10 @@ type ConfigInfoDo struct {
 	// 部署参数值
 	Value *string `json:"value,omitempty"`
 
-	// 部署任务id，创建部署任务后由系统自动生成
+	// 部署任务id，创建应用后由系统自动生成
 	TaskId *string `json:"task_id,omitempty"`
 
-	// 表示是否为静态参数，值为1时不支持执行时变更参数，值为0时支持，并且也会把该参数上报流水线
+	// 表示是否为静态参数，值为1时不支持部署时变更参数，值为0时支持，并且也会把该参数上报流水线
 	StaticStatus *ConfigInfoDoStaticStatus `json:"static_status,omitempty"`
 
 	// 当参数类型为enum枚举类型时，必须填写可选值

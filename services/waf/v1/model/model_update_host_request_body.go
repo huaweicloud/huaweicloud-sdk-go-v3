@@ -76,7 +76,6 @@ type UpdateHostRequestBodyTlsEnum struct {
 	TLS_V1_0 UpdateHostRequestBodyTls
 	TLS_V1_1 UpdateHostRequestBodyTls
 	TLS_V1_2 UpdateHostRequestBodyTls
-	TLS_V1_3 UpdateHostRequestBodyTls
 }
 
 func GetUpdateHostRequestBodyTlsEnum() UpdateHostRequestBodyTlsEnum {
@@ -89,9 +88,6 @@ func GetUpdateHostRequestBodyTlsEnum() UpdateHostRequestBodyTlsEnum {
 		},
 		TLS_V1_2: UpdateHostRequestBodyTls{
 			value: "TLS v1.2",
-		},
-		TLS_V1_3: UpdateHostRequestBodyTls{
-			value: "TLS v1.3",
 		},
 	}
 }

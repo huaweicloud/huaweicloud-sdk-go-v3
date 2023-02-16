@@ -15,7 +15,7 @@ type ShowExtensionAuthorizationRequest struct {
 	// 插件标识(发布者.插件名)
 	Identifier string `json:"identifier"`
 
-	// CloudIDE实例ID
+	// CodeArtsIDEOnline实例ID
 	InstanceId string `json:"instance_id"`
 }
 

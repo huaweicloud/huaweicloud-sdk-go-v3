@@ -5,8 +5,12 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/region"
 )
 
-var CN_SOUTH_1 = region.NewRegion("cn-south-1", "https://ugo.cn-south-1.myhuaweicloud.com")
-var AP_SOUTHEAST_3 = region.NewRegion("ap-southeast-3", "https://ugo.ap-southeast-3.myhuaweicloud.com")
+var (
+	CN_SOUTH_1 = region.NewRegion("cn-south-1",
+		"https://ugo.cn-south-1.myhuaweicloud.com")
+	AP_SOUTHEAST_3 = region.NewRegion("ap-southeast-3",
+		"https://ugo.ap-southeast-3.myhuaweicloud.com")
+)
 
 var staticFields = map[string]*region.Region{
 	"cn-south-1":     CN_SOUTH_1,

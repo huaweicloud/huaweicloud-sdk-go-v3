@@ -9,7 +9,7 @@ import (
 // Request Object
 type CreateInstanceBy3rdRequest struct {
 
-	// 实例标签（不同的第三方需要和CloudIDE服务共同设定标签）。不传默认为classroom
+	// 实例标签（不同的第三方需要和CodeArtsIDEOnline服务共同设定标签）。不传默认为classroom
 	InstanceLabel *string `json:"instance_label,omitempty"`
 
 	Body *InstanceEdgeParam `json:"body,omitempty"`

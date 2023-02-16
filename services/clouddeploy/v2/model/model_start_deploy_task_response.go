@@ -9,7 +9,7 @@ import (
 // Response Object
 type StartDeployTaskResponse struct {
 
-	// 执行记录id
+	// 部署记录id
 	Id *string `json:"id,omitempty"`
 
 	// 部署任务id
@@ -18,7 +18,7 @@ type StartDeployTaskResponse struct {
 	// 执行任务名称
 	JobName *string `json:"job_name,omitempty"`
 
-	// 部署任务和应用组件对应关系
+	// 应用和AOM应用组件对应关系
 	AppComponentList *[]AppComponentDao `json:"app_component_list,omitempty"`
 	HttpStatusCode   int                `json:"-"`
 }

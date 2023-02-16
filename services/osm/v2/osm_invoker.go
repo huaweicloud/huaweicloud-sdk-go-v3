@@ -53,6 +53,30 @@ func (i *ConfirmAuthorizationsInvoker) Invoke() (*model.ConfirmAuthorizationsRes
 	}
 }
 
+type CreateAskQuestionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAskQuestionInvoker) Invoke() (*model.CreateAskQuestionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAskQuestionResponse), nil
+	}
+}
+
+type CreateAuthorizationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAuthorizationInvoker) Invoke() (*model.CreateAuthorizationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAuthorizationResponse), nil
+	}
+}
+
 type CreateCaseExtendsParamInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -86,6 +110,54 @@ func (i *CreateCasesInvoker) Invoke() (*model.CreateCasesResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.CreateCasesResponse), nil
+	}
+}
+
+type CreateDiagnoseFeedbackInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDiagnoseFeedbackInvoker) Invoke() (*model.CreateDiagnoseFeedbackResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDiagnoseFeedbackResponse), nil
+	}
+}
+
+type CreateDiagnoseJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDiagnoseJobInvoker) Invoke() (*model.CreateDiagnoseJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDiagnoseJobResponse), nil
+	}
+}
+
+type CreateEvaluateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateEvaluateInvoker) Invoke() (*model.CreateEvaluateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateEvaluateResponse), nil
+	}
+}
+
+type CreateFeedbackInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateFeedbackInvoker) Invoke() (*model.CreateFeedbackResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateFeedbackResponse), nil
 	}
 }
 
@@ -125,6 +197,42 @@ func (i *CreatePrivilegesInvoker) Invoke() (*model.CreatePrivilegesResponse, err
 	}
 }
 
+type CreateQaAskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateQaAskInvoker) Invoke() (*model.CreateQaAskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateQaAskResponse), nil
+	}
+}
+
+type CreateQaFeedbacksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateQaFeedbacksInvoker) Invoke() (*model.CreateQaFeedbacksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateQaFeedbacksResponse), nil
+	}
+}
+
+type CreateQuestionInSessionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateQuestionInSessionInvoker) Invoke() (*model.CreateQuestionInSessionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateQuestionInSessionResponse), nil
+	}
+}
+
 type CreateRelationsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -146,6 +254,18 @@ func (i *CreateScoresInvoker) Invoke() (*model.CreateScoresResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.CreateScoresResponse), nil
+	}
+}
+
+type CreateSessionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSessionInvoker) Invoke() (*model.CreateSessionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSessionResponse), nil
 	}
 }
 
@@ -266,6 +386,18 @@ func (i *ListAreaCodesInvoker) Invoke() (*model.ListAreaCodesResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListAreaCodesResponse), nil
+	}
+}
+
+type ListArticlesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListArticlesInvoker) Invoke() (*model.ListArticlesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListArticlesResponse), nil
 	}
 }
 
@@ -401,6 +533,42 @@ func (i *ListCustomersRegionsInvoker) Invoke() (*model.ListCustomersRegionsRespo
 	}
 }
 
+type ListDiagnoseItemsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDiagnoseItemsInvoker) Invoke() (*model.ListDiagnoseItemsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDiagnoseItemsResponse), nil
+	}
+}
+
+type ListDiagnoseJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDiagnoseJobInvoker) Invoke() (*model.ListDiagnoseJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDiagnoseJobResponse), nil
+	}
+}
+
+type ListDiagnoseRecordsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDiagnoseRecordsInvoker) Invoke() (*model.ListDiagnoseRecordsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDiagnoseRecordsResponse), nil
+	}
+}
+
 type ListExtendsParamsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -410,6 +578,18 @@ func (i *ListExtendsParamsInvoker) Invoke() (*model.ListExtendsParamsResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ListExtendsParamsResponse), nil
+	}
+}
+
+type ListFeedbackOptionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListFeedbackOptionInvoker) Invoke() (*model.ListFeedbackOptionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListFeedbackOptionResponse), nil
 	}
 }
 
@@ -497,6 +677,18 @@ func (i *ListNewInstantMessagesInvoker) Invoke() (*model.ListNewInstantMessagesR
 	}
 }
 
+type ListNoticesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListNoticesInvoker) Invoke() (*model.ListNoticesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListNoticesResponse), nil
+	}
+}
+
 type ListPrivilegesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -530,6 +722,18 @@ func (i *ListProductCategoriesInvoker) Invoke() (*model.ListProductCategoriesRes
 		return nil, err
 	} else {
 		return result.(*model.ListProductCategoriesResponse), nil
+	}
+}
+
+type ListRecommendWordsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRecommendWordsInvoker) Invoke() (*model.ListRecommendWordsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRecommendWordsResponse), nil
 	}
 }
 
@@ -593,6 +797,18 @@ func (i *ListSubCustomersInvoker) Invoke() (*model.ListSubCustomersResponse, err
 	}
 }
 
+type ListToolsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListToolsInvoker) Invoke() (*model.ListToolsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListToolsResponse), nil
+	}
+}
+
 type ListTransportHistoriesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -650,6 +866,18 @@ func (i *ShowAccessoryLimitsInvoker) Invoke() (*model.ShowAccessoryLimitsRespons
 		return nil, err
 	} else {
 		return result.(*model.ShowAccessoryLimitsResponse), nil
+	}
+}
+
+type ShowAssociatedQuestionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAssociatedQuestionsInvoker) Invoke() (*model.ShowAssociatedQuestionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAssociatedQuestionsResponse), nil
 	}
 }
 
@@ -713,6 +941,18 @@ func (i *ShowCustomerPrivilegePolicyInvoker) Invoke() (*model.ShowCustomerPrivil
 	}
 }
 
+type ShowDownloadAccessoryUrlInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDownloadAccessoryUrlInvoker) Invoke() (*model.ShowDownloadAccessoryUrlResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDownloadAccessoryUrlResponse), nil
+	}
+}
+
 type ShowLatestPublishedAgreementInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -749,6 +989,30 @@ func (i *ShowPartnersServiceInfoInvoker) Invoke() (*model.ShowPartnersServiceInf
 	}
 }
 
+type ShowQaPairDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowQaPairDetailInvoker) Invoke() (*model.ShowQaPairDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowQaPairDetailResponse), nil
+	}
+}
+
+type ShowQaPairsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowQaPairsInvoker) Invoke() (*model.ShowQaPairsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowQaPairsResponse), nil
+	}
+}
+
 type ShowSignedLatestPublishedAgreementInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -758,6 +1022,18 @@ func (i *ShowSignedLatestPublishedAgreementInvoker) Invoke() (*model.ShowSignedL
 		return nil, err
 	} else {
 		return result.(*model.ShowSignedLatestPublishedAgreementResponse), nil
+	}
+}
+
+type ShowThemeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowThemeInvoker) Invoke() (*model.ShowThemeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowThemeResponse), nil
 	}
 }
 

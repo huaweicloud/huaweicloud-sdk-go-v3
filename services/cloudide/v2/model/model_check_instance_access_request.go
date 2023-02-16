@@ -9,7 +9,7 @@ import (
 // Request Object
 type CheckInstanceAccessRequest struct {
 
-	// CloudIDE实例id
+	// CodeArtsIDEOnline实例id
 	InstanceId string `json:"instance_id"`
 }
 

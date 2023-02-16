@@ -5,15 +5,26 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/region"
 )
 
-var CN_SOUTH_1 = region.NewRegion("cn-south-1", "https://er.cn-south-1.myhuaweicloud.com")
-var CN_EAST_3 = region.NewRegion("cn-east-3", "https://er.cn-east-3.myhuaweicloud.com")
-var CN_NORTH_4 = region.NewRegion("cn-north-4", "https://er.cn-north-4.myhuaweicloud.com")
-var CN_NORTH_2 = region.NewRegion("cn-north-2", "https://er.cn-north-2.myhuaweicloud.com")
-var CN_NORTH_9 = region.NewRegion("cn-north-9", "https://er.cn-north-9.myhuaweicloud.com")
-var AP_SOUTHEAST_1 = region.NewRegion("ap-southeast-1", "https://er.ap-southeast-1.myhuaweicloud.com")
-var AP_SOUTHEAST_2 = region.NewRegion("ap-southeast-2", "https://er.ap-southeast-2.myhuaweicloud.com")
-var AP_SOUTHEAST_3 = region.NewRegion("ap-southeast-3", "https://er.ap-southeast-3.myhuaweicloud.com")
-var CN_SOUTHWEST_2 = region.NewRegion("cn-southwest-2", "https://er.cn-southwest-2.myhuaweicloud.com")
+var (
+	CN_SOUTH_1 = region.NewRegion("cn-south-1",
+		"https://er.cn-south-1.myhuaweicloud.com")
+	CN_EAST_3 = region.NewRegion("cn-east-3",
+		"https://er.cn-east-3.myhuaweicloud.com")
+	CN_NORTH_4 = region.NewRegion("cn-north-4",
+		"https://er.cn-north-4.myhuaweicloud.com")
+	CN_NORTH_2 = region.NewRegion("cn-north-2",
+		"https://er.cn-north-2.myhuaweicloud.com")
+	CN_NORTH_9 = region.NewRegion("cn-north-9",
+		"https://er.cn-north-9.myhuaweicloud.com")
+	AP_SOUTHEAST_1 = region.NewRegion("ap-southeast-1",
+		"https://er.ap-southeast-1.myhuaweicloud.com")
+	AP_SOUTHEAST_2 = region.NewRegion("ap-southeast-2",
+		"https://er.ap-southeast-2.myhuaweicloud.com")
+	AP_SOUTHEAST_3 = region.NewRegion("ap-southeast-3",
+		"https://er.ap-southeast-3.myhuaweicloud.com")
+	CN_SOUTHWEST_2 = region.NewRegion("cn-southwest-2",
+		"https://er.cn-southwest-2.myhuaweicloud.com")
+)
 
 var staticFields = map[string]*region.Region{
 	"cn-south-1":     CN_SOUTH_1,

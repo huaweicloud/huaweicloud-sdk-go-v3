@@ -221,6 +221,18 @@ func (i *CreateAcceptanceInvoker) Invoke() (*model.CreateAcceptanceResponse, err
 	}
 }
 
+type CreateLoginInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateLoginInvoker) Invoke() (*model.CreateLoginResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateLoginResponse), nil
+	}
+}
+
 type CreateRequestInvoker struct {
 	*invoker.BaseInvoker
 }

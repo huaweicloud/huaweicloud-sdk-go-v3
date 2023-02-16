@@ -9,7 +9,7 @@ import (
 // Request Object
 type UploadExtensionFileRequest struct {
 
-	// 插件类型。目前只支持CloudIDE
+	// 插件类型。目前只支持CodeArtsIDEOnline
 	Official string `json:"official"`
 
 	Body *UploadExtensionFileRequestBody `json:"body,omitempty" type:"multipart"`

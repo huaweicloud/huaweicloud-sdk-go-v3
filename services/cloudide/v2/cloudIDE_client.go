@@ -397,6 +397,27 @@ func (c *CloudIDEClient) CreateAcceptanceInvoker(request *model.CreateAcceptance
 	return &CreateAcceptanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateLogin CreateLogin接口
+//
+// create a login
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudIDEClient) CreateLogin(request *model.CreateLoginRequest) (*model.CreateLoginResponse, error) {
+	requestDef := GenReqDefForCreateLogin()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateLoginResponse), nil
+	}
+}
+
+// CreateLoginInvoker CreateLogin接口
+func (c *CloudIDEClient) CreateLoginInvoker(request *model.CreateLoginRequest) *CreateLoginInvoker {
+	requestDef := GenReqDefForCreateLogin()
+	return &CreateLoginInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateRequest Create Request接口
 //
 // create a code generation request.

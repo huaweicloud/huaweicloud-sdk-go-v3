@@ -8,7 +8,7 @@ import (
 
 type PageResourceListParam struct {
 
-	// 页面的分页标志位
+	// 页面的分页标志位；为分页的最后一条记录的id
 	Maker *string `json:"maker,omitempty"`
 
 	// 查询返回记录的数量限制
@@ -26,8 +26,11 @@ type PageResourceListParam struct {
 	// 环境的region信息，若没有值，代表全部
 	CiRegion *string `json:"ci_region,omitempty"`
 
-	// 节点id
-	CiId string `json:"ci_id"`
+	// 节点id列表;如果ci_ids和ci_id同时有，则优先ci_ids，但是不能同时为空
+	CiIds *[]string `json:"ci_ids,omitempty"`
+
+	// 节点id列表;如果ci_ids和ci_id同时有，则优先ci_ids，但是不能同时为空。但是不支持应用批量查询
+	CiId *string `json:"ci_id,omitempty"`
 }
 
 func (o PageResourceListParam) String() string {
