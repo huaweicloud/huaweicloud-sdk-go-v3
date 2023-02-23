@@ -53,13 +53,13 @@ type ShowHdfsFileListRequestSortKeyEnum struct {
 func GetShowHdfsFileListRequestSortKeyEnum() ShowHdfsFileListRequestSortKeyEnum {
 	return ShowHdfsFileListRequestSortKeyEnum{
 		PATH_SUFFIX: ShowHdfsFileListRequestSortKey{
-			value: "path_suffix：文件或目录名称",
+			value: "path_suffix",
 		},
 		LENGTH: ShowHdfsFileListRequestSortKey{
-			value: "length：文件大小",
+			value: "length",
 		},
 		MODIFICATION_TIME: ShowHdfsFileListRequestSortKey{
-			value: "modification_time：修改时间",
+			value: "modification_time",
 		},
 	}
 }

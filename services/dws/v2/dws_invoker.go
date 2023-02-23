@@ -161,6 +161,18 @@ func (i *CreateClusterDnsInvoker) Invoke() (*model.CreateClusterDnsResponse, err
 	}
 }
 
+type CreateClusterV2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateClusterV2Invoker) Invoke() (*model.CreateClusterV2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateClusterV2Response), nil
+	}
+}
+
 type CreateClusterWorkloadInvoker struct {
 	*invoker.BaseInvoker
 }

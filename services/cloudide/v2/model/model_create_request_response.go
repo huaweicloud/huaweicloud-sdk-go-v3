@@ -12,8 +12,11 @@ type CreateRequestResponse struct {
 	// the unique id of the request
 	RequestId *string `json:"request_id,omitempty"`
 
-	Status         *RequestStatus `json:"status,omitempty"`
-	HttpStatusCode int            `json:"-"`
+	Status *RequestStatus `json:"status,omitempty"`
+
+	// the number of tasks dispatched successfully
+	DispatchedTaskNumber *int32 `json:"dispatched_task_number,omitempty"`
+	HttpStatusCode       int    `json:"-"`
 }
 
 func (o CreateRequestResponse) String() string {

@@ -29,6 +29,9 @@ type ResourceTypeResponse struct {
 
 	// console详情页地址
 	ConsoleDetailUrl *string `json:"console_detail_url,omitempty"`
+
+	// 资源是否默认收集，\"tracked\"表示默认收集，\"untracked\"表示默认不收集
+	Track *string `json:"track,omitempty"`
 }
 
 func (o ResourceTypeResponse) String() string {

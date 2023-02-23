@@ -352,6 +352,10 @@ func GenReqDefForCreateRequest() *def.HttpRequestDef {
 		WithName("ModelId").
 		WithJsonTag("model_id").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RequestType").
+		WithJsonTag("request_type").
+		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").

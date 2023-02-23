@@ -18,6 +18,9 @@ type ListProvidersRequest struct {
 	// 最大的返回数量
 	Limit *int32 `json:"limit,omitempty"`
 
+	// 资源是否默认收集
+	Track *ListProvidersRequestTrack `json:"track,omitempty"`
+
 	// 选择接口返回的信息的语言，默认为\"zh-cn\"中文
 	XLanguage *ListProvidersRequestXLanguage `json:"X-Language,omitempty"`
 }
@@ -29,6 +32,48 @@ func (o ListProvidersRequest) String() string {
 	}
 
 	return strings.Join([]string{"ListProvidersRequest", string(data)}, " ")
+}
+
+type ListProvidersRequestTrack struct {
+	value string
+}
+
+type ListProvidersRequestTrackEnum struct {
+	TRACKED   ListProvidersRequestTrack
+	UNTRACKED ListProvidersRequestTrack
+}
+
+func GetListProvidersRequestTrackEnum() ListProvidersRequestTrackEnum {
+	return ListProvidersRequestTrackEnum{
+		TRACKED: ListProvidersRequestTrack{
+			value: "tracked",
+		},
+		UNTRACKED: ListProvidersRequestTrack{
+			value: "untracked",
+		},
+	}
+}
+
+func (c ListProvidersRequestTrack) Value() string {
+	return c.value
+}
+
+func (c ListProvidersRequestTrack) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListProvidersRequestTrack) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type ListProvidersRequestXLanguage struct {

@@ -83,7 +83,7 @@ type ListFunctionResult struct {
 	// 函数最后一次更新时间。
 	LastModified *sdktime.SdkTime `json:"last_modified"`
 
-	// 对应tbl_func_vpc表的id字段。
+	// 用户的vpcid。
 	FuncVpcId *string `json:"func_vpc_id,omitempty"`
 
 	StrategyConfig *StrategyConfig `json:"strategy_config,omitempty"`

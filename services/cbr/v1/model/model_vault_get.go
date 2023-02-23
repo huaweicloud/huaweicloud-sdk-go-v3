@@ -27,8 +27,8 @@ type VaultGet struct {
 	// 资源
 	Resources []ResourceResp `json:"resources"`
 
-	// 标签
-	Tags *[]TagsResp `json:"tags,omitempty"`
+	// 存储库标签
+	Tags *[]Tag `json:"tags,omitempty"`
 
 	// 企业项目id，默认为‘0’。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`

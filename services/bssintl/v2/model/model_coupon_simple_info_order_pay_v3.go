@@ -11,7 +11,7 @@ type CouponSimpleInfoOrderPayV3 struct {
 	// 优惠券ID。
 	Id string `json:"id"`
 
-	// 折扣类型：300:折扣券 301:促销代金券 302:促销现金券 303:促销储值卡
+	// 优惠券类型：300:折扣券 301:促销代金券 302:促销现金券 303:促销储值卡
 	Type int32 `json:"type"`
 }
 

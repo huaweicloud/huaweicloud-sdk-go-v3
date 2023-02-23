@@ -27,7 +27,13 @@ type PropertiesSchema struct {
 	PluginVersion *string `json:"plugin_version,omitempty"`
 
 	// signature
-	Signature string `json:"signature"`
+	Signature *string `json:"signature,omitempty"`
+
+	// the text above the cursor
+	AboveText *string `json:"above_text,omitempty"`
+
+	// the text following the cursor
+	FollowingText *string `json:"following_text,omitempty"`
 }
 
 func (o PropertiesSchema) String() string {

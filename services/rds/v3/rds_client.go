@@ -2699,6 +2699,27 @@ func (c *RdsClient) StopDatabaseProxyInvoker(request *model.StopDatabaseProxyReq
 	return &StopDatabaseProxyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateDbUserPrivilege
+//
+// 数据库帐号授权。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) UpdateDbUserPrivilege(request *model.UpdateDbUserPrivilegeRequest) (*model.UpdateDbUserPrivilegeResponse, error) {
+	requestDef := GenReqDefForUpdateDbUserPrivilege()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDbUserPrivilegeResponse), nil
+	}
+}
+
+// UpdateDbUserPrivilegeInvoker
+func (c *RdsClient) UpdateDbUserPrivilegeInvoker(request *model.UpdateDbUserPrivilegeRequest) *UpdateDbUserPrivilegeInvoker {
+	requestDef := GenReqDefForUpdateDbUserPrivilege()
+	return &UpdateDbUserPrivilegeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdatePostgresqlParameterValue 修改实例指定参数的值
 //
 // 修改实例指定参数的值。

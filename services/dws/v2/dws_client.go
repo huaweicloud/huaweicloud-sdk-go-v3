@@ -301,6 +301,29 @@ func (c *DwsClient) CreateClusterDnsInvoker(request *model.CreateClusterDnsReque
 	return &CreateClusterDnsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateClusterV2 V2创建集群
+//
+// 该接口用于创建集群。
+// 集群必须要运行在VPC之内，创建集群前，您需要先创建VPC，并获取VPC和子网的id。
+// 该接口为异步接口，创建集群需要10～15分钟。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) CreateClusterV2(request *model.CreateClusterV2Request) (*model.CreateClusterV2Response, error) {
+	requestDef := GenReqDefForCreateClusterV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateClusterV2Response), nil
+	}
+}
+
+// CreateClusterV2Invoker V2创建集群
+func (c *DwsClient) CreateClusterV2Invoker(request *model.CreateClusterV2Request) *CreateClusterV2Invoker {
+	requestDef := GenReqDefForCreateClusterV2()
+	return &CreateClusterV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateClusterWorkload 设置资源管理
 //
 // 设置资源管理。

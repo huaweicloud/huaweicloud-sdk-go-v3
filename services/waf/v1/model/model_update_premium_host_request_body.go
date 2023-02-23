@@ -52,6 +52,8 @@ type UpdatePremiumHostRequestBody struct {
 	CircuitBreaker *CircuitBreaker `json:"circuit_breaker,omitempty"`
 
 	TimeoutConfig *TimeoutConfig `json:"timeout_config,omitempty"`
+
+	Flag *HostFlag `json:"flag,omitempty"`
 }
 
 func (o UpdatePremiumHostRequestBody) String() string {

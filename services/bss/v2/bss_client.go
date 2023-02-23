@@ -505,6 +505,27 @@ func (c *BssClient) ListCouponQuotasRecordsInvoker(request *model.ListCouponQuot
 	return &ListCouponQuotasRecordsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListCustomerAccountChangeRecords 查询收支明细(客户)
+//
+// 功能描述：客户可以查询自身的收支明细情况(此接口不适用于伙伴的代售类、转售类客户。)
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *BssClient) ListCustomerAccountChangeRecords(request *model.ListCustomerAccountChangeRecordsRequest) (*model.ListCustomerAccountChangeRecordsResponse, error) {
+	requestDef := GenReqDefForListCustomerAccountChangeRecords()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCustomerAccountChangeRecordsResponse), nil
+	}
+}
+
+// ListCustomerAccountChangeRecordsInvoker 查询收支明细(客户)
+func (c *BssClient) ListCustomerAccountChangeRecordsInvoker(request *model.ListCustomerAccountChangeRecordsRequest) *ListCustomerAccountChangeRecordsInvoker {
+	requestDef := GenReqDefForListCustomerAccountChangeRecords()
+	return &ListCustomerAccountChangeRecordsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListCustomerBillsFeeRecords 查询流水账单
 //
 // 客户在自建平台查询自己的消费流水账单。

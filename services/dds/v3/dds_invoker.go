@@ -1001,6 +1001,18 @@ func (i *ShowUpgradeDurationInvoker) Invoke() (*model.ShowUpgradeDurationRespons
 	}
 }
 
+type ShrinkInstanceNodesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShrinkInstanceNodesInvoker) Invoke() (*model.ShrinkInstanceNodesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShrinkInstanceNodesResponse), nil
+	}
+}
+
 type SwitchConfigurationInvoker struct {
 	*invoker.BaseInvoker
 }

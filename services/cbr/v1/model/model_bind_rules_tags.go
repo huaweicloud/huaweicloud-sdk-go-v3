@@ -13,7 +13,7 @@ type BindRulesTags struct {
 	Key string `json:"key"`
 
 	// value不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”。  [value只能由中文，字母，数字，“-”，“_”，“.”组成。](tag:hws,hws_hk,fcs_vm,ctc) [value只能由字母，数字，“_”，“-”组成。](tag:dt,ocb,tlf,sbc,g42,hcso_dt)
-	Value *string `json:"value,omitempty"`
+	Value string `json:"value"`
 }
 
 func (o BindRulesTags) String() string {

@@ -20,6 +20,8 @@ type ChannelDetail struct {
 
 	RomaForwarding *RomaForwarding `json:"roma_forwarding,omitempty"`
 
+	MysqlForwarding *MysqlForwarding `json:"mysql_forwarding,omitempty"`
+
 	InfluxdbForwarding *InfluxDbForwarding `json:"influxdb_forwarding,omitempty"`
 
 	FunctiongraphForwarding *FunctionGraphForwarding `json:"functiongraph_forwarding,omitempty"`

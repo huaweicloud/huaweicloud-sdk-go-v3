@@ -1481,6 +1481,10 @@ func GenReqDefForListRoutingRules() *def.HttpRequestDef {
 		WithJsonTag("rule_name").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Active").
+		WithJsonTag("active").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Limit").
 		WithJsonTag("limit").
 		WithLocationType(def.Query))

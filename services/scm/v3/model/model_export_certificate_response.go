@@ -9,7 +9,10 @@ import (
 // Response Object
 type ExportCertificateResponse struct {
 
-	// 证书内容。
+	// 证书及证书链。
+	EntireCertificate *string `json:"entire_certificate,omitempty"`
+
+	// 证书内容，不包含证书链。
 	Certificate *string `json:"certificate,omitempty"`
 
 	// 证书链。

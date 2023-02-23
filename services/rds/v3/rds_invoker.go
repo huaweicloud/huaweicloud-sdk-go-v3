@@ -1529,6 +1529,18 @@ func (i *StopDatabaseProxyInvoker) Invoke() (*model.StopDatabaseProxyResponse, e
 	}
 }
 
+type UpdateDbUserPrivilegeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDbUserPrivilegeInvoker) Invoke() (*model.UpdateDbUserPrivilegeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDbUserPrivilegeResponse), nil
+	}
+}
+
 type UpdatePostgresqlParameterValueInvoker struct {
 	*invoker.BaseInvoker
 }

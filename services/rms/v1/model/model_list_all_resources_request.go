@@ -18,11 +18,20 @@ type ListAllResourcesRequest struct {
 	// 资源类型（provider.type）
 	Type *string `json:"type,omitempty"`
 
-	// 最大的返回数量
+	// 最大的返回数量。
 	Limit *int32 `json:"limit,omitempty"`
 
 	// 分页参数，通过上一个请求中返回的marker信息作为输入，获取当前页
 	Marker *string `json:"marker,omitempty"`
+
+	// 资源ID
+	Id *string `json:"id,omitempty"`
+
+	// 资源名称
+	Name *string `json:"name,omitempty"`
+
+	// 标签列表
+	Tags *[]string `json:"tags,omitempty"`
 }
 
 func (o ListAllResourcesRequest) String() string {

@@ -79,28 +79,28 @@ type ShowJobExeListNewRequestJobStateEnum struct {
 func GetShowJobExeListNewRequestJobStateEnum() ShowJobExeListNewRequestJobStateEnum {
 	return ShowJobExeListNewRequestJobStateEnum{
 		FAILED: ShowJobExeListNewRequestJobState{
-			value: "FAILED：失败",
+			value: "FAILED",
 		},
 		KILLED: ShowJobExeListNewRequestJobState{
-			value: "KILLED：已终止",
+			value: "KILLED",
 		},
 		NEW: ShowJobExeListNewRequestJobState{
-			value: "NEW：已创建",
+			value: "NEW",
 		},
 		NEW_SAVING: ShowJobExeListNewRequestJobState{
-			value: "NEW_SAVING：已创建保存中",
+			value: "NEW_SAVING",
 		},
 		SUBMITTED: ShowJobExeListNewRequestJobState{
-			value: "SUBMITTED：已提交",
+			value: "SUBMITTED",
 		},
 		ACCEPTED: ShowJobExeListNewRequestJobState{
-			value: "ACCEPTED：已接受",
+			value: "ACCEPTED",
 		},
 		RUNNING: ShowJobExeListNewRequestJobState{
-			value: "RUNNING：运行中",
+			value: "RUNNING",
 		},
 		FINISHED: ShowJobExeListNewRequestJobState{
-			value: "FINISHED：已完成",
+			value: "FINISHED",
 		},
 	}
 }
@@ -141,16 +141,16 @@ type ShowJobExeListNewRequestJobResultEnum struct {
 func GetShowJobExeListNewRequestJobResultEnum() ShowJobExeListNewRequestJobResultEnum {
 	return ShowJobExeListNewRequestJobResultEnum{
 		FAILED: ShowJobExeListNewRequestJobResult{
-			value: "FAILED：执行失败的作业。",
+			value: "FAILED",
 		},
 		KILLED: ShowJobExeListNewRequestJobResult{
-			value: "KILLED：执行中被手动终止的作业。",
+			value: "KILLED",
 		},
 		UNDEFINED: ShowJobExeListNewRequestJobResult{
-			value: "UNDEFINED：正在执行的作业。",
+			value: "UNDEFINED",
 		},
 		SUCCEEDED: ShowJobExeListNewRequestJobResult{
-			value: "SUCCEEDED：执行成功的作业。",
+			value: "SUCCEEDED",
 		},
 	}
 }

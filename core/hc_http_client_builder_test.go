@@ -30,15 +30,16 @@ func TestHcHttpClientBuilder_Build(t *testing.T) {
 		err := recover()
 		assert.NotNil(t, err)
 	}()
+	endpoints := []string{"endpoint"}
 	err := os.Setenv("HUAWEICLOUD_SDK_CREDENTIALS_FILE", "/cred")
 	assert.Nil(t, err)
-	client := NewHcHttpClientBuilder().WithEndpoint("endpoint").Build()
+	client := NewHcHttpClientBuilder().WithEndpoints(endpoints).Build()
 	assert.Nil(t, client.credential)
 
 	err = os.Setenv("HUAWEICLOUD_SDK_AK", "ak")
 	assert.Nil(t, err)
 	err = os.Setenv("HUAWEICLOUD_SDK_SK", "sk")
 	assert.Nil(t, err)
-	client = NewHcHttpClientBuilder().WithEndpoint("endpoint").Build()
+	client = NewHcHttpClientBuilder().WithEndpoints(endpoints).Build()
 	assert.NotNil(t, client.credential)
 }

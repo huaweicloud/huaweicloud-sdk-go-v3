@@ -11,8 +11,11 @@ type ShowResultResponse struct {
 	RequestStatus *RequestStatus `json:"request_status,omitempty"`
 
 	// task list
-	Tasks          *[]TaskModel `json:"tasks,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	Tasks *[]TaskModel `json:"tasks,omitempty"`
+
+	// the type of the request
+	RequestType    *string `json:"request_type,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowResultResponse) String() string {

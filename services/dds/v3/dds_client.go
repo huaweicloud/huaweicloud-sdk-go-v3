@@ -1762,6 +1762,27 @@ func (c *DdsClient) ShowUpgradeDurationInvoker(request *model.ShowUpgradeDuratio
 	return &ShowUpgradeDurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShrinkInstanceNodes 删除实例的节点
+//
+// 删除实例的节点。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdsClient) ShrinkInstanceNodes(request *model.ShrinkInstanceNodesRequest) (*model.ShrinkInstanceNodesResponse, error) {
+	requestDef := GenReqDefForShrinkInstanceNodes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShrinkInstanceNodesResponse), nil
+	}
+}
+
+// ShrinkInstanceNodesInvoker 删除实例的节点
+func (c *DdsClient) ShrinkInstanceNodesInvoker(request *model.ShrinkInstanceNodesRequest) *ShrinkInstanceNodesInvoker {
+	requestDef := GenReqDefForShrinkInstanceNodes()
+	return &ShrinkInstanceNodesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SwitchConfiguration 应用参数模板
 //
 // 指定实例变更参数模板。

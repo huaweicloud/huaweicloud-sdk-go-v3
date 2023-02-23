@@ -245,6 +245,18 @@ func (i *ListCouponQuotasRecordsInvoker) Invoke() (*model.ListCouponQuotasRecord
 	}
 }
 
+type ListCustomerAccountChangeRecordsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCustomerAccountChangeRecordsInvoker) Invoke() (*model.ListCustomerAccountChangeRecordsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCustomerAccountChangeRecordsResponse), nil
+	}
+}
+
 type ListCustomerBillsFeeRecordsInvoker struct {
 	*invoker.BaseInvoker
 }

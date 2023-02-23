@@ -36,14 +36,15 @@ var endpoint = fmt.Sprintf("https://%s.%s.myhuaweicloud.com", strings.ToLower(se
 func TestNewRegion(t *testing.T) {
 	reg := NewRegion(regionId, endpoint)
 	assert.Equal(t, &Region{
-		Id:       regionId,
-		Endpoint: endpoint,
+		Id:        regionId,
+		Endpoints: []string{endpoint},
 	}, reg)
 }
 
-func TestRegion_WithEndpointOverride(t *testing.T) {
+func TestRegion_WithEndpointsOverride(t *testing.T) {
+	testEndpoints := []string{"test"}
 	reg := NewRegion(regionId, endpoint)
-	assert.Equal(t, endpoint, reg.Endpoint)
-	reg.WithEndpointOverride("test")
-	assert.Equal(t, "test", reg.Endpoint)
+	assert.Equal(t, endpoint, reg.Endpoints[0])
+	reg.WithEndpointsOverride(testEndpoints)
+	assert.Equal(t, testEndpoints, reg.Endpoints)
 }
