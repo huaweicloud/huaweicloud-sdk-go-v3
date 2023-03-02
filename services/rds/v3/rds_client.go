@@ -925,6 +925,27 @@ func (c *RdsClient) ListSlowlogStatisticsInvoker(request *model.ListSlowlogStati
 	return &ListSlowlogStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSslCertDownloadLink 获取SSL证书下载地址
+//
+// 获取SSL证书下载地址
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListSslCertDownloadLink(request *model.ListSslCertDownloadLinkRequest) (*model.ListSslCertDownloadLinkResponse, error) {
+	requestDef := GenReqDefForListSslCertDownloadLink()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSslCertDownloadLinkResponse), nil
+	}
+}
+
+// ListSslCertDownloadLinkInvoker 获取SSL证书下载地址
+func (c *RdsClient) ListSslCertDownloadLinkInvoker(request *model.ListSslCertDownloadLinkRequest) *ListSslCertDownloadLinkInvoker {
+	requestDef := GenReqDefForListSslCertDownloadLink()
+	return &ListSslCertDownloadLinkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListStorageTypes 查询数据库磁盘类型
 //
 // 查询数据库磁盘类型。

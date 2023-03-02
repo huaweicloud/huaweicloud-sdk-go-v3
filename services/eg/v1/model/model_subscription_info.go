@@ -32,6 +32,9 @@ type SubscriptionInfo struct {
 	// 通道名称
 	ChannelName *string `json:"channel_name,omitempty"`
 
+	// 标签信息
+	Used *[]SubscriptionUsedInfo `json:"used,omitempty"`
+
 	// 订阅源列表
 	Sources *[]SubscriptionSourceInfo `json:"sources,omitempty"`
 

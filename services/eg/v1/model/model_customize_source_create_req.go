@@ -43,6 +43,7 @@ type CustomizeSourceCreateReqType struct {
 type CustomizeSourceCreateReqTypeEnum struct {
 	APPLICATION CustomizeSourceCreateReqType
 	RABBITMQ    CustomizeSourceCreateReqType
+	ROCKETMQ    CustomizeSourceCreateReqType
 }
 
 func GetCustomizeSourceCreateReqTypeEnum() CustomizeSourceCreateReqTypeEnum {
@@ -52,6 +53,9 @@ func GetCustomizeSourceCreateReqTypeEnum() CustomizeSourceCreateReqTypeEnum {
 		},
 		RABBITMQ: CustomizeSourceCreateReqType{
 			value: "RABBITMQ",
+		},
+		ROCKETMQ: CustomizeSourceCreateReqType{
+			value: "ROCKETMQ",
 		},
 	}
 }

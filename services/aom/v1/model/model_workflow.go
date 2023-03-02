@@ -12,7 +12,7 @@ type Workflow struct {
 	// 工作流id，唯一标识，根据project_id和workflow_name生成。
 	Id *string `json:"id,omitempty"`
 
-	// 工作流名称，满足：[^\\\\>+<^;#\"\\s&?%='$￥@*_/\\]\\[【】{}|:,.，。：‘’“、—！!~`·？《》…]{1,64}。
+	// 工作流名称。
 	Name string `json:"name"`
 
 	// 工作流类型，可以为cron、manual
@@ -36,7 +36,7 @@ type Workflow struct {
 	// 工作流更新人，从接口调用传入的token中获取。
 	UpdateBy *string `json:"update_by,omitempty"`
 
-	// 模板名称，需要满足：[^\\\\>+<^;#\"\\s&?%='$￥@*_/\\]\\[【】{}|:,.，。：‘’“、—！!~`·？《》…]{1,64}。
+	// 模板名称。
 	TemplateName *string `json:"template_name,omitempty"`
 
 	// 模板id
@@ -51,7 +51,7 @@ type Workflow struct {
 	// 任务状态，包含success，fail,executing
 	Status *string `json:"status,omitempty"`
 
-	// 引用链接,workflow引用的工作链接
+	// 工作流的引用。
 	CitationUrns *[]string `json:"citation_urns,omitempty"`
 
 	// 最近一次执行结束时间，为utc时间毫秒数
@@ -120,8 +120,7 @@ type Workflow struct {
 	// 审批id
 	ApproveId *string `json:"approve_id,omitempty"`
 
-	// 任务国际化字段，包含中英文描述
-	TemplateI18n map[string]map[string]interface{} `json:"template_i18n,omitempty"`
+	TemplateI18n *WorkFlowModel `json:"template_i18n,omitempty"`
 
 	// 任务所属的企业项目
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`

@@ -51,7 +51,7 @@ type ServerDetails struct {
 	// 预留属性
 	AccessIPv6 *string `json:"accessIPv6,omitempty"`
 
-	// 裸金属服务器当前状态信息。取值范围：ACTIVE：运行中/正在关机/删除中BUILD：创建中ERROR：故障HARD_REBOOT：强制重启中REBOOT：重启中裸金属服务器当前状态信息。取值范围：ACTIVE：运行中/正在关机/删除中BUILD：创建中ERROR：故障HARD_REBOOT：强制重启中REBOOT：重启中
+	// 裸金属服务器当前状态信息。  取值范围：  ACTIVE：运行中/正在关机/删除中 BUILD：创建中 ERROR：故障 HARD_REBOOT：强制重启中 REBOOT：重启中 DELETED：实例已被正常删除 SHUTOFF：关机/正在开机/删除中/重建中/重装操作系统中/重装操作系统失败/冻结
 	Status ServerDetailsStatus `json:"status"`
 
 	// 预留属性
@@ -65,7 +65,7 @@ type ServerDetails struct {
 	// 扩展属性，裸金属服务器当前的任务状态。例如：rebooting：重启中reboot_started：普通重启reboot_started_hard：强制重启powering-off：关机中powering-on：开机中rebuilding：重建中scheduling：调度中deleting：删除中
 	OSEXTSTStaskState *ServerDetailsOSEXTSTStaskState `json:"OS-EXT-STS:task_state,omitempty"`
 
-	// 扩展属性，裸金属服务器的稳定状态。例如：active：运行中shutoff：关机suspended：暂停reboot：重启
+	// 扩展属性，裸金属服务器的稳定状态。例如：active：运行中shutoff：关机reboot：重启
 	OSEXTSTSvmState *ServerDetailsOSEXTSTSvmState `json:"OS-EXT-STS:vm_state,omitempty"`
 
 	// 扩展属性，裸金属服务器宿主名称
@@ -153,11 +153,13 @@ type ServerDetailsStatus struct {
 }
 
 type ServerDetailsStatusEnum struct {
-	ACTIVE  ServerDetailsStatus
-	BUILD   ServerDetailsStatus
-	ERROR   ServerDetailsStatus
-	REBOOT  ServerDetailsStatus
-	SHUTOFF ServerDetailsStatus
+	ACTIVE      ServerDetailsStatus
+	BUILD       ServerDetailsStatus
+	ERROR       ServerDetailsStatus
+	HARD_REBOOT ServerDetailsStatus
+	REBOOT      ServerDetailsStatus
+	DELETED     ServerDetailsStatus
+	SHUTOFF     ServerDetailsStatus
 }
 
 func GetServerDetailsStatusEnum() ServerDetailsStatusEnum {
@@ -171,8 +173,14 @@ func GetServerDetailsStatusEnum() ServerDetailsStatusEnum {
 		ERROR: ServerDetailsStatus{
 			value: "ERROR",
 		},
+		HARD_REBOOT: ServerDetailsStatus{
+			value: "HARD_REBOOT",
+		},
 		REBOOT: ServerDetailsStatus{
 			value: "REBOOT",
+		},
+		DELETED: ServerDetailsStatus{
+			value: "DELETED",
 		},
 		SHUTOFF: ServerDetailsStatus{
 			value: "SHUTOFF",
@@ -273,10 +281,9 @@ type ServerDetailsOSEXTSTSvmState struct {
 }
 
 type ServerDetailsOSEXTSTSvmStateEnum struct {
-	ACTIVE    ServerDetailsOSEXTSTSvmState
-	SHUTOFF   ServerDetailsOSEXTSTSvmState
-	SUSPENDED ServerDetailsOSEXTSTSvmState
-	REBOOT    ServerDetailsOSEXTSTSvmState
+	ACTIVE  ServerDetailsOSEXTSTSvmState
+	SHUTOFF ServerDetailsOSEXTSTSvmState
+	REBOOT  ServerDetailsOSEXTSTSvmState
 }
 
 func GetServerDetailsOSEXTSTSvmStateEnum() ServerDetailsOSEXTSTSvmStateEnum {
@@ -286,9 +293,6 @@ func GetServerDetailsOSEXTSTSvmStateEnum() ServerDetailsOSEXTSTSvmStateEnum {
 		},
 		SHUTOFF: ServerDetailsOSEXTSTSvmState{
 			value: "shutoff",
-		},
-		SUSPENDED: ServerDetailsOSEXTSTSvmState{
-			value: "suspended",
 		},
 		REBOOT: ServerDetailsOSEXTSTSvmState{
 			value: "reboot",

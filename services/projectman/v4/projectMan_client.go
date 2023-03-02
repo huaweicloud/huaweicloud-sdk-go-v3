@@ -1258,6 +1258,27 @@ func (c *ProjectManClient) ListScrumProjectStatusesInvoker(request *model.ListSc
 	return &ListScrumProjectStatusesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSpecIssueStayTimes 获取指定工作项停留时间
+//
+// 获取指定工作项停留时间
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) ListSpecIssueStayTimes(request *model.ListSpecIssueStayTimesRequest) (*model.ListSpecIssueStayTimesResponse, error) {
+	requestDef := GenReqDefForListSpecIssueStayTimes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSpecIssueStayTimesResponse), nil
+	}
+}
+
+// ListSpecIssueStayTimesInvoker 获取指定工作项停留时间
+func (c *ProjectManClient) ListSpecIssueStayTimesInvoker(request *model.ListSpecIssueStayTimesRequest) *ListSpecIssueStayTimesInvoker {
+	requestDef := GenReqDefForListSpecIssueStayTimes()
+	return &ListSpecIssueStayTimesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListStatusStatistic 查询迭代下工作项状态的统计数据（处理人维度）
 //
 // 查询迭代下工作项状态的统计数据（处理人维度）

@@ -12,6 +12,7 @@ type PutEventsResponse struct {
 	// 发布失败的事件个数
 	FailedCount *int32 `json:"failed_count,omitempty"`
 
+	// 事件列表
 	Events *[]PutEventsRespEvents `json:"events,omitempty"`
 
 	XRequestId     *string `json:"X-Request-Id,omitempty"`

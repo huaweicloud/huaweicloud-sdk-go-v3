@@ -14,7 +14,7 @@ type RateControl struct {
 	// 每批间隔。
 	TimeDelay *int32 `json:"time_delay,omitempty"`
 
-	// 是否分批发布。
+	// 每批支持的最大实例数。
 	Max *int32 `json:"max,omitempty"`
 }
 

@@ -40,6 +40,9 @@ type CreateClusterReqV2 struct {
 	// 组件名称列表，用逗号分隔。支持的组件请参见[获取MRS集群信息](https://support.huaweicloud.com/api-mrs/mrs_02_9001.html)页面的“MRS服务支持的组件”内容。
 	Components string `json:"components"`
 
+	// 部署Hive和Ranger等组件时，可以关联数据连接，将元数据存储于关联的数据库
+	ExternalDatasources *[]ClusterDataConnectorMap `json:"external_datasources,omitempty"`
+
 	// 可用分区名称，不支持多AZ集群。 可用分区信息请参见[终端节点](https://support.huaweicloud.com/api-mrs/mrs_02_0003.html)。
 	AvailabilityZone string `json:"availability_zone"`
 

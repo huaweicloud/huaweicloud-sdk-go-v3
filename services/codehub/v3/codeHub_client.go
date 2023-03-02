@@ -231,7 +231,7 @@ func (c *CodeHubClient) ShowRepositoryNameExistInvoker(request *model.ShowReposi
 
 // AddRepoMembers 添加仓库成员
 //
-// 调用方codehubportal,添加仓库成员。
+// 添加仓库成员。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) AddRepoMembers(request *model.AddRepoMembersRequest) (*model.AddRepoMembersResponse, error) {

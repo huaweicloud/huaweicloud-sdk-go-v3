@@ -65,6 +65,18 @@ func (i *UpdateForwardingConfigInvoker) Invoke() (*model.UpdateForwardingConfigR
 	}
 }
 
+type ListEdgeFlowsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListEdgeFlowsInvoker) Invoke() (*model.ListEdgeFlowsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListEdgeFlowsResponse), nil
+	}
+}
+
 type ShowHistoryTrafficEventsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -626,18 +638,6 @@ func (i *UpdateEdgeApplicationVersionStateInvoker) Invoke() (*model.UpdateEdgeAp
 		return nil, err
 	} else {
 		return result.(*model.UpdateEdgeApplicationVersionStateResponse), nil
-	}
-}
-
-type ListEdgeFlowsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListEdgeFlowsInvoker) Invoke() (*model.ListEdgeFlowsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListEdgeFlowsResponse), nil
 	}
 }
 

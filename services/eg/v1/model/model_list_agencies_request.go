@@ -32,6 +32,7 @@ type ListAgenciesRequestType struct {
 type ListAgenciesRequestTypeEnum struct {
 	TARGET_CONNECTION      ListAgenciesRequestType
 	CUSTOM_SOURCE_RABBITMQ ListAgenciesRequestType
+	EG_RESTORE_AGENCY      ListAgenciesRequestType
 }
 
 func GetListAgenciesRequestTypeEnum() ListAgenciesRequestTypeEnum {
@@ -41,6 +42,9 @@ func GetListAgenciesRequestTypeEnum() ListAgenciesRequestTypeEnum {
 		},
 		CUSTOM_SOURCE_RABBITMQ: ListAgenciesRequestType{
 			value: "CUSTOM_SOURCE_RABBITMQ",
+		},
+		EG_RESTORE_AGENCY: ListAgenciesRequestType{
+			value: "EG_RESTORE_AGENCY",
 		},
 	}
 }

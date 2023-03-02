@@ -9,7 +9,7 @@ import (
 // 设置计费模式请求体
 type SetChargeModesBody struct {
 
-	// 计费模式，支持flux（流量），bw（带宽）
+	// 计费模式，支持flux（流量），v2及以上客户支持bw（带宽）
 	ChargeMode string `json:"charge_mode"`
 
 	// 产品模式，仅支持base（基础加速）

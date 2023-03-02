@@ -953,6 +953,18 @@ func (i *ShowRecyclePolicyInvoker) Invoke() (*model.ShowRecyclePolicyResponse, e
 	}
 }
 
+type ShowReplSetNameInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowReplSetNameInvoker) Invoke() (*model.ShowReplSetNameResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowReplSetNameResponse), nil
+	}
+}
+
 type ShowSecondLevelMonitoringStatusInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1142,6 +1154,18 @@ func (i *UpdateInstanceRemarkInvoker) Invoke() (*model.UpdateInstanceRemarkRespo
 		return nil, err
 	} else {
 		return result.(*model.UpdateInstanceRemarkResponse), nil
+	}
+}
+
+type UpdateReplSetNameInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateReplSetNameInvoker) Invoke() (*model.UpdateReplSetNameResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateReplSetNameResponse), nil
 	}
 }
 

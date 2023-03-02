@@ -24,7 +24,7 @@ type CloudEvents struct {
 	// 事件内容格式，采用MIME格式，遵循RFC2046，参考https://tools.ietf.org/html/rfc2046
 	Datacontenttype *string `json:"datacontenttype,omitempty"`
 
-	// 件内容模型定义的URI，遵循RFC3986，参考https://tools.ietf.org/html/rfc3986#section-4.3
+	// 事件内容模型定义的URI，遵循RFC3986，参考https://tools.ietf.org/html/rfc3986#section-4.3
 	Dataschema *string `json:"dataschema,omitempty"`
 
 	// 事件的负载内容，采用datacontenttype字段指定的格式，内容字段遵循dataschema字段的描述

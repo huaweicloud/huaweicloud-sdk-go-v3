@@ -16,7 +16,7 @@ type OrganizationV2 struct {
 	NameHash *string `json:"name_hash,omitempty"`
 
 	// 组织节点
-	NodeCount *string `json:"node_count,omitempty"`
+	NodeCount *int32 `json:"node_count,omitempty"`
 
 	// 状态
 	Status *string `json:"status,omitempty"`

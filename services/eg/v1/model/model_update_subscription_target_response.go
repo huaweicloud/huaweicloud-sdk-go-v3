@@ -24,7 +24,7 @@ type UpdateSubscriptionTargetResponse struct {
 	// 订阅的事件目标参数列表
 	Detail *interface{} `json:"detail,omitempty"`
 
-	Transform *SubscriptionTargetInfoTransform `json:"transform,omitempty"`
+	Transform *TransForm `json:"transform,omitempty"`
 
 	// 创建时间
 	CreatedTime *string `json:"created_time,omitempty"`

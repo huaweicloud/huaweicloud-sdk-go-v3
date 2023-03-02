@@ -124,6 +124,27 @@ func (c *DrisClient) UpdateForwardingConfigInvoker(request *model.UpdateForwardi
 	return &UpdateForwardingConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListEdgeFlows 查询历史交通统计信息列表
+//
+// 查询历史交通统计信息列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrisClient) ListEdgeFlows(request *model.ListEdgeFlowsRequest) (*model.ListEdgeFlowsResponse, error) {
+	requestDef := GenReqDefForListEdgeFlows()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListEdgeFlowsResponse), nil
+	}
+}
+
+// ListEdgeFlowsInvoker 查询历史交通统计信息列表
+func (c *DrisClient) ListEdgeFlowsInvoker(request *model.ListEdgeFlowsRequest) *ListEdgeFlowsInvoker {
+	requestDef := GenReqDefForListEdgeFlows()
+	return &ListEdgeFlowsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowHistoryTrafficEvents 查询历史交通事件列表
 //
 // 查询历史交通事件列表
@@ -1129,27 +1150,6 @@ func (c *DrisClient) UpdateEdgeApplicationVersionState(request *model.UpdateEdge
 func (c *DrisClient) UpdateEdgeApplicationVersionStateInvoker(request *model.UpdateEdgeApplicationVersionStateRequest) *UpdateEdgeApplicationVersionStateInvoker {
 	requestDef := GenReqDefForUpdateEdgeApplicationVersionState()
 	return &UpdateEdgeApplicationVersionStateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListEdgeFlows 查询历史交通统计信息列表
-//
-// 查询历史交通统计信息列表
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DrisClient) ListEdgeFlows(request *model.ListEdgeFlowsRequest) (*model.ListEdgeFlowsResponse, error) {
-	requestDef := GenReqDefForListEdgeFlows()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListEdgeFlowsResponse), nil
-	}
-}
-
-// ListEdgeFlowsInvoker 查询历史交通统计信息列表
-func (c *DrisClient) ListEdgeFlowsInvoker(request *model.ListEdgeFlowsRequest) *ListEdgeFlowsInvoker {
-	requestDef := GenReqDefForListEdgeFlows()
-	return &ListEdgeFlowsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateRsuModel 创建RSU型号

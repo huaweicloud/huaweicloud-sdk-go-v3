@@ -1292,6 +1292,21 @@ func GenReqDefForListScrumProjectStatuses() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListSpecIssueStayTimes() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v4/issues/duration").
+		WithResponse(new(model.ListSpecIssueStayTimesResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListStatusStatistic() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).

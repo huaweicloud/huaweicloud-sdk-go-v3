@@ -11,7 +11,7 @@ type RepoInfo struct {
 	// 创建时间
 	CreateAt *string `json:"createAt,omitempty"`
 
-	// 仓库组名(克隆地址中域名后面项目名前的一段 示例：git@codehub.alpha.devcloud.inhuawei.com:Demo00228/testword.git  组名：Demo00228)
+	// 仓库组名(克隆地址中域名后面项目名前的一段 示例：git@repo.alpha.devcloud.inhuawei.com:Demo00228/testword.git  组名：Demo00228)
 	GroupName *string `json:"groupName,omitempty"`
 
 	// https url

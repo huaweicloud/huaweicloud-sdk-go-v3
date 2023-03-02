@@ -29,6 +29,12 @@ type ListCommitsRequest struct {
 
 	// 有关每个提交的统计信息是否添加到响应中
 	WithStats *bool `json:"with_stats,omitempty"`
+
+	// 页码
+	Page *int32 `json:"page,omitempty"`
+
+	// 每页条目数
+	PerPage *int32 `json:"per_page,omitempty"`
 }
 
 func (o ListCommitsRequest) String() string {

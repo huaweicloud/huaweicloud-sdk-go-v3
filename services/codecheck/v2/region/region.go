@@ -7,15 +7,20 @@ import (
 
 var (
 	CN_NORTH_4 = region.NewRegion("cn-north-4",
-		"https://codecheck-ext.cn-north-4.myhuaweicloud.com")
+		"https://codecheck-ext.cn-north-4.myhuaweicloud.com",
+		"https://codecheck-ext.cn-north-4.myhuaweicloud.cn")
 	CN_NORTH_1 = region.NewRegion("cn-north-1",
-		"https://codecheck-ext.cn-north-1.myhuaweicloud.com")
+		"https://codecheck-ext.cn-north-1.myhuaweicloud.com",
+		"https://codecheck-ext.cn-north-1.myhuaweicloud.cn")
 	CN_EAST_2 = region.NewRegion("cn-east-2",
-		"https://codecheck-ext.cn-east-2.myhuaweicloud.com")
+		"https://codecheck-ext.cn-east-2.myhuaweicloud.com",
+		"https://codecheck-ext.cn-east-2.myhuaweicloud.cn")
 	CN_SOUTH_1 = region.NewRegion("cn-south-1",
-		"https://codecheck-ext.cn-south-1.myhuaweicloud.com")
+		"https://codecheck-ext.cn-south-1.myhuaweicloud.com",
+		"https://codecheck-ext.cn-south-1.myhuaweicloud.cn")
 	CN_EAST_3 = region.NewRegion("cn-east-3",
-		"https://codecheck-ext.cn-east-3.myhuaweicloud.com")
+		"https://codecheck-ext.cn-east-3.myhuaweicloud.com",
+		"https://codecheck-ext.cn-east-3.myhuaweicloud.cn")
 	LA_NORTH_2 = region.NewRegion("la-north-2",
 		"https://codecheck-ext.la-north-2.myhuaweicloud.com")
 	SA_BRAZIL_1 = region.NewRegion("sa-brazil-1",

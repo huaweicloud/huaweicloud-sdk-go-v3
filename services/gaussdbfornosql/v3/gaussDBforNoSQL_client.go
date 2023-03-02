@@ -209,6 +209,27 @@ func (c *GaussDBforNoSQLClient) CreateConfigurationInvoker(request *model.Create
 	return &CreateConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateDbUser 创建Redis数据库账号
+//
+// 在Redis实例中创建数据库帐号。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) CreateDbUser(request *model.CreateDbUserRequest) (*model.CreateDbUserResponse, error) {
+	requestDef := GenReqDefForCreateDbUser()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDbUserResponse), nil
+	}
+}
+
+// CreateDbUserInvoker 创建Redis数据库账号
+func (c *GaussDBforNoSQLClient) CreateDbUserInvoker(request *model.CreateDbUserRequest) *CreateDbUserInvoker {
+	requestDef := GenReqDefForCreateDbUser()
+	return &CreateDbUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateDisasterRecovery 搭建实例与特定实例的容灾关系
 //
 // 搭建实例与特定实例的容灾关系。 该接口需要对搭建容灾关系的两个实例分别各调用一次，2次接口都调用成功才能成功搭建容灾关系。
@@ -291,6 +312,27 @@ func (c *GaussDBforNoSQLClient) DeleteConfiguration(request *model.DeleteConfigu
 func (c *GaussDBforNoSQLClient) DeleteConfigurationInvoker(request *model.DeleteConfigurationRequest) *DeleteConfigurationInvoker {
 	requestDef := GenReqDefForDeleteConfiguration()
 	return &DeleteConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDbUser 删除Redis数据库账号
+//
+// 删除Redis实例的数据库账号。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) DeleteDbUser(request *model.DeleteDbUserRequest) (*model.DeleteDbUserResponse, error) {
+	requestDef := GenReqDefForDeleteDbUser()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDbUserResponse), nil
+	}
+}
+
+// DeleteDbUserInvoker 删除Redis数据库账号
+func (c *GaussDBforNoSQLClient) DeleteDbUserInvoker(request *model.DeleteDbUserRequest) *DeleteDbUserInvoker {
+	requestDef := GenReqDefForDeleteDbUser()
+	return &DeleteDbUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteDisasterRecovery 解除实例与特定实例的容灾关系
@@ -482,6 +524,27 @@ func (c *GaussDBforNoSQLClient) ListDatastoresInvoker(request *model.ListDatasto
 	return &ListDatastoresInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListDbUsers 获取Redis数据库账号列表和详情
+//
+// 获取Redis数据库账号列表和详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ListDbUsers(request *model.ListDbUsersRequest) (*model.ListDbUsersResponse, error) {
+	requestDef := GenReqDefForListDbUsers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDbUsersResponse), nil
+	}
+}
+
+// ListDbUsersInvoker 获取Redis数据库账号列表和详情
+func (c *GaussDBforNoSQLClient) ListDbUsersInvoker(request *model.ListDbUsersRequest) *ListDbUsersInvoker {
+	requestDef := GenReqDefForListDbUsers()
+	return &ListDbUsersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListDedicatedResources 查询专属资源列表
 //
 // 查询专属资源列表。
@@ -564,6 +627,27 @@ func (c *GaussDBforNoSQLClient) ListFlavors(request *model.ListFlavorsRequest) (
 func (c *GaussDBforNoSQLClient) ListFlavorsInvoker(request *model.ListFlavorsRequest) *ListFlavorsInvoker {
 	requestDef := GenReqDefForListFlavors()
 	return &ListFlavorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListInstanceDatabases 获取Redis实例数据库列表
+//
+// 获取Redis实例数据库列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ListInstanceDatabases(request *model.ListInstanceDatabasesRequest) (*model.ListInstanceDatabasesResponse, error) {
+	requestDef := GenReqDefForListInstanceDatabases()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstanceDatabasesResponse), nil
+	}
+}
+
+// ListInstanceDatabasesInvoker 获取Redis实例数据库列表
+func (c *GaussDBforNoSQLClient) ListInstanceDatabasesInvoker(request *model.ListInstanceDatabasesRequest) *ListInstanceDatabasesInvoker {
+	requestDef := GenReqDefForListInstanceDatabases()
+	return &ListInstanceDatabasesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListInstanceTags 查询资源标签
@@ -734,6 +818,27 @@ func (c *GaussDBforNoSQLClient) ListSlowLogsInvoker(request *model.ListSlowLogsR
 	return &ListSlowLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ModifyDbUserPrivilege 修改Redis数据库帐号权限
+//
+// 修改Redis数据库帐号权限。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ModifyDbUserPrivilege(request *model.ModifyDbUserPrivilegeRequest) (*model.ModifyDbUserPrivilegeResponse, error) {
+	requestDef := GenReqDefForModifyDbUserPrivilege()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifyDbUserPrivilegeResponse), nil
+	}
+}
+
+// ModifyDbUserPrivilegeInvoker 修改Redis数据库帐号权限
+func (c *GaussDBforNoSQLClient) ModifyDbUserPrivilegeInvoker(request *model.ModifyDbUserPrivilegeRequest) *ModifyDbUserPrivilegeInvoker {
+	requestDef := GenReqDefForModifyDbUserPrivilege()
+	return &ModifyDbUserPrivilegeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ModifyEpsQuotas 修改企业项目配额
 //
 // 修改企业项目配额。
@@ -839,6 +944,27 @@ func (c *GaussDBforNoSQLClient) PauseResumeDataSynchronization(request *model.Pa
 func (c *GaussDBforNoSQLClient) PauseResumeDataSynchronizationInvoker(request *model.PauseResumeDataSynchronizationRequest) *PauseResumeDataSynchronizationInvoker {
 	requestDef := GenReqDefForPauseResumeDataSynchronization()
 	return &PauseResumeDataSynchronizationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ResetDbUserPassword 重置Redis数据库账号密码
+//
+// 重置Redis数据库账号密码。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ResetDbUserPassword(request *model.ResetDbUserPasswordRequest) (*model.ResetDbUserPasswordResponse, error) {
+	requestDef := GenReqDefForResetDbUserPassword()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ResetDbUserPasswordResponse), nil
+	}
+}
+
+// ResetDbUserPasswordInvoker 重置Redis数据库账号密码
+func (c *GaussDBforNoSQLClient) ResetDbUserPasswordInvoker(request *model.ResetDbUserPasswordRequest) *ResetDbUserPasswordInvoker {
+	requestDef := GenReqDefForResetDbUserPassword()
+	return &ResetDbUserPasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ResetPassword 修改实例的管理员密码

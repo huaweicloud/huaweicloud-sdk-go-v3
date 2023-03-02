@@ -377,6 +377,10 @@ func GenReqDefForListSimCards() *def.HttpRequestDef {
 		WithName("FilterDowntimePeriod").
 		WithJsonTag("filter_downtime_period").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("OrderIds").
+		WithJsonTag("order_ids").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

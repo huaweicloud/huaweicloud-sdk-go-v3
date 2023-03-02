@@ -9,7 +9,7 @@ import (
 // 任务参数对象。
 type TaskParam struct {
 
-	// 参数名称,满足：[^\\>+<;#\";&?%=']{1,64}。
+	// 参数名称。
 	ParamName string `json:"param_name"`
 
 	// 参数类型。

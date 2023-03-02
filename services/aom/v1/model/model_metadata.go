@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// 任务节点形状信息。
+// 任务节点元数据。
 type Metadata struct {
 
-	// 形状,节点类型。
+	// 节点类型。
 	Type *string `json:"type,omitempty"`
 
 	// 配置信息。

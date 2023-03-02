@@ -713,6 +713,18 @@ func (i *ListScrumProjectStatusesInvoker) Invoke() (*model.ListScrumProjectStatu
 	}
 }
 
+type ListSpecIssueStayTimesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSpecIssueStayTimesInvoker) Invoke() (*model.ListSpecIssueStayTimesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSpecIssueStayTimesResponse), nil
+	}
+}
+
 type ListStatusStatisticInvoker struct {
 	*invoker.BaseInvoker
 }

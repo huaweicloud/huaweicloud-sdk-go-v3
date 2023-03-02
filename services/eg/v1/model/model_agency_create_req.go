@@ -32,6 +32,7 @@ type AgencyCreateReqType struct {
 type AgencyCreateReqTypeEnum struct {
 	TARGET_CONNECTION      AgencyCreateReqType
 	CUSTOM_SOURCE_RABBITMQ AgencyCreateReqType
+	EG_RESTORE_AGENCY      AgencyCreateReqType
 }
 
 func GetAgencyCreateReqTypeEnum() AgencyCreateReqTypeEnum {
@@ -41,6 +42,9 @@ func GetAgencyCreateReqTypeEnum() AgencyCreateReqTypeEnum {
 		},
 		CUSTOM_SOURCE_RABBITMQ: AgencyCreateReqType{
 			value: "CUSTOM_SOURCE_RABBITMQ",
+		},
+		EG_RESTORE_AGENCY: AgencyCreateReqType{
+			value: "EG_RESTORE_AGENCY",
 		},
 	}
 }

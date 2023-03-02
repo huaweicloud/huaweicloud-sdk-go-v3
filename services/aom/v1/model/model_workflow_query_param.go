@@ -15,7 +15,7 @@ type WorkflowQueryParam struct {
 	// 工作流分类，可以取值[\"cron\",\"event\",\"manual\"]。
 	Type *string `json:"type,omitempty"`
 
-	// 工作标签，最多支持10个。
+	// 工作流标签，最多支持10个。
 	Tags map[string]string `json:"tags,omitempty"`
 
 	// 查询当前的页数，默认值为0。
@@ -30,16 +30,16 @@ type WorkflowQueryParam struct {
 	// 工作流创建人。
 	CreateBy *string `json:"create_by,omitempty"`
 
-	// 排序字段，取值[\"create_time\"，\"last_execution_start_time\"]。
+	// 排序字段，取值[\"create_time\"，\"last_execution_start_time\"，\"update_time\"]。
 	SortField string `json:"sort_field"`
 
 	// 排序类型，取值[\"ASC\"，\"DESC\"]。
 	SortType string `json:"sort_type"`
 
-	// 更新时间，时间范围查询的开始时间。
+	// 时间范围查询的开始时间。
 	SearchTimeStart *int64 `json:"search_time_start,omitempty"`
 
-	// 更新时间，时间范围查询的结束时间。
+	// 时间范围查询的结束时间。
 	SearchTimeEnd *int64 `json:"search_time_end,omitempty"`
 
 	// 任务的状态 [\"success\",\"fail\",\"executing\",\"cancel\",\"waitExecute\",\"waitApproval\",\"approvalFailed\",\"pausing\",\"canceling\"]

@@ -20,6 +20,9 @@ type V2XEdgeListResponseDto struct {
 	// **参数说明**：设备编码。  **取值范围**：长度不超过64，只允许字母、数字、以及_等字符的组合。
 	Esn *string `json:"esn,omitempty"`
 
+	// **参数说明**：网络IP，例如127.0.0.1。
+	Ip *string `json:"ip,omitempty"`
+
 	// **参数说明**：安装位置编码，由用户自定义。  **取值范围**：长度不低于1不超过128，只允许字母、数字、下划线（_）的组合。
 	PositionDescription *string `json:"position_description,omitempty"`
 

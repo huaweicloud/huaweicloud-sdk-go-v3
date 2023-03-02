@@ -30,7 +30,7 @@ type ScriptVersion struct {
 	// 脚本引用次数，脚本被任务和模板引用的次数。默认是0次,引用次数未非负整数，不能出现负数
 	ReferenceNumber *int32 `json:"reference_number,omitempty"`
 
-	// 版本所在的脚本id,根据project_id、脚本名称的和，用guava计算hash(md5)方式获取，比如为：d648c682ef5750f700c050b41692b2b8
+	// 脚本id，根据UUID.randomUUID生成。
 	ScriptId *string `json:"script_id,omitempty"`
 
 	// 脚本语言，目前支持四种，分别是：SHELL BAT PYTHON POWER_SHELL
@@ -42,10 +42,10 @@ type ScriptVersion struct {
 	// 修改人
 	UpdateBy *string `json:"update_by,omitempty"`
 
-	// 实体的最后更新时间戳。 注意：执行创建/修补/删除操作时，update_time将更新。
+	// 实体的最后更新时间戳。 注意：执行创建/修改/删除操作时，update_time将更新。
 	UpdateTime *int64 `json:"update_time,omitempty"`
 
-	// 版本id，唯一标识，根据project_id、脚本名称、脚本版本号的和，用guava计算hash(md5)方式获取，比如为：d648c682ef5750f700c050b41692b2b8
+	// 版本id，根据UUID.randomUUID生成。
 	VersionId *string `json:"version_id,omitempty"`
 
 	// 脚本版本号，支持数字，下划线，大小写字母和小数点

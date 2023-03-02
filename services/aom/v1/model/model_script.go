@@ -22,7 +22,7 @@ type Script struct {
 	// 企业项目id
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	// 脚本id,根据project_id、脚本名称的和，用guava计算hash(md5)方式获取，比如为：c279d73a0b4e0f0927721e366c736880
+	// 脚本id，根据UUID.randomUUID生成。
 	Id *string `json:"id,omitempty"`
 
 	// 脚本名称，支持数字，下划线，大小写字母 ,中文

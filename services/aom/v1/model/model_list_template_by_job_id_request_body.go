@@ -18,10 +18,10 @@ type ListTemplateByJobIdRequestBody struct {
 	// 每页显示的条数
 	PageSize *int32 `json:"page_size,omitempty"`
 
-	// 需要排序的字段(默认为更新时间),支持字段有create_time
+	// 需要排序的字段(默认为更新时间),支持字段有name，create_time，update_time。
 	OrderByColumn string `json:"order_by_column"`
 
-	// 排序规则(默认降序) 传入升序或降序，升序：ASC，降序：DESC 排序规则(默认降序) 传入升序或降序，升序：ASC，降序：DESC
+	// 排序规则(默认降序) 传入升序或降序，升序：ASC，降序：DESC。
 	SortOrder *string `json:"sort_order,omitempty"`
 }
 

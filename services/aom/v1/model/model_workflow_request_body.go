@@ -33,8 +33,6 @@ type WorkflowRequestBody struct {
 	// 引用，参数引用。
 	Quote *[]string `json:"quote,omitempty"`
 
-	Trigger *Trigger `json:"trigger,omitempty"`
-
 	// 作业名称。
 	JobName *string `json:"job_name,omitempty"`
 

@@ -18,7 +18,7 @@ type WorkflowExecutionBrief struct {
 	// 流程实例执行状态
 	Status *string `json:"status,omitempty"`
 
-	// 流程实例创建时间，格式：UT时间戳
+	// 流程实例创建时间，格式：UTC时间戳
 	BeginTime *int64 `json:"begin_time,omitempty"`
 
 	// 流程实例结束时间，格式：UTC时间戳

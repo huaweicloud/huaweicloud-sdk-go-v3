@@ -73,7 +73,7 @@ type ChangeBaremetalNameResponsesServers struct {
 	// 扩展属性，裸金属服务器任务状态。例如：rebooting表示重启中reboot_started表示普通重启reboot_started_hard表示强制重启powering-off表示关机中powering-on表示开机中rebuilding表示重建中scheduling表示调度中deleting表示删除中
 	OSEXTSTStaskState *ChangeBaremetalNameResponsesServersOSEXTSTStaskState `json:"OS-EXT-STS:task_state,omitempty"`
 
-	// 扩展属性，裸金属服务器状态。例如：RUNNING表示运行中SHUTOFF表示关机SUSPENDED表示暂停REBOOT表示重启
+	// 扩展属性，裸金属服务器状态。例如：RUNNING表示运行中SHUTOFF表示关机REBOOT表示重启
 	OSEXTSTSvmState *ChangeBaremetalNameResponsesServersOSEXTSTSvmState `json:"OS-EXT-STS:vm_state,omitempty"`
 
 	// 扩展属性，裸金属服务器启动时间。时间戳格式为ISO 8601，例如：2019-05-25T03:40:25.000000
@@ -329,10 +329,9 @@ type ChangeBaremetalNameResponsesServersOSEXTSTSvmState struct {
 }
 
 type ChangeBaremetalNameResponsesServersOSEXTSTSvmStateEnum struct {
-	RUNNING   ChangeBaremetalNameResponsesServersOSEXTSTSvmState
-	SHUTOFF   ChangeBaremetalNameResponsesServersOSEXTSTSvmState
-	SUSPENDED ChangeBaremetalNameResponsesServersOSEXTSTSvmState
-	REBOOT    ChangeBaremetalNameResponsesServersOSEXTSTSvmState
+	RUNNING ChangeBaremetalNameResponsesServersOSEXTSTSvmState
+	SHUTOFF ChangeBaremetalNameResponsesServersOSEXTSTSvmState
+	REBOOT  ChangeBaremetalNameResponsesServersOSEXTSTSvmState
 }
 
 func GetChangeBaremetalNameResponsesServersOSEXTSTSvmStateEnum() ChangeBaremetalNameResponsesServersOSEXTSTSvmStateEnum {
@@ -342,9 +341,6 @@ func GetChangeBaremetalNameResponsesServersOSEXTSTSvmStateEnum() ChangeBaremetal
 		},
 		SHUTOFF: ChangeBaremetalNameResponsesServersOSEXTSTSvmState{
 			value: "SHUTOFF",
-		},
-		SUSPENDED: ChangeBaremetalNameResponsesServersOSEXTSTSvmState{
-			value: "SUSPENDED",
 		},
 		REBOOT: ChangeBaremetalNameResponsesServersOSEXTSTSvmState{
 			value: "REBOOT",

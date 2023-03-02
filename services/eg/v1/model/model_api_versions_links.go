@@ -7,8 +7,11 @@ import (
 )
 
 type ApiVersionsLinks struct {
+
+	// href属性
 	Href *string `json:"href,omitempty"`
 
+	// rel属性
 	Rel *string `json:"rel,omitempty"`
 }
 

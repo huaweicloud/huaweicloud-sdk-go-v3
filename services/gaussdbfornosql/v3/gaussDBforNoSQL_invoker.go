@@ -113,6 +113,18 @@ func (i *CreateConfigurationInvoker) Invoke() (*model.CreateConfigurationRespons
 	}
 }
 
+type CreateDbUserInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDbUserInvoker) Invoke() (*model.CreateDbUserResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDbUserResponse), nil
+	}
+}
+
 type CreateDisasterRecoveryInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -158,6 +170,18 @@ func (i *DeleteConfigurationInvoker) Invoke() (*model.DeleteConfigurationRespons
 		return nil, err
 	} else {
 		return result.(*model.DeleteConfigurationResponse), nil
+	}
+}
+
+type DeleteDbUserInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDbUserInvoker) Invoke() (*model.DeleteDbUserResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDbUserResponse), nil
 	}
 }
 
@@ -269,6 +293,18 @@ func (i *ListDatastoresInvoker) Invoke() (*model.ListDatastoresResponse, error) 
 	}
 }
 
+type ListDbUsersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDbUsersInvoker) Invoke() (*model.ListDbUsersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDbUsersResponse), nil
+	}
+}
+
 type ListDedicatedResourcesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -314,6 +350,18 @@ func (i *ListFlavorsInvoker) Invoke() (*model.ListFlavorsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListFlavorsResponse), nil
+	}
+}
+
+type ListInstanceDatabasesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceDatabasesInvoker) Invoke() (*model.ListInstanceDatabasesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceDatabasesResponse), nil
 	}
 }
 
@@ -413,6 +461,18 @@ func (i *ListSlowLogsInvoker) Invoke() (*model.ListSlowLogsResponse, error) {
 	}
 }
 
+type ModifyDbUserPrivilegeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifyDbUserPrivilegeInvoker) Invoke() (*model.ModifyDbUserPrivilegeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifyDbUserPrivilegeResponse), nil
+	}
+}
+
 type ModifyEpsQuotasInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -470,6 +530,18 @@ func (i *PauseResumeDataSynchronizationInvoker) Invoke() (*model.PauseResumeData
 		return nil, err
 	} else {
 		return result.(*model.PauseResumeDataSynchronizationResponse), nil
+	}
+}
+
+type ResetDbUserPasswordInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ResetDbUserPasswordInvoker) Invoke() (*model.ResetDbUserPasswordResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ResetDbUserPasswordResponse), nil
 	}
 }
 

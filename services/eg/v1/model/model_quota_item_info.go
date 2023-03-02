@@ -54,6 +54,7 @@ type QuotaItemInfoTypeEnum struct {
 	CONNECTION           QuotaItemInfoType
 	PRIVATE_ENDPOINT     QuotaItemInfoType
 	SOURCE_RABBITMQ      QuotaItemInfoType
+	SOURCE_ROCKETMQ      QuotaItemInfoType
 }
 
 func GetQuotaItemInfoTypeEnum() QuotaItemInfoTypeEnum {
@@ -87,6 +88,9 @@ func GetQuotaItemInfoTypeEnum() QuotaItemInfoTypeEnum {
 		},
 		SOURCE_RABBITMQ: QuotaItemInfoType{
 			value: "SOURCE_RABBITMQ",
+		},
+		SOURCE_ROCKETMQ: QuotaItemInfoType{
+			value: "SOURCE_ROCKETMQ",
 		},
 	}
 }

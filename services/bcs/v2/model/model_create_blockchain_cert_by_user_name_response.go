@@ -3,15 +3,22 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"io"
+
 	"strings"
 )
 
 // Response Object
 type CreateBlockchainCertByUserNameResponse struct {
+	HttpStatusCode int           `json:"-"`
+	Body           io.ReadCloser `json:"-" type:"stream"`
+}
 
-	// 请求成功的结果
-	Result         *string `json:"result,omitempty"`
-	HttpStatusCode int     `json:"-"`
+func (o CreateBlockchainCertByUserNameResponse) Consume(writer io.Writer) (int64, error) {
+	written, err := io.Copy(writer, o.Body)
+	defer o.Body.Close()
+
+	return written, err
 }
 
 func (o CreateBlockchainCertByUserNameResponse) String() string {

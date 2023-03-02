@@ -15,7 +15,7 @@ type StartPausingWorkflowExecutionsRequest struct {
 	// 工作流ID，唯一标识，根据project_id和workflow_name生成。
 	WorkflowId string `json:"workflow_id"`
 
-	// 工作流执行ID，xxxxxx。
+	// 工作流执行ID。
 	ExecutionId string `json:"execution_id"`
 
 	// 对当前节点的操作：失败重试，失败跳过，暂停继续。 restart可重新执行失败的节点，skip可跳过失败的节点进入下个节点的执行，continue可通过暂停节点进入下一个节点。

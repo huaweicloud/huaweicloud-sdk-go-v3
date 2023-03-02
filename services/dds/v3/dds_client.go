@@ -1678,6 +1678,27 @@ func (c *DdsClient) ShowRecyclePolicyInvoker(request *model.ShowRecyclePolicyReq
 	return &ShowRecyclePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowReplSetName 查询数据库复制集名称
+//
+// 查询数据库复制集名称
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdsClient) ShowReplSetName(request *model.ShowReplSetNameRequest) (*model.ShowReplSetNameResponse, error) {
+	requestDef := GenReqDefForShowReplSetName()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowReplSetNameResponse), nil
+	}
+}
+
+// ShowReplSetNameInvoker 查询数据库复制集名称
+func (c *DdsClient) ShowReplSetNameInvoker(request *model.ShowReplSetNameRequest) *ShowReplSetNameInvoker {
+	requestDef := GenReqDefForShowReplSetName()
+	return &ShowReplSetNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowSecondLevelMonitoringStatus 查询秒级监控配置
 //
 // 查询秒级监控配置。
@@ -2012,6 +2033,27 @@ func (c *DdsClient) UpdateInstanceRemark(request *model.UpdateInstanceRemarkRequ
 func (c *DdsClient) UpdateInstanceRemarkInvoker(request *model.UpdateInstanceRemarkRequest) *UpdateInstanceRemarkInvoker {
 	requestDef := GenReqDefForUpdateInstanceRemark()
 	return &UpdateInstanceRemarkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateReplSetName 修改数据库复制集名称
+//
+// 修改数据库复制集名称
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdsClient) UpdateReplSetName(request *model.UpdateReplSetNameRequest) (*model.UpdateReplSetNameResponse, error) {
+	requestDef := GenReqDefForUpdateReplSetName()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateReplSetNameResponse), nil
+	}
+}
+
+// UpdateReplSetNameInvoker 修改数据库复制集名称
+func (c *DdsClient) UpdateReplSetNameInvoker(request *model.UpdateReplSetNameRequest) *UpdateReplSetNameInvoker {
+	requestDef := GenReqDefForUpdateReplSetName()
+	return &UpdateReplSetNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateSecurityGroup 变更实例安全组

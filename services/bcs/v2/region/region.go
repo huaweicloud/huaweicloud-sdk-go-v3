@@ -20,6 +20,8 @@ var (
 		"https://bcs.ap-southeast-2.myhuaweicloud.com")
 	AP_SOUTHEAST_3 = region.NewRegion("ap-southeast-3",
 		"https://bcs.ap-southeast-3.myhuaweicloud.com")
+	AP_SOUTHEAST_4 = region.NewRegion("ap-southeast-4",
+		"https://bcs.ap-southeast-4.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
@@ -30,6 +32,7 @@ var staticFields = map[string]*region.Region{
 	"ap-southeast-1": AP_SOUTHEAST_1,
 	"ap-southeast-2": AP_SOUTHEAST_2,
 	"ap-southeast-3": AP_SOUTHEAST_3,
+	"ap-southeast-4": AP_SOUTHEAST_4,
 }
 
 var provider = region.DefaultProviderChain("BCS")

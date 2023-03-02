@@ -465,6 +465,9 @@ func (hc *HcHttpClient) getFieldInfo(reqDef *def.HttpRequestDef, item *def.Field
 }
 
 func isNoSuchHostErr(err error) bool {
+	if err == nil {
+		return false
+	}
 	var errInterface interface{} = err
 	if innerErr, ok := errInterface.(*url.Error); !ok {
 		return false

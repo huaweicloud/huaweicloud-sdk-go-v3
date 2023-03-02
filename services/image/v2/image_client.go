@@ -19,6 +19,195 @@ func ImageClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+// CreateImageHighresolutionMattingTask 创建任务
+//
+// Create Task
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ImageClient) CreateImageHighresolutionMattingTask(request *model.CreateImageHighresolutionMattingTaskRequest) (*model.CreateImageHighresolutionMattingTaskResponse, error) {
+	requestDef := GenReqDefForCreateImageHighresolutionMattingTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateImageHighresolutionMattingTaskResponse), nil
+	}
+}
+
+// CreateImageHighresolutionMattingTaskInvoker 创建任务
+func (c *ImageClient) CreateImageHighresolutionMattingTaskInvoker(request *model.CreateImageHighresolutionMattingTaskRequest) *CreateImageHighresolutionMattingTaskInvoker {
+	requestDef := GenReqDefForCreateImageHighresolutionMattingTask()
+	return &CreateImageHighresolutionMattingTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateImageToVideoTask 创建任务
+//
+// Create Task
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ImageClient) CreateImageToVideoTask(request *model.CreateImageToVideoTaskRequest) (*model.CreateImageToVideoTaskResponse, error) {
+	requestDef := GenReqDefForCreateImageToVideoTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateImageToVideoTaskResponse), nil
+	}
+}
+
+// CreateImageToVideoTaskInvoker 创建任务
+func (c *ImageClient) CreateImageToVideoTaskInvoker(request *model.CreateImageToVideoTaskRequest) *CreateImageToVideoTaskInvoker {
+	requestDef := GenReqDefForCreateImageToVideoTask()
+	return &CreateImageToVideoTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateImageTranslateTask 创建任务
+//
+// Create Task
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ImageClient) CreateImageTranslateTask(request *model.CreateImageTranslateTaskRequest) (*model.CreateImageTranslateTaskResponse, error) {
+	requestDef := GenReqDefForCreateImageTranslateTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateImageTranslateTaskResponse), nil
+	}
+}
+
+// CreateImageTranslateTaskInvoker 创建任务
+func (c *ImageClient) CreateImageTranslateTaskInvoker(request *model.CreateImageTranslateTaskRequest) *CreateImageTranslateTaskInvoker {
+	requestDef := GenReqDefForCreateImageTranslateTask()
+	return &CreateImageTranslateTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateVideoCoverAnalysisTask 创建任务
+//
+// 创建视频封面任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ImageClient) CreateVideoCoverAnalysisTask(request *model.CreateVideoCoverAnalysisTaskRequest) (*model.CreateVideoCoverAnalysisTaskResponse, error) {
+	requestDef := GenReqDefForCreateVideoCoverAnalysisTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateVideoCoverAnalysisTaskResponse), nil
+	}
+}
+
+// CreateVideoCoverAnalysisTaskInvoker 创建任务
+func (c *ImageClient) CreateVideoCoverAnalysisTaskInvoker(request *model.CreateVideoCoverAnalysisTaskRequest) *CreateVideoCoverAnalysisTaskInvoker {
+	requestDef := GenReqDefForCreateVideoCoverAnalysisTask()
+	return &CreateVideoCoverAnalysisTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateVideoCuttingTask 创建任务
+//
+// Create Task
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ImageClient) CreateVideoCuttingTask(request *model.CreateVideoCuttingTaskRequest) (*model.CreateVideoCuttingTaskResponse, error) {
+	requestDef := GenReqDefForCreateVideoCuttingTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateVideoCuttingTaskResponse), nil
+	}
+}
+
+// CreateVideoCuttingTaskInvoker 创建任务
+func (c *ImageClient) CreateVideoCuttingTaskInvoker(request *model.CreateVideoCuttingTaskRequest) *CreateVideoCuttingTaskInvoker {
+	requestDef := GenReqDefForCreateVideoCuttingTask()
+	return &CreateVideoCuttingTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateVideoShotSplitTask 创建任务
+//
+// 创建视频拆条任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ImageClient) CreateVideoShotSplitTask(request *model.CreateVideoShotSplitTaskRequest) (*model.CreateVideoShotSplitTaskResponse, error) {
+	requestDef := GenReqDefForCreateVideoShotSplitTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateVideoShotSplitTaskResponse), nil
+	}
+}
+
+// CreateVideoShotSplitTaskInvoker 创建任务
+func (c *ImageClient) CreateVideoShotSplitTaskInvoker(request *model.CreateVideoShotSplitTaskRequest) *CreateVideoShotSplitTaskInvoker {
+	requestDef := GenReqDefForCreateVideoShotSplitTask()
+	return &CreateVideoShotSplitTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateVideoSummarizationAnalysisTask 创建任务
+//
+// Create Task
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ImageClient) CreateVideoSummarizationAnalysisTask(request *model.CreateVideoSummarizationAnalysisTaskRequest) (*model.CreateVideoSummarizationAnalysisTaskResponse, error) {
+	requestDef := GenReqDefForCreateVideoSummarizationAnalysisTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateVideoSummarizationAnalysisTaskResponse), nil
+	}
+}
+
+// CreateVideoSummarizationAnalysisTaskInvoker 创建任务
+func (c *ImageClient) CreateVideoSummarizationAnalysisTaskInvoker(request *model.CreateVideoSummarizationAnalysisTaskRequest) *CreateVideoSummarizationAnalysisTaskInvoker {
+	requestDef := GenReqDefForCreateVideoSummarizationAnalysisTask()
+	return &CreateVideoSummarizationAnalysisTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateVideoSynthesisTask 创建任务
+//
+// Create Task
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ImageClient) CreateVideoSynthesisTask(request *model.CreateVideoSynthesisTaskRequest) (*model.CreateVideoSynthesisTaskResponse, error) {
+	requestDef := GenReqDefForCreateVideoSynthesisTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateVideoSynthesisTaskResponse), nil
+	}
+}
+
+// CreateVideoSynthesisTaskInvoker 创建任务
+func (c *ImageClient) CreateVideoSynthesisTaskInvoker(request *model.CreateVideoSynthesisTaskRequest) *CreateVideoSynthesisTaskInvoker {
+	requestDef := GenReqDefForCreateVideoSynthesisTask()
+	return &CreateVideoSynthesisTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateVideoTranslateTask 创建任务
+//
+// Create Task
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ImageClient) CreateVideoTranslateTask(request *model.CreateVideoTranslateTaskRequest) (*model.CreateVideoTranslateTaskResponse, error) {
+	requestDef := GenReqDefForCreateVideoTranslateTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateVideoTranslateTaskResponse), nil
+	}
+}
+
+// CreateVideoTranslateTaskInvoker 创建任务
+func (c *ImageClient) CreateVideoTranslateTaskInvoker(request *model.CreateVideoTranslateTaskRequest) *CreateVideoTranslateTaskInvoker {
+	requestDef := GenReqDefForCreateVideoTranslateTask()
+	return &CreateVideoTranslateTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RunCelebrityRecognition 名人识别
 //
 // 分析并识别图片中包含的政治人物、明星及网红人物，返回人物信息及人脸坐标。
@@ -187,6 +376,90 @@ func (c *ImageClient) RunImageTaggingInvoker(request *model.RunImageTaggingReque
 	return &RunImageTaggingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RunImageWisedesignColorfilter 智能设计图像滤镜
+//
+// 智能设计图像滤镜服务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ImageClient) RunImageWisedesignColorfilter(request *model.RunImageWisedesignColorfilterRequest) (*model.RunImageWisedesignColorfilterResponse, error) {
+	requestDef := GenReqDefForRunImageWisedesignColorfilter()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RunImageWisedesignColorfilterResponse), nil
+	}
+}
+
+// RunImageWisedesignColorfilterInvoker 智能设计图像滤镜
+func (c *ImageClient) RunImageWisedesignColorfilterInvoker(request *model.RunImageWisedesignColorfilterRequest) *RunImageWisedesignColorfilterInvoker {
+	requestDef := GenReqDefForRunImageWisedesignColorfilter()
+	return &RunImageWisedesignColorfilterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RunImageWisedesignCombine 智能设计图像合图
+//
+// 智能设计图像合图服务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ImageClient) RunImageWisedesignCombine(request *model.RunImageWisedesignCombineRequest) (*model.RunImageWisedesignCombineResponse, error) {
+	requestDef := GenReqDefForRunImageWisedesignCombine()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RunImageWisedesignCombineResponse), nil
+	}
+}
+
+// RunImageWisedesignCombineInvoker 智能设计图像合图
+func (c *ImageClient) RunImageWisedesignCombineInvoker(request *model.RunImageWisedesignCombineRequest) *RunImageWisedesignCombineInvoker {
+	requestDef := GenReqDefForRunImageWisedesignCombine()
+	return &RunImageWisedesignCombineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RunImageWisedesignCrop 智能设计图像裁剪
+//
+// 智能设计图像裁剪服务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ImageClient) RunImageWisedesignCrop(request *model.RunImageWisedesignCropRequest) (*model.RunImageWisedesignCropResponse, error) {
+	requestDef := GenReqDefForRunImageWisedesignCrop()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RunImageWisedesignCropResponse), nil
+	}
+}
+
+// RunImageWisedesignCropInvoker 智能设计图像裁剪
+func (c *ImageClient) RunImageWisedesignCropInvoker(request *model.RunImageWisedesignCropRequest) *RunImageWisedesignCropInvoker {
+	requestDef := GenReqDefForRunImageWisedesignCrop()
+	return &RunImageWisedesignCropInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RunImageWisedesignInpainting 智能设计图像修复
+//
+// 智能设计图像修复服务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ImageClient) RunImageWisedesignInpainting(request *model.RunImageWisedesignInpaintingRequest) (*model.RunImageWisedesignInpaintingResponse, error) {
+	requestDef := GenReqDefForRunImageWisedesignInpainting()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RunImageWisedesignInpaintingResponse), nil
+	}
+}
+
+// RunImageWisedesignInpaintingInvoker 智能设计图像修复
+func (c *ImageClient) RunImageWisedesignInpaintingInvoker(request *model.RunImageWisedesignInpaintingRequest) *RunImageWisedesignInpaintingInvoker {
+	requestDef := GenReqDefForRunImageWisedesignInpainting()
+	return &RunImageWisedesignInpaintingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RunQueryCustomTags 查询媒资图像标签
 //
 // 用于用户自查是否存在自定义的标签。
@@ -227,4 +500,193 @@ func (c *ImageClient) RunRecaptureDetect(request *model.RunRecaptureDetectReques
 func (c *ImageClient) RunRecaptureDetectInvoker(request *model.RunRecaptureDetectRequest) *RunRecaptureDetectInvoker {
 	requestDef := GenReqDefForRunRecaptureDetect()
 	return &RunRecaptureDetectInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowImageHighresolutionMattingTask 查询任务
+//
+// show task
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ImageClient) ShowImageHighresolutionMattingTask(request *model.ShowImageHighresolutionMattingTaskRequest) (*model.ShowImageHighresolutionMattingTaskResponse, error) {
+	requestDef := GenReqDefForShowImageHighresolutionMattingTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowImageHighresolutionMattingTaskResponse), nil
+	}
+}
+
+// ShowImageHighresolutionMattingTaskInvoker 查询任务
+func (c *ImageClient) ShowImageHighresolutionMattingTaskInvoker(request *model.ShowImageHighresolutionMattingTaskRequest) *ShowImageHighresolutionMattingTaskInvoker {
+	requestDef := GenReqDefForShowImageHighresolutionMattingTask()
+	return &ShowImageHighresolutionMattingTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowImageToVideoTask 查询任务
+//
+// show task
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ImageClient) ShowImageToVideoTask(request *model.ShowImageToVideoTaskRequest) (*model.ShowImageToVideoTaskResponse, error) {
+	requestDef := GenReqDefForShowImageToVideoTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowImageToVideoTaskResponse), nil
+	}
+}
+
+// ShowImageToVideoTaskInvoker 查询任务
+func (c *ImageClient) ShowImageToVideoTaskInvoker(request *model.ShowImageToVideoTaskRequest) *ShowImageToVideoTaskInvoker {
+	requestDef := GenReqDefForShowImageToVideoTask()
+	return &ShowImageToVideoTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowImageTranslateTask 查询任务
+//
+// show task
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ImageClient) ShowImageTranslateTask(request *model.ShowImageTranslateTaskRequest) (*model.ShowImageTranslateTaskResponse, error) {
+	requestDef := GenReqDefForShowImageTranslateTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowImageTranslateTaskResponse), nil
+	}
+}
+
+// ShowImageTranslateTaskInvoker 查询任务
+func (c *ImageClient) ShowImageTranslateTaskInvoker(request *model.ShowImageTranslateTaskRequest) *ShowImageTranslateTaskInvoker {
+	requestDef := GenReqDefForShowImageTranslateTask()
+	return &ShowImageTranslateTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowVideoCoverAnalysisTask 查询任务
+//
+// 查询视频封面任务完成状态
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ImageClient) ShowVideoCoverAnalysisTask(request *model.ShowVideoCoverAnalysisTaskRequest) (*model.ShowVideoCoverAnalysisTaskResponse, error) {
+	requestDef := GenReqDefForShowVideoCoverAnalysisTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowVideoCoverAnalysisTaskResponse), nil
+	}
+}
+
+// ShowVideoCoverAnalysisTaskInvoker 查询任务
+func (c *ImageClient) ShowVideoCoverAnalysisTaskInvoker(request *model.ShowVideoCoverAnalysisTaskRequest) *ShowVideoCoverAnalysisTaskInvoker {
+	requestDef := GenReqDefForShowVideoCoverAnalysisTask()
+	return &ShowVideoCoverAnalysisTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowVideoCuttingTask 查询任务
+//
+// show task
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ImageClient) ShowVideoCuttingTask(request *model.ShowVideoCuttingTaskRequest) (*model.ShowVideoCuttingTaskResponse, error) {
+	requestDef := GenReqDefForShowVideoCuttingTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowVideoCuttingTaskResponse), nil
+	}
+}
+
+// ShowVideoCuttingTaskInvoker 查询任务
+func (c *ImageClient) ShowVideoCuttingTaskInvoker(request *model.ShowVideoCuttingTaskRequest) *ShowVideoCuttingTaskInvoker {
+	requestDef := GenReqDefForShowVideoCuttingTask()
+	return &ShowVideoCuttingTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowVideoShotSplitTask 查询任务
+//
+// 查询拆条任务状态
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ImageClient) ShowVideoShotSplitTask(request *model.ShowVideoShotSplitTaskRequest) (*model.ShowVideoShotSplitTaskResponse, error) {
+	requestDef := GenReqDefForShowVideoShotSplitTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowVideoShotSplitTaskResponse), nil
+	}
+}
+
+// ShowVideoShotSplitTaskInvoker 查询任务
+func (c *ImageClient) ShowVideoShotSplitTaskInvoker(request *model.ShowVideoShotSplitTaskRequest) *ShowVideoShotSplitTaskInvoker {
+	requestDef := GenReqDefForShowVideoShotSplitTask()
+	return &ShowVideoShotSplitTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowVideoSummarizationAnalysisTask 查询任务
+//
+// show task
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ImageClient) ShowVideoSummarizationAnalysisTask(request *model.ShowVideoSummarizationAnalysisTaskRequest) (*model.ShowVideoSummarizationAnalysisTaskResponse, error) {
+	requestDef := GenReqDefForShowVideoSummarizationAnalysisTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowVideoSummarizationAnalysisTaskResponse), nil
+	}
+}
+
+// ShowVideoSummarizationAnalysisTaskInvoker 查询任务
+func (c *ImageClient) ShowVideoSummarizationAnalysisTaskInvoker(request *model.ShowVideoSummarizationAnalysisTaskRequest) *ShowVideoSummarizationAnalysisTaskInvoker {
+	requestDef := GenReqDefForShowVideoSummarizationAnalysisTask()
+	return &ShowVideoSummarizationAnalysisTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowVideoSynthesisTask 查询任务
+//
+// show task
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ImageClient) ShowVideoSynthesisTask(request *model.ShowVideoSynthesisTaskRequest) (*model.ShowVideoSynthesisTaskResponse, error) {
+	requestDef := GenReqDefForShowVideoSynthesisTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowVideoSynthesisTaskResponse), nil
+	}
+}
+
+// ShowVideoSynthesisTaskInvoker 查询任务
+func (c *ImageClient) ShowVideoSynthesisTaskInvoker(request *model.ShowVideoSynthesisTaskRequest) *ShowVideoSynthesisTaskInvoker {
+	requestDef := GenReqDefForShowVideoSynthesisTask()
+	return &ShowVideoSynthesisTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowVideoTranslateTask 查询任务
+//
+// show task
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ImageClient) ShowVideoTranslateTask(request *model.ShowVideoTranslateTaskRequest) (*model.ShowVideoTranslateTaskResponse, error) {
+	requestDef := GenReqDefForShowVideoTranslateTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowVideoTranslateTaskResponse), nil
+	}
+}
+
+// ShowVideoTranslateTaskInvoker 查询任务
+func (c *ImageClient) ShowVideoTranslateTaskInvoker(request *model.ShowVideoTranslateTaskRequest) *ShowVideoTranslateTaskInvoker {
+	requestDef := GenReqDefForShowVideoTranslateTask()
+	return &ShowVideoTranslateTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

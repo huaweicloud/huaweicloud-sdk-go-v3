@@ -8,7 +8,7 @@ import (
 
 type ExternalKeyMessage struct {
 
-	// 第三方保存在codehub的关键信息
+	// 第三方保存在代码托管的关键信息
 	ExternalKeyMessage *string `json:"external_key_message,omitempty"`
 
 	// 外部服务名称

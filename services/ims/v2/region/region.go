@@ -42,6 +42,8 @@ var (
 		"https://ims.na-mexico-1.myhuaweicloud.com")
 	AP_SOUTHEAST_4 = region.NewRegion("ap-southeast-4",
 		"https://ims.ap-southeast-4.myhuaweicloud.com")
+	CN_SOUTH_4 = region.NewRegion("cn-south-4",
+		"https://ims.cn-south-4.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
@@ -63,6 +65,7 @@ var staticFields = map[string]*region.Region{
 	"la-north-2":     LA_NORTH_2,
 	"na-mexico-1":    NA_MEXICO_1,
 	"ap-southeast-4": AP_SOUTHEAST_4,
+	"cn-south-4":     CN_SOUTH_4,
 }
 
 var provider = region.DefaultProviderChain("IMS")

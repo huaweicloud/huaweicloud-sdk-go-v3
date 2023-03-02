@@ -103,7 +103,7 @@ func (c *AomClient) ListAllJobByNameInvoker(request *model.ListAllJobByNameReque
 	return &ListAllJobByNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListAllScriptByName 脚本主页查询
+// ListAllScriptByName 脚本查询
 //
 // 该接口是脚本主页查询，可指定脚本名称和脚本创建人进行精确查询，返回包含脚本基本信息的列表数据。（注：接口目前开放的region为：上海一）。
 //
@@ -118,13 +118,13 @@ func (c *AomClient) ListAllScriptByName(request *model.ListAllScriptByNameReques
 	}
 }
 
-// ListAllScriptByNameInvoker 脚本主页查询
+// ListAllScriptByNameInvoker 脚本查询
 func (c *AomClient) ListAllScriptByNameInvoker(request *model.ListAllScriptByNameRequest) *ListAllScriptByNameInvoker {
 	requestDef := GenReqDefForListAllScriptByName()
 	return &ListAllScriptByNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListAllVersionByVersionId 脚本管理主页查询，版本管理查询
+// ListAllVersionByVersionId 脚本版本查询
 //
 // 该接口可查询指定脚本ID下的所有版本，返回该名称的脚本版本列表信息。（注：接口目前开放的region为：上海一）。
 //
@@ -139,7 +139,7 @@ func (c *AomClient) ListAllVersionByVersionId(request *model.ListAllVersionByVer
 	}
 }
 
-// ListAllVersionByVersionIdInvoker 脚本管理主页查询，版本管理查询
+// ListAllVersionByVersionIdInvoker 脚本版本查询
 func (c *AomClient) ListAllVersionByVersionIdInvoker(request *model.ListAllVersionByVersionIdRequest) *ListAllVersionByVersionIdInvoker {
 	requestDef := GenReqDefForListAllVersionByVersionId()
 	return &ListAllVersionByVersionIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

@@ -19,6 +19,27 @@ func EgClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+// CheckPutEvents 预校验指定事件源发布事件成功
+//
+// 发布事件到事件源成功需要有订阅等条件，预先校验
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EgClient) CheckPutEvents(request *model.CheckPutEventsRequest) (*model.CheckPutEventsResponse, error) {
+	requestDef := GenReqDefForCheckPutEvents()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckPutEventsResponse), nil
+	}
+}
+
+// CheckPutEventsInvoker 预校验指定事件源发布事件成功
+func (c *EgClient) CheckPutEventsInvoker(request *model.CheckPutEventsRequest) *CheckPutEventsInvoker {
+	requestDef := GenReqDefForCheckPutEvents()
+	return &CheckPutEventsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateAgencies 创建服务委托
 //
 // 按照业务场景，一键创建服务委托授权
@@ -84,7 +105,7 @@ func (c *EgClient) CreateConnectionInvoker(request *model.CreateConnectionReques
 
 // CreateEndpoint 创建访问端点
 //
-// create endpoint
+// 创建访问端点
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) CreateEndpoint(request *model.CreateEndpointRequest) (*model.CreateEndpointResponse, error) {
@@ -252,6 +273,7 @@ func (c *EgClient) DeleteConnectionInvoker(request *model.DeleteConnectionReques
 
 // DeleteEndpoint 删除访问端点
 //
+// 删除访问端点
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) DeleteEndpoint(request *model.DeleteEndpointRequest) (*model.DeleteEndpointResponse, error) {
@@ -398,6 +420,7 @@ func (c *EgClient) DiscoverEventSchemaFromDataInvoker(request *model.DiscoverEve
 
 // ListAgencies 查询服务委托
 //
+// 查询服务委托
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ListAgencies(request *model.ListAgenciesRequest) (*model.ListAgenciesResponse, error) {
@@ -460,7 +483,7 @@ func (c *EgClient) ListConnectionsInvoker(request *model.ListConnectionsRequest)
 
 // ListEndpoints 查询访问端点
 //
-// list all endpoints
+// 查询访问端点
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ListEndpoints(request *model.ListEndpointsRequest) (*model.ListEndpointsResponse, error) {
@@ -563,6 +586,27 @@ func (c *EgClient) ListEventTargetInvoker(request *model.ListEventTargetRequest)
 	return &ListEventTargetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListPubMetrics 查询事件通道监控指标数据
+//
+// 查询事件通道监控指标数据
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EgClient) ListPubMetrics(request *model.ListPubMetricsRequest) (*model.ListPubMetricsResponse, error) {
+	requestDef := GenReqDefForListPubMetrics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPubMetricsResponse), nil
+	}
+}
+
+// ListPubMetricsInvoker 查询事件通道监控指标数据
+func (c *EgClient) ListPubMetricsInvoker(request *model.ListPubMetricsRequest) *ListPubMetricsInvoker {
+	requestDef := GenReqDefForListPubMetrics()
+	return &ListPubMetricsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListQuotas 查询配额
 //
 // 查询当前租户的配额，未特殊配置过的会返回默认配额
@@ -582,6 +626,27 @@ func (c *EgClient) ListQuotas(request *model.ListQuotasRequest) (*model.ListQuot
 func (c *EgClient) ListQuotasInvoker(request *model.ListQuotasRequest) *ListQuotasInvoker {
 	requestDef := GenReqDefForListQuotas()
 	return &ListQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSubMetrics 查询事件订阅监控指标数据
+//
+// 查询事件订阅监控指标数据
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EgClient) ListSubMetrics(request *model.ListSubMetricsRequest) (*model.ListSubMetricsResponse, error) {
+	requestDef := GenReqDefForListSubMetrics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSubMetricsResponse), nil
+	}
+}
+
+// ListSubMetricsInvoker 查询事件订阅监控指标数据
+func (c *EgClient) ListSubMetricsInvoker(request *model.ListSubMetricsRequest) *ListSubMetricsInvoker {
+	requestDef := GenReqDefForListSubMetrics()
+	return &ListSubMetricsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListSubscriptions 查询事件订阅列表
@@ -605,7 +670,7 @@ func (c *EgClient) ListSubscriptionsInvoker(request *model.ListSubscriptionsRequ
 	return &ListSubscriptionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListTriggers 查询事件订阅列表
+// ListTriggers 查询单个函数的EG触发器
 //
 // 查询触发器，支持指定函数urn。一个以函数urn为目标的订阅为一个触发器。
 //
@@ -620,10 +685,31 @@ func (c *EgClient) ListTriggers(request *model.ListTriggersRequest) (*model.List
 	}
 }
 
-// ListTriggersInvoker 查询事件订阅列表
+// ListTriggersInvoker 查询单个函数的EG触发器
 func (c *EgClient) ListTriggersInvoker(request *model.ListTriggersRequest) *ListTriggersInvoker {
 	requestDef := GenReqDefForListTriggers()
 	return &ListTriggersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListWorkflowTriggers 查询单个函数流的EG触发器
+//
+// 查询触发器，支持指定函数流id。一个以函数流id为目标的订阅为一个触发器。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EgClient) ListWorkflowTriggers(request *model.ListWorkflowTriggersRequest) (*model.ListWorkflowTriggersResponse, error) {
+	requestDef := GenReqDefForListWorkflowTriggers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListWorkflowTriggersResponse), nil
+	}
+}
+
+// ListWorkflowTriggersInvoker 查询单个函数流的EG触发器
+func (c *EgClient) ListWorkflowTriggersInvoker(request *model.ListWorkflowTriggersRequest) *ListWorkflowTriggersInvoker {
+	requestDef := GenReqDefForListWorkflowTriggers()
+	return &ListWorkflowTriggersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // OperateSubscription 操作事件订阅
@@ -670,6 +756,7 @@ func (c *EgClient) PutEventsInvoker(request *model.PutEventsRequest) *PutEventsI
 
 // ShowDetailOfChannel 查询事件通道详情
 //
+// 查询指定事件通道详情
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ShowDetailOfChannel(request *model.ShowDetailOfChannelRequest) (*model.ShowDetailOfChannelResponse, error) {
@@ -690,6 +777,7 @@ func (c *EgClient) ShowDetailOfChannelInvoker(request *model.ShowDetailOfChannel
 
 // ShowDetailOfConnection 查询目标连接详情
 //
+// 查询目标连接详情
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ShowDetailOfConnection(request *model.ShowDetailOfConnectionRequest) (*model.ShowDetailOfConnectionResponse, error) {
@@ -857,7 +945,7 @@ func (c *EgClient) UpdateConnectionInvoker(request *model.UpdateConnectionReques
 
 // UpdateEndpoint 更新访问端点
 //
-// update endpoint
+// 更新访问端点
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) UpdateEndpoint(request *model.UpdateEndpointRequest) (*model.UpdateEndpointResponse, error) {
@@ -1000,4 +1088,25 @@ func (c *EgClient) ListApiVersions(request *model.ListApiVersionsRequest) (*mode
 func (c *EgClient) ListApiVersionsInvoker(request *model.ListApiVersionsRequest) *ListApiVersionsInvoker {
 	requestDef := GenReqDefForListApiVersions()
 	return &ListApiVersionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListObsBuckets 获取obs桶列表
+//
+// 获取obs桶列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EgClient) ListObsBuckets(request *model.ListObsBucketsRequest) (*model.ListObsBucketsResponse, error) {
+	requestDef := GenReqDefForListObsBuckets()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListObsBucketsResponse), nil
+	}
+}
+
+// ListObsBucketsInvoker 获取obs桶列表
+func (c *EgClient) ListObsBucketsInvoker(request *model.ListObsBucketsRequest) *ListObsBucketsInvoker {
+	requestDef := GenReqDefForListObsBuckets()
+	return &ListObsBucketsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

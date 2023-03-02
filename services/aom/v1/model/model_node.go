@@ -15,7 +15,7 @@ type Node struct {
 	// 节点类型。
 	Category *string `json:"category,omitempty"`
 
-	// 节点描述,节点上任务的描述。
+	// 节点描述。
 	Description *string `json:"description,omitempty"`
 
 	// 节点id

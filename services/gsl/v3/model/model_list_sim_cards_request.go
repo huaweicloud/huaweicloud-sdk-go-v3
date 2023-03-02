@@ -83,6 +83,9 @@ type ListSimCardsRequest struct {
 
 	// 是否过滤停机保号的卡
 	FilterDowntimePeriod *bool `json:"filter_downtime_period,omitempty"`
+
+	// 订单批次号集合
+	OrderIds *[]int64 `json:"order_ids,omitempty"`
 }
 
 func (o ListSimCardsRequest) String() string {

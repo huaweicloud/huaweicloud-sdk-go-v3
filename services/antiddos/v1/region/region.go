@@ -42,6 +42,8 @@ var (
 		"https://antiddos.la-north-2.myhuaweicloud.com")
 	CN_NORTH_9 = region.NewRegion("cn-north-9",
 		"https://antiddos.cn-north-9.myhuaweicloud.com")
+	AP_SOUTHEAST_4 = region.NewRegion("ap-southeast-4",
+		"https://antiddos.ap-southeast-4.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
@@ -63,6 +65,7 @@ var staticFields = map[string]*region.Region{
 	"na-mexico-1":    NA_MEXICO_1,
 	"la-north-2":     LA_NORTH_2,
 	"cn-north-9":     CN_NORTH_9,
+	"ap-southeast-4": AP_SOUTHEAST_4,
 }
 
 var provider = region.DefaultProviderChain("ANTIDDOS")

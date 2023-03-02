@@ -15,10 +15,10 @@ type ConnectionCreateReq struct {
 	Description *string `json:"description,omitempty"`
 
 	// 待连接的VPC ID
-	VpcId *string `json:"vpc_id,omitempty"`
+	VpcId string `json:"vpc_id"`
 
 	// 待连接的子网ID
-	SubnetId *string `json:"subnet_id,omitempty"`
+	SubnetId string `json:"subnet_id"`
 }
 
 func (o ConnectionCreateReq) String() string {

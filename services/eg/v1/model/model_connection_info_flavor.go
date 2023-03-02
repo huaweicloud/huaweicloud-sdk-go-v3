@@ -9,6 +9,7 @@ import (
 	"strings"
 )
 
+// 规格
 type ConnectionInfoFlavor struct {
 
 	// 规格名称

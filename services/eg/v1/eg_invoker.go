@@ -5,6 +5,18 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/eg/v1/model"
 )
 
+type CheckPutEventsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckPutEventsInvoker) Invoke() (*model.CheckPutEventsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckPutEventsResponse), nil
+	}
+}
+
 type CreateAgenciesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -317,6 +329,18 @@ func (i *ListEventTargetInvoker) Invoke() (*model.ListEventTargetResponse, error
 	}
 }
 
+type ListPubMetricsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPubMetricsInvoker) Invoke() (*model.ListPubMetricsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPubMetricsResponse), nil
+	}
+}
+
 type ListQuotasInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -326,6 +350,18 @@ func (i *ListQuotasInvoker) Invoke() (*model.ListQuotasResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListQuotasResponse), nil
+	}
+}
+
+type ListSubMetricsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSubMetricsInvoker) Invoke() (*model.ListSubMetricsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSubMetricsResponse), nil
 	}
 }
 
@@ -350,6 +386,18 @@ func (i *ListTriggersInvoker) Invoke() (*model.ListTriggersResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListTriggersResponse), nil
+	}
+}
+
+type ListWorkflowTriggersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListWorkflowTriggersInvoker) Invoke() (*model.ListWorkflowTriggersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListWorkflowTriggersResponse), nil
 	}
 }
 
@@ -566,5 +614,17 @@ func (i *ListApiVersionsInvoker) Invoke() (*model.ListApiVersionsResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ListApiVersionsResponse), nil
+	}
+}
+
+type ListObsBucketsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListObsBucketsInvoker) Invoke() (*model.ListObsBucketsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListObsBucketsResponse), nil
 	}
 }

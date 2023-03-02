@@ -40,6 +40,7 @@ type ListQuotasRequestTypeEnum struct {
 	CONNECTION           ListQuotasRequestType
 	PRIVATE_ENDPOINT     ListQuotasRequestType
 	SOURCE_RABBITMQ      ListQuotasRequestType
+	SOURCE_ROCKETMQ      ListQuotasRequestType
 }
 
 func GetListQuotasRequestTypeEnum() ListQuotasRequestTypeEnum {
@@ -73,6 +74,9 @@ func GetListQuotasRequestTypeEnum() ListQuotasRequestTypeEnum {
 		},
 		SOURCE_RABBITMQ: ListQuotasRequestType{
 			value: "SOURCE_RABBITMQ",
+		},
+		SOURCE_ROCKETMQ: ListQuotasRequestType{
+			value: "SOURCE_ROCKETMQ",
 		},
 	}
 }

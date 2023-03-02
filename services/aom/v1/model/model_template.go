@@ -10,7 +10,7 @@ import (
 type Template struct {
 	ApproveInfo *ApproveInfo `json:"approve_info,omitempty"`
 
-	// 模板创人，从接口调用传入的token中获取。
+	// 模板创建人，从接口调用传入的token中获取。
 	CreateBy *string `json:"create_by,omitempty"`
 
 	// 模板创建时间，为utc时间毫秒数。

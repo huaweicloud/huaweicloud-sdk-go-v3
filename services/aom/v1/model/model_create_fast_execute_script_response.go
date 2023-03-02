@@ -9,7 +9,7 @@ import (
 // Response Object
 type CreateFastExecuteScriptResponse struct {
 
-	// 响应体。
+	// 工作流执行id。
 	ExecutionId    *string `json:"execution_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

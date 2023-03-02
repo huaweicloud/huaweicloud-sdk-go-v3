@@ -521,6 +521,18 @@ func (i *ListSlowlogStatisticsInvoker) Invoke() (*model.ListSlowlogStatisticsRes
 	}
 }
 
+type ListSslCertDownloadLinkInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSslCertDownloadLinkInvoker) Invoke() (*model.ListSslCertDownloadLinkResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSslCertDownloadLinkResponse), nil
+	}
+}
+
 type ListStorageTypesInvoker struct {
 	*invoker.BaseInvoker
 }

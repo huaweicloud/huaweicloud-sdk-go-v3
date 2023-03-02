@@ -24,9 +24,9 @@ type SubscriptionTarget struct {
 	ConnectionId *string `json:"connection_id,omitempty"`
 
 	// 订阅的事件目标参数列表，该字段序列化后总长度不超过1024字节
-	Detail *interface{} `json:"detail,omitempty"`
+	Detail *interface{} `json:"detail"`
 
-	Transform *SubscriptionTargetTransform `json:"transform"`
+	Transform *TransForm `json:"transform"`
 }
 
 func (o SubscriptionTarget) String() string {

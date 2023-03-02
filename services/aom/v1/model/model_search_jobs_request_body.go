@@ -18,7 +18,7 @@ type SearchJobsRequestBody struct {
 	// 每页显示的条数，每页查询的总条数，page_size为正整数，不能是0和负数，当输入参数为负数，0和大于101，自动修正参数为10，默认值是10（用户不传时，值是10）。
 	PageSize *int32 `json:"page_size,omitempty"`
 
-	// 需要排序的字段(默认为更新时间),支持字段有create_time。
+	// 需要排序的字段(默认为更新时间),支持字段有name,create_time,update_time。
 	OrderByColumn string `json:"order_by_column"`
 
 	// 排序规则(默认降序) 传入升序或降序，升序：ASC，降序：DESC。

@@ -1101,6 +1101,91 @@ func (c *IoTDAClient) ShowDeviceMessageInvoker(request *model.ShowDeviceMessageR
 	return &ShowDeviceMessageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateOtaPackage 创建OTA升级包
+//
+// 用户可调用此接口创建升级包关联OBS对象
+// 使用前提：使用该API需要您授权设备接入服务(IoTDA)的实例访问对象存储服务(OBS)以及 密钥管理服务(KMS Administrator)的权限。在“[[统一身份认证服务（IAM）](https://console.huaweicloud.com/iam/?region&#x3D;cn-north-4#/iam/agencies)](tag:hws) - 委托”中将委托名称为iotda_admin_trust的委托授权KMS Administrator和OBS OperateAccess
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) CreateOtaPackage(request *model.CreateOtaPackageRequest) (*model.CreateOtaPackageResponse, error) {
+	requestDef := GenReqDefForCreateOtaPackage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateOtaPackageResponse), nil
+	}
+}
+
+// CreateOtaPackageInvoker 创建OTA升级包
+func (c *IoTDAClient) CreateOtaPackageInvoker(request *model.CreateOtaPackageRequest) *CreateOtaPackageInvoker {
+	requestDef := GenReqDefForCreateOtaPackage()
+	return &CreateOtaPackageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteOtaPackage 删除OTA升级包
+//
+// 只删除升级包信息，不会删除OBS上对象
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) DeleteOtaPackage(request *model.DeleteOtaPackageRequest) (*model.DeleteOtaPackageResponse, error) {
+	requestDef := GenReqDefForDeleteOtaPackage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteOtaPackageResponse), nil
+	}
+}
+
+// DeleteOtaPackageInvoker 删除OTA升级包
+func (c *IoTDAClient) DeleteOtaPackageInvoker(request *model.DeleteOtaPackageRequest) *DeleteOtaPackageInvoker {
+	requestDef := GenReqDefForDeleteOtaPackage()
+	return &DeleteOtaPackageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListOtaPackageInfo 查询OTA升级包列表
+//
+// 查询OTA升级包列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) ListOtaPackageInfo(request *model.ListOtaPackageInfoRequest) (*model.ListOtaPackageInfoResponse, error) {
+	requestDef := GenReqDefForListOtaPackageInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListOtaPackageInfoResponse), nil
+	}
+}
+
+// ListOtaPackageInfoInvoker 查询OTA升级包列表
+func (c *IoTDAClient) ListOtaPackageInfoInvoker(request *model.ListOtaPackageInfoRequest) *ListOtaPackageInfoInvoker {
+	requestDef := GenReqDefForListOtaPackageInfo()
+	return &ListOtaPackageInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowOtaPackage 获取OTA升级包详情
+//
+// 获取OTA升级包详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) ShowOtaPackage(request *model.ShowOtaPackageRequest) (*model.ShowOtaPackageResponse, error) {
+	requestDef := GenReqDefForShowOtaPackage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowOtaPackageResponse), nil
+	}
+}
+
+// ShowOtaPackageInvoker 获取OTA升级包详情
+func (c *IoTDAClient) ShowOtaPackageInvoker(request *model.ShowOtaPackageRequest) *ShowOtaPackageInvoker {
+	requestDef := GenReqDefForShowOtaPackage()
+	return &ShowOtaPackageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateProduct 创建产品
 //
 // 应用服务器可调用此接口创建产品。
