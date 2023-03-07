@@ -49,6 +49,15 @@ type BillingCreate struct {
 
 	// 存储库多az属性，默认为false
 	IsMultiAz *bool `json:"is_multi_az,omitempty"`
+
+	// 促销信息，包周期时可选参数
+	PromotionInfo *string `json:"promotion_info,omitempty"`
+
+	// 购买模式，包周期时可选参数
+	PurchaseMode *string `json:"purchase_mode,omitempty"`
+
+	// 订单 ID，包周期时可选参数
+	OrderId *string `json:"order_id,omitempty"`
 }
 
 func (o BillingCreate) String() string {
