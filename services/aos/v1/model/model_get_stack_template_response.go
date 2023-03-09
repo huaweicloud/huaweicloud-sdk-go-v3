@@ -8,7 +8,8 @@ import (
 
 // Response Object
 type GetStackTemplateResponse struct {
-	HttpStatusCode int `json:"-"`
+	Location       *string `json:"Location,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o GetStackTemplateResponse) String() string {

@@ -6,10 +6,9 @@ import (
 	"strings"
 )
 
-// variable-validation response
 type VariableValidationResponse struct {
 
-	// 校验表达式。支持Terraform表达式
+	// 校验表达式
 	Condition *string `json:"condition,omitempty"`
 
 	// 校验失败后的错误信息

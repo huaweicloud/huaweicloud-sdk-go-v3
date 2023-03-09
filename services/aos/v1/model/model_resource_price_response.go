@@ -9,25 +9,24 @@ import (
 	"strings"
 )
 
-// resource price response
 type ResourcePriceResponse struct {
 
-	// 计费模式，包周期计费、按需计费、免费的返回，不支持的资源不返回 PRE_PAID 包周期计费 POST_PAID 按需计费 FREE 免费
+	// 计费模式  * `PRE_PAID` - 包周期计费 * `POST_PAID` - 按需计费 * `FREE` - 免费
 	ChargeMode *ResourcePriceResponseChargeMode `json:"charge_mode,omitempty"`
 
-	// 执行计划中的每个资源部署后最终优惠后的金额（只考虑商务折扣以及伙伴折扣，不包含促销折扣及优惠券），保留小数点后2位，向上取整，默认单位是元
-	SalePrice *interface{} `json:"sale_price,omitempty"`
+	// 该资源最终优惠后的金额（只考虑官网折扣、商务折扣以及伙伴折扣，不包含促销折扣及优惠券），保留小数点后2位，向上取整，默认单位是元。
+	SalePrice *float64 `json:"sale_price,omitempty"`
 
-	// 执行计划中的每个资源部署后的优惠额，保留小数点后2位，向上取整，默认单位是元
-	Discount *interface{} `json:"discount,omitempty"`
+	// 该资源的总优惠额，保留小数点后2位，向上取整，默认单位是元。
+	Discount *float64 `json:"discount,omitempty"`
 
-	// 执行计划中的每个资源部署后的原价，保留小数点后2位，向上取整，默认单位是元
-	OriginalPrice *interface{} `json:"original_price,omitempty"`
+	// 该资源的原价，保留小数点后2位，向上取整，默认单位是元。
+	OriginalPrice *float64 `json:"original_price,omitempty"`
 
-	// 包周期和按需的计费单位，包周期计费和按需计费返回，免费不会返回 HOUR：小时，包周期计费和按需计费返回，免费不会返回 DAY：天，包周期计费返回，按需计费和免费不会返回 WEEK：周，包周期计费返回，按需计费和免费不会返回 MONTH：月，包周期计费返回，按需计费和免费不会返回 YEAR：年，包周期计费返回，按需计费和免费不会返回 BYTE：字节，按需计费返回，包周期计费和免费不会返回 MB：百万字节，按需计费返回，包周期计费和免费不会返回 GB：千兆字节，按需计费返回，包周期计费和免费不会返回
+	// 计费单位  若该资源支持包周期计费或按需计费，则会返回该字段；若该资源为免费资源，则不返回该字段。  * `HOUR` - 小时，按需计费的单位 * `DAY` - 天，按需计费的单位 * `MONTH` - 月，包周期计费的单位 * `YEAR` - 年，包周期计费的单位 * `BYTE` - 字节，按需计费的单位 * `MB` - 百万字节，包周期计费和按需计费的单位 * `GB` - 千兆字节，包周期计费和按需计费的单位
 	PeriodType *ResourcePriceResponsePeriodType `json:"period_type,omitempty"`
 
-	// 订购数量。包周期计费和按需计费返回，免费不会返回。
+	// 该资源的计费数量，需要和period_type搭配使用  若该资源支持包周期计费或按需计费，则会返回该字段；若该资源为免费资源，则不返回该字段。  * 对于按需计费资源，此值默认返回1，代表在1个计费单位下，该资源的价格 * 对于包周期计费资源，此值与模板中该资源的period字段保持一致
 	PeriodCount *int32 `json:"period_count,omitempty"`
 }
 
@@ -93,7 +92,6 @@ type ResourcePriceResponsePeriodType struct {
 type ResourcePriceResponsePeriodTypeEnum struct {
 	HOUR  ResourcePriceResponsePeriodType
 	DAY   ResourcePriceResponsePeriodType
-	WEEK  ResourcePriceResponsePeriodType
 	MONTH ResourcePriceResponsePeriodType
 	YEAR  ResourcePriceResponsePeriodType
 	BYTE  ResourcePriceResponsePeriodType
@@ -108,9 +106,6 @@ func GetResourcePriceResponsePeriodTypeEnum() ResourcePriceResponsePeriodTypeEnu
 		},
 		DAY: ResourcePriceResponsePeriodType{
 			value: "DAY",
-		},
-		WEEK: ResourcePriceResponsePeriodType{
-			value: "WEEK",
 		},
 		MONTH: ResourcePriceResponsePeriodType{
 			value: "MONTH",

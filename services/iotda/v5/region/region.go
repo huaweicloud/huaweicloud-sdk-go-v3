@@ -16,6 +16,10 @@ var (
 		"https://iotda.cn-east-3.myhuaweicloud.com")
 	AP_SOUTHEAST_3 = region.NewRegion("ap-southeast-3",
 		"https://iotda.ap-southeast-3.myhuaweicloud.com")
+	AP_SOUTHEAST_2 = region.NewRegion("ap-southeast-2",
+		"https://iotda.ap-southeast-2.myhuaweicloud.com")
+	AP_SOUTHEAST_1 = region.NewRegion("ap-southeast-1",
+		"https://iotda.ap-southeast-1.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
@@ -24,6 +28,8 @@ var staticFields = map[string]*region.Region{
 	"cn-south-1":     CN_SOUTH_1,
 	"cn-east-3":      CN_EAST_3,
 	"ap-southeast-3": AP_SOUTHEAST_3,
+	"ap-southeast-2": AP_SOUTHEAST_2,
+	"ap-southeast-1": AP_SOUTHEAST_1,
 }
 
 var provider = region.DefaultProviderChain("IOTDA")

@@ -9,7 +9,7 @@ import (
 // Response Object
 type ParseTemplateVariablesResponse struct {
 
-	// 模板中的所有参数
+	// 解析模板得到的参数列表
 	Variables      *[]VariableResponse `json:"variables,omitempty"`
 	HttpStatusCode int                 `json:"-"`
 }

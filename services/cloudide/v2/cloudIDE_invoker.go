@@ -113,6 +113,18 @@ func (i *ListProjectTemplatesInvoker) Invoke() (*model.ListProjectTemplatesRespo
 	}
 }
 
+type ListPublisherInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPublisherInvoker) Invoke() (*model.ListPublisherResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPublisherResponse), nil
+	}
+}
+
 type ListStacksInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -134,6 +146,18 @@ func (i *ShowAccountStatusInvoker) Invoke() (*model.ShowAccountStatusResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ShowAccountStatusResponse), nil
+	}
+}
+
+type ShowCategoryListInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowCategoryListInvoker) Invoke() (*model.ShowCategoryListResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowCategoryListResponse), nil
 	}
 }
 

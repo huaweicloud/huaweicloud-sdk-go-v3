@@ -9,7 +9,7 @@ import (
 // Response Object
 type ApplyExecutionPlanResponse struct {
 
-	// 部署生成的唯一ID，由资源编排服务生成
+	// 标识部署的唯一Id，此Id由资源编排服务在触发部署、回滚等操作时生成，为UUID。
 	DeploymentId   *string `json:"deployment_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

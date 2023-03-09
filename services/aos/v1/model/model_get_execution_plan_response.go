@@ -9,7 +9,7 @@ import (
 // Response Object
 type GetExecutionPlanResponse struct {
 
-	// 执行计划元素的列表，只有当状态为'AVAILABLE'、'APPLIED'、’APPLY_IN_PROGRESS‘等完成创建后的状态才会被赋值，而'CREATION_IN_PROGRESS'或'CREATION_FAILED'会返回错误。
+	// 执行计划项目的列表
 	ExecutionPlanItems *[]ExecutionPlanItem `json:"execution_plan_items,omitempty"`
 	HttpStatusCode     int                  `json:"-"`
 }

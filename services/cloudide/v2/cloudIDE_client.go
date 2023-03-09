@@ -208,6 +208,27 @@ func (c *CloudIDEClient) ListProjectTemplatesInvoker(request *model.ListProjectT
 	return &ListProjectTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListPublisher 获取当前用户下的发布商列表
+//
+// 获取当前用户下的发布商列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudIDEClient) ListPublisher(request *model.ListPublisherRequest) (*model.ListPublisherResponse, error) {
+	requestDef := GenReqDefForListPublisher()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPublisherResponse), nil
+	}
+}
+
+// ListPublisherInvoker 获取当前用户下的发布商列表
+func (c *CloudIDEClient) ListPublisherInvoker(request *model.ListPublisherRequest) *ListPublisherInvoker {
+	requestDef := GenReqDefForListPublisher()
+	return &ListPublisherInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListStacks 按region获取标签所有技术栈
 //
 // 按region获取标签所有技术栈
@@ -248,6 +269,27 @@ func (c *CloudIDEClient) ShowAccountStatus(request *model.ShowAccountStatusReque
 func (c *CloudIDEClient) ShowAccountStatusInvoker(request *model.ShowAccountStatusRequest) *ShowAccountStatusInvoker {
 	requestDef := GenReqDefForShowAccountStatus()
 	return &ShowAccountStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowCategoryList 查询插件分类
+//
+// 查询插件分类
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudIDEClient) ShowCategoryList(request *model.ShowCategoryListRequest) (*model.ShowCategoryListResponse, error) {
+	requestDef := GenReqDefForShowCategoryList()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowCategoryListResponse), nil
+	}
+}
+
+// ShowCategoryListInvoker 查询插件分类
+func (c *CloudIDEClient) ShowCategoryListInvoker(request *model.ShowCategoryListRequest) *ShowCategoryListInvoker {
+	requestDef := GenReqDefForShowCategoryList()
+	return &ShowCategoryListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowExtensionAuthorization 查询ide实例对插件的授权情况

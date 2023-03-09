@@ -7,11 +7,14 @@ import (
 
 var (
 	CN_NORTH_4 = region.NewRegion("cn-north-4",
-		"https://imagesearch.cn-north-4.myhuaweicloud.com")
+		"https://imagesearch.cn-north-4.myhuaweicloud.com",
+		"https://imagesearch.cn-north-4.myhuaweicloud.cn")
 	CN_NORTH_1 = region.NewRegion("cn-north-1",
-		"https://imagesearch.cn-north-1.myhuaweicloud.com")
+		"https://imagesearch.cn-north-1.myhuaweicloud.com",
+		"https://imagesearch.cn-north-1.myhuaweicloud.cn")
 	AP_SOUTHEAST_1 = region.NewRegion("ap-southeast-1",
-		"https://imagesearch.ap-southeast-1.myhuaweicloud.com")
+		"https://imagesearch.ap-southeast-1.myhuaweicloud.com",
+		"https://imagesearch.ap-southeast-1.myhuaweicloud.cn")
 )
 
 var staticFields = map[string]*region.Region{

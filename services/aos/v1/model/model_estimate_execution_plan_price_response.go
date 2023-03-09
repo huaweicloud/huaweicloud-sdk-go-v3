@@ -12,7 +12,7 @@ import (
 // Response Object
 type EstimateExecutionPlanPriceResponse struct {
 
-	// 币种，枚举值   CNY  元，中国站返回的币种   USD 美元，国际站返回的币种
+	// 币种，枚举值   * `CNY` - 元，中国站返回的币种   * `USD` - 美元，国际站返回的币种
 	Currency *EstimateExecutionPlanPriceResponseCurrency `json:"currency,omitempty"`
 
 	// 执行计划中所有资源的询价结果

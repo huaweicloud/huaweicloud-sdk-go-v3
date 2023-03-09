@@ -41,18 +41,6 @@ func (i *DeleteExecutionPlanInvoker) Invoke() (*model.DeleteExecutionPlanRespons
 	}
 }
 
-type DescribeExecutionPlanInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DescribeExecutionPlanInvoker) Invoke() (*model.DescribeExecutionPlanResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DescribeExecutionPlanResponse), nil
-	}
-}
-
 type EstimateExecutionPlanPriceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -74,6 +62,18 @@ func (i *GetExecutionPlanInvoker) Invoke() (*model.GetExecutionPlanResponse, err
 		return nil, err
 	} else {
 		return result.(*model.GetExecutionPlanResponse), nil
+	}
+}
+
+type GetExecutionPlanMetadataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *GetExecutionPlanMetadataInvoker) Invoke() (*model.GetExecutionPlanMetadataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.GetExecutionPlanMetadataResponse), nil
 	}
 }
 
@@ -230,5 +230,89 @@ func (i *ParseTemplateVariablesInvoker) Invoke() (*model.ParseTemplateVariablesR
 		return nil, err
 	} else {
 		return result.(*model.ParseTemplateVariablesResponse), nil
+	}
+}
+
+type DeleteTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteTemplateInvoker) Invoke() (*model.DeleteTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteTemplateResponse), nil
+	}
+}
+
+type DeleteTemplateVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteTemplateVersionInvoker) Invoke() (*model.DeleteTemplateVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteTemplateVersionResponse), nil
+	}
+}
+
+type ListTemplatesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTemplatesInvoker) Invoke() (*model.ListTemplatesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTemplatesResponse), nil
+	}
+}
+
+type ShowTemplateMetadataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTemplateMetadataInvoker) Invoke() (*model.ShowTemplateMetadataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTemplateMetadataResponse), nil
+	}
+}
+
+type ShowTemplateVersionContentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTemplateVersionContentInvoker) Invoke() (*model.ShowTemplateVersionContentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTemplateVersionContentResponse), nil
+	}
+}
+
+type ShowTemplateVersionMetadataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTemplateVersionMetadataInvoker) Invoke() (*model.ShowTemplateVersionMetadataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTemplateVersionMetadataResponse), nil
+	}
+}
+
+type UpdateTemplateMetadataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateTemplateMetadataInvoker) Invoke() (*model.UpdateTemplateMetadataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateTemplateMetadataResponse), nil
 	}
 }
