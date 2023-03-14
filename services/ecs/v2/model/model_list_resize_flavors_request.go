@@ -12,7 +12,7 @@ import (
 // Request Object
 type ListResizeFlavorsRequest struct {
 
-	// 进行规格切换的云服务器ID，UUID格式。
+	// 进行规格切换的云服务器ID，UUID格式。(instance_uuid,source_flavor_id and source_flavor_name 不能都为空)
 	InstanceUuid *string `json:"instance_uuid,omitempty"`
 
 	// 单页面可显示的flavor条数最大值，默认是1000。
@@ -27,10 +27,10 @@ type ListResizeFlavorsRequest struct {
 	// 排序字段。  key的取值范围：  - flavorid：表示规格ID。 - sort_key的默认值为“flavorid”。 - name：表示规格名称。 - memory_mb：表示内存大小。 - vcpus：表示CPU大小。 - root_gb：表示系统盘大小。
 	SortKey *ListResizeFlavorsRequestSortKey `json:"sort_key,omitempty"`
 
-	// 进行规格切换的云服务器源规格ID。
+	// 进行规格切换的云服务器源规格ID。(instance_uuid,source_flavor_id and source_flavor_name 不能都为空)
 	SourceFlavorId *string `json:"source_flavor_id,omitempty"`
 
-	// 进行规格切换的云服务器源规格名称。
+	// 进行规格切换的云服务器源规格名称。(instance_uuid,source_flavor_id and source_flavor_name 不能都为空)
 	SourceFlavorName *string `json:"source_flavor_name,omitempty"`
 }
 

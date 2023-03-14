@@ -22,7 +22,7 @@ type OrganizationPolicyAssignmentStatusResponse struct {
 	ErrorCode *string `json:"error_code,omitempty"`
 
 	// 当创建或更新组织合规规则失败时错误信息。
-	ErrorMessage *interface{} `json:"error_message,omitempty"`
+	ErrorMessage *string `json:"error_message,omitempty"`
 
 	// 创建时间。
 	CreatedAt *string `json:"created_at,omitempty"`

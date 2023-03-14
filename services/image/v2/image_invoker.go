@@ -41,6 +41,30 @@ func (i *CreateImageTranslateTaskInvoker) Invoke() (*model.CreateImageTranslateT
 	}
 }
 
+type CreateImageVariationTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateImageVariationTaskInvoker) Invoke() (*model.CreateImageVariationTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateImageVariationTaskResponse), nil
+	}
+}
+
+type CreateTextToImageTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateTextToImageTaskInvoker) Invoke() (*model.CreateTextToImageTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateTextToImageTaskResponse), nil
+	}
+}
+
 type CreateVideoCoverAnalysisTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -209,30 +233,6 @@ func (i *RunImageTaggingInvoker) Invoke() (*model.RunImageTaggingResponse, error
 	}
 }
 
-type RunImageWisedesignColorfilterInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *RunImageWisedesignColorfilterInvoker) Invoke() (*model.RunImageWisedesignColorfilterResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.RunImageWisedesignColorfilterResponse), nil
-	}
-}
-
-type RunImageWisedesignCombineInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *RunImageWisedesignCombineInvoker) Invoke() (*model.RunImageWisedesignCombineResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.RunImageWisedesignCombineResponse), nil
-	}
-}
-
 type RunImageWisedesignCropInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -314,6 +314,30 @@ func (i *ShowImageTranslateTaskInvoker) Invoke() (*model.ShowImageTranslateTaskR
 		return nil, err
 	} else {
 		return result.(*model.ShowImageTranslateTaskResponse), nil
+	}
+}
+
+type ShowImageVariationTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowImageVariationTaskInvoker) Invoke() (*model.ShowImageVariationTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowImageVariationTaskResponse), nil
+	}
+}
+
+type ShowTextToImageTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTextToImageTaskInvoker) Invoke() (*model.ShowTextToImageTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTextToImageTaskResponse), nil
 	}
 }
 
