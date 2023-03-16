@@ -9,7 +9,7 @@ import (
 // Request Object
 type InstallInstanceEipRequest struct {
 
-	// server_id
+	// 云堡垒机实例ID，使用UUID格式表示。
 	ServerId string `json:"server_id"`
 
 	Body *OperateEipRequestBody `json:"body,omitempty"`

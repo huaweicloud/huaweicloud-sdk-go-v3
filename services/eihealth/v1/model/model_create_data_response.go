@@ -8,7 +8,10 @@ import (
 
 // Response Object
 type CreateDataResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// 创建文件夹返回体
+	Id             *string `json:"id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o CreateDataResponse) String() string {

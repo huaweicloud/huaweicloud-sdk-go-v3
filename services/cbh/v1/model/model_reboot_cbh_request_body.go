@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// 重启CBH实例请求对象
+// 重启云堡垒机实例请求对象。
 type RebootCbhRequestBody struct {
 
-	// 实例的server id
+	// 云堡垒机实例ID，使用UUID格式。
 	InstanceId string `json:"instance_id"`
 
 	Reboot *RebootType `json:"reboot"`

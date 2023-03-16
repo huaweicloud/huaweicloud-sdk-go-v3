@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// 弹性IP
+// 云堡垒机实例弹性公网IP信息。
 type PublicIp struct {
 
-	// 已分配的弹性IP 和EIP只能有一个
+	// 已分配的弹性IP和EIP只能有一个。
 	Id string `json:"id"`
 
-	// 已分配的弹性IP的地址Address
+	// 已分配的弹性IP的地址Address。
 	PublicEip string `json:"public_eip"`
 
 	Eip *Eip `json:"eip,omitempty"`

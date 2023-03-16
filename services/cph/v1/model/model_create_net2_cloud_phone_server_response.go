@@ -16,8 +16,11 @@ type CreateNet2CloudPhoneServerResponse struct {
 	OrderId *string `json:"order_id,omitempty"`
 
 	// 产品ID，不超过64个字节
-	ProductId      *string `json:"product_id,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	ProductId *string `json:"product_id,omitempty"`
+
+	// 服务器ID列表
+	ServerIds      *[]string `json:"server_ids,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o CreateNet2CloudPhoneServerResponse) String() string {

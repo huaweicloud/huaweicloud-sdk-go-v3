@@ -40,6 +40,9 @@ type GetUserRsp struct {
 
 	// 更新时间，UTC时间
 	UpdateTime *string `json:"update_time,omitempty"`
+
+	// 来源，PLATFORM或者IAM
+	Source *string `json:"source,omitempty"`
 }
 
 func (o GetUserRsp) String() string {

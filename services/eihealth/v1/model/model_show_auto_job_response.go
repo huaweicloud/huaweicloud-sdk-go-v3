@@ -71,7 +71,7 @@ type ShowAutoJobResponse struct {
 	// 节点标签 取值范围[0,1]，单个标签最大长度63字符
 	NodeLabels *[]string `json:"node_labels,omitempty"`
 
-	// 自动作业使用的SFS-Turbo实例id，不填表示不使用
+	// 自动作业使用的IO加速实例id，不填表示不使用
 	IoAccId *string `json:"io_acc_id,omitempty"`
 
 	// 自动作业依赖的流程信息

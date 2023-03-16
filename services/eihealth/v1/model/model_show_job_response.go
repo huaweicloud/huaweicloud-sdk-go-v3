@@ -62,8 +62,11 @@ type ShowJobResponse struct {
 	IoAccInfo *IoAccInfoDto `json:"io_acc_info,omitempty"`
 
 	// 计算节点标签
-	NodeLabels     *[]string `json:"node_labels,omitempty"`
-	HttpStatusCode int       `json:"-"`
+	NodeLabels *[]string `json:"node_labels,omitempty"`
+
+	// 仍在运行中的子任务
+	StillRunningTasks *[]string `json:"still_running_tasks,omitempty"`
+	HttpStatusCode    int       `json:"-"`
 }
 
 func (o ShowJobResponse) String() string {

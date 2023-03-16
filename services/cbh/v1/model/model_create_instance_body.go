@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建堡垒机实例请求body
+// 创建堡垒机实例请求参数。
 type CreateInstanceBody struct {
 	Server *CbhInstances `json:"server"`
 }

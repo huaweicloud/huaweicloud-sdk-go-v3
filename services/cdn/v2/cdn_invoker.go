@@ -41,6 +41,18 @@ func (i *DownloadStatisticsExcelInvoker) Invoke() (*model.DownloadStatisticsExce
 	}
 }
 
+type ListDomainsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDomainsInvoker) Invoke() (*model.ListDomainsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDomainsResponse), nil
+	}
+}
+
 type SetChargeModesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -74,6 +86,18 @@ func (i *ShowChargeModesInvoker) Invoke() (*model.ShowChargeModesResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ShowChargeModesResponse), nil
+	}
+}
+
+type ShowDomainDetailByNameInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDomainDetailByNameInvoker) Invoke() (*model.ShowDomainDetailByNameResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDomainDetailByNameResponse), nil
 	}
 }
 

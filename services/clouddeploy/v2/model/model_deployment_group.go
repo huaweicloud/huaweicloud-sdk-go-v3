@@ -18,13 +18,13 @@ type DeploymentGroup struct {
 	// 局点信息
 	RegionName string `json:"region_name"`
 
-	// devcloud项目id
+	// 项目id
 	ProjectId string `json:"project_id"`
 
 	// 操作信息：windows|linux
 	Os DeploymentGroupOs `json:"os"`
 
-	// slave集群id，默认为null时使用devcloud八爪鱼slave集群，用户自定义slave时为slave集群id
+	// slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id
 	SlaveClusterId *string `json:"slave_cluster_id,omitempty"`
 
 	// 描述

@@ -19,7 +19,7 @@ type CreateProjectReq struct {
 	Tags *[]string `json:"tags,omitempty"`
 
 	// 标签
-	IsCore bool `json:"is_core"`
+	IsCore *bool `json:"is_core,omitempty"`
 }
 
 func (o CreateProjectReq) String() string {

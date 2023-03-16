@@ -63,7 +63,7 @@ type ShowDeployTaskDetailResponse struct {
 	// 应用创建者租户名
 	TenantName *string `json:"tenant_name,omitempty"`
 
-	// slave集群id，默认为null时使用devcloud八爪鱼slave集群，用户自定义slave时为slave集群id
+	// slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id
 	SlaveClusterId *string `json:"slave_cluster_id,omitempty"`
 
 	// 当前用户是否已收藏

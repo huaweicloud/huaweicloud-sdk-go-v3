@@ -9,7 +9,7 @@ import (
 // Request Object
 type ChangeInstanceNetworkRequest struct {
 
-	// 实例ID
+	// 云堡垒机实例ID，使用UUID格式。
 	ServerId string `json:"server_id"`
 
 	Body *ChangeInstanceNetwork `json:"body,omitempty"`

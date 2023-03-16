@@ -49,7 +49,10 @@ type ShowDataJobResponse struct {
 	Type *string `json:"type,omitempty"`
 
 	// 数据作业失败原因
-	FailedReason   *string `json:"failed_reason,omitempty"`
+	FailedReason *string `json:"failed_reason,omitempty"`
+
+	// 附加信息
+	Additions      *string `json:"additions,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -13,7 +13,7 @@ type DeleteDatabasePermission struct {
 	Name string `json:"name"`
 
 	// 主机地址
-	Host *string `json:"host,omitempty"`
+	Host string `json:"host"`
 
 	// 数据库列表
 	Databases []string `json:"databases"`

@@ -40,7 +40,10 @@ type ShowUserResponse struct {
 	PwdStatus *bool `json:"pwd_status,omitempty"`
 
 	// 更新时间，UTC时间
-	UpdateTime     *string `json:"update_time,omitempty"`
+	UpdateTime *string `json:"update_time,omitempty"`
+
+	// 来源，PLATFORM或者IAM
+	Source         *string `json:"source,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

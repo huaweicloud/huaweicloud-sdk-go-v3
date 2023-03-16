@@ -9,124 +9,121 @@ import (
 // CBH实例详情
 type InstanceDetail struct {
 
-	// 弹性ip
+	// 云堡垒机实例弹性公网IP，返回默认值null
 	Publicip string `json:"publicip"`
 
-	// 过期时间，要求用UTC时间表示
+	// 云堡垒机实例过期时间。
 	ExpTime string `json:"expTime"`
 
-	// 开始时间，要求用UTC时间表示
+	// 云堡垒机实例开始时间，使用时间戳格式表示。
 	StartTime string `json:"startTime"`
 
-	// 结束时间，要求用UTC时间表示
+	// 云堡垒机实例结束时间，使用时间戳格式表示。
 	EndTime string `json:"endTime"`
 
-	// 释放时间，要求用UTC时间表示
+	// 云堡垒机释放时间，使用时间戳格式表示。
 	ReleaseTime string `json:"releaseTime"`
 
-	// 实例名称
+	// 云堡垒机实例名称。
 	Name string `json:"name"`
 
-	// 实例的server id
+	// 云堡垒机实例ID，UUID格式。
 	InstanceId string `json:"instanceId"`
 
-	// 实例私有ip
+	// 云堡垒机实例私有ip。
 	PrivateIp string `json:"privateIp"`
 
-	// 实例当前的任务状态
+	// 云堡垒机实例当前的任务状态。
 	TaskStatus string `json:"taskStatus"`
 
-	// 实例状态
+	// 云堡垒机实例状态。
 	Status string `json:"status"`
 
-	// 实例创建时间，要求用UTC时间表示
+	// 云堡垒机实例创建时间，使用UTC时间表示。
 	Created string `json:"created"`
 
-	// 实例所在region
+	// 云堡垒机实例所在局点。
 	Region string `json:"region"`
 
-	// 实例所在可用区id
+	// 云堡垒机实例所在可用区。
 	Zone string `json:"zone"`
 
-	// 实例所在可用区名称
+	// 云堡垒机实例所在可用区中文名称。
 	AvailabilityZoneDisplay string `json:"availability_zone_display"`
 
-	// 实例所在vpc的id
+	// 云堡垒机实例所在虚拟私有云的VPC ID。
 	VpcId string `json:"vpcId"`
 
-	// 实例所在子网的id
+	// 云堡垒机实例所在子网的ID。
 	SubnetId string `json:"subnetId"`
 
-	// 实例所属的安全组的id
+	// 云堡垒机实例所属的安全组的ID。
 	SecurityGroupId string `json:"securityGroupId"`
 
-	// 实例规格
+	// 云堡垒机实例规格。
 	Specification string `json:"specification"`
 
-	// 实例镜像是否可以升级
+	// 云堡垒机实例镜像是否可以升级。 - NEW，可以升级 - OLD，不能升级
 	Update string `json:"update"`
 
-	// 在创建实例过程中的过程状态信息
+	// 云堡垒机实例在创建实例过程中的过程状态信息。 - Waiting for payment，等待支付 - creating-network，创建网络 - creating-server，创建服务 - tranfering-horizontal-network，网络打通 - adding-policy-route，添加路由策略 - configing-dns，配置DNS - starting-cbs-service，服务运行中 - setting-init-conf，初始化 - buying-EIP，购买弹性公网IP
 	CreateinstanceStatus string `json:"createinstanceStatus"`
 
-	// 创建实例失败原因
+	// 云堡垒机实例创建实例失败原因。
 	FailReason string `json:"failReason"`
 
-	// 实例ID
+	// 云堡垒机实例key。
 	InstanceKey string `json:"instanceKey"`
 
-	// 订单id
+	// 订单ID。
 	OrderId string `json:"orderId"`
 
-	// 租户购买的时长
+	// 云堡垒机实例订购周期数。
 	PeriodNum string `json:"periodNum"`
 
-	// 实例的资源id
+	// 云堡垒机实例实例的资源id,UUID格式显示。
 	ResourceId string `json:"resourceId"`
 
-	// 堡垒机类型
+	// 云堡垒机实例堡垒机类型。 - OEM
 	BastionType string `json:"bastion_type"`
 
-	// 前端是否显示扩容按钮
+	// 云堡垒机实例是否可以扩容。 - 1 开启扩容 - 0 关闭扩容
 	AlterPermit string `json:"alterPermit"`
 
-	// 实例绑定的弹性IP的id
+	// 云堡垒机实例绑定公网的弹性IP的ID，UUID格式表示。
 	PublicId string `json:"publicId"`
 
-	// 实例镜像当前版本号
+	// 云堡垒机实例镜像当前版本号。
 	BastionVersion string `json:"bastionVersion"`
 
-	// 实例镜像最新版本号
+	// 云堡垒机实例镜像可以升级的版本号。
 	NewBastionVersion string `json:"newBastionVersion"`
 
-	// 实例状态
+	// 云堡垒机实例状态。 - building  创建中 - deleting  删除中 - deleted 删除了 - unpaid  未支付 - upgrading 升级中 - resizing  扩容中 - abnormal  异常 - error 故障 - ok  正常
 	InstanceStatus string `json:"instanceStatus"`
 
-	// 实例描述
+	// 云堡垒机实例状态描述。
 	InstanceDescription string `json:"instanceDescription"`
 
-	// 是否支持续费
-	IsAutoRenew *int32 `json:"is_auto_renew,omitempty"`
-
-	// 备可用分区
+	// 备可用分区，默认返回null。
 	SlaveZone *string `json:"slaveZone,omitempty"`
 
-	// 企业项目id
+	// 云堡垒机实例所属企业项目ID。
 	EnterpriseProjectId *string `json:"enterpriseProjectId,omitempty"`
 
-	// 实例类型
+	// 云堡垒机实例类型。 - null  单机默认返回null - master  HA时返回主机 - slave HA时返回备机
 	InstanceType *string `json:"instanceType,omitempty"`
 
-	// 主备ID
+	// 云堡垒机实例主备ID。 - 单机堡垒机实例默认返回null - HA堡垒机实例返回主机HAID
 	HaId *string `json:"haId,omitempty"`
 
-	// 备可用分区名称
+	// 云堡垒机实例备机可用分区名称。 单机堡垒机实例和备机堡垒机实例返回null，HA堡垒机实例主机返回备机所在可用区名称。
 	SlaveZoneDisplay *string `json:"slaveZoneDisplay,omitempty"`
 
-	// 端口号
+	// 云堡垒机实例WEB界面访问的端口号。
 	WebPort *string `json:"webPort,omitempty"`
 
-	// 浮动ip
+	// 云堡垒机实例浮动ip。
 	Vip *string `json:"vip,omitempty"`
 }
 

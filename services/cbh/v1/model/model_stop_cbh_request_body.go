@@ -6,13 +6,11 @@ import (
 	"strings"
 )
 
-// 关闭CBH实例请求对象
+// 关闭云堡垒机实例请求对象。
 type StopCbhRequestBody struct {
 
-	// 实例的server id
+	// 云堡垒机实例ID，使用UUID格式。
 	InstanceId string `json:"instance_id"`
-
-	Reboot *RebootType `json:"reboot,omitempty"`
 }
 
 func (o StopCbhRequestBody) String() string {

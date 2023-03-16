@@ -838,6 +838,27 @@ func (c *EiHealthClient) ShowBackupPathInvoker(request *model.ShowBackupPathRequ
 	return &ShowBackupPathInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchDeleteData 批量删除项目数据
+//
+// 批量删除项目数据
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) BatchDeleteData(request *model.BatchDeleteDataRequest) (*model.BatchDeleteDataResponse, error) {
+	requestDef := GenReqDefForBatchDeleteData()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteDataResponse), nil
+	}
+}
+
+// BatchDeleteDataInvoker 批量删除项目数据
+func (c *EiHealthClient) BatchDeleteDataInvoker(request *model.BatchDeleteDataRequest) *BatchDeleteDataInvoker {
+	requestDef := GenReqDefForBatchDeleteData()
+	return &BatchDeleteDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CopyData 复制项目数据
 //
 // 复制项目数据
@@ -878,27 +899,6 @@ func (c *EiHealthClient) CreateData(request *model.CreateDataRequest) (*model.Cr
 func (c *EiHealthClient) CreateDataInvoker(request *model.CreateDataRequest) *CreateDataInvoker {
 	requestDef := GenReqDefForCreateData()
 	return &CreateDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DeleteData 批量删除项目数据
-//
-// 批量删除项目数据
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *EiHealthClient) DeleteData(request *model.DeleteDataRequest) (*model.DeleteDataResponse, error) {
-	requestDef := GenReqDefForDeleteData()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeleteDataResponse), nil
-	}
-}
-
-// DeleteDataInvoker 批量删除项目数据
-func (c *EiHealthClient) DeleteDataInvoker(request *model.DeleteDataRequest) *DeleteDataInvoker {
-	requestDef := GenReqDefForDeleteData()
-	return &DeleteDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ImportData 导入项目数据
@@ -2392,6 +2392,48 @@ func (c *EiHealthClient) ListLabelPageInvoker(request *model.ListLabelPageReques
 	return &ListLabelPageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchDeleteNotice 批量删除通知消息
+//
+// 批量删除通知消息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) BatchDeleteNotice(request *model.BatchDeleteNoticeRequest) (*model.BatchDeleteNoticeResponse, error) {
+	requestDef := GenReqDefForBatchDeleteNotice()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteNoticeResponse), nil
+	}
+}
+
+// BatchDeleteNoticeInvoker 批量删除通知消息
+func (c *EiHealthClient) BatchDeleteNoticeInvoker(request *model.BatchDeleteNoticeRequest) *BatchDeleteNoticeInvoker {
+	requestDef := GenReqDefForBatchDeleteNotice()
+	return &BatchDeleteNoticeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchUpdateNotice 批量更新消息
+//
+// 批量更新消息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) BatchUpdateNotice(request *model.BatchUpdateNoticeRequest) (*model.BatchUpdateNoticeResponse, error) {
+	requestDef := GenReqDefForBatchUpdateNotice()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchUpdateNoticeResponse), nil
+	}
+}
+
+// BatchUpdateNoticeInvoker 批量更新消息
+func (c *EiHealthClient) BatchUpdateNoticeInvoker(request *model.BatchUpdateNoticeRequest) *BatchUpdateNoticeInvoker {
+	requestDef := GenReqDefForBatchUpdateNotice()
+	return &BatchUpdateNoticeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CheckEmailConnection 邮箱连通性测试
 //
 // 邮箱连通性测试
@@ -2453,6 +2495,48 @@ func (c *EiHealthClient) ListMessage(request *model.ListMessageRequest) (*model.
 func (c *EiHealthClient) ListMessageInvoker(request *model.ListMessageRequest) *ListMessageInvoker {
 	requestDef := GenReqDefForListMessage()
 	return &ListMessageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListMessageStatistics 统计消息信息
+//
+// 统计消息信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) ListMessageStatistics(request *model.ListMessageStatisticsRequest) (*model.ListMessageStatisticsResponse, error) {
+	requestDef := GenReqDefForListMessageStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListMessageStatisticsResponse), nil
+	}
+}
+
+// ListMessageStatisticsInvoker 统计消息信息
+func (c *EiHealthClient) ListMessageStatisticsInvoker(request *model.ListMessageStatisticsRequest) *ListMessageStatisticsInvoker {
+	requestDef := GenReqDefForListMessageStatistics()
+	return &ListMessageStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListNotice 获取通知消息列表
+//
+// 获取通知消息列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) ListNotice(request *model.ListNoticeRequest) (*model.ListNoticeResponse, error) {
+	requestDef := GenReqDefForListNotice()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListNoticeResponse), nil
+	}
+}
+
+// ListNoticeInvoker 获取通知消息列表
+func (c *EiHealthClient) ListNoticeInvoker(request *model.ListNoticeRequest) *ListNoticeInvoker {
+	requestDef := GenReqDefForListNotice()
+	return &ListNoticeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowMessageClearRule 获取消息清理规则
@@ -2520,7 +2604,7 @@ func (c *EiHealthClient) ShowMessageReceiveConfigInvoker(request *model.ShowMess
 
 // UpdateMessageClearRule 设置消息清理规则
 //
-// 设置消息清理规则，支持修改保存时长(180天 - 10年)、记录数(1W-500W)
+// 设置消息清理规则，支持修改记录数(1W-1000W)
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) UpdateMessageClearRule(request *model.UpdateMessageClearRuleRequest) (*model.UpdateMessageClearRuleResponse, error) {
@@ -3379,6 +3463,27 @@ func (c *EiHealthClient) UpdateStarInvoker(request *model.UpdateStarRequest) *Up
 	return &UpdateStarInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListGlobalWorkflowStatistic 统计全局流程、作业信息
+//
+// 统计全局流程、作业信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) ListGlobalWorkflowStatistic(request *model.ListGlobalWorkflowStatisticRequest) (*model.ListGlobalWorkflowStatisticResponse, error) {
+	requestDef := GenReqDefForListGlobalWorkflowStatistic()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListGlobalWorkflowStatisticResponse), nil
+	}
+}
+
+// ListGlobalWorkflowStatisticInvoker 统计全局流程、作业信息
+func (c *EiHealthClient) ListGlobalWorkflowStatisticInvoker(request *model.ListGlobalWorkflowStatisticRequest) *ListGlobalWorkflowStatisticInvoker {
+	requestDef := GenReqDefForListGlobalWorkflowStatistic()
+	return &ListGlobalWorkflowStatisticInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListPerformanceResourceStat 获取性能加速资源上统计信息
 //
 // 获取性能加速资源上统计信息
@@ -3841,6 +3946,27 @@ func (c *EiHealthClient) UploadTemplateInvoker(request *model.UploadTemplateRequ
 	return &UploadTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ChangePassword 修改密码
+//
+// 修改密码
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) ChangePassword(request *model.ChangePasswordRequest) (*model.ChangePasswordResponse, error) {
+	requestDef := GenReqDefForChangePassword()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangePasswordResponse), nil
+	}
+}
+
+// ChangePasswordInvoker 修改密码
+func (c *EiHealthClient) ChangePasswordInvoker(request *model.ChangePasswordRequest) *ChangePasswordInvoker {
+	requestDef := GenReqDefForChangePassword()
+	return &ChangePasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CheckTokenVerification 校验token
 //
 // 校验token是否可访问当前环境
@@ -3923,6 +4049,27 @@ func (c *EiHealthClient) DeleteUser(request *model.DeleteUserRequest) (*model.De
 func (c *EiHealthClient) DeleteUserInvoker(request *model.DeleteUserRequest) *DeleteUserInvoker {
 	requestDef := GenReqDefForDeleteUser()
 	return &DeleteUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ImportUser 导入用户
+//
+// 导入用户
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) ImportUser(request *model.ImportUserRequest) (*model.ImportUserResponse, error) {
+	requestDef := GenReqDefForImportUser()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ImportUserResponse), nil
+	}
+}
+
+// ImportUserInvoker 导入用户
+func (c *EiHealthClient) ImportUserInvoker(request *model.ImportUserRequest) *ImportUserInvoker {
+	requestDef := GenReqDefForImportUser()
+	return &ImportUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListMfa 获取可用的认证方法
@@ -4028,27 +4175,6 @@ func (c *EiHealthClient) UpdateInitPassword(request *model.UpdateInitPasswordReq
 func (c *EiHealthClient) UpdateInitPasswordInvoker(request *model.UpdateInitPasswordRequest) *UpdateInitPasswordInvoker {
 	requestDef := GenReqDefForUpdateInitPassword()
 	return &UpdateInitPasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// UpdatePassword 修改密码
-//
-// 修改密码
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *EiHealthClient) UpdatePassword(request *model.UpdatePasswordRequest) (*model.UpdatePasswordResponse, error) {
-	requestDef := GenReqDefForUpdatePassword()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.UpdatePasswordResponse), nil
-	}
-}
-
-// UpdatePasswordInvoker 修改密码
-func (c *EiHealthClient) UpdatePasswordInvoker(request *model.UpdatePasswordRequest) *UpdatePasswordInvoker {
-	requestDef := GenReqDefForUpdatePassword()
-	return &UpdatePasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateUser 修改用户基本信息

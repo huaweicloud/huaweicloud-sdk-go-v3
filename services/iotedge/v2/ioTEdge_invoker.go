@@ -245,6 +245,150 @@ func (i *UpdateEdgeApplicationVersionStateInvoker) Invoke() (*model.UpdateEdgeAp
 	}
 }
 
+type BatchListDcDsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchListDcDsInvoker) Invoke() (*model.BatchListDcDsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchListDcDsResponse), nil
+	}
+}
+
+type CreateDsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDsInvoker) Invoke() (*model.CreateDsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDsResponse), nil
+	}
+}
+
+type DeleteDcDsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDcDsInvoker) Invoke() (*model.DeleteDcDsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDcDsResponse), nil
+	}
+}
+
+type ShowDcDsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDcDsInvoker) Invoke() (*model.ShowDcDsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDcDsResponse), nil
+	}
+}
+
+type SynchronizeDcConfigsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SynchronizeDcConfigsInvoker) Invoke() (*model.SynchronizeDcConfigsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SynchronizeDcConfigsResponse), nil
+	}
+}
+
+type UpdateDcDsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDcDsInvoker) Invoke() (*model.UpdateDcDsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDcDsResponse), nil
+	}
+}
+
+type BatchListDcDevicesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchListDcDevicesInvoker) Invoke() (*model.BatchListDcDevicesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchListDcDevicesResponse), nil
+	}
+}
+
+type BatchListDcPointsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchListDcPointsInvoker) Invoke() (*model.BatchListDcPointsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchListDcPointsResponse), nil
+	}
+}
+
+type CreateDcPointInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDcPointInvoker) Invoke() (*model.CreateDcPointResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDcPointResponse), nil
+	}
+}
+
+type DeleteDcPointInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDcPointInvoker) Invoke() (*model.DeleteDcPointResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDcPointResponse), nil
+	}
+}
+
+type ShowDcPointInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDcPointInvoker) Invoke() (*model.ShowDcPointResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDcPointResponse), nil
+	}
+}
+
+type UpdateDcPointInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDcPointInvoker) Invoke() (*model.UpdateDcPointResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDcPointResponse), nil
+	}
+}
+
 type CreateExternalEntityInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -374,6 +518,42 @@ func (i *UpdateRoutesInvoker) Invoke() (*model.UpdateRoutesResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.UpdateRoutesResponse), nil
+	}
+}
+
+type ImportPointsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ImportPointsInvoker) Invoke() (*model.ImportPointsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ImportPointsResponse), nil
+	}
+}
+
+type ShowPointTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPointTemplateInvoker) Invoke() (*model.ShowPointTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPointTemplateResponse), nil
+	}
+}
+
+type ShowPointsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPointsInvoker) Invoke() (*model.ShowPointsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPointsResponse), nil
 	}
 }
 

@@ -19,9 +19,6 @@ type ComputingResourceRsp struct {
 
 	Spec *ComputingSpecDto `json:"spec,omitempty"`
 
-	// IP地址
-	Ip string `json:"ip"`
-
 	SystemDisk *DiskDto `json:"system_disk,omitempty"`
 
 	// 数据盘
@@ -32,11 +29,11 @@ type ComputingResourceRsp struct {
 	// 计费模式
 	ChargeMode string `json:"charge_mode"`
 
-	// 购买周期
-	PeriodNum *string `json:"period_num,omitempty"`
-
 	// 购买时间
 	CreateTime string `json:"create_time"`
+
+	// 失败原因
+	FailureReason string `json:"failure_reason"`
 
 	// 状态
 	Status string `json:"status"`

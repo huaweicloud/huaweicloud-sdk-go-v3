@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// 管理CBH实例Eip响应对象
+// 云堡垒机绑定\\解绑弹性公网IP请求对象。
 type OperateEipRequestBody struct {
 
-	// 弹性ip的id
+	// 弹性公网IP的ID,使用UUID格式。
 	PublicipId string `json:"publicip_id"`
 
-	// 弹性ip
+	// 弹性公网IP，使用IP地址。
 	PublicEip string `json:"public_eip"`
 }
 

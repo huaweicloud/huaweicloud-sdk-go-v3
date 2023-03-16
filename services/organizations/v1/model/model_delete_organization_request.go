@@ -1,0 +1,20 @@
+package model
+
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
+	"strings"
+)
+
+// Request Object
+type DeleteOrganizationRequest struct {
+}
+
+func (o DeleteOrganizationRequest) String() string {
+	data, err := utils.Marshal(o)
+	if err != nil {
+		return "DeleteOrganizationRequest struct{}"
+	}
+
+	return strings.Join([]string{"DeleteOrganizationRequest", string(data)}, " ")
+}

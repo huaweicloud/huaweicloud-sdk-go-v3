@@ -17,6 +17,18 @@ func (i *ChangeInstanceNetworkInvoker) Invoke() (*model.ChangeInstanceNetworkRes
 	}
 }
 
+type ChangeInstanceOrderInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeInstanceOrderInvoker) Invoke() (*model.ChangeInstanceOrderResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeInstanceOrderResponse), nil
+	}
+}
+
 type CreateInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -41,6 +53,18 @@ func (i *CreateInstanceOrderInvoker) Invoke() (*model.CreateInstanceOrderRespons
 	}
 }
 
+type InstallInstanceEipInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *InstallInstanceEipInvoker) Invoke() (*model.InstallInstanceEipResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.InstallInstanceEipResponse), nil
+	}
+}
+
 type ListCbhInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -50,6 +74,42 @@ func (i *ListCbhInstanceInvoker) Invoke() (*model.ListCbhInstanceResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ListCbhInstanceResponse), nil
+	}
+}
+
+type ListQuotaStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListQuotaStatusInvoker) Invoke() (*model.ListQuotaStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListQuotaStatusResponse), nil
+	}
+}
+
+type ResetLoginMethodInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ResetLoginMethodInvoker) Invoke() (*model.ResetLoginMethodResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ResetLoginMethodResponse), nil
+	}
+}
+
+type ResetPasswordInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ResetPasswordInvoker) Invoke() (*model.ResetPasswordResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ResetPasswordResponse), nil
 	}
 }
 
@@ -113,54 +173,6 @@ func (i *StartCbhInstanceInvoker) Invoke() (*model.StartCbhInstanceResponse, err
 	}
 }
 
-type UpgradeCbhInstanceInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpgradeCbhInstanceInvoker) Invoke() (*model.UpgradeCbhInstanceResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpgradeCbhInstanceResponse), nil
-	}
-}
-
-type ResetLoginMethodInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ResetLoginMethodInvoker) Invoke() (*model.ResetLoginMethodResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ResetLoginMethodResponse), nil
-	}
-}
-
-type ResetPasswordInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ResetPasswordInvoker) Invoke() (*model.ResetPasswordResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ResetPasswordResponse), nil
-	}
-}
-
-type ChangeInstanceOrderInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ChangeInstanceOrderInvoker) Invoke() (*model.ChangeInstanceOrderResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ChangeInstanceOrderResponse), nil
-	}
-}
-
 type StopCbhInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -173,30 +185,6 @@ func (i *StopCbhInstanceInvoker) Invoke() (*model.StopCbhInstanceResponse, error
 	}
 }
 
-type ListQuotaStateInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListQuotaStateInvoker) Invoke() (*model.ListQuotaStateResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListQuotaStateResponse), nil
-	}
-}
-
-type InstallInstanceEipInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *InstallInstanceEipInvoker) Invoke() (*model.InstallInstanceEipResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.InstallInstanceEipResponse), nil
-	}
-}
-
 type UninstallInstanceEipInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -206,5 +194,17 @@ func (i *UninstallInstanceEipInvoker) Invoke() (*model.UninstallInstanceEipRespo
 		return nil, err
 	} else {
 		return result.(*model.UninstallInstanceEipResponse), nil
+	}
+}
+
+type UpgradeCbhInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpgradeCbhInstanceInvoker) Invoke() (*model.UpgradeCbhInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpgradeCbhInstanceResponse), nil
 	}
 }

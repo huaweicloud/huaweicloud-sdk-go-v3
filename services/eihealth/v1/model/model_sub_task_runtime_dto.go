@@ -25,6 +25,15 @@ type SubTaskRuntimeDto struct {
 
 	// 作业日志存储链接
 	LogStorageLink *string `json:"log_storage_link,omitempty"`
+
+	// task的pod创建时间
+	PodCreateTime *string `json:"pod_create_time,omitempty"`
+
+	// task的pod启动时间
+	PodStartTime *string `json:"pod_start_time,omitempty"`
+
+	// task的cce job失败次数
+	JobFailedTimes *int32 `json:"job_failed_times,omitempty"`
 }
 
 func (o SubTaskRuntimeDto) String() string {

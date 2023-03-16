@@ -15,7 +15,7 @@ type VersionRsp struct {
 	Publisher *string `json:"publisher,omitempty"`
 
 	// 资产长描述
-	Descritpion *string `json:"descritpion,omitempty"`
+	Description *string `json:"description,omitempty"`
 
 	// 资产短描述
 	Summary *string `json:"summary,omitempty"`

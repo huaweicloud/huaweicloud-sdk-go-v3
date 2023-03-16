@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// 升级CBH实例请求对象
+// 升级云堡垒机实例请求对象。
 type UpgradeCbhRequestBody struct {
 
-	// 实例的server id
+	// 云堡垒机实例ID，使用UUID格式。
 	InstanceId string `json:"instance_id"`
 }
 

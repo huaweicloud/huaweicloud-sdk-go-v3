@@ -22,8 +22,11 @@ type ShowEnvResponse struct {
 	HasEncryptionButton *bool `json:"has_encryption_button,omitempty"`
 
 	// 医疗智能体部署模式
-	DeployMode     *string `json:"deploy_mode,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	DeployMode *string `json:"deploy_mode,omitempty"`
+
+	// 是否支持归档类型存储
+	EnableColdArchive *bool `json:"enable_cold_archive,omitempty"`
+	HttpStatusCode    int   `json:"-"`
 }
 
 func (o ShowEnvResponse) String() string {

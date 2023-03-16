@@ -13,8 +13,8 @@ type ListDatabaseDataResponse struct {
 	Count *int32 `json:"count,omitempty"`
 
 	// 查询记录列表
-	Objects        *[]map[string]interface{} `json:"objects,omitempty"`
-	HttpStatusCode int                       `json:"-"`
+	Objects        *[]map[string]string `json:"objects,omitempty"`
+	HttpStatusCode int                  `json:"-"`
 }
 
 func (o ListDatabaseDataResponse) String() string {

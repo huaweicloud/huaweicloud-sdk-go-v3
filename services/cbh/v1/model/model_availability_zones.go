@@ -6,22 +6,22 @@ import (
 	"strings"
 )
 
-// CBH服务可用区对象
+// 云堡垒机服务可用分区信息。
 type AvailabilityZones struct {
 
-	// 可用区id
+	// 云堡垒机服务可用区ID。
 	Id string `json:"id"`
 
-	// 可用区显示名称
+	// 云堡垒机服务可用分区显示名称。
 	DisplayName string `json:"display_name"`
 
-	// region id
+	// 云堡垒机服务分区ID
 	RegionId string `json:"region_id"`
 
-	// 可用区状态
+	// 云堡垒机服务可用区状态。
 	Status string `json:"status"`
 
-	// 可用区类型
+	// 云堡垒机服务可用区类型。
 	Type *string `json:"type,omitempty"`
 }
 

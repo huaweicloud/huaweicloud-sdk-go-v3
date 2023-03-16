@@ -13,10 +13,10 @@ type GaussMySqlDatabaseUser struct {
 	Name string `json:"name"`
 
 	// 主机地址
-	Host *string `json:"host,omitempty"`
+	Host string `json:"host"`
 
 	// 是否为只读权限： - true，表示只读。 - false，表示可读写。
-	Readonly *bool `json:"readonly,omitempty"`
+	Readonly bool `json:"readonly"`
 }
 
 func (o GaussMySqlDatabaseUser) String() string {

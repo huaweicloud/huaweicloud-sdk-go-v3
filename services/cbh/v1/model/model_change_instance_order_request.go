@@ -9,10 +9,10 @@ import (
 // Request Object
 type ChangeInstanceOrderRequest struct {
 
-	// 实例ID
+	// 云堡垒机实例ID。
 	ServerId string `json:"server_id"`
 
-	// 实例的Instance_id
+	// 云堡垒机实例Key。
 	InstanceKey string `json:"instance_key"`
 }
 

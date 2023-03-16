@@ -15,6 +15,9 @@ type JobTaskDto struct {
 	Inputs *[]TaskParameterDto `json:"inputs,omitempty"`
 
 	Resources *TaskResourceDto `json:"resources,omitempty"`
+
+	// 子任务使用的IO加速实例类型，不填表示不使用；
+	IoAccType *string `json:"io_acc_type,omitempty"`
 }
 
 func (o JobTaskDto) String() string {

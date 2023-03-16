@@ -61,6 +61,27 @@ func (c *ApigClient) AddEngressEipV2Invoker(request *model.AddEngressEipV2Reques
 	return &AddEngressEipV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AddIngressEipV2 开启实例公网入口
+//
+// 开启实例开启公网入口，仅当实例为ELB类型时支持
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) AddIngressEipV2(request *model.AddIngressEipV2Request) (*model.AddIngressEipV2Response, error) {
+	requestDef := GenReqDefForAddIngressEipV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddIngressEipV2Response), nil
+	}
+}
+
+// AddIngressEipV2Invoker 开启实例公网入口
+func (c *ApigClient) AddIngressEipV2Invoker(request *model.AddIngressEipV2Request) *AddIngressEipV2Invoker {
+	requestDef := GenReqDefForAddIngressEipV2()
+	return &AddIngressEipV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // AssociateCertificateV2 绑定域名证书
 //
 // 如果创建API时，“定义API请求”使用HTTPS请求协议，那么在独立域名中需要添加SSL证书。
@@ -1520,6 +1541,27 @@ func (c *ApigClient) RemoveEngressEipV2Invoker(request *model.RemoveEngressEipV2
 	return &RemoveEngressEipV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RemoveIngressEipV2 关闭实例公网入口
+//
+// 关闭实例公网入口，仅当实例为ELB类型时支持
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) RemoveIngressEipV2(request *model.RemoveIngressEipV2Request) (*model.RemoveIngressEipV2Response, error) {
+	requestDef := GenReqDefForRemoveIngressEipV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RemoveIngressEipV2Response), nil
+	}
+}
+
+// RemoveIngressEipV2Invoker 关闭实例公网入口
+func (c *ApigClient) RemoveIngressEipV2Invoker(request *model.RemoveIngressEipV2Request) *RemoveIngressEipV2Invoker {
+	requestDef := GenReqDefForRemoveIngressEipV2()
+	return &RemoveIngressEipV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowDetailsOfCustomAuthorizersV2 查看自定义认证详情
 //
 // 查看自定义认证详情
@@ -1833,6 +1875,27 @@ func (c *ApigClient) UpdateGatewayResponseV2(request *model.UpdateGatewayRespons
 func (c *ApigClient) UpdateGatewayResponseV2Invoker(request *model.UpdateGatewayResponseV2Request) *UpdateGatewayResponseV2Invoker {
 	requestDef := GenReqDefForUpdateGatewayResponseV2()
 	return &UpdateGatewayResponseV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateIngressEipV2 更新实例入公网带宽
+//
+// 更新实例入公网带宽，仅当实例为ELB类型时支持
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) UpdateIngressEipV2(request *model.UpdateIngressEipV2Request) (*model.UpdateIngressEipV2Response, error) {
+	requestDef := GenReqDefForUpdateIngressEipV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateIngressEipV2Response), nil
+	}
+}
+
+// UpdateIngressEipV2Invoker 更新实例入公网带宽
+func (c *ApigClient) UpdateIngressEipV2Invoker(request *model.UpdateIngressEipV2Request) *UpdateIngressEipV2Invoker {
+	requestDef := GenReqDefForUpdateIngressEipV2()
+	return &UpdateIngressEipV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateInstanceV2 更新专享版实例

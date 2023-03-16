@@ -439,6 +439,258 @@ func (c *IoTEdgeClient) UpdateEdgeApplicationVersionStateInvoker(request *model.
 	return &UpdateEdgeApplicationVersionStateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchListDcDs 查询数据源配置列表
+//
+// 查询数据源配置列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) BatchListDcDs(request *model.BatchListDcDsRequest) (*model.BatchListDcDsResponse, error) {
+	requestDef := GenReqDefForBatchListDcDs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchListDcDsResponse), nil
+	}
+}
+
+// BatchListDcDsInvoker 查询数据源配置列表
+func (c *IoTEdgeClient) BatchListDcDsInvoker(request *model.BatchListDcDsRequest) *BatchListDcDsInvoker {
+	requestDef := GenReqDefForBatchListDcDs()
+	return &BatchListDcDsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateDs 创建数据源配置
+//
+// 用户通过Console接口在指定边缘节点上创建数据源配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) CreateDs(request *model.CreateDsRequest) (*model.CreateDsResponse, error) {
+	requestDef := GenReqDefForCreateDs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDsResponse), nil
+	}
+}
+
+// CreateDsInvoker 创建数据源配置
+func (c *IoTEdgeClient) CreateDsInvoker(request *model.CreateDsRequest) *CreateDsInvoker {
+	requestDef := GenReqDefForCreateDs()
+	return &CreateDsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDcDs 删除数据源配置
+//
+// 删除数据源配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) DeleteDcDs(request *model.DeleteDcDsRequest) (*model.DeleteDcDsResponse, error) {
+	requestDef := GenReqDefForDeleteDcDs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDcDsResponse), nil
+	}
+}
+
+// DeleteDcDsInvoker 删除数据源配置
+func (c *IoTEdgeClient) DeleteDcDsInvoker(request *model.DeleteDcDsRequest) *DeleteDcDsInvoker {
+	requestDef := GenReqDefForDeleteDcDs()
+	return &DeleteDcDsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDcDs 查询数据源配置
+//
+// 查询数据源配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) ShowDcDs(request *model.ShowDcDsRequest) (*model.ShowDcDsResponse, error) {
+	requestDef := GenReqDefForShowDcDs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDcDsResponse), nil
+	}
+}
+
+// ShowDcDsInvoker 查询数据源配置
+func (c *IoTEdgeClient) ShowDcDsInvoker(request *model.ShowDcDsRequest) *ShowDcDsInvoker {
+	requestDef := GenReqDefForShowDcDs()
+	return &ShowDcDsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SynchronizeDcConfigs 下发数采配置
+//
+// 下发数采配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) SynchronizeDcConfigs(request *model.SynchronizeDcConfigsRequest) (*model.SynchronizeDcConfigsResponse, error) {
+	requestDef := GenReqDefForSynchronizeDcConfigs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SynchronizeDcConfigsResponse), nil
+	}
+}
+
+// SynchronizeDcConfigsInvoker 下发数采配置
+func (c *IoTEdgeClient) SynchronizeDcConfigsInvoker(request *model.SynchronizeDcConfigsRequest) *SynchronizeDcConfigsInvoker {
+	requestDef := GenReqDefForSynchronizeDcConfigs()
+	return &SynchronizeDcConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDcDs 修改数据源配置
+//
+// 修改数据源配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) UpdateDcDs(request *model.UpdateDcDsRequest) (*model.UpdateDcDsResponse, error) {
+	requestDef := GenReqDefForUpdateDcDs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDcDsResponse), nil
+	}
+}
+
+// UpdateDcDsInvoker 修改数据源配置
+func (c *IoTEdgeClient) UpdateDcDsInvoker(request *model.UpdateDcDsRequest) *UpdateDcDsInvoker {
+	requestDef := GenReqDefForUpdateDcDs()
+	return &UpdateDcDsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchListDcDevices 查数采连接子设备列表
+//
+// 查询数采连接下子设备列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) BatchListDcDevices(request *model.BatchListDcDevicesRequest) (*model.BatchListDcDevicesResponse, error) {
+	requestDef := GenReqDefForBatchListDcDevices()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchListDcDevicesResponse), nil
+	}
+}
+
+// BatchListDcDevicesInvoker 查数采连接子设备列表
+func (c *IoTEdgeClient) BatchListDcDevicesInvoker(request *model.BatchListDcDevicesRequest) *BatchListDcDevicesInvoker {
+	requestDef := GenReqDefForBatchListDcDevices()
+	return &BatchListDcDevicesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchListDcPoints 查询点位表配置列表
+//
+// 查询点位表配置列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) BatchListDcPoints(request *model.BatchListDcPointsRequest) (*model.BatchListDcPointsResponse, error) {
+	requestDef := GenReqDefForBatchListDcPoints()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchListDcPointsResponse), nil
+	}
+}
+
+// BatchListDcPointsInvoker 查询点位表配置列表
+func (c *IoTEdgeClient) BatchListDcPointsInvoker(request *model.BatchListDcPointsRequest) *BatchListDcPointsInvoker {
+	requestDef := GenReqDefForBatchListDcPoints()
+	return &BatchListDcPointsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateDcPoint 创建点位表配置
+//
+// 用户通过Console接口在指定边缘节点上点位表配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) CreateDcPoint(request *model.CreateDcPointRequest) (*model.CreateDcPointResponse, error) {
+	requestDef := GenReqDefForCreateDcPoint()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDcPointResponse), nil
+	}
+}
+
+// CreateDcPointInvoker 创建点位表配置
+func (c *IoTEdgeClient) CreateDcPointInvoker(request *model.CreateDcPointRequest) *CreateDcPointInvoker {
+	requestDef := GenReqDefForCreateDcPoint()
+	return &CreateDcPointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDcPoint 删除点位表配置
+//
+// 删除点位表配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) DeleteDcPoint(request *model.DeleteDcPointRequest) (*model.DeleteDcPointResponse, error) {
+	requestDef := GenReqDefForDeleteDcPoint()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDcPointResponse), nil
+	}
+}
+
+// DeleteDcPointInvoker 删除点位表配置
+func (c *IoTEdgeClient) DeleteDcPointInvoker(request *model.DeleteDcPointRequest) *DeleteDcPointInvoker {
+	requestDef := GenReqDefForDeleteDcPoint()
+	return &DeleteDcPointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDcPoint 查询点位表配置详情
+//
+// 查询点位表配置详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) ShowDcPoint(request *model.ShowDcPointRequest) (*model.ShowDcPointResponse, error) {
+	requestDef := GenReqDefForShowDcPoint()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDcPointResponse), nil
+	}
+}
+
+// ShowDcPointInvoker 查询点位表配置详情
+func (c *IoTEdgeClient) ShowDcPointInvoker(request *model.ShowDcPointRequest) *ShowDcPointInvoker {
+	requestDef := GenReqDefForShowDcPoint()
+	return &ShowDcPointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDcPoint 修改点位表配置
+//
+// 修改点位表配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) UpdateDcPoint(request *model.UpdateDcPointRequest) (*model.UpdateDcPointResponse, error) {
+	requestDef := GenReqDefForUpdateDcPoint()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDcPointResponse), nil
+	}
+}
+
+// UpdateDcPointInvoker 修改点位表配置
+func (c *IoTEdgeClient) UpdateDcPointInvoker(request *model.UpdateDcPointRequest) *UpdateDcPointInvoker {
+	requestDef := GenReqDefForUpdateDcPoint()
+	return &UpdateDcPointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateExternalEntity 在指定节点上创建外部实体
 //
 // 用户通过在指定边缘节点上设置外部实体的接入信息
@@ -668,6 +920,69 @@ func (c *IoTEdgeClient) UpdateRoutes(request *model.UpdateRoutesRequest) (*model
 func (c *IoTEdgeClient) UpdateRoutesInvoker(request *model.UpdateRoutesRequest) *UpdateRoutesInvoker {
 	requestDef := GenReqDefForUpdateRoutes()
 	return &UpdateRoutesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ImportPoints 批量导入点位表
+//
+// 用户通过Console接口在指定边缘节点上点位表配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) ImportPoints(request *model.ImportPointsRequest) (*model.ImportPointsResponse, error) {
+	requestDef := GenReqDefForImportPoints()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ImportPointsResponse), nil
+	}
+}
+
+// ImportPointsInvoker 批量导入点位表
+func (c *IoTEdgeClient) ImportPointsInvoker(request *model.ImportPointsRequest) *ImportPointsInvoker {
+	requestDef := GenReqDefForImportPoints()
+	return &ImportPointsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPointTemplate 查询点位表模板文件
+//
+// 查询点位表模板文件
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) ShowPointTemplate(request *model.ShowPointTemplateRequest) (*model.ShowPointTemplateResponse, error) {
+	requestDef := GenReqDefForShowPointTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPointTemplateResponse), nil
+	}
+}
+
+// ShowPointTemplateInvoker 查询点位表模板文件
+func (c *IoTEdgeClient) ShowPointTemplateInvoker(request *model.ShowPointTemplateRequest) *ShowPointTemplateInvoker {
+	requestDef := GenReqDefForShowPointTemplate()
+	return &ShowPointTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPoints 查询点位表模板文件
+//
+// 查询点位表模板文件
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) ShowPoints(request *model.ShowPointsRequest) (*model.ShowPointsResponse, error) {
+	requestDef := GenReqDefForShowPoints()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPointsResponse), nil
+	}
+}
+
+// ShowPointsInvoker 查询点位表模板文件
+func (c *IoTEdgeClient) ShowPointsInvoker(request *model.ShowPointsRequest) *ShowPointsInvoker {
+	requestDef := GenReqDefForShowPoints()
+	return &ShowPointsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // BatchConfirmConfigsNew 批量确认南向3rdIA配置项

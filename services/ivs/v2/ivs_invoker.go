@@ -52,3 +52,27 @@ func (i *DetectStandardByNameAndIdInvoker) Invoke() (*model.DetectStandardByName
 		return result.(*model.DetectStandardByNameAndIdResponse), nil
 	}
 }
+
+type DetectStandardByVideoAndIdCardImageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DetectStandardByVideoAndIdCardImageInvoker) Invoke() (*model.DetectStandardByVideoAndIdCardImageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DetectStandardByVideoAndIdCardImageResponse), nil
+	}
+}
+
+type DetectStandardByVideoAndNameAndIdInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DetectStandardByVideoAndNameAndIdInvoker) Invoke() (*model.DetectStandardByVideoAndNameAndIdResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DetectStandardByVideoAndNameAndIdResponse), nil
+	}
+}

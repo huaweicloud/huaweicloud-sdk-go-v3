@@ -20,6 +20,9 @@ type TaskDefinitionDto struct {
 	// 子任务的完整输出路径，查看流程不会返回，查看作业时才会返回完整输出路径
 	WholeOutputDir *string `json:"whole_output_dir,omitempty"`
 
+	// 子任务使用的IO加速类型，不填表示不使用；
+	IoAccType *string `json:"io_acc_type,omitempty"`
+
 	Resources *TaskResourceDto `json:"resources,omitempty"`
 
 	Location *VertexLocationDto `json:"location,omitempty"`

@@ -18,6 +18,9 @@ type BackupDto struct {
 	// 类型
 	Type *string `json:"type,omitempty"`
 
+	// 存储类型
+	StorageType *string `json:"storage_type,omitempty"`
+
 	// 区域
 	Region *string `json:"region,omitempty"`
 
@@ -29,6 +32,9 @@ type BackupDto struct {
 
 	// 归档结束时间
 	EndTime *string `json:"end_time,omitempty"`
+
+	// 已归档天数
+	ArchiveDays *int32 `json:"archive_days,omitempty"`
 
 	// 大小
 	Size *int64 `json:"size,omitempty"`

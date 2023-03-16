@@ -9,22 +9,22 @@ import (
 type IdcardResult struct {
 
 	// 身份证上识别的名称。
-	Name *string `json:"name,omitempty"`
+	Name string `json:"name"`
 
 	// 身份证号。
-	Number *string `json:"number,omitempty"`
+	Number string `json:"number"`
 
 	// 性别。
-	Sex *string `json:"sex,omitempty"`
+	Sex string `json:"sex"`
 
 	// 出生日期。
-	Birth *string `json:"birth,omitempty"`
+	Birth string `json:"birth"`
 
 	// 民族。
-	Ethnicity *string `json:"ethnicity,omitempty"`
+	Ethnicity string `json:"ethnicity"`
 
 	// 地址。
-	Address *string `json:"address,omitempty"`
+	Address string `json:"address"`
 
 	// 发证机关。
 	Issue *string `json:"issue,omitempty"`

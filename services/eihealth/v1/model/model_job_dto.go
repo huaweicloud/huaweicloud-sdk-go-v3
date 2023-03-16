@@ -15,7 +15,7 @@ type JobDto struct {
 	// 作业的描述,取值范围：输入字符最大长度为255
 	Description *string `json:"description,omitempty"`
 
-	// 作业标签，取值范围[0,5]，单个标签最大长度32字符，仅仅包含小写字母或数字或大写字母
+	// 作业标签，取值范围[0,5]，单个标签最大长度32字符，支持中文、字母、数字、空格、下划线和中划线，且不能以空格开头或者结尾。
 	Labels *[]string `json:"labels,omitempty"`
 
 	// 作业的优先级,取值范围[0,9]，0最低，默认数值0
@@ -36,7 +36,7 @@ type JobDto struct {
 	// 基于替换规则压扁后，job实际的运行信息
 	Tasks *[]JobTaskDto `json:"tasks,omitempty"`
 
-	// 作业使用的SFS-Turbo实例id，不填表示不使用
+	// 作业使用的IO加速实例id，不填表示不使用
 	IoAccId *string `json:"io_acc_id,omitempty"`
 
 	// 作业使用的SFS-Turbo实例预期占用存储量，单位G，用于投递作业时评估当前加速实例余量是否充足

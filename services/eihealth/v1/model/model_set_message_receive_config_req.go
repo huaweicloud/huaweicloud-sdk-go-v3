@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 用户邮件接收配置
+// 用户邮件接收配置请求体
 type SetMessageReceiveConfigReq struct {
 
 	// 接收范围（不接收消息(none)、仅接收自己操作的消息(mine)、接收全部消息(all)）

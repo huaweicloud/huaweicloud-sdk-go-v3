@@ -9,7 +9,7 @@ import (
 // Response Object
 type ChangeInstanceOrderResponse struct {
 
-	// 订单ID
+	// 订单ID。
 	OrderId        *string `json:"orderId,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

@@ -166,6 +166,27 @@ func (c *ImageClient) CreateVideoCuttingTaskInvoker(request *model.CreateVideoCu
 	return &CreateVideoCuttingTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateVideoObjectMaskingTask 创建司乘敏感擦除任务
+//
+// Create Task
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ImageClient) CreateVideoObjectMaskingTask(request *model.CreateVideoObjectMaskingTaskRequest) (*model.CreateVideoObjectMaskingTaskResponse, error) {
+	requestDef := GenReqDefForCreateVideoObjectMaskingTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateVideoObjectMaskingTaskResponse), nil
+	}
+}
+
+// CreateVideoObjectMaskingTaskInvoker 创建司乘敏感擦除任务
+func (c *ImageClient) CreateVideoObjectMaskingTaskInvoker(request *model.CreateVideoObjectMaskingTaskRequest) *CreateVideoObjectMaskingTaskInvoker {
+	requestDef := GenReqDefForCreateVideoObjectMaskingTask()
+	return &CreateVideoObjectMaskingTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateVideoShotSplitTask 创建任务
 //
 // 创建视频拆条任务
@@ -647,6 +668,27 @@ func (c *ImageClient) ShowVideoCuttingTask(request *model.ShowVideoCuttingTaskRe
 func (c *ImageClient) ShowVideoCuttingTaskInvoker(request *model.ShowVideoCuttingTaskRequest) *ShowVideoCuttingTaskInvoker {
 	requestDef := GenReqDefForShowVideoCuttingTask()
 	return &ShowVideoCuttingTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowVideoObjectMaskingTask show task 查询任务信息
+//
+// show task
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ImageClient) ShowVideoObjectMaskingTask(request *model.ShowVideoObjectMaskingTaskRequest) (*model.ShowVideoObjectMaskingTaskResponse, error) {
+	requestDef := GenReqDefForShowVideoObjectMaskingTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowVideoObjectMaskingTaskResponse), nil
+	}
+}
+
+// ShowVideoObjectMaskingTaskInvoker show task 查询任务信息
+func (c *ImageClient) ShowVideoObjectMaskingTaskInvoker(request *model.ShowVideoObjectMaskingTaskRequest) *ShowVideoObjectMaskingTaskInvoker {
+	requestDef := GenReqDefForShowVideoObjectMaskingTask()
+	return &ShowVideoObjectMaskingTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowVideoShotSplitTask 查询任务

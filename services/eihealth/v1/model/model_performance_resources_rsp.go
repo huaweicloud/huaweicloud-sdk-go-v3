@@ -17,6 +17,9 @@ type PerformanceResourcesRsp struct {
 
 	// 当前运行中的作业总数
 	RunningJobCount *int32 `json:"running_job_count,omitempty"`
+
+	// 资源是否可调度
+	Schedulable *bool `json:"schedulable,omitempty"`
 }
 
 func (o PerformanceResourcesRsp) String() string {

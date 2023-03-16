@@ -473,6 +473,18 @@ func (i *ShowBackupPathInvoker) Invoke() (*model.ShowBackupPathResponse, error) 
 	}
 }
 
+type BatchDeleteDataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteDataInvoker) Invoke() (*model.BatchDeleteDataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteDataResponse), nil
+	}
+}
+
 type CopyDataInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -494,18 +506,6 @@ func (i *CreateDataInvoker) Invoke() (*model.CreateDataResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.CreateDataResponse), nil
-	}
-}
-
-type DeleteDataInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteDataInvoker) Invoke() (*model.DeleteDataResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteDataResponse), nil
 	}
 }
 
@@ -1361,6 +1361,30 @@ func (i *ListLabelPageInvoker) Invoke() (*model.ListLabelPageResponse, error) {
 	}
 }
 
+type BatchDeleteNoticeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteNoticeInvoker) Invoke() (*model.BatchDeleteNoticeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteNoticeResponse), nil
+	}
+}
+
+type BatchUpdateNoticeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchUpdateNoticeInvoker) Invoke() (*model.BatchUpdateNoticeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchUpdateNoticeResponse), nil
+	}
+}
+
 type CheckEmailConnectionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1394,6 +1418,30 @@ func (i *ListMessageInvoker) Invoke() (*model.ListMessageResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListMessageResponse), nil
+	}
+}
+
+type ListMessageStatisticsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListMessageStatisticsInvoker) Invoke() (*model.ListMessageStatisticsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListMessageStatisticsResponse), nil
+	}
+}
+
+type ListNoticeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListNoticeInvoker) Invoke() (*model.ListNoticeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListNoticeResponse), nil
 	}
 }
 
@@ -1925,6 +1973,18 @@ func (i *UpdateStarInvoker) Invoke() (*model.UpdateStarResponse, error) {
 	}
 }
 
+type ListGlobalWorkflowStatisticInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListGlobalWorkflowStatisticInvoker) Invoke() (*model.ListGlobalWorkflowStatisticResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListGlobalWorkflowStatisticResponse), nil
+	}
+}
+
 type ListPerformanceResourceStatInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2189,6 +2249,18 @@ func (i *UploadTemplateInvoker) Invoke() (*model.UploadTemplateResponse, error) 
 	}
 }
 
+type ChangePasswordInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangePasswordInvoker) Invoke() (*model.ChangePasswordResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangePasswordResponse), nil
+	}
+}
+
 type CheckTokenVerificationInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2234,6 +2306,18 @@ func (i *DeleteUserInvoker) Invoke() (*model.DeleteUserResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.DeleteUserResponse), nil
+	}
+}
+
+type ImportUserInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ImportUserInvoker) Invoke() (*model.ImportUserResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ImportUserResponse), nil
 	}
 }
 
@@ -2294,18 +2378,6 @@ func (i *UpdateInitPasswordInvoker) Invoke() (*model.UpdateInitPasswordResponse,
 		return nil, err
 	} else {
 		return result.(*model.UpdateInitPasswordResponse), nil
-	}
-}
-
-type UpdatePasswordInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdatePasswordInvoker) Invoke() (*model.UpdatePasswordResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdatePasswordResponse), nil
 	}
 }
 

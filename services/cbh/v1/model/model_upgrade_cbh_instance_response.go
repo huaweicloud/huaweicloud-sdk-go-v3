@@ -9,16 +9,16 @@ import (
 // Response Object
 type UpgradeCbhInstanceResponse struct {
 
-	// 操作结果
+	// 操作结果。
 	Code *int32 `json:"code,omitempty"`
 
-	// 描述
+	// 描述。
 	Description *string `json:"description,omitempty"`
 
-	// 任务 id
+	// 任务 id。
 	TaskId *string `json:"task_id,omitempty"`
 
-	// 订单 id
+	// 订单 id。
 	OrderId        *string `json:"order_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

@@ -1,10 +1,11 @@
 package model
 
 import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
 	"strings"
 )
 
@@ -23,10 +24,10 @@ type SubJobs struct {
 	JobType *string `json:"job_type,omitempty"`
 
 	// 开始时间。时间戳格式为ISO 8601，例如：2019-04-25T20:04:47.591Z
-	BeginTime *sdktime.SdkTime `json:"begin_time,omitempty"`
+	BeginTime *string `json:"begin_time,omitempty"`
 
 	// 结束时间。时间戳格式为ISO 8601，例如：2019-04-26T20:04:47.591Z
-	EndTime *sdktime.SdkTime `json:"end_time,omitempty"`
+	EndTime *string `json:"end_time,omitempty"`
 
 	// Job执行失败时的错误码
 	ErrorCode *string `json:"error_code,omitempty"`

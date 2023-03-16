@@ -12,7 +12,7 @@ type ListDeleteDatabaseUserRequest struct {
 	Name string `json:"name"`
 
 	// 主机地址
-	Host *string `json:"host,omitempty"`
+	Host string `json:"host"`
 }
 
 func (o ListDeleteDatabaseUserRequest) String() string {

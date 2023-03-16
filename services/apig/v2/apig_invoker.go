@@ -29,6 +29,18 @@ func (i *AddEngressEipV2Invoker) Invoke() (*model.AddEngressEipV2Response, error
 	}
 }
 
+type AddIngressEipV2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddIngressEipV2Invoker) Invoke() (*model.AddIngressEipV2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddIngressEipV2Response), nil
+	}
+}
+
 type AssociateCertificateV2Invoker struct {
 	*invoker.BaseInvoker
 }
@@ -785,6 +797,18 @@ func (i *RemoveEngressEipV2Invoker) Invoke() (*model.RemoveEngressEipV2Response,
 	}
 }
 
+type RemoveIngressEipV2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RemoveIngressEipV2Invoker) Invoke() (*model.RemoveIngressEipV2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RemoveIngressEipV2Response), nil
+	}
+}
+
 type ShowDetailsOfCustomAuthorizersV2Invoker struct {
 	*invoker.BaseInvoker
 }
@@ -962,6 +986,18 @@ func (i *UpdateGatewayResponseV2Invoker) Invoke() (*model.UpdateGatewayResponseV
 		return nil, err
 	} else {
 		return result.(*model.UpdateGatewayResponseV2Response), nil
+	}
+}
+
+type UpdateIngressEipV2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateIngressEipV2Invoker) Invoke() (*model.UpdateIngressEipV2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateIngressEipV2Response), nil
 	}
 }
 

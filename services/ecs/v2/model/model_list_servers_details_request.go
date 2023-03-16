@@ -42,7 +42,7 @@ type ListServersDetailsRequest struct {
 	// IPv4地址过滤结果，匹配规则为精确匹配。
 	IpEq *string `json:"ip_eq,omitempty"`
 
-	// 云服务器ID，格式为UUID，匹配规则为精确匹配  示例: server_id={id1}&server_id={id2}
+	// 云服务器ID，格式为UUID，匹配规则为精确匹配  示例: server_id=id1,id2
 	ServerId *string `json:"server_id,omitempty"`
 }
 

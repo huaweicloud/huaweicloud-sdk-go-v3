@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type UpdateMessageClearRuleRequest struct {
-	Body *GetMessageClearRuleReq `json:"body,omitempty"`
+	Body *SetMessageClearRuleReq `json:"body,omitempty"`
 }
 
 func (o UpdateMessageClearRuleRequest) String() string {

@@ -9,10 +9,10 @@ import (
 // 通过模板创建应用请求体
 type TemplateTaskRequestBody struct {
 
-	// devcloud创建的项目id
+	// 项目id
 	ProjectId string `json:"project_id"`
 
-	// devcloud创建的项目名称
+	// 项目名称
 	ProjectName string `json:"project_name"`
 
 	// 部署模板id

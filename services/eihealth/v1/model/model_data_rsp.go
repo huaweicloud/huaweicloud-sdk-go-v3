@@ -23,6 +23,9 @@ type DataRsp struct {
 	// 创建时间
 	CreateTime *string `json:"create_time,omitempty"`
 
+	// 文件内容
+	Content *string `json:"content,omitempty"`
+
 	// 下载链接
 	DownloadUrl *string `json:"download_url,omitempty"`
 

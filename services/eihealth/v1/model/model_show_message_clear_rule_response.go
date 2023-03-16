@@ -9,9 +9,6 @@ import (
 // Response Object
 type ShowMessageClearRuleResponse struct {
 
-	// 保存时长，单位：天
-	MessageRetainTime *int32 `json:"message_retain_time,omitempty"`
-
 	// 最多保留记录数
 	MessageRetainNumber *int32 `json:"message_retain_number,omitempty"`
 	HttpStatusCode      int    `json:"-"`

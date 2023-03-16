@@ -43,7 +43,7 @@ type CreateServers struct {
 
 	Publicip *PublicIp `json:"publicip,omitempty"`
 
-	// 创建裸金属服务器的数量。约束：不传该字段时默认取值为1。租户的配额足够时，最大值为24。
+	// 创建裸金属服务器的数量。约束：不传该字段时默认取值为1。租户的配额足够时，最大值为100。
 	Count *int32 `json:"count,omitempty"`
 
 	RootVolume *RootVolume `json:"root_volume,omitempty"`

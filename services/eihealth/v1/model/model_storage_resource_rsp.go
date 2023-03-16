@@ -7,13 +7,6 @@ import (
 )
 
 type StorageResourceRsp struct {
-
-	// 实例ID
-	Id string `json:"id"`
-
-	// 实例名称
-	Name string `json:"name"`
-
 	Spec *SpecDto `json:"spec"`
 
 	// 使用量

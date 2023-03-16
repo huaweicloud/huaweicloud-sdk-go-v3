@@ -49,7 +49,7 @@ type JobListDto struct {
 
 	ToolInfo *ToolInfoDto `json:"tool_info,omitempty"`
 
-	// IO加速实例ID
+	// 作业使用的IO加速实例id，不填表示不使用；
 	IoAccId *string `json:"io_acc_id,omitempty"`
 
 	// 作业使用的SFS-Turbo实例预期占用存储量，单位G，用于投递作业时评估当前加速实例余量是否充足

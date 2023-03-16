@@ -89,6 +89,18 @@ func (i *CreateVideoCuttingTaskInvoker) Invoke() (*model.CreateVideoCuttingTaskR
 	}
 }
 
+type CreateVideoObjectMaskingTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateVideoObjectMaskingTaskInvoker) Invoke() (*model.CreateVideoObjectMaskingTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateVideoObjectMaskingTaskResponse), nil
+	}
+}
+
 type CreateVideoShotSplitTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -362,6 +374,18 @@ func (i *ShowVideoCuttingTaskInvoker) Invoke() (*model.ShowVideoCuttingTaskRespo
 		return nil, err
 	} else {
 		return result.(*model.ShowVideoCuttingTaskResponse), nil
+	}
+}
+
+type ShowVideoObjectMaskingTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowVideoObjectMaskingTaskInvoker) Invoke() (*model.ShowVideoObjectMaskingTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowVideoObjectMaskingTaskResponse), nil
 	}
 }
 

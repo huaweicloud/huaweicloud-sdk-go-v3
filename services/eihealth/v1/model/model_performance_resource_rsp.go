@@ -34,14 +34,23 @@ type PerformanceResourceRsp struct {
 	// 购买周期
 	PeriodNum int32 `json:"period_num"`
 
+	// 作业运行数
+	RunningJobCount *int32 `json:"running_job_count,omitempty"`
+
 	// 运行的最大作业数量
 	JobQuota *int32 `json:"job_quota,omitempty"`
 
 	// 购买时间
 	CreateTime string `json:"create_time"`
 
+	// 失败原因
+	FailureReason string `json:"failure_reason"`
+
 	// 状态
 	Status string `json:"status"`
+
+	// 资源是否可调度
+	Schedulable bool `json:"schedulable"`
 }
 
 func (o PerformanceResourceRsp) String() string {

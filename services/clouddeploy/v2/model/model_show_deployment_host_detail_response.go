@@ -46,10 +46,10 @@ type ShowDeploymentHostDetailResponse struct {
 	// 主机组名
 	GroupName *string `json:"group_name,omitempty"`
 
-	// devcloud项目id
+	// 项目id
 	ProjectId *string `json:"project_id,omitempty"`
 
-	// devcloud项目名称
+	// 项目名称
 	ProjectName *string `json:"project_name,omitempty"`
 
 	Permission *PermissionHostDetail `json:"permission,omitempty"`

@@ -102,6 +102,27 @@ func (c *CdnClient) DownloadStatisticsExcelInvoker(request *model.DownloadStatis
 	return &DownloadStatisticsExcelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListDomains 查询加速域名
+//
+// 查询加速域名
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) ListDomains(request *model.ListDomainsRequest) (*model.ListDomainsResponse, error) {
+	requestDef := GenReqDefForListDomains()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDomainsResponse), nil
+	}
+}
+
+// ListDomainsInvoker 查询加速域名
+func (c *CdnClient) ListDomainsInvoker(request *model.ListDomainsRequest) *ListDomainsInvoker {
+	requestDef := GenReqDefForListDomains()
+	return &ListDomainsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SetChargeModes 设置用户计费模式
 //
 // - 设置用户计费模式。
@@ -191,6 +212,27 @@ func (c *CdnClient) ShowChargeModes(request *model.ShowChargeModesRequest) (*mod
 func (c *CdnClient) ShowChargeModesInvoker(request *model.ShowChargeModesRequest) *ShowChargeModesInvoker {
 	requestDef := GenReqDefForShowChargeModes()
 	return &ShowChargeModesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDomainDetailByName 查询加速域名详情
+//
+// 加速域名详情信息接口
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) ShowDomainDetailByName(request *model.ShowDomainDetailByNameRequest) (*model.ShowDomainDetailByNameResponse, error) {
+	requestDef := GenReqDefForShowDomainDetailByName()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDomainDetailByNameResponse), nil
+	}
+}
+
+// ShowDomainDetailByNameInvoker 查询加速域名详情
+func (c *CdnClient) ShowDomainDetailByNameInvoker(request *model.ShowDomainDetailByNameRequest) *ShowDomainDetailByNameInvoker {
+	requestDef := GenReqDefForShowDomainDetailByName()
+	return &ShowDomainDetailByNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowDomainLocationStats 查询域名统计区域运营商数据

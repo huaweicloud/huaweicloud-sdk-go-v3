@@ -6,84 +6,44 @@ import (
 	"strings"
 )
 
-// 创建堡垒机实例请求body
+// 创建堡垒机实例请求参数。
 type CbhInstances struct {
 
-	// 镜像ID
-	ImageRef *string `json:"image_ref,omitempty"`
-
-	// 规格ID
+	// 待创建云堡垒机规格ID，例如： - cbh.basic.50 - cbh.enhance.50 已上线的规格请参见《云堡垒机产品介绍》的“服务版本差异(https://support.huaweicloud.com/productdesc-cbh/cbh_01_0010.html)”章节。
 	FlavorRef string `json:"flavor_ref"`
 
-	// 堡垒机实例名称
+	// 云堡垒机实例名称，取值范围： - 只能由中文字符、英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。 例如：CBH-6b8e
 	InstanceName string `json:"instance_name"`
 
-	// 名字
-	Name *string `json:"name,omitempty"`
-
-	Personality *Personality `json:"personality,omitempty"`
-
-	// 注入用户数据
-	UserData *string `json:"user_data,omitempty"`
-
-	// 初始登录密码
-	AdminPassword *string `json:"admin_password,omitempty"`
-
-	// 管理员SSH秘钥登录
-	KeyName *string `json:"key_name,omitempty"`
-
-	// VPC ID
+	// 待创建云服务器所属虚拟私有云（简称VPC），需要指定已创建VPC的ID，UUID格式。 VPC的ID可以从控制台或者参考《虚拟私有云接口参考》的“查询VPC”章节获取。 例如：03211ecf-697e-4306-a7a0-6e939bf948de
 	VpcId string `json:"vpc_id"`
 
-	// 网卡信息
 	Nics []Nics `json:"nics"`
 
 	PublicIp *PublicIp `json:"public_ip"`
 
-	// 弹性数量
-	Count *int32 `json:"count,omitempty"`
-
-	RootVolume *RootVolume `json:"root_volume,omitempty"`
-
-	DataVolumes *DataVolumes `json:"data_volumes,omitempty"`
-
-	// 网卡信息
 	SecurityGroups []SecurityGroup `json:"security_groups"`
 
-	// 分区信息
+	// 创建云堡垒机所在的可用区，需要指定可用区名称。 可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取
 	AvailabilityZone string `json:"availability_zone"`
 
-	// 备用区
+	// 创建云堡垒机所在的备机可用区，需要指定备机可用区名称。 可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取
 	SlaveAvailabilityZone *string `json:"slave_availability_zone,omitempty"`
 
-	ExtendParam *ExtendParam `json:"extend_param,omitempty"`
-
-	// 创建云服务云数据
-	Metadata *string `json:"metadata,omitempty"`
-
-	// 描述
+	// 云堡垒机实例描述信息。
 	Comment *string `json:"comment,omitempty"`
 
-	// 云服务所在区域ID
+	// 云服务所在局点ID。
 	Region string `json:"region"`
 
-	// region标识
-	RegionId *string `json:"region_id,omitempty"`
-
-	// 资源规格
-	ResourceSpecCode *string `json:"resource_spec_code,omitempty"`
-
-	// 前端登录密码
+	// 堡垒机实例前端登录密码。密码规则：8-32位,不能包含amdin或nidma及其大写形式,必须包含大小写数字特殊字符四种类型中的三种。
 	HxPassword string `json:"hx_password"`
 
-	// 堡垒机机机型
+	// 堡垒机实例类型，填写“OEM”即可。
 	BastionType string `json:"bastion_type"`
 
-	// 分区信息
+	// 是否支持IPV6，不填默认为false。
 	Ipv6Enable *bool `json:"ipv6_enable,omitempty"`
-
-	// 订购截止日期
-	EndTime *string `json:"end_time,omitempty"`
 }
 
 func (o CbhInstances) String() string {

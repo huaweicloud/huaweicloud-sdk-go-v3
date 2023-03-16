@@ -18,6 +18,8 @@ type CreateBackupReq struct {
 	// 归档路径集
 	SubPaths []string `json:"sub_paths"`
 
+	StorageType *StorageType `json:"storage_type,omitempty"`
+
 	// 是否删除已归档数据
 	DeleteArchivedData *bool `json:"delete_archived_data,omitempty"`
 }

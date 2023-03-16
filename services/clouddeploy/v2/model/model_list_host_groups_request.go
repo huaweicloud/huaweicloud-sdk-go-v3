@@ -12,7 +12,7 @@ import (
 // Request Object
 type ListHostGroupsRequest struct {
 
-	// devcloud创建的项目id
+	// 项目id
 	ProjectId *string `json:"project_id,omitempty"`
 
 	// 局点信息

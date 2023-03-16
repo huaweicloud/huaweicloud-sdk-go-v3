@@ -27,6 +27,9 @@ type DatabaseResourceRsp struct {
 	// 购买时间，UTC时间
 	CreateTime string `json:"create_time"`
 
+	// 失败原因
+	FailureReason string `json:"failure_reason"`
+
 	Status *DatabaseStatusEnum `json:"status"`
 }
 

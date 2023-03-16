@@ -9,7 +9,7 @@ import (
 // Request Object
 type ResetLoginMethodRequest struct {
 
-	// Cbh Server Id
+	// 堡垒机实例ID，使用UUID格式。
 	ServerId string `json:"server_id"`
 }
 

@@ -18,9 +18,6 @@ type ShowMessageEmailConfigResponse struct {
 	// 用户名
 	UserName *string `json:"user_name,omitempty"`
 
-	// 密码
-	Password *string `json:"password,omitempty"`
-
 	// 邮箱
 	Email *string `json:"email,omitempty"`
 

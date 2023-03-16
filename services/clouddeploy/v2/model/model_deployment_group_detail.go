@@ -21,7 +21,7 @@ type DeploymentGroupDetail struct {
 	// 组内主机数量，一个主机组内最多可添加200台主机
 	HostCount *int32 `json:"host_count,omitempty"`
 
-	// devcloud项目名称
+	// 项目名称
 	ProjectName *string `json:"project_name,omitempty"`
 
 	// 主机组名
@@ -30,7 +30,7 @@ type DeploymentGroupDetail struct {
 	// 局点信息
 	RegionName *string `json:"region_name,omitempty"`
 
-	// devcloud项目id
+	// 项目id
 	ProjectId *string `json:"project_id,omitempty"`
 
 	// 操作系统：windows|linux
@@ -39,7 +39,7 @@ type DeploymentGroupDetail struct {
 	// 自动连通性验证 0不执行 1每日 2每周
 	AutoConnectionTestSwitch *int32 `json:"auto_connection_test_switch,omitempty"`
 
-	// slave集群id，默认为null时使用devcloud八爪鱼slave集群，用户自定义slave时为slave集群id
+	// slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id
 	SlaveClusterId *string `json:"slave_cluster_id,omitempty"`
 
 	// 用户昵称

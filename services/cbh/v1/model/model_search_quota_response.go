@@ -9,17 +9,17 @@ import (
 // Response Object
 type SearchQuotaResponse struct {
 
-	// 配额
+	// 剩余可创建云堡垒机实例个数。
 	Quota *int32 `json:"quota,omitempty"`
 
-	// EIP配额
+	// 弹性公网IP个数，默认值1。
 	EipQuota *int32 `json:"eip_quota,omitempty"`
 
-	// 状态
-	Status *string `json:"status,omitempty"`
+	// IPV6状态信息，返回默认值null。
+	StatusV6 *string `json:"status_v6,omitempty"`
 
-	// v6状态
-	StatusV6       *string `json:"status_v6,omitempty"`
+	// IPV6状态信息，返回默认值null。
+	Status         *string `json:"status,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

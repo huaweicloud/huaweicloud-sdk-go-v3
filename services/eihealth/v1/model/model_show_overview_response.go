@@ -19,8 +19,11 @@ type ShowOverviewResponse struct {
 	ProjectNum *int32 `json:"project_num,omitempty"`
 
 	// 计费模式
-	ChargeMode     *int32 `json:"charge_mode,omitempty"`
-	HttpStatusCode int    `json:"-"`
+	ChargeMode *int32 `json:"charge_mode,omitempty"`
+
+	// 是否欠费
+	IsArrears      *bool `json:"is_arrears,omitempty"`
+	HttpStatusCode int   `json:"-"`
 }
 
 func (o ShowOverviewResponse) String() string {
