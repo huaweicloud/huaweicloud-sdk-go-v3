@@ -42,7 +42,7 @@ type UpdateHostRequestBody struct {
 	// 是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
 	ExclusiveIp *bool `json:"exclusive_ip,omitempty"`
 
-	// 套餐付费模式，目前只支持prePaid预付款模式
+	// 套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
 	PaidType *string `json:"paid_type,omitempty"`
 
 	BlockPage *BlockPage `json:"block_page,omitempty"`

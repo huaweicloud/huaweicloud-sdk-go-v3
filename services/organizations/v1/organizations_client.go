@@ -19,27 +19,6 @@ func OrganizationsClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// CreateAccount 创建帐号
-//
-// 创建一个帐号，生成的帐号将自动成为调用此接口的帐号所属组织的成员。此操作只能由组织的管理帐号调用。组织云服务将在新帐号中创建所需的服务关联委托和帐号访问委托。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *OrganizationsClient) CreateAccount(request *model.CreateAccountRequest) (*model.CreateAccountResponse, error) {
-	requestDef := GenReqDefForCreateAccount()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateAccountResponse), nil
-	}
-}
-
-// CreateAccountInvoker 创建帐号
-func (c *OrganizationsClient) CreateAccountInvoker(request *model.CreateAccountRequest) *CreateAccountInvoker {
-	requestDef := GenReqDefForCreateAccount()
-	return &CreateAccountInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // InviteAccount 邀请帐号加入组织
 //
 // 向另一个帐号发送邀请，受邀帐号将以成员帐号加入您的组织。此操作只能由组织的管理帐号调用。
@@ -164,27 +143,6 @@ func (c *OrganizationsClient) ShowAccount(request *model.ShowAccountRequest) (*m
 func (c *OrganizationsClient) ShowAccountInvoker(request *model.ShowAccountRequest) *ShowAccountInvoker {
 	requestDef := GenReqDefForShowAccount()
 	return &ShowAccountInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowCreateAccountStatus 查询有关创建帐号状态的信息
-//
-// 检索创建帐号的异步请求的当前状态。此操作只能由组织的管理帐号或作为服务委托管理员的成员帐号调用。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *OrganizationsClient) ShowCreateAccountStatus(request *model.ShowCreateAccountStatusRequest) (*model.ShowCreateAccountStatusResponse, error) {
-	requestDef := GenReqDefForShowCreateAccountStatus()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowCreateAccountStatusResponse), nil
-	}
-}
-
-// ShowCreateAccountStatusInvoker 查询有关创建帐号状态的信息
-func (c *OrganizationsClient) ShowCreateAccountStatusInvoker(request *model.ShowCreateAccountStatusRequest) *ShowCreateAccountStatusInvoker {
-	requestDef := GenReqDefForShowCreateAccountStatus()
-	return &ShowCreateAccountStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeregisterDelegatedAdministrator 注销服务的委托管理员
@@ -437,48 +395,6 @@ func (c *OrganizationsClient) ListServices(request *model.ListServicesRequest) (
 func (c *OrganizationsClient) ListServicesInvoker(request *model.ListServicesRequest) *ListServicesInvoker {
 	requestDef := GenReqDefForListServices()
 	return &ListServicesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListTagPolicyServices 列出被添加到标签策略强制执行的资源类型
-//
-// List all services and resource type that could integrate with tag policy.
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *OrganizationsClient) ListTagPolicyServices(request *model.ListTagPolicyServicesRequest) (*model.ListTagPolicyServicesResponse, error) {
-	requestDef := GenReqDefForListTagPolicyServices()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListTagPolicyServicesResponse), nil
-	}
-}
-
-// ListTagPolicyServicesInvoker 列出被添加到标签策略强制执行的资源类型
-func (c *OrganizationsClient) ListTagPolicyServicesInvoker(request *model.ListTagPolicyServicesRequest) *ListTagPolicyServicesInvoker {
-	requestDef := GenReqDefForListTagPolicyServices()
-	return &ListTagPolicyServicesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowEffectivePolicies 查询有效的策略
-//
-// 查询指定策略类型和帐户的有效策略信息。当前此接口不支持查询服务控制策略（service_control_policy）。此操作只能由组织的管理帐号或作为服务委托管理员的成员帐号调用。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *OrganizationsClient) ShowEffectivePolicies(request *model.ShowEffectivePoliciesRequest) (*model.ShowEffectivePoliciesResponse, error) {
-	requestDef := GenReqDefForShowEffectivePolicies()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowEffectivePoliciesResponse), nil
-	}
-}
-
-// ShowEffectivePoliciesInvoker 查询有效的策略
-func (c *OrganizationsClient) ShowEffectivePoliciesInvoker(request *model.ShowEffectivePoliciesRequest) *ShowEffectivePoliciesInvoker {
-	requestDef := GenReqDefForShowEffectivePolicies()
-	return &ShowEffectivePoliciesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateOrganization 创建组织
@@ -901,111 +817,6 @@ func (c *OrganizationsClient) UpdatePolicyInvoker(request *model.UpdatePolicyReq
 	return &UpdatePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateTagResource 为指定资源添加标签
-//
-// 向指定的资源添加一个或多个标签。目前，您可以将标签附加到组织中的帐号、组织单元、根和策略。此操作只能由组织的管理帐号调用
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *OrganizationsClient) CreateTagResource(request *model.CreateTagResourceRequest) (*model.CreateTagResourceResponse, error) {
-	requestDef := GenReqDefForCreateTagResource()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateTagResourceResponse), nil
-	}
-}
-
-// CreateTagResourceInvoker 为指定资源添加标签
-func (c *OrganizationsClient) CreateTagResourceInvoker(request *model.CreateTagResourceRequest) *CreateTagResourceInvoker {
-	requestDef := GenReqDefForCreateTagResource()
-	return &CreateTagResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DeleteTagResource 从指定资源中删除指定主键标签
-//
-// 从指定资源中删除具有指定主键的任何标签。您可以将标签绑定到组织中的帐号、组织单元、根和策略。此操作只能由组织的管理帐号调用
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *OrganizationsClient) DeleteTagResource(request *model.DeleteTagResourceRequest) (*model.DeleteTagResourceResponse, error) {
-	requestDef := GenReqDefForDeleteTagResource()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeleteTagResourceResponse), nil
-	}
-}
-
-// DeleteTagResourceInvoker 从指定资源中删除指定主键标签
-func (c *OrganizationsClient) DeleteTagResourceInvoker(request *model.DeleteTagResourceRequest) *DeleteTagResourceInvoker {
-	requestDef := GenReqDefForDeleteTagResource()
-	return &DeleteTagResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListResourceInstances 根据资源类型及标签信息查询实例列表
-//
-// 根据资源类型及标签信息查询实例列表
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *OrganizationsClient) ListResourceInstances(request *model.ListResourceInstancesRequest) (*model.ListResourceInstancesResponse, error) {
-	requestDef := GenReqDefForListResourceInstances()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListResourceInstancesResponse), nil
-	}
-}
-
-// ListResourceInstancesInvoker 根据资源类型及标签信息查询实例列表
-func (c *OrganizationsClient) ListResourceInstancesInvoker(request *model.ListResourceInstancesRequest) *ListResourceInstancesInvoker {
-	requestDef := GenReqDefForListResourceInstances()
-	return &ListResourceInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListResourceTags 查询项目标签
-//
-// 查询项目标签
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *OrganizationsClient) ListResourceTags(request *model.ListResourceTagsRequest) (*model.ListResourceTagsResponse, error) {
-	requestDef := GenReqDefForListResourceTags()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListResourceTagsResponse), nil
-	}
-}
-
-// ListResourceTagsInvoker 查询项目标签
-func (c *OrganizationsClient) ListResourceTagsInvoker(request *model.ListResourceTagsRequest) *ListResourceTagsInvoker {
-	requestDef := GenReqDefForListResourceTags()
-	return &ListResourceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListTagResources 列出绑定到指定资源的标签
-//
-// 列出绑定到指定资源的标签。您可以将标签附加到组织中的帐号、组织单元、根和策略。此操作只能由组织的管理帐号或作为服务委托管理员的成员帐号调用
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *OrganizationsClient) ListTagResources(request *model.ListTagResourcesRequest) (*model.ListTagResourcesResponse, error) {
-	requestDef := GenReqDefForListTagResources()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListTagResourcesResponse), nil
-	}
-}
-
-// ListTagResourcesInvoker 列出绑定到指定资源的标签
-func (c *OrganizationsClient) ListTagResourcesInvoker(request *model.ListTagResourcesRequest) *ListTagResourcesInvoker {
-	requestDef := GenReqDefForListTagResources()
-	return &ListTagResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // ListTagsForResource 列出绑定到指定资源的标签
 //
 // 列出绑定到指定资源的标签。您可以将标签附加到组织中的帐号、组织单元、根和策略。此操作只能由组织的管理帐号或作为服务委托管理员的成员帐号调用。
@@ -1025,27 +836,6 @@ func (c *OrganizationsClient) ListTagsForResource(request *model.ListTagsForReso
 func (c *OrganizationsClient) ListTagsForResourceInvoker(request *model.ListTagsForResourceRequest) *ListTagsForResourceInvoker {
 	requestDef := GenReqDefForListTagsForResource()
 	return &ListTagsForResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowResourceInstancesCount 根据资源类型及标签信息查询实例数量
-//
-// 根据资源类型及标签信息查询实例数量
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *OrganizationsClient) ShowResourceInstancesCount(request *model.ShowResourceInstancesCountRequest) (*model.ShowResourceInstancesCountResponse, error) {
-	requestDef := GenReqDefForShowResourceInstancesCount()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowResourceInstancesCountResponse), nil
-	}
-}
-
-// ShowResourceInstancesCountInvoker 根据资源类型及标签信息查询实例数量
-func (c *OrganizationsClient) ShowResourceInstancesCountInvoker(request *model.ShowResourceInstancesCountRequest) *ShowResourceInstancesCountInvoker {
-	requestDef := GenReqDefForShowResourceInstancesCount()
-	return &ShowResourceInstancesCountInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // TagResource 为指定资源添加标签

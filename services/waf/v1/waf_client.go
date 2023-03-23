@@ -85,6 +85,69 @@ func (c *WafClient) CreateAntiTamperRuleInvoker(request *model.CreateAntiTamperR
 	return &CreateAntiTamperRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateAnticrawlerRule 创建JS脚本反爬虫规则
+//
+// 创建JS脚本反爬虫规则，在调用此接口创建防护规则前，需要调用更新JS脚本反爬虫规则防护模式（UpdateAnticrawlerRuleType）接口指定防护模式
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) CreateAnticrawlerRule(request *model.CreateAnticrawlerRuleRequest) (*model.CreateAnticrawlerRuleResponse, error) {
+	requestDef := GenReqDefForCreateAnticrawlerRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAnticrawlerRuleResponse), nil
+	}
+}
+
+// CreateAnticrawlerRuleInvoker 创建JS脚本反爬虫规则
+func (c *WafClient) CreateAnticrawlerRuleInvoker(request *model.CreateAnticrawlerRuleRequest) *CreateAnticrawlerRuleInvoker {
+	requestDef := GenReqDefForCreateAnticrawlerRule()
+	return &CreateAnticrawlerRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateAntileakageRule 创建防敏感信息泄露规则
+//
+// 创建防敏感信息泄露规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) CreateAntileakageRule(request *model.CreateAntileakageRuleRequest) (*model.CreateAntileakageRuleResponse, error) {
+	requestDef := GenReqDefForCreateAntileakageRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAntileakageRuleResponse), nil
+	}
+}
+
+// CreateAntileakageRuleInvoker 创建防敏感信息泄露规则
+func (c *WafClient) CreateAntileakageRuleInvoker(request *model.CreateAntileakageRuleRequest) *CreateAntileakageRuleInvoker {
+	requestDef := GenReqDefForCreateAntileakageRule()
+	return &CreateAntileakageRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateCcRule 创建cc规则
+//
+// 创建cc规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) CreateCcRule(request *model.CreateCcRuleRequest) (*model.CreateCcRuleResponse, error) {
+	requestDef := GenReqDefForCreateCcRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateCcRuleResponse), nil
+	}
+}
+
+// CreateCcRuleInvoker 创建cc规则
+func (c *WafClient) CreateCcRuleInvoker(request *model.CreateCcRuleRequest) *CreateCcRuleInvoker {
+	requestDef := GenReqDefForCreateCcRule()
+	return &CreateCcRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateCertificate 创建证书
 //
 // 创建证书
@@ -104,6 +167,27 @@ func (c *WafClient) CreateCertificate(request *model.CreateCertificateRequest) (
 func (c *WafClient) CreateCertificateInvoker(request *model.CreateCertificateRequest) *CreateCertificateInvoker {
 	requestDef := GenReqDefForCreateCertificate()
 	return &CreateCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateCustomRule 创建精准防护规则
+//
+// 创建精准防护规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) CreateCustomRule(request *model.CreateCustomRuleRequest) (*model.CreateCustomRuleResponse, error) {
+	requestDef := GenReqDefForCreateCustomRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateCustomRuleResponse), nil
+	}
+}
+
+// CreateCustomRuleInvoker 创建精准防护规则
+func (c *WafClient) CreateCustomRuleInvoker(request *model.CreateCustomRuleRequest) *CreateCustomRuleInvoker {
+	requestDef := GenReqDefForCreateCustomRule()
+	return &CreateCustomRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateGeoipRule 创建地理位置控制规则
@@ -295,6 +379,27 @@ func (c *WafClient) CreatePrivacyRuleInvoker(request *model.CreatePrivacyRuleReq
 	return &CreatePrivacyRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreatePunishmentRule 创建攻击惩罚规则
+//
+// 创建攻击惩罚规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) CreatePunishmentRule(request *model.CreatePunishmentRuleRequest) (*model.CreatePunishmentRuleResponse, error) {
+	requestDef := GenReqDefForCreatePunishmentRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePunishmentRuleResponse), nil
+	}
+}
+
+// CreatePunishmentRuleInvoker 创建攻击惩罚规则
+func (c *WafClient) CreatePunishmentRuleInvoker(request *model.CreatePunishmentRuleRequest) *CreatePunishmentRuleInvoker {
+	requestDef := GenReqDefForCreatePunishmentRule()
+	return &CreatePunishmentRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateValueList 创建引用表
 //
 // 创建引用表，引用表能够被CC攻击防护规则和精准访问防护中的规则所引用。
@@ -337,6 +442,48 @@ func (c *WafClient) CreateWhiteblackipRuleInvoker(request *model.CreateWhiteblac
 	return &CreateWhiteblackipRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteAnticrawlerRule 删除JS脚本反爬虫防护规则
+//
+// 删除JS脚本反爬虫防护规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) DeleteAnticrawlerRule(request *model.DeleteAnticrawlerRuleRequest) (*model.DeleteAnticrawlerRuleResponse, error) {
+	requestDef := GenReqDefForDeleteAnticrawlerRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAnticrawlerRuleResponse), nil
+	}
+}
+
+// DeleteAnticrawlerRuleInvoker 删除JS脚本反爬虫防护规则
+func (c *WafClient) DeleteAnticrawlerRuleInvoker(request *model.DeleteAnticrawlerRuleRequest) *DeleteAnticrawlerRuleInvoker {
+	requestDef := GenReqDefForDeleteAnticrawlerRule()
+	return &DeleteAnticrawlerRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAntileakageRule 删除防敏感信息泄露防护规则
+//
+// 删除防敏感信息泄露防护规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) DeleteAntileakageRule(request *model.DeleteAntileakageRuleRequest) (*model.DeleteAntileakageRuleResponse, error) {
+	requestDef := GenReqDefForDeleteAntileakageRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAntileakageRuleResponse), nil
+	}
+}
+
+// DeleteAntileakageRuleInvoker 删除防敏感信息泄露防护规则
+func (c *WafClient) DeleteAntileakageRuleInvoker(request *model.DeleteAntileakageRuleRequest) *DeleteAntileakageRuleInvoker {
+	requestDef := GenReqDefForDeleteAntileakageRule()
+	return &DeleteAntileakageRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteAntitamperRule 删除防篡改防护规则
 //
 // 删除防篡改防护规则
@@ -358,6 +505,27 @@ func (c *WafClient) DeleteAntitamperRuleInvoker(request *model.DeleteAntitamperR
 	return &DeleteAntitamperRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteCcRule 删除cc防护规则
+//
+// 删除cc防护规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) DeleteCcRule(request *model.DeleteCcRuleRequest) (*model.DeleteCcRuleResponse, error) {
+	requestDef := GenReqDefForDeleteCcRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteCcRuleResponse), nil
+	}
+}
+
+// DeleteCcRuleInvoker 删除cc防护规则
+func (c *WafClient) DeleteCcRuleInvoker(request *model.DeleteCcRuleRequest) *DeleteCcRuleInvoker {
+	requestDef := GenReqDefForDeleteCcRule()
+	return &DeleteCcRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteCertificate 删除证书
 //
 // 删除证书
@@ -377,6 +545,27 @@ func (c *WafClient) DeleteCertificate(request *model.DeleteCertificateRequest) (
 func (c *WafClient) DeleteCertificateInvoker(request *model.DeleteCertificateRequest) *DeleteCertificateInvoker {
 	requestDef := GenReqDefForDeleteCertificate()
 	return &DeleteCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteCustomRule 删除精准防护规则
+//
+// 删除精准防护规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) DeleteCustomRule(request *model.DeleteCustomRuleRequest) (*model.DeleteCustomRuleResponse, error) {
+	requestDef := GenReqDefForDeleteCustomRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteCustomRuleResponse), nil
+	}
+}
+
+// DeleteCustomRuleInvoker 删除精准防护规则
+func (c *WafClient) DeleteCustomRuleInvoker(request *model.DeleteCustomRuleRequest) *DeleteCustomRuleInvoker {
+	requestDef := GenReqDefForDeleteCustomRule()
+	return &DeleteCustomRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteGeoipRule 删除地理位置控制防护规则
@@ -547,6 +736,27 @@ func (c *WafClient) DeletePrivacyRuleInvoker(request *model.DeletePrivacyRuleReq
 	return &DeletePrivacyRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeletePunishmentRule 删除攻击惩罚规则
+//
+// 删除攻击惩罚规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) DeletePunishmentRule(request *model.DeletePunishmentRuleRequest) (*model.DeletePunishmentRuleResponse, error) {
+	requestDef := GenReqDefForDeletePunishmentRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeletePunishmentRuleResponse), nil
+	}
+}
+
+// DeletePunishmentRuleInvoker 删除攻击惩罚规则
+func (c *WafClient) DeletePunishmentRuleInvoker(request *model.DeletePunishmentRuleRequest) *DeletePunishmentRuleInvoker {
+	requestDef := GenReqDefForDeletePunishmentRule()
+	return &DeletePunishmentRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteValueList 删除引用表
 //
 // 删除引用表
@@ -587,6 +797,48 @@ func (c *WafClient) DeleteWhiteBlackIpRule(request *model.DeleteWhiteBlackIpRule
 func (c *WafClient) DeleteWhiteBlackIpRuleInvoker(request *model.DeleteWhiteBlackIpRuleRequest) *DeleteWhiteBlackIpRuleInvoker {
 	requestDef := GenReqDefForDeleteWhiteBlackIpRule()
 	return &DeleteWhiteBlackIpRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAnticrawlerRules 查询JS脚本反爬虫规则列表
+//
+// 查询JS脚本反爬虫规则列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) ListAnticrawlerRules(request *model.ListAnticrawlerRulesRequest) (*model.ListAnticrawlerRulesResponse, error) {
+	requestDef := GenReqDefForListAnticrawlerRules()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAnticrawlerRulesResponse), nil
+	}
+}
+
+// ListAnticrawlerRulesInvoker 查询JS脚本反爬虫规则列表
+func (c *WafClient) ListAnticrawlerRulesInvoker(request *model.ListAnticrawlerRulesRequest) *ListAnticrawlerRulesInvoker {
+	requestDef := GenReqDefForListAnticrawlerRules()
+	return &ListAnticrawlerRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAntileakageRules 查询防敏感信息泄露规则列表
+//
+// 查询防敏感信息泄露规则列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) ListAntileakageRules(request *model.ListAntileakageRulesRequest) (*model.ListAntileakageRulesResponse, error) {
+	requestDef := GenReqDefForListAntileakageRules()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAntileakageRulesResponse), nil
+	}
+}
+
+// ListAntileakageRulesInvoker 查询防敏感信息泄露规则列表
+func (c *WafClient) ListAntileakageRulesInvoker(request *model.ListAntileakageRulesRequest) *ListAntileakageRulesInvoker {
+	requestDef := GenReqDefForListAntileakageRules()
+	return &ListAntileakageRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListAntitamperRule 查询防篡改规则列表
@@ -631,6 +883,27 @@ func (c *WafClient) ListBandwidthTimelineInvoker(request *model.ListBandwidthTim
 	return &ListBandwidthTimelineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListCcRules 查询cc规则列表
+//
+// 查询cc规则列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) ListCcRules(request *model.ListCcRulesRequest) (*model.ListCcRulesResponse, error) {
+	requestDef := GenReqDefForListCcRules()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCcRulesResponse), nil
+	}
+}
+
+// ListCcRulesInvoker 查询cc规则列表
+func (c *WafClient) ListCcRulesInvoker(request *model.ListCcRulesRequest) *ListCcRulesInvoker {
+	requestDef := GenReqDefForListCcRules()
+	return &ListCcRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListCertificates 查询证书列表
 //
 // 查询证书列表
@@ -671,6 +944,27 @@ func (c *WafClient) ListCompositeHosts(request *model.ListCompositeHostsRequest)
 func (c *WafClient) ListCompositeHostsInvoker(request *model.ListCompositeHostsRequest) *ListCompositeHostsInvoker {
 	requestDef := GenReqDefForListCompositeHosts()
 	return &ListCompositeHostsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCustomRules 查询精准防护规则列表
+//
+// 查询精准防护规则列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) ListCustomRules(request *model.ListCustomRulesRequest) (*model.ListCustomRulesResponse, error) {
+	requestDef := GenReqDefForListCustomRules()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCustomRulesResponse), nil
+	}
+}
+
+// ListCustomRulesInvoker 查询精准防护规则列表
+func (c *WafClient) ListCustomRulesInvoker(request *model.ListCustomRulesRequest) *ListCustomRulesInvoker {
+	requestDef := GenReqDefForListCustomRules()
+	return &ListCustomRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListEvent 查询攻击事件列表
@@ -925,6 +1219,27 @@ func (c *WafClient) ListPrivacyRuleInvoker(request *model.ListPrivacyRuleRequest
 	return &ListPrivacyRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListPunishmentRules 查询攻击惩罚规则列表
+//
+// 查询攻击惩罚规则列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) ListPunishmentRules(request *model.ListPunishmentRulesRequest) (*model.ListPunishmentRulesResponse, error) {
+	requestDef := GenReqDefForListPunishmentRules()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPunishmentRulesResponse), nil
+	}
+}
+
+// ListPunishmentRulesInvoker 查询攻击惩罚规则列表
+func (c *WafClient) ListPunishmentRulesInvoker(request *model.ListPunishmentRulesRequest) *ListPunishmentRulesInvoker {
+	requestDef := GenReqDefForListPunishmentRules()
+	return &ListPunishmentRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListQpsTimeline 查询安全统计qps次数
 //
 // 查询安全统计qps次数。需要注意的是，安全统计相关的接口，暂时不能支持任意时间的查询。只能支持 console上显示的 昨天，今天，3天，7天和30天 数据查询。
@@ -1093,6 +1408,69 @@ func (c *WafClient) RenameInstanceInvoker(request *model.RenameInstanceRequest) 
 	return &RenameInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowAnticrawlerRule 查询JS脚本反爬虫防护规则
+//
+// 根据Id查询JS脚本反爬虫防护规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) ShowAnticrawlerRule(request *model.ShowAnticrawlerRuleRequest) (*model.ShowAnticrawlerRuleResponse, error) {
+	requestDef := GenReqDefForShowAnticrawlerRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAnticrawlerRuleResponse), nil
+	}
+}
+
+// ShowAnticrawlerRuleInvoker 查询JS脚本反爬虫防护规则
+func (c *WafClient) ShowAnticrawlerRuleInvoker(request *model.ShowAnticrawlerRuleRequest) *ShowAnticrawlerRuleInvoker {
+	requestDef := GenReqDefForShowAnticrawlerRule()
+	return &ShowAnticrawlerRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAntileakageRule 查询防敏感信息泄露防护规则
+//
+// 根据Id查询防敏感信息泄露防护规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) ShowAntileakageRule(request *model.ShowAntileakageRuleRequest) (*model.ShowAntileakageRuleResponse, error) {
+	requestDef := GenReqDefForShowAntileakageRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAntileakageRuleResponse), nil
+	}
+}
+
+// ShowAntileakageRuleInvoker 查询防敏感信息泄露防护规则
+func (c *WafClient) ShowAntileakageRuleInvoker(request *model.ShowAntileakageRuleRequest) *ShowAntileakageRuleInvoker {
+	requestDef := GenReqDefForShowAntileakageRule()
+	return &ShowAntileakageRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowCcRule 根据Id查询cc防护规则
+//
+// 根据Id查询cc防护规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) ShowCcRule(request *model.ShowCcRuleRequest) (*model.ShowCcRuleResponse, error) {
+	requestDef := GenReqDefForShowCcRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowCcRuleResponse), nil
+	}
+}
+
+// ShowCcRuleInvoker 根据Id查询cc防护规则
+func (c *WafClient) ShowCcRuleInvoker(request *model.ShowCcRuleRequest) *ShowCcRuleInvoker {
+	requestDef := GenReqDefForShowCcRule()
+	return &ShowCcRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowCertificate 查询证书
 //
 // 查询证书
@@ -1156,6 +1534,27 @@ func (c *WafClient) ShowConsoleConfigInvoker(request *model.ShowConsoleConfigReq
 	return &ShowConsoleConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowCustomRule 根据Id查询精准防护规则
+//
+// 根据Id查询精准防护规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) ShowCustomRule(request *model.ShowCustomRuleRequest) (*model.ShowCustomRuleResponse, error) {
+	requestDef := GenReqDefForShowCustomRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowCustomRuleResponse), nil
+	}
+}
+
+// ShowCustomRuleInvoker 根据Id查询精准防护规则
+func (c *WafClient) ShowCustomRuleInvoker(request *model.ShowCustomRuleRequest) *ShowCustomRuleInvoker {
+	requestDef := GenReqDefForShowCustomRule()
+	return &ShowCustomRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowEvent 查询指定事件id的防护事件详情
 //
 // 查询指定事件id的防护事件详情
@@ -1177,6 +1576,27 @@ func (c *WafClient) ShowEventInvoker(request *model.ShowEventRequest) *ShowEvent
 	return &ShowEventInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowGeoipRule 删除地理位置控制防护规则
+//
+// 删除地理位置控制防护规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) ShowGeoipRule(request *model.ShowGeoipRuleRequest) (*model.ShowGeoipRuleResponse, error) {
+	requestDef := GenReqDefForShowGeoipRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowGeoipRuleResponse), nil
+	}
+}
+
+// ShowGeoipRuleInvoker 删除地理位置控制防护规则
+func (c *WafClient) ShowGeoipRuleInvoker(request *model.ShowGeoipRuleRequest) *ShowGeoipRuleInvoker {
+	requestDef := GenReqDefForShowGeoipRule()
+	return &ShowGeoipRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowHost 根据防护域名Id查询云模式防护域名详细信息
 //
 // 根据防护域名Id查询云模式防护域名详细信息
@@ -1196,6 +1616,27 @@ func (c *WafClient) ShowHost(request *model.ShowHostRequest) (*model.ShowHostRes
 func (c *WafClient) ShowHostInvoker(request *model.ShowHostRequest) *ShowHostInvoker {
 	requestDef := GenReqDefForShowHost()
 	return &ShowHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowIgnoreRule 查询全局白名单(原误报屏蔽)防护规则
+//
+// 查询全局白名单(原误报屏蔽)防护规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) ShowIgnoreRule(request *model.ShowIgnoreRuleRequest) (*model.ShowIgnoreRuleResponse, error) {
+	requestDef := GenReqDefForShowIgnoreRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowIgnoreRuleResponse), nil
+	}
+}
+
+// ShowIgnoreRuleInvoker 查询全局白名单(原误报屏蔽)防护规则
+func (c *WafClient) ShowIgnoreRuleInvoker(request *model.ShowIgnoreRuleRequest) *ShowIgnoreRuleInvoker {
+	requestDef := GenReqDefForShowIgnoreRule()
+	return &ShowIgnoreRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowInstance 查询WAF独享引擎信息
@@ -1303,6 +1744,27 @@ func (c *WafClient) ShowPremiumHostInvoker(request *model.ShowPremiumHostRequest
 	return &ShowPremiumHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowPunishmentRule 根据Id查询攻击惩罚防护规则
+//
+// 根据Id查询攻击惩罚防护规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) ShowPunishmentRule(request *model.ShowPunishmentRuleRequest) (*model.ShowPunishmentRuleResponse, error) {
+	requestDef := GenReqDefForShowPunishmentRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPunishmentRuleResponse), nil
+	}
+}
+
+// ShowPunishmentRuleInvoker 根据Id查询攻击惩罚防护规则
+func (c *WafClient) ShowPunishmentRuleInvoker(request *model.ShowPunishmentRuleRequest) *ShowPunishmentRuleInvoker {
+	requestDef := GenReqDefForShowPunishmentRule()
+	return &ShowPunishmentRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowSourceIp 查询WAF回源Ip信息
 //
 // 查询WAF回源Ip信息
@@ -1366,6 +1828,111 @@ func (c *WafClient) UpdateAlertNoticeConfigInvoker(request *model.UpdateAlertNot
 	return &UpdateAlertNoticeConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateAntiTamperRuleRefresh 网页防篡改规则更新缓存
+//
+// 网页防篡改规则更新缓存
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) UpdateAntiTamperRuleRefresh(request *model.UpdateAntiTamperRuleRefreshRequest) (*model.UpdateAntiTamperRuleRefreshResponse, error) {
+	requestDef := GenReqDefForUpdateAntiTamperRuleRefresh()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAntiTamperRuleRefreshResponse), nil
+	}
+}
+
+// UpdateAntiTamperRuleRefreshInvoker 网页防篡改规则更新缓存
+func (c *WafClient) UpdateAntiTamperRuleRefreshInvoker(request *model.UpdateAntiTamperRuleRefreshRequest) *UpdateAntiTamperRuleRefreshInvoker {
+	requestDef := GenReqDefForUpdateAntiTamperRuleRefresh()
+	return &UpdateAntiTamperRuleRefreshInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAnticrawlerRule 更新JS脚本反爬虫防护规则
+//
+// 更新JS脚本反爬虫防护规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) UpdateAnticrawlerRule(request *model.UpdateAnticrawlerRuleRequest) (*model.UpdateAnticrawlerRuleResponse, error) {
+	requestDef := GenReqDefForUpdateAnticrawlerRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAnticrawlerRuleResponse), nil
+	}
+}
+
+// UpdateAnticrawlerRuleInvoker 更新JS脚本反爬虫防护规则
+func (c *WafClient) UpdateAnticrawlerRuleInvoker(request *model.UpdateAnticrawlerRuleRequest) *UpdateAnticrawlerRuleInvoker {
+	requestDef := GenReqDefForUpdateAnticrawlerRule()
+	return &UpdateAnticrawlerRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAnticrawlerRuleType 更新JS脚本反爬虫规则防护模式
+//
+// 更新JS脚本反爬虫规则防护模式，在创建JS脚本反爬虫规则前，需要调用该接口指定JS脚本反爬虫规则防护模式。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) UpdateAnticrawlerRuleType(request *model.UpdateAnticrawlerRuleTypeRequest) (*model.UpdateAnticrawlerRuleTypeResponse, error) {
+	requestDef := GenReqDefForUpdateAnticrawlerRuleType()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAnticrawlerRuleTypeResponse), nil
+	}
+}
+
+// UpdateAnticrawlerRuleTypeInvoker 更新JS脚本反爬虫规则防护模式
+func (c *WafClient) UpdateAnticrawlerRuleTypeInvoker(request *model.UpdateAnticrawlerRuleTypeRequest) *UpdateAnticrawlerRuleTypeInvoker {
+	requestDef := GenReqDefForUpdateAnticrawlerRuleType()
+	return &UpdateAnticrawlerRuleTypeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAntileakageRule 更新防敏感信息泄露防护规则
+//
+// 更新防敏感信息泄露防护规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) UpdateAntileakageRule(request *model.UpdateAntileakageRuleRequest) (*model.UpdateAntileakageRuleResponse, error) {
+	requestDef := GenReqDefForUpdateAntileakageRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAntileakageRuleResponse), nil
+	}
+}
+
+// UpdateAntileakageRuleInvoker 更新防敏感信息泄露防护规则
+func (c *WafClient) UpdateAntileakageRuleInvoker(request *model.UpdateAntileakageRuleRequest) *UpdateAntileakageRuleInvoker {
+	requestDef := GenReqDefForUpdateAntileakageRule()
+	return &UpdateAntileakageRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateCcRule 更新cc防护规则
+//
+// 更新cc防护规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) UpdateCcRule(request *model.UpdateCcRuleRequest) (*model.UpdateCcRuleResponse, error) {
+	requestDef := GenReqDefForUpdateCcRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateCcRuleResponse), nil
+	}
+}
+
+// UpdateCcRuleInvoker 更新cc防护规则
+func (c *WafClient) UpdateCcRuleInvoker(request *model.UpdateCcRuleRequest) *UpdateCcRuleInvoker {
+	requestDef := GenReqDefForUpdateCcRule()
+	return &UpdateCcRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateCertificate 修改证书
 //
 // 修改证书
@@ -1385,6 +1952,27 @@ func (c *WafClient) UpdateCertificate(request *model.UpdateCertificateRequest) (
 func (c *WafClient) UpdateCertificateInvoker(request *model.UpdateCertificateRequest) *UpdateCertificateInvoker {
 	requestDef := GenReqDefForUpdateCertificate()
 	return &UpdateCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateCustomRule 更新精准防护规则
+//
+// 更新精准防护规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) UpdateCustomRule(request *model.UpdateCustomRuleRequest) (*model.UpdateCustomRuleResponse, error) {
+	requestDef := GenReqDefForUpdateCustomRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateCustomRuleResponse), nil
+	}
+}
+
+// UpdateCustomRuleInvoker 更新精准防护规则
+func (c *WafClient) UpdateCustomRuleInvoker(request *model.UpdateCustomRuleRequest) *UpdateCustomRuleInvoker {
+	requestDef := GenReqDefForUpdateCustomRule()
+	return &UpdateCustomRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateGeoipRule 更新地理位置控制防护规则
@@ -1448,6 +2036,27 @@ func (c *WafClient) UpdateHostProtectStatus(request *model.UpdateHostProtectStat
 func (c *WafClient) UpdateHostProtectStatusInvoker(request *model.UpdateHostProtectStatusRequest) *UpdateHostProtectStatusInvoker {
 	requestDef := GenReqDefForUpdateHostProtectStatus()
 	return &UpdateHostProtectStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateIgnoreRule 更新全局白名单(原误报屏蔽)防护规则
+//
+// 更新全局白名单(原误报屏蔽)防护规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) UpdateIgnoreRule(request *model.UpdateIgnoreRuleRequest) (*model.UpdateIgnoreRuleResponse, error) {
+	requestDef := GenReqDefForUpdateIgnoreRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateIgnoreRuleResponse), nil
+	}
+}
+
+// UpdateIgnoreRuleInvoker 更新全局白名单(原误报屏蔽)防护规则
+func (c *WafClient) UpdateIgnoreRuleInvoker(request *model.UpdateIgnoreRuleRequest) *UpdateIgnoreRuleInvoker {
+	requestDef := GenReqDefForUpdateIgnoreRule()
+	return &UpdateIgnoreRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateIpGroup 修改ip地址组
@@ -1616,6 +2225,27 @@ func (c *WafClient) UpdatePrivacyRule(request *model.UpdatePrivacyRuleRequest) (
 func (c *WafClient) UpdatePrivacyRuleInvoker(request *model.UpdatePrivacyRuleRequest) *UpdatePrivacyRuleInvoker {
 	requestDef := GenReqDefForUpdatePrivacyRule()
 	return &UpdatePrivacyRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePunishmentRule 更新攻击惩罚规则
+//
+// 更新攻击惩罚规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) UpdatePunishmentRule(request *model.UpdatePunishmentRuleRequest) (*model.UpdatePunishmentRuleResponse, error) {
+	requestDef := GenReqDefForUpdatePunishmentRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdatePunishmentRuleResponse), nil
+	}
+}
+
+// UpdatePunishmentRuleInvoker 更新攻击惩罚规则
+func (c *WafClient) UpdatePunishmentRuleInvoker(request *model.UpdatePunishmentRuleRequest) *UpdatePunishmentRuleInvoker {
+	requestDef := GenReqDefForUpdatePunishmentRule()
+	return &UpdatePunishmentRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateValueList 修改引用表

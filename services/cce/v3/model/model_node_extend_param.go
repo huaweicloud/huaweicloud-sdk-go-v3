@@ -65,6 +65,9 @@ type NodeExtendParam struct {
 
 	// 节点的计费模式。已废弃，请使用NodeSpec中的billingMode字段。
 	ChargingMode *int32 `json:"chargingMode,omitempty"`
+
+	// 委托的名称。  委托是由租户管理员在统一身份认证服务（Identity and Access Management，IAM）上创建的，可以为CCE节点提供访问云服务器的临时凭证。
+	AgencyName *string `json:"agency_name,omitempty"`
 }
 
 func (o NodeExtendParam) String() string {

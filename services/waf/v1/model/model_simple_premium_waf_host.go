@@ -29,7 +29,7 @@ type SimplePremiumWafHost struct {
 	// 防护域名初始绑定的防护策略ID,可以通过策略名称调用查询防护策略列表（ListPolicy）接口查询到对应的策略id
 	Policyid *string `json:"policyid,omitempty"`
 
-	// 域名防护状态：  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
+	// 域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
 	ProtectStatus *int32 `json:"protect_status,omitempty"`
 
 	// 域名接入状态，0表示未接入，1表示已接入

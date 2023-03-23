@@ -40,12 +40,16 @@ type BackupFilesBodyFileSource struct {
 
 type BackupFilesBodyFileSourceEnum struct {
 	SELF_BUILD_OBS BackupFilesBodyFileSource
+	BACKUP_RECORD  BackupFilesBodyFileSource
 }
 
 func GetBackupFilesBodyFileSourceEnum() BackupFilesBodyFileSourceEnum {
 	return BackupFilesBodyFileSourceEnum{
 		SELF_BUILD_OBS: BackupFilesBodyFileSource{
 			value: "self_build_obs",
+		},
+		BACKUP_RECORD: BackupFilesBodyFileSource{
+			value: "backup_record",
 		},
 	}
 }

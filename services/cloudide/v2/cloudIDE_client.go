@@ -250,6 +250,27 @@ func (c *CloudIDEClient) ListStacksInvoker(request *model.ListStacksRequest) *Li
 	return &ListStacksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// PublishExtension 插件发布
+//
+// 插件发布
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudIDEClient) PublishExtension(request *model.PublishExtensionRequest) (*model.PublishExtensionResponse, error) {
+	requestDef := GenReqDefForPublishExtension()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.PublishExtensionResponse), nil
+	}
+}
+
+// PublishExtensionInvoker 插件发布
+func (c *CloudIDEClient) PublishExtensionInvoker(request *model.PublishExtensionRequest) *PublishExtensionInvoker {
+	requestDef := GenReqDefForPublishExtension()
+	return &PublishExtensionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowAccountStatus 查询当前帐号访问权限
 //
 // 查询当前帐号访问权限
@@ -376,6 +397,27 @@ func (c *CloudIDEClient) ShowExtensionEvaluationStarInvoker(request *model.ShowE
 	return &ShowExtensionEvaluationStarInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowExtensionTestingResult 获取插件检测结果
+//
+// 获取插件检测结果
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudIDEClient) ShowExtensionTestingResult(request *model.ShowExtensionTestingResultRequest) (*model.ShowExtensionTestingResultResponse, error) {
+	requestDef := GenReqDefForShowExtensionTestingResult()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowExtensionTestingResultResponse), nil
+	}
+}
+
+// ShowExtensionTestingResultInvoker 获取插件检测结果
+func (c *CloudIDEClient) ShowExtensionTestingResultInvoker(request *model.ShowExtensionTestingResultRequest) *ShowExtensionTestingResultInvoker {
+	requestDef := GenReqDefForShowExtensionTestingResult()
+	return &ShowExtensionTestingResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowPrice 获取技术栈计费信息
 //
 // 获取技术栈计费信息
@@ -416,6 +458,27 @@ func (c *CloudIDEClient) UploadExtensionFile(request *model.UploadExtensionFileR
 func (c *CloudIDEClient) UploadExtensionFileInvoker(request *model.UploadExtensionFileRequest) *UploadExtensionFileInvoker {
 	requestDef := GenReqDefForUploadExtensionFile()
 	return &UploadExtensionFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UploadFilePublisher 文件上传归一化
+//
+// 文件上传归一化
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudIDEClient) UploadFilePublisher(request *model.UploadFilePublisherRequest) (*model.UploadFilePublisherResponse, error) {
+	requestDef := GenReqDefForUploadFilePublisher()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UploadFilePublisherResponse), nil
+	}
+}
+
+// UploadFilePublisherInvoker 文件上传归一化
+func (c *CloudIDEClient) UploadFilePublisherInvoker(request *model.UploadFilePublisherRequest) *UploadFilePublisherInvoker {
+	requestDef := GenReqDefForUploadFilePublisher()
+	return &UploadFilePublisherInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateAcceptance CreateAcceptance接口

@@ -3,9 +3,6 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
-	"errors"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-
 	"strings"
 )
 
@@ -50,8 +47,8 @@ type CloudWafHostItem struct {
 	// 是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
 	ExclusiveIp *bool `json:"exclusive_ip,omitempty"`
 
-	// 付费模式，目前只支持prePaid预付款模式
-	PaidType *CloudWafHostItemPaidType `json:"paid_type,omitempty"`
+	// 套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
+	PaidType *string `json:"paid_type,omitempty"`
 
 	// 网站名称，对应WAF控制台域名详情中的网站名称
 	WebTag *string `json:"web_tag,omitempty"`
@@ -66,42 +63,4 @@ func (o CloudWafHostItem) String() string {
 	}
 
 	return strings.Join([]string{"CloudWafHostItem", string(data)}, " ")
-}
-
-type CloudWafHostItemPaidType struct {
-	value string
-}
-
-type CloudWafHostItemPaidTypeEnum struct {
-	PRE_PAID CloudWafHostItemPaidType
-}
-
-func GetCloudWafHostItemPaidTypeEnum() CloudWafHostItemPaidTypeEnum {
-	return CloudWafHostItemPaidTypeEnum{
-		PRE_PAID: CloudWafHostItemPaidType{
-			value: "prePaid",
-		},
-	}
-}
-
-func (c CloudWafHostItemPaidType) Value() string {
-	return c.value
-}
-
-func (c CloudWafHostItemPaidType) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *CloudWafHostItemPaidType) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to string error")
-	}
 }

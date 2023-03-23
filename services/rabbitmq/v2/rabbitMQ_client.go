@@ -296,6 +296,27 @@ func (c *RabbitMQClient) ResetPasswordInvoker(request *model.ResetPasswordReques
 	return &ResetPasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ResizeEngineInstance 新规格实例的规格变更
+//
+// 新规格实例的规格变更。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RabbitMQClient) ResizeEngineInstance(request *model.ResizeEngineInstanceRequest) (*model.ResizeEngineInstanceResponse, error) {
+	requestDef := GenReqDefForResizeEngineInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ResizeEngineInstanceResponse), nil
+	}
+}
+
+// ResizeEngineInstanceInvoker 新规格实例的规格变更
+func (c *RabbitMQClient) ResizeEngineInstanceInvoker(request *model.ResizeEngineInstanceRequest) *ResizeEngineInstanceInvoker {
+	requestDef := GenReqDefForResizeEngineInstance()
+	return &ResizeEngineInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ResizeInstance 实例规格变更
 //
 // 实例规格变更。
@@ -338,6 +359,27 @@ func (c *RabbitMQClient) ShowBackgroundTask(request *model.ShowBackgroundTaskReq
 func (c *RabbitMQClient) ShowBackgroundTaskInvoker(request *model.ShowBackgroundTaskRequest) *ShowBackgroundTaskInvoker {
 	requestDef := GenReqDefForShowBackgroundTask()
 	return &ShowBackgroundTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowEngineInstanceExtendProductInfo 查询新规格可扩容规格列表
+//
+// 查询新规格实例可扩容列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RabbitMQClient) ShowEngineInstanceExtendProductInfo(request *model.ShowEngineInstanceExtendProductInfoRequest) (*model.ShowEngineInstanceExtendProductInfoResponse, error) {
+	requestDef := GenReqDefForShowEngineInstanceExtendProductInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowEngineInstanceExtendProductInfoResponse), nil
+	}
+}
+
+// ShowEngineInstanceExtendProductInfoInvoker 查询新规格可扩容规格列表
+func (c *RabbitMQClient) ShowEngineInstanceExtendProductInfoInvoker(request *model.ShowEngineInstanceExtendProductInfoRequest) *ShowEngineInstanceExtendProductInfoInvoker {
+	requestDef := GenReqDefForShowEngineInstanceExtendProductInfo()
+	return &ShowEngineInstanceExtendProductInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowInstance 查询指定实例

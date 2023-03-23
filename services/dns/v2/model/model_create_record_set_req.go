@@ -14,7 +14,7 @@ type CreateRecordSetReq struct {
 	// 可选配置，对域名的描述。  长度不超过255个字符。  默认值为空。
 	Description *string `json:"description,omitempty"`
 
-	// Record Set的类型。  取值范围：A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。
+	// Record Set的类型。  公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。  内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA、PTR。  默认值为空。
 	Type string `json:"type"`
 
 	// 资源状态。

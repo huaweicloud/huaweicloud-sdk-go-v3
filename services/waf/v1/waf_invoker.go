@@ -41,6 +41,42 @@ func (i *CreateAntiTamperRuleInvoker) Invoke() (*model.CreateAntiTamperRuleRespo
 	}
 }
 
+type CreateAnticrawlerRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAnticrawlerRuleInvoker) Invoke() (*model.CreateAnticrawlerRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAnticrawlerRuleResponse), nil
+	}
+}
+
+type CreateAntileakageRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAntileakageRuleInvoker) Invoke() (*model.CreateAntileakageRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAntileakageRuleResponse), nil
+	}
+}
+
+type CreateCcRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateCcRuleInvoker) Invoke() (*model.CreateCcRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateCcRuleResponse), nil
+	}
+}
+
 type CreateCertificateInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -50,6 +86,18 @@ func (i *CreateCertificateInvoker) Invoke() (*model.CreateCertificateResponse, e
 		return nil, err
 	} else {
 		return result.(*model.CreateCertificateResponse), nil
+	}
+}
+
+type CreateCustomRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateCustomRuleInvoker) Invoke() (*model.CreateCustomRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateCustomRuleResponse), nil
 	}
 }
 
@@ -161,6 +209,18 @@ func (i *CreatePrivacyRuleInvoker) Invoke() (*model.CreatePrivacyRuleResponse, e
 	}
 }
 
+type CreatePunishmentRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePunishmentRuleInvoker) Invoke() (*model.CreatePunishmentRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePunishmentRuleResponse), nil
+	}
+}
+
 type CreateValueListInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -185,6 +245,30 @@ func (i *CreateWhiteblackipRuleInvoker) Invoke() (*model.CreateWhiteblackipRuleR
 	}
 }
 
+type DeleteAnticrawlerRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAnticrawlerRuleInvoker) Invoke() (*model.DeleteAnticrawlerRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAnticrawlerRuleResponse), nil
+	}
+}
+
+type DeleteAntileakageRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAntileakageRuleInvoker) Invoke() (*model.DeleteAntileakageRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAntileakageRuleResponse), nil
+	}
+}
+
 type DeleteAntitamperRuleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -197,6 +281,18 @@ func (i *DeleteAntitamperRuleInvoker) Invoke() (*model.DeleteAntitamperRuleRespo
 	}
 }
 
+type DeleteCcRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteCcRuleInvoker) Invoke() (*model.DeleteCcRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteCcRuleResponse), nil
+	}
+}
+
 type DeleteCertificateInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -206,6 +302,18 @@ func (i *DeleteCertificateInvoker) Invoke() (*model.DeleteCertificateResponse, e
 		return nil, err
 	} else {
 		return result.(*model.DeleteCertificateResponse), nil
+	}
+}
+
+type DeleteCustomRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteCustomRuleInvoker) Invoke() (*model.DeleteCustomRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteCustomRuleResponse), nil
 	}
 }
 
@@ -305,6 +413,18 @@ func (i *DeletePrivacyRuleInvoker) Invoke() (*model.DeletePrivacyRuleResponse, e
 	}
 }
 
+type DeletePunishmentRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeletePunishmentRuleInvoker) Invoke() (*model.DeletePunishmentRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeletePunishmentRuleResponse), nil
+	}
+}
+
 type DeleteValueListInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -326,6 +446,30 @@ func (i *DeleteWhiteBlackIpRuleInvoker) Invoke() (*model.DeleteWhiteBlackIpRuleR
 		return nil, err
 	} else {
 		return result.(*model.DeleteWhiteBlackIpRuleResponse), nil
+	}
+}
+
+type ListAnticrawlerRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAnticrawlerRulesInvoker) Invoke() (*model.ListAnticrawlerRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAnticrawlerRulesResponse), nil
+	}
+}
+
+type ListAntileakageRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAntileakageRulesInvoker) Invoke() (*model.ListAntileakageRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAntileakageRulesResponse), nil
 	}
 }
 
@@ -353,6 +497,18 @@ func (i *ListBandwidthTimelineInvoker) Invoke() (*model.ListBandwidthTimelineRes
 	}
 }
 
+type ListCcRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCcRulesInvoker) Invoke() (*model.ListCcRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCcRulesResponse), nil
+	}
+}
+
 type ListCertificatesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -374,6 +530,18 @@ func (i *ListCompositeHostsInvoker) Invoke() (*model.ListCompositeHostsResponse,
 		return nil, err
 	} else {
 		return result.(*model.ListCompositeHostsResponse), nil
+	}
+}
+
+type ListCustomRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCustomRulesInvoker) Invoke() (*model.ListCustomRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCustomRulesResponse), nil
 	}
 }
 
@@ -521,6 +689,18 @@ func (i *ListPrivacyRuleInvoker) Invoke() (*model.ListPrivacyRuleResponse, error
 	}
 }
 
+type ListPunishmentRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPunishmentRulesInvoker) Invoke() (*model.ListPunishmentRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPunishmentRulesResponse), nil
+	}
+}
+
 type ListQpsTimelineInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -617,6 +797,42 @@ func (i *RenameInstanceInvoker) Invoke() (*model.RenameInstanceResponse, error) 
 	}
 }
 
+type ShowAnticrawlerRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAnticrawlerRuleInvoker) Invoke() (*model.ShowAnticrawlerRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAnticrawlerRuleResponse), nil
+	}
+}
+
+type ShowAntileakageRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAntileakageRuleInvoker) Invoke() (*model.ShowAntileakageRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAntileakageRuleResponse), nil
+	}
+}
+
+type ShowCcRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowCcRuleInvoker) Invoke() (*model.ShowCcRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowCcRuleResponse), nil
+	}
+}
+
 type ShowCertificateInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -653,6 +869,18 @@ func (i *ShowConsoleConfigInvoker) Invoke() (*model.ShowConsoleConfigResponse, e
 	}
 }
 
+type ShowCustomRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowCustomRuleInvoker) Invoke() (*model.ShowCustomRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowCustomRuleResponse), nil
+	}
+}
+
 type ShowEventInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -665,6 +893,18 @@ func (i *ShowEventInvoker) Invoke() (*model.ShowEventResponse, error) {
 	}
 }
 
+type ShowGeoipRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowGeoipRuleInvoker) Invoke() (*model.ShowGeoipRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowGeoipRuleResponse), nil
+	}
+}
+
 type ShowHostInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -674,6 +914,18 @@ func (i *ShowHostInvoker) Invoke() (*model.ShowHostResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowHostResponse), nil
+	}
+}
+
+type ShowIgnoreRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowIgnoreRuleInvoker) Invoke() (*model.ShowIgnoreRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowIgnoreRuleResponse), nil
 	}
 }
 
@@ -737,6 +989,18 @@ func (i *ShowPremiumHostInvoker) Invoke() (*model.ShowPremiumHostResponse, error
 	}
 }
 
+type ShowPunishmentRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPunishmentRuleInvoker) Invoke() (*model.ShowPunishmentRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPunishmentRuleResponse), nil
+	}
+}
+
 type ShowSourceIpInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -773,6 +1037,66 @@ func (i *UpdateAlertNoticeConfigInvoker) Invoke() (*model.UpdateAlertNoticeConfi
 	}
 }
 
+type UpdateAntiTamperRuleRefreshInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAntiTamperRuleRefreshInvoker) Invoke() (*model.UpdateAntiTamperRuleRefreshResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAntiTamperRuleRefreshResponse), nil
+	}
+}
+
+type UpdateAnticrawlerRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAnticrawlerRuleInvoker) Invoke() (*model.UpdateAnticrawlerRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAnticrawlerRuleResponse), nil
+	}
+}
+
+type UpdateAnticrawlerRuleTypeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAnticrawlerRuleTypeInvoker) Invoke() (*model.UpdateAnticrawlerRuleTypeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAnticrawlerRuleTypeResponse), nil
+	}
+}
+
+type UpdateAntileakageRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAntileakageRuleInvoker) Invoke() (*model.UpdateAntileakageRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAntileakageRuleResponse), nil
+	}
+}
+
+type UpdateCcRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateCcRuleInvoker) Invoke() (*model.UpdateCcRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateCcRuleResponse), nil
+	}
+}
+
 type UpdateCertificateInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -782,6 +1106,18 @@ func (i *UpdateCertificateInvoker) Invoke() (*model.UpdateCertificateResponse, e
 		return nil, err
 	} else {
 		return result.(*model.UpdateCertificateResponse), nil
+	}
+}
+
+type UpdateCustomRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateCustomRuleInvoker) Invoke() (*model.UpdateCustomRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateCustomRuleResponse), nil
 	}
 }
 
@@ -818,6 +1154,18 @@ func (i *UpdateHostProtectStatusInvoker) Invoke() (*model.UpdateHostProtectStatu
 		return nil, err
 	} else {
 		return result.(*model.UpdateHostProtectStatusResponse), nil
+	}
+}
+
+type UpdateIgnoreRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateIgnoreRuleInvoker) Invoke() (*model.UpdateIgnoreRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateIgnoreRuleResponse), nil
 	}
 }
 
@@ -914,6 +1262,18 @@ func (i *UpdatePrivacyRuleInvoker) Invoke() (*model.UpdatePrivacyRuleResponse, e
 		return nil, err
 	} else {
 		return result.(*model.UpdatePrivacyRuleResponse), nil
+	}
+}
+
+type UpdatePunishmentRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdatePunishmentRuleInvoker) Invoke() (*model.UpdatePunishmentRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdatePunishmentRuleResponse), nil
 	}
 }
 

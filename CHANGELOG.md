@@ -1,3 +1,229 @@
+# 0.1.33 2023-03-23
+
+### HuaweiCloud SDK CCE
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - **ShowNode**
+    - changes of response param
+      - `+ spec.extendParam.agency_name`
+  - **UpdateNode**
+    - changes of response param
+      - `+ spec.extendParam.agency_name`
+  - **DeleteNode**
+    - changes of response param
+      - `+ spec.extendParam.agency_name`
+  - **CreateNode**
+    - changes of request param
+      - `+ spec.extendParam.agency_name`
+    - changes of response param
+      - `+ spec.extendParam.agency_name`
+  - **ListNodes**
+    - changes of response param
+      - `+ items.spec.extendParam.agency_name`
+  - **ShowNodePool**
+    - changes of response param
+      - `+ spec.nodeTemplate.extendParam.agency_name`
+  - **UpdateNodePool**
+    - changes of response param
+      - `+ spec.nodeTemplate.extendParam.agency_name`
+  - **DeleteNodePool**
+    - changes of response param
+      - `+ spec.nodeTemplate.extendParam.agency_name`
+  - **CreateNodePool**
+    - changes of request param
+      - `+ spec.nodeTemplate.extendParam.agency_name`
+    - changes of response param
+      - `+ spec.nodeTemplate.extendParam.agency_name`
+  - **ListNodePools**
+    - changes of response param
+      - `+ items.spec.nodeTemplate.extendParam.agency_name`
+
+### HuaweiCloud SDK CDN
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - **ShowDomainDetailByName**
+    - changes of response param
+      - `- domain.banned_reason`
+      - `- domain.locked_reason`
+      - `- domain.enterprise_project_id`
+
+### HuaweiCloud SDK CloudIDE
+
+- _Features_
+  - Support the interfaces `UploadFilePublisher`, `ShowExtensionTestingResult`, `PublishExtension`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+### HuaweiCloud SDK DCS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - **CreateMigrationTask**
+    - changes of request param
+      - `+ backup_files.file_source: enum value [backup_record]`
+  - **ShowMigrationTask**
+    - changes of response param
+      - `+ backup_files.file_source: enum value [backup_record]`
+  - **StopMigrationTask**
+    - changes of response param
+      - `+ backup_files.file_source: enum value [backup_record]`
+
+### HuaweiCloud SDK DDS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - **ShowReplSetName**
+    - changes of response param
+      - `+ name`
+  - **UpdateReplSetName**
+    - changes of response param
+      - `+ job_id`
+
+### HuaweiCloud SDK eiHealth
+
+- _Features_
+  - Support the following interfaces：
+    - `CreateCpiTask`
+    - `ShowCpiTaskResult`
+    - `CreateGenerationTask`
+    - `ShowGenerationTaskResult`
+    - `CreateOptimizationTask`
+    - `ShowOptimizationTaskResult`
+    - `CreateSearchTask`
+    - `ShowSearchTaskResult`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+### HuaweiCloud SDK NAT
+
+- _Features_
+  - Support the following interfaces：
+    - `ListPrivateNats`
+    - `CreatePrivateNat`
+    - `ShowPrivateNat`
+    - `UpdatePrivateNat`
+    - `DeletePrivateNat`
+    - `ListPrivateDnats`
+    - `CreatePrivateDnat`
+    - `ShowPrivateDnat`
+    - `UpdatePrivateDnat`
+    - `DeletePrivateDnat`
+    - `ListPrivateSnats`
+    - `CreatePrivateSnat`
+    - `ShowPrivateSnat`
+    - `UpdatePrivateSnat`
+    - `DeletePrivateSnat`
+    - `ListTransitIps`
+    - `CreateTransitIp`
+    - `ShowTransitIp`
+    - `DeleteTransitIp`
+    - `ListPrivateNatsByTags`
+    - `ListPrivateNatTags`
+    - `ShowPrivateNatTags`
+    - `CreatePrivateNatTag`
+    - `BatchCreateDeletePrivateNatTags`
+    - `DeletePrivateNatTag`
+    - `ListTransitIpsByTags`
+    - `ListTransitIpTags`
+    - `ShowTransitIpTags`
+    - `CreateTransitIpTag`
+    - `BatchCreateDeleteTransitIpTags`
+    - `DeleteTransitIpTag`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+### HuaweiCloud SDK Organizations
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Remove the following interfaces：
+    - `ShowCreateAccountStatus`
+    - `ShowEffectivePolicies`
+    - `ListTagPolicyServices`
+    - `ListTagResources`
+    - `CreateTagResource`
+    - `DeleteTagResource`
+    - `ListResourceInstances`
+    - `ShowResourceInstancesCount`
+    - `ListResourceTags`
+    - `CreateAccount`
+
+### HuaweiCloud SDK RabbitMQ
+
+- _Features_
+  - Support the interfaces `ShowEngineInstanceExtendProductInfo`, `ResizeEngineInstance`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+### HuaweiCloud SDK WAF
+
+- _Features_
+  - Support the following interfaces：
+    - `ListCcRules`
+    - `CreateCcRule`
+    - `ShowCcRule`
+    - `UpdateCcRule`
+    - `DeleteCcRule`
+    - `ListCustomRules`
+    - `CreateCustomRule`
+    - `ShowCustomRule`
+    - `UpdateCustomRule`
+    - `DeleteCustomRule`
+    - `ListAnticrawlerRules`
+    - `UpdateAnticrawlerRuleType`
+    - `CreateAnticrawlerRule`
+    - `ShowAnticrawlerRule`
+    - `UpdateAnticrawlerRule`
+    - `DeleteAnticrawlerRule`
+    - `ListPunishmentRules`
+    - `CreatePunishmentRule`
+    - `ShowPunishmentRule`
+    - `UpdatePunishmentRule`
+    - `DeletePunishmentRule`
+    - `ListAntileakageRules`
+    - `CreateAntileakageRule`
+    - `ShowAntileakageRule`
+    - `UpdateAntileakageRule`
+    - `DeleteAntileakageRule`
+    - `UpdateAntiTamperRuleRefresh`
+    - `ShowGeoipRule`
+    - `ShowIgnoreRule`
+    - `UpdateIgnoreRule`
+- _Bug Fix_
+  - None
+- _Change_
+  - **ListHost**
+    - changes of response param
+      - `- items.paid_type: enum value [prePaid]`
+  - **DeleteHost**
+    - changes of response param
+      - `- paid_type: enum value [prePaid]`
+
 # 0.1.32 2023-03-16
 
 ### HuaweiCloud SDK Organizations

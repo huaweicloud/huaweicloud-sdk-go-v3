@@ -5,6 +5,54 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/eihealth/v1/model"
 )
 
+type CreateCpiTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateCpiTaskInvoker) Invoke() (*model.CreateCpiTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateCpiTaskResponse), nil
+	}
+}
+
+type ShowCpiTaskResultInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowCpiTaskResultInvoker) Invoke() (*model.ShowCpiTaskResultResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowCpiTaskResultResponse), nil
+	}
+}
+
+type CreateGenerationTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateGenerationTaskInvoker) Invoke() (*model.CreateGenerationTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateGenerationTaskResponse), nil
+	}
+}
+
+type ShowGenerationTaskResultInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowGenerationTaskResultInvoker) Invoke() (*model.ShowGenerationTaskResultResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowGenerationTaskResultResponse), nil
+	}
+}
+
 type BatchImportAppInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2546,5 +2594,53 @@ func (i *UpdateWorkflowInvoker) Invoke() (*model.UpdateWorkflowResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.UpdateWorkflowResponse), nil
+	}
+}
+
+type CreateOptimizationTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateOptimizationTaskInvoker) Invoke() (*model.CreateOptimizationTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateOptimizationTaskResponse), nil
+	}
+}
+
+type ShowOptimizationTaskResultInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowOptimizationTaskResultInvoker) Invoke() (*model.ShowOptimizationTaskResultResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowOptimizationTaskResultResponse), nil
+	}
+}
+
+type CreateSearchTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSearchTaskInvoker) Invoke() (*model.CreateSearchTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSearchTaskResponse), nil
+	}
+}
+
+type ShowSearchTaskResultInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSearchTaskResultInvoker) Invoke() (*model.ShowSearchTaskResultResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSearchTaskResultResponse), nil
 	}
 }

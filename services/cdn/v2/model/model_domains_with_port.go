@@ -44,15 +44,6 @@ type DomainsWithPort struct {
 
 	// 华为云CDN提供的加速服务范围，包含：mainland_china中国大陆、outside_mainland_china中国大陆境外、global全球。
 	ServiceArea *DomainsWithPortServiceArea `json:"service_area,omitempty"`
-
-	// 域名禁用原因。 1：该域名涉嫌违规内容（涉黄/涉赌/涉毒/涉政）已被禁用； 2：该域名因备案失效已被禁用； 3：该域名遭受攻击，已被禁用； 150：该域名涉嫌违规内容涉黄已被禁用； 151：该域名涉嫌违规内容涉政已被禁用； 152：该域名涉嫌违规内容涉暴已被禁用； 153：该域名涉嫌违规内容涉赌已被禁用。
-	BannedReason *string `json:"banned_reason,omitempty"`
-
-	// 域名锁定原因（Changing the config, please wait）。
-	LockedReason *string `json:"locked_reason,omitempty"`
-
-	// 当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 
 func (o DomainsWithPort) String() string {

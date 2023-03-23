@@ -19,6 +19,90 @@ func EiHealthClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+// CreateCpiTask 新建CPI任务接口
+//
+// 输入蛋白序列、小分子库，创建分子-蛋白互作预测任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) CreateCpiTask(request *model.CreateCpiTaskRequest) (*model.CreateCpiTaskResponse, error) {
+	requestDef := GenReqDefForCreateCpiTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateCpiTaskResponse), nil
+	}
+}
+
+// CreateCpiTaskInvoker 新建CPI任务接口
+func (c *EiHealthClient) CreateCpiTaskInvoker(request *model.CreateCpiTaskRequest) *CreateCpiTaskInvoker {
+	requestDef := GenReqDefForCreateCpiTask()
+	return &CreateCpiTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowCpiTaskResult 查询CPI任务
+//
+// 通过CPI任务ID查询CPI任务状态及结果。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) ShowCpiTaskResult(request *model.ShowCpiTaskResultRequest) (*model.ShowCpiTaskResultResponse, error) {
+	requestDef := GenReqDefForShowCpiTaskResult()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowCpiTaskResultResponse), nil
+	}
+}
+
+// ShowCpiTaskResultInvoker 查询CPI任务
+func (c *EiHealthClient) ShowCpiTaskResultInvoker(request *model.ShowCpiTaskResultRequest) *ShowCpiTaskResultInvoker {
+	requestDef := GenReqDefForShowCpiTaskResult()
+	return &ShowCpiTaskResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateGenerationTask 新建分子生成任务接口
+//
+// 输入分子属性约束，创建分子生成任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) CreateGenerationTask(request *model.CreateGenerationTaskRequest) (*model.CreateGenerationTaskResponse, error) {
+	requestDef := GenReqDefForCreateGenerationTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateGenerationTaskResponse), nil
+	}
+}
+
+// CreateGenerationTaskInvoker 新建分子生成任务接口
+func (c *EiHealthClient) CreateGenerationTaskInvoker(request *model.CreateGenerationTaskRequest) *CreateGenerationTaskInvoker {
+	requestDef := GenReqDefForCreateGenerationTask()
+	return &CreateGenerationTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowGenerationTaskResult 查询分子生成任务
+//
+// 通过分子生成任务ID查询分子生成任务状态及结果。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) ShowGenerationTaskResult(request *model.ShowGenerationTaskResultRequest) (*model.ShowGenerationTaskResultResponse, error) {
+	requestDef := GenReqDefForShowGenerationTaskResult()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowGenerationTaskResultResponse), nil
+	}
+}
+
+// ShowGenerationTaskResultInvoker 查询分子生成任务
+func (c *EiHealthClient) ShowGenerationTaskResultInvoker(request *model.ShowGenerationTaskResultRequest) *ShowGenerationTaskResultInvoker {
+	requestDef := GenReqDefForShowGenerationTaskResult()
+	return &ShowGenerationTaskResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchImportApp 导入应用
 //
 // 批量导入应用
@@ -4469,4 +4553,88 @@ func (c *EiHealthClient) UpdateWorkflow(request *model.UpdateWorkflowRequest) (*
 func (c *EiHealthClient) UpdateWorkflowInvoker(request *model.UpdateWorkflowRequest) *UpdateWorkflowInvoker {
 	requestDef := GenReqDefForUpdateWorkflow()
 	return &UpdateWorkflowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateOptimizationTask 新建分子优化任务接口
+//
+// 输入起始小分子以及属性约束，创建分子优化任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) CreateOptimizationTask(request *model.CreateOptimizationTaskRequest) (*model.CreateOptimizationTaskResponse, error) {
+	requestDef := GenReqDefForCreateOptimizationTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateOptimizationTaskResponse), nil
+	}
+}
+
+// CreateOptimizationTaskInvoker 新建分子优化任务接口
+func (c *EiHealthClient) CreateOptimizationTaskInvoker(request *model.CreateOptimizationTaskRequest) *CreateOptimizationTaskInvoker {
+	requestDef := GenReqDefForCreateOptimizationTask()
+	return &CreateOptimizationTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowOptimizationTaskResult 查询分子优化任务
+//
+// 通过分子优化任务ID查询分子优化任务状态及结果。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) ShowOptimizationTaskResult(request *model.ShowOptimizationTaskResultRequest) (*model.ShowOptimizationTaskResultResponse, error) {
+	requestDef := GenReqDefForShowOptimizationTaskResult()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowOptimizationTaskResultResponse), nil
+	}
+}
+
+// ShowOptimizationTaskResultInvoker 查询分子优化任务
+func (c *EiHealthClient) ShowOptimizationTaskResultInvoker(request *model.ShowOptimizationTaskResultRequest) *ShowOptimizationTaskResultInvoker {
+	requestDef := GenReqDefForShowOptimizationTaskResult()
+	return &ShowOptimizationTaskResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSearchTask 新建分子搜索任务接口
+//
+// 输入要查询的分子以及查询条件，创建分子搜索任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) CreateSearchTask(request *model.CreateSearchTaskRequest) (*model.CreateSearchTaskResponse, error) {
+	requestDef := GenReqDefForCreateSearchTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSearchTaskResponse), nil
+	}
+}
+
+// CreateSearchTaskInvoker 新建分子搜索任务接口
+func (c *EiHealthClient) CreateSearchTaskInvoker(request *model.CreateSearchTaskRequest) *CreateSearchTaskInvoker {
+	requestDef := GenReqDefForCreateSearchTask()
+	return &CreateSearchTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSearchTaskResult 查询分子搜索任务
+//
+// 通过分子搜索任务ID查询分子搜索任务状态及结果。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) ShowSearchTaskResult(request *model.ShowSearchTaskResultRequest) (*model.ShowSearchTaskResultResponse, error) {
+	requestDef := GenReqDefForShowSearchTaskResult()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSearchTaskResultResponse), nil
+	}
+}
+
+// ShowSearchTaskResultInvoker 查询分子搜索任务
+func (c *EiHealthClient) ShowSearchTaskResultInvoker(request *model.ShowSearchTaskResultRequest) *ShowSearchTaskResultInvoker {
+	requestDef := GenReqDefForShowSearchTaskResult()
+	return &ShowSearchTaskResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

@@ -5,18 +5,6 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/organizations/v1/model"
 )
 
-type CreateAccountInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateAccountInvoker) Invoke() (*model.CreateAccountResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateAccountResponse), nil
-	}
-}
-
 type InviteAccountInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -86,18 +74,6 @@ func (i *ShowAccountInvoker) Invoke() (*model.ShowAccountResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowAccountResponse), nil
-	}
-}
-
-type ShowCreateAccountStatusInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowCreateAccountStatusInvoker) Invoke() (*model.ShowCreateAccountStatusResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowCreateAccountStatusResponse), nil
 	}
 }
 
@@ -242,30 +218,6 @@ func (i *ListServicesInvoker) Invoke() (*model.ListServicesResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListServicesResponse), nil
-	}
-}
-
-type ListTagPolicyServicesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListTagPolicyServicesInvoker) Invoke() (*model.ListTagPolicyServicesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListTagPolicyServicesResponse), nil
-	}
-}
-
-type ShowEffectivePoliciesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowEffectivePoliciesInvoker) Invoke() (*model.ShowEffectivePoliciesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowEffectivePoliciesResponse), nil
 	}
 }
 
@@ -509,66 +461,6 @@ func (i *UpdatePolicyInvoker) Invoke() (*model.UpdatePolicyResponse, error) {
 	}
 }
 
-type CreateTagResourceInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateTagResourceInvoker) Invoke() (*model.CreateTagResourceResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateTagResourceResponse), nil
-	}
-}
-
-type DeleteTagResourceInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteTagResourceInvoker) Invoke() (*model.DeleteTagResourceResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteTagResourceResponse), nil
-	}
-}
-
-type ListResourceInstancesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListResourceInstancesInvoker) Invoke() (*model.ListResourceInstancesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListResourceInstancesResponse), nil
-	}
-}
-
-type ListResourceTagsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListResourceTagsInvoker) Invoke() (*model.ListResourceTagsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListResourceTagsResponse), nil
-	}
-}
-
-type ListTagResourcesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListTagResourcesInvoker) Invoke() (*model.ListTagResourcesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListTagResourcesResponse), nil
-	}
-}
-
 type ListTagsForResourceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -578,18 +470,6 @@ func (i *ListTagsForResourceInvoker) Invoke() (*model.ListTagsForResourceRespons
 		return nil, err
 	} else {
 		return result.(*model.ListTagsForResourceResponse), nil
-	}
-}
-
-type ShowResourceInstancesCountInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowResourceInstancesCountInvoker) Invoke() (*model.ShowResourceInstancesCountResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowResourceInstancesCountResponse), nil
 	}
 }
 

@@ -21,7 +21,7 @@ type DeletePublicZoneResponse struct {
 	// 管理该zone的管理员邮箱
 	Email *string `json:"email,omitempty"`
 
-	// zone类型，公网（public）或者内网（private）
+	// zone类型，公网（public）
 	ZoneType *string `json:"zone_type,omitempty"`
 
 	// 该zone下SOA记录中的ttl值

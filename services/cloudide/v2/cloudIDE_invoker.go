@@ -137,6 +137,18 @@ func (i *ListStacksInvoker) Invoke() (*model.ListStacksResponse, error) {
 	}
 }
 
+type PublishExtensionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *PublishExtensionInvoker) Invoke() (*model.PublishExtensionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.PublishExtensionResponse), nil
+	}
+}
+
 type ShowAccountStatusInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -209,6 +221,18 @@ func (i *ShowExtensionEvaluationStarInvoker) Invoke() (*model.ShowExtensionEvalu
 	}
 }
 
+type ShowExtensionTestingResultInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowExtensionTestingResultInvoker) Invoke() (*model.ShowExtensionTestingResultResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowExtensionTestingResultResponse), nil
+	}
+}
+
 type ShowPriceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -230,6 +254,18 @@ func (i *UploadExtensionFileInvoker) Invoke() (*model.UploadExtensionFileRespons
 		return nil, err
 	} else {
 		return result.(*model.UploadExtensionFileResponse), nil
+	}
+}
+
+type UploadFilePublisherInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UploadFilePublisherInvoker) Invoke() (*model.UploadFilePublisherResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UploadFilePublisherResponse), nil
 	}
 }
 

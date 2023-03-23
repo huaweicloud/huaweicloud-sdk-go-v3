@@ -161,6 +161,18 @@ func (i *ResetPasswordInvoker) Invoke() (*model.ResetPasswordResponse, error) {
 	}
 }
 
+type ResizeEngineInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ResizeEngineInstanceInvoker) Invoke() (*model.ResizeEngineInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ResizeEngineInstanceResponse), nil
+	}
+}
+
 type ResizeInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -182,6 +194,18 @@ func (i *ShowBackgroundTaskInvoker) Invoke() (*model.ShowBackgroundTaskResponse,
 		return nil, err
 	} else {
 		return result.(*model.ShowBackgroundTaskResponse), nil
+	}
+}
+
+type ShowEngineInstanceExtendProductInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowEngineInstanceExtendProductInfoInvoker) Invoke() (*model.ShowEngineInstanceExtendProductInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowEngineInstanceExtendProductInfoResponse), nil
 	}
 }
 
