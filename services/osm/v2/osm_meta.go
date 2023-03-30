@@ -2522,6 +2522,22 @@ func GenReqDefForShowCaseStatus() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowConfiguration() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/servicerequest/configurations/{config_key}").
+		WithResponse(new(model.ShowConfigurationResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ConfigKey").
+		WithJsonTag("config_key").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShowCustomerPrivilegePolicy() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).

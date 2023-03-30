@@ -929,6 +929,18 @@ func (i *ShowCaseStatusInvoker) Invoke() (*model.ShowCaseStatusResponse, error) 
 	}
 }
 
+type ShowConfigurationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowConfigurationInvoker) Invoke() (*model.ShowConfigurationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowConfigurationResponse), nil
+	}
+}
+
 type ShowCustomerPrivilegePolicyInvoker struct {
 	*invoker.BaseInvoker
 }

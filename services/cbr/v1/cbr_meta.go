@@ -405,6 +405,10 @@ func GenReqDefForListBackups() *def.HttpRequestDef {
 		WithName("ShowReplication").
 		WithJsonTag("show_replication").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Incremental").
+		WithJsonTag("incremental").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

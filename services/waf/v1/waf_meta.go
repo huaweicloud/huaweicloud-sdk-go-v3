@@ -1833,6 +1833,31 @@ func GenReqDefForShowAntileakageRule() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowAntitamperRule() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/waf/policy/{policy_id}/antitamper/{rule_id}").
+		WithResponse(new(model.ShowAntitamperRuleResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PolicyId").
+		WithJsonTag("policy_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RuleId").
+		WithJsonTag("rule_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShowCcRule() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -2128,6 +2153,31 @@ func GenReqDefForShowPremiumHost() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowPrivacyRule() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/waf/policy/{policy_id}/privacy/{rule_id}").
+		WithResponse(new(model.ShowPrivacyRuleResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PolicyId").
+		WithJsonTag("policy_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RuleId").
+		WithJsonTag("rule_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShowPunishmentRule() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -2170,6 +2220,52 @@ func GenReqDefForShowSubscriptionInfo() *def.HttpRequestDef {
 		WithPath("/v1/{project_id}/waf/subscription").
 		WithResponse(new(model.ShowSubscriptionInfoResponse)).
 		WithContentType("application/json")
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowValueList() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/waf/valuelist/{valuelistid}").
+		WithResponse(new(model.ShowValueListResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Valuelistid").
+		WithJsonTag("valuelistid").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowWhiteBlackIpRule() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/waf/policy/{policy_id}/whiteblackip/{rule_id}").
+		WithResponse(new(model.ShowWhiteBlackIpRuleResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PolicyId").
+		WithJsonTag("policy_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RuleId").
+		WithJsonTag("rule_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

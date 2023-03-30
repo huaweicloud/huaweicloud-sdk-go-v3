@@ -38,6 +38,9 @@ type ShowCustomRuleResponse struct {
 	// 创建精准防护规则的
 	Timestamp *int64 `json:"timestamp,omitempty"`
 
+	// 精准防护规则生效时间:  - “false”：表示该规则立即生效。   - “true”：表示自定义生效时间。
+	Time *bool `json:"time,omitempty"`
+
 	// 精准防护规则生效的起始时间戳（毫秒）。当time=true，才会返回该参数。
 	Start *int64 `json:"start,omitempty"`
 

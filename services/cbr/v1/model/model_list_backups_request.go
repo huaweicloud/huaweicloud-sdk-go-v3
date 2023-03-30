@@ -15,7 +15,7 @@ type ListBackupsRequest struct {
 	// 还原点ID
 	CheckpointId *string `json:"checkpoint_id,omitempty"`
 
-	// 专属云
+	// 专属云 （专属云场景使用，非专属云场景不生效）
 	Dec *bool `json:"dec,omitempty"`
 
 	// 备份产生时间范围的结束时间，格式为%YYYY-%mm-%ddT%HH:%MM:%SSZ，例如2018-02-01T12:00:00Z
@@ -77,6 +77,9 @@ type ListBackupsRequest struct {
 
 	// 是否返回复制记录
 	ShowReplication *bool `json:"show_replication,omitempty"`
+
+	// 是否是增备
+	Incremental *bool `json:"incremental,omitempty"`
 }
 
 func (o ListBackupsRequest) String() string {

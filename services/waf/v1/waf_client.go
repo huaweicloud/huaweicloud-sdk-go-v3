@@ -1450,6 +1450,27 @@ func (c *WafClient) ShowAntileakageRuleInvoker(request *model.ShowAntileakageRul
 	return &ShowAntileakageRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowAntitamperRule 查询防篡改防护规则
+//
+// 查询防篡改防护规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) ShowAntitamperRule(request *model.ShowAntitamperRuleRequest) (*model.ShowAntitamperRuleResponse, error) {
+	requestDef := GenReqDefForShowAntitamperRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAntitamperRuleResponse), nil
+	}
+}
+
+// ShowAntitamperRuleInvoker 查询防篡改防护规则
+func (c *WafClient) ShowAntitamperRuleInvoker(request *model.ShowAntitamperRuleRequest) *ShowAntitamperRuleInvoker {
+	requestDef := GenReqDefForShowAntitamperRule()
+	return &ShowAntitamperRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowCcRule 根据Id查询cc防护规则
 //
 // 根据Id查询cc防护规则
@@ -1744,6 +1765,27 @@ func (c *WafClient) ShowPremiumHostInvoker(request *model.ShowPremiumHostRequest
 	return &ShowPremiumHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowPrivacyRule 查询隐私屏蔽防护规则
+//
+// 删除隐私屏蔽防护规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) ShowPrivacyRule(request *model.ShowPrivacyRuleRequest) (*model.ShowPrivacyRuleResponse, error) {
+	requestDef := GenReqDefForShowPrivacyRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPrivacyRuleResponse), nil
+	}
+}
+
+// ShowPrivacyRuleInvoker 查询隐私屏蔽防护规则
+func (c *WafClient) ShowPrivacyRuleInvoker(request *model.ShowPrivacyRuleRequest) *ShowPrivacyRuleInvoker {
+	requestDef := GenReqDefForShowPrivacyRule()
+	return &ShowPrivacyRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowPunishmentRule 根据Id查询攻击惩罚防护规则
 //
 // 根据Id查询攻击惩罚防护规则
@@ -1805,6 +1847,48 @@ func (c *WafClient) ShowSubscriptionInfo(request *model.ShowSubscriptionInfoRequ
 func (c *WafClient) ShowSubscriptionInfoInvoker(request *model.ShowSubscriptionInfoRequest) *ShowSubscriptionInfoInvoker {
 	requestDef := GenReqDefForShowSubscriptionInfo()
 	return &ShowSubscriptionInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowValueList 查询引用表
+//
+// 查询引用表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) ShowValueList(request *model.ShowValueListRequest) (*model.ShowValueListResponse, error) {
+	requestDef := GenReqDefForShowValueList()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowValueListResponse), nil
+	}
+}
+
+// ShowValueListInvoker 查询引用表
+func (c *WafClient) ShowValueListInvoker(request *model.ShowValueListRequest) *ShowValueListInvoker {
+	requestDef := GenReqDefForShowValueList()
+	return &ShowValueListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowWhiteBlackIpRule 查询黑白名单防护规则
+//
+// 查询黑白名单防护规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) ShowWhiteBlackIpRule(request *model.ShowWhiteBlackIpRuleRequest) (*model.ShowWhiteBlackIpRuleResponse, error) {
+	requestDef := GenReqDefForShowWhiteBlackIpRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowWhiteBlackIpRuleResponse), nil
+	}
+}
+
+// ShowWhiteBlackIpRuleInvoker 查询黑白名单防护规则
+func (c *WafClient) ShowWhiteBlackIpRuleInvoker(request *model.ShowWhiteBlackIpRuleRequest) *ShowWhiteBlackIpRuleInvoker {
+	requestDef := GenReqDefForShowWhiteBlackIpRule()
+	return &ShowWhiteBlackIpRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateAlertNoticeConfig 更新告警通知配置

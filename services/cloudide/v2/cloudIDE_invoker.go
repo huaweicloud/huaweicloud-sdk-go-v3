@@ -281,6 +281,30 @@ func (i *CreateAcceptanceInvoker) Invoke() (*model.CreateAcceptanceResponse, err
 	}
 }
 
+type CreateApplyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateApplyInvoker) Invoke() (*model.CreateApplyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateApplyResponse), nil
+	}
+}
+
+type CreateEventInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateEventInvoker) Invoke() (*model.CreateEventResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateEventResponse), nil
+	}
+}
+
 type CreateLoginInvoker struct {
 	*invoker.BaseInvoker
 }

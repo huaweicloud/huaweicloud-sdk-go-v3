@@ -28,6 +28,9 @@ type LeakageListInfo struct {
 
 	// 规则状态，0：关闭，1：开启
 	Status *int32 `json:"status,omitempty"`
+
+	// 规则描述
+	Description *string `json:"description,omitempty"`
 }
 
 func (o LeakageListInfo) String() string {

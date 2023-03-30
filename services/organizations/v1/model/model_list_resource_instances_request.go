@@ -1,0 +1,84 @@
+package model
+
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
+	"strings"
+)
+
+// Request Object
+type ListResourceInstancesRequest struct {
+
+	// 页面中最大结果数量。
+	Limit *int32 `json:"limit,omitempty"`
+
+	// 分页标记。
+	Offset *string `json:"offset,omitempty"`
+
+	// 资源类型 organizations:policies服务策略 organizations:ous组织OU organizations:accounts 帐号信息 organizations:roots根
+	ResourceType ListResourceInstancesRequestResourceType `json:"resource_type"`
+
+	Body *ResourceInstanceReqBody `json:"body,omitempty"`
+}
+
+func (o ListResourceInstancesRequest) String() string {
+	data, err := utils.Marshal(o)
+	if err != nil {
+		return "ListResourceInstancesRequest struct{}"
+	}
+
+	return strings.Join([]string{"ListResourceInstancesRequest", string(data)}, " ")
+}
+
+type ListResourceInstancesRequestResourceType struct {
+	value string
+}
+
+type ListResourceInstancesRequestResourceTypeEnum struct {
+	ORGANIZATIONSROOTS    ListResourceInstancesRequestResourceType
+	ORGANIZATIONSOUS      ListResourceInstancesRequestResourceType
+	ORGANIZATIONSACCOUNTS ListResourceInstancesRequestResourceType
+	ORGANIZATIONSPOLICIES ListResourceInstancesRequestResourceType
+}
+
+func GetListResourceInstancesRequestResourceTypeEnum() ListResourceInstancesRequestResourceTypeEnum {
+	return ListResourceInstancesRequestResourceTypeEnum{
+		ORGANIZATIONSROOTS: ListResourceInstancesRequestResourceType{
+			value: "organizations:roots",
+		},
+		ORGANIZATIONSOUS: ListResourceInstancesRequestResourceType{
+			value: "organizations:ous",
+		},
+		ORGANIZATIONSACCOUNTS: ListResourceInstancesRequestResourceType{
+			value: "organizations:accounts",
+		},
+		ORGANIZATIONSPOLICIES: ListResourceInstancesRequestResourceType{
+			value: "organizations:policies",
+		},
+	}
+}
+
+func (c ListResourceInstancesRequestResourceType) Value() string {
+	return c.value
+}
+
+func (c ListResourceInstancesRequestResourceType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListResourceInstancesRequestResourceType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}

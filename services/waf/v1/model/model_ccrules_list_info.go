@@ -11,6 +11,9 @@ import (
 
 type CcrulesListInfo struct {
 
+	// 规则名称
+	Name *string `json:"name,omitempty"`
+
 	// Rule ID.
 	Id *string `json:"id,omitempty"`
 

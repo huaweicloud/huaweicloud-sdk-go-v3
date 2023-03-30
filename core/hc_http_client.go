@@ -356,7 +356,7 @@ func (hc *HcHttpClient) deserializeResponseFields(resp *response.DefaultHttpResp
 
 			bodyErr := hc.deserializeResponseBody(reqDef, data)
 			if bodyErr != nil {
-				return processError(err)
+				return processError(bodyErr)
 			}
 		}
 	}

@@ -5,6 +5,18 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/eihealth/v1/model"
 )
 
+type ShowAdmetPropertiesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAdmetPropertiesInvoker) Invoke() (*model.ShowAdmetPropertiesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAdmetPropertiesResponse), nil
+	}
+}
+
 type CreateCpiTaskInvoker struct {
 	*invoker.BaseInvoker
 }

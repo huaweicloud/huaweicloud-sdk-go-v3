@@ -609,6 +609,27 @@ func (c *BssintlClient) ListRateOnPeriodDetailInvoker(request *model.ListRateOnP
 	return &ListRateOnPeriodDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListRenewRateOnPeriod 查询待续订包年包月资源的续订金额
+//
+// 功能描述：客户在自建平台按照条件查询待续订包年/包月资源续订时候的续订金额
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *BssintlClient) ListRenewRateOnPeriod(request *model.ListRenewRateOnPeriodRequest) (*model.ListRenewRateOnPeriodResponse, error) {
+	requestDef := GenReqDefForListRenewRateOnPeriod()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRenewRateOnPeriodResponse), nil
+	}
+}
+
+// ListRenewRateOnPeriodInvoker 查询待续订包年包月资源的续订金额
+func (c *BssintlClient) ListRenewRateOnPeriodInvoker(request *model.ListRenewRateOnPeriodRequest) *ListRenewRateOnPeriodInvoker {
+	requestDef := GenReqDefForListRenewRateOnPeriod()
+	return &ListRenewRateOnPeriodInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListResourceTypes 查询资源类型列表
 //
 // 伙伴在伙伴销售平台查询资源类型的列表。

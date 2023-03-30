@@ -480,3 +480,45 @@ func (c *RamClient) SearchResourceShareInvitationInvoker(request *model.SearchRe
 	requestDef := GenReqDefForSearchResourceShareInvitation()
 	return &SearchResourceShareInvitationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
+
+// BatchCreateResourceShareTags 资源共享实例增加标签
+//
+// 资源共享实例增加标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RamClient) BatchCreateResourceShareTags(request *model.BatchCreateResourceShareTagsRequest) (*model.BatchCreateResourceShareTagsResponse, error) {
+	requestDef := GenReqDefForBatchCreateResourceShareTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateResourceShareTagsResponse), nil
+	}
+}
+
+// BatchCreateResourceShareTagsInvoker 资源共享实例增加标签
+func (c *RamClient) BatchCreateResourceShareTagsInvoker(request *model.BatchCreateResourceShareTagsRequest) *BatchCreateResourceShareTagsInvoker {
+	requestDef := GenReqDefForBatchCreateResourceShareTags()
+	return &BatchCreateResourceShareTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteResourceShareTags 删除资源共享实例的标签
+//
+// 删除资源共享实例指定的标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RamClient) BatchDeleteResourceShareTags(request *model.BatchDeleteResourceShareTagsRequest) (*model.BatchDeleteResourceShareTagsResponse, error) {
+	requestDef := GenReqDefForBatchDeleteResourceShareTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteResourceShareTagsResponse), nil
+	}
+}
+
+// BatchDeleteResourceShareTagsInvoker 删除资源共享实例的标签
+func (c *RamClient) BatchDeleteResourceShareTagsInvoker(request *model.BatchDeleteResourceShareTagsRequest) *BatchDeleteResourceShareTagsInvoker {
+	requestDef := GenReqDefForBatchDeleteResourceShareTags()
+	return &BatchDeleteResourceShareTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}

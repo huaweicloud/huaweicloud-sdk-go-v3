@@ -28,9 +28,6 @@ type MoleculeConstraint struct {
 
 	// 属性约束类型minimize和maximize的参数
 	Quantiles *[]float32 `json:"quantiles,omitempty"`
-
-	// 属性约束参数
-	Requirement *interface{} `json:"requirement,omitempty"`
 }
 
 func (o MoleculeConstraint) String() string {

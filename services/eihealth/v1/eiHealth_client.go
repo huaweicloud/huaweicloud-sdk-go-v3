@@ -19,6 +19,27 @@ func EiHealthClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+// ShowAdmetProperties ADMET属性预测接口
+//
+// 计算小分子的物化性质，包括吸收(adsorption)、分布(distribution)、代谢(metabolism)、清除(excretion)与毒性(toxicity)。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) ShowAdmetProperties(request *model.ShowAdmetPropertiesRequest) (*model.ShowAdmetPropertiesResponse, error) {
+	requestDef := GenReqDefForShowAdmetProperties()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAdmetPropertiesResponse), nil
+	}
+}
+
+// ShowAdmetPropertiesInvoker ADMET属性预测接口
+func (c *EiHealthClient) ShowAdmetPropertiesInvoker(request *model.ShowAdmetPropertiesRequest) *ShowAdmetPropertiesInvoker {
+	requestDef := GenReqDefForShowAdmetProperties()
+	return &ShowAdmetPropertiesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateCpiTask 新建CPI任务接口
 //
 // 输入蛋白序列、小分子库，创建分子-蛋白互作预测任务。

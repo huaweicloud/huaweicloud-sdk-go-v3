@@ -16,7 +16,7 @@ type PageInfo struct {
 	PreviousMarker *string `json:"previous_marker,omitempty"`
 
 	// 分页查询资源时，本页的实例的个数。
-	CurrentCount float32 `json:"current_count,omitempty"`
+	CurrentCount *int32 `json:"current_count,omitempty"`
 }
 
 func (o PageInfo) String() string {

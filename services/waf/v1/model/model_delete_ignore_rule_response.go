@@ -39,7 +39,7 @@ type DeleteIgnoreRuleResponse struct {
 	// 条件
 	Conditions *[]Condition `json:"conditions,omitempty"`
 
-	// 高级配置项
+	// 高级配置项。**当前该参数类型错误，请用户忽略该参数**；正确类型可先参考更新接口，后续将改正。
 	Advanced *[]Advanced `json:"advanced,omitempty"`
 
 	// 防护域名或防护网站

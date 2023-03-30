@@ -22,7 +22,7 @@ type QueryUserDetailResp struct {
 	IsTransfer *bool `json:"is_transfer,omitempty"`
 
 	// 权限
-	Privileges *[]string `json:"privileges,omitempty"`
+	Privileges *string `json:"privileges,omitempty"`
 
 	// 密码。
 	Password *string `json:"password,omitempty"`

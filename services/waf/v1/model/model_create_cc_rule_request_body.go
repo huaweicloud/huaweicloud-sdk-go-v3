@@ -11,6 +11,9 @@ import (
 
 type CreateCcRuleRequestBody struct {
 
+	// 规则名称
+	Name *string `json:"name,omitempty"`
+
 	// cc规则防护模式，对应console上的mode，现在只支持创建高级cc规则防护模式。   - 0：标准，只支持对域名的防护路径做限制。  - 1：高级，支持对路径、IP、Cookie、Header、Params字段做限制。
 	Mode int32 `json:"mode"`
 

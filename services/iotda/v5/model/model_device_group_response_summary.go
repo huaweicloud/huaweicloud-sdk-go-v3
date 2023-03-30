@@ -7,7 +7,7 @@ import (
 )
 
 // 设备组信息结构体，创建、查询、修改设备组时返回
-type DeviceGroupResponseDto struct {
+type DeviceGroupResponseSummary struct {
 
 	// 设备组ID，用于唯一标识一个设备组，在创建设备组时由物联网平台分配。
 	GroupId *string `json:"group_id,omitempty"`
@@ -22,11 +22,11 @@ type DeviceGroupResponseDto struct {
 	SuperGroupId *string `json:"super_group_id,omitempty"`
 }
 
-func (o DeviceGroupResponseDto) String() string {
+func (o DeviceGroupResponseSummary) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "DeviceGroupResponseDto struct{}"
+		return "DeviceGroupResponseSummary struct{}"
 	}
 
-	return strings.Join([]string{"DeviceGroupResponseDto", string(data)}, " ")
+	return strings.Join([]string{"DeviceGroupResponseSummary", string(data)}, " ")
 }

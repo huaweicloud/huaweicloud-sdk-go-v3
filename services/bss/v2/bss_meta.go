@@ -1397,6 +1397,21 @@ func GenReqDefForListRateOnPeriodDetail() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListRenewRateOnPeriod() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/bills/ratings/period-resources/renew-rate").
+		WithResponse(new(model.ListRenewRateOnPeriodResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListResourceTypes() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).

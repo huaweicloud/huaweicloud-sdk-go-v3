@@ -376,3 +376,43 @@ func GenReqDefForSearchResourceShareInvitation() *def.HttpRequestDef {
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
+
+func GenReqDefForBatchCreateResourceShareTags() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/resource-shares/{resource_share_id}/tags/create").
+		WithResponse(new(model.BatchCreateResourceShareTagsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ResourceShareId").
+		WithJsonTag("resource_share_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForBatchDeleteResourceShareTags() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/resource-shares/{resource_share_id}/tags/delete").
+		WithResponse(new(model.BatchDeleteResourceShareTagsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ResourceShareId").
+		WithJsonTag("resource_share_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}

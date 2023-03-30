@@ -502,6 +502,48 @@ func (c *CloudIDEClient) CreateAcceptanceInvoker(request *model.CreateAcceptance
 	return &CreateAcceptanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateApply CreateJoinRequest接口
+//
+// create a join-request
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudIDEClient) CreateApply(request *model.CreateApplyRequest) (*model.CreateApplyResponse, error) {
+	requestDef := GenReqDefForCreateApply()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateApplyResponse), nil
+	}
+}
+
+// CreateApplyInvoker CreateJoinRequest接口
+func (c *CloudIDEClient) CreateApplyInvoker(request *model.CreateApplyRequest) *CreateApplyInvoker {
+	requestDef := GenReqDefForCreateApply()
+	return &CreateApplyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateEvent CreateEvent接口
+//
+// create an event
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudIDEClient) CreateEvent(request *model.CreateEventRequest) (*model.CreateEventResponse, error) {
+	requestDef := GenReqDefForCreateEvent()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateEventResponse), nil
+	}
+}
+
+// CreateEventInvoker CreateEvent接口
+func (c *CloudIDEClient) CreateEventInvoker(request *model.CreateEventRequest) *CreateEventInvoker {
+	requestDef := GenReqDefForCreateEvent()
+	return &CreateEventInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateLogin CreateLogin接口
 //
 // create a login

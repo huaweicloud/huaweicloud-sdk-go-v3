@@ -18,7 +18,7 @@ type BillingCreate struct {
 	// 规格，崩溃一致性（crash_consistent）或应用一致性（app_consistent）
 	ConsistentLevel BillingCreateConsistentLevel `json:"consistent_level"`
 
-	// 对象类型：云服务器（server），云硬盘（disk），文件系统（turbo），云桌面（workspace）。
+	// 对象类型：云服务器（server），云硬盘（disk），文件系统（turbo），云桌面（workspace），VMware（vmware），关系型数据库（rds），文件（file）。
 	ObjectType BillingCreateObjectType `json:"object_type"`
 
 	// 保护类型：备份（backup）、复制(replication)
@@ -162,6 +162,9 @@ type BillingCreateObjectTypeEnum struct {
 	DISK      BillingCreateObjectType
 	TURBO     BillingCreateObjectType
 	WORKSPACE BillingCreateObjectType
+	VMWARE    BillingCreateObjectType
+	RDS       BillingCreateObjectType
+	FILE      BillingCreateObjectType
 }
 
 func GetBillingCreateObjectTypeEnum() BillingCreateObjectTypeEnum {
@@ -177,6 +180,15 @@ func GetBillingCreateObjectTypeEnum() BillingCreateObjectTypeEnum {
 		},
 		WORKSPACE: BillingCreateObjectType{
 			value: "workspace",
+		},
+		VMWARE: BillingCreateObjectType{
+			value: "vmware",
+		},
+		RDS: BillingCreateObjectType{
+			value: "rds",
+		},
+		FILE: BillingCreateObjectType{
+			value: "file",
 		},
 	}
 }

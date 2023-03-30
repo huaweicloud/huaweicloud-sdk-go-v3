@@ -12,6 +12,9 @@ import (
 // Response Object
 type CreateCcRuleResponse struct {
 
+	// 规则名称
+	Name *string `json:"name,omitempty"`
+
 	// Rule ID.
 	Id *string `json:"id,omitempty"`
 
@@ -25,7 +28,7 @@ type CreateCcRuleResponse struct {
 	Prefix *bool `json:"prefix,omitempty"`
 
 	// cc规则防护模式，对应console上的mode，现在只支持创建高级cc规则防护模式。   - 0：标准，只支持对域名的防护路径做限制。  - 1：高级，支持对路径、IP、Cookie、Header、Params字段做限制。
-	Mode float32 `json:"mode,omitempty"`
+	Mode *int32 `json:"mode,omitempty"`
 
 	// 规则状态，0：关闭，1：开启
 	Status *int32 `json:"status,omitempty"`

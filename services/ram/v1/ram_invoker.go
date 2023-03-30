@@ -268,3 +268,27 @@ func (i *SearchResourceShareInvitationInvoker) Invoke() (*model.SearchResourceSh
 		return result.(*model.SearchResourceShareInvitationResponse), nil
 	}
 }
+
+type BatchCreateResourceShareTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateResourceShareTagsInvoker) Invoke() (*model.BatchCreateResourceShareTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCreateResourceShareTagsResponse), nil
+	}
+}
+
+type BatchDeleteResourceShareTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteResourceShareTagsInvoker) Invoke() (*model.BatchDeleteResourceShareTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteResourceShareTagsResponse), nil
+	}
+}

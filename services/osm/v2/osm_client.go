@@ -1636,6 +1636,27 @@ func (c *OsmClient) ShowCaseStatusInvoker(request *model.ShowCaseStatusRequest) 
 	return &ShowCaseStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowConfiguration 查询配置
+//
+// 查询配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OsmClient) ShowConfiguration(request *model.ShowConfigurationRequest) (*model.ShowConfigurationResponse, error) {
+	requestDef := GenReqDefForShowConfiguration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowConfigurationResponse), nil
+	}
+}
+
+// ShowConfigurationInvoker 查询配置
+func (c *OsmClient) ShowConfigurationInvoker(request *model.ShowConfigurationRequest) *ShowConfigurationInvoker {
+	requestDef := GenReqDefForShowConfiguration()
+	return &ShowConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowCustomerPrivilegePolicy 查询提单权限
 //
 // 查询提单权限

@@ -821,6 +821,18 @@ func (i *ShowAntileakageRuleInvoker) Invoke() (*model.ShowAntileakageRuleRespons
 	}
 }
 
+type ShowAntitamperRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAntitamperRuleInvoker) Invoke() (*model.ShowAntitamperRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAntitamperRuleResponse), nil
+	}
+}
+
 type ShowCcRuleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -989,6 +1001,18 @@ func (i *ShowPremiumHostInvoker) Invoke() (*model.ShowPremiumHostResponse, error
 	}
 }
 
+type ShowPrivacyRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPrivacyRuleInvoker) Invoke() (*model.ShowPrivacyRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPrivacyRuleResponse), nil
+	}
+}
+
 type ShowPunishmentRuleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1022,6 +1046,30 @@ func (i *ShowSubscriptionInfoInvoker) Invoke() (*model.ShowSubscriptionInfoRespo
 		return nil, err
 	} else {
 		return result.(*model.ShowSubscriptionInfoResponse), nil
+	}
+}
+
+type ShowValueListInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowValueListInvoker) Invoke() (*model.ShowValueListResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowValueListResponse), nil
+	}
+}
+
+type ShowWhiteBlackIpRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowWhiteBlackIpRuleInvoker) Invoke() (*model.ShowWhiteBlackIpRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowWhiteBlackIpRuleResponse), nil
 	}
 }
 
