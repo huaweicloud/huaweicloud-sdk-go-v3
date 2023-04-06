@@ -29,6 +29,9 @@ type FinancialStatementRequestBody struct {
 
 	// 返回矫正后的图像大小，可选值包括： - true：返回矫正图像大小; - false：不返回。  > 说明： - 未传入该参数时默认为false，即不返回。
 	ReturnImageSize *bool `json:"return_image_size,omitempty"`
+
+	// 透视变换矩阵，可选值包括： - true：返回透视变换矩阵; - false：不返回。  > 说明： - 未传入该参数时默认为false，即不返回透视变换矩阵。
+	ReturnRectificationMatrix *bool `json:"return_rectification_matrix,omitempty"`
 }
 
 func (o FinancialStatementRequestBody) String() string {

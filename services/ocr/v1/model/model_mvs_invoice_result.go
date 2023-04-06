@@ -35,10 +35,10 @@ type MvsInvoiceResult struct {
 	// 购买方纳税人识别号、二手车买方单位代码/身份证号
 	BuyerId *string `json:"buyer_id,omitempty"`
 
-	// 二手车买方单位/个人住址。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+	// 二手车买方单位/个人住址。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
 	BuyerAddress *string `json:"buyer_address,omitempty"`
 
-	// 二手车买方单位/个人电话。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+	// 二手车买方单位/个人电话。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
 	BuyerPhone *string `json:"buyer_phone,omitempty"`
 
 	// 销货单位名称、二手车卖方单位/个人
@@ -56,13 +56,13 @@ type MvsInvoiceResult struct {
 	// 销售方地址、二手车卖方单位/个人地址
 	SellerAddress *string `json:"seller_address,omitempty"`
 
-	// 二手车车牌照号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+	// 二手车车牌照号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
 	LicencePlateNumber *string `json:"licence_plate_number,omitempty"`
 
-	// 二手车登记证号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+	// 二手车登记证号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
 	RegistrationNumber *string `json:"registration_number,omitempty"`
 
-	// 二手车转入地车管所名称。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+	// 二手车转入地车管所名称。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
 	DeptMotorVehicles *string `json:"dept_motor_vehicles,omitempty"`
 
 	// 销售方开户行。
@@ -125,34 +125,34 @@ type MvsInvoiceResult struct {
 	// 税控码。
 	FiscalCode *string `json:"fiscal_code,omitempty"`
 
-	// 二手车经营拍卖单位名称。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+	// 二手车经营拍卖单位名称。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
 	AuctionOrgName *string `json:"auction_org_name,omitempty"`
 
-	// 二手车经营拍卖单位地址。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+	// 二手车经营拍卖单位地址。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
 	AuctionOrgAddress *string `json:"auction_org_address,omitempty"`
 
-	// 二手车经营拍卖单位纳税人识别号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+	// 二手车经营拍卖单位纳税人识别号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
 	AuctionOrgId *string `json:"auction_org_id,omitempty"`
 
-	// 二手车经营拍卖单位银行和账号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+	// 二手车经营拍卖单位银行和账号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
 	AuctionOrgBankAccount *string `json:"auction_org_bank_account,omitempty"`
 
-	// 二手车经营拍卖单位电话。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+	// 二手车经营拍卖单位电话。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
 	AuctionOrgPhone *string `json:"auction_org_phone,omitempty"`
 
-	// 二手车市场名称。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+	// 二手车市场名称。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
 	UsedVehicleMarketName *string `json:"used_vehicle_market_name,omitempty"`
 
-	// 二手车市场纳税人识别号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+	// 二手车市场纳税人识别号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
 	UsedVehicleMarketId *string `json:"used_vehicle_market_id,omitempty"`
 
-	// 二手车市场地址。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+	// 二手车市场地址。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
 	UsedVehicleMarketAddress *string `json:"used_vehicle_market_address,omitempty"`
 
-	// 二手车市场银行和账号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+	// 二手车市场银行和账号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
 	UsedVehicleMarketBankAccount *string `json:"used_vehicle_market_bank_account,omitempty"`
 
-	// 二手车市场电话。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+	// 二手车市场电话。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
 	UsedVehicleMarketPhone *string `json:"used_vehicle_market_phone,omitempty"`
 
 	// 备注

@@ -352,3 +352,27 @@ func (i *ListTagsInvoker) Invoke() (*model.ListTagsResponse, error) {
 		return result.(*model.ListTagsResponse), nil
 	}
 }
+
+type ListSmsDetailsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSmsDetailsInvoker) Invoke() (*model.ListSmsDetailsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSmsDetailsResponse), nil
+	}
+}
+
+type SendSmsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SendSmsInvoker) Invoke() (*model.SendSmsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SendSmsResponse), nil
+	}
+}

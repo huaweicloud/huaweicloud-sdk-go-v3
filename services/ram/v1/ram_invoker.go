@@ -292,3 +292,39 @@ func (i *BatchDeleteResourceShareTagsInvoker) Invoke() (*model.BatchDeleteResour
 		return result.(*model.BatchDeleteResourceShareTagsResponse), nil
 	}
 }
+
+type ListResourceShareTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListResourceShareTagsInvoker) Invoke() (*model.ListResourceShareTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListResourceShareTagsResponse), nil
+	}
+}
+
+type ListResourceSharesByTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListResourceSharesByTagsInvoker) Invoke() (*model.ListResourceSharesByTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListResourceSharesByTagsResponse), nil
+	}
+}
+
+type SearchResourceShareCountByTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SearchResourceShareCountByTagsInvoker) Invoke() (*model.SearchResourceShareCountByTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SearchResourceShareCountByTagsResponse), nil
+	}
+}

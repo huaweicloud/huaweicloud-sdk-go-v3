@@ -522,3 +522,66 @@ func (c *RamClient) BatchDeleteResourceShareTagsInvoker(request *model.BatchDele
 	requestDef := GenReqDefForBatchDeleteResourceShareTags()
 	return &BatchDeleteResourceShareTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
+
+// ListResourceShareTags 查询已经使用的标签列表
+//
+// 查询的标签相信列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RamClient) ListResourceShareTags(request *model.ListResourceShareTagsRequest) (*model.ListResourceShareTagsResponse, error) {
+	requestDef := GenReqDefForListResourceShareTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListResourceShareTagsResponse), nil
+	}
+}
+
+// ListResourceShareTagsInvoker 查询已经使用的标签列表
+func (c *RamClient) ListResourceShareTagsInvoker(request *model.ListResourceShareTagsRequest) *ListResourceShareTagsInvoker {
+	requestDef := GenReqDefForListResourceShareTags()
+	return &ListResourceShareTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListResourceSharesByTags 根据标签信息查询实例列表
+//
+// 根据标签信息查询实例列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RamClient) ListResourceSharesByTags(request *model.ListResourceSharesByTagsRequest) (*model.ListResourceSharesByTagsResponse, error) {
+	requestDef := GenReqDefForListResourceSharesByTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListResourceSharesByTagsResponse), nil
+	}
+}
+
+// ListResourceSharesByTagsInvoker 根据标签信息查询实例列表
+func (c *RamClient) ListResourceSharesByTagsInvoker(request *model.ListResourceSharesByTagsRequest) *ListResourceSharesByTagsInvoker {
+	requestDef := GenReqDefForListResourceSharesByTags()
+	return &ListResourceSharesByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SearchResourceShareCountByTags 根据标签信息查询实例数量
+//
+// 根据标签信息查询实例数量。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RamClient) SearchResourceShareCountByTags(request *model.SearchResourceShareCountByTagsRequest) (*model.SearchResourceShareCountByTagsResponse, error) {
+	requestDef := GenReqDefForSearchResourceShareCountByTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SearchResourceShareCountByTagsResponse), nil
+	}
+}
+
+// SearchResourceShareCountByTagsInvoker 根据标签信息查询实例数量
+func (c *RamClient) SearchResourceShareCountByTagsInvoker(request *model.SearchResourceShareCountByTagsRequest) *SearchResourceShareCountByTagsInvoker {
+	requestDef := GenReqDefForSearchResourceShareCountByTags()
+	return &SearchResourceShareCountByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}

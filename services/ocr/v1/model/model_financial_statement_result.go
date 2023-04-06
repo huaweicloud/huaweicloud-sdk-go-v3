@@ -19,6 +19,9 @@ type FinancialStatementResult struct {
 	Excel *string `json:"excel,omitempty"`
 
 	ImageSize *FinancialStatementResultImageSize `json:"image_size,omitempty"`
+
+	// 返回透视变换矩阵
+	RectificationMatrix *[][]float32 `json:"rectification_matrix,omitempty"`
 }
 
 func (o FinancialStatementResult) String() string {

@@ -26,8 +26,7 @@ type PostAlarmsReqV2 struct {
 	// 告警策略
 	Policies []Policy `json:"policies"`
 
-	// 告警规则类型
-	Type string `json:"type"`
+	Type *AlarmType `json:"type"`
 
 	// 告警触发的动作
 	AlarmNotifications *[]Notification `json:"alarm_notifications,omitempty"`

@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-type CreateClusterReqV2 struct {
+type RunJobFlowCommand struct {
 
 	// 说明是否为专属云的资源，默认为false。
 	IsDecProject *bool `json:"is_dec_project,omitempty"`
@@ -86,7 +86,7 @@ type CreateClusterReqV2 struct {
 	Tags *[]Tag `json:"tags,omitempty"`
 
 	// 集群创建失败时，是否收集失败日志。 默认设置为1，此时将创建OBS桶仅用于MRS集群创建失败时的日志收集。 枚举值： - 0：不收集 - 1：收集
-	LogCollection *CreateClusterReqV2LogCollection `json:"log_collection,omitempty"`
+	LogCollection *RunJobFlowCommandLogCollection `json:"log_collection,omitempty"`
 
 	// 组成集群的节点组信息。
 	NodeGroups []NodeGroupV2 `json:"node_groups"`
@@ -94,53 +94,56 @@ type CreateClusterReqV2 struct {
 	// 配置引导操作脚本信息。
 	BootstrapScripts *[]BootstrapScript `json:"bootstrap_scripts,omitempty"`
 
-	// 创建集群时可同时提交作业，当前仅MRS1.8.7之前版本支持，暂时只支持新增一个作业。建议使用创建集群并提交作业接口RunJobFlow的steps参数
-	AddJobs *[]AddJobsReqV11 `json:"add_jobs,omitempty"`
-
 	// 集群日志转储至OBS的具体路径。 开启日志转储功能后，日志上传需要对应OBS路径的读写权限， 请配置MRS_ECS_DEFULT_AGENCY默认委托或具有对应OBS路径读写权限的自定义委托。 具体请参见[配置存算分离集群（委托方式）](https://support.huaweicloud.com/usermanual-mrs/mrs_01_0768.html)。 该参数只适用于支持“集群日志转储OBS”特性的集群版本。
 	LogUri *string `json:"log_uri,omitempty"`
 
 	// 集群组件自定义配置。 该参数只适用于支持“自定义组件配置创建集群”特性的集群版本。
 	ComponentConfigs *[]ComponentConfig `json:"component_configs,omitempty"`
+
+	// 作业完成后是否自动删除集群，默认为false。
+	DeleteWhenNoSteps *bool `json:"delete_when_no_steps,omitempty"`
+
+	// 作业列表。
+	Steps []StepConfig `json:"steps"`
 }
 
-func (o CreateClusterReqV2) String() string {
+func (o RunJobFlowCommand) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "CreateClusterReqV2 struct{}"
+		return "RunJobFlowCommand struct{}"
 	}
 
-	return strings.Join([]string{"CreateClusterReqV2", string(data)}, " ")
+	return strings.Join([]string{"RunJobFlowCommand", string(data)}, " ")
 }
 
-type CreateClusterReqV2LogCollection struct {
+type RunJobFlowCommandLogCollection struct {
 	value int32
 }
 
-type CreateClusterReqV2LogCollectionEnum struct {
-	E_0 CreateClusterReqV2LogCollection
-	E_1 CreateClusterReqV2LogCollection
+type RunJobFlowCommandLogCollectionEnum struct {
+	E_0 RunJobFlowCommandLogCollection
+	E_1 RunJobFlowCommandLogCollection
 }
 
-func GetCreateClusterReqV2LogCollectionEnum() CreateClusterReqV2LogCollectionEnum {
-	return CreateClusterReqV2LogCollectionEnum{
-		E_0: CreateClusterReqV2LogCollection{
+func GetRunJobFlowCommandLogCollectionEnum() RunJobFlowCommandLogCollectionEnum {
+	return RunJobFlowCommandLogCollectionEnum{
+		E_0: RunJobFlowCommandLogCollection{
 			value: 0,
-		}, E_1: CreateClusterReqV2LogCollection{
+		}, E_1: RunJobFlowCommandLogCollection{
 			value: 1,
 		},
 	}
 }
 
-func (c CreateClusterReqV2LogCollection) Value() int32 {
+func (c RunJobFlowCommandLogCollection) Value() int32 {
 	return c.value
 }
 
-func (c CreateClusterReqV2LogCollection) MarshalJSON() ([]byte, error) {
+func (c RunJobFlowCommandLogCollection) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
 
-func (c *CreateClusterReqV2LogCollection) UnmarshalJSON(b []byte) error {
+func (c *RunJobFlowCommandLogCollection) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("int32")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

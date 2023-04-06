@@ -16,6 +16,9 @@ type ExportCertificateRequestBody struct {
 
 	// 是否国密GMT0009标准规范。当证书算法为SM2时传入才有效，若不传入，则默认为false。   - **true**   - **false**
 	IsSmStandard *string `json:"is_sm_standard,omitempty"`
+
+	// 设置用于加密私钥的密码。支持使用英文大小写字母、数字、特殊字符（例如,.+-_#）等。最大长度为32字节，若不传入，则默认不使用加密导出。
+	Password *string `json:"password,omitempty"`
 }
 
 func (o ExportCertificateRequestBody) String() string {

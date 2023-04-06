@@ -41,6 +41,18 @@ func (i *CreateExecuteJobInvoker) Invoke() (*model.CreateExecuteJobResponse, err
 	}
 }
 
+type RunJobFlowInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RunJobFlowInvoker) Invoke() (*model.RunJobFlowResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RunJobFlowResponse), nil
+	}
+}
+
 type ShowAgencyMappingInvoker struct {
 	*invoker.BaseInvoker
 }

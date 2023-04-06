@@ -26,8 +26,7 @@ type ListAlarmResponseAlarms struct {
 	// 资源列表，关联资源需要使用查询告警规则资源接口获取
 	Resources *[]ResourcesInListResp `json:"resources,omitempty"`
 
-	// 告警规则类型
-	Type *string `json:"type,omitempty"`
+	Type *AlarmType `json:"type,omitempty"`
 
 	// 告警开关
 	Enabled *bool `json:"enabled,omitempty"`

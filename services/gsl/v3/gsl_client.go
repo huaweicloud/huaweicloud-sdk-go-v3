@@ -336,7 +336,7 @@ func (c *GslClient) SetExceedCutNetInvoker(request *model.SetExceedCutNetRequest
 
 // SetSpeedValue 实体卡限速
 //
-// 实体卡限速接口,支持电信和联通实体卡调用。
+// 实体卡限速接口,支持电信和联通实体卡调用。联通卡需要个人实名认证后才能使用限速功能。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GslClient) SetSpeedValue(request *model.SetSpeedValueRequest) (*model.SetSpeedValueResponse, error) {
@@ -626,4 +626,46 @@ func (c *GslClient) ListTags(request *model.ListTagsRequest) (*model.ListTagsRes
 func (c *GslClient) ListTagsInvoker(request *model.ListTagsRequest) *ListTagsInvoker {
 	requestDef := GenReqDefForListTags()
 	return &ListTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSmsDetails 短信发送详情
+//
+// 短信发送详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GslClient) ListSmsDetails(request *model.ListSmsDetailsRequest) (*model.ListSmsDetailsResponse, error) {
+	requestDef := GenReqDefForListSmsDetails()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSmsDetailsResponse), nil
+	}
+}
+
+// ListSmsDetailsInvoker 短信发送详情
+func (c *GslClient) ListSmsDetailsInvoker(request *model.ListSmsDetailsRequest) *ListSmsDetailsInvoker {
+	requestDef := GenReqDefForListSmsDetails()
+	return &ListSmsDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SendSms 发送短信
+//
+// 发送短信
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GslClient) SendSms(request *model.SendSmsRequest) (*model.SendSmsResponse, error) {
+	requestDef := GenReqDefForSendSms()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SendSmsResponse), nil
+	}
+}
+
+// SendSmsInvoker 发送短信
+func (c *GslClient) SendSmsInvoker(request *model.SendSmsRequest) *SendSmsInvoker {
+	requestDef := GenReqDefForSendSms()
+	return &SendSmsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

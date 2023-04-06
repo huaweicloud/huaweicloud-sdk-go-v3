@@ -92,6 +92,31 @@ func (c *MrsClient) CreateExecuteJobInvoker(request *model.CreateExecuteJobReque
 	return &CreateExecuteJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RunJobFlow 创建集群并提交作业
+//
+// 创建一个MRS集群并提交作业，并支持作业完成后删除集群，支持MRS 1.8.9及以上集群版本使用。使用接口前，您需要先获取下的资源信息。
+// - 通过VPC创建或查询VPC、子网
+// - 通过ECS创建或查询密钥对
+// - 通过[终端节点](https://support.huaweicloud.com/api-mrs/mrs_02_0003.html)获取区域信息
+// - 参考[MRS服务支持的组件](https://support.huaweicloud.com/api-mrs/mrs_02_9001.html)获取MRS版本及对应版本支持的组件信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MrsClient) RunJobFlow(request *model.RunJobFlowRequest) (*model.RunJobFlowResponse, error) {
+	requestDef := GenReqDefForRunJobFlow()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RunJobFlowResponse), nil
+	}
+}
+
+// RunJobFlowInvoker 创建集群并提交作业
+func (c *MrsClient) RunJobFlowInvoker(request *model.RunJobFlowRequest) *RunJobFlowInvoker {
+	requestDef := GenReqDefForRunJobFlow()
+	return &RunJobFlowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowAgencyMapping 查询用户（组）与IAM委托的映射关系
 //
 // 获取用户（组）与IAM委托之间的映射关系的详细信息。

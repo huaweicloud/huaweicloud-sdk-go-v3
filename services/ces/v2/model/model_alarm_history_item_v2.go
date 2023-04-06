@@ -26,8 +26,7 @@ type AlarmHistoryItemV2 struct {
 	// 告警记录的告警级别，值为1,2,3,4；1为紧急，2为重要，3为次要，4为提示。
 	Level *AlarmHistoryItemV2Level `json:"level,omitempty"`
 
-	// 告警类型； 仅针对事件告警的参数，枚举类型：值为EVENT.SYS或者EVENT.CUSTOM
-	Type *AlarmHistoryItemV2Type `json:"type,omitempty"`
+	Type *AlarmType `json:"type,omitempty"`
 
 	// 是否发送通知，值为true或者false。
 	ActionEnabled *bool `json:"action_enabled,omitempty"`
@@ -153,47 +152,5 @@ func (c *AlarmHistoryItemV2Level) UnmarshalJSON(b []byte) error {
 		return err
 	} else {
 		return errors.New("convert enum data to int32 error")
-	}
-}
-
-type AlarmHistoryItemV2Type struct {
-	value string
-}
-
-type AlarmHistoryItemV2TypeEnum struct {
-	EVENT_SYS    AlarmHistoryItemV2Type
-	EVENT_CUSTOM AlarmHistoryItemV2Type
-}
-
-func GetAlarmHistoryItemV2TypeEnum() AlarmHistoryItemV2TypeEnum {
-	return AlarmHistoryItemV2TypeEnum{
-		EVENT_SYS: AlarmHistoryItemV2Type{
-			value: "EVENT.SYS",
-		},
-		EVENT_CUSTOM: AlarmHistoryItemV2Type{
-			value: "EVENT.CUSTOM",
-		},
-	}
-}
-
-func (c AlarmHistoryItemV2Type) Value() string {
-	return c.value
-}
-
-func (c AlarmHistoryItemV2Type) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *AlarmHistoryItemV2Type) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to string error")
 	}
 }
