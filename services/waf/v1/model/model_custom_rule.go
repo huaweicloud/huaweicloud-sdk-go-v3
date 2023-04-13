@@ -45,6 +45,9 @@ type CustomRule struct {
 
 	// 规则创建对象，该参数为预留参数，用于后续功能扩展，当前请用户忽略该参数
 	Producer *int32 `json:"producer,omitempty"`
+
+	// 规则名称
+	Name *string `json:"name,omitempty"`
 }
 
 func (o CustomRule) String() string {

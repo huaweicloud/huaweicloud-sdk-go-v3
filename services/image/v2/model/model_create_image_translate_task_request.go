@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateImageTranslateTaskRequest struct {
-	Body *ImageTranslateRequestBody `json:"body,omitempty"`
+	Body *CreateImageTranslateRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateImageTranslateTaskRequest) String() string {

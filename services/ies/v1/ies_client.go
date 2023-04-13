@@ -168,6 +168,48 @@ func (c *IesClient) ListQuotasInvoker(request *model.ListQuotasRequest) *ListQuo
 	return &ListQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListRacks 查询机柜列表
+//
+// 查询机柜列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IesClient) ListRacks(request *model.ListRacksRequest) (*model.ListRacksResponse, error) {
+	requestDef := GenReqDefForListRacks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRacksResponse), nil
+	}
+}
+
+// ListRacksInvoker 查询机柜列表
+func (c *IesClient) ListRacksInvoker(request *model.ListRacksRequest) *ListRacksInvoker {
+	requestDef := GenReqDefForListRacks()
+	return &ListRacksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRack 查询机柜详情
+//
+// 查询机柜详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IesClient) ShowRack(request *model.ShowRackRequest) (*model.ShowRackResponse, error) {
+	requestDef := GenReqDefForShowRack()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRackResponse), nil
+	}
+}
+
+// ShowRackInvoker 查询机柜详情
+func (c *IesClient) ShowRackInvoker(request *model.ShowRackRequest) *ShowRackInvoker {
+	requestDef := GenReqDefForShowRack()
+	return &ShowRackInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListSupportedRegions 查询支持的区域列表
 //
 // 查询支持智能边缘小站接入的华为云区域（region）列表。
@@ -187,4 +229,46 @@ func (c *IesClient) ListSupportedRegions(request *model.ListSupportedRegionsRequ
 func (c *IesClient) ListSupportedRegionsInvoker(request *model.ListSupportedRegionsRequest) *ListSupportedRegionsInvoker {
 	requestDef := GenReqDefForListSupportedRegions()
 	return &ListSupportedRegionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListStoragePools 查询存储池列表
+//
+// 查询存储池列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IesClient) ListStoragePools(request *model.ListStoragePoolsRequest) (*model.ListStoragePoolsResponse, error) {
+	requestDef := GenReqDefForListStoragePools()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListStoragePoolsResponse), nil
+	}
+}
+
+// ListStoragePoolsInvoker 查询存储池列表
+func (c *IesClient) ListStoragePoolsInvoker(request *model.ListStoragePoolsRequest) *ListStoragePoolsInvoker {
+	requestDef := GenReqDefForListStoragePools()
+	return &ListStoragePoolsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowStoragePool 查询存储池详情
+//
+// 查询存储池详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IesClient) ShowStoragePool(request *model.ShowStoragePoolRequest) (*model.ShowStoragePoolResponse, error) {
+	requestDef := GenReqDefForShowStoragePool()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowStoragePoolResponse), nil
+	}
+}
+
+// ShowStoragePoolInvoker 查询存储池详情
+func (c *IesClient) ShowStoragePoolInvoker(request *model.ShowStoragePoolRequest) *ShowStoragePoolInvoker {
+	requestDef := GenReqDefForShowStoragePool()
+	return &ShowStoragePoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

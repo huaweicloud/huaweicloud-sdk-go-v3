@@ -149,6 +149,18 @@ func (i *ShowRegisterServiceInvoker) Invoke() (*model.ShowRegisterServiceRespons
 	}
 }
 
+type ShowReportInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowReportInvoker) Invoke() (*model.ShowReportResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowReportResponse), nil
+	}
+}
+
 type ShowTestCaseDetailInvoker struct {
 	*invoker.BaseInvoker
 }

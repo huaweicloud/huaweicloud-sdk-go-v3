@@ -569,6 +569,18 @@ func (i *ListDiagnoseRecordsInvoker) Invoke() (*model.ListDiagnoseRecordsRespons
 	}
 }
 
+type ListDiagnoseResourcesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDiagnoseResourcesInvoker) Invoke() (*model.ListDiagnoseResourcesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDiagnoseResourcesResponse), nil
+	}
+}
+
 type ListExtendsParamsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -686,6 +698,18 @@ func (i *ListNoticesInvoker) Invoke() (*model.ListNoticesResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListNoticesResponse), nil
+	}
+}
+
+type ListOrderIncidentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListOrderIncidentInvoker) Invoke() (*model.ListOrderIncidentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListOrderIncidentResponse), nil
 	}
 }
 

@@ -271,6 +271,27 @@ func (c *CloudtestClient) ShowRegisterServiceInvoker(request *model.ShowRegister
 	return &ShowRegisterServiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowReport 实时计算单个自定义报表
+//
+// 实时计算单个自定义报表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) ShowReport(request *model.ShowReportRequest) (*model.ShowReportResponse, error) {
+	requestDef := GenReqDefForShowReport()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowReportResponse), nil
+	}
+}
+
+// ShowReportInvoker 实时计算单个自定义报表
+func (c *CloudtestClient) ShowReportInvoker(request *model.ShowReportRequest) *ShowReportInvoker {
+	requestDef := GenReqDefForShowReport()
+	return &ShowReportInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowTestCaseDetail 获取测试用例详情
 //
 // 获取测试用例详情

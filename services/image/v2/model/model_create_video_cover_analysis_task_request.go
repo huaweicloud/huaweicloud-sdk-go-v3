@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateVideoCoverAnalysisTaskRequest struct {
-	Body *VideoCoverAnalysisCreateTaskRequestBody `json:"body,omitempty"`
+	Body *CreateVideoCoverAnalysisTaskRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateVideoCoverAnalysisTaskRequest) String() string {

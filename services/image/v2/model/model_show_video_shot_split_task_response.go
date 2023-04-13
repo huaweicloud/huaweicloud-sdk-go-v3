@@ -3,9 +3,6 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
-	"errors"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-
 	"strings"
 )
 
@@ -22,7 +19,7 @@ type ShowVideoShotSplitTaskResponse struct {
 	UpdateTime *string `json:"update_time,omitempty"`
 
 	// 任务当前的状态，分别为SUCCEEDED（运行成功），FAILED（运行失败），RUNNING（运行中）。
-	State *ShowVideoShotSplitTaskResponseState `json:"state,omitempty"`
+	State *string `json:"state,omitempty"`
 
 	Input *VideoSplitTaskInput `json:"input,omitempty"`
 
@@ -41,50 +38,4 @@ func (o ShowVideoShotSplitTaskResponse) String() string {
 	}
 
 	return strings.Join([]string{"ShowVideoShotSplitTaskResponse", string(data)}, " ")
-}
-
-type ShowVideoShotSplitTaskResponseState struct {
-	value string
-}
-
-type ShowVideoShotSplitTaskResponseStateEnum struct {
-	SUCCEEDED ShowVideoShotSplitTaskResponseState
-	FAILED    ShowVideoShotSplitTaskResponseState
-	RUNNING   ShowVideoShotSplitTaskResponseState
-}
-
-func GetShowVideoShotSplitTaskResponseStateEnum() ShowVideoShotSplitTaskResponseStateEnum {
-	return ShowVideoShotSplitTaskResponseStateEnum{
-		SUCCEEDED: ShowVideoShotSplitTaskResponseState{
-			value: "SUCCEEDED",
-		},
-		FAILED: ShowVideoShotSplitTaskResponseState{
-			value: "FAILED",
-		},
-		RUNNING: ShowVideoShotSplitTaskResponseState{
-			value: "RUNNING",
-		},
-	}
-}
-
-func (c ShowVideoShotSplitTaskResponseState) Value() string {
-	return c.value
-}
-
-func (c ShowVideoShotSplitTaskResponseState) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *ShowVideoShotSplitTaskResponseState) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to string error")
-	}
 }

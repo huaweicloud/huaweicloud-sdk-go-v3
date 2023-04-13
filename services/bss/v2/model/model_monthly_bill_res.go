@@ -127,6 +127,12 @@ type MonthlyBillRes struct {
 
 	// 该字段为预留字段。
 	SubResourceName *string `json:"sub_resource_name,omitempty"`
+
+	// 原订单ID 。
+	PreOrderId *string `json:"pre_order_id,omitempty"`
+
+	// 可用区信息列表。具体请参见表 AzCodeInfo。
+	AzCodeInfos *[]AzCodeInfo `json:"az_code_infos,omitempty"`
 }
 
 func (o MonthlyBillRes) String() string {

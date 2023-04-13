@@ -8,10 +8,10 @@ import (
 
 type TaskOutputObs struct {
 
-	// OBS桶名。
+	// 任务运行结果输出的OBS桶名。
 	Bucket string `json:"bucket"`
 
-	// OBS的路径。
+	// 任务运行结果输出的OBS路径。
 	Path string `json:"path"`
 }
 

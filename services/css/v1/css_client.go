@@ -1195,7 +1195,7 @@ func (c *CssClient) UpdateSnapshotSettingInvoker(request *model.UpdateSnapshotSe
 
 // UpdateUnbindPublic 关闭公网访问
 //
-// 该接口用于关闭公网访问。
+// 该接口用于关闭公网访问。包周期类型的集群不支持通过api进行关闭公网访问。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CssClient) UpdateUnbindPublic(request *model.UpdateUnbindPublicRequest) (*model.UpdateUnbindPublicResponse, error) {
@@ -1342,7 +1342,7 @@ func (c *CssClient) UpdateAlterKibanaInvoker(request *model.UpdateAlterKibanaReq
 
 // UpdateCloseKibana 关闭Kibana公网访问
 //
-// 该接口用于关闭Kibana公网访问。
+// 该接口用于关闭Kibana公网访问。包周期类型集群不支持通过api进行关闭Kibana公网访问。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CssClient) UpdateCloseKibana(request *model.UpdateCloseKibanaRequest) (*model.UpdateCloseKibanaResponse, error) {

@@ -22,7 +22,7 @@ type ImageTaggingItemBody struct {
 
 	I18nType *ImageTaggingItemBodyI18nType `json:"i18n_type,omitempty"`
 
-	// 目标检测框信息，为空则表示没有目标检测框。
+	// 目标检测框信息(该服务不返回目标检测信息)。
 	Instances *[]ImageTaggingInstance `json:"instances,omitempty"`
 }
 

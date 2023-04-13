@@ -7,7 +7,7 @@ import (
 )
 
 type ImageHighresolutionMattingRequestBody struct {
-	Input *TaskInput `json:"input"`
+	Input *ImageHighresolutionMattingInput `json:"input"`
 
 	Output *TaskOutput `json:"output"`
 

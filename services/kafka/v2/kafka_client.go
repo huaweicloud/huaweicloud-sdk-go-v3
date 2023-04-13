@@ -40,6 +40,27 @@ func (c *KafkaClient) BatchCreateOrDeleteKafkaTagInvoker(request *model.BatchCre
 	return &BatchCreateOrDeleteKafkaTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchDeleteGroup Kafka实例批量删除Group
+//
+// 该接口用于向Kafka实例批量删除Group。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KafkaClient) BatchDeleteGroup(request *model.BatchDeleteGroupRequest) (*model.BatchDeleteGroupResponse, error) {
+	requestDef := GenReqDefForBatchDeleteGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteGroupResponse), nil
+	}
+}
+
+// BatchDeleteGroupInvoker Kafka实例批量删除Group
+func (c *KafkaClient) BatchDeleteGroupInvoker(request *model.BatchDeleteGroupRequest) *BatchDeleteGroupInvoker {
+	requestDef := GenReqDefForBatchDeleteGroup()
+	return &BatchDeleteGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchDeleteInstanceTopic Kafka实例批量删除Topic
 //
 // 该接口用于向Kafka实例批量删除Topic。批量删除多个消费组时，部分删除成功，部分失败，此时接口返回删除成功，并在返回中显示删除失败的消费组信息。

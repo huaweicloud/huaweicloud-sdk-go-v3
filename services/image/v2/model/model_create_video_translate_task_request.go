@@ -8,7 +8,7 @@ import (
 
 // Request Object
 type CreateVideoTranslateTaskRequest struct {
-	Body *VideoTranslateRequestBody `json:"body,omitempty"`
+	Body *CreateVideoTranslateTaskRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateVideoTranslateTaskRequest) String() string {

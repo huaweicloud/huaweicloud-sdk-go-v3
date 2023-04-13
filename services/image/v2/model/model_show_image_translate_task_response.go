@@ -21,7 +21,7 @@ type ShowImageTranslateTaskResponse struct {
 	// 任务当前的状态，分别为SUCCEEDED（运行成功），FAILED（运行失败），RUNNING（运行中）。
 	State *string `json:"state,omitempty"`
 
-	Input *TaskInput `json:"input,omitempty"`
+	Input *ImageTranslateTaskInput `json:"input,omitempty"`
 
 	Output *TaskOutput `json:"output,omitempty"`
 

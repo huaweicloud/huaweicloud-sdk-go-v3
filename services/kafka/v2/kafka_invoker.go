@@ -17,6 +17,18 @@ func (i *BatchCreateOrDeleteKafkaTagInvoker) Invoke() (*model.BatchCreateOrDelet
 	}
 }
 
+type BatchDeleteGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteGroupInvoker) Invoke() (*model.BatchDeleteGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteGroupResponse), nil
+	}
+}
+
 type BatchDeleteInstanceTopicInvoker struct {
 	*invoker.BaseInvoker
 }

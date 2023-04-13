@@ -8,7 +8,7 @@ import (
 
 type TaskCallback struct {
 
-	// 回调url地址。
+	// 回调url地址，用于通知客户任务运行结束。
 	Url *string `json:"url,omitempty"`
 }
 

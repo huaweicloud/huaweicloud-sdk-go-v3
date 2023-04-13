@@ -169,6 +169,27 @@ func (c *WafClient) CreateCertificateInvoker(request *model.CreateCertificateReq
 	return &CreateCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateCloudWafPostPaidResource 开通云模式按需计费接口
+//
+// 开通云模式按需计费接口
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) CreateCloudWafPostPaidResource(request *model.CreateCloudWafPostPaidResourceRequest) (*model.CreateCloudWafPostPaidResourceResponse, error) {
+	requestDef := GenReqDefForCreateCloudWafPostPaidResource()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateCloudWafPostPaidResourceResponse), nil
+	}
+}
+
+// CreateCloudWafPostPaidResourceInvoker 开通云模式按需计费接口
+func (c *WafClient) CreateCloudWafPostPaidResourceInvoker(request *model.CreateCloudWafPostPaidResourceRequest) *CreateCloudWafPostPaidResourceInvoker {
+	requestDef := GenReqDefForCreateCloudWafPostPaidResource()
+	return &CreateCloudWafPostPaidResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateCustomRule 创建精准防护规则
 //
 // 创建精准防护规则
@@ -545,6 +566,27 @@ func (c *WafClient) DeleteCertificate(request *model.DeleteCertificateRequest) (
 func (c *WafClient) DeleteCertificateInvoker(request *model.DeleteCertificateRequest) *DeleteCertificateInvoker {
 	requestDef := GenReqDefForDeleteCertificate()
 	return &DeleteCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteCloudWafPostPaidResource 关闭云模式按需计费接口
+//
+// 关闭云模式按需计费接口
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) DeleteCloudWafPostPaidResource(request *model.DeleteCloudWafPostPaidResourceRequest) (*model.DeleteCloudWafPostPaidResourceResponse, error) {
+	requestDef := GenReqDefForDeleteCloudWafPostPaidResource()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteCloudWafPostPaidResourceResponse), nil
+	}
+}
+
+// DeleteCloudWafPostPaidResourceInvoker 关闭云模式按需计费接口
+func (c *WafClient) DeleteCloudWafPostPaidResourceInvoker(request *model.DeleteCloudWafPostPaidResourceRequest) *DeleteCloudWafPostPaidResourceInvoker {
+	requestDef := GenReqDefForDeleteCloudWafPostPaidResource()
+	return &DeleteCloudWafPostPaidResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteCustomRule 删除精准防护规则
@@ -1198,9 +1240,9 @@ func (c *WafClient) ListPremiumHostInvoker(request *model.ListPremiumHostRequest
 	return &ListPremiumHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListPrivacyRule 查询隐私屏蔽防护规则
+// ListPrivacyRule 查询隐私屏蔽防护规则列表
 //
-// 查询隐私屏蔽防护规则
+// 查询隐私屏蔽防护规则列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) ListPrivacyRule(request *model.ListPrivacyRuleRequest) (*model.ListPrivacyRuleResponse, error) {
@@ -1213,7 +1255,7 @@ func (c *WafClient) ListPrivacyRule(request *model.ListPrivacyRuleRequest) (*mod
 	}
 }
 
-// ListPrivacyRuleInvoker 查询隐私屏蔽防护规则
+// ListPrivacyRuleInvoker 查询隐私屏蔽防护规则列表
 func (c *WafClient) ListPrivacyRuleInvoker(request *model.ListPrivacyRuleRequest) *ListPrivacyRuleInvoker {
 	requestDef := GenReqDefForListPrivacyRule()
 	return &ListPrivacyRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

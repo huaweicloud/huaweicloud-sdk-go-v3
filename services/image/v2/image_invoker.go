@@ -17,18 +17,6 @@ func (i *CreateImageHighresolutionMattingTaskInvoker) Invoke() (*model.CreateIma
 	}
 }
 
-type CreateImageToVideoTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateImageToVideoTaskInvoker) Invoke() (*model.CreateImageToVideoTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateImageToVideoTaskResponse), nil
-	}
-}
-
 type CreateImageTranslateTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -50,18 +38,6 @@ func (i *CreateVideoCoverAnalysisTaskInvoker) Invoke() (*model.CreateVideoCoverA
 		return nil, err
 	} else {
 		return result.(*model.CreateVideoCoverAnalysisTaskResponse), nil
-	}
-}
-
-type CreateVideoCuttingTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateVideoCuttingTaskInvoker) Invoke() (*model.CreateVideoCuttingTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateVideoCuttingTaskResponse), nil
 	}
 }
 
@@ -98,18 +74,6 @@ func (i *CreateVideoSummarizationAnalysisTaskInvoker) Invoke() (*model.CreateVid
 		return nil, err
 	} else {
 		return result.(*model.CreateVideoSummarizationAnalysisTaskResponse), nil
-	}
-}
-
-type CreateVideoSynthesisTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateVideoSynthesisTaskInvoker) Invoke() (*model.CreateVideoSynthesisTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateVideoSynthesisTaskResponse), nil
 	}
 }
 
@@ -221,30 +185,6 @@ func (i *RunImageTaggingInvoker) Invoke() (*model.RunImageTaggingResponse, error
 	}
 }
 
-type RunImageWisedesignCropInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *RunImageWisedesignCropInvoker) Invoke() (*model.RunImageWisedesignCropResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.RunImageWisedesignCropResponse), nil
-	}
-}
-
-type RunImageWisedesignInpaintingInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *RunImageWisedesignInpaintingInvoker) Invoke() (*model.RunImageWisedesignInpaintingResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.RunImageWisedesignInpaintingResponse), nil
-	}
-}
-
 type RunQueryCustomTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -281,18 +221,6 @@ func (i *ShowImageHighresolutionMattingTaskInvoker) Invoke() (*model.ShowImageHi
 	}
 }
 
-type ShowImageToVideoTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowImageToVideoTaskInvoker) Invoke() (*model.ShowImageToVideoTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowImageToVideoTaskResponse), nil
-	}
-}
-
 type ShowImageTranslateTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -314,18 +242,6 @@ func (i *ShowVideoCoverAnalysisTaskInvoker) Invoke() (*model.ShowVideoCoverAnaly
 		return nil, err
 	} else {
 		return result.(*model.ShowVideoCoverAnalysisTaskResponse), nil
-	}
-}
-
-type ShowVideoCuttingTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowVideoCuttingTaskInvoker) Invoke() (*model.ShowVideoCuttingTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowVideoCuttingTaskResponse), nil
 	}
 }
 
@@ -362,18 +278,6 @@ func (i *ShowVideoSummarizationAnalysisTaskInvoker) Invoke() (*model.ShowVideoSu
 		return nil, err
 	} else {
 		return result.(*model.ShowVideoSummarizationAnalysisTaskResponse), nil
-	}
-}
-
-type ShowVideoSynthesisTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowVideoSynthesisTaskInvoker) Invoke() (*model.ShowVideoSynthesisTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowVideoSynthesisTaskResponse), nil
 	}
 }
 

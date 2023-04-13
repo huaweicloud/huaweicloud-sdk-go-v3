@@ -89,6 +89,30 @@ func (i *ListQuotasInvoker) Invoke() (*model.ListQuotasResponse, error) {
 	}
 }
 
+type ListRacksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRacksInvoker) Invoke() (*model.ListRacksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRacksResponse), nil
+	}
+}
+
+type ShowRackInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRackInvoker) Invoke() (*model.ShowRackResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRackResponse), nil
+	}
+}
+
 type ListSupportedRegionsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -98,5 +122,29 @@ func (i *ListSupportedRegionsInvoker) Invoke() (*model.ListSupportedRegionsRespo
 		return nil, err
 	} else {
 		return result.(*model.ListSupportedRegionsResponse), nil
+	}
+}
+
+type ListStoragePoolsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListStoragePoolsInvoker) Invoke() (*model.ListStoragePoolsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListStoragePoolsResponse), nil
+	}
+}
+
+type ShowStoragePoolInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowStoragePoolInvoker) Invoke() (*model.ShowStoragePoolResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowStoragePoolResponse), nil
 	}
 }

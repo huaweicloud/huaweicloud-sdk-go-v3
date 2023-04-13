@@ -9,6 +9,9 @@ import (
 // Response Object
 type CollectTranscriberJobResponse struct {
 
+	// 录音文件识别任务标识符。  使用“callback_url”回调url时，该字段会随结果发送至用户服务器。 使用get接口查询，不会出现该字段
+	JobId *string `json:"job_id,omitempty"`
+
 	// 当前识别状态。具体状态如下所示：  WAITING 等待识别。 FINISHED 识别已经完成。 ERROR 识别过程中发生错误。
 	Status *string `json:"status,omitempty"`
 

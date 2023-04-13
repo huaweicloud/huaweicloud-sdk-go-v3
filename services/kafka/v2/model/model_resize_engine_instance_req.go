@@ -20,6 +20,9 @@ type ResizeEngineInstanceReq struct {
 
 	// 垂直扩容时的新产品ID。  当oper_type类型是vertical时，该参数才有效且必填。
 	NewProductId *string `json:"new_product_id,omitempty"`
+
+	// 实例绑定的弹性IP地址的ID。 以英文逗号隔开多个弹性IP地址的ID。 当oper_type类型是horizontal时，该参数必填。
+	PublicipId *string `json:"publicip_id,omitempty"`
 }
 
 func (o ResizeEngineInstanceReq) String() string {

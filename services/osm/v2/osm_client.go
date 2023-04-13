@@ -1006,6 +1006,27 @@ func (c *OsmClient) ListDiagnoseRecordsInvoker(request *model.ListDiagnoseRecord
 	return &ListDiagnoseRecordsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListDiagnoseResources 获取资源信息
+//
+// 获取资源信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OsmClient) ListDiagnoseResources(request *model.ListDiagnoseResourcesRequest) (*model.ListDiagnoseResourcesResponse, error) {
+	requestDef := GenReqDefForListDiagnoseResources()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDiagnoseResourcesResponse), nil
+	}
+}
+
+// ListDiagnoseResourcesInvoker 获取资源信息
+func (c *OsmClient) ListDiagnoseResourcesInvoker(request *model.ListDiagnoseResourcesRequest) *ListDiagnoseResourcesInvoker {
+	requestDef := GenReqDefForListDiagnoseResources()
+	return &ListDiagnoseResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListExtendsParams 查询附加参数
 //
 // 提单时，根据不同的产品或者问题类型，会存在不同的一些附加参数填写
@@ -1214,6 +1235,27 @@ func (c *OsmClient) ListNotices(request *model.ListNoticesRequest) (*model.ListN
 func (c *OsmClient) ListNoticesInvoker(request *model.ListNoticesRequest) *ListNoticesInvoker {
 	requestDef := GenReqDefForListNotices()
 	return &ListNoticesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListOrderIncident 工单列表
+//
+// 工单列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OsmClient) ListOrderIncident(request *model.ListOrderIncidentRequest) (*model.ListOrderIncidentResponse, error) {
+	requestDef := GenReqDefForListOrderIncident()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListOrderIncidentResponse), nil
+	}
+}
+
+// ListOrderIncidentInvoker 工单列表
+func (c *OsmClient) ListOrderIncidentInvoker(request *model.ListOrderIncidentRequest) *ListOrderIncidentInvoker {
+	requestDef := GenReqDefForListOrderIncident()
+	return &ListOrderIncidentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListPrivileges 查询工单权限

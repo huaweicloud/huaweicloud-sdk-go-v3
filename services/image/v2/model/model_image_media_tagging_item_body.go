@@ -23,7 +23,7 @@ type ImageMediaTaggingItemBody struct {
 	I18nType *ImageMediaTaggingItemBodyI18nType `json:"i18n_type,omitempty"`
 
 	// 目标检测框信息，为空则表示没有目标检测框。
-	Instances *[]ImageTaggingInstance `json:"instances,omitempty"`
+	Instances *[]ImageMediaTaggingInstance `json:"instances,omitempty"`
 }
 
 func (o ImageMediaTaggingItemBody) String() string {

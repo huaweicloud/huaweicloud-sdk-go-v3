@@ -89,6 +89,18 @@ func (i *CreateCertificateInvoker) Invoke() (*model.CreateCertificateResponse, e
 	}
 }
 
+type CreateCloudWafPostPaidResourceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateCloudWafPostPaidResourceInvoker) Invoke() (*model.CreateCloudWafPostPaidResourceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateCloudWafPostPaidResourceResponse), nil
+	}
+}
+
 type CreateCustomRuleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -302,6 +314,18 @@ func (i *DeleteCertificateInvoker) Invoke() (*model.DeleteCertificateResponse, e
 		return nil, err
 	} else {
 		return result.(*model.DeleteCertificateResponse), nil
+	}
+}
+
+type DeleteCloudWafPostPaidResourceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteCloudWafPostPaidResourceInvoker) Invoke() (*model.DeleteCloudWafPostPaidResourceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteCloudWafPostPaidResourceResponse), nil
 	}
 }
 

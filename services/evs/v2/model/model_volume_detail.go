@@ -110,6 +110,10 @@ type VolumeDetail struct {
 
 	// 云硬盘序列号。 只有SCSI类型的非双活卷才会返回该字段，用于与虚拟机中的盘做对应关系。
 	SerialNumber *string `json:"serial_number,omitempty"`
+
+	Iops *Iops `json:"iops,omitempty"`
+
+	Throughput *Throughput `json:"throughput,omitempty"`
 }
 
 func (o VolumeDetail) String() string {
