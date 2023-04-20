@@ -102,22 +102,14 @@ type CreateUserResponseDefaultGroupPerm struct {
 }
 
 type CreateUserResponseDefaultGroupPermEnum struct {
-	PUB     CreateUserResponseDefaultGroupPerm
-	SUB     CreateUserResponseDefaultGroupPerm
-	PUB_SUB CreateUserResponseDefaultGroupPerm
-	DENY    CreateUserResponseDefaultGroupPerm
+	SUB  CreateUserResponseDefaultGroupPerm
+	DENY CreateUserResponseDefaultGroupPerm
 }
 
 func GetCreateUserResponseDefaultGroupPermEnum() CreateUserResponseDefaultGroupPermEnum {
 	return CreateUserResponseDefaultGroupPermEnum{
-		PUB: CreateUserResponseDefaultGroupPerm{
-			value: "PUB",
-		},
 		SUB: CreateUserResponseDefaultGroupPerm{
 			value: "SUB",
-		},
-		PUB_SUB: CreateUserResponseDefaultGroupPerm{
-			value: "PUB|SUB",
 		},
 		DENY: CreateUserResponseDefaultGroupPerm{
 			value: "DENY",

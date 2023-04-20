@@ -18,8 +18,11 @@ type CreateEndpointResponse struct {
 	// 终端节点连接的终端节点服务类型。 ● gataway：由运维人员配置。用户无需创建，可直接使用。 ● interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过查询公共终端节点服务列表， 查看由运维人员配置的所有用户可见且可连接的终端节点服务， 并通过创建终端节点服务创建Interface类型的终端节点服务。
 	ServiceType *CreateEndpointResponseServiceType `json:"service_type,omitempty"`
 
-	// 终端节点的连接状态。 ● pendingAcceptance：待接受 ● creating：创建中 ● accepted：已接受 ● failed：失败
+	// 终端节点的连接状态。 ● pendingAcceptance：待接受 ● creating：创建中 ● accepted：已接受 ● rejected：已拒绝 ● failed：失败 ● deleting：删除中
 	Status *CreateEndpointResponseStatus `json:"status,omitempty"`
+
+	// 终端节点ip
+	Ip *string `json:"ip,omitempty"`
 
 	// 帐号状态。 ● frozen：冻结 ● active：解冻
 	ActiveStatus *[]string `json:"active_status,omitempty"`
@@ -76,8 +79,14 @@ type CreateEndpointResponse struct {
 	PolicyStatement *[]string `json:"policy_statement,omitempty"`
 
 	// 终端节点是否已停用，取值【enable/disable】
-	EnableStatus   *string `json:"enable_status,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	EnableStatus *string `json:"enable_status,omitempty"`
+
+	// 待废弃，实例相关联的集群ID
+	EndpointPoolId *string `json:"endpoint_pool_id,omitempty"`
+
+	// 终端节点对应Pool的Public Border Group信息
+	PublicBorderGroup *string `json:"public_border_group,omitempty"`
+	HttpStatusCode    int     `json:"-"`
 }
 
 func (o CreateEndpointResponse) String() string {

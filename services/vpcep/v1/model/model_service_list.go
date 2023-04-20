@@ -14,7 +14,7 @@ type ServiceList struct {
 	// 终端节点服务的ID，唯一标识。
 	Id *string `json:"id,omitempty"`
 
-	// 标识终端节点服务后端资源的ID， 格式为通用唯一识别码（Universally Unique Identifier，下文简称UUID）。取值为： ● LB类型：增强型负载均衡器内网IP对应的端口ID。 ● VM类型：弹性云服务器IP地址对应的网卡ID。 ● VIP类型：虚拟资源所在物理服务器对应的网卡ID。
+	// 标识终端节点服务后端资源的ID， 格式为通用唯一识别码（Universally Unique Identifier，下文简称UUID）。取值为： ● LB类型：负载均衡器内网IP对应的端口ID。 ● VM类型：弹性云服务器IP地址对应的网卡ID。 ● VIP类型：虚拟资源所在物理服务器对应的网卡ID。（该字段已废弃，请优先使用LB类型）
 	PortId *string `json:"port_id,omitempty"`
 
 	// 虚拟IP的网卡ID。 仅当“port_id”为“VIP类型”时，返回该参数。
@@ -59,7 +59,7 @@ type ServiceList struct {
 	// 终端节点服务下连接的状态为“创建中”或“已接受”的终端节点的个数。
 	ConnectionCount *int32 `json:"connection_count,omitempty"`
 
-	// 用于控制是否将客户端的源IP、源端口、marker_id等信息携带到服务端。 信息携带支持两种方式： ● TCP TOA：表示将客户端信息插入到tcp，option字段中携带至服务端。 说明 仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。 ● Proxy Protocol：表示将客户端相关信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 参数的取值包括： ● close：表示关闭代理协议。 ● toa_open：表示开启代理协议“tcp_toa”。 ● proxy_open：表示开启代理协议“proxy_protocol”。 ● open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 默认值为“close”。
+	// 用于控制是否将客户端的源IP、源端口、marker_id等信息携带到服务端。 信息携带支持两种方式： ● TCP TOA：表示将客户端信息插入到tcp，option字段中携带至服务端。 说明 仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。 ● Proxy Protocol：表示将客户端相关信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 参数的取值包括： ● close：表示关闭代理协议。 ● toa_open：表示开启代理协议“tcp_toa”。 ● proxy_open：表示开启代理协议“proxy_protocol”。 ● open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 ● proxy_vni: 关闭toa，开启proxy和vni。 默认值为“close”。
 	TcpProxy *ServiceListTcpProxy `json:"tcp_proxy,omitempty"`
 
 	// 提交任务异常时返回的异常信息
@@ -70,6 +70,9 @@ type ServiceList struct {
 
 	// 终端节点服务对应Pool的Public Border Group信息
 	PublicBorderGroup *string `json:"public_border_group,omitempty"`
+
+	// 是否开启终端节点策略。 ● false：不支持设置终端节点策略 ● true：支持设置终端节点策略 默认为false
+	EnablePolicy *bool `json:"enable_policy,omitempty"`
 }
 
 func (o ServiceList) String() string {
@@ -182,6 +185,7 @@ type ServiceListTcpProxyEnum struct {
 	TOA_OPEN   ServiceListTcpProxy
 	PROXY_OPEN ServiceListTcpProxy
 	OPEN       ServiceListTcpProxy
+	PROXY_VNI  ServiceListTcpProxy
 }
 
 func GetServiceListTcpProxyEnum() ServiceListTcpProxyEnum {
@@ -197,6 +201,9 @@ func GetServiceListTcpProxyEnum() ServiceListTcpProxyEnum {
 		},
 		OPEN: ServiceListTcpProxy{
 			value: "open",
+		},
+		PROXY_VNI: ServiceListTcpProxy{
+			value: "proxy_vni",
 		},
 	}
 }

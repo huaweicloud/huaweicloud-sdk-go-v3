@@ -32,22 +32,14 @@ type UserGroupPermsPerm struct {
 }
 
 type UserGroupPermsPermEnum struct {
-	PUB     UserGroupPermsPerm
-	SUB     UserGroupPermsPerm
-	PUB_SUB UserGroupPermsPerm
-	DENY    UserGroupPermsPerm
+	SUB  UserGroupPermsPerm
+	DENY UserGroupPermsPerm
 }
 
 func GetUserGroupPermsPermEnum() UserGroupPermsPermEnum {
 	return UserGroupPermsPermEnum{
-		PUB: UserGroupPermsPerm{
-			value: "PUB",
-		},
 		SUB: UserGroupPermsPerm{
 			value: "SUB",
-		},
-		PUB_SUB: UserGroupPermsPerm{
-			value: "PUB|SUB",
 		},
 		DENY: UserGroupPermsPerm{
 			value: "DENY",

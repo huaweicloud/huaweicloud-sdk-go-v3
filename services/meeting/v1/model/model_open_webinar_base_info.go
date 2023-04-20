@@ -70,6 +70,8 @@ type OpenWebinarBaseInfo struct {
 
 	// 观众入会密码。
 	AudiencePasswd *string `json:"audiencePasswd,omitempty"`
+
+	EnableRecording *YesNoEnum `json:"enableRecording,omitempty"`
 }
 
 func (o OpenWebinarBaseInfo) String() string {

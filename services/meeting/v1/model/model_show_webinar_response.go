@@ -71,6 +71,8 @@ type ShowWebinarResponse struct {
 	// 观众入会密码。
 	AudiencePasswd *string `json:"audiencePasswd,omitempty"`
 
+	EnableRecording *YesNoEnum `json:"enableRecording,omitempty"`
+
 	NotifySetting *OpenNotifySetting `json:"notifySetting,omitempty"`
 
 	// 与会嘉宾名称列表。

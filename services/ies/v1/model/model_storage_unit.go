@@ -10,7 +10,7 @@ import (
 type StorageUnit struct {
 	StorageType *StorageType `json:"storage_type"`
 
-	// 存储池大小，单位：TB/PB（视图存储中容量、视图存储大容量）。
+	// 存储池大小，单位：TB。
 	Capacity int32 `json:"capacity"`
 
 	// 存储池销售档位

@@ -50,6 +50,8 @@ type JobInfo struct {
 
 	// 是否新框架
 	NodeNewFramework bool `json:"node_newFramework"`
+
+	JobAction *JobActionResp `json:"job_action,omitempty"`
 }
 
 func (o JobInfo) String() string {

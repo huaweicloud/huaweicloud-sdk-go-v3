@@ -147,6 +147,251 @@ func (c *CbsClient) DeleteSessionInvoker(request *model.DeleteSessionRequest) *D
 	return &DeleteSessionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ExecuteComposeVideo 合成视频(按包周期收费)
+//
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbsClient) ExecuteComposeVideo(request *model.ExecuteComposeVideoRequest) (*model.ExecuteComposeVideoResponse, error) {
+	requestDef := GenReqDefForExecuteComposeVideo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteComposeVideoResponse), nil
+	}
+}
+
+// ExecuteComposeVideoInvoker 合成视频(按包周期收费)
+func (c *CbsClient) ExecuteComposeVideoInvoker(request *model.ExecuteComposeVideoRequest) *ExecuteComposeVideoInvoker {
+	requestDef := GenReqDefForExecuteComposeVideo()
+	return &ExecuteComposeVideoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExecuteComposeVideoOndemand 合成视频(按需收费)
+//
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbsClient) ExecuteComposeVideoOndemand(request *model.ExecuteComposeVideoOndemandRequest) (*model.ExecuteComposeVideoOndemandResponse, error) {
+	requestDef := GenReqDefForExecuteComposeVideoOndemand()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteComposeVideoOndemandResponse), nil
+	}
+}
+
+// ExecuteComposeVideoOndemandInvoker 合成视频(按需收费)
+func (c *CbsClient) ExecuteComposeVideoOndemandInvoker(request *model.ExecuteComposeVideoOndemandRequest) *ExecuteComposeVideoOndemandInvoker {
+	requestDef := GenReqDefForExecuteComposeVideoOndemand()
+	return &ExecuteComposeVideoOndemandInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExecuteCreateVideo 创建视频
+//
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbsClient) ExecuteCreateVideo(request *model.ExecuteCreateVideoRequest) (*model.ExecuteCreateVideoResponse, error) {
+	requestDef := GenReqDefForExecuteCreateVideo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteCreateVideoResponse), nil
+	}
+}
+
+// ExecuteCreateVideoInvoker 创建视频
+func (c *CbsClient) ExecuteCreateVideoInvoker(request *model.ExecuteCreateVideoRequest) *ExecuteCreateVideoInvoker {
+	requestDef := GenReqDefForExecuteCreateVideo()
+	return &ExecuteCreateVideoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExecuteDeleteVideoById 删除视频
+//
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbsClient) ExecuteDeleteVideoById(request *model.ExecuteDeleteVideoByIdRequest) (*model.ExecuteDeleteVideoByIdResponse, error) {
+	requestDef := GenReqDefForExecuteDeleteVideoById()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteDeleteVideoByIdResponse), nil
+	}
+}
+
+// ExecuteDeleteVideoByIdInvoker 删除视频
+func (c *CbsClient) ExecuteDeleteVideoByIdInvoker(request *model.ExecuteDeleteVideoByIdRequest) *ExecuteDeleteVideoByIdInvoker {
+	requestDef := GenReqDefForExecuteDeleteVideoById()
+	return &ExecuteDeleteVideoByIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExecuteDeleteimageById 删除图片
+//
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbsClient) ExecuteDeleteimageById(request *model.ExecuteDeleteimageByIdRequest) (*model.ExecuteDeleteimageByIdResponse, error) {
+	requestDef := GenReqDefForExecuteDeleteimageById()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteDeleteimageByIdResponse), nil
+	}
+}
+
+// ExecuteDeleteimageByIdInvoker 删除图片
+func (c *CbsClient) ExecuteDeleteimageByIdInvoker(request *model.ExecuteDeleteimageByIdRequest) *ExecuteDeleteimageByIdInvoker {
+	requestDef := GenReqDefForExecuteDeleteimageById()
+	return &ExecuteDeleteimageByIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExecuteGetCharacterInfoById 获取形象详情
+//
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbsClient) ExecuteGetCharacterInfoById(request *model.ExecuteGetCharacterInfoByIdRequest) (*model.ExecuteGetCharacterInfoByIdResponse, error) {
+	requestDef := GenReqDefForExecuteGetCharacterInfoById()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteGetCharacterInfoByIdResponse), nil
+	}
+}
+
+// ExecuteGetCharacterInfoByIdInvoker 获取形象详情
+func (c *CbsClient) ExecuteGetCharacterInfoByIdInvoker(request *model.ExecuteGetCharacterInfoByIdRequest) *ExecuteGetCharacterInfoByIdInvoker {
+	requestDef := GenReqDefForExecuteGetCharacterInfoById()
+	return &ExecuteGetCharacterInfoByIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExecuteGetCharacters 获取形象列表
+//
+// TODO:
+//
+// 本期不做形象进度
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbsClient) ExecuteGetCharacters(request *model.ExecuteGetCharactersRequest) (*model.ExecuteGetCharactersResponse, error) {
+	requestDef := GenReqDefForExecuteGetCharacters()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteGetCharactersResponse), nil
+	}
+}
+
+// ExecuteGetCharactersInvoker 获取形象列表
+func (c *CbsClient) ExecuteGetCharactersInvoker(request *model.ExecuteGetCharactersRequest) *ExecuteGetCharactersInvoker {
+	requestDef := GenReqDefForExecuteGetCharacters()
+	return &ExecuteGetCharactersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExecuteGetFramsListByImagesId 获取播报框
+//
+// 获取指定图片可用的播报框列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbsClient) ExecuteGetFramsListByImagesId(request *model.ExecuteGetFramsListByImagesIdRequest) (*model.ExecuteGetFramsListByImagesIdResponse, error) {
+	requestDef := GenReqDefForExecuteGetFramsListByImagesId()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteGetFramsListByImagesIdResponse), nil
+	}
+}
+
+// ExecuteGetFramsListByImagesIdInvoker 获取播报框
+func (c *CbsClient) ExecuteGetFramsListByImagesIdInvoker(request *model.ExecuteGetFramsListByImagesIdRequest) *ExecuteGetFramsListByImagesIdInvoker {
+	requestDef := GenReqDefForExecuteGetFramsListByImagesId()
+	return &ExecuteGetFramsListByImagesIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExecuteGetImagesList 获取图片列表
+//
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbsClient) ExecuteGetImagesList(request *model.ExecuteGetImagesListRequest) (*model.ExecuteGetImagesListResponse, error) {
+	requestDef := GenReqDefForExecuteGetImagesList()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteGetImagesListResponse), nil
+	}
+}
+
+// ExecuteGetImagesListInvoker 获取图片列表
+func (c *CbsClient) ExecuteGetImagesListInvoker(request *model.ExecuteGetImagesListRequest) *ExecuteGetImagesListInvoker {
+	requestDef := GenReqDefForExecuteGetImagesList()
+	return &ExecuteGetImagesListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExecuteGetVideoInfoById 获取视频详情
+//
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbsClient) ExecuteGetVideoInfoById(request *model.ExecuteGetVideoInfoByIdRequest) (*model.ExecuteGetVideoInfoByIdResponse, error) {
+	requestDef := GenReqDefForExecuteGetVideoInfoById()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteGetVideoInfoByIdResponse), nil
+	}
+}
+
+// ExecuteGetVideoInfoByIdInvoker 获取视频详情
+func (c *CbsClient) ExecuteGetVideoInfoByIdInvoker(request *model.ExecuteGetVideoInfoByIdRequest) *ExecuteGetVideoInfoByIdInvoker {
+	requestDef := GenReqDefForExecuteGetVideoInfoById()
+	return &ExecuteGetVideoInfoByIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExecuteGetVideosList 获取视频列表
+//
+// 该接口用于获取视频列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbsClient) ExecuteGetVideosList(request *model.ExecuteGetVideosListRequest) (*model.ExecuteGetVideosListResponse, error) {
+	requestDef := GenReqDefForExecuteGetVideosList()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteGetVideosListResponse), nil
+	}
+}
+
+// ExecuteGetVideosListInvoker 获取视频列表
+func (c *CbsClient) ExecuteGetVideosListInvoker(request *model.ExecuteGetVideosListRequest) *ExecuteGetVideosListInvoker {
+	requestDef := GenReqDefForExecuteGetVideosList()
+	return &ExecuteGetVideosListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExecutePostCreateImages 创建图片
+//
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbsClient) ExecutePostCreateImages(request *model.ExecutePostCreateImagesRequest) (*model.ExecutePostCreateImagesResponse, error) {
+	requestDef := GenReqDefForExecutePostCreateImages()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecutePostCreateImagesResponse), nil
+	}
+}
+
+// ExecutePostCreateImagesInvoker 创建图片
+func (c *CbsClient) ExecutePostCreateImagesInvoker(request *model.ExecutePostCreateImagesRequest) *ExecutePostCreateImagesInvoker {
+	requestDef := GenReqDefForExecutePostCreateImages()
+	return &ExecutePostCreateImagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ExecuteQaChat 问答机器人会话
 //
 // 用户调用该接口和机器人进行聊天。
@@ -187,6 +432,112 @@ func (c *CbsClient) ExecuteSession(request *model.ExecuteSessionRequest) (*model
 func (c *CbsClient) ExecuteSessionInvoker(request *model.ExecuteSessionRequest) *ExecuteSessionInvoker {
 	requestDef := GenReqDefForExecuteSession()
 	return &ExecuteSessionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExecuteUpdateImageName 修改图片名
+//
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbsClient) ExecuteUpdateImageName(request *model.ExecuteUpdateImageNameRequest) (*model.ExecuteUpdateImageNameResponse, error) {
+	requestDef := GenReqDefForExecuteUpdateImageName()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteUpdateImageNameResponse), nil
+	}
+}
+
+// ExecuteUpdateImageNameInvoker 修改图片名
+func (c *CbsClient) ExecuteUpdateImageNameInvoker(request *model.ExecuteUpdateImageNameRequest) *ExecuteUpdateImageNameInvoker {
+	requestDef := GenReqDefForExecuteUpdateImageName()
+	return &ExecuteUpdateImageNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExecuteUpdateVideoById 更新视频名
+//
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbsClient) ExecuteUpdateVideoById(request *model.ExecuteUpdateVideoByIdRequest) (*model.ExecuteUpdateVideoByIdResponse, error) {
+	requestDef := GenReqDefForExecuteUpdateVideoById()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteUpdateVideoByIdResponse), nil
+	}
+}
+
+// ExecuteUpdateVideoByIdInvoker 更新视频名
+func (c *CbsClient) ExecuteUpdateVideoByIdInvoker(request *model.ExecuteUpdateVideoByIdRequest) *ExecuteUpdateVideoByIdInvoker {
+	requestDef := GenReqDefForExecuteUpdateVideoById()
+	return &ExecuteUpdateVideoByIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExecuteUpdateVideoInfoById 配置视频
+//
+// 通过该接口配置视频
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbsClient) ExecuteUpdateVideoInfoById(request *model.ExecuteUpdateVideoInfoByIdRequest) (*model.ExecuteUpdateVideoInfoByIdResponse, error) {
+	requestDef := GenReqDefForExecuteUpdateVideoInfoById()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteUpdateVideoInfoByIdResponse), nil
+	}
+}
+
+// ExecuteUpdateVideoInfoByIdInvoker 配置视频
+func (c *CbsClient) ExecuteUpdateVideoInfoByIdInvoker(request *model.ExecuteUpdateVideoInfoByIdRequest) *ExecuteUpdateVideoInfoByIdInvoker {
+	requestDef := GenReqDefForExecuteUpdateVideoInfoById()
+	return &ExecuteUpdateVideoInfoByIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExecuteUploadImage 上传播报插图
+//
+// 上传图片并生成图片链接，图片需小于10m；
+// 同一个视频同时最多支持50张插图。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbsClient) ExecuteUploadImage(request *model.ExecuteUploadImageRequest) (*model.ExecuteUploadImageResponse, error) {
+	requestDef := GenReqDefForExecuteUploadImage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteUploadImageResponse), nil
+	}
+}
+
+// ExecuteUploadImageInvoker 上传播报插图
+func (c *CbsClient) ExecuteUploadImageInvoker(request *model.ExecuteUploadImageRequest) *ExecuteUploadImageInvoker {
+	requestDef := GenReqDefForExecuteUploadImage()
+	return &ExecuteUploadImageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExecuteUploadPpt 通过pdf上传多张插图
+//
+// 当前仅支持上传PDF，如有PPT请将PPT转化为PDF再进行上传，文件需小于10m；
+// 该接口会将pdf每一页转换图片，并生成链接；
+// 同一个视频同时最多支持50张插图。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbsClient) ExecuteUploadPpt(request *model.ExecuteUploadPptRequest) (*model.ExecuteUploadPptResponse, error) {
+	requestDef := GenReqDefForExecuteUploadPpt()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteUploadPptResponse), nil
+	}
+}
+
+// ExecuteUploadPptInvoker 通过pdf上传多张插图
+func (c *CbsClient) ExecuteUploadPptInvoker(request *model.ExecuteUploadPptRequest) *ExecuteUploadPptInvoker {
+	requestDef := GenReqDefForExecuteUploadPpt()
+	return &ExecuteUploadPptInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListSuggestions 获取问题提示

@@ -50,6 +50,8 @@ type ChildrenJobInfo struct {
 
 	// 迁移模式
 	TaskType ChildrenJobInfoTaskType `json:"task_type"`
+
+	JobAction *JobActionResp `json:"job_action,omitempty"`
 }
 
 func (o ChildrenJobInfo) String() string {

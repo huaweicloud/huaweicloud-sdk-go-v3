@@ -21,7 +21,7 @@ type SearchCorpExternalDirRequest struct {
 	// 查询数量。 默认值：10。
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 搜索条件。支持帐号、SIP号码、名称、手机、邮箱模糊搜索。
+	// 搜索条件。支持名称、手机、邮箱模糊搜索。
 	SearchKey *string `json:"searchKey,omitempty"`
 
 	// 搜索范围。默认值为ALL。 * PERSONAL - 查询个人外部联系人 * CORP - 查询企业外部联系人 * ALL - 查询所有外部联系人

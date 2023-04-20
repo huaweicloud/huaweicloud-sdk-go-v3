@@ -13,6 +13,8 @@ import (
 type ShowJobResponse struct {
 	Name *string `json:"name,omitempty"`
 
+	Id *int32 `json:"id,omitempty"`
+
 	Nodes *[]Node `json:"nodes,omitempty"`
 
 	Schedule *Schedule `json:"schedule,omitempty"`
@@ -22,6 +24,8 @@ type ShowJobResponse struct {
 	Directory *string `json:"directory,omitempty"`
 
 	JobType *ShowJobResponseJobType `json:"jobType,omitempty"`
+
+	LastUpdateUser *string `json:"lastUpdateUser,omitempty"`
 
 	BasicConfig    *BasicInfo `json:"basicConfig,omitempty"`
 	HttpStatusCode int        `json:"-"`

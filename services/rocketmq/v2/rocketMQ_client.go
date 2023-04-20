@@ -460,6 +460,27 @@ func (c *RocketMQClient) ResetConsumeOffsetInvoker(request *model.ResetConsumeOf
 	return &ResetConsumeOffsetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowConsumerConnections 查询消费者列表
+//
+// 查询消费组内消费者列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RocketMQClient) ShowConsumerConnections(request *model.ShowConsumerConnectionsRequest) (*model.ShowConsumerConnectionsResponse, error) {
+	requestDef := GenReqDefForShowConsumerConnections()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowConsumerConnectionsResponse), nil
+	}
+}
+
+// ShowConsumerConnectionsInvoker 查询消费者列表
+func (c *RocketMQClient) ShowConsumerConnectionsInvoker(request *model.ShowConsumerConnectionsRequest) *ShowConsumerConnectionsInvoker {
+	requestDef := GenReqDefForShowConsumerConnections()
+	return &ShowConsumerConnectionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowConsumerListOrDetails 查询消费列表或详情
 //
 // 查询消费列表或详情。

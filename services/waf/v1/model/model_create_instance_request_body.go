@@ -42,8 +42,8 @@ type CreateInstanceRequestBody struct {
 	// 申请的独享引擎数量
 	Count int32 `json:"count"`
 
-	// 是否为资源租户类   - true: 资源租户类   - false: 普通租户类
-	ResTenant bool `json:"res_tenant"`
+	// 是否为资源租户类，默认值为false。   - true: 资源租户类   - false: 普通租户类
+	ResTenant *bool `json:"res_tenant,omitempty"`
 }
 
 func (o CreateInstanceRequestBody) String() string {

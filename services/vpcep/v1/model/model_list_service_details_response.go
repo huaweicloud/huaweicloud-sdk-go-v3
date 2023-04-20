@@ -15,7 +15,7 @@ type ListServiceDetailsResponse struct {
 	// 终端节点服务的ID，唯一标识。
 	Id *string `json:"id,omitempty"`
 
-	// 标识终端节点服务后端资源的ID， 格式为通用唯一识别码（Universally Unique Identifier，下文简称UUID）。取值为： ● LB类型：增强型负载均衡器内网IP对应的端口ID。 ● VM类型：弹性云服务器IP地址对应的网卡ID。 ● VIP类型：虚拟资源所在物理服务器对应的网卡ID。
+	// 标识终端节点服务后端资源的ID， 格式为通用唯一识别码（Universally Unique Identifier，下文简称UUID）。取值为： ● LB类型：负载均衡器内网IP对应的端口ID。 ● VM类型：弹性云服务器IP地址对应的网卡ID。 ● VIP类型：虚拟资源所在物理服务器对应的网卡ID。（该字段已废弃，请优先使用LB类型）
 	PortId *string `json:"port_id,omitempty"`
 
 	// 虚拟IP的网卡ID。 仅当“port_id”为“VIP类型”时，返回该参数。
@@ -54,7 +54,7 @@ type ListServiceDetailsResponse struct {
 	// 服务开放的端口映射列表，详细内容请参见表4-17 同一个终端节点服务下，不允许重复的端口映射。若多个终端节点服务共用一个port_id，则 终端节点服务之间的所有端口映射的server_port和protocol的组合不能重复。
 	Ports *[]PortList `json:"ports,omitempty"`
 
-	// 用于控制是否将客户端的源IP、源端口、marker_id等信息携带到服务端。 信息携带支持两种方式： ● TCP TOA：表示将客户端信息插入到tcpoption字段中携带至服务端。 说明 仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。 ● Proxy Protocol：表示将客户端相关信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 参数的取值包括： ● close：表示关闭代理协议。 ● toa_open：表示开启代理协议“tcp_toa”。 ● proxy_open：表示开启代理协议“proxy_protocol”。 ● open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 默认值为“close”。
+	// 用于控制是否将客户端的源IP、源端口、marker_id等信息携带到服务端。 信息携带支持两种方式： ● TCP TOA：表示将客户端信息插入到tcpoption字段中携带至服务端。 说明 仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。 ● Proxy Protocol：表示将客户端相关信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 参数的取值包括： ● close：表示关闭代理协议。 ● toa_open：表示开启代理协议“tcp_toa”。 ● proxy_open：表示开启代理协议“proxy_protocol”。 ● open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 ● proxy_vni: 关闭toa，开启proxy和vni。 默认值为“close”。
 	TcpProxy *ListServiceDetailsResponseTcpProxy `json:"tcp_proxy,omitempty"`
 
 	// 资源标签列表
@@ -62,6 +62,9 @@ type ListServiceDetailsResponse struct {
 
 	// 提交任务异常时返回的异常信息
 	Error *[]Error `json:"error,omitempty"`
+
+	// 是否开启终端节点策略。 ● false：不支持设置终端节点策略 ● true：支持设置终端节点策略 默认为false
+	EnablePolicy *bool `json:"enable_policy,omitempty"`
 
 	// 描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
 	Description    *string `json:"description,omitempty"`
@@ -220,6 +223,7 @@ type ListServiceDetailsResponseTcpProxyEnum struct {
 	TOA_OPEN   ListServiceDetailsResponseTcpProxy
 	PROXY_OPEN ListServiceDetailsResponseTcpProxy
 	OPEN       ListServiceDetailsResponseTcpProxy
+	PROXY_VNI  ListServiceDetailsResponseTcpProxy
 }
 
 func GetListServiceDetailsResponseTcpProxyEnum() ListServiceDetailsResponseTcpProxyEnum {
@@ -235,6 +239,9 @@ func GetListServiceDetailsResponseTcpProxyEnum() ListServiceDetailsResponseTcpPr
 		},
 		OPEN: ListServiceDetailsResponseTcpProxy{
 			value: "open",
+		},
+		PROXY_VNI: ListServiceDetailsResponseTcpProxy{
+			value: "proxy_vni",
 		},
 	}
 }

@@ -523,9 +523,9 @@ func (c *RamClient) BatchDeleteResourceShareTagsInvoker(request *model.BatchDele
 	return &BatchDeleteResourceShareTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListResourceShareTags 查询已经使用的标签列表
+// ListResourceShareTags 查询已使用的标签列表
 //
-// 查询的标签相信列表。
+// 查询资源共享实例已使用标签的列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *RamClient) ListResourceShareTags(request *model.ListResourceShareTagsRequest) (*model.ListResourceShareTagsResponse, error) {
@@ -538,7 +538,7 @@ func (c *RamClient) ListResourceShareTags(request *model.ListResourceShareTagsRe
 	}
 }
 
-// ListResourceShareTagsInvoker 查询已经使用的标签列表
+// ListResourceShareTagsInvoker 查询已使用的标签列表
 func (c *RamClient) ListResourceShareTagsInvoker(request *model.ListResourceShareTagsRequest) *ListResourceShareTagsInvoker {
 	requestDef := GenReqDefForListResourceShareTags()
 	return &ListResourceShareTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -546,7 +546,7 @@ func (c *RamClient) ListResourceShareTagsInvoker(request *model.ListResourceShar
 
 // ListResourceSharesByTags 根据标签信息查询实例列表
 //
-// 根据标签信息查询实例列表。
+// 根据标签信息查询资源共享实例列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *RamClient) ListResourceSharesByTags(request *model.ListResourceSharesByTagsRequest) (*model.ListResourceSharesByTagsResponse, error) {
@@ -567,7 +567,7 @@ func (c *RamClient) ListResourceSharesByTagsInvoker(request *model.ListResourceS
 
 // SearchResourceShareCountByTags 根据标签信息查询实例数量
 //
-// 根据标签信息查询实例数量。
+// 根据标签信息查询资源共享实例数量。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *RamClient) SearchResourceShareCountByTags(request *model.SearchResourceShareCountByTagsRequest) (*model.SearchResourceShareCountByTagsResponse, error) {

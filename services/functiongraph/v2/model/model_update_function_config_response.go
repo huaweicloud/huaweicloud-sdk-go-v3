@@ -41,6 +41,9 @@ type UpdateFunctionConfigResponse struct {
 	// 函数消耗的内存。 单位M。 取值范围为：128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096。 最小值为128，最大值为4096。
 	MemorySize *int32 `json:"memory_size,omitempty"`
 
+	// 函数消耗的显存，只支持自定义运行时与自定义镜像函数配置GPU。 单位MB。 取值范围为：1024、2048、3072、4096、5120、6144、7168、8192、9216、10240、11264、12288、13312、14336、15360、16384。 最小值为1024，最大值为16384。
+	GpuMemory *int32 `json:"gpu_memory,omitempty"`
+
 	// 函数占用的cpu资源。 单位为millicore（1 core=1000 millicores）。 取值与MemorySize成比例，默认是128M内存占0.1个核（100 millicores）。 函数占用的CPU为基础CPU：200 millicores，再加上内存按比例占用的CPU，计算方法：内存/128 *100 + 200。
 	Cpu *int32 `json:"cpu,omitempty"`
 
@@ -82,6 +85,9 @@ type UpdateFunctionConfigResponse struct {
 
 	// 函数最后一次更新时间。
 	LastModified *sdktime.SdkTime `json:"last_modified,omitempty"`
+
+	// 临时存储大小。
+	EphemeralStorage *int32 `json:"ephemeral_storage,omitempty"`
 
 	FuncVpc *FuncVpc `json:"func_vpc,omitempty"`
 

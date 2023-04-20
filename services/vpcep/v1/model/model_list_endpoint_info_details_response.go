@@ -82,7 +82,13 @@ type ListEndpointInfoDetailsResponse struct {
 
 	// 只涉及开启双端固定的网关型终端节点，响应体展示此字段
 	PolicyStatement *[]string `json:"policy_statement,omitempty"`
-	HttpStatusCode  int       `json:"-"`
+
+	// 待废弃，实例相关联的集群ID
+	EndpointPoolId *string `json:"endpoint_pool_id,omitempty"`
+
+	// 终端节点对应Pool的Public Border Group信息
+	PublicBorderGroup *string `json:"public_border_group,omitempty"`
+	HttpStatusCode    int     `json:"-"`
 }
 
 func (o ListEndpointInfoDetailsResponse) String() string {

@@ -14,6 +14,12 @@ type ThailandIdcardConfidence struct {
 	// 泰文名字置信度。
 	NameTh *float32 `json:"name_th,omitempty"`
 
+	// 英文名置信度。
+	NameEn *float32 `json:"name_en,omitempty"`
+
+	// 参考编码置信度。
+	RefNumber *float32 `json:"ref_number,omitempty"`
+
 	// 英文名字置信度。
 	FirstNameEn *float32 `json:"first_name_en,omitempty"`
 

@@ -71,6 +71,8 @@ type CreateWebinarResponse struct {
 	// 观众入会密码。
 	AudiencePasswd *string `json:"audiencePasswd,omitempty"`
 
+	EnableRecording *YesNoEnum `json:"enableRecording,omitempty"`
+
 	// 与会嘉宾名称列表。
 	Attendees      *[]string `json:"attendees,omitempty"`
 	HttpStatusCode int       `json:"-"`

@@ -25,8 +25,11 @@ type ListServiceDescribeDetailsResponse struct {
 	CreatedAt *string `json:"created_at,omitempty"`
 
 	// 连接该终端节点服务的终端节点是否计费。 ● true：计费 ● false：不计费
-	IsCharge       *bool `json:"is_charge,omitempty"`
-	HttpStatusCode int   `json:"-"`
+	IsCharge *bool `json:"is_charge,omitempty"`
+
+	// 终端节点对应Pool的Public Border Group信息
+	PublicBorderGroup *string `json:"public_border_group,omitempty"`
+	HttpStatusCode    int     `json:"-"`
 }
 
 func (o ListServiceDescribeDetailsResponse) String() string {

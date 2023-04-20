@@ -17,30 +17,6 @@ func (i *CreateImageHighresolutionMattingTaskInvoker) Invoke() (*model.CreateIma
 	}
 }
 
-type CreateImageTranslateTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateImageTranslateTaskInvoker) Invoke() (*model.CreateImageTranslateTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateImageTranslateTaskResponse), nil
-	}
-}
-
-type CreateVideoCoverAnalysisTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateVideoCoverAnalysisTaskInvoker) Invoke() (*model.CreateVideoCoverAnalysisTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateVideoCoverAnalysisTaskResponse), nil
-	}
-}
-
 type CreateVideoObjectMaskingTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -50,42 +26,6 @@ func (i *CreateVideoObjectMaskingTaskInvoker) Invoke() (*model.CreateVideoObject
 		return nil, err
 	} else {
 		return result.(*model.CreateVideoObjectMaskingTaskResponse), nil
-	}
-}
-
-type CreateVideoShotSplitTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateVideoShotSplitTaskInvoker) Invoke() (*model.CreateVideoShotSplitTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateVideoShotSplitTaskResponse), nil
-	}
-}
-
-type CreateVideoSummarizationAnalysisTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateVideoSummarizationAnalysisTaskInvoker) Invoke() (*model.CreateVideoSummarizationAnalysisTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateVideoSummarizationAnalysisTaskResponse), nil
-	}
-}
-
-type CreateVideoTranslateTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateVideoTranslateTaskInvoker) Invoke() (*model.CreateVideoTranslateTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateVideoTranslateTaskResponse), nil
 	}
 }
 
@@ -221,30 +161,6 @@ func (i *ShowImageHighresolutionMattingTaskInvoker) Invoke() (*model.ShowImageHi
 	}
 }
 
-type ShowImageTranslateTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowImageTranslateTaskInvoker) Invoke() (*model.ShowImageTranslateTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowImageTranslateTaskResponse), nil
-	}
-}
-
-type ShowVideoCoverAnalysisTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowVideoCoverAnalysisTaskInvoker) Invoke() (*model.ShowVideoCoverAnalysisTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowVideoCoverAnalysisTaskResponse), nil
-	}
-}
-
 type ShowVideoObjectMaskingTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -254,41 +170,5 @@ func (i *ShowVideoObjectMaskingTaskInvoker) Invoke() (*model.ShowVideoObjectMask
 		return nil, err
 	} else {
 		return result.(*model.ShowVideoObjectMaskingTaskResponse), nil
-	}
-}
-
-type ShowVideoShotSplitTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowVideoShotSplitTaskInvoker) Invoke() (*model.ShowVideoShotSplitTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowVideoShotSplitTaskResponse), nil
-	}
-}
-
-type ShowVideoSummarizationAnalysisTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowVideoSummarizationAnalysisTaskInvoker) Invoke() (*model.ShowVideoSummarizationAnalysisTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowVideoSummarizationAnalysisTaskResponse), nil
-	}
-}
-
-type ShowVideoTranslateTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowVideoTranslateTaskInvoker) Invoke() (*model.ShowVideoTranslateTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowVideoTranslateTaskResponse), nil
 	}
 }

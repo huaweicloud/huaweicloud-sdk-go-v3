@@ -209,6 +209,18 @@ func (i *UploadBatchTaskFileInvoker) Invoke() (*model.UploadBatchTaskFileRespons
 	}
 }
 
+type BroadcastMessageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BroadcastMessageInvoker) Invoke() (*model.BroadcastMessageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BroadcastMessageResponse), nil
+	}
+}
+
 type AddCertificateInvoker struct {
 	*invoker.BaseInvoker
 }

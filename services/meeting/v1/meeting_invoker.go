@@ -257,6 +257,18 @@ func (i *BatchHandInvoker) Invoke() (*model.BatchHandResponse, error) {
 	}
 }
 
+type BatchShowUserDetailsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchShowUserDetailsInvoker) Invoke() (*model.BatchShowUserDetailsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchShowUserDetailsResponse), nil
+	}
+}
+
 type BatchUpdateDevicesStatusInvoker struct {
 	*invoker.BaseInvoker
 }

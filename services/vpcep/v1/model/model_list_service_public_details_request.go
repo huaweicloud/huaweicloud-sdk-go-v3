@@ -13,7 +13,7 @@ import (
 type ListServicePublicDetailsRequest struct {
 
 	// 发送的实体的MIME类型。推荐用户默认使用application/json， 如果API是对象、镜像上传等接口，媒体类型可按照流类型的不同进行确定。
-	ContentType string `json:"Content-Type"`
+	ContentType *string `json:"Content-Type,omitempty"`
 
 	// 查询返回公共的终端节点服务数量限制，即每页返回的个数。 取值范围：0~1000，取值一般为10，20或者50，默认为10。
 	Limit *int32 `json:"limit,omitempty"`

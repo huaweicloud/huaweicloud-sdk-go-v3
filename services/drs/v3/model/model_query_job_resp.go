@@ -165,6 +165,9 @@ type QueryJobResp struct {
 
 	// 已同步对象信息。
 	ObjectInfos *[]DatabaseObjectInfo `json:"object_infos,omitempty"`
+
+	// 初始任务方向。 取值： - up：入云，灾备场景时对应本云为备。 - down：出云，灾备场景时对应本云为主。 - non-dbs：自建。
+	OriginalJobDirection *QueryJobRespOriginalJobDirection `json:"original_job_direction,omitempty"`
 }
 
 func (o QueryJobResp) String() string {
@@ -589,6 +592,52 @@ func (c QueryJobRespSchemaType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *QueryJobRespSchemaType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type QueryJobRespOriginalJobDirection struct {
+	value string
+}
+
+type QueryJobRespOriginalJobDirectionEnum struct {
+	UP      QueryJobRespOriginalJobDirection
+	DOWN    QueryJobRespOriginalJobDirection
+	NON_DBS QueryJobRespOriginalJobDirection
+}
+
+func GetQueryJobRespOriginalJobDirectionEnum() QueryJobRespOriginalJobDirectionEnum {
+	return QueryJobRespOriginalJobDirectionEnum{
+		UP: QueryJobRespOriginalJobDirection{
+			value: "up",
+		},
+		DOWN: QueryJobRespOriginalJobDirection{
+			value: "down",
+		},
+		NON_DBS: QueryJobRespOriginalJobDirection{
+			value: "non-dbs",
+		},
+	}
+}
+
+func (c QueryJobRespOriginalJobDirection) Value() string {
+	return c.value
+}
+
+func (c QueryJobRespOriginalJobDirection) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *QueryJobRespOriginalJobDirection) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter != nil {
 		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))

@@ -27,8 +27,8 @@ type ScriptVersion struct {
 	// 租户从IAM申请到的projectid，一般为32位字符串
 	ProjectId *string `json:"project_id,omitempty"`
 
-	// 脚本引用次数，脚本被任务和模板引用的次数。默认是0次,引用次数未非负整数，不能出现负数
-	ReferenceNumber *int32 `json:"reference_number,omitempty"`
+	// 脚本版本的引用次数，脚本版本被作业引用的次数。默认是0次,引用次数为非负整数，不能出现负数
+	JobReferenceNumber *int32 `json:"job_reference_number,omitempty"`
 
 	// 脚本id，根据UUID.randomUUID生成。
 	ScriptId *string `json:"script_id,omitempty"`
@@ -51,8 +51,8 @@ type ScriptVersion struct {
 	// 脚本版本号，支持数字，下划线，大小写字母和小数点
 	VersionNumber *string `json:"version_number,omitempty"`
 
-	// 脚本引用详情
-	ScriptReference *[]ScriptReferenceDetail `json:"script_reference,omitempty"`
+	// 脚本引用的作业详情
+	JobReferenceName *[]ReferenceInfo `json:"job_reference_name,omitempty"`
 }
 
 func (o ScriptVersion) String() string {

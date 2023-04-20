@@ -65,7 +65,7 @@ func (c *VpcepClient) AddOrRemoveServicePermissionsInvoker(request *model.AddOrR
 	return &AddOrRemoveServicePermissionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// BatchAddEndpointServicePermissions 批量添加或移除终端节点服务的白名单
+// BatchAddEndpointServicePermissions 批量添加终端节点服务的白名单
 //
 // 功能介绍
 // 批量添加当前用户下终端节点服务的白名单，支持添加描述信息。
@@ -83,13 +83,13 @@ func (c *VpcepClient) BatchAddEndpointServicePermissions(request *model.BatchAdd
 	}
 }
 
-// BatchAddEndpointServicePermissionsInvoker 批量添加或移除终端节点服务的白名单
+// BatchAddEndpointServicePermissionsInvoker 批量添加终端节点服务的白名单
 func (c *VpcepClient) BatchAddEndpointServicePermissionsInvoker(request *model.BatchAddEndpointServicePermissionsRequest) *BatchAddEndpointServicePermissionsInvoker {
 	requestDef := GenReqDefForBatchAddEndpointServicePermissions()
 	return &BatchAddEndpointServicePermissionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// BatchRemoveEndpointServicePermissions 批量添加或移除终端节点服务的白名单
+// BatchRemoveEndpointServicePermissions 批量删除终端节点服务的白名单
 //
 // 功能介绍
 // 批量删除当前用户下终端节点服务的白名单
@@ -105,7 +105,7 @@ func (c *VpcepClient) BatchRemoveEndpointServicePermissions(request *model.Batch
 	}
 }
 
-// BatchRemoveEndpointServicePermissionsInvoker 批量添加或移除终端节点服务的白名单
+// BatchRemoveEndpointServicePermissionsInvoker 批量删除终端节点服务的白名单
 func (c *VpcepClient) BatchRemoveEndpointServicePermissionsInvoker(request *model.BatchRemoveEndpointServicePermissionsRequest) *BatchRemoveEndpointServicePermissionsInvoker {
 	requestDef := GenReqDefForBatchRemoveEndpointServicePermissions()
 	return &BatchRemoveEndpointServicePermissionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -181,7 +181,7 @@ func (c *VpcepClient) DeleteEndpointInvoker(request *model.DeleteEndpointRequest
 	return &DeleteEndpointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteEndpointPolicy 修改终端节点路由表
+// DeleteEndpointPolicy 删除网关型终端节点policy
 //
 // 功能介绍
 // 删除网关型终端节点policy。
@@ -197,7 +197,7 @@ func (c *VpcepClient) DeleteEndpointPolicy(request *model.DeleteEndpointPolicyRe
 	}
 }
 
-// DeleteEndpointPolicyInvoker 修改终端节点路由表
+// DeleteEndpointPolicyInvoker 删除网关型终端节点policy
 func (c *VpcepClient) DeleteEndpointPolicyInvoker(request *model.DeleteEndpointPolicyRequest) *DeleteEndpointPolicyInvoker {
 	requestDef := GenReqDefForDeleteEndpointPolicy()
 	return &DeleteEndpointPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -337,8 +337,7 @@ func (c *VpcepClient) ListServiceConnectionsInvoker(request *model.ListServiceCo
 
 // ListServiceDescribeDetails 查询终端节点服务概要
 //
-// 功能介绍
-// 查询终端节点服务的概要信息， 此接口是供创建终端节点的用户来查询需要连接的终端节点服务信息。 此接口既可以方便其他用户查询到您的终端节点服务概要信息, 又可以避免您的终端节点服务的细节信息暴露给其他用户。
+// 功能介绍查询终端节点服务的概要信息， 此接口是供创建终端节点的用户来查询需要连接的终端节点服务信息。 此接口既可以方便其他用户查询到您的终端节点服务概要信息, 又可以避免您的终端节点服务的细节信息暴露给其他用户。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcepClient) ListServiceDescribeDetails(request *model.ListServiceDescribeDetailsRequest) (*model.ListServiceDescribeDetailsResponse, error) {
@@ -492,7 +491,7 @@ func (c *VpcepClient) UpdateEndpointConnectionsDescInvoker(request *model.Update
 	return &UpdateEndpointConnectionsDescInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateEndpointPolicy 修改终端节点路由表
+// UpdateEndpointPolicy 修改网关型终端节点policy
 //
 // 功能介绍
 // 修改网关型终端节点policy。
@@ -508,16 +507,16 @@ func (c *VpcepClient) UpdateEndpointPolicy(request *model.UpdateEndpointPolicyRe
 	}
 }
 
-// UpdateEndpointPolicyInvoker 修改终端节点路由表
+// UpdateEndpointPolicyInvoker 修改网关型终端节点policy
 func (c *VpcepClient) UpdateEndpointPolicyInvoker(request *model.UpdateEndpointPolicyRequest) *UpdateEndpointPolicyInvoker {
 	requestDef := GenReqDefForUpdateEndpointPolicy()
 	return &UpdateEndpointPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateEndpointRoutetable 修改终端节点路由表
+// UpdateEndpointRoutetable 修改终端节点的路由表
 //
 // 功能介绍
-// 修改终端节点路由表。
+// 修改终端节点的路由表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcepClient) UpdateEndpointRoutetable(request *model.UpdateEndpointRoutetableRequest) (*model.UpdateEndpointRoutetableResponse, error) {
@@ -530,7 +529,7 @@ func (c *VpcepClient) UpdateEndpointRoutetable(request *model.UpdateEndpointRout
 	}
 }
 
-// UpdateEndpointRoutetableInvoker 修改终端节点路由表
+// UpdateEndpointRoutetableInvoker 修改终端节点的路由表
 func (c *VpcepClient) UpdateEndpointRoutetableInvoker(request *model.UpdateEndpointRoutetableRequest) *UpdateEndpointRoutetableInvoker {
 	requestDef := GenReqDefForUpdateEndpointRoutetable()
 	return &UpdateEndpointRoutetableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

@@ -462,6 +462,27 @@ func (c *MeetingClient) BatchHandInvoker(request *model.BatchHandRequest) *Batch
 	return &BatchHandInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchShowUserDetails 批量查询用户详情
+//
+// 批量查询用户详情，支持指定第三方账号查询详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MeetingClient) BatchShowUserDetails(request *model.BatchShowUserDetailsRequest) (*model.BatchShowUserDetailsResponse, error) {
+	requestDef := GenReqDefForBatchShowUserDetails()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchShowUserDetailsResponse), nil
+	}
+}
+
+// BatchShowUserDetailsInvoker 批量查询用户详情
+func (c *MeetingClient) BatchShowUserDetailsInvoker(request *model.BatchShowUserDetailsRequest) *BatchShowUserDetailsInvoker {
+	requestDef := GenReqDefForBatchShowUserDetails()
+	return &BatchShowUserDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchUpdateDevicesStatus 批量修改终端状态
 //
 // 企业管理员通过该接口批量修改专业会议终端状态。当硬终端资源到期后，若企业内对应资源的硬终端超过数量后会被系统随机自动停用，此时可通过该接口修改专业会议终端的状态。

@@ -78,7 +78,7 @@ type DeleteEndpointPolicyResponse struct {
 	// 只涉及开启双端固定的网关型终端节点，响应体展示此字段
 	PolicyStatement *[]PolicyStatement `json:"policy_statement,omitempty"`
 
-	// 终端节点相关联的Pood的ID
+	// 待废弃，实例相关联的集群ID
 	EndpointPoolId *string `json:"endpoint_pool_id,omitempty"`
 
 	// 终端节点关联的Public Border Group信息，只有当终端节点和边缘Pool相关联时才会返回改字段

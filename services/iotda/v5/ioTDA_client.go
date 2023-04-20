@@ -389,6 +389,29 @@ func (c *IoTDAClient) UploadBatchTaskFileInvoker(request *model.UploadBatchTaskF
 	return &UploadBatchTaskFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BroadcastMessage 下发广播消息
+//
+// 应用服务器可调用此接口向订阅了指定Topic的所有在线设备发布广播消息。应用将广播消息下发给平台后，平台会先返回应用响应结果，再将消息广播给设备。
+// 注意：
+// - 此接口只适用于使用MQTT协议接入的设备。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) BroadcastMessage(request *model.BroadcastMessageRequest) (*model.BroadcastMessageResponse, error) {
+	requestDef := GenReqDefForBroadcastMessage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BroadcastMessageResponse), nil
+	}
+}
+
+// BroadcastMessageInvoker 下发广播消息
+func (c *IoTDAClient) BroadcastMessageInvoker(request *model.BroadcastMessageRequest) *BroadcastMessageInvoker {
+	requestDef := GenReqDefForBroadcastMessage()
+	return &BroadcastMessageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // AddCertificate 上传设备CA证书
 //
 // 应用服务器可调用此接口在物联网平台上传设备CA证书

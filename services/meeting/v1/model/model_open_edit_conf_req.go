@@ -46,6 +46,8 @@ type OpenEditConfReq struct {
 
 	// 观众入会范围。 * 0: 所有用户 * 2: 企业内用户和被邀请用户
 	AudienceScope *int32 `json:"audienceScope,omitempty"`
+
+	EnableRecording *YesNoEnum `json:"enableRecording,omitempty"`
 }
 
 func (o OpenEditConfReq) String() string {

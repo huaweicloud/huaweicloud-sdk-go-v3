@@ -86,6 +86,9 @@ type ListSimCardsRequest struct {
 
 	// 订单批次号集合
 	OrderIds *[]int64 `json:"order_ids,omitempty"`
+
+	// 套餐id集合，最多支持传30个
+	PricePlanId *[]string `json:"price_plan_id,omitempty"`
 }
 
 func (o ListSimCardsRequest) String() string {

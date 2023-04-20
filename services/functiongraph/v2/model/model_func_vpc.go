@@ -26,6 +26,9 @@ type FuncVpc struct {
 
 	// 网关。
 	Gateway string `json:"gateway"`
+
+	// 安全组
+	SecurityGroups *[]string `json:"security_groups,omitempty"`
 }
 
 func (o FuncVpc) String() string {

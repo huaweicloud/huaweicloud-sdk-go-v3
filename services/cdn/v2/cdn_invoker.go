@@ -101,6 +101,18 @@ func (i *ShowDomainDetailByNameInvoker) Invoke() (*model.ShowDomainDetailByNameR
 	}
 }
 
+type ShowDomainFullConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDomainFullConfigInvoker) Invoke() (*model.ShowDomainFullConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDomainFullConfigResponse), nil
+	}
+}
+
 type ShowDomainLocationStatsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -146,5 +158,17 @@ func (i *ShowTopUrlInvoker) Invoke() (*model.ShowTopUrlResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowTopUrlResponse), nil
+	}
+}
+
+type UpdateDomainFullConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDomainFullConfigInvoker) Invoke() (*model.UpdateDomainFullConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDomainFullConfigResponse), nil
 	}
 }

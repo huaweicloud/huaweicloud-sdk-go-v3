@@ -25,6 +25,16 @@ type Configs struct {
 	// 回源协议（follow：协议跟随回源，http：HTTP回源(默认)，https：https回源）。
 	OriginProtocol *string `json:"origin_protocol,omitempty"`
 
+	// 回源跟随（on：开启，off：关闭）。
+	OriginFollow302Status *string `json:"origin_follow302_status,omitempty"`
+
+	// 缓存规则。
+	CacheRules *[]CacheRules `json:"cache_rules,omitempty"`
+
+	IpFilter *IpFilter `json:"ip_filter,omitempty"`
+
+	Referer *RefererConfig `json:"referer,omitempty"`
+
 	ForceRedirect *ForceRedirectConfig `json:"force_redirect,omitempty"`
 
 	Compress *Compress `json:"compress,omitempty"`

@@ -54,7 +54,7 @@ type CreateInstanceByEngineReq struct {
 	// 是否开启访问控制列表。
 	EnableAcl *bool `json:"enable_acl,omitempty"`
 
-	// 是否支持IPV6。   - true: 支持   - false：不支持
+	// 是否支持IPv6。   - true: 支持   - false：不支持
 	Ipv6Enable *bool `json:"ipv6_enable,omitempty"`
 
 	// 是否开启公网访问功能。默认不开启公网。 - true：开启 - false：不开启

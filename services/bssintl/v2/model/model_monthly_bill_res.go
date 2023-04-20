@@ -127,6 +127,12 @@ type MonthlyBillRes struct {
 
 	// 该字段为预留字段。
 	SubResourceName *string `json:"sub_resource_name,omitempty"`
+
+	// |参数名称：原订单ID| |参数的约束及描述：该参数非必填，且只允许字符串|
+	PreOrderId *string `json:"pre_order_id,omitempty"`
+
+	// |参数名称：可用区信息列表| |参数的约束及描述：该参数非必填，且只允许字符串|
+	AzCodeInfos *[]AzCodeInfo `json:"az_code_infos,omitempty"`
 }
 
 func (o MonthlyBillRes) String() string {

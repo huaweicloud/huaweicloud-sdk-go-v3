@@ -880,6 +880,27 @@ func (c *IoTEdgeClient) UpdateModuleInvoker(request *model.UpdateModuleRequest) 
 	return &UpdateModuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateModuleState 修改边缘模块状态
+//
+// 用户通过Console接口启停数采连接
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) UpdateModuleState(request *model.UpdateModuleStateRequest) (*model.UpdateModuleStateResponse, error) {
+	requestDef := GenReqDefForUpdateModuleState()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateModuleStateResponse), nil
+	}
+}
+
+// UpdateModuleStateInvoker 修改边缘模块状态
+func (c *IoTEdgeClient) UpdateModuleStateInvoker(request *model.UpdateModuleStateRequest) *UpdateModuleStateInvoker {
+	requestDef := GenReqDefForUpdateModuleState()
+	return &UpdateModuleStateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListRoutes 查询边缘路由列表
 //
 // 用户在指定边缘节点上查询边缘路由列表
@@ -920,6 +941,111 @@ func (c *IoTEdgeClient) UpdateRoutes(request *model.UpdateRoutesRequest) (*model
 func (c *IoTEdgeClient) UpdateRoutesInvoker(request *model.UpdateRoutesRequest) *UpdateRoutesInvoker {
 	requestDef := GenReqDefForUpdateRoutes()
 	return &UpdateRoutesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AddGeneralOtTemplate 导入标准数采模板
+//
+// 导入标准数采模板
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) AddGeneralOtTemplate(request *model.AddGeneralOtTemplateRequest) (*model.AddGeneralOtTemplateResponse, error) {
+	requestDef := GenReqDefForAddGeneralOtTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddGeneralOtTemplateResponse), nil
+	}
+}
+
+// AddGeneralOtTemplateInvoker 导入标准数采模板
+func (c *IoTEdgeClient) AddGeneralOtTemplateInvoker(request *model.AddGeneralOtTemplateRequest) *AddGeneralOtTemplateInvoker {
+	requestDef := GenReqDefForAddGeneralOtTemplate()
+	return &AddGeneralOtTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AddOtTemplates 添加数采模板
+//
+// 添加数采模板
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) AddOtTemplates(request *model.AddOtTemplatesRequest) (*model.AddOtTemplatesResponse, error) {
+	requestDef := GenReqDefForAddOtTemplates()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddOtTemplatesResponse), nil
+	}
+}
+
+// AddOtTemplatesInvoker 添加数采模板
+func (c *IoTEdgeClient) AddOtTemplatesInvoker(request *model.AddOtTemplatesRequest) *AddOtTemplatesInvoker {
+	requestDef := GenReqDefForAddOtTemplates()
+	return &AddOtTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchListOtTemplates 查询数采模板列表
+//
+// 查询数采模板列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) BatchListOtTemplates(request *model.BatchListOtTemplatesRequest) (*model.BatchListOtTemplatesResponse, error) {
+	requestDef := GenReqDefForBatchListOtTemplates()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchListOtTemplatesResponse), nil
+	}
+}
+
+// BatchListOtTemplatesInvoker 查询数采模板列表
+func (c *IoTEdgeClient) BatchListOtTemplatesInvoker(request *model.BatchListOtTemplatesRequest) *BatchListOtTemplatesInvoker {
+	requestDef := GenReqDefForBatchListOtTemplates()
+	return &BatchListOtTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteOtTemplate 删除数采模板
+//
+// 删除数采模板
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) DeleteOtTemplate(request *model.DeleteOtTemplateRequest) (*model.DeleteOtTemplateResponse, error) {
+	requestDef := GenReqDefForDeleteOtTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteOtTemplateResponse), nil
+	}
+}
+
+// DeleteOtTemplateInvoker 删除数采模板
+func (c *IoTEdgeClient) DeleteOtTemplateInvoker(request *model.DeleteOtTemplateRequest) *DeleteOtTemplateInvoker {
+	requestDef := GenReqDefForDeleteOtTemplate()
+	return &DeleteOtTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowOtTemplate 查询数采模板详情
+//
+// 查询数采模板详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) ShowOtTemplate(request *model.ShowOtTemplateRequest) (*model.ShowOtTemplateResponse, error) {
+	requestDef := GenReqDefForShowOtTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowOtTemplateResponse), nil
+	}
+}
+
+// ShowOtTemplateInvoker 查询数采模板详情
+func (c *IoTEdgeClient) ShowOtTemplateInvoker(request *model.ShowOtTemplateRequest) *ShowOtTemplateInvoker {
+	requestDef := GenReqDefForShowOtTemplate()
+	return &ShowOtTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ImportPoints 批量导入点位表

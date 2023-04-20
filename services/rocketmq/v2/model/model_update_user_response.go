@@ -102,22 +102,14 @@ type UpdateUserResponseDefaultGroupPerm struct {
 }
 
 type UpdateUserResponseDefaultGroupPermEnum struct {
-	PUB     UpdateUserResponseDefaultGroupPerm
-	SUB     UpdateUserResponseDefaultGroupPerm
-	PUB_SUB UpdateUserResponseDefaultGroupPerm
-	DENY    UpdateUserResponseDefaultGroupPerm
+	SUB  UpdateUserResponseDefaultGroupPerm
+	DENY UpdateUserResponseDefaultGroupPerm
 }
 
 func GetUpdateUserResponseDefaultGroupPermEnum() UpdateUserResponseDefaultGroupPermEnum {
 	return UpdateUserResponseDefaultGroupPermEnum{
-		PUB: UpdateUserResponseDefaultGroupPerm{
-			value: "PUB",
-		},
 		SUB: UpdateUserResponseDefaultGroupPerm{
 			value: "SUB",
-		},
-		PUB_SUB: UpdateUserResponseDefaultGroupPerm{
-			value: "PUB|SUB",
 		},
 		DENY: UpdateUserResponseDefaultGroupPerm{
 			value: "DENY",

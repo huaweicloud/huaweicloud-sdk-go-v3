@@ -11,7 +11,7 @@ type Match struct {
 	// 键。取值范围为policy , organizational-unit, account。
 	Key string `json:"key"`
 
-	// 值。每个值最大长度255个unicode字符。
+	// 值。每个值最大长度255个字符。
 	Value string `json:"value"`
 }
 

@@ -27,10 +27,10 @@ type ListMessagesRequest struct {
 	// 偏移量，表示从此偏移量开始查询， offset大于等于0。
 	Offset *string `json:"offset,omitempty"`
 
-	// 开始时间（不按msg_id查询时需要填写开始时间）。
+	// 开始时间（不通过msg_id精确查询消息时，此参数必填）。
 	StartTime *string `json:"start_time,omitempty"`
 
-	// 结束时间（不按msg_id查询时需要填写结束时间）。
+	// 结束时间（不通过msg_id精确查询消息时，此参数必填）。
 	EndTime *string `json:"end_time,omitempty"`
 
 	// 消息ID。

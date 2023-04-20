@@ -22,7 +22,7 @@ type SearchJobsRequestBody struct {
 	OrderByColumn string `json:"order_by_column"`
 
 	// 排序规则(默认降序) 传入升序或降序，升序：ASC，降序：DESC。
-	SortOrder *string `json:"sort_order,omitempty"`
+	SortOrder string `json:"sort_order"`
 
 	// 企业项目id
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`

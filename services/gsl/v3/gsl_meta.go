@@ -381,6 +381,10 @@ func GenReqDefForListSimCards() *def.HttpRequestDef {
 		WithName("OrderIds").
 		WithJsonTag("order_ids").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PricePlanId").
+		WithJsonTag("price_plan_id").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

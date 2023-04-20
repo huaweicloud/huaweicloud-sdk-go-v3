@@ -257,6 +257,18 @@ func (i *ResetConsumeOffsetInvoker) Invoke() (*model.ResetConsumeOffsetResponse,
 	}
 }
 
+type ShowConsumerConnectionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowConsumerConnectionsInvoker) Invoke() (*model.ShowConsumerConnectionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowConsumerConnectionsResponse), nil
+	}
+}
+
 type ShowConsumerListOrDetailsInvoker struct {
 	*invoker.BaseInvoker
 }

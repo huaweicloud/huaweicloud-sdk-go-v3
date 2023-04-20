@@ -497,6 +497,18 @@ func (i *UpdateModuleInvoker) Invoke() (*model.UpdateModuleResponse, error) {
 	}
 }
 
+type UpdateModuleStateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateModuleStateInvoker) Invoke() (*model.UpdateModuleStateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateModuleStateResponse), nil
+	}
+}
+
 type ListRoutesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -518,6 +530,66 @@ func (i *UpdateRoutesInvoker) Invoke() (*model.UpdateRoutesResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.UpdateRoutesResponse), nil
+	}
+}
+
+type AddGeneralOtTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddGeneralOtTemplateInvoker) Invoke() (*model.AddGeneralOtTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddGeneralOtTemplateResponse), nil
+	}
+}
+
+type AddOtTemplatesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddOtTemplatesInvoker) Invoke() (*model.AddOtTemplatesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddOtTemplatesResponse), nil
+	}
+}
+
+type BatchListOtTemplatesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchListOtTemplatesInvoker) Invoke() (*model.BatchListOtTemplatesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchListOtTemplatesResponse), nil
+	}
+}
+
+type DeleteOtTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteOtTemplateInvoker) Invoke() (*model.DeleteOtTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteOtTemplateResponse), nil
+	}
+}
+
+type ShowOtTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowOtTemplateInvoker) Invoke() (*model.ShowOtTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowOtTemplateResponse), nil
 	}
 }
 

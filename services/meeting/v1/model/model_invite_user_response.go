@@ -8,7 +8,10 @@ import (
 
 // Response Object
 type InviteUserResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// 用户是否存在
+	UserExist      *bool `json:"userExist,omitempty"`
+	HttpStatusCode int   `json:"-"`
 }
 
 func (o InviteUserResponse) String() string {

@@ -41,6 +41,18 @@ func (i *CreatePipelineByTemplateInvoker) Invoke() (*model.CreatePipelineByTempl
 	}
 }
 
+type CreatePipelineByTemplateIdInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePipelineByTemplateIdInvoker) Invoke() (*model.CreatePipelineByTemplateIdResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePipelineByTemplateIdResponse), nil
+	}
+}
+
 type DeletePipelineInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -74,6 +86,18 @@ func (i *ListPipelineSimpleInfoInvoker) Invoke() (*model.ListPipelineSimpleInfoR
 		return nil, err
 	} else {
 		return result.(*model.ListPipelineSimpleInfoResponse), nil
+	}
+}
+
+type ListPipelineTemplatesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPipelineTemplatesInvoker) Invoke() (*model.ListPipelineTemplatesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPipelineTemplatesResponse), nil
 	}
 }
 
@@ -158,6 +182,18 @@ func (i *ShowPipelineRunDetailInvoker) Invoke() (*model.ShowPipelineRunDetailRes
 		return nil, err
 	} else {
 		return result.(*model.ShowPipelineRunDetailResponse), nil
+	}
+}
+
+type ShowPipelineTemplateDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPipelineTemplateDetailInvoker) Invoke() (*model.ShowPipelineTemplateDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPipelineTemplateDetailResponse), nil
 	}
 }
 

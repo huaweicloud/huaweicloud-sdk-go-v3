@@ -82,6 +82,27 @@ func (c *CloudPipelineClient) CreatePipelineByTemplateInvoker(request *model.Cre
 	return &CreatePipelineByTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreatePipelineByTemplateId 基于模板创建流水线
+//
+// 基于模板创建流水线
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudPipelineClient) CreatePipelineByTemplateId(request *model.CreatePipelineByTemplateIdRequest) (*model.CreatePipelineByTemplateIdResponse, error) {
+	requestDef := GenReqDefForCreatePipelineByTemplateId()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePipelineByTemplateIdResponse), nil
+	}
+}
+
+// CreatePipelineByTemplateIdInvoker 基于模板创建流水线
+func (c *CloudPipelineClient) CreatePipelineByTemplateIdInvoker(request *model.CreatePipelineByTemplateIdRequest) *CreatePipelineByTemplateIdInvoker {
+	requestDef := GenReqDefForCreatePipelineByTemplateId()
+	return &CreatePipelineByTemplateIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeletePipeline 删除流水线
 //
 // 删除流水线
@@ -143,6 +164,27 @@ func (c *CloudPipelineClient) ListPipelineSimpleInfo(request *model.ListPipeline
 func (c *CloudPipelineClient) ListPipelineSimpleInfoInvoker(request *model.ListPipelineSimpleInfoRequest) *ListPipelineSimpleInfoInvoker {
 	requestDef := GenReqDefForListPipelineSimpleInfo()
 	return &ListPipelineSimpleInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPipelineTemplates 查询模板列表
+//
+// 查询流水线模板列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudPipelineClient) ListPipelineTemplates(request *model.ListPipelineTemplatesRequest) (*model.ListPipelineTemplatesResponse, error) {
+	requestDef := GenReqDefForListPipelineTemplates()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPipelineTemplatesResponse), nil
+	}
+}
+
+// ListPipelineTemplatesInvoker 查询模板列表
+func (c *CloudPipelineClient) ListPipelineTemplatesInvoker(request *model.ListPipelineTemplatesRequest) *ListPipelineTemplatesInvoker {
+	requestDef := GenReqDefForListPipelineTemplates()
+	return &ListPipelineTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListPipelines 获取流水线列表/获取项目下流水线执行状况
@@ -290,6 +332,27 @@ func (c *CloudPipelineClient) ShowPipelineRunDetail(request *model.ShowPipelineR
 func (c *CloudPipelineClient) ShowPipelineRunDetailInvoker(request *model.ShowPipelineRunDetailRequest) *ShowPipelineRunDetailInvoker {
 	requestDef := GenReqDefForShowPipelineRunDetail()
 	return &ShowPipelineRunDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPipelineTemplateDetail 查询模板详情
+//
+// 查询模板详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudPipelineClient) ShowPipelineTemplateDetail(request *model.ShowPipelineTemplateDetailRequest) (*model.ShowPipelineTemplateDetailResponse, error) {
+	requestDef := GenReqDefForShowPipelineTemplateDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPipelineTemplateDetailResponse), nil
+	}
+}
+
+// ShowPipelineTemplateDetailInvoker 查询模板详情
+func (c *CloudPipelineClient) ShowPipelineTemplateDetailInvoker(request *model.ShowPipelineTemplateDetailRequest) *ShowPipelineTemplateDetailInvoker {
+	requestDef := GenReqDefForShowPipelineTemplateDetail()
+	return &ShowPipelineTemplateDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowPipleineStatus 获取流水线状态

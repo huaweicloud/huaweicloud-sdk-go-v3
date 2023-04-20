@@ -9,7 +9,7 @@ import (
 // 资源信息。
 type ResourceDto struct {
 
-	// 资源Id。
+	// 资源ID。
 	ResourceId string `json:"resource_id"`
 
 	// 资源名称。

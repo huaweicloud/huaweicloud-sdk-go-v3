@@ -7,7 +7,7 @@ import (
 )
 
 type CreateVideoObjectMaskingTaskRequestBody struct {
-	Input *ObjectMaskingTaskInput `json:"input"`
+	Input *TaskInput `json:"input"`
 
 	Output *TaskOutput `json:"output"`
 

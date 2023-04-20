@@ -35,6 +35,9 @@ type CreateFunctionRequestBody struct {
 	// 函数消耗的内存。 单位M。 取值范围为：128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096。 最小值为128，最大值为4096。
 	MemorySize int32 `json:"memory_size"`
 
+	// 函数消耗的显存，只支持自定义运行时与自定义镜像函数配置GPU。 单位MB。 取值范围为：1024、2048、3072、4096、5120、6144、7168、8192、9216、10240、11264、12288、13312、14336、15360、16384。 最小值为1024，最大值为16384。
+	GpuMemory *int32 `json:"gpu_memory,omitempty"`
+
 	// 函数代码类型，取值有4种。 inline: UI在线编辑代码。 zip: 函数代码为zip包。 obs: 函数代码来源于obs存储。 jar: 函数代码为jar包，主要针对Java函数。
 	CodeType CreateFunctionRequestBodyCodeType `json:"code_type"`
 
@@ -69,6 +72,10 @@ type CreateFunctionRequestBody struct {
 
 	// 函数版本；部分局点只支持v1函数，缺省值则为v1
 	Type *CreateFunctionRequestBodyType `json:"type,omitempty"`
+
+	LogConfig *FuncLogConfig `json:"log_config,omitempty"`
+
+	NetworkController *NetworkControlConfig `json:"network_controller,omitempty"`
 }
 
 func (o CreateFunctionRequestBody) String() string {

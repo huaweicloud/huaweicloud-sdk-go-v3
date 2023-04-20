@@ -8,6 +8,15 @@ import (
 
 type ThailandIdcardResult struct {
 
+	// 返回证件类型，\"normal\"表示普通泰文证件，\"pink\"表示外国人身份证件
+	Type *string `json:"type,omitempty"`
+
+	// 英文名。
+	NameEn *string `json:"name_en,omitempty"`
+
+	// 参考编码。
+	RefNumber *string `json:"ref_number,omitempty"`
+
 	// 标示正面还是反面，取值为front或back。
 	Side *string `json:"side,omitempty"`
 
@@ -64,7 +73,7 @@ type ThailandIdcardResult struct {
 	// 头像在原图上的位置。 当输入参数“return_portrait_location”为“true”时，才返回该参数。以列表形式显示，包含头像区域四个顶点的二维坐标（x,y），坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向
 	PortraitLocation *[][]int32 `json:"portrait_location,omitempty"`
 
-	// 身份证的类型。取值如下所示： - normal：身份证原件 - copy：复印的身份证 当输入参数“return_idcard_type”为“true”时，才返回该参数。
+	// 身份证的类型。取值如下所示： - normal：身份证原件 - copy：复印的身份证 - screen：屏幕翻拍 当输入参数“return_idcard_type”为“true”时，才返回该参数。
 	IdcardType *string `json:"idcard_type,omitempty"`
 
 	// 对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。

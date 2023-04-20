@@ -19,6 +19,12 @@ type UpdateInstanceReq struct {
 
 	// ACL访问控制。
 	EnableAcl *bool `json:"enable_acl,omitempty"`
+
+	// 是否开启公网。
+	EnablePublicip *bool `json:"enable_publicip,omitempty"`
+
+	// 实例绑定的弹性IP地址的ID。 以英文逗号隔开多个弹性IP地址的ID。 如果开启了公网访问功能（即enable_publicip为true），该字段为必选。
+	PublicipId *string `json:"publicip_id,omitempty"`
 }
 
 func (o UpdateInstanceReq) String() string {

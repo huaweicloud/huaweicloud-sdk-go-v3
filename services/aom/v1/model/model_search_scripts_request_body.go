@@ -18,7 +18,7 @@ type SearchScriptsRequestBody struct {
 	CreateBy *string `json:"create_by,omitempty"`
 
 	// 版本管理时需要查询的脚本id。
-	ScriptId *string `json:"script_id,omitempty"`
+	ScriptId string `json:"script_id"`
 
 	// page_num为正整数。
 	PageNum *int32 `json:"page_num,omitempty"`
@@ -33,7 +33,7 @@ type SearchScriptsRequestBody struct {
 	OrderByColumn string `json:"order_by_column"`
 
 	// 排序规则(默认降序) 传入升序或降序，升序：ASC，降序：DESC。
-	SortOrder *string `json:"sort_order,omitempty"`
+	SortOrder string `json:"sort_order"`
 
 	// 企业项目id，根据企业项目id搜索。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`

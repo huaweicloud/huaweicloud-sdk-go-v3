@@ -26,6 +26,9 @@ type UpdateFunctionConfigRequestBody struct {
 	// 函数消耗的内存。 单位M。 取值范围为：128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096。 最小值为128，最大值为4096。
 	MemorySize int32 `json:"memory_size"`
 
+	// 函数消耗的显存，只支持自定义运行时与自定义镜像函数配置GPU。 单位MB。 取值范围为：1024、2048、3072、4096、5120、6144、7168、8192、9216、10240、11264、12288、13312、14336、15360、16384。 最小值为1024，最大值为16384。
+	GpuMemory *int32 `json:"gpu_memory,omitempty"`
+
 	// 用户自定义的name/value信息。 在函数中使用的参数。 举例：如函数要访问某个主机，可以设置自定义参数：Host={host_ip}，最多定义20个，总长度不超过4KB。
 	UserData *string `json:"user_data,omitempty"`
 
@@ -58,8 +61,15 @@ type UpdateFunctionConfigRequestBody struct {
 	// 初始化超时时间，超时函数将被强行停止，范围1～300秒。
 	InitializerTimeout *int32 `json:"initializer_timeout,omitempty"`
 
+	// 临时存储大小, 默认512M, 支持配置10G。
+	EphemeralStorage *int32 `json:"ephemeral_storage,omitempty"`
+
 	// 企业项目ID，在企业用户创建函数时必填。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	LogConfig *FuncLogConfig `json:"log_config,omitempty"`
+
+	NetworkController *NetworkControlConfig `json:"network_controller,omitempty"`
 
 	// 是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
 	IsStatefulFunction *bool `json:"is_stateful_function,omitempty"`
@@ -72,6 +82,12 @@ type UpdateFunctionConfigRequestBody struct {
 
 	// 内网域名配置。
 	DomainNames *string `json:"domain_names,omitempty"`
+
+	// 函数快照式冷启动Restore Hook入口，仅支持Java，规则：xx.xx，必须包含“. ”。如：com.huawei.demo.Test.restoreHook
+	RestoreHookHandler *string `json:"restore_hook_handler,omitempty"`
+
+	// 快照冷启动Restore Hook的超时时间，超时函数将被强行停止，范围1～300秒。
+	RestoreHookTimeout *int32 `json:"restore_hook_timeout,omitempty"`
 }
 
 func (o UpdateFunctionConfigRequestBody) String() string {
