@@ -13,7 +13,7 @@ type ListDataResponse struct {
 	Count *int64 `json:"count,omitempty"`
 
 	// 数据对象列表
-	Datas *[]DataRsp `json:"datas,omitempty"`
+	Datas *[]DataSummaryRsp `json:"datas,omitempty"`
 
 	// 下一页开始标签
 	NextMarker     *string `json:"next_marker,omitempty"`

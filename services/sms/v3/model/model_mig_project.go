@@ -49,6 +49,9 @@ type MigProject struct {
 
 	// 首次复制或者同步后 是否继续持续同步
 	Syncing bool `json:"syncing"`
+
+	// 是否启动网络质量检测
+	StartNetworkCheck *bool `json:"start_network_check,omitempty"`
 }
 
 func (o MigProject) String() string {

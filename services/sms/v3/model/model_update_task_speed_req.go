@@ -32,6 +32,9 @@ type UpdateTaskSpeedReq struct {
 
 	// 实施文件压缩率
 	CompressRate *float64 `json:"compress_rate,omitempty"`
+
+	// 剩余时间
+	RemainTime *int64 `json:"remain_time,omitempty"`
 }
 
 func (o UpdateTaskSpeedReq) String() string {

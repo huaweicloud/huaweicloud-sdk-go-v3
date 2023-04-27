@@ -15,7 +15,7 @@ type ShowConsumerConnectionsRequest struct {
 	// 消费组名称
 	Group string `json:"group"`
 
-	// 查询数量，取值范围[1, 50]。
+	// 查询数量，取值范围为1~50。
 	Limit *int32 `json:"limit,omitempty"`
 
 	// 偏移量，表示从此偏移量开始查询， offset大于等于0。

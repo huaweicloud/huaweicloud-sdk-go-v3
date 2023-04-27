@@ -38,7 +38,7 @@ type BackendApi struct {
 	// 是否开启双向认证
 	EnableClientSsl *bool `json:"enable_client_ssl,omitempty"`
 
-	// 请求后端服务的重试次数，默认为-1，范围[-1,10]
+	// 请求后端服务的重试次数，默认为-1，范围[-1,10]。  当该值为-1时，幂等的接口会重试1次，非幂等的不会重试。POST，PATCH方法为非幂等；GET，HEAD，PUT，OPTIONS和DELETE等方法为幂等的。
 	RetryCount *string `json:"retry_count,omitempty"`
 
 	// 编号

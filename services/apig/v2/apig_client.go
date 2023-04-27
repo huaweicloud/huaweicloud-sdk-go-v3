@@ -784,7 +784,7 @@ func (c *ApigClient) DisassociateDomainV2Invoker(request *model.DisassociateDoma
 	return &DisassociateDomainV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DisassociateSignatureKeyV2 解除绑定
+// DisassociateSignatureKeyV2 解除API与签名密钥的绑定关系
 //
 // 解除API与签名密钥的绑定关系。
 //
@@ -799,7 +799,7 @@ func (c *ApigClient) DisassociateSignatureKeyV2(request *model.DisassociateSigna
 	}
 }
 
-// DisassociateSignatureKeyV2Invoker 解除绑定
+// DisassociateSignatureKeyV2Invoker 解除API与签名密钥的绑定关系
 func (c *ApigClient) DisassociateSignatureKeyV2Invoker(request *model.DisassociateSignatureKeyV2Request) *DisassociateSignatureKeyV2Invoker {
 	requestDef := GenReqDefForDisassociateSignatureKeyV2()
 	return &DisassociateSignatureKeyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -2244,7 +2244,7 @@ func (c *ApigClient) CreateApiGroupV2Invoker(request *model.CreateApiGroupV2Requ
 	return &CreateApiGroupV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateApiV2 注册API
+// CreateApiV2 创建API
 //
 // 添加一个API，API即一个服务接口，具体的服务能力。
 //
@@ -2261,7 +2261,7 @@ func (c *ApigClient) CreateApiV2(request *model.CreateApiV2Request) (*model.Crea
 	}
 }
 
-// CreateApiV2Invoker 注册API
+// CreateApiV2Invoker 创建API
 func (c *ApigClient) CreateApiV2Invoker(request *model.CreateApiV2Request) *CreateApiV2Invoker {
 	requestDef := GenReqDefForCreateApiV2()
 	return &CreateApiV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

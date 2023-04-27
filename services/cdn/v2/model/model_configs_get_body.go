@@ -38,7 +38,13 @@ type ConfigsGetBody struct {
 
 	CacheUrlParameterFilter *CacheUrlParameterFilter `json:"cache_url_parameter_filter,omitempty"`
 
+	// ipv6设置（1：打开；0：关闭）
+	Ipv6Accelerate *int32 `json:"ipv6_accelerate,omitempty"`
+
 	ErrorCodeCache *[]ErrorCodeCache `json:"error_code_cache,omitempty"`
+
+	// Range回源，即分片回源 开启Range回源的前提是您的源站支持Range请求，即HTTP请求头中包含Range字段，否则可能导致回源失败。 开启: on
+	OriginRangeStatus *string `json:"origin_range_status,omitempty"`
 
 	UserAgentFilter *UserAgentFilter `json:"user_agent_filter,omitempty"`
 

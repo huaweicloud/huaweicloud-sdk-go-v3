@@ -54,6 +54,9 @@ type PostTask struct {
 
 	// 是否存在服务，如果存在，则创建任务
 	ExistServer *bool `json:"exist_server,omitempty"`
+
+	// 是否开启网络检测
+	StartNetworkCheck *bool `json:"start_network_check,omitempty"`
 }
 
 func (o PostTask) String() string {

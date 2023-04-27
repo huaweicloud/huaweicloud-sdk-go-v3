@@ -245,6 +245,18 @@ func (i *ShowCommandInvoker) Invoke() (*model.ShowCommandResponse, error) {
 	}
 }
 
+type ShowConfigSettingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowConfigSettingInvoker) Invoke() (*model.ShowConfigSettingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowConfigSettingResponse), nil
+	}
+}
+
 type ShowMigprojectInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -425,6 +437,18 @@ func (i *UpdateMigprojectInvoker) Invoke() (*model.UpdateMigprojectResponse, err
 	}
 }
 
+type UpdateNetworkCheckInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateNetworkCheckInfoInvoker) Invoke() (*model.UpdateNetworkCheckInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateNetworkCheckInfoResponse), nil
+	}
+}
+
 type UpdateServerNameInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -494,5 +518,53 @@ func (i *UpdateTemplateInvoker) Invoke() (*model.UpdateTemplateResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.UpdateTemplateResponse), nil
+	}
+}
+
+type UploadSpecialConfigurationSettingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UploadSpecialConfigurationSettingInvoker) Invoke() (*model.UploadSpecialConfigurationSettingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UploadSpecialConfigurationSettingResponse), nil
+	}
+}
+
+type ShowConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowConfigInvoker) Invoke() (*model.ShowConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowConfigResponse), nil
+	}
+}
+
+type ListApiVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListApiVersionInvoker) Invoke() (*model.ListApiVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListApiVersionResponse), nil
+	}
+}
+
+type ShowApiVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowApiVersionInvoker) Invoke() (*model.ShowApiVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowApiVersionResponse), nil
 	}
 }

@@ -615,6 +615,15 @@ func GenReqDefForListHistorySql() *def.HttpRequestDef {
 		WithResponse(new(model.ListHistorySqlResponse)).
 		WithContentType("application/json")
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("LogGroupId").
+		WithJsonTag("log_group_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("LogStreamId").
+		WithJsonTag("log_stream_id").
+		WithLocationType(def.Query))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }

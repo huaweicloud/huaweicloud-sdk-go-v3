@@ -637,6 +637,27 @@ func (c *DcsClient) ListConfigHistoriesInvoker(request *model.ListConfigHistorie
 	return &ListConfigHistoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListConfigTemplates 查询参数模板列表
+//
+// 查询租户的参数模板列表，支持按照条件查询
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) ListConfigTemplates(request *model.ListConfigTemplatesRequest) (*model.ListConfigTemplatesResponse, error) {
+	requestDef := GenReqDefForListConfigTemplates()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListConfigTemplatesResponse), nil
+	}
+}
+
+// ListConfigTemplatesInvoker 查询参数模板列表
+func (c *DcsClient) ListConfigTemplatesInvoker(request *model.ListConfigTemplatesRequest) *ListConfigTemplatesInvoker {
+	requestDef := GenReqDefForListConfigTemplates()
+	return &ListConfigTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListConfigurations 查询实例配置参数
 //
 // 查询指定实例的配置参数信息。
@@ -973,6 +994,27 @@ func (c *DcsClient) ListTagsOfTenant(request *model.ListTagsOfTenantRequest) (*m
 func (c *DcsClient) ListTagsOfTenantInvoker(request *model.ListTagsOfTenantRequest) *ListTagsOfTenantInvoker {
 	requestDef := GenReqDefForListTagsOfTenant()
 	return &ListTagsOfTenantInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ResetPassword 重置密码
+//
+// 重置缓存实例的密码。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) ResetPassword(request *model.ResetPasswordRequest) (*model.ResetPasswordResponse, error) {
+	requestDef := GenReqDefForResetPassword()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ResetPasswordResponse), nil
+	}
+}
+
+// ResetPasswordInvoker 重置密码
+func (c *DcsClient) ResetPasswordInvoker(request *model.ResetPasswordRequest) *ResetPasswordInvoker {
+	requestDef := GenReqDefForResetPassword()
+	return &ResetPasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ResizeInstance 变更实例规格
@@ -1396,6 +1438,27 @@ func (c *DcsClient) UpdateInstance(request *model.UpdateInstanceRequest) (*model
 func (c *DcsClient) UpdateInstanceInvoker(request *model.UpdateInstanceRequest) *UpdateInstanceInvoker {
 	requestDef := GenReqDefForUpdateInstance()
 	return &UpdateInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateInstanceBandwidth 变更指定实例的带宽
+//
+// 变更指定实例的带宽
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) UpdateInstanceBandwidth(request *model.UpdateInstanceBandwidthRequest) (*model.UpdateInstanceBandwidthResponse, error) {
+	requestDef := GenReqDefForUpdateInstanceBandwidth()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateInstanceBandwidthResponse), nil
+	}
+}
+
+// UpdateInstanceBandwidthInvoker 变更指定实例的带宽
+func (c *DcsClient) UpdateInstanceBandwidthInvoker(request *model.UpdateInstanceBandwidthRequest) *UpdateInstanceBandwidthInvoker {
+	requestDef := GenReqDefForUpdateInstanceBandwidth()
+	return &UpdateInstanceBandwidthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdatePassword 修改密码

@@ -8,6 +8,12 @@ import (
 
 // Request Object
 type ListHistorySqlRequest struct {
+
+	// 日志组id
+	LogGroupId string `json:"log_group_id"`
+
+	// 日志流id
+	LogStreamId string `json:"log_stream_id"`
 }
 
 func (o ListHistorySqlRequest) String() string {

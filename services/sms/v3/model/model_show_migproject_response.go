@@ -48,8 +48,11 @@ type ShowMigprojectResponse struct {
 	EnterpriseProject *string `json:"enterprise_project,omitempty"`
 
 	// 首次复制或者同步后 是否继续持续同步
-	Syncing        *bool `json:"syncing,omitempty"`
-	HttpStatusCode int   `json:"-"`
+	Syncing *bool `json:"syncing,omitempty"`
+
+	// 是否启动网络质量检测
+	StartNetworkCheck *bool `json:"start_network_check,omitempty"`
+	HttpStatusCode    int   `json:"-"`
 }
 
 func (o ShowMigprojectResponse) String() string {

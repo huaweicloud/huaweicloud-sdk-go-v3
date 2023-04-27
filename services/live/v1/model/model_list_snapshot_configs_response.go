@@ -12,12 +12,6 @@ type ListSnapshotConfigsResponse struct {
 	// 总条目数
 	Total *int32 `json:"total,omitempty"`
 
-	// Page
-	Page *int32 `json:"page,omitempty"`
-
-	// Size
-	Size *int32 `json:"size,omitempty"`
-
 	SnapshotConfigList *LiveSnapshotConfig `json:"snapshot_config_list,omitempty"`
 
 	// 每页记录数

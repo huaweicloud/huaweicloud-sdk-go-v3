@@ -47,6 +47,9 @@ type MigprojectsResponseBody struct {
 
 	// 是否持续同步
 	Syncing *bool `json:"syncing,omitempty"`
+
+	// 是否开启网络质量检测
+	StartNetworkCheck *bool `json:"start_network_check,omitempty"`
 }
 
 func (o MigprojectsResponseBody) String() string {

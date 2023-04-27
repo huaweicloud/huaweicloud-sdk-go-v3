@@ -17,6 +17,9 @@ type UpdateTaskStatusReq struct {
 
 	// 操作参数
 	Param map[string]string `json:"param,omitempty"`
+
+	// 是否切换hce
+	SwitchHce *bool `json:"switch_hce,omitempty"`
 }
 
 func (o UpdateTaskStatusReq) String() string {

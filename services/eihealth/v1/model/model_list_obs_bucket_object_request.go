@@ -20,6 +20,9 @@ type ListObsBucketObjectRequest struct {
 
 	// 子路径
 	Path *string `json:"path,omitempty"`
+
+	// 查询关键词
+	SearchKey *string `json:"search_key,omitempty"`
 }
 
 func (o ListObsBucketObjectRequest) String() string {

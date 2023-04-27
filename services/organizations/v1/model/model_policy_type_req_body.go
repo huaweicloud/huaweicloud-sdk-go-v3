@@ -12,7 +12,7 @@ import (
 // 策略类型相关操作的请求体。
 type PolicyTypeReqBody struct {
 
-	// 策略类型的名称，service_control_policy服务控制策略。
+	// 策略类型的名称，service_control_policy服务控制策略；tag_policy：标签策略。
 	PolicyType PolicyTypeReqBodyPolicyType `json:"policy_type"`
 
 	// 根的唯一标识符（ID）。
@@ -34,12 +34,16 @@ type PolicyTypeReqBodyPolicyType struct {
 
 type PolicyTypeReqBodyPolicyTypeEnum struct {
 	SERVICE_CONTROL_POLICY PolicyTypeReqBodyPolicyType
+	TAG_POLICY             PolicyTypeReqBodyPolicyType
 }
 
 func GetPolicyTypeReqBodyPolicyTypeEnum() PolicyTypeReqBodyPolicyTypeEnum {
 	return PolicyTypeReqBodyPolicyTypeEnum{
 		SERVICE_CONTROL_POLICY: PolicyTypeReqBodyPolicyType{
 			value: "service_control_policy",
+		},
+		TAG_POLICY: PolicyTypeReqBodyPolicyType{
+			value: "tag_policy",
 		},
 	}
 }

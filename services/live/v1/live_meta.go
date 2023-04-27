@@ -96,15 +96,6 @@ func GenReqDefForCreateSnapshotConfig() *def.HttpRequestDef {
 		WithContentType("application/json; charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("AccessControlAllowInternal").
-		WithJsonTag("Access-Control-Allow-Internal").
-		WithLocationType(def.Header))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("AccessControlAllowExternal").
-		WithJsonTag("Access-Control-Allow-External").
-		WithLocationType(def.Header))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -169,15 +160,6 @@ func GenReqDefForDeleteDomainKeyChain() *def.HttpRequestDef {
 		WithName("Domain").
 		WithJsonTag("domain").
 		WithLocationType(def.Query))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("AccessControlAllowInternal").
-		WithJsonTag("Access-Control-Allow-Internal").
-		WithLocationType(def.Header))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("AccessControlAllowExternal").
-		WithJsonTag("Access-Control-Allow-External").
-		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -250,15 +232,6 @@ func GenReqDefForDeleteSnapshotConfig() *def.HttpRequestDef {
 		WithName("AppName").
 		WithJsonTag("app_name").
 		WithLocationType(def.Query))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("AccessControlAllowInternal").
-		WithJsonTag("Access-Control-Allow-Internal").
-		WithLocationType(def.Header))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("AccessControlAllowExternal").
-		WithJsonTag("Access-Control-Allow-External").
-		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -494,14 +467,6 @@ func GenReqDefForListSnapshotConfigs() *def.HttpRequestDef {
 		WithJsonTag("app_name").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Page").
-		WithJsonTag("page").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Size").
-		WithJsonTag("size").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Limit").
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
@@ -509,15 +474,6 @@ func GenReqDefForListSnapshotConfigs() *def.HttpRequestDef {
 		WithName("Offset").
 		WithJsonTag("offset").
 		WithLocationType(def.Query))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("AccessControlAllowInternal").
-		WithJsonTag("Access-Control-Allow-Internal").
-		WithLocationType(def.Header))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("AccessControlAllowExternal").
-		WithJsonTag("Access-Control-Allow-External").
-		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -612,15 +568,6 @@ func GenReqDefForShowDomainKeyChain() *def.HttpRequestDef {
 		WithName("Domain").
 		WithJsonTag("domain").
 		WithLocationType(def.Query))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("AccessControlAllowInternal").
-		WithJsonTag("Access-Control-Allow-Internal").
-		WithLocationType(def.Header))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("AccessControlAllowExternal").
-		WithJsonTag("Access-Control-Allow-External").
-		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -729,15 +676,6 @@ func GenReqDefForUpdateDomainKeyChain() *def.HttpRequestDef {
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("AccessControlAllowInternal").
-		WithJsonTag("Access-Control-Allow-Internal").
-		WithLocationType(def.Header))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("AccessControlAllowExternal").
-		WithJsonTag("Access-Control-Allow-External").
-		WithLocationType(def.Header))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -793,15 +731,6 @@ func GenReqDefForUpdateSnapshotConfig() *def.HttpRequestDef {
 		WithContentType("application/json; charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("AccessControlAllowInternal").
-		WithJsonTag("Access-Control-Allow-Internal").
-		WithLocationType(def.Header))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("AccessControlAllowExternal").
-		WithJsonTag("Access-Control-Allow-External").
-		WithLocationType(def.Header))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -851,15 +780,6 @@ func GenReqDefForDeleteDomainHttpsCert() *def.HttpRequestDef {
 		WithJsonTag("domain").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("AccessControlAllowInternal").
-		WithJsonTag("Access-Control-Allow-Internal").
-		WithLocationType(def.Header))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("AccessControlAllowExternal").
-		WithJsonTag("Access-Control-Allow-External").
-		WithLocationType(def.Header))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -875,15 +795,6 @@ func GenReqDefForShowDomainHttpsCert() *def.HttpRequestDef {
 		WithName("Domain").
 		WithJsonTag("domain").
 		WithLocationType(def.Query))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("AccessControlAllowInternal").
-		WithJsonTag("Access-Control-Allow-Internal").
-		WithLocationType(def.Header))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("AccessControlAllowExternal").
-		WithJsonTag("Access-Control-Allow-External").
-		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -902,15 +813,6 @@ func GenReqDefForUpdateDomainHttpsCert() *def.HttpRequestDef {
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("AccessControlAllowInternal").
-		WithJsonTag("Access-Control-Allow-Internal").
-		WithLocationType(def.Header))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("AccessControlAllowExternal").
-		WithJsonTag("Access-Control-Allow-External").
-		WithLocationType(def.Header))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -924,15 +826,6 @@ func GenReqDefForUpdateObsBucketAuthorityPublic() *def.HttpRequestDef {
 		WithPath("/v1/{project_id}/obs/authority").
 		WithResponse(new(model.UpdateObsBucketAuthorityPublicResponse)).
 		WithContentType("application/json; charset=UTF-8")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("AccessControlAllowInternal").
-		WithJsonTag("Access-Control-Allow-Internal").
-		WithLocationType(def.Header))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("AccessControlAllowExternal").
-		WithJsonTag("Access-Control-Allow-External").
-		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").

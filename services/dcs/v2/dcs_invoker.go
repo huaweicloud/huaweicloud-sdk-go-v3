@@ -353,6 +353,18 @@ func (i *ListConfigHistoriesInvoker) Invoke() (*model.ListConfigHistoriesRespons
 	}
 }
 
+type ListConfigTemplatesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListConfigTemplatesInvoker) Invoke() (*model.ListConfigTemplatesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListConfigTemplatesResponse), nil
+	}
+}
+
 type ListConfigurationsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -542,6 +554,18 @@ func (i *ListTagsOfTenantInvoker) Invoke() (*model.ListTagsOfTenantResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ListTagsOfTenantResponse), nil
+	}
+}
+
+type ResetPasswordInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ResetPasswordInvoker) Invoke() (*model.ResetPasswordResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ResetPasswordResponse), nil
 	}
 }
 
@@ -782,6 +806,18 @@ func (i *UpdateInstanceInvoker) Invoke() (*model.UpdateInstanceResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.UpdateInstanceResponse), nil
+	}
+}
+
+type UpdateInstanceBandwidthInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateInstanceBandwidthInvoker) Invoke() (*model.UpdateInstanceBandwidthResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateInstanceBandwidthResponse), nil
 	}
 }
 

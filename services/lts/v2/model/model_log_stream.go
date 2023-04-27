@@ -23,6 +23,9 @@ type LogStream struct {
 
 	// 日志流所属标签
 	Tag map[string]string `json:"tag,omitempty"`
+
+	// 是否收藏日志流
+	IsFavorite *bool `json:"is_favorite,omitempty"`
 }
 
 func (o LogStream) String() string {

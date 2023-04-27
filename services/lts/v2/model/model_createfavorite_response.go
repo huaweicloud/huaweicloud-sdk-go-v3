@@ -10,7 +10,7 @@ import (
 type CreatefavoriteResponse struct {
 
 	// 创建时间
-	CreateTime *string `json:"create_time,omitempty"`
+	CreateTime *int64 `json:"create_time,omitempty"`
 
 	// 企业项目id
 	EpsId *string `json:"eps_id,omitempty"`

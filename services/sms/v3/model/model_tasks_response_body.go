@@ -74,6 +74,11 @@ type TasksResponseBody struct {
 
 	// 是否同步
 	Syncing *bool `json:"syncing,omitempty"`
+
+	NetworkCheckInfo *NetworkCheckInfoRequestBody `json:"network_check_info,omitempty"`
+
+	// 特殊配置项配置信息
+	SpecialConfig *[]ConfigBody `json:"special_config,omitempty"`
 }
 
 func (o TasksResponseBody) String() string {

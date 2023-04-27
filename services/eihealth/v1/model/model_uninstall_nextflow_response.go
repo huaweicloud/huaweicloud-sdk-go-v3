@@ -1,0 +1,21 @@
+package model
+
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
+	"strings"
+)
+
+// Response Object
+type UninstallNextflowResponse struct {
+	HttpStatusCode int `json:"-"`
+}
+
+func (o UninstallNextflowResponse) String() string {
+	data, err := utils.Marshal(o)
+	if err != nil {
+		return "UninstallNextflowResponse struct{}"
+	}
+
+	return strings.Join([]string{"UninstallNextflowResponse", string(data)}, " ")
+}

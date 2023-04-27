@@ -21,7 +21,7 @@ type CreatePolicyReqBody struct {
 	// 要分配给策略的名称。
 	Name string `json:"name"`
 
-	// 要创建的策略类型,service_control_policy服务控制策略。
+	// 要创建的策略类型,service_control_policy服务控制策略；tag_policy：标签策略。
 	Type CreatePolicyReqBodyType `json:"type"`
 
 	// 要附加到新创建的策略的标签列表。
@@ -43,12 +43,16 @@ type CreatePolicyReqBodyType struct {
 
 type CreatePolicyReqBodyTypeEnum struct {
 	SERVICE_CONTROL_POLICY CreatePolicyReqBodyType
+	TAG_POLICY             CreatePolicyReqBodyType
 }
 
 func GetCreatePolicyReqBodyTypeEnum() CreatePolicyReqBodyTypeEnum {
 	return CreatePolicyReqBodyTypeEnum{
 		SERVICE_CONTROL_POLICY: CreatePolicyReqBodyType{
 			value: "service_control_policy",
+		},
+		TAG_POLICY: CreatePolicyReqBodyType{
+			value: "tag_policy",
 		},
 	}
 }

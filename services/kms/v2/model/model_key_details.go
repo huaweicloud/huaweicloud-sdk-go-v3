@@ -65,6 +65,9 @@ type KeyDetails struct {
 
 	// 密钥在加密机中的标签
 	KeyLabel *string `json:"key_label,omitempty"`
+
+	// 分区类型，枚举如下：  - 1为专业版
+	PartitionType *string `json:"partition_type,omitempty"`
 }
 
 func (o KeyDetails) String() string {

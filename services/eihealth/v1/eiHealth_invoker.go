@@ -329,6 +329,114 @@ func (i *UpdateAutoJobInvoker) Invoke() (*model.UpdateAutoJobResponse, error) {
 	}
 }
 
+type CreateScaleOutPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateScaleOutPolicyInvoker) Invoke() (*model.CreateScaleOutPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateScaleOutPolicyResponse), nil
+	}
+}
+
+type DeleteScaleOutPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteScaleOutPolicyInvoker) Invoke() (*model.DeleteScaleOutPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteScaleOutPolicyResponse), nil
+	}
+}
+
+type ListScaleOutPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListScaleOutPolicyInvoker) Invoke() (*model.ListScaleOutPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListScaleOutPolicyResponse), nil
+	}
+}
+
+type ShowScaleInPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowScaleInPolicyInvoker) Invoke() (*model.ShowScaleInPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowScaleInPolicyResponse), nil
+	}
+}
+
+type ShowScaleOutPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowScaleOutPolicyInvoker) Invoke() (*model.ShowScaleOutPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowScaleOutPolicyResponse), nil
+	}
+}
+
+type StartScaleOutPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StartScaleOutPolicyInvoker) Invoke() (*model.StartScaleOutPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StartScaleOutPolicyResponse), nil
+	}
+}
+
+type StopScaleOutPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StopScaleOutPolicyInvoker) Invoke() (*model.StopScaleOutPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StopScaleOutPolicyResponse), nil
+	}
+}
+
+type UpdateScaleInPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateScaleInPolicyInvoker) Invoke() (*model.UpdateScaleInPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateScaleInPolicyResponse), nil
+	}
+}
+
+type UpdateScaleOutPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateScaleOutPolicyInvoker) Invoke() (*model.UpdateScaleOutPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateScaleOutPolicyResponse), nil
+	}
+}
+
 type CreateComputingResourceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -977,6 +1085,42 @@ func (i *ListDatabaseResourceFlavorInvoker) Invoke() (*model.ListDatabaseResourc
 	}
 }
 
+type ListIamGroupUsersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListIamGroupUsersInvoker) Invoke() (*model.ListIamGroupUsersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListIamGroupUsersResponse), nil
+	}
+}
+
+type ListIamGroupsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListIamGroupsInvoker) Invoke() (*model.ListIamGroupsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListIamGroupsResponse), nil
+	}
+}
+
+type ListIamUsersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListIamUsersInvoker) Invoke() (*model.ListIamUsersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListIamUsersResponse), nil
+	}
+}
+
 type BatchDeleteTagInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1574,6 +1718,258 @@ func (i *UpdateMessageReceiveConfigInvoker) Invoke() (*model.UpdateMessageReceiv
 		return nil, err
 	} else {
 		return result.(*model.UpdateMessageReceiveConfigResponse), nil
+	}
+}
+
+type CleanNextflowCacheInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CleanNextflowCacheInvoker) Invoke() (*model.CleanNextflowCacheResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CleanNextflowCacheResponse), nil
+	}
+}
+
+type InstallNextflowInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *InstallNextflowInvoker) Invoke() (*model.InstallNextflowResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.InstallNextflowResponse), nil
+	}
+}
+
+type ListNextflowVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListNextflowVersionInvoker) Invoke() (*model.ListNextflowVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListNextflowVersionResponse), nil
+	}
+}
+
+type ShowNextflowInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowNextflowInvoker) Invoke() (*model.ShowNextflowResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowNextflowResponse), nil
+	}
+}
+
+type UninstallNextflowInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UninstallNextflowInvoker) Invoke() (*model.UninstallNextflowResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UninstallNextflowResponse), nil
+	}
+}
+
+type CreateNextflowJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateNextflowJobInvoker) Invoke() (*model.CreateNextflowJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateNextflowJobResponse), nil
+	}
+}
+
+type DeleteNextflowJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteNextflowJobInvoker) Invoke() (*model.DeleteNextflowJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteNextflowJobResponse), nil
+	}
+}
+
+type ListNextflowJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListNextflowJobInvoker) Invoke() (*model.ListNextflowJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListNextflowJobResponse), nil
+	}
+}
+
+type RetryNextflowJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RetryNextflowJobInvoker) Invoke() (*model.RetryNextflowJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RetryNextflowJobResponse), nil
+	}
+}
+
+type ShowNextflowJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowNextflowJobInvoker) Invoke() (*model.ShowNextflowJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowNextflowJobResponse), nil
+	}
+}
+
+type ShowNextflowJobLogInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowNextflowJobLogInvoker) Invoke() (*model.ShowNextflowJobLogResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowNextflowJobLogResponse), nil
+	}
+}
+
+type ShowNextflowJobReportsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowNextflowJobReportsInvoker) Invoke() (*model.ShowNextflowJobReportsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowNextflowJobReportsResponse), nil
+	}
+}
+
+type StopNextflowJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StopNextflowJobInvoker) Invoke() (*model.StopNextflowJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StopNextflowJobResponse), nil
+	}
+}
+
+type ListNextflowTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListNextflowTaskInvoker) Invoke() (*model.ListNextflowTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListNextflowTaskResponse), nil
+	}
+}
+
+type ShowNextflowTaskDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowNextflowTaskDetailInvoker) Invoke() (*model.ShowNextflowTaskDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowNextflowTaskDetailResponse), nil
+	}
+}
+
+type ShowNextflowTaskLogInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowNextflowTaskLogInvoker) Invoke() (*model.ShowNextflowTaskLogResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowNextflowTaskLogResponse), nil
+	}
+}
+
+type CreateNextflowWorkflowInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateNextflowWorkflowInvoker) Invoke() (*model.CreateNextflowWorkflowResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateNextflowWorkflowResponse), nil
+	}
+}
+
+type DeleteNextflowWorkflowInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteNextflowWorkflowInvoker) Invoke() (*model.DeleteNextflowWorkflowResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteNextflowWorkflowResponse), nil
+	}
+}
+
+type ListNextflowWorkflowInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListNextflowWorkflowInvoker) Invoke() (*model.ListNextflowWorkflowResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListNextflowWorkflowResponse), nil
+	}
+}
+
+type ShowNextflowWorkflowInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowNextflowWorkflowInvoker) Invoke() (*model.ShowNextflowWorkflowResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowNextflowWorkflowResponse), nil
+	}
+}
+
+type UpdateNextflowWorkflowInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateNextflowWorkflowInvoker) Invoke() (*model.UpdateNextflowWorkflowResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateNextflowWorkflowResponse), nil
 	}
 }
 

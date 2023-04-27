@@ -24,7 +24,7 @@ type PolicySummaryDto struct {
 	// 策略的名称。
 	Name string `json:"name"`
 
-	// 策略的类型,service_control_policy：服务控制策略。
+	// 策略的类型,service_control_policy：服务控制策略；tag_policy：标签策略。
 	Type string `json:"type"`
 }
 

@@ -18,7 +18,7 @@ type EipResource struct {
 	// 弹性公网IP
 	PublicIp *string `json:"public_ip,omitempty"`
 
-	// EIP防护状态
+	// EIP防护状态，0表示防护中，1表示未防护
 	Status *EipResourceStatus `json:"status,omitempty"`
 
 	// 弹性公网IP,IPV6

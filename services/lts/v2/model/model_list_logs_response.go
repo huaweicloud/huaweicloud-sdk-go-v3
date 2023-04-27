@@ -13,8 +13,11 @@ type ListLogsResponse struct {
 	Count *int32 `json:"count,omitempty"`
 
 	// 日志信息。
-	Logs           *[]LogContents `json:"logs,omitempty"`
-	HttpStatusCode int            `json:"-"`
+	Logs *[]LogContents `json:"logs,omitempty"`
+
+	// 是否查询完成。
+	IsQueryComplete *bool `json:"isQueryComplete,omitempty"`
+	HttpStatusCode  int   `json:"-"`
 }
 
 func (o ListLogsResponse) String() string {

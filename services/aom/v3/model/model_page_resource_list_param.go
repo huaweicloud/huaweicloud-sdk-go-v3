@@ -9,7 +9,7 @@ import (
 type PageResourceListParam struct {
 
 	// 页面的分页标志位；为分页的最后一条记录的id
-	Maker *string `json:"maker,omitempty"`
+	Marker *string `json:"marker,omitempty"`
 
 	// 查询返回记录的数量限制
 	Limit *int32 `json:"limit,omitempty"`

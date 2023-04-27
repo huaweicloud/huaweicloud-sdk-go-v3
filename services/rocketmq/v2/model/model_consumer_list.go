@@ -12,7 +12,7 @@ type ConsumerList struct {
 	Topics *[]string `json:"topics,omitempty"`
 
 	// Topic总数（当查询topic消费“列表”时才显示此参数）。
-	Total float32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty"`
 }
 
 func (o ConsumerList) String() string {

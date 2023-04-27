@@ -20,6 +20,9 @@ type GetTagDetailRsp struct {
 
 	// 镜像版本更新时间
 	UpdateTime *string `json:"update_time,omitempty"`
+
+	// 镜像地址
+	Path *string `json:"path,omitempty"`
 }
 
 func (o GetTagDetailRsp) String() string {

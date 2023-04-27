@@ -439,6 +439,27 @@ func (c *SmsClient) ShowCommandInvoker(request *model.ShowCommandRequest) *ShowC
 	return &ShowCommandInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowConfigSetting 查询配置资源
+//
+// 使用该接口查询任指定任务的指定配置类型的配置信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmsClient) ShowConfigSetting(request *model.ShowConfigSettingRequest) (*model.ShowConfigSettingResponse, error) {
+	requestDef := GenReqDefForShowConfigSetting()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowConfigSettingResponse), nil
+	}
+}
+
+// ShowConfigSettingInvoker 查询配置资源
+func (c *SmsClient) ShowConfigSettingInvoker(request *model.ShowConfigSettingRequest) *ShowConfigSettingInvoker {
+	requestDef := GenReqDefForShowConfigSetting()
+	return &ShowConfigSettingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowMigproject 查询指定ID迁移项目详情
 //
 // 查询指定ID的迁移项目详情。
@@ -754,6 +775,27 @@ func (c *SmsClient) UpdateMigprojectInvoker(request *model.UpdateMigprojectReque
 	return &UpdateMigprojectInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateNetworkCheckInfo 更新网络检测相关的信息
+//
+// Agent 上报网络检测相关的信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmsClient) UpdateNetworkCheckInfo(request *model.UpdateNetworkCheckInfoRequest) (*model.UpdateNetworkCheckInfoResponse, error) {
+	requestDef := GenReqDefForUpdateNetworkCheckInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateNetworkCheckInfoResponse), nil
+	}
+}
+
+// UpdateNetworkCheckInfoInvoker 更新网络检测相关的信息
+func (c *SmsClient) UpdateNetworkCheckInfoInvoker(request *model.UpdateNetworkCheckInfoRequest) *UpdateNetworkCheckInfoInvoker {
+	requestDef := GenReqDefForUpdateNetworkCheckInfo()
+	return &UpdateNetworkCheckInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateServerName 修改指定ID的源端服务器名称
 //
 // 该功能用来修改SMS服务端的源端名称，方便用户对源端进行管理。
@@ -880,4 +922,88 @@ func (c *SmsClient) UpdateTemplate(request *model.UpdateTemplateRequest) (*model
 func (c *SmsClient) UpdateTemplateInvoker(request *model.UpdateTemplateRequest) *UpdateTemplateInvoker {
 	requestDef := GenReqDefForUpdateTemplate()
 	return &UpdateTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UploadSpecialConfigurationSetting 迁移任务配置设置
+//
+// 配置迁移任务特殊设置，例如配置指定同步的文件或路径
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmsClient) UploadSpecialConfigurationSetting(request *model.UploadSpecialConfigurationSettingRequest) (*model.UploadSpecialConfigurationSettingResponse, error) {
+	requestDef := GenReqDefForUploadSpecialConfigurationSetting()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UploadSpecialConfigurationSettingResponse), nil
+	}
+}
+
+// UploadSpecialConfigurationSettingInvoker 迁移任务配置设置
+func (c *SmsClient) UploadSpecialConfigurationSettingInvoker(request *model.UploadSpecialConfigurationSettingRequest) *UploadSpecialConfigurationSettingInvoker {
+	requestDef := GenReqDefForUploadSpecialConfigurationSetting()
+	return &UploadSpecialConfigurationSettingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowConfig 获取Agent配置信息
+//
+// 源端Agent启动后，访问此接口获取配置信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmsClient) ShowConfig(request *model.ShowConfigRequest) (*model.ShowConfigResponse, error) {
+	requestDef := GenReqDefForShowConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowConfigResponse), nil
+	}
+}
+
+// ShowConfigInvoker 获取Agent配置信息
+func (c *SmsClient) ShowConfigInvoker(request *model.ShowConfigRequest) *ShowConfigInvoker {
+	requestDef := GenReqDefForShowConfig()
+	return &ShowConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApiVersion 查询主机迁移服务的API版本信息
+//
+// 查询主机迁移服务的API版本信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmsClient) ListApiVersion(request *model.ListApiVersionRequest) (*model.ListApiVersionResponse, error) {
+	requestDef := GenReqDefForListApiVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListApiVersionResponse), nil
+	}
+}
+
+// ListApiVersionInvoker 查询主机迁移服务的API版本信息
+func (c *SmsClient) ListApiVersionInvoker(request *model.ListApiVersionRequest) *ListApiVersionInvoker {
+	requestDef := GenReqDefForListApiVersion()
+	return &ListApiVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowApiVersion 查询主机迁移服务指定API版本信息
+//
+// 查询主机迁移服务指定API版本信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmsClient) ShowApiVersion(request *model.ShowApiVersionRequest) (*model.ShowApiVersionResponse, error) {
+	requestDef := GenReqDefForShowApiVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowApiVersionResponse), nil
+	}
+}
+
+// ShowApiVersionInvoker 查询主机迁移服务指定API版本信息
+func (c *SmsClient) ShowApiVersionInvoker(request *model.ShowApiVersionRequest) *ShowApiVersionInvoker {
+	requestDef := GenReqDefForShowApiVersion()
+	return &ShowApiVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

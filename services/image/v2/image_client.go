@@ -82,27 +82,6 @@ func (c *ImageClient) RunCelebrityRecognitionInvoker(request *model.RunCelebrity
 	return &RunCelebrityRecognitionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// RunDeleteCustomTags 删除媒资图像标签
-//
-// 用于用户删除自定义的标签。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ImageClient) RunDeleteCustomTags(request *model.RunDeleteCustomTagsRequest) (*model.RunDeleteCustomTagsResponse, error) {
-	requestDef := GenReqDefForRunDeleteCustomTags()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.RunDeleteCustomTagsResponse), nil
-	}
-}
-
-// RunDeleteCustomTagsInvoker 删除媒资图像标签
-func (c *ImageClient) RunDeleteCustomTagsInvoker(request *model.RunDeleteCustomTagsRequest) *RunDeleteCustomTagsInvoker {
-	requestDef := GenReqDefForRunDeleteCustomTags()
-	return &RunDeleteCustomTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // RunImageDescription 图像描述
 //
 // 图像描述
@@ -227,27 +206,6 @@ func (c *ImageClient) RunImageTagging(request *model.RunImageTaggingRequest) (*m
 func (c *ImageClient) RunImageTaggingInvoker(request *model.RunImageTaggingRequest) *RunImageTaggingInvoker {
 	requestDef := GenReqDefForRunImageTagging()
 	return &RunImageTaggingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// RunQueryCustomTags 查询媒资图像标签
-//
-// 用于用户自查是否存在自定义的标签。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ImageClient) RunQueryCustomTags(request *model.RunQueryCustomTagsRequest) (*model.RunQueryCustomTagsResponse, error) {
-	requestDef := GenReqDefForRunQueryCustomTags()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.RunQueryCustomTagsResponse), nil
-	}
-}
-
-// RunQueryCustomTagsInvoker 查询媒资图像标签
-func (c *ImageClient) RunQueryCustomTagsInvoker(request *model.RunQueryCustomTagsRequest) *RunQueryCustomTagsInvoker {
-	requestDef := GenReqDefForRunQueryCustomTags()
-	return &RunQueryCustomTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // RunRecaptureDetect 翻拍识别

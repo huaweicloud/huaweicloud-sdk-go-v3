@@ -41,6 +41,9 @@ type QueryLtsLogParams struct {
 
 	// 日志关键词高亮显示，默认为true（高亮显示），false为取消高亮显示。
 	Highlight *bool `json:"highlight,omitempty"`
+
+	// 日志迭代查询，默认为false（不开启迭代），true为开启迭代。
+	IsIterative *bool `json:"is_iterative,omitempty"`
 }
 
 func (o QueryLtsLogParams) String() string {

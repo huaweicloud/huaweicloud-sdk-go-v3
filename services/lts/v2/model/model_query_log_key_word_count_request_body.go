@@ -26,6 +26,9 @@ type QueryLogKeyWordCountRequestBody struct {
 
 	// 关键词
 	KeyWord string `json:"key_word"`
+
+	// 日志迭代查询，默认为false（不开启迭代），true为开启迭代。
+	IsIterative *bool `json:"is_iterative,omitempty"`
 }
 
 func (o QueryLogKeyWordCountRequestBody) String() string {

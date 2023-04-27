@@ -100,8 +100,10 @@ type ShowTaskResponse struct {
 	CloneServer *CloneServer `json:"clone_server,omitempty"`
 
 	// 任务包含的子任务列表
-	SubTasks       *[]SubTask `json:"sub_tasks,omitempty"`
-	HttpStatusCode int        `json:"-"`
+	SubTasks *[]SubTask `json:"sub_tasks,omitempty"`
+
+	NetworkCheckInfo *NetworkCheckInfoRequestBody `json:"network_check_info,omitempty"`
+	HttpStatusCode   int                          `json:"-"`
 }
 
 func (o ShowTaskResponse) String() string {

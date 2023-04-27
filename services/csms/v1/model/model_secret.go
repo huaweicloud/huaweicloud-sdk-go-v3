@@ -15,7 +15,7 @@ type Secret struct {
 	// 凭据名称。
 	Name *string `json:"name,omitempty"`
 
-	// 凭据状态，取值如下：  ENABLED：表示启用状态  DISABLED：表示禁用状态  PENDING_DELETE：表示待删除状态  FROZEN：表示冻结状态状态
+	// 凭据状态，取值如下：  ENABLED：表示启用状态  DISABLED：表示禁用状态  PENDING_DELETE：表示待删除状态  FROZEN：表示冻结状态
 	State *string `json:"state,omitempty"`
 
 	// 用于加密凭据值的KMS主密钥的ID值。

@@ -41,18 +41,6 @@ func (i *RunCelebrityRecognitionInvoker) Invoke() (*model.RunCelebrityRecognitio
 	}
 }
 
-type RunDeleteCustomTagsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *RunDeleteCustomTagsInvoker) Invoke() (*model.RunDeleteCustomTagsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.RunDeleteCustomTagsResponse), nil
-	}
-}
-
 type RunImageDescriptionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -122,18 +110,6 @@ func (i *RunImageTaggingInvoker) Invoke() (*model.RunImageTaggingResponse, error
 		return nil, err
 	} else {
 		return result.(*model.RunImageTaggingResponse), nil
-	}
-}
-
-type RunQueryCustomTagsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *RunQueryCustomTagsInvoker) Invoke() (*model.RunQueryCustomTagsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.RunQueryCustomTagsResponse), nil
 	}
 }
 

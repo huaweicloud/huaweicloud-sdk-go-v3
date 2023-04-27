@@ -21,7 +21,7 @@ type ListPoliciesRequest struct {
 	// 分页标记。
 	Marker *string `json:"marker,omitempty"`
 
-	// 选择接口返回的信息的语言，默认为\"zh-cn\"中文，zh-cn中文，en-us英文
+	// 选择接口返回的信息的语言
 	XLanguage *ListPoliciesRequestXLanguage `json:"X-Language,omitempty"`
 }
 

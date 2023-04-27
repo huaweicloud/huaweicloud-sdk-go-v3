@@ -13,8 +13,11 @@ type ListLogHistogramResponse struct {
 	Histogram *string `json:"histogram,omitempty"`
 
 	// 日志条数
-	Count          *int64 `json:"count,omitempty"`
-	HttpStatusCode int    `json:"-"`
+	Count *int64 `json:"count,omitempty"`
+
+	// 是否查询完成。
+	IsQueryComplete *bool `json:"isQueryComplete,omitempty"`
+	HttpStatusCode  int   `json:"-"`
 }
 
 func (o ListLogHistogramResponse) String() string {

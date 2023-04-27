@@ -10,7 +10,7 @@ import (
 type PublishWorkflowResponse struct {
 
 	// 资产id
-	AssetId *string `json:"asset_id,omitempty"`
+	Id *string `json:"id,omitempty"`
 
 	// 资产版本
 	Version        *string `json:"version,omitempty"`

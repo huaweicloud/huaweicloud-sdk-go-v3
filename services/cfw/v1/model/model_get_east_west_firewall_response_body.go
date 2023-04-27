@@ -15,7 +15,7 @@ type GetEastWestFirewallResponseBody struct {
 	// 租户project_id
 	ProjectId *string `json:"project_id,omitempty"`
 
-	// 防护状态：0 未开启防护， 1 已开启防护
+	// 防护状态：0 已开启防护， 1 未开启防护
 	Status *int32 `json:"status,omitempty"`
 
 	ErAssociatedSubnet *SubnetInfo `json:"er_associated_subnet,omitempty"`

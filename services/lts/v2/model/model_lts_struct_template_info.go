@@ -44,8 +44,7 @@ type LtsStructTemplateInfo struct {
 	// parse_type为nginx类型时必填，nginx日志格式模板
 	LogFormat *string `json:"log_format,omitempty"`
 
-	// 结构化方式
-	Rule *[]Rule `json:"rule,omitempty"`
+	Rule *Rule `json:"rule,omitempty"`
 }
 
 func (o LtsStructTemplateInfo) String() string {

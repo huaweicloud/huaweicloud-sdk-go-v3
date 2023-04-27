@@ -44,6 +44,9 @@ type PostMigProjectBody struct {
 
 	// 首次复制或者同步后 是否继续持续同步
 	Syncing bool `json:"syncing"`
+
+	// 是否启动网络质量检测
+	StartNetworckCheck *bool `json:"start_networck_check,omitempty"`
 }
 
 func (o PostMigProjectBody) String() string {

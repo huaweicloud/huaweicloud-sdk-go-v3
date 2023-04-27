@@ -96,8 +96,11 @@ type ShowInstanceResponse struct {
 	// 是否开启安全认证。 - true：开启 - false：未开启
 	SslEnable *bool `json:"ssl_enable,omitempty"`
 
+	// 开启SASL后使用的安全协议。 - SASL_SSL: 采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持账号密码认证，性能更好，仅支持SCRAM-SHA-512机制。
+	KafkaSecurityProtocol *string `json:"kafka_security_protocol,omitempty"`
+
 	// 开启SASL后使用的认证机制。 - PLAIN: 简单的用户名密码校验。 - SCRAM-SHA-512: 用户凭证校验，安全性比PLAIN机制更高。
-	SaslEnabledMechanisms *[]string `json:"sasl_enabled_mechanisms,omitempty"`
+	SaslEnabledMechanisms *[]ShowInstanceResponseSaslEnabledMechanisms `json:"sasl_enabled_mechanisms,omitempty"`
 
 	// 是否开启双向认证。
 	SslTwoWayEnable *bool `json:"ssl_two_way_enable,omitempty"`
@@ -255,6 +258,48 @@ func (o ShowInstanceResponse) String() string {
 	}
 
 	return strings.Join([]string{"ShowInstanceResponse", string(data)}, " ")
+}
+
+type ShowInstanceResponseSaslEnabledMechanisms struct {
+	value string
+}
+
+type ShowInstanceResponseSaslEnabledMechanismsEnum struct {
+	PLAIN         ShowInstanceResponseSaslEnabledMechanisms
+	SCRAM_SHA_512 ShowInstanceResponseSaslEnabledMechanisms
+}
+
+func GetShowInstanceResponseSaslEnabledMechanismsEnum() ShowInstanceResponseSaslEnabledMechanismsEnum {
+	return ShowInstanceResponseSaslEnabledMechanismsEnum{
+		PLAIN: ShowInstanceResponseSaslEnabledMechanisms{
+			value: "PLAIN",
+		},
+		SCRAM_SHA_512: ShowInstanceResponseSaslEnabledMechanisms{
+			value: "SCRAM-SHA-512",
+		},
+	}
+}
+
+func (c ShowInstanceResponseSaslEnabledMechanisms) Value() string {
+	return c.value
+}
+
+func (c ShowInstanceResponseSaslEnabledMechanisms) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ShowInstanceResponseSaslEnabledMechanisms) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type ShowInstanceResponseType struct {
