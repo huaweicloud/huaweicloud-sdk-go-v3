@@ -12,7 +12,7 @@ type GetDatabases struct {
 	// 分片数。
 	Dbslot int32 `json:"dbslot"`
 
-	// 分片名称.
+	// 分片名称。
 	Name string `json:"name"`
 
 	// 状态。

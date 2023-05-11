@@ -8,6 +8,10 @@ import (
 
 // Request Object
 type ImportJobRequest struct {
+
+	// 工作空间id
+	Workspace *string `json:"workspace,omitempty"`
+
 	Body *ImportFileReq `json:"body,omitempty"`
 }
 

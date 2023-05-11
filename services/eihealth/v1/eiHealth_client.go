@@ -82,6 +82,48 @@ func (c *EiHealthClient) ShowCpiTaskResultInvoker(request *model.ShowCpiTaskResu
 	return &ShowCpiTaskResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateCustomPropsTask 新建自定义属性任务接口
+//
+// 输入自定义属性的任务数据，创建自定义属性建模任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) CreateCustomPropsTask(request *model.CreateCustomPropsTaskRequest) (*model.CreateCustomPropsTaskResponse, error) {
+	requestDef := GenReqDefForCreateCustomPropsTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateCustomPropsTaskResponse), nil
+	}
+}
+
+// CreateCustomPropsTaskInvoker 新建自定义属性任务接口
+func (c *EiHealthClient) CreateCustomPropsTaskInvoker(request *model.CreateCustomPropsTaskRequest) *CreateCustomPropsTaskInvoker {
+	requestDef := GenReqDefForCreateCustomPropsTask()
+	return &CreateCustomPropsTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowCustomPropsTaskResult 查询自定义属性任务
+//
+// 通过自定义属性任务ID查询任务状态及结果。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) ShowCustomPropsTaskResult(request *model.ShowCustomPropsTaskResultRequest) (*model.ShowCustomPropsTaskResultResponse, error) {
+	requestDef := GenReqDefForShowCustomPropsTaskResult()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowCustomPropsTaskResultResponse), nil
+	}
+}
+
+// ShowCustomPropsTaskResultInvoker 查询自定义属性任务
+func (c *EiHealthClient) ShowCustomPropsTaskResultInvoker(request *model.ShowCustomPropsTaskResultRequest) *ShowCustomPropsTaskResultInvoker {
+	requestDef := GenReqDefForShowCustomPropsTaskResult()
+	return &ShowCustomPropsTaskResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateGenerationTask 新建分子生成任务接口
 //
 // 输入分子属性约束，创建分子生成任务。
@@ -5351,4 +5393,46 @@ func (c *EiHealthClient) ShowSearchTaskResult(request *model.ShowSearchTaskResul
 func (c *EiHealthClient) ShowSearchTaskResultInvoker(request *model.ShowSearchTaskResultRequest) *ShowSearchTaskResultInvoker {
 	requestDef := GenReqDefForShowSearchTaskResult()
 	return &ShowSearchTaskResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSynthesisTask 新建分子合成路径规划任务接口
+//
+// 输入要进行合成路径规划的分子以及输出可行方案的个数。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) CreateSynthesisTask(request *model.CreateSynthesisTaskRequest) (*model.CreateSynthesisTaskResponse, error) {
+	requestDef := GenReqDefForCreateSynthesisTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSynthesisTaskResponse), nil
+	}
+}
+
+// CreateSynthesisTaskInvoker 新建分子合成路径规划任务接口
+func (c *EiHealthClient) CreateSynthesisTaskInvoker(request *model.CreateSynthesisTaskRequest) *CreateSynthesisTaskInvoker {
+	requestDef := GenReqDefForCreateSynthesisTask()
+	return &CreateSynthesisTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSynthesisTaskResult 查询分子合成路径规划任务
+//
+// 通过分子合成路径规划任务ID查询分子合成路径规划任务状态及结果。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) ShowSynthesisTaskResult(request *model.ShowSynthesisTaskResultRequest) (*model.ShowSynthesisTaskResultResponse, error) {
+	requestDef := GenReqDefForShowSynthesisTaskResult()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSynthesisTaskResultResponse), nil
+	}
+}
+
+// ShowSynthesisTaskResultInvoker 查询分子合成路径规划任务
+func (c *EiHealthClient) ShowSynthesisTaskResultInvoker(request *model.ShowSynthesisTaskResultRequest) *ShowSynthesisTaskResultInvoker {
+	requestDef := GenReqDefForShowSynthesisTaskResult()
+	return &ShowSynthesisTaskResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

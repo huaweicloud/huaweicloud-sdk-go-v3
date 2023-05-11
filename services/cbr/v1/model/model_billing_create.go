@@ -45,8 +45,6 @@ type BillingCreate struct {
 	// 跳转URL
 	ConsoleUrl *string `json:"console_url,omitempty"`
 
-	ExtraInfo *BillbingCreateExtraInfo `json:"extra_info,omitempty"`
-
 	// 存储库多az属性，默认为false
 	IsMultiAz *bool `json:"is_multi_az,omitempty"`
 

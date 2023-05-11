@@ -15,10 +15,10 @@ type SqlConvertReq struct {
 	// 源数据库类型。
 	SourceDbType SqlConvertReqSourceDbType `json:"source_db_type"`
 
-	// 目标数据库类型。
+	// 目标数据库类型。其中GaussDB Centralized已弃用。
 	TargetDbType SqlConvertReqTargetDbType `json:"target_db_type"`
 
-	// 目标数据库版本。 （注意：该字段需要与 target_db_type 字段组合成有效的目标数据库类型与版本，当前支持以下组合： GaussDB Centralized-2.0； RDS for PostgreSQL-11； RDS for PostgreSQL-Enhanced Edition； RDS for MySQL-5.7; GaussDB(for MySQL) 8.0。)
+	// 目标数据库版本。 （注意：该字段需要与 target_db_type 字段组合成有效的目标数据库类型与版本，当前支持以下组合： GaussDB Centralized-2.0（已弃用）； GaussDB Primary/Standby-2.0； RDS for PostgreSQL-11； RDS for PostgreSQL-Enhanced Edition； RDS for MySQL-5.7; GaussDB(for MySQL) 8.0。)
 	TargetDbVersion SqlConvertReqTargetDbVersion `json:"target_db_version"`
 
 	// 需要转换的SQL语句。
@@ -77,10 +77,11 @@ type SqlConvertReqTargetDbType struct {
 }
 
 type SqlConvertReqTargetDbTypeEnum struct {
-	RDS_FOR_MY_SQL       SqlConvertReqTargetDbType
-	GAUSS_DB_CENTRALIZED SqlConvertReqTargetDbType
-	GAUSS_DB_FOR_MY_SQL  SqlConvertReqTargetDbType
-	RDS_FOR_POSTGRE_SQL  SqlConvertReqTargetDbType
+	RDS_FOR_MY_SQL           SqlConvertReqTargetDbType
+	GAUSS_DB_FOR_MY_SQL      SqlConvertReqTargetDbType
+	RDS_FOR_POSTGRE_SQL      SqlConvertReqTargetDbType
+	GAUSS_DB_PRIMARY_STANDBY SqlConvertReqTargetDbType
+	GAUSS_DB_CENTRALIZED     SqlConvertReqTargetDbType
 }
 
 func GetSqlConvertReqTargetDbTypeEnum() SqlConvertReqTargetDbTypeEnum {
@@ -88,14 +89,17 @@ func GetSqlConvertReqTargetDbTypeEnum() SqlConvertReqTargetDbTypeEnum {
 		RDS_FOR_MY_SQL: SqlConvertReqTargetDbType{
 			value: "RDS for MySQL",
 		},
-		GAUSS_DB_CENTRALIZED: SqlConvertReqTargetDbType{
-			value: "GaussDB Centralized",
-		},
 		GAUSS_DB_FOR_MY_SQL: SqlConvertReqTargetDbType{
 			value: "GaussDB(for MySQL)",
 		},
 		RDS_FOR_POSTGRE_SQL: SqlConvertReqTargetDbType{
 			value: "RDS for PostgreSQL",
+		},
+		GAUSS_DB_PRIMARY_STANDBY: SqlConvertReqTargetDbType{
+			value: "GaussDB Primary/Standby",
+		},
+		GAUSS_DB_CENTRALIZED: SqlConvertReqTargetDbType{
+			value: "GaussDB Centralized",
 		},
 	}
 }

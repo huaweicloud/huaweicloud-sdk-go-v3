@@ -2485,6 +2485,48 @@ func (c *RdsClient) CreatePostgresqlExtensionInvoker(request *model.CreatePostgr
 	return &CreatePostgresqlExtensionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeletePostgresqlDatabase 删除数据库
+//
+// 删除数据库。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) DeletePostgresqlDatabase(request *model.DeletePostgresqlDatabaseRequest) (*model.DeletePostgresqlDatabaseResponse, error) {
+	requestDef := GenReqDefForDeletePostgresqlDatabase()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeletePostgresqlDatabaseResponse), nil
+	}
+}
+
+// DeletePostgresqlDatabaseInvoker 删除数据库
+func (c *RdsClient) DeletePostgresqlDatabaseInvoker(request *model.DeletePostgresqlDatabaseRequest) *DeletePostgresqlDatabaseInvoker {
+	requestDef := GenReqDefForDeletePostgresqlDatabase()
+	return &DeletePostgresqlDatabaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeletePostgresqlDbUser 删除数据库用户
+//
+// 删除数据库用户。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) DeletePostgresqlDbUser(request *model.DeletePostgresqlDbUserRequest) (*model.DeletePostgresqlDbUserResponse, error) {
+	requestDef := GenReqDefForDeletePostgresqlDbUser()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeletePostgresqlDbUserResponse), nil
+	}
+}
+
+// DeletePostgresqlDbUserInvoker 删除数据库用户
+func (c *RdsClient) DeletePostgresqlDbUserInvoker(request *model.DeletePostgresqlDbUserRequest) *DeletePostgresqlDbUserInvoker {
+	requestDef := GenReqDefForDeletePostgresqlDbUser()
+	return &DeletePostgresqlDbUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeletePostgresqlExtension 删除插件
 //
 // 在指定数据库上删除插件。
@@ -2781,6 +2823,48 @@ func (c *RdsClient) UpdateDbUserPrivilege(request *model.UpdateDbUserPrivilegeRe
 func (c *RdsClient) UpdateDbUserPrivilegeInvoker(request *model.UpdateDbUserPrivilegeRequest) *UpdateDbUserPrivilegeInvoker {
 	requestDef := GenReqDefForUpdateDbUserPrivilege()
 	return &UpdateDbUserPrivilegeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePostgresqlDatabase 修改指定实例的数据库备注
+//
+// 修改指定实例中的数据库备注。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) UpdatePostgresqlDatabase(request *model.UpdatePostgresqlDatabaseRequest) (*model.UpdatePostgresqlDatabaseResponse, error) {
+	requestDef := GenReqDefForUpdatePostgresqlDatabase()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdatePostgresqlDatabaseResponse), nil
+	}
+}
+
+// UpdatePostgresqlDatabaseInvoker 修改指定实例的数据库备注
+func (c *RdsClient) UpdatePostgresqlDatabaseInvoker(request *model.UpdatePostgresqlDatabaseRequest) *UpdatePostgresqlDatabaseInvoker {
+	requestDef := GenReqDefForUpdatePostgresqlDatabase()
+	return &UpdatePostgresqlDatabaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePostgresqlDbUserComment 修改数据库用户名备注
+//
+// 修改数据库用户名备注
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) UpdatePostgresqlDbUserComment(request *model.UpdatePostgresqlDbUserCommentRequest) (*model.UpdatePostgresqlDbUserCommentResponse, error) {
+	requestDef := GenReqDefForUpdatePostgresqlDbUserComment()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdatePostgresqlDbUserCommentResponse), nil
+	}
+}
+
+// UpdatePostgresqlDbUserCommentInvoker 修改数据库用户名备注
+func (c *RdsClient) UpdatePostgresqlDbUserCommentInvoker(request *model.UpdatePostgresqlDbUserCommentRequest) *UpdatePostgresqlDbUserCommentInvoker {
+	requestDef := GenReqDefForUpdatePostgresqlDbUserComment()
+	return &UpdatePostgresqlDbUserCommentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdatePostgresqlParameterValue 修改实例指定参数的值

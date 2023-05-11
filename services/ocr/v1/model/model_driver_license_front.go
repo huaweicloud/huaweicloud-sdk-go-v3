@@ -56,7 +56,7 @@ type DriverLicenseFront struct {
 	// 当前时间。
 	CurrentTime *string `json:"current_time,omitempty"`
 
-	// 档案编号。
+	// 档案编号。  > 说明：当驾驶证类型为电子驾驶证时才返回。
 	FileNumber *string `json:"file_number,omitempty"`
 
 	// 对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。

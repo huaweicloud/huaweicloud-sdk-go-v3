@@ -8,6 +8,10 @@ import (
 
 // Request Object
 type CancelScriptRequest struct {
+
+	// 工作空间id
+	Workspace *string `json:"workspace,omitempty"`
+
 	ScriptName string `json:"script_name"`
 
 	InstanceId string `json:"instance_id"`

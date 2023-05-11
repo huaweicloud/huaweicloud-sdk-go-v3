@@ -18,8 +18,8 @@ type ListAreaDetailRequest struct {
 	// 查询结束时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度1天，最大查询周期90天。
 	EndTime string `json:"end_time"`
 
-	// 需查询的播放域名列表，最多支持查询15个域名。
-	PlayDomains []string `json:"play_domains"`
+	// 需查询的播放域名列表，最多支持查询100个域名。
+	PlayDomains *[]string `json:"play_domains,omitempty"`
 
 	// 需查询的app。
 	App *string `json:"app,omitempty"`

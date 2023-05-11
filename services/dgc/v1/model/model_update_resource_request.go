@@ -9,6 +9,9 @@ import (
 // Request Object
 type UpdateResourceRequest struct {
 
+	// 工作空间id
+	Workspace *string `json:"workspace,omitempty"`
+
 	// 资源id.
 	ResourceId string `json:"resource_id"`
 

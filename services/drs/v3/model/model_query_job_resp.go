@@ -168,6 +168,11 @@ type QueryJobResp struct {
 
 	// 初始任务方向。 取值： - up：入云，灾备场景时对应本云为备。 - down：出云，灾备场景时对应本云为主。 - non-dbs：自建。
 	OriginalJobDirection *QueryJobRespOriginalJobDirection `json:"original_job_direction,omitempty"`
+
+	DataTransformation *GetDataTransformationResp `json:"data_transformation,omitempty"`
+
+	// DRS任务标签
+	Tags *[]Tag `json:"tags,omitempty"`
 }
 
 func (o QueryJobResp) String() string {

@@ -7,7 +7,7 @@ import (
 )
 
 // Request Object
-type CreateInstallCmdRequest struct {
+type CreateClusterInstallCmdRequest struct {
 
 	// 边缘集群ID
 	ClusterId string `json:"cluster_id"`
@@ -19,11 +19,11 @@ type CreateInstallCmdRequest struct {
 	Os *string `json:"os,omitempty"`
 }
 
-func (o CreateInstallCmdRequest) String() string {
+func (o CreateClusterInstallCmdRequest) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "CreateInstallCmdRequest struct{}"
+		return "CreateClusterInstallCmdRequest struct{}"
 	}
 
-	return strings.Join([]string{"CreateInstallCmdRequest", string(data)}, " ")
+	return strings.Join([]string{"CreateClusterInstallCmdRequest", string(data)}, " ")
 }

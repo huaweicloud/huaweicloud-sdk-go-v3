@@ -230,6 +230,33 @@ func (c *AosClient) ListExecutionPlansInvoker(request *model.ListExecutionPlansR
 	return &ListExecutionPlansInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ContinueDeployStack 继续部署资源栈
+//
+// 继续部署资源栈（ContinueDeployStack）
+//
+// 此API用于继续部署一个已有的资源栈
+//
+// * 如果资源栈当前可以继续部署，即处于&#x60;DEPLOYMENT_FAILED&#x60;，则返回202与对应生成的deploymentId，否则将不允许继续部署并返回相应的错误码
+//
+// * 继续部署操作依然有可能部署失败，用户可以从ListStackEvents获取对应的log，解决后可再次调用此API触发继续部署
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AosClient) ContinueDeployStack(request *model.ContinueDeployStackRequest) (*model.ContinueDeployStackResponse, error) {
+	requestDef := GenReqDefForContinueDeployStack()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ContinueDeployStackResponse), nil
+	}
+}
+
+// ContinueDeployStackInvoker 继续部署资源栈
+func (c *AosClient) ContinueDeployStackInvoker(request *model.ContinueDeployStackRequest) *ContinueDeployStackInvoker {
+	requestDef := GenReqDefForContinueDeployStack()
+	return &ContinueDeployStackInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ContinueRollbackStack 继续回滚资源栈
 //
 // 继续回滚资源栈（ContinueRollbackStack）

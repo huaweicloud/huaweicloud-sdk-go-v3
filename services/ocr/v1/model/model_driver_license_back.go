@@ -23,7 +23,7 @@ type DriverLicenseBack struct {
 	// 住址。
 	Address *string `json:"address,omitempty"`
 
-	// 档案编号。
+	// 档案编号。 > 说明：当驾驶证类型为纸质驾驶证时才返回。
 	FileNumber *string `json:"file_number,omitempty"`
 
 	// 记录。

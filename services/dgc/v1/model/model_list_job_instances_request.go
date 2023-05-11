@@ -8,6 +8,9 @@ import (
 
 // Request Object
 type ListJobInstancesRequest struct {
+
+	// 工作空间id
+	Workspace *string `json:"workspace,omitempty"`
 }
 
 func (o ListJobInstancesRequest) String() string {

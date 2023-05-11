@@ -8,6 +8,10 @@ import (
 
 // Request Object
 type CreateConnectionRequest struct {
+
+	// 工作空间id
+	Workspace *string `json:"workspace,omitempty"`
+
 	Body *ConnectionInfo `json:"body,omitempty"`
 }
 

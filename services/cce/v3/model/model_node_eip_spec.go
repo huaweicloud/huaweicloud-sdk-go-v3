@@ -10,7 +10,7 @@ import (
 type NodeEipSpec struct {
 
 	// 弹性IP类型，取值请参见申请EIP接口中publicip.type说明。 [链接请参见[申请EIP](https://support.huaweicloud.com/api-eip/eip_api_0001.html)](tag:hws) [链接请参见[申请EIP](https://support.huaweicloud.com/intl/zh-cn/api-eip/eip_api_0001.html)](tag:hws_hk)
-	Iptype *string `json:"iptype,omitempty"`
+	Iptype string `json:"iptype"`
 
 	Bandwidth *NodeBandwidth `json:"bandwidth,omitempty"`
 }

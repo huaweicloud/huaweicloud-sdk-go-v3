@@ -41,6 +41,30 @@ func (i *ShowCpiTaskResultInvoker) Invoke() (*model.ShowCpiTaskResultResponse, e
 	}
 }
 
+type CreateCustomPropsTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateCustomPropsTaskInvoker) Invoke() (*model.CreateCustomPropsTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateCustomPropsTaskResponse), nil
+	}
+}
+
+type ShowCustomPropsTaskResultInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowCustomPropsTaskResultInvoker) Invoke() (*model.ShowCustomPropsTaskResultResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowCustomPropsTaskResultResponse), nil
+	}
+}
+
 type CreateGenerationTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3050,5 +3074,29 @@ func (i *ShowSearchTaskResultInvoker) Invoke() (*model.ShowSearchTaskResultRespo
 		return nil, err
 	} else {
 		return result.(*model.ShowSearchTaskResultResponse), nil
+	}
+}
+
+type CreateSynthesisTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSynthesisTaskInvoker) Invoke() (*model.CreateSynthesisTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSynthesisTaskResponse), nil
+	}
+}
+
+type ShowSynthesisTaskResultInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSynthesisTaskResultInvoker) Invoke() (*model.ShowSynthesisTaskResultResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSynthesisTaskResultResponse), nil
 	}
 }

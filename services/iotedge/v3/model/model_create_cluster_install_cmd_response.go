@@ -7,18 +7,18 @@ import (
 )
 
 // Response Object
-type CreateInstallCmdResponse struct {
+type CreateClusterInstallCmdResponse struct {
 
 	// 标准版节点安装/升级命令
 	Cmd            *string `json:"cmd,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 
-func (o CreateInstallCmdResponse) String() string {
+func (o CreateClusterInstallCmdResponse) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "CreateInstallCmdResponse struct{}"
+		return "CreateClusterInstallCmdResponse struct{}"
 	}
 
-	return strings.Join([]string{"CreateInstallCmdResponse", string(data)}, " ")
+	return strings.Join([]string{"CreateClusterInstallCmdResponse", string(data)}, " ")
 }

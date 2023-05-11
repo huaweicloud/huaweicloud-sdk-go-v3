@@ -9,6 +9,9 @@ import (
 // Request Object
 type ListSystemTasksRequest struct {
 
+	// 工作空间id
+	Workspace *string `json:"workspace,omitempty"`
+
 	// 系统任务id.
 	TaskId string `json:"task_id"`
 }

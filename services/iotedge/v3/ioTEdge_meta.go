@@ -370,11 +370,11 @@ func GenReqDefForCreateCluster() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForCreateInstallCmd() *def.HttpRequestDef {
+func GenReqDefForCreateClusterInstallCmd() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v3/{project_id}/clusters/{cluster_id}/install-cmd").
-		WithResponse(new(model.CreateInstallCmdResponse)).
+		WithResponse(new(model.CreateClusterInstallCmdResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

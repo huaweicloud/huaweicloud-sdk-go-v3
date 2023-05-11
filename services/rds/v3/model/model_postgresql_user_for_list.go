@@ -17,6 +17,9 @@ type PostgresqlUserForList struct {
 
 	// 用户的默认权限。
 	Memberof *[]string `json:"memberof,omitempty"`
+
+	// 数据库用户备注。
+	Comment *string `json:"comment,omitempty"`
 }
 
 func (o PostgresqlUserForList) String() string {

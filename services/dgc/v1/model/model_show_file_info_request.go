@@ -8,6 +8,10 @@ import (
 
 // Request Object
 type ShowFileInfoRequest struct {
+
+	// 工作空间id
+	Workspace *string `json:"workspace,omitempty"`
+
 	Body *FilePath `json:"body,omitempty"`
 }
 

@@ -41,6 +41,30 @@ func (i *ChangeShareNameInvoker) Invoke() (*model.ChangeShareNameResponse, error
 	}
 }
 
+type CreateFsDirInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateFsDirInvoker) Invoke() (*model.CreateFsDirResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateFsDirResponse), nil
+	}
+}
+
+type CreateFsDirQuotaInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateFsDirQuotaInvoker) Invoke() (*model.CreateFsDirQuotaResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateFsDirQuotaResponse), nil
+	}
+}
+
 type CreateShareInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -62,6 +86,30 @@ func (i *CreateSharedTagInvoker) Invoke() (*model.CreateSharedTagResponse, error
 		return nil, err
 	} else {
 		return result.(*model.CreateSharedTagResponse), nil
+	}
+}
+
+type DeleteFsDirInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteFsDirInvoker) Invoke() (*model.DeleteFsDirResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteFsDirResponse), nil
+	}
+}
+
+type DeleteFsDirQuotaInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteFsDirQuotaInvoker) Invoke() (*model.DeleteFsDirQuotaResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteFsDirQuotaResponse), nil
 	}
 }
 
@@ -125,6 +173,30 @@ func (i *ListSharesInvoker) Invoke() (*model.ListSharesResponse, error) {
 	}
 }
 
+type ShowFsDirInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowFsDirInvoker) Invoke() (*model.ShowFsDirResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowFsDirResponse), nil
+	}
+}
+
+type ShowFsDirQuotaInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowFsDirQuotaInvoker) Invoke() (*model.ShowFsDirQuotaResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowFsDirQuotaResponse), nil
+	}
+}
+
 type ShowShareInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -146,5 +218,17 @@ func (i *ShowSharedTagsInvoker) Invoke() (*model.ShowSharedTagsResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.ShowSharedTagsResponse), nil
+	}
+}
+
+type UpdateFsDirQuotaInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateFsDirQuotaInvoker) Invoke() (*model.UpdateFsDirQuotaResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateFsDirQuotaResponse), nil
 	}
 }

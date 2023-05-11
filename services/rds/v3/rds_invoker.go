@@ -1409,6 +1409,30 @@ func (i *CreatePostgresqlExtensionInvoker) Invoke() (*model.CreatePostgresqlExte
 	}
 }
 
+type DeletePostgresqlDatabaseInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeletePostgresqlDatabaseInvoker) Invoke() (*model.DeletePostgresqlDatabaseResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeletePostgresqlDatabaseResponse), nil
+	}
+}
+
+type DeletePostgresqlDbUserInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeletePostgresqlDbUserInvoker) Invoke() (*model.DeletePostgresqlDbUserResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeletePostgresqlDbUserResponse), nil
+	}
+}
+
 type DeletePostgresqlExtensionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1574,6 +1598,30 @@ func (i *UpdateDbUserPrivilegeInvoker) Invoke() (*model.UpdateDbUserPrivilegeRes
 		return nil, err
 	} else {
 		return result.(*model.UpdateDbUserPrivilegeResponse), nil
+	}
+}
+
+type UpdatePostgresqlDatabaseInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdatePostgresqlDatabaseInvoker) Invoke() (*model.UpdatePostgresqlDatabaseResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdatePostgresqlDatabaseResponse), nil
+	}
+}
+
+type UpdatePostgresqlDbUserCommentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdatePostgresqlDbUserCommentInvoker) Invoke() (*model.UpdatePostgresqlDbUserCommentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdatePostgresqlDbUserCommentResponse), nil
 	}
 }
 

@@ -9,6 +9,9 @@ import (
 // Request Object
 type RestoreJobInstanceRequest struct {
 
+	// 工作空间id
+	Workspace *string `json:"workspace,omitempty"`
+
 	// 作业名称.
 	JobName string `json:"job_name"`
 

@@ -20,6 +20,9 @@ type CpiResult struct {
 
 	// 返回CPI的模型结果
 	Result []CpiResultItem `json:"result"`
+
+	// 用户已开启的自定义属性集合
+	CustomProps *[]CustomProp `json:"custom_props,omitempty"`
 }
 
 func (o CpiResult) String() string {

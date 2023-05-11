@@ -29,6 +29,9 @@ type PostgresqlDatabaseForCreation struct {
 
 	// 是否回收public schema的PUBLIC CREATE权限。 true，表示回收该权限。 false，表示不回收该权限。 缺省时默认是false。
 	IsRevokePublicPrivilege *bool `json:"is_revoke_public_privilege,omitempty"`
+
+	// 数据库备注。 取值范围：长度1~512个字符。
+	Comment *string `json:"comment,omitempty"`
 }
 
 func (o PostgresqlDatabaseForCreation) String() string {

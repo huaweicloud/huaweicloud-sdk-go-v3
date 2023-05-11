@@ -65,6 +65,18 @@ func (i *DeletePendingAggregationRequestInvoker) Invoke() (*model.DeletePendingA
 	}
 }
 
+type ListAggregateComplianceByPolicyAssignmentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAggregateComplianceByPolicyAssignmentInvoker) Invoke() (*model.ListAggregateComplianceByPolicyAssignmentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAggregateComplianceByPolicyAssignmentResponse), nil
+	}
+}
+
 type ListAggregateDiscoveredResourcesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -125,6 +137,18 @@ func (i *RunAggregateResourceQueryInvoker) Invoke() (*model.RunAggregateResource
 	}
 }
 
+type ShowAggregateComplianceDetailsByPolicyAssignmentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAggregateComplianceDetailsByPolicyAssignmentInvoker) Invoke() (*model.ShowAggregateComplianceDetailsByPolicyAssignmentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAggregateComplianceDetailsByPolicyAssignmentResponse), nil
+	}
+}
+
 type ShowAggregateDiscoveredResourceCountsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -134,6 +158,30 @@ func (i *ShowAggregateDiscoveredResourceCountsInvoker) Invoke() (*model.ShowAggr
 		return nil, err
 	} else {
 		return result.(*model.ShowAggregateDiscoveredResourceCountsResponse), nil
+	}
+}
+
+type ShowAggregatePolicyAssignmentDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAggregatePolicyAssignmentDetailInvoker) Invoke() (*model.ShowAggregatePolicyAssignmentDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAggregatePolicyAssignmentDetailResponse), nil
+	}
+}
+
+type ShowAggregatePolicyStateComplianceSummaryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAggregatePolicyStateComplianceSummaryInvoker) Invoke() (*model.ShowAggregatePolicyStateComplianceSummaryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAggregatePolicyStateComplianceSummaryResponse), nil
 	}
 }
 

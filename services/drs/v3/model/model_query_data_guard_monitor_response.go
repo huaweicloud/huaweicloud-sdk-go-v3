@@ -65,6 +65,9 @@ type QueryDataGuardMonitorResponse struct {
 
 	// 磁盘使用。
 	VolumeUsedInGB *string `json:"volume_used_inGB,omitempty"`
+
+	// 每秒迁移字节大小。
+	MigrationBytesPerSecond *int64 `json:"migration_bytes_per_second,omitempty"`
 }
 
 func (o QueryDataGuardMonitorResponse) String() string {

@@ -1978,10 +1978,10 @@ func GenReqDefForListOrderIncident() *def.HttpRequestDef {
 		WithName("PageSize").
 		WithJsonTag("pageSize").
 		WithLocationType(def.Query))
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
+		WithName("XCustomerId").
+		WithJsonTag("xCustomerId").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

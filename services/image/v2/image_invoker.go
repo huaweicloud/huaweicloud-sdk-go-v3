@@ -29,6 +29,18 @@ func (i *CreateVideoObjectMaskingTaskInvoker) Invoke() (*model.CreateVideoObject
 	}
 }
 
+type CreateVideoTaggingMediaTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateVideoTaggingMediaTaskInvoker) Invoke() (*model.CreateVideoTaggingMediaTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateVideoTaggingMediaTaskResponse), nil
+	}
+}
+
 type RunCelebrityRecognitionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -146,5 +158,17 @@ func (i *ShowVideoObjectMaskingTaskInvoker) Invoke() (*model.ShowVideoObjectMask
 		return nil, err
 	} else {
 		return result.(*model.ShowVideoObjectMaskingTaskResponse), nil
+	}
+}
+
+type ShowVideoTaggingMediaTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowVideoTaggingMediaTaskInvoker) Invoke() (*model.ShowVideoTaggingMediaTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowVideoTaggingMediaTaskResponse), nil
 	}
 }

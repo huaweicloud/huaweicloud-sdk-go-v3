@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-type Quota struct {
+type CtsQuota struct {
 
 	// quota资源类型。
 	Type *string `json:"type,omitempty"`
@@ -18,11 +18,11 @@ type Quota struct {
 	Quota *int64 `json:"quota,omitempty"`
 }
 
-func (o Quota) String() string {
+func (o CtsQuota) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "Quota struct{}"
+		return "CtsQuota struct{}"
 	}
 
-	return strings.Join([]string{"Quota", string(data)}, " ")
+	return strings.Join([]string{"CtsQuota", string(data)}, " ")
 }

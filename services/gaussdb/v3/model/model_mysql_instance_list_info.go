@@ -17,8 +17,14 @@ type MysqlInstanceListInfo struct {
 	// 实例状态。
 	Status *string `json:"status,omitempty"`
 
-	// 实例写内网IP地址列表。弹性云服务器创建成功后该值存在，其他情况下为空字符串。
+	// 实例写内网IP地址列表。弹性云服务器创建成功后该值存在，其他情况下为空字列表。
 	PrivateIps *[]string `json:"private_ips,omitempty"`
+
+	// 实例读内网IP地址列表。弹性云服务器创建成功后该值存在，其他情况下为空列表。
+	ReadonlyPrivateIps *[]string `json:"readonly_private_ips,omitempty"`
+
+	// 实例读写分离IP地址列表。GaussDB(for MySQL)实例开启代理成功后该值存在，其他情况下为空列表。
+	ProxyIps *[]string `json:"proxy_ips,omitempty"`
 
 	// 实例外网IP地址列表。
 	PublicIps *[]string `json:"public_ips,omitempty"`

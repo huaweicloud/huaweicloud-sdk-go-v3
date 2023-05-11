@@ -33,7 +33,7 @@ type CreateRecordIndexResponse struct {
 	Duration *int32 `json:"duration,omitempty"`
 
 	// 视频宽。
-	Weight *int32 `json:"weight,omitempty"`
+	Width *int32 `json:"width,omitempty"`
 
 	// 视频高。
 	Height *int32 `json:"height,omitempty"`

@@ -14,6 +14,8 @@ var (
 		"https://clouddeploy.cn-east-3.myhuaweicloud.com")
 	CN_EAST_2 = region.NewRegion("cn-east-2",
 		"https://clouddeploy.cn-east-2.myhuaweicloud.com")
+	CN_NORTH_1 = region.NewRegion("cn-north-1",
+		"https://clouddeploy.cn-north-1.myhuaweicloud.com")
 	CN_NORTH_4 = region.NewRegion("cn-north-4",
 		"https://clouddeploy.cn-north-4.myhuaweicloud.com")
 	SA_BRAZIL_1 = region.NewRegion("sa-brazil-1",
@@ -27,6 +29,7 @@ var staticFields = map[string]*region.Region{
 	"cn-south-1":     CN_SOUTH_1,
 	"cn-east-3":      CN_EAST_3,
 	"cn-east-2":      CN_EAST_2,
+	"cn-north-1":     CN_NORTH_1,
 	"cn-north-4":     CN_NORTH_4,
 	"sa-brazil-1":    SA_BRAZIL_1,
 	"la-north-2":     LA_NORTH_2,

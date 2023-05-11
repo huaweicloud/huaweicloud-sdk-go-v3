@@ -43,6 +43,27 @@ func GenReqDefForCreateVideoObjectMaskingTask() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForCreateVideoTaggingMediaTask() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/image/video-tagging-media/tasks").
+		WithResponse(new(model.CreateVideoTaggingMediaTaskResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-request-id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForRunCelebrityRecognition() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -190,6 +211,28 @@ func GenReqDefForShowVideoObjectMaskingTask() *def.HttpRequestDef {
 		WithMethod(http.MethodGet).
 		WithPath("/v2/{project_id}/image/video-object-masking/tasks/{task_id}").
 		WithResponse(new(model.ShowVideoObjectMaskingTaskResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TaskId").
+		WithJsonTag("task_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-request-id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowVideoTaggingMediaTask() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/{project_id}/image/video-tagging-media/tasks/{task_id}").
+		WithResponse(new(model.ShowVideoTaggingMediaTaskResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

@@ -15,7 +15,7 @@ type AomMappingRequestInfo struct {
 	RuleName string `json:"rule_name"`
 
 	// 接入规则id
-	RuleId string `json:"rule_id"`
+	RuleId *string `json:"rule_id,omitempty"`
 
 	RuleInfo *AomMappingRuleInfo `json:"rule_info"`
 }

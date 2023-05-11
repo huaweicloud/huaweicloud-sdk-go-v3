@@ -37,6 +37,17 @@ type OptimizationResult struct {
 
 	// 分子优化结果条目
 	Result *[]OptimizationResultItem `json:"result,omitempty"`
+
+	// 强约束集合
+	StrongConstraints *[]MoleculeConstraint `json:"strong_constraints,omitempty"`
+
+	// 弱约束集合
+	WeakConstraints *[]MoleculeConstraint `json:"weak_constraints,omitempty"`
+
+	BindingSite *BindingSite `json:"binding_site,omitempty"`
+
+	// 用户已开启的自定义属性集合
+	CustomProps *[]CustomProp `json:"custom_props,omitempty"`
 }
 
 func (o OptimizationResult) String() string {

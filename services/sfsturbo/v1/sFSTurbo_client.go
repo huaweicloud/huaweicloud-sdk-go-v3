@@ -86,6 +86,48 @@ func (c *SFSTurboClient) ChangeShareNameInvoker(request *model.ChangeShareNameRe
 	return &ChangeShareNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateFsDir 创建目录
+//
+// 创建目录 (目前已上线的局点：上海一、上海二、北京二、北京四、乌兰察布一、广州、贵阳一、中国-香港、亚太-新加坡、亚太-曼谷)
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SFSTurboClient) CreateFsDir(request *model.CreateFsDirRequest) (*model.CreateFsDirResponse, error) {
+	requestDef := GenReqDefForCreateFsDir()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateFsDirResponse), nil
+	}
+}
+
+// CreateFsDirInvoker 创建目录
+func (c *SFSTurboClient) CreateFsDirInvoker(request *model.CreateFsDirRequest) *CreateFsDirInvoker {
+	requestDef := GenReqDefForCreateFsDir()
+	return &CreateFsDirInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateFsDirQuota 创建目标文件夹quota
+//
+// 创建目标文件夹quota。只支持对空目录设置目录quota (目前已上线的局点：上海一、上海二、北京二、北京四、乌兰察布一、广州、贵阳一、中国-香港、亚太-新加坡、亚太-曼谷)
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SFSTurboClient) CreateFsDirQuota(request *model.CreateFsDirQuotaRequest) (*model.CreateFsDirQuotaResponse, error) {
+	requestDef := GenReqDefForCreateFsDirQuota()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateFsDirQuotaResponse), nil
+	}
+}
+
+// CreateFsDirQuotaInvoker 创建目标文件夹quota
+func (c *SFSTurboClient) CreateFsDirQuotaInvoker(request *model.CreateFsDirQuotaRequest) *CreateFsDirQuotaInvoker {
+	requestDef := GenReqDefForCreateFsDirQuota()
+	return &CreateFsDirQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateShare 创建文件系统
 //
 // 创建文件系统。
@@ -129,6 +171,48 @@ func (c *SFSTurboClient) CreateSharedTag(request *model.CreateSharedTagRequest) 
 func (c *SFSTurboClient) CreateSharedTagInvoker(request *model.CreateSharedTagRequest) *CreateSharedTagInvoker {
 	requestDef := GenReqDefForCreateSharedTag()
 	return &CreateSharedTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteFsDir 删除文件系统目录
+//
+// 删除文件系统目录 (目前已上线的局点：上海一、上海二、北京二、北京四、乌兰察布一、广州、贵阳一、中国-香港、亚太-新加坡、亚太-曼谷)
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SFSTurboClient) DeleteFsDir(request *model.DeleteFsDirRequest) (*model.DeleteFsDirResponse, error) {
+	requestDef := GenReqDefForDeleteFsDir()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteFsDirResponse), nil
+	}
+}
+
+// DeleteFsDirInvoker 删除文件系统目录
+func (c *SFSTurboClient) DeleteFsDirInvoker(request *model.DeleteFsDirRequest) *DeleteFsDirInvoker {
+	requestDef := GenReqDefForDeleteFsDir()
+	return &DeleteFsDirInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteFsDirQuota 删除目标文件夹quota
+//
+// 删除目标文件夹quota。只支持对空目录进行删除quota (目前已上线的局点：上海一、上海二、北京二、北京四、乌兰察布一、广州、贵阳一、中国-香港、亚太-新加坡、亚太-曼谷)
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SFSTurboClient) DeleteFsDirQuota(request *model.DeleteFsDirQuotaRequest) (*model.DeleteFsDirQuotaResponse, error) {
+	requestDef := GenReqDefForDeleteFsDirQuota()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteFsDirQuotaResponse), nil
+	}
+}
+
+// DeleteFsDirQuotaInvoker 删除目标文件夹quota
+func (c *SFSTurboClient) DeleteFsDirQuotaInvoker(request *model.DeleteFsDirQuotaRequest) *DeleteFsDirQuotaInvoker {
+	requestDef := GenReqDefForDeleteFsDirQuota()
+	return &DeleteFsDirQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteShare 删除文件系统
@@ -236,6 +320,48 @@ func (c *SFSTurboClient) ListSharesInvoker(request *model.ListSharesRequest) *Li
 	return &ListSharesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowFsDir 查询目录是否存在
+//
+// 查询目录是否存在 (目前已上线的局点：上海一、上海二、北京二、北京四、乌兰察布一、广州、贵阳一、中国-香港、亚太-新加坡、亚太-曼谷)
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SFSTurboClient) ShowFsDir(request *model.ShowFsDirRequest) (*model.ShowFsDirResponse, error) {
+	requestDef := GenReqDefForShowFsDir()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowFsDirResponse), nil
+	}
+}
+
+// ShowFsDirInvoker 查询目录是否存在
+func (c *SFSTurboClient) ShowFsDirInvoker(request *model.ShowFsDirRequest) *ShowFsDirInvoker {
+	requestDef := GenReqDefForShowFsDir()
+	return &ShowFsDirInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowFsDirQuota 查询目标文件夹quota
+//
+// 查询目标文件夹quota (目前已上线的局点：上海一、上海二、北京二、北京四、乌兰察布一、广州、贵阳一、中国-香港、亚太-新加坡、亚太-曼谷)
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SFSTurboClient) ShowFsDirQuota(request *model.ShowFsDirQuotaRequest) (*model.ShowFsDirQuotaResponse, error) {
+	requestDef := GenReqDefForShowFsDirQuota()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowFsDirQuotaResponse), nil
+	}
+}
+
+// ShowFsDirQuotaInvoker 查询目标文件夹quota
+func (c *SFSTurboClient) ShowFsDirQuotaInvoker(request *model.ShowFsDirQuotaRequest) *ShowFsDirQuotaInvoker {
+	requestDef := GenReqDefForShowFsDirQuota()
+	return &ShowFsDirQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowShare 查询文件系统详细信息
 //
 // 查询SFS Turbo文件系统详细信息。
@@ -276,4 +402,25 @@ func (c *SFSTurboClient) ShowSharedTags(request *model.ShowSharedTagsRequest) (*
 func (c *SFSTurboClient) ShowSharedTagsInvoker(request *model.ShowSharedTagsRequest) *ShowSharedTagsInvoker {
 	requestDef := GenReqDefForShowSharedTags()
 	return &ShowSharedTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateFsDirQuota 更新目标文件夹quota
+//
+// 更新目标文件夹quota (目前已上线的局点：上海一、上海二、北京二、北京四、乌兰察布一、广州、贵阳一、中国-香港、亚太-新加坡、亚太-曼谷)
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SFSTurboClient) UpdateFsDirQuota(request *model.UpdateFsDirQuotaRequest) (*model.UpdateFsDirQuotaResponse, error) {
+	requestDef := GenReqDefForUpdateFsDirQuota()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateFsDirQuotaResponse), nil
+	}
+}
+
+// UpdateFsDirQuotaInvoker 更新目标文件夹quota
+func (c *SFSTurboClient) UpdateFsDirQuotaInvoker(request *model.UpdateFsDirQuotaRequest) *UpdateFsDirQuotaInvoker {
+	requestDef := GenReqDefForUpdateFsDirQuota()
+	return &UpdateFsDirQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

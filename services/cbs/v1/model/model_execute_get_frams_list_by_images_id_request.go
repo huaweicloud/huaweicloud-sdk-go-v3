@@ -11,6 +11,12 @@ type ExecuteGetFramsListByImagesIdRequest struct {
 
 	// 图片id
 	ImageId string `json:"image_id"`
+
+	// 偏移量，默认为零
+	Offset *int32 `json:"offset,omitempty"`
+
+	// 分页限制数
+	Limit *int32 `json:"limit,omitempty"`
 }
 
 func (o ExecuteGetFramsListByImagesIdRequest) String() string {

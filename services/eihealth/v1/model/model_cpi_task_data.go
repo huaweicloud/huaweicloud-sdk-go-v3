@@ -23,6 +23,9 @@ type CpiTaskData struct {
 
 	// 期望最大返回条目数（排序后取Top）
 	NumResults *int32 `json:"num_results,omitempty"`
+
+	// 用户已开启的自定义属性集合
+	CustomProps *[]CustomProp `json:"custom_props,omitempty"`
 }
 
 func (o CpiTaskData) String() string {

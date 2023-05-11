@@ -8,6 +8,10 @@ import (
 
 // Request Object
 type CreateScriptRequest struct {
+
+	// 工作空间id
+	Workspace *string `json:"workspace,omitempty"`
+
 	Body *ScriptInfo `json:"body,omitempty"`
 }
 

@@ -25,6 +25,9 @@ type GenerationTaskData struct {
 	InitialDataset *[]string `json:"initial_dataset,omitempty"`
 
 	BindingSite *BindingSite `json:"binding_site,omitempty"`
+
+	// 用户已开启的自定义属性集合
+	CustomProps *[]CustomProp `json:"custom_props,omitempty"`
 }
 
 func (o GenerationTaskData) String() string {

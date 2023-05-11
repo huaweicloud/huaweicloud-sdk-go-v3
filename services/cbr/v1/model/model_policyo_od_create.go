@@ -37,6 +37,9 @@ type PolicyoOdCreate struct {
 
 	// 保留年备个数，该备份不受保留最大备份数限制。取值为0到100。若选择该参数，则timezone 也必选。
 	YearBackups *int32 `json:"year_backups,omitempty"`
+
+	// 每间隔多少次执行一次全量备份，当取值为 -1 时，不执行全量备份。  最小值：-1  最大值：100
+	FullBackupInterval *int32 `json:"full_backup_interval,omitempty"`
 }
 
 func (o PolicyoOdCreate) String() string {

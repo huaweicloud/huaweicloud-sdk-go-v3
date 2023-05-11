@@ -19,7 +19,7 @@ type IncidentInfo struct {
 	BusinessTypeName *string `json:"businessTypeName,omitempty"`
 
 	// 工单类型名称
-	IncidentTypeName *interface{} `json:"incidentTypeName,omitempty"`
+	IncidentTypeName *string `json:"incidentTypeName,omitempty"`
 
 	// 客户id
 	CustomerId *string `json:"customerId,omitempty"`

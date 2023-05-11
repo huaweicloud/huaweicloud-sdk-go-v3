@@ -9,6 +9,9 @@ import (
 // Request Object
 type ShowConnectionRequest struct {
 
+	// 工作空间id
+	Workspace *string `json:"workspace,omitempty"`
+
 	// 连接名称.
 	ConnectionName string `json:"connection_name"`
 }

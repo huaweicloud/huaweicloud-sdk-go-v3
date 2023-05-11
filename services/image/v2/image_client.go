@@ -61,6 +61,27 @@ func (c *ImageClient) CreateVideoObjectMaskingTaskInvoker(request *model.CreateV
 	return &CreateVideoObjectMaskingTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateVideoTaggingMediaTask 创建视频标签任务
+//
+// 创建视频标签任务，输入一段视频，通过AI模型分析视频中的信息，输出视频所包含的媒资标签、名人标签、logo标签、语音标签、OCR标签等信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ImageClient) CreateVideoTaggingMediaTask(request *model.CreateVideoTaggingMediaTaskRequest) (*model.CreateVideoTaggingMediaTaskResponse, error) {
+	requestDef := GenReqDefForCreateVideoTaggingMediaTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateVideoTaggingMediaTaskResponse), nil
+	}
+}
+
+// CreateVideoTaggingMediaTaskInvoker 创建视频标签任务
+func (c *ImageClient) CreateVideoTaggingMediaTaskInvoker(request *model.CreateVideoTaggingMediaTaskRequest) *CreateVideoTaggingMediaTaskInvoker {
+	requestDef := GenReqDefForCreateVideoTaggingMediaTask()
+	return &CreateVideoTaggingMediaTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RunCelebrityRecognition 名人识别
 //
 // 分析并识别图片中包含的政治人物、明星及网红人物，返回人物信息及人脸坐标。
@@ -269,4 +290,25 @@ func (c *ImageClient) ShowVideoObjectMaskingTask(request *model.ShowVideoObjectM
 func (c *ImageClient) ShowVideoObjectMaskingTaskInvoker(request *model.ShowVideoObjectMaskingTaskRequest) *ShowVideoObjectMaskingTaskInvoker {
 	requestDef := GenReqDefForShowVideoObjectMaskingTask()
 	return &ShowVideoObjectMaskingTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowVideoTaggingMediaTask 查询视频标签任务
+//
+// 查询视频标签任务详情，返回参数配置以及任务状态信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ImageClient) ShowVideoTaggingMediaTask(request *model.ShowVideoTaggingMediaTaskRequest) (*model.ShowVideoTaggingMediaTaskResponse, error) {
+	requestDef := GenReqDefForShowVideoTaggingMediaTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowVideoTaggingMediaTaskResponse), nil
+	}
+}
+
+// ShowVideoTaggingMediaTaskInvoker 查询视频标签任务
+func (c *ImageClient) ShowVideoTaggingMediaTaskInvoker(request *model.ShowVideoTaggingMediaTaskRequest) *ShowVideoTaggingMediaTaskInvoker {
+	requestDef := GenReqDefForShowVideoTaggingMediaTask()
+	return &ShowVideoTaggingMediaTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

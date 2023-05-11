@@ -355,25 +355,25 @@ func (c *IoTEdgeClient) CreateClusterInvoker(request *model.CreateClusterRequest
 	return &CreateClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateInstallCmd 生成边缘集群安装命令
+// CreateClusterInstallCmd 生成边缘集群安装命令
 //
 // 应用服务器可调用此接口生成边缘集群安装命令。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *IoTEdgeClient) CreateInstallCmd(request *model.CreateInstallCmdRequest) (*model.CreateInstallCmdResponse, error) {
-	requestDef := GenReqDefForCreateInstallCmd()
+func (c *IoTEdgeClient) CreateClusterInstallCmd(request *model.CreateClusterInstallCmdRequest) (*model.CreateClusterInstallCmdResponse, error) {
+	requestDef := GenReqDefForCreateClusterInstallCmd()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.CreateInstallCmdResponse), nil
+		return resp.(*model.CreateClusterInstallCmdResponse), nil
 	}
 }
 
-// CreateInstallCmdInvoker 生成边缘集群安装命令
-func (c *IoTEdgeClient) CreateInstallCmdInvoker(request *model.CreateInstallCmdRequest) *CreateInstallCmdInvoker {
-	requestDef := GenReqDefForCreateInstallCmd()
-	return &CreateInstallCmdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// CreateClusterInstallCmdInvoker 生成边缘集群安装命令
+func (c *IoTEdgeClient) CreateClusterInstallCmdInvoker(request *model.CreateClusterInstallCmdRequest) *CreateClusterInstallCmdInvoker {
+	requestDef := GenReqDefForCreateClusterInstallCmd()
+	return &CreateClusterInstallCmdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteCluster 删除边缘集群

@@ -12,8 +12,7 @@ type TagResource struct {
 	// 资源ID
 	ResourceId string `json:"resource_id"`
 
-	// 资源详情
-	ResourceDetail []Vault `json:"resource_detail"`
+	ResourceDetail *InstancesResourceDetail `json:"resource_detail"`
 
 	// 标签列表 没有标签默认为空数字。
 	Tags []Tag `json:"tags"`

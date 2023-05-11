@@ -8,6 +8,10 @@ import (
 
 // Request Object
 type CreateJobRequest struct {
+
+	// 工作空间id
+	Workspace *string `json:"workspace,omitempty"`
+
 	Body *JobInfo `json:"body,omitempty"`
 }
 

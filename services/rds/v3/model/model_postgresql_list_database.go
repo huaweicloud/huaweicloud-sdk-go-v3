@@ -23,6 +23,9 @@ type PostgresqlListDatabase struct {
 
 	// 数据库大小（单位：字节）。
 	Size *int64 `json:"size,omitempty"`
+
+	// 数据库备注
+	Comment *string `json:"comment,omitempty"`
 }
 
 func (o PostgresqlListDatabase) String() string {

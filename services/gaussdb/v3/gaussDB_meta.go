@@ -834,6 +834,14 @@ func GenReqDefForListGaussMySqlInstances() *def.HttpRequestDef {
 		WithJsonTag("private_ip").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ReadonlyPrivateIp").
+		WithJsonTag("readonly_private_ip").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProxyIp").
+		WithJsonTag("proxy_ip").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Offset").
 		WithJsonTag("offset").
 		WithLocationType(def.Query))

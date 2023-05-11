@@ -197,15 +197,15 @@ func (i *CreateClusterInvoker) Invoke() (*model.CreateClusterResponse, error) {
 	}
 }
 
-type CreateInstallCmdInvoker struct {
+type CreateClusterInstallCmdInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *CreateInstallCmdInvoker) Invoke() (*model.CreateInstallCmdResponse, error) {
+func (i *CreateClusterInstallCmdInvoker) Invoke() (*model.CreateClusterInstallCmdResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.CreateInstallCmdResponse), nil
+		return result.(*model.CreateClusterInstallCmdResponse), nil
 	}
 }
 

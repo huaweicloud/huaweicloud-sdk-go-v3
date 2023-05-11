@@ -89,6 +89,18 @@ func (i *ListExecutionPlansInvoker) Invoke() (*model.ListExecutionPlansResponse,
 	}
 }
 
+type ContinueDeployStackInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ContinueDeployStackInvoker) Invoke() (*model.ContinueDeployStackResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ContinueDeployStackResponse), nil
+	}
+}
+
 type ContinueRollbackStackInvoker struct {
 	*invoker.BaseInvoker
 }

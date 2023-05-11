@@ -54,7 +54,8 @@ type ListOrderIncidentRequest struct {
 	// 分页大小
 	PageSize *int32 `json:"pageSize,omitempty"`
 
-	Body *string `json:"body,omitempty"`
+	// 客户id
+	XCustomerId *string `json:"xCustomerId,omitempty"`
 }
 
 func (o ListOrderIncidentRequest) String() string {

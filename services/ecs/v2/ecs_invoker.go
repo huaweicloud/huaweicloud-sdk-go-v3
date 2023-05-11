@@ -425,6 +425,18 @@ func (i *NovaAssociateSecurityGroupInvoker) Invoke() (*model.NovaAssociateSecuri
 	}
 }
 
+type NovaAttachInterfaceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *NovaAttachInterfaceInvoker) Invoke() (*model.NovaAttachInterfaceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.NovaAttachInterfaceResponse), nil
+	}
+}
+
 type NovaCreateKeypairInvoker struct {
 	*invoker.BaseInvoker
 }
