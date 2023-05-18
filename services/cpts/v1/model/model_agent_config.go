@@ -41,6 +41,21 @@ type AgentConfig struct {
 
 	// redis影子库类型
 	RedisShadowType *string `json:"redis_shadow_type,omitempty"`
+
+	// kafka影子规则开关
+	KafkaEnable *bool `json:"kafka_enable,omitempty"`
+
+	// kafka影子topic前缀
+	KafkaShadowTopicPrefix *string `json:"kafka_shadow_topic_prefix,omitempty"`
+
+	// 应用日志等级（ALL/TRACE/DEBUG/INFO/WARN/ERROR/OFF）
+	AppLogLevel *string `json:"app_log_level,omitempty"`
+
+	// 应用日志路径
+	AppLogPath *string `json:"app_log_path,omitempty"`
+
+	// mock规则列表
+	MockRuleList *[]MockRuleConfig `json:"mock_rule_list,omitempty"`
 }
 
 func (o AgentConfig) String() string {

@@ -776,6 +776,48 @@ func (c *GaussDBClient) ListInstanceTagsInvoker(request *model.ListInstanceTagsR
 	return &ListInstanceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListLtsErrorLogDetails 获取错误日志详情列表
+//
+// 获取指定实例的错误日志详情列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ListLtsErrorLogDetails(request *model.ListLtsErrorLogDetailsRequest) (*model.ListLtsErrorLogDetailsResponse, error) {
+	requestDef := GenReqDefForListLtsErrorLogDetails()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListLtsErrorLogDetailsResponse), nil
+	}
+}
+
+// ListLtsErrorLogDetailsInvoker 获取错误日志详情列表
+func (c *GaussDBClient) ListLtsErrorLogDetailsInvoker(request *model.ListLtsErrorLogDetailsRequest) *ListLtsErrorLogDetailsInvoker {
+	requestDef := GenReqDefForListLtsErrorLogDetails()
+	return &ListLtsErrorLogDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListLtsSlowlogDetails 获取慢日志详情列表
+//
+// 获取指定实例的慢日志详情列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ListLtsSlowlogDetails(request *model.ListLtsSlowlogDetailsRequest) (*model.ListLtsSlowlogDetailsResponse, error) {
+	requestDef := GenReqDefForListLtsSlowlogDetails()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListLtsSlowlogDetailsResponse), nil
+	}
+}
+
+// ListLtsSlowlogDetailsInvoker 获取慢日志详情列表
+func (c *GaussDBClient) ListLtsSlowlogDetailsInvoker(request *model.ListLtsSlowlogDetailsRequest) *ListLtsSlowlogDetailsInvoker {
+	requestDef := GenReqDefForListLtsSlowlogDetails()
+	return &ListLtsSlowlogDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListProjectTags 查询项目标签
 //
 // 查询指定project ID下实例的所有标签集合。
@@ -1341,6 +1383,48 @@ func (c *GaussDBClient) UpdateGaussMySqlConfiguration(request *model.UpdateGauss
 func (c *GaussDBClient) UpdateGaussMySqlConfigurationInvoker(request *model.UpdateGaussMySqlConfigurationRequest) *UpdateGaussMySqlConfigurationInvoker {
 	requestDef := GenReqDefForUpdateGaussMySqlConfiguration()
 	return &UpdateGaussMySqlConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateGaussMySqlDatabaseComment 修改数据库备注
+//
+// 修改云数据库 GaussDB(for MySQL)实例数据库备注。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) UpdateGaussMySqlDatabaseComment(request *model.UpdateGaussMySqlDatabaseCommentRequest) (*model.UpdateGaussMySqlDatabaseCommentResponse, error) {
+	requestDef := GenReqDefForUpdateGaussMySqlDatabaseComment()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateGaussMySqlDatabaseCommentResponse), nil
+	}
+}
+
+// UpdateGaussMySqlDatabaseCommentInvoker 修改数据库备注
+func (c *GaussDBClient) UpdateGaussMySqlDatabaseCommentInvoker(request *model.UpdateGaussMySqlDatabaseCommentRequest) *UpdateGaussMySqlDatabaseCommentInvoker {
+	requestDef := GenReqDefForUpdateGaussMySqlDatabaseComment()
+	return &UpdateGaussMySqlDatabaseCommentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateGaussMySqlDatabaseUserComment 修改数据库用户备注
+//
+// 修改云数据库 GaussDB(for MySQL)实例数据库用户备注。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) UpdateGaussMySqlDatabaseUserComment(request *model.UpdateGaussMySqlDatabaseUserCommentRequest) (*model.UpdateGaussMySqlDatabaseUserCommentResponse, error) {
+	requestDef := GenReqDefForUpdateGaussMySqlDatabaseUserComment()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateGaussMySqlDatabaseUserCommentResponse), nil
+	}
+}
+
+// UpdateGaussMySqlDatabaseUserCommentInvoker 修改数据库用户备注
+func (c *GaussDBClient) UpdateGaussMySqlDatabaseUserCommentInvoker(request *model.UpdateGaussMySqlDatabaseUserCommentRequest) *UpdateGaussMySqlDatabaseUserCommentInvoker {
+	requestDef := GenReqDefForUpdateGaussMySqlDatabaseUserComment()
+	return &UpdateGaussMySqlDatabaseUserCommentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateGaussMySqlInstanceAlias 修改实例备注

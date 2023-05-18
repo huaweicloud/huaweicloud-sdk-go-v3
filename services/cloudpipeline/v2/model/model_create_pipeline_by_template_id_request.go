@@ -15,9 +15,6 @@ type CreatePipelineByTemplateIdRequest struct {
 	// 模板ID
 	TemplateId string `json:"template_id"`
 
-	// 语言类型 中文:zh-cn 英文:en-us，默认en-us
-	XLanguage *string `json:"X-Language,omitempty"`
-
 	// 微服务ID
 	ComponentId *string `json:"component_id,omitempty"`
 

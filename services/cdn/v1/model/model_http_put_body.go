@@ -12,7 +12,7 @@ type HttpPutBody struct {
 	// HTTPS证书是否启用。（on：开启，off：关闭）
 	HttpsStatus *string `json:"https_status,omitempty"`
 
-	// 证书名字。（长度限制为3-32字符）。当证书开启时必传。
+	// 证书名字。（长度限制为3-64字符）。当证书开启时必传。
 	CertificateName *string `json:"certificate_name,omitempty"`
 
 	// HTTPS协议使用的证书内容，当证书开启时必传。取值范围：PEM编码格式。

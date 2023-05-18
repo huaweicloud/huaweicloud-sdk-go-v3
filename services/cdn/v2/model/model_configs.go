@@ -44,7 +44,7 @@ type Configs struct {
 	// ipv6设置（1：打开；0：关闭）
 	Ipv6Accelerate *int32 `json:"ipv6_accelerate,omitempty"`
 
-	// 状态码缓存时间
+	// 状态码缓存时间。
 	ErrorCodeCache *[]ErrorCodeCache `json:"error_code_cache,omitempty"`
 
 	// Range回源，即分片回源 开启Range回源的前提是您的源站支持Range请求，即HTTP请求头中包含Range字段，否则可能导致回源失败。 开启: on 关闭: off
@@ -54,6 +54,24 @@ type Configs struct {
 
 	// 改写回源URL，最多配置20条。
 	OriginRequestUrlRewrite *[]OriginRequestUrlRewrite `json:"origin_request_url_rewrite,omitempty"`
+
+	// 高级回源，最多配置20条。
+	FlexibleOrigin *[]FlexibleOrigins `json:"flexible_origin,omitempty"`
+
+	// 回源是否校验ETag（on：开启，off：关闭）。
+	SliceEtagStatus *string `json:"slice_etag_status,omitempty"`
+
+	// 回源超时时间，范围:5-60，单位：秒。
+	OriginReceiveTimeout *int32 `json:"origin_receive_timeout,omitempty"`
+
+	RemoteAuth *CommonRemoteAuth `json:"remote_auth,omitempty"`
+
+	Websocket *WebSocketSeek `json:"websocket,omitempty"`
+
+	VideoSeek *VideoSeek `json:"video_seek,omitempty"`
+
+	// 请求限速配置。
+	RequestLimitRules *[]RequestLimitRules `json:"request_limit_rules,omitempty"`
 
 	// 自定义错误页面
 	ErrorCodeRedirectRules *[]ErrorCodeRedirectRules `json:"error_code_redirect_rules,omitempty"`

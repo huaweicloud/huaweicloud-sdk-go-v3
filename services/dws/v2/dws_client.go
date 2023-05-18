@@ -215,6 +215,27 @@ func (c *DwsClient) CheckClusterInvoker(request *model.CheckClusterRequest) *Che
 	return &CheckClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CheckDisasterName 检查容灾名称
+//
+// 检查容灾名称
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) CheckDisasterName(request *model.CheckDisasterNameRequest) (*model.CheckDisasterNameResponse, error) {
+	requestDef := GenReqDefForCheckDisasterName()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckDisasterNameResponse), nil
+	}
+}
+
+// CheckDisasterNameInvoker 检查容灾名称
+func (c *DwsClient) CheckDisasterNameInvoker(request *model.CheckDisasterNameRequest) *CheckDisasterNameInvoker {
+	requestDef := GenReqDefForCheckDisasterName()
+	return &CheckDisasterNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CopySnapshot 复制快照
 //
 // 该接口用于复制一个自动快照。
@@ -870,6 +891,27 @@ func (c *DwsClient) ListAvailabilityZones(request *model.ListAvailabilityZonesRe
 func (c *DwsClient) ListAvailabilityZonesInvoker(request *model.ListAvailabilityZonesRequest) *ListAvailabilityZonesInvoker {
 	requestDef := GenReqDefForListAvailabilityZones()
 	return &ListAvailabilityZonesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAvailableDisasterClusters 查询可用容灾集群列表
+//
+// 查询可用容灾集群列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ListAvailableDisasterClusters(request *model.ListAvailableDisasterClustersRequest) (*model.ListAvailableDisasterClustersResponse, error) {
+	requestDef := GenReqDefForListAvailableDisasterClusters()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAvailableDisasterClustersResponse), nil
+	}
+}
+
+// ListAvailableDisasterClustersInvoker 查询可用容灾集群列表
+func (c *DwsClient) ListAvailableDisasterClustersInvoker(request *model.ListAvailableDisasterClustersRequest) *ListAvailableDisasterClustersInvoker {
+	requestDef := GenReqDefForListAvailableDisasterClusters()
+	return &ListAvailableDisasterClustersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListClusterCn 查询集群CN节点
@@ -1649,6 +1691,27 @@ func (c *DwsClient) RestoreDisasterInvoker(request *model.RestoreDisasterRequest
 	return &RestoreDisasterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowDisasterDetail 查询容灾详情
+//
+// 查询容灾详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ShowDisasterDetail(request *model.ShowDisasterDetailRequest) (*model.ShowDisasterDetailResponse, error) {
+	requestDef := GenReqDefForShowDisasterDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDisasterDetailResponse), nil
+	}
+}
+
+// ShowDisasterDetailInvoker 查询容灾详情
+func (c *DwsClient) ShowDisasterDetailInvoker(request *model.ShowDisasterDetailRequest) *ShowDisasterDetailInvoker {
+	requestDef := GenReqDefForShowDisasterDetail()
+	return &ShowDisasterDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShrinkCluster 集群缩容
 //
 // 该接口用于缩容集群。
@@ -1838,6 +1901,27 @@ func (c *DwsClient) UpdateDataSource(request *model.UpdateDataSourceRequest) (*m
 func (c *DwsClient) UpdateDataSourceInvoker(request *model.UpdateDataSourceRequest) *UpdateDataSourceInvoker {
 	requestDef := GenReqDefForUpdateDataSource()
 	return &UpdateDataSourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDisasterInfo 更新容灾配置
+//
+// 更新容灾配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) UpdateDisasterInfo(request *model.UpdateDisasterInfoRequest) (*model.UpdateDisasterInfoResponse, error) {
+	requestDef := GenReqDefForUpdateDisasterInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDisasterInfoResponse), nil
+	}
+}
+
+// UpdateDisasterInfoInvoker 更新容灾配置
+func (c *DwsClient) UpdateDisasterInfoInvoker(request *model.UpdateDisasterInfoRequest) *UpdateDisasterInfoInvoker {
+	requestDef := GenReqDefForUpdateDisasterInfo()
+	return &UpdateDisasterInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateEventSub 更新订阅事件

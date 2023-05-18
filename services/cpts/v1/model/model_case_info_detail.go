@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-type CaseInfo struct {
+type CaseInfoDetail struct {
 
 	// case_id
 	CaseId *int32 `json:"case_id,omitempty"`
@@ -39,11 +39,11 @@ type CaseInfo struct {
 	Sort *int32 `json:"sort,omitempty"`
 }
 
-func (o CaseInfo) String() string {
+func (o CaseInfoDetail) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "CaseInfo struct{}"
+		return "CaseInfoDetail struct{}"
 	}
 
-	return strings.Join([]string{"CaseInfo", string(data)}, " ")
+	return strings.Join([]string{"CaseInfoDetail", string(data)}, " ")
 }

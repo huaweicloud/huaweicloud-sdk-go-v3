@@ -46,6 +46,8 @@ type CreateClusterInfo struct {
 
 	// 企业项目ID，对集群指定企业项目，如果未指定，则使用默认企业项目“default”的ID，即0。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	Tags *Tags `json:"tags,omitempty"`
 }
 
 func (o CreateClusterInfo) String() string {

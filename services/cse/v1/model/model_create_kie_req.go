@@ -8,6 +8,9 @@ import (
 
 type CreateKieReq struct {
 
+	// 配置项的id。
+	Id *string `json:"id,omitempty"`
+
 	// 配置项的key。
 	Key *string `json:"key,omitempty"`
 

@@ -45,6 +45,9 @@ type SearchDevice struct {
 	// 设备关联的产品名称。
 	ProductName *string `json:"product_name,omitempty"`
 
+	// 设备组列表。
+	Groups *interface{} `json:"groups,omitempty"`
+
 	// 设备的状态。 - ONLINE：设备在线。 - OFFLINE：设备离线。 - ABNORMAL：设备异常。 - INACTIVE：设备未激活。 - FROZEN：设备冻结。
 	Status *string `json:"status,omitempty"`
 

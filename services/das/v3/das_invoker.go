@@ -29,6 +29,18 @@ func (i *ShowApiVersionInvoker) Invoke() (*model.ShowApiVersionResponse, error) 
 	}
 }
 
+type CancelShareConnectionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CancelShareConnectionsInvoker) Invoke() (*model.CancelShareConnectionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CancelShareConnectionsResponse), nil
+	}
+}
+
 type ChangeSqlLimitSwitchStatusInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -50,6 +62,18 @@ func (i *ChangeSqlSwitchInvoker) Invoke() (*model.ChangeSqlSwitchResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ChangeSqlSwitchResponse), nil
+	}
+}
+
+type CreateShareConnectionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateShareConnectionsInvoker) Invoke() (*model.CreateShareConnectionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateShareConnectionsResponse), nil
 	}
 }
 

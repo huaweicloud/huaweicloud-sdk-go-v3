@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// IP黑白名单。
 type IpFilter struct {
 
 	// IP黑白名单类型 off：关闭IP黑白名单; black：IP黑名单; white：IP白名单;

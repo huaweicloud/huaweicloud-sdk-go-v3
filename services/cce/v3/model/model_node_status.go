@@ -12,8 +12,11 @@ import (
 //
 type NodeStatus struct {
 
-	// 节点状态。
+	// 节点状态：节点资源生命周期管理（如安装卸载等）状态和集群内k8s node状态的综合体现。
 	Phase *NodeStatusPhase `json:"phase,omitempty"`
+
+	// 节点最近一次状态检查时间。集群处于异常、冻结或者中间态（例如创建中）时，节点的状态检查动作可能受影响。检查时间超过5分的节点状态不具有参考意义。
+	LastProbeTime *string `json:"lastProbeTime,omitempty"`
 
 	// 创建或删除时的任务ID。
 	JobID *string `json:"jobID,omitempty"`

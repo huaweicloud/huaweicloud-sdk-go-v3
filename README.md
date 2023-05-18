@@ -37,57 +37,130 @@ go get github.com/huaweicloud/huaweicloud-sdk-go-v3
   real `{service} "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/{service}/{version}"`
   for `vpc "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2"` in actual use, and initialize the client
   as `{service}.New{Service}Client`.
-- Substitute the values for `{your ak string}`, `{your sk string}`, `{your endpoint string}` and `{your project id}`.
+- Substitute the values for `{your ak string}` and `{your sk string}`。
+
+**Simplified Demo**
 
 ``` go
 package main
 
 import (
-    "fmt"
-    "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/basic"
-    "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/config"
-    "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/httphandler"
-    vpc "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2"
-    "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2/model"
-    "net/http"
+	"fmt"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/basic"
+	vpc "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2"
+	vpcModel "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2/model"
+	vpcRegion "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2/region"
 )
 
-func RequestHandler(request http.Request) {
-    fmt.Println(request)
-}
+func main() {
+	// Configure authentication
+	auth := basic.NewCredentialsBuilder().
+		WithAk("{your ak string}").
+		WithSk("{your ak string}").
+		Build()
 
-func ResponseHandler(response http.Response) {
-    fmt.Println(response)
+	// Create a service client
+	client := vpc.NewVpcClient(
+		vpc.VpcClientBuilder().
+			WithRegion(vpcRegion.ValueOf("cn-north-4")).
+			WithCredential(auth).
+			Build())
+
+	// Send the request and get the response
+	request := &vpcModel.ListVpcsRequest{}
+	response, err := client.ListVpcs(request)
+	if err == nil {
+		fmt.Printf("%+v\n", response)
+	} else {
+		fmt.Println(err)
+	}
 }
+```
+
+**Detailed Demo**
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/basic"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/config"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/httphandler"
+	vpc "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2"
+	vpcModel "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2/model"
+	vpcRegion "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2/region"
+	"net"
+	"net/http"
+)
 
 func main() {
-    client := vpc.NewVpcClient(
-        vpc.VpcClientBuilder().
-            WithEndpoint("{your endpoint}").
-            WithCredential(
-                basic.NewCredentialsBuilder().
-                    WithAk("{your ak string}").
-                    WithSk("{your sk string}").
-                    WithProjectId("{your project id}").
-                    Build()).
-            WithHttpConfig(config.DefaultHttpConfig().
-                WithIgnoreSSLVerification(true).
-                WithHttpHandler(httphandler.
-                    NewHttpHandler().
-                        AddRequestHandler(RequestHandler).
-                        AddResponseHandler(ResponseHandler))).
-            Build())
+	// Configure authentication
+	auth := basic.NewCredentialsBuilder().
+		// Access Key and Secret Access Key used for authentication
+		WithAk("{your ak string}").
+		WithSk("{your ak string}").
+		// If ProjectId is not filled in, the SDK will automatically call the IAM service to query the project id corresponding to the region.
+		WithProjectId("{your projectId string}").
+		// Configure the SDK built-in IAM service endpoint, default is https://iam.myhuaweicloud.com
+		WithIamEndpointOverride("https://iam.cn-north-4.myhuaweicloud.com").
+		Build()
 
-    limit := int32(1)
-    request := &model.ListVpcsRequest{
-      Limit: &limit,
-    }
-    response, err := client.ListVpcs(request)
-    if err == nil {
-      fmt.Printf("%+v\n\n", response.Vpcs)
-    } else {
-      fmt.Println(err)
-    }
+	// Use default configuration
+	httpConfig := config.DefaultHttpConfig()
+	// Configure whether to ignore the SSL certificate verification, default is false
+	httpConfig.WithIgnoreSSLVerification(true)
+	// Configure timeout as needed, default timeout is 120 seconds
+	httpConfig.WithTimeout(120)
+	// Configure proxy as needed
+	proxy := config.NewProxy().
+		WithSchema("http").
+		WithHost("proxy.huaweicloud.com").
+		WithPort(80).
+		WithUsername("testuser").
+		WithPassword("password")
+	httpConfig.WithProxy(proxy)
+	// Configure how to create network connections as needed
+	dialContext := func(ctx context.Context, network string, addr string) (net.Conn, error) {
+		return net.Dial(network, addr)
+	}
+	httpConfig.WithDialContext(dialContext)
+	// Configure HTTP handler for debugging, do not use in production environment
+	requestHandler := func(request http.Request) {
+		fmt.Println(request)
+	}
+	responseHandler := func(response http.Response) {
+		fmt.Println(response)
+	}
+	httpHandler := httphandler.NewHttpHandler().AddRequestHandler(requestHandler).AddResponseHandler(responseHandler)
+	httpConfig.WithHttpHandler(httpHandler)
+
+	// Create a service client
+	client := vpc.NewVpcClient(
+		vpc.VpcClientBuilder().
+			// Configure region, it will cause a panic if the region does not exist
+			WithRegion(vpcRegion.ValueOf("cn-north-4")).
+			// Configure authentication
+			WithCredential(auth).
+			// Configure HTTP
+			WithHttpConfig(httpConfig).
+			Build())
+
+	// Create a request
+	request := &vpcModel.ListVpcsRequest{}
+	// Configure the number of records on each page
+	limit := int32(1)
+	request.Limit = &limit
+
+	// Send the request and get the response
+	response, err := client.ListVpcs(request)
+	// Handle error and print response
+	if err == nil {
+		fmt.Printf("%+v\n", response)
+	} else {
+		fmt.Println(err)
+	}
 }
 ```
 
@@ -139,32 +212,53 @@ import "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/config"
 
 // Use default configuration
 httpConfig := config.DefaultHttpConfig()
+
+client := vpc.NewVpcClient(
+    vpc.VpcClientBuilder().
+    WithHttpConfig(httpConfig).
+    Build())
 ```
 
 #### 1.2 Network Proxy [:top:](#user-manual-top)
 
 ``` go
 // Use proxy if needed
-httpConfig.WithProxy(config.NewProxy().
+proxy := config.NewProxy().
     WithSchema("http").
     WithHost("proxy.huaweicloud.com").
     WithPort(80).
     WithUsername("testuser").
-    WithPassword("password"))))
+    WithPassword("password")
+httpConfig := config.DefaultHttpConfig().WithProxy(proxy)
+
+client := vpc.NewVpcClient(
+    vpc.VpcClientBuilder().
+    WithHttpConfig(httpConfig).
+    Build())
 ```
 
 #### 1.3 Timeout Configuration [:top:](#user-manual-top)
 
 ``` go
 // The default timeout is 120 seconds, which can be adjusted as needed
-httpConfig.WithTimeout(120);
+httpConfig := config.DefaultHttpConfig().WithTimeout(120)
+
+client := vpc.NewVpcClient(
+    vpc.VpcClientBuilder().
+    WithHttpConfig(httpConfig).
+    Build())
 ```
 
 #### 1.4 SSL Certification [:top:](#user-manual-top)
 
 ``` go
 // Skip SSL certification checking while using https protocol if needed
-httpConfig.WithIgnoreSSLVerification(true);
+httpConfig := config.DefaultHttpConfig().WithIgnoreSSLVerification(true)
+
+client := vpc.NewVpcClient(
+    vpc.VpcClientBuilder().
+    WithHttpConfig(httpConfig).
+    Build())
 ```
 
 #### 1.5 Custom Network Connection [:top:](#user-manual-top)
@@ -174,7 +268,12 @@ httpConfig.WithIgnoreSSLVerification(true);
 func DialContext(ctx context.Context, network string, addr string) (net.Conn, error) {
 	return net.Dial(network, addr)
 }
-httpConfig.WithDialContext(DialContext)
+httpConfig := config.DefaultHttpConfig().WithDialContext(DialContext)
+
+client := vpc.NewVpcClient(
+    vpc.VpcClientBuilder().
+    WithHttpConfig(httpConfig).
+    Build())
 ```
 
 ### 2. Credentials Configuration [:top:](#user-manual-top)
@@ -743,30 +842,31 @@ needed. The SDK provides a listener function to obtain the original encrypted ht
 > :warning:  Warning: The original http log information is used in debugging stage only, please do not print the original http header or body in the production environment. This log information is not encrypted and contains sensitive data such as the password of your ECS virtual machine, or the password of your IAM user account, etc. When the response body is binary content, the body will be printed as "***" without detailed information.
 
 ``` go
+import (
+	"fmt"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/config"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/httphandler"
+	vpc "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2"
+	"net/http"
+)
+
 func RequestHandler(request http.Request) {
-    fmt.Println(request)
+	fmt.Println(request)
 }
 
 func ResponseHandler(response http.Response) {
-    fmt.Println(response)
+	fmt.Println(response)
 }
 
+handler := httphandler.NewHttpHandler().
+	AddRequestHandler(RequestHandler).
+	AddResponseHandler(ResponseHandler)
+httpConfig := config.DefaultHttpConfig().WithHttpHandler(handler)
+
 client := vpc.NewVpcClient(
-    vpc.VpcClientBuilder().
-        WithEndpoint("{your endpoint}").
-        WithCredential(
-            basic.NewCredentialsBuilder().
-                WithAk("{your ak string}").
-                WithSk("{your sk string}").
-                WithProjectId("{your project id}").
-                   Build()).
-        WithHttpConfig(config.DefaultHttpConfig().
-            WithIgnoreSSLVerification(true).
-            WithHttpHandler(httphandler.
-                NewHttpHandler().
-                    AddRequestHandler(RequestHandler).
-                    AddResponseHandler(ResponseHandler))).
-        Build())
+	vpc.VpcClientBuilder().
+		WithHttpConfig(httpConfig).
+		Build())
 ```
 
 ### 6. Upload and download files [:top:](#user-manual-top)

@@ -5,6 +5,18 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/cbr/v1/model"
 )
 
+type AddAgentPathInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddAgentPathInvoker) Invoke() (*model.AddAgentPathResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddAgentPathResponse), nil
+	}
+}
+
 type AddMemberInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -209,6 +221,18 @@ func (i *ImportBackupInvoker) Invoke() (*model.ImportBackupResponse, error) {
 	}
 }
 
+type ListAgentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAgentInvoker) Invoke() (*model.ListAgentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAgentResponse), nil
+	}
+}
+
 type ListBackupsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -281,6 +305,30 @@ func (i *MigrateVaultResourceInvoker) Invoke() (*model.MigrateVaultResourceRespo
 	}
 }
 
+type RegisterAgentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RegisterAgentInvoker) Invoke() (*model.RegisterAgentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RegisterAgentResponse), nil
+	}
+}
+
+type RemoveAgentPathInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RemoveAgentPathInvoker) Invoke() (*model.RemoveAgentPathResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RemoveAgentPathResponse), nil
+	}
+}
+
 type RemoveVaultResourceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -302,6 +350,18 @@ func (i *RestoreBackupInvoker) Invoke() (*model.RestoreBackupResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.RestoreBackupResponse), nil
+	}
+}
+
+type ShowAgentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAgentInvoker) Invoke() (*model.ShowAgentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAgentResponse), nil
 	}
 }
 
@@ -446,6 +506,30 @@ func (i *ShowVaultTagInvoker) Invoke() (*model.ShowVaultTagResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowVaultTagResponse), nil
+	}
+}
+
+type UnregisterAgentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UnregisterAgentInvoker) Invoke() (*model.UnregisterAgentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UnregisterAgentResponse), nil
+	}
+}
+
+type UpdateAgentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAgentInvoker) Invoke() (*model.UpdateAgentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAgentResponse), nil
 	}
 }
 

@@ -36,57 +36,130 @@ go get github.com/huaweicloud/huaweicloud-sdk-go-v3
 - 使用如下代码在指定 Region 下查询 VPC 列表，实际使用中请将 `vpc "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2"`
   替换为您使用的产品/服务相应的 `{service} "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/{service}/{version}"`
   ，且初始化为 `{service}.New{Service}Client` 。
-- 调用前请根据实际情况替换如下变量： `{your ak string}`、`{your sk string}`、`{your endpoint string}` 以及 `{your project id}` 。
+- 调用前请根据实际情况替换如下变量： `{your ak string}`和`{your sk string}`。
+
+**精简示例**
 
 ``` go
 package main
 
 import (
-    "fmt"
-    "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/basic"
-    "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/config"
-    "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/httphandler"
-    vpc "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2"
-    "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2/model"
-    "net/http"
+	"fmt"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/basic"
+	vpc "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2"
+	vpcModel "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2/model"
+	vpcRegion "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2/region"
 )
 
-func RequestHandler(request http.Request) {
-    fmt.Println(request)
-}
+func main() {
+	// 配置认证信息
+	auth := basic.NewCredentialsBuilder().
+		WithAk("{your ak string}").
+		WithSk("{your ak string}").
+		Build()
 
-func ResponseHandler(response http.Response) {
-    fmt.Println(response)
+	// 创建服务客户端
+	client := vpc.NewVpcClient(
+		vpc.VpcClientBuilder().
+			WithRegion(vpcRegion.ValueOf("cn-north-4")).
+			WithCredential(auth).
+			Build())
+
+	// 发送请求并获取响应
+	request := &vpcModel.ListVpcsRequest{}
+	response, err := client.ListVpcs(request)
+	if err == nil {
+		fmt.Printf("%+v\n", response)
+	} else {
+		fmt.Println(err)
+	}
 }
+```
+
+**详细示例**
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/basic"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/config"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/httphandler"
+	vpc "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2"
+	vpcModel "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2/model"
+	vpcRegion "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2/region"
+	"net"
+	"net/http"
+)
 
 func main() {
-    client := vpc.NewVpcClient(
-        vpc.VpcClientBuilder().
-            WithEndpoint("{your endpoint}").
-            WithCredential(
-                basic.NewCredentialsBuilder().
-                    WithAk("{your ak string}").
-                    WithSk("{your sk string}").
-                    WithProjectId("{your project id}").
-                    Build()).
-            WithHttpConfig(config.DefaultHttpConfig().
-                WithIgnoreSSLVerification(true).
-                WithHttpHandler(httphandler.
-                    NewHttpHandler().
-                        AddRequestHandler(RequestHandler).
-                        AddResponseHandler(ResponseHandler))).
-            Build())
+	// 配置认证信息
+	auth := basic.NewCredentialsBuilder().
+		// 鉴权使用的 Access Key 和 Secret Access Key
+		WithAk("{your ak string}").
+		WithSk("{your ak string}").
+		// 如果未填写ProjectId，SDK会自动调用IAM服务查询所在region对应的项目id
+		WithProjectId("{your projectId string}").
+		// 配置SDK内置的IAM服务地址，默认为https://iam.myhuaweicloud.com
+		WithIamEndpointOverride("https://iam.cn-north-4.myhuaweicloud.com").
+		Build()
 
-    limit := int32(1)
-    request := &model.ListVpcsRequest{
-      Limit: &limit,
-    }
-    response, err := client.ListVpcs(request)
-    if err == nil {
-      fmt.Printf("%+v\n\n", response.Vpcs)
-    } else {
-      fmt.Println(err)
-    }
+	// 使用默认配置
+	httpConfig := config.DefaultHttpConfig()
+	// 配置是否忽略SSL证书校验， 默认不忽略
+	httpConfig.WithIgnoreSSLVerification(true)
+	// 默认超时时间为120秒，可根据需要配置
+	httpConfig.WithTimeout(120)
+	// 根据需要配置网络代理
+	proxy := config.NewProxy().
+		WithSchema("http").
+		WithHost("proxy.huaweicloud.com").
+		WithPort(80).
+		WithUsername("testuser").
+		WithPassword("password")
+	httpConfig.WithProxy(proxy)
+	// 根据需要配置如何创建网络连接
+	dialContext := func(ctx context.Context, network string, addr string) (net.Conn, error) {
+		return net.Dial(network, addr)
+	}
+	httpConfig.WithDialContext(dialContext)
+	// 配置HTTP监听器进行调试，请勿用于生产环境
+	requestHandler := func(request http.Request) {
+		fmt.Println(request)
+	}
+	responseHandler := func(response http.Response) {
+		fmt.Println(response)
+	}
+	httpHandler := httphandler.NewHttpHandler().AddRequestHandler(requestHandler).AddResponseHandler(responseHandler)
+	httpConfig.WithHttpHandler(httpHandler)
+
+	// 创建服务客户端
+	client := vpc.NewVpcClient(
+		vpc.VpcClientBuilder().
+			// 配置地区, 如果地区不存在会导致panic
+			WithRegion(vpcRegion.ValueOf("cn-north-4")).
+			// 配置认证信息
+			WithCredential(auth).
+			// HTTP配置
+			WithHttpConfig(httpConfig).
+			Build())
+
+	// 创建请求
+	request := &vpcModel.ListVpcsRequest{}
+	// 配置每页返回的个数
+	limit := int32(1)
+	request.Limit = &limit
+
+	// 发送请求并获取响应
+	response, err := client.ListVpcs(request)
+	// 处理异常，打印响应信息
+	if err == nil {
+		fmt.Printf("%+v\n", response)
+	} else {
+		fmt.Println(err)
+	}
 }
 ```
 
@@ -138,32 +211,53 @@ import "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/config"
 
 // 使用默认配置
 httpConfig := config.DefaultHttpConfig()
+
+client := vpc.NewVpcClient(
+    vpc.VpcClientBuilder().
+    WithHttpConfig(httpConfig).
+    Build())
 ```
 
 #### 1.2 网络代理 [:top:](#用户手册-top)
 
 ``` go
 // 根据需要配置网络代理
-httpConfig.WithProxy(config.NewProxy().
+proxy := config.NewProxy().
     WithSchema("http").
     WithHost("proxy.huaweicloud.com").
     WithPort(80).
     WithUsername("testuser").
-    WithPassword("password"))))
+    WithPassword("password")
+httpConfig := config.DefaultHttpConfig().WithProxy(proxy)
+
+client := vpc.NewVpcClient(
+    vpc.VpcClientBuilder().
+    WithHttpConfig(httpConfig).
+    Build())
 ```
 
 #### 1.3 超时配置 [:top:](#用户手册-top)
 
 ``` go
 // 默认超时时间为120秒，可根据需要配置
-httpConfig.WithTimeout(120);
+httpConfig := config.DefaultHttpConfig().WithTimeout(120)
+
+client := vpc.NewVpcClient(
+    vpc.VpcClientBuilder().
+    WithHttpConfig(httpConfig).
+    Build())
 ```
 
 #### 1.4 SSL 配置 [:top:](#用户手册-top)
 
 ``` go
-// 根据需要配置是否跳过SSL证书校验
-httpConfig.WithIgnoreSSLVerification(true);
+// 根据需要配置是否跳过SSL证书校验, 默认不忽略
+httpConfig := config.DefaultHttpConfig().WithIgnoreSSLVerification(true)
+
+client := vpc.NewVpcClient(
+    vpc.VpcClientBuilder().
+    WithHttpConfig(httpConfig).
+    Build())
 ```
 
 #### 1.5 自定义网络连接创建 [:top:](#用户手册-top)
@@ -173,7 +267,12 @@ httpConfig.WithIgnoreSSLVerification(true);
 func DialContext(ctx context.Context, network string, addr string) (net.Conn, error) {
 	return net.Dial(network, addr)
 }
-httpConfig.WithDialContext(DialContext)
+httpConfig := config.DefaultHttpConfig().WithDialContext(DialContext)
+
+client := vpc.NewVpcClient(
+    vpc.VpcClientBuilder().
+    WithHttpConfig(httpConfig).
+    Build())
 ```
 
 ### 2. 认证信息配置 [:top:](#用户手册-top)
@@ -754,30 +853,31 @@ if err == nil {
 > :warning:  Warning: 原始信息打印仅在 Debug 阶段使用，请不要在生产系统中将原始的 HTTP 头和 Body 信息打印到日志，这些信息并未加密且其中包含敏感数据，例如所创建虚拟机的密码，IAM 用户的密码等；当 Body 体为二进制内容，即 Content-Type 标识为二进制时，Body 为"***"，详细内容不输出。
 
 ``` go
+import (
+	"fmt"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/config"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/httphandler"
+	vpc "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2"
+	"net/http"
+)
+
 func RequestHandler(request http.Request) {
-    fmt.Println(request)
+	fmt.Println(request)
 }
 
 func ResponseHandler(response http.Response) {
-    fmt.Println(response)
+	fmt.Println(response)
 }
 
+handler := httphandler.NewHttpHandler().
+	AddRequestHandler(RequestHandler).
+	AddResponseHandler(ResponseHandler)
+httpConfig := config.DefaultHttpConfig().WithHttpHandler(handler)
+
 client := vpc.NewVpcClient(
-    vpc.VpcClientBuilder().
-        WithEndpoint("{your endpoint}").
-        WithCredential(
-            basic.NewCredentialsBuilder().
-                WithAk("{your ak string}").
-                WithSk("{your sk string}").
-                WithProjectId("{your project id}").
-                    Build()).
-        WithHttpConfig(config.DefaultHttpConfig().
-            WithIgnoreSSLVerification(true).
-            WithHttpHandler(httphandler.
-                NewHttpHandler().
-                    AddRequestHandler(RequestHandler).
-                    AddResponseHandler(ResponseHandler))).
-        Build())
+	vpc.VpcClientBuilder().
+		WithHttpConfig(httpConfig).
+		Build())
 ```
 
 ### 6. 文件上传与下载 [:top:](#用户手册-top)

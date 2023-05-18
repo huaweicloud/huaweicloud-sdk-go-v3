@@ -16,7 +16,7 @@ type UpgradeEngineResponse struct {
 	Name *string `json:"name,omitempty"`
 
 	// 微服务引擎专享版执行的任务ID
-	JobId          *int32 `json:"job_id,omitempty"`
+	JobId          *int32 `json:"jobId,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

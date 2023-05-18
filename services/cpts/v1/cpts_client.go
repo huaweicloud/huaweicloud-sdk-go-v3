@@ -250,9 +250,9 @@ func (c *CptsClient) ShowAgentConfigInvoker(request *model.ShowAgentConfigReques
 	return &ShowAgentConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowHistoryRunInfo 查询CPTS任务离线报告列表
+// ShowHistoryRunInfo 查询PerfTest任务离线报告列表
 //
-// 查询CPTS任务离线报告列表
+// 查询PerfTest任务离线报告列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CptsClient) ShowHistoryRunInfo(request *model.ShowHistoryRunInfoRequest) (*model.ShowHistoryRunInfoResponse, error) {
@@ -265,7 +265,7 @@ func (c *CptsClient) ShowHistoryRunInfo(request *model.ShowHistoryRunInfoRequest
 	}
 }
 
-// ShowHistoryRunInfoInvoker 查询CPTS任务离线报告列表
+// ShowHistoryRunInfoInvoker 查询PerfTest任务离线报告列表
 func (c *CptsClient) ShowHistoryRunInfoInvoker(request *model.ShowHistoryRunInfoRequest) *ShowHistoryRunInfoInvoker {
 	requestDef := GenReqDefForShowHistoryRunInfo()
 	return &ShowHistoryRunInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

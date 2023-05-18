@@ -13,7 +13,10 @@ type Compress struct {
 	Status string `json:"status"`
 
 	// 智能压缩类型（gzip：gzip压缩，br：br压缩）。
-	Type *string `json:"type,omitempty"`
+	Type string `json:"type"`
+
+	// 压缩格式，内容总长度不可超过200个字符， 使用\",\"分隔，每组内容不可超过50个字符， 开启状态下，首次传空时默认值为.js,.html,.css,.xml,.json,.shtml,.htm，否则为上次设置的结果。
+	FileType *string `json:"file_type,omitempty"`
 }
 
 func (o Compress) String() string {

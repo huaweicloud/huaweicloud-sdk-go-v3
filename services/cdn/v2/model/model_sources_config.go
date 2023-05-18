@@ -29,6 +29,9 @@ type SourcesConfig struct {
 
 	// 回源HOST，默认加速域名。
 	HostName *string `json:"host_name,omitempty"`
+
+	// obs桶源站类型 “private” 私有桶 “public” 公有桶。
+	ObsBucketType *string `json:"obs_bucket_type,omitempty"`
 }
 
 func (o SourcesConfig) String() string {

@@ -12,9 +12,6 @@ type ListPipelinesRequest struct {
 	// 项目ID
 	ProjectId string `json:"project_id"`
 
-	// 语言类型 中文:zh-cn 英文:en-us，默认en-us
-	XLanguage *string `json:"X-Language,omitempty"`
-
 	Body *ListPipelineQuery `json:"body,omitempty"`
 }
 

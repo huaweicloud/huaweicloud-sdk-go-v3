@@ -191,7 +191,7 @@ func GenReqDefForListVariables() *def.HttpRequestDef {
 func GenReqDefForShowAgentConfig() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/v1/cpts/{project_id}/stress/agents").
+		WithPath("/v1/{project_id}/stress/agents").
 		WithResponse(new(model.ShowAgentConfigResponse)).
 		WithContentType("application/json")
 

@@ -12,6 +12,9 @@ type CreateGaussMySqlDatabase struct {
 	// 数据库名称,数据库名称长度可在1～64个字符之间，由字母、数字、下划线组成，且不能包含其他特殊字符。
 	Name string `json:"name"`
 
+	// 数据库备注,长度不能超过512个字符，不能包含回车和特殊字符!<\"='>&。
+	Comment *string `json:"comment,omitempty"`
+
 	// 数据库使用的字符集名称，如utf8mb4、gbk。
 	CharacterSet string `json:"character_set"`
 

@@ -714,6 +714,14 @@ func GenReqDefForListDeviceGroups() *def.HttpRequestDef {
 		WithName("AppId").
 		WithJsonTag("app_id").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("GroupType").
+		WithJsonTag("group_type").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Name").
+		WithJsonTag("name").
+		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").

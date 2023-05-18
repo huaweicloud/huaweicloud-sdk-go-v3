@@ -19,6 +19,27 @@ func CbrClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+// AddAgentPath 新增备份路径
+//
+// 对客户端新增备份路径，新增的路径不会校验是否存在。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbrClient) AddAgentPath(request *model.AddAgentPathRequest) (*model.AddAgentPathResponse, error) {
+	requestDef := GenReqDefForAddAgentPath()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddAgentPathResponse), nil
+	}
+}
+
+// AddAgentPathInvoker 新增备份路径
+func (c *CbrClient) AddAgentPathInvoker(request *model.AddAgentPathRequest) *AddAgentPathInvoker {
+	requestDef := GenReqDefForAddAgentPath()
+	return &AddAgentPathInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // AddMember 添加备份成员
 //
 // 添加备份可共享的成员，只有云服务器备份可以添加备份共享成员，且仅支持在同一区域的不同用户间共享。
@@ -384,6 +405,27 @@ func (c *CbrClient) ImportBackupInvoker(request *model.ImportBackupRequest) *Imp
 	return &ImportBackupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListAgent 查询客户端列表
+//
+// 查询客户端列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbrClient) ListAgent(request *model.ListAgentRequest) (*model.ListAgentResponse, error) {
+	requestDef := GenReqDefForListAgent()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAgentResponse), nil
+	}
+}
+
+// ListAgentInvoker 查询客户端列表
+func (c *CbrClient) ListAgentInvoker(request *model.ListAgentRequest) *ListAgentInvoker {
+	requestDef := GenReqDefForListAgent()
+	return &ListAgentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListBackups 查询所有备份
 //
 // 查询所有副本
@@ -510,6 +552,48 @@ func (c *CbrClient) MigrateVaultResourceInvoker(request *model.MigrateVaultResou
 	return &MigrateVaultResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RegisterAgent 注册客户端
+//
+// 注册客户端，安装时候由Agent调用，无需手动注册。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbrClient) RegisterAgent(request *model.RegisterAgentRequest) (*model.RegisterAgentResponse, error) {
+	requestDef := GenReqDefForRegisterAgent()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RegisterAgentResponse), nil
+	}
+}
+
+// RegisterAgentInvoker 注册客户端
+func (c *CbrClient) RegisterAgentInvoker(request *model.RegisterAgentRequest) *RegisterAgentInvoker {
+	requestDef := GenReqDefForRegisterAgent()
+	return &RegisterAgentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RemoveAgentPath 移除备份路径
+//
+// 移除已添加的文件备份路径。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbrClient) RemoveAgentPath(request *model.RemoveAgentPathRequest) (*model.RemoveAgentPathResponse, error) {
+	requestDef := GenReqDefForRemoveAgentPath()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RemoveAgentPathResponse), nil
+	}
+}
+
+// RemoveAgentPathInvoker 移除备份路径
+func (c *CbrClient) RemoveAgentPathInvoker(request *model.RemoveAgentPathRequest) *RemoveAgentPathInvoker {
+	requestDef := GenReqDefForRemoveAgentPath()
+	return &RemoveAgentPathInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RemoveVaultResource 移除资源
 //
 // 移除存储库中的资源，若移除资源，将一并删除该资源在保管库中的备份
@@ -550,6 +634,27 @@ func (c *CbrClient) RestoreBackup(request *model.RestoreBackupRequest) (*model.R
 func (c *CbrClient) RestoreBackupInvoker(request *model.RestoreBackupRequest) *RestoreBackupInvoker {
 	requestDef := GenReqDefForRestoreBackup()
 	return &RestoreBackupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAgent 查询指定客户端
+//
+// 查询指定客户端
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbrClient) ShowAgent(request *model.ShowAgentRequest) (*model.ShowAgentResponse, error) {
+	requestDef := GenReqDefForShowAgent()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAgentResponse), nil
+	}
+}
+
+// ShowAgentInvoker 查询指定客户端
+func (c *CbrClient) ShowAgentInvoker(request *model.ShowAgentRequest) *ShowAgentInvoker {
+	requestDef := GenReqDefForShowAgent()
+	return &ShowAgentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowBackup 查询指定备份
@@ -805,6 +910,48 @@ func (c *CbrClient) ShowVaultTag(request *model.ShowVaultTagRequest) (*model.Sho
 func (c *CbrClient) ShowVaultTagInvoker(request *model.ShowVaultTagRequest) *ShowVaultTagInvoker {
 	requestDef := GenReqDefForShowVaultTag()
 	return &ShowVaultTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UnregisterAgent 移除客户端
+//
+// 移除客户端，移除客户端时将会删除该客户端所有备份，请谨慎操作。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbrClient) UnregisterAgent(request *model.UnregisterAgentRequest) (*model.UnregisterAgentResponse, error) {
+	requestDef := GenReqDefForUnregisterAgent()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UnregisterAgentResponse), nil
+	}
+}
+
+// UnregisterAgentInvoker 移除客户端
+func (c *CbrClient) UnregisterAgentInvoker(request *model.UnregisterAgentRequest) *UnregisterAgentInvoker {
+	requestDef := GenReqDefForUnregisterAgent()
+	return &UnregisterAgentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAgent 修改客户端
+//
+// 修改客户端状态
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbrClient) UpdateAgent(request *model.UpdateAgentRequest) (*model.UpdateAgentResponse, error) {
+	requestDef := GenReqDefForUpdateAgent()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAgentResponse), nil
+	}
+}
+
+// UpdateAgentInvoker 修改客户端
+func (c *CbrClient) UpdateAgentInvoker(request *model.UpdateAgentRequest) *UpdateAgentInvoker {
+	requestDef := GenReqDefForUpdateAgent()
+	return &UpdateAgentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateMemberStatus 更新备份成员状态

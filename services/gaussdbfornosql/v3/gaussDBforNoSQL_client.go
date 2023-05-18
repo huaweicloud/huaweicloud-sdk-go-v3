@@ -1177,6 +1177,27 @@ func (c *GaussDBforNoSQLClient) ShowAllInstancesBackupsInvoker(request *model.Sh
 	return &ShowAllInstancesBackupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowAllInstancesBackupsNew 查询备份列表（推荐）
+//
+// 根据指定条件查询备份列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ShowAllInstancesBackupsNew(request *model.ShowAllInstancesBackupsNewRequest) (*model.ShowAllInstancesBackupsNewResponse, error) {
+	requestDef := GenReqDefForShowAllInstancesBackupsNew()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAllInstancesBackupsNewResponse), nil
+	}
+}
+
+// ShowAllInstancesBackupsNewInvoker 查询备份列表（推荐）
+func (c *GaussDBforNoSQLClient) ShowAllInstancesBackupsNewInvoker(request *model.ShowAllInstancesBackupsNewRequest) *ShowAllInstancesBackupsNewInvoker {
+	requestDef := GenReqDefForShowAllInstancesBackupsNew()
+	return &ShowAllInstancesBackupsNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowApplicableInstances 查询参数模板可应用的实例列表
 //
 // 查询参数模板可应用的实例列表。

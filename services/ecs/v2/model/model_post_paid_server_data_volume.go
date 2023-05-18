@@ -39,6 +39,9 @@ type PostPaidServerDataVolume struct {
 
 	// 数据镜像的ID，UUID格式。  如果使用数据盘镜像创建数据盘，则data_image_id为必选参数，且不支持使用metadata。
 	DataImageId *string `json:"data_image_id,omitempty"`
+
+	// 弹性公网IP随实例释放策略。  true：弹性公网IP随实例释放。 false：弹性公网IP不随实例释放。 默认值：false。
+	DeleteOnTermination *bool `json:"delete_on_termination,omitempty"`
 }
 
 func (o PostPaidServerDataVolume) String() string {

@@ -16,7 +16,7 @@ type AudioCreateRequest struct {
 	// 事件类型，可选值如下： default：默认事件 audiobook：有声书 education：教育音频 game：游戏语音房 live：秀场直播 ecommerce：电商直播 voiceroom：交友语音房 private：私密语音聊天
 	EventType AudioCreateRequestEventType `json:"event_type"`
 
-	// 需要检测的风险类型，若未传或者传参为空，则表示全场景审核。
+	// 需要检测的风险类型，列表不能为空。 风险类型如下： - porn：涉黄检测 - ad：广告检测 - moan：娇喘检测 - abuse：辱骂检测
 	Categories []AudioCreateRequestCategories `json:"categories"`
 
 	// 回调http接口：当该字段非空时，服务将根据该字段回调通知用户审核结果。

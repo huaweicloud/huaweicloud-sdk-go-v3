@@ -61,6 +61,28 @@ func (c *DasClient) ShowApiVersionInvoker(request *model.ShowApiVersionRequest) 
 	return &ShowApiVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CancelShareConnections 删除共享链接
+//
+// 删除共享链接，
+// 用于用户删除共享链接
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) CancelShareConnections(request *model.CancelShareConnectionsRequest) (*model.CancelShareConnectionsResponse, error) {
+	requestDef := GenReqDefForCancelShareConnections()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CancelShareConnectionsResponse), nil
+	}
+}
+
+// CancelShareConnectionsInvoker 删除共享链接
+func (c *DasClient) CancelShareConnectionsInvoker(request *model.CancelShareConnectionsRequest) *CancelShareConnectionsInvoker {
+	requestDef := GenReqDefForCancelShareConnections()
+	return &CancelShareConnectionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ChangeSqlLimitSwitchStatus 设置SQL限流开关状态
 //
 // 设置SQL限流开关状态。目前仅支持MySQL数据库。
@@ -102,6 +124,28 @@ func (c *DasClient) ChangeSqlSwitch(request *model.ChangeSqlSwitchRequest) (*mod
 func (c *DasClient) ChangeSqlSwitchInvoker(request *model.ChangeSqlSwitchRequest) *ChangeSqlSwitchInvoker {
 	requestDef := GenReqDefForChangeSqlSwitch()
 	return &ChangeSqlSwitchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateShareConnections 设置共享链接
+//
+// 设置共享链接，
+// 用于用户添加共享链接
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) CreateShareConnections(request *model.CreateShareConnectionsRequest) (*model.CreateShareConnectionsResponse, error) {
+	requestDef := GenReqDefForCreateShareConnections()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateShareConnectionsResponse), nil
+	}
+}
+
+// CreateShareConnectionsInvoker 设置共享链接
+func (c *DasClient) CreateShareConnectionsInvoker(request *model.CreateShareConnectionsRequest) *CreateShareConnectionsInvoker {
+	requestDef := GenReqDefForCreateShareConnections()
+	return &CreateShareConnectionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateSpaceAnalysisTask 创建空间分析任务

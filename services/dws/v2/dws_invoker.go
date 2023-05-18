@@ -113,6 +113,18 @@ func (i *CheckClusterInvoker) Invoke() (*model.CheckClusterResponse, error) {
 	}
 }
 
+type CheckDisasterNameInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckDisasterNameInvoker) Invoke() (*model.CheckDisasterNameResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckDisasterNameResponse), nil
+	}
+}
+
 type CopySnapshotInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -482,6 +494,18 @@ func (i *ListAvailabilityZonesInvoker) Invoke() (*model.ListAvailabilityZonesRes
 		return nil, err
 	} else {
 		return result.(*model.ListAvailabilityZonesResponse), nil
+	}
+}
+
+type ListAvailableDisasterClustersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAvailableDisasterClustersInvoker) Invoke() (*model.ListAvailableDisasterClustersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAvailableDisasterClustersResponse), nil
 	}
 }
 
@@ -929,6 +953,18 @@ func (i *RestoreDisasterInvoker) Invoke() (*model.RestoreDisasterResponse, error
 	}
 }
 
+type ShowDisasterDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDisasterDetailInvoker) Invoke() (*model.ShowDisasterDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDisasterDetailResponse), nil
+	}
+}
+
 type ShrinkClusterInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1034,6 +1070,18 @@ func (i *UpdateDataSourceInvoker) Invoke() (*model.UpdateDataSourceResponse, err
 		return nil, err
 	} else {
 		return result.(*model.UpdateDataSourceResponse), nil
+	}
+}
+
+type UpdateDisasterInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDisasterInfoInvoker) Invoke() (*model.UpdateDisasterInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDisasterInfoResponse), nil
 	}
 }
 

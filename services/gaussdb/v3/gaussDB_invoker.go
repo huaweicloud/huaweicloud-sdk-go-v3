@@ -437,6 +437,30 @@ func (i *ListInstanceTagsInvoker) Invoke() (*model.ListInstanceTagsResponse, err
 	}
 }
 
+type ListLtsErrorLogDetailsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListLtsErrorLogDetailsInvoker) Invoke() (*model.ListLtsErrorLogDetailsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListLtsErrorLogDetailsResponse), nil
+	}
+}
+
+type ListLtsSlowlogDetailsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListLtsSlowlogDetailsInvoker) Invoke() (*model.ListLtsSlowlogDetailsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListLtsSlowlogDetailsResponse), nil
+	}
+}
+
 type ListProjectTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -758,6 +782,30 @@ func (i *UpdateGaussMySqlConfigurationInvoker) Invoke() (*model.UpdateGaussMySql
 		return nil, err
 	} else {
 		return result.(*model.UpdateGaussMySqlConfigurationResponse), nil
+	}
+}
+
+type UpdateGaussMySqlDatabaseCommentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateGaussMySqlDatabaseCommentInvoker) Invoke() (*model.UpdateGaussMySqlDatabaseCommentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateGaussMySqlDatabaseCommentResponse), nil
+	}
+}
+
+type UpdateGaussMySqlDatabaseUserCommentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateGaussMySqlDatabaseUserCommentInvoker) Invoke() (*model.UpdateGaussMySqlDatabaseUserCommentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateGaussMySqlDatabaseUserCommentResponse), nil
 	}
 }
 

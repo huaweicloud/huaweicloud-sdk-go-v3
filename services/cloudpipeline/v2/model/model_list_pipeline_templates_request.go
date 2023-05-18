@@ -12,9 +12,6 @@ type ListPipelineTemplatesRequest struct {
 	// 租户ID
 	TenantId string `json:"tenant_id"`
 
-	// 语言类型 中文:zh-cn 英文:en-us，默认en-us
-	XLanguage *string `json:"X-Language,omitempty"`
-
 	Body *ListPipelineTemplatesQuery `json:"body,omitempty"`
 }
 

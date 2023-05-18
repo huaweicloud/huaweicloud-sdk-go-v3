@@ -20,6 +20,8 @@ type PrePaidServerRootVolume struct {
 
 	Extendparam *PrePaidServerRootVolumeExtendParam `json:"extendparam,omitempty"`
 
+	Metadata *PrePaidServerRootVolumeMetadata `json:"metadata,omitempty"`
+
 	// 云服务器系统盘对应的磁盘存储类型。 磁盘存储类型枚举值： DSS：专属存储类型
 	ClusterType *PrePaidServerRootVolumeClusterType `json:"cluster_type,omitempty"`
 

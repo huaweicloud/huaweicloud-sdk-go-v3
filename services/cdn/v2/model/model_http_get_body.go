@@ -18,14 +18,23 @@ type HttpGetBody struct {
 	// HTTPS协议使用的证书内容，当证书开启时必返回该字段。取值范围：PEM编码格式。
 	CertificateValue *string `json:"certificate_value,omitempty"`
 
+	// 证书过期时间,单位：毫秒。
+	ExpireTime *int64 `json:"expire_time,omitempty"`
+
 	// 证书来源。1：代表华为云托管证书；0：表示自有证书。 默认值0。当证书开启时必返回该字段。
 	CertificateSource *int32 `json:"certificate_source,omitempty"`
+
+	// 证书类型。server：国际证书；server_sm：国密证书。
+	CertificateType *string `json:"certificate_type,omitempty"`
 
 	// 是否使用HTTP2.0。（on：是，off：否）
 	Http2Status *string `json:"http2_status,omitempty"`
 
 	// 传输层安全性协议，目前支持TLSv1.0/1.1/1.2/1.3四个版本的协议。当证书开启时返回该字段，默认全部开启，不可全部关闭。
 	TlsVersion *string `json:"tls_version,omitempty"`
+
+	// 是否开启ocsp stapling （on：是，off：否）。
+	OcspStaplingStatus *string `json:"ocsp_stapling_status,omitempty"`
 }
 
 func (o HttpGetBody) String() string {

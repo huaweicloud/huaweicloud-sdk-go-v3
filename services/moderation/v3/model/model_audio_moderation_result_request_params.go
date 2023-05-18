@@ -8,12 +8,16 @@ import (
 
 // 作业创建参数
 type AudioModerationResultRequestParams struct {
+
+	// 创建作业时传的event_type参数
 	EventType *string `json:"event_type,omitempty"`
 
 	Data *AudioModerationResultRequestParamsData `json:"data,omitempty"`
 
+	// 创建作业时传的callback参数
 	Callback *string `json:"callback,omitempty"`
 
+	// 创建作业时传的categories参数
 	Categories *[]string `json:"categories,omitempty"`
 }
 

@@ -9,9 +9,6 @@ import (
 // Request Object
 type ListTemplatesRequest struct {
 
-	// 语言类型 中文:zh-cn 英文:en-us，默认en-us
-	XLanguage *string `json:"X-Language,omitempty"`
-
 	// 模板类型
 	TemplateType string `json:"template_type"`
 

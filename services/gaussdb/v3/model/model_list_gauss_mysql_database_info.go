@@ -15,6 +15,9 @@ type ListGaussMysqlDatabaseInfo struct {
 	// 数据库使用的字符集，如utf8mb4、gbk等。
 	Charset *string `json:"charset,omitempty"`
 
+	// 数据库备注。
+	Comment *string `json:"comment,omitempty"`
+
 	// 已授权数据库用户列表。
 	Users *[]GaussMySqlDatabaseInfo `json:"users,omitempty"`
 }

@@ -28,6 +28,8 @@ type PostPaidServerRootVolume struct {
 	ClusterId *string `json:"cluster_id,omitempty"`
 
 	Extendparam *PostPaidServerRootVolumeExtendParam `json:"extendparam,omitempty"`
+
+	Metadata *PostPaidServerRootVolumeMetadata `json:"metadata,omitempty"`
 }
 
 func (o PostPaidServerRootVolume) String() string {

@@ -17,9 +17,6 @@ type StopPipelineRunRequest struct {
 
 	// 流水线运行实例ID
 	PipelineRunId string `json:"pipeline_run_id"`
-
-	// 语言类型 中文:zh-cn 英文:en-us，默认en-us
-	XLanguage *string `json:"X-Language,omitempty"`
 }
 
 func (o StopPipelineRunRequest) String() string {

@@ -161,6 +161,18 @@ func (i *ListProjectsV4Invoker) Invoke() (*model.ListProjectsV4Response, error) 
 	}
 }
 
+type ListTemplatesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTemplatesInvoker) Invoke() (*model.ListTemplatesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTemplatesResponse), nil
+	}
+}
+
 type ListWorkitemStatusRecordsV4Invoker struct {
 	*invoker.BaseInvoker
 }
@@ -734,6 +746,18 @@ func (i *ListStatusStatisticInvoker) Invoke() (*model.ListStatusStatisticRespons
 		return nil, err
 	} else {
 		return result.(*model.ListStatusStatisticResponse), nil
+	}
+}
+
+type SearchIssuesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SearchIssuesInvoker) Invoke() (*model.SearchIssuesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SearchIssuesResponse), nil
 	}
 }
 

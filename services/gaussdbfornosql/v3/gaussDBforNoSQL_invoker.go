@@ -665,6 +665,18 @@ func (i *ShowAllInstancesBackupsInvoker) Invoke() (*model.ShowAllInstancesBackup
 	}
 }
 
+type ShowAllInstancesBackupsNewInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAllInstancesBackupsNewInvoker) Invoke() (*model.ShowAllInstancesBackupsNewResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAllInstancesBackupsNewResponse), nil
+	}
+}
+
 type ShowApplicableInstancesInvoker struct {
 	*invoker.BaseInvoker
 }

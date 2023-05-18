@@ -292,6 +292,27 @@ func (c *ProjectManClient) ListProjectsV4Invoker(request *model.ListProjectsV4Re
 	return &ListProjectsV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListTemplates 查询项目模板
+//
+// 查询项目模板
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) ListTemplates(request *model.ListTemplatesRequest) (*model.ListTemplatesResponse, error) {
+	requestDef := GenReqDefForListTemplates()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTemplatesResponse), nil
+	}
+}
+
+// ListTemplatesInvoker 查询项目模板
+func (c *ProjectManClient) ListTemplatesInvoker(request *model.ListTemplatesRequest) *ListTemplatesInvoker {
+	requestDef := GenReqDefForListTemplates()
+	return &ListTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListWorkitemStatusRecordsV4 查询看板项目下工作项的状态历史记录
 //
 // 分页查询看板项目下工作项的状态历史记录
@@ -1298,6 +1319,27 @@ func (c *ProjectManClient) ListStatusStatistic(request *model.ListStatusStatisti
 func (c *ProjectManClient) ListStatusStatisticInvoker(request *model.ListStatusStatisticRequest) *ListStatusStatisticInvoker {
 	requestDef := GenReqDefForListStatusStatistic()
 	return &ListStatusStatisticInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SearchIssues 高级查询我的待办工作项
+//
+// 高级查询我的待办工作项
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) SearchIssues(request *model.SearchIssuesRequest) (*model.SearchIssuesResponse, error) {
+	requestDef := GenReqDefForSearchIssues()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SearchIssuesResponse), nil
+	}
+}
+
+// SearchIssuesInvoker 高级查询我的待办工作项
+func (c *ProjectManClient) SearchIssuesInvoker(request *model.SearchIssuesRequest) *SearchIssuesInvoker {
+	requestDef := GenReqDefForSearchIssues()
+	return &SearchIssuesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowIssueCompletionRate 获取工作项完成率
