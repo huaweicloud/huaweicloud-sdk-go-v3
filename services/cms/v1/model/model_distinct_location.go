@@ -9,10 +9,10 @@ import (
 //
 type DistinctLocation struct {
 
-	// region的id
+	// 区域Region
 	RegionId string `json:"region_id"`
 
-	// az的id
+	// 可用区Availability Zone
 	AvailabilityZoneId *string `json:"availability_zone_id,omitempty"`
 }
 

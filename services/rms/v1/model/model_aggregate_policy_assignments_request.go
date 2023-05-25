@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 聚合合规策略请求体
+// 聚合合规规则请求体
 type AggregatePolicyAssignmentsRequest struct {
 
 	// 资源聚合器ID

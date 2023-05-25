@@ -99,6 +99,21 @@ func GenReqDefForListInstances() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListSupplyRecommendation() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/{domain_id}/recommendations/ecs-supply").
+		WithResponse(new(model.ListSupplyRecommendationResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShowAutoLaunchGroup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -126,21 +141,6 @@ func GenReqDefForUpdateAutoLaunchGroup() *def.HttpRequestDef {
 		WithName("AutoLaunchGroupId").
 		WithJsonTag("auto_launch_group_id").
 		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForListSupplyRecommendation() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v1/{domain_id}/recommendations/ecs-supply").
-		WithResponse(new(model.ListSupplyRecommendationResponse)).
-		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").

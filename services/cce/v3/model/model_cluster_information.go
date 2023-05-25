@@ -9,6 +9,8 @@ import (
 //
 type ClusterInformation struct {
 	Spec *ClusterInformationSpec `json:"spec"`
+
+	Metadata *ClusterMetadataForUpdate `json:"metadata,omitempty"`
 }
 
 func (o ClusterInformation) String() string {

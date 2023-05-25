@@ -5,6 +5,18 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/live/v1/model"
 )
 
+type BatchShowIpBelongsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchShowIpBelongsInvoker) Invoke() (*model.BatchShowIpBelongsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchShowIpBelongsResponse), nil
+	}
+}
+
 type CreateDomainInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -125,6 +125,18 @@ func (i *SearchSharedPrincipalsInvoker) Invoke() (*model.SearchSharedPrincipalsR
 	}
 }
 
+type ListQuotaInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListQuotaInvoker) Invoke() (*model.ListQuotaResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListQuotaResponse), nil
+	}
+}
+
 type SearchDistinctSharedResourcesInvoker struct {
 	*invoker.BaseInvoker
 }

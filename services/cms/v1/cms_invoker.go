@@ -53,6 +53,18 @@ func (i *ListInstancesInvoker) Invoke() (*model.ListInstancesResponse, error) {
 	}
 }
 
+type ListSupplyRecommendationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSupplyRecommendationInvoker) Invoke() (*model.ListSupplyRecommendationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSupplyRecommendationResponse), nil
+	}
+}
+
 type ShowAutoLaunchGroupInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -74,17 +86,5 @@ func (i *UpdateAutoLaunchGroupInvoker) Invoke() (*model.UpdateAutoLaunchGroupRes
 		return nil, err
 	} else {
 		return result.(*model.UpdateAutoLaunchGroupResponse), nil
-	}
-}
-
-type ListSupplyRecommendationInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListSupplyRecommendationInvoker) Invoke() (*model.ListSupplyRecommendationResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListSupplyRecommendationResponse), nil
 	}
 }

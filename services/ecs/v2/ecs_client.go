@@ -602,6 +602,27 @@ func (c *EcsClient) DisassociateServerVirtualIpInvoker(request *model.Disassocia
 	return &DisassociateServerVirtualIpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListFlavorSellPolicies 查询规格销售策略
+//
+// 查询规格销售策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcsClient) ListFlavorSellPolicies(request *model.ListFlavorSellPoliciesRequest) (*model.ListFlavorSellPoliciesResponse, error) {
+	requestDef := GenReqDefForListFlavorSellPolicies()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFlavorSellPoliciesResponse), nil
+	}
+}
+
+// ListFlavorSellPoliciesInvoker 查询规格销售策略
+func (c *EcsClient) ListFlavorSellPoliciesInvoker(request *model.ListFlavorSellPoliciesRequest) *ListFlavorSellPoliciesInvoker {
+	requestDef := GenReqDefForListFlavorSellPolicies()
+	return &ListFlavorSellPoliciesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListFlavors 查询规格详情和规格扩展信息列表
 //
 // 查询云服务器规格详情信息和规格扩展信息列表。

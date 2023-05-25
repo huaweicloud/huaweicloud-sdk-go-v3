@@ -82,9 +82,9 @@ func (c *CmsClient) ListAutoLaunchGroupsInvoker(request *model.ListAutoLaunchGro
 	return &ListAutoLaunchGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListInstances 查询智能购买组VM实例列表
+// ListInstances 查询智能购买组实例列表
 //
-// 获取autoLaunchGroup创建的instances信息
+// 获取智能购买组创建的实例信息
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CmsClient) ListInstances(request *model.ListInstancesRequest) (*model.ListInstancesResponse, error) {
@@ -97,15 +97,36 @@ func (c *CmsClient) ListInstances(request *model.ListInstancesRequest) (*model.L
 	}
 }
 
-// ListInstancesInvoker 查询智能购买组VM实例列表
+// ListInstancesInvoker 查询智能购买组实例列表
 func (c *CmsClient) ListInstancesInvoker(request *model.ListInstancesRequest) *ListInstancesInvoker {
 	requestDef := GenReqDefForListInstances()
 	return &ListInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSupplyRecommendation 地域推荐
+//
+// 对ECS的资源供给的地域和规格进行推荐，推荐结果以打分的形式呈现，分数越高推荐程度越高
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CmsClient) ListSupplyRecommendation(request *model.ListSupplyRecommendationRequest) (*model.ListSupplyRecommendationResponse, error) {
+	requestDef := GenReqDefForListSupplyRecommendation()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSupplyRecommendationResponse), nil
+	}
+}
+
+// ListSupplyRecommendationInvoker 地域推荐
+func (c *CmsClient) ListSupplyRecommendationInvoker(request *model.ListSupplyRecommendationRequest) *ListSupplyRecommendationInvoker {
+	requestDef := GenReqDefForListSupplyRecommendation()
+	return &ListSupplyRecommendationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowAutoLaunchGroup 查询智能购买组详情
 //
-// 查询指定AutoLaunchGroup的详细信息
+// 查询指定智能购买组的详细信息
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CmsClient) ShowAutoLaunchGroup(request *model.ShowAutoLaunchGroupRequest) (*model.ShowAutoLaunchGroupResponse, error) {
@@ -143,25 +164,4 @@ func (c *CmsClient) UpdateAutoLaunchGroup(request *model.UpdateAutoLaunchGroupRe
 func (c *CmsClient) UpdateAutoLaunchGroupInvoker(request *model.UpdateAutoLaunchGroupRequest) *UpdateAutoLaunchGroupInvoker {
 	requestDef := GenReqDefForUpdateAutoLaunchGroup()
 	return &UpdateAutoLaunchGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListSupplyRecommendation 查询资源供给推荐
-//
-// 对ECS的资源供给的地域和规格进行推荐，推荐结果以打分的形式呈现，分数越高推荐程度越高
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CmsClient) ListSupplyRecommendation(request *model.ListSupplyRecommendationRequest) (*model.ListSupplyRecommendationResponse, error) {
-	requestDef := GenReqDefForListSupplyRecommendation()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListSupplyRecommendationResponse), nil
-	}
-}
-
-// ListSupplyRecommendationInvoker 查询资源供给推荐
-func (c *CmsClient) ListSupplyRecommendationInvoker(request *model.ListSupplyRecommendationRequest) *ListSupplyRecommendationInvoker {
-	requestDef := GenReqDefForListSupplyRecommendation()
-	return &ListSupplyRecommendationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

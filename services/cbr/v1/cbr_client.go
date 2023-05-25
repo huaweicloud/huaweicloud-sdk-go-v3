@@ -131,6 +131,48 @@ func (c *CbrClient) BatchCreateAndDeleteVaultTagsInvoker(request *model.BatchCre
 	return &BatchCreateAndDeleteVaultTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchUpdateVault 批量修改存储库
+//
+// 批量修改项目下所有存储库
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbrClient) BatchUpdateVault(request *model.BatchUpdateVaultRequest) (*model.BatchUpdateVaultResponse, error) {
+	requestDef := GenReqDefForBatchUpdateVault()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchUpdateVaultResponse), nil
+	}
+}
+
+// BatchUpdateVaultInvoker 批量修改存储库
+func (c *CbrClient) BatchUpdateVaultInvoker(request *model.BatchUpdateVaultRequest) *BatchUpdateVaultInvoker {
+	requestDef := GenReqDefForBatchUpdateVault()
+	return &BatchUpdateVaultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CheckAgent 查询agent状态
+//
+// 检查应用一致性Agent状态
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbrClient) CheckAgent(request *model.CheckAgentRequest) (*model.CheckAgentResponse, error) {
+	requestDef := GenReqDefForCheckAgent()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckAgentResponse), nil
+	}
+}
+
+// CheckAgentInvoker 查询agent状态
+func (c *CbrClient) CheckAgentInvoker(request *model.CheckAgentRequest) *CheckAgentInvoker {
+	requestDef := GenReqDefForCheckAgent()
+	return &CheckAgentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CopyBackup 复制备份
 //
 // 跨区域复制备份。
@@ -213,6 +255,27 @@ func (c *CbrClient) CreatePolicy(request *model.CreatePolicyRequest) (*model.Cre
 func (c *CbrClient) CreatePolicyInvoker(request *model.CreatePolicyRequest) *CreatePolicyInvoker {
 	requestDef := GenReqDefForCreatePolicy()
 	return &CreatePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreatePostPaidVault 创建包周期存储库
+//
+// 创建包周期存储库
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbrClient) CreatePostPaidVault(request *model.CreatePostPaidVaultRequest) (*model.CreatePostPaidVaultResponse, error) {
+	requestDef := GenReqDefForCreatePostPaidVault()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePostPaidVaultResponse), nil
+	}
+}
+
+// CreatePostPaidVaultInvoker 创建包周期存储库
+func (c *CbrClient) CreatePostPaidVaultInvoker(request *model.CreatePostPaidVaultRequest) *CreatePostPaidVaultInvoker {
+	requestDef := GenReqDefForCreatePostPaidVault()
+	return &CreatePostPaidVaultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateVault 创建存储库
@@ -405,6 +468,27 @@ func (c *CbrClient) ImportBackupInvoker(request *model.ImportBackupRequest) *Imp
 	return &ImportBackupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ImportCheckpoint 同步备份还原点
+//
+// 针对vault同步备份副本
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbrClient) ImportCheckpoint(request *model.ImportCheckpointRequest) (*model.ImportCheckpointResponse, error) {
+	requestDef := GenReqDefForImportCheckpoint()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ImportCheckpointResponse), nil
+	}
+}
+
+// ImportCheckpointInvoker 同步备份还原点
+func (c *CbrClient) ImportCheckpointInvoker(request *model.ImportCheckpointRequest) *ImportCheckpointInvoker {
+	requestDef := GenReqDefForImportCheckpoint()
+	return &ImportCheckpointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListAgent 查询客户端列表
 //
 // 查询客户端列表
@@ -445,6 +529,48 @@ func (c *CbrClient) ListBackups(request *model.ListBackupsRequest) (*model.ListB
 func (c *CbrClient) ListBackupsInvoker(request *model.ListBackupsRequest) *ListBackupsInvoker {
 	requestDef := GenReqDefForListBackups()
 	return &ListBackupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDomainProjects 查询租户项目列表
+//
+// 根据指定租户名称查询项目列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbrClient) ListDomainProjects(request *model.ListDomainProjectsRequest) (*model.ListDomainProjectsResponse, error) {
+	requestDef := GenReqDefForListDomainProjects()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDomainProjectsResponse), nil
+	}
+}
+
+// ListDomainProjectsInvoker 查询租户项目列表
+func (c *CbrClient) ListDomainProjectsInvoker(request *model.ListDomainProjectsRequest) *ListDomainProjectsInvoker {
+	requestDef := GenReqDefForListDomainProjects()
+	return &ListDomainProjectsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListExternalVault 查询其他区域存储库列表
+//
+// 查询其他区域的存储库列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbrClient) ListExternalVault(request *model.ListExternalVaultRequest) (*model.ListExternalVaultResponse, error) {
+	requestDef := GenReqDefForListExternalVault()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListExternalVaultResponse), nil
+	}
+}
+
+// ListExternalVaultInvoker 查询其他区域存储库列表
+func (c *CbrClient) ListExternalVaultInvoker(request *model.ListExternalVaultRequest) *ListExternalVaultInvoker {
+	requestDef := GenReqDefForListExternalVault()
+	return &ListExternalVaultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListOpLogs 查询任务列表
@@ -489,6 +615,27 @@ func (c *CbrClient) ListPoliciesInvoker(request *model.ListPoliciesRequest) *Lis
 	return &ListPoliciesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListProjects 查询租户的项目信息
+//
+// 查询租户的企业项目信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbrClient) ListProjects(request *model.ListProjectsRequest) (*model.ListProjectsResponse, error) {
+	requestDef := GenReqDefForListProjects()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListProjectsResponse), nil
+	}
+}
+
+// ListProjectsInvoker 查询租户的项目信息
+func (c *CbrClient) ListProjectsInvoker(request *model.ListProjectsRequest) *ListProjectsInvoker {
+	requestDef := GenReqDefForListProjects()
+	return &ListProjectsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListProtectable 查询可保护资源
 //
 // 查询可保护性资源列表
@@ -529,6 +676,27 @@ func (c *CbrClient) ListVault(request *model.ListVaultRequest) (*model.ListVault
 func (c *CbrClient) ListVaultInvoker(request *model.ListVaultRequest) *ListVaultInvoker {
 	requestDef := GenReqDefForListVault()
 	return &ListVaultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// MigrateDomain 租户迁移
+//
+// 将CSBS/VBS资源迁移到CBR。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbrClient) MigrateDomain(request *model.MigrateDomainRequest) (*model.MigrateDomainResponse, error) {
+	requestDef := GenReqDefForMigrateDomain()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.MigrateDomainResponse), nil
+	}
+}
+
+// MigrateDomainInvoker 租户迁移
+func (c *CbrClient) MigrateDomainInvoker(request *model.MigrateDomainRequest) *MigrateDomainInvoker {
+	requestDef := GenReqDefForMigrateDomain()
+	return &MigrateDomainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // MigrateVaultResource 迁移资源
@@ -636,6 +804,27 @@ func (c *CbrClient) RestoreBackupInvoker(request *model.RestoreBackupRequest) *R
 	return &RestoreBackupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SetVaultResource 设置存储库资源
+//
+// 设置存储库资源是否自动备份
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbrClient) SetVaultResource(request *model.SetVaultResourceRequest) (*model.SetVaultResourceResponse, error) {
+	requestDef := GenReqDefForSetVaultResource()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetVaultResourceResponse), nil
+	}
+}
+
+// SetVaultResourceInvoker 设置存储库资源
+func (c *CbrClient) SetVaultResourceInvoker(request *model.SetVaultResourceRequest) *SetVaultResourceInvoker {
+	requestDef := GenReqDefForSetVaultResource()
+	return &SetVaultResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowAgent 查询指定客户端
 //
 // 查询指定客户端
@@ -699,6 +888,27 @@ func (c *CbrClient) ShowCheckpointInvoker(request *model.ShowCheckpointRequest) 
 	return &ShowCheckpointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowDomain 查询租户信息
+//
+// 由控制台调用的内部接口，用于仅在查询共享备份时获取源project_id的域名信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbrClient) ShowDomain(request *model.ShowDomainRequest) (*model.ShowDomainResponse, error) {
+	requestDef := GenReqDefForShowDomain()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDomainResponse), nil
+	}
+}
+
+// ShowDomainInvoker 查询租户信息
+func (c *CbrClient) ShowDomainInvoker(request *model.ShowDomainRequest) *ShowDomainInvoker {
+	requestDef := GenReqDefForShowDomain()
+	return &ShowDomainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowMemberDetail 获取备份成员详情
 //
 // 获取备份成员的详情
@@ -739,6 +949,48 @@ func (c *CbrClient) ShowMembersDetail(request *model.ShowMembersDetailRequest) (
 func (c *CbrClient) ShowMembersDetailInvoker(request *model.ShowMembersDetailRequest) *ShowMembersDetailInvoker {
 	requestDef := GenReqDefForShowMembersDetail()
 	return &ShowMembersDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowMetadata 查询备份元数据
+//
+// 查询备份时资源的元数据
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbrClient) ShowMetadata(request *model.ShowMetadataRequest) (*model.ShowMetadataResponse, error) {
+	requestDef := GenReqDefForShowMetadata()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowMetadataResponse), nil
+	}
+}
+
+// ShowMetadataInvoker 查询备份元数据
+func (c *CbrClient) ShowMetadataInvoker(request *model.ShowMetadataRequest) *ShowMetadataInvoker {
+	requestDef := GenReqDefForShowMetadata()
+	return &ShowMetadataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowMigrateStatus 查询迁移
+//
+// 查询迁移结果
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbrClient) ShowMigrateStatus(request *model.ShowMigrateStatusRequest) (*model.ShowMigrateStatusResponse, error) {
+	requestDef := GenReqDefForShowMigrateStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowMigrateStatusResponse), nil
+	}
+}
+
+// ShowMigrateStatusInvoker 查询迁移
+func (c *CbrClient) ShowMigrateStatusInvoker(request *model.ShowMigrateStatusRequest) *ShowMigrateStatusInvoker {
+	requestDef := GenReqDefForShowMigrateStatus()
+	return &ShowMigrateStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowOpLog 查询单个任务
@@ -823,6 +1075,27 @@ func (c *CbrClient) ShowReplicationCapabilities(request *model.ShowReplicationCa
 func (c *CbrClient) ShowReplicationCapabilitiesInvoker(request *model.ShowReplicationCapabilitiesRequest) *ShowReplicationCapabilitiesInvoker {
 	requestDef := GenReqDefForShowReplicationCapabilities()
 	return &ShowReplicationCapabilitiesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowStorageUsage 查询容量统计
+//
+// 查询容量统计
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbrClient) ShowStorageUsage(request *model.ShowStorageUsageRequest) (*model.ShowStorageUsageResponse, error) {
+	requestDef := GenReqDefForShowStorageUsage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowStorageUsageResponse), nil
+	}
+}
+
+// ShowStorageUsageInvoker 查询容量统计
+func (c *CbrClient) ShowStorageUsageInvoker(request *model.ShowStorageUsageRequest) *ShowStorageUsageInvoker {
+	requestDef := GenReqDefForShowStorageUsage()
+	return &ShowStorageUsageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowVault 查询指定存储库
@@ -954,6 +1227,27 @@ func (c *CbrClient) UpdateAgentInvoker(request *model.UpdateAgentRequest) *Updat
 	return &UpdateAgentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateBackup 更新备份
+//
+// 根据备份id更改备份
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbrClient) UpdateBackup(request *model.UpdateBackupRequest) (*model.UpdateBackupResponse, error) {
+	requestDef := GenReqDefForUpdateBackup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateBackupResponse), nil
+	}
+}
+
+// UpdateBackupInvoker 更新备份
+func (c *CbrClient) UpdateBackupInvoker(request *model.UpdateBackupRequest) *UpdateBackupInvoker {
+	requestDef := GenReqDefForUpdateBackup()
+	return &UpdateBackupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateMemberStatus 更新备份成员状态
 //
 // 更新备份共享成员的状态，需要接收方执行此API。
@@ -973,6 +1267,27 @@ func (c *CbrClient) UpdateMemberStatus(request *model.UpdateMemberStatusRequest)
 func (c *CbrClient) UpdateMemberStatusInvoker(request *model.UpdateMemberStatusRequest) *UpdateMemberStatusInvoker {
 	requestDef := GenReqDefForUpdateMemberStatus()
 	return &UpdateMemberStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateOrder 变更
+//
+// 订单更新，支付cbc订单后，调用该接口更新包周期产品订单信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbrClient) UpdateOrder(request *model.UpdateOrderRequest) (*model.UpdateOrderResponse, error) {
+	requestDef := GenReqDefForUpdateOrder()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateOrderResponse), nil
+	}
+}
+
+// UpdateOrderInvoker 变更
+func (c *CbrClient) UpdateOrderInvoker(request *model.UpdateOrderRequest) *UpdateOrderInvoker {
+	requestDef := GenReqDefForUpdateOrder()
+	return &UpdateOrderInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdatePolicy 修改策略

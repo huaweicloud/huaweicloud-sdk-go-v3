@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// 启动模板，创建虚拟机时，使用到安全组、网络、镜像、flavor等信息
+// 实例的启动模板，创建虚拟机时，使用到安全组、网络、镜像、flavor等信息
 type LaunchTemplateInfo struct {
 
-	// 模板的ID,唯一标识一个模板
+	// 实例的启动模板id，唯一标识一个启动模板
 	LaunchTemplateId string `json:"launch_template_id"`
 
-	// 模板的版本，模板更新，都会增加版本
+	// 模板版本号
 	Version string `json:"version"`
 }
 

@@ -84,7 +84,7 @@ func (c *CbhClient) CreateInstanceInvoker(request *model.CreateInstanceRequest) 
 
 // CreateInstanceOrder 创建云堡垒机实例订单
 //
-// 创建云堡垒机实例订单。
+// 创建云堡垒机实例订单。(调用此接口前先调用创建云堡垒机实例接口)
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CbhClient) CreateInstanceOrder(request *model.CreateInstanceOrderRequest) (*model.CreateInstanceOrderResponse, error) {

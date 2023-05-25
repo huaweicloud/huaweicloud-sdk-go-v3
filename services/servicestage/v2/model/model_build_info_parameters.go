@@ -17,6 +17,12 @@ type BuildInfoParameters struct {
 
 	// 构建归档组织，默认cas_{project_id}。
 	ArtifactNamespace *string `json:"artifact_namespace,omitempty"`
+
+	// 指定构建集群的id。
+	ClusterId *string `json:"cluster_id,omitempty"`
+
+	// key是标签的键，value是标签的值。
+	NodeLabelSelector *interface{} `json:"node_label_selector,omitempty"`
 }
 
 func (o BuildInfoParameters) String() string {

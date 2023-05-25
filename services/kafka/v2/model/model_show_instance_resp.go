@@ -50,7 +50,7 @@ type ShowInstanceResp struct {
 	// 资源规格标识。   - dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。   - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。   - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。   - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。
 	ResourceSpecCode *string `json:"resource_spec_code,omitempty"`
 
-	// [付费模式，1表示按需计费，0表示包年/包月计费。](tag:hc,hk,hws,hws_hk,ctc,sbc,hk_sbc,cmcc,hws_eu)[付费模式，暂未使用。](tag:hws_ocb,ocb) [付费模式，1表示按需计费。](tag:otc,dt,g42,tm)
+	// '[付费模式，1表示按需计费，0表示包年/包月计费。](tag:hc,hk,hws,hws_hk,ctc,sbc,hk_sbc,cmcc,hws_eu)[付费模式，暂未使用。](tag:hws_ocb,ocb) [付费模式，1表示按需计费。](tag:otc,dt,g42,tm)'
 	ChargingMode *int32 `json:"charging_mode,omitempty"`
 
 	// VPC ID。
@@ -166,6 +166,9 @@ type ShowInstanceResp struct {
 
 	// kafka公网访问带宽。
 	PublicBandwidth *int32 `json:"public_bandwidth,omitempty"`
+
+	// 是否已开启kafka manager
+	KafkaManagerEnable *bool `json:"kafka_manager_enable,omitempty"`
 
 	// 登录Kafka Manager的用户名。
 	KafkaManagerUser *string `json:"kafka_manager_user,omitempty"`

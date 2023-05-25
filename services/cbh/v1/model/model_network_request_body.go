@@ -15,7 +15,7 @@ type NetworkRequestBody struct {
 	// 云堡垒升级实例所在安全组信息。
 	SecurityGroups []SecurityGroup `json:"security_groups"`
 
-	// 云堡垒升级实例的网卡信息。
+	// 云堡垒机实例的网卡信息。
 	Nics []Nics `json:"nics"`
 
 	// 云堡垒机实例ID。

@@ -12,7 +12,7 @@ type DeleteAutoLaunchGroupResponse struct {
 	// 错误码 请求失败时，响应体中必需包含错误码 请求成功时，不在响应消息体中包含错误码
 	ErrorCode *int32 `json:"error_code,omitempty"`
 
-	// 错误描述 请求失败时，响应体中必需包含错误 请求成功时，不在响应消息体中包含错误描述
+	// 错误描述 请求失败时，响应体中必需包含错误描述 请求成功时，不在响应消息体中包含错误描述
 	ErrorMsg       *string `json:"error_msg,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

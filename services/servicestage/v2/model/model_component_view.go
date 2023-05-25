@@ -17,6 +17,12 @@ type ComponentView struct {
 	// 应用组件名称。
 	Name *string `json:"name,omitempty"`
 
+	// 项目ID。
+	ProjectId *string `json:"project_id,omitempty"`
+
+	// 流水线Id列表，最多10个。
+	PipelineIds *[]string `json:"pipeline_ids,omitempty"`
+
 	Runtime *RuntimeType `json:"runtime,omitempty"`
 
 	Category *ComponentCategory `json:"category,omitempty"`
@@ -30,6 +36,8 @@ type ComponentView struct {
 	Status *int32 `json:"status,omitempty"`
 
 	Source *SourceObject `json:"source,omitempty"`
+
+	Build *BuildInfo `json:"build,omitempty"`
 
 	// 创建人。
 	Creator *string `json:"creator,omitempty"`

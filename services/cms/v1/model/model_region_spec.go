@@ -9,13 +9,13 @@ import (
 // 一个Region内的资源需求描述
 type RegionSpec struct {
 
-	// region的id
+	// 区域Region
 	RegionId string `json:"region_id"`
 
 	// Region内期望的总算力容量
 	ExpectTargetCapacity int32 `json:"expect_target_capacity"`
 
-	// Region内期望的稳定算力总量
+	// Region内期望的稳定算力容量
 	ExpectStableCapacity int32 `json:"expect_stable_capacity"`
 
 	LaunchTemplateConfig *LaunchTemplateConfig `json:"launch_template_config"`

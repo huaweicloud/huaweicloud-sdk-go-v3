@@ -15,7 +15,7 @@ type ShowInstanceMessagesResponse struct {
 	// 消息总条数。
 	Total *int64 `json:"total,omitempty"`
 
-	// 消息条数。
+	// 每页消息条数。
 	Size           *int64 `json:"size,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

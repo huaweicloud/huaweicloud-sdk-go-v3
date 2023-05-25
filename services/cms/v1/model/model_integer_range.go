@@ -9,10 +9,10 @@ import (
 // 资源取值范围，最大值最小值可取。 约束：min<=max
 type IntegerRange struct {
 
-	// 最大值：2147483647
+	// 最大值，-1表示无限制
 	Max *int32 `json:"max,omitempty"`
 
-	// 最小值：-2147483648
+	// 最小值，-1表示无限制
 	Min *int32 `json:"min,omitempty"`
 }
 

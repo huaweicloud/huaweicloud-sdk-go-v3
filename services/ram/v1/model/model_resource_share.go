@@ -19,6 +19,9 @@ type ResourceShare struct {
 	// 资源共享实例的描述。
 	Description string `json:"description"`
 
+	// 资源共享实例是否支持共享给组织外账号。
+	AllowExternalPrincipals *bool `json:"allow_external_principals,omitempty"`
+
 	// 资源共享实例的所有者ID。
 	OwningAccountId string `json:"owning_account_id"`
 

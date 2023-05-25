@@ -9,13 +9,13 @@ import (
 	"strings"
 )
 
-// AggregatePolicyAssignmentsFilters对象
+// 聚合合规规则过滤器。
 type AggregatePolicyAssignmentsFilters struct {
 
-	// 租户ID
+	// 源帐号ID。
 	AccountId *string `json:"account_id,omitempty"`
 
-	// 合规性状态
+	// 合规结果。
 	ComplianceState *AggregatePolicyAssignmentsFiltersComplianceState `json:"compliance_state,omitempty"`
 
 	// 合规规则名称

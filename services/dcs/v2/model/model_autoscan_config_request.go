@@ -10,10 +10,10 @@ import (
 type AutoscanConfigRequest struct {
 
 	// 是否开启自动分析
-	EnableAutoScan *bool `json:"enable_auto_scan,omitempty"`
+	EnableAutoScan bool `json:"enable_auto_scan"`
 
 	// 每日分析时间，时间格式为21:00，时间为UTC时间
-	ScheduleAt *[]string `json:"schedule_at,omitempty"`
+	ScheduleAt []string `json:"schedule_at"`
 }
 
 func (o AutoscanConfigRequest) String() string {

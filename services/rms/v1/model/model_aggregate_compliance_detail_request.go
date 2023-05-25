@@ -9,16 +9,16 @@ import (
 	"strings"
 )
 
-// 聚合合规策略详情请求体
+// 查询指定聚合合规规则评估结果详情请求体。
 type AggregateComplianceDetailRequest struct {
 
 	// 资源聚合器ID
 	AggregatorId string `json:"aggregator_id"`
 
-	// 租户ID
+	// 源帐号ID
 	AccountId string `json:"account_id"`
 
-	// 合规性状态
+	// 合规结果。
 	ComplianceState *AggregateComplianceDetailRequestComplianceState `json:"compliance_state,omitempty"`
 
 	// 合规规则名称

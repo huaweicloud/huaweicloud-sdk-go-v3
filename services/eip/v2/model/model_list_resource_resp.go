@@ -10,7 +10,7 @@ import (
 type ListResourceResp struct {
 
 	// 资源详情。 资源对象，用于扩展。默认为空
-	ResouceDetail *interface{} `json:"resouce_detail,omitempty"`
+	ResourceDetail *interface{} `json:"resource_detail,omitempty"`
 
 	// 资源ID
 	ResourceId *string `json:"resource_id,omitempty"`

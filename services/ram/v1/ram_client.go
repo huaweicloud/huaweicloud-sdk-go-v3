@@ -229,6 +229,27 @@ func (c *RamClient) SearchSharedPrincipalsInvoker(request *model.SearchSharedPri
 	return &SearchSharedPrincipalsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListQuota 查询资源共享的配额
+//
+// 查询当前帐号的资源共享配额信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RamClient) ListQuota(request *model.ListQuotaRequest) (*model.ListQuotaResponse, error) {
+	requestDef := GenReqDefForListQuota()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListQuotaResponse), nil
+	}
+}
+
+// ListQuotaInvoker 查询资源共享的配额
+func (c *RamClient) ListQuotaInvoker(request *model.ListQuotaRequest) *ListQuotaInvoker {
+	requestDef := GenReqDefForListQuota()
+	return &ListQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SearchDistinctSharedResources 检索去重的共享的资源
 //
 // 检索您添加到资源共享或被共享给您的不同资源。

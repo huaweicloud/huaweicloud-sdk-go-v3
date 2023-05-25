@@ -15,6 +15,9 @@ type CreateResourceShareReqBody struct {
 	// 资源共享实例的描述。
 	Description *string `json:"description,omitempty"`
 
+	// 资源共享实例是否支持共享给组织外账号。
+	AllowExternalPrincipals *bool `json:"allow_external_principals,omitempty"`
+
 	// 资源共享实例关联的RAM权限列表。一种资源类型只能关联一个RAM权限。如果您没有指定权限ID，RAM将自动为每个资源类型关联默认权限。
 	PermissionIds *[]string `json:"permission_ids,omitempty"`
 

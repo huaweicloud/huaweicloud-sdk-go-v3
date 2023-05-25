@@ -15,7 +15,7 @@ type AvailabilityZones struct {
 	// 云堡垒机服务可用分区显示名称。
 	DisplayName string `json:"display_name"`
 
-	// 云堡垒机服务分区ID
+	// 云堡垒机服务分区ID。
 	RegionId string `json:"region_id"`
 
 	// 云堡垒机服务可用区状态。

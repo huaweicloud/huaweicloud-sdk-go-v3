@@ -26,7 +26,7 @@ type Template struct {
 	// 模板中最新的模板版本ID
 	LatestVersionId string `json:"latest_version_id"`
 
-	// -> 模板中最新模板版本的版本描述
+	// 模板中最新模板版本的版本描述
 	LatestVersionDescription string `json:"latest_version_description"`
 }
 

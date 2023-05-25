@@ -25,8 +25,7 @@ type InstanceCreate struct {
 	// 应用组件版本号，满足版本语义，如1.0.0。。
 	Version string `json:"version"`
 
-	// 应用配置，环境变量等，如{“env”: [{“name”: “log-level”: “warn”}]}, 默认空。
-	Configuration *interface{} `json:"configuration,omitempty"`
+	Configuration *InstanceConfiguration `json:"configuration,omitempty"`
 
 	// 描述。
 	Description *string `json:"description,omitempty"`

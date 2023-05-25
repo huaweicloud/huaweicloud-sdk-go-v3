@@ -20,6 +20,9 @@ type CreateVpcOption struct {
 
 	// 功能说明：企业项目ID。创建虚拟私有云时，给虚拟私有云绑定企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。 默认值：\"0\"
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	// 功能说明：VPC资源标签。创建VPC时，给VPC添加资源标签。 取值范围：最大10个标签, key：标签名称; value：标签值。 格式：[key*value]，每一个标签的key和value之间用*连接
+	Tags *[]string `json:"tags,omitempty"`
 }
 
 func (o CreateVpcOption) String() string {

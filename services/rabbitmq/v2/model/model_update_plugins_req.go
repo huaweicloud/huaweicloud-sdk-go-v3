@@ -8,7 +8,7 @@ import (
 
 type UpdatePluginsReq struct {
 
-	// 是否开启改插件。
+	// 是否开启该插件。
 	Enable *bool `json:"enable,omitempty"`
 
 	// 插件列表，多个插件中间用“,”隔开。

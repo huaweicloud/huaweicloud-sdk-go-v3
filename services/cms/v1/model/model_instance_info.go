@@ -6,25 +6,25 @@ import (
 	"strings"
 )
 
-// 实例信息
+// 虚拟机列表
 type InstanceInfo struct {
 
-	// 虚拟机名称
+	// 弹性云服务器名称。
 	Name string `json:"name"`
 
-	// 虚拟机Id
+	// 弹性云服务器id。
 	Id string `json:"id"`
 
 	// 可用区
 	AvailabilityZoneId string `json:"availability_zone_id"`
 
-	// 虚拟机规格
+	// 弹性云服务器规格
 	FlavorId string `json:"flavor_id"`
 
-	// 虚拟机状态
+	// 弹性云服务器状态
 	Status string `json:"status"`
 
-	// 销售模型（spot/onDemand）
+	// 销售模型，枚举值 spot：竞价实例 onDemand：按需实例
 	SellMode string `json:"sell_mode"`
 }
 

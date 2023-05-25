@@ -179,6 +179,17 @@ func GenReqDefForSearchSharedPrincipals() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListQuota() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/resource-shares/quotas").
+		WithResponse(new(model.ListQuotaResponse)).
+		WithContentType("application/json")
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForSearchDistinctSharedResources() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).

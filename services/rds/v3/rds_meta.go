@@ -3766,6 +3766,10 @@ func GenReqDefForListSqlserverDatabases() *def.HttpRequestDef {
 		WithName("DbName").
 		WithJsonTag("db-name").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RecoverModel").
+		WithJsonTag("recover_model").
+		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XLanguage").

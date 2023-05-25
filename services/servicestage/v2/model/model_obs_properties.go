@@ -13,7 +13,7 @@ type ObsProperties struct {
 	Endpoint *string `json:"endpoint,omitempty"`
 
 	// 软件包在obs的桶名。
-	Buket *string `json:"buket,omitempty"`
+	Bucket *string `json:"bucket,omitempty"`
 
 	// obs桶中的对象，一般是软件包名，有文件夹的话要加上文件夹的路径。比如test.jar或者demo/test.jar。
 	Key *string `json:"key,omitempty"`

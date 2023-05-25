@@ -601,7 +601,7 @@ func (c *VpcepClient) UpdateEndpointServicePermissionDescInvoker(request *model.
 	return &UpdateEndpointServicePermissionDescInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateEndpointWhite 更新终端节点的白名单
+// UpdateEndpointWhite 更新终端节点
 //
 // 功能介绍
 // 更新或删除允许访问终端节点的白名单。
@@ -617,7 +617,7 @@ func (c *VpcepClient) UpdateEndpointWhite(request *model.UpdateEndpointWhiteRequ
 	}
 }
 
-// UpdateEndpointWhiteInvoker 更新终端节点的白名单
+// UpdateEndpointWhiteInvoker 更新终端节点
 func (c *VpcepClient) UpdateEndpointWhiteInvoker(request *model.UpdateEndpointWhiteRequest) *UpdateEndpointWhiteInvoker {
 	requestDef := GenReqDefForUpdateEndpointWhite()
 	return &UpdateEndpointWhiteInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

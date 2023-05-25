@@ -21,6 +21,9 @@ type SourceOrArtifact struct {
 	// 软件包源码地址，如https://{IP}:20202/xxx/xxx.jar。
 	Url *string `json:"url,omitempty"`
 
+	// 软件包/源码仓库地址
+	WebUrl *string `json:"webUrl,omitempty"`
+
 	// 认证方式，支持iam，none，默认是iam。
 	Auth *string `json:"auth,omitempty"`
 

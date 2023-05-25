@@ -17,18 +17,6 @@ func (i *CreateImageHighresolutionMattingTaskInvoker) Invoke() (*model.CreateIma
 	}
 }
 
-type CreateVideoObjectMaskingTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateVideoObjectMaskingTaskInvoker) Invoke() (*model.CreateVideoObjectMaskingTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateVideoObjectMaskingTaskResponse), nil
-	}
-}
-
 type CreateVideoTaggingMediaTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -146,18 +134,6 @@ func (i *ShowImageHighresolutionMattingTaskInvoker) Invoke() (*model.ShowImageHi
 		return nil, err
 	} else {
 		return result.(*model.ShowImageHighresolutionMattingTaskResponse), nil
-	}
-}
-
-type ShowVideoObjectMaskingTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowVideoObjectMaskingTaskInvoker) Invoke() (*model.ShowVideoObjectMaskingTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowVideoObjectMaskingTaskResponse), nil
 	}
 }
 

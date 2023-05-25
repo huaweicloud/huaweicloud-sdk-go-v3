@@ -21,7 +21,7 @@ type CreateInstanceReq struct {
 	// 消息引擎：rabbitmq。
 	Engine CreateInstanceReqEngine `json:"engine"`
 
-	// 消息引擎的版本。   - RabbitMQ版本有：3.7.17
+	// 消息引擎的版本。   - RabbitMQ版本有：3.8.35和3.7.17
 	EngineVersion CreateInstanceReqEngineVersion `json:"engine_version"`
 
 	// 消息存储空间，单位GB。   - 单机RabbitMQ实例的存储空间的取值范围100GB~90000GB。   - 集群RabbitMQ实例的存储空间的取值范围为100GB*节点数~90000GB、200GB*节点数~90000GB、300GB*节点数~90000GB。
@@ -66,7 +66,7 @@ type CreateInstanceReq struct {
 	// 是否打开SSL加密访问。 - true：打开SSL加密访问。 - false：不打开SSL加密访问。
 	SslEnable *bool `json:"ssl_enable,omitempty"`
 
-	// 存储IO规格。  取值范围：   - dms.physical.storage.high.v2   - dms.physical.storage.ultra.v2   - dms.physical.storage.high.dss.v2   - dms.physical.storage.ultra.dss.v2
+	// 存储IO规格。  取值范围：   - dms.physical.storage.high.v2   - dms.physical.storage.ultra.v2   - dms.physical.storage.high.dss.v2(专属云)   - dms.physical.storage.ultra.dss.v2(专属云)
 	StorageSpecCode CreateInstanceReqStorageSpecCode `json:"storage_spec_code"`
 
 	// 企业项目ID。若为企业项目帐号，该参数必填。
@@ -128,11 +128,15 @@ type CreateInstanceReqEngineVersion struct {
 }
 
 type CreateInstanceReqEngineVersionEnum struct {
+	E_3_8_35 CreateInstanceReqEngineVersion
 	E_3_7_17 CreateInstanceReqEngineVersion
 }
 
 func GetCreateInstanceReqEngineVersionEnum() CreateInstanceReqEngineVersionEnum {
 	return CreateInstanceReqEngineVersionEnum{
+		E_3_8_35: CreateInstanceReqEngineVersion{
+			value: "3.8.35",
+		},
 		E_3_7_17: CreateInstanceReqEngineVersion{
 			value: "3.7.17",
 		},

@@ -9,7 +9,7 @@ import (
 // Response Object
 type ListAggregateComplianceByPolicyAssignmentResponse struct {
 
-	// AggregatePolicyAssignment对象的列表。
+	// 聚合合规规则的列表。
 	AggregatePolicyAssignments *[]AggregatePolicyAssignments `json:"aggregate_policy_assignments,omitempty"`
 
 	PageInfo       *PageInfo `json:"page_info,omitempty"`

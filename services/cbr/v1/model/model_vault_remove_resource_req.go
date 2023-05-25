@@ -8,7 +8,7 @@ import (
 
 type VaultRemoveResourceReq struct {
 
-	// 要移除的资源ID列表
+	// 要移除的资源ID列表 最小长度：1 最大长度：256
 	ResourceIds []string `json:"resource_ids"`
 }
 

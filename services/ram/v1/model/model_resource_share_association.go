@@ -22,6 +22,9 @@ type ResourceShareAssociation struct {
 	// 最后一次更新绑定的时间。
 	UpdatedAt *sdktime.SdkTime `json:"updated_at"`
 
+	// 标识资源使用者是否和共享的拥有者属于同一个组织
+	External *bool `json:"external,omitempty"`
+
 	// 资源共享实例的ID。
 	ResourceShareId string `json:"resource_share_id"`
 

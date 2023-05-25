@@ -9,7 +9,7 @@ import (
 // Request Object
 type ShowAutoLaunchGroupRequest struct {
 
-	// 指定智能购买组id
+	// 智能购买组id
 	AutoLaunchGroupId string `json:"auto_launch_group_id"`
 }
 

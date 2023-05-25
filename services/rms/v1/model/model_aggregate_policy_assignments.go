@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 聚合合规策略响应列表
+// 聚合合规规则。
 type AggregatePolicyAssignments struct {
 
 	// 合规规则ID
@@ -17,7 +17,7 @@ type AggregatePolicyAssignments struct {
 
 	Compliance *Compliance `json:"compliance,omitempty"`
 
-	// 账户ID
+	// 源帐号ID。
 	AccountId *string `json:"account_id,omitempty"`
 }
 

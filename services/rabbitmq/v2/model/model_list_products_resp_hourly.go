@@ -11,7 +11,7 @@ type ListProductsRespHourly struct {
 	// 消息引擎的名称，该字段显示为rabbitmq。
 	Name *string `json:"name,omitempty"`
 
-	// 消息引擎的版本，当前仅支持3.7.17。
+	// 消息引擎的版本，当前支持3.8.35和3.7.17。
 	Version *string `json:"version,omitempty"`
 
 	// 产品规格列表。

@@ -15,6 +15,8 @@ type MigrateNodesSpec struct {
 
 	Login *Login `json:"login"`
 
+	Runtime *Runtime `json:"runtime,omitempty"`
+
 	// 待操作节点列表
 	Nodes []NodeItem `json:"nodes"`
 }

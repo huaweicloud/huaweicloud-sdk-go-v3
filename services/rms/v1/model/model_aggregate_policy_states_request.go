@@ -12,7 +12,7 @@ type AggregatePolicyStatesRequest struct {
 	// 资源聚合器ID
 	AggregatorId string `json:"aggregator_id"`
 
-	// 租户ID
+	// 源帐号ID
 	AccountId *string `json:"account_id,omitempty"`
 
 	// 用于对资源计数进行分组的键（DOMAIN）。

@@ -30,6 +30,9 @@ type ShowSignatureFileResponse struct {
 	// 操作人
 	Operator *string `json:"operator,omitempty"`
 
+	// 描述
+	FileDesc *string `json:"file_desc,omitempty"`
+
 	// 更新时间
 	UpdateTime     *string `json:"update_time,omitempty"`
 	HttpStatusCode int     `json:"-"`

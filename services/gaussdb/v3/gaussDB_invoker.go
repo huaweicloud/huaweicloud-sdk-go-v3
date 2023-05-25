@@ -533,6 +533,18 @@ func (i *RestartGaussMySqlNodeInvoker) Invoke() (*model.RestartGaussMySqlNodeRes
 	}
 }
 
+type RestoreOldInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RestoreOldInstanceInvoker) Invoke() (*model.RestoreOldInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RestoreOldInstanceResponse), nil
+	}
+}
+
 type SetGaussMySqlProxyWeightInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -566,6 +578,18 @@ func (i *ShowAuditLogInvoker) Invoke() (*model.ShowAuditLogResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowAuditLogResponse), nil
+	}
+}
+
+type ShowBackupRestoreTimeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowBackupRestoreTimeInvoker) Invoke() (*model.ShowBackupRestoreTimeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowBackupRestoreTimeResponse), nil
 	}
 }
 
@@ -914,6 +938,18 @@ func (i *UpdateInstanceMonitorInvoker) Invoke() (*model.UpdateInstanceMonitorRes
 		return nil, err
 	} else {
 		return result.(*model.UpdateInstanceMonitorResponse), nil
+	}
+}
+
+type UpdateProxyConnectionPoolTypeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateProxyConnectionPoolTypeInvoker) Invoke() (*model.UpdateProxyConnectionPoolTypeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateProxyConnectionPoolTypeResponse), nil
 	}
 }
 

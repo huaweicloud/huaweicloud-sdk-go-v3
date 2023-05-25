@@ -33,10 +33,10 @@ type InstanceDetail struct {
 	// 云堡垒机实例私有ip。
 	PrivateIp string `json:"privateIp"`
 
-	// 云堡垒机实例当前的任务状态。
+	// 云堡垒机实例当前的任务状态。 - powering-on 开启 - powering-off 关闭 - rebooting 重启 - delete_wait 删除 - frozen 冻结 - NO_TASK 运行 - unfrozen 解冻 - alter 变更 - updating 升级中 - configuring-ha 配置HA
 	TaskStatus string `json:"taskStatus"`
 
-	// 云堡垒机实例状态。
+	// 云堡垒机实例状态。 - SHUTOFF 已关闭 - ACTIVE 运行中 - DELETING 删除中 - BUILD 创建中 - DELETED 已删除 - ERROR 故障 - HAWAIT 等待备机创建成功 - FROZEN 已冻结 - UPGRADING 升级中 - UNPAID 待支付 - RESIZE 规格变更中 - DILATATION 扩容中 - HA 配置HA中
 	Status string `json:"status"`
 
 	// 云堡垒机实例创建时间，使用UTC时间表示。
@@ -63,7 +63,7 @@ type InstanceDetail struct {
 	// 云堡垒机实例规格。
 	Specification string `json:"specification"`
 
-	// 云堡垒机实例镜像是否可以升级。 - NEW，可以升级 - OLD，不能升级
+	// 云堡垒机实例是否可以升级。 - NEW，可以升级 - OLD，不能升级
 	Update string `json:"update"`
 
 	// 云堡垒机实例在创建实例过程中的过程状态信息。 - Waiting for payment，等待支付 - creating-network，创建网络 - creating-server，创建服务 - tranfering-horizontal-network，网络打通 - adding-policy-route，添加路由策略 - configing-dns，配置DNS - starting-cbs-service，服务运行中 - setting-init-conf，初始化 - buying-EIP，购买弹性公网IP
@@ -81,7 +81,7 @@ type InstanceDetail struct {
 	// 云堡垒机实例订购周期数。
 	PeriodNum string `json:"periodNum"`
 
-	// 云堡垒机实例实例的资源id,UUID格式显示。
+	// 云堡垒机实例的资源id,UUID格式显示。
 	ResourceId string `json:"resourceId"`
 
 	// 云堡垒机实例堡垒机类型。 - OEM
@@ -93,10 +93,10 @@ type InstanceDetail struct {
 	// 云堡垒机实例绑定公网的弹性IP的ID，UUID格式表示。
 	PublicId string `json:"publicId"`
 
-	// 云堡垒机实例镜像当前版本号。
+	// 云堡垒机实例当前版本。
 	BastionVersion string `json:"bastionVersion"`
 
-	// 云堡垒机实例镜像可以升级的版本号。
+	// 云堡垒机实例可以升级的版本。
 	NewBastionVersion string `json:"newBastionVersion"`
 
 	// 云堡垒机实例状态。 - building  创建中 - deleting  删除中 - deleted 删除了 - unpaid  未支付 - upgrading 升级中 - resizing  扩容中 - abnormal  异常 - error 故障 - ok  正常
@@ -123,7 +123,7 @@ type InstanceDetail struct {
 	// 云堡垒机实例WEB界面访问的端口号。
 	WebPort *string `json:"webPort,omitempty"`
 
-	// 云堡垒机实例浮动ip。
+	// 云堡垒机实例浮动ip。返回默认值null
 	Vip *string `json:"vip,omitempty"`
 }
 

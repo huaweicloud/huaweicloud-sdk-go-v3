@@ -44,6 +44,15 @@ type BandwidthRespInsert struct {
 
 	// 功能说明：带宽的状态  取值范围：  FREEZED：冻结  NORMAL：正常
 	Status *BandwidthRespInsertStatus `json:"status,omitempty"`
+
+	// 功能说明：是否开启企业级qos 取值范围：true/false
+	EnableBandwidthRules *bool `json:"enable_bandwidth_rules,omitempty"`
+
+	// 功能说明：带宽支持的最大分组规则数。
+	RuleQuota *int32 `json:"rule_quota,omitempty"`
+
+	// 功能说明：带宽规则对象
+	BandwidthRules *[]BandWidthRules `json:"bandwidth_rules,omitempty"`
 }
 
 func (o BandwidthRespInsert) String() string {

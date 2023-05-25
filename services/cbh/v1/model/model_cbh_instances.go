@@ -9,7 +9,7 @@ import (
 // 创建堡垒机实例请求参数。
 type CbhInstances struct {
 
-	// 待创建云堡垒机规格ID，例如： - cbh.basic.50 - cbh.enhance.50 已上线的规格请参见《云堡垒机产品介绍》的“服务版本差异(https://support.huaweicloud.com/productdesc-cbh/cbh_01_0010.html)”章节。
+	// 待创建云堡垒机规格ID，例如： - cbh.basic.50 - cbh.enhance.50 已上线的规格请参见《云堡垒机产品介绍》的[服务版本差异](https://support.huaweicloud.com/productdesc-cbh/cbh_01_0010.html)章节。
 	FlavorRef string `json:"flavor_ref"`
 
 	// 云堡垒机实例名称，取值范围： - 只能由中文字符、英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。 例如：CBH-6b8e
@@ -27,7 +27,7 @@ type CbhInstances struct {
 	// 创建云堡垒机所在的可用区，需要指定可用区名称。 可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取
 	AvailabilityZone string `json:"availability_zone"`
 
-	// 创建云堡垒机所在的备机可用区，需要指定备机可用区名称。 可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取
+	// 创建云堡垒机所在的备机可用区，需要指定备机可用区名称。(当前字段未启用,填写默认值null) 可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取
 	SlaveAvailabilityZone *string `json:"slave_availability_zone,omitempty"`
 
 	// 云堡垒机实例描述信息。
@@ -44,6 +44,9 @@ type CbhInstances struct {
 
 	// 是否支持IPV6，不填默认为false。
 	Ipv6Enable *bool `json:"ipv6_enable,omitempty"`
+
+	// 企业项目ID，不填默认为0。
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 
 func (o CbhInstances) String() string {

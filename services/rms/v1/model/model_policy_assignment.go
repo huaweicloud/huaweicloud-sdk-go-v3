@@ -45,6 +45,9 @@ type PolicyAssignment struct {
 
 	// 规则参数
 	Parameters map[string]PolicyParameterValue `json:"parameters,omitempty"`
+
+	// 规则的创建者
+	CreatedBy *string `json:"created_by,omitempty"`
 }
 
 func (o PolicyAssignment) String() string {

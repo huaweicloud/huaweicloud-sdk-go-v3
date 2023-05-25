@@ -65,6 +65,18 @@ func (i *BatchRestartOrDeleteInstancesInvoker) Invoke() (*model.BatchRestartOrDe
 	}
 }
 
+type CloseKafkaManagerInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CloseKafkaManagerInvoker) Invoke() (*model.CloseKafkaManagerResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CloseKafkaManagerResponse), nil
+	}
+}
+
 type CreateConnectorInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -74,6 +86,18 @@ func (i *CreateConnectorInvoker) Invoke() (*model.CreateConnectorResponse, error
 		return nil, err
 	} else {
 		return result.(*model.CreateConnectorResponse), nil
+	}
+}
+
+type CreateDeleteConnectorOrderInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDeleteConnectorOrderInvoker) Invoke() (*model.CreateDeleteConnectorOrderResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDeleteConnectorOrderResponse), nil
 	}
 }
 
@@ -110,6 +134,18 @@ func (i *CreateInstanceUserInvoker) Invoke() (*model.CreateInstanceUserResponse,
 		return nil, err
 	} else {
 		return result.(*model.CreateInstanceUserResponse), nil
+	}
+}
+
+type CreateKafkaConsumerGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateKafkaConsumerGroupInvoker) Invoke() (*model.CreateKafkaConsumerGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateKafkaConsumerGroupResponse), nil
 	}
 }
 
@@ -170,6 +206,18 @@ func (i *DeleteBackgroundTaskInvoker) Invoke() (*model.DeleteBackgroundTaskRespo
 		return nil, err
 	} else {
 		return result.(*model.DeleteBackgroundTaskResponse), nil
+	}
+}
+
+type DeleteConnectorInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteConnectorInvoker) Invoke() (*model.DeleteConnectorResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteConnectorResponse), nil
 	}
 }
 

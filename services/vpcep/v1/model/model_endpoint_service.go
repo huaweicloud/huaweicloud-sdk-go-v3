@@ -29,6 +29,9 @@ type EndpointService struct {
 
 	// 连接该终端节点服务的终端节点是否计费。 ● true：计费 ● false：不计费
 	IsCharge *bool `json:"is_charge,omitempty"`
+
+	// 是否开启终端节点策略。 ● false：不支持设置终端节点策略 ● true：支持设置终端节点策略 默认为false 是否开启终端节点策略。 ● false：不支持设置终端节点策略 ● true：支持设置终端节点策略 默认为false
+	EnablePolicy *bool `json:"enable_policy,omitempty"`
 }
 
 func (o EndpointService) String() string {

@@ -7,22 +7,22 @@ import (
 	"strings"
 )
 
-// 智能购买组信息
+// 智能购买组列表
 type AutoLaunchGroupInfo struct {
 
 	// 智能购买组id
 	Id string `json:"id"`
 
-	// autoLaunchGroup的名称(1-64个字符)，只能包含中文、字母、数字、下划线或中划线
+	// 智能购买组的名称
 	Name string `json:"name"`
 
 	// 请求类型
 	Type string `json:"type"`
 
-	// autoLaunchGroup的运行状态 SUBMITTED|ACTIVE|DELETING|DELETED
+	// 智能购买组的运行状态，枚举值 SUBMITTED：已提交 ACTIVE：运行中 DELETING：删除中 DELETED：已删除
 	Status string `json:"status"`
 
-	// autoLaunchGroup的任务状态， INIT|HANDLING|FULFILLED|ERROR
+	// 智能购买组的任务状态，枚举值 HANDLING：购买中 FULFILLED：智能购买组已满配 ERROR：智能购买组异常
 	TaskState string `json:"task_state"`
 
 	// 开始时间

@@ -44,6 +44,9 @@ type CreateSubnetOption struct {
 
 	// 子网配置的NTP地址或租约时间
 	ExtraDhcpOpts *[]ExtraDhcpOption `json:"extra_dhcp_opts,omitempty"`
+
+	// 功能说明：子网资源标签。创建子网时，给子网添加资源标签。 取值范围：最大10个标签, key：标签名称; value：标签值。 格式：[key*value]，每一个标签的key和value之间用*连接
+	Tags *[]string `json:"tags,omitempty"`
 }
 
 func (o CreateSubnetOption) String() string {

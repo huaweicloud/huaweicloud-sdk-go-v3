@@ -44,8 +44,11 @@ type ShowAggregatePolicyAssignmentDetailResponse struct {
 	CustomPolicy *CustomPolicy `json:"custom_policy,omitempty"`
 
 	// 规则参数
-	Parameters     map[string]PolicyParameterValue `json:"parameters,omitempty"`
-	HttpStatusCode int                             `json:"-"`
+	Parameters map[string]PolicyParameterValue `json:"parameters,omitempty"`
+
+	// 规则的创建者
+	CreatedBy      *string `json:"created_by,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowAggregatePolicyAssignmentDetailResponse) String() string {

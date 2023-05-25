@@ -11,19 +11,19 @@ import (
 // 智能购买组信息
 type ShowAutoLaunchGroupResp struct {
 
-	// autoLaunchGroup名称(1-64个字符)，只能包含中文、字母、数字、下划线或中划线
+	// 智能购买组名称
 	Name string `json:"name"`
 
-	// 请求类型 request：一次性。仅在启动时交付实例集群，调度失败后不再重试。 maintain：持续供应。在启动时尝试交付实例集群，并监控实时容量，未达到目标容量则尝试继续创建ECS实例
+	// 请求类型。枚举值 request：一次性。仅在启动时交付实例集群，调度失败后不再重试。 maintain：持续供应。在启动时尝试交付实例集群，并监控实时容量，未达到目标容量则尝试继续创建ECS实例
 	Type ShowAutoLaunchGroupRespType `json:"type"`
 
-	// AutoLaunchGroup状态,[SUBMITTED|ACTIVE|DELETING|DELETED]
+	// 智能购买组的运行状态，枚举值 SUBMITTED：已提交 ACTIVE：运行中 DELETING：删除中 DELETED：已删除
 	Status string `json:"status"`
 
-	// 任务状态,[INIT|HANDLING|FULFILLED|ERROR]
+	// 智能购买组的任务状态，枚举值 HANDLING：购买中 FULFILLED：智能购买组已满配 ERROR：智能购买组异常
 	TaskState string `json:"task_state"`
 
-	// 目标容量 实例数量或者CPU个数 目标容量大于等于stable_capacity， spot实例的容量为目标容量减去stable_capacity
+	// 智能购买组目标容量，实例数量或者CPU个数，目标容量大于等于stable_capacity。spot实例的容量为目标容量减去stable_capacity
 	TargetCapacity int32 `json:"target_capacity"`
 
 	// 按需实例目标容量 小于等于target_capacity
@@ -32,31 +32,31 @@ type ShowAutoLaunchGroupResp struct {
 	// 当前已经购买成功的总算力
 	CurrentCapacity int32 `json:"current_capacity"`
 
-	// 当前已经购买成功的按需容量
+	// 当前已经购买成功的按需算力
 	CurrentStableCapacity int32 `json:"current_stable_capacity"`
 
-	// 目标容量减少时 实例的中断行为 terminate|noTermination terminate：释放 noTermination：不释放 默认值：terminate
+	// 超过目标容量时（目标容量减少）实例的中断行为，枚举值 terminate：释放 noTermination：不释放
 	ExcessFulfilledCapacityBehavior ShowAutoLaunchGroupRespExcessFulfilledCapacityBehavior `json:"excess_fulfilled_capacity_behavior"`
 
-	// 请求到期 实例的中断行为 terminate|noTermination terminate：释放 noTermination：不释放 默认值：terminate
+	// 请求到期正在的实例终端行为，枚举值 terminate：释放 noTermination：不释放
 	InstancesBehaviorWithExpiration ShowAutoLaunchGroupRespInstancesBehaviorWithExpiration `json:"instances_behavior_with_expiration"`
 
-	// 请求开始时间 yyyy-MM-dd HH:mm:ss
+	// 请求开始时间，格式为yyyy-MM-ddTHH:mm:ssZ
 	ValidSince *sdktime.SdkTime `json:"valid_since"`
 
-	// 请求结束时间 yyyy-MM-dd HH:mm:ss
+	// 请求结束时间，格式为yyyy-MM-ddTHH:mm:ssZ
 	ValidUntil *sdktime.SdkTime `json:"valid_until"`
 
 	// 智能购买组在各个region的配置
 	RegionSpecs []RegionSpec `json:"region_specs"`
 
-	// 实例分配策略 lowest_price:最小价格 diversified：AZ均铺 prioritized：优先级 capacity_optimized：容量最优化 默认值：lowest_price
+	// 实例分配策略，枚举值 lowest_price：价格最低策略，智能购买组购买的所有实例的价格总和最低。 prioritized：优先级策略，按照规格设定的优先级创建实例。 capacity_optimized：容量最优化策略，智能购买组购买的实例按照大规格优先进行购买。
 	AllocationStrategy ShowAutoLaunchGroupRespAllocationStrategy `json:"allocation_strategy"`
 
-	// spot实例价格 为全局spot实例的价格， 如果overrides中没有提供价格，可以使用该价格
+	// spot实例价格
 	SpotPrice *float64 `json:"spot_price,omitempty"`
 
-	// 智能购买组的创建时间
+	// 智能购买组创建时间
 	CreatedAt *sdktime.SdkTime `json:"created_at"`
 }
 

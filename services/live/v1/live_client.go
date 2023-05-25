@@ -19,6 +19,27 @@ func LiveClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+// BatchShowIpBelongs 查询IP归属信息
+//
+// 查询IP归属信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) BatchShowIpBelongs(request *model.BatchShowIpBelongsRequest) (*model.BatchShowIpBelongsResponse, error) {
+	requestDef := GenReqDefForBatchShowIpBelongs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchShowIpBelongsResponse), nil
+	}
+}
+
+// BatchShowIpBelongsInvoker 查询IP归属信息
+func (c *LiveClient) BatchShowIpBelongsInvoker(request *model.BatchShowIpBelongsRequest) *BatchShowIpBelongsInvoker {
+	requestDef := GenReqDefForBatchShowIpBelongs()
+	return &BatchShowIpBelongsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateDomain 创建直播域名
 //
 // 可单独创建直播播放域名或推流域名，每个租户最多可配置64条域名记录。

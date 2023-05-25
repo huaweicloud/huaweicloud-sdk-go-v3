@@ -29,6 +29,9 @@ type InstanceListInfo struct {
 	// 创建时间。格式为：2017-03-31T12:24:46.297Z
 	CreatedAt *string `json:"created_at,omitempty"`
 
+	// 更新时间。格式为：2017-03-31T19:24:46.297Z
+	UpdatedAt *string `json:"updated_at,omitempty"`
+
 	// Redis缓存实例开启公网访问功能时，是否选择支持ssl。 - true：开启 - false：不开启
 	EnableSsl *bool `json:"enable_ssl,omitempty"`
 

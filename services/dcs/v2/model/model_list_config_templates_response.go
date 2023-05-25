@@ -10,7 +10,7 @@ import (
 type ListConfigTemplatesResponse struct {
 
 	// 模板个数。
-	TemplateNum float32 `json:"template_num,omitempty"`
+	TemplateNum *int32 `json:"template_num,omitempty"`
 
 	// 模板的详情数组。
 	ConfigTemplates *[]ConfigTemplatesListInfo `json:"config_templates,omitempty"`

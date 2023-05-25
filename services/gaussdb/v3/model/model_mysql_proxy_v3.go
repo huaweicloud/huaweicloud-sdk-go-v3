@@ -55,6 +55,12 @@ type MysqlProxyV3 struct {
 
 	// Proxy事务拆分开关状态【ON/OFF】。
 	TransactionSplit *string `json:"transaction_split,omitempty"`
+
+	// 连接池类型。  取值范围: - CLOSED 不使用连接池; - SESSION 使用会话级连接池。
+	ConnectionPoolType *string `json:"connection_pool_type,omitempty"`
+
+	// 数据库代理版本是否支持会话级连接池。  取值范围: - true 支持; - false 不支持。
+	SwitchConnectionPoolTypeEnabled *bool `json:"switch_connection_pool_type_enabled,omitempty"`
 }
 
 func (o MysqlProxyV3) String() string {

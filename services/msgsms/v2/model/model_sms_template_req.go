@@ -15,7 +15,7 @@ type SmsTemplateReq struct {
 	Brackets *string `json:"brackets,omitempty"`
 
 	// 地域 1. cn：国内 2. intl：
-	Region *string `json:"region,omitempty"`
+	Region string `json:"region"`
 
 	// 发送国家id列表，只有地域为国际时，该字段有效
 	SendCountry *[]int64 `json:"send_country,omitempty"`

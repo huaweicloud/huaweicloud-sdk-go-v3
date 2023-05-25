@@ -44,7 +44,7 @@ type VaultCreateResource struct {
 	// 创建时间,例如:\"2020-02-05T10:38:34.209782\"
 	CreatedAt *string `json:"created_at,omitempty"`
 
-	// 是否开启存储库自动扩容能力（只支持按需存储库）
+	// [是否开启存储库自动扩容能力（只支持按需存储库）。](tag:hws,hws_hk) [是否开启存储库自动扩容能力。](tag:dt,ocb,tlf,sbc,fcs_vm,ctc,g42,tm,cmcc,tm,hcso_dt)
 	AutoExpand *bool `json:"auto_expand,omitempty"`
 
 	// 存储库smn消息通知开关
@@ -61,6 +61,18 @@ type VaultCreateResource struct {
 
 	// 包周期创建订单信息
 	Orders *[]CbcOrderResult `json:"orders,omitempty"`
+
+	// 备份名称前缀
+	BackupNamePrefix *string `json:"backup_name_prefix,omitempty"`
+
+	// 是否允许使用超出存储库容量
+	DemandBilling *bool `json:"demand_billing,omitempty"`
+
+	// 存储库删除次数
+	CbcDeleteCount *int32 `json:"cbc_delete_count,omitempty"`
+
+	// 存储库是否冻结
+	Frozen *bool `json:"frozen,omitempty"`
 }
 
 func (o VaultCreateResource) String() string {

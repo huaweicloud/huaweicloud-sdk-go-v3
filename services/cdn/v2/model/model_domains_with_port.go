@@ -15,6 +15,9 @@ type DomainsWithPort struct {
 	// 加速域名ID。
 	Id *string `json:"id,omitempty"`
 
+	// 加速域名。
+	DomainName *string `json:"domain_name,omitempty"`
+
 	// 域名业务类型，若为web，则表示类型为网站加速；若为download，则表示业务类型为文件下载加速；若为video，则表示业务类型为点播加速；若为wholeSite，则表示类型为全站加速。
 	BusinessType *string `json:"business_type,omitempty"`
 

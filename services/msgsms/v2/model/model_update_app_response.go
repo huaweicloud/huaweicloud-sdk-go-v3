@@ -16,10 +16,7 @@ type UpdateAppResponse struct {
 	AppName *string `json:"app_name,omitempty"`
 
 	// 应用主键ID
-	Id *string `json:"id,omitempty"`
-
-	// Application Secret，应用密钥
-	AppSecret      *string `json:"app_secret,omitempty"`
+	Id             *string `json:"id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

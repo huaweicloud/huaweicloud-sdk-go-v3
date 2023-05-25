@@ -10,7 +10,7 @@ import (
 type LaunchTemplateConfig struct {
 	LaunchTemplate *LaunchTemplateInfo `json:"launch_template"`
 
-	// VM模板的覆盖
+	// 实例的详细信息
 	Overrides []OverrideInfo `json:"overrides"`
 }
 

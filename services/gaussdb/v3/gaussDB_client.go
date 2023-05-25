@@ -944,6 +944,27 @@ func (c *GaussDBClient) RestartGaussMySqlNodeInvoker(request *model.RestartGauss
 	return &RestartGaussMySqlNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RestoreOldInstance 备份恢复到当前实例或已有实例
+//
+// 备份恢复到当前实例或已有实例。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) RestoreOldInstance(request *model.RestoreOldInstanceRequest) (*model.RestoreOldInstanceResponse, error) {
+	requestDef := GenReqDefForRestoreOldInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RestoreOldInstanceResponse), nil
+	}
+}
+
+// RestoreOldInstanceInvoker 备份恢复到当前实例或已有实例
+func (c *GaussDBClient) RestoreOldInstanceInvoker(request *model.RestoreOldInstanceRequest) *RestoreOldInstanceInvoker {
+	requestDef := GenReqDefForRestoreOldInstance()
+	return &RestoreOldInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SetGaussMySqlProxyWeight 设置读写分离权重
 //
 // 设置读写分离权重。
@@ -1005,6 +1026,27 @@ func (c *GaussDBClient) ShowAuditLog(request *model.ShowAuditLogRequest) (*model
 func (c *GaussDBClient) ShowAuditLogInvoker(request *model.ShowAuditLogRequest) *ShowAuditLogInvoker {
 	requestDef := GenReqDefForShowAuditLog()
 	return &ShowAuditLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowBackupRestoreTime 查询可恢复时间段
+//
+// 查询实例的可恢复时间段。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowBackupRestoreTime(request *model.ShowBackupRestoreTimeRequest) (*model.ShowBackupRestoreTimeResponse, error) {
+	requestDef := GenReqDefForShowBackupRestoreTime()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowBackupRestoreTimeResponse), nil
+	}
+}
+
+// ShowBackupRestoreTimeInvoker 查询可恢复时间段
+func (c *GaussDBClient) ShowBackupRestoreTimeInvoker(request *model.ShowBackupRestoreTimeRequest) *ShowBackupRestoreTimeInvoker {
+	requestDef := GenReqDefForShowBackupRestoreTime()
+	return &ShowBackupRestoreTimeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowDedicatedResourceInfo 查询专属资源信息详情
@@ -1614,6 +1656,27 @@ func (c *GaussDBClient) UpdateInstanceMonitor(request *model.UpdateInstanceMonit
 func (c *GaussDBClient) UpdateInstanceMonitorInvoker(request *model.UpdateInstanceMonitorRequest) *UpdateInstanceMonitorInvoker {
 	requestDef := GenReqDefForUpdateInstanceMonitor()
 	return &UpdateInstanceMonitorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateProxyConnectionPoolType 更改数据库代理连接池类型
+//
+// 更改数据库代理连接池类型
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) UpdateProxyConnectionPoolType(request *model.UpdateProxyConnectionPoolTypeRequest) (*model.UpdateProxyConnectionPoolTypeResponse, error) {
+	requestDef := GenReqDefForUpdateProxyConnectionPoolType()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateProxyConnectionPoolTypeResponse), nil
+	}
+}
+
+// UpdateProxyConnectionPoolTypeInvoker 更改数据库代理连接池类型
+func (c *GaussDBClient) UpdateProxyConnectionPoolTypeInvoker(request *model.UpdateProxyConnectionPoolTypeRequest) *UpdateProxyConnectionPoolTypeInvoker {
+	requestDef := GenReqDefForUpdateProxyConnectionPoolType()
+	return &UpdateProxyConnectionPoolTypeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateProxySessionConsistence 修改代理会话一致性

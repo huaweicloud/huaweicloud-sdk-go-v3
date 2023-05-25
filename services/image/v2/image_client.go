@@ -40,27 +40,6 @@ func (c *ImageClient) CreateImageHighresolutionMattingTaskInvoker(request *model
 	return &CreateImageHighresolutionMattingTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateVideoObjectMaskingTask 创建视频脱敏任务
-//
-// 创建视频脱敏除任务，将输入视频的图像敏感信息模糊化，包括视频中的人脸和车牌
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ImageClient) CreateVideoObjectMaskingTask(request *model.CreateVideoObjectMaskingTaskRequest) (*model.CreateVideoObjectMaskingTaskResponse, error) {
-	requestDef := GenReqDefForCreateVideoObjectMaskingTask()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateVideoObjectMaskingTaskResponse), nil
-	}
-}
-
-// CreateVideoObjectMaskingTaskInvoker 创建视频脱敏任务
-func (c *ImageClient) CreateVideoObjectMaskingTaskInvoker(request *model.CreateVideoObjectMaskingTaskRequest) *CreateVideoObjectMaskingTaskInvoker {
-	requestDef := GenReqDefForCreateVideoObjectMaskingTask()
-	return &CreateVideoObjectMaskingTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // CreateVideoTaggingMediaTask 创建视频标签任务
 //
 // 创建视频标签任务，输入一段视频，通过AI模型分析视频中的信息，输出视频所包含的媒资标签、名人标签、logo标签、语音标签、OCR标签等信息。
@@ -269,27 +248,6 @@ func (c *ImageClient) ShowImageHighresolutionMattingTask(request *model.ShowImag
 func (c *ImageClient) ShowImageHighresolutionMattingTaskInvoker(request *model.ShowImageHighresolutionMattingTaskRequest) *ShowImageHighresolutionMattingTaskInvoker {
 	requestDef := GenReqDefForShowImageHighresolutionMattingTask()
 	return &ShowImageHighresolutionMattingTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowVideoObjectMaskingTask 查询视频脱敏任务详情
-//
-// show task
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ImageClient) ShowVideoObjectMaskingTask(request *model.ShowVideoObjectMaskingTaskRequest) (*model.ShowVideoObjectMaskingTaskResponse, error) {
-	requestDef := GenReqDefForShowVideoObjectMaskingTask()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowVideoObjectMaskingTaskResponse), nil
-	}
-}
-
-// ShowVideoObjectMaskingTaskInvoker 查询视频脱敏任务详情
-func (c *ImageClient) ShowVideoObjectMaskingTaskInvoker(request *model.ShowVideoObjectMaskingTaskRequest) *ShowVideoObjectMaskingTaskInvoker {
-	requestDef := GenReqDefForShowVideoObjectMaskingTask()
-	return &ShowVideoObjectMaskingTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowVideoTaggingMediaTask 查询视频标签任务

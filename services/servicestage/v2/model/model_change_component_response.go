@@ -43,6 +43,9 @@ type ChangeComponentResponse struct {
 	// 创建时间。
 	CreateTime *int64 `json:"create_time,omitempty"`
 
+	// 创建者
+	Creator *string `json:"creator,omitempty"`
+
 	// 修改时间。
 	UpdateTime     *int64 `json:"update_time,omitempty"`
 	HttpStatusCode int    `json:"-"`

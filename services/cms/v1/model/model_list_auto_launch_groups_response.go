@@ -9,7 +9,7 @@ import (
 // Response Object
 type ListAutoLaunchGroupsResponse struct {
 
-	// autoLaunchGroup列表
+	// 智能购买组列表
 	AutoLaunchGroups *[]AutoLaunchGroupInfo `json:"auto_launch_groups,omitempty"`
 
 	PageInfo       *PageInfo `json:"page_info,omitempty"`

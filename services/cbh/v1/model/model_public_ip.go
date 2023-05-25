@@ -6,16 +6,14 @@ import (
 	"strings"
 )
 
-// 云堡垒机实例弹性公网IP信息。
+// 云堡垒机实例弹性公网IP信息。可填写null值
 type PublicIp struct {
 
 	// 已分配的弹性IP和EIP只能有一个。
-	Id string `json:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 已分配的弹性IP的地址Address。
-	PublicEip string `json:"public_eip"`
-
-	Eip *Eip `json:"eip,omitempty"`
+	PublicEip *string `json:"public_eip,omitempty"`
 }
 
 func (o PublicIp) String() string {
