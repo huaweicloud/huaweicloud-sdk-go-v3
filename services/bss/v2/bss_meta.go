@@ -99,6 +99,21 @@ func GenReqDefForCheckUserIdentity() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForClaimEnterpriseMultiAccountCoupon() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/enterprises/multi-accounts/transfer-coupon").
+		WithResponse(new(model.ClaimEnterpriseMultiAccountCouponResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForCreateEnterpriseProjectAuth() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -1104,6 +1119,50 @@ func GenReqDefForListMeasureUnits() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListMultiAccountRetrieveCoupons() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/enterprises/multi-accounts/retrieve-coupons").
+		WithResponse(new(model.ListMultiAccountRetrieveCouponsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SubCustomerId").
+		WithJsonTag("sub_customer_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListMultiAccountTransferCoupons() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/enterprises/multi-accounts/transfer-coupons").
+		WithResponse(new(model.ListMultiAccountTransferCouponsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListOnDemandResourceRatings() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -1850,6 +1909,21 @@ func GenReqDefForReclaimCouponQuotas() *def.HttpRequestDef {
 		WithMethod(http.MethodPost).
 		WithPath("/v2/partners/coupon-quotas/indirect-partner-reclaim").
 		WithResponse(new(model.ReclaimCouponQuotasResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForReclaimEnterpriseMultiAccountCoupon() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/enterprises/multi-accounts/retrieve-coupon").
+		WithResponse(new(model.ReclaimEnterpriseMultiAccountCouponResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

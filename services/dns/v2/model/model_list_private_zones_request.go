@@ -10,7 +10,7 @@ import (
 type ListPrivateZonesRequest struct {
 
 	// 待查询的zone的类型。  取值范围：private。
-	Type string `json:"type"`
+	Type *string `json:"type,omitempty"`
 
 	// 每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
 	Limit *int32 `json:"limit,omitempty"`

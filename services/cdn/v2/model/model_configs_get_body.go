@@ -22,10 +22,10 @@ type ConfigsGetBody struct {
 	// 源站配置。
 	Sources *[]SourcesConfig `json:"sources,omitempty"`
 
-	// 回源协议（follow：协议跟随回源，http：HTTP回源(默认)，https：https回源）。
+	// 回源协议，follow：协议跟随回源，http：HTTP回源(默认)，https：https回源。
 	OriginProtocol *string `json:"origin_protocol,omitempty"`
 
-	// 回源跟随（on：开启，off：关闭）。
+	// 回源跟随，on：开启，off：关闭。
 	OriginFollow302Status *string `json:"origin_follow302_status,omitempty"`
 
 	// 缓存规则。
@@ -41,27 +41,27 @@ type ConfigsGetBody struct {
 
 	CacheUrlParameterFilter *CacheUrlParameterFilter `json:"cache_url_parameter_filter,omitempty"`
 
-	// ipv6设置（1：打开；0：关闭）
+	// ipv6设置，1：打开；0：关闭。
 	Ipv6Accelerate *int32 `json:"ipv6_accelerate,omitempty"`
 
-	// CDN状态码缓存时间
+	// 状态码缓存时间。
 	ErrorCodeCache *[]ErrorCodeCache `json:"error_code_cache,omitempty"`
 
-	// Range回源，即分片回源 开启Range回源的前提是您的源站支持Range请求，即HTTP请求头中包含Range字段，否则可能导致回源失败。 开启: on
+	// Range回源，开启: on，off:关闭。
 	OriginRangeStatus *string `json:"origin_range_status,omitempty"`
 
 	UserAgentFilter *UserAgentFilter `json:"user_agent_filter,omitempty"`
 
-	// 改写回源URL，最多配置20条。
+	// 改写回源URL。
 	OriginRequestUrlRewrite *[]OriginRequestUrlRewrite `json:"origin_request_url_rewrite,omitempty"`
 
-	// 高级回源，最多配置20条。
+	// 高级回源。
 	FlexibleOrigin *[]FlexibleOrigins `json:"flexible_origin,omitempty"`
 
-	// 回源是否校验ETag（on：开启，off：关闭）。
+	// 回源是否校验ETag，on：开启，off：关闭。
 	SliceEtagStatus *string `json:"slice_etag_status,omitempty"`
 
-	// 回源超时时间，范围:5-60，单位：秒。
+	// 回源超时时间，单位：秒。
 	OriginReceiveTimeout *int32 `json:"origin_receive_timeout,omitempty"`
 
 	RemoteAuth *CommonRemoteAuth `json:"remote_auth,omitempty"`

@@ -36,11 +36,8 @@ type CreateL7PolicyOption struct {
 	// 转发到的listener的ID，当action为REDIRECT_TO_LISTENER时必选。  使用说明： - 只支持protocol为HTTPS/TERMINATED_HTTPS的listener。 - 不能指定为其他loadbalancer下的listener。 - 当action为REDIRECT_TO_POOL时，创建或更新时不能传入该参数。 [- 共享型负载均衡器下的转发策略不支持该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,fcs,dt,hk_tm)
 	RedirectListenerId *string `json:"redirect_listener_id,omitempty"`
 
-	// 转发到pool的ID。当action为REDIRECT_TO_POOL时生效。  使用说明： - 当action为REDIRECT_TO_POOL时，redirect_pool_id和redirect_pools_config 必须指定一个，两个都指定时按redirect_pools_config生效。 - 当action为REDIRECT_TO_LISTENER时，不可指定。
+	// 转发到pool的ID。当action为REDIRECT_TO_POOL时生效。  使用说明： - 当action为REDIRECT_TO_LISTENER时，不可指定。
 	RedirectPoolId *string `json:"redirect_pool_id,omitempty"`
-
-	// 转发到的后端主机组的配置。当action为REDIRECT_TO_POOL时生效。  使用说明： - 当action为REDIRECT_TO_POOL时redirect_pool_id和redirect_pools_config 必须指定一个，两个都指定时按redirect_pools_config生效。 - 当action为REDIRECT_TO_LISTENER时，不可指定。
-	RedirectPoolsConfig *[]CreateRedirectPoolsConfig `json:"redirect_pools_config,omitempty"`
 
 	// 转发到的url。必须满足格式: protocol://host:port/path?query。  [不支持该字段，请勿使用。](tag:hcso_dt)
 	RedirectUrl *string `json:"redirect_url,omitempty"`
@@ -48,6 +45,8 @@ type CreateL7PolicyOption struct {
 	RedirectUrlConfig *CreateRedirectUrlConfig `json:"redirect_url_config,omitempty"`
 
 	FixedResponseConfig *CreateFixtedResponseConfig `json:"fixed_response_config,omitempty"`
+
+	RedirectPoolsExtendConfig *CreateRedirectPoolsExtendConfig `json:"redirect_pools_extend_config,omitempty"`
 
 	// 转发策略关联的转发规则对象。详细参考表 l7rule字段说明。rules列表中最多含有10个rule规则 （若rule中包含conditions字段，一条condition算一个规则）， 且列表中type为HOST_NAME，PATH，METHOD，SOURCE_IP的rule不能重复，至多指定一条。  使用说明： - 仅支持全量替换。 - 如果l7policy 是重定向到listener的话，不允许创建l7rule。
 	Rules *[]CreateL7PolicyRuleOption `json:"rules,omitempty"`

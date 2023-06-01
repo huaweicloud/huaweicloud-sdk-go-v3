@@ -397,6 +397,27 @@ func (c *OrganizationsClient) ListEntitiesInvoker(request *model.ListEntitiesReq
 	return &ListEntitiesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListQuotas 列出租户的组织配额
+//
+// 列出租户的组织配额。此操作只能由组织的管理帐号或作为服务委托管理员的成员帐号调用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OrganizationsClient) ListQuotas(request *model.ListQuotasRequest) (*model.ListQuotasResponse, error) {
+	requestDef := GenReqDefForListQuotas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListQuotasResponse), nil
+	}
+}
+
+// ListQuotasInvoker 列出租户的组织配额
+func (c *OrganizationsClient) ListQuotasInvoker(request *model.ListQuotasRequest) *ListQuotasInvoker {
+	requestDef := GenReqDefForListQuotas()
+	return &ListQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListServices 列出所有可以与组织服务集成的云服务
 //
 // 列出所有可以与组织服务集成的云服务。集成后云服务将成为组织的可信服务。

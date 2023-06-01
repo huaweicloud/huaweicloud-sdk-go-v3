@@ -34,6 +34,10 @@ type ConnectionInfo struct {
 
 	Flavor *ConnectionInfoFlavor `json:"flavor,omitempty"`
 
+	Type *ConnectionType `json:"type,omitempty"`
+
+	KafkaDetail *KafkaConnectionDetail `json:"kafka_detail,omitempty"`
+
 	// 创建UTC时间
 	CreatedTime *string `json:"created_time,omitempty"`
 

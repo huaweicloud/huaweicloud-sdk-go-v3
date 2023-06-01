@@ -12,7 +12,7 @@ type LicensePlateResult struct {
 	// 车牌内容。
 	PlateNumber string `json:"plate_number"`
 
-	// 当前版本支持的车牌底色类型：  - blue: 蓝色  - green: 绿色  - black: 黑色  - white: 白色  - yellow: 黄色
+	// 当前版本支持的车牌底色类型：  - blue: 蓝色  - green: 绿色（小型新能源车牌）  - black: 黑色  - white: 白色  - yellow: 黄色  - yellow_green: 黄绿（大型新能源车牌）
 	PlateColor string `json:"plate_color"`
 
 	// 车牌的区域位置信息，列表形式，包含文字区域四个顶点的二维坐标（x,y）;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。

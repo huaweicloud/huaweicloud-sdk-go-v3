@@ -20,7 +20,7 @@ type ChannelInfo struct {
 	// 通道描述
 	Description *string `json:"description,omitempty"`
 
-	// 通道提供方类型，OFFICIAL：官方事件通道；CUSTOM：自定义事件通道
+	// 通道提供方类型，OFFICIAL：官方事件通道；CUSTOM：自定义事件通道；PARTNER：伙伴事件通道
 	ProviderType *ChannelInfoProviderType `json:"provider_type,omitempty"`
 
 	// 创建UTC时间
@@ -46,6 +46,7 @@ type ChannelInfoProviderType struct {
 type ChannelInfoProviderTypeEnum struct {
 	OFFICIAL ChannelInfoProviderType
 	CUSTOM   ChannelInfoProviderType
+	PARTNER  ChannelInfoProviderType
 }
 
 func GetChannelInfoProviderTypeEnum() ChannelInfoProviderTypeEnum {
@@ -55,6 +56,9 @@ func GetChannelInfoProviderTypeEnum() ChannelInfoProviderTypeEnum {
 		},
 		CUSTOM: ChannelInfoProviderType{
 			value: "CUSTOM",
+		},
+		PARTNER: ChannelInfoProviderType{
+			value: "PARTNER",
 		},
 	}
 }

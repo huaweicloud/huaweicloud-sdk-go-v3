@@ -39,11 +39,8 @@ type L7Policy struct {
 	// 转发策略的配置状态。  取值范围： - ACTIVE: 默认值，表示正常。 [- ERROR: 表示当前策略与同一监听器下的其他策略存在相同的规则配置。 ](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,fcs)
 	ProvisioningStatus string `json:"provisioning_status"`
 
-	// 转发到pool的ID。当action为REDIRECT_TO_POOL时生效。 若同时指定redirect_pools_config和redirect_pool_id，按redirect_pools_config生效。
+	// 转发到pool的ID。当action为REDIRECT_TO_POOL时生效。
 	RedirectPoolId string `json:"redirect_pool_id"`
-
-	// 转发到后端主机组的配置。当action为REDIRECT_TO_POOL时生效。
-	RedirectPoolsConfig []CreateRedirectPoolsConfig `json:"redirect_pools_config"`
 
 	// 转发到的listener的ID，当action为REDIRECT_TO_LISTENER时必选。  使用说明： - 只支持protocol为HTTPS/TERMINATED_HTTPS的listener。 - 不能指定为其他loadbalancer下的listener。 - 当action为REDIRECT_TO_POOL时，创建或更新时不能传入该参数。
 	RedirectListenerId string `json:"redirect_listener_id"`
@@ -55,6 +52,8 @@ type L7Policy struct {
 	Rules []RuleRef `json:"rules"`
 
 	RedirectUrlConfig *RedirectUrlConfig `json:"redirect_url_config"`
+
+	RedirectPoolsExtendConfig *RedirectPoolsExtendConfig `json:"redirect_pools_extend_config,omitempty"`
 
 	FixedResponseConfig *FixtedResponseConfig `json:"fixed_response_config"`
 

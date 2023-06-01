@@ -39,7 +39,10 @@ type HttpConfig struct {
 	Retries               int
 	HttpProxy             *Proxy
 	IgnoreSSLVerification bool
-	HttpHandler           *httphandler.HttpHandler
+	// Experimental configuration, the default value is false.
+	// Automatic redirection is allowed when turns on, which may cause some request exceptions.
+	AllowRedirects bool
+	HttpHandler    *httphandler.HttpHandler
 }
 
 func DefaultHttpConfig() *HttpConfig {
@@ -67,6 +70,13 @@ func (config *HttpConfig) WithRetries(retries int) *HttpConfig {
 
 func (config *HttpConfig) WithIgnoreSSLVerification(ignore bool) *HttpConfig {
 	config.IgnoreSSLVerification = ignore
+	return config
+}
+
+// WithAllowRedirects Experimental configuration, the default value is false.
+// Automatic redirection is allowed when turns on, which may cause some request exceptions.
+func (config *HttpConfig) WithAllowRedirects(allowRedirects bool) *HttpConfig {
+	config.AllowRedirects = allowRedirects
 	return config
 }
 

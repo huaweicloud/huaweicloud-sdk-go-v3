@@ -23,7 +23,7 @@ type CustomizeSourceInfo struct {
 	// 事件源描述
 	Description *string `json:"description,omitempty"`
 
-	// 事件源提供方类型，OFFICIAL：官方云服务事件源；CUSTOM：用户创建的自定义事件源
+	// 事件源提供方类型，OFFICIAL：官方云服务事件源；CUSTOM：用户创建的自定义事件源；PARTNER：伙伴事件源
 	ProviderType *CustomizeSourceInfoProviderType `json:"provider_type,omitempty"`
 
 	// 事件源提供的事件类型列表，只有官方云服务事件源提供事件类型
@@ -67,6 +67,7 @@ type CustomizeSourceInfoProviderType struct {
 type CustomizeSourceInfoProviderTypeEnum struct {
 	OFFICIAL CustomizeSourceInfoProviderType
 	CUSTOM   CustomizeSourceInfoProviderType
+	PARTNER  CustomizeSourceInfoProviderType
 }
 
 func GetCustomizeSourceInfoProviderTypeEnum() CustomizeSourceInfoProviderTypeEnum {
@@ -76,6 +77,9 @@ func GetCustomizeSourceInfoProviderTypeEnum() CustomizeSourceInfoProviderTypeEnu
 		},
 		CUSTOM: CustomizeSourceInfoProviderType{
 			value: "CUSTOM",
+		},
+		PARTNER: CustomizeSourceInfoProviderType{
+			value: "PARTNER",
 		},
 	}
 }

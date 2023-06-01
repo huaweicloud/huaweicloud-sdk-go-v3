@@ -53,6 +53,7 @@ type ListEventSourcesRequestProviderType struct {
 type ListEventSourcesRequestProviderTypeEnum struct {
 	OFFICIAL ListEventSourcesRequestProviderType
 	CUSTOM   ListEventSourcesRequestProviderType
+	PARTNER  ListEventSourcesRequestProviderType
 }
 
 func GetListEventSourcesRequestProviderTypeEnum() ListEventSourcesRequestProviderTypeEnum {
@@ -62,6 +63,9 @@ func GetListEventSourcesRequestProviderTypeEnum() ListEventSourcesRequestProvide
 		},
 		CUSTOM: ListEventSourcesRequestProviderType{
 			value: "CUSTOM",
+		},
+		PARTNER: ListEventSourcesRequestProviderType{
+			value: "PARTNER",
 		},
 	}
 }

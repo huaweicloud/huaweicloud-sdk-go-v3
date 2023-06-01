@@ -22,6 +22,9 @@ type ListTopicsItem struct {
 
 	// 企业项目ID。
 	EnterpriseProjectId string `json:"enterprise_project_id"`
+
+	// 主题ID。
+	TopicId string `json:"topic_id"`
 }
 
 func (o ListTopicsItem) String() string {

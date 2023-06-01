@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 包周期选项，charge_mode为prepaid时填写。
+// 包周期选项，pay_type=prepaid或charge_mode为prepaid时填写。
 type PrepaidChangeChargeModeOption struct {
 
 	// 是否连同独享按带宽计费的弹性公网IP一起转包周期。 1. 弹性公网IP转包周期之后可以单独解绑，绑定到其他实例，删除 2. 只有独享且按带宽计费的弹性公网IP才被允许转包周期 默认值：false

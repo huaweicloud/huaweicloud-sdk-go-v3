@@ -2,6 +2,7 @@ package model
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+	"github.com/shopspring/decimal"
 
 	"strings"
 )
@@ -16,28 +17,28 @@ type ShowCustomerMonthlySumResponse struct {
 	BillSums *[]BillSumRecordInfoV2 `json:"bill_sums,omitempty"`
 
 	// 总金额（包含退订）。
-	ConsumeAmount *float64 `json:"consume_amount,omitempty"`
+	ConsumeAmount *decimal.Decimal `json:"consume_amount,omitempty"`
 
 	// 总欠费金额。
-	DebtAmount *float64 `json:"debt_amount,omitempty"`
+	DebtAmount *decimal.Decimal `json:"debt_amount,omitempty"`
 
 	// 代金券金额。
-	CouponAmount *float64 `json:"coupon_amount,omitempty"`
+	CouponAmount *decimal.Decimal `json:"coupon_amount,omitempty"`
 
 	// 现金券金额，预留。
-	FlexipurchaseCouponAmount *float64 `json:"flexipurchase_coupon_amount,omitempty"`
+	FlexipurchaseCouponAmount *decimal.Decimal `json:"flexipurchase_coupon_amount,omitempty"`
 
 	// 储值卡金额，预留。
-	StoredValueCardAmount *float64 `json:"stored_value_card_amount,omitempty"`
+	StoredValueCardAmount *decimal.Decimal `json:"stored_value_card_amount,omitempty"`
 
 	// 现金账户金额。
-	CashAmount *float64 `json:"cash_amount,omitempty"`
+	CashAmount *decimal.Decimal `json:"cash_amount,omitempty"`
 
 	// 信用账户金额。
-	CreditAmount *float64 `json:"credit_amount,omitempty"`
+	CreditAmount *decimal.Decimal `json:"credit_amount,omitempty"`
 
 	// 欠费核销金额。
-	WriteoffAmount *float64 `json:"writeoff_amount,omitempty"`
+	WriteoffAmount *decimal.Decimal `json:"writeoff_amount,omitempty"`
 
 	// 金额单位。 1：元
 	MeasureId *int32 `json:"measure_id,omitempty"`

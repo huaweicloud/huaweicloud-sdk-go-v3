@@ -21,7 +21,7 @@ type ListTopicDetailsResponse struct {
 	// 创建Topic的名字。
 	Name *string `json:"name,omitempty"`
 
-	// Topic的唯一的资源标识。可以通过[查看主题列表获](https://support.huaweicloud.com/api-smn/smn_api_51004.html)取该标识。
+	// Topic的唯一的资源标识。可以通过[查看主题列表获](smn_api_51004.xml)取该标识。
 	TopicUrn *string `json:"topic_urn,omitempty"`
 
 	// Topic的显示名，推送邮件消息时，作为邮件发件人显示。
@@ -32,7 +32,10 @@ type ListTopicDetailsResponse struct {
 
 	// 企业项目ID。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
-	HttpStatusCode      int     `json:"-"`
+
+	// 主题ID。
+	TopicId        *string `json:"topic_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ListTopicDetailsResponse) String() string {

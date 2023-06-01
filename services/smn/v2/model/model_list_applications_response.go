@@ -15,6 +15,7 @@ type ListApplicationsResponse struct {
 	// 返回的Application个数。该参数不受offset和limit影响，即返回的是您账户下所有的Application个数。
 	ApplicationCount *int32 `json:"application_count,omitempty"`
 
+	// Application列表。
 	Applications   *[]ApplicationItem `json:"applications,omitempty"`
 	HttpStatusCode int                `json:"-"`
 }

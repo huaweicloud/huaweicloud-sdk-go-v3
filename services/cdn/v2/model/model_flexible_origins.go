@@ -18,8 +18,8 @@ type FlexibleOrigins struct {
 	// 优先级取值范围为1~100，数值越大优先级越高。
 	Priority int32 `json:"priority"`
 
-	// 回源信息。
-	BackSources *[]BackSources `json:"back_sources,omitempty"`
+	// 回源信息。  > 每个目录的回源源站数量不超过1个。
+	BackSources []BackSources `json:"back_sources"`
 }
 
 func (o FlexibleOrigins) String() string {

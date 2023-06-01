@@ -8,7 +8,8 @@ import (
 
 // Response Object
 type ShowTemplateVersionContentResponse struct {
-	HttpStatusCode int `json:"-"`
+	Location       *string `json:"Location,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowTemplateVersionContentResponse) String() string {

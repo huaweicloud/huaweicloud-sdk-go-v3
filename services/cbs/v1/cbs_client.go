@@ -602,3 +602,27 @@ func (c *CbsClient) TagSatisfactionInvoker(request *model.TagSatisfactionRequest
 	requestDef := GenReqDefForTagSatisfaction()
 	return &TagSatisfactionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
+
+// PostRequests PostRequests
+//
+// 问答服务的输入为用户提问，输出是与输入最匹配的Top N(默认为top5)个知识点，知识点按得分从高到低排序。
+//
+// 说明：
+// 返回知识点如果含有答案字段（answer），则表示返回匹配成功结果，如果没有答案字段，则表示推荐结果。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbsClient) PostRequests(request *model.PostRequestsRequest) (*model.PostRequestsResponse, error) {
+	requestDef := GenReqDefForPostRequests()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.PostRequestsResponse), nil
+	}
+}
+
+// PostRequestsInvoker PostRequests
+func (c *CbsClient) PostRequestsInvoker(request *model.PostRequestsRequest) *PostRequestsInvoker {
+	requestDef := GenReqDefForPostRequests()
+	return &PostRequestsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}

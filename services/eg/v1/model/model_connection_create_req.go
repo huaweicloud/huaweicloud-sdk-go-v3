@@ -19,6 +19,10 @@ type ConnectionCreateReq struct {
 
 	// 待连接的子网ID
 	SubnetId string `json:"subnet_id"`
+
+	Type *ConnectionType `json:"type,omitempty"`
+
+	KafkaDetail *KafkaConnectionDetail `json:"kafka_detail,omitempty"`
 }
 
 func (o ConnectionCreateReq) String() string {

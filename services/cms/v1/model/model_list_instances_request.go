@@ -15,7 +15,7 @@ type ListInstancesRequest struct {
 	// 取值为上一页数据的最后一条记录的唯一标识
 	Marker *string `json:"marker,omitempty"`
 
-	// 智能购买组id
+	// 智能购买组ID
 	AutoLaunchGroupId string `json:"auto_launch_group_id"`
 }
 

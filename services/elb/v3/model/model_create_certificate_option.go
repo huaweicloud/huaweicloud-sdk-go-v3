@@ -27,7 +27,7 @@ type CreateCertificateOption struct {
 	// 证书的名称。
 	Name *string `json:"name,omitempty"`
 
-	// HTTPS协议使用的私钥。当type为server时有效且必选。 取值范围：PEM编码格式。 最大长度8192字符。
+	// HTTPS协议使用的私钥。当type为server时有效且必选。当type为client时，可以传或也可以不传，但都会被忽略；若传入则必须符合PEM格式。 取值范围：PEM编码格式。 最大长度8192字符。
 	PrivateKey *string `json:"private_key,omitempty"`
 
 	// 证书所在的项目ID。

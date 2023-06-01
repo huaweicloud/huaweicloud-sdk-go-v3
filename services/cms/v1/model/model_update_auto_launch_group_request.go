@@ -9,7 +9,7 @@ import (
 // Request Object
 type UpdateAutoLaunchGroupRequest struct {
 
-	// 智能购买组id
+	// 智能购买组ID
 	AutoLaunchGroupId string `json:"auto_launch_group_id"`
 
 	Body *UpdateAutoLaunchGroupReqV2 `json:"body,omitempty"`

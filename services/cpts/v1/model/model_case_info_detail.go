@@ -37,6 +37,23 @@ type CaseInfoDetail struct {
 
 	// 排序字段
 	Sort *int32 `json:"sort,omitempty"`
+
+	// 用例所属目录id（旧版接口可不传）
+	DirectoryId *int32 `json:"directory_id,omitempty"`
+
+	// 前置步骤
+	SetupContents *[]Contents `json:"setup_contents,omitempty"`
+
+	// 执行器个数
+	UserReplicas *int32 `json:"user_replicas,omitempty"`
+
+	// 日志采集策略（0-请求模式；1-用例模式）
+	CollectLogPolicy *int32 `json:"collect_log_policy,omitempty"`
+
+	// 关联全链路应用列表
+	LinkAppList *[]int32 `json:"link_app_list,omitempty"`
+
+	CaseInfo *CaseDoc `json:"case_info,omitempty"`
 }
 
 func (o CaseInfoDetail) String() string {

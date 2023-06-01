@@ -65,6 +65,8 @@ type MysqlInstanceRequest struct {
 
 	// 专属资源池ID，只有开通专属资源池后才可以下发此参数。
 	DedicatedResourceId *string `json:"dedicated_resource_id,omitempty"`
+
+	RestorePoint *MysqlRestorePoint `json:"restore_point,omitempty"`
 }
 
 func (o MysqlInstanceRequest) String() string {

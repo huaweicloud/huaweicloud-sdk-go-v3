@@ -2,6 +2,7 @@ package model
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+	"github.com/shopspring/decimal"
 
 	"strings"
 )
@@ -27,7 +28,7 @@ type CouponRecordV2 struct {
 	CustomerId *string `json:"customer_id,omitempty"`
 
 	// 操作的面额值。单位：元。 发放时，等于面额值；回收时，指每次回收的具体值。
-	OperationAmount *float64 `json:"operation_amount,omitempty"`
+	OperationAmount *decimal.Decimal `json:"operation_amount,omitempty"`
 
 	// 操作时间。
 	OperationTime *string `json:"operation_time,omitempty"`

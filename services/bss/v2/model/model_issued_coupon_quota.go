@@ -2,6 +2,7 @@ package model
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+	"github.com/shopspring/decimal"
 
 	"strings"
 )
@@ -21,7 +22,7 @@ type IssuedCouponQuota struct {
 	LastUpdateTime *string `json:"last_update_time,omitempty"`
 
 	// 代金券额度的值，精确到小数点后2位。
-	QuotaValue *float64 `json:"quota_value,omitempty"`
+	QuotaValue *decimal.Decimal `json:"quota_value,omitempty"`
 
 	// 代金券额度的状态： 0：正常3：失效（包括过期失效和人工设置失效）4：额度调整中（伙伴可以查看该额度，但不能使用该额度发放代金券）5：冻结6：回收
 	QuotaStatus *int32 `json:"quota_status,omitempty"`

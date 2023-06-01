@@ -154,6 +154,25 @@ func (c *ServiceStageClient) CreateApplicationInvoker(request *model.CreateAppli
 	return &CreateApplicationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateCamInstance 创建、更新实例
+//
+// 创建、更新实例
+func (c *ServiceStageClient) CreateCamInstance(request *model.CreateCamInstanceRequest) (*model.CreateCamInstanceResponse, error) {
+	requestDef := GenReqDefForCreateCamInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateCamInstanceResponse), nil
+	}
+}
+
+// CreateCamInstanceInvoker 创建、更新实例
+func (c *ServiceStageClient) CreateCamInstanceInvoker(request *model.CreateCamInstanceRequest) *CreateCamInstanceInvoker {
+	requestDef := GenReqDefForCreateCamInstance()
+	return &CreateCamInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateComponent 应用中创建组件
 //
 // 应用组件是组成应用的某个业务特性实现，以代码或者软件包为载体，可独立部署运行。
@@ -213,6 +232,25 @@ func (c *ServiceStageClient) CreateInstance(request *model.CreateInstanceRequest
 func (c *ServiceStageClient) CreateInstanceInvoker(request *model.CreateInstanceRequest) *CreateInstanceInvoker {
 	requestDef := GenReqDefForCreateInstance()
 	return &CreateInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateTemplate 创建模板
+//
+// 创建模板
+func (c *ServiceStageClient) CreateTemplate(request *model.CreateTemplateRequest) (*model.CreateTemplateResponse, error) {
+	requestDef := GenReqDefForCreateTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateTemplateResponse), nil
+	}
+}
+
+// CreateTemplateInvoker 创建模板
+func (c *ServiceStageClient) CreateTemplateInvoker(request *model.CreateTemplateRequest) *CreateTemplateInvoker {
+	requestDef := GenReqDefForCreateTemplate()
+	return &CreateTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteApplication 根据应用ID删除应用
@@ -308,6 +346,63 @@ func (c *ServiceStageClient) DeleteInstance(request *model.DeleteInstanceRequest
 func (c *ServiceStageClient) DeleteInstanceInvoker(request *model.DeleteInstanceRequest) *DeleteInstanceInvoker {
 	requestDef := GenReqDefForDeleteInstance()
 	return &DeleteInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteInstanceById 删除实例
+//
+// 删除实例
+func (c *ServiceStageClient) DeleteInstanceById(request *model.DeleteInstanceByIdRequest) (*model.DeleteInstanceByIdResponse, error) {
+	requestDef := GenReqDefForDeleteInstanceById()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteInstanceByIdResponse), nil
+	}
+}
+
+// DeleteInstanceByIdInvoker 删除实例
+func (c *ServiceStageClient) DeleteInstanceByIdInvoker(request *model.DeleteInstanceByIdRequest) *DeleteInstanceByIdInvoker {
+	requestDef := GenReqDefForDeleteInstanceById()
+	return &DeleteInstanceByIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteTemplate 删除模板
+//
+// 删除模板
+func (c *ServiceStageClient) DeleteTemplate(request *model.DeleteTemplateRequest) (*model.DeleteTemplateResponse, error) {
+	requestDef := GenReqDefForDeleteTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteTemplateResponse), nil
+	}
+}
+
+// DeleteTemplateInvoker 删除模板
+func (c *ServiceStageClient) DeleteTemplateInvoker(request *model.DeleteTemplateRequest) *DeleteTemplateInvoker {
+	requestDef := GenReqDefForDeleteTemplate()
+	return &DeleteTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeployInstance 部署实例
+//
+// 部署实例
+func (c *ServiceStageClient) DeployInstance(request *model.DeployInstanceRequest) (*model.DeployInstanceResponse, error) {
+	requestDef := GenReqDefForDeployInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeployInstanceResponse), nil
+	}
+}
+
+// DeployInstanceInvoker 部署实例
+func (c *ServiceStageClient) DeployInstanceInvoker(request *model.DeployInstanceRequest) *DeployInstanceInvoker {
+	requestDef := GenReqDefForDeployInstance()
+	return &DeployInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListApplications 获取所有应用
@@ -536,6 +631,25 @@ func (c *ServiceStageClient) UpdateInstanceAction(request *model.UpdateInstanceA
 func (c *ServiceStageClient) UpdateInstanceActionInvoker(request *model.UpdateInstanceActionRequest) *UpdateInstanceActionInvoker {
 	requestDef := GenReqDefForUpdateInstanceAction()
 	return &UpdateInstanceActionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateTemplate 更新模板
+//
+// 更新模板
+func (c *ServiceStageClient) UpdateTemplate(request *model.UpdateTemplateRequest) (*model.UpdateTemplateResponse, error) {
+	requestDef := GenReqDefForUpdateTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateTemplateResponse), nil
+	}
+}
+
+// UpdateTemplateInvoker 更新模板
+func (c *ServiceStageClient) UpdateTemplateInvoker(request *model.UpdateTemplateRequest) *UpdateTemplateInvoker {
+	requestDef := GenReqDefForUpdateTemplate()
+	return &UpdateTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateFile 创建仓库文件

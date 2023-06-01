@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// webSocket配置。
+// webSocket配置。  > 只支持全站加速。
 type WebSocketSeek struct {
 
-	// 开关(on 开启，off 关闭)
+	// 开关， on 开启，off 关闭。
 	Status string `json:"status"`
 
 	// 请求建立连接后，会话的保持时间：范围：1-300，单位：秒。

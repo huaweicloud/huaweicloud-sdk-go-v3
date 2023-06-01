@@ -10,7 +10,7 @@ import (
 // 智能购买组列表
 type AutoLaunchGroupInfo struct {
 
-	// 智能购买组id
+	// 智能购买组ID
 	Id string `json:"id"`
 
 	// 智能购买组的名称

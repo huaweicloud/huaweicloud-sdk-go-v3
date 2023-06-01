@@ -1164,6 +1164,17 @@ func GenReqDefForShowStorageUsage() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowSummary() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{project_id}/vaults/summary").
+		WithResponse(new(model.ShowSummaryResponse)).
+		WithContentType("application/json")
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShowVault() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).

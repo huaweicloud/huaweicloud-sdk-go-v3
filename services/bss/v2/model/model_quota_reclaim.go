@@ -2,6 +2,7 @@ package model
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+	"github.com/shopspring/decimal"
 
 	"strings"
 )
@@ -12,7 +13,7 @@ type QuotaReclaim struct {
 	QuotaId *string `json:"quota_id,omitempty"`
 
 	// 被回收额度后的代金券额度余额。单位：元。
-	QuotaBalance *float64 `json:"quota_balance,omitempty"`
+	QuotaBalance *decimal.Decimal `json:"quota_balance,omitempty"`
 }
 
 func (o QuotaReclaim) String() string {

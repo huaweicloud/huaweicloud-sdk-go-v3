@@ -65,30 +65,6 @@ func (i *CreateEndpointInvoker) Invoke() (*model.CreateEndpointResponse, error) 
 	}
 }
 
-type CreateEventSchemaInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateEventSchemaInvoker) Invoke() (*model.CreateEventSchemaResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateEventSchemaResponse), nil
-	}
-}
-
-type CreateEventSchemaVersionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateEventSchemaVersionInvoker) Invoke() (*model.CreateEventSchemaVersionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateEventSchemaVersionResponse), nil
-	}
-}
-
 type CreateEventSourceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -98,6 +74,18 @@ func (i *CreateEventSourceInvoker) Invoke() (*model.CreateEventSourceResponse, e
 		return nil, err
 	} else {
 		return result.(*model.CreateEventSourceResponse), nil
+	}
+}
+
+type CreateEventStreamingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateEventStreamingInvoker) Invoke() (*model.CreateEventStreamingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateEventStreamingResponse), nil
 	}
 }
 
@@ -161,30 +149,6 @@ func (i *DeleteEndpointInvoker) Invoke() (*model.DeleteEndpointResponse, error) 
 	}
 }
 
-type DeleteEventSchemaInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteEventSchemaInvoker) Invoke() (*model.DeleteEventSchemaResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteEventSchemaResponse), nil
-	}
-}
-
-type DeleteEventSchemaVersionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteEventSchemaVersionInvoker) Invoke() (*model.DeleteEventSchemaVersionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteEventSchemaVersionResponse), nil
-	}
-}
-
 type DeleteEventSourceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -194,6 +158,18 @@ func (i *DeleteEventSourceInvoker) Invoke() (*model.DeleteEventSourceResponse, e
 		return nil, err
 	} else {
 		return result.(*model.DeleteEventSourceResponse), nil
+	}
+}
+
+type DeleteEventStreamingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteEventStreamingInvoker) Invoke() (*model.DeleteEventStreamingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteEventStreamingResponse), nil
 	}
 }
 
@@ -218,18 +194,6 @@ func (i *DeleteSubscriptionTargetInvoker) Invoke() (*model.DeleteSubscriptionTar
 		return nil, err
 	} else {
 		return result.(*model.DeleteSubscriptionTargetResponse), nil
-	}
-}
-
-type DiscoverEventSchemaFromDataInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DiscoverEventSchemaFromDataInvoker) Invoke() (*model.DiscoverEventSchemaFromDataResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DiscoverEventSchemaFromDataResponse), nil
 	}
 }
 
@@ -281,30 +245,6 @@ func (i *ListEndpointsInvoker) Invoke() (*model.ListEndpointsResponse, error) {
 	}
 }
 
-type ListEventSchemaInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListEventSchemaInvoker) Invoke() (*model.ListEventSchemaResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListEventSchemaResponse), nil
-	}
-}
-
-type ListEventSchemaVersionsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListEventSchemaVersionsInvoker) Invoke() (*model.ListEventSchemaVersionsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListEventSchemaVersionsResponse), nil
-	}
-}
-
 type ListEventSourcesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -314,6 +254,18 @@ func (i *ListEventSourcesInvoker) Invoke() (*model.ListEventSourcesResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ListEventSourcesResponse), nil
+	}
+}
+
+type ListEventStreamingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListEventStreamingInvoker) Invoke() (*model.ListEventStreamingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListEventStreamingResponse), nil
 	}
 }
 
@@ -377,6 +329,18 @@ func (i *ListSubscriptionsInvoker) Invoke() (*model.ListSubscriptionsResponse, e
 	}
 }
 
+type ListTracedEventsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTracedEventsInvoker) Invoke() (*model.ListTracedEventsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTracedEventsResponse), nil
+	}
+}
+
 type ListTriggersInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -425,6 +389,30 @@ func (i *PutEventsInvoker) Invoke() (*model.PutEventsResponse, error) {
 	}
 }
 
+type PutOfficialEventsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *PutOfficialEventsInvoker) Invoke() (*model.PutOfficialEventsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.PutOfficialEventsResponse), nil
+	}
+}
+
+type ResumeEventStreamingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ResumeEventStreamingInvoker) Invoke() (*model.ResumeEventStreamingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ResumeEventStreamingResponse), nil
+	}
+}
+
 type ShowDetailOfChannelInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -449,27 +437,15 @@ func (i *ShowDetailOfConnectionInvoker) Invoke() (*model.ShowDetailOfConnectionR
 	}
 }
 
-type ShowDetailOfEventSchemaInvoker struct {
+type ShowDetailOfEventInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ShowDetailOfEventSchemaInvoker) Invoke() (*model.ShowDetailOfEventSchemaResponse, error) {
+func (i *ShowDetailOfEventInvoker) Invoke() (*model.ShowDetailOfEventResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ShowDetailOfEventSchemaResponse), nil
-	}
-}
-
-type ShowDetailOfEventSchemaVersionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowDetailOfEventSchemaVersionInvoker) Invoke() (*model.ShowDetailOfEventSchemaVersionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowDetailOfEventSchemaVersionResponse), nil
+		return result.(*model.ShowDetailOfEventResponse), nil
 	}
 }
 
@@ -482,6 +458,18 @@ func (i *ShowDetailOfEventSourceInvoker) Invoke() (*model.ShowDetailOfEventSourc
 		return nil, err
 	} else {
 		return result.(*model.ShowDetailOfEventSourceResponse), nil
+	}
+}
+
+type ShowDetailOfEventTraceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDetailOfEventTraceInvoker) Invoke() (*model.ShowDetailOfEventTraceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDetailOfEventTraceResponse), nil
 	}
 }
 
@@ -506,6 +494,18 @@ func (i *ShowDetailOfSubscriptionTargetInvoker) Invoke() (*model.ShowDetailOfSub
 		return nil, err
 	} else {
 		return result.(*model.ShowDetailOfSubscriptionTargetResponse), nil
+	}
+}
+
+type ShowEventStreamingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowEventStreamingInvoker) Invoke() (*model.ShowEventStreamingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowEventStreamingResponse), nil
 	}
 }
 
@@ -545,18 +545,6 @@ func (i *UpdateEndpointInvoker) Invoke() (*model.UpdateEndpointResponse, error) 
 	}
 }
 
-type UpdateEventSchemaInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateEventSchemaInvoker) Invoke() (*model.UpdateEventSchemaResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateEventSchemaResponse), nil
-	}
-}
-
 type UpdateEventSourceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -566,6 +554,18 @@ func (i *UpdateEventSourceInvoker) Invoke() (*model.UpdateEventSourceResponse, e
 		return nil, err
 	} else {
 		return result.(*model.UpdateEventSourceResponse), nil
+	}
+}
+
+type UpdateEventStreamingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateEventStreamingInvoker) Invoke() (*model.UpdateEventStreamingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateEventStreamingResponse), nil
 	}
 }
 

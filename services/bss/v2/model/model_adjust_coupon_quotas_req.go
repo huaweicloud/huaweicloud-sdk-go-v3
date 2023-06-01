@@ -2,6 +2,7 @@ package model
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+	"github.com/shopspring/decimal"
 
 	"strings"
 )
@@ -15,7 +16,7 @@ type AdjustCouponQuotasReq struct {
 	IndirectPartnerIds []string `json:"indirect_partner_ids"`
 
 	// 华为云总经销商向云经销商发放的代金券额度值。 单位：元。取值大于0且精确到小数点后2位。
-	QuotaAmount float64 `json:"quota_amount"`
+	QuotaAmount *decimal.Decimal `json:"quota_amount"`
 }
 
 func (o AdjustCouponQuotasReq) String() string {

@@ -23,6 +23,9 @@ type ListTopicsRequest struct {
 
 	// 检索的主题名称，模糊匹配，按照startwith模式进行匹配。
 	FuzzyName *string `json:"fuzzy_name,omitempty"`
+
+	// 检索的主题ID，完全匹配。
+	TopicId *string `json:"topic_id,omitempty"`
 }
 
 func (o ListTopicsRequest) String() string {

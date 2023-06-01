@@ -17,6 +17,9 @@ type IssueCommentV4 struct {
 	// 评论时间
 	CreatedTime *string `json:"created_time,omitempty"`
 
+	// 评论时间戳
+	Timestamp *string `json:"timestamp,omitempty"`
+
 	User *CommentUserV4 `json:"user,omitempty"`
 }
 

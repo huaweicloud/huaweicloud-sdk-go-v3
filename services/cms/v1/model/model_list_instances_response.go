@@ -9,7 +9,7 @@ import (
 // Response Object
 type ListInstancesResponse struct {
 
-	// 虚拟机列表
+	// 实例列表
 	Instances *[]InstanceInfo `json:"instances,omitempty"`
 
 	PageInfo       *PageInfo `json:"page_info,omitempty"`

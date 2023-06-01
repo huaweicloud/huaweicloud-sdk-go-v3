@@ -15,7 +15,7 @@ type CreateAddonInstanceResponse struct {
 	// API版本，固定值“v3”，该值不可修改。
 	ApiVersion *string `json:"apiVersion,omitempty"`
 
-	Metadata *Metadata `json:"metadata,omitempty"`
+	Metadata *AddonMetadata `json:"metadata,omitempty"`
 
 	Spec *InstanceSpec `json:"spec,omitempty"`
 

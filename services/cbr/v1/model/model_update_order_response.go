@@ -8,7 +8,16 @@ import (
 
 // Response Object
 type UpdateOrderResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// 订单ID
+	OrderId *string `json:"orderId,omitempty"`
+
+	// 变更状态码
+	RetCode *string `json:"retCode,omitempty"`
+
+	// 变更信息
+	RetMsg         *string `json:"retMsg,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o UpdateOrderResponse) String() string {

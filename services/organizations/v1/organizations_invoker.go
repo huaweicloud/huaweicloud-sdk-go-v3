@@ -221,6 +221,18 @@ func (i *ListEntitiesInvoker) Invoke() (*model.ListEntitiesResponse, error) {
 	}
 }
 
+type ListQuotasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListQuotasInvoker) Invoke() (*model.ListQuotasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListQuotasResponse), nil
+	}
+}
+
 type ListServicesInvoker struct {
 	*invoker.BaseInvoker
 }

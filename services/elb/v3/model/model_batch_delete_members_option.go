@@ -15,7 +15,7 @@ type BatchDeleteMembersOption struct {
 	// 后端服务器IP地址。  使用说明： - address和protocol_port必须同时传入。 - 不能同时传入ID字段
 	Address *string `json:"address,omitempty"`
 
-	// 后端服务器端口。  使用说明： - address和protocol_port必须同时传入。 - 不能同时传入ID字段
+	// 后端服务器端口。  使用说明： - address和protocol_port必须同时传入。 - 不能同时传入ID字段 - 可以传0，用于删除端口透传pool下的member
 	ProtocolPort *int32 `json:"protocol_port,omitempty"`
 }
 

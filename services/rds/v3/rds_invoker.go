@@ -29,6 +29,18 @@ func (i *AttachEipInvoker) Invoke() (*model.AttachEipResponse, error) {
 	}
 }
 
+type BatchDeleteManualBackupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteManualBackupInvoker) Invoke() (*model.BatchDeleteManualBackupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteManualBackupResponse), nil
+	}
+}
+
 type BatchTagAddActionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -185,6 +197,18 @@ func (i *DeleteInstanceInvoker) Invoke() (*model.DeleteInstanceResponse, error) 
 	}
 }
 
+type DeleteJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteJobInvoker) Invoke() (*model.DeleteJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteJobResponse), nil
+	}
+}
+
 type DeleteManualBackupInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -290,6 +314,18 @@ func (i *ListDrRelationsInvoker) Invoke() (*model.ListDrRelationsResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ListDrRelationsResponse), nil
+	}
+}
+
+type ListEngineFlavorsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListEngineFlavorsInvoker) Invoke() (*model.ListEngineFlavorsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListEngineFlavorsResponse), nil
 	}
 }
 

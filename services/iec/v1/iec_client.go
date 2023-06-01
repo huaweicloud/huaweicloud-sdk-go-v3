@@ -174,6 +174,27 @@ func (c *IecClient) CreateDeploymentInvoker(request *model.CreateDeploymentReque
 	return &CreateDeploymentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateImage 从边缘实例创建边缘私有镜像
+//
+// 使用指定边缘实例的系统盘创建边缘私有镜像。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IecClient) CreateImage(request *model.CreateImageRequest) (*model.CreateImageResponse, error) {
+	requestDef := GenReqDefForCreateImage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateImageResponse), nil
+	}
+}
+
+// CreateImageInvoker 从边缘实例创建边缘私有镜像
+func (c *IecClient) CreateImageInvoker(request *model.CreateImageRequest) *CreateImageInvoker {
+	requestDef := GenReqDefForCreateImage()
+	return &CreateImageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateKeypair 创建和导入密钥
 //
 // 创建SSH密钥，或把公钥导入系统，生成密钥对。
@@ -323,6 +344,27 @@ func (c *IecClient) CreateVpcInvoker(request *model.CreateVpcRequest) *CreateVpc
 	return &CreateVpcInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteBandwidth 删除带宽
+//
+// 删除带宽。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IecClient) DeleteBandwidth(request *model.DeleteBandwidthRequest) (*model.DeleteBandwidthResponse, error) {
+	requestDef := GenReqDefForDeleteBandwidth()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteBandwidthResponse), nil
+	}
+}
+
+// DeleteBandwidthInvoker 删除带宽
+func (c *IecClient) DeleteBandwidthInvoker(request *model.DeleteBandwidthRequest) *DeleteBandwidthInvoker {
+	requestDef := GenReqDefForDeleteBandwidth()
+	return &DeleteBandwidthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteDeployment 删除部署计划
 //
 // 删除部署计划。
@@ -363,6 +405,27 @@ func (c *IecClient) DeleteEdgeCloud(request *model.DeleteEdgeCloudRequest) (*mod
 func (c *IecClient) DeleteEdgeCloudInvoker(request *model.DeleteEdgeCloudRequest) *DeleteEdgeCloudInvoker {
 	requestDef := GenReqDefForDeleteEdgeCloud()
 	return &DeleteEdgeCloudInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteImage 删除边缘私有镜像
+//
+// 将指定ID的边缘私有镜像删除
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IecClient) DeleteImage(request *model.DeleteImageRequest) (*model.DeleteImageResponse, error) {
+	requestDef := GenReqDefForDeleteImage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteImageResponse), nil
+	}
+}
+
+// DeleteImageInvoker 删除边缘私有镜像
+func (c *IecClient) DeleteImageInvoker(request *model.DeleteImageRequest) *DeleteImageInvoker {
+	requestDef := GenReqDefForDeleteImage()
+	return &DeleteImageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteInstances 批量删除边缘实例
@@ -657,6 +720,27 @@ func (c *IecClient) ListBandwidths(request *model.ListBandwidthsRequest) (*model
 func (c *IecClient) ListBandwidthsInvoker(request *model.ListBandwidthsRequest) *ListBandwidthsInvoker {
 	requestDef := GenReqDefForListBandwidths()
 	return &ListBandwidthsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCloudImages 查询中心镜像列表
+//
+// 查询租户在某个云Region的可见镜像列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IecClient) ListCloudImages(request *model.ListCloudImagesRequest) (*model.ListCloudImagesResponse, error) {
+	requestDef := GenReqDefForListCloudImages()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCloudImagesResponse), nil
+	}
+}
+
+// ListCloudImagesInvoker 查询中心镜像列表
+func (c *IecClient) ListCloudImagesInvoker(request *model.ListCloudImagesRequest) *ListCloudImagesInvoker {
+	requestDef := GenReqDefForListCloudImages()
+	return &ListCloudImagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListDeployments 查询部署计划列表
@@ -1001,6 +1085,49 @@ func (c *IecClient) ListVpcsInvoker(request *model.ListVpcsRequest) *ListVpcsInv
 	return &ListVpcsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RebuildImage 重试边缘镜像任务
+//
+// 重试边缘镜像任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IecClient) RebuildImage(request *model.RebuildImageRequest) (*model.RebuildImageResponse, error) {
+	requestDef := GenReqDefForRebuildImage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RebuildImageResponse), nil
+	}
+}
+
+// RebuildImageInvoker 重试边缘镜像任务
+func (c *IecClient) RebuildImageInvoker(request *model.RebuildImageRequest) *RebuildImageInvoker {
+	requestDef := GenReqDefForRebuildImage()
+	return &RebuildImageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RegisterImage 注册边缘私有镜像
+//
+// 将指定Region和ID的IMS镜像注册到边缘IEC-IMS;
+// 注意指定的Region必须在当前IEC-IMS支持的Region列表中。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IecClient) RegisterImage(request *model.RegisterImageRequest) (*model.RegisterImageResponse, error) {
+	requestDef := GenReqDefForRegisterImage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RegisterImageResponse), nil
+	}
+}
+
+// RegisterImageInvoker 注册边缘私有镜像
+func (c *IecClient) RegisterImageInvoker(request *model.RegisterImageRequest) *RegisterImageInvoker {
+	requestDef := GenReqDefForRegisterImage()
+	return &RegisterImageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowBandwidth 查询带宽详情
 //
 // 查询带宽详情。
@@ -1232,6 +1359,27 @@ func (c *IecClient) ShowVolumeInvoker(request *model.ShowVolumeRequest) *ShowVol
 	return &ShowVolumeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowVolumeTypes 查询硬盘类型列表
+//
+// 查询硬盘类型列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IecClient) ShowVolumeTypes(request *model.ShowVolumeTypesRequest) (*model.ShowVolumeTypesResponse, error) {
+	requestDef := GenReqDefForShowVolumeTypes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowVolumeTypesResponse), nil
+	}
+}
+
+// ShowVolumeTypesInvoker 查询硬盘类型列表
+func (c *IecClient) ShowVolumeTypesInvoker(request *model.ShowVolumeTypesRequest) *ShowVolumeTypesInvoker {
+	requestDef := GenReqDefForShowVolumeTypes()
+	return &ShowVolumeTypesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowVpc 查询虚拟私有云详情
 //
 // 根据虚拟私有云ID，获取虚拟私有云的详情。
@@ -1251,6 +1399,27 @@ func (c *IecClient) ShowVpc(request *model.ShowVpcRequest) (*model.ShowVpcRespon
 func (c *IecClient) ShowVpcInvoker(request *model.ShowVpcRequest) *ShowVpcInvoker {
 	requestDef := GenReqDefForShowVpc()
 	return &ShowVpcInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateBandwidth 更新带宽
+//
+// 更新带宽。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IecClient) UpdateBandwidth(request *model.UpdateBandwidthRequest) (*model.UpdateBandwidthResponse, error) {
+	requestDef := GenReqDefForUpdateBandwidth()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateBandwidthResponse), nil
+	}
+}
+
+// UpdateBandwidthInvoker 更新带宽
+func (c *IecClient) UpdateBandwidthInvoker(request *model.UpdateBandwidthRequest) *UpdateBandwidthInvoker {
+	requestDef := GenReqDefForUpdateBandwidth()
+	return &UpdateBandwidthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateInstance 修改边缘实例

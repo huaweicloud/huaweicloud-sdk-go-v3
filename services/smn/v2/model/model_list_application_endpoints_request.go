@@ -9,7 +9,7 @@ import (
 // Request Object
 type ListApplicationEndpointsRequest struct {
 
-	// Application的唯一资源标识，可通过[查询Application](https://support.huaweicloud.com/api-smn/ListApplications.html)获取该标识。
+	// Application的唯一资源标识，可通过[查询Application](smn_api_57004.xml)获取该标识。
 	ApplicationUrn string `json:"application_urn"`
 
 	// 偏移量。  偏移量为一个大于0小于资源总个数的整数，表示查询该偏移量后面的所有的资源，默认值为0。

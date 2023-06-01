@@ -12,22 +12,22 @@ import (
 // This is a auto create Body Object
 type UpdateAutoLaunchGroupReqV2 struct {
 
-	// 智能购买组名称(1-64个字符)，只能包含中文、字母、数字、下划线和中划线
+	// 智能购买组名称。 取值范围：1-64个字符，只能包含中文、字母、数字、下划线和中划线
 	Name *string `json:"name,omitempty"`
 
-	// 保障计划id
+	// 算力保障计划ID
 	GuaranteePlanId *string `json:"guarantee_plan_id,omitempty"`
 
-	// 供应组目标容量，实例数量或者CPU个数，目标容量大于等于stable_capacity。spot实例的容量为满配容量减去stable_capacity。
+	// 智能购买组目标容量。 实例数量或者CPU个数，目标容量大于等于stable_capacity。竞价实例的容量为满配容量减去stable_capacity。
 	TargetCapacity *int32 `json:"target_capacity,omitempty"`
 
-	// 按需实例目标容量(实例数量或CPU个数),小于target_capacity,供应组中可以没有按需实例。
+	// 按需实例目标容量。 目标容量指实例数量或CPU个数，必须小于等于target_capacity，智能购买组中可以没有按需实例。
 	StableCapacity *int32 `json:"stable_capacity,omitempty"`
 
-	// 超过目标容量时（目标容量减少）实例中断行为，枚举值 terminate：释放 noTermination：不释放 默认值：terminate
+	// 超过目标容量或目标容量减少时的实例中断行为，枚举值 terminate：释放 noTermination：不释放 默认值：terminate
 	ExcessFulfilledCapacityBehavior *UpdateAutoLaunchGroupReqV2ExcessFulfilledCapacityBehavior `json:"excess_fulfilled_capacity_behavior,omitempty"`
 
-	// 请求到期正在运行实例中断行为，枚举值 terminate：释放 noTermination：不释放 默认值：terminate
+	// 请求到期时正在运行实例的中断行为，枚举值 terminate：释放 noTermination：不释放 默认值：terminate
 	InstancesBehaviorWithExpiration *UpdateAutoLaunchGroupReqV2InstancesBehaviorWithExpiration `json:"instances_behavior_with_expiration,omitempty"`
 
 	// 用户愿意为竞价实例每小时支付的最高价格。如果overrides中没有提供价格，可以使用该价格

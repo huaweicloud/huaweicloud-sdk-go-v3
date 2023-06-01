@@ -20,7 +20,7 @@ type FlavorRequirement struct {
 
 	MemoryGbPerVcpu *DoubleRange `json:"memory_gb_per_vcpu,omitempty"`
 
-	// 接受的资源代系，不填表示全接受
+	// 接受的资源代系，不填表示接受所有
 	InstanceGenerations *[]FlavorRequirementInstanceGenerations `json:"instance_generations,omitempty"`
 }
 

@@ -77,6 +77,18 @@ func (i *CheckUserIdentityInvoker) Invoke() (*model.CheckUserIdentityResponse, e
 	}
 }
 
+type ClaimEnterpriseMultiAccountCouponInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ClaimEnterpriseMultiAccountCouponInvoker) Invoke() (*model.ClaimEnterpriseMultiAccountCouponResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ClaimEnterpriseMultiAccountCouponResponse), nil
+	}
+}
+
 type CreateEnterpriseProjectAuthInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -473,6 +485,30 @@ func (i *ListMeasureUnitsInvoker) Invoke() (*model.ListMeasureUnitsResponse, err
 	}
 }
 
+type ListMultiAccountRetrieveCouponsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListMultiAccountRetrieveCouponsInvoker) Invoke() (*model.ListMultiAccountRetrieveCouponsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListMultiAccountRetrieveCouponsResponse), nil
+	}
+}
+
+type ListMultiAccountTransferCouponsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListMultiAccountTransferCouponsInvoker) Invoke() (*model.ListMultiAccountTransferCouponsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListMultiAccountTransferCouponsResponse), nil
+	}
+}
+
 type ListOnDemandResourceRatingsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -782,6 +818,18 @@ func (i *ReclaimCouponQuotasInvoker) Invoke() (*model.ReclaimCouponQuotasRespons
 		return nil, err
 	} else {
 		return result.(*model.ReclaimCouponQuotasResponse), nil
+	}
+}
+
+type ReclaimEnterpriseMultiAccountCouponInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ReclaimEnterpriseMultiAccountCouponInvoker) Invoke() (*model.ReclaimEnterpriseMultiAccountCouponResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ReclaimEnterpriseMultiAccountCouponResponse), nil
 	}
 }
 

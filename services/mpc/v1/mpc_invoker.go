@@ -173,42 +173,6 @@ func (i *ListEditingJobInvoker) Invoke() (*model.ListEditingJobResponse, error) 
 	}
 }
 
-type CreateEditingJobsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateEditingJobsInvoker) Invoke() (*model.CreateEditingJobsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateEditingJobsResponse), nil
-	}
-}
-
-type DeleteEditingJobsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteEditingJobsInvoker) Invoke() (*model.DeleteEditingJobsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteEditingJobsResponse), nil
-	}
-}
-
-type ListEditingJobsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListEditingJobsInvoker) Invoke() (*model.ListEditingJobsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListEditingJobsResponse), nil
-	}
-}
-
 type CreateEncryptTaskInvoker struct {
 	*invoker.BaseInvoker
 }

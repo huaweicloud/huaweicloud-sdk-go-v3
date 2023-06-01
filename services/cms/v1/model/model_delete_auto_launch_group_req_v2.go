@@ -12,7 +12,7 @@ import (
 // This is a delete Request Object
 type DeleteAutoLaunchGroupReqV2 struct {
 
-	// 删除智能购买组时组内实例中断行为。枚举值 terminate：释放，由delete_publicip和delete_volume决定是否释放ip和卷 noTermination：不释放，ip和卷也不释放 默认值：terminate
+	// 删除智能购买组时组内实例的中断行为。枚举值 terminate：释放，由delete_publicip和delete_volume决定是否释放弹性公网IP和磁盘 noTermination：不释放，弹性公网IP和磁盘也不释放 默认值：terminate
 	DeleteInstances *DeleteAutoLaunchGroupReqV2DeleteInstances `json:"delete_instances,omitempty"`
 }
 

@@ -1008,9 +1008,9 @@ func (c *DnsClient) DisassociateRouterInvoker(request *model.DisassociateRouterR
 	return &DisassociateRouterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListPrivateZones 查询内网Zone的列表
+// ListPrivateZones 查询内网Zone列表
 //
-// 查询内网Zone的列表
+// 查询内网Zone列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ListPrivateZones(request *model.ListPrivateZonesRequest) (*model.ListPrivateZonesResponse, error) {
@@ -1023,7 +1023,7 @@ func (c *DnsClient) ListPrivateZones(request *model.ListPrivateZonesRequest) (*m
 	}
 }
 
-// ListPrivateZonesInvoker 查询内网Zone的列表
+// ListPrivateZonesInvoker 查询内网Zone列表
 func (c *DnsClient) ListPrivateZonesInvoker(request *model.ListPrivateZonesRequest) *ListPrivateZonesInvoker {
 	requestDef := GenReqDefForListPrivateZones()
 	return &ListPrivateZonesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

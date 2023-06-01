@@ -9,10 +9,10 @@ import (
 //
 type DistinctLocation struct {
 
-	// 区域Region
+	// 区域ID
 	RegionId string `json:"region_id"`
 
-	// 可用区Availability Zone
+	// 可用区ID
 	AvailabilityZoneId *string `json:"availability_zone_id,omitempty"`
 }
 

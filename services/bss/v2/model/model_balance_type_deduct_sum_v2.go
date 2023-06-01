@@ -2,6 +2,7 @@ package model
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+	"github.com/shopspring/decimal"
 
 	"strings"
 )
@@ -12,7 +13,7 @@ type BalanceTypeDeductSumV2 struct {
 	BalanceType *string `json:"balance_type,omitempty"`
 
 	// 金额。 对于billType=1或者2的账单，该金额为负值。
-	Amount *float64 `json:"amount,omitempty"`
+	Amount *decimal.Decimal `json:"amount,omitempty"`
 
 	// 账单类型。 0：正常1：退订2：华为核销
 	BillType *string `json:"bill_type,omitempty"`

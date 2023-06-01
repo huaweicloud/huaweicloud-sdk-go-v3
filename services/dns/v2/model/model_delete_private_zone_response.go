@@ -30,7 +30,7 @@ type DeletePrivateZoneResponse struct {
 	// 该zone下SOA记录中用于标识zone文件变更的序列值，用于主从节点同步。
 	Serial *int32 `json:"serial,omitempty"`
 
-	// 状态
+	// 资源状态
 	Status *string `json:"status,omitempty"`
 
 	// 该zone下的recordset个数。

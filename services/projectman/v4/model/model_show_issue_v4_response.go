@@ -51,6 +51,8 @@ type ShowIssueV4Response struct {
 
 	Iteration *IssueItemSfV4Iteration `json:"iteration,omitempty"`
 
+	StoryPoint *IssueDetailResponseV4StoryPoint `json:"story_point,omitempty"`
+
 	Module *IssueItemSfV4Module `json:"module,omitempty"`
 
 	// 标题

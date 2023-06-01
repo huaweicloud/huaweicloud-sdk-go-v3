@@ -15,7 +15,7 @@ type InstanceRequest struct {
 	// API版本，固定值“v3”，该值不可修改，该字段传入无效。
 	ApiVersion string `json:"apiVersion"`
 
-	Metadata *Metadata `json:"metadata"`
+	Metadata *AddonMetadata `json:"metadata"`
 
 	Spec *InstanceRequestSpec `json:"spec"`
 }

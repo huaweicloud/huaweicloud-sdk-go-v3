@@ -9,13 +9,13 @@ import (
 // 资源供给推荐结果
 type SupplyRecommendation struct {
 
-	// 弹性云服务器规格
+	// 实例规格ID
 	FlavorId *string `json:"flavor_id,omitempty"`
 
-	// 地域id
+	// 区域ID
 	RegionId *string `json:"region_id,omitempty"`
 
-	// 可用区id
+	// 可用区ID
 	AvailabilityZoneId *string `json:"availability_zone_id,omitempty"`
 
 	// 推荐分数

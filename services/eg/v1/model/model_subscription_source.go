@@ -43,6 +43,7 @@ type SubscriptionSourceProviderType struct {
 type SubscriptionSourceProviderTypeEnum struct {
 	CUSTOM   SubscriptionSourceProviderType
 	OFFICIAL SubscriptionSourceProviderType
+	PARTNER  SubscriptionSourceProviderType
 }
 
 func GetSubscriptionSourceProviderTypeEnum() SubscriptionSourceProviderTypeEnum {
@@ -52,6 +53,9 @@ func GetSubscriptionSourceProviderTypeEnum() SubscriptionSourceProviderTypeEnum 
 		},
 		OFFICIAL: SubscriptionSourceProviderType{
 			value: "OFFICIAL",
+		},
+		PARTNER: SubscriptionSourceProviderType{
+			value: "PARTNER",
 		},
 	}
 }

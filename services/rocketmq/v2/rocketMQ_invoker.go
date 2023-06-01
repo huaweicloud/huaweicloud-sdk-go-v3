@@ -77,6 +77,18 @@ func (i *CreatePostPaidInstanceInvoker) Invoke() (*model.CreatePostPaidInstanceR
 	}
 }
 
+type CreateRocketMqMigrationTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateRocketMqMigrationTaskInvoker) Invoke() (*model.CreateRocketMqMigrationTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateRocketMqMigrationTaskResponse), nil
+	}
+}
+
 type CreateUserInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -110,6 +122,18 @@ func (i *DeleteInstanceInvoker) Invoke() (*model.DeleteInstanceResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.DeleteInstanceResponse), nil
+	}
+}
+
+type DeleteRocketMqMigrationTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteRocketMqMigrationTaskInvoker) Invoke() (*model.DeleteRocketMqMigrationTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteRocketMqMigrationTaskResponse), nil
 	}
 }
 
@@ -221,6 +245,18 @@ func (i *ListMessagesInvoker) Invoke() (*model.ListMessagesResponse, error) {
 	}
 }
 
+type ListRocketMqMigrationTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRocketMqMigrationTaskInvoker) Invoke() (*model.ListRocketMqMigrationTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRocketMqMigrationTaskResponse), nil
+	}
+}
+
 type ListTopicAccessPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -254,6 +290,18 @@ func (i *ResetConsumeOffsetInvoker) Invoke() (*model.ResetConsumeOffsetResponse,
 		return nil, err
 	} else {
 		return result.(*model.ResetConsumeOffsetResponse), nil
+	}
+}
+
+type SendRocketMqDlqMessageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SendRocketMqDlqMessageInvoker) Invoke() (*model.SendRocketMqDlqMessageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SendRocketMqDlqMessageResponse), nil
 	}
 }
 
@@ -374,6 +422,18 @@ func (i *UpdateUserInvoker) Invoke() (*model.UpdateUserResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.UpdateUserResponse), nil
+	}
+}
+
+type ValidateRocketMqConsumedMessageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ValidateRocketMqConsumedMessageInvoker) Invoke() (*model.ValidateRocketMqConsumedMessageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ValidateRocketMqConsumedMessageResponse), nil
 	}
 }
 

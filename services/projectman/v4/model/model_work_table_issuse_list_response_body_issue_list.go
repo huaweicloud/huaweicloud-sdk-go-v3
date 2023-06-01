@@ -75,6 +75,9 @@ type WorkTableIssuseListResponseBodyIssueList struct {
 
 	// 工作项更新时间戳
 	UpdatedOn *string `json:"updated_on,omitempty"`
+
+	// 工作项预计结束时间戳
+	DueDate *string `json:"due_date,omitempty"`
 }
 
 func (o WorkTableIssuseListResponseBodyIssueList) String() string {

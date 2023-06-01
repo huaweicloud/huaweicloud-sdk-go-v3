@@ -21,7 +21,7 @@ type ShowDetailOfChannelResponse struct {
 	// 通道描述
 	Description *string `json:"description,omitempty"`
 
-	// 通道提供方类型，OFFICIAL：官方事件通道；CUSTOM：自定义事件通道
+	// 通道提供方类型，OFFICIAL：官方事件通道；CUSTOM：自定义事件通道；PARTNER：伙伴事件通道
 	ProviderType *ShowDetailOfChannelResponseProviderType `json:"provider_type,omitempty"`
 
 	// 创建UTC时间
@@ -48,6 +48,7 @@ type ShowDetailOfChannelResponseProviderType struct {
 type ShowDetailOfChannelResponseProviderTypeEnum struct {
 	OFFICIAL ShowDetailOfChannelResponseProviderType
 	CUSTOM   ShowDetailOfChannelResponseProviderType
+	PARTNER  ShowDetailOfChannelResponseProviderType
 }
 
 func GetShowDetailOfChannelResponseProviderTypeEnum() ShowDetailOfChannelResponseProviderTypeEnum {
@@ -57,6 +58,9 @@ func GetShowDetailOfChannelResponseProviderTypeEnum() ShowDetailOfChannelRespons
 		},
 		CUSTOM: ShowDetailOfChannelResponseProviderType{
 			value: "CUSTOM",
+		},
+		PARTNER: ShowDetailOfChannelResponseProviderType{
+			value: "PARTNER",
 		},
 	}
 }

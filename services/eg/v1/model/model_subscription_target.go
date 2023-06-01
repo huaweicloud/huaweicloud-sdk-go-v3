@@ -26,6 +26,8 @@ type SubscriptionTarget struct {
 	// 订阅的事件目标参数列表，该字段序列化后总长度不超过1024字节
 	Detail *interface{} `json:"detail"`
 
+	KafkaDetail *KafkaTargetDetail `json:"kafka_detail,omitempty"`
+
 	Transform *TransForm `json:"transform"`
 }
 

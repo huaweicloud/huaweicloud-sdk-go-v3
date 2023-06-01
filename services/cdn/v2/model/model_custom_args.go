@@ -10,13 +10,13 @@ import (
 type CustomArgs struct {
 
 	// 参数类型，custom_var：自定义，nginx_preset_var：预置的变量。
-	Type *string `json:"type,omitempty"`
+	Type string `json:"type"`
 
 	// 参数,长度支持1-256，由数字0-9、字符a-z、A-Z，及特殊字符._-*#%|+^@?=组成。
-	Key *string `json:"key,omitempty"`
+	Key string `json:"key"`
 
 	// 取值,长度支持1-256，由数字0-9、字符a-z、A-Z，及特殊字符._-*#%|+^@?=组成。
-	Value *string `json:"value,omitempty"`
+	Value string `json:"value"`
 }
 
 func (o CustomArgs) String() string {

@@ -26,6 +26,9 @@ type ListSubscriptionsRequest struct {
 
 	// 指定查询的事件订阅名称，模糊匹配
 	FuzzyName *string `json:"fuzzy_name,omitempty"`
+
+	// 目标连接 id
+	ConnectionId *string `json:"connection_id,omitempty"`
 }
 
 func (o ListSubscriptionsRequest) String() string {

@@ -16,12 +16,12 @@ type ListSupplyRecommendationRequestBody struct {
 	// 接受推荐的规格列表
 	FlavorIds *[]string `json:"flavor_ids,omitempty"`
 
-	// 接受推荐的地域列表，默认接受所有Region
+	// 接受推荐的地域列表，默认接受所有区域
 	Locations *[]DistinctLocation `json:"locations,omitempty"`
 
 	Option *SupplyOption `json:"option,omitempty"`
 
-	// 推荐的策略
+	// 推荐的策略。 CAPACITY：容量策略 COST：成本策略
 	Strategy *ListSupplyRecommendationRequestBodyStrategy `json:"strategy,omitempty"`
 
 	// 查询返回的数量限制

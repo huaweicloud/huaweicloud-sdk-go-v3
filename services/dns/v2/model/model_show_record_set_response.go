@@ -48,8 +48,11 @@ type ShowRecordSetResponse struct {
 	// 该Record Set所属的项目ID。
 	ProjectId *string `json:"project_id,omitempty"`
 
-	Links          *PageLink `json:"links,omitempty"`
-	HttpStatusCode int       `json:"-"`
+	Links *PageLink `json:"links,omitempty"`
+
+	// 规格，默认规格，保留字段。
+	Bundle         *string `json:"bundle,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowRecordSetResponse) String() string {

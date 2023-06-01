@@ -89,6 +89,18 @@ func (i *CreateDeploymentInvoker) Invoke() (*model.CreateDeploymentResponse, err
 	}
 }
 
+type CreateImageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateImageInvoker) Invoke() (*model.CreateImageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateImageResponse), nil
+	}
+}
+
 type CreateKeypairInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -173,6 +185,18 @@ func (i *CreateVpcInvoker) Invoke() (*model.CreateVpcResponse, error) {
 	}
 }
 
+type DeleteBandwidthInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteBandwidthInvoker) Invoke() (*model.DeleteBandwidthResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteBandwidthResponse), nil
+	}
+}
+
 type DeleteDeploymentInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -194,6 +218,18 @@ func (i *DeleteEdgeCloudInvoker) Invoke() (*model.DeleteEdgeCloudResponse, error
 		return nil, err
 	} else {
 		return result.(*model.DeleteEdgeCloudResponse), nil
+	}
+}
+
+type DeleteImageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteImageInvoker) Invoke() (*model.DeleteImageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteImageResponse), nil
 	}
 }
 
@@ -362,6 +398,18 @@ func (i *ListBandwidthsInvoker) Invoke() (*model.ListBandwidthsResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.ListBandwidthsResponse), nil
+	}
+}
+
+type ListCloudImagesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCloudImagesInvoker) Invoke() (*model.ListCloudImagesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCloudImagesResponse), nil
 	}
 }
 
@@ -557,6 +605,30 @@ func (i *ListVpcsInvoker) Invoke() (*model.ListVpcsResponse, error) {
 	}
 }
 
+type RebuildImageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RebuildImageInvoker) Invoke() (*model.RebuildImageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RebuildImageResponse), nil
+	}
+}
+
+type RegisterImageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RegisterImageInvoker) Invoke() (*model.RegisterImageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RegisterImageResponse), nil
+	}
+}
+
 type ShowBandwidthInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -689,6 +761,18 @@ func (i *ShowVolumeInvoker) Invoke() (*model.ShowVolumeResponse, error) {
 	}
 }
 
+type ShowVolumeTypesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowVolumeTypesInvoker) Invoke() (*model.ShowVolumeTypesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowVolumeTypesResponse), nil
+	}
+}
+
 type ShowVpcInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -698,6 +782,18 @@ func (i *ShowVpcInvoker) Invoke() (*model.ShowVpcResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowVpcResponse), nil
+	}
+}
+
+type UpdateBandwidthInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateBandwidthInvoker) Invoke() (*model.UpdateBandwidthResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateBandwidthResponse), nil
 	}
 }
 

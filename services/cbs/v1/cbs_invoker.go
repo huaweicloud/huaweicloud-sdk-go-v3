@@ -340,3 +340,15 @@ func (i *TagSatisfactionInvoker) Invoke() (*model.TagSatisfactionResponse, error
 		return result.(*model.TagSatisfactionResponse), nil
 	}
 }
+
+type PostRequestsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *PostRequestsInvoker) Invoke() (*model.PostRequestsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.PostRequestsResponse), nil
+	}
+}

@@ -1050,7 +1050,7 @@ func (c *CodeHubClient) AddSshKeyInvoker(request *model.AddSshKeyRequest) *AddSs
 
 // DeleteSShkey 删除用户公钥
 //
-// 调用gitlab原生接口删除用户公钥。
+// 删除用户公钥。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) DeleteSShkey(request *model.DeleteSShkeyRequest) (*model.DeleteSShkeyResponse, error) {
@@ -1113,7 +1113,7 @@ func (c *CodeHubClient) ShowPrivateKeyVerifyInvoker(request *model.ShowPrivateKe
 
 // ValidateHttpsInfo  https账号密码校验
 //
-// 调用 gitlab 接口判断用户使用 https 上传/下载代码时输入的用户名和密码是否合法。
+// 判断用户使用 https 上传/下载代码时输入的用户名和密码是否合法。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) ValidateHttpsInfo(request *model.ValidateHttpsInfoRequest) (*model.ValidateHttpsInfoResponse, error) {
@@ -1132,9 +1132,9 @@ func (c *CodeHubClient) ValidateHttpsInfoInvoker(request *model.ValidateHttpsInf
 	return &ValidateHttpsInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ValidateHttpsInfoV2  https账号密码校验
+// ValidateHttpsInfoV2 https账号密码校验
 //
-// 调用 gitlab 接口判断用户使用 https 上传/下载代码时输入的用户名和密码是否合法。
+// 判断用户使用 https 上传/下载代码时输入的用户名和密码是否合法。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) ValidateHttpsInfoV2(request *model.ValidateHttpsInfoV2Request) (*model.ValidateHttpsInfoV2Response, error) {
@@ -1147,7 +1147,7 @@ func (c *CodeHubClient) ValidateHttpsInfoV2(request *model.ValidateHttpsInfoV2Re
 	}
 }
 
-// ValidateHttpsInfoV2Invoker  https账号密码校验
+// ValidateHttpsInfoV2Invoker https账号密码校验
 func (c *CodeHubClient) ValidateHttpsInfoV2Invoker(request *model.ValidateHttpsInfoV2Request) *ValidateHttpsInfoV2Invoker {
 	requestDef := GenReqDefForValidateHttpsInfoV2()
 	return &ValidateHttpsInfoV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

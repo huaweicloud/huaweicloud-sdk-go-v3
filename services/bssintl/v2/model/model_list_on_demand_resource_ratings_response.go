@@ -2,6 +2,7 @@ package model
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+	"github.com/shopspring/decimal"
 
 	"strings"
 )
@@ -10,13 +11,13 @@ import (
 type ListOnDemandResourceRatingsResponse struct {
 
 	// 折扣的金额。
-	Amount *float64 `json:"amount,omitempty"`
+	Amount *decimal.Decimal `json:"amount,omitempty"`
 
 	// 优惠额（官网价和总价的差）。
-	DiscountAmount *float64 `json:"discount_amount,omitempty"`
+	DiscountAmount *decimal.Decimal `json:"discount_amount,omitempty"`
 
 	// 按需产品的官网价。
-	OfficialWebsiteAmount *float64 `json:"official_website_amount,omitempty"`
+	OfficialWebsiteAmount *decimal.Decimal `json:"official_website_amount,omitempty"`
 
 	// 度量单位标识。 1：元
 	MeasureId *int32 `json:"measure_id,omitempty"`

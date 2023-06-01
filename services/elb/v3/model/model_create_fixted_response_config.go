@@ -15,7 +15,7 @@ type CreateFixtedResponseConfig struct {
 	// 返回码。支持200~299,400~499,500~599。
 	StatusCode string `json:"status_code"`
 
-	// 返回body的格式。  取值范围： - text/plain - text/css - text/html - application/javascript - application/json
+	// 返回body的格式。  取值范围： - text/plain，默认值 - text/css - text/html - application/javascript - application/json
 	ContentType *CreateFixtedResponseConfigContentType `json:"content_type,omitempty"`
 
 	// 返回消息内容。

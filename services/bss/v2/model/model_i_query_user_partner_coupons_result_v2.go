@@ -2,6 +2,7 @@ package model
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+	"github.com/shopspring/decimal"
 
 	"strings"
 )
@@ -24,7 +25,7 @@ type IQueryUserPartnerCouponsResultV2 struct {
 	MeasureId *int32 `json:"measure_id,omitempty"`
 
 	// 优惠券面值。
-	FaceValue *float64 `json:"face_value,omitempty"`
+	FaceValue *decimal.Decimal `json:"face_value,omitempty"`
 
 	// 生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
 	EffectiveTime *string `json:"effective_time,omitempty"`
@@ -66,7 +67,7 @@ type IQueryUserPartnerCouponsResultV2 struct {
 	CreateTime *string `json:"create_time,omitempty"`
 
 	// 优惠券余额。
-	Balance *float64 `json:"balance,omitempty"`
+	Balance *decimal.Decimal `json:"balance,omitempty"`
 
 	// 锁定优惠券的订单ID。 如果为老版本优惠券，该值为空。
 	LockOrderId *string `json:"lock_order_id,omitempty"`

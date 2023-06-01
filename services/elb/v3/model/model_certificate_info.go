@@ -27,7 +27,7 @@ type CertificateInfo struct {
 	// 证书的名称。
 	Name string `json:"name"`
 
-	// 服务器证书的私钥。PEM编码格式。 当type为client时，该参数被忽略，不影响证书的创建和使用。且若不符合格式，不报错但会被设置为空。 当type为server时，该字段必须符合格式要求，且私钥必须是有效的。
+	// 服务器证书的私钥。PEM编码格式。 当type为client时，该参数被忽略，不影响证书的创建和使用。 当type为server时，该字段必须符合格式要求，且私钥必须是有效的。
 	PrivateKey string `json:"private_key"`
 
 	// SSL证书的类型。分为服务器证书(server)、CA证书(client)。默认值：server。

@@ -2,6 +2,7 @@ package model
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+	"github.com/shopspring/decimal"
 
 	"strings"
 )
@@ -13,7 +14,7 @@ type ShowCustomerAccountBalancesResponse struct {
 	AccountBalances *[]AccountBalanceV3 `json:"account_balances,omitempty"`
 
 	// 欠款总金额。
-	DebtAmount *float64 `json:"debt_amount,omitempty"`
+	DebtAmount *decimal.Decimal `json:"debt_amount,omitempty"`
 
 	// 度量单位。 1：元
 	MeasureId *int32 `json:"measure_id,omitempty"`

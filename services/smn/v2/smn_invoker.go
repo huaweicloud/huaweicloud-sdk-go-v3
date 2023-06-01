@@ -41,6 +41,18 @@ func (i *CancelSubscriptionInvoker) Invoke() (*model.CancelSubscriptionResponse,
 	}
 }
 
+type CreateLogtankInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateLogtankInvoker) Invoke() (*model.CreateLogtankResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateLogtankResponse), nil
+	}
+}
+
 type CreateMessageTemplateInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -74,6 +86,18 @@ func (i *CreateTopicInvoker) Invoke() (*model.CreateTopicResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.CreateTopicResponse), nil
+	}
+}
+
+type DeleteLogtankInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteLogtankInvoker) Invoke() (*model.DeleteLogtankResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteLogtankResponse), nil
 	}
 }
 
@@ -134,6 +158,18 @@ func (i *DeleteTopicAttributesInvoker) Invoke() (*model.DeleteTopicAttributesRes
 		return nil, err
 	} else {
 		return result.(*model.DeleteTopicAttributesResponse), nil
+	}
+}
+
+type ListLogtankInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListLogtankInvoker) Invoke() (*model.ListLogtankResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListLogtankResponse), nil
 	}
 }
 
@@ -293,6 +329,18 @@ func (i *PublishMessageInvoker) Invoke() (*model.PublishMessageResponse, error) 
 	}
 }
 
+type UpdateLogtankInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateLogtankInvoker) Invoke() (*model.UpdateLogtankResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateLogtankResponse), nil
+	}
+}
+
 type UpdateMessageTemplateInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -302,6 +350,18 @@ func (i *UpdateMessageTemplateInvoker) Invoke() (*model.UpdateMessageTemplateRes
 		return nil, err
 	} else {
 		return result.(*model.UpdateMessageTemplateResponse), nil
+	}
+}
+
+type UpdateSubscriptionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateSubscriptionInvoker) Invoke() (*model.UpdateSubscriptionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateSubscriptionResponse), nil
 	}
 }
 

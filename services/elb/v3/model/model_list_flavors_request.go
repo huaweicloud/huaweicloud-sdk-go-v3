@@ -24,7 +24,7 @@ type ListFlavorsRequest struct {
 	// 规格名称。   支持多值查询，查询条件格式：*name=xxx&name=xxx*。
 	Name *[]string `json:"name,omitempty"`
 
-	// 规格类别。  取值： - L4和L7 表示四层和七层flavor。 [- L4_elastic和L7_elastic 表示弹性扩缩容实例的下限规格。 - L4_elastic_max和L7_elastic_max 表示弹性扩缩容实例的上限规格。 ](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,fcs,hcso_dt)  支持多值查询，查询条件格式：*type=xxx&type=xxx*。
+	// 规格类别。  取值： - L4和L7 表示四层和七层flavor。 - L4_elastic和L7_elastic 表示弹性扩缩容实例的下限规格。 - L4_elastic_max和L7_elastic_max 表示弹性扩缩容实例的上限规格。  支持多值查询，查询条件格式：*type=xxx&type=xxx*。
 	Type *[]string `json:"type,omitempty"`
 
 	// 是否查询公共规格。true表示公共规格，所有租户可见。false表示私有规格，为当前租户所有。

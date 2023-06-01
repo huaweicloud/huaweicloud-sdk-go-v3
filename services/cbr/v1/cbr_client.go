@@ -1098,6 +1098,27 @@ func (c *CbrClient) ShowStorageUsageInvoker(request *model.ShowStorageUsageReque
 	return &ShowStorageUsageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowSummary 存储库容量总览
+//
+// 查询项目下所有存储库的总容量和总使用量
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbrClient) ShowSummary(request *model.ShowSummaryRequest) (*model.ShowSummaryResponse, error) {
+	requestDef := GenReqDefForShowSummary()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSummaryResponse), nil
+	}
+}
+
+// ShowSummaryInvoker 存储库容量总览
+func (c *CbrClient) ShowSummaryInvoker(request *model.ShowSummaryRequest) *ShowSummaryInvoker {
+	requestDef := GenReqDefForShowSummary()
+	return &ShowSummaryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowVault 查询指定存储库
 //
 // 根据ID查询指定存储库

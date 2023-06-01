@@ -61,6 +61,27 @@ func (c *RdsClient) AttachEipInvoker(request *model.AttachEipRequest) *AttachEip
 	return &AttachEipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchDeleteManualBackup 批量删除手动备份
+//
+// 批量删除手动备份。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) BatchDeleteManualBackup(request *model.BatchDeleteManualBackupRequest) (*model.BatchDeleteManualBackupResponse, error) {
+	requestDef := GenReqDefForBatchDeleteManualBackup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteManualBackupResponse), nil
+	}
+}
+
+// BatchDeleteManualBackupInvoker 批量删除手动备份
+func (c *RdsClient) BatchDeleteManualBackupInvoker(request *model.BatchDeleteManualBackupRequest) *BatchDeleteManualBackupInvoker {
+	requestDef := GenReqDefForBatchDeleteManualBackup()
+	return &BatchDeleteManualBackupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchTagAddAction 批量添加标签
 //
 // 批量添加标签。
@@ -334,6 +355,26 @@ func (c *RdsClient) DeleteInstanceInvoker(request *model.DeleteInstanceRequest) 
 	return &DeleteInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteJob 删除即时任务
+//
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) DeleteJob(request *model.DeleteJobRequest) (*model.DeleteJobResponse, error) {
+	requestDef := GenReqDefForDeleteJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteJobResponse), nil
+	}
+}
+
+// DeleteJobInvoker 删除即时任务
+func (c *RdsClient) DeleteJobInvoker(request *model.DeleteJobRequest) *DeleteJobInvoker {
+	requestDef := GenReqDefForDeleteJob()
+	return &DeleteJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteManualBackup 删除手动备份
 //
 // 删除手动备份。
@@ -521,6 +562,27 @@ func (c *RdsClient) ListDrRelations(request *model.ListDrRelationsRequest) (*mod
 func (c *RdsClient) ListDrRelationsInvoker(request *model.ListDrRelationsRequest) *ListDrRelationsInvoker {
 	requestDef := GenReqDefForListDrRelations()
 	return &ListDrRelationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListEngineFlavors 查询实例可变更规格
+//
+// 查询实例可变更规格
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListEngineFlavors(request *model.ListEngineFlavorsRequest) (*model.ListEngineFlavorsResponse, error) {
+	requestDef := GenReqDefForListEngineFlavors()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListEngineFlavorsResponse), nil
+	}
+}
+
+// ListEngineFlavorsInvoker 查询实例可变更规格
+func (c *RdsClient) ListEngineFlavorsInvoker(request *model.ListEngineFlavorsRequest) *ListEngineFlavorsInvoker {
+	requestDef := GenReqDefForListEngineFlavors()
+	return &ListEngineFlavorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListErrorLogs 查询数据库错误日志

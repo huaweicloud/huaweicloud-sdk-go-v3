@@ -30,8 +30,11 @@ type CreateEipRecordSetResponse struct {
 	// 对该资源的当前操作。取值范围：CREATE，UPDATE，DELETE，NONE CREATE：表示创建，UPDATE：表示更新，DELETE：表示删除，NONE：表示无操作
 	Action *string `json:"action,omitempty"`
 
-	Links          *PageLink `json:"links,omitempty"`
-	HttpStatusCode int       `json:"-"`
+	Links *PageLink `json:"links,omitempty"`
+
+	// 反向解析关联的企业项目ID，长度不超过36个字符。
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	HttpStatusCode      int     `json:"-"`
 }
 
 func (o CreateEipRecordSetResponse) String() string {

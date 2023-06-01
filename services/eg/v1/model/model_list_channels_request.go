@@ -47,6 +47,7 @@ type ListChannelsRequestProviderType struct {
 type ListChannelsRequestProviderTypeEnum struct {
 	OFFICIAL ListChannelsRequestProviderType
 	CUSTOM   ListChannelsRequestProviderType
+	PARTNER  ListChannelsRequestProviderType
 }
 
 func GetListChannelsRequestProviderTypeEnum() ListChannelsRequestProviderTypeEnum {
@@ -56,6 +57,9 @@ func GetListChannelsRequestProviderTypeEnum() ListChannelsRequestProviderTypeEnu
 		},
 		CUSTOM: ListChannelsRequestProviderType{
 			value: "CUSTOM",
+		},
+		PARTNER: ListChannelsRequestProviderType{
+			value: "PARTNER",
 		},
 	}
 }

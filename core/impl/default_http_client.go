@@ -67,6 +67,12 @@ func NewDefaultHttpClient(httpConfig *config.HttpConfig) *DefaultHttpClient {
 		Timeout:   httpConfig.Timeout,
 	}
 
+	if !httpConfig.AllowRedirects {
+		client.goHttpClient.CheckRedirect = func(req *http.Request, via []*http.Request) error {
+			return http.ErrUseLastResponse
+		}
+	}
+
 	client.httpHandler = httpConfig.HttpHandler
 
 	return client

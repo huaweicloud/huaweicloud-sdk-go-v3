@@ -617,6 +617,18 @@ func (i *ShowStorageUsageInvoker) Invoke() (*model.ShowStorageUsageResponse, err
 	}
 }
 
+type ShowSummaryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSummaryInvoker) Invoke() (*model.ShowSummaryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSummaryResponse), nil
+	}
+}
+
 type ShowVaultInvoker struct {
 	*invoker.BaseInvoker
 }

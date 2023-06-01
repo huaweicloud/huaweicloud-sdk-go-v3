@@ -29,6 +29,18 @@ func (i *BatchDeleteMembersInvoker) Invoke() (*model.BatchDeleteMembersResponse,
 	}
 }
 
+type BatchUpdateMembersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchUpdateMembersInvoker) Invoke() (*model.BatchUpdateMembersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchUpdateMembersResponse), nil
+	}
+}
+
 type BatchUpdatePoliciesPriorityInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -233,6 +245,18 @@ func (i *DeleteListenerInvoker) Invoke() (*model.DeleteListenerResponse, error) 
 	}
 }
 
+type DeleteListenerForceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteListenerForceInvoker) Invoke() (*model.DeleteListenerForceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteListenerForceResponse), nil
+	}
+}
+
 type DeleteLoadBalancerInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -242,6 +266,18 @@ func (i *DeleteLoadBalancerInvoker) Invoke() (*model.DeleteLoadBalancerResponse,
 		return nil, err
 	} else {
 		return result.(*model.DeleteLoadBalancerResponse), nil
+	}
+}
+
+type DeleteLoadBalancerForceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteLoadBalancerForceInvoker) Invoke() (*model.DeleteLoadBalancerForceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteLoadBalancerForceResponse), nil
 	}
 }
 

@@ -85,6 +85,27 @@ func (c *SmnClient) CancelSubscriptionInvoker(request *model.CancelSubscriptionR
 	return &CancelSubscriptionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateLogtank 绑定云日志
+//
+// 为指定Topic绑定一个云日志，用于记录主题消息发送状态等信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmnClient) CreateLogtank(request *model.CreateLogtankRequest) (*model.CreateLogtankResponse, error) {
+	requestDef := GenReqDefForCreateLogtank()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateLogtankResponse), nil
+	}
+}
+
+// CreateLogtankInvoker 绑定云日志
+func (c *SmnClient) CreateLogtankInvoker(request *model.CreateLogtankRequest) *CreateLogtankInvoker {
+	requestDef := GenReqDefForCreateLogtank()
+	return &CreateLogtankInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateMessageTemplate 创建消息模板
 //
 // 创建一个模板，用户可以按照模板去发送消息，这样可以减少请求的数据量。
@@ -148,6 +169,27 @@ func (c *SmnClient) CreateTopic(request *model.CreateTopicRequest) (*model.Creat
 func (c *SmnClient) CreateTopicInvoker(request *model.CreateTopicRequest) *CreateTopicInvoker {
 	requestDef := GenReqDefForCreateTopic()
 	return &CreateTopicInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteLogtank 解绑云日志
+//
+// 解绑指定Topic绑定的云日志。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmnClient) DeleteLogtank(request *model.DeleteLogtankRequest) (*model.DeleteLogtankResponse, error) {
+	requestDef := GenReqDefForDeleteLogtank()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteLogtankResponse), nil
+	}
+}
+
+// DeleteLogtankInvoker 解绑云日志
+func (c *SmnClient) DeleteLogtankInvoker(request *model.DeleteLogtankRequest) *DeleteLogtankInvoker {
+	requestDef := GenReqDefForDeleteLogtank()
+	return &DeleteLogtankInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteMessageTemplate 删除消息模板
@@ -253,6 +295,27 @@ func (c *SmnClient) DeleteTopicAttributes(request *model.DeleteTopicAttributesRe
 func (c *SmnClient) DeleteTopicAttributesInvoker(request *model.DeleteTopicAttributesRequest) *DeleteTopicAttributesInvoker {
 	requestDef := GenReqDefForDeleteTopicAttributes()
 	return &DeleteTopicAttributesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListLogtank 查询云日志
+//
+// 查询指定Topic绑定的云日志。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmnClient) ListLogtank(request *model.ListLogtankRequest) (*model.ListLogtankResponse, error) {
+	requestDef := GenReqDefForListLogtank()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListLogtankResponse), nil
+	}
+}
+
+// ListLogtankInvoker 查询云日志
+func (c *SmnClient) ListLogtankInvoker(request *model.ListLogtankRequest) *ListLogtankInvoker {
+	requestDef := GenReqDefForListLogtank()
+	return &ListLogtankInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListMessageTemplateDetails 查询消息模板详情
@@ -537,6 +600,27 @@ func (c *SmnClient) PublishMessageInvoker(request *model.PublishMessageRequest) 
 	return &PublishMessageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateLogtank 更新云日志
+//
+// 更新指定Topic绑定的云日志。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmnClient) UpdateLogtank(request *model.UpdateLogtankRequest) (*model.UpdateLogtankResponse, error) {
+	requestDef := GenReqDefForUpdateLogtank()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateLogtankResponse), nil
+	}
+}
+
+// UpdateLogtankInvoker 更新云日志
+func (c *SmnClient) UpdateLogtankInvoker(request *model.UpdateLogtankRequest) *UpdateLogtankInvoker {
+	requestDef := GenReqDefForUpdateLogtank()
+	return &UpdateLogtankInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateMessageTemplate 更新消息模板
 //
 // 修改消息模板的内容。
@@ -556,6 +640,27 @@ func (c *SmnClient) UpdateMessageTemplate(request *model.UpdateMessageTemplateRe
 func (c *SmnClient) UpdateMessageTemplateInvoker(request *model.UpdateMessageTemplateRequest) *UpdateMessageTemplateInvoker {
 	requestDef := GenReqDefForUpdateMessageTemplate()
 	return &UpdateMessageTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSubscription 更新订阅者
+//
+// 更新订阅者备注。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmnClient) UpdateSubscription(request *model.UpdateSubscriptionRequest) (*model.UpdateSubscriptionResponse, error) {
+	requestDef := GenReqDefForUpdateSubscription()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateSubscriptionResponse), nil
+	}
+}
+
+// UpdateSubscriptionInvoker 更新订阅者
+func (c *SmnClient) UpdateSubscriptionInvoker(request *model.UpdateSubscriptionRequest) *UpdateSubscriptionInvoker {
+	requestDef := GenReqDefForUpdateSubscription()
+	return &UpdateSubscriptionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateTopic 更新主题

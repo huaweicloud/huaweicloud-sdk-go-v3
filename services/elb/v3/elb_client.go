@@ -21,7 +21,7 @@ func ElbClientBuilder() *http_client.HcHttpClientBuilder {
 
 // BatchCreateMembers 批量创建后端服务器
 //
-// 在指定pool下批量创建后端服务器。
+// 在指定pool下批量创建后端服务器。一次最多添加200个。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ElbClient) BatchCreateMembers(request *model.BatchCreateMembersRequest) (*model.BatchCreateMembersResponse, error) {
@@ -42,7 +42,7 @@ func (c *ElbClient) BatchCreateMembersInvoker(request *model.BatchCreateMembersR
 
 // BatchDeleteMembers 批量删除后端服务器
 //
-// 在指定pool下批量删除后端服务器。
+// 在指定pool下批量删除后端服务器。一次最多添加200个。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ElbClient) BatchDeleteMembers(request *model.BatchDeleteMembersRequest) (*model.BatchDeleteMembersResponse, error) {
@@ -59,6 +59,27 @@ func (c *ElbClient) BatchDeleteMembers(request *model.BatchDeleteMembersRequest)
 func (c *ElbClient) BatchDeleteMembersInvoker(request *model.BatchDeleteMembersRequest) *BatchDeleteMembersInvoker {
 	requestDef := GenReqDefForBatchDeleteMembers()
 	return &BatchDeleteMembersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchUpdateMembers 批量更新后端服务器
+//
+// 在指定pool下批量更新后端服务器。一次最多添加200个。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) BatchUpdateMembers(request *model.BatchUpdateMembersRequest) (*model.BatchUpdateMembersResponse, error) {
+	requestDef := GenReqDefForBatchUpdateMembers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchUpdateMembersResponse), nil
+	}
+}
+
+// BatchUpdateMembersInvoker 批量更新后端服务器
+func (c *ElbClient) BatchUpdateMembersInvoker(request *model.BatchUpdateMembersRequest) *BatchUpdateMembersInvoker {
+	requestDef := GenReqDefForBatchUpdateMembers()
+	return &BatchUpdateMembersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // BatchUpdatePoliciesPriority 批量更新转发策略优先级
@@ -84,7 +105,10 @@ func (c *ElbClient) BatchUpdatePoliciesPriorityInvoker(request *model.BatchUpdat
 
 // ChangeLoadbalancerChargeMode 变更负载均衡器计费模式
 //
-// 负载均衡器计费模式变更，当前只支持按需计费转包周期计费。
+// 负载均衡器计费模式变更，当前支持的计费模式变更为：
+// 1. 按需计费转包周期计费；
+// 2. 按需按规格计费转按需按使用量计费；
+// 3. 按需按使用量计费转按需按规格计费；
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ElbClient) ChangeLoadbalancerChargeMode(request *model.ChangeLoadbalancerChargeModeRequest) (*model.ChangeLoadbalancerChargeModeResponse, error) {
@@ -429,6 +453,27 @@ func (c *ElbClient) DeleteListenerInvoker(request *model.DeleteListenerRequest) 
 	return &DeleteListenerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteListenerForce 级联删除监听器
+//
+// 删除监听器且级联删除其下子资源（删除监听器、转发策略等，解绑后端服务器组）。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) DeleteListenerForce(request *model.DeleteListenerForceRequest) (*model.DeleteListenerForceResponse, error) {
+	requestDef := GenReqDefForDeleteListenerForce()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteListenerForceResponse), nil
+	}
+}
+
+// DeleteListenerForceInvoker 级联删除监听器
+func (c *ElbClient) DeleteListenerForceInvoker(request *model.DeleteListenerForceRequest) *DeleteListenerForceInvoker {
+	requestDef := GenReqDefForDeleteListenerForce()
+	return &DeleteListenerForceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteLoadBalancer 删除负载均衡器
 //
 // 删除负载均衡器。
@@ -448,6 +493,27 @@ func (c *ElbClient) DeleteLoadBalancer(request *model.DeleteLoadBalancerRequest)
 func (c *ElbClient) DeleteLoadBalancerInvoker(request *model.DeleteLoadBalancerRequest) *DeleteLoadBalancerInvoker {
 	requestDef := GenReqDefForDeleteLoadBalancer()
 	return &DeleteLoadBalancerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteLoadBalancerForce 级联删除负载均衡器
+//
+// 删除负载均衡器且级联删除其下子资源（删除负载均衡器及其绑定的监听器、后端服务器组、后端服务器等一系列资源）
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) DeleteLoadBalancerForce(request *model.DeleteLoadBalancerForceRequest) (*model.DeleteLoadBalancerForceResponse, error) {
+	requestDef := GenReqDefForDeleteLoadBalancerForce()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteLoadBalancerForceResponse), nil
+	}
+}
+
+// DeleteLoadBalancerForceInvoker 级联删除负载均衡器
+func (c *ElbClient) DeleteLoadBalancerForceInvoker(request *model.DeleteLoadBalancerForceRequest) *DeleteLoadBalancerForceInvoker {
+	requestDef := GenReqDefForDeleteLoadBalancerForce()
+	return &DeleteLoadBalancerForceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteLogtank 删除云日志
@@ -841,8 +907,6 @@ func (c *ElbClient) ListSecurityPoliciesInvoker(request *model.ListSecurityPolic
 // 查询系统安全策略列表。
 //
 // 系统安全策略为预置的所有租户通用的安全策略，租户不可新增或修改。
-//
-// [荷兰region不支持自定义安全策略功能，请勿使用。](tag:dt)
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ElbClient) ListSystemSecurityPolicies(request *model.ListSystemSecurityPoliciesRequest) (*model.ListSystemSecurityPoliciesResponse, error) {
@@ -1370,7 +1434,7 @@ func (c *ElbClient) ListApiVersionsInvoker(request *model.ListApiVersionsRequest
 
 // BatchDeleteIpList 删除IP地址组的IP列表项
 //
-// 批量删除IP地址组的IP列表信息。
+// 批量删除IP地址组的IP列表信息。[荷兰region不支持该API](tag:dt,dt_test)
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ElbClient) BatchDeleteIpList(request *model.BatchDeleteIpListRequest) (*model.BatchDeleteIpListResponse, error) {
@@ -1406,7 +1470,7 @@ func (c *ElbClient) BatchDeleteIpListInvoker(request *model.BatchDeleteIpListReq
 // - 计算出来的预占IP数大于等于最终实际占用的IP数。
 // - 总占用IP数量，即整个LB所占用的IP数量。
 //
-// [不支持传入l7_flavor_id](tag:fcs)
+// [不支持传入l7_flavor_id](tag:hcso,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ElbClient) CountPreoccupyIpNum(request *model.CountPreoccupyIpNumRequest) (*model.CountPreoccupyIpNumResponse, error) {

@@ -2,6 +2,7 @@ package model
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+	"github.com/shopspring/decimal"
 
 	"strings"
 )
@@ -24,16 +25,16 @@ type BillSumInfoV2 struct {
 	ChargeMode *string `json:"charge_mode,omitempty"`
 
 	// 金额。 对于billType=1或者2的账单，该金额为负值。
-	Amount *float64 `json:"amount,omitempty"`
+	Amount *decimal.Decimal `json:"amount,omitempty"`
 
 	// 欠费金额，指从客户账户扣费的时候，客户账户金额不足，欠费的金额，华为核销或者退订的时候没有该字段。
-	DebtAmount *float64 `json:"debt_amount,omitempty"`
+	DebtAmount *decimal.Decimal `json:"debt_amount,omitempty"`
 
 	// 核销欠款，华为核销或者退订的时候没有该字段。
-	AdjustmentAmount *float64 `json:"adjustment_amount,omitempty"`
+	AdjustmentAmount *decimal.Decimal `json:"adjustment_amount,omitempty"`
 
 	// 折扣金额，华为核销或者退订的时候没有该字段。
-	DiscountAmount *float64 `json:"discount_amount,omitempty"`
+	DiscountAmount *decimal.Decimal `json:"discount_amount,omitempty"`
 
 	// 金额单位。 1：元
 	MeasureId *int32 `json:"measure_id,omitempty"`

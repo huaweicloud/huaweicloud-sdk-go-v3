@@ -294,7 +294,8 @@ func (c *CdnClient) ShowDomainDetailInvoker(request *model.ShowDomainDetailReque
 
 // ShowDomainFullConfig 查询域名配置接口
 //
-// 查询域名配置接口，支持查询回源请求头、HTTP header配置、URL鉴权、证书、源站、回源协议、强制重定向、智能压缩、缓存URL参数、IPv6开关、状态码缓存时间、Range回源、User-Agent黑白名单、改写回源URL、自定义错误页面
+// 查询域名配置接口，
+// 支持查询回源请求头、HTTP header配置、URL鉴权、证书、源站、回源协议、强制重定向、智能压缩、IPv6开关、状态码缓存时间、Range回源、User-Agent黑白名单、改写回源URL、自定义错误页面、缓存规则、IP黑白名单、防盗链、强制跳转。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CdnClient) ShowDomainFullConfig(request *model.ShowDomainFullConfigRequest) (*model.ShowDomainFullConfigResponse, error) {
@@ -526,7 +527,7 @@ func (c *CdnClient) ShowIpInfoInvoker(request *model.ShowIpInfoRequest) *ShowIpI
 
 // ShowLogs 日志查询
 //
-// 日志查询。
+// 查询日志下载链接，支持查询30天内的日志信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CdnClient) ShowLogs(request *model.ShowLogsRequest) (*model.ShowLogsResponse, error) {
@@ -749,7 +750,8 @@ func (c *CdnClient) UpdateCacheRulesInvoker(request *model.UpdateCacheRulesReque
 
 // UpdateDomainFullConfig 修改域名全量配置接口
 //
-// 修改域名全量配置接口，支持配置回源请求头、HTTP header配置、URL鉴权、证书、源站、回源协议、强制重定向、智能压缩、缓存URL参数、IPv6、状态码缓存时间、Range回源、User-Agent黑白名单、改写回源URL、自定义错误页面
+// 修改域名配置接口，
+// 支持修改回源请求头、HTTP header配置、URL鉴权、证书、源站、回源协议、强制重定向、智能压缩、IPv6开关、状态码缓存时间、Range回源、User-Agent黑白名单、改写回源URL、自定义错误页面、缓存规则、IP黑白名单、防盗链、强制跳转。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CdnClient) UpdateDomainFullConfig(request *model.UpdateDomainFullConfigRequest) (*model.UpdateDomainFullConfigResponse, error) {

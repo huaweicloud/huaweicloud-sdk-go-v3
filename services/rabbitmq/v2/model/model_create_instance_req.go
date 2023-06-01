@@ -74,6 +74,8 @@ type CreateInstanceReq struct {
 
 	// 标签列表。
 	Tags *[]TagEntity `json:"tags,omitempty"`
+
+	BssParam *BssParam `json:"bss_param,omitempty"`
 }
 
 func (o CreateInstanceReq) String() string {

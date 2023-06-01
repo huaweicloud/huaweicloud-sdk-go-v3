@@ -21,7 +21,7 @@ type UrlAuth struct {
 	// 加密的算法 可选择md5或sha256。
 	SignMethod *string `json:"sign_method,omitempty"`
 
-	// 鉴权范围，目前仅支持配置所有文件参与鉴权。all：所有文件
+	// 鉴权范围，目前仅支持配置所有文件参与鉴权，all：所有文件。
 	MatchType *string `json:"match_type,omitempty"`
 
 	// 鉴权KEY 由6-32位大小写字母、数字构成。

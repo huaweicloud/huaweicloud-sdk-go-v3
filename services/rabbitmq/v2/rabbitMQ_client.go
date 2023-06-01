@@ -86,9 +86,9 @@ func (c *RabbitMQClient) CreatePostPaidInstanceInvoker(request *model.CreatePost
 	return &CreatePostPaidInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreatePostPaidInstanceByEngine 创建实例(按需)
+// CreatePostPaidInstanceByEngine 创建实例
 //
-// 创建实例，该接口创建的实例为按需计费的方式。
+// 创建实例，该接口支持创建按需[和包周期](tag:hws,hws_hk,ctc,cmcc)计费方式的实例。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *RabbitMQClient) CreatePostPaidInstanceByEngine(request *model.CreatePostPaidInstanceByEngineRequest) (*model.CreatePostPaidInstanceByEngineResponse, error) {
@@ -101,7 +101,7 @@ func (c *RabbitMQClient) CreatePostPaidInstanceByEngine(request *model.CreatePos
 	}
 }
 
-// CreatePostPaidInstanceByEngineInvoker 创建实例(按需)
+// CreatePostPaidInstanceByEngineInvoker 创建实例
 func (c *RabbitMQClient) CreatePostPaidInstanceByEngineInvoker(request *model.CreatePostPaidInstanceByEngineRequest) *CreatePostPaidInstanceByEngineInvoker {
 	requestDef := GenReqDefForCreatePostPaidInstanceByEngine()
 	return &CreatePostPaidInstanceByEngineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

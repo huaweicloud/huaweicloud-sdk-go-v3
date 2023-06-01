@@ -392,6 +392,12 @@ func GenReqDefForGetStackTemplate() *def.HttpRequestDef {
 		WithJsonTag("Client-Request-Id").
 		WithLocationType(def.Header))
 
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Location").
+		WithJsonTag("Location").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -669,6 +675,12 @@ func GenReqDefForShowTemplateVersionContent() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClientRequestId").
 		WithJsonTag("Client-Request-Id").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Location").
+		WithJsonTag("Location").
+		WithKindName("string").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()

@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// 属性列表。
 type ListApplicationEndpointAttributesResponseBodyAttributes struct {
 
 	// 设备是否可用。

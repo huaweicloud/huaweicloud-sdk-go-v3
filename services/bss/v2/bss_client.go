@@ -181,6 +181,30 @@ func (c *BssClient) CheckUserIdentityInvoker(request *model.CheckUserIdentityReq
 	return &CheckUserIdentityInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ClaimEnterpriseMultiAccountCoupon 企业主账号向企业子账号拨款优惠券
+//
+// 企业主账号在自建平台向企业子账号拨款优惠券。
+//
+// &gt;![](public_sys-resources/icon-note.gif) **说明：**
+// &gt;-   仅支持华为发放的测试类、商务类、活动类代金券。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *BssClient) ClaimEnterpriseMultiAccountCoupon(request *model.ClaimEnterpriseMultiAccountCouponRequest) (*model.ClaimEnterpriseMultiAccountCouponResponse, error) {
+	requestDef := GenReqDefForClaimEnterpriseMultiAccountCoupon()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ClaimEnterpriseMultiAccountCouponResponse), nil
+	}
+}
+
+// ClaimEnterpriseMultiAccountCouponInvoker 企业主账号向企业子账号拨款优惠券
+func (c *BssClient) ClaimEnterpriseMultiAccountCouponInvoker(request *model.ClaimEnterpriseMultiAccountCouponRequest) *ClaimEnterpriseMultiAccountCouponInvoker {
+	requestDef := GenReqDefForClaimEnterpriseMultiAccountCoupon()
+	return &ClaimEnterpriseMultiAccountCouponInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateEnterpriseProjectAuth 开通客户企业项目权限
 //
 // 客户在自建平台开通客户企业项目权限。
@@ -947,6 +971,54 @@ func (c *BssClient) ListMeasureUnitsInvoker(request *model.ListMeasureUnitsReque
 	return &ListMeasureUnitsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListMultiAccountRetrieveCoupons 查询企业子账号可回收优惠券列表
+//
+// 企业主账号在自建平台查询企业子账号的可回收优惠券。
+//
+// &gt;![](public_sys-resources/icon-note.gif) **说明：**
+// &gt;-   仅支持华为发放的测试类、商务类、活动类代金券。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *BssClient) ListMultiAccountRetrieveCoupons(request *model.ListMultiAccountRetrieveCouponsRequest) (*model.ListMultiAccountRetrieveCouponsResponse, error) {
+	requestDef := GenReqDefForListMultiAccountRetrieveCoupons()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListMultiAccountRetrieveCouponsResponse), nil
+	}
+}
+
+// ListMultiAccountRetrieveCouponsInvoker 查询企业子账号可回收优惠券列表
+func (c *BssClient) ListMultiAccountRetrieveCouponsInvoker(request *model.ListMultiAccountRetrieveCouponsRequest) *ListMultiAccountRetrieveCouponsInvoker {
+	requestDef := GenReqDefForListMultiAccountRetrieveCoupons()
+	return &ListMultiAccountRetrieveCouponsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListMultiAccountTransferCoupons 查询企业主账号可拨款优惠券列表
+//
+// 企业主账号在自建平台查询自己的可拨款优惠券列表。
+//
+// &gt;![](public_sys-resources/icon-note.gif) **说明：**
+// &gt;-   仅支持华为发放的测试类、商务类、活动类代金券。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *BssClient) ListMultiAccountTransferCoupons(request *model.ListMultiAccountTransferCouponsRequest) (*model.ListMultiAccountTransferCouponsResponse, error) {
+	requestDef := GenReqDefForListMultiAccountTransferCoupons()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListMultiAccountTransferCouponsResponse), nil
+	}
+}
+
+// ListMultiAccountTransferCouponsInvoker 查询企业主账号可拨款优惠券列表
+func (c *BssClient) ListMultiAccountTransferCouponsInvoker(request *model.ListMultiAccountTransferCouponsRequest) *ListMultiAccountTransferCouponsInvoker {
+	requestDef := GenReqDefForListMultiAccountTransferCoupons()
+	return &ListMultiAccountTransferCouponsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListOnDemandResourceRatings 查询按需产品价格
 //
 // 伙伴在销售平台按照条件查询按需产品的价格。
@@ -1551,6 +1623,30 @@ func (c *BssClient) ReclaimCouponQuotas(request *model.ReclaimCouponQuotasReques
 func (c *BssClient) ReclaimCouponQuotasInvoker(request *model.ReclaimCouponQuotasRequest) *ReclaimCouponQuotasInvoker {
 	requestDef := GenReqDefForReclaimCouponQuotas()
 	return &ReclaimCouponQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ReclaimEnterpriseMultiAccountCoupon 企业主账号从企业子账号回收优惠券
+//
+// 企业主账号在自建平台回收给企业子账号的拨款优惠券。
+//
+// &gt;![](public_sys-resources/icon-note.gif) **说明：**
+// &gt;-   仅支持华为发放的测试类、商务类、活动类代金券。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *BssClient) ReclaimEnterpriseMultiAccountCoupon(request *model.ReclaimEnterpriseMultiAccountCouponRequest) (*model.ReclaimEnterpriseMultiAccountCouponResponse, error) {
+	requestDef := GenReqDefForReclaimEnterpriseMultiAccountCoupon()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ReclaimEnterpriseMultiAccountCouponResponse), nil
+	}
+}
+
+// ReclaimEnterpriseMultiAccountCouponInvoker 企业主账号从企业子账号回收优惠券
+func (c *BssClient) ReclaimEnterpriseMultiAccountCouponInvoker(request *model.ReclaimEnterpriseMultiAccountCouponRequest) *ReclaimEnterpriseMultiAccountCouponInvoker {
+	requestDef := GenReqDefForReclaimEnterpriseMultiAccountCoupon()
+	return &ReclaimEnterpriseMultiAccountCouponInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ReclaimIndirectPartnerAccount 回收云经销商账户拨款

@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -20,6 +23,9 @@ type ListEventTargetRequest struct {
 
 	// 指定查询的事件目标标签，模糊匹配
 	FuzzyLabel *string `json:"fuzzy_label,omitempty"`
+
+	// 事件目标支持方式：事件订阅：SUBSCRIPTION、事件流：FLOW
+	SupportTypes *[]ListEventTargetRequestSupportTypes `json:"support_types,omitempty"`
 }
 
 func (o ListEventTargetRequest) String() string {
@@ -29,4 +35,46 @@ func (o ListEventTargetRequest) String() string {
 	}
 
 	return strings.Join([]string{"ListEventTargetRequest", string(data)}, " ")
+}
+
+type ListEventTargetRequestSupportTypes struct {
+	value string
+}
+
+type ListEventTargetRequestSupportTypesEnum struct {
+	SUBSCRIPTION ListEventTargetRequestSupportTypes
+	FLOW         ListEventTargetRequestSupportTypes
+}
+
+func GetListEventTargetRequestSupportTypesEnum() ListEventTargetRequestSupportTypesEnum {
+	return ListEventTargetRequestSupportTypesEnum{
+		SUBSCRIPTION: ListEventTargetRequestSupportTypes{
+			value: "SUBSCRIPTION",
+		},
+		FLOW: ListEventTargetRequestSupportTypes{
+			value: "FLOW",
+		},
+	}
+}
+
+func (c ListEventTargetRequestSupportTypes) Value() string {
+	return c.value
+}
+
+func (c ListEventTargetRequestSupportTypes) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListEventTargetRequestSupportTypes) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter != nil {
+		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+		if err == nil {
+			c.value = val.(string)
+			return nil
+		}
+		return err
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

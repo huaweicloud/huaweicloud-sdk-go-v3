@@ -24,7 +24,7 @@ type ShowDetailOfEventSourceResponse struct {
 	// 事件源描述
 	Description *string `json:"description,omitempty"`
 
-	// 事件源提供方类型，OFFICIAL：官方云服务事件源；CUSTOM：用户创建的自定义事件源
+	// 事件源提供方类型，OFFICIAL：官方云服务事件源；CUSTOM：用户创建的自定义事件源；PARTNER：伙伴事件源
 	ProviderType *ShowDetailOfEventSourceResponseProviderType `json:"provider_type,omitempty"`
 
 	// 事件源提供的事件类型列表，只有官方云服务事件源提供事件类型
@@ -69,6 +69,7 @@ type ShowDetailOfEventSourceResponseProviderType struct {
 type ShowDetailOfEventSourceResponseProviderTypeEnum struct {
 	OFFICIAL ShowDetailOfEventSourceResponseProviderType
 	CUSTOM   ShowDetailOfEventSourceResponseProviderType
+	PARTNER  ShowDetailOfEventSourceResponseProviderType
 }
 
 func GetShowDetailOfEventSourceResponseProviderTypeEnum() ShowDetailOfEventSourceResponseProviderTypeEnum {
@@ -78,6 +79,9 @@ func GetShowDetailOfEventSourceResponseProviderTypeEnum() ShowDetailOfEventSourc
 		},
 		CUSTOM: ShowDetailOfEventSourceResponseProviderType{
 			value: "CUSTOM",
+		},
+		PARTNER: ShowDetailOfEventSourceResponseProviderType{
+			value: "PARTNER",
 		},
 	}
 }

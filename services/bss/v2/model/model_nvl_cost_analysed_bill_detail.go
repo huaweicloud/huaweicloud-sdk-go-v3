@@ -2,6 +2,7 @@ package model
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+	"github.com/shopspring/decimal"
 
 	"strings"
 )
@@ -75,52 +76,52 @@ type NvlCostAnalysedBillDetail struct {
 	UsageType *string `json:"usage_type,omitempty"`
 
 	// 资源的使用量。
-	Usage *float64 `json:"usage,omitempty"`
+	Usage *decimal.Decimal `json:"usage,omitempty"`
 
 	// 资源使用量的度量单位，您可以调用查询度量单位列表接口获取。
 	UsageMeasureId *int32 `json:"usage_measure_id,omitempty"`
 
 	// 套餐内使用量。
-	FreeResourceUsage *float64 `json:"free_resource_usage,omitempty"`
+	FreeResourceUsage *decimal.Decimal `json:"free_resource_usage,omitempty"`
 
 	// 套餐内使用量的度量单位，您可以调用查询度量单位列表接口获取。
 	FreeResourceMeasureId *int32 `json:"free_resource_measure_id,omitempty"`
 
 	// 预留实例使用量。
-	RiUsage *float64 `json:"ri_usage,omitempty"`
+	RiUsage *decimal.Decimal `json:"ri_usage,omitempty"`
 
 	// 预留实例使用量单位。
 	RiUsageMeasureId *int32 `json:"ri_usage_measure_id,omitempty"`
 
 	// 消费金额（应付金额）。 消费金额=期初已分摊金额+当月分摊金额+期末未分摊金额
-	ConsumeAmount *float64 `json:"consume_amount,omitempty"`
+	ConsumeAmount *decimal.Decimal `json:"consume_amount,omitempty"`
 
 	// 期初已分摊金额。  说明： 包周期和预留实例预付时有效；计费类型为按需，预留实例为按时计费时该值为0。
 	PastMonthsAmortizedAmount *float64 `json:"past_months_amortized_amount,omitempty"`
 
 	// 当月分摊金额。 当月分摊金额=现金分摊金额+信用额度分摊金额+代金券分摊金额+现金券分摊金额+储值卡分摊金额+奖励金分摊金额
-	CurrentMonthAmortizedAmount *float64 `json:"current_month_amortized_amount,omitempty"`
+	CurrentMonthAmortizedAmount *decimal.Decimal `json:"current_month_amortized_amount,omitempty"`
 
 	// 期末未分摊金额。月度成本分摊时，当月以后还未分摊的金额。  说明： 包周期和预留实例预付时有效；计费类型为按需，预留实例为按时计费时该值为0。
-	FutureMonthsAmortizedAmount *float64 `json:"future_months_amortized_amount,omitempty"`
+	FutureMonthsAmortizedAmount *decimal.Decimal `json:"future_months_amortized_amount,omitempty"`
 
 	// 月度成本分摊时，当月已分摊金额中包含的现金金额。
 	AmortizedCashAmount *float64 `json:"amortized_cash_amount,omitempty"`
 
 	// 月度成本分摊时，当月已分摊金额中包含的信用额度分摊金额。
-	AmortizedCreditAmount *float64 `json:"amortized_credit_amount,omitempty"`
+	AmortizedCreditAmount *decimal.Decimal `json:"amortized_credit_amount,omitempty"`
 
 	// 月度成本分摊时，当月已分摊金额中包含的代金券分摊金额。
-	AmortizedCouponAmount *float64 `json:"amortized_coupon_amount,omitempty"`
+	AmortizedCouponAmount *decimal.Decimal `json:"amortized_coupon_amount,omitempty"`
 
 	// 月度成本分摊时，当月已分摊金额中包含的现金券分摊金额。
-	AmortizedFlexipurchaseCouponAmount *float64 `json:"amortized_flexipurchase_coupon_amount,omitempty"`
+	AmortizedFlexipurchaseCouponAmount *decimal.Decimal `json:"amortized_flexipurchase_coupon_amount,omitempty"`
 
 	// 月度成本分摊时，当月已分摊金额中包含的储值卡分摊金额。
-	AmortizedStoredValueCardAmount *float64 `json:"amortized_stored_value_card_amount,omitempty"`
+	AmortizedStoredValueCardAmount *decimal.Decimal `json:"amortized_stored_value_card_amount,omitempty"`
 
 	// 月度成本分摊时，当月已分摊金额中包含的奖励金分摊金额（用于现网未清干净的奖励金）。
-	AmortizedBonusAmount *float64 `json:"amortized_bonus_amount,omitempty"`
+	AmortizedBonusAmount *decimal.Decimal `json:"amortized_bonus_amount,omitempty"`
 
 	// 该字段为预留字段
 	SubServiceTypeCode *string `json:"sub_service_type_code,omitempty"`

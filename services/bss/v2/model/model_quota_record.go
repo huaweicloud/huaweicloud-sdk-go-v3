@@ -2,6 +2,7 @@ package model
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+	"github.com/shopspring/decimal"
 
 	"strings"
 )
@@ -24,7 +25,7 @@ type QuotaRecord struct {
 	ParentQuotaId *string `json:"parent_quota_id,omitempty"`
 
 	// 发放回收的金额。 取值大于0且精确到小数点后2位，单位：元。
-	Amount *float64 `json:"amount,omitempty"`
+	Amount *decimal.Decimal `json:"amount,omitempty"`
 
 	// 操作时间，UTC时间，UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
 	OperationTime *string `json:"operation_time,omitempty"`

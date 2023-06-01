@@ -2,6 +2,7 @@ package model
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+	"github.com/shopspring/decimal"
 
 	"strings"
 )
@@ -12,10 +13,10 @@ type CustomerBalancesV2 struct {
 	CustomerId string `json:"customer_id"`
 
 	// 客户欠款总额度。
-	DebtAmount *float64 `json:"debt_amount,omitempty"`
+	DebtAmount *decimal.Decimal `json:"debt_amount,omitempty"`
 
 	// 客户可用总额度。
-	Amount *float64 `json:"amount,omitempty"`
+	Amount *decimal.Decimal `json:"amount,omitempty"`
 
 	// 币种。 CNY：人民币。
 	Currency *string `json:"currency,omitempty"`

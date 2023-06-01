@@ -349,6 +349,17 @@ func GenReqDefForListEntities() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListQuotas() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/organizations/quotas").
+		WithResponse(new(model.ListQuotasResponse)).
+		WithContentType("application/json")
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListServices() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).

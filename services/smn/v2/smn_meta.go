@@ -67,6 +67,26 @@ func GenReqDefForCancelSubscription() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForCreateLogtank() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/notifications/topics/{topic_urn}/logtanks").
+		WithResponse(new(model.CreateLogtankResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TopicUrn").
+		WithJsonTag("topic_urn").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForCreateMessageTemplate() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -116,6 +136,26 @@ func GenReqDefForCreateTopic() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDeleteLogtank() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v2/{project_id}/notifications/topics/{topic_urn}/logtanks/{logtank_id}").
+		WithResponse(new(model.DeleteLogtankResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TopicUrn").
+		WithJsonTag("topic_urn").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("LogtankId").
+		WithJsonTag("logtank_id").
+		WithLocationType(def.Path))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -202,6 +242,22 @@ func GenReqDefForDeleteTopicAttributes() *def.HttpRequestDef {
 		WithMethod(http.MethodDelete).
 		WithPath("/v2/{project_id}/notifications/topics/{topic_urn}/attributes").
 		WithResponse(new(model.DeleteTopicAttributesResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TopicUrn").
+		WithJsonTag("topic_urn").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListLogtank() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/{project_id}/notifications/topics/{topic_urn}/logtanks").
+		WithResponse(new(model.ListLogtankResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -434,6 +490,10 @@ func GenReqDefForListTopics() *def.HttpRequestDef {
 		WithName("FuzzyName").
 		WithJsonTag("fuzzy_name").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TopicId").
+		WithJsonTag("topic_id").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -442,14 +502,9 @@ func GenReqDefForListTopics() *def.HttpRequestDef {
 func GenReqDefForListVersion() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/{api_version}").
+		WithPath("/v2").
 		WithResponse(new(model.ListVersionResponse)).
 		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ApiVersion").
-		WithJsonTag("api_version").
-		WithLocationType(def.Path))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -486,6 +541,30 @@ func GenReqDefForPublishMessage() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForUpdateLogtank() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v2/{project_id}/notifications/topics/{topic_urn}/logtanks/{logtank_id}").
+		WithResponse(new(model.UpdateLogtankResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TopicUrn").
+		WithJsonTag("topic_urn").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("LogtankId").
+		WithJsonTag("logtank_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForUpdateMessageTemplate() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
@@ -496,6 +575,30 @@ func GenReqDefForUpdateMessageTemplate() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("MessageTemplateId").
 		WithJsonTag("message_template_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateSubscription() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v2/{project_id}/notifications/topics/{topic_urn}/subscriptions/{subscription_urn}").
+		WithResponse(new(model.UpdateSubscriptionResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TopicUrn").
+		WithJsonTag("topic_urn").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SubscriptionUrn").
+		WithJsonTag("subscription_urn").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

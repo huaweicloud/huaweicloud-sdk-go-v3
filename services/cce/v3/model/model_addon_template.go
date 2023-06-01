@@ -15,7 +15,7 @@ type AddonTemplate struct {
 	// API版本，固定值“v3”，该值不可修改。
 	ApiVersion string `json:"apiVersion"`
 
-	Metadata *Metadata `json:"metadata"`
+	Metadata *AddonMetadata `json:"metadata"`
 
 	Spec *Templatespec `json:"spec"`
 }
