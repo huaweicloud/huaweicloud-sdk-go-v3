@@ -22,7 +22,7 @@ type CreateMemberOption struct {
 	ProjectId *string `json:"project_id,omitempty"`
 
 	// 后端服务器业务端口。 >在开启端口透传的pool下创建member传该字段不生效，可不传该字段。
-	ProtocolPort int32 `json:"protocol_port"`
+	ProtocolPort *int32 `json:"protocol_port,omitempty"`
 
 	// 后端云服务器所在的子网ID，可以是子网的IPv4子网ID或IPv6子网ID。  使用说明： - 该子网和关联的负载均衡器的子网必须在同一VPC下。 - 若所属LB的跨VPC后端转发特性已开启，则该字段可以不传，表示添加跨VPC的后端服务器。 此时address必须为IPv4地址，所在的pool的协议必须为TCP/HTTP/HTTPS。  [不支持IPv6，请勿设置为IPv6子网ID。](tag:dt,dt_test)
 	SubnetCidrId *string `json:"subnet_cidr_id,omitempty"`

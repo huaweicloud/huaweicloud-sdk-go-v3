@@ -28,7 +28,7 @@ type IssuedCouponQuota struct {
 	QuotaStatus *int32 `json:"quota_status,omitempty"`
 
 	// 剩余的代金券额度，精确到小数点后2位。
-	Balance *float64 `json:"balance,omitempty"`
+	Balance *decimal.Decimal `json:"balance,omitempty"`
 
 	// 代金券额度的单位。 1：元。
 	MeasureId *int32 `json:"measure_id,omitempty"`

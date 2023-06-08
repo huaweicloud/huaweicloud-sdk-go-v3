@@ -9,7 +9,7 @@ import (
 // Request Object
 type ListPublicZonesRequest struct {
 
-	// 待查询的zone的类型。  取值范围：public、private  如果为空，表示查询公网类型的zone。 如果为public，表示查询公网类型的zone。 如果为private，表示查询内网类型的zone。 搜索模式默认为模糊搜索。  默认值为空。
+	// 待查询的zone的类型。  取值范围：public  搜索模式默认为模糊搜索。  默认值为空。
 	Type *string `json:"type,omitempty"`
 
 	// 每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
@@ -29,6 +29,9 @@ type ListPublicZonesRequest struct {
 
 	// 资源状态。
 	Status *string `json:"status,omitempty"`
+
+	// 查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
+	SearchMode *string `json:"search_mode,omitempty"`
 
 	// 域名关联的企业项目ID，长度不超过36个字符。  默认值为0。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`

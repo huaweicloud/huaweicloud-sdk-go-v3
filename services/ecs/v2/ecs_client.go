@@ -303,6 +303,27 @@ func (c *EcsClient) BatchUpdateServersNameInvoker(request *model.BatchUpdateServ
 	return &BatchUpdateServersNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ChangeServerChargeMode 更换云服务器计费模式
+//
+// 更换云服务器的计费模式
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcsClient) ChangeServerChargeMode(request *model.ChangeServerChargeModeRequest) (*model.ChangeServerChargeModeResponse, error) {
+	requestDef := GenReqDefForChangeServerChargeMode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeServerChargeModeResponse), nil
+	}
+}
+
+// ChangeServerChargeModeInvoker 更换云服务器计费模式
+func (c *EcsClient) ChangeServerChargeModeInvoker(request *model.ChangeServerChargeModeRequest) *ChangeServerChargeModeInvoker {
+	requestDef := GenReqDefForChangeServerChargeMode()
+	return &ChangeServerChargeModeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ChangeServerOsWithCloudInit 切换弹性云服务器操作系统(安装Cloud init)
 //
 // 切换弹性云服务器操作系统。支持弹性云服务器数据盘不变的情况下，使用新镜像重装系统盘。

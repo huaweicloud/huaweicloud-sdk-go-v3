@@ -12,10 +12,10 @@ type DeleteBlockchainRequest struct {
 	// bcs 服务id
 	BlockchainId string `json:"blockchain_id"`
 
-	// [是否删除存储，IEF模式下不用填写](tag:online,g42)[是否删除存储](tag:hcs)
+	// 是否删除存储，IEF模式下不用填写
 	IsDeleteStorage *bool `json:"is_delete_storage,omitempty"`
 
-	// [是否删除obs，IEF模式下不用填写](tag:online,g42)[是否删除obs](tag:hcs)
+	// 是否删除obs，IEF模式下不用填写
 	IsDeleteObs *bool `json:"is_delete_obs,omitempty"`
 
 	// 是否删除底层CCE资源，IEF模式下不用填写

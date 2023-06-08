@@ -180,6 +180,7 @@ func main() {
     * [1.3 超时配置](#13-超时配置-top)
     * [1.4 SSL配置](#14-ssl-配置-top)
     * [1.5 自定义网络连接创建](#15-自定义网络连接创建-top)
+    * [1.6 自定义HTTP传输](#16-自定义HTTP传输-top)
 * [2. 认证信息配置](#2-认证信息配置-top)
   * [2.1 使用永久 AK 和 SK](#21-使用永久-ak-和-sk-top)
   * [2.2 使用临时 AK 和 SK](#22-使用临时-ak-和-sk-top)
@@ -268,6 +269,22 @@ func DialContext(ctx context.Context, network string, addr string) (net.Conn, er
 	return net.Dial(network, addr)
 }
 httpConfig := config.DefaultHttpConfig().WithDialContext(DialContext)
+
+client := vpc.NewVpcClient(
+    vpc.VpcClientBuilder().
+    WithHttpConfig(httpConfig).
+    Build())
+```
+
+#### 1.6 自定义HTTP传输 [:top:](#用户手册-top)
+
+**注意：** 该配置项拥有最高优先级。
+
+如果配置了自定义HTTP传输，**会导致 [1.2 网络代理](#12-网络代理-top)、[1.4 SSL配置](#14-ssl-配置-top)、[1.5 自定义网络连接创建](#15-自定义网络连接创建-top) 配置失效。**
+
+``` go
+transport := &http.Transport{}
+httpConfig := config.DefaultHttpConfig().WithHttpTransport(transport)
 
 client := vpc.NewVpcClient(
     vpc.VpcClientBuilder().

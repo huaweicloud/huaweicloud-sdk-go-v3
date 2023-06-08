@@ -29,6 +29,9 @@ type DeploymentGroup struct {
 
 	// 描述
 	Description *string `json:"description,omitempty"`
+
+	// 主机组是否为代理机接入模式
+	IsProxyMode *int32 `json:"is_proxy_mode,omitempty"`
 }
 
 func (o DeploymentGroup) String() string {

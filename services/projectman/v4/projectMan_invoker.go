@@ -341,6 +341,18 @@ func (i *UpdateProjectV4Invoker) Invoke() (*model.UpdateProjectV4Response, error
 	}
 }
 
+type AddIssueWorkHoursInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddIssueWorkHoursInvoker) Invoke() (*model.AddIssueWorkHoursResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddIssueWorkHoursResponse), nil
+	}
+}
+
 type BatchDeleteIssuesV4Invoker struct {
 	*invoker.BaseInvoker
 }
@@ -710,6 +722,18 @@ func (i *ListProjectWorkHoursInvoker) Invoke() (*model.ListProjectWorkHoursRespo
 		return nil, err
 	} else {
 		return result.(*model.ListProjectWorkHoursResponse), nil
+	}
+}
+
+type ListProjectWorkHoursTypeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListProjectWorkHoursTypeInvoker) Invoke() (*model.ListProjectWorkHoursTypeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListProjectWorkHoursTypeResponse), nil
 	}
 }
 

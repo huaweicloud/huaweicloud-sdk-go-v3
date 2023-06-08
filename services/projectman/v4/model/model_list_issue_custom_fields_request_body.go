@@ -14,6 +14,9 @@ type ListIssueCustomFieldsRequestBody struct {
 
 	// 自定义字段页面显示的含义
 	Names *[]string `json:"names,omitempty"`
+
+	// 查询结果是否包括未使用的自定义字段，默认仅查询使用中的自定义字段，设为true时查询项目中所有自定义字段
+	IncludedNotInUse *bool `json:"included_not_in_use,omitempty"`
 }
 
 func (o ListIssueCustomFieldsRequestBody) String() string {

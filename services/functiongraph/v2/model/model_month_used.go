@@ -12,7 +12,7 @@ type MonthUsed struct {
 	Date *string `json:"date,omitempty"`
 
 	// 使用量
-	Value *int32 `json:"value,omitempty"`
+	Value float32 `json:"value,omitempty"`
 }
 
 func (o MonthUsed) String() string {

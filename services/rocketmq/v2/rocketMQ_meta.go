@@ -609,13 +609,17 @@ func GenReqDefForResetConsumeOffset() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForSendRocketMqDlqMessage() *def.HttpRequestDef {
+func GenReqDefForSendDlqMessage() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/v2/reliability/{project_id}/instances/{instance_id}/messages/deadletter-resend").
-		WithResponse(new(model.SendRocketMqDlqMessageResponse)).
+		WithPath("/v2/{engine}/{project_id}/instances/{instance_id}/messages/deadletter-resend").
+		WithResponse(new(model.SendDlqMessageResponse)).
 		WithContentType("application/json")
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Engine").
+		WithJsonTag("engine").
+		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
@@ -846,13 +850,17 @@ func GenReqDefForUpdateUser() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForValidateRocketMqConsumedMessage() *def.HttpRequestDef {
+func GenReqDefForValidateConsumedMessage() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/v2/reliability/{project_id}/instances/{instance_id}/messages/resend").
-		WithResponse(new(model.ValidateRocketMqConsumedMessageResponse)).
+		WithPath("/v2/{engine}/{project_id}/instances/{instance_id}/messages/resend").
+		WithResponse(new(model.ValidateConsumedMessageResponse)).
 		WithContentType("application/json")
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Engine").
+		WithJsonTag("engine").
+		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").

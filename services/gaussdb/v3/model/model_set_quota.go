@@ -12,13 +12,13 @@ type SetQuota struct {
 	EnterpriseProjectId string `json:"enterprise_project_id"`
 
 	// 实例个数配额。取值范围0~100000。(如果已经存在实例，应该大于已经存在的实例个数)
-	InstanceQuota int32 `json:"instance_quota"`
+	InstanceQuota *int32 `json:"instance_quota,omitempty"`
 
 	// CPU核数配额。取值范围0~2147483646。(如果已经存在实例，应该大于已经占用的cpu个数)
-	VcpusQuota int32 `json:"vcpus_quota"`
+	VcpusQuota *int32 `json:"vcpus_quota,omitempty"`
 
 	// 内存使用配额，单位为GB。取值范围0~2147483646。(如果已经存在实例，应该大于已经占用的内存数)
-	RamQuota int32 `json:"ram_quota"`
+	RamQuota *int32 `json:"ram_quota,omitempty"`
 }
 
 func (o SetQuota) String() string {

@@ -19,6 +19,9 @@ type PrePaidServerNic struct {
 	Ipv6Enable *bool `json:"ipv6_enable,omitempty"`
 
 	Ipv6Bandwidth *PrePaidServerIpv6Bandwidth `json:"ipv6_bandwidth,omitempty"`
+
+	// IP/Mac对列表， 约束：IP地址不允许为 “0.0.0.0/0” 如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组 如果allowed_address_pairs为“1.1.1.1/0”，表示关闭源目地址检查开关 被绑定的云服务器网卡allowed_address_pairs填“1.1.1.1/0”
+	AllowedAddressPairs *[]CreateServerNicAllowedAddressPairs `json:"allowed_address_pairs,omitempty"`
 }
 
 func (o PrePaidServerNic) String() string {

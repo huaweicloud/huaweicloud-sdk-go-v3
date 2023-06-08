@@ -1029,9 +1029,9 @@ func (c *DnsClient) ListPrivateZonesInvoker(request *model.ListPrivateZonesReque
 	return &ListPrivateZonesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListPublicZones 查询公网Zone的列表
+// ListPublicZones 查询公网Zone列表
 //
-// 查询公网Zone的列表
+// 查询公网Zone列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ListPublicZones(request *model.ListPublicZonesRequest) (*model.ListPublicZonesResponse, error) {
@@ -1044,7 +1044,7 @@ func (c *DnsClient) ListPublicZones(request *model.ListPublicZonesRequest) (*mod
 	}
 }
 
-// ListPublicZonesInvoker 查询公网Zone的列表
+// ListPublicZonesInvoker 查询公网Zone列表
 func (c *DnsClient) ListPublicZonesInvoker(request *model.ListPublicZonesRequest) *ListPublicZonesInvoker {
 	requestDef := GenReqDefForListPublicZones()
 	return &ListPublicZonesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

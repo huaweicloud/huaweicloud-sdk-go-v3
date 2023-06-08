@@ -24,6 +24,7 @@ import (
 	"fmt"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/httphandler"
 	"net"
+	"net/http"
 	"time"
 )
 
@@ -39,10 +40,14 @@ type HttpConfig struct {
 	Retries               int
 	HttpProxy             *Proxy
 	IgnoreSSLVerification bool
-	// Experimental configuration, the default value is false.
+	// AllowRedirects Experimental configuration, the default value is false.
 	// Automatic redirection is allowed when turns on, which may cause some request exceptions.
 	AllowRedirects bool
 	HttpHandler    *httphandler.HttpHandler
+	// HttpTransport This configuration has the highest priority,
+	// which means specifying the HttpTransport will invalidate other configurations,
+	// such as DialContext, HttpProxy, IgnoreSSLVerification.
+	HttpTransport *http.Transport
 }
 
 func DefaultHttpConfig() *HttpConfig {
@@ -82,6 +87,14 @@ func (config *HttpConfig) WithAllowRedirects(allowRedirects bool) *HttpConfig {
 
 func (config *HttpConfig) WithHttpHandler(handler *httphandler.HttpHandler) *HttpConfig {
 	config.HttpHandler = handler
+	return config
+}
+
+// WithHttpTransport This configuration has the highest priority,
+// which means specifying the HttpTransport will invalidate other configurations,
+// such as DialContext, HttpProxy, IgnoreSSLVerification.
+func (config *HttpConfig) WithHttpTransport(transport *http.Transport) *HttpConfig {
+	config.HttpTransport = transport
 	return config
 }
 

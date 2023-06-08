@@ -68,6 +68,12 @@ type NodeExtendParam struct {
 
 	// 委托的名称。  委托是由租户管理员在统一身份认证服务（Identity and Access Management，IAM）上创建的，可以为CCE节点提供访问云服务器的临时凭证。
 	AgencyName *string `json:"agency_name,omitempty"`
+
+	// 节点内存预留，Kubernetes相关组件预留值。
+	KubeReservedMem *int32 `json:"kube-reserved-mem,omitempty"`
+
+	// 节点内存预留，系统组件预留值。
+	SystemReservedMem *int32 `json:"system-reserved-mem,omitempty"`
 }
 
 func (o NodeExtendParam) String() string {

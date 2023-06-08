@@ -137,6 +137,18 @@ func (i *CreateFunctionVersionInvoker) Invoke() (*model.CreateFunctionVersionRes
 	}
 }
 
+type CreateTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateTagsInvoker) Invoke() (*model.CreateTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateTagsResponse), nil
+	}
+}
+
 type CreateVersionAliasInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -146,6 +158,18 @@ func (i *CreateVersionAliasInvoker) Invoke() (*model.CreateVersionAliasResponse,
 		return nil, err
 	} else {
 		return result.(*model.CreateVersionAliasResponse), nil
+	}
+}
+
+type CreateVpcEndpointInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateVpcEndpointInvoker) Invoke() (*model.CreateVpcEndpointResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateVpcEndpointResponse), nil
 	}
 }
 
@@ -233,6 +257,18 @@ func (i *DeleteFunctionTriggerInvoker) Invoke() (*model.DeleteFunctionTriggerRes
 	}
 }
 
+type DeleteTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteTagsInvoker) Invoke() (*model.DeleteTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteTagsResponse), nil
+	}
+}
+
 type DeleteVersionAliasInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -242,6 +278,18 @@ func (i *DeleteVersionAliasInvoker) Invoke() (*model.DeleteVersionAliasResponse,
 		return nil, err
 	} else {
 		return result.(*model.DeleteVersionAliasResponse), nil
+	}
+}
+
+type DeleteVpcEndpointInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteVpcEndpointInvoker) Invoke() (*model.DeleteVpcEndpointResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteVpcEndpointResponse), nil
 	}
 }
 
@@ -545,6 +593,18 @@ func (i *ShowEventInvoker) Invoke() (*model.ShowEventResponse, error) {
 	}
 }
 
+type ShowFuncSnapshotStateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowFuncSnapshotStateInvoker) Invoke() (*model.ShowFuncSnapshotStateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowFuncSnapshotStateResponse), nil
+	}
+}
+
 type ShowFunctionAsyncInvokeConfigInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -602,6 +662,30 @@ func (i *ShowLtsLogDetailsInvoker) Invoke() (*model.ShowLtsLogDetailsResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ShowLtsLogDetailsResponse), nil
+	}
+}
+
+type ShowProjectTagsListInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowProjectTagsListInvoker) Invoke() (*model.ShowProjectTagsListResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowProjectTagsListResponse), nil
+	}
+}
+
+type ShowResInstanceInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowResInstanceInfoInvoker) Invoke() (*model.ShowResInstanceInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowResInstanceInfoResponse), nil
 	}
 }
 
@@ -746,6 +830,18 @@ func (i *UpdateEventInvoker) Invoke() (*model.UpdateEventResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.UpdateEventResponse), nil
+	}
+}
+
+type UpdateFuncSnapshotInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateFuncSnapshotInvoker) Invoke() (*model.UpdateFuncSnapshotResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateFuncSnapshotResponse), nil
 	}
 }
 

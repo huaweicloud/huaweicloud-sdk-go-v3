@@ -166,6 +166,27 @@ func (c *GaussDBforopenGaussClient) CreateDatabaseSchemasInvoker(request *model.
 	return &CreateDatabaseSchemasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateDbInstance 创建数据库实例
+//
+// 创建数据库实例
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) CreateDbInstance(request *model.CreateDbInstanceRequest) (*model.CreateDbInstanceResponse, error) {
+	requestDef := GenReqDefForCreateDbInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDbInstanceResponse), nil
+	}
+}
+
+// CreateDbInstanceInvoker 创建数据库实例
+func (c *GaussDBforopenGaussClient) CreateDbInstanceInvoker(request *model.CreateDbInstanceRequest) *CreateDbInstanceInvoker {
+	requestDef := GenReqDefForCreateDbInstance()
+	return &CreateDbInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateDbUser 创建数据库用户
 //
 // 在指定实例中创建数据库用户。
@@ -565,6 +586,48 @@ func (c *GaussDBforopenGaussClient) ListDatastoresInvoker(request *model.ListDat
 	return &ListDatastoresInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListDbBackups 查询备份列表
+//
+// 获取备份列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ListDbBackups(request *model.ListDbBackupsRequest) (*model.ListDbBackupsResponse, error) {
+	requestDef := GenReqDefForListDbBackups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDbBackupsResponse), nil
+	}
+}
+
+// ListDbBackupsInvoker 查询备份列表
+func (c *GaussDBforopenGaussClient) ListDbBackupsInvoker(request *model.ListDbBackupsRequest) *ListDbBackupsInvoker {
+	requestDef := GenReqDefForListDbBackups()
+	return &ListDbBackupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDbFlavors 查询数据库规格
+//
+// 查询数据库的规格信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ListDbFlavors(request *model.ListDbFlavorsRequest) (*model.ListDbFlavorsResponse, error) {
+	requestDef := GenReqDefForListDbFlavors()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDbFlavorsResponse), nil
+	}
+}
+
+// ListDbFlavorsInvoker 查询数据库规格
+func (c *GaussDBforopenGaussClient) ListDbFlavorsInvoker(request *model.ListDbFlavorsRequest) *ListDbFlavorsInvoker {
+	requestDef := GenReqDefForListDbFlavors()
+	return &ListDbFlavorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListDbUsers 查询数据库用户列表
 //
 // 在指定实例中查询数据库用户列表。
@@ -710,6 +773,48 @@ func (c *GaussDBforopenGaussClient) ListInstances(request *model.ListInstancesRe
 func (c *GaussDBforopenGaussClient) ListInstancesInvoker(request *model.ListInstancesRequest) *ListInstancesInvoker {
 	requestDef := GenReqDefForListInstances()
 	return &ListInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListInstancesDetails 查询数据库实例列表/查询实例详情
+//
+// 查询数据库实例列表/查询实例详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ListInstancesDetails(request *model.ListInstancesDetailsRequest) (*model.ListInstancesDetailsResponse, error) {
+	requestDef := GenReqDefForListInstancesDetails()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstancesDetailsResponse), nil
+	}
+}
+
+// ListInstancesDetailsInvoker 查询数据库实例列表/查询实例详情
+func (c *GaussDBforopenGaussClient) ListInstancesDetailsInvoker(request *model.ListInstancesDetailsRequest) *ListInstancesDetailsInvoker {
+	requestDef := GenReqDefForListInstancesDetails()
+	return &ListInstancesDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListParamGroupTemplates 获取参数模板列表
+//
+// 获取参数模板列表，包括所有数据库的默认参数模板和用户创建的参数模板。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ListParamGroupTemplates(request *model.ListParamGroupTemplatesRequest) (*model.ListParamGroupTemplatesResponse, error) {
+	requestDef := GenReqDefForListParamGroupTemplates()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListParamGroupTemplatesResponse), nil
+	}
+}
+
+// ListParamGroupTemplatesInvoker 获取参数模板列表
+func (c *GaussDBforopenGaussClient) ListParamGroupTemplatesInvoker(request *model.ListParamGroupTemplatesRequest) *ListParamGroupTemplatesInvoker {
+	requestDef := GenReqDefForListParamGroupTemplates()
+	return &ListParamGroupTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListPredefinedTags 查询预定义标签
@@ -1173,6 +1278,27 @@ func (c *GaussDBforopenGaussClient) ShowInstanceDisk(request *model.ShowInstance
 func (c *GaussDBforopenGaussClient) ShowInstanceDiskInvoker(request *model.ShowInstanceDiskRequest) *ShowInstanceDiskInvoker {
 	requestDef := GenReqDefForShowInstanceDisk()
 	return &ShowInstanceDiskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowInstanceParamGroup 获取指定实例的参数模板
+//
+// 获取指定实例的参数模板。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ShowInstanceParamGroup(request *model.ShowInstanceParamGroupRequest) (*model.ShowInstanceParamGroupResponse, error) {
+	requestDef := GenReqDefForShowInstanceParamGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowInstanceParamGroupResponse), nil
+	}
+}
+
+// ShowInstanceParamGroupInvoker 获取指定实例的参数模板
+func (c *GaussDBforopenGaussClient) ShowInstanceParamGroupInvoker(request *model.ShowInstanceParamGroupRequest) *ShowInstanceParamGroupInvoker {
+	requestDef := GenReqDefForShowInstanceParamGroup()
+	return &ShowInstanceParamGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowInstanceSnapshot 根据时间点或者备份文件查询原实例信息

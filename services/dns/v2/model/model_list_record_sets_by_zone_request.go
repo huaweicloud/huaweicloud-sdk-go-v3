@@ -12,6 +12,9 @@ type ListRecordSetsByZoneRequest struct {
 	// 所属zone id。
 	ZoneId string `json:"zone_id"`
 
+	// 查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
+	SearchMode *string `json:"search_mode,omitempty"`
+
 	// 分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
 	Marker *string `json:"marker,omitempty"`
 

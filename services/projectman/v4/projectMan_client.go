@@ -607,6 +607,27 @@ func (c *ProjectManClient) UpdateProjectV4Invoker(request *model.UpdateProjectV4
 	return &UpdateProjectV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AddIssueWorkHours 添加指定工作项工时
+//
+// 添加指定工作项工时
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) AddIssueWorkHours(request *model.AddIssueWorkHoursRequest) (*model.AddIssueWorkHoursResponse, error) {
+	requestDef := GenReqDefForAddIssueWorkHours()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddIssueWorkHoursResponse), nil
+	}
+}
+
+// AddIssueWorkHoursInvoker 添加指定工作项工时
+func (c *ProjectManClient) AddIssueWorkHoursInvoker(request *model.AddIssueWorkHoursRequest) *AddIssueWorkHoursInvoker {
+	requestDef := GenReqDefForAddIssueWorkHours()
+	return &AddIssueWorkHoursInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchDeleteIssuesV4 批量删除工作项
 //
 // 批量删除工作项
@@ -1256,6 +1277,27 @@ func (c *ProjectManClient) ListProjectWorkHours(request *model.ListProjectWorkHo
 func (c *ProjectManClient) ListProjectWorkHoursInvoker(request *model.ListProjectWorkHoursRequest) *ListProjectWorkHoursInvoker {
 	requestDef := GenReqDefForListProjectWorkHours()
 	return &ListProjectWorkHoursInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProjectWorkHoursType 查询项目下的工时类型
+//
+// 查询项目下的工时类型
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) ListProjectWorkHoursType(request *model.ListProjectWorkHoursTypeRequest) (*model.ListProjectWorkHoursTypeResponse, error) {
+	requestDef := GenReqDefForListProjectWorkHoursType()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListProjectWorkHoursTypeResponse), nil
+	}
+}
+
+// ListProjectWorkHoursTypeInvoker 查询项目下的工时类型
+func (c *ProjectManClient) ListProjectWorkHoursTypeInvoker(request *model.ListProjectWorkHoursTypeRequest) *ListProjectWorkHoursTypeInvoker {
+	requestDef := GenReqDefForListProjectWorkHoursType()
+	return &ListProjectWorkHoursTypeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListScrumProjectStatuses 查询项目的状态列表

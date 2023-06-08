@@ -556,6 +556,10 @@ func GenReqDefForListRecordSets() *def.HttpRequestDef {
 		WithJsonTag("marker").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SearchMode").
+		WithJsonTag("search_mode").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Limit").
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
@@ -612,6 +616,10 @@ func GenReqDefForListRecordSetsByZone() *def.HttpRequestDef {
 		WithJsonTag("zone_id").
 		WithLocationType(def.Path))
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SearchMode").
+		WithJsonTag("search_mode").
+		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Marker").
 		WithJsonTag("marker").
@@ -1168,6 +1176,10 @@ func GenReqDefForListPrivateZones() *def.HttpRequestDef {
 		WithJsonTag("status").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SearchMode").
+		WithJsonTag("search_mode").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("EnterpriseProjectId").
 		WithJsonTag("enterprise_project_id").
 		WithLocationType(def.Query))
@@ -1210,6 +1222,10 @@ func GenReqDefForListPublicZones() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Status").
 		WithJsonTag("status").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SearchMode").
+		WithJsonTag("search_mode").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("EnterpriseProjectId").

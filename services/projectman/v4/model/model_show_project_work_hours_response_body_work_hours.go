@@ -46,6 +46,12 @@ type ShowProjectWorkHoursResponseBodyWorkHours struct {
 
 	// 工作项结束时间
 	ClosedTime *string `json:"closed_time,omitempty"`
+
+	// 工时创建时间
+	WorkHoursCreatedTime *string `json:"work_hours_created_time,omitempty"`
+
+	// 工时更新时间
+	WorkHoursUpdatedTime *string `json:"work_hours_updated_time,omitempty"`
 }
 
 func (o ShowProjectWorkHoursResponseBodyWorkHours) String() string {

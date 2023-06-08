@@ -258,6 +258,27 @@ func (c *FunctionGraphClient) CreateFunctionVersionInvoker(request *model.Create
 	return &CreateFunctionVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateTags 创建资源标签
+//
+// 创建资源标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *FunctionGraphClient) CreateTags(request *model.CreateTagsRequest) (*model.CreateTagsResponse, error) {
+	requestDef := GenReqDefForCreateTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateTagsResponse), nil
+	}
+}
+
+// CreateTagsInvoker 创建资源标签
+func (c *FunctionGraphClient) CreateTagsInvoker(request *model.CreateTagsRequest) *CreateTagsInvoker {
+	requestDef := GenReqDefForCreateTags()
+	return &CreateTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateVersionAlias 创建函数版本别名
 //
 // 创建函数灰度版本别名。
@@ -277,6 +298,27 @@ func (c *FunctionGraphClient) CreateVersionAlias(request *model.CreateVersionAli
 func (c *FunctionGraphClient) CreateVersionAliasInvoker(request *model.CreateVersionAliasRequest) *CreateVersionAliasInvoker {
 	requestDef := GenReqDefForCreateVersionAlias()
 	return &CreateVersionAliasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateVpcEndpoint 创建下沉入口
+//
+// 创建下沉入口。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *FunctionGraphClient) CreateVpcEndpoint(request *model.CreateVpcEndpointRequest) (*model.CreateVpcEndpointResponse, error) {
+	requestDef := GenReqDefForCreateVpcEndpoint()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateVpcEndpointResponse), nil
+	}
+}
+
+// CreateVpcEndpointInvoker 创建下沉入口
+func (c *FunctionGraphClient) CreateVpcEndpointInvoker(request *model.CreateVpcEndpointRequest) *CreateVpcEndpointInvoker {
+	requestDef := GenReqDefForCreateVpcEndpoint()
+	return &CreateVpcEndpointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateWorkflow 创建函数流
@@ -429,6 +471,27 @@ func (c *FunctionGraphClient) DeleteFunctionTriggerInvoker(request *model.Delete
 	return &DeleteFunctionTriggerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteTags 删除资源标签
+//
+// 删除资源标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *FunctionGraphClient) DeleteTags(request *model.DeleteTagsRequest) (*model.DeleteTagsResponse, error) {
+	requestDef := GenReqDefForDeleteTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteTagsResponse), nil
+	}
+}
+
+// DeleteTagsInvoker 删除资源标签
+func (c *FunctionGraphClient) DeleteTagsInvoker(request *model.DeleteTagsRequest) *DeleteTagsInvoker {
+	requestDef := GenReqDefForDeleteTags()
+	return &DeleteTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteVersionAlias 删除函数版本别名
 //
 // 删除函数版本别名。
@@ -448,6 +511,27 @@ func (c *FunctionGraphClient) DeleteVersionAlias(request *model.DeleteVersionAli
 func (c *FunctionGraphClient) DeleteVersionAliasInvoker(request *model.DeleteVersionAliasRequest) *DeleteVersionAliasInvoker {
 	requestDef := GenReqDefForDeleteVersionAlias()
 	return &DeleteVersionAliasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteVpcEndpoint 删除下沉入口
+//
+// 删除下沉入口。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *FunctionGraphClient) DeleteVpcEndpoint(request *model.DeleteVpcEndpointRequest) (*model.DeleteVpcEndpointResponse, error) {
+	requestDef := GenReqDefForDeleteVpcEndpoint()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteVpcEndpointResponse), nil
+	}
+}
+
+// DeleteVpcEndpointInvoker 删除下沉入口
+func (c *FunctionGraphClient) DeleteVpcEndpointInvoker(request *model.DeleteVpcEndpointRequest) *DeleteVpcEndpointInvoker {
+	requestDef := GenReqDefForDeleteVpcEndpoint()
+	return &DeleteVpcEndpointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // EnableLtsLogs 开通lts日志上报功能
@@ -980,6 +1064,27 @@ func (c *FunctionGraphClient) ShowEventInvoker(request *model.ShowEventRequest) 
 	return &ShowEventInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowFuncSnapshotState 查询函数快照制作状态
+//
+// 查询函数快照制作状态。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *FunctionGraphClient) ShowFuncSnapshotState(request *model.ShowFuncSnapshotStateRequest) (*model.ShowFuncSnapshotStateResponse, error) {
+	requestDef := GenReqDefForShowFuncSnapshotState()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowFuncSnapshotStateResponse), nil
+	}
+}
+
+// ShowFuncSnapshotStateInvoker 查询函数快照制作状态
+func (c *FunctionGraphClient) ShowFuncSnapshotStateInvoker(request *model.ShowFuncSnapshotStateRequest) *ShowFuncSnapshotStateInvoker {
+	requestDef := GenReqDefForShowFuncSnapshotState()
+	return &ShowFuncSnapshotStateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowFunctionAsyncInvokeConfig 获取函数异步配置信息
 //
 // 获取指定函数某一版本的异步配置信息。
@@ -1083,6 +1188,48 @@ func (c *FunctionGraphClient) ShowLtsLogDetails(request *model.ShowLtsLogDetails
 func (c *FunctionGraphClient) ShowLtsLogDetailsInvoker(request *model.ShowLtsLogDetailsRequest) *ShowLtsLogDetailsInvoker {
 	requestDef := GenReqDefForShowLtsLogDetails()
 	return &ShowLtsLogDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowProjectTagsList 查询资源标签
+//
+// 查询资源标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *FunctionGraphClient) ShowProjectTagsList(request *model.ShowProjectTagsListRequest) (*model.ShowProjectTagsListResponse, error) {
+	requestDef := GenReqDefForShowProjectTagsList()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowProjectTagsListResponse), nil
+	}
+}
+
+// ShowProjectTagsListInvoker 查询资源标签
+func (c *FunctionGraphClient) ShowProjectTagsListInvoker(request *model.ShowProjectTagsListRequest) *ShowProjectTagsListInvoker {
+	requestDef := GenReqDefForShowProjectTagsList()
+	return &ShowProjectTagsListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowResInstanceInfo 查询资源实例
+//
+// 查询资源实例。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *FunctionGraphClient) ShowResInstanceInfo(request *model.ShowResInstanceInfoRequest) (*model.ShowResInstanceInfoResponse, error) {
+	requestDef := GenReqDefForShowResInstanceInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowResInstanceInfoResponse), nil
+	}
+}
+
+// ShowResInstanceInfoInvoker 查询资源实例
+func (c *FunctionGraphClient) ShowResInstanceInfoInvoker(request *model.ShowResInstanceInfoRequest) *ShowResInstanceInfoInvoker {
+	requestDef := GenReqDefForShowResInstanceInfo()
+	return &ShowResInstanceInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowTenantMetric 获取函数流指标
@@ -1335,6 +1482,27 @@ func (c *FunctionGraphClient) UpdateEvent(request *model.UpdateEventRequest) (*m
 func (c *FunctionGraphClient) UpdateEventInvoker(request *model.UpdateEventRequest) *UpdateEventInvoker {
 	requestDef := GenReqDefForUpdateEvent()
 	return &UpdateEventInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateFuncSnapshot 禁用/启动函数快照
+//
+// 禁用/启动函数快照
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *FunctionGraphClient) UpdateFuncSnapshot(request *model.UpdateFuncSnapshotRequest) (*model.UpdateFuncSnapshotResponse, error) {
+	requestDef := GenReqDefForUpdateFuncSnapshot()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateFuncSnapshotResponse), nil
+	}
+}
+
+// UpdateFuncSnapshotInvoker 禁用/启动函数快照
+func (c *FunctionGraphClient) UpdateFuncSnapshotInvoker(request *model.UpdateFuncSnapshotRequest) *UpdateFuncSnapshotInvoker {
+	requestDef := GenReqDefForUpdateFuncSnapshot()
+	return &UpdateFuncSnapshotInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateFunctionAsyncInvokeConfig 设置函数异步配置信息

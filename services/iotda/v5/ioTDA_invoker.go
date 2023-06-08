@@ -161,6 +161,18 @@ func (i *ListBatchTasksInvoker) Invoke() (*model.ListBatchTasksResponse, error) 
 	}
 }
 
+type RetryBatchTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RetryBatchTaskInvoker) Invoke() (*model.RetryBatchTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RetryBatchTaskResponse), nil
+	}
+}
+
 type ShowBatchTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -170,6 +182,18 @@ func (i *ShowBatchTaskInvoker) Invoke() (*model.ShowBatchTaskResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowBatchTaskResponse), nil
+	}
+}
+
+type StopBatchTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StopBatchTaskInvoker) Invoke() (*model.StopBatchTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StopBatchTaskResponse), nil
 	}
 }
 

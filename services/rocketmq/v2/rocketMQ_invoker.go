@@ -293,15 +293,15 @@ func (i *ResetConsumeOffsetInvoker) Invoke() (*model.ResetConsumeOffsetResponse,
 	}
 }
 
-type SendRocketMqDlqMessageInvoker struct {
+type SendDlqMessageInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *SendRocketMqDlqMessageInvoker) Invoke() (*model.SendRocketMqDlqMessageResponse, error) {
+func (i *SendDlqMessageInvoker) Invoke() (*model.SendDlqMessageResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.SendRocketMqDlqMessageResponse), nil
+		return result.(*model.SendDlqMessageResponse), nil
 	}
 }
 
@@ -425,15 +425,15 @@ func (i *UpdateUserInvoker) Invoke() (*model.UpdateUserResponse, error) {
 	}
 }
 
-type ValidateRocketMqConsumedMessageInvoker struct {
+type ValidateConsumedMessageInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ValidateRocketMqConsumedMessageInvoker) Invoke() (*model.ValidateRocketMqConsumedMessageResponse, error) {
+func (i *ValidateConsumedMessageInvoker) Invoke() (*model.ValidateConsumedMessageResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ValidateRocketMqConsumedMessageResponse), nil
+		return result.(*model.ValidateConsumedMessageResponse), nil
 	}
 }
 

@@ -26,6 +26,9 @@ type Resources struct {
 
 	// 资源类型
 	ResourceType string `json:"resource_type"`
+
+	// 标签列表
+	Tags *[]CreateTagRequest `json:"tags,omitempty"`
 }
 
 func (o Resources) String() string {

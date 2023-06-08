@@ -29,6 +29,9 @@ type TaskProgress struct {
 
 	// 停止的子任务个数。
 	Stopped *int32 `json:"stopped,omitempty"`
+
+	// 移除的子任务个数。
+	Removed *int32 `json:"removed,omitempty"`
 }
 
 func (o TaskProgress) String() string {

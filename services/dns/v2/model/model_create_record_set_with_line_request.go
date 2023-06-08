@@ -12,7 +12,7 @@ type CreateRecordSetWithLineRequest struct {
 	// 所属zone的ID。
 	ZoneId string `json:"zone_id"`
 
-	Body *CreateRecordSetWithLineReq `json:"body,omitempty"`
+	Body *CreateRecordSetWithLineRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateRecordSetWithLineRequest) String() string {

@@ -690,6 +690,27 @@ func (c *RdsClient) ListInstanceParamHistoriesInvoker(request *model.ListInstanc
 	return &ListInstanceParamHistoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListInstanceTags 查询实例标签
+//
+// 查询实例标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListInstanceTags(request *model.ListInstanceTagsRequest) (*model.ListInstanceTagsResponse, error) {
+	requestDef := GenReqDefForListInstanceTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstanceTagsResponse), nil
+	}
+}
+
+// ListInstanceTagsInvoker 查询实例标签
+func (c *RdsClient) ListInstanceTagsInvoker(request *model.ListInstanceTagsRequest) *ListInstanceTagsInvoker {
+	requestDef := GenReqDefForListInstanceTags()
+	return &ListInstanceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListInstances 查询数据库实例列表
 //
 // 查询数据库实例列表。

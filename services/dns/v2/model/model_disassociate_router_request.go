@@ -12,7 +12,7 @@ type DisassociateRouterRequest struct {
 	// 待解关联zone的ID。
 	ZoneId string `json:"zone_id"`
 
-	Body *DisassociaterouterReq `json:"body,omitempty"`
+	Body *DisassociaterouterRequestBody `json:"body,omitempty"`
 }
 
 func (o DisassociateRouterRequest) String() string {

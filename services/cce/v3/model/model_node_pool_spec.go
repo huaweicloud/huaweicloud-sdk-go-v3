@@ -12,7 +12,7 @@ import (
 //
 type NodePoolSpec struct {
 
-	// 节点池类型。不填写时默认为vm。  - vm：弹性云服务器 - ElasticBMS：C6型弹性裸金属通用计算增强型云服务器，规格示例：c6.22xlarge.2.physical
+	// 节点池类型。不填写时默认为vm。  - vm：弹性云服务器 - ElasticBMS：C6型弹性裸金属通用计算增强型云服务器，规格示例：c6.22xlarge.2.physical - pm: 裸金属服务器
 	Type *NodePoolSpecType `json:"type,omitempty"`
 
 	NodeTemplate *NodeSpec `json:"nodeTemplate"`
@@ -47,6 +47,7 @@ type NodePoolSpecType struct {
 type NodePoolSpecTypeEnum struct {
 	VM          NodePoolSpecType
 	ELASTIC_BMS NodePoolSpecType
+	PM          NodePoolSpecType
 }
 
 func GetNodePoolSpecTypeEnum() NodePoolSpecTypeEnum {
@@ -56,6 +57,9 @@ func GetNodePoolSpecTypeEnum() NodePoolSpecTypeEnum {
 		},
 		ELASTIC_BMS: NodePoolSpecType{
 			value: "ElasticBMS",
+		},
+		PM: NodePoolSpecType{
+			value: "pm",
 		},
 	}
 }

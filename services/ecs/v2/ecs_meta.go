@@ -242,6 +242,21 @@ func GenReqDefForBatchUpdateServersName() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForChangeServerChargeMode() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/{project_id}/cloudservers/actions/change-charge-mode").
+		WithResponse(new(model.ChangeServerChargeModeResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForChangeServerOsWithCloudInit() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).

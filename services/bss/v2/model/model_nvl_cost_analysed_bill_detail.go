@@ -97,7 +97,7 @@ type NvlCostAnalysedBillDetail struct {
 	ConsumeAmount *decimal.Decimal `json:"consume_amount,omitempty"`
 
 	// 期初已分摊金额。  说明： 包周期和预留实例预付时有效；计费类型为按需，预留实例为按时计费时该值为0。
-	PastMonthsAmortizedAmount *float64 `json:"past_months_amortized_amount,omitempty"`
+	PastMonthsAmortizedAmount *decimal.Decimal `json:"past_months_amortized_amount,omitempty"`
 
 	// 当月分摊金额。 当月分摊金额=现金分摊金额+信用额度分摊金额+代金券分摊金额+现金券分摊金额+储值卡分摊金额+奖励金分摊金额
 	CurrentMonthAmortizedAmount *decimal.Decimal `json:"current_month_amortized_amount,omitempty"`
@@ -106,7 +106,7 @@ type NvlCostAnalysedBillDetail struct {
 	FutureMonthsAmortizedAmount *decimal.Decimal `json:"future_months_amortized_amount,omitempty"`
 
 	// 月度成本分摊时，当月已分摊金额中包含的现金金额。
-	AmortizedCashAmount *float64 `json:"amortized_cash_amount,omitempty"`
+	AmortizedCashAmount *decimal.Decimal `json:"amortized_cash_amount,omitempty"`
 
 	// 月度成本分摊时，当月已分摊金额中包含的信用额度分摊金额。
 	AmortizedCreditAmount *decimal.Decimal `json:"amortized_credit_amount,omitempty"`

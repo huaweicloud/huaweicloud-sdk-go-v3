@@ -524,25 +524,25 @@ func (c *RocketMQClient) ResetConsumeOffsetInvoker(request *model.ResetConsumeOf
 	return &ResetConsumeOffsetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// SendRocketMqDlqMessage 重发死信消息
+// SendDlqMessage 重发死信消息
 //
 // 重发死信消息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *RocketMQClient) SendRocketMqDlqMessage(request *model.SendRocketMqDlqMessageRequest) (*model.SendRocketMqDlqMessageResponse, error) {
-	requestDef := GenReqDefForSendRocketMqDlqMessage()
+func (c *RocketMQClient) SendDlqMessage(request *model.SendDlqMessageRequest) (*model.SendDlqMessageResponse, error) {
+	requestDef := GenReqDefForSendDlqMessage()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.SendRocketMqDlqMessageResponse), nil
+		return resp.(*model.SendDlqMessageResponse), nil
 	}
 }
 
-// SendRocketMqDlqMessageInvoker 重发死信消息
-func (c *RocketMQClient) SendRocketMqDlqMessageInvoker(request *model.SendRocketMqDlqMessageRequest) *SendRocketMqDlqMessageInvoker {
-	requestDef := GenReqDefForSendRocketMqDlqMessage()
-	return &SendRocketMqDlqMessageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// SendDlqMessageInvoker 重发死信消息
+func (c *RocketMQClient) SendDlqMessageInvoker(request *model.SendDlqMessageRequest) *SendDlqMessageInvoker {
+	requestDef := GenReqDefForSendDlqMessage()
+	return &SendDlqMessageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowConsumerConnections 查询消费者列表
@@ -755,25 +755,25 @@ func (c *RocketMQClient) UpdateUserInvoker(request *model.UpdateUserRequest) *Up
 	return &UpdateUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ValidateRocketMqConsumedMessage 消费验证
+// ValidateConsumedMessage 消费验证
 //
 // 消费验证。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *RocketMQClient) ValidateRocketMqConsumedMessage(request *model.ValidateRocketMqConsumedMessageRequest) (*model.ValidateRocketMqConsumedMessageResponse, error) {
-	requestDef := GenReqDefForValidateRocketMqConsumedMessage()
+func (c *RocketMQClient) ValidateConsumedMessage(request *model.ValidateConsumedMessageRequest) (*model.ValidateConsumedMessageResponse, error) {
+	requestDef := GenReqDefForValidateConsumedMessage()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ValidateRocketMqConsumedMessageResponse), nil
+		return resp.(*model.ValidateConsumedMessageResponse), nil
 	}
 }
 
-// ValidateRocketMqConsumedMessageInvoker 消费验证
-func (c *RocketMQClient) ValidateRocketMqConsumedMessageInvoker(request *model.ValidateRocketMqConsumedMessageRequest) *ValidateRocketMqConsumedMessageInvoker {
-	requestDef := GenReqDefForValidateRocketMqConsumedMessage()
-	return &ValidateRocketMqConsumedMessageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ValidateConsumedMessageInvoker 消费验证
+func (c *RocketMQClient) ValidateConsumedMessageInvoker(request *model.ValidateConsumedMessageRequest) *ValidateConsumedMessageInvoker {
+	requestDef := GenReqDefForValidateConsumedMessage()
+	return &ValidateConsumedMessageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateTopicOrBatchDeleteTopic 创建主题或批量删除主题

@@ -161,6 +161,18 @@ func (i *BatchUpdateServersNameInvoker) Invoke() (*model.BatchUpdateServersNameR
 	}
 }
 
+type ChangeServerChargeModeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeServerChargeModeInvoker) Invoke() (*model.ChangeServerChargeModeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeServerChargeModeResponse), nil
+	}
+}
+
 type ChangeServerOsWithCloudInitInvoker struct {
 	*invoker.BaseInvoker
 }

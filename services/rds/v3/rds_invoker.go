@@ -389,6 +389,18 @@ func (i *ListInstanceParamHistoriesInvoker) Invoke() (*model.ListInstanceParamHi
 	}
 }
 
+type ListInstanceTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceTagsInvoker) Invoke() (*model.ListInstanceTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceTagsResponse), nil
+	}
+}
+
 type ListInstancesInvoker struct {
 	*invoker.BaseInvoker
 }

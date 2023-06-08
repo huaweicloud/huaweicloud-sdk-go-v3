@@ -53,7 +53,7 @@ type Listener struct {
 	// 监听器的监听协议。  [取值：TCP、UDP、HTTP、HTTPS、TERMINATED_HTTPS、QUIC。  使用说明： - 共享型LB上的HTTPS监听器只支持设置为TERMINATED_HTTPS， 创建时传入HTTPS将会自动转为TERMINATED_HTTPS。 - 独享型LB上的HTTPS监听器只支持设置为HTTPS，创建时传入TERMINATED_HTTPS将会自动转为HTTPS。 ](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,fcs,dt)  [取值：TCP、UDP、HTTP、HTTPS。](tag:hws_eu,hcso_dt)  [不支持QUIC。](tag:tm,dt,dt_test)
 	Protocol string `json:"protocol"`
 
-	// 监听器的前端监听端口。客户端将请求发送到该端口中。
+	// 监听器的监听端口。QUIC监听器端口不能是4789，且不能和UDP监听器端口重复。传0时表示开启监听端口范围的能力，此时port_ranges为必填字段。 [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt,dt_test)
 	ProtocolPort int32 `json:"protocol_port"`
 
 	// 监听器使用的SNI证书（带域名的服务器证书）ID列表。  使用说明： - 列表对应的所有SNI证书的域名不允许存在重复。 - 列表对应的所有SNI证书的域名总数不超过50。
@@ -104,6 +104,9 @@ type Listener struct {
 
 	// ELB是否开启gzip压缩，缺省值：false，非必选  [仅HTTP/HTTPS类型监听器支持配置。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt,dt_test) [仅HTTP/HTTPS/QUIC类型监听器支持配置。](tag:hws,hws_hk,hws_test,hcs,hcs_sm,hcso,fcs,fcs_vm,mix,ocb,ctc,cmcc,sbc,hws_ocb,hk_sbc)
 	GzipEnable *bool `json:"gzip_enable,omitempty"`
+
+	// 端口监听范围（闭区间)，最多指定10个端口组，每个组范围不可有重叠部分 >仅当protocol_port为0时可以传入。
+	PortRanges *[]PortRange `json:"port_ranges,omitempty"`
 }
 
 func (o Listener) String() string {

@@ -185,6 +185,30 @@ func (i *HandleUnionMemberQuitListInvoker) Invoke() (*model.HandleUnionMemberQui
 	}
 }
 
+type ListBcsEventsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBcsEventsInvoker) Invoke() (*model.ListBcsEventsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBcsEventsResponse), nil
+	}
+}
+
+type ListBcsEventsStatisticInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBcsEventsStatisticInvoker) Invoke() (*model.ListBcsEventsStatisticResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBcsEventsStatisticResponse), nil
+	}
+}
+
 type ListBcsMetricInvoker struct {
 	*invoker.BaseInvoker
 }

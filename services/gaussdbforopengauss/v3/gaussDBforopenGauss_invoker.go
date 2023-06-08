@@ -89,6 +89,18 @@ func (i *CreateDatabaseSchemasInvoker) Invoke() (*model.CreateDatabaseSchemasRes
 	}
 }
 
+type CreateDbInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDbInstanceInvoker) Invoke() (*model.CreateDbInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDbInstanceResponse), nil
+	}
+}
+
 type CreateDbUserInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -317,6 +329,30 @@ func (i *ListDatastoresInvoker) Invoke() (*model.ListDatastoresResponse, error) 
 	}
 }
 
+type ListDbBackupsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDbBackupsInvoker) Invoke() (*model.ListDbBackupsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDbBackupsResponse), nil
+	}
+}
+
+type ListDbFlavorsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDbFlavorsInvoker) Invoke() (*model.ListDbFlavorsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDbFlavorsResponse), nil
+	}
+}
+
 type ListDbUsersInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -398,6 +434,30 @@ func (i *ListInstancesInvoker) Invoke() (*model.ListInstancesResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListInstancesResponse), nil
+	}
+}
+
+type ListInstancesDetailsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstancesDetailsInvoker) Invoke() (*model.ListInstancesDetailsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstancesDetailsResponse), nil
+	}
+}
+
+type ListParamGroupTemplatesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListParamGroupTemplatesInvoker) Invoke() (*model.ListParamGroupTemplatesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListParamGroupTemplatesResponse), nil
 	}
 }
 
@@ -662,6 +722,18 @@ func (i *ShowInstanceDiskInvoker) Invoke() (*model.ShowInstanceDiskResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ShowInstanceDiskResponse), nil
+	}
+}
+
+type ShowInstanceParamGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInstanceParamGroupInvoker) Invoke() (*model.ShowInstanceParamGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceParamGroupResponse), nil
 	}
 }
 

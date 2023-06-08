@@ -334,6 +334,48 @@ func (c *BcsClient) HandleUnionMemberQuitListInvoker(request *model.HandleUnionM
 	return &HandleUnionMemberQuitListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListBcsEvents 查询服务实例告警信息
+//
+// 该接口用于查询BCS服务的事件、告警数据，可以指定查询时的过滤条件。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *BcsClient) ListBcsEvents(request *model.ListBcsEventsRequest) (*model.ListBcsEventsResponse, error) {
+	requestDef := GenReqDefForListBcsEvents()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListBcsEventsResponse), nil
+	}
+}
+
+// ListBcsEventsInvoker 查询服务实例告警信息
+func (c *BcsClient) ListBcsEventsInvoker(request *model.ListBcsEventsRequest) *ListBcsEventsInvoker {
+	requestDef := GenReqDefForListBcsEvents()
+	return &ListBcsEventsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListBcsEventsStatistic 查询服务实例告警统计接口
+//
+// 该接口用于查询BCS服务的分段事件、告警统计数据，可以指定查询时的过滤条件。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *BcsClient) ListBcsEventsStatistic(request *model.ListBcsEventsStatisticRequest) (*model.ListBcsEventsStatisticResponse, error) {
+	requestDef := GenReqDefForListBcsEventsStatistic()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListBcsEventsStatisticResponse), nil
+	}
+}
+
+// ListBcsEventsStatisticInvoker 查询服务实例告警统计接口
+func (c *BcsClient) ListBcsEventsStatisticInvoker(request *model.ListBcsEventsStatisticRequest) *ListBcsEventsStatisticInvoker {
+	requestDef := GenReqDefForListBcsEventsStatistic()
+	return &ListBcsEventsStatisticInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListBcsMetric 查询服务实例监控数据
 //
 // 该接口用于查询BCS服务的监控数据，可以指定相应的指标名称。

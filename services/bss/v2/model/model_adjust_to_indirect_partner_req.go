@@ -2,6 +2,7 @@ package model
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+	"github.com/shopspring/decimal"
 
 	"strings"
 )
@@ -12,7 +13,7 @@ type AdjustToIndirectPartnerReq struct {
 	IndirectPartnerId string `json:"indirect_partner_id"`
 
 	// 华为云总经销商向云经销商拨款的金额。 单位：元。取值大于0且精确到小数点后2位。
-	Amount float64 `json:"amount"`
+	Amount *decimal.Decimal `json:"amount"`
 }
 
 func (o AdjustToIndirectPartnerReq) String() string {

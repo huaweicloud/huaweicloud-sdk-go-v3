@@ -434,3 +434,24 @@ func (c *MrsClient) UpdateClusterScalingInvoker(request *model.UpdateClusterScal
 	requestDef := GenReqDefForUpdateClusterScaling()
 	return &UpdateClusterScalingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
+
+// ListAvailableZones 查询可用区信息
+//
+// 在创建集群时，需要配置实例所在的可用区ID，可通过该接口查询可用区的ID。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MrsClient) ListAvailableZones(request *model.ListAvailableZonesRequest) (*model.ListAvailableZonesResponse, error) {
+	requestDef := GenReqDefForListAvailableZones()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAvailableZonesResponse), nil
+	}
+}
+
+// ListAvailableZonesInvoker 查询可用区信息
+func (c *MrsClient) ListAvailableZonesInvoker(request *model.ListAvailableZonesRequest) *ListAvailableZonesInvoker {
+	requestDef := GenReqDefForListAvailableZones()
+	return &ListAvailableZonesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}

@@ -54,6 +54,9 @@ type CreatePoolOption struct {
 
 	// 设置保护的原因 >仅当protection_status为consoleProtection时有效。
 	ProtectionReason *string `json:"protection_reason,omitempty"`
+
+	// 后端是否开启端口透传，开启后，后端服务器端口与前端监听器端口保持一致。  使用说明： - 仅QUIC,TCP,UDP的pool支持。
+	AnyPortEnable *bool `json:"any_port_enable,omitempty"`
 }
 
 func (o CreatePoolOption) String() string {

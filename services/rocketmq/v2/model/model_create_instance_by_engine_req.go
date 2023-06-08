@@ -39,7 +39,7 @@ type CreateInstanceByEngineReq struct {
 	// 创建节点到指定且有资源的可用区ID。该参数不能为空数组或者数组的值为空， 请注意查看该可用区是否有资源。  创建RocketMQ实例，支持节点部署在1个或3个及3个以上的可用区。在为节点指定可用区时，用逗号分隔开。
 	AvailableZones []string `json:"available_zones"`
 
-	// RocketMQ实例规格。   - c6.4u8g.cluster：单个代理最大Topic数4000，单个代理最大消费组数4000   - c6.8u16g.cluster：单个代理最大Topic数8000，单个代理最大消费组数8000   - c6.12u24g.cluster：单个代理最大Topic数12000，单个代理最大消费组数12000   - c6.16u32g.cluster：单个代理最大Topic数16000，单个代理最大消费组数16000
+	// RocketMQ实例规格。   - c6.4u8g.cluster.small：单个代理最大Topic数2000，单个代理最大消费组数2000   - c6.4u8g.cluster：单个代理最大Topic数4000，单个代理最大消费组数4000   - c6.8u16g.cluster：单个代理最大Topic数8000，单个代理最大消费组数8000   - c6.12u24g.cluster：单个代理最大Topic数12000，单个代理最大消费组数12000   - c6.16u32g.cluster：单个代理最大Topic数16000，单个代理最大消费组数16000
 	ProductId CreateInstanceByEngineReqProductId `json:"product_id"`
 
 	// 是否打开SSL加密访问。 - true：打开SSL加密访问。 - false：不打开SSL加密访问。
@@ -159,14 +159,18 @@ type CreateInstanceByEngineReqProductId struct {
 }
 
 type CreateInstanceByEngineReqProductIdEnum struct {
-	C6_4U8G_CLUSTER   CreateInstanceByEngineReqProductId
-	C6_8U16G_CLUSTER  CreateInstanceByEngineReqProductId
-	C6_12U24G_CLUSTER CreateInstanceByEngineReqProductId
-	C6_16U32G_CLUSTER CreateInstanceByEngineReqProductId
+	C6_4U8G_CLUSTER_SMALL CreateInstanceByEngineReqProductId
+	C6_4U8G_CLUSTER       CreateInstanceByEngineReqProductId
+	C6_8U16G_CLUSTER      CreateInstanceByEngineReqProductId
+	C6_12U24G_CLUSTER     CreateInstanceByEngineReqProductId
+	C6_16U32G_CLUSTER     CreateInstanceByEngineReqProductId
 }
 
 func GetCreateInstanceByEngineReqProductIdEnum() CreateInstanceByEngineReqProductIdEnum {
 	return CreateInstanceByEngineReqProductIdEnum{
+		C6_4U8G_CLUSTER_SMALL: CreateInstanceByEngineReqProductId{
+			value: "c6.4u8g.cluster.small",
+		},
 		C6_4U8G_CLUSTER: CreateInstanceByEngineReqProductId{
 			value: "c6.4u8g.cluster",
 		},

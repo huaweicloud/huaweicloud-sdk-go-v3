@@ -220,3 +220,15 @@ func (i *UpdateClusterScalingInvoker) Invoke() (*model.UpdateClusterScalingRespo
 		return result.(*model.UpdateClusterScalingResponse), nil
 	}
 }
+
+type ListAvailableZonesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAvailableZonesInvoker) Invoke() (*model.ListAvailableZonesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAvailableZonesResponse), nil
+	}
+}

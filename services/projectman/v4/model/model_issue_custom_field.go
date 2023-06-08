@@ -23,6 +23,9 @@ type IssueCustomField struct {
 
 	// 自定义字段支持的工作项类型 2任务/Task,3缺陷/Bug,5Epic,6Feature,7Story
 	TrackerIds *[]int32 `json:"tracker_ids,omitempty"`
+
+	// 自定义字段创建时间
+	CreateTime *string `json:"create_time,omitempty"`
 }
 
 func (o IssueCustomField) String() string {

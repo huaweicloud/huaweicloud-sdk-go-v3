@@ -23,6 +23,9 @@ type CreateAddressGroupOption struct {
 
 	// 功能说明：地址组最大条目数，限制地址组可以包含的地址数量 取值范围：0-20 默认值：20
 	MaxCapacity *int32 `json:"max_capacity,omitempty"`
+
+	// 功能说明：企业项目ID。创建IP地址组时，给IP地址组绑定企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 
 func (o CreateAddressGroupOption) String() string {
