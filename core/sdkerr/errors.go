@@ -138,6 +138,20 @@ func NewServiceResponseError(resp *http.Response) *ServiceResponseError {
 	return sr
 }
 
+func IsNotFound(err error) bool {
+	if err == nil {
+		return false
+	}
+
+	if errorResponse, ok := err.(*ServiceResponseError); ok {
+		if errorResponse.StatusCode == http.StatusNotFound {
+			return true
+		}
+	}
+
+	return false
+}
+
 func processServiceResponseError(m errMap, sr *ServiceResponseError) {
 	if value := m.getStringValue(encodedAuthorizationMessage); value != "" {
 		sr.EncodedAuthorizationMessage = value
