@@ -65,8 +65,11 @@ type CreateHostResponse struct {
 	Flag *Flag `json:"flag,omitempty"`
 
 	// 扩展字段，用于保存防护域名的一些配置信息。
-	Extend         map[string]string `json:"extend,omitempty"`
-	HttpStatusCode int               `json:"-"`
+	Extend map[string]string `json:"extend,omitempty"`
+
+	// 字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
+	ForwardHeaderMap map[string]string `json:"forward_header_map,omitempty"`
+	HttpStatusCode   int               `json:"-"`
 }
 
 func (o CreateHostResponse) String() string {

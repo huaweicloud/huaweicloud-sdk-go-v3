@@ -9,7 +9,7 @@ import (
 // Response Object
 type AddDatabasePermissionResponse struct {
 
-	// 授予用户权限的任务id。
+	// 授予用户权限的任务ID。
 	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

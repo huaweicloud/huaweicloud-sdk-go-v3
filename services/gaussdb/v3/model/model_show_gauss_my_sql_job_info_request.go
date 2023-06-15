@@ -9,7 +9,7 @@ import (
 // Request Object
 type ShowGaussMySqlJobInfoRequest struct {
 
-	// 语言
+	// 语言。
 	XLanguage *string `json:"X-Language,omitempty"`
 
 	// 任务ID。

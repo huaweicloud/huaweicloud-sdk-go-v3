@@ -12,7 +12,7 @@ import (
 // Request Object
 type ShowGaussMySqlProjectQuotasRequest struct {
 
-	// 语言
+	// 语言。
 	XLanguage *string `json:"X-Language,omitempty"`
 
 	// 功能说明：根据type过滤查询指定类型的配额。  取值范围：instance

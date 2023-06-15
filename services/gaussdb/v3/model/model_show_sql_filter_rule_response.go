@@ -9,7 +9,7 @@ import (
 // Response Object
 type ShowSqlFilterRuleResponse struct {
 
-	// 节点id
+	// 节点ID
 	NodeId *string `json:"node_id,omitempty"`
 
 	// SQL限流规则

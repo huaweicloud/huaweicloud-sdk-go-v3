@@ -21,7 +21,7 @@ type LtsLogErrorQueryRequest struct {
 	// 查询记录数。
 	Limit int32 `json:"limit"`
 
-	// 日志单行序列号，据此进行查询时的偏移。
+	// 日志单行序列号，第一次查询时不需要此参数,后续分页查询时需要使用,可从上次查询的返回信息中获取。
 	LineNum *string `json:"line_num,omitempty"`
 
 	// 日志级别，默认为ALL。  取值范围： - ALL - INFO - LOG - WARNING - ERROR - FATAL - PANIC - NOTE

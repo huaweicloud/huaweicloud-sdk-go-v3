@@ -9,7 +9,7 @@ import (
 // Request Object
 type UpdateGaussMySqlBackupPolicyRequest struct {
 
-	// 语言
+	// 语言。
 	XLanguage *string `json:"X-Language,omitempty"`
 
 	// 实例ID，严格匹配UUID规则。

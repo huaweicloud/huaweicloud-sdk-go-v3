@@ -21,7 +21,7 @@ type CreateRocketMqMigrationTaskRequest struct {
 	// 迁移任务名称，名称规则参考创建实例
 	Name string `json:"name"`
 
-	// 迁移任务类型，分为自建RocketMQ上云(rocketmq)、自建RabbitMQ上云(rabbitToRocket)、自建Kafka上云(kafka)
+	// 迁移任务类型，分为自建RocketMQ上云(rocketmq)、自建RabbitMQ上云(rabbitToRocket)
 	Type CreateRocketMqMigrationTaskRequestType `json:"type"`
 
 	Body *string `json:"body,omitempty"`
@@ -85,7 +85,6 @@ type CreateRocketMqMigrationTaskRequestType struct {
 type CreateRocketMqMigrationTaskRequestTypeEnum struct {
 	ROCKETMQ         CreateRocketMqMigrationTaskRequestType
 	RABBIT_TO_ROCKET CreateRocketMqMigrationTaskRequestType
-	KAFKA            CreateRocketMqMigrationTaskRequestType
 }
 
 func GetCreateRocketMqMigrationTaskRequestTypeEnum() CreateRocketMqMigrationTaskRequestTypeEnum {
@@ -95,9 +94,6 @@ func GetCreateRocketMqMigrationTaskRequestTypeEnum() CreateRocketMqMigrationTask
 		},
 		RABBIT_TO_ROCKET: CreateRocketMqMigrationTaskRequestType{
 			value: "rabbitToRocket",
-		},
-		KAFKA: CreateRocketMqMigrationTaskRequestType{
-			value: "kafka",
 		},
 	}
 }

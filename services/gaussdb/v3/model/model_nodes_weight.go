@@ -8,7 +8,7 @@ import (
 
 type NodesWeight struct {
 
-	// 数据库节点id。
+	// 数据库节点ID。
 	Id *string `json:"id,omitempty"`
 
 	// 权重。取值范围：0~1000。

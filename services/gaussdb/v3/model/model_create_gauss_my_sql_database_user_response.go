@@ -9,7 +9,7 @@ import (
 // Response Object
 type CreateGaussMySqlDatabaseUserResponse struct {
 
-	// 创建数据库用户的任务id。
+	// 创建数据库用户的任务ID。
 	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

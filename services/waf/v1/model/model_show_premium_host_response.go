@@ -80,6 +80,9 @@ type ShowPremiumHostResponse struct {
 
 	TimeoutConfig *TimeoutConfig `json:"timeout_config,omitempty"`
 
+	// 字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
+	ForwardHeaderMap map[string]string `json:"forward_header_map,omitempty"`
+
 	// 接入进度，仅用于新版console(前端)使用
 	AccessProgress *[]AccessProgress `json:"access_progress,omitempty"`
 	HttpStatusCode int               `json:"-"`

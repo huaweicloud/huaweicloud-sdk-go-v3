@@ -365,18 +365,6 @@ func (i *ListGaussMySqlDedicatedResourcesInvoker) Invoke() (*model.ListGaussMySq
 	}
 }
 
-type ListGaussMySqlErrorLogInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListGaussMySqlErrorLogInvoker) Invoke() (*model.ListGaussMySqlErrorLogResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListGaussMySqlErrorLogResponse), nil
-	}
-}
-
 type ListGaussMySqlInstanceDetailInfoInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -398,18 +386,6 @@ func (i *ListGaussMySqlInstancesInvoker) Invoke() (*model.ListGaussMySqlInstance
 		return nil, err
 	} else {
 		return result.(*model.ListGaussMySqlInstancesResponse), nil
-	}
-}
-
-type ListGaussMySqlSlowLogInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListGaussMySqlSlowLogInvoker) Invoke() (*model.ListGaussMySqlSlowLogResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListGaussMySqlSlowLogResponse), nil
 	}
 }
 

@@ -202,6 +202,15 @@ type Cluster struct {
 
 	// Task节点列表信息。
 	TaskNodeGroups *[]NodeGroupV10 `json:"taskNodeGroups,omitempty"`
+
+	// 集群弹性公网ip的唯一标识
+	EipId *string `json:"eipId,omitempty"`
+
+	// 集群弹性公网ip的IPV4地址
+	EipAddress *string `json:"eipAddress,omitempty"`
+
+	// 集群弹性公网ip的IPV6地址，IPv4时无此字段。
+	Eipv6Address *string `json:"eipv6Address,omitempty"`
 }
 
 func (o Cluster) String() string {

@@ -15,7 +15,7 @@ type DeviceDataCondition struct {
 	// **参数说明**：设备关联的产品ID，用于唯一标识一个产品模型，创建产品后获得。方法请参见 [[创建产品](https://support.huaweicloud.com/api-iothub/iot_06_v5_0050.html)](tag:hws)[[创建产品](https://support.huaweicloud.com/intl/zh-cn/api-iothub/iot_06_v5_0050.html)](tag:hws_hk)。存在该参数且device_id为空时设备属性触发匹配该产品下所有设备触发，该参数值和device_id不能同时为空。
 	ProductId *string `json:"product_id,omitempty"`
 
-	// 数据过滤条件
+	// 数据过滤条件。
 	Filters *[]PropertyFilter `json:"filters,omitempty"`
 }
 

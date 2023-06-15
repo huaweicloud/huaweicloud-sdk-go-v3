@@ -9,7 +9,7 @@ import (
 // Response Object
 type ShowDedicatedResourceInfoResponse struct {
 
-	// 专属资源池id。
+	// 专属资源池ID。
 	Id *string `json:"id,omitempty"`
 
 	// 专属资源池名称。

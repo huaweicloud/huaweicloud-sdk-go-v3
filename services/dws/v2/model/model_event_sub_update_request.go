@@ -28,7 +28,7 @@ type EventSubUpdateRequest struct {
 	Tag *string `json:"tag,omitempty"`
 
 	// 是否开启订阅 1为开启，0为关闭
-	Enable int32 `json:"enable"`
+	Enable *int32 `json:"enable,omitempty"`
 
 	// 消息通知地址
 	NotificationTarget string `json:"notification_target"`

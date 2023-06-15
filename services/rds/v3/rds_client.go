@@ -3223,6 +3223,27 @@ func (c *RdsClient) ListSqlserverDbUsersInvoker(request *model.ListSqlserverDbUs
 	return &ListSqlserverDbUsersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ModifyCollation 修改实例字符集
+//
+// 修改实例字符集。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ModifyCollation(request *model.ModifyCollationRequest) (*model.ModifyCollationResponse, error) {
+	requestDef := GenReqDefForModifyCollation()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifyCollationResponse), nil
+	}
+}
+
+// ModifyCollationInvoker 修改实例字符集
+func (c *RdsClient) ModifyCollationInvoker(request *model.ModifyCollationRequest) *ModifyCollationInvoker {
+	requestDef := GenReqDefForModifyCollation()
+	return &ModifyCollationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RevokeSqlserverDbUserPrivilege 解除数据库帐号权限
 //
 // 解除数据库帐号权限。

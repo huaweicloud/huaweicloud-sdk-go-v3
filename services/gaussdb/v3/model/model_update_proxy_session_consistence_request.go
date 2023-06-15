@@ -15,7 +15,7 @@ type UpdateProxySessionConsistenceRequest struct {
 	// 租户在某一project下的实例ID。
 	InstanceId string `json:"instance_id"`
 
-	// 租户在某一instance下的数据库代理id。
+	// 租户在某一instance下的数据库代理ID。
 	ProxyId string `json:"proxy_id"`
 
 	Body *ModifyProxyConsistRequest `json:"body,omitempty"`

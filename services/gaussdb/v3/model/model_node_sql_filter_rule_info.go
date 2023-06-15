@@ -9,7 +9,7 @@ import (
 // 节点级别的SQL限流规则。
 type NodeSqlFilterRuleInfo struct {
 
-	// 节点id
+	// 节点ID
 	NodeId string `json:"node_id"`
 
 	// SQL限流规则。集合的sql_type值不能重复。

@@ -13,7 +13,7 @@ type AlarmSubRequest struct {
 	Name string `json:"name"`
 
 	// 是否开启订阅
-	Enable string `json:"enable"`
+	Enable *int32 `json:"enable,omitempty"`
 
 	// 告警级别
 	AlarmLevel *string `json:"alarm_level,omitempty"`

@@ -5,6 +5,102 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/ccm/v1/model"
 )
 
+type BatchCreateCaTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateCaTagsInvoker) Invoke() (*model.BatchCreateCaTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCreateCaTagsResponse), nil
+	}
+}
+
+type BatchCreateCertTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateCertTagsInvoker) Invoke() (*model.BatchCreateCertTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCreateCertTagsResponse), nil
+	}
+}
+
+type BatchDeleteCaTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteCaTagsInvoker) Invoke() (*model.BatchDeleteCaTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteCaTagsResponse), nil
+	}
+}
+
+type BatchDeleteCertTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteCertTagsInvoker) Invoke() (*model.BatchDeleteCertTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteCertTagsResponse), nil
+	}
+}
+
+type CountCaResourceInstancesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CountCaResourceInstancesInvoker) Invoke() (*model.CountCaResourceInstancesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CountCaResourceInstancesResponse), nil
+	}
+}
+
+type CountCertResourceInstancesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CountCertResourceInstancesInvoker) Invoke() (*model.CountCertResourceInstancesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CountCertResourceInstancesResponse), nil
+	}
+}
+
+type CreateCaTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateCaTagInvoker) Invoke() (*model.CreateCaTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateCaTagResponse), nil
+	}
+}
+
+type CreateCertTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateCertTagInvoker) Invoke() (*model.CreateCertTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateCertTagResponse), nil
+	}
+}
+
 type CreateCertificateInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -89,6 +185,54 @@ func (i *ExportCertificateInvoker) Invoke() (*model.ExportCertificateResponse, e
 	}
 }
 
+type ListCaResourceInstancesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCaResourceInstancesInvoker) Invoke() (*model.ListCaResourceInstancesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCaResourceInstancesResponse), nil
+	}
+}
+
+type ListCaTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCaTagsInvoker) Invoke() (*model.ListCaTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCaTagsResponse), nil
+	}
+}
+
+type ListCertResourceInstancesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCertResourceInstancesInvoker) Invoke() (*model.ListCertResourceInstancesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCertResourceInstancesResponse), nil
+	}
+}
+
+type ListCertTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCertTagsInvoker) Invoke() (*model.ListCertTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCertTagsResponse), nil
+	}
+}
+
 type ListCertificateInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -110,6 +254,30 @@ func (i *ListCertificateAuthorityObsBucketInvoker) Invoke() (*model.ListCertific
 		return nil, err
 	} else {
 		return result.(*model.ListCertificateAuthorityObsBucketResponse), nil
+	}
+}
+
+type ListDomainCaTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDomainCaTagsInvoker) Invoke() (*model.ListDomainCaTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDomainCaTagsResponse), nil
+	}
+}
+
+type ListDomainCertTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDomainCertTagsInvoker) Invoke() (*model.ListDomainCertTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDomainCertTagsResponse), nil
 	}
 }
 

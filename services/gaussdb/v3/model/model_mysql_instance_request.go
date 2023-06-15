@@ -50,7 +50,7 @@ type MysqlInstanceRequest struct {
 	// 主可用区。
 	MasterAvailabilityZone *string `json:"master_availability_zone,omitempty"`
 
-	// 备节点个数。单次接口调用最多支持创建9个备节点。
+	// 只读节点个数。单次接口调用最多支持创建9个只读节点。
 	SlaveCount int32 `json:"slave_count"`
 
 	Volume *MysqlVolume `json:"volume,omitempty"`

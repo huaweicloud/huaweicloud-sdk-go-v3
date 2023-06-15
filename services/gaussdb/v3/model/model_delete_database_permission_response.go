@@ -9,7 +9,7 @@ import (
 // Response Object
 type DeleteDatabasePermissionResponse struct {
 
-	// 删除数据库用户的数据库权限任务id。
+	// 删除数据库用户的数据库权限任务ID。
 	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

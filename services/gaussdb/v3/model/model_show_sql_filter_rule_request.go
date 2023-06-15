@@ -15,7 +15,7 @@ type ShowSqlFilterRuleRequest struct {
 	// 实例ID。
 	InstanceId string `json:"instance_id"`
 
-	// 节点id。
+	// 节点ID。
 	NodeId string `json:"node_id"`
 
 	// SQL限流类型，取值为SELECT、UPDATE、DELETE，不区分大小写；若不传则默认查询所有类型的限流规则。

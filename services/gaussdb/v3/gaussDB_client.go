@@ -650,27 +650,6 @@ func (c *GaussDBClient) ListGaussMySqlDedicatedResourcesInvoker(request *model.L
 	return &ListGaussMySqlDedicatedResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListGaussMySqlErrorLog 查询数据库错误日志
-//
-// 查询数据库错误日志。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *GaussDBClient) ListGaussMySqlErrorLog(request *model.ListGaussMySqlErrorLogRequest) (*model.ListGaussMySqlErrorLogResponse, error) {
-	requestDef := GenReqDefForListGaussMySqlErrorLog()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListGaussMySqlErrorLogResponse), nil
-	}
-}
-
-// ListGaussMySqlErrorLogInvoker 查询数据库错误日志
-func (c *GaussDBClient) ListGaussMySqlErrorLogInvoker(request *model.ListGaussMySqlErrorLogRequest) *ListGaussMySqlErrorLogInvoker {
-	requestDef := GenReqDefForListGaussMySqlErrorLog()
-	return &ListGaussMySqlErrorLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // ListGaussMySqlInstanceDetailInfo 批量查询实例详情
 //
 // 批量查询实例详情。
@@ -711,27 +690,6 @@ func (c *GaussDBClient) ListGaussMySqlInstances(request *model.ListGaussMySqlIns
 func (c *GaussDBClient) ListGaussMySqlInstancesInvoker(request *model.ListGaussMySqlInstancesRequest) *ListGaussMySqlInstancesInvoker {
 	requestDef := GenReqDefForListGaussMySqlInstances()
 	return &ListGaussMySqlInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListGaussMySqlSlowLog 查询数据库慢日志
-//
-// 查询数据库慢日志。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *GaussDBClient) ListGaussMySqlSlowLog(request *model.ListGaussMySqlSlowLogRequest) (*model.ListGaussMySqlSlowLogResponse, error) {
-	requestDef := GenReqDefForListGaussMySqlSlowLog()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListGaussMySqlSlowLogResponse), nil
-	}
-}
-
-// ListGaussMySqlSlowLogInvoker 查询数据库慢日志
-func (c *GaussDBClient) ListGaussMySqlSlowLogInvoker(request *model.ListGaussMySqlSlowLogRequest) *ListGaussMySqlSlowLogInvoker {
-	requestDef := GenReqDefForListGaussMySqlSlowLog()
-	return &ListGaussMySqlSlowLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListImmediateJobs 获取即时任务列表
@@ -1301,9 +1259,9 @@ func (c *GaussDBClient) ShowGaussMySqlQuotasInvoker(request *model.ShowGaussMySq
 	return &ShowGaussMySqlQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowInstanceMonitorExtend 查询实例秒级监控频率
+// ShowInstanceMonitorExtend 查询实例秒级监控
 //
-// 查询实例秒级监控频率。
+// 查询实例秒级监控信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) ShowInstanceMonitorExtend(request *model.ShowInstanceMonitorExtendRequest) (*model.ShowInstanceMonitorExtendResponse, error) {
@@ -1316,7 +1274,7 @@ func (c *GaussDBClient) ShowInstanceMonitorExtend(request *model.ShowInstanceMon
 	}
 }
 
-// ShowInstanceMonitorExtendInvoker 查询实例秒级监控频率
+// ShowInstanceMonitorExtendInvoker 查询实例秒级监控
 func (c *GaussDBClient) ShowInstanceMonitorExtendInvoker(request *model.ShowInstanceMonitorExtendRequest) *ShowInstanceMonitorExtendInvoker {
 	requestDef := GenReqDefForShowInstanceMonitorExtend()
 	return &ShowInstanceMonitorExtendInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1637,9 +1595,9 @@ func (c *GaussDBClient) UpdateGaussMySqlQuotasInvoker(request *model.UpdateGauss
 	return &UpdateGaussMySqlQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateInstanceMonitor 修改实例秒级监控频率
+// UpdateInstanceMonitor 设置实例秒级监控
 //
-// 打开/关闭/修改实例秒级监控。
+// 设置实例秒级监控，包括1秒监控和5秒监控。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) UpdateInstanceMonitor(request *model.UpdateInstanceMonitorRequest) (*model.UpdateInstanceMonitorResponse, error) {
@@ -1652,7 +1610,7 @@ func (c *GaussDBClient) UpdateInstanceMonitor(request *model.UpdateInstanceMonit
 	}
 }
 
-// UpdateInstanceMonitorInvoker 修改实例秒级监控频率
+// UpdateInstanceMonitorInvoker 设置实例秒级监控
 func (c *GaussDBClient) UpdateInstanceMonitorInvoker(request *model.UpdateInstanceMonitorRequest) *UpdateInstanceMonitorInvoker {
 	requestDef := GenReqDefForUpdateInstanceMonitor()
 	return &UpdateInstanceMonitorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

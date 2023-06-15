@@ -1829,6 +1829,18 @@ func (i *ListSqlserverDbUsersInvoker) Invoke() (*model.ListSqlserverDbUsersRespo
 	}
 }
 
+type ModifyCollationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifyCollationInvoker) Invoke() (*model.ModifyCollationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifyCollationResponse), nil
+	}
+}
+
 type RevokeSqlserverDbUserPrivilegeInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -15,7 +15,7 @@ type ListPremiumHostRequest struct {
 	// 分页查询时，返回第几页数据。默认值为1，表示返回第1页数据。
 	Page *string `json:"page,omitempty"`
 
-	// 分页查询时，每页包含多少条结果。范围1-100，默认值为10，表示每页包含10条结果。
+	// 分页查询时，每页包含多少条结果。范围1-100，默认值为10，表示每页包含10条结果。如果需要一次查全部域名，该参数值填-1。
 	Pagesize *string `json:"pagesize,omitempty"`
 
 	// 域名

@@ -12,7 +12,7 @@ type UpdateGaussMySqlBackupPolicyResponse struct {
 	// 状态信息
 	Status *string `json:"status,omitempty"`
 
-	// 实例ID
+	// 实例ID。
 	InstanceId *string `json:"instance_id,omitempty"`
 
 	// 实例名称

@@ -629,6 +629,18 @@ func (i *ListDataSourceInvoker) Invoke() (*model.ListDataSourceResponse, error) 
 	}
 }
 
+type ListDatabaseUsersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDatabaseUsersInvoker) Invoke() (*model.ListDatabaseUsersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDatabaseUsersResponse), nil
+	}
+}
+
 type ListDisasterRecoverInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -953,6 +965,30 @@ func (i *RestoreDisasterInvoker) Invoke() (*model.RestoreDisasterResponse, error
 	}
 }
 
+type ShowDatabaseAuthorityInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDatabaseAuthorityInvoker) Invoke() (*model.ShowDatabaseAuthorityResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDatabaseAuthorityResponse), nil
+	}
+}
+
+type ShowDatabaseUserInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDatabaseUserInvoker) Invoke() (*model.ShowDatabaseUserResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDatabaseUserResponse), nil
+	}
+}
+
 type ShowDisasterDetailInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -962,6 +998,18 @@ func (i *ShowDisasterDetailInvoker) Invoke() (*model.ShowDisasterDetailResponse,
 		return nil, err
 	} else {
 		return result.(*model.ShowDisasterDetailResponse), nil
+	}
+}
+
+type ShowDisasterProgressInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDisasterProgressInvoker) Invoke() (*model.ShowDisasterProgressResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDisasterProgressResponse), nil
 	}
 }
 
@@ -1025,6 +1073,18 @@ func (i *SwitchoverDisasterRecoveryInvoker) Invoke() (*model.SwitchoverDisasterR
 	}
 }
 
+type SyncIamUsersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SyncIamUsersInvoker) Invoke() (*model.SyncIamUsersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SyncIamUsersResponse), nil
+	}
+}
+
 type UpdateAlarmSubInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1070,6 +1130,30 @@ func (i *UpdateDataSourceInvoker) Invoke() (*model.UpdateDataSourceResponse, err
 		return nil, err
 	} else {
 		return result.(*model.UpdateDataSourceResponse), nil
+	}
+}
+
+type UpdateDatabaseAuthorityInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDatabaseAuthorityInvoker) Invoke() (*model.UpdateDatabaseAuthorityResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDatabaseAuthorityResponse), nil
+	}
+}
+
+type UpdateDatabaseUserInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDatabaseUserInfoInvoker) Invoke() (*model.UpdateDatabaseUserInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDatabaseUserInfoResponse), nil
 	}
 }
 

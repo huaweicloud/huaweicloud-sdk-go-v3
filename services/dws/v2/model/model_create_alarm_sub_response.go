@@ -16,7 +16,7 @@ type CreateAlarmSubResponse struct {
 	Name *string `json:"name,omitempty"`
 
 	// 是否开启订阅
-	Enable *string `json:"enable,omitempty"`
+	Enable *int32 `json:"enable,omitempty"`
 
 	// 告警级别
 	AlarmLevel *string `json:"alarm_level,omitempty"`

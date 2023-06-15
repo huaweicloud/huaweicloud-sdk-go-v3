@@ -27,16 +27,16 @@ type CreateInstanceByEngineReq struct {
 	// 存储空间。
 	StorageSpace int32 `json:"storage_space"`
 
-	// 虚拟私有云ID。  获取方法如下： - 登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。
+	// 虚拟私有云ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。
 	VpcId string `json:"vpc_id"`
 
-	// 子网信息。  获取方法如下： - 登录虚拟私有云服务的控制台界面，单击VPC下的子网，进入子网详情页面，查找网络ID。
+	// 子网信息。  获取方法如下：登录虚拟私有云服务的控制台界面，单击VPC下的子网，进入子网详情页面，查找网络ID。
 	SubnetId string `json:"subnet_id"`
 
-	// 指定实例所属的安全组。  获取方法如下： - 登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
+	// 指定实例所属的安全组。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
 	SecurityGroupId string `json:"security_group_id"`
 
-	// 创建节点到指定且有资源的可用区ID。该参数不能为空数组或者数组的值为空， 请注意查看该可用区是否有资源。  创建RocketMQ实例，支持节点部署在1个或3个及3个以上的可用区。在为节点指定可用区时，用逗号分隔开。
+	// 创建节点到指定且有资源的可用区ID。请参考[查询可用区信息](ListAvailableZones.xml)获取可用区ID。  该参数不能为空数组或者数组的值为空， 请注意查看该可用区是否有资源。  创建RocketMQ实例，支持节点部署在1个或3个及3个以上的可用区。在为节点指定可用区时，用逗号分隔开。
 	AvailableZones []string `json:"available_zones"`
 
 	// RocketMQ实例规格。   - c6.4u8g.cluster.small：单个代理最大Topic数2000，单个代理最大消费组数2000   - c6.4u8g.cluster：单个代理最大Topic数4000，单个代理最大消费组数4000   - c6.8u16g.cluster：单个代理最大Topic数8000，单个代理最大消费组数8000   - c6.12u24g.cluster：单个代理最大Topic数12000，单个代理最大消费组数12000   - c6.16u32g.cluster：单个代理最大Topic数16000，单个代理最大消费组数16000

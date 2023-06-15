@@ -11,10 +11,10 @@ type MysqlRestorePoint struct {
 	// PITR。要恢复的时间点。
 	RestoreTime *int64 `json:"restore_time,omitempty"`
 
-	// 源实例id。
+	// 源实例ID。
 	SourceInstanceId string `json:"source_instance_id"`
 
-	// 备份文件id。
+	// 备份文件ID。
 	BackupId *string `json:"backup_id,omitempty"`
 
 	// 备份类型。当参数为空时，backup_id不能为空，即默认按备份文件恢复。 当参数不为空时，取值范围： - backup：表示按备份文件恢复； - timestamp：表示按时间点恢复；

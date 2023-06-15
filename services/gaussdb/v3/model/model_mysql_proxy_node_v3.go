@@ -8,10 +8,10 @@ import (
 
 type MysqlProxyNodeV3 struct {
 
-	// 节点id。
+	// 节点ID。
 	Id *string `json:"id,omitempty"`
 
-	// 实例id。
+	// 实例ID。
 	InstanceId *string `json:"instance_id,omitempty"`
 
 	// 节点状态。

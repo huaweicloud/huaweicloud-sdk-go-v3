@@ -8,7 +8,7 @@ import (
 
 type MysqlProxyNodes struct {
 
-	// Proxy节点id。
+	// Proxy节点ID。
 	Id *string `json:"id,omitempty"`
 
 	// Proxy节点状态。  取值范围： - ACTIVE，表示节点正常 - ABNORMAL，表示节点异常 - FAILED，表示节点失败 - DELETED，表示节点已删除

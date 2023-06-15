@@ -9,7 +9,7 @@ import (
 // Response Object
 type UpdateTransactionSplitStatusResponse struct {
 
-	// 工作流id
+	// 工作流ID
 	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

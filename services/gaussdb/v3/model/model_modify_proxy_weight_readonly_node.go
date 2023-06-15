@@ -9,7 +9,7 @@ import (
 // 只读节点权重信息
 type ModifyProxyWeightReadonlyNode struct {
 
-	// 只读节点id
+	// 只读节点ID
 	Id *string `json:"id,omitempty"`
 
 	// 只读节点权重

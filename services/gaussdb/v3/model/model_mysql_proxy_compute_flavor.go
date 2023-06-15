@@ -17,7 +17,7 @@ type MysqlProxyComputeFlavor struct {
 	// 数据库类型。
 	DbType string `json:"db_type"`
 
-	// Proxy规格id。
+	// Proxy规格ID。
 	Id string `json:"id"`
 
 	// Proxy规格码。

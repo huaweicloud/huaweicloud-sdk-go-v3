@@ -327,7 +327,7 @@ func GenReqDefForListBatchTasks() *def.HttpRequestDef {
 func GenReqDefForRetryBatchTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/{project_id}/batchtasks/{task_id}/retry").
+		WithPath("/v5/iot/{project_id}/batchtasks/{task_id}/retry").
 		WithResponse(new(model.RetryBatchTaskResponse)).
 		WithContentType("application/json")
 
@@ -394,7 +394,7 @@ func GenReqDefForShowBatchTask() *def.HttpRequestDef {
 func GenReqDefForStopBatchTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/{project_id}/batchtasks/{task_id}/stop").
+		WithPath("/v5/iot/{project_id}/batchtasks/{task_id}/stop").
 		WithResponse(new(model.StopBatchTaskResponse)).
 		WithContentType("application/json")
 

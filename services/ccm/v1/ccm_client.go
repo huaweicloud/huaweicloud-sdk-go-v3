@@ -19,6 +19,174 @@ func CcmClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+// BatchCreateCaTags 批量创建CA标签
+//
+// 批量创建CA标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcmClient) BatchCreateCaTags(request *model.BatchCreateCaTagsRequest) (*model.BatchCreateCaTagsResponse, error) {
+	requestDef := GenReqDefForBatchCreateCaTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateCaTagsResponse), nil
+	}
+}
+
+// BatchCreateCaTagsInvoker 批量创建CA标签
+func (c *CcmClient) BatchCreateCaTagsInvoker(request *model.BatchCreateCaTagsRequest) *BatchCreateCaTagsInvoker {
+	requestDef := GenReqDefForBatchCreateCaTags()
+	return &BatchCreateCaTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchCreateCertTags 批量创建证书标签
+//
+// 批量创建证书标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcmClient) BatchCreateCertTags(request *model.BatchCreateCertTagsRequest) (*model.BatchCreateCertTagsResponse, error) {
+	requestDef := GenReqDefForBatchCreateCertTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateCertTagsResponse), nil
+	}
+}
+
+// BatchCreateCertTagsInvoker 批量创建证书标签
+func (c *CcmClient) BatchCreateCertTagsInvoker(request *model.BatchCreateCertTagsRequest) *BatchCreateCertTagsInvoker {
+	requestDef := GenReqDefForBatchCreateCertTags()
+	return &BatchCreateCertTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteCaTags 批量删除CA标签
+//
+// 批量删除CA标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcmClient) BatchDeleteCaTags(request *model.BatchDeleteCaTagsRequest) (*model.BatchDeleteCaTagsResponse, error) {
+	requestDef := GenReqDefForBatchDeleteCaTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteCaTagsResponse), nil
+	}
+}
+
+// BatchDeleteCaTagsInvoker 批量删除CA标签
+func (c *CcmClient) BatchDeleteCaTagsInvoker(request *model.BatchDeleteCaTagsRequest) *BatchDeleteCaTagsInvoker {
+	requestDef := GenReqDefForBatchDeleteCaTags()
+	return &BatchDeleteCaTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteCertTags 批量删除证书标签
+//
+// 批量删除证书标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcmClient) BatchDeleteCertTags(request *model.BatchDeleteCertTagsRequest) (*model.BatchDeleteCertTagsResponse, error) {
+	requestDef := GenReqDefForBatchDeleteCertTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteCertTagsResponse), nil
+	}
+}
+
+// BatchDeleteCertTagsInvoker 批量删除证书标签
+func (c *CcmClient) BatchDeleteCertTagsInvoker(request *model.BatchDeleteCertTagsRequest) *BatchDeleteCertTagsInvoker {
+	requestDef := GenReqDefForBatchDeleteCertTags()
+	return &BatchDeleteCertTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CountCaResourceInstances 根据标签查询CA数量
+//
+// 根据标签查询CA数量。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcmClient) CountCaResourceInstances(request *model.CountCaResourceInstancesRequest) (*model.CountCaResourceInstancesResponse, error) {
+	requestDef := GenReqDefForCountCaResourceInstances()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CountCaResourceInstancesResponse), nil
+	}
+}
+
+// CountCaResourceInstancesInvoker 根据标签查询CA数量
+func (c *CcmClient) CountCaResourceInstancesInvoker(request *model.CountCaResourceInstancesRequest) *CountCaResourceInstancesInvoker {
+	requestDef := GenReqDefForCountCaResourceInstances()
+	return &CountCaResourceInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CountCertResourceInstances 根据标签查询证书数量
+//
+// 根据标签查询证书数量。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcmClient) CountCertResourceInstances(request *model.CountCertResourceInstancesRequest) (*model.CountCertResourceInstancesResponse, error) {
+	requestDef := GenReqDefForCountCertResourceInstances()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CountCertResourceInstancesResponse), nil
+	}
+}
+
+// CountCertResourceInstancesInvoker 根据标签查询证书数量
+func (c *CcmClient) CountCertResourceInstancesInvoker(request *model.CountCertResourceInstancesRequest) *CountCertResourceInstancesInvoker {
+	requestDef := GenReqDefForCountCertResourceInstances()
+	return &CountCertResourceInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateCaTag 创建CA标签
+//
+// 创建CA标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcmClient) CreateCaTag(request *model.CreateCaTagRequest) (*model.CreateCaTagResponse, error) {
+	requestDef := GenReqDefForCreateCaTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateCaTagResponse), nil
+	}
+}
+
+// CreateCaTagInvoker 创建CA标签
+func (c *CcmClient) CreateCaTagInvoker(request *model.CreateCaTagRequest) *CreateCaTagInvoker {
+	requestDef := GenReqDefForCreateCaTag()
+	return &CreateCaTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateCertTag 创建证书标签
+//
+// 创建证书标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcmClient) CreateCertTag(request *model.CreateCertTagRequest) (*model.CreateCertTagResponse, error) {
+	requestDef := GenReqDefForCreateCertTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateCertTagResponse), nil
+	}
+}
+
+// CreateCertTagInvoker 创建证书标签
+func (c *CcmClient) CreateCertTagInvoker(request *model.CreateCertTagRequest) *CreateCertTagInvoker {
+	requestDef := GenReqDefForCreateCertTag()
+	return &CreateCertTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateCertificate 申请证书
 //
 // 申请证书。
@@ -259,6 +427,90 @@ func (c *CcmClient) ExportCertificateInvoker(request *model.ExportCertificateReq
 	return &ExportCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListCaResourceInstances 根据标签查询CA列表
+//
+// 根据标签查询CA列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcmClient) ListCaResourceInstances(request *model.ListCaResourceInstancesRequest) (*model.ListCaResourceInstancesResponse, error) {
+	requestDef := GenReqDefForListCaResourceInstances()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCaResourceInstancesResponse), nil
+	}
+}
+
+// ListCaResourceInstancesInvoker 根据标签查询CA列表
+func (c *CcmClient) ListCaResourceInstancesInvoker(request *model.ListCaResourceInstancesRequest) *ListCaResourceInstancesInvoker {
+	requestDef := GenReqDefForListCaResourceInstances()
+	return &ListCaResourceInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCaTags 根据CA查询标签列表
+//
+// 根据CA证书ID查询此CA的标签列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcmClient) ListCaTags(request *model.ListCaTagsRequest) (*model.ListCaTagsResponse, error) {
+	requestDef := GenReqDefForListCaTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCaTagsResponse), nil
+	}
+}
+
+// ListCaTagsInvoker 根据CA查询标签列表
+func (c *CcmClient) ListCaTagsInvoker(request *model.ListCaTagsRequest) *ListCaTagsInvoker {
+	requestDef := GenReqDefForListCaTags()
+	return &ListCaTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCertResourceInstances 根据标签查询证书列表
+//
+// 根据标签查询证书列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcmClient) ListCertResourceInstances(request *model.ListCertResourceInstancesRequest) (*model.ListCertResourceInstancesResponse, error) {
+	requestDef := GenReqDefForListCertResourceInstances()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCertResourceInstancesResponse), nil
+	}
+}
+
+// ListCertResourceInstancesInvoker 根据标签查询证书列表
+func (c *CcmClient) ListCertResourceInstancesInvoker(request *model.ListCertResourceInstancesRequest) *ListCertResourceInstancesInvoker {
+	requestDef := GenReqDefForListCertResourceInstances()
+	return &ListCertResourceInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCertTags 根据证书查询标签列表
+//
+// 根据证书ID查询此证书的标签列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcmClient) ListCertTags(request *model.ListCertTagsRequest) (*model.ListCertTagsResponse, error) {
+	requestDef := GenReqDefForListCertTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCertTagsResponse), nil
+	}
+}
+
+// ListCertTagsInvoker 根据证书查询标签列表
+func (c *CcmClient) ListCertTagsInvoker(request *model.ListCertTagsRequest) *ListCertTagsInvoker {
+	requestDef := GenReqDefForListCertTags()
+	return &ListCertTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListCertificate 查询私有证书列表
 //
 // 查询私有证书列表。
@@ -300,6 +552,48 @@ func (c *CcmClient) ListCertificateAuthorityObsBucket(request *model.ListCertifi
 func (c *CcmClient) ListCertificateAuthorityObsBucketInvoker(request *model.ListCertificateAuthorityObsBucketRequest) *ListCertificateAuthorityObsBucketInvoker {
 	requestDef := GenReqDefForListCertificateAuthorityObsBucket()
 	return &ListCertificateAuthorityObsBucketInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDomainCaTags 查询所有CA标签列表
+//
+// 查询所有CA标签列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcmClient) ListDomainCaTags(request *model.ListDomainCaTagsRequest) (*model.ListDomainCaTagsResponse, error) {
+	requestDef := GenReqDefForListDomainCaTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDomainCaTagsResponse), nil
+	}
+}
+
+// ListDomainCaTagsInvoker 查询所有CA标签列表
+func (c *CcmClient) ListDomainCaTagsInvoker(request *model.ListDomainCaTagsRequest) *ListDomainCaTagsInvoker {
+	requestDef := GenReqDefForListDomainCaTags()
+	return &ListDomainCaTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDomainCertTags 查询所有证书标签列表
+//
+// 查询所有证书标签列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcmClient) ListDomainCertTags(request *model.ListDomainCertTagsRequest) (*model.ListDomainCertTagsResponse, error) {
+	requestDef := GenReqDefForListDomainCertTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDomainCertTagsResponse), nil
+	}
+}
+
+// ListDomainCertTagsInvoker 查询所有证书标签列表
+func (c *CcmClient) ListDomainCertTagsInvoker(request *model.ListDomainCertTagsRequest) *ListDomainCertTagsInvoker {
+	requestDef := GenReqDefForListDomainCertTags()
+	return &ListDomainCertTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ParseCertificateSigningRequest 解析CSR

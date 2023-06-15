@@ -9,7 +9,7 @@ import (
 // Request Object
 type CreateGaussMySqlBackupRequest struct {
 
-	// 语言
+	// 语言。
 	XLanguage *string `json:"X-Language,omitempty"`
 
 	Body *MysqlCreateBackupRequest `json:"body,omitempty"`

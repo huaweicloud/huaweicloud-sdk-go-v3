@@ -9,7 +9,7 @@ import (
 // Proxy信息。
 type MysqlProxyInfo struct {
 
-	// Proxy实例id。
+	// Proxy实例ID。
 	PoolId *string `json:"pool_id,omitempty"`
 
 	// Proxy实例名称。

@@ -65,8 +65,11 @@ type CreatePremiumHostResponse struct {
 	// 域名接入状态，0表示未接入，1表示已接入
 	AccessStatus *int32 `json:"access_status,omitempty"`
 
-	BlockPage      *BlockPage `json:"block_page,omitempty"`
-	HttpStatusCode int        `json:"-"`
+	BlockPage *BlockPage `json:"block_page,omitempty"`
+
+	// 字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
+	ForwardHeaderMap map[string]string `json:"forward_header_map,omitempty"`
+	HttpStatusCode   int               `json:"-"`
 }
 
 func (o CreatePremiumHostResponse) String() string {

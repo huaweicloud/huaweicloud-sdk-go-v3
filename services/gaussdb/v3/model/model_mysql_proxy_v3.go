@@ -8,7 +8,7 @@ import (
 
 type MysqlProxyV3 struct {
 
-	// Proxy实例id。
+	// Proxy实例ID。
 	PoolId *string `json:"pool_id,omitempty"`
 
 	// Proxy实例开启状态。  取值: - “ACTIVE”，表示数据库代理正常； - “FAILED”，表示数据库代理创建失败； - “DELETED”，表示数据库代理已删除； - “ABNORMAL”，表示数据库代理异常； - “ENABLING PROXY”，表示数据库代理正在开启； - “DISABLING PROXY”，表示数据库代理正在关闭； - “ADDING PROXY NODE”，表示数据库代理正在扩容； - “DELETING READ REPLICAS FROM PROXY”，表示数据库代理正在移除只读节点； - “ADDING READ REPLICAS TO PROXY”，表示数据库代理正在添加只读节点； - “CHANGING WEIGHTS”，表示数据库代理正在修改只读节点权重。
@@ -56,10 +56,10 @@ type MysqlProxyV3 struct {
 	// Proxy事务拆分开关状态【ON/OFF】。
 	TransactionSplit *string `json:"transaction_split,omitempty"`
 
-	// 连接池类型。  取值范围: - CLOSED 不使用连接池; - SESSION 使用会话级连接池。
+	// 连接池类型。  取值范围: - CLOSED: 关闭连接池。 - SESSION: 开启会话级连接池。
 	ConnectionPoolType *string `json:"connection_pool_type,omitempty"`
 
-	// 数据库代理版本是否支持会话级连接池。  取值范围: - true 支持; - false 不支持。
+	// 数据库代理版本是否支持会话级连接池。  取值范围: - true: 支持。 - false: 不支持。
 	SwitchConnectionPoolTypeEnabled *bool `json:"switch_connection_pool_type_enabled,omitempty"`
 }
 

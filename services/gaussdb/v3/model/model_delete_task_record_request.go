@@ -12,7 +12,7 @@ type DeleteTaskRecordRequest struct {
 	// 语言。
 	XLanguage *string `json:"X-Language,omitempty"`
 
-	// 任务id。
+	// 任务ID。
 	JobId string `json:"job_id"`
 }
 

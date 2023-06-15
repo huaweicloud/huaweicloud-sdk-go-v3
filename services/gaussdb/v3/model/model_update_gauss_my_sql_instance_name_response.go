@@ -9,7 +9,7 @@ import (
 // Response Object
 type UpdateGaussMySqlInstanceNameResponse struct {
 
-	// 修改实例名称的任务id
+	// 修改实例名称的任务ID
 	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

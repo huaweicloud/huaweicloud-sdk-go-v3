@@ -1124,6 +1124,27 @@ func (c *DwsClient) ListDataSourceInvoker(request *model.ListDataSourceRequest) 
 	return &ListDataSourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListDatabaseUsers 查询所有数据库用户/角色
+//
+// 查询所有数据库用户/角色
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ListDatabaseUsers(request *model.ListDatabaseUsersRequest) (*model.ListDatabaseUsersResponse, error) {
+	requestDef := GenReqDefForListDatabaseUsers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDatabaseUsersResponse), nil
+	}
+}
+
+// ListDatabaseUsersInvoker 查询所有数据库用户/角色
+func (c *DwsClient) ListDatabaseUsersInvoker(request *model.ListDatabaseUsersRequest) *ListDatabaseUsersInvoker {
+	requestDef := GenReqDefForListDatabaseUsers()
+	return &ListDatabaseUsersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListDisasterRecover 查询容灾列表
 //
 // 查询容灾列表
@@ -1691,6 +1712,48 @@ func (c *DwsClient) RestoreDisasterInvoker(request *model.RestoreDisasterRequest
 	return &RestoreDisasterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowDatabaseAuthority 查询数据库对象权限
+//
+// 查询数据库对象权限
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ShowDatabaseAuthority(request *model.ShowDatabaseAuthorityRequest) (*model.ShowDatabaseAuthorityResponse, error) {
+	requestDef := GenReqDefForShowDatabaseAuthority()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDatabaseAuthorityResponse), nil
+	}
+}
+
+// ShowDatabaseAuthorityInvoker 查询数据库对象权限
+func (c *DwsClient) ShowDatabaseAuthorityInvoker(request *model.ShowDatabaseAuthorityRequest) *ShowDatabaseAuthorityInvoker {
+	requestDef := GenReqDefForShowDatabaseAuthority()
+	return &ShowDatabaseAuthorityInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDatabaseUser 查询指定用户信息
+//
+// 查询指定用户信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ShowDatabaseUser(request *model.ShowDatabaseUserRequest) (*model.ShowDatabaseUserResponse, error) {
+	requestDef := GenReqDefForShowDatabaseUser()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDatabaseUserResponse), nil
+	}
+}
+
+// ShowDatabaseUserInvoker 查询指定用户信息
+func (c *DwsClient) ShowDatabaseUserInvoker(request *model.ShowDatabaseUserRequest) *ShowDatabaseUserInvoker {
+	requestDef := GenReqDefForShowDatabaseUser()
+	return &ShowDatabaseUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowDisasterDetail 查询容灾详情
 //
 // 查询容灾详情。
@@ -1710,6 +1773,27 @@ func (c *DwsClient) ShowDisasterDetail(request *model.ShowDisasterDetailRequest)
 func (c *DwsClient) ShowDisasterDetailInvoker(request *model.ShowDisasterDetailRequest) *ShowDisasterDetailInvoker {
 	requestDef := GenReqDefForShowDisasterDetail()
 	return &ShowDisasterDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDisasterProgress 容灾-查询容灾进度详情
+//
+// 容灾-查询容灾进度详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ShowDisasterProgress(request *model.ShowDisasterProgressRequest) (*model.ShowDisasterProgressResponse, error) {
+	requestDef := GenReqDefForShowDisasterProgress()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDisasterProgressResponse), nil
+	}
+}
+
+// ShowDisasterProgressInvoker 容灾-查询容灾进度详情
+func (c *DwsClient) ShowDisasterProgressInvoker(request *model.ShowDisasterProgressRequest) *ShowDisasterProgressInvoker {
+	requestDef := GenReqDefForShowDisasterProgress()
+	return &ShowDisasterProgressInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShrinkCluster 集群缩容
@@ -1819,6 +1903,27 @@ func (c *DwsClient) SwitchoverDisasterRecoveryInvoker(request *model.SwitchoverD
 	return &SwitchoverDisasterRecoveryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SyncIamUsers 同步IAM用户到数据库
+//
+// 同步IAM用户到数据库
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) SyncIamUsers(request *model.SyncIamUsersRequest) (*model.SyncIamUsersResponse, error) {
+	requestDef := GenReqDefForSyncIamUsers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SyncIamUsersResponse), nil
+	}
+}
+
+// SyncIamUsersInvoker 同步IAM用户到数据库
+func (c *DwsClient) SyncIamUsersInvoker(request *model.SyncIamUsersRequest) *SyncIamUsersInvoker {
+	requestDef := GenReqDefForSyncIamUsers()
+	return &SyncIamUsersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateAlarmSub 更新告警订阅
 //
 // 更新订阅的告警
@@ -1901,6 +2006,48 @@ func (c *DwsClient) UpdateDataSource(request *model.UpdateDataSourceRequest) (*m
 func (c *DwsClient) UpdateDataSourceInvoker(request *model.UpdateDataSourceRequest) *UpdateDataSourceInvoker {
 	requestDef := GenReqDefForUpdateDataSource()
 	return &UpdateDataSourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDatabaseAuthority 修改数据库对象权限
+//
+// 修改数据库对象权限
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) UpdateDatabaseAuthority(request *model.UpdateDatabaseAuthorityRequest) (*model.UpdateDatabaseAuthorityResponse, error) {
+	requestDef := GenReqDefForUpdateDatabaseAuthority()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDatabaseAuthorityResponse), nil
+	}
+}
+
+// UpdateDatabaseAuthorityInvoker 修改数据库对象权限
+func (c *DwsClient) UpdateDatabaseAuthorityInvoker(request *model.UpdateDatabaseAuthorityRequest) *UpdateDatabaseAuthorityInvoker {
+	requestDef := GenReqDefForUpdateDatabaseAuthority()
+	return &UpdateDatabaseAuthorityInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDatabaseUserInfo 修改指定用户信息
+//
+// 修改指定用户信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) UpdateDatabaseUserInfo(request *model.UpdateDatabaseUserInfoRequest) (*model.UpdateDatabaseUserInfoResponse, error) {
+	requestDef := GenReqDefForUpdateDatabaseUserInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDatabaseUserInfoResponse), nil
+	}
+}
+
+// UpdateDatabaseUserInfoInvoker 修改指定用户信息
+func (c *DwsClient) UpdateDatabaseUserInfoInvoker(request *model.UpdateDatabaseUserInfoRequest) *UpdateDatabaseUserInfoInvoker {
+	requestDef := GenReqDefForUpdateDatabaseUserInfo()
+	return &UpdateDatabaseUserInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateDisasterInfo 更新容灾配置

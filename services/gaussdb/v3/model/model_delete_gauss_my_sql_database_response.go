@@ -9,7 +9,7 @@ import (
 // Response Object
 type DeleteGaussMySqlDatabaseResponse struct {
 
-	// 删除数据库的任务id。
+	// 删除数据库的任务ID。
 	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

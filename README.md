@@ -181,7 +181,7 @@ the [CHANGELOG.md](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/blob/mas
     * [1.3 Timeout Configuration](#13-timeout-configuration-top)
     * [1.4 SSL Certification](#14-ssl-certification-top)
     * [1.5 Custom Network Connection](#15-custom-network-connection-top)
-    * [1.6 Custom HTTP Transport](#15-custom-http-transport-top)
+    * [1.6 Custom HTTP Transport](#16-custom-http-transport-top)
 * [2. Credentials Configuration](#2-credentials-configuration-top)
   * [2.1 Use Permanent AK&SK](#21-use-permanent-aksk-top)
   * [2.2 Use Temporary AK&SK](#22-use-temporary-aksk-top)

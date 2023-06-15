@@ -15,7 +15,7 @@ type CreateGaussMySqlReadonlyNodeResponse struct {
 	// 节点名称列表。
 	NodeNames *[]string `json:"node_names,omitempty"`
 
-	// 创建只读节点的任务id。  仅创建按需只读节点时会返回该参数。
+	// 创建只读节点的任务ID。  仅创建按需只读节点时会返回该参数。
 	JobId *string `json:"job_id,omitempty"`
 
 	// 订单号，创建包年包月只读节点时返回该参数。
