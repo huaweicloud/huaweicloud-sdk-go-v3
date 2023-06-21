@@ -113,6 +113,18 @@ func (i *ShowApiInfoInvoker) Invoke() (*model.ShowApiInfoResponse, error) {
 	}
 }
 
+type ShowDomainQuotaInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDomainQuotaInvoker) Invoke() (*model.ShowDomainQuotaResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDomainQuotaResponse), nil
+	}
+}
+
 type ShowLineGroupInvoker struct {
 	*invoker.BaseInvoker
 }

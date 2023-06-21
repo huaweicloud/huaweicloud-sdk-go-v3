@@ -1109,6 +1109,90 @@ func (i *ListDatabaseResourceFlavorInvoker) Invoke() (*model.ListDatabaseResourc
 	}
 }
 
+type CreateDockingJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDockingJobInvoker) Invoke() (*model.CreateDockingJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDockingJobResponse), nil
+	}
+}
+
+type ShowDockingJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDockingJobInvoker) Invoke() (*model.ShowDockingJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDockingJobResponse), nil
+	}
+}
+
+type CancelDrugJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CancelDrugJobInvoker) Invoke() (*model.CancelDrugJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CancelDrugJobResponse), nil
+	}
+}
+
+type DeleteDrugJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDrugJobInvoker) Invoke() (*model.DeleteDrugJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDrugJobResponse), nil
+	}
+}
+
+type ListDrugJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDrugJobInvoker) Invoke() (*model.ListDrugJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDrugJobResponse), nil
+	}
+}
+
+type CreateFepJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateFepJobInvoker) Invoke() (*model.CreateFepJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateFepJobResponse), nil
+	}
+}
+
+type ShowFepJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowFepJobInvoker) Invoke() (*model.ShowFepJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowFepJobResponse), nil
+	}
+}
+
 type ListIamGroupUsersInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2165,6 +2249,30 @@ func (i *ListObsBucketObjectInvoker) Invoke() (*model.ListObsBucketObjectRespons
 	}
 }
 
+type CreateOptmJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateOptmJobInvoker) Invoke() (*model.CreateOptmJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateOptmJobResponse), nil
+	}
+}
+
+type ShowOptmJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowOptmJobInvoker) Invoke() (*model.ShowOptmJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowOptmJobResponse), nil
+	}
+}
+
 type ShowOverviewInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2582,6 +2690,30 @@ func (i *ShowExtremumInfoInvoker) Invoke() (*model.ShowExtremumInfoResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ShowExtremumInfoResponse), nil
+	}
+}
+
+type CreateSynthesisJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSynthesisJobInvoker) Invoke() (*model.CreateSynthesisJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSynthesisJobResponse), nil
+	}
+}
+
+type ShowSynthesisJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSynthesisJobInvoker) Invoke() (*model.ShowSynthesisJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSynthesisJobResponse), nil
 	}
 }
 

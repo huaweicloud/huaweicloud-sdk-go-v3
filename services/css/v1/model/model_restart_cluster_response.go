@@ -8,10 +8,7 @@ import (
 
 // Response Object
 type RestartClusterResponse struct {
-
-	// 重启任务的ID。
-	JobId          *[]string `json:"jobId,omitempty"`
-	HttpStatusCode int       `json:"-"`
+	HttpStatusCode int `json:"-"`
 }
 
 func (o RestartClusterResponse) String() string {

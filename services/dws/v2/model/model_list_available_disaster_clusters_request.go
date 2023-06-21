@@ -10,7 +10,7 @@ import (
 type ListAvailableDisasterClustersRequest struct {
 
 	// 主集群ID
-	PrimaryClusterId *string `json:"primary_cluster_id,omitempty"`
+	PrimaryClusterId string `json:"primary_cluster_id"`
 
 	// 主集群规格ID
 	PrimarySpecId *string `json:"primary_spec_id,omitempty"`
@@ -25,7 +25,7 @@ type ListAvailableDisasterClustersRequest struct {
 	StandbyProjectId *string `json:"standby_project_id,omitempty"`
 
 	// 备集群所在AZ
-	StandbyAzCode *string `json:"standby_az_code,omitempty"`
+	StandbyAzCode string `json:"standby_az_code"`
 
 	// 容灾类型
 	DrType *string `json:"dr_type,omitempty"`

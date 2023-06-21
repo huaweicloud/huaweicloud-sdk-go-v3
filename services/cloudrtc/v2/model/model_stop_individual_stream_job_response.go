@@ -8,7 +8,8 @@ import (
 
 // Response Object
 type StopIndividualStreamJobResponse struct {
-	HttpStatusCode int `json:"-"`
+	XRequestId     *string `json:"X-request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o StopIndividualStreamJobResponse) String() string {

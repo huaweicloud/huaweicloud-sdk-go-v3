@@ -9,9 +9,6 @@ import (
 // Request Object
 type ListAlarmHistoriesRequest struct {
 
-	// 发送的实体的MIME类型。默认使用application/json; charset=UTF-8。
-	ContentType string `json:"Content-Type"`
-
 	// 告警ID,以al开头，后跟22位由字母或数字组成的字符串
 	AlarmId *string `json:"alarm_id,omitempty"`
 

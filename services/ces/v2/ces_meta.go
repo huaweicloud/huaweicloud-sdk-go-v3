@@ -20,11 +20,6 @@ func GenReqDefForAddAlarmRuleResources() *def.HttpRequestDef {
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ContentType").
-		WithJsonTag("Content-Type").
-		WithLocationType(def.Header))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -58,11 +53,6 @@ func GenReqDefForBatchDeleteAlarmRules() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/alarms/batch-delete").
 		WithResponse(new(model.BatchDeleteAlarmRulesResponse)).
 		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ContentType").
-		WithJsonTag("Content-Type").
-		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -130,11 +120,6 @@ func GenReqDefForBatchEnableAlarmRules() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ContentType").
-		WithJsonTag("Content-Type").
-		WithLocationType(def.Header))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -148,11 +133,6 @@ func GenReqDefForCreateAlarmRules() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/alarms").
 		WithResponse(new(model.CreateAlarmRulesResponse)).
 		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ContentType").
-		WithJsonTag("Content-Type").
-		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -205,11 +185,6 @@ func GenReqDefForDeleteAlarmRuleResources() *def.HttpRequestDef {
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ContentType").
-		WithJsonTag("Content-Type").
-		WithLocationType(def.Header))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -245,11 +220,6 @@ func GenReqDefForListAgentDimensionInfo() *def.HttpRequestDef {
 		WithName("Limit").
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ContentType").
-		WithJsonTag("Content-Type").
-		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -303,11 +273,6 @@ func GenReqDefForListAlarmHistories() *def.HttpRequestDef {
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ContentType").
-		WithJsonTag("Content-Type").
-		WithLocationType(def.Header))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -333,11 +298,6 @@ func GenReqDefForListAlarmRulePolicies() *def.HttpRequestDef {
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ContentType").
-		WithJsonTag("Content-Type").
-		WithLocationType(def.Header))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -362,11 +322,6 @@ func GenReqDefForListAlarmRuleResources() *def.HttpRequestDef {
 		WithName("Limit").
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ContentType").
-		WithJsonTag("Content-Type").
-		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -407,11 +362,6 @@ func GenReqDefForListAlarmRules() *def.HttpRequestDef {
 		WithName("Limit").
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ContentType").
-		WithJsonTag("Content-Type").
-		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -598,11 +548,6 @@ func GenReqDefForUpdateAlarmRulePolicies() *def.HttpRequestDef {
 		WithName("AlarmId").
 		WithJsonTag("alarm_id").
 		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ContentType").
-		WithJsonTag("Content-Type").
-		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").

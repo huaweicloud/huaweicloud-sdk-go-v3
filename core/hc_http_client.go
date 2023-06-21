@@ -33,7 +33,7 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/request"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/response"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdkerr"
-	jsoniter "github.com/json-iterator/go"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"go.mongodb.org/mongo-driver/bson"
 	"io/ioutil"
 	"net"
@@ -262,7 +262,7 @@ func (hc *HcHttpClient) getFieldValueByName(name string, jsonTag map[string]stri
 
 func flattenEnumStruct(value reflect.Value) (reflect.Value, error) {
 	if value.Kind() == reflect.Struct {
-		v, e := jsoniter.Marshal(value.Interface())
+		v, e := utils.Marshal(value.Interface())
 		if e == nil {
 			if strings.HasPrefix(string(v), "\"") {
 				return reflect.ValueOf(strings.Trim(string(v), "\"")), nil
@@ -367,7 +367,7 @@ func (hc *HcHttpClient) deserializeResponseFields(resp *response.DefaultHttpResp
 		} else if strings.Contains(resp.Response.Header.Get(contentType), applicationBson) {
 			err = bson.Unmarshal(data, reqDef.Response)
 		} else {
-			err = jsoniter.Unmarshal(data, &reqDef.Response)
+			err = utils.Unmarshal(data, &reqDef.Response)
 		}
 
 		if err != nil {

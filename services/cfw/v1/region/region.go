@@ -28,6 +28,14 @@ var (
 		"https://cfw.ap-southeast-4.myhuaweicloud.com")
 	LA_SOUTH_2 = region.NewRegion("la-south-2",
 		"https://cfw.la-south-2.myhuaweicloud.com")
+	CN_NORTH_9 = region.NewRegion("cn-north-9",
+		"https://cfw.cn-north-9.myhuaweicloud.com")
+	CN_EAST_2 = region.NewRegion("cn-east-2",
+		"https://cfw.cn-east-2.myhuaweicloud.com")
+	AF_SOUTH_1 = region.NewRegion("af-south-1",
+		"https://cfw.la-south-2.myhuaweicloud.com")
+	SA_BRAZIL_1 = region.NewRegion("sa-brazil-1",
+		"https://cfw.sa-brazil-1.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
@@ -42,6 +50,10 @@ var staticFields = map[string]*region.Region{
 	"ap-southeast-2": AP_SOUTHEAST_2,
 	"ap-southeast-4": AP_SOUTHEAST_4,
 	"la-south-2":     LA_SOUTH_2,
+	"cn-north-9":     CN_NORTH_9,
+	"cn-east-2":      CN_EAST_2,
+	"af-south-1":     AF_SOUTH_1,
+	"sa-brazil-1":    SA_BRAZIL_1,
 }
 
 var provider = region.DefaultProviderChain("CFW")

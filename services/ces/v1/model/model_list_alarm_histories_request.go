@@ -9,9 +9,6 @@ import (
 // Request Object
 type ListAlarmHistoriesRequest struct {
 
-	// 发送的实体的MIME类型。推荐用户默认使用application/json，如果API是对象、镜像上传等接口，媒体类型可按照流类型的不同进行确定。
-	ContentType string `json:"Content-Type"`
-
 	// 服务提供的资源分组功能，创建的资源分组ID，如：rg1603107497873DK4O2pXbn。
 	GroupId *string `json:"group_id,omitempty"`
 

@@ -147,7 +147,7 @@ func (c *CodeArtsDeployClient) StartDeployTaskInvoker(request *model.StartDeploy
 
 // CreateDeploymentHost 新建主机
 //
-// 在指定主机组下新建主机。
+// 在指定主机集群下新建主机。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeArtsDeployClient) CreateDeploymentHost(request *model.CreateDeploymentHostRequest) (*model.CreateDeploymentHostResponse, error) {
@@ -189,7 +189,7 @@ func (c *CodeArtsDeployClient) DeleteDeploymentHostInvoker(request *model.Delete
 
 // ListHosts 查询主机列表
 //
-// 根据主机组id查询指定主机组下的主机列表。
+// 根据主机集群id查询指定主机集群下的主机列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeArtsDeployClient) ListHosts(request *model.ListHostsRequest) (*model.ListHostsResponse, error) {
@@ -250,9 +250,9 @@ func (c *CodeArtsDeployClient) UpdateDeploymentHostInvoker(request *model.Update
 	return &UpdateDeploymentHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateDeploymentGroup 新建主机组
+// CreateDeploymentGroup 新建主机集群
 //
-// 在项目下新建主机组。
+// 在项目下新建主机集群。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeArtsDeployClient) CreateDeploymentGroup(request *model.CreateDeploymentGroupRequest) (*model.CreateDeploymentGroupResponse, error) {
@@ -265,15 +265,15 @@ func (c *CodeArtsDeployClient) CreateDeploymentGroup(request *model.CreateDeploy
 	}
 }
 
-// CreateDeploymentGroupInvoker 新建主机组
+// CreateDeploymentGroupInvoker 新建主机集群
 func (c *CodeArtsDeployClient) CreateDeploymentGroupInvoker(request *model.CreateDeploymentGroupRequest) *CreateDeploymentGroupInvoker {
 	requestDef := GenReqDefForCreateDeploymentGroup()
 	return &CreateDeploymentGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteDeploymentGroup 删除主机组
+// DeleteDeploymentGroup 删除主机集群
 //
-// 根据主机组id删除主机组。
+// 根据主机集群id删除主机集群。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeArtsDeployClient) DeleteDeploymentGroup(request *model.DeleteDeploymentGroupRequest) (*model.DeleteDeploymentGroupResponse, error) {
@@ -286,15 +286,15 @@ func (c *CodeArtsDeployClient) DeleteDeploymentGroup(request *model.DeleteDeploy
 	}
 }
 
-// DeleteDeploymentGroupInvoker 删除主机组
+// DeleteDeploymentGroupInvoker 删除主机集群
 func (c *CodeArtsDeployClient) DeleteDeploymentGroupInvoker(request *model.DeleteDeploymentGroupRequest) *DeleteDeploymentGroupInvoker {
 	requestDef := GenReqDefForDeleteDeploymentGroup()
 	return &DeleteDeploymentGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListHostGroups 查询主机组列表
+// ListHostGroups 查询主机集群列表
 //
-// 按条件查询主机组列表。
+// 按条件查询主机集群列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeArtsDeployClient) ListHostGroups(request *model.ListHostGroupsRequest) (*model.ListHostGroupsResponse, error) {
@@ -307,15 +307,15 @@ func (c *CodeArtsDeployClient) ListHostGroups(request *model.ListHostGroupsReque
 	}
 }
 
-// ListHostGroupsInvoker 查询主机组列表
+// ListHostGroupsInvoker 查询主机集群列表
 func (c *CodeArtsDeployClient) ListHostGroupsInvoker(request *model.ListHostGroupsRequest) *ListHostGroupsInvoker {
 	requestDef := GenReqDefForListHostGroups()
 	return &ListHostGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowDeploymentGroupDetail 查询主机组
+// ShowDeploymentGroupDetail 查询主机集群
 //
-// 根据主机组id查询主机组详情。
+// 根据主机集群id查询主机集群详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeArtsDeployClient) ShowDeploymentGroupDetail(request *model.ShowDeploymentGroupDetailRequest) (*model.ShowDeploymentGroupDetailResponse, error) {
@@ -328,15 +328,15 @@ func (c *CodeArtsDeployClient) ShowDeploymentGroupDetail(request *model.ShowDepl
 	}
 }
 
-// ShowDeploymentGroupDetailInvoker 查询主机组
+// ShowDeploymentGroupDetailInvoker 查询主机集群
 func (c *CodeArtsDeployClient) ShowDeploymentGroupDetailInvoker(request *model.ShowDeploymentGroupDetailRequest) *ShowDeploymentGroupDetailInvoker {
 	requestDef := GenReqDefForShowDeploymentGroupDetail()
 	return &ShowDeploymentGroupDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateDeploymentGroup 修改主机组
+// UpdateDeploymentGroup 修改主机集群
 //
-// 根据主机组id修改主机组信息。
+// 根据主机集群id修改主机集群信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeArtsDeployClient) UpdateDeploymentGroup(request *model.UpdateDeploymentGroupRequest) (*model.UpdateDeploymentGroupResponse, error) {
@@ -349,7 +349,7 @@ func (c *CodeArtsDeployClient) UpdateDeploymentGroup(request *model.UpdateDeploy
 	}
 }
 
-// UpdateDeploymentGroupInvoker 修改主机组
+// UpdateDeploymentGroupInvoker 修改主机集群
 func (c *CodeArtsDeployClient) UpdateDeploymentGroupInvoker(request *model.UpdateDeploymentGroupRequest) *UpdateDeploymentGroupInvoker {
 	requestDef := GenReqDefForUpdateDeploymentGroup()
 	return &UpdateDeploymentGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

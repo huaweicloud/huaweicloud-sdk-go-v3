@@ -12,9 +12,6 @@ import (
 // Request Object
 type ListAgentDimensionInfoRequest struct {
 
-	// 发送的实体的MIME类型。默认使用application/json; charset=UTF-8。
-	ContentType string `json:"Content-Type"`
-
 	// 资源ID，如：4270ff17-aba3-4138-89fa-820594c39755。
 	InstanceId string `json:"instance_id"`
 

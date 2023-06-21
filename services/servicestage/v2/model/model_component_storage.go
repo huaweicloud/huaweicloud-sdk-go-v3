@@ -10,14 +10,11 @@ import (
 )
 
 type ComponentStorage struct {
-	Type *ComponentStorageType `json:"type,omitempty"`
+	Type ComponentStorageType `json:"type"`
 
-	// 存储盘的名字
-	Name *string `json:"name,omitempty"`
+	Parameters *StorageParameter `json:"parameters"`
 
-	Parameters *ComponentStorage `json:"parameters,omitempty"`
-
-	Mounts *[]ComponentMount `json:"mounts,omitempty"`
+	Mounts []ComponentMount `json:"mounts"`
 }
 
 func (o ComponentStorage) String() string {

@@ -41,10 +41,10 @@ type RespInstanceBase struct {
 	// 实例绑定的弹性IP地址
 	EipAddress *string `json:"eip_address,omitempty"`
 
-	// 实例计费方式： - 0：按需计费 - 1：[包周期计费](tag:hws,hws_hk)[暂未使用](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm)
+	// 实例计费方式： - 0：按需计费 - 1：[包周期计费](tag:hws)[暂未使用](tag:hws_hk,cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm)
 	ChargingMode *RespInstanceBaseChargingMode `json:"charging_mode,omitempty"`
 
-	// [包周期计费订单编号](tag:hws,hws_hk)[计费订单编号参数暂未使用](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm)
+	// [包周期计费订单编号](tag:hws)[计费订单编号参数暂未使用](tag:hws_hk,cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm)
 	CbcMetadata *string `json:"cbc_metadata,omitempty"`
 
 	// 实例使用的负载均衡器类型 - lvs Linux虚拟服务器 - elb 弹性负载均衡，elb仅部分region支持

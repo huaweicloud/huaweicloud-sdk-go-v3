@@ -20,6 +20,9 @@ type OpenGaussHaResult struct {
 
 	// GaussDB的预留参数：指定实例一致性类型，取值范围：strong（强一致性） | eventual(最终一致性)。
 	Consistency OpenGaussHaResultConsistency `json:"consistency"`
+
+	// 指定副本一致性协议类型，取值范围：quorum | paxos。不填时，默认为quorum。
+	ConsistencyProtocol *string `json:"consistency_protocol,omitempty"`
 }
 
 func (o OpenGaussHaResult) String() string {

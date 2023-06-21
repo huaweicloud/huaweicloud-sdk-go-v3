@@ -59,8 +59,11 @@ type SetRecordSetsStatusResponse struct {
 	// 健康检查ID。
 	HealthCheckId *string `json:"health_check_id,omitempty"`
 
-	AliasTarget    *AliasTarget `json:"alias_target,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	AliasTarget *AliasTarget `json:"alias_target,omitempty"`
+
+	// 规格，默认规格，保留字段。
+	Bundle         *string `json:"bundle,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o SetRecordSetsStatusResponse) String() string {

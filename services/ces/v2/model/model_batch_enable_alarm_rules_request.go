@@ -8,10 +8,6 @@ import (
 
 // Request Object
 type BatchEnableAlarmRulesRequest struct {
-
-	// 发送的实体的MIME类型。默认使用application/json; charset=UTF-8。
-	ContentType string `json:"Content-Type"`
-
 	Body *BatchEnableAlarmsRequestBody `json:"body,omitempty"`
 }
 

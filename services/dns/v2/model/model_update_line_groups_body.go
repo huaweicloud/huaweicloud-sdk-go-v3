@@ -14,7 +14,7 @@ type UpdateLineGroupsBody struct {
 	// 线路分组的描述信息。长度不超过255个字符。默认值为空。
 	Description *string `json:"description,omitempty"`
 
-	// 线路分组的描述信息。长度不超过255个字符。默认值为空。
+	// 线路列表。
 	Lines []string `json:"lines"`
 }
 

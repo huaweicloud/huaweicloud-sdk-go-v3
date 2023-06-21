@@ -41,6 +41,90 @@ func (i *ShowJudgementFileInvoker) Invoke() (*model.ShowJudgementFileResponse, e
 	}
 }
 
+type ExecuteExerciseInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExecuteExerciseInvoker) Invoke() (*model.ExecuteExerciseResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExecuteExerciseResponse), nil
+	}
+}
+
+type ListExercisesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListExercisesInvoker) Invoke() (*model.ListExercisesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListExercisesResponse), nil
+	}
+}
+
+type ListPackagesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPackagesInvoker) Invoke() (*model.ListPackagesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPackagesResponse), nil
+	}
+}
+
+type ShowExerciseDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowExerciseDetailInvoker) Invoke() (*model.ShowExerciseDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowExerciseDetailResponse), nil
+	}
+}
+
+type ShowPackageDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPackageDetailInvoker) Invoke() (*model.ShowPackageDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPackageDetailResponse), nil
+	}
+}
+
+type ListAllDifficultsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAllDifficultsInvoker) Invoke() (*model.ListAllDifficultsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAllDifficultsResponse), nil
+	}
+}
+
+type ListMyKnowledgePointsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListMyKnowledgePointsInvoker) Invoke() (*model.ListMyKnowledgePointsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListMyKnowledgePointsResponse), nil
+	}
+}
+
 type ListClassroomMembersInvoker struct {
 	*invoker.BaseInvoker
 }

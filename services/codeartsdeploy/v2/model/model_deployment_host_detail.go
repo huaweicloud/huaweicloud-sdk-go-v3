@@ -12,7 +12,7 @@ import (
 // 主机信息详情
 type DeploymentHostDetail struct {
 
-	// 主机组id
+	// 主机集群id
 	GroupId string `json:"group_id"`
 
 	// 主机名称
@@ -24,7 +24,7 @@ type DeploymentHostDetail struct {
 	// ssh端口，如：22
 	Port int32 `json:"port"`
 
-	// 操作系统：windows|linux，需要和主机组保持一致
+	// 操作系统：windows|linux，需要和主机集群保持一致
 	Os DeploymentHostDetailOs `json:"os"`
 
 	// 是否为代理机
@@ -43,7 +43,7 @@ type DeploymentHostDetail struct {
 
 	ProxyHost *DeploymentHostDetail `json:"proxy_host,omitempty"`
 
-	// 主机组名
+	// 主机集群名
 	GroupName *string `json:"group_name,omitempty"`
 
 	// 项目id

@@ -8,9 +8,9 @@ import (
 
 // 组件来源。
 type SourceObject struct {
-	Kind *SourceKind `json:"kind,omitempty"`
+	Kind *SourceKind `json:"kind"`
 
-	Spec *SourceOrArtifact `json:"spec,omitempty"`
+	Spec *SourceOrArtifact `json:"spec"`
 }
 
 func (o SourceObject) String() string {

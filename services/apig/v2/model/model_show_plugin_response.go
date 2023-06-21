@@ -17,13 +17,13 @@ type ShowPluginResponse struct {
 	// 插件名称。支持汉字，英文，数字，中划线，下划线，且只能以英文和汉字开头，3-255字符。 > 中文字符必须为UTF-8或者unicode编码。
 	PluginName *string `json:"plugin_name,omitempty"`
 
-	// 插件类型 - cors：跨域资源共享 - set_resp_headers：HTTP响应头管理 - kafka_log：Kafka日志推送 - breaker：断路器 - rate_limit: 流量控制
+	// 插件类型 - cors：跨域资源共享 - set_resp_headers：HTTP响应头管理 - kafka_log：Kafka日志推送 - breaker：断路器 - rate_limit: 流量控制 - third_auth: 第三方认证
 	PluginType *ShowPluginResponsePluginType `json:"plugin_type,omitempty"`
 
 	// 插件可见范围。global：全局可见；
 	PluginScope *ShowPluginResponsePluginScope `json:"plugin_scope,omitempty"`
 
-	// 插件定义内容，支持json。参考提供的具体模型定义  CorsPluginContent：跨域资源共享 定义内容 SetRespHeadersContent：HTTP响应头管理 定义内容 KafkaLogContent：Kafka日志推送 定义内容 BreakerContent：断路器 定义内容 RateLimitContent 流量控制 定义内容
+	// 插件定义内容，支持json。参考提供的具体模型定义  CorsPluginContent：跨域资源共享 定义内容 SetRespHeadersContent：HTTP响应头管理 定义内容 KafkaLogContent：Kafka日志推送 定义内容 BreakerContent：断路器 定义内容 RateLimitContent 流量控制 定义内容 ThirdAuthContent: 第三方认证 定义内容
 	PluginContent *string `json:"plugin_content,omitempty"`
 
 	// 插件描述，255字符。 > 中文字符必须为UTF-8或者unicode编码。
@@ -56,6 +56,7 @@ type ShowPluginResponsePluginTypeEnum struct {
 	KAFKA_LOG        ShowPluginResponsePluginType
 	BREAKER          ShowPluginResponsePluginType
 	RATE_LIMIT       ShowPluginResponsePluginType
+	THIRD_AUTH       ShowPluginResponsePluginType
 }
 
 func GetShowPluginResponsePluginTypeEnum() ShowPluginResponsePluginTypeEnum {
@@ -74,6 +75,9 @@ func GetShowPluginResponsePluginTypeEnum() ShowPluginResponsePluginTypeEnum {
 		},
 		RATE_LIMIT: ShowPluginResponsePluginType{
 			value: "rate_limit",
+		},
+		THIRD_AUTH: ShowPluginResponsePluginType{
+			value: "third_auth",
 		},
 	}
 }

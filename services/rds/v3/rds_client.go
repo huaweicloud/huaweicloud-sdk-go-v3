@@ -838,6 +838,27 @@ func (c *RdsClient) ListOffSiteRestoreTimesInvoker(request *model.ListOffSiteRes
 	return &ListOffSiteRestoreTimesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListPredefinedTag
+//
+// 查询预定义标签
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListPredefinedTag(request *model.ListPredefinedTagRequest) (*model.ListPredefinedTagResponse, error) {
+	requestDef := GenReqDefForListPredefinedTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPredefinedTagResponse), nil
+	}
+}
+
+// ListPredefinedTagInvoker
+func (c *RdsClient) ListPredefinedTagInvoker(request *model.ListPredefinedTagRequest) *ListPredefinedTagInvoker {
+	requestDef := GenReqDefForListPredefinedTag()
+	return &ListPredefinedTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListProjectTags 查询项目标签
 //
 // 查询项目标签。
@@ -900,6 +921,27 @@ func (c *RdsClient) ListRestoreTimes(request *model.ListRestoreTimesRequest) (*m
 func (c *RdsClient) ListRestoreTimesInvoker(request *model.ListRestoreTimesRequest) *ListRestoreTimesInvoker {
 	requestDef := GenReqDefForListRestoreTimes()
 	return &ListRestoreTimesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSimplifiedInstances
+//
+// 获取指定实例详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListSimplifiedInstances(request *model.ListSimplifiedInstancesRequest) (*model.ListSimplifiedInstancesResponse, error) {
+	requestDef := GenReqDefForListSimplifiedInstances()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSimplifiedInstancesResponse), nil
+	}
+}
+
+// ListSimplifiedInstancesInvoker
+func (c *RdsClient) ListSimplifiedInstancesInvoker(request *model.ListSimplifiedInstancesRequest) *ListSimplifiedInstancesInvoker {
+	requestDef := GenReqDefForListSimplifiedInstances()
+	return &ListSimplifiedInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListSlowLogFile 查询慢日志文件列表

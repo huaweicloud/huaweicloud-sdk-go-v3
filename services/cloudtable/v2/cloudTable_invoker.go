@@ -29,6 +29,30 @@ func (i *DeleteClusterInvoker) Invoke() (*model.DeleteClusterResponse, error) {
 	}
 }
 
+type EnableComponentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *EnableComponentInvoker) Invoke() (*model.EnableComponentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.EnableComponentResponse), nil
+	}
+}
+
+type ExpandClusterComponentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExpandClusterComponentInvoker) Invoke() (*model.ExpandClusterComponentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExpandClusterComponentResponse), nil
+	}
+}
+
 type ListClustersInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -41,6 +65,18 @@ func (i *ListClustersInvoker) Invoke() (*model.ListClustersResponse, error) {
 	}
 }
 
+type RebootCloudTableClusterInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RebootCloudTableClusterInvoker) Invoke() (*model.RebootCloudTableClusterResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RebootCloudTableClusterResponse), nil
+	}
+}
+
 type ShowClusterDetailInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -50,5 +86,29 @@ func (i *ShowClusterDetailInvoker) Invoke() (*model.ShowClusterDetailResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ShowClusterDetailResponse), nil
+	}
+}
+
+type ShowClusterSettingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowClusterSettingInvoker) Invoke() (*model.ShowClusterSettingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowClusterSettingResponse), nil
+	}
+}
+
+type UpdateClusterSettingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateClusterSettingInvoker) Invoke() (*model.UpdateClusterSettingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateClusterSettingResponse), nil
 	}
 }

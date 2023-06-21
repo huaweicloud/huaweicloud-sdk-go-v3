@@ -13,7 +13,7 @@ import (
 type MicroserviceImportReq struct {
 	GroupInfo *MicroserviceGroup `json:"group_info"`
 
-	// 微服务中心类型。 - CSE：CSE微服务注册中心 - CCE: CCE云容器引擎
+	// 微服务中心类型。 - CSE：CSE微服务注册中心 - CCE: CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service）
 	ServiceType MicroserviceImportReqServiceType `json:"service_type"`
 
 	// API网关访问微服务的请求协议 - HTTP - HTTPS
@@ -34,6 +34,8 @@ type MicroserviceImportReq struct {
 	CseInfo *MicroServiceInfoCseCreate `json:"cse_info,omitempty"`
 
 	CceInfo *MicroServiceInfoCceCreate `json:"cce_info,omitempty"`
+
+	CceServiceInfo *MicroServiceInfoCceServiceCreate `json:"cce_service_info,omitempty"`
 }
 
 func (o MicroserviceImportReq) String() string {
@@ -50,8 +52,9 @@ type MicroserviceImportReqServiceType struct {
 }
 
 type MicroserviceImportReqServiceTypeEnum struct {
-	CSE MicroserviceImportReqServiceType
-	CCE MicroserviceImportReqServiceType
+	CSE         MicroserviceImportReqServiceType
+	CCE         MicroserviceImportReqServiceType
+	CCE_SERVICE MicroserviceImportReqServiceType
 }
 
 func GetMicroserviceImportReqServiceTypeEnum() MicroserviceImportReqServiceTypeEnum {
@@ -61,6 +64,9 @@ func GetMicroserviceImportReqServiceTypeEnum() MicroserviceImportReqServiceTypeE
 		},
 		CCE: MicroserviceImportReqServiceType{
 			value: "CCE",
+		},
+		CCE_SERVICE: MicroserviceImportReqServiceType{
+			value: "CCE_SERVICE",
 		},
 	}
 }

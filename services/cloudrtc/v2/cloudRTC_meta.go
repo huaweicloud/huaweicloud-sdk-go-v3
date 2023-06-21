@@ -12,7 +12,7 @@ func GenReqDefForCreateApp() *def.HttpRequestDef {
 		WithMethod(http.MethodPost).
 		WithPath("/v2/apps").
 		WithResponse(new(model.CreateAppResponse)).
-		WithContentType("application/json")
+		WithContentType("application/json;charset=utf-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Authorization").
@@ -46,7 +46,7 @@ func GenReqDefForCreateIndividualStreamJob() *def.HttpRequestDef {
 		WithMethod(http.MethodPost).
 		WithPath("/v2/apps/{app_id}/individual-stream-jobs").
 		WithResponse(new(model.CreateIndividualStreamJobResponse)).
-		WithContentType("application/json")
+		WithContentType("application/json;charset=utf-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("AppId").
@@ -85,7 +85,7 @@ func GenReqDefForCreateMixJob() *def.HttpRequestDef {
 		WithMethod(http.MethodPost).
 		WithPath("/v2/apps/{app_id}/mix-stream-jobs").
 		WithResponse(new(model.CreateMixJobResponse)).
-		WithContentType("application/json")
+		WithContentType("application/json;charset=utf-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("AppId").
@@ -124,7 +124,7 @@ func GenReqDefForCreateRecordRule() *def.HttpRequestDef {
 		WithMethod(http.MethodPost).
 		WithPath("/v2/apps/{app_id}/record-rules").
 		WithResponse(new(model.CreateRecordRuleResponse)).
-		WithContentType("application/json")
+		WithContentType("application/json;charset=utf-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("AppId").
@@ -183,6 +183,12 @@ func GenReqDefForDeleteApp() *def.HttpRequestDef {
 		WithJsonTag("X-Project-Id").
 		WithLocationType(def.Header))
 
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -214,6 +220,12 @@ func GenReqDefForDeleteRecordRule() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XProjectId").
 		WithJsonTag("X-Project-Id").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-request-Id").
+		WithKindName("string").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
@@ -336,6 +348,12 @@ func GenReqDefForRemoveRoom() *def.HttpRequestDef {
 		WithJsonTag("X-Project-Id").
 		WithLocationType(def.Header))
 
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -345,7 +363,7 @@ func GenReqDefForRemoveUsers() *def.HttpRequestDef {
 		WithMethod(http.MethodPost).
 		WithPath("/v2/apps/{app_id}/rooms/{room_id}/batch-remove-users").
 		WithResponse(new(model.RemoveUsersResponse)).
-		WithContentType("application/json")
+		WithContentType("application/json;charset=utf-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("AppId").
@@ -372,6 +390,12 @@ func GenReqDefForRemoveUsers() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -733,6 +757,12 @@ func GenReqDefForStopIndividualStreamJob() *def.HttpRequestDef {
 		WithJsonTag("X-Project-Id").
 		WithLocationType(def.Header))
 
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -766,6 +796,12 @@ func GenReqDefForStopMixJob() *def.HttpRequestDef {
 		WithJsonTag("X-Project-Id").
 		WithLocationType(def.Header))
 
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -775,7 +811,7 @@ func GenReqDefForUpdateAutoRecord() *def.HttpRequestDef {
 		WithMethod(http.MethodPut).
 		WithPath("/v2/apps/{app_id}/auto-record-mode").
 		WithResponse(new(model.UpdateAutoRecordResponse)).
-		WithContentType("application/json")
+		WithContentType("application/json;charset=utf-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("AppId").
@@ -814,7 +850,7 @@ func GenReqDefForUpdateIndividualStreamJob() *def.HttpRequestDef {
 		WithMethod(http.MethodPut).
 		WithPath("/v2/apps/{app_id}/individual-stream-jobs/{job_id}").
 		WithResponse(new(model.UpdateIndividualStreamJobResponse)).
-		WithContentType("application/json")
+		WithContentType("application/json;charset=utf-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("AppId").
@@ -857,7 +893,7 @@ func GenReqDefForUpdateMixJob() *def.HttpRequestDef {
 		WithMethod(http.MethodPut).
 		WithPath("/v2/apps/{app_id}/mix-stream-jobs/{job_id}").
 		WithResponse(new(model.UpdateMixJobResponse)).
-		WithContentType("application/json")
+		WithContentType("application/json;charset=utf-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("AppId").
@@ -900,7 +936,7 @@ func GenReqDefForUpdateRecordCallback() *def.HttpRequestDef {
 		WithMethod(http.MethodPut).
 		WithPath("/v2/apps/{app_id}/record-callback").
 		WithResponse(new(model.UpdateRecordCallbackResponse)).
-		WithContentType("application/json")
+		WithContentType("application/json;charset=utf-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("AppId").
@@ -939,7 +975,7 @@ func GenReqDefForUpdateRecordRule() *def.HttpRequestDef {
 		WithMethod(http.MethodPut).
 		WithPath("/v2/apps/{app_id}/record-rules/{rule_id}").
 		WithResponse(new(model.UpdateRecordRuleResponse)).
-		WithContentType("application/json")
+		WithContentType("application/json;charset=utf-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("AppId").

@@ -18,7 +18,7 @@ type AppCallbackUrl struct {
 	// 回调秘钥，主要用于鉴权。如果不设置或者为空，则回调不会增加鉴权头域字段。
 	AuthKey *string `json:"auth_key,omitempty"`
 
-	// 订阅云端录制通知消息。  取值如下：  - RECORD_NEW_FILE_START：录制模块开始创建新的录制文件。  - RECORD_FILE_COMPLETE：录制模块已经生成录制文件。
+	// 订阅云端录制通知消息。  取值如下：  - RECORD_NEW_FILE_START：开始创建新的录制文件。  - RECORD_FILE_COMPLETE：录制文件生成完成。
 	NotifyEventSubscription *[]AppCallbackUrlNotifyEventSubscription `json:"notify_event_subscription,omitempty"`
 
 	// 更新时间，形如“2006-01-02T15:04:05.075Z”，时区为：UTC。

@@ -22,7 +22,6 @@ package sdkerr
 import (
 	"bytes"
 	"fmt"
-	jsoniter "github.com/json-iterator/go"
 	"io/ioutil"
 	"net/http"
 
@@ -124,7 +123,7 @@ func NewServiceResponseError(resp *http.Response) *ServiceResponseError {
 
 	if err == nil {
 		dataBuf := errMap{}
-		err := jsoniter.Unmarshal(data, &dataBuf)
+		err := utils.Unmarshal(data, &dataBuf)
 		if err != nil {
 			sr.ErrorMessage = string(data)
 		} else {

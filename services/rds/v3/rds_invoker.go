@@ -473,6 +473,18 @@ func (i *ListOffSiteRestoreTimesInvoker) Invoke() (*model.ListOffSiteRestoreTime
 	}
 }
 
+type ListPredefinedTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPredefinedTagInvoker) Invoke() (*model.ListPredefinedTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPredefinedTagResponse), nil
+	}
+}
+
 type ListProjectTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -506,6 +518,18 @@ func (i *ListRestoreTimesInvoker) Invoke() (*model.ListRestoreTimesResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ListRestoreTimesResponse), nil
+	}
+}
+
+type ListSimplifiedInstancesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSimplifiedInstancesInvoker) Invoke() (*model.ListSimplifiedInstancesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSimplifiedInstancesResponse), nil
 	}
 }
 

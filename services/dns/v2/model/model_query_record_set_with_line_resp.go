@@ -59,6 +59,9 @@ type QueryRecordSetWithLineResp struct {
 	HealthCheckId *string `json:"health_check_id,omitempty"`
 
 	AliasTarget *AliasTarget `json:"alias_target,omitempty"`
+
+	// 规格，默认规格，保留字段。
+	Bundle *string `json:"bundle,omitempty"`
 }
 
 func (o QueryRecordSetWithLineResp) String() string {

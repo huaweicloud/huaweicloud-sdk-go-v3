@@ -26,7 +26,7 @@ type ExecutionPlan struct {
 	// 执行计划的描述。可用于客户识别自己的执行计划。
 	Description *string `json:"description,omitempty"`
 
-	// 执行计划的状态    * `CREATION_IN_PROGRESS` - 正在创建，请等待    * `CREATION_FAILED` - 创建失败，请从status_message获取错误信息汇总    * `AVAILABLE` - 创建完成，可以调用ApplyExecutionPlan API进行执行    * `APPLY_IN_PROGRESS` - 执行中，可通过GetStackMetadata查询资源栈状态，通过ListStackEvents获取执行过程中产生的资源栈事件    * `APPLIED` - 已执行
+	// 执行计划的状态     * `CREATION_IN_PROGRESS` - 正在创建，请等待     * `CREATION_FAILED` - 创建失败，请从status_message获取错误信息汇总     * `AVAILABLE` - 创建完成，可以调用ApplyExecutionPlan API进行执行     * `APPLY_IN_PROGRESS` - 执行中，可通过GetStackMetadata查询资源栈状态，通过ListStackEvents获取执行过程中产生的资源栈事件     * `APPLIED` - 已执行
 	Status *ExecutionPlanStatus `json:"status,omitempty"`
 
 	// 当执行计划的状态为创建失败状态（即为 `CREATION_FAILED` 时），将会展示简要的错误信息总结以供debug

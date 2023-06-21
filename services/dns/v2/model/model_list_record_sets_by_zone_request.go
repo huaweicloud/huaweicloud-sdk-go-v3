@@ -30,7 +30,7 @@ type ListRecordSetsByZoneRequest struct {
 	// 待查询的Record Set的状态。  取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
 	Status *string `json:"status,omitempty"`
 
-	// 待查询的Record Set的记录集类型。  取值范围：A,AAAA,MX,CNAME,TXT, NS（仅限公网Zone）,SRV,PTR（仅限内网Zone）,CAA（仅限公网Zone）。
+	// 待查询的Record Set的记录集类型。 公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。 内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
 	Type *string `json:"type,omitempty"`
 
 	// 待查询的Record Set的域名中包含此name。  搜索模式默认为模糊搜索。  默认值为空。

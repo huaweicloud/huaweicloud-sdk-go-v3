@@ -14,10 +14,10 @@ type ResourceConfigDto struct {
 	// 内存大小
 	Memory *float32 `json:"memory,omitempty"`
 
-	// cpu个数
+	// gpu内存大小，单位为M
 	Gpu *float32 `json:"gpu,omitempty"`
 
-	// cpu个数
+	// 使用npu加速卡个数
 	Npu *float32 `json:"npu,omitempty"`
 }
 

@@ -9,10 +9,10 @@ import (
 	"strings"
 )
 
-// 主机组详细信息
+// 主机集群详细信息
 type DeploymentGroup struct {
 
-	// 主机组名
+	// 主机集群名
 	Name string `json:"name"`
 
 	// 局点信息
@@ -30,7 +30,7 @@ type DeploymentGroup struct {
 	// 描述
 	Description *string `json:"description,omitempty"`
 
-	// 主机组是否为代理类型
+	// 主机集群是否为代理类型
 	IsProxyMode *int32 `json:"is_proxy_mode,omitempty"`
 }
 

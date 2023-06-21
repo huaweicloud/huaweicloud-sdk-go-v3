@@ -9,7 +9,7 @@ import (
 // Request Object
 type CreateDeploymentHostRequest struct {
 
-	// 主机组id
+	// 主机集群id
 	GroupId string `json:"group_id"`
 
 	Body *DeploymentHost `json:"body,omitempty"`

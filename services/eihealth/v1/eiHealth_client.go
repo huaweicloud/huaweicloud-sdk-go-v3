@@ -1951,6 +1951,153 @@ func (c *EiHealthClient) ListDatabaseResourceFlavorInvoker(request *model.ListDa
 	return &ListDatabaseResourceFlavorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateDockingJob 创建分子对接作业
+//
+// 创建分子对接作业
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) CreateDockingJob(request *model.CreateDockingJobRequest) (*model.CreateDockingJobResponse, error) {
+	requestDef := GenReqDefForCreateDockingJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDockingJobResponse), nil
+	}
+}
+
+// CreateDockingJobInvoker 创建分子对接作业
+func (c *EiHealthClient) CreateDockingJobInvoker(request *model.CreateDockingJobRequest) *CreateDockingJobInvoker {
+	requestDef := GenReqDefForCreateDockingJob()
+	return &CreateDockingJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDockingJob 查询分子对接作业详情
+//
+// 查询分子对接作业详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) ShowDockingJob(request *model.ShowDockingJobRequest) (*model.ShowDockingJobResponse, error) {
+	requestDef := GenReqDefForShowDockingJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDockingJobResponse), nil
+	}
+}
+
+// ShowDockingJobInvoker 查询分子对接作业详情
+func (c *EiHealthClient) ShowDockingJobInvoker(request *model.ShowDockingJobRequest) *ShowDockingJobInvoker {
+	requestDef := GenReqDefForShowDockingJob()
+	return &ShowDockingJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CancelDrugJob 取消药物作业
+//
+// 取消药物作业
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) CancelDrugJob(request *model.CancelDrugJobRequest) (*model.CancelDrugJobResponse, error) {
+	requestDef := GenReqDefForCancelDrugJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CancelDrugJobResponse), nil
+	}
+}
+
+// CancelDrugJobInvoker 取消药物作业
+func (c *EiHealthClient) CancelDrugJobInvoker(request *model.CancelDrugJobRequest) *CancelDrugJobInvoker {
+	requestDef := GenReqDefForCancelDrugJob()
+	return &CancelDrugJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDrugJob 删除药物作业
+//
+// 删除药物作业
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) DeleteDrugJob(request *model.DeleteDrugJobRequest) (*model.DeleteDrugJobResponse, error) {
+	requestDef := GenReqDefForDeleteDrugJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDrugJobResponse), nil
+	}
+}
+
+// DeleteDrugJobInvoker 删除药物作业
+func (c *EiHealthClient) DeleteDrugJobInvoker(request *model.DeleteDrugJobRequest) *DeleteDrugJobInvoker {
+	requestDef := GenReqDefForDeleteDrugJob()
+	return &DeleteDrugJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDrugJob 获取药物作业列表
+//
+// 获取药物作业列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) ListDrugJob(request *model.ListDrugJobRequest) (*model.ListDrugJobResponse, error) {
+	requestDef := GenReqDefForListDrugJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDrugJobResponse), nil
+	}
+}
+
+// ListDrugJobInvoker 获取药物作业列表
+func (c *EiHealthClient) ListDrugJobInvoker(request *model.ListDrugJobRequest) *ListDrugJobInvoker {
+	requestDef := GenReqDefForListDrugJob()
+	return &ListDrugJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateFepJob 创建自由能微扰作业
+//
+// 创建自由能微扰作业
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) CreateFepJob(request *model.CreateFepJobRequest) (*model.CreateFepJobResponse, error) {
+	requestDef := GenReqDefForCreateFepJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateFepJobResponse), nil
+	}
+}
+
+// CreateFepJobInvoker 创建自由能微扰作业
+func (c *EiHealthClient) CreateFepJobInvoker(request *model.CreateFepJobRequest) *CreateFepJobInvoker {
+	requestDef := GenReqDefForCreateFepJob()
+	return &CreateFepJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowFepJob 查询自由能微扰作业详情
+//
+// 查询自由能微扰作业详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) ShowFepJob(request *model.ShowFepJobRequest) (*model.ShowFepJobResponse, error) {
+	requestDef := GenReqDefForShowFepJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowFepJobResponse), nil
+	}
+}
+
+// ShowFepJobInvoker 查询自由能微扰作业详情
+func (c *EiHealthClient) ShowFepJobInvoker(request *model.ShowFepJobRequest) *ShowFepJobInvoker {
+	requestDef := GenReqDefForShowFepJob()
+	return &ShowFepJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListIamGroupUsers 查询IAM用户组的用户列表
 //
 // 查询IAM用户组的用户列表
@@ -3799,6 +3946,48 @@ func (c *EiHealthClient) ListObsBucketObjectInvoker(request *model.ListObsBucket
 	return &ListObsBucketObjectInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateOptmJob 创建分子优化作业
+//
+// 创建分子优化作业
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) CreateOptmJob(request *model.CreateOptmJobRequest) (*model.CreateOptmJobResponse, error) {
+	requestDef := GenReqDefForCreateOptmJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateOptmJobResponse), nil
+	}
+}
+
+// CreateOptmJobInvoker 创建分子优化作业
+func (c *EiHealthClient) CreateOptmJobInvoker(request *model.CreateOptmJobRequest) *CreateOptmJobInvoker {
+	requestDef := GenReqDefForCreateOptmJob()
+	return &CreateOptmJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowOptmJob 查询分子优化作业详情
+//
+// 查询分子优化作业详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) ShowOptmJob(request *model.ShowOptmJobRequest) (*model.ShowOptmJobResponse, error) {
+	requestDef := GenReqDefForShowOptmJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowOptmJobResponse), nil
+	}
+}
+
+// ShowOptmJobInvoker 查询分子优化作业详情
+func (c *EiHealthClient) ShowOptmJobInvoker(request *model.ShowOptmJobRequest) *ShowOptmJobInvoker {
+	requestDef := GenReqDefForShowOptmJob()
+	return &ShowOptmJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowOverview 获取医疗平台信息
 //
 // 获取医疗平台信息
@@ -4532,6 +4721,48 @@ func (c *EiHealthClient) ShowExtremumInfo(request *model.ShowExtremumInfoRequest
 func (c *EiHealthClient) ShowExtremumInfoInvoker(request *model.ShowExtremumInfoRequest) *ShowExtremumInfoInvoker {
 	requestDef := GenReqDefForShowExtremumInfo()
 	return &ShowExtremumInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSynthesisJob 创建分子合成路径规划作业
+//
+// 创建分子合成路径规划作业
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) CreateSynthesisJob(request *model.CreateSynthesisJobRequest) (*model.CreateSynthesisJobResponse, error) {
+	requestDef := GenReqDefForCreateSynthesisJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSynthesisJobResponse), nil
+	}
+}
+
+// CreateSynthesisJobInvoker 创建分子合成路径规划作业
+func (c *EiHealthClient) CreateSynthesisJobInvoker(request *model.CreateSynthesisJobRequest) *CreateSynthesisJobInvoker {
+	requestDef := GenReqDefForCreateSynthesisJob()
+	return &CreateSynthesisJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSynthesisJob 查询分子合成路径规划作业详情
+//
+// 查询分子合成路径规划作业详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) ShowSynthesisJob(request *model.ShowSynthesisJobRequest) (*model.ShowSynthesisJobResponse, error) {
+	requestDef := GenReqDefForShowSynthesisJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSynthesisJobResponse), nil
+	}
+}
+
+// ShowSynthesisJobInvoker 查询分子合成路径规划作业详情
+func (c *EiHealthClient) ShowSynthesisJobInvoker(request *model.ShowSynthesisJobRequest) *ShowSynthesisJobInvoker {
+	requestDef := GenReqDefForShowSynthesisJob()
+	return &ShowSynthesisJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListArchiveConfigs 获取跨域归档配置

@@ -29,7 +29,7 @@ type DeploymentHostRequest struct {
 	// 免费启用应用运维服务（AOM），提供指标监控、日志查询、告警功能（自动安装数据采集器 ICAgent，仅支持华为云linux主机）
 	InstallIcagent *bool `json:"install_icagent,omitempty"`
 
-	// 是否将当前主机的密码信息同步到同一项目下其他主机组中具有相同IP、用户名、端口的主机。
+	// 是否将当前主机的密码信息同步到同一项目下其他主机集群中具有相同IP、用户名、端口的主机。
 	Sync *bool `json:"sync,omitempty"`
 }
 

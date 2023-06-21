@@ -10,9 +10,9 @@ import (
 type ConfigurationLifecycle struct {
 	Entrypoint *LifecycleEntrypoint `json:"entrypoint,omitempty"`
 
-	PostStart *LifecycleEntrypoint `json:"post-start,omitempty"`
+	PostStart *LifecycleProcess `json:"post-start,omitempty"`
 
-	PreStop *LifecycleEntrypoint `json:"pre-stop,omitempty"`
+	PreStop *LifecycleProcess `json:"pre-stop,omitempty"`
 }
 
 func (o ConfigurationLifecycle) String() string {

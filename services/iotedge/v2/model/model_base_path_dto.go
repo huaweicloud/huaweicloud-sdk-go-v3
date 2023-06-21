@@ -16,6 +16,8 @@ type BasePathDto struct {
 
 	// 节点数据存储根目录
 	DbBasePath *string `json:"db_base_path,omitempty"`
+
+	OfflineCacheConfigs *OfflineCacheConfigsDto `json:"offline_cache_configs,omitempty"`
 }
 
 func (o BasePathDto) String() string {

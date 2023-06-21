@@ -19,7 +19,7 @@ type AttachedPluginInfo struct {
 	// 插件名称。支持汉字，英文，数字，中划线，下划线，且只能以英文和汉字开头，3-255字符 > 中文字符必须为UTF-8或者unicode编码。
 	PluginName *string `json:"plugin_name,omitempty"`
 
-	// 插件类型 - cors：跨域资源共享 - set_resp_headers：HTTP响应头管理 - kafka_log：Kafka日志推送 - breaker：断路器 - rate_limit: 流量控制
+	// 插件类型 - cors：跨域资源共享 - set_resp_headers：HTTP响应头管理 - kafka_log：Kafka日志推送 - breaker：断路器 - rate_limit: 流量控制 - third_auth: 第三方认证
 	PluginType *AttachedPluginInfoPluginType `json:"plugin_type,omitempty"`
 
 	// 插件可见范围。global：全局可见。
@@ -66,6 +66,7 @@ type AttachedPluginInfoPluginTypeEnum struct {
 	KAFKA_LOG        AttachedPluginInfoPluginType
 	BREAKER          AttachedPluginInfoPluginType
 	RATE_LIMIT       AttachedPluginInfoPluginType
+	THIRD_AUTH       AttachedPluginInfoPluginType
 }
 
 func GetAttachedPluginInfoPluginTypeEnum() AttachedPluginInfoPluginTypeEnum {
@@ -84,6 +85,9 @@ func GetAttachedPluginInfoPluginTypeEnum() AttachedPluginInfoPluginTypeEnum {
 		},
 		RATE_LIMIT: AttachedPluginInfoPluginType{
 			value: "rate_limit",
+		},
+		THIRD_AUTH: AttachedPluginInfoPluginType{
+			value: "third_auth",
 		},
 	}
 }

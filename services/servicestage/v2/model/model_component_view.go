@@ -20,9 +20,6 @@ type ComponentView struct {
 	// 项目ID。
 	ProjectId *string `json:"project_id,omitempty"`
 
-	// 流水线Id列表，最多10个。
-	PipelineIds *[]string `json:"pipeline_ids,omitempty"`
-
 	Runtime *RuntimeType `json:"runtime,omitempty"`
 
 	Category *ComponentCategory `json:"category,omitempty"`

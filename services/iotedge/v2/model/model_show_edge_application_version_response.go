@@ -27,7 +27,7 @@ type ShowEdgeApplicationVersionResponse struct {
 	// 应用版本
 	Version *string `json:"version,omitempty"`
 
-	// 应用集成的边缘升得快版本
+	// 应用集成的边缘SDK版本
 	SdkVersion *string `json:"sdk_version,omitempty"`
 
 	// 应用描述

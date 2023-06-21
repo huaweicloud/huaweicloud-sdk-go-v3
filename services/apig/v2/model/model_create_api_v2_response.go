@@ -26,7 +26,7 @@ type CreateApiV2Response struct {
 	// API的请求方式
 	ReqMethod CreateApiV2ResponseReqMethod `json:"req_method"`
 
-	// 请求地址。可以包含请求参数，用{}标识，比如/getUserInfo/{userId}，支持 * % - _ . 等特殊字符，总长度不超过512，且满足URI规范。 > 需要服从URI规范。
+	// 请求地址。可以包含请求参数，用{}标识，比如/getUserInfo/{userId}，支持 * % - _ . 等特殊字符，总长度不超过512，且满足URI规范。  > 需要服从URI规范。
 	ReqUri string `json:"req_uri"`
 
 	// API的认证方式 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证
@@ -61,7 +61,7 @@ type CreateApiV2Response struct {
 	// 前端自定义认证对象的ID
 	AuthorizerId *string `json:"authorizer_id,omitempty"`
 
-	// 标签。  支持英文，数字，下划线，且只能以英文开头。支持输入多个标签，不同标签以英文逗号分割。
+	// 标签。  支持英文，数字，中文，特殊符号（-*#%.:_），且只能以中文或英文开头。  默认支持10个标签，如需扩大配额请联系技术工程师修改API_TAG_NUM_LIMIT配置。
 	Tags *[]string `json:"tags,omitempty"`
 
 	// 分组自定义响应ID

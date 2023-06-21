@@ -17,12 +17,14 @@ type MicroServiceInfo struct {
 	// 实例编号
 	InstanceId *string `json:"instance_id,omitempty"`
 
-	// 微服务类型： - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎
+	// 微服务类型： - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service）
 	ServiceType *MicroServiceInfoServiceType `json:"service_type,omitempty"`
 
 	CseInfo *MicroServiceInfoCse `json:"cse_info,omitempty"`
 
 	CceInfo *MicroServiceInfoCce `json:"cce_info,omitempty"`
+
+	CceServiceInfo *MicroServiceInfoCceService `json:"cce_service_info,omitempty"`
 
 	// 微服务更新时间
 	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
@@ -45,8 +47,9 @@ type MicroServiceInfoServiceType struct {
 }
 
 type MicroServiceInfoServiceTypeEnum struct {
-	CSE MicroServiceInfoServiceType
-	CCE MicroServiceInfoServiceType
+	CSE         MicroServiceInfoServiceType
+	CCE         MicroServiceInfoServiceType
+	CCE_SERVICE MicroServiceInfoServiceType
 }
 
 func GetMicroServiceInfoServiceTypeEnum() MicroServiceInfoServiceTypeEnum {
@@ -56,6 +59,9 @@ func GetMicroServiceInfoServiceTypeEnum() MicroServiceInfoServiceTypeEnum {
 		},
 		CCE: MicroServiceInfoServiceType{
 			value: "CCE",
+		},
+		CCE_SERVICE: MicroServiceInfoServiceType{
+			value: "CCE_SERVICE",
 		},
 	}
 }

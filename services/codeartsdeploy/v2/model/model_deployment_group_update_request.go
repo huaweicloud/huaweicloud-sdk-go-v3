@@ -12,7 +12,7 @@ import (
 //
 type DeploymentGroupUpdateRequest struct {
 
-	// 主机组名
+	// 主机集群名
 	Name string `json:"name"`
 
 	// 描述

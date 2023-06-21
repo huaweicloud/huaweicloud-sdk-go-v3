@@ -50,7 +50,7 @@ type CreateIndividualStreamJobResponse struct {
 	// 任务状态。  - INIT：任务正在初始化 - RUNNING：任务正在运行 - STOPPED：任务已停止
 	State *CreateIndividualStreamJobResponseState `json:"state,omitempty"`
 
-	// 任务结束原因
+	// 任务结束原因 - TENANT_STOP - EXCEED_MAX_IDLE_TIME - INTERNAL_ERROR
 	StopReason *CreateIndividualStreamJobResponseStopReason `json:"stop_reason,omitempty"`
 
 	// 针对任务状态的详细信息描述

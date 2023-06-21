@@ -11,7 +11,7 @@ import (
 
 type RecordObsFileAddr struct {
 
-	// OBS Bucket所在RegionID
+	// OBS Bucket所在RegionID - cn-north-4
 	Location RecordObsFileAddrLocation `json:"location"`
 
 	// OBS Bucket所在Region的项目ID

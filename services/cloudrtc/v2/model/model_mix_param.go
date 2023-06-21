@@ -15,7 +15,7 @@ type MixParam struct {
 	// 房间id
 	RoomId string `json:"room_id"`
 
-	// 输出编码模板名称 - 1920x1080_30_4620：输出流是1080p，帧率30，码率4.62Mbps - 1920x1080_15_3460：输出流是1080p，帧率15，码率3.46Mbps - 1280x720_30_3420：输出流是720p，帧率30，码率3.42Mbps - 1280x720_15_2260：输出流是720p，帧率15，码率2.26Mbps
+	// 输出编码模板名称 - 1920*1080_30_4620：输出流是1080p，帧率30，码率4.62Mbps - 1920*1080_30_3150：输出流是1080p，帧率30，码率3.15Mbps - 1920*1080_15_3460：输出流是1080p，帧率15，码率3.46Mbps - 1920*1080_15_2080：输出流是1080p，帧率15，码率2.08Mbps - 1280*720_30_3420：输出流是720p，帧率30，码率3.42Mbps - 1280*720_30_1710：输出流是720p，帧率30，码率1.71Mbps - 1280*720_15_2260：输出流是720p，帧率15，码率2.26Mbps - 1280*720_15_1130：输出流是720p，帧率15，码率1.13Mbps - 640*480_30_1500：输出流是480p，帧率30，码率1.50Mbps - 640*480_15_500：输出流是480p，帧率15，码率500Kbps - 640*480_30_1000 输出流是480p，帧率30，码率1000Kbps - 480*360_30_490：输出流是360p，帧率30，码率490Kbps - 480*360_15_320：输出流是360p，帧率15，码率320Kbps
 	EncodeTemplate MixParamEncodeTemplate `json:"encode_template"`
 
 	// 最长空闲频道时间。  取值范围：[5，43200]，默认值为30。  单位：秒。  如果频道内无连麦方的状态持续超过该时间，录制程序会自动退出。退出后，再次调用start请求，会产生新的录制任务。  连麦方指：joiner或者publisher的用户。
@@ -54,25 +54,61 @@ type MixParamEncodeTemplate struct {
 }
 
 type MixParamEncodeTemplateEnum struct {
-	E_1920X1080_30_4620 MixParamEncodeTemplate
-	E_1920X1080_15_3460 MixParamEncodeTemplate
-	E_1280X720_30_3420  MixParamEncodeTemplate
-	E_1280X720_15_2260  MixParamEncodeTemplate
+	E_19201080_30_4620 MixParamEncodeTemplate
+	E_19201080_30_3150 MixParamEncodeTemplate
+	E_19201080_15_3460 MixParamEncodeTemplate
+	E_19201080_15_2080 MixParamEncodeTemplate
+	E_1280720_30_3420  MixParamEncodeTemplate
+	E_1280720_30_1710  MixParamEncodeTemplate
+	E_1280720_15_2260  MixParamEncodeTemplate
+	E_1280720_15_1130  MixParamEncodeTemplate
+	E_640480_30_1000   MixParamEncodeTemplate
+	E_640480_30_1500   MixParamEncodeTemplate
+	E_640480_15_500    MixParamEncodeTemplate
+	E_480360_30_490    MixParamEncodeTemplate
+	E_480360_15_320    MixParamEncodeTemplate
 }
 
 func GetMixParamEncodeTemplateEnum() MixParamEncodeTemplateEnum {
 	return MixParamEncodeTemplateEnum{
-		E_1920X1080_30_4620: MixParamEncodeTemplate{
-			value: "1920x1080_30_4620",
+		E_19201080_30_4620: MixParamEncodeTemplate{
+			value: "1920*1080_30_4620",
 		},
-		E_1920X1080_15_3460: MixParamEncodeTemplate{
-			value: "1920x1080_15_3460",
+		E_19201080_30_3150: MixParamEncodeTemplate{
+			value: "1920*1080_30_3150",
 		},
-		E_1280X720_30_3420: MixParamEncodeTemplate{
-			value: "1280x720_30_3420",
+		E_19201080_15_3460: MixParamEncodeTemplate{
+			value: "1920*1080_15_3460",
 		},
-		E_1280X720_15_2260: MixParamEncodeTemplate{
-			value: "1280x720_15_2260",
+		E_19201080_15_2080: MixParamEncodeTemplate{
+			value: "1920*1080_15_2080",
+		},
+		E_1280720_30_3420: MixParamEncodeTemplate{
+			value: "1280*720_30_3420",
+		},
+		E_1280720_30_1710: MixParamEncodeTemplate{
+			value: "1280*720_30_1710",
+		},
+		E_1280720_15_2260: MixParamEncodeTemplate{
+			value: "1280*720_15_2260",
+		},
+		E_1280720_15_1130: MixParamEncodeTemplate{
+			value: "1280*720_15_1130",
+		},
+		E_640480_30_1000: MixParamEncodeTemplate{
+			value: "640*480_30_1000",
+		},
+		E_640480_30_1500: MixParamEncodeTemplate{
+			value: "640*480_30_1500",
+		},
+		E_640480_15_500: MixParamEncodeTemplate{
+			value: "640*480_15_500",
+		},
+		E_480360_30_490: MixParamEncodeTemplate{
+			value: "480*360_30_490",
+		},
+		E_480360_15_320: MixParamEncodeTemplate{
+			value: "480*360_15_320",
 		},
 	}
 }

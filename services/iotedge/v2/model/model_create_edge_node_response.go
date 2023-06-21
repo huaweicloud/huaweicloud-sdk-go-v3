@@ -48,7 +48,18 @@ type CreateEdgeNodeResponse struct {
 	CreateTime *string `json:"create_time,omitempty"`
 
 	// 注册节点网关配置
-	HardwareModel  *string `json:"hardware_model,omitempty"`
+	HardwareModel *string `json:"hardware_model,omitempty"`
+
+	// 节点使用的数据格式，默认为iotda物模型1.0格式，可以选择属性平铺数据格式flat_json
+	DeviceDataFormat *string `json:"device_data_format,omitempty"`
+
+	// 自动升级系统应用的节点开关，默认为关闭：OFF，IMMEDIATE表示节点开关打开
+	AutomaticUpgrade *string `json:"automatic_upgrade,omitempty"`
+
+	DeviceDataRecord *DeviceDataRecord `json:"device_data_record,omitempty"`
+
+	// omagent监控运维工具是否上报指标
+	MetricReport   *string `json:"metric_report,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

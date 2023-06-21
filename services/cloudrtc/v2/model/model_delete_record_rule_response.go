@@ -8,7 +8,8 @@ import (
 
 // Response Object
 type DeleteRecordRuleResponse struct {
-	HttpStatusCode int `json:"-"`
+	XRequestId     *string `json:"X-request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o DeleteRecordRuleResponse) String() string {

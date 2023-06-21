@@ -21,7 +21,7 @@ type DeploymentHost struct {
 	// ssh端口，如：22
 	Port int32 `json:"port"`
 
-	// 操作系统：windows|linux，需要和主机组保持一致
+	// 操作系统：windows|linux，需要和主机集群保持一致
 	Os DeploymentHostOs `json:"os"`
 
 	// 是否为代理机

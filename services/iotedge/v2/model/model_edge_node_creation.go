@@ -48,8 +48,11 @@ type EdgeNodeCreation struct {
 	// 节点的存储周期，默认0天，取值范围0~7天，0天则不存储。
 	StoragePeriod *int32 `json:"storage_period,omitempty"`
 
-	// 华为AI加速卡类型，如NPU、GPU。
+	// AI加速卡类型，如华为昇腾AI加速卡NPU、图像处理加速卡GPU。
 	AiCardType *string `json:"ai_card_type,omitempty"`
+
+	// npu驱动动态库路径
+	NpuLibraryPath *string `json:"npu_library_path,omitempty"`
 
 	BasePath *BasePathDto `json:"base_path,omitempty"`
 
@@ -68,6 +71,17 @@ type EdgeNodeCreation struct {
 	OfflineCacheConfigs *OfflineCacheConfigsDto `json:"offline_cache_configs,omitempty"`
 
 	DeviceAuthInfo *DeviceAuthInfoDto `json:"device_auth_info,omitempty"`
+
+	// 节点使用的数据格式，默认为iotda物模型1.0格式，可以选择属性平铺数据格式flat_json
+	DeviceDataFormat *string `json:"device_data_format,omitempty"`
+
+	// 自动升级系统应用的节点开关，默认为关闭：OFF，IMMEDIATE表示节点开关打开
+	AutomaticUpgrade *string `json:"automatic_upgrade,omitempty"`
+
+	DeviceDataRecord *DeviceDataRecord `json:"device_data_record,omitempty"`
+
+	// omagent监控运维工具是否上报指标
+	MetricReport *string `json:"metric_report,omitempty"`
 }
 
 func (o EdgeNodeCreation) String() string {

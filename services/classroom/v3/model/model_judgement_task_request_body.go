@@ -24,7 +24,7 @@ type JudgementTaskRequestBody struct {
 	// 任务描述
 	Description *string `json:"description,omitempty"`
 
-	// 支持语言类型：java、c、cpp、python
+	// 支持语言类型：java、c、cpp、python、javaScript
 	RuntimeType JudgementTaskRequestBodyRuntimeType `json:"runtime_type"`
 
 	// 代码运行超时时间，单位为秒
@@ -89,10 +89,11 @@ type JudgementTaskRequestBodyRuntimeType struct {
 }
 
 type JudgementTaskRequestBodyRuntimeTypeEnum struct {
-	JAVA   JudgementTaskRequestBodyRuntimeType
-	C      JudgementTaskRequestBodyRuntimeType
-	CPP    JudgementTaskRequestBodyRuntimeType
-	PYTHON JudgementTaskRequestBodyRuntimeType
+	JAVA        JudgementTaskRequestBodyRuntimeType
+	C           JudgementTaskRequestBodyRuntimeType
+	CPP         JudgementTaskRequestBodyRuntimeType
+	PYTHON      JudgementTaskRequestBodyRuntimeType
+	JAVA_SCRIPT JudgementTaskRequestBodyRuntimeType
 }
 
 func GetJudgementTaskRequestBodyRuntimeTypeEnum() JudgementTaskRequestBodyRuntimeTypeEnum {
@@ -108,6 +109,9 @@ func GetJudgementTaskRequestBodyRuntimeTypeEnum() JudgementTaskRequestBodyRuntim
 		},
 		PYTHON: JudgementTaskRequestBodyRuntimeType{
 			value: "python",
+		},
+		JAVA_SCRIPT: JudgementTaskRequestBodyRuntimeType{
+			value: "javaScript",
 		},
 	}
 }

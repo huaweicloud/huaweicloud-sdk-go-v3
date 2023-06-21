@@ -69,6 +69,48 @@ func (c *CloudTableClient) DeleteClusterInvoker(request *model.DeleteClusterRequ
 	return &DeleteClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// EnableComponent 开启opentsdb组件
+//
+// 开启opentsdb组件
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudTableClient) EnableComponent(request *model.EnableComponentRequest) (*model.EnableComponentResponse, error) {
+	requestDef := GenReqDefForEnableComponent()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.EnableComponentResponse), nil
+	}
+}
+
+// EnableComponentInvoker 开启opentsdb组件
+func (c *CloudTableClient) EnableComponentInvoker(request *model.EnableComponentRequest) *EnableComponentInvoker {
+	requestDef := GenReqDefForEnableComponent()
+	return &EnableComponentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExpandClusterComponent 扩容组件
+//
+// 扩容指定类型的集群节点
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudTableClient) ExpandClusterComponent(request *model.ExpandClusterComponentRequest) (*model.ExpandClusterComponentResponse, error) {
+	requestDef := GenReqDefForExpandClusterComponent()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExpandClusterComponentResponse), nil
+	}
+}
+
+// ExpandClusterComponentInvoker 扩容组件
+func (c *CloudTableClient) ExpandClusterComponentInvoker(request *model.ExpandClusterComponentRequest) *ExpandClusterComponentInvoker {
+	requestDef := GenReqDefForExpandClusterComponent()
+	return &ExpandClusterComponentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListClusters 查询CloudTable集群列表
 //
 // 查看用户创建的集群列表信息。
@@ -90,6 +132,27 @@ func (c *CloudTableClient) ListClustersInvoker(request *model.ListClustersReques
 	return &ListClustersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RebootCloudTableCluster 重启集群的api入口
+//
+// 重启集群的api入口
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudTableClient) RebootCloudTableCluster(request *model.RebootCloudTableClusterRequest) (*model.RebootCloudTableClusterResponse, error) {
+	requestDef := GenReqDefForRebootCloudTableCluster()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RebootCloudTableClusterResponse), nil
+	}
+}
+
+// RebootCloudTableClusterInvoker 重启集群的api入口
+func (c *CloudTableClient) RebootCloudTableClusterInvoker(request *model.RebootCloudTableClusterRequest) *RebootCloudTableClusterInvoker {
+	requestDef := GenReqDefForRebootCloudTableCluster()
+	return &RebootCloudTableClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowClusterDetail 查询CloudTable集群详情
 //
 // 通过集群ID唯一标识一个集群，根据集群ID查询特定CloudTable集群的详情信息。
@@ -109,4 +172,46 @@ func (c *CloudTableClient) ShowClusterDetail(request *model.ShowClusterDetailReq
 func (c *CloudTableClient) ShowClusterDetailInvoker(request *model.ShowClusterDetailRequest) *ShowClusterDetailInvoker {
 	requestDef := GenReqDefForShowClusterDetail()
 	return &ShowClusterDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowClusterSetting 查询集群配置
+//
+// 查询集群配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudTableClient) ShowClusterSetting(request *model.ShowClusterSettingRequest) (*model.ShowClusterSettingResponse, error) {
+	requestDef := GenReqDefForShowClusterSetting()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowClusterSettingResponse), nil
+	}
+}
+
+// ShowClusterSettingInvoker 查询集群配置
+func (c *CloudTableClient) ShowClusterSettingInvoker(request *model.ShowClusterSettingRequest) *ShowClusterSettingInvoker {
+	requestDef := GenReqDefForShowClusterSetting()
+	return &ShowClusterSettingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateClusterSetting 修改集群配置
+//
+// 修改集群配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudTableClient) UpdateClusterSetting(request *model.UpdateClusterSettingRequest) (*model.UpdateClusterSettingResponse, error) {
+	requestDef := GenReqDefForUpdateClusterSetting()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateClusterSettingResponse), nil
+	}
+}
+
+// UpdateClusterSettingInvoker 修改集群配置
+func (c *CloudTableClient) UpdateClusterSettingInvoker(request *model.UpdateClusterSettingRequest) *UpdateClusterSettingInvoker {
+	requestDef := GenReqDefForUpdateClusterSetting()
+	return &UpdateClusterSettingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

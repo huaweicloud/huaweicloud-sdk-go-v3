@@ -12,10 +12,10 @@ type ComponentMount struct {
 	Path *string `json:"path,omitempty"`
 
 	// 挂载路径的子路径
-	SubPath *string `json:"sub_path,omitempty"`
+	SubPath *string `json:"subPath,omitempty"`
 
 	// 是否只读
-	ReadOnly *bool `json:"read_only,omitempty"`
+	ReadOnly *bool `json:"readOnly,omitempty"`
 }
 
 func (o ComponentMount) String() string {

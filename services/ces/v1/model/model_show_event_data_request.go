@@ -9,9 +9,6 @@ import (
 // Request Object
 type ShowEventDataRequest struct {
 
-	// 发送的实体的MIME类型。推荐用户默认使用application/json，如果API是对象、镜像上传等接口，媒体类型可按照流类型的不同进行确定。
-	ContentType string `json:"Content-Type"`
-
 	// 指标命名空间，如：弹性云服务器的命名空间为SYS.ECS，文档数据库的命名空间为SYS.DDS，各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
 	Namespace string `json:"namespace"`
 

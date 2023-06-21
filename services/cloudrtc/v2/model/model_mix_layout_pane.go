@@ -30,7 +30,7 @@ type MixLayoutPane struct {
 	// 窗格宽，归一化百分比，小数取值范围在float内，自定义布局场景下填写本字段。
 	Width *float32 `json:"width,omitempty"`
 
-	// 窗格宽，归一化百分比，小数取值范围在float内，自定义布局场景下填写本字段。
+	// 窗格高，归一化百分比，小数取值范围在float内，自定义布局场景下填写本字段。
 	Height *float32 `json:"height,omitempty"`
 
 	// 叠放顺序，0为最底层，1层在0层之上，以此类推，最大支持25层，自定义布局场景下填写本字段。

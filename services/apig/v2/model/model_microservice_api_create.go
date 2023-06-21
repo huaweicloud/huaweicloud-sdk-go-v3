@@ -18,7 +18,7 @@ type MicroserviceApiCreate struct {
 	// API的请求方式
 	ReqMethod *MicroserviceApiCreateReqMethod `json:"req_method,omitempty"`
 
-	// 请求地址。可以包含请求参数，用{}标识，比如/getUserInfo/{userId}，支持 * % - _ . 等特殊字符，总长度不超过512，且满足URI规范。 /apic/health_check为APIG预置的健康检查路径，当req_method=GET时不支持req_uri=/apic/health_check。 > 需要服从URI规范。
+	// 请求地址。可以包含请求参数，用{}标识，比如/getUserInfo/{userId}，支持 * % - _ . 等特殊字符，总长度不超过512，且满足URI规范。  /apic/health_check为APIG预置的健康检查路径，当req_method=GET时不支持req_uri=/apic/health_check。  > 需要服从URI规范。
 	ReqUri string `json:"req_uri"`
 
 	// API的匹配方式 - SWA：前缀匹配 - NORMAL：正常匹配（绝对匹配） 默认：NORMAL

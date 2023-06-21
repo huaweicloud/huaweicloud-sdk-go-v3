@@ -9,7 +9,7 @@ import (
 // Request Object
 type DeleteDeploymentHostRequest struct {
 
-	// 主机组id
+	// 主机集群id
 	GroupId string `json:"group_id"`
 
 	// 主机id

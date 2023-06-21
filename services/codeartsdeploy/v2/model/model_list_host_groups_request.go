@@ -27,7 +27,7 @@ type ListHostGroupsRequest struct {
 	// 每页显示的条目数量，默认为1000
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 主机组名
+	// 主机集群名
 	Name *string `json:"name,omitempty"`
 
 	// 排序字段：nickName|NAME|OWNER_NAME|CREATE_TIME|name|owner_name|create_time，不传使用默认排序

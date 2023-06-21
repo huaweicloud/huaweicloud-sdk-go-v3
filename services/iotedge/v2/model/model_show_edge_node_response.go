@@ -68,8 +68,11 @@ type ShowEdgeNodeResponse struct {
 	// 网络规格，如4 cores | 3867 MB
 	Specification *string `json:"specification,omitempty"`
 
-	// 华为AI加速卡类型，如NPU、GPU、unEquipped
+	// AI加速卡类型，如华为昇腾AI加速卡NPU、图像处理加速卡GPU。
 	AiCardType *string `json:"ai_card_type,omitempty"`
+
+	// npu驱动动态库路径
+	NpuLibraryPath *string `json:"npu_library_path,omitempty"`
 
 	// 容器运行时版本
 	ContainerVersion *string `json:"container_version,omitempty"`
@@ -94,7 +97,18 @@ type ShowEdgeNodeResponse struct {
 	OfflineCacheConfigs *OfflineCacheConfigsDto `json:"offline_cache_configs,omitempty"`
 
 	DeviceAuthInfo *DeviceAuthInfoDisplayDto `json:"device_auth_info,omitempty"`
-	HttpStatusCode int                       `json:"-"`
+
+	// 节点使用的数据格式，默认为iotda物模型1.0格式，可以选择属性平铺数据格式flat_json
+	DeviceDataFormat *string `json:"device_data_format,omitempty"`
+
+	// 自动升级系统应用的节点开关，默认为关闭：OFF，IMMEDIATE表示节点开关打开
+	AutomaticUpgrade *string `json:"automatic_upgrade,omitempty"`
+
+	DeviceDataRecord *DeviceDataRecord `json:"device_data_record,omitempty"`
+
+	// omagent监控运维工具是否上报指标
+	MetricReport   *string `json:"metric_report,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowEdgeNodeResponse) String() string {

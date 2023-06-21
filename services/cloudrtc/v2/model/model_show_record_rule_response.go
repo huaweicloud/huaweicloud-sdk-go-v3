@@ -20,7 +20,7 @@ type ShowRecordRuleResponse struct {
 
 	ObsAddr *RecordObsFileAddr `json:"obs_addr,omitempty"`
 
-	// 录制格式：hls格式或者mp4格式
+	// 录制格式：HLS格式或者MP4格式
 	RecordFormats *[]ShowRecordRuleResponseRecordFormats `json:"record_formats,omitempty"`
 
 	HlsConfig *HlsRecordConfig `json:"hls_config,omitempty"`

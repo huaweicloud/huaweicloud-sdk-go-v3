@@ -9,10 +9,10 @@ import (
 // Response Object
 type ListHostGroupsResponse struct {
 
-	// 主机组个数
+	// 主机集群个数
 	Total *int32 `json:"total,omitempty"`
 
-	// 主机组详情响应体
+	// 主机集群详情响应体
 	HostGroups     *[]DeploymentGroupDetail `json:"host_groups,omitempty"`
 	HttpStatusCode int                      `json:"-"`
 }

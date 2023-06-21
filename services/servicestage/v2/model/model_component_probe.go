@@ -10,7 +10,7 @@ import (
 )
 
 type ComponentProbe struct {
-	Type *ComponentProbeType `json:"type,omitempty"`
+	Type ComponentProbeType `json:"type"`
 
 	// 表示启动后多久开始探测
 	Delay *int32 `json:"delay,omitempty"`
@@ -18,7 +18,7 @@ type ComponentProbe struct {
 	// 表示探测超时时间
 	Timeout *int32 `json:"timeout,omitempty"`
 
-	Parameters *ProbeParameter `json:"parameters,omitempty"`
+	Parameters *ProbeParameter `json:"parameters"`
 }
 
 func (o ComponentProbe) String() string {

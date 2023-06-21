@@ -552,7 +552,7 @@ func (c *CloudRTCClient) UpdateMixJobInvoker(request *model.UpdateMixJobRequest)
 	return &UpdateMixJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateRecordCallback RTC增值（录制）事件回调配置
+// UpdateRecordCallback 配置RTC增值（录制）事件回调
 //
 // 调用此接口配置增值（录制）事件上报回调。
 //
@@ -571,7 +571,7 @@ func (c *CloudRTCClient) UpdateRecordCallback(request *model.UpdateRecordCallbac
 	}
 }
 
-// UpdateRecordCallbackInvoker RTC增值（录制）事件回调配置
+// UpdateRecordCallbackInvoker 配置RTC增值（录制）事件回调
 func (c *CloudRTCClient) UpdateRecordCallbackInvoker(request *model.UpdateRecordCallbackRequest) *UpdateRecordCallbackInvoker {
 	requestDef := GenReqDefForUpdateRecordCallback()
 	return &UpdateRecordCallbackInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

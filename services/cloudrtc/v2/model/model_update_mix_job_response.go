@@ -37,7 +37,7 @@ type UpdateMixJobResponse struct {
 	// 任务状态。  - INIT：任务正在初始化 - RUNNING：任务正在运行 - STOPPED：任务已停止
 	State *UpdateMixJobResponseState `json:"state,omitempty"`
 
-	// 任务结束原因
+	// 任务结束原因 - TENANT_STOP - EXCEED_MAX_IDLE_TIME - INTERNAL_ERROR
 	StopReason *UpdateMixJobResponseStopReason `json:"stop_reason,omitempty"`
 
 	// 状态描述，对state字段的一些补充说明，可用于人工查阅。

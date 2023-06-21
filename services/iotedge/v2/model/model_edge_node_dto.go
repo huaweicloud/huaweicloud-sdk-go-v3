@@ -15,7 +15,7 @@ type EdgeNodeDto struct {
 	// 边缘节点名称
 	Name *string `json:"name,omitempty"`
 
-	// 边缘节点状态 UNINSTALLED|INSTALLED|OFFLINE|ONLINE|DELETING|FROZEN
+	// 边缘节点状态UNINSTALLED|INSTALLED|OFFLINE|ONLINE|DELETING|FROZEN
 	State *string `json:"state,omitempty"`
 
 	// 实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。

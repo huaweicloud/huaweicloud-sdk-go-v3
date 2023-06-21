@@ -82,6 +82,153 @@ func (c *ClassroomClient) ShowJudgementFileInvoker(request *model.ShowJudgementF
 	return &ShowJudgementFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ExecuteExercise 习题判题
+//
+// 习题判题
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ClassroomClient) ExecuteExercise(request *model.ExecuteExerciseRequest) (*model.ExecuteExerciseResponse, error) {
+	requestDef := GenReqDefForExecuteExercise()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteExerciseResponse), nil
+	}
+}
+
+// ExecuteExerciseInvoker 习题判题
+func (c *ClassroomClient) ExecuteExerciseInvoker(request *model.ExecuteExerciseRequest) *ExecuteExerciseInvoker {
+	requestDef := GenReqDefForExecuteExercise()
+	return &ExecuteExerciseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListExercises 查询习题库下习题列表
+//
+// 查询习题库下习题列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ClassroomClient) ListExercises(request *model.ListExercisesRequest) (*model.ListExercisesResponse, error) {
+	requestDef := GenReqDefForListExercises()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListExercisesResponse), nil
+	}
+}
+
+// ListExercisesInvoker 查询习题库下习题列表
+func (c *ClassroomClient) ListExercisesInvoker(request *model.ListExercisesRequest) *ListExercisesInvoker {
+	requestDef := GenReqDefForListExercises()
+	return &ListExercisesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPackages 查询当前租户的习题库列表
+//
+// 查询当前租户的习题库列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ClassroomClient) ListPackages(request *model.ListPackagesRequest) (*model.ListPackagesResponse, error) {
+	requestDef := GenReqDefForListPackages()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPackagesResponse), nil
+	}
+}
+
+// ListPackagesInvoker 查询当前租户的习题库列表
+func (c *ClassroomClient) ListPackagesInvoker(request *model.ListPackagesRequest) *ListPackagesInvoker {
+	requestDef := GenReqDefForListPackages()
+	return &ListPackagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowExerciseDetail 查询单个习题详情
+//
+// 查询单个习题详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ClassroomClient) ShowExerciseDetail(request *model.ShowExerciseDetailRequest) (*model.ShowExerciseDetailResponse, error) {
+	requestDef := GenReqDefForShowExerciseDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowExerciseDetailResponse), nil
+	}
+}
+
+// ShowExerciseDetailInvoker 查询单个习题详情
+func (c *ClassroomClient) ShowExerciseDetailInvoker(request *model.ShowExerciseDetailRequest) *ShowExerciseDetailInvoker {
+	requestDef := GenReqDefForShowExerciseDetail()
+	return &ShowExerciseDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPackageDetail 查询单个习题库详情
+//
+// 查询单个习题库详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ClassroomClient) ShowPackageDetail(request *model.ShowPackageDetailRequest) (*model.ShowPackageDetailResponse, error) {
+	requestDef := GenReqDefForShowPackageDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPackageDetailResponse), nil
+	}
+}
+
+// ShowPackageDetailInvoker 查询单个习题库详情
+func (c *ClassroomClient) ShowPackageDetailInvoker(request *model.ShowPackageDetailRequest) *ShowPackageDetailInvoker {
+	requestDef := GenReqDefForShowPackageDetail()
+	return &ShowPackageDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAllDifficults 获取习题所有难度
+//
+// 获取习题所有难度
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ClassroomClient) ListAllDifficults(request *model.ListAllDifficultsRequest) (*model.ListAllDifficultsResponse, error) {
+	requestDef := GenReqDefForListAllDifficults()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAllDifficultsResponse), nil
+	}
+}
+
+// ListAllDifficultsInvoker 获取习题所有难度
+func (c *ClassroomClient) ListAllDifficultsInvoker(request *model.ListAllDifficultsRequest) *ListAllDifficultsInvoker {
+	requestDef := GenReqDefForListAllDifficults()
+	return &ListAllDifficultsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListMyKnowledgePoints 获取自身习题知识点
+//
+// 获取自身习题知识点
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ClassroomClient) ListMyKnowledgePoints(request *model.ListMyKnowledgePointsRequest) (*model.ListMyKnowledgePointsResponse, error) {
+	requestDef := GenReqDefForListMyKnowledgePoints()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListMyKnowledgePointsResponse), nil
+	}
+}
+
+// ListMyKnowledgePointsInvoker 获取自身习题知识点
+func (c *ClassroomClient) ListMyKnowledgePointsInvoker(request *model.ListMyKnowledgePointsRequest) *ListMyKnowledgePointsInvoker {
+	requestDef := GenReqDefForListMyKnowledgePoints()
+	return &ListMyKnowledgePointsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListClassroomMembers 根据课堂ID获取指定课堂的课堂成员列表
 //
 // 根据课堂ID获取指定课堂的课堂成员列表，支持分页，搜索字段默认同时匹配姓名，学号，用户名，班级。

@@ -12,12 +12,14 @@ import (
 // 微服务详情。
 type MicroServiceCreate struct {
 
-	// 微服务类型： - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎
+	// 微服务类型： - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service）
 	ServiceType *MicroServiceCreateServiceType `json:"service_type,omitempty"`
 
 	CseInfo *MicroServiceInfoCseBase `json:"cse_info,omitempty"`
 
 	CceInfo *MicroServiceInfoCceBase `json:"cce_info,omitempty"`
+
+	CceServiceInfo *MicroServiceInfoCceServiceBase `json:"cce_service_info,omitempty"`
 }
 
 func (o MicroServiceCreate) String() string {
@@ -34,8 +36,9 @@ type MicroServiceCreateServiceType struct {
 }
 
 type MicroServiceCreateServiceTypeEnum struct {
-	CSE MicroServiceCreateServiceType
-	CCE MicroServiceCreateServiceType
+	CSE         MicroServiceCreateServiceType
+	CCE         MicroServiceCreateServiceType
+	CCE_SERVICE MicroServiceCreateServiceType
 }
 
 func GetMicroServiceCreateServiceTypeEnum() MicroServiceCreateServiceTypeEnum {
@@ -45,6 +48,9 @@ func GetMicroServiceCreateServiceTypeEnum() MicroServiceCreateServiceTypeEnum {
 		},
 		CCE: MicroServiceCreateServiceType{
 			value: "CCE",
+		},
+		CCE_SERVICE: MicroServiceCreateServiceType{
+			value: "CCE_SERVICE",
 		},
 	}
 }

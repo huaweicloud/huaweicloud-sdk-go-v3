@@ -12,7 +12,7 @@ type ListHostsResponse struct {
 	// 主机数量
 	Total *int32 `json:"total,omitempty"`
 
-	// 主机组名称
+	// 主机集群名称
 	GroupName *string `json:"group_name,omitempty"`
 
 	// 主机列表信息
